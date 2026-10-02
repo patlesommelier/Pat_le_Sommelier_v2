@@ -49,18 +49,40 @@ export async function getVin(restaurantId: string, id: string) {
   return v ?? null;
 }
 
-/** Accords à afficher pour un plat, avec les vins correspondants, dans l'ordre du sommelier. */
-export async function getPropositions(platId: string) {
-  const accords = await requete<Accord>(
-    `select plat_id, vin_id, note, rang, explication, explication_longue, service, statut
-       from accord where plat_id = $1 and statut = any($2) order by rang nulls last, note desc nulls last`,
-    [platId, accordsVisibles()],
+/** Nombre de propositions par plat : règle « nombre_propositions » du sommelier, 2 par défaut. */
+async function nombrePropositions(restaurantId: string) {
+  const [r] = await requete<{ valeur: string | null }>(
+    `select valeur from regle_sommelier where restaurant_id = $1 and type = 'nombre_propositions' and actif order by priorite limit 1`,
+    [restaurantId],
   );
-  if (!accords.length) return [];
-  const vins = await requete<Vin>(`${SELECT_VIN} where v.id = any($1) and v.disponible`, [accords.map((a) => a.vin_id)]);
-  return accords
-    .map((a) => ({ accord: a, vin: vins.find((v) => v.id === a.vin_id) }))
-    .filter((x): x is { accord: Accord; vin: Vin } => Boolean(x.vin));
+  const n = Number(r?.valeur);
+  return Number.isFinite(n) && n > 0 ? n : 2;
+}
+
+/** Note minimale pour qu'un accord soit proposé au client (3 = « correct »). */
+const NOTE_MINIMALE = 3;
+
+/** Meilleurs accords d'un plat (note puis rang du sommelier), avec les vins disponibles correspondants. */
+export async function getPropositions(restaurantId: string, platId: string) {
+  const n = await nombrePropositions(restaurantId);
+  const lignes = await requete<Accord & Vin>(
+    `select a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.explication_longue, a.service, a.statut, v.*
+       from accord a
+       join (${SELECT_VIN}) v on v.id = a.vin_id
+      where a.plat_id = $1 and a.statut = any($2) and a.note >= $3
+        and exists (select 1 from vin_carte d where d.id = a.vin_id and d.disponible)
+      order by a.note desc, a.rang nulls last
+      limit $4`,
+    [platId, accordsVisibles(), NOTE_MINIMALE, n * 4],
+  );
+  // Un même vin en plusieurs formats (37,5 cl et 75 cl) n'occupe qu'une place : on garde le premier.
+  const vus = new Set<string>();
+  lignes.sort((x, y) => (y.note ?? 0) - (x.note ?? 0) || Number(x.format !== '75 cl') - Number(y.format !== '75 cl') || (x.rang ?? 99) - (y.rang ?? 99));
+  const uniques = lignes.filter((l) => !vus.has(l.libelle) && vus.add(l.libelle)).slice(0, n);
+  return uniques.map((l) => ({
+    accord: { plat_id: l.plat_id, vin_id: l.vin_id, note: l.note, rang: l.rang, explication: l.explication, explication_longue: l.explication_longue, service: l.service, statut: l.statut } as Accord,
+    vin: l as Vin,
+  }));
 }
 
 export async function getAccord(platId: string, vinId: string) {

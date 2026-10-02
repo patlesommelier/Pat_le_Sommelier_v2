@@ -101,12 +101,22 @@ async function main() {
       await upsert(client, 'plat', r.plats);
       await upsert(client, 'profil_accord', r.profils, 'plat_id');
       await upsert(client, 'vin_carte', r.vins);
-      // Les accords déjà validés ou refusés par le sommelier ne sont jamais écrasés par l'import.
-      for (const a of r.accords) {
+      // Le fichier d'accords de Pat fait foi et met à jour ses accords à chaque import,
+      // sauf ceux que le sommelier a ajoutés, refusés ou commentés : ceux-là ne sont jamais écrasés.
+      for (let i = 0; i < r.accords.length; i += 300) {
+        const lot = r.accords.slice(i, i + 300);
+        const valeurs: unknown[] = [];
+        const tuples = lot.map((a, j) => {
+          valeurs.push(a.restaurant_id, a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.principes, a.service, a.origine, a.statut);
+          return `(${Array.from({ length: 10 }, (_, k) => `$${j * 10 + k + 1}`).join(', ')})`;
+        });
         await client.query(
           `insert into accord (restaurant_id, plat_id, vin_id, note, rang, explication, principes, service, origine, statut)
-           values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10) on conflict (plat_id, vin_id) do nothing`,
-          [a.restaurant_id, a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.principes, a.service, a.origine, a.statut],
+           values ${tuples.join(', ')}
+           on conflict (plat_id, vin_id) do update set note = excluded.note, rang = excluded.rang, explication = excluded.explication,
+             principes = excluded.principes, service = excluded.service, statut = excluded.statut, calcule_le = now()
+           where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null`,
+          valeurs,
         );
       }
       await upsert(client, 'regle_sommelier', r.regles);

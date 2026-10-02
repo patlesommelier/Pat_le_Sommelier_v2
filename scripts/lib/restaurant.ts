@@ -74,7 +74,7 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
     const { prix, variantes } = prixEtVariantes(m['Prix (€)'], nomBrut);
     const categorie = /fromages/i.test(nom) ? 'fromage' : CATEGORIES[String(m['Type de plat'])] ?? 'plat';
     const id = uniquePlat(`${rid}-${slug(court ?? nom)}`);
-    plats.push({ id, restaurant_id: rid, nom, nom_court: court, categorie, prix, prix_variantes: variantes, specialite_maison: false, actif: true, ordre: i });
+    plats.push({ id, restaurant_id: rid, nom, nom_court: court, categorie, prix, prix_variantes: variantes, specialite_maison: false, actif: true, ordre: i, _nom_brut: nomBrut });
 
     const analyse = String(m["Résultat de l'analyse"] ?? '');
     const champ = (k: string) => analyse.match(new RegExp(`^${k}\\s*:\\s*(.+)$`, 'mi'))?.[1].trim() ?? null;
@@ -160,16 +160,41 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
     }
   }
 
-  // ── Accords d'exemple et règles du sommelier ──
+  // ── Accords mets/vins de Pat (onglet « Détail (filtrable) » : une ligne par plat × vin, note 1 à 5) ──
+  // Les accords de ce fichier sont l'analyse de Pat : ils arrivent « validés ». Le rang départage les ex aequo
+  // dans l'ordre de la carte, comme l'onglet « Meilleurs accords » du fichier.
   const accords: Ligne[] = [];
-  const fa = path.join(dossier, 'accords_exemple.json');
+  const fa = path.join(dossier, 'accords.xlsx');
   if (fs.existsSync(fa)) {
-    for (const a of JSON.parse(fs.readFileSync(fa, 'utf8')).accords) {
-      const plat = plats.find((p) => p.nom_court === a.plat);
-      if (!plat) continue;
-      accords.push({ restaurant_id: rid, plat_id: plat.id, vin_id: a.vin, note: a.note, rang: a.rang, explication: a.explication, principes: a.principes, service: a.service, origine: 'pat', statut: 'propose' });
+    const numeroVersId = new Map(principes.map((p) => [Number(p.numero), String(p.id)]));
+    const ordreVin = new Map(vins.map((v) => [String(v.id), Number(v.ordre)]));
+    const parPlat = new Map<string, Ligne[]>();
+    for (const l of enObjets(await lireFeuille(fa, 'Détail (filtrable)'))) {
+      const nomPlat = texte(l['Plat']);
+      const code = String(l['Vin'] ?? '').match(/^L-[A-Z]\d{2}/)?.[0];
+      const note = Number(l['Note']);
+      if (!nomPlat || !code || !(note >= 1 && note <= 5)) continue;
+      const plat = plats.find((p) => p._nom_brut === nomPlat) ?? plats.find((p) => nomPlat.startsWith(String(p.nom)));
+      if (!plat || !ordreVin.has(code)) continue;
+      const commentaire = texte(l['Commentaire']) ?? '';
+      const principesCites = (String(l['Principes de Pat'] ?? '').match(/\d+/g) ?? []).map(Number).map((n) => numeroVersId.get(n)).filter(Boolean);
+      const profil = profils.find((pr) => pr.plat_id === plat.id);
+      const a: Ligne = {
+        restaurant_id: rid, plat_id: plat.id, vin_id: code, note,
+        // Le texte client ne montre pas les références « (P10, P35) » : elles restent dans `principes`.
+        explication: commentaire.replace(/\s*\((?:P\d+(?:,\s*)?)+\)/g, '').replace(/\s+([.,])/g, '$1').replace(/\s{2,}/g, ' ').trim() || null,
+        principes: principesCites,
+        service: String(profil?.temperature_service ?? '').match(/\d+(?:\s*-\s*\d+)?\s*°C/)?.[0] ?? null,
+        origine: 'pat', statut: 'valide',
+      };
+      parPlat.set(String(plat.id), [...(parPlat.get(String(plat.id)) ?? []), a]);
+    }
+    for (const liste of parPlat.values()) {
+      liste.sort((x, y) => Number(y.note) - Number(x.note) || ordreVin.get(String(x.vin_id))! - ordreVin.get(String(y.vin_id))!);
+      liste.forEach((a, i) => accords.push({ ...a, rang: i + 1 }));
     }
   }
+  plats.forEach((p) => delete p._nom_brut);
   const fr = path.join(dossier, 'regles.json');
   const regles: Ligne[] = fs.existsSync(fr)
     ? JSON.parse(fs.readFileSync(fr, 'utf8')).regles.map((r: Ligne) => ({ ...r, restaurant_id: rid, priorite: r.priorite ?? 1 }))

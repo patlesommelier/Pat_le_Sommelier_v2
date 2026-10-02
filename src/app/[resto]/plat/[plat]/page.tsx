@@ -10,7 +10,7 @@ export default async function Propositions({ params }: { params: Promise<{ resto
   const { resto, plat: platId } = await params;
   const [restaurant, plat] = await Promise.all([getRestaurant(resto), getPlat(platId)]);
   if (!restaurant || !plat) notFound();
-  const propositions = await getPropositions(platId);
+  const propositions = await getPropositions(resto, platId);
   const service = propositions.find((p) => p.accord.service)?.accord.service;
 
   return (
@@ -34,8 +34,8 @@ export default async function Propositions({ params }: { params: Promise<{ resto
                     <div className="sous">{sousTitreVin(vin, true)}</div>
                     {accord.explication && <div className="pourquoi">{accord.explication}</div>}
                     <div className="prix" style={{ fontSize: 16 }}>
-                      {euros(vin.prix)}
-                      {vin.prix_verre ? <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · verre {euros(vin.prix_verre)}</span> : null}
+                      {vin.prix ? euros(vin.prix) : vin.prix_verre ? `${euros(vin.prix_verre)} le verre` : ''}
+                      {vin.prix && vin.prix_verre ? <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · verre {euros(vin.prix_verre)}</span> : null}
                     </div>
                   </div>
                 </Link>
@@ -43,8 +43,8 @@ export default async function Propositions({ params }: { params: Promise<{ resto
             </div>
           ) : (
             <div className="etat-vide">
-              <p className="note-discrete">Le sommelier n’a pas encore validé d’accord pour ce plat.</p>
-              <DemanderAPat question={`Quel vin de la carte me conseillez-vous avec « ${plat.nom} » ?`}>Demander à Pat</DemanderAPat>
+              <p className="note-discrete">Aucun vin de la carte ne s’accorde vraiment bien avec ce plat.</p>
+              <DemanderAPat question={`Quel vin de la carte me conseillez-vous avec « ${plat.nom} » ?`}>Demander conseil à Pat</DemanderAPat>
             </div>
           )}
 
