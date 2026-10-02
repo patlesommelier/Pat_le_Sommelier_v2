@@ -4,15 +4,24 @@ Webapp qui conseille le vin de la carte d'un restaurant pour le plat choisi, en 
 
 - **Écrans** (repris des maquettes validées) : Accueil (choix du plat), Mes propositions, Fiche vin, Carte des vins à onglets, et la barre « Demandez à Pat » toujours visible en bas.
 - **Données** : le savoir de Pat (principes, producteurs, cuvées, terroirs) et les bases de chaque restaurant (menu, profils d'accord, carte des vins, accords, règles du sommelier), selon le document « Pat le sommelier — modèle de données ».
-- **Technique** : Next.js 15 (App Router) · Postgres hébergé chez Supabase · API Claude pour Pat · déploiement Netlify.
+- **Technique** : Next.js 15 (App Router) · Postgres via Netlify Database · API Claude pour Pat · déploiement Netlify.
 
 ## Mise en route
 
-### 1. Base de données (Supabase)
+### 1. Base de données (Netlify Database)
 
-1. Créer un projet sur [supabase.com](https://supabase.com) (région Europe).
-2. Dans **SQL Editor**, coller et exécuter `supabase/migrations/0001_schema.sql`.
-3. Récupérer la chaîne de connexion : **Project Settings › Database › Connection string › Transaction pooler** (port 6543).
+La base Postgres est fournie par Netlify : aucune chaîne de connexion à configurer. À chaque déploiement, Netlify applique les migrations de `netlify/database/migrations/` :
+
+- `0001_create_schema.sql` : le schéma (repris de `supabase/migrations/0001_schema.sql`, sans les politiques RLS propres à Supabase) ;
+- `0002_seed_pat_et_lola.sql` : les données de Pat et de Lola, générées depuis `data/`.
+
+Après une mise à jour des fichiers de `data/`, générer une **nouvelle** migration de données (ne jamais modifier une migration déjà appliquée) ; les insertions sont des « upserts », elles peuvent être rejouées sans risque :
+
+```bash
+npm run import -- --sql netlify/database/migrations/0003_maj_donnees.sql
+```
+
+`DATABASE_URL` reste possible pour viser une autre base Postgres (scripts ou app).
 
 ### 2. Variables d'environnement
 
@@ -20,7 +29,7 @@ Copier `.env.example` en `.env` et remplir :
 
 | Variable | Rôle |
 | --- | --- |
-| `DATABASE_URL` | Connexion Postgres (app et scripts) |
+| `DATABASE_URL` | Optionnelle : autre base Postgres que Netlify Database (requise pour `npm run import` sans `--sql` et `npm run accords`) |
 | `ANTHROPIC_API_KEY` | Clé de l'API Claude (console.anthropic.com) |
 | `ANTHROPIC_MODEL` | Modèle utilisé par Pat |
 | `AFFICHER_ACCORDS_PROPOSES` | `true` pour montrer aussi les accords pas encore validés (démo) |
