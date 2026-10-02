@@ -1,0 +1,45 @@
+{
+  "_note": "Exemples du document de modèle de données. Les règles inactives sont à confirmer par le sommelier de Lola.",
+  "regles": [
+    {
+      "id": "lola-r01",
+      "type": "nombre_propositions",
+      "portee": "tout",
+      "valeur": "2",
+      "texte": "Deux propositions par plat.",
+      "actif": true
+    },
+    {
+      "id": "lola-r02",
+      "type": "ton",
+      "portee": "tout",
+      "valeur": "vouvoiement",
+      "texte": "Vouvoyer le client, pas de jargon technique dans les phrases courtes.",
+      "actif": true
+    },
+    {
+      "id": "lola-r03",
+      "type": "mettre_en_avant",
+      "portee": "tout",
+      "valeur": "coup_de_coeur",
+      "texte": "À note égale, préférer les coups de cœur de la carte.",
+      "actif": false
+    },
+    {
+      "id": "lola-r04",
+      "type": "prix",
+      "portee": "tout",
+      "valeur": "50",
+      "texte": "Toujours au moins une proposition sous 50 €.",
+      "actif": false
+    },
+    {
+      "id": "lola-r05",
+      "type": "service",
+      "portee": "tout",
+      "valeur": "verre_d_abord",
+      "texte": "Quand un bon accord existe au verre, le proposer en premier.",
+      "actif": false
+    }
+  ]
+}

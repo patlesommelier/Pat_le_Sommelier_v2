@@ -1,0 +1,238 @@
+{
+  "id": "lola",
+  "nom": "Lola",
+  "couleur": "#BA4037",
+  "couleur_claire": "#FBF3F2",
+  "logo_url": "/restaurants/lola/logo.png",
+  "accroche": "Bienvenue chez Lola,|nous vous aidons à choisir votre vin",
+  "police_titres": "Lato",
+  "fichiers": {
+    "menu": "menu.xlsx",
+    "carte": [
+      "carte_vins_1.xlsx",
+      "carte_vins_2.xlsx"
+    ]
+  },
+  "noms_courts": [
+    [
+      "Carpaccio",
+      "Carpaccio de bœuf"
+    ],
+    [
+      "Émincé de bar",
+      "Émincé de bar"
+    ],
+    [
+      "Scampis",
+      "Scampis tempura"
+    ],
+    [
+      "Cuisses de grenouilles",
+      "Grenouilles"
+    ],
+    [
+      "Assiette d'huîtres",
+      "Huîtres n°3"
+    ],
+    [
+      "Belles moules",
+      "Moules à l’ail"
+    ],
+    [
+      "Croquettes au fromage",
+      "Croquettes fromage"
+    ],
+    [
+      "Croquettes aux crevettes",
+      "Croquettes crevettes"
+    ],
+    [
+      "Escargots",
+      "Escargots"
+    ],
+    [
+      "Nems",
+      "Nems"
+    ],
+    [
+      "Fraîcheur de tourteau",
+      "Tourteau"
+    ],
+    [
+      "Belle tranche de foie gras",
+      "Foie gras"
+    ],
+    [
+      "Ravioles de homard",
+      "Ravioles de homard"
+    ],
+    [
+      "Filet de bar",
+      "Bar rôti"
+    ],
+    [
+      "Tataki de thon",
+      "Tataki de thon"
+    ],
+    [
+      "Cabillaud",
+      "Cabillaud"
+    ],
+    [
+      "Solettes",
+      "Solettes meunière"
+    ],
+    [
+      "Tartare de thon",
+      "Tartare de thon"
+    ],
+    [
+      "Risotto",
+      "Risotto champignons"
+    ],
+    [
+      "Belle assiette de légumes",
+      "Légumes au miso"
+    ],
+    [
+      "Tagliolini",
+      "Tagliolini sauge"
+    ],
+    [
+      "Volaille",
+      "Volaille morilles"
+    ],
+    [
+      "Vol-au-vent",
+      "Vol-au-vent"
+    ],
+    [
+      "Ris de veau",
+      "Ris de veau"
+    ],
+    [
+      "Tartare de bœuf",
+      "Tartare de bœuf"
+    ],
+    [
+      "Filet pur de bœuf Simmental, sauce poivre",
+      "Filet pur poivre vert"
+    ],
+    [
+      "Filet pur de bœuf Simmental, sauce morilles",
+      "Filet pur morilles"
+    ],
+    [
+      "Filet pur de bœuf Simmental, sauce béarnaise",
+      "Filet pur béarnaise"
+    ],
+    [
+      "Crème brûlée",
+      "Crème brûlée"
+    ],
+    [
+      "Traditionnelle dame blanche",
+      "Dame blanche"
+    ],
+    [
+      "Moelleux au chocolat",
+      "Moelleux chocolat"
+    ],
+    [
+      "Café glacé",
+      "Café glacé"
+    ],
+    [
+      "Duo de sorbets",
+      "Sorbets"
+    ],
+    [
+      "Île flottante",
+      "Île flottante"
+    ],
+    [
+      "Crumble",
+      "Crumble pommes"
+    ],
+    [
+      "Profiterole",
+      "Profiterole pistache"
+    ],
+    [
+      "Mille-feuille",
+      "Mille-feuille"
+    ],
+    [
+      "Colonel",
+      "Colonel"
+    ],
+    [
+      "Assiette de 3 fromages",
+      "3 fromages"
+    ]
+  ],
+  "sections": {
+    "L-B01": "Loire",
+    "L-B02": "Loire",
+    "L-B03": "Loire",
+    "L-B04": "Bordeaux",
+    "L-B05": "Bourgogne",
+    "L-B06": "Bourgogne",
+    "L-B07": "Bourgogne",
+    "L-B08": "Bourgogne",
+    "L-B09": "Bourgogne",
+    "L-B10": "Bourgogne",
+    "L-B11": "Bourgogne",
+    "L-B12": "Bourgogne",
+    "L-B13": "Bourgogne",
+    "L-B14": "Rhône & Sud",
+    "L-B15": "Rhône & Sud",
+    "L-B16": "Rhône & Sud",
+    "L-B17": "Italie & Espagne",
+    "L-B18": "Italie & Espagne",
+    "L-B19": "Italie & Espagne",
+    "L-B20": "Italie & Espagne",
+    "L-B21": "Bourgogne",
+    "L-D01": "Vin doux",
+    "L-R01": "Beaujolais",
+    "L-R02": "Beaujolais",
+    "L-R03": "Beaujolais",
+    "L-R04": "Bourgogne",
+    "L-R05": "Bourgogne",
+    "L-R06": "Bourgogne",
+    "L-R07": "Bourgogne",
+    "L-R08": "Bourgogne",
+    "L-R09": "Bourgogne",
+    "L-R10": "Loire",
+    "L-R11": "Loire",
+    "L-R12": "Rhône",
+    "L-R13": "Rhône",
+    "L-R14": "Rhône",
+    "L-R15": "Rhône",
+    "L-R16": "Bordeaux",
+    "L-R17": "Bordeaux",
+    "L-R18": "Bordeaux",
+    "L-R19": "Bordeaux",
+    "L-R20": "Bordeaux",
+    "L-R21": "Bordeaux",
+    "L-R22": "Bordeaux",
+    "L-R23": "Bordeaux",
+    "L-R24": "Bordeaux",
+    "L-R25": "Bordeaux",
+    "L-R26": "Bordeaux",
+    "L-R27": "Bordeaux",
+    "L-R28": "Bordeaux",
+    "L-R29": "Bordeaux",
+    "L-R30": "Italie",
+    "L-R31": "Italie",
+    "L-R32": "Italie",
+    "L-R33": "Italie",
+    "L-R34": "Italie",
+    "L-R35": "Italie",
+    "L-R36": "Espagne, Portugal & Uruguay",
+    "L-R37": "Espagne, Portugal & Uruguay",
+    "L-R38": "Espagne, Portugal & Uruguay",
+    "L-R39": "Espagne, Portugal & Uruguay",
+    "L-R40": "Bordeaux"
+  }
+}

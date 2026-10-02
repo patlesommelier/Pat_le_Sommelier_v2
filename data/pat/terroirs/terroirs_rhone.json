@@ -1,0 +1,1068 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "rhone",
+  "region_label": "Rhône",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_rhone_vPat.xlsx",
+  "built_at": "2026-05-15T08:32:29+00:00",
+  "count": 41,
+  "items": [
+    {
+      "id": "cote-rotie",
+      "nom": "Côte-Rôtie AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Viognier (max 20%)"
+      ],
+      "altitude": "200-325m",
+      "sols": "Schistes micacés (Côte Brune)|Granite décomposé arzelle (Côte Blonde)",
+      "caracteristiques_rapides": "Coteaux abrupts en rive droite. Côte Brune masculine et structurée, Côte Blonde florale. Co-vinification facultative avec Viognier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Une des seules appellations en France où il n'y a pas de mauvais vin.",
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "reference",
+        "coteaux"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "condrieu",
+      "nom": "Condrieu AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Viognier"
+      ],
+      "altitude": "150-300m",
+      "sols": "Granite|arzelle|sables granitiques",
+      "caracteristiques_rapides": "Mono-cépage Viognier. Coteaux extrêmes plein sud. Aromatique abricot/violette, parfois sucre résiduel. Quasi-disparition dans les années 1960.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Vins compliqués à produire qui peuvent être d'une rare finesse quand ils sontr produits dans un style léger.",
+      "tags": [
+        "rhone-nord",
+        "condrieu",
+        "viognier",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "chateau-grillet",
+      "nom": "Château-Grillet AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Viognier"
+      ],
+      "altitude": "200-280m",
+      "sols": "Granite|sables granitiques",
+      "caracteristiques_rapides": "Plus petite AOC mono-domaine de France (3,5 ha). Propriété d'Artémis (François Pinault) depuis 2011. Style austère, longue garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "mono-domaine",
+        "viognier",
+        "artemis"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "saint-joseph",
+      "nom": "Saint-Joseph AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "150-350m",
+      "sols": "Granite|micaschiste|gneiss",
+      "caracteristiques_rapides": "Très large appellation s'étirant sur 50 km de Cornas à Condrieu. Hétérogène. Rouge majoritaire, blanc remarquable au sud (Mauves, Tournon).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Le pire et le meilleur.",
+      "tags": [
+        "rhone-nord",
+        "saint-joseph",
+        "granite",
+        "hetero"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "hermitage",
+      "nom": "Hermitage AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "120-340m",
+      "sols": "Granite|loess|cailloux roulés alpins",
+      "caracteristiques_rapides": "Colline mythique surplombant Tain. Mosaïque de climats (Bessards, Méal, Greffieux, Hermite, Beaume, Pavillon, Murets, Rocoules). Rouge structuré, blanc d'exception et garde très longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Un des plus grand terroir de France.",
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "reference-absolue",
+        "colline"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "crozes-hermitage",
+      "nom": "Crozes-Hermitage AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "100-300m",
+      "sols": "Granite (nord, Larnage)|cailloux et loess (sud, plaine)",
+      "caracteristiques_rapides": "Plus grande AOC du Rhône Nord. Deux profils : nord granitique (Gervans, Larnage) plus tendu, sud alluvial plus généreux. Renaissance qualitative depuis Graillot.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Le pire et le meilleur, beaucoup de types de terroirs différents sur une seule appellation.",
+      "tags": [
+        "rhone-nord",
+        "crozes",
+        "granite",
+        "alluvions",
+        "graillot"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cornas",
+      "nom": "Cornas AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "100-380m",
+      "sols": "Granite décomposé|gore",
+      "caracteristiques_rapides": "Mono-cépage Syrah. Amphithéâtre exposé sud. Sol granitique. Vins denses, savoureux, longs de garde. Renaissance tirée par Clape, Allemand, Robert Michel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Très belle appellation avec de très grands vins de garde.",
+      "tags": [
+        "rhone-nord",
+        "cornas",
+        "syrah",
+        "granite",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "saint-peray",
+      "nom": "Saint-Péray AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "150-400m",
+      "sols": "Granite|calcaire-marno|loess",
+      "caracteristiques_rapides": "AOC blanche uniquement (tranquille et effervescente méthode trad). Renaissance grâce à Voge, Tunnel, Chapoutier. Vins droits, salins.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "saint-peray",
+        "blancs",
+        "effervescent"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "chateauneuf-du-pape",
+      "nom": "Châteauneuf-du-Pape AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "Counoise",
+        "13 cépages autorisés"
+      ],
+      "altitude": "100-130m",
+      "sols": "Galets roulés (La Crau, Mont-Redon)|sables (Pignan, Rayas)|argilo-calcaire|safres",
+      "caracteristiques_rapides": "Première AOC de France (1936). Mosaïque de sols. Rouge dominant, blanc en progression. 13 cépages autorisés. Diversité de styles unique.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Avec le changement climatique, les terroirs plus chauds classiques produisent aujourd'hui souvent des vins trop puissants et alcooleux. Les meilleurs vins de l'appellation ont tendance à venir des terroirs plus frais proche de Rayas.",
+      "tags": [
+        "rhone-sud",
+        "chateauneuf",
+        "reference-absolue",
+        "galets",
+        "13-cepages"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "gigondas",
+      "nom": "Gigondas AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre"
+      ],
+      "altitude": "100-500m",
+      "sols": "Calcaire|grès jurassiques|argilo-calcaire (Dentelles de Montmirail)",
+      "caracteristiques_rapides": "Adossé aux Dentelles de Montmirail. Altitude variable, fraîcheur. Rouge dominant, AOC blanc depuis 2023.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": "Belle appellation.",
+      "tags": [
+        "rhone-sud",
+        "gigondas",
+        "dentelles",
+        "altitude"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "vacqueyras",
+      "nom": "Vacqueyras AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre"
+      ],
+      "altitude": "60-300m",
+      "sols": "Galets roulés|safres|argilo-calcaire",
+      "caracteristiques_rapides": "Voisin de Gigondas, plus chaud. Profil plus généreux, fruité. Bon rapport qualité-prix.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "vacqueyras",
+        "qualite-prix"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "rasteau",
+      "nom": "Rasteau AOC (rouge)",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre"
+      ],
+      "altitude": "150-400m",
+      "sols": "Argilo-calcaire|marnes|safres",
+      "caracteristiques_rapides": "AOC depuis 2010 (auparavant CDR Villages). Aussi AOC pour les VDN (Grenache fortifié) historique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "rasteau",
+        "vdn"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cairanne",
+      "nom": "Cairanne AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "100-450m",
+      "sols": "Argilo-calcaire|safres|galets",
+      "caracteristiques_rapides": "AOC depuis 2016. Diversité de sols et altitudes. Excellent rapport qualité-prix tirée par Richaud, Oratoire Saint-Martin, Brusset.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "cairanne",
+        "qualite-prix",
+        "richaud"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "beaumes-de-venise",
+      "nom": "Beaumes-de-Venise AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre"
+      ],
+      "altitude": "100-400m",
+      "sols": "Trias rouge|argilo-calcaire|safres",
+      "caracteristiques_rapides": "AOC rouge depuis 2005, distincte de Muscat de BdV. Particularité géologique : sols rouges du Trias unique en France.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": "Belle particularité géologique, un terroir d'avenir.",
+      "tags": [
+        "rhone-sud",
+        "beaumes-de-venise",
+        "trias"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "muscat-bdv",
+      "nom": "Muscat de Beaumes-de-Venise AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat à petits grains blancs",
+        "Muscat noir"
+      ],
+      "altitude": "100-400m",
+      "sols": "Argilo-calcaire|safres|trias",
+      "caracteristiques_rapides": "VDN historique (vin doux naturel) à base de Muscat. Aromatique fleur d'oranger, miel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "muscat",
+        "vdn",
+        "beaumes-de-venise"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "lirac",
+      "nom": "Lirac AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "blancs"
+      ],
+      "altitude": "30-150m",
+      "sols": "Galets roulés|sables|argile",
+      "caracteristiques_rapides": "Rive droite face à CDP. Trois couleurs autorisées. Profil fruité, parfois proche de CDP à prix moindre.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "lirac",
+        "rive-droite"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "tavel",
+      "nom": "Tavel AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Cinsault",
+        "Syrah",
+        "Mourvèdre",
+        "Clairette"
+      ],
+      "altitude": "100-150m",
+      "sols": "Galets roulés|sables|argile",
+      "caracteristiques_rapides": "Seule AOC française exclusivement rosé. Profil intense, gastronomique. Garde possible. Référence : Mordorée, Aquéria.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Très belle appallation en rosé, mais des vins de qualité variables.",
+      "tags": [
+        "rhone-sud",
+        "tavel",
+        "rose",
+        "gastronomique"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "vinsobres",
+      "nom": "Vinsobres AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre"
+      ],
+      "altitude": "200-500m",
+      "sols": "Argilo-calcaire|sables",
+      "caracteristiques_rapides": "AOC depuis 2006. Altitude > 200m donne fraîcheur. Profil élégant.",
+      "niveau_reference": 3,
+      "ranking_pat": null,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "vinsobres",
+        "altitude"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cdr",
+      "nom": "Côtes du Rhône AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône (régionale)",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault",
+        "blancs"
+      ],
+      "altitude": "0-500m",
+      "sols": "Très variés (galets, argilo-calcaire, sables, schistes)",
+      "caracteristiques_rapides": "AOC régionale, ~50% du volume Rhône. Très inégale en qualité, mais quelques pépites de domaines sérieux.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": "Très variable en qualité",
+      "tags": [
+        "rhone",
+        "cdr",
+        "regionale",
+        "volume"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cdr-villages",
+      "nom": "Côtes du Rhône Villages AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "100-500m",
+      "sols": "Argilo-calcaire|safres|galets",
+      "caracteristiques_rapides": "Niveau intermédiaire au-dessus du CDR. 22 villages avec mention possible (Sablet, Séguret, etc.). Rouge majoritaire.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": "Très variable en qualité",
+      "tags": [
+        "rhone-sud",
+        "cdr-villages",
+        "sablet",
+        "seguret"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "grignan",
+      "nom": "Grignan-les-Adhémar AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Carignan",
+        "blancs"
+      ],
+      "altitude": "100-400m",
+      "sols": "Argilo-calcaire|sables",
+      "caracteristiques_rapides": "AOC septentrionale du Sud (anciennement Coteaux du Tricastin, renommée 2010 après Fukushima). Profil frais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "grignan",
+        "tricastin"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "costieres-de-nimes",
+      "nom": "Costières de Nîmes AOC",
+      "type": "appellation",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "blancs"
+      ],
+      "altitude": "20-150m",
+      "sols": "Galets roulés|sables marins",
+      "caracteristiques_rapides": "Ancrée entre Rhône et Méditerranée. Galets siliceux. Rouges et rosés en majorité. AOC du Rhône depuis 2004.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "costieres",
+        "galets",
+        "mediterranee"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cote-brune",
+      "nom": "Côte Brune (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "200-325m",
+      "sols": "Schistes micacés riches en oxydes de fer",
+      "caracteristiques_rapides": "Versant nord-est de Côte-Rôtie. Sols sombres ferreux donnent une Syrah dense, charpentée, longue de garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "cote-brune",
+        "schiste",
+        "fer"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cote-blonde",
+      "nom": "Côte Blonde (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Viognier"
+      ],
+      "altitude": "200-325m",
+      "sols": "Granite décomposé arzelle clair",
+      "caracteristiques_rapides": "Versant sud-ouest de Côte-Rôtie. Sols clairs granitiques donnent une Syrah florale, élégante, plus précoce.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "cote-blonde",
+        "granite"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "la-landonne",
+      "nom": "La Landonne (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "230-310m",
+      "sols": "Schistes micacés ferreux Côte Brune",
+      "caracteristiques_rapides": "Climat emblématique de Côte Brune. Cuvée Guigal La Landonne (mono-parcellaire, 100% Syrah, élevage 42 mois fûts neufs). Aussi Rostaing, Jamet, Ogier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "landonne",
+        "guigal",
+        "culte"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "la-mouline",
+      "nom": "La Mouline (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Viognier"
+      ],
+      "altitude": "200-260m",
+      "sols": "Granite arzelle Côte Blonde",
+      "caracteristiques_rapides": "Climat de Côte Blonde. Cuvée Guigal La Mouline (Syrah + ~10% Viognier co-vinifié). Style très floral, sensuel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "mouline",
+        "guigal",
+        "culte"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "la-turque",
+      "nom": "La Turque (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Viognier"
+      ],
+      "altitude": "230-300m",
+      "sols": "Mixte schiste/granite (zone de transition)",
+      "caracteristiques_rapides": "Climat à la jonction Côte Brune/Côte Blonde. Cuvée Guigal La Turque (Syrah + ~5% Viognier). Profil entre les deux extrêmes.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "turque",
+        "guigal",
+        "culte"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "la-chatillonne",
+      "nom": "La Chatillonne (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Viognier"
+      ],
+      "altitude": "220-280m",
+      "sols": "Granite Côte Blonde",
+      "caracteristiques_rapides": "Climat de Côte Blonde, exploitée par Vidal-Fleury. Style proche de La Mouline, plus accessible.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cote-rotie",
+        "chatillonne",
+        "vidal-fleury"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "les-bessards",
+      "nom": "Les Bessards (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "180-340m",
+      "sols": "Granite décomposé pur, plein sud",
+      "caracteristiques_rapides": "Climat le plus pentu et le plus chaud d'Hermitage. Donne la cuvée la plus dense, charpentée. Cœur des assemblages Chave et Chapoutier (Le Pavillon).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "bessards",
+        "granite",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "le-meal",
+      "nom": "Le Méal (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "180-300m",
+      "sols": "Cailloux roulés alpins sur loess",
+      "caracteristiques_rapides": "Climat central d'Hermitage. Profil charnu, sensuel. Important dans Chave, Chapoutier (Le Méal), Sorrel (Le Gréal).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "meal",
+        "cailloux"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "les-greffieux",
+      "nom": "Les Greffieux (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne"
+      ],
+      "altitude": "150-280m",
+      "sols": "Loess|cailloux roulés alpins",
+      "caracteristiques_rapides": "Climat central-bas d'Hermitage. Profil élégant, parfumé. Souvent en assemblage. Chapoutier (Les Greffieux), Sorrel (Le Gréal).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "greffieux",
+        "loess"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "l-ermite",
+      "nom": "L'Ermite (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne",
+        "Roussanne"
+      ],
+      "altitude": "300-340m",
+      "sols": "Granite|sables granitiques",
+      "caracteristiques_rapides": "Climat le plus haut de la colline (autour de la chapelle). Profil élégant, frais. Cuvée Chapoutier L'Ermite (rouge et blanc).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "ermite",
+        "chapelle",
+        "altitude"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "le-pavillon",
+      "nom": "Le Pavillon (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "200-280m",
+      "sols": "Granite décomposé Bessards",
+      "caracteristiques_rapides": "Climat de Chapoutier (Bessards historique). Vendangé tard, vinification spécifique. Sommet du domaine.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "pavillon",
+        "chapoutier"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "les-murets",
+      "nom": "Les Murets (climat)",
+      "type": "climat",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Marsanne",
+        "Roussanne",
+        "Syrah"
+      ],
+      "altitude": "150-280m",
+      "sols": "Cailloux roulés alpins|loess",
+      "caracteristiques_rapides": "Climat est d'Hermitage. Surtout reconnu pour les blancs (Chave, Sorrel). Donne des Marsanne très ageworthy.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "hermitage",
+        "murets",
+        "blancs"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "sainte-epine",
+      "nom": "Sainte-Épine (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "180-300m",
+      "sols": "Granite|micaschiste",
+      "caracteristiques_rapides": "Lieu-dit de Saint-Joseph (Saint-Jean-de-Muzols). Vieilles vignes. Cuvées de référence : Faurie, Aurélien Chatagnier.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "saint-joseph",
+        "sainte-epine",
+        "granite"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "les-granits",
+      "nom": "Les Granits (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Marsanne"
+      ],
+      "altitude": "200-300m",
+      "sols": "Granite affleurant",
+      "caracteristiques_rapides": "Lieu-dit de Saint-Joseph (Saint-Jean-de-Muzols). Marque déposée par Chapoutier. Granite pur, profil tendu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "saint-joseph",
+        "granits",
+        "chapoutier"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "reynard",
+      "nom": "Reynard (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "180-380m",
+      "sols": "Granite décomposé gore",
+      "caracteristiques_rapides": "Lieu-dit majeur de Cornas. Cuvée Allemand Reynard (référence absolue de Cornas moderne).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cornas",
+        "reynard",
+        "allemand",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "chaillot",
+      "nom": "Chaillot (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Nord",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "180-380m",
+      "sols": "Granite décomposé gore",
+      "caracteristiques_rapides": "Autre lieu-dit majeur de Cornas. Cuvée Allemand Chaillot, plus structurée et fermée jeune que Reynard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-nord",
+        "cornas",
+        "chaillot",
+        "allemand"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "la-crau",
+      "nom": "La Crau (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Mourvèdre",
+        "Syrah"
+      ],
+      "altitude": "100-130m",
+      "sols": "Galets roulés alpins sur argile rouge",
+      "caracteristiques_rapides": "Plateau emblématique de Châteauneuf, sols couverts de galets roulés (réflecteurs thermiques de jour, restitution la nuit). Vieux Télégraphe est l'expression historique.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "chateauneuf",
+        "crau",
+        "galets",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "pignan",
+      "nom": "Pignan (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache"
+      ],
+      "altitude": "80-120m",
+      "sols": "Sables fins (et non galets)",
+      "caracteristiques_rapides": "Lieu-dit de Châteauneuf au sols sableux. Donne au Grenache une expression aromatique éthérée. Cœur de Rayas.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "chateauneuf",
+        "pignan",
+        "sables",
+        "rayas",
+        "reference"
+      ],
+      "source": "guides publics"
+    },
+    {
+      "id": "cabrieres",
+      "nom": "Cabrières (lieu-dit)",
+      "type": "lieu-dit",
+      "region": "Vallée du Rhône",
+      "sous_region": "Rhône Sud",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Mourvèdre",
+        "Syrah"
+      ],
+      "altitude": "100-150m",
+      "sols": "Galets roulés sur argile rouge",
+      "caracteristiques_rapides": "Lieu-dit nord de Châteauneuf, voisin de Mont-Redon. Profil plus frais que La Crau.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "rhone-sud",
+        "chateauneuf",
+        "cabrieres",
+        "galets"
+      ],
+      "source": "guides publics"
+    }
+  ]
+}

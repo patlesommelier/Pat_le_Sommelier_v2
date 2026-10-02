@@ -1,0 +1,162 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  background: #EDEAE6;
+  color: #1A1A1A;
+  font-family: Lato, 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; }
+button { font: inherit; }
+
+:root { --encre: #1A1A1A; --discret: #6B6B6B; --bord: #DDDDDD; --filet: #EEEEEE; }
+
+/* ── Écran mobile ── */
+.ecran {
+  height: 100dvh; max-width: 480px; margin: 0 auto; background: #FFFFFF;
+  display: flex; flex-direction: column; overflow: hidden; position: relative;
+  box-shadow: 0 0 40px rgba(0,0,0,0.08);
+}
+.defile { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
+
+/* ── Bandeau ── */
+.bandeau { flex-shrink: 0; background: var(--marque); color: #FFFFFF; position: relative; z-index: 2; }
+.bandeau-haut { display: flex; align-items: center; gap: 12px; padding: 18px 20px 18px; }
+.bandeau-haut .logo { flex-grow: 1; display: flex; align-items: center; }
+.bandeau-haut .logo img { display: block; height: 50px; width: auto; }
+.bandeau.grand .bandeau-haut { padding-bottom: 12px; }
+.bandeau.grand .bandeau-haut .logo img { height: 73px; }
+.retour {
+  width: 32px; height: 40px; margin: 0 -6px 0 -8px; display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.85); flex-shrink: 0; text-decoration: none;
+}
+.bouton-carte {
+  display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid #FFFFFF;
+  color: #FFFFFF; text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; flex-shrink: 0; white-space: nowrap;
+}
+.accueil-hero { padding: 10px 20px 28px; display: flex; flex-direction: column; gap: 22px; }
+.accueil-texte { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.accueil-titre { font-size: 27px; font-weight: 700; line-height: 1.25; margin-top: 18px; letter-spacing: 0.3px; }
+.accueil-titre span { display: block; font-weight: 400; font-size: 21px; }
+.filet-blanc { width: 48px; height: 1px; background: #FFFFFF; }
+.accueil-question { font-size: 18px; font-style: italic; }
+.silhouettes { display: block; margin: 4px -20px -28px; width: calc(100% + 40px); height: 70px; }
+
+/* ── Titres et sections ── */
+.contenu { padding: 28px 20px 24px; display: flex; flex-direction: column; gap: 26px; }
+.titre-page { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
+.titre-page h1 { margin: 0; font-size: 30px; font-weight: 400; }
+.titre-page p { margin: 0; font-size: 15px; font-style: italic; color: var(--discret); }
+.filet { width: 48px; height: 1px; background: var(--marque); margin: 0 auto; }
+.filet.court { width: 20px; }
+.titre-section { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+.titre-section span { font-size: 14px; letter-spacing: 2px; text-transform: uppercase; }
+.boite { display: flex; flex-direction: column; gap: 16px; padding: 20px 6px; border: 1px solid var(--bord); }
+
+/* ── Bulles de plats ── */
+.bulles { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
+.bulle {
+  display: flex; align-items: center; height: 30px; padding: 0 7px; border: 1px solid #BDBDBD;
+  color: var(--encre); text-decoration: none; font-size: 11px; white-space: nowrap;
+}
+.bulle:hover, .bulle:focus-visible { border-color: var(--marque); color: var(--marque); }
+
+/* ── Cartes vin (Propositions) ── */
+.carte-vin { display: flex; gap: 14px; padding: 14px; border: 1px solid var(--bord); text-decoration: none; color: var(--encre); }
+.carte-vin .infos { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.carte-vin .nom { font-size: 16px; font-weight: 700; line-height: 1.25; }
+.carte-vin .sous { font-size: 13px; color: var(--discret); }
+.carte-vin .pourquoi { font-size: 14px; line-height: 1.45; }
+.prix { font-weight: 700; color: var(--marque); white-space: nowrap; }
+.etiquette {
+  object-fit: contain; padding: 3px; background: #FFFFFF; border: 1px solid var(--filet); flex-shrink: 0; display: block;
+}
+.etiquette-vide {
+  flex-shrink: 0; border: 1px solid var(--filet); background: var(--marque-claire); display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 8px; color: var(--discret); font-size: 12px;
+}
+.note-discrete { font-size: 14px; color: var(--discret); text-align: center; font-style: italic; margin: 0; }
+.etat-vide { padding: 22px 16px; border: 1px dashed var(--bord); text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.bouton-plein { border: 0; background: var(--marque); color: #FFFFFF; padding: 10px 16px; font-weight: 700; cursor: pointer; }
+
+/* ── Fiche vin ── */
+.fiche-entete { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
+.fiche-entete .surtitre { font-size: 13px; letter-spacing: 2px; color: var(--marque); text-transform: uppercase; }
+.fiche-entete h1 { margin: 0; font-size: 30px; font-weight: 400; }
+.fiche-entete .lieu { font-size: 15px; font-style: italic; color: var(--discret); }
+.pastilles { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
+.pastille { padding: 6px 12px; border: 1px solid var(--bord); font-size: 13px; }
+.texte { font-size: 15px; line-height: 1.6; text-align: justify; margin: 0; white-space: pre-line; }
+.encadre { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 16px; border: 1px solid var(--bord); text-align: center; }
+.encadre .titre { font-size: 12px; letter-spacing: 2px; color: var(--marque); text-transform: uppercase; }
+.encadre p { margin: 0; font-size: 15px; line-height: 1.5; font-style: italic; }
+.ligne-prix { display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid var(--bord); }
+.ligne-prix .gauche { display: flex; flex-direction: column; gap: 2px; }
+.ligne-prix .gauche span + span { font-size: 13px; color: var(--discret); }
+.ligne-prix .prix { font-size: 22px; }
+.profil { display: flex; flex-direction: column; gap: 12px; }
+.jauge { display: flex; align-items: center; gap: 12px; }
+.jauge .libelle { width: 128px; font-size: 14px; color: var(--discret); }
+.jauge .barres { display: flex; gap: 4px; flex-grow: 1; }
+.jauge .barres span { flex-grow: 1; height: 5px; background: #E6E6E6; }
+.jauge .barres span.pleine { background: var(--marque); }
+.jauge .valeur { width: 28px; text-align: right; font-size: 13px; color: var(--discret); }
+
+/* ── Carte des vins : onglets ── */
+.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; }
+.onglet {
+  flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 52px;
+  cursor: pointer; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--discret);
+  border: 0; border-bottom: 2px solid transparent; background: none; padding: 0;
+}
+.onglet small { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.onglet[aria-selected='true'] { color: var(--marque); border-bottom-color: var(--marque); }
+.panneau { display: flex; flex-direction: column; padding: 4px 20px 24px; }
+.sous-titre { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--marque); padding: 18px 0 4px; }
+.ligne-vin { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--filet); color: var(--encre); text-decoration: none; }
+.ligne-vin .infos { display: flex; flex-direction: column; gap: 2px; flex-grow: 1; min-width: 0; }
+.ligne-vin .nom { font-size: 15px; font-weight: 700; line-height: 1.25; }
+.ligne-vin .sous { font-size: 13px; color: var(--discret); }
+.ligne-vin .prix { font-size: 15px; text-align: right; }
+.ligne-vin .prix small { display: block; font-weight: 400; font-size: 12px; color: var(--discret); }
+
+/* ── Barre « Demandez à Pat » ── */
+.barre-pat { flex-shrink: 0; padding: 12px 14px 16px; background: #FFFFFF; box-shadow: 0 -6px 18px rgba(0,0,0,0.10); position: relative; z-index: 4; }
+.barre-pat form {
+  display: flex; align-items: flex-end; gap: 10px; padding: 5px 6px 5px 5px; border-radius: 32px;
+  background: var(--marque-claire); border: 1.5px solid var(--marque);
+}
+.avatar-pat {
+  width: 54px; height: 54px; border-radius: 27px; border: 2px solid var(--marque); padding: 0; background: #FFFFFF;
+  display: flex; align-items: flex-end; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer;
+}
+.avatar-pat img { width: 42px; height: auto; display: block; }
+.barre-pat textarea {
+  flex-grow: 1; min-width: 0; min-height: 24px; max-height: 120px; field-sizing: content; resize: none; overflow-y: auto;
+  padding: 15px 0; box-sizing: content-box; background: transparent; border: 0; outline: none; color: var(--encre);
+  font-size: 17px; font-weight: 700; line-height: 1.4; font-family: inherit;
+}
+.barre-pat textarea::placeholder { color: #4A4A4A; opacity: 1; }
+.rond {
+  width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer;
+}
+.rond.secondaire { border: 1px solid #D9D2D0; background: #FFFFFF; color: var(--encre); }
+.rond.principal { border: 0; background: var(--marque); color: #FFFFFF; }
+.rond:disabled { opacity: 0.5; cursor: default; }
+
+/* ── Conversation avec Pat ── */
+.conversation {
+  position: absolute; inset: 0; z-index: 3; background: #FFFFFF;
+  display: flex; flex-direction: column; padding-bottom: 104px;
+}
+.conversation-haut { display: flex; align-items: center; gap: 10px; padding: 14px 16px; border-bottom: 1px solid var(--filet); }
+.conversation-haut strong { flex-grow: 1; }
+.conversation-haut button { border: 0; background: none; font-size: 15px; color: var(--discret); cursor: pointer; padding: 8px; }
+.fil { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.message { max-width: 86%; padding: 10px 14px; line-height: 1.45; font-size: 15px; white-space: pre-line; }
+.message.client { align-self: flex-end; background: var(--marque); color: #FFFFFF; border-radius: 16px 16px 4px 16px; }
+.message.pat { align-self: flex-start; background: var(--marque-claire); border-radius: 16px 16px 16px 4px; }
+.message .vins-cites { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+.message .vins-cites a { font-size: 12px; padding: 5px 8px; border: 1px solid var(--marque); color: var(--marque); text-decoration: none; background: #FFFFFF; }
+.message.erreur { align-self: center; background: #FFF4E5; color: #6B4A00; border-radius: 8px; font-size: 14px; }

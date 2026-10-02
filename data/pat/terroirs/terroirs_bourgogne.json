@@ -1,0 +1,2532 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "bourgogne",
+  "region_label": "Bourgogne",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_bourgogne_vPat.xlsx",
+  "built_at": "2026-05-09T18:33:28+00:00",
+  "count": 110,
+  "items": [
+    {
+      "id": "bgn-gc-bienvenues-batard",
+      "nom": "Bienvenues-Bâtard-Montrachet",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Marnes argileuses",
+      "caracteristiques_rapides": "3,7 ha. Le plus petit et le plus aérien des Bâtard. Carillon, Leflaive, Ramonet, Sauzet, Bachelard.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "puligny",
+        "chardonnay",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-batard-montrachet",
+      "nom": "Bâtard-Montrachet",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Marnes argileuses, sols profonds",
+      "caracteristiques_rapides": "11,9 ha à cheval sur Puligny et Chassagne. Plus puissant et gras que Montrachet, parfois plus accessible jeune. Leflaive, Ramonet, Niellon, Pierre Morey, Drouhin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "puligny",
+        "chassagne",
+        "chardonnay",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-montee-tonnerre",
+      "nom": "Chablis 1er Cru Montée de Tonnerre",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "63,5 ha. Le plus grand et le plus prestigieux des 1ers crus de Chablis. Voisin direct des grands crus. Raveneau, William Fèvre, Drouhin, Pinson.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "premier-cru",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-les-clos",
+      "nom": "Chablis Grand Cru Les Clos",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens à exogyra virgula",
+      "caracteristiques_rapides": "26 ha. Le plus grand et souvent considéré comme le plus complet des 7 climats du Chablis Grand Cru. Profondeur minérale, longue garde. Raveneau, Dauvissat, William Fèvre, Christian Moreau (Clos des Hospices).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "chablis",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-les-preuses",
+      "nom": "Chablis Grand Cru Les Preuses",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "11,4 ha. Souvent le plus séduisant et accessible jeune des grands crus chablisiens. Dauvissat, Fèvre, Drouhin, Louis Michel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru",
+        "accessible"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-valmur",
+      "nom": "Chablis Grand Cru Valmur",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "11,7 ha. Profondeur, structure tannique blanche, garde longue. Raveneau, Christian Moreau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-vaudesir",
+      "nom": "Chablis Grand Cru Vaudésir",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "16,2 ha. Le plus aérien et floral des grands crus de Chablis. Drouhin, Louis Michel, Fèvre, Moreau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chambertin",
+      "nom": "Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-300 m",
+      "sols": "Calcaires bajociens, sols caillouteux et argileux",
+      "caracteristiques_rapides": "12,9 ha. Le « roi des vins » selon Napoléon. Puissance, garde, structure. Rousseau, Trapet, Ponsot, Charlopin, Mortet, Leroy, Drouhin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "gevrey",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-beze",
+      "nom": "Chambertin-Clos de Bèze",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-300 m",
+      "sols": "Calcaires bajociens, sols caillouteux et argileux",
+      "caracteristiques_rapides": "15,4 ha. Jumeau historique de Chambertin (peut être étiqueté « Chambertin »). Souvent un poil plus aérien. Rousseau, Faiveley, Drouhin-Laroze, Bart, Bruno Clair.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "gevrey"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-amoureuses",
+      "nom": "Chambolle-Musigny 1er Cru Les Amoureuses",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens, sols superficiels",
+      "caracteristiques_rapides": "5,4 ha. Le 1er cru le plus mythique de Bourgogne, souvent considéré comme un grand cru de fait. Style aérien, parfumé. Roumier, Mugnier, de Vogüé, Groffier, Amiot-Servelle, Drouhin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "chambolle",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-caillerets-chassagne",
+      "nom": "Chassagne-Montrachet 1er Cru Les Caillerets",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-280 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "14,4 ha. Le 1er cru le plus prestigieux de Chassagne, voisin de Montrachet. Ramonet, Pillot, Bachelet-Ramonet, Marc Colin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chassagne",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chevalier-montrachet",
+      "nom": "Chevalier-Montrachet",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires fins, sols superficiels",
+      "caracteristiques_rapides": "7,4 ha. Plus haut, plus pauvre que Le Montrachet. Style plus tendu et minéral, parfois plus austère. Leflaive, Bouchard (La Cabotte), Niellon, Latour, Sauzet, d'Auvenay.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "puligny",
+        "chardonnay",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-tart",
+      "nom": "Clos de Tart",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-300 m",
+      "sols": "Calcaires de Comblanchien, sols caillouteux",
+      "caracteristiques_rapides": "7,5 ha de monopole intégral. Domaine du Clos de Tart (Artémis). L'un des très rares grands crus en monopole. Style ciselé.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "morey",
+        "artemis"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-saint-denis",
+      "nom": "Clos Saint-Denis",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-270 m",
+      "sols": "Calcaires bajociens et alluvions",
+      "caracteristiques_rapides": "6,6 ha. Plus aérien et fin que Clos de la Roche. Dujac, Amiot, Ponsot, Charlopin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "morey",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-corton-charlemagne",
+      "nom": "Corton-Charlemagne",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "270-330 m",
+      "sols": "Marnes blanches, calcaires bathoniens",
+      "caracteristiques_rapides": "52 ha. Le grand cru blanc le plus puissant de Bourgogne. Plus minéral et long que Corton blanc. Coche-Dury, Bonneau du Martray, Bouchard, Rapet, Leroy.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "aloxe",
+        "chardonnay",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-criots-batard",
+      "nom": "Criots-Bâtard-Montrachet",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Marnes argileuses",
+      "caracteristiques_rapides": "1,6 ha — le plus petit grand cru blanc de Bourgogne, intégralement à Chassagne. d'Auvenay, Belland, Fontaine-Gagnard, Hubert Lamy.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chassagne",
+        "chardonnay",
+        "rare"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-clos-saint-jacques",
+      "nom": "Gevrey-Chambertin 1er Cru Clos Saint-Jacques",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-300 m",
+      "sols": "Calcaires bajociens, sols caillouteux",
+      "caracteristiques_rapides": "6,7 ha. Considéré par beaucoup comme un grand cru de fait. Cinq propriétaires uniquement (Rousseau, Fourrier, Bruno Clair, Esmonin, Jadot). Style ample, profond, garde longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "gevrey",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-grands-echezeaux",
+      "nom": "Grands Échezeaux",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens, sols argilo-calcaires",
+      "caracteristiques_rapides": "9,1 ha. Plus structuré et plus profond qu'Échezeaux, parfois proche de Clos de Vougeot dans le caractère. Garde longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-griotte-chambertin",
+      "nom": "Griotte-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-285 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "2,7 ha — l'un des plus petits grands crus de Gevrey. Notes de griotte (cerise) caractéristiques. Drouhin, Fourrier, Duroché.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "fruite",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-la-romanee",
+      "nom": "La Romanée",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-285 m",
+      "sols": "Calcaires bajociens, sols caillouteux",
+      "caracteristiques_rapides": "0,84 ha — la plus petite AOC de France. Monopole du Comte Liger-Belair. Style très tendu, minéral, qui demande de la garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "liger-belair",
+        "vosne"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-la-tache",
+      "nom": "La Tâche",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires et marnes",
+      "caracteristiques_rapides": "6,06 ha de monopole DRC. Souvent considéré comme le « petit frère » de la Romanée-Conti, parfois plus immédiatement séduisant. Notes de violette et d'épices.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "drc",
+        "vosne"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-latricieres-chambertin",
+      "nom": "Latricières-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-300 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "7,4 ha. Voisin direct de Chambertin, mais sols plus pauvres et caillouteux. Style minéral, tendu, garde longue. Rossignol-Trapet, Faiveley, Camus, Duroché.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-le-montrachet",
+      "nom": "Le Montrachet",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "250-265 m",
+      "sols": "Marnes calcaires, sols caillouteux exposés est-sud-est",
+      "caracteristiques_rapides": "8 ha. Le grand cru blanc le plus mythique du monde. Profondeur, complexité, longévité. DRC (0,68 ha), Comtes Lafon, Leroy, Bouchard, Drouhin (Marquis de Laguiche), Ramonet.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "puligny",
+        "chassagne",
+        "chardonnay"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-mazis-chambertin",
+      "nom": "Mazis-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-300 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "9,1 ha. Le plus puissant des « satellites » de Chambertin. Mazis-Hauts plus fin que Mazis-Bas. Rousseau, Hospices (Madeleine Collignon), Faiveley, Charlopin, d'Auvenay.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-perrieres-meursault",
+      "nom": "Meursault 1er Cru Les Perrières",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "260-290 m",
+      "sols": "Calcaires durs, sols caillouteux",
+      "caracteristiques_rapides": "13,7 ha. Le plus minéral des 1ers crus de Meursault, candidat de longue date au grand cru. Coche-Dury, Roulot, Lafon, Pierre Morey, Sauzet.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "meursault",
+        "grand-cru-de-fait",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-musigny",
+      "nom": "Musigny",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires et marnes blanches",
+      "caracteristiques_rapides": "10,9 ha. Grand cru de Chambolle, l'un des plus fins de Bourgogne. Vogüé en propriétaire dominant (7 ha). Petite production de blanc (Vogüé).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "chambolle",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-saint-georges",
+      "nom": "Nuits-Saint-Georges 1er Cru Les Saint-Georges",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "7,5 ha. Le climat phare de Nuits, candidat de longue date au grand cru. Style profond, garde longue. Chevillon, Faiveley, Gouges, Thibault Liger-Belair.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "nuits-saint-georges",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-rugiens",
+      "nom": "Pommard 1er Cru Les Rugiens",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires et marnes rouges (« rugines »)",
+      "caracteristiques_rapides": "12,7 ha (Rugiens-Hauts + Rugiens-Bas). Candidat de longue date au grand cru. Rugiens-Bas considéré comme le meilleur. de Montille, Comte Armand, Hospices.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "pommard",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-puligny-village",
+      "nom": "Puligny-Montrachet",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "230-280 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "207 ha. 17 1ers crus + 4 grands crus. Référence absolue du Chardonnay minéral et tendu. Style ciselé, salin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "puligny",
+        "appellation",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-pucelles",
+      "nom": "Puligny-Montrachet 1er Cru Les Pucelles",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "6,8 ha. Voisin direct des Bâtard. Style très puligny : minéralité, tension, finesse. Leflaive, Carillon, Boyer-Martenot, Paul Pernot.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "puligny",
+        "premier-cru",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-richebourg",
+      "nom": "Richebourg",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens, sols rouges argilo-calcaires",
+      "caracteristiques_rapides": "8 ha. Le plus puissant des grands crus de Vosne. Profondeur tannique, plénitude, longue garde. DRC, Leroy, Méo-Camuzet, Anne Gros, Liger-Belair, Hudelot-Noëllat, Grivot, Gros Frère.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vosne",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-romanee-conti",
+      "nom": "Romanée-Conti",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens et bathoniens, marnes",
+      "caracteristiques_rapides": "1,8 ha de monopole DRC. Le climat le plus mythique du monde du vin. Profondeur, pureté aromatique, longévité quasi infinie.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "drc",
+        "vosne"
+      ],
+      "source": "lpv|inao|drc.eu"
+    },
+    {
+      "id": "bgn-gc-romanee-saint-vivant",
+      "nom": "Romanée-Saint-Vivant",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens et marnes profondes",
+      "caracteristiques_rapides": "9,4 ha. Le plus aérien des grands crus de Vosne. Finesse florale, structure soyeuse. DRC (5,3 ha), Leroy, Cathiard, Hudelot-Noëllat, Arnoux-Lachaux, Liger-Belair, Poisot.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vosne",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-ruchottes-chambertin",
+      "nom": "Ruchottes-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "300-320 m",
+      "sols": "Calcaires bathoniens, sols rocailleux",
+      "caracteristiques_rapides": "3,3 ha. Le plus haut grand cru de Gevrey, le plus minéral. Style tendu, minéralité crayeuse. Rousseau, Roumier, Marchand-Tawse.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "minerale",
+        "altitude"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-caillerets-volnay",
+      "nom": "Volnay 1er Cru Les Caillerets",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-290 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "14,3 ha. Le climat le plus prestigieux de Volnay, candidat au grand cru. Lafarge, d'Angerville, Bouchard, Pousse d'Or.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "volnay",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-vosne-village",
+      "nom": "Vosne-Romanée",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-300 m",
+      "sols": "Calcaires bajociens, sols caillouteux",
+      "caracteristiques_rapides": "159 ha. 14 1ers crus + 8 grands crus. La référence absolue du Pinot Noir au monde. Style profond, complexe, aromatique.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vosne",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-malconsorts",
+      "nom": "Vosne-Romanée 1er Cru Aux Malconsorts",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "5,9 ha. Voisin direct de La Tâche. Souvent considéré comme un grand cru de fait. Cathiard, de Montille, Hudelot-Noëllat, Lamarche.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-cros-parantoux",
+      "nom": "Vosne-Romanée 1er Cru Cros Parantoux",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens, sols rocailleux",
+      "caracteristiques_rapides": "1,01 ha. Climat ressuscité par Henri Jayer (qui en avait 0,72 ha). Désormais Méo-Camuzet (0,72 ha) et Emmanuel Rouget (0,29 ha). Vins légendaires, prix d'un GC.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vosne",
+        "jayer",
+        "grand-cru-de-fait"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-bonnes-mares",
+      "nom": "Bonnes-Mares",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires bajociens (Chambolle), marnes et calcaires blancs (Morey)",
+      "caracteristiques_rapides": "15,1 ha à cheval sur Chambolle et Morey. Plus structuré que Musigny, plus puissant. Vogüé, Roumier, Drouhin-Laroze, de Vogüé, Bart, Groffier.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "chambolle",
+        "morey"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-clos-mouches",
+      "nom": "Beaune 1er Cru Clos des Mouches",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Calcaires bathoniens, sols caillouteux",
+      "caracteristiques_rapides": "25,4 ha. Climat phare de Beaune, signature historique de Drouhin (production de référence en blanc et rouge). Aussi Jadot, Chanson.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "beaune",
+        "premier-cru",
+        "drouhin"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-greves",
+      "nom": "Beaune 1er Cru Les Grèves",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-280 m",
+      "sols": "Calcaires et alluvions, sols caillouteux",
+      "caracteristiques_rapides": "31,3 ha. Le plus grand 1er cru de Beaune. Bouchard (Vigne de l'Enfant Jésus), Jadot, Camille Giroud, Tollot-Beaut.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "beaune",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-vaillons",
+      "nom": "Chablis 1er Cru Vaillons",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "210 ha (incl. lieux-dits). Plus à l'ouest, exposition est, style un poil plus aérien. Raveneau, Dauvissat, Servin, Tribut.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-blanchot",
+      "nom": "Chablis Grand Cru Blanchot",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "12,7 ha. Plus à l'est, exposition plus chaude. Style ample, parfois plus mûr que les autres. Raveneau, Fèvre, Servin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-bougros",
+      "nom": "Chablis Grand Cru Bougros",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "12,6 ha. Le plus à l'ouest, parcelles parfois en pente raide. Côte Bouguerots (Fèvre) parmi les meilleures expressions.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chablis-grenouilles",
+      "nom": "Chablis Grand Cru Grenouilles",
+      "type": "climat",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "180-220 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "9,4 ha. Climat majoritairement détenu par La Chablisienne (cave coopérative, Château Grenouilles). Style salin et tendu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "grand-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-chambolle-village",
+      "nom": "Chambolle-Musigny",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Calcaires bajociens, sols superficiels",
+      "caracteristiques_rapides": "152 ha. 24 1ers crus + 2 grands crus (Musigny, Bonnes-Mares). Référence absolue de la finesse en Bourgogne. Style aérien, parfumé, féminin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chambolle",
+        "appellation",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-charmes-chambolle",
+      "nom": "Chambolle-Musigny 1er Cru Les Charmes",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "9 ha. Plus charnu et accessible jeune que Les Amoureuses. Roumier, Amiot-Servelle, Hudelot-Baillet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chambolle",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-chapelle-chambertin",
+      "nom": "Chapelle-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "275-285 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "5,4 ha. Plus aérien et floral que Chambertin. Trapet, Damoy, Drouhin-Laroze, Rossignol-Trapet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "floral"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-charmes-chambertin",
+      "nom": "Charmes-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-285 m",
+      "sols": "Calcaires et alluvions, plus argileux que Chambertin",
+      "caracteristiques_rapides": "30,8 ha (incl. Mazoyères). Le plus accessible des grands crus de Gevrey. Style charnu, fruité, garde plus courte. Bachelet, Roumier, Rousseau, Dujac, Magnien.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "charnu",
+        "accessible"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-chassagne-village",
+      "nom": "Chassagne-Montrachet",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "297 ha. 55 1ers crus (le plus grand nombre de la CdB) + 3 grands crus partagés avec Puligny. Production blanche dominante depuis 30 ans.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chassagne",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-vougeot",
+      "nom": "Clos de Vougeot",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-270 m",
+      "sols": "Calcaires bajociens haut, marnes et alluvions bas",
+      "caracteristiques_rapides": "50,6 ha. Plus grand grand cru de la CdN, partagé entre 80 propriétaires. Qualité très hétérogène : haut du clos > milieu > bas. Le « vrai » CdV est celui des hauteurs.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "grand-cru",
+        "heterogene"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-lambrays",
+      "nom": "Clos des Lambrays",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-310 m",
+      "sols": "Calcaires variés, sols caillouteux",
+      "caracteristiques_rapides": "8,8 ha quasi-monopole du Domaine des Lambrays (LVMH). Promu grand cru tardif (1981). Style aérien, parfumé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "morey",
+        "monopole",
+        "lvmh"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-corton",
+      "nom": "Corton",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "270-330 m",
+      "sols": "Marnes rouges (haut), calcaires bathoniens (milieu), oolithes (bas)",
+      "caracteristiques_rapides": "94 ha. Seul grand cru rouge de la Côte de Beaune. Climats hétérogènes (Bressandes, Renardes, Clos du Roi, Pougets, Maréchaudes, etc.). Quelques % en blanc. Bonneau du Martray, Tollot-Beaut, Faiveley, Chandon de Briailles, Rapet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "aloxe",
+        "grand-cru",
+        "heterogene"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-lavaut-saint-jacques",
+      "nom": "Gevrey-Chambertin 1er Cru Lavaut Saint-Jacques",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-300 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "9,5 ha. Voisin direct du Clos Saint-Jacques. Style un poil plus minéral. Trapet, Mortet, Duroché, Esmonin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-cazetiers",
+      "nom": "Gevrey-Chambertin 1er Cru Les Cazetiers",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-300 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "8,3 ha. Climat tendu et minéral, l'un des meilleurs 1ers crus de Gevrey. Bruno Clair, Faiveley, Rousseau (parcelle).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "premier-cru",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-la-grande-rue",
+      "nom": "La Grande Rue",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "1,65 ha. Monopole du Domaine François Lamarche. Promu en grand cru en 1992 (auparavant 1er cru). Encadré par La Tâche et Romanée-Conti.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "monopole",
+        "lamarche",
+        "vosne"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-mazoyeres-chambertin",
+      "nom": "Mazoyères-Chambertin",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-285 m",
+      "sols": "Argilo-calcaires, plus argileux que Chambertin",
+      "caracteristiques_rapides": "Inclus dans Charmes-Chambertin (peut s'appeler Charmes ou Mazoyères). Rare en étiquette dédiée. Perrot-Minot, Magnien.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gevrey"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-charmes-meursault",
+      "nom": "Meursault 1er Cru Charmes",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Calcaires bathoniens, sols profonds",
+      "caracteristiques_rapides": "31,1 ha. Le plus grand 1er cru de Meursault. Style charnu et beurré, plus accessible jeune que Perrières. Lafon, Roulot, Bouchard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "meursault",
+        "premier-cru",
+        "charnu"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-genevrieres",
+      "nom": "Meursault 1er Cru Genevrières",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "16,5 ha. Style intermédiaire entre Charmes et Perrières. Lafon, Bouchard, Faiveley, Pierre Morey.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "meursault",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-nuits-village",
+      "nom": "Nuits-Saint-Georges",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bajociens, alluvions",
+      "caracteristiques_rapides": "307 ha. 41 1ers crus, aucun grand cru (anomalie historique). Style structuré, garde longue, plus austère que Vosne. Les Saint-Georges en candidat au grand cru.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "nuits-saint-georges",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-vaucrains",
+      "nom": "Nuits-Saint-Georges 1er Cru Les Vaucrains",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "6,2 ha. Voisin direct des Saint-Georges. Style un poil plus austère et tannique. Chevillon, Gouges, Cathiard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "nuits-saint-georges",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-epenots",
+      "nom": "Pommard 1er Cru Les Épenots",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-280 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "16,2 ha (Grands + Petits). Style un poil plus aérien que Rugiens. Comte Armand (Clos des Épeneaux, monopole), de Courcel, Aleth Le Royer-Girardin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "pommard",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-pouilly-fuisse",
+      "nom": "Pouilly-Fuissé",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Mâconnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Calcaires bajociens, marnes",
+      "caracteristiques_rapides": "800 ha sur les communes de Vergisson, Solutré-Pouilly, Fuissé, Chaintré. 22 1ers crus depuis 2020 (première fois en Mâconnais). Style ample, minéral, montée en gamme nette. Guffens, Merlin, Ferret, Robert-Denogent.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "maconnais",
+        "premier-cru-recent",
+        "montee-gamme"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-combettes",
+      "nom": "Puligny-Montrachet 1er Cru Les Combettes",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-260 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "6,8 ha. Voisin de Charmes (Meursault). Style charnu pour un Puligny, plus mûr. Leflaive, Sauzet, Carillon.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puligny",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-folatieres",
+      "nom": "Puligny-Montrachet 1er Cru Les Folatières",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires bathoniens, sols caillouteux",
+      "caracteristiques_rapides": "17,6 ha. Le plus haut 1er cru de Puligny. Style minéral et tendu, parfois plus austère. Leflaive, Drouhin, Sauzet, Lambrays.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puligny",
+        "premier-cru",
+        "altitude"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-saint-aubin-village",
+      "nom": "Saint-Aubin",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "270-380 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "159 ha. 20 1ers crus dont En Remilly et Sous Roche Dumay. Voisin de Montrachet. Excellent rapport qualité-prix sur les blancs. Style ciselé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "saint-aubin",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-en-remilly",
+      "nom": "Saint-Aubin 1er Cru En Remilly",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "300-320 m",
+      "sols": "Calcaires bathoniens, sols caillouteux",
+      "caracteristiques_rapides": "10,9 ha. Voisin direct de Le Montrachet. Le 1er cru le plus prestigieux de Saint-Aubin. PYC Morey, Marc Colin, Hubert Lamy, Dujac.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "saint-aubin",
+        "premier-cru",
+        "altitude"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-volnay-village",
+      "nom": "Volnay",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bathoniens, marnes",
+      "caracteristiques_rapides": "215 ha. 29 1ers crus, aucun grand cru. Référence absolue du Pinot fin et aérien en Côte de Beaune. d'Angerville, Lafarge, de Montille, Comte Armand.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volnay",
+        "appellation",
+        "finesse"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-clos-chenes",
+      "nom": "Volnay 1er Cru Clos des Chênes",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-300 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "16 ha. Voisin de Caillerets. Style un poil plus structuré. Lafarge, de Montille, Comte Armand, Lafouge.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volnay",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-clos-ducs",
+      "nom": "Volnay 1er Cru Clos des Ducs",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "270-285 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "2,1 ha de monopole d'Angerville. Style très volnaysien : finesse, élégance, longue garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volnay",
+        "monopole",
+        "angerville"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-beaumonts",
+      "nom": "Vosne-Romanée 1er Cru Les Beaumonts",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-285 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "11 ha. Style structuré et profond. Grivot, Hudelot-Noëllat, Clavelier, Cathiard, Arnoux-Lachaux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "premier-cru",
+        "profondeur"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-1c-suchots",
+      "nom": "Vosne-Romanée 1er Cru Les Suchots",
+      "type": "premier_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-275 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "13,1 ha. Le plus grand 1er cru de Vosne. Voisin de Romanée-Saint-Vivant. Style charnu, généreux. Cathiard, Arnoux-Lachaux, Confuron-Cotetidot, Hudelot-Noëllat.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "premier-cru"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-echezeaux",
+      "nom": "Échezeaux",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-300 m",
+      "sols": "Calcaires variés, lieux-dits hétérogènes",
+      "caracteristiques_rapides": "37,7 ha — l'un des plus grands « grands crus » de Bourgogne, ce qui explique sa qualité variable. 11 lieux-dits (Les Rouges du Bas, Champs Traversins, Quartiers de Nuits, etc.).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vosne",
+        "grand-cru",
+        "heterogene"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-bouzeron",
+      "nom": "Bouzeron",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte Chalonnaise",
+      "pays": "France",
+      "cepages_rois": [
+        "Aligoté Doré"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires variés, marnes",
+      "caracteristiques_rapides": "55 ha. Seule appellation village de Bourgogne en Aligoté (variante Aligoté Doré). Référence : Aubert de Villaine. Style ample, minéral, qui prend de l'âge.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "bouzeron",
+        "aligote",
+        "monocepage"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-charlemagne",
+      "nom": "Charlemagne",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "270-330 m",
+      "sols": "Marnes blanches, calcaires bathoniens",
+      "caracteristiques_rapides": "Climat plus restreint (et moins utilisé) inclus dans la zone Corton-Charlemagne. Étiquette quasi-disparue.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aloxe",
+        "chardonnay",
+        "rare"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-givry",
+      "nom": "Givry",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte Chalonnaise",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Calcaires variés, marnes",
+      "caracteristiques_rapides": "270 ha. 38 1ers crus. Production rouge dominante. Style accessible, gourmand. Joblot, Lumpp, Ragot, Chofflet-Valdenaire.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "givry",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-pouilly-vinzelles",
+      "nom": "Pouilly-Vinzelles",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Mâconnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "53 ha. Petite appellation, plus simple que Pouilly-Fuissé. Bret Brothers (La Soufrandière) référence absolue.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "maconnais",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-rully",
+      "nom": "Rully",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte Chalonnaise",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires variés, marnes",
+      "caracteristiques_rapides": "330 ha. 23 1ers crus. Production majoritairement en blanc. Style ciselé, bon rapport qualité-prix. Dureuil-Janthial, Jacqueson, Briday.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "rully",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-saint-bris",
+      "nom": "Saint-Bris",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Auxerrois",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc"
+      ],
+      "altitude": "150-280 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "133 ha. Unique appellation Sauvignon Blanc de Bourgogne (anomalie historique). Style minéral, tendu. Goisot référence.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "saint-bris",
+        "sauvignon",
+        "auxerrois"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-saint-veran",
+      "nom": "Saint-Véran",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Mâconnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "200-380 m",
+      "sols": "Calcaires variés, schistes",
+      "caracteristiques_rapides": "750 ha. Encadre Pouilly-Fuissé. Style frais, accessible, excellent rapport qualité-prix. Merlin, Saumaize-Michelin, Barraud.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "maconnais",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-vire-clesse",
+      "nom": "Viré-Clessé",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Mâconnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "200-330 m",
+      "sols": "Calcaires variés, marnes",
+      "caracteristiques_rapides": "390 ha. Connue pour les vendanges tardives (Bongran, Lévrier). Style mûr, parfois moelleux selon le millésime. Thévenet/Bongran référence.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "maconnais",
+        "vendanges-tardives"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-chablis-village",
+      "nom": "Chablis",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "150-220 m",
+      "sols": "Calcaires kimméridgiens à exogyra virgula",
+      "caracteristiques_rapides": "3 200 ha (incluant 1ers et grands crus). Le Chardonnay le plus minéral du monde. Style salin, tranchant, peu de bois. Référence absolue.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "appellation",
+        "minerale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-gevrey-village",
+      "nom": "Gevrey-Chambertin",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bajociens, marnes",
+      "caracteristiques_rapides": "Plus grande appellation village de la CdN (411 ha). 26 1ers crus + 9 grands crus. Profondeur, garde, structure, signature de style.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gevrey",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-meursault-village",
+      "nom": "Meursault",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "412 ha. 19 1ers crus, aucun grand cru. Style ample, gras, beurré, signature Meursault. Référence absolue du Chardonnay charnu.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "meursault",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-morey-village",
+      "nom": "Morey-Saint-Denis",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires bajociens et bathoniens",
+      "caracteristiques_rapides": "96 ha. 5 grands crus + 20 1ers crus. Souvent décrit comme un mélange entre la puissance de Gevrey et la finesse de Chambolle.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "morey",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-aloxe-corton",
+      "nom": "Aloxe-Corton",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Marnes rouges, calcaires bathoniens",
+      "caracteristiques_rapides": "94 ha. 14 1ers crus + grand cru Corton (en partie). Style charpenté, fruité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aloxe",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-auxey-duresses",
+      "nom": "Auxey-Duresses",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "270-380 m",
+      "sols": "Calcaires variés, sols caillouteux",
+      "caracteristiques_rapides": "133 ha. 9 1ers crus. Vallée plus haute et plus fraîche, vins minéraux. Comte Armand, Lafouge, Roy, Coche-Dury (blancs).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "auxey",
+        "qualite-prix",
+        "fraicheur"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-beaune-village",
+      "nom": "Beaune",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "220-330 m",
+      "sols": "Calcaires bathoniens, alluvions",
+      "caracteristiques_rapides": "411 ha. 42 1ers crus (le plus grand nombre de Bourgogne). Pas de grand cru. Style accessible, fruité, élégant. Bouchard, Drouhin, Jadot.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "beaune",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-fixin",
+      "nom": "Fixin",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "270-330 m",
+      "sols": "Calcaires bajociens",
+      "caracteristiques_rapides": "100 ha. Souvent perçu comme le « petit Gevrey ». 6 1ers crus dont Clos de la Perrière. Bart, Berthaut-Gerbet, Pierre Gelin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "fixin"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-irancy",
+      "nom": "Irancy",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Auxerrois",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "César"
+      ],
+      "altitude": "150-280 m",
+      "sols": "Calcaires kimméridgiens",
+      "caracteristiques_rapides": "160 ha. Seule appellation village rouge du Grand Auxerrois. Cépage Pinot Noir + accessoirement César (cépage local). Stéphanie Colinot, Goisot, Renaud.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "irancy",
+        "cesar",
+        "auxerrois"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-marsannay",
+      "nom": "Marsannay",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "260-330 m",
+      "sols": "Calcaires bajociens et marnes",
+      "caracteristiques_rapides": "Seul village de la Côte d'Or à produire les 3 couleurs (rouge, blanc, rosé). 220 ha. Candidat à la promotion en 1er cru pour certains lieux-dits (Longeroies, Saint-Jacques). Bruno Clair, Bart, Audoin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marsannay",
+        "3-couleurs"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-mercurey",
+      "nom": "Mercurey",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte Chalonnaise",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Calcaires bajociens, marnes",
+      "caracteristiques_rapides": "640 ha — la plus grande appellation village de Bourgogne en surface. 32 1ers crus. Production majoritairement en rouge. Style charpenté. Faiveley, Lorenzon, Juillot.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "mercurey",
+        "grande-appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-montagny",
+      "nom": "Montagny",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte Chalonnaise",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "240-380 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "326 ha. Uniquement en blanc. 49 1ers crus (anomalie historique : tout le village peut être 1er cru). Style frais, minéral. Berthenet, Stéphane Aladame.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "montagny",
+        "chardonnay"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-pernand-vergelesses",
+      "nom": "Pernand-Vergelesses",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "260-330 m",
+      "sols": "Calcaires bathoniens, marnes",
+      "caracteristiques_rapides": "138 ha. 5 1ers crus dont Île des Vergelesses. Aussi grand cru Corton et Corton-Charlemagne (en partie). Style mi-Beaune mi-Côte de Nuits.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "pernand",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-pommard-village",
+      "nom": "Pommard",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Calcaires et marnes rouges",
+      "caracteristiques_rapides": "323 ha. 28 1ers crus dont Rugiens et Épenots (candidats GC). Style charpenté, tannique, garde longue. Comte Armand, de Courcel, Hospices.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "pommard",
+        "appellation",
+        "puissance"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-saint-romain",
+      "nom": "Saint-Romain",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Calcaires variés, marnes",
+      "caracteristiques_rapides": "137 ha. Pas de 1er cru. Le village le plus haut de la CdB. Vins très frais, minéraux. d'Auvenay (Lalou), Henri Germain, Buisson.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "saint-romain",
+        "altitude",
+        "fraicheur"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-santenay",
+      "nom": "Santenay",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "330 ha. 12 1ers crus. Sud de la CdB, vins plus rustiques. Style mûr et accessible. Bon rapport qualité-prix. Roger Belland, Lequin-Colin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "santenay",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-savigny-les-beaune",
+      "nom": "Savigny-lès-Beaune",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Marnes et calcaires variés",
+      "caracteristiques_rapides": "382 ha. 22 1ers crus dont Lavières, Aux Vergelesses, Aux Serpentières. Style accessible, bon rapport qualité-prix.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "savigny",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-vougeot",
+      "nom": "Vougeot",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-300 m",
+      "sols": "Calcaires bajociens, alluvions",
+      "caracteristiques_rapides": "Toute petite appellation village (16 ha) éclipsée par le Clos de Vougeot. 4 1ers crus dont Clos Blanc de Vougeot.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vougeot",
+        "appellation"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-bourgogne-aligote",
+      "nom": "Bourgogne Aligoté",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Bourgogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Aligoté"
+      ],
+      "altitude": "150-450 m",
+      "sols": "Sols variés",
+      "caracteristiques_rapides": "L'AOC régionale Aligoté, second cépage blanc historique de Bourgogne. Vif, acidulé, idéal pour le kir (origine bourguignonne). Montée en gamme depuis les années 2010 (Coche-Dury, Naudin-Ferrand, Ponsot).",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bourgogne",
+        "aligote",
+        "appellation-regionale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-cremant",
+      "nom": "Crémant de Bourgogne",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Bourgogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Aligoté",
+        "Gamay"
+      ],
+      "altitude": "150-450 m",
+      "sols": "Sols variés",
+      "caracteristiques_rapides": "L'AOC effervescente bourguignonne, méthode traditionnelle. Style varié selon assemblage. Devient un effervescent de référence en France, alternative au Champagne. Bailly-Lapierre, Veuve Ambal.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bourgogne",
+        "cremant",
+        "effervescent"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-maranges",
+      "nom": "Maranges",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "240-330 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "170 ha. 7 1ers crus. La plus méridionale de la CdB. Style plus simple, accessible. Bachelet-Monnot référence.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "maranges",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-monthelie",
+      "nom": "Monthélie",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "270-330 m",
+      "sols": "Calcaires bathoniens",
+      "caracteristiques_rapides": "129 ha. 15 1ers crus. Style proche de Volnay, plus rustique. Bon rapport qualité-prix. Boussey, de Suremain.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "monthelie",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-macon-villages",
+      "nom": "Mâcon-Villages",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Mâconnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Gamay"
+      ],
+      "altitude": "180-380 m",
+      "sols": "Calcaires variés, sols hétérogènes",
+      "caracteristiques_rapides": "5 000 ha. 27 communes peuvent ajouter leur nom (Mâcon-Lugny, Mâcon-Uchizy, Mâcon-Chardonnay, etc.). Style simple, accessible, bon rapport qualité-prix.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "maconnais",
+        "appellation-regionale",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-bourgogne",
+      "nom": "Bourgogne",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Bourgogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Gamay",
+        "Aligoté"
+      ],
+      "altitude": "150-450 m",
+      "sols": "Sols variés sur l'ensemble de la Bourgogne",
+      "caracteristiques_rapides": "L'AOC régionale de base. Existe aussi en sous-régionales (Bourgogne Côte d'Or, Bourgogne Hautes-Côtes, Bourgogne Côte Chalonnaise, etc.). Vins simples, plaisants, qui peuvent monter avec un grand vinificateur.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "bourgogne",
+        "appellation-regionale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-chorey-les-beaune",
+      "nom": "Chorey-lès-Beaune",
+      "type": "appellation_village",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "230-260 m",
+      "sols": "Sols alluviaux, calcaires bathoniens",
+      "caracteristiques_rapides": "131 ha. Pas de 1er cru. Vins simples, fruités, plaisants jeunes. Tollot-Beaut, Drouhin.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "chorey",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-hcb",
+      "nom": "Hautes-Côtes de Beaune",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Beaune",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "320-450 m",
+      "sols": "Calcaires variés",
+      "caracteristiques_rapides": "650 ha de plateau au-dessus de la CdB. Vins plus simples, frais, qui montent avec le réchauffement climatique. Naudin-Ferrand, Carré-Courbin.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "hautes-cotes",
+        "appellation-regionale"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-hcn",
+      "nom": "Hautes-Côtes de Nuits",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "320-450 m",
+      "sols": "Calcaires variés, sols caillouteux",
+      "caracteristiques_rapides": "560 ha de plateau, plus haut, plus tardif. Vins plus simples, frais, accessibles, qui montent en gamme avec le réchauffement climatique. Devient une zone à suivre.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "hautes-cotes",
+        "appellation-regionale",
+        "fraicheur"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-v-petit-chablis",
+      "nom": "Petit Chablis",
+      "type": "appellation_regionale",
+      "region": "Bourgogne",
+      "sous_region": "Chablis",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "150-280 m",
+      "sols": "Calcaires portlandiens (plus tendres)",
+      "caracteristiques_rapides": "1 000 ha sur les plateaux. Style plus simple, frais, accessible. Bon rapport qualité-prix d'apéritif. Tous les producteurs chablisiens en font.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "chablis",
+        "appellation-regionale",
+        "qualite-prix"
+      ],
+      "source": "lpv|inao"
+    },
+    {
+      "id": "bgn-gc-clos-roche",
+      "nom": "Clos de la Roche",
+      "type": "grand_cru",
+      "region": "Bourgogne",
+      "sous_region": "Côte de Nuits",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "260-290 m",
+      "sols": "Calcaires durs et marnes, sols rocailleux",
+      "caracteristiques_rapides": "16,9 ha. Plus profond et puissant que Clos Saint-Denis. Dujac, Rousseau, Lignier, Ponsot, Castagnier.",
+      "niveau_reference": 5,
+      "ranking_pat": null,
+      "mes_notes": null,
+      "tags": [
+        "morey",
+        "profondeur"
+      ],
+      "source": "lpv|inao"
+    }
+  ]
+}
