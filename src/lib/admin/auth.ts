@@ -7,7 +7,10 @@ import { supabaseConfigure, supabaseSession } from './supabase';
 export interface Utilisateur { id: string; email: string; admin: boolean; restaurants: string[] }
 
 const emailsAdmin = () =>
-  (process.env.PAT_ADMIN_EMAILS ?? '').split(/[,;\s]+/).map((e) => e.trim().toLowerCase()).filter(Boolean);
+  (process.env.PAT_ADMIN_EMAILS ?? '').split(/[,;\s]+/).map((e) => e.replace(/["'<>]/g, '').trim().toLowerCase()).filter(Boolean);
+
+/** Pour l'écran d'accueil : la variable des administrateurs est-elle lue par le serveur ? */
+export const adminsConfigures = () => emailsAdmin().length;
 
 /**
  * Mode développement sans Supabase : AUTH_DEV_EMAIL simule un administrateur connecté.

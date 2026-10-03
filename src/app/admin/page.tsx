@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { Coque } from './Coque';
 import { Entete } from '@/components/admin/Ui';
-import { exigerConnexion } from '@/lib/admin/auth';
+import { adminsConfigures, exigerConnexion } from '@/lib/admin/auth';
 import { listeRestaurants } from '@/lib/admin/donnees';
 
 export default async function AccueilAdmin() {
@@ -12,6 +12,14 @@ export default async function AccueilAdmin() {
   return (
     <Coque utilisateur={u} etapes={[]}>
       <Entete titre="Bonjour" texte={restos.length ? 'Choisissez un restaurant.' : 'Aucun restaurant n’est encore relié à votre compte. Demandez à Pat de vous donner accès.'} />
+      {!restos.length && (
+        <div className="carte-bo pile" style={{ maxWidth: 640 }}>
+          <span>Connecté avec <b>{u.email}</b>.</span>
+          <span className="discret">{adminsConfigures()
+            ? `Cette adresse ne fait pas partie des administrateurs (PAT_ADMIN_EMAILS en compte ${adminsConfigures()}).`
+            : 'Aucun administrateur n’est configuré : la variable PAT_ADMIN_EMAILS n’est pas lue par le site.'}</span>
+        </div>
+      )}
       <div className="grille">
         {restos.map((r) => (
           <Link key={r.id} href={`/admin/${r.id}`} className="carte-bo" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', gap: 14, alignItems: 'center' }}>
