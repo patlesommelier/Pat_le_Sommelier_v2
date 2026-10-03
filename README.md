@@ -50,6 +50,8 @@ npm run dev     # http://localhost:3000/lola
 
 Sur **Netlify** : *Add new site › Import from Git*, choisir ce dépôt, puis ajouter les variables d'environnement ci-dessus dans *Site configuration › Environment variables*. `netlify.toml` contient déjà la configuration.
 
+> **Important** : sans `DATABASE_URL` dans les variables d'environnement Netlify, toutes les pages du restaurant échouent (message « Pat est momentanément indisponible »). Après avoir ajouté ou modifié une variable, relancer un déploiement (*Deploys › Trigger deploy*).
+
 ## Mettre à jour les données
 
 Pat continue de travailler dans ses fichiers ; l'app les importe.
