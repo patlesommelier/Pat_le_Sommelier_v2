@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
-    "@netlify/database": "^2.0.1",
     "next": "^15.2.0",
     "pg": "^8.13.0",
     "react": "^19.0.0",
