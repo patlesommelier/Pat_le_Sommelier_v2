@@ -29,7 +29,11 @@ export async function POST(req: Request) {
     return Response.json({ erreur: 'JSON invalide' }, { status: 400 });
   }
   const { id, statut, image } = lireDemande(objet);
-  if (!id) return Response.json({ erreur: 'request_id absent' }, { status: 400 });
+  // Message signé mais sans demande (ex. événement de test) : accepté, rien à appliquer.
+  if (!id) {
+    console.info(`[wine-labs] message signé sans request_id, accepté : ${corps.slice(0, 300)}`);
+    return Response.json({ ok: true, ignore: true });
+  }
 
   try {
     // Un même message ne s'applique qu'une fois (il n'est marqué « traité » qu'une fois appliqué).
