@@ -4,28 +4,28 @@ Webapp qui conseille le vin de la carte d'un restaurant pour le plat choisi, en 
 
 - **Écrans** (repris des maquettes validées) : Accueil (choix du plat), Mes propositions, Fiche vin, Carte des vins à onglets, et la barre « Demandez à Pat » toujours visible en bas.
 - **Données** : le savoir de Pat (principes, producteurs, cuvées, terroirs) et les bases de chaque restaurant (menu, profils d'accord, carte des vins, accords, règles du sommelier), selon le document « Pat le sommelier — modèle de données ».
-- **Technique** : Next.js 15 (App Router) · Postgres via Netlify Database · API Claude pour Pat · déploiement Netlify.
+- **Technique** : Next.js 15 (App Router) · Postgres via Supabase · API Claude pour Pat · déploiement Netlify.
 
 ## Mise en route
 
-### 1. Base de données (Netlify Database)
+### 1. Base de données (Supabase)
 
-La base Postgres est fournie par Netlify : aucune chaîne de connexion à configurer. À chaque déploiement, Netlify applique les migrations de `netlify/database/migrations/` qui ne l'ont pas encore été :
+La base Postgres est hébergée sur Supabase. L'app (pages et API) et les scripts s'y connectent avec `DATABASE_URL` : *Supabase › Project Settings › Database › Connection string › « Transaction pooler »* (port 6543). Le schéma est dans `supabase/migrations/` ; `npm run import` applique les migrations qui ne l'ont pas encore été (suivi dans la table `schema_migration`), puis importe les fichiers de `data/`.
 
-- `0001_create_schema.sql` : le schéma (repris de `supabase/migrations/0001_schema.sql`, sans les politiques RLS propres à Supabase) ;
-- `0002_seed_pat_et_lola.sql` : les premières données de Pat et de Lola ;
-- `0003_regles_v7_et_bases_completes.sql` : le schéma V7 (repris de `supabase/migrations/0002_…`) ;
-- `0004_donnees_v7.sql` : les données à jour (règles de sélection V7, producteurs et terroirs de toutes les régions, accords de Lola), générées depuis `data/`.
+Une évolution du schéma s'ajoute dans `supabase/migrations/` (nouveau fichier, ne jamais modifier une migration déjà appliquée).
 
-Après une mise à jour des fichiers de `data/`, générer une **nouvelle** migration de données (ne jamais modifier une migration déjà appliquée). Elle refait l'import complet, ménage compris : ce qui a disparu des fichiers est retiré de la base.
+#### Venir de Netlify Database
 
-```bash
-npm run import -- --sql netlify/database/migrations/0005_maj_donnees.sql
-```
+L'app utilisait auparavant Netlify Database. Pour passer à Supabase sans rien perdre (y compris les accords déjà validés, refusés ou commentés par le sommelier) :
 
-Une évolution du schéma s'ajoute à la fois dans `supabase/migrations/` et, sans les lignes RLS, dans `netlify/database/migrations/`.
-
-`DATABASE_URL` reste possible pour viser une autre base Postgres (Supabase par exemple) : l'app l'utilise alors à la place de Netlify Database, et `npm run import` sans `--sql` y écrit directement en appliquant `supabase/migrations/`.
+1. Récupérer la chaîne « Transaction pooler » du projet Supabase `ykbthpgmcqtoolrnkdsd` (*Connect* › *Transaction pooler*) ; l'utilisateur est `postgres.ykbthpgmcqtoolrnkdsd`.
+2. Dans `.env`, renseigner `DATABASE_URL` (Supabase) et `NETLIFY_DB_URL` (chaîne de connexion de l'ancienne Netlify Database, à récupérer dans le tableau de bord Netlify du projet).
+3. Lancer la copie, qui crée le schéma dans Supabase puis recopie chaque table (sans risque à relancer, tout ou rien) :
+   ```bash
+   npm run copier-vers-supabase
+   ```
+4. Ajouter `DATABASE_URL` dans les variables d'environnement du site Netlify, puis redéployer.
+5. Une fois le site vérifié, retirer `NETLIFY_DB_URL` du `.env`. Les fichiers de `netlify/database/migrations/` sont gardés pour l'historique : Netlify exige qu'ils restent tant que la Netlify Database du site existe. Ils ne servent plus à l'app.
 
 ### 2. Variables d'environnement
 
@@ -33,7 +33,8 @@ Copier `.env.example` en `.env` et remplir :
 
 | Variable | Rôle |
 | --- | --- |
-| `DATABASE_URL` | Optionnelle : autre base Postgres que Netlify Database (requise pour `npm run import` sans `--sql` et `npm run accords`) |
+| `DATABASE_URL` | Chaîne de connexion Supabase (« Transaction pooler »), requise par l'app et les scripts |
+| `NETLIFY_DB_URL` | Uniquement pour `npm run copier-vers-supabase` : l'ancienne base Netlify Database |
 | `ANTHROPIC_API_KEY` | Clé de l'API Claude (console.anthropic.com) |
 | `ANTHROPIC_MODEL` | Modèle utilisé par Pat |
 | `AFFICHER_ACCORDS_PROPOSES` | `true` pour montrer aussi les accords pas encore validés (démo) |
@@ -86,7 +87,8 @@ Les fichiers font foi : un producteur, un terroir ou une règle retiré des fich
 
 ```
 supabase/migrations/   schéma SQL
-scripts/               import.ts (fichiers → base), generer-accords.ts (Claude → accords proposés)
+scripts/               import.ts (fichiers → base), generer-accords.ts (Claude → accords proposés),
+                       copier-vers-supabase.ts (Netlify Database → Supabase, migration ponctuelle)
 src/lib/pat-cerveau.ts ce que Pat sait et comment on le lui présente (partagé app + scripts)
 src/app/[resto]/       écrans : accueil, plat/[plat], vin/[vin], carte
 src/app/api/pat/       barre « Demandez à Pat » (Claude, uniquement des vins de la carte)
