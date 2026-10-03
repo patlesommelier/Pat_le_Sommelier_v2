@@ -15,6 +15,10 @@ import 'dotenv/config';
 import pg from 'pg';
 import { migrer, pool } from './lib/migrations';
 
+// Dates gardées en texte : une conversion en Date JavaScript perdrait les microsecondes.
+pg.types.setTypeParser(1184, (v) => v);
+pg.types.setTypeParser(1114, (v) => v);
+
 // Ordre des clés étrangères ; « auto » = colonne qui pointe vers la même table, remplie dans un second temps.
 const TABLES: { nom: string; cle: string; auto?: string }[] = [
   { nom: 'principe', cle: 'id' },
