@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { enregistrerVin } from '../../actions';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
-import { getVinsBO, type VinBO } from '@/lib/admin/donnees';
+import { getVinsBO, suggestionsProducteurs, type VinBO } from '@/lib/admin/donnees';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -34,6 +34,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
   const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
+  const suggestions = choisi ? (await suggestionsProducteurs(choisi.producteur_texte ?? choisi.producteur_nom)).filter((p) => p.id !== choisi.producteur_id) : [];
   return (
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite." />
@@ -89,11 +90,25 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
                 </div>
               </div>
-              <div className="encadre-rose">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/pat/pat.png" alt="" />
-                <span>{choisi.producteur_nom ? <><strong>{choisi.producteur_nom}</strong> · {pl}</> : <>{choisi.producteur_texte ?? 'Producteur non indiqué'} · {pl}</>}{' '}· ranking producteur {choisi.ranking_producteur ?? 0}, ranking terroir {choisi.ranking_terroir ?? 0}.</span>
-              </div>
+              <fieldset className="pile" style={{ gap: 10, border: '1px solid var(--ligne)', borderRadius: 14, padding: 14, margin: 0 }}>
+                <legend style={{ fontSize: 13, fontWeight: 700, padding: '0 6px' }}>Producteur</legend>
+                <div className="champ">
+                  <label htmlFor="producteur_texte">Nom affiché</label>
+                  <input id="producteur_texte" name="producteur_texte" defaultValue={choisi.producteur_texte ?? choisi.producteur_nom ?? ''} />
+                </div>
+                <span className="libelle" style={{ fontSize: 13, fontWeight: 700 }}>Producteur dans la base de Pat</span>
+                {choisi.producteur_id && (
+                  <label className="case"><input type="radio" name="producteur_choix" value={choisi.producteur_id} defaultChecked />
+                    <span><b>{choisi.producteur_nom}</b><small>{pl} · ranking {choisi.producteur_ranking ?? '—'}</small></span></label>
+                )}
+                {suggestions.map((p) => (
+                  <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
+                    <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{p.statut === 'propose' ? ' · proposé' : ''} · ranking {p.ranking_pat ?? '—'}</small></span></label>
+                ))}
+                <label className="case"><input type="radio" name="producteur_choix" value="aucun" defaultChecked={!choisi.producteur_id} />
+                  <span>Aucun producteur de la base<small>Le nom affiché reste tel quel ; ranking producteur {choisi.ranking_producteur ?? 0}</small></span></label>
+                <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Modifiez le nom puis enregistrez : Pat propose les producteurs de sa base qui lui ressemblent. Relier un producteur reprend son ranking.</span>
+              </fieldset>
               {pk === 'attention' && choisi.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {choisi.a_verifier}</p>}
               <div className="champs">
                 <div className="champ"><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={choisi.millesime ?? ''} /></div>

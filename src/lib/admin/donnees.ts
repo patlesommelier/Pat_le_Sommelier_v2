@@ -127,3 +127,27 @@ export async function getProducteursProposes() {
        from producteur p left join vin_carte v on v.producteur_id = p.id
       where p.statut = 'propose' group by p.id order by p.region nulls last, p.nom`);
 }
+
+// ───────── Producteurs de la base de Pat : suggestions pour relier un vin ─────────
+const SANS_ACCENTS = `translate(lower(nom), 'àâäáãéèêëíìîïóòôöõúùûüçñœ', 'aaaaaeeeeiiiiooooouuuucno')`;
+const MOTS_VIDES = new Set(['domaine', 'chateau', 'maison', 'cave', 'caves', 'cantina', 'bodegas', 'bodega', 'tenuta', 'weingut', 'clos',
+  'des', 'du', 'de', 'la', 'le', 'les', 'et', 'fils', 'freres', 'pere', 'vignerons', 'vignobles', 'non', 'indique', 'carte', 'confirmer', 'probable']);
+const norm = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/œ/g, 'oe');
+
+export interface ProducteurSuggere { id: string; nom: string; region: string | null; pays: string | null; ranking_pat: number | null; statut: string }
+
+/** Producteurs de la base de Pat dont le nom ressemble au texte saisi (les plus proches d'abord). */
+export async function suggestionsProducteurs(texte: string | null, limite = 5): Promise<ProducteurSuggere[]> {
+  const mots = [...new Set(norm(texte ?? '').split(/[^a-z0-9]+/).filter((m) => m.length > 2 && !MOTS_VIDES.has(m)))];
+  if (!mots.length) return [];
+  const lignes = await requete<ProducteurSuggere>(
+    `select id, nom, region, pays, ranking_pat, statut::text from producteur
+      where statut <> 'retire' and ${SANS_ACCENTS} like any($1) limit 200`,
+    [mots.map((m) => `%${m}%`)],
+  );
+  const score = (p: ProducteurSuggere) => {
+    const n = norm(p.nom);
+    return mots.filter((m) => n.includes(m)).length * 10 - Math.abs(n.length - norm(texte ?? '').length) / 10 + (p.statut === 'valide' ? 1 : 0);
+  };
+  return lignes.sort((a, b) => score(b) - score(a)).slice(0, limite);
+}

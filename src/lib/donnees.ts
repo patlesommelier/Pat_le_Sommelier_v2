@@ -36,7 +36,9 @@ const SELECT_VIN = `
          v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation,
          v.descriptif, v.presentation, v.vin_texte, v.resume_court, v.etiquette_url, v.coup_de_coeur,
          v.ordre, v.ranking_producteur, v.ranking_terroir, v.pays,
-         p.nom as producteur_nom, p.avis_pat as producteur_avis_pat, p.ranking_pat as producteur_ranking,
+         -- Nom saisi dans le back-office prioritaire sur celui de la base de Pat
+         case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else p.nom end as producteur_nom,
+         p.avis_pat as producteur_avis_pat, p.ranking_pat as producteur_ranking,
          t.nom as appellation_nom
     from vin_carte v
     left join producteur p on p.id = v.producteur_id

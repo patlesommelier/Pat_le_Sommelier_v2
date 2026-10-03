@@ -84,6 +84,21 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
       redirect(avec(`/admin/${resto}/carte`, { vin: vinId, erreur: (e as Error).message }));
     }
   }
+  // Producteur : nom affiché (texte) et lien éventuel vers la base de Pat. Relier un producteur reprend son ranking.
+  const choix = txt(f, 'producteur_choix');
+  const [actuel] = await requete<{ producteur_id: string | null }>('select producteur_id from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  if (choix && choix !== (actuel?.producteur_id ?? 'aucun')) {
+    const lie = choix === 'aucun' ? null : (await requete<{ id: string; nom: string; ranking_pat: number | null }>(
+      `select id, nom, ranking_pat from producteur where id = $1 and statut <> 'retire'`, [choix]))[0] ?? null;
+    await requete(
+      `update vin_carte set producteur_id = $3, producteur_texte = coalesce($4, producteur_texte),
+              ranking_producteur = case when $3::text is null then ranking_producteur else coalesce($5, ranking_producteur) end
+        where id = $1 and restaurant_id = $2`,
+      [vinId, resto, lie?.id ?? null, txt(f, 'producteur_texte') ?? lie?.nom ?? null, lie?.ranking_pat ?? null],
+    );
+  } else if (txt(f, 'producteur_texte')) {
+    await requete('update vin_carte set producteur_texte = $3 where id = $1 and restaurant_id = $2', [vinId, resto, txt(f, 'producteur_texte')]);
+  }
   await requete(
     `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, resume_court = $6, disponible = $7, coup_de_coeur = $8,
             etiquette_url = coalesce($9, etiquette_url),
