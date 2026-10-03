@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react';
 
-// Filet de sécurité : une erreur serveur (base injoignable, DATABASE_URL absente…) affiche
+// Filet de sécurité : une erreur serveur (base injoignable, données pas encore importées…) affiche
 // un message lisible au lieu de « Application error ». Le détail reste dans les logs Netlify.
 export default function Erreur({ error, reset }: { error: Error & { digest?: string }; reset: () => void }) {
   useEffect(() => {

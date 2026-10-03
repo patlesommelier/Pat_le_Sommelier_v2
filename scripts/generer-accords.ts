@@ -21,8 +21,10 @@ const arg = (nom: string) => {
 async function main() {
   const restaurant = arg('restaurant') ?? 'lola';
   const seulPlat = arg('plat');
-  if (!process.env.DATABASE_URL || !process.env.ANTHROPIC_API_KEY) throw new Error('DATABASE_URL et ANTHROPIC_API_KEY sont nécessaires');
-  const db = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|host=\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
+  // Netlify Database (NETLIFY_DB_URL, fourni par `netlify dev`) ou toute autre base Postgres (DATABASE_URL).
+  const url = process.env.DATABASE_URL ?? process.env.NETLIFY_DB_URL;
+  if (!url || !process.env.ANTHROPIC_API_KEY) throw new Error('NETLIFY_DB_URL (ou DATABASE_URL) et ANTHROPIC_API_KEY sont nécessaires');
+  const db = new pg.Pool({ connectionString: url, ssl: /localhost|host=\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
   const q = async <T>(sql: string, p: unknown[] = []) => (await db.query(sql, p)).rows as T[];
 
   const principes = await q<PrincipeCtx>(`select id, numero, titre, regle, role, statut from principe where statut <> 'retire'`);

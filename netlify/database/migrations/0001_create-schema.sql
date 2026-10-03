@@ -1,4 +1,5 @@
--- Pat le sommelier — schéma initial
+-- Pat le sommelier — schéma (Netlify Database)
+-- État final des anciennes migrations Supabase 0001 + 0002.
 -- Modèle validé dans le document « Pat le sommelier — modèle de données » (octobre 2026).
 -- Deux familles : le savoir de Pat (commun à tous les restaurants) et les bases de chaque restaurant.
 
@@ -10,10 +11,6 @@ create type statut_production as enum (
   'biodynamie', 'biodynamie-certifiee', 'nature', 'inconnu'
 );
 create type gamme_prix as enum ('<15', '15-30', '30-50', '50-100', '100-300', '>300');
-create type terroir_type as enum (
-  'appellation_regionale', 'appellation', 'appellation_village',
-  'premier_cru', 'grand_cru', 'climat', 'lieu-dit'
-);
 create type couleur_vin as enum ('bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux');
 create type categorie_plat as enum ('entree', 'plat', 'dessert', 'fromage');
 create type origine_accord as enum ('pat', 'sommelier');
@@ -47,7 +44,9 @@ create table terroir (
   id                text primary key,           -- <région>-terr-<nom>
   ancien_id         text,
   nom               text not null,
-  type              terroir_type not null,
+  type              text not null,              -- type d'origine des fichiers de Pat (DOC, DOCG, climat…)
+  niveau            text not null default 'appellation'
+                    check (niveau in ('appellation', 'zone', 'cru', 'lieu-dit', 'autre')),
   parent_id         text references terroir(id) on delete set null,
   pays              text,
   region            text,
@@ -60,13 +59,15 @@ create table terroir (
   notes_objectives  text,
   niveau_reference  smallint check (niveau_reference between 1 and 5),
   ranking_pat       smallint check (ranking_pat between 1 and 5),
-  avis_pat          text,
+  avis_critique     text,                       -- « mes_notes »
+  avis_pat          text,                       -- « notes_pat »
   tags              text[] not null default '{}',
   source            text,
   statut            statut_validation not null default 'valide',
   maj_le            timestamptz not null default now()
 );
 create index on terroir (parent_id);
+create index on terroir (niveau);
 create index on terroir (region);
 
 create table producteur (
@@ -184,7 +185,10 @@ create table vin_carte (
   coup_de_coeur       boolean not null default false,
   disponible          boolean not null default true,
   a_verifier          text,
-  ordre               integer not null default 0
+  ordre               integer not null default 0,
+  ranking_producteur  smallint check (ranking_producteur between 0 and 5),
+  ranking_terroir     smallint check (ranking_terroir between 0 and 5),
+  pays                text
 );
 create index on vin_carte (restaurant_id);
 
@@ -222,28 +226,19 @@ create table regle_sommelier (
   date_fin       date
 );
 
--- ─────────────────────── Lecture publique (clients) ───────────────────────
--- Les clients lisent la carte, le menu et les accords validés. Les écritures
--- passent uniquement par les scripts (clé service) — aucune politique d'écriture.
-alter table principe          enable row level security;
-alter table question_pat      enable row level security;
-alter table terroir           enable row level security;
-alter table producteur        enable row level security;
-alter table producteur_terroir enable row level security;
-alter table cuvee             enable row level security;
-alter table restaurant        enable row level security;
-alter table plat              enable row level security;
-alter table profil_accord     enable row level security;
-alter table vin_carte         enable row level security;
-alter table accord            enable row level security;
-alter table regle_sommelier   enable row level security;
+-- Règles de sélection du restaurant (fichier regles_selection.xlsx), gardées pour référence et affichage.
+create table regle_selection (
+  id             text primary key,               -- lola-plat-seul-2bis
+  restaurant_id  text not null references restaurant(id) on delete cascade,
+  onglet         text not null,                  -- Plat seul, Plusieurs plats, Tour 2 et verre…
+  ordre          text not null,                  -- 1, 2, 2 bis…
+  rang           smallint not null,              -- position dans l'onglet (tri)
+  nom            text not null,
+  type           text,                           -- Filtre, Classement, Départage, Ajout…
+  enonce         text not null,
+  statut         text,                           -- Validé / À confirmer (…)
+  version        text                            -- V7 — 30/09/2026
+);
+create index on regle_selection (restaurant_id, onglet, rang);
 
-create policy lecture on restaurant    for select using (true);
-create policy lecture on plat          for select using (actif);
-create policy lecture on vin_carte     for select using (disponible);
-create policy lecture on accord        for select using (statut = 'valide');
-create policy lecture on producteur    for select using (statut = 'valide');
-create policy lecture on terroir       for select using (statut = 'valide');
-create policy lecture on cuvee         for select using (true);
-create policy lecture on principe      for select using (statut = 'valide');
--- profil_accord, regle_sommelier, question_pat : réservés au serveur (clé service).
+-- La base n'est lue que par le serveur de l'app (pages et API) : pas d'accès public, donc pas de RLS.

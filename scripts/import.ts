@@ -1,22 +1,39 @@
 /**
- * Import des bases de Pat et des restaurants vers Postgres (Supabase).
+ * Import des bases de Pat et des restaurants vers Netlify Database.
  *
- *   npm run import                 → importe tout (Pat + tous les restaurants de data/restaurants)
+ *   npm run import                 → écrit une migration de données dans netlify/database/migrations
  *   npm run import -- --dry-run    → n'écrit rien, affiche le bilan et écrit data/import-apercu.json
  *
- * Variable requise : DATABASE_URL (Supabase > Project Settings > Database > Connection string, mode « Session »).
- * Les fichiers de Pat restent la source : relancer l'import après chaque mise à jour d'Excel/JSON.
+ * Netlify applique la migration au prochain déploiement (avant la mise en ligne) : rien à configurer.
+ * Les fichiers de Pat restent la source : relancer l'import après chaque mise à jour d'Excel/JSON, puis déployer.
  */
-import 'dotenv/config';
 import fs from 'node:fs';
 import path from 'node:path';
 import pg from 'pg';
+import { prepareValue } from 'pg/lib/utils';
 import { importerPrincipes, importerProducteurs, importerTerroirs, type Ligne } from './lib/pat';
 import { importerRestaurant } from './lib/restaurant';
 
 const DRY = process.argv.includes('--dry-run');
 
-async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], conflit = 'id') {
+/**
+ * Remplace les requêtes paramétrées par du SQL littéral : l'import produit un fichier de migration,
+ * appliqué par Netlify au déploiement, au lieu d'écrire directement dans la base.
+ */
+class EcrivainSql {
+  instructions: string[] = [];
+
+  async query(sql: string, params: unknown[] = []) {
+    const litteral = (v: unknown): string => {
+      const prepare = prepareValue(v);
+      return prepare === null || prepare === undefined ? 'null' : pg.escapeLiteral(String(prepare));
+    };
+    this.instructions.push(`${sql.replace(/\$(\d+)/g, (_, n) => litteral(params[Number(n) - 1]))};`);
+    return { rowCount: null as number | null };
+  }
+}
+
+async function upsert(client: EcrivainSql, table: string, lignes: Ligne[], conflit = 'id') {
   if (!lignes.length) return 0;
   const cols = Object.keys(lignes[0]);
   const maj = cols.filter((c) => !conflit.split(',').includes(c)).map((c) => `${c} = excluded.${c}`).join(', ');
@@ -36,29 +53,8 @@ async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], con
   return lignes.length;
 }
 
-/**
- * Applique les migrations de supabase/migrations qui ne l'ont pas encore été (suivi dans la table schema_migration).
- * Une base créée avant ce suivi (0001 collé à la main dans Supabase) est reconnue : 0001 est marquée comme faite.
- */
-async function migrer(client: pg.PoolClient) {
-  await client.query('create table if not exists schema_migration (nom text primary key, appliquee_le timestamptz not null default now())');
-  const { rows } = await client.query<{ nom: string }>('select nom from schema_migration');
-  const faites = new Set(rows.map((r) => r.nom));
-  if (!faites.size) {
-    const { rows: t } = await client.query("select to_regclass('public.restaurant') as t");
-    if (t[0].t) { await client.query("insert into schema_migration (nom) values ('0001_schema.sql')"); faites.add('0001_schema.sql'); }
-  }
-  const dossier = path.join('supabase', 'migrations');
-  for (const f of fs.readdirSync(dossier).filter((f) => f.endsWith('.sql')).sort()) {
-    if (faites.has(f)) continue;
-    console.log(`Migration ${f}…`);
-    await client.query(fs.readFileSync(path.join(dossier, f), 'utf8'));
-    await client.query('insert into schema_migration (nom) values ($1)', [f]);
-  }
-}
-
 /** Supprime les lignes qui ne figurent plus dans les fichiers (les fichiers de Pat font foi). */
-async function nettoyer(client: pg.PoolClient, table: string, ids: unknown[], filtre = 'true') {
+async function nettoyer(client: EcrivainSql, table: string, ids: unknown[], filtre = 'true') {
   const r = await client.query(`delete from ${table} where ${filtre} and not (id = any($1))`, [ids]);
   if (r.rowCount) console.log(`  ${table} : ${r.rowCount} ligne(s) retirée(s), absentes des fichiers`);
 }
@@ -109,66 +105,58 @@ async function main() {
     return;
   }
 
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL manquante (voir .env.example)');
-  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
-  const client = await pool.connect();
-  try {
-    await client.query('begin');
-    await migrer(client);
-    await upsert(client, 'principe', principes);
-    await upsert(client, 'question_pat', questions, 'numero');
-    // Terroirs en deux temps : d'abord sans parent, puis les liens parent → enfant.
-    await upsert(client, 'terroir', terroirs.map((t) => ({ ...t, parent_id: null })));
-    for (const t of terroirs.filter((t) => t.parent_id)) await client.query('update terroir set parent_id = $1 where id = $2', [t.parent_id, t.id]);
-    await upsert(client, 'producteur', producteurs);
-    for (const r of restos) await upsert(client, 'producteur', r.nouveauxProducteurs);
-    const tousLiens = [...liens, ...restos.flatMap((r) => r.liens)];
-    await upsert(client, 'producteur_terroir', tousLiens, 'producteur_id, terroir_id');
-    await upsert(client, 'cuvee', cuvees);
-    // Ménage : terroirs, producteurs et cuvées qui ne sont plus dans les fichiers (ids changés, doublons retirés).
-    const tousProd = [...producteurs, ...restos.flatMap((r) => r.nouveauxProducteurs)];
-    await nettoyer(client, 'cuvee', cuvees.map((c) => c.id));
-    await client.query('delete from producteur_terroir where not ((producteur_id, terroir_id) in (select * from unnest($1::text[], $2::text[])))',
-      [tousLiens.map((l) => l.producteur_id), tousLiens.map((l) => l.terroir_id)]);
-    await nettoyer(client, 'producteur', tousProd.map((p) => p.id));
-    await nettoyer(client, 'terroir', terroirs.map((t) => t.id));
-    for (const r of restos) {
-      await upsert(client, 'restaurant', [r.restaurant]);
-      await upsert(client, 'plat', r.plats);
-      await upsert(client, 'profil_accord', r.profils, 'plat_id');
-      await upsert(client, 'vin_carte', r.vins);
-      // Le fichier d'accords de Pat fait foi et met à jour ses accords à chaque import,
-      // sauf ceux que le sommelier a ajoutés, refusés ou commentés : ceux-là ne sont jamais écrasés.
-      for (let i = 0; i < r.accords.length; i += 300) {
-        const lot = r.accords.slice(i, i + 300);
-        const valeurs: unknown[] = [];
-        const tuples = lot.map((a, j) => {
-          valeurs.push(a.restaurant_id, a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.principes, a.service, a.origine, a.statut);
-          return `(${Array.from({ length: 10 }, (_, k) => `$${j * 10 + k + 1}`).join(', ')})`;
-        });
-        await client.query(
-          `insert into accord (restaurant_id, plat_id, vin_id, note, rang, explication, principes, service, origine, statut)
-           values ${tuples.join(', ')}
-           on conflict (plat_id, vin_id) do update set note = excluded.note, rang = excluded.rang, explication = excluded.explication,
-             principes = excluded.principes, service = excluded.service, statut = excluded.statut, calcule_le = now()
-           where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null`,
-          valeurs,
-        );
-      }
-      await nettoyer(client, 'regle_sommelier', r.regles.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
-      await upsert(client, 'regle_sommelier', r.regles);
-      await nettoyer(client, 'regle_selection', r.reglesSelection.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
-      await upsert(client, 'regle_selection', r.reglesSelection);
+  const client = new EcrivainSql();
+  await upsert(client, 'principe', principes);
+  await upsert(client, 'question_pat', questions, 'numero');
+  // Terroirs en deux temps : d'abord sans parent, puis les liens parent → enfant.
+  await upsert(client, 'terroir', terroirs.map((t) => ({ ...t, parent_id: null })));
+  for (const t of terroirs.filter((t) => t.parent_id)) await client.query('update terroir set parent_id = $1 where id = $2', [t.parent_id, t.id]);
+  await upsert(client, 'producteur', producteurs);
+  for (const r of restos) await upsert(client, 'producteur', r.nouveauxProducteurs);
+  const tousLiens = [...liens, ...restos.flatMap((r) => r.liens)];
+  await upsert(client, 'producteur_terroir', tousLiens, 'producteur_id, terroir_id');
+  await upsert(client, 'cuvee', cuvees);
+  // Ménage : terroirs, producteurs et cuvées qui ne sont plus dans les fichiers (ids changés, doublons retirés).
+  const tousProd = [...producteurs, ...restos.flatMap((r) => r.nouveauxProducteurs)];
+  await nettoyer(client, 'cuvee', cuvees.map((c) => c.id));
+  await client.query('delete from producteur_terroir where not ((producteur_id, terroir_id) in (select * from unnest($1::text[], $2::text[])))',
+    [tousLiens.map((l) => l.producteur_id), tousLiens.map((l) => l.terroir_id)]);
+  await nettoyer(client, 'producteur', tousProd.map((p) => p.id));
+  await nettoyer(client, 'terroir', terroirs.map((t) => t.id));
+  for (const r of restos) {
+    await upsert(client, 'restaurant', [r.restaurant]);
+    await upsert(client, 'plat', r.plats);
+    await upsert(client, 'profil_accord', r.profils, 'plat_id');
+    await upsert(client, 'vin_carte', r.vins);
+    // Le fichier d'accords de Pat fait foi et met à jour ses accords à chaque import,
+    // sauf ceux que le sommelier a ajoutés, refusés ou commentés : ceux-là ne sont jamais écrasés.
+    for (let i = 0; i < r.accords.length; i += 300) {
+      const lot = r.accords.slice(i, i + 300);
+      const valeurs: unknown[] = [];
+      const tuples = lot.map((a, j) => {
+        valeurs.push(a.restaurant_id, a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.principes, a.service, a.origine, a.statut);
+        return `(${Array.from({ length: 10 }, (_, k) => `$${j * 10 + k + 1}`).join(', ')})`;
+      });
+      await client.query(
+        `insert into accord (restaurant_id, plat_id, vin_id, note, rang, explication, principes, service, origine, statut)
+         values ${tuples.join(', ')}
+         on conflict (plat_id, vin_id) do update set note = excluded.note, rang = excluded.rang, explication = excluded.explication,
+           principes = excluded.principes, service = excluded.service, statut = excluded.statut, calcule_le = now()
+         where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null`,
+        valeurs,
+      );
     }
-    await client.query('commit');
-    console.log('Import terminé.');
-  } catch (e) {
-    await client.query('rollback');
-    throw e;
-  } finally {
-    client.release();
-    await pool.end();
+    await nettoyer(client, 'regle_sommelier', r.regles.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
+    await upsert(client, 'regle_sommelier', r.regles);
+    await nettoyer(client, 'regle_selection', r.reglesSelection.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
+    await upsert(client, 'regle_selection', r.reglesSelection);
   }
+
+  const horodatage = new Date().toISOString().replace(/\D/g, '').slice(0, 14);
+  const fichier = path.join('netlify', 'database', 'migrations', `${horodatage}_import-donnees.sql`);
+  const entete = `-- Import des fichiers de Pat et des restaurants (npm run import, ${new Date().toISOString()}).\n-- Généré automatiquement : ne pas modifier, relancer l'import pour une nouvelle version.\n\n`;
+  fs.writeFileSync(fichier, entete + client.instructions.join('\n\n') + '\n');
+  console.log(`Migration écrite : ${fichier} (${client.instructions.length} instructions). Elle sera appliquée au prochain déploiement.`);
 }
 
 main().catch((e) => {
