@@ -1,11 +1,11 @@
 /**
- * Import des bases de Pat et des restaurants vers Postgres (Netlify Database via --sql, ou toute base via DATABASE_URL).
+ * Import des bases de Pat et des restaurants vers Supabase (DATABASE_URL).
  *
  *   npm run import                 → importe tout (Pat + tous les restaurants de data/restaurants)
  *   npm run import -- --dry-run    → n'écrit rien, affiche le bilan et écrit data/import-apercu.json
- *   npm run import -- --sql <f>    → écrit une migration de données pour Netlify Database au lieu d'une base
+ *   npm run import -- --sql <f>    → écrit un script SQL au lieu d'écrire dans la base
  *
- * Sans --sql, variable requise : DATABASE_URL (Supabase > Project Settings > Database > Connection string, mode « Session »).
+ * Sans --sql, variable requise : DATABASE_URL (Supabase > Project Settings > Database > Connection string).
  * Les fichiers de Pat restent la source : relancer l'import après chaque mise à jour d'Excel/JSON.
  */
 import 'dotenv/config';
@@ -14,9 +14,10 @@ import path from 'node:path';
 import pg from 'pg';
 import { importerPrincipes, importerProducteurs, importerTerroirs, type Ligne } from './lib/pat';
 import { importerRestaurant } from './lib/restaurant';
+import { migrer, pool as connexion } from './lib/migrations';
 
 const DRY = process.argv.includes('--dry-run');
-// --sql <fichier> : n'écrit pas dans la base, produit un fichier SQL (migration de données Netlify Database).
+// --sql <fichier> : n'écrit pas dans la base, produit un fichier SQL.
 const iSql = process.argv.indexOf('--sql');
 const SQL_SORTIE = iSql > -1 ? process.argv[iSql + 1] : null;
 
@@ -57,27 +58,6 @@ async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], con
     );
   }
   return lignes.length;
-}
-
-/**
- * Applique les migrations de supabase/migrations qui ne l'ont pas encore été (suivi dans la table schema_migration).
- * Une base créée avant ce suivi (0001 collé à la main dans Supabase) est reconnue : 0001 est marquée comme faite.
- */
-async function migrer(client: pg.PoolClient) {
-  await client.query('create table if not exists schema_migration (nom text primary key, appliquee_le timestamptz not null default now())');
-  const { rows } = await client.query<{ nom: string }>('select nom from schema_migration');
-  const faites = new Set(rows.map((r) => r.nom));
-  if (!faites.size) {
-    const { rows: t } = await client.query("select to_regclass('public.restaurant') as t");
-    if (t[0].t) { await client.query("insert into schema_migration (nom) values ('0001_schema.sql')"); faites.add('0001_schema.sql'); }
-  }
-  const dossier = path.join('supabase', 'migrations');
-  for (const f of fs.readdirSync(dossier).filter((f) => f.endsWith('.sql')).sort()) {
-    if (faites.has(f)) continue;
-    console.log(`Migration ${f}…`);
-    await client.query(fs.readFileSync(path.join(dossier, f), 'utf8'));
-    await client.query('insert into schema_migration (nom) values ($1)', [f]);
-  }
 }
 
 /** Supprime les lignes qui ne figurent plus dans les fichiers (les fichiers de Pat font foi). */
@@ -190,7 +170,7 @@ async function main() {
   }
 
   if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL manquante (voir .env.example)');
-  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
+  const pool = connexion(process.env.DATABASE_URL);
   const client = await pool.connect();
   try {
     await client.query('begin');
