@@ -53,6 +53,28 @@ function couleursDepuisProfil(profil: string): string[] {
   return [...out];
 }
 
+/** Producteur de la base dont le nom correspond (exactement, ou un nom contenu dans l'autre si c'est le seul). */
+function producteurParNom(texteCarte: string, producteurs: Ligne[]): string | undefined {
+  const k = cle(texteCarte.replace(/\(.*?\)/g, ''));
+  if (k.length < 4) return undefined;
+  const exact = producteurs.find((p) => cle(String(p.nom)) === k);
+  if (exact) return String(exact.id);
+  const proches = producteurs.filter((p) => {
+    const n = cle(String(p.nom).replace(/\(.*?\)/g, ''));
+    return n.length >= 4 && (n.startsWith(k + ' ') || k.startsWith(n + ' '));
+  });
+  return proches.length === 1 ? String(proches[0].id) : undefined;
+}
+
+/** Appellation de la base : « Alto Adige DOC », « Rioja DOCa », « Châteauneuf-du-Pape blanc »… */
+function appellationParNom(texteCarte: string, appellations: Ligne[]): Ligne | undefined {
+  const net = (t: string) => cle(t.replace(/\(.*?\)/g, '')).replace(/\b(aoc|aop|doc|docg|doca|do|igt|igp|vdp|rouge|blanc|rose)\b/g, ' ').replace(/\s+/g, ' ').trim();
+  const k = net(texteCarte);
+  if (!k) return undefined;
+  const parNom = appellations.filter((t) => net(String(t.nom)) === k);
+  return parNom.find((t) => t.statut !== 'propose') ?? parNom[0];
+}
+
 /** « 4 », « 3 (fiche Meursault…) » → 4, 3 ; « n.d. », « Hors périmètre » → 0. */
 function rankingCarte(v: unknown): number {
   const m = String(v ?? '').match(/^\s*([0-5])\b/);
@@ -155,10 +177,9 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
       let libelle = ref.split(' · ').slice(1).join(' · ').replace(/ · 37,5 cl$/, '').replace(/\s*\(au verre\)/, '');
       libelle = libelle.replace(/\s+(NM|\d{4}(-\d{4})?)$/, '');
       const prodTexte = texte(v['Producteur']);
-      const prodId = prodParCode.get(code) ??
-        (prodTexte && !/^non /i.test(prodTexte) ? tousProducteurs.find((p) => cle(String(p.nom)) === cle(prodTexte.replace(/\(.*\)/, '')))?.id : undefined);
+      const prodId = prodParCode.get(code) ?? (prodTexte && !/^non /i.test(prodTexte) ? producteurParNom(prodTexte, tousProducteurs) : undefined);
       const appTexte = String(v['Vin'] ?? '').split(' – ')[0];
-      const app = appellations.find((t) => cle(String(t.nom)).replace(/ aoc$/, '').trim() === cle(appTexte).replace(/\b(rouge|blanc)\b/g, '').trim());
+      const app = appellationParNom(appTexte, appellations);
       const etiquette = path.join('public', 'restaurants', rid, 'etiquettes', `${code}.jpg`);
       vins.push({
         id: code, restaurant_id: rid, couleur, section: meta.sections?.[code] ?? null, libelle,
@@ -171,7 +192,8 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
         etiquette_url: fs.existsSync(etiquette) ? `/restaurants/${rid}/etiquettes/${code}.jpg` : null,
         // Rankings tels que la carte les donne (règles de sélection V7) ; « n.d. », « Hors périmètre » → 0.
         ranking_producteur: rankingCarte(v['Ranking Pat producteur']),
-        ranking_terroir: rankingCarte(v['Ranking Pat terroir']),
+        // Pas de chiffre sur la carte (vin noté « hors périmètre » avant l'ajout des régions étrangères) : ranking de l'appellation.
+        ranking_terroir: rankingCarte(v['Ranking Pat terroir']) || (app && /hors périmètre|n\.d\./i.test(String(v['Ranking Pat terroir'] ?? '')) ? Number(app.ranking_pat ?? 0) : 0),
         pays: paysDuVin(String(v['Vin'] ?? ''), tousProducteurs.find((p) => p.id === prodId)?.pays as string | undefined),
         coup_de_coeur: coupsDeCoeur.has(code), disponible: true,
         a_verifier: /non précisée|à confirmer|non indiqué|non identifié/i.test(String(v['Vin']) + String(prodTexte)) ? `${prodTexte ?? ''} — ${v['Vin'] ?? ''}` : null,

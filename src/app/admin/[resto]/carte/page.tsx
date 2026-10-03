@@ -17,8 +17,7 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
   if (v.producteur_statut === 'propose') return ['Nouveau producteur', 'propose'];
   if (v.producteur_id) return [`Base de Pat${v.ranking_producteur ? ` · ★ ${v.ranking_producteur}` : ''}`, 'ok'];
-  if (v.pays && v.pays !== 'France') return ['Hors base · vin étranger', ''];
-  return ['Producteur à préciser', 'attention'];
+  return ['Absent de la base de Pat', 'attention'];
 }
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
