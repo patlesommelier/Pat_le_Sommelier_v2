@@ -1,10 +1,11 @@
 /**
- * Import des bases de Pat et des restaurants vers Postgres (Supabase).
+ * Import des bases de Pat et des restaurants vers Postgres (Netlify Database via --sql, ou toute base via DATABASE_URL).
  *
  *   npm run import                 → importe tout (Pat + tous les restaurants de data/restaurants)
  *   npm run import -- --dry-run    → n'écrit rien, affiche le bilan et écrit data/import-apercu.json
+ *   npm run import -- --sql <f>    → écrit une migration de données pour Netlify Database au lieu d'une base
  *
- * Variable requise : DATABASE_URL (Supabase > Project Settings > Database > Connection string, mode « Session »).
+ * Sans --sql, variable requise : DATABASE_URL (Supabase > Project Settings > Database > Connection string, mode « Session »).
  * Les fichiers de Pat restent la source : relancer l'import après chaque mise à jour d'Excel/JSON.
  */
 import 'dotenv/config';
@@ -15,6 +16,28 @@ import { importerPrincipes, importerProducteurs, importerTerroirs, type Ligne } 
 import { importerRestaurant } from './lib/restaurant';
 
 const DRY = process.argv.includes('--dry-run');
+// --sql <fichier> : n'écrit pas dans la base, produit un fichier SQL (migration de données Netlify Database).
+const iSql = process.argv.indexOf('--sql');
+const SQL_SORTIE = iSql > -1 ? process.argv[iSql + 1] : null;
+
+/** Faux client qui inscrit chaque requête, valeurs incluses, dans un script SQL. */
+function clientSql() {
+  const lignes: string[] = [];
+  const litteral = (v: unknown) => {
+    const p = (pg as unknown as { utils: { prepareValue(v: unknown): unknown } }).utils.prepareValue(v);
+    return p === null || p === undefined ? 'null' : pg.Client.prototype.escapeLiteral(String(p));
+  };
+  const client = {
+    async query(sql: string, params: unknown[] = []) {
+      if (!/^(begin|commit|rollback)$/i.test(sql.trim())) {
+        lignes.push(`${sql.replace(/\$(\d+)/g, (_, n) => litteral(params[Number(n) - 1])).trim()};`);
+      }
+      // Le ménage lit rowCount : on ne sait pas d'avance combien de lignes la migration retirera.
+      return { rows: [], rowCount: 0 };
+    },
+  };
+  return { client: client as unknown as pg.PoolClient, lignes };
+}
 
 async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], conflit = 'id') {
   if (!lignes.length) return 0;
@@ -69,7 +92,7 @@ async function main() {
   const { terroirs, stats } = await importerTerroirs(path.join('data', 'pat', 'terroirs'));
   const { producteurs, cuvees, liens, unique } = await importerProducteurs(path.join('data', 'pat', 'producteurs'), terroirs);
 
-  const restos = [];
+  const restos: Awaited<ReturnType<typeof importerRestaurant>>[] = [];
   for (const d of fs.readdirSync(path.join('data', 'restaurants'))) {
     const dossier = path.join('data', 'restaurants', d);
     if (fs.existsSync(path.join(dossier, 'restaurant.json'))) {
@@ -109,12 +132,7 @@ async function main() {
     return;
   }
 
-  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL manquante (voir .env.example)');
-  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
-  const client = await pool.connect();
-  try {
-    await client.query('begin');
-    await migrer(client);
+  async function ecrire(client: pg.PoolClient) {
     await upsert(client, 'principe', principes);
     await upsert(client, 'question_pat', questions, 'numero');
     // Terroirs en deux temps : d'abord sans parent, puis les liens parent → enfant.
@@ -160,6 +178,24 @@ async function main() {
       await nettoyer(client, 'regle_selection', r.reglesSelection.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
       await upsert(client, 'regle_selection', r.reglesSelection);
     }
+  }
+
+  if (SQL_SORTIE) {
+    const { client, lignes } = clientSql();
+    await ecrire(client);
+    fs.mkdirSync(path.dirname(SQL_SORTIE), { recursive: true });
+    fs.writeFileSync(SQL_SORTIE, `-- Généré par « npm run import -- --sql ${SQL_SORTIE} » à partir des fichiers de data/.\n${lignes.join('\n')}\n`);
+    console.log(`Script SQL écrit dans ${SQL_SORTIE}`);
+    return;
+  }
+
+  if (!process.env.DATABASE_URL) throw new Error('DATABASE_URL manquante (voir .env.example)');
+  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
+  const client = await pool.connect();
+  try {
+    await client.query('begin');
+    await migrer(client);
+    await ecrire(client);
     await client.query('commit');
     console.log('Import terminé.');
   } catch (e) {
