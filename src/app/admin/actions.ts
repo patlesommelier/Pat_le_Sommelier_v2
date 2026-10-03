@@ -5,6 +5,7 @@ import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
+import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { REGLAGES_PAT, type Reglages } from '@/lib/selection';
@@ -84,21 +85,7 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
       redirect(avec(`/admin/${resto}/carte`, { vin: vinId, erreur: (e as Error).message }));
     }
   }
-  // Producteur : nom affiché (texte) et lien éventuel vers la base de Pat. Relier un producteur reprend son ranking.
-  const choix = txt(f, 'producteur_choix');
-  const [actuel] = await requete<{ producteur_id: string | null }>('select producteur_id from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
-  if (choix && choix !== (actuel?.producteur_id ?? 'aucun')) {
-    const lie = choix === 'aucun' ? null : (await requete<{ id: string; nom: string; ranking_pat: number | null }>(
-      `select id, nom, ranking_pat from producteur where id = $1 and statut <> 'retire'`, [choix]))[0] ?? null;
-    await requete(
-      `update vin_carte set producteur_id = $3, producteur_texte = coalesce($4, producteur_texte),
-              ranking_producteur = case when $3::text is null then ranking_producteur else coalesce($5, ranking_producteur) end
-        where id = $1 and restaurant_id = $2`,
-      [vinId, resto, lie?.id ?? null, txt(f, 'producteur_texte') ?? lie?.nom ?? null, lie?.ranking_pat ?? null],
-    );
-  } else if (txt(f, 'producteur_texte')) {
-    await requete('update vin_carte set producteur_texte = $3 where id = $1 and restaurant_id = $2', [vinId, resto, txt(f, 'producteur_texte')]);
-  }
+  await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
   await requete(
     `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, resume_court = $6, disponible = $7, coup_de_coeur = $8,
             etiquette_url = coalesce($9, etiquette_url),
@@ -112,6 +99,60 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   redirect(avec(`/admin/${resto}/carte`, { vin: vinId, ok: '1' }));
+}
+
+/**
+ * Producteur d'un vin.
+ * - choix = id d'un producteur de la base : le vin y est relié et reprend son ranking.
+ * - choix = « nouveau » : le nom saisi devient un producteur proposé à Pat (ranking 3), relié au vin.
+ * - nom saisi ou changé sans choix : recherche dans la base. Un seul nom correspondant → relié ;
+ *   aucun nom proche → nouveau producteur proposé (ranking 3) ; des noms proches → ils sont proposés au choix.
+ * - nom vidé : le vin n'est plus relié (« Producteur à préciser »).
+ */
+async function enregistrerProducteurDuVin(resto: string, vinId: string, nom: string | null, choix: string | null) {
+  const [v] = await requete<{ producteur_id: string | null; producteur_texte: string | null; pays: string | null; section: string | null; couleur: string }>(
+    'select producteur_id, producteur_texte, pays, section, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  if (!v) return;
+  const relier = async (id: string, texte: string | null) => {
+    const [p] = await requete<{ nom: string; ranking_pat: number | null }>(`select nom, ranking_pat from producteur where id = $1 and statut <> 'retire'`, [id]);
+    if (!p) return;
+    await requete(
+      `update vin_carte set producteur_id = $3, producteur_texte = $4, ranking_producteur = coalesce($5, ranking_producteur)
+        where id = $1 and restaurant_id = $2`,
+      [vinId, resto, id, texte ?? p.nom, p.ranking_pat],
+    );
+  };
+  const proposer = async (texte: string) => {
+    const base = `bo-prod-${texte.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60)}`;
+    const [deja] = await requete<{ id: string }>(`select id from producteur where id = $1 or (statut = 'propose' and lower(nom) = lower($2))`, [base, texte]);
+    const id = deja?.id ?? base;
+    if (!deja) {
+      await requete(
+        `insert into producteur (id, nom, pays, region, couleurs, ranking_pat, statut, source, a_verifier)
+         values ($1, $2, $3, $4, $5, 3, 'propose', $6, 'Ajouté depuis le back-office : fiche à compléter par Pat')`,
+        [id, texte, v.pays, v.section, [v.couleur], `back-office ${resto} (${vinId})`],
+      );
+    }
+    await requete(
+      `update vin_carte set producteur_id = $3, producteur_texte = $4, ranking_producteur = 3 where id = $1 and restaurant_id = $2`,
+      [vinId, resto, id, texte],
+    );
+  };
+
+  if (choix === 'nouveau' && nom) return proposer(nom);
+  if (choix && choix !== 'nouveau' && choix !== v.producteur_id) return relier(choix, nom);
+  if (!nom) {
+    await requete('update vin_carte set producteur_id = null, producteur_texte = null where id = $1 and restaurant_id = $2', [vinId, resto]);
+    return;
+  }
+  if (nom === v.producteur_texte && v.producteur_id) return;
+  // Nom saisi ou changé : recherche dans la base de Pat.
+  const suggestions = await suggestionsProducteurs(nom, 5);
+  const exact = suggestions.filter((p) => p.nom.toLowerCase() === nom.toLowerCase());
+  if (exact.length === 1) return relier(exact[0].id, nom);
+  if (!suggestions.length) return proposer(nom);
+  // Des noms proches existent : le restaurant choisit (le vin n'est relié qu'après son choix).
+  await requete('update vin_carte set producteur_id = null, producteur_texte = $3 where id = $1 and restaurant_id = $2', [vinId, resto, nom]);
 }
 
 // ───────── Accords ─────────

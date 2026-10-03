@@ -158,7 +158,7 @@ async function main() {
     await nettoyer(client, 'cuvee', cuvees.map((c) => c.id));
     await client.query('delete from producteur_terroir where not ((producteur_id, terroir_id) in (select * from unnest($1::text[], $2::text[])))',
       [tousLiens.map((l) => l.producteur_id), tousLiens.map((l) => l.terroir_id)]);
-    await nettoyer(client, 'producteur', tousProd.map((p) => p.id));
+    await nettoyer(client, 'producteur', tousProd.map((p) => p.id), `id not like 'bo-%'`); // producteurs proposés depuis le back-office : gardés
     await nettoyer(client, 'terroir', terroirs.map((t) => t.id));
     for (const r of restos) {
       // Apparence et textes réglés dans le back-office : l'import ne les remplace plus.

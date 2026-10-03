@@ -15,9 +15,10 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 }
 
 function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
-  if (v.producteur_statut === 'propose') return ['Nouveau producteur', 'propose'];
+  if (v.producteur_statut === 'propose') return [`Nouveau producteur · ★ ${v.ranking_producteur ?? 3}`, 'propose'];
   if (v.producteur_id) return [`Base de Pat${v.ranking_producteur ? ` · ★ ${v.ranking_producteur}` : ''}`, 'ok'];
-  return ['Absent de la base de Pat', 'attention'];
+  if (v.producteur_texte && !/^non /i.test(v.producteur_texte)) return ['À relier : choisir le producteur', 'attention'];
+  return ['Producteur à préciser', 'attention'];
 }
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
@@ -33,7 +34,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
   const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
-  const suggestions = choisi ? (await suggestionsProducteurs(choisi.producteur_texte ?? choisi.producteur_nom)).filter((p) => p.id !== choisi.producteur_id) : [];
+  const sansLien = Boolean(choisi && !choisi.producteur_id && choisi.producteur_texte && !/^non /i.test(choisi.producteur_texte));
+  // Suggestions : pour un nom pas encore relié, ou pour corriger un producteur proposé.
+  const suggestions = choisi && (sansLien || choisi.producteur_statut === 'propose')
+    ? (await suggestionsProducteurs(choisi.producteur_texte ?? choisi.producteur_nom)).filter((p) => p.id !== choisi.producteur_id && p.statut !== 'propose')
+    : [];
   return (
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite." />
@@ -93,20 +98,24 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <legend style={{ fontSize: 13, fontWeight: 700, padding: '0 6px' }}>Producteur</legend>
                 <div className="champ">
                   <label htmlFor="producteur_texte">Nom affiché</label>
-                  <input id="producteur_texte" name="producteur_texte" defaultValue={choisi.producteur_texte ?? choisi.producteur_nom ?? ''} />
+                  <input id="producteur_texte" name="producteur_texte" placeholder="Nom du domaine ou de la maison" defaultValue={choisi.producteur_texte && /^non /i.test(choisi.producteur_texte) ? '' : choisi.producteur_texte ?? choisi.producteur_nom ?? ''} />
                 </div>
-                <span className="libelle" style={{ fontSize: 13, fontWeight: 700 }}>Producteur dans la base de Pat</span>
                 {choisi.producteur_id && (
                   <label className="case"><input type="radio" name="producteur_choix" value={choisi.producteur_id} defaultChecked />
-                    <span><b>{choisi.producteur_nom}</b><small>{pl} · ranking {choisi.producteur_ranking ?? '—'}</small></span></label>
+                    <span><b>{choisi.producteur_nom}</b><small>{pl}</small></span></label>
+                )}
+                {!choisi.producteur_id && sansLien && suggestions.length > 0 && (
+                  <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Pat a trouvé des noms proches dans sa base : choisissez le bon producteur, ou proposez-le comme nouveau.</p>
                 )}
                 {suggestions.map((p) => (
                   <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
                     <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{p.statut === 'propose' ? ' · proposé' : ''} · ranking {p.ranking_pat ?? '—'}</small></span></label>
                 ))}
-                <label className="case"><input type="radio" name="producteur_choix" value="aucun" defaultChecked={!choisi.producteur_id} />
-                  <span>Aucun producteur de la base<small>Le nom affiché reste tel quel ; ranking producteur {choisi.ranking_producteur ?? 0}</small></span></label>
-                <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Modifiez le nom puis enregistrez : Pat propose les producteurs de sa base qui lui ressemblent. Relier un producteur reprend son ranking.</span>
+                {sansLien && (
+                  <label className="case"><input type="radio" name="producteur_choix" value="nouveau" />
+                    <span>Nouveau producteur : « {choisi.producteur_texte} »<small>Proposé à Pat pour sa base, avec un ranking de 3</small></span></label>
+                )}
+                <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : Pat le cherche dans sa base. S’il ne le connaît pas, il est proposé comme nouveau producteur (ranking 3).</span>
               </fieldset>
               {pk === 'attention' && choisi.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {choisi.a_verifier}</p>}
               <div className="champs">
