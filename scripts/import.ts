@@ -39,10 +39,10 @@ function clientSql() {
   return { client: client as unknown as pg.PoolClient, lignes };
 }
 
-async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], conflit = 'id') {
+async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], conflit = 'id', surcharges: Record<string, string> = {}) {
   if (!lignes.length) return 0;
   const cols = Object.keys(lignes[0]);
-  const maj = cols.filter((c) => !conflit.split(',').includes(c)).map((c) => `${c} = excluded.${c}`).join(', ');
+  const maj = cols.filter((c) => !conflit.split(',').includes(c)).map((c) => `${c} = ${surcharges[c] ?? `excluded.${c}`}`).join(', ');
   for (let i = 0; i < lignes.length; i += 200) {
     const lot = lignes.slice(i, i + 200);
     const valeurs: unknown[] = [];
@@ -154,7 +154,11 @@ async function main() {
       await upsert(client, 'restaurant', [r.restaurant]);
       await upsert(client, 'plat', r.plats);
       await upsert(client, 'profil_accord', r.profils, 'plat_id');
-      await upsert(client, 'vin_carte', r.vins);
+      // Une étiquette venue de Wine Labs ou photographiée par le restaurant n'est pas remplacée par l'import.
+      await upsert(client, 'vin_carte', r.vins, 'id', {
+        etiquette_url: `case when vin_carte.etiquette_source in ('wine_labs', 'restaurant') then vin_carte.etiquette_url else coalesce(excluded.etiquette_url, vin_carte.etiquette_url) end`,
+        etiquette_source: `case when vin_carte.etiquette_source in ('wine_labs', 'restaurant') then vin_carte.etiquette_source else coalesce(excluded.etiquette_source, vin_carte.etiquette_source) end`,
+      });
       // Le fichier d'accords de Pat fait foi et met à jour ses accords à chaque import,
       // sauf ceux que le sommelier a ajoutés, refusés ou commentés : ceux-là ne sont jamais écrasés.
       for (let i = 0; i < r.accords.length; i += 300) {

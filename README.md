@@ -82,6 +82,14 @@ Les fichiers font foi : un producteur, un terroir ou une règle retiré des fich
 
 **Normalisations faites à l'import** (décidées dans le modèle de données) : identifiants uniques `<région>-prod-<nom>` / `<région>-terr-<nom>` (l'ancien est gardé dans `ancien_id`), `statut_production` ramené à une liste fermée (la phrase d'origine va dans `statut_precision`), `mes_notes` → `avis_critique` et `notes_pat` → `avis_pat` pour les producteurs, cuvées phares converties en table `cuvee` (statut « proposé », à relire), terroirs rangés sous leur appellation quand c'est possible.
 
+## Étiquettes Wine Labs (webhook)
+
+Wine Labs envoie un POST signé quand une demande d'étiquette est `fulfilled`, `unavailable` ou `failed`.
+
+- Adresse à déclarer chez Wine Labs : `https://<votre-site>.netlify.app/api/webhooks/wine-labs`
+- Netlify > Site configuration > Environment variables : `WINE_LABS_WEBHOOK_SECRET` = le secret `whsec_…` (jamais dans le code), puis redéployer.
+- La route vérifie la signature (sinon 401), ignore un message déjà traité, enregistre la réponse dans `demande_etiquette` et met à jour l'étiquette du vin relié. Une photo ajoutée par le restaurant n'est jamais remplacée, et l'import ne remplace pas une étiquette venue de Wine Labs.
+
 ## Organisation du code
 
 ```

@@ -184,6 +184,7 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
   for (const v of vins.filter((x) => !x.etiquette_url)) {
     v.etiquette_url = vins.find((x) => x.etiquette_url && x.libelle === v.libelle)?.etiquette_url ?? null;
   }
+  for (const v of vins) v.etiquette_source = v.etiquette_url ? 'fichier' : null;
 
   // ── Accords mets/vins de Pat (onglet « Détail (filtrable) » : une ligne par plat × vin, note 1 à 5) ──
   // Les accords de ce fichier sont l'analyse de Pat : ils arrivent « validés ». Le rang départage les ex aequo
