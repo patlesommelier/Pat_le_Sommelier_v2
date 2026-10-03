@@ -1,0 +1,129 @@
+import 'server-only';
+import { requete } from '../db';
+import { REGLAGES_PAT, reglagesComplets, type Reglages } from '../selection';
+
+export interface RestaurantBO {
+  id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null;
+  accroche: string | null; reglages_selection: Record<string, unknown>; modifie_bo: string | null;
+}
+
+export async function getRestaurantBO(id: string) {
+  const [r] = await requete<RestaurantBO>(
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, reglages_selection, modifie_bo
+       from restaurant where id = $1`, [id]);
+  return r ?? null;
+}
+
+export async function listeRestaurants() {
+  return requete<{ id: string; nom: string; couleur: string; plats: number; vins: number }>(
+    `select r.id, r.nom, r.couleur,
+            (select count(*)::int from plat p where p.restaurant_id = r.id) as plats,
+            (select count(*)::int from vin_carte v where v.restaurant_id = r.id) as vins
+       from restaurant r order by r.nom`);
+}
+
+export interface Resume {
+  plats: number; plats_inactifs: number; vins: number; vins_etiquette: number; vins_producteur: number;
+  vins_indisponibles: number; nouveaux_producteurs: number; accords: number; accords_valides: number;
+  accords_proposes: number; plats_avec_accords: number; acces: number;
+}
+
+export async function getResume(id: string): Promise<Resume> {
+  const [r] = await requete<Resume>(
+    `select
+       (select count(*)::int from plat where restaurant_id = $1 and actif) as plats,
+       (select count(*)::int from plat where restaurant_id = $1 and not actif) as plats_inactifs,
+       (select count(*)::int from vin_carte where restaurant_id = $1) as vins,
+       (select count(*)::int from vin_carte where restaurant_id = $1 and etiquette_url is not null) as vins_etiquette,
+       (select count(*)::int from vin_carte where restaurant_id = $1 and producteur_id is not null) as vins_producteur,
+       (select count(*)::int from vin_carte where restaurant_id = $1 and not disponible) as vins_indisponibles,
+       (select count(distinct p.id)::int from producteur p join vin_carte v on v.producteur_id = p.id
+         where v.restaurant_id = $1 and p.statut = 'propose') as nouveaux_producteurs,
+       (select count(*)::int from accord where restaurant_id = $1) as accords,
+       (select count(*)::int from accord where restaurant_id = $1 and statut = 'valide') as accords_valides,
+       (select count(*)::int from accord where restaurant_id = $1 and statut = 'propose') as accords_proposes,
+       (select count(distinct plat_id)::int from accord where restaurant_id = $1) as plats_avec_accords,
+       (select count(*)::int from acces_restaurant where restaurant_id = $1) as acces`,
+    [id]);
+  return r;
+}
+
+/** Réglages modifiés par rapport aux règles de Pat. */
+export function reglagesModifies(r: RestaurantBO | null): (keyof Reglages)[] {
+  const R = reglagesComplets(r?.reglages_selection);
+  return (Object.keys(REGLAGES_PAT) as (keyof Reglages)[]).filter((k) => R[k] !== REGLAGES_PAT[k]);
+}
+
+// ───────── Menu ─────────
+export interface PlatBO {
+  id: string; nom: string; nom_court: string | null; categorie: string; prix: number | null; prix_variantes: string | null;
+  actif: boolean; ordre: number; modifie_bo: string | null;
+}
+export async function getPlatsBO(restaurantId: string) {
+  return requete<PlatBO>(
+    `select id, nom, nom_court, categorie::text, prix, prix_variantes, actif, ordre, modifie_bo
+       from plat where restaurant_id = $1 order by ordre`, [restaurantId]);
+}
+export async function getProfil(platId: string) {
+  const [p] = await requete<{ ancrages: string[]; profil: string | null; a_eviter: string | null; temperature_service: string | null }>(
+    'select ancrages, profil, a_eviter, temperature_service from profil_accord where plat_id = $1', [platId]);
+  return p ?? null;
+}
+
+// ───────── Carte ─────────
+export interface VinBO {
+  id: string; couleur: string; section: string | null; libelle: string; producteur_id: string | null; producteur_texte: string | null;
+  producteur_nom: string | null; producteur_statut: string | null; producteur_ranking: number | null;
+  millesime: string | null; format: string; prix: number | null; prix_verre: number | null; cepages: string | null;
+  resume_court: string | null; presentation: string | null; etiquette_url: string | null; etiquette_source: string | null;
+  etiquette_statut: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
+  ranking_producteur: number | null; ranking_terroir: number | null; pays: string | null; vin_texte: string | null;
+  profil_degustation: Record<string, unknown> | null; ordre: number;
+}
+export async function getVinsBO(restaurantId: string) {
+  return requete<VinBO>(
+    `select v.id, v.couleur::text, v.section, v.libelle, v.producteur_id, v.producteur_texte, p.nom as producteur_nom,
+            p.statut::text as producteur_statut, p.ranking_pat as producteur_ranking, v.millesime, v.format, v.prix, v.prix_verre,
+            v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.coup_de_coeur,
+            v.disponible, v.a_verifier, v.ranking_producteur, v.ranking_terroir, v.pays, v.vin_texte, v.profil_degustation, v.ordre
+       from vin_carte v left join producteur p on p.id = v.producteur_id
+      where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
+}
+
+// ───────── Accords ─────────
+export interface AccordBO {
+  vin_id: string; note: number; statut: string; origine: string; explication: string | null; modifie_par: string | null;
+}
+export async function getAccordsPlat(restaurantId: string, platId: string) {
+  return requete<AccordBO>(
+    `select vin_id, note, statut::text, origine::text, explication, modifie_par
+       from accord where restaurant_id = $1 and plat_id = $2`, [restaurantId, platId]);
+}
+export async function getStatsAccordsParPlat(restaurantId: string) {
+  return requete<{ plat_id: string; total: number; valides: number }>(
+    `select plat_id, count(*)::int as total, count(*) filter (where statut = 'valide')::int as valides
+       from accord where restaurant_id = $1 group by plat_id`, [restaurantId]);
+}
+
+// ───────── Règles ponctuelles ─────────
+export async function getExclusions(restaurantId: string) {
+  return requete<{ id: string; cible: string; texte: string; date_fin: string | null }>(
+    `select id, cible, texte, to_char(date_fin, 'YYYY-MM-DD') as date_fin from regle_sommelier
+      where restaurant_id = $1 and type = 'exclure' and portee = 'vin' and actif order by id`, [restaurantId]);
+}
+
+// ───────── Accès ─────────
+export async function getAcces(restaurantId: string) {
+  return requete<{ user_id: string; email: string; cree_le: string }>(
+    `select user_id, email, to_char(cree_le, 'DD/MM/YYYY') as cree_le from acces_restaurant where restaurant_id = $1 order by cree_le`,
+    [restaurantId]);
+}
+
+// ───────── Producteurs proposés (administrateur) ─────────
+export async function getProducteursProposes() {
+  return requete<{ id: string; nom: string; region: string | null; pays: string | null; notes_objectives: string | null; a_verifier: string | null; vins: string | null }>(
+    `select p.id, p.nom, p.region, p.pays, p.notes_objectives, p.a_verifier,
+            string_agg(v.restaurant_id || ' ' || v.id || ' · ' || v.libelle, ' ; ' order by v.id) as vins
+       from producteur p left join vin_carte v on v.producteur_id = p.id
+      where p.statut = 'propose' group by p.id order by p.region nulls last, p.nom`);
+}

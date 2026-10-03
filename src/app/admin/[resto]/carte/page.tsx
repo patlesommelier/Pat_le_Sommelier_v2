@@ -1,0 +1,126 @@
+import Link from 'next/link';
+import { enregistrerVin } from '../../actions';
+import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
+import { getVinsBO, type VinBO } from '@/lib/admin/donnees';
+
+const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
+const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
+
+function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
+  if (v.etiquette_source === 'restaurant') return ['Votre photo', 'propose'];
+  if (v.etiquette_source === 'wine_labs') return ['Wine Labs', 'ok'];
+  if (v.etiquette_url) return ['Fournie', 'ok'];
+  if (v.etiquette_statut === 'demandee') return ['Recherche…', ''];
+  return ['À photographier', 'attention'];
+}
+
+function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
+  if (v.producteur_statut === 'propose') return ['Nouveau producteur', 'propose'];
+  if (v.producteur_id) return [`Base de Pat${v.ranking_producteur ? ` · ★ ${v.ranking_producteur}` : ''}`, 'ok'];
+  if (v.pays && v.pays !== 'France') return ['Hors base · vin étranger', ''];
+  return ['Producteur à préciser', 'attention'];
+}
+
+export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
+  const { resto } = await params;
+  const sp = await searchParams;
+  const vins = await getVinsBO(resto);
+  const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
+  const choisiParam = vins.find((v) => v.id === sp.vin);
+  const c = sp.c ?? choisiParam?.couleur ?? presentes[0]?.[0] ?? 'rouge';
+  const affiches = vins.filter((v) => v.couleur === c);
+  const choisi = choisiParam ?? affiches[0];
+  const lien = (q: Record<string, string>) => `/admin/${resto}/carte?${new URLSearchParams({ c, ...(choisi ? { vin: choisi.id } : {}), ...q })}`;
+  const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
+  const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
+  const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
+  return (
+    <>
+      <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite." />
+      <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.producteur_id && v.producteur_statut !== 'propose').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span></div>
+      </div>
+      <div className="rangee">
+        <section className="large">
+          <nav className="onglets" aria-label="Couleurs">
+            {presentes.map(([k, l]) => (
+              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{vins.filter((v) => v.couleur === k).length}</span></Link>
+            ))}
+          </nav>
+          <div className="tableau">
+            <table style={{ minWidth: 820 }}>
+              <thead><tr><th>Vin</th><th>Millésime</th><th className="droite">Prix</th><th>Étiquette</th><th>Base de Pat</th><th /></tr></thead>
+              <tbody>
+                {affiches.map((v) => {
+                  const [el, ek] = etiquette(v);
+                  const [bl, bk] = producteur(v);
+                  return (
+                    <tr key={v.id} className={v.id === choisi?.id ? 'choisi' : ''}>
+                      <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><div className="nom">{v.libelle}{v.format !== '75 cl' ? ` · ${v.format}` : ''}</div><div className="petit">{v.id} · {v.producteur_nom ?? v.producteur_texte ?? '—'}</div></div></div></td>
+                      <td>{v.millesime ?? '—'}</td>
+                      <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : v.prix_verre ? `${euros(v.prix_verre)} le verre` : '—'}</td>
+                      <td><Etat type={ek}>{el}</Etat></td>
+                      <td>{!v.disponible ? <Etat type="defaut">Indisponible</Etat> : <Etat type={bk}>{bl}</Etat>}</td>
+                      <td className="droite"><Link className="lien-ligne" href={lien({ vin: v.id })} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+        {choisi && (
+          <aside className="etroit">
+            <form key={choisi.id} action={enregistrerVin.bind(null, resto, choisi.id)} className="carte-bo pile">
+              <div className="pile" style={{ gap: 6 }}>
+                <span className="surtitre">{choisi.id} · {choisi.section ?? choisi.couleur}</span>
+                <h2>{choisi.libelle} {choisi.millesime ?? ''}</h2>
+              </div>
+              <Message ok={sp.ok ? 'Enregistré.' : undefined} erreur={sp.erreur} />
+              <div style={{ display: 'flex', gap: 16, alignItems: 'center', padding: 14, borderRadius: 14, border: '1px solid var(--ligne)', background: 'var(--fond)' }}>
+                <Vignette url={choisi.etiquette_url} taille={104} />
+                <div className="champ" style={{ flex: 1, minWidth: 0 }}>
+                  <span className="libelle">Étiquette</span>
+                  <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
+                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (JPG, PNG, WebP · 5 Mo max). Elle ne sera jamais écrasée par Wine Labs.</label>
+                  <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
+                </div>
+              </div>
+              <div className="encadre-rose">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/pat/pat.png" alt="" />
+                <span>{choisi.producteur_nom ? <><strong>{choisi.producteur_nom}</strong> · {pl}</> : <>{choisi.producteur_texte ?? 'Producteur non indiqué'} · {pl}</>}{' '}· ranking producteur {choisi.ranking_producteur ?? 0}, ranking terroir {choisi.ranking_terroir ?? 0}.</span>
+              </div>
+              {pk === 'attention' && choisi.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {choisi.a_verifier}</p>}
+              <div className="champs">
+                <div className="champ"><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={choisi.millesime ?? ''} /></div>
+                <div className="champ"><label htmlFor="prix">Prix bouteille (€)</label><input id="prix" name="prix" inputMode="decimal" defaultValue={choisi.prix ?? ''} /></div>
+                <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={choisi.prix_verre ?? ''} /></div>
+              </div>
+              <div className="champ"><label htmlFor="resume_court">Résumé court (vu par le client)</label><textarea id="resume_court" name="resume_court" rows={3} defaultValue={choisi.resume_court ?? ''} /></div>
+              {BARRES.some(([k]) => typeof profil[k] === 'number') && (
+                <div className="pile" style={{ gap: 8 }}>
+                  <span className="libelle" style={{ fontSize: 13, fontWeight: 700 }}>Profil de dégustation</span>
+                  {BARRES.filter(([k]) => typeof profil[k] === 'number').map(([k, l]) => (
+                    <div key={k} className="jauge"><span>{l}</span><span className="barres" role="img" aria-label={`${l} ${profil[k]} sur 5`}>{[0, 1, 2, 3, 4].map((i) => <i key={i} className={i < (profil[k] ?? 0) ? 'plein' : ''} />)}</span></div>
+                  ))}
+                </div>
+              )}
+              <div>
+                <label className="case"><input type="checkbox" name="disponible" defaultChecked={choisi.disponible} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
+                <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={choisi.coup_de_coeur} /><span>Coup de cœur de la maison</span></label>
+              </div>
+              <div className="ligne-actions">
+                <button type="submit" className="btn petit">Enregistrer</button>
+                <Link href={`/${resto}/vin/${choisi.id}`} target="_blank" className="btn sec petit">Voir la fiche client</Link>
+              </div>
+            </form>
+          </aside>
+        )}
+      </div>
+    </>
+  );
+}

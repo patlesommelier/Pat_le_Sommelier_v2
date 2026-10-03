@@ -1,15 +1,15 @@
 import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
-import { selectionner, tourSuivant, type Motif, type Retenu } from './selection';
+import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
 import type { Accord, Plat, Restaurant, Vin } from './types';
 
-const accordsVisibles = () =>
+export const accordsVisibles = () =>
   process.env.AFFICHER_ACCORDS_PROPOSES === 'true' ? ['valide', 'propose'] : ['valide'];
 
 export const getRestaurant = cache(async (id: string) => {
   const [r] = await requete<Restaurant>(
-    'select id, nom, couleur, couleur_claire, logo_url, accroche from restaurant where id = $1',
+    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche from restaurant where id = $1',
     [id],
   );
   return r ?? null;
@@ -52,7 +52,7 @@ export async function getVin(restaurantId: string, id: string) {
 }
 
 /** Vins que le sommelier a retirés des propositions (règle ponctuelle « exclure », portée « vin »). */
-async function vinsExclus(restaurantId: string) {
+export async function vinsExclus(restaurantId: string) {
   const r = await requete<{ cible: string }>(
     `select cible from regle_sommelier
       where restaurant_id = $1 and type = 'exclure' and portee = 'vin' and actif
@@ -64,39 +64,64 @@ async function vinsExclus(restaurantId: string) {
 
 export interface Proposition { accord: Accord; vin: Vin; motif: Motif }
 
+/** Réglages des règles de sélection du restaurant (back-office), complétés par les valeurs de Pat. */
+export async function getReglages(restaurantId: string): Promise<Reglages> {
+  const [r] = await requete<{ reglages_selection: unknown }>('select reglages_selection from restaurant where id = $1', [restaurantId]);
+  return reglagesComplets(r?.reglages_selection);
+}
+
+export type LigneAccord = Accord & Vin;
+export type CandidatVin = LigneAccord & Candidat;
+
 /**
- * Propositions pour un plat, selon les règles de sélection du restaurant (regles_selection.xlsx, V7 — voir selection.ts).
- * tour = 1 : la liste de 1 à 5 vins ; tour = 2, 3… : les trois vins suivants du classement.
+ * Vins candidats pour un ou plusieurs plats : vins disponibles, non retirés, avec leur note d'accord sur chaque plat.
+ * `statuts` : statuts d'accord pris en compte (par défaut ceux montrés au client).
  */
-export async function getPropositions(restaurantId: string, platId: string, tour = 1): Promise<{ propositions: Proposition[]; encore: boolean }> {
+export async function getCandidats(restaurantId: string, platIds: string[], statuts = accordsVisibles()) {
   const [lignes, exclus] = await Promise.all([
-    requete<Accord & Vin>(
+    requete<LigneAccord>(
       `select a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.explication_longue, a.service, a.statut, v.*
          from accord a
          join (${SELECT_VIN} where v.disponible) v on v.id = a.vin_id
-        where a.plat_id = $1 and a.restaurant_id = $2 and a.statut = any($3) and a.note is not null`,
-      [platId, restaurantId, accordsVisibles()],
+        where a.plat_id = any($1) and a.restaurant_id = $2 and a.statut = any($3) and a.note is not null`,
+      [platIds, restaurantId, statuts],
     ),
     vinsExclus(restaurantId),
   ]);
-  const parId = new Map(lignes.filter((l) => !exclus.has(l.vin_id)).map((l) => [l.vin_id, l]));
-  const candidats = [...parId.values()].map((l) => ({
-    ...l,
-    id: l.vin_id,
-    prix: l.prix ?? null,
-    appellation: String(l.vin_texte ?? '').split(' – ')[0].replace(/\(.*?\)/g, '').trim(),
-    notes: { [platId]: Number(l.note) },
-  }));
-  const sel = selectionner(candidats, [platId]);
-  let liste: Retenu<(typeof candidats)[number]>[] = sel.liste;
+  const parVin = new Map<string, CandidatVin>();
+  const lignesParVin = new Map<string, LigneAccord[]>();
+  for (const l of lignes) {
+    if (exclus.has(l.vin_id)) continue;
+    lignesParVin.set(l.vin_id, [...(lignesParVin.get(l.vin_id) ?? []), l]);
+    const c = parVin.get(l.vin_id) ?? {
+      ...l,
+      id: l.vin_id,
+      prix: l.prix ?? null,
+      appellation: String(l.vin_texte ?? '').split(' – ')[0].replace(/\(.*?\)/g, '').trim(),
+      notes: {},
+    };
+    c.notes[l.plat_id] = Number(l.note);
+    parVin.set(l.vin_id, c);
+  }
+  return { candidats: [...parVin.values()], lignesParVin, exclus };
+}
+
+/**
+ * Propositions pour un plat, selon les règles de sélection du restaurant (regles_selection.xlsx, V7 — voir selection.ts),
+ * ajustées par ses réglages. tour = 1 : la liste de 1 à 5 vins ; tour = 2, 3… : les vins suivants du classement.
+ */
+export async function getPropositions(restaurantId: string, platId: string, tour = 1): Promise<{ propositions: Proposition[]; encore: boolean }> {
+  const [{ candidats, lignesParVin }, R] = await Promise.all([getCandidats(restaurantId, [platId]), getReglages(restaurantId)]);
+  const sel = selectionner(candidats, [platId], { reglages: R });
+  let liste: Retenu<CandidatVin>[] = sel.liste;
   const proposes = sel.liste.map((r) => r.vin.id);
   for (let t = 2; t <= tour; t++) {
-    liste = tourSuivant(sel, proposes);
+    liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles);
     proposes.push(...liste.map((r) => r.vin.id));
   }
-  const encore = tourSuivant(sel, proposes, 1).length > 0;
+  const encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
   const propositions = liste.map((r) => {
-    const l = parId.get(r.vin.id)!;
+    const l = lignesParVin.get(r.vin.id)![0];
     return {
       accord: { plat_id: l.plat_id, vin_id: l.vin_id, note: l.note, rang: l.rang, explication: l.explication, explication_longue: l.explication_longue, service: l.service, statut: l.statut } as Accord,
       vin: l as Vin,

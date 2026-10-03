@@ -20,7 +20,7 @@ button { font: inherit; }
 .defile { flex: 1 1 auto; min-height: 0; overflow-y: auto; display: flex; flex-direction: column; }
 
 /* ── Bandeau ── */
-.bandeau { flex-shrink: 0; background: var(--marque); color: #FFFFFF; position: relative; z-index: 2; }
+.bandeau { flex-shrink: 0; background: var(--marque); color: var(--sur-marque, #FFFFFF); position: relative; z-index: 2; }
 .bandeau-haut { display: flex; align-items: center; gap: 12px; padding: 18px 20px 18px; }
 .bandeau-haut .logo { flex-grow: 1; display: flex; align-items: center; }
 .bandeau-haut .logo img { display: block; height: 50px; width: auto; }
@@ -28,18 +28,18 @@ button { font: inherit; }
 .bandeau.grand .bandeau-haut .logo img { height: 73px; }
 .retour {
   width: 32px; height: 40px; margin: 0 -6px 0 -8px; display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.85); flex-shrink: 0; text-decoration: none;
+  color: var(--sur-marque, #FFFFFF); opacity: 0.85; flex-shrink: 0; text-decoration: none;
 }
 .bouton-carte {
-  display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid #FFFFFF;
-  color: #FFFFFF; text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px;
+  display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid var(--sur-marque, #FFFFFF);
+  color: var(--sur-marque, #FFFFFF); text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px;
   text-transform: uppercase; flex-shrink: 0; white-space: nowrap;
 }
 .accueil-hero { padding: 10px 20px 28px; display: flex; flex-direction: column; gap: 22px; }
 .accueil-texte { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 .accueil-titre { font-size: 27px; font-weight: 700; line-height: 1.25; margin-top: 18px; letter-spacing: 0.3px; }
 .accueil-titre span { display: block; font-weight: 400; font-size: 21px; }
-.filet-blanc { width: 48px; height: 1px; background: #FFFFFF; }
+.filet-blanc { width: 48px; height: 1px; background: var(--sur-marque, #FFFFFF); }
 .accueil-question { font-size: 18px; font-style: italic; }
 .silhouettes { display: block; margin: 4px -20px -28px; width: calc(100% + 40px); height: 70px; }
 
@@ -60,19 +60,19 @@ button { font: inherit; }
   display: flex; align-items: center; height: 30px; padding: 0 7px; border: 1px solid #BDBDBD;
   color: var(--encre); text-decoration: none; font-size: 11px; white-space: nowrap;
 }
-.bulle:hover, .bulle:focus-visible { border-color: var(--marque); color: var(--marque); }
+.bulle:hover, .bulle:focus-visible { border-color: var(--marque); color: var(--marque-texte, var(--marque)); }
 
 /* ── Cartes vin (Propositions) ── */
 .carte-vin { display: flex; gap: 14px; padding: 14px; border: 1px solid var(--bord); text-decoration: none; color: var(--encre); }
 .carte-vin .infos { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
 .carte-vin .nom { font-size: 16px; font-weight: 700; line-height: 1.25; }
 .carte-vin .sous { font-size: 13px; color: var(--discret); }
-.carte-vin .mention { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--marque); }
+.carte-vin .mention { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--marque-texte, var(--marque)); }
 .autres { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .autres .lien-discret:only-child { margin-left: auto; }
-.lien-discret { font-size: 14px; color: var(--marque); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
+.lien-discret { font-size: 14px; color: var(--marque-texte, var(--marque)); text-decoration: none; border-bottom: 1px solid currentColor; padding-bottom: 1px; }
 .carte-vin .pourquoi { font-size: 14px; line-height: 1.45; }
-.prix { font-weight: 700; color: var(--marque); white-space: nowrap; }
+.prix { font-weight: 700; color: var(--marque-texte, var(--marque)); white-space: nowrap; }
 .etiquette {
   object-fit: contain; padding: 3px; background: #FFFFFF; border: 1px solid var(--filet); flex-shrink: 0; display: block;
 }
@@ -87,14 +87,14 @@ a.bouton-plein { text-decoration: none; }
 
 /* ── Fiche vin ── */
 .fiche-entete { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
-.fiche-entete .surtitre { font-size: 13px; letter-spacing: 2px; color: var(--marque); text-transform: uppercase; }
+.fiche-entete .surtitre { font-size: 13px; letter-spacing: 2px; color: var(--marque-texte, var(--marque)); text-transform: uppercase; }
 .fiche-entete h1 { margin: 0; font-size: 30px; font-weight: 400; }
 .fiche-entete .lieu { font-size: 15px; font-style: italic; color: var(--discret); }
 .pastilles { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; }
 .pastille { padding: 6px 12px; border: 1px solid var(--bord); font-size: 13px; }
 .texte { font-size: 15px; line-height: 1.6; text-align: justify; margin: 0; white-space: pre-line; }
 .encadre { display: flex; flex-direction: column; align-items: center; gap: 10px; padding: 18px 16px; border: 1px solid var(--bord); text-align: center; }
-.encadre .titre { font-size: 12px; letter-spacing: 2px; color: var(--marque); text-transform: uppercase; }
+.encadre .titre { font-size: 12px; letter-spacing: 2px; color: var(--marque-texte, var(--marque)); text-transform: uppercase; }
 .encadre p { margin: 0; font-size: 15px; line-height: 1.5; font-style: italic; }
 .ligne-prix { display: flex; align-items: center; justify-content: space-between; padding: 16px; border: 1px solid var(--bord); }
 .ligne-prix .gauche { display: flex; flex-direction: column; gap: 2px; }
@@ -116,9 +116,9 @@ a.bouton-plein { text-decoration: none; }
   border: 0; border-bottom: 2px solid transparent; background: none; padding: 0;
 }
 .onglet small { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; }
-.onglet[aria-selected='true'] { color: var(--marque); border-bottom-color: var(--marque); }
+.onglet[aria-selected='true'] { color: var(--marque-texte, var(--marque)); border-bottom-color: var(--marque); }
 .panneau { display: flex; flex-direction: column; padding: 4px 20px 24px; }
-.sous-titre { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--marque); padding: 18px 0 4px; }
+.sous-titre { font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: var(--marque-texte, var(--marque)); padding: 18px 0 4px; }
 .ligne-vin { display: flex; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--filet); color: var(--encre); text-decoration: none; }
 .ligne-vin .infos { display: flex; flex-direction: column; gap: 2px; flex-grow: 1; min-width: 0; }
 .ligne-vin .nom { font-size: 15px; font-weight: 700; line-height: 1.25; }
@@ -163,5 +163,5 @@ a.bouton-plein { text-decoration: none; }
 .message.client { align-self: flex-end; background: var(--marque); color: #FFFFFF; border-radius: 16px 16px 4px 16px; }
 .message.pat { align-self: flex-start; background: var(--marque-claire); border-radius: 16px 16px 16px 4px; }
 .message .vins-cites { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.message .vins-cites a { font-size: 12px; padding: 5px 8px; border: 1px solid var(--marque); color: var(--marque); text-decoration: none; background: #FFFFFF; }
+.message .vins-cites a { font-size: 12px; padding: 5px 8px; border: 1px solid var(--marque); color: var(--marque-texte, var(--marque)); text-decoration: none; background: #FFFFFF; }
 .message.erreur { align-self: center; background: #FFF4E5; color: #6B4A00; border-radius: 8px; font-size: 14px; }

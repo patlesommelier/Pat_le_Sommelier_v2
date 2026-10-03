@@ -6,6 +6,7 @@ export interface Restaurant {
   couleur: string;
   couleur_claire: string;
   logo_url: string | null;
+  logo_fonce_url?: string | null;
   accroche: string | null;
 }
 

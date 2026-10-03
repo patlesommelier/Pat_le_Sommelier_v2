@@ -82,6 +82,24 @@ Les fichiers font foi : un producteur, un terroir ou une règle retiré des fich
 
 **Normalisations faites à l'import** (décidées dans le modèle de données) : identifiants uniques `<région>-prod-<nom>` / `<région>-terr-<nom>` (l'ancien est gardé dans `ancien_id`), `statut_production` ramené à une liste fermée (la phrase d'origine va dans `statut_precision`), `mes_notes` → `avis_critique` et `notes_pat` → `avis_pat` pour les producteurs, cuvées phares converties en table `cuvee` (statut « proposé », à relire), terroirs rangés sous leur appellation quand c'est possible.
 
+## Back-office des restaurants (`/admin`)
+
+Espace où chaque restaurant gère son menu, sa carte, ses accords, ses règles, son apparence, ses accès et son QR code, avec un simulateur. Pat (administrateur) voit tous les restaurants et valide les producteurs proposés.
+
+Mise en route (une fois) :
+
+1. Supabase > Project Settings > API : copier « Project URL », la clé `anon` et la clé `service_role`.
+2. Netlify > Environment variables : `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_ANON_KEY`, `SUPABASE_SERVICE_ROLE_KEY` (secrète), `PAT_ADMIN_EMAILS` (votre e-mail), `URL_PUBLIQUE` (adresse du site, pour le QR code). Redéployer.
+3. Supabase > Authentication > Users > « Add user » : créer votre compte (e-mail de `PAT_ADMIN_EMAILS` + mot de passe).
+4. Supabase > Authentication > URL Configuration : Site URL = adresse du site ; ajouter `https://<site>/admin/auth/retour` aux Redirect URLs (mot de passe oublié).
+5. `npm run import` (applique la migration 0005), puis se connecter sur `https://<site>/admin`.
+
+Les comptes des restaurants se créent ensuite dans l'écran « Accès & QR code ». Les images (logos, photos d'étiquettes) vont dans le compartiment public « medias » de Supabase Storage, créé au premier dépôt.
+
+Une ligne modifiée dans le back-office (plat, vin, apparence) n'est plus écrasée par `npm run import` ; une note changée par le sommelier non plus.
+
+En local sans Supabase : `AUTH_DEV_EMAIL=vous@exemple.be` dans `.env` ouvre le back-office en administrateur (ignoré sur Netlify).
+
 ## Étiquettes Wine Labs (webhook)
 
 Wine Labs envoie un POST signé quand une demande d'étiquette est `fulfilled`, `unavailable` ou `failed`.

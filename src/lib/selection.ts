@@ -43,13 +43,39 @@ export interface Selection<C extends Candidat = Candidat> {
   classement: Retenu<C>[];
 }
 
-const NOTE_ELIMINATOIRE = 2;   // règle 1
-const PREMIERS = 3;            // règles 3 à 5 : les trois premiers vins
-const MAXIMUM = 5;             // règle 9
-const SCORE_MINIMUM_AJOUT = 7; // règle 6c
-const FACTEUR_PLUS_CHER = 1.5; // règle 7b
-const ECART_MOINS_CHER = 1.3;  // règle 8 (déclenchement)
-const PLAFOND_BULLES = 2;      // règle 11
+/** Réglages des règles, modifiables par le restaurant dans le back-office. Valeurs de Pat : REGLAGES_PAT. */
+export interface Reglages {
+  contenance: boolean;        // règle 10
+  noteEliminatoire: number;   // règle 1 : notes ≤ valeur écartées
+  diversite: boolean;         // règle 3 (Plat seul)
+  premiers: number;           // règles 3 à 5 : nombre de premiers vins
+  maximum: number;            // règle 9
+  noteMinAjout: number;       // règle 6a
+  scoreMinAjout: number;      // règle 6c
+  plusCher: boolean;          // règle 7
+  facteurPlusCher: number;    // règle 7b
+  moinsCher: boolean;         // règle 8
+  ecartMoinsCher: number;     // règle 8 (déclenchement)
+  plafondBulles: number;      // règle 11
+  tourSuivant: number;        // Tour 2 : nombre de vins
+}
+
+export const REGLAGES_PAT: Reglages = {
+  contenance: true, noteEliminatoire: 2, diversite: true, premiers: 3, maximum: 5, noteMinAjout: 4, scoreMinAjout: 7,
+  plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3,
+};
+
+/** Réglages enregistrés (partiels, éventuellement invalides) → réglages complets. */
+export function reglagesComplets(r: unknown): Reglages {
+  const o = (r && typeof r === 'object' ? r : {}) as Record<string, unknown>;
+  const out = { ...REGLAGES_PAT };
+  for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
+    const v = o[k];
+    if (typeof REGLAGES_PAT[k] === 'boolean' && typeof v === 'boolean') (out[k] as boolean) = v;
+    if (typeof REGLAGES_PAT[k] === 'number' && typeof v === 'number' && Number.isFinite(v)) (out[k] as number) = v;
+  }
+  return out;
+}
 
 const norm = (s: string | null | undefined) =>
   (s ?? '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
@@ -71,7 +97,8 @@ const memeVin = (v: Candidat) => norm(v.libelle);
 const estBulle = (v: Candidat) => v.couleur === 'bulles';
 
 /** Règle 10 : la demi-bouteille d'un vin qui existe en 75 cl est écartée avant le classement. */
-function contenance<C extends Candidat>(vins: C[]): C[] {
+function contenance<C extends Candidat>(vins: C[], active = true): C[] {
+  if (!active) return vins;
   const en75 = new Set(vins.filter((v) => v.format === '75 cl').map(memeVin));
   return vins.filter((v) => v.format === '75 cl' || !en75.has(memeVin(v)));
 }
@@ -105,9 +132,9 @@ function diversite(v: Candidat, liste: Candidat[]): number[] {
 }
 
 /** Règle 11 : deux bulles au plus, trois si tous les vins notés 5 du classement sont des bulles. */
-function plafondBulles(classement: Retenu[]) {
+function plafondBulles(classement: Retenu[], plafond: number) {
   const cinq = classement.filter((r) => r.note === 5);
-  return cinq.length && cinq.every((r) => estBulle(r.vin)) ? PLAFOND_BULLES + 1 : PLAFOND_BULLES;
+  return cinq.length && cinq.every((r) => estBulle(r.vin)) ? plafond + 1 : plafond;
 }
 
 /**
@@ -133,23 +160,26 @@ function suivant<C extends Candidat>(restants: Retenu<C>[], liste: Retenu<C>[], 
 }
 
 export interface Options {
-  /** Règle 3 (diversité). Vraie pour « Plat seul », fausse pour « Plusieurs plats ». */
+  /** Règle 3 (diversité). Vraie pour « Plat seul » (si le réglage l'autorise), fausse pour « Plusieurs plats ». */
   diversite?: boolean;
+  reglages?: Partial<Reglages>;
 }
 
 /** Sélection « Plat seul » (un plat) ou « Plusieurs plats » (plusieurs). */
 export function selectionner<C extends Candidat>(vins: C[], plats: string[], options: Options = {}): Selection<C> {
-  const avecDiversite = options.diversite ?? plats.length === 1;
+  const R = { ...REGLAGES_PAT, ...options.reglages };
+  const avecDiversite = options.diversite ?? (plats.length === 1 && R.diversite);
+  const PREMIERS = R.premiers, MAXIMUM = R.maximum;
 
   // Règles 10, 1 et 2 → classement
-  const classement: Retenu<C>[] = contenance(vins)
+  const classement: Retenu<C>[] = contenance(vins, R.contenance)
     .map((vin) => {
       const note = noteSur(vin, plats);
       return note === null ? null : { vin, note, score: note + (vin.ranking_producteur ?? 0), motif: 'classement' as Motif };
     })
-    .filter((r): r is Retenu<C> => r !== null && r.note > NOTE_ELIMINATOIRE)
+    .filter((r): r is Retenu<C> => r !== null && r.note > R.noteEliminatoire)
     .sort(compare);
-  const plafond = plafondBulles(classement);
+  const plafond = plafondBulles(classement, R.plafondBulles);
 
   // Règles 3 à 5 : les trois premiers vins
   const liste: Retenu<C>[] = [];
@@ -165,7 +195,7 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   const scoreTroisieme = liste[PREMIERS - 1].score;
   while (liste.length < MAXIMUM) {
     const r = suivant(restants(), liste, plafond, avecDiversite,
-      (c) => c.note >= 4 && c.score >= scoreTroisieme - 1 && c.score >= SCORE_MINIMUM_AJOUT);
+      (c) => c.note >= R.noteMinAjout && c.score >= scoreTroisieme - 1 && c.score >= R.scoreMinAjout);
     if (!r) break;
     liste.push({ ...r, motif: liste.length >= PREMIERS ? 'quatrieme_cinquieme' : 'classement' });
   }
@@ -178,8 +208,8 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   const minPrix = Math.min(...prix6);
 
   // Règle 7 : vin plus cher (toujours recherché)
-  const plusCher = prix6.length
-    ? restants().find((c) => c.note >= 4 && c.vin.prix !== null && c.vin.prix >= FACTEUR_PLUS_CHER * maxPrix && c.score >= dernier6.score - 1)
+  const plusCher = R.plusCher && prix6.length
+    ? restants().find((c) => c.note >= R.noteMinAjout && c.vin.prix !== null && c.vin.prix >= R.facteurPlusCher * maxPrix && c.score >= dernier6.score - 1)
     : undefined;
   if (plusCher) {
     const ajout = { ...plusCher, motif: 'plus_cher' as Motif };
@@ -196,10 +226,10 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   }
 
   // Règle 8 : vin moins cher, seulement si l'écart de prix de la liste (après la règle 6) est inférieur à 1,3
-  if (prix6.length && maxPrix < ECART_MOINS_CHER * minPrix) {
+  if (R.moinsCher && prix6.length && maxPrix < R.ecartMoinsCher * minPrix) {
     const bullesPleines = liste.filter((r) => estBulle(r.vin)).length >= plafond;
     const moinsCher = restants().find((c) =>
-      c.note >= 4 && c.vin.prix !== null && c.vin.prix <= minPrix / 2 && c.score >= dernier6.score - 2 && !(bullesPleines && estBulle(c.vin)));
+      c.note >= R.noteMinAjout && c.vin.prix !== null && c.vin.prix <= minPrix / 2 && c.score >= dernier6.score - 2 && !(bullesPleines && estBulle(c.vin)));
     if (moinsCher) {
       const ajout = { ...moinsCher, motif: 'moins_cher' as Motif };
       if (liste.length < MAXIMUM) liste.push(ajout);
@@ -219,8 +249,8 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
  * « Tour 2 et verre », règle 1 : les trois vins suivants du classement, en reprenant après la liste précédente.
  * Les règles 6 à 8 ne s'appliquent pas ; le plafond de bulles s'applique à la nouvelle liste.
  */
-export function tourSuivant<C extends Candidat>(sel: Selection<C>, dejaProposes: string[], nombre = PREMIERS, avecDiversite = true): Retenu<C>[] {
-  const plafond = plafondBulles(sel.classement);
+export function tourSuivant<C extends Candidat>(sel: Selection<C>, dejaProposes: string[], nombre = REGLAGES_PAT.tourSuivant, avecDiversite = true, plafondReglage = REGLAGES_PAT.plafondBulles): Retenu<C>[] {
+  const plafond = plafondBulles(sel.classement, plafondReglage);
   const exclus = new Set(dejaProposes);
   const liste: Retenu<C>[] = [];
   while (liste.length < nombre) {

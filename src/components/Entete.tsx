@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Restaurant } from '@/lib/types';
+import { couleurClaire } from '@/lib/couleurs';
 import { Chevron, Livre } from './Icones';
 
 /** Bandeau du haut : retour discret, logo, bouton « Carte des vins ». Reste visible quand on fait défiler. */
@@ -15,7 +16,7 @@ export function Entete({ restaurant, retour, grand = false, children }: { restau
         )}
         <Link href={`/${restaurant.id}`} className="logo" aria-label={`${restaurant.nom}, accueil`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={restaurant.logo_url ?? ''} alt={restaurant.nom} />
+          <img src={(couleurClaire(restaurant.couleur) && restaurant.logo_fonce_url) || restaurant.logo_url || ''} alt={restaurant.nom} />
         </Link>
         <Link href={`/${restaurant.id}/carte`} className="bouton-carte">
           <Livre />

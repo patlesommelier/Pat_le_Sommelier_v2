@@ -1,0 +1,138 @@
+/* Back-office de Pat le sommelier — encre bordeaux du bonhomme, Bricolage Grotesque + Lato. */
+.bo {
+  --encre: #610420;
+  --encre-fonce: #3E0214;
+  --texte: #24151A;
+  --discret: #66565B;
+  --ligne: #E8DDDF;
+  --fond: #FBF8F7;
+  --rose: #F6ECEE;
+  --vert: #1D5C38; --vert-fond: #E3F1E7;
+  --ocre: #6E4600; --ocre-fond: #FBEED2;
+  --gris-fond: #EFEAEB; --gris: #4F4246;
+  --titre: 'Bricolage Grotesque', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  min-height: 100vh; background: var(--fond); color: var(--texte);
+  font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  display: flex; flex-wrap: wrap; align-items: stretch;
+}
+.bo a { color: var(--encre); }
+.bo a:hover { color: var(--encre-fonce); }
+.bo h1, .bo h2, .bo h3 { font-family: var(--titre); margin: 0; letter-spacing: -0.3px; }
+.bo :focus-visible { outline: 2px solid var(--encre); outline-offset: 2px; }
+
+/* ── Navigation ── */
+.bo-nav { flex: 1 1 260px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: #FFF; border-right: 1px solid var(--ligne); display: flex; flex-direction: column; gap: 22px; }
+.bo-marque { display: flex; align-items: center; gap: 10px; text-decoration: none; padding: 0 8px; }
+.bo-marque img { width: 44px; height: 48px; display: block; }
+.bo-marque strong { display: block; font-family: var(--titre); font-size: 20px; font-weight: 800; color: var(--encre); line-height: 1.05; }
+.bo-marque span { font-size: 12px; color: var(--discret); }
+.bo-resto { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 1px solid var(--ligne); border-radius: 12px; background: var(--fond); text-decoration: none; color: var(--texte) !important; }
+.bo-resto .pastille { width: 30px; height: 30px; border-radius: 8px; color: #FFF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+.bo-resto b { display: block; font-size: 15px; }
+.bo-resto small { font-size: 12px; color: var(--discret); }
+.bo-liens { display: flex; flex-direction: column; gap: 4px; }
+.bo-liens .section { margin: 14px 12px 6px; font-size: 11.5px; letter-spacing: 1.6px; text-transform: uppercase; color: var(--discret); font-weight: 700; }
+.bo-lien { display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 8px 12px; border-radius: 12px; text-decoration: none; font-size: 15px; color: var(--texte) !important; }
+.bo-lien:hover { background: var(--rose); }
+.bo-lien[aria-current='page'] { background: var(--encre); color: #FFF !important; font-weight: 700; }
+.bo-num { width: 24px; height: 24px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1.5px solid #CDBFC3; color: var(--discret); font-size: 12px; font-weight: 700; flex-shrink: 0; }
+.bo-num.fait { border: 0; background: var(--encre); color: #FFF; }
+.bo-num.encours { border-color: var(--encre); color: var(--encre); }
+.bo-lien[aria-current='page'] .bo-num { border-color: #FFF; color: #FFF; }
+.bo-lien[aria-current='page'] .bo-num.fait { background: #FFF; color: var(--encre); }
+.bo-bas { margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--discret); padding: 0 12px; }
+.bo-bas form { margin: 0; }
+
+/* ── Contenu ── */
+.bo-main { flex: 999 1 640px; min-width: 0; max-width: 100%; box-sizing: border-box; padding: 36px clamp(16px, 3vw, 48px) 56px; display: flex; flex-direction: column; gap: 28px; }
+.bo-entete { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 18px; }
+.bo-entete h1 { font-size: clamp(30px, 3.2vw, 40px); font-weight: 800; letter-spacing: -0.8px; line-height: 1.05; }
+.bo-entete p { margin: 8px 0 0; max-width: 760px; font-size: 16px; line-height: 1.55; color: var(--discret); }
+.rangee { display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start; }
+.rangee > .large { flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+.rangee > .etroit { flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 18px; }
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr)); gap: 18px; }
+.pile { display: flex; flex-direction: column; gap: 16px; }
+.ligne-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+
+.carte-bo { background: #FFF; border: 1px solid var(--ligne); border-radius: 16px; padding: 24px; }
+.carte-bo.sticker { border: 1.5px solid var(--encre); box-shadow: 5px 5px 0 var(--encre); }
+.carte-bo h2 { font-size: 22px; font-weight: 700; }
+.carte-bo .sous { margin: 6px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--discret); }
+.surtitre { font-size: 12.5px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 700; color: var(--encre); }
+.discret { color: var(--discret); font-size: 14px; }
+.encadre-rose { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: 12px; background: var(--rose); font-size: 14px; line-height: 1.45; }
+.encadre-rose img { width: 24px; height: 26px; flex-shrink: 0; }
+.chiffre { font-family: var(--titre); font-size: 28px; font-weight: 800; color: var(--encre); }
+
+/* ── Boutons ── */
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 700 15px Lato, sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #FFF !important; border: 1.5px solid var(--encre); }
+.btn:hover { background: var(--encre-fonce); }
+.btn.sec { background: #FFF; color: var(--encre) !important; }
+.btn.sec:hover { background: var(--rose); }
+.btn.fantome { background: transparent; color: var(--encre) !important; border-color: transparent; }
+.btn.fantome:hover { background: var(--rose); }
+.btn.petit { min-height: 40px; padding: 8px 16px; font-size: 14px; }
+.btn[disabled] { opacity: 0.45; cursor: not-allowed; }
+
+/* ── Pastilles d'état ── */
+.etat { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; white-space: nowrap; background: #FFF; color: var(--discret); border: 1px solid var(--ligne); }
+.etat.ok { background: var(--vert-fond); color: var(--vert); border-color: var(--vert-fond); }
+.etat.propose { background: var(--rose); color: var(--encre); border-color: var(--rose); }
+.etat.attention { background: var(--ocre-fond); color: var(--ocre); border-color: var(--ocre-fond); }
+.etat.defaut { background: var(--gris-fond); color: var(--gris); border-color: var(--gris-fond); }
+.etat.modifie { background: var(--encre); color: #FFF; border-color: var(--encre); }
+
+/* ── Onglets ── */
+.onglets { display: flex; flex-wrap: wrap; gap: 8px; }
+.onglets a { min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; background: #FFF; color: var(--texte) !important; border: 1.5px solid var(--ligne); }
+.onglets a[aria-current='true'] { background: var(--encre); color: #FFF !important; border-color: var(--encre); }
+.onglets a span { font-weight: 400; opacity: 0.8; }
+
+/* ── Tableaux ── */
+.tableau { overflow-x: auto; border: 1px solid var(--ligne); border-radius: 16px; background: #FFF; }
+.tableau table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
+.tableau th { text-align: left; padding: 12px 14px; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--discret); font-weight: 700; border-bottom: 1px solid var(--ligne); white-space: nowrap; }
+.tableau td { padding: 10px 14px; border-bottom: 1px solid var(--ligne); vertical-align: middle; }
+.tableau tr:last-child td { border-bottom: 0; }
+.tableau tr.choisi { background: var(--rose); }
+.tableau .droite { text-align: right; }
+.tableau .nom { font-weight: 700; }
+.tableau .petit { font-size: 13px; color: var(--discret); }
+.lien-ligne { display: inline-flex; min-height: 40px; align-items: center; font-weight: 700; font-size: 14px; text-decoration: none; }
+.vin-cell { display: flex; align-items: center; gap: 12px; }
+.vignette { width: 52px; height: 52px; object-fit: contain; box-sizing: border-box; padding: 3px; background: #FFF; border: 1px solid #EEE6E8; border-radius: 8px; flex-shrink: 0; }
+.vignette.vide { display: flex; align-items: center; justify-content: center; background: var(--rose); color: var(--encre); border: 0; }
+
+/* ── Formulaires ── */
+.champ { display: flex; flex-direction: column; gap: 6px; }
+.champ label, .champ .libelle { font-size: 13px; font-weight: 700; }
+.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid var(--ligne); border-radius: 10px; background: #FFF; font: 15px Lato, sans-serif; color: var(--texte); }
+.champ textarea { line-height: 1.5; resize: vertical; }
+.champ input:focus, .champ select:focus, .champ textarea:focus { border-color: var(--encre); outline: none; }
+.champ .aide { font-size: 12.5px; color: var(--discret); }
+.champs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr)); gap: 12px; }
+.case { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14.5px; cursor: pointer; }
+.case input { width: 20px; height: 20px; accent-color: var(--encre); margin: 0; flex-shrink: 0; }
+.case small { display: block; color: var(--discret); font-size: 13px; }
+.message { margin: 0; padding: 12px 14px; border-radius: 12px; font-size: 14px; line-height: 1.45; }
+.message.ok { background: var(--vert-fond); color: var(--vert); }
+.message.erreur { background: #FBE3E3; color: #8A1C1C; }
+
+.points { display: inline-flex; gap: 4px; }
+.points span { width: 10px; height: 10px; border-radius: 5px; background: #E6DADD; }
+.points span.plein { background: var(--encre); }
+.jauge { display: flex; align-items: center; gap: 12px; font-size: 13.5px; color: var(--discret); }
+.jauge > span:first-child { width: 120px; }
+.jauge .barres { display: flex; gap: 4px; flex-grow: 1; }
+.jauge .barres i { flex: 1 1 0; height: 6px; border-radius: 3px; background: #E6DADD; }
+.jauge .barres i.plein { background: var(--encre); }
+
+/* ── Connexion ── */
+.bo-connexion { min-height: 100vh; display: flex; align-items: center; justify-content: center; padding: 24px 16px; box-sizing: border-box; }
+.bo-connexion .carte-bo { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 18px; }
+
+@media print {
+  .bo-nav, .pas-imprime { display: none !important; }
+  .bo-main { padding: 0; }
+}
