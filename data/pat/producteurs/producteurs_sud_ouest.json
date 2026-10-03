@@ -1,0 +1,1433 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "sud_ouest",
+  "region_label": "Sud-Ouest",
+  "source_file": "France/Fichiers Producteurs finaux/producteurs_sud_ouest_vPat.xlsx",
+  "built_at": "2026-05-09T18:33:28+00:00",
+  "count": 30,
+  "items": [
+    {
+      "id": "so-prod-camin-larredya",
+      "nom": "Camin Larredya",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Jurançon",
+      "appellations_principales": [
+        "Jurançon sec",
+        "Jurançon"
+      ],
+      "localisation": "La Chapelle de Rousse, Jurançon (64110)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**La référence absolue du Jurançon moderne**, et probablement le plus grand vigneron blanc du Sud-Ouest. **Jean-Marc Grussaute**, ancien rugbyman, reprend en **1988** à 20 ans la petite ferme familiale de La Chapelle de Rousse — son père Jean apportait le raisin à la coopérative. Jean-Marc sort de la coop, vinifie en propre. **Conversion bio fin des années 1990, certification Agrocert en 2007, biodynamie certifiée Demeter** dans la foulée. **Seul vigneron du Sud-Ouest à avoir obtenu les 3 étoiles du guide RVF** (depuis 2017) — plafond absolu du référentiel. **Vigneron de l'année RVF 2023**.\n\n**Domaine** : **11,5 hectares** sur La Chapelle de Rousse, commune de Jurançon, **piémont pyrénéen** au sud de Pau, plus 1,5 ha en achat (cuvée Les Grains de Copains). **Pentes abruptes**, parcelles en **terrasses** pour les plus escarpées (4 ha). **Sous-sol** : argiles, silices, et surtout **poudingues altérés** caractéristiques du Jurançon (galets cimentés issus du démantèlement des Pyrénées), plus une veine de **calcaire de Costa Blanca** qui donne son nom à la cuvée phare. Vue directe sur le **Pic du Midi d'Ossau**. **Cépages** : **petit manseng 65%, gros manseng 27%**, et 8% de **cépages anciens** retrouvés et replantés en sélection massale — **petit courbu, camaralet, lauzet**. Travail en cours sur le **bouchet** (cabernet franc local) pour amorcer un Jurançon rouge.\n\n**Pratiques** : **biodynamie certifiée Demeter**, **méthode Hérody** pour le travail des sols, calendrier lunaire, sélections massales. Vendanges manuelles, tris successifs pour les moelleux (raisins **passerillés sans botrytis**).\n\n**Vinification** : **levures indigènes**, pressurage en raisins entiers, fermentation en fûts de 225L (5% neufs seulement) et **foudres de 1 200 à 2 500 L** thermorégulés. **Pas de fermentation malolactique**. Élevage **8 mois minimum, jusqu'à 18 mois** sur lies pour le petit manseng pur. **Bois neuf anecdotique** — parti pris anti-démonstration.\n\n**Cuvées repères**. En **Jurançon sec** : **La Part Davant**, assemblage dominante manseng, ~25 € — entrée du domaine, déjà magnifique de tension saline ; **La Virada**, parcellaire avec courbu-camaralet-lauzet, plus complexe, ~30-35 € ; **Costa Blanca**, petit manseng pur sur la veine calcaire, ~40-50 € — sommet des secs. En **moelleux** : **Costa Darrer**, ~25-30 € ; **Au Capcéu**, ananas confit et mangue, ~35-45 € ; **A Solhèvat**, baies passerillées extrêmes, opulent et liquoreux, ~50-60 €. Cuvée négoce **Les Grains de Copains** en apéritif vif, ~15 €.\n\n**Style** : tout chez Camin Larredya tient en quatre mots — **équilibre, amertume, finesse, droiture**. Les secs sont **tendus, salins, précis**, loin des Jurançon alcooleux du passé. Les moelleux gardent une **acidité vibrante** sous le sucre, jamais d'effet pâteux. Signature : une **délicate amertume** en finale qui structure.\n\n**Garde** : secs **5 à 10 ans**, Costa Blanca jusqu'à 15 ans. Moelleux **15-25 ans** sur les grandes cuvées.\n\n**Prix** : **15 €** (Grains de Copains), **20-25 €** (Part Davant), **30-50 €** (parcellaires), **50-60 €** (moelleux extrêmes). **Prix encore raisonnables** pour ce niveau — une grande affaire qui ne durera pas.\n\n**Profil Pat** : domaine qui incarne quatre convictions à lui seul. (1) **Pionnier de la biodynamie en Jurançon**, méthode Hérody, sélections massales — engagement à l'os. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Grussaute, les poudingues n'auraient pas parlé à ce niveau ; sans Costa Blanca, pas cette cuvée signature. (3) **Bois neuf à 5%**, foudres dominants = conviction n°5. (4) **Région périphérique défendue avec panache** : le Sud-Ouest pyrénéen hissé au niveau des grands blancs de France = conviction n°6. **À recommander les yeux fermés** — entrée par La Part Davant, montée par Costa Blanca. Une fierté française.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "biodynamie",
+        "biodyvin",
+        "chapelle-de-rousse",
+        "demeter",
+        "gros-manseng",
+        "grussaute",
+        "jurancon",
+        "lafitte",
+        "petit-manseng",
+        "producteur",
+        "secs"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-bouscasse",
+      "nom": "Château Bouscassé",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Madiran",
+      "appellations_principales": [
+        "Madiran",
+        "Pacherenc du Vic-Bilh"
+      ],
+      "localisation": "Maumusson-Laguian (32400)",
+      "statut_production": "conventionnel-raisonne",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Le domaine familial historique d'Alain Brumont**, et le berceau de la révolution Madiran moderne. **Famille Brumont** propriétaire de Bouscassé depuis plusieurs générations (avant la Révolution), à **Maumusson-Laguian** dans le Gers. Alain Brumont travaille pour son père dès **17 ans**, sans salaire pendant trois ans, claque la porte, revient en **1978** reprendre l'exploitation paternelle de **17 hectares**. Il vendra plus tard un moulin hérité du grand-père pour acquérir Montus en 1980. **Pionnier absolu** de la modernisation du Madiran : convaincu que le tannat peut donner de grands vins de garde à l'instar du cabernet sauvignon bordelais. Visite **Mouton-Rothschild** dans les années 1980, en repart avec quelques barriques neuves — **première fois qu'on élève du Madiran sous bois neuf à 100%**. **Élu Meilleur Vigneron des années 80 par Gault & Millau en 1991**. Détient aujourd'hui avec Montus **environ 90% des meilleures parcelles de l'appellation**. **5 étoiles Bettane+Desseauve**, membre de l'**Académie du Vin de France**.\n\n**Domaine** : aujourd'hui **environ 112 hectares** (parti de 17 ha), grand terroir **argilo-calcaire** **longeant la falaise** de Maumusson-Laguian. Surnommé « **le pied de côte de Saint-Émilion** » par les connaisseurs — même rigueur de matière, même trame fine, même potentiel de garde. Petites parcelles d'**argiles fines**, vieilles vignes parfois centenaires, plus quelques **terroirs de grep** (concrétions d'oxyde de fer et de manganèse). **Encépagement** : **tannat** dominant, **cabernet sauvignon, cabernet franc**, plus blancs pour le Pacherenc.\n\n**Pratiques** : **lutte raisonnée**, HVE. **Pas de certification bio** — choix assumé d'Alain Brumont, pragmatisme contre dogme. **Rendements très bas** (5-6 grappes par pied), vendanges manuelles, tri sévère. **Cartographie parcellaire fine**.\n\n**Vinification** : cuves bois et inox thermorégulées, **macérations longues 3 à 6 semaines**, pigeages, malolactique en cuves bois. **Élevage sur lies en barriques neuves** : 30-50% sur la cuvée classique, **100% de bois neuf** sur Vieilles Vignes, durées **14-16 mois**, parfois bien plus.\n\n**Cuvées repères**. **Bouscassé** classique, tannat dominant avec cabernets, élevage 14 mois en barriques 30-50% neuves, ~15-20 € — **bonne porte d'entrée** sérieuse aux Madiran de Brumont ; **Bouscassé Vieilles Vignes**, **100% tannat** issu de parcelles parfois centenaires, élevage **14-16 mois en fûts 100% neufs**, ni collé ni filtré, ~25-35 € — **profondeur, fruits noirs, menthol, poivre noir**, tanins veloutés, **grand vin de garde**. Parcellaires récents : **Argile Rouge** et **Menhir**. En **blanc Pacherenc du Vic-Bilh** : **Les Jardins Philosophiques** sec, **Bouscassé Blanc** moelleux — **gamme blanche exemplaire** sur petit manseng et gros manseng.\n\n**Style** : tout chez Bouscassé tient en quatre mots — **puissance, garde, élevage, élégance**. Style **classique-bordelais appliqué au tannat** : élevage long sous bois neuf, extraction maîtrisée, tanins fondus avec le temps. À l'opposé de l'école nature (Mas del Périé, Cosse). **Critique honnête** : sur les jeunes millésimes, **le bois neuf est franchement présent** — pari assumé qu'avec le temps il se fondra. Sur 8-10 ans, il se fond et le vin gagne **profondeur impressionnante**. Tous les vins du groupe sont aujourd'hui élevés **au moins 30 mois** (barriques puis foudres).\n\n**Garde** : Bouscassé classique **8-15 ans**, Vieilles Vignes **15-25 ans**.\n\n**Prix** : **15-20 €** (Bouscassé), **25-35 €** (Vieilles Vignes), **30-50 €** (parcellaires). **Rapport qualité-prix solide**, Vieilles Vignes une affaire pour un 100% tannat de cette stature.\n\n**Profil Pat** : domaine emblématique à recommander avec nuance. (1) **Architecte historique de l'appellation** : sans Brumont, Madiran serait resté un vin de cassoulet rustique — rôle indéniable. (2) **Grand vigneron + grand terroir** = conviction n°3 cochée : argilo-calcaires de Maumusson incomparables, tannat magnifié. (3) **Bois neuf à 100% sur Vieilles Vignes** = **contredit ma conviction n°5** sur l'excès de bois — parti pris stylistique assumé. Sur jeune millésime le bois domine ; sur 10-15 ans il se fond. (4) **Pas de bio**, lutte raisonnée — choix qu'on peut respecter sans applaudir. **À recommander franchement** pour qui aime le **style bordelais classique**, **avec carafage long** et **dans un millésime un peu avancé**. **Préférer Cosse Maisonneuve ou Mas del Périé** pour qui cherche la transparence du terroir. **Reconnaître le rôle historique sans suivre aveuglément le style.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "alain-brumont",
+        "barrique-neuve",
+        "brumont",
+        "cabernet-franc",
+        "cabernet-sauvignon",
+        "garde",
+        "iconique",
+        "madiran",
+        "producteur",
+        "tannat",
+        "vieilles-vignes"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-montus",
+      "nom": "Château Montus",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Madiran",
+      "appellations_principales": [
+        "Madiran",
+        "Pacherenc du Vic-Bilh"
+      ],
+      "localisation": "Maumusson-Laguian (65700)",
+      "statut_production": "conventionnel-raisonne",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Le chef-d'œuvre d'Alain Brumont**, et le « Petrus du Madiran ». Histoire fondatrice : en **1979-1980**, Alain Brumont achète **Château Montus à Maumusson-Laguian** — propriété tombant en ruine, terres considérées comme abruptes, désertées par l'exode rural. Il y voit ce que personne ne voit : un **grand terroir de coteaux escarpés** déjà reconnu au **XVIIIe siècle**, oublié depuis. Replante en tannat soigneusement sélectionné. **Premier millésime 1985 sous le nom « Montus Prestige »**, presse acclame, **surnommé « le Petrus du Madiran »** par les grands dégustateurs internationaux. Aujourd'hui environ **106 hectares**. **5 étoiles Bettane+Desseauve**. **Chai souterrain monumental construit en 1995**, surnommé la **« Cathédrale du Tannat »**, **2000 barriques** dormantes.\n\n**Domaine** : environ **106 hectares**, dont **90 ha en rouge**, sur les hauts coteaux de Maumusson-Laguian. **Pentes très fortes (20 à 40%)**, exposition **plein sud**. **Sous-sol exceptionnel** : **gros galets roulés noirs marbrés de blanc** sur **argiles jaunes et rouges en strates** — vestige des **premières Pyrénées datant de 40 millions d'années**. Terroirs drainants et chauds. La parcelle phare **La Tyre** (10 ha) est sur le **plus haut coteau de l'appellation**, **260 m d'altitude**, **poudingues**. **Encépagement** : **tannat** majoritaire, **cabernet sauvignon**, **cabernet franc**. **Rendements draconiens** : 5-6 grappes par pied.\n\n**Pratiques** : **HVE**, **lutte raisonnée**. **Pas de certification bio**. Cartographie parcellaire poussée, **haute densité** (Brumont a doublé le nombre de pieds/ha), vendanges manuelles, tri.\n\n**Vinification** : **cuves bois tronconiques** pour les fermentations, **macérations longues 30 à 45 jours**, pigeages et délestages. **Élevage en barriques 100% chêne neuf** sur les têtes de gamme, **durées extrêmes** : 12-14 mois sur Montus classique, **14-16 mois sur Montus XL**, **24 à 36 mois sur La Tyre**, parfois suivi de 2 ans en foudre. Brumont est **le premier de l'appellation à avoir utilisé du bois neuf à 100%**.\n\n**Cuvées repères**. **Montus classique** Madiran, **80% tannat / 20% cabernet sauvignon**, élevage 12-14 mois en barriques 60-80% neuves, ~25-35 € — **vin puissant et élégant** ; **Montus XL** (a remplacé Montus Prestige en 2004), **100% tannat**, **riche, profond, complexe et concentré**, ~40-50 €, **garde 20-30 ans** ; **La Tyre**, **100% tannat** sur la parcelle à 260 m d'altitude, **24-36 mois en fûts 100% neufs**, ~80-120 € — **cuvée mythique**, **« un des madirans les plus parfaits jamais produits »** (Bettane, 18/20). En **blanc Pacherenc** : Montus blanc sec, Montus moelleux — **gamme blanche luxueuse**. Plus récemment, un **Pinot Noir** étonnant en IGP.\n\n**Style** : tout chez Montus tient en quatre mots — **monumentalité, force, élevage, longévité**. Vins **monumentaux, puissance et violence évidentes mais complètement domptés** (RVF). La Tyre est **« vin profond, à l'élevage ambitieux mais juste, à l'extraction mesurée »** (RVF 18/20). **Critique honnête identique à Bouscassé** : **le bois neuf domine sur le jeune millésime**, parfois jusqu'à masquer le fruit. C'est le **pari de la garde** : sur 10-20 ans l'élevage se fond et le tannat reparle. **Style « international »** assumé, plus proche de Bordeaux mondialisé que des Sud-Ouest naturels.\n\n**Garde** : Montus classique **10-15 ans**, Montus XL **20-30 ans**, **La Tyre 25-40 ans**.\n\n**Prix** : **25-35 €** (Montus), **40-50 €** (Montus XL), **80-120 €** (La Tyre). **Montus XL** reste la meilleure équation prix-plaisir-garde.\n\n**Profil Pat** : domaine emblématique à recommander avec la même nuance que Bouscassé. (1) **Architecte absolu de l'appellation** : sans Brumont à Montus en 1980, le Madiran n'aurait jamais été reconnu mondialement. **Rôle historique majeur**. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : poudingues de La Tyre incomparables. (3) **Bois neuf à 100% sur les têtes de gamme** = **contredit frontalement ma conviction n°5** sur l'excès de bois — parti pris stylistique défendu avec cohérence, la patience de garde étant le seul rachat. (4) **Pas de bio**, lutte raisonnée. **À recommander** pour les amateurs de **grands vins de garde au style classique-international**, **toujours avec carafage long**, **dans des millésimes ayant 8-12 ans minimum**. **Pas le premier choix pour qui cherche la transparence du terroir** : **préférer Mas del Périé ou Cosse Maisonneuve**. **Une fierté française à respecter sans suivre aveuglément le dogme du bois**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "alain-brumont",
+        "barrique-neuve",
+        "brumont",
+        "cabernet-sauvignon",
+        "garde",
+        "iconique",
+        "la-tyre",
+        "madiran",
+        "petrus-du-madiran",
+        "producteur",
+        "tannat"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-tour-des-gendres",
+      "nom": "Château Tour des Gendres",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac",
+      "appellations_principales": [
+        "Bergerac",
+        "Côtes de Bergerac"
+      ],
+      "localisation": "Ribagnac (24240)",
+      "statut_production": "biologique",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Le grand domaine moderne du Bergerac**, et la preuve qu'une appellation marquée par la production de masse peut produire des vins de très haut niveau. Le grand-père vénitien **Vincenzo de Conti** arrive au château de Bridoire en **1925**. En **1981**, **Luc de Conti** rachète Tour des Gendres à Ribagnac, sur l'emplacement d'une ancienne villa gallo-romaine. **Premier millésime en propre 1987**. En **1986**, les frères de Conti et le cousin Francis mettent leurs terres en commun. **Conversion bio en 1996**, **biodynamie partielle (12 ha sur 50)** plus tard. Évolution récente : **Luc s'est séparé du cousin Francis**, reconstruit avec ses enfants **Guillaume** au domaine, **Margaux** au Château Barouillet, **Gilles** dans la bière. **2 étoiles RVF, 3 étoiles Bettane+Desseauve**.\n\n**Domaine** : **50 à 52 hectares** en AOC **Bergerac** et **Côtes de Bergerac**, à **Ribagnac** (Dordogne), au cœur du **Périgord Pourpre**. Assemblage de **trois vignobles distincts** acquis successivement. **Sols** : **argilo-calcaires** majoritaires, calcaires durs et marnes en sous-sol — proches géologiquement de **Saint-Émilion** voisin (60 km à l'ouest), même bassin sédimentaire. **Cépages** : en blanc **sémillon** dominant, sauvignon blanc, muscadelle ; en rouge **merlot, cabernet sauvignon, malbec, cabernet franc**, plus **fer servadou** sur la Vigne d'Albert. Encépagement bordelais sur terroir bordelais en miroir.\n\n**Pratiques** : **bio certifié** sur les 50 ha, **biodynamie** sur 12 ha. Luc de Conti considère ses sols comme « cadavériques » au départ, entreprend un travail de **15 ans pour les revivifier** (algues, silice, nourriture microbienne).\n\n**Vinification** : **vendanges manuelles** sur les têtes de gamme avec tri sévère. **Macération pelliculaire 48h** sur le sémillon, **débourbage à froid à 7°C**, fermentation en **inox thermorégulée à 18°C**. Élevage **sur lies 11 mois** pour la Cuvée des Conti. Rouges en barrique sur les cuvées prestige. **Vins non collés, filtrés très modérément**. Cuvée Sans Soufre en vinification nature. Approche **expérimentatrice, anti-routine** — la marque Luc.\n\n**Cuvées repères**. En **blanc** : **Cuvée des Conti** Bergerac sec, sémillon dominant ramassé très mûr et **partiellement passerillé**, ~12-15 € — **excellent rapport prix-plaisir**, classique des cartes ; **Moulin des Dames** blanc, cuvée prestige avec barrique, ~25-30 € ; **Cuvée Marine**, sauvignon dominant, plus tendu. En **rouge** : **Cuvée des Conti** rouge, ~12-15 € ; **La Gloire de mon Père**, Côtes de Bergerac, cabernet sauvignon-malbec-merlot, ~20-25 € — riche, racé, bouteille de garde ; **Moulin des Dames** rouge, prestige, ~30-35 € ; **La Vigne d'Albert** (vin nature, vieilles vignes merlot-malbec-cabernets-côt-fer servadou), ~20 € — fruit croquant ; **Cuvée Sans Soufre**, ~15-18 €. Plus un **pétillant naturel** qui défrise gentiment la gamme.\n\n**Style** : les blancs sont **puissants et aromatiques** — le sémillon ramassé très mûr donne complexité et rondeur, parfois au détriment d'une fraîcheur que certains critiques (RVF) regrettent. Les rouges sont **conformes au canon bordelais voisin** : cabernet bien mûr, merlot rond, élevage barrique présent mais maîtrisé. Caractère pas convenu sur les cuvées expérimentales (Vigne d'Albert, Sans Soufre, pet'nat).\n\n**Garde** : Cuvée des Conti blanc **3-5 ans**, Moulin des Dames blanc **8-10 ans**. Rouges Cuvée des Conti **5-8 ans**, Gloire de mon Père et Moulin des Dames **10-15 ans**.\n\n**Prix** : **12-15 €** (Cuvée des Conti), **18-25 €** (Vigne d'Albert, Sans Soufre, Gloire de mon Père), **25-35 €** (Moulin des Dames). **Rapport qualité-prix remarquable**, l'un des meilleurs du Sud-Ouest sur la Cuvée des Conti blanc.\n\n**Profil Pat** : domaine emblématique de quatre convictions. (1) **Bio dès 1996** : engagement précoce, vrai, patience d'un travail de 15 ans sur les sols. (2) **Grand vigneron + grand terroir** = conviction n°3 : Luc de Conti a révélé que les argilo-calcaires de Ribagnac valaient ceux du Libournais voisin. (3) **Conviction n°4 démontrée** : sur Bergerac où 85% des vins sont ordinaires, Tour des Gendres tire des bouteilles très au-dessus du standard. (4) **Bergerac défendu** = conviction n°6 dans sa version la plus utile : pas une région obscure, une appellation **mal aimée à réhabiliter producteur par producteur**. **À recommander franchement** sur la Cuvée des Conti blanc en rapport prix-plaisir, **à goûter sur les expérimentations**. Une porte d'entrée parfaite sur le Sud-Ouest pour qui sort de Bordeaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "bergerac",
+        "bio",
+        "cabernet",
+        "conti",
+        "de-conti",
+        "malbec",
+        "merlot",
+        "producteur",
+        "reference",
+        "semillon"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-arretxea",
+      "nom": "Domaine Arretxea",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Irouléguy",
+      "appellations_principales": [
+        "Irouléguy"
+      ],
+      "localisation": "Irouléguy (64220)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**La référence absolue d'Irouléguy**, et l'un des plus beaux domaines du Sud-Ouest. **Michel et Thérèse Riouspeyrous**, instituteur et éducatrice de leur premier métier, reprennent en **1989-1990** la ferme familiale du grand-père de Michel. **Première vinification en 1993**. Pari fou à l'époque : Irouléguy ne comptait plus que **50 hectares** dans les années 1970 (contre 1000 historiquement, vignoble créé par les **moines de l'abbaye de Roncevaux au XIIe siècle**), l'**AOC** n'est créée qu'en **1970**. **Bio certifié et biodynamie depuis 1998**. **Deux fils** désormais aux commandes : **Iban**, formé **7 ans chez Jean-Marc Grussaute à Camin Larredya** (filiation vertueuse) ; **Téo**, formé chez **Elian Da Ros**. Qualité en hausse continue.\n\n**Domaine** : **12 hectares** sur la commune d'Irouléguy, **Pays Basque** côté français (la seule AOC du Pays Basque). Vignes en **terrasses** au pied de la **montagne Jara**, **altitudes 200 à 400 m**, **pentes jusqu'à 40%** — viticulture héroïque. **3,5 ha de blanc, 4 ha de rouge, 1 ha de rosé**, plus quelques hectares acquis en 2019 sur ophites. **Géologie exceptionnellement riche** pour une si petite surface : **grès rouges du Trias riches en oxyde de fer, schistes, ampélites, ophites** (roche magmatique verte), croupes argilo-calcaires. **Cépages** : en rouge **tannat, cabernet sauvignon, cabernet franc** ; en blanc **gros manseng, petit manseng, petit courbu**. **Conservatoire de cépages anciens en sélection massale** avec le pépiniériste **Lilian Bérillon**.\n\n**Pratiques** : **biodynamie certifiée**, conseils du **géo-pédologue Yves Hérody** dès les débuts. Vendanges manuelles obligatoires sur ces pentes, soufre **50% en dessous de la norme bio** maximum.\n\n**Vinification** : **levures indigènes** (pied de cuve), élevages sur lies avec bâtonnage. **Contenants multiples** — **cuves béton, barriques, demi-muids, foudres de 1200L, et dolias** (jarres de 400L fabriquées localement par le potier basque **Goicoechea**). **Pas de collage**, soufre minimum.\n\n**Cuvées repères**. En **blanc** : **Hegoxuri** (« blanc du sud » en basque), assemblage gros manseng 55% / petit manseng 25% / petit courbu 20%, élevage en foudre et demi-muid, ~25-30 € — la cuvée signature, **devenue rare**, tension saline, gras, agrumes confits ; **Grés**, parcellaire sur grès rouges du Trias, ~35-40 € ; **Schistes**, parcellaire sur schistes, ~35-40 €. En **rouge** : **Cuvée Tradition** (entrée) ; **Haitza** (« le chêne » en basque), cuvée prestige rouge, **tannat magnifié par les cabernets**, ~25-30 € ; **Dolia**, élevage en amphore, pureté de fruit étincelante.\n\n**Style** : tout chez Arretxea tient en trois mots — **salinité, tension, énergie**. Les blancs sont **vibrants**, soutenus par une **acidité tonique** et une **finale légèrement crayeuse**, agrumes-tilleul-jasmin-poivre vert au nez, finale épicée — à mille lieues des manseng riches du Jurançon. Les rouges sont d'une **finesse rare** sur tannat — peu d'extraction, fruit pur, **tanins polis par les schistes**, jamais le côté rustique qu'on associe au cépage. Servis dans **les meilleurs restaurants du monde**.\n\n**Garde** : blancs **8 à 15 ans** (Hegoxuri vieillit superbement). Rouges Haitza **10 à 15 ans**.\n\n**Prix** : **20-25 €** (entrée), **25-40 €** (Hegoxuri, Haitza), **35-45 €** (parcellaires). **Prix exceptionnellement contenus** mais quantités très limitées.\n\n**Profil Pat** : domaine emblématique de cinq convictions à la fois. (1) **Renaissance d'une appellation moribonde** : sans les Riouspeyrous, Irouléguy aurait disparu. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Michel et Thérèse, les ophites et les schistes basques n'auraient rien donné. (3) **Bois neuf inexistant**, foudres, dolias, demi-muids — **conviction n°5 incarnée**. (4) **Région périphérique défendue avec panache absolu** : le Pays Basque français, viticulture héroïque sur pentes à 40% — **conviction n°6 dans sa version la plus pure**. (5) **Conservatoire de massales** avec Lilian Bérillon : transmission patrimoniale. **À recommander les yeux fermés** sur les blancs (Hegoxuri, puis Schistes ou Grés) ; **à découvrir sans préjugés** sur les rouges (Haitza révèle que le tannat peut être fin). Une fierté française pure.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "basque",
+        "biodynamie",
+        "demeter",
+        "iconique",
+        "irouleguy",
+        "manseng",
+        "pays-basque",
+        "producteur",
+        "riouspeyrous",
+        "tannat"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-cauhape",
+      "nom": "Domaine Cauhapé",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Jurançon",
+      "appellations_principales": [
+        "Jurançon sec",
+        "Jurançon"
+      ],
+      "localisation": "Monein (64360)",
+      "statut_production": "conventionnel-raisonne",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**L'autre grand nom du Jurançon**, et le pionnier historique des moelleux modernes — celui qui, dans les années 1980-1990, a sorti l'appellation de son confidentiel local. **Henri Ramonteu** vient d'une famille de paysans béarnais en polyculture. **En 1980**, il décide de **vendre les vaches et abandonner le maïs**, il sera vigneron. Le domaine, mentionné dès **1558** sous le nom « Caussapé », ne compte alors que **4 hectares**. Henri va l'étendre méthodiquement jusqu'aux **40-50 hectares actuels**. **Membre de l'Académie du Vin de France** (40 membres environ) — reconnaissance rare pour le Sud-Ouest. Son fils **David** est œnologue-conseil en Nouvelle-Zélande, associé à distance. Autodidacte qui revendique **Émile Peynaud et Denis Dubourdieu** comme références.\n\n**Domaine** : **43 à 54 hectares** selon les années sur la commune de **Monein**, cœur du Jurançon. Coteaux escarpés exposés sud-est et sud, **altitudes jusqu'à 400 m**. Climat singulier : rigueur montagnarde et douceur océane, et surtout **effet de foehn** du vent du sud qui sèche et réchauffe à l'automne — c'est lui qui permet le **passerillage** sur souche pour les moelleux. **Sous-sol** : 40% d'**argile jaune** qui donne sa vigueur au petit manseng, plus silices et galets. **Encépagement** : petit manseng 60%, gros manseng 30%, courbu 2%, et 8% de **camaralet et lauzet** — cépages anciens replantés, pivot des assemblages secs. **200 000 bouteilles** par an, équipe de 18 personnes.\n\n**Pratiques** : Henri Ramonteu se revendique **« au plus près du bio »** mais **n'est pas certifié** — il assume la viticulture raisonnée. Travail manuel intégral, **pas d'insecticides**, **éraflage à la pince grain par grain** sur certaines cuvées, **vendanges très tardives** pour les moelleux (parfois **janvier** pour la mythique Folie de Janvier). **Rendements naturellement très bas** : 8 hl/ha pour Quintessence, 5 hl/ha pour Folie de Janvier.\n\n**Vinification** : **œnologie de précision assumée**. Cuves inox thermorégulées pour les secs courants, **fûts neufs** pour les moelleux prestige, élevages longs (10 à 30 mois). À l'opposé du low-intervention de Grussaute.\n\n**Cuvées repères**. **6 secs et 7 moelleux** environ. En **sec** : **Chant des Vignes** (entrée), **Quatre Temps** (assemblage classique, ~20 €), **La Canopée** (petit manseng pur, sommet des secs, ~35-45 €). En **moelleux** : **Ballet d'Octobre**, **Symphonie de Novembre**, **Noblesse du Temps** (vieilles vignes, 18 mois en fûts neufs, ~50-70 €), **Quintessence du Petit Manseng** (récolte décembre, ~80-150 €, produite **une fois tous les 10 ans environ**), **Folie de Janvier** (récolte de janvier suivant, 5 hl/ha, 30 mois en fûts neufs, ~150-300 €). La **Quintessence** a révolutionné l'appellation au début des années 1990 — première démonstration qu'on pouvait viser le niveau des plus grands liquoreux du monde.\n\n**Style** : **richesse et précision**. Les secs sont puissants, aromatiques, denses — certains critiques (RVF récents) leur reprochent un **manque de fraîcheur** par rapport à Camin Larredya. Les moelleux sont la vraie signature : aromatique opulent (miel, fruits confits, épices), sucre généreux soutenu par l'acidité du petit manseng, **finales fines malgré la richesse**. **Boisé marqué** sur les cuvées prestige — assumé.\n\n**Garde** : secs **5-10 ans**. Moelleux **20-30 ans**, Quintessence et Folie de Janvier au-delà.\n\n**Prix** : **15-20 €** (secs courants), **25-45 €** (cuvées principales), **50-150 €** (moelleux prestige), **150-300 €** (Folie de Janvier).\n\n**Profil Pat** : domaine respecté plutôt qu'aimé, à distinguer nettement de Camin Larredya. (1) **Architecte historique de l'appellation** : sans Ramonteu, le Jurançon serait resté un vin de fin de repas confidentiel. (2) **Approche technique assumée** qui contredit ma conviction n°5 sur le bois — le boisé est ici parti pris stylistique, à goûter et apprécier ou non. (3) **Pas de certification bio** : choix qu'on peut respecter même si on préfère l'engagement clair. (4) **Conviction n°3 cochée** sur les moelleux : grand vigneron, grand terroir, grand vent du sud. **À recommander sur les moelleux** (Noblesse du Temps en valeur sûre). **Préférer Camin Larredya sur les secs** pour qui cherche tension et droiture. Deux écoles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "academie-vin-france",
+        "gros-manseng",
+        "iconique",
+        "jurancon",
+        "moelleux",
+        "monein",
+        "petit-manseng",
+        "producteur",
+        "ramonteu"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-cosse-maisonneuve",
+      "nom": "Domaine Cosse Maisonneuve",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Cahors",
+      "appellations_principales": [
+        "Cahors"
+      ],
+      "localisation": "Lacapelle-Cabanac / Prayssac (46220)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**L'autre grand domaine de la révolution Cahors moderne**, avec Mas del Périé. **Matthieu Cosse**, œnologue brillant et ancien rugbyman, et **Catherine Maisonneuve**, viticultrice idéaliste passée par le **prestigieux Château Léoville Las Cases** (2e Grand Cru Classé de Saint-Julien), fondent le domaine en **1999**. **Première parcelle de 2,5 hectares** plantée en sélections massales, **travaillée en biodynamie dès l'installation** — pas la conversion progressive habituelle, l'engagement total dès le premier coup de bêche. **Certification Demeter en 2009**. **2 étoiles RVF**, reconnaissance large. Détail intéressant : Matthieu Cosse **gère également Château La Coste** en Provence, propriété de Paddy McKillen (art contemporain, hôtellerie de luxe) — double casquette assumée, sans nuire au travail à Cahors.\n\n**Domaine** : aujourd'hui **28 hectares** à **Lacapelle-Cabanac** et **Prayssac**, ouest de Cahors. Vignoble sur **deux terroirs distincts** : un **plateau argilo-calcaire** à Cournou (sols supérieurs du Causse, fond minéral) et des **terrasses dans la vallée** de Prayssac (sols plus profonds, fruits plus charnus). **Cépages** : **malbec (côt)** dominant, principal et roi de l'appellation Cahors qui le revendique en exclusivité ; plus quelques pieds de **merlot, cabernet franc, tannat et gamay**. **Éboulis calcaires** sur les meilleures parcelles.\n\n**Pratiques** : **biodynamie certifiée Demeter** depuis 2009, mais pratiquée dès 1999. Sélections massales, vendanges manuelles, **rendements faibles**, table de tri. Approche pédologique sérieuse — le couple a passé des années à comprendre les sous-sols avant de définir les cuvées parcellaires.\n\n**Vinification** : **levures indigènes**, **cuvaisons longues** pour gérer les tanins souvent puissants du malbec. **Approche « infusion plutôt qu'extraction »** — choix stylistique essentiel, qui distingue le domaine du Cahors traditionnel viril. **Pas de collage, pas de filtration** sur la plupart des cuvées. **Élevages longs et maîtrisés**, **jamais de bois 100% neuf** — Matthieu ne veut pas marquer les vins. **Soufre en cuve, en malo et à la mise**, dosé.\n\n**Cuvées repères**. **Cheval en Tête Rouge** (entrée), malbec sur le fruit, **douceur de tanins et parfums floraux**, ~12-15 € — **excellent rapport prix-plaisir** ; **Le Combal**, malbec sur **limons sableux**, élevage 14-16 mois en barriques de 1-2 vins, ~18-22 € — la **porte d'entrée** sérieuse au domaine, **noté 16/20 par la RVF** ; **La Fage**, malbec sur **limons fins plus calcaires**, plus dense, ~25-30 €, garde 7-8 ans ; **Les Laquets**, **grande cuvée parcellaire**, élevage long, **17/20 RVF** — aucun autre vin de Cahors n'a jamais été aussi bien noté par cette revue. Plus récentes : **La Marguerite** et **Sidérolithe**, parcellaires sur sols exceptionnels.\n\n**Style** : tout chez Cosse Maisonneuve tient en trois mots — **puissance, finesse, fraîcheur**. Les vins sont **profonds, bien élevés, élégants** — la comparaison souvent faite avec « les plus beaux bordeaux » dans l'esprit n'est pas usurpée : même densité de matière, même rigueur d'élevage, **sans la rusticité tannique** souvent reprochée au Cahors traditionnel. Le malbec ressort **frais, mûr mais pas surmûr**, avec une **acidité préservée** rare dans l'appellation. Signature de l'infusion plutôt que l'extraction.\n\n**Garde** : Cheval en Tête **3-6 ans**, Le Combal **5-10 ans**, La Fage **8-12 ans**, Les Laquets **15-20 ans**.\n\n**Prix** : **12-15 €** (Cheval en Tête), **18-22 €** (Le Combal), **25-35 €** (La Fage), **45-65 €** (Les Laquets, parcellaires prestige). **Rapport qualité-prix exceptionnel** sur l'entrée et le milieu de gamme — Le Combal à 20 € est l'une des grandes affaires du Sud-Ouest.\n\n**Profil Pat** : domaine emblématique de quatre convictions. (1) **Biodynamie dès l'installation**, certifiée Demeter — engagement précoce et total, pas l'opportunisme. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Matthieu et Catherine, les éboulis de Lacapelle-Cabanac n'auraient pas donné de tels malbecs ; sans ce terroir, leur talent technique n'aurait pas trouvé matière. (3) **« Infusion plutôt qu'extraction », pas de bois neuf** = conviction n°5 incarnée — la transparence du terroir avant la signature du chai. (4) **Cahors défendu** = conviction n°6 dans sa version la plus utile : appellation longtemps caricaturée (« vin noir, vin rude »), réhabilitée par ce duo et Mas del Périé. **À recommander franchement** — entrée par Le Combal en valeur sûre, montée par La Fage, Les Laquets pour l'occasion. **Une fierté française**, et un duo à suivre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "biodynamie",
+        "cahors",
+        "catherine-maisonneuve",
+        "cosse-maisonneuve",
+        "cot",
+        "demeter",
+        "leoville-las-cases",
+        "malbec",
+        "matthieu-cosse",
+        "moderne",
+        "producteur"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-causse-marines",
+      "nom": "Domaine de Causse Marines",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Gaillac",
+      "appellations_principales": [
+        "Gaillac",
+        "Vin de France"
+      ],
+      "localisation": "Vieux (81140)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "effervescent",
+        "doux"
+      ],
+      "notes_objectives": "**Le domaine emblématique de la renaissance gaillacoise**, et l'un des piliers du Sud-Ouest naturel avec Plageoles et Mas del Périé. **Patrice Lescarret**, originaire de **Bordeaux**, diplômé de l'**Institut d'Œnologie de Bordeaux**, formé à **Sancerre et en Provence**, fonde le domaine en **1993** — pari incongru pour un œnologue bordelais que de venir à Gaillac, appellation alors dévalorisée. **Virginie Maignien**, originaire du **Jura**, passée par une grande école de commerce avant de bifurquer vers le vin (CFPPA de Beaune), **arrive aux vendanges en 2005** et n'est jamais repartie. Couple atypique, intelligence affûtée, plume aiguisée — Patrice est aussi connu pour ses commentaires de dégustation drôles et lucides. Le domaine tient son nom du **ruisseau Marines** qui borde le bas de la propriété, sur un **causse calcaire très maigre**.\n\n**Domaine** : **12 hectares d'un seul tenant** autour du domaine à **Vieux** (81140), au cœur du Gaillacois, au nord-est de Toulouse (50 km). **Sol** : **causse calcaire** dur, peu profond, idéal pour les cépages anciens du Tarn. **Encépagement riche en variétés locales** : **Mauzac** (vert et autres), **Ondenc**, **Loin de l'Œil** (Len de l'Ehl), **Verdanel**, **Petit Manseng**, **Duras**, **Braucol** (« taureau » en occitan), **Prunelart**. **Cépages méconnus du grand public**, et c'est précisément l'objet du domaine : défendre l'identité de Gaillac contre la standardisation.\n\n**Pratiques** : **bio certifié, biodynamie certifiée Demeter** (à signaler : Patrice a récemment **fait le choix de sortir de la certification** tout en maintenant les pratiques — geste typique de son refus du dogme). **Vendanges manuelles** intégrales, **rendements faibles**, tri sévère.\n\n**Vinification** : **levures indigènes** exclusivement, **pas d'intrants œnologiques**, **collage et filtration limités à leur plus simple expression**. **Certaines cuvées totalement exemptes de soufre**, les autres reçoivent une dose minime à la mise. Approche **peu interventionniste**, sans dogmatisme — Patrice n'est ni un guru ni un agité.\n\n**Cuvées repères**. En **AOC Gaillac** : **Peyrouzelles** rouge, assemblage **Braucol-Syrah-Duras** (parfois avec un peu d'Alicante, de Prunelart, de Jurançon noir), ~15-18 € — **canon digeste**, fruits noirs et épices, **vin à la fois d'été et d'hiver** ; **Les Greilles** blanc, assemblage de cépages anciens, ~18-22 €. **Cuvées en Vin de France** avec **noms à l'envers** pour contourner la règle qui interdit de mentionner les cépages sur ces vins : **Zacmau** (= Mauzac), **Rasdu** (= Duras), **Dencon** (= Ondenc) — astuce drôle et révélatrice. **Grain de Folie** moelleux, équilibre fin entre sucre et acidité.\n\n**Style** : tout chez Causse Marines tient en quatre mots — **pureté, tension, identité, plaisir**. Les rouges sont **fluides, frais, juteux**, sans la lourdeur qu'on associe parfois au Gaillac de masse. Les blancs sont **purs**, marqués par le **caractère propre de chaque cépage ancien** — c'est précisément l'objectif : faire entendre la voix de l'Ondenc, du Verdanel, du Loin de l'Œil. **Grain de Folie** est l'une des plus belles démonstrations qu'un moelleux peut éviter le piège du sucre lourd.\n\n**Garde** : Peyrouzelles **3-5 ans** (vin de plaisir immédiat), Les Greilles et cuvées Vin de France **5-8 ans**, Grain de Folie **10-15 ans**.\n\n**Prix** : **15-22 €** sur la quasi-totalité de la gamme — **prix exceptionnellement contenus** pour un domaine de cette stature, marque de fabrique du Sud-Ouest naturel.\n\n**Profil Pat** : domaine qui incarne cinq convictions. (1) **Bio et biodynamie pratiquées avec lucidité**, sans dogme — sortie volontaire de certification, geste rare et respectable. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Patrice et Virginie, le causse calcaire de Vieux et les cépages oubliés n'auraient pas parlé ; sans ces cépages, leur travail aurait été banalisé. (3) **Vinification sans intrants**, peu interventionniste = conviction n°5 dans sa version naturelle. (4) **Cépages anciens défendus** : Ondenc, Verdanel, Prunelart — patrimoine ampélographique français préservé, dimension qui dépasse le commercial. (5) **Région périphérique défendue** : Gaillac, l'un des plus anciens vignobles de France (Bénédictins de l'abbaye Saint-Michel, Xe siècle) longtemps réduit à de la production de masse — **conviction n°6**. **À recommander franchement** — entrée par Peyrouzelles en valeur sûre, montée par les Vins de France monocépages (Zacmau, Rasdu) pour la découverte. Une porte d'entrée superbe sur Gaillac et le Sud-Ouest naturel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "biodynamie",
+        "braucol",
+        "duras",
+        "gaillac",
+        "lescarret",
+        "loin-de-loeil",
+        "mauzac",
+        "nature",
+        "ondenc",
+        "producteur"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-plageoles",
+      "nom": "Domaine Plageoles",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Gaillac",
+      "appellations_principales": [
+        "Gaillac",
+        "Vin de France",
+        "IGP Côtes du Tarn"
+      ],
+      "localisation": "Cahuzac-sur-Vère / Castelnau-de-Montmiral (81140)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "effervescent",
+        "doux"
+      ],
+      "notes_objectives": "**Le domaine patrimonial absolu de Gaillac**, et le conservatoire vivant des cépages anciens du Sud-Ouest. **Famille Plageoles depuis 1805**, **7 générations** : Jules → François → Émile → **Marcel** (le greffeur) → **Robert** (l'ampélographe) → **Bernard** (l'héritier engagé) → **Florent et Romain** (les jeunes au domaine aujourd'hui). Histoire unique en France : trois générations consécutives ont mené un **travail d'archéologie ampélographique** pour sauver les cépages oubliés de Gaillac. **Marcel Plageoles**, greffeur de vignes, commence à recenser les vieux cépages locaux ; il **réintroduit le Duras** quasi-disparu, et **replante deux rangées d'Ondenc** au milieu d'une parcelle de Mauzac en **1983**. **Robert Plageoles**, le grand-père, s'empare de l'ampélographie comme d'une vocation : il retrouve le **Prunelart** chez un vigneron ami qui allait l'arracher, recense les **mauzacs en 4 couleurs** (vert, roux, rose, noir), exhume le **Verdanel**, le **Loin de l'Œil**, et trouve dans un traité de 1909 que l'Ondenc, comme le sémillon, peut donner de grands liquoreux — naissance du **Vin d'Autan**. Bernard, arrivé en **1983**, mène le **virage bio dès le début des années 1990**. **Renvoyé du syndicat** à l'époque pour son engagement minoritaire. Aujourd'hui ses fils **Florent et Romain** poursuivent.\n\n**Domaine** : **27 à 30 hectares** en deux exploitations : **Très Cantous** à **Cahuzac-sur-Vère** (siège historique) et **Roucou-Cantemerle** à **Castelnau-de-Montmiral** (où vit Robert). **Sols argilo-calcaires** profonds, vignoble qui a **résisté au phylloxéra** (à peine effleuré, fait historique remarquable). **Taille en gobelet** (non palissée), méthode traditionnelle adaptée au réchauffement climatique. **14 cépages anciens** cultivés en conservatoire : **Mauzac** dans toutes ses couleurs, **Ondenc, Loin de l'Œil, Verdanel, Duras, Braucol, Prunelart, Muscadelle**, et quelques raretés (Mourtes, Morrastel, Nehelescol…).\n\n**Pratiques** : **bio certifié depuis les années 1980**, **biodynamie ajoutée** plus tard. **Méthode Cousinié** (nutrition par oligo-éléments foliaires et organiques). Membre de l'association **Terre de Gaillac** (charte bio + biodynamie + vinification naturelle).\n\n**Vinification** : **sans engrais chimiques, sans levures sèches, sans chaptalisation**. **Levures indigènes**, vinifications **majoritairement monocépages** pour révéler la singularité de chaque variété. Élevages en **cuve inox, demi-muids**, parfois en **barriques anciennes**. **Soufre minime** ou absent.\n\n**Cuvées repères**. Une **gamme exceptionnellement large** par variété : **Duras** rouge (le retour du cépage), **Braucol**, **Prunelart** (rare et précieux), **Mauzac vert** sec, **Mauzac Nature** (pétillant en méthode ancestrale gaillacoise, recette de 1950), **Loin de l'Œil**, **Verdanel**. Les chefs-d'œuvre : **Vin d'Autan** (liquoreux d'**Ondenc** botrytisé, recréation d'un vin disparu, ~50-80 €) ; **Vin de Voile** (pur **Mauzac** élevé **7 ans sous voile** en demi-muids comme un vin jaune, **~96/100 RVF**, ~50-80 €) — chef-d'œuvre absolu et démonstration que le Sud-Ouest peut tutoyer le Jura. Plus récemment, les **séries Contre-pied et Terroirists** ouvertes par Florent et Romain (assemblages de tout ce qui pousse, esprit plus libre).\n\n**Style** : tout chez Plageoles tient en deux mots — **identité et pureté**. Les monocépages permettent d'**entendre la voix propre** de chaque cépage, sans assemblage qui homogénéise. Le **Duras** est tout en dentelle et fruits rouges écrasés, le **Mauzac Nature** est une bulle ultra-fine d'apéritif, le **Vin de Voile** est un OVNI noix-épices à mi-chemin entre Jurançon et Château-Chalon. **Caractère et émotion**, jamais l'effet maquillé.\n\n**Garde** : monocépages **5-10 ans**, Prunelart **10-15 ans**, **Vin d'Autan et Vin de Voile 20-40 ans** sans difficulté.\n\n**Prix** : **18-30 €** sur la majorité de la gamme, **50-80 €** pour Vin d'Autan et Vin de Voile. **Rapport qualité-prix exceptionnel** vu le travail patrimonial et la rareté.\n\n**Profil Pat** : domaine emblématique de quatre convictions et d'une dimension supplémentaire. (1) **Bio dès les années 1980**, biodynamie ajoutée — engagement pionnier dans le Sud-Ouest. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans 7 générations Plageoles, les cépages anciens du Tarn auraient disparu ; sans ces cépages, le terroir gaillacois n'aurait pas retrouvé son identité. (3) **Pas de bois neuf marqué**, élevages traditionnels = conviction n°5. (4) **Cépages oubliés défendus, région périphérique défendue** : le travail de Marcel-Robert-Bernard est **patrimoine français** au sens fort = conviction n°6 incarnée à un niveau rare. **À recommander franchement** — entrée par Mauzac Nature ou Duras, montée par Prunelart, **Vin de Voile pour l'émotion rare**. **Une fierté française** dans ce qu'elle a de plus précieux : la préservation contre la standardisation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "ampelographie",
+        "biodynamie",
+        "cepages-anciens",
+        "conservatoire",
+        "duras",
+        "gaillac",
+        "iconique",
+        "mauzac",
+        "ondenc",
+        "patrimoine",
+        "plageoles",
+        "producteur",
+        "prunelart",
+        "vin-de-voile"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-mas-del-perie",
+      "nom": "Mas del Périé",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Cahors",
+      "appellations_principales": [
+        "Cahors",
+        "Vin de France"
+      ],
+      "localisation": "Trespoux-Rassiels (46090)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**L'autre fer de lance du Cahors moderne**, dans une approche plus radicale que Cosse Maisonneuve — plus proche du vin nature. **Fabien Jouves**, ancien rugbyman comme tant de vignerons du Sud-Ouest, issu d'une **vieille famille paysanne du Causse**, **fils unique**, formé en œnologie dans le Bordelais. **Reprend en 2006** à 24 ans le domaine familial de Trespoux, jusque-là entièrement tourné vers la coopérative. **Création du Mas del Périé en propre**. Filiation revendiquée : tombé amoureux des vins nature en goûtant ceux d'**Éric Pfifferling** (Domaine de l'Anglore en Rhône) et de **Fred Palacios** (Malepère) — pas l'école classique œnologique, donc, mais la voie nature. **3 étoiles Bettane+Desseauve, 2 étoiles RVF**.\n\n**Domaine** : aujourd'hui **20 à 27 hectares** (selon les sources et les années) à **Trespoux**, **plus hauts coteaux de Cahors**, **350 m d'altitude** au nord de l'appellation. Le domaine est à la **jonction des terroirs des Coteaux du Quercy et de Cahors** — diversité géologique précieuse, à l'origine de la démarche parcellaire systématique. **Sols** : argiles blanches, **argiles rouges**, **sidérolithes** (sols ferrugineux), **marnes brunes du miocène**, **calcaires kimméridgiens** — Fabien revendique l'origine géologique directement sur les étiquettes (bouteilles bourguignonnes, choix lui aussi parlant). **Cépage roi** : **malbec (côt)** exclusivement pour l'AOC Cahors, avec quelques **chenin** et **manseng** en Vin de France.\n\n**Pratiques** : **bio et biodynamie certifiées Demeter et Biodyvin depuis 2011**. Fabien voit la biodynamie comme un **« exhausteur de terroir »** — pas une religion, un outil. Vendanges manuelles, rendements bas.\n\n**Vinification** : **« sans intrants œnologiques »**, levures indigènes, **fermentations naturelles**. Élevages variés selon la cuvée et le millésime — **cuves béton, barriques, foudres, jarres, œufs béton** — Fabien expérimente, parfois la même cuvée en plusieurs contenants. **Objectif déclaré : vinifier sans soufre sur toutes les cuvées lorsque le millésime le permet** — tour de force vu la précision des vins. **Pas de collage, pas de filtration**.\n\n**Cuvées repères**. **Cuvées de soif** aux noms iconoclastes : **Tu vin plus aux soirées**, **You Fuck my wine**, **À table**, **Les Agudes** — ~12-18 € — **canons digestes**, fruit pur, en Vin de France. **Cuvées sérieuses Cahors** : **Les Escures** sur calcaires kimméridgiens, ~22-28 € ; **La Roque** sur marnes brunes, ~22-28 €, fruit vinifié en cuve sans maquillage ; **Amphore**, élevage en jarre, ~30-35 € ; **B763** ; et la **grande cuvée parcellaire Les Acacias**, vieilles vignes de 40 ans sur **sidérolithes**, élevée 18 mois en foudre, ~40-50 € — **noté 93/100 RVF**, l'un des plus beaux ambassadeurs de l'appellation. Plus deux **chenin** en Vin de France (Les Pièces Longues, Orange Voilée) et collaboration **Haut-Berba** avec Vincent Maysounave.\n\n**Style** : tout chez Mas del Périé tient en quatre mots — **fruit, acidité, tension, finesse**. À mille lieues du Cahors viril du passé. Le malbec ressort **frais, croquant, précis**, parfois **presque salin** (Les Acacias), avec des **tanins polis** par les sols ferrugineux et l'altitude. Certains critiques (Walter Wine) notent une **« certaine froideur »** sur certains élevages — c'est le revers du parti pris d'infusion-pureté. **Signature reconnaissable** : pas de bois neuf marqué, fruit lisible, énergie.\n\n**Garde** : cuvées de soif **2-4 ans**, La Roque et Les Escures **5-10 ans**, Les Acacias **10-15 ans**.\n\n**Prix** : **12-18 €** (cuvées de soif), **22-30 €** (cuvées parcellaires courantes), **40-50 €** (Les Acacias). **Rapport qualité-prix remarquable** sur les cuvées de soif, et **encore raisonnable** sur Les Acacias pour ce niveau.\n\n**Profil Pat** : domaine qui coche cinq convictions à la fois. (1) **Biodynamie certifiée Demeter et Biodyvin** — engagement à l'os. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Fabien, les sidérolithes de Trespoux n'auraient pas parlé ; sans cette géologie variée, pas de cuvées parcellaires aussi distinctes. (3) **Pas de bois neuf marqué**, foudres et jarres dominants = conviction n°5 incarnée. (4) **Vin nature défendu** : pari du sans soufre quand le millésime permet, sans dogme. (5) **Cahors défendu** = conviction n°6, en duo avec Cosse Maisonneuve. **À recommander franchement** — entrée par les cuvées de soif (À table, Les Agudes), montée par La Roque ou Les Escures, **Les Acacias pour l'occasion**. Différence Cosse/Jouves : Cosse plus classique-élégant, Jouves plus nature-radical. Les deux à connaître.",
+      "mes_notes": null,
+      "notes_pat": "Très beaux vins blancs également",
+      "tags": [
+        "biodynamie",
+        "biodyvin",
+        "cahors",
+        "causse",
+        "cot",
+        "demeter",
+        "fabien-jouves",
+        "jouves",
+        "malbec",
+        "nature",
+        "producteur",
+        "trespoux"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-plaisance",
+      "nom": "Château Plaisance",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Fronton",
+      "appellations_principales": [
+        "Fronton"
+      ],
+      "localisation": "Vacquiers (31340)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "rose"
+      ],
+      "notes_objectives": "**Le moteur du renouveau de Fronton**, et l'un des plus beaux domaines du Sud-Ouest sur un cépage longtemps caricaturé : la **négrette**. Famille Penavayre installée à **Vacquiers** (entre Toulouse et Montauban) depuis le **XIXe siècle**, d'abord en **polyculture**, apportant les raisins à la coopérative. **Louis Penavayre** sort de la coopérative en **1971**, devient l'un des **pionniers de l'appellation Fronton**. En **1985**, fonde **Château Plaisance**. Son fils **Marc Penavayre**, **ingénieur agronome formé à l'INRA en Guadeloupe et dans le Val de Loire**, le rejoint en **1991**. Filiation revendiquée : Marc a côtoyé **Bernard Plageoles** (Gaillac) et **Marcel Lapierre** (Beaujolais). Son fils **Thibaut** rejoint en **2019**. **3 étoiles Bettane+Desseauve, 1 étoile RVF**.\n\n**Domaine** : aujourd'hui **26 hectares** sur la commune de **Vacquiers**, entre la **vallée du Tarn** au nord et la **vallée de la Garonne** au sud. **Plusieurs terroirs distincts** travaillés en sélection parcellaire : **sols minces** pour les cuvées de soif, **boulbènes caillouteuses** parfaites pour la négrette (cuvée Alabets), **rougets du Tarn** argilo-limoneux pour maturation lente (Le Pitchou, Tot ço que Cal). **Cépage roi** : **négrette** (cépage majoritaire de Fronton, présent aussi en Île de Ré et Fiefs Vendéens), complété par **cabernet franc, cabernet sauvignon, gamay, syrah** en rouges, et **bouysselet** (cépage blanc local quasi-disparu, replanté), **chenin, sauvignon** en blancs. **Découverte récente** : Marc a retrouvé et planté le **Négret Pounjut** (« pointu » en occitan), **cépage rouge ancien dont il est aujourd'hui le seul producteur**.\n\n**Pratiques** : **bio certifié depuis 2011**, **pratiques biodynamiques** ajoutées dès **2005**, couverture végétale, **cuivre minimisé** par plantes et huiles essentielles.\n\n**Vinification** : éraflage, **levures indigènes**, fermentation en **cuves béton ou inox**, vinifications **cépage par cépage**. Élevage **12 à 24 mois** selon les cuvées en **cuves béton, inox, barriques anciennes ou foudres** — **usage raisonné de la barrique**, Marc a fait évoluer le domaine vers **moins de bois neuf** au fil des ans. **Collage très réduit**, **pas de filtration**, **SO2 minimal**.\n\n**Cuvées repères**. **Le Rouge** Fronton (60% négrette + syrah, cabernets, gamay), ~10-13 € — **vin de soif gourmand**, bonne porte d'entrée ; **Le Rosé**, 80% négrette ; **Alabets** rouge, **100% négrette** sur boulbènes caillouteuses, élevée 2 hivers en béton, ~15-18 € ; **Tot ço que Cal** (« tout ce qu'il faut » en occitan), **100% négrette** parcellaire, 12-18 mois en foudre, ~20-25 € — **cuvée signature**, **« le rouge le plus équilibré de Fronton »** (RVF) ; **Serr da Beg**, **négrette nature sans soufre** ; **Négret Pounjut** en Vin de France. En blanc : **bouysselet** et cépages locaux replantés.\n\n**Style** : tout chez Plaisance tient en quatre mots — **finesse, fraîcheur, identité, charme**. Marc Penavayre a **réussi à changer l'image de la négrette** — longtemps caricaturée comme rustique, présentée ici comme un **cépage charmeur, gouleyant, à texture soyeuse**, notes de **violette, framboise, pivoine, réglisse**. Alcools modérés (le cépage le permet), tanins polis. **Pas de boisé marquant**, fruits purs. Comparaison juste : la négrette à Plaisance, c'est ce que le gamay nature est devenu au Beaujolais — un cépage rapatrié de la caricature à la noblesse.\n\n**Garde** : Le Rouge **3-5 ans**, Alabets **5-10 ans**, Tot ço que Cal **8-15 ans**.\n\n**Prix** : **10-13 €** (Le Rouge), **15-18 €** (Alabets), **20-25 €** (Tot ço que Cal). **Prix exceptionnellement contenus** — Fronton reste économique, et Plaisance n'a pas spéculé sur sa qualité.\n\n**Profil Pat** : domaine qui incarne cinq convictions. (1) **Bio depuis 2011, biodynamie depuis 2005** — engagement précoce dans une appellation conventionnelle. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Marc Penavayre, la négrette serait restée caricaturée ; sans ce cépage et ces boulbènes, son travail n'aurait pas d'objet. (3) **Bois neuf raisonné**, foudres et béton dominants = conviction n°5 incarnée. (4) **Cépages oubliés défendus** : Bouysselet, Négret Pounjut — patrimoine préservé. (5) **Région périphérique défendue** : Fronton, longtemps polluée par la production de masse, réhabilitée producteur par producteur — **conviction n°6**. **À recommander franchement** — entrée par Le Rouge, montée par Alabets ou Tot ço que Cal, **Serr da Beg** pour la découverte du nature. **Une porte d'entrée superbe** sur Fronton et la négrette, **excellent rapport prix-plaisir** sur tout le catalogue.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "bio",
+        "biodynamie",
+        "bouysselet",
+        "fronton",
+        "marc-penavayre",
+        "negret-pounjut",
+        "negrette",
+        "penavayre",
+        "producteur",
+        "thibaut-penavayre"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "so-prod-tirecul-graviere",
+      "nom": "Château Tirecul La Gravière",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Monbazillac",
+      "appellations_principales": [
+        "Monbazillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**Référence absolue du Monbazillac** — **Claudie et Bruno Bilancini** depuis 1992, **~9 ha** seulement sur **sols argilo-calcaires** typiques de la rive sud de la Dordogne. **Vendanges manuelles en plusieurs tries successives** sur grains atteints de **pourriture noble (Botrytis cinerea)** — pratique sauternaise rigoureusement appliquée à Monbazillac. **Sémillon dominant** + Muscadelle + Sauvignon Blanc. Élevage **18 à 24 mois en barriques**, dont une part neuve sur la **Cuvée Madame**. Style **opulent, miellé, complexe** (abricot confit, écorce d'orange, miel, safran), **garde 30-50 ans** sur les grands millésimes. La Cuvée Madame est régulièrement notée au niveau des grands Sauternes par la critique internationale — équivalent Yquem du Bergeracois. Allocations.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "monbazillac",
+        "iconique",
+        "bilancini",
+        "liquoreux",
+        "claudie-bruno-bilancini",
+        "depuis-1992",
+        "9-hectares",
+        "botrytis-cinerea",
+        "cuvee-madame",
+        "yquem-bergeracois",
+        "garde-longue"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~401 à 773 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Sémillon",
+        "Muscadelle",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Monbazillac Tirecul La Gravière (cuvée classique)",
+        "Monbazillac Cuvée Madame (haut de gamme, garde 30-50 ans)",
+        "Monbazillac Les Pins"
+      ]
+    },
+    {
+      "id": "so-prod-chateau-cedre",
+      "nom": "Château du Cèdre",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Cahors",
+      "appellations_principales": [
+        "Cahors"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "Domaine à **Vire-sur-Lot (Cahors)**, **frères Pascal et Jean-Marc Verhaeghe** (origine flamande, famille installée depuis 1956). **Bio certifié**, **~27 ha sur le causse calcaire** (plateau dominant la vallée du Lot) — terroir le plus qualitatif de l'appellation. **Malbec dominant** (90%+), complété par Merlot et Tannat. Vinifications longues, **élevages en fûts** (12-18 mois) selon les cuvées. Cuvée **\"Le Cèdre\" (haut de gamme, parcelles causse vieilles vignes)** = la signature, garde **15-20 ans**. **\"GC\" (Grande Cuvée)** = sélection moderne haut de gamme. Style structuré, tanins fermes mais soyeux avec l'âge. **Référence du Cahors moderne**, à la fois respectueux de la tradition Malbec et précis dans l'extraction.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cahors",
+        "bio",
+        "verhaeghe",
+        "causse",
+        "vire-sur-lot",
+        "freres-verhaeghe",
+        "pascal-jean-marc-verhaeghe",
+        "origine-flamande",
+        "depuis-1956",
+        "bio-certifie",
+        "causse-calcaire",
+        "malbec"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~381 à 726 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Malbec (Côt)",
+        "Merlot",
+        "Tannat"
+      ],
+      "cuvees_phares": [
+        "Cahors Château du Cèdre (cuvée signature)",
+        "Cahors Le Cèdre (haut de gamme causse)",
+        "Cahors GC (Grande Cuvée)",
+        "Cahors Le Prestige"
+      ]
+    },
+    {
+      "id": "so-prod-clos-lapeyre",
+      "nom": "Clos Lapeyre",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Jurançon",
+      "appellations_principales": [
+        "Jurançon"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **La Chapelle-de-Rousse (Jurançon)**, **Jean-Bernard Larrieu** (installation années 1980). **Biodynamie certifiée**, **~15 ha** sur **terrasses pyrénéennes** étagées entre **250 et 350 m d'altitude**. Sols **argilo-graveleux du poudingue de Jurançon**, exposition sud. **Référence du Jurançon sec et moelleux** moderne. Cuvées parcellaires : **La Magendia** (Jurançon Sec parcellaire), **Mantoulan** (sec et moelleux), **Vitatge Vielh** (vieilles vignes, moelleux haut de gamme, vendanges tardives, garde 15-25 ans). **Cépages anciens préservés** : aux côtés de Petit et Gros Manseng dominants, Larrieu cultive aussi du **Camaralet** et du **Lauzet** (cépages quasi-disparus). Style précis, vinifications soignées, l'un des grands noms du Jurançon biodynamique contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "jurancon",
+        "biodynamie",
+        "larrieu",
+        "la-chapelle-de-rousse",
+        "jean-bernard-larrieu",
+        "15-hectares",
+        "terrasses-pyreneennes",
+        "vitatge-vielh",
+        "magendia"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~303 à 784 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Petit Manseng",
+        "Gros Manseng",
+        "Camaralet",
+        "Lauzet"
+      ],
+      "cuvees_phares": [
+        "Jurançon Sec Mantoulan",
+        "Jurançon Sec La Magendia",
+        "Jurançon Moelleux Vitatge Vielh (vieilles vignes)",
+        "Jurançon Moelleux Mantoulan"
+      ]
+    },
+    {
+      "id": "so-prod-clos-triguedina",
+      "nom": "Clos Triguedina",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Cahors",
+      "appellations_principales": [
+        "Cahors"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Domaine historique de Cahors** à **Vire-sur-Lot**, **famille Baldès depuis 1830** (8 générations, **Jean-Luc Baldès** aujourd'hui). **~65 ha**, l'un des plus anciens domaines et plus grands en propriété de l'appellation. **Trois lieux-dits emblématiques** : **Les Galets, Petites Cailles, Clos Triguedina**. Cuvée **\"Probus\"** = sélection des plus vieilles vignes de Malbec sur causse, **élevage 18-24 mois en barriques**, garde **15-25 ans**. Cuvée **\"The New Black Wine\"** = recréation moderne du **Black Wine historique de Cahors médiéval** (passerillage partiel des raisins, vinification longue) — projet historique unique. Style classique-traditionnel, l'un des piliers du Cahors authentique avant la modernisation des années 2000.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cahors",
+        "baldes",
+        "historique",
+        "vire-sur-lot",
+        "famille-baldes",
+        "depuis-1830",
+        "8-generations",
+        "jean-luc-baldes",
+        "probus",
+        "black-wine"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~379 à 738 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Malbec (Côt)",
+        "Merlot",
+        "Tannat"
+      ],
+      "cuvees_phares": [
+        "Cahors Clos Triguedina (cuvée classique)",
+        "Cahors Probus (haut de gamme, garde 15-25 ans)",
+        "Cahors The New Black Wine (recréation Black Wine médiéval)",
+        "Cahors Petites Cailles"
+      ]
+    },
+    {
+      "id": "so-prod-bellegarde",
+      "nom": "Domaine Bellegarde",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Jurançon",
+      "appellations_principales": [
+        "Jurançon"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Monein (Jurançon)**, **Pascal Labasse** (3e génération, reprise années 1990). **Bio certifié**, **~10 ha** sur **coteaux argileux** de la commune phare du Jurançon. Cuvées Jurançon Sec et Moelleux classiques, plus la **\"Cuvée Thibault\"** parcellaire signature (sélection des meilleures parcelles, élevage partiel en barriques). Style classique soigné — moelleux ronds et miellés, secs tendus et minéraux, ni la radicalité de Larrieu (Camin/Lapeyre) ni l'avant-garde de Souch. Élevages en cuves inox et fûts usagés. Bon producteur fiable du Jurançon, **rapport qualité-prix solide** dans la catégorie ranking 4. Bonne distribution régionale, peu présent à l'export.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "jurancon",
+        "labasse",
+        "monein",
+        "pascal-labasse",
+        "bio",
+        "cuvee-thibault"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~300 à 676 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Jurançon Sec",
+        "Jurançon Sec Cuvée Thibault (parcellaire)",
+        "Jurançon Moelleux Tradition",
+        "Jurançon Moelleux Cuvée Thibault"
+      ]
+    },
+    {
+      "id": "so-prod-berthoumieu",
+      "nom": "Domaine Berthoumieu",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Madiran",
+      "appellations_principales": [
+        "Madiran"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "Domaine à **Viella (Madiran)**, **famille Barre** (Didier Barre puis sa fille Claire). **~26 ha sur coteaux argilo-calcaires** du Vic-Bilh. **Référence du Madiran traditionnel non-modernisé** — vinifications longues, **macérations 4-6 semaines**, élevages en cuves et fûts. Cuvée **\"Charles de Batz\"** = sélection **vieilles vignes Tannat** (50+ ans), élevage **18 mois en barriques** dont 30% neuves, garde **15-25 ans**. Profil **Madiran classique** : tanins fermes en jeunesse (Tannat oblige), fruits noirs, épices, garrigue avec l'âge. Production complète : Madiran rouge + **Pacherenc du Vic-Bilh** en sec et en doux (vendanges tardives), cépages locaux Petit et Gros Manseng. Producteur familial fiable et constant, bonne distribution régionale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "madiran",
+        "barre",
+        "charles-de-batz",
+        "viella",
+        "famille-barre",
+        "didier-barre",
+        "tannat-vieilles-vignes",
+        "pacherenc-vic-bilh",
+        "tradition"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~316 à 751 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Madiran Tradition",
+        "Madiran Charles de Batz (vieilles vignes Tannat, signature)",
+        "Pacherenc du Vic-Bilh Sec",
+        "Pacherenc du Vic-Bilh Doux"
+      ]
+    },
+    {
+      "id": "so-prod-brana",
+      "nom": "Domaine Brana",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Irouléguy",
+      "appellations_principales": [
+        "Irouléguy"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine historique à **Saint-Étienne-de-Baïgorry (Irouléguy)**, **famille Brana** — **Étienne Brana** (pionnier de la renaissance de l'appellation dans les années 1980) puis son fils **Jean Brana** aujourd'hui. **Pionniers absolus de la renaissance d'Irouléguy** : c'est Étienne Brana qui a relancé l'appellation après la quasi-disparition d'après-guerre. **~22 ha sur terrasses pentues** du Pays Basque, **sols schisteux et argilo-calcaires**, exposition sud, **altitude 200-400 m**. **Tannat et Cabernet Franc (Axeria)** pour les rouges, **Petit Manseng + Gros Manseng + Petit Courbu** pour les blancs. Cuvée **\"Harri Gorri\" (pierre rouge en basque)** = haut de gamme rouge, garde 12-18 ans. Style traditionnel basque structuré, l'un des fondateurs de l'Irouléguy moderne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "irouleguy",
+        "brana",
+        "basque",
+        "pays-basque",
+        "saint-etienne-de-baigorry",
+        "famille-brana",
+        "etienne-jean-brana",
+        "22-hectares",
+        "pionnier-irouleguy",
+        "terrasses-pentues"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~363 à 774 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Manseng",
+        "Gros Manseng",
+        "Petit Courbu"
+      ],
+      "cuvees_phares": [
+        "Irouléguy Rouge Domaine Brana",
+        "Irouléguy Rouge Harri Gorri (haut de gamme)",
+        "Irouléguy Blanc",
+        "Irouléguy Rosé"
+      ]
+    },
+    {
+      "id": "so-prod-capmartin",
+      "nom": "Domaine Capmartin",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Madiran",
+      "appellations_principales": [
+        "Madiran"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Maumusson-Laguian (Madiran)**, **Guy Capmartin** (installation 1986) puis son fils **Bertrand Capmartin**. **Bio certifié**, **~17 ha sur argiles et galets** du Vic-Bilh. **Macérations longues** sur les rouges, élevages en cuves béton et fûts usagés. Cuvée **\"Tradition\"** = Madiran classique (Tannat + Cabernets), **\"Cuvée du Couvent\"** = sélection vieilles vignes. **Pacherenc du Vic-Bilh** réussi en sec (Gros Manseng + Petit Courbu) et en moelleux (Petit Manseng vendanges tardives). Style soigné, équilibre entre puissance du Tannat et accessibilité, l'un des Madiran bio les plus fiables du marché. Bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "madiran",
+        "pacherenc",
+        "bio",
+        "capmartin",
+        "maumusson-laguian",
+        "guy-bertrand-capmartin",
+        "tradition"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~292 à 642 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Franc",
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Madiran Tradition",
+        "Madiran Vieilles Vignes",
+        "Pacherenc du Vic-Bilh Sec",
+        "Pacherenc du Vic-Bilh Doux"
+      ]
+    },
+    {
+      "id": "so-prod-ancienne-cure",
+      "nom": "Domaine de l'Ancienne Cure",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Monbazillac",
+      "appellations_principales": [
+        "Bergerac-Monbazillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Colombier (Bergerac-Monbazillac)**, **Christian Roche** depuis 1985 — pionnier du bio dans le Bergeracois, **certification bio acquise dès les années 1990**. **~35 ha** répartis sur trois appellations : **Bergerac (rouge et blanc), Monbazillac (liquoreux), Pécharmant** (rouge). Cuvées **\"Jour de Fruit\" (entrée de gamme), \"Abbaye\" (parcellaire) et \"Extase\"** (haut de gamme en sec et en liquoreux). Le **Monbazillac Extase** est issu de vendanges botrytisées en plusieurs tries, garde 20-30 ans. Style classique soigné, élevages en cuves et fûts usagés. Distribution importante, l'un des domaines bio les mieux établis du Bergeracois — référence sérieuse à prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bergerac",
+        "monbazillac",
+        "bio",
+        "roche",
+        "colombier",
+        "christian-roche",
+        "depuis-1985",
+        "bio-certifie",
+        "35-hectares",
+        "gamme-complete"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~352 à 688 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Sémillon",
+        "Sauvignon Blanc",
+        "Muscadelle"
+      ],
+      "cuvees_phares": [
+        "Bergerac Rouge L'Abbaye",
+        "Bergerac Blanc Jour de Fruit",
+        "Monbazillac L'Abbaye",
+        "Monbazillac Extase (haut de gamme)",
+        "Pécharmant"
+      ]
+    },
+    {
+      "id": "so-prod-ramaye",
+      "nom": "Domaine de la Ramaye",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Gaillac",
+      "appellations_principales": [
+        "Gaillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "effervescent",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Sainte-Cécile-d'Avès (Gaillac)**, **Michel Issaly** (figure tutélaire du Gaillac contemporain et président historique des Vignerons Indépendants de France). **Biodynamie**, **~5 ha** seulement. **Spécialiste des vins sous voile** (méthode jurassienne appliquée au Mauzac — pratique historique rare conservée en Gaillac, voire unique aujourd'hui), cuvée **\"Le Vin de l'Oubli\"** signature, **élevage 7 ans sous voile** avant mise en bouteille. **Cépages anciens préservés** : Loin de l'Œil, Mauzac, Ondenc, Duras, Braucol (Fer Servadou), **Prunelard** (cépage quasi-disparu, Michel Issaly l'a réhabilité). Cuvée **\"Le Petit Brin\" (Mauzac sec)**, **\"Le Pech de la Tillette\" (rouge)**. Micro-production, allocations, l'un des domaines les plus singuliers du Sud-Ouest.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "gaillac",
+        "biodynamie",
+        "issaly",
+        "sous-voile",
+        "sainte-cecile-d-aves",
+        "michel-issaly",
+        "5-hectares",
+        "vin-de-l-oubli",
+        "cepages-anciens",
+        "loin-de-l-oeil",
+        "ondenc",
+        "prunelard"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~355 à 776 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Mauzac",
+        "Loin de l'Œil",
+        "Ondenc",
+        "Duras",
+        "Braucol (Fer Servadou)",
+        "Prunelard"
+      ],
+      "cuvees_phares": [
+        "Gaillac Le Vin de l'Oubli (sous voile, signature)",
+        "Gaillac Le Petit Brin (Mauzac)",
+        "Gaillac Le Pech de la Tillette (rouge)",
+        "Gaillac La Combe d'Avès"
+      ]
+    },
+    {
+      "id": "so-prod-souch",
+      "nom": "Domaine de Souch",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Jurançon",
+      "appellations_principales": [
+        "Jurançon"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Laroin (Jurançon)**, **Yvonne Hegoburu** (légende vivante du Jurançon biodynamique, **installation à 60 ans en 1986** — parcours d'installation tardif unique, après une carrière dans l'enseignement), aujourd'hui **gérée par son petit-fils Hugues Hegoburu**. **Biodynamie Demeter dès l'origine**, **~6 ha** seulement sur **coteaux argilo-calcaires**. Cuvées **\"Marie-Kattalin\" (sec, Gros Manseng + Petit Courbu)** et **\"Mademoiselle de Souch\" (moelleux, Petit Manseng vendanges tardives en plusieurs tries)**, garde 15-25 ans. Style précis, micro-production confidentielle, allocations sur cavistes spécialisés. Domaine culte des amateurs de Jurançon authentique, l'un des plus exigeants de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "jurancon",
+        "biodynamie",
+        "hegoburu",
+        "laroin",
+        "yvonne-hegoburu",
+        "hugues-hegoburu",
+        "biodynamie-demeter",
+        "depuis-1986",
+        "pionniere-biodynamie-jurancon",
+        "6-hectares",
+        "marie-kattalin",
+        "mademoiselle-de-souch"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~370 à 716 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Petit Manseng",
+        "Gros Manseng",
+        "Petit Courbu"
+      ],
+      "cuvees_phares": [
+        "Jurançon Sec Marie-Kattalin",
+        "Jurançon Moelleux Mademoiselle de Souch",
+        "Jurançon Moelleux Cuvée Marie-Kattalin"
+      ]
+    },
+    {
+      "id": "so-prod-cros",
+      "nom": "Domaine du Cros",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Marcillac",
+      "appellations_principales": [
+        "Marcillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "rose"
+      ],
+      "notes_objectives": "**Référence absolue du Marcillac** — **Philippe Teulier** puis son fils **Julien Teulier** à **Goutrens (Aveyron)**. **~30 ha**, **monocépage Mansois (Fer Servadou)** sur les **sols rouges ferrugineux** typiques de Marcillac (\"rougiers\", concentration unique d'oxydes de fer). Vinifications **macérations courtes à moyennes** (15-20 jours), élevages en cuves béton et fûts usagés. Cuvées : **\"Lo Sang del Païs\"** (signature, expression directe du Mansois jeune), **\"Vieilles Vignes\"** (sélection 40+ ans), **\"Vieilles Vignes Préphylloxériques\"** (parcelles franc de pied rarissimes, micro-production). Style **fruité-épicé, croquant, peu boisé** — Marcillac dans son expression la plus pure, à boire jeune ou attendre 8-12 ans. Domaine pédagogique pour comprendre cette appellation confidentielle de l'Aveyron.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "marcillac",
+        "teulier",
+        "mansois",
+        "reference",
+        "goutrens",
+        "philippe-julien-teulier",
+        "30-hectares",
+        "fer-servadou",
+        "sols-rouges-ferrugineux",
+        "lo-sang-del-pais",
+        "prephylloxeriques",
+        "reference-marcillac"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~372 à 810 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Mansois (Fer Servadou)"
+      ],
+      "cuvees_phares": [
+        "Marcillac Lo Sang del Païs (cuvée signature)",
+        "Marcillac Vieilles Vignes",
+        "Marcillac Vieilles Vignes Préphylloxériques (rare)",
+        "Marcillac Cuvée Charles Carles"
+      ]
+    },
+    {
+      "id": "so-prod-ilarria",
+      "nom": "Domaine Ilarria",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Irouléguy",
+      "appellations_principales": [
+        "Irouléguy"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Ispoure (Irouléguy)**, **Peio Espil** (installation années 1990). **Bio certifié**, **~12 ha sur terrasses pentues** du Pays Basque basse Navarre. Sols **grès et schistes**, exposition sud, **altitude 200-350 m**. **Tannat dominant** (le \"vrai\" Tannat basque) + Cabernet Franc + Cabernet Sauvignon. **Macérations longues**, élevages en cuves et fûts usagés (peu de bois neuf marqué). Cuvée **\"Bixintxo\"** = haut de gamme rouge, vieilles vignes, garde 12-18 ans. Également blanc et rosé sur les mansengs locaux. Style précis et moderne sans sacrifier l'identité basque, **référence du Tannat d'Irouléguy** de la nouvelle génération aux côtés d'Arretxea. Production confidentielle, distribution sur cavistes spécialisés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "irouleguy",
+        "bio",
+        "espil",
+        "pays-basque",
+        "ispoure",
+        "peio-espil",
+        "bio-certifie",
+        "tannat-irouleguy",
+        "bixintxo",
+        "nouvelle-generation"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~294 à 730 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Irouléguy Rouge Domaine Ilarria",
+        "Irouléguy Rouge Bixintxo (haut de gamme)",
+        "Irouléguy Blanc",
+        "Irouléguy Rosé"
+      ]
+    },
+    {
+      "id": "so-prod-labranche-laffont",
+      "nom": "Domaine Labranche-Laffont",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Madiran",
+      "appellations_principales": [
+        "Madiran"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "Domaine à **Maumusson-Laguian (Madiran)**, **Christine Dupuy** depuis 1992 (succession familiale 4e génération). **~18 ha**, **caractéristique exceptionnelle** : **parcelles préphylloxériques de Tannat franc de pied** (vignes non greffées sur porte-greffe américain, ayant survécu au phylloxéra de la fin XIXe — rarissime en France, quelques hectares à peine sur tout le pays). Cuvée **\"Vieilles Vignes Préphylloxériques\"** signature, élevage 18-24 mois, garde **20-30 ans**, **production confidentielle**, allocations. Style traditionnel rigoureux, l'un des Madiran les plus respectés des amateurs avertis — cas d'école pour comprendre ce qu'était le Tannat franc de pied avant le phylloxéra.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "madiran",
+        "dupuy",
+        "prephylloxerique",
+        "maumusson-laguian",
+        "christine-dupuy",
+        "depuis-1992",
+        "prephylloxeriques",
+        "tannat-franc-de-pied",
+        "garde-longue"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~317 à 693 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Madiran Tradition",
+        "Madiran Vieilles Vignes",
+        "Madiran Vieilles Vignes Préphylloxériques (signature, garde 20-30 ans)",
+        "Pacherenc du Vic-Bilh"
+      ]
+    },
+    {
+      "id": "so-prod-mouthes-le-bihan",
+      "nom": "Domaine Mouthes Le Bihan",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Côtes de Duras",
+      "appellations_principales": [
+        "Côtes de Duras"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Saint-Jean-de-Duras (Côtes de Duras)**, **Catherine et Jean-Mary Le Bihan** (installation 1998). **Biodynamie certifiée**, **~25 ha** sur **sols argilo-calcaires** du Duras (proche du Bordelais mais à prix bien inférieurs). **Pionnier absolu de la qualité dans une appellation oubliée et déconsidérée** — Mouthes Le Bihan a démontré qu'il y avait un grand vin possible à Duras, créant une école. Cuvées **\"Vieillefont\" (rouge, Cabernet Franc + Merlot, garde 10-15 ans), \"La Pie Colette\" (blanc, Sémillon + Sauvignon Blanc), \"Lou Petit Brouchet\" (rosé sec gastronomique)** et **\"Perette\"** (haut de gamme). Style précis, élevages en cuves et fûts usagés, fraîcheur préservée — l'antithèse des Bordelais boisés à prix élevés, à 15-25 € la bouteille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "duras",
+        "biodynamie",
+        "le-bihan",
+        "cotes-de-duras",
+        "saint-jean-de-duras",
+        "catherine-jean-mary-le-bihan",
+        "25-hectares",
+        "vieillefont",
+        "pie-colette",
+        "pionnier-cotes-de-duras"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~362 à 759 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Merlot",
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Côtes de Duras Rouge Vieillefont",
+        "Côtes de Duras Blanc La Pie Colette",
+        "Côtes de Duras Rosé Lou Petit Brouchet",
+        "Côtes de Duras Cuvée Perette"
+      ]
+    },
+    {
+      "id": "so-prod-plaimont",
+      "nom": "Plaimont",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Saint-Mont",
+      "appellations_principales": [
+        "Saint-Mont"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "<15",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Coopérative géante** fondée en **1979 par André Dubosc** dans le **Saint-Mont/Madiran**. **~5300 hectares** au total, **~700 viticulteurs adhérents**. **Rôle patrimonial majeur** assumé : **conservatoire INRA des cépages anciens du Sud-Ouest** sur la **vigne de Sarragachies (classée Monument Historique en 2012, plus vieille vigne de France encore en production, ~200 ans)** — **40+ cépages oubliés** y sont conservés vivants (Manseng noir, Tardif, Pinenc, Arrufiac, Petit Courbu, etc.). Gamme allant du commercial (Saint-Mont entrée) au prestige (**\"Le Faîte\" Vieilles Vignes, \"Plénitude\"**). Modèle coopératif sérieux, démonstration que volume et qualité ne sont pas incompatibles quand le projet est culturellement engagé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-mont",
+        "cooperative",
+        "cepages-anciens",
+        "plaimont",
+        "madiran",
+        "pacherenc",
+        "fondee-1979",
+        "5000-hectares",
+        "700-adherents",
+        "conservatoire-cepages-anciens",
+        "manseng-noir",
+        "tardif",
+        "pinenc",
+        "patrimoine"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~445 à 728 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Tannat",
+        "Pinenc",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Gros Manseng",
+        "Petit Manseng",
+        "Arrufiac"
+      ],
+      "cuvees_phares": [
+        "Saint-Mont Tradition",
+        "Saint-Mont Le Faîte (haut de gamme)",
+        "Madiran",
+        "Pacherenc du Vic-Bilh",
+        "Cuvées cépages anciens (Manseng noir, Tardif)"
+      ]
+    },
+    {
+      "id": "so-prod-tariquet",
+      "nom": "Domaine du Tariquet",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "IGP Côtes de Gascogne",
+      "appellations_principales": [
+        "IGP Côtes de Gascogne"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Domaine géant** à **Eauze (Gers, IGP Côtes de Gascogne)**, **famille Grassa** (Yves et Maïté puis leurs fils). **~1100 hectares** (!) — le plus grand domaine familial de France. **Spécialiste de l'IGP Côtes de Gascogne** (Ugni Blanc, Colombard, Sauvignon, Gros Manseng) en blancs **frais et fruités** à boire jeunes. Volumes massifs, distribution mondiale, style commercial soigné mais sans recherche d'authenticité parcellaire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "igp",
+        "gascogne",
+        "grassa",
+        "volume",
+        "cotes-de-gascogne",
+        "eauze",
+        "gers",
+        "famille-grassa",
+        "1100-hectares",
+        "plus-grand-domaine-familial-france",
+        "volumes-massifs",
+        "distribution-mondiale",
+        "commercial"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 3) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés.",
+      "cepages_rois": [
+        "Ugni Blanc",
+        "Colombard",
+        "Sauvignon Blanc",
+        "Gros Manseng"
+      ],
+      "cuvees_phares": [
+        "Côtes de Gascogne Classic (Ugni Blanc/Colombard)",
+        "Côtes de Gascogne Sauvignon",
+        "Côtes de Gascogne Gros Manseng",
+        "Côtes de Gascogne Premières Grives (Gros Manseng moelleux)"
+      ]
+    },
+    {
+      "id": "so-prod-rotier",
+      "nom": "Domaine Rotier",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Gaillac",
+      "appellations_principales": [
+        "Gaillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "effervescent",
+        "doux"
+      ],
+      "notes_objectives": "Domaine à **Cadalen (Gaillac)**, **Alain Rotier et Francis Marre** (puis génération suivante). **Bio**, ~35 ha. Production complète **Gaillac rouge, blanc sec, blanc doux (Vendanges Tardives)**. Cuvée **\"Renaissance\"** parcellaire signature. Style classique soigné, distribution importante régionalement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "gaillac",
+        "bio",
+        "rotier",
+        "cadalen",
+        "alain-rotier",
+        "francis-marre",
+        "35-hectares",
+        "renaissance",
+        "vendanges-tardives"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 3) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés.",
+      "cepages_rois": [
+        "Duras",
+        "Braucol (Fer Servadou)",
+        "Syrah",
+        "Loin de l'Œil",
+        "Mauzac",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Gaillac Rouge Tradition",
+        "Gaillac Rouge Renaissance (parcellaire)",
+        "Gaillac Blanc Sec",
+        "Gaillac Doux Renaissance (Vendanges Tardives)"
+      ]
+    },
+    {
+      "id": "so-prod-matha",
+      "nom": "Jean-Luc Matha",
+      "pays": "France",
+      "region": "Sud-Ouest",
+      "sous_region": "Marcillac",
+      "appellations_principales": [
+        "Marcillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Bruéjouls (Marcillac)**, **Jean-Luc Matha**. **Bio**, ~12 ha. **Mansois (Fer Servadou)** signature, cuvée **\"Pierres Rouges\"**. Style classique-bio sans positionnement nature radical, bonne référence sérieuse du Marcillac aux côtés de Domaine du Cros.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "marcillac",
+        "bio",
+        "matha",
+        "bruejouls",
+        "jean-luc-matha",
+        "mansois",
+        "pierres-rouges"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 3) — notes objectives + cuvées phares + cépages + gamme_prix ajoutés.",
+      "cepages_rois": [
+        "Mansois (Fer Servadou)"
+      ],
+      "cuvees_phares": [
+        "Marcillac Pierres Rouges (signature)",
+        "Marcillac Tradition",
+        "Marcillac Vieilles Vignes"
+      ]
+    }
+  ]
+}

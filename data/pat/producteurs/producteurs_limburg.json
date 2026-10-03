@@ -1,0 +1,784 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "limburg",
+  "region_label": "Limburg",
+  "source_file": "producteurs_limburg_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 21,
+  "items": [
+    {
+      "id": "be-limburg-prod-wijnkasteel-genoels-elderen",
+      "nom": "Wijnkasteel Genoels-Elderen",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Riemst (Genoelselderen)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)",
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le seul château viticole de Belgique, entre Tongres et Maastricht, le long de l'ancienne voie romaine. Jaap van Rennes, grossiste en alimentation devenu vigneron sur le tard, rachète le domaine dans les années 1980 et fait planter en 1991 les premiers 4,5 hectares derrière le château néoclassique de Genoelselderen ; sa fille Joyce interrompt ses études d'économie pour apprendre l'œnologie en France et rentre à temps pour la première vendange. Le vignoble compte aujourd'hui 22 hectares en cinq parcelles ceinturant le château — 18 de Chardonnay, 4 de Pinot Noir, plantés à 4 300 pieds/ha, plus un demi-hectare de Pinot Gris.\n\nLe choix de ces cépages découle du sol : un socle de marne calcaire coiffé d'une nappe de limon, dont la parenté bourguignonne a été explicitement recherchée, plus de cent clones ayant été testés avant sélection. Pas d'herbicides, désherbage mécanique, mais pas de certification biologique.\n\nLa gamme se lit en deux registres. En tranquille, le Chardonnay Goud, issu des plus vieilles vignes sur les meilleures pentes et limité à environ 5 000 bouteilles, et le Chardonnay Kiezelingenbos. En effervescent, trois cuvées en méthode traditionnelle — Zilveren, Zwarte et Roze Parel — tirées du seul cœur de cuvée, sur des rendements inférieurs à 40 hl/ha. Médailles régulières au Concours Mondial de Bruxelles et au Chardonnay du Monde. C'est le domaine qui, dès les années 1990, a convaincu la gastronomie belge d'inscrire du vin national à la carte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Goud",
+        "Chardonnay Kiezelingenbos",
+        "Zilveren Parel",
+        "Zwarte Parel",
+        "Roze Parel"
+      ],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "craie",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface : 22 ha selon la majorité des sources, près de 25 ha selon d'autres. Pas de certification bio malgré l'absence d'herbicides.",
+      "source": "belgischewijnbouwers.be ; wijnkasteel.com ; Gault&Millau Wine Guide Belgium"
+    },
+    {
+      "id": "be-limburg-prod-clos-dopleeuw",
+      "nom": "Clos d'Opleeuw",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Gors-Opleeuw (Borgloon)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)",
+        "Clos d'Opleeuw"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare, un cépage, une signature : le Clos d'Opleeuw est le plus petit des grands noms belges, et sans doute le plus copié. Peter Colemont, professeur d'œnologie et de dégustation au centre de formation pour adultes de Hasselt, rachète au milieu des années 1990 un verger à l'abandon à Gors-Opleeuw, hameau de Borgloon, dont la particularité est d'être entièrement ceint d'un mur de briques rouges élevé vers 1840. Le clos au sens strict — une vigne murée — est unique en Belgique et constitue tout le projet : la muraille emmagasine la chaleur du jour et la restitue la nuit, protège des gels de printemps et crée un microclimat qui compense la latitude.\n\nLe coteau est plein sud, sur les limons éoliens profonds de la Hesbaye flamande posés sur un socle de marne calcaire. La parenté géologique avec la Bourgogne n'est pas ici un argument commercial mais la raison du choix du Chardonnay, planté vers 1994 et pratiquement seul cépage du domaine, complété d'une frange de Pinot Noir. Colemont s'est formé auprès de domaines de la Côte de Nuits, notamment Bernard Dugat-Py, et importe par ailleurs en Belgique les Meursault d'Albert Grivault : la référence bourguignonne est assumée jusque dans la cave.\n\nRendements très bas — de l'ordre de 27 hl/ha sur les premiers millésimes —, vendange manuelle, fermentation malolactique menée à terme, un an d'élevage en barriques françaises et, détail devenu emblématique, en fûts de chêne belge issus du village même. Mise en bouteille sans filtration ni collage. Le clos est vendangé en une seule fois, à une maturité arbitrée au goût du raisin plutôt qu'à l'analyse. La production tient dans quelques milliers de cols : environ 4 500 bouteilles de Chardonnay, réparties entre la cuvée du domaine et la cuvée prestige Pleistoceen, issue des rangs qui longent le mur, plus quelques centaines de Pinot Noir.\n\nRevendiqué en AOP Haspengouwse wijn, ce Chardonnay a probablement plus fait pour la crédibilité du vin belge que n'importe quelle campagne de promotion : dégusté à l'aveugle, il a été pris pour un bourgogne blanc par des dégustateurs de premier plan, et il figure de façon constante en tête des classements nationaux. La démonstration, à très petite échelle, qu'un lieu belge peut donner un vin de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Clos d'Opleeuw",
+        "Chardonnay Cuvée Prestige Pleistoceen",
+        "Pinot Noir"
+      ],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "clos-historique",
+        "loess",
+        "craie"
+      ],
+      "a_verifier": "Année exacte de plantation (vignes de 7 ans en 2001, donc vers 1994) ; volumes actuels.",
+      "source": "clos-d-opleeuw.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-hoenshof",
+      "nom": "Wijndomein Hoenshof",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Borgloon",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent",
+        "Liquoreux"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le domaine le plus expérimental du pays. Ghislain Houben, professeur d'entrepreneuriat à l'université de Hasselt, plante ses premières vignes en 2002 au hameau de Hoenshoven, à Borgloon, sur des terres familiales depuis 1907. Son fils Jeroen reprend l'exploitation en 2018 et en est le vinificateur.\n\nSix hectares et demi en propre, mais 25 à 30 cépages : c'est la marque de la maison. Aux classiques — Chardonnay en tête, Pinots — s'ajoutent de nombreux cépages résistants adaptés au climat frais, et chaque millésime apporte de nouveaux assemblages. Certification biologique obtenue en 2022. Attention à la structure : Jeroen vinifie la récolte d'environ 32 hectares entretenus par des partenaires et achète raisins et fruits à six exploitations voisines, pour quelque 150 000 litres par an — d'où le tag negoce-partiel.\n\nLa production reste revendiquée en IGP Vlaamse landwijn plutôt qu'en AOP Haspengouwse wijn, ce qui laisse la liberté d'encépagement et d'assemblage nécessaire à la démarche. À côté des blancs, rouges, rosés et effervescents, Houben est le pionnier du vin de glace belge, obtenu par cryo-extraction, décliné sur le raisin mais aussi la pomme, la poire, la fraise et la cerise — un prolongement logique en pays de vergers. Médailles récurrentes au concours national des sommeliers flamands, à la Paris Wine Cup et sur le circuit bio ; le Gault&Millau belge le décrit comme le domaine le plus aventureux du pays.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Appearance (vin de glace)"
+      ],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "piwi",
+        "bio",
+        "vin-de-glace",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Encépagement : 25 à 30 cépages selon les sources, dont une large part de PIWI, liste complète non publiée. Le domaine possède 6,5 ha mais vinifie la récolte de 32 ha entretenus par des partenaires, et achète raisins et fruits à six exploitations voisines : à distinguer dans les fiches (tag negoce-partiel). Jeroen Houben vinifie aussi pour Domein Helshoven.",
+      "source": "hoenshof.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-gloire-de-duras",
+      "nom": "Wijndomein Gloire de Duras",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Wilderen (Sint-Truiden)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Auxerrois",
+        "Riesling"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Projet familial lancé en 2015 par Peter Nijskens, arboriculteur à temps plein qui s'est mis à la vigne sans quitter les fruits. Les premières plantations — Chardonnay, Pinot Gris, Auxerrois — sortent de terre cette année-là à Wilderen, près de Saint-Trond, suivies en 2017 par le Riesling. Le domaine compte aujourd'hui 6,5 hectares de sable limoneux plantés à 4 000 pieds l'hectare, à Wilderen et à Duras ; une partie des parcelles, à Halle-Booienhoven, se trouve de l'autre côté de la frontière provinciale, en Brabant flamand.\n\nLe nom joue sur deux sens : au Moyen Âge, Wilderen relevait de la seigneurie de Duras, et « seigneurie » se traduit en français par « gloire ». La pièce maîtresse est justement à Duras — quatre-vingts ares de Riesling plantés dans l'ancien potager muré du château, un vrai clos, où l'inclinaison optimise l'ensoleillement et où le mur écarte le risque de gel printanier tout en prolongeant la maturation. C'est l'autre clos historique de la Hesbaye flamande, après celui d'Opleeuw.\n\nLe domaine ne produit que des blancs — huit cuvées actuellement, dont des vins de cépage et des assemblages élevés en fût — plus des effervescents, en AOP Haspengouwse wijn. Dégustations et visites sont organisées au printemps pendant la floraison des vergers et en été, avec l'épouse de Peter, Hilde, et leurs trois enfants : c'est l'un des domaines les plus visités de la zone de Saint-Trond.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "clos-historique",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Parcelles de Halle-Booienhoven situées en Vlaams-Brabant : à mentionner dans le fichier voisin.",
+      "source": "gloirededuras.be ; belgischewijnbouwers.be ; vinetiq.eu"
+    },
+    {
+      "id": "be-limburg-prod-domein-schorpion",
+      "nom": "Domein Schorpion",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Vliermaal (Kortessem)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Auxerrois",
+        "Riesling"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Un domaine monomaniaque, dans le bon sens : Schorpion ne fait que de l'effervescent, et le fait depuis longtemps. Les frères Wilfried et Robrecht Schorpion exploitent près de deux hectares sur le versant sud de Vliermaal, à Kortessem, plantés à la fin des années 1980 — les vignes avaient trente-six ans en 2025, ce qui en fait l'un des vignobles les plus âgés de Belgique, un critère rare dans un pays où presque tout date d'après 2000.\n\nL'encépagement est champenois élargi : Chardonnay, Pinot Noir, Pinot Gris, Pinot Blanc, Auxerrois et Riesling, entièrement destinés à la méthode traditionnelle. Les deux frères travaillent à temps plein sur le domaine et misent sur de très longs élevages sur lattes, dont ils tirent la finesse de bulle et la complexité de leurs cuvées ; le Zwart brut nature est la plus commentée. La faible dimension du vignoble et l'absence de dilution dans une gamme tranquille expliquent une régularité que peu de domaines belges atteignent.\n\nLes vins sont recherchés, distribués en petites quantités et régulièrement médaillés au concours de l'association des sommeliers flamands, qui range Schorpion parmi les références nationales de la bulle. Le domaine se visite sur rendez-vous, avec terrasse ouverte le dimanche d'avril à septembre. Le vignoble relève de l'aire hesbignonne et des appellations flamandes réservées aux mousseux de qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Année de plantation déduite (ranks de 36 ans en 2025, donc vers 1989) ; appellation revendiquée à confirmer sur étiquette.",
+      "source": "schorpion.com ; Gault&Millau Wine Guide Belgium"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-vlijtingen",
+      "nom": "Wijndomein Vlijtingen",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Vlijtingen (Riemst)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier",
+        "Pinot Blanc"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Herman Meers et Heidi Castermans, tous deux natifs de Vlijtingen, se lancent en septembre 2013 après une formation de vigneron-vinificateur et des séjours d'observation chez leurs confrères belges et français. Ils plantent en trois vagues, de 2014 à 2016, sur les coteaux du sud-est de Riemst : au total 4,5 hectares, dans une zone de limons profonds sur socle de marne calcaire qui est le cœur historique de la Hesbaye flamande.\n\nLe domaine est organisé en deux vignobles nommés, ce qui est encore rare en Belgique. Bèsselkes Grech, deux hectares, est dédié à l'effervescent en méthode traditionnelle : majoritairement Chardonnay, avec Pinot Noir et Pinot Meunier. Ellicht, deux hectares et demi, porte les vins tranquilles — Chardonnay et un peu de Pinot Blanc. Le choix d'un encépagement strictement champenois et bourguignon, sans aucun cépage résistant, est un parti pris assumé : qualité et petite échelle sont les deux mots d'ordre affichés par le couple.\n\nLa production est revendiquée en appellation flamande, entre Haspengouwse wijn pour les tranquilles et mousseux de qualité pour les bulles. Le domaine s'est fait connaître localement par ses effervescents et pratique largement l'accueil : dégustations sur place et visites de vignobles font partie du modèle économique, comme chez la plupart des domaines limbourgeois de cette taille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "methode-traditionnelle",
+        "loess",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Appellation revendiquée et statut de production à confirmer.",
+      "source": "wijndomein-vlijtingen.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-montepertini-winery",
+      "nom": "Montepertini Winery",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Bilzen (Eigenbilzen / Alden Biesen)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "La famille Celli — Fabio et Laura, d'origine italienne — plante son premier vignoble en 2017 à Eigenbilzen, dans la boucle du canal Albert, et embouteille sous le nom Montepertini à partir de 2021. L'ensemble couvre environ cinq hectares de sable limoneux mêlé de silex et de graviers, plantés en Chardonnay et en Pinots Gris, Blanc et Noir, soit quelque 15 000 pieds. La gamme comprend des blancs élevés sur vieux fûts bourguignons, un rosé de Pinot Noir et un effervescent.\n\nEn 2021, la ville de Bilzen lance un appel à candidatures pour confier quatre hectares au pied de la commanderie d'Alden Biesen : Montepertini l'emporte et y installe un second vignoble, dont les premières bouteilles sont annoncées pour 2026. Le domaine est reconnu en AOP Haspengouwse wijn et joue beaucoup sur l'accueil : visites, dégustations et événements dans la vigne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Le domaine d'Alden Biesen (4 ha, concession de la ville de Bilzen) entre en production vers 2026 : surface totale à réactualiser.",
+      "source": "montepertini.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-marsnil",
+      "nom": "Wijndomein Marsnil",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Batsheers (Heers)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Haspengouwse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Jeune vignoble planté en 2014 à Batsheers, hameau de Heers, dans le sud très rural de la Hesbaye flamande, entre zone de silence, vergers et fermes en carré. Deux hectares et quart sur les limons de plateau, reconnus en AOP Haspengouw. Le domaine, lancé par Adriaan Cornelis puis conduit avec Marieke Kinds, tire son nom du lieu-dit : les cartes de l'abbaye de Herkenrode, en 1660, mentionnent déjà « Het Marsenil velt », de mars, marais, et île — les cuvées portent ce nom.\n\nC'est l'un des nouveaux venus les plus suivis par la presse spécialisée flamande, avec une production de petite taille répartie entre blancs, rouges et effervescents, et un accueil au domaine — visites guidées et dégustations — qui complète la vente directe. La zone, à cheval sur Heers et Gingelom, est l'une des plus tardives de la Hesbaye flamande à s'être ouverte à la vigne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement non publié. Gouvernance : domaine lancé par Adriaan Cornelis, Marieke Kinds étant la personne de contact auprès de la fédération.",
+      "source": "domeinmarsnil.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-clos-les-ramiers",
+      "nom": "Clos Les Ramiers",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Gotem (Borgloon)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Blanc",
+        "Würzer",
+        "Johanniter",
+        "Muscaris",
+        "Muscat Bleu",
+        "Dornfelder"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Carole Vandionant a grandi dans les fruits et s'est formée à la direction d'exploitation fruitière. En 2001, elle reprend l'entreprise de son père à Gotem, hameau de Borgloon, et remplace progressivement les vergers de pommiers et de poiriers par de la vigne — la trajectoire typique de la Hesbaye flamande, où le vignoble s'est bâti sur le recul de l'arboriculture.\n\nTrois hectares aujourd'hui, avec un encépagement délibérément large et très marqué par les cépages résistants : Chardonnay et Pinot Blanc pour les classiques, Würzer, Johanniter, Muscaris, Muscat Bleu et Dornfelder pour le reste, ce qui donne une gamme variée en blanc, rouge et rosé. La conduite est annoncée comme respectueuse de l'environnement, sans certification. Le domaine reste hors appellation et vend surtout en direct, avec visites et dégustations sur place.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "piwi"
+      ],
+      "a_verifier": "Un « Cabernet » est cité par le domaine sans précision : Cabernet Blanc, Cortis ou Jura ? Culture annoncée respectueuse de l'environnement, sans certification.",
+      "source": "closlesramiers.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-cubiz-domein-cuvelier",
+      "nom": "Cubiz | Domein Cuvelier",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Borgloon (Gors-Opleeuw)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine familial conduit par Yves Cuvelier et Miet Jackers, avec Patrick Cuvelier, sur la route de Gors-Opleeuw à Borgloon — à quelques centaines de mètres du Clos d'Opleeuw. Les parcelles sont dispersées sur plusieurs hameaux du Borgloon viticole : Jesseren, Kerniel et Haren, sur les limons de plateau de la Hesbaye flamande.\n\nLa marque commerciale Cubiz combine les initiales du nom de famille et l'idée de « bizonder », singulier : la gamme, en blanc et en effervescent, se veut peu conventionnelle. La structure est de petite taille, les visites se font uniquement sur réservation, et la commercialisation reste locale. Peu de données publiées : ni la surface, ni l'encépagement, ni l'éventuelle revendication d'appellation ne sont documentés en ligne, ce qui vaut à ce domaine une mention en « à vérifier ».",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw"
+      ],
+      "a_verifier": "Surface et encépagement non publiés ; parcelles réparties sur Jesseren, Kerniel et Haren (Borgloon).",
+      "source": "cubiz.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-kitsberg",
+      "nom": "Wijndomein Kitsberg",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Klein-Gelmen (Heers)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Klein-Gelmen, dans la commune de Heers, à l'extrémité occidentale de la zone viticole hesbignonne. Le projet est né vers 2008 de l'envie d'Evi et Daniel Medarts de produire leur propre vin, sur les limons de plateau qui caractérisent tout le sud de la province.\n\nLe domaine reste hors appellation et de dimension familiale, sans reconnaissance en AOP Haspengouwse wijn, ce qui est le cas de la majorité des micro-domaines nés dans les années 2010 sur d'anciennes parcelles fruitières : la reconnaissance impose un cahier des charges et des contrôles que ces structures d'un hectare rentabilisent difficilement. Production en blanc et en rouge, vendue essentiellement au domaine et dans un rayon local, avec accueil sur rendez-vous. L'encépagement n'est pas publié.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement non publié ; projet lancé vers 2008 par Evi et Daniel Medarts, à confirmer.",
+      "source": "kitsberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-eburon-winery",
+      "nom": "EBURON winery",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Tongeren",
+      "pays": "Belgique",
+      "cepages": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Auxerrois"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Paul Molleman et Marco Tiggelman ont créé ce domaine aux portes de Tongres, la plus ancienne ville de Belgique et unique capitale administrative romaine du territoire — d'où le nom, emprunté aux Éburons d'Ambiorix. Les premières parcelles, choisies sur critères d'exposition et de structure de sol, ont été plantées en Pinot Noir et Chardonnay, complétés depuis par de l'Auxerrois ; la surface, de 1,5 hectare, devait atteindre environ 3 hectares.\n\nLe sous-sol est riche en silex mêlé d'argile et de calcaire, ce dont le domaine tire son discours sur la minéralité. La structure combine vignoble, chai, boutique et chambres d'hôtes. Point à noter pour le classement : EBURON commercialise aussi, sous sa marque, des vins produits à l'étranger — la production propre doit donc être distinguée du reste de la gamme.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Le domaine commercialise aussi des vins produits à l'étranger : bien séparer la production propre (tag negoce-partiel). Objectif de 3 ha annoncé pour 2025, à vérifier.",
+      "source": "eburonestate.com ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-le-maar",
+      "nom": "Wijndomein Le Maar",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Nieuwerkerken",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares à Nieuwerkerken, au nord-ouest de Saint-Trond : l'un des plus petits domaines du corpus limbourgeois, exploité par la famille Heylands — Luc et Stéphanie. On est ici à la limite septentrionale de la Hesbaye flamande, là où les limons de plateau commencent à céder la place aux sables de Campine.\n\nLa production, confidentielle, est vendue au domaine et localement, sans revendication d'appellation. Ce format ultra-réduit est représentatif d'une partie importante du vignoble belge : des vignerons souvent pluriactifs, exploitant moins d'un hectare, dont la production entière part en circuit court. Ces domaines n'apparaissent ni dans les statistiques d'appellation ni chez les cavistes, mais ils représentent une part notable des quelque 350 vignerons enregistrés dans le pays. L'encépagement et les volumes ne sont pas documentés publiquement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement et volumes ; couleurs produites.",
+      "source": "lemaar.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-wideux",
+      "nom": "Wijndomein Wideux",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Hasselt",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Micro-domaine artisanal de cinquante ares conduit par Koen Marneffe à Hasselt, au nord de la zone viticole hesbignonne. Le projet, récent, est revendiqué comme délibérément petit et manuel, sans reconnaissance en appellation.\n\nComme la plupart des domaines hasseltois de cette taille, Wideux fonctionne largement sur l'accueil — visites et dégustations sur demande — et la vente directe, dans une province où la densité de consommateurs urbains et la notoriété touristique du vignoble limbourgeois rendent ce modèle viable même sur de très petites surfaces. Hasselt, capitale provinciale, compte ainsi plusieurs micro-domaines de moins d'un hectare apparus dans les années 2020, dont Wideux et Mongo. Encépagement, couleurs produites et millésime de première récolte ne sont pas publiés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et millésime de première récolte.",
+      "source": "wijndomein-wideux.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-mongo",
+      "nom": "Mongo",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "commune": "Hasselt (vignoble à Eben-Emael)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sept mille mètres carrés plantés par An et Bram Molenaers-Ngo, dont le domaine illustre un cas intéressant de géographie administrative : le vignoble se trouve sur la craie du Sint-Pietersberg, à Eben-Emael, donc dans la commune de Bassenge et la province de Liège, tandis que la vinification se fait à Hasselt, en Limbourg. Le fichier le rattache à son siège, mais il devra être recoupé avec le corpus liégeois.\n\nL'intérêt du site est ce substrat crayeux, le même que celui qui court sous le bassin de Mons et sous la Champagne, ici affleurant au bord de la vallée du Geer. Le couple revendique une conduite respectueuse de l'environnement, une échelle volontairement réduite et un accompagnement du raisin de la vigne à la bouteille. Domaine des années 2020, encore peu documenté et hors appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "craie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Cas transprovincial : le vignoble est sur la craie du Sint-Pietersberg à Eben-Emael (Bassenge, province de Liège), la vinification à Hasselt. À recouper avec le fichier Liège. Encépagement non publié.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-aldeneyck",
+      "nom": "Wijndomein Aldeneyck",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Maasvallei Limburg",
+      "commune": "Aldeneik (Maaseik)",
+      "pays": "Belgique",
+      "cepages": [
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Chardonnay",
+        "Pinot Noir",
+        "Auxerrois",
+        "Riesling"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Maasvallei Limburg (AOP)",
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Karel Henckens est arboriculteur de famille — pommes et poires — quand il décide, à la fin des années 1990, que les terrasses de la Meuse valent mieux que des vergers. Il se forme au Weinbauinstitut de Trèves, y obtient en 2002 le diplôme de Winzer et plante la même année les premières vignes dans le vieux verger d'Aldeneik, hameau de Maaseik, à quelques centaines de mètres du fleuve. Avec son épouse Tine Linssen, il exploite aujourd'hui un peu plus de 10 hectares et quelque 50 000 pieds, ce qui place le domaine parmi les plus grands de Flandre.\n\nLe terroir est l'argument central, et il est réel : la Meuse a déposé au fil des millénaires d'épaisses couches de graviers et de galets sur ses berges et ses terrasses moyennes, recouvertes d'une mince nappe de limon réchauffant. Le drainage est parfait, les galets restituent la chaleur, et l'abri du plateau campinois fait de ce coin du Limbourg l'un des endroits les plus chauds et les plus secs du Benelux, avec des extrêmes amortis par la présence de l'eau. D'où un encépagement entièrement bourguignon et alsacien, exceptionnel à cette latitude : Pinot Blanc, Pinot Gris et Pinot Noir — les plus septentrionaux d'Europe pour ce dernier —, Chardonnay depuis 2012 sur le lieu de Heerenlaak, en bord de Meuse, et des sélections récentes de Riesling.\n\nRendements plafonnés autour de 50 hl/ha, vendange manuelle, fermentation en inox sous température contrôlée puis passage immédiat en barriques pour les cuvées de garde : le Chardonnay Heerenlaak s'élève cinq mois sur lies en fûts français, un quart de bois neuf. Les blancs de pinots, le Pinot Noir barrique et les effervescents Pinot Brut en méthode traditionnelle ont été élus à plusieurs reprises Meilleur Vin belge par l'association des sommeliers flamands.\n\nHenckens est enfin, avec Harry Vorselen (Wijngoed Thorn, aux Pays-Bas) et Johan Jacobs (Thilesna), l'un des artisans de la reconnaissance en 2017 de la Maasvallei Limburg, première appellation transfrontalière d'Europe, à cheval sur les deux Limbourg. Le domaine en est la locomotive et la vitrine. Il se visite le samedi toute l'année, dégustation comprise, et sert de fait de porte d'entrée touristique au vignoble mosan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "maasvallei",
+        "terrasse-meuse",
+        "transfrontalier",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface actuelle (10,2 ha en 2024) et détail des cuvées haut de gamme (Heerenlaak).",
+      "source": "wijndomein-aldeneyck.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-thilesna",
+      "nom": "Wijndomein Thilesna",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Maasvallei Limburg",
+      "commune": "Dilsen-Stokkem",
+      "pays": "Belgique",
+      "cepages": [
+        "Auxerrois",
+        "Pinot Blanc",
+        "Pinot Gris",
+        "Riesling"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Maasvallei Limburg (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Johan Jacobs exploite ce domaine au bord de la Vieille Meuse, à Dilsen, sur les alluvions et les graviers de la vallée. Son importance dépasse sa taille : avec Karel Henckens (Aldeneyck) et Harry Vorselen (Wijngoed Thorn, aux Pays-Bas), il est l'un des trois artisans de la reconnaissance en 2017 de la Maasvallei Limburg, première appellation d'origine transfrontalière d'Europe, et le domaine revendique cette AOP.\n\nL'encépagement suit la logique de la vallée — Auxerrois, Pinot Blanc, Pinot Gris et Riesling — sur les épaisses couches de graviers coiffées de limon chaud qui donnent aux vins du Maasland leurs acidités fines et leur caractère minéral. La surface est mal établie : 1,5 hectare selon la fédération, 4 hectares selon d'autres sources. Boutique et chai ouverts le samedi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "maasvallei",
+        "terrasse-meuse",
+        "transfrontalier"
+      ],
+      "a_verifier": "Surface : 1,5 ha selon la fédération, 4 ha selon d'autres sources.",
+      "source": "wijndomein-thilesna.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-pietershof",
+      "nom": "Wijndomein Pietershof",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "commune": "Teuven (Voeren)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Auxerrois",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le meilleur domaine du pays des Fourons, et l'un des plus médaillés du Limbourg malgré ses 2,4 hectares. Albert Meijer et Piet Akkermans plantent en 2000, sur une pente exposée plein sud dite « het Crindael », au hameau de Nurop près de Teuven, dans la vallée de la Gulp. Les toponymes anciens du secteur — Wiegersberg, Wiegershaeghe, littéralement mont et haie de la vigne — attestent une viticulture médiévale dans ces collines.\n\nLe sol est l'atout : quelques décimètres sous la surface, il devient très calcaire et bourré de silex et de fossiles, vestiges de la mer crétacée qui recouvrait la région il y a environ soixante-dix millions d'années. Le domaine résume volontiers son vin comme un « vin de fond marin limbourgeois ». L'encépagement est classique — Chardonnay, Pinot Gris, Pinot Blanc, Auxerrois, et Pinot Noir pour le rouge — et la conduite se veut durable : travail intensif du palissage pour réduire les traitements antifongiques, vendange manuelle avec sélection stricte.\n\nPoint à connaître : depuis 2021, la vinification se fait à Margraten, aux Pays-Bas, à quelques kilomètres de là. Le domaine est donc structurellement transfrontalier, ce qui a des conséquences sur l'accès aux appellations belges — Pietershof ne revendique d'ailleurs aucune AOP. Son effervescent est primé, et le domaine figure régulièrement parmi les grands pourvoyeurs de médailles limbourgeois au concours des sommeliers flamands.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "craie",
+        "transfrontalier"
+      ],
+      "a_verifier": "Depuis 2021 la vinification se fait à Margraten (Pays-Bas) : conséquences sur l'éligibilité à une appellation belge à vérifier. Surface annoncée 2,4 ou 2,5 ha.",
+      "source": "pietershof.be ; belgischewijnbouwers.be ; lekkerlimburgs.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-crutzberg",
+      "nom": "Wijndomein Crutzberg",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "commune": "Sint-Martens-Voeren (Voeren)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares et vingt ares sur le coteau du Crutzberg, à Sint-Martens-Voeren, exploités par Eugène Ernens : l'un des plus anciens vignobles du pays des Fourons, cette enclave néerlandophone rattachée administrativement au Limbourg mais enclavée entre la province de Liège et les Pays-Bas.\n\nLe secteur partage la géologie de Teuven et de Voeren : limons de couverture sur un socle crayeux crétacé chargé de silex, avec des pentes bien exposées dans les vallées du Voer et de la Gulp. Le domaine reste hors appellation — comme tous ses voisins fouronnais, aucune AOP flamande ne couvrant cette enclave — et produit blanc et rouge, avec visites et dégustations, dans un secteur qui joue à fond la carte du tourisme vert. L'année de plantation et l'encépagement ne sont pas publiés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "voerstreek"
+      ],
+      "a_verifier": "Année de plantation et encépagement non publiés ; société enregistrée de longue date, ce qui suggère une antériorité à confirmer.",
+      "source": "crutzberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijndomein-zwaeneberg",
+      "nom": "Wijndomein Zwaeneberg",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "commune": "Sint-Pieters-Voeren (Voeren)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi à Sint-Pieters-Voeren, exploité en nom propre par Guido Verreyt, dans le vallon de la commanderie — l'un des sites les plus touristiques des Fourons. Domaine récent, hors appellation, adossé à une activité d'accueil et de chambres d'hôtes, selon un modèle courant dans cette enclave où le vignoble reste anecdotique en surface mais s'intègre à une économie de randonnée et de gastronomie.\n\nLe contexte pédologique est celui du pays de Herve élargi : limons sur craie et silex, coteaux courts et bien exposés, altitude relativement élevée pour la Belgique, ce qui décale les vendanges de une à deux semaines par rapport à la Hesbaye. Encépagement, millésime de première récolte et couleurs produites ne sont pas documentés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, millésime de première récolte, couleurs produites.",
+      "source": "zwaeneberg.com ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-prod-wijngaard-strouvenbosch",
+      "nom": "Wijngaard Strouvenbosch",
+      "type": "domaine",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "commune": "Sint-Martens-Voeren (Voeren)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vignoble expérimental de trente-cinq ares et mille quatre cents pieds à Sint-Martens-Voeren, planté par Sabine Markovitz avec plusieurs cépages et plusieurs clones par cépage, précisément pour observer leur comportement dans les conditions des Fourons — pluviométrie élevée, altitude, sols crayeux chargés de silex.\n\nLa production est symbolique et l'objet du projet est autant l'essai variétal que la mise en bouteille. À ce titre, le domaine a une valeur documentaire pour la région : ce genre de parcelle-test renseigne sur ce qui pourra être planté à grande échelle dans les prochaines décennies, à mesure que le climat se réchauffe et que les sélections résistantes progressent. Existence d'une cuvée commercialisée et liste des cépages testés à confirmer.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Cépages testés ; existence d'une mise en bouteille commercialisée.",
+      "source": "belgischewijnbouwers.be"
+    }
+  ]
+}

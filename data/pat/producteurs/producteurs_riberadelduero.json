@@ -1,0 +1,2478 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Ribera del Duero",
+  "source_file": "producteurs_riberadelduero_To_Import.xlsx",
+  "built_at": "2026-08-11T15:58:29",
+  "count": 63,
+  "items": [
+    {
+      "id": "es-castillayleon-prod-bodegas-vega-sicilia",
+      "nom": "Bodegas Vega Sicilia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Valbuena de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot",
+        "Malbec"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Único",
+        "Único Reserva Especial",
+        "Valbuena 5º"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Vega Sicilia est l'icône absolue du vin espagnol, et la maison qui a prouvé, dès la fin du XIXe siècle, que la vallée du Duero pouvait produire des rouges de garde de rang mondial. Fondée en 1864 à Valbuena de Duero, en pleine Milla de Oro, elle appartient depuis 1982 à la famille Álvarez, qui en a fait la tête d'un groupe — la Tempos Vega Sicilia — présent en Ribera, à Toro, en Rioja et jusqu'en Hongrie. Le domaine s'étend sur un vaste vignoble d'un seul tenant en bord de Duero, sur des sols argilo-calcaires et des terrasses caillouteuses. L'encépagement est unique dans la région : le Tinto Fino y côtoie le Cabernet-Sauvignon, le Merlot et le Malbec, plantés dès le XIXe siècle par un fondateur revenu de Bordeaux avec des plants. Cet héritage bordelais, rare en Ribera, explique une part du style. Único, le vin emblématique, est un monument : élevé une décennie entre bois et bouteille, assemblage de Tinto Fino et de Cabernet, il n'est produit que dans les grands millésimes et sort après un vieillissement d'une lenteur presque irréelle. L'Único Reserva Especial, assemblage non millésimé de plusieurs années, a reçu à trois reprises la note parfaite de la critique. Valbuena 5º, commercialisé après cinq ans, offre une lecture plus accessible mais déjà somptueuse du domaine. La maison possède aussi Alión en Ribera, Pintia à Toro, Macán en Rioja et Oremus en Tokaj. Le style Vega Sicilia — profondeur, fraîcheur, capacité de garde sur plusieurs décennies, refus de toute démonstration — est resté d'une constance remarquable. Pour un sommelier, Vega Sicilia est un sommet et une évidence : la bouteille qui ouvre ou clôt une grande carte espagnole, dont les vieux millésimes comptent parmi les expériences de dégustation les plus émouvantes qui soient. Único demande de la patience et une longue aération ; Valbuena, plus souple, se laisse approcher plus tôt. Un détail dit la rigueur du lieu : la maison n'hésite pas à déclasser un millésime entier d'Único si elle le juge indigne, préférant reporter la sortie plutôt que de transiger. Cette exigence explique que le domaine reste, plus de cent cinquante ans après sa fondation, la référence à laquelle toute l'Espagne se mesure. Les prix, élevés, demeurent cohérents avec la rareté et la longévité des vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "icone",
+        "historique",
+        "garde",
+        "tempo-family",
+        "valbuena",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-dominio-de-pingus",
+      "nom": "Dominio de Pingus",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Onésimo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Pingus",
+        "Flor de Pingus",
+        "PSI",
+        "Amelia"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio de Pingus est le premier vin culte moderne d'Espagne, et le domaine qui a fait basculer la Ribera del Duero dans une nouvelle ère au milieu des années 1990. Son créateur, le Danois Peter Sisseck, arrivé dans la région pour conseiller Hacienda Monasterio, repère à La Horra un patrimoine de très vieilles vignes de Tinto Fino en gobelet, à faible rendement, dont personne ne mesurait alors le potentiel. Le premier millésime de Pingus, en 1995, produit en quelques centaines de caisses, atteint immédiatement une cote vertigineuse. Le vignoble, conduit en biodynamie certifiée, repose sur des sols argilo-calcaires et sableux, avec des ceps souvent centenaires vendangés grappe par grappe. Sisseck vinifie en levures indigènes, avec des extractions douces et un élevage en chêne français, dans une recherche de pureté et de profondeur plutôt que de puissance. Le style s'est d'ailleurs affiné avec les années, gagnant en fraîcheur et en définition. Pingus reste produit en quantités minuscules et figure parmi les vins les plus chers et les plus recherchés du monde. Flor de Pingus, issu de vignes un peu plus jeunes, offre une entrée plus accessible mais d'une réelle personnalité, et PSI, projet collectif visant à réhabiliter les vieilles vignes de toute la Ribera en aidant les petits viticulteurs à les conserver, joue un rôle presque militant. Amelia est une micro-cuvée parcellaire de blanc rarissime. Peter Sisseck est aussi devenu, au fil du temps, l'une des consciences de la région, promoteur de la biodynamie et défenseur du patrimoine de vieilles vignes. Pour un sommelier, Pingus est un vin de légende à la disponibilité forcément limitée, mais Flor de Pingus et surtout PSI permettent de faire goûter la patte Sisseck à des prix plus raisonnables. Les vins demandent de la garde et récompensent l'attente par une allonge et une fraîcheur remarquables. Il faut aussi rappeler le rôle du calado historique de La Horra dans le style de la maison : Sisseck a toujours attaché une importance particulière au lieu d'élevage, frais et stable, qui permet des fermentations longues et un vieillissement serein. Pingus a durablement changé le regard porté sur la Ribera : en montrant qu'une parcelle de vieilles vignes pouvait engendrer un vin de cote mondiale, il a ouvert la voie à la génération parcellaire qui a suivi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "culte",
+        "biodynamie",
+        "sisseck",
+        "la-horra",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-alion",
+      "nom": "Bodegas Alión",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Padilla de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Alión"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Alión est le deuxième domaine du groupe Vega Sicilia, créé en 1991 à Padilla de Duero pour offrir une lecture résolument moderne du Tinto Fino, affranchie du modèle bordelais et des très longs élevages d'Único. Là où Vega Sicilia assemble et patiente, Alión joue le Tempranillo pur et le chêne français neuf, dans un style dense, net et contemporain. Le vignoble, situé sur la Milla de Oro entre Padilla et Pesquera, repose sur des sols argilo-calcaires et des terrasses caillouteuses, conduits avec la rigueur viticole qui caractérise l'ensemble du groupe Álvarez. Les rendements sont maîtrisés, les vendanges triées, et la vinification vise l'équilibre entre puissance et fraîcheur. Le vin, un seul par millésime, est élevé en chêne français et sort après plusieurs années : c'est l'un des grands classiques modernes de la Ribera, capable d'une garde de deux décennies tout en restant plus abordable, à sa sortie, que les cuvées de la maison mère. Le style, ample et racé, a gagné en précision au fil des années, à mesure que le groupe affinait sa lecture des terroirs. Pour un sommelier, Alión offre un accès à la philosophie Vega Sicilia dans un registre plus immédiat et plus fruité : un vin de grande table, régulier et lisible, qui vieillit remarquablement et fait toujours forte impression. Il gagne à être servi après quelques années de cave et supporte une aération généreuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "tempo-family",
+        "moderne",
+        "vega-sicilia",
+        "haut-de-gamme",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-aalto",
+      "nom": "Bodegas Aalto",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Arriba",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Aalto",
+        "Aalto PS"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Aalto est né en 1999 de la rencontre de deux hommes qui connaissaient la Ribera mieux que quiconque : Mariano García, chef de cave légendaire de Vega Sicilia pendant trois décennies, et Javier Zaccagnini, ancien directeur du Conseil régulateur de l'appellation. Leur ambition était de bâtir, à partir d'une sélection des meilleures vieilles vignes de la région, un grand vin moderne affranchi de toute maison historique. Le domaine ne repose pas sur un vignoble d'un seul tenant mais sur une mosaïque de vieilles parcelles de Tinto Fino réparties sur les meilleurs villages de la rive burgalaise et vallisoletane — La Horra, Roa, Anguix, La Aguilera — sur des sols argilo-calcaires d'altitude. Cette sélection large permet des assemblages d'une grande complexité, et Mariano García y applique tout le savoir accumulé à Vega Sicilia : maîtrise des extractions, élevage en chêne français, recherche d'équilibre entre puissance et fraîcheur. Deux vins structurent la production. Aalto, l'assemblage principal, est déjà d'une profondeur remarquable, dense mais net. Aalto PS — pour Pagos Seleccionados — provient des toutes meilleures parcelles de vieilles vignes et ne sort que dans les bons millésimes : c'est l'un des grands rouges modernes de la Ribera, taillé pour une longue garde. Mariano García a par ailleurs bâti, avec ses fils, un petit empire familial comprenant Mauro et San Román à Toro, ce qui fait de lui l'une des figures majeures du vin castillan contemporain. Pour un sommelier, Aalto est une valeur sûre au sommet de la région : un style immédiatement lisible, une régularité sans faille et une capacité de garde qui justifie de patienter. Le PS mérite plusieurs années de cave et une aération généreuse. Le nom, emprunté à l'architecte finlandais Alvar Aalto, dit la volonté de sobriété et de modernité qui a présidé au projet. Vingt-cinq ans après sa création, Aalto s'est imposé comme l'un des piliers de la Ribera, cité en exemple pour avoir démontré qu'un grand vin de la région pouvait naître d'une sélection de vieilles vignes plutôt que d'un domaine historique unique. Pour une carte, c'est un repère précieux : le nom parle immédiatement au client averti, et la régularité d'un millésime à l'autre en fait une valeur de confiance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "mariano-garcia",
+        "vieilles-vignes",
+        "moderne",
+        "reference",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-pago-de-carraovejas",
+      "nom": "Pago de Carraovejas",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Pago de Carraovejas",
+        "El Anejón",
+        "Cuesta de las Liebres"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Pago de Carraovejas est l'un des grands crus modernes les plus recherchés d'Espagne, né en 1988 de l'ambition d'un restaurateur de Segovie, José María Ruiz, décidé à produire le vin qui manquait à sa cave. Le domaine occupe un amphithéâtre de coteaux exposés au sud, face au château de Peñafiel, sur des sols argilo-calcaires en pente. Tout, ici, repose sur une viticulture de précision : parcellisation fine du vignoble, maîtrise des rendements, suivi méticuleux des maturités. L'encépagement mêle le Tinto Fino à une part bordelaise assumée de Cabernet-Sauvignon et de Merlot, ce qui donne au vin sa structure et son profil reconnaissable, à la fois mûr, frais et profondément marqué par le fruit noir et les épices. Le Pago de Carraovejas, cuvée principale produite en volume conséquent pour ce niveau de qualité, affiche une régularité impressionnante d'un millésime à l'autre. Au-dessus, El Anejón et surtout Cuesta de las Liebres, issu d'une parcelle de vieilles vignes, poussent l'ambition vers le très haut de gamme. Le domaine possède aussi Ossian en Rueda et Aylés en Aragon. Le style, dense et charnu mais équilibré, a fait de Carraovejas une signature immédiatement identifiable et l'une des marques les plus désirées de la Ribera. Pour un sommelier, c'est une valeur sûre, très demandée par la clientèle : un vin qui plaît largement tout en offrant une vraie profondeur, à servir après quelques années et à carafer dans sa jeunesse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "penafiel",
+        "coteau",
+        "precision",
+        "reference",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-dominio-de-atauta",
+      "nom": "Dominio de Atauta",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Atauta",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Dominio de Atauta",
+        "La Mala",
+        "Valdegatiles",
+        "Llanos del Almendro"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio de Atauta est l'un des secrets les mieux gardés et les plus émouvants de la Ribera del Duero. Le domaine se trouve dans la vallée haute et isolée de l'Atauta, tout à l'est de l'appellation, dans la province de Soria, à plus de mille mètres d'altitude — un cul-de-sac géographique où le phylloxéra n'est jamais parvenu. Il en résulte un trésor viticole exceptionnel : des dizaines d'hectares de très vieilles vignes de Tinto Fino franches de pied, non greffées, plantées sur des sols sableux qui ont protégé leurs racines. Certaines parcelles dépassent les cent, voire les deux cents ans, en gobelet, à des rendements infimes. L'altitude et le climat continental extrême de la vallée — nuits très fraîches, forte amplitude thermique — donnent des raisins d'une maturité lente et d'une acidité préservée, à l'opposé des Riberas chaudes et puissantes de la vallée basse. Le domaine est conduit en biologique, avec des vinifications de plus en plus respectueuses du fruit et du lieu. La gamme est construite comme une pyramide de terroir. Le Dominio de Atauta, assemblage de parcelles de la vallée, offre déjà une finesse rare. Au-dessus, les parcellaires — La Mala, Valdegatiles, Llanos del Almendro — proviennent de vignes préphylloxériques identifiées et donnent des vins d'une profondeur et d'une élégance qui comptent parmi les plus singulières d'Espagne, floraux, épicés, tendus. Le domaine a joué un rôle décisif pour faire reconnaître le potentiel des zones hautes de Soria, aujourd'hui au cœur du virage de la Ribera vers la fraîcheur et l'expression du lieu. Pour un sommelier, Atauta est une bouteille à raconter : celle qui prouve que la Ribera peut être aérienne et parcellaire, et non seulement dense et solaire. Les cuvées de lieu demandent de la garde et surprennent par leur finesse. Le domaine a essaimé une petite école : plusieurs vignerons de la vallée et de la Soria viticole s'en réclament aujourd'hui, et l'ancien œnologue du lieu, Bertrand Sourdais, y a développé son propre projet. Pour un sommelier, c'est un formidable outil pédagogique : servir un Atauta à côté d'une Ribera de la vallée basse suffit à faire comprendre l'ampleur des styles que recouvre l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "altitude",
+        "soria",
+        "prephylloxerique",
+        "franc-de-pied",
+        "parcellaire",
+        "prov-soria"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-tinto-pesquera",
+      "nom": "Tinto Pesquera — Familia Fernández Rivera",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pesquera de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Pesquera",
+        "Janus Gran Reserva",
+        "Millennium"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Tinto Pesquera est le domaine d'Alejandro Fernández, le vigneron qui a fait connaître la Ribera del Duero au monde. Quand il fonde sa maison à Pesquera de Duero en 1972, l'appellation n'existe pas encore — elle ne sera créée qu'en 1982 — et la région est un obscur terroir de vin de garage. En quelques millésimes, la critique internationale, Robert Parker en tête, érige son Tinto Fino pur au rang de révélation, et Pesquera devient une référence mondiale. Le domaine repose sur un vignoble important autour de Pesquera, sur des sols argilo-calcaires, avec un attachement viscéral au Tinto Fino en monocépage, à contre-courant des assemblages bordelais de Vega Sicilia. Alejandro Fernández est resté fidèle toute sa vie au chêne américain et à un style classique, chaleureux et épicé, sans jamais céder aux modes. La gamme s'organise autour du Crianza, du Reserva et du Gran Reserva, avec au sommet Janus, Gran Reserva produit uniquement dans les très grands millésimes, et la cuvée Millennium. Le style, ample et fruité, incarne la Ribera classique dans sa version la plus généreuse. La famille a essaimé ailleurs, avec Condado de Haza en Ribera et El Vínculo à La Mancha. Pour un sommelier, Pesquera est un nom historique incontournable, à la fois pédagogique et fiable : le vin qui raconte la naissance de la Ribera moderne, à des prix restés raisonnables. Les Reserva et Gran Reserva vieillissent bien et offrent un classicisme rassurant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pionnier",
+        "classique",
+        "pesquera",
+        "historique",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-emilio-moro",
+      "nom": "Bodegas Emilio Moro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pesquera de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Malleolus",
+        "Malleolus de Valderramiro",
+        "Malleolus de Sanchomartín"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Emilio Moro est l'une des grandes signatures familiales de la Ribera del Duero, installée à Pesquera de Duero, où la famille cultive la vigne depuis trois générations. Le domaine porte le nom du grand-père, et c'est son petit-fils, José Moro, qui en a fait une marque de dimension internationale tout en préservant un ancrage viticole fort. Le vignoble repose sur un patrimoine de vieilles vignes de Tinto Fino, dont la famille a développé sa propre sélection clonale, sur des sols argilo-calcaires de la rive vallisoletane. La gamme est construite comme une pyramide claire : Finca Resalso pour l'entrée, gourmande et immédiate ; Emilio Moro, le cœur de gamme ; puis la série Malleolus, qui monte en profondeur. Ce sont les parcellaires qui font la réputation de la maison : Malleolus de Valderramiro, issu d'une vigne plantée en 1924, et Malleolus de Sanchomartín, d'une parcelle en coteau à haute altitude, comptent parmi les grands Tinto Fino de vieilles vignes de la région, denses et racés. Le style Emilio Moro, moderne et net, mise sur la pureté du fruit et un boisé bien intégré. Le groupe possède aussi Cepa 21, sa seconde maison, et des projets en Rioja et à Bierzo. Pour un sommelier, Emilio Moro est une valeur sûre et lisible, dont la gamme couvre tous les niveaux de prix : Resalso au verre, la série Malleolus pour les grandes occasions. Les parcellaires méritent la garde et récompensent l'attente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "malleolus",
+        "vieilles-vignes",
+        "reference",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-hacienda-monasterio",
+      "nom": "Hacienda Monasterio",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pesquera de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot",
+        "Malbec"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Hacienda Monasterio",
+        "Reserva Especial"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Hacienda Monasterio est l'un des domaines les plus élégants de la Ribera del Duero, et le lieu où Peter Sisseck a fait ses armes dans la région avant de créer Pingus. Fondée à la fin des années 1980 sur la Milla de Oro, près de Pesquera, la propriété est restée sous le conseil du Danois, dont la patte se lit dans la recherche de fraîcheur et de finesse plutôt que de puissance. Le vignoble, d'un seul tenant, repose sur des sols argilo-calcaires et des terrasses caillouteuses, conduits en biodynamie. L'encépagement associe le Tinto Fino dominant à une part de Cabernet-Sauvignon, de Merlot et de Malbec, dans un assemblage qui apporte structure et complexité sans alourdir le vin. Les vinifications, soignées, privilégient l'équilibre et la buvabilité. La gamme, resserrée, va du Crianza au Reserva et à la Reserva Especial, produite uniquement dans les grands millésimes. Le style, raffiné et frais, tranche avec la Ribera puissante et boisée des années 2000 : les vins sont denses mais élancés, taillés pour une garde élégante. Pour un sommelier, Hacienda Monasterio est un domaine précieux : il offre la finesse de la patte Sisseck à des prix bien plus accessibles que Pingus, avec une régularité remarquable. C'est un vin de gastronomie, à recommander à l'amateur qui cherche une Ribera de terroir plutôt qu'un vin de démonstration. Les Reserva vieillissent avec grâce.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sisseck",
+        "elegance",
+        "biodynamie",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-pago-de-los-capellanes",
+      "nom": "Pago de los Capellanes",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pedrosa de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "El Nogal",
+        "El Picón",
+        "Parcela El Picón"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Pago de los Capellanes est l'un des domaines les plus réguliers et les plus respectés de la rive burgalaise de la Ribera, installé à Pedrosa de Duero, dans une zone réputée pour la qualité de ses coteaux calcaires. Fondé par la famille Rodero-Villa, il conjugue un style moderne et net avec une véritable ambition parcellaire. Le vignoble repose sur des sols argilo-calcaires en coteau, sur les meilleures pentes de Pedrosa, conduits avec un grand soin viticole. La gamme couvre le Crianza et le Reserva, dans un registre fruité et précis, mais ce sont les deux parcellaires qui font la réputation de la maison : El Nogal, issu d'une vigne identifiée, et surtout El Picón, provenant d'une parcelle de vieilles vignes, comptent parmi les grands Tinto Fino de la région, denses, profonds et taillés pour la garde. Le style, moderne sans excès, mise sur la pureté du fruit noir, une trame tannique fine et un boisé bien fondu. La régularité d'un millésime à l'autre est l'une des marques du domaine, qui a aussi développé un projet à Bierzo. Pour un sommelier, Pago de los Capellanes est une valeur de confiance : le Crianza offre un excellent rapport qualité-prix, tandis qu'El Nogal et El Picón permettent de monter en gamme sans quitter une signature parfaitement maîtrisée. Les parcellaires demandent quelques années de cave et se montrent alors d'une grande précision.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "pedrosa",
+        "parcellaire",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-arzuaga-navarro",
+      "nom": "Bodegas Arzuaga Navarro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Onésimo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Arzuaga Reserva",
+        "Gran Arzuaga",
+        "Amaya Arzuaga"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Arzuaga Navarro est l'une des grandes propriétés de la Milla de Oro, installée à Quintanilla de Onésimo, sur la rive vallisoletane du Duero. Fondée par Florentino Arzuaga au début des années 1990, elle est devenue un ensemble considérable, doublé d'un hôtel et d'un spa qui en font une destination œnotouristique majeure de la région. Le vignoble, vaste, repose sur des sols argilo-calcaires et des terrasses en bord de Duero, au sein d'une grande finca qui abrite aussi un élevage de cerfs. L'encépagement mêle le Tinto Fino dominant à une part de Cabernet-Sauvignon et de Merlot pour les cuvées supérieures. Le style est moderne et généreux, marqué par une matière ample et un élevage soigné en chêne français. La gamme est large : de l'Arzuaga Crianza, gourmand et diffusé, jusqu'au Gran Arzuaga, cuvée de prestige assemblant Tinto Fino et cépages bordelais, en passant par la ligne Amaya Arzuaga, plus contemporaine. Le domaine produit aussi un blanc d'Albillo qui a été remarqué, signe de l'intérêt croissant de la région pour ce cépage. Pour un sommelier, Arzuaga est un nom bien identifié, apprécié d'une clientèle qui recherche une Ribera charnue et démonstrative. La gamme permet de travailler à plusieurs niveaux de prix, et l'Albillo offre une porte d'entrée intéressante vers les blancs de la région. Les cuvées de tête demandent de la garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "oenotourisme",
+        "quintanilla",
+        "albillo",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-vinedos-alonso-del-yerro",
+      "nom": "Viñedos Alonso del Yerro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Alonso del Yerro",
+        "María"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Viñedos Alonso del Yerro est un domaine familial de Roa, sur la rive burgalaise, fondé au début des années 2000 par María del Yerro et Javier Alonso, qui ont fait appel un temps au consultant bordelais Stéphane Derenoncourt pour affiner leur style. Le résultat est une Ribera précise et fraîche, à l'opposé de la puissance qui dominait alors la région. Le vignoble repose sur des coteaux calcaires d'altitude autour de Roa, conduits en biologique, avec un travail attentif sur la maturité et les rendements. Le Tinto Fino y est vinifié seul, avec des extractions mesurées et un élevage en chêne français qui laisse le fruit s'exprimer. La gamme est courte et lisible : Alonso del Yerro, la cuvée principale, offre déjà une belle définition, et María, issue des meilleures parcelles de vieilles vignes, constitue le sommet du domaine, dans un registre profond et racé. Le style, tout en fraîcheur et en finesse de tanin, illustre le virage qualitatif de la rive burgalaise vers l'élégance. La famille possède aussi un domaine à Toro, Paydos. Pour un sommelier, Alonso del Yerro est un domaine attachant, dont les vins conjuguent lisibilité et vraie profondeur de terroir. María est une belle bouteille de garde à faire découvrir à l'amateur de Riberas fraîches et parcellaires, encore à des prix raisonnables au regard de leur qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "derenoncourt",
+        "calcaire",
+        "famille",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-dominio-del-aguila",
+      "nom": "Dominio del Águila",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Aguilera",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Albillo",
+        "Garnacha",
+        "Bobal",
+        "Blanca del País"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Dominio del Águila",
+        "Canta la Perdiz",
+        "Albillo",
+        "Pícaro del Águila"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio del Águila est le sommet de la nouvelle Ribera del Duero, née de la rencontre de Jorge Monzón et d'Isabel Rodero. Le parcours de Monzón est unique : premier Espagnol à avoir travaillé au Domaine de la Romanée-Conti, passé aussi par Vega Sicilia, il revient au début des années 2010 sur ses terres familiales de La Aguilera, dans la province de Burgos, avec une idée précise en tête — appliquer à la Ribera la lecture parcellaire et la finesse bourguignonnes. Le domaine repose sur un patrimoine rare : des vieilles vignes complantées, souvent centenaires et préphylloxériques, où le Tinto Fino cohabite dans le même rang avec l'Albillo, la Garnacha, la Bobal et diverses variétés blanches, sur des coteaux d'altitude aux sols argilo-calcaires. Cette complantation, héritée d'une viticulture paysanne antérieure à la spécialisation, est au cœur du style de la maison. La conduite est biologique, les rendements minuscules, les vinifications menées en levures indigènes avec une grande retenue. La gamme est devenue culte. Pícaro del Águila, en tinto comme en clarete, joue déjà dans une catégorie à part : le clarete, vin clair historique de Castille obtenu par co-fermentation de raisins rouges et blancs, y retrouve ses lettres de noblesse. Canta la Perdiz, issu d'une parcelle unique de vieilles vignes complantées, est l'un des rouges les plus recherchés et les plus chers d'Espagne. Le domaine produit aussi un Albillo blanc de vieilles vignes d'une grande profondeur, et des Reserva et Gran Reserva de style classique restauré. Le couple a remis au goût du jour deux traditions oubliées de la Ribera : le clarete et l'Albillo, aujourd'hui au centre du renouveau de la région. Pour un sommelier, Dominio del Águila est un domaine d'exception à tous égards : rareté, finesse, profondeur historique. Les cuvées de tête sont difficiles à obtenir et méritent une longue garde ; le Pícaro clarete est l'une des plus belles surprises que l'on puisse servir. La reconnaissance critique est venue vite et les allocations se sont resserrées à mesure que la rareté des cuvées devenait manifeste. Au-delà de ses vins, le couple a valeur d'exemple : en misant sur la complantation, les cépages minoritaires et les traditions historiques de la Castille, il a contribué à réorienter toute la région vers l'expression du lieu et la fraîcheur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "vieilles-vignes",
+        "complantation",
+        "clarete",
+        "culte",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-vina-sastre",
+      "nom": "Viña Sastre — Hermanos Sastre",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Horra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Pesus",
+        "Pago de Santa Cruz",
+        "Regina Vides"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Viña Sastre, ou Hermanos Sastre, est l'une des signatures les plus puissantes et les plus recherchées de la Ribera del Duero, installée à La Horra, sur la rive burgalaise, dans un village dont les vieilles vignes de Tinto Fino comptent parmi les plus réputées de l'appellation. La famille Sastre y cultive la vigne depuis des générations et embouteille sous son nom depuis la fin des années 1980. Le vignoble, conduit en biologique, repose sur un patrimoine de vieilles vignes en gobelet sur des sols argilo-calcaires, à faible rendement. Le style maison est assumé : dense, coloré, puissant, avec une matière tannique imposante et un élevage soigné en chêne français, dans une recherche de concentration qui a fait la réputation du domaine. La gamme monte du Crianza jusqu'aux cuvées de prestige. Pago de Santa Cruz et Regina Vides, issus de parcelles de vieilles vignes, poussent l'intensité très loin. Au sommet, Pesus, assemblage de vieilles vignes produit en quantités infimes, figure parmi les vins les plus chers et les plus cotés de la Ribera. Pour un sommelier, Viña Sastre est la référence à sortir pour un amateur de Riberas denses et charpentées : des vins de garde qui demandent plusieurs années de cave et une aération généreuse pour révéler, sous la puissance, une réelle profondeur. Le Crianza offre déjà un bon aperçu du style maison à prix contenu.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "la-horra",
+        "puissance",
+        "biologique",
+        "vieilles-vignes",
+        "culte",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-carmelo-rodero",
+      "nom": "Bodegas Carmelo Rodero",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pedrosa de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Rodero Reserva",
+        "TSM",
+        "Pago de Valtarreña"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Carmelo Rodero est l'un des domaines phares de Pedrosa de Duero, sur la rive burgalaise, réputée pour la qualité de ses coteaux calcaires et de ses vieilles vignes. Carmelo Rodero, issu d'une famille de viticulteurs, a longtemps vendu son raisin avant de fonder sa propre bodega au début des années 1990, et en a fait une signature moderne et régulière. Le vignoble repose sur un beau patrimoine de vieilles vignes de Tinto Fino autour de Pedrosa, sur des sols argilo-calcaires, complété d'une part de Cabernet-Sauvignon et de Merlot pour certaines cuvées. Le style est moderne et charnu, avec une matière ample, un fruit mûr et un élevage soigné en chêne français, sans verser dans l'excès. La gamme est large et lisible, du Crianza gourmand jusqu'aux cuvées de tête. TSM, assemblage des trois cépages, et surtout Pago de Valtarreña, issu d'une parcelle de vieilles vignes, constituent le haut de gamme, dans un registre dense et profond taillé pour la garde. La régularité du domaine, à tous les niveaux de la gamme, est l'une de ses grandes forces. Pour un sommelier, Carmelo Rodero est une valeur sûre de la rive burgalaise : le Crianza et le Reserva offrent d'excellents rapports qualité-prix, tandis que Valtarreña permet de monter en gamme dans une signature parfaitement maîtrisée. Les cuvées de tête demandent quelques années de cave.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pedrosa",
+        "moderne",
+        "famille",
+        "vieilles-vignes",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-felix-callejo",
+      "nom": "Bodegas Félix Callejo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Sotillo de la Ribera",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Callejo",
+        "Selección Viñedos de la Familia",
+        "Majuelos de Callejo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Félix Callejo est un domaine familial de Sotillo de la Ribera, sur la rive burgalaise, qui a opéré un virage remarqué vers le parcellaire, le biologique et l'expression du lieu, sous l'impulsion de la nouvelle génération de la famille. Fondée dans les années 1980, la maison s'est progressivement affranchie du style régional dominant pour chercher la fraîcheur et la finesse. Le vignoble repose sur des vieilles vignes de Tinto Fino autour de Sotillo, sur des sols argilo-calcaires d'altitude, conduits en biologique. La famille a été l'une des pionnières du travail sérieux sur l'Albillo Mayor, le cépage blanc historique de la Ribera, qu'elle vinifie en parcellaire. Les vinifications privilégient les levures indigènes et un élevage respectueux du fruit. La gamme monte de Flores de Callejo, gourmand et accessible, jusqu'aux Majuelos de Callejo, série de parcellaires de vieilles vignes qui constitue le cœur de l'ambition du domaine. La cuvée Selección Viñedos de la Familia et les Majuelos illustrent une Ribera de terroir, tendue et précise. Les blancs d'Albillo comptent parmi les plus intéressants de la région. Pour un sommelier, Callejo est un domaine à suivre, à cheval entre tradition familiale et nouvelle vague : les parcellaires et l'Albillo permettent de raconter le renouveau de la Ribera, tandis que Flores de Callejo offre une entrée de gamme fiable. Les cuvées de tête méritent la garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sotillo",
+        "parcellaire",
+        "albillo",
+        "biologique",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-valduero",
+      "nom": "Bodegas Valduero",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel del Mercado",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Valduero Reserva",
+        "Valduero Una Cepa",
+        "2 Millennium Gran Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Valduero est un domaine familial de Gumiel del Mercado, sur la rive burgalaise, dirigé par les sœurs García Viadero, réputé pour ses longs élevages classiques et ses Gran Reserva de garde. Fondée dans les années 1980, la maison a fait le choix de la patience et de la tradition, à l'écart des modes de la Ribera moderne. Le vignoble repose sur un patrimoine de vieilles vignes de Tinto Fino autour de Gumiel, sur des sols argilo-calcaires d'altitude. Le style est résolument classique : élevages longs en chêne, sorties tardives, recherche de complexité tertiaire plutôt que de démonstration fruitée. Les vins vieillissent remarquablement et développent, avec le temps, des notes de cuir, de tabac et d'épices. La gamme s'organise autour du Crianza, du Reserva et du Gran Reserva Valduero, avec au sommet la cuvée Una Cepa et le 2 Millennium Gran Reserva, produit uniquement dans les très grands millésimes et gardé de longues années avant commercialisation. Ces vins de garde comptent parmi les plus beaux classiques de la Ribera. Pour un sommelier, Valduero est une adresse précieuse pour proposer de la Ribera classique mûre, à des prix cohérents : un registre traditionnel de plus en plus rare, à opposer aux Riberas modernes et boisées. Les Gran Reserva sont d'une grande fiabilité et se prêtent parfaitement aux accords de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "gran-reserva",
+        "famille",
+        "gumiel",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-goyo-garcia-viadero",
+      "nom": "Bodega Goyo García Viadero",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel de Mercado",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Albillo",
+        "Graciano",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Finca Los Quemados",
+        "Finca El Peruco",
+        "Joven de Viñas Viejas",
+        "Clarete"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Goyo García Viadero est le franc-tireur nature de la Ribera del Duero, issu pourtant de l'une des familles les plus établies de la région — celle qui dirige Bodegas Valduero. Il travaille dans la zone depuis avant la création de la DO et a lancé son propre projet en 2003, à rebours total du style régional : ni intrant, ni bois neuf, ni extraction poussée. Le domaine repose sur une dizaine d'hectares de vieilles parcelles, souvent complantées de rouge et de blanc, réparties autour de Roa et Gumiel de Mercado, sur des sols variés d'argile, de calcaire et de sables. Leur point commun est l'altitude : les fincas Los Quemados et El Peruco dépassent neuf cents mètres, parmi les plus hautes de l'appellation. La conduite est biologique, et les vins sont élevés dans un lagar creusé à l'époque romaine sous Gumiel del Mercado, frais et stable. La gamme mêle Tinto Fino, Albillo, Graciano et Malvasía, souvent en co-fermentation. Le Joven de Viñas Viejas, seul rouge non boisé, est vibrant et digeste ; les parcellaires et les claretes — vins clairs historiques de Castille — illustrent une Ribera aérienne et sans maquillage. Les vins sont mis sans filtration ni soufre ajouté. Pour un sommelier, Goyo García Viadero est une signature à part, à réserver à une clientèle curieuse : des vins nature d'altitude, tendus et parfumés, qui bousculent radicalement l'image de la Ribera. Les claretes, en particulier, sont des OVNIs gastronomiques.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "nature",
+        "altitude",
+        "clarete",
+        "complantation",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-alfredo-maestro",
+      "nom": "Alfredo Maestro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Lovamor",
+        "Castrillo de Duero",
+        "El Rey del Glam"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Alfredo Maestro est l'une des figures du vin nature en Castille, installé à Peñafiel, au cœur de la Ribera, mais souvent hors de l'appellation par choix. Œnologue de formation, il rompt en 2003 avec le style régional dominant pour se consacrer à des vins sans soufre ajouté, sans levures sélectionnées et sans bois neuf, dans une démarche artisanale et libre. Son travail s'appuie sur des vieilles vignes réparties entre la Ribera et la Sierra de Gredos, sur des sols variés — argilo-calcaires près de Peñafiel, granites décomposés en altitude à Gredos. Il vinifie aussi bien le Tinto Fino que la Garnacha et l'Albillo, en cherchant la buvabilité et l'expression du fruit plutôt que la concentration. La gamme est éclectique et volontiers provocatrice dans ses étiquettes : Lovamor, un Albillo macéré ; Castrillo de Duero, Tinto Fino de vieilles vignes ; El Rey del Glam et les Garnachas de Gredos, souvent classées en simple vin de table par refus des contraintes de la DO. Le style, changeant d'un millésime à l'autre, assume une part d'imprévu propre au vin nature. Pour un sommelier, Alfredo Maestro est une signature militante, à réserver à une clientèle sensible aux vins nature : des cuvées vivantes et originales, à des prix raisonnables, qui racontent une autre Castille, plus libre et plus fraîche. L'Albillo Lovamor est une belle porte d'entrée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "nature",
+        "albillo",
+        "hors-do",
+        "penafiel",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-finca-villacreces",
+      "nom": "Finca Villacreces",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Onésimo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Villacreces",
+        "Nebro",
+        "Pruno"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Finca Villacreces est un domaine d'un seul tenant remarquablement situé au cœur de la Milla de Oro, en bord de Duero, entre Vega Sicilia et Pingus — l'une des meilleures adresses de la rive vallisoletane. La propriété, aujourd'hui aux mains de la famille Antón, également propriétaire d'Izadi en Rioja, allie un terroir d'exception à une gestion moderne et rigoureuse. Le vignoble, protégé par un bois de pins qui régule les températures, repose sur des terrasses de galets et des sols argilo-calcaires en bord de fleuve. L'encépagement associe le Tinto Fino dominant à une part de Cabernet-Sauvignon et de Merlot. La conduite est biologique, et les vinifications, soignées, cherchent l'équilibre entre matière et fraîcheur. La gamme est claire : Pruno, l'entrée de gamme, est régulièrement cité comme l'un des meilleurs rapports qualité-prix de toute la Ribera ; Finca Villacreces, la cuvée principale, offre profondeur et élégance ; Nebro, issu des plus vieilles vignes du domaine et produit en quantités infimes, constitue le sommet, dense et racé. Pour un sommelier, Villacreces est une adresse précieuse à double titre : Pruno pour une carte au verre ou une entrée de gamme imbattable, Villacreces et Nebro pour la montée en gamme. Le tout dans une signature moderne et fraîche, servie par l'un des plus beaux emplacements de l'appellation. Les cuvées de tête vieillissent bien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "milla-de-oro",
+        "domaine-unique",
+        "artevino",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-la-horra",
+      "nom": "Bodegas La Horra — Corimbo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Horra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Corimbo",
+        "Corimbo I"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas La Horra est le projet ribérien de la famille Rotllant, propriétaire de Bodegas Roda en Rioja, installé dans le village de La Horra dont les vieilles vignes de Tinto Fino comptent parmi les plus réputées de l'appellation. Créé au tournant des années 2010, le domaine applique à la Ribera la même philosophie qu'à Haro : la sélection rigoureuse de vieilles parcelles et la recherche de l'équilibre plutôt que de la puissance. Le vignoble repose sur des vieilles vignes en gobelet autour de La Horra, sur des sols argilo-calcaires d'altitude, sur la rive burgalaise. Les vinifications, menées avec la précision qui caractérise la maison Roda, privilégient la fraîcheur, la finesse de tanin et un boisé mesuré — un style qui tranche nettement avec la Ribera dense et concentrée du secteur. La gamme se limite à deux vins : Corimbo, déjà d'une belle profondeur, et Corimbo I, issu des meilleures parcelles de vieilles vignes, plus dense et taillé pour la garde. Les deux illustrent une lecture élégante et fraîche du Tinto Fino, dans l'esprit des grands Rioja de la maison mère. Pour un sommelier, Bodegas La Horra est une valeur intéressante : elle offre, à des prix raisonnables, une Ribera d'équilibre et de finesse, idéale pour l'amateur qui trouve les vins du secteur trop puissants. Corimbo I mérite quelques années de cave et se montre alors d'une grande élégance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roda",
+        "la-horra",
+        "moderne",
+        "elegance",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-cillar-de-silos",
+      "nom": "Cillar de Silos",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintana del Pidio",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Cillar de Silos",
+        "Torresilo",
+        "El Quintanal"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Cillar de Silos est un domaine familial de Quintana del Pidio, sur la rive burgalaise, tenu par la famille Aragón et réputé pour sa régularité et son excellent rapport qualité-prix. Fondé dans les années 1990 à partir d'un patrimoine de vieilles vignes, il s'est imposé comme l'une des adresses fiables du secteur, à l'écart des projets les plus médiatisés. Le vignoble repose sur des vieilles vignes de Tinto Fino autour de Quintana del Pidio, sur des sols argilo-calcaires d'altitude, conduits en biologique. Le style privilégie la pureté du fruit et un boisé bien intégré, dans un registre moderne mais équilibré, sans recherche d'extraction excessive. La famille travaille aussi l'Albillo Mayor pour un blanc de la région. La gamme est lisible : le Crianza, gourmand et régulier, offre un rapport qualité-prix remarquable ; El Quintanal joue une carte plus immédiate ; Torresilo, issu des meilleures vieilles vignes, constitue le sommet du domaine, dense et racé mais toujours équilibré. Les vins vieillissent bien et gagnent en complexité. Pour un sommelier, Cillar de Silos est une valeur de confiance, particulièrement utile pour une carte : le Crianza est l'un des meilleurs achats de la Ribera dans sa catégorie, et Torresilo permet de monter en gamme sans quitter une signature parfaitement maîtrisée. Le blanc d'Albillo mérite la curiosité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "burgos",
+        "rapport-qualite-prix",
+        "albillo",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-montecastro",
+      "nom": "Bodegas Montecastro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Castrillo de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Montecastro",
+        "Alconte"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Montecastro est un domaine de coteau installé à Castrillo de Duero, sur la rive vallisoletane, dans un secteur d'altitude réputé pour la fraîcheur de ses vins. Fondé au tournant des années 2000, il s'appuie sur un patrimoine de vieilles vignes en terrasses et sur une approche moderne mais équilibrée du Tinto Fino. Le vignoble repose sur des coteaux argilo-calcaires en pente autour de Castrillo, à bonne altitude, ce qui préserve l'acidité et donne des vins plus élancés que ceux de la vallée basse. L'encépagement associe le Tinto Fino dominant à une part de Merlot pour certaines cuvées. Les vinifications, soignées, cherchent l'équilibre entre matière et fraîcheur, avec un élevage en chêne français mesuré. La gamme est claire : Alconte, l'entrée de gamme, offre un fruit net et gourmand ; Montecastro, la cuvée principale, monte en profondeur et en structure, dans un registre moderne mais frais. Le style, dense sans lourdeur, illustre le potentiel des coteaux d'altitude de la rive vallisoletane. Pour un sommelier, Montecastro est un domaine encore discret mais fiable, aux prix contenus, qui offre une Ribera équilibrée et bien faite. C'est le type d'adresse à connaître pour proposer une alternative de qualité aux grands noms du secteur, à un niveau de prix plus accessible.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "coteau",
+        "castrillo",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-protos",
+      "nom": "Bodegas Protos",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Protos Reserva",
+        "Protos Selección Finca El Grajo Viejo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Protos est la plus ancienne bodega de la Ribera del Duero, fondée en 1927 à Peñafiel — son nom signifie « premier » en grec. Le cœur historique de la maison réside dans les galeries souterraines creusées sur deux kilomètres sous le château de Peñafiel, doublées depuis 2008 d'une cave contemporaine signée Richard Rogers. Le domaine dispose d'un vignoble important et produit de gros volumes de Tinto Fino, dans un registre classique et fiable, du Crianza au Gran Reserva. La cuvée Selección Finca El Grajo Viejo, issue de vieilles vignes, marque le haut de gamme. La maison produit aussi un blanc de Verdejo en Rueda. Pour un sommelier, Protos est un nom historique et rassurant, largement diffusé, dont les Reserva offrent un classicisme régulier à prix mesuré. Une valeur d'usage, doublée d'une visite spectaculaire pour qui passe à Peñafiel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "historique",
+        "penafiel",
+        "volume",
+        "calados",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-portia",
+      "nom": "Bodegas Portia — Faustino",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel de Izán",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Portia",
+        "Triennia",
+        "Prima"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Portia est la bodega ribérienne du groupe Faustino, installée à Gumiel de Izán, célèbre pour son bâtiment en étoile à trois branches signé Norman Foster, conçu pour organiser la vinification par gravité selon les trois gammes de la maison. Le domaine dispose d'un vignoble d'altitude autour de Gumiel, sur des sols argilo-calcaires, et produit un Tinto Fino de style moderne, net et fruité. La gamme est lisible : Prima, l'entrée fruitée ; Triennia, plus structurée ; et Portia, la cuvée principale, plus ambitieuse. Pour un sommelier, Portia est un nom bien diffusé, dont la gamme moderne et régulière convient à une carte cherchant des Riberas accessibles et fiables. L'architecture Foster en fait par ailleurs une étape œnotouristique remarquable de la rive burgalaise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "architecture",
+        "faustino",
+        "moderne",
+        "volume",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-balbas",
+      "nom": "Bodegas Balbás",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Horra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Balbás Reserva",
+        "Ardal"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Balbás est une maison familiale de La Horra, sur la rive burgalaise, où la famille cultive la vigne depuis plusieurs générations. Le village est réputé pour la qualité de ses vieilles vignes de Tinto Fino, dont Balbás tire des vins de registre classique. Le domaine travaille des sols argilo-calcaires d'altitude et produit une gamme organisée autour du Crianza et du Reserva, dans un style traditionnel bien tenu, complétée d'un rosé et d'un blanc. La cuvée Ardal marque le haut de gamme, sur les meilleures parcelles. Pour un sommelier, Balbás est une adresse discrète de La Horra, aux prix mesurés, qui offre une Ribera classique fiable. C'est le type de maison familiale utile pour une carte cherchant de bons rapports qualité-prix loin des noms les plus médiatisés du secteur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "la-horra",
+        "famille",
+        "classique",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-vina-mayor",
+      "nom": "Bodegas Viña Mayor",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Onésimo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Viña Mayor Reserva",
+        "Secreto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Viña Mayor est une marque de grande diffusion de la Milla de Oro, installée à Quintanilla de Onésimo et appartenant au groupe García Carrión. Elle figure parmi les Riberas les plus vendues, en Espagne comme à l'export, grâce à une gamme large et régulière. Le vignoble et les approvisionnements couvrent plusieurs secteurs de l'appellation, et la production, importante, s'organise autour du Roble, du Crianza et du Reserva, dans un style moderne et accessible. La cuvée Secreto marque une montée en gamme. Le domaine produit aussi en Rueda. Pour un sommelier, Viña Mayor est une valeur d'usage : un nom connu, disponible partout, aux prix contenus, utile pour une carte cherchant une Ribera fiable et sans surprise. Ce n'est pas un vin de terroir, mais une signature régulière et bien distribuée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "volume",
+        "milla-de-oro",
+        "groupe",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-valtravieso",
+      "nom": "Bodegas Valtravieso",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Piñel de Arriba",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Valtravieso Reserva",
+        "VT Vendimia Seleccionada"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Valtravieso est un domaine du páramo d'altitude, installé à Piñel de Arriba, sur les hauteurs de la rive vallisoletane, à près de neuf cents mètres. Cette altitude, parmi les plus élevées de l'appellation, confère aux vins une fraîcheur et une acidité naturelle qui distinguent la maison. Le vignoble s'étage sur des sols argilo-calcaires du páramo, où le Tinto Fino côtoie une part de Cabernet-Sauvignon et de Merlot. Le style est moderne et équilibré, avec un fruit mûr préservé par l'altitude et un élevage soigné. La gamme monte du Crianza à la cuvée VT Vendimia Seleccionada. Pour un sommelier, Valtravieso illustre le potentiel des zones hautes de la Ribera, gage de fraîcheur : une adresse intéressante pour proposer des vins équilibrés à des prix raisonnables, en jouant la carte de l'altitude auprès d'une clientèle sensible à cet argument.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "altitude",
+        "paramo",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-rodero",
+      "nom": "Bodegas Rodero — Familia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pedrosa de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Carmelo Rodero 9 meses",
+        "Rodero Crianza"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sous le nom de Bodegas Rodero se rangent les gammes d'accès et de milieu de la maison Carmelo Rodero, à Pedrosa de Duero, sur la rive burgalaise réputée pour ses coteaux calcaires. Ces cuvées offrent une porte d'entrée dans une signature par ailleurs reconnue pour ses parcellaires. Le vignoble repose sur des vieilles vignes de Tinto Fino autour de Pedrosa, sur des sols argilo-calcaires. Les cuvées d'entrée, comme le 9 meses et le Crianza, misent sur la pureté du fruit et un boisé mesuré, dans un style moderne et gourmand, sans la densité des cuvées de tête. Pour un sommelier, ces vins constituent d'excellents rapports qualité-prix, particulièrement utiles pour une carte au verre ou une entrée de gamme fiable. Ils permettent de proposer la patte Carmelo Rodero à un niveau de prix accessible, avec la régularité qui fait la réputation de la maison.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pedrosa",
+        "rapport-qualite-prix",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-comenge",
+      "nom": "Bodegas Comenge",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Curiel de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Comenge",
+        "Don Miguel Comenge"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Comenge est un domaine familial de Curiel de Duero, sur la rive vallisoletane, converti à l'agriculture biologique et doté d'une belle offre œnotouristique. La famille Comenge, d'origine médicale et scientifique, y applique une approche rigoureuse de la viticulture. Le vignoble repose sur des coteaux argilo-calcaires autour de Curiel, conduits en biologique, où le Tinto Fino est vinifié seul. Le style est moderne et régulier, avec un fruit net et un élevage en chêne bien intégré. La gamme s'organise autour du Comenge et de la cuvée Don Miguel Comenge, plus ambitieuse. Pour un sommelier, Comenge est une adresse fiable et discrète, aux prix raisonnables, qui offre une Ribera biologique bien faite. C'est le type de domaine familial à connaître pour une carte cherchant des valeurs sûres à l'écart des grands noms, avec l'argument du biologique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "curiel",
+        "biologique",
+        "famille",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-valderiz",
+      "nom": "Bodegas Valderiz",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Valderiz",
+        "Valdehermoso",
+        "Tomás Esteban"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Valderiz est un domaine familial de Roa, sur la rive burgalaise, pionnier de la biodynamie dans la Ribera del Duero. La famille Fernández y cultive de vieilles vignes de Tinto Fino dans le respect des cycles naturels, à une époque où cette démarche restait rare dans la région. Le vignoble repose sur des vieilles vignes autour de Roa, sur des sols argilo-calcaires, conduits en biodynamie. Le style privilégie la fraîcheur et l'expression du fruit plutôt que la concentration, avec des élevages respectueux. La gamme monte de Valdehermoso, l'entrée gourmande, à Valderiz, puis à la cuvée Tomás Esteban, issue des plus vieilles vignes et taillée pour la garde. Pour un sommelier, Valderiz est une adresse attachante, à la croisée de la tradition familiale et de l'engagement biodynamique : des vins équilibrés et sincères, à des prix raisonnables. Tomás Esteban est une belle bouteille de garde à faire découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "biodynamie",
+        "vieilles-vignes",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-perez-pascuas",
+      "nom": "Bodegas Pérez Pascuas — Viña Pedrosa",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pedrosa de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Viña Pedrosa",
+        "Pérez Pascuas Gran Selección",
+        "La Navilla"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Pérez Pascuas, avec sa marque Viña Pedrosa, est l'une des signatures historiques de la rive burgalaise, installée à Pedrosa de Duero. La famille Pérez Pascuas y cultive la vigne depuis des générations et compte parmi les références classiques du secteur. Le vignoble repose sur un beau patrimoine de vieilles vignes de Tinto Fino autour de Pedrosa, sur des coteaux argilo-calcaires. Le style, classique et soigné, mise sur la profondeur et la capacité de garde. La gamme monte du Viña Pedrosa Crianza et Reserva jusqu'à la Gran Selección et à La Navilla, cuvées de prestige issues des meilleures parcelles. Pour un sommelier, Pérez Pascuas est un nom sûr de la Ribera classique burgalaise : le Viña Pedrosa Reserva offre un excellent rapport qualité-prix, et les cuvées de tête permettent une montée en gamme dans une signature fiable et respectée. Les vins vieillissent bien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pedrosa",
+        "famille",
+        "classique",
+        "reference",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-teofilo-reyes",
+      "nom": "Bodegas Teófilo Reyes",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Teófilo Reyes Reserva",
+        "Tamiz"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Teófilo Reyes est une maison de Peñafiel fondée par l'œnologue du même nom, figure légendaire de la Ribera qui fut l'artisan des grands millésimes de Pesquera avant de créer son propre domaine à la fin des années 1990. Ses descendants perpétuent aujourd'hui son style. Le domaine travaille de vieilles vignes de Tinto Fino sur des sols argilo-calcaires, dans un registre classique et dense, marqué par un savoir-faire d'assemblage et d'élevage hérité de son fondateur. La gamme s'organise autour du Crianza, du Reserva et de la cuvée Tamiz, plus accessible. Pour un sommelier, Teófilo Reyes est une adresse à la fois classique et chargée d'histoire : le nom évoque l'un des grands artisans de la Ribera moderne, et les vins offrent un registre traditionnel bien fait à des prix raisonnables. Une belle carte à jouer sur le récit autant que sur le verre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "penafiel",
+        "classique",
+        "vieilles-vignes",
+        "famille",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-vizcarra",
+      "nom": "Bodegas Vizcarra",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Mambrilla de Castrejón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Vizcarra Senda del Oro",
+        "Torralvo",
+        "Celia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vizcarra est un domaine familial de Mambrilla de Castrejón, sur la rive burgalaise, mené par Juan Carlos Vizcarra, réputé pour ses Tinto Fino charnus issus de vieilles vignes. La maison s'est imposée comme une signature moderne appréciée des amateurs de vins généreux. Le vignoble repose sur de vieilles vignes autour de Mambrilla, sur des sols argilo-calcaires, vinifiées dans un style dense et coloré, avec un élevage soigné en chêne français. La gamme monte de Senda del Oro, l'entrée gourmande, à Torralvo et Celia, cuvées de vieilles vignes qui constituent le haut de gamme. Pour un sommelier, Vizcarra est une valeur sûre pour l'amateur de Riberas modernes et charpentées : Senda del Oro offre un très bon rapport qualité-prix, tandis que Torralvo et Celia permettent de monter en gamme. Les cuvées de tête méritent quelques années de cave.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "burgos",
+        "moderne",
+        "vieilles-vignes",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-hermanos-perez-pascuas",
+      "nom": "Bodegas Hermanos Pérez Pascuas",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pedrosa de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Cepa Gavilán",
+        "Viña Pedrosa Crianza"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sous cette entrée se range la gamme d'accès de la famille Pérez Pascuas, à Pedrosa de Duero, autour de la marque Cepa Gavilán. Elle offre une porte d'entrée abordable dans l'univers d'une des maisons classiques les plus respectées de la rive burgalaise. Le vignoble repose sur les vieilles vignes de Tinto Fino de la famille autour de Pedrosa, sur des coteaux argilo-calcaires. Cepa Gavilán, le Tinto Fino jeune et souple de la maison, mise sur la pureté du fruit et un boisé léger, dans un registre gourmand et immédiat, sans la profondeur des Viña Pedrosa. Pour un sommelier, Cepa Gavilán est l'un des bons rapports qualité-prix de la Ribera, idéal pour une carte au verre ou une entrée de gamme fiable. Il permet de proposer la signature Pérez Pascuas à petit prix, avec la régularité qui fait la réputation de la famille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pedrosa",
+        "famille",
+        "rapport-qualite-prix",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-vina-sastre",
+      "nom": "Bodegas Viña Sastre — gamma clásica",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Horra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Viña Sastre Crianza",
+        "Roble"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sous cette entrée figure la gamme d'accès des Hermanos Sastre, à La Horra, l'une des signatures les plus puissantes de la Ribera. Le Crianza et le Roble offrent une porte d'entrée, à prix plus accessible, dans un style maison réputé pour sa densité. Le vignoble repose sur les vieilles vignes de Tinto Fino de la famille autour de La Horra, conduites en biologique, sur des sols argilo-calcaires. Le Crianza, dense et coloré, reprend le style puissant et concentré qui a fait la réputation du domaine, dans une version plus immédiate que les cuvées de prestige. Pour un sommelier, ces cuvées permettent de faire découvrir la patte Sastre — matière imposante, fruit noir, boisé présent — sans passer par les prix élevés de Pesus ou Regina Vides. Un bon choix pour l'amateur de Riberas charpentées cherchant un rapport qualité-prix. Le Crianza demande un peu d'aération.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "la-horra",
+        "biologique",
+        "puissance",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-tarsus",
+      "nom": "Bodegas Tarsus",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Anguix",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Tarsus Reserva",
+        "Quinta de Tarsus"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Tarsus est un domaine d'Anguix, sur la rive burgalaise, dans un secteur d'altitude réputé pour la fraîcheur de ses vins. La maison, qui a changé de mains au fil du temps, s'appuie sur des vignes hautes et un style moderne et régulier. Le vignoble s'étage sur des coteaux d'altitude autour d'Anguix, sur des sols argilo-calcaires, où le Tinto Fino côtoie une part de Cabernet-Sauvignon. Le style est moderne et équilibré, avec un fruit préservé par l'altitude et un élevage en chêne français. La gamme monte du Tarsus Reserva à la cuvée Quinta de Tarsus. Pour un sommelier, Tarsus est une adresse fiable et bien diffusée, aux prix raisonnables, qui bénéficie de l'altitude d'Anguix. C'est le type de domaine utile pour une carte cherchant une Ribera moderne et régulière, avec l'argument de fraîcheur que confèrent les vignes hautes de la rive burgalaise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "anguix",
+        "altitude",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-resalte-de-penafiel",
+      "nom": "Bodegas Resalte de Peñafiel",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Resalte Reserva",
+        "Peña Roble"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Resalte de Peñafiel est une maison moderne de Peñafiel, sur la rive vallisoletane, au style net et bien diffusé. Fondée au tournant des années 2000, elle s'est construit une réputation régulière sur une gamme lisible de Tinto Fino. Le vignoble repose sur des vignes autour de Peñafiel, sur des sols argilo-calcaires, vinifiées dans un style moderne et fruité, avec un élevage soigné. La gamme s'organise autour du Peña Roble et du Resalte, du Crianza au Reserva, avec une bonne régularité d'un millésime à l'autre. Pour un sommelier, Resalte est une adresse fiable, aux prix contenus, qui offre une Ribera moderne bien faite. C'est une valeur d'usage utile pour une carte, avec une gamme claire et une distribution correcte, à l'écart des projets les plus médiatisés du secteur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "penafiel",
+        "moderne",
+        "volume",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-convento-san-francisco",
+      "nom": "Bodegas Convento San Francisco",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Peñafiel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Convento San Francisco",
+        "Tinto Fino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Convento San Francisco est une petite bodega de Peñafiel installée dans un ancien couvent franciscain, qui donne son nom à la maison. Elle produit un Tinto Fino de facture soignée dans un cadre patrimonial, à échelle familiale. Le vignoble repose sur des vignes autour de Peñafiel, sur des sols argilo-calcaires, vinifiées dans un style classique-moderne équilibré, avec des élevages mesurés. La gamme, resserrée, s'organise autour du Tinto Fino de la maison, dans un registre net et fruité. Pour un sommelier, Convento San Francisco est une adresse discrète et attachante, aux prix mesurés, qui allie qualité correcte et cadre historique. C'est le type de petite maison à connaître pour une carte cherchant des Riberas fiables et un récit patrimonial autour de Peñafiel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "penafiel",
+        "patrimoine",
+        "famille",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-dominio-basconcillos",
+      "nom": "Dominio Basconcillos",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel de Mercado",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Viña Magna",
+        "Ecológico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio Basconcillos est un domaine d'altitude installé à Gumiel de Mercado, sur la rive burgalaise, conduit intégralement en agriculture biologique certifiée — une démarche encore peu répandue dans la Ribera au moment de sa création. Fondé au début des années 2000, il mise sur la fraîcheur que confère l'altitude et sur une viticulture respectueuse. Le vignoble s'étage sur des coteaux d'altitude autour de Gumiel, sur des sols argilo-calcaires, à des hauteurs qui préservent l'acidité et ralentissent la maturation. Le Tinto Fino y est vinifié seul, dans un style moderne mais équilibré, avec des élevages en chêne français bien dosés. La certification biologique s'accompagne d'un travail attentif sur la vie des sols. La gamme Viña Magna structure la production, du Crianza aux cuvées de garde, dans un registre net et fruité. Le domaine produit aussi une cuvée Seis, élevée six mois, plus immédiate. L'ensemble illustre le mouvement de la Ribera vers l'altitude et le biologique, deux leviers de fraîcheur dans une région réputée pour ses vins puissants. Pour un sommelier, Dominio Basconcillos est une adresse intéressante pour proposer une Ribera biologique et équilibrée à des prix raisonnables. La gamme Viña Magna offre une bonne lisibilité, et l'engagement écologique du domaine constitue un argument apprécié d'une clientèle sensible à ces questions.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "gumiel",
+        "biologique",
+        "altitude",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-briego",
+      "nom": "Bodegas Briego",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Fompedraza",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Briego Fiel",
+        "Briego Tiempo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Briego est un domaine familial de Fompedraza, sur les hauteurs de la rive vallisoletane, appuyé sur un patrimoine de vieilles vignes de páramo. La famille Zorrilla y produit un Tinto Fino de style classique-moderne, à des prix contenus. Le vignoble s'étage sur des coteaux d'altitude autour de Fompedraza, sur des sols argilo-calcaires, ce qui préserve la fraîcheur des vins. La gamme monte de Briego Tiempo, l'entrée gourmande, à Briego Fiel, cuvée plus ambitieuse issue des meilleures vignes. Le style est équilibré, avec un fruit net et un élevage mesuré. Pour un sommelier, Briego est une adresse fiable et discrète, aux prix raisonnables, qui bénéficie de l'altitude de Fompedraza. C'est une valeur d'usage utile pour une carte cherchant une Ribera équilibrée loin des grands noms, avec un bon rapport qualité-prix sur les cuvées d'entrée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "fompedraza",
+        "famille",
+        "altitude",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-legaris",
+      "nom": "Bodegas Legaris",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Curiel de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Legaris Reserva",
+        "Calmo",
+        "vinos de pueblo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Legaris est la bodega ribérienne du groupe Codorníu, installée à Curiel de Duero, sur la rive vallisoletane, pionnière des vinos de pueblo dans l'appellation. En identifiant l'origine villageoise de ses cuvées, elle a contribué à faire émerger la notion de terroir dans une région longtemps dominée par la logique de marque. Le vignoble et les approvisionnements couvrent plusieurs villages de la Ribera, sur des sols argilo-calcaires. Outre la gamme classique du Crianza au Reserva, Legaris a lancé une série de vinos de pueblo — vins de village identifiés — et la cuvée Calmo, plus ambitieuse, dans un style moderne et frais. Le domaine produit aussi en Rueda. Pour un sommelier, Legaris est une adresse intéressante et pédagogique : sa gamme de vins de village permet de raconter la diversité des terroirs ribériens à des prix raisonnables. Une signature moderne et bien diffusée, utile pour introduire la notion de lieu auprès d'une clientèle curieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "curiel",
+        "codorniu",
+        "vinos-de-pueblo",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-neo",
+      "nom": "Bodegas Neo — Bodegas Conde",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Neo",
+        "Neo Punta Esencia",
+        "El Arte de Vivir"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Neo, ou Bodegas Conde, est une maison de Roa, sur la rive burgalaise, au style moderne et coloré, bien identifiée à l'export. Elle s'est construit une image contemporaine autour d'une gamme de Tinto Fino aux étiquettes soignées. Le vignoble repose sur des vignes autour de Roa, sur des sols argilo-calcaires, vinifiées dans un style moderne, dense et fruité, avec un élevage marqué. La gamme monte du El Arte de Vivir, accessible, à Neo et Neo Punta Esencia, cuvées de vieilles vignes plus ambitieuses. Pour un sommelier, Neo est une adresse fiable, au style moderne assumé, bien diffusée à l'international. C'est une valeur d'usage pour une carte cherchant des Riberas contemporaines et lisibles, avec un habillage attractif qui séduit une clientèle jeune.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "moderne",
+        "volume",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-pagos-de-matanegra",
+      "nom": "Bodegas Pagos de Matanegra",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Olmedillo de Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Matanegra Vendimia Seleccionada",
+        "Cuvée"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Pagos de Matanegra est une bodega d'Olmedillo de Roa, sur la rive burgalaise, qui produit un Tinto Fino de facture moderne à des prix accessibles. Elle s'appuie sur les vignes du secteur de Roa, réputé pour la qualité de ses coteaux. Le vignoble repose sur des sols argilo-calcaires autour d'Olmedillo, vinifiés dans un style moderne et fruité. La gamme s'organise autour du Crianza et de la cuvée Vendimia Seleccionada, avec une bonne régularité et un boisé bien intégré. Pour un sommelier, Matanegra est une adresse discrète offrant de bons rapports qualité-prix sur les Crianza. C'est le type de maison utile pour une carte cherchant une Ribera moderne et fiable à petit prix, dans le secteur qualitatif de Roa.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "moderne",
+        "rapport-qualite-prix",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-valparaiso",
+      "nom": "Bodegas Valparaíso — Pradorey",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel de Mercado",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "PradoRey Reserva",
+        "Élite",
+        "Adaro"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Valparaíso, avec sa marque PradoRey, est un grand domaine de la Finca La Mina à Gumiel de Mercado, sur la rive burgalaise, doté d'une offre œnotouristique complète. La maison produit de gros volumes sur un large éventail de styles. Le vignoble, vaste, s'étage sur des sols argilo-calcaires autour de Gumiel, où le Tinto Fino côtoie des cépages bordelais et l'Albillo. La gamme est très large, du PradoRey Reserva aux cuvées Élite et Adaro, en passant par des rosés et un blanc d'Albillo. Le style est moderne et accessible. Pour un sommelier, PradoRey est un nom bien diffusé, dont la gamme étendue couvre tous les niveaux de prix et de couleurs. C'est une valeur d'usage utile pour une carte, avec l'intérêt d'une offre incluant rosés et Albillo, à l'heure où la région s'ouvre à ces styles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "volume",
+        "gumiel",
+        "oenotourisme",
+        "albillo",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-vinedos-y-bodegas-garcia-figuero",
+      "nom": "Bodegas Viñedos y Bodegas García Figuero",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "La Horra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Tinto Figuero",
+        "Figuero Noble",
+        "Milagros de Figuero"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "García Figuero est une maison familiale de La Horra, sur la rive burgalaise, dont la gamme Tinto Figuero est largement diffusée. La famille García y exploite de vieilles vignes de Tinto Fino dans l'un des meilleurs villages de l'appellation. Le vignoble repose sur des vieilles vignes autour de La Horra, sur des sols argilo-calcaires, vinifiées dans un style moderne et charnu. La gamme monte du Tinto Figuero, décliné selon les durées d'élevage, à Figuero Noble et Milagros de Figuero, cuvées de vieilles vignes qui constituent le haut de gamme. Pour un sommelier, García Figuero est une valeur fiable et bien distribuée : la gamme Tinto Figuero offre de bons rapports qualité-prix, tandis que Milagros permet de monter en gamme dans une signature maîtrisée. Une adresse sûre du secteur de La Horra.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "la-horra",
+        "famille",
+        "moderne",
+        "volume",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-territorio-luthier",
+      "nom": "Bodegas Territorio Luthier",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Gumiel de Izán",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Albillo",
+        "Garnacha"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Luthier",
+        "Camino de las Aves",
+        "Viñas Viejas"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Territorio Luthier est un projet parcellaire récent installé à Gumiel de Izán, sur la rive burgalaise, tourné vers les vieilles vignes complantées et l'expression des terroirs d'altitude — dans l'esprit de la nouvelle Ribera qui privilégie la finesse à la puissance. Le nom, emprunté au monde de la lutherie, dit l'ambition d'artisanat et de précision qui anime la démarche. Le domaine s'appuie sur un patrimoine de vieilles vignes autour de Gumiel de Izán, souvent complantées de Tinto Fino et de variétés blanches comme l'Albillo, sur des sols argilo-calcaires d'altitude. La conduite est biologique, et les vinifications privilégient les levures indigènes et un élevage respectueux du fruit, dans une recherche de fraîcheur et de digestibilité. La gamme mêle rouges parcellaires et blancs d'Albillo, avec des cuvées comme Camino de las Aves et une série de vins de vieilles vignes. Le style, tendu et précis, illustre le virage de la région vers l'altitude, la complantation et les cépages historiques. La production reste confidentielle. Pour un sommelier, Territorio Luthier est un domaine à suivre, représentatif de la génération montante de la Ribera : des vins de terroir, frais et parcellaires, encore à des prix raisonnables. C'est une belle option pour faire découvrir à une clientèle curieuse une facette moins connue et plus contemporaine de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "gumiel",
+        "albillo",
+        "altitude",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-ismael-arroyo",
+      "nom": "Bodegas Ismael Arroyo — Valsotillo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Sotillo de la Ribera",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Valsotillo Reserva",
+        "ValSotillo Gran Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Ismael Arroyo, avec sa marque ValSotillo, est une maison familiale de Sotillo de la Ribera, sur la rive burgalaise, réputée pour ses calados traditionnels et ses longs élevages classiques. La famille Arroyo y perpétue un style typé et ancré dans la tradition. Le vignoble repose sur des vieilles vignes de Tinto Fino autour de Sotillo, sur des sols argilo-calcaires. Le vieillissement se fait en partie dans les caves souterraines historiques du village, dans un registre classique marqué par le chêne. La gamme monte du Crianza au ValSotillo Reserva et Gran Reserva, cuvées de garde très typées. Pour un sommelier, Ismael Arroyo est une adresse de Ribera classique, aux prix raisonnables, à recommander pour un registre traditionnel de plus en plus rare. Les Gran Reserva vieillissent bien et se prêtent aux accords de garde, avec le charme d'un style resté fidèle à la tradition.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sotillo",
+        "classique",
+        "calados",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-torremilanos",
+      "nom": "Bodegas Torremilanos — Peñalba López",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Aranda de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Torremilanos",
+        "Torre Albéniz",
+        "Los Cantos"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Torremilanos est un grand domaine d'Aranda de Duero, sur la rive burgalaise, appartenant à la famille Peñalba López, converti à la biodynamie certifiée — l'un des plus vastes engagements de ce type dans la Ribera. Plusieurs cuvées sont produites sans sulfites ajoutés. Le vignoble, important, s'étage sur des sols argilo-calcaires autour d'Aranda, conduits en biodynamie. Le style, malgré l'échelle, reste cohérent et soigné, avec un fruit net et un élevage mesuré. La gamme est large : Los Cantos, l'entrée gourmande ; Torremilanos, le cœur de gamme ; et Torre Albéniz, la cuvée de prestige. Pour un sommelier, Torremilanos est une adresse intéressante par son échelle et son engagement biodynamique : elle offre une Ribera cohérente à tous les niveaux de prix, avec l'argument de la certification et des cuvées sans soufre ajouté, appréciées d'une clientèle sensible à ces questions.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "aranda",
+        "biodynamie",
+        "volume",
+        "famille",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-bohorquez",
+      "nom": "Bodegas Bohórquez",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Pesquera de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Bohórquez Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bohórquez est une micro-bodega de Pesquera de Duero, sur la rive vallisoletane, qui produit quasi exclusivement des Reserva de longue garde, dans un style classique et confidentiel. La maison a fait le choix de la patience et de la petite échelle. Le vignoble repose sur des vignes autour de Pesquera, sur des sols argilo-calcaires, où le Tinto Fino côtoie une part de Cabernet-Sauvignon et de Merlot. Le vin, produit en petites quantités, est élevé longuement et sort tardivement, dans un registre classique dense et taillé pour la garde. Pour un sommelier, Bohórquez est une adresse de connaisseur : une production confidentielle de Reserva classiques, à recommander à l'amateur qui cherche des Riberas de garde à l'écart des grands noms. La rareté et le style traditionnel en font une bouteille de découverte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "pesquera",
+        "reserva",
+        "confidentiel",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-hornillos-ballesteros",
+      "nom": "Bodegas Hornillos Ballesteros",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintana del Pidio",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Mibal",
+        "Mibal Selección"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Hornillos Ballesteros est une petite maison familiale de Quintana del Pidio, sur la rive burgalaise, qui produit un Tinto Fino de vieilles vignes sous la marque Mibal. Elle s'appuie sur un patrimoine viticole modeste mais de qualité. Le vignoble repose sur des vieilles vignes autour de Quintana del Pidio, sur des sols argilo-calcaires d'altitude. Le style est classique-moderne, avec un fruit net et un élevage mesuré. La gamme s'organise autour du Mibal et du Mibal Selección, plus ambitieux. Pour un sommelier, Hornillos Ballesteros est une adresse discrète et fiable, aux prix raisonnables, qui offre de bons rapports qualité-prix. C'est le type de petite maison familiale utile pour une carte cherchant des Riberas honnêtes à l'écart des noms les plus connus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "quintana-del-pidio",
+        "famille",
+        "rapport-qualite-prix",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-pingon",
+      "nom": "Bodegas Pingón",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Quintanilla de Onésimo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Carredueñas",
+        "Torrederos"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Pingón est une bodega familiale de la Milla de Oro, à Quintanilla de Onésimo, sur la rive vallisoletane, dont les gammes Torrederos et Carredueñas sont fiables et accessibles. Elle s'appuie sur un vignoble bien situé dans le secteur le plus réputé de l'appellation. Le vignoble repose sur des sols argilo-calcaires et des terrasses de la Milla de Oro, où le Tinto Fino est vinifié seul. Le style est moderne et fruité, avec un boisé bien intégré. La gamme s'organise autour du Torrederos, du Crianza au Reserva, et inclut un rosé. Pour un sommelier, Pingón est une adresse fiable, aux prix contenus, bénéficiant de l'emplacement de la Milla de Oro. C'est une valeur d'usage utile pour une carte cherchant une Ribera moderne et régulière, avec de bons rapports qualité-prix sur les Crianza.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "milla-de-oro",
+        "famille",
+        "rapport-qualite-prix",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-prado-de-olmedo",
+      "nom": "Bodegas Prado de Olmedo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Fuentelisendo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Prado de Olmedo Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Prado de Olmedo est un domaine de Fuentelisendo, sur la rive burgalaise, au style moderne et boisé, doté d'une gamme régulière. La maison produit un Tinto Fino de facture soignée dans un registre contemporain. Le vignoble repose sur des vignes autour de Fuentelisendo, sur des sols argilo-calcaires, vinifiées dans un style moderne marqué par le chêne. La gamme s'organise autour du Crianza et du Reserva, avec une bonne régularité. Pour un sommelier, Prado de Olmedo est une adresse discrète, aux prix mesurés, qui offre une Ribera moderne bien faite. C'est une valeur d'usage utile pour une carte cherchant des vins fiables à l'écart des grands noms, dans un style boisé qui plaît à une partie de la clientèle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "burgos",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-valdubon",
+      "nom": "Bodegas Valdubón — Freixenet",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Milagros",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Valdubón Reserva",
+        "Honoris de Valdubón"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Valdubón est la bodega ribérienne du groupe Freixenet, installée à Milagros, sur la rive burgalaise, au style moderne et net. Elle bénéficie de la puissance de distribution du groupe pour une diffusion large. Le vignoble repose sur des vignes autour de Milagros, sur des sols argilo-calcaires, vinifiées dans un style moderne et fruité. La gamme monte du Crianza à la cuvée Honoris de Valdubón, plus ambitieuse, avec un boisé bien intégré et une bonne régularité. Pour un sommelier, Valdubón est une adresse fiable et bien diffusée, aux prix contenus, adossée à un grand groupe. C'est une valeur d'usage utile pour une carte cherchant une Ribera moderne et régulière, avec Honoris pour une montée en gamme accessible.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "milagros",
+        "groupe",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-nabal",
+      "nom": "Bodegas Nabal",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Villanueva de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Nabal",
+        "Nabal Selección"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Nabal est une bodega moderne de la rive vallisoletane, à Villanueva de Duero, qui produit un Tinto Fino de facture soignée à des prix mesurés. Elle s'inscrit dans le renouveau qualitatif des maisons de taille moyenne de l'appellation. Le vignoble repose sur des vignes de la rive vallisoletane, sur des sols argilo-calcaires, vinifiées dans un style moderne et équilibré, avec un élevage soigné. La gamme s'organise autour du Nabal et du Nabal Selección, plus ambitieux. Pour un sommelier, Nabal est une adresse discrète et fiable, aux prix raisonnables, qui offre une Ribera moderne bien faite. C'est le type de maison utile pour une carte cherchant des valeurs sûres à l'écart des grands noms, avec un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "valladolid",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-o-fournier",
+      "nom": "Bodegas O. Fournier",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Berlangas de Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Alfa Spiga",
+        "Spiga",
+        "Urban"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "O. Fournier est une bodega architecturale de Berlangas de Roa, sur la rive burgalaise, dont la gamme moderne est bien diffusée à l'international. Le domaine, d'inspiration contemporaine, s'appuie sur un bâtiment conçu pour la vinification par gravité. Le vignoble s'étage sur des sols argilo-calcaires autour de Berlangas, où le Tinto Fino est vinifié dans un style moderne et net. La gamme monte d'Urban, l'entrée accessible, à Spiga puis Alfa Spiga, cuvée de prestige issue des meilleures vignes. Le groupe a aussi été présent en Argentine et en Espagne du Sud. Pour un sommelier, O. Fournier est une adresse moderne et bien distribuée, dont la gamme couvre plusieurs niveaux de prix. C'est une valeur d'usage utile pour une carte cherchant des Riberas contemporaines lisibles, avec Alfa Spiga pour une montée en gamme.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "architecture",
+        "roa",
+        "moderne",
+        "volume",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-aster",
+      "nom": "Bodegas Aster — La Rioja Alta",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Anguix",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Áster",
+        "Áster Finca El Otero"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Áster est le domaine ribérien de La Rioja Alta S.A., installé à Anguix, sur la rive burgalaise d'altitude. La maison de Haro y applique sa philosophie de précision et de fraîcheur, dans un style qui tranche avec la puissance locale. Le vignoble s'étage sur des coteaux d'altitude autour d'Anguix, sur des sols argilo-calcaires, où le Tinto Fino est vinifié dans un registre équilibré et frais, avec un élevage soigné dans l'esprit de la maison mère. La gamme monte de l'Áster à la cuvée Finca El Otero, issue des meilleures parcelles. Pour un sommelier, Áster est une adresse intéressante : elle offre une lecture élégante et fraîche de la Ribera, signée par l'une des grandes maisons de Rioja. C'est une belle option pour l'amateur qui cherche une Ribera d'équilibre plutôt que de puissance, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "anguix",
+        "la-rioja-alta",
+        "moderne",
+        "elegance",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-seleccion-torres",
+      "nom": "Bodegas Selección Torres — Celeste",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Fompedraza",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Celeste Crianza",
+        "Celeste Verdejo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Celeste est le projet ribérien de la famille Torres, installé à Fompedraza, sur le páramo d'altitude de la rive vallisoletane. La grande maison catalane y applique son savoir-faire à un secteur réputé pour la fraîcheur de ses vins d'altitude. Le vignoble s'étage sur des coteaux d'altitude autour de Fompedraza, sur des sols argilo-calcaires, où le Tinto Fino bénéficie de la fraîcheur que confère la hauteur. Le style est moderne et équilibré, avec un fruit préservé et un élevage soigné. La gamme Celeste monte du Crianza aux cuvées supérieures. Pour un sommelier, Celeste est une adresse fiable et bien diffusée, adossée au savoir-faire Torres, qui joue la carte de l'altitude. C'est une valeur d'usage utile pour une carte cherchant une Ribera équilibrée et régulière, avec un nom qui rassure la clientèle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "torres",
+        "altitude",
+        "moderne",
+        "volume",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-cepa-21",
+      "nom": "Bodegas Cepa 21 — Familia Moro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Castrillo de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Cepa 21",
+        "Malabrigo",
+        "Hito"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cepa 21 est la seconde maison de la famille Emilio Moro, installée à Castrillo de Duero, sur la rive vallisoletane, dans un style plus moderne et fruité que le domaine principal. Elle vise une clientèle contemporaine avec une gamme lisible. Le vignoble repose sur des vignes autour de Castrillo, sur des sols argilo-calcaires, où le Tinto Fino est vinifié dans un style moderne, net et gourmand. La gamme monte de Hito, l'entrée accessible déclinée aussi en rosé, à Cepa 21 puis Malabrigo, cuvée de vieilles vignes qui constitue le haut de gamme. Pour un sommelier, Cepa 21 est une adresse fiable, adossée au savoir-faire Emilio Moro, dont la gamme moderne convient à une clientèle jeune. Hito offre un bon rapport qualité-prix au verre, et Malabrigo permet une montée en gamme dans une signature maîtrisée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "castrillo",
+        "emilio-moro",
+        "moderne",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-winner-wines",
+      "nom": "Bodegas Winner Wines — Milú",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Aranda de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Milú",
+        "Milú Bellavista Ánfora"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Winner Wines, avec sa marque Milú, est un petit projet d'Aranda de Duero tourné vers des vinifications plus naturelles, qui a attiré l'attention par sa cuvée élevée en amphore. Il illustre l'intérêt croissant de la Ribera pour les approches alternatives. Le domaine travaille des vignes autour d'Aranda, sur des sols argilo-calcaires, dans une démarche plus naturelle que la moyenne régionale. La cuvée Milú Bellavista Ánfora, élevée en amphore, se distingue par son originalité et sa fraîcheur, à rebours du style ribérien classique. Pour un sommelier, Milú est une adresse à connaître pour proposer une Ribera différente et surprenante, à réserver à une clientèle curieuse. La cuvée en amphore, originale et digeste, offre une alternative intéressante aux Riberas boisées, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "aranda",
+        "nature",
+        "anfora",
+        "nouvelle-vague",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-lleiroso",
+      "nom": "Bodegas Lleiroso",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Valbuena de Duero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Lleiroso Reserva",
+        "El Sueco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Lleiroso est une bodega de Valbuena de Duero, sur la rive vallisoletane, fondée en 2001, aux installations modernes et au style soigné. Elle s'appuie sur un patrimoine de vieilles vignes dans le secteur prestigieux de la Milla de Oro. Le vignoble repose sur des vieilles vignes autour de Valbuena, sur des sols argilo-calcaires, vinifiées dans un style moderne et équilibré, avec un élevage soigné. La gamme monte du Reserva à la cuvée El Sueco, issue de très vieilles vignes, plus dense et ambitieuse. Pour un sommelier, Lleiroso est une adresse fiable, bien située dans la Milla de Oro, aux prix raisonnables. C'est une valeur d'usage utile pour une carte cherchant une Ribera moderne et régulière, avec El Sueco pour une montée en gamme sur des vieilles vignes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "valbuena",
+        "moderne",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-francisco-barona",
+      "nom": "Bodegas Francisco Barona",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "Francisco Barona"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Francisco Barona est un vigneron de Roa, sur la rive burgalaise, qui travaille de très vieilles vignes préphylloxériques en biologique, dans une démarche artisanale et confidentielle. Sa micro-production ambitieuse est très recherchée des amateurs. Le domaine s'appuie sur un patrimoine rare de vignes centenaires franches de pied autour de Roa, sur des sols argilo-calcaires et sableux, conduites en biologique. Les vinifications, soignées, cherchent à exprimer la finesse de ces vieilles vignes plutôt que la puissance, avec un élevage respectueux. Pour un sommelier, Francisco Barona est une adresse de connaisseur : une production confidentielle issue de vignes préphylloxériques, à recommander à l'amateur qui cherche des Riberas de terroir rares et fines. La rareté et la qualité du patrimoine viticole en font une bouteille de découverte recherchée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "vieilles-vignes",
+        "prephylloxerique",
+        "confidentiel",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-lopez-cristobal",
+      "nom": "Bodegas López Cristóbal",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero",
+      "commune": "Roa",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Ribera del Duero",
+        "López Cristóbal Reserva",
+        "Bagús"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "López Cristóbal est une maison familiale de Roa, sur la rive burgalaise, au style moderne et charnu. La famille y exploite un vignoble bien situé dans l'un des secteurs qualitatifs de l'appellation. Le vignoble repose sur des vignes autour de Roa, sur des sols argilo-calcaires, où le Tinto Fino côtoie une part de Merlot. Le style est moderne, dense et fruité, avec un élevage soigné en chêne. La gamme monte du Crianza et du Reserva à la cuvée Bagús, issue de vieilles vignes, qui constitue le haut de gamme. Pour un sommelier, López Cristóbal est une adresse fiable de Roa, aux prix raisonnables, dont le Reserva offre un bon rapport qualité-prix. Bagús permet une montée en gamme sur des vieilles vignes, dans une signature moderne et maîtrisée. Une valeur sûre du secteur burgalais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "roa",
+        "famille",
+        "moderne",
+        "prov-burgos"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Tim Atkin Ribera 2025, spanishwinelover, vinissimus, presse spécialisée)"
+    }
+  ]
+}

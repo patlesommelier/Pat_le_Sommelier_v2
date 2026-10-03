@@ -1,0 +1,1114 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "pfalz",
+  "region_label": "Pfalz (Allemagne)",
+  "source_file": "producteurs_pfalz_To_Import.xlsx",
+  "built_at": "2026-06-12",
+  "count": 28,
+  "items": [
+    {
+      "id": "de-pfalz-prod-dr-buerklin-wolf",
+      "nom": "Dr. Bürklin-Wolf",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Wachenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Kirchenstück",
+        "Forster Pechstein",
+        "Forster Jesuitengarten",
+        "Ruppertsberger Gaisböhl",
+        "Wachenheimer Rechbächel"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Wachenheim, sur la Mittelhaardt, Dr. Bürklin-Wolf est l'un des plus grands et des plus prestigieux domaines du Pfalz. Fondé en 1597, il est aujourd'hui dirigé par Bettina Bürklin-von Guradze, qui en a fait, à partir des années 1990, le fer de lance d'une révolution : l'introduction en Allemagne d'une classification des crus calquée sur le modèle bourguignon. Bien avant que le VDP ne formalise sa propre hiérarchie, le domaine établit son système « G.C. » (Grand Cru), « P.C. » (Premier Cru) et villages, fondé sur la seule qualité du terroir. Sur environ 85 hectares, l'un des plus vastes domaines de qualité du pays, Bürklin-Wolf exploite les plus grands lieux-dits de Forst — Kirchenstück, le joyau absolu, mais aussi Pechstein (basalte) et Jesuitengarten — ainsi que deux monopoles, le Gaisböhl à Ruppertsberg et le Rechbächel à Wachenheim. La conversion à la biodynamie, menée tôt et avec conviction, vise à amplifier l'expression du terroir, jugée essentielle sur ces sols intensément typés autour de Deidesheim et Forst. Le style maison privilégie des Rieslings secs, droits, profonds et minéraux, taillés pour la garde, avec une production qui peut atteindre, bonnes années, autour d'un million de bouteilles tous niveaux confondus. Les Grosses Gewächs « G.C. » des grands sites de Forst comptent parmi les secs les plus aboutis d'Allemagne. Pionnier de la viticulture de terroir et de la biodynamie au sommet du vignoble allemand, Dr. Bürklin-Wolf a profondément influencé la manière dont l'Allemagne pense aujourd'hui ses grands crus. Entre poids de l'histoire — plus de quatre siècles — et modernité d'une vision, le domaine demeure une référence cardinale du Riesling sec de la Mittelhaardt et l'un des grands noms du vin allemand. Ce virage qualitatif, amorcé dans les années 1990 avec Christian von Guradze, a fait du domaine un modèle pour toute l'Allemagne : la hiérarchie « G.C. » de Bürklin-Wolf a directement inspiré la classification du VDP. Les Grosses Gewächs de Forst, marqués par le basalte du Pechstein ou l'argile du Kirchenstück, s'arrachent aux enchères et figurent dans les plus grandes caves du monde. Entre tradition séculaire, engagement biodynamique et lecture rigoureuse du terroir, Bürklin-Wolf demeure, à Wachenheim, l'un des phares incontestés du Riesling sec allemand.",
+      "mes_notes": "Très grands rieslings \"sudistes\", vins d'une très grande intensité et concentration, parfois huileux. Les grand crus sont exceptionnels.",
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "biodynamie",
+        "wachenheim",
+        "forst",
+        "kirchenstueck",
+        "buerklin-wolf"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-von-winning",
+      "nom": "von Winning",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Deidesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Kirchenstück",
+        "Forster Pechstein",
+        "Forster Ungeheuer",
+        "Ruppertsberger Reiterpfad"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Deidesheim, au cœur de la Mittelhaardt, von Winning est l'un des domaines les plus spectaculaires de l'Allemagne contemporaine. Né de l'ancien Weingut Dr. Deinhard, il a été entièrement relancé à partir de 2008, lorsque le groupe Niederberger (qui possède aussi Bassermann-Jordan et Reichsrat von Buhl, mais les laisse opérer séparément) en a confié les rênes à Stephan Attmann. En une poignée d'années, celui-ci en a fait l'un des grands noms du Riesling sec allemand. La signature de von Winning est aussi sa singularité : Attmann a réintroduit la fermentation et l'élevage en fûts de chêne (parfois neufs) pour le Riesling sec — un choix longtemps controversé en Allemagne — afin d'obtenir des vins amples, profonds et structurés, sans jamais masquer le terroir. Les Grosses Gewächs des plus grands sites de Forst (Kirchenstück, Pechstein, Jesuitengarten) et de Deidesheim comptent parmi les secs les plus impressionnants du pays. Le domaine s'est aussi distingué par ses Sauvignon Blanc (la cuvée « 500 » en tête), qui prouvent que l'Allemagne peut rivaliser avec les meilleurs du monde sur ce cépage. La viticulture, conduite de façon proche du bio, et la philosophie de cave (« négligence contrôlée », vinifications par gravité, fermentations spontanées) servent une recherche d'authenticité et de personnalité. Installé dans des caves historiques remontant à 1849, fort d'un parcellaire qui compte plusieurs Erste et Grosse Lagen, von Winning conjugue ambition, audace stylistique et exigence sans faille. En moins de deux décennies, le domaine s'est hissé au tout premier rang de la Mittelhaardt et incarne, mieux que tout autre, le renouveau du grand Riesling sec allemand. Le domaine est l'un des trois héritiers du « partage Jordan » (Jordan'sche Teilung) qui, au XIXe siècle, divisa un vaste domaine de Deidesheim en trois maisons aujourd'hui réunies sous le même actionnariat mais gérées séparément. Du « Win Win », entrée de gamme d'un rapport qualité-prix imbattable, jusqu'aux GG les plus rares, la collection von Winning a raflé les meilleures notes des guides allemands et internationaux en quelques millésimes seulement. Le domaine, doté d'un bistro et d'un hôtel, est devenu une destination autant qu'une référence — symbole éclatant de l'ambition retrouvée de la Mittelhaardt.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "sauvignon",
+        "deidesheim",
+        "forst",
+        "pechstein",
+        "von-winning",
+        "fut"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-a-christmann",
+      "nom": "A. Christmann",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Gimmeldingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Königsbacher Idig",
+        "Gimmeldinger Mandelgarten",
+        "Ruppertsberger Reiterpfad"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Gimmeldingen, à l'extrémité sud de la Mittelhaardt, le domaine A. Christmann est l'un des plus respectés du Pfalz, mené par Steffen Christmann — longtemps président du VDP, l'association des grands domaines allemands — et sa fille Sophie Christmann, qui incarne la relève. Cette double présence à la tête du domaine et à la tête du VDP a fait de la famille une voix majeure dans la définition de ce qu'est aujourd'hui un grand cru allemand. Conduit en biodynamie, le domaine concentre son travail sur les meilleurs terroirs autour de Königsbach, de Gimmeldingen et de Ruppertsberg. Son site phare est le Königsbacher Idig, coteau calcaire qui donne des Rieslings — mais aussi des Spätburgunder — d'une profondeur et d'une salinité remarquables, comptant parmi les secs les plus complets de la région. Le style Christmann recherche la précision, la finesse et la transparence du terroir, par des vinifications traditionnelles et un grand respect du raisin. Les Grosses Gewächs, secs et tendus, possèdent une trame minérale et une capacité de garde qui les distinguent. Le domaine produit aussi de très beaux Pinots Noirs, confirmant la vocation du calcaire de la Mittelhaardt pour les cépages bourguignons. Entre engagement biodynamique, rôle institutionnel de premier plan et exigence qualitative constante, A. Christmann illustre la maturité d'un Pfalz qui se pense désormais en termes de terroir, et figure parmi les valeurs les plus sûres du Riesling sec allemand. La famille, installée à Gimmeldingen depuis le XVIe siècle, a joué un rôle décisif dans la mise en place de la pyramide qualitative du VDP, dont Steffen Christmann a longtemps été le président : on lui doit en grande partie la reconnaissance des Grosse Lage, Erste Lage et autres échelons qui structurent aujourd'hui le grand vin allemand. Sophie Christmann incarne désormais une relève engagée, fidèle à la biodynamie et au calcaire de l'Idig. Entre influence institutionnelle et excellence concrète, A. Christmann conjugue la théorie et la pratique du terroir comme peu de domaines en Allemagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "spaetburgunder",
+        "biodynamie",
+        "gimmeldingen",
+        "idig",
+        "christmann"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-mueller-catoir",
+      "nom": "Müller-Catoir",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Haardt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Rieslaner",
+        "Scheurebe",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Haardter Bürgergarten",
+        "Gimmeldinger Mandelgarten"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Haardt, sur les hauteurs de Neustadt, Müller-Catoir est un domaine historique et une référence aromatique unique en Allemagne. Fondé au début du XVIIIe siècle, il s'est forgé une réputation hors du commun non seulement sur le Riesling, mais aussi — fait rare — sur des cépages souvent négligés ailleurs : le Rieslaner et la Scheurebe, qu'il porte à un niveau d'intensité et de pureté inégalé. Le domaine exploite notamment le Haardter Bürgergarten (et sa parcelle « Im Breumel »), le Herzog et le Herrenletten, sur des sols de grès coloré et de lœss. De ces terroirs naissent des vins d'une concentration aromatique spectaculaire, mais toujours portés par une acidité vibrante et une trame saline qui leur évitent toute lourdeur. La signature Müller-Catoir tient à cette alliance de puissance et de précision : des Rieslings secs cristallins et profonds, des Weissburgunder d'une grande race, et ces Rieslaner et Scheurebe nobles qui comptent parmi les sommets de leur catégorie dans le monde. Conduit avec une grande rigueur, le domaine a traversé les décennies en restant fidèle à un style à la fois opulent et tendu, qui en fait l'une des adresses les plus identifiables du Pfalz. Pilier de la Mittelhaardt et gardien d'une certaine idée de l'expression aromatique du terroir, Müller-Catoir demeure une référence incontournable, citée parmi les tout meilleurs domaines d'Allemagne. Le style moderne du domaine doit beaucoup au légendaire maître de chai Hans-Günter Schwarz, dont la philosophie de « négligence contrôlée » — laisser le vin se faire avec un minimum d'intervention — a essaimé dans tout le vignoble allemand et formé toute une génération de vignerons. Cet héritage, perpétué par la famille Catoir, fait de Müller-Catoir un domaine-école autant qu'un grand cru. Ses Rieslaner et Scheurebe nobles, en particulier, demeurent des monuments rares d'un savoir-faire que presque plus personne ne maîtrise à ce niveau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "rieslaner",
+        "scheurebe",
+        "haardt",
+        "buergergarten",
+        "mueller-catoir"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-oekonomierat-rebholz",
+      "nom": "Ökonomierat Rebholz",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Siebeldingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Birkweiler Kastanienbusch",
+        "Siebeldinger Im Sonnenschein",
+        "Birkweiler Mandelberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Siebeldingen, au cœur de la Südpfalz, Ökonomierat Rebholz est l'un des plus grands domaines d'Allemagne et le véritable « architecte » de la renommée du sud du Pfalz. Mené par Hansjörg Rebholz, en biodynamie, il s'est bâti une réputation mondiale sur une philosophie radicale : des vins secs, vinifiés sans le moindre sucre résiduel, sur tous les cépages, pour une expression la plus pure possible du terroir. Le domaine exploite des terroirs d'une grande diversité géologique : le Birkweiler Kastanienbusch, coteau d'altitude sur schiste rouge volcanique (Rotliegendes), qui donne des Rieslings tendus et salins de très grande garde ; le Siebeldinger Im Sonnenschein, dont la parcelle « Ganshorn » est emblématique ; et le Birkweiler Mandelberg (calcaire), terre d'élection d'un Weissburgunder (Pinot Blanc) considéré comme l'un des plus complets d'Allemagne. Rebholz est aussi une référence majeure pour le Spätburgunder (Pinot Noir), avec ses cuvées « R » d'une finesse bourguignonne, confirmant la vocation du sud du Pfalz pour les cépages nobles. Le style maison privilégie la précision, la minéralité et la droiture, sans la moindre concession à la facilité — des vins parfois austères dans leur jeunesse mais d'une profondeur et d'une longévité exceptionnelles. Pionnier du sec et de la biodynamie, Ökonomierat Rebholz a montré la voie à toute une génération de vignerons de la Südpfalz et reste l'une des signatures les plus admirées du vin allemand. La philosophie du sec n'est pas une mode récente chez les Rebholz : dès les années 1920-1930, l'aïeul Eduard Rebholz — « Ökonomierat » — défendait, à contre-courant de toute l'Allemagne d'alors, des vins entièrement secs et sans artifice, jugés presque hérétiques à l'époque. Hansjörg Rebholz a prolongé et porté à son sommet cette vision familiale. Entre le schiste rouge du Kastanienbusch, le calcaire du Mandelberg et la rigueur biodynamique, le domaine offre l'une des lectures les plus pures et les plus intellectuelles du terroir allemand, et continue d'inspirer toute la Südpfalz.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "weissburgunder",
+        "spaetburgunder",
+        "biodynamie",
+        "siebeldingen",
+        "kastanienbusch",
+        "rebholz"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-friedrich-becker",
+      "nom": "Friedrich Becker",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Schweigen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schweigener Sonnenberg",
+        "Schweigener Kammerberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Schweigen, à l'extrême sud du Pfalz, à la frontière même avec l'Alsace, Friedrich Becker est la référence absolue du Spätburgunder (Pinot Noir) en Allemagne. Le domaine doit sa renommée à Fritz Becker, qui a démontré dès les années 1980-1990 que l'Allemagne pouvait produire de grands Pinots Noirs ; son fils, Friedrich Becker junior, en assure aujourd'hui la conduite dans la même quête d'excellence. La singularité du domaine tient à sa géographie : une partie de ses meilleures vignes — sur les grands lieux-dits du Sonnenberg, du Kammerberg et de Sankt Paul, sur calcaire coquillier (Muschelkalk) — se trouve en réalité de l'autre côté de la frontière, en territoire français, héritage d'une histoire régionale mouvementée. Les Spätburgunder de Becker, élevés à la bourguignonne, sont profonds, racés et taillés pour une très longue garde ; ils figurent régulièrement au sommet des classements des meilleurs rouges allemands et soutiennent la comparaison avec de grands bourgognes. Le domaine produit aussi d'excellents Weissburgunder et Rieslings. Cette double identité — frontalière, franco-allemande, et résolument tournée vers le Pinot Noir dans un pays de Riesling — fait de Friedrich Becker un domaine à part. Pionnier et maître incontesté du grand Pinot Noir allemand, il a ouvert la voie à toute la nouvelle génération de vignerons rouges du pays. Le domaine est aussi célèbre pour son étiquette ornée d'un renard, devenue un symbole pour les amateurs de grand Pinot Noir allemand. Les meilleures cuvées de Spätburgunder — du Sonnenberg, du Kammerberg ou de Sankt Paul — s'échangent à des prix dignes des grands bourgognes et figurent régulièrement dans les sélections internationales des meilleurs rouges du pays. Le passage de témoin entre Fritz Becker et son fils s'est fait sans rupture de niveau, confirmant Schweigen comme la capitale allemande du Pinot Noir et le domaine comme son ambassadeur le plus illustre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "spaetburgunder",
+        "pinot-noir",
+        "calcaire",
+        "schweigen",
+        "sonnenberg",
+        "becker",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-koehler-ruprecht",
+      "nom": "Koehler-Ruprecht",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Kallstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Kallstadter Saumagen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Kallstadt, sur la Mittelhaardt, Koehler-Ruprecht est un domaine culte, gardien d'une tradition que presque plus personne ne perpétue. Fondé vers 1700, il fut porté au rang d'icône du Riesling allemand par Bernd Philippi, qui en prit la tête au milieu des années 1980 : un vigneron « fièrement démodé », qui n'eut jamais à renier les modes puisqu'il les ignorait. Depuis 2012, après le départ de Philippi — qui a vendu le domaine à la famille américaine Sauvage —, c'est Dominik Sona, arrivé en 2008, qui en perpétue scrupuleusement l'esprit. Le cœur du domaine est le Kallstadter Saumagen, amphithéâtre de calcaire coquillier considéré comme le meilleur site de Kallstadt et l'un des plus grands terroirs d'Allemagne. Sur environ douze hectares et demi de sols calcaires, les raisins sont vendangés à la main et vinifiés sans artifice. La signature Koehler-Ruprecht est intemporelle : des Rieslings secs élevés longuement en vieux foudres, sans technologie ni esbroufe, dont les sélections « R » (Auslese trocken) atteignent une concentration et une longévité quasi infinies. Le domaine produit aussi un Spätburgunder dans la même veine classique. À rebours de toute modernité, fidèle à des méthodes éprouvées, Koehler-Ruprecht cultive une intransigeance qui en fait un objet de dévotion pour les amateurs en quête de Rieslings secs de garde et de vins « vrais ». Mémoire vivante du grand Riesling sec allemand, le domaine demeure, par son refus des modes, l'une des adresses les plus singulières et les plus respectées du Pfalz. La méthode est d'une orthodoxie absolue : pas de chaptalisation forcée, pas de levures industrielles, des fermentations longues et des élevages patients en foudres, et une politique de garde à contre-courant — les grands « R » sont souvent commercialisés après des années de cave. Le domaine produit aussi un Spätburgunder « R » de facture classique très recherché. Cette intransigeance, héritée de Bernd Philippi et fidèlement maintenue, vaut à Koehler-Ruprecht un statut de domaine-culte auprès des sommeliers et collectionneurs du monde entier, pour qui le Saumagen reste l'un des plus grands terroirs de Riesling sec d'Allemagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "spaetburgunder",
+        "calcaire",
+        "kallstadt",
+        "saumagen",
+        "koehler-ruprecht",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-reichsrat-von-buhl",
+      "nom": "Reichsrat von Buhl",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Deidesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Kirchenstück",
+        "Forster Pechstein",
+        "Forster Ungeheuer",
+        "Ruppertsberger Reiterpfad"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Deidesheim, sur la Mittelhaardt, Reichsrat von Buhl est l'un des domaines les plus prestigieux et les plus historiques du Pfalz. Fondé en 1849, il est l'un des trois domaines issus de la division de l'ancien domaine Jordan (avec Bassermann-Jordan et l'actuel von Winning) et appartient aujourd'hui au groupe Niederberger, qui le laisse opérer de façon autonome. Sur quelque cinquante hectares, von Buhl possède des parcelles dans les plus grands crus de Forst et de Deidesheim — Kirchenstück, Jesuitengarten, Pechstein, Reiterpfad, Ungeheuer. Conduit en agriculture biologique certifiée, le domaine est aussi l'un des tout meilleurs producteurs de Sekt d'Allemagne, élaboré en méthode traditionnelle. Le style maison, terroir-driven et intemporel, privilégie la pureté, la minéralité et la fraîcheur, dans des Riesling secs racés et de garde. Riche d'une gloire ancienne — un Riesling von Buhl fut servi à l'inauguration du canal de Suez en 1869 —, le domaine demeure une référence du Riesling sec et du grand Sekt de la Mittelhaardt. Après l'ère marquante du chef de cave Mathieu Kauffmann, venu de Champagne, le domaine est aujourd'hui piloté par Monika Schmid à la direction et Simone Frigerio à la vinification. Tous deux poursuivent une quête d'excellence, confirmant von Buhl parmi les grands noms du Riesling et du Sekt allemands.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "deidesheim",
+        "forst",
+        "von-buhl",
+        "sekt"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-geheimer-rat-dr-von-bassermann-jordan",
+      "nom": "Geheimer Rat Dr. von Bassermann-Jordan",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Deidesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Kirchenstück",
+        "Deidesheimer Hohenmorgen",
+        "Deidesheimer Kalkofen",
+        "Deidesheimer Kieselberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Deidesheim, Geheimer Rat Dr. von Bassermann-Jordan est l'un des domaines les plus anciens et les plus emblématiques du Pfalz, lui aussi issu de la division historique du domaine Jordan et aujourd'hui propriété du groupe Niederberger. Le domaine possède un parcellaire d'exception dans les plus grands crus de Forst — Kirchenstück, Jesuitengarten, Pechstein — ainsi qu'à Deidesheim (Hohenmorgen, Kalkofen) et Ruppertsberg. De ces terroirs intensément typés naissent des Riesling secs classiques, profonds et minéraux, fidèles à la grande tradition de la Mittelhaardt. Le style Bassermann-Jordan recherche l'élégance, la structure et l'expression du terroir, avec des Grosses Gewächs de belle garde. Doté de caves voûtées historiques et d'un riche patrimoine (la famille fut aussi à l'origine de travaux pionniers sur l'histoire du vin allemand), le domaine demeure un pilier du Riesling sec du Pfalz. La famille Bassermann-Jordan a aussi marqué l'histoire du vin allemand par ses travaux érudits, notamment ceux de Friedrich von Bassermann-Jordan, auteur d'ouvrages de référence. Doté d'un riche patrimoine et de caves historiques, le domaine demeure l'un des piliers les plus respectés de Deidesheim et de la Mittelhaardt.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "deidesheim",
+        "forst",
+        "bassermann-jordan",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-knipser",
+      "nom": "Knipser",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Laumersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Laumersheimer Kirschgarten",
+        "Großkarlbacher Burgweg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Laumersheim, dans le nord du Pfalz, le domaine Knipser est une institution, menée par les frères Werner et Volker Knipser et la génération suivante. Pionniers de l'élevage en barrique en Allemagne dès les années 1980, les Knipser ont démontré que le pays pouvait produire de grands vins rouges. Le domaine est célèbre pour ses Spätburgunder, sa « Cuvée X » d'inspiration bordelaise et ses Syrah, mais aussi pour ses Riesling secs de premier ordre, issus de grands coteaux calcaires comme le Laumersheimer Kirschgarten, le Steinbuckel et le Mandelpfad. La gamme, large et ambitieuse, couvre le blanc comme le rouge au plus haut niveau. Le style Knipser conjugue puissance, structure et précision, dans des vins de garde d'une grande constance. Référence majeure du nord du Pfalz et du vin rouge allemand, Knipser demeure l'un des domaines les plus complets et les plus respectés du pays. La nouvelle génération, autour de Stephan et Sabine Knipser, perpétue et affine ce travail d'orfèvre sur le blanc comme sur le rouge. Avec une gamme d'une ampleur et d'une régularité rares, et des cuvées de garde recherchées, Knipser s'est durablement installé parmi l'élite viticole allemande.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "rouge",
+        "laumersheim",
+        "knipser",
+        "barrique"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-philipp-kuhn",
+      "nom": "Philipp Kuhn",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Laumersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Laumersheimer Kirschgarten",
+        "Großkarlbacher Burgweg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Laumersheim, dans le nord du Pfalz, Philipp Kuhn est l'un des vignerons les plus talentueux de sa génération. Sur des coteaux calcaires de premier ordre — Laumersheimer Kirschgarten, Steinbuckel —, il produit des Riesling secs précis, salins et profonds, ainsi que d'excellents vins rouges, au premier rang desquels le Spätburgunder. Le domaine, ambitieux et soigné, décline une gamme étendue, du vin de soif accessible aux Grosses Gewächs de garde, dans un style net et abouti. La rigueur du travail au vignoble et en cave assure une grande régularité, saluée par toute la critique. Polyvalent et exigeant, Philipp Kuhn excelle aussi bien dans le Riesling que dans les Burgundern et les cépages rouges. Valeur sûre du nord du Pfalz, le domaine compte parmi les adresses les plus fiables et les plus complètes de la région. Salué chaque année par la critique, le domaine s'est hissé parmi les meilleurs du nord du Pfalz grâce à une exigence constante et une lecture fine de ses terroirs calcaires. Du Riesling sec aux grands Spätburgunder, Philipp Kuhn signe une gamme d'une cohérence et d'une profondeur remarquables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "laumersheim",
+        "philipp-kuhn",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-rings",
+      "nom": "Rings",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Freinsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kallstadter Saumagen",
+        "Ungsteiner Weilberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Freinsheim, dans le nord du Pfalz, les frères Steffen et Andreas Rings ont transformé en une dizaine d'années le domaine familial en l'une des plus grandes étoiles montantes d'Allemagne. Ils se sont notamment imposés comme des références du Spätburgunder (Pinot Noir), élevé avec une grande finesse. Le domaine travaille de grands coteaux calcaires — Kallstadter Saumagen, Weilberg, Kirschgarten — d'où naissent aussi des Riesling secs salins, tendus et de belle garde. La gamme, du rouge au blanc, témoigne d'une exigence et d'une régularité remarquables. Le style Rings recherche l'élégance, la fraîcheur et la précision, dans des vins qui ont rapidement conquis la critique et les amateurs. En pleine ascension, le domaine est aujourd'hui cité parmi les meilleurs du Pfalz, tant pour ses rouges que pour ses Riesling, et incarne la vitalité de la nouvelle génération de la région. Membre du VDP, le domaine a connu une ascension fulgurante, salué par toute la critique allemande et internationale. Avec leurs Spätburgunder racés et leurs Riesling de calcaire, Steffen et Andreas Rings sont devenus l'un des symboles de l'excellence retrouvée du nord du Pfalz.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "spaetburgunder",
+        "riesling",
+        "bio",
+        "freinsheim",
+        "rings",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-dr-wehrheim",
+      "nom": "Dr. Wehrheim",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Birkweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Birkweiler Kastanienbusch",
+        "Birkweiler Mandelberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Birkweiler, dans la Südpfalz, le domaine Dr. Wehrheim, mené par Karl-Heinz Wehrheim et son fils Franz, est une référence du sud du Pfalz. Il exploite deux grands terroirs aux géologies opposées : le Birkweiler Kastanienbusch, sur schiste rouge volcanique, et le Mandelberg, sur calcaire. Le domaine excelle aussi bien dans le Riesling sec — tendu et minéral sur le Kastanienbusch — que dans les Burgundern, en particulier le Weissburgunder (Pinot Blanc), dont il est l'une des meilleures adresses d'Allemagne. La gamme couvre également de beaux Spätburgunder. Le style Wehrheim privilégie la pureté, la précision et l'expression du terroir, dans des vins secs racés et de garde. Discret mais constant au sommet, Dr. Wehrheim compte parmi les piliers du renouveau de la Südpfalz et une valeur sûre pour le Riesling comme pour les cépages bourguignons. Karl-Heinz Wehrheim, longtemps figure du renouveau de la Südpfalz, a transmis à son fils Franz un domaine au sommet de son art. La capacité à exceller sur deux géologies opposées — schiste volcanique et calcaire — fait de Dr. Wehrheim l'une des adresses les plus complètes du sud du Pfalz.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "birkweiler",
+        "kastanienbusch",
+        "wehrheim"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-georg-mosbacher",
+      "nom": "Georg Mosbacher",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Forst",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Pechstein",
+        "Forster Ungeheuer",
+        "Forster Freundstück"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Forst, au cœur de la Mittelhaardt, le domaine Georg Mosbacher est mené par Sabine Mosbacher-Düringer et Jürgen Düringer, et compte parmi les meilleurs spécialistes des grands crus de Forst. Il possède des parcelles dans les lieux-dits les plus prestigieux du village — Freundstück, Ungeheuer, Pechstein, Kirchenstück —, dont les sols de basalte et d'argile donnent des Riesling secs d'une grande minéralité et d'une belle profondeur. Le domaine décline toute la gamme, du Riesling d'entrée d'un excellent rapport qualité-prix aux Grosses Gewächs de garde. Le style Mosbacher recherche la précision, la salinité et la pureté, dans des vins secs racés et réguliers. Valeur sûre de Forst, le domaine offre l'une des plus belles lectures des terroirs de basalte de la Mittelhaardt et figure parmi les références fiables du Riesling sec du Pfalz. Régulièrement primé, le domaine offre un rapport qualité-prix exemplaire sur ses cuvées d'entrée comme une réelle profondeur sur ses Grosses Gewächs de Forst. Sabine Mosbacher-Düringer et Jürgen Düringer comptent parmi les plus fidèles interprètes des terroirs de basalte de la Mittelhaardt.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "forst",
+        "pechstein",
+        "mosbacher",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-pfeffingen-fuhrmann-eymael",
+      "nom": "Pfeffingen (Fuhrmann-Eymael)",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Ungstein",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Scheurebe"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ungsteiner Weilberg",
+        "Ungsteiner Herrenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ungstein, près de Bad Dürkheim, le domaine Pfeffingen (Fuhrmann-Eymael), mené par Jan Eymael, est une maison familiale réputée du nord de la Mittelhaardt. Il exploite de beaux coteaux, dont l'Ungsteiner Weilberg et le Herrenberg, sur sols calcaires et gréseux. Le domaine s'est notamment fait une spécialité de la Scheurebe, dont il est l'une des meilleures expressions d'Allemagne, à côté de ses Riesling secs et fruités de belle facture. La gamme conjugue ainsi tradition aromatique et précision moderne. Le style Pfeffingen privilégie la finesse, la fraîcheur et l'équilibre, dans des vins purs et d'un bon rapport qualité-prix. Fidèle et régulier, le domaine compte parmi les valeurs sûres du secteur de Bad Dürkheim et un ambassadeur reconnu de la Scheurebe. Transmis de génération en génération, le domaine a su préserver son savoir-faire sur la Scheurebe tout en élevant ses Riesling secs au niveau des meilleurs du secteur. Jan Eymael y perpétue un style fin et équilibré, qui fait de Pfeffingen une valeur sûre et attachante du nord de la Mittelhaardt.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "scheurebe",
+        "ungstein",
+        "weilberg",
+        "pfeffingen"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-bergdolt-klostergut-st-lamprecht",
+      "nom": "Bergdolt (Klostergut St. Lamprecht)",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Duttweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Duttweiler Kalkberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Duttweiler, près de Neustadt, le domaine Bergdolt (Klostergut St. Lamprecht) est installé dans un ancien domaine monastique et compte parmi les meilleures adresses d'Allemagne pour le Weissburgunder (Pinot Blanc). Sur des coteaux comme le Duttweiler Mandelberg, le domaine produit des Weissburgunder racés et profonds, parmi les plus aboutis du pays, ainsi que de beaux Riesling secs et des Spätburgunder. Le travail soigné et la fidélité aux cépages bourguignons en font une référence pour ce style. Le style Bergdolt recherche la structure, la pureté et la garde, dans des vins blancs secs d'une grande tenue. Discret mais respecté, le domaine illustre la vocation du Pfalz pour les grands Burgundern blancs et demeure une valeur sûre pour les amateurs de Weissburgunder de terroir. Installé dans un ancien domaine monastique chargé d'histoire, Bergdolt a contribué à établir la réputation du Weissburgunder allemand de garde. Ses blancs secs, structurés et profonds, comptent parmi les plus aboutis du pays et confirment la vocation du Pfalz pour les grands Burgundern.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "pinot-blanc",
+        "riesling",
+        "duttweiler",
+        "bergdolt"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-juelg",
+      "nom": "Jülg",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Schweigen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sankt Paul (Schweigen)",
+        "Schweigener Sonnenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Schweigen, à l'extrême sud du Pfalz et à la frontière de l'Alsace, le domaine Jülg, mené par Johannes Jülg, est l'une des étoiles montantes de la Südpfalz. Comme certains de ses voisins, il possède des parcelles de l'autre côté de la frontière, en territoire français, sur de grands coteaux calcaires comme le Sonnenberg. Le domaine s'est fait un nom avec ses Pinots — Spätburgunder élégants d'inspiration bourguignonne — et ses Weissburgunder, mais aussi avec ses Riesling secs et ses Sekt soignés. La gamme, précise et moderne, témoigne d'une ambition croissante. Le style Jülg privilégie la finesse, la fraîcheur et l'expression du calcaire, dans des vins racés et de garde. En pleine ascension critique, Jülg illustre le dynamisme de la Südpfalz frontalière et compte parmi les adresses les plus prometteuses de la région. Porté par la nouvelle génération, le domaine a connu une montée en gamme remarquée, saluée par la critique. À cheval sur la frontière franco-allemande, Jülg illustre la singularité de Schweigen et compte parmi les talents les plus prometteurs de la Südpfalz pour le Pinot comme pour le Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "schweigen",
+        "sankt-paul",
+        "juelg",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-bernhart",
+      "nom": "Bernhart",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Schweigen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schweigener Sonnenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Schweigen, à l'extrême sud du Pfalz, le domaine Bernhart est l'une des bonnes adresses de ce secteur frontalier réputé pour ses cépages bourguignons. Comme ses voisins, il possède des parcelles de grands coteaux calcaires situées en partie de l'autre côté de la frontière, notamment sur le Sonnenberg. Le domaine s'est fait connaître pour ses Spätburgunder (Pinot Noir) de belle facture, structurés et de garde, ainsi que pour ses Riesling secs et ses Burgundern blancs. Le travail soigné et la fidélité au terroir confèrent aux vins finesse et caractère. Le style Bernhart conjugue tradition et précision, dans des vins racés d'un bon rapport qualité-prix. Discret mais sérieux, le domaine compte parmi les valeurs sûres de la Südpfalz pour le grand Pinot Noir et le Riesling de calcaire. Travaillant des coteaux partagés avec l'Alsace, le domaine perpétue la tradition rouge de Schweigen avec des Spätburgunder de belle tenue. Bernhart compte parmi ces adresses discrètes de la Südpfalz frontalière qui font la réputation du secteur pour le grand Pinot Noir de calcaire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "schweigen",
+        "sonnenberg",
+        "bernhart",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-gies-dueppel",
+      "nom": "Gies-Düppel",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Birkweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Birkweiler Kastanienbusch",
+        "Birkweiler Mandelberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Birkweiler, dans la Südpfalz, le domaine Gies-Düppel, mené par Volker Gies, s'est imposé comme l'une des bonnes adresses montantes du secteur. Il travaille notamment le grand coteau de schiste rouge du Birkweiler Kastanienbusch, ainsi que des sols calcaires. Le domaine produit des Riesling secs précis, tendus et minéraux, ainsi que de beaux Burgundern (Weissburgunder, Grauburgunder, Spätburgunder), dans un style net et moderne. Le rapport qualité-prix, souvent remarquable, lui a valu une reconnaissance critique croissante. Le style Gies-Düppel privilégie la fraîcheur, la salinité et la pureté, dans des vins secs droits et bien faits. En progression constante, le domaine illustre le dynamisme de la Südpfalz et compte parmi les valeurs sûres et abordables de la région. Salué pour son excellent rapport qualité-prix, le domaine s'est imposé comme une référence accessible de la Südpfalz. Volker Gies y signe des Riesling secs tendus et de beaux Burgundern, confirmant le dynamisme d'un secteur — Birkweiler — devenu l'un des plus excitants du sud du Pfalz.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "weissburgunder",
+        "birkweiler",
+        "kastanienbusch",
+        "gies-dueppel"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-kranz",
+      "nom": "Kranz",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Ilbesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Ilbesheimer Kalmit"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ilbesheim, dans le sud de la Südpfalz, un peu à l'écart de la Route des Vins, le domaine Kranz s'est hissé en deux décennies parmi les valeurs montantes du Pfalz, autour d'un terroir qu'il a lui-même contribué à faire reconnaître : la Kleine Kalmit. L'histoire familiale, commencée modestement en 1948 comme producteur de vin en vrac, a basculé dans les années 1970 lorsque la famille s'est mise à mettre en bouteille et à vendre son propre vin ; c'est aujourd'hui Boris Kranz, avec son épouse Kerstin et leur fils Xaver (diplômé de Geisenheim), qui mène le domaine, désormais membre du VDP et conduit en bio. La Kleine Kalmit est une colline de 270 mètres née de l'effondrement du fossé rhénan à l'ère tertiaire ; son sous-sol de calcaire à escargots (Landschneckenkalk), coiffé de lœss, de marnes et de colluvions, en fait un terroir singulier, classé en Einzellage seulement en 2008 — une reconnaissance rare et tardive pour laquelle la famille s'est battue pendant des années. Sur ces sols calcaires, Kranz produit des Rieslings précis, des Weissburgunder élégants et des Spätburgunder de caractère, dont plusieurs en Grosses Gewächs (Kalmit, Kirchberg). Le domaine est aussi l'une des meilleures adresses d'Allemagne pour l'Auxerrois, cépage confidentiel. Le style Kranz se veut authentique, sans fioritures et taillé pour la garde : des vins qui demandent du temps pour se révéler, marqués par la clarté et la salinité du calcaire. La nouvelle cave et l'arrivée de Xaver accompagnent une montée en gamme constante. Resté discret faute de lieu-dit historiquement célèbre, Kranz illustre parfaitement cette Südpfalz montante qui, à force de patience et de précision, impose ses propres grands crus. Au-delà des Grosses Gewächs du Riesling, du Weissburgunder et du Spätburgunder, le domaine s'est fait une spécialité de l'Auxerrois — cépage rare et confidentiel dont il est l'une des toutes meilleures expressions allemandes — et a lancé une cuvée « Prestige » au profil fumé, affinée trente-six mois sur lies. L'arrivée de Xaver Kranz, formé à Geisenheim, et la construction d'une nouvelle cave accompagnent une montée en gamme régulière. Discret mais ambitieux, Kranz prouve qu'un grand terroir peut encore naître loin des projecteurs, à force de patience et de précision.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "ilbesheim",
+        "kalmit",
+        "kranz"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-josef-biffar",
+      "nom": "Josef Biffar",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Deidesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Deidesheimer Kieselberg",
+        "Wachenheimer Gerümpel"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Deidesheim, le domaine Josef Biffar est une maison historique relancée à partir des années 2010 par la famille japonaise Tokuoka, qui avait auparavant exploité le domaine Reichsrat von Buhl pendant un quart de siècle. C'est aujourd'hui Fumiko Tokuoka, formée à l'œnologie à Geisenheim, qui dirige le domaine, épaulée par une équipe expérimentée. Le domaine exploite de beaux coteaux autour de Deidesheim, Wachenheim et Ruppertsberg, dont il tire des Riesling secs précis et minéraux, ainsi que d'élégants Sekt. Le siège, « Im Katharinenbild », abrite aussi un restaurant japonais qui marie cuisine nippone et vins du domaine. Le style Biffar recherche la pureté et la finesse, dans des Riesling secs racés fidèles à la tradition de la Mittelhaardt. Belle renaissance d'un nom ancien, Josef Biffar illustre l'ouverture internationale du Pfalz et compte parmi les adresses intéressantes de Deidesheim. Cette renaissance, portée par Fumiko Tokuoka et héritière du long passage de sa famille à von Buhl, conjugue tradition allemande et sensibilité japonaise. Avec ses Riesling secs et ses Sekt soignés, Josef Biffar illustre l'ouverture internationale de Deidesheim et la vitalité de son terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "deidesheim",
+        "biffar"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-eugen-mueller",
+      "nom": "Eugen Müller",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Forst",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Pechstein",
+        "Forster Ungeheuer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Forst, au cœur de la Mittelhaardt, le domaine familial Eugen Müller exploite des parcelles dans quelques-uns des plus grands crus du village — Kirchenstück, Pechstein, Ungeheuer, Jesuitengarten. Il produit une large gamme de Riesling, du sec au liquoreux noble, dans un style fidèle à la tradition de Forst, marqué par la minéralité du basalte. Le domaine offre un bon rapport qualité-prix et une porte d'entrée accessible vers les terroirs prestigieux du village. Fiable et bien ancré, Eugen Müller compte parmi les bonnes adresses familiales de Forst pour découvrir le Riesling de la Mittelhaardt. Le domaine, qui dispose aussi d'un hôtel et d'un accueil œnotouristique, contribue à faire vivre le terroir de Forst auprès d'un large public.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "forst",
+        "eugen-mueller",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-theo-minges",
+      "nom": "Theo Minges",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Flemlingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Gleisweiler Hölle",
+        "Burrweiler Schäwer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Flemlingen, dans la Südpfalz, le domaine Theo Minges propose une gamme étendue de Riesling, du sec au liquoreux, ainsi que de beaux Burgundern, issus de coteaux du secteur de Gleisweiler et Burrweiler. Le domaine, attentif à la qualité et au rapport qualité-prix, décline des vins purs et bien faits, du registre fruité au sec minéral, dans un style accessible et soigné. Régulier et apprécié, Theo Minges compte parmi les bonnes adresses de la Südpfalz, offrant une belle diversité de styles à des prix mesurés. Attentif à une viticulture soignée, le domaine séduit par la diversité de sa gamme et la sincérité de ses vins, du fruité gourmand au sec minéral.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "suedpfalz",
+        "flemlingen",
+        "minges"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-wageck-pfaffmann",
+      "nom": "Wageck-Pfaffmann",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Bissersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dirmsteiner Mandelpfad"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bissersheim, dans le nord du Pfalz, le domaine Wageck-Pfaffmann s'est imposé comme l'une des adresses montantes du secteur, sur des sols en partie calcaires propices aux cépages bourguignons. Le domaine produit de beaux Burgundern (Weissburgunder, Spätburgunder) et des Riesling secs, dans un style moderne et précis, avec un bon rapport qualité-prix. La nouvelle génération a nettement élevé le niveau ces dernières années. Dynamique et en progression, Wageck-Pfaffmann illustre le potentiel du nord du Pfalz et compte parmi les domaines à suivre de la région. Porté par une nouvelle génération ambitieuse, le domaine s'affirme comme l'un des noms à suivre du nord du Pfalz pour les Burgundern et le Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "bissersheim",
+        "wageck"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-karl-schaefer",
+      "nom": "Karl Schaefer",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Bad Dürkheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dürkheimer Spielberg",
+        "Ungsteiner Weilberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bad Dürkheim, le domaine Karl Schaefer est une maison historique du nord de la Mittelhaardt, exploitant de beaux coteaux du secteur de Dürkheim et de Wachenheim. Il produit des Riesling classiques, du sec aux Prädikate, dans un style fidèle à la tradition régionale, privilégiant la finesse et l'équilibre. Le domaine, riche d'un long passé, demeure une adresse de référence pour le Riesling de Bad Dürkheim. Fiable et ancré dans son terroir, Karl Schaefer compte parmi les noms traditionnels du Pfalz, appréciés pour la régularité et l'authenticité de leurs vins. Témoin d'une longue tradition à Bad Dürkheim, le domaine perpétue un classicisme rassurant et propose des Riesling d'un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bad-duerkheim",
+        "karl-schaefer"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-markus-schneider",
+      "nom": "Markus Schneider",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Ellerstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ellerstadter Bubeneck"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ellerstadt, dans le nord du Pfalz, Markus Schneider est l'une des plus grandes réussites commerciales du vin allemand contemporain. Parti de presque rien, il a bâti en deux décennies un domaine de grande envergure, au style moderne et accessible. Sa cuvée rouge « Black Print » est devenue un phénomène, l'un des vins allemands les plus vendus, à côté d'une large gamme de blancs (dont un Sauvignon Blanc réputé) et de rouges. Le marketing audacieux et l'identité visuelle forte ont conquis un très large public, en Allemagne comme à l'export. Accessible et populaire, Markus Schneider illustre une autre facette du Pfalz : celle d'un vin moderne, gourmand et décomplexé, qui a su séduire une nouvelle génération d'amateurs. Derrière l'image décontractée, le domaine s'appuie sur un outil de production performant et une vraie maîtrise technique, qui en font l'une des marques les plus visibles du vin allemand contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "ellerstadt",
+        "markus-schneider",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-oliver-zeter",
+      "nom": "Oliver Zeter",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "commune": "Neustadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Sauvignon Blanc",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Basé dans le secteur de Neustadt, dans le Pfalz, Oliver Zeter s'est fait un nom comme l'un des spécialistes allemands du Sauvignon Blanc, cépage encore rare dans le pays, dont il propose des versions précises et aromatiques. Le domaine décline aussi de beaux Riesling et des vins rouges, dans un style moderne, net et accessible, qui a rapidement séduit un large public. L'approche, soignée et tournée vers la qualité, en a fait une marque appréciée et bien diffusée. Dynamique et identifiable, Oliver Zeter illustre l'ouverture du Pfalz à de nouveaux cépages et compte parmi les adresses modernes et populaires de la région. En misant sur des cépages et un style modernes, Oliver Zeter a su construire une marque forte et appréciée bien au-delà du Pfalz.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sauvignon",
+        "spaetburgunder",
+        "neustadt",
+        "oliver-zeter"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-pfalz-prod-lucashof",
+      "nom": "Lucashof",
+      "type": "domaine",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "commune": "Forst",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Forster Ungeheuer",
+        "Forster Pechstein"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Forst, au cœur de la Mittelhaardt, le domaine familial Lucashof exploite des parcelles dans de grands crus du village, notamment l'Ungeheuer et le Pechstein. Il produit des Riesling secs et fruités fidèles à la tradition de Forst, marqués par la minéralité du basalte, dans un style accessible et d'un bon rapport qualité-prix. Le domaine offre une porte d'entrée abordable vers les terroirs prestigieux du village. Fiable et bien ancré, Lucashof compte parmi les bonnes adresses familiales de Forst, appréciées pour la régularité et l'accessibilité de leurs Riesling de la Mittelhaardt. Le domaine offre une lecture accessible et conviviale des grands terroirs de Forst, appréciée des amateurs en quête de Riesling de la Mittelhaardt à prix doux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "forst",
+        "lucashof",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    }
+  ]
+}

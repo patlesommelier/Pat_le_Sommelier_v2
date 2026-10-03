@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "marche",
+  "region_label": "Marche (Italie)",
+  "source_file": "terroirs_marche.json",
+  "built_at": "2026-07-09",
+  "count": 15,
+  "items": [
+    {
+      "id": "it-marche-terr-verdicchio-dei-castelli-di-jesi",
+      "nom": "Verdicchio dei Castelli di Jesi",
+      "type": "appellation (DOC/DOCG)",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi (AN)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdicchio"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "argilo-calcaires, grès (arenaria) et collines marines",
+      "caracteristiques_rapides": "Le grand blanc des Marche, l'un des plus grands d'Italie : Verdicchio de Jesi, salin et rond sous l'influence maritime, du frais à la grande Riserva de garde (Bucci).",
+      "notes_objectives": "Le Verdicchio dei Castelli di Jesi est le grand blanc des Marche et l'un des plus grands d'Italie. Le Verdicchio, cépage autochtone considéré par l'ampélographe Ian D'Agata comme le plus grand cépage blanc autochtone d'Italie, trouve ici, sur les collines à l'ouest d'Ancône autour de la ville de Jesi, son terroir historique et le plus vaste.\n\nCette zone, la plus étendue et la plus connue des deux appellations du Verdicchio, s'étend sur des collines argilo-calcaires et gréseuses, à des altitudes de 100 à 500 mètres, sous une double influence : la fraîcheur des Apennins à l'ouest et la mer Adriatique à l'est. Il en résulte un Verdicchio au profil rond, ample et salin, marqué par une belle amertume noble en finale (la fameuse « amande » du Verdicchio) et des arômes d'agrumes, de fleurs blanches, d'anis et de fruits à noyau. Longtemps galvaudé — noyé dans la production de masse et la célèbre bouteille-amphore vendue au litre —, le Verdicchio a retrouvé ses lettres de noblesse grâce à des vignerons exigeants qui ont prouvé son potentiel. Car sa grande singularité est sa capacité de garde exceptionnelle : les meilleures cuvées, notamment la Castelli di Jesi Verdicchio Riserva (promue DOCG), vieillissent sur une à deux décennies et développent des notes de miel, de fruits secs et d'hydrocarbure dignes d'un grand Riesling. Bucci, Garofoli, Sartarelli, Andrea Felici ou Pievalta en sont les fers de lance.\n\nGrand blanc des Marche et l'un des plus grands d'Italie, le Verdicchio dei Castelli di Jesi est salin, rond et de garde sous l'influence maritime. C'est le terroir historique du plus grand cépage blanc autochtone italien.\n\nL'histoire du Verdicchio est celle d'un malentendu réparé. Dans les années 1970-80, la fameuse bouteille-amphore verte, imaginée pour évoquer les amphores étrusques, avait fait la fortune commerciale du cépage tout en l'enfermant dans l'image d'un blanc bon marché, léger et sans intérêt, servi dans les pizzerias du monde entier. Il a fallu la ténacité de quelques vignocteurs visionnaires, Ampelio Bucci en tête, pour prouver que le Verdicchio était en réalité l'un des plus grands cépages blancs d'Italie, capable de rivaliser avec les meilleurs par sa complexité et sa longévité. Servi sur les poissons et fruits de mer de l'Adriatique, le brodetto (soupe de poisson locale), les fritures ou une volaille, le Verdicchio de Jesi séduit d'abord par sa fraîcheur saline et sa finale d'amande ; mais ses meilleures cuvées, patientées en cave, se transforment en grands vins de garde aux notes de miel, de fruits secs et d'hydrocarbure. Cette double nature — vin de plaisir immédiat et vin de garde insoupçonné — fait toute la richesse de l'appellation. Vaste, diverse, portée par une nouvelle génération de vignerons exigeants et de plus en plus tournés vers le bio, elle est aujourd'hui reconnue comme l'un des plus beaux terroirs à blanc d'Italie, et le Verdicchio comme un trésor national trop longtemps sous-estimé.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "blanc",
+        "doc",
+        "docg",
+        "garde",
+        "maritime"
+      ],
+      "source": "decanter|vinous"
+    },
+    {
+      "id": "it-marche-terr-verdicchio-di-matelica",
+      "nom": "Verdicchio di Matelica",
+      "type": "appellation (DOC/DOCG)",
+      "region": "Marche",
+      "sous_region": "Matelica (MC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdicchio"
+      ],
+      "altitude": "~350-450 m",
+      "sols": "calcaires et sols riches en minéraux, vallée fermée",
+      "caracteristiques_rapides": "L'autre Verdicchio, plus rare et continental : à Matelica, en altitude, blanc tendu, minéral et vertical, de longue garde (Mirum), l'égal minéral de celui de Jesi.",
+      "notes_objectives": "Le Verdicchio di Matelica est l'autre visage du grand cépage blanc des Marche : plus rare, plus confidentiel et radicalement différent de celui de Jesi. Il est produit dans la vallée intérieure de Matelica, à l'ouest de la région, une enclave continentale cernée par les Apennins, loin de toute influence maritime.\n\nCette situation géographique unique est la clé de son caractère. Contrairement à la plupart des vallées des Marche, qui descendent vers l'Adriatique, celle de Matelica est orientée nord-sud et fermée, créant un climat continental marqué par de fortes amplitudes thermiques entre le jour et la nuit, et par des sols riches en minéraux hérités d'un ancien lac. Le Verdicchio y gagne en tension, en verticalité et en minéralité : un blanc plus tendu, plus austère et plus vibrant que celui de Jesi, à l'acidité vive et à la profonde salinité, doté d'une aptitude à la garde remarquable. La zone, minuscule et ne comptant qu'une poignée de producteurs, a néanmoins donné quelques-uns des plus grands Verdicchio d'Italie, au premier rang desquels le Mirum de La Monacesca, aux côtés de Bisci, Belisario ou Collestefano. La Verdicchio di Matelica Riserva bénéficie du statut DOCG. Souvent comparé au Verdicchio de Jesi comme le Barbaresco l'est au Barolo, celui de Matelica en est le pendant minéral et continental.\n\nL'autre Verdicchio, plus rare et continental : à Matelica, en altitude et à l'écart de la mer, il donne un blanc tendu, minéral et de longue garde (Mirum). C'est le pendant vertical et confidentiel du Verdicchio de Jesi.\n\nLe contraste entre les deux Verdicchio des Marche est l'un des plus fascinants d'Italie, et rappelle celui qui oppose deux grands crus voisins issus d'un même cépage. Là où Jesi, ouvert sur la mer, donne des vins ronds et salins, Matelica, enfermé dans sa vallée d'altitude, produit des blancs droits, tendus et minéraux, à la personnalité plus austère et plus verticale. La rareté de Matelica ajoute à son prestige : la zone est minuscule, ne compte qu'une poignée de producteurs, et sa production reste confidentielle face à l'immensité de Jesi. Pourtant, ses meilleurs vins atteignent des sommets. Servi sur des poissons, des crustacés, le vincisgrassi (la lasagne locale au ragù) ou une volaille, le Verdicchio de Matelica séduit par sa tension et sa profondeur, et se patine sur dix à quinze ans, développant une complexité et des notes d'hydrocarbure dignes d'un grand Riesling alsacien ou mosellan. Les fortes amplitudes thermiques de la vallée et ses sols anciens, hérités d'un lac préhistorique, sont la clé de cette minéralité. La Monacesca, avec son Mirum, a démontré au monde que Matelica méritait sa place parmi les grands blancs de garde d'Italie, faisant de cette petite vallée méconnue un terroir culte pour les amateurs de Verdicchio.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "matelica",
+        "verdicchio",
+        "blanc",
+        "doc",
+        "docg",
+        "minéral",
+        "continental",
+        "altitude"
+      ],
+      "source": "decanter|italiancookingandliving"
+    },
+    {
+      "id": "it-marche-terr-conero-rosso-conero",
+      "nom": "Conero (Rosso Conero)",
+      "type": "appellation (DOC/DOCG)",
+      "region": "Marche",
+      "sous_region": "Conero (AN)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "calcaires blancs du promontoire du Monte Conero, influence maritime",
+      "caracteristiques_rapides": "Le grand rouge de la côte : Montepulciano sur les calcaires du Monte Conero face à l'Adriatique, profond et de garde (Conero Riserva DOCG), le plus septentrional du cépage.",
+      "notes_objectives": "Le Conero, ou Rosso Conero, est le grand rouge de la côte des Marche, produit sur les pentes du Monte Conero, un spectaculaire promontoire calcaire qui domine l'Adriatique juste au sud d'Ancône. C'est ici que le Montepulciano — cépage roi des Abruzzes voisines — trouve sa limite septentrionale et l'une de ses plus belles expressions hors de sa région d'origine.\n\nSur les sols de calcaire blanc du Conero, sous l'influence maritime et le microclimat particulier de ce massif boisé, le Montepulciano (parfois complété d'un peu de Sangiovese) donne des rouges profonds, structurés et charnus, aux arômes de fruits noirs, d'épices et de notes balsamiques, avec une belle fraîcheur due à la proximité de la mer. Les meilleures cuvées, réunies sous la Conero Riserva (promue DOCG), sont des vins de longue garde, denses et racés, à l'image du Dorico de Moroder ou du Cùmaro d'Umani Ronchi. Le style, plus frais et plus élégant que les Montepulciano solaires du Sud, illustre le potentiel de ce cépage en climat maritime tempéré. C'est un accord idéal avec les viandes rouges, le gibier et les fromages affinés.\n\nGrand rouge de la côte des Marche, le Conero est un Montepulciano sur les calcaires du Monte Conero face à l'Adriatique, profond et de garde (Conero Riserva DOCG). C'est l'expression la plus septentrionale et fraîche du cépage.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "conero",
+        "montepulciano",
+        "rouge",
+        "doc",
+        "docg",
+        "maritime",
+        "garde"
+      ],
+      "source": "wine-searcher|italiancookingandliving"
+    },
+    {
+      "id": "it-marche-terr-rosso-piceno-piceno",
+      "nom": "Rosso Piceno (Piceno)",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Piceno (AP/FM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "argileux et argilo-sableux du sud des Marche",
+      "caracteristiques_rapides": "La plus vaste DOC des Marche : Montepulciano et Sangiovese en rouge fruité et charnu, du vin de plaisir au Rosso Piceno Superiore de garde, cœur du sud de la région.",
+      "notes_objectives": "Le Rosso Piceno, aujourd'hui souvent appelé simplement Piceno, est la plus vaste appellation des Marche, qui s'étend sur une grande partie du centre et du sud de la région. C'est le rouge de tous les jours de ces terres, mais aussi, dans ses meilleures versions, un vin de caractère.\n\nIl repose sur un assemblage de Montepulciano (majoritaire, qui apporte couleur, structure et fruit noir) et de Sangiovese (qui apporte fraîcheur et acidité), une combinaison qui donne des rouges équilibrés, fruités et charnus, aux arômes de cerise, de prune et d'épices. Selon le terroir et l'ambition du producteur, le Rosso Piceno va du vin gourmand et immédiat, à boire jeune, au Rosso Piceno Superiore, plus concentré et de garde, produit dans une zone plus restreinte du sud (autour d'Ascoli Piceno). Sur les sols argileux et argilo-sableux de ces collines, sous un climat méditerranéen, le cépage exprime générosité et rondeur. Des domaines comme Velenosi, Saladini Pilastri, Cocci Grifoni ou Ciù Ciù en sont les ambassadeurs. C'est un accord idéal avec les viandes, les charcuteries et la cuisine du sud des Marche.\n\nLa plus vaste DOC des Marche, le Rosso Piceno marie Montepulciano et Sangiovese en rouge fruité et charnu, du vin de plaisir au Superiore de garde. C'est le rouge emblématique du centre et du sud de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "piceno",
+        "montepulciano",
+        "sangiovese",
+        "rouge",
+        "doc"
+      ],
+      "source": "strictlywine|wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-offida",
+      "nom": "Offida",
+      "type": "appellation (DOCG)",
+      "region": "Marche",
+      "sous_region": "Piceno (AP/FM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pecorino",
+        "Passerina",
+        "Montepulciano"
+      ],
+      "altitude": "~100-450 m",
+      "sols": "argilo-calcaires du Piceno (Offida, Ripatransone)",
+      "caracteristiques_rapides": "La DOCG du sud des Marche : Pecorino et Passerina, blancs autochtones stars du renouveau, et un Rosso de Montepulciano, cœur qualitatif des cépages du Piceno.",
+      "notes_objectives": "L'Offida est la DOCG qualitative du sud des Marche, dans le Piceno, autour des villes d'Offida et de Ripatransone. Promue au rang de DOCG, elle consacre l'excellence des cépages autochtones du Piceno, en particulier les deux blancs stars du renouveau régional.\n\nL'Offida se décline en trois versions principales : l'Offida Pecorino, à base de ce cépage blanc autochtone sauvé de l'oubli, qui donne des blancs vifs, salins et structurés, aptes à la garde ; l'Offida Passerina, plus léger, floral et frais ; et l'Offida Rosso, à base de Montepulciano, rouge structuré et de garde. Sur les sols argilo-calcaires des collines du Piceno, sous un climat méditerranéen tempéré, ces cépages expriment tout leur potentiel. La DOCG a joué un rôle clé dans la reconnaissance du Pecorino et de la Passerina, aujourd'hui parmi les blancs autochtones les plus en vogue d'Italie centrale. Des domaines comme Velenosi, Cocci Grifoni (pionnier du Pecorino), Saladini Pilastri ou Ciù Ciù en sont les fers de lance. C'est le cœur qualitatif des cépages du sud des Marche.\n\nDOCG du sud des Marche, l'Offida consacre les cépages autochtones du Piceno : Pecorino et Passerina en blanc, Montepulciano en rouge. C'est le cœur qualitatif du renouveau des blancs du Piceno.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "piceno",
+        "offida",
+        "pecorino",
+        "passerina",
+        "montepulciano",
+        "docg",
+        "autochtone"
+      ],
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-terr-lacrima-di-morro-dalba",
+      "nom": "Lacrima di Morro d'Alba",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Morro d'Alba (AN)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lacrima"
+      ],
+      "altitude": "~100-200 m",
+      "sols": "argilo-calcaires des collines de Morro d'Alba",
+      "caracteristiques_rapides": "Le rouge aromatique le plus original d'Italie : Lacrima, intensément floral (rose, violette), souple et parfumé, cultivé quasi exclusivement autour de Morro d'Alba.",
+      "notes_objectives": "Le Lacrima di Morro d'Alba est l'un des rouges les plus originaux et les plus reconnaissables d'Italie, produit à partir du cépage autochtone Lacrima, cultivé quasi exclusivement autour du village de Morro d'Alba, près d'Ancône (à ne pas confondre avec l'Alba piémontaise). Longtemps au bord de l'extinction, il connaît depuis les années 1980-90 un beau renouveau.\n\nLe nom « Lacrima » (larme) viendrait de la tendance des baies mûres à se fendre et à « pleurer » leur jus. Le cépage donne un vin absolument singulier : d'une couleur rubis, il est intensément aromatique, exhalant des parfums envoûtants de rose, de violette, de fruits rouges et d'épices, uniques dans le paysage des rouges italiens. En bouche, il est souple, peu tannique et gouleyant, ce qui en fait un vin de plaisir, généralement bu jeune sur son exubérance florale, parfois légèrement rafraîchi. Il existe aussi en version Superiore (plus structurée), en passito doux et même en pétillant. Sur les sols argilo-calcaires de Morro d'Alba, des domaines comme Lucchetti, Stefano Mancinelli, Marotti Campi ou Vicari en sont les ambassadeurs. C'est un accord original avec les charcuteries, les viandes blanches et la cuisine parfumée.\n\nL'un des rouges les plus originaux d'Italie, le Lacrima di Morro d'Alba est intensément floral (rose, violette), souple et parfumé, cultivé quasi exclusivement autour de Morro d'Alba. C'est une spécialité aromatique unique des Marche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "morro-dalba",
+        "lacrima",
+        "rouge",
+        "aromatique",
+        "doc",
+        "autochtone"
+      ],
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-terr-pecorino",
+      "nom": "Pecorino",
+      "type": "cépage / appellation",
+      "region": "Marche",
+      "sous_region": "Piceno (AP/FM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pecorino"
+      ],
+      "altitude": "~150-500 m",
+      "sols": "argilo-calcaires du Piceno, souvent en altitude",
+      "caracteristiques_rapides": "Cépage blanc autochtone star du renouveau, sauvé de l'oubli (Cocci Grifoni) : Pecorino vif, salin et structuré, aux notes de sauge et d'agrumes, apte à la garde.",
+      "notes_objectives": "Le Pecorino est le cépage blanc autochtone star du renouveau des Marche (et des Abruzzes voisines), une variété ancienne sauvée in extremis de l'extinction qui connaît depuis les années 2000 un succès spectaculaire. Son nom — qui évoque le mouton — viendrait du goût des brebis pour ses raisins précoces, sur les routes de transhumance des Apennins.\n\nQuasi disparu au XXe siècle, le Pecorino a été retrouvé et replanté dans le Piceno, notamment sous l'impulsion de Guido Cocci Grifoni, avant de conquérir toute l'Italie centrale. Le cépage, à l'acidité vive et au potentiel alcoolique élevé, donne des blancs structurés, salins et aromatiques, aux notes de sauge, de thym, de pêche blanche, de pomme et d'agrumes, avec une belle minéralité. Contrairement à beaucoup de blancs, les meilleurs Pecorino ont une réelle aptitude à la garde et gagnent en complexité. Il s'exprime particulièrement bien sur les collines argilo-calcaires du Piceno, souvent en altitude, où la fraîcheur préserve sa tension. Vinifié le plus souvent en sec (Offida Pecorino DOCG, Falerio Pecorino, Marche IGT), il est devenu l'un des blancs autochtones les plus recherchés. C'est un accord idéal avec les poissons, les fruits de mer et une cuisine relevée.\n\nCépage blanc autochtone star du renouveau des Marche, le Pecorino donne des blancs vifs, salins et structurés, aptes à la garde. Sauvé de l'oubli dans le Piceno, il est devenu l'un des grands blancs autochtones d'Italie centrale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "piceno",
+        "pecorino",
+        "blanc",
+        "autochtone",
+        "altitude"
+      ],
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-terr-vernaccia-di-serrapetrona",
+      "nom": "Vernaccia di Serrapetrona",
+      "type": "appellation (DOCG)",
+      "region": "Marche",
+      "sous_region": "Serrapetrona (MC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vernaccia Nera"
+      ],
+      "altitude": "~300-500 m",
+      "sols": "argilo-calcaires des collines de Serrapetrona",
+      "caracteristiques_rapides": "Curiosité unique : un rouge pétillant (spumante) de Vernaccia Nera partiellement passerillée, du sec au doux, spécialité rare et festive du centre des Marche (DOCG).",
+      "notes_objectives": "La Vernaccia di Serrapetrona est l'une des curiosités les plus fascinantes du vin italien : un rouge pétillant (spumante) produit selon une méthode unique au monde, autour du village de Serrapetrona, dans les collines de la province de Macerata, au centre des Marche. Elle bénéficie du statut de DOCG, gage de sa singularité.\n\nElle est élaborée à partir du cépage autochtone Vernaccia Nera (sans lien avec les Vernaccia blanches). Sa particularité tient à un processus en trois fermentations : une partie de la récolte est vinifiée normalement, tandis qu'une autre partie (environ 40 %) est mise à sécher sur des claies pendant l'hiver ; les raisins passerillés sont ensuite vinifiés et assemblés, puis le vin subit une prise de mousse. Il en résulte un rouge effervescent d'une couleur rubis, aux fines bulles, aux arômes de fruits rouges, d'épices et de fruits secs, existant en versions sèche (secco) et douce (dolce). Festif et original, il accompagne aussi bien les charcuteries et les plats de la région que, pour la version douce, les desserts et la pâtisserie locale. Rare et confidentielle, produite en petites quantités, la Vernaccia di Serrapetrona est une spécialité identitaire et joyeuse, à découvrir absolument pour son caractère unique.\n\nCuriosité unique, la Vernaccia di Serrapetrona est un rouge pétillant (DOCG) de Vernaccia Nera partiellement passerillée, du sec au doux. C'est une spécialité rare, festive et identitaire du centre des Marche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "serrapetrona",
+        "vernaccia-nera",
+        "effervescent",
+        "rouge",
+        "docg",
+        "curiosite"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-falerio",
+      "nom": "Falerio",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Piceno (AP/FM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Trebbiano",
+        "Passerina",
+        "Pecorino"
+      ],
+      "altitude": "~100-450 m",
+      "sols": "argilo-calcaires du Piceno",
+      "caracteristiques_rapides": "Le blanc d'assemblage historique du Piceno : Trebbiano, Passerina et Pecorino en blanc frais et léger, dont la version Pecorino, vin du quotidien du sud des Marche.",
+      "notes_objectives": "Le Falerio est le blanc d'assemblage historique du Piceno, dans le sud des Marche, un vin dont les origines remontent à l'Antiquité romaine (le « Falernum » était l'un des vins les plus prisés de Rome). C'est le blanc du quotidien de ces terres méridionales.\n\nLe Falerio « classique » est un assemblage de Trebbiano, de Passerina et de Pecorino, qui donne un blanc frais, léger et désaltérant, aux arômes floraux et d'agrumes, à boire jeune. Il existe aussi une version Falerio Pecorino, monocépage, plus structurée et ambitieuse, qui a bénéficié de l'engouement pour ce cépage. Sur les sols argilo-calcaires des collines du Piceno, sous un climat méditerranéen, ces cépages autochtones expriment fraîcheur et légèreté. Moins prestigieux que l'Offida DOCG voisine, le Falerio n'en reste pas moins un blanc de tradition, agréable et représentatif du sud des Marche, produit par la plupart des domaines du Piceno. C'est un accord idéal avec les poissons de l'Adriatique, les fritures et la cuisine locale, servi bien frais.\n\nBlanc d'assemblage historique du Piceno (Trebbiano, Passerina, Pecorino), le Falerio est frais, léger et désaltérant, aussi décliné en version Pecorino. C'est le blanc de tradition du quotidien du sud des Marche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "piceno",
+        "falerio",
+        "trebbiano",
+        "passerina",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-bianchello-del-metauro",
+      "nom": "Bianchello del Metauro",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Metauro/Pesaro (PU)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bianchello (Biancame)"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "argilo-calcaires et sableux de la vallée du Metauro",
+      "caracteristiques_rapides": "Le blanc du nord des Marche, dans la vallée du Metauro : Bianchello (Biancame) frais, léger et salin, blanc de plaisir de la province de Pesaro-Urbino.",
+      "notes_objectives": "Le Bianchello del Metauro est le blanc emblématique du nord des Marche, produit dans la vallée du fleuve Metauro, dans la province de Pesaro-Urbino, à la frontière de la Romagne. C'est un vin de tradition, longtemps confidentiel, qui gagne aujourd'hui en reconnaissance.\n\nIl est élaboré à partir du cépage autochtone Bianchello (aussi appelé Biancame), qui donne un blanc frais, léger et salin, aux arômes délicats de fleurs blanches, d'agrumes et de fruits blancs, avec une belle vivacité. Sur les sols argilo-calcaires et sableux de la vallée du Metauro, sous l'influence de l'Adriatique, le cépage exprime une fraîcheur désaltérante. Longtemps cantonné à un rôle de vin de soif local, le Bianchello connaît un renouveau qualitatif chez quelques vignerons qui en révèlent le potentiel, avec des cuvées plus structurées et parfois aptes à un certain vieillissement. C'est le blanc de plaisir du nord des Marche, un accord idéal avec les poissons de l'Adriatique, les fruits de mer et la cuisine légère, à découvrir pour son authenticité et sa fraîcheur.\n\nBlanc emblématique du nord des Marche, dans la vallée du Metauro, le Bianchello del Metauro est frais, léger et salin. C'est le blanc de plaisir de la province de Pesaro-Urbino, en plein renouveau qualitatif.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "metauro",
+        "pesaro",
+        "bianchello",
+        "biancame",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-passerina",
+      "nom": "Passerina",
+      "type": "cépage / appellation",
+      "region": "Marche",
+      "sous_region": "Piceno (AP/FM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Passerina"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires du Piceno",
+      "caracteristiques_rapides": "Cépage blanc autochtone du sud des Marche : Passerina fraîche, florale et vive, en sec ou en spumante, aux côtés du Pecorino dans le renouveau des blancs du Piceno.",
+      "notes_objectives": "La Passerina est un cépage blanc autochtone du sud des Marche (et des Abruzzes voisines), qui accompagne le Pecorino dans le renouveau des blancs du Piceno. Son nom évoquerait les passereaux (« passeri »), friands de ses raisins. Cépage à l'acidité vive et à la maturation régulière, la Passerina donne des blancs frais, légers et floraux, aux arômes d'agrumes, de fleurs blanches et de pomme verte, plus délicats et moins structurés que le Pecorino. Sa fraîcheur en fait un vin de plaisir idéal à l'apéritif ou sur les poissons, ainsi qu'une bonne base de spumante. Sur les sols argilo-calcaires du Piceno, elle exprime un profil méditerranéen et désaltérant. Valorisée notamment dans l'Offida Passerina DOCG et sous la mention Marche IGT, elle participe de l'affirmation des cépages blancs autochtones. C'est une belle porte d'entrée, fraîche et accessible, dans les blancs du sud des Marche.\n\nCépage blanc autochtone du sud des Marche, la Passerina donne des blancs frais, floraux et légers, secs ou en spumante. Elle accompagne le Pecorino dans le renouveau des blancs autochtones du Piceno.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "piceno",
+        "passerina",
+        "blanc",
+        "autochtone"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-colli-pesaresi",
+      "nom": "Colli Pesaresi",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Metauro/Pesaro (PU)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Bianchello",
+        "Trebbiano"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Pesaro",
+      "caracteristiques_rapides": "DOC du nord des Marche, à la frontière de la Romagne : Sangiovese en rouge (proche du romagnol) et blancs, terroir de collines de la province de Pesaro-Urbino.",
+      "notes_objectives": "Les Colli Pesaresi forment la DOC du nord des Marche, dans les collines de la province de Pesaro-Urbino, à la frontière de la Romagne. Cette position, à la charnière de deux régions, donne à l'appellation un profil particulier. En rouge, elle repose principalement sur le Sangiovese, qui donne ici des vins proches du style romagnol voisin : fruités, frais et de bonne buvabilité, la sous-zone Focara étant réputée. En blanc, elle produit des vins de Bianchello, de Trebbiano et d'autres cépages. Sur les sols argilo-calcaires de ces collines, sous l'influence de l'Adriatique, les cépages expriment fraîcheur et équilibre. Moins connue que les grandes appellations du centre et du sud des Marche, les Colli Pesaresi illustrent l'identité du nord de la région, à la transition avec la Romagne. C'est un terroir de tradition, à découvrir pour ses Sangiovese et ses blancs, sur la cuisine locale.\n\nDOC du nord des Marche à la frontière de la Romagne, les Colli Pesaresi donnent des Sangiovese (proches du romagnol) et des blancs. C'est un terroir de transition de la province de Pesaro-Urbino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "pesaro",
+        "colli-pesaresi",
+        "sangiovese",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-pergola",
+      "nom": "Pergola",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Metauro/Pesaro (PU)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aleatico",
+        "Vernaccia"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "argilo-calcaires des collines de Pergola",
+      "caracteristiques_rapides": "Petite DOC du nord des Marche : rare rouge d'Aleatico, du sec au doux passito, curiosité aromatique confidentielle de l'arrière-pays de Pesaro.",
+      "notes_objectives": "La Pergola est une petite DOC confidentielle du nord des Marche, dans l'arrière-pays de la province de Pesaro-Urbino, autour de la ville éponyme. Sa singularité tient à un cépage rare : l'Aleatico, variété aromatique surtout connue en Toscane et dans le Latium. La Pergola en donne des rouges parfumés, existant en version sèche comme en version douce (passito), aux arômes caractéristiques de rose, de fruits rouges et d'épices, typiques de l'Aleatico. Sur les sols argilo-calcaires des collines de Pergola, ce cépage exprime son aromatique singulière. Très confidentielle, produite en petites quantités par quelques vignerons, la Pergola est une curiosité pour les amateurs, l'une des rares appellations d'Aleatico d'Italie. C'est un vin original, à découvrir pour son parfum, la version douce accompagnant desserts et fin de repas, la version sèche une cuisine parfumée.\n\nPetite DOC confidentielle du nord des Marche, la Pergola donne un rare rouge d'Aleatico, du sec au doux passito. C'est une curiosité aromatique de l'arrière-pays de Pesaro.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "pergola",
+        "aleatico",
+        "rouge",
+        "doux",
+        "doc",
+        "curiosite"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-esino",
+      "nom": "Esino",
+      "type": "appellation (DOC)",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi (AN)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdicchio",
+        "Sangiovese",
+        "Montepulciano"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "sols variés du bassin de l'Esino",
+      "caracteristiques_rapides": "DOC-cadre du bassin de l'Esino, autour de Jesi : Verdicchio en blanc et assemblages en rouge, appellation souple et large des Marche centrales.",
+      "notes_objectives": "L'Esino est une DOC-cadre des Marche centrales, qui couvre le bassin du fleuve Esino, autour de la ville de Jesi, chevauchant en partie la zone du Verdicchio dei Castelli di Jesi. C'est une appellation souple et large, complément des appellations plus prestigieuses de la zone. Elle se décline en Esino Bianco, à base de Verdicchio (parfois complété d'autres blancs), et en Esino Rosso, assemblage à base de Sangiovese et de Montepulciano. Sur les sols variés du bassin de l'Esino, ces cépages donnent des vins accessibles et fidèles au terroir des Marche centrales. Moins ambitieuse que le Verdicchio dei Castelli di Jesi ou le Rosso Conero voisins, l'Esino offre un cadre plus libre, souvent utilisé pour des vins de tous les jours ou des cuvées hors des DOC principales. C'est une appellation de proximité, à découvrir sur la cuisine régionale, du blanc de Verdicchio au rouge d'assemblage.\n\nDOC-cadre du bassin de l'Esino autour de Jesi, l'Esino donne du Verdicchio en blanc et des assemblages en rouge. C'est une appellation souple et accessible des Marche centrales.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "esino",
+        "verdicchio",
+        "doc",
+        "regionale"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-marche-terr-marche",
+      "nom": "Marche",
+      "type": "appellation (IGT)",
+      "region": "Marche",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdicchio",
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Cabernet"
+      ],
+      "altitude": "~0-600 m",
+      "sols": "sols variés des collines et de la côte des Marche",
+      "caracteristiques_rapides": "La grande IGT régionale : cadre souple pour tous cépages, autochtones et internationaux, dont des cuvées d'auteur majeures (Kurni, Pelago) hors DOC.",
+      "notes_objectives": "L'IGT Marche est l'indication géographique régionale, qui couvre l'ensemble du territoire des Marche. Cadre souple et transversal, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC et DOCG. Elle rassemble tous les cépages de la région — Verdicchio, Montepulciano, Sangiovese, Pecorino, Passerina, Lacrima — ainsi que des cépages internationaux (Cabernet, Merlot, Chardonnay), en rouge, blanc, rosé et effervescent. C'est notamment sous cette IGT que sont commercialisées certaines des cuvées d'auteur les plus prestigieuses de la région, à commencer par le Kurni d'Oasi degli Angeli (Montepulciano culte) et le Pelago d'Umani Ronchi (assemblage bordelais-Montepulciano), qui sortent du cadre des appellations. Souple et créative, l'IGT Marche est un espace de liberté précieux pour les vignerons, du vin de tous les jours aux cuvées les plus ambitieuses. Elle illustre la diversité et le dynamisme du vin des Marche.\n\nIGT régionale, la Marche offre un cadre souple pour tous cépages, dont des cuvées d'auteur majeures (Kurni, Pelago) hors DOC. C'est l'espace de liberté et de créativité des vignerons des Marche.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "marche",
+        "igt",
+        "souple",
+        "auteur",
+        "multi-cepages"
+      ],
+      "source": "wine-searcher|italianwineselection"
+    }
+  ]
+}

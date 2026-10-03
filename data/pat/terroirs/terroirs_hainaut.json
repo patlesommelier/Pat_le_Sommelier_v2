@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "hainaut",
+  "region_label": "Hainaut",
+  "source_file": "terroirs_hainaut_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 13,
+  "items": [
+    {
+      "id": "be-hainaut-terr-les-agaises-haulchin",
+      "nom": "Les Agaises (Haulchin)",
+      "type": "lieu-dit",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 100 m",
+      "sols": "Craie du Crétacé affleurante, localement dite « terres blanches »",
+      "caracteristiques_rapides": "Le lieu-dit qui a lancé la viticulture professionnelle wallonne : coteau plein sud à 100 mètres, sur des terres blanches très riches en craie, planté en 2002. Ventilation permanente assurée par le parc éolien voisin.",
+      "notes_objectives": "Le lieu-dit qui a fait basculer la viticulture belge dans le professionnalisme. En 2002, deux hectares de Chardonnay y sont plantés à Haulchin, entre Binche et Mons ; le vignoble dépasse aujourd'hui trente-cinq hectares et 310 000 pieds, et n'a jamais produit autre chose que de l'effervescent en méthode traditionnelle.\n\nLe sol porte un nom local qui dit tout : les terres blanches. On est sur les craies du Crétacé supérieur qui remplissent le bassin de Mons, une cuvette d'effondrement où les dépôts crayeux atteignent une épaisseur considérable. Cette formation est le prolongement septentrional du Bassin parisien : géologiquement, c'est bien la même craie que celle de la Champagne, ce qui fait du rapprochement un fait et non un argument de vente. Le coteau est exposé plein sud, à cent mètres d'altitude, sur un sol drainant qui limite naturellement la vigueur.\n\nS'ajoute un facteur climatique inhabituel : le vignoble se trouve au pied de l'un des plus grands parcs éoliens d'Europe, dans un couloir constamment ventilé. Le feuillage sèche vite après la pluie, et la pression du mildiou et de l'oïdium s'en trouve sensiblement réduite — avantage décisif sous climat belge, et raison pour laquelle des cépages classiques sensibles restent tenables ici.\n\nLe toponyme renvoie au seigneur Ruffus, qui régnait sur ces coteaux au XIIe siècle et a donné son nom à la marque.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "craie",
+        "methode-traditionnelle",
+        "ruffus"
+      ],
+      "source": "ruffus.be ; fr.wikipedia.org ; komoot.com"
+    },
+    {
+      "id": "be-hainaut-terr-coteaux-de-quevy-et-harveng",
+      "nom": "Coteaux de Quévy et Harveng",
+      "type": "coteau",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Blanc"
+      ],
+      "altitude": "env. 80-120 m",
+      "sols": "Limons sur craie du bassin de Mons, sols calcaires drainants",
+      "caracteristiques_rapides": "Versants plein sud entre Harveng et Quévy, au sud de Mons, portant le plus grand vignoble du pays. Sols calcaires réputés pour leur drainage, sous un parc éolien qui limite la pression cryptogamique.",
+      "notes_objectives": "Les versants qui portent le plus grand vignoble de Belgique, entre Harveng et Quévy, au sud de Mons. Neuf hectares vendangés pour la première fois en 2013, quarante en 2022, environ cinquante-quatre aujourd'hui, soit quelque 490 000 pieds sur un seul ensemble.\n\nLe contexte géologique est celui des Agaises, à quelques kilomètres de là : la craie du bassin de Mons sous une couverture limoneuse, avec des sols calcaires dont le domaine souligne les qualités de drainage. L'exposition est plein sud, l'altitude modeste, et le secteur bénéficie de la même ventilation éolienne permanente qui assainit le feuillage. Ces conditions expliquent le choix d'un encépagement quasi monovariétal en Chardonnay, complété de Pinot Noir et de Pinot Blanc, avec du Pinot Meunier pour des cuvées expérimentales. La vendange est manuelle.\n\nLe lieu a produit le vin qui a fait basculer la perception du vin belge : la cuvée prestige 2014, un Crémant de Wallonie blanc de blancs élevé quarante-huit mois sur lattes, sacrée révélation internationale vin mousseux au Concours Mondial de Bruxelles 2019 devant plus de deux cents champagnes dégustés à l'aveugle parmi sept cent trente effervescents. C'était la première fois qu'un mousseux belge devançait les propositions françaises dans une compétition de ce niveau, et le lieu a depuis développé un pôle œnotouristique complet : le site accueille deux restaurants, dont un étoilé Michelin depuis 2024.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "craie",
+        "methode-traditionnelle",
+        "cremant"
+      ],
+      "source": "chantdeole.be ; rtbf.be ; lalibre.be"
+    },
+    {
+      "id": "be-hainaut-terr-craies-du-haut-pays-havay-nouvelles",
+      "nom": "Craies du Haut-Pays (Havay, Nouvelles)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Voltis"
+      ],
+      "altitude": "env. 60-110 m",
+      "sols": "Craie du Crétacé supérieur sous couverture limoneuse",
+      "caracteristiques_rapides": "Prolongement des coteaux crayeux entre Mons et la frontière française, où s'installe depuis 2018 la troisième génération de domaines du Haut-Pays, mêlant cépages champenois et résistants.",
+      "notes_objectives": "Le prolongement des coteaux crayeux entre Mons et la frontière française, sur les communes de Quévy et de Mons. Même substrat que les Agaises et Quévy-Harveng — la craie du Crétacé supérieur sous une couverture limoneuse — mais avec une occupation viticole beaucoup plus récente.\n\nC'est ici que s'installe depuis 2018 la troisième génération de domaines du Haut-Pays, et son parti pris variétal est différent : là où les deux leaders misent exclusivement sur le trio champenois, les nouveaux venus mêlent classiques et cépages résistants, jusqu'à introduire en Wallonie le Voltis, sélection résistante française récente. Le signal est intéressant — les PIWI ne sont plus cantonnés aux petits domaines contraints par les coûts, ils entrent sur le meilleur terroir de la province et pour des vins d'ambition.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "craie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "montdesanges.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-vallee-de-la-haine-sirault-saint-symphorien",
+      "nom": "Vallée de la Haine (Sirault, Saint-Symphorien)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 25-60 m",
+      "sols": "Limons de plaine sur substrat crayeux, sols hydromorphes par endroits",
+      "caracteristiques_rapides": "Plaine de la Haine à l'ouest et à l'est de Mons, ancien pays de charbonnages : altitudes basses, sols limoneux et vignobles récents, tous en cépages résistants et souvent portés par des collectifs.",
+      "notes_objectives": "La plaine de la Haine, de part et d'autre de Mons, dans l'ancien pays des charbonnages. Les altitudes y sont basses, entre vingt-cinq et soixante mètres, les sols limoneux et localement hydromorphes, sur un substrat crayeux plus profondément enfoui que dans le Haut-Pays.\n\nCe n'est pas un terroir de coteau et il ne prétend pas l'être : ce qui le caractérise, c'est le profil des projets qui s'y installent. Le vignoble de Sirault, planté en 2015, est porté par un collectif de citoyens investisseurs ; celui de Saint-Symphorien date de 2022. Tous deux sont intégralement en cépages résistants, choix logique là où le drainage est médiocre et l'humidité persistante. La reconversion viticole d'un ancien bassin industriel est l'un des traits marquants du Hainaut contemporain.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "vignobledesirault.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-clos-de-labbaye-de-saint-denis-obourg",
+      "nom": "Clos de l'abbaye de Saint-Denis (Obourg)",
+      "type": "lieu-dit",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-60 m",
+      "sols": "Limons sur craie, enceinte abbatiale",
+      "caracteristiques_rapides": "Cinquante ares replantés en 2000 dans l'enceinte d'une abbaye bénédictine du XIe siècle, à Obourg : l'un des rares sites belges où la vigne est revenue sur une implantation monastique documentée.",
+      "notes_objectives": "Cinquante ares replantés en 2000 dans l'enceinte de l'ancienne abbaye bénédictine de Saint-Denis-en-Broqueroie, à Obourg, au nord-est de Mons. Le site conserve une église romane classée, et l'abbaye remonte au XIe siècle.\n\nL'intérêt est patrimonial autant que viticole. Jusqu'au petit âge glaciaire, les communautés religieuses assuraient l'essentiel de la production de vin dans nos régions — vin de messe d'abord, mais aussi vin de table et de rente — et entretenaient les coteaux les mieux exposés. La disparition de la vigne aux XVIe et XVIIe siècles a effacé cette géographie, dont il ne reste que la toponymie et quelques enceintes. Replanter dans un clos abbatial relève donc de la restitution : les volumes sont symboliques, l'encépagement mêle classiques et résistants, et le projet est porté par une confrérie de compagnons vignerons plutôt que par une exploitation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "clos-historique",
+        "craie"
+      ],
+      "source": "compagnonvignoblesaintdenis.wordpress.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-collines-dath-ostiches-moulbaix",
+      "nom": "Collines d'Ath (Ostiches, Moulbaix)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 40-100 m",
+      "sols": "Limons profonds sur substrat argileux tertiaire",
+      "caracteristiques_rapides": "Buttes limoneuses du Pays des Collines, second foyer de plantation du Hainaut après le Haut-Pays : quatre vignobles de plus de deux hectares y sont apparus entre 2018 et 2021, en cépages classiques.",
+      "notes_objectives": "Les buttes limoneuses du Pays des Collines autour d'Ath, devenues le second foyer de plantation du Hainaut après le Haut-Pays. Quatre vignobles de plus de deux hectares y sont apparus entre 2018 et 2021, sur des terres jusque-là vouées aux grandes cultures.\n\nLes sols sont des limons profonds reposant sur un substrat argileux tertiaire : fertiles, à bonne réserve hydrique, sans pierrosité — la maîtrise de la vigueur y est le principal enjeu technique. Les pentes sont courtes mais réelles, et le bocage limite l'exposition au vent. Particularité du secteur : les domaines y plantent majoritairement des cépages classiques, à contre-courant de l'ouest de la province, et visent l'effervescent. Le centre agronomique de recherches appliquées du Hainaut y entretient une parcelle expérimentale depuis 2016.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "loess",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; carah.be"
+    },
+    {
+      "id": "be-hainaut-terr-calcaire-du-tournaisis-havinnes-gaurain-ramecroix-ere",
+      "nom": "Calcaire du Tournaisis (Havinnes, Gaurain-Ramecroix, Ère)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 20-60 m",
+      "sols": "Limons peu épais sur calcaire carbonifère (pierre de Tournai)",
+      "caracteristiques_rapides": "Plaine de l'Escaut sur le calcaire carbonifère exploité depuis des siècles en carrières et fours à chaux. Substrat calcaire franc à faible profondeur, vignobles plantés depuis 2015, essentiellement en résistants.",
+      "notes_objectives": "La plaine de l'Escaut autour de Tournai, sur un socle de calcaire carbonifère recouvert d'une couverture limoneuse mince. C'est la roche de la pierre de Tournai, exploitée depuis le Moyen Âge pour les fonts baptismaux et les dallages, et aujourd'hui pour le ciment : Gaurain-Ramecroix est l'un des grands sites d'extraction du pays, avec des carrières qui structurent le paysage depuis le XIXe siècle.\n\nCe calcaire a donné son nom à un étage géologique international, le Tournaisien, défini sur les affleurements locaux — comme le Tongrien l'a été sur ceux de Tongres. Pour la vigne, l'intérêt est direct : un calcaire franc à faible profondeur, cas rare en Belgique hors des craies du Haut-Pays et des versants de la Sambre. Les plantations, postérieures à 2015, sont essentiellement en cépages résistants et souvent conduites en bio.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; domainedelonguesault"
+    },
+    {
+      "id": "be-hainaut-terr-coteaux-de-lescaut-obigies",
+      "nom": "Coteaux de l'Escaut (Obigies)",
+      "type": "coteau",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 15-50 m",
+      "sols": "Limons de versant sur substrat calcaire et argileux",
+      "caracteristiques_rapides": "Versants dominant l'Escaut à la frontière linguistique, dans un ancien pays de lin. Vigne arrivée après 2018 sur des terres de grandes cultures, sans continuité historique documentée.",
+      "notes_objectives": "Les versants qui dominent l'Escaut à hauteur de Pecq, à quelques kilomètres de la frontière linguistique. Sols de limons de versant sur substrat calcaire et argileux, altitudes faibles, pentes modestes.\n\nLe secteur a une identité agricole forte mais pas viticole : c'est un ancien pays de lin, dont la culture et le rouissage dans les eaux de la Lys et de l'Escaut ont fait la richesse pendant des siècles, et à quoi renvoie le nom du principal vignoble local. La vigne n'y arrive qu'après 2018, sur des terres de grandes cultures, en cépages résistants et sans continuité historique documentée. C'est l'un des cas les plus nets du Hainaut où l'implantation tient au porteur de projet plus qu'au lieu : rien, dans la géologie ou dans l'histoire locale, ne désignait ces versants plutôt que d'autres.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-pays-des-collines-flobecq-frasnes-mont-de-lenclus",
+      "nom": "Pays des Collines (Flobecq, Frasnes, Mont-de-l'Enclus)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 50-141 m",
+      "sols": "Sables et argiles tertiaires sous couverture limoneuse, buttes boisées",
+      "caracteristiques_rapides": "Ligne de buttes boisées à la frontière linguistique, culminant à 141 m au Mont-de-l'Enclus. Même relief que le Kluisberg flamand : un rare cas de colline viticole partagée entre les deux régions.",
+      "notes_objectives": "La ligne de buttes boisées qui court le long de la frontière linguistique, du Mont-de-l'Enclus à Frasnes-lez-Anvaing, culminant à 141 mètres — des hauteurs modestes, mais qui tranchent nettement dans un Hainaut occidental de plaines limoneuses.\n\nLe sous-sol est fait de sables et d'argiles tertiaires sous couverture limoneuse, la même série qui forme les collines des Ardennes flamandes juste au nord. C'est le point à retenir : le Mont-de-l'Enclus et le Kluisberg sont le même relief, coupé par une frontière régionale, et tous deux portent des vignes. Un des rares cas belges de colline viticole partagée entre les deux régions linguistiques. Les vignobles y sont anciens à l'échelle wallonne — l'un date de 2005 — mais restent de très petite taille.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "source": "closlojerau.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-versants-de-la-sambre-lobbes-thuin-landelies",
+      "nom": "Versants de la Sambre (Lobbes, Thuin, Landelies)",
+      "type": "coteau",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 100-180 m",
+      "sols": "Calcaire carbonifère affleurant, sols peu profonds sur pentes fortes",
+      "caracteristiques_rapides": "Les pentes les plus marquées du vignoble hennuyer, sur calcaire carbonifère. Tradition de culture en terrasses attestée par les jardins suspendus de Thuin. Secteur inclus dans le bassin de l'AOP Côtes de Sambre et Meuse.",
+      "notes_objectives": "Les pentes les plus marquées du vignoble hennuyer, sur les versants de la Sambre entre Landelies et Lobbes, où le calcaire carbonifère affleure sous des sols peu profonds. On est à cent quatre-vingts mètres au plus haut, avec un relief réel — très différent des plateaux limoneux qui dominent ailleurs dans la province.\n\nLe lieu a une mémoire de culture en pente : les jardins suspendus de Thuin, terrasses étagées au-dessus de la rivière et classées au patrimoine wallon, remontent au Moyen Âge, et la vigne en faisait partie.\n\nPoint réglementaire à connaître : l'AOP Côtes de Sambre et Meuse, reconnue en 2004, définit son aire par les bassins hydrographiques wallons et non par les limites provinciales : ces communes hennuyères en relèvent donc, ce qui les distingue du reste de la province.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "cotes-de-sambre-et-meuse"
+      ],
+      "source": "marcvanel.be ; domainedublanccaillou.be ; closdeszouaves.org"
+    },
+    {
+      "id": "be-hainaut-terr-basse-sambre-merbes-le-chateau-nalinnes",
+      "nom": "Basse Sambre (Merbes-le-Château, Nalinnes)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 100-200 m",
+      "sols": "Limons sur schistes et calcaires, transition vers le Condroz hennuyer",
+      "caracteristiques_rapides": "Vallée encaissée près de la frontière française et premiers reliefs au sud de Charleroi : versants bien exposés, amplitude thermique amortie par la rivière, micro-vignobles souvent associatifs.",
+      "notes_objectives": "Deux secteurs distincts réunis par le bassin de la Sambre : la vallée encaissée près de la frontière française, à Merbes-le-Château, et les premiers reliefs au sud de Charleroi, à Nalinnes, où l'on entre dans le Condroz hennuyer.\n\nLes sols passent des limons sur calcaire aux limons sur schistes, avec des versants bien exposés et une amplitude thermique amortie par la rivière — deux facteurs qui expliquent que la vigne y soit revenue dès 2009, avant bien d'autres secteurs de la province. Les structures restent minuscules et souvent associatives, dans une région industrielle où le vignoble s'installe volontiers sur des terrains communaux ou d'anciennes friches. Comme les versants de la Sambre, le secteur relève de l'aire de l'AOP Côtes de Sambre et Meuse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "cotes-de-sambre-et-meuse"
+      ],
+      "source": "leditvin.wordpress.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-terr-pierre-bleue-du-centre-ecaussinnes-feluy-chapelle",
+      "nom": "Pierre bleue du Centre (Écaussinnes, Feluy, Chapelle)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Région du Centre",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 80-150 m",
+      "sols": "Limons de plateau sur calcaire carbonifère (petit granit)",
+      "caracteristiques_rapides": "Pays du petit granit, extrait à Écaussinnes, Feluy et Soignies depuis des siècles. Région industrielle et carrière reconvertie en zone viticole après 2015, à l'exception d'une plantation qui remonterait à 1972.",
+      "notes_objectives": "Le pays du petit granit, ce calcaire à crinoïdes d'âge tournaisien extrait à Écaussinnes, Feluy et Soignies depuis des siècles, et devenu la pierre de construction emblématique de la Belgique. Les carrières, certaines encore en activité, structurent le paysage autant que les cheminées du sillon industriel voisin.\n\nLa vigne y arrive sur les limons de plateau qui recouvrent ce socle calcaire, et presque toutes les plantations sont postérieures à 2015 — la reconversion viticole d'une région de carrières et d'industrie lourde est le trait marquant du Centre. Une exception notable : une plantation de Chapelle-lez-Herlaimont remonterait à 1972, ce qui en ferait le plus ancien vignoble de la province, contemporain des premières vignes du Hageland. L'information mérite confirmation, mais si elle se vérifie, ce secteur peu spectaculaire abrite le témoin wallon du redémarrage viticole belge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; cepterra.be"
+    },
+    {
+      "id": "be-hainaut-terr-entree-de-la-fagne-sivry-chimay",
+      "nom": "Entrée de la Fagne (Sivry, Chimay)",
+      "type": "secteur",
+      "region": "Hainaut",
+      "sous_region": "Botte du Hainaut",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 180-260 m",
+      "sols": "Sols schisteux et argileux, drainage médiocre",
+      "caracteristiques_rapides": "Extrême sud de la province, à l'entrée de la Fagne : altitude élevée, pluviométrie forte, maturation nettement plus incertaine que dans le Haut-Pays. Deux vignobles seulement, dont un pédagogique.",
+      "notes_objectives": "L'extrême sud de la province, à l'entrée de la Fagne : des sols schisteux et argileux au drainage médiocre, des altitudes qui approchent les deux cent cinquante mètres, une pluviométrie élevée et des gelées tardives fréquentes.\n\nC'est, avec la Gaume, l'un des secteurs les plus difficiles de Wallonie pour la vigne, et la maturation y est nettement plus incertaine que dans le bassin de Mons, à cinquante kilomètres de là. Les cépages résistants n'y sont pas un choix de confort mais une condition de faisabilité. Deux vignobles seulement s'y sont installés, dont un à vocation pédagogique, tous deux postérieurs à 2019. La région reste avant tout un pays de bières d'abbaye et de forêts ; la vigne y a valeur de test, et ce qu'on y observera dans dix ans dira jusqu'où le réchauffement repousse la limite de la culture.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    }
+  ]
+}

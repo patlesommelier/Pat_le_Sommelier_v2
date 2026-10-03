@@ -1,0 +1,420 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "calabria",
+  "region_label": "Calabria (Italie)",
+  "source_file": "terroirs_calabria.json",
+  "built_at": "2026-07-11",
+  "count": 14,
+  "items": [
+    {
+      "id": "it-calabria-terr-ciro",
+      "nom": "Cirò",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Cirò/Ionienne (KR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "altitude": "~0-350 m",
+      "sols": "marnes calcaires des collines côtières, brises marines de la mer Ionienne",
+      "caracteristiques_rapides": "Le vin phare de la Calabria et l'un des plus vieux vins nommés au monde (l'antique Krimisa) : Gaglioppo en rouge, robe pâle façon Nebbiolo, en pleine renaissance (Cirò Revolution).",
+      "notes_objectives": "Le Cirò est le vin phare de la Calabria et l'un des plus vieux vins nommés au monde, avec une histoire de vinification qui remonte à plusieurs millénaires. Produit sur la côte ionienne, autour des villages de Cirò et Cirò Marina, il correspond à l'antique Krimisa, un vin que l'on offrait, dit-on, aux athlètes vainqueurs des Jeux olympiques de la Grèce antique.\n\nLe Cirò existe en rouge (le plus réputé), en rosato et en blanc. Le rouge repose sur le Gaglioppo (au moins 80 %), le cépage roi de la Calabria, tandis que le blanc est à base de Greco Bianco. Sur les marnes calcaires des collines côtières, rafraîchies par les brises de la mer Ionienne, le Gaglioppo donne des rouges à la robe étonnamment pâle — souvent comparée à celle du Nebbiolo —, aux arômes de cerise, de fruits rouges, d'épices et de garrigue, aux tanins présents mais fins et à la belle acidité. Longtemps affublé d'une réputation de vin rustique et tannique (qui conduisit même à autoriser l'ajout de cépages internationaux), le Cirò connaît aujourd'hui une renaissance spectaculaire, la « Cirò Revolution », portée par de jeunes vignerons bio ('A Vita, Sergio Arcuri, Cataldo Calabretta) qui en ont révélé la finesse et l'élégance. C'est un accord idéal avec la cuisine calabraise, les viandes grillées, la 'nduja et les fromages.\n\nLe vin phare de la Calabria et l'un des plus vieux vins nommés au monde (l'antique Krimisa) : Gaglioppo en rouge, robe pâle façon Nebbiolo, en pleine renaissance (Cirò Revolution). C'est le cœur du vignoble calabrais.\n\nL'histoire du Cirò se confond avec celle de la vigne en Méditerranée. Cette côte ionienne, colonisée par les Grecs il y a près de trois millénaires (l'antique Krimisa se trouvait ici), fut l'un des berceaux de la viticulture italienne, et la légende veut que le vin local ait couronné les athlètes des premiers Jeux olympiques. Ce prestige antique tranche avec le destin plus modeste du Cirò au XXe siècle, longtemps réduit à un vin de coupage puissant et anonyme. Le tournant est venu d'abord de Librandi, qui, dès les années 1980, a fait découvrir le Cirò à l'international et prouvé son potentiel, puis, plus récemment, de la génération de la « Cirò Revolution » : de jeunes vignerons bio qui, en revenant aux vieilles vignes, aux méthodes ancestrales et à une vinification respectueuse, ont révélé un Gaglioppo tout en finesse, frais et digeste, aux antipodes de l'image rustique héritée du passé. Servi sur la cuisine calabraise généreuse et épicée — la 'nduja, les viandes grillées, les pâtes au ragù, les fromages —, le Cirò séduit par son équilibre entre chaleur méridionale et fraîcheur saline ; les meilleures cuvées et Riserve se patinent sur une décennie et plus. Aujourd'hui recherché par les sommeliers du monde entier et considéré comme l'un des grands rouges autochtones du Sud, le Cirò incarne la renaissance de la Calabria viticole et la redécouverte d'un patrimoine millénaire longtemps sous-estimé.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "doc",
+        "historique",
+        "reference"
+      ],
+      "source": "wine-searcher|cellartours"
+    },
+    {
+      "id": "it-calabria-terr-gaglioppo",
+      "nom": "Gaglioppo",
+      "type": "cépage",
+      "region": "Calabria",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les marnes calcaires et sols volcaniques de Calabria",
+      "caracteristiques_rapides": "Le grand cépage rouge de la Calabria : robe claire, arômes de cerise, d'épices et de rose, tanins fins et acidité vive, souvent comparé au Nebbiolo, cœur du Cirò.",
+      "notes_objectives": "Le Gaglioppo est le grand cépage rouge de la Calabria, le cœur de son vin le plus célèbre, le Cirò, et l'un des cépages autochtones les plus emblématiques du Sud de l'Italie. On le cultive dans presque toutes les appellations rouges de la région, mais c'est sur la côte ionienne qu'il donne ses expressions les plus abouties.\n\nCépage à l'origine disputée (peut-être lié à la Grèce antique, comme le suggèrent les nombreux cépages « grecs » de Calabria), le Gaglioppo se distingue par une robe rubis souvent claire, presque translucide, qui lui vaut des comparaisons avec le Nebbiolo du Piémont. Au nez, il déploie des arômes de cerise, de fruits rouges, d'épices, de réglisse et de notes florales (rose), parfois teintés de garrigue et de terre. En bouche, il allie des tanins présents mais fins, une belle acidité et une réelle capacité de garde. Longtemps vinifié dans un style rustique et tannique, il a été réhabilité par la nouvelle génération de vignerons de Cirò, qui en ont révélé l'élégance et la finesse. Sur les marnes calcaires et les sols volcaniques de Calabria, le Gaglioppo exprime tout son caractère méditerranéen. C'est un accord idéal avec les viandes grillées, l'agneau, la 'nduja épicée et les fromages affinés de la cuisine calabraise.\n\nLe grand cépage rouge de la Calabria : robe claire, arômes de cerise, d'épices et de rose, tanins fins et acidité vive, souvent comparé au Nebbiolo. C'est le cœur du Cirò et l'emblème rouge de la région.\n\nCe qui rend le Gaglioppo si fascinant, c'est le contraste entre son apparence et sa nature méridionale. Sa robe pâle et translucide, ses arômes floraux et épicés et ses tanins fins évoquent davantage un cépage de climat frais — d'où la comparaison récurrente avec le Nebbiolo — que le produit d'une terre baignée de soleil comme la Calabria. Cette dualité explique en partie les malentendus dont il a longtemps souffert : vinifié pour la puissance et la couleur, il donnait des vins durs et asséchants ; laissé s'exprimer avec finesse, il révèle une élégance rare. La « Cirò Revolution » a précisément consisté à comprendre et respecter cette nature, en privilégiant les vieilles vignes en gobelet, les macérations mesurées et l'expression du terroir de marnes calcaires balayé par les brises marines. Le Gaglioppo entre aussi dans les grands assemblages autochtones du Savuto et de l'ouest, où il se marie au Magliocco, au Greco Nero et au Nerello. Servi sur les viandes grillées, l'agneau, la 'nduja ou les fromages affinés, il séduit par sa fraîcheur épicée et sa digestibilité. Longtemps considéré comme un cépage rustique de la pointe oubliée de l'Italie, le Gaglioppo s'affirme aujourd'hui comme l'un des grands cépages autochtones du Sud, capable de vins de terroir racés et de garde, et le porte-drapeau d'une Calabria viticole en pleine renaissance.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "gaglioppo",
+        "cepage",
+        "rouge",
+        "autochtone"
+      ],
+      "source": "cellartours|firstleaf"
+    },
+    {
+      "id": "it-calabria-terr-greco-di-bianco",
+      "nom": "Greco di Bianco",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Reggio/Sud (RC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Greco Bianco"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "sols schisteux et argileux des collines côtières de la pointe sud",
+      "caracteristiques_rapides": "Le trésor doux de la pointe de la botte : Greco Bianco passerillé sur nattes en un liquoreux ancestral au goût antique, l'un des grands vins doux méconnus d'Italie (Ceratti).",
+      "notes_objectives": "Le Greco di Bianco est le trésor doux de la Calabria, un vin liquoreux rare produit à l'extrême pointe de la botte italienne, autour de la ville de Bianco (dont il tire son nom), sur la côte ionienne de la province de Reggio. C'est l'un des grands vins doux méconnus d'Italie, au goût classique et ancien.\n\nIl est élaboré à partir du Greco Bianco (une variété distincte, parfois identifiée à la Malvasia di Lipari), dont les raisins sont passerillés — séchés au soleil sur des nattes de paille — pour concentrer les sucres et les arômes. Il en résulte un vin doux d'une grande finesse, à la robe dorée, aux arômes d'agrumes confits, d'abricot, de miel, de figue et de notes méditerranéennes (herbes, résine), à la fois riche et frais. Cette tradition de vin de paille, d'origine grecque antique, se perpétue depuis des millénaires sur ce terroir schisteux et ensoleillé de la pointe sud. Confidentiel et produit en quantités infimes, le Greco di Bianco est gardé par quelques vignerons passionnés (Ceratti, favori de Jancis Robinson, Mariolina Baccellieri). C'est un accord idéal avec les desserts, la pâtisserie aux amandes et aux figues, les fromages affinés, ou à déguster seul, en méditation.\n\nLe trésor doux de la pointe de la botte : Greco Bianco passerillé sur nattes en un liquoreux ancestral au goût antique. C'est l'un des grands vins doux méconnus d'Italie (Ceratti).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "reggio",
+        "greco-di-bianco",
+        "blanc",
+        "doux",
+        "passito",
+        "doc",
+        "rare"
+      ],
+      "source": "jancisrobinson|cellartours"
+    },
+    {
+      "id": "it-calabria-terr-terre-di-cosenza",
+      "nom": "Terre di Cosenza",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Terre di Cosenza (CS)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Magliocco",
+        "Greco Nero",
+        "Guarnaccia",
+        "Pecorello"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "sols granitiques et argilo-calcaires des collines intérieures (Pollino, Sila)",
+      "caracteristiques_rapides": "La grande DOC-cadre du nord, avec ses sous-zones (Pollino, Donnici, Verbicaro…) : Magliocco Dolce en rouge d'altitude, élégant et raffiné, fer de lance du renouveau intérieur.",
+      "notes_objectives": "Les Terre di Cosenza forment la grande DOC-cadre du nord de la Calabria, un vaste terroir de collines intérieures qui s'étend autour de la ville de Cosenza, entre les massifs du Pollino et de la Sila. Créée pour fédérer plusieurs zones, elle comprend de nombreuses sous-zones (Pollino, Donnici, Verbicaro, San Vito di Luzzi, Colline del Crati, Esaro).\n\nLe cépage vedette de cette DOC est le Magliocco (Dolce), un rouge autochtone que les producteurs de la région ont hissé au premier plan, révélant son élégance et sa finesse. Sur les sols granitiques et argilo-calcaires de ces collines, souvent en altitude (jusqu'à 600-700 mètres), sous un climat continental aux fortes amplitudes thermiques, le Magliocco donne des rouges raffinés, profonds et frais, aux tanins soyeux, différents des Gaglioppo côtiers. La DOC produit aussi des blancs (Greco Bianco, Pecorello, Guarnaccia) et met à l'honneur d'autres cépages autochtones rares. Terre di Cosenza est le fer de lance du renouveau viticole de l'intérieur calabrais, porté par des domaines comme Serracavallo, L'Acino ou Ferrocinto. C'est un accord idéal avec la cuisine calabraise, les viandes, le gibier et les fromages, dans un style plus frais et élégant grâce à l'altitude.\n\nLa grande DOC-cadre du nord, avec ses sous-zones (Pollino, Donnici, Verbicaro…) : Magliocco Dolce en rouge d'altitude, élégant et raffiné. C'est le fer de lance du renouveau de l'intérieur calabrais.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "cosenza",
+        "pollino",
+        "magliocco",
+        "rouge",
+        "doc",
+        "altitude"
+      ],
+      "source": "firstleaf|decanter"
+    },
+    {
+      "id": "it-calabria-terr-magliocco",
+      "nom": "Magliocco",
+      "type": "cépage",
+      "region": "Calabria",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Magliocco Canino",
+        "Magliocco Dolce"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les sols granitiques et argileux des collines intérieures",
+      "caracteristiques_rapides": "Le second grand rouge autochtone, sauvé de l'oubli (Librandi) : Magliocco profond, épicé et raffiné, aux tanins soyeux, révélé dans les Terre di Cosenza et les assemblages du Savuto.",
+      "notes_objectives": "Le Magliocco est le second grand cépage rouge autochtone de la Calabria, longtemps négligé et aujourd'hui réhabilité, notamment dans les Terre di Cosenza. On distingue plusieurs types, dont le Magliocco Canino et le Magliocco Dolce, ce dernier étant le plus qualitatif.\n\nSauvé de l'oubli grâce au travail pionnier de la maison Librandi (qui lança son Magno Megonio en 1998) et à la recherche ampélographique, le Magliocco s'est révélé un cépage de grande qualité. Sur les sols granitiques et argileux des collines intérieures, souvent en altitude, il donne des rouges profonds, épicés et raffinés, aux arômes de fruits noirs, de violette et d'épices, dotés de tanins soyeux et d'une belle structure, avec une élégance et une profondeur qui le distinguent du Gaglioppo. Il entre aussi dans les assemblages complexes du Savuto et d'autres appellations. Considéré par beaucoup comme l'un des cépages les plus prometteurs de la Calabria, le Magliocco illustre la richesse ampélographique unique de la région. Des domaines comme Librandi, Serracavallo, L'Acino ou Ferrocinto en révèlent le potentiel. C'est un accord idéal avec les viandes rouges, le gibier, l'agneau et les fromages affinés de la cuisine calabraise.\n\nLe second grand rouge autochtone, sauvé de l'oubli (Librandi) : Magliocco profond, épicé et raffiné, aux tanins soyeux, révélé dans les Terre di Cosenza et les assemblages du Savuto. C'est un cépage plein de promesses.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "magliocco",
+        "cepage",
+        "rouge",
+        "autochtone",
+        "rescape"
+      ],
+      "source": "decanter|italianamericanherald"
+    },
+    {
+      "id": "it-calabria-terr-savuto",
+      "nom": "Savuto",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Magliocco",
+        "Greco Nero",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "sols granitiques et argileux de la vallée du Savuto (versant tyrrhénien)",
+      "caracteristiques_rapides": "L'appellation historique de la côte tyrrhénienne : assemblages complexes de cépages autochtones (Gaglioppo, Magliocco, Greco Nero), rouges de caractère et de garde (Odoardi).",
+      "notes_objectives": "Le Savuto est l'une des appellations historiques de la côte tyrrhénienne de Calabria, produite dans la vallée du fleuve Savuto, à cheval sur les provinces de Cosenza et Catanzaro. C'est un terroir de rouges d'assemblage à la riche palette de cépages autochtones. À la différence du Cirò, monocépage à base de Gaglioppo, le Savuto est un vin d'assemblage typiquement calabrais, mêlant Gaglioppo, Magliocco Canino, Greco Nero, Nerello Cappuccio et d'autres variétés locales — un véritable « stew » ampélographique. Sur les sols granitiques et argileux de la vallée, sous l'influence de la mer Tyrrhénienne, ces cépages donnent des rouges de caractère, structurés, complexes et de garde. L'appellation est notamment portée par le domaine historique Odoardi (Vigna Garrone), installé dans la région depuis le XVe siècle. Le Savuto illustre la tradition des assemblages autochtones de l'ouest calabrais, distincte de la monoculture du Gaglioppo à l'est. C'est un accord idéal avec la cuisine calabraise, les viandes rouges, le gibier et les fromages affinés, un rouge de caractère de la côte tyrrhénienne.\n\nL'appellation historique de la côte tyrrhénienne : assemblages complexes de cépages autochtones (Gaglioppo, Magliocco, Greco Nero), rouges de caractère et de garde (Odoardi). C'est la tradition d'assemblage de l'ouest.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "savuto",
+        "gaglioppo",
+        "magliocco",
+        "rouge",
+        "doc",
+        "assemblage"
+      ],
+      "source": "italianamericanherald|winedexer"
+    },
+    {
+      "id": "it-calabria-terr-greco-bianco",
+      "nom": "Greco Bianco",
+      "type": "cépage",
+      "region": "Calabria",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Greco Bianco"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les sols calcaires et schisteux, du sec au passito",
+      "caracteristiques_rapides": "Le grand cépage blanc de la Calabria : frais et salin en sec (Cirò Bianco), somptueux en passito (Greco di Bianco), variété polyvalente d'origine grecque.",
+      "notes_objectives": "Le Greco Bianco est le grand cépage blanc de la Calabria, un cépage autochtone polyvalent d'origine grecque antique, capable de donner aussi bien des blancs secs frais que de somptueux vins doux. C'est le blanc le plus planté de la région. En version sèche, il est le cépage du Cirò Bianco et de nombreux blancs de la région : sur les marnes calcaires côtières, il donne des vins frais, salins et méditerranéens, aux arômes d'agrumes, de fleurs blanches et de fruits jaunes, désaltérants et de bonne tenue. Mais c'est en version douce qu'il atteint son sommet : passerillé sur des nattes de paille à la pointe sud de la région, il donne le rare et somptueux Greco di Bianco, un liquoreux ancestral au goût antique. Le Greco Bianco (parfois identifié à la Malvasia di Lipari ou di Sardegna) illustre ainsi la polyvalence et la richesse des cépages blancs autochtones de Calabria. Des domaines comme Librandi, Ceraudo ou Ceratti en révèlent les différentes facettes. C'est un accord idéal avec les poissons, les fruits de mer et la cuisine méditerranéenne pour le sec, les desserts et les fromages pour le doux.\n\nLe grand cépage blanc de la Calabria : frais et salin en sec (Cirò Bianco), somptueux en passito (Greco di Bianco), variété polyvalente d'origine grecque. C'est le blanc emblématique de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "greco-bianco",
+        "cepage",
+        "blanc",
+        "doux",
+        "autochtone"
+      ],
+      "source": "firstleaf|decanter"
+    },
+    {
+      "id": "it-calabria-terr-val-di-neto",
+      "nom": "Val di Neto",
+      "type": "appellation (IGT)",
+      "region": "Calabria",
+      "sous_region": "Val di Neto (KR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Greco Bianco",
+        "Mantonico",
+        "Pecorello"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "sols argileux et alluviaux des collines ioniennes (près de Crotone)",
+      "caracteristiques_rapides": "L'IGT dynamique près de Cirò : cadre souple pour cépages autochtones et internationaux, terroir de domaines phares (Ceraudo), entre tradition et créativité.",
+      "notes_objectives": "Le Val di Neto est une IGT dynamique de la côte ionienne de Calabria, dans la vallée du fleuve Neto, près de Crotone et à quelques kilomètres de Cirò. Cadre plus souple que les DOC, elle est le terroir de plusieurs domaines phares de la région. Sur les sols argileux et alluviaux des collines ioniennes, sous un climat méditerranéen chaud tempéré par la mer, l'IGT permet de cultiver aussi bien les cépages autochtones (Gaglioppo, Greco Bianco, Mantonico, Pecorello) que des variétés internationales, avec une grande liberté. C'est notamment le terroir du domaine Ceraudo, pionnier du bio en Calabria, dont les cuvées (Petraro, Grisara, Grayasusi) figurent parmi les meilleures de la région et ont porté haut la réputation du Val di Neto. La souplesse de l'IGT permet l'innovation et l'expression de terroirs et de cépages variés, à côté des appellations plus strictes. Le Val di Neto illustre le dynamisme de la viticulture ionienne, entre tradition et créativité. C'est un accord idéal avec la cuisine calabraise, les poissons pour les blancs et rosés, les viandes pour les rouges.\n\nL'IGT dynamique près de Cirò : cadre souple pour cépages autochtones et internationaux, terroir de domaines phares (Ceraudo), entre tradition et créativité. C'est une belle vitrine de la viticulture ionienne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "val-di-neto",
+        "gaglioppo",
+        "igt",
+        "crotone"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-terr-melissa",
+      "nom": "Melissa",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Cirò/Ionienne (KR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Greco Bianco",
+        "Greco Nero"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "sols sableux et argileux des collines côtières basses de la mer Ionienne",
+      "caracteristiques_rapides": "Le voisin méridional du Cirò : Gaglioppo (avec un peu de Greco Nero) en rouge et Greco Bianco en blanc, sur l'une des zones les plus basses de la région (Librandi/Asylia).",
+      "notes_objectives": "Le Melissa est une appellation de la côte ionienne de Calabria, voisine méridionale du Cirò, dans la province de Crotone. Son nom évoque la douceur (le miel, en grec), et une légende le rattache à Melisseus, un prince crétois. C'est l'une des zones viticoles les plus basses de la région. Le Melissa produit des rouges et des blancs : les rouges reposent sur le Gaglioppo (avec jusqu'à 25 % de Greco Nero), les blancs sur le Greco Bianco (complété de Trebbiano et de Malvasia). Sur les collines côtières basses (de 0 à 300 mètres), aux sols sableux et argileux, bordant la mer Ionienne et exposées à l'est, ces cépages donnent des vins solaires et accessibles, proches stylistiquement du Cirò mais souvent plus souples. L'appellation est notamment portée par la maison Librandi, basée à Melissa, qui y produit son Asylia. Le Melissa illustre, aux côtés du Cirò, la tradition du Gaglioppo sur la côte ionienne. C'est un accord idéal avec la cuisine calabraise, les viandes et les fromages pour le rouge, les poissons pour le blanc, un vin méditerranéen accessible.\n\nLe voisin méridional du Cirò : Gaglioppo (avec un peu de Greco Nero) en rouge et Greco Bianco en blanc, sur l'une des zones les plus basses de la région (Librandi/Asylia). C'est une autre facette du Gaglioppo ionien.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "melissa",
+        "gaglioppo",
+        "rouge",
+        "blanc",
+        "doc"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-calabria-terr-lamezia",
+      "nom": "Lamezia",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Greco Nero",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "sols alluviaux et argileux de la plaine et des collines de Lamezia (versant tyrrhénien)",
+      "caracteristiques_rapides": "L'appellation de l'ouest, autour de Lamezia Terme : rouges d'assemblage de cépages autochtones et blancs, terroir chaud de la côte tyrrhénienne (Statti, Cantine Lento).",
+      "notes_objectives": "Le Lamezia est une appellation de la côte tyrrhénienne de Calabria, autour de la ville de Lamezia Terme, dans la province de Catanzaro, là où la botte italienne est la plus étroite. C'est un terroir chaud du versant occidental de la région. L'appellation produit surtout des rouges d'assemblage à base de cépages autochtones (Gaglioppo, Greco Nero, Nerello Cappuccio), ainsi que des blancs et des rosés. Sur les sols alluviaux et argileux de la plaine et des collines de Lamezia, sous un climat méditerranéen chaud tempéré par la mer Tyrrhénienne, ces cépages donnent des vins solaires et accessibles. L'appellation est portée par des domaines comme Statti et Cantine Lento, qui conjuguent cépages autochtones et internationaux. Le Lamezia illustre la viticulture de l'ouest calabrais, entre tradition et modernité. C'est un accord idéal avec la cuisine calabraise, les viandes et les fromages pour les rouges, les poissons pour les blancs, un vin méditerranéen convivial de la côte tyrrhénienne.\n\nL'appellation de l'ouest, autour de Lamezia Terme : rouges d'assemblage de cépages autochtones et blancs, terroir chaud de la côte tyrrhénienne (Statti, Cantine Lento). C'est la viticulture de l'ouest calabrais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "lamezia",
+        "gaglioppo",
+        "rouge",
+        "doc"
+      ],
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-calabria-terr-scavigna",
+      "nom": "Scavigna",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Aglianico",
+        "Chardonnay"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "sols argileux des collines de Nocera Terinese (versant tyrrhénien)",
+      "caracteristiques_rapides": "Petite appellation de la côte tyrrhénienne : rouges et blancs mêlant autochtones et internationaux, terroir confidentiel révélé par Odoardi (Vigna Garrone).",
+      "notes_objectives": "Le Scavigna est une petite appellation de la côte tyrrhénienne de Calabria, autour de Nocera Terinese, dans la province de Catanzaro. C'est un terroir confidentiel et de qualité du versant occidental de la région. L'appellation produit des rouges et des blancs, mêlant cépages autochtones (Gaglioppo) et internationaux (Aglianico, Chardonnay). Sur les sols argileux des collines de Nocera Terinese, sous l'influence de la mer Tyrrhénienne, ces cépages donnent des vins de caractère. L'appellation a été notamment révélée par le domaine Odoardi, dont le Vigna Garrone (jadis sous cette DOC) est une référence. Petite et méconnue, Scavigna illustre le potentiel qualitatif des terroirs confidentiels de l'ouest calabrais. C'est un accord idéal avec la cuisine calabraise, les viandes rouges et le gibier pour les rouges, les poissons pour les blancs, un vin de la côte tyrrhénienne à découvrir, chez une appellation rare portée par quelques vignerons passionnés.\n\nPetite appellation de la côte tyrrhénienne : rouges et blancs mêlant autochtones et internationaux, terroir confidentiel révélé par Odoardi (Vigna Garrone). C'est un terroir rare de l'ouest à découvrir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "scavigna",
+        "gaglioppo",
+        "rouge",
+        "blanc",
+        "doc"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-calabria-terr-bivongi",
+      "nom": "Bivongi",
+      "type": "appellation (DOC)",
+      "region": "Calabria",
+      "sous_region": "Reggio/Sud (RC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Greco Nero",
+        "Nerello",
+        "Guardavalle"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "sols schisteux de la vallée du Stilaro (Locride, versant ionien sud)",
+      "caracteristiques_rapides": "L'appellation de la Locride, entre les deux mers : rouges de Gaglioppo et Nerello, blancs de Guardavalle, terroir méconnu de la pointe sud de la Calabria.",
+      "notes_objectives": "Le Bivongi est une appellation de la Locride, dans la vallée du fleuve Stilaro, à cheval sur les provinces de Reggio Calabria et Catanzaro, sur le versant ionien sud de la région. C'est un terroir méconnu, entre les deux mers, au pied du massif des Serre. L'appellation produit des rouges à base de Gaglioppo, Greco Nero et Nerello, ainsi que des blancs de Greco Bianco et de Guardavalle (un cépage autochtone rare). Sur les sols schisteux de la vallée du Stilaro, en moyenne altitude, ces cépages donnent des vins de caractère, fidèles au terroir. Confidentielle, l'appellation illustre le patrimoine viticole de la Locride et de la pointe sud de la Calabria, riche en cépages autochtones rares. Le Bivongi est un terroir à découvrir pour les amateurs de vins méridionaux authentiques. C'est un accord idéal avec la cuisine calabraise, les viandes et les fromages pour les rouges, les poissons pour les blancs, un vin rare de la Locride, chez une appellation méconnue de la pointe sud de la région.\n\nL'appellation de la Locride, entre les deux mers : rouges de Gaglioppo et Nerello, blancs de Guardavalle, terroir méconnu de la pointe sud de la Calabria. C'est un patrimoine viticole à découvrir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "bivongi",
+        "locride",
+        "gaglioppo",
+        "rouge",
+        "doc"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-terr-moscato-al-governo-di-saracena",
+      "nom": "Moscato al governo di Saracena",
+      "type": "appellation (IGP)",
+      "region": "Calabria",
+      "sous_region": "Pollino/Saracena (CS)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Guarnaccia",
+        "Malvasia",
+        "Moscatello",
+        "Odoacra"
+      ],
+      "altitude": "~400-600 m",
+      "sols": "sols calcaires des contreforts du massif du Pollino",
+      "caracteristiques_rapides": "Un vin doux unique au monde : assemblage de cépages passerillés et de moût cuit selon une méthode héritée de la Renaissance, curiosité culte de Saracena (Viola).",
+      "notes_objectives": "Le Moscato al governo di Saracena est un vin doux unique au monde, produit autour du village de Saracena, au pied du massif du Pollino, dans le nord de la Calabria. C'est l'une des curiosités œnologiques les plus fascinantes d'Italie, héritée de la Renaissance. Sa méthode d'élaboration est sans équivalent : on assemble plusieurs cépages autochtones passerillés (Guarnaccia, Malvasia, Moscatello, Odoacra) avec un moût de Moscatello préalablement cuit (le « governo »), le tout sans ajout d'alcool. Il en résulte un vin liquoreux d'une grande complexité, aux arômes d'agrumes confits, d'abricot, de miel, de figue et d'épices, à la fois riche et frais. Cette tradition séculaire, longtemps au bord de l'oubli, a été sauvée et fait connaître par quelques vignerons passionnés (Cantine Viola, Feudo dei Sanseverino). Sur les sols calcaires des contreforts du Pollino, ce vin perpétue un savoir-faire rarissime. C'est un accord idéal avec les desserts, la pâtisserie aux amandes et aux figues, les fromages bleus, ou à déguster seul en méditation, une curiosité culte du patrimoine calabrais.\n\nUn vin doux unique au monde : assemblage de cépages passerillés et de moût cuit selon une méthode héritée de la Renaissance, curiosité culte de Saracena (Viola). C'est l'un des liquoreux les plus originaux d'Italie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "saracena",
+        "pollino",
+        "moscato",
+        "doux",
+        "rare",
+        "curiosite",
+        "igp"
+      ],
+      "source": "decanter|cellartours"
+    },
+    {
+      "id": "it-calabria-terr-calabria",
+      "nom": "Calabria",
+      "type": "appellation (IGT)",
+      "region": "Calabria",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gaglioppo",
+        "Magliocco",
+        "Greco Bianco",
+        "Mantonico",
+        "Cabernet"
+      ],
+      "altitude": "~0-700 m",
+      "sols": "sols variés (marnes, granites, sables, schistes) de la région",
+      "caracteristiques_rapides": "La grande IGT régionale : cadre souple pour tous cépages, autochtones et internationaux, dont des cuvées d'auteur et nature majeures (Cirò Revolution, L'Acino) hors DOC.",
+      "notes_objectives": "L'IGT Calabria est l'indication géographique régionale, qui couvre l'ensemble du territoire de la région. Cadre souple et transversal, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC. Elle rassemble tous les cépages de la région — au premier rang desquels le Gaglioppo et le Magliocco, mais aussi le Greco Bianco, le Mantonico, le Greco Nero, la Guarnaccia — ainsi que des cépages internationaux (Cabernet, Merlot, Chardonnay), en rouge, blanc, rosé et doux. C'est notamment sous cette IGT que sont commercialisées de nombreuses cuvées d'auteur et nature qui sortent du cadre des appellations, notamment celles de la « Cirò Revolution » et de la scène naturelle des Terre di Cosenza (L'Acino, et diverses micro-cuvées). Souple et créative, l'IGT Calabria est un espace de liberté précieux pour les vignerons, du vin de tous les jours aux cuvées les plus originales. Elle illustre la diversité et le dynamisme retrouvé du vignoble calabrais. C'est un accord idéal avec l'ensemble de la cuisine calabraise, selon les cépages et les styles.\n\nLa grande IGT régionale : cadre souple pour tous cépages, autochtones et internationaux, dont des cuvées d'auteur et nature majeures (Cirò Revolution, L'Acino) hors DOC. C'est l'espace de liberté des vignerons calabrais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calabria",
+        "igt",
+        "gaglioppo",
+        "souple",
+        "auteur",
+        "nature"
+      ],
+      "source": "firstleaf"
+    }
+  ]
+}

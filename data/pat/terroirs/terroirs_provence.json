@@ -1,0 +1,498 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "provence",
+  "region_label": "Provence",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_provence_vPat.xlsx",
+  "built_at": "2026-05-15T08:34:01+00:00",
+  "count": 16,
+  "items": [
+    {
+      "id": "prov-cotes-de-provence",
+      "nom": "Côtes de Provence",
+      "type": "appellation_regionale",
+      "region": "Provence",
+      "sous_region": "Var-Bouches-du-Rhône-Alpes-Maritimes",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "Tibouren",
+        "Carignan",
+        "Vermentino",
+        "Sémillon",
+        "Ugni Blanc"
+      ],
+      "altitude": "0-400 m",
+      "sols": "Variés : calcaires, schistes, grès permiens, sables",
+      "caracteristiques_rapides": "Plus grande AOC de Provence (~20 000 ha). Production dominée par les rosés (~85-90%). Cinq dénominations géographiques (Sainte-Victoire, Fréjus, La Londe, Pierrefeu, Notre-Dame des Anges).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "rose",
+        "tous-styles"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-sainte-victoire",
+      "nom": "Côtes de Provence Sainte-Victoire",
+      "type": "appellation_denomination",
+      "region": "Provence",
+      "sous_region": "Bouches-du-Rhône-Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Vermentino"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "Dénomination géographique au pied de la montagne Sainte-Victoire. Rosés et rouges (pas de blancs). Climat plus continental, vins plus structurés. Référence pour rosés haut de gamme.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "sainte-victoire",
+        "rose-rouge"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-frejus",
+      "nom": "Côtes de Provence Fréjus",
+      "type": "appellation_denomination",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Tibouren",
+        "Mourvèdre",
+        "Syrah",
+        "Grenache"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Rhyolites et grès rouges de l'Estérel",
+      "caracteristiques_rapides": "Petite dénomination sur sols volcaniques rouges du massif de l'Estérel. Tibouren mis en avant. Rouges et rosés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "esterel",
+        "tibouren",
+        "volcanique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-la-londe",
+      "nom": "Côtes de Provence La Londe",
+      "type": "appellation_denomination",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Syrah",
+        "Vermentino",
+        "Sémillon"
+      ],
+      "altitude": "0-150 m",
+      "sols": "Schistes (massif des Maures)",
+      "caracteristiques_rapides": "Dénomination littorale (presqu'île entre Hyères et Bormes). Influence maritime, sols schisteux. Rosés salins, rouges sur mourvèdre. Domaine de la Sanglière, Galoupet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "maritime",
+        "schistes",
+        "mourvedre"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-pierrefeu",
+      "nom": "Côtes de Provence Pierrefeu",
+      "type": "appellation_denomination",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Schistes et grès permiens",
+      "caracteristiques_rapides": "Dénomination intérieure (massif des Maures). Climat plus chaud et sec, rouges en progression qualitative.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "maures",
+        "interieure"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-notre-dame-des-anges",
+      "nom": "Côtes de Provence Notre-Dame des Anges",
+      "type": "appellation_denomination",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Carignan",
+        "Tibouren"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Dénomination la plus récente (reconnue 2019), au cœur des Maures. Altitude apporte de la fraîcheur. Identité encore en construction.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "maures",
+        "recente",
+        "altitude"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-coteaux-aix",
+      "nom": "Coteaux d'Aix-en-Provence",
+      "type": "appellation_regionale",
+      "region": "Provence",
+      "sous_region": "Bouches-du-Rhône",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cabernet Sauvignon",
+        "Cinsault",
+        "Counoise",
+        "Carignan",
+        "Mourvèdre",
+        "Vermentino",
+        "Sauvignon",
+        "Bourboulenc",
+        "Clairette"
+      ],
+      "altitude": "100-450 m",
+      "sols": "Argilo-calcaires, marnes, grès",
+      "caracteristiques_rapides": "AOC ~4 000 ha entre Salon-de-Provence et Aix. Rosés majoritaires mais belle production de rouges. Particularité : Cabernet Sauvignon autorisé. Conflit historique avec Trévallon (passé en IGP).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "cabernet-autorise",
+        "aix"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-coteaux-varois",
+      "nom": "Coteaux Varois en Provence",
+      "type": "appellation_regionale",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Carignan",
+        "Vermentino",
+        "Clairette"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "AOC ~2 200 ha autour de Brignoles, plus en altitude que les Côtes de Provence. Climat plus frais, rosés tendus, rouges fruités.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "altitude",
+        "brignoles"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-bandol",
+      "nom": "Bandol",
+      "type": "appellation_village",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault",
+        "Carignan",
+        "Syrah",
+        "Clairette",
+        "Bourboulenc",
+        "Ugni Blanc",
+        "Vermentino"
+      ],
+      "altitude": "0-450 m",
+      "sols": "Argilo-calcaires, marnes (restanques en terrasses)",
+      "caracteristiques_rapides": "AOC iconique ~1 500 ha en amphithéâtre face mer. Mourvèdre roi (50 % min en rouge), élevage minimum 18 mois en bois. Rouges et rosés de très longue garde. Tempier, Pibarnon, Pradeaux, La Bégude, Terrebrune.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "iconique",
+        "mourvedre",
+        "garde",
+        "restanques"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-cassis",
+      "nom": "Cassis",
+      "type": "appellation_village",
+      "region": "Provence",
+      "sous_region": "Bouches-du-Rhône",
+      "pays": "France",
+      "cepages_rois": [
+        "Marsanne",
+        "Clairette",
+        "Ugni Blanc",
+        "Bourboulenc",
+        "Sauvignon",
+        "Grenache",
+        "Mourvèdre",
+        "Cinsault",
+        "Carignan"
+      ],
+      "altitude": "0-200 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "Petite AOC ~200 ha consacrée à 75 % aux blancs (marsanne, clairette). Première AOC de France à reconnaître les blancs (1936). Clos Sainte-Magdeleine, Bagnol, Ferme Blanche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "blancs",
+        "maritime",
+        "calcaires"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-palette",
+      "nom": "Palette",
+      "type": "appellation_village",
+      "region": "Provence",
+      "sous_region": "Bouches-du-Rhône",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Mourvèdre",
+        "Cinsault",
+        "Clairette",
+        "Ugni Blanc",
+        "Grenache Blanc"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Calcaire de Langesse",
+      "caracteristiques_rapides": "Toute petite AOC ~50 ha à Meyreuil (sud-est d'Aix). Encépagement ample autorisant ~15 cépages. Château Simone est l'iconographie absolue (rouges, rosés et blancs de très longue garde).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "confidentielle",
+        "simone",
+        "garde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-bellet",
+      "nom": "Bellet",
+      "type": "appellation_village",
+      "region": "Provence",
+      "sous_region": "Alpes-Maritimes",
+      "pays": "France",
+      "cepages_rois": [
+        "Folle Noire (Fuella)",
+        "Braquet",
+        "Grenache",
+        "Cinsault",
+        "Rolle",
+        "Roussan",
+        "Spagnol"
+      ],
+      "altitude": "200-400 m",
+      "sols": "Poudingues, galets, sables",
+      "caracteristiques_rapides": "AOC niçoise ~50 ha sur les collines au-dessus de Nice. Cépages locaux uniques (Folle Noire, Braquet, Rolle). Très confidentielle et urbanisée. Clos Saint-Vincent, Château de Bellet, Toasc.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "niçoise",
+        "cepages-locaux",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-baux-de-provence",
+      "nom": "Les Baux-de-Provence",
+      "type": "appellation_village",
+      "region": "Provence",
+      "sous_region": "Bouches-du-Rhône",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "Counoise",
+        "Clairette",
+        "Grenache Blanc",
+        "Roussanne",
+        "Vermentino"
+      ],
+      "altitude": "50-300 m",
+      "sols": "Calcaires des Alpilles",
+      "caracteristiques_rapides": "AOC ~280 ha dans les Alpilles. Forte densité de bio/biodynamie historique (mistral limite les maladies). Hauvette, Romanin, Mas de la Dame. Trévallon (en IGP suite au refus du cabernet).",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": "Certains des plus grands rouges de France, dont certains dans l'IGP Alpilles",
+      "tags": [
+        "aoc",
+        "village",
+        "alpilles",
+        "biodynamie"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-pierrevert",
+      "nom": "Pierrevert",
+      "type": "appellation_regionale",
+      "region": "Provence",
+      "sous_region": "Alpes-de-Haute-Provence",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Carignan",
+        "Vermentino",
+        "Clairette"
+      ],
+      "altitude": "350-500 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC ~400 ha, vignoble le plus septentrional et le plus haut de Provence. Climat alpin, vins frais et tendus. Confidentielle.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "haute-altitude",
+        "alpes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-igp-mediterranee",
+      "nom": "IGP Méditerranée",
+      "type": "igp",
+      "region": "Provence",
+      "sous_region": "Provence-Alpes-Côte-d Azur + Drôme + Vaucluse",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Mourvèdre",
+        "Vermentino",
+        "Chardonnay",
+        "Sauvignon"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant l'ensemble PACA (+ partie Rhône). Permet des cépages non autorisés en AOC (cabernet, merlot, chardonnay…). Trévallon en est l'exemple le plus célèbre. Sulauze, Hauvette pour certaines cuvées.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "cepages-libres",
+        "trevallon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "prov-igp-maures",
+      "nom": "IGP Maures",
+      "type": "igp",
+      "region": "Provence",
+      "sous_region": "Var",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Carignan",
+        "Tibouren",
+        "Rolle",
+        "Sémillon"
+      ],
+      "altitude": "100-500 m",
+      "sols": "Schistes, grès permiens",
+      "caracteristiques_rapides": "IGP correspondant au massif des Maures. Plus de liberté de cépages et d'élevage. Souvent utilisée par les domaines pour des cuvées hors-cadre AOC.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "maures",
+        "schistes"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

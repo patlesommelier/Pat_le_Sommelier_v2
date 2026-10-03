@@ -1,0 +1,513 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Toro & Rueda",
+  "source_file": "terroirs_toro_rueda_To_Import.xlsx",
+  "built_at": "2026-08-12T08:57:32",
+  "count": 19,
+  "items": [
+    {
+      "id": "es-castillayleon-terr-vinedos-prefiloxericos-de-segovia-nieva",
+      "nom": "Viñedos prefiloxéricos de Segovia (Nieva)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Segovia",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Sables francs et graves sur socle, autour du « mar de pinares »",
+      "caracteristiques_rapides": "Réserve unique de Verdejo préphylloxérique franc de pied à Nieva, Aldeanueva et Santiuste, à plus de 900 m : le sable fin a bloqué le phylloxéra, berceau d'Ossian et Shaya.",
+      "notes_objectives": "Les vignobles préphylloxériques du nord de la province de Ségovie constituent l'une des plus grandes réserves de vieilles vignes franches de pied de toute la péninsule Ibérique, et le plus grand trésor caché de la DO Rueda. Autour des villages de Nieva, Aldeanueva del Codonal, Aldehuela et Santiuste de San Juan Bautista, à plus de neuf cents mètres d'altitude, subsistent près de quatre-vingt-dix hectares de Verdejo âgé de cent à deux cents ans, jamais greffé, planté sur ses propres racines. Ce miracle tient à la nature du sol. Ces villages sont traversés par l'ancienne voie de transhumance dite du Cordel de las Merinas et entourés par le mar de pinares, une immense forêt de pins qui pousse sur des sables très fins. Or, à la fin du XIXe siècle, les larves du phylloxéra n'ont pas pu éclore dans ces sables francs et meubles, qui les asphyxiaient : la zone a ainsi échappé à la catastrophe qui a ravagé le vignoble européen. Aux sables s'ajoutent des graves — les codones, galets roulés d'anciennes terrasses fluviales — et des passages d'argile et d'ardoise selon les endroits. L'altitude extrême, parmi les plus élevées d'Espagne pour un vignoble, et la pauvreté des sols donnent un Verdejo franc de pied à toutes petites grappes, à baies minuscules, d'une concentration et d'une acidité exceptionnelles. Les fortes gelées de la meseta, mises à profit pour stabiliser naturellement les vins, complètent ce tableau climatique extrême. C'est ce terroir qui a donné naissance à Ossian, l'un des plus grands blancs de garde d'Espagne, ainsi qu'à Shaya et à plusieurs cuvées parcellaires de haut vol. Pour un sommelier, ces vignes de Ségovie sont un lieu à raconter autant qu'à faire goûter : elles prouvent que le Verdejo, longtemps réduit à un blanc de plaine, peut donner de grands vins de terroir profonds et minéraux, à condition de disposer de vieilles vignes franches de pied d'altitude. Un patrimoine irremplaçable, aujourd'hui reconnu comme tel. Morcelées entre de nombreux petits propriétaires, ces parcelles restent fragiles, mais leur reconnaissance récente, portée par le succès d'Ossian, a inversé la tendance à l'arrachage. Elles constituent, avec les vieilles vignes de Toro et de l'Atauta, l'un des trois grands réservoirs préphylloxériques de la Castille.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "prephylloxerique",
+        "franc-de-pied",
+        "altitude",
+        "sables",
+        "segovia",
+        "prov-segovia"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-vinas-viejas-en-pie-franco-de-toro",
+      "nom": "Viñas viejas en pie franco de Toro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "620–870 m",
+      "sols": "Sables profonds sur argiles et pudingas calizas, franc de pied",
+      "caracteristiques_rapides": "Patrimoine mondial unique : près de 1800 ha estimés de Tinta de Toro franc de pied, préphylloxérique ou de plus de 60 ans, sur sables qui ont résisté au phylloxéra.",
+      "notes_objectives": "Les vieilles vignes franches de pied de Toro forment un patrimoine viticole unique au monde, et le véritable cœur de l'identité de l'appellation. La DO conserverait, selon les estimations, près de mille huit cents hectares de Tinta de Toro non greffée — préphylloxérique ou issue de matériel préphylloxérique — âgée de plus de soixante ans, et une part considérable de son vignoble en gobelet dépasse les trente-cinq ans. Ce trésor n'a jamais été inventorié précisément, ce qui ajoute à son aura. Comme en Ségovie ou dans la vallée de l'Atauta, ce miracle tient au sol. Toro repose sur des sables profonds, pauvres en matière organique, déposés sur des argiles et des pudingas calizas — des poudingues calcaires. Ces sables meubles ont empêché le phylloxéra de proliférer à la fin du XIXe siècle, si bien que de nombreuses parcelles ont survécu sur leurs propres racines, franches de pied. Le climat continental semi-aride, aux hivers glaciaux et aux étés brûlants, avec de fortes amplitudes thermiques et à peine trois cent cinquante à quatre cents millimètres de pluie par an, impose à ces vieilles vignes des rendements infimes. La Tinta de Toro qui en est issue, à petites baies et à peau très épaisse, donne des vins d'une couleur, d'une puissance et d'une concentration extrêmes, mais les meilleures vieilles vignes apportent aussi une minéralité et une profondeur qui transcendent la rusticité. C'est de ce patrimoine que naissent les grands crus de l'appellation, d'Alabaster à Termanthia en passant par Cartago. Pour beaucoup de vignerons de référence, comme Anthony Terryn de Dominio del Bendito, pouvoir planter en franc de pied et préserver ce matériel végétal historique est un rêve et un combat. Pour un sommelier, ces vieilles vignes sont l'argument central de Toro : elles expliquent la puissance des vins, mais aussi, entre les meilleures mains, leur capacité à la finesse. Un patrimoine à raconter comme l'un des plus précieux d'Espagne. Ce patrimoine est aussi un enjeu d'avenir : face au réchauffement climatique, ces vieilles vignes profondément enracinées résistent mieux que les plantations récentes. Leur préservation est devenue une cause commune aux meilleurs producteurs, conscients qu'elles font la différence entre un grand Toro et un simple vin de puissance.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "prephylloxerique",
+        "franc-de-pied",
+        "vieilles-vignes",
+        "sables",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-la-seca",
+      "nom": "La Seca",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "700–780 m",
+      "sols": "Sables, argiles et galets roulés (cantos rodados) sur socle calcaire",
+      "caracteristiques_rapides": "Village le plus qualitatif de Rueda, cœur du « triangle d'or », fief de Belondrade, José Pariente et Naia : les meilleures vieilles vignes de Verdejo de la DO.",
+      "notes_objectives": "La Seca est le village le plus qualitatif de la DO Rueda, et le cœur du « triangle d'or » de l'appellation, cette zone d'élite délimitée par Tordesillas, Medina del Campo et Rueda. C'est ici, sur les meilleures terres à Verdejo de la région, que se sont installés les domaines les plus ambitieux : Belondrade, qui a inventé le Rueda de garde, José Pariente, Naia, et une nouvelle génération de vignerons parcellaires comme Barco del Corneta. Le terroir de La Seca repose sur des sols sédimentaires caractéristiques : des sables et des argiles mêlés de galets roulés — les cantos rodados — sur un socle de calcaire en profondeur. Cette combinaison, à sept cents à sept cent quatre-vingts mètres d'altitude, assure un excellent drainage et contraint la vigne, tandis que le sous-sol calcaire apporte de la fraîcheur et de la tension. Le climat continental extrême du plateau, aux fortes amplitudes thermiques entre le jour et la nuit, préserve l'acidité et les arômes du Verdejo. La grande richesse de La Seca est son patrimoine de vieilles vignes, en partie franches de pied et en gobelet, dont certaines pourraient avoir survécu au phylloxéra. Ce sont ces parcelles qui donnent les Verdejo les plus profonds et les plus complexes de l'appellation, aptes à la fermentation en barrique et à la garde. La Seca concentre ainsi ce que Rueda produit de mieux, à rebours de l'image industrielle qui a longtemps collé à la DO. Pour un sommelier, La Seca est le nom-clé de Rueda : l'évoquer, c'est situer d'emblée les grands Verdejo de terroir et de garde, et expliquer pourquoi cette commune concentre les domaines les plus sérieux de l'appellation. Les vins qui en sont issus méritent d'être servis pas trop froids et, pour les meilleurs, carafés. L'histoire récente de La Seca illustre la mutation de toute l'appellation : c'est ici qu'un Français, Didier Belondrade, a planté en 1994 les vignes qui allaient prouver que le Verdejo pouvait vieillir, ouvrant la voie à une génération entière. Aujourd'hui, la commune attire les projets les plus pointus, de Barco del Corneta aux cuvées parcellaires des grands noms, tous en quête de ses meilleures vieilles vignes. La Seca est ainsi passée, en une génération, du statut de simple fournisseur de raisin à celui de terroir de référence.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "la-seca",
+        "verdejo",
+        "vieilles-vignes",
+        "triangle-de-oro",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-tinta-de-toro",
+      "nom": "Tinta de Toro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "620–870 m",
+      "sols": "S'exprime sur sables et graves de toute la DO Toro",
+      "caracteristiques_rapides": "Le clone local du Tempranillo, adapté à la sécheresse et aux amplitudes extrêmes : petites baies, peau très épaisse, couleur et tanins puissants, colonne vertébrale de Toro.",
+      "notes_objectives": "La Tinta de Toro est le clone local du Tempranillo, adapté depuis des siècles au climat extrême de la DO Toro, et la colonne vertébrale de l'appellation, où elle représente la quasi-totalité de l'encépagement. Elle s'exprime sur les sables et les graves de toute la zone, entre six cent vingt et huit cent soixante-dix mètres d'altitude, sur des sols bruns pauvres reposant sur des poudingues calcaires. Ce Tempranillo toresan se distingue nettement de ses cousins de Rioja ou de Ribera. Le climat continental semi-aride — hivers glaciaux, étés brûlants, à peine trois cent cinquante millimètres de pluie par an — l'a façonné en un cépage à petites grappes et baies minuscules à peau très épaisse, d'où la couleur intense, les tanins et la puissance des vins de Toro. Longtemps synonyme de rusticité, cette puissance a été domptée par une génération de vignerons — des Eguren à Mariano García — qui ont montré que, issue de vieilles vignes et vinifiée avec précision, la Tinta de Toro pouvait donner des rouges profonds et racés, voire minéraux sur les franc de pied. Pour un sommelier, comprendre la Tinta de Toro est essentiel : c'est le même cépage que le Tempranillo de Rioja, mais poussé à l'extrême par un climat et un sol impitoyables, ce qui explique la singularité des vins de Toro. Un point de comparaison toujours parlant à table, et un argument pour l'amateur de rouges puissants et charpentés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "cepage",
+        "tempranillo",
+        "transversal",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-verdejo",
+      "nom": "Verdejo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "700–920 m",
+      "sols": "S'exprime sur sables, graves et calcaires de toute la DO Rueda",
+      "caracteristiques_rapides": "Cépage blanc autochtone de Rueda, à l'acidité vive et à l'amertume noble : de blanc frais de plaine à grand blanc de garde d'altitude selon le terroir et l'élevage.",
+      "notes_objectives": "Le Verdejo est le cépage blanc autochtone de Rueda, et l'un des plus grands cépages blancs d'Espagne. Il s'exprime sur les sables, les graves et les calcaires de toute l'appellation, entre sept cents et neuf cent vingt mètres d'altitude, avec une prédilection pour les sols pauvres et bien drainés du plateau castillan. Sa signature tient à un équilibre rare : une acidité vive, préservée par les fortes amplitudes thermiques du climat continental, et une amertume noble en finale, presque saline, qui donne aux vins leur tension et leur longueur. Les arômes vont des fruits blancs et des agrumes, dans les versions fraîches, à des notes plus complexes de fenouil, de fruits secs et d'herbes lorsque le cépage est issu de vieilles vignes et élevé sur lies ou en barrique. Longtemps cantonné à un rôle de blanc de plaine vinifié en inox pour une consommation rapide, le Verdejo a vu Belondrade, Ossian et José Pariente prouver qu'il pouvait donner de grands blancs de garde, à condition de vieilles vignes et d'un travail ambitieux. Pour un sommelier, le Verdejo est un cépage à double visage, qu'il faut savoir raconter : le blanc frais et gourmand pour l'apéritif et la carte au verre, le grand blanc de terroir pour la gastronomie. Cette polyvalence en fait un atout précieux, et l'occasion de surprendre un client qui croit connaître Rueda.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "cepage",
+        "verdejo",
+        "transversal",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-morales-de-toro",
+      "nom": "Morales de Toro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro — Zamora",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "650–750 m",
+      "sols": "Sables et graves sur la rive nord du Duero",
+      "caracteristiques_rapides": "Village historique de la rive nord du Duero, riche en vieilles vignes préphylloxériques, fief de Vega Saúco et de plusieurs parcellaires réputés.",
+      "notes_objectives": "Morales de Toro est l'un des villages historiques de la DO Toro, sur la rive nord du Duero, réputé pour la richesse de son patrimoine de vieilles vignes préphylloxériques. Situé entre six cent cinquante et sept cent cinquante mètres d'altitude, il repose sur des sols de sables et de graves déposés par le fleuve. Ces sables profonds et pauvres, qui ont protégé les vignes du phylloxéra, abritent de nombreuses parcelles franches de pied et centenaires, parmi les plus précieuses de l'appellation. Le village est le fief de Vega Saúco et fournit le raisin de plusieurs cuvées parcellaires réputées, comme le Celsus de Vetus, issu d'un vignoble préphylloxérique de Morales aux notes minérales et épicées caractéristiques. La Tinta de Toro y donne des vins puissants mais, sur les meilleures vieilles vignes, dotés d'une minéralité et d'une profondeur qui transcendent la rusticité. La rive nord du Duero, plus fraîche, apporte une dimension supplémentaire à ces terroirs. Pour un sommelier, Morales de Toro est un nom à connaître pour raconter le patrimoine préphylloxérique de l'appellation et proposer des Toros de vieilles vignes de caractère. Un village qui incarne, mieux que d'autres, la richesse cachée du vignoble historique de Toro, et dont les vieilles vignes sont aujourd'hui très recherchées par les vignerons ambitieux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "morales",
+        "prephylloxerique",
+        "vieilles-vignes",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-toro-villa",
+      "nom": "Toro (villa)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro — Zamora",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "620–750 m",
+      "sols": "Sables bruns pauvres sur pudingas calizas, faible matière organique",
+      "caracteristiques_rapides": "Cœur de la DO autour de la ville de Toro, sur les terrasses du Duero : le berceau des rouges puissants qui ont fait la réputation de l'appellation.",
+      "notes_objectives": "La ville de Toro et ses environs immédiats constituent le cœur historique et symbolique de l'appellation, sur les terrasses qui dominent le Duero. Situé entre six cent vingt et sept cent cinquante mètres d'altitude, ce secteur repose sur des sables bruns pauvres, à faible teneur en matière organique et en sels minéraux, sur des poudingues calcaires. C'est autour de la ville, perchée sur un promontoire dominant le fleuve, que s'est développée la viticulture de Toro depuis l'époque romaine. Les vins de Toro étaient réputés dès le Moyen Âge, exportés et même emportés, dit-on, par Christophe Colomb lors de ses traversées, en raison de leur robustesse qui leur permettait de supporter le voyage. Le secteur concentre de nombreuses bodegas, des maisons historiques comme Fariña ou Rejadorada aux projets plus récents. La Tinta de Toro y donne les rouges puissants et concentrés qui ont fait la réputation de l'appellation, sur des sols pauvres qui contraignent la vigne et limitent les rendements. C'est le terroir du Toro classique, dense et charpenté. Pour un sommelier, la ville de Toro est le repère central de l'appellation : l'évoquer, c'est situer le berceau des grands rouges castillans et raconter une histoire viticole plusieurs fois millénaire. Un nom chargé d'histoire, à associer aux vins les plus emblématiques de la DO.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "toro",
+        "terrasses",
+        "historique",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-valdefinjas",
+      "nom": "Valdefinjas",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro — Zamora",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Sables et graves d'altitude, vieilles vignes en gobelet",
+      "caracteristiques_rapides": "Village de vieilles vignes de la DO Toro, berceau de Numanthia et Teso La Monja : certaines des parcelles les plus anciennes de l'appellation.",
+      "notes_objectives": "Valdefinjas est un village de vieilles vignes de la DO Toro, dans la province de Zamora, dont le patrimoine viticole compte parmi les plus anciens et les plus précieux de l'appellation. Situé entre sept cents et huit cents mètres d'altitude, il repose sur des sables et des graves d'altitude, propices aux vieilles vignes en gobelet. Le village est indissociable de la famille Eguren : c'est ici qu'ils ont d'abord révélé Toro au monde avec Numanthia, puis qu'ils ont bâti Teso La Monja après avoir vendu le premier domaine. Ils y ont sélectionné certaines des parcelles les plus anciennes de l'appellation, dont sont issus des vins comme Alabaster et Termanthia. La qualité exceptionnelle de ces vieilles vignes franches de pied explique la concentration de projets ambitieux dans le secteur. La Tinta de Toro y donne des vins d'une grande profondeur, où la puissance du cépage est disciplinée par l'âge des vignes et le travail des meilleurs vignerons. Valdefinjas illustre le potentiel des vieilles vignes de Toro entre de bonnes mains. Pour un sommelier, Valdefinjas est un nom à connaître pour raconter l'histoire de la révélation de Toro et situer les grands crus des Eguren. Un village discret mais essentiel dans la géographie qualitative de l'appellation, dont le nom mérite d'être connu au même titre que les grands crus qui en sont issus.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "valdefinjas",
+        "vieilles-vignes",
+        "eguren",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-san-roman-de-hornija",
+      "nom": "San Román de Hornija",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Sables frais à veines calcaires et surfaces de galets",
+      "caracteristiques_rapides": "Village de la partie vallisoletane de Toro, sols plus frais orientés au nord, fief de San Román, Pintia et Elías Mora.",
+      "notes_objectives": "San Román de Hornija est un village de la partie vallisoletane de la DO Toro, réputé pour ses sols plus frais et ses expositions favorables, qui en font l'un des secteurs les plus intéressants de l'appellation pour la recherche d'équilibre. Situé entre sept cents et huit cents mètres d'altitude, il repose sur des sables frais à veines calcaires et des surfaces de galets. Cette fraîcheur relative des sols, et parfois l'orientation au nord de certaines parcelles, permettent de tempérer la puissance solaire de la Tinta de Toro et d'allonger le cycle végétatif, préservant l'acidité. C'est cette recherche qui a conduit plusieurs grands domaines à s'y installer : San Román de Mariano García, Pintia de Vega Sicilia et Elías Mora y puisent une partie de leur matière. Les vins de San Román de Hornija se distinguent par un équilibre et une finesse supérieurs à la moyenne de l'appellation, tout en conservant la profondeur du Tinta de Toro. Le village illustre la manière dont le choix des sols frais permet de réinventer le style de Toro. Pour un sommelier, San Román de Hornija est un nom à connaître pour situer les Toros les plus équilibrés et raconter la quête de fraîcheur qui anime les meilleurs producteurs de l'appellation. Un terroir de référence pour la Tinta de Toro raffinée.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "san-roman",
+        "valladolid",
+        "fraicheur",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-villaester",
+      "nom": "Villaester",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinta de Toro"
+      ],
+      "altitude": "700–780 m",
+      "sols": "Sables et graves sur socle, vieilles vignes franches de pied",
+      "caracteristiques_rapides": "Pago réputé de la partie vallisoletane de Toro, berceau du domaine San Román de Mariano García.",
+      "notes_objectives": "Villaester est un pago réputé de la partie vallisoletane de la DO Toro, sur le territoire de Pedrosa del Rey, berceau du domaine San Román de Mariano García. Situé entre sept cents et sept cent quatre-vingts mètres d'altitude, il repose sur des sables et des graves sur socle, propices aux vieilles vignes franches de pied. C'est la qualité de ces terroirs qui a conduit Mariano García, ancien chef de cave de Vega Sicilia, à y établir son projet toresan. Les vieilles vignes de Tinta de Toro y donnent des vins profonds mais dotés de la finesse recherchée par la maison, dont les cuvées San Román et Cartago sont issues. Pour un sommelier, Villaester est un nom à connaître pour situer l'un des plus beaux terroirs de la partie vallisoletane de Toro et raconter le projet de Mariano García. Un pago de référence pour la Tinta de Toro raffinée, associé à l'un des grands noms de l'appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "villaester",
+        "mariano-garcia",
+        "franc-de-pied",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-rueda-villa",
+      "nom": "Rueda (villa)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "700–750 m",
+      "sols": "Sables et graves sur socle calcaire",
+      "caracteristiques_rapides": "Village qui donne son nom à la DO, cœur historique de l'appellation, fief de Marqués de Riscal, Menade et Palacio de Bornos.",
+      "notes_objectives": "Rueda est le village qui donne son nom à l'appellation, cœur historique de la DO et l'un de ses secteurs les plus réputés. Situé autour de sept cents à sept cent cinquante mètres d'altitude, il repose sur des sables et des graves sur socle calcaire, terroir typique du Verdejo. Le village est le fief de plusieurs maisons majeures : Marqués de Riscal, qui y a relancé l'appellation dans les années 1970, Menade et sa biodynamie, ou Palacio de Bornos. La position centrale du village dans le triangle d'or de Rueda en fait un secteur de choix pour le Verdejo. Les vins de Rueda, dominés par le Verdejo, vont du frais et immédiat au blanc de garde selon les producteurs. Pour un sommelier, c'est un nom incontournable pour situer l'appellation et raconter sa renaissance, à associer aux maisons qui ont fait sa réputation moderne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "rueda",
+        "historique",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-serrada",
+      "nom": "Serrada",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "700–750 m",
+      "sols": "Sables et graves, calados historiques sous le village",
+      "caracteristiques_rapides": "Village de Rueda aux calados historiques, réputé pour son Dorado traditionnel, fief de Bodegas de Alberto et Val de Vid.",
+      "notes_objectives": "Serrada est un village de la DO Rueda réputé pour ses calados historiques et sa tradition du Dorado, le vin rancio oxydatif de l'appellation. Situé autour de sept cents à sept cent cinquante mètres d'altitude, il repose sur des sables et des graves du plateau castillan. Le village conserve un réseau de caves souterraines creusées sous les maisons, où reposent les soleras de Dorado, tradition oxydative que Bodegas de Alberto perpétue notamment. Serrada est aussi le fief de Val de Vid pour le Verdejo moderne. Ce patrimoine de calados témoigne de l'ancienneté de la culture du vin dans la commune. Pour un sommelier, Serrada est un nom à connaître pour raconter la tradition du Dorado et le patrimoine souterrain de Rueda, aux côtés du Verdejo contemporain. Un village qui incarne la mémoire oxydative de l'appellation, à l'écart de l'image du blanc frais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "serrada",
+        "dorado",
+        "calados",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-medina-del-campo",
+      "nom": "Medina del Campo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "700–730 m",
+      "sols": "Sables sur sols sédimentaires, sud de la DO",
+      "caracteristiques_rapides": "Grande ville historique du sud de la DO Rueda, centre commercial du vin castillan depuis le Moyen Âge, entourée de vastes vignobles de Verdejo.",
+      "notes_objectives": "Medina del Campo est une grande ville historique du sud de la DO Rueda, centre commercial du vin castillan depuis le Moyen Âge, entourée de vastes vignobles de Verdejo. Située autour de sept cents à sept cent trente mètres d'altitude, elle repose sur des sols sédimentaires sableux. La ville fut, à la Renaissance, l'un des plus grands marchés du vin d'Europe : ses foires attiraient des marchands de tout le continent, et le vin de Rueda, notamment le Dorado, s'y négociait en quantités considérables. Ce passé commercial a façonné l'identité viticole de la région. Aujourd'hui, la ville est entourée de vignobles qui alimentent de nombreuses bodegas. Pour un sommelier, Medina del Campo est un nom à connaître pour raconter l'histoire commerciale du vin castillan et situer le sud de l'appellation. Un repère historique autant que géographique, à évoquer pour donner de la profondeur au récit de Rueda.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "medina-del-campo",
+        "historique",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-aldeanueva-del-codonal",
+      "nom": "Aldeanueva del Codonal",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Segovia",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "850–900 m",
+      "sols": "Sables francs et codones (galets roulés) d'altitude",
+      "caracteristiques_rapides": "Village préphylloxérique du nord de Ségovie sur le « Cordel de las Merinas », fief de Shaya, aux vieilles vignes franches de pied d'altitude.",
+      "notes_objectives": "Aldeanueva del Codonal est un village préphylloxérique du nord de la province de Ségovie, sur l'ancienne voie de transhumance du Cordel de las Merinas, aux vieilles vignes franches de pied d'altitude. Situé autour de huit cent cinquante à neuf cents mètres, il repose sur des sables francs et des codones — les galets roulés qui donnent son nom au village. Ces sols sableux et graveleux, à haute altitude, ont préservé des vignes de Verdejo centenaires jamais greffées, parmi les plus précieuses de la DO Rueda. Le village est notamment le fief de Shaya, projet de la famille Gil qui met en valeur ce patrimoine. Le Verdejo franc de pied y donne des raisins à petites grappes d'une grande concentration. Pour un sommelier, Aldeanueva del Codonal est un nom à connaître pour raconter le patrimoine préphylloxérique de Ségovie et proposer des Verdejo de vieilles vignes d'altitude. Un village emblématique de la face la plus qualitative et la plus méconnue de Rueda.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "segovia",
+        "prephylloxerique",
+        "franc-de-pied",
+        "altitude",
+        "prov-segovia"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-nieva",
+      "nom": "Nieva",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda — Segovia",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo"
+      ],
+      "altitude": "870–920 m",
+      "sols": "Sables fins et graves autour du « mar de pinares »",
+      "caracteristiques_rapides": "Village le plus haut de Ségovie, l'un des vignobles de Verdejo les plus élevés d'Espagne, fief d'Ossian et de ses vignes centenaires franches de pied.",
+      "notes_objectives": "Nieva est l'un des villages les plus hauts de la province de Ségovie et l'un des vignobles de Verdejo les plus élevés d'Espagne, au cœur de la réserve préphylloxérique du nord ségovien. Situé entre huit cent soixante-dix et neuf cent vingt mètres d'altitude, il repose sur des sables fins et des graves autour du mar de pinares, l'immense forêt de pins qui a protégé les vignes du phylloxéra. C'est à Nieva que se trouvent certaines des plus vieilles vignes de Verdejo franches de pied de la péninsule, dont sont issus les vins d'Ossian, l'un des plus grands blancs de garde d'Espagne. L'altitude extrême et les sols sableux y donnent un Verdejo d'une concentration et d'une acidité exceptionnelles, à mille lieues du blanc frais de plaine. Pour un sommelier, Nieva est un nom à connaître pour raconter le sommet qualitatif de Rueda et proposer des Verdejo de terroir profonds et minéraux. Un village emblématique du potentiel de garde du Verdejo, à associer directement à Ossian et aux vignes centenaires de Ségovie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "segovia",
+        "nieva",
+        "prephylloxerique",
+        "altitude",
+        "prov-segovia"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-malcorta-verdejo",
+      "nom": "Malcorta (Verdejo)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo Malcorta"
+      ],
+      "altitude": "700–780 m",
+      "sols": "S'exprime sur les vieilles vignes de La Seca et Segovia",
+      "caracteristiques_rapides": "Clone ancien et rare du Verdejo, à grappe très lâche difficile à cultiver, presque disparu et préservé notamment par Javier Sanz : arômes plus intenses et texture particulière.",
+      "notes_objectives": "Le Verdejo Malcorta est un clone ancien et rare du Verdejo, presque disparu, préservé notamment par la famille Javier Sanz à La Seca. Il s'exprime sur les vieilles vignes de Rueda et de Ségovie, sur les sols sableux caractéristiques de l'appellation. Son nom — de mal cortar, « difficile à couper » — vient de sa grappe très lâche et de son architecture particulière, qui rendent sa culture et sa vendange malaisées, ce qui a conduit à son abandon progressif au profit de clones plus productifs. Mais le Malcorta offre en échange des arômes plus intenses et une texture particulière, très recherchés pour les cuvées ambitieuses. Sa préservation relève d'un travail patrimonial. Pour un sommelier, le Malcorta est une curiosité ampélographique de Rueda, à connaître pour proposer un Verdejo différent et raconter la préservation d'un clone menacé. Une belle carte à jouer pour surprendre un amateur qui pense connaître le cépage, et pour valoriser le travail patrimonial de vignerons comme Javier Sanz.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "cepage",
+        "malcorta",
+        "cepages-rares",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-el-dorado-de-rueda",
+      "nom": "El Dorado de Rueda",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Rueda (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Verdejo",
+        "Palomino"
+      ],
+      "altitude": "700–750 m",
+      "sols": "Vieillissement oxydatif en solera, tradition des calados",
+      "caracteristiques_rapides": "Vin rancio historique de Rueda, vieilli en solera façon Jerez, à base de Verdejo et Palomino : tradition oxydative presque oubliée, préservée à Serrada et La Seca.",
+      "notes_objectives": "El Dorado est le vin historique de Rueda, un rancio oxydatif aujourd'hui presque oublié mais qui fut, pendant des siècles, la véritable identité de l'appellation avant l'avènement du Verdejo frais. C'est un vin muté et vieilli par oxydation, élaboré selon un système de solera proche de celui de Jerez, à partir de Verdejo et de Palomino, qui développe une couleur ambrée — d'où son nom — et des arômes de fruits secs, de noix et de caramel. Le Dorado est indissociable des calados, ces caves souterraines creusées sous les villages de Rueda, La Seca et surtout Serrada, où les jarres et les fûts de la solera reposent à température constante. Le vin y vieillit des années, parfois des décennies, se concentrant et s'oxydant lentement au contact de l'air, jusqu'à atteindre une complexité qui évoque les grands vins généreux andalous. La tradition remonte au Moyen Âge, quand Medina del Campo était l'un des plus grands marchés du vin de Castille et que le Dorado s'exportait dans toute l'Europe. Menacée de disparition avec la mode du Verdejo sec et frais, cette tradition est aujourd'hui préservée par quelques maisons, au premier rang desquelles Bodegas de Alberto à Serrada. Le Dorado bénéficie d'une reconnaissance officielle au sein de la DO, qui protège cette spécialité historique. Pour un sommelier, El Dorado est une curiosité de premier ordre : un vin oxydatif castillan, proche des amontillados de Jerez, chargé d'histoire, à réserver à une clientèle curieuse. Il accompagne merveilleusement les fromages affinés, les fruits secs et les desserts peu sucrés, et constitue une magnifique porte d'entrée vers le patrimoine viticole oublié de Rueda. Une bouteille à raconter autant qu'à déguster. La survie du Dorado tient à quelques familles obstinées qui ont refusé d'abandonner leurs soleras au moment où tout Rueda se convertissait au Verdejo frais. Leur ténacité a permis de préserver un savoir-faire séculaire, aujourd'hui reconnu comme un élément essentiel du patrimoine de l'appellation. Le Dorado rappelle ainsi que Rueda fut, bien avant le Verdejo sec, une grande terre de vins de garde oxydatifs, à l'égal des régions généreuses du sud de l'Espagne. C'est une bouteille rare, que l'on ne trouve plus que chez quelques producteurs.",
+      "niveau_reference": 3,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-rueda",
+        "dorado",
+        "rancio",
+        "tradition",
+        "solera",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-malvasia-castellana-y-albillo-real",
+      "nom": "Malvasía Castellana y Albillo Real",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Malvasía",
+        "Albillo Real"
+      ],
+      "altitude": "620–870 m",
+      "sols": "Vieilles vignes complantées de blanc dans la DO Toro",
+      "caracteristiques_rapides": "Cépages blancs traditionnels de Toro, longtemps complantés avec la Tinta de Toro, à l'origine des rares blancs de l'appellation et de claretes historiques.",
+      "notes_objectives": "La Malvasía Castellana et l'Albillo Real sont les cépages blancs traditionnels de la DO Toro, longtemps complantés avec la Tinta de Toro dans les vieilles vignes, et aujourd'hui à l'origine des rares blancs de l'appellation. Ils s'expriment sur les sables et les graves de la zone, entre six cent vingt et huit cent soixante-dix mètres d'altitude. Ces variétés, minoritaires, faisaient partie de l'encépagement mixte des vieilles vignes castillanes, où rouge et blanc cohabitaient dans le même rang selon la tradition paysanne. La Malvasía Castellana, ou Doña Blanca, apporte du gras et des arômes floraux ; l'Albillo Real, également présent à Madrid et dans la Sierra de Gredos, donne des blancs texturés à l'acidité modérée. Ensemble, ils entraient dans la composition des claretes historiques, ces vins clairs de co-fermentation. Longtemps négligés au profit de la Tinta de Toro, ces cépages connaissent un regain d'intérêt avec la mode des blancs de terroir et des vins complantés. Quelques producteurs les vinifient désormais séparément, révélant un potentiel insoupçonné pour des blancs de caractère. Pour un sommelier, ces cépages blancs sont une curiosité de Toro, à connaître pour proposer les rares blancs de l'appellation et raconter la tradition des vieilles vignes complantées castillanes. Une belle occasion de sortir des sentiers battus du tout-rouge toresan.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "cepage",
+        "malvasia",
+        "albillo",
+        "blancs",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-garnacha-de-toro",
+      "nom": "Garnacha de Toro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Toro (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha"
+      ],
+      "altitude": "620–870 m",
+      "sols": "Sables et graves, souvent en vieilles vignes complantées",
+      "caracteristiques_rapides": "Second cépage rouge de Toro, longtemps complanté avec la Tinta de Toro, qui apporte fraîcheur et parfum : de plus en plus valorisé en monocépage par la nouvelle vague.",
+      "notes_objectives": "La Garnacha est le second cépage rouge de la DO Toro, longtemps complanté avec la Tinta de Toro dans les vieilles vignes et aujourd'hui de plus en plus valorisé en monocépage par la nouvelle génération. Elle s'exprime sur les sables et les graves de la zone, souvent sur de vieilles vignes en gobelet, entre six cent vingt et huit cent soixante-dix mètres d'altitude. Dans la tradition toresane, la Garnacha était mêlée à la Tinta de Toro dans les parcelles complantées, apportant fraîcheur, parfum et souplesse à des assemblages dominés par la puissance. Sur les sables pauvres de l'appellation, et notamment sur les vieilles vignes, elle donne des vins floraux et épicés, d'une élégance qui contraste avec la densité du cépage principal. La mode des Garnachas fraîches, portée par la Sierra de Gredos voisine, a incité plusieurs vignerons de Toro à isoler et vinifier séparément leurs vieilles Garnachas, révélant une facette méconnue de l'appellation. Ces cuvées, encore rares, comptent parmi les plus originales du secteur. Pour un sommelier, la Garnacha de Toro est une curiosité à suivre, à connaître pour proposer une autre facette de l'appellation, plus aérienne et parfumée. Une belle carte à jouer pour surprendre un amateur qui n'attend de Toro que de la puissance, et pour raconter le lien de l'appellation avec la Sierra de Gredos voisine.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-toro",
+        "cepage",
+        "garnacha",
+        "nouvelle-vague",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (dotoro.com, spanishwinelover, destinocastillayleon, catalogues producteurs)"
+    }
+  ]
+}

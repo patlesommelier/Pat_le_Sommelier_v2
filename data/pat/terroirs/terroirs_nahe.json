@@ -1,0 +1,712 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "nahe",
+  "region_label": "Nahe (Allemagne)",
+  "source_file": "terroirs_nahe_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 29,
+  "items": [
+    {
+      "id": "de-nahe-terr-niederhaeuser-hermannshoehle",
+      "nom": "Niederhäuser Hermannshöhle",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-250 m",
+      "sols": "ardoise argileuse à veines calcaires et éléments volcaniques",
+      "caracteristiques_rapides": "Considéré depuis plus d'un siècle comme le plus grand terroir de la Nahe ; coteau en amphithéâtre, joyau absolu de Dönnhoff.",
+      "notes_objectives": "La Niederhäuser Hermannshöhle est considérée, depuis plus d'un siècle, comme le plus grand terroir de la Nahe. Ce coteau en amphithéâtre, au-dessus de Niederhausen, repose sur un sol complexe d'ardoise argileuse parcourue de veines calcaires et d'éléments volcaniques, une combinaison rare qui en fait toute la singularité. Cette géologie, conjuguée à une exposition idéale et à une pente raide, donne des Riesling d'une profondeur, d'une minéralité et d'une finesse exceptionnelles, à la garde remarquable. Le terroir est indissociable du domaine Dönnhoff, qui en est le maître absolu et en tire l'un des plus grands Riesling d'Allemagne. Classé au sommet de la hiérarchie de la Nahe, l'Hermannshöhle est le joyau de la région. La Nahe est réputée pour être la région viticole la plus diverse d'Allemagne sur le plan géologique, et l'Hermannshöhle en est le plus bel exemple : sur un seul coteau se côtoient ardoise, calcaire et roches volcaniques, ce qui explique la complexité unique de ses vins. La pente raide et l'exposition sud assurent une maturité parfaite. Helmut Dönnhoff, puis son fils Cornelius, ont porté l'Hermannshöhle au firmament : leurs Riesling, d'une pureté et d'une profondeur sidérantes, comptent parmi les plus grands d'Allemagne et figurent régulièrement au sommet des dégustations internationales. Plus qu'un grand cru, l'Hermannshöhle est le terroir étalon de la Nahe. Le coteau, qui domine un méandre de la rivière face au village de Niederhausen, offre l'un des plus beaux paysages de la Nahe, avec ses parois rocheuses et ses terrasses. La diversité de son sous-sol permet aux Riesling de conjuguer la salinité de l'ardoise, la finesse apportée par le calcaire et l'énergie du volcan. Les meilleurs millésimes développent une complexité et une longueur qui les placent au niveau des plus grands Riesling du monde, et leur garde se compte en décennies. Pour l'amateur, l'Hermannshöhle est le nom qui résume à lui seul la grandeur, longtemps discrète, de la Nahe — une région capable de rivaliser avec la Mosel et le Rheingau. Visité et commenté par les amateurs du monde entier, l'Hermannshöhle est devenu l'ambassadeur d'une région longtemps méconnue, dont il a fait reconnaître les terroirs parmi les plus grands d'Allemagne. Pour qui découvre la Nahe, c'est par lui qu'il faut commencer.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|vomboden"
+    },
+    {
+      "id": "de-nahe-terr-niederhaeuser-hermannsberg",
+      "nom": "Niederhäuser Hermannsberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-250 m",
+      "sols": "porphyre et roches volcaniques (melaphyre), en pente raide",
+      "caracteristiques_rapides": "Monopole de Gut Hermannsberg, sur le porphyre volcanique près de Schlossböckelheim ; grands Riesling minéraux et de garde (ancienne Domaine royale de Prusse).",
+      "notes_objectives": "Le Niederhäuser Hermannsberg est l'un des grands coteaux de la Nahe moyenne, exploité en monopole par le domaine Gut Hermannsberg, auquel il a donné son nom. Sur les hauteurs de Niederhausen, près de Schlossböckelheim, c'est une pente raide de porphyre et de roches volcaniques, exposée au sud au-dessus de la rivière. Ce sol volcanique, chaud et minéral, donne des Riesling structurés, profonds et de longue garde, à la minéralité fumée caractéristique des grands crus de ce secteur. Le terroir fut le cœur de la Königlich Preußische Weinbaudomäne, la Domaine royale de Prusse fondée en 1902 pour valoriser les meilleurs coteaux de la Nahe ; reprise en 2009, elle est devenue Gut Hermannsberg, redevenu l'un des grands domaines de la région. Classé en grand cru, le Hermannsberg illustre, aux côtés de la Kupfergrube et du Felsenberg voisins, la grandeur des terroirs volcaniques de Schlossböckelheim et de Niederhausen, ainsi que le riche héritage de la viticulture d'État dans la Nahe moyenne, dont le patrimoine de grands coteaux a retrouvé tout son lustre. Ses Riesling, secs et racés, à la minéralité profonde, comptent parmi les plus aboutis de la Nahe moyenne et témoignent du potentiel des sols volcaniques pour le grand vin blanc. La renaissance de Gut Hermannsberg, depuis 2009, a redonné tout son lustre à ce monopole historique, symbole du réveil des anciens domaines prussiens de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "volcanique",
+        "monopole",
+        "riesling",
+        "historique",
+        "nahe-moyenne"
+      ],
+      "source": "gut-hermannsberg|vdp.de"
+    },
+    {
+      "id": "de-nahe-terr-schlossboeckelheimer-kupfergrube",
+      "nom": "Schlossböckelheimer Kupfergrube",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-230 m",
+      "sols": "porphyre volcanique altéré (ancienne mine de cuivre)",
+      "caracteristiques_rapides": "Grand cru aménagé en terrasses sur une ancienne mine de cuivre ; porphyre volcanique, Riesling intenses (Dönnhoff, Gut Hermannsberg).",
+      "notes_objectives": "La Schlossböckelheimer Kupfergrube est l'un des plus grands terroirs de la Nahe, sur les hauteurs de Schlossböckelheim. Son histoire est singulière : le coteau a été aménagé en terrasses sur le site d'une ancienne mine de cuivre, dont le sol de porphyre volcanique altéré donne aux vins une signature très particulière. Ce terroir volcanique, chaud et bien drainé, donne des Riesling intenses, épicés et d'une grande minéralité, dotés d'une belle aptitude à la garde. La Kupfergrube est exploitée par les meilleurs domaines, dont Dönnhoff et Gut Hermannsberg. Classée au sommet de la hiérarchie de la Nahe, elle illustre la vocation des sols volcaniques de la région pour de grands Riesling. Le coteau, entièrement façonné par la main de l'homme au début du XXe siècle sur le site d'une mine désaffectée, est une prouesse : ses terrasses de porphyre, exposées plein sud, forment un amphithéâtre qui capte la chaleur. La pauvreté du sol volcanique oblige la vigne à puiser en profondeur. Dönnhoff en est l'interprète le plus célèbre, avec des Riesling d'une intensité épicée et d'une longueur remarquables ; Gut Hermannsberg, héritier de l'ancien domaine d'État qui créa le coteau, en livre aussi de grandes cuvées. La Kupfergrube illustre la singularité volcanique de la Nahe moyenne et sa capacité à produire des Riesling de tout premier plan. L'histoire de la Kupfergrube est indissociable de celle de l'ancien domaine royal prussien, qui aménagea ce coteau spectaculaire au début du XXe siècle en faisant travailler des prisonniers sur la mine désaffectée. Le résultat est un amphithéâtre de terrasses unique en Allemagne. Les Riesling de la Kupfergrube, à la minéralité fumée et épicée, comptent parmi les plus typés de la Nahe et vieillissent magnifiquement. Avec le Felsenberg voisin, elle fait de Schlossböckelheim l'épicentre des grands terroirs volcaniques de la région, capables de Riesling d'une puissance et d'une profondeur exceptionnelles. Spectaculaire vestige industriel devenu grand cru, la Kupfergrube fascine autant par son histoire que par ses vins. Elle demeure l'un des terroirs les plus emblématiques et les plus identifiables de toute la Nahe.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "volcanique",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-schlossboeckelheimer-felsenberg",
+      "nom": "Schlossböckelheimer Felsenberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "125-250 m",
+      "sols": "porphyre volcanique (rhyolite/mélaphyre) et quartz",
+      "caracteristiques_rapides": "Pente très raide d'éboulis de porphyre volcanique rougeâtre ; Riesling épicés et puissants (Dönnhoff, Schäfer-Fröhlich, Gut Hermannsberg).",
+      "notes_objectives": "Le Schlossböckelheimer Felsenberg est l'un des grands coteaux de la Nahe moyenne, à Schlossböckelheim, voisin de la célèbre Kupfergrube. Sa pente raide de porphyre et de roches volcaniques, exposée au sud au-dessus de la rivière, en fait un terroir chaud et minéral. Ce sol volcanique donne des Riesling structurés, racés et de garde, à la minéralité fumée caractéristique des meilleurs crus de Schlossböckelheim. Le terroir est magnifié par de grands domaines de la région, dont Dönnhoff, Gut Hermannsberg et Schäfer-Fröhlich. Le style de ses vins conjugue puissance contenue, tension et profondeur. Classé en grand cru, le Felsenberg illustre, aux côtés de la Kupfergrube, la grandeur des terroirs volcaniques de Schlossböckelheim, l'un des sommets de la Nahe moyenne, où le Riesling atteint une grande noblesse minérale. Le Felsenberg doit son nom (« la montagne de roche ») à ses affleurements de porphyre, pierre volcanique dure et sombre qui emmagasine la chaleur du jour pour la restituer la nuit — un atout précieux dans cette région fraîche. Voisin immédiat de la mythique Kupfergrube, créée au début du XXe siècle par la Domaine royale de Prusse, il partage avec elle ce socle volcanique exceptionnel. Ses Riesling, à la minéralité fumée et à la trame serrée, comptent parmi les plus racés de Schlossböckelheim ; ils demandent souvent du temps pour s'ouvrir et récompensent la garde. Dönnhoff, Gut Hermannsberg et Schäfer-Fröhlich en signent de remarquables cuvées. Le cru illustre la grandeur des terroirs volcaniques de la Nahe moyenne, où le Riesling atteint une intensité minérale rare.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "volcanique",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-nahe-terr-bockenauer-felseneck",
+      "nom": "Bockenauer Felseneck",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-320 m",
+      "sols": "ardoise bleue dévonienne, quartz et basalte",
+      "caracteristiques_rapides": "Grand cru escarpé de Bockenau, dans les collines du Soonwald ; ardoise bleue dévonienne, terroir fétiche de Tim Fröhlich (Schäfer-Fröhlich).",
+      "notes_objectives": "Le Bockenauer Felseneck est l'un des plus grands terroirs de la Nahe, sur un coteau escarpé de Bockenau, dans les collines boisées du Soonwald. Son sol d'ardoise bleue dévonienne, mêlée de quartz et de basalte, lui confère une minéralité tendue et profonde. Le terroir, frais et bien exposé, donne des Riesling d'une grande pureté, nerveux et de longue garde. Il est le terroir fétiche de Tim Fröhlich, au domaine Schäfer-Fröhlich, qui en a fait l'un des crus les plus recherchés d'Allemagne. Classé au sommet de la hiérarchie de la Nahe, le Felseneck illustre la grandeur des terroirs d'ardoise bleue de la haute Nahe. Situé dans un vallon latéral frais du Soonwald, le Felseneck bénéficie d'une exposition idéale et d'un sol d'ardoise bleue dévonienne, mêlé de quartz et de basalte, qui donne aux vins une tension cristalline et une minéralité profonde. La fraîcheur du site préserve une acidité vibrante. Tim Fröhlich, au domaine Schäfer-Fröhlich, en a fait son grand cru emblématique : ses Riesling du Felseneck, d'une pureté et d'une énergie remarquables, sont devenus des objets de culte, parmi les plus recherchés d'Allemagne. Le Felseneck illustre la grandeur des terroirs d'ardoise bleue de la haute Nahe. L'ascension de Bockenau au rang des plus grands villages de la Nahe est récente et doit presque tout au talent de Tim Fröhlich, qui a révélé le potentiel exceptionnel du Felseneck. La fraîcheur du Soonwald y préserve une acidité vibrante, et l'ardoise bleue donne une minéralité tranchante. Ses Riesling, d'une pureté cristalline et d'une longue garde, s'arrachent auprès des amateurs du monde entier. Le Felseneck illustre comment un grand vigneron peut, en quelques années, hisser un terroir d'ardoise jusqu'au sommet de la hiérarchie allemande. Devenu en une génération l'un des crus les plus convoités d'Allemagne, le Felseneck illustre la formidable ascension de la Nahe et la capacité de ses terroirs d'ardoise à produire de très grands Riesling.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "ardoise-bleue",
+        "vdp-grosse-lage",
+        "haute-nahe"
+      ],
+      "source": "vdp.de|thegwc"
+    },
+    {
+      "id": "de-nahe-terr-monzinger-halenberg",
+      "nom": "Monzinger Halenberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-300 m",
+      "sols": "ardoise bleue, quartzite et graviers",
+      "caracteristiques_rapides": "Grand cru de la haute Nahe au caractère « saarien » ; ardoise bleue et quartzite, Riesling nerveux (Emrich-Schönleber, Schäfer-Fröhlich).",
+      "notes_objectives": "Le Monzinger Halenberg est l'un des grands crus de la haute Nahe, sur les hauteurs de Monzingen. Son sol d'ardoise bleue, de quartzite et de graviers, sur une pente raide, lui donne un caractère tendu et nerveux qui évoque parfois les grands Riesling de la Sarre. Le terroir donne des Riesling salins, minéraux et d'une grande finesse, à la longue garde. Il est magnifié par le domaine Emrich-Schönleber, sa référence, ainsi que par Schäfer-Fröhlich. Classé au sommet de la hiérarchie de la Nahe, le Halenberg illustre la pureté cristalline des grands Riesling d'ardoise de la haute vallée. Perché sur les hauteurs de Monzingen, le Halenberg bénéficie d'un climat plus frais que la Nahe moyenne, et son ardoise bleue mêlée de quartzite donne aux Riesling une nervosité et une salinité qui évoquent parfois la Sarre. La pente raide et l'exposition assurent néanmoins une belle maturité. Werner et Frank Schönleber, au domaine Emrich-Schönleber, en ont fait l'un des plus grands crus de la Nahe, avec des Riesling d'une pureté cristalline et d'une longue garde ; Schäfer-Fröhlich y excelle aussi. Le Halenberg illustre la finesse tendue des grands Riesling d'ardoise de la haute vallée. Le caractère « saarien » du Halenberg — sa nervosité, sa salinité, sa droiture — tient à la fraîcheur de la haute Nahe et à son ardoise bleue, qui le distinguent nettement des terroirs volcaniques de la vallée moyenne. C'est l'un des grands terroirs d'ardoise du sud de la région. Le domaine Emrich-Schönleber en a fait une référence absolue, avec des Riesling d'une finesse et d'une longévité remarquables, du grand sec au liquoreux noble. Le Halenberg illustre la diversité de la Nahe, capable d'offrir, à quelques kilomètres des porphyres de Schlossböckelheim, des Riesling d'ardoise d'une tout autre nature. Pour beaucoup d'amateurs, le Halenberg incarne la quintessence du Riesling tendu et salin de la haute Nahe, à ranger parmi les plus grands crus d'ardoise d'Allemagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "ardoise-bleue",
+        "vdp-grosse-lage",
+        "haute-nahe"
+      ],
+      "source": "vdp.de|vomboden"
+    },
+    {
+      "id": "de-nahe-terr-oberhaeuser-bruecke",
+      "nom": "Oberhäuser Brücke",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-150 m",
+      "sols": "argiles et limons alluviaux au bord de la Nahe",
+      "caracteristiques_rapides": "Petit grand cru en monopole de Dönnhoff, au bord de la rivière ; Riesling profonds et souvent botrytisés d'une grande finesse.",
+      "notes_objectives": "L'Oberhäuser Brücke est un terroir confidentiel et précieux, exploité en monopole par le domaine Dönnhoff. Petit coteau situé au bord de la rivière, à Oberhausen, il repose sur des sols d'argiles et de limons alluviaux qui retiennent l'humidité. Cette situation favorise le développement de la pourriture noble, et le terroir est réputé pour ses Riesling profonds, souvent botrytisés, d'une grande finesse, mais aussi pour ses grands secs. Classée au sommet de la hiérarchie de la Nahe, la Brücke est l'un des joyaux du domaine Dönnhoff et l'un des terroirs les plus singuliers de la région. Petit coteau d'à peine plus d'un hectare, situé près d'un pont sur la rivière (d'où son nom), la Brücke bénéficie d'un microclimat humide propice à la pourriture noble. Le domaine Dönnhoff, qui en a l'exclusivité, y produit certains de ses plus grands vins. Ses Riesling, qu'ils soient secs ou nobles liquoreux, se distinguent par une profondeur et une finesse remarquables, et figurent parmi les sommets du domaine. Joyau confidentiel exploité en monopole, la Brücke illustre la précision et la diversité des terroirs de la Nahe moyenne, et l'art de Dönnhoff à en révéler chaque nuance. La situation de la Brücke, en contrebas au bord de la rivière, lui vaut un microclimat particulier, plus frais et plus humide, qui favorise la finesse et la botrytisation. C'est un terroir à part, que Dönnhoff cultive avec un soin extrême. Ses Riesling, qu'ils soient secs ou nobles liquoreux, comptent parmi les plus délicats et les plus profonds du domaine, et atteignent des prix élevés en raison de leur rareté. La Brücke illustre la précision avec laquelle les plus grands vignerons de la Nahe savent révéler les nuances de chaque parcelle. Monopole minuscule et précieux, la Brücke est l'un de ces joyaux confidentiels qui font la grandeur discrète de la Nahe et le génie du domaine Dönnhoff.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|vomboden"
+    },
+    {
+      "id": "de-nahe-terr-monzinger-fruehlingsplaetzchen",
+      "nom": "Monzinger Frühlingsplätzchen",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-300 m",
+      "sols": "ardoise rouge, graviers et quartz",
+      "caracteristiques_rapides": "Grand cru de la haute Nahe, voisin du Halenberg ; ardoise rouge, Riesling tendus (Emrich-Schönleber, Schäfer-Fröhlich).",
+      "notes_objectives": "Le Monzinger Frühlingsplätzchen est l'un des grands crus de la haute Nahe, voisin du Halenberg, sur les hauteurs de Monzingen. Son sol d'ardoise rouge, de graviers et de quartz lui donne un caractère un peu plus chaleureux que l'ardoise bleue voisine. Le terroir donne des Riesling tendus et aromatiques, d'une belle minéralité. Il est exploité par Emrich-Schönleber et Schäfer-Fröhlich. Classé en grand cru, le Frühlingsplätzchen illustre, aux côtés du Halenberg, l'excellence des terroirs d'ardoise de Monzingen. Sur les hauteurs de Monzingen, le Frühlingsplätzchen partage avec le Halenberg voisin la fraîcheur de la haute Nahe, mais son ardoise rouge, plus chaude, donne des Riesling au fruit un peu plus généreux. Emrich-Schönleber et Schäfer-Fröhlich y signent des Grosses Gewächs racés et de garde. Le cru illustre, avec le Halenberg, l'excellence des terroirs d'ardoise de Monzingen, l'un des grands villages de la haute vallée. Sa réputation, comme celle du Halenberg, doit beaucoup au travail d'Emrich-Schönleber, qui a hissé Monzingen parmi les villages phares de la Nahe. Les Riesling du Frühlingsplätzchen, à la fois mûrs et tendus, séduisent par leur équilibre. Le cru confirme la diversité de la haute vallée, où ardoise rouge et ardoise bleue offrent deux visages complémentaires du grand Riesling.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "haute-nahe"
+      ],
+      "source": "vdp.de|vomboden"
+    },
+    {
+      "id": "de-nahe-terr-traiser-bastei",
+      "nom": "Traiser Bastei",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-200 m",
+      "sols": "éboulis de porphyre volcanique (au pied du Rotenfels)",
+      "caracteristiques_rapides": "Minuscule grand cru blotti au pied du Rotenfels, la plus haute paroi rocheuse d'Europe au nord des Alpes ; porphyre, Riesling spectaculaires (Dr. Crusius).",
+      "notes_objectives": "La Traiser Bastei est un minuscule grand cru de la Nahe moyenne, blotti au pied du Rotenfels, la plus haute paroi rocheuse d'Europe au nord des Alpes. Ses éboulis de porphyre volcanique, au pied de la falaise, créent un microclimat chaud et abrité. Le terroir donne des Riesling spectaculaires, intenses et minéraux. Il est indissociable du domaine Dr. Crusius. Classé en grand cru, la Bastei illustre, par son cadre exceptionnel, la singularité des terroirs volcaniques de la Nahe moyenne. Dominée par les 200 mètres de la paroi du Rotenfels, la Bastei jouit d'un microclimat unique : la falaise renvoie la chaleur et protège les vignes, tandis que les éboulis de porphyre offrent un sol volcanique d'exception. Le domaine Dr. Crusius y produit des Riesling spectaculaires, intenses et profonds. Minuscule et théâtrale, la Bastei est l'un des terroirs les plus emblématiques et les plus photographiés de la Nahe moyenne. Le cadre de la Bastei, écrasée par la falaise rouge du Rotenfels, en fait l'un des sites les plus saisissants de toute l'Allemagne viticole. Le microclimat exceptionnel et le sol de porphyre donnent au domaine Dr. Crusius des Riesling d'une intensité rare. Minuscule mais spectaculaire, la Bastei est emblématique de la beauté des paysages et de la singularité géologique de la Nahe moyenne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "rotenfels",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|vomboden"
+    },
+    {
+      "id": "de-nahe-terr-norheimer-dellchen",
+      "nom": "Norheimer Dellchen",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-230 m",
+      "sols": "ardoise et roches volcaniques",
+      "caracteristiques_rapides": "Grand cru de Norheim mêlant ardoise et volcan ; Riesling racés et complexes (Dönnhoff).",
+      "notes_objectives": "Le Norheimer Dellchen est un grand cru de la Nahe moyenne, sur les coteaux de Norheim. Son sol mêlant ardoise et roches volcaniques lui confère une minéralité complexe. Le terroir donne des Riesling racés et profonds. Il est notamment exploité par le domaine Dönnhoff. Classé en grand cru, le Dellchen illustre la richesse des terroirs mixtes, à la fois ardoisiers et volcaniques, de la Nahe moyenne. Le Dellchen bénéficie d'un sol mixte, où l'ardoise se mêle aux roches volcaniques, ce qui lui confère une minéralité complexe et épicée. Le domaine Dönnhoff y signe des Riesling racés et profonds, qui comptent parmi ses belles réussites. Le cru illustre la richesse des terroirs de Norheim, où la diversité géologique de la Nahe s'exprime pleinement sur un même coteau. Sur ce terroir mixte, Dönnhoff signe des Riesling d'une grande complexité, où la minéralité de l'ardoise se conjugue à l'énergie du volcan. Le Dellchen, voisin des grands crus de Niederhausen et de Schlossböckelheim, profite de la même excellence géologique. Il illustre la richesse des coteaux de Norheim, l'un des grands villages du cœur de la Nahe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-norheimer-kirschheck",
+      "nom": "Norheimer Kirschheck",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-220 m",
+      "sols": "ardoise grise",
+      "caracteristiques_rapides": "Grand cru de Norheim sur ardoise ; Riesling fins et salins (Dönnhoff).",
+      "notes_objectives": "Le Norheimer Kirschheck est un grand cru de la Nahe moyenne, sur les coteaux de Norheim. Son sol d'ardoise grise, bien exposé, donne des Riesling fins et salins. Le terroir produit des vins tendus et minéraux, exploités notamment par le domaine Dönnhoff. Classé en grand cru, le Kirschheck illustre la finesse des terroirs d'ardoise de Norheim, dans le cœur historique de la Nahe. Sur son sol d'ardoise grise, le Kirschheck donne des Riesling fins, salins et tendus, dans le style minéral propre à Norheim. Le domaine Dönnhoff en est l'interprète attitré, avec des cuvées d'une grande pureté. Le cru illustre la finesse des terroirs d'ardoise de la Nahe moyenne, à deux pas des grands crus de Niederhausen et de Schlossböckelheim. Dans le sillage du Dellchen voisin, le Kirschheck offre des Riesling d'une grande finesse, salins et précis, magnifiés par le domaine Dönnhoff. Le cru illustre la délicatesse des terroirs d'ardoise grise de Norheim, qui complètent, dans un registre plus tendu, les grands crus volcaniques de la Nahe moyenne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-bockenauer-stromberg",
+      "nom": "Bockenauer Stromberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "190-330 m",
+      "sols": "porphyre volcanique altéré",
+      "caracteristiques_rapides": "Grand cru de Bockenau dans le Soonwald, sur porphyre volcanique ; Riesling minéraux (Schäfer-Fröhlich).",
+      "notes_objectives": "Le Bockenauer Stromberg est un grand cru de la haute Nahe, sur les coteaux de Bockenau, dans le Soonwald. Son sol de porphyre volcanique altéré lui confère une minéralité épicée. Le terroir donne des Riesling minéraux et de garde, exploités par le domaine Schäfer-Fröhlich. Classé en grand cru, le Stromberg illustre, aux côtés du Felseneck voisin, la diversité géologique des grands terroirs de Bockenau. Voisin du célèbre Felseneck, le Stromberg repose sur un sol de porphyre volcanique altéré qui donne aux Riesling une minéralité épicée. Le domaine Schäfer-Fröhlich y produit des Grosses Gewächs minéraux et de garde. Le cru illustre la diversité géologique de Bockenau, où ardoise bleue et porphyre volcanique se côtoient pour donner des Riesling de caractère. Magnifié, comme le Felseneck, par le domaine Schäfer-Fröhlich, le Stromberg donne des Riesling minéraux et profonds, marqués par le porphyre volcanique. Le cru participe à la réputation grandissante de Bockenau, village du Soonwald devenu, en l'espace d'une génération, l'un des hauts lieux du Riesling de la Nahe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "haute-nahe"
+      ],
+      "source": "vdp.de|thegwc"
+    },
+    {
+      "id": "de-nahe-terr-roxheimer-hoellenpfad",
+      "nom": "Roxheimer Höllenpfad",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "140-230 m",
+      "sols": "grès rouge (Rotliegend)",
+      "caracteristiques_rapides": "Grand cru de Roxheim sur grès rouge, sol rare dans la région ; Riesling épicés (Schäfer-Fröhlich).",
+      "notes_objectives": "Le Roxheimer Höllenpfad est un grand cru du secteur de Bad Kreuznach, sur un sol de grès rouge (Rotliegend), rare dans la région. Cette géologie particulière donne aux Riesling une signature épicée. Le terroir produit des vins amples et minéraux, exploités notamment par le domaine Schäfer-Fröhlich. Classé en grand cru, le Höllenpfad illustre la diversité des sols de la Nahe et l'expression singulière du Riesling sur grès rouge. Le grès rouge du Höllenpfad, formé au Rotliegend, est un sol rare dans la Nahe, qui imprime aux Riesling une signature épicée et chaleureuse. Le domaine Schäfer-Fröhlich en tire des vins amples et minéraux. Le cru illustre la remarquable diversité des sols de la Nahe, où chaque secteur offre une géologie différente, du porphyre à l'ardoise et au grès rouge. Le grès rouge, rare et caractéristique, fait du Höllenpfad un terroir à part dans la région. Schäfer-Fröhlich en tire des Riesling épicés et amples, qui témoignent de la diversité géologique de la Nahe. Le cru illustre la richesse de la palette de sols de la vallée, où chaque secteur imprime aux vins une signature différente.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gres-rouge",
+        "vdp-grosse-lage",
+        "bad-kreuznach"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-dorsheimer-goldloch",
+      "nom": "Dorsheimer Goldloch",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-200 m",
+      "sols": "graviers et limons sur ardoise et quartzite",
+      "caracteristiques_rapides": "Grand cru de Dorsheim aux sols graveleux ; Riesling profonds et amples (Schlossgut Diel).",
+      "notes_objectives": "Le Dorsheimer Goldloch est l'un des plus grands crus de la basse Nahe, sur les coteaux de Dorsheim, dans une vallée latérale abritée. Son nom — « le trou d'or » — évoque la richesse de son sol : des graviers et des limons reposant sur un socle d'ardoise et de quartzite, qui emmagasinent la chaleur et assurent un excellent drainage. Cette géologie particulière, conjuguée à une belle exposition, confère aux Riesling ampleur, rondeur et profondeur, tout en préservant la fraîcheur et la finesse propres à la Nahe. Les vins, à la fois mûrs et tendus, possèdent une grande aptitude à la garde. Le terroir est indissociable du Schlossgut Diel, sa référence : sous l'impulsion d'Armin Diel puis de sa fille Caroline, le domaine a hissé le Goldloch parmi les grands crus reconnus de la région. Il en tire de grands Riesling secs (Grosses Gewächs) ainsi que de splendides nobles liquoreux, qui comptent parmi les plus aboutis de la basse Nahe. Voisin des autres grands coteaux de Dorsheim — le Pittermännchen et le Burgberg —, le Goldloch se distingue par la générosité que lui confèrent ses sols graveleux. Classé au sommet de la hiérarchie de la Nahe, le Goldloch illustre la richesse des terroirs graveleux de Dorsheim et la capacité de la basse vallée à produire de grands Riesling, amples et nobles. Pour l'amateur, c'est l'un des crus par lesquels découvrir la profondeur et l'élégance des Riesling de la Nahe. La vallée latérale de Dorsheim, abritée des vents et bien ensoleillée, offre un microclimat particulièrement favorable à la maturité du Riesling, ce qui distingue ses grands crus du reste de la basse Nahe. Sur le Goldloch, les graviers de surface réchauffent rapidement le sol au printemps, tandis que le socle d'ardoise et de quartzite apporte la minéralité et la tension. Le Schlossgut Diel, installé dans un château familial à Burg Layen, est l'un des domaines les plus réputés de toute la Nahe : Caroline Diel y poursuit l'œuvre de son père Armin avec une exigence remarquable, signant des Grosses Gewächs droits et profonds ainsi que des liquoreux d'anthologie. Le Goldloch en est le fleuron, aux côtés du Pittermännchen. Pour l'amateur, le Dorsheimer Goldloch incarne la facette ample et généreuse du grand Riesling de la Nahe : un vin qui marie la richesse des sols graveleux à la fraîcheur d'une région septentrionale, et qui vieillit superbement sur une ou deux décennies.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "graviers",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-dorsheimer-pittermaennchen",
+      "nom": "Dorsheimer Pittermännchen",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-220 m",
+      "sols": "ardoise et quartzite",
+      "caracteristiques_rapides": "Grand cru de Dorsheim sur ardoise et quartzite ; Riesling tendus et minéraux (Schlossgut Diel).",
+      "notes_objectives": "Le Dorsheimer Pittermännchen est un grand cru de la basse Nahe, sur les coteaux de Dorsheim. Son sol d'ardoise et de quartzite donne des Riesling tendus et minéraux, plus nerveux que ceux du Goldloch voisin. Le terroir est exploité par le Schlossgut Diel, qui en tire des Riesling racés et de garde. Classé en grand cru, le Pittermännchen illustre la finesse minérale des terroirs d'ardoise de Dorsheim. Plus ardoisier que le Goldloch voisin, le Pittermännchen donne des Riesling plus tendus et plus minéraux, à la trame saline. Le Schlossgut Diel en tire des Grosses Gewächs racés et de garde. Le cru illustre la finesse des terroirs d'ardoise et de quartzite de Dorsheim, et la diversité, sur quelques hectares, des grands crus de ce village de la basse Nahe. Plus tendu et plus salin que le Goldloch, le Pittermännchen révèle, sous la main du Schlossgut Diel, des Riesling d'une grande finesse minérale. Le cru illustre la diversité, sur quelques hectares, des grands crus de Dorsheim, où ardoise et graviers offrent des styles complémentaires de Riesling de la basse Nahe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-dorsheimer-burgberg",
+      "nom": "Dorsheimer Burgberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "140-240 m",
+      "sols": "ardoise et quartzite (forte pente)",
+      "caracteristiques_rapides": "Grand cru escarpé de Dorsheim ; Riesling salins et de garde (Schlossgut Diel).",
+      "notes_objectives": "Le Dorsheimer Burgberg est un grand cru escarpé de la basse Nahe, sur les coteaux de Dorsheim. Sa forte pente et son sol d'ardoise et de quartzite donnent des Riesling salins et de longue garde. Le terroir est exploité par le Schlossgut Diel. Classé en grand cru, le Burgberg complète, aux côtés du Goldloch et du Pittermännchen, le remarquable trio des grands crus de Dorsheim. Le plus escarpé des trois grands crus de Dorsheim, le Burgberg offre, sur son ardoise et son quartzite, des Riesling salins, droits et de longue garde. Le Schlossgut Diel en est l'interprète attitré. Avec le Goldloch et le Pittermännchen, le Burgberg compose un trio de grands crus qui fait de Dorsheim l'un des villages phares de la basse Nahe. Le plus escarpé des crus de Dorsheim, le Burgberg donne, sous la main du Schlossgut Diel, des Riesling salins et d'une grande capacité de garde. Avec le Goldloch et le Pittermännchen, il forme un trio de grands crus qui place Dorsheim parmi les villages phares de la basse Nahe, aux portes du Rhin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-muensterer-dautenpflaenzer",
+      "nom": "Münsterer Dautenpflänzer",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-200 m",
+      "sols": "quartzite, ardoise et lœss",
+      "caracteristiques_rapides": "Grand cru de Münster-Sarmsheim ; Riesling racés de la basse Nahe (Kruger-Rumpf).",
+      "notes_objectives": "Le Münsterer Dautenpflänzer est un grand cru de la basse Nahe, sur les coteaux de Münster-Sarmsheim. Son sol de quartzite, d'ardoise et de lœss donne des Riesling racés et d'une belle minéralité. Le terroir est exploité par le domaine Kruger-Rumpf, l'une des références de la basse vallée. Classé en grand cru, le Dautenpflänzer illustre la qualité des terroirs de Münster-Sarmsheim, à la confluence de la Nahe et du Rhin. Sur son sol de quartzite, d'ardoise et de lœss, le Dautenpflänzer donne des Riesling racés et d'une belle minéralité. Le domaine Kruger-Rumpf, référence de la basse Nahe, en tire des Grosses Gewächs de garde. Le cru illustre la qualité des terroirs de Münster-Sarmsheim, à la confluence de la Nahe et du Rhin, secteur le plus septentrional de la région. Le domaine Kruger-Rumpf, installé à Münster-Sarmsheim, a fait du Dautenpflänzer l'un de ses crus phares, avec des Riesling racés et de garde. Le cru illustre la qualité des terroirs de la basse Nahe, dans ce secteur septentrional proche du Rhin, longtemps moins célèbre que la vallée moyenne mais riche de grands coteaux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-muensterer-pittersberg",
+      "nom": "Münsterer Pittersberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-200 m",
+      "sols": "ardoise grise et quartzite",
+      "caracteristiques_rapides": "Grand cru de Münster-Sarmsheim sur ardoise ; Riesling salins et droits (Kruger-Rumpf, Göttelmann).",
+      "notes_objectives": "Le Münsterer Pittersberg est un grand cru de la basse Nahe, sur les coteaux de Münster-Sarmsheim. Son sol d'ardoise grise et de quartzite donne des Riesling droits et salins. Le terroir est exploité par les domaines Kruger-Rumpf et Göttelmann. Classé en grand cru, le Pittersberg illustre la finesse des terroirs d'ardoise de la basse Nahe. Sur son ardoise grise et son quartzite, le Pittersberg donne des Riesling droits, salins et minéraux. Les domaines Kruger-Rumpf et Göttelmann en sont les interprètes attitrés. Le cru illustre la finesse des terroirs d'ardoise de Münster-Sarmsheim, dont les Riesling se distinguent par leur tension et leur pureté, à l'extrémité nord de la Nahe. Sur son ardoise grise, le Pittersberg donne des Riesling droits et salins, magnifiés par Kruger-Rumpf et Göttelmann. Le cru illustre la finesse minérale des terroirs d'ardoise de Münster-Sarmsheim, à la confluence de la Nahe et du Rhin, où les Riesling gagnent en tension et en précision.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-wallhaeuser-felseneck",
+      "nom": "Wallhäuser Felseneck",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-280 m",
+      "sols": "ardoise et roches volcaniques",
+      "caracteristiques_rapides": "Grand cru de Wallhausen ; Riesling minéraux du domaine Prinz Salm.",
+      "notes_objectives": "Le Wallhäuser Felseneck est un grand cru de la basse Nahe, sur les coteaux de Wallhausen. Son sol d'ardoise et de roches volcaniques donne des Riesling minéraux et racés. Le terroir est exploité par le domaine Prinz Salm, l'un des plus anciens domaines familiaux d'Allemagne. Classé en grand cru, le Felseneck illustre la qualité des terroirs de Wallhausen, dans le nord de la vallée. Sur son sol d'ardoise et de roches volcaniques, le Felseneck de Wallhausen donne des Riesling minéraux et racés. Le domaine Prinz Salm, dont les origines remontent au Moyen Âge, en est l'interprète attitré. Le cru illustre la qualité des terroirs du nord de la Nahe, dans le secteur de Wallhausen, à l'écart des villages les plus célèbres de la vallée. Le domaine Prinz Salm, l'un des plus anciens d'Allemagne, perpétue à Wallhausen une tradition viticole séculaire. Sur le Felseneck, il signe des Riesling minéraux et racés. Le cru illustre la qualité des terroirs du nord de la Nahe, dans un secteur plus confidentiel mais porté par une longue histoire familiale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "basse-nahe"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-niederhaeuser-klamm",
+      "nom": "Niederhäuser Klamm",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-230 m",
+      "sols": "ardoise et roches volcaniques",
+      "caracteristiques_rapides": "Grand coteau de Niederhausen voisin de la Hermannshöhle ; Riesling fins (Jakob Schneider, Mathern).",
+      "notes_objectives": "La Niederhäuser Klamm est un grand coteau de la Nahe moyenne, voisin de la grande Hermannshöhle, à Niederhausen. Son sol d'ardoise et de roches volcaniques donne des Riesling fins et minéraux. Le terroir est notamment exploité par les domaines Jakob Schneider et Mathern. Classé en grand cru, la Klamm illustre la qualité des coteaux de Niederhausen, au cœur des grands terroirs de la Nahe moyenne. Voisine de la prestigieuse Hermannshöhle, la Klamm partage avec elle le sol mixte d'ardoise et de roches volcaniques de Niederhausen, et donne des Riesling fins et minéraux. Elle est exploitée par des domaines comme Jakob Schneider et Mathern. Le cru illustre la richesse des coteaux de Niederhausen, l'un des cœurs des grands terroirs de la Nahe moyenne. Voisine de la grande Hermannshöhle, la Klamm bénéficie du même environnement géologique d'exception et donne des Riesling fins et minéraux, exploités par Jakob Schneider et Mathern. Le cru illustre la richesse des coteaux de Niederhausen, village au cœur des plus grands terroirs de la Nahe moyenne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "nahe-moyenne"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-kreuznacher-kahlenberg",
+      "nom": "Kreuznacher Kahlenberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-200 m",
+      "sols": "grès, argiles et lœss",
+      "caracteristiques_rapides": "Grand coteau de Bad Kreuznach aux sols variés ; Riesling amples (Korrell).",
+      "notes_objectives": "Le Kreuznacher Kahlenberg est un grand coteau du secteur de Bad Kreuznach, aux sols variés de grès, d'argiles et de lœss. Bien exposé, il donne des Riesling amples et aromatiques. Le terroir est exploité par des domaines comme Korrell. Classé en grand cru, le Kahlenberg illustre la qualité des terroirs de Bad Kreuznach, secteur historique de la Nahe. Sur les hauteurs de Bad Kreuznach, le Kahlenberg bénéficie de sols variés de grès, d'argiles et de lœss qui donnent des Riesling amples et aromatiques. Le domaine Korrell en est un interprète réputé. Le cru illustre la qualité des terroirs de Bad Kreuznach, ville thermale qui fut longtemps la capitale viticole et le cœur historique de la Nahe. Bad Kreuznach, ville thermale, fut longtemps la capitale viticole de la Nahe, et le Kahlenberg compte parmi ses meilleurs coteaux. Le domaine Korrell y signe des Riesling amples et aromatiques. Le cru illustre la qualité des terroirs de Bad Kreuznach, secteur historique dont la réputation, un temps éclipsée, retrouve aujourd'hui des couleurs.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "bad-kreuznach"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-muensterer-rheinberg",
+      "nom": "Münsterer Rheinberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-190 m",
+      "sols": "quartzite et ardoise grise",
+      "caracteristiques_rapides": "Coteau de Münster-Sarmsheim sur quartzite ; Riesling secs salins de la basse Nahe (Kruger-Rumpf, Göttelmann).",
+      "notes_objectives": "Le Münsterer Rheinberg est un coteau de la basse Nahe, à Münster-Sarmsheim, sur des sols de quartzite et d'ardoise grise. Bien exposé, il donne des Riesling secs et salins. Le terroir est exploité par les domaines Kruger-Rumpf et Göttelmann. Il illustre la qualité des coteaux de la basse Nahe, à la confluence avec le Rhin. Voisin du grand Dautenpflänzer, le Rheinberg offre, sur son quartzite et son ardoise grise, des Riesling secs salins et d'une belle tension. Kruger-Rumpf et Göttelmann en sont les interprètes. Le cru illustre la qualité des coteaux de Münster-Sarmsheim, à la confluence de la Nahe et du Rhin. Il complète, aux côtés du Dautenpflänzer et du Pittersberg, la belle série des coteaux de Münster-Sarmsheim, dans la basse vallée. Il compte parmi les bons coteaux abordables de la basse Nahe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "grand-coteau",
+        "basse-nahe"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-wallhaeuser-johannisberg",
+      "nom": "Wallhäuser Johannisberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "170-270 m",
+      "sols": "ardoise et lœss",
+      "caracteristiques_rapides": "Coteau de Wallhausen ; Riesling du plus ancien domaine familial d'Allemagne (Prinz Salm).",
+      "notes_objectives": "Le Wallhäuser Johannisberg est un coteau de la basse Nahe, à Wallhausen, sur des sols d'ardoise et de lœss. Bien exposé, il donne des Riesling fins et minéraux. Le terroir est exploité par le domaine Prinz Salm, qui revendique l'un des plus anciens héritages familiaux du vin allemand. Il illustre la qualité des terroirs du nord de la vallée. Sur son sol d'ardoise et de lœss, le Johannisberg de Wallhausen donne des Riesling fins et minéraux. Il est exploité par le domaine Prinz Salm, qui revendique l'un des plus anciens héritages viticoles familiaux d'Allemagne. Le cru illustre la qualité des terroirs du nord de la vallée. Porté par la longue histoire du domaine Prinz Salm, il participe à la réputation des terroirs du nord de la Nahe. Il illustre la tradition viticole séculaire de Wallhausen.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "basse-nahe"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-meddersheimer-rheingrafenberg",
+      "nom": "Meddersheimer Rheingrafenberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-280 m",
+      "sols": "roche volcanique altérée",
+      "caracteristiques_rapides": "Grand coteau volcanique de Meddersheim ; Riesling secs minéraux (Hexamer).",
+      "notes_objectives": "Le Meddersheimer Rheingrafenberg est un grand coteau de la haute Nahe, à Meddersheim, sur un sol de roche volcanique altérée. Bien exposé, il donne des Riesling secs et minéraux. Le terroir est exploité par le domaine Hexamer. Il illustre la vocation des sols volcaniques de la haute Nahe pour des Riesling de caractère. Sur son sol de roche volcanique altérée, le Rheingrafenberg de Meddersheim donne des Riesling secs minéraux et de caractère. Il est exploité par le domaine Hexamer, réputé pour ses Riesling de la haute Nahe. Le cru illustre la vocation des sols volcaniques de la vallée amont. Avec le domaine Hexamer, il confirme le potentiel des sols volcaniques de la haute Nahe pour des Riesling secs de caractère. Il figure parmi les beaux terroirs volcaniques de la haute vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "grand-coteau",
+        "haute-nahe"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-langenlonsheimer-rothenberg",
+      "nom": "Langenlonsheimer Rothenberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-190 m",
+      "sols": "grès rouge et argiles",
+      "caracteristiques_rapides": "Coteau de Langenlonsheim ; Riesling secs vinifiés par lieu-dit (Tesch).",
+      "notes_objectives": "Le Langenlonsheimer Rothenberg est un coteau de la basse Nahe, à Langenlonsheim, sur des sols de grès rouge et d'argiles. Bien exposé, il donne des Riesling fruités et minéraux. Le terroir est exploité par le domaine Tesch, réputé pour ses Riesling secs vinifiés par lieu-dit. Il illustre la diversité des sols de la basse Nahe. Sur son grès rouge et ses argiles, le Rothenberg de Langenlonsheim donne des Riesling fruités et minéraux. Il est exploité par le domaine Tesch, pionnier d'une approche parcellaire des Riesling secs. Le cru illustre la diversité géologique de la basse Nahe, où le grès rouge côtoie l'ardoise. Vinifié par lieu-dit chez Tesch, il témoigne de l'attention nouvelle portée aux terroirs de la basse Nahe. Il illustre la diversité des sols de la basse Nahe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gres-rouge",
+        "grand-coteau",
+        "basse-nahe"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-kreuznacher-kroetenpfuhl",
+      "nom": "Kreuznacher Krötenpfuhl",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-180 m",
+      "sols": "grès, graviers et argiles",
+      "caracteristiques_rapides": "Coteau historique de Bad Kreuznach ; Riesling fruités et fins (Korrell, von Plettenberg).",
+      "notes_objectives": "Le Kreuznacher Krötenpfuhl est un coteau historique de Bad Kreuznach, sur des sols de grès, de graviers et d'argiles. Bien exposé, il donne des Riesling fruités et fins. Le terroir est exploité par des domaines comme Korrell et von Plettenberg. Il illustre la tradition viticole de Bad Kreuznach, longtemps capitale du vin de la Nahe. Coteau historique de Bad Kreuznach, le Krötenpfuhl donne, sur ses sols de grès et de graviers, des Riesling fruités et fins. Korrell et von Plettenberg en sont les interprètes. Le cru illustre la tradition viticole de Bad Kreuznach, longtemps considérée comme la capitale du vin de la Nahe. Il perpétue la tradition viticole de Bad Kreuznach, cœur historique de la région. Il demeure l'un des coteaux historiques de Bad Kreuznach.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "bad-kreuznach"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-burg-layer-schlossberg",
+      "nom": "Burg Layer Schlossberg",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-220 m",
+      "sols": "ardoise et quartzite",
+      "caracteristiques_rapides": "Coteau de Burg Layen ; Riesling secs montants de la basse Nahe (Joh. Bapt. Schäfer).",
+      "notes_objectives": "Le Burg Layer Schlossberg est un coteau de la basse Nahe, à Burg Layen, sur des sols d'ardoise et de quartzite. Bien exposé, il donne des Riesling secs et minéraux. Le terroir est exploité par le domaine Joh. Bapt. Schäfer. Il illustre le potentiel montant des coteaux d'ardoise de la basse Nahe. Sur son ardoise et son quartzite, le Schlossberg de Burg Layen donne des Riesling secs et minéraux. Il est exploité par le domaine Joh. Bapt. Schäfer. Le cru illustre le potentiel montant des coteaux d'ardoise de la basse Nahe, travaillés par une nouvelle génération de vignerons. Il illustre la dynamique d'une nouvelle génération qui redonne vie aux coteaux d'ardoise de la basse Nahe. Il symbolise le renouveau des coteaux d'ardoise de la basse Nahe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "grand-coteau",
+        "basse-nahe"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-niederhaeuser-felsensteyer",
+      "nom": "Niederhäuser Felsensteyer",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Nahe moyenne",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-210 m",
+      "sols": "ardoise et roches volcaniques",
+      "caracteristiques_rapides": "Coteau de Niederhausen ; Riesling fins de la Nahe moyenne (Dr. Crusius, Mathern).",
+      "notes_objectives": "Le Niederhäuser Felsensteyer est un coteau de la Nahe moyenne, à Niederhausen, sur des sols d'ardoise et de roches volcaniques. Bien exposé, il donne des Riesling fins et minéraux. Le terroir est exploité par des domaines comme Dr. Crusius et Mathern. Il illustre la richesse des terroirs de Niederhausen, au cœur de la Nahe moyenne. Sur son sol d'ardoise et de roches volcaniques, le Felsensteyer de Niederhausen donne des Riesling fins et minéraux. Il est exploité par des domaines comme Dr. Crusius et Mathern. Le cru illustre la richesse des terroirs de Niederhausen, au cœur de la Nahe moyenne et de ses grands crus. Voisin des plus grands crus de Niederhausen, il bénéficie du même environnement géologique d'exception. Il profite du voisinage prestigieux des grands crus de Niederhausen.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "grand-coteau",
+        "nahe-moyenne"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-nahe-terr-kreuznacher-brueckes",
+      "nom": "Kreuznacher Brückes",
+      "type": "lieu-dit",
+      "region": "Nahe",
+      "sous_region": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-180 m",
+      "sols": "grès, argiles et lœss",
+      "caracteristiques_rapides": "Coteau réputé de Bad Kreuznach, célèbre au début du XXe siècle ; Riesling classiques de la Nahe.",
+      "notes_objectives": "Le Kreuznacher Brückes est l'un des coteaux les plus réputés de Bad Kreuznach, sur des sols de grès, d'argiles et de lœss. Bien exposé, il donne des Riesling classiques, fins et de belle facture. Le Brückes connut sa pleine gloire au début du XXe siècle, lorsque Bad Kreuznach était une ville thermale prospère et que ses meilleurs crus rivalisaient, sur les cartes des vins et dans les ventes aux enchères, avec les plus grands noms du Rheingau et de la Moselle. Le Brückes figurait alors parmi les terroirs les plus cotés d'Allemagne. Ses sols variés donnent des Riesling à la fois mûrs et racés, dans un style classique et équilibré. Classé en grand cru, le Brückes illustre le passé prestigieux de Bad Kreuznach, capitale historique de la Nahe, et la renaissance qualitative de ses grands coteaux, longtemps endormis, que de nouveaux vignerons remettent aujourd'hui en lumière. À l'apogée de Bad Kreuznach, les Riesling du Brückes atteignaient des prix comparables à ceux des plus grands crus du Rheingau, et le coteau figurait sur les cartes des palaces et des wagons-restaurants de l'époque impériale. Le déclin de la ville thermale et les bouleversements du XXe siècle ont fait sombrer dans l'oubli ce patrimoine, que l'on redécouvre aujourd'hui. Sur ses sols variés de grès, d'argiles et de lœss, le Brückes donne des Riesling mûrs, amples et équilibrés, au charme plus rond que les crus volcaniques de la Nahe moyenne. Le cru illustre à la fois l'histoire glorieuse de Bad Kreuznach et le renouveau qualitatif que connaît la région, porté par une nouvelle génération qui réveille ses grands coteaux endormis.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "historique",
+        "grand-coteau",
+        "bad-kreuznach"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

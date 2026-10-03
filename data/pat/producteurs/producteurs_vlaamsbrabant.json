@@ -1,0 +1,1010 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "vlaamsbrabant",
+  "region_label": "Vlaams-Brabant",
+  "source_file": "producteurs_vlaamsbrabant_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 30,
+  "items": [
+    {
+      "id": "be-vlaamsbrabant-prod-wijnkasteel-vandeurzen",
+      "nom": "Wijnkasteel Vandeurzen",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Linden (Lubbeek)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Riesling",
+        "Tempranillo",
+        "Albariño",
+        "Barbera",
+        "Grüner Veltliner"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Urbain Vandeurzen rachète en 2013 le domaine du Witte Kasteel à Linden, près de Louvain, restaure quatre ans durant le château et la ferme du XVIIIe siècle, et fait planter plus de trente-trois mille pieds sur le flanc sud — de sept à onze hectares selon les sources. Le sol est une argile limoneuse sur sous-couche ferrugineuse.\n\nC'est le domaine le plus ouvertement expérimental de la province. À côté du Chardonnay, du Pinot Noir et du Riesling, la famille plante Tempranillo, Albariño, Barbera et les deux Veltliner, en pariant explicitement sur le réchauffement du climat. Les vinifications suivent : fûts français et américains neufs, mais aussi élevage en amphores. Le domaine associe restaurant, salles et bistrot au vignoble.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface : 7 ha selon la fédération, 11 ha selon le domaine et le tourisme provincial. Encépagement complet et statut de production à confirmer.",
+      "source": "wijnkasteel-vandeurzen.be ; belgischewijnbouwers.be ; visitvlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-hagelander-et-petrushoeve",
+      "nom": "Wijndomein Hagelander & Petrushoeve",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Houwaart (Tielt-Winge) et Molenbeek-Wersbeek (Bekkevoort)",
+      "pays": "Belgique",
+      "cepages": [
+        "Müller-Thurgau",
+        "Ortega",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le vignoble fondateur de la viticulture belge moderne. Au début des années 1970, Jos Daems plante le flanc sud de la Houwaartseberg, colline de soixante-trois mètres au cœur du Hageland : c'est le plus ancien vignoble commercial du pays encore en activité, la parcelle historique datant de 1973. Daems n'agit pas seul — avec Marcel Saenen, Maurice Fol, Jacques Cypers et Achilles Schrevens, il fonde en 1972 l'association des Hagelandse wijnliefhebbers, qui organise les premières formations avec l'appui de l'école d'horticulture de Louvain et de la KU Leuven. C'est de ce noyau qu'est sortie, en 1997, la première appellation belge : Hagelandse wijn.\n\nLe sol est celui de toute la région : un sable limoneux reposant sur le grès ferrugineux diestien, cette roche brun rouille née de bancs de sable marins cimentés par l'oxyde de fer, qui forme les collines du Hageland en relief inversé. Elle emmagasine la chaleur et la restitue lentement ; les pentes raides et le bois qui ceinture la parcelle font le reste. L'encépagement a été choisi pour la maturité assurée — Müller-Thurgau et Ortega —, complété par du Chardonnay depuis 2012.\n\nLa transmission s'est faite hors famille : Rik Daems, fils de Jos, cède le domaine en 2019 à Gerry Calders, qui le fusionne avec la Petrushoeve de Bekkevoort sous la marque Vinobelga, pour un ensemble d'une dizaine d'hectares. Le site de Houwaart conserve un petit musée du vin, installé dans la maison où Jos Daems élevait ses premiers vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "vinobelga"
+      ],
+      "a_verifier": "Structure à clarifier : Hagelander (Houwaart, 3,5 ha, 1973) et Petrushoeve (Bekkevoort) fusionnés en 2019 sous Gerry Calders, marque Vinobelga ; Rik Daems garde un petit vignoble à Rillaar. Surface totale annoncée 10 ha.",
+      "source": "belgianwines.com ; vinobelga.be ; petrushoeve.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-kluisberg",
+      "nom": "Wijndomein Kluisberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Assent (Bekkevoort)",
+      "pays": "Belgique",
+      "cepages": [
+        "Müller-Thurgau",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Kerner",
+        "Chardonnay",
+        "Lemberger",
+        "Dornfelder",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Une valeur sûre du Hageland, et l'un des rares domaines belges à compter trois générations au travail. Jos Vanlaer se lance en 1983 à Assent, hameau de Bekkevoort, d'abord sur des vins de fruits, puis sur une petite parcelle de Müller-Thurgau. Quarante ans plus tard, l'exploitation couvre sept à huit hectares et quelque vingt-cinq mille pieds, conduits avec son épouse Daniëlla, ses enfants Bart et Lincy et leurs propres enfants ; Bart reprend progressivement la direction.\n\nLe nom du lieu dit l'antériorité : des ermites — kluizenaars — cultivaient la vigne sur le Kluisberg il y a des siècles. Les parcelles occupent les hauteurs, sur des pentes raides chargées de grès ferrugineux. La nuance qui fait la réputation du domaine tient à la proportion d'argile dans le sable limoneux, plus élevée ici qu'ailleurs dans le Hageland : elle donne des vins d'un caractère plus plein que la moyenne régionale.\n\nL'encépagement est délibérément classique, après des débuts consacrés aux cépages résistants : Müller-Thurgau, Pinot Gris, Pinot Blanc, Kerner et Chardonnay en blanc, Lemberger, Dornfelder et Merlot en rouge, pour une gamme complète en blanc, rouge et rosé. Tous les vins sont revendiqués en AOP Hagelandse wijn et bouchés à vis, choix assumé pour préserver le fruit. Le rapport qualité-prix et la régularité sont les deux points systématiquement relevés par la critique belge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Surface : 3 ha selon d'anciennes sources, 7 ha selon le domaine en 2023, 8 ha selon Gault&Millau et le tourisme provincial. Année de fondation : 1983 ou 1984 selon les sources.",
+      "source": "kluisberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-hageling",
+      "nom": "Wijndomein Hageling",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Tienen",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le pionnier du bio et des cépages résistants en Belgique. En 1993, trois mille pieds de variétés résistantes sont plantés sur le Deelberg, au nord de Tienen — une décision doublement en avance : à cette date, les PIWI relèvent encore de l'expérimentation, et presque personne dans le pays ne s'intéresse à la viticulture biologique.\n\nLa conduite est écologique depuis le premier jour : ni engrais chimiques, ni insecticides, ni herbicides. Les vins portent le label Biogarantie depuis 1995, et depuis la vendange 2012 la vinification est conforme au règlement européen sur le vin biologique, ce qui vaut au domaine le label bio européen — contrôles assurés par TÜV Nord Integra. Le raisonnement du domaine est explicite et reste d'actualité : les résistants sont la condition de la viticulture biologique sous climat atlantique, parce que la sortie progressive du cuivre contre le mildiou rendra les vinifera classiques difficiles à défendre.\n\nL'échelle est celle d'un domaine familial de très petite taille, exploité par Hugo Bernar et Greet Denruyter, à côté d'un commerce de vin. La production est revendiquée en AOP Hagelandse wijn, vendue au domaine sur rendez-vous, et les visites de groupes se font entre la mi-mai et la fin août. Le vignoble se situe en limite méridionale du Hageland, là où les collines de grès ferrugineux cèdent la place aux limons betteraviers de la Hesbaye brabançonne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "bio",
+        "piwi"
+      ],
+      "a_verifier": "Liste des cépages résistants plantés non publiée. Surface exacte inconnue : 3 000 pieds plantés en 1993 sur le Deelberg. Exploitation en société de personnes (Hugo Bernar, Greet Denruyter).",
+      "source": "hageling-bio.be ; toerismevlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijnkasteel-haksberg",
+      "nom": "Wijnkasteel Haksberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Tielt-Winge",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares et demi de vignes au sein d'un domaine boisé d'une vingtaine d'hectares, autour d'une maison de maître du XIXe siècle, à Tielt-Winge. Hilde Rutten y conduit un vignoble qui mêle délibérément cépages traditionnels et variétés résistantes, sur les sables limoneux reposant sur le grès ferrugineux diestien.\n\nLe domaine met en avant une viticulture respectueuse de la nature, sans revendiquer de certification, et fonctionne largement sur l'accueil : visites du parc et du vignoble, dégustations. C'est l'un des formats les plus répandus dans le Hageland, où la proximité de Louvain, de Diest et de Bruxelles rend l'œnotourisme économiquement décisif pour des exploitations de cette taille. Le domaine tire son nom de la colline du Haksberg, l'un des reliefs de grès ferrugineux qui structurent la commune la plus viticole du Hageland.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement détaillé et éventuelle certification à vérifier.",
+      "source": "wijndomeinhaksberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-steenen-muur",
+      "nom": "Steenen Muur",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Wezemaal (Rotselaar)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Bacchus",
+        "Sirius"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Le site viticole le plus chargé d'histoire du Hageland. La Wijngaardberg de Wezemaal porte encore le Wijnmuur : un mur de pierre sèche en blocs de grès ferrugineux, long de 1 546 mètres, large de 1,7 mètre et haut de 2 mètres, élevé au début du XIXe siècle par le duc d'Ursel pour abriter un vignoble en terrasses d'une trentaine d'hectares, exploité de 1814 à 1845 environ. Longtemps tenu pour médiéval, il est en réalité le vestige d'une entreprise du XIXe siècle.\n\nL'association Steenen Muur, fondée en 1996, a replanté un hectare sur ce versant à partir de 1999, avec six cépages blancs dont Chardonnay, Bacchus et Sirius. La production est revendiquée en AOP Hagelandse wijn, et le site jouxte le centre d'interprétation du vin hagelandais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "clos-historique"
+      ],
+      "a_verifier": "Encépagement : six cépages blancs plantés en 1999 dont Chardonnay, Bacchus et Sirius ; liste complète à confirmer.",
+      "source": "steenenmuur.be ; inventaris.onroerenderfgoed.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijngaard-ten-gaerde",
+      "nom": "Wijngaard ten Gaerde",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Begijnendijk",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi conduit par Danny Van de Gaer à Begijnendijk, sur le versant sud de la Houwaartse Berg, dans le secteur le plus dense du vignoble hagelandais : la colline compte à elle seule plus de dix vignerons.\n\nLe sol est le sable limoneux sur grès ferrugineux commun à toutes ces collines, dont les vignerons font l'argument central de leur identité régionale : la roche brun rouille se réchauffe vite et restitue lentement sa chaleur, ce qui compense une saison courte. La production, en blanc, rouge et rosé, se vend au domaine, qui pratique visites et dégustations. Encépagement non publié. Begijnendijk marque la limite septentrionale de l'aire hagelandaise : au-delà commencent les sables de Campine, trop pauvres et trop plats pour la vigne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Encépagement et année de plantation à documenter ; appellation revendiquée.",
+      "source": "wijngaardtengaerde.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-domein-chartreuzenberg",
+      "nom": "Domein Chartreuzenberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Holsbeek",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)",
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante ares sur le Chartreuzenberg, à Holsbeek, dans ce que la fédération appelle la région vallonnée du Brabant oriental — la frange occidentale du Hageland, là où les collines diestiennes s'abaissent vers la vallée de la Dyle.\n\nHerman Van Goidsenhoven y conduit un domaine doublement reconnu, chose rare à cette échelle : AOP Hagelandse wijn pour les vins tranquilles, AOP Vlaamse mousserende kwaliteitswijn pour les effervescents. Cette double revendication suppose de satisfaire deux cahiers des charges distincts, avec les contrôles correspondants, sur moins d'un hectare de vigne. Encépagement et année de plantation ne sont pas documentés. Le nom renvoie à un ancien bien des chartreux de Louvain : la toponymie du secteur garde la trace des abbayes brabançonnes, qui exploitaient une partie de ces coteaux avant le petit âge glaciaire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Encépagement et année de plantation non publiés.",
+      "source": "chartreuzenberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-den-eeckhout",
+      "nom": "Wijndomein den Eeckhout",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Sint-Joris-Winge (Tielt-Winge)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante ares plantés par Joris Eeckhout au point culminant de la Houwaartseberg, avec ses fils Kasper et Lode. La position en haut de colline est un avantage réel dans le Hageland : elle réduit sensiblement l'exposition aux gelées de printemps, l'air froid s'écoulant vers les vallons.\n\nLe domaine a été remarqué par la presse spécialisée néerlandophone comme l'un des exemples de la montée en qualité de la région, malgré une surface minuscule. Joris Eeckhout est par ailleurs l'un des neuf vignerons associés dans la Houwaartse Wijngaard vzw, coopérative qui exploite le vignoble communal de la colline. Encépagement non publié. Le domaine pratique la vente directe et l'accueil, et fait partie du réseau de caves ouvertes lors du festival Sprankelend Hageland, qui réunit chaque année les vignerons de la région sur quatre week-ends.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Encépagement et millésime de première récolte à documenter.",
+      "source": "deneeckhout.be ; perswijn.nl ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-ter-weyden-bosch",
+      "nom": "Wijndomein Ter Weyden Bosch",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Tielt-Winge",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Entreprise familiale de soixante-dix ares au cœur de Tielt-Winge, conduite par Nathalie Peeters, orientée vers les vins blancs et les effervescents.\n\nLe domaine se situe dans la commune la plus viticole du Hageland, entre la Houwaartseberg et le Vlooybergtoren, sur les mêmes sables limoneux à substrat ferrugineux. Comme la plupart des exploitations de cette taille, il combine vente directe et accueil au domaine. La proportion d'effervescents dans la gamme n'est pas anodine : la bulle représente près de la moitié de la production viticole belge, et permet de valoriser des raisins à maturité modérée. Encépagement et millésime de première récolte à documenter. Le nom renvoie au bois de Weyden, en lisière duquel se trouve le vignoble : les couverts forestiers de crête sont une constante du paysage hagelandais et jouent un rôle de brise-vent sur les parcelles de versant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "methode-traditionnelle",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, surface et méthode d'élaboration des mousseux à confirmer.",
+      "source": "terweydenbosch.com ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijngaard-danouise",
+      "nom": "Wijngaard Danouise",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Houwaart (Tielt-Winge)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente-cinq ares à Houwaart, exploités par Daniël Vandervaeren sur les pentes de la Houwaartseberg, hors appellation.\n\nCe format — moins d'un demi-hectare, vendu intégralement au domaine et dans un rayon de quelques kilomètres — est celui de la majorité des vignerons hagelandais, et il explique pourquoi la province compte beaucoup plus de domaines que le Limbourg pour une surface plantée bien moindre. La colline de Houwaart concentre à elle seule une dizaine de ces micro-vignobles, sur un sol de sable limoneux reposant sur le grès ferrugineux diestien. Encépagement et volumes non publiés. La densité de ces petites structures autour de Houwaart a fini par créer un véritable itinéraire œnotouristique, avec sentiers balisés, points de vue aménagés et caves ouvertes plusieurs week-ends par an.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes non publiés.",
+      "source": "danouise.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-liemau",
+      "nom": "Liemau",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Houwaart (Tielt-Winge)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quarante ares conduits par Lieve Wuyts et Kris Jacobs à Houwaart, sur le versant sud de la colline, sans revendication d'appellation.\n\nLe vignoble s'inscrit dans le paysage caractéristique du Hageland : de courtes pentes exposées au sud, des bois en crête, un sol de sable limoneux sur grès ferrugineux. La région annonce environ 1 600 heures d'ensoleillement, une température moyenne de 11 °C et 800 millimètres de précipitations annuelles — des conditions qui imposent des cépages précoces et une vigilance constante face aux maladies cryptogamiques. Encépagement et couleurs produites non publiés. Le nom associe les prénoms des deux exploitants, usage courant chez les micro-domaines belges. La production, de quelques centaines à quelques milliers de bouteilles, part intégralement en vente directe et en dégustation sur place.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Encépagement et couleurs produites non publiés.",
+      "source": "liemau.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-graevenberger",
+      "nom": "Graevenberger",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Holsbeek",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente-cinq ares plantés par Erwin Blomsma et Saskia Broeckx sur le flanc sud du Beninksberg, à Holsbeek, l'une des collines diestiennes qui marquent la limite occidentale du Hageland.\n\nCes buttes sont un cas d'école de relief inversé : d'anciens bancs de sable marins du Miocène, cimentés par l'oxyde de fer en un grès résistant, ont protégé de l'érosion les terrains qu'ils coiffaient, si bien que ce qui était le fond de la mer forme aujourd'hui les points hauts. C'est cette roche brun rouille que tous les vignerons de la région revendiquent comme signature. Encépagement et millésime de première récolte à documenter. Le domaine reste hors appellation et vend sa production au domaine. Holsbeek, avec Lubbeek et Rotselaar, forme la frange occidentale du vignoble hagelandais, la plus proche de Louvain et donc la mieux placée pour l'accueil de visiteurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "a_verifier": "Encépagement et millésime de première récolte à documenter.",
+      "source": "graevenberger.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-den-aeretop",
+      "nom": "Den Aeretop",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Lubbeek",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quarante ares à Lubbeek, sur des terres restées cent ans dans la même famille avant que Robbe Vanzavelberg n'y plante des vignes. La production est revendiquée en AOP Vlaamse mousserende kwaliteitswijn, l'appellation flamande réservée aux mousseux de qualité.\n\nCe choix d'une reconnaissance uniquement en effervescent est révélateur d'une logique très répandue chez les nouveaux venus : la méthode traditionnelle valorise mieux des raisins de maturité modérée, supporte des millésimes irréguliers, et se prête au stockage long qui permet d'étaler les ventes d'une petite production. Encépagement et premier millésime non publiés. Lubbeek se situe entre Louvain et Tienen, sur les dernières collines diestiennes avant le plateau limoneux hesbignon. Le domaine illustre la reconversion de petites parcelles familiales en vignobles, devenue massive depuis 2015.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "methode-traditionnelle",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, millésime de première récolte et gamme complète à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-vin-de-anntoon",
+      "nom": "Vin de AnnToon",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Begijnendijk",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares à Begijnendijk conduits par Ann Verbeeck, reconnus en AOP Hagelandse wijn : c'est l'un des plus petits domaines du corpus à revendiquer l'appellation, ce qui suppose de se plier au cahier des charges et aux contrôles pour quelques centaines de bouteilles.\n\nLa commune se situe à la charnière entre le Hageland et la Campine anversoise, sur les derniers reliefs de grès ferrugineux avant les sables campinois. Le nom du domaine associe les prénoms des deux exploitants, formule fréquente dans les micro-domaines belges. Encépagement, volumes et couleurs produites à documenter. La commune compte plusieurs autres micro-vignobles, dont Wijngaard ten Gaerde, ce qui en fait l'un des points de concentration du vignoble hagelandais septentrional. La production est vendue au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, volumes et couleurs à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-beenshoeve",
+      "nom": "Beenshoeve",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Linter",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre-vingt-dix ares plantés au printemps 2020 par Nele Kempeneers à Linter, à la charnière entre le Hageland et la Hesbaye brabançonne.\n\nOn quitte ici les collines de grès ferrugineux pour le plateau limoneux qui court jusqu'à Saint-Trond et Tongres : sols profonds, fertiles, sans le drainage rapide des versants diestiens. Le domaine fait partie de la vague de plantations du début des années 2020, la plus forte qu'ait connue le pays — le vignoble belge a plus que doublé en surface depuis 2018. Encépagement, couleurs et appellation éventuelle à documenter. Linter est une zone de transition à suivre : la vigne y arrive par le Hageland, mais les conditions pédologiques sont déjà celles de la Hesbaye, où dominent Chardonnay et Pinots.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et appellation éventuelle à documenter.",
+      "source": "beenshoeve.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-hagegoud",
+      "nom": "Wijndomein Hagegoud",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "commune": "Geetbets",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hagelandse wijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine de la Glabbeekstraat à Geetbets, né d'une activité de loisir devenue métier, planté de trois cépages résistants et reconnu en AOP Hagelandse wijn.\n\nLe cas est intéressant pour le classement : le cahier des charges de l'appellation hagelandaise autorise un éventail de variétés nettement plus large que celui de la Hesbaye, cépages résistants compris, ce qui permet à un domaine intégralement planté en PIWI de revendiquer l'AOP. C'est une particularité de la première appellation belge, conçue dès 1997 dans une région où les hybrides résistants étaient déjà la norme. Identité des trois cépages, surface et année de plantation non publiées. Geetbets se trouve à l'extrémité orientale du Hageland, en limite de la province de Limbourg et de la vallée du Gete, sur des sols sablo-limoneux. La production est vendue au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "hageland",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Identité des trois cépages résistants, surface et année de plantation non publiées.",
+      "source": "toerismevlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-chardonnay-meerdael",
+      "nom": "Chardonnay Meerdael",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Dijleland",
+      "commune": "Oud-Heverlee",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Fondé en 1994 par la famille Vleminckx en lisière du bois de Meerdael, au sud de Louvain, ce domaine de huit hectares est l'un des plus grands du Brabant flamand et l'un des très rares en Belgique à ne produire que de l'effervescent — d'où son nom, qui annonce à la fois le cépage unique et le lieu.\n\nTout part du Chardonnay, vinifié en méthode traditionnelle et revendiqué en AOP Vlaamse mousserende kwaliteitswijn. Le choix d'une monoculture consacrée à la bulle, adopté ici trente ans avant que le label BelBul ne popularise l'effervescent belge, s'appuie sur la même logique qu'en Champagne : sous climat frais, une maturité modérée et une acidité élevée sont un atout plutôt qu'un défaut. Le vignoble occupe les sables limoneux du Dijleland.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "dijleland",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface (8 ha) et volumes actuels à revérifier ; présence éventuelle d'autres cépages.",
+      "source": "chardonnaymeerdael.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-leefdaeler",
+      "nom": "Leefdaeler",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Dijleland",
+      "commune": "Oud-Heverlee",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares conduits par Luc Colson à Oud-Heverlee, dans la vallée de la Dyle au sud de Louvain. Le domaine trouve son origine dans des plantations de 2008 sur le territoire de Leefdaal, dont il tire son nom.\n\nLe Dijleland n'est pas une zone viticole reconnue : les sols y sont des sables limoneux, le relief beaucoup plus doux que dans le Hageland voisin, et les domaines restent hors appellation, à l'exception de ceux qui revendiquent le mousseux de qualité flamand. Encépagement, couleurs et appellation éventuelle à documenter. Le secteur d'Oud-Heverlee, adossé au massif forestier de Meerdaal, mêle vignobles récents et sites protégés, ce qui limite fortement les surfaces plantables : les domaines y dépassent rarement deux hectares.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "dijleland"
+      ],
+      "a_verifier": "Encépagement, couleurs et appellation éventuelle à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-dappersveld-woestijn",
+      "nom": "Wijndomein Dappersveld-Woestijn",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Elingen (Pepingen)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares à Elingen, dans la commune de Pepingen, conduits par Sam Dehandschutter : l'un des plus grands vignobles de l'ouest de la province, et de loin le plus étendu du Pajottenland.\n\nOn est ici sur le plateau limoneux brabançon, entaillé par les vallées de la Senne et de la Marcq, dans un paysage de fermes en carré et de houblonnières disparues. C'est le pays de la gueuze et du lambic, où la fermentation spontanée est une tradition ancienne ; la vigne, elle, n'y est revenue que dans les années 2000. Encépagement, année de plantation et appellation éventuelle à documenter. Avec cinq hectares, le domaine fait figure d'exception dans un secteur où la moyenne tourne autour d'un demi-hectare : c'est l'une des rares exploitations de l'ouest brabançon dimensionnée pour une activité professionnelle à part entière plutôt que pour une pluriactivité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland"
+      ],
+      "a_verifier": "Encépagement, année de plantation et appellation éventuelle à documenter.",
+      "source": "dappersveldwoestijn.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-domaine-holvast",
+      "nom": "Domaine Holvast",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Asse",
+      "pays": "Belgique",
+      "cepages": [
+        "Sirius",
+        "Merzling",
+        "Regent",
+        "Léon Millot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Créé en 2001 par Jurgen Holvast, ce domaine de deux hectares réparti en trois parcelles sur la commune d'Asse est un cas d'école du modèle brabançon : il est intégralement planté de cépages résistants — Sirius et Merzling en blanc, Regent et Léon Millot en rouge.\n\nCes variétés, issues des programmes de croisement allemands et suisses, demandent trois à cinq fois moins de traitements que les vinifera classiques sous un climat aussi humide, argument décisif à l'ouest de Bruxelles où la pression du mildiou est forte. Le domaine est reconnu en AOP Vlaamse mousserende kwaliteitswijn, preuve qu'un encépagement entièrement résistant n'interdit pas la reconnaissance officielle. Le domaine, l'un des plus anciens du Pajottenland, est aussi l'un des rares de la zone à dépasser l'hectare et demi. Sa gamme comprend blancs, rouges et effervescents.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland",
+        "piwi",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface : 1,5 ha selon certaines sources, 2 ha selon la fédération.",
+      "source": "domaineholvast.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijngoed-stuyvenberg",
+      "nom": "Wijngoed Stuyvenberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Gooik",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Gooik, au cœur du Pajottenland, conduit par Hendrik Coysman.\n\nLe vignoble occupe l'une des buttes limoneuses de ce paysage de collines douces à l'ouest de Bruxelles, région rendue célèbre par ses bières à fermentation spontanée et par les paysages de Bruegel. La viticulture y est entièrement récente, sans continuité historique documentée, et la quasi-totalité des domaines restent hors appellation : le Pajottenland n'est couvert par aucune AOP territoriale, seules les appellations flamandes transversales — mousseux de qualité et vin de pays — y sont accessibles. Encépagement et année de plantation non publiés. Gooik est, avec Pepingen et Lennik, l'une des trois communes qui concentrent le vignoble du Pajottenland. La production se vend au domaine et dans le réseau des producteurs locaux, très structuré dans cette région de produits du terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites non publiés.",
+      "source": "stuyvenberg.com ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-saffelberg",
+      "nom": "Wijndomein Saffelberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Gooik",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante ares plantés entre le château de Saffelberg et le restaurant Popelier, à Gooik : un vignoble adossé à un projet gastronomique, formule fréquente dans le Pajottenland, où la proximité de Bruxelles assure un débouché direct.\n\nLe modèle a une logique économique claire : à cette échelle, la vente en salle règle en une saison l'écoulement de quelques milliers de bouteilles, sans distribution ni commercialisation. Il explique une part de la floraison de micro-domaines dans la périphérie bruxelloise depuis 2015. Encépagement et millésime de première récolte à documenter. Le château de Saffelberg et son parc donnent au lieu un cadre qui compte autant que le vin dans le modèle économique : dégustations, réceptions et événements accompagnent la production. Le vignoble reste hors appellation, comme la quasi-totalité du Pajottenland.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement et millésime de première récolte à documenter.",
+      "source": "restaurantpopelier.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-domein-van-krayenberg",
+      "nom": "Domein Van Krayenberg",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Beersel",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi sur les hauteurs de Beersel, conduit par Laurent Demarque, avec vue sur la vallée de la Senne au sud-ouest de Bruxelles.\n\nLa Zennevallei est l'une des zones viticoles les plus récentes du pays : les plantations y datent presque toutes de l'après-2015, sur les versants limoneux qui dominent la vallée industrielle. Le domaine se présente comme le vignoble de Beersel et de ses environs, ancrage local revendiqué dans une commune surtout connue pour son château médiéval et pour la gueuze. Encépagement, année de plantation et couleurs produites à documenter. Le nom reprend celui du coteau sur lequel le vignoble est planté. À une quinzaine de kilomètres du centre de Bruxelles, le domaine bénéficie d'un bassin de clientèle considérable pour une production d'un hectare et demi, ce qui explique la viabilité de ce type de projet en périphérie urbaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "zennevallei",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "krayenberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijngaard-cauden-borre",
+      "nom": "Wijngaard Cauden Borre",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "O.-L.-V.-Lombeek (Roosdaal)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares plantés par Bart Decoster sur l'une des collines de Lennik, dans le Pajottenland oriental, à une vingtaine de kilomètres de Bruxelles.\n\nLe nom reprend un toponyme ancien du secteur. À cette échelle — quelques centaines de bouteilles par an —, la production part intégralement en vente directe et n'apparaît ni dans les statistiques d'appellation ni chez les cavistes. Ces micro-vignobles représentent pourtant une part notable des quelque trois cent cinquante vignerons enregistrés en Belgique. Encépagement et couleurs produites non publiés ; la commune exacte du vignoble, entre Lennik et Roosdaal, reste à confirmer. Le vignoble est planté sur les limons de plateau du Brabant central, profonds et fertiles, où la maîtrise de la vigueur est le principal enjeu technique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et commune exacte du vignoble (Lennik ou Roosdaal) à confirmer.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-dierickx-andre-wijnbouw",
+      "nom": "Dierickx André Wijnbouw",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Opwijk",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Opwijk, à la limite du Pajottenland et du pays de Termonde, exploité par André Dierickx et revendiqué en IGP Vlaamse landwijn.\n\nLe choix de l'indication géographique plutôt que d'une AOP est la solution la plus fréquente dans l'ouest du Brabant flamand, faute d'appellation territoriale : la Vlaamse landwijn, reconnue en 2005, couvre toute la Flandre et laisse une grande liberté d'encépagement, au prix d'une moindre identification géographique. Encépagement et année de plantation non publiés. Le domaine est l'un des plus anciens du secteur d'Opwijk, où la vigne s'est installée sur d'anciennes terres de culture, dans une plaine limoneuse sans relief marqué. La longévité de ce type de structure — un hectare, un exploitant, une clientèle locale — est le vrai indicateur de viabilité du modèle brabançon.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland"
+      ],
+      "a_verifier": "Encépagement et année de plantation non publiés.",
+      "source": "andredierickx.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijngoed-bodegem",
+      "nom": "Wijngoed Bodegem",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "commune": "Dilbeek (Sint-Martens-Bodegem)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante-dix ares plantés en 2024 par Ulrik Van Schepdael à Sint-Martens-Bodegem, sur le territoire de Dilbeek, aux portes de Bruxelles : l'un des projets les plus récents de la province.\n\nLe vignoble n'a pas encore de millésime commercialisé au moment de la rédaction — une vigne plantée en 2024 donne sa première vraie récolte vers 2027. Il illustre la dynamique de la périphérie bruxelloise, où les plantations se sont multipliées depuis 2020, portées par la demande locale et par des sols limoneux profonds. Encépagement et couleurs produites à documenter. Le domaine a une valeur documentaire pour le corpus : il permettra de dater précisément l'entrée en production d'un vignoble planté au milieu des années 2020, et de vérifier quels cépages ont été retenus au moment où les sélections résistantes de troisième génération arrivent sur le marché belge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "pajottenland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter (plantation 2024).",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-landakkershof",
+      "nom": "Landakkershof",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Nord du Brabant flamand",
+      "commune": "Perk (Steenokkerzeel)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares à Perk, dans la commune de Steenokkerzeel, au nord-est de Bruxelles, conduits par Bert De Laet et reconnus en AOP Vlaamse mousserende kwaliteitswijn.\n\nLe secteur ne relève d'aucune zone viticole nommée : on est sur les limons du plateau brabançon, entre l'aéroport de Zaventem et la vallée de la Dyle, dans une campagne périurbaine où la vigne est apparue récemment. La reconnaissance en mousseux de qualité flamand, transversale et non territoriale, est ici la seule appellation accessible. Encépagement et année de plantation non publiés. Le domaine produit blancs et effervescents et pratique la vente directe. Sa taille — deux hectares — le place parmi les plus étendus de la moitié nord de la province, où la moyenne reste très inférieure à l'hectare, et en fait un point de comparaison utile pour juger du potentiel de ce secteur encore peu exploré.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Encépagement et année de plantation non publiés ; sous-région à préciser.",
+      "source": "landakkershof.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-van-renterghem",
+      "nom": "Wijndomein Van Renterghem",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Nord du Brabant flamand",
+      "commune": "Londerzeel",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés par Jasper Van Renterghem dans la zone verte qui sépare Bruxelles d'Anvers, à Londerzeel, et revendiqués en IGP Vlaamse landwijn.\n\nLe nord du Brabant flamand n'a aucune tradition viticole et ne dispose d'aucune appellation territoriale : les sols y sont sableux à sablo-limoneux, plus légers que les limons du sud de la province, et le relief est quasi nul. Les quelques domaines qui s'y sont installés depuis 2015 travaillent tous sous IGP ou hors appellation. Encépagement, couleurs et millésime de première récolte à documenter. La revendication de l'IGP est en soi un indicateur : elle suppose une déclaration de récolte, un contrôle analytique et organoleptique, et donc une intention commerciale, ce qui distingue ce type de domaine des vignes d'agrément que compte aussi la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et millésime de première récolte à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-prod-wijndomein-swaene",
+      "nom": "Wijndomein Swaene",
+      "type": "domaine",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Nord du Brabant flamand",
+      "commune": "Malderen (Londerzeel)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Malderen, dans la commune de Londerzeel, domaine récent conduit par Joris Janssens, hors appellation.\n\nLe vignoble se trouve à quelques centaines de mètres de celui de Van Renterghem, ce qui fait de ce coin du nord de la province un petit foyer de plantations nouvelles, sur des terres sableuses auparavant vouées aux cultures maraîchères et à l'élevage. À cette échelle et sans reconnaissance officielle, la production se vend au domaine et dans le circuit local. Encépagement, année de plantation et couleurs produites à documenter. Le nom renvoie au lieu-dit Zwaantje, où se trouvent les deux domaines. Cette concentration nouvelle vaut d'être suivie : c'est souvent ainsi que naissent les zones viticoles belges — deux ou trois plantations rapprochées, puis une dizaine en une décennie, comme cela s'est produit sur la Houwaartseberg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "wijndomeinswaene.be ; belgischewijnbouwers.be"
+    }
+  ]
+}

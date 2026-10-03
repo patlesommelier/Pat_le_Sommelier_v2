@@ -1,0 +1,441 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "trentino",
+  "region_label": "Trentino (Italie)",
+  "source_file": "terroirs_trentino.json",
+  "built_at": "2026-07-08",
+  "count": 15,
+  "items": [
+    {
+      "id": "it-trentino-terr-trento-trentodoc",
+      "nom": "Trento (Trentodoc)",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Pinot Bianco",
+        "Pinot Meunier"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "coteaux d'altitude variés (calcaire, moraine, porphyre)",
+      "caracteristiques_rapides": "La grande appellation du metodo classico de montagne, 1re AOC italienne dédiée aux bulles (1993) : Trentodoc frais, tendus et de garde, Ferrari en tête.",
+      "notes_objectives": "Le Trento DOC, plus connu sous sa marque collective Trentodoc, est la grande appellation du vin effervescent de montagne et l'un des sommets du metodo classico italien. Créée en 1993, ce fut la première AOC d'Italie entièrement dédiée aux bulles élaborées selon la méthode traditionnelle (seconde fermentation en bouteille) — avant même la Franciacorta —, fruit d'une longue tradition initiée un siècle plus tôt par Giulio Ferrari.\n\nL'appellation repose sur les cépages champenois : Chardonnay surtout, complété de Pinot Nero, Pinot Bianco et, plus rarement, Pinot Meunier. Sa singularité tient à l'altitude : les vignes s'étagent sur les coteaux du Trentino jusqu'à 700 mètres et plus, dans un climat alpin aux nuits fraîches et aux fortes amplitudes thermiques. Cette fraîcheur de montagne, rare en Italie, préserve une acidité vive et une grande finesse aromatique, gages de tension et de longévité. Les sols variés — calcaires, morainiques, porphyriques — apportent minéralité et complexité. Le cahier des charges impose un vieillissement minimal sur lies (15 mois, bien davantage pour les Riserva), et les meilleures cuvées, comme le Giulio Ferrari, se patinent des décennies. Portée par une cinquantaine de maisons (Ferrari en tête, mais aussi Letrari, Maso Martis, Moser, Cesarini Sforza, Cavit/Altemasi), l'appellation a bâti une identité collective forte, symbolisée par la montagne sur ses étiquettes.\n\nGrande appellation du metodo classico de montagne, première AOC italienne dédiée aux bulles, le Trentodoc donne des effervescents frais, tendus et de garde. Portée par Ferrari, c'est l'une des références du vin effervescent italien et la fierté du Trentino.\n\nLe succès du Trentodoc illustre une réussite collective rare : plutôt que de se concurrencer, les maisons trentines ont bâti une marque commune, symbolisée par la silhouette d'une montagne, qui incarne l'identité alpine de leurs bulles. Cette stratégie a permis à une petite région de s'imposer comme l'un des grands noms du metodo classico italien, face à la Franciacorta. La comparaison avec la Champagne n'est pas usurpée : mêmes cépages, même méthode, mais un climat de montagne qui apporte une signature propre, faite de tension, de minéralité et de fraîcheur. Servis à l'apéritif, sur des poissons, des crustacés, une cuisine gastronomique ou, pour les grandes Riserva, sur des plats plus riches, les Trentodoc séduisent par leur élégance et leur allonge. Les meilleures cuvées, longuement vieillies sur lies, développent des notes de brioche, de fruits secs et de pâtisserie, et se patinent en cave comme de grands champagnes. Au-delà de Ferrari, sa locomotive historique, l'appellation compte une belle diversité de maisons, des grandes coopératives aux petits domaines artisanaux souvent en bio, qui explorent toutes les nuances des bulles de montagne. Le Trentodoc est ainsi devenu un ambassadeur de l'excellence viticole trentine et un symbole de l'art de vivre alpin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "trentodoc",
+        "metodo-classico",
+        "chardonnay",
+        "effervescent",
+        "altitude",
+        "doc"
+      ],
+      "source": "trentodoc|gamberorosso"
+    },
+    {
+      "id": "it-trentino-terr-teroldego-rotaliano",
+      "nom": "Teroldego Rotaliano",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Teroldego"
+      ],
+      "altitude": "~200-250 m",
+      "sols": "graviers alluviaux dolomitiques du Campo Rotaliano",
+      "caracteristiques_rapides": "Le grand rouge du Trentino : Teroldego profond, fruité et racé sur les graviers de la plaine rotalienne, du vin gourmand au grand vin de garde (Foradori).",
+      "notes_objectives": "Le Teroldego Rotaliano est la grande appellation rouge du Trentino et l'expression du cépage autochtone Teroldego sur son terroir de prédilection : la Piana Rotaliana, au confluent du Noce et de l'Adige. Longtemps considéré comme un simple vin de comptoir généreux, le Teroldego a été réhabilité au rang de grand vin par une nouvelle génération de vignerons.\n\nSur les graviers dolomitiques drainants de la plaine rotalienne, le Teroldego donne des rouges d'une couleur intense, au fruité éclatant de mûre et de cerise noire, aux notes de violette, d'épices et de garrigue alpine, avec une belle fraîcheur. Selon la vinification, il se décline du vin gourmand et fruité, à boire jeune, au grand vin de garde, concentré, structuré et apte à vieillir une décennie et plus (Granato de Foradori, Diedri de Dorigati, Gran Masetto d'Endrizzi). Le cépage, apparenté au Syrah et au Lagrein, exprime ici une race et une identité fortes. Le cahier des charges prévoit aussi une version Superiore et Riserva. C'est le compagnon idéal des viandes rouges, du gibier, de la polenta et des fromages alpins.\n\nGrande appellation rouge du Trentino, le Teroldego Rotaliano exprime le cépage autochtone sur les graviers de la Piana Rotaliana, du vin gourmand au grand vin de garde. C'est le rouge emblématique de la région.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "rouge",
+        "doc",
+        "garde"
+      ],
+      "source": "jamessuckling|tasteatlas"
+    },
+    {
+      "id": "it-trentino-terr-piana-rotaliana-campo-rotaliano",
+      "nom": "Piana Rotaliana (Campo Rotaliano)",
+      "type": "zone",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Teroldego"
+      ],
+      "altitude": "~200-250 m",
+      "sols": "amphithéâtre plat de graviers et sables alluviaux (Noce, Adige)",
+      "caracteristiques_rapides": "Le « grand cru » du Teroldego : petit amphithéâtre plat de graviers dolomitiques entre les Dolomites, considéré comme l'un des plus beaux terroirs à rouge d'Italie.",
+      "notes_objectives": "La Piana Rotaliana, ou Campo Rotaliano, est considérée comme l'un des plus beaux terroirs à vin rouge d'Italie, souvent surnommée « le plus grand jardin viticole d'Europe » ou le « grand cru » du Teroldego. C'est un petit amphithéâtre naturel, une plaine alluviale plate d'à peine une poignée de kilomètres, nichée au confluent des rivières Noce et Adige, au nord de Trente, encerclée par les parois abruptes des Dolomites.\n\nCe terroir unique doit tout à sa géologie : les crues successives du torrent Noce, descendu des montagnes, y ont déposé au fil des millénaires un épais matelas de graviers, de galets et de sables dolomitiques, parfaitement drainants et pauvres. Sur ces sols chauds et filtrants, à faible altitude (environ 200-250 m) mais bénéficiant de l'air frais qui descend des sommets, le Teroldego — cépage autochtone quasi exclusif du lieu, dont le nom signifierait « or du Tyrol » — trouve son expression idéale. La conduite traditionnelle en pergola, longtemps la règle, laisse peu à peu place à des palissages plus qualitatifs et à de faibles rendements. Il en résulte des rouges d'une couleur profonde, au fruité éclatant (mûre, cerise noire), aux notes de violette et d'épices, à la fois généreux et frais. C'est ici qu'Elisabetta Foradori a révolutionné le cépage, prouvant avec son Granato qu'il pouvait donner un grand vin de garde, aux côtés de maisons comme Dorigati, Endrizzi ou de Vescovi Ulzbach. L'unité et la petitesse du terroir, sa géologie si particulière et la concentration de grands producteurs en font un cas presque unique en Italie.\n\n« Grand cru » du Teroldego, la Piana Rotaliana est un petit amphithéâtre plat de graviers dolomitiques cerné par les Dolomites, l'un des plus beaux terroirs à rouge d'Italie. C'est le berceau et l'apogée du grand cépage rouge du Trentino.\n\nCe terroir minuscule concentre une densité de grands producteurs peu commune en Italie, ce qui a nourri sa réputation de « grand cru ». La comparaison avec les meilleurs terroirs à rouge de la péninsule n'est pas exagérée : comme dans les plus beaux crus, tout tient ici à la rencontre d'un cépage et d'un sol dans un périmètre restreint et parfaitement défini. La conversion progressive vers des rendements plus faibles et une viticulture plus qualitative, initiée par des figures comme Elisabetta Foradori, a révélé le potentiel de garde insoupçonné du Teroldego, longtemps bridé par la surproduction en pergola. Servis sur des viandes rouges, du gibier, de la polenta taragna ou des fromages alpins affinés, les grands Teroldego de la Rotaliana se patinent sur une décennie et plus, développant des arômes tertiaires de cuir, de sous-bois et d'épices. Le paysage lui-même, cette plaine de vignes cernée de parois dolomitiques vertigineuses, participe de la magie du lieu et en fait l'un des sites viticoles les plus photographiés du nord de l'Italie. La Piana Rotaliana est ainsi à la fois un terroir d'exception, un patrimoine paysager et le berceau du renouveau qualitatif du grand cépage rouge trentin, dont elle demeure l'expression la plus aboutie et la plus émouvante.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "campo-rotaliano",
+        "teroldego",
+        "graviers",
+        "grand-cru"
+      ],
+      "source": "jamessuckling|tasteatlas"
+    },
+    {
+      "id": "it-trentino-terr-trentino-marzemino-isera",
+      "nom": "Trentino Marzemino (Isera)",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Marzemino"
+      ],
+      "altitude": "~150-350 m",
+      "sols": "argilo-calcaires et basaltiques d'Isera (Vallagarina)",
+      "caracteristiques_rapides": "Le Marzemino, cépage cher à Mozart (cité dans Don Giovanni) : rouge frais, fruité et parfumé (violette), dont la sous-zone d'Isera est la plus réputée.",
+      "notes_objectives": "Le Trentino Marzemino est le rouge identitaire du sud du Trentino, indissociable d'une célèbre référence culturelle : dans le Don Giovanni de Mozart, le héros réclame « l'eccellente Marzimino » lors de son dernier repas, ce qui a immortalisé ce cépage. La sous-zone la plus réputée est celle d'Isera, sur les collines de la Vallagarina près de Rovereto.\n\nLe Marzemino donne un rouge frais, fruité et parfumé, à la robe rubis, aux arômes caractéristiques de violette, de prune et de fruits rouges, avec une trame souple et une légère amertume noble. C'est un vin de plaisir, généralement bu jeune sur son fruit, plutôt qu'un vin de garde. La zone d'Isera, aux sols basaltiques et argilo-calcaires, en donne l'expression la plus fine et la plus réputée (parfois complétée de la sous-zone dei Ziresi). Le climat plus doux du sud du Trentino, sous l'influence lointaine de Vérone, favorise la maturité de ce cépage. Des producteurs comme la Cantina d'Isera, Letrari, Eugenio Rosi (dans une version nature plus profonde) ou De Tarczal en sont les ambassadeurs. C'est un accord idéal avec les charcuteries, les viandes blanches et la cuisine trentine.\n\nRouge identitaire du sud du Trentino, cher à Mozart, le Marzemino donne un vin frais et parfumé (violette), dont la sous-zone d'Isera est la plus réputée. C'est une spécialité gourmande et culturelle de la Vallagarina.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "isera",
+        "marzemino",
+        "rouge",
+        "mozart",
+        "doc"
+      ],
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-trentino-terr-trentino-vino-santo",
+      "nom": "Trentino Vino Santo",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nosiola"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "morainiques et calcaires de la Valle dei Laghi",
+      "caracteristiques_rapides": "Le grand vin doux du Trentino : Nosiola passerillée jusqu'à Pâques sur claies, balayée par l'Ora del Garda, vin de méditation rare, riche et de très longue garde.",
+      "notes_objectives": "Le Trentino Vino Santo est l'un des plus grands vins doux d'Italie et le trésor de la Valle dei Laghi, cette vallée des lacs qui relie Trente au lac de Garde. À ne pas confondre avec le Vin Santo toscan, il est issu d'un seul cépage, la Nosiola, et d'un processus d'une lenteur extrême, unique en son genre.\n\nLes meilleures grappes de Nosiola sont récoltées et disposées sur des claies (les « arèle ») dans des greniers ventilés, où elles sèchent lentement pendant tout l'hiver — le passerillage le plus long d'Italie, s'étirant souvent jusqu'à la Semaine sainte, d'où le nom de « Vin saint ». Ce séchage prolongé est rendu possible par un allié naturel : l'Ora del Garda, le vent régulier qui remonte du lac et assainit les raisins, empêchant la pourriture. Les baies, réduites à l'état de raisins secs, ne livrent qu'un jus infime, d'une concentration extraordinaire. Après une fermentation très lente et un long élevage en petits fûts (souvent une décennie), on obtient un vin d'or ambré, d'une richesse et d'une complexité rares : arômes de figue, d'abricot confit, de miel, de fruits secs et d'épices, sur une acidité qui préserve l'équilibre et assure une garde quasi illimitée. Rare et précieux, produit en quantités infimes par quelques domaines (Pisoni, Gino Pedrotti, Francesco Poli, Toblino), c'est un vin de méditation d'exception.\n\nGrand vin doux de la Valle dei Laghi, le Trentino Vino Santo est une Nosiola passerillée jusqu'à Pâques grâce à l'Ora del Garda, d'une richesse et d'une garde rares. C'est l'un des plus grands vins doux et confidentiels d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "vino-santo",
+        "doux",
+        "passito",
+        "doc"
+      ],
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-terr-valle-dei-laghi",
+      "nom": "Valle dei Laghi",
+      "type": "zone",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nosiola",
+        "Chardonnay",
+        "Müller-Thurgau"
+      ],
+      "altitude": "~200-600 m",
+      "sols": "morainiques et calcaires glaciaires, chaîne de lacs",
+      "caracteristiques_rapides": "La vallée des lacs entre Trente et le Garde, patrie de la Nosiola : microclimat balayé par l'Ora, blancs frais et Vino Santo, entre Alpes et Méditerranée.",
+      "notes_objectives": "La Valle dei Laghi — la « vallée des lacs » — est un terroir singulier du Trentino, un corridor naturel jalonné d'une chaîne de petits lacs qui relie la vallée de l'Adige, près de Trente, au grand lac de Garde au sud. Cette position en fait un trait d'union entre le monde alpin et le monde méditerranéen.\n\nSa clé climatique est l'Ora del Garda, un vent thermique régulier qui remonte du lac chaque après-midi, tempérant les étés, asséchant l'air et créant des conditions idéales pour la viticulture, notamment pour le séchage des raisins du Vino Santo. Sur des sols morainiques et calcaires hérités des glaciers, la vallée est la patrie de la Nosiola, seul cépage blanc autochtone du Trentino, qu'elle décline en version sèche (fraîche, minérale, parfois en amphore) comme dans le célèbre et rare Vino Santo. On y cultive aussi le Chardonnay, le Müller-Thurgau et quelques rouges. Le paysage, entre falaises, oliviers, lacs et vignes, illustre la douceur particulière de ce microclimat. Des domaines comme Pravis, Gino Pedrotti, Pisoni ou la Cantina Toblino en sont les gardiens. La Valle dei Laghi est un terroir à part, où les Alpes rencontrent la Méditerranée.\n\nVallée des lacs entre Trente et le Garde, patrie de la Nosiola, la Valle dei Laghi doit son microclimat à l'Ora del Garda. Elle donne des blancs frais et le grand Vino Santo, entre monde alpin et méditerranéen.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "ora-del-garda",
+        "blanc",
+        "zone"
+      ],
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-terr-val-di-cembra",
+      "nom": "Val di Cembra",
+      "type": "zone",
+      "region": "Trentino",
+      "sous_region": "Val di Cembra",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "altitude": "~400-900 m",
+      "sols": "terrasses de porphyre volcanique (porfido)",
+      "caracteristiques_rapides": "La vallée la plus haute et la plus escarpée : viticulture héroïque en terrasses de porphyre, Müller-Thurgau d'altitude et base des grands Trentodoc de montagne.",
+      "notes_objectives": "La Val di Cembra est la vallée la plus haute, la plus escarpée et la plus spectaculaire du Trentino, un terroir de viticulture héroïque. Creusée par le torrent Avisio au nord-est de Trente, elle est célèbre pour ses impressionnantes terrasses de pierre sèche accrochées à flanc de montagne, un paysage façonné par des générations de vignerons.\n\nSa singularité géologique est le porphyre (porfido), roche volcanique rougeâtre qui domine la vallée et donne aux vins une minéralité particulière ; la Val di Cembra en est d'ailleurs l'un des grands bassins d'extraction. Les vignes s'étagent jusqu'à 700-900 mètres, parmi les plus hautes d'Italie, dans un climat alpin froid aux fortes amplitudes thermiques. Ces conditions extrêmes préservent une acidité vive et une grande finesse aromatique, idéales pour deux usages : le Müller-Thurgau, cépage blanc aromatique qui trouve ici l'une de ses meilleures expressions d'altitude, tendue et parfumée, et les raisins de base des grands Trentodoc, dont la fraîcheur provient souvent de ces hauteurs. On y cultive aussi le Pinot Nero, le Chardonnay et la Schiava. Des domaines comme Villa Corniole, Zanotelli ou Pojer e Sandri (à Faedo, sur le versant opposé) illustrent ce terroir de montagne. La viticulture y est difficile, entièrement manuelle, mais le résultat est d'une pureté remarquable.\n\nVallée la plus haute et escarpée du Trentino, la Val di Cembra est un terroir héroïque de terrasses de porphyre. Elle donne un Müller-Thurgau d'altitude de référence et la base fraîche des grands Trentodoc de montagne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "val-di-cembra",
+        "muller-thurgau",
+        "porphyre",
+        "altitude",
+        "trentodoc",
+        "zone"
+      ],
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-terr-vallagarina",
+      "nom": "Vallagarina",
+      "type": "zone",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Marzemino",
+        "Cabernet",
+        "Merlot",
+        "Chardonnay"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "alluviaux, argilo-calcaires et basaltiques de la basse Adige",
+      "caracteristiques_rapides": "La vallée du sud du Trentino, autour de Rovereto : fief du Marzemino et des grands assemblages bordelais (San Leonardo), climat plus doux vers Vérone.",
+      "notes_objectives": "La Vallagarina est la grande vallée du sud du Trentino, traversée par l'Adige autour de la ville de Rovereto, à la frontière de la Vénétie. Plus large, plus basse et plus chaude que le reste de la région, sous l'influence lointaine du climat véronais, elle offre des conditions propices à une viticulture diversifiée.\n\nC'est le fief du Marzemino, le cépage identitaire du sud du Trentino cher à Mozart, dont la sous-zone d'Isera donne l'expression la plus réputée : un rouge frais, fruité et parfumé. Mais la Vallagarina est aussi la terre des grands assemblages bordelais, avec au premier rang la légendaire Tenuta San Leonardo, dont le vin éponyme (Cabernet, Merlot, Carmenère) est l'un des plus beaux rouges d'Italie du Nord, ainsi que Vallarom à Avio. Sur des sols alluviaux, argilo-calcaires et basaltiques, on cultive également le Chardonnay (base de Trentodoc, comme chez Letrari et Balter à Rovereto) et divers cépages. Cette diversité — cépage autochtone identitaire, assemblages bordelais raffinés et bulles de montagne — fait la richesse de la Vallagarina, à la charnière du Trentino et de la Vénétie.\n\nGrande vallée du sud du Trentino autour de Rovereto, la Vallagarina est le fief du Marzemino (Isera) et des grands assemblages bordelais (San Leonardo). Plus douce, elle conjugue cépage identitaire, rouges raffinés et Trentodoc.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "rovereto",
+        "marzemino",
+        "bordeaux",
+        "zone"
+      ],
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-trentino-terr-trentino-nosiola",
+      "nom": "Trentino Nosiola",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nosiola"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "morainiques et calcaires de la Valle dei Laghi",
+      "caracteristiques_rapides": "Le seul cépage blanc autochtone du Trentino en sec : Nosiola vive et minérale, aux notes de fruits secs et de pomme, souvent en amphore, spécialité de la Valle dei Laghi.",
+      "notes_objectives": "La Nosiola est le seul cépage blanc autochtone du Trentino, une variété ancienne et rare qui trouve son fief dans la Valle dei Laghi. Son nom viendrait de la noisette (« nosèla »), en référence à ses arômes ou à la couleur dorée que prennent ses baies à maturité.\n\nEn version sèche, la Nosiola donne un blanc léger, frais et délicat, à l'acidité vive, aux arômes discrets de fruits secs, de pomme verte, de fleurs blanches et d'herbes, avec une belle minéralité et une légère amertume noble en finale. Longtemps considérée comme un vin modeste, elle gagne en profondeur chez les meilleurs vignerons, notamment lorsqu'elle est vinifiée en amphore ou avec macération (Foradori, Gino Pedrotti, Pravis), qui en révèlent la texture et le potentiel. Mais la Nosiola est surtout célèbre pour être le cépage unique du Trentino Vino Santo, ce grand vin doux de passerillage. Sur les sols morainiques et calcaires de la Valle dei Laghi, sous l'influence de l'Ora del Garda, elle exprime un terroir singulier. C'est un accord idéal avec les poissons de lac, les fromages frais et la cuisine légère.\n\nSeul cépage blanc autochtone du Trentino, la Nosiola donne un blanc frais et minéral, souvent en amphore, et sert de base au grand Vino Santo. C'est une spécialité identitaire de la Valle dei Laghi.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "blanc",
+        "autochtone",
+        "doc"
+      ],
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-terr-trentino-muller-thurgau",
+      "nom": "Trentino Müller-Thurgau",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Val di Cembra",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Müller-Thurgau"
+      ],
+      "altitude": "~400-900 m",
+      "sols": "porphyre d'altitude (Val di Cembra) et coteaux frais",
+      "caracteristiques_rapides": "Le blanc aromatique d'altitude par excellence : Müller-Thurgau tendu, floral et muscaté, brillant sur les hauteurs de la Val di Cembra et de Faedo.",
+      "notes_objectives": "Le Trentino Müller-Thurgau est l'expression d'altitude par excellence de ce cépage blanc aromatique en Italie, et l'une des grandes réussites des vins de montagne trentins. Croisement créé en Suisse à la fin du XIXe siècle, le Müller-Thurgau a trouvé dans les hauteurs fraîches du Trentino un terroir d'élection qui en révèle le meilleur.\n\nC'est en altitude — notamment sur les terrasses de porphyre de la Val di Cembra et sur les coteaux de Faedo, jusqu'à 700-900 mètres — que le cépage donne ses vins les plus fins. Le climat froid et les fortes amplitudes thermiques préservent une acidité vive et exaltent l'aromatique du cépage : un blanc tendu et parfumé, aux arômes de fleurs, de muscade, de sauge, de pomme verte et d'agrumes, avec une belle minéralité issue du porphyre. Loin des Müller-Thurgau plats et neutres produits ailleurs en plaine, ceux du Trentino ont une vraie personnalité et une fraîcheur alpine. Le domaine Pojer e Sandri en a été le pionnier et la référence, aux côtés de producteurs de la Val di Cembra (Zanotelli, Villa Corniole) et de coopératives. C'est un accord idéal, servi frais, avec les poissons, les asperges, les fromages de montagne et la cuisine légère.\n\nBlanc aromatique d'altitude par excellence, le Trentino Müller-Thurgau donne des vins tendus, floraux et muscatés, brillants sur le porphyre de la Val di Cembra et à Faedo. C'est l'une des grandes réussites des blancs de montagne trentins.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "val-di-cembra",
+        "muller-thurgau",
+        "blanc",
+        "altitude",
+        "aromatique",
+        "doc"
+      ],
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-terr-trentino-sorni",
+      "nom": "Trentino Sorni",
+      "type": "sottozona",
+      "region": "Trentino",
+      "sous_region": "Val d'Adige",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Teroldego",
+        "Lagrein",
+        "Schiava",
+        "Nosiola"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "coteaux argilo-calcaires et porphyriques de Sorni (Lavis)",
+      "caracteristiques_rapides": "Sous-zone historique autour de Sorni (Lavis) : rouges d'assemblage (Teroldego, Lagrein, Schiava) et blancs (Nosiola), petit cru traditionnel du Val d'Adige.",
+      "notes_objectives": "Le Trentino Sorni est une petite sous-zone historique du Val d'Adige, autour du hameau de Sorni sur la commune de Lavis, au nord de Trente. C'est l'un des rares crus traditionnels nommés du Trentino, reconnu pour la qualité particulière de ses coteaux. Sur des sols argilo-calcaires et porphyriques bien exposés, la sous-zone produit un Sorni Rosso, assemblage à base de Teroldego complété de Lagrein et de Schiava, rouge de belle facture, souple et fruité, ainsi qu'un Sorni Bianco à base de Nosiola et de cépages blancs. Longtemps réputée, cette petite appellation illustre la tradition des crus nommés du Val d'Adige. Le style, fidèle au terroir, met en valeur les cépages autochtones dans des vins de caractère. Trentino Sorni est un petit cru confidentiel, à découvrir pour ses assemblages traditionnels, témoins d'un savoir-faire local ancien.\n\nPetite sous-zone historique de Lavis, Trentino Sorni donne des rouges d'assemblage (Teroldego, Lagrein, Schiava) et des blancs de Nosiola. C'est un cru traditionnel confidentiel du Val d'Adige.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "sorni",
+        "lavis",
+        "teroldego",
+        "sottozona"
+      ],
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-terr-casteller",
+      "nom": "Casteller",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Val d'Adige",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schiava",
+        "Merlot",
+        "Lagrein"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "coteaux morainiques autour de Trente",
+      "caracteristiques_rapides": "DOC de rouge léger autour de Trente : Schiava, Merlot et Lagrein en vin frais et gouleyant, souvent servi jeune, spécialité conviviale du quotidien trentin.",
+      "notes_objectives": "Le Casteller est une DOC de rouge léger produite sur les coteaux morainiques autour de Trente, dans le Val d'Adige. C'est le vin de tous les jours par excellence du Trentino, un rouge convivial destiné à une consommation courante. Élaboré à partir de Schiava (le cépage à rouge léger local, aussi appelé Vernatsch dans le Tyrol), souvent complété de Merlot et de Lagrein, le Casteller donne un vin rubis clair, frais, fruité et peu tannique, souvent servi jeune et parfois légèrement rafraîchi. Facile à boire et gouleyant, il accompagne la cuisine quotidienne trentine — charcuteries, plats simples, polenta. Longtemps le vin de comptoir de la région, le Casteller illustre la tradition des rouges légers alpins, à l'image de ceux du Tyrol voisin. Le style, gourmand et sans prétention, en fait un vin de plaisir immédiat. C'est une spécialité conviviale du quotidien, à découvrir pour son fruité et sa fraîcheur.\n\nDOC de rouge léger autour de Trente, le Casteller est le vin convivial du quotidien trentin : Schiava, Merlot et Lagrein en vin frais, fruité et gouleyant, à boire jeune. C'est la tradition des rouges légers alpins.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "trento",
+        "casteller",
+        "schiava",
+        "rouge-leger",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-trentino-terr-alto-garda-trentino",
+      "nom": "Alto Garda Trentino",
+      "type": "zone",
+      "region": "Trentino",
+      "sous_region": "Alto Garda",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Rebo",
+        "Casetta"
+      ],
+      "altitude": "~65-500 m",
+      "sols": "morainiques et calcaires au bord du lac de Garde",
+      "caracteristiques_rapides": "L'extrémité nord du lac de Garde : climat quasi méditerranéen adouci par le lac, blancs frais, Trentodoc et cépages rares (Rebo, Casetta), entre montagne et oliviers.",
+      "notes_objectives": "L'Alto Garda Trentino est l'extrémité septentrionale du lac de Garde, un terroir singulier où le plus grand lac d'Italie pénètre au cœur des montagnes, autour de Riva del Garda et d'Arco. Cette rencontre de l'eau et des Alpes crée un microclimat exceptionnel, quasi méditerranéen malgré la latitude.\n\nL'immense masse d'eau du lac agit comme un régulateur thermique, adoucissant les hivers et tempérant les étés, tandis que les vents réguliers (l'Ora et le Pelér) ventilent le vignoble. Il en résulte un climat doux où prospèrent l'olivier, le citronnier et la vigne, dans un décor spectaculaire entre falaises et lac. Sur des sols morainiques et calcaires, on y cultive des blancs frais (Chardonnay), la base de Trentodoc et des cépages rares ou locaux comme le Rebo (croisement Merlot-Teroldego créé localement) et le Casetta. Des domaines comme Madonna delle Vittorie (famille Marzadro) illustrent ce terroir. L'Alto Garda est aussi réputé pour son huile d'olive extra-vierge, l'une des plus septentrionales du monde. C'est un terroir de contraste, où la montagne rencontre la douceur lacustre.\n\nExtrémité nord du lac de Garde, l'Alto Garda Trentino jouit d'un microclimat quasi méditerranéen adouci par le lac. Il donne des blancs frais, du Trentodoc et des cépages rares (Rebo, Casetta), entre montagne et oliviers.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "alto-garda",
+        "riva-del-garda",
+        "lac",
+        "blanc",
+        "zone"
+      ],
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-terr-trentino",
+      "nom": "Trentino",
+      "type": "appellation (DOC)",
+      "region": "Trentino",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Grigio",
+        "Marzemino",
+        "Teroldego",
+        "Müller-Thurgau"
+      ],
+      "altitude": "~100-900 m",
+      "sols": "sols variés, de la plaine à la haute montagne",
+      "caracteristiques_rapides": "L'appellation-cadre régionale : couvre de nombreux cépages et sous-zones (Marzemino, Nosiola, Vino Santo, Müller-Thurgau…), du vin de tous les jours aux crus.",
+      "notes_objectives": "L'appellation Trentino (DOC) est le cadre régional qui structure une grande partie de la production de la province de Trente. Vaste et polyvalente, elle couvre une multitude de cépages et de types de vins, du fond de vallée aux coteaux de montagne. Elle se décline en de nombreuses versions variétales et sous-zones : Trentino Marzemino, Nosiola, Müller-Thurgau, Chardonnay, Pinot Grigio, Pinot Nero, Lagrein, Moscato, ainsi que le prestigieux Vino Santo, sans oublier les sous-zones nommées comme Sorni ou Isera. Sur des sols et à des altitudes très variés, elle embrasse ainsi toute la diversité viticole du Trentino, du vin de tous les jours aux crus les plus fins. Le style dépend entièrement du cépage et du producteur, mais l'ensemble reflète l'identité alpine de la région : fraîcheur, finesse aromatique et minéralité. C'est le cadre souple qui rassemble la mosaïque des vins tranquilles trentins, complément des appellations spécifiques (Teroldego Rotaliano, Trento).\n\nAppellation-cadre régionale, le Trentino DOC couvre de nombreux cépages et sous-zones (Marzemino, Nosiola, Vino Santo, Müller-Thurgau…). C'est la bannière souple qui rassemble la diversité des vins tranquilles de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "doc",
+        "regionale",
+        "multi-cepages"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-trentino-terr-vigneti-delle-dolomiti",
+      "nom": "Vigneti delle Dolomiti",
+      "type": "appellation (IGT)",
+      "region": "Trentino",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Teroldego",
+        "Manzoni Bianco",
+        "Pinot Grigio"
+      ],
+      "altitude": "~100-900 m",
+      "sols": "sols variés des vallées alpines dolomitiques",
+      "caracteristiques_rapides": "La grande IGT alpine (partagée avec l'Alto Adige et Belluno) : cadre souple pour les cuvées d'auteur hors DOC, dont beaucoup de grands vins (Foradori Granato).",
+      "notes_objectives": "L'IGT Vigneti delle Dolomiti (Weinberg Dolomiten en allemand) est la grande indication géographique alpine du nord-est de l'Italie, partagée entre le Trentino, l'Alto Adige et la province vénète de Belluno. Elle offre un cadre souple, au pied du massif des Dolomites classé à l'UNESCO. Sa liberté — cépages et assemblages non contraints par les cahiers des charges plus stricts des DOC — en fait un espace de créativité précieux. C'est notamment sous cette IGT que sont commercialisés certains des plus grands vins de la région, à commencer par le Granato d'Elisabetta Foradori, ainsi que de nombreuses cuvées d'auteur, biodynamiques ou expérimentales. Sur les sols variés des vallées alpines, elle couvre tous les cépages, autochtones comme internationaux, en rouge, blanc et parfois effervescent. Souple et transversale, l'IGT Vigneti delle Dolomiti est le cadre idéal des vignerons qui veulent s'affranchir des règles, tout en revendiquant leur ancrage dans le paysage grandiose des Dolomites.\n\nGrande IGT alpine partagée avec l'Alto Adige et Belluno, Vigneti delle Dolomiti offre un cadre souple pour les cuvées d'auteur hors DOC, dont de grands vins (Foradori Granato). C'est l'espace de créativité des vignerons dolomitiques.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "trentino",
+        "dolomiti",
+        "igt",
+        "souple",
+        "auteur"
+      ],
+      "source": "jamessuckling|tasteatlas"
+    }
+  ]
+}

@@ -1,0 +1,1148 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "jura_savoie",
+  "region_label": "Jura / Savoie",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_jura_savoie_vPat.xlsx",
+  "built_at": "2026-05-15T08:39:06+00:00",
+  "count": 46,
+  "items": [
+    {
+      "id": "jus-arbois",
+      "nom": "Arbois",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin",
+        "Chardonnay",
+        "Trousseau",
+        "Poulsard",
+        "Pinot Noir"
+      ],
+      "altitude": "250-400 m",
+      "sols": "Marnes irisées du Trias, marnes bleues, calcaires bajociens",
+      "caracteristiques_rapides": "Plus grande AOC du Jura, ~830 ha. Tous les styles : ouillé, oxydatif, vin jaune, vin de paille, mousseux. Cœur historique des vins natures français.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Grande variété",
+      "tags": [
+        "aoc",
+        "tous-cepages",
+        "nature",
+        "vin-jaune"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-arbois-pupillin",
+      "nom": "Arbois-Pupillin",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Ploussard",
+        "Savagnin",
+        "Chardonnay",
+        "Trousseau"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Marnes bleues du Lias, marnes irisées",
+      "caracteristiques_rapides": "Enclave dénominée d'Arbois (~80 ha). Berceau historique du ploussard de Pupillin et de la viticulture nature (Overnoy).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": "Le cœur du jura",
+      "tags": [
+        "aoc",
+        "enclave",
+        "ploussard",
+        "nature",
+        "pupillin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-cotes-du-jura",
+      "nom": "Côtes du Jura",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "Poulsard",
+        "Trousseau",
+        "Pinot Noir"
+      ],
+      "altitude": "230-450 m",
+      "sols": "Marnes du Lias et du Trias, calcaires",
+      "caracteristiques_rapides": "AOC régionale ~600 ha, du nord (Salins) au sud (Sud-Revermont, Rotalier). Le Sud-Revermont (Ganevat, Labet, Buronfosse) en a fait un terroir de pointe pour le chardonnay.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "sud-revermont",
+        "chardonnay"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-letoile",
+      "nom": "L'Étoile",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "Poulsard"
+      ],
+      "altitude": "250-330 m",
+      "sols": "Marnes du Lias étoilées de fossiles d'oursins (pentacrines)",
+      "caracteristiques_rapides": "AOC ~67 ha exclusivement blancs, vin jaune et vin de paille. Doit son nom aux fossiles étoilés. Style minéral et iodé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Uniquement vins oxidatifs",
+      "tags": [
+        "aoc",
+        "blanc-uniquement",
+        "vin-jaune",
+        "fossiles"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-chateau-chalon",
+      "nom": "Château-Chalon",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin"
+      ],
+      "altitude": "300-360 m",
+      "sols": "Marnes bleues du Lias",
+      "caracteristiques_rapides": "AOC monovariétale (savagnin) ~50 ha consacrée exclusivement au Vin Jaune. Le sommet absolu du genre. Élevage 6 ans 3 mois sous voile.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "iconique",
+        "vin-jaune",
+        "monovariétale",
+        "savagnin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-cremant-jura",
+      "nom": "Crémant du Jura",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Trousseau",
+        "Poulsard",
+        "Savagnin"
+      ],
+      "altitude": "230-400 m",
+      "sols": "Variés (l'aire couvre les 4 AOC du Jura)",
+      "caracteristiques_rapides": "AOC effervescent méthode traditionnelle. Volume important, qualité hétérogène mais quelques cuvées de référence (Tissot, Stéphane Tissot, Rolet, Clavelin).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": "Quelques grandes cuvées",
+      "tags": [
+        "aoc",
+        "effervescent",
+        "methode-traditionnelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-macvin-jura",
+      "nom": "Macvin du Jura",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "Poulsard",
+        "Trousseau",
+        "Pinot Noir"
+      ],
+      "altitude": "230-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC mistelle (jus de raisin frais + marc du Jura). Apéritif sucré ~17 % alcool. Style assez confidentiel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "mistelle",
+        "aperitif"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-vin-jaune-jura",
+      "nom": "Vin Jaune (style jurassien)",
+      "type": "style_transversal",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin"
+      ],
+      "altitude": "230-400 m",
+      "sols": "Marnes bleues / marnes irisées",
+      "caracteristiques_rapides": "Style transversal aux 4 AOC blanches du Jura (Arbois, Côtes du Jura, L'Étoile, Château-Chalon). Élevage minimum 6 ans 3 mois sous voile de levures, sans ouillage. Clavelin de 62 cl. Notes de noix, curry, fruits secs.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vin-jaune",
+        "sous-voile",
+        "savagnin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-vin-paille-jura",
+      "nom": "Vin de Paille (style jurassien)",
+      "type": "style_transversal",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "Poulsard"
+      ],
+      "altitude": "230-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "Style transversal Arbois / Côtes du Jura / L'Étoile. Raisins passerillés sur paille ou claies pendant 6 semaines minimum. Vin liquoreux ~14,5 % alc., 70 g/L sucre min. Bouteilles de 37,5 cl.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "liquoreux",
+        "passerillage"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-en-curon",
+      "nom": "En Curon",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin"
+      ],
+      "altitude": "320 m",
+      "sols": "Marnes grises du Lias",
+      "caracteristiques_rapides": "Lieu-dit emblématique de Pupillin (Arbois-Pupillin). Cuvée signature de Stéphane Tissot, Chardonnay très tendu et minéral, garde longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "pupillin",
+        "tissot",
+        "chardonnay"
+      ],
+      "source": "tissot|lpv"
+    },
+    {
+      "id": "jus-les-tourillons",
+      "nom": "Les Tourillons",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin",
+        "Chardonnay"
+      ],
+      "altitude": "330 m",
+      "sols": "Marnes bleues du Lias",
+      "caracteristiques_rapides": "Lieu-dit de Pupillin sur marnes bleues. Vinifié notamment par Tissot et Bornard. Savagnin floral, structure tendue.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "pupillin",
+        "marnes-bleues",
+        "savagnin"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-en-spois",
+      "nom": "En Spois",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Trousseau",
+        "Ploussard"
+      ],
+      "altitude": "320 m",
+      "sols": "Marnes irisées du Trias",
+      "caracteristiques_rapides": "Lieu-dit d'Arbois (Saint-Lothain) connu pour son trousseau. Plusieurs vignerons en bouteille.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "arbois",
+        "trousseau"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-les-bessettes",
+      "nom": "Les Bessettes",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Trousseau"
+      ],
+      "altitude": "300 m",
+      "sols": "Marnes du Trias",
+      "caracteristiques_rapides": "Lieu-dit signature du Domaine des Cavarodes (Étienne Thiébaud). Trousseau précis, allocation très serrée.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "cavarodes",
+        "trousseau"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-en-beaumont",
+      "nom": "En Beaumont",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin"
+      ],
+      "altitude": "320 m",
+      "sols": "Marnes bleues du Lias",
+      "caracteristiques_rapides": "Lieu-dit de Château-Chalon. Vin Jaune profond et structuré, vinifié notamment par Berthet-Bondet et Macle.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "chateau-chalon",
+        "vin-jaune"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-vires-guisses",
+      "nom": "Vires Guisses",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin"
+      ],
+      "altitude": "300 m",
+      "sols": "Marnes bleues",
+      "caracteristiques_rapides": "Lieu-dit de Château-Chalon, vinifié historiquement par le Domaine Macle. Vin Jaune dense.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "chateau-chalon",
+        "macle"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-les-grands-teppes",
+      "nom": "Les Grands Teppes",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin"
+      ],
+      "altitude": "300 m",
+      "sols": "Calcaires marno-calcaires du Sud-Revermont",
+      "caracteristiques_rapides": "Lieu-dit de Rotalier vinifié par Ganevat (Vieilles Vignes). Chardonnay très tendu, garde longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "sud-revermont",
+        "ganevat",
+        "chardonnay"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-en-paradis",
+      "nom": "En Paradis",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin",
+        "Chardonnay"
+      ],
+      "altitude": "300 m",
+      "sols": "Marnes",
+      "caracteristiques_rapides": "Lieu-dit de Saint-Lothain (Côtes du Jura). Vinifié par plusieurs vignerons pour des cuvées de garde.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "cotes-du-jura"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-la-mailloche",
+      "nom": "La Mailloche",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "330 m",
+      "sols": "Marnes calcaires du Lias",
+      "caracteristiques_rapides": "Lieu-dit d'Arbois (Montigny-lès-Arsures). Cuvée signature de Stéphane Tissot, chardonnay ouillé tendu.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "arbois",
+        "tissot",
+        "chardonnay"
+      ],
+      "source": "tissot|lpv"
+    },
+    {
+      "id": "jus-en-chantemerle",
+      "nom": "En Chantemerle",
+      "type": "lieu_dit",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin"
+      ],
+      "altitude": "330 m",
+      "sols": "Marnes du Lias",
+      "caracteristiques_rapides": "Lieu-dit de Pupillin. Cuvée importante chez Stéphane Tissot.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "pupillin",
+        "tissot"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "jus-vin-de-savoie",
+      "nom": "Vin de Savoie",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère",
+        "Altesse",
+        "Mondeuse",
+        "Roussanne",
+        "Chasselas",
+        "Persan",
+        "Gamay",
+        "Pinot Noir"
+      ],
+      "altitude": "250-500 m",
+      "sols": "Éboulis calcaires, moraines glaciaires, marnes",
+      "caracteristiques_rapides": "AOC régionale ~1900 ha. 16 « crus » dénommés autorisés sur étiquette. Cépages multiples, vignoble morcelé entre Combe de Savoie, Chambéry, Aix, Léman, Tarentaise.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "crus-multiples"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-roussette-de-savoie",
+      "nom": "Roussette de Savoie",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "250-450 m",
+      "sols": "Calcaires, moraines glaciaires",
+      "caracteristiques_rapides": "AOC monovariétale altesse (~210 ha). 4 crus dénommés (Frangy, Marestel, Monthoux, Monterminod). Vins de garde sur les meilleurs terroirs.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "monovariétale",
+        "altesse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-seyssel",
+      "nom": "Seyssel",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse",
+        "Molette"
+      ],
+      "altitude": "250-350 m",
+      "sols": "Calcaires, moraines",
+      "caracteristiques_rapides": "AOC ~80 ha sur les rives du Rhône (Ain et Haute-Savoie). Versions tranquille (altesse) et méthode traditionnelle (altesse + molette).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "effervescent",
+        "altesse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-crepy",
+      "nom": "Crépy",
+      "type": "appellation_village",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Chasselas"
+      ],
+      "altitude": "400-500 m",
+      "sols": "Moraines glaciaires",
+      "caracteristiques_rapides": "AOC chasselas (~80 ha) sur le bord du Léman. Vin blanc léger et perlant, très local.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "chasselas",
+        "leman"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-chignin",
+      "nom": "Chignin",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Éboulis calcaires du Mont Granier",
+      "caracteristiques_rapides": "Cru de Vin de Savoie, jacquère sur les pentes du Granier. Vins blancs vifs et minéraux. Famille Quenard omniprésente.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "jacquere",
+        "granier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-chignin-bergeron",
+      "nom": "Chignin-Bergeron",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Roussanne"
+      ],
+      "altitude": "300-500 m",
+      "sols": "Éboulis calcaires du Granier, schistes",
+      "caracteristiques_rapides": "Cru de Vin de Savoie, roussanne (= bergeron localement) sur les coteaux escarpés. Le sommet qualitatif des blancs savoyards : gras, minéral, garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "iconique",
+        "roussanne",
+        "granier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-apremont",
+      "nom": "Apremont",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Éboulis calcaires (effondrement du Granier 1248)",
+      "caracteristiques_rapides": "Cru de Vin de Savoie le plus vaste (~390 ha). Jacquère vive et perlante, parfois plus profonde sur les meilleurs vignerons (Giachino).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "jacquere",
+        "granier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-abymes",
+      "nom": "Abymes",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Éboulis calcaires (effondrement du Granier)",
+      "caracteristiques_rapides": "Cru de Vin de Savoie voisin d'Apremont (~330 ha). Jacquère légère et perlante.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "jacquere",
+        "granier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-arbin",
+      "nom": "Arbin",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Mondeuse"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Éboulis et calcaires",
+      "caracteristiques_rapides": "Cru de Vin de Savoie consacré à la mondeuse. ~100 ha. Le sommet de la mondeuse (Magnin, Trosset, Curtet, Berlioz).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "iconique",
+        "mondeuse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-cruet",
+      "nom": "Cruet",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère",
+        "Altesse"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Éboulis calcaires",
+      "caracteristiques_rapides": "Cru de Vin de Savoie, jacquère et altesse en blanc, mondeuse en rouge. ~250 ha.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "jacquere",
+        "altesse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-jongieux",
+      "nom": "Jongieux",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Jacquère",
+        "Altesse",
+        "Mondeuse"
+      ],
+      "altitude": "270-450 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "Cru de Vin de Savoie sur les pentes du Mont du Chat (rive ouest du lac du Bourget). ~200 ha. Domaines Dupasquier, Jacquin, Carrel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "mont-du-chat",
+        "jacquere",
+        "mondeuse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-marignan",
+      "nom": "Marignan",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Chasselas"
+      ],
+      "altitude": "400-500 m",
+      "sols": "Moraines glaciaires",
+      "caracteristiques_rapides": "Cru de Vin de Savoie sur le Léman, chasselas. ~16 ha confidentiels.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "chasselas",
+        "leman",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-marin",
+      "nom": "Marin",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Chasselas"
+      ],
+      "altitude": "400-500 m",
+      "sols": "Moraines glaciaires",
+      "caracteristiques_rapides": "Cru de Vin de Savoie sur le Léman, chasselas. ~20 ha.",
+      "niveau_reference": 2,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "chasselas",
+        "leman",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-ripaille",
+      "nom": "Ripaille",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Chasselas"
+      ],
+      "altitude": "400-450 m",
+      "sols": "Moraines glaciaires",
+      "caracteristiques_rapides": "Cru de Vin de Savoie sur le Léman (Thonon), chasselas. ~20 ha autour du Château de Ripaille.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "chasselas",
+        "leman",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-ayze",
+      "nom": "Ayze",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gringet"
+      ],
+      "altitude": "450-550 m",
+      "sols": "Calcaires, moraines",
+      "caracteristiques_rapides": "Cru de Vin de Savoie au pied du Mont-Blanc. ~22 ha de gringet (cépage local). Effervescent et tranquille. Belluard est la référence.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "iconique",
+        "gringet",
+        "mont-blanc"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-chautagne",
+      "nom": "Chautagne",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Mondeuse",
+        "Jacquère"
+      ],
+      "altitude": "250-350 m",
+      "sols": "Moraines, alluvions",
+      "caracteristiques_rapides": "Cru de Vin de Savoie au nord du lac du Bourget. Plus orienté rouges (gamay, mondeuse). Maillet est la pointe qualitative.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "gamay",
+        "mondeuse",
+        "chautagne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-frangy",
+      "nom": "Frangy",
+      "type": "cru_roussette",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Calcaires marneux, moraines",
+      "caracteristiques_rapides": "Cru de Roussette de Savoie (~12 ha). Altesse pure, vins de garde minéraux. Domaine Saint-Germain.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cru-roussette",
+        "altesse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-marestel",
+      "nom": "Marestel",
+      "type": "cru_roussette",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Calcaires escarpés",
+      "caracteristiques_rapides": "Cru de Roussette de Savoie sur Jongieux (~20 ha). Le sommet de l'altesse en Savoie, longévité hors-norme. Dupasquier, Jacquin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "cru-roussette",
+        "iconique",
+        "altesse",
+        "jongieux"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-monthoux",
+      "nom": "Monthoux",
+      "type": "cru_roussette",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Calcaires",
+      "caracteristiques_rapides": "Cru de Roussette de Savoie (~3 ha) sur Jongieux. Altesse confidentielle.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru-roussette",
+        "altesse",
+        "jongieux",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-monterminod",
+      "nom": "Monterminod",
+      "type": "cru_roussette",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "400-450 m",
+      "sols": "Calcaires",
+      "caracteristiques_rapides": "Cru de Roussette de Savoie (~5 ha) près de Chambéry. Altesse minérale et tendue.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru-roussette",
+        "altesse",
+        "chambery"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-allobroges",
+      "nom": "Vin des Allobroges (IGP) — Cevins / Tarentaise",
+      "type": "igp",
+      "region": "Jura-Savoie",
+      "sous_region": "Savoie",
+      "pays": "France",
+      "cepages_rois": [
+        "Persan",
+        "Mondeuse",
+        "Jacquère",
+        "Altesse"
+      ],
+      "altitude": "400-900 m",
+      "sols": "Schistes, ardoises",
+      "caracteristiques_rapides": "IGP qui couvre notamment les vignes de très haute altitude de la Tarentaise (Cevins, Saint-Pierre-d'Albigny). Domaine des Ardoisières. Cépage local persan en pointe.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "haute-altitude",
+        "persan",
+        "ardoisieres"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-bugey",
+      "nom": "Bugey",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Bugey",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Gamay",
+        "Mondeuse",
+        "Altesse",
+        "Jacquère"
+      ],
+      "altitude": "250-450 m",
+      "sols": "Calcaires jurassiques, marnes",
+      "caracteristiques_rapides": "AOC régionale (~500 ha) entre Savoie et Beaujolais. 3 crus (Cerdon, Manicle, Montagnieu). Cépages mixtes.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "cepages-mixtes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-cerdon",
+      "nom": "Bugey-Cerdon",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Bugey",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Poulsard"
+      ],
+      "altitude": "300-500 m",
+      "sols": "Marnes et calcaires",
+      "caracteristiques_rapides": "Cru AOC ~140 ha. Rosé pétillant méthode ancestrale (50-65 g/L sucre). Renardat-Fâche est la référence.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "methode-ancestrale",
+        "rose-petillant"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-manicle",
+      "nom": "Bugey - Manicle",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Bugey",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Calcaires",
+      "caracteristiques_rapides": "Cru AOC très petit (~9 ha) à Vongnes. Chardonnay et pinot noir, style proche du sud Bourgogne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "chardonnay",
+        "pinot-noir",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-montagnieu",
+      "nom": "Bugey - Montagnieu",
+      "type": "cru",
+      "region": "Jura-Savoie",
+      "sous_region": "Bugey",
+      "pays": "France",
+      "cepages_rois": [
+        "Mondeuse",
+        "Altesse",
+        "Chardonnay"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Calcaires escarpés",
+      "caracteristiques_rapides": "Cru AOC ~50 ha. Méthode traditionnelle effervescente (mondeuse, chardonnay) et tranquilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cru",
+        "effervescent",
+        "mondeuse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-roussette-bugey",
+      "nom": "Roussette du Bugey",
+      "type": "appellation_regionale",
+      "region": "Jura-Savoie",
+      "sous_region": "Bugey",
+      "pays": "France",
+      "cepages_rois": [
+        "Altesse"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "AOC monovariétale altesse (~50 ha). Crus dénommés Anglefort, Arbignieu, Lagnieu, Montagnieu, Virieu-le-Grand.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "monovariétale",
+        "altesse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "jus-aigle-deux-tetes",
+      "nom": "L'Aigle à Deux Têtes",
+      "type": "producteur",
+      "region": "Jura-Savoie",
+      "sous_region": "Jura",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "Poulsard",
+        "Trousseau"
+      ],
+      "altitude": null,
+      "sols": null,
+      "caracteristiques_rapides": "Producteur du Jura en vins nature, production confidentielle. Travail sur les cépages traditionnels jurassiens (chardonnay, savagnin, poulsard, trousseau). Détails précis (vigneron, commune, parcelles, cuvées) à confirmer.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": "La qualité monte d'année en année, sur toute les cuvées",
+      "tags": [
+        "producteur",
+        "jura",
+        "nature",
+        "confidentiel"
+      ],
+      "source": "lpv"
+    }
+  ]
+}

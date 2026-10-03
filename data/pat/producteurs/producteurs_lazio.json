@@ -1,0 +1,1479 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "lazio",
+  "region_label": "Lazio (Italie)",
+  "source_file": "producteurs_lazio.json",
+  "built_at": "2026-07-11",
+  "count": 33,
+  "items": [
+    {
+      "id": "it-lazio-prod-damiano-ciolli",
+      "nom": "Damiano Ciolli",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "commune": "Olevano Romano",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese di Olevano Romano DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Olevano Romano, dans les collines à l'est de Rome, Damiano Ciolli est le domaine de référence du Cesanese et l'artisan de la reconnaissance de ce cépage autochtone. Sur les terres familiales, il a fait, en une génération, d'un simple domaine vendant son raisin l'un des noms les plus admirés du vin du Latium.\n\nSur une dizaine d'hectares de vignes cultivées en agriculture biologique, sur les sols volcaniques d'Olevano, Damiano Ciolli (avec sa compagne l'œnologue Letizia Rocchi) vinifie le Cesanese di Affile, le plus noble des sous-cépages du Cesanese, avec levures indigènes et un profond respect du terroir. Il en tire deux cuvées devenues des références : le Silene, un Cesanese fruité, frais et immédiat, et le Cirsium, issu de vieilles vignes, plus complexe, structuré et de garde, capable de vieillir dix ans et plus. Sa philosophie tranche avec les rouges lourds : « le Cesanese est l'opposé de l'Amarone », dit-il, cherchant fraîcheur, digestibilité et finesse, à tel point que son Cesanese est parfois comparé au pinot noir ou à un grand cru bourguignon. Le premier Tre Bicchieri jamais attribué à Olevano Romano fut pour son Silene. Par son talent, son travail bio et sa philosophie, Damiano Ciolli a hissé le Cesanese au rang de grand vin et inspiré toute une génération de vignerons du Latium.\n\nLE domaine de référence du Cesanese : à Olevano, sur sols volcaniques et en bio, Damiano Ciolli signe avec le Cirsium et le Silene les plus grands rouges autochtones du Latium. C'est l'artisan de la reconnaissance du cépage.\n\nL'histoire de Damiano Ciolli est celle d'une révélation tardive. Olevano Romano, comme tout le Latium, avait longtemps produit un vin de masse anonyme, écoulé dans les trattorias romaines sans souci de qualité. Il aura fallu la conviction de quelques vignerons, Ciolli en tête, pour révéler que le Cesanese — cépage difficile, à maturation tardive, qui peut donner des vins verts et végétaux s'il est mal maîtrisé — recelait un potentiel insoupçonné. En abaissant les rendements, en laissant le raisin mûrir pleinement et en travaillant en bio sur les sols volcaniques d'Olevano, il en a tiré des rouges d'une élégance et d'une buvabilité rares. Servis sur la cuisine romaine (abbacchio, coda alla vaccinara, saltimbocca), des viandes grillées ou des fromages, ses Cesanese séduisent par leur fraîcheur épicée et florale ; le Cirsium, patienté en cave, peut se boire après dix ans et évoquer alors un grand cru bourguignon, dépliant des notes complexes de sous-bois, de cuir et d'épices. Son succès a essaimé : autour de lui, une nouvelle génération de vignerons (dont son voisin et élève Alberto Giacobbe) a repris le flambeau, faisant d'Olevano Romano l'un des épicentres de la renaissance du Cesanese et du vin du Latium. Damiano Ciolli reste la figure de proue de ce mouvement, admiré bien au-delà des frontières italiennes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirsium (Cesanese vieilles vignes)",
+        "Silene (Cesanese)"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "olevano",
+        "rouge",
+        "bio",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|gamberorosso|cellartours"
+    },
+    {
+      "id": "it-lazio-prod-sergio-mottura",
+      "nom": "Sergio Mottura",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Civitella d'Agliano",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Procanico"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Grechetto DOC",
+        "Orvieto DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Civitella d'Agliano, dans le Haut-Latium proche de la frontière ombrienne, Sergio Mottura est le maître du Grechetto et l'un des pionniers de l'agriculture biologique en Italie centrale. Sur ce terroir volcanique du nord de la région, la famille Mottura a fait le pari de la qualité et des cépages autochtones, à contre-courant.\n\nLe domaine, converti au bio dès les années 1990 (une rareté à l'époque), s'est spécialisé dans le Grechetto, cépage blanc qu'il a hissé à un niveau inédit. Ses cuvées sont des références : le Poggio della Costa (Grechetto pur, frais et minéral) et surtout le Latour a Civitella, une sélection plus ambitieuse, élevée en bois, d'une grande complexité et d'une réelle aptitude à la garde, régulièrement primée (Tre Bicchieri). Le domaine signe aussi le Muffo, un blanc doux botrytisé rare, et des vins effervescents. Sur les sols volcaniques et argilo-calcaires de Civitella, sous un climat favorable, le Grechetto exprime toute sa finesse. Sergio Mottura a démontré que ce cépage, souvent cantonné à l'assemblage, pouvait donner de grands blancs de terroir et de garde, faisant de son domaine une référence incontournable du Latium et l'un des grands noms du Grechetto en Italie.\n\nLe maître du Grechetto et pionnier du bio dans le Latium : à Civitella d'Agliano, Sergio Mottura signe avec le Latour a Civitella et le Poggio della Costa des blancs de référence, primés. C'est un grand nom du Grechetto.\n\nLe pari de Sergio Mottura fut doublement audacieux : croire au Grechetto quand la mode était aux cépages internationaux, et adopter l'agriculture biologique des décennies avant qu'elle ne devienne un argument. Sur son domaine de Civitella d'Agliano, isolé dans le Haut-Latium, il a patiemment démontré que ce terroir volcanique, à la croisée du Latium et de l'Ombrie (la zone d'Orvieto n'est pas loin), pouvait donner de grands blancs. Le Grechetto, cépage à la peau épaisse et au caractère affirmé, y trouve des conditions idéales. Servis sur des poissons, des fruits de mer, une volaille ou une cuisine méditerranéenne, les blancs de Mottura séduisent par leur minéralité et leur profondeur ; le Latour a Civitella se patine sur plusieurs années, chose rare pour un blanc d'Italie centrale. Le domaine cultive aussi le rare art du vin botrytisé, avec le Muffo, preuve supplémentaire du potentiel du lieu. Régulièrement distingué par les guides et présent parmi les meilleurs vins du Latium, Sergio Mottura a fait figure de précurseur, ouvrant la voie à la reconnaissance des blancs autochtones de la région. Son domaine demeure une référence incontournable et un modèle de constance, ambassadeur du Grechetto et de la viticulture bio du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Latour a Civitella (Grechetto)",
+        "Poggio della Costa (Grechetto)",
+        "Muffo",
+        "Magone"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "grechetto",
+        "blanc",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-falesco-famiglia-cotarella",
+      "nom": "Falesco (Famiglia Cotarella)",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Montecchio",
+      "pays": "Italie",
+      "cepages": [
+        "Merlot",
+        "Roscetto",
+        "Trebbiano",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT",
+        "Est! Est!! Est!!! di Montefiascone DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À la frontière entre le Latium et l'Ombrie, près de Montefiascone et du lac de Bolsena, Falesco (aujourd'hui Famiglia Cotarella) est le domaine des célèbres frères Cotarella, Riccardo et Renzo. Riccardo Cotarella est l'un des œnologues les plus réputés et les plus influents d'Italie, consultant pour d'innombrables domaines prestigieux.\n\nFondé dans les années 1970, le domaine a acquis une renommée internationale avec le Montiano, un Merlot en pureté lancé en 1993, salué dès ses débuts comme l'un des plus grands rouges d'Italie : un vin dense, profond et velouté, maintes fois distingué par les Tre Bicchieri du Gambero Rosso et les cinq grappoli de Bibenda. Le domaine signe aussi le Ferentano (un blanc de Roscetto, cépage autochtone) et l'Est! Est!! Est!!! di Montefiascone. Situé à cheval sur les deux régions, il travaille surtout des cépages internationaux et des variétés ombriennes (Roscetto, Grechetto). Aujourd'hui dirigé par les filles Cotarella, qui ont modernisé la maison, il conjugue savoir-faire œnologique de pointe et ambition. Par le prestige du Montiano et l'aura de Riccardo Cotarella, Falesco est l'un des domaines les plus renommés du Latium et un ambassadeur du potentiel de la région pour les grands rouges.\n\nLe domaine des célèbres Cotarella (Riccardo, œnologue star) : le Montiano (Merlot) est l'un des plus grands rouges d'Italie, maintes fois primé, aux côtés du Ferentano. C'est l'un des noms les plus renommés du Latium.\n\nLe cas de Falesco est indissociable de la figure de Riccardo Cotarella, sans doute l'œnologue-consultant le plus influent d'Italie, dont l'expertise a façonné des dizaines de grands vins à travers le pays. En créant le Montiano sur ses propres terres, il a voulu démontrer que le Latium, région longtemps méprisée pour ses blancs dilués, pouvait produire un rouge de niveau mondial. Le succès fut immédiat et retentissant, le Montiano s'imposant comme l'un des grands Merlot d'Italie et un symbole du renouveau qualitatif de la région. Servi sur des viandes rouges, du gibier ou des fromages affinés, ce Merlot dense et velouté se patine sur une décennie et plus. Le domaine, à cheval sur la frontière ombrienne, assume pleinement son orientation vers les cépages internationaux et les variétés du secteur d'Orvieto (Roscetto, Grechetto), une cohérence géographique plutôt qu'une trahison des autochtones. La reprise par les filles Cotarella a modernisé l'image et affiné le style de la maison. Par le prestige de ses vins, l'aura de la famille et son rôle dans la reconnaissance du Latium viticole, Falesco occupe une place à part dans le paysage régional, à la croisée de la tradition locale et de l'excellence œnologique internationale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montiano (Merlot)",
+        "Ferentano (Roscetto)",
+        "Est! Est!! Est!!!"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "merlot",
+        "roscetto",
+        "cotarella",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "signorvino|gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-coletti-conti",
+      "nom": "Coletti Conti",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "commune": "Anagni",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese del Piglio DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Anagni, dans la zone du Cesanese del Piglio, Coletti Conti est un domaine réputé, l'une des références de cette DOCG. Issu d'une famille noble de la région, Antonello Coletti Conti s'est lancé dans le vin de qualité pour révéler le potentiel du Cesanese.\n\nLe domaine signe des Cesanese del Piglio structurés et de garde, dont le Hernicus (sa cuvée emblématique) et le Romanico, régulièrement primés (Tre Bicchieri), à base du Cesanese di Affile, le plus noble des sous-cépages. Le style, ambitieux et soigné, met en valeur la puissance et la complexité du Cesanese dans des rouges denses et aromatiques. « J'aime les vins que l'on mâche », résume le vigneron, qui recherche la concentration et le caractère. La qualité constante et le rôle du domaine dans la reconnaissance du Cesanese del Piglio en font une référence de l'appellation. Coletti Conti est une belle adresse pour découvrir le Cesanese del Piglio dans sa version la plus aboutie et structurée, chez un domaine passionné de la région d'Anagni.\n\nDomaine réputé du Cesanese del Piglio (famille noble d'Anagni), Coletti Conti signe des rouges structurés et primés (Hernicus, Romanico). C'est l'une des références de la DOCG.\n\n Le rôle de la famille Coletti Conti, issue de la noblesse d'Anagni, dans la reconnaissance du Cesanese del Piglio a compté. Servis sur la cuisine romaine, l'agneau, des viandes grillées ou des fromages affinés, ses Cesanese se patinent sur plusieurs années, développant profondeur et complexité. Le domaine illustre le potentiel de garde et de sérieux du grand cépage autochtone du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Hernicus (Cesanese del Piglio)",
+        "Romanico",
+        "Alea"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "piglio",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel|gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-casale-della-ioria",
+      "nom": "Casale della Ioria",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "commune": "Acuto",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese del Piglio DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Acuto, dans la zone du Cesanese del Piglio, Casale della Ioria est un domaine historique, l'une des références les plus anciennes du Cesanese. La famille Perinelli y cultive le cépage depuis des générations, avec un savoir-faire reconnu.\n\nLe domaine signe des Cesanese del Piglio élégants et de garde, dont le Torre del Piano (une Riserva sophistiquée aux notes de cerise noire et d'herbes) et la cuvée Tenuta della Ioria, régulièrement cités parmi les meilleurs de l'appellation. Le style, soigné et fidèle au terroir, met en valeur la finesse et la complexité du Cesanese, dans des rouges équilibrés. L'expérience de plusieurs générations et la qualité constante de la gamme en font une valeur sûre de la DOCG. Casale della Ioria est une belle adresse pour découvrir le Cesanese del Piglio dans un style élégant et classique, chez un domaine historique qui a contribué à la réputation de l'appellation, sur les collines d'Acuto.\n\nDomaine historique du Cesanese del Piglio (famille Perinelli), Casale della Ioria signe des rouges élégants et de garde (Torre del Piano). C'est l'une des références anciennes de l'appellation.\n\n L'expérience de plusieurs générations de la famille Perinelli confère au domaine une maîtrise rare du Cesanese, cépage réputé difficile. Servis sur la cuisine romaine, l'agneau ou des fromages, ses Cesanese del Piglio séduisent par leur élégance ; le Torre del Piano se patine sur plusieurs années. Casale della Ioria reste un gardien du classicisme de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torre del Piano (Cesanese Ris.)",
+        "Cesanese del Piglio",
+        "Colle Bianco"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "piglio",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly|gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-alberto-giacobbe",
+      "nom": "Alberto Giacobbe",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "commune": "Olevano Romano",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese di Olevano Romano DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Olevano Romano, dans les collines à l'est de Rome, Alberto Giacobbe est un vigneron bio montant, voisin et élève de Damiano Ciolli. Dans le sillage de son mentor, il produit des Cesanese de qualité qui confirment l'excellence du terroir d'Olevano.\n\nLe domaine signe des Cesanese di Olevano Romano purs et frais, à base de Cesanese di Affile, dans un style qui privilégie le fruit, la fraîcheur et la buvabilité, ainsi que de beaux blancs (Passerina). Le style, bio et précis, met en valeur le Cesanese dans des rouges élégants et digestes, à rebours des vins lourds. La qualité et la belle progression du domaine en font une valeur montante du Cesanese, aux côtés de Ciolli. Alberto Giacobbe est une belle adresse pour découvrir le Cesanese d'Olevano dans un style frais et pur, chez un jeune vigneron prometteur qui incarne, avec d'autres, la nouvelle génération du grand rouge autochtone du Latium.\n\nVoisin et élève de Damiano Ciolli à Olevano, Alberto Giacobbe signe des Cesanese purs et frais et de beaux blancs (Passerina). C'est une belle réussite de la nouvelle génération du Cesanese.\n\n Le sillage de Damiano Ciolli et la jeune énergie d'Alberto Giacobbe ont fait d'Olevano un épicentre du renouveau du Cesanese. Servis sur la cuisine romaine, des charcuteries ou des viandes, ses rouges séduisent par leur fraîcheur et leur pureté. Le domaine confirme, avec d'autres, que le terroir volcanique d'Olevano compte parmi les meilleurs pour le Cesanese di Affile.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cesanese di Olevano Romano",
+        "Passerina",
+        "Kimòsa"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "olevano",
+        "rouge",
+        "bio",
+        "revelation"
+      ],
+      "a_verifier": null,
+      "source": "roscioliwineclub"
+    },
+    {
+      "id": "it-lazio-prod-formiconi",
+      "nom": "Formiconi",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "commune": "Olevano Romano",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese di Affile DOC",
+        "Cesanese di Olevano Romano DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Olevano Romano, dans les collines à l'est de Rome, Formiconi est un domaine spécialiste du Cesanese di Affile, le plus noble des sous-cépages du Cesanese. Sur ce terroir d'altitude, la famille cultive cette variété exigeante avec soin.\n\nLe domaine signe des Cesanese di Affile en pureté, dont le Capozzano (100 % Affile), un rouge de caractère, aux arômes de fruits rouges, d'épices et de notes florales, dans un style fidèle au cépage. Le style, soigné et authentique, met en valeur la finesse et la structure du Cesanese di Affile, qui préfère les hauteurs. La spécialisation sur ce sous-cépage réputé et la qualité de la gamme en font une belle adresse de la zone d'Olevano et d'Affile. Formiconi est une adresse à découvrir pour le Cesanese di Affile, le plus racé des Cesanese, chez un domaine spécialiste, sur la cuisine romaine et les viandes grillées, à bon rapport qualité-prix.\n\nDomaine spécialiste du Cesanese di Affile, Formiconi signe le Capozzano (100 % Affile), un rouge de caractère. C'est une belle adresse du plus noble des sous-cépages du Cesanese.\n\n La spécialisation de Formiconi sur le Cesanese di Affile, sous-cépage exigeant qui préfère les hauteurs, en fait un interprète fidèle de cette variété racée. Servi sur la cuisine romaine, l'agneau ou des viandes grillées, le Capozzano séduit par sa structure et son fruit épicé. Le domaine illustre la noblesse du Cesanese di Affile, considéré comme le meilleur des sous-cépages.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Capozzano (Cesanese di Affile)",
+        "Cesanese"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "affile",
+        "olevano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-castel-de-paolis",
+      "nom": "Castel de Paolis",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Grottaferrata",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Viognier",
+        "Sauvignon",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Roma DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Grottaferrata, dans les Castelli Romani au sud de Rome, Castel de Paolis est un domaine de référence pour le Frascati de qualité. Sur ce terroir volcanique proche de la capitale, la famille Santarelli a fait le pari de hisser le Frascati au-dessus de sa réputation de vin de masse.\n\nLe domaine a été le premier à obtenir les Tre Bicchieri pour un Frascati Superiore. Sa cuvée phare, le Donna Adriana (un assemblage de Viognier et de Malvasia), est un grand blanc complexe et de belle tenue, aux côtés d'un Frascati Superiore de haut niveau et de rouges soignés (I Quattro Mori, à base de Syrah). Le style, ambitieux et précis, met en valeur les cépages des Castelli dans des blancs de terroir, à rebours du Frascati dilué d'autrefois. La qualité constante et le rôle pionnier du domaine dans la reconnaissance du Frascati en font une référence. Castel de Paolis est une belle adresse pour découvrir le Frascati dans sa version la plus qualitative, chez le domaine qui a prouvé le potentiel des collines de Rome.\n\nDomaine de référence du Frascati Superiore (premier Tre Bicchieri de l'appellation), Castel de Paolis signe le Donna Adriana (Viognier-Malvasia) et de beaux rouges. C'est un pionnier de la qualité des Castelli Romani.\n\n Le rôle pionnier de Castel de Paolis, premier Frascati couronné par les Tre Bicchieri, a changé le regard sur les blancs de Rome. Servis sur des poissons, des fruits de mer, une cacio e pepe ou une volaille, ses blancs séduisent par leur complexité ; le Donna Adriana gagne à être attendu. Le domaine a prouvé que les collines volcaniques des Castelli pouvaient donner de grands vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Donna Adriana (blanc)",
+        "Frascati Superiore",
+        "I Quattro Mori (rouge)"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-colle-picchioni",
+      "nom": "Colle Picchioni",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Marino",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Trebbiano",
+        "Merlot",
+        "Cabernet",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Marino DOC",
+        "Roma DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marino, dans les Castelli Romani au sud de Rome, Colle Picchioni est un domaine culte, créé par la légendaire Paola Di Mauro, figure pionnière de la qualité dans le Latium. Dès les années 1970-80, elle a prouvé que les collines de Rome pouvaient produire de grands vins.\n\nLe domaine est célèbre pour son Vigna del Vassallo, un assemblage de cépages bordelais (Merlot, Cabernet) qui fut l'un des premiers grands rouges du Latium, longtemps considéré comme une référence. Il signe aussi de beaux blancs de Marino (Le Vignole, assemblage de Malvasia, Trebbiano et Sauvignon). Le style, soigné et de caractère, met en valeur les cépages des Castelli et les variétés internationales. Le rôle historique de Paola Di Mauro, considérée comme une pionnière du renouveau viticole du Latium, et la qualité de la gamme en font un domaine à part. Colle Picchioni est une belle adresse pour découvrir un rouge d'assemblage historique et de beaux blancs de Marino, chez un domaine culte des Castelli Romani.\n\nDomaine culte de Marino créé par la légendaire Paola Di Mauro, Colle Picchioni signe le Vigna del Vassallo (bordelais) et Le Vignole (blanc). Ce sont des références historiques des Castelli Romani.\n\n L'aura de Paola Di Mauro, pionnière visionnaire, plane encore sur ce domaine culte des Castelli. Servis sur des viandes rouges et du gibier pour le Vigna del Vassallo, sur des poissons pour Le Vignole, ses vins séduisent par leur classicisme ; le rouge se patine sur une décennie. Colle Picchioni reste une adresse historique, témoin du premier renouveau qualitatif du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna del Vassallo (rouge)",
+        "Le Vignole (blanc)",
+        "Marino"
+      ],
+      "tags": [
+        "lazio",
+        "marino",
+        "castelli-romani",
+        "blanc",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-principe-pallavicini",
+      "nom": "Principe Pallavicini",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Colonna",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Grechetto",
+        "Cesanese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Roma DOC",
+        "Cesanese del Piglio DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Colonna, dans les Castelli Romani au sud de Rome, Principe Pallavicini est une grande maison historique, référence établie des blancs de la région. La famille princière Pallavicini possède ce domaine depuis des siècles, sur un beau vignoble des collines de Rome.\n\nLe domaine signe des Frascati Superiore de qualité, dont le Poggio Verde (une référence de l'appellation), aux côtés d'une gamme large et fiable : Roma Rosso, Cesanese, et divers cépages. Le style, soigné et régulier, met en valeur les cépages des Castelli dans des blancs frais et des rouges équilibrés. La longévité de la maison, sa belle diffusion et la qualité constante de sa gamme en font une valeur sûre des Castelli Romani. Principe Pallavicini est une belle adresse pour découvrir le Frascati Superiore et les vins de Rome dans un style fiable et soigné, chez une maison historique et princière de la région, à bon rapport qualité-prix.\n\nGrande maison historique et princière des Castelli Romani, Principe Pallavicini signe le Poggio Verde (Frascati Superiore) et une gamme large et fiable. C'est une référence établie des blancs de Rome.\n\n La longévité de la maison princière Pallavicini et sa belle diffusion en font un pilier des Castelli Romani. Servis sur des poissons, une cacio e pepe ou une volaille pour les blancs, sur des viandes pour les rouges, ses vins séduisent par leur régularité. Le Poggio Verde reste une valeur sûre du Frascati Superiore, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggio Verde (Frascati Sup.)",
+        "Roma Rosso",
+        "Soleluna"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-poggio-le-volpi",
+      "nom": "Poggio Le Volpi",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Monte Porzio Catone",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Nero Buono",
+        "Merlot",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Roma DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monte Porzio Catone, dans les Castelli Romani au sud de Rome, Poggio Le Volpi est un domaine dynamique, l'un des plus visibles de la région. La famille Mergè y conjugue tradition des Castelli et ambition qualitative.\n\nLe domaine valorise notamment les cépages autochtones : le Baccarossa (un Nero Buono en pureté) est un rouge de caractère, et le Roma Rosso Edizione Limitata a décroché les Tre Bicchieri. Il signe aussi de beaux Frascati Superiore (Epos) et une gamme large et bien diffusée. Le style, moderne et soigné, met en valeur aussi bien les blancs des Castelli que les rouges autochtones et internationaux. La qualité constante, le dynamisme commercial et la belle cave œnotouristique en font une valeur sûre de la région. Poggio Le Volpi est une belle adresse pour découvrir les vins de Rome, du Frascati au Nero Buono, chez un domaine dynamique et primé des Castelli Romani, à la gamme complète.\n\nDomaine dynamique des Castelli (famille Mergè), Poggio Le Volpi signe le Baccarossa (Nero Buono) et le Roma Rosso (Tre Bicchieri), aux côtés de beaux Frascati. Il valorise les cépages autochtones.\n\n Le dynamisme de la famille Mergè et la valorisation du Nero Buono distinguent Poggio Le Volpi dans les Castelli. Servis sur des poissons pour les Frascati, sur des viandes et des fromages pour le Baccarossa et le Roma Rosso, ses vins séduisent par leur netteté ; les rouges de garde se patinent sur plusieurs années. Le domaine illustre le renouveau des autochtones du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Baccarossa (Nero Buono)",
+        "Roma Rosso Ed. Limitata",
+        "Epos (Frascati Sup.)"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "nero-buono",
+        "blanc",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-fontana-candida",
+      "nom": "Fontana Candida",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Monte Porzio Catone",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Trebbiano",
+        "Bombino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Frascati DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monte Porzio Catone, dans les Castelli Romani, Fontana Candida est la maison la plus emblématique du Frascati, celle qui a fait connaître ce vin dans le monde entier. Acteur historique et majeur de l'appellation, elle en est l'ambassadrice mondiale.\n\nLe domaine produit de gros volumes de Frascati, mais aussi de belles cuvées de terroir : le Luna Mater (un Frascati Superiore Riserva ambitieux, issu de sélections parcellaires) et le Santa Teresa sont des références qualitatives de l'appellation. Le style, du vin accessible à la cuvée haut de gamme, met en valeur la Malvasia et le Trebbiano des collines de Rome. Si Fontana Candida a longtemps incarné le Frascati de grande diffusion, ses sélections montrent le vrai potentiel du terroir. C'est une belle adresse pour découvrir le Frascati, du vin convivial de tous les jours au Luna Mater plus sérieux, chez la maison qui a porté l'appellation à l'international, ambassadrice historique des Castelli Romani.\n\nMaison emblématique et ambassadrice mondiale du Frascati, Fontana Candida signe de belles cuvées de terroir (Luna Mater, Santa Teresa) au-delà de sa grande diffusion. C'est un acteur historique majeur des Castelli.\n\n Le rôle historique de Fontana Candida dans la diffusion mondiale du Frascati en fait un ambassadeur incontournable. Servis sur une cacio e pepe, des fritures, des poissons ou une volaille, ses Frascati séduisent par leur fraîcheur ; le Luna Mater, plus ambitieux, gagne à être attendu. La maison prouve qu'une grande diffusion peut coexister avec de belles cuvées de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Luna Mater (Frascati Sup. Ris.)",
+        "Santa Teresa",
+        "Frascati Superiore"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-tenuta-di-fiorano",
+      "nom": "Tenuta di Fiorano",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Roma",
+      "commune": "Rome (Appia Antica)",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia di Candia",
+        "Sémillon",
+        "Cabernet",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Roma DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Aux portes de Rome, sur la Voie Appienne antique, la Tenuta di Fiorano est un domaine mythique, l'un des plus légendaires du Latium. Au milieu du XXe siècle, le prince Alberico Boncompagni Ludovisi y créa des vins d'une qualité inouïe pour la région, longtemps cultes et quasi introuvables.\n\nLe Fiorano Bianco (à base de Malvasia di Candia et de Sémillon) et le Fiorano Rosso (Cabernet-Merlot) devinrent des vins de légende, encensés par les critiques, produits en quantités infimes et entourés d'une aura de mystère. Après une période d'interruption, le domaine a été ressuscité par l'héritier Alessandrojacopo Boncompagni Ludovisi, en agriculture biologique, redonnant vie à ces cuvées mythiques (Fiorano Bianco, Rosso, et le Fioranello plus accessible). Le style, artisanal et de garde, perpétue l'héritage d'excellence du prince. L'histoire exceptionnelle du domaine, son cadre unique sur l'Appienne et la qualité de ses vins en font une adresse à part, chargée de mythe. La Tenuta di Fiorano est une belle adresse pour découvrir un morceau de l'histoire du vin italien, aux portes de Rome.\n\nDomaine mythique aux portes de Rome, sur la Voie Appienne (Boncompagni Ludovisi), la Tenuta di Fiorano signe le Fiorano Bianco et Rosso, vins cultes et historiques ressuscités avec brio. C'est une adresse chargée de légende.\n\n L'aura mythique de Fiorano, née des vins visionnaires du prince Boncompagni Ludovisi, en fait une adresse à part dans l'histoire du vin italien. Servis sur des poissons et une volaille pour le blanc, sur des viandes rouges et du gibier pour le rouge, ses vins se patinent avec grâce. La résurrection du domaine en bio a redonné vie à l'un des grands mythes viticoles aux portes de Rome.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiorano Bianco",
+        "Fiorano Rosso",
+        "Fioranello"
+      ],
+      "tags": [
+        "lazio",
+        "roma",
+        "appia",
+        "blanc",
+        "rouge",
+        "culte",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-marco-carpineti",
+      "nom": "Marco Carpineti",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cori/Latina (LT)",
+      "commune": "Cori",
+      "pays": "Italie",
+      "cepages": [
+        "Bellone",
+        "Nero Buono",
+        "Greco Moro",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Cori DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cori, sur les premières collines des monts Lepini au sud de Rome, Marco Carpineti est le premier domaine bio du Latium et le champion des cépages autochtones de Cori. Fils de paysan, il reprit les vignes familiales et se tourna vers la qualité et les variétés locales.\n\nPionnier de l'agriculture biologique dans la région, il s'est fait le défenseur du Bellone (blanc) et du Nero Buono (rouge), deux cépages autochtones qu'il a hissés au premier plan. Ses cuvées sont des références : le Capolemole Bianco (Bellone), le Nzù et le Moro (Nero Buono), ainsi que le Kius, un metodo classico de Bellone original. Le style, bio et authentique, met en valeur les cépages du sud du Latium dans des vins de caractère et de terroir. Le rôle pionnier de Carpineti dans le bio et la valorisation des autochtones en fait une figure majeure du renouveau du Latium. C'est une belle adresse pour découvrir le Bellone et le Nero Buono, cépages bus jadis par les Césars, chez le premier domaine bio de la région, sur la cuisine méditerranéenne.\n\nPremier domaine bio du Latium et champion des autochtones de Cori, Marco Carpineti signe de beaux Bellone (Capolemole) et Nero Buono, dont un metodo classique (Kius). C'est une figure du renouveau régional.\n\n Le rôle pionnier de Carpineti, premier bio du Latium et défenseur des autochtones, en fait une figure du renouveau régional. Servis sur des poissons et une cuisine méditerranéenne pour le Bellone, sur des viandes pour le Nero Buono, ses vins séduisent par leur authenticité ; le Kius surprend à l'apéritif. Le domaine perpétue des cépages bus dès l'Antiquité romaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Capolemole Bianco (Bellone)",
+        "Nzù (Nero Buono)",
+        "Kius (Metodo Classico)"
+      ],
+      "tags": [
+        "lazio",
+        "cori",
+        "bellone",
+        "nero-buono",
+        "bio",
+        "autochtone",
+        "pionnier"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-casale-del-giglio",
+      "nom": "Casale del Giglio",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cori/Latina (LT)",
+      "commune": "Le Ferriere",
+      "pays": "Italie",
+      "cepages": [
+        "Syrah",
+        "Petit Verdot",
+        "Bellone",
+        "Biancolella"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT",
+        "Cori DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Le Ferriere, dans l'Agro Pontino au sud de Rome (une plaine asséchée au XXe siècle), Casale del Giglio est un grand domaine moderne, l'un des plus importants et innovants du Latium. Sur ce terroir neuf, la famille Santarelli a mené un vaste travail de recherche sur les cépages adaptés à la région.\n\nLe domaine produit une vingtaine de vins, à partir de cépages internationaux comme autochtones. Sa cuvée phare, le Mater Matuta (un assemblage de Syrah et Petit Verdot), est un grand rouge ambitieux, et le Faro della Guardia (un Biancolella de l'île de Ponza) a décroché les Tre Bicchieri. Le domaine valorise aussi le Bellone (Anthium). Le style, moderne et soigné, met en valeur une large palette, de l'international à l'autochtone. La qualité, l'innovation et la belle diffusion en font une valeur sûre. Casale del Giglio est une belle adresse pour découvrir la diversité du Latium moderne, du Syrah au Bellone en passant par le Biancolella insulaire, chez un grand domaine dynamique de l'Agro Pontino.\n\nGrand domaine moderne de l'Agro Pontino, Casale del Giglio signe le Mater Matuta (Syrah) et le Faro della Guardia (Biancolella de Ponza, Tre Bicchieri). Il allie cépages internationaux et autochtones.\n\n Le vaste travail de recherche de Casale del Giglio sur les cépages adaptés à l'Agro Pontino, terre neuve, en fait un laboratoire du Latium moderne. Servis sur des viandes rouges pour le Mater Matuta, sur des poissons pour le Faro della Guardia et le Bellone, ses vins séduisent par leur netteté. Le domaine illustre la diversité et l'ambition du vin du Latium contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mater Matuta (Syrah)",
+        "Faro della Guardia (Biancolella)",
+        "Anthium (Bellone)"
+      ],
+      "tags": [
+        "lazio",
+        "latina",
+        "agro-pontino",
+        "syrah",
+        "bellone",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly|gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-cincinnato",
+      "nom": "Cincinnato",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cori/Latina (LT)",
+      "commune": "Cori",
+      "pays": "Italie",
+      "cepages": [
+        "Bellone",
+        "Nero Buono"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Cori DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cori, sur les collines des monts Lepini au sud de Rome, Cincinnato est une coopérative de référence pour les cépages autochtones du Latium. Rassemblant des vignerons de Cori, elle valorise le Bellone et le Nero Buono, deux variétés locales emblématiques.\n\nLa coopérative signe de beaux vins autochtones : le Castore (Bellone), l'Ercole et le Pollux (Nero Buono), des blancs et rouges de caractère qui expriment le terroir de Cori, ainsi que des effervescents. Le style, soigné pour une coopérative, met en valeur les cépages du sud du Latium à un excellent rapport qualité-prix. Le travail sur les autochtones et la qualité constante en font une valeur sûre de la région. Cincinnato est une belle adresse pour découvrir le Bellone et le Nero Buono, cépages historiques de Cori, dans des vins fiables et abordables, chez une coopérative engagée dans la valorisation du patrimoine ampélographique du Latium.\n\nCoopérative de référence de Cori pour les autochtones, Cincinnato signe de beaux Bellone (Castore) et Nero Buono (Ercole). C'est une belle valorisation des cépages du Latium à bon rapport qualité-prix.\n\n Le rôle d'une coopérative capable de valoriser le Bellone et le Nero Buono à prix doux est essentiel à la vitalité de Cori. Servis sur des poissons et une cuisine méditerranéenne pour le Bellone, sur des viandes pour le Nero Buono, ses vins séduisent par leur franchise. Cincinnato prouve qu'une coopérative peut être un gardien efficace du patrimoine autochtone du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ercole (Nero Buono)",
+        "Castore (Bellone)",
+        "Pollux"
+      ],
+      "tags": [
+        "lazio",
+        "cori",
+        "bellone",
+        "nero-buono",
+        "cooperative",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-lazio-prod-ômina-romana",
+      "nom": "Ômina Romana",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Velletri",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Franc",
+        "Merlot",
+        "Petit Verdot",
+        "Chardonnay",
+        "Bellone"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT",
+        "Roma DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Velletri, dans les Castelli Romani au sud de Rome, Ômina Romana est un domaine ambitieux et perfectionniste, l'un des plus modernes du Latium. Fruit d'un important investissement (d'origine allemande), il a été conçu pour produire des vins de très haut niveau, avec des moyens considérables.\n\nLe domaine mise sur des cépages internationaux (Cabernet Franc, Merlot, Petit Verdot, Chardonnay) et sur le Bellone autochtone, dans des cuvées haut de gamme d'une grande précision : le Ceres Anesidora (Chardonnay), le Diana Nemorensis (Cabernet Franc), le Janus Geminus. Le style, moderne, précis et de garde, vise l'excellence technique, avec un soin extrême à la vigne et en cave. L'ambition, les moyens et la qualité des vins en font un domaine à part, qui bouscule les codes du Latium. Ômina Romana est une belle adresse pour découvrir des vins modernes et perfectionnistes, à base de cépages internationaux et de Bellone, chez un domaine ambitieux qui prouve le potentiel qualitatif des Castelli Romani.\n\nDomaine ambitieux et moderne de Velletri (investissement allemand), Ômina Romana signe des cuvées haut de gamme de cépages internationaux et de Bellone, précises et de garde. C'est une démarche perfectionniste à part.\n\n Les moyens considérables et l'exigence technique d'Ômina Romana en font un domaine à part, qui vise l'excellence absolue. Servis sur une cuisine raffinée, des viandes nobles ou des poissons selon la cuvée, ses vins précis et de garde se patinent sur plusieurs années. Le domaine bouscule les codes du Latium et prouve le potentiel qualitatif des Castelli Romani à haut niveau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ceres Anesidora (Chardonnay)",
+        "Diana Nemorensis (Cabernet Franc)",
+        "Janus Geminus"
+      ],
+      "tags": [
+        "lazio",
+        "velletri",
+        "cabernet-franc",
+        "bellone",
+        "moderne",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-lazio-prod-le-coste",
+      "nom": "Le Coste",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Gradoli",
+      "pays": "Italie",
+      "cepages": [
+        "Aleatico",
+        "Procanico",
+        "Sangiovese",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gradoli, sur les pentes volcaniques du lac de Bolsena dans le Haut-Latium, Le Coste est un domaine nature culte, l'une des références du vin naturel italien. Gian Marco Antonuzi et Clémentine Bouveron y ont ressuscité d'anciennes vignes et défriché des terrasses abandonnées, dans une démarche radicale.\n\nEn biodynamie et avec une vinification sans artifice (levures indigènes, sans soufre ou presque), le domaine signe des vins vivants et recherchés : le Le Coste Rosso (à base d'Aleatico, Sangiovese et cépages locaux), les Litrozzo (rouge, blanc, rosé, plus immédiats) et divers micro-cuvées. Le style, nature et sincère, privilégie l'expression du terroir volcanique et la buvabilité, avec des vins d'une grande énergie. La démarche pionnière et la qualité des vins ont fait de Le Coste une référence mondiale du vin nature, recherchée par les amateurs. C'est une belle adresse pour découvrir les vins volcaniques de Bolsena dans une démarche nature exigeante, chez un domaine culte du Haut-Latium.\n\nDomaine nature culte de Gradoli, sur les sols volcaniques de Bolsena, Le Coste signe des vins vivants et recherchés (Le Coste Rosso, Litrozzo). C'est une référence mondiale du vin naturel italien.\n\n Le travail de défrichage et de résurrection de vieilles vignes mené par Antonuzi et Bouveron, sur les terrasses volcaniques de Bolsena, force le respect. Servis sur une cuisine de caractère, des charcuteries ou des plats mijotés, leurs vins nature séduisent par leur énergie et leur pureté. Le domaine est devenu une référence mondiale, recherchée par les amateurs de vin vivant du monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Coste Rosso",
+        "Litrozzo",
+        "Bianco"
+      ],
+      "tags": [
+        "lazio",
+        "gradoli",
+        "bolsena",
+        "aleatico",
+        "nature",
+        "biodynamie",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-andrea-occhipinti",
+      "nom": "Andrea Occhipinti",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Gradoli",
+      "pays": "Italie",
+      "cepages": [
+        "Aleatico",
+        "Grechetto Rosso"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gradoli, sur les pentes volcaniques du lac de Bolsena dans le Haut-Latium, Andrea Occhipinti est un vigneron bio spécialiste de l'Aleatico sec et du Grechetto Rosso, l'une des belles scènes du nord de la région. Jeune vigneron, il a fait le choix des cépages locaux et originaux.\n\nLe domaine signe des vins de caractère, à contre-courant : l'Alea Viva (un Aleatico vinifié en sec, alors que ce cépage donne traditionnellement des vins doux), aromatique et original, ainsi que le Rosso Arcaico (Grechetto Rosso) et des blancs. Le style, bio et original, met en valeur les cépages autochtones du terroir volcanique de Bolsena dans des vins frais et singuliers. L'originalité de la démarche et la qualité des vins en font une belle adresse du Haut-Latium. Andrea Occhipinti est une adresse à découvrir pour l'Aleatico sec et le Grechetto Rosso, cépages rares vinifiés avec talent, chez un vigneron bio de la scène dynamique de Gradoli et du lac de Bolsena.\n\nVigneron bio de Gradoli, spécialiste de l'Aleatico sec (Alea Viva) et du Grechetto Rosso sur les sols volcaniques de Bolsena, Andrea Occhipinti signe des vins originaux et de caractère. C'est une belle scène du Haut-Latium.\n\n Le pari de vinifier l'Aleatico en sec, à rebours de sa tradition douce, illustre l'esprit original d'Andrea Occhipinti. Servis sur des charcuteries, une cuisine méditerranéenne ou légèrement épicée, ses vins séduisent par leur fraîcheur et leur singularité. Le domaine incarne le dynamisme de la scène volcanique de Bolsena, aux côtés de Le Coste, avec une identité propre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Alea Viva (Aleatico)",
+        "Rosso Arcaico",
+        "Bianco"
+      ],
+      "tags": [
+        "lazio",
+        "gradoli",
+        "bolsena",
+        "aleatico",
+        "grechetto-rosso",
+        "bio",
+        "original"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-lazio-prod-san-giovenale",
+      "nom": "San Giovenale",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Blera",
+      "pays": "Italie",
+      "cepages": [
+        "Grenache",
+        "Syrah",
+        "Cesanese",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Blera, dans le Haut-Latium (province de Viterbe), San Giovenale est le domaine d'Emanuele Pangrazi, l'une des belles réussites qualitatives du nord de la région. Sur un terroir volcanique soigné, il produit des vins ambitieux et acclamés.\n\nLe domaine est surtout connu pour le Habemus, un assemblage original de Grenache, Syrah et Cesanese, rouge complexe et de garde régulièrement salué par la critique comme l'un des meilleurs vins du Latium, ainsi que pour le Habemus Est! (blanc) et le Nemus. Le style, soigné et précis, met en valeur un assemblage méditerranéen inhabituel dans la région, avec une réelle recherche d'élégance. La qualité constante et la reconnaissance critique en font une valeur montante du Haut-Latium. San Giovenale est une belle adresse pour découvrir un rouge d'assemblage original et racé, chez un domaine ambitieux de la région de Blera, qui illustre le potentiel qualitatif méconnu du nord du Latium.\n\nDomaine d'Emanuele Pangrazi près de Blera, San Giovenale signe le Habemus (Grenache-Syrah-Cesanese), un rouge acclamé. C'est l'une des belles réussites qualitatives du Haut-Latium.\n\n Le pari d'Emanuele Pangrazi, marier Grenache, Syrah et Cesanese sur un terroir volcanique, a donné l'un des rouges les plus acclamés du Latium. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Habemus se patine sur plusieurs années. Le domaine illustre le potentiel qualitatif méconnu du Haut-Latium et la liberté créative permise par l'IGP régionale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Habemus (rouge)",
+        "Habemus Est! (blanc)",
+        "Nemus"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "grenache",
+        "cesanese",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-trappolini",
+      "nom": "Trappolini",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Castiglione in Teverina",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano",
+        "Malvasia",
+        "Sangiovese",
+        "Grechetto Rosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Est! Est!! Est!!! di Montefiascone DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione in Teverina, dans le Haut-Latium (province de Viterbe), Trappolini est un domaine réputé, l'une des références de la zone de l'Est! Est!! Est!!! et du lac de Bolsena. La famille cultive les cépages du nord de la région avec une recherche de qualité.\n\nLe domaine signe un bel Est! Est!! Est!!! di Montefiascone (blanc frais et fidèle à la tradition), ainsi que le Paterno (un Sangiovese de caractère) et un rare Grechetto Rosso (Brecceto), cépage autochtone peu répandu. Le style, soigné et fidèle au terroir, met en valeur les cépages du Haut-Latium dans des vins équilibrés, blancs comme rouges. La qualité constante et le travail sur les autochtones en font une valeur sûre de la région. Trappolini est une belle adresse pour découvrir l'Est! Est!! Est!!!, le Sangiovese local et le rare Grechetto Rosso, chez un domaine réputé du secteur de Montefiascone, sur les collines volcaniques du lac de Bolsena.\n\nDomaine réputé du Haut-Latium, Trappolini signe un bel Est! Est!! Est!!!, le Paterno (Sangiovese) et un rare Grechetto Rosso. C'est une référence de la zone de Montefiascone et du lac de Bolsena.\n\n Le travail de Trappolini sur les autochtones, dont le rare Grechetto Rosso, enrichit la palette du Haut-Latium. Servis sur des poissons et une cuisine légère pour l'Est! Est!! Est!!!, sur des viandes pour le Paterno, ses vins séduisent par leur équilibre. Le domaine reste une valeur sûre du secteur de Montefiascone, entre tradition et curiosités ampélographiques.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Paterno (Sangiovese)",
+        "Est! Est!! Est!!!",
+        "Brecceto (Grechetto Rosso)"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "est-est-est",
+        "montefiascone",
+        "blanc",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-tenuta-la-pazzaglia",
+      "nom": "Tenuta La Pazzaglia",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Castiglione in Teverina",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano",
+        "Malvasia",
+        "Grechetto",
+        "Violone"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Est! Est!! Est!!! di Montefiascone DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione in Teverina, dans le Haut-Latium (province de Viterbe), la Tenuta La Pazzaglia est un domaine de la famille Verdecchia, cité par le Gambero Rosso parmi l'élite nationale. Sur ce terroir volcanique, elle produit des vins de qualité qui montent en réputation.\n\nLe domaine signe un bel Est! Est!! Est!!! di Montefiascone et surtout le Poggio Triale, un Grechetto de belle facture, régulièrement distingué, aux côtés d'autres cuvées (Senzafine). Le style, soigné et précis, met en valeur les cépages du Haut-Latium, notamment le Grechetto, dans des blancs frais et de caractère. La qualité croissante et la reconnaissance critique en font une valeur montante de la région. Tenuta La Pazzaglia est une belle adresse pour découvrir l'Est! Est!! Est!!! et le Grechetto du Haut-Latium, chez un domaine réputé du secteur de Montefiascone, dans la belle zone viticole du lac de Bolsena, à la frontière ombrienne.\n\nDomaine de la famille Verdecchia (élite nationale selon Gambero Rosso), la Tenuta La Pazzaglia signe un bel Est! Est!! Est!!! et un Grechetto de qualité (Poggio Triale). C'est une référence montante du Haut-Latium.\n\n La montée en réputation de la famille Verdecchia, saluée par le Gambero Rosso, confirme le potentiel du Grechetto du Haut-Latium. Servis sur des poissons, des fruits de mer ou une cuisine légère, ses blancs séduisent par leur fraîcheur ; le Poggio Triale gagne en complexité. Le domaine illustre le dynamisme qualitatif de la zone de Montefiascone et du lac de Bolsena.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggio Triale (Grechetto)",
+        "Est! Est!! Est!!!",
+        "Senzafine"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "est-est-est",
+        "grechetto",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-lazio-prod-villa-simone",
+      "nom": "Villa Simone",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Monte Porzio Catone",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Trebbiano",
+        "Bombino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Cannellino di Frascati DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monte Porzio Catone, dans les Castelli Romani, Villa Simone est un domaine réputé de Piero Costantini, l'un des meilleurs interprètes du Frascati traditionnel. Sur un beau terroir volcanique, il défend un Frascati de qualité, fidèle à la tradition. Le domaine signe des Frascati Superiore soignés, dont le Vigneto Filonardi (issu d'une parcelle réputée), ainsi qu'un Cannellino di Frascati (la version douce, DOCG), à base de Malvasia et Trebbiano. Le style, classique et soigné, met en valeur les cépages des Castelli dans des blancs frais et authentiques, à rebours du Frascati dilué. La qualité constante et l'attachement à la tradition en font une valeur sûre de l'appellation. Villa Simone est une belle adresse pour découvrir le Frascati Superiore et le Cannellino doux dans un style traditionnel et de qualité, chez un domaine réputé des Castelli Romani, sur la cuisine romaine et les poissons.\n\nDomaine réputé des Castelli (Piero Costantini), Villa Simone est l'un des meilleurs interprètes du Frascati traditionnel (Vigneto Filonardi, Cannellino). C'est une valeur sûre de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigneto Filonardi (Frascati Sup.)",
+        "Cannellino",
+        "Frascati Superiore"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-lazio-prod-lolivella",
+      "nom": "L'Olivella",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Frascati",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Bombino",
+        "Cesanese",
+        "Bellone"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Roma DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Frascati, dans les Castelli Romani, L'Olivella est un domaine bio de la famille Bernabei, belle adresse artisanale et durable de la région de Rome. Sur un terroir volcanique, la famille cultive les cépages des Castelli en agriculture biologique. Le domaine signe des Frascati Superiore authentiques (le Racemo), ainsi que des rouges de cépages autochtones (Cesanese, dans le Racemo Rosso) et le Fioccorosso. Le style, bio et soigné, met en valeur les cépages des Castelli dans des vins fidèles au terroir, à rebours de la production de masse. L'engagement biologique et la qualité de la gamme en font une belle adresse de Frascati. L'Olivella est une adresse à découvrir pour un Frascati Superiore bio et authentique, aux côtés de rouges de Cesanese, chez un domaine familial et durable des Castelli Romani, sur la cuisine romaine, à bon rapport qualité-prix.\n\nDomaine bio des Castelli (famille Bernabei), L'Olivella signe des Frascati Superiore authentiques (Racemo) et des rouges autochtones. C'est une belle adresse artisanale et durable de la région de Rome.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Racemo (Frascati Sup.)",
+        "Racemo Rosso",
+        "Fioccorosso"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-casale-marchese",
+      "nom": "Casale Marchese",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani",
+      "commune": "Frascati",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Trebbiano",
+        "Cesanese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Frascati Superiore DOCG",
+        "Roma DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Frascati, dans les Castelli Romani, Casale Marchese est un domaine familial historique, belle adresse fiable au cœur de l'appellation. Sur un beau terroir volcanique proche de Rome, la famille cultive les cépages des Castelli depuis des générations. Le domaine signe des Frascati Superiore soignés et fidèles à la tradition (dont le Vigneto Colle Pizzuto), ainsi qu'un Roma Rosso, à base de Malvasia et Trebbiano en blanc, de Cesanese en rouge. Le style, classique et régulier, met en valeur les cépages des Castelli dans des vins équilibrés et authentiques. La longévité du domaine et la qualité constante en font une valeur sûre de Frascati. Casale Marchese est une belle adresse pour découvrir le Frascati Superiore dans un style traditionnel et fiable, chez un domaine familial historique au cœur de l'appellation, sur la cuisine romaine et les poissons, à bon rapport qualité-prix.\n\nDomaine familial historique de Frascati, Casale Marchese signe des Frascati Superiore soignés et fidèles à la tradition. C'est une valeur sûre au cœur de l'appellation des Castelli Romani.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Frascati Superiore",
+        "Vigneto Colle Pizzuto",
+        "Roma Rosso"
+      ],
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "blanc",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-corte-dei-papi",
+      "nom": "Corte dei Papi",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "commune": "Anagni",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese del Piglio DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Anagni, dans la zone du Cesanese del Piglio, Corte dei Papi est un domaine de la famille Terenzi, belle adresse de cette DOCG. Sur les collines de la région, la famille cultive le Cesanese avec une recherche de qualité et de modernité. Le domaine signe des Cesanese del Piglio soignés, dont le Colle Ticchio (une Riserva), le San Giovanni et le Hesus, à base de Cesanese di Affile et Comune, dans un style moderne et abouti. Le style, soigné et contemporain, met en valeur la puissance et le fruit du Cesanese dans des rouges structurés. La qualité de la gamme et le beau travail sur le cépage en font une valeur sûre de l'appellation. Corte dei Papi est une belle adresse pour découvrir le Cesanese del Piglio dans un style moderne et soigné, chez un domaine dynamique de la région d'Anagni, sur la cuisine romaine et les viandes grillées.\n\nDomaine du Cesanese del Piglio (famille Terenzi), Corte dei Papi signe des Cesanese soignés et modernes (Colle Ticchio). C'est une belle adresse de l'appellation DOCG de la région d'Anagni.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Colle Ticchio (Cesanese Ris.)",
+        "San Giovanni",
+        "Hesus"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "piglio",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-marco-falcone",
+      "nom": "Marco Falcone",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "commune": "Piglio",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese del Piglio DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Piglio, dans la zone du Cesanese del Piglio, Marco Falcone est un vigneron pionnier de la vinification du Cesanese en amphore, belle adresse de la nouvelle vague de l'appellation. Sur les collines du Piglio, il cultive le Cesanese en agriculture biologique. Le domaine signe des Cesanese del Piglio purs et originaux, dont des cuvées vinifiées en amphore (une première dans l'appellation), qui révèlent une facette plus authentique et minérale du cépage. Le style, artisanal et innovant, privilégie l'expression du terroir et la pureté, à rebours des vins boisés. La démarche pionnière et la qualité des vins en font une adresse à découvrir. Marco Falcone est une belle adresse pour découvrir le Cesanese del Piglio dans un style nature et en amphore, chez un vigneron innovant qui incarne, avec d'autres, le renouveau du grand rouge autochtone du Latium, sur la cuisine romaine.\n\nVigneron du Piglio, pionnier de la vinification du Cesanese en amphore, Marco Falcone signe des rouges purs et originaux. C'est une belle adresse de la nouvelle vague du Cesanese del Piglio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cesanese del Piglio (amphore)",
+        "Dossi Neri"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "piglio",
+        "rouge",
+        "amphore",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "roscioliwineclub"
+    },
+    {
+      "id": "it-lazio-prod-mazziotti",
+      "nom": "Mazziotti",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "commune": "Bolsena",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano",
+        "Malvasia",
+        "Rossetto"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Est! Est!! Est!!! di Montefiascone DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolsena, au bord du lac du même nom dans le Haut-Latium, Mazziotti est un domaine historique de l'Est! Est!! Est!!! di Montefiascone, cette appellation à la légende célèbre. Sur les rives volcaniques du lac, la famille cultive les cépages du nord de la région. Le domaine signe des Est! Est!! Est!!! frais et fidèles à la tradition, dont le Canuleio (sa cuvée réputée), à base de Trebbiano, Malvasia et Rossetto, blancs légers et désaltérants. Le style, classique et soigné, met en valeur les cépages du Haut-Latium dans des blancs de plaisir. L'ancrage historique à cette appellation légendaire et la qualité de la gamme en font une valeur sûre. Mazziotti est une belle adresse pour découvrir l'Est! Est!! Est!!! di Montefiascone, ce vin à l'histoire fameuse (celle du prélat et de son serviteur cherchant les bonnes tavernes), chez un domaine historique du lac de Bolsena, sur les poissons du lac.\n\nDomaine historique de l'Est! Est!! Est!!! au bord du lac de Bolsena, Mazziotti signe des blancs frais et fidèles à la tradition (Canuleio). C'est une belle adresse de cette appellation légendaire du Haut-Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Canuleio (Est! Est!! Est!!!)",
+        "Est! Est!! Est!!!"
+      ],
+      "tags": [
+        "lazio",
+        "viterbo",
+        "est-est-est",
+        "bolsena",
+        "blanc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-cantina-ribela",
+      "nom": "Cantina Ribelà",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Roma",
+      "commune": "Gallicano nel Lazio",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia",
+        "Ottonese",
+        "Bellone",
+        "Cesanese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Rome, à Gallicano nel Lazio, Cantina Ribelà est un domaine bio-nature mené par deux jeunes vignerons, belle adresse de la scène naturelle du Latium. Sur un terroir volcanique proche de la capitale, ils cultivent des cépages autochtones en agriculture biologique. Le domaine signe des blancs de Malvasia et Ottonese souvent macérés (« orange »), et des rouges de Cesanese et Bellone, vinifiés sans artifice, dans un style nature et authentique. Le style, peu interventionniste, privilégie l'expression du terroir et la buvabilité, avec des vins vivants et originaux. La démarche et la qualité des vins en font une belle adresse de la scène naturelle romaine. Cantina Ribelà est une adresse à découvrir pour des vins nature de cépages autochtones, blancs macérés et rouges authentiques, chez de jeunes vignerons engagés près de Rome, sur une cuisine de caractère, pour les amateurs de vin vivant.\n\nDomaine bio-nature près de Rome (deux jeunes vignerons), Cantina Ribelà signe des blancs macérés et des rouges authentiques de cépages autochtones. C'est une belle adresse de la scène naturelle du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bianco (Malvasia macérée)",
+        "Rosso",
+        "Ribelà"
+      ],
+      "tags": [
+        "lazio",
+        "roma",
+        "malvasia",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-pietra-pinta",
+      "nom": "Pietra Pinta",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cori/Latina (LT)",
+      "commune": "Cori",
+      "pays": "Italie",
+      "cepages": [
+        "Bellone",
+        "Nero Buono",
+        "Chardonnay",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cori DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cori, sur les collines des monts Lepini au sud de Rome, Pietra Pinta (domaine Colle Amato) est une belle adresse du terroir autochtone du sud du Latium. Sur un beau vignoble, la famille cultive les cépages locaux et internationaux. Le domaine signe des vins de Bellone (le Colle Amato) et de Nero Buono, cépages autochtones emblématiques de Cori, aux côtés de cépages internationaux (Chardonnay, Merlot). Le style, soigné et fidèle au terroir, met en valeur le Bellone en blanc et le Nero Buono en rouge, dans des vins équilibrés. La qualité de la gamme et le travail sur les autochtones en font une valeur sûre de la région de Cori. Pietra Pinta est une belle adresse pour découvrir le Bellone et le Nero Buono, cépages historiques du sud du Latium, chez un domaine soigné des monts Lepini, sur la cuisine méditerranéenne et les viandes, à bon rapport qualité-prix.\n\nDomaine de Cori (Colle Amato), Pietra Pinta signe de beaux Bellone et Nero Buono, aux côtés de cépages internationaux. C'est une belle adresse du terroir autochtone du sud du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Colle Amato (Bellone)",
+        "Nero Buono",
+        "Selezione"
+      ],
+      "tags": [
+        "lazio",
+        "cori",
+        "bellone",
+        "nero-buono",
+        "blanc",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-casale-cento-corvi",
+      "nom": "Casale Cento Corvi",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Roma",
+      "commune": "Cerveteri",
+      "pays": "Italie",
+      "cepages": [
+        "Giacchè",
+        "Bellone",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerveteri DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cerveteri, sur la côte au nord de Rome (l'antique cité étrusque), Casale Cento Corvi est un domaine gardien du rare cépage Giacchè, curiosité ampélographique du Latium. Sur ce terroir chargé d'histoire étrusque, la famille cultive des cépages autochtones rares. Le domaine est surtout connu pour son Giacchè, un cépage rouge autochtone quasi disparu qu'il a sauvé, donnant un rouge original et de caractère, ainsi que pour le Bellone en blanc. Le style, attaché au patrimoine, met en valeur des cépages rares du Latium dans des vins authentiques. Le rôle du domaine dans la préservation du Giacchè et l'originalité de sa gamme en font une curiosité intéressante de la région. Casale Cento Corvi est une adresse à découvrir pour le rare Giacchè et le Bellone, cépages autochtones de la côte étrusque, chez un domaine attaché au patrimoine ampélographique, au nord de Rome, sur la cuisine locale.\n\nDomaine de Cerveteri, gardien du rare cépage Giacchè, Casale Cento Corvi signe un rouge autochtone quasi disparu, aux côtés du Bellone. C'est une curiosité ampélographique de la côte au nord de Rome.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Giacchè Rosso",
+        "Bellone",
+        "Cerveteri"
+      ],
+      "tags": [
+        "lazio",
+        "cerveteri",
+        "giacche",
+        "bellone",
+        "rouge",
+        "autochtone",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-prod-palazzo-tronconi",
+      "nom": "Palazzo Tronconi",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "commune": "Arce",
+      "pays": "Italie",
+      "cepages": [
+        "Maturano",
+        "Capolongo",
+        "Lecinaro",
+        "Pampanaro"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Lazio IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Arce, dans le Frusinate au sud-est du Latium, Palazzo Tronconi est un domaine bio-nature gardien de cépages autochtones rarissimes, curiosité ampélographique de la région. Sur un terroir méconnu, la famille cultive des variétés quasi disparues en agriculture biologique. Le domaine signe des vins de cépages rares — le Maturano (Zitore), le Lecinaro (Fregellae), le Capolongo, le Pampanaro —, des variétés autochtones que peu de vignerons cultivent encore, vinifiées sans artifice. Le style, nature et attaché au patrimoine, met en valeur ces cépages oubliés dans des vins originaux et vivants. La démarche de sauvegarde et l'originalité de la gamme en font une adresse unique. Palazzo Tronconi est une adresse à découvrir pour des cépages autochtones rarissimes du Frusinate, chez un vigneron nature gardien du patrimoine ampélographique, pour les amateurs de curiosités et de vin vivant, sur une cuisine de caractère.\n\nDomaine bio-nature du Frusinate, gardien de cépages autochtones rarissimes (Maturano, Lecinaro, Capolongo), Palazzo Tronconi signe des vins originaux et vivants. C'est une curiosité ampélographique du sud du Latium.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Zitore (Maturano)",
+        "Fregellae (Lecinaro)",
+        "Donnico"
+      ],
+      "tags": [
+        "lazio",
+        "frosinone",
+        "maturano",
+        "lecinaro",
+        "nature",
+        "biodynamie",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-prod-gabriele-magno",
+      "nom": "Gabriele Magno",
+      "type": "domaine",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "commune": "Olevano Romano",
+      "pays": "Italie",
+      "cepages": [
+        "Cesanese di Affile"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cesanese di Olevano Romano DOC",
+        "Lazio IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Olevano Romano, dans les collines à l'est de Rome, Gabriele Magno est un petit vigneron nature, belle adresse artisanale de la scène naturelle du Cesanese. Dans le sillage de Damiano Ciolli, il cultive le Cesanese en agriculture biologique. Le domaine signe des Cesanese di Olevano Romano authentiques et vivants (dont le Ròppolo), vinifiés avec peu d'intervention, dans un style nature qui privilégie la fraîcheur et l'expression du terroir volcanique d'Olevano. Le style, artisanal et sincère, met en valeur le Cesanese di Affile dans des rouges purs et digestes. La démarche nature et la qualité des vins en font une belle adresse à découvrir. Gabriele Magno est une adresse à découvrir pour un Cesanese nature et authentique, chez un petit vigneron d'Olevano qui incarne, avec d'autres, le renouveau du grand rouge autochtone du Latium, sur la cuisine romaine, pour les amateurs de vin vivant.\n\nPetit vigneron nature d'Olevano, Gabriele Magno signe des Cesanese authentiques et vivants (Ròppolo). C'est une belle adresse artisanale de la scène naturelle du Cesanese, dans le sillage de Damiano Ciolli.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cesanese di Olevano Romano",
+        "Ròppolo"
+      ],
+      "tags": [
+        "lazio",
+        "cesanese",
+        "olevano",
+        "rouge",
+        "nature",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    }
+  ]
+}

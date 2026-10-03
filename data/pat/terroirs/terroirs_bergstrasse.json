@@ -1,0 +1,382 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "bergstrasse",
+  "region_label": "Hessische Bergstraße (Allemagne)",
+  "source_file": "terroirs_bergstrasse_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 14,
+  "items": [
+    {
+      "id": "de-bergstrasse-terr-heppenheimer-centgericht",
+      "nom": "Heppenheimer Centgericht",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Grauburgunder"
+      ],
+      "altitude": "110-240 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Le grand cru emblématique de la Bergstraße, à Heppenheim ; sur granite décomposé et lœss, des Riesling d'une élégance et d'un parfum exemplaires (Domäne Bergstraße, Freiberger).",
+      "notes_objectives": "Le Heppenheimer Centgericht est le grand cru emblématique de la Hessische Bergstraße, sur les hauteurs de Heppenheim. Son nom évoque l'ancien tribunal médiéval (Centgericht) qui s'y tenait. Sur un sol de granite décomposé (Urgestein) et de lœss, exposé au sud, il bénéficie d'un microclimat parmi les plus doux d'Allemagne. Ce sol et cette chaleur donnent des Riesling d'une grande élégance, floraux et parfumés, mais aussi structurés et de garde. Le terroir est magnifié par la Domäne Bergstraße, qui en a fait sa cuvée de référence, ainsi que par H. Freiberger et la coopérative. Classé en VDP Grosse Lage, le Centgericht est le terroir emblématique de la Bergstraße et l'un de ses rares grands crus reconnus. Le Centgericht doit son caractère à une combinaison rare dans le nord de l'Allemagne : un sol de granite décomposé, pauvre et drainant, recouvert par endroits de lœss, et un microclimat d'une douceur exceptionnelle, abrité par l'Odenwald. C'est ce climat qui fit s'exclamer l'empereur Joseph II que « ici, l'Allemagne commence à devenir l'Italie ». Le granite confère aux Riesling une finesse florale et parfumée très caractéristique, tandis que la chaleur assure une belle maturité ; les meilleures cuvées vieillissent remarquablement. La Domäne Bergstraße en a fait sa référence absolue, saluée comme un modèle d'élégance et de terroir. Dominant la jolie ville médiévale de Heppenheim, le Centgericht est le grand cru qui incarne, à lui seul, l'identité du Riesling de la Bergstraße. Au-delà de sa qualité, le Centgericht porte une charge historique forte : son nom rappelle qu'il fut le siège d'un tribunal médiéval (le « Cent »), et la viticulture y est attestée depuis plus de mille ans, héritée des Romains qui tracèrent la « Via strata montana » — la Bergstraße. Les Riesling du Centgericht, floraux, parfumés et d'une grande finesse, comptent parmi les plus élégants d'Allemagne du Nord, et leur capacité de garde a fait la réputation de la Domäne Bergstraße. Pour l'amateur, c'est le terroir par lequel découvrir l'âme de cette région minuscule : un Riesling tendre et aromatique, marqué par le granite et la douceur exceptionnelle du climat de la Bergstraße.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "grapeguru|kloster-eberbach"
+    },
+    {
+      "id": "de-bergstrasse-terr-steinberg",
+      "nom": "Steinberg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "altitude": "120-250 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Monopole de la Domäne Bergstraße, classé en VDP Grosse Lage ; mosaïque de sols sur granite et lœss, donnant des Riesling et Burgunder racés.",
+      "notes_objectives": "Le Steinberg est un grand cru de la Hessische Bergstraße, exploité en monopole par la Domäne Bergstraße. Classé en VDP Grosse Lage, il repose sur une mosaïque de sols, où le granite décomposé se mêle au lœss. Cette diversité géologique permet la culture de plusieurs cépages et donne des Riesling racés ainsi que de beaux Burgunder (Weissburgunder, Grauburgunder). Le terroir, exploité d'un seul tenant par le domaine de l'État de Hesse, permet une expression cohérente du grand vin. Classé en grand cru, le Steinberg illustre, aux côtés du Centgericht, l'excellence des meilleurs terroirs de granite et de lœss de la Bergstraße. Exploité d'un seul tenant par la Domäne Bergstraße — le domaine de l'État de Hesse, rattaché aux prestigieux Hessische Staatsweingüter Kloster Eberbach —, le Steinberg est l'un des rares monopoles de la région. Sa mosaïque de sols, où le granite décomposé alterne avec le lœss, permet une grande diversité d'expressions. Le domaine y produit des Riesling racés et parfumés, ainsi que de beaux Weissburgunder et Grauburgunder, et propose même un parrainage de pieds de vigne, signe de l'attachement de la région à son patrimoine. Classé en VDP Grosse Lage, le Steinberg illustre, aux côtés du Centgericht, le savoir-faire et les moyens que l'État de Hesse met au service des meilleurs terroirs de la Bergstraße. Le statut de monopole du Steinberg, rare dans une région aussi morcelée, permet à la Domäne Bergstraße une lecture cohérente et patiente de ce terroir de mosaïque. La diversité des sols — granite par endroits, lœss ailleurs — se traduit par une palette de cépages et de styles, du Riesling racé aux Burgunder ronds. Bénéficiant des moyens et du savoir-faire des Hessische Staatsweingüter, l'un des plus grands domaines d'Allemagne, le Steinberg produit des vins d'une grande régularité. Avec le Centgericht, il forme le sommet de la hiérarchie de la Bergstraße et témoigne du rôle décisif de l'État de Hesse dans la préservation des meilleurs terroirs de cette région confidentielle.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "monopole",
+        "granite",
+        "vdp-grosse-lage",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "kloster-eberbach"
+    },
+    {
+      "id": "de-bergstrasse-terr-heppenheimer-steinkopf",
+      "nom": "Heppenheimer Steinkopf",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Grauburgunder"
+      ],
+      "altitude": "120-260 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Grand coteau de granite et de lœss à Heppenheim ; Riesling parfumés et de garde (Domäne Bergstraße, Freiberger, Koob).",
+      "notes_objectives": "Le Heppenheimer Steinkopf est un grand coteau de granite et de lœss à Heppenheim. Bien exposé, il donne des Riesling parfumés et de garde. Le terroir est exploité par la Domäne Bergstraße, H. Freiberger et Weinbau Koob. Classé en grand cru, le Steinkopf illustre la qualité des terroirs de granite d'Heppenheim, dans le sud de la Bergstraße. Grand coteau de granite et de lœss au-dessus de Heppenheim, le Steinkopf bénéficie d'une belle exposition qui donne des Riesling parfumés, fins et de garde. La Domäne Bergstraße, H. Freiberger et Weinbau Koob y signent de belles cuvées. Le cru illustre la qualité des terroirs de granite d'Heppenheim, l'un des deux grands centres viticoles de la région, dont les Riesling se distinguent par leur élégance florale. Apprécié pour la finesse florale de ses Riesling, le Steinkopf compte parmi les meilleurs coteaux d'Heppenheim après le Centgericht. Son granite et son lœss, bien exposés, donnent des vins parfumés et de garde, magnifiés par la Domäne Bergstraße et Freiberger. Le cru confirme la place d'Heppenheim parmi les grands secteurs de la Bergstraße, aux côtés de Bensheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "wine-searcher|bergstrasse-odenwald"
+    },
+    {
+      "id": "de-bergstrasse-terr-heppenheimer-maiberg",
+      "nom": "Heppenheimer Maiberg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "110-240 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite et de lœss à Heppenheim ; Riesling et Spätburgunder de belle facture (Koob, Amthor).",
+      "notes_objectives": "Le Heppenheimer Maiberg est un coteau de granite et de lœss à Heppenheim. Bien exposé, il donne des Riesling et des Spätburgunder de belle facture. Le terroir est exploité par des domaines comme Koob et Amthor. Classé en grand cru, le Maiberg illustre la qualité des coteaux de granite d'Heppenheim. Coteau de granite et de lœss à Heppenheim, le Maiberg donne des Riesling parfumés et de beaux Spätburgunder. Exploité par des domaines familiaux comme Koob et Amthor, il illustre la qualité des coteaux d'Heppenheim et la polyvalence des terroirs de la Bergstraße, capables de donner de bons blancs comme de jolis rouges sur le granite. Polyvalent, le Maiberg donne aussi bien de jolis Riesling parfumés que de beaux Spätburgunder, sur le granite et le lœss d'Heppenheim. Exploité par des domaines familiaux comme Koob et Amthor, il illustre l'esprit artisanal de la région et la capacité de ses terroirs de granite à exceller sur plusieurs cépages, blancs comme rouges.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "bergstrasse-odenwald"
+    },
+    {
+      "id": "de-bergstrasse-terr-bensheimer-kalkgasse",
+      "nom": "Bensheimer Kalkgasse",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "altitude": "100-220 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau réputé de Bensheim, au nom évoquant le calcaire ; Riesling fins et parfumés (Weingut der Stadt Bensheim).",
+      "notes_objectives": "La Bensheimer Kalkgasse est l'un des coteaux les plus réputés de Bensheim. Son nom évoque le calcaire, sur un sous-sol qui mêle granite et lœss. Bien exposé, il donne des Riesling fins et parfumés. Le terroir est notamment exploité par le Weingut der Stadt Bensheim. Classé en grand cru, la Kalkgasse illustre la qualité des terroirs de Bensheim, capitale officieuse de la Bergstraße. L'un des coteaux les plus réputés de Bensheim, la Kalkgasse doit son nom à une présence calcaire, sur un sous-sol qui mêle aussi granite et lœss. Cette singularité donne des Riesling fins et parfumés, légèrement différents des terroirs purement granitiques. Le Weingut der Stadt Bensheim en est l'interprète attitré. Le cru illustre la diversité des sols de Bensheim, capitale officieuse de la Bergstraße. Sa singularité géologique — une présence calcaire au sein des sols de granite et de lœss — distingue la Kalkgasse des autres coteaux de la région et donne des Riesling d'une finesse particulière. Le Weingut der Stadt Bensheim en est l'interprète historique. Le cru illustre la diversité des terroirs de Bensheim, ville qui concentre, avec Heppenheim, les plus beaux coteaux de la Bergstraße.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor"
+    },
+    {
+      "id": "de-bergstrasse-terr-bensheimer-streichling",
+      "nom": "Bensheimer Streichling",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "100-230 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite et de lœss à Bensheim, prisé pour les vins de base de Sekt comme pour le Riesling (Griesel, Stadt Bensheim).",
+      "notes_objectives": "Le Bensheimer Streichling est un grand coteau de granite et de lœss à Bensheim. Bien exposé, il donne des Riesling racés, et fournit aussi des vins de base réputés pour le Sekt. Le terroir est exploité par des maisons comme Griesel et le Weingut der Stadt Bensheim. Classé en grand cru, le Streichling illustre la double vocation des terroirs de Bensheim, pour le vin tranquille comme pour l'effervescent. Grand coteau de granite et de lœss à Bensheim, le Streichling donne des Riesling racés, mais fournit aussi d'excellents vins de base pour le Sekt. C'est notamment sur ce terroir que la maison Griesel puise une partie de ses raisins. Le cru illustre la double vocation des terroirs de Bensheim, pour le vin tranquille comme pour le grand effervescent, spécialité montante de la région. Sa double vocation fait l'originalité du Streichling : grand coteau de Riesling, il fournit aussi des vins de base recherchés pour le Sekt, notamment chez Griesel. Le granite et le lœss y donnent des vins racés et d'une belle acidité, idéale pour l'effervescent. Le cru illustre l'essor du grand Sekt de la Bergstraße, spécialité montante portée par la renaissance de la catégorie en Allemagne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "sekt",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor|verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-terr-bensheimer-hemsberg",
+      "nom": "Bensheimer Hemsberg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Grauburgunder"
+      ],
+      "altitude": "100-240 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Grand coteau de granite de Bensheim, exposé au sud ; Riesling racés et Burgunder.",
+      "notes_objectives": "Le Bensheimer Hemsberg est un grand coteau de granite à Bensheim, exposé au sud. Il donne des Riesling racés et de beaux Grauburgunder. Le terroir est notamment exploité par le Weingut der Stadt Bensheim. Classé en grand cru, le Hemsberg illustre la qualité des coteaux de granite de Bensheim. Grand coteau de granite exposé au sud, le Hemsberg est l'un des terroirs de référence de Bensheim. Il donne des Riesling racés et de beaux Grauburgunder, exploités notamment par le Weingut der Stadt Bensheim. Le cru illustre la qualité des coteaux de granite de Bensheim, dont les Riesling parfumés sont caractéristiques du style de la Bergstraße. Grand coteau de granite exposé au sud, le Hemsberg donne des Riesling racés et de beaux Grauburgunder, magnifiés par le Weingut der Stadt Bensheim. Il compte parmi les terroirs de référence de Bensheim, dont les Riesling parfumés et tendres incarnent le style de la région. Le cru illustre la qualité des coteaux de granite du cœur de la Bergstraße.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor"
+    },
+    {
+      "id": "de-bergstrasse-terr-auerbacher-fuerstenlager",
+      "nom": "Auerbacher Fürstenlager",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "110-260 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau d'Auerbach au pied du parc paysager princier ; Riesling et Spätburgunder parfumés (Jäger, Simon-Bürkle).",
+      "notes_objectives": "Le Auerbacher Fürstenlager est un coteau d'Auerbach, au pied du parc paysager princier (Fürstenlager) qui surplombe le village. Sur le granite et le lœss, il donne des Riesling et des Spätburgunder parfumés. Le terroir est exploité par des domaines comme Jäger et Simon-Bürkle. Classé en grand cru, le Fürstenlager illustre l'alliance du patrimoine et de la vigne, caractéristique de la Bergstraße. Niché au pied du Fürstenlager — un parc paysager princier du début du XIXe siècle qui surplombe Auerbach —, ce coteau de granite et de lœss conjugue beauté du cadre et qualité du terroir. Ses Riesling et ses Spätburgunder, parfumés, sont exploités par des domaines comme Jäger et Simon-Bürkle. Le cru illustre l'alliance du patrimoine et de la vigne, omniprésente sur la Bergstraße. Le cadre du Fürstenlager, parc paysager princier classé, ajoute au charme de ce coteau de granite et de lœss, où la vigne côtoie un jardin historique. Ses Riesling et ses Spätburgunder, parfumés, sont magnifiés par Jäger et Simon-Bürkle. Le cru illustre l'alliance, si caractéristique de la Bergstraße, entre patrimoine, paysage et viticulture, dans le secteur d'Auerbach.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "historique",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor|verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-terr-zwingenberger-alte-burg",
+      "nom": "Zwingenberger Alte Burg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "110-260 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite et de lœss à Zwingenberg, au nord de la région ; Riesling et Burgunder racés (Simon-Bürkle).",
+      "notes_objectives": "La Zwingenberger Alte Burg est un coteau de granite et de lœss à Zwingenberg, dans le nord de la Bergstraße. Bien exposé, il donne des Riesling racés et de beaux Burgunder. Le terroir est le fief du domaine Simon-Bürkle, l'un des meilleurs producteurs privés de la région. Classé en grand cru, l'Alte Burg illustre la qualité des terroirs de granite du nord de la Bergstraße. Dominé par les hauteurs du nord de la région, le coteau de l'Alte Burg, sur granite et lœss, est le fief du domaine Simon-Bürkle, l'un des meilleurs producteurs privés de la Bergstraße. Ses Riesling racés et ses beaux Burgunder en font l'un des terroirs phares de Zwingenberg. Le cru illustre la qualité des coteaux de granite du nord de la région, à la limite avec la plaine du Rhin. Fief du domaine Simon-Bürkle, chef de file des producteurs privés de la région, l'Alte Burg donne, sur son granite et son lœss, des Riesling racés et de beaux Burgunder. Située à l'extrémité nord de la Bergstraße, à la limite de la plaine du Rhin, elle bénéficie d'une belle exposition. Le cru illustre la qualité des coteaux de granite du nord de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor|wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-terr-heppenheimer-eckweg",
+      "nom": "Heppenheimer Eckweg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Grauburgunder"
+      ],
+      "altitude": "120-250 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite à Heppenheim ; Riesling et Grauburgunder de belle facture (Koob).",
+      "notes_objectives": "Le Heppenheimer Eckweg est un coteau de granite à Heppenheim. Bien exposé, il donne des Riesling et des Grauburgunder de belle facture. Le terroir est notamment exploité par le Weinbau Koob. Il illustre la qualité des coteaux de granite d'Heppenheim, dans le sud de la Bergstraße. Coteau de granite d'Heppenheim, l'Eckweg donne des Riesling et des Grauburgunder de belle facture, exploités notamment par le Weinbau Koob. Il complète la série des bons coteaux d'Heppenheim, l'un des deux centres viticoles de la Bergstraße, où le granite et le lœss façonnent des Riesling parfumés et élégants. Il complète la série des bons coteaux de granite d'Heppenheim, l'un des deux grands centres viticoles de la Bergstraße. Bien exposé sur le granite, il offre des Riesling parfumés d'un bon rapport qualité-prix.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "starkenburg"
+      ],
+      "source": "bergstrasse-odenwald"
+    },
+    {
+      "id": "de-bergstrasse-terr-bensheimer-kirchberg",
+      "nom": "Bensheimer Kirchberg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "altitude": "100-220 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de Bensheim ; Riesling et Burgunder parfumés (Weingut der Stadt Bensheim).",
+      "notes_objectives": "Le Bensheimer Kirchberg est un coteau de Bensheim, sur granite et lœss. Bien exposé, il donne des Riesling et des Burgunder parfumés. Le terroir est notamment exploité par le Weingut der Stadt Bensheim. Il illustre la qualité des coteaux de Bensheim. Coteau de Bensheim sur granite et lœss, le Kirchberg donne des Riesling et des Burgunder parfumés, exploités notamment par le Weingut der Stadt Bensheim. Il illustre la qualité des coteaux de Bensheim, ville qui concentre, avec Heppenheim, l'essentiel des grands terroirs de la région. Il illustre la qualité des coteaux de Bensheim, capitale officieuse de la région, où le granite et le lœss façonnent des Riesling parfumés. Il demeure une valeur sûre parmi les coteaux de granite et de lœss de Bensheim.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor"
+    },
+    {
+      "id": "de-bergstrasse-terr-auerbacher-hoellberg",
+      "nom": "Auerbacher Höllberg",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "120-270 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite d'Auerbach, exposé au sud ; Riesling et Spätburgunder (Simon-Bürkle).",
+      "notes_objectives": "Le Auerbacher Höllberg est un coteau de granite d'Auerbach, exposé au sud. Il donne des Riesling et des Spätburgunder. Le terroir est exploité par le domaine Simon-Bürkle. Il illustre la qualité des coteaux d'Auerbach, dans le nord de la Bergstraße. Coteau de granite d'Auerbach exposé au sud, le Höllberg donne des Riesling et des Spätburgunder, exploités par le domaine Simon-Bürkle. Il illustre la qualité des coteaux d'Auerbach, dans le nord de la Bergstraße, où le granite confère aux Riesling leur finesse florale caractéristique. Il confirme la qualité des coteaux d'Auerbach, dans le nord de la Bergstraße, voués au Riesling et au Spätburgunder. Sa belle exposition sud en fait l'un des bons coteaux d'Auerbach, dans le nord de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor|wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-terr-schoenberger-herrenwingert",
+      "nom": "Schönberger Herrenwingert",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "altitude": "120-260 m",
+      "sols": "granite décomposé (Urgestein) et lœss",
+      "caracteristiques_rapides": "Coteau de granite à Schönberg, près de Bensheim ; Riesling et Burgunder (Schloss Schönberg).",
+      "notes_objectives": "Le Schönberger Herrenwingert est un coteau de granite à Schönberg, près de Bensheim. Bien exposé, il donne des Riesling et des Burgunder. Le terroir est exploité par le domaine de Schloss Schönberg. Il illustre la qualité des coteaux de granite du secteur de Bensheim. Coteau de granite à Schönberg, près de Bensheim, le Herrenwingert est le fief du domaine de Schloss Schönberg. Il donne des Riesling et des Burgunder fins, dans un cadre castral. Le cru illustre la qualité des coteaux de granite du secteur de Bensheim et l'attache patrimoniale des domaines de la Bergstraße. Dans son cadre castral, il illustre l'attache patrimoniale des domaines de granite de la Bergstraße. Sa finesse florale est représentative du style des Riesling de la Bergstraße.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "starkenburg"
+      ],
+      "source": "euroweinkontor"
+    },
+    {
+      "id": "de-bergstrasse-terr-gross-umstaedter-steingerueck",
+      "nom": "Groß-Umstädter Steingerück",
+      "type": "lieu-dit",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Umstadt (Odenwald)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "150-280 m",
+      "sols": "grès et lœss (Odenwald)",
+      "caracteristiques_rapides": "Coteau de grès et de lœss de l'« île viticole de l'Odenwald », à Groß-Umstadt ; Riesling et Spätburgunder (Dingeldey, Vinum Autmundis).",
+      "notes_objectives": "Le Groß-Umstädter Steingerück est un coteau de grès et de lœss de l'« île viticole de l'Odenwald », à Groß-Umstadt. Bien exposé, il donne des Riesling et des Spätburgunder. Le terroir est exploité par des domaines comme Dingeldey et la coopérative Vinum Autmundis. Il illustre la singularité de l'Odenwald, secteur détaché de la Bergstraße. Coteau de grès et de lœss de l'« île viticole de l'Odenwald », à Groß-Umstadt, le Steingerück se distingue par sa géologie, différente du granite de la Bergstraße rhénane. Ses Riesling et ses Spätburgunder, exploités par Dingeldey et Vinum Autmundis, reflètent l'originalité de ce secteur détaché. Le cru illustre la singularité de l'Odenwald au sein de la région. Il porte haut les couleurs de l'« île viticole de l'Odenwald », secteur détaché et original de la région. Sa géologie de grès, unique dans la région, en fait une curiosité de l'Odenwald.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "odenwald",
+        "gres",
+        "grand-coteau",
+        "umstadt"
+      ],
+      "source": "euroweinkontor|verkehrsverein-bensheim"
+    }
+  ]
+}

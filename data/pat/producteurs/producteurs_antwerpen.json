@@ -1,0 +1,416 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "antwerpen",
+  "region_label": "Antwerpen",
+  "source_file": "producteurs_antwerpen_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 13,
+  "items": [
+    {
+      "id": "be-antwerpen-prod-wijndomein-oud-conynsbergh",
+      "nom": "Wijndomein Oud Conynsbergh",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "commune": "Boechout",
+      "pays": "Belgique",
+      "cepages": [
+        "Auxerrois",
+        "Chardonnay",
+        "Pinot Noir",
+        "Muscat"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le seul domaine vraiment visible de la province, et l'un des rares du corpus né d'une décision collective : huit amis en vacances au Piémont, quelques bouteilles ouvertes, et l'idée de planter chez eux. Le premier demi-hectare sort de terre en 2014 à l'ombre du moulin du XVIIIe siècle de Boechout, au sud-est d'Anvers. Le domaine compte aujourd'hui quatre vignobles sur quatre sites distincts, reliés par un circuit cycliste de dix kilomètres dont le moulin est le point de départ et d'arrivée, et annonce une extension à dix-neuf hectares assortie d'une nouvelle cuverie.\n\nL'encépagement met en avant l'Auxerrois en blanc et le Pinot Noir en rouge, complétés de Chardonnay et de Muscat, avec des effervescents. La particularité tient à la valorisation intégrale de la récolte : les marcs de pressurage sont refermentés puis distillés deux fois, avec un élevage sur verre, sur inox ou sur bois selon le cépage. C'est une pratique qu'on n'a croisée qu'une fois ailleurs dans le corpus, à Genoels-Elderen, et elle témoigne d'une approche qui cherche à occuper toute la chaîne.\n\nLe domaine évoque par ailleurs des préparations biodynamiques sans revendiquer de certification, ce qui reste à clarifier. Dans une province dépourvue de tradition et de relief, c'est ce modèle intégré — production, tourisme, distillation, circuit vélo — qui donne au domaine sa visibilité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "nete",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface actuelle non publiée (0,5 ha en 2014, objectif 19 ha) ; le domaine évoque des préparations biodynamiques sans revendiquer de certification — statut de production à confirmer.",
+      "source": "oudconynsbergh.be ; magazine.vab.be"
+    },
+    {
+      "id": "be-antwerpen-prod-vigna-wijn",
+      "nom": "Vigna Wijn",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "commune": "Wijnegem",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Huit hectares à Wijnegem, au nord-est d'Anvers, conduits par Guy Somers : c'est la plus grande surface plantée de la province, davantage même que le domaine de Boechout qui en est pourtant la vitrine.\n\nLe contraste entre cette surface et l'absence quasi totale du domaine dans la presse spécialisée belge est frappant — c'est le même profil que Mérula Wines en Flandre occidentale, et le corpus en compte désormais deux cas. Le nom de la commune mérite d'être relevé : Wijnegem dérive du vin, ce qui atteste une viticulture médiévale dans ce secteur du bassin de la Petite Nèthe. Encépagement, année de plantation, gamme et appellation éventuelle restent entièrement à documenter. Le domaine se situe au nord-est de l'agglomération anversoise, sur des sols sableux à sablo-limoneux, dans un secteur périurbain dense.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "nete"
+      ],
+      "a_verifier": "Encépagement, année de plantation, gamme et appellation éventuelle à documenter — domaine peu présent dans la presse spécialisée malgré sa surface.",
+      "source": "vignawijn.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-emmelhof-wijndomein",
+      "nom": "Emmelhof Wijndomein",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "commune": "Emblem (Ranst)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et sept ares à Emblem, dans la commune de Ranst, conduits par Wim Ariens, dans la vallée de la Grande Nèthe à l'est d'Anvers.\n\nLe secteur est celui des sols sableux à sablo-limoneux de la Campine méridionale, à faible altitude, sans relief exploitable. La vigne y arrive dans les années 2020 comme diversification agricole ou comme projet individuel, portée par la proximité immédiate de l'agglomération anversoise — un bassin de plus d'un demi-million d'habitants qui garantit l'écoulement de productions de cette taille en vente directe. Encépagement, année de plantation et couleurs produites restent à documenter. Le domaine est l'un des quatre installés dans la vallée des Nèthes, autour d'Anvers, secteur qui concentre les projets les plus récents de la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "nete",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "emmelhof.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijnfaktorij",
+      "nom": "Wijnfaktorij",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "commune": "Anvers",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un chai urbain installé en plein centre d'Anvers, conduit par Patrick Nijs : les raisins proviennent de deux hectares de vignes en propre, cultivées ailleurs en Belgique, puis acheminés en ville pour y être vinifiés avec le minimum d'intervention.\n\nC'est le seul domaine du corpus à revendiquer explicitement une approche nature, et le seul à produire un vin de macération pelliculaire — la cuvée Kontreir existe en rouge et en orange, tandis que la gamme Chansaar couvre le rouge, le blanc et un pétillant naturel rosé.\n\nLe montage — vignes dissociées du chai — rejoint celui du Vignoble de Neuville, en Ardenne liégeoise. La localisation des vignes n'étant pas publiée, il faudra recouper avec les autres fichiers provinciaux pour écarter tout doublon. Les vins sont appréciés des amateurs de production peu interventionniste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "nature",
+        "orange",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Localisation exacte des vignes non publiée — le domaine indique seulement qu'elles sont en Belgique. À recouper avec les autres fichiers provinciaux pour éviter un doublon.",
+      "source": "wijnfaktorij.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijndomein-eersselshof",
+      "nom": "Wijndomein Eersselshof",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Lichtaart (Kasterlee)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares à Lichtaart, dans la commune de Kasterlee, conduits par Ingrid Vanparijs et Romain Rutten : l'un des plus étendus de la Campine anversoise.\n\nLa Campine est un plateau de sables quaternaires pauvres et acides, longtemps couvert de bruyères et de bois de pins, mis en culture tardivement — c'est le contexte pédologique le moins favorable de Flandre avec le Waasland. Quatre hectares y constituent une exploitation professionnelle, ce qui reste l'exception : sur les treize domaines de la province, sept font moins d'un hectare. Encépagement, année de plantation et appellation éventuelle restent à documenter. Kasterlee est l'une des communes touristiques de la Campine, connue pour ses dunes intérieures et ses pinèdes, ce qui offre au domaine un flux de visiteurs appréciable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et appellation éventuelle à documenter.",
+      "source": "eersselshof.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-domein-walterus",
+      "nom": "Domein Walterus",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Poederlee (Lille)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Poederlee, dans la commune de Lille, au cœur de la Campine anversoise, conduit par Reinout Moonen et Annick Milis, hors appellation.\n\nLe domaine est représentatif du format dominant de la province : environ un hectare, un couple, une vente directe, aucune reconnaissance officielle. Sur les treize vignobles recensés, un seul revendique une indication géographique. Cette faible structuration s'explique par la jeunesse du vignoble local — presque tout date d'après 2014 — et par l'absence d'appellation territoriale, la Campine n'étant couverte par aucune des cinq AOP flamandes. Encépagement et année de plantation restent à documenter. Lille et Poederlee occupent le centre de la Campine anversoise, dans un paysage de bois, de landes reconverties et de fermes dispersées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "domeinwalterus.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-verlooy-winery",
+      "nom": "Verlooy Winery",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Balen",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre-vingt-cinq ares à Balen, dans la Campine orientale, conduits par Hans Verlooy et commercialisés sous la marque Chappel.\n\nBalen se situe à la limite du Limbourg, dans un secteur de sables campinois et d'anciennes carrières de sable, à une trentaine de kilomètres au nord des collines du Hageland. La dissociation entre le nom du domaine et celui de la marque est un cas de figure qu'on retrouve ailleurs dans le corpus — Vignoble des Agaises et Ruffus, Vignoble de Saint Martin et Le Dit-Vin — et qui complique le repérage. Encépagement, année de plantation et articulation entre les deux noms restent à documenter. À quatre-vingt-cinq ares, le domaine reste dans le format dominant de la province, celui d'une production entièrement écoulée en circuit court.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et articulation entre le nom du domaine et la marque à documenter.",
+      "source": "chappel.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijndomein-hoeve-blueland",
+      "nom": "Wijndomein Hoeve Blueland",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Meerhout",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sept mille cinq cents mètres carrés plantés en 2015 à Meerhout, dans la Campine méridionale, par Didier Van Thielen.\n\nLa date compte : en 2015, la province ne comptait qu'une poignée de vignobles, et la vague de plantations campinoises n'avait pas commencé. Le domaine fait donc partie des précurseurs locaux, avec celui de Boechout planté un an plus tôt. Les sols sont ceux du plateau campinois — sables quaternaires acides, drainants mais très pauvres, avec une réserve hydrique faible qui rend la vigne sensible aux étés secs. Encépagement, couleurs produites et volumes restent à documenter. Meerhout se trouve dans la vallée de la Grande Nèthe, entre Campine et Hageland, dans un secteur agricole peu peuplé. La production, très limitée, se vend au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijndomein-hoogstraten",
+      "nom": "Wijndomein Hoogstraten",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Minderhout (Hoogstraten)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sept mille mètres carrés à Minderhout, dans la commune de Hoogstraten, à la frontière néerlandaise, conduits par Charis Kamoen et Paul Depauw.\n\nLe contexte agricole est remarquable : Hoogstraten est le premier bassin de production de fraises et de légumes de Belgique, avec une criée qui fait référence à l'échelle européenne. La vigne y arrive donc dans un environnement de maraîchage intensif à forte valeur ajoutée, sur des sols sableux, selon la même logique de diversification qu'on observe en Hesbaye avec les vergers ou autour de Gand avec l'horticulture ornementale. Encépagement et année de plantation restent à documenter. La commune est aussi connue pour sa collégiale gothique et sa tour, l'une des plus hautes de Belgique, dans un paysage de plaine sableuse à la frontière néerlandaise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "wijndomeinhoogstraten.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijngaard-berghoven",
+      "nom": "Wijngaard Berghoven",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Heist-op-den-Berg",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares à Heist-op-den-Berg, conduits par Louis Moons et reconnus en IGP Vlaamse landwijn — l'une des rares reconnaissances officielles de toute la province.\n\nLa commune doit son nom à la colline qui la domine, l'une des rares éminences de la Campine, qui culmine à une cinquantaine de mètres et offre un panorama sur toute la plaine environnante. C'est précisément le type de microsite qui rend la viticulture possible dans un contexte plat : une pente, une exposition, un drainage. Le domaine est l'un des seuls de la province à disposer d'un vrai argument topographique. Encépagement, année de plantation et volumes restent à documenter. La reconnaissance en IGP suppose déclaration de récolte et contrôle analytique, démarche que peu d'exploitations de cette taille consentent — c'est un indicateur d'intention commerciale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "wijngaardberghoven.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijndomein-meulenhey",
+      "nom": "Wijndomein Meulenhey",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "commune": "Pulderbos (Zandhoven)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares à Pulderbos, dans la commune de Zandhoven, conduits par Sven Pype : une histoire familiale locale, à l'échelle la plus modeste de la province.\n\nCe format — quelques centaines de bouteilles, écoulées dans un rayon de quelques kilomètres — représente une part importante des exploitations recensées en Belgique, et il est particulièrement répandu en Campine, où sept des treize domaines font moins d'un hectare. Le nom renvoie à un moulin, élément récurrent de la toponymie campinoise. Encépagement, année de plantation et couleurs produites restent à documenter. Zandhoven se situe entre Anvers et Herentals, dans la vallée de la Petite Nèthe, sur des sols sableux typiques de la Campine méridionale. Le domaine est l'un des plus récents de la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "kempen",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "meulenhey.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijndomein-valke-vleug",
+      "nom": "Wijndomein Valke Vleug",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Scheldeland",
+      "commune": "Liezele (Puurs-Sint-Amands)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares et trois ares à Liezele, dans la commune de Puurs-Sint-Amands, conduits par Pieter Raeymaekers.\n\nSa singularité est ailleurs que dans la surface : Raeymaekers est également actif dans le conseil viticole sous l'enseigne Vinetiq, ce qui en fait l'un des rares vignerons belges à cumuler production et prestation de conseil. Dans un pays où presque tous les vignerons se sont installés sans formation ni antériorité familiale, cette fonction compte : elle complète la typologie déjà repérée — ateliers de vinification partagés au Chapitre, gestion déléguée chez Bon Baron, vinification pour tiers à Hoenshof. Encépagement, année de plantation et gamme restent à documenter. Le domaine se présente comme une maison du vin autant que comme un vignoble, avec une activité d'accueil développée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "scheldeland"
+      ],
+      "a_verifier": "Encépagement, année de plantation et gamme à documenter ; nature exacte de l'activité de conseil à préciser.",
+      "source": "valkevleug.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-prod-wijn-goed-coninckxbeeck",
+      "nom": "Wijn-Goed Coninckxbeeck",
+      "type": "domaine",
+      "region": "Antwerpen",
+      "sous_region": "Scheldeland",
+      "commune": "Hingene (Bornem)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine de Hingene, dans la commune de Bornem, sur la rive droite de l'Escaut, face au pays de Waes.\n\nLe secteur du Scheldeland compte ainsi deux vignobles de part et d'autre du fleuve, celui-ci et Valke Vleug à Liezele. On est dans un paysage de polders intérieurs et de prairies alluviales, entre Anvers et Termonde, sur des sols sableux à limoneux avec une nappe haute — un contexte comparable à celui du Waasland voisin, parmi les moins favorables du corpus. Le domaine figure dans les listes régionales mais pas dans le recensement provincial de la fédération : surface, encépagement et année de plantation restent à documenter. Bornem est connue pour son château et son abbaye, et le secteur bénéficie d'un flux touristique lié aux boucles de l'Escaut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "scheldeland"
+      ],
+      "a_verifier": "Surface, encépagement et année de plantation non publiés — le domaine figure dans les listes régionales mais pas dans le recensement provincial de la fédération.",
+      "source": "belgischewijnbouwers.be"
+    }
+  ]
+}

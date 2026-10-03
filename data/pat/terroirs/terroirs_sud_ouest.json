@@ -1,0 +1,973 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "sud_ouest",
+  "region_label": "Sud-Ouest",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_sud_ouest_vPat.xlsx",
+  "built_at": "2026-05-15T08:37:12+00:00",
+  "count": 34,
+  "items": [
+    {
+      "id": "so-bergerac",
+      "nom": "Bergerac",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Cot",
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle"
+      ],
+      "altitude": "20-200 m",
+      "sols": "Argilo-calcaires, graves, sables",
+      "caracteristiques_rapides": "AOC régionale ~6 500 ha autour de Bergerac (rive droite et gauche). Voisin direct de Bordeaux, mêmes cépages. Rouges, blancs secs, rosés. Tour des Gendres en référence.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "bordelais",
+        "merlot"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cotes-de-bergerac",
+      "nom": "Côtes de Bergerac",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Cot"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Argilo-calcaires, graves",
+      "caracteristiques_rapides": "AOC pour rouges plus structurés que Bergerac (rendements plus bas, degré plus élevé). Et une version blanc moelleux.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "garde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-pecharmant",
+      "nom": "Pécharmant",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Cot"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Sables, graves, argiles ferrugineuses (\"Tran\")",
+      "caracteristiques_rapides": "AOC ~410 ha au nord-est de Bergerac, exclusivement rouge. Sols singuliers (Tran ferrugineux). Garde longue. Château Tiregand, Champarel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "rouge",
+        "tran",
+        "garde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-monbazillac",
+      "nom": "Monbazillac",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires, marnes",
+      "caracteristiques_rapides": "AOC liquoreuse ~2 000 ha sur la rive gauche de la Dordogne face à Bergerac. Botrytisation par les brumes matinales. Tirecul La Gravière, L'Ancienne Cure, Bélingard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "botrytis",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-saussignac",
+      "nom": "Saussignac",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC liquoreuse ~50 ha à l'ouest de Monbazillac. Style généralement plus riche que Monbazillac. Confidentielle.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-rosette",
+      "nom": "Rosette",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC moelleuse confidentielle (~30 ha) au nord de Bergerac.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "moelleux",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-montravel",
+      "nom": "Montravel",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle",
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Cot"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires, graves",
+      "caracteristiques_rapides": "AOC à l'ouest de Bergerac (frontière de la Gironde). Versions sec (blanc) et rouge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sec"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cotes-montravel",
+      "nom": "Côtes de Montravel",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC moelleuse (sucres résiduels modérés). Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "moelleux",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-haut-montravel",
+      "nom": "Haut-Montravel",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC liquoreuse (botrytisée). Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cahors",
+      "nom": "Cahors",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-Quercy",
+      "pays": "France",
+      "cepages_rois": [
+        "Cot (Malbec)",
+        "Merlot",
+        "Tannat"
+      ],
+      "altitude": "100-350 m",
+      "sols": "Trois terrasses : alluvions de la vallée du Lot (graves), terrasses moyennes (galets), causses (calcaires)",
+      "caracteristiques_rapides": "AOC ~3 800 ha consacrée au rouge sur Cot (= Malbec, 70% min, souvent 100%). Berceau historique du Malbec. Trois identités : vallée (souple), terrasses (équilibrées), causses (puissants). Clos Triguedina, Cèdre, Cosse Maisonneuve, Mas del Périé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "malbec",
+        "cot",
+        "terrasses",
+        "causses"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-marcillac",
+      "nom": "Marcillac",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Aveyron",
+      "pays": "France",
+      "cepages_rois": [
+        "Fer Servadou (Mansois)"
+      ],
+      "altitude": "300-500 m",
+      "sols": "Rougiers (grès rouges du Permien)",
+      "caracteristiques_rapides": "AOC ~190 ha au nord de Rodez, monovariétale Mansois (= Fer Servadou). Sols rouges spectaculaires (rougiers). Vins de garde, identité forte. Domaine du Cros, Matha, Laurens.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "monovariétale",
+        "mansois",
+        "rougiers",
+        "altitude"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-entraygues-le-fel",
+      "nom": "Entraygues-Le Fel",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Aveyron",
+      "pays": "France",
+      "cepages_rois": [
+        "Fer Servadou (Mansois)",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Gamay",
+        "Chenin"
+      ],
+      "altitude": "300-500 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Petite AOC ~20 ha à la confluence du Lot et de la Truyère. Rouges sur Mansois et Cabernet Franc, blancs sur Chenin. Confidentiel. Jean-Marc Viguier.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "schistes",
+        "chenin",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-estaing",
+      "nom": "Estaing",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Aveyron",
+      "pays": "France",
+      "cepages_rois": [
+        "Fer Servadou",
+        "Gamay",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Chenin",
+        "Mauzac"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Schistes, calcaires",
+      "caracteristiques_rapides": "AOC très petite (~14 ha) sur les coteaux du Lot. Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cotes-millau",
+      "nom": "Côtes de Millau",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Aveyron",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Gamay",
+        "Fer Servadou",
+        "Cabernet Sauvignon",
+        "Chenin",
+        "Mauzac"
+      ],
+      "altitude": "300-550 m",
+      "sols": "Schistes, calcaires",
+      "caracteristiques_rapides": "AOC ~50 ha dans les gorges du Tarn, vignoble d'altitude. Vins frais, identité montagnarde.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "altitude",
+        "gorges-tarn"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-gaillac",
+      "nom": "Gaillac",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Tarn",
+      "pays": "France",
+      "cepages_rois": [
+        "Duras",
+        "Braucol (Fer Servadou)",
+        "Prunelard",
+        "Syrah",
+        "Gamay",
+        "Cabernet",
+        "Merlot",
+        "Mauzac",
+        "Loin de l Œil",
+        "Muscadelle",
+        "Ondenc",
+        "Sauvignon",
+        "Sémillon"
+      ],
+      "altitude": "120-300 m",
+      "sols": "Graves, calcaires, alluvions, schistes (rive droite vs rive gauche)",
+      "caracteristiques_rapides": "AOC ~3 000 ha sur le Tarn, un des plus anciens vignobles français. Cépages locaux uniques (Mauzac, Loin de l'Œil, Ondenc, Prunelard, Duras, Braucol). Rouges, blancs secs/moelleux/perlés/effervescents. Plageoles, Causse Marines, La Ramaye.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "cepages-anciens",
+        "plageoles"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-gaillac-premieres-cotes",
+      "nom": "Gaillac Premières Côtes",
+      "type": "denomination",
+      "region": "Sud-Ouest",
+      "sous_region": "Tarn",
+      "pays": "France",
+      "cepages_rois": [
+        "Mauzac",
+        "Loin de l Œil",
+        "Muscadelle",
+        "Ondenc",
+        "Sauvignon"
+      ],
+      "altitude": "150-300 m",
+      "sols": "Calcaires, argilo-calcaires",
+      "caracteristiques_rapides": "Dénomination géographique Gaillac réservée aux blancs moelleux et liquoreux des coteaux de la rive droite.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "moelleux",
+        "rive-droite"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-buzet",
+      "nom": "Buzet",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-et-Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Graves, argilo-calcaires, boulbènes",
+      "caracteristiques_rapides": "AOC ~1 800 ha (Lot-et-Garonne). Cépages bordelais. Production largement coopérative (Vignerons de Buzet).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "bordelais",
+        "cooperative"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cotes-marmandais",
+      "nom": "Côtes du Marmandais",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-et-Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Abouriou",
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot",
+        "Syrah",
+        "Gamay"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Boulbènes, graves, argilo-calcaires",
+      "caracteristiques_rapides": "AOC ~1 200 ha sur la Garonne. Particularité : cépage local Abouriou (autorisé jusqu'à 50%). Mostly bordelais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "abouriou"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-cotes-duras",
+      "nom": "Côtes de Duras",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-et-Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot",
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle",
+        "Ondenc"
+      ],
+      "altitude": "60-200 m",
+      "sols": "Argilo-calcaires, graves",
+      "caracteristiques_rapides": "AOC ~1 800 ha à la limite de la Gironde. Cépages bordelais. Domaine Mouthes Le Bihan.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "bordelais",
+        "duras"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-brulhois",
+      "nom": "Côtes du Brulhois",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-et-Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Cot",
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Tannat",
+        "Fer Servadou"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Boulbènes, graves",
+      "caracteristiques_rapides": "AOC ~200 ha sur la Garonne entre Agen et Moissac. Connue pour les \"vins noirs\" (couleur intense).",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "vins-noirs",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-saint-mont",
+      "nom": "Saint-Mont",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Gers",
+      "pays": "France",
+      "cepages_rois": [
+        "Tannat",
+        "Pinenc (Fer Servadou)",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Gros Manseng",
+        "Petit Manseng",
+        "Petit Courbu",
+        "Arrufiac"
+      ],
+      "altitude": "100-200 m",
+      "sols": "Argilo-calcaires, sables fauves",
+      "caracteristiques_rapides": "AOC ~1 200 ha au sud-ouest du Gers, voisine de Madiran. Largement coopérative (Plaimont). Travail remarquable de conservation des cépages anciens.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "plaimont",
+        "cepages-anciens"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-igp-cotes-gascogne",
+      "nom": "IGP Côtes de Gascogne",
+      "type": "igp",
+      "region": "Sud-Ouest",
+      "sous_region": "Gers",
+      "pays": "France",
+      "cepages_rois": [
+        "Colombard",
+        "Ugni Blanc",
+        "Gros Manseng",
+        "Sauvignon",
+        "Chardonnay"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Argilo-calcaires, boulbènes",
+      "caracteristiques_rapides": "IGP très importante (~13 000 ha) consacrée surtout aux blancs secs vifs et fruités. Tariquet en figure de proue. Issu en partie des terres armagnacaises.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "gascogne",
+        "blancs",
+        "tariquet"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-madiran",
+      "nom": "Madiran",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Béarn-Bigorre",
+      "pays": "France",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Pinenc (Fer Servadou)"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Argilo-calcaires, galets, boulbènes (3 terroirs : argilo-calcaires, graves, sables fauves)",
+      "caracteristiques_rapides": "AOC ~1 300 ha au sud-ouest, autour du Madiranais (Gers/Hautes-Pyrénées/Pyrénées-Atlantiques). Tannat (60% min) en cépage roi. Rouges puissants et tanniques de longue garde. Brumont (Montus, Bouscassé), Berthoumieu, Capmartin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "tannat",
+        "garde",
+        "brumont",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-pacherenc-vic-bilh",
+      "nom": "Pacherenc du Vic-Bilh",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Béarn-Bigorre",
+      "pays": "France",
+      "cepages_rois": [
+        "Petit Manseng",
+        "Gros Manseng",
+        "Petit Courbu",
+        "Arrufiac",
+        "Sauvignon",
+        "Sémillon"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Argilo-calcaires, galets",
+      "caracteristiques_rapides": "AOC ~250 ha en blanc sur les mêmes terroirs que Madiran. Versions sec et moelleux/liquoreux (Petit Manseng en surmaturation). Style aromatique et tendu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "petit-manseng",
+        "moelleux"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-bearn",
+      "nom": "Béarn",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Béarn-Bigorre",
+      "pays": "France",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Pinenc",
+        "Gros Manseng",
+        "Petit Manseng",
+        "Petit Courbu",
+        "Raffiat de Moncade"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Argilo-calcaires, galets",
+      "caracteristiques_rapides": "AOC régionale ~200 ha. Rouges (cépages comme Madiran), blancs (Mansengs). Dispersée géographiquement.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "bearn"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-jurancon",
+      "nom": "Jurançon",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Béarn-Bigorre",
+      "pays": "France",
+      "cepages_rois": [
+        "Petit Manseng",
+        "Gros Manseng",
+        "Petit Courbu",
+        "Camaralet",
+        "Lauzet"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Galets, argilo-calcaires, schistes (Pyrénées)",
+      "caracteristiques_rapides": "AOC ~1 400 ha au pied des Pyrénées, exclusivement blanc. Versions sec (Gros Manseng) et moelleux/liquoreux (Petit Manseng en passerillage sur souche). Vendanges tardives jusqu'à décembre. Cauhapé, Camin Larredya, Lapeyre.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "petit-manseng",
+        "passerillage",
+        "altitude"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-jurancon-sec",
+      "nom": "Jurançon Sec",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Béarn-Bigorre",
+      "pays": "France",
+      "cepages_rois": [
+        "Gros Manseng",
+        "Petit Manseng",
+        "Petit Courbu"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Galets, argilo-calcaires",
+      "caracteristiques_rapides": "Version sec de l'AOC Jurançon, à dominante Gros Manseng. Vins tendus, salins, longue garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sec",
+        "gros-manseng"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-irouleguy",
+      "nom": "Irouléguy",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Pays basque",
+      "pays": "France",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Courbu",
+        "Petit Manseng",
+        "Gros Manseng"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Schistes, grès rouges, argilo-calcaires (Pyrénées)",
+      "caracteristiques_rapides": "AOC ~230 ha au Pays basque (vallée des Aldudes), seul vignoble basque français. Rouges sur Tannat/Cabernet Franc, blancs sur Mansengs. Vinifications héroïques sur terrasses. Arretxea, Brana, Ilarria, Bordatto.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "basque",
+        "terrasses",
+        "arretxea",
+        "heroique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-fronton",
+      "nom": "Fronton",
+      "type": "appellation_village",
+      "region": "Sud-Ouest",
+      "sous_region": "Haute-Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Négrette",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot",
+        "Syrah",
+        "Gamay",
+        "Fer Servadou"
+      ],
+      "altitude": "100-200 m",
+      "sols": "Boulbènes, graves",
+      "caracteristiques_rapides": "AOC ~1 600 ha au nord de Toulouse. Négrette comme cépage roi (50-70%), local et endémique. Rouges et rosés frais, fruités.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "negrette",
+        "toulouse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-tursan",
+      "nom": "Tursan",
+      "type": "appellation_regionale",
+      "region": "Sud-Ouest",
+      "sous_region": "Landes",
+      "pays": "France",
+      "cepages_rois": [
+        "Tannat",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Pinenc",
+        "Baroque",
+        "Gros Manseng",
+        "Petit Manseng",
+        "Sauvignon"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Argiles, sables, calcaires",
+      "caracteristiques_rapides": "AOC ~250 ha dans les Landes. Particularité : cépage blanc local Baroque (autorisé). Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "baroque",
+        "landes",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-igp-comte-tolosan",
+      "nom": "IGP Comté Tolosan",
+      "type": "igp",
+      "region": "Sud-Ouest",
+      "sous_region": "Sud-Ouest",
+      "pays": "France",
+      "cepages_rois": [
+        "large palette"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant l'ensemble du Sud-Ouest (8 départements). Cadre pour des cuvées hors AOC (assemblages atypiques, cépages anciens).",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "generaliste",
+        "sud-ouest"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-igp-perigord",
+      "nom": "IGP Périgord",
+      "type": "igp",
+      "region": "Sud-Ouest",
+      "sous_region": "Bergerac-Dordogne",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet",
+        "Cot",
+        "Sauvignon",
+        "Sémillon",
+        "Chenin",
+        "Cépages d antan"
+      ],
+      "altitude": "50-300 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP départementale (Dordogne). Cadre pour cuvées hors AOC. Bois (et autres) y sortent quelques curiosités.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "perigord"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-igp-lot",
+      "nom": "IGP Côtes du Lot",
+      "type": "igp",
+      "region": "Sud-Ouest",
+      "sous_region": "Lot-Quercy",
+      "pays": "France",
+      "cepages_rois": [
+        "Cot",
+        "Merlot",
+        "Tannat",
+        "Chardonnay",
+        "Viognier",
+        "Chenin"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant le département du Lot, périphérie de Cahors. Permet d'autres cépages que le Cot. Mas del Périé pour ses cuvées hors AOC.",
+      "niveau_reference": 3,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "lot",
+        "hors-aoc-cahors"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "so-igp-cotes-tarn",
+      "nom": "IGP Côtes du Tarn",
+      "type": "igp",
+      "region": "Sud-Ouest",
+      "sous_region": "Tarn",
+      "pays": "France",
+      "cepages_rois": [
+        "Mauzac",
+        "Loin de l Œil",
+        "Sauvignon",
+        "Cabernet",
+        "Syrah",
+        "Duras",
+        "Braucol",
+        "Prunelard"
+      ],
+      "altitude": "120-300 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant le département du Tarn, autour de Gaillac. Cadre pour des cuvées hors cadre AOC.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "tarn",
+        "hors-aoc-gaillac"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "mittelrhein",
+  "region_label": "Mittelrhein (Allemagne)",
+  "source_file": "producteurs_mittelrhein_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 14,
+  "items": [
+    {
+      "id": "de-mittelrhein-prod-toni-jost",
+      "nom": "Toni Jost",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Bacharach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bacharacher Hahn"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacharach, au cœur de la gorge du Rhin classée à l'UNESCO, le domaine Toni Jost — aussi appelé Hahnenhof — est le plus renommé du Mittelrhein. Son joyau est le grand coteau d'ardoise du Bacharacher Hahn, qu'il exploite presque en monopole : une pente raide exposée au sud, à l'entrée d'une vallée latérale, qui donne des Riesling d'une grande race. Mené aujourd'hui par Cecilia Jost, après Peter Jost, le domaine signe des Riesling secs racés et minéraux, mais aussi de beaux vins à sucrosité résiduelle et de la garde. L'ardoise dévonienne imprime aux vins une salinité et une tension caractéristiques du Mittelrhein. Le domaine possède également une parcelle dans le Rheingau voisin, ce qui élargit sa palette. Membre du VDP, Toni Jost est l'ambassadeur historique du Mittelrhein et la preuve que cette petite région peut produire des Riesling de tout premier plan, dignes des plus grandes régions d'ardoise allemandes. Le Bacharacher Hahn, à l'entrée d'une vallée latérale juste en aval de Bacharach, est l'un des plus grands terroirs du Mittelrhein : une pente d'ardoise raide et plein sud, dont la roche altérée donne aux Riesling une minéralité saline et une grande finesse. Le quasi-monopole qu'en détient le domaine assure une expression d'une rare cohérence. Cecilia Jost, qui a succédé à son père Peter, perpétue un style à la fois racé et précis, avec des Riesling secs de garde et de splendides vins à sucrosité résiduelle. La parcelle que le domaine possède dans le Rheingau (à Walluf) élargit encore sa palette et témoigne de son ambition. Dans une région longtemps connue pour le négoce plus que pour la qualité, Toni Jost a porté très haut le nom du Mittelrhein, et figure parmi les grandes signatures du Riesling d'ardoise allemand. Au-delà de ses vins, le domaine joue un rôle d'ambassadeur pour tout le Mittelrhein, région minuscule et fragile dont le vignoble en terrasses, classé au patrimoine mondial, lutte contre l'abandon et l'embroussaillement. En maintenant au plus haut niveau un grand terroir comme le Hahn, Toni Jost contribue à préserver ce paysage culturel unique. Pour l'amateur, le domaine est la porte d'entrée idéale vers les Riesling d'ardoise du Mittelrhein : racés, salins, d'une grande pureté, et capables d'une longue garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "icone",
+        "vdp",
+        "ardoise",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|schiller-wine"
+    },
+    {
+      "id": "de-mittelrhein-prod-florian-weingart",
+      "nom": "Florian Weingart",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Boppard)",
+      "commune": "Spay",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bopparder Hamm Feuerlay",
+        "Bopparder Hamm Ohlenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Spay, dans le nord du Mittelrhein, le domaine Florian Weingart est l'un des sommets de la région, sur le grand coteau du Bopparder Hamm. Ce vaste amphithéâtre d'ardoise, lové dans la plus grande boucle du Rhin et exposé plein sud, est l'une des plus belles pentes de tout le cours du fleuve. Perfectionniste, Florian Weingart a délibérément réduit ses volumes pour ne se concentrer que sur la qualité. Ses Riesling, issus des parcelles Feuerlay, Ohlenberg et Mandelstein, sont complexes, d'une grande fraîcheur et d'une belle acidité, dans toute la gamme du sec au liquoreux ; ses Sekt sont également réputés. L'ardoise du Hamm et l'exposition idéale donnent des vins à la fois mûrs et tendus, d'une grande pureté minérale. Souvent cité parmi les meilleurs vignerons d'Allemagne malgré la discrétion de la région, Weingart incarne l'excellence du Riesling du Bopparder Hamm. Le Bopparder Hamm, qui épouse la plus grande boucle du Rhin entre Boppard et Spay, forme un immense amphithéâtre d'ardoise ouvert au sud : l'une des plus belles et des plus chaudes pentes de tout le fleuve. Florian Weingart y travaille les meilleures parcelles — le Feuerlay, au cœur du coteau, l'Ohlenberg, le Mandelstein. Son choix de réduire volontairement les rendements et les volumes, pour ne viser que l'excellence, a fait de lui une référence. Ses Riesling, d'une grande fraîcheur et d'une acidité vibrante, brillent dans toute la gamme, du sec au liquoreux, en passant par de remarquables feinherb et de grands Sekt. Malgré la discrétion de la région, Weingart est régulièrement cité parmi les meilleurs vignerons d'Allemagne, et ses vins comptent parmi les plus profonds et les plus précis du Bopparder Hamm. Le Bopparder Hamm, avec ses terrasses d'ardoise dominant la plus grande boucle du Rhin, est l'un des paysages viticoles les plus spectaculaires d'Allemagne, et Weingart en est l'interprète le plus exigeant. Ses feinherb et ses Kabinett, d'une buvabilité et d'une finesse remarquables, sont particulièrement prisés des connaisseurs. Pour qui cherche de grands Riesling encore abordables et trop méconnus, le domaine Weingart est l'une des plus belles découvertes du vignoble allemand.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "icone",
+        "ardoise",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "theculturetrip|wanderlog"
+    },
+    {
+      "id": "de-mittelrhein-prod-ratzenberger",
+      "nom": "Ratzenberger",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Bacharach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Steeger St. Jost",
+        "Bacharacher Wolfshöhle",
+        "Bacharacher Posten"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacharach, le domaine Ratzenberger est l'une des grandes références du Mittelrhein, conduit en agriculture biologique et mené par Jochen Ratzenberger. Il travaille les coteaux d'ardoise des vallées latérales de Bacharach et Steeg, dont le Steeger St. Jost, la Bacharacher Wolfshöhle et le Posten. Ses Riesling secs, tendus et salins, ainsi que ses vins à sucrosité résiduelle, comptent parmi les plus aboutis de la région ; le domaine est aussi réputé pour ses Sekt de grande qualité. Le style Ratzenberger recherche la pureté, la minéralité et la finesse, dans des vins de garde. Membre du VDP, le domaine illustre l'excellence du Riesling d'ardoise de Bacharach et la vitalité d'une viticulture biologique exigeante au cœur de la gorge du Rhin. Jochen Ratzenberger conduit le domaine en bio et l'a hissé parmi les références du Mittelrhein, notamment grâce à ses Sekt, considérés comme parmi les meilleurs d'Allemagne. Sur les coteaux d'ardoise de Steeg et de Bacharach — le Steeger St. Jost, la Wolfshöhle, le Posten —, il signe des Riesling tendus et salins, secs comme moelleux. Le domaine illustre l'excellence du Riesling d'ardoise de Bacharach et le savoir-faire effervescent de la région ; il a même aidé à relancer la viticulture autour de la Burg Reichenstein.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "vdp",
+        "ardoise",
+        "sekt",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "meininger|schiller-wine"
+    },
+    {
+      "id": "de-mittelrhein-prod-matthias-mueller",
+      "nom": "Matthias Müller",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Boppard)",
+      "commune": "Spay",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bopparder Hamm Engelstein",
+        "Bopparder Hamm Feuerlay",
+        "Bopparder Hamm Ohlenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Spay, le domaine de Matthias et Marianne Müller travaille douze hectares de coteaux d'ardoise plein sud dans le Bopparder Hamm, l'une des plus impressionnantes pentes du Rhin. Avec 88% de Riesling, le domaine signe des vins fruités, élégants et minéraux, issus des parcelles Engelstein, Feuerlay, Ohlenberg et Mandelstein, dont de beaux Grosses Gewächs. L'exposition plein sud, qui prolonge l'ensoleillement jusqu'au soir, assure une belle maturité. Le style Müller conjugue fruité, fraîcheur et minéralité ardoisière. Membre du VDP, le domaine illustre la qualité du grand amphithéâtre du Bopparder Hamm et la finesse des Riesling du nord du Mittelrhein. Sur leurs douze hectares du Bopparder Hamm, Matthias et Marianne Müller cultivent des coteaux d'ardoise exposés plein sud, baignés de soleil jusqu'au soir. Leurs Riesling — Engelstein, Feuerlay, Ohlenberg, Mandelstein, An der Rabenlei — séduisent par leur fruité, leur minéralité et leur équilibre entre fraîcheur et maturité. Membre du VDP, le domaine illustre la qualité du grand amphithéâtre du Bopparder Hamm, l'une des pentes d'ardoise les plus réputées de tout le cours du Rhin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "vdp",
+        "ardoise",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "wanderlog|rieslingco"
+    },
+    {
+      "id": "de-mittelrhein-prod-lanius-knab",
+      "nom": "Lanius-Knab",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Oberwesel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Engehöller Bernstein",
+        "Oberweseler Oelsberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oberwesel, dans le sud du Mittelrhein, le domaine Lanius-Knab est l'une des références de la région, conduit en agriculture biologique. Il travaille les coteaux d'ardoise escarpés autour d'Oberwesel et de la vallée latérale d'Engehöll. Le domaine signe des Riesling secs racés et de garde, dont des Grosses Gewächs réputés issus de l'Engehöller Bernstein et de l'Oberweseler Oelsberg. L'ardoise dévonienne, sur ces pentes vertigineuses, donne des vins d'une grande minéralité, tendus et salins. Engagé de longue date dans le bio, le domaine illustre une viticulture exigeante et respectueuse sur des terrasses parmi les plus difficiles à travailler d'Allemagne. Membre du VDP, Lanius-Knab compte parmi les tout meilleurs domaines du Mittelrhein et confirme le potentiel des grands terroirs d'ardoise du secteur d'Oberwesel. Le secteur d'Oberwesel et la vallée latérale d'Engehöll offrent des coteaux d'ardoise parmi les plus escarpés et les plus difficiles à travailler d'Allemagne, où la vigne s'accroche à des terrasses vertigineuses. C'est là que le domaine, conduit en bio, puise des Riesling d'une grande tension. Ses Grosses Gewächs de l'Engehöller Bernstein et de l'Oberweseler Oelsberg, droits, salins et de longue garde, comptent parmi les plus aboutis du sud du Mittelrhein, dans un style ferme et minéral typique des vallées latérales fraîches, balayées par les vents du Hunsrück. L'engagement bio de longue date et l'exigence du domaine en font, aux côtés de Toni Jost, l'un des fers de lance de la qualité dans le Mittelrhein méridional, et l'un des grands défenseurs de ses terroirs d'ardoise. En maintenant en culture, et en bio, des terrasses d'ardoise que beaucoup ont abandonnées, le domaine joue aussi un rôle de gardien du paysage de la gorge du Rhin, classée au patrimoine mondial. Ses Riesling, droits et minéraux, en sont la plus belle récompense. Promu au plus haut rang, Lanius-Knab confirme que le sud du Mittelrhein, autour d'Oberwesel, recèle de grands terroirs d'ardoise, à l'égal des secteurs les plus réputés de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "vdp",
+        "ardoise",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "meininger|weinkaiser"
+    },
+    {
+      "id": "de-mittelrhein-prod-dr-randolf-kauer",
+      "nom": "Dr. Randolf Kauer",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Bacharach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bacharacher Mathias Weingarten"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacharach, le domaine du Dr. Randolf Kauer est l'une des adresses les plus singulières du Mittelrhein. Kauer, professeur de viticulture biologique à Geisenheim, conduit son domaine en bio depuis ses débuts. Sur les coteaux d'ardoise escarpés de Bacharach, il signe des Riesling concentrés, droits et sans concession, d'une grande minéralité, qui demandent parfois du temps pour s'ouvrir. Le style Kauer, exigeant et authentique, privilégie l'expression du terroir d'ardoise à la séduction immédiate. Le domaine illustre une vision puriste du Riesling du Mittelrhein, portée par l'un des spécialistes allemands de la viticulture biologique. Figure de la viticulture biologique allemande, Randolf Kauer enseigne à Geisenheim tout en menant son domaine de Bacharach selon ses principes. Ses Riesling, concentrés et droits, refusent toute facilité : marqués par l'ardoise, parfois austères dans leur jeunesse, ils se révèlent avec le temps. Le domaine illustre une vision puriste et exigeante du Riesling du Mittelrhein, et le rôle pionnier de la région dans la viticulture respectueuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "ardoise",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "rieslingco"
+    },
+    {
+      "id": "de-mittelrhein-prod-august-perll",
+      "nom": "August Perll",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Boppard)",
+      "commune": "Boppard",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bopparder Hamm Mandelstein",
+        "Bopparder Hamm Feuerlay"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Boppard, le domaine August Perll est l'une des bonnes adresses du Bopparder Hamm. Il travaille les coteaux d'ardoise plein sud du grand amphithéâtre, sur des parcelles comme le Mandelstein et le Feuerlay. Le domaine signe des Riesling minéraux et fruités, ainsi que des Spätburgunder, dans le style mûr et élégant propre au nord du Mittelrhein. Le style Perll met en avant la fraîcheur et la minéralité ardoisière. Le domaine illustre la qualité du Bopparder Hamm, l'une des plus belles pentes d'ardoise du Rhin, et la tradition familiale de Boppard. Domaine familial de Boppard, August Perll travaille les coteaux d'ardoise plein sud du Bopparder Hamm, dont le Mandelstein et le Feuerlay. Ses Riesling, minéraux et fruités, et ses Spätburgunder reflètent le style mûr et élégant du nord du Mittelrhein, où le grand amphithéâtre du Hamm bénéficie d'un ensoleillement maximal. Le domaine illustre la qualité de ce secteur et la tradition viticole de Boppard, l'un des centres de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-bastian",
+      "nom": "Bastian",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Bacharach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bacharacher Insel Heyles'en Werth",
+        "Bacharacher Wolfshöhle"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacharach, le domaine Bastian, associé à la célèbre taverne « Zum Grünen Baum », est un vieux domaine familial du Mittelrhein. Il a la particularité de cultiver la Bacharacher Insel Heyles'en Werth, une île classée au milieu du Rhin, ainsi que la Bacharacher Wolfshöhle. Ses Riesling, marqués par l'ardoise, se distinguent par leur finesse et leur minéralité. Le style Bastian, classique, met en avant l'expression du terroir d'ardoise et la fraîcheur. Le domaine illustre la diversité des terroirs de Bacharach, des coteaux escarpés jusqu'à l'île au milieu du fleuve, cas rare dans le vignoble allemand. Le domaine Bastian, indissociable de sa taverne historique « Zum Grünen Baum » à Bacharach, cultive un terroir unique : la Bacharacher Insel Heyles'en Werth, île classée au milieu du Rhin, où les vignes poussent sur des alluvions, ainsi que les coteaux d'ardoise de la Wolfshöhle. Cette diversité, des terrasses escarpées à l'île fluviale, donne des Riesling fins et variés. Le domaine illustre la richesse et la singularité des terroirs de Bacharach, ancienne capitale du commerce du vin sur le Rhin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "historique",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "meininger|weinkaiser"
+    },
+    {
+      "id": "de-mittelrhein-prod-goswin-lambrich",
+      "nom": "Goswin Lambrich",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Oberwesel-Dellhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Oberweseler Römerkrug"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oberwesel-Dellhofen, dans le sud du Mittelrhein, le domaine et maison de Sekt Goswin Lambrich est une adresse soignée. Il signe des Riesling d'ardoise droits et minéraux, ainsi que des effervescents de qualité, dans les coteaux escarpés du secteur d'Oberwesel. Le domaine illustre la qualité des Riesling et des Sekt du sud du Mittelrhein, dans la gorge du Rhin. À Oberwesel-Dellhofen, le domaine et la maison de Sekt Goswin Lambrich travaillent les coteaux d'ardoise du sud du Mittelrhein. Réputé pour ses Riesling droits et minéraux comme pour ses effervescents soignés, le domaine illustre la double tradition, vin tranquille et Sekt, du secteur d'Oberwesel, dans la gorge du Rhin. Il demeure une bonne adresse du secteur d'Oberwesel, autant pour le vin tranquille que pour le Sekt.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "sekt",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-baer",
+      "nom": "Baer",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Sud (Bacharach)",
+      "commune": "Bacharach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bacharacher Posten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacharach, le domaine Baer est un petit producteur soigné du Mittelrhein. Sur les coteaux d'ardoise escarpés des vallées latérales de Bacharach, il signe des Riesling droits et minéraux, tendus et salins. Le domaine illustre la qualité des Riesling d'ardoise de Bacharach, dans le style ferme et minéral propre au sud de la région. À Bacharach, le petit domaine Baer travaille les coteaux d'ardoise escarpés des vallées latérales. Ses Riesling, droits, tendus et salins, reflètent le style ferme et minéral du sud du Mittelrhein, où les vins, plus sévères que ceux de Boppard, gagnent en finesse avec le temps. Le domaine illustre la qualité discrète des artisans de Bacharach. Il illustre la qualité discrète des artisans de Bacharach, sur les coteaux d'ardoise du sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "mittelrhein-sud"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-didinger",
+      "nom": "Didinger",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Boppard)",
+      "commune": "Osterspai",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Osterspaier"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Osterspai, sur la rive droite du Rhin dans le nord du Mittelrhein, le domaine Didinger est une maison familiale dynamique. Il signe des Riesling et des Spätburgunder de belle facture, ainsi que des Weissburgunder, sur des coteaux d'ardoise au bord du fleuve. Le domaine illustre le renouveau de jeunes vignerons dans le nord du Mittelrhein. À Osterspai, sur la rive droite du Rhin, le domaine familial Didinger s'est fait remarquer par la qualité de ses Riesling, Weissburgunder et Spätburgunder, sur des coteaux d'ardoise au bord du fleuve. Porté par une nouvelle génération dynamique, le domaine illustre le renouveau qualitatif du nord du Mittelrhein, dans un secteur longtemps moins en vue. Il compte parmi les jeunes domaines qui redonnent de l'élan au nord du Mittelrhein.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-weingut-sturm",
+      "nom": "Weingut Sturm",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Coblence-Bonn)",
+      "commune": "Leutesdorf",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Leutesdorfer Gartenlay"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Leutesdorf, au nord du Mittelrhein, le domaine Sturm est réputé pour ses Riesling de coteaux d'ardoise au bord du Rhin. Il signe des Riesling minéraux et de belle facture, ainsi que des Spätburgunder. Le domaine illustre la qualité des terroirs d'ardoise du secteur septentrional du Mittelrhein, autour de Leutesdorf. À Leutesdorf, au nord du Mittelrhein, le domaine Sturm travaille des coteaux d'ardoise exposés au sud au bord du Rhin. Ses Riesling minéraux et ses Spätburgunder reflètent la qualité du secteur septentrional de la région. Le domaine illustre la persistance d'une viticulture de coteaux dans le nord du Mittelrhein, là où la vigne se fait plus rare. Il demeure une référence des coteaux d'ardoise du nord de la région, à Leutesdorf.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-pieper",
+      "nom": "Pieper",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Coblence-Bonn)",
+      "commune": "Königswinter",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Königswinterer Drachenfels"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Königswinter, à l'extrême nord du Mittelrhein, près de Bonn, le domaine Pieper cultive la vigne au pied du Drachenfels, butte volcanique célèbre. Il signe des Spätburgunder et des Riesling, dans le secteur le plus septentrional de la région. Le domaine illustre la viticulture du nord du Mittelrhein, là où le vignoble s'approche de la Rhénanie. À Königswinter, au pied du Drachenfels — butte volcanique célèbre dominant le Rhin près de Bonn —, le domaine Pieper cultive la vigne à l'extrême nord du Mittelrhein. Ses Spätburgunder et Riesling marquent la limite septentrionale du vignoble. Le domaine illustre la viticulture héroïque du nord de la région, là où le Rhin entre en Rhénanie. Il marque la limite septentrionale du vignoble du Mittelrhein, aux portes de Bonn.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-prod-jakob-sebastian",
+      "nom": "Jakob Sebastian",
+      "type": "domaine",
+      "region": "Mittelrhein",
+      "sous_region": "Mittelrhein Nord (Coblence-Bonn)",
+      "commune": "Bad Hönningen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling",
+        "Frühburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bad Hönninger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bad Hönningen, sur la rive droite au nord du Mittelrhein, le domaine Jakob Sebastian est spécialisé dans le Spätburgunder. Sur des coteaux proches de l'Ahr voisine, il signe de beaux rouges, ainsi que du Frühburgunder et des Riesling. Le domaine illustre la vocation rouge du nord du Mittelrhein, dans un secteur influencé par la proximité de l'Ahr. À Bad Hönningen, sur la rive droite du nord du Mittelrhein, le domaine Jakob Sebastian s'est spécialisé dans le Spätburgunder, profitant de la proximité de l'Ahr voisine. Il signe de beaux rouges, ainsi que du Frühburgunder et des Riesling. Le domaine illustre la vocation rouge méconnue du nord du Mittelrhein, à la frontière de la grande région des Pinots de l'Ahr. Il illustre la vocation rouge du nord de la région, à la frontière de l'Ahr.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "mittelrhein-nord"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    }
+  ]
+}

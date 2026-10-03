@@ -1,0 +1,504 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "bergstrasse",
+  "region_label": "Hessische Bergstraße (Allemagne)",
+  "source_file": "producteurs_bergstrasse_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 13,
+  "items": [
+    {
+      "id": "de-bergstrasse-prod-domaene-bergstrasse",
+      "nom": "Domäne Bergstraße",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Grauburgunder",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Heppenheimer Centgericht",
+        "Steinberg",
+        "Heppenheimer Steinkopf"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bensheim, la Domäne Bergstraße est le domaine de l'État de Hesse (rattaché aux Hessische Staatsweingüter Kloster Eberbach) et le plus grand propriétaire de la région, avec environ trente-huit hectares. Il exploite les meilleurs terroirs de la Bergstraße : le grand cru Heppenheimer Centgericht et le monopole du Steinberg, classés en VDP Grosse Lage, ainsi que le Steinkopf et le Maiberg. Il en tire des Riesling élégants et parfumés, ainsi que de beaux Grauburgunder, Weissburgunder et Spätburgunder. Le style de la Domäne, classique et soigné, met en avant la finesse florale et l'élégance propres aux sols de granite et de lœss de la région. Référence du vin tranquille de la Bergstraße, la Domäne illustre le rôle central de l'État de Hesse dans la préservation des grands terroirs de cette région minuscule. Rattachée aux Hessische Staatsweingüter Kloster Eberbach — l'un des plus prestigieux domaines d'Allemagne, basé dans le Rheingau —, la Domäne Bergstraße bénéficie d'un savoir-faire et de moyens rares dans cette petite région. Le Heppenheimer Centgericht, son grand cru, est souvent cité comme un modèle d'élégance et de terroir, et le monopole du Steinberg complète ce patrimoine d'exception. Ses Riesling, floraux et racés, ainsi que ses Burgunder, font de la Domäne la référence du vin tranquille de la Bergstraße et la gardienne de ses meilleurs coteaux de granite et de lœss. Pour l'amateur, c'est la porte d'entrée vers le grand Riesling de la Bergstraße, et le meilleur ambassadeur de ses terroirs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "icone",
+        "vdp",
+        "historique",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|kloster-eberbach"
+    },
+    {
+      "id": "de-bergstrasse-prod-griesel-compagnie",
+      "nom": "Griesel & Compagnie",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bensheimer Streichling"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bensheim, Griesel & Compagnie est la première maison de Sekt de la Hessische Bergstraße et l'une des meilleures d'Allemagne. Installée dans les caves voûtées centenaires du Sekthaus Streit, creusées profondément dans la colline du Griesel, elle élabore ses effervescents selon la méthode traditionnelle, avec de longs élevages sur lattes. Relancée dans les années 2010 par la famille Lulay, la maison s'est imposée en quelques années au sommet du Sekt allemand, raflant prix et distinctions, dont des titres de meilleur effervescent du pays. Ses cuvées — Brut, Extra Brut et Brut Nature — sont élaborées à partir de cépages de la région : Riesling, Spätburgunder, Weissburgunder et Chardonnay. Le style Griesel recherche la finesse, la précision et la tension, avec des dosages faibles et une grande pureté, dans des effervescents capables de rivaliser avec de grands champagnes. Dans une région minuscule et discrète, Griesel & Compagnie fait figure de phare : elle a porté le nom de la Hessische Bergstraße bien au-delà de ses frontières et incarne le renouveau du grand Sekt allemand. La renaissance de Griesel est l'une des belles histoires du vin allemand contemporain : reprenant les caves historiques du Sekthaus Streit, la famille Lulay y a fondé, dans les années 2010, une maison entièrement vouée à l'effervescent de haute couture, à rebours du Sekt industriel qui a longtemps terni l'image de la catégorie en Allemagne. Les vins de base, issus des coteaux de granite et de lœss de la Bergstraße, sont vinifiés avec le soin d'un grand vin tranquille, puis élevés longuement sur lies dans la fraîcheur des caves voûtées. Les cuvées de prestige, élevées plusieurs années, rivalisent de complexité et de finesse avec de grands champagnes, et ont valu à la maison les plus hautes distinctions des guides allemands. En quelques millésimes, Griesel s'est hissée au sommet du Sekt allemand, aux côtés des plus grands noms de la catégorie. Pour l'amateur, Griesel est la plus belle raison de s'intéresser à la Hessische Bergstraße : la preuve qu'une région minuscule, longtemps confidentielle, peut donner naissance à l'un des plus grands noms d'une catégorie — le Sekt — qui connaît aujourd'hui une renaissance spectaculaire en Allemagne. Une maison à découvrir absolument pour qui veut comprendre le potentiel des effervescents allemands.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sekt",
+        "icone",
+        "effervescent",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine|verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-prod-simon-buerkle",
+      "nom": "Simon-Bürkle",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Zwingenberg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Zwingenberger Alte Burg",
+        "Auerbacher Höllberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Zwingenberg, dans le nord de la Bergstraße, Simon-Bürkle est l'un des meilleurs domaines privés de la région. Il signe des Riesling racés et de beaux Burgunder, dont des Spätburgunder, sur les coteaux de granite et de lœss de Zwingenberg (Alte Burg) et d'Auerbach (Höllberg). Le style Simon-Bürkle conjugue fraîcheur, fruité et finesse, dans des vins soignés et accessibles. Le domaine illustre la qualité des meilleurs producteurs privés de la Bergstraße, dans une région où la coopérative domine largement. Fondé par deux amis, Wilfried Simon et Alexander Bürkle, le domaine s'est imposé comme le chef de file des producteurs privés de la Bergstraße. Ses Riesling secs, ses Spätburgunder et ses cuvées de Burgunder, soignés et expressifs, ainsi que ses effervescents, séduisent par leur régularité. Sur les coteaux de Zwingenberg et d'Auerbach, le domaine illustre le potentiel qualitatif de la région entre les mains de vignerons ambitieux, dans un paysage dominé par la coopérative. Il demeure la référence des domaines privés de la région, gage de régularité et de qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine|wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-prod-weingut-der-stadt-bensheim",
+      "nom": "Weingut der Stadt Bensheim",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bensheimer Kalkgasse",
+        "Bensheimer Kirchberg",
+        "Bensheimer Streichling"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bensheim, le Weingut der Stadt Bensheim est une rareté : un domaine viticole appartenant à une ville, cas peu fréquent en Allemagne. Il exploite les coteaux de la commune — Kalkgasse, Kirchberg, Streichling — et en tire des Riesling et des Burgunder de tradition, dans le style floral et parfumé de la Bergstraße. Le style du domaine, classique, met en avant la typicité régionale. Institution locale, le Weingut der Stadt Bensheim illustre l'attachement de la région à son patrimoine viticole et la tradition municipale de Bensheim. Propriété de la ville de Bensheim, le domaine perpétue une tradition municipale ancienne, cas rare dans le vignoble allemand. Sur les meilleurs coteaux de la commune, dont la Kalkgasse et le Kirchberg, il signe des Riesling et des Burgunder fidèles au style floral et parfumé de la Bergstraße. Institution locale appréciée, le domaine illustre l'attachement de Bensheim — capitale officieuse de la région — à son patrimoine viticole et à ses terroirs de granite et de lœss. Domaine municipal emblématique, il incarne le lien entre la ville de Bensheim et son vignoble.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "historique",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "euroweinkontor|wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-prod-h-freiberger",
+      "nom": "H. Freiberger",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Heppenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Grauburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Heppenheimer Steinkopf",
+        "Heppenheimer Centgericht"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heppenheim, le domaine H. Freiberger est une maison familiale réputée de la Bergstraße. Il signe des Riesling du Steinkopf et du Centgericht, ainsi que des Grauburgunder et des Spätburgunder, et produit également de bons effervescents et eaux-de-vie. Le style Freiberger met en avant la fraîcheur et le parfum caractéristiques des sols de la région. Le domaine illustre la qualité des producteurs familiaux d'Heppenheim, l'un des centres viticoles de la Hessische Bergstraße. Domaine familial d'Heppenheim, H. Freiberger conjugue vin tranquille, effervescent et eaux-de-vie, dans la tradition polyvalente des vignerons de la Bergstraße. Ses Riesling du Steinkopf et du Centgericht, ainsi que ses Burgunder, sont réputés pour leur fraîcheur et leur parfum. Le domaine illustre la qualité des maisons familiales d'Heppenheim, l'un des deux grands centres viticoles de la région avec Bensheim. Il compte parmi les valeurs sûres des producteurs familiaux d'Heppenheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-prod-schloss-schoenberg",
+      "nom": "Schloss Schönberg",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim-Schönberg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Schönberger Herrenwingert"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Schönberg, près de Bensheim, le domaine de Schloss Schönberg est une adresse soignée, installée autour d'un château. Il exploite le coteau du Herrenwingert et en tire des Riesling et des Burgunder, dont des Weissburgunder et des Spätburgunder, sur les sols de granite de la Bergstraße. Le style du domaine met en avant la finesse et l'élégance. Schloss Schönberg illustre la qualité des domaines privés de la région, dans un cadre patrimonial caractéristique de la Bergstraße. Installé autour d'un château au pied de l'Odenwald, le domaine de Schloss Schönberg exploite le coteau du Herrenwingert sur les sols de granite caractéristiques de la région. Ses Riesling et ses Burgunder, fins et parfumés, reflètent le style élégant de la Bergstraße. Le cadre patrimonial et la qualité des vins en font une adresse représentative des bons domaines privés de la région. Son cadre castral et la finesse de ses vins en font une belle adresse de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-prod-weinbau-koob",
+      "nom": "Weinbau Koob",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Heppenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Grauburgunder",
+        "Gewürztraminer",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Heppenheimer Eckweg",
+        "Heppenheimer Maiberg",
+        "Heppenheimer Stemmler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heppenheim, le Weinbau Koob est un petit domaine familial soigné de la Bergstraße. Sur les coteaux d'Heppenheim (Eckweg, Maiberg, Stemmler), il signe des Riesling, des Grauburgunder et des cépages aromatiques comme le Gewürztraminer. Le domaine illustre la qualité artisanale des petits producteurs familiaux de la région. Sur 4,5 hectares de coteaux d'Heppenheim, la famille Koob cultive Riesling, Grauburgunder, Weissburgunder et cépages aromatiques, jusqu'à des raretés comme le Morio-Muscat ou le St. Laurent. Le domaine illustre l'esprit artisanal et la diversité des petits producteurs familiaux de la Bergstraße, profondément attachés à leurs lieux-dits. Il illustre l'attachement des petits vignerons d'Heppenheim à leurs lieux-dits.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "bergstrasse-odenwald|verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-prod-weingut-amthor",
+      "nom": "Weingut Amthor",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Heppenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Grauburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Heppenheimer Maiberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heppenheim, le Weingut Amthor est un petit domaine familial de la Bergstraße. Il signe une large gamme artisanale : Riesling (et Roter Riesling), Weissburgunder, Grauburgunder, Chardonnay et Spätburgunder. Le domaine illustre la diversité et le caractère artisanal des petits producteurs d'Heppenheim. Sur quatre hectares à Heppenheim, le Weingut Amthor cultive une gamme étonnamment large pour sa taille : Riesling et Roter Riesling, Kerner, Weissburgunder, Grauburgunder, Chardonnay et Spätburgunder. Le domaine illustre le caractère artisanal et la curiosité ampélographique des petits vignerons familiaux de la Bergstraße. Il séduit par sa diversité ampélographique et son esprit artisanal.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-prod-bergstraesser-winzer-eg",
+      "nom": "Bergsträßer Winzer eG",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Heppenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Grauburgunder",
+        "Spätburgunder",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Heppenheimer Centgericht",
+        "Heppenheimer Steinkopf"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heppenheim, la Bergsträßer Winzer eG est la grande coopérative de la région, qui exploite environ 60% du vignoble de la Hessische Bergstraße. Elle propose une large gamme de Riesling et de Burgunder, du vin quotidien à de bonnes cuvées de lieux-dits comme le Centgericht et le Steinkopf. Pilier de l'économie viticole locale, la coopérative illustre le poids déterminant du modèle coopératif dans cette petite région. Regroupant plusieurs centaines de vignerons autour d'Heppenheim, la coopérative façonne le visage de la région : c'est elle qui vinifie la majeure partie de la récolte. Sa gamme va du vin quotidien à de bonnes cuvées de grands lieux-dits, et elle joue un rôle économique et social déterminant. Elle illustre le poids du modèle coopératif, sans lequel une si petite région ne pourrait subsister. Sans elle, une région aussi petite ne pourrait maintenir son vignoble.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "cooperative",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine|wine-searcher"
+    },
+    {
+      "id": "de-bergstrasse-prod-volker-dingeldey",
+      "nom": "Volker Dingeldey",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Umstadt (Odenwald)",
+      "commune": "Groß-Umstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Groß-Umstädter Steingerück"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Groß-Umstadt, dans l'« île viticole de l'Odenwald », le domaine Volker Dingeldey est une adresse familiale. Il signe des Riesling, des Spätburgunder et des Grauburgunder sur les sols singuliers de ce secteur détaché de la Bergstraße. Le domaine illustre la viticulture de l'Odenwald, partie confidentielle et excentrée de la région. Dans l'« île viticole de l'Odenwald », secteur détaché autour de Groß-Umstadt, le domaine Dingeldey travaille des sols singuliers, différents de ceux de la Bergstraße rhénane. Ses Riesling et ses Spätburgunder reflètent l'originalité de ce terroir excentré. Le domaine illustre la viticulture confidentielle de l'Odenwald, l'un des deux secteurs de la région. Il porte haut les couleurs de l'île viticole de l'Odenwald.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "odenwald",
+        "umstadt"
+      ],
+      "a_verifier": null,
+      "source": "verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-prod-weingut-j-faber",
+      "nom": "Weingut J. Faber",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bensheimer Paulus"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bensheim, le Weingut J. Faber est un domaine familial de la Bergstraße. Il signe des Riesling et des Burgunder de belle facture, dont des Weissburgunder et des Spätburgunder, sur les coteaux du secteur de Bensheim. Le domaine illustre la qualité régulière des producteurs familiaux de Bensheim. Domaine familial de Bensheim, le Weingut J. Faber signe des Riesling et des Burgunder soignés, dont des Weissburgunder et des Spätburgunder, sur les coteaux du secteur de Bensheim. Fiable et régulier, il illustre la qualité discrète des nombreux producteurs familiaux qui font, à côté de la coopérative, la vie viticole de la Bergstraße. Il compte parmi les bons producteurs familiaux de Bensheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "verkehrsverein-bensheim"
+    },
+    {
+      "id": "de-bergstrasse-prod-vinum-autmundis",
+      "nom": "Vinum Autmundis",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Umstadt (Odenwald)",
+      "commune": "Groß-Umstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Müller-Thurgau",
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Groß-Umstädter Herrnberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Groß-Umstadt, Vinum Autmundis est la coopérative de l'« île viticole de l'Odenwald ». Elle propose une gamme variée de Riesling, de Müller-Thurgau et de Burgunder, ambassadrice de ce secteur détaché de la Bergstraße. La coopérative illustre la tradition viticole de l'Odenwald, partie confidentielle et originale de la région. Coopérative de l'« île viticole de l'Odenwald », Vinum Autmundis regroupe les vignerons de Groß-Umstadt et de ses environs. Sa gamme variée — Riesling, Müller-Thurgau, Burgunder — fait connaître ce secteur détaché et original de la région. Elle illustre, comme sa grande sœur d'Heppenheim, le rôle central des coopératives dans la Hessische Bergstraße. Elle fait vivre la viticulture de l'Odenwald, secteur détaché de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cooperative",
+        "odenwald",
+        "umstadt"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-bergstrasse-prod-weingut-jaeger",
+      "nom": "Weingut Jäger",
+      "type": "domaine",
+      "region": "Hessische Bergstraße",
+      "sous_region": "Starkenburg",
+      "commune": "Bensheim-Auerbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Auerbacher Fürstenlager"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Auerbach, près de Bensheim, le Weingut Jäger est un domaine familial de la Bergstraße. Il signe des Riesling et des Burgunder sur le coteau du Fürstenlager, au pied du parc princier d'Auerbach. Le domaine illustre la qualité des producteurs familiaux du secteur de Bensheim-Auerbach. Domaine familial d'Auerbach, le Weingut Jäger exploite le coteau du Fürstenlager, au pied du parc paysager princier qui surplombe Auerbach. Ses Riesling et ses Burgunder reflètent le style parfumé de la région. Le domaine illustre la qualité des producteurs familiaux du secteur de Bensheim-Auerbach, dans un cadre patrimonial remarquable. Il met en valeur le beau coteau du Fürstenlager d'Auerbach.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "starkenburg"
+      ],
+      "a_verifier": null,
+      "source": "verkehrsverein-bensheim"
+    }
+  ]
+}

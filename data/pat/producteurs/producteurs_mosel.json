@@ -1,0 +1,1496 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "mosel",
+  "region_label": "Mosel (Allemagne)",
+  "source_file": "producteurs_mosel_To_Import.xlsx",
+  "built_at": "2026-06-12",
+  "count": 38,
+  "items": [
+    {
+      "id": "de-mosel-prod-egon-mueller",
+      "nom": "Egon Müller (Scharzhof)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Wiltingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Wiltinger Scharzhofberger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Au pied du Scharzhofberg, dans le hameau de Wiltingen sur la Saar (au sud de Trèves), le domaine Egon Müller-Scharzhof est l'une des adresses les plus légendaires de toute la culture du vin allemande, et sans doute la plus mythique de la planète Riesling. La famille y possède des vignes depuis 1797 : à la faveur de la sécularisation qui suit la Révolution française, le moine bénédictin Johann Jakob Koch rachète des parcelles à son ancien monastère ; sa fille épouse Felix Müller en 1837, et depuis huit générations le domaine se transmet de père en fils, chacun portant le prénom d'Egon. C'est Egon Müller IV qui le dirige depuis 1991 (seul maître à bord après la mort de son père Egon III en 2001). L'essor international remonte à Egon Müller I, qui à la fin du XIXe siècle, porté par la soif des marchés anglais et américain pour le Riesling de la Saar, hisse le Scharzhof à une réputation mondiale ; après 1945, Egon Müller III pose la politique qualitative moderne et complète le vignoble en rachetant des sites laissés vacants (Wiltinger Kupp et braune Kupp, via l'acquisition de la moitié du domaine Le Gallais). Le cœur du domaine est le Scharzhofberger, coteau d'environ 28 hectares exposé plein sud à deux kilomètres du village, sur ardoise bleue dévonienne. Müller en détient environ sept à huit hectares, plantés en partie de vignes franches de pied (non greffées) datant des années 1880-1890. Le Scharzhofberg jouit d'un statut rare en Allemagne, celui d'« Ortsteil » : à l'instar d'un Grand Cru bourguignon, son nom suffit sur l'étiquette, sans mention du village. Le domaine exploite aussi, sous l'étiquette Le Gallais, le Wiltinger Braune Kupp, dont les sols plus lourds donnent un Riesling plus charnu et succulent. La signature Müller tient à une viticulture proche de la nature (ni engrais de synthèse, ni pesticides), des rendements extrêmement bas (de l'ordre de 35 hl/ha), des vendanges manuelles en tries successives grain par grain, et des fermentations lentes et spontanées en vieux foudres, avec une intervention minimale en cave. Il en résulte des Rieslings d'une transparence absolue, à l'acidité fine et à la minéralité saline pénétrante, capables d'un vieillissement quasi infini tout en gardant, même très âgés, une profondeur fruitée. La gamme déroule toute l'échelle de sucrosité, du Kabinett délicatement tendu — souvent considéré comme l'un des plus grands au monde — jusqu'aux Spätlese, Auslese, Beerenauslese et Trockenbeerenauslese, sans oublier l'Eiswein (premier millésime commercial en 1961), reconnaissables à leurs capsules dorées. Le domaine a abandonné les cuvées sèches (produites de 1980 à 1997) faute de les juger à la hauteur, pour se concentrer sur les liquoreux nobles, produits en quantités minuscules. Vendus chaque année aux enchères du Grosser Ring (VDP Mosel), ces flacons atteignent des prix vertigineux : la Scharzhofberger Trockenbeerenauslese 2003 a établi en 2015 un record mondial à 12 000 euros la bouteille, faisant d'elle le vin allemand le plus cher et, selon Wine-Searcher, le vin blanc le plus cher du monde. Des millésimes comme 1959, 1971, 1976 ou 2015 demeurent des références absolues. Egon Müller IV a par ailleurs ressuscité le Château Belá en Slovaquie et prêté son nom à des projets de Riesling à l'étranger, mais c'est bien le silence minéral du Scharzhofberg qui définit, millésime après millésime, l'étalon du grand Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "saar",
+        "scharzhofberg",
+        "allocation",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-jj-pruem",
+      "nom": "Joh. Jos. Prüm",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Wehlen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Wehlener Sonnenuhr",
+        "Graacher Himmelreich",
+        "Bernkasteler Badstube"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Wehlen, face au plus célèbre cadran solaire du vignoble mondial — la Sonnenuhr gravée dans la roche en 1842 par un ancêtre Prüm pour donner l'heure aux vignerons des coteaux escarpés —, Joh. Jos. Prüm est l'un des domaines les plus mythiques et les plus collectionnés de toute la Mosel. Il est né en 1911 du démembrement du vaste domaine familial Prüm entre les héritiers (dont sont également issus S.A. Prüm, Studert-Prüm ou Dr. F. Weins-Prüm), et c'est à Sebastian Alois Prüm qu'il doit ses premiers galons, avant que le légendaire Dr. Manfred Prüm n'en fasse, durant la seconde moitié du XXe siècle, une référence absolue. Aujourd'hui, sa fille le Dr. Katharina Prüm dirige le domaine dans une fidélité scrupuleuse au style maison. Sur une vingtaine d'hectares exclusivement plantés de Riesling, le domaine exploite quelques-uns des plus grands lieux-dits du cœur de la Mosel, sur ardoises grises et bleues : le Wehlener Sonnenuhr en joyau, complété par le Graacher Himmelreich, le Bernkasteler Badstube, le Zeltinger Sonnenuhr et le Graacher Domprobst. Mais ce qui rend J.J. Prüm unique, c'est moins son parcellaire que sa signature stylistique, à nulle autre pareille. Les vinifications, résolument non oxydatives, reposent sur des fermentations spontanées et lentes qui laissent dans la jeunesse une réduction et un léger perlant — le fameux « spritz » — déconcertants : à la mise, et souvent durant plusieurs années, les vins peuvent paraître fermés, austères, presque récalcitrants. C'est là tout le pacte que propose ce domaine : ses Rieslings ne se livrent pas jeunes et exigent du temps — fréquemment une décennie ou deux — pour déployer une profondeur, une finesse et une complexité quasi infinies, où la pureté du fruit se marie à une minéralité saline et à une acidité d'une élégance suprême. Le domaine ne produit aucun vin sec et concentre tout son art sur les Prädikate fruités, du Kabinett — l'un des plus grands au monde — jusqu'à la Trockenbeerenauslese, avec une hiérarchie minutieuse de capsules d'or (Goldkapsel) et de longues capsules d'or (lange Goldkapsel) qui signalent les meilleures sélections d'Auslese, âprement disputées aux enchères du Grosser Ring. Incarnation même du Riesling de garde, J.J. Prüm propose une leçon de patience : celle d'un vin qui se mérite et qui, sur le très long terme, récompense souverainement ceux qui ont su l'attendre. Peu de domaines au monde suscitent une telle dévotion ni n'illustrent aussi parfaitement l'idée que le grand Riesling mosellan est, avant tout, une affaire de temps.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "wehlen",
+        "sonnenuhr",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-willi-schaefer",
+      "nom": "Willi Schaefer",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Graach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Graacher Himmelreich",
+        "Graacher Domprobst"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Avec à peine plus de quatre hectares, Willi Schaefer est l'archétype du grand domaine miniature de la Mosel : minuscule par la taille, immense par la réputation. Installé à Graach, au cœur de la Mosel moyenne, il est aujourd'hui mené par Christoph Schaefer, qui a succédé à son père Willi tout en perpétuant un savoir-faire transmis de génération en génération depuis le XVIIIe siècle. La production, de l'ordre de quelques milliers de caisses seulement, s'écoule en allocations confidentielles auprès des amateurs les plus avertis du monde entier, et les meilleures cuvées sont régulièrement introuvables dès leur sortie. Le domaine concentre ses vignes sur deux lieux-dits de Graach. Le Domprobst, et tout particulièrement sa partie haute, très pentue, sur ardoise grise-bleue, en constitue le cœur : il y donne des Rieslings d'une densité et d'une énergie remarquables. Le Himmelreich, voisin, apporte un registre un peu plus tendre et accessible. De ces parcelles naissent des vins d'une pureté et d'une finesse rares, d'une précision presque cristalline, à la fois délicats et d'une intensité saline qui signe les grands schistes de Graach. Le style Schaefer, classique et sans la moindre esbroufe, met le terroir au premier plan : fermentations spontanées, élevages en vieux foudres traditionnels (Fuder), interventions minimales, recherche de l'équilibre plutôt que de la puissance. Du Kabinett à l'Auslese, en passant par de superbes Spätlese, les vins conjuguent une légèreté apparente — degrés alcooliques modestes, buvabilité immédiate des bas Prädikate — et une profondeur insoupçonnée, doublée d'une aptitude à la garde qui dément leur apparente fragilité. Les Auslese en capsule d'or, produites en quantités infimes, comptent parmi les sommets discrets du Riesling mosellan. Régulièrement cités par la critique internationale parmi les tout meilleurs vignerons de la Mosel, voire d'Allemagne, les Schaefer démontrent qu'avec quatre hectares, une connaissance intime de quelques parcelles et une exigence sans relâche, on peut produire des vins d'une grandeur que bien des domaines infiniment plus vastes n'atteindront jamais. Un modèle d'artisanat et d'humilité au service du grand cru.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "graach",
+        "domprobst",
+        "allocation",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-markus-molitor",
+      "nom": "Markus Molitor",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Wehlen / Bernkastel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Wehlener Sonnenuhr",
+        "Zeltinger Sonnenuhr",
+        "Erdener Treppchen",
+        "Saarburger Rausch"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installé à Haus Klosterberg, au-dessus de Wehlen, Markus Molitor a repris le domaine familial en 1984 à tout juste vingt ans, avec trois hectares ; il en exploite aujourd'hui plus d'une centaine, à cheval sur la Mosel et la Saar, ce qui en fait l'un des plus grands domaines de qualité de la région — sans jamais rien céder sur l'exigence. Sa marque de fabrique est un système de capsules de couleur, indépendant du Prädikat : blanche pour les secs, verte pour les demi-secs (feinherb), or pour les fruités et liquoreux nobles ; une à trois étoiles signalent les meilleures parcelles. Molitor s'est fait une spécialité de ressusciter de grands sites historiques souvent en friche — Zeltinger Sonnenuhr, Wehlener Sonnenuhr, Ürziger Würzgarten sur la Mosel, Saarburger Rausch, Ockfener Bockstein et Scharzhofberg sur la Saar —, qu'il vinifie parcelle par parcelle, du sec tranchant à la Trockenbeerenauslese la plus opulente. Il est aussi l'un des rares à prendre le Spätburgunder (Pinot Noir) de la Mosel très au sérieux, avec des rouges structurés et de garde. D'une précision et d'une régularité remarquables, son travail lui a valu certaines des plus hautes notes jamais attribuées à des vins allemands. Domaine incontournable, à la fois vaste et pointilliste. Plusieurs de ses cuvées ont décroché la note maximale de la critique internationale, et le domaine, désormais doté d'installations spectaculaires, s'écoule en allocations dans le monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "grand-domaine",
+        "capsule-system",
+        "spaetburgunder"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-selbach-oster",
+      "nom": "Selbach-Oster",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Zeltingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Zeltinger Sonnenuhr",
+        "Zeltinger Schlossberg",
+        "Wehlener Sonnenuhr",
+        "Bernkasteler Badstube"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Zeltingen, au cœur de la Mosel moyenne, Selbach-Oster est un domaine d'environ vingt-cinq hectares mené par Johannes Selbach, l'un des meilleurs ambassadeurs du Riesling mosellan dans le monde, aujourd'hui épaulé par son fils Sebastian. La famille conduit en parallèle la maison de négoce J. & H. Selbach, mais c'est le domaine qui porte sa réputation, fondée sur un éventail des plus beaux coteaux d'ardoise du secteur : Zeltinger Sonnenuhr, Schlossberg et Himmelreich, mais aussi Wehlener Sonnenuhr, Graacher Domprobst et Bernkasteler. Le style maison se distingue par un équilibre remarquable et une grande lisibilité du terroir, obtenus par des fermentations spontanées et des élevages prolongés sur lies, sans recherche d'effet. Si le domaine excelle dans toute la gamme classique des Prädikate fruités, de la Kabinett délicate et désaltérante jusqu'à la Trockenbeerenauslese opulente, il s'est aussi fait un nom grâce à des cuvées parcellaires singulières qui sortent des sentiers battus. Le « Rotlay », issu de très vieilles vignes franches de pied plantées sur une veine de schiste rouge dans le Zeltinger Sonnenuhr, et l'« Anrecht », tiré de vieilles vignes non éclaircies vendangées à rendement infime, explorent un registre plus sec, dense et profondément gastronomique, taillé pour la table autant que pour la cave. Selbach-Oster compte par ailleurs parmi les rares domaines mosellans à proposer un Spätburgunder (Pinot Noir) crédible, témoin du potentiel rouge longtemps bridé de la région. De l'entrée de gamme, d'un rapport qualité-plaisir imbattable, jusqu'aux sommets de ses sélections de vieilles vignes, le domaine offre une porte d'entrée idéale vers le grand Riesling mosellan tout en comblant les amateurs les plus exigeants. Cette double identité — accessibilité et profondeur, classicisme des Prädikate et audace des cuvées sèches parcellaires — fait de Selbach-Oster l'un des domaines les plus complets et les plus attachants de la Mosel moyenne, capable de séduire le néophyte comme le collectionneur aguerri.",
+      "mes_notes": null,
+      "notes_pat": "Très grand domaine qui propose des vins tout en équlibire. Fermentations spontanées, vieilissements sur lies jusqu'à l'embouteillage, et pour les vins doux, arrêt de la fermentation par refroidissement seulement. Le Blauer Spätburgunder est un des plus beaux exemples de pinot noir sur schiste, vin jeune à boire frais tout l'été!",
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "zeltingen",
+        "schiste-rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-fritz-haag",
+      "nom": "Fritz Haag",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Brauneberg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Brauneberger Juffer",
+        "Brauneberger Juffer-Sonnenuhr"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Brauneberg, sur les ardoises bleues de la Mosel moyenne, Fritz Haag est une référence absolue, à la tête d'un domaine familial dont les racines plongent jusqu'en 1605. Le coteau de Brauneberg jouit d'une réputation historique exceptionnelle : dès le XVIIIe siècle, ses vins étaient parmi les plus chers et les plus prisés de la Mosel, et la colline était alors connue sous le nom de « Brauneberger ». C'est Wilhelm Haag qui, durant la seconde moitié du XXe siècle, a porté le domaine au pinacle, au point d'être consacré « vigneron de l'année » et de devenir l'une des figures tutélaires du Riesling allemand. Depuis 2005, son fils Oliver Haag a repris le flambeau et élevé encore la régularité du domaine, pendant que son frère Thomas dirige le voisin Schloss Lieser. Le cœur du vignoble est constitué des deux grands lieux-dits de Brauneberg : la Juffer et, en son sein, la Juffer-Sonnenuhr — la partie la plus pentue et la mieux exposée, plein sud sur ardoise bleue dévonienne, autour de son cadran solaire — considérée comme l'un des plus grands terroirs de Riesling de la planète. Les Rieslings de Fritz Haag en livrent l'expression la plus cristalline : pureté de fruit éclatante, tension, précision, élégance aérienne, le tout adossé à une profondeur minérale et à une acidité finement ciselée qui leur confèrent une longévité remarquable. La gamme couvre tout le spectre, des secs (Grosses Gewächs) aux liquoreux nobles, mais ce sont les Auslese et au-delà — en particulier les sélections en longue capsule d'or (lange Goldkapsel) de la Juffer-Sonnenuhr — qui ont forgé la légende du domaine, atteignant aux enchères du Grosser Ring des sommets de pureté, de concentration et de longévité. Même dans les Prädikate les plus modestes, le style reste d'une lisibilité exemplaire : jamais de lourdeur, toujours cette impression de lumière et de transparence. Valeur sûre et intemporelle de la Mosel, Fritz Haag offre l'une des lectures les plus limpides et lumineuses de ce que l'ardoise bleue et le Riesling peuvent accomplir ensemble — une élégance classique qui traverse les modes sans jamais se démoder.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "brauneberg",
+        "sonnenuhr"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-reinhold-haart",
+      "nom": "Reinhold Haart",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Piesport",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Piesporter Goldtröpfchen",
+        "Piesporter Domherr",
+        "Wintricher Ohligsberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Piesport, sur le grand amphithéâtre d'ardoise bleue qu'est le Goldtröpfchen, Reinhold Haart perpétue la tradition de la plus ancienne famille de vignerons du village — les Haart y sont attestés depuis 1337, ce qui en fait l'une des plus vieilles dynasties viticoles d'Allemagne. Le domaine doit sa réputation moderne à Theo Haart, qui en a fait l'une des références incontestées de la Mosel ; son fils Johannes Haart en assure aujourd'hui la conduite, dans la continuité d'un style très identifiable. Le Piesporter Goldtröpfchen — vaste coteau en hémicycle exposé plein sud, sur schistes bleus dévoniens profonds — est le joyau du domaine. Il faut ici distinguer ce grand cru de la sinistre réputation jadis attachée au nom de « Piesporter Michelsberg », vaste Grosslage d'où provenaient les vins de masse qui ont longtemps galvaudé l'appellation : le Goldtröpfchen authentique, lui, donne des Rieslings parmi les plus parfumés et expressifs de toute la Mosel. Le nez, exubérant de fruits exotiques, d'agrumes et de fleurs, est porté par une acidité fine et une trame saline qui interdisent toute lourdeur et assurent une vraie tension. À ses côtés, le Wintricher Ohligsberg apporte un registre plus droit, sévère et minéral, tandis que le Piesporter Domherr et d'autres parcelles complètent la palette. Du Kabinett aux liquoreux nobles, les vins de Reinhold Haart conjuguent une séduction aromatique immédiate et une réelle aptitude à la garde, défaisant durablement le cliché d'un Piesport galvaudé. Domaine de taille modeste mais d'une grande constance, travaillant avec patience des vignes parfois très âgées, Reinhold Haart incarne l'élégance parfumée du Riesling mosellan dans ce qu'elle a de plus raffiné : une expression à la fois charmeuse et profonde, qui prouve que le terroir de Piesport mérite de figurer au tout premier rang.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "piesport",
+        "goldtroepfchen"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-falkenstein",
+      "nom": "Hofgut Falkenstein",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Konz-Niedermennig",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niedermenniger Herrenberg",
+        "Krettnacher Euchariusberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Niedermennig, sur la Saar, Hofgut Falkenstein est un domaine culte, gardien d'une tradition saaroise que presque plus personne ne perpétue. Fondé et façonné par Erich Weber, aujourd'hui épaulé par son fils Johannes, il cultive un classicisme assumé et radical : tout y est à l'ancienne, des vendanges manuelles aux fermentations spontanées en vieux foudres (Fuder), avec de longs élevages sur lies et une intervention minimale. La singularité du domaine tient à sa manière d'embouteiller : chaque foudre est souvent mis en bouteille séparément, identifié par son numéro de fût et, fréquemment, par le nom du vendangeur de la parcelle — une approche d'une transparence rare qui fait le bonheur des amateurs. Le domaine travaille les coteaux de schiste du Niedermenniger Herrenberg, du Krettnacher Euchariusberg et du Falkensteiner Hofberg. Le style Falkenstein est l'essence même du Riesling de la Saar : des vins filigranes, à faible degré d'alcool, d'une tension et d'une fraîcheur cristallines, où les Kabinett et Spätlease spontanés atteignent une finesse et une buvabilité enchanteresses. Du sec au fruité, l'ensemble respire la précision et la pureté. Longtemps confidentiel, le domaine est devenu une référence absolue pour les passionnés de Riesling de la Saar, qui voient en lui le dépositaire d'un savoir-faire menacé. À rebours des modes et de la technologie, Hofgut Falkenstein cultive une forme de vérité du terroir et du millésime. Erich et Johannes Weber signent ainsi quelques-uns des Kabinett les plus émouvants d'Allemagne, et incarnent la mémoire vivante de la grande Saar classique. Devenu une cause célèbre parmi les amateurs pointus — notamment grâce au travail de passionnés qui ont fait connaître la Saar classique à l'international —, le domaine voit ses Kabinett et Spätlese de foudre s'arracher malgré leur grande discrétion. Le Falkensteiner Hofberg, en monopole de fait, en est le fleuron. Erich et Johannes Weber refusent les raccourcis technologiques et laissent chaque foudre exprimer sa parcelle et son millésime : une intransigeance qui fait de Hofgut Falkenstein l'un des derniers gardiens d'un Riesling de la Saar d'une pureté et d'une émotion rares.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "saar",
+        "culte",
+        "allocation",
+        "kabinett"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|larscarlberg"
+    },
+    {
+      "id": "de-mosel-prod-clemens-busch",
+      "nom": "Clemens Busch",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Untermosel",
+      "commune": "Pünderich",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Pündericher Marienburg"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Pünderich, sur la Mosel moyenne, Clemens Busch est l'un des pionniers du Riesling sec mosellan et l'une des plus belles expressions de la biodynamie dans la région. Clemens et Rita Busch, aujourd'hui épaulés par leur fils Florian, conduisent depuis des décennies un domaine d'environ seize hectares en biodynamie certifiée (Demeter), à une époque où ces choix étaient tout sauf évidents sur la Mosel. Le cœur du domaine est un seul grand coteau, le Pündericher Marienburg, que les Busch ont eu l'intelligence de relire à la lumière de sa géologie : ils en vinifient séparément les parcelles selon la couleur de l'ardoise — ardoise rouge (Rothenpfad), ardoise grise (Falkenlay) et ardoise bleue (Fahrlay) —, donnant à chacune sa propre cuvée. C'est une véritable cartographie sensorielle du schiste, rare et passionnante. Le style Clemens Busch privilégie le sec et l'authenticité : fermentations spontanées, longs élevages sur lies en vieux foudres, soufre réduit, intervention minimale. Il en résulte des Rieslings profonds, salins et texturés, parfois proches du registre nature dans leur jeunesse, mais d'une grande pureté de terroir et d'une belle aptitude à la garde. Le domaine produit aussi de superbes Prädikate fruités et liquoreux. Cette approche, longtemps marginale, a fait des Busch des références mondiales pour qui cherche un Riesling de schiste sec, vivant et profondément lié à son sol. Discret mais influent, le domaine a montré qu'on pouvait, sur la Mosel, conjuguer biodynamie, vin sec et lecture parcellaire du terroir au plus haut niveau. Clemens Busch incarne ainsi une Mosel à la fois ancrée dans son schiste et résolument tournée vers l'avenir, où chaque nuance d'ardoise trouve sa traduction dans le verre. Au-delà des cuvées parcellaires du Marienburg, le domaine propose des Rieslings « vom roten, grauen und blauen Schiefer » qui offrent un accès limpide à cette lecture du schiste par la couleur. Pionniers de la biodynamie et du sec sur la Mosel bien avant que ce ne soit une tendance, Clemens et Rita Busch, désormais relayés par Florian, ont essaimé une influence considérable sur la nouvelle génération. Leurs vins, salués par la critique internationale et présents sur les plus grandes cartes, prouvent qu'un grand schiste mosellan peut s'exprimer en sec, vivant et profondément lié à son sol.",
+      "mes_notes": null,
+      "notes_pat": "Clemens Busch façonne ses vins de terroirs sur le Marianburg et les côteaux alentours. Ces vins illustrent très bien les différences qu'amènent les schistes gris, rouges et bleus au riesling. Mention particulière pour le Marienburg Falkenlay GG d'une concentration et d'une fraicheur unique, une des plus belles expression de la Moselle Allemande. A noter aussi le Fass33 Feinherbe dont la légère sucrosité en font un complément parfait sur les plats asiatiques.",
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "biodynamie",
+        "demeter",
+        "untermosel",
+        "marienburg",
+        "nature",
+        "orange"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-heymann-loewenstein",
+      "nom": "Heymann-Löwenstein",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Untermosel",
+      "commune": "Winningen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Winninger Uhlen",
+        "Winninger Röttgen",
+        "Hatzenporter Stolzenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Winningen, sur la Terrassenmosel — ce tronçon spectaculaire de la basse Mosel proche de Coblence, où le vignoble s'accroche à de vertigineuses terrasses de schiste —, Heymann-Löwenstein est un domaine mythique et le pionnier absolu du Riesling sec mosellan. Fondé en 1980 par Reinhard Löwenstein et son épouse Cornelia Heymann, il a imposé une vision radicale du terroir (« le son de l'ardoise »), à rebours de la Mosel sucrée de l'époque, et hissé ces coteaux longtemps oubliés au rang des plus grands. Sur une quinzaine d'hectares de pentes parmi les plus raides d'Allemagne, plantées à 98 % de Riesling, le domaine exploite deux grands crus de Winningen, le Röttgen et l'Uhlen — ce dernier vinifié en trois cuvées distinctes selon la géologie de ses bancs de schiste (Roth Lay, Laubach, Blaufüsser Lay) — ainsi que le Kirchberg et le Stolzenberg à Hatzenport. La viticulture, proche de la nature, est certifiée Fair'n Green. Le style Heymann-Löwenstein est unique : des Rieslings secs amples, profonds et puissants, à la minéralité saline intense, souvent dotés d'une touche de sucre résiduel parfaitement fondue, et taillés pour une très longue garde. Ce sont des vins de gastronomie et de méditation, qui ont prouvé que la Mosel pouvait produire de grands secs de terroir. Fin 2025, après quatre décennies, la famille Löwenstein a passé la main : le domaine a été repris par le négociant Jochen Heigoldt (Vioneers) et deux investisseurs, avec Thomas Dörr — venu de Dr. Bürklin-Wolf — comme directeur depuis janvier 2026 ; l'équipe a été conservée et Reinhard Löwenstein reste conseiller. Cette transmission marque la fin d'une ère mais préserve l'esprit d'une maison devenue, sous l'impulsion d'un couple visionnaire, une institution. Référence intemporelle de la Terrassenmosel, Heymann-Löwenstein demeure le symbole d'une Mosel sèche, sérieuse et profondément ancrée dans son schiste. Le travail sur ces terrasses vertigineuses, où tout se fait à la main au prix d'efforts considérables, est au cœur de la philosophie de la maison : faire « parler le schiste ». Reinhard Löwenstein, par ses écrits et ses prises de position, fut aussi un théoricien influent du vin de terroir allemand. Aux grands secs s'ajoutent de rares Eiswein et liquoreux, ainsi qu'un peu de Spätburgunder (« Schieferterrassen in Rot »). La reprise de 2026 ouvre un nouveau chapitre, mais l'enjeu affiché des repreneurs est clair : préserver l'âme d'un domaine qui a redéfini la Terrassenmosel.",
+      "mes_notes": null,
+      "notes_pat": "Le domaine a été vendu début 2026 à un groupe d'investisseurs passionés qui veut garder l'équipe en place. Les vins sont toujours impressionant de pureté et de chaleur. Mention pour les très différents Uhlen Blaufusser Lay, Uhlen Laubach et Uhlen Roth Lay, qui sont sans aucun doute parmis les plus grands rieslings au monde.",
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "untermosel",
+        "winningen",
+        "uhlen",
+        "terrasses"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-peter-lauer",
+      "nom": "Peter Lauer (Weingut Lauer)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Ayl",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ayler Kupp",
+        "Ayler Schonfels",
+        "Saarfeilser"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ayl, sur la Saar, le domaine Peter Lauer est mené par Florian Lauer, l'un des artisans les plus inventifs du renouveau de la région. La famille, qui tient aussi une auberge réputée au village, exploite quelques-uns des plus beaux coteaux de schiste d'Ayl, au premier rang desquels l'Ayler Kupp et l'escarpé Schonfels. La marque de fabrique du domaine, c'est son système de cuvées « Fass » (foudre) : chaque grande sélection porte le numéro de son fût, perpétuant une tradition saaroise ancienne et offrant une lecture parcellaire d'une grande finesse. Florian Lauer a notamment ressuscité le style historique du Kabinett de la Saar — léger, sec ou demi-sec, peu alcoolisé, d'une buvabilité et d'une précision exquises —, devenu emblématique de sa démarche. Le style Peter Lauer privilégie la fraîcheur, la salinité et la finesse plutôt que la puissance : des Rieslings cristallins, tendus, d'une grande énergie minérale, qui ont conquis la critique internationale et les sommeliers du monde entier. Le domaine produit aussi un excellent Sekt. En quelques millésimes, Florian Lauer a fait passer le domaine familial du statut de bonne adresse locale à celui de référence mondiale du Riesling de la Saar, et sa relecture des cuvées de foudre et du Kabinett a influencé toute une génération de vignerons. Entre fidélité à la tradition et inventivité, Peter Lauer incarne le visage le plus séduisant de la Saar contemporaine, celui d'un terroir d'ardoise révélé avec autant de rigueur que de gourmandise. Florian Lauer a redonné ses lettres de noblesse à l'Ayler Kupp, grand coteau historique de la Saar, et son approche — numéroter les foudres, restaurer un style de Kabinett oublié, viser la précision avant la puissance — a fait école bien au-delà de la région. Présents sur les plus grandes tables, ses vins comptent parmi les plus recherchés de la Saar contemporaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "saar",
+        "ayl",
+        "fass-system",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-schloss-lieser",
+      "nom": "Schloss Lieser (Thomas Haag)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Lieser",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niederberg Helden",
+        "Brauneberger Juffer-Sonnenuhr",
+        "Wehlener Sonnenuhr"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Lieser, sur la Mosel moyenne, Schloss Lieser est l'un des plus beaux exemples de renaissance de la région. Le domaine, installé dans un château néogothique du XIXe siècle, était à l'abandon lorsque Thomas Haag — fils de la légende Wilhelm Haag (Fritz Haag) et frère d'Oliver Haag — en a pris les rênes en 1992 ; en une trentaine d'années, il l'a hissé au tout premier rang de la Mosel. Le domaine exploite le Lieser Niederberg Helden, qu'il a largement contribué à faire reconnaître, ainsi que de prestigieux lieux-dits voisins : la Brauneberger Juffer-Sonnenuhr et la Juffer (terroir de famille), le Wehlener Sonnenuhr, le Graacher Himmelreich et le Piesporter Goldtröpfchen. Le style Thomas Haag est d'une grande pureté classique : des Rieslings cristallins, précis, d'une finesse aérienne et d'une belle tension, déclinés sur toute l'échelle des Prädikate, du sec aux liquoreux nobles. Les Auslese en capsule d'or, en particulier, comptent parmi les plus belles réussites de la Mosel. Travaillant dans la grande tradition mosellane — fermentations en foudres, élevages soignés —, le domaine conjugue rigueur et élégance, et offre un rapport qualité-prix souvent remarquable au regard de son niveau. Devenu une valeur sûre saluée par toute la critique, Schloss Lieser illustre la capacité de la Mosel à faire renaître ses joyaux endormis, et le château de Lieser est redevenu l'un des grands noms du Riesling cristallin de la Mosel moyenne. La fratrie Haag occupe ainsi une place unique sur la Mosel : Oliver à Fritz Haag (Brauneberg), Thomas à Schloss Lieser, tous deux héritiers du même perfectionnisme paternel. Sous sa houlette, le Niederberg Helden est redevenu un nom qui compte, et le domaine une référence régulière des sommets de la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "lieser",
+        "niederberg-helden",
+        "haag"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-jj-christoffel",
+      "nom": "Joh. Jos. Christoffel Erben",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Ürzig",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Erdener Prälat",
+        "Erdener Treppchen",
+        "Ürziger Würzgarten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ürzig, sur la Mosel moyenne, J.J. Christoffel Erben est un domaine minuscule mais légendaire, dont les vins comptent parmi les plus recherchés des amateurs de Riesling fruité classique. Pendant des décennies, il fut incarné par Hans-Leo Christoffel, vinificateur d'exception qui, sur à peine deux ou trois hectares, produisait des vins d'une finesse et d'une précision rares. À son départ à la retraite, au début des années 2000, les vignes du domaine ont été confiées à Robert Eymael, du voisin Mönchhof, qui continue depuis de les vinifier et de les commercialiser sous l'étiquette historique J.J. Christoffel Erben, en préservant scrupuleusement le style maison. Le domaine travaille de très grands coteaux : l'Ürziger Würzgarten, sur son spectaculaire schiste rouge volcanique, qui donne des Rieslings épicés et parfumés, et surtout l'Erdener Prälat, l'un des plus petits et des plus prestigieux lieux-dits de toute la Mosel, à l'origine de vins d'une richesse et d'une profondeur exceptionnelles, ainsi que l'Erdener Treppchen. Le style J.J. Christoffel Erben reste fidèle à la tradition fruitée de la Mosel : du Kabinett délicat à l'Auslese, des vins d'une grande élégance, à faible degré, à la fois aromatiques et d'une longévité remarquable. Confidentiel par sa taille, le domaine continue de faire figure de référence pour le grand Riesling fruité d'Ürzig et d'Erden : entre héritage d'un maître et savoir-faire perpétué, J.J. Christoffel Erben demeure un nom culte, gage de finesse pour les connaisseurs de la Mosel. Cette continuité entre la main de Hans-Leo Christoffel et le travail de Robert Eymael a permis de sauver un patrimoine inestimable : celui d'un micro-domaine dont les Prälat et Würzgarten figurent, millésime après millésime, parmi les plus belles expressions du grand Riesling fruité de la Mosel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "mittelmosel",
+        "erden",
+        "uerzig",
+        "wuerzgarten",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-aj-adam",
+      "nom": "A.J. Adam",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Neumagen-Dhron",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dhroner Hofberg",
+        "Dhroner Häschen",
+        "Piesporter Goldtröpfchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Dhron, dans la commune de Neumagen-Dhron, Andreas Adam (A.J. Adam) est l'une des plus belles révélations de la nouvelle génération mosellane. Parti de presque rien au milieu des années 2000, il a notamment fait renaître un grand coteau de schiste tombé dans l'oubli, le Dhroner Hofberg, dont il a révélé tout le potentiel. Le domaine, resté de taille modeste, travaille aussi le lieu-dit Häschen et quelques parcelles voisines, dans une approche méticuleuse de viticulteur-artisan : faibles rendements, fermentations spontanées, recherche de pureté et de tension. Les Rieslings d'A.J. Adam sont filigranes, précis et salins, déclinés du Kabinett — registre dans lequel il excelle — jusqu'aux cuvées sèches parcellaires et aux Prädikate plus riches. En une quinzaine d'années, Andreas Adam s'est imposé comme l'un des noms les plus recherchés de la Mosel moyenne, symbole d'une génération qui réinvente la région en redécouvrant ses terroirs oubliés et en cultivant l'élégance aérienne du Riesling de schiste. Produits en petites quantités sur des parcelles exigeantes, ses vins s'arrachent en allocations confidentielles. Andreas Adam est aujourd'hui cité parmi les vignerons les plus prometteurs de la Mosel, et son Dhroner Hofberg est redevenu un nom qui compte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "dhron",
+        "hofberg",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-zilliken",
+      "nom": "Forstmeister Geltz Zilliken",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Saarburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Saarburger Rausch",
+        "Ockfener Bockstein"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Saarburg, sur la Saar, Forstmeister Geltz Zilliken est l'un des domaines historiques de la région, mené par Hanno Zilliken et sa fille Dorothee, qui incarne la relève. Membre du VDP, le domaine est une référence du Riesling fruité classique de la Saar. Son joyau est le Saarburger Rausch, grand coteau de schiste (diabase) dont il tire des Rieslings d'une finesse et d'une vivacité remarquables, complété par l'Ockfener Bockstein. La particularité du domaine tient aussi à sa cave légendaire, profonde, froide et très humide — la « Schatzkammer » (chambre au trésor) —, dont le microclimat offre des conditions idéales pour de très longs élevages et le vieillissement des vins. Le style Zilliken privilégie la fraîcheur, la délicatesse et la tension : des Kabinett et Spätlese d'une buvabilité enchanteresse, mais surtout des Auslese et des Eiswein d'anthologie, d'une pureté et d'une longévité exceptionnelles, qui comptent parmi les plus beaux liquoreux de la Saar. Fidèle à une tradition fruitée et à un faible degré d'alcool, le domaine demeure l'un des gardiens les plus précieux de l'identité saaroise. Dorothee Zilliken, l'une des rares femmes à la tête d'un grand domaine de la Saar, perpétue ce style avec une remarquable constance, confirmant la maison parmi les valeurs les plus sûres et les plus attachantes de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "saar",
+        "saarburg",
+        "rausch",
+        "botrytis"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-carl-loewen",
+      "nom": "Carl Loewen",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Leiwen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Maximin Herrenberg",
+        "Detzem Maximiner Klosterlay",
+        "Longuicher Maximiner Herrenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Leiwen, sur la Mosel, le domaine Carl Loewen est mené par Christopher Loewen, épaulé par son père Karl-Josef, dans un style qui conjugue tradition et précision. Le domaine s'est fait connaître par un trésor rare : des vignes de Riesling franches de pied (non greffées) plantées en 1896 dans le Maximin Herrenberg de Longuich, parmi les plus vieilles d'Allemagne, dont est issu le célèbre « 1896 / Längst vergessener Riesling ». Carl Loewen exploite aussi de grands coteaux de schiste comme la Leiwener Laurentiuslay et le Thörnicher Ritsch, dont il tire des Rieslings tendus, salins et profonds. Le style maison, marqué par des fermentations spontanées et de longs élevages, privilégie la finesse et l'expression du terroir, aussi bien dans le registre sec que dans de délicieux Kabinett à faible degré. Régulier et en pleine ascension critique, Carl Loewen s'est imposé comme l'une des valeurs sûres de la Mosel moyenne, à la croisée du classicisme mosellan et d'une approche moderne et parcellaire du grand Riesling de schiste. Salué par une critique de plus en plus élogieuse, le domaine est devenu un modèle de cette Mosel moderne qui marie vieilles vignes, fermentations naturelles et lecture parcellaire au service d'un Riesling à la fois précis et chaleureux.",
+      "mes_notes": null,
+      "notes_pat": "Les vignobles sur le coteau Maximin Herrenberg sont les plus vieux rieslings au monde, datant pour certains de 1896. La cuvée 1896 compte 1,200 bouteille et est faite à la main par Christopher, produit un des riesling à la texture ronde et unique, un des plus grands vins d'Allemagne.",
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "leiwen",
+        "maximin-herrenberg",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-max-ferd-richter",
+      "nom": "Max Ferd. Richter",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Mülheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Mülheimer Helenenkloster",
+        "Brauneberger Juffer-Sonnenuhr",
+        "Wehlener Sonnenuhr"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Mülheim, sur la Mosel moyenne, Max Ferd. Richter est un domaine familial historique — les Richter y font du vin depuis le XVIIe siècle —, aujourd'hui mené par Dirk Richter et son fils Constantin. Il incarne une certaine tradition du Riesling fruité et classique de la Mosel, avec une régularité qui en fait une valeur sûre. Le domaine exploite plusieurs grands coteaux de schiste : la Brauneberger Juffer-Sonnenuhr, le Wehlener Sonnenuhr, le Graacher Domprobst et le Mülheimer Sonnenlay. Sa singularité est de posséder en monopole le Mülheimer Helenenkloster, minuscule parcelle d'où provient l'un des Eiswein les plus réputés et les plus réguliers d'Allemagne, produit presque chaque année. Le style Richter privilégie l'équilibre, la fraîcheur et la pureté du fruit, du Kabinett délicat aux liquoreux nobles, avec un sens consommé du classicisme mosellan. Fiable, accessible et présent sur les marchés internationaux, le domaine reste l'un des ambassadeurs les plus constants du Riesling fruité de la Mosel et un spécialiste reconnu de l'Eiswein. Largement diffusé à l'international depuis des décennies, le domaine a contribué à faire connaître le Riesling mosellan dans le monde, tout en gardant un ancrage familial et un attachement à la tradition qui forcent le respect.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "muelheim",
+        "helenenkloster",
+        "monopole",
+        "eiswein"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-vollenweider",
+      "nom": "Daniel Vollenweider",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Traben-Trarbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Wolfer Goldgrube",
+        "Wolfer Sonnenlay",
+        "Trabener Würzgarten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Wolf, près de Traben-Trarbach, le Suisse Daniel Vollenweider a créé son domaine en 2000, après un véritable coup de cœur pour la Mosel, en rachetant des parcelles de vieilles vignes franches de pied sur un grand coteau de schiste alors négligé : le Wolfer Goldgrube. Son pari a été spectaculairement payant. Travaillant de très vieilles vignes à faible rendement, Vollenweider produit des Rieslings d'une grande pureté et d'une belle profondeur, fidèles à la tradition fruitée de la Mosel : du Kabinett délicat aux Auslese concentrées, en passant par de superbes Spätlese. Le style maison recherche la finesse, la tension et l'expression cristalline du schiste, dans des vins à faible degré d'alcool d'une grande élégance. La production, restée confidentielle, s'écoule auprès d'amateurs avertis. En l'espace de deux décennies, ce vigneron venu d'ailleurs s'est imposé comme l'un des artisans les plus respectés de la Mosel, preuve que la région continue d'attirer et de révéler des talents capables de faire renaître ses grands terroirs oubliés. Régulièrement salué par la critique, ce parcours singulier — un vigneron suisse tombé amoureux d'un coteau mosellan oublié — est devenu l'une des belles histoires de la région et une référence du Riesling fruité de schiste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "wolf",
+        "goldgrube",
+        "allocation",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-weiser-kuenstler",
+      "nom": "Weiser-Künstler",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Enkirch",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Enkircher Ellergrub",
+        "Enkircher Steffensberg",
+        "Enkircher Zeppwingert"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Traben-Trarbach, dans la partie aval de la Mosel moyenne, Weiser-Künstler est un petit domaine culte fondé et mené par Konstantin Weiser et Alexandra Künstler. Travaillant sur de très grands coteaux de schiste souvent escarpés et difficiles d'accès, le couple s'est imposé en quelques années parmi les références de la nouvelle génération. Le domaine exploite notamment l'Enkircher Ellergrub et le Wolfer Goldgrube, dont il tire des Rieslings d'une grande finesse, salins et tendus, vinifiés par fermentation spontanée avec une intervention minimale. Le style, à la fois précis et profond, couvre le registre sec comme les Prädikate fruités, toujours avec un faible degré d'alcool et une remarquable buvabilité. Produits en petites quantités sur des parcelles exigeant un travail manuel considérable, les vins de Weiser-Künstler s'écoulent en allocations confidentielles auprès des amateurs et des meilleures tables. Discret mais très admiré, le domaine illustre parfaitement le renouveau de la Mosel par de jeunes vignerons attachés à la préservation des terroirs de schiste en forte pente et à l'expression la plus pure du Riesling. Alexandra Künstler, issue de la célèbre famille de vignerons du Rheingau, et Konstantin Weiser forment un duo dont l'exigence et la finesse en font l'un des secrets les mieux gardés de la Mosel aval.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "mittelmosel",
+        "enkirch",
+        "ellergrub",
+        "terrasses"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-van-volxem",
+      "nom": "Van Volxem",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Wiltingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Wiltinger Gottesfuss",
+        "Kanzemer Altenberg",
+        "Wiltinger Volz"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Wiltingen, sur la Saar, Van Volxem est l'un des domaines les plus spectaculaires de la Mosel contemporaine. Ancienne propriété jésuite puis du brasseur belge Gustav Van Volxem, le domaine a été racheté en 1999 par Roman Niewodniczanski — arrière-petit-fils du fondateur de la brasserie Bitburger —, qui s'est donné pour mission de lui rendre la splendeur qu'il connaissait un siècle plus tôt. Sur environ trente-trois hectares de coteaux de schiste plantés à 98 % de Riesling, le domaine possède des terroirs d'exception classés au plus haut dès la classification prussienne de 1865 : Scharzhofberg, Wiltinger Gottesfuß (avec des vignes franches de pied de quelque 125 ans), Volz, Kanzemer Altenberg, Wawerner Goldberg. Niewodniczanski, passionné d'archives, a aussi entrepris de ressusciter des sites oubliés, comme le Geisberg, dans l'un des projets viticoles les plus ambitieux d'Allemagne. Son style renoue avec la Saar d'avant 1914, plus sèche qu'aujourd'hui : des Rieslings à faible degré (rarement plus de 12 %), d'une grande pureté, à la fois légers, fruités et profondément minéraux. Doté d'une cave-cathédrale ultramoderne, Van Volxem s'est imposé comme un acteur majeur du renouveau du grand Riesling sec de la Saar. Roman Niewodniczanski mène par ailleurs, avec Markus Molitor, l'un des chantiers de restauration de coteaux les plus ambitieux du vignoble mondial, confirmant son rôle de figure majeure du renouveau saarrois.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "saar",
+        "wiltingen",
+        "gottesfuss",
+        "gross-gewaechs",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-knebel",
+      "nom": "Knebel (Heinz-Peter Knebel)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Untermosel",
+      "commune": "Winningen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Winninger Uhlen",
+        "Winninger Röttgen",
+        "Winninger Brückstück"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Winningen, sur la Terrassenmosel — ce tronçon spectaculaire de la basse Mosel aux terrasses vertigineuses, proche de Coblence —, le domaine Knebel est mené aujourd'hui par Matthias Knebel et son épouse Beate, héritiers d'une longue tradition familiale et d'un travail de pionnier sur ces coteaux. Sur environ six hectares et demi plantés presque exclusivement de Riesling, le domaine exploite quelques-uns des plus grands sites de Winningen : le Röttgen, dont la pente atteint par endroits 81 %, et l'Uhlen, vinifié selon ses différents bancs de schiste (Roth Lay, Laubach, Blaufüsser Lay), ainsi que le Hamm. Quatre-vingt-dix pour cent du vignoble est en forte pente, exigeant un travail manuel considérable. Le style Knebel, proche du registre naturel, privilégie le respect du sol et du raisin : pas de levures industrielles, pas de désacidification ni de collage, des fermentations spontanées et de vieilles vignes en partie franches de pied. Il en résulte des Rieslings secs et des Kabinett d'une grande énergie minérale, tendus et profonds. Membre du VDP depuis 2017, le domaine s'est imposé comme l'une des références de la Terrassenmosel. Salués par la critique pour leur authenticité et leur énergie, les Riesling de Matthias Knebel comptent désormais parmi les plus belles expressions de la basse Mosel et de ses terrasses de schiste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "untermosel",
+        "winningen",
+        "uhlen",
+        "terrasses"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-maximin-gruenhaus",
+      "nom": "Maximin Grünhaus (von Schubert)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "commune": "Mertesdorf",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Abtsberg",
+        "Herrenberg",
+        "Bruderberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Au bord de la minuscule Ruwer, à Mertesdorf, à quelques kilomètres de Trèves, Maximin Grünhaus est l'un des domaines les plus chargés d'histoire de toute l'Allemagne. Ses terres appartenaient à l'abbaye Saint-Maximin de Trèves et sont plantées de vignes depuis plus de mille ans — certaines mentions documentaires remontent à l'époque carolingienne. La famille von Schubert en est propriétaire depuis 1882 ; après les longues et marquantes décennies de Carl von Schubert, c'est désormais son fils Maximin von Schubert qui dirige ce monument vivant du patrimoine viticole rhénan. La singularité du domaine tient à ses trois lieux-dits, tous en monopole, qui prolongent jusqu'à aujourd'hui la hiérarchie monastique d'origine. L'Abtsberg — « la colline de l'abbé » —, sur ardoise bleue dévonienne, en forte pente pouvant atteindre 70 %, en est le sommet : réservé jadis à la table de l'abbé, il donne les vins les plus fins, les plus minéraux et les plus longilignes. Le Herrenberg, sur ardoise rouge aux sols plus profonds et plus aptes à retenir l'eau, produisait le vin des maîtres de chœur et offre des Rieslings plus généreux et fruités. Le Bruderberg, le plus petit des trois, réservé aux frères convers, donne des vins épicés au caractère parfois plus rustique. Le style Grünhaus est d'une précision exemplaire et d'une grande cohérence : faible degré d'alcool, acidité racée et vibrante, fruit pur et délicatesse de texture, pour des Rieslings comptant parmi les plus aptes à la garde de la région — ils traversent les décennies sans faiblir. Du sec (les Grosses Gewächs de l'Abtsberg, d'une rare allonge) jusqu'aux Prädikate les plus nobles, en passant par des Kabinett d'anthologie, le domaine décline une lecture limpide, fraîche et intemporelle du terroir si particulier de la Ruwer, vallée latérale plus froide et plus tardive que la Mosel elle-même. Entre mémoire millénaire et exigence contemporaine, Maximin Grünhaus demeure une référence incontournable, et l'un des plus beaux témoignages de ce que mille ans de viticulture continue peuvent inscrire dans un verre de Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ruwer",
+        "monopole",
+        "abtsberg",
+        "herrenberg",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-karthaeuserhof",
+      "nom": "Karthäuserhof",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "commune": "Eitelsbach (Trier)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Eitelsbacher Karthäuserhofberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Niché à Eitelsbach, sur la Ruwer, le Karthäuserhof est l'un des plus anciens domaines viticoles d'Europe : fondé en 1335 par les moines chartreux — dont il tire son nom — il fut, comme son voisin Maximin Grünhaus, un haut lieu monastique de la vigne durant près de cinq siècles, sur des terres où la viticulture remonterait même à l'époque romaine. Sécularisé sous Napoléon, le domaine fut vendu aux enchères à Paris en 1811 et racheté par Valentin Leonardy, un francophile passionné ; il est resté dans la même lignée familiale depuis, des Rautenstrauch aux Tyrell, et aujourd'hui à la famille Behler. Le joyau du domaine est le Karthäuserhofberg, vaste monopole d'environ dix-neuf hectares d'un seul tenant, exposé du sud au sud-ouest sur ardoise dévonienne. Depuis 2020, Albert Behler a confié la direction du domaine à Richard Grosche (commercial) et surtout, pour la technique, à Mathieu Kauffmann — ancien chef de cave de la maison de Champagne Bollinger, puis artisan de la conversion biologique du domaine von Buhl dans le Pfalz, et élu vigneron de l'année 2020 par Gault & Millau. Sous son impulsion, le Karthäuserhof a engagé une conversion à la viticulture biologique et biodynamique, abandonné les intrants de synthèse, et adopté en cave des vinifications en grappes entières, sans levurage ni collage, avec des élevages en cuves inox et en grands fûts de chêne usagés. Il en résulte des Rieslings minéraux, racés, à l'acidité saline et à la grande aptitude à la garde, déclinés du sec (le Grosses Gewächs du Karthäuserhofberg, d'une belle profondeur) jusqu'aux Prädikate les plus nobles. Le domaine cultive aussi une tradition de Sekt (vin effervescent) qui remonte au début du XIXe siècle, lorsque le propriétaire d'alors rêvait d'imiter les bulles des grandes maisons. Reconnaissable entre toutes à son étiquette historique apposée sur le seul col de la bouteille — une singularité qui en fait un objet de collection —, le Karthäuserhof conjugue aujourd'hui mémoire monastique millénaire et élan résolument contemporain, porté par l'un des techniciens les plus respectés du vin allemand.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ruwer",
+        "eitelsbach",
+        "monopole",
+        "legacy",
+        "kauffmann"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-st-urbans-hof",
+      "nom": "St. Urbans-Hof",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Leiwen / Ockfen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ockfener Bockstein",
+        "Wiltinger Schlangengraben",
+        "Leiwener Laurentiuslay"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Leiwen, sur la Mosel, St. Urbans-Hof est l'un des domaines les plus importants et les plus réputés de la région, fondé en 1947 par Nicolaus Weis et aujourd'hui mené par son petit-fils Nik Weis, dont le nom figure désormais en grand sur les étiquettes. Sur une quarantaine d'hectares répartis entre la Mosel et la Saar, le domaine exploite de très grands coteaux de schiste : l'Ockfener Bockstein, le Wiltinger Schlangengraben et le Saarfeilser sur la Saar ; la Leiwener Laurentiuslay, le Mehringer Blattenberg et le Piesporter Goldtröpfchen sur la Mosel. Le domaine entretient aussi sa propre pépinière de vignes, gage de sélection massale et de vieilles vignes. Le style St. Urbans-Hof conjugue tradition fruitée et précision moderne : des Rieslings purs, élégants et équilibrés, du sec aux Prädikate nobles, d'une grande régularité. Largement exporté et apprécié dans le monde entier, le domaine offre un excellent rapport qualité-prix sur ses cuvées d'entrée comme de réelles profondeurs sur ses grands crus. Valeur sûre et ambassadeur reconnu du Riesling mosellan, St. Urbans-Hof allie le savoir-faire de trois générations à une vision contemporaine du terroir. Le domaine a aussi joué un rôle de passeur, formant et inspirant nombre de jeunes vignerons, et reste une porte d'entrée idéale vers le grand Riesling de la Mosel et de la Saar.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "saar",
+        "ockfen",
+        "bockstein",
+        "grand-domaine",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-dr-loosen",
+      "nom": "Dr. Loosen (Ernst Loosen)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Bernkastel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Wehlener Sonnenuhr",
+        "Erdener Treppchen",
+        "Erdener Prälat",
+        "Ürziger Würzgarten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bernkastel, Dr. Loosen est l'un des domaines les plus célèbres de la Mosel et l'un des plus efficaces ambassadeurs du Riesling allemand dans le monde, sous l'impulsion de l'inépuisable Ernst « Erni » Loosen, qui a repris la propriété familiale à la fin des années 1980. Le domaine possède des parcelles dans plusieurs des plus grands coteaux de la Mosel moyenne, souvent plantés de très vieilles vignes franches de pied : le Wehlener Sonnenuhr, l'Erdener Prälat et le Treppchen, l'Ürziger Würzgarten, le Graacher Himmelreich et le Bernkasteler Lay. De ces sites naissent des Rieslings qui couvrent toute la gamme, du sec aux liquoreux nobles, avec notamment une série de Grosses Gewächs « Réserve » longuement élevés et commercialisés tardivement. Infatigable promoteur du Riesling, Erni Loosen a multiplié les projets bien au-delà de la Mosel : le domaine Villa Wolf dans le Pfalz, la cuvée Eroica dans l'État de Washington, ou encore des aventures en Oregon. Conjuguant ce rayonnement international à une réelle profondeur sur ses meilleurs crus, Dr. Loosen offre à la fois des cuvées d'entrée accessibles et de grands Riesling de garde, et demeure l'un des noms les plus reconnus de la Mosel à travers le monde. Erni Loosen est aussi connu pour ses expérimentations sur le vieillissement et la vinification, et pour avoir replacé le grand Riesling allemand au centre de la scène internationale, faisant de Dr. Loosen une porte d'entrée mondiale vers la Mosel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "bernkastel",
+        "grand-domaine",
+        "international"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-thanisch",
+      "nom": "Wwe. Dr. H. Thanisch (Erben Thanisch)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Bernkastel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bernkasteler Doctor",
+        "Bernkasteler Lay",
+        "Bernkasteler Bratenhöfchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bernkastel, Wwe. Dr. H. Thanisch (Erben Thanisch) est l'un des domaines les plus historiques de la Mosel, remontant au XVIIe siècle et longtemps dirigé par des femmes — d'où le « Wwe. » (Witwe, la veuve) qui figure dans son nom. C'est l'une des deux propriétés issues de la division de l'ancien grand domaine Thanisch. Son joyau est une part du Bernkasteler Doctor, considéré comme le plus prestigieux — et historiquement le plus cher — lieu-dit de toute la Mosel, minuscule coteau d'ardoise dominant la ville de Bernkastel. Le domaine exploite aussi le Bernkasteler Lay et le Graben, dont il tire des Rieslings d'une grande finesse. Le style maison reste fidèle à la tradition fruitée de la Mosel : des vins élégants, à l'acidité fine et à la minéralité d'ardoise marquée, du Kabinett délicat aux Auslese de grande garde. Gardien de l'un des terroirs les plus mythiques d'Allemagne, le domaine perpétue un héritage prestigieux et demeure une référence pour qui veut goûter au légendaire Bernkasteler Doctor. Présent sur les marchés internationaux, le domaine continue de faire vivre un nom indissociable de l'histoire du vin allemand, et ses cuvées issues du Doctor demeurent parmi les plus recherchées de la Mosel pour leur valeur patrimoniale autant que gustative.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "mittelmosel",
+        "bernkastel",
+        "doctor",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-prod-kesselstatt",
+      "nom": "Reichsgraf von Kesselstatt",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mosel-Saar-Ruwer",
+      "commune": "Morscheid",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Scharzhofberger",
+        "Josephshöfer",
+        "Piesporter Goldtröpfchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installé au romantique château de Marienlay, dans la vallée de la Ruwer, Reichsgraf von Kesselstatt est l'un des plus anciens et des plus vastes domaines de la Mosel — son histoire est documentée depuis 1349. Propriété des comtes (Reichsgraf) jusqu'en 1978, il a été racheté par la famille Reh et porté au sommet par Annegret Reh-Gartner, qui le dirigea de 1983 jusqu'à sa mort en 2016 ; il est aujourd'hui géré par le Dr. Karsten Weyand. Fait unique au sein du VDP, le domaine possède des grands crus classés dans les trois vallées — Mosel, Saar et Ruwer —, dont le monopole du Josephshöfer à Graach, ainsi que des parcelles au Scharzhofberger, au Kaseler Nies'chen, au Wehlener Sonnenuhr ou au Piesporter Goldtröpfchen. Sur une cinquantaine d'hectares plantés presque exclusivement de Riesling, il vinifie par fermentations indigènes des vins fidèles à la tradition fruitée de la Mosel, du Riesling d'entrée de gamme désaltérant aux Grosses Gewächs filigranes. Référence patrimoniale, Kesselstatt demeure l'un des grands ambassadeurs historiques du Riesling des trois vallées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "grand-domaine",
+        "josephshoefer",
+        "kesselstatt"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-von-othegraven",
+      "nom": "von Othegraven",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "commune": "Kanzem",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kanzemer Altenberg",
+        "Ockfener Bockstein",
+        "Wiltinger Kupp"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Sur les pentes d'ardoise de Kanzem, au cœur de la Saar, von Othegraven est l'un des domaines les plus anciens et les plus respectés de la région. Son joyau est le Kanzemer Altenberg, coteau très raide sur ardoise rouge qui donne des Rieslings salins, droits et de longue garde, du sec au liquoreux noble ; le domaine exploite aussi l'Ockfener Bockstein et le Wiltinger Kupp. Il a connu un coup de projecteur en 2010 lorsqu'il a été repris par l'animateur de télévision Günther Jauch, héritier par alliance de la famille von Othegraven, qui a réinvesti pour hisser la qualité et la notoriété de la propriété tout en respectant son style classique ; la vinification est confiée à Andreas Barth, par ailleurs vigneron du Lubentiushof. Aujourd'hui, von Othegraven conjugue tradition saaroise et gestion soignée, et propose une gamme fiable et authentique, encore d'un bon rapport qualité-prix au regard de la finesse de ses meilleurs crus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "saar",
+        "kanzem",
+        "altenberg",
+        "jauch"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-julian-haart",
+      "nom": "Julian Haart",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Piesport",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Piesporter Goldtröpfchen",
+        "Piesporter Schubertslay",
+        "Wintricher Ohligsberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Piesport, Julian Haart est l'une des plus belles révélations de la jeune génération mosellane. Cousin éloigné de Reinhold Haart et formé aux meilleures écoles — il a fait ses armes chez Egon Müller, sur la Saar, et chez Klaus-Peter Keller, en Rheinhessen —, il a fondé son propre domaine en 2010 et l'a, en quelques millésimes, hissé au rang des adresses les plus convoitées de la région. Sur une surface minuscule (à peine quelques hectares), il travaille de grands coteaux de schiste autour de Piesport et de Wintrich : le Piesporter Goldtröpfchen, le Wintricher Ohligsberg et, surtout, le tout petit Schubertslay, planté de vieilles vignes franches de pied, d'où il tire un Kabinett devenu mythique. Le style Julian Haart est d'une finesse extrême : des Rieslings filigranes, à très faible degré d'alcool, d'une pureté cristalline et d'une tension électrique, issus de fermentations spontanées et d'une intervention minimale. Du Kabinett aux cuvées les plus concentrées, ses vins conjuguent légèreté apparente et profondeur saisissante. Produits en quantités infimes, ils s'écoulent en allocations confidentielles auprès des amateurs les plus avertis et des meilleures tables du monde. En une dizaine d'années, Julian Haart est devenu l'un des symboles du renouveau de la Mosel, celui d'une nouvelle génération qui réinvente le Kabinett et l'élégance aérienne du Riesling de schiste. Discret et exigeant, il incarne l'avenir prometteur de la grande Mosel fruitée et filigrane. La production, infime, et la jeunesse du domaine n'ont pas empêché Julian Haart de s'imposer en quelques années comme l'un des noms les plus convoités de la Mosel : ses bouteilles s'échangent désormais à prix d'or entre connaisseurs. Héritier d'une double école — la rigueur saaroise d'Egon Müller et l'exigence rhénane de Keller —, il met ce bagage au service d'un Riesling de schiste d'une délicatesse extrême. Le Schubertslay, vinifié à partir de vieilles vignes franches de pied, en est le symbole : un Kabinett d'anthologie qui résume tout son art de la légèreté profonde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "mittelmosel",
+        "piesport",
+        "schubertslay",
+        "culte",
+        "allocation",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|trink-magazine|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-immich-batterieberg",
+      "nom": "Immich-Batterieberg",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Enkirch",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Enkircher Batterieberg",
+        "Enkircher Ellergrub",
+        "Enkircher Steffensberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Enkirch, à l'extrémité de la Mosel moyenne, Immich-Batterieberg est l'un des plus anciens domaines viticoles d'Allemagne — la famille Immich y est attestée dès le début du XVe siècle. Après une longue période d'endormissement, le domaine a connu une renaissance spectaculaire à partir de 2009, lorsqu'une équipe d'investisseurs a confié sa relance au vinificateur Gernot Kollmann, passé notamment par Van Volxem et Knebel. Le domaine doit son nom à son lieu-dit phare, le Batterieberg, ainsi appelé en souvenir des « batteries » d'explosifs utilisées au XIXe siècle pour tailler la roche et aménager le coteau. Immich-Batterieberg exploite plusieurs grands sites de schiste autour d'Enkirch — Batterieberg, Ellergrub, Steffensberg, Zeppwingert —, plantés en partie de vieilles vignes franches de pied. Le style maison tranche avec la Mosel sucrée traditionnelle : Kollmann y produit avant tout des Rieslings secs, vinifiés par fermentation spontanée, peu interventionnistes, d'une grande énergie minérale et d'un caractère affirmé. Les cuvées d'entrée de gamme « CAI » et « Detonation » offrent un accès très qualitatif au style du domaine, tandis que les crus parcellaires montent en puissance et en complexité. Cette relecture moderne et sèche d'un domaine historique a rapidement séduit la critique et les amateurs en quête d'authenticité. Immich-Batterieberg illustre ainsi une autre voie de la Mosel contemporaine : celle d'un patrimoine séculaire réveillé par une approche résolument actuelle. Entre mémoire médiévale et vins secs vibrants, le domaine s'est réimposé comme l'une des signatures les plus originales de la région. Le sigle « C.A.I. » de la cuvée d'entrée rend hommage à Carl August Immich, figure du domaine au XIXe siècle. Gernot Kollmann, l'un des vinificateurs les plus respectés de sa génération, a fait de cette maison médiévale un laboratoire du Riesling sec mosellan : vieilles vignes non greffées, fermentations indigènes, élevages patients, soufre mesuré. Salué par la critique pour son authenticité et son caractère, Immich-Batterieberg s'est imposé en une quinzaine d'années comme l'une des signatures les plus originales d'une Mosel qui se réinvente par le sec, sans rien renier de son histoire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "biodynamie",
+        "mittelmosel",
+        "enkirch",
+        "batterieberg",
+        "kollmann",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|trink-magazine|batterieberg.com"
+    },
+    {
+      "id": "de-mosel-prod-guenther-steinmetz",
+      "nom": "Günther Steinmetz",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Brauneberg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brauneberger Juffer",
+        "Kestener Herrenberg",
+        "Paulinsberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Brauneberg, au cœur de la Mosel moyenne, le domaine Günther Steinmetz est l'une des belles montées en puissance de la région. Fondé en 1973, il est dirigé depuis 1999 par Stefan Steinmetz, qui en a pris les rênes à vingt et un ans et l'a hissé, par un perfectionnisme acharné, au niveau de ses voisins les plus prestigieux. Sur une dizaine d'hectares dispersés sur une vingtaine de kilomètres, Steinmetz travaille un éventail de grands coteaux de schiste, souvent plantés de très vieilles vignes (parfois centenaires) : Brauneberger Juffer et Juffer-Sonnenuhr, Kestener Paulinshofberg, Piesporter Goldtröpfchen, Wehlener Sonnenuhr, Dhroner Hofberg, et surtout ses positions de choix dans les vallées plus fraîches de Wintrich (Geierslay, Ohligsberg), sur schiste pourpre et quartzite. Le style Steinmetz, fondé sur de faibles rendements, des vendanges manuelles et une intervention minimale, vise à transmettre le plus fidèlement possible l'empreinte de chaque parcelle. Il en résulte des Rieslings d'une grande clarté et d'une tension cristalline, du sec au liquoreux, mais aussi des Spätburgunder (Pinot Noir) profonds et structurés, qui comptent parmi les plus convaincants de la Mosel. Discret mais ambitieux, Günther Steinmetz s'est imposé comme l'un des domaines les plus excitants de la Mosel moyenne. Salué par une critique de plus en plus enthousiaste, le domaine est désormais cité, malgré sa discrétion, parmi les producteurs les plus passionnants de la Mosel moyenne, à la croisée du grand Riesling de schiste et d'un Pinot Noir en pleine ascension.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "biodynamie",
+        "mittelmosel",
+        "brauneberg",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|trink-magazine"
+    },
+    {
+      "id": "de-mosel-prod-lubentiushof",
+      "nom": "Lubentiushof (Andreas Barth)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Untermosel",
+      "commune": "Niederfell",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niederfeller Goldlay",
+        "Gondorfer Gäns"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Niederfell, sur la Terrassenmosel — la basse Mosel aux coteaux en terrasses, proche de Coblence —, le Lubentiushof est un petit domaine mené par Andreas Barth, fin connaisseur du vin et défenseur passionné de ces terroirs souvent négligés. Le domaine travaille des coteaux de schiste escarpés comme la Gondorfer Gäns et le Niederfeller Goldlay, dont il tire des Rieslings principalement secs, droits, minéraux et d'une belle tension, fidèles au caractère plus austère et plus salin de la basse Mosel. Le travail, soigné et à taille humaine, privilégie l'expression du terroir et la fraîcheur. Resté confidentiel, le Lubentiushof fait partie de ces adresses pointues qui ont contribué à réhabiliter la Terrassenmosel et à montrer que ce secteur méconnu pouvait produire de grands Riesling secs de schiste. Andreas Barth y signe des vins sincères et précis, appréciés des amateurs en quête d'authenticité et de la singularité minérale de la basse Mosel. Andreas Barth, par ailleurs fin dégustateur et passeur reconnu, a contribué à faire redécouvrir ces coteaux escarpés. Ses Riesling secs, salins et tendus, comptent parmi les plus belles expressions de la Terrassenmosel et séduisent un public d'amateurs exigeants en quête d'authenticité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "bio",
+        "untermosel",
+        "niederfell",
+        "sans-levures",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|meiningers-international"
+    },
+    {
+      "id": "de-mosel-prod-stein-ulrich",
+      "nom": "Weingut Stein (Ulrich Stein)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Sankt Aldegund",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alfer Hölle",
+        "St. Aldegunder Klosterkammer",
+        "Pündericher Marienburg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Sur la basse Mosel, du côté de Saint-Aldegund et d'Alf, le Weingut Stein est animé par Ulrich Stein, figure haute en couleur et défenseur infatigable de la viticulture en forte pente. Personnage à part dans le paysage mosellan, il s'est fait le héraut de la préservation des coteaux de schiste les plus escarpés, menacés d'abandon. Le domaine travaille des parcelles vertigineuses, notamment sur des terrasses de schiste bleu, et produit des Rieslings d'un style affirmé, souvent secs, ainsi que d'excellents Sekt, dans une approche proche du registre naturel et volontiers iconoclaste. Loin des canons et des modes, Ulrich Stein cultive une forme de liberté et d'authenticité qui fait de ses vins des objets singuliers, recherchés par les amateurs en quête de caractère. Entre engagement militant pour les paysages viticoles de la Mosel et vins personnels et vibrants, le Weingut Stein occupe une place originale et attachante dans la région, celle d'un trublion talentueux et profondément attaché à son terroir. Ses prises de position en faveur des paysages de terrasses et son refus des conventions ont fait de lui une figure respectée et singulière, dont les vins — souvent secs, parfois inclassables — séduisent les amateurs en quête de personnalité et de vérité du schiste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "mittelmosel",
+        "terrasses",
+        "vieilles-vignes",
+        "culte",
+        "allocation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|trink-magazine|wine-enthusiast"
+    },
+    {
+      "id": "de-mosel-prod-martin-muellen",
+      "nom": "Martin Müllen",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Traben-Trarbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Trabener Hühnerberg",
+        "Trarbacher Hühnerberg",
+        "Kröver Steffensberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Traben-Trarbach, le domaine Martin Müllen est un petit trésor caché de la Mosel, mené avec une rigueur artisanale par Martin Müllen lui-même. Travaillant de très vieilles vignes sur des coteaux de schiste comme le Kröver Steffensberg, le Trarbacher Hühnerberg ou l'Ungsberg, il perpétue une approche d'une grande fidélité à la tradition mosellane. Le domaine se distingue par une multitude d'embouteillages parcellaires, des fermentations classiques et de longs élevages, ainsi qu'une habitude de commercialiser ses vins avec un peu de bouteille — gage de maturité. Du Kabinett aux Auslese, en passant par de superbes cuvées sèches, les Rieslings de Martin Müllen allient pureté, finesse et profondeur. Resté largement à l'écart des projecteurs, le domaine offre un rapport qualité-prix remarquable et jouit d'un statut culte auprès des connaisseurs de la Mosel classique. Martin Müllen incarne ce savoir-faire discret et exigeant qui fait la richesse de la région : celui d'un vigneron-artisan attaché à la pureté du Riesling de schiste, loin des effets de mode. Travaillant le plus souvent seul, en véritable artisan, Martin Müllen propose une gamme d'une diversité étonnante pour un si petit domaine, et reste l'un des secrets les mieux gardés de la Mosel pour les amateurs de Riesling classique de grande garde à prix doux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "mittelmosel",
+        "traben-trarbach",
+        "terrasses",
+        "allocation",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|larscarlberg"
+    },
+    {
+      "id": "de-mosel-prod-trossen",
+      "nom": "Rudolf Trossen",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Kinheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kinheimer Rosenberg",
+        "Kröver Steffensberg"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "non",
+      "notes_objectives": "À Kinheim, sur la Mosel moyenne, Rudolf Trossen est l'un des pionniers du vin nature en Allemagne, bien avant que le mouvement ne devienne une tendance. Avec son épouse, il conduit son domaine en biodynamie depuis des décennies et vinifie ses Rieslings sans intrants, sans soufre ajouté, par fermentation spontanée, parfois en amphore. Travaillant de vieilles vignes franches de pied sur les coteaux de schiste autour de Kinheim et d'Erden, Trossen produit des cuvées au caractère affirmé — « Pyramide », « Schiefergold », « Lay » — qui explorent un registre vivant, parfois déroutant, mais toujours profondément lié au terroir d'ardoise. Ces vins, à la fois purs et libres, ont conquis un cercle d'amateurs et de cavistes nature à travers le monde, faisant de ce domaine confidentiel une référence internationale du genre. Précurseur visionnaire et resté fidèle à ses convictions, Rudolf Trossen démontre qu'une autre Mosel est possible : naturelle, vivante et radicalement attachée à l'expression du schiste, sans artifice. Longtemps marginal, ce travail pionnier a fini par inspirer toute une génération de vignerons nature, et les cuvées de Rudolf Trossen figurent aujourd'hui sur les cartes des meilleurs bars à vin naturel du monde, gage de l'aura singulière d'un domaine resté fidèle à ses convictions.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "biodynamie",
+        "demeter",
+        "nature",
+        "mittelmosel",
+        "pionnier",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|wine-enthusiast|raisin-digital"
+    },
+    {
+      "id": "de-mosel-prod-sybille-kuntz",
+      "nom": "Sybille Kuntz",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Lieser",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lieser Niederberg-Helden",
+        "Lieser Schlossberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Lieser, sur la Mosel moyenne, le domaine Sybille Kuntz s'est fait une spécialité d'un registre encore rare dans la région : le grand Riesling sec de gastronomie, conduit en biodynamie certifiée (Demeter). Sur des coteaux de schiste comme le Lieser Niederberg Helden, le domaine décline une gamme de Rieslings secs structurés selon le degré de maturité du raisin (de la qualité de base jusqu'aux équivalents secs d'Auslese), tous vinifiés dans la recherche d'une grande pureté et d'une vraie aptitude à la table. Le travail biodynamique au vignoble vise à renforcer l'expression du terroir et la vitalité des vins. À contre-courant d'une Mosel longtemps dominée par les vins fruités et sucrés, Sybille Kuntz a défendu très tôt une vision sèche, mûre et gastronomique du Riesling mosellan. Le domaine, à taille familiale, offre ainsi une lecture originale et cohérente du schiste de Lieser, et compte parmi les bonnes adresses pour qui cherche un Riesling sec mosellan ample et taillé pour la table. Engagée de longue date dans la biodynamie et la défense d'un Riesling sec mosellan, Sybille Kuntz a fait de son domaine une adresse de référence pour les amateurs de blancs secs amples, droits et taillés pour accompagner les plus belles tables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "biodynamie",
+        "mittelmosel",
+        "lieser",
+        "sec",
+        "gastronomique"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|wine-searcher"
+    },
+    {
+      "id": "de-mosel-prod-twardowski",
+      "nom": "Daniel Twardowski (Pittermännchen)",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Neumagen-Dhron",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Dhroner Pittermännchen"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Daniel Twardowski est un cas unique sur la Mosel : un vigneron entièrement dédié au Pinot Noir (Spätburgunder) dans un pays de Riesling. Installé du côté de Neumagen-Dhron, il a fait le pari audacieux de planter du Pinot Noir sur les schistes dévoniens de la Mosel — il a même déclaré ses parcelles du Dhroner Hofberg « zone sans Riesling ». Sur de jeunes vignes (les premières plantées au milieu des années 2000), il produit en quantités infimes une cuvée de Pinot Noir d'inspiration bourguignonne, le « Pittermännchen », d'une profondeur et d'une fraîcheur qui ont surpris la critique et confirmé le potentiel du schiste mosellan pour ce cépage. Le style recherche l'élégance, la tension et la pureté du fruit, dans des rouges fins et digestes, à mille lieues de l'image du Pinot allemand puissant. Véritable étoile montante et défricheur, Daniel Twardowski illustre une facette inattendue et passionnante de la Mosel contemporaine : celle d'un grand Pinot Noir de schiste, rare et recherché, né de la conviction d'un homme. Produits en quantités infimes et très recherchés, ses Pinots ont rapidement acquis un statut culte, et confirment que la Mosel, terre de Riesling, peut aussi enfanter de grands rouges de schiste d'une finesse remarquable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "spaetburgunder",
+        "pinot-noir",
+        "mittelmosel",
+        "dhron",
+        "pittermaennchen",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|trink-magazine"
+    },
+    {
+      "id": "de-mosel-prod-cluesserath-eva",
+      "nom": "Ansgar Clüsserath",
+      "type": "domaine",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "commune": "Trittenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Trittenheimer Apotheke",
+        "Trittenheimer Felsenkopf",
+        "Trittenheimer Vogelsang"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Trittenheim, sur la Mosel moyenne, le domaine Ansgar Clüsserath est l'un des plus anciens domaines familiaux d'Allemagne — la famille y cultive la vigne depuis 1670. Il porte le nom de son fondateur historique, mais c'est aujourd'hui sa fille, Eva Clüsserath-Wittmann (diplômée de Geisenheim, par ailleurs épouse de Philipp Wittmann en Rheinhessen), qui en a fait une référence saluée internationalement. Sur à peine quatre à cinq hectares, le domaine concentre l'essentiel de son travail sur le Riesling et sur le grand coteau de la Trittenheimer Apotheke, escarpé (jusqu'à plus de 70° de pente), exposé au sud-ouest sur schiste dévonien, planté de vieilles vignes parfois centenaires. La lage plus douce de l'Altärchen complète la palette. Le style Eva Clüsserath est d'une grande finesse, droit et tendu, que certains qualifient de presque « saaroise » : fermentations spontanées en foudre (Fuder), longs élevages sur lies, recherche d'élégance plutôt que de puissance. Du Kabinett délicat aux cuvées sèches parcellaires, ses Riesling figurent depuis des années parmi les meilleurs de la Mosel. Surnommée par certains la « reine de la Mosel », Eva Clüsserath signe des vins filigranes et lumineux qui portent une signature inimitable. Le domaine, qui figure parmi les plus anciennes propriétés familiales d'Allemagne, conjugue ainsi trois siècles et demi de tradition et une signature résolument contemporaine, faisant de la Trittenheimer Apotheke l'un des grands crus à suivre de la Mosel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "mittelmosel",
+        "trittenheim",
+        "apotheke",
+        "sec",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "mosel-fine-wines|vdp.de"
+    }
+  ]
+}

@@ -1,0 +1,421 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "ahr",
+  "region_label": "Ahr (Allemagne)",
+  "source_file": "terroirs_ahr_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 16,
+  "items": [
+    {
+      "id": "de-ahr-terr-dernauer-pfarrwingert",
+      "nom": "Dernauer Pfarrwingert",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "110-220 m",
+      "sols": "grès coloré, ardoise bleue et fragments d'argile",
+      "caracteristiques_rapides": "L'un des plus grands crus de l'Ahr, à Dernau ; sols complexes de grès et d'ardoise donnant des Spätburgunder fins et profonds (Meyer-Näkel, Kreuzberg, Bertram-Baltes).",
+      "notes_objectives": "Le Dernauer Pfarrwingert est l'un des plus grands crus de l'Ahr, sur la rive gauche de la rivière, au-dessus de Dernau. Son originalité tient à un sol composite et complexe, où se mêlent grès coloré, ardoise bleue dévonienne et fragments d'argile, sur une forte pente exposée plein sud qui capte au maximum la lumière dans ce climat septentrional. Cette mosaïque géologique, alliée à un excellent drainage et à une accumulation de chaleur dans les pierres, donne des Spätburgunder à la fois puissants et finement ciselés, profonds, épicés et dotés d'une réelle aptitude à la garde. C'est l'un des terroirs où le Pinot Noir allemand atteint son sommet de complexité. Le cru est exploité par plusieurs des meilleurs domaines de la vallée — Meyer-Näkel, H.J. Kreuzberg, Bertram-Baltes —, dont les cuvées parcellaires comptent parmi les références de l'Ahr. Classé en VDP Grosse Lage, le Pfarrwingert illustre à merveille la capacité de l'ardoise et du grès de Dernau à produire de grands rouges, et demeure l'un des coteaux les plus convoités de la région. Longtemps considéré comme l'un des tout premiers crus de la vallée, le Pfarrwingert se distingue par la longévité de ses vins, qui développent avec l'âge une complexité de grand Pinot. Son morcellement entre plusieurs vignerons d'élite en fait un formidable terrain de comparaison de styles sur un même terroir d'exception.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|thegwc"
+    },
+    {
+      "id": "de-ahr-terr-walporzheimer-kraeuterberg",
+      "nom": "Walporzheimer Kräuterberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "100-200 m",
+      "sols": "ardoise bleue altérée et limons sableux",
+      "caracteristiques_rapides": "Grand cru escarpé de Walporzheim sur ardoise bleue ; Spätburgunder racés et minéraux (Meyer-Näkel, Adeneuer).",
+      "notes_objectives": "Le Walporzheimer Kräuterberg est l'un des coteaux les plus escarpés et les plus réputés de l'Ahr, dominant le village de Walporzheim. Il repose sur de l'ardoise bleue altérée mêlée de limons sableux et de pierres, sur une pente raide exposée au sud qui en fait un véritable capteur solaire. Le caractère minéral de l'ardoise et la chaleur emmagasinée dans les schistes donnent des Spätburgunder racés, tendus et profonds, à la finesse aromatique marquée et à la belle longueur. Le travail y est presque entièrement manuel, tant la pente est forte. Le cru est exploité notamment par Meyer-Näkel et J.J. Adeneuer, dont les cuvées issues du Kräuterberg figurent parmi les plus belles expressions du Pinot Noir de schiste de la vallée. Classé en VDP Grosse Lage, le Kräuterberg incarne le style de l'Ahr : des rouges fins et minéraux nés de coteaux d'ardoise vertigineux, à mille lieues des Pinots opulents. La forte déclivité impose un travail entièrement manuel et des rendements naturellement faibles, gages de concentration. Sur les meilleures parcelles, les vieilles vignes donnent des Spätburgunder d'une profondeur remarquable, qui comptent parmi les sommets du Pinot Noir de Walporzheim et gagnent en finesse au vieillissement.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|thegwc"
+    },
+    {
+      "id": "de-ahr-terr-recher-herrenberg",
+      "nom": "Recher Herrenberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "110-230 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Grand cru de Rech sur ardoise et grauwacke ; Spätburgunder concentrés et de garde, terroir phare de Jean Stodden.",
+      "notes_objectives": "Le Recher Herrenberg est un grand cru situé autour du village de Rech, au cœur de la vallée de l'Ahr, sur des sols d'ardoise dévonienne et de grauwacke. Sa pente raide et son exposition favorable assurent une bonne maturité au Spätburgunder dans ce climat frais. Le terroir, dont les schistes restituent la chaleur accumulée le jour, donne des Pinots Noirs concentrés, structurés et de longue garde, à la trame minérale affirmée. C'est l'un des crus emblématiques pour le vin rouge allemand de style ambitieux. Le Herrenberg est avant tout associé au domaine Jean Stodden, qui en a fait son terroir phare et en tire des cuvées denses, longuement élevées en barrique, recherchées des amateurs. Classé en VDP Grosse Lage, le Recher Herrenberg compte parmi les sites qui ont prouvé que l'Ahr pouvait produire de grands Spätburgunder de garde, capables de rivaliser avec les meilleurs Pinots. Le micro-climat de Rech, protégé et bien ensoleillé, permet une maturité optimale, tandis que le sous-sol d'ardoise apporte tension et salinité. Les cuvées issues du Herrenberg, peu nombreuses, figurent parmi les Spätburgunder allemands les plus recherchés pour leur densité et leur potentiel de garde sur une à deux décennies.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-walporzheimer-gaerkammer",
+      "nom": "Walporzheimer Gärkammer",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "110-180 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "L'un des plus petits crus classés d'Allemagne, à Walporzheim ; quasi-monopole d'Adeneuer, Spätburgunder rare et recherché.",
+      "notes_objectives": "La Walporzheimer Gärkammer est un cru minuscule et mythique : avec moins d'un demi-hectare, c'est l'un des plus petits vignobles classés d'Allemagne, niché dans un repli rocheux abrité de Walporzheim. Son nom, qui évoque une « chambre de fermentation », souligne son microclimat exceptionnellement chaud. Le sol d'ardoise et de grauwacke, conjugué à une protection naturelle contre les vents et à une excellente exposition, en fait une poche de chaleur idéale pour le Spätburgunder, qui y mûrit pleinement et donne des vins denses, épicés et profonds. Le cru est exploité quasiment en monopole par le domaine J.J. Adeneuer, dont la cuvée de la Gärkammer est l'une des plus rares et des plus recherchées de l'Ahr. Classée en VDP Grosse Lage, la Gärkammer illustre l'extrême morcellement et la précision des grands terroirs de la vallée, où quelques ares suffisent à façonner un vin de caractère unique. Documentée de longue date, la Gärkammer est l'un de ces joyaux miniatures qui font la singularité de l'Ahr, où le morcellement extrême des terroirs atteint son paroxysme. Sa production confidentielle et son microclimat exceptionnel en font un cru d'amateur, dont chaque bouteille est rare et chère.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "monopole",
+        "iconique",
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-neuenahrer-sonnenberg",
+      "nom": "Neuenahrer Sonnenberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "100-200 m",
+      "sols": "conglomérat d'ardoise grise, lœss et limons",
+      "caracteristiques_rapides": "Grand cru de Bad Neuenahr ; Spätburgunder élégants sur ardoise et lœss (Meyer-Näkel, Burggarten, Linke).",
+      "notes_objectives": "Le Neuenahrer Sonnenberg est l'un des grands crus de la basse Ahr, sur les hauteurs de Bad Neuenahr. Son sol est un conglomérat d'ardoise grise mêlé de lœss et de limons, sur une pente bien exposée dont le nom même — « montagne du soleil » — dit l'ensoleillement. Ce terroir, un peu plus profond et frais que les coteaux d'ardoise pure de la vallée moyenne, donne des Spätburgunder élégants et équilibrés, au fruit délicat et à la fraîcheur préservée. C'est l'un des sites les plus harmonieux de l'Ahr. Il est exploité par plusieurs bonnes maisons, dont Meyer-Näkel, Burggarten et le domaine Sonnenberg (Linke), qui en tirent des cuvées fines et accessibles comme des vins de garde. Classé en VDP Grosse Lage, le Sonnenberg illustre le style plus souple et aérien de la basse Ahr, complément des crus plus tendus de la vallée moyenne. Plus vaste que les crus de la vallée moyenne, le Sonnenberg offre une gamme de styles selon les parcelles et les mains qui le travaillent, des cuvées de village délicates aux Grosses Gewächs de garde. Sa fraîcheur et son fruit en font l'un des terroirs les plus séduisants pour découvrir le Pinot Noir de l'Ahr.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "source": "vdp.de|thegwc"
+    },
+    {
+      "id": "de-ahr-terr-ahrweiler-silberberg",
+      "nom": "Ahrweiler Silberberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "110-220 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Grand cru d'Ahrweiler sur ardoise ; Spätburgunder structurés (Deutzerhof, Adeneuer).",
+      "notes_objectives": "L'Ahrweiler Silberberg est un grand cru situé sur les coteaux d'ardoise dominant la vieille ville d'Ahrweiler. Sur une pente bien exposée, ses schistes dévoniens restituent la chaleur et assurent une maturité régulière au Spätburgunder. Le terroir donne des Pinots Noirs structurés et profonds, à la minéralité d'ardoise affirmée et à la belle capacité de garde. Il fait partie des sites historiques de la vallée pour le vin rouge. Le Silberberg est exploité notamment par les domaines Deutzerhof et J.J. Adeneuer, dont les cuvées comptent parmi les belles expressions du secteur d'Ahrweiler. Classé en VDP Grosse Lage, le Silberberg confirme la vocation des coteaux d'ardoise d'Ahrweiler pour des Spätburgunder de caractère, tendus et de garde. Au cœur d'un secteur viticole habité depuis l'époque romaine, le Silberberg bénéficie d'une longue tradition de vin rouge. Ses Spätburgunder, profonds et minéraux, vieillissent en se patinant et comptent parmi les belles expressions du Pinot Noir d'Ahrweiler.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-ahrweiler-rosenthal",
+      "nom": "Ahrweiler Rosenthal",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "110-210 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Grand cru d'Ahrweiler sur ardoise et grauwacke ; Spätburgunder fins (Adeneuer, Maibachfarm, Kriechel).",
+      "notes_objectives": "L'Ahrweiler Rosenthal est l'un des grands crus du secteur d'Ahrweiler, sur des sols d'ardoise dévonienne et de grauwacke, en coteau bien exposé. La chaleur emmagasinée par les schistes y favorise une bonne maturité du Spätburgunder. Le terroir donne des Pinots Noirs fins et élégants, à la trame minérale nette et au fruit délicat, dans le style racé propre à l'Ahr. Le Rosenthal est exploité par plusieurs domaines de la vallée, dont J.J. Adeneuer — qui en tire un Grosses Gewächs réputé —, Maibachfarm et Peter Kriechel. Classé en VDP Grosse Lage, le Rosenthal compte parmi les bons coteaux d'ardoise d'Ahrweiler et illustre la finesse du Pinot Noir de la vallée moyenne. La finesse de ses vins et leur trame minérale en font un cru apprécié des amateurs ; le Grosses Gewächs qu'en tire J.J. Adeneuer est l'une des références du secteur. Le Rosenthal illustre l'élégance que l'ardoise d'Ahrweiler sait conférer au Pinot Noir.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-mayschosser-moenchberg",
+      "nom": "Mayschosser Mönchberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Obere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "120-260 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Grand cru escarpé de Mayschoß, dans la haute Ahr ; Spätburgunder profonds (Deutzerhof, coopérative de Mayschoß).",
+      "notes_objectives": "Le Mayschosser Mönchberg est un grand cru de la haute Ahr, sur des coteaux d'ardoise particulièrement escarpés autour du village de Mayschoß. Son nom évoque le passé monastique de la vallée, où les moines furent parmi les premiers à cultiver la vigne. Sur ces pentes raides exposées au sud, les schistes dévoniens emmagasinent la chaleur et donnent des Spätburgunder profonds et structurés, à la minéralité marquée et à la belle aptitude à la garde, dans un secteur réputé plus frais de la vallée. Le cru est exploité notamment par le domaine Deutzerhof et par la coopérative de Mayschoß-Altenahr, la plus ancienne du monde. Classé en VDP Grosse Lage, le Mönchberg illustre le potentiel des grands coteaux d'ardoise de la haute Ahr pour des Pinots Noirs de caractère. La fraîcheur de la haute vallée confère aux vins du Mönchberg une tension et une vivacité particulières, tandis que les schistes apportent profondeur et structure. C'est l'un des grands coteaux historiques de Mayschoß, où la vigne épouse des pentes parmi les plus raides de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "obere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-heimersheimer-landskrone",
+      "nom": "Heimersheimer Landskrone",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "100-230 m",
+      "sols": "basalte volcanique et lœss",
+      "caracteristiques_rapides": "Cône volcanique de basalte dominant Heimersheim, terroir singulier de l'Ahr ; Spätburgunder de garde (Nelles).",
+      "notes_objectives": "La Heimersheimer Landskrone est l'un des terroirs les plus singuliers de l'Ahr : un ancien cône volcanique de basalte qui domine Heimersheim, à l'entrée de la vallée. Là où l'essentiel de la région repose sur l'ardoise, ce sol basaltique mêlé de lœss confère aux vins une signature à part. Sur ses pentes bien exposées, le Spätburgunder donne des vins structurés, profonds et de garde, à la minéralité particulière et à la chair généreuse, marqués par la roche volcanique. Le cru est notamment exploité par le domaine Nelles, attaché à révéler le caractère unique de ce terroir basaltique. Classé en VDP Grosse Lage, la Landskrone enrichit la palette géologique de l'Ahr et rappelle que, même dans une si petite région, la diversité des sols façonne des styles bien distincts. Couronnée par les ruines d'un château médiéval, la Landskrone est un repère paysager autant qu'un terroir. Le basalte, rare dans la vallée, y imprime aux Spätburgunder une minéralité et une assise particulières, faisant de ce cru l'un des plus distinctifs et identifiables de toute l'Ahr.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "basalte",
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-heimersheimer-burggarten",
+      "nom": "Heimersheimer Burggarten",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "95-180 m",
+      "sols": "lœss, limons et ardoise",
+      "caracteristiques_rapides": "Grand coteau de Heimersheim aux sols plus profonds ; Spätburgunder et blancs (Nelles, Burggarten).",
+      "notes_objectives": "Le Heimersheimer Burggarten est un grand coteau de la basse Ahr, autour de Heimersheim, aux sols plus profonds que les schistes purs de la vallée moyenne : lœss, limons et ardoise s'y mêlent. Ce terroir, un peu plus généreux, donne des Spätburgunder ronds et accessibles, au fruit charmeur, ainsi que de beaux Burgundern blancs. La bonne exposition assure une maturité régulière. Il est exploité notamment par les domaines Nelles et Burggarten. Classé en VDP Grosse Lage, le Burggarten illustre le style plus souple de la basse vallée, complément des crus d'ardoise plus tendus. Sa relative générosité en fait un terroir abordable et plaisant, porte d'entrée idéale vers le Pinot Noir de la basse Ahr. Plusieurs bons domaines y signent des Spätburgunder ronds et des Burgundern blancs de belle tenue, confirmant le potentiel de ce secteur de la basse vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-dernauer-hardtberg",
+      "nom": "Dernauer Hardtberg",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "120-230 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Coteau d'ardoise de Dernau ; Spätburgunder équilibrés (Kreuzberg).",
+      "notes_objectives": "Le Dernauer Hardtberg est un coteau d'ardoise situé au-dessus de Dernau, voisin du grand Pfarrwingert. Sur ses schistes dévoniens bien exposés, le Spätburgunder donne des vins équilibrés, au fruit net et à la minéralité d'ardoise caractéristique. Un peu moins prestigieux que le Pfarrwingert, le Hardtberg n'en demeure pas moins un beau terroir, exploité notamment par le domaine H.J. Kreuzberg. Classé en VDP Grosse Lage, il offre des Pinots Noirs accessibles et fidèles au style de la vallée moyenne, où l'ardoise façonne des rouges fins et tendus. Bien exposé et bien drainé, il offre un excellent rapport entre finesse et accessibilité, dans le sillage de son prestigieux voisin le Pfarrwingert. Ses Spätburgunder, fins et fidèles à l'identité ardoisière de Dernau, séduisent les amateurs en quête d'un grand terroir à prix encore mesuré.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "vdp.de|rotweinjaeger"
+    },
+    {
+      "id": "de-ahr-terr-neuenahrer-kirchtuermchen",
+      "nom": "Neuenahrer Kirchtürmchen",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "100-190 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Grand coteau de Bad Neuenahr sur ardoise ; Spätburgunder fins de la basse Ahr.",
+      "notes_objectives": "Le Neuenahrer Kirchtürmchen est un coteau d'ardoise de la basse Ahr, sur les hauteurs de Bad Neuenahr. Ses schistes dévoniens, sur une pente bien exposée, donnent des Spätburgunder fins et minéraux, dans le registre élégant propre au secteur de Neuenahr. Voisin du grand Sonnenberg, le Kirchtürmchen partage avec lui la finesse et la fraîcheur caractéristiques de la basse vallée. Classé en VDP Grosse Lage, il compte parmi les bons coteaux d'ardoise de Bad Neuenahr et illustre la délicatesse du Pinot Noir de l'Ahr. Sa finesse et sa fraîcheur en font un bel ambassadeur du style délicat des coteaux d'ardoise de Bad Neuenahr. Souvent vinifié avec soin par les vignerons du secteur, il confirme la vocation de Bad Neuenahr pour des Pinots d'une grande délicatesse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-neuenahrer-schieferlay",
+      "nom": "Neuenahrer Schieferlay",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "100-200 m",
+      "sols": "ardoise (Schiefer)",
+      "caracteristiques_rapides": "Coteau de Bad Neuenahr dont le nom évoque l'ardoise ; Spätburgunder minéraux (Linke).",
+      "notes_objectives": "Le Neuenahrer Schieferlay porte dans son nom même la marque de son sol : l'ardoise (« Schiefer »). Ce coteau de Bad Neuenahr, sur schistes dévoniens bien exposés, donne des Spätburgunder minéraux et tendus, au fruit délicat. Le terroir, typique du secteur de Neuenahr, conjugue la fraîcheur de la basse vallée et la signature saline de l'ardoise. Il est exploité notamment par le domaine Sonnenberg (Linke). Classé en VDP Grosse Lage, le Schieferlay illustre, jusque dans son nom, l'identité ardoisière des grands coteaux de l'Ahr. Sa salinité et sa tension en font un terroir recherché pour des Pinots Noirs droits et minéraux, fidèles à l'âme ardoisière de la vallée. Le nom du cru, à lui seul, résume l'ADN de l'Ahr : un Pinot Noir né de l'ardoise, vibrant et salin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-altenahrer-eck",
+      "nom": "Altenahrer Eck",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Obere Ahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "150-300 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Coteau très escarpé d'Altenahr, à l'amont de la vallée ; Spätburgunder tendus sur ardoise (Sermann).",
+      "notes_objectives": "L'Altenahrer Eck est un coteau d'ardoise de la haute Ahr, parmi les plus escarpés et les plus spectaculaires de la vallée, autour d'Altenahr, où la rivière s'encaisse entre des parois rocheuses. Sur ces pentes vertigineuses exposées au sud, le Spätburgunder donne des vins tendus, minéraux et nerveux, marqués par la fraîcheur de l'amont de la vallée et par le caractère du schiste. Le travail y est purement manuel et exigeant. Le cru est exploité notamment par le domaine Sermann, en bio. Classé en VDP Grosse Lage, l'Eck illustre le potentiel des coteaux extrêmes de la haute Ahr. Spectaculaire et difficile d'accès, ce cru d'altitude illustre l'extrême viticulture de coteau qui fait la singularité — et la fragilité — du vignoble de l'Ahr. Les vignerons qui y travaillent, comme Sermann en bio, en tirent des vins d'une grande pureté, témoins du courage qu'exige la viticulture de la haute Ahr.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "forte-pente",
+        "grand-coteau",
+        "spaetburgunder",
+        "obere-ahr"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-walporzheimer-domlay",
+      "nom": "Walporzheimer Domlay",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "altitude": "110-190 m",
+      "sols": "ardoise dévonienne et grauwacke",
+      "caracteristiques_rapides": "Coteau d'ardoise de Walporzheim ; Spätburgunder de belle facture (Brogsitter).",
+      "notes_objectives": "Le Walporzheimer Domlay est un coteau d'ardoise du secteur de Walporzheim, sur des schistes dévoniens bien exposés. Le Spätburgunder y donne des vins de belle facture, fins et minéraux, dans le style racé de la vallée moyenne. Voisin des grands crus de Walporzheim, le Domlay offre des Pinots Noirs de caractère, exploités notamment par la maison Brogsitter. Classé en VDP Grosse Lage, il complète la mosaïque des coteaux d'ardoise de Walporzheim, l'un des hauts lieux du Pinot Noir de l'Ahr. Discret mais sérieux, il participe à la réputation de Walporzheim, l'un des grands villages rouges de la vallée. Ses Spätburgunder d'ardoise, fins et équilibrés, complètent la riche palette des crus de Walporzheim.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grand-coteau",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-ahr-terr-marienthaler-klostergarten",
+      "nom": "Marienthaler Klostergarten",
+      "type": "lieu-dit",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Riesling"
+      ],
+      "altitude": "110-200 m",
+      "sols": "ardoise et limons",
+      "caracteristiques_rapides": "Coteau de Marienthal autour de l'ancien couvent ; Spätburgunder de tradition (Kloster Marienthal).",
+      "notes_objectives": "Le Marienthaler Klostergarten s'étend autour de l'ancien couvent de Marienthal, au cœur de la vallée, sur des sols d'ardoise mêlés de limons. Le lieu rappelle le rôle des monastères dans l'histoire viticole de l'Ahr. Sur ce coteau bien exposé, le Spätburgunder donne des vins de tradition, fins et marqués par l'ardoise, complétés par un peu de Frühburgunder et de blancs. Il est exploité par le domaine de Kloster Marienthal. Riche d'un passé monastique, le Klostergarten compte parmi les coteaux historiques de la vallée et témoigne de l'ancienneté de la vigne à Marienthal. Le cadre du couvent et la longue histoire du lieu en font autant un terroir qu'un site patrimonial de la route des vins de l'Ahr. Entre vigne et pierres anciennes, le Klostergarten perpétue la mémoire des moines qui façonnèrent le vignoble de la vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "historique",
+        "grand-coteau",
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

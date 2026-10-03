@@ -1,0 +1,560 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Bierzo & autres DO",
+  "source_file": "terroirs_bierzo_reste_To_Import.xlsx",
+  "built_at": "2026-08-12T11:56:46",
+  "count": 20,
+  "items": [
+    {
+      "id": "es-castillayleon-terr-la-faraona-paraje-el-ferro",
+      "nom": "La Faraona (paraje El Ferro)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Corullón",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "900–1000 m",
+      "sols": "Pizarra avec fer et basalte, sol maigre sur roche, forte pente",
+      "caracteristiques_rapides": "Le paraje mythique du Bierzo à Corullón : à peine 0,5 ha à 900-1000 m sur ardoise ferreuse, La Faraona de Descendientes de J. Palacios, ~1000 bouteilles, le modèle du grand cru bierzan.",
+      "notes_objectives": "La Faraona est le paraje le plus mythique du Bierzo, et le vin qui incarne à lui seul l'ambition « grand cru » de l'appellation. Il s'agit d'une parcelle d'à peine un demi-hectare, perchée sur le haut de Corullón, dans le lieu-dit El Ferro, à plus de neuf cents mètres et jusqu'à mille mètres d'altitude, sur une pente si raide que les vignes semblent s'agripper à la roche. C'est de là que Descendientes de J. Palacios tire un vin produit à environ mille bouteilles, vendu au-delà de mille euros — et parfois plusieurs milliers pour les grands millésimes. Ce qui fait la singularité du lieu, c'est son sol. Sous une couche de terre très mince affleure une roche d'ardoise mêlée de fer et de basalte, d'une composition rare qui donne au vin sa structure, sa profondeur et sa capacité de garde. Les ceps, à faible rendement, luttent pour trouver un peu de sol entre les plaques de pizarra, et les raisins mûrissent lentement, dans des conditions extrêmes, réchauffés surtout par le soleil du matin. Le résultat est un Mencía compact, tout en couches, vigoureux et taillé pour un long vieillissement. Álvaro et Ricardo Pérez Palacios ont conçu La Faraona sur le modèle de L'Ermita, la parcelle-culte d'Álvaro au Priorat : un lieu unique, minuscule, dont naît un vin d'exception. La cuvée a obtenu à deux reprises la note parfaite de la critique, ce qui a définitivement installé le Bierzo sur la carte des grands terroirs du monde. La vinification, pourtant, ne diffère pas de celle des autres cuvées de la maison, comme Las Lamas ou Moncerbal : c'est le lieu, et lui seul, qui fait la différence. Pour un sommelier, La Faraona est un vin de légende à la disponibilité forcément confidentielle, mais dont le seul nom permet de raconter l'histoire de la renaissance du Bierzo et l'émergence de la notion de grand cru en Espagne. Une bouteille rare, à réserver aux amateurs les plus avertis et aux grandes occasions. La renommée de La Faraona a fait de son nom un aimant pour toute la région, symbole de ce que le Bierzo peut produire de plus grand. Elle a aussi accéléré la démarche de classification de l'appellation vers les futurs Viña Clasificada et Gran Viña Clasificada, dont elle serait le candidat le plus évident. Ce lieu minuscule est ainsi devenu l'un des grands crus les plus cotés d'Espagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "paraje",
+        "corullon",
+        "pizarra",
+        "altitude",
+        "palacios",
+        "grand-cru",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-corullon",
+      "nom": "Corullón",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Corullón",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía",
+        "Godello"
+      ],
+      "altitude": "550–1000 m",
+      "sols": "Pizarra et schiste sur fortes pentes, mosaïque de micro-parcelles",
+      "caracteristiques_rapides": "Le village-cru emblématique du Bierzo, remis sur la carte par Descendientes de J. Palacios : vieilles vignes de Mencía sur ardoise en coteau, berceau de Las Lamas, Moncerbal, La Faraona.",
+      "notes_objectives": "Corullón est le village-cru emblématique du Bierzo, celui par lequel toute la région est revenue sur la carte des grands terroirs. Perché sur les coteaux escarpés qui dominent la vallée de Valtuille, il déploie ses vignes entre cinq cent cinquante et mille mètres d'altitude, sur des pentes parfois vertigineuses. C'est ici qu'Álvaro et Ricardo Pérez Palacios ont établi Descendientes de J. Palacios en 1999, reconnaissant dans ce paysage un potentiel comparable à celui du Priorat. Le terroir de Corullón repose sur des sols de pizarra et de schiste, maigres et bien drainés, sur de fortes pentes exposées qui obligent à une viticulture héroïque, souvent manuelle. La grande caractéristique du lieu est son morcellement extrême : une mosaïque de centaines de micro-parcelles de vieilles vignes de Mencía, chacune avec son exposition, son altitude et sa nuance de sol. Cette diversité explique la richesse des expressions qu'on en tire, et a permis d'y identifier une série de parajes désormais célèbres. C'est à Corullón que naissent les grands parcellaires de Descendientes de J. Palacios : Las Lamas, généreuse et veloutée sur ses argiles mêlées de schiste ; Moncerbal, saline et tendue sur son ardoise pure ; et, au sommet, La Faraona, sur son ardoise ferreuse d'altitude. Le vino de villa Corullón, qui peut assembler jusqu'à deux cents petites parcelles, offre une lecture d'ensemble du village. Corullón illustre parfaitement le modèle bourguignon adopté par le Bierzo, où le vin se raconte par le nom du village puis du lieu-dit. Pour un sommelier, c'est un nom-clé : évoquer Corullón, c'est situer le berceau du Bierzo moderne et raconter la hiérarchie de ses crus. Des Mencía d'altitude d'une finesse rare, à carafer et à garder. Le succès de Corullón a eu un effet d'entraînement considérable : en montrant qu'un village du Bierzo pouvait rivaliser avec les plus grands, il a attiré une génération de vignerons et fait grimper la valeur des vieilles vignes de coteau, aujourd'hui parmi les plus convoitées de la région. Le village illustre aussi la parenté du Bierzo avec la Galice voisine et son climat de transition, entre influences atlantique et méditerranéenne, qui donne aux Mencía leur fraîcheur caractéristique et les distingue nettement des rouges plus solaires de l'intérieur castillan.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "vino-de-villa",
+        "corullon",
+        "pizarra",
+        "palacios",
+        "mencia",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-valtuille-de-abajo-y-de-arriba",
+      "nom": "Valtuille (de Abajo y de Arriba)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Valtuille",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía",
+        "Godello"
+      ],
+      "altitude": "500–700 m",
+      "sols": "Sables et argiles sur ardoise, mosaïque de parajes",
+      "caracteristiques_rapides": "Le village-cru de Raúl Pérez et de la nouvelle vague : mosaïque de parajes (Villegas, El Rapolao, La Vitoriana) sur sables et ardoise, cœur du minifundisme bierzan.",
+      "notes_objectives": "Valtuille est l'autre grand village-cru du Bierzo, indissociable du nom de Raúl Pérez, qui y est né et l'a hissé au rang de référence. Situé dans une vallée plus basse que Corullón, entre cinq cents et sept cents mètres d'altitude, il rassemble Valtuille de Abajo et Valtuille de Arriba, et forme le cœur du minifundisme bierzan — cette agriculture de micro-parcelles héritée d'un très ancien partage des terres. Le terroir de Valtuille associe des sols de sables et d'argiles reposant sur l'ardoise, sur des coteaux plus doux que ceux de Corullón. Sa richesse tient à sa mosaïque de parajes réputés — Villegas, El Rapolao, La Vitoriana, parmi bien d'autres — chacun donnant une nuance particulière de Mencía. Ce morcellement, qui complique la production de vins de village homogènes, favorise en revanche l'émergence de vins de lieu d'une grande précision, ce qui a fait de Valtuille le terrain d'expression privilégié de la nouvelle vague. C'est à Valtuille que Raúl Pérez a construit son œuvre — la série La Vizcaína, les Ultreia — et que travaillent aujourd'hui les vignerons qu'il a formés ou inspirés, comme son neveu César Márquez, ainsi que le domaine familial Castro Ventosa et Bodegas Peique. Le village est ainsi devenu l'épicentre de la génération parcellaire du Bierzo. Valtuille illustre, plus encore que Corullón, la logique bourguignonne du vin de paraje, portée par le morcellement du vignoble. Pour un sommelier, Valtuille est un nom à connaître pour raconter la nouvelle vague du Bierzo et proposer des Mencía de terroir d'une grande finesse. Un village-cru dont les parajes sont appelés à devenir aussi célèbres que ceux de Corullón. Le morcellement de Valtuille, longtemps considéré comme un handicap économique, s'est révélé un atout à l'ère des vins de terroir : chaque paraje, chaque orientation, chaque type de sol peut être vinifié séparément, offrant une palette d'expressions d'une richesse rare. C'est cette diversité, jointe au génie de Raúl Pérez, qui a fait de ce village discret l'un des lieux les plus passionnants du vignoble espagnol contemporain. Valtuille bénéficie du climat de transition du Bierzo, entre influences atlantique et méditerranéenne, qui donne aux Mencía leur fraîcheur. C'est là que se joue une partie de l'avenir qualitatif de l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "vino-de-villa",
+        "valtuille",
+        "raul-perez",
+        "parajes",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-las-lamas",
+      "nom": "Las Lamas",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Corullón",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "600–750 m",
+      "sols": "Argile mêlée de schiste, plus de générosité et de velouté",
+      "caracteristiques_rapides": "Paraje de Corullón de Descendientes de J. Palacios : l'argile sur schiste donne une Mencía généreuse, veloutée et expressive, l'un des grands crus du Bierzo.",
+      "notes_objectives": "Las Lamas est l'un des grands parajes de Corullón, et l'une des expressions les plus séduisantes du terroir du Bierzo. Exploité par Descendientes de J. Palacios, ce lieu-dit situé entre six cents et sept cent cinquante mètres d'altitude doit sa personnalité à un sol particulier : l'argile s'y mêle au schiste, une combinaison qui confère au Mencía une générosité et une texture veloutée peu communes dans une région dominée par l'ardoise pure. Là où d'autres parajes de Corullón donnent des vins tendus et salins, Las Lamas offre un Mencía juteux, ample, à la fruit très expressif et à la trame soyeuse. Cette générosité en fait souvent le plus immédiatement séduisant des grands crus de la maison, celui qui s'ouvre le plus tôt tout en conservant la capacité de garde propre aux grands terroirs d'ardoise. La cuvée, produite à environ six mille bouteilles, figure parmi les Mencía les plus recherchés d'Espagne. Le contraste avec Moncerbal, son voisin sur ardoise pure, est le cas d'école du terroir bierzan : deux parcelles proches, deux sols, deux vins opposés issus du même cépage et de la même main. Pour un sommelier, Las Lamas est un lieu-dit à connaître pour raconter la diversité des terroirs de Corullón et proposer un grand Mencía velouté et expressif. Une bouteille de prestige, à carafer, qui séduit par sa générosité tout en offrant une vraie profondeur de garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "paraje",
+        "corullon",
+        "schiste",
+        "palacios",
+        "grand-cru",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-moncerbal",
+      "nom": "Moncerbal",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Corullón",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "600–800 m",
+      "sols": "Pizarra pure sur forte pente, sol très maigre et frais",
+      "caracteristiques_rapides": "Paraje de Corullón sur ardoise pure : Mencía sapide, minérale, saline et délicate, contrepoint tendu de Las Lamas dans la gamme de Descendientes de J. Palacios.",
+      "notes_objectives": "Moncerbal est l'un des grands parajes de Corullón, et le contrepoint minéral de Las Lamas dans la gamme de Descendientes de J. Palacios. Situé sur une forte pente entre six cents et huit cents mètres d'altitude, il repose sur un sol de pizarra pure, très maigre et frais, où les vieilles vignes de Mencía luttent pour s'enraciner dans la roche fissurée. Ce terroir d'ardoise donne un vin à l'opposé de la générosité de Las Lamas : Moncerbal est sapide, tendu, minéral et salin, d'une délicatesse presque chiffonnée, avec une fraîcheur qui évoque les climats les plus froids. Moins volumineux que son voisin, il séduit par sa finesse, sa tension et sa longueur saline, dans un registre qui rappelle pourquoi la Mencía est souvent comparée au Pinot Noir. La cuvée, produite à environ six mille bouteilles, compte parmi les plus raffinées de l'appellation. L'opposition Las Lamas / Moncerbal — argile et schiste contre ardoise pure — est devenue l'illustration canonique du terroir bierzan, celle par laquelle on explique comment le sol façonne le vin dans cette petite Bourgogne espagnole. Pour un sommelier, Moncerbal est un lieu-dit à connaître pour proposer un Mencía tendu et minéral, et pour composer un duo pédagogique avec Las Lamas. Une bouteille de prestige, à carafer, qui illustre la face la plus fine et la plus saline du Bierzo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "paraje",
+        "corullon",
+        "pizarra",
+        "palacios",
+        "grand-cru",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-el-rapolao",
+      "nom": "El Rapolao",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Valtuille",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "550–700 m",
+      "sols": "Ardoise et sables, coteau exposé, mosaïque de vieilles vignes",
+      "caracteristiques_rapides": "Paraje réputé de Valtuille, l'un des plus recherchés du Bierzo : Mencía fraîche et parfumée sur ardoise, travaillé par Raúl Pérez, Dominio de Anza et la nouvelle vague.",
+      "notes_objectives": "El Rapolao est l'un des parajes les plus réputés de Valtuille, et l'un des plus recherchés de tout le Bierzo. Situé entre cinq cent cinquante et sept cents mètres d'altitude, sur un coteau bien exposé, il repose sur des sols mêlant ardoise et sables, qui donnent au Mencía une combinaison rare de fraîcheur, de parfum et de finesse de tanin. Le lieu-dit doit sa célébrité au travail de Raúl Pérez, qui en a tiré certaines de ses cuvées les plus admirées, mais il est aussi exploité par d'autres figures de la nouvelle vague, comme Dominio de Anza avec sa Finca El Rapolao. Les vins qui en sont issus se distinguent par leur profil aromatique floral et leur fraîcheur, dans le style élégant et digeste qui caractérise les meilleurs Mencía de Valtuille. El Rapolao illustre la richesse du morcellement de Valtuille, où chaque paraje possède son identité propre. C'est l'un des noms de lieu appelés à s'imposer sur les étiquettes du Bierzo à mesure que la classification bourguignonne de l'appellation se précise. Pour un sommelier, El Rapolao est un lieu-dit à connaître pour proposer un Mencía frais et parfumé, signé par les meilleurs vignerons de Valtuille. Un paraje de référence, encore à des prix raisonnables au regard de sa qualité, idéal pour faire découvrir la logique parcellaire du Bierzo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "paraje",
+        "valtuille",
+        "pizarra",
+        "raul-perez",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-mencia",
+      "nom": "Mencía",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "450–1000 m",
+      "sols": "S'exprime au mieux sur les pizarras d'altitude du Bierzo",
+      "caracteristiques_rapides": "Cépage rouge autochtone du nord-ouest, souvent comparé au Pinot Noir : couleur légère, fruit vif, haute acidité, floral et minéral sur ardoise, colonne vertébrale du Bierzo.",
+      "notes_objectives": "La Mencía est le cépage rouge autochtone du nord-ouest de l'Espagne, et la colonne vertébrale du Bierzo, où elle occupe près de trois cinquièmes du vignoble. Elle s'exprime au mieux sur les sols d'ardoise d'altitude de l'appellation, entre quatre cent cinquante et mille mètres, mais se rencontre aussi sur les sables et les sols alluviaux des zones plus basses. Longtemps déconsidérée, tenue pour un cépage rustique donnant des vins plats et alcooleux, la Mencía a été entièrement réhabilitée par la génération de Descendientes de J. Palacios et de Raúl Pérez. On la compare volontiers au Pinot Noir : comme lui, elle donne des vins à la couleur peu intense, au fruit rouge vif, à l'acidité élevée, capables d'une grande finesse et d'une expression translucide du terroir. Sur l'ardoise des coteaux, elle développe une minéralité et un caractère floral remarquables ; en altitude, elle gagne en fraîcheur et en tension. Sa parenté avec les vins de la Galice voisine — Ribeira Sacra, Valdeorras — est manifeste. La Mencía est ainsi devenue l'emblème d'un nord-ouest frais et atlantique, à l'opposé de l'image traditionnelle des rouges espagnols. Pour un sommelier, comprendre la Mencía est essentiel pour raconter le Bierzo : un cépage à la fois fruité, frais et minéral, souvent comparé au Pinot Noir, qui séduit les amateurs de rouges élégants et digestes. Un argument de choix pour surprendre une clientèle.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "cepage",
+        "mencia",
+        "transversal",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-bierzo-alto-arganza-bembibre",
+      "nom": "Bierzo Alto (Arganza, Bembibre)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Bierzo Alto",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía",
+        "Godello"
+      ],
+      "altitude": "650–900 m",
+      "sols": "Pizarra et argile d'altitude, zone plus fraîche et tardive",
+      "caracteristiques_rapides": "Partie haute et fraîche de la DO, terroir d'altitude recherché pour la fraîcheur : fief de Dominio de Tares et de parcelles-clés de Mengoba, Mencía tendue et minérale.",
+      "notes_objectives": "Le Bierzo Alto désigne la partie haute et orientale de l'appellation, autour d'Arganza, Bembibre et San Román, plus fraîche et plus tardive que le cœur du Bierzo. Situé entre six cent cinquante et neuf cents mètres d'altitude, ce secteur repose sur des sols de pizarra et d'argile d'altitude, qui donnent aux vins une tension et une minéralité particulières. L'altitude y allonge le cycle végétatif et préserve l'acidité de la Mencía, ce qui en fait un terroir recherché à l'heure où la fraîcheur devient un enjeu majeur. C'est dans le Bierzo Alto, à Bembibre, que Dominio de Tares a bâti sa réputation sur des Mencía de vieilles vignes issues de plusieurs pagos. C'est aussi là que Gregory Pérez, de Mengoba, a patiemment rassemblé des micro-parcelles de vieilles vignes sur ardoise à Arganza, certaines si peu productives qu'il a fini par les replanter, au nom du principe que le terroir prime sur l'âge des vignes. Le Bierzo Alto illustre la diversité de l'appellation, dont les secteurs hauts offrent une alternative fraîche et tendue aux coteaux plus chauds de Corullón et Valtuille. Pour un sommelier, c'est un secteur à connaître pour proposer des Mencía d'altitude, tendues et minérales, à des prix souvent plus accessibles que les grands parajes de Corullón. Un terroir de fraîcheur, dans l'air du temps, à faire découvrir aux amateurs de rouges élancés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "bierzo-alto",
+        "altitude",
+        "pizarra",
+        "fraicheur",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-granito-y-pizarra-de-arribes-fermoselle",
+      "nom": "Granito y pizarra de Arribes (Fermoselle)",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Arribes — Fermoselle",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Juan García",
+        "Bruñal"
+      ],
+      "altitude": "600–750 m",
+      "sols": "Granite et ardoises tendres en terrasses (bancales) sur le Duero",
+      "caracteristiques_rapides": "Les gorges du Duero à la frontière portugaise : terrasses de granite et d'ardoise, microclimat abrité, cépages autochtones Juan García et Bruñal, 1000 caves creusées à Fermoselle.",
+      "notes_objectives": "Les Arribes forment l'une des zones viticoles les plus spectaculaires et les plus singulières d'Espagne, nichée dans les gorges profondes que creuse le Duero à la frontière du Portugal, entre les provinces de Zamora et de Salamanque. Autour de Fermoselle, capitale historique de la zone, les vignes s'étagent en terrasses — les bancales — sur des pentes vertigineuses, entre six cents et sept cent cinquante mètres d'altitude. Le terroir associe le granite et des ardoises tendres, sur des sols pauvres et bien drainés qui obligent les racines à plonger profondément. L'encaissement des gorges crée un microclimat méditerranéen abrité, plus doux et plus sec que le plateau castillan environnant, où prospèrent des cépages autochtones cultivés depuis le Moyen Âge : le Juan García, à l'acidité vive et au fruit expressif, et le rare Bruñal, à très faible rendement et au caractère puissant. Fermoselle est par ailleurs célèbre pour ses plus de mille caves creusées sous la ville. Longtemps réservés à une consommation locale et rustique, ces terroirs connaissent un renouveau porté par de jeunes vignerons comme Frontio, qui en révèlent la finesse et la minéralité. Pour un sommelier, les Arribes sont un terroir à raconter pour son paysage extrême et ses cépages rares : des vins de granite originaux, sur Juan García et Bruñal, à faire découvrir à une clientèle en quête de singularité et d'authenticité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-arribes",
+        "granite",
+        "juan-garcia",
+        "brunal",
+        "fermoselle",
+        "terrasses",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-granito-de-la-sierra-de-salamanca",
+      "nom": "Granito de la Sierra de Salamanca",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Sierra de Salamanca",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Rufete"
+      ],
+      "altitude": "700–950 m",
+      "sols": "Granite décomposé en terrasses de montagne, sols pauvres",
+      "caracteristiques_rapides": "Sierra de montagne au sud de Salamanque : granite en terrasses, cépage Rufete à peau fine, vins clairs et parfumés, zone en plein renouveau qualitatif.",
+      "notes_objectives": "La Sierra de Salamanca est une petite appellation de montagne du sud de la province, adossée aux contreforts de la Sierra de Béjar et de la Peña de Francia, tournée vers le cépage autochtone Rufete. Les vignes s'y étagent en terrasses entre sept cents et neuf cent cinquante mètres d'altitude, sur des sols de granite décomposé, pauvres et bien drainés. Ce terroir de granite d'altitude, aux fortes amplitudes thermiques, convient particulièrement au Rufete, un cépage à peau fine et à maturité délicate, longtemps déconsidéré mais capable, sur ces sols et entre de bonnes mains, de donner des vins clairs, parfumés et frais, à mille lieues des rouges puissants de Castille. Les terrasses escarpées, souvent plantées de vieilles vignes en gobelet, imposent une viticulture manuelle et de faibles rendements. La zone connaît un renouveau spectaculaire, portée par une nouvelle génération de jeunes vignerons — dont Cámbrico fut le pionnier — qui ont révélé le potentiel de ce terroir de montagne longtemps ignoré. C'est aujourd'hui l'une des zones les plus dynamiques du renouveau castillan. Pour un sommelier, le granite de la Sierra de Salamanca est un terroir à connaître pour des Rufete fins et frais, sur un cépage rare : des vins de montagne originaux, à faire découvrir à une clientèle en quête de fraîcheur et de singularité, à des prix encore raisonnables.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "do-sierra-salamanca",
+        "granite",
+        "rufete",
+        "altitude",
+        "nouvelle-vague",
+        "prov-salamanca"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-villafranca-del-bierzo",
+      "nom": "Villafranca del Bierzo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Villafranca",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía",
+        "Godello"
+      ],
+      "altitude": "500–800 m",
+      "sols": "Pizarra et schiste sur coteaux, porte ouest du Bierzo",
+      "caracteristiques_rapides": "Village historique sur le chemin de Saint-Jacques, à l'ouest de la DO : vieilles vignes de Mencía sur ardoise, fief d'Akilia et de nombreux petits producteurs.",
+      "notes_objectives": "Villafranca del Bierzo est un village historique à l'ouest de l'appellation, étape majeure du chemin de Saint-Jacques, dont le passé viticole remonte à l'époque monastique. Situé entre cinq cents et huit cents mètres d'altitude, il repose sur des coteaux de pizarra et de schiste. Le secteur abrite de vieilles vignes de Mencía sur ardoise, ainsi que du Godello, et constitue le fief d'Akilia et de nombreux petits producteurs. Sa position à l'ouest, plus proche de la Galice, renforce le caractère frais et atlantique des vins. Pour un sommelier, Villafranca del Bierzo est un nom à connaître pour situer l'un des villages historiques de l'appellation et proposer des Mencía frais sur ardoise. Un secteur au charme patrimonial, sur le chemin de Compostelle, à raconter autant qu'à servir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "vino-de-villa",
+        "villafranca",
+        "pizarra",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-cacabelos",
+      "nom": "Cacabelos",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Cacabelos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía",
+        "Godello"
+      ],
+      "altitude": "450–600 m",
+      "sols": "Sols alluviaux, argile et galets en zone basse et centrale",
+      "caracteristiques_rapides": "Cœur commercial du Bierzo, zone centrale plus basse : fief de Luna Beberide, Losada, Godelia, entre vignes de plaine et coteaux d'ardoise.",
+      "notes_objectives": "Cacabelos est le cœur commercial du Bierzo, dans la partie centrale et plus basse de l'appellation. Situé entre quatre cent cinquante et six cents mètres d'altitude, il repose sur des sols alluviaux, mêlant argile et galets, plus fertiles que les coteaux d'ardoise. Le secteur, plus chaud et plus plat, abrite de grandes maisons comme Luna Beberide, Losada et Godelia, entre vignes de plaine et coteaux voisins. C'est un secteur de volume et de qualité intermédiaire, mais qui compte aussi des parajes réputés sur ses hauteurs, comme Pieros. Pour un sommelier, Cacabelos est un nom à connaître pour situer le centre névralgique du Bierzo et proposer des Mencía accessibles et fiables. Un secteur clé de l'appellation, complémentaire des coteaux d'ardoise des villages-crus.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "cacabelos",
+        "alluvial",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-pieros",
+      "nom": "Pieros",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — Cacabelos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "550–700 m",
+      "sols": "Argile ferreuse rougeâtre et galets sur coteau",
+      "caracteristiques_rapides": "Paraje réputé près de Cacabelos, sols d'argile ferreuse : Mencía structurée, à l'origine de cuvées comme Tilenus Pieros, vin de garde.",
+      "notes_objectives": "Pieros est un paraje réputé près de Cacabelos, dont les sols le distinguent nettement des zones alluviales environnantes. Situé entre cinq cent cinquante et sept cents mètres d'altitude, sur un coteau, il repose sur une argile ferreuse rougeâtre mêlée de galets. Ce sol particulier donne au Mencía une structure et une profondeur qui en font un terroir de garde. Le paraje est notamment à l'origine de cuvées comme Tilenus Pieros, de Bodegas Estefanía, réputé pour sa capacité de vieillissement. Pour un sommelier, Pieros est un lieu-dit à connaître pour proposer un Mencía structuré et de garde, sur argile ferreuse. Un paraje de référence du secteur de Cacabelos, à faire découvrir aux amateurs de Bierzo aptes au vieillissement.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "paraje",
+        "pieros",
+        "garde",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-san-juan-de-paluezas",
+      "nom": "San Juan de Paluezas",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo — San Juan de Paluezas",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Mencía"
+      ],
+      "altitude": "550–700 m",
+      "sols": "Sols calcaires, rareté dans le Bierzo, sur coteau",
+      "caracteristiques_rapides": "L'un des rares secteurs à sols calcaires du Bierzo, près des Médulas romaines : terroir dans le viseur de Raúl Pérez et César Márquez pour des Mencía singulières.",
+      "notes_objectives": "San Juan de Paluezas est l'un des rares secteurs du Bierzo à posséder des sols calcaires, ce qui en fait un terroir singulier dans une appellation dominée par l'ardoise et le sable. Situé entre cinq cent cinquante et sept cents mètres d'altitude, près des Médulas — le spectaculaire paysage minier hérité des Romains — il abrite de vieilles vignes de Mencía. Ce caractère calcaire, rare dans la région, attire l'attention des vignerons les plus pointus, comme Raúl Pérez et son neveu César Márquez, qui y voient un potentiel pour des Mencía d'un profil différent, plus tendu et plus fin. Le secteur pourrait donner naissance à des vins de village distinctifs. Pour un sommelier, San Juan de Paluezas est un nom à suivre pour proposer des Mencía sur calcaire, singularité géologique du Bierzo. Un terroir émergent, dans le viseur des meilleurs producteurs, à connaître pour anticiper les futures références de l'appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "vino-de-villa",
+        "calcaire",
+        "raul-perez",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-godello",
+      "nom": "Godello",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Godello"
+      ],
+      "altitude": "450–900 m",
+      "sols": "S'exprime sur ardoise et sable de tout le Bierzo",
+      "caracteristiques_rapides": "Grand cépage blanc du nord-ouest, roi du Bierzo comme de Valdeorras : agrumes, fleurs, minéralité, structure et acidité fraîche, de plus en plus planté face à la demande.",
+      "notes_objectives": "Le Godello est le grand cépage blanc du nord-ouest de l'Espagne, roi du Bierzo comme de Valdeorras en Galice voisine. Il s'exprime sur les sols d'ardoise et de sable de l'appellation, entre quatre cent cinquante et neuf cents mètres d'altitude, avec une prédilection pour les coteaux frais. Longtemps au bord de l'extinction, le Godello a été sauvé et réhabilité à partir des années 1970. Il donne des blancs de grande personnalité, alliant des arômes d'agrumes, de fleurs et de fruits blancs à une belle minéralité, une structure ample et une acidité fraîche. Il se prête aussi bien aux vinifications en cuve, pour des vins nets et vifs, qu'à l'élevage en barrique ou sur lies, pour des blancs de garde plus complexes. Face à la demande croissante, de nombreux vignerons plantent du Godello ou surgreffent d'anciennes vignes de Mencía. Pour un sommelier, le Godello est un atout précieux pour élargir une carte au-delà des rouges du Bierzo : un blanc de terroir structuré et frais, encore méconnu, idéal pour surprendre une clientèle. Les versions élevées en barrique méritent une vraie attention et peuvent vieillir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-bierzo",
+        "cepage",
+        "godello",
+        "blancs",
+        "transversal",
+        "prov-leon"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-terrazas-de-cigales",
+      "nom": "Terrazas de Cigales",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Cigales — Pisuerga",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Albillo"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Sables, graves et calcaires sur les rives du Pisuerga",
+      "caracteristiques_rapides": "Terroir de part et d'autre du Pisuerga, au nord de la dépression du Duero : vieilles vignes de Tinta del País, berceau du rosado-clarete et de rouges de garde émergents.",
+      "notes_objectives": "Cigales est une appellation du nord de la dépression du Duero, de part et d'autre de la rivière Pisuerga, entre les provinces de Valladolid et de Palencia. Située autour de sept cents à huit cents mètres d'altitude, elle repose sur des sols de sables, de graves et de calcaires. Le vignoble, riche en vieilles vignes de Tinta del País souvent complantées de blanc, a longtemps été dédié au rosado — le clarete — qui a fait la réputation de l'appellation. Mais une nouvelle génération y révèle le potentiel des rouges de garde, à l'image de Traslanzas et César Príncipe. La Garnacha, le Verdejo et l'Albillo complètent l'encépagement. Pour un sommelier, Cigales est un nom à connaître pour son rosado traditionnel autant que pour ses rouges émergents de vieilles vignes. Un terroir en pleine mutation, à faire découvrir au-delà de son image de région de rosé.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-cigales",
+        "pisuerga",
+        "clarete",
+        "tempranillo",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-el-clarete-de-cigales",
+      "nom": "El Clarete de Cigales",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Cigales (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Albillo",
+        "Verdejo"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Co-fermentation de raisins rouges et blancs des vieilles vignes",
+      "caracteristiques_rapides": "Le rosado historique de Cigales, clair et complexe, obtenu par co-fermentation de rouge et de blanc : la grande tradition de l'appellation, protégée par la DO.",
+      "notes_objectives": "Le clarete est le vin historique de Cigales, un rosé clair et complexe obtenu par co-fermentation de raisins rouges et blancs, qui a fait la réputation de l'appellation depuis des siècles. Il naît des vieilles vignes complantées de la zone, où la Tinta del País cohabite avec l'Albillo et le Verdejo. Traditionnellement, ces raisins étaient vendangés et fermentés ensemble, rouge et blanc mêlés, donnant un vin clair d'une réelle complexité, à mille lieues des rosés industriels. Cette méthode ancestrale, protégée par la DO, distingue le clarete de Cigales des simples rosados de saignée. Longtemps menacé par la mode des rouges, il connaît aujourd'hui un regain d'intérêt à la faveur du renouveau des vins de gastronomie. Pour un sommelier, le clarete de Cigales est une curiosité à connaître : un rosé de terroir, complexe et gastronomique, chargé d'histoire, à mille lieues des rosés d'apéritif. Une belle porte d'entrée vers le patrimoine des vins clairs castillans, à raconter autant qu'à servir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-cigales",
+        "clarete",
+        "rosado",
+        "tradition",
+        "transversal",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-juan-garcia-y-brunal",
+      "nom": "Juan García y Bruñal",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Arribes (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Juan García",
+        "Bruñal"
+      ],
+      "altitude": "600–750 m",
+      "sols": "Granite et ardoise des gorges du Duero",
+      "caracteristiques_rapides": "Les cépages rouges autochtones des Arribes, cultivés depuis le Moyen Âge : Juan García à l'acidité vive et au fruit, Bruñal rare et puissant à très faible rendement.",
+      "notes_objectives": "Le Juan García et le Bruñal sont les cépages rouges autochtones des Arribes, cultivés depuis le Moyen Âge dans les gorges du Duero, sur les sols de granite et d'ardoise de la zone. Ils constituent l'identité viticole singulière de cette appellation frontalière du Portugal. Le Juan García, cépage principal des rouges de la zone, se distingue par son acidité vive et son fruit expressif, donnant des vins de caractère à la personnalité marquée. Le Bruñal, beaucoup plus rare, à très faible rendement, offre des rouges puissants, colorés et structurés, longtemps utilisés pour renforcer les assemblages et aujourd'hui vinifiés en monocépage par les vignerons les plus ambitieux. Ces variétés, parfaitement adaptées au microclimat des Arribes, expriment un terroir de granite unique en Castille. Pour un sommelier, le Juan García et le Bruñal sont des cépages à connaître pour proposer des vins des Arribes vraiment originaux, sur granite. Des variétés rares, à raconter autant qu'à servir, pour une clientèle en quête de singularité et de patrimoine ampélographique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-arribes",
+        "cepage",
+        "juan-garcia",
+        "brunal",
+        "transversal",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-rufete",
+      "nom": "Rufete",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Sierra de Salamanca (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Rufete"
+      ],
+      "altitude": "700–950 m",
+      "sols": "S'exprime sur le granite d'altitude de la sierra",
+      "caracteristiques_rapides": "Cépage rouge autochtone de la Sierra de Salamanca, à peau fine et maturité délicate : vins clairs, parfumés et frais, cœur du renouveau de la zone.",
+      "notes_objectives": "Le Rufete est le cépage rouge autochtone de la Sierra de Salamanca, cultivé sur les terrasses de granite d'altitude de cette petite appellation de montagne. Cépage à peau fine et à maturité délicate, il donne des vins clairs, parfumés et frais, à l'opposé des rouges puissants de Castille. Longtemps déconsidéré, le Rufete a été réhabilité par une nouvelle génération de vignerons qui ont su, sur les vieilles vignes de granite et à faible rendement, en tirer des rouges d'une réelle finesse, aux arômes de fruits rouges, d'épices et d'herbes de montagne. Sa fraîcheur et sa légèreté en font un cépage dans l'air du temps, souvent rapproché des vins de montagne les plus élégants. Il est parfois complété du Calabrés ou du Tempranillo. Pour un sommelier, le Rufete est un cépage à connaître pour proposer des rouges frais et parfumés de la Sierra de Salamanca : des vins de montagne originaux, sur granite, à faire découvrir aux amateurs de fraîcheur et de singularité, encore à des prix raisonnables.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-sierra-salamanca",
+        "cepage",
+        "rufete",
+        "granite",
+        "transversal",
+        "prov-salamanca"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    },
+    {
+      "id": "es-castillayleon-terr-tierra-del-vino-de-zamora",
+      "nom": "Tierra del Vino de Zamora",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Tierra del Vino de Zamora",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "650–800 m",
+      "sols": "Sables sur socle, vignes préphylloxériques franches de pied",
+      "caracteristiques_rapides": "Petite DO au sud de Zamora, sur l'ancienne route du vin vers Salamanque : vieilles vignes de Tempranillo préphylloxérique, révélée par Viñas del Cénit.",
+      "notes_objectives": "La Tierra del Vino de Zamora est une petite appellation au sud de la province de Zamora, sur l'ancienne route qui menait le vin vers Salamanque. Située entre six cent cinquante et huit cents mètres d'altitude, elle repose sur des sols de sable sur socle, qui ont préservé de précieuses vignes préphylloxériques franches de pied. Le vignoble, dominé par le Tempranillo, conserve des parcelles centenaires qui ont échappé au phylloxéra grâce aux sables. Longtemps méconnue, la zone a été révélée par Viñas del Cénit, qui en tire un Tempranillo dense et profond, prouvant le potentiel de ce terroir historique. Pour un sommelier, la Tierra del Vino de Zamora est un nom à connaître pour proposer un Tempranillo de vieilles vignes préphylloxériques à l'écart des grandes appellations. Un terroir confidentiel, à faire découvrir pour sortir des sentiers battus castillans.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "do-tierra-del-vino-zamora",
+        "tempranillo",
+        "prephylloxerique",
+        "sables",
+        "prov-zamora"
+      ],
+      "source": "Recherche web juillet 2026 (spanishwinelover, World of Fine Wine, James Suckling, V de Vendimia, doarribes)"
+    }
+  ]
+}

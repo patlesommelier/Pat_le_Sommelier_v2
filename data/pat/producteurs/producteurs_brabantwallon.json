@@ -1,0 +1,684 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "brabantwallon",
+  "region_label": "Brabant wallon",
+  "source_file": "producteurs_brabantwallon_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 21,
+  "items": [
+    {
+      "id": "be-brabantwallon-prod-domaine-viticole-du-chapitre",
+      "nom": "Domaine viticole du Chapitre",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Baulers (Nivelles)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Crémant de Wallonie (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le plus grand vignoble de la province : treize à quatorze hectares plantés à partir de 2013 à Baulers, au nord de Nivelles, en cépages classiques et résistants mêlés, pour quelque 50 000 bouteilles par an. La gamme est complète — blancs, rouges, rosés et Crémants de Wallonie — et régulièrement médaillée, notamment au Concours Mondial de Bruxelles dans sa session consacrée aux rosés.\n\nSa singularité est structurelle plutôt que qualitative. Le domaine maîtrise toute la chaîne, de la vigne à la mise en bouteille, et met cet outil à disposition de vignobles plus petits qui n'ont pas les moyens de s'équiper : il assure pour eux certaines étapes de production. Dans une province où vingt vignobles sur trente-quatre font moins d'un hectare, cette fonction d'atelier partagé est déterminante — sans elle, une bonne partie de la production brabançonne n'existerait pas sous forme commercialisable.\n\nC'est un troisième modèle de mutualisation dans le corpus belge, distinct de la gestion déléguée pratiquée par Château Bon Baron sur les clos mosans et du négoce de raisin de Hoenshof en Hesbaye. Ici, ni la vigne ni le raisin ne changent de mains : seul l'outil de vinification est partagé. Le domaine est signalé par le tag negoce-partiel, mais la nature exacte de ces prestations mériterait d'être précisée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "cremant",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Surface : 13 ha en 2022, plus de 13 selon des sources récentes. Encépagement détaillé et cuvées phares à documenter ; nature exacte des prestations pour tiers à préciser.",
+      "source": "chapitre.vin ; marcvanel.be ; pointbw.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-w",
+      "nom": "Domaine W",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Saintes (Tubize)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Crémant de Wallonie (AOP)"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Rien ne prédestinait Sophie Wautier, psychologue, et son mari Dimitri Vander Heyden, alors directeur général de Danone en Autriche, à devenir vignerons. C'est un séjour à Wagram, dans le Weinviertel autrichien, où ils plantent vingt ares de Grüner Veltliner et découvrent la biodynamie, qui décide de tout. Retour en Belgique, analyses de sol et d'ensoleillement dès 2012 sur la ferme familiale de Saintes, à Tubize, puis plantation des premiers pieds en 2016. Huit hectares et 35 000 pieds aujourd'hui, au sein d'une propriété de quarante hectares plantée de cinq mille arbres et arbustes, avec prés fleuris et ruches — la biodiversité fait partie du projet, pas de la communication.\n\nLe parti pris est d'une netteté rare en Belgique : trio champenois strict — Chardonnay, Pinot Noir, Meunier —, uniquement de l'effervescent, uniquement en méthode traditionnelle, avec un suivi assuré par des experts champenois. C'est à ce jour le seul vignoble belge certifié à la fois bio et biodynamique, Demeter compris, depuis 2019. L'élevage combine bois et cuve — six mois en fût de chêne pour le Brut de Brabant, puis dix-huit à vingt-quatre mois sur lattes, vingt-huit mois pour le Blanc de Blanc. Le dosage est minimal, trois grammes, avec des sulfites très bas.\n\nLes débuts ont été modestes et méritent d'être rappelés : la première récolte, en 2018, a donné 2 500 bouteilles, vinifiées dans le chai de la coopérative Vin de Liège faute d'installation propre. Le chai de Saintes est construit l'année suivante. La production vise aujourd'hui les 40 000 bouteilles, disponibles trois ans après la récolte, distribuées d'abord aux membres du Wine Club — plus de deux mille coopérateurs qui financent le développement.\n\nLes distinctions ont suivi : quatre étoiles au premier guide des vins belges en 2021, double récompense au Frankfurt International Trophy, et une médaille d'or au concours des Meilleurs Chardonnay du Monde en 2025 pour le Blanc de Blanc 2020, aux côtés du Chardonnay Brut de Ruffus. La grande presse a traduit cela par « meilleur chardonnay du monde », ce que le palmarès ne dit pas — quatre-vingt-deux médailles d'or ont été décernées cette année-là. La reconnaissance n'en reste pas moins réelle : les cuvées figurent à la carte de plusieurs restaurants étoilés belges.",
+      "mes_notes": "Le Domaine W produit sans doute les meilleures méthode traditionnelle belge, équivalent aux meilleurs champenois.",
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Brut de Brabant",
+        "Blanc de Blanc",
+        "Rosé"
+      ],
+      "tags": [
+        "wallonie",
+        "methode-traditionnelle",
+        "cremant",
+        "bio",
+        "biodynamie"
+      ],
+      "a_verifier": "Assemblage variable d'un millésime à l'autre (60 % de Meunier en 2019, 61 % de Chardonnay en 2021) : à revérifier à chaque cuvée. Surface 8 ha et 35 000 pieds ; production annoncée à 40 000 bouteilles, disponibles trois ans après la récolte.",
+      "source": "domaine-w.be ; marcvanel.be ; espacevie.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-vignoble-du-chateau-de-bousval",
+      "nom": "Vignoble du Château de Bousval",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Bousval (Genappe)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux années de revitalisation des sols précèdent la plantation des premières vignes, en 2014, autour du château de Bousval, dans la commune de Genappe. Le domaine couvre aujourd'hui huit hectares et deux, plantés de trois cépages classiques seulement — Chardonnay, Pinot Noir, Pinot Gris — sur les conseils d'un vigneron bourguignon.\n\nLa démarche est parcellaire et environnementale : le domaine revendique une viticulture respectueuse des sols et une attention portée au caractère propre de chaque parcelle. La certification biologique est acquise en 2021, ce qui place Bousval dans le petit groupe des domaines wallons certifiés, avec le Chenoy, Vin de Liège, le Domaine W et le Château de Bioul. Le chai a été inauguré en 2019.\n\nUn détail éclaire la structuration du milieu viticole wallon : le maître de chai du domaine partage son temps entre Bousval et le Domaine W, à Saintes. Cette circulation des compétences entre les meilleurs domaines d'une même province est un phénomène récent, et probablement l'un des facteurs de la montée en qualité observée depuis 2020 — le vignoble belge est trop jeune pour avoir formé ses propres cadres en nombre suffisant. Le domaine pratique visites guidées du vignoble et du chai suivies de dégustations, ce qui en fait l'une des portes d'entrée œnotouristiques de la province, dans un cadre paysager remarquable au sud de Genappe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "bio"
+      ],
+      "a_verifier": "Identité du conseiller bourguignon à confirmer. Gamme actuelle et cuvées phares à documenter.",
+      "source": "chateaudebousval.be ; marcvanel.be ; vigneronsdewallonie.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-de-glabais",
+      "nom": "Domaine de Glabais",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Glabais (Genappe)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares et quart plantés en 2016 à Glabais, dans la commune de Genappe, en cépages classiques, avec une orientation marquée vers l'effervescent — le domaine s'est fait connaître comme celui des bulles du Pays de Waterloo.\n\nL'ouest de la province concentre les plus grandes exploitations brabançonnes : le Chapitre, Bousval, le Domaine W et Glabais sont tous dans un rayon d'une vingtaine de kilomètres, sur les limons de plateau qui descendent vers la Dyle et la Senne. La proximité de Bruxelles et un tissu de consommateurs aisés expliquent en partie cette concentration, dans une province où le foncier agricole est le plus cher de Wallonie. Encépagement détaillé et appellation revendiquée restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Encépagement détaillé, gamme et appellation revendiquée à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-du-roy",
+      "nom": "Domaine du Roy",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Tilly (Villers-la-Ville)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares plantés en 2022 à Tilly, dans la commune de Villers-la-Ville, en cépages résistants : l'une des plantations les plus récentes et les plus étendues de la province.\n\nLe contraste avec le clos historique de Villers-la-Vigne, sur la même commune, est éloquent : quatorze ares plantés en 1990 par une confrérie d'un côté, cinq hectares plantés d'un coup trente-deux ans plus tard de l'autre. C'est tout le changement d'échelle du vignoble wallon en une génération. Encépagement, premier millésime et structure d'exploitation restent à documenter. Cinq hectares en cépages résistants représentent l'un des plus gros ensembles de variétés interspécifiques de la province, choix devenu la norme pour les plantations dépassant deux hectares.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, premier millésime et structure d'exploitation à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-coteaux-des-avelines",
+      "nom": "Coteaux des Avelines",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Sart-Dames-Avelines (Villers-la-Ville)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et trois plantés en 2018 à Sart-Dames-Avelines, dans la commune de Villers-la-Ville, en cépages résistants, dans le cadre d'une reconversion professionnelle.\n\nCette trajectoire est devenue majoritaire dans le vignoble brabançon : sur les dix-sept vignobles créés en moins de dix ans dans la province, la plupart sont portés par des personnes venues d'autres métiers. C'est une force — capitaux, gestion, réseau — et une fragilité, l'absence de savoir-faire familial obligeant à tout apprendre en même temps. Le choix des cépages résistants répond directement à cette contrainte : il réduit le nombre de décisions techniques à prendre chaque saison. Le domaine se situe sur les limons du plateau au sud de la province, dans un paysage de grandes cultures et de bois. Encépagement, gamme et premier millésime commercialisé restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, gamme et premier millésime commercialisé à documenter.",
+      "source": "coteaux-des-avelines.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-petit-chaumont",
+      "nom": "Petit Chaumont",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Ittre",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2017 à Ittre, en cépages classiques et résistants mêlés, dans l'ouest de la province, à quelques kilomètres de la frontière hennuyère.\n\nLe secteur, entre Senne et canal Bruxelles-Charleroi, est un plateau limoneux voué aux grandes cultures. L'encépagement mixte est révélateur d'une génération intermédiaire : ni le tout-classique des domaines ambitieux, ni le tout-résistant des projets récents, mais une prudence qui consiste à planter les deux et à voir. Encépagement, couleurs et volumes restent à documenter. Ittre, sur le canal Bruxelles-Charleroi, appartient à cet ouest brabançon où se concentrent les plus grandes exploitations de la province — le Domaine W est à moins de dix kilomètres. Ce voisinage explique en partie la densité viticole locale : une réussite visible lève le doute pour les voisins, mécanisme observé partout en Belgique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-villers-la-vigne",
+      "nom": "Villers-la-Vigne",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "commune": "Villers-la-Ville",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatorze ares plantés en 1990 dans l'enceinte de l'abbaye cistercienne de Villers-la-Ville, en cépages résistants, et animés depuis par une confrérie : l'un des vétérans de la viticulture wallonne, largement antérieur à la vague contemporaine.\n\nLe site est l'une des plus vastes ruines abbatiales d'Europe, fondée en 1146, et les moines cisterciens y cultivaient la vigne. La replantation relève donc de la restitution patrimoniale, comme à Brogne, Floreffe ou Saint-Denis-en-Broqueroie ; elle a la particularité d'avoir trente-cinq ans d'ancienneté et d'avoir décroché une médaille en Allemagne pour son rosé. Le clos est inclus dans le corpus par dérogation au seuil de surface, pour son antériorité. La confrérie qui l'anime a fourni à l'Association des Vignerons de Wallonie son secrétaire, signe du rôle qu'ont joué ces structures avant l'arrivée des domaines professionnels.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "clos-historique",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement et volumes à documenter. Domaine inclus par dérogation au seuil de surface, pour son antériorité et sa valeur patrimoniale.",
+      "source": "villerslavigne.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-champ-des-vignes-lasne-chapelle-saint-lambert",
+      "nom": "Champ des Vignes (Lasne-Chapelle-Saint-Lambert)",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Lasne-Chapelle-Saint-Lambert (Lasne)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sept hectares plantés d'un seul coup en 2022 à Lasne-Chapelle-Saint-Lambert, en cépages classiques : l'une des plus grosses plantations réalisées en une seule opération dans la province.\n\nLasne compte désormais trois vignobles pour des profils radicalement différents — celui-ci, deux hectares au Try d'Argenteuil, trente-cinq ares au Champ des Vignes de Christian Pasture — ce qui en fait l'une des communes les plus denses du Brabant wallon. Le nom du domaine était encore provisoire au moment du recensement de référence, ce qui crée d'ailleurs une homonymie gênante avec son voisin. Encépagement et premier millésime restent à documenter. Sept hectares plantés en une opération, sans phase de test préalable, traduisent une confiance dans la viticulture brabançonne que les pionniers des années 1990 n'avaient pas.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Nom encore provisoire au moment du recensement de référence. À ne pas confondre avec Le Champ des Vignes de C. Pasture, autre vignoble de la commune de Lasne. Encépagement et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-try-dargenteuil",
+      "nom": "Try d'Argenteuil",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Lasne",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares plantés en 2020 à Lasne, en cépages classiques, à quelques centaines de mètres du champ de bataille de Waterloo — le domaine se présente volontiers comme installé à l'ombre du Lion.\n\nUn try, en toponymie wallonne, désigne une pente ou un raidillon, ce qui vaut d'être noté dans une province où le relief est justement l'élément qui manque : Pierre Rion, président des vignerons wallons, cite l'absence de vallée parmi les handicaps du Brabant wallon. Les rares dénivelés y sont donc recherchés. Encépagement, gamme et premier millésime restent à documenter. Lasne est l'une des communes les plus aisées de Belgique, ce qui garantit un débouché local immédiat pour une production de deux hectares : dans une province sans tradition viticole, la proximité de la clientèle compte autant que la qualité du site.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, gamme et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-le-champ-des-vignes-c-pasture",
+      "nom": "Le Champ des Vignes (C. Pasture)",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Lasne",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente-cinq ares plantés en 2000 à Lasne par Christian Pasture, en cépages résistants : l'un des rares vignobles brabançons antérieurs à 2010, et l'un des plus anciens de la province après Mellemont et Villers-la-Vigne.\n\nPlanter des résistants en 2000 relevait alors de l'anticipation : le Domaine du Chenoy, qui a popularisé cette approche en Wallonie, ne serait planté que trois ans plus tard. Attention à l'homonymie — un autre vignoble de la même commune, planté en 2022 sur sept hectares, porte un nom presque identique. Encépagement et volumes restent à documenter. Le domaine appartient à cette poignée de vignobles wallons plantés autour de l'an 2000 — avec Dalaheim Castellum à Dalhem, le Clos de Brogne à Mettet et le Clos des Zouaves à Thuin — qui forment le chaînon manquant entre les confréries des années 1990 et les domaines professionnels des années 2010.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "À ne pas confondre avec le Champ des Vignes planté en 2022 sur la même commune. Encépagement et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-terre-des-dieu",
+      "nom": "Terre des Dieu",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Chaumont-Gistoux",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2020 à Chaumont-Gistoux, en cépages classiques, sur les limons du plateau brabançon.\n\nLa commune est l'une de celles où la vigne s'est installée le plus tôt dans l'est de la province, et elle illustre le profil dominant du vignoble brabançon : de très petites surfaces, une clientèle de proximité dans une zone résidentielle aisée, et une production qui ne quitte pas le circuit local. Vingt des trente-quatre vignobles de la province font moins d'un hectare. Encépagement, couleurs et premier millésime restent à documenter, de même que l'orthographe exacte du nom. Chaumont-Gistoux occupe l'un des points hauts du plateau brabançon, dans un paysage de grandes cultures entaillé par les vallons de la Dyle et du Train.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter ; orthographe exacte du nom à confirmer.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-les-pieds-dans-la-dyle",
+      "nom": "Les Pieds dans la Dyle",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Wavre",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Environ un hectare et trois répartis autour de Wavre depuis 2018, en cépages classiques et résistants mêlés : un vignoble volontairement éclaté en petites parcelles dans la vallée de la Dyle.\n\nCe morcellement, subi ailleurs, semble ici assumé : il permet de saisir les rares expositions favorables d'un plateau sans relief marqué, et de diversifier le risque climatique. La Dyle, qui traverse la province du sud au nord avant de rejoindre Louvain, entaille légèrement les limons et dégage les seuls versants exploitables du centre du Brabant wallon. Nombre exact de parcelles, encépagement et volumes restent à documenter. Le nom, comme celui de plusieurs micro-domaines wallons récents, relève du clin d'œil plutôt que de la toponymie — un trait générationnel qui distingue nettement ces projets des clos et châteaux qui les ont précédés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Nombre et localisation exacts des parcelles, encépagement et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-des-lowas",
+      "nom": "Domaine des Lowas",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Grez-Doiceau",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi planté en 2016 à Grez-Doiceau, en cépages résistants, dans la vallée du Train, affluent de la Dyle.\n\nLa commune se situe à la limite du Brabant flamand, à quelques kilomètres du Hageland et de ses collines de grès ferrugineux — mais on est ici sur les limons brabançons, sans le substrat qui fait la particularité du versant flamand. La frontière régionale coïncide avec une vraie frontière géologique, ce qui explique que les deux vignobles voisins n'aient rien de commun. Encépagement et volumes restent à documenter. Grez-Doiceau compte parmi les communes les plus étendues de la province, dans un paysage de vallons boisés et de fermes en carré. Le vignoble est l'un des rares de l'est du Brabant wallon à dépasser l'hectare, dans un secteur où la moyenne tourne autour de trente ares.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, gamme et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-coteaux-de-la-balbriere",
+      "nom": "Coteaux de la Balbrière",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "commune": "Ottignies-Louvain-la-Neuve",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares plantés en 2021 à Ottignies-Louvain-la-Neuve, en cépages résistants, également connus sous le nom L'arbre qui pousse.\n\nLe vignoble est l'un des plus urbains du corpus wallon, dans une commune façonnée par l'université et la ville nouvelle. Ce type d'implantation périurbaine, où la vigne s'installe sur des parcelles résiduelles au contact immédiat de l'habitat, impose des contraintes propres — la réduction des traitements y est un enjeu de voisinage autant qu'agronomique, ce qui explique le recours quasi systématique aux cépages résistants. Nom définitif et encépagement restent à confirmer. La commune compte par ailleurs l'une des principales universités du pays, dont les compétences agronomiques ont contribué à plusieurs projets viticoles wallons — le Domaine du Chenoy a fait valider son terrain par une étude pédologique menée avec l'UCLouvain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Nom définitif du domaine, encépagement et premier millésime à confirmer.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-de-mellemont",
+      "nom": "Domaine de Mellemont",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Thorembais-Saint-Trond (Perwez)",
+      "pays": "Belgique",
+      "cepages": [
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le vignoble fondateur du Brabant wallon, et l'un des plus anciens de Wallonie. Pierre Rion, futur président de l'Association des Vignerons de Wallonie, plante ses premiers pieds au début des années 1990 — « on me prenait pour un cinglé », résumera-t-il plus tard. L'association avec Étienne Rigo et François Vercheval permet d'atteindre 3 200 pieds en 1994, ce qui fait alors de Mellemont le plus grand vignoble de Wallonie, position qu'il conservera une dizaine d'années.\n\nLe choix variétal dit l'état des connaissances de l'époque : le Müller-Thurgau, croisement obtenu à Geisenheim en 1882, retenu pour deux critères tenus alors pour décisifs sous ce climat — la précocité et la résistance aux maladies. Le cépage ne développe son bouquet que dans les régions fraîches, ce qui en faisait un candidat logique avant que le réchauffement et les sélections résistantes modernes ne changent la donne.\n\nLe domaine couvre aujourd'hui un peu plus de quatre hectares, pour 15 000 à 20 000 bouteilles par an en blancs, rouges et effervescents, avec des cuvées identifiées comme le Rosé des Béguines et les Bulles pour Lui et pour Elle. Il n'est plus que le septième vignoble de sa propre province en surface, ce qui mesure l'ampleur de l'essor brabançon. Changement d'équipe en 2021, après vingt-huit ans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye"
+      ],
+      "a_verifier": "Encépagement actuel au-delà du Müller-Thurgau à documenter ; composition de la nouvelle équipe depuis 2021.",
+      "source": "domaine-de-mellemont.be ; marcvanel.be ; vigneronsdewallonie.be ; pointbw.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-domaine-du-buisson",
+      "nom": "Domaine du Buisson",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Orbais (Perwez)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Projet familial de Serge de Liedekerke, lancé en 2015 : trois hectares et quart à Orbais, dans la commune de Perwez, complétés par deux hectares à Latinne, en province de Liège, soit plus de cinq hectares au total.\n\nLes cépages sont classiques — Chardonnay, Pinot Noir, Pinot Gris — en conduite biologique, avec une certification obtenue en 2024. La double implantation sur deux provinces se retrouve chez plusieurs vignerons wallons, dont le Ry d'Argent, et traduit une réalité du foncier : les terres se trouvent là où elles sont disponibles. Le fichier Liège comporte une entrée pour la parcelle de Latinne — il s'agit bien d'une seule exploitation, à traiter comme telle. Perwez, avec Mellemont et La Garenne, concentre trois vignobles, ce qui en fait le principal foyer viticole de la Hesbaye brabançonne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "bio"
+      ],
+      "a_verifier": "Cas transprovincial : la parcelle de Latinne figure aussi dans le fichier Liège, à traiter comme une seule exploitation. Nom du domaine encore provisoire dans le recensement de référence.",
+      "source": "marcvanel.be ; destinationbw.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-beekborne",
+      "nom": "Beekborne",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Hélécine",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares plantés en 2013 à Hélécine, en cépages classiques, à l'extrémité orientale de la province, au point de rencontre du Brabant wallon, du Brabant flamand et de la province de Liège.\n\nLe nom, d'origine néerlandaise, rappelle que la frontière linguistique passe à quelques kilomètres, et le domaine revendique explicitement une recherche d'expression du terroir — un discours encore rare dans une province où l'on plante d'abord et où l'on s'interroge sur le lieu ensuite. On est ici sur les limons de la Hesbaye brabançonne, dans le prolongement direct des terres de Hesbaye liégeoise et flamande. Encépagement détaillé et volumes restent à documenter. Hélécine est aussi connue pour son domaine provincial et son château néoclassique, cadre qui offre au vignoble une visibilité que ses trois hectares ne lui donneraient pas seuls.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye"
+      ],
+      "a_verifier": "Encépagement détaillé, gamme et volumes à documenter.",
+      "source": "beekborne.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-vignoble-la-garenne",
+      "nom": "Vignoble La Garenne",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Malèves-Sainte-Marie (Perwez)",
+      "pays": "Belgique",
+      "cepages": [
+        "Pinot Noir",
+        "Riesling"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares plantés en 2019 par Michel Pierard à Malèves-Sainte-Marie, dans la commune de Perwez, en Pinot Noir et Riesling.\n\nLe choix est à contre-courant. Le Riesling est rarissime en Wallonie — on le trouve surtout en Hesbaye flamande, où le Clos du château de Duras lui est entièrement consacré — et il exige des sols pauvres et une longue saison, deux choses que les limons profonds de la Hesbaye brabançonne n'offrent pas spontanément. Associé au Pinot Noir, il fait de ce petit domaine l'un des paris les plus singuliers de la province. Proportion des deux cépages et premier millésime restent à documenter. Le domaine est l'un des trois vignobles de la commune de Perwez, avec Mellemont et le Domaine du Buisson, dans une Hesbaye brabançonne devenue le second pôle viticole de la province après l'ouest.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Proportion respective des deux cépages, gamme et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-monts-marilles",
+      "nom": "Monts-Marilles",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Marilles (Orp-Jauche)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares plantés en 2021 à Marilles, dans la commune d'Orp-Jauche, en cépages résistants, dans la Hesbaye brabançonne.\n\nLa région est un plateau limoneux voué aux betteraves et aux céréales, sans relief ni tradition viticole : le toponyme des Monts y désigne des ondulations que l'on qualifierait ailleurs de négligeables. C'est précisément l'intérêt du secteur — il montre que la viticulture belge ne se limite plus aux coteaux identifiés et gagne des terres agricoles ordinaires, portée par le réchauffement et par des cépages qui pardonnent davantage. Encépagement et premier millésime restent à documenter. Orp-Jauche se situe à l'extrémité orientale du Brabant wallon, aux confins de la Hesbaye liégeoise et du Brabant flamand — trois provinces dont les vignobles partagent exactement le même substrat limoneux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "montsmarilles.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-prod-les-rouhaux",
+      "nom": "Les Rouhaux",
+      "type": "domaine",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "commune": "Piétrebais (Incourt)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares plantés en 2011 à Piétrebais, dans la commune d'Incourt, en cépages résistants : l'un des rares vignobles brabançons antérieurs à la vague des années 2010.\n\nEn 2011, la province ne comptait qu'une poignée de vignobles, dont Mellemont et deux ou trois clos confrériques ; le doublement du nombre d'exploitations s'est produit ensuite, entre 2015 et 2022. Ce domaine appartient donc à la génération intermédiaire, celle qui a planté avant l'engouement et sans les références aujourd'hui disponibles. Encépagement, volumes et couleurs produites restent à documenter. Incourt occupe le plateau entre Dyle et Grande Gette, dans un paysage de grandes cultures et de vallons discrets, à la limite du Brabant flamand.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, volumes et couleurs produites à documenter.",
+      "source": "marcvanel.be"
+    }
+  ]
+}

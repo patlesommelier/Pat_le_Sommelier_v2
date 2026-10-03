@@ -1,0 +1,1549 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "veneto",
+  "region_label": "Veneto (Italie)",
+  "source_file": "producteurs_veneto.json",
+  "built_at": "2026-06-28",
+  "count": 41,
+  "items": [
+    {
+      "id": "it-veneto-prod-pieropan",
+      "nom": "Pieropan",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Soave",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega",
+        "Trebbiano di Soave"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Calvarino",
+        "Soave Classico La Rocca",
+        "Soave Classico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Soave, la famille Pieropan est la référence absolue de l'appellation et l'une des grandes maisons de blanc d'Italie. C'est ici que naquirent, sous l'impulsion du regretté Leonildo Pieropan, les tout premiers crus de vin blanc du pays : le Calvarino dès 1971, puis La Rocca en 1978 — quarante ans avant l'officialisation des UGA. Aujourd'hui, ses fils Andrea et Dario perpétuent magistralement cet héritage, avec une exigence de terroir et une régularité exemplaires.\n\nLe domaine cultive la Garganega (complétée du Trebbiano di Soave) sur les collines volcaniques de Soave Classico, en pergola adaptée à de hautes densités et de faibles rendements. Les deux crus illustrent deux visages du Soave : le Calvarino, élevé en cuve, issu de sols mêlant basalte et calcaire, offre un vin minéral, tendu et d'une grande pureté ; La Rocca, sur sols calcaires et élevé sous bois, en pur Garganega, déploie davantage d'ampleur, de richesse et de profondeur. Tous deux sont d'une longévité remarquable, capable de défier une décennie ou plus en cave — chose rare pour un Soave. Le Soave Classico « de domaine » figure quant à lui chaque année parmi les meilleurs de l'appellation.\n\nPilier de la renaissance qualitative du Soave et ardent défenseur de la Garganega face à la mode des cépages internationaux, Pieropan a prouvé que ce blanc, longtemps déprécié, pouvait jouer dans la cour des grands. C'est aujourd'hui le nom de référence de l'appellation, gage de minéralité, de finesse et de garde.\n\nLe Soave a longtemps souffert d'une image de blanc bon marché, façonnée par les coopératives des années 1970-1980. Pieropan a été l'un des artisans majeurs de sa réhabilitation, en misant sur la Garganega de terroir, les faibles rendements et les vins de garde, quand d'autres couraient après les cépages internationaux. Le domaine, désormais en biologique, a élargi sa gamme — notamment vers la Valpolicella — tout en gardant le Soave pour cœur. La famille soigne chaque parcelle des collines de Soave Classico, dont le secteur de La Santa. Servis sur des poissons, des risottos ou de la volaille, les crus Calvarino et La Rocca révèlent toute la noblesse d'une Garganega vinifiée avec ambition, et vieillissent avec une grâce que peu de blancs italiens égalent. Pieropan reste l'étendard de tout ce que le Soave peut offrir de meilleur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "cru",
+        "icone"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineenthusiast|decanter"
+    },
+    {
+      "id": "it-veneto-prod-giuseppe-quintarelli",
+      "nom": "Giuseppe Quintarelli",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Negrar",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella",
+        "Cabernet Sauvignon",
+        "Nebbiolo"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Classico",
+        "Recioto della Valpolicella",
+        "Alzero",
+        "Valpolicella Classico Superiore"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les hauteurs de Negrar, au cœur de la Valpolicella Classica, le domaine Giuseppe Quintarelli est considéré par beaucoup comme le plus grand producteur d'Amarone qui ait jamais existé. Surnommé « il Maestro del Veneto », Giuseppe Quintarelli, disparu en 2012 à 84 ans, a incarné toute sa vie une vision intransigeante du vin : tradition absolue, patience extrême, refus de toute concession au goût du moment. Le domaine, resté familial, perpétue ce style inimitable, reconnaissable jusque dans ses étiquettes manuscrites.\n\nLa production est volontairement minuscule et la sélection draconienne, à la vigne comme à la cave : les raisins (un assemblage d'environ 55 % de Corvina et Corvinone, 30 % de Rondinella et 15 % de cépages complémentaires comme le Cabernet Sauvignon, le Nebbiolo ou la Croatina) sont séchés de longs mois selon l'appassimento, puis élevés des années en grands foudres. L'Amarone della Valpolicella Classico, et plus encore sa Riserva, ne sont produits que dans les meilleurs millésimes ; ce sont des vins d'une profondeur, d'une complexité et d'une longévité hors normes, qui figurent régulièrement parmi les plus chers et les plus recherchés d'Italie. Le Recioto (sucré), le rare Alzero (à base de Cabernet Franc passerillé, seul vin du domaine élevé en barriques) et le Valpolicella Classico Superiore complètent une gamme entièrement vouée à l'excellence.\n\nRéférence absolue de l'appellation et étalon du style traditionnel, Quintarelli produit des Amarone capables de vieillir plusieurs décennies, lentement, vers des notes tertiaires de cuir, de tabac, d'épices et de fruits confits. C'est l'un des sommets du vin italien, et le repère contre lequel se mesure tout l'univers de la Valpolicella.\n\nLa vendange y est un travail d'orfèvre : les raisins sont triés en plusieurs passages successifs, puis séchés dans les greniers du domaine pendant l'hiver avant un pressurage tardif. Outre les grands rouges, la maison produit des cuvées plus « accessibles » mais déjà superbes, comme le Primofiore ou le Rosso Ca' del Merlo, ainsi qu'un blanc original assemblant plusieurs cépages. Goûter un Quintarelli est, pour beaucoup d'amateurs, une expérience à part : ces vins, devenus quasi introuvables et hors de prix, ont acquis un statut quasi mythique et ont durablement inspiré toute une génération de vignerons véronais, à commencer par Romano Dal Forno. Plus qu'un domaine, Quintarelli est une institution et la conscience de la Valpolicella.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "icone",
+        "tradition",
+        "appassimento"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "allamarone|cultwine"
+    },
+    {
+      "id": "it-veneto-prod-romano-dal-forno",
+      "nom": "Romano Dal Forno",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Illasi",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Monte Lodoletta",
+        "Valpolicella Superiore Monte Lodoletta"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Illasi, dans une vallée à l'écart de la Valpolicella Classica, Romano Dal Forno a bâti en une génération l'autre icône contemporaine de l'Amarone, souvent citée d'un même souffle que Quintarelli — dont la rencontre, dans sa jeunesse, fut décisive. Là où Quintarelli incarne la tradition, Dal Forno incarne la perfection moderne : recherche obsessionnelle de la concentration et de la précision, rendements infimes, tri rigoureux et maîtrise totale du séchage des raisins.\n\nLes vins, issus principalement du vignoble de Monte Lodoletta, sont d'une densité spectaculaire : robe presque opaque, bouquet profond de fruits noirs confits, de chocolat, de moka et de bois fumé, bouche d'une intensité et d'une structure impressionnantes, soutenue par une acidité qui préserve l'équilibre. L'Amarone della Valpolicella Monte Lodoletta et le Valpolicella Superiore du même nom comptent parmi les rouges les mieux notés de la décennie (régulièrement 95-98 points), et leur rareté en fait des bouteilles très convoitées. La concentration n'y exclut jamais la fraîcheur ni la longévité : ces vins se patinent sur des décennies.\n\nEn portant l'appassimento et l'élevage à un niveau de précision inédit, Dal Forno a redéfini le potentiel qualitatif de la Valpolicella et inspiré toute une génération de vignerons. Aux côtés de Quintarelli, il forme le duo souverain de l'Amarone — deux visions opposées et complémentaires d'un même sommet.\n\nAu vignoble, Dal Forno a tout repensé : densités de plantation très élevées, palissage soigné, rendements drastiquement limités, fruits irréprochables. En cave, la modernité des installations et la rigueur du séchage, sur des claies parfaitement ventilées, permettent d'obtenir une concentration sans déviation. Au-delà de l'Amarone et du Valpolicella Superiore, le domaine signe un rarissime passito sucré, le Vigna Sere. La production, infime, et les prix élevés réservent ces vins à une élite de collectionneurs, mais leur influence dépasse largement leur diffusion : Dal Forno a prouvé qu'avec une exigence absolue, la Valpolicella pouvait rivaliser avec les plus grands rouges du monde. C'est, avec Quintarelli, l'une des deux références qui ont redéfini les sommets de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "icone",
+        "moderne",
+        "appassimento"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "allamarone|vinous"
+    },
+    {
+      "id": "it-veneto-prod-maculan",
+      "nom": "Maculan",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Breganze",
+      "commune": "Breganze",
+      "pays": "Italie",
+      "cepages": [
+        "Vespaiola",
+        "Cabernet Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Torcolato",
+        "Fratta",
+        "Acininobili"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Breganze, au pied des Préalpes vicentines, Maculan est la maison qui a révélé le potentiel qualitatif de cette petite appellation. Fausto Maculan y a hissé les vins de Breganze, et tout particulièrement les liquoreux, au rang de références italiennes.\n\nLe Torcolato, élaboré à partir de Vespaiola passerillée, est son chef-d'œuvre : un vin doux d'or, riche et équilibré, emblème de la maison ; l'Acininobili, issu de raisins botrytisés, en pousse l'intensité plus loin encore. Côté rouge, le Fratta (assemblage bordelais de Cabernet et Merlot) témoigne d'une autre facette de l'ambition du domaine. Le style Maculan conjugue précision technique et générosité aromatique.\n\nMaître du Torcolato et figure de proue de Breganze, Maculan compte parmi les grands noms des vins doux d'Italie et révèle la diversité méconnue du vignoble vénitien.\n\nFausto Maculan a véritablement réinventé Breganze dans les années 1980, en hissant ses liquoreux et ses rouges à un niveau international. Le Torcolato, dont le nom évoque les grappes torsadées et suspendues pour le passerillage, est devenu un emblème des vins doux italiens ; l'Acininobili, plus rare, en pousse la concentration grâce à la pourriture noble. Servis sur des desserts ou des fromages bleus, ces nectars confirment Maculan comme l'une des grandes maisons de vins doux du pays.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "breganze",
+        "torcolato",
+        "liquoreux",
+        "vespaiola"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-prod-adami",
+      "nom": "Adami",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Vidor",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Vigneto Giardino Rive di Colbertaldo",
+        "Col Credas Rive di Farra di Soligo",
+        "Bosco di Gica"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vidor et Colbertaldo, dans le cœur de Conegliano-Valdobbiadene, la famille Adami est l'une des plus innovantes et respectées du Prosecco Superiore. Franco Adami y cultive une approche fine du terroir, sélectionnant des raisins issus d'une trentaine de secteurs de la dénomination.\n\nLa maison est réputée pour ses « Rive » (crus de coteau) et pour le Vigneto Giardino, l'un des grands sites historiques du Prosecco, dans la famille depuis 1933 et toujours embouteillé en Dry pour révéler son fruit. Le Col Credas (Extra Brut, Rive di Farra di Soligo) explore le versant le plus frais et tendu du style, tandis que le Bosco di Gica assure l'entrée de gamme. Le tout dans une recherche constante de finesse et de définition.\n\nRéférence du Prosecco Superiore de terroir, Adami signe des cuvées précises et expressives, parmi les plus fiables et les plus abouties de la dénomination.\n\nLe Vigneto Giardino, dans la famille depuis 1933, et le secteur escarpé des Torri di Credazzo donnent les cuvées les plus ambitieuses de la maison. La diversité des approvisionnements, sur une trentaine de secteurs, permet à Franco Adami de composer une gamme allant du frais et tendu Col Credas au fruité plus généreux du Giardino. Cette précision et cette recherche de terroir placent Adami parmi les références qualitatives du Prosecco Superiore.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "rive",
+        "glera"
+      ],
+      "a_verifier": "",
+      "source": "gamberorosso|falstaff"
+    },
+    {
+      "id": "it-veneto-prod-bisol",
+      "nom": "Bisol",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cartizze",
+        "Valdobbiadene Prosecco Superiore Crede",
+        "Rive di Campea"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Santo Stefano, sur les pentes vertigineuses de Valdobbiadene, Bisol est la maison de référence du Prosecco Superiore et l'incarnation de la viticulture héroïque de coteau. La famille Bisol y cultive la vigne depuis 1542 ; reprise par le groupe Lunelli (Ferrari), la maison a connu ces dernières années une profonde mutation qualitative, avec une restructuration de la cave et des crus permettant une séparation quasi totale des meilleures parcelles, sous la conduite viticole de Mattia Filippi et Umberto Marchiori.\n\nLe cœur de la gamme est le Cartizze, le « grand cru » du Prosecco : 107 hectares sur les collines les plus pentues de San Pietro di Barbozza, Santo Stefano et Saccol, dont Bisol possède des parcelles parmi les plus convoitées. Le cru Crede, sur des grès marins riches en argile, donne un Prosecco d'une tension et d'une définition remarquables ; les « Rive » comme Campea expriment la diversité fine du territoire. Loin de l'image de bulle facile, ces vins, élaborés en méthode Charmat longue avec un soin extrême, séduisent par leur pureté cristalline, leur salinité, leur élégance et une étonnante longévité.\n\nEn portant la micro-zonation et la maîtrise des fortes pentes à un niveau inédit, Bisol démontre que le Prosecco Superiore peut atteindre une complexité et une finesse insoupçonnées. Référence absolue de la dénomination, gardienne du Cartizze et de la viticulture de coteau classée au patrimoine de l'UNESCO, la maison incarne le sommet qualitatif de tout l'univers du Prosecco.\n\nLe Cartizze, souvent surnommé le « grand cru » du Prosecco, occupe un pentagone de 107 hectares sur les pentes les plus abruptes, où la vendange se fait entièrement à la main, parfois suspendu aux flancs des collines. Ces paysages, classés au patrimoine mondial de l'UNESCO depuis 2019, exigent une viticulture héroïque que Bisol maîtrise mieux que quiconque. La maison décline une gamme complète, du Cartizze aux « Rive » de coteau, en passant par des cuvées plus accessibles ; l'investissement du groupe Lunelli a permis de moderniser la cave et de séparer finement les meilleurs lots. Au-delà du plaisir immédiat de la bulle, les meilleurs Bisol surprennent par leur longévité et leur capacité à gagner en complexité, démentant l'idée reçue d'un Prosecco à boire jeune. Gardienne du Cartizze et de la viticulture de pente, la maison incarne l'aristocratie du Prosecco Superiore.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "cartizze",
+        "glera"
+      ],
+      "a_verifier": "",
+      "source": "doctorwine|cucineditalia"
+    },
+    {
+      "id": "it-veneto-prod-nino-franco",
+      "nom": "Nino Franco",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Valdobbiadene Prosecco Superiore Rive di San Floriano",
+        "Primo Franco",
+        "Rustico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Valdobbiadene, Nino Franco est considéré comme la référence qualitative du Prosecco. Maison centenaire (elle a fêté ses cent ans en 2019), dirigée par Primo Franco puis sa fille Silvia, elle a constamment misé sur la qualité, à rebours de l'image de bulle industrielle.\n\nPrimo Franco a été un pionnier, signant dès 1983 l'un des premiers Prosecco millésimés. Le fleuron de la maison est le Rive di San Floriano, issu d'un coteau escarpé, rejoint par le Primo Franco et le célèbre Rustico. Fait rare pour un Prosecco, ces vins révèlent une étonnante aptitude au vieillissement : la maison propose des verticales remontant aux années 1980. La maison produit aussi un vin tranquille, le Grave di Stecca.\n\nPar son exigence et la longévité surprenante de ses cuvées, Nino Franco a hissé le Prosecco au rang de vin fin et demeure la maison de référence de Valdobbiadene.\n\nOutre le Rive di San Floriano, fleuron issu d'un coteau escarpé, la maison soigne chaque cuvée comme un vin fin, du Rustico d'entrée de gamme aux millésimés. La capacité de ses Prosecco à vieillir plusieurs années, démontrée lors de verticales remontant aux années 1980, est unique dans la dénomination et illustre la philosophie de qualité de Primo et Silvia Franco. Nino Franco demeure la maison qui prouve, bouteille après bouteille, que le Prosecco peut être un grand vin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "glera",
+        "reference"
+      ],
+      "a_verifier": "",
+      "source": "winenews|wineenthusiast"
+    },
+    {
+      "id": "it-veneto-prod-ruggeri",
+      "nom": "Ruggeri",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Vecchie Viti",
+        "Giustino B.",
+        "Cartizze"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Santo Stefano, au cœur de Valdobbiadene, Ruggeri est l'une des maisons de pointe du Prosecco Superiore. Fondée en 1950, elle a largement contribué à faire connaître le Prosecco dans le monde, en alliant savoir-faire rural et dynamisme.\n\nSa cuvée la plus singulière est le Vecchie Viti, issu de vignes de Glera âgées de quatre-vingts à quatre-vingt-dix ans : de très faibles rendements et une grande concentration y révèlent toute la profondeur et l'aptitude à la garde dont le Prosecco est capable. Le Giustino B. (Extra Dry) et le Cartizze complètent une gamme de haut niveau, élaborée à partir d'un large réseau de vignerons sur les meilleurs coteaux.\n\nEn montrant ce que de vieilles vignes peuvent apporter en complexité et en longévité, Ruggeri compte parmi les références qualitatives du Prosecco Superiore de Valdobbiadene.\n\nLe réseau de vignerons partenaires, sur les meilleurs coteaux de Valdobbiadene, et un travail technique soigné assurent une gamme d'une grande régularité, du Giustino B. au Cartizze. Mais c'est le Vecchie Viti, issu de vignes presque centenaires, qui résume l'ambition de la maison : montrer la profondeur et la longévité dont la Glera est capable. Ruggeri reste l'une des maisons phares de la dénomination.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "vieilles-vignes",
+        "glera"
+      ],
+      "a_verifier": "",
+      "source": "winenews|wineenthusiast"
+    },
+    {
+      "id": "it-veneto-prod-la-biancara",
+      "nom": "La Biancara",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Gambellara",
+      "commune": "Gambellara",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sassaia",
+        "Pico",
+        "Recioto di Gambellara"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gambellara, sur les collines volcaniques voisines de Soave, La Biancara est le domaine d'Angiolino Maule, l'une des grandes figures du vin nature en Italie et fondateur de l'association VinNatur. Le domaine défend une viticulture sans intrants et des vinifications sans artifice.\n\nSur les sols basaltiques de Gambellara, la Garganega y donne des blancs vivants et salins, dont les cuvées Sassaia et Pico (issue de vieilles vignes), ainsi qu'un Recioto di Gambellara (liquoreux passerillé). Ces vins, sans soufre ajouté ou presque, expriment une minéralité volcanique et une énergie singulières, parfois déroutantes mais profondément originales. La démarche, pionnière, a inspiré tout un mouvement.\n\nFigure majeure du vin nature, La Biancara signe des Garganega volcaniques vibrantes et sans compromis, références d'une viticulture authentique et engagée.\n\nAngiolino Maule, ancien pizzaïolo devenu vigneron par conviction, est l'une des voix les plus écoutées du vin nature en Europe, et la fondation de VinNatur a structuré tout un mouvement. Sur les basaltes de Gambellara, ses Garganega vibrantes et salines, comme la Sassaia ou le Pico, divisent parfois mais ne laissent jamais indifférent. Le Recioto di Gambellara prolonge cette identité volcanique dans le registre doux. C'est une référence du vin authentique et sans compromis.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "gambellara",
+        "garganega",
+        "nature",
+        "volcanique"
+      ],
+      "a_verifier": "certification à confirmer",
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-prod-ottella",
+      "nom": "Ottella",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Lugana",
+      "commune": "Peschiera del Garda",
+      "pays": "Italie",
+      "cepages": [
+        "Turbiana"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lugana DOC",
+        "Lugana Le Creete",
+        "Lugana Molceo Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Peschiera del Garda, sur la rive sud du lac de Garde, Ottella est l'un des grands noms de la Lugana. La famille Montresor, présente ici depuis la fin du XIXe siècle, fut longtemps le seul producteur de Lugana du côté véronais, et a joué un rôle clé dans la naissance de l'appellation.\n\nSur les argiles calcaires d'origine glaciaire de la Lugana, le domaine décline le cépage Turbiana (Trebbiano di Lugana) en plusieurs expressions : du frais et salin Lugana DOC au cru Le Creete, issu de vieilles vignes sur argiles blanches, jusqu'au Molceo Riserva élevé sous bois et à des cuvées en amphore. Ce sont des blancs minéraux, élégants et étonnamment aptes au vieillissement, qui révèlent la finesse insoupçonnée de la Turbiana. La maison est aussi connue pour son dialogue entre vin et art contemporain.\n\nAmbassadeur de la Lugana dans le monde, Ottella signe des blancs précis et salins parmi les références de cette appellation montante du sud du Garda.\n\nLes argiles blanches d'origine glaciaire de la Lugana, riches en sels minéraux, confèrent à la Turbiana sa salinité et sa tension caractéristiques. Le cru Le Creete, issu des plus vieilles vignes, et le Molceo Riserva démontrent que ce blanc, longtemps tenu pour un simple vin de soif estival, peut gagner en complexité et vieillir plusieurs années. Servis sur des poissons de lac ou des fruits de mer, les Ottella comptent parmi les plus belles expressions d'une appellation en pleine ascension.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lugana",
+        "turbiana",
+        "garda",
+        "blanc"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|ottella"
+    },
+    {
+      "id": "it-veneto-prod-serafini-vidotto",
+      "nom": "Serafini & Vidotto",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Montello",
+      "commune": "Nervesa della Battaglia",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rosso dell'Abazia",
+        "Il Bosco",
+        "Pinot Nero"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les collines du Montello, à Nervesa della Battaglia, Serafini & Vidotto est l'un des domaines les plus réputés du Veneto pour les assemblages bordelais. Francesco Serafini et Antonello Vidotto y signent des rouges d'une grande élégance.\n\nLe Rosso dell'Abazia, assemblage de Cabernet Sauvignon, Cabernet Franc et Merlot, en est le fleuron : un rouge raffiné, profond et de garde, régulièrement cité parmi les meilleurs du Veneto. Le domaine excelle aussi avec le Pinot Nero, cépage difficile sous ces latitudes, et propose une gamme cohérente et soignée. Le style, précis et tendu, privilégie la finesse à la démonstration.\n\nRéférence des rouges bordelais et bourguignons du Veneto, Serafini & Vidotto démontre que le Montello peut produire des vins d'une élégance et d'une profondeur remarquables.\n\nSur les graviers et argiles du Montello, le domaine a démontré dès les années 1990 que la Vénétie pouvait produire de grands rouges d'inspiration bordelaise. Le Rosso dell'Abazia, assemblage racé de Cabernet et Merlot, vieillit superbement, tandis que le travail réussi sur le Pinot Nero, cépage exigeant, témoigne d'une rare maîtrise. Le style, tout en finesse et en tension, place Serafini & Vidotto parmi les meilleurs producteurs de rouges du Veneto.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "montello",
+        "bordelais",
+        "rouge"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-prod-anselmi",
+      "nom": "Anselmi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Monteforte d'Alpone",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Capitel Foscarino",
+        "Capitel Croce",
+        "San Vincenzo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monteforte d'Alpone, Roberto Anselmi a marqué l'histoire récente du Soave en prenant une décision retentissante : quitter l'appellation pour l'IGT Veneto, par exigence qualitative et refus des rendements élevés autorisés. Ses vins, toujours issus de Garganega du terroir de Soave, n'en portent plus le nom mais en sont l'une des plus belles expressions.\n\nLes cuvées Capitel Foscarino et Capitel Croce, issues des meilleurs coteaux, déploient une Garganega ambitieuse, riche et structurée, tandis que le San Vincenzo offre un blanc plus immédiat. Le style Anselmi vise la concentration et la profondeur, dans des vins soignés et reconnus. La démarche, longtemps polémique, a contribué à relancer le débat qualitatif dans l'appellation.\n\nPionnier exigeant, Anselmi reste l'un des grands noms de la Garganega de Soave, même hors appellation, et une référence de la quête de qualité dans la région.\n\nLe geste de Roberto Anselmi — quitter une appellation prestigieuse par refus du nivellement par le bas — a marqué durablement le débat sur la qualité en Vénétie. Ses Garganega, élevées avec soin et parfois sous bois, visent la profondeur et la garde, et n'ont rien perdu de leur ancrage dans le terroir de Soave. Capitel Foscarino et Capitel Croce restent des références de ce que la Garganega peut donner de plus ambitieux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "igt",
+        "qualite"
+      ],
+      "a_verifier": "",
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-prod-gini",
+      "nom": "Gini",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Monteforte d'Alpone",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Contrada Salvarenza Vecchie Vigne",
+        "Soave Classico La Frosca"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monteforte d'Alpone, Gini est un domaine historique du Soave Classico, mené par les frères Sandro et Claudio Gini, et l'un des plus fervents défenseurs du Soave comme grand vin blanc. En culture biologique, le domaine mise sur la pureté et l'expression du terroir.\n\nSon joyau est le cru Contrada Salvarenza Vecchie Vigne, issu de vignes de Garganega en pergola âgées de quatre-vingts ans et plus : un Soave d'une texture, d'une profondeur et d'une longévité remarquables, qui peut vieillir des décennies. La cuvée La Frosca et le Soave Classico de domaine confirment une signature d'acidité marquée, de minéralité et de tenue. Chaque vin parle du terroir volcanique de Monteforte.\n\nParmi les tout meilleurs producteurs de Soave, Gini signe des blancs d'une grande pureté et d'une aptitude au vieillissement exceptionnelle, références incontournables de l'appellation.\n\nLes vieilles vignes en pergola de Salvarenza, parmi les plus anciennes du Soave, sont un trésor que les frères Gini préservent jalousement. La conversion biologique et le refus des hauts rendements donnent des Garganega d'une densité et d'une texture rares, capables de vieillir sur une à deux décennies. Servis sur des poissons ou des plats crémés, ces Soave démontrent qu'un grand blanc peut naître de la Garganega de Monteforte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "vieilles-vignes",
+        "cru"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winesearcher"
+    },
+    {
+      "id": "it-veneto-prod-inama",
+      "nom": "Inama",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "San Bonifacio",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Vigneti di Foscarino",
+        "Soave Classico Vigneto du Lot",
+        "I Palchi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Bonifacio, aux portes du Soave, Inama est l'une des grandes références du Soave volcanique. Stefano Inama y a porté la Garganega à un haut niveau de finesse et de minéralité, sur les sols basaltiques du mont Foscarino.\n\nLes crus parcellaires en sont la signature : Vigneti di Foscarino et Vigneto du Lot, jusqu'à la cuvée I Palchi, expriment une Garganega ample, complexe et profondément minérale, capable de vieillir. Le domaine produit aussi des rouges dans les Colli Berici, où il a notamment réhabilité le Carmenère. Le style Inama allie richesse, précision et tension saline.\n\nRéférence du Soave de terroir, Inama démontre tout le potentiel de la Garganega sur sols volcaniques, avec des crus parmi les plus aboutis et les plus recherchés de l'appellation.\n\nStefano Inama, puis la nouvelle génération, ont fait du domaine un laboratoire d'expression de la Garganega sur sols volcaniques, avec des élevages soignés et parfois sous bois pour les cuvées les plus ambitieuses. Au-delà du Soave, l'aventure des Colli Berici, où le Carmenère a été réhabilité, témoigne de l'esprit pionnier de la maison. Ses crus de Foscarino comptent parmi les Soave les plus profonds et les plus aptes au vieillissement de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "volcanique",
+        "cru"
+      ],
+      "a_verifier": "",
+      "source": "italysfinestwines|decanter"
+    },
+    {
+      "id": "it-veneto-prod-pra",
+      "nom": "Prà",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Monteforte d'Alpone",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Monte Grande",
+        "Soave Classico Staforte",
+        "Soave Classico Otto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monteforte d'Alpone, Graziano Prà s'est imposé comme l'un des grands noms du Soave Classico, réputé pour des vins élégants, structurés et étonnamment aptes au vieillissement. Le domaine travaille la Garganega avec rigueur sur les collines volcaniques.\n\nLe cru Monte Grande en est le fleuron, rejoint par le Staforte (élevé sur lies) et le Soave Classico Otto : des Garganega précises, salines et profondes, qui gagnent en complexité avec quelques années de cave. Le style Prà conjugue fraîcheur, texture et minéralité, dans des vins d'une grande régularité. Le domaine produit aussi de remarquables rouges en Valpolicella.\n\nRéférence du Soave moderne et exigeant, Prà signe des blancs élégants et de garde qui comptent parmi les plus fiables et les plus appréciés de l'appellation.\n\nGraziano Prà a été l'un des artisans de la reconnaissance du Soave de cru, avec un travail précis sur les coteaux volcaniques de Monteforte. Ses Garganega, élevées sur lies pour le Staforte, gagnent en complexité avec le temps et comptent parmi les plus régulières de l'appellation. Le domaine, qui produit aussi de beaux rouges en Valpolicella, s'est imposé comme une valeur sûre du Soave moderne et exigeant. Servis sur des poissons ou des risottos, ses crus de Monteforte comptent parmi les Soave les plus fiables et les plus appréciés de l'appellation, et confirment d'année en année la régularité du domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "cru"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winesearcher"
+    },
+    {
+      "id": "it-veneto-prod-suavia",
+      "nom": "Suavia",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Soave",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Monte Carbonare",
+        "Soave Classico Le Rive"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Fittà, sur les hauteurs volcaniques au nord de Soave, Suavia est un domaine très respecté mené par les sœurs Tessari (Meri, Valentina et Alessandra). Le nom même de Suavia est un mot ancien pour Soave, signe de l'attachement de la famille à son terroir.\n\nSa cuvée emblématique, le Monte Carbonare, tire son nom des sols noirs basaltiques (« carbonare ») qui lui donnent une salinité et une minéralité marquées : un Soave précis, tendu et expressif. La cuvée Le Rive, plus ample, et le Soave Classico de domaine confirment une signature d'élégance et de pureté. Le travail soigné au vignoble et une vinification précise donnent des blancs d'une grande clarté.\n\nParmi les producteurs les plus réputés du Soave, Suavia signe des Garganega volcaniques d'une précision et d'une finesse remarquables, références de l'expression minérale de l'appellation.\n\nLes sols noirs basaltiques de Fittà, au nord de l'appellation, donnent au Monte Carbonare sa salinité et sa tension singulières. Les sœurs Tessari, qui ont repris et hissé le domaine au plus haut niveau, signent des Garganega d'une grande clarté, élégantes et persistantes, qui figurent régulièrement parmi les meilleurs Soave de leur millésime. C'est l'une des plus belles expressions de la minéralité volcanique de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "volcanique",
+        "cru"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "italysfinestwines|vinepair"
+    },
+    {
+      "id": "it-veneto-prod-allegrini",
+      "nom": "Allegrini",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Fumane",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Classico",
+        "La Poja",
+        "La Grola",
+        "Palazzo della Torre"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Fumane, au cœur de la Valpolicella Classica, Allegrini est l'un des domaines phares de l'appellation et l'un de ses ambassadeurs les plus réputés dans le monde. La famille, installée ici depuis des siècles, a su conjuguer tradition de l'appassimento et vision moderne, avec une recherche constante d'élégance et de précision.\n\nL'Amarone della Valpolicella Classico en est le fleuron, mais Allegrini est surtout célèbre pour ses crus parcellaires : La Poja, issu du sommet de la colline de La Grola et vinifié en Corvina pure, est l'une des plus belles expressions mono-cépage de la région ; La Grola et le Palazzo della Torre (de style ripasso) complètent une gamme d'une grande cohérence. Membre des Famiglie Storiche, le domaine privilégie des vins structurés mais équilibrés, où la puissance de l'appassimento s'allie à la fraîcheur. Allegrini a aussi essaimé en Toscane, signe de son envergure.\n\nRéférence incontournable de la Valpolicella, Allegrini produit des Amarone et des crus de garde parmi les plus fiables et les plus aboutis de l'appellation.\n\nLe travail de l'appassimento y est mené avec une grande maîtrise, dans des fruitières modernes qui permettent un séchage sain et régulier des raisins. Au-delà de la Valpolicella, la famille Allegrini a porté son nom en Toscane (Bolgheri, Montalcino), confirmant son envergure de groupe de référence. Servis sur des viandes braisées ou des fromages affinés, l'Amarone et La Poja figurent parmi les valeurs les plus sûres de l'appellation, à la fois puissantes et raffinées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "valpolicella",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "garrafeira|decanter"
+    },
+    {
+      "id": "it-veneto-prod-bertani",
+      "nom": "Bertani",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Grezzana",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Classico",
+        "Amarone Valpantena",
+        "Secco-Bertani"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Fondée en 1857, Bertani est l'une des maisons historiques de la Valpolicella et la gardienne du style classique de l'Amarone. Installée dans la Valpantena (Grezzana) et sur la Tenuta Novare, elle a forgé sa réputation sur un Amarone della Valpolicella Classico d'une longévité légendaire.\n\nLe grand vin de la maison, mis en marché avec de nombreuses années de retard — souvent une dizaine d'années après le millésime —, est conçu pour vieillir trente ans et plus. Élevé longuement en grands foudres, il déploie un profil traditionnel d'une grande finesse : fruits mûrs, épices, cuir et notes balsamiques, structure ample et fraîcheur préservée, à mille lieues des Amarone surmûris et boisés. Le Secco-Bertani, assemblage véronais historique, et la gamme de la Valpantena complètent l'offre.\n\nSymbole de constance et de tradition, Bertani demeure la référence du style classique de l'Amarone, et l'une des très rares maisons à proposer régulièrement de vieux millésimes parfaitement à point.\n\nLa maison dispose d'un patrimoine de vieux millésimes exceptionnel, qu'elle commercialise au compte-gouttes : déguster un Bertani de vingt ou trente ans d'âge est l'une des plus belles façons de comprendre le potentiel de garde de l'Amarone traditionnel. Cette politique de sorties tardives, rare dans la région, et la fidélité à un style frais et digeste font de Bertani une maison à part, gardienne d'une certaine idée de l'Amarone classique, loin des modes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "historique",
+        "tradition",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "allamarone|decanter"
+    },
+    {
+      "id": "it-veneto-prod-ca-la-bionda",
+      "nom": "Ca' La Bionda",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Marano di Valpolicella",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Ravazzol",
+        "Valpolicella Classico Superiore"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marano di Valpolicella, Ca' La Bionda est l'un des plus beaux représentants du courant des traditionalistes modernes de l'appellation. Le domaine, en culture biologique, défend une vision fidèle au terroir et à la fraîcheur, loin des excès de concentration et de bois.\n\nSes Amarone, dont le cru Ravazzol, séduisent par leur digestibilité et leur élégance : des vins droits, parfumés, où la puissance de l'appassimento reste au service de l'équilibre et de la buvabilité. Le Valpolicella Classico Superiore illustre la même philosophie, avec un fruit éclatant et une trame fine. Le travail à la vigne, respectueux et précis, y est central.\n\nFigure du renouveau qualitatif de la Valpolicella, Ca' La Bionda produit des Amarone et des Valpolicella d'une fraîcheur exemplaire, parmi les plus convaincants de la nouvelle génération.\n\nLe secteur de Marano, plus frais et plus élevé, se prête particulièrement à ce style de fraîcheur. Le domaine, l'un des chefs de file de la nouvelle vague de la Valpolicella, a contribué à réorienter l'appellation vers plus de finesse et de buvabilité, à rebours des Amarone surconcentrés des années 1990-2000. Ses vins, servis sur une cuisine de caractère, séduisent par leur droiture et leur authenticité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "artisan",
+        "bio",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-prod-corte-santalda",
+      "nom": "Corte Sant'Alda",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Mezzane di Sotto",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Mithas",
+        "Valpolicella Superiore Ca' Fiui"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzane di Sotto, à l'est de la Valpolicella, Corte Sant'Alda est le domaine de Marinella Camerani, l'une des figures de la viticulture en biodynamie de la région. L'approche, tout en finesse, vise des vins lumineux et frais, en rupture avec les Amarone les plus lourds.\n\nL'Amarone Mithas et le Valpolicella Superiore Ca' Fiui en sont les expressions phares : des vins élégants, parfumés et digestes, où le fruit et la fraîcheur priment sur la puissance brute. Le travail biodynamique au vignoble et une vinification soignée donnent des cuvées d'une grande pureté, fidèles au caractère plus frais de la vallée de Mezzane.\n\nRéférence de la Valpolicella biodynamique, Corte Sant'Alda incarne un Amarone de finesse et de lumière, et fait partie des domaines les plus attachants de l'appellation.\n\nLa vallée de Mezzane, plus fraîche et ventée, favorise des maturités équilibrées et préserve l'acidité. La conversion biodynamique, menée de longue date par Marinella Camerani, se traduit par des vins vivants et précis, qui ont contribué à montrer qu'un Amarone pouvait être lumineux plutôt que pesant. C'est l'une des adresses de référence pour qui cherche un Amarone de finesse et d'énergie. Au-delà de l'Amarone et du Valpolicella, le domaine décline une gamme cohérente, toujours guidée par la même quête de fraîcheur et de pureté, qui en fait l'une des adresses les plus attachantes de la Valpolicella d'altitude.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "biodynamie",
+        "artisan"
+      ],
+      "a_verifier": "certification à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-prod-marion",
+      "nom": "Marion",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "San Martino Buon Albergo",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella",
+        "Valpolicella Superiore"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marcellise, dans la commune de San Martino Buon Albergo, à l'est de Vérone, Marion est un domaine réputé pour des rouges puissants et concentrés. La maison s'est forgé une solide réputation sur la densité et la profondeur de ses vins.\n\nL'Amarone della Valpolicella et le Valpolicella Superiore en sont les cuvées phares : des vins de grande structure, riches et intenses, à la matière imposante et de longue garde. Le domaine cultive aussi des cépages plus inhabituels pour la région, dans une démarche personnelle et exigeante. Le style, généreux et ambitieux, vise la plénitude.\n\nAvec ses rouges denses et structurés, Marion s'est imposé comme l'une des références des amateurs d'Amarone de caractère et de garde dans le vignoble véronais.\n\nLe domaine, situé sur les collines à l'est de Vérone, cultive aussi des cépages plus rares dans une démarche personnelle et exigeante. Ses Amarone et Valpolicella, denses et profonds, à la matière imposante, séduisent les amateurs de rouges puissants et de longue garde, et ont forgé à Marion une réputation solide parmi les domaines de caractère du Véronais. Le domaine, encore relativement confidentiel, est devenu une référence pour les amateurs de rouges véronais riches et profonds, capables de plusieurs années de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "puissance",
+        "artisan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "garrafeira"
+    },
+    {
+      "id": "it-veneto-prod-masi",
+      "nom": "Masi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Sant'Ambrogio di Valpolicella",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Costasera",
+        "Amarone Mazzano",
+        "Amarone Campolongo di Torbe",
+        "Campofiorin"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gargagnago (Sant'Ambrogio di Valpolicella), Masi est l'une des grandes maisons de la Valpolicella et l'un des plus puissants ambassadeurs de l'Amarone dans le monde. La famille Boscaini y perpétue un savoir-faire séculaire tout en étant à l'origine d'innovations majeures.\n\nC'est Masi qui, en 1964, a recréé la technique du « double passage » sur les marcs avec le Campofiorin, ancêtre du style ripasso aujourd'hui répandu. Au sommet de la gamme, l'Amarone Costasera et surtout les crus parcellaires Mazzano et Campolongo di Torbe figurent parmi les références de l'appellation. La maison gère aussi le domaine Serego Alighieri, propriété des descendants de Dante, et fait partie des Famiglie Storiche. Le style Masi conjugue puissance de l'appassimento et soin de l'élevage, dans des vins amples et expressifs.\n\nEntre tradition et innovation, Masi a largement contribué à faire connaître l'Amarone et le ripasso à l'international, et reste une valeur sûre parmi les grands noms de la Valpolicella.\n\nLe groupe, qui s'est aussi développé hors de Vénétie, conjugue recherche œnologique (notamment sur les techniques de séchage et de double passage) et respect des cépages autochtones. Les crus Mazzano et Campolongo di Torbe, issus de coteaux d'altitude, comptent parmi les Amarone les plus profonds et les plus aptes à la garde de la maison. Servi sur des plats riches ou de la grande cuisine, le style Masi séduit par sa générosité maîtrisée et sa constance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "ripasso",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "allamarone|winescurated"
+    },
+    {
+      "id": "it-veneto-prod-monte-dei-ragni",
+      "nom": "Monte dei Ragni",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Fumane",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella",
+        "Valpolicella Superiore"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les hauteurs de Fumane, Monte dei Ragni est un domaine artisanal culte, mené par Zeno Zignoli selon une viticulture traditionnelle et naturelle, en biologique. La production, minuscule, et l'approche radicalement non interventionniste en font un objet de désir pour les amateurs.\n\nL'Amarone et le Valpolicella Superiore y sont élaborés à l'ancienne, avec un long séchage et un élevage patient, dans un style profond, authentique et sans artifice. Ces vins rares, recherchés par les connaisseurs, expriment une vision presque archaïque et très personnelle de la Valpolicella, à rebours des standards de l'appellation.\n\nArtisan discret mais très réputé, Monte dei Ragni signe des Amarone artisanaux et confidentiels parmi les plus singuliers et les plus convoités de la région.\n\nZeno Zignoli travaille à la main, sans recours aux artifices œnologiques modernes, dans une logique presque paysanne qui séduit les amateurs en quête d'authenticité. Les rendements minuscules et le long élevage donnent des Amarone d'une profondeur et d'une personnalité hors du commun, à la diffusion confidentielle. C'est l'un des secrets les mieux gardés — et les plus convoités — de la Valpolicella. Rares et confidentiels, ces vins se transmettent presque de bouche à oreille entre passionnés, et incarnent une vision presque hors du temps de la Valpolicella, à l'opposé des standards commerciaux de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "artisan",
+        "culte",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-prod-roccolo-grassi",
+      "nom": "Roccolo Grassi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Mezzane di Sotto",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella",
+        "Valpolicella Superiore"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzane di Sotto, Roccolo Grassi est un domaine familial de pointe, réputé pour des vins concentrés mais ciselés. Dans cette vallée plus fraîche à l'est de la Valpolicella, la famille Sartori signe des cuvées d'une grande précision.\n\nL'Amarone della Valpolicella et le Valpolicella Superiore en sont les fleurons : des vins denses et profonds, mais d'une définition et d'une fraîcheur remarquables, qui leur valent des notes élevées et une solide réputation. Le travail méticuleux à la vigne et le souci de l'équilibre évitent l'écueil de la lourdeur, pour des Amarone à la fois puissants et élégants.\n\nValeur montante et confirmée de la Valpolicella, Roccolo Grassi compte parmi les artisans les plus rigoureux de l'appellation, avec des vins qui conjuguent concentration et finesse.\n\nLa vallée de Mezzane, plus fraîche, et le souci permanent de l'équilibre permettent à la famille Sartori de produire des vins denses sans lourdeur. L'Amarone et le Valpolicella Superiore, régulièrement très bien notés, conjuguent concentration, fraîcheur et longueur, et placent le domaine parmi les artisans les plus prometteurs et les plus rigoureux de la nouvelle génération de la Valpolicella. Le domaine, encore jeune à l'échelle de l'appellation, s'est rapidement hissé parmi les producteurs les plus rigoureux de la Valpolicella orientale, avec des cuvées qui conjuguent puissance et précision.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "artisan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "garrafeira"
+    },
+    {
+      "id": "it-veneto-prod-speri",
+      "nom": "Speri",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "San Pietro in Cariano",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Vigneto Monte Sant'Urbano",
+        "Valpolicella Classico Superiore"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pedemonte, la famille Speri cultive la vigne depuis sept générations et compte parmi les piliers historiques de la Valpolicella Classica, membre fondateur des Famiglie Storiche. Le domaine, passé en culture biologique, est resté fidèle à un style classique et soigné.\n\nSa signature est l'Amarone Vigneto Monte Sant'Urbano, l'un des grands crus mono-parcellaires de l'appellation, issu d'un coteau idéalement exposé : un Amarone profond, structuré et élégant, élevé en grands foudres. Le Valpolicella Classico Superiore (souvent en ripasso) et le Recioto complètent une gamme d'une belle cohérence, toute tournée vers l'expression fidèle du terroir de la Valpolicella historique.\n\nRéférence respectée de l'appellation, Speri illustre la voie d'un classicisme exigeant et durable, où le cru Monte Sant'Urbano s'impose comme l'un des plus beaux Amarone de cru.\n\nLa conversion au biologique et le travail soigné à la vigne confirment l'engagement qualitatif de la famille, qui figure parmi les sept générations de vignerons les plus respectées de la Valpolicella. Le cru Monte Sant'Urbano, sur un coteau idéalement exposé, donne un Amarone profond et structuré, qui se patine magnifiquement après dix à quinze ans de cave — l'un des plus beaux exemples de mono-cru de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "famiglie-storiche",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winescurated|decanter"
+    },
+    {
+      "id": "it-veneto-prod-tedeschi",
+      "nom": "Tedeschi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Pedemonte",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Capitel Monte Olmi",
+        "Amarone La Fabriseria",
+        "Valpolicella"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pedemonte, en Valpolicella Classica, Tedeschi est l'une des maisons de référence de l'appellation et membre des Famiglie Storiche. Le domaine s'est distingué par un travail parcellaire poussé et une approche précise du terroir.\n\nSa signature est l'Amarone Capitel Monte Olmi, cru historique issu d'une parcelle d'exception, rejoint au sommet par l'ambitieuse cuvée La Fabriseria. Ces vins, élevés en grands foudres, allient la puissance de l'appassimento à une recherche de définition et de fraîcheur. Le Valpolicella et le Ripasso complètent une gamme tournée vers l'expression fidèle des grands lieux-dits de la Valpolicella.\n\nPar son attachement aux crus et son travail de cartographie du terroir, Tedeschi compte parmi les producteurs les plus sérieux de l'appellation, avec un Capitel Monte Olmi qui figure parmi les beaux Amarone de cru.\n\nLe domaine a longtemps été pionnier dans l'étude des sols et des expositions, cartographiant ses parcelles pour en tirer des cuvées de cru. Le Capitel Monte Olmi et La Fabriseria, issus des meilleurs secteurs, allient la puissance de l'appassimento à une recherche d'équilibre et de fraîcheur. Cet attachement au terroir et à la précision place Tedeschi parmi les producteurs les plus rigoureux et les plus respectés de la Valpolicella Classica.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "famiglie-storiche",
+        "cru"
+      ],
+      "a_verifier": "",
+      "source": "winescurated"
+    },
+    {
+      "id": "it-veneto-prod-tommasi",
+      "nom": "Tommasi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Pedemonte",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Classico",
+        "Amarone Riserva Ca' Florian"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Grande famille historique de Pedemonte, au cœur de la Valpolicella Classica, Tommasi est l'une des maisons emblématiques de l'appellation et membre des Famiglie Storiche. Sur plusieurs générations, elle a bâti un patrimoine de vignobles de premier plan.\n\nL'Amarone della Valpolicella Classico, élevé en grands foudres de chêne de Slavonie, en est le fleuron, couronné par la Riserva Ca' Florian, issue des meilleures parcelles et des plus belles années : un Amarone ample, profond et de longue garde, dans un registre classique et généreux. La maison décline aussi Ripasso et Valpolicella, et s'est développée en Italie au-delà de la seule Valpolicella.\n\nValeur sûre de l'appellation, Tommasi conjugue ampleur, régularité et fidélité au style traditionnel de l'Amarone, porté par la Riserva Ca' Florian parmi ses plus belles expressions.\n\nLe domaine, qui s'est étendu dans plusieurs régions d'Italie, conserve son cœur en Valpolicella Classica, où il possède des parcelles de premier ordre. La Riserva Ca' Florian, élevée de longues années, n'est produite que dans les grands millésimes et compte parmi les Amarone de garde les plus réputés de la maison. Servi sur des viandes en sauce ou du gibier, l'Amarone Tommasi illustre un classicisme généreux et fiable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "garrafeira|allamarone"
+    },
+    {
+      "id": "it-veneto-prod-zenato",
+      "nom": "Zenato",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Peschiera del Garda",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Sergio Zenato Riserva",
+        "Amarone della Valpolicella Classico",
+        "Lugana"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Installée à Peschiera del Garda, à cheval entre le lac de Garde et la Valpolicella, Zenato est une maison réputée dans deux mondes : la Lugana, dont elle est l'un des grands noms, et l'Amarone. Le style maison conjugue précision et équilibre, dans une approche polie et accessible.\n\nAu sommet, l'Amarone Sergio Zenato Riserva, issu des vignes les plus anciennes et des meilleurs millésimes, en est la cuvée emblématique : un Amarone structuré mais soyeux, aux tanins arrondis, qui allie concentration et clarté. L'Amarone Classique, plus immédiat, et la gamme de Lugana (Turbiana) complètent une offre large et régulière, qui a fait la réputation internationale de la maison.\n\nEntre Garda et Valpolicella, Zenato offre des Amarone élégants et fiables et d'excellents Lugana, valeur sûre du vignoble véronais.\n\nDu côté de la Lugana, Zenato est l'un des grands noms historiques, avec des cuvées issues de ses plus vieilles vignes qui comptent parmi les références de l'appellation. Cette double excellence, sur le Garda blanc et sur l'Amarone rouge, fait de la maison un acteur incontournable du vignoble véronais, apprécié pour la régularité et l'accessibilité de son style poli et équilibré. Servis sur des viandes en sauce ou de la grande cuisine, ses Amarone allient générosité et clarté, et confirment la place de Zenato parmi les maisons les plus régulières et les plus appréciées du vignoble véronais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "garda",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "allamarone|garrafeira"
+    },
+    {
+      "id": "it-veneto-prod-corte-gardoni",
+      "nom": "Corte Gardoni",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Bardolino",
+      "commune": "Valeggio sul Mincio",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge",
+        "rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Bardolino",
+        "Bardolino Chiaretto",
+        "Custoza"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Valeggio sul Mincio, au sud du lac de Garde, Corte Gardoni est un domaine familial soigné, l'un des bons artisans du Bardolino. La maison travaille les cépages véronais avec netteté.\n\nSes Bardolino et Chiaretto (rosé) séduisent par leur fruit éclatant et leur fraîcheur, dans un style net et gourmand ; le domaine décline aussi le Custoza (blanc). Le travail attentif au vignoble donne des vins équilibrés et de bon rapport qualité-prix.\n\nValeur sûre du Bardolino, Corte Gardoni offre des rouges et des Chiaretto frais et bien faits, représentatifs du meilleur de l'appellation.\n\nLe travail attentif au vignoble, au sud du Garda, donne des Bardolino et des Chiaretto fruités et nets, d'un bon rapport qualité-prix, représentatifs du meilleur de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bardolino",
+        "chiaretto",
+        "garda"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-prod-guerrieri-rizzardi",
+      "nom": "Guerrieri Rizzardi",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Bardolino",
+      "commune": "Bardolino",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella",
+        "Garganega"
+      ],
+      "couleurs": [
+        "rouge",
+        "rosé",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bardolino",
+        "Bardolino Chiaretto",
+        "Amarone",
+        "Soave"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Maison historique du Véronais, Guerrieri Rizzardi possède des vignobles dans plusieurs appellations du lac de Garde et de la Valpolicella. En culture biologique, elle décline une large gamme de vins typiques de la région.\n\nDu Bardolino et de son Chiaretto au Soave, en passant par l'Amarone, le domaine offre un panorama complet du vignoble véronais, avec une régularité de bon aloi. Son ancrage historique et la diversité de ses terroirs en font une référence du Bardolino.\n\nActeur historique et polyvalent du Véronais, Guerrieri Rizzardi signe des vins typiques et fiables, et compte parmi les références de Bardolino.\n\nLa conduite biologique et la diversité des terroirs, du Garda à la Valpolicella, donnent un panorama complet et fiable des vins véronais, qui fait du domaine une référence historique de Bardolino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bardolino",
+        "garda",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "allamarone"
+    },
+    {
+      "id": "it-veneto-prod-biancavigna",
+      "nom": "BiancaVigna",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Conegliano",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Conegliano Valdobbiadene Rive di Ogliano Extra Brut",
+        "Soligo Brut"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur la colline d'Ogliano, près de Conegliano, BiancaVigna est un domaine de Prosecco Superiore conduit en biologique sur une trentaine d'hectares. La famille y soigne particulièrement la viticulture.\n\nSes cuvées, dont le Conegliano Valdobbiadene Rive di Ogliano (Extra Brut) et le Soligo Brut, offrent un Prosecco précis, frais et salin, qui exprime les meilleurs coteaux du secteur. La démarche bio et le travail parcellaire placent le domaine parmi les producteurs sérieux de la dénomination.\n\nProducteur fiable et soigné, BiancaVigna signe des Prosecco Superiore frais et définis, représentatifs du versant qualitatif de Conegliano.\n\nLa conduite biologique sur la colline d'Ogliano et le travail parcellaire donnent des Prosecco Superiore frais et définis, représentatifs du versant qualitatif de Conegliano.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "conegliano",
+        "rive",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winenews|gamberorosso"
+    },
+    {
+      "id": "it-veneto-prod-bortolomiol",
+      "nom": "Bortolomiol",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Motus Vitae Rive di San Pietro di Barbozza",
+        "Prior Brut"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Valdobbiadene, Bortolomiol est une maison familiale réputée du Prosecco Superiore, proposant une gamme étendue et de bon niveau. Le domaine puise dans les coteaux de la dénomination.\n\nParmi ses cuvées, le Motus Vitae (Rive di San Pietro di Barbozza, Brut Nature) et le Prior Brut illustrent une recherche de qualité et d'expression de terroir, à travers des « Rive » bien faits. La maison conjugue volume et sélection parcellaire.\n\nValeur sûre de Valdobbiadene, Bortolomiol offre des Prosecco Superiore réguliers, dont quelques « Rive » se distinguent par leur précision.\n\nLa maison conjugue une production importante et une sélection parcellaire sur les meilleurs coteaux de Valdobbiadene, avec quelques « Rive » qui se distinguent par leur précision et leur fraîcheur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "glera"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-veneto-prod-ca-dei-zago",
+      "nom": "Ca' dei Zago",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Valdobbiadene Prosecco Superiore Col Fondo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Valdobbiadene, Ca' dei Zago est un petit domaine fidèle à la tradition du « col fondo » : un Prosecco refermenté en bouteille, non dégorgé, à l'opposé des bulles industrielles. La famille y défend une approche artisanale et authentique.\n\nSon Valdobbiadene Prosecco Superiore Col Fondo, trouble et vineux, exprime une autre facette de la Glera : plus sapide, plus texturée, plus proche du raisin et du terroir. Le travail respectueux à la vigne et la vinification minimaliste donnent un vin sincère et original.\n\nArtisan à contre-courant, Ca' dei Zago perpétue la tradition du Prosecco col fondo et séduit les amateurs en quête d'authenticité dans une dénomination dominée par les bulles modernes.\n\nLe travail respectueux à la vigne et la vinification minimaliste, sans dégorgement, donnent un Prosecco sapide et texturé, fidèle à une tradition que peu de domaines perpétuent encore aujourd'hui.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "col-fondo",
+        "artisan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winenews|wineenthusiast"
+    },
+    {
+      "id": "it-veneto-prod-col-vetoraz",
+      "nom": "Col Vetoraz",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Valdobbiadene",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cartizze",
+        "Valdobbiadene Prosecco Superiore Extra Brut"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Perché à Santo Stefano, sur les hauteurs de Valdobbiadene, Col Vetoraz est un spécialiste reconnu du Cartizze et des Prosecco Superiore de coteau. Le domaine, idéalement situé, travaille les meilleures pentes.\n\nSon Cartizze, issu du « grand cru » du Prosecco, et ses cuvées de Valdobbiadene Prosecco Superiore (jusqu'à l'Extra Brut) offrent des bulles fines, fraîches et bien définies. La position en altitude et le savoir-faire de la maison assurent une belle régularité.\n\nRéférence du Cartizze, Col Vetoraz signe des Prosecco Superiore de coteau précis et fiables, parmi les valeurs sûres de Valdobbiadene.\n\nLa position en altitude à Santo Stefano et la maîtrise du Cartizze assurent des bulles fines et bien définies, parmi les valeurs sûres du Prosecco Superiore de coteau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "cartizze",
+        "glera"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winesearcher"
+    },
+    {
+      "id": "it-veneto-prod-sorelle-bronca",
+      "nom": "Sorelle Bronca",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "commune": "Vidor",
+      "pays": "Italie",
+      "cepages": [
+        "Glera"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Particella 181 Rive di Rua",
+        "Valdobbiadene Prosecco Superiore Extra Dry"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rua di Feletto, les sœurs Bronca (Ersiliana et Antonella) mènent un domaine de Prosecco Superiore en biologique, réputé pour le raffinement et la salinité de ses vins. La démarche, originale, valorise les expressions territoriales.\n\nLeur cuvée Particella 181 (Rive di Rua), issue de coteaux exposés à l'est, séduit par sa finesse et sa sapidité, sans renoncer au caractère léger et avenant du Prosecco. La gamme, soignée, mise sur la pureté et l'élégance.\n\nProducteur sérieux et engagé, Sorelle Bronca offre des Prosecco Superiore raffinés et salins, parmi les plus fins du secteur de Conegliano.\n\nLa conduite biologique et la recherche d'expressions territoriales, comme la Particella 181, donnent des Prosecco raffinés et salins, parmi les plus fins du secteur de Conegliano.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "prosecco",
+        "valdobbiadene",
+        "rive",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-veneto-prod-corte-quaiara",
+      "nom": "Corte Quaiara",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Custoza (colline moreniche)",
+      "commune": "Sona",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Nero",
+        "Oseleta",
+        "Syrah",
+        "Garganega"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc",
+        "rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Verona IGP (Oseleta, Obardi)",
+        "Custoza",
+        "Bardolino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Giorgio in Salici, dans la commune de Sona, sur les collines morainiques entre le lac de Garde et la Valpolicella, Corte Quaiara est le domaine de Giovanni Montresor, vigneron indépendant (FIVI) revendiquant des vins « hors normes ». Après une première expérience dans une grande maison véronaise, il a fait renaître la propriété de son grand-père pour y exprimer pleinement sa vision.\n\nLes sols d'origine glaciaire, riches en minéraux mais pauvres en nutriments, contraignent la vigne et impriment aux vins une nette sapidité. Montresor y cultive, à bas rendements, des cépages inhabituels pour la région : le Pinot Nero (vinifié en rouge et en pureté, l'un de ses points forts), mais aussi l'Oseleta, la Syrah, le Goldtraminer ou le Corvinone, déclinés le plus souvent en Verona IGP (cuvées Oseleta, Obardi) plutôt qu'en appellations locales. Ce sont des vins très personnels, fruits d'un travail méticuleux et d'un profond attachement à la terre.\n\nArtisan à contre-courant des traditions séculaires du Véronais, Corte Quaiara séduit par des vins de caractère, minéraux et singuliers, qui révèlent un potentiel méconnu des collines morainiques de Custoza.\n\nLe domaine, membre de la fédération des vignerons indépendants (FIVI), assume une démarche à contre-courant : ni grandes appellations locales, ni standardisation, mais des cuvées qui revendiquent le caractère du lieu et le tempérament de leur auteur. Le Pinot Nero, vinifié en pureté, surprend par sa finesse sous ces latitudes, tandis que l'Oseleta, cépage autochtone rare et tannique, ou la Syrah donnent des rouges denses et originaux. Servis sur des palais curieux, ces vins singuliers révèlent un visage inattendu des collines morainiques entre Garda et Valpolicella.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "fivi",
+        "artisan",
+        "morenico",
+        "pinot-nero",
+        "hors-normes"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winetourism|aisveneto"
+    },
+    {
+      "id": "it-veneto-prod-coffele",
+      "nom": "Coffele",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Soave",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico Ca' Visco",
+        "Soave Classico Alzari"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelcerino, sur les hauteurs du Soave Classico, la famille Coffele cultive la Garganega en biologique, avec un souci de pureté et d'harmonie. Le domaine est l'un des bons artisans de l'appellation.\n\nSes crus Ca' Visco et Alzari déclinent une Garganega franche, fine et équilibrée, fidèle au terroir volcanique de Castelcerino. Le Soave Classico de domaine confirme un style net et harmonieux, sans esbroufe.\n\nProducteur sérieux et régulier, Coffele offre des Soave Classico purs et bien faits, qui rappellent la qualité que peut atteindre l'appellation entre de bonnes mains.\n\nLa conversion biologique et l'altitude de Castelcerino apportent fraîcheur et minéralité, dans des Garganega d'une belle pureté et d'un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-prod-tamellini",
+      "nom": "Tamellini",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "commune": "Soave",
+      "pays": "Italie",
+      "cepages": [
+        "Garganega"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Soave Classico",
+        "Soave Classico Le Bine de Costìola"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Soave, les frères Tamellini signent une Garganega franche et bien travaillée, et comptent parmi les bons producteurs de l'appellation. Le domaine privilégie l'expression directe du cépage et du terroir.\n\nLe Soave Classico de domaine et le cru Le Bine de Costìola en sont les cuvées phares : des blancs salins, fruités et équilibrés, fidèles au caractère volcanique du Soave. Le style, sans artifice, mise sur la pureté et la buvabilité.\n\nValeur sûre de l'appellation, Tamellini offre des Soave de bon niveau et de belle régularité, dont le cru Le Bine de Costìola se distingue.\n\nLe domaine, attaché aux cépages autochtones et au terroir volcanique de Soave, signe des blancs salins et équilibrés d'une belle régularité, dont le cru Le Bine de Costìola se détache.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "soave",
+        "garganega"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-veneto-prod-brigaldara",
+      "nom": "Brigaldara",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "San Pietro in Cariano",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella Classico",
+        "Amarone Case Vecie"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Pietro in Cariano, au cœur de la Valpolicella Classica, Brigaldara est un domaine réputé, membre des Famiglie Storiche. La maison signe des vins classiques et fiables de l'appellation.\n\nSon Amarone della Valpolicella Classico, élevé en grands foudres, et la cuvée de cru Case Vecie en sont les fleurons : des Amarone amples et bien faits, dans un registre traditionnel. Le Valpolicella et le Ripasso complètent une gamme cohérente et de bon niveau.\n\nValeur sûre de la Valpolicella Classica, Brigaldara offre des Amarone classiques et soignés, représentatifs du savoir-faire des familles historiques de l'appellation.\n\nLe domaine, qui possède des parcelles dans plusieurs secteurs de la Valpolicella, allie ampleur et régularité, et figure parmi les valeurs sûres des familles historiques de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winescurated"
+    },
+    {
+      "id": "it-veneto-prod-corte-giara",
+      "nom": "Corte Giara",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "Cavaion Veronese",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Rondinella",
+        "Molinara"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone della Valpolicella",
+        "Valpolicella",
+        "Valpolicella Ripasso",
+        "Bardolino",
+        "Soave",
+        "Prosecco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Corte Giara est la marque de négoce créée en 1989 par la famille Allegrini, basée à Cavaion Veronese, entre Vérone et le lac de Garde. Elle vise des vins jeunes, accessibles et fidèles à la tradition, à prix abordable.\n\nLa gamme, large, couvre la Valpolicella (Valpolicella, Ripasso, Amarone, Recioto) mais aussi le Bardolino, le Soave, le Prosecco et des cépages internationaux, à partir de raisins sélectionnés chez des vignerons partenaires et sur le domaine de Cavaion. La signature Allegrini y apporte une régularité qui distingue ces vins de l'offre courante à ce niveau de prix.\n\nBon rapport qualité-prix porté par le savoir-faire d'Allegrini, Corte Giara est une porte d'entrée fiable et accessible dans les vins de la Valpolicella et du Véronais.\n\nLe domaine de Cavaion Veronese, situé dans la zone du Bardolino Classico, et la sélection de raisins partenaires assurent une régularité qui distingue ces vins de l'offre courante à ce niveau de prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "negoce",
+        "allegrini",
+        "valpolicella",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wine-searcher|cortegiara"
+    },
+    {
+      "id": "it-veneto-prod-nicolis",
+      "nom": "Nicolis",
+      "type": "domaine",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "commune": "San Pietro in Cariano",
+      "pays": "Italie",
+      "cepages": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Amarone Ambrosan",
+        "Valpolicella Classico Superiore Seccal"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Pietro in Cariano, en Valpolicella Classica, la famille Nicolis est un producteur classique et fiable, membre des Famiglie Storiche. Le domaine perpétue un style traditionnel et soigné.\n\nSon Amarone Ambrosan, issu des meilleures parcelles, et le Valpolicella Classico Superiore Seccal en sont les cuvées phares : des vins amples et bien construits, dans le registre généreux de l'appellation. La gamme, cohérente, témoigne d'un savoir-faire familial éprouvé.\n\nValeur sûre de la Valpolicella Classica, Nicolis signe des Amarone classiques et réguliers, représentatifs du style des familles historiques.\n\nLe travail soigné de la famille sur ses parcelles de San Pietro in Cariano donne des vins fidèles au style classique et généreux de la Valpolicella historique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "amarone",
+        "famiglie-storiche"
+      ],
+      "a_verifier": "",
+      "source": "allamarone"
+    }
+  ]
+}

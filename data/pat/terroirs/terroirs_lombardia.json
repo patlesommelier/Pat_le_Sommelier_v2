@@ -1,0 +1,575 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "lombardia",
+  "region_label": "Lombardia (Italie)",
+  "source_file": "terroirs_lombardia.json",
+  "built_at": "2026-06-28",
+  "count": 21,
+  "items": [
+    {
+      "id": "it-lombardia-terr-sassella",
+      "nom": "Sassella",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "roches rouges et porphyres, terrasses escarpées",
+      "caracteristiques_rapides": "La plus prestigieuse sottozona du Valtellina Superiore : Nebbiolo de montagne d'une finesse et d'une longévité remarquables, étalon de l'appellation (Ar.Pe.Pe. Rocce Rosse).",
+      "notes_objectives": "La Sassella est la plus prestigieuse des cinq sottozone du Valtellina Superiore et l'un des grands terroirs de Nebbiolo d'Italie. Elle s'étire sur les versants escarpés au-dessus de Sondrio, exposés plein sud, où la vigne s'accroche à des terrasses de pierres sèches face au soleil. Son nom dérive des « sassi », ces roches rouges et porphyriques qui affleurent partout et donnent à la Chiavennasca (nom local du Nebbiolo) une signature minérale inimitable.\n\nSur ces sols pauvres et caillouteux, à des altitudes pouvant dépasser 600 mètres, le Nebbiolo de montagne atteint une finesse et une élégance souvent comparées à la Bourgogne : robe claire à reflets orangés, nez de rose, de goudron, de petits fruits rouges, d'agrumes et d'herbes séchées, bouche délicate, fraîche et profondément minérale, aux tanins fins et à la longue persistance. La fraîcheur de l'altitude et l'amplitude thermique préservent l'acidité et les arômes, et confèrent aux meilleurs vins une longévité exceptionnelle. C'est ici que naissent des cuvées légendaires, comme la Sassella Rocce Rosse d'Ar.Pe.Pe., élevée en grands fûts de châtaignier et mise en marché des années après la vendange.\n\nÉtalon du Valtellina Superiore et vitrine du Nebbiolo alpin, la Sassella démontre qu'un grand rouge de montagne peut rivaliser de finesse et de garde avec les plus prestigieux terroirs italiens. C'est le cœur battant de la Valtellina et la référence à laquelle se mesurent toutes les autres sottozone.\n\nLa viticulture y est héroïque : tout se fait à la main, sur des terrasses retenues par des kilomètres de murets de pierres sèches accrochés à la montagne, où aucune mécanisation n'est possible. Cet effort titanesque, longtemps déprécié par les guides obnubilés par l'alcool et le bois, a trouvé sa reconnaissance grâce à des vignerons intransigeants. Les meilleures parcelles donnent des cuvées de cru, mises en marché des années après la vendange et capables de vieillir des décennies : un Sassella de vingt ans ou plus garde une vitalité étonnante, ses tanins fondus laissant place à des notes de cuir, de tabac, de zeste d'orange et d'épices. Servi sur des viandes de montagne, du gibier, des fromages d'alpage comme le bitto, le Nebbiolo de la Sassella révèle une élégance presque bourguignonne. À l'heure du regain d'intérêt mondial pour les vins de montagne, frais et digestes, la Sassella s'impose comme l'un des plus beaux terroirs de Nebbiolo hors du Piémont.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "sassella",
+        "nebbiolo",
+        "cru",
+        "sottozona"
+      ],
+      "source": "jancisrobinson|decanter"
+    },
+    {
+      "id": "it-lombardia-terr-grumello",
+      "nom": "Grumello",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~300-650 m",
+      "sols": "roches métamorphiques et éboulis, fortes pentes",
+      "caracteristiques_rapides": "Sottozona centrale du Valtellina Superiore, autour d'un château : Nebbiolo élégant et parfumé (Ar.Pe.Pe. Buon Consiglio, Dirupi).",
+      "notes_objectives": "Le Grumello est l'une des cinq sottozone du Valtellina Superiore, en position centrale, autour des ruines d'un château médiéval qui domine la vallée de l'Adda. Sur des roches métamorphiques et des éboulis, en terrasses escarpées exposées au sud, il donne un Nebbiolo de montagne réputé pour son élégance et son parfum.\n\nLes vins du Grumello se distinguent souvent par leur finesse florale et leur charme immédiat, dans un registre un peu plus tendre et parfumé que la Sassella voisine : nez de rose et de petits fruits, bouche fraîche et minérale, aux tanins déliés. C'est ici qu'Ar.Pe.Pe. produit son Buon Consiglio (issu de parcelles basses, juste au-dessus de Sondrio) et que Dirupi signe certains de ses vins les plus acclamés. L'altitude et l'amplitude thermique préservent fraîcheur et tension.\n\nSottozona de référence du Valtellina Superiore, le Grumello illustre le visage le plus élégant et parfumé du Nebbiolo alpin, et compte parmi les terroirs les plus appréciés de la vallée.\n\nLe secteur tire son nom du château de Grumello, sentinelle médiévale qui veille sur la vallée. La diversité des parcelles, des coteaux bas au-dessus de Sondrio jusqu'aux terrasses plus hautes, autorise des styles variés, du plus charmeur au plus tendu. Comme partout en Valtellina, la viticulture y est manuelle et héroïque, sur des murets de pierres sèches. Servis sur des viandes ou des fromages de montagne, les Nebbiolo du Grumello séduisent par leur parfum et leur élégance, et vieillissent avec grâce. C'est l'une des sottozone les plus fiables et appréciées du Valtellina Superiore.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "grumello",
+        "nebbiolo",
+        "cru",
+        "sottozona"
+      ],
+      "source": "openingabottle|decanter"
+    },
+    {
+      "id": "it-lombardia-terr-inferno",
+      "nom": "Inferno",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~300-550 m",
+      "sols": "roches abruptes très exposées, sols caillouteux",
+      "caracteristiques_rapides": "La plus petite et la plus chaude des sottozone, aux pentes vertigineuses (« enfer ») : Nebbiolo concentré, minéral et structuré.",
+      "notes_objectives": "L'Inferno est la plus petite et l'une des plus spectaculaires des sottozone du Valtellina Superiore. Son nom évoque la chaleur qui règne, l'été, dans cette gorge resserrée aux pentes vertigineuses, où les roches abruptes emmagasinent et renvoient le soleil. C'est l'un des terroirs les plus extrêmes de toute la viticulture italienne.\n\nSur ces sols caillouteux très exposés, le Nebbiolo de montagne donne un vin souvent plus concentré et structuré que dans les autres sottozone, tout en conservant la minéralité et la fraîcheur propres à la Valtellina : arômes de fruits noirs, d'épices et de pierre chaude, bouche dense et profonde, soutenue par une belle acidité. La difficulté d'accès et l'étroitesse du secteur en font un terroir rare et recherché.\n\nJoyau confidentiel du Valtellina Superiore, l'Inferno donne des Nebbiolo concentrés et minéraux, témoins de la viticulture héroïque de la vallée et de la puissance que peut atteindre la Chiavennasca sur ses pentes les plus chaudes.\n\nL'exiguïté du secteur, coincé entre des parois rocheuses, et la difficulté extrême de son accès en font l'une des sottozone les plus rares et les plus chères à exploiter. La chaleur emmagasinée par les roches et l'amplitude thermique nocturne y équilibrent la maturité. Les meilleurs Inferno conjuguent ainsi puissance et fraîcheur, dans des vins qui se patinent magnifiquement sur dix à quinze ans. Servis sur des viandes braisées ou du gibier, ils illustrent toute la singularité de la viticulture héroïque de la Valtellina, et comptent parmi les expressions les plus convoitées de la Chiavennasca.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "inferno",
+        "nebbiolo",
+        "cru",
+        "sottozona"
+      ],
+      "source": "jancisrobinson|stefangourmet"
+    },
+    {
+      "id": "it-lombardia-terr-valgella",
+      "nom": "Valgella",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "terrasses schisteuses, secteur oriental",
+      "caracteristiques_rapides": "La plus vaste sottozona du Valtellina Superiore, à l'est (Teglio) : Nebbiolo fin et digeste, terre du domaine Sandro Fay.",
+      "notes_objectives": "La Valgella est la plus vaste des cinq sottozone du Valtellina Superiore, à l'est de la vallée, autour de Teglio. Longtemps considérée comme plus modeste, elle s'est imposée comme un terroir de finesse, notamment grâce au travail de domaines de pointe.\n\nSur des terrasses schisteuses d'altitude, le Nebbiolo de montagne y donne des vins fins, parfumés et particulièrement digestes, à la trame élégante et fraîche : un registre tout en délicatesse, parfois un peu plus accessible que les sottozone occidentales. C'est le fief du domaine Sandro Fay, qui en a révélé le potentiel avec des cuvées comme la Carterìa, vin historique de la famille. L'altitude et l'exposition signent des Nebbiolo d'une grande pureté.\n\nSottozona orientale du Valtellina Superiore, la Valgella illustre le visage le plus fin et digeste du Nebbiolo alpin, et compte, entre de bonnes mains, parmi les beaux terroirs de la vallée.\n\nSa grande étendue, autour de Teglio, recouvre une mosaïque de terrasses d'altitude et d'expositions, ce qui explique la diversité de ses vins. Longtemps fournisseuse de raisins, la Valgella a vu sa réputation s'élever grâce à des vignerons qui en ont révélé la finesse parcellaire. Le Sforzato de la sous-zone, comme le Ronco del Picchio de Sandro Fay (issu de vignes jusqu'à 750 m), témoigne aussi de son potentiel. Servis sur des viandes blanches, des fromages ou une cuisine de montagne, les Nebbiolo de Valgella séduisent par leur délicatesse et leur digestibilité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "valgella",
+        "nebbiolo",
+        "cru",
+        "sottozona",
+        "teglio"
+      ],
+      "source": "decanter|firstonline"
+    },
+    {
+      "id": "it-lombardia-terr-sforzato-di-valtellina",
+      "nom": "Sforzato di Valtellina",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca, passerillé)"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "terrasses de montagne (raisins séchés en fruttaio)",
+      "caracteristiques_rapides": "DOCG du Nebbiolo passerillé façon Amarone, séché ~100 jours par les vents du lac de Côme : rouge puissant mais ciselé, expression la plus robuste de la vallée.",
+      "notes_objectives": "Le Sforzato di Valtellina (ou Sfursat) est la grande spécialité de raisins passerillés de la vallée et l'une de ses deux DOCG. Sur le même principe que l'Amarone de la Valpolicella, les meilleures grappes de Nebbiolo sont récoltées un peu plus tôt, puis séchées une centaine de jours dans des greniers ventilés (fruttai), où les vents alternés du lac de Côme concentrent les baies.\n\nVinifié entièrement sec, le Sforzato est l'expression la plus robuste et la plus opulente du Nebbiolo de montagne : robe profonde, arômes de fruits noirs confits, d'épices, de cuir et de notes balsamiques, bouche ample et puissante (souvent 15-16 % d'alcool), mais préservée d'un excès grâce à l'acidité alpine et au tri préalable. Plus ciselé et, selon beaucoup, plus digeste que l'Amarone, il a longtemps été le vin-phare de la Valtellina, illustré par des cuvées comme le 5 Stelle Sfursat de Nino Negri ou le Fruttaio Ca' Rizzieri de Rainoldi.\n\nSommet historique de la Valtellina, le Sforzato conjugue la puissance de l'appassimento et la fraîcheur de la montagne, dans un rouge concentré mais élégant, expression la plus spectaculaire de la Chiavennasca.\n\nLe séchage, qui fait perdre aux raisins près d'un tiers de leur poids, était à l'origine une nécessité, dans une vallée où le Nebbiolo peinait à mûrir ; il est devenu une signature. Si le réchauffement climatique pousse aujourd'hui les degrés vers le haut, le tri et la récolte un peu anticipée préservent l'équilibre. Servi sur des viandes en sauce, du gibier ou des fromages affinés, le Sforzato se patine sur de longues années. Sa place de vin-phare est aujourd'hui discutée, à l'heure où le marché valorise des rouges plus légers et digestes ; il n'en demeure pas moins l'expression la plus spectaculaire et la plus identitaire de la Valtellina, capable d'une réelle finesse entre de bonnes mains.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "sforzato",
+        "sfursat",
+        "passito",
+        "nebbiolo",
+        "docg"
+      ],
+      "source": "decanter|stefangourmet"
+    },
+    {
+      "id": "it-lombardia-terr-maroggia",
+      "nom": "Maroggia",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~300-550 m",
+      "sols": "sols sableux et caillouteux, secteur occidental",
+      "caracteristiques_rapides": "La plus petite et la plus occidentale des cinq sottozone, reconnue récemment : Nebbiolo de montagne fin et encore confidentiel.",
+      "notes_objectives": "La Maroggia est la plus petite et la plus occidentale des cinq sottozone du Valtellina Superiore, reconnue plus récemment que ses voisines. Sur des sols sableux et caillouteux, en terrasses d'altitude, elle donne un Nebbiolo de montagne fin et délicat, dans le registre élégant et minéral propre à la Valtellina. Encore confidentielle, elle complète la mosaïque des crus de la vallée et révèle, entre de bonnes mains, un beau potentiel pour la Chiavennasca.\n\nReconnue officiellement plus tard que les autres sottozone, la Maroggia gagne peu à peu en notoriété à mesure que la Valtellina suscite l'intérêt. Sa position occidentale et ses sols particuliers en font un terroir à découvrir, qui complète la palette des crus de la vallée avec des Nebbiolo fins et élégants.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "maroggia",
+        "nebbiolo",
+        "sottozona"
+      ],
+      "source": "decanter|vino2travel"
+    },
+    {
+      "id": "it-lombardia-terr-rosso-di-valtellina",
+      "nom": "Rosso di Valtellina",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtellina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Chiavennasca)"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "alluvions et sols caillouteux du fond de vallée (Adda)",
+      "caracteristiques_rapides": "DOC de base, sur les vignes les plus basses près de l'Adda : Nebbiolo plus léger et fruité, à boire jeune, premier visage de la Chiavennasca.",
+      "notes_objectives": "Le Rosso di Valtellina est l'appellation de base de la vallée, issue des vignes les plus basses, près de l'Adda, et souvent de plants plus jeunes. Le Nebbiolo (Chiavennasca) y donne un vin plus léger, frais et fruité que les Valtellina Superiore de coteau, à boire jeune sur son fruit. C'est le premier visage de la Chiavennasca, plus accessible et convivial, et une porte d'entrée idéale dans l'univers du Nebbiolo de montagne.\n\nPlus accessible et à boire dans sa jeunesse, le Rosso di Valtellina permet de découvrir le caractère alpin de la Chiavennasca sans attendre de longues années de garde. Servi frais sur des charcuteries, des pâtes ou des viandes blanches, il offre un excellent rapport plaisir-prix et constitue la meilleure introduction aux vins de la vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valtellina",
+        "rosso-di-valtellina",
+        "nebbiolo",
+        "fondovalle"
+      ],
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lombardia-terr-franciacorta-anfiteatro-morenico",
+      "nom": "Franciacorta (anfiteatro morenico)",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Franciacorta",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Pinot Bianco",
+        "Erbamat"
+      ],
+      "altitude": "~150-380 m",
+      "sols": "moraines glaciaires, sols minéraux du lac d'Iseo",
+      "caracteristiques_rapides": "Le grand terroir du metodo classico italien : amphithéâtre morainique au sud du lac d'Iseo, dont les sols glaciaires bornent l'alcool et apportent minéralité et fraîcheur.",
+      "notes_objectives": "La Franciacorta est le grand terroir du metodo classico italien, niché sur un amphithéâtre de collines au sud du lac d'Iseo, en Lombardie. Sa singularité tient à sa géologie : un amphithéâtre morainique formé par les débris déposés par les anciens glaciers alpins, dont les sols meubles et minéraux jouent un rôle décisif. Comme le résumait Mattia Vezzola, ces moraines « font que la Franciacorta n'est jamais trop riche en alcool » — elles bornent la maturité et préservent la fraîcheur indispensable à un grand effervescent.\n\nSur ces collines abritées par les Alpes et tempérées par le lac, à des altitudes de 150 à 380 mètres, le Chardonnay, le Pinot Nero et le Pinot Bianco (rejoints par l'autochtone Erbamat) donnent des bases d'une grande finesse, vinifiées selon la méthode traditionnelle avec une seconde fermentation en bouteille et de longs élevages sur lies — parmi les plus exigeants au monde, supérieurs aux minima de la Champagne. Les vins en tirent une perlage fin, des notes de fruits à chair blanche, d'agrumes et de brioche, une tension minérale et une réelle aptitude à la garde sur les cuvées de prestige. Première DOCG italienne entièrement dédiée au metodo classico, la Franciacorta a imposé un standard qualitatif unique en Italie.\n\nBerceau de Ca' del Bosco, Bellavista et de toute une génération de grands noms, la Franciacorta est devenue, en une cinquantaine d'années, le grand terroir d'effervescents fins du pays. Ses sols morainiques et son climat alpin tempéré en font le repère de l'élégance pétillante à l'italienne.\n\nL'appellation s'étend sur dix-neuf communes de la province de Brescia, entre le lac d'Iseo et la ville. Son ascension a été météorique : avant le premier metodo classico de 1961, signé Berlucchi et Ziliani, la viticulture y était modeste ; en quelques décennies, la surface a été multipliée par dizaines, et la Franciacorta affiche aujourd'hui le plus fort taux de viticulture biologique d'Italie (près de 70 % des caves). Les styles vont du Brut au Dosaggio Zero, avec une catégorie originale et exclusive, le Satèn (crémant à base de Chardonnay, à pression réduite), et les Riserva longuement élevées. Les vins de prestige peuvent vieillir et gagner en complexité, démentant l'idée d'un effervescent à boire jeune. Servis à l'apéritif, sur des poissons de lac, des risottos ou des fromages, ils séduisent par leur finesse. Si la comparaison avec la Champagne a longtemps collé à la Franciacorta, les meilleures cuvées ont désormais leur identité propre, et l'appellation, à une heure de Milan, est devenue une destination œnotouristique majeure, classée parmi les fleurons du vin italien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "franciacorta",
+        "morenico",
+        "metodo-classico",
+        "iseo",
+        "docg"
+      ],
+      "source": "wineenthusiast|gamberorosso"
+    },
+    {
+      "id": "it-lombardia-terr-erbusco",
+      "nom": "Erbusco",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Franciacorta",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "moraines glaciaires, cœur de la Franciacorta",
+      "caracteristiques_rapides": "Commune-cœur de la Franciacorta, berceau de Ca' del Bosco, Bellavista et Cavalleri : secteur de référence pour les grands metodo classico de l'appellation.",
+      "notes_objectives": "Erbusco est la commune-cœur de la Franciacorta, au pied du Monte Orfano et au centre de l'amphithéâtre morainique. C'est ici que se concentrent quelques-uns des plus grands noms de l'appellation, ce qui en fait un secteur de référence pour le metodo classico.\n\nSur des sols morainiques d'origine glaciaire, le Chardonnay et le Pinot Nero y donnent des bases d'une grande finesse, alliant fruit, fraîcheur et minéralité. Erbusco abrite les domaines emblématiques Ca' del Bosco, Bellavista, Cavalleri et Uberti, dont les cuvées de prestige comptent parmi les sommets de la Franciacorta. La diversité des parcelles et la densité de grands producteurs en font le centre de gravité qualitatif de l'appellation.\n\nCœur historique de la Franciacorta, Erbusco concentre une part majeure du savoir-faire et des grands domaines de l'appellation, et signe certains de ses metodo classico les plus aboutis.\n\nLa proximité du lac d'Iseo et l'amplitude des sols morainiques offrent un terroir idéal pour des bases fines et équilibrées. La concentration de domaines de premier plan y a fait d'Erbusco une sorte de « grand cru » officieux de la Franciacorta, même si l'appellation ne reconnaît pas de crus. Servis à l'apéritif, sur des poissons de lac ou une cuisine raffinée, les metodo classico d'Erbusco séduisent par leur élégance et leur profondeur, et figurent régulièrement parmi les sommets de l'appellation, des cuvées de prestige aux Satèn.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "franciacorta",
+        "erbusco",
+        "metodo-classico"
+      ],
+      "source": "winewithseth|decanter"
+    },
+    {
+      "id": "it-lombardia-terr-monte-orfano",
+      "nom": "Monte Orfano",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Franciacorta",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Pinot Bianco"
+      ],
+      "altitude": "~200-380 m",
+      "sols": "calcaires et sols rouges, colline isolée et abritée",
+      "caracteristiques_rapides": "Colline calcaire isolée au sud de la Franciacorta, abritée et bien exposée : maturité complète et fraîcheur préservée (Corte Fusia, Ferghettina, Andrea Arici).",
+      "notes_objectives": "Le Monte Orfano est une colline calcaire isolée au sud de la Franciacorta, qui tranche avec les sols morainiques dominants de l'appellation. Bien exposée et abritée, elle bénéficie d'un microclimat favorable à une maturité complète tout en préservant la fraîcheur.\n\nSur ses sols calcaires et ses terres rouges, le Chardonnay et le Pinot Nero donnent des bases mûres et structurées, d'une belle tension minérale. La pente, qui culmine vers 380 mètres, assure ensoleillement et drainage. Le secteur abrite des domaines réputés comme Corte Fusia (Orfano Terre Rosse), Ferghettina et Andrea Arici, qui en tirent des effervescents de caractère, souvent en Dosaggio Zero. Le caractère calcaire imprime aux vins une minéralité distinctive.\n\nSecteur singulier de la Franciacorta, le Monte Orfano offre, sur ses sols calcaires, des metodo classico mûrs et minéraux, complémentaires des secteurs morainiques de l'appellation.\n\nIsolée au milieu de la plaine, la colline du Monte Orfano (« le mont orphelin ») bénéficie d'un ensoleillement généreux et d'un abri naturel contre les vents froids, gage d'une maturité régulière. Son substrat calcaire, rare dans une appellation dominée par les moraines, apporte aux vins une minéralité et une tension particulières. Les Dosaggio Zero qui y naissent sont parmi les plus rigoureux de la Franciacorta. Servis à l'apéritif ou sur des poissons, ils séduisent par leur droiture et leur caractère. Le Monte Orfano illustre la diversité géologique de l'appellation et le potentiel des secteurs calcaires.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "franciacorta",
+        "monte-orfano",
+        "calcaire",
+        "cru"
+      ],
+      "source": "decanter|gamberorosso"
+    },
+    {
+      "id": "it-lombardia-terr-gussago-cellatica",
+      "nom": "Gussago – Cellatica",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Franciacorta",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Marzemino",
+        "Barbera"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "collines calcaires d'origine marine, frange orientale",
+      "caracteristiques_rapides": "Frange orientale de la Franciacorta (calcaire d'origine marine, salinité marquée) : metodo classico atypiques (Nicola Gatta) et rouges de la petite DOC Cellatica.",
+      "notes_objectives": "Gussago et Cellatica forment la frange orientale de la Franciacorta, aux portes de Brescia. Le terroir y change de nature : aux moraines glaciaires succèdent des collines calcaires d'origine marine, qui impriment aux vins une salinité et une minéralité marquées.\n\nSur ces sols calcaires, le Chardonnay et le Pinot Nero donnent des metodo classico parfois atypiques, à l'image de ceux de Nicola Gatta, vigneron nature de Gussago qui a quitté la DOCG pour exprimer librement ce terroir. Le secteur abrite aussi la petite appellation Cellatica, dédiée à des rouges légers d'assemblage (Marzemino, Barbera, Schiava, Incrocio Terzi). C'est une Franciacorta plus confidentielle et plus minérale, où la viticulture artisanale tient une place de choix.\n\nFrange orientale et calcaire de la Franciacorta, Gussago–Cellatica offre des vins salins et originaux, témoins de la diversité géologique de l'appellation et terre d'élection des artisans nature.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "franciacorta",
+        "gussago",
+        "cellatica",
+        "calcaire",
+        "nature"
+      ],
+      "source": "winecouture|fytwine"
+    },
+    {
+      "id": "it-lombardia-terr-oltrepo-pavese-colline-del-pinot-nero",
+      "nom": "Oltrepò Pavese (Colline del Pinot Nero)",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Nero"
+      ],
+      "altitude": "~150-500 m",
+      "sols": "argilo-calcaires et marnes des collines de l'Apennin",
+      "caracteristiques_rapides": "Le plus grand vignoble de Pinot Nero d'Italie (3e d'Europe après Bourgogne et Champagne) : rouges tranquilles et metodo classico (Cruasé), sur des collines argilo-calcaires.",
+      "notes_objectives": "Au sud du Pô, dans la province de Pavie, l'Oltrepò Pavese forme un vaste triangle de collines, l'un des vignobles les plus densément plantés d'Italie. C'est, avant tout, le plus grand vignoble de Pinot Nero du pays — la troisième zone d'Europe pour ce cépage, après la Bourgogne et la Champagne.\n\nSur des sols argilo-calcaires et marneux, à des altitudes de 150 à 500 mètres, le Pinot Nero s'exprime sous deux visages : en rouge tranquille, fin et parfumé, et surtout en metodo classico (notamment le Cruasé, rosé de la DOCG Oltrepò Pavese Metodo Classico), pour lequel la région possède un potentiel reconnu. Le climat continental, tempéré par les reliefs apenins, et la diversité des terroirs donnent une grande variété d'expressions. Des domaines comme Conte Vistarino ou Monsupello en sont les ambassadeurs.\n\nCœur du Pinot Nero italien, l'Oltrepò Pavese offre, sur ses collines argilo-calcaires, des rouges et des effervescents de Pinot Nero au potentiel souvent méconnu, et constitue l'un des grands terroirs de Lombardie.\n\nTerre de confins entre Lombardie, Piémont et Émilie, l'Oltrepò est une mosaïque de vallées (Versa, Scuropasso, Coppa, Staffora) et de cépages, qui en font l'une des régions les plus diverses d'Italie. Outre le Pinot Nero, elle est réputée pour la Bonarda (Croatina), le Riesling, la Barbera et toute une famille de rouges traditionnels. Longtemps bridée par une image de production de masse et un marketing déficient, la région opère un changement de paradigme, porté par des projets de qualité autour du metodo classico et des crus. Servis sur des volailles, des champignons ou des viandes blanches, ses Pinot Nero révèlent un potentiel que confirment, millésime après millésime, les meilleurs domaines.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "pinot-nero",
+        "colline",
+        "metodo-classico"
+      ],
+      "source": "terredoltrepo|winemeridian"
+    },
+    {
+      "id": "it-lombardia-terr-valle-versa",
+      "nom": "Valle Versa",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Nero",
+        "Chardonnay",
+        "Riesling"
+      ],
+      "altitude": "~150-450 m",
+      "sols": "marnes et argiles de la vallée orientale",
+      "caracteristiques_rapides": "Vallée orientale autour de Santa Maria della Versa, cœur du metodo classico de l'Oltrepò : Pinot Nero et Chardonnay pour les effervescents de la région.",
+      "notes_objectives": "La Valle Versa, dans l'est de l'Oltrepò Pavese autour de Santa Maria della Versa, est le cœur historique du metodo classico de la région. Cette vallée vouée aux effervescents y concentre un savoir-faire ancien.\n\nSur des sols de marnes et d'argiles, le Pinot Nero et le Chardonnay donnent des bases idéales pour la prise de mousse en bouteille, dans un climat frais propice à la fraîcheur et à la finesse. La Valle Versa est le berceau de la tradition du « spumante » de l'Oltrepò, illustrée par la DOCG Oltrepò Pavese Metodo Classico et des cuvées comme le Cruasé (rosé de Pinot Nero). La vallée a longtemps fourni, aussi, des bases pour d'autres régions effervescentes italiennes.\n\nBerceau du metodo classico de l'Oltrepò, la Valle Versa illustre la vocation de la région pour les effervescents de Pinot Nero et de Chardonnay, et demeure un terroir de référence pour les bulles lombardes.\n\nLe relief vallonné et le climat frais de la Valle Versa, où alternent expositions et altitudes, sont propices à des raisins équilibrés et acidulés, base idéale des grands effervescents. La tradition du spumante y est ancienne et structurée, autour de maisons spécialisées et de la coopération historique. La DOCG Oltrepò Pavese Metodo Classico, et son fer de lance le Cruasé (rosé de Pinot Nero), y trouvent leur expression la plus aboutie. Servis à l'apéritif ou sur des poissons, ces effervescents séduisent par leur finesse, et confirment la vocation de la Valle Versa pour les bulles de Pinot Nero et de Chardonnay.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "valle-versa",
+        "metodo-classico",
+        "pinot-nero"
+      ],
+      "source": "classese|winemeridian"
+    },
+    {
+      "id": "it-lombardia-terr-buttafuoco-storico-sperone-di-stradella",
+      "nom": "Buttafuoco Storico (Sperone di Stradella)",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Croatina",
+        "Barbera",
+        "Uva Rara",
+        "Ughetta (Vespolina)"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "strates de graviers, grès et argiles (Sperone di Stradella)",
+      "caracteristiques_rapides": "Cru historique de ~22 ha entre les torrents Versa et Scuropasso : rouge puissant et de garde, vinifié vigne par vigne, l'un des grands terroirs de l'Oltrepò.",
+      "notes_objectives": "Le Buttafuoco Storico est l'un des grands crus historiques de l'Oltrepò Pavese, niché sur le « Sperone di Stradella », un éperon de collines délimité par les torrents Versa et Scuropasso, sur à peine 22 hectares répartis sur sept communes. C'est l'un des terroirs les plus singuliers et les plus exigeants de Lombardie.\n\nLe sol, né de la rencontre des plaques apennine et alpine, est stratifié en trois matrices — graviers au nord, grès au centre, argiles au sud — où les racines peuvent plonger jusqu'à dix mètres. À partir d'un assemblage de cépages autochtones (Croatina en tête, complétée de Barbera, Uva Rara et Ughetta), vinifiés ensemble et issus d'une vigne unique nommée sur l'étiquette, le Buttafuoco Storico donne un rouge puissant, structuré et de garde : robe profonde, arômes d'épices, de fruits noirs, de réglisse et de notes balsamiques, bouche dense soutenue par tanin et acidité. Un club de vignerons, fondé en 1996, en encadre strictement la production, vigne par vigne.\n\nCru emblématique de l'Oltrepò, comparé à l'occasion aux grands rouges bordelais, le Buttafuoco Storico incarne le lien le plus étroit entre un vin et sa vigne, et compte parmi les terroirs les plus fascinants et sous-estimés d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "buttafuoco",
+        "sperone-stradella",
+        "cru",
+        "croatina"
+      ],
+      "source": "ilsommelier|portaleoltrepo"
+    },
+    {
+      "id": "it-lombardia-terr-casteggio",
+      "nom": "Casteggio",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Croatina",
+        "Barbera",
+        "Uva Rara"
+      ],
+      "altitude": "~150-350 m",
+      "sols": "argilo-calcaires des collines centrales",
+      "caracteristiques_rapides": "DOC dédiée aux rouges structurés de l'Oltrepò (Croatina/Barbera), autour de la cité historique de Casteggio : vins de corps et de garde.",
+      "notes_objectives": "Casteggio est une DOC de l'Oltrepò Pavese dédiée aux rouges structurés, autour de la cité historique du même nom. À partir de Croatina, Barbera et Uva Rara, sur des sols argilo-calcaires, elle donne des vins de corps, plus ambitieux et de meilleure garde que les rouges courants de la région. L'appellation, récente, vise à valoriser le potentiel des rouges sérieux de l'Oltrepò, dans un registre charnu et épicé.\n\nLa cité de Casteggio, l'antique Clastidium, est l'un des centres historiques du vin de l'Oltrepò. La DOC qui en porte le nom met en avant des rouges de garde, plus ambitieux que la moyenne régionale, avec une obligation de vieillissement. Servis sur des viandes rouges ou du gibier, ces vins charnus et épicés illustrent le potentiel sérieux des rouges de l'Oltrepò.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "casteggio",
+        "rosso",
+        "croatina"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-lombardia-terr-sangue-di-giuda",
+      "nom": "Sangue di Giuda",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Croatina",
+        "Barbera",
+        "Uva Rara",
+        "Ughetta"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "graviers, grès et argiles du Sperone di Stradella",
+      "caracteristiques_rapides": "Rouge doux et légèrement effervescent, mêmes cépages que le Buttafuoco mais en version sucrée : spécialité gourmande et conviviale de l'Oltrepò.",
+      "notes_objectives": "Le Sangue di Giuda (« sang de Judas ») est l'une des spécialités gourmandes de l'Oltrepò Pavese, sur le secteur du Sperone di Stradella. Élaboré à partir des mêmes cépages que le Buttafuoco (Croatina, Barbera, Uva Rara, Ughetta), mais en version douce et légèrement effervescente, c'est un rouge tendre et fruité, aux notes de prune et de cerise, d'une grande convivialité. Spécialité conviviale longtemps oubliée, il accompagne charcuteries, desserts ou se boit simplement pour le plaisir, et reste l'une des curiosités attachantes de l'Oltrepò.\n\nAu-delà de son nom évocateur, le Sangue di Giuda est l'un de ces rouges doux et frizzants dont l'Italie du Nord a le secret, à rapprocher du Lambrusco ou du Brachetto. Produit en quantités notables, apprécié jusqu'aux États-Unis, il séduit par sa gourmandise immédiate. Servi sur des desserts, des charcuteries ou simplement entre amis, il incarne la convivialité de l'Oltrepò et le plaisir simple du vin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "sangue-di-giuda",
+        "doux",
+        "frizzante",
+        "croatina"
+      ],
+      "source": "intravino|winemeridian"
+    },
+    {
+      "id": "it-lombardia-terr-canneto-pavese-bonarda",
+      "nom": "Canneto Pavese (Bonarda)",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Oltrepò Pavese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Croatina"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "argilo-calcaires et marnes, fortes pentes",
+      "caracteristiques_rapides": "Commune emblématique de la Bonarda (Croatina), longtemps la plus vitée d'Italie : rouge frizzante convivial et crus historiques (Cavariola).",
+      "notes_objectives": "Canneto Pavese est l'une des communes emblématiques de l'Oltrepò Pavese et la patrie de la Bonarda, le rouge le plus répandu de la région, issu du cépage Croatina. Longtemps la commune la plus densément plantée d'Italie, elle est vouée à la vigne sur des sols argilo-calcaires en forte pente. La Bonarda y donne un rouge frizzante convivial, fruité et légèrement amer en finale, mais Canneto abrite aussi des crus historiques plus ambitieux, comme la Cavariola de Bruno Verdi. C'est l'un des cœurs identitaires de l'Oltrepò traditionnel.\n\nLa Bonarda, vin emblématique de l'Oltrepò et de la table milanaise, se décline le plus souvent en version frizzante, tendre et fruitée, sur des notes de fruits rouges et une fine amertume finale. Mais les coteaux escarpés de Canneto abritent aussi des Croatina plus ambitieuses et de garde, comme la Cavariola. Servie sur des charcuteries, des pâtes ou des viandes, la Bonarda de Canneto illustre l'âme conviviale et authentique de l'Oltrepò traditionnel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "oltrepo",
+        "canneto-pavese",
+        "bonarda",
+        "croatina"
+      ],
+      "source": "lavinium|winemeridian"
+    },
+    {
+      "id": "it-lombardia-terr-valtenesi-riviera-del-garda-classico",
+      "nom": "Valtènesi (Riviera del Garda Classico)",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valtènesi",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Groppello",
+        "Marzemino",
+        "Sangiovese",
+        "Barbera"
+      ],
+      "altitude": "~70-250 m",
+      "sols": "moraines glaciaires de la rive ouest du Garda",
+      "caracteristiques_rapides": "Rive ouest du lac de Garde : le Groppello y donne des rouges légers et surtout le Chiaretto, rosé de référence (Costaripa, Molmenti) parfois conçu pour la garde.",
+      "notes_objectives": "La Valtènesi s'étend sur la rive ouest du lac de Garde, en province de Brescia, sur des collines morainiques d'origine glaciaire. Tempéré par le lac, ce terroir est l'un des hauts lieux du rosé italien.\n\nLe cépage roi y est le Groppello, autochtone, qui donne des rouges légers et parfumés mais surtout un rosé de référence, le Chiaretto : d'un rose pâle délicat, frais et gastronomique. Mattia Vezzola, au domaine Costaripa, en a fait un vin de garde avec sa cuvée Molmenti, démontrant que le rosé du Garda pouvait viser l'excellence. L'appellation Riviera del Garda Classico encadre Chiaretto et rouges, sur des assemblages de Groppello, Marzemino, Sangiovese et Barbera.\n\nTerroir du Chiaretto, la Valtènesi a hissé le rosé du Garda à un niveau insoupçonné, et illustre, avec le Groppello, l'identité singulière du vignoble lombard de la rive ouest du lac.\n\nLe microclimat méditerranéen du Garda, adouci par l'immense masse d'eau du lac, permet de cultiver oliviers, agrumes et vigne sur ces collines morainiques. Le Groppello, cépage fragile et local, exige un travail soigné mais récompense par des vins d'une grande finesse aromatique. Au-delà du Chiaretto, le secteur produit aussi des rouges légers et parfumés. Servis sur des poissons de lac, des viandes blanches ou une cuisine d'été, les vins de la Valtènesi séduisent par leur fraîcheur. Sous l'impulsion de domaines comme Costaripa, l'appellation a gagné en ambition et s'impose comme l'un des grands terroirs du rosé italien.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "garda",
+        "valtenesi",
+        "chiaretto",
+        "groppello",
+        "rose"
+      ],
+      "source": "firstonline"
+    },
+    {
+      "id": "it-lombardia-terr-moscato-di-scanzo",
+      "nom": "Moscato di Scanzo",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Moscato di Scanzo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Moscato di Scanzo"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "marnes calcaires (« sass de luna »), collines de Bergame",
+      "caracteristiques_rapides": "Plus petite DOCG d'Italie, à Scanzorosciate : passito rouge aromatique et rarissime issu du Moscato di Scanzo passerillé, sur des marnes « sass de luna ».",
+      "notes_objectives": "Le Moscato di Scanzo est un trésor confidentiel des collines de Scanzorosciate, près de Bergame : la plus petite DOCG d'Italie, sur quelques dizaines d'hectares seulement. Le terroir y est unique, marqué par les marnes calcaires localement appelées « sass de luna ».\n\nLe cépage autochtone Moscato di Scanzo, à baies noires, y est récolté puis passerillé, avant de donner un passito rouge aromatique d'une grande rareté : robe grenat, arômes intenses de fruits rouges confits, de rose, d'épices et de sauge, bouche douce mais équilibrée par la fraîcheur et une fine tannicité. Produit en très petites quantités, il accompagne desserts et fromages, ou se déguste en vin de méditation. Ce vin, déjà réputé au XVIIIe siècle, a failli disparaître avant d'être sauvé par quelques passionnés.\n\nJoyau rarissime des collines bergamasques, le Moscato di Scanzo perpétue, sur ses marnes « sass de luna », une tradition de passito rouge unique en Italie, et constitue l'une des curiosités les plus précieuses de la Lombardie viticole.\n\nLa production, infime, et la difficulté de la culture en font un vin de niche, longtemps réservé aux initiés. Le passerillage des grappes, étalées sur des claies plusieurs semaines, concentre sucres et arômes avant un long élevage. Le résultat est un vin doux d'une grande complexité aromatique, à la fois suave et frais, qui se distingue des Moscato blancs par sa robe rouge et son registre épicé et floral. Servi sur des pâtisseries, du chocolat, des fromages affinés ou en méditation, il révèle toute sa singularité. Soutenu par une DOCG obtenue en 2009 et par quelques familles passionnées, le Moscato di Scanzo perpétue un patrimoine viticole précieux des collines de Bergame.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "scanzo",
+        "bergame",
+        "passito",
+        "moscato",
+        "rare",
+        "docg"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-lombardia-terr-valcalepio",
+      "nom": "Valcalepio",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "Valcalepio",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "sols morainiques et marno-calcaires des Préalpes",
+      "caracteristiques_rapides": "Appellation des collines de Bergame : rouges d'inspiration bordelaise (Merlot, Cabernet) structurés et de garde, et metodo classico, sous l'influence des Préalpes.",
+      "notes_objectives": "Le Valcalepio est l'appellation des collines de la province de Bergame, entre les lacs d'Iseo et de Côme, sous l'influence des Préalpes. Sur des sols morainiques et marno-calcaires, elle s'est spécialisée dans les rouges d'inspiration bordelaise — assemblages de Merlot et de Cabernet Sauvignon —, structurés et aptes à la garde, ainsi que dans le metodo classico. Appellation méconnue, le Valcalepio illustre le potentiel des collines bergamasques pour des rouges sérieux et des effervescents de bonne tenue.\n\nEncadrée par un consortium actif, l'appellation a su se forger une identité autour de ses rouges d'assemblage bordelais et de ses blancs et effervescents. Le climat préalpin, aux nuits fraîches, et les sols variés donnent des vins équilibrés. Servis sur des viandes ou des fromages, les rouges du Valcalepio confirment le potentiel méconnu des collines bergamasques, à mi-chemin entre tradition italienne et inspiration internationale.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valcalepio",
+        "bergame",
+        "merlot",
+        "bordeaux",
+        "metodo-classico"
+      ],
+      "source": "wikipedia|firstonline"
+    },
+    {
+      "id": "it-lombardia-terr-san-colombano-al-lambro",
+      "nom": "San Colombano al Lambro",
+      "type": "lieu-dit",
+      "region": "Lombardia",
+      "sous_region": "San Colombano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Croatina",
+        "Barbera",
+        "Uva Rara"
+      ],
+      "altitude": "~80-150 m",
+      "sols": "collines isolées de la plaine du Lambro",
+      "caracteristiques_rapides": "Seule DOC née dans la plaine au sud de Milan, sur une colline isolée : rouge convivial (Croatina, Barbera), parfois frizzante, curiosité « milanaise ».",
+      "notes_objectives": "San Colombano al Lambro est une curiosité : la seule DOC née dans la plaine au sud de Milan, sur une colline isolée qui émerge de la Pianura Padana. Surnommé le « vin des Milanais », ce rouge d'assemblage (Croatina, Barbera, Uva Rara), parfois légèrement effervescent, est convivial et fruité, à boire jeune. Témoin d'une viticulture périurbaine rare, San Colombano perpétue une tradition vinicole insolite aux portes de la métropole lombarde.\n\nCette colline isolée, vestige géologique au milieu des champs, constitue une véritable enclave viticole aux portes de Milan. La tradition y est ancienne, et le vin de San Colombano fut longtemps celui des tables de la métropole lombarde. Servi jeune sur des charcuteries ou des plats régionaux, ce rouge convivial perpétue une curiosité viticole rare en pleine plaine padane.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "san-colombano",
+        "milano",
+        "croatina",
+        "rosso"
+      ],
+      "source": "wikipedia"
+    }
+  ]
+}

@@ -1,0 +1,859 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "hainaut",
+  "region_label": "Hainaut",
+  "source_file": "producteurs_hainaut_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 27,
+  "items": [
+    {
+      "id": "be-hainaut-prod-domaine-du-chant-deole",
+      "nom": "Domaine du Chant d'Éole",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Quévy-le-Grand (Quévy)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Blanc"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Crémant de Wallonie (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le plus grand vignoble de Belgique, et le premier à avoir battu les champagnes sur leur terrain. Le domaine naît en 2010-2011 de l'association d'une famille de viticulteurs champenois et de la famille Ewbank de Wespin, exploitants agricoles belges. Première vendange en 2013 sur neuf hectares ; la surface atteint quarante hectares en 2022 et environ cinquante-quatre aujourd'hui, soit quelque 490 000 pieds au sud de Mons, entre Harveng et Quévy.\n\nL'encépagement est presque monovariétal : Chardonnay à 97 %, complété de Pinot Noir et de Pinot Blanc, avec du Pinot Meunier pour des cuvées expérimentales. Le sol est calcaire, les parcelles exposées plein sud, et le domaine est installé sous un parc éolien dont la ventilation permanente réduit sensiblement la pression cryptogamique — un atout technique réel sous climat humide. Vendange manuelle, méthode traditionnelle, élevage sur lattes long : quarante-huit mois pour la cuvée prestige.\n\nEn 2019, cette cuvée prestige 2014, un Crémant de Wallonie blanc de blancs, est sacrée révélation internationale vin mousseux au Concours Mondial de Bruxelles, devant plus de deux cents champagnes dégustés à l'aveugle parmi sept cent trente effervescents. C'est la première fois qu'un mousseux belge devance les propositions françaises, et le point de bascule pour la crédibilité du secteur. Le domaine a depuis développé un pôle œnotouristique complet, avec deux restaurants dont un étoilé Michelin depuis 2024.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Brut Blanc de Blancs",
+        "Brut Rosé",
+        "Elixir Saint-Georges"
+      ],
+      "tags": [
+        "wallonie",
+        "craie",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface : 9 ha en 2019, 40 ha en 2022, 54 ha selon les sources récentes — croissance très rapide, à redater à chaque révision. Part du Pinot Meunier (cuvées nature expérimentales) à préciser.",
+      "source": "chantdeole.be ; marcvanel.be ; rtbf.be ; vinsetgourmandisesdewallonie.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-des-agaises",
+      "nom": "Vignoble des Agaises",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Haulchin (Estinnes)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vin mousseux de qualité de Wallonie (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le pionnier professionnel de la Wallonie, connu partout sous sa marque : Ruffus. En 2002, à une époque où la viticulture belge relevait encore de la curiosité, deux hectares de Chardonnay sont plantés au lieu-dit Les Agaises, à Haulchin, entre Binche et Mons. Le vignoble compte aujourd'hui plus de trente-cinq hectares et quelque 310 000 pieds, et reste exclusivement consacré aux effervescents en méthode traditionnelle — le premier domaine wallon à faire ce choix.\n\nLe terroir est l'argument, et il est vérifiable : les parcelles occupent des sols très riches en craie localement appelés les terres blanches, à cent mètres d'altitude et en exposition plein sud. On est sur les affleurements crayeux du bassin de Mons, prolongement septentrional du Bassin parisien, donc sur la même formation géologique que la Champagne. Le voisinage du plus grand parc éolien d'Europe assure en outre une ventilation constante qui limite les maladies cryptogamiques.\n\nLa gamme tient en trois cuvées — Ruffus Brut, Brut Sauvage et Brut Rosé — revendiquées en AOP Vin mousseux de qualité de Wallonie, et régulièrement primées au Concours Mondial de Bruxelles. Le nom renvoie au seigneur Ruffus, qui régnait sur ces coteaux au XIIe siècle. C'est le domaine par lequel le vin belge est devenu une réalité commerciale plutôt qu'une curiosité locale, et celui qui a ouvert la voie à toute la vague wallonne des années 2010.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ruffus Brut",
+        "Ruffus Brut Sauvage",
+        "Ruffus Brut Rosé"
+      ],
+      "tags": [
+        "wallonie",
+        "craie",
+        "methode-traditionnelle",
+        "ruffus"
+      ],
+      "a_verifier": "Surface : 31 ha en 2022, plus de 35 ha selon les sources récentes, jusqu'à 40 ha selon d'autres. Part exacte du Pinot Noir (cuvée rosé) à confirmer.",
+      "source": "ruffus.be ; fr.wikipedia.org ; marcvanel.be ; vinsetgourmandisesdewallonie.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-mont-des-anges",
+      "nom": "Domaine Mont des Anges",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Nouvelles (Mons) et Havay (Quévy)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Voltis"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Créé en 2018 sous le nom de Terres de Craie, rebaptisé Mont des Anges deux ans plus tard, ce domaine réparti entre Nouvelles, près de Mons, et Havay, sur la commune de Quévy, couvre un peu plus de neuf hectares. Il s'installe sur le même substrat crayeux que ses deux grands voisins, avec la même orientation vers l'effervescent de méthode traditionnelle.\n\nSa particularité est ailleurs : c'est le seul des trois à combiner cépages classiques et cépages résistants, et c'est lui qui a introduit le Voltis en Wallonie. Cette sélection résistante française récente, issue des programmes de l'INRAE, est un marqueur intéressant — elle signale que les domaines hennuyers de la nouvelle génération ne considèrent plus les PIWI comme un pis-aller, mais comme une option assumée y compris pour la bulle haut de gamme.\n\nLe financement est participatif : le domaine a constitué une communauté d'investisseurs, les « amis » du Mont des Anges, sur le modèle qui se répand dans le vignoble wallon. Les cinq cents premières bouteilles sont sorties en édition limitée en 2021. C'est le troisième nom du Haut-Pays, loin derrière Ruffus et Chant d'Éole en volume, mais installé sur le même terroir et avec une ambition comparable. Le nom précédent, Terres de Craie, disait explicitement le terroir ; le nouveau renvoie à un lieu-dit local. Le domaine se visite et pratique la vente directe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "craie",
+        "piwi",
+        "methode-traditionnelle",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement complet et gamme actuelle à documenter ; surface annoncée 9,22 ha en 2022.",
+      "source": "montdesanges.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-le-vignoble-de-sirault",
+      "nom": "Le Vignoble de Sirault",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Sirault (Saint-Ghislain)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares et demi plantés en 2015 à Sirault, dans la commune de Saint-Ghislain, entièrement en cépages résistants. La singularité est dans la structure : le vignoble est porté par un collectif de citoyens investisseurs, formule coopérative encore rare en Belgique, où la viticulture reste majoritairement familiale ou entrepreneuriale.\n\nLe modèle a une logique claire. Planter un hectare de vigne représente un investissement lourd pour un retour qui n'arrive pas avant quatre à cinq ans ; la coopérative répartit ce risque et fournit simultanément une clientèle acquise. Le Vignoble de Sirault et le Domaine Mont des Anges, chacun à sa manière, montrent que le financement participatif est devenu un ressort courant du vignoble wallon.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement résistant détaillé et structure juridique de la coopérative à documenter.",
+      "source": "vignobledesirault.com ; marcvanel.be ; visitwallonia.be"
+    },
+    {
+      "id": "be-hainaut-prod-la-voix-des-meles",
+      "nom": "La Voix des Mêlés",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Saint-Symphorien (Mons)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Seize mille pieds de cépages résistants plantés en 2022 à Saint-Symphorien, aux portes de Mons, sur une surface estimée à trois hectares et demi : l'un des projets les plus récents et les plus étendus du bassin de Mons hors des trois grands.\n\nLe secteur bénéficie du même contexte géologique que Ruffus et Chant d'Éole — les craies du bassin de Mons, prolongement du Bassin parisien — mais le choix de l'encépagement est inverse : là où les deux leaders misent sur le trio champenois, ce domaine part sur des variétés résistantes, moins exigeantes en traitements. C'est la ligne de partage la plus nette du vignoble hennuyer, et elle ne recoupe pas la géologie mais la taille des exploitations. Le nom renvoie au bois des Mêlés, en bordure duquel se trouvent les parcelles. Premier millésime commercialisé et gamme restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface à confirmer (3,5 ha estimés) ; encépagement, couleurs et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-jardin-de-la-couturelle",
+      "nom": "Jardin de la Couturelle",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Montignies-lez-Lens (Lens)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre-vingt-quatre ares plantés en 2018 en cépages classiques à Montignies-lez-Lens, entre Ath et Mons, sur les limons du plateau hennuyer.\n\nLe choix de cépages classiques sur une surface aussi réduite mérite d'être noté : il implique un programme de traitements que la plupart des micro-domaines wallons cherchent précisément à éviter en plantant des résistants. C'est un pari sur la qualité perçue — le Chardonnay et les Pinots restent plus faciles à vendre que le Johanniter ou le Souvignier — au prix d'une charge de travail nettement supérieure à l'hectare. Encépagement détaillé et gamme restent à documenter. Le secteur, entre Ath et Mons, est un plateau limoneux voué aux grandes cultures, où la vigne n'arrive qu'après 2015. La production, en petits volumes, se vend au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et appellation éventuelle à documenter.",
+      "source": "jardindelacouturelle.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-clos-du-vignoble-de-labbaye-de-saint-denis",
+      "nom": "Clos du vignoble de l'Abbaye de Saint-Denis",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Obourg (Mons)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares replantés en 2000 dans l'enceinte de l'ancienne abbaye bénédictine de Saint-Denis-en-Broqueroie, à Obourg, par une confrérie de compagnons vignerons. C'est l'un des rares vignobles belges rattachés à un site monastique, et l'un des plus anciens du Hainaut contemporain.\n\nLe lien entre abbayes et vigne est historiquement établi dans nos régions : jusqu'au petit âge glaciaire, les communautés religieuses produisaient le vin de messe et entretenaient l'essentiel des coteaux. Ce type de replantation dans une enceinte abbatiale relève donc autant de la restitution patrimoniale que de la production, avec des volumes symboliques et un encépagement mêlant classiques et résistants. L'abbaye, fondée au XIe siècle, conserve une église romane classée ; le vignoble s'inscrit dans un projet de valorisation du site autant que dans une démarche viticole.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "clos-historique"
+      ],
+      "a_verifier": "Encépagement (classiques et résistants mêlés), volumes et statut associatif à documenter.",
+      "source": "compagnonvignoblesaintdenis.wordpress.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-pots-de-vin",
+      "nom": "Pots de Vin",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Haut-Pays et bassin de Mons",
+      "commune": "Jurbise",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares plantés en 2010 à Jurbise, au nord-ouest de Mons, en cépages classiques et résistants mêlés.\n\nLe domaine appartient à la première vague hennuyère, celle qui suit de peu le succès de Ruffus sans en avoir les moyens : entre 2005 et 2012, une dizaine de micro-vignobles apparaissent dans la province, presque tous sous un demi-hectare, portés par des particuliers plutôt que par des entrepreneurs agricoles. Leur production part intégralement en vente directe. Le nom joue sur l'expression française, clin d'œil fréquent dans la nomenclature des petits domaines wallons. Jurbise se situe à la charnière entre les craies du bassin de Mons et les sables du plateau, dans un secteur boisé et résidentiel au nord de l'agglomération montoise. Encépagement précis, couleurs produites et volumes ne sont pas publiés, ce qui est la règle pour cette catégorie de domaines.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes non publiés.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-degavre",
+      "nom": "Domaine Degavre",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Ostiches (Ath)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares plantés en 2019 par Adrien Degavre à Ostiches, dans le Pays des Collines, en cépages classiques et avec un objectif d'effervescents affiché dès le départ.\n\nC'est l'une des plantations les plus étendues du Hainaut occidental, dans une région de collines limoneuses restée longtemps à l'écart de la viticulture. Le choix des cépages classiques associé à la bulle reproduit à petite échelle le modèle qui a fait le succès du Haut-Pays : sous climat frais, la méthode traditionnelle valorise mieux des raisins à maturité modérée qu'un vin tranquille, et supporte des millésimes irréguliers. Encépagement détaillé et premier millésime commercialisé restent à documenter. Ostiches, ancienne commune d'Ath, occupe l'une des collines qui donnent son nom à la région, avec des pentes courtes et des sols limoneux profonds reposant sur un substrat argileux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "methode-traditionnelle",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement détaillé, premier millésime et gamme à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-marquise-de-moulbaix",
+      "nom": "Marquise de Moulbaix",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Moulbaix (Ath)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares plantés en 2018 à Moulbaix, près d'Ath, en cépages classiques, sur les limons du Pays des Collines.\n\nLe nom renvoie au château de Moulbaix et à son domaine, dans un village connu pour son moulin à vent encore en activité. La région d'Ath concentre aujourd'hui plusieurs des plantations récentes du Hainaut occidental — Ostiches, Moulbaix, le vignoble expérimental du CARAH — ce qui en fait le second foyer viticole de la province après le Haut-Pays, malgré des surfaces sans commune mesure. Encépagement, couleurs produites et appellation éventuelle à documenter. Le vignoble bénéficie de pentes douces et d'un environnement de bocage et de bois qui limite l'exposition au vent. La production, en blanc et en rouge, se vend au domaine ; à trois hectares, le domaine est dimensionné pour une activité professionnelle, ce qui reste minoritaire dans la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et appellation éventuelle à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-de-longuesault",
+      "nom": "Domaine de Longuesault",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Ère (Tournai)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares et quatre-vingts ares plantés en 2020 à Ère, aux portes de Tournai, entièrement en cépages résistants, avec un choix de conduite biologique annoncé dès la création.\n\nL'association est cohérente et devient la norme dans la nouvelle génération wallonne : les variétés résistantes demandent trois à cinq fois moins de traitements que les vinifera classiques sous climat humide, ce qui rend le bio économiquement tenable là où il serait autrement très risqué. Le Tournaisis offre par ailleurs un sous-sol de calcaire carbonifère, celui de la pierre de Tournai, recouvert de limons. La certification effective reste à vérifier. Ère est une ancienne commune du sud de Tournai, dans la plaine de l'Escaut. Le domaine appartient à la vague de plantations 2019-2021, la plus forte qu'ait connue le Hainaut, portée par des porteurs de projet souvent issus d'autres métiers.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "bio",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Certification bio effective à vérifier (annonce de conversion) ; encépagement détaillé.",
+      "source": "marcvanel.be ; facebook.com/domainedelonguesault"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-de-la-fleur-de-lin",
+      "nom": "Vignoble de la Fleur de Lin",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Obigies (Pecq)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares et demi plantés en 2019 à Obigies, dans la commune de Pecq, sur les coteaux de l'Escaut, en cépages résistants.\n\nLe nom renvoie au lin, dont la culture et le rouissage ont fait pendant des siècles la richesse de cette partie du Tournaisis, le long de l'Escaut et de la Lys. La reconversion d'une terre de culture industrielle en vignoble est un motif récurrent du Hainaut occidental, où la vigne arrive sur des sols limoneux profonds sans tradition viticole. Encépagement, couleurs et volumes restent à documenter, de même que le lien éventuel avec une seconde parcelle recensée à Obigies. Le domaine appartient à la vague de plantations qui suit 2018 dans le Tournaisis, où quatre vignobles de plus de deux hectares sont apparus en trois ans, sur des terres jusque-là vouées aux grandes cultures.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes à documenter ; lien éventuel avec la parcelle de 0,15 ha recensée séparément à Obigies.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-du-grand-rejet",
+      "nom": "Domaine du Grand Rejet",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Havinnes et Gaurain-Ramecroix (Tournai)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et quatre-vingt-cinq ares répartis entre Havinnes et Gaurain-Ramecroix, dans l'agglomération tournaisienne, plantés en 2015 en cépages résistants. La seconde parcelle porte le nom de Terres de Four à chaux.\n\nCe toponyme dit tout du lieu : Gaurain-Ramecroix est l'un des grands sites d'extraction du calcaire carbonifère de Belgique, avec des carrières et une industrie cimentière qui structurent le paysage depuis le XIXe siècle. La vigne y pousse sur un sous-sol calcaire franc, argument que le domaine revendique. La structure, exploitée sous deux noms pour deux sites, reste à clarifier. Les deux parcelles totalisent moins de deux hectares mais bénéficient d'un environnement pédologique peu banal en Belgique : un calcaire franc à faible profondeur, comparable par la nature du substrat à ce que l'on trouve dans la vallée de la Sambre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Structure à clarifier : deux sites exploités sous deux noms (Grand Rejet et Terres de Four à chaux). Encépagement à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-dieu-des-monts",
+      "nom": "Vignoble Dieu des Monts",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Frasnes-lez-Anvaing",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares plantés en 2012 à Frasnes-lez-Anvaing, mêlant cépages classiques et résistants, dans un secteur de collines boisées du Hainaut occidental.\n\nLe domaine se présente comme un jardin viticole plutôt que comme une exploitation, ce qui correspond à sa dimension. Il appartient à la génération intermédiaire du vignoble hennuyer, celle des années 2010-2012, antérieure à la vague de plantations qui suit 2018 : à cette date, les cépages résistants commençaient tout juste à s'imposer en Wallonie, ce qui explique les encépagements mixtes de cette période. Frasnes-lez-Anvaing se situe à la limite du Hainaut et de la Flandre occidentale, dans un paysage de buttes boisées qui prolonge le Pays des Collines. La production, très limitée, part en vente directe. Encépagement, couleurs produites et volumes restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-clos-lojerau",
+      "nom": "Clos LoJerAu",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Flobecq",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vignoble fondé en 2005 à Flobecq, dans le Pays des Collines, en cépages classiques, agrandi progressivement depuis sa création.\n\nC'est l'un des rares domaines hennuyers antérieurs à la vague des années 2010, et l'un des plus anciens du Hainaut occidental. Le nom, composé de syllabes prélevées sur les prénoms des fondateurs, est un usage fréquent chez les petits domaines belges. Flobecq occupe l'une des positions les plus élevées du Pays des Collines, à la limite linguistique, dans un paysage de bois et de pentes courtes qui tranche avec les plaines limoneuses environnantes. Surface actuelle et encépagement à documenter. La production, en blanc et en rouge, se vend au domaine, qui pratique les visites et figure parmi les vignobles recensés par le tourisme wallon.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie"
+      ],
+      "a_verifier": "Surface actuelle (0,25 ha en 2022, extension annoncée) et encépagement à documenter.",
+      "source": "closlojerau.com ; visitwallonia.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-experimental-du-carah",
+      "nom": "Vignoble expérimental du CARAH",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Ath",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Parcelle expérimentale de vingt ares plantée en 2016 à Ath par le Centre agronomique de recherches appliquées du Hainaut, mêlant cépages classiques et résistants.\n\nSa vocation n'est pas commerciale mais technique : essais variétaux, observation du comportement sanitaire, conseil aux vignerons de la province. Ce type de dispositif est important dans un vignoble aussi jeune, où la plupart des exploitants se sont installés sans formation viticole ni antériorité familiale, et où les références locales sur le comportement des cépages font défaut. La liste des variétés en essai mériterait d'être documentée : elle indique ce qui sera planté dans la province dans dix ans. Le CARAH assure par ailleurs des avertissements agricoles et un appui technique aux producteurs de la province, ce qui donne à cette parcelle une fonction de référence régionale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Liste des cépages testés et existence d'une mise en bouteille à documenter.",
+      "source": "carah.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-de-labbaye-des-pres",
+      "nom": "Vignoble de l'Abbaye des Prés",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Pays des Collines et Tournaisis",
+      "commune": "Mont-de-l'Enclus",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2020 au Mont-de-l'Enclus, l'une des rares hauteurs du Hainaut occidental, à la frontière de la Flandre orientale.\n\nLe site est intéressant par sa position : le mont culmine à un peu plus de cent quarante mètres et appartient à la même ligne de collines que le Kluisberg, côté flamand, où la vigne est également présente. C'est l'un des rares cas belges où un même relief porte des vignobles de part et d'autre de la frontière linguistique. Encépagement, couleurs et premier millésime restent à documenter. Le nom renvoie à une ancienne abbaye du secteur. La position en hauteur, rare dans cette partie de la province, donne au site un intérêt réel en matière d'exposition et de drainage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-de-la-portelette",
+      "nom": "Domaine de la Portelette",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "commune": "Lobbes",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares et soixante-dix ares plantés en 2018 à Lobbes, dans la vallée de la Sambre, en cépages résistants et classiques mêlés. Le projet est conduit en permaculture, approche encore isolée dans le vignoble belge.\n\nLe lieu a une particularité administrative utile : la commune se trouve dans le bassin hydrographique de la Sambre, aire de l'AOP Côtes de Sambre et Meuse, définie en 2004 non par des limites provinciales mais par les bassins et sous-bassins hydrographiques wallons. Les domaines de la Sambre hennuyère peuvent donc en théorie y prétendre, ce qui distingue nettement ce secteur du reste de la province, où seules les appellations transversales sont accessibles. Lobbes est connue pour sa collégiale Saint-Ursmer, l'un des plus anciens édifices religieux de Belgique, et pour son abbaye disparue, qui possédait des vignes au haut Moyen Âge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement détaillé, certification éventuelle et gamme à documenter.",
+      "source": "domainedelaportelette.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-du-blanc-caillou",
+      "nom": "Domaine du Blanc Caillou",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "commune": "Landelies (Montigny-le-Tilleul)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi planté en 2018 à Landelies, sur les coteaux de la Sambre en aval de Charleroi, en cépages résistants.\n\nLe nom renvoie au sous-sol : on est ici sur les calcaires carbonifères qui affleurent tout le long de la vallée, exploités depuis des siècles en carrières et en fours à chaux. Les versants de la Sambre offrent, avec ceux de la Meuse namuroise, les pentes les plus marquées du vignoble belge — un relief réel, très différent des plateaux limoneux qui dominent ailleurs dans la province. Le domaine relève du bassin de la Sambre, donc de l'aire de l'AOP Côtes de Sambre et Meuse. Landelies fait face à l'abbaye d'Aulne, autre grand site monastique de la vallée, où la vigne était cultivée avant le refroidissement climatique du XVIIe siècle. Encépagement et volumes restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes à documenter.",
+      "source": "domainedublanccaillou.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-de-saint-martin",
+      "nom": "Vignoble de Saint Martin",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "commune": "Merbes-le-Château",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2009 à Merbes-le-Château, en cépages résistants, commercialisés sous la marque Le Dit-Vin.\n\nLe domaine fait partie des rares vignobles hennuyers antérieurs à 2010, à une époque où les cépages résistants n'étaient pas encore le choix par défaut en Wallonie. La commune borde la Sambre, à la frontière française, dans un secteur de vallée encaissée où le calcaire carbonifère affleure. L'articulation entre le nom du vignoble et la marque commerciale, ainsi que l'encépagement et les volumes, restent à documenter. La vallée de la Sambre offre ici des versants bien exposés et une amplitude thermique amortie par la rivière, deux facteurs qui expliquent que la vigne y soit revenue avant d'autres secteurs de la province. Le domaine relève du bassin de la Sambre, donc de l'aire de l'AOP Côtes de Sambre et Meuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement et volumes non publiés ; articulation entre le nom du domaine et la marque.",
+      "source": "leditvin.wordpress.com ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-les-vignerons-de-nalinnes",
+      "nom": "Les Vignerons de Nalinnes",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "commune": "Nalinnes (Ham-sur-Heure-Nalinnes)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares plantés en 2017 à Nalinnes, au sud de Charleroi, en cépages résistants, dans un cadre associatif.\n\nLe format collectif — une association de vignerons amateurs exploitant une parcelle commune — est fréquent dans l'ancienne région industrielle, où la vigne s'installe souvent sur des terrains communaux ou sur d'anciennes friches. Il produit peu, mais joue un rôle de formation et de sociabilité qui explique la densité de micro-vignobles autour de Charleroi. Encépagement, couleurs et structure juridique restent à documenter. Le village se situe sur les premiers reliefs au sud de la Sambre, à la transition entre le sillon industriel et le Condroz hennuyer, sur des sols limoneux à substrat schisteux. La production reste confidentielle et n'est pas commercialisée hors du cercle des membres et du circuit local.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et structure juridique à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-clos-des-zouaves",
+      "nom": "Clos des Zouaves",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Vallée de la Sambre et Thudinie",
+      "commune": "Thuin",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-deux ares plantés en 2001 sur les hauteurs de Thuin, en cépages résistants : l'un des plus anciens vignobles du Hainaut contemporain, contemporain du lancement de Ruffus.\n\nLe lieu s'y prête historiquement. Thuin est célèbre pour ses jardins suspendus, terrasses étagées sur le versant qui domine la Sambre, soutenues par des murets de pierre sèche et classées au patrimoine wallon : une tradition de culture de pente qui remonte au Moyen Âge et dont la vigne faisait partie. Le domaine relève du bassin de la Sambre, donc de l'aire de l'AOP Côtes de Sambre et Meuse. Le nom renvoie à un épisode militaire local. La production, de quelques centaines de bouteilles, se vend au domaine ; l'intérêt du site tient surtout à sa position et à son antériorité dans une province où presque tout date d'après 2015.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes à documenter.",
+      "source": "closdeszouaves.org ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-coteaux-des-deux-tilleuls",
+      "nom": "Coteaux des deux Tilleuls",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Région du Centre",
+      "commune": "Écaussinnes",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares plantés en 2021 à Écaussinnes, mêlant cépages classiques et résistants : l'une des plantations les plus étendues de la vague récente dans la région du Centre.\n\nLe secteur est celui de la pierre bleue — le petit granit, calcaire du Carbonifère extrait à Écaussinnes et à Feluy depuis des siècles — dont l'exploitation a façonné le paysage et l'économie locale. La reconversion d'une région industrielle et carrière en zone viticole est le trait le plus frappant du Centre hennuyer, où toutes les plantations sont postérieures à 2015, à l'exception de celle de Chapelle-lez-Herlaimont. La plantation, très récente, n'a pas encore de recul sur les millésimes : une vigne mise en terre en 2021 donne sa première vraie récolte vers 2024 et ses premières bouteilles abouties un ou deux ans plus tard. Encépagement détaillé et gamme restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, premier millésime et gamme à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-cepterra",
+      "nom": "CepTerra",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Région du Centre",
+      "commune": "Chapelle-lez-Herlaimont",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Chapelle-lez-Herlaimont dont l'origine remonterait à 1972, ce qui en ferait de loin le plus ancien vignoble du Hainaut — exactement contemporain des premières plantations de la Houwaartseberg, dans le Hageland, et donc du redémarrage de la viticulture belge.\n\nL'information mérite vérification avant d'être exploitée : elle provient d'un recensement fiable, mais ne dit pas s'il y a eu continuité d'exploitation depuis cette date ou replantation récente sous le nom CepTerra. Si l'antériorité se confirme, le domaine change de statut dans le corpus : il devient le témoin wallon d'une reprise viticole qu'on attribue habituellement au seul Hageland. Cépages classiques. La commune se situe dans la région du Centre, sur les limons du plateau, à quelques kilomètres du sillon industriel Sambre-et-Meuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie"
+      ],
+      "a_verifier": "Antériorité à confirmer (1972 selon Marc Vanel) : continuité d'exploitation depuis cette date, ou replantation récente sous le nom CepTerra ? Encépagement à documenter.",
+      "source": "cepterra.be ; marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-vignoble-des-rivages",
+      "nom": "Vignoble des Rivages",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Région du Centre",
+      "commune": "Feluy (Seneffe)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2018 à Feluy, dans la commune de Seneffe, en cépages résistants.\n\nFeluy est l'un des grands sites d'extraction de la pierre bleue du Hainaut, aux côtés d'Écaussinnes et de Soignies : le sous-sol est un calcaire carbonifère massif, et les carrières marquent le paysage. La commune est aussi connue pour sa zone pétrochimique, ce qui donne la mesure du contraste — la vigne s'installe ici dans un environnement industriel, sur de petites parcelles résiduelles. Encépagement et volumes restent à documenter. Le domaine appartient à la vague de plantations postérieures à 2015 qui a fait passer le Hainaut de quelques vignobles à près de quarante. Ces micro-parcelles ne pèsent rien en surface mais représentent la majorité des exploitations recensées dans la province, et leur multiplication est le meilleur indicateur de l'ancrage local de la viticulture wallonne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-du-garde-leuw",
+      "nom": "Domaine du Garde Leuw",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Botte du Hainaut",
+      "commune": "Sivry (Sivry-Rance)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vignoble pédagogique d'un hectare planté en 2019 à Sivry, en cépages classiques, dans la Botte du Hainaut.\n\nSa vocation est la formation et la démonstration autant que la production, ce qui en fait le pendant hennuyer de la parcelle expérimentale du CARAH, à l'autre bout de la province. Le secteur est l'un des plus difficiles de Wallonie pour la vigne : on approche de la Fagne, avec des altitudes plus élevées, des sols schisteux et un climat sensiblement plus rude que dans le Haut-Pays. L'existence d'une mise en bouteille commercialisée reste à confirmer. Sivry-Rance se situe à l'extrême sud de la province, dans un secteur de forêts, d'étangs et de prairies. Le nom renvoie à un lieu-dit local. Encépagement et existence d'une production commercialisée restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, statut du vignoble pédagogique et existence d'une mise en bouteille commercialisée à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-hainaut-prod-domaine-du-longchamp",
+      "nom": "Domaine du Longchamp",
+      "type": "domaine",
+      "region": "Hainaut",
+      "sous_region": "Botte du Hainaut",
+      "commune": "Bourlers (Chimay)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quarante ares plantés en 2020 à Bourlers, près de Chimay, en cépages résistants : l'un des très rares vignobles de la Botte du Hainaut.\n\nLa position est extrême à l'échelle belge. On se trouve à l'entrée de la Fagne, sur des terrains schisteux et argileux, à une altitude et sous une pluviométrie qui rendent la maturation nettement plus incertaine que dans le bassin de Mons, à cinquante kilomètres de là. Le choix des cépages résistants n'y est pas un confort mais une condition. Le secteur est surtout connu pour ses bières d'abbaye ; la vigne y reste anecdotique et le domaine, très récent, a valeur de test. Bourlers est une ancienne commune de Chimay, au sud de la Fagne, dans un paysage de bocage et de forêts. La production, très réduite, se vend au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "marcvanel.be ; facebook.com"
+    }
+  ]
+}

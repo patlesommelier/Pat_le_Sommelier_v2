@@ -1,0 +1,711 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "rheinhessen",
+  "region_label": "Rheinhessen (Allemagne)",
+  "source_file": "terroirs_rheinhessen_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 28,
+  "items": [
+    {
+      "id": "de-rheinhessen-terr-westhofener-morstein",
+      "nom": "Westhofener Morstein",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "180-280 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru emblématique du Wonnegau, longue pente sud d'argilo-calcaire profond ; l'un des plus grands terroirs de Riesling d'Allemagne (Keller, Wittmann).",
+      "notes_objectives": "Le Westhofener Morstein est considéré comme le plus grand terroir de la Rheinhessen et l'un des plus grands crus de Riesling sec d'Allemagne. Vaste pente sud du Wonnegau, il repose sur un sol profond de marne argilo-calcaire (Tonmergel) sur un sous-sol calcaire, qui retient l'eau et donne aux vins puissance, densité et longueur. Le terroir donne des Riesling profonds, salins et d'une grande capacité de garde, parmi les plus complets du pays. Il est magnifié par les deux plus grands domaines de la région, Keller et Wittmann, ainsi que par Seehof. Classé au sommet de la hiérarchie de la Rheinhessen, le Morstein est l'emblème de la renaissance de la région et l'un des terroirs de Riesling les plus prestigieux d'Allemagne. Le Morstein est une vaste pente exposée au sud-est dont le sous-sol calcaire, riche en eau, permet à la vigne de résister aux étés secs tout en gardant de la fraîcheur — d'où des vins à la fois puissants et tendus, d'une longueur remarquable. C'est cette alliance rare qui en fait un terroir d'exception. Klaus-Peter Keller et Philipp Wittmann (en biodynamie) en signent des Grosses Gewächs comptant parmi les Riesling secs les plus recherchés et les plus chers d'Allemagne, dont les prix aux enchères rivalisent avec ceux de grands bourgognes blancs. Symbole de la renaissance spectaculaire de la Rheinhessen — passée en une génération du vin de masse aux plus grands secs du pays —, le Morstein est devenu une référence mondiale du Riesling. Mentionné dès le XIIIe siècle, le Morstein était déjà reconnu au Moyen Âge comme un terroir supérieur, bien avant la longue éclipse qui frappa la Rheinhessen au XXe siècle. Sa réhabilitation par Keller et Wittmann a valeur de symbole pour toute la région. Les Riesling du Morstein se distinguent par une profondeur saline, une tension et une longueur qui les rapprochent des plus grands vins blancs du monde, et leur garde se compte en décennies. Pour l'amateur, le nom de Morstein est aujourd'hui synonyme de l'un des sommets absolus du Riesling sec allemand, et la preuve éclatante que la Rheinhessen, longtemps moquée, abrite des terroirs de tout premier plan. Pour beaucoup d'amateurs et de critiques, le Morstein est aujourd'hui le plus grand terroir de Riesling sec d'Allemagne avec quelques crus de la Mosel et du Rheingau — un statut impensable il y a seulement trente ans, et le symbole le plus éclatant de la renaissance de la Rheinhessen.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-pettenthal",
+      "nom": "Niersteiner Pettenthal",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-180 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Coteau le plus escarpé du Roter Hang, sur ardoise rouge surplombant le Rhin ; Riesling salins et profonds (Kühling-Gillot, Gunderloch, Schätzel, Keller).",
+      "notes_objectives": "Le Niersteiner Pettenthal est l'un des plus grands terroirs du Roter Hang, la célèbre côte d'ardoise rouge qui surplombe le Rhin entre Nierstein et Nackenheim. C'est le coteau le plus escarpé de cette pente, sur un sol de schiste argileux rouge (Rotliegend) ferrugineux. Cette ardoise rouge, qui emmagasine la chaleur, donne des Riesling profonds, salins et d'une grande minéralité, à la garde remarquable. Le terroir est magnifié par Kühling-Gillot, Gunderloch, Schätzel et St. Antony. Classé au sommet de la hiérarchie de la Rheinhessen, le Pettenthal illustre la grandeur des Riesling d'ardoise rouge de la Rheinterrasse. Le Roter Hang est une curiosité géologique : une falaise d'ardoise rouge ferrugineuse (le Rotliegendes) qui plonge vers le Rhin, unique en Allemagne. Le Pettenthal en est le coteau le plus raide, où la roche rouge et le fleuve, qui réfléchit la lumière, créent un microclimat chaud propice à de grands Riesling. Carolin Spanier-Gillot (Kühling-Gillot, en biodynamie), Johannes Hasselbach (Gunderloch) et Kai Schätzel y signent des Riesling d'une salinité et d'une profondeur remarquables, où l'ardoise rouge imprime une signature épicée et minérale inimitable. Classé parmi les plus grands terroirs de la Rheinhessen, le Pettenthal illustre la magie singulière de la côte rouge de Nierstein. Le spectacle du Roter Hang, falaise rouge plongeant vers le Rhin, compte parmi les paysages viticoles les plus saisissants d'Allemagne, et le Pettenthal en occupe le cœur le plus escarpé. La rareté de cette ardoise rouge ferrugineuse en fait un terroir unique au monde. Ses Riesling, d'une salinité épicée et d'une profondeur remarquables, vieillissent magnifiquement et comptent parmi les plus typés de la région. Porté par une nouvelle génération talentueuse et souvent en biodynamie, le Pettenthal est devenu l'un des grands noms du Riesling allemand, emblème de la renaissance de la côte rouge de Nierstein. Pour qui découvre la côte rouge, le Pettenthal est le terroir à goûter en priorité : l'expression la plus pure et la plus profonde du Riesling d'ardoise rouge, dans l'un des plus beaux paysages du vignoble allemand.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-nackenheimer-rothenberg",
+      "nom": "Nackenheimer Rothenberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-170 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Joyau du Roter Hang à Nackenheim, sur ardoise rouge ferrugineuse ; terroir de prédilection de Gunderloch, Riesling de garde d'une grande minéralité.",
+      "notes_objectives": "Le Nackenheimer Rothenberg est le joyau du Roter Hang à Nackenheim, sur un sol d'ardoise rouge ferrugineuse particulièrement pur. Ce coteau escarpé, surplombant le Rhin, est l'un des plus beaux terroirs de Riesling d'Allemagne. L'ardoise rouge donne des Riesling d'une grande minéralité, profonds et de longue garde, à la salinité affirmée. Le terroir est le fief du domaine Gunderloch, qui en est l'interprète emblématique, aux côtés de Kühling-Gillot. Classé au sommet de la hiérarchie de la Rheinhessen, le Rothenberg illustre, aux côtés du Pettenthal, l'excellence des Riesling de la côte rouge. À Nackenheim, le Rothenberg offre la concentration la plus pure d'ardoise rouge de tout le Roter Hang : un sol ferrugineux, friable, qui donne des Riesling d'une minéralité saline et fumée immédiatement reconnaissable. La pente, raide et plongeant vers le fleuve, est spectaculaire. Le domaine Gunderloch, qui possède la part du lion du coteau, en a fait sa cuvée phare, un Riesling de garde d'une grande noblesse ; Kühling-Gillot en livre aussi une lecture remarquable. Classé parmi les plus grands terroirs de la Rheinhessen, le Rothenberg illustre, aux côtés du Pettenthal voisin, la quintessence des Riesling d'ardoise rouge de la Rheinterrasse. Le Rothenberg, dont le nom signifie « montagne rouge », offre l'image la plus pure de la côte d'ardoise rouge : une pente vertigineuse où la roche ferrugineuse affleure, plongeant vers le fleuve. C'est l'un des terroirs les plus spectaculaires de la Rheinhessen. Ses Riesling, d'une minéralité saline et fumée intense, comptent parmi les plus profonds et les plus typés du Roter Hang, et atteignent des prix élevés en raison de leur rareté et de leur qualité. Indissociable du domaine Gunderloch, le Rothenberg est, avec le Pettenthal, l'un des deux joyaux de la côte rouge et l'un des grands terroirs de Riesling d'Allemagne. Indissociable du domaine Gunderloch, le Rothenberg demeure, pour les amateurs, l'un des grands joyaux de la côte rouge et l'un des terroirs les plus spectaculaires de toute la Rheinhessen.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-dalsheimer-hubacker",
+      "nom": "Dalsheimer Hubacker",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru calcaire de Flörsheim-Dalsheim, longue maturation ; l'un des sommets du Riesling de Keller, riche et salin.",
+      "notes_objectives": "Le Dalsheimer Hubacker est l'un des plus grands terroirs du Wonnegau, à Flörsheim-Dalsheim. Son sol de marne argilo-calcaire sur calcaire donne des Riesling riches, salins et d'une grande capacité de garde. Le terroir est indissociable du domaine Keller, qui en a fait l'un de ses plus grands crus : ses Riesling du Hubacker comptent parmi les plus recherchés d'Allemagne. Classé au sommet de la hiérarchie de la Rheinhessen, le Hubacker illustre la grandeur des terroirs calcaires du Wonnegau et le génie du domaine Keller. Situé dans le Wonnegau intérieur, loin du Rhin, le Hubacker repose sur une marne argilo-calcaire profonde qui donne des Riesling riches, structurés et d'une grande longévité, à la trame saline serrée. C'est l'un des terroirs où le Riesling sec atteint son plus haut niveau de densité. Klaus-Peter Keller en a fait l'un de ses crus emblématiques : son Riesling Grosses Gewächs du Hubacker compte, millésime après millésime, parmi les plus grands secs d'Allemagne, recherché par les amateurs du monde entier. Classé parmi les plus grands terroirs de la Rheinhessen, le Hubacker illustre la grandeur des calcaires du Wonnegau et l'aura du domaine Keller, locomotive de la région. Le Hubacker doit beaucoup au phénomène Keller : en quelques décennies, ce domaine du Wonnegau intérieur, longtemps loin des projecteurs, est devenu l'un des plus admirés et des plus recherchés au monde, et le Hubacker l'un de ses crus signatures. Ses Riesling, d'une densité saline et d'une longueur exceptionnelles, peuvent vieillir pendant des décennies et comptent parmi les plus grands secs d'Allemagne. La demande mondiale en fait des vins rares et chers. Le Hubacker illustre, mieux qu'aucun autre, comment un grand vigneron a hissé un terroir calcaire du Wonnegau jusqu'au sommet de la hiérarchie du Riesling. Pour l'amateur, le Hubacker de Keller est devenu l'un des noms mythiques du Riesling sec allemand, dont chaque millésime est attendu et recherché dans le monde entier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|riesling.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-westhofener-kirchspiel",
+      "nom": "Westhofener Kirchspiel",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "170-260 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru de Westhofen, marne argilo-calcaire à squelette calcaire ; Riesling racés et tendus (Keller, Wittmann, Seehof).",
+      "notes_objectives": "Le Westhofener Kirchspiel est l'un des grands crus du Wonnegau, à Westhofen. Son sol de marne argilo-calcaire à squelette calcaire donne des Riesling racés, tendus et profonds. Le terroir est magnifié par les domaines Keller, Wittmann et Seehof, dont les Grosses Gewächs comptent parmi les références de la région. Classé au sommet de la hiérarchie de la Rheinhessen, le Kirchspiel illustre, aux côtés du Morstein voisin, l'excellence des grands terroirs calcaires de Westhofen. Le Kirchspiel, sur une pente sud de Westhofen, repose sur une marne argilo-calcaire à fort squelette calcaire, qui donne des Riesling plus tendus et plus aériens que ceux du Morstein voisin, d'une grande finesse minérale. Keller, Wittmann et Seehof y signent des Grosses Gewächs racés, qui comptent parmi les meilleurs secs de la région. Avec le Morstein et l'Aulerde, le Kirchspiel forme le trio des grands crus de Westhofen, épicentre de la renaissance du Wonnegau. Classé parmi les plus grands terroirs de la Rheinhessen, le Kirchspiel illustre la finesse des Riesling de calcaire de Westhofen. Le Kirchspiel offre, par rapport au Morstein voisin, une expression plus aérienne et plus tendue du calcaire de Westhofen, ce qui en fait un complément idéal au sein des grands crus du village. Sa pente sud et son squelette calcaire assurent maturité et fraîcheur. Keller, Wittmann et Seehof y signent des Grosses Gewächs d'une grande finesse, salués par la critique internationale. Le Kirchspiel illustre la richesse de Westhofen, dont les trois grands crus — Morstein, Kirchspiel et Aulerde — composent l'un des plus beaux ensembles de terroirs de Riesling sec d'Allemagne, au cœur de la renaissance du Wonnegau. Avec le Morstein et l'Aulerde, il fait de Westhofen le village emblématique du grand Riesling sec de la Rheinhessen contemporaine.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|riesling.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-westhofener-brunnenhaeuschen",
+      "nom": "Westhofener Brunnenhäuschen",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-280 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru d'altitude de Westhofen (parcelle « Abtserde »), calcaire ancien ; Riesling de très longue garde (Keller, Wittmann).",
+      "notes_objectives": "Le Westhofener Brunnenhäuschen est l'un des grands crus d'altitude du Wonnegau, à Westhofen. Il abrite la parcelle d'élite « Abtserde », sur un calcaire ancien particulièrement pur, qui donne des Riesling d'une grande profondeur et d'une très longue garde. Le terroir est magnifié par les domaines Keller et Wittmann, dont les cuvées issues de l'Abtserde figurent parmi les plus grands Riesling secs d'Allemagne. Classé au sommet de la hiérarchie de la Rheinhessen, le Brunnenhäuschen illustre la quintessence des terroirs calcaires de Westhofen. Le Brunnenhäuschen, sur les hauteurs de Westhofen, abrite l'« Abtserde », une parcelle d'argilo-calcaire ancien d'une pureté exceptionnelle, dont le nom rappelle qu'elle appartenait jadis à une abbaye. C'est l'un des terroirs les plus tardifs et les plus profonds du Wonnegau. Keller (avec sa cuvée « Abts E ») et Wittmann en tirent des Riesling secs d'une complexité et d'une longévité remarquables, parmi les plus grands d'Allemagne. La rareté de ces vins en fait des objets de culte. Classé parmi les plus grands terroirs de la Rheinhessen, le Brunnenhäuschen illustre la quintessence des calcaires d'altitude de Westhofen. L'Abtserde, parcelle d'élite du Brunnenhäuschen, repose sur un calcaire ancien d'une pureté rare, qui donne des Riesling d'une profondeur, d'une salinité et d'une longévité hors du commun, parmi les plus tardifs et les plus complexes du Wonnegau. Keller, avec sa cuvée « Abts E », et Wittmann en tirent des vins d'une rareté qui en fait des objets de culte, recherchés par les collectionneurs du monde entier. Le Brunnenhäuschen illustre la quintessence des calcaires d'altitude de Westhofen et la quête de précision parcellaire qui caractérise les plus grands domaines de la Rheinhessen. Sa parcelle de l'Abtserde compte, pour les connaisseurs, parmi les terroirs les plus précieux et les plus confidentiels du Riesling sec allemand.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "calcaire",
+        "abtserde",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|riesling.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-siefersheimer-heerkretz",
+      "nom": "Siefersheimer Heerkretz",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord-Ouest)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-270 m",
+      "sols": "porphyre volcanique (rhyolite)",
+      "caracteristiques_rapides": "Grand cru volcanique de Siefersheim, sur porphyre ; Riesling minéraux et tendus, terroir phare de Wagner-Stempel.",
+      "notes_objectives": "Le Siefersheimer Heerkretz est le plus grand terroir du nord-ouest de la Rheinhessen, à Siefersheim. Fait rare dans la région, il repose sur un sol de porphyre volcanique (rhyolite), qui donne aux Riesling une minéralité tendue et une grande énergie. Le terroir, frais et bien exposé, donne des Riesling salins, profonds et de longue garde. Il est le fief du domaine Wagner-Stempel, son interprète emblématique. Classé au sommet de la hiérarchie de la Rheinhessen, le Heerkretz illustre la singularité des terroirs volcaniques du nord-ouest de la région. À Siefersheim, à l'extrémité nord-ouest de la Rheinhessen, le Heerkretz repose sur un sol de porphyre volcanique (rhyolite), rarissime dans la région, qui donne aux Riesling une minéralité tendue et une énergie particulières, distinctes des calcaires et des ardoises rouges. Daniel Wagner, au domaine Wagner-Stempel, en a fait l'un des plus grands terroirs de la Rheinhessen, avec des Riesling secs d'une pureté et d'une longueur remarquables, qui ont révélé le potentiel de ce secteur longtemps méconnu. Classé parmi les plus grands terroirs de la région, le Heerkretz illustre la diversité géologique de la Rheinhessen et la grandeur de ses terroirs volcaniques. Le porphyre volcanique du Heerkretz, vestige d'un passé géologique ancien, est une rareté dans une région dominée par le calcaire, l'ardoise rouge et le lœss. Il imprime aux Riesling une minéralité tendue et une énergie particulières, distinctes de tout le reste de la Rheinhessen. Daniel Wagner a fait du Heerkretz l'un des plus grands terroirs de la région, avec des Riesling secs d'une pureté et d'une longueur remarquables, salués par la critique. Le Heerkretz illustre la fabuleuse diversité géologique de la Rheinhessen, plus grande région viticole d'Allemagne, et la capacité de ses vignerons à révéler des terroirs longtemps oubliés. Révélé par Wagner-Stempel, il incarne la capacité de la Rheinhessen à faire surgir, de terroirs oubliés, des Riesling de rang national.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "volcanique",
+        "porphyre",
+        "vdp-grosse-lage",
+        "rheinhessen"
+      ],
+      "source": "vdp.de|originalverkorkt"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-hipping",
+      "nom": "Niersteiner Hipping",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-170 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Grand cru du Roter Hang sur ardoise rouge ; Riesling amples et salins (Kühling-Gillot, St. Antony, Schätzel).",
+      "notes_objectives": "Le Niersteiner Hipping est l'un des grands crus du Roter Hang, sur l'ardoise rouge surplombant le Rhin à Nierstein. Bien exposé, il donne des Riesling amples et salins, à la minéralité caractéristique de la côte rouge. Le terroir est magnifié par Kühling-Gillot, St. Antony et Schätzel. Classé en grand cru, le Hipping illustre la finesse et la profondeur des Riesling d'ardoise rouge de la Rheinterrasse. Vaste coteau d'ardoise rouge surplombant le Rhin, le Hipping bénéficie de la chaleur réfléchie par le fleuve et donne des Riesling amples, salins et profonds. Kühling-Gillot, St. Antony et Schätzel en signent de remarquables cuvées. Le cru illustre, aux côtés du Pettenthal et de l'Ölberg, la grandeur de la côte rouge de Nierstein, l'un des plus beaux paysages viticoles d'Allemagne. Apprécié pour l'ampleur et la générosité de ses Riesling, le Hipping compte parmi les coteaux les plus réputés de la côte rouge. Sa belle exposition au Rhin et son ardoise ferrugineuse donnent des vins mûrs et salins, de belle garde. Il participe pleinement au prestige retrouvé de Nierstein, dont le Roter Hang est l'un des plus beaux terroirs de Riesling du pays. Il demeure l'un des grands coteaux les plus réputés de la côte rouge de Nierstein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-oelberg",
+      "nom": "Niersteiner Ölberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-180 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Grand cru du Roter Hang, ardoise rouge et un peu de calcaire ; Riesling profonds (Kühling-Gillot, St. Antony).",
+      "notes_objectives": "Le Niersteiner Ölberg est l'un des grands crus du Roter Hang, à Nierstein, sur l'ardoise rouge mêlée d'un peu de calcaire. Bien exposé, il donne des Riesling profonds et salins. Le terroir est exploité par Kühling-Gillot et St. Antony, parmi d'autres. Classé en grand cru, l'Ölberg illustre la grandeur des terroirs d'ardoise rouge de Nierstein. Sur l'ardoise rouge mêlée d'un peu de calcaire, l'Ölberg donne des Riesling profonds et salins, à la minéralité épicée du Roter Hang. Kühling-Gillot et St. Antony en sont de beaux interprètes. Le cru compte parmi les grands coteaux d'ardoise rouge de Nierstein, où le Riesling atteint une expression saline et minérale inimitable. Réputé pour la profondeur de ses vins, l'Ölberg compte parmi les grands coteaux d'ardoise rouge de Nierstein. Ses Riesling, salins et épicés, illustrent la signature minérale inimitable du Roter Hang. Magnifié par les meilleurs domaines de Nierstein, il participe à la renaissance qualitative de cette côte spectaculaire surplombant le Rhin. Il compte parmi les grands terroirs d'ardoise rouge emblématiques de Nierstein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-orbel",
+      "nom": "Niersteiner Orbel",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-180 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Grand cru de Nierstein mêlant ardoise rouge et calcaire ; Riesling structurés (St. Antony).",
+      "notes_objectives": "Le Niersteiner Orbel est un grand cru de Nierstein mêlant ardoise rouge et calcaire. Bien exposé sur le Roter Hang, il donne des Riesling structurés et de garde. Le terroir est notamment exploité par le domaine St. Antony. Classé en grand cru, l'Orbel illustre la diversité des sols de la côte rouge de Nierstein. Mêlant ardoise rouge et calcaire, l'Orbel donne des Riesling structurés et de garde, à mi-chemin entre la salinité de la côte rouge et la finesse du calcaire. Le domaine St. Antony en est un interprète attitré. Le cru illustre la diversité des sols de la Rheinterrasse de Nierstein, où ardoise et calcaire se côtoient sur quelques coteaux. Le mariage de l'ardoise rouge et du calcaire confère à l'Orbel des Riesling à la fois salins et fins, qui synthétisent les deux grandes natures de sol de la Rheinterrasse. Le cru illustre la diversité des terroirs de Nierstein, où, sur quelques centaines de mètres, la géologie change et façonne des Riesling aux personnalités distinctes. Il illustre la diversité des sols de la Rheinterrasse, entre ardoise rouge et calcaire.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-brudersberg",
+      "nom": "Niersteiner Brudersberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-170 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Petit grand cru en monopole sur le Roter Hang, ardoise rouge ; Riesling racés du domaine St. Antony.",
+      "notes_objectives": "Le Niersteiner Brudersberg est un petit grand cru du Roter Hang, exploité en monopole par le domaine St. Antony. Sur l'ardoise rouge, en forte pente, il donne des Riesling racés et minéraux. Le terroir, confidentiel, produit des vins d'une grande pureté. Classé en grand cru, le Brudersberg illustre, par son statut de monopole, la logique parcellaire des grands crus du Roter Hang. Petit monopole du domaine St. Antony, le Brudersberg offre, sur son ardoise rouge en forte pente, des Riesling racés et minéraux d'une grande pureté. Son statut de monopole permet une expression très cohérente du terroir. Le cru illustre la logique parcellaire des grands crus du Roter Hang, où chaque coteau a sa personnalité. Joyau confidentiel exploité en monopole, le Brudersberg permet au domaine St. Antony une expression d'une grande cohérence sur son ardoise rouge en forte pente. Ses Riesling, racés et purs, illustrent la logique parcellaire qui fait la richesse du Roter Hang, où chaque coteau, voire chaque parcelle, possède sa propre signature. Monopole confidentiel, il incarne la logique parcellaire des grands crus du Roter Hang.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "ardoise-rouge",
+        "monopole",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-zehnmorgen",
+      "nom": "Niersteiner Zehnmorgen",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-160 m",
+      "sols": "ardoise rouge / schiste argileux rouge (Rotliegend)",
+      "caracteristiques_rapides": "Grand cru du Roter Hang sur ardoise rouge ; Riesling salins et tendus (St. Antony, Schätzel).",
+      "notes_objectives": "Le Niersteiner Zehnmorgen est un grand cru du Roter Hang, sur l'ardoise rouge de Nierstein. Bien exposé, il donne des Riesling salins et tendus. Le terroir est exploité par des domaines comme St. Antony et Schätzel. Classé en grand cru, le Zehnmorgen illustre la finesse des Riesling d'ardoise rouge de la Rheinterrasse. Sur l'ardoise rouge de Nierstein, le Zehnmorgen donne des Riesling salins et tendus, d'une belle finesse. St. Antony et Schätzel en sont de beaux interprètes. Le cru complète la remarquable série des grands crus du Roter Hang, qui font de Nierstein l'un des hauts lieux du Riesling d'ardoise rouge. Apprécié pour la finesse de ses Riesling salins, le Zehnmorgen complète la remarquable série des grands crus d'ardoise rouge de Nierstein. Magnifié par St. Antony et Schätzel, il confirme la place de Nierstein parmi les hauts lieux du Riesling de la Rheinhessen, sur la côte rouge surplombant le fleuve. Il confirme la place de Nierstein parmi les hauts lieux du Riesling d'ardoise rouge.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "ardoise-rouge",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-westhofener-aulerde",
+      "nom": "Westhofener Aulerde",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-220 m",
+      "sols": "sables et argiles sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru de Westhofen, plus sableux et précoce que le Morstein voisin ; Riesling charmeurs (Keller, Wittmann, Groebe).",
+      "notes_objectives": "Le Westhofener Aulerde est un grand cru du Wonnegau, à Westhofen, sur des sols de sables et d'argiles reposant sur le calcaire. Plus précoce et plus souple que le Morstein voisin, il donne des Riesling charmeurs et aromatiques. Le terroir est exploité par Keller, Wittmann et Groebe. Classé en grand cru, l'Aulerde illustre la diversité des terroirs de Westhofen, où sables et calcaire offrent des styles complémentaires. Plus sableux et plus précoce que le Morstein, l'Aulerde donne des Riesling charmeurs, au fruit éclatant, qui s'ouvrent plus vite tout en gardant de la profondeur. Keller, Wittmann et Groebe en signent de belles cuvées. Avec le Morstein et le Kirchspiel, l'Aulerde complète le trio des grands crus de Westhofen, illustrant la diversité de ses sols. Apprécié pour son fruit éclatant et sa relative précocité, l'Aulerde offre une porte d'entrée séduisante vers les grands crus de Westhofen. Magnifié par Keller, Wittmann et Groebe, il complète, aux côtés du Morstein et du Kirchspiel, le trio qui a fait de Westhofen l'épicentre de la renaissance du Wonnegau et du Riesling sec de la Rheinhessen. Il complète idéalement le Morstein et le Kirchspiel dans le trio des grands crus de Westhofen.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "sable",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|riesling.de"
+    },
+    {
+      "id": "de-rheinhessen-terr-dalsheimer-buergel",
+      "nom": "Dalsheimer Bürgel",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "170-250 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru calcaire de Dalsheim/Monsheim ; Riesling et Spätburgunder profonds (Keller, Battenfeld-Spanier).",
+      "notes_objectives": "Le Dalsheimer Bürgel est un grand cru calcaire du Wonnegau, à Flörsheim-Dalsheim. Son sol de marne argilo-calcaire donne des Riesling profonds, mais aussi de beaux Spätburgunder. Le terroir est exploité par les domaines Keller et Battenfeld-Spanier. Classé en grand cru, le Bürgel illustre la vocation des terroirs calcaires de Dalsheim pour le Riesling comme pour le Pinot Noir. Sur la marne argilo-calcaire de Dalsheim, le Bürgel donne des Riesling profonds mais aussi de remarquables Spätburgunder, fait notable dans une région vouée au Riesling. Keller et Battenfeld-Spanier en sont les grands interprètes. Le cru illustre la polyvalence des grands terroirs calcaires du Wonnegau. Polyvalent, le Bürgel se distingue par sa capacité à donner aussi bien de grands Riesling que de remarquables Spätburgunder, fait notable dans la région. Keller et Battenfeld-Spanier en sont les grands interprètes. Le cru illustre la richesse des terroirs calcaires de Dalsheim, dans le Wonnegau, capables d'exceller sur plusieurs cépages. Sa polyvalence Riesling-Spätburgunder en fait l'un des terroirs les plus complets du Wonnegau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-niederfloersheimer-frauenberg",
+      "nom": "Niederflörsheimer Frauenberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-230 m",
+      "sols": "marne argilo-calcaire (Tonmergel) sur sous-sol calcaire",
+      "caracteristiques_rapides": "Grand cru calcaire de Nieder-Flörsheim ; Riesling minéraux, terroir clé de Battenfeld-Spanier.",
+      "notes_objectives": "Le Niederflörsheimer Frauenberg est un grand cru calcaire du Wonnegau, à Nieder-Flörsheim. Son sol de marne argilo-calcaire donne des Riesling minéraux et salins. Le terroir est le fief du domaine Battenfeld-Spanier, son interprète emblématique. Classé en grand cru, le Frauenberg illustre la grandeur des terroirs calcaires du Wonnegau méridional. Fief du domaine Battenfeld-Spanier, conduit en biodynamie, le Frauenberg repose sur une marne argilo-calcaire qui donne des Riesling salins et profonds. H.O. Spanier en a fait l'un des grands crus du Wonnegau méridional. Le cru illustre la montée en puissance des terroirs calcaires du sud de la Rheinhessen. Conduit en biodynamie par H.O. Spanier (Battenfeld-Spanier), le Frauenberg est devenu l'un des grands crus du Wonnegau méridional. Sa marne argilo-calcaire donne des Riesling salins et profonds, d'une grande pureté. Le cru illustre la montée en puissance des terroirs calcaires du sud de la Rheinhessen, portée par une viticulture exigeante. Fief de Battenfeld-Spanier, il s'impose parmi les grands crus du Wonnegau méridional.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-moelsheimer-zellerweg-am-schwarzen-herrgott",
+      "nom": "Mölsheimer Zellerweg am Schwarzen Herrgott",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "calcaire (Zechstein)",
+      "caracteristiques_rapides": "Grand cru calcaire de Mölsheim sur roche du Zechstein ; Riesling salins et de garde (Battenfeld-Spanier).",
+      "notes_objectives": "Le Mölsheimer Zellerweg am Schwarzen Herrgott est un grand cru calcaire du Wonnegau, à Mölsheim, sur une roche du Zechstein particulière. Bien exposé, il donne des Riesling salins et de longue garde. Le terroir est exploité par le domaine Battenfeld-Spanier. Classé en grand cru, le Zellerweg illustre la singularité géologique des terroirs calcaires du sud du Wonnegau. Au nom singulier, le Zellerweg repose sur une roche calcaire du Zechstein, rare et particulière, qui donne aux Riesling une salinité et une tension marquées. Battenfeld-Spanier en est l'interprète attitré. Le cru illustre la richesse géologique du sud du Wonnegau, où des calcaires anciens façonnent des Riesling de longue garde. Son calcaire du Zechstein, géologie ancienne et rare, confère au Zellerweg une salinité et une tension singulières. Battenfeld-Spanier en a fait l'un de ses crus phares, avec des Riesling de longue garde. Le cru illustre la richesse géologique méconnue du sud du Wonnegau, où des roches anciennes façonnent des Riesling de grand caractère. Sa géologie singulière en fait l'un des terroirs les plus originaux du sud du Wonnegau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|originalverkorkt"
+    },
+    {
+      "id": "de-rheinhessen-terr-appenheimer-hundertgulden",
+      "nom": "Appenheimer Hundertgulden",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-250 m",
+      "sols": "calcaire (Kalkstein) et marnes",
+      "caracteristiques_rapides": "Grand cru calcaire du nord de la Rheinhessen ; Riesling tendus et salins (Knewitz, Bischel, Kühling-Gillot).",
+      "notes_objectives": "L'Appenheimer Hundertgulden est un grand cru calcaire du nord de la Rheinhessen, à Appenheim. Son sol de calcaire et de marnes donne des Riesling tendus et salins. Le terroir est exploité par des domaines comme Knewitz, Bischel et Kühling-Gillot. Classé en grand cru, le Hundertgulden illustre le potentiel des terroirs calcaires du nord de la région, en plein essor qualitatif. Dans le nord de la Rheinhessen, longtemps méconnu, le Hundertgulden a révélé tout le potentiel de ses calcaires grâce à une nouvelle génération de vignerons. Knewitz, Bischel et Kühling-Gillot y signent des Riesling tendus et salins. Le cru illustre l'essor qualitatif spectaculaire du nord de la région, autour d'Appenheim et de Gau-Algesheim. Devenu l'un des fers de lance du nord de la Rheinhessen, le Hundertgulden a vu sa réputation grandir grâce à des domaines comme Knewitz et Bischel, qui en tirent des Riesling tendus et salins. Le cru illustre l'essor qualitatif spectaculaire du nord de la région, longtemps cantonné au vin de masse et aujourd'hui en pleine renaissance. Il est l'un des fers de lance de la renaissance du nord de la Rheinhessen.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "rheinhessen"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-binger-scharlachberg",
+      "nom": "Binger Scharlachberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord-Ouest)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "quartzite et schiste",
+      "caracteristiques_rapides": "Grand coteau de quartzite de Bingen, à la confluence Nahe/Rhin ; Riesling minéraux singuliers (Riffel, Kruger-Rumpf).",
+      "notes_objectives": "Le Binger Scharlachberg est un grand coteau de quartzite à Bingen, à la confluence de la Nahe et du Rhin, à l'extrême nord-ouest de la Rheinhessen. Son sol singulier de quartzite et de schiste donne des Riesling minéraux et tendus. Le terroir est exploité par des domaines comme Riffel et Kruger-Rumpf. Classé en grand cru, le Scharlachberg illustre la diversité géologique de la Rheinhessen et la singularité des Riesling de quartzite. À la confluence de la Nahe et du Rhin, le Scharlachberg repose sur un sol de quartzite, unique dans la Rheinhessen, qui donne des Riesling minéraux et tendus, plus proches parfois de ceux de la Nahe voisine. Riffel et Kruger-Rumpf en sont les interprètes. Le cru illustre la diversité géologique de la région et la singularité des Riesling de quartzite de Bingen. Sa géologie de quartzite, unique dans la Rheinhessen, rapproche le Scharlachberg des terroirs de la Nahe voisine et donne des Riesling minéraux et tendus. Riffel et Kruger-Rumpf en sont les interprètes. Le cru illustre la position singulière de Bingen, à la confluence de la Nahe et du Rhin, et la diversité géologique remarquable de la Rheinhessen. Sa singularité de quartzite en fait une curiosité parmi les terroirs de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "quartzite",
+        "vdp-grosse-lage",
+        "rheinhessen"
+      ],
+      "source": "vdp.de|originalverkorkt"
+    },
+    {
+      "id": "de-rheinhessen-terr-siefersheimer-hoellberg",
+      "nom": "Siefersheimer Höllberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord-Ouest)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "190-260 m",
+      "sols": "porphyre volcanique (rhyolite)",
+      "caracteristiques_rapides": "Grand cru volcanique de Siefersheim, voisin du Heerkretz ; Riesling minéraux (Wagner-Stempel).",
+      "notes_objectives": "Le Siefersheimer Höllberg est un grand cru volcanique du nord-ouest de la Rheinhessen, voisin du Heerkretz, à Siefersheim. Son sol de porphyre donne des Riesling minéraux et racés. Le terroir est exploité par le domaine Wagner-Stempel. Classé en grand cru, le Höllberg illustre, aux côtés du Heerkretz, la singularité des terroirs volcaniques de Siefersheim. Voisin du grand Heerkretz, le Höllberg partage le porphyre volcanique de Siefersheim et donne des Riesling minéraux et racés. Le domaine Wagner-Stempel en est l'interprète emblématique. Le cru illustre, aux côtés du Heerkretz, la singularité des terroirs volcaniques du nord-ouest de la Rheinhessen, longtemps restés dans l'ombre. Voisin du grand Heerkretz, le Höllberg partage le porphyre volcanique de Siefersheim et donne des Riesling minéraux et racés, magnifiés par Wagner-Stempel. Le cru illustre, aux côtés du Heerkretz, la singularité des terroirs volcaniques du nord-ouest de la Rheinhessen, secteur révélé en une génération et désormais reconnu pour la qualité de ses Riesling. Il confirme, avec le Heerkretz, la grandeur des terroirs volcaniques de Siefersheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "porphyre",
+        "vdp-grosse-lage",
+        "rheinhessen"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-oppenheimer-sacktraeger",
+      "nom": "Oppenheimer Sackträger",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-160 m",
+      "sols": "calcaire et argile",
+      "caracteristiques_rapides": "Grand cru historique d'Oppenheim, sols calcaires ; Riesling amples et de garde (Kühling-Gillot, Manz).",
+      "notes_objectives": "L'Oppenheimer Sackträger est un grand cru historique d'Oppenheim, sur des sols de calcaire et d'argile. Bien exposé, il donne des Riesling amples et de garde. Le terroir est exploité par des domaines comme Kühling-Gillot et Manz. Classé en grand cru, le Sackträger illustre la qualité des terroirs calcaires d'Oppenheim, sur la Rheinterrasse. Grand cru historique d'Oppenheim, le Sackträger repose sur des sols de calcaire et d'argile qui donnent des Riesling amples et de garde. Kühling-Gillot et Manz en sont de beaux interprètes. Le cru illustre la qualité des terroirs calcaires d'Oppenheim, sur la Rheinterrasse, au sud de la côte rouge de Nierstein. Grand cru historique d'Oppenheim, le Sackträger doit sa réputation à ses sols de calcaire et d'argile, qui donnent des Riesling amples et de garde. Kühling-Gillot et Manz en sont de beaux interprètes. Le cru illustre la qualité des terroirs calcaires d'Oppenheim, ville réputée pour sa splendide église gothique, au sud de la côte rouge de Nierstein. Il demeure le grand cru historique d'Oppenheim, sur la Rheinterrasse.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "rheinterrasse",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-kranzberg",
+      "nom": "Niersteiner Kranzberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse (Roter Hang)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-160 m",
+      "sols": "ardoise rouge et calcaire",
+      "caracteristiques_rapides": "Petit grand cru de Nierstein mêlant ardoise rouge et calcaire ; Riesling fins et salins.",
+      "notes_objectives": "Le Niersteiner Kranzberg est un petit grand cru de Nierstein mêlant ardoise rouge et calcaire. Bien exposé, il donne des Riesling fins et salins. Le terroir, situé sur la côte du Roter Hang, produit des vins d'une belle minéralité. Classé en grand cru, le Kranzberg illustre la diversité des sols de la Rheinterrasse de Nierstein. Petit grand cru de Nierstein mêlant ardoise rouge et calcaire, le Kranzberg donne des Riesling fins et salins, d'une belle minéralité. Bien situé sur la côte du Roter Hang, il complète la mosaïque des grands crus de Nierstein, où chaque coteau exprime une nuance différente du grand Riesling de la Rheinterrasse. Petit cru mêlant ardoise rouge et calcaire, le Kranzberg donne des Riesling fins et salins, d'une belle minéralité. Bien situé sur la côte du Roter Hang, il complète la mosaïque des grands coteaux de Nierstein. Le cru illustre la diversité des sols de la Rheinterrasse, où ardoise rouge et calcaire façonnent des Riesling complémentaires. Il complète la mosaïque des grands coteaux de Nierstein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "vdp-grosse-lage",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-bechtheimer-geyersberg",
+      "nom": "Bechtheimer Geyersberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-200 m",
+      "sols": "calcaire et marnes",
+      "caracteristiques_rapides": "Grand cru de Bechtheim sur calcaire ; Riesling secs précis, terroir phare de Dreissigacker.",
+      "notes_objectives": "Le Bechtheimer Geyersberg est un grand cru du Wonnegau, à Bechtheim, sur des sols de calcaire et de marnes. Bien exposé, il donne des Riesling secs précis et salins. Le terroir est le fief du domaine Dreissigacker, son interprète emblématique. Classé en grand cru, le Geyersberg illustre le renouveau des terroirs calcaires de Bechtheim, dans le nord du Wonnegau. Fief du domaine Dreissigacker, conduit en bio, le Geyersberg repose sur des sols de calcaire et de marnes qui donnent des Riesling secs précis et salins. Le cru illustre le renouveau qualitatif de Bechtheim, dans le nord du Wonnegau, porté par une viticulture exigeante et respectueuse. Conduit en bio par le domaine Dreissigacker, le Geyersberg illustre le renouveau de Bechtheim, dans le nord du Wonnegau. Sur ses calcaires et ses marnes, il donne des Riesling secs précis et salins, d'une belle finesse. Le cru témoigne de la dynamique qualitative qui gagne l'ensemble de la Rheinhessen, jusque dans ses villages les moins célèbres. Il symbolise le renouveau bio des terroirs de Bechtheim, dans le Wonnegau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "wonnegau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-westhofener-saulheimer-probstey",
+      "nom": "Westhofener (Saulheimer) Probstey",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "120-200 m",
+      "sols": "calcaire et lœss",
+      "caracteristiques_rapides": "Coteau calcaire de Saulheim ; Spätburgunder et Riesling de belle facture (Thörle).",
+      "notes_objectives": "La Probstey de Saulheim est un coteau calcaire du nord de la Rheinhessen, sur des sols de calcaire et de lœss. Bien exposée, elle donne des Spätburgunder et des Riesling de belle facture. Le terroir est le fief du domaine Thörle, qui en a fait l'un de ses crus phares. Il illustre la qualité montante des terroirs de Saulheim. Fief du domaine Thörle, la Probstey de Saulheim a été révélée par les frères Thörle, qui en ont fait l'un de leurs crus phares, tant en Spätburgunder qu'en Riesling. Sur ses sols de calcaire et de lœss, elle donne des vins racés et fiables. Le cru illustre l'essor qualitatif des terroirs de Saulheim, dans le nord de la Rheinhessen. Elle illustre la dynamique qualitative de Saulheim et le talent des frères Thörle, qui comptent parmi les vignerons les plus en vue du nord de la région. Elle compte parmi les bons terroirs montants du nord de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "saulheim",
+        "grand-coteau",
+        "rheinhessen"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-dittelsheimer-leckerberg",
+      "nom": "Dittelsheimer Leckerberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-210 m",
+      "sols": "calcaire et marnes",
+      "caracteristiques_rapides": "Coteau calcaire de Dittelsheim ; Riesling secs salins (Weingut Winter).",
+      "notes_objectives": "Le Dittelsheimer Leckerberg est un coteau calcaire du Wonnegau, à Dittelsheim, sur des sols de calcaire et de marnes. Bien exposé, il donne des Riesling secs salins. Le terroir est exploité par le domaine Winter. Il illustre la qualité des terroirs calcaires du nord du Wonnegau. Sur le calcaire de Dittelsheim, le Leckerberg donne des Riesling secs salins et tendus, magnifiés par le domaine Winter. Le cru illustre la qualité des terroirs calcaires du nord du Wonnegau, secteur en plein renouveau, où le Riesling sec gagne en finesse et en précision. Il illustre la qualité montante des terroirs calcaires du nord du Wonnegau, où le Riesling sec gagne en précision. Il illustre le potentiel des calcaires du nord du Wonnegau.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "grand-coteau",
+        "wonnegau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-oppenheimer-kreuz",
+      "nom": "Oppenheimer Kreuz",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-150 m",
+      "sols": "calcaire et argile",
+      "caracteristiques_rapides": "Coteau d'Oppenheim sur calcaire ; Riesling amples de la Rheinterrasse (Kühling-Gillot).",
+      "notes_objectives": "L'Oppenheimer Kreuz est un coteau d'Oppenheim, sur des sols de calcaire et d'argile. Bien exposé, il donne des Riesling amples de la Rheinterrasse. Le terroir est notamment exploité par Kühling-Gillot. Il illustre la qualité des terroirs calcaires d'Oppenheim, au sud de Nierstein. Sur les sols de calcaire et d'argile d'Oppenheim, le Kreuz donne des Riesling amples et savoureux de la Rheinterrasse. Kühling-Gillot et Manz en sont de beaux interprètes. Le cru illustre la qualité des terroirs calcaires d'Oppenheim, ville célèbre pour sa magnifique église gothique et sa longue tradition viticole. Il complète, aux côtés du Sackträger, la belle série des terroirs calcaires d'Oppenheim, sur la Rheinterrasse. Il complète la série des terroirs calcaires d'Oppenheim.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "rheinterrasse",
+        "grand-coteau",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-niersteiner-paterberg",
+      "nom": "Niersteiner Paterberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinterrasse",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-160 m",
+      "sols": "ardoise rouge, calcaire et lœss",
+      "caracteristiques_rapides": "Grand coteau de Nierstein aux sols variés ; Riesling accessibles et fruités de la Rheinterrasse.",
+      "notes_objectives": "Le Niersteiner Paterberg est un grand coteau de Nierstein aux sols variés, mêlant ardoise rouge, calcaire et lœss. Bien exposé, il donne des Riesling accessibles et fruités. Vaste et bien situé, le terroir produit des vins fiables de la Rheinterrasse. Il illustre la diversité des sols de Nierstein. Vaste coteau aux sols variés — ardoise rouge, calcaire et lœss —, le Paterberg donne des Riesling accessibles et fruités, fiables, de la Rheinterrasse. Bien situé près des grands crus du Roter Hang, il offre une belle porte d'entrée vers les Riesling de Nierstein, à des prix mesurés. Vaste et bien situé, il offre une porte d'entrée accessible vers les Riesling de Nierstein et de la côte rouge. Il offre une belle entrée en matière vers les Riesling de Nierstein.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "roter-hang",
+        "rheinterrasse",
+        "grand-coteau",
+        "rheinterrasse"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-gau-algesheimer-goldberg",
+      "nom": "Gau-Algesheimer Goldberg",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Rheinhessen (Nord)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "130-230 m",
+      "sols": "calcaire et marnes",
+      "caracteristiques_rapides": "Coteau calcaire du nord de la Rheinhessen ; Riesling et Burgundern précis (Bischel).",
+      "notes_objectives": "Le Gau-Algesheimer Goldberg est un coteau calcaire du nord de la Rheinhessen, à Gau-Algesheim, sur des sols de calcaire et de marnes. Bien exposé, il donne des Riesling et des Burgundern précis. Le terroir est exploité par le domaine Bischel. Il illustre l'essor qualitatif des terroirs calcaires du nord de la région. Sur le calcaire du nord de la Rheinhessen, le Goldberg de Gau-Algesheim donne des Riesling et des Burgundern précis et salins, magnifiés par le domaine Bischel. Le cru illustre l'essor qualitatif spectaculaire du nord de la région, où une nouvelle génération révèle de beaux terroirs calcaires longtemps méconnus. Il illustre l'essor qualitatif du nord de la Rheinhessen, révélé par une nouvelle génération de vignerons. Il témoigne de l'essor du nord de la Rheinhessen.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "grand-coteau",
+        "rheinhessen"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-terr-worms-liebfrauenstift-kirchenstueck",
+      "nom": "Worms Liebfrauenstift-Kirchenstück",
+      "type": "lieu-dit",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "85-100 m",
+      "sols": "sables et lœss",
+      "caracteristiques_rapides": "Vignoble historique de Worms, berceau du « Liebfraumilch » ; clos urbain sablonneux, Riesling de tradition.",
+      "notes_objectives": "Le Liebfrauenstift-Kirchenstück, à Worms, est un vignoble historique : c'est le berceau du célèbre « Liebfraumilch ». Clos urbain entourant l'église Notre-Dame, sur des sols de sables et de lœss, il donne des Riesling de tradition. Le terroir, chargé d'histoire, illustre le riche passé viticole de la Rheinhessen et de la ville de Worms. C'est dans ce clos urbain de Worms, entourant l'église Notre-Dame (Liebfrauenkirche), que naquit le nom du « Liebfraumilch », devenu hélas synonyme de vin de masse — alors que le terroir d'origine, sablonneux, donne de véritables Riesling de caractère. Chargé d'histoire, il témoigne du riche passé viticole de la Rheinhessen. Berceau du nom « Liebfraumilch », il demeure un témoin précieux du riche passé viticole de la Rheinhessen. Il demeure un haut lieu de mémoire du vignoble allemand.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "historique",
+        "sable",
+        "grand-coteau",
+        "wonnegau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    }
+  ]
+}

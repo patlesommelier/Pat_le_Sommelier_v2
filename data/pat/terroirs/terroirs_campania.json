@@ -1,0 +1,592 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "campania",
+  "region_label": "Campania (Italie)",
+  "source_file": "terroirs_campania.json",
+  "built_at": "2026-07-07",
+  "count": 20,
+  "items": [
+    {
+      "id": "it-campania-terr-taurasi",
+      "nom": "Taurasi",
+      "type": "appellation (DOCG)",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~350-700 m",
+      "sols": "argilo-calcaires et volcaniques des collines d'Irpinia",
+      "caracteristiques_rapides": "Le « Barolo du Sud » : grand rouge d'Aglianico, tannique, structuré et de très longue garde, sur les collines fraîches et tardives de l'Irpinia autour de Taurasi.",
+      "notes_objectives": "Le Taurasi est le grand rouge de la Campanie et l'un des plus prestigieux d'Italie du Sud, surnommé le « Barolo du Sud ». Produit dans les collines de l'Irpinia, autour du village de Taurasi, à l'est de Naples, il est né du seul cépage Aglianico (au moins 85 %), variété introduite par les Grecs dans l'Antiquité et dont le nom serait une déformation d'« Elleniko » (le grec).\n\nL'Aglianico est l'un des cépages les plus tardifs d'Italie : sur les hauteurs fraîches de l'Irpinia (jusqu'à 700 m), il n'est parfois vendangé qu'en novembre, ce qui lui confère une acidité et des tanins puissants, gages de longévité. Sur des sols argilo-calcaires et volcaniques, il donne un rouge structuré, profond et austère dans sa jeunesse, aux arômes de cerise noire, de prune, de goudron, de tabac, de cuir et d'épices, qui demande des années pour se fondre. Le cahier des charges impose un élevage d'au moins trois ans (quatre pour la Riserva), et les meilleurs Taurasi vieillissent des décennies. C'est Mastroberardino qui, au XXe siècle, sauva l'Aglianico et fit connaître le Taurasi, notamment avec son mythique millésime 1968 ; d'autres l'ont depuis rejoint (Quintodecimo, Caggiano, Molettieri, Tecce…). Les sous-zones d'altitude comme Montemarano ou Castelfranci donnent les vins les plus tardifs et les plus aptes à la garde.\n\nGrand rouge d'Aglianico, tannique et de très longue garde, le Taurasi est le fleuron du vin campanien et l'un des plus grands vins du Sud de l'Italie. Terroir d'altitude et cépage antique en font un « Barolo du Sud » à la personnalité unique.\n\nL'Irpinia, arrière-pays montagneux et volcanique à l'est de Naples, offre à l'Aglianico un terroir d'exception : l'altitude et les fortes amplitudes thermiques préservent l'acidité et affinent les tanins, tandis que les sols argilo-calcaires et volcaniques apportent structure et minéralité. Le Taurasi a longtemps souffert d'une réputation de rouge rustique et austère, mais les meilleurs producteurs ont prouvé qu'il pouvait, comme le Barolo, conjuguer puissance et finesse. Servi sur des viandes braisées, du gibier, des daubes ou des fromages affinés, il demande souvent une longue aération dans sa jeunesse et se révèle pleinement après huit à dix ans de garde, développant des arômes tertiaires de cuir, de sous-bois, de champignon et de truffe. Sa capacité à vieillir des décennies, démontrée par les vieux millésimes de Mastroberardino, en fait l'un des grands vins de garde d'Italie et le porte-drapeau du renouveau du vin campanien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "docg",
+        "garde",
+        "rouge"
+      ],
+      "source": "jancisrobinson|winetravelguides"
+    },
+    {
+      "id": "it-campania-terr-fiano-di-avellino",
+      "nom": "Fiano di Avellino",
+      "type": "appellation (DOCG)",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Fiano"
+      ],
+      "altitude": "~350-650 m",
+      "sols": "argilo-calcaires, parfois volcaniques, en altitude",
+      "caracteristiques_rapides": "L'un des plus grands blancs d'Italie : le Fiano, floral et fruité jeune, développe des notes de noisette, de miel et de minéral, avec une longévité de 10-15 ans.",
+      "notes_objectives": "Le Fiano di Avellino est l'un des plus grands vins blancs d'Italie et le joyau blanc de l'Irpinia. Produit sur les collines autour d'Avellino, à partir du cépage Fiano — une variété ancienne, déjà mentionnée par Pline l'Ancien —, il conjugue rareté aromatique, structure et une longévité exceptionnelle pour un blanc du Sud.\n\nSur des sols argilo-calcaires, parfois volcaniques, et à des altitudes élevées (jusqu'à 650 m), le Fiano bénéficie d'un climat frais aux fortes amplitudes thermiques qui préserve son acidité et sa finesse. Jeune, il séduit par ses notes florales, de poire, de noisette fraîche et de miel ; avec l'âge, il développe une complexité remarquable — fruits secs, cire d'abeille, fumée, minéral, voire notes d'hydrocarbures rappelant les grands rieslings —, sur une trame saline et tendue. Le cépage, à la peau épaisse, résiste bien aux climats frais et aux millésimes pluvieux. Contrairement à l'idée reçue sur les blancs méridionaux, les meilleurs Fiano di Avellino se bonifient dix à quinze ans en cave. Mastroberardino (More Maiorum), Feudi di San Gregorio (Pietracalda), Pietracupa, Colli di Lapio ou Guido Marsella en sont des références. Le village de Lapio donne les expressions les plus fines.\n\nGrand blanc de garde à la complexité rare, le Fiano di Avellino est l'un des sommets du vin blanc italien. Sa minéralité, sa tension et sa longévité en font un cru d'exception, capable de rivaliser avec les plus grands blancs d'Europe.\n\nL'histoire du Fiano illustre la renaissance du vin campanien : quasi disparu au milieu du XXe siècle, ce cépage ancien a été sauvé et remis à l'honneur, notamment par Mastroberardino, avant de devenir l'un des blancs les plus admirés d'Italie. Sa richesse aromatique et sa structure le distinguent des blancs méridionaux légers et anonymes. Servi sur des poissons, des crustacés, des viandes blanches, des pâtes aux fruits de mer ou des fromages, il gagne à être carafé jeune et révèle toute sa complexité après quelques années de cave. Le terroir de Lapio, réputé pour la finesse, et les sites d'altitude comme Summonte ou Montefredane donnent les expressions les plus tendues et les plus aptes à la garde. Le Fiano di Avellino a définitivement placé la Campanie sur la carte des grands vins blancs, prouvant que le Sud de l'Italie pouvait produire des blancs de garde de classe mondiale.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "irpinia",
+        "fiano",
+        "docg",
+        "blanc",
+        "garde"
+      ],
+      "source": "winetravelguides|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-terr-greco-di-tufo",
+      "nom": "Greco di Tufo",
+      "type": "appellation (DOCG)",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Greco"
+      ],
+      "altitude": "~300-550 m",
+      "sols": "tuf soufré (zone des anciennes mines de soufre)",
+      "caracteristiques_rapides": "Blanc minéral et salin, marqué par les sols soufrés de Tufo : notes d'agrumes, de silex et de fumée, grande acidité, apte à la garde et au metodo classico.",
+      "notes_objectives": "Le Greco di Tufo est l'un des grands blancs de l'Irpinia, produit autour du village de Tufo et de six communes voisines, à partir du cépage Greco — variété d'origine grecque, comme son nom l'indique. Sa personnalité est indissociable de son terroir : les sols de tuf, riches en soufre, hérités d'une activité minière qui fit longtemps vivre la région.\n\nCes sols soufrés confèrent au Greco une minéralité saline et fumée caractéristique, presque sulfureuse, qui laisse pantois les amateurs et divise parfois : arômes d'agrumes, de pêche, de fruits à noyau, de silex et de pierre à fusil, sur une acidité vive et une belle salinité. Le cépage, à la peau fine et plus fragile que le Fiano, exige des sites bien exposés (les coteaux de Tufo, pentus, regardent souvent le sud-ouest). Le Greco di Tufo peut être bu jeune, mais les meilleures cuvées vieillissent cinq à huit ans, gagnant en complexité et en couleur ; il se prête aussi remarquablement au metodo classico (spumante). Benito Ferrara (Vigna Cicogna), Cantine dell'Angelo, Pietracupa, Cantine di Marzo ou Mastroberardino en sont des références. C'est l'un des blancs les plus « terroir » d'Italie.\n\nBlanc minéral et salin façonné par les sols soufrés de Tufo, le Greco di Tufo est l'un des grands blancs de caractère d'Italie. Sa personnalité fumée et sa belle acidité en font un cru unique, apte à la garde comme aux bulles.\n\nLe terroir de Tufo est indissociable de l'histoire minière du village, qui vécut longtemps de l'extraction du soufre : cette singularité géologique marque profondément le vin, lui donnant une minéralité et une salinité presque uniques en Italie. Le Greco, cépage exigeant et à faible rendement, y trouve son expression la plus aboutie sur les coteaux les mieux exposés des sept communes de l'appellation. Servi sur des poissons, des crustacés, la mozzarella di bufala, des fritures ou une cuisine de mer, le Greco di Tufo séduit par sa tension saline et vieillit bien mieux que sa couleur claire ne le laisse supposer, développant des notes fumées et pétrolées avec l'âge. Sa forte acidité en fait aussi une excellente base de spumante metodo classico. Terroir minéral par excellence, le Greco di Tufo est l'un des blancs italiens les plus reconnaissables et les plus « terroir », capable de dérouter comme de fasciner.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "irpinia",
+        "greco",
+        "tufo",
+        "docg",
+        "blanc",
+        "mineral"
+      ],
+      "source": "wine-searcher|filippobartolotta"
+    },
+    {
+      "id": "it-campania-terr-aglianico-del-taburno",
+      "nom": "Aglianico del Taburno",
+      "type": "appellation (DOCG)",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~200-600 m",
+      "sols": "sols calcaires et argileux des pentes du Taburno",
+      "caracteristiques_rapides": "La seconde DOCG de l'Aglianico : rouges structurés et de garde sur le massif du Taburno, un peu plus souples et frais que le Taurasi.",
+      "notes_objectives": "L'Aglianico del Taburno est la seconde DOCG dédiée à l'Aglianico en Campanie, après le Taurasi. Elle s'étend sur les pentes du massif du Taburno, dans la province de Bénévent (le Sannio), autour de communes comme Torrecuso. C'est un terroir d'altitude où l'Aglianico, cépage roi de la région, trouve une expression propre.\n\nSur des sols calcaires et argileux, à 200-600 mètres, l'Aglianico del Taburno donne des rouges structurés, tanniques et de garde, aux arômes de fruits noirs, d'épices et de notes minérales. Par rapport au Taurasi, ils sont souvent perçus comme un peu plus souples, fruités et accessibles, tout en conservant la fraîcheur et le potentiel de vieillissement caractéristiques du cépage. La DOCG produit aussi un rosé d'Aglianico apprécié. Des domaines comme Fattoria La Rivolta, Fontanavecchia ou la coopérative Cantina del Taburno en sont les références. Le terroir, un peu dans l'ombre du Taurasi, offre souvent un excellent rapport qualité-prix pour de grands Aglianico.\n\nSeconde DOCG de l'Aglianico, l'Aglianico del Taburno donne des rouges structurés et de garde sur les pentes du Taburno, un peu plus souples que le Taurasi. C'est un beau terroir de rouge du Sannio. Le massif du Taburno, aux nuits fraîches, apporte à l'Aglianico une fraîcheur qui équilibre sa puissance. Servi sur des viandes rouges, des grillades, du gibier ou des fromages affinés, l'Aglianico del Taburno se patine sur plusieurs années. Longtemps éclipsé par le Taurasi voisin, il gagne aujourd'hui en reconnaissance grâce à des producteurs exigeants qui en révèlent la finesse, et constitue souvent une excellente porte d'entrée, à prix doux, dans les grands Aglianico de Campanie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "taburno",
+        "sannio",
+        "aglianico",
+        "docg",
+        "rouge"
+      ],
+      "source": "greatitalianchefs|justerinis"
+    },
+    {
+      "id": "it-campania-terr-campi-flegrei",
+      "nom": "Campi Flegrei",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Campi Flegrei (Napoli)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina",
+        "Piedirosso"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "sables volcaniques (vignes souvent franches de pied)",
+      "caracteristiques_rapides": "Terroir volcanique des « champs Phlégréens » à l'ouest de Naples : Falanghina saline et Piedirosso fin, sur des sables où survivent des vignes franches de pied.",
+      "notes_objectives": "Les Campi Flegrei — les « champs Phlégréens », c'est-à-dire « brûlants » — forment l'un des terroirs les plus spectaculaires et singuliers d'Italie, à l'ouest de Naples. Cette zone volcanique en activité, parsemée de cratères, de fumerolles et de lacs, où les Grecs situaient l'entrée des Enfers (le lac Averne), est un terroir de sables volcaniques profonds.\n\nSa particularité est rare en Europe : dans ces sables, le phylloxéra ne survit pas, si bien que de nombreuses vignes sont franches de pied (non greffées), parfois centenaires, un patrimoine génétique précieux. Les cépages autochtones y règnent : la Falanghina (variante Flegrea) en blanc, saline, minérale et étonnamment structurée, et le Piedirosso (Per 'e Palummo) en rouge, fin et épicé. Loin des Falanghina simples et fruitées, les meilleures cuvées des Campi Flegrei (La Sibilla Cruna deLago, Agnanum, Cantine Astroni) sont profondes et de garde, expression pure d'un terroir volcanique et maritime unique. La viticulture y est souvent héroïque, sur des terrasses escarpées face à la baie de Naples.\n\nTerroir volcanique aux vignes franches de pied, les Campi Flegrei donnent des Falanghina salines et profondes et des Piedirosso fins. C'est l'un des terroirs les plus singuliers et authentiques de Campanie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "campi-flegrei",
+        "falanghina",
+        "piedirosso",
+        "volcanique",
+        "franc-de-pied",
+        "doc"
+      ],
+      "source": "greatitalianchefs|wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-lacryma-christi-del-vesuvio",
+      "nom": "Lacryma Christi del Vesuvio",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Vesuvio",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Piedirosso",
+        "Caprettone",
+        "Falanghina",
+        "Aglianico"
+      ],
+      "altitude": "~150-600 m",
+      "sols": "laves, lapilli et cendres du Vésuve",
+      "caracteristiques_rapides": "Le célèbre vin des pentes du Vésuve, rouge (Piedirosso) et blanc (Caprettone) : terroir volcanique historique, connu depuis l'Antiquité, aux vins minéraux et typés.",
+      "notes_objectives": "Le Lacryma Christi del Vesuvio est le vin emblématique des pentes du Vésuve, le célèbre volcan qui domine la baie de Naples. Son nom poétique — « larmes du Christ » — et son histoire millénaire, remontant à l'Antiquité romaine et aux vins de Pompéi, en font l'un des vins les plus légendaires d'Italie.\n\nSur les sols de laves, de lapilli et de cendres du Vésuve, souvent sur vignes franches de pied grâce au sable volcanique, le Lacryma Christi se décline en rouge (à base de Piedirosso et d'Aglianico) et en blanc (à base de Caprettone — longtemps confondu avec la Coda di Volpe — et de Falanghina). Le blanc, minéral et frais, aux notes d'agrumes et de fleurs, accompagne à merveille les poissons et la cuisine napolitaine ; le rouge, léger et épicé, est un vin de plaisir et de terroir. La viticulture, dans le parc national du Vésuve, est un défi, mais le terroir volcanique donne aux vins une minéralité caractéristique. Des domaines comme Sorrentino, Cantine Matrone ou Villa Dora en perpétuent la tradition, avec un regain d'intérêt pour le cépage Caprettone.\n\nVin légendaire des pentes du Vésuve, le Lacryma Christi conjugue histoire antique et terroir volcanique. Rouge ou blanc, il exprime la minéralité du volcan et le cépage identitaire Caprettone.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "vesuvio",
+        "lacryma-christi",
+        "piedirosso",
+        "caprettone",
+        "volcanique",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-ischia",
+      "nom": "Ischia",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Ischia",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Biancolella",
+        "Forastera",
+        "Piedirosso"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tuf vert et sols volcaniques en terrasses",
+      "caracteristiques_rapides": "Île volcanique du golfe de Naples : blancs insulaires salins de Biancolella et Forastera, sur des terrasses vertigineuses ; l'une des plus anciennes DOC d'Italie (1966).",
+      "notes_objectives": "Ischia, île volcanique du golfe de Naples, est l'un des terroirs insulaires les plus anciens et les plus attachants d'Italie — sa DOC, créée en 1966, fut l'une des toutes premières du pays. Colonisée par les Grecs dès le VIIIe siècle av. J.-C., l'île a une tradition viticole millénaire, aujourd'hui menacée par la pression touristique.\n\nSur des sols de tuf vert et de roches volcaniques, en terrasses escarpées au-dessus de la mer, Ischia cultive des cépages autochtones insulaires : la Biancolella (le plus emblématique) et la Forastera en blanc, le Piedirosso (Per 'e Palummo) en rouge. Ces vins, salins et parfumés, aux notes d'agrumes, d'herbes méditerranéennes et de minéral, expriment l'influence conjointe du volcan et de la mer. La Biancolella, notamment sur les terrasses perchées de Frassitelli (parfois desservies par un petit monorail), donne des blancs d'une belle finesse. Casa d'Ambra, domaine historique fondé en 1888, en est le principal gardien. La viticulture héroïque et le patrimoine ampélographique font tout le prix de ce terroir insulaire.\n\nÎle volcanique aux cépages autochtones (Biancolella, Forastera), Ischia donne des blancs insulaires salins et typés. C'est l'un des plus anciens et des plus authentiques terroirs de Campanie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "ischia",
+        "biancolella",
+        "forastera",
+        "insulaire",
+        "volcanique",
+        "doc"
+      ],
+      "source": "wine-searcher|tasteatlas"
+    },
+    {
+      "id": "it-campania-terr-costa-damalfi",
+      "nom": "Costa d'Amalfi",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Costa d'Amalfi (Salerno)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina",
+        "Biancolella",
+        "Ripoli",
+        "Aglianico",
+        "Piedirosso"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "terrasses calcaires et volcaniques sur la côte",
+      "caracteristiques_rapides": "Viticulture héroïque sur les terrasses de la côte amalfitaine : blancs aromatiques et rouges, avec des cépages rares (Fenile, Ripoli, Ginestra) ; sous-zones Furore, Ravello, Tramonti.",
+      "notes_objectives": "La Costa d'Amalfi est l'un des terroirs les plus spectaculaires du monde : sur la célèbre côte amalfitaine, classée au patrimoine de l'UNESCO, la vigne s'accroche à des terrasses vertigineuses arrachées aux falaises qui plongent dans la mer Tyrrhénienne. La viticulture y est purement héroïque, entièrement manuelle.\n\nL'appellation se divise en trois sous-zones : Furore, Ravello et Tramonti. Sur des sols calcaires et volcaniques, battus par les embruns, on cultive des cépages autochtones dont certains sont rarissimes — Fenile, Ripoli, Ginestra en blanc, complétés de Falanghina et Biancolella —, ainsi que l'Aglianico, le Piedirosso et le Sciascinoso en rouge. Les blancs, aromatiques et salins, et les rouges, fins et épicés, expriment un terroir unique où l'altitude, la mer et le soleil se conjuguent. C'est ici, à Furore, que Marisa Cuomo produit le fameux Fiorduva. À Tramonti, de vieilles vignes franches de pied, parfois centenaires, constituent un patrimoine précieux. La rareté des cépages et l'héroïsme de la culture font toute la valeur de ces vins.\n\nTerroir héroïque de la côte amalfitaine, la Costa d'Amalfi donne des blancs et des rouges de terrasses, avec des cépages rares. Ses sous-zones (Furore, Ravello, Tramonti) en font l'un des terroirs les plus singuliers d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "costa-amalfi",
+        "falanghina",
+        "heroique",
+        "terrasses",
+        "doc"
+      ],
+      "source": "wine-searcher|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-terr-furore",
+      "nom": "Furore",
+      "type": "sottozona",
+      "region": "Campania",
+      "sous_region": "Costa d'Amalfi (Salerno)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Fenile",
+        "Ripoli",
+        "Ginestra",
+        "Falanghina",
+        "Aglianico",
+        "Piedirosso"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "terrasses vertigineuses au-dessus de la mer",
+      "caracteristiques_rapides": "Sous-zone la plus célèbre de la côte amalfitaine : le Fiorduva de Marisa Cuomo (Fenile, Ripoli, Ginestra) en a fait l'un des grands terroirs de blanc rare d'Italie.",
+      "notes_objectives": "Furore est la plus célèbre des sous-zones de la Costa d'Amalfi, un terroir spectaculaire accroché aux falaises de la côte amalfitaine, entre ciel et mer Tyrrhénienne. Ici, la viticulture relève de l'héroïsme absolu : sur des terrasses vertigineuses arrachées à la roche, soutenues par des murets de pierre sèche, tout se fait à la main, souvent en portant les raisins dans des paniers le long d'escaliers escarpés.\n\nCe terroir unique, aux sols calcaires et volcaniques battus par les embruns, est le domaine de cépages autochtones rarissimes, sauvés de l'oubli : le Fenile, le Ripoli et la Ginestra en blanc, complétés de Falanghina et Biancolella, ainsi que l'Aglianico et le Piedirosso en rouge. C'est ici que le domaine Marisa Cuomo produit le Furore Bianco Fiorduva, assemblage de ces trois cépages rares vendangés tardivement et partiellement élevés en bois : un blanc d'une richesse, d'une complexité et d'une salinité exceptionnelles, aux arômes de fruits mûrs, d'abricot, de miel et d'épices, devenu l'un des grands blancs d'Italie et une icône mondiale. Le Furore Rosso Riserva confirme le potentiel du terroir en rouge. L'exposition maritime, les rendements infimes des terrasses et la fraîcheur nocturne donnent des vins d'une minéralité et d'une tension inimitables. La cave de Marisa Cuomo, creusée dans la falaise, ajoute à la légende du lieu.\n\nTerroir héroïque et iconique de la côte amalfitaine, Furore donne avec le Fiorduva l'un des plus grands blancs rares d'Italie. Ses terrasses vertigineuses et ses cépages introuvables ailleurs en font l'un des lieux les plus fascinants du vin méditerranéen.\n\nLa côte amalfitaine, célèbre dans le monde entier pour sa beauté, cache l'une des viticultures les plus difficiles qui soient : à Furore, un fjord spectaculaire entaille la falaise, et les vignes s'étagent sur des terrasses si étroites et si pentues que tout travail y est manuel, souvent acrobatique. Ce terroir extrême a failli disparaître, ses cépages rares avec lui, avant que des vignerons comme Marisa Cuomo et Andrea Ferraioli ne le fassent renaître. Le Fiorduva, né des raisins Fenile, Ripoli et Ginestra vendangés à surmaturité, est un blanc opulent mais tendu, d'une salinité marine caractéristique, qui a acquis une renommée mondiale et figure sur les plus grandes tables. Servi sur des poissons nobles, des crustacés, des langoustines ou une cuisine méditerranéenne raffinée, il impressionne par sa richesse et sa longueur. Les rouges (Furore Rosso Riserva), issus d'Aglianico et de Piedirosso, confirment le potentiel du lieu. À Furore, l'héroïsme de la culture et la rareté des cépages donnent des vins qui comptent parmi les plus originaux et les plus recherchés d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "costa-amalfi",
+        "furore",
+        "fiorduva",
+        "heroique",
+        "sottozona"
+      ],
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-terr-cilento",
+      "nom": "Cilento",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Cilento (Salerno)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Fiano",
+        "Aglianico",
+        "Greco"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "sols calcaires et argileux du parc national, influence maritime",
+      "caracteristiques_rapides": "Terroir méridional et maritime du parc national du Cilento : Fiano frais et salin, Aglianico solaire et structuré, près des temples de Paestum.",
+      "notes_objectives": "Le Cilento est le terroir méridional de la Campanie, au sud de Salerne, dans un vaste parc national classé à l'UNESCO, entre montagnes et mer Tyrrhénienne. Terre de la « diète méditerranéenne » (le concept y est né), c'est une région préservée où la vigne côtoie l'olivier, près des temples grecs de Paestum.\n\nSur des sols calcaires et argileux, sous un climat chaud tempéré par les brises marines, le Cilento réussit particulièrement le Fiano, qui y donne des blancs frais, salins et parfumés, un peu plus solaires que ceux d'Irpinia, ainsi que l'Aglianico, qui signe des rouges structurés et généreux. Le Greco et d'autres cépages complètent la palette. Des domaines comme San Salvatore 1988, Luigi Maffini (Fiano Kratos) ou De Conciliis (Aglianico Naima) en ont fait un terroir de qualité, alliant l'expression méridionale à une belle fraîcheur. L'influence maritime et la préservation du parc national donnent aux vins une identité propre.\n\nTerroir méridional et maritime du parc national, le Cilento donne des Fiano frais et des Aglianico solaires, près de Paestum. C'est l'un des terroirs montants du sud de la Campanie. Terre de la diète méditerranéenne, le Cilento associe la vigne à l'olivier et aux herbes sauvages, dans un cadre naturel préservé. Servis sur des poissons et fruits de mer pour les blancs, sur des viandes pour les rouges, ses vins séduisent par leur générosité solaire tempérée de fraîcheur maritime. La montée en qualité, portée par une nouvelle génération de vignerons, fait du Cilento l'un des terroirs les plus prometteurs du sud de la Campanie, encore relativement méconnu et donc abordable.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "cilento",
+        "fiano",
+        "aglianico",
+        "maritime",
+        "doc"
+      ],
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-campania-terr-falerno-del-massico",
+      "nom": "Falerno del Massico",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico",
+        "Piedirosso",
+        "Falanghina"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols volcaniques du Roccamonfina et sableux côtiers",
+      "caracteristiques_rapides": "Renaissance du Falernum, le vin le plus célèbre de la Rome antique : Aglianico rouge de garde et Falanghina, sur les pentes du volcan éteint du Roccamonfina.",
+      "notes_objectives": "Le Falerno del Massico est la renaissance moderne du Falernum, le vin le plus célèbre de l'Antiquité romaine, chanté par les poètes et réservé aux tables les plus prestigieuses de Rome. Ce terroir historique s'étend au nord de la Campanie, dans la Terra di Lavoro, sur les pentes du volcan éteint du Roccamonfina et la plaine côtière du mont Massico.\n\nSur des sols volcaniques et sableux, l'appellation produit un rouge à base d'Aglianico et de Piedirosso, structuré et de garde, ainsi qu'un blanc de Falanghina — cépage que certains associent au Falernum antique — frais et minéral. Le Falerno rouge, plus souple que le Taurasi mais capable de vieillir dix ans et plus, allie générosité méridionale et fraîcheur volcanique. Villa Matilde, avec son Vigna Camarato, a joué un rôle pionnier dans la résurrection de ce terroir mythique dès les années 1960, retrouvant et replantant les cépages historiques ; Masseria Felicia en est une autre belle expression. Le Falerno del Massico conjugue ainsi patrimoine antique et renouveau qualitatif.\n\nRenaissance du Falernum antique, le Falerno del Massico donne des Aglianico de garde et des Falanghina minérales sur sols volcaniques. C'est l'un des terroirs les plus chargés d'histoire d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "falerno",
+        "roccamonfina",
+        "aglianico",
+        "falanghina",
+        "historique",
+        "doc"
+      ],
+      "source": "jancisrobinson|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-terr-falanghina-del-sannio",
+      "nom": "Falanghina del Sannio",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "collines argilo-calcaires du Bénévent",
+      "caracteristiques_rapides": "Le grand fief de la Falanghina (variante Beneventana) : blancs frais, floraux et fruités, produits en volume dans les collines du Sannio, du sec au spumante.",
+      "notes_objectives": "La Falanghina del Sannio est le grand fief de la Falanghina, cépage blanc emblématique de la Campanie, dans les collines du Sannio autour de Bénévent. C'est ici, dans cette province qui est le premier bassin de production viticole de la région, que la Falanghina (variante Beneventana) est cultivée en volume et a connu son renouveau.\n\nSur des sols argilo-calcaires, la Falanghina donne des blancs frais, floraux et fruités, aux notes d'agrumes, de pomme, de poire et parfois de fruits tropicaux, sur une belle acidité. Facile à boire et gourmande, elle se décline du sec au passito en passant par le spumante. C'est à Sant'Agata de' Goti que la maison Mustilli fut, dans les années 1970-80, pionnière de sa vinification en pureté, sauvant le cépage de l'oubli. Aujourd'hui, la Falanghina del Sannio est l'un des blancs les plus populaires et les mieux diffusés de Campanie, offrant souvent un excellent rapport qualité-prix. Les meilleures cuvées, sur vieilles vignes, révèlent une belle profondeur.\n\nGrand fief de la Falanghina, le Sannio donne des blancs frais, floraux et gourmands, du sec au spumante. C'est le terroir de référence de ce cépage emblématique de la Campanie. Cépage probablement très ancien, la Falanghina est parfois associée au Falernum de l'Antiquité. Sa polyvalence et sa gourmandise en ont fait l'un des blancs les plus populaires du Sud. Servie sur des poissons, des fruits de mer, des fritures ou une cuisine méditerranéenne, elle séduit par sa fraîcheur immédiate. Le Sannio, qui en produit l'essentiel, a su en faire un ambassadeur accessible du vin campanien, tout en révélant, sur ses meilleurs terroirs et vieilles vignes, un réel potentiel de finesse.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "sannio",
+        "falanghina",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher|tasteatlas"
+    },
+    {
+      "id": "it-campania-terr-irpinia",
+      "nom": "Irpinia",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico",
+        "Fiano",
+        "Greco",
+        "Coda di Volpe"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "collines variées d'Irpinia (argile, calcaire, volcanique)",
+      "caracteristiques_rapides": "Appellation-cadre de la province d'Avellino, sous les trois DOCG : Aglianico (Campi Taurasini), Fiano, Greco et Coda di Volpe, souvent en entrée de gamme des grands domaines.",
+      "notes_objectives": "L'Irpinia (DOC) est l'appellation-cadre de la province d'Avellino, sous le chapeau des trois grandes DOCG (Taurasi, Fiano di Avellino, Greco di Tufo). Ce territoire montagneux et frais, à l'est de Naples, est le cœur qualitatif du vin campanien, riche d'une mosaïque de terroirs d'altitude.\n\nL'appellation Irpinia permet de produire, hors du cadre plus strict des DOCG, des vins issus des mêmes cépages autochtones : l'Aglianico (notamment la sous-zone Campi Taurasini, pour des rouges de belle tenue), le Fiano, le Greco et le Coda di Volpe. Elle sert souvent d'entrée de gamme ou de terrain d'expérimentation aux grands domaines irpiniens, avec des vins plus accessibles mais fidèles au terroir. Sur des sols variés — argile, calcaire, influences volcaniques — et à des altitudes élevées, l'Irpinia offre la fraîcheur et la minéralité qui font la réputation de la région. C'est un cadre précieux pour découvrir les cépages campaniens à bon prix.\n\nAppellation-cadre de la province d'Avellino, l'Irpinia rassemble Aglianico, Fiano et Greco sous les grandes DOCG. C'est le socle du vin d'altitude campanien et une belle porte d'entrée dans ses cépages autochtones. Cette appellation-cadre joue un rôle essentiel : elle permet aux domaines de valoriser des parcelles ou des cépages hors du carcan des DOCG, et offre aux amateurs un accès abordable aux grands cépages irpiniens. Servis sur une cuisine variée, des poissons pour les blancs aux viandes pour les rouges, ces vins séduisent par leur fraîcheur d'altitude. La sous-zone Campi Taurasini, dédiée à l'Aglianico, donne notamment des rouges de belle tenue, souvent proches de l'esprit du Taurasi à moindre prix.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "irpinia",
+        "aglianico",
+        "fiano",
+        "greco",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-sannio",
+      "nom": "Sannio",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina",
+        "Aglianico",
+        "Greco",
+        "Fiano",
+        "Coda di Volpe"
+      ],
+      "altitude": "~100-600 m",
+      "sols": "collines argilo-calcaires du Bénévent",
+      "caracteristiques_rapides": "Vaste appellation-cadre du Bénévent, premier bassin de production de Campanie : Falanghina, Aglianico, Greco et Coda di Volpe, en rouge, blanc, rosé et spumante.",
+      "notes_objectives": "Le Sannio est la vaste appellation-cadre de la province de Bénévent, premier bassin de production viticole de Campanie. Ce territoire de collines argilo-calcaires rassemble une grande diversité de cépages autochtones : Falanghina, Aglianico, Greco, Fiano et Coda di Volpe, déclinés en rouge, blanc, rosé et spumante. Le Sannio produit des vins souvent accessibles et d'un bon rapport qualité-prix, avec la Falanghina comme fer de lance et l'Aglianico del Taburno comme fleuron. Longtemps tournée vers le volume, la zone monte en qualité grâce à ses coopératives et domaines. Vaste appellation du Bénévent, le Sannio offre une large palette de cépages campaniens, de la Falanghina à l'Aglianico, à prix abordable. La diversité de son encépagement et sa capacité à produire tous les styles, du tranquille au spumante, en font un terroir polyvalent, moteur de la production régionale et de plus en plus soucieux de qualité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "sannio",
+        "benevento",
+        "falanghina",
+        "aglianico",
+        "doc"
+      ],
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-terr-penisola-sorrentina",
+      "nom": "Penisola Sorrentina",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Penisola Sorrentina (Napoli)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Piedirosso",
+        "Aglianico",
+        "Falanghina",
+        "Sciascinoso"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "terrasses volcaniques et calcaires de la péninsule",
+      "caracteristiques_rapides": "Péninsule de Sorrente : rouges et blancs de terrasses, dont le fameux Gragnano (rouge pétillant et frais) et le Lettere, spécialités napolitaines de tradition.",
+      "notes_objectives": "La Penisola Sorrentina couvre la péninsule de Sorrente, au sud de Naples, face à Capri. Sur des terrasses volcaniques et calcaires plongeant vers la mer, cette appellation produit des rouges et des blancs, mais elle est surtout célèbre pour ses sous-zones traditionnelles : le Gragnano et le Lettere, des rouges légèrement pétillants (frizzante) à base de Piedirosso, Sciascinoso et Aglianico. Frais, fruités et désaltérants, servis légèrement rafraîchis, ces vins sont une spécialité napolitaine idéale sur la pizza et la cuisine locale. La Falanghina donne les blancs. Terroir de tradition, la Penisola Sorrentina perpétue avec le Gragnano un style de rouge pétillant unique, emblème de la convivialité napolitaine. Servi frais sur la pizza, les charcuteries ou les plats mijotés napolitains, le Gragnano incarne une convivialité et une tradition que quelques producteurs s'attachent à préserver face à l'uniformisation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "sorrento",
+        "gragnano",
+        "piedirosso",
+        "frizzante",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-terre-del-volturno",
+      "nom": "Terre del Volturno",
+      "type": "appellation (IGT)",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pallagrello Nero",
+        "Pallagrello Bianco",
+        "Casavecchia"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols volcaniques et sableux du Casertano",
+      "caracteristiques_rapides": "IGT du Casertano, refuge des cépages rares sauvés de l'oubli : Pallagrello (blanc et noir) et Casavecchia, des variétés autochtones originales et de caractère.",
+      "notes_objectives": "L'IGT Terre del Volturno, dans la province de Caserte (la Terra di Lavoro), est le refuge des cépages rares de la Campanie du Nord, sauvés de l'oubli par quelques vignerons passionnés. On y cultive le Pallagrello (en versions blanche et noire) et le Casavecchia, des variétés autochtones quasi disparues, aux profils originaux et de caractère, ainsi que l'Aglianico. Sur des sols volcaniques et sableux, ces cépages donnent des vins introuvables ailleurs, portés par des domaines comme Terre del Principe ou Nanni Copè (Sabbie di Sopra il Bosco). Le travail de sauvegarde ampélographique fait tout l'intérêt de ce terroir. Refuge des cépages rares (Pallagrello, Casavecchia), l'IGT Terre del Volturno offre des vins originaux et identitaires du Casertano.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "terra-di-lavoro",
+        "pallagrello",
+        "casavecchia",
+        "autochtone",
+        "igt"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-roccamonfina",
+      "nom": "Roccamonfina",
+      "type": "appellation (IGT)",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico",
+        "Piedirosso"
+      ],
+      "altitude": "~200-600 m",
+      "sols": "sols volcaniques riches du massif éteint du Roccamonfina",
+      "caracteristiques_rapides": "Terroir volcanique du nord de la Campanie, illustré par le rouge culte Terra di Lavoro (Galardi) : Aglianico et Piedirosso profonds sur les pentes du Roccamonfina.",
+      "notes_objectives": "L'IGT Roccamonfina, dans le nord de la Campanie (province de Caserte), tire son nom d'un ancien volcan éteint dont les pentes offrent des sols volcaniques riches et bien drainés. Ce terroir est surtout célèbre pour un vin culte : le Terra di Lavoro du domaine Galardi, assemblage d'Aglianico et de Piedirosso devenu, dès les années 1990, l'un des grands rouges du Sud de l'Italie. Les sols volcaniques et le climat propice donnent des rouges profonds, veloutés et de garde. Longtemps méconnu, le terroir du Roccamonfina a acquis une réputation grâce à ce vin d'exception. Terroir volcanique du nord campanien, le Roccamonfina donne, avec le Terra di Lavoro de Galardi, l'un des grands rouges cultes d'Italie du Sud. Servi sur des viandes rouges, du gibier ou des fromages, le rouge du Roccamonfina séduit par sa profondeur veloutée ; le succès du Terra di Lavoro a révélé le potentiel de ce terroir volcanique longtemps négligé du nord de la Campanie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "roccamonfina",
+        "aglianico",
+        "piedirosso",
+        "volcanique",
+        "igt"
+      ],
+      "source": "winedexer|tasteatlas"
+    },
+    {
+      "id": "it-campania-terr-capri",
+      "nom": "Capri",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Capri",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina",
+        "Greco",
+        "Piedirosso"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "sols calcaires de l'île, influence maritime",
+      "caracteristiques_rapides": "Minuscule DOC de l'île de Capri : blancs (Falanghina, Greco) et rouges (Piedirosso) confidentiels, production insulaire très limitée face à la pression touristique.",
+      "notes_objectives": "La DOC Capri est l'une des plus petites et des plus confidentielles d'Italie, sur la célèbre île du golfe de Naples. Face à la pression touristique et à la rareté du foncier, la viticulture y est devenue héroïque et quasi symbolique : quelques hectares seulement subsistent. Sur des sols calcaires, sous l'influence maritime, on produit des blancs (Falanghina, Greco) frais et salins et un peu de rouge (Piedirosso), en quantités infimes presque entièrement consommées sur place. Plus qu'un terroir commercial, Capri est un patrimoine que quelques passionnés s'efforcent de préserver. Minuscule DOC insulaire, Capri perpétue une viticulture héroïque et symbolique face à la pression touristique, avec des blancs salins rarissimes.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "capri",
+        "falanghina",
+        "insulaire",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-asprinio-di-aversa",
+      "nom": "Asprinio di Aversa",
+      "type": "appellation (DOC)",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Asprinio"
+      ],
+      "altitude": "~0-50 m",
+      "sols": "sols sableux de la plaine d'Aversa (vignes hautes, alberata)",
+      "caracteristiques_rapides": "Curiosité viticole : l'Asprinio, blanc vif et acidulé cultivé en vignes très hautes mariées aux peupliers (alberata aversana), base de spumante método classico.",
+      "notes_objectives": "L'Asprinio di Aversa est l'une des curiosités viticoles les plus étonnantes d'Italie, dans la plaine d'Aversa entre Naples et Caserte. Son originalité tient à la fois au cépage — l'Asprinio, blanc très vif et acidulé — et à son mode de culture spectaculaire : l'alberata aversana, où la vigne est mariée à de hauts peupliers et grimpe parfois à plus de quinze mètres, formant des « murs » de vigne que l'on vendange à l'échelle. Ces vignes hautes, héritage étrusque et romain, donnent un vin léger, acidulé et rafraîchissant, souvent transformé en spumante metodo classico grâce à sa forte acidité. Ce patrimoine unique, menacé, est défendu par quelques producteurs. Curiosité viticole aux vignes géantes en alberata, l'Asprinio di Aversa donne un blanc vif idéal pour les bulles, témoin d'un patrimoine ancestral.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "aversa",
+        "asprinio",
+        "alberata",
+        "spumante",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-terr-campania-igt",
+      "nom": "Campania (IGT)",
+      "type": "appellation (IGT)",
+      "region": "Campania",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico",
+        "Fiano",
+        "Falanghina",
+        "Greco",
+        "Piedirosso"
+      ],
+      "altitude": "~0-700 m",
+      "sols": "sols variés à l'échelle de la région",
+      "caracteristiques_rapides": "IGT régionale offrant une grande liberté : elle couvre toute la Campanie et permet aux producteurs des cuvées hors cadre des DOC, du plus simple au plus ambitieux.",
+      "notes_objectives": "L'IGT Campania est l'indication géographique régionale, qui couvre l'ensemble du territoire de la région. Offrant une grande liberté aux producteurs, elle permet des cuvées qui sortent du cadre plus strict des DOC et DOCG : assemblages inédits, cépages ou méthodes non prévus par les cahiers des charges, du vin le plus simple à des cuvées ambitieuses (certains vins cultes, comme le Montevetrano, sont d'ailleurs commercialisés en IGT). Elle couvre tous les cépages campaniens, autochtones comme internationaux, sur des sols très variés. Souple et transversale, l'IGT Campania est un cadre précieux pour la créativité des vignerons. IGT régionale, elle offre liberté et diversité, du vin de tous les jours à des cuvées d'auteur hors des sentiers battus.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "campania",
+        "igt",
+        "regionale",
+        "aglianico",
+        "fiano"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

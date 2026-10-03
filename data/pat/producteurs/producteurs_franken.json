@@ -1,0 +1,663 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "franken",
+  "region_label": "Franken (Allemagne)",
+  "source_file": "producteurs_franken_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 17,
+  "items": [
+    {
+      "id": "de-franken-prod-rudolf-fuerst",
+      "nom": "Rudolf Fürst",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Mainviereck (Churfranken)",
+      "commune": "Bürgstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bürgstadter Centgrafenberg",
+        "Centgrafenberg Hundsrück",
+        "Klingenberger Schlossberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bürgstadt, dans le Churfranken (Mainviereck), le domaine Rudolf Fürst est le plus grand producteur de vin rouge de Franconie et l'un des plus grands spécialistes du Spätburgunder (Pinot Noir) de toute l'Allemagne. À l'écart des coteaux calcaires du cœur de la région, il travaille les sols de grès coloré (Buntsandstein) du Centgrafenberg, qui réchauffent le sol et confèrent aux vins une signature minérale et épicée. Paul Fürst a hissé le domaine au sommet à partir des années 1980 et 1990 ; son fils Sebastian, formé notamment en Bourgogne, en a encore affiné le style. Les Grosses Gewächs de Spätburgunder — Centgrafenberg, la parcelle d'élite Hundsrück, le Klingenberger Schlossberg — comptent parmi les plus grands Pinots du pays, d'une finesse toute bourguignonne et d'une longue garde. Le domaine excelle aussi dans le Frühburgunder, mutation précoce typique du Churfranken, et signe de remarquables blancs : Weissburgunder et Riesling d'une grande pureté minérale. Comptant parmi les rares à produire de grands rouges en Allemagne, Rudolf Fürst incarne la facette rouge et méconnue de la Franconie, et demeure une référence absolue du Spätburgunder allemand, recherché dans le monde entier. Le Churfranken, à l'ouest de la région, est un univers à part : loin du Silvaner et du calcaire, on y cultive le Pinot sur des grès rouges qui évoquent davantage la Bourgogne ou le Palatinat méridional. Sebastian Fürst, qui a repris le flambeau après une formation en Côte d'Or, y vinifie en vendange partiellement entière, avec une grande retenue dans le boisé. La parcelle d'élite du Hundsrück, au cœur du Centgrafenberg, donne l'un des plus grands Pinots Noirs d'Allemagne, d'une finesse et d'une profondeur saluées par toute la critique internationale, dont les prix rivalisent avec ceux de grands bourgognes. Le domaine signe aussi un Frühburgunder de référence et des blancs (Weissburgunder, Riesling) d'une remarquable tension minérale. Pour l'amateur français, Rudolf Fürst est une révélation : la preuve que la Franconie, terre de Silvaner, abrite aussi l'un des plus grands domaines de Pinot Noir du pays. Discret mais immensément respecté, le domaine illustre, aux côtés des grands noms de Baden et de l'Ahr, la renaissance du Pinot Noir allemand, et confère à la Franconie une dimension rouge que peu de gens lui soupçonnent.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "icone",
+        "vdp",
+        "buntsandstein",
+        "mainviereck"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|grapeguru|jessebeckerms"
+    },
+    {
+      "id": "de-franken-prod-horst-sauer",
+      "nom": "Horst Sauer",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Escherndorf",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Scheurebe",
+        "Rieslaner"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Escherndorfer Lump",
+        "Escherndorfer Fürstenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Escherndorf, sur les bords du Main, Horst Sauer est l'un des maîtres absolus du Silvaner, le cépage roi de la Franconie. Le domaine doit sa renommée au grand coteau de l'Escherndorfer Lump, amphithéâtre vertigineux de calcaire coquillier (Muschelkalk) lové dans une boucle de la rivière, l'un des plus beaux terroirs de la région. Horst Sauer, épaulé par sa fille Sandra, y signe des Silvaner secs d'une pureté et d'une précision cristallines, mais aussi des vins doux d'anthologie — Beerenauslese, Trockenbeerenauslese et vins de glace — qui ont raflé d'innombrables distinctions et fait sa réputation internationale. Sa gamme s'étend du Silvaner et du Riesling secs aux cépages aromatiques comme la Scheurebe et le Rieslaner, toujours dans un registre de finesse et d'éclat. Salué comme l'un des plus grands vignerons d'Allemagne, Horst Sauer a porté le Silvaner de Franconie au rang des grands vins blancs, et demeure l'ambassadeur le plus brillant de ce cépage et de l'Escherndorfer Lump. L'Escherndorfer Lump, dont les pentes plongent vers le Main en un amphithéâtre saisissant, est un terroir de calcaire coquillier d'une rare précocité, qui permet aussi bien de grands vins secs que de splendides nectars botrytisés. C'est sur ce coteau que tout se joue. Horst Sauer s'est forgé une réputation mondiale grâce à ses vins doux — ses Trockenbeerenauslese et vins de glace ont remporté d'innombrables prix et lui ont valu d'être plusieurs fois distingué comme l'un des meilleurs vignerons d'Allemagne. Mais ses Silvaner secs, à commencer par les Grosses Gewächs et la cuvée « Es ist wie es ist », sont tout aussi remarquables, d'une pureté et d'une salinité cristallines. Sa fille Sandra assure aujourd'hui la continuité du style. Référence mondiale du Silvaner, Horst Sauer a fait de l'Escherndorfer Lump l'un des noms qui comptent dans le paysage du grand vin blanc allemand. Pour qui veut comprendre pourquoi la Franconie revendique le titre de patrie du Silvaner, une dégustation chez Horst Sauer s'impose : c'est là que ce cépage longtemps mésestimé atteint l'un de ses sommets mondiaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "icone",
+        "vdp",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|wine-searcher|vdp.de"
+    },
+    {
+      "id": "de-franken-prod-juliusspital",
+      "nom": "Juliusspital",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Würzburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Würzburger Stein",
+        "Iphöfer Julius-Echter-Berg",
+        "Escherndorfer Lump",
+        "Randersackerer Pfülben"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Würzburg, le Juliusspital est l'un des plus grands et des plus prestigieux domaines d'Allemagne, indissociable de l'histoire de la Franconie. Fondé en 1576 comme fondation hospitalière et caritative — mission qu'il poursuit encore aujourd'hui —, il finance ses œuvres grâce à un vaste vignoble, vinifié dans une cave historique à foudres de bois au cœur de la ville. Le domaine possède des parcelles dans les meilleurs sites de toute la Franconie, à travers les trois grands sols de la région : le Würzburger Stein (calcaire coquillier), l'Iphöfer Julius-Echter-Berg (keuper), l'Escherndorfer Lump, le Randersackerer Pfülben ou encore le Rödelseer Küchenmeister. Fidèle au Silvaner, qu'il considère comme son cépage signature, le Juliusspital en tire des vins vinifiés par fermentation spontanée en grands foudres, alliant tradition artisanale et pureté moderne. Le Silvaner du Würzburger Stein, sur le calcaire à la note fumée caractéristique, en est le fleuron. Monument vivant — au même titre que la Résidence de Würzburg, classée au patrimoine mondial —, le Juliusspital illustre la continuité unique des grandes fondations viticoles de Franconie et demeure une référence du grand Silvaner allemand. Avec un vignoble de plusieurs dizaines d'hectares répartis sur plus de cent kilomètres, à travers les meilleurs coteaux de la région, le Juliusspital est l'un des trois plus grands domaines d'Allemagne — et l'argent du vin sert toujours à financer l'hôpital de la fondation, une continuité unique au monde depuis bientôt cinq siècles. La cave à foudres de bois, au cœur de Würzburg, est un monument en soi : c'est là que les Silvaner sont vinifiés par fermentation spontanée, dans un mariage de tradition séculaire et de précision moderne. Le Würzburger Stein, dont le « Steinwein » à la note fumée enchanta jadis Goethe, en est le fleuron, complété par les grands keupers d'Iphofen et les calcaires d'Escherndorf et de Randersacker. Référence historique et qualitative, le Juliusspital propose certains des meilleurs rapports qualité-prix parmi les grands domaines allemands, et demeure l'ambassadeur par excellence du Silvaner de Franconie — « les grands Silvaner du Würzburger Stein ». Visiter ses caves historiques au cœur de Würzburg, c'est toucher du doigt cinq siècles d'histoire viticole ininterrompue ; rares sont les domaines au monde à offrir une telle alliance de patrimoine, de mission caritative et d'excellence.",
+      "mes_notes": null,
+      "notes_pat": "Les grans sylvanars du Würburgezr Stein vieillissent magnifiquement et sont dans le plus grands vins d'Allemagne.",
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "vdp",
+        "historique",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|jancisrobinson"
+    },
+    {
+      "id": "de-franken-prod-buergerspital",
+      "nom": "Bürgerspital",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Würzburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Würzburger Stein",
+        "Würzburger Stein-Harfe",
+        "Randersackerer Pfülben"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Würzburg, le Bürgerspital zum Heiligen Geist est l'une des plus anciennes institutions viticoles d'Allemagne, fondée en 1319 comme hospice pour les citoyens de la ville. Comme le Juliusspital voisin, il finance ses œuvres caritatives grâce à un grand vignoble. Il exploite de belles parcelles du Würzburger Stein, dont la fameuse partie « Stein-Harfe », ainsi que le Randersackerer Pfülben, sur les sols de calcaire coquillier qui donnent aux Silvaner leur note fumée caractéristique. Il en tire des Silvaner et des Riesling racés et de garde. Le style Bürgerspital, classique et soigné, vise la pureté et l'expression du terroir calcaire de Würzburg. Riche de plus de sept siècles d'histoire, le Bürgerspital compte, aux côtés du Juliusspital et du Hofkeller, parmi les trois grandes maisons historiques qui façonnent le Würzburger Stein et la réputation de la Franconie. Fondé grâce au legs d'un couple de bourgeois pour soigner les vieillards et les indigents de Würzburg, le Bürgerspital perpétue depuis plus de sept siècles cette double vocation, caritative et viticole. Sa cuvée du Stein-Harfe, issue d'une parcelle d'élite, compte parmi les grands Silvaner de Würzburg. Le domaine illustre, avec ses voisins, la continuité exceptionnelle des fondations hospitalières qui ont façonné le vignoble de la ville et la réputation du Würzburger Stein.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "vdp",
+        "historique",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|winedexer"
+    },
+    {
+      "id": "de-franken-prod-staatlicher-hofkeller",
+      "nom": "Staatlicher Hofkeller",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Würzburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Würzburger Stein",
+        "Würzburger Innere Leiste"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Würzburg, le Staatlicher Hofkeller est le domaine viticole de l'État de Bavière, installé dans les caves monumentales situées sous la Résidence des princes-évêques, joyau baroque classé au patrimoine mondial de l'UNESCO. C'est l'un des plus anciens et des plus vastes domaines d'Allemagne. Il exploite de grandes parcelles du Würzburger Stein et de la Würzburger Innere Leiste, sur le calcaire coquillier emblématique de la ville. Il en tire des Silvaner et des Riesling de tradition, marqués par la minéralité fumée du Stein. Le style Hofkeller, classique, met en avant l'expression du grand terroir calcaire de Würzburg. Troisième grande maison historique du Stein, aux côtés du Juliusspital et du Bürgerspital, le Staatlicher Hofkeller perpétue, dans un cadre exceptionnel, la longue tradition du grand Silvaner de Franconie. Héritier du domaine des princes-évêques de Würzburg, le Hofkeller possède l'une des plus impressionnantes caves d'Europe, creusée sous la Résidence baroque. Son histoire et son patrimoine en font une institution, et ses Silvaner du Stein perpétuent la grande tradition du Steinwein. Aux côtés du Juliusspital et du Bürgerspital, il complète le trio des maisons historiques qui dominent le vignoble de Würzburg et incarnent la grandeur du calcaire coquillier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "historique",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "jessebeckerms|wine-searcher"
+    },
+    {
+      "id": "de-franken-prod-hans-wirsching",
+      "nom": "Hans Wirsching",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "commune": "Iphofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Scheurebe",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Iphöfer Julius-Echter-Berg",
+        "Iphöfer Kronsberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Iphofen, dans le Steigerwald, Hans Wirsching est l'une des références du Silvaner de Franconie, et l'un des domaines familiaux les plus respectés de la région. À la différence du calcaire de Würzburg, il travaille les marnes de keuper (gypse) qui font la singularité du Steigerwald. Sur les grands coteaux de l'Iphöfer Julius-Echter-Berg et du Kronsberg, le domaine signe des Silvaner secs structurés, profonds et d'une grande capacité de garde, ainsi que de beaux Riesling et Scheurebe. Le keuper noir donne à ces vins une minéralité fumée et une trame ferme caractéristiques. Le style Wirsching recherche la précision, la structure et l'expression du terroir de keuper. Pilier du Steigerwald, le domaine illustre la capacité du Silvaner à donner, sur le keuper, des vins de terroir vieillissant magnifiquement, et compte parmi les meilleures adresses de la Franconie. Domaine familial depuis le XVIIIe siècle, Wirsching est l'un des piliers du Steigerwald et l'un des défenseurs les plus constants du Silvaner de keuper. Ses Grosses Gewächs du Julius-Echter-Berg, structurés et taillés pour la garde, démontrent que le Silvaner peut vieillir aussi magnifiquement que le Riesling. Le domaine illustre la personnalité du keuper noir, qui donne des vins plus fermes, fumés et minéraux que le calcaire de Würzburg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "vdp",
+        "keuper",
+        "steigerwald"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|jessebeckerms"
+    },
+    {
+      "id": "de-franken-prod-fuerstlich-castell",
+      "nom": "Fürstlich Castell",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "commune": "Castell",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Casteller Schlossberg",
+        "Casteller Kugelspiel"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castell, dans le Steigerwald, le Fürstlich Castell'sches Domänenamt est un domaine princier d'exception, qui possède l'intégralité des vignes du village — un cas rare en Allemagne. C'est ici, dit-on, que le Silvaner fut planté pour la première fois en Franconie, en 1659. Sur les marnes de keuper du Casteller Schlossberg et du Kugelspiel, le domaine signe des Silvaner racés, structurés et de garde, à la minéralité fumée typique du Steigerwald, ainsi que de beaux Riesling. Le style Castell, classique et soigné, met en avant l'expression du keuper et la pureté du Silvaner. Riche d'une longue histoire et d'un patrimoine de terroirs unique, Fürstlich Castell illustre les racines historiques du Silvaner de Franconie et demeure l'une des grandes maisons du Steigerwald. La famille Castell, l'une des plus anciennes maisons princières d'Allemagne, cultive la vigne depuis des siècles et possède l'intégralité du terroir du village — un cas presque unique, comparable à certains monopoles bourguignons. C'est ici qu'aurait été planté le premier Silvaner de Franconie, ce qui ajoute au prestige historique du domaine. Ses Silvaner de keuper, racés et de garde, perpétuent une tradition séculaire au cœur du Steigerwald.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "vdp",
+        "keuper",
+        "historique",
+        "steigerwald"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|jessebeckerms"
+    },
+    {
+      "id": "de-franken-prod-zehnthof-luckert",
+      "nom": "Zehnthof Luckert",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Sulzfeld",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sulzfelder Maustal",
+        "Sulzfelder Cyriakusberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sulzfeld, sur les bords du Main, le Zehnthof Luckert est l'un des plus beaux domaines bio de Franconie, mené par la famille Luckert. Sur le calcaire coquillier du Sulzfelder Maustal et du Cyriakusberg, il signe des Silvaner d'une grande profondeur et d'une remarquable salinité. Vinifiés avec patience, souvent en grands foudres et avec un minimum d'interventions, ses Silvaner comptent parmi les plus aboutis de la région, alliant densité, minéralité et capacité de garde. Le domaine produit aussi de beaux Weissburgunder et Riesling. Le style Luckert, exigeant et naturel, vise la pureté et l'expression du terroir calcaire. Engagé de longue date dans le bio, le Zehnthof Luckert s'est imposé comme l'une des références qualitatives du Silvaner de Franconie, salué par la critique. La famille Luckert, pionnière du bio à Sulzfeld, vinifie ses meilleurs Silvaner avec une approche proche du naturel, longuement élevés sur lies en grands foudres. Le résultat est une gamme de Silvaner d'une profondeur et d'une salinité remarquables, qui figurent régulièrement parmi les meilleurs de la région dans les dégustations. Le domaine illustre l'essor d'une viticulture exigeante et respectueuse au cœur du Maindreieck.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "bio",
+        "vdp",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "jessebeckerms|winedexer"
+    },
+    {
+      "id": "de-franken-prod-weingut-am-stein",
+      "nom": "Weingut am Stein",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Würzburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Würzburger Stein",
+        "Stettener Stein"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Würzburg, le Weingut am Stein, mené par Ludwig et Sandra Knoll, est un pionnier de la biodynamie en Franconie. Installé sur le grand coteau du Würzburger Stein, il en tire des Silvaner et des Riesling d'une grande pureté, dans un style résolument moderne et précis. Le domaine travaille aussi le Stettener Stein, sur le calcaire coquillier caractéristique de Würzburg. La conduite en biodynamie et un travail soigné en cave confèrent aux vins énergie et salinité. Le style am Stein conjugue modernité, finesse et expression du terroir calcaire. Figure du renouveau de la Franconie, le Weingut am Stein illustre l'essor d'une viticulture plus respectueuse et plus parcellaire, et compte parmi les bonnes adresses contemporaines de Würzburg. Ludwig Knoll a converti le domaine à la biodynamie et en a fait un laboratoire de la Franconie moderne, alliant respect du vivant et précision. Ses Silvaner et Riesling du Würzburger Stein, énergiques et salins, s'inscrivent dans le renouveau qualitatif de la région. Le domaine, également connu pour son accueil œnotouristique au-dessus de la ville, illustre une vision contemporaine du grand terroir calcaire de Würzburg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "biodynamie",
+        "vdp",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|vdp.de"
+    },
+    {
+      "id": "de-franken-prod-rudolf-may",
+      "nom": "Rudolf May",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Retzstadt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Retzstadter Langenberg",
+        "Himmelspfad"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Retzstadt, dans le Maindreieck, Rudolf May est l'une des étoiles montantes de la Franconie. Sur les coteaux du secteur, il signe des Silvaner et des Riesling d'une grande finesse, salués par la critique comme parmi les plus prometteurs de la région. Le domaine, membre du VDP, met l'accent sur l'expression parcellaire et une viticulture soignée, dans un style précis et énergique. Le style May recherche la pureté, la tension et la finesse, dans des vins de terroir d'un excellent niveau. Représentant d'une nouvelle génération ambitieuse, Rudolf May illustre la vitalité actuelle de la Franconie et compte parmi les vignerons à suivre de très près dans la région. Issu d'une famille de vignerons, Rudolf May s'est imposé en quelques années comme l'un des talents les plus en vue de la Franconie, salué par les guides comme une valeur montante. Ses Silvaner et Riesling, d'une grande précision, témoignent d'un travail parcellaire rigoureux et d'une recherche constante de finesse. Le domaine illustre l'élan d'une nouvelle génération qui hisse la région vers de nouveaux sommets.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "montant",
+        "vdp",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|vdp.de"
+    },
+    {
+      "id": "de-franken-prod-rainer-sauer",
+      "nom": "Rainer Sauer",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Escherndorf",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Escherndorfer Lump"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Escherndorf, Rainer Sauer est l'un des pionniers du renouveau du Silvaner en Franconie. Sur le grand coteau de l'Escherndorfer Lump, en calcaire coquillier, le domaine familial signe des Silvaner secs purs et fiables, ambassadeurs du cépage roi de la région. Le travail soigné et l'attachement au terroir confèrent aux vins fraîcheur et précision. Régulier et apprécié, Rainer Sauer compte parmi les bonnes adresses d'Escherndorf et une valeur sûre du Silvaner de Franconie. Aux côtés de quelques autres pionniers, Rainer Sauer a contribué dès les années 1990 à redonner ses lettres de noblesse au Silvaner sec de Franconie. Sa famille perpétue aujourd'hui ce travail, avec des vins droits et sincères, fidèles au grand terroir de l'Escherndorfer Lump. Le domaine reste l'une des valeurs sûres d'Escherndorf pour le Silvaner sec de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "muschelkalk",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|winedexer"
+    },
+    {
+      "id": "de-franken-prod-johann-ruck",
+      "nom": "Johann Ruck",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "commune": "Iphofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Iphöfer Julius-Echter-Berg",
+        "Iphöfer Kronsberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Iphofen, dans le Steigerwald, Johann Ruck est une bonne adresse pour le Silvaner de keuper. Sur les grands coteaux de l'Iphöfer Julius-Echter-Berg et du Kronsberg, le domaine signe des Silvaner et des Riesling structurés et de belle facture. Le travail soigné met en avant la minéralité fumée caractéristique du keuper du Steigerwald. Discret et régulier, Johann Ruck compte parmi les bonnes adresses d'Iphofen pour le Silvaner de terroir. Iphofen, avec ses remparts médiévaux et ses grands coteaux de keuper, est l'un des hauts lieux du Silvaner de Franconie, et Johann Ruck y tient son rang avec constance. Ses vins, structurés et minéraux, illustrent le style fumé et ferme propre au keuper du Steigerwald. Il compte parmi les bonnes adresses d'Iphofen pour le Silvaner de keuper du Steigerwald.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "keuper",
+        "steigerwald"
+      ],
+      "a_verifier": null,
+      "source": "jessebeckerms|starwinelist"
+    },
+    {
+      "id": "de-franken-prod-weltner",
+      "nom": "Weltner",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "commune": "Rödelsee",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Rödelseer Küchenmeister"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rödelsee, dans le Steigerwald, le domaine Paul Weltner est réputé pour ses Silvaner de keuper. Sur le grand coteau du Rödelseer Küchenmeister, il signe des vins droits, salins et minéraux, parmi les bonnes valeurs du secteur. Le travail soigné met en avant la structure et la finesse propres au keuper. Spécialiste reconnu du Silvaner, Weltner compte parmi les bonnes adresses du Steigerwald pour ce cépage. Spécialiste reconnu du Silvaner, Paul Weltner concentre son travail sur les meilleurs keupers de Rödelsee, dont le Küchenmeister. Ses vins, droits et salins, sont prisés des amateurs en quête de Silvaner de terroir authentique, à des prix encore raisonnables. Il figure parmi les spécialistes les plus respectés du Silvaner de Rödelsee.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "keuper",
+        "steigerwald"
+      ],
+      "a_verifier": null,
+      "source": "jessebeckerms|starwinelist"
+    },
+    {
+      "id": "de-franken-prod-bickel-stumpf",
+      "nom": "Bickel-Stumpf",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Frickenhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Frickenhäuser Kapellenberg",
+        "Thüngersheimer Scharlachberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Frickenhausen, dans le Maindreieck, Bickel-Stumpf est un domaine familial soigné. Sur le Frickenhäuser Kapellenberg et le Thüngersheimer Scharlachberg, il signe des Silvaner et des Riesling fins et salins. Le travail attentif à la vigne et en cave confère aux vins pureté et fraîcheur, à des prix mesurés. Fiable et apprécié, Bickel-Stumpf compte parmi les bonnes adresses familiales de la Franconie pour le Silvaner et le Riesling de terroir. Membre du VDP, le domaine soigne particulièrement ses Silvaner et Riesling du Kapellenberg, dans un style net et précis. Bickel-Stumpf offre certains des meilleurs rapports qualité-prix de la Franconie, et illustre la qualité régulière des bonnes maisons familiales du Maindreieck. Le domaine confirme la vitalité des bonnes maisons familiales du Maindreieck.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "vdp",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|starwinelist"
+    },
+    {
+      "id": "de-franken-prod-fuerst-zu-loewenstein",
+      "nom": "Fürst zu Löwenstein",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Mainviereck (Churfranken)",
+      "commune": "Kreuzwertheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Homburger Kallmuth"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kreuzwertheim, dans l'ouest de la Franconie (Mainviereck), le domaine Fürst zu Löwenstein est une propriété princière conduite en agriculture biologique. Son joyau est le spectaculaire coteau du Homburger Kallmuth, vignoble en terrasses parmi les plus escarpés d'Allemagne, au sol singulier. Le domaine y signe des Silvaner d'une grande personnalité ainsi que de beaux Spätburgunder, dans un secteur occidental de la Franconie plus propice aux cépages bourguignons. Le travail bio et l'attention au terroir confèrent aux vins finesse et caractère. Le style Löwenstein, soigné et authentique, met en avant l'expression de ses terroirs singuliers. Riche d'un patrimoine remarquable, le domaine illustre la diversité de la Franconie et compte parmi les bonnes adresses de l'ouest de la région, entre grand Silvaner et Pinot Noir. Le Homburger Kallmuth, coteau en terrasses vertigineuses classé pour sa flore rare, est l'un des sites les plus spectaculaires d'Allemagne, au sol singulier mêlant grès et calcaire. Le domaine princier, conduit en bio, y signe des Silvaner d'une grande personnalité et de beaux Spätburgunder. Situé dans l'ouest de la Franconie, à la transition avec le Churfranken, Fürst zu Löwenstein illustre la diversité des terroirs et des cépages de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "spaetburgunder",
+        "bio",
+        "mainviereck"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|starwinelist"
+    },
+    {
+      "id": "de-franken-prod-max-mueller-i",
+      "nom": "Max Müller I",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "commune": "Volkach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Scheurebe"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Volkacher Ratsherr",
+        "Escherndorfer Lump"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Volkach, dans le cœur du Maindreieck, le domaine Max Müller I est une maison familiale dynamique. Sur des coteaux comme le Volkacher Ratsherr et l'Escherndorfer Lump, il propose une large gamme de Silvaner et de blancs aromatiques. Le travail soigné et une gamme étendue assurent des vins fiables et accessibles, dans le style frais de la Franconie. Bien diffusé, Max Müller I compte parmi les bonnes adresses de Volkach et contribue à faire connaître le Silvaner de la région. Installé dans la jolie ville viticole de Volkach, Max Müller I conjugue tradition familiale et large diffusion. Sa gamme étendue, du Silvaner aux cépages aromatiques, en fait une adresse de confiance pour découvrir la diversité des vins du Maindreieck, à des prix accessibles. Il reste une adresse de confiance pour découvrir la diversité des vins de Volkach.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "maindreieck"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|starwinelist"
+    },
+    {
+      "id": "de-franken-prod-stahl",
+      "nom": "Stahl",
+      "type": "domaine",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "commune": "Auernhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Scheurebe"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Auernhofer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Auernhofen, dans le sud du Steigerwald, le domaine Stahl s'est fait remarquer par son approche moderne et créative. Il propose des Silvaner et des blancs aromatiques d'un bon rapport qualité-prix, popularisés par un marketing dynamique et des étiquettes originales. Le travail soigné et un style accessible séduisent un large public. Représentant d'une Franconie plus jeune et décomplexée, Stahl compte parmi les adresses montantes et attachantes du Steigerwald. Avec ses étiquettes modernes et son ton décomplexé, le domaine Stahl s'adresse à un nouveau public sans renoncer à la qualité de ses Silvaner. Il incarne une Franconie plus jeune et créative, qui dépoussière l'image parfois austère de la région tout en restant fidèle à son cépage roi. Le domaine séduit un public jeune tout en restant fidèle au cépage roi de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "steigerwald"
+      ],
+      "a_verifier": null,
+      "source": "starwinelist"
+    }
+  ]
+}

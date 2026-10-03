@@ -1,0 +1,1654 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "rioja",
+  "region_label": "La Rioja (DOCa Rioja)",
+  "source_file": "terroirs_rioja_To_Import.xlsx",
+  "built_at": "2026-08-11T15:03:34",
+  "count": 62,
+  "items": [
+    {
+      "id": "es-rioja-terr-vina-el-pison",
+      "nom": "Viña El Pisón",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "560–580 m",
+      "sols": "Argiles calcaires sur socle de calcaire compact, très caillouteux",
+      "caracteristiques_rapides": "Clos de 2,4 ha ceint de murs, planté en 1945, vinifié seul par Artadi depuis 1991 : le grand cru le plus incontesté de la Rioja.",
+      "notes_objectives": "Viña El Pisón est le plus incontesté des grands crus de la Rioja. Ce clos de deux hectares et demi, ceint de murs de pierre au lieu-dit El Pisón sur la commune de Laguardia, a été planté en Tempranillo en 1945 par la famille dont descend Artadi. Il s'inscrit dans une combe abritée de la Rioja Alavesa, autour de cinq cent soixante-dix mètres d'altitude, sur un sol d'argiles rouges peu profondes reposant sur une dalle de calcaire compact qui affleure par endroits. Ce socle calcaire, très drainant, contraint la vigne à plonger ses racines et impose des rendements naturellement faibles. L'exposition et le mur de clôture créent un microclimat légèrement plus chaud et plus protégé que les parcelles voisines, ce qui permet une maturité pleine sans excès de degré, tandis que l'altitude préserve l'acidité. Le résultat, vinifié séparément par Artadi depuis 1991, est un Tempranillo d'une densité et d'une profondeur de tanin exceptionnelles, doublé d'une allonge saline qui signe le calcaire. C'est l'un des tout premiers vins espagnols à avoir été pensé et vendu comme un vin de lieu, contre la logique d'assemblage et d'élevage qui régissait alors la Rioja. Sa reconnaissance internationale a largement contribué à faire admettre l'idée qu'il existe, dans la DOCa, des parcelles capables de rivaliser avec les plus grands crus du monde. La sortie d'Artadi de l'appellation en 2015 a paradoxalement renforcé le statut du clos, désormais commercialisé sous simple mention géographique : le nom du lieu suffit. Pour un sommelier, El Pisón est autant un vin qu'un argument — celui qui clôt le débat sur l'existence de crus en Rioja. Les grands millésimes demandent une dizaine d'années de cave et une longue aération, et vieillissent sans difficulté sur deux ou trois décennies. Il faut aussi rappeler ce que le lieu doit au travail de la vigne : Artadi y pratique une viticulture biologique exigeante, labours, rendements volontairement bridés et vendange parcelle par parcelle, si bien que la qualité du cru tient autant à la main de l'homme qu'à la nature du sol. La comparaison avec les grands clos bourguignons n'est pas usurpée : même mur d'enceinte, même idée qu'un microclimat clos façonne un vin impossible à reproduire ailleurs. La bouteille à réserver au client qui doute que l'Espagne possède des terroirs de rang mondial.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "clos",
+        "artadi",
+        "vieilles-vignes",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-las-beatas",
+      "nom": "Las Beatas",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "600–650 m",
+      "sols": "Calcaires et argiles rouges en terrasses très pentues",
+      "caracteristiques_rapides": "Moins de 2 ha en terrasses relevées pierre par pierre par Telmo Rodríguez, complantés d'une douzaine de variétés : le lieu-dit manifeste du mouvement parcellaire riojan.",
+      "notes_objectives": "Las Beatas est le lieu-dit manifeste du mouvement parcellaire riojan. Il s'agit de moins de deux hectares en terrasses très pentues au-dessus de Lanciego, dans la partie orientale de la Rioja Alavesa, entre six cents et six cent cinquante mètres d'altitude. Quand Telmo Rodríguez et Pablo Eguzkiza rachètent la parcelle, elle est en friche ; ils relèvent un à un les murets de pierre sèche effondrés et reconstituent les terrasses à la main, dans un travail de restauration qui a duré plusieurs années. Le sol associe calcaires actifs et argiles rouges maigres sur une pente si raide que toute mécanisation est impossible : la vigne y est travaillée à la main et, pour partie, à la traction animale. La parcelle est complantée à l'ancienne, mêlant une douzaine de variétés — Tempranillo, Garnacha, Graciano, Viura et divers cépages minoritaires — vendangées et vinifiées ensemble, comme le voulait la tradition antérieure à la spécialisation. Cette cohabitation variétale, jointe à l'altitude et au calcaire, donne un vin d'une complexité aromatique rare, floral et épicé, à la trame fine et tendue, très éloigné de l'image d'un Rioja puissant. La production, minuscule, se compte en quelques milliers de bouteilles. Au-delà du vin, Las Beatas incarne une démonstration : celle qu'un grand terroir riojan peut naître de la reconstitution patiente d'un lieu abandonné et du refus de la monoculture. Telmo Rodríguez en a fait le symbole de son combat, mené pendant deux décennies, pour l'instauration d'une hiérarchie de lieux dans la DOCa. C'est une bouteille de collection, à réserver aux grandes occasions et à carafer longuement ; elle raconte, à elle seule, le tournant qu'a pris la Rioja au début du XXIe siècle. Sur le plan pratique, Las Beatas illustre aussi une réalité économique : un tel travail en forte pente, entièrement manuel, sur une surface aussi réduite, ne peut donner qu'un vin rare et cher, ce qui explique son statut de bouteille de collection. Mais le lieu a valeur d'exemple bien au-delà de sa production confidentielle. Il a montré qu'une friche pouvait redevenir un grand cru, que la complantation ancienne était un atout et non un archaïsme, et que la Rioja avait tout intérêt à nommer ses lieux plutôt qu'à les diluer. Toute une génération de vignerons s'y réfère aujourd'hui.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "complantation",
+        "terrasses",
+        "telmo-rodriguez",
+        "altitude",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-quinon-de-valmira",
+      "nom": "Quiñón de Valmira",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha"
+      ],
+      "altitude": "580–620 m",
+      "sols": "Calcaires actifs et argiles rouges sur pentes du Monte Yerga",
+      "caracteristiques_rapides": "Parcelle de Garnacha de haute altitude sur le Monte Yerga, vinifiée seule par Álvaro Palacios depuis 2015 : la démonstration que la Rioja Oriental a des grands crus.",
+      "notes_objectives": "Quiñón de Valmira a fait basculer la réputation de toute la Rioja Oriental. C'est une parcelle de Garnacha de vieilles vignes accrochée aux pentes du Monte Yerga, au-dessus d'Alfaro, à l'extrémité sud-est de l'appellation, entre cinq cent quatre-vingts et six cent vingt mètres d'altitude. Álvaro Palacios, revenu diriger le domaine familial Palacios Remondo, la vinifie séparément depuis 2015, convaincu qu'elle recelait le plus grand potentiel de la propriété. Le sol, fait de calcaires actifs et d'argiles rouges sur un versant frais et venté, contraint fortement la Garnacha, cépage habituellement généreux et alcooleux en plaine, mais qui gagne ici en tension, en parfum et en finesse dès qu'on l'installe en altitude sur calcaire. L'amplitude thermique entre le jour et la nuit, marquée sur ces hauteurs, préserve une acidité et une fraîcheur aromatique inattendues sous ce climat méditerranéen. Le vin qui en résulte est floral, épicé, presque bourguignon dans sa texture soyeuse et son allonge, à mille lieues des Garnachas chaudes qui ont longtemps fait la mauvaise réputation de la Rioja Baja. Álvaro Palacios, déjà auteur de L'Ermita au Priorat et de Corullón au Bierzo, y a signé sa troisième grande Garnacha de terroir espagnole. Pour un sommelier, Valmira est un formidable outil de démonstration : il suffit de le servir à l'aveugle pour balayer l'idée que la Rioja Oriental ne produirait que du vin de volume. Le lieu a entraîné dans son sillage une nouvelle génération de vignerons — Arizcuren, Dominio de Queirón — décidés à valoriser les altitudes du Yerga. Les quantités sont réduites et le vin déjà recherché ; il mérite quelques années de garde et gagne à être servi autour de seize degrés. Le nom de quiñón désigne, dans le vocabulaire agraire local, une part de vigne héritée ou attribuée en indivision — une manière de rappeler l'ancrage paysan du lieu, bien antérieur à sa reconnaissance critique. Le versant du Yerga offre par ailleurs une palette d'expositions et d'altitudes que Palacios explore parcelle par parcelle, si bien que Valmira n'est que la pointe émergée d'un travail plus large sur la montagne. Pour la Rioja Oriental tout entière, longtemps reléguée au rang de réservoir de degré et de couleur, ce cru a valeur de réhabilitation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "garnacha",
+        "monte-yerga",
+        "altitude",
+        "rioja-oriental",
+        "palacios"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-vina-tondonia",
+      "nom": "Viña Tondonia",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Malvasía"
+      ],
+      "altitude": "460–490 m",
+      "sols": "Alluvions caillouteuses et argilo-calcaires du méandre de l'Èbre",
+      "caracteristiques_rapides": "Une centaine d'hectares plantés en 1913 dans un méandre de l'Èbre, propriété de López de Heredia : le lieu-dit le plus célèbre d'Espagne, en rouge comme en blanc.",
+      "notes_objectives": "Viña Tondonia est probablement le lieu-dit le plus célèbre d'Espagne. Cette centaine d'hectares plantée en 1913 par Rafael López de Heredia occupe un vaste méandre de l'Èbre à la sortie de Haro, en Rioja Alta, autour de quatre cent soixante-quinze mètres d'altitude. Le fleuve, qui enserre la parcelle sur trois côtés, tempère le climat et entretient une humidité favorable à la lente maturation. Le sol, fait d'alluvions caillouteuses et d'argiles calcaires déposées par l'Èbre, est pauvre et bien drainé. Il est planté en Tempranillo dominant complété de Garnacha, Graciano et Mazuelo pour les rouges, et de Viura et Malvasía pour les blancs, dans une logique d'assemblage de terroir qui reste la marque de la maison. Ce qui fait de Tondonia un cru, ce n'est pas seulement le lieu mais le geste : López de Heredia y applique un élevage d'une longueur presque irréelle, six à dix ans en barriques maison pour les Gran Reserva, une décennie pour les blancs, avec soutirages manuels à la bougie et collage au blanc d'œuf. Le rosé Gran Reserva issu de la parcelle, élevé plusieurs années sous bois, est devenu un objet de culte mondial. Tondonia est le lieu où le temps se fige : le vin y naît d'une conjonction entre un terroir de méandre, un encépagement complanté et une méthode d'élevage inchangée depuis un siècle. C'est la référence absolue du Rioja classique, citée par la génération parcellaire elle-même comme la preuve qu'un grand vin de lieu peut être un assemblage patiemment élevé. Pour un sommelier, c'est une source inépuisable d'accords de garde, et l'un des rares crus au monde dont les vieux millésimes restent disponibles à la propriété. Un détail dit bien la philosophie du lieu : le vignoble a été en partie replanté après le gel dévastateur de 1913, l'année même de sa création, et la maison a toujours privilégié la sélection massale à partir de ses propres ceps plutôt que le recours à des clones. Tondonia n'est donc pas seulement un terroir, mais un patrimoine génétique vivant. Les blancs, en particulier, y atteignent une singularité extrême : élevés une décennie sous bois, ils développent un registre oxydatif de noisette, de cire et de curry doux dont l'équivalent ne se trouve qu'au Jura ou à Jerez, et vieillissent sur un demi-siècle sans faiblir.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lopez-de-heredia",
+        "meandre",
+        "haro",
+        "blancs",
+        "historique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-finca-ygay",
+      "nom": "Finca Ygay",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Mazuelo",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "450–485 m",
+      "sols": "Argilo-calcaires avec terrasses de galets, sous-sol crayeux",
+      "caracteristiques_rapides": "Environ 300 ha d'un seul tenant appartenant à Marqués de Murrieta depuis 1872, dont sont issus Castillo Ygay et le blanc Capellanía : le plus vaste domaine-terroir de la DOCa.",
+      "notes_objectives": "Finca Ygay est le plus vaste domaine-terroir d'un seul tenant de la DOCa Rioja : environ trois cents hectares que Marqués de Murrieta possède sans interruption depuis 1872, sur les hauteurs qui dominent Logroño, en Rioja Alta, autour de quatre cent soixante-dix mètres d'altitude. À une échelle où la plupart des grands vins riojans naissent d'achats de raisin dispersés, Ygay est un cas unique — un domaine au sens bourguignon, ceint de ses propres limites. Le sol associe argiles calcaires et terrasses de galets sur un sous-sol crayeux, avec une mosaïque d'expositions et de profondeurs qui a permis, depuis la rénovation des installations, un travail parcellaire de plus en plus fin. Chaque grande cuvée de la maison correspond à une zone identifiée de la finca. C'est ici que naît Castillo Ygay Gran Reserva Especial, produit seulement dans les millésimes jugés dignes du nom et gardé de très longues années avant commercialisation : les 1917 et 1942 restent des légendes du vin espagnol, et le 2010 a été sacré meilleur vin du monde par la critique américaine. C'est ici aussi qu'est délimitée la parcelle de Viura dont sort Capellanía, l'un des plus grands blancs de garde d'Espagne. Finca Ygay démontre qu'un terroir riojan peut se lire à l'échelle d'un domaine entier, avec ses climats internes, plutôt qu'à celle d'une seule parcelle. Deux siècles d'archives, une continuité de propriété exceptionnelle et une capacité de garde qui se compte en décennies en font un lieu de référence. Les Castillo Ygay anciens, régulièrement remis en vente par la propriété, comptent parmi les bouteilles les plus émouvantes que puisse proposer un sommelier. La finca comprend aussi des parcelles emblématiques comme la Vieille Cépage plantée à la fin du XIXe siècle, qui alimente les versions les plus exceptionnelles de Castillo Ygay. La continuité du lieu, jamais morcelé ni revendu, permet à la maison de disposer d'un recul historique unique sur le comportement de chaque zone selon les millésimes. C'est cette mémoire, autant que le sol, qui fait la valeur du terroir. Pour un sommelier, Ygay est l'argument imparable face à celui qui réduit le Rioja à un assemblage de négoce : c'est un domaine d'un seul tenant, avec ses climats internes et deux siècles d'archives.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "monopole",
+        "murrieta",
+        "castillo-ygay",
+        "historique",
+        "logrono"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-calvario",
+      "nom": "Calvario",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano"
+      ],
+      "altitude": "520–560 m",
+      "sols": "Argiles calcaires maigres sur coteau escarpé exposé au sud-est",
+      "caracteristiques_rapides": "Deux hectares complantés en 1945 sur une pente raide au-dessus de l'Èbre, vinifiés par Finca Allende : l'un des lieux-dits les plus intériorisés de la Rioja Alta.",
+      "notes_objectives": "Calvario est l'un des lieux-dits les plus intériorisés de la Rioja Alta. Ce sont un peu plus de deux hectares complantés en 1945 sur un coteau escarpé au-dessus de l'Èbre, à Briones, exposés au sud-est, entre cinq cent vingt et cinq cent soixante mètres d'altitude. Miguel Ángel de Gregorio, fondateur de Finca Allende, en a fait l'expression sommitale de son domaine. Le sol est fait d'argiles calcaires maigres sur une pente si raide que le travail y reste manuel. La parcelle est complantée à l'ancienne, avec une majorité de Tempranillo accompagnée de Garnacha et de Graciano dans le même rang, vendangés et vinifiés ensemble. Cette cohabitation, jointe à la pauvreté du sol et à l'âge des ceps, donne des rendements infimes et une concentration naturelle élevée. Contrairement à beaucoup de cuvées ambitieuses de la Rioja moderne, Calvario ne cherche pas la puissance : le vin est dense mais retenu, minéral, marqué par une acidité fine et une tension qui rappellent davantage un grand coteau qu'un vin de plaine. Le boisé, appuyé dans les premiers millésimes des années 1990 et 2000, s'est nettement fondu au fil du temps. Le lieu illustre parfaitement ce qu'apporte la complantation historique de la Rioja : un équilibre naturel entre structure, parfum et acidité, obtenu par la diversité variétale plutôt que par l'assemblage en cave. Calvario fait partie des parcelles qui ont convaincu la région de reconnaître officiellement ses grands lieux. C'est un vin de garde, à ouvrir après une dizaine d'années et à carafer, dont la finesse surprend souvent ceux qui attendent un Rioja plus démonstratif. Le nom du lieu, évoquant une montée pénible, renvoie à la difficulté du travail sur cette pente, mais aussi à la position dominante de la parcelle au-dessus du fleuve. De Gregorio y a très tôt abandonné toute recherche de sur-extraction pour laisser parler la finesse du coteau, ce qui a fait de Calvario l'un des marqueurs du virage qualitatif de Briones. Le village, classé parmi les plus beaux d'Espagne, concentre plusieurs de ces coteaux d'exception, et Calvario en est la pointe la plus recherchée. Une bouteille à ouvrir sur un plat de caractère mais sans excès de puissance, tant sa force est intérieure.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "finca-allende",
+        "complantation",
+        "briones",
+        "coteau",
+        "vieilles-vignes"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-condenada",
+      "nom": "La Condenada",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Malvasía"
+      ],
+      "altitude": "500–540 m",
+      "sols": "Calcaires en dalles affleurantes avec fine couche d'argile",
+      "caracteristiques_rapides": "Vieille vigne complantée reconnue en Viñedo Singular, vinifiée par Artuke : sol calcaire quasi nu, rendements infimes, une des plus belles tensions de l'Alavesa.",
+      "notes_objectives": "La Condenada est l'un des lieux-dits qui incarnent le mieux le renouveau parcellaire de la Rioja Alavesa. Cette vieille vigne complantée, reconnue en Viñedo Singular, se trouve à Baños de Ebro, au pied de la Sierra de Cantabria, entre cinq cents et cinq cent quarante mètres d'altitude. Elle est vinifiée par Artuke, le domaine des frères de Miguel, figures de la nouvelle génération riojane. Sa particularité tient au sol : un calcaire en dalles qui affleure presque à nu, recouvert d'une couche d'argile si mince que la vigne peine à s'y nourrir. Ce dénuement impose des rendements minuscules et confère au vin une salinité et une tension immédiatement reconnaissables. La parcelle mêle Tempranillo, Garnacha et des variétés blanches complantées, vendangées ensemble selon l'usage ancien. Le nom, « la condamnée », dit assez le regard qu'on portait naguère sur ces vieilles vignes jugées trop peu productives et vouées à l'arrachage. Leur réhabilitation est au cœur du travail d'Artuke, qui les vinifie en grappes entières, en levures indigènes, avec des élevages en foudres et fûts anciens qui laissent le calcaire s'exprimer sans écran. Le résultat est un rouge élancé, floral, d'une droiture minérale peu commune en Rioja, à des années-lumière du registre boisé et charnu qui a longtemps dominé l'appellation. La Condenada compte parmi les parcelles dont l'exemple a poussé le Consejo Regulador à créer, en 2017, la catégorie des Viñedos Singulares. Pour un sommelier, c'est le vin idéal pour montrer qu'un grand terroir riojan peut donner un vin tendu et digeste ; il demande un peu d'air et gagne à être servi frais. Le travail d'Artuke sur ce lieu a aussi une portée documentaire : en identifiant, cartographiant et vinifiant séparément ces vieilles vignes complantées, les frères de Miguel ont contribué à sauver un patrimoine que la logique productiviste des décennies précédentes avait condamné, comme le dit son nom. Chaque millésime de La Condenada est produit en quelques milliers de bouteilles à peine, ce qui en fait un vin d'initié plus qu'un vin de grande diffusion. Sur une carte, il occupe une place à part : celle du grand cru minéral et digeste que l'on n'attend pas de la Rioja, et qui bouscule les idées reçues.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "artuke",
+        "complantation",
+        "calcaire",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-el-bosque",
+      "nom": "El Bosque",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "560–600 m",
+      "sols": "Argilo-calcaires pauvres sur coteau exposé au nord",
+      "caracteristiques_rapides": "Finca d'un peu plus d'un hectare exploitée par Sierra Cantabria, plantée en 1970 sur les hauteurs de la Sonsierra : référence absolue du Tempranillo de coteau frais.",
+      "notes_objectives": "El Bosque est la référence du Tempranillo de coteau frais en Rioja Alta. Cette finca d'un peu plus d'un hectare, plantée en 1970, se situe sur les hauteurs de San Vicente de la Sonsierra, sur la rive nord de l'Èbre, à une exposition nord peu commune pour un grand cru, entre cinq cent soixante et six cents mètres d'altitude. Elle est exploitée par Sierra Cantabria, la maison mère de la galaxie Eguren. Le choix d'une exposition fraîche est délibéré : sur un sol d'argiles calcaires pauvres, l'orientation au nord ralentit la maturation et préserve une acidité et une finesse aromatique que les coteaux plus chauds de la commune ne donnent pas. La vigne, âgée et à faible rendement, produit un Tempranillo d'une pureté et d'une définition de fruit remarquables. Le vin, l'un des plus recherchés de la famille Eguren, se distingue par sa verticalité et son élégance plutôt que par la puissance qui caractérise souvent leurs autres cuvées. Il montre qu'une maison réputée pour ses vins denses et mûrs sait aussi produire, sur le bon lieu, un rouge tendu et racé. El Bosque appartient à cette génération de parcelles identifiées qui, dans la Sonsierra riojane, ont prouvé la capacité de la sous-zone à donner de grands vins de lieu. San Vicente est aujourd'hui la commune la plus densément plantée de la Rioja Alta et un vivier de vignerons de pointe, et El Bosque en est l'un des étendards. C'est un vin de garde, à attendre une dizaine d'années, dont la fraîcheur en fait un partenaire de table particulièrement souple malgré sa concentration. Le choix de l'exposition nord, encore rare en Rioja au moment de la plantation, anticipait un débat devenu central avec le réchauffement climatique : celui de la recherche de fraîcheur par l'orientation et l'altitude plutôt que par la seule précocité de vendange. El Bosque avait, en ce sens, plusieurs décennies d'avance. La famille Eguren, souvent associée à un style puissant et démonstratif, y démontre une autre facette de son savoir-faire, plus retenue et plus fine. C'est aussi un rappel utile que la Sonsierra riojane, sur la rive nord de l'Èbre, possède des coteaux frais capables de rivaliser avec les meilleurs de l'Alavesa voisine. Le vin, produit en quantités limitées, demande de la patience mais récompense l'attente par une palette tertiaire d'une grande subtilité.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sierra-cantabria",
+        "eguren",
+        "sonsierra",
+        "altitude",
+        "coteau"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-vina-bosconia",
+      "nom": "Viña Bosconia",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo"
+      ],
+      "altitude": "450–480 m",
+      "sols": "Alluvions argilo-calcaires en rive de l'Èbre, plus argileuses que Tondonia",
+      "caracteristiques_rapides": "Quinze hectares en bordure du fleuve, propriété de López de Heredia, réputés donner le vin le plus « bourguignon » de la maison.",
+      "notes_objectives": "Viña Bosconia est le lieu-dit que López de Heredia décrit volontiers comme le plus « bourguignon » de ses vignobles. Une quinzaine d'hectares en bordure de l'Èbre, à la sortie de Haro, sur des alluvions argilo-calcaires plus argileuses et plus profondes que celles de Tondonia, à quelque quatre cent soixante-dix mètres d'altitude. Cette différence de sol suffit à distinguer nettement les deux crus voisins. Le Tempranillo y domine plus largement que sur Tondonia, complété de Garnacha, Graciano et Mazuelo. Le vin qui en résulte est plus rond, plus enveloppant, doté d'une texture plus soyeuse et d'un fruité plus immédiat, là où Tondonia joue la fraîcheur et la ligne. L'élevage maison, de plusieurs années en barriques réparées sur place, avec soutirages manuels à la bougie, s'applique ici comme sur les autres parcelles de la maison. Bosconia illustre parfaitement l'idée que deux terroirs distants de quelques centaines de mètres, travaillés à l'identique, donnent deux vins reconnaissables : c'est la démonstration, à l'échelle d'une seule maison, que le lieu compte autant que la main. Pour un sommelier, opposer un Bosconia et un Tondonia du même millésime est l'un des plus beaux exercices pédagogiques que permette la Rioja classique. Les Gran Reserva issus de la parcelle vieillissent sur plusieurs décennies et gagnent à être carafés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lopez-de-heredia",
+        "haro",
+        "meandre",
+        "historique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-vina-del-olivo",
+      "nom": "Viña del Olivo",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano"
+      ],
+      "altitude": "440–470 m",
+      "sols": "Terrasses de galets et argiles calcaires du méandre de Laserna",
+      "caracteristiques_rapides": "Parcelle entourant l'olivier centenaire de Contino, dans la boucle de l'Èbre : la cuvée sommet d'un des rares domaines d'un seul tenant de la région.",
+      "notes_objectives": "Viña del Olivo tire son nom de l'olivier centenaire qui se dresse au milieu de la parcelle, au cœur du domaine Contino, dans le méandre de Laserna près de Laguardia. Ce lieu-dit constitue la cuvée sommet de l'un des très rares domaines d'un seul tenant de la Rioja, entièrement ceint par une boucle de l'Èbre qui tempère le climat sur trois côtés. Le sol associe terrasses de galets roulés et argiles calcaires déposées par le fleuve, autour de quatre cent cinquante mètres d'altitude. Le Tempranillo, complété d'une part de Graciano, y bénéficie d'une maturité pleine grâce à l'effet thermique du méandre, tout en conservant la fraîcheur que donnent les nuits ventées de la vallée. La conduite est biologique certifiée, avec un travail parcellaire de plus en plus fin. Le vin, élevé en chêne français, se distingue par sa densité soyeuse et sa profondeur épicée, sans jamais verser dans la lourdeur. Il incarne la meilleure expression du modèle du château appliqué à la Rioja depuis 1973, quand Contino inventa dans la région le principe du domaine d'un seul tenant vinifiant sa propre récolte. Viña del Olivo est un vin de garde qui demande une bonne décennie et récompense la patience par une palette tertiaire complexe de cuir, de sous-bois et d'épices douces.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "contino",
+        "laserna",
+        "meandre",
+        "domaine-unique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-pago-cuba-negra-el-belisario",
+      "nom": "Pago Cuba Negra — El Belisario",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "550–600 m",
+      "sols": "Calcaires francs, sols squelettiques et très drainants",
+      "caracteristiques_rapides": "Vigne plantée en 1910 travaillée à la traction animale par Bodega Tierra, premier rouge riojan commercialisé sous la mention Viñedo Singular.",
+      "notes_objectives": "Le Pago Cuba Negra est une vigne plantée en 1910 sur la commune de Labastida, à l'ouest de la Rioja Alavesa, dont Bodega Tierra tire le vin El Belisario, premier rouge riojan commercialisé sous la mention Viñedo Singular. Le lieu se situe sur les hauteurs de Labastida, entre cinq cent cinquante et six cents mètres d'altitude, sur des sols calcaires francs, squelettiques et très drainants. La vigne, plus que centenaire, est conduite de façon traditionnelle, y compris à la traction animale, et donne des rendements extrêmement faibles. Le Tempranillo, seul cépage du lieu, y atteint une concentration aromatique et une acidité vibrante qui traduisent directement la pauvreté du sol et l'âge des ceps. El Belisario a valeur de symbole : en devenant l'un des premiers vins à revendiquer officiellement la catégorie Viñedo Singular, il a montré que la Rioja pouvait nommer et protéger ses grandes parcelles historiques. Le vin, élevé en fûts de chêne français, est profond, mentholé et minéral, taillé pour une longue garde. Pour un sommelier, c'est un excellent support pour raconter la naissance de la hiérarchie parcellaire riojane et le rôle des petites bodegas familiales de Labastida dans ce mouvement. Les quantités sont très limitées, ce qui en fait une bouteille rare, à la fois vin de terroir et pièce d'histoire de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "bodega-tierra",
+        "labastida",
+        "traction-animale",
+        "vieilles-vignes"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-tierra-fidel",
+      "nom": "Tierra Fidel",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Graciano",
+        "Garnacha",
+        "Cariñena Blanca",
+        "Viura"
+      ],
+      "altitude": "540–580 m",
+      "sols": "Calcaires et argiles blanches en pente douce",
+      "caracteristiques_rapides": "Viñedo Singular conduit en biodynamie par Bodega Tierra, complanté et remarquable pour son blanc dominé par la rare Cariñena Blanca.",
+      "notes_objectives": "Tierra Fidel est un Viñedo Singular de Labastida conduit en biodynamie par Bodega Tierra, remarquable autant par sa parcelle que par son encépagement. Le lieu se trouve sur les hauteurs de la commune, à l'ouest de la Rioja Alavesa, entre cinq cent quarante et cinq cent quatre-vingts mètres d'altitude, sur des sols de calcaires et d'argiles blanches en pente douce. La parcelle est complantée, ce qui donne naissance à deux vins distincts. Le rouge assemble à parts sensiblement égales le Graciano et la Garnacha, association rare qui conjugue l'acidité et le poivre du premier à la chair du second. Le blanc, plus singulier encore, est dominé par la Cariñena Blanca, variété presque disparue de la Rioja, complétée de Viura : un field blend qui était une rareté absolue dans la région au moment de sa création. La conduite biodynamique, avec préparations et travail des sols, vise à exprimer sans écran la fraîcheur calcaire du lieu. Les vins sont tendus, salins, à contre-courant de l'esthétique riojane dominante. Tierra Fidel illustre l'un des apports majeurs du mouvement des Viñedos Singulares : la réhabilitation des cépages minoritaires et des assemblages complantés que la spécialisation autour du Tempranillo avait fait disparaître. Une bouteille d'initié, à réserver à une clientèle curieuse.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "biodynamie",
+        "cepages-rares",
+        "labastida",
+        "blancs"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-vina-de-andres-romeo",
+      "nom": "La Viña de Andrés Romeo",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "520–560 m",
+      "sols": "Argilo-calcaires caillouteux sur terrasse haute",
+      "caracteristiques_rapides": "Parcelle unique de vieilles vignes vinifiée par Benjamín Romeo en hommage à son père : la face la plus intérieure et la plus fine du domaine Contador.",
+      "notes_objectives": "La Viña de Andrés Romeo est la parcelle que Benjamín Romeo, fondateur de Bodega Contador, a dédiée à la mémoire de son père. Située sur une terrasse haute de San Vicente de la Sonsierra, sur la rive nord de l'Èbre, entre cinq cent vingt et cinq cent soixante mètres d'altitude, elle donne la cuvée la plus intérieure et la plus fine du domaine. Le sol, fait d'argilo-calcaires caillouteux, et l'âge des vieilles vignes de Tempranillo qui la composent imposent des rendements très bas. Là où d'autres cuvées de Romeo cherchent la densité, cette parcelle unique privilégie la finesse et la retenue : le vin est profond mais tout en nuances, marqué par une trame minérale et une longueur saline plutôt que par la puissance. Vinifiée en levures indigènes avec des extractions douces et un élevage soigné en chêne français, elle témoigne de la maturité stylistique atteinte par Benjamín Romeo, dont les premiers Contador des années 2000 avaient au contraire marqué les esprits par leur concentration. Le lieu s'inscrit dans la constellation de vieilles parcelles que le vigneron a patiemment identifiées sur les coteaux de la Sonsierra, chacune vinifiée séparément. C'est un vin rare, produit en petites quantités, à ouvrir après plusieurs années de garde et à servir carafé pour lui laisser déployer sa complexité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "benjamin-romeo",
+        "sonsierra",
+        "vieilles-vignes",
+        "parcellaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-canoca",
+      "nom": "La Canoca",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo Peludo"
+      ],
+      "altitude": "490–530 m",
+      "sols": "Argiles calcaires profondes sur socle crayeux",
+      "caracteristiques_rapides": "Finca plantée exclusivement en Tempranillo Peludo, variante à feuille duveteuse récupérée par la famille Eguren, à l'origine du vin unique Señorío de San Vicente.",
+      "notes_objectives": "La Canoca est une finca de San Vicente de la Sonsierra entièrement plantée en Tempranillo Peludo, variante à feuille duveteuse récupérée par la famille Eguren, dont elle tire le vin unique Señorío de San Vicente. Le lieu se situe sur la rive nord de l'Èbre, entre quatre cent quatre-vingt-dix et cinq cent trente mètres d'altitude, sur des argiles calcaires profondes reposant sur un socle crayeux. Le Tempranillo Peludo, ou Tempranillo Velludo, se distingue du Tempranillo classique par le duvet qui recouvre la face inférieure de ses feuilles et par une peau plus épaisse ; il donne des vins plus colorés, plus structurés et souvent plus acides. Presque disparu, il a été préservé et multiplié par la famille Eguren à partir des ceps de La Canoca, ce qui fait de la parcelle un conservatoire vivant autant qu'un terroir. Le vin, vinifié séparément depuis la fin des années 1980, est dense et profond, mais sa singularité tient surtout à l'empreinte variétale : une matière tannique particulière, une couleur soutenue et une capacité de garde marquée. La Canoca illustre l'un des enjeux de la Rioja contemporaine, la réhabilitation d'un patrimoine ampélographique appauvri par des décennies de sélection au profit du seul Tempranillo standard. Une curiosité de premier ordre pour un sommelier, à commenter autant pour son cépage que pour son lieu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cepages-rares",
+        "tempranillo-peludo",
+        "eguren",
+        "sonsierra",
+        "monopole"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-el-puntido",
+      "nom": "El Puntido",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "560–600 m",
+      "sols": "Calcaires en plaques sous une mince couverture argileuse",
+      "caracteristiques_rapides": "Vigne de Páganos plantée en 1972, exploitée par Viñedos de Páganos : l'un des premiers vins de parcelle revendiqués comme tels en Rioja Alavesa.",
+      "notes_objectives": "El Puntido est une vigne de Páganos, hameau rattaché à Laguardia, plantée en 1972 et exploitée par Viñedos de Páganos, la branche de la famille Eguren consacrée aux parcellaires de la Rioja Alavesa. C'est l'un des premiers vins riojans à avoir été explicitement revendiqué comme un vin de parcelle, à une époque où la région raisonnait encore en marques et en catégories d'élevage. Le lieu se situe entre cinq cent soixante et six cents mètres d'altitude, sur un sol de calcaires en plaques recouverts d'une mince couverture argileuse, au pied de la Sierra de Cantabria. Le Tempranillo, seul cépage de la parcelle, y bénéficie d'une exposition et d'une altitude qui préservent la fraîcheur, tout en donnant une maturité pleine. Le vin, élevé en chêne français, se distingue par sa densité soyeuse et sa profondeur, dans le style dense et maîtrisé qui a fait la réputation de la famille Eguren, mais avec l'identité propre d'un lieu unique. El Puntido a contribué, aux côtés de quelques autres, à imposer l'idée qu'un grand Rioja pouvait porter le nom d'une seule vigne. Sur une carte, il offre l'avantage d'un vin de parcelle lisible et régulier, plus accessible que les micro-cuvées confidentielles de la nouvelle vague, tout en portant la même idée de terroir. Il gagne à être attendu quelques années.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "eguren",
+        "paganos",
+        "calcaire",
+        "parcellaire",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-nieta",
+      "nom": "La Nieta",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "580–620 m",
+      "sols": "Calcaires actifs très pauvres, forte pente",
+      "caracteristiques_rapides": "Moins de trois hectares au-dessus de Páganos, rendements minuscules : la cuvée la plus rare et la plus verticale de la galaxie Eguren.",
+      "notes_objectives": "La Nieta est la parcelle la plus rare et la plus verticale de la galaxie Eguren. Moins de trois hectares accrochés aux hauteurs de Páganos, au-dessus de la vigne d'El Puntido dont elle est la voisine et, d'une certaine manière, la « petite-fille » — sens du nom en espagnol. Elle culmine entre cinq cent quatre-vingts et six cent vingt mètres d'altitude, sur des calcaires actifs extrêmement pauvres et une forte pente. Ce dénuement du sol et cette altitude imposent des rendements minuscules et donnent un Tempranillo d'une concentration et d'une tension peu communes. Là où El Puntido joue la plénitude, La Nieta ajoute une dimension de verticalité et de minéralité, avec une trame plus serrée et une allonge plus saline. Vinifiée par Viñedos de Páganos avec un soin extrême, en petites quantités, elle représente le sommet de la lecture parcellaire de la famille Eguren en Rioja Alavesa. Le vin, dense et profond dans sa jeunesse, demande plusieurs années pour s'ouvrir et déployer sa complexité. La Nieta illustre la manière dont, à quelques mètres de distance et sur un même coteau, une variation de sol et d'altitude suffit à distinguer deux crus. Pour un sommelier, c'est une bouteille de prestige, à réserver aux grandes occasions et à carafer largement.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "eguren",
+        "paganos",
+        "altitude",
+        "micro-parcelle",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-martires",
+      "nom": "Mártires",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Viura"
+      ],
+      "altitude": "530–560 m",
+      "sols": "Argilo-calcaires blanchâtres sur coteau frais",
+      "caracteristiques_rapides": "Parcelle unique de Viura de vieilles vignes vinifiée par Finca Allende : le lieu-dit qui a prouvé que la Rioja pouvait produire des grands blancs de garde.",
+      "notes_objectives": "Mártires est le lieu-dit qui a prouvé que la Rioja pouvait produire de grands blancs de garde. Cette parcelle unique de Viura de vieilles vignes, exploitée par Finca Allende, se situe sur un coteau frais de Briones, en Rioja Alta, entre cinq cent trente et cinq cent soixante mètres d'altitude, sur des sols argilo-calcaires blanchâtres. La Viura, cépage blanc majoritaire de la région, a longtemps souffert d'une réputation de variété neutre, bonne à produire des blancs simples ou des vins oxydatifs de longue garde. Sur le terroir de Mártires, vendangée en vieilles vignes à faible rendement et vinifiée avec soin, elle révèle une tout autre dimension : une tension minérale, une allonge saline et une capacité de vieillissement qui la rapprochent des grands blancs de Bourgogne. Miguel Ángel de Gregorio fermente et élève le vin sous bois, sans chercher à masquer le fruit, dans une recherche d'équilibre entre matière et fraîcheur. Mártires est né à contre-courant, à un moment où la Rioja blanche était largement dévalorisée, et il a ouvert la voie à toute une génération de blancs parcellaires ambitieux dans la région. Le vin demande quelques années pour se révéler et vieillit remarquablement. Pour un sommelier, c'est l'argument idéal pour surprendre un client convaincu que la Rioja est une terre exclusivement rouge.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "blancs",
+        "viura",
+        "finca-allende",
+        "briones",
+        "parcellaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-cisma",
+      "nom": "Cisma",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "600–640 m",
+      "sols": "Calcaires durs affleurants, sol très maigre",
+      "caracteristiques_rapides": "Petite parcelle de haute altitude au-dessus de Laguardia exploitée par Pujanza, à l'origine d'un des Tempranillos les plus tendus de l'appellation.",
+      "notes_objectives": "Cisma est une petite parcelle de haute altitude au-dessus de Laguardia, exploitée par Pujanza, dont elle tire l'un des Tempranillos les plus tendus de toute l'appellation. Le lieu culmine entre six cents et six cent quarante mètres, sur les coteaux calcaires qui montent vers la Sierra de Cantabria, sur un sol de calcaires durs affleurants recouverts d'une couche de terre extrêmement maigre. Cette pauvreté et cette altitude, parmi les plus élevées de la Rioja Alavesa, expliquent le profil singulier du vin : une verticalité, une acidité naturelle et une salinité qui tranchent avec la rondeur habituelle des Tempranillos de la sous-zone. Carlos San Pedro, fondateur de Pujanza, a toujours revendiqué une lecture de terroir plutôt qu'une logique d'élevage, et Cisma en est l'expression la plus radicale. Le vin, issu de Tempranillo pur et élevé en chêne français, est dense mais élancé, marqué par une tension minérale qui demande du temps pour s'ouvrir. Il illustre la recherche de fraîcheur par l'altitude qui structure une part croissante de la Rioja contemporaine. Produit en petites quantités, Cisma est un vin de garde à réserver à une clientèle avertie, capable d'apprécier son austérité juvénile et sa longue capacité de vieillissement. Une belle démonstration de ce que donne le calcaire d'altitude en Rioja Alavesa.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "pujanza",
+        "altitude",
+        "laguardia",
+        "micro-parcelle",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-pujanza-norte",
+      "nom": "Pujanza Norte",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "570–610 m",
+      "sols": "Argilo-calcaires frais, exposition nord",
+      "caracteristiques_rapides": "Ensemble de parcelles exposées au nord au pied de la Sierra de Cantabria, choisies pour leur maturité tardive et leur acidité naturelle élevée.",
+      "notes_objectives": "Pujanza Norte réunit un ensemble de parcelles exposées au nord au pied de la Sierra de Cantabria, au-dessus de Laguardia, choisies par Carlos San Pedro pour leur maturité tardive et leur acidité naturelle élevée. Le lieu se situe entre cinq cent soixante-dix et six cent dix mètres d'altitude, sur des sols argilo-calcaires frais. Le choix délibéré de l'exposition nord, à contre-courant de la recherche traditionnelle de coteaux ensoleillés, répond à une logique devenue centrale avec le réchauffement climatique : ralentir la maturation pour préserver la fraîcheur aromatique et la tension du vin. Le Tempranillo, seul cépage du lieu, y gagne une définition de fruit et une acidité que les expositions plus chaudes ne donnent pas. Vinifié par Pujanza sans mention traditionnelle de Crianza ou Reserva, fidèle à la philosophie de terroir du domaine, le vin est élancé, minéral et digeste, avec un boisé fondu qui laisse parler le lieu. Pujanza Norte s'inscrit dans le mouvement qui a fait de Laguardia et de ses coteaux d'altitude l'un des laboratoires de la Rioja fraîche. Sur une carte, il offre une belle lecture de Tempranillo tendu, à un niveau de prix plus accessible que les micro-parcelles de prestige, et gagne à être servi légèrement rafraîchi sur une cuisine de caractère.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "pujanza",
+        "exposition-nord",
+        "laguardia",
+        "fraicheur"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-capellania",
+      "nom": "Capellanía",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Viura"
+      ],
+      "altitude": "460–485 m",
+      "sols": "Argilo-calcaires avec fortes proportions de craie",
+      "caracteristiques_rapides": "Parcelle de Viura identifiée au sein de la Finca Ygay, élevée sous bois par Marqués de Murrieta : l'archétype du grand blanc riojan de garde.",
+      "notes_objectives": "Capellanía est la parcelle de Viura identifiée au sein de la Finca Ygay, dont Marqués de Murrieta tire l'un des plus grands blancs de garde d'Espagne. Le lieu se situe sur les hauteurs qui dominent Logroño, en Rioja Alta, autour de quatre cent soixante-dix mètres d'altitude, sur des sols argilo-calcaires riches en craie qui donnent au vin sa signature minérale. Sur ce terroir, la Viura de vieilles vignes, vendangée à faible rendement, révèle une profondeur et une capacité de vieillissement exceptionnelles. Murrieta l'élève sous bois pendant plusieurs mois et la garde de longues années avant commercialisation, dans la tradition des grands blancs riojans conçus pour la garde. Le vin évolue lentement vers un registre de fruits secs, de miel, de cire et d'épices douces, tout en conservant une tension saline qui l'empêche de basculer dans la lourdeur. Capellanía rappelle une vérité souvent oubliée : la Rioja fut d'abord une grande terre de blancs de garde, avant que le rouge n'en devienne l'image dominante. Aux côtés de Mártires et du blanc de Tondonia, il forme le trio des grands blancs classiques de la région. Pour un sommelier, c'est un vin précieux, capable d'accompagner une gastronomie exigeante et de surprendre par sa longévité. Les vieux millésimes, parfois remis en vente par la propriété, valent absolument la recherche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "blancs",
+        "viura",
+        "murrieta",
+        "ygay",
+        "garde"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-sologarnacha",
+      "nom": "Sologarnacha",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha"
+      ],
+      "altitude": "600–700 m",
+      "sols": "Calcaires et éboulis pauvres en terrasses au pied de la Sierra de Yerga",
+      "caracteristiques_rapides": "Viñedo Singular d'Arizcuren en vignes basses de Garnacha sur terrasses d'altitude : l'un des lieux qui réhabilitent la Rioja Oriental.",
+      "notes_objectives": "Sologarnacha est un Viñedo Singular exploité par Arizcuren sur les hauteurs de Quel, dans la Rioja Oriental, l'un des lieux qui ont réhabilité cette partie longtemps déconsidérée de l'appellation. La parcelle s'étage entre six cents et sept cents mètres d'altitude, au pied de la Sierra de Yerga, sur des sols de calcaires et d'éboulis très pauvres, en terrasses. La Garnacha, seul cépage du lieu comme l'annonce son nom, y est conduite en vignes basses de gobelet, à faible rendement. Installée en altitude sur calcaire, loin des plaines chaudes où elle donnait des vins lourds, elle révèle une finesse, une acidité et un parfum qui tranchent avec sa réputation. Javier Arizcuren, architecte devenu vigneron, a fait de la remise en valeur de ces terrasses d'altitude le cœur de son projet. Le vin, vinifié en levures indigènes avec des élevages sobres en béton et foudres, est floral, épicé et minéral, avec un degré maîtrisé malgré le climat méditerranéen de la zone. Sologarnacha illustre, aux côtés de Quiñón de Valmira, la manière dont l'altitude du Yerga transforme la Garnacha riojane. C'est un vin de découverte idéal pour montrer que la Rioja Oriental ne se réduit pas au vin de volume, produit en petites quantités et encore à des prix raisonnables.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "arizcuren",
+        "garnacha",
+        "sierra-de-yerga",
+        "rioja-oriental"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-el-arca",
+      "nom": "El Arca",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha"
+      ],
+      "altitude": "620–700 m",
+      "sols": "Calcaires blancs et argiles maigres en forte pente",
+      "caracteristiques_rapides": "Viñedo Singular exploité par Dominio de Queirón sur les hauteurs de Quel, où l'altitude compense la chaleur de la Rioja Oriental.",
+      "notes_objectives": "El Arca est un Viñedo Singular exploité par Dominio de Queirón, la branche parcellaire de la famille Pérez Marco, sur les hauteurs de Quel, dans la Rioja Oriental. La parcelle culmine entre six cent vingt et sept cents mètres d'altitude, sur les pentes de la Sierra de Yerga, sur des sols de calcaires blancs et d'argiles maigres en forte inclinaison. À cette altitude, la chaleur méditerranéenne de la Rioja Oriental est largement compensée par l'amplitude thermique et la ventilation, ce qui permet au Tempranillo et à la Garnacha du lieu de conserver une fraîcheur inattendue. La famille Pérez Marco, historiquement implantée à Quel, a lancé Queirón précisément pour valoriser ce patrimoine de vignes hautes que la réputation de la zone avait maintenu dans l'ombre. Le vin, conduit en biologique et élevé avec mesure, est frais, épicé et tendu, à rebours de l'image de vin chaud attachée à la sous-zone. El Arca s'inscrit dans le mouvement de réhabilitation de la Rioja Oriental porté par une poignée de vignerons, d'Álvaro Palacios à Arizcuren. Pour un sommelier, c'est un bel exemple à opposer aux idées reçues, doublé d'une belle histoire de famille attachée à son village. Le lieu est encore peu connu hors d'Espagne, ce qui en fait une trouvaille intéressante à un prix mesuré.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "queiron",
+        "altitude",
+        "quel",
+        "rioja-oriental"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-taconera",
+      "nom": "La Taconera",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "560–590 m",
+      "sols": "Argiles calcaires caillouteuses",
+      "caracteristiques_rapides": "Un demi-hectare planté en 1920, récupéré et vinifié par Javier San Pedro Ortega : parmi les premiers Viñedos Singulares certifiés de la DOCa.",
+      "notes_objectives": "La Taconera est un demi-hectare planté en 1920 sur la commune de Laguardia, première parcelle acquise par Javier San Pedro Ortega et reconnue parmi les premiers Viñedos Singulares certifiés de la DOCa. Le lieu se situe sur les coteaux de la Rioja Alavesa, entre cinq cent soixante et cinq cent quatre-vingt-dix mètres d'altitude, sur des argiles calcaires caillouteuses. La vigne, plus que centenaire, avait été laissée à l'abandon pendant des années avant d'être récupérée et remise en état. Cet âge et ce faible rendement confèrent au Tempranillo du lieu une concentration et une définition particulières. San Pedro, cinquième génération d'une famille de bodegueros de Laguardia, en a fait le vin emblématique de son projet personnel, lancé en 2012. Le vin, élevé une dizaine de mois en fût, se distingue par sa fraîcheur et son élégance de trame plutôt que par la puissance : un profil qui traduit à la fois l'altitude, le sol calcaire et l'âge de la vigne. La Taconera illustre le rôle des jeunes vignerons issus de familles historiques dans le mouvement des Viñedos Singulares, capables de conjuguer héritage et lecture contemporaine du terroir. Produit en très petites quantités, c'est un vin de découverte, à réserver à une clientèle sensible à ces micro-parcelles patrimoniales.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "javier-san-pedro",
+        "laguardia",
+        "micro-parcelle"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-finca-de-los-locos",
+      "nom": "Finca de los Locos",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano"
+      ],
+      "altitude": "540–580 m",
+      "sols": "Calcaires en dalles avec couverture argileuse mince",
+      "caracteristiques_rapides": "Parcelle de Samaniego vinifiée par Artuke, où le Graciano complanté apporte une acidité et un poivre caractéristiques.",
+      "notes_objectives": "Finca de los Locos est une parcelle de Samaniego vinifiée par Artuke, où le Graciano complanté aux côtés du Tempranillo donne au vin une signature aromatique immédiatement reconnaissable. Le lieu se situe au pied de la Sierra de Cantabria, en Rioja Alavesa, entre cinq cent quarante et cinq cent quatre-vingts mètres d'altitude, sur des calcaires en dalles recouverts d'une mince couverture argileuse. La présence significative de Graciano, cépage tardif, acide et coloré, distingue cette parcelle des autres cuvées du domaine : il apporte une fraîcheur, un poivre et une trame tannique particuliers, que la vinification en grappes entières et l'élevage en foudres et fûts anciens laissent pleinement s'exprimer. Les frères de Miguel, à la tête d'Artuke, comptent parmi les artisans les plus convaincants de la nouvelle Rioja parcellaire. Le vin est tendu, épicé et salin, avec un degré modéré et une buvabilité qui tranchent avec l'esthétique riojane traditionnelle. Finca de los Locos fait partie de la série de parcellaires par lesquels Artuke a démontré la diversité des terroirs de Samaniego et de Baños de Ebro. Pour un sommelier, c'est une belle porte d'entrée vers la nouvelle vague de l'Alavesa, à un niveau de rareté et de prix plus accessible que les cuvées de tête comme La Condenada.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "artuke",
+        "samaniego",
+        "graciano",
+        "parcellaire",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-villabuena-de-alava",
+      "nom": "Villabuena de Álava",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura",
+        "Malvasía"
+      ],
+      "altitude": "500–620 m",
+      "sols": "Argilo-calcaires en terrasses successives descendant de la Sierra de Cantabria",
+      "caracteristiques_rapides": "Le village qui compte le plus de bodegas par habitant d'Espagne, morcelé à l'extrême : le laboratoire du vin de village riojan.",
+      "notes_objectives": "Villabuena de Álava est le village qui compte le plus grand nombre de bodegas par habitant de toute l'Espagne, et l'un des grands laboratoires du vin de village riojan. Niché au pied de la Sierra de Cantabria, en Rioja Alavesa, il s'étage entre cinq cents et six cent vingt mètres d'altitude sur une succession de terrasses argilo-calcaires qui descendent de la montagne vers la vallée. Ce morcellement extrême du parcellaire, hérité d'une longue tradition de petits cosecheros, explique la densité exceptionnelle de domaines installés dans le village et la diversité des expressions qu'on y trouve. Les vieilles vignes en gobelet y sont nombreuses, sur des sols dont la teneur en calcaire augmente à mesure qu'on monte vers la sierra. Les rouges de Villabuena, dominés par le Tempranillo souvent complété de Graciano, se distinguent par une finesse de tanin et une fraîcheur qui doivent beaucoup à l'altitude et au calcaire. De nombreux domaines de premier plan y sont établis, de Luis Cañas à Bideona en passant par Barbarot, ce qui en fait un point de repère pour comprendre la notion émergente de vin de village en Rioja. Pour un sommelier, présenter plusieurs vins d'un même village mais de mains différentes est un exercice particulièrement parlant, et Villabuena s'y prête mieux qu'aucun autre.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "morcellement",
+        "terrasses"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-samaniego",
+      "nom": "Samaniego",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "520–650 m",
+      "sols": "Calcaires et argiles rouges, pentes soutenues au pied de la sierra",
+      "caracteristiques_rapides": "Village d'altitude adossé à la Sierra de Cantabria, réputé pour ses vieilles vignes en gobelet et la finesse tannique de ses rouges.",
+      "notes_objectives": "Samaniego est l'un des villages de référence de la Rioja Alavesa, adossé à la Sierra de Cantabria, réputé pour ses vieilles vignes en gobelet et la finesse tannique de ses rouges. Le vignoble s'étage entre cinq cent vingt et six cent cinquante mètres d'altitude, sur des pentes soutenues de calcaires et d'argiles rouges qui descendent de la montagne. L'altitude et la proximité de la barrière calcaire donnent au terroir une fraîcheur marquée et une maturité tardive, propices à des vins tendus et parfumés plutôt que puissants. Le Tempranillo domine, souvent accompagné de Graciano qui trouve ici l'un de ses terrains de prédilection, ainsi que de Viura pour les blancs. Le village abrite plusieurs domaines de premier plan, de Fernando Remírez de Ganuza à Ostatu, qui y exploitent des parcelles complantées parmi les plus recherchées de l'Alavesa. La combinaison de vieilles vignes, d'altitude et de sols calcaires fait de Samaniego un terroir de choix pour le mouvement des vins de village et de lieu. Pour un sommelier, c'est un nom à connaître pour orienter un amateur vers des Riojas frais et raffinés, et un excellent point de comparaison avec les villages voisins de Villabuena et Baños de Ebro, dont les expressions diffèrent malgré la proximité géographique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "altitude",
+        "vieilles-vignes"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-labastida",
+      "nom": "Labastida",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "500–750 m",
+      "sols": "Calcaires francs et argiles blanches, forte amplitude d'altitude",
+      "caracteristiques_rapides": "Village le plus occidental de l'Alavesa, adossé à la Sierra de Toloño : le plus frais et le plus tardif de la sous-zone.",
+      "notes_objectives": "Labastida est le village le plus occidental de la Rioja Alavesa, adossé à la Sierra de Toloño, et le plus frais et tardif de la sous-zone. Son vignoble présente une amplitude d'altitude considérable, de cinq cents à sept cent cinquante mètres, sur des sols de calcaires francs et d'argiles blanches qui montent en pente vers la montagne. Cette fraîcheur, jointe à la richesse en calcaire, fait de Labastida un terroir recherché pour la tension et la longévité de ses vins. On y trouve aussi bien de grands domaines historiques, comme Remelluri, dont le vignoble d'un seul tenant s'étage sur les hauteurs, que de petites bodegas familiales à l'origine de plusieurs Viñedos Singulares — El Belisario et Tierra Fidel de Bodega Tierra en tête. Le Tempranillo y domine, complété de Garnacha et de Viura, avec une part croissante de cépages minoritaires réhabilités par la nouvelle génération. Les vins, tendus et minéraux, comptent parmi les plus élégants de l'Alavesa. Labastida illustre parfaitement l'intérêt du découpage par village : son profil, nettement plus frais que celui d'Elciego ou d'Oyón à l'est, se lit immédiatement dans le verre. Pour un sommelier, c'est un repère utile pour guider un amateur vers les expressions les plus racées et les plus vieillissantes de la Rioja Alavesa.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "sierra-de-tolono",
+        "altitude",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-san-vicente-de-la-sonsierra",
+      "nom": "San Vicente de la Sonsierra",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "480–650 m",
+      "sols": "Alternance de calcaires en coteaux et d'alluvions près de l'Èbre",
+      "caracteristiques_rapides": "Commune la plus densément plantée de la Rioja Alta, sur la rive nord de l'Èbre : concentration exceptionnelle de vieilles vignes et de vignerons de pointe.",
+      "notes_objectives": "San Vicente de la Sonsierra est la commune la plus densément plantée de la Rioja Alta, sur la rive nord de l'Èbre, et l'un des grands foyers de la viticulture riojane de pointe. Le village, dominé par les ruines de son château et son ermita, s'étage entre quatre cent quatre-vingts et six cent cinquante mètres d'altitude, sur une alternance de coteaux calcaires en hauteur et d'alluvions plus riches près du fleuve. Cette diversité de sols et d'expositions, jointe à une concentration exceptionnelle de vieilles vignes, explique que tant de vignerons de premier plan y soient installés : Benjamín Romeo avec Contador, la famille Eguren avec Sierra Cantabria et Señorío de San Vicente, ou encore Abel Mendoza. La rive nord de l'Èbre, que l'on appelle la Sonsierra, partage d'ailleurs son terroir entre communes riojanes et alavaises, par-delà la limite administrative. Les rouges de San Vicente, dominés par le Tempranillo, vont du plus puissant au plus tendu selon l'altitude et l'exposition des parcelles. Le village illustre à lui seul la richesse de la notion de vin de commune en Rioja Alta. Pour un sommelier, c'est un nom-clé : derrière lui se cachent certains des plus grands lieux-dits de la région, d'El Bosque à La Viña de Andrés Romeo, et une densité de talents rarement égalée dans l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "sonsierra",
+        "rioja-alta",
+        "vieilles-vignes"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-abalos",
+      "nom": "Ábalos",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "550–700 m",
+      "sols": "Calcaires et grès, sols pauvres en pente au pied de la Sierra de Toloño",
+      "caracteristiques_rapides": "Petit village de la Sonsierra riojane devenu un pôle de la nouvelle génération parcellaire, avec des altitudes parmi les plus élevées de la Rioja Alta.",
+      "notes_objectives": "Ábalos est un petit village de la Sonsierra riojane, sur la rive nord de l'Èbre, devenu un pôle de la nouvelle génération parcellaire grâce à des altitudes parmi les plus élevées de la Rioja Alta. Le vignoble s'étage entre cinq cent cinquante et sept cents mètres, au pied de la Sierra de Toloño, sur des sols pauvres de calcaires et de grès en pente. Cette altitude, inhabituelle pour la Rioja Alta, confère aux vins une fraîcheur et une tension recherchées. Le village abrite aujourd'hui plusieurs vignerons emblématiques du renouveau riojan, d'Olivier Rivière à Alegre Valgañón, attirés par ses vieilles vignes de Tempranillo et de Garnacha et par la fraîcheur de ses coteaux. La proximité de la sierra et l'exposition des parcelles y ralentissent la maturation, préservant l'acidité naturelle. Les rouges d'Ábalos, dominés par le Tempranillo souvent complété de Garnacha, tendent vers un profil élancé et parfumé plutôt que puissant. Le village illustre la façon dont la recherche de fraîcheur, devenue centrale avec le réchauffement climatique, réoriente la géographie qualitative de la Rioja vers ses hauteurs. Pour un sommelier, Ábalos est un nom à suivre : il concentre, sur une petite surface, plusieurs des signatures les plus intéressantes de la Rioja contemporaine, à des prix encore raisonnables.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "sonsierra",
+        "altitude",
+        "nouvelle-vague"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-laguardia",
+      "nom": "Laguardia",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura",
+        "Malvasía"
+      ],
+      "altitude": "500–650 m",
+      "sols": "Calcaires en plaques sous argiles minces, terrasses étagées",
+      "caracteristiques_rapides": "Capitale historique de la Rioja Alavesa, perchée sur un promontoire criblé de calados médiévaux, avec un vignoble d'une grande diversité d'expositions.",
+      "notes_objectives": "Laguardia est la capitale historique de la Rioja Alavesa, perchée sur un promontoire criblé de calados médiévaux, entourée d'un vignoble d'une grande diversité d'expositions. La commune, qui englobe le hameau de Páganos et le domaine Contino à Laserna, s'étage entre cinq cents et six cent cinquante mètres d'altitude, sur des sols de calcaires en plaques recouverts d'argiles minces, disposés en terrasses. Cette variété de terroirs, du méandre frais de Laserna aux coteaux d'altitude qui montent vers la Sierra de Cantabria, explique la richesse et le nombre des grands vins issus de la commune : Cisma et Pujanza Norte sur les hauteurs, El Puntido et La Nieta à Páganos, Viña del Olivo dans la boucle de l'Èbre. Peu de villages riojans offrent une telle concentration de lieux-dits réputés. Les vins de Laguardia, dominés par le Tempranillo, couvrent un large spectre selon l'altitude et l'exposition, du plus rond au plus tendu. La ville elle-même, avec ses caves creusées sous chaque maison, témoigne d'une tradition viticole plusieurs fois séculaire. Pour un sommelier, Laguardia est un repère central de la Rioja Alavesa, et le point de départ idéal pour explorer la manière dont un même village peut donner, selon les parcelles, des expressions très contrastées d'un même cépage.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "calados",
+        "patrimoine"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-sierra-de-tolono",
+      "nom": "Sierra de Toloño",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "550–800 m",
+      "sols": "Calcaires durs, éboulis et argiles blanches sur le piémont",
+      "caracteristiques_rapides": "Prolongement occidental de la Sierra de Cantabria : la barrière qui protège la Rioja des vents atlantiques et donne ses vignobles les plus hauts et les plus tardifs.",
+      "notes_objectives": "La Sierra de Toloño est le prolongement occidental de la Sierra de Cantabria, la barrière montagneuse qui protège la Rioja Alavesa des vents atlantiques et fixe le climat de toute la sous-zone. Ses piémonts, entre cinq cent cinquante et huit cents mètres d'altitude, abritent les vignobles les plus hauts et les plus tardifs de l'Alavesa, sur des sols de calcaires durs, d'éboulis et d'argiles blanches. Cette barrière joue un rôle climatique décisif : en arrêtant l'humidité venue du golfe de Gascogne, elle crée l'abri qui permet la viticulture sur le versant sud, tout en apportant, par son altitude et ses nuits fraîches, l'amplitude thermique qui préserve l'acidité des raisins. C'est cette combinaison qui donne aux vins du piémont leur fraîcheur et leur tension caractéristiques. Le nom sert aussi d'enseigne à l'un des domaines les plus en vue de la nouvelle Rioja, celui de Sandra Bravo, qui travaille précisément les vignes les plus élevées de ce piémont. Le lieu incarne la recherche d'altitude et de fraîcheur qui structure la Rioja contemporaine. Pour un sommelier, évoquer la Sierra de Toloño permet d'expliquer d'un seul geste pourquoi les vins de Labastida et d'Ábalos, blottis à son pied, sont parmi les plus racés et les plus vieillissants de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "piemont",
+        "altitude",
+        "fraicheur",
+        "rioja-alavesa"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-monte-yerga",
+      "nom": "Monte Yerga",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha",
+        "Tempranillo"
+      ],
+      "altitude": "500–700 m",
+      "sols": "Calcaires actifs et argiles rouges sur versants",
+      "caracteristiques_rapides": "Massif dominant Alfaro, dont les versants d'altitude ont permis la réhabilitation de la Garnacha et changé la réputation de toute la Rioja Oriental.",
+      "notes_objectives": "Le Monte Yerga est le massif qui domine Alfaro, à l'extrémité sud-est de la Rioja Oriental, et dont les versants d'altitude ont permis la réhabilitation de la Garnacha et changé la réputation de toute la sous-zone. Ses pentes s'étagent entre cinq cents et sept cents mètres, sur des sols de calcaires actifs et d'argiles rouges. Longtemps, la Rioja Oriental fut considérée comme une zone chaude, bonne à produire du degré et de la couleur pour les assemblages. Le Monte Yerga a démontré le contraire : sur ses versants, l'altitude et la ventilation apportent une amplitude thermique qui préserve la fraîcheur et le parfum de la Garnacha, cépage roi du lieu, tout en maîtrisant son alcool. C'est ici qu'Álvaro Palacios a établi son domaine familial Palacios Remondo et qu'il vinifie le grand cru Quiñón de Valmira. Les vins issus du massif, floraux, épicés et soyeux, ont contribué à faire tomber les préjugés sur la Rioja Oriental et à réhabiliter la Garnacha d'altitude comme l'un des cépages d'avenir de l'appellation. Pour un sommelier, le Monte Yerga est un terroir à mettre en avant pour raconter le renouveau de la Rioja Oriental et proposer des Garnachas fraîches et parfumées, encore souvent sous-évaluées au regard de leur qualité et de leur potentiel de garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "garnacha",
+        "altitude",
+        "rioja-oriental",
+        "piemont"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-vina-cubillo",
+      "nom": "Viña Cubillo",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo"
+      ],
+      "altitude": "450–480 m",
+      "sols": "Alluvions argilo-calcaires en terrasse basse",
+      "caracteristiques_rapides": "Vingt-quatre hectares appartenant à López de Heredia, dont sort le vin le plus immédiat et le plus abordable de la maison.",
+      "notes_objectives": "Viña Cubillo est l'un des quatre vignobles historiques de López de Heredia, à la sortie de Haro, en Rioja Alta. Ces vingt-quatre hectares en terrasse basse, sur des alluvions argilo-calcaires du méandre de l'Èbre, autour de quatre cent soixante mètres d'altitude, donnent le vin le plus immédiat et le plus abordable de la maison. Planté en Tempranillo dominant complété de Garnacha, Graciano et Mazuelo, Cubillo reçoit le même élevage traditionnel que ses aînés, mais sur une durée moindre, ce qui en fait un Crianza de long vieillissement au style classique et souple. Le vin, floral et épicé, offre une porte d'entrée idéale dans l'univers oxydatif et patiné de la maison. Pour un sommelier, c'est un excellent moyen de faire découvrir le style López de Heredia sans passer par les Gran Reserva de Tondonia ou Bosconia, à un prix nettement plus accessible et sur une fenêtre de dégustation plus immédiate.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lopez-de-heredia",
+        "haro",
+        "meandre"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-paso-las-manas",
+      "nom": "Paso Las Mañas",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "500–530 m",
+      "sols": "Argiles calcaires caillouteuses sur coteau",
+      "caracteristiques_rapides": "Viñedo Singular d'Artuke à Baños de Ebro, dans un registre plus charnu et plus solaire que La Condenada.",
+      "notes_objectives": "Paso Las Mañas est un Viñedo Singular exploité par Artuke à Baños de Ebro, en Rioja Alavesa, dans un registre plus charnu et plus solaire que sa voisine La Condenada. La parcelle se situe au pied de la Sierra de Cantabria, entre cinq cents et cinq cent trente mètres d'altitude, sur des argiles calcaires caillouteuses en coteau. Le Tempranillo, seul cépage du lieu, y trouve une exposition qui favorise une maturité plus pleine, donnant un vin plus rond et plus immédiatement séducteur que les autres parcellaires du domaine, sans rien perdre de la fraîcheur qui caractérise le travail des frères de Miguel. Vinification en grappes entières, levures indigènes et élevage en fûts anciens laissent le lieu s'exprimer. Paso Las Mañas illustre la finesse du découpage parcellaire opéré par Artuke à Baños de Ebro, où quelques centaines de mètres et une exposition différente suffisent à distinguer deux Viñedos Singulares. C'est un vin de découverte pour amateur curieux, produit en petites quantités.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "artuke",
+        "rioja-alavesa",
+        "parcellaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-cerro-la-isa",
+      "nom": "Cerro La Isa",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha"
+      ],
+      "altitude": "650–750 m",
+      "sols": "Grès et argiles pauvres en très forte pente",
+      "caracteristiques_rapides": "Viñedo Singular de Juan Carlos Sancha dans la haute vallée du Najerilla, l'un des vignobles les plus hauts et les plus pentus de la DOCa.",
+      "notes_objectives": "Cerro La Isa est un Viñedo Singular de Juan Carlos Sancha, situé dans la haute vallée du Najerilla, à Baños de Río Tobía, l'un des vignobles les plus hauts et les plus pentus de toute la DOCa. La parcelle culmine entre six cent cinquante et sept cent cinquante mètres d'altitude, sur des grès et des argiles pauvres en très forte pente. Cette altitude extrême, à l'écart des zones classiques de la Rioja, confère à la Garnacha du lieu une fraîcheur, une acidité et un parfum remarquables, très éloignés des Garnachas chaudes de plaine. Juan Carlos Sancha, chercheur et vigneron, a fait de la haute vallée du Najerilla et de ses vignes centenaires le cœur de son travail de préservation du patrimoine riojan. Le vin, floral et élancé, illustre le potentiel des altitudes de la Sierra de la Demanda, longtemps ignorées. Pour un sommelier, Cerro La Isa est une belle histoire de viticulture de montagne, à des prix étonnamment doux compte tenu de la difficulté du travail en forte pente.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "najerilla",
+        "garnacha",
+        "altitude",
+        "juan-carlos-sancha"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-pena-el-gato",
+      "nom": "Peña El Gato",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha"
+      ],
+      "altitude": "650–800 m",
+      "sols": "Grès rouges et éboulis, sols très maigres",
+      "caracteristiques_rapides": "Vieille vigne de Garnacha centenaire en pente extrême dans le Najerilla, réputée être la plus verticale de la Rioja.",
+      "notes_objectives": "Peña El Gato désigne un ensemble de vieilles vignes de Garnacha centenaire en pente extrême, dans la haute vallée du Najerilla, à Baños de Río Tobía, réputé parmi les vignobles les plus verticaux de la Rioja. Le lieu s'étage entre six cent cinquante et huit cents mètres d'altitude, sur des grès rouges et des éboulis, sur des sols très maigres. À de telles altitudes et sur de telles pentes, la viticulture relève de l'héroïsme : tout se fait à la main, les rendements sont infimes, et la Garnacha y donne des vins d'une finesse et d'une fraîcheur qui contredisent totalement sa réputation méridionale. Juan Carlos Sancha, qui vinifie ces parcelles, y voit l'expression la plus pure du potentiel de montagne de la Rioja. Le vin, parfumé et tendu, illustre la richesse méconnue de la haute vallée du Najerilla, refuge de vignes préphylloxériques et de cépages minoritaires. Pour un sommelier, Peña El Gato est un vin à raconter autant qu'à servir, tant le lieu incarne une viticulture de survie et de passion.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "najerilla",
+        "garnacha",
+        "vieilles-vignes",
+        "altitude",
+        "viticulture-heroique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-vina-lanciano",
+      "nom": "Viña Lanciano",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo"
+      ],
+      "altitude": "410–440 m",
+      "sols": "Galets roulés et argiles rouges dans un méandre de l'Èbre",
+      "caracteristiques_rapides": "Soixante-douze hectares d'un seul tenant exploités par Bodegas LAN, d'où sont issus le Culmen et le Viña Lanciano.",
+      "notes_objectives": "Viña Lanciano est une finca de soixante-douze hectares d'un seul tenant, exploitée par Bodegas LAN dans un méandre de l'Èbre à Fuenmayor, en Rioja Alta. La parcelle, ceinte par une boucle du fleuve, repose sur une terrasse de galets roulés et d'argiles rouges, autour de quatre cent vingt mètres d'altitude. L'effet thermique du méandre et le drainage des galets favorisent une maturité régulière du Tempranillo, complété de Graciano et de Mazuelo. C'est de cette finca que LAN tire ses cuvées supérieures, dont le Culmen, sélection des meilleures parcelles élevée en chêne français, capable de rivaliser avec les références de la Rioja Alta. Viña Lanciano illustre le modèle de la grande finca d'un seul tenant, moins fréquent en Rioja qu'ailleurs, et la capacité d'une maison de volume à produire, sur son meilleur terroir, des vins de réelle ambition. Pour un sommelier, le Culmen offre un excellent rapport qualité-prix dans le registre moderne et reste largement disponible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bodegas-lan",
+        "meandre",
+        "fuenmayor",
+        "galets"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-finca-valpiedra",
+      "nom": "Finca Valpiedra",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Maturana Tinta"
+      ],
+      "altitude": "420–450 m",
+      "sols": "Terrasse de galets roulés déposée par l'Èbre sur socle argileux",
+      "caracteristiques_rapides": "Quatre-vingts hectares dans une boucle du fleuve, membre des Grandes Pagos de España, au style droit et minéral marqué par les galets.",
+      "notes_objectives": "Finca Valpiedra occupe quatre-vingts hectares d'un seul tenant dans une boucle de l'Èbre à Fuenmayor, en Rioja Alta, sur une terrasse de galets roulés déposée par le fleuve — d'où son nom, la « pierre du val ». C'est l'un des rares domaines riojans membres des Grandes Pagos de España, cette association qui distingue des domaines de terroir singuliers. Le sol de galets sur socle argileux, autour de quatre cent trente mètres d'altitude, donne au vin sa signature minérale et son style droit, plus structuré que charnu. Le Tempranillo domine, complété de Graciano et de Maturana Tinta, dans une conduite biologique et selon un modèle explicitement inspiré du château bordelais : un vin principal, un second vin, et rien d'autre. Valpiedra illustre le potentiel des terrasses de galets de la basse Rioja Alta, souvent négligées au profit des coteaux calcaires. Pour un sommelier, c'est un domaine cohérent et encore un peu confidentiel, dont le style minéral et frais mérite d'être mis en avant.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "grandes-pagos",
+        "galets",
+        "fuenmayor",
+        "domaine-unique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-la-carbonera",
+      "nom": "La Carbonera",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha"
+      ],
+      "altitude": "560–620 m",
+      "sols": "Calcaires et argiles blanches d'altitude",
+      "caracteristiques_rapides": "Viñedo Singular exploité par Soto de Torres à Labastida, marqueur de l'intérêt des grands groupes pour les parcelles hautes de l'Alavesa.",
+      "notes_objectives": "La Carbonera est un Viñedo Singular exploité par Soto de Torres, la branche riojane de la maison catalane Torres, à Labastida, à l'ouest de la Rioja Alavesa. La parcelle se situe sur les hauteurs de la commune, entre cinq cent soixante et six cent vingt mètres d'altitude, sur des sols de calcaires et d'argiles blanches d'altitude. Son intérêt est autant symbolique que qualitatif : l'entrée d'un grand groupe comme Torres dans la catégorie des Viñedos Singulares témoigne de l'attrait qu'exercent désormais les parcelles hautes et fraîches de l'Alavesa, y compris sur les acteurs de dimension internationale. Le Tempranillo, complété de Garnacha, y bénéficie de la fraîcheur et de la tension propres au piémont de la Sierra de Toloño. Le vin, élevé avec soin, s'inscrit dans la recherche d'altitude qui structure la Rioja contemporaine. Pour un sommelier, La Carbonera est un exemple utile pour montrer que le mouvement parcellaire riojan touche aussi bien les micro-domaines que les grandes maisons.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "labastida",
+        "altitude",
+        "torres"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-las-cien-doncellas",
+      "nom": "Las Cien Doncellas",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "550–600 m",
+      "sols": "Argilo-calcaires caillouteux en coteau",
+      "caracteristiques_rapides": "Viñedo Singular de Marqués de Riscal, dont l'entrée dans la catégorie a servi de caution à la nouvelle mention parcellaire.",
+      "notes_objectives": "Las Cien Doncellas est un Viñedo Singular de Marqués de Riscal, à Labastida, dont l'entrée dans la catégorie a servi de caution à la nouvelle mention parcellaire de la DOCa. La parcelle se situe sur les coteaux de la Rioja Alavesa occidentale, entre cinq cent cinquante et six cents mètres d'altitude, sur des argilo-calcaires caillouteux. Que la plus ancienne bodega de la Rioja Alavesa, fondée en 1858, ait choisi de revendiquer un Viñedo Singular a constitué un signal fort en faveur de la reconnaissance des grands lieux, longtemps freinée par le système de classement fondé sur la seule durée d'élevage. Le Tempranillo du lieu bénéficie de l'altitude et de la fraîcheur du piémont de Toloño. Le vin traduit le virage parcellaire d'une maison surtout connue pour ses volumes et son architecture signée Gehry. Pour un sommelier, Las Cien Doncellas est intéressant à présenter comme le ralliement des grandes maisons historiques à la logique de terroir.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vinedo-singular",
+        "marques-de-riscal",
+        "labastida"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-elciego",
+      "nom": "Elciego",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "440–550 m",
+      "sols": "Argilo-calcaires et terrasses caillouteuses descendant vers l'Èbre",
+      "caracteristiques_rapides": "Village de Marqués de Riscal, plus bas et plus précoce que Laguardia, aux rouges généreux et souples.",
+      "notes_objectives": "Elciego est le village de Marqués de Riscal, en Rioja Alavesa, plus bas et plus précoce que Laguardia, aux rouges généreux et souples. Le vignoble s'étage entre quatre cent quarante et cinq cent cinquante mètres d'altitude, sur des argilo-calcaires et des terrasses caillouteuses qui descendent vers l'Èbre. L'altitude plus modérée et la proximité du fleuve donnent des vins un peu plus ronds et plus précoces que ceux des villages perchés de l'Alavesa, sans la tension extrême des terroirs de piémont. Le Tempranillo y domine largement, complété de Viura pour les blancs. La renommée du village doit beaucoup à Riscal, dont la Ciudad del Vino, coiffée des toitures de titane de Frank Gehry, en a fait une étape œnotouristique majeure. Elciego illustre la diversité de la Rioja Alavesa : à quelques kilomètres des coteaux frais de Labastida ou de Samaniego, il offre un profil plus solaire et plus accessible. Pour un sommelier, c'est un repère utile pour situer le style d'un vin dans la géographie de la sous-zone.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "marques-de-riscal"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-leza",
+      "nom": "Leza",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "540–640 m",
+      "sols": "Calcaires en dalles et argiles rouges, pentes marquées",
+      "caracteristiques_rapides": "Petit village d'altitude entre Laguardia et Samaniego, apprécié des vignerons de la nouvelle vague pour sa fraîcheur.",
+      "notes_objectives": "Leza est un petit village d'altitude de la Rioja Alavesa, entre Laguardia et Samaniego, apprécié des vignerons de la nouvelle vague pour sa fraîcheur. Le vignoble s'étage entre cinq cent quarante et six cent quarante mètres d'altitude, sur des calcaires en dalles et des argiles rouges, sur des pentes marquées au pied de la Sierra de Cantabria. Cette altitude et la proximité de la barrière calcaire donnent des raisins à la maturation tardive et à l'acidité préservée, propices à des vins tendus et parfumés. Plusieurs vignerons du renouveau riojan y sont installés, d'Exopto à Laventura, attirés par les vieilles vignes et la fraîcheur des coteaux. Le Tempranillo domine, souvent complété de Graciano et de Viura. Leza illustre la façon dont les petits villages d'altitude de l'Alavesa, longtemps utilisés surtout pour l'assemblage, deviennent des terroirs revendiqués à part entière. Pour un sommelier, c'est un nom à connaître pour orienter vers des Riojas frais et digestes issus de la nouvelle génération.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "altitude",
+        "nouvelle-vague"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-lanciego-et-vinaspre",
+      "nom": "Lanciego et Viñaspre",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "550–680 m",
+      "sols": "Calcaires, grès et argiles maigres en terrasses",
+      "caracteristiques_rapides": "Commune orientale de l'Alavesa, avec le hameau de Viñaspre, devenue un foyer du renouveau parcellaire riojan.",
+      "notes_objectives": "Lanciego, avec son hameau de Viñaspre, est une commune orientale de la Rioja Alavesa devenue un foyer du renouveau parcellaire riojan. Le vignoble s'étage entre cinq cent cinquante et six cent quatre-vingts mètres d'altitude, sur des sols de calcaires, de grès et d'argiles maigres disposés en terrasses au pied de la sierra. C'est ici que Telmo Rodríguez a installé sa Bodega Lanzaga et reconstruit la parcelle mythique de Las Beatas, et que Roberto Oliván a établi Tentenublo à Viñaspre : deux signatures majeures qui ont braqué les projecteurs sur ce coin longtemps discret de l'Alavesa. Les vieilles vignes complantées y sont nombreuses, sur des coteaux frais qui préservent l'acidité. Le Tempranillo domine, complété de Garnacha et de Viura, dans un registre tendu et parfumé. Lanciego illustre la manière dont l'arrivée de quelques vignerons de talent peut révéler tout le potentiel d'un village. Pour un sommelier, c'est un terroir à suivre, associé à certains des noms les plus en vue de la Rioja contemporaine.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "nouvelle-vague",
+        "altitude"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-banos-de-ebro",
+      "nom": "Baños de Ebro",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "480–560 m",
+      "sols": "Calcaires affleurants sous argiles minces",
+      "caracteristiques_rapides": "Village de cosecheros au pied de la sierra, riche en vieilles vignes complantées et en parcelles calcaires très pauvres.",
+      "notes_objectives": "Baños de Ebro est un village de cosecheros de la Rioja Alavesa, au pied de la Sierra de Cantabria, riche en vieilles vignes complantées et en parcelles calcaires très pauvres. Le vignoble s'étage entre quatre cent quatre-vingts et cinq cent soixante mètres d'altitude, sur des calcaires affleurants recouverts d'argiles minces. Cette pauvreté des sols et la présence de nombreuses vieilles vignes en font un terroir de choix pour le mouvement des vins de lieu. C'est ici qu'Artuke, dont les frères de Miguel sont originaires du village, exploite les Viñedos Singulares La Condenada et Paso Las Mañas, qui comptent parmi les parcelles les plus remarquées de l'Alavesa. Le Tempranillo domine, complété de Graciano et de variétés complantées. Baños de Ebro illustre le rôle des villages de petits vignerons dans le renouveau riojan, où le patrimoine de vieilles vignes constitue la vraie richesse. Pour un sommelier, c'est un nom à associer au travail parcellaire d'Artuke et à la redécouverte des sols calcaires nus de la sous-zone.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "complantation",
+        "calcaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-elvillar",
+      "nom": "Elvillar",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "560–650 m",
+      "sols": "Calcaires durs et graves d'altitude",
+      "caracteristiques_rapides": "Village haut de l'Alavesa, dominé par le dolmen de la Chabola de la Hechicera, où la biodynamie s'est installée tôt.",
+      "notes_objectives": "Elvillar est un village haut de la Rioja Alavesa, dominé par le dolmen de la Chabola de la Hechicera, où la biodynamie s'est installée tôt. Le vignoble s'étage entre cinq cent soixante et six cent cinquante mètres d'altitude, sur des calcaires durs et des graves d'altitude au pied de la Sierra de Cantabria. L'altitude et la richesse en calcaire donnent des vins tendus et frais, propices aux approches les plus naturelles. C'est ici que David Sampedro a établi Bhilar, l'un des rares domaines riojans conduits en biodynamie stricte, dont la série Phinca décline les parcelles du village. La présence de vestiges mégalithiques rappelle l'ancienneté de l'occupation humaine sur ces coteaux. Le Tempranillo domine, complété de Garnacha et de Viura, dans un registre salin et digeste. Elvillar illustre l'installation précoce des pratiques biologiques et biodynamiques dans les villages d'altitude de l'Alavesa. Pour un sommelier, c'est un terroir à associer aux vins les plus nature de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "altitude",
+        "biodynamie"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-navaridas",
+      "nom": "Navaridas",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "520–600 m",
+      "sols": "Argilo-calcaires clairs en pente régulière",
+      "caracteristiques_rapides": "Petite commune discrète entre Laguardia et Elciego, souvent utilisée en assemblage mais riche en parcelles anciennes.",
+      "notes_objectives": "Navaridas est une petite commune discrète de la Rioja Alavesa, entre Laguardia et Elciego, souvent utilisée en assemblage mais riche en parcelles anciennes. Le vignoble s'étage entre cinq cent vingt et six cents mètres d'altitude, sur des argilo-calcaires clairs en pente régulière. Moins médiatisé que ses voisins, Navaridas n'en possède pas moins de belles vieilles vignes, dont plusieurs alimentent les cuvées parcellaires de domaines réputés installés dans les villages alentour. L'altitude modérée et les sols calcaires y donnent des Tempranillos équilibrés, ni aussi tendus que ceux des villages hauts, ni aussi ronds que ceux des terroirs de plaine. Navaridas illustre le fait que la Rioja Alavesa recèle, au-delà de ses villages vedettes, de nombreux terroirs de qualité encore peu revendiqués comme tels. Pour un sommelier, c'est un nom à connaître pour comprendre la géographie fine de la sous-zone et repérer des vins de bon rapport qualité-prix issus de parcelles réputées.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "vieilles-vignes"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-paganos",
+      "nom": "Páganos",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "550–620 m",
+      "sols": "Calcaires en plaques sous couverture argileuse mince",
+      "caracteristiques_rapides": "Hameau rattaché à Laguardia, rendu célèbre par El Puntido et La Nieta : quelques dizaines d'hectares parmi les plus cotés de la région.",
+      "notes_objectives": "Páganos est un hameau rattaché à Laguardia, en Rioja Alavesa, rendu célèbre par les vins El Puntido et La Nieta : quelques dizaines d'hectares parmi les plus cotés de la région. Le vignoble s'étage entre cinq cent cinquante et six cent vingt mètres d'altitude, sur des calcaires en plaques recouverts d'une mince couverture argileuse. Ce sol calcaire d'altitude, au pied de la Sierra de Cantabria, donne des Tempranillos à la fois mûrs et frais, dont la famille Eguren a fait, avec Viñedos de Páganos, deux des parcellaires les plus recherchés de l'Alavesa. La réputation du hameau tient presque entièrement à ces deux vins, qui ont contribué à imposer l'idée du vin de parcelle en Rioja. Páganos illustre la manière dont un lieu minuscule peut acquérir une notoriété considérable grâce à quelques cuvées d'exception. Pour un sommelier, c'est un nom à associer directement au travail de la famille Eguren et à la naissance de la lecture parcellaire en Rioja Alavesa.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "eguren",
+        "calcaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-oyon",
+      "nom": "Oyón",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "430–520 m",
+      "sols": "Argiles calcaires profondes et alluvions",
+      "caracteristiques_rapides": "Village oriental de l'Alavesa, face à Logroño, historiquement dominé par les grandes maisons de volume.",
+      "notes_objectives": "Oyón est un village oriental de la Rioja Alavesa, face à Logroño, historiquement dominé par les grandes maisons de volume. Le vignoble s'étage entre quatre cent trente et cinq cent vingt mètres d'altitude, sur des argiles calcaires profondes et des alluvions. L'altitude plus modérée et les sols plus riches que ceux des villages perchés de l'Alavesa donnent des vins plus ronds et plus précoces, propices à une production de grande échelle. Plusieurs des plus gros producteurs de la DOCa y sont installés, de Faustino à El Coto en passant par Valdemar, qui y disposent de vastes vignobles. Le Tempranillo domine, complété de Viura. Oyón illustre l'autre visage de la Rioja Alavesa, celui des grandes structures et des volumes importants, complémentaire des villages de coteaux voués aux vins de terroir. Pour un sommelier, c'est un nom à connaître pour situer l'origine de nombreux Riojas classiques largement diffusés, dont plusieurs offrent un bon rapport qualité-prix.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alavesa",
+        "volume"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-haro",
+      "nom": "Haro",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "440–600 m",
+      "sols": "Argilo-calcaires en coteaux et alluvions du méandre de l'Èbre",
+      "caracteristiques_rapides": "Capitale historique du vin riojan, dont le Barrio de la Estación concentre six maisons centenaires, avec un vignoble varié entre fleuve et hauteurs.",
+      "notes_objectives": "Haro est la capitale historique du vin riojan, dont le Barrio de la Estación concentre six maisons centenaires — López de Heredia, La Rioja Alta, CVNE, Muga, Roda, Bilbaínas — installées autour de la gare pour exporter leurs vins dès le XIXe siècle. Le vignoble alentour, en Rioja Alta, s'étage entre quatre cent quarante et six cents mètres d'altitude, entre les alluvions du méandre de l'Èbre et les coteaux argilo-calcaires des hauteurs. C'est à Haro que s'est écrite l'histoire moderne de la Rioja, quand l'arrivée du chemin de fer et l'afflux de négociants bordelais fuyant le phylloxéra ont transformé la région à la fin du XIXe siècle. Le Barrio de la Estación reste à ce jour la plus forte concentration de maisons centenaires de prestige d'Espagne. Les vins de Haro, dominés par le Tempranillo, couvrent tout le spectre, du classique le plus patiné au moderne le plus ambitieux. Pour un sommelier, Haro est un nom incontournable, à la fois berceau historique et cœur battant de la Rioja d'aujourd'hui.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "barrio-de-la-estacion",
+        "rioja-alta",
+        "historique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-briones",
+      "nom": "Briones",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura",
+        "Graciano"
+      ],
+      "altitude": "480–580 m",
+      "sols": "Argiles calcaires et terrasses caillouteuses sur promontoire",
+      "caracteristiques_rapides": "Village perché classé parmi les plus beaux d'Espagne, aux coteaux bien exposés d'où sortent Calvario et Mártires.",
+      "notes_objectives": "Briones est un village perché de la Rioja Alta, classé parmi les plus beaux d'Espagne, aux coteaux bien exposés d'où sortent les grands vins de lieu Calvario et Mártires. Le vignoble s'étage entre quatre cent quatre-vingts et cinq cent quatre-vingts mètres d'altitude, sur des argiles calcaires et des terrasses caillouteuses disposées autour du promontoire. Cette diversité d'expositions et la qualité des sols argilo-calcaires expliquent la présence de domaines de premier plan comme Finca Allende, ainsi que du musée Vivanco, l'une des plus belles offres œnotouristiques de la région. Le Tempranillo domine, complété de Viura et de Graciano. Briones illustre le potentiel des villages de coteaux de la Rioja Alta, capables de donner aussi bien de grands rouges que des blancs de garde. La beauté du bourg médiéval ajoute à son attrait. Pour un sommelier, c'est un nom à associer aux parcellaires de Finca Allende et à la renaissance des grands blancs riojans à travers Mártires.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "patrimoine",
+        "coteau"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-ollauri",
+      "nom": "Ollauri",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "500–570 m",
+      "sols": "Argilo-calcaires frais, sous-sol de grès tendre",
+      "caracteristiques_rapides": "Village de la Rioja Alta occidentale connu pour ses calados du XVIe siècle et des vins d'une élégance particulière.",
+      "notes_objectives": "Ollauri est un village de la Rioja Alta occidentale, connu pour ses calados du XVIe siècle et des vins d'une élégance particulière. Le vignoble s'étage entre cinq cents et cinq cent soixante-dix mètres d'altitude, sur des argilo-calcaires frais reposant sur un sous-sol de grès tendre. Les caves souterraines historiques, creusées sous le village, comptent parmi les plus impressionnantes de la région et sont aujourd'hui exploitées notamment par Muriel pour sa marque Conde de los Andes. La fraîcheur des sols et l'altitude donnent des Tempranillos d'une finesse recherchée, plus élégants que puissants. Plusieurs domaines de qualité y sont installés, de Valenciso à Beronia. Ollauri illustre la diversité des villages de la Rioja Alta, chacun avec sa signature : ici, l'élégance et la fraîcheur, servies par un patrimoine de caves exceptionnel. Pour un sommelier, c'est un nom à connaître pour orienter vers des Riojas fins et pour évoquer la tradition des calados souterrains.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "calados",
+        "fraicheur"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-cenicero",
+      "nom": "Cenicero",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano",
+        "Viura"
+      ],
+      "altitude": "420–500 m",
+      "sols": "Alluvions et argiles calcaires de plaine, quelques terrasses",
+      "caracteristiques_rapides": "Village de maisons centenaires en rive sud de l'Èbre, au vignoble plus plat et plus précoce que la Sonsierra.",
+      "notes_objectives": "Cenicero est un village de maisons centenaires en rive sud de l'Èbre, en Rioja Alta, au vignoble plus plat et plus précoce que la Sonsierra. Le terroir s'étage entre quatre cent vingt et cinq cents mètres d'altitude, sur des alluvions et des argiles calcaires de plaine, avec quelques terrasses. Le village abrite plusieurs maisons historiques de renom, dont Bodegas Riojanas et Marqués de Cáceres, ainsi que Marqués de Murrieta pour partie. Les sols plus profonds et l'altitude modérée donnent des vins un peu plus ronds et plus précoces que ceux des coteaux de la rive nord. Le Tempranillo domine, complété de Graciano et de Viura. Cenicero illustre le rôle des villages de la plaine riojane dans l'histoire des grandes maisons, plus tournées vers le volume et l'assemblage que vers le vin de parcelle. Pour un sommelier, c'est un nom à associer à plusieurs marques classiques largement diffusées, utiles pour construire une carte accessible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "historique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-fuenmayor",
+      "nom": "Fuenmayor",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Graciano"
+      ],
+      "altitude": "400–460 m",
+      "sols": "Terrasses de galets roulés sur argiles rouges",
+      "caracteristiques_rapides": "Commune de la basse Rioja Alta, marquée par les méandres de l'Èbre et les grandes fincas d'un seul tenant.",
+      "notes_objectives": "Fuenmayor est une commune de la basse Rioja Alta, marquée par les méandres de l'Èbre et les grandes fincas d'un seul tenant. Le vignoble s'étage entre quatre cents et quatre cent soixante mètres d'altitude, sur des terrasses de galets roulés reposant sur des argiles rouges. L'altitude modérée et les sols de galets, bien drainés, favorisent une maturité régulière du Tempranillo, complété de Graciano. C'est ici que se trouvent plusieurs grandes fincas d'un seul tenant, dont Viña Lanciano de Bodegas LAN et Finca Valpiedra, membre des Grandes Pagos de España, ce qui fait de Fuenmayor un terroir de domaines plutôt que de coteaux morcelés. Fuenmayor illustre le potentiel des terrasses de galets de la basse Rioja Alta, souvent éclipsées par les coteaux calcaires mais capables de donner des vins minéraux et droits. Pour un sommelier, c'est un nom à associer aux grandes propriétés d'un seul tenant et à un style plutôt structuré.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "galets",
+        "meandre"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-san-asensio",
+      "nom": "San Asensio",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "460–540 m",
+      "sols": "Argiles calcaires et grès, coteaux exposés au sud",
+      "caracteristiques_rapides": "Village de cosecheros aux dizaines de calados creusés dans la colline des Cuevas, où survit la vinification au lagar de pierre.",
+      "notes_objectives": "San Asensio est un village de cosecheros de la Rioja Alta, aux dizaines de calados creusés dans la colline des Cuevas, où survit la vinification au lagar de pierre. Le vignoble s'étage entre quatre cent soixante et cinq cent quarante mètres d'altitude, sur des argiles calcaires et des grès, sur des coteaux exposés au sud. Le quartier des Cuevas, criblé de caves souterraines médiévales, témoigne d'une tradition de vinification paysanne encore vivante : Bodegas Lecea y perpétue la méthode du lagar, cuve de pierre où le raisin est foulé aux pieds puis pressé sous une poutre de bois, qui donne le vin de cosechero traditionnel. Le Tempranillo domine, complété de Viura. San Asensio illustre la dimension patrimoniale de la Rioja, où subsistent des gestes de vinification presque entièrement disparus ailleurs. Pour un sommelier, c'est un terroir à raconter autant qu'à servir, associé à la survivance du lagar de pierre et à une histoire viticole populaire.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "lagar",
+        "calados"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-navarrete",
+      "nom": "Navarrete",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "altitude": "500–560 m",
+      "sols": "Argiles rouges et calcaires, sols riches en fer",
+      "caracteristiques_rapides": "Village du chemin de Saint-Jacques, connu pour ses argiles ferrugineuses et sa tradition de poterie autant que de vin.",
+      "notes_objectives": "Navarrete est un village de la Rioja Alta situé sur le chemin de Saint-Jacques, connu pour ses argiles ferrugineuses et sa tradition de poterie autant que de vin. Le vignoble s'étage entre cinq cents et cinq cent soixante mètres d'altitude, sur des argiles rouges et des calcaires riches en fer. La teneur particulière des sols en oxyde de fer, qui a nourri une longue tradition de céramique, marque aussi le caractère des vins, souvent colorés et structurés. Le passage du chemin de Saint-Jacques a fait du village une étape historique, et plusieurs maisons y sont installées, dont Bodegas Corral avec sa marque Don Jacobo. Le Tempranillo domine, complété de Garnacha et de Viura. Navarrete illustre le lien étroit, en Rioja, entre nature des sols, artisanat local et style des vins. Pour un sommelier, c'est un nom à associer au Camino et à une identité de terroir marquée par les argiles rouges ferrugineuses.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-alta",
+        "camino",
+        "argiles-rouges"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-valle-del-tiron",
+      "nom": "Valle del Tirón",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "520–620 m",
+      "sols": "Argilo-calcaires frais et graves alluviales du Tirón",
+      "caracteristiques_rapides": "Extrémité nord-ouest de la Rioja Alta, la plus atlantique et la plus tardive, longtemps jugée marginale et aujourd'hui recherchée.",
+      "notes_objectives": "Le Valle del Tirón forme l'extrémité nord-ouest de la Rioja Alta, la plus atlantique et la plus tardive, longtemps jugée marginale et aujourd'hui recherchée pour sa fraîcheur. Le vignoble, autour de Cuzcurrita et des villages du Tirón, s'étage entre cinq cent vingt et six cent vingt mètres d'altitude, sur des argilo-calcaires frais et des graves alluviales déposées par la rivière. L'influence atlantique, plus marquée ici qu'ailleurs en Rioja, et l'altitude donnent des vins à l'acidité élevée et à la maturation tardive, longtemps considérés comme trop légers mais désormais valorisés à l'heure du réchauffement climatique. La famille Tobía, à Cuzcurrita, compte parmi les producteurs qui exploitent ce potentiel de fraîcheur. Le Valle del Tirón illustre le déplacement de la géographie qualitative de la Rioja vers ses marges fraîches et hautes. Pour un sommelier, c'est un secteur à suivre pour des Riojas tendus et digestes, encore à des prix modérés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vallee",
+        "rioja-alta",
+        "fraicheur",
+        "altitude"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-valle-del-najerilla",
+      "nom": "Valle del Najerilla",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha",
+        "Tempranillo",
+        "Maturana Tinta"
+      ],
+      "altitude": "550–800 m",
+      "sols": "Grès, éboulis et argiles pauvres sur pentes fortes",
+      "caracteristiques_rapides": "Haute vallée descendant de la Sierra de la Demanda, refuge des Garnachas centenaires et des cépages minoritaires riojans.",
+      "notes_objectives": "Le Valle del Najerilla est une haute vallée descendant de la Sierra de la Demanda, en Rioja Alta, refuge des Garnachas centenaires et des cépages minoritaires riojans. Le vignoble, autour de Badarán, Baños de Río Tobía et des villages voisins, s'étage entre cinq cent cinquante et huit cents mètres d'altitude, sur des grès, des éboulis et des argiles pauvres, sur des pentes souvent extrêmes. Cette altitude et ces sols maigres, à l'écart des zones classiques de la Rioja, ont préservé un patrimoine unique de vieilles vignes de Garnacha préphylloxériques et de variétés rares comme la Maturana. Juan Carlos Sancha et Gómez Cruzado, entre autres, y puisent des raisins d'une fraîcheur et d'un parfum remarquables, à travers des vins comme Cerro La Isa, Peña El Gato ou Pancrudo. Le Najerilla illustre le potentiel des altitudes de la Sierra de la Demanda, longtemps ignorées et aujourd'hui au cœur de la recherche de fraîcheur. Pour un sommelier, c'est un terroir de montagne à raconter, associé aux plus belles Garnachas d'altitude de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vallee",
+        "garnacha",
+        "altitude",
+        "cepages-rares",
+        "viticulture-heroique"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-valle-del-iregua",
+      "nom": "Valle del Iregua",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo Blanco",
+        "Viura",
+        "Garnacha Blanca"
+      ],
+      "altitude": "600–800 m",
+      "sols": "Sols pauvres et caillouteux d'altitude, calcaires et grès",
+      "caracteristiques_rapides": "Vallée au sud de Logroño devenue le laboratoire des blancs riojans d'altitude, avec des acidités inhabituelles pour la région.",
+      "notes_objectives": "Le Valle del Iregua, au sud de Logroño, est devenu le laboratoire des blancs riojans d'altitude, avec des acidités inhabituelles pour la région. Le vignoble, autour de Nalda et des villages de la vallée, s'étage entre six cents et huit cents mètres d'altitude, sur des sols pauvres et caillouteux de calcaires et de grès. Cette altitude élevée, rare en Rioja, préserve une acidité naturelle et une tension propices aux vins blancs. C'est ici que le domaine Nivarius s'est consacré presque exclusivement aux blancs, avec un travail pionnier sur le Tempranillo Blanco, mutation récente, aux côtés de la Viura, de la Garnacha Blanca et de la Maturana Blanca. La fraîcheur du lieu contraste avec l'image d'une Rioja essentiellement rouge et solaire. Le Valle del Iregua illustre le renouveau des blancs riojans, longtemps négligés, à travers la recherche d'altitude. Pour un sommelier, c'est un secteur à connaître pour proposer des blancs de Rioja tendus et originaux, à rebours des clichés sur la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vallee",
+        "blancs",
+        "altitude",
+        "iregua"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-aldeanueva-de-ebro",
+      "nom": "Aldeanueva de Ebro",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha",
+        "Tempranillo"
+      ],
+      "altitude": "350–450 m",
+      "sols": "Alluvions et argiles calcaires de plaine, sols profonds",
+      "caracteristiques_rapides": "Commune très plantée de la Rioja Oriental, longtemps synonyme de volume, dont les parcelles hautes commencent à être valorisées.",
+      "notes_objectives": "Aldeanueva de Ebro est une commune très plantée de la Rioja Oriental, longtemps synonyme de volume, dont les parcelles hautes commencent à être valorisées. Le vignoble s'étage entre trois cent cinquante et quatre cent cinquante mètres d'altitude pour l'essentiel, sur des alluvions et des argiles calcaires de plaine, aux sols profonds. Historiquement, la commune a produit de grandes quantités de vin destiné à l'assemblage, dans un registre chaud et généreux typique de la Rioja Oriental de plaine. Mais la réhabilitation de la Garnacha d'altitude, portée par des voisins comme Alfaro ou Quel, incite désormais à distinguer les parcelles plus hautes et mieux exposées, capables de donner des vins plus frais. Le cépage dominant y est la Garnacha, complétée de Tempranillo. Aldeanueva illustre la mutation en cours de la Rioja Oriental, tiraillée entre une tradition de volume et une nouvelle recherche de terroir. Pour un sommelier, c'est un nom à suivre pour l'évolution qualitative d'une zone longtemps déconsidérée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-oriental",
+        "garnacha",
+        "volume"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-tudelilla",
+      "nom": "Tudelilla",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Garnacha",
+        "Tempranillo"
+      ],
+      "altitude": "500–650 m",
+      "sols": "Calcaires et argiles maigres sur versants du Yerga",
+      "caracteristiques_rapides": "Village d'altitude de la Rioja Oriental, réputé pour ses Garnachas de coteau, dont plusieurs maisons de la Rioja Alta s'approvisionnent.",
+      "notes_objectives": "Tudelilla est un village d'altitude de la Rioja Oriental, réputé pour ses Garnachas de coteau, dont plusieurs maisons de la Rioja Alta s'approvisionnent. Le vignoble s'étage entre cinq cents et six cent cinquante mètres d'altitude, sur des calcaires et des argiles maigres, sur les versants du Monte Yerga. Cette altitude, nettement plus élevée que celle des plaines voisines de la Rioja Oriental, confère à la Garnacha du lieu une fraîcheur et un parfum recherchés, très éloignés des vins chauds de plaine. Plusieurs maisons réputées, jusque dans la Rioja Alta, y achètent des raisins pour leurs cuvées de Garnacha d'altitude, à l'image de La Rioja Alta avec sa finca La Pedriza. Tudelilla illustre, aux côtés de Quel et d'Alfaro, la réhabilitation des coteaux d'altitude de la Rioja Oriental et de leur Garnacha. Pour un sommelier, c'est un nom à connaître pour comprendre d'où viennent certaines des plus belles Garnachas de la région, souvent cachées dans des assemblages prestigieux.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vin-de-village",
+        "rioja-oriental",
+        "garnacha",
+        "altitude"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-sierra-de-cantabria",
+      "nom": "Sierra de Cantabria",
+      "type": "lieu-dit",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "altitude": "500–800 m",
+      "sols": "Calcaires durs, éboulis de pente et argiles rouges",
+      "caracteristiques_rapides": "Barrière calcaire de mille mètres qui protège toute la Rioja Alavesa des influences atlantiques et fixe le climat de la sous-zone.",
+      "notes_objectives": "La Sierra de Cantabria est la barrière calcaire de mille mètres qui protège toute la Rioja Alavesa des influences atlantiques et fixe le climat de la sous-zone. Ses piémonts, entre cinq cents et huit cents mètres d'altitude, portent les vignobles de la plupart des villages de l'Alavesa, sur des sols de calcaires durs, d'éboulis de pente et d'argiles rouges. Le rôle de la sierra est déterminant : en arrêtant l'humidité et les vents venus du nord, elle crée l'abri qui rend possible la viticulture sur son versant sud, tout en apportant, par son altitude, l'amplitude thermique qui préserve l'acidité des raisins. C'est elle qui explique le style plus frais et plus tendu des vins alavais par rapport à ceux de la plaine. La Sierra de Cantabria, dont la Sierra de Toloño forme le prolongement occidental, structure toute la géographie de la Rioja Alavesa. Pour un sommelier, l'évoquer permet d'expliquer d'un seul mot pourquoi les vins de Laguardia, Samaniego ou Labastida partagent cette fraîcheur caractéristique qui les distingue.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "piemont",
+        "climat",
+        "rioja-alavesa",
+        "calcaire"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    },
+    {
+      "id": "es-rioja-terr-montes-obarenes",
+      "nom": "Montes Obarenes",
+      "type": "lieu-dit",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Viura",
+        "Tempranillo Blanco"
+      ],
+      "altitude": "550–700 m",
+      "sols": "Calcaires et marnes fraîches sur versants exposés au nord",
+      "caracteristiques_rapides": "Chaînon nord-ouest fermant la Rioja Alta vers la Bureba, dont les versants frais donnent des blancs d'une tension rare dans la région.",
+      "notes_objectives": "Les Montes Obarenes forment le chaînon nord-ouest qui ferme la Rioja Alta vers la Bureba, dont les versants frais donnent des blancs d'une tension rare dans la région. Le secteur, sur les hauteurs de Haro et des villages voisins, s'étage entre cinq cent cinquante et sept cents mètres d'altitude, sur des calcaires et des marnes fraîches exposés au nord. Cette exposition et cette altitude, à la charnière entre la Rioja et le nord de la Castille, créent un microclimat frais propice aux blancs. C'est là que Gómez Cruzado puise les raisins de son blanc Montes Obarenes, assemblage de Viura et de Tempranillo Blanco de vieilles vignes qui compte parmi les blancs les plus tendus de la Rioja actuelle. Le relief marque la limite septentrionale de la Rioja Alta. Les Montes Obarenes illustrent le potentiel des versants frais et hauts pour les blancs riojans, dans le sillage de la recherche d'altitude. Pour un sommelier, c'est un nom à associer aux blancs de tension de la Rioja Alta occidentale et à la frontière climatique entre la vallée de l'Èbre et le plateau castillan.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "piemont",
+        "blancs",
+        "fraicheur",
+        "altitude"
+      ],
+      "source": "Recherche web juillet 2026 (riojawine.com, BOE ordres Viñedo Singular, spanishwinelover.com)"
+    }
+  ]
+}

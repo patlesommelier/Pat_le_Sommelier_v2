@@ -1,0 +1,1136 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "valledaosta",
+  "region_label": "Valle d'Aosta (Italie)",
+  "source_file": "producteurs_valledaosta.json",
+  "built_at": "2026-07-12",
+  "count": 24,
+  "items": [
+    {
+      "id": "it-valledaosta-prod-les-cretes",
+      "nom": "Les Crêtes",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aymavilles",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Chardonnay",
+        "Fumin",
+        "Petit Rouge",
+        "Pinot Noir",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aymavilles, au cœur de la Vallée d'Aoste, Les Crêtes est le domaine phare de la région et son plus grand producteur privé. Fondé en 1989 par Costantino Charrère, ancien fondateur d'une école de ski du Mont-Blanc et fils de paysan-vigneron, il est aujourd'hui cité par le guide de Daniele Cernilli parmi les meilleurs producteurs d'Italie.\n\nInspiré par la Bourgogne, Charrère a d'abord bâti la réputation du domaine sur ses Chardonnay riches et élevés en fût (la Cuvée Bois), démontrant que cette terre de rouges pouvait donner de grands blancs. « Historiquement, c'est une terre de vin rouge, mais qualitativement, les blancs y réussissent très bien », résume-t-on au domaine : à ces altitudes, les raisins parviennent à maturité tout en conservant une acidité élevée. Ces dernières années, la Petite Arvine (importée de Suisse dans les années 1970) s'est imposée au premier plan, avec plusieurs cuvées dont la Fleur. Le domaine signe aussi de beaux rouges : Fumin, Torrette, Pinot Noir, Syrah et le Nebbiolo Sommet. Aujourd'hui dirigé par les filles de Costantino, Elena et Eleonora, avec le directeur Giulio Corti, Les Crêtes conjugue ambition, régularité et rayonnement international. Le domaine, avec son « Rifugio del Vino » évoquant les massifs alpins, est l'ambassadeur incontesté de la viticulture de montagne valdôtaine.\n\nLE domaine de la Vallée d'Aoste : plus grand privé de la région (Costantino Charrère, 1989), cité parmi les meilleurs producteurs d'Italie. Chardonnay Cuvée Bois et Petite Arvine de référence, c'est l'ambassadeur de la région.\n\nLe pari de Costantino Charrère fut celui d'un visionnaire : croire qu'une région minuscule, la plus petite d'Italie avec à peine 400 hectares de vignes, coincée entre le Mont-Blanc et le Cervin, pouvait produire des vins de niveau international. Il a démontré que l'altitude, loin d'être un handicap, était un atout : les fortes amplitudes thermiques entre des étés chauds et secs et des nuits très fraîches donnent des vins d'une vivacité remarquable, alliant maturité du fruit et acidité tendue. Le domaine, installé autour d'un moulin à eau historique du XVIIIe siècle et des anciennes caves de la Via Moulins à Aymavilles, cultive des parcelles escarpées où tout le travail se fait à la main : c'est la « viticulture héroïque » dans toute sa rigueur. Servis sur la cuisine valdôtaine — la fontina, la carbonade, la polenta concia, le gibier de montagne —, les vins des Crêtes séduisent par leur fraîcheur alpine et leur droiture ; les Chardonnay élevés en fût et le Fumin se patinent sur plusieurs années. Régulièrement salués par Wine Spectator et les guides italiens, ils ont fait connaître la Vallée d'Aoste bien au-delà de ses frontières. Aujourd'hui mené par les filles Charrère, le domaine reste la locomotive qualitative et le porte-drapeau d'une région longtemps ignorée, désormais courtisée par les amateurs de vins de montagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Cuvée Bois",
+        "Petite Arvine Fleur",
+        "Fumin",
+        "Nebbiolo Sommet"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aymavilles",
+        "petite-arvine",
+        "chardonnay",
+        "fumin",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|the-buyer|wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-grosjean",
+      "nom": "Grosjean",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Quart",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Premetta",
+        "Petit Rouge",
+        "Vuillermin"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Quart, près d'Aoste, Grosjean est le domaine emblématique de la viticulture de montagne valdôtaine et le gardien de ses cépages autochtones. Cette maison familiale, aujourd'hui à sa troisième génération, est un pionnier du bio : la famille n'utilise ni pesticides ni herbicides depuis 1975, et a officialisé sa conversion biologique en 2011.\n\nSur des pentes escarpées exposées plein sud, qui captent la précieuse lumière nécessaire à la maturation en climat froid, les Grosjean cultivent une palette remarquable de variétés locales : le Fumin (sombre, corsé et fumé, le rouge le plus structuré et le plus apte à la garde de la vallée), le Cornalin (épicé et élégant), la Premetta (variété ancienne à la peau fine et à la robe claire), le Petit Rouge (base du Torrette), le Vuillermin (père du Fumin) et bien d'autres, aux côtés de la Petite Arvine, du Gamay et du Pinot Noir. La famille a joué un rôle déterminant dans la sélection et le sauvetage de ces cépages, menés dans les années 1980-90 : « la grande sélection a été faite alors ; aujourd'hui nous re-sélectionnons les sélections », explique Hervé Grosjean, troisième génération. La Petite Arvine Vigna Rovettaz et le Fumin Vigne Merletta sont des références, et le Torrette du domaine a même été distingué par le New York Times. Grosjean est le domaine de référence des autochtones valdôtains.\n\nPionnier du bio et gardien des cépages autochtones (3 générations, bio certifié 2011) : Petite Arvine Vigna Rovettaz, Fumin, Cornalin, Premetta. C'est la référence de la viticulture de montagne valdôtaine.\n\nLe rôle des Grosjean dépasse celui d'un simple domaine : ils sont les conservateurs vivants d'un patrimoine ampélographique unique. La Vallée d'Aoste compte près d'une vingtaine de variétés autochtones, dont beaucoup étaient au bord de l'extinction lorsque, dans les années 1980-90, l'Institut Agricole Régional et une poignée de vignerons — les Grosjean en tête — entreprirent de les identifier, de les sélectionner et de les replanter. Ce travail patient a sauvé le Fumin, le Cornalin, la Premetta, le Vuillermin, le Mayolet, le Neyret, qui font aujourd'hui la singularité et la richesse des vins valdôtains. Le domaine produit dix-sept cuvées pour environ 10 000 caisses, une échelle artisanale à la mesure de cette région où près de 70 % des vignerons possèdent moins de 0,2 hectare. Servis sur la cuisine de montagne — fontina, charcuteries de montagne, viandes, gibier —, les vins de Grosjean séduisent par leur fraîcheur alpine et leur énergie ; le Fumin, le plus structuré des rouges valdôtains, se patine sur une décennie. Le Torrette du domaine a été distingué par le New York Times comme l'un des vins du monde offrant le meilleur rapport qualité-prix tout en exprimant fidèlement son lieu d'origine. Grosjean incarne ainsi le cœur battant de la viticulture de montagne : exigeante, biologique et fidèle à ses racines.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine Vigna Rovettaz",
+        "Fumin Vigne Merletta",
+        "Cornalin",
+        "Torrette"
+      ],
+      "tags": [
+        "valle-daosta",
+        "quart",
+        "petite-arvine",
+        "fumin",
+        "cornalin",
+        "bio",
+        "autochtone",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|chambersstwines|nytimes"
+    },
+    {
+      "id": "it-valledaosta-prod-cave-mont-blanc-de-morgex-et-la-salle",
+      "nom": "Cave Mont Blanc de Morgex et La Salle",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Valdigne / Morgex (AO)",
+      "commune": "Morgex",
+      "pays": "Italie",
+      "cepages": [
+        "Prié Blanc"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Blanc de Morgex et de La Salle"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morgex, au pied du Mont-Blanc, la Cave Mont Blanc est la coopérative des plus hauts vignobles d'Europe et l'un des lieux les plus spectaculaires du vin italien. Ses parcelles s'étagent entre 900 et 1 200 mètres d'altitude, dans la Valdigne, l'extrémité nord-ouest de la Vallée d'Aoste, à l'ombre du toit de l'Europe.\n\nElle repose sur un seul cépage, le Prié Blanc, une variété autochtone unique conduite en basses pergolas près du sol pour capter la chaleur, et dotée d'un cycle de maturation court permettant de vendanger avant les premières neiges. Fait exceptionnel : à ces altitudes, le phylloxéra n'est jamais parvenu à s'installer, si bien que les vignes sont franches de pied (non greffées), un cas rarissime en Europe. Le Blanc de Morgex et de La Salle qui en est issu est un blanc alpin d'une grande pureté : frais, délicat et floral, aux notes de pêche, de citron et de fleurs de montagne, marqué par une minéralité tranchante et une acidité vive. La coopérative excelle aussi dans les effervescents en méthode traditionnelle, dont l'extraordinaire Cuvée des Guides, dont la seconde fermentation et le vieillissement s'effectuent à 2 200 mètres d'altitude, à même le massif du Mont-Blanc. Riche, intense et complexe, elle est devenue une icône. La Cave Mont Blanc incarne la viticulture héroïque poussée à son extrême.\n\nLa coopérative des plus hauts vignobles d'Europe (900-1200 m, au pied du Mont-Blanc) : Prié Blanc franc de pied (pré-phylloxérique), dont la Cuvée des Guides, élevée à 2200 m sur le glacier. C'est une icône de la viticulture héroïque.\n\nLa viticulture de Morgex relève de l'exploit permanent. Sur des centaines de minuscules parcelles éparpillées sur les pentes des deux communes de Morgex et La Salle, une poignée de vignerons et cette coopérative cultivent le Prié Blanc dans des conditions extrêmes : gel, neige précoce, saison végétative très courte, travail exclusivement manuel sur des terrasses vertigineuses. C'est ici, en levant les yeux, que l'on aperçoit les sommets glacés du Mont-Blanc, et l'air se fait plus rare. Ce contexte confère aux vins un caractère alpin inimitable, à des années-lumière des blancs solaires du Sud : légers en alcool, tendus, salins, d'une pureté cristalline. La Cave Mont Blanc a su valoriser ce trésor à travers une gamme complète — le Blanc de Morgex classique, le Rayon (une version tranquille plus ambitieuse), le Blanc du Blanc en méthode traditionnelle, et surtout la Cuvée des Guides, hommage aux guides de haute montagne, vieillie deux ans sur lies à 2 200 mètres. Servis à l'apéritif, sur les poissons de rivière, la fondue valdôtaine ou les fromages de montagne, ces vins séduisent par leur fraîcheur désaltérante. Symbole des vignes franches de pied et des cimes, la Cave Mont Blanc est l'un des lieux les plus emblématiques du vin italien et le témoin qu'à 1 200 mètres, la vigne peut encore donner de grands vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cuvée des Guides (metodo classico)",
+        "Blanc de Morgex et de La Salle",
+        "Rayon",
+        "Blanc du Blanc"
+      ],
+      "tags": [
+        "valle-daosta",
+        "morgex",
+        "prie-blanc",
+        "blanc",
+        "effervescent",
+        "altitude",
+        "franc-de-pied",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "the-buyer|wine-searcher|winewithseth"
+    },
+    {
+      "id": "it-valledaosta-prod-maison-anselmet",
+      "nom": "Maison Anselmet",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Villeneuve",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Chardonnay",
+        "Fumin",
+        "Syrah",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Villeneuve, dans la vallée centrale, Maison Anselmet est l'un des domaines les plus admirés de la Vallée d'Aoste. La famille Anselmet fait remonter sa tradition vigneronne à 1585, ce qui en fait l'une des plus anciennes lignées de la région, aujourd'hui menée par Giorgio Anselmet.\n\nLe domaine, à la production volontairement limitée (environ 80 000 bouteilles), travaille de façon expérimentale sur de vieilles vignes franches de pied, un patrimoine rare. Il signe des Chardonnay élevés en fût d'une grande finesse, de la Petite Arvine, du Fumin, du Syrah et du Pinot Noir, dans un style précis et ambitieux. Lors des dégustations régionales, ses vins sont régulièrement désignés comme les meilleurs du panorama valdôtain, attirant l'attention des critiques internationaux. Le domaine possède aussi une structure sœur, La Plantze, à la production plus confidentielle. Le style, raffiné et précis, tire parti de l'altitude et des amplitudes thermiques pour donner des vins d'une fraîcheur alpine remarquable. Maison Anselmet est une belle adresse pour découvrir la Vallée d'Aoste à son plus haut niveau, chez une famille vigneronne quatre fois centenaire, sur la cuisine de montagne.\n\nDomaine star de la vallée (famille vigneronne depuis 1585), Maison Anselmet signe des cuvées expérimentales sur vieilles vignes franches de pied, saluées comme les meilleures des dégustations régionales.\n\n L'ancienneté exceptionnelle de la lignée Anselmet, vigneronne depuis 1585, ancre le domaine dans l'histoire même de la viticulture valdôtaine. Servis sur la cuisine de montagne — fontina, carbonade, gibier —, ses vins séduisent par leur précision et leur fraîcheur alpine ; les Chardonnay élevés en fût et le Fumin se patinent sur plusieurs années. Le domaine illustre le haut niveau qualitatif atteint par la vallée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Elevé en Fût",
+        "Fumin",
+        "Petite Arvine",
+        "Le Prisonnier"
+      ],
+      "tags": [
+        "valle-daosta",
+        "villeneuve",
+        "petite-arvine",
+        "fumin",
+        "chardonnay",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "the-buyer"
+    },
+    {
+      "id": "it-valledaosta-prod-ottin-elio-ottin",
+      "nom": "Ottin (Elio Ottin)",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aosta (Porossan)",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les hauteurs de Porossan, au-dessus d'Aoste, Ottin est un domaine durable très acclamé, fondé il y a une quinzaine d'années par Elio Ottin. Sur des vignes en terrasses spectaculaires dominant la ville, il produit environ 60 000 bouteilles d'une qualité remarquée.\n\nLe domaine s'est fait connaître par sa Petite Arvine, fraîche et délicieuse, élevée sur lies fines en cuve, puis par l'ajout du Fumin en monocépage et d'une Petite Arvine vinifiée en foudres de bois. Ses cuvées phares — le Nuances (riche, texturé, élevé sur lies en grands fûts), le Canto X (un Chardonnay très bien noté) et l'Americo (un Pinot Noir élevé dix-huit mois en barriques) — sont régulièrement saluées par la critique. Le style, précis et moderne, met en valeur la fraîcheur alpine et la texture des cépages de montagne. La qualité constante, l'engagement durable et la beauté du site en font l'une des adresses montantes de la région. Ottin est une belle adresse pour découvrir la Petite Arvine et le Fumin valdôtains dans des versions ambitieuses, chez un vigneron acclamé des hauteurs d'Aoste.\n\nDomaine durable très acclamé (Elio Ottin, vignes en terrasses au-dessus d'Aoste) : Petite Arvine, Fumin et Pinot Noir salués par la critique (Nuances, Canto X, L'Americo). C'est l'une des adresses montantes de la vallée.\n\n La beauté des terrasses d'Ottin, suspendues au-dessus d'Aoste face aux sommets, résume la « viticulture héroïque » valdôtaine, entièrement manuelle. Servis sur les fromages de montagne, les viandes ou le gibier, ses vins séduisent par leur texture et leur tension ; le Nuances et le Fumin se patinent sur plusieurs années. Le domaine incarne la nouvelle génération ambitieuse de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Nuances",
+        "L'Americo (Pinot Noir)"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aosta",
+        "petite-arvine",
+        "fumin",
+        "pinot-noir",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "the-buyer|wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-lo-triolet",
+      "nom": "Lo Triolet",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Introd",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Gris",
+        "Petite Arvine",
+        "Fumin",
+        "Pinot Noir",
+        "Petit Rouge"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Introd, dans la vallée centrale, Lo Triolet est la référence du Pinot Gris valdôtain. Mené par Marco Martin avec une passion reconnue pour le travail de la vigne, le domaine est passé de mille bouteilles à ses débuts à quelque soixante mille aujourd'hui, sur des parcelles étagées de 550 à 900 mètres d'altitude.\n\nLe domaine s'est distingué par plusieurs Tre Bicchieri, notamment pour ses Pinot Gris — dont une version élevée en fût, texturée et complexe, qui a fait sa réputation — mais aussi pour son Pinot Noir, son Torrette (assemblage de Petit Rouge et de Fumin) et son Fumin, un rouge sombre à la belle texture et à la longue finale. Sa Petite Arvine, fermentée en cuve inox, séduit par sa pureté et son équilibre. Le style, précis et soigné, met en valeur la fraîcheur alpine et la définition aromatique des cépages de montagne. La qualité constante et la reconnaissance critique en font une valeur sûre de la région. Lo Triolet est une belle adresse pour découvrir le Pinot Gris de montagne, une spécialité rare et réussie, chez un vigneron réputé de la Vallée d'Aoste.\n\nRéférence du Pinot Gris valdôtain (Marco Martin, vignes de 550 à 900 m) : plusieurs Tre Bicchieri, Pinot Gris élevé en fût, Fumin et Torrette de belle facture. C'est une valeur sûre de la région.\n\n Le pari de Marco Martin sur le Pinot Gris, cépage discret ailleurs, en fait une signature originale de la vallée. Servis sur les fromages, la fondue valdôtaine, les poissons de rivière ou les viandes blanches, ses blancs séduisent par leur texture ; le Pinot Gris élevé en fût gagne à être attendu. L'étagement de ses vignes, de 550 à 900 mètres, offre une palette de maturités précieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pinot Gris Elevé en Fût",
+        "Pinot Gris",
+        "Fumin",
+        "Torrette"
+      ],
+      "tags": [
+        "valle-daosta",
+        "introd",
+        "pinot-gris",
+        "fumin",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "the-buyer|winewithseth"
+    },
+    {
+      "id": "it-valledaosta-prod-ermes-pavese",
+      "nom": "Ermes Pavese",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Valdigne / Morgex (AO)",
+      "commune": "Morgex",
+      "pays": "Italie",
+      "cepages": [
+        "Prié Blanc"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Blanc de Morgex et de La Salle"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morgex, au pied du Mont-Blanc, Ermes Pavese est le vigneron emblématique du Prié Blanc, ce cépage unique des plus hauts vignobles d'Europe. Sur des parcelles minuscules situées vers 1 000 mètres d'altitude, il cultive des vignes franches de pied, jamais atteintes par le phylloxéra.\n\nLe domaine signe des blancs alpins d'une grande pureté : le Blanc de Morgex et de La Salle, frais, floral et minéral, ainsi que le Ninive, une version élevée en fût, plus texturée et ambitieuse, qui a démontré que le Prié Blanc pouvait aussi donner des vins de garde. Il produit également un metodo classico (Nathan). Le style, artisanal et précis, exprime le caractère alpin du cépage : légèreté, tension, salinité et notes de pêche, de citron et de fleurs de montagne. La conduite en basses pergolas, la vendange manuelle avant les neiges et le travail en conditions extrêmes font de chaque bouteille un exploit. Ermes Pavese est une belle adresse pour découvrir le Prié Blanc de Morgex, l'un des blancs les plus singuliers d'Italie, chez un vigneron passionné des cimes.\n\nLe vigneron emblématique du Prié Blanc de Morgex : vignes franches de pied à 1000 m au pied du Mont-Blanc, blancs alpins purs et minéraux, dont un élevé en fût (Ninive). C'est une figure de la viticulture extrême.\n\n La singularité d'Ermes Pavese tient à ce trésor rarissime : des vignes franches de pied, jamais greffées, que le phylloxéra n'a pu atteindre à cette altitude. Servis à l'apéritif, sur les poissons de rivière, la fondue ou les fromages de montagne, ses Prié Blanc séduisent par leur salinité et leur tension cristalline ; le Ninive, élevé en fût, se patine avec grâce. C'est la viticulture extrême dans toute sa noblesse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Blanc de Morgex et de La Salle",
+        "Ninive",
+        "Nathan (metodo classico)"
+      ],
+      "tags": [
+        "valle-daosta",
+        "morgex",
+        "prie-blanc",
+        "blanc",
+        "altitude",
+        "franc-de-pied",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "chambersstwines"
+    },
+    {
+      "id": "it-valledaosta-prod-chateau-feuillet",
+      "nom": "Château Feuillet",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Saint-Pierre",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Petit Rouge",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Saint-Pierre, dans la vallée centrale, Château Feuillet est un domaine réputé, fondé en 1997 et mené par Maurizio Fiorano. Avec une production d'environ 35 000 bouteilles et une dizaine de vins en appellation, il s'est imposé comme l'une des meilleures adresses de la région.\n\nLe domaine signe une gamme complète : en blanc, la Petite Arvine, le Chardonnay, le Moscato et le Gewürztraminer ; en rouge, le Torrette et le Torrette Supérieur (à base de Petit Rouge), le Fumin, le Cornalin, le Pinot Noir et le Syrah, ainsi qu'un vin de paille. Le style, précis et fidèle au terroir, met en valeur la fraîcheur alpine et la définition aromatique des cépages valdôtains. Le domaine est régulièrement cité parmi les meilleurs rapports qualité-prix de la vallée, ce qui en fait une porte d'entrée idéale. Château Feuillet est une belle adresse pour découvrir le Torrette Supérieur et le Fumin, deux classiques valdôtains, chez un vigneron réputé de Saint-Pierre, sur la cuisine de montagne et les fromages.\n\nDomaine réputé de Saint-Pierre (Maurizio Fiorano), Château Feuillet signe des Torrette Supérieur, Fumin et Petite Arvine de qualité. C'est l'un des meilleurs rapports qualité-prix de la vallée.\n\n L'étendue de la gamme de Château Feuillet, dix vins en appellation pour une production modeste, illustre la mosaïque ampélographique valdôtaine. Servis sur la cuisine de montagne, les fromages, les viandes et le gibier, ses vins séduisent par leur franchise ; le Torrette Supérieur et le Fumin se patinent sur plusieurs années. Le domaine offre l'un des meilleurs rapports qualité-prix de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette Supérieur",
+        "Fumin",
+        "Petite Arvine",
+        "Cornalin"
+      ],
+      "tags": [
+        "valle-daosta",
+        "saint-pierre",
+        "torrette",
+        "fumin",
+        "petite-arvine"
+      ],
+      "a_verifier": null,
+      "source": "guidedtours|wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-la-crotta-di-vegneron",
+      "nom": "La Crotta di Vegneron",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Chambave (AO)",
+      "commune": "Chambave",
+      "pays": "Italie",
+      "cepages": [
+        "Muscat",
+        "Petit Rouge",
+        "Fumin",
+        "Pinot Gris",
+        "Vien de Nus"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Chambave",
+        "Nus"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Chambave, dans la vallée centrale, La Crotta di Vegneron est la coopérative de référence de cette sous-zone réputée. Rassemblant les vignerons de Chambave et des environs, elle valorise notamment le Muscat, spécialité historique du lieu.\n\nLe Chambave Muscat est un classique valdôtain : un blanc sec, aromatique et floral, mais c'est surtout dans sa version flétrie (passito, à partir de raisins passerillés) qu'il atteint son sommet, donnant un vin doux d'une grande finesse, aux arômes de miel, d'abricot et de fleurs. La coopérative signe aussi de beaux rouges (Fumin, Petit Rouge, Prieuré) et le rare Nus Malvoisie (un Pinot Gris local, parfois en version flétrie). Le style, soigné et fidèle à la tradition, met en valeur les spécialités de cette portion de la vallée. La qualité constante et le rôle patrimonial de la coopérative en font une référence. La Crotta di Vegneron est une belle adresse pour découvrir le Muscat de Chambave, sec ou flétri, l'un des joyaux de la Vallée d'Aoste.\n\nCoopérative de référence de Chambave, La Crotta di Vegneron signe le Muscat de Chambave (sec et flétri/passito), un classique, aux côtés de rouges et du rare Nus Malvoisie.\n\n Le rôle de la coopérative dans la préservation du Muscat de Chambave, spécialité menacée, en fait un gardien du patrimoine valdôtain. Servi à l'apéritif ou sur les poissons pour le sec, sur les fromages bleus, la pâtisserie et les desserts pour le flétri, le Muscat de Chambave séduit par sa finesse aromatique. Le rare Nus Malvoisie complète cette palette de spécialités locales.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chambave Muscat",
+        "Chambave Muscat Flétri",
+        "Fumin",
+        "Prieuré"
+      ],
+      "tags": [
+        "valle-daosta",
+        "chambave",
+        "muscat",
+        "doux",
+        "cooperative",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-caves-cooperatives-de-donnas",
+      "nom": "Caves Coopératives de Donnas",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Donnas / Basse vallée (AO)",
+      "commune": "Donnas",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo (Picotendro)"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Donnas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Donnas, à l'entrée sud de la Vallée d'Aoste, les Caves Coopératives de Donnas sont les gardiennes du Nebbiolo alpin, connu ici sous le nom de Picotendro. Sur des terrasses de granit vertigineuses, aux confins du Piémont, elles perpétuent l'une des expressions les plus originales du grand cépage piémontais.\n\nLe Donnas est un Nebbiolo de montagne : plus léger, plus fin et plus tendu que ses cousins du Barolo ou du Barbaresco, il séduit par sa finesse, ses arômes de rose, de cerise et d'amande, ses tanins soyeux et sa minéralité granitique. Élevé traditionnellement, il possède une belle aptitude à la garde. La coopérative, dont l'appellation Donnas fut reconnue dès 1971 (avant d'être intégrée à la DOC unifiée Valle d'Aosta en 1985), signe le Donnas classique, une cuvée de vieilles vignes et le Napoleon. Le style, traditionnel et racé, exprime le Nebbiolo dans un registre alpin unique. Les Caves de Donnas sont une belle adresse pour découvrir le Nebbiolo d'altitude, l'un des grands Nebbiolo de montagne d'Italie, aux côtés de ceux de la Valtellina.\n\nLa coopérative du Nebbiolo alpin : le Donnas (Picotendro) est un Nebbiolo de montagne fin et racé, en terrasses de granit. C'est l'un des grands Nebbiolo d'altitude d'Italie.\n\n Le Donnas illustre à merveille ce que l'altitude fait au Nebbiolo : là où le Barolo gagne en puissance, le Picotendro gagne en finesse et en tension, sur ses terrasses de granit. Servi sur la cuisine de montagne, le gibier, les viandes ou les fromages affinés, il se patine sur une décennie et plus. La coopérative est la gardienne d'une tradition alpine unique, à la frontière du Piémont.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Donnas (Nebbiolo)",
+        "Donnas Vieilles Vignes",
+        "Napoleon"
+      ],
+      "tags": [
+        "valle-daosta",
+        "donnas",
+        "nebbiolo",
+        "picotendro",
+        "rouge",
+        "cooperative",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|winewithseth"
+    },
+    {
+      "id": "it-valledaosta-prod-cave-des-onze-communes",
+      "nom": "Cave des Onze Communes",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aymavilles",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Petit Rouge",
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aymavilles, dans la vallée centrale, la Cave des Onze Communes est une grande coopérative moderne, rassemblant les vignerons de onze communes de la région d'Aoste. Elle joue un rôle central dans une région où les coopératives assurent près des trois quarts de la production.\n\nLa cave signe une gamme complète et fiable, couvrant l'essentiel des cépages valdôtains : le Torrette et le Torrette Supérieur (à base de Petit Rouge), le Fumin, la Petite Arvine, le Chardonnay, le Pinot Noir. Le style, soigné et accessible, met en valeur la fraîcheur alpine des vins dans des cuvées équilibrées et bien diffusées. La qualité constante, le bon rapport qualité-prix et la belle diffusion en font une valeur sûre et une excellente porte d'entrée dans les vins de la Vallée d'Aoste. La Cave des Onze Communes illustre le rôle essentiel du modèle coopératif dans cette région où près de 70 % des vignerons possèdent moins de 0,2 hectare de vignes. C'est une belle adresse pour découvrir les classiques valdôtains à prix raisonnable.\n\nGrande coopérative moderne de la vallée centrale (onze communes) : Torrette, Fumin et Petite Arvine soignés, bien diffusés et à bon rapport qualité-prix. C'est une excellente porte d'entrée dans les vins valdôtains.\n\n Le modèle coopératif, dominant dans cette région où les parcelles sont minuscules et éparpillées, est vital : sans lui, une grande partie du vignoble valdôtain aurait disparu. Servis sur la cuisine de montagne, les fromages et les viandes, les vins de la Cave des Onze Communes séduisent par leur franchise et leur fraîcheur, à des prix accessibles. C'est une porte d'entrée idéale dans la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette Supérieur",
+        "Fumin",
+        "Petite Arvine",
+        "Chardonnay"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aymavilles",
+        "torrette",
+        "cooperative",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "moretimetotravel|wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-di-barro",
+      "nom": "Di Barrò",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Saint-Pierre",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Petit Rouge",
+        "Mayolet"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Saint-Pierre, dans la vallée centrale, Di Barrò est un domaine familial soigné, mené par Elvira Rini, belle adresse artisanale de la Vallée d'Aoste. Sur des parcelles en terrasses, la famille cultive les cépages autochtones avec attention.\n\nLe domaine signe des Torrette et Torrette Supérieur de belle facture (à base de Petit Rouge), du Fumin, du Cornalin, ainsi que des cépages autochtones rares comme le Mayolet, qu'il contribue à préserver. Il produit aussi de la Petite Arvine et une cuvée Vin des Guides. Le style, artisanal et fidèle au terroir, met en valeur la fraîcheur alpine et le caractère des variétés locales. Le travail sur les cépages rares et la qualité constante de la gamme en font une belle adresse de la région. Di Barrò est une belle adresse pour découvrir le Torrette et les cépages autochtones rares de la Vallée d'Aoste, chez un domaine familial de Saint-Pierre, sur la cuisine de montagne, les viandes et les fromages.\n\nDomaine familial soigné de Saint-Pierre (Elvira Rini), Di Barrò signe des Torrette Supérieur, Fumin et cépages autochtones rares (Mayolet). C'est une belle adresse artisanale de la vallée.\n\n Le travail de Di Barrò sur le Mayolet et les autres cépages rares participe à la sauvegarde du patrimoine ampélographique valdôtain, l'un des plus riches d'Italie rapporté à sa taille. Servis sur la cuisine de montagne, les viandes et les fromages, ses rouges séduisent par leur fraîcheur épicée ; le Torrette Supérieur et le Fumin se patinent sur plusieurs années. C'est une adresse artisanale attachante.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette Supérieur",
+        "Fumin",
+        "Vin des Guides",
+        "Mayolet"
+      ],
+      "tags": [
+        "valle-daosta",
+        "saint-pierre",
+        "torrette",
+        "fumin",
+        "mayolet",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-rosset-terroir",
+      "nom": "Rosset Terroir",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Quart",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Quart, près d'Aoste, Rosset Terroir est un domaine bio réputé, mené par Nicola Rosset, l'une des belles adresses montantes de la Vallée d'Aoste. Sur des parcelles de montagne conduites en agriculture biologique, il produit des vins précis et expressifs.\n\nLe domaine signe de la Petite Arvine (fraîche et tendue), du Fumin (structuré et fumé), du Cornalin (épicé et élégant), du Pinot Noir et du Chardonnay, ainsi que des effervescents en méthode traditionnelle. Le style, bio et précis, met en valeur la fraîcheur alpine et la définition aromatique des cépages valdôtains, dans des vins équilibrés et authentiques. L'engagement biologique, la qualité croissante et la belle progression du domaine en font une valeur montante de la région. Rosset Terroir est une belle adresse pour découvrir la Petite Arvine et les rouges autochtones valdôtains dans une version bio et soignée, chez un vigneron de Quart, sur la cuisine de montagne.\n\nDomaine bio réputé de Quart (Nicola Rosset), Rosset Terroir signe des Petite Arvine, Fumin et Cornalin précis, ainsi que des metodo classico. C'est une belle adresse montante de la vallée.\n\n L'engagement bio de Nicola Rosset s'inscrit dans le renouveau durable de la viticulture valdôtaine, particulièrement adaptée à ces terroirs de montagne préservés. Servis sur la cuisine de montagne, les fromages, les viandes et le gibier, ses vins séduisent par leur fraîcheur et leur précision ; le Fumin se patine sur plusieurs années. Le domaine figure parmi les valeurs montantes de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Pinot Noir"
+      ],
+      "tags": [
+        "valle-daosta",
+        "quart",
+        "petite-arvine",
+        "fumin",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-la-vrille",
+      "nom": "La Vrille",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Chambave (AO)",
+      "commune": "Verrayes",
+      "pays": "Italie",
+      "cepages": [
+        "Muscat",
+        "Cornalin",
+        "Fumin",
+        "Petit Rouge",
+        "Vuillermin"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Chambave"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Verrayes, dans la zone de Chambave, La Vrille est un petit domaine bio mené par Hervé Deguillame, belle adresse artisanale et durable de la Vallée d'Aoste. Sur des parcelles de montagne, il cultive les cépages locaux en agriculture biologique.\n\nLe domaine est notamment réputé pour son Chambave Muscat Flétri, un vin doux de raisins passerillés, d'une belle finesse aromatique (miel, abricot, fleurs), qui compte parmi les plus beaux de la sous-zone. Il signe aussi des rouges de cépages autochtones : le Cornalin (épicé et élégant), le Fumin (structuré) et le rare Vuillermin. Le style, bio et artisanal, privilégie l'expression du terroir de montagne et l'authenticité. L'engagement biologique, la taille humaine et la qualité de la gamme en font une belle adresse de la région. La Vrille est une adresse à découvrir pour le Chambave Muscat Flétri et les rouges autochtones rares, chez un petit vigneron bio de Verrayes, sur les fromages et les desserts pour le doux.\n\nPetit domaine bio de Verrayes (Hervé Deguillame), La Vrille signe un Chambave Muscat Flétri réputé et des rouges autochtones (Cornalin, Vuillermin). C'est une belle adresse artisanale et durable.\n\n La démarche bio et artisanale d'Hervé Deguillame, sur de petites parcelles de montagne, illustre la vitalité des micro-domaines valdôtains. Servi sur les fromages bleus, la pâtisserie ou en méditation, son Chambave Muscat Flétri séduit par sa finesse ; ses rouges autochtones, sur les viandes et le gibier, expriment le caractère alpin. Le domaine contribue à préserver des cépages rares comme le Vuillermin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chambave Muscat Flétri",
+        "Cornalin",
+        "Fumin",
+        "Vuillermin"
+      ],
+      "tags": [
+        "valle-daosta",
+        "chambave",
+        "verrayes",
+        "muscat",
+        "cornalin",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-nadir-cuneaz",
+      "nom": "Nadir Cunéaz",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Gressan",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Premetta",
+        "Vuillermin"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gressan, près d'Aoste, Nadir Cunéaz est un micro-domaine nature culte, l'une des adresses les plus recherchées de la Vallée d'Aoste. Sur un demi-hectare de vignes seulement, ce vigneron travaille sans pesticides ni herbicides, n'utilisant que du cuivre et du soufre, dans une démarche artisanale radicale. Le domaine signe des vins de cépages autochtones rares — Petite Arvine, Fumin, Cornalin, Premetta, Vuillermin —, vinifiés avec très peu d'intervention, dans des quantités infimes. Le style, nature et sincère, privilégie l'expression du terroir de montagne et l'authenticité, avec des vins vivants et de caractère, prisés des amateurs de vin nature du monde entier. La taille minuscule du domaine, la rareté des bouteilles et la qualité des vins en font une adresse culte. Nadir Cunéaz est une adresse à découvrir pour des vins de montagne nature et rarissimes, chez un vigneron passionné de Gressan, sur la cuisine valdôtaine, pour les amateurs de vin vivant.\n\nMicro-domaine nature culte (Nadir Cunéaz, un demi-hectare, sans pesticides) : cépages autochtones rares vinifiés artisanalement. C'est une adresse recherchée des amateurs de vin vivant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Premetta",
+        "Cuvée"
+      ],
+      "tags": [
+        "valle-daosta",
+        "gressan",
+        "petite-arvine",
+        "nature",
+        "bio",
+        "micro-domaine",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "chambersstwines"
+    },
+    {
+      "id": "it-valledaosta-prod-danilo-thomain",
+      "nom": "Danilo Thomain",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Arvier (AO)",
+      "commune": "Arvier",
+      "pays": "Italie",
+      "cepages": [
+        "Petit Rouge",
+        "Vien de Nus",
+        "Neyret"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Enfer d'Arvier"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Arvier, dans la vallée centrale, Danilo Thomain est le gardien de l'Enfer d'Arvier, l'une des sous-zones les plus singulières et les plus confidentielles de la Vallée d'Aoste. Son nom évoque un amphithéâtre rocheux naturel où la chaleur, réverbérée par les parois, devient étouffante en été — « l'enfer ». Sur ce terroir spectaculaire et exigeant, le vigneron cultive le Petit Rouge (complété de Vien de Nus et de Neyret) pour produire l'Enfer d'Arvier, un rouge rare et de caractère, à la fois fruité, floral et épicé, marqué par la chaleur du lieu et la fraîcheur de l'altitude. Le style, artisanal et fidèle au terroir, perpétue une tradition menacée. La rareté de cette appellation et le travail du vigneron en font une adresse à part. Danilo Thomain est une belle adresse pour découvrir l'Enfer d'Arvier, l'une des curiosités les plus attachantes de la Vallée d'Aoste, sur la cuisine de montagne et les viandes.\n\nLe gardien de l'Enfer d'Arvier : sur cet amphithéâtre rocheux surchauffé (« l'enfer »), un rouge de Petit Rouge rare et de caractère. C'est une sous-zone confidentielle et attachante de la vallée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Enfer d'Arvier"
+      ],
+      "tags": [
+        "valle-daosta",
+        "arvier",
+        "enfer-darvier",
+        "petit-rouge",
+        "rouge",
+        "rare",
+        "sous-zone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-feudo-di-san-maurizio",
+      "nom": "Feudo di San Maurizio",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Sarre",
+      "pays": "Italie",
+      "cepages": [
+        "Petit Rouge",
+        "Fumin",
+        "Cornalin",
+        "Mayolet",
+        "Petite Arvine"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sarre, dans la vallée centrale, Feudo di San Maurizio est un domaine bio mené par Michel Vallet, belle adresse artisanale attachée au patrimoine valdôtain. Sur des parcelles de montagne conduites en agriculture biologique, il cultive des cépages autochtones rares. Le domaine signe du Torrette (à base de Petit Rouge), du Fumin, du Cornalin, ainsi que des variétés rares qu'il contribue à préserver, comme le Mayolet et le Vuillermin, et de la Petite Arvine en blanc. Le style, bio et artisanal, privilégie l'expression du terroir de montagne et l'authenticité. Le travail sur les cépages rares, l'engagement biologique et la qualité de la gamme en font une belle adresse de la région. Feudo di San Maurizio est une adresse à découvrir pour les cépages autochtones rares de la Vallée d'Aoste, chez un vigneron bio de Sarre, sur la cuisine de montagne, les viandes et les fromages, pour les amateurs de patrimoine ampélographique.\n\nDomaine bio de Sarre (Michel Vallet), Feudo di San Maurizio signe des cépages autochtones rares (Mayolet, Vuillermin) et du Torrette. C'est une belle adresse artisanale attachée au patrimoine valdôtain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette",
+        "Mayolet",
+        "Fumin",
+        "Vin de la Sabla"
+      ],
+      "tags": [
+        "valle-daosta",
+        "sarre",
+        "torrette",
+        "mayolet",
+        "autochtone",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-la-source",
+      "nom": "La Source",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Saint-Pierre",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Saint-Pierre, dans la vallée centrale, La Source est un domaine soigné mené par Stefano Celi, belle valeur sûre de la Vallée d'Aoste. Sur des parcelles de montagne, la famille cultive les cépages valdôtains avec attention. Le domaine signe de la Petite Arvine (fraîche et tendue), du Fumin (structuré et fumé), du Cornalin (épicé), du Torrette, ainsi que du Pinot Noir et du Chardonnay. Le style, soigné et précis, met en valeur la fraîcheur alpine et la définition aromatique des cépages de montagne, dans des vins équilibrés et de belle facture. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de la vallée centrale. La Source est une belle adresse pour découvrir la Petite Arvine et les rouges autochtones valdôtains dans des versions soignées, chez un vigneron de Saint-Pierre, sur la cuisine de montagne, les fromages et les viandes, à bon rapport qualité-prix.\n\nDomaine soigné de Saint-Pierre (Stefano Celi), La Source signe des Petite Arvine, Fumin et Cornalin de belle facture. C'est une valeur sûre de la vallée centrale à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Torrette"
+      ],
+      "tags": [
+        "valle-daosta",
+        "saint-pierre",
+        "petite-arvine",
+        "fumin"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-la-plantze",
+      "nom": "La Plantze",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Villeneuve",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Villeneuve, dans la vallée centrale, La Plantze est le domaine sœur de Maison Anselmet, propriété de la même famille vigneronne (dont la tradition remonte à 1585). À la production plus confidentielle (environ 20 000 bouteilles), il constitue un laboratoire complémentaire. Le domaine signe de la Petite Arvine, du Fumin, du Torrette et du Chardonnay, dans un style soigné et précis, hérité du savoir-faire familial. La petite production permet un soin particulier apporté à chaque cuvée, sur de vieilles vignes. Le style, raffiné, met en valeur la fraîcheur alpine et la définition des cépages valdôtains. La qualité de la gamme et le lien avec Maison Anselmet en font une belle adresse de la région. La Plantze est une adresse à découvrir pour les vins de la Vallée d'Aoste dans des versions confidentielles et soignées, chez la famille Anselmet à Villeneuve, sur la cuisine de montagne, les fromages et les viandes.\n\nDomaine sœur de Maison Anselmet (famille Anselmet), La Plantze signe une petite production soignée de cépages autochtones et internationaux. C'est une belle adresse confidentielle de Villeneuve.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Torrette"
+      ],
+      "tags": [
+        "valle-daosta",
+        "villeneuve",
+        "petite-arvine",
+        "fumin"
+      ],
+      "a_verifier": null,
+      "source": "the-buyer"
+    },
+    {
+      "id": "it-valledaosta-prod-institut-agricole-regional",
+      "nom": "Institut Agricole Régional",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aosta",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aoste, l'Institut Agricole Régional est l'école viticole historique de la région et l'acteur central du sauvetage de son patrimoine ampélographique. Fondée à l'origine comme École Pratique d'Agriculture, devenue Institut Agricole Régional en 1982, l'institution a joué un rôle décisif : c'est elle qui, par ses nouvelles techniques culturales, a permis de privilégier la qualité sur la quantité, et qui a recensé, sélectionné et sauvé les cépages autochtones valdôtains (Fumin, Cornalin, Vuillermin, Mayolet, Premetta…) menacés de disparition. Elle a aussi introduit à titre expérimental des variétés internationales (Chardonnay, Müller-Thurgau), avec succès. L'institut produit également ses propres vins de qualité (Petite Arvine, Fumin, Torrette, Vin du Prêtre). Son rôle patrimonial est inestimable. L'Institut Agricole Régional est une belle adresse pour découvrir les vins valdôtains chez l'institution qui a permis leur renaissance, sur la cuisine de montagne.\n\nL'école viticole historique de la région (1982) : à l'origine de la sélection et du sauvetage des cépages autochtones valdôtains, elle produit aussi ses propres vins de qualité. Son rôle patrimonial est inestimable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petite Arvine",
+        "Fumin",
+        "Vin du Prêtre",
+        "Torrette"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aosta",
+        "institut",
+        "autochtone",
+        "patrimoine",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "signorvino"
+    },
+    {
+      "id": "it-valledaosta-prod-cave-gargantua",
+      "nom": "Cave Gargantua",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Gressan",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gressan, dans la vallée centrale, Cave Gargantua est un domaine belle adresse fiable de la Vallée d'Aoste. Sur des parcelles de montagne, la famille cultive les cépages valdôtains avec soin. Le domaine signe du Torrette (à base de Petit Rouge), du Fumin (structuré et fumé), de la Petite Arvine et du Chardonnay, dans un style soigné et fidèle au terroir. Le style, précis et authentique, met en valeur la fraîcheur alpine et la définition aromatique des cépages de montagne, dans des vins équilibrés. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de la vallée centrale. Cave Gargantua est une belle adresse pour découvrir les classiques valdôtains — Torrette, Fumin, Petite Arvine — dans des versions soignées, chez un domaine de Gressan, sur la cuisine de montagne, les fromages et les viandes, à bon rapport qualité-prix, pour une belle découverte de la région.\n\nDomaine de Gressan, Cave Gargantua signe des Torrette, Fumin et Petite Arvine soignés. C'est une belle adresse fiable de la vallée centrale, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette",
+        "Fumin",
+        "Petite Arvine"
+      ],
+      "tags": [
+        "valle-daosta",
+        "gressan",
+        "torrette",
+        "fumin"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-gerbelle-didier-gerbelle",
+      "nom": "Gerbelle (Didier Gerbelle)",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aymavilles",
+      "pays": "Italie",
+      "cepages": [
+        "Petite Arvine",
+        "Fumin",
+        "Cornalin",
+        "Petit Rouge"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aymavilles, dans la vallée centrale, Gerbelle est le domaine de Didier Gerbelle, l'un des rares producteurs valdôtains à exporter ses vins, belle adresse fiable de la région. Sur des parcelles de montagne, il cultive les cépages locaux avec soin. Le domaine signe du Torrette et du Torrette Supérieur (à base de Petit Rouge), du Fumin, du Cornalin et de la Petite Arvine, dans un style soigné et fidèle au terroir. Le style, précis et authentique, met en valeur la fraîcheur alpine des cépages valdôtains dans des vins équilibrés et de belle facture. La qualité constante et la diffusion à l'international en font une valeur sûre de la région. Gerbelle est une belle adresse pour découvrir le Torrette et les cépages autochtones de la Vallée d'Aoste dans des versions soignées, chez un vigneron d'Aymavilles, sur la cuisine de montagne, les fromages et les viandes.\n\nDomaine d'Aymavilles (Didier Gerbelle), l'un des exportateurs de la vallée, signe des Torrette et cépages autochtones soignés. C'est une belle adresse fiable de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette Supérieur",
+        "Fumin",
+        "Petite Arvine"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aymavilles",
+        "torrette",
+        "fumin"
+      ],
+      "a_verifier": null,
+      "source": "moretimetotravel"
+    },
+    {
+      "id": "it-valledaosta-prod-cave-des-vignerons-daoste-vallee-daoste",
+      "nom": "Cave des Vignerons d'Aoste (Vallée d'Aoste)",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "commune": "Aoste",
+      "pays": "Italie",
+      "cepages": [
+        "Petit Rouge",
+        "Fumin",
+        "Petite Arvine",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Torrette"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aoste, la Cave des Vignerons est une coopérative de la vallée, belle porte d'entrée dans les vins valdôtains. Elle rassemble des vignerons de la région, dans un territoire où le modèle coopératif est vital, près de 70 % des producteurs possédant moins de 0,2 hectare de vignes. La cave signe une gamme fiable et accessible : Torrette (à base de Petit Rouge), Fumin, Petite Arvine et Chardonnay, dans un style soigné et représentatif. Le style, fiable et accessible, met en valeur la fraîcheur alpine des cépages valdôtains dans des vins équilibrés, à des prix raisonnables. La régularité et le bon rapport qualité-prix en font une valeur sûre. La Cave des Vignerons d'Aoste est une belle adresse pour une première découverte des vins de la Vallée d'Aoste, du Torrette au Fumin en passant par la Petite Arvine, sur la cuisine de montagne, les fromages et les viandes, à bon rapport qualité-prix.\n\nCoopérative de la vallée, la Cave des Vignerons d'Aoste signe une gamme fiable et accessible de Torrette, Fumin et blancs autochtones. C'est une belle porte d'entrée dans les vins valdôtains.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torrette",
+        "Fumin",
+        "Petite Arvine"
+      ],
+      "tags": [
+        "valle-daosta",
+        "aosta",
+        "torrette",
+        "cooperative",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-prod-chateau-de-chambave-ezio-voyat",
+      "nom": "Château de Chambave (Ezio Voyat)",
+      "type": "domaine",
+      "region": "Valle d'Aosta",
+      "sous_region": "Chambave (AO)",
+      "commune": "Chambave",
+      "pays": "Italie",
+      "cepages": [
+        "Muscat",
+        "Petit Rouge",
+        "Vien de Nus"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Valle d'Aosta DOC",
+        "Chambave"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Chambave, dans la vallée centrale, le Château de Chambave perpétue l'héritage d'Ezio Voyat, figure légendaire de la viticulture valdôtaine, considéré comme l'un des pionniers de la qualité dans la région. Le domaine signe le Chambave Muscat (sec) et sa version flétrie (Le Muscat Flétri, un vin doux de raisins passerillés, aux arômes de miel et d'abricot), ainsi que des rouges de tradition (Petit Rouge, Vien de Nus). Le style, traditionnel et fidèle à l'héritage, perpétue le savoir-faire d'une figure historique de la vallée. La mémoire de ce domaine et la qualité de ses vins en font une adresse à part. Le Château de Chambave est une belle adresse pour découvrir le Muscat de Chambave, sec ou flétri, chez un domaine historique héritier d'une légende locale, sur les fromages et les desserts pour le doux, les viandes pour les rouges, pour les amateurs de patrimoine valdôtain.\n\nDomaine historique de Chambave (héritage d'Ezio Voyat, légende locale) : Muscat de Chambave et rouges de tradition. C'est une mémoire vivante de la sous-zone.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chambave Muscat",
+        "Le Muscat Flétri",
+        "Rouge"
+      ],
+      "tags": [
+        "valle-daosta",
+        "chambave",
+        "muscat",
+        "doux",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    }
+  ]
+}

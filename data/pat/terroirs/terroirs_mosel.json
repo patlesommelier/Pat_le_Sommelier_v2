@@ -1,0 +1,802 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "mosel",
+  "region_label": "Mosel (Allemagne)",
+  "source_file": "terroirs_mosel_vPat.xlsx",
+  "built_at": "2026-06-14",
+  "count": 29,
+  "items": [
+    {
+      "id": "de-mosel-terr-wehlener-sonnenuhr",
+      "nom": "Wehlener Sonnenuhr",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "schistes bleus dévoniens (Devon Schiefer)",
+      "caracteristiques_rapides": "Lieu-dit le plus célèbre de la Mosel, exposition sud-sud-ouest, pente vertigineuse face au village de Wehlen. Cadran solaire historique au cœur de la parcelle. VDP Grosse Lage.",
+      "notes_objectives": "Le Wehlener Sonnenuhr est l'un des plus grands terroirs de Riesling du monde, sur la Mittelmosel, au-dessus de Wehlen. Son nom vient du cadran solaire (Sonnenuhr) érigé au XIXe siècle au cœur du coteau. Sur des schistes bleus dévoniens d'une grande pureté, en pente extrêmement raide exposée au sud, il donne des Riesling d'une finesse et d'une transparence cristallines. Le terroir est indissociable du domaine J.J. Prüm, dont les Riesling — du Kabinett à l'Auslese — sont des références absolues, capables de vieillir pendant des décennies. D'autres grands noms y brillent : Dr. Loosen, Markus Molitor, Max Ferd. Richter, S.A. Prüm. Classé au sommet de la hiérarchie mosellane, le Wehlener Sonnenuhr incarne l'élégance aérienne du Riesling d'ardoise bleue. Ce qui distingue le Sonnenuhr, c'est la pureté absolue de son ardoise bleue, qui donne des vins d'une transparence et d'une légèreté presque éthérées, où l'intensité naît de la finesse plutôt que de la puissance. Le cadran solaire, planté en 1842 par Jodocus Prüm, n'est pas qu'un repère pittoresque : il marque les meilleures parcelles, au cœur du coteau. J.J. Prüm y a forgé une légende avec des Riesling au fruité retenu dans leur jeunesse, qui se révèlent magnifiquement après dix, vingt ou trente ans. Cette aptitude à la garde, conjuguée à une buvabilité immédiate dans les versions légères, fait du Sonnenuhr un terroir étalon, auquel se mesure tout le Riesling de la Mosel. Le coteau, qui s'élève d'un seul tenant au-dessus du village au bord de la rivière, offre l'une des images les plus emblématiques du paysage mosellan, classé parmi les plus spectaculaires d'Europe. La pente, souvent supérieure à soixante degrés, impose un travail entièrement manuel. Au-delà de J.J. Prüm, c'est tout un éventail de styles qui s'y exprime : la rigueur cristalline de Willi Schaefer, la palette complète de Markus Molitor (du sec au liquoreux), la précision de Dr. Loosen. Cette diversité, sur un seul et même terroir, fait du Wehlener Sonnenuhr un véritable laboratoire du Riesling mosellan. Pour l'amateur, c'est l'un des noms qui résument à eux seuls la grandeur des vins blancs allemands. Inscrit au cœur d'un des paysages culturels les plus remarquables d'Europe, le coteau attire chaque année amateurs et pèlerins du Riesling venus admirer son cadran et déguster ses vins. Plus qu'un grand cru, le Wehlener Sonnenuhr est devenu une icône, dont le nom seul évoque la quintessence du Riesling de la Mosel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "sonnenuhr",
+        "iconique"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-graacher-himmelreich",
+      "nom": "Graacher Himmelreich",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Voisin direct de Wehlener Sonnenuhr, exposition sud-sud-ouest. Style légèrement plus floral et moins exubérant que Sonnenuhr. VDP Grosse Lage.",
+      "notes_objectives": "Le Graacher Himmelreich est l'un des grands crus de la Mittelmosel, sur les coteaux de Graach, entre Bernkastel et Wehlen. Ses schistes bleus dévoniens, en pente raide exposée au sud-ouest, donnent des Riesling à la fois fruités et minéraux, d'une grande pureté. Le terroir, légèrement plus profond que le Sonnenuhr voisin, produit des vins charmeurs et équilibrés. Il est exploité par de grands domaines comme J.J. Prüm, Dr. Loosen, Willi Schaefer et Markus Molitor. Classé en grand cru de fait, le Himmelreich illustre la grâce des Riesling de Graach sur l'ardoise bleue de la Mittelmosel. La position du Himmelreich, un peu en retrait de la rivière, lui donne des sols plus profonds qui retiennent davantage l'eau, d'où des vins au fruité généreux et à la matière ample. C'est un terroir réputé pour la régularité et le charme de ses Riesling. J.J. Prüm, Willi Schaefer et Dr. Loosen y signent des cuvées d'une grande finesse, du Kabinett délicat à l'Auslese opulente. Le Himmelreich illustre la facette la plus avenante de l'ardoise bleue de Graach, complément du Domprobst plus austère, et confirme la place de ce village au cœur des grands crus de la Mittelmosel. Le « royaume des cieux » doit son nom à sa position élevée et à sa lumière. Sa relative générosité en fait un terroir apprécié pour des Riesling immédiatement séduisants, mais capables aussi d'une belle garde dans les grands millésimes. Niché entre Bernkastel et Wehlen, le Himmelreich profite du prestige de ses illustres voisins tout en gardant une identité propre, plus ronde et fruitée. Les grands domaines de Graach et de Wehlen y possèdent des parcelles, et leurs cuvées comptent parmi les valeurs sûres de la Mittelmosel. Le Himmelreich illustre la facette la plus accessible et la plus charmeuse des grands crus d'ardoise bleue. Entre la majesté du Doctor de Bernkastel et la pureté du Sonnenuhr de Wehlen, le Himmelreich tient son rang avec constance, offrant certains des Riesling les plus harmonieux et les plus fiables de toute la Mittelmosel, dans tous les styles.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "graach"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-graacher-domprobst",
+      "nom": "Graacher Domprobst",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-250 m",
+      "sols": "schistes bleus profonds",
+      "caracteristiques_rapides": "Légèrement plus en altitude que Himmelreich, structure plus profonde et tannique. Willi Schaefer y excelle. VDP Grosse Lage.",
+      "notes_objectives": "Le Graacher Domprobst est l'un des plus grands terroirs de Graach, sur la Mittelmosel. Ses schistes bleus profonds, en forte pente, donnent des Riesling plus structurés et plus minéraux que ceux du Himmelreich voisin, à la trame ferme et saline. Le terroir est magnifié par le domaine Willi Schaefer, considéré comme l'un des plus grands de toute la Mosel, ainsi que par Selbach-Oster et Markus Molitor. Classé en grand cru de fait, le Domprobst illustre la profondeur et la capacité de garde que l'ardoise bleue de Graach confère aux plus grands Riesling. Le Domprobst se distingue du Himmelreich par une ardoise plus profonde et une pente plus prononcée, qui donnent des vins plus serrés, plus salins et plus aptes à la garde. C'est l'un des terroirs les plus minéraux de toute la Mittelmosel. Le domaine Willi Schaefer, microscopique mais vénéré dans le monde entier, en est l'interprète absolu : ses Riesling du Domprobst, d'une précision cristalline, comptent parmi les plus recherchés d'Allemagne. Le cru illustre la profondeur et la longévité que l'ardoise bleue de Graach confère aux plus grands Riesling, dans tous les niveaux de maturité. Le nom du cru rappelle qu'il appartenait jadis au prévôt de la cathédrale (Domprobst) de Trèves, signe de son ancien prestige. Sa pente raide et son ardoise profonde en font l'un des terroirs les plus sérieux et les plus austères de Graach dans sa jeunesse. Avec le temps, ses Riesling développent une complexité minérale et une longueur saline remarquables. Outre Willi Schaefer, des domaines comme Markus Molitor et Selbach-Oster y signent de grandes cuvées. Le Domprobst est unanimement considéré comme l'un des sommets de la Mittelmosel, prisé des amateurs les plus exigeants. Apprécié des connaisseurs pour sa profondeur et sa rigueur, le Domprobst gagne une reconnaissance croissante à mesure que les amateurs redécouvrent les vertus des grands Riesling secs et minéraux de la Mosel, taillés pour la garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "graach",
+        "domprobst"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-bernkasteler-doctor",
+      "nom": "Bernkasteler Doctor",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-180 m",
+      "sols": "schistes bleus très purs, sous-sol rocheux",
+      "caracteristiques_rapides": "Lieu-dit légendaire (3,2 ha), partagé entre quelques familles dont Wegeler et Thanisch. Pente extrême, exposition sud. Vins parmi les plus chers d'Allemagne.",
+      "notes_objectives": "Le Bernkasteler Doctor est le plus célèbre vignoble d'Allemagne, et l'un des plus chers du monde. Minuscule — à peine plus de trois hectares —, il s'accroche à une pente vertigineuse juste au-dessus de la ville de Bernkastel, sur des schistes bleus d'une grande pureté. Sa position abritée et son exposition idéale en font un site précoce, donnant des Riesling d'une rare concentration, à la fois puissants et raffinés, d'une longévité exceptionnelle. La légende veut qu'un archevêque y ait été guéri par le vin, d'où son nom. Le terroir est exploité par les domaines Dr. H. Thanisch, Wegeler et Markus Molitor. Classé en grand cru de fait, le Doctor est un mythe vivant du Riesling mosellan. Sa rareté extrême et son prestige historique en ont fait, dès le XIXe siècle, un vin de cour, recherché par les têtes couronnées d'Europe. La pente, qui dépasse par endroits soixante degrés, et la chaleur réfléchie par les toits de la ville en contrebas créent un microclimat unique. Les Riesling du Doctor allient une puissance peu commune sur la Mosel à une grande finesse, et vieillissent admirablement. Exploité par une poignée de domaines seulement, sur quelques rangs de vigne chacun, le Doctor demeure le symbole le plus éclatant du Riesling mosellan et l'un des noms les plus mythiques du vin allemand. L'image du Doctor surplombant les toits pointus de la vieille ville de Bernkastel est l'une des plus célèbres du vignoble allemand. Sa surface minuscule, partagée entre quelques domaines seulement, en fait un vin d'une rareté extrême, dont les prix atteignent des sommets. Ses Riesling, qu'ils soient secs ou doux, conjuguent une concentration et une profondeur peu communes sur la Mosel à une finesse aristocratique, et peuvent vieillir un demi-siècle. Plus qu'un grand cru, le Doctor est une légende, un nom qui a porté la renommée du Riesling mosellan jusqu'aux tables royales d'Europe. Aucune visite de la Mosel ne s'envisage sans un regard vers ce coteau minuscule accroché au-dessus de Bernkastel : le Doctor reste, dans l'imaginaire des amateurs du monde entier, le symbole même du grand vin de la région.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "bernkastel",
+        "doctor",
+        "legendaire"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-brauneberger-juffer",
+      "nom": "Brauneberger Juffer",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Grande lieu-dit de Brauneberg, exposition sud. Plus accessible que sa parcelle voisine Juffer-Sonnenuhr. VDP Grosse Lage.",
+      "notes_objectives": "Le Brauneberger Juffer est le grand coteau qui domine Brauneberg, sur la Mittelmosel, dont le cœur d'élite est le Juffer-Sonnenuhr. Ses schistes bleus dévoniens, en pente raide plein sud, donnent des Riesling riches et corsés. Plus vaste que le Sonnenuhr, le Juffer produit des vins d'une belle puissance, exploités par Fritz Haag, Max Ferd. Richter et Paulinshof. Classé en grand cru de fait, le Juffer illustre la générosité des Riesling de Brauneberg, réputés depuis des siècles parmi les meilleurs de la Mosel. Réputé depuis des siècles — Napoléon, dit-on, en appréciait les vins —, le Juffer doit sa richesse à son exposition plein sud et à son ardoise profonde. Fritz Haag et Max Ferd. Richter y signent des Riesling amples et racés. Le cru, dont le Juffer-Sonnenuhr constitue le cœur d'élite, illustre la grande tradition viticole de Brauneberg, longtemps considéré comme l'un des tout meilleurs villages de la Mosel. Vaste et bien exposé, le Juffer offre, dans ses meilleures parcelles, des Riesling d'une grande générosité, et reste l'un des grands noms historiques de la Mittelmosel. Il demeure l'un des grands noms historiques de la Mittelmosel, dont le cœur d'élite, le Juffer-Sonnenuhr, atteint les sommets.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "brauneberg",
+        "juffer"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-brauneberger-juffer-sonnenuhr",
+      "nom": "Brauneberger Juffer-Sonnenuhr",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "schistes bleus dévoniens, sous-sol rocheux",
+      "caracteristiques_rapides": "Cœur du Juffer, exposition sud, le cadran solaire au pied de la parcelle. Fritz Haag y excelle. VDP Grosse Lage.",
+      "notes_objectives": "Le Brauneberger Juffer-Sonnenuhr est le cœur du grand coteau de Brauneberg, sur la Mittelmosel — la parcelle d'élite située autour du cadran solaire, au sein du plus vaste Juffer. Ses schistes bleus dévoniens, en pente raide plein sud, donnent des Riesling d'une grande richesse et d'une profondeur remarquable. Réputé depuis des siècles comme l'un des meilleurs crus de la Mosel, le terroir produit des vins plus opulents et corsés que ceux de Wehlen ou Graach. Il est indissociable du domaine Fritz Haag, sa référence absolue, aux côtés de Max Ferd. Richter et Schloss Lieser. Classé en grand cru de fait, le Juffer-Sonnenuhr incarne la puissance racée du Riesling de Brauneberg. Brauneberg jouissait déjà au XIXe siècle d'une réputation supérieure à celle de Bernkastel, et le Juffer-Sonnenuhr en était le sommet. Son exposition plein sud et son ardoise bleue profonde donnent des vins plus charnus, plus dorés et plus riches que ceux des villages voisins, sans rien perdre en finesse. Wilhelm Haag, puis son fils Oliver, ont porté le domaine Fritz Haag au firmament avec des Riesling du Juffer-Sonnenuhr d'une pureté et d'une race exemplaires. Le cru illustre la grande tradition mosellane des Riesling à la fois puissants et raffinés, capables de traverser les décennies. Le cadran solaire qui donne son nom à la parcelle d'élite marque le cœur du coteau, là où l'ardoise et l'exposition atteignent leur perfection. Les vins y gagnent une densité dorée et une ampleur que l'on ne retrouve pas ailleurs sur la Mittelmosel. Sous la houlette de la famille Haag, le Juffer-Sonnenuhr a confirmé son statut de tout premier plan, avec des Riesling d'une régularité et d'une longévité exemplaires. Max Ferd. Richter et Schloss Lieser en livrent d'autres belles lectures. Le cru incarne l'âme de Brauneberg, village qui fut au XIXe siècle l'un des plus réputés de toute l'Allemagne. Référence pour qui cherche un Riesling mosellan à la fois riche et racé, le Juffer-Sonnenuhr confirme, millésime après millésime, qu'il appartient au tout premier rang des grands crus de la Mittelmosel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "brauneberg",
+        "sonnenuhr",
+        "iconique"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-piesporter-goldtroepfchen",
+      "nom": "Piesporter Goldtröpfchen",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-220 m",
+      "sols": "schistes bleus profonds, parfois argileux",
+      "caracteristiques_rapides": "Amphithéâtre naturel face plein sud, lumière concentrée. Style aromatique et tendu. Reinhold Haart en référence. VDP Grosse Lage.",
+      "notes_objectives": "Le Piesporter Goldtröpfchen est l'un des plus beaux amphithéâtres viticoles de la Mosel, formant un vaste cirque de schistes bleus profonds autour de Piesport. Cette configuration en hémicycle concentre la chaleur et donne des Riesling d'une intensité aromatique exceptionnelle, sur des notes d'agrumes et d'épices. Le terroir, ancien et réputé, produit des vins à la fois exubérants et profonds. Il est magnifié par les domaines Reinhold Haart et Julian Haart, ainsi que par St. Urbans-Hof. Classé en grand cru de fait, le Goldtröpfchen illustre la générosité aromatique unique des Riesling de Piesport. La forme en amphithéâtre du Goldtröpfchen, unique sur la Mosel, crée un piège à chaleur qui explique l'exubérance aromatique de ses vins, tout en épices, fruits exotiques et fleurs. Les schistes y sont profonds et parfois mêlés d'argile, ce qui ajoute à la générosité de la matière. Reinhold Haart, puis le jeune et talentueux Julian Haart, en signent des Riesling parmi les plus expressifs de toute la Mosel. Le Goldtröpfchen, dont la réputation remonte à l'époque romaine, illustre la facette la plus aromatique et la plus solaire du Riesling mosellan. Le nom du village de Piesport a longtemps souffert d'usurpations commerciales (le tristement célèbre « Piesporter Michelsberg »), mais le Goldtröpfchen, lui, est un authentique grand cru, dont la réputation est intacte depuis l'Antiquité — des pressoirs romains ont été mis au jour à proximité. Ses Riesling, parmi les plus aromatiques et les plus exubérants de la Mosel, séduisent par leur intensité de fruits exotiques et d'épices. La nouvelle génération, emmenée par Julian Haart, en a relancé l'aura au plus haut niveau. Le Goldtröpfchen illustre la facette la plus solaire et parfumée du grand Riesling mosellan. Affranchi des usurpations qui ont longtemps terni le nom de Piesport, le Goldtröpfchen brille aujourd'hui comme l'un des grands crus les plus expressifs et les plus aimés de toute la Mosel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "piesport",
+        "goldtroepfchen",
+        "iconique"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-erdener-praelat",
+      "nom": "Erdener Prälat",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-180 m",
+      "sols": "schistes rouges dévoniens (Rotliegend)",
+      "caracteristiques_rapides": "Très petite (~1,5 ha), sols de schiste rouge en abri du vent, microclimat chaud. Vins exotiques, riches, parmi les plus concentrés de Mosel. VDP Grosse Lage.",
+      "notes_objectives": "L'Erdener Prälat est l'un des terroirs les plus rares et les plus opulents de la Mosel, à Erden. Minuscule parcelle blottie au pied de falaises de schistes rouges (Rotliegend), au bord de la rivière, il bénéficie d'un microclimat chaud exceptionnel. Ce sol de schiste rouge et cette position abritée donnent des Riesling riches, exotiques et puissants, parmi les plus concentrés de la Mosel, à la garde impressionnante. Le terroir est exploité par Dr. Loosen, Mönchhof et Erbes. Classé en grand cru de fait, le Prälat est un joyau confidentiel et l'un des sommets du Riesling mosellan. Niché entre des falaises de schiste rouge et la rivière, le Prälat bénéficie d'une chaleur emmagasinée jour et nuit, qui en fait l'un des terroirs les plus précoces et les plus chauds de toute la Mosel — un cas presque unique sur l'ardoise rouge. Ses Riesling, d'une richesse et d'une ampleur exotiques, contrastent avec la nervosité habituelle de la région. Dr. Loosen et Mönchhof en tirent des cuvées d'une opulence remarquable, capables d'une très longue garde. Minuscule et confidentiel, le Prälat est l'un des joyaux les plus convoités de la Mosel. Sa taille minuscule et sa situation spectaculaire, coincé entre la falaise rouge et la rivière, en font l'un des terroirs les plus photographiés et les plus convoités de la Mosel. La production, très limitée, s'arrache auprès des amateurs du monde entier. Les Riesling du Prälat, riches, épicés et d'une profondeur peu commune, comptent parmi les plus opulents de la région et défient le temps. Aux côtés du Würzgarten d'Ürzig et du Treppchen d'Erden, le Prälat forme l'un des plus beaux ensembles de grands crus de la Mittelmosel, sur des ardoises rouges d'exception. Rare, cher et spectaculaire, le Prälat fait figure de joyau parmi les joyaux : pour beaucoup d'amateurs, c'est l'un des plus beaux terroirs de Riesling qui soient, à découvrir au moins une fois.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-rouge",
+        "erden",
+        "praelat",
+        "iconique",
+        "microclimat"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-erdener-treppchen",
+      "nom": "Erdener Treppchen",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-220 m",
+      "sols": "schistes bleus dévoniens, pierre concassée",
+      "caracteristiques_rapides": "Voisin de Prälat mais plus large et plus aéré, schistes bleus. Style plus tendu et minéral, signature classique de Erden.",
+      "notes_objectives": "L'Erdener Treppchen est l'un des grands crus d'Erden, sur la Mittelmosel. Ses schistes bleus dévoniens et ses pierres, sur des terrasses raides reliées par des escaliers (d'où son nom, « petit escalier »), donnent des Riesling tendus et minéraux. Voisin du prestigieux Prälat, le Treppchen produit des vins plus droits et plus salins, de belle garde. Il est exploité par Dr. Loosen et Mönchhof. Classé en grand cru de fait, le Treppchen illustre la minéralité racée des Riesling d'Erden sur l'ardoise bleue. Les terrasses du Treppchen, reliées par d'étroits escaliers taillés dans la roche, témoignent de la viticulture héroïque d'Erden. Plus salin et plus droit que le Prälat voisin, le cru donne des Riesling tendus et de garde. Dr. Loosen et Mönchhof en sont les grands interprètes, confirmant la place d'Erden parmi les villages majeurs de la Mittelmosel. Avec le Prälat et le Würzgarten voisins, le Treppchen complète le remarquable ensemble de grands crus d'Erden et d'Ürzig, fleurons de la Mittelmosel aval. Sa minéralité droite en fait un terroir prisé des amateurs de Riesling salin et de longue garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "erden",
+        "treppchen"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-uerziger-wuerzgarten",
+      "nom": "Ürziger Würzgarten",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-220 m",
+      "sols": "volcaniques (rare en Mosel) — basalte et schiste rouge mélangés",
+      "caracteristiques_rapides": "Sols volcaniques uniques en Mosel, d'où la signature aromatique épicée (le \"jardin d'épices\" du nom). Profondeur et fraîcheur singulières. VDP Grosse Lage.",
+      "notes_objectives": "L'Ürziger Würzgarten — le « jardin aux épices » — est l'un des terroirs les plus singuliers de la Mosel, à Ürzig. Fait rare dans la région, son sol mêle schistes rouges et roches volcaniques, qui donnent aux Riesling une signature épicée et exotique immédiatement reconnaissable. Sur des pentes spectaculaires et des terrasses étroites, le terroir produit des vins aromatiques, profonds et originaux. Il est exploité par de grands domaines comme Dr. Loosen, J.J. Christoffel et Mönchhof. Classé en grand cru de fait, le Würzgarten illustre la diversité géologique de la Mosel et la personnalité unique des Riesling de schiste rouge. L'originalité du Würzgarten tient à sa géologie : un mélange de schistes rouges et de roches volcaniques ferrugineuses, rarissime sur la Mosel, qui imprime aux vins des arômes d'épices, de fruits jaunes et de fleurs, d'où le nom de « jardin aux épices ». Sur des terrasses spectaculaires plantées sur des pentes extrêmes, Dr. Loosen, J.J. Christoffel et Mönchhof signent des Riesling d'une grande typicité. Le Würzgarten illustre la diversité géologique souvent insoupçonnée de la Mosel et constitue, avec le Prälat voisin, le cœur des grands crus d'Ürzig et Erden. Le paysage du Würzgarten, avec ses falaises de roche rouge et ses minuscules terrasses accrochées à la pente, est l'un des plus saisissants de toute la Mosel. La nature volcanique et ferrugineuse du sol, unique dans la région, fait du cru un cas géologique à part. Ses Riesling, reconnaissables entre tous à leurs arômes épicés et exotiques, séduisent autant en sec qu'en versions liquoreuses. Dr. Loosen et J.J. Christoffel en sont les ambassadeurs les plus réputés. Le Würzgarten illustre la fabuleuse diversité des terroirs mosellans et la personnalité inimitable des Riesling d'ardoise rouge et de roche volcanique. Impossible à confondre, le Würzgarten est de ces crus dont la seule mention évoque un style : celui d'un Riesling épicé et exotique, né d'un terroir comme il n'en existe nulle part ailleurs sur la Mosel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "sols-volcaniques",
+        "uerzig",
+        "wuerzgarten",
+        "iconique",
+        "epices"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-trittenheimer-apotheke",
+      "nom": "Trittenheimer Apotheke",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-280 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Grande lieu-dit en falaise, exposition sud. Style équilibré, pas le plus iconique mais une référence solide. VDP Grosse Lage en partie.",
+      "notes_objectives": "La Trittenheimer Apotheke est l'un des grands crus de la Mittelmosel, sur les coteaux de Trittenheim. Ses schistes bleus dévoniens, en pente raide, donnent des Riesling fins et aromatiques, d'une belle vivacité. Le terroir produit des vins élégants et précis, exploités par des domaines comme Grans-Fassian et Ansgar Clüsserath. Classé en grand cru de fait, l'Apotheke illustre la finesse des Riesling de la Mittelmosel amont, dans le secteur de Trittenheim. Située dans une boucle de la rivière, l'Apotheke bénéficie d'une belle exposition qui donne des Riesling élégants, sur des notes d'agrumes et de fleurs. Grans-Fassian et Ansgar Clüsserath en tirent des vins fins et précis. Le cru illustre la délicatesse des Riesling de la Mittelmosel amont, dans un secteur un peu plus frais qui préserve une grande fraîcheur aromatique. Cru le plus réputé de Trittenheim, l'Apotheke illustre la finesse aromatique des Riesling de la Mittelmosel amont, prisés pour leur fraîcheur et leur élégance. Elle reste la signature de Trittenheim, gage de finesse et de fraîcheur aromatique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "trittenheim",
+        "apotheke"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-mosel-terr-dhroner-hofberg",
+      "nom": "Dhroner Hofberg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-300 m",
+      "sols": "schistes gris (Grauwacke) et bleus mélangés",
+      "caracteristiques_rapides": "Lieu-dit historique de Dhron remis en lumière par A.J. Adam. Schiste gris donne une signature plus saline et tendue.",
+      "notes_objectives": "Le Dhroner Hofberg est un grand cru de la Mittelmosel, dans la vallée de la Dhron près de Neumagen. Ses schistes gris et bleus, en coteau raide, donnent des Riesling fins et minéraux. Longtemps sous-estimé, le terroir a été remis en lumière par le domaine A.J. Adam, dont les Riesling du Hofberg sont devenus des références recherchées. Classé en grand cru de fait, le Hofberg illustre le renouveau qualitatif des terroirs latéraux de la Mittelmosel. Florian Lauer… non : c'est Andreas Adam, au domaine A.J. Adam, qui a ressuscité le Hofberg, terroir latéral longtemps négligé, pour en faire l'un des crus les plus courus de la Mosel. Ses Riesling, d'une grande finesse minérale, ont prouvé que les vallées affluentes recelaient de grands terroirs. Le Hofberg illustre ainsi le renouveau qualitatif de la Mittelmosel par une nouvelle génération. Devenu l'un des terroirs latéraux les plus courus de la Mosel, le Hofberg symbolise le renouveau qualitatif porté par une nouvelle génération de vignerons exigeants. Sa renaissance en a fait l'un des terroirs latéraux les plus convoités de toute la Mosel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-gris",
+        "dhron",
+        "hofberg",
+        "aj-adam"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-zeltinger-sonnenuhr",
+      "nom": "Zeltinger Sonnenuhr",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Pendant nord du fameux Wehlener Sonnenuhr, même type de sols et exposition. Selbach-Oster en cible. VDP Grosse Lage.",
+      "notes_objectives": "Le Zeltinger Sonnenuhr est l'un des grands crus de Zeltingen, sur la Mittelmosel, prolongeant le coteau du Wehlener Sonnenuhr voisin. Ses schistes bleus dévoniens, en forte pente, donnent des Riesling purs et racés. Le terroir produit des vins fins et minéraux, exploités notamment par Markus Molitor et Selbach-Oster. Classé en grand cru de fait, le Zeltinger Sonnenuhr illustre la grande qualité des coteaux d'ardoise bleue du cœur de la Mittelmosel. Prolongeant le célèbre coteau de Wehlen, le Zeltinger Sonnenuhr partage la même ardoise bleue et la même exposition, pour des Riesling purs et racés parfois un peu plus fermes. Markus Molitor et Selbach-Oster en signent de belles cuvées, du sec au liquoreux. Le cru illustre la grande qualité, parfois sous-estimée, des coteaux de Zeltingen au cœur de la Mittelmosel. Souvent à l'ombre de son célèbre voisin de Wehlen, le Zeltinger Sonnenuhr n'en demeure pas moins un grand terroir d'ardoise bleue, capable de Riesling racés et de garde. Il offre souvent un excellent rapport qualité-prix parmi les grands coteaux d'ardoise bleue du cœur de la Mittelmosel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "zeltingen",
+        "sonnenuhr"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-muelheimer-helenenkloster",
+      "nom": "Mülheimer Helenenkloster",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-250 m",
+      "sols": "schistes bleus",
+      "caracteristiques_rapides": "Monopole de Max Ferd. Richter, célèbre pour son Eiswein régulier. Petite parcelle.",
+      "notes_objectives": "Le Mülheimer Helenenkloster est un petit cru de la Mittelmosel, à Mülheim. Ses schistes bleus, en coteau bien exposé, donnent des Riesling fins, et le site est particulièrement réputé pour ses vins de glace (Eiswein). Le terroir est indissociable du domaine Max Ferd. Richter, dont l'Eiswein du Helenenkloster est une référence quasi annuelle. Classé en grand cru de fait, le Helenenkloster illustre la vocation particulière de certains terroirs mosellans pour les grands vins liquoreux. Petit clos blotti autour d'un ancien ermitage, le Helenenkloster bénéficie d'un microclimat propice à la surmaturation et au gel tardif. Le domaine Max Ferd. Richter y produit presque chaque année un Eiswein réputé, l'un des plus réguliers de la Mosel. Le cru illustre la vocation de certains terroirs mosellans pour les grands vins de glace et liquoreux. Petit mais réputé, le Helenenkloster doit sa célébrité à ses Eiswein quasi annuels, parmi les plus réguliers et les plus appréciés de toute la Mosel. Sa réputation tient surtout à ses vins de glace, parmi les plus fidèles rendez-vous liquoreux de la Mosel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "monopole",
+        "muelheim",
+        "helenenkloster",
+        "eiswein",
+        "richter"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-mosel-terr-wolfer-goldgrube",
+      "nom": "Wolfer Goldgrube",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "schistes bleus",
+      "caracteristiques_rapides": "Lieu-dit remis en valeur par Daniel Vollenweider. Exposition sud-est, vieilles vignes en terrasses.",
+      "notes_objectives": "La Wolfer Goldgrube est un grand cru de la Mittelmosel, à Wolf près de Traben-Trarbach. Ses schistes bleus, en pente raide, donnent des Riesling fins et aromatiques. Le terroir a été révélé par le domaine Vollenweider, fondé par le Suisse Daniel Vollenweider, dont les Riesling de la Goldgrube sont très appréciés. Classé en grand cru de fait, la Goldgrube illustre le renouveau de terroirs mosellans remis en valeur par une nouvelle génération de vignerons. Terroir longtemps oublié, la Goldgrube a été remise en lumière par Daniel Vollenweider, vigneron suisse installé sur la Mosel au début des années 2000. Ses Riesling, du Kabinett aux nobles liquoreux, ont rapidement séduit la critique. La Goldgrube illustre comment de jeunes vignerons venus d'ailleurs ont contribué à faire renaître de grands coteaux d'ardoise de la Mittelmosel. Symbole de la renaissance de terroirs oubliés, la Goldgrube illustre l'attractivité de la Mosel pour de jeunes vignerons venus, parfois, de très loin. Elle illustre la vitalité retrouvée des coteaux d'ardoise de la Mittelmosel, portée par une nouvelle génération.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "wolf",
+        "goldgrube",
+        "terrasses",
+        "vollenweider"
+      ],
+      "source": "mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-enkircher-ellergrub",
+      "nom": "Enkircher Ellergrub",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Mittelmosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-220 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Lieu-dit en pente raide d'Enkirch, vieilles vignes. Weiser-Künstler en référence. VDP Grosse Lage.",
+      "notes_objectives": "L'Enkircher Ellergrub est un grand cru de la Mittelmosel, à Enkirch. Ses schistes bleus dévoniens, en coteau raide, donnent des Riesling tendus et minéraux, d'une belle profondeur. Le terroir est exploité par des domaines comme Immich-Batterieberg et Weiser-Künstler, qui en tirent des Riesling secs et fruités très appréciés. Classé en grand cru de fait, l'Ellergrub illustre la qualité parfois méconnue des terroirs d'Enkirch sur la Mittelmosel. Enkirch, l'un des plus anciens villages viticoles de la Mosel, possède en l'Ellergrub un terroir d'ardoise bleue de grande qualité. Immich-Batterieberg et Weiser-Künstler y signent des Riesling secs et fruités d'une belle minéralité. Le cru illustre le potentiel de ce secteur authentique et préservé de la Mittelmosel, à l'écart des villages les plus célèbres. Dans un village au charme préservé, l'Ellergrub révèle le potentiel souvent méconnu des grands coteaux d'ardoise d'Enkirch, sur la Mittelmosel. Elle compte parmi les beaux terroirs encore abordables d'un secteur authentique et préservé de la Mosel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "enkirch",
+        "ellergrub",
+        "weiser-kuenstler"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-scharzhofberger",
+      "nom": "Scharzhofberger (Wiltinger)",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-300 m",
+      "sols": "schistes gris dévoniens (Grauwacke) profonds",
+      "caracteristiques_rapides": "Le lieu-dit le plus célèbre d'Allemagne selon le VDP. Egon Müller règne sur les meilleures parcelles. Climat froid, vins de garde extrême. Iconique.",
+      "notes_objectives": "Le Scharzhofberger est le plus grand terroir de la Sarre et l'un des plus prestigieux d'Allemagne, sur les hauteurs de Wiltingen. Ses schistes gris dévoniens (Grauwacke), en pente raide, donnent des Riesling d'une race, d'une finesse et d'une longévité légendaires. Le terroir est indissociable du domaine Egon Müller, dont les Riesling — et notamment ses Auslese et Trockenbeerenauslese — comptent parmi les vins blancs les plus chers et les plus recherchés du monde. Van Volxem en est un autre grand interprète. Classé au sommet absolu de la hiérarchie allemande, le Scharzhofberger incarne la quintessence du Riesling racé et minéral de la Sarre. Le Scharzhofberg n'est rattaché à aucun village (il porte simplement le nom du domaine Scharzhof), signe de son statut à part. Ses schistes gris, sa pente raide et le climat frais de la Sarre donnent des Riesling d'une tension et d'une complexité exceptionnelles, qui demandent du temps pour s'épanouir. Egon Müller y produit des vins mythiques : ses Trockenbeerenauslese figurent régulièrement parmi les vins blancs les plus chers du monde, et même ses Kabinett sont des objets de culte. Van Volxem, dans un registre sec, en révèle une autre grandeur. Le Scharzhofberger est, tout simplement, l'un des plus grands terroirs de vin blanc de la planète. Le Scharzhofberg occupe une place comparable, pour le Riesling, à celle des plus grands crus de Bourgogne pour le Chardonnay : un terroir mythique dont les vins servent de référence absolue. Sa pente, son altitude et le climat frais de la Sarre y donnent des vins d'une jeunesse parfois austère, mais d'une longévité quasi illimitée. Les enchères de vieux millésimes d'Egon Müller atteignent des prix vertigineux, et chaque nouvelle cuvée est un événement pour les amateurs du monde entier. Le Scharzhofberger n'est pas seulement le sommet de la Sarre : c'est l'un des plus grands terroirs de vin blanc qui soient. Pour l'amateur, prononcer le nom de Scharzhofberg, c'est déjà évoquer le sommet du Riesling mondial : un terroir dont les meilleurs vins comptent, tout simplement, parmi les plus grands blancs jamais produits.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-gris",
+        "saar",
+        "wiltingen",
+        "scharzhofberg",
+        "legendaire"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-saarburger-rausch",
+      "nom": "Saarburger Rausch",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-300 m",
+      "sols": "diabase (roche volcanique) et schistes",
+      "caracteristiques_rapides": "Sol unique : diabase volcanique mêlé aux schistes, signature minérale particulière. Geltz Zilliken en référence. VDP Grosse Lage.",
+      "notes_objectives": "Le Saarburger Rausch est l'un des grands crus de la Sarre, sur les coteaux de Saarburg. Son sol singulier, mêlant diabase (roche volcanique) et schistes, lui confère une minéralité particulière, distincte des autres terroirs de la Sarre. Le terroir donne des Riesling profonds, tendus et d'une grande finesse, à la salinité affirmée. Il est indissociable du domaine Forstmeister Geltz Zilliken, sa référence, réputé pour ses Riesling de garde et ses grands liquoreux. Classé en grand cru de fait, le Rausch illustre la complexité minérale et la longévité des grands Riesling de la Sarre. La présence de diabase, une roche volcanique rare, distingue le Rausch des autres terroirs de schiste de la Sarre et apporte à ses vins une profondeur et une minéralité particulières. La pente raide et le climat frais y préservent une acidité vibrante. Hanno Zilliken, puis sa fille Dorothee, y élaborent des Riesling d'une grande pureté, réputés pour leur finesse et leur extraordinaire aptitude à la garde, ainsi que des liquoreux d'anthologie. Le Rausch illustre la complexité et la longévité qui font la réputation des grands Riesling de la Sarre. Surplombant la petite ville de Saarburg et ses cascades, le Rausch offre l'un des plus beaux paysages de la Sarre. Sa géologie volcanique et son climat frais en font un terroir à la signature très personnelle, où l'acidité vibrante structure des vins de très longue garde. Le domaine Zilliken, gardien d'une cave-trésor de vieux millésimes, y perpétue un style d'une grande pureté, du Kabinett aux liquoreux d'exception. Le Rausch illustre la complexité minérale et la capacité de vieillissement hors norme des plus grands Riesling de la Sarre. Gardien d'une mémoire liquide grâce à sa cave de vieux millésimes, le Rausch incarne la patience et la longévité, vertus cardinales des plus grands Riesling de la Sarre.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "diabase",
+        "saar",
+        "saarburg",
+        "rausch",
+        "zilliken"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-ayler-kupp",
+      "nom": "Ayler Kupp",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-310 m",
+      "sols": "schistes gris (Grauwacke) et bleus",
+      "caracteristiques_rapides": "Grand amphithéâtre face sud à Ayl, Peter Lauer en référence. Climat froid, vins très précis et aromatiques. VDP Grosse Lage.",
+      "notes_objectives": "L'Ayler Kupp est l'un des grands crus de la Sarre, sur les coteaux d'Ayl. Ses schistes gris et bleus, en pente raide, donnent des Riesling d'une grande finesse, tendus et salins, typiques de la fraîcheur de la Sarre. Le terroir est magnifié par le domaine Peter Lauer, qui en vinifie les différentes parcelles avec une précision remarquable, dans un style sec très abouti. Classé en grand cru de fait, l'Ayler Kupp illustre l'élégance nerveuse et la profondeur minérale des Riesling de la Sarre. La Kupp forme une colline conique dont les meilleures parcelles, en forte pente, bénéficient d'une exposition idéale. Le climat frais de la Sarre y donne des Riesling d'une grande tension, à la minéralité saline très pure. Florian Lauer, au domaine Peter Lauer, a fait de l'Ayler Kupp un terroir de référence du Riesling sec mosellan, en vinifiant ses différentes parcelles (« Kupp », « Unterstenberg »…) avec une précision rare. Le cru illustre le renouveau du grand Riesling sec de la Sarre et la richesse de ses nuances parcellaires. Longtemps connue surtout pour des vins demi-secs, l'Ayler Kupp a été entièrement réinventée par Peter Lauer, qui en a fait l'une des références du Riesling sec de la Mosel, avec une approche parcellaire et un système de cuvées numérotées très personnel. La fraîcheur de la Sarre y donne des vins d'une tension et d'une salinité remarquables, mais aussi d'une grande buvabilité. Le cru illustre à merveille le renouveau du Riesling sec sarrois et l'attention nouvelle portée aux nuances entre les parcelles d'un même grand coteau. Devenue l'un des emblèmes du nouveau Riesling sec sarrois, l'Ayler Kupp séduit autant les puristes que les amateurs en quête de vins précis, salins et profondément digestes.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste",
+        "saar",
+        "ayl",
+        "kupp",
+        "lauer"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-ockfener-bockstein",
+      "nom": "Ockfener Bockstein",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-300 m",
+      "sols": "schistes gris dévoniens (Grauwacke)",
+      "caracteristiques_rapides": "Grande lieu-dit, exposition sud-sud-est. Zilliken et St. Urbans-Hof y produisent des cuvées remarquables. VDP Grosse Lage.",
+      "notes_objectives": "L'Ockfener Bockstein est l'un des grands crus de la Sarre, sur les coteaux d'Ockfen. Ses schistes gris dévoniens (Grauwacke), en pente raide, donnent des Riesling nerveux et salins, typiques de la fraîcheur de la Sarre. Le terroir produit des vins fins et minéraux, exploités par Zilliken, St. Urbans-Hof et Dr. Fischer. Classé en grand cru de fait, le Bockstein illustre la tension et la finesse des grands Riesling de la Sarre. Vaste et bien exposé, le Bockstein est l'un des grands crus historiques de la Sarre. Son ardoise grise donne des Riesling nerveux et salins, d'une grande pureté. Zilliken, St. Urbans-Hof et Dr. Fischer en sont de beaux interprètes. Le cru illustre la finesse tranchante et la minéralité des Riesling de la Sarre, vallée réputée pour la fraîcheur de ses vins. Grand cru historique de la Sarre, le Bockstein illustre la nervosité saline et la finesse qui font la réputation des Riesling de cette vallée fraîche. Grand cru emblématique d'Ockfen, il reste une valeur sûre du Riesling nerveux et salin de la Sarre.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-gris",
+        "saar",
+        "ockfen",
+        "bockstein"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-wiltinger-gottesfuss",
+      "nom": "Wiltinger Gottesfuss",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-280 m",
+      "sols": "schistes gris (Grauwacke)",
+      "caracteristiques_rapides": "Petite lieu-dit (~3 ha), Van Volxem en référence. Style sec ambitieux Grosses Gewächs. VDP Grosse Lage.",
+      "notes_objectives": "Le Wiltinger Gottesfuss est un grand cru de la Sarre, sur les coteaux de Wiltingen, voisin du Scharzhofberg. Ses schistes gris (Grauwacke), plantés de très vieilles vignes, donnent des Riesling concentrés et profonds. Le terroir a été remis en lumière par le domaine van Volxem, qui en tire des Riesling secs puissants et minéraux. Classé en grand cru de fait, le Gottesfuss illustre le potentiel des vieilles vignes sur les grands terroirs de Wiltingen. Planté de vignes parfois centenaires et non greffées, le Gottesfuss est un terroir d'exception, voisin immédiat du Scharzhofberg. Van Volxem en tire des Riesling secs concentrés et profonds, qui comptent parmi les sommets de son domaine. Le cru illustre le potentiel des vieilles vignes sur les grands schistes gris de Wiltingen, au cœur de la Sarre. Voisin du Scharzhofberg et planté de vénérables vieilles vignes, le Gottesfuss compte parmi les terroirs les plus profonds de Wiltingen et de toute la Sarre. Ses vieilles vignes en font l'un des terroirs les plus profonds de la Sarre, dans l'ombre prestigieuse du Scharzhofberg.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-gris",
+        "saar",
+        "wiltingen",
+        "gottesfuss",
+        "gross-gewaechs"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-niedermenniger-herrenberg",
+      "nom": "Niedermenniger Herrenberg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Saar",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-300 m",
+      "sols": "schistes gris (Grauwacke), terrasses",
+      "caracteristiques_rapides": "Lieu-dit cher au Hofgut Falkenstein, vinifications très traditionnelles. Allocations cultes parmi les nouveaux sommeliers.",
+      "notes_objectives": "Le Niedermenniger Herrenberg est un cru de la Sarre, sur des coteaux de schistes gris (Grauwacke) aménagés en terrasses. Bien exposé, il donne des Riesling fins et salins, dans le style nerveux de la Sarre. Le terroir, dans le secteur de Niedermennig, produit des vins d'une belle minéralité. Il illustre la qualité des coteaux d'ardoise grise de la Sarre, vallée affluente réputée pour la finesse de ses Riesling. Aménagé en terrasses sur des schistes gris, le Herrenberg de Niedermennig bénéficie d'une bonne exposition dans la fraîche vallée de la Sarre. Il donne des Riesling fins et salins, d'une belle tension. Le cru illustre la qualité des coteaux d'ardoise grise de la Sarre, dont les vins se distinguent par leur nervosité et leur finesse aromatique. Terroir en terrasses de la Sarre, le Herrenberg illustre la finesse nerveuse et la minéralité des Riesling de cette vallée affluente de la Mosel. Il illustre la finesse des coteaux d'ardoise grise de la Sarre, vallée vouée aux Riesling tendus et précis.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "schiste-gris",
+        "saar",
+        "niedermennig",
+        "herrenberg",
+        "falkenstein",
+        "culte"
+      ],
+      "source": "mosel-fine-wines|larscarlberg"
+    },
+    {
+      "id": "de-mosel-terr-maximin-gruenhaeuser-abtsberg",
+      "nom": "Maximin Grünhäuser Abtsberg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-280 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Monopole de Maximin Grünhaus (von Schubert). Lieu-dit historique mentionné depuis Charlemagne. Top des trois lieux-dits du domaine.",
+      "notes_objectives": "Le Maximin Grünhäuser Abtsberg est le plus grand terroir de la Ruwer, sur les coteaux de Grünhaus. Ce cru, exploité en monopole par le domaine von Schubert, repose sur des schistes bleus dévoniens et constitue le fleuron d'un trio (Abtsberg, Herrenberg, Bruderberg). Sur ces pentes raides, le terroir donne des Riesling d'une grande finesse et d'une vivacité remarquable, à la minéralité ciselée et à la longévité exceptionnelle. Classé en grand cru de fait, l'Abtsberg illustre la grâce et la précision des Riesling de la Ruwer, dans un domaine d'une régularité légendaire. Le domaine Grünhaus, ancienne propriété de l'abbaye Saint-Maximin de Trèves, possède l'ensemble du coteau, ce qui en fait l'un des plus beaux monopoles d'Allemagne. L'Abtsberg, la part historiquement réservée à l'abbé, en est le sommet, sur une ardoise bleue particulièrement fine. Le domaine von Schubert y produit, depuis des générations, des Riesling d'une vivacité et d'une longévité exceptionnelles, du Kabinett à l'Auslese. L'Abtsberg illustre la grâce inimitable des Riesling de la Ruwer, où la fraîcheur du climat se conjugue à la finesse de l'ardoise. Le domaine Grünhaus, dont l'histoire remonte à plus de mille ans, forme un écrin préservé : un seul tenant de vignes, de forêt et de prairies, à l'écart des villages. L'Abtsberg en est le cœur, sur l'ardoise bleue la plus fine. Les Riesling de l'Abtsberg, d'une délicatesse et d'une vivacité incomparables, comptent parmi les plus grands de toute la Mosel et vieillissent admirablement, gagnant en complexité pendant des décennies. Le cru incarne l'idéal de la Ruwer : des vins légers en apparence, mais d'une profondeur et d'une longévité insoupçonnées. Pour beaucoup de connaisseurs, l'Abtsberg de Grünhaus est tout simplement l'un des plus beaux terroirs de Riesling d'Allemagne, et un monopole d'une qualité d'une régularité presque insolente.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "ruwer",
+        "abtsberg",
+        "monopole",
+        "gruenhaus",
+        "legacy"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-maximin-gruenhaeuser-herrenberg",
+      "nom": "Maximin Grünhäuser Herrenberg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-280 m",
+      "sols": "schistes bleus, mêlés à du grès rouge dans certaines parcelles",
+      "caracteristiques_rapides": "Deuxième lieu-dit monopole de Maximin Grünhaus. Style légèrement plus rond que Abtsberg.",
+      "notes_objectives": "Le Maximin Grünhäuser Herrenberg est l'un des grands crus du domaine von Schubert, à Grünhaus sur la Ruwer. Ses schistes bleus mêlés de grès rouge, en coteau raide, donnent des Riesling fins et aromatiques, légèrement plus ronds que ceux de l'Abtsberg voisin. Le terroir, exploité en monopole, produit des vins d'une grande pureté et d'une belle capacité de garde. Classé en grand cru de fait, le Herrenberg complète, aux côtés de l'Abtsberg, l'exceptionnel patrimoine de terroirs du domaine Grünhaus sur la Ruwer. Le Herrenberg, historiquement la part des moines (par opposition à l'Abtsberg réservé à l'abbé), bénéficie d'un sol où l'ardoise bleue se mêle de grès rouge, ce qui donne des vins un peu plus ronds et accessibles, sans rien perdre de la signature fraîche et précise de Grünhaus. Le domaine von Schubert y signe des Riesling d'une grande pureté, souvent considérés comme offrant un superbe rapport entre finesse et prix. Le Herrenberg illustre, aux côtés de l'Abtsberg, la richesse du monopole de Grünhaus et la grâce des terroirs de la Ruwer. Faisant partie du même monopole millénaire que l'Abtsberg, le Herrenberg en partage la qualité tout en offrant des vins un peu plus immédiats, grâce à la présence de grès rouge dans le sol. C'est souvent l'un des meilleurs rapports qualité-prix de toute la Mosel. Le domaine von Schubert y signe des Riesling d'une pureté exemplaire, salués par la critique internationale. Le Herrenberg illustre, comme l'Abtsberg, la grâce et la finesse uniques que la fraîcheur de la Ruwer et l'ardoise bleue confèrent aux plus grands Riesling. Offrant un accès plus immédiat à la magie de Grünhaus, le Herrenberg est souvent cité parmi les meilleurs rapports qualité-prix du grand Riesling mosellan.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "ruwer",
+        "herrenberg",
+        "monopole",
+        "gruenhaus"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-eitelsbacher-karthaeuserhofberg",
+      "nom": "Eitelsbacher Karthäuserhofberg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-280 m",
+      "sols": "schistes bleus dévoniens, sous-sol rocheux",
+      "caracteristiques_rapides": "Monopole de Karthäuserhof (cistercien depuis 1335). Caractère minéral très marqué, garde immense.",
+      "notes_objectives": "L'Eitelsbacher Karthäuserhofberg est l'un des grands crus de la Ruwer, exploité en quasi-monopole par le domaine Karthäuserhof, ancienne chartreuse. Ses schistes bleus dévoniens, en pente raide, donnent des Riesling d'une grande finesse et d'une minéralité tendue. Le terroir produit des vins d'une grande pureté, à la fois nerveux et profonds, dans le style racé caractéristique de la Ruwer. Classé en grand cru de fait, le Karthäuserhofberg illustre, aux côtés de Grünhaus, l'excellence des terroirs d'ardoise de cette petite vallée affluente de la Mosel. Le domaine Karthäuserhof, installé dans une ancienne chartreuse fondée au XIVe siècle, possède la quasi-totalité du coteau, l'un des plus beaux monopoles de la Mosel. Reconnaissable jadis à son étiquette réduite à une simple collerette de col, le domaine est une institution de la Ruwer. Ses Riesling, d'une grande pureté minérale et d'une vivacité tranchante, comptent parmi les plus racés de toute la région et vieillissent superbement. Le Karthäuserhofberg illustre, avec Grünhaus, l'excellence discrète mais constante des grands terroirs d'ardoise de la Ruwer. Le domaine Karthäuserhof, l'un des plus anciens d'Allemagne, a traversé les siècles en préservant l'intégrité de son grand coteau. Ses Riesling, d'une rigueur minérale et d'une fraîcheur tranchante, sont parmi les plus identifiables de la Mosel. Capables d'une très longue garde, ils incarnent le style le plus pur et le plus racé de la Ruwer. Avec Grünhaus, le Karthäuserhofberg fait de cette discrète vallée affluente l'une des sources des plus grands Riesling allemands, à la réputation fidèle parmi les connaisseurs. Discret mais fidèle à lui-même depuis des siècles, le Karthäuserhofberg demeure l'un des grands secrets bien gardés de la Mosel, chéri des amateurs de Riesling racé et minéral.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "ruwer",
+        "eitelsbach",
+        "karthaeuserhofberg",
+        "monopole",
+        "legacy"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-kasel-nieschen",
+      "nom": "Kaseler Nies'chen",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Ruwer",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-270 m",
+      "sols": "schistes bleus dévoniens",
+      "caracteristiques_rapides": "Lieu-dit de la Ruwer, climat froid, Riesling très fin et aromatique. Kesselstatt et autres y produisent.",
+      "notes_objectives": "Le Kaseler Nies'chen est l'un des grands crus de la Ruwer, sur les coteaux de Kasel. Ses schistes bleus dévoniens, en pente raide, donnent des Riesling d'une grande finesse aromatique, sur des notes florales et épicées. Le terroir produit des vins fins et nerveux, exploités par des domaines comme Karlsmühle et von Beulwitz. Classé en grand cru de fait, le Nies'chen illustre l'élégance aromatique des Riesling de la Ruwer. Le Nies'chen est le grand cru le plus réputé de Kasel, dans la vallée de la Ruwer. Son ardoise bleue donne des Riesling d'une grande finesse aromatique, sur des notes florales et d'épices, d'une élégance toute mosellane. Karlsmühle et von Beulwitz en sont les interprètes attitrés. Le cru illustre la grâce et le parfum caractéristiques des Riesling de la Ruwer. Premier cru de Kasel, le Nies'chen incarne l'élégance parfumée et florale si caractéristique des grands Riesling de la Ruwer. Premier cru de Kasel, il incarne le parfum et la grâce typiques des Riesling de la Ruwer.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "ruwer",
+        "kasel",
+        "nieschen"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-mosel-terr-winninger-uhlen",
+      "nom": "Winninger Uhlen",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Untermosel (Terrassenmosel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-220 m",
+      "sols": "schistes bleus profonds, parfois mêlés à du calcaire (sous-lieux-dits Roth Lay, Laubach, Blaufüsser Lay)",
+      "caracteristiques_rapides": "Terrasses vertigineuses face à la Mosel. Heymann-Löwenstein vinifie séparément trois sous-lieux-dits selon les sous-sols. VDP Grosse Lage.",
+      "notes_objectives": "Le Winninger Uhlen est l'un des plus grands terroirs de la Terrassenmosel (Untermosel), sur des coteaux d'ardoise vertigineux aménagés en terrasses, à Winningen. Le cru se distingue par trois sous-sols d'ardoise nettement différents (Laubach, Roth Lay, Blaufüsser Lay), souvent vinifiés séparément. Ces schistes profonds, sur des pentes parmi les plus raides d'Europe, donnent des Riesling secs puissants, complexes et d'une grande minéralité. Le terroir est magnifié par les domaines Heymann-Löwenstein et Knebel. Classé en grand cru de fait, l'Uhlen illustre la grandeur des Riesling secs de la Terrassenmosel, sur des terrasses héroïques. La singularité de l'Uhlen est de réunir, sur un même coteau, trois formations d'ardoise distinctes — Blaufüsser Lay, Roth Lay et Laubach —, chacune donnant des vins de caractère différent, que les meilleurs vignerons vinifient séparément. Les terrasses, soutenues par des murs de pierre sèche, comptent parmi les plus raides d'Europe. Reinhard Löwenstein (Heymann-Löwenstein) et Reinhard Knebel ont fait de l'Uhlen un haut lieu du Riesling sec, profond et minéral, à mille lieues des clichés sucrés de la Mosel. Le cru illustre la grandeur héroïque et la modernité de la Terrassenmosel. Situé à l'entrée aval de la Mosel, peu avant sa confluence avec le Rhin, l'Uhlen appartient à la Terrassenmosel, secteur où le fleuve a creusé des gorges et où la vigne s'accroche à des terrasses soutenues par des kilomètres de murs de pierre sèche. Ce paysage héroïque, et la distinction entre ses trois ardoises, font de l'Uhlen un terroir d'une richesse exceptionnelle pour le Riesling sec. Reinhard Löwenstein en a fait un manifeste du grand vin sec mosellan, profond, salin et taillé pour la garde. L'Uhlen illustre une autre Mosel, plus sauvage et plus minérale, longtemps méconnue. Manifeste du grand Riesling sec, l'Uhlen a fait connaître au monde une autre Mosel : minérale, profonde et héroïque, à des années-lumière des clichés sucrés.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "untermosel",
+        "winningen",
+        "uhlen",
+        "terrasses",
+        "heymann-loewenstein"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-winninger-roettgen",
+      "nom": "Winninger Röttgen",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Untermosel (Terrassenmosel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "schistes bleus dévoniens, pierre concassée",
+      "caracteristiques_rapides": "Voisin direct de Uhlen. Vins denses, plus chaleureux que Uhlen, signature plus exotique. VDP Grosse Lage.",
+      "notes_objectives": "Le Winninger Röttgen est l'un des grands crus de la Terrassenmosel, à Winningen, formant un amphithéâtre d'ardoise particulièrement chaud et abrité. Ses schistes bleus et ses pierres, sur des terrasses vertigineuses, donnent des Riesling secs riches et puissants. Voisin de l'Uhlen, le terroir produit des vins plus opulents, exploités par Heymann-Löwenstein et Knebel. Classé en grand cru de fait, le Röttgen illustre, aux côtés de l'Uhlen, la grandeur des Riesling secs de la Terrassenmosel. Formant un amphithéâtre exposé plein sud, le Röttgen est l'un des terroirs les plus chauds de la Terrassenmosel. Ses Riesling secs, riches et puissants, contrastent avec la nervosité habituelle de la région. Heymann-Löwenstein et Knebel en signent des cuvées remarquables. Le cru illustre, aux côtés de l'Uhlen, la grandeur singulière des Riesling secs des terrasses de Winningen. Avec l'Uhlen voisin, le Röttgen fait de Winningen la capitale du grand Riesling sec de la Terrassemosel, sur des terrasses parmi les plus raides d'Europe. Avec l'Uhlen, il fait de Winningen la capitale du grand Riesling sec de la Terrassenmosel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-bleu",
+        "untermosel",
+        "winningen",
+        "roettgen",
+        "terrasses"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-mosel-terr-puendericher-marienburg",
+      "nom": "Pündericher Marienburg",
+      "type": "lieu-dit",
+      "region": "Mosel",
+      "sous_region": "Untermosel",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "schistes bleus, gris et rouges en mosaïque (sous-lieux-dits Rothenpfad, Falkenlay, Fahrlay)",
+      "caracteristiques_rapides": "Mosaïque de schistes que Clemens Busch vinifie séparément, en biodynamie. Sols rouges = chaleureux, gris = salin, bleu = tendu. VDP Grosse Lage.",
+      "notes_objectives": "Le Pündericher Marienburg est un grand coteau de la Mosel, à Pünderich, rendu célèbre par le travail du domaine Clemens Busch. Le cru se distingue par une mosaïque de schistes — bleus, gris et rouges —, souvent vinifiés en parcelles séparées (Falkenlay, Rothenpfad, Fahrlay). Conduit en biodynamie, le terroir donne des Riesling secs d'une grande pureté et d'une minéralité finement déclinée selon les types d'ardoise. Classé en grand cru de fait, le Marienburg illustre la renaissance du Riesling sec de terroir sur la Mosel et la lecture parcellaire de l'ardoise. Clemens et Rita Busch ont fait du Marienburg, dès les années 1980, un laboratoire du Riesling sec biodynamique de terroir, en isolant les différentes natures d'ardoise du coteau — bleue, grise, rouge — dans des cuvées parcellaires distinctes (Falkenlay, Rothenpfad, Fahrlay, Raffes). Le résultat est une gamme de Riesling secs d'une grande pureté, où chaque type d'ardoise s'exprime avec netteté. Le Marienburg est ainsi devenu l'un des symboles du renouveau du Riesling sec mosellan et de la lecture géologique fine des grands coteaux d'ardoise. Le coteau, qui domine une boucle de la rivière en face de l'ancien couvent de Marienburg, déploie une étonnante diversité de sols sur une même pente, ce qui en fait un terrain idéal pour une viticulture parcellaire. Le travail en biodynamie y est mené avec une rigueur exemplaire. Les Riesling secs de Clemens Busch, devenus des références internationales, illustrent comment l'ardoise — bleue, grise ou rouge — peut s'exprimer en nuances distinctes au sein d'un même cru. Le Marienburg est ainsi l'un des grands symboles de la Mosel sèche et terroitée d'aujourd'hui. Devenu une référence du Riesling sec biodynamique, le Marienburg illustre, mieux qu'aucun autre, la capacité de la Mosel contemporaine à lire ses ardoises parcelle par parcelle.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "biodynamie",
+        "untermosel",
+        "puenderich",
+        "marienburg",
+        "clemens-busch",
+        "mosaique-schistes"
+      ],
+      "source": "vdp.de|mosel-fine-wines"
+    }
+  ]
+}

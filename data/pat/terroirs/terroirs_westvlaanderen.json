@@ -1,0 +1,254 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "westvlaanderen",
+  "region_label": "West-Vlaanderen",
+  "source_file": "terroirs_westvlaanderen_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 10,
+  "items": [
+    {
+      "id": "be-westvlaanderen-terr-rodeberg-et-zwarteberg-westouter",
+      "nom": "Rodeberg et Zwarteberg (Westouter)",
+      "type": "coteau",
+      "region": "West-Vlaanderen",
+      "sous_region": "Heuvelland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Auxerrois",
+        "Pinot Gris",
+        "Pinot Noir",
+        "Pinot Meunier"
+      ],
+      "altitude": "env. 60-150 m",
+      "sols": "Limons minces sur sables tertiaires, buttes coiffées de grès ferrugineux",
+      "caracteristiques_rapides": "Le versant entre les deux monts porte le plus grand vignoble de Flandre, planté à partir de 2004, et le seul domaine flamand à cumuler deux AOP. La frontière française passe sur la crête du Zwarteberg.",
+      "notes_objectives": "Le versant compris entre les deux monts porte le plus grand vignoble de Flandre et le seul domaine flamand à cumuler deux appellations d'origine. Le site n'a rien d'évident : une centaine de mètres de dénivelé, des limons minces sur sables tertiaires, et une frontière française qui passe sur la crête du Zwarteberg — le Mont Noir, côté français.\n\nCe qui fait le lieu, c'est la conjonction d'une pente, d'une exposition et d'une famille. Le grand-père acquiert les parcelles au milieu du siècle dernier ; les mille premiers pieds sont plantés en 2004, la première récolte tombe en 2008, et le domaine passe de trois hectares à plus de vingt en vingt ans, avec sept cépages et une production de l'ordre de 120 000 bouteilles. C'est cette trajectoire, plus que la géologie, qui a fait exister l'AOP Heuvellandse wijn reconnue en 2005.\n\nLes monts eux-mêmes sont des buttes-témoins : des sables tertiaires cimentés par l'oxyde de fer ont protégé de l'érosion les terrains sous-jacents, exactement comme dans le Hageland. C'est la même formation, le grès ferrugineux diestien, à cent quatre-vingts kilomètres de distance. La conduite y est écologique sans certification — ni insecticides ni herbicides, bouillie bordelaise, nichoirs à faucons crécerelles contre les oiseaux — et l'orientation dominante va à l'effervescent de méthode traditionnelle, avec vingt-quatre mois sur lattes pour la cuvée de tête.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "heuvelland",
+        "ijzerzandsteen",
+        "methode-traditionnelle"
+      ],
+      "source": "entre-deux-monts.be ; westtoer.be ; vino.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-kemmelberg-et-monteberg",
+      "nom": "Kemmelberg et Monteberg",
+      "type": "coteau",
+      "region": "West-Vlaanderen",
+      "sous_region": "Heuvelland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 60-156 m",
+      "sols": "Sables et limons sur argile yprésienne, sommets à grès ferrugineux diestien",
+      "caracteristiques_rapides": "Le Kemmelberg culmine à 156 mètres, point le plus élevé de la province. Un vignoble d'un hectare et demi y est planté à la densité champenoise de 9 000 pieds à l'hectare, avec des élevages sur lattes de 36 mois.",
+      "notes_objectives": "Le Kemmelberg culmine à 156 mètres : c'est le point le plus élevé de la Flandre occidentale, et l'un des rares reliefs francs de toute la Flandre. Le Monteberg le prolonge vers le sud-ouest, dans le même alignement de buttes-témoins coiffées de grès ferrugineux diestien, sur des sables et limons reposant sur l'argile yprésienne.\n\nLe secteur mérite l'attention pour un fait technique isolé dans le corpus belge : un vignoble d'un hectare et demi y a été planté par un vigneron champenois à la densité de neuf mille pieds à l'hectare — le double de ce qui se pratique ailleurs dans le pays, où l'on tourne entre quatre et cinq mille — avec des élevages sur lattes de trente-six mois. C'est la transposition littérale des usages champenois, et le seul cas documenté à cette densité. Le Monteberg, lui, donne son nom au deuxième domaine de la province, dix hectares à Dranouter.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "heuvelland",
+        "ijzerzandsteen",
+        "methode-traditionnelle"
+      ],
+      "source": "vino.be ; monteberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-coteaux-de-nieuwkerke-et-dranouter",
+      "nom": "Coteaux de Nieuwkerke et Dranouter",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Heuvelland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 50-100 m",
+      "sols": "Limons de versant sur argile yprésienne",
+      "caracteristiques_rapides": "Sud du Heuvelland, dans la vallée de la Douve, où l'altitude tombe sous les cent mètres. C'est là que se trouve l'un des rares domaines d'un hectare à revendiquer l'AOP Heuvellandse wijn.",
+      "notes_objectives": "Le sud du Heuvelland, dans la vallée de la Douve, où l'altitude retombe sous les cent mètres et où le relief s'adoucit avant la plaine. Les sols sont des limons de versant reposant sur l'argile yprésienne, imperméable, ce qui explique les sources et les prairies humides du secteur.\n\nC'est ici que se trouve l'un des rares domaines d'un hectare à revendiquer l'AOP Heuvellandse wijn, reconnue en 2005 — la seule appellation territoriale accessible dans la province, et l'une des cinq de Flandre. Dranouter, plus connue pour son festival de musique folk, abrite pour sa part deux vignobles d'échelles sans commune mesure, dix hectares et quarante ares, ce qui résume la structure du vignoble belge. La vallée de la Douve marque par ailleurs la limite sud du vignoble flamand : au-delà commence la plaine française de la Lys, sans vigne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "heuvelland"
+      ],
+      "source": "censedelalouette.wine ; wijngoedreyngaard.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-cretes-du-saillant-dypres-zonnebeke-beselare",
+      "nom": "Crêtes du saillant d'Ypres (Zonnebeke, Beselare)",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Westhoek",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-65 m",
+      "sols": "Limons sablonneux sur substrat argileux yprésien",
+      "caracteristiques_rapides": "La ligne de crête de Passchendaele à Beselare, dont l'histoire militaire a façonné le paysage. Trois vignobles s'y partagent aujourd'hui le relief, du demi-hectare associatif aux dix hectares professionnels.",
+      "notes_objectives": "La ligne de crête qui court de Passchendaele à Beselare et Zonnebeke n'atteint pas soixante-cinq mètres, mais dans une plaine par ailleurs sans relief, ces quelques dizaines de mètres ont suffi à justifier quatre années de combats — l'histoire militaire a façonné le paysage plus que la géologie.\n\nLes sols sont des limons sablonneux reposant sur le substrat argileux yprésien. Trois vignobles se partagent aujourd'hui ce relief, du demi-hectare associatif planté en 2018 aux dix hectares professionnels — l'un des rares secteurs de la province où coexistent les deux échelles sur quelques kilomètres carrés. La reconversion viticole de ces terres est entièrement postérieure à 2015. Le sous-sol reste marqué par le conflit, ce qui n'est pas sans conséquence pratique pour une plantation : le travail du sol y impose des précautions particulières.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "westhoek"
+      ],
+      "source": "den-nachtegael.be ; wijngaardaltinus.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-plaine-du-westhoek-staden-wervik-geluwe",
+      "nom": "Plaine du Westhoek (Staden, Wervik, Geluwe)",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Westhoek",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 15-40 m",
+      "sols": "Sables limoneux de plaine, sans relief marqué",
+      "caracteristiques_rapides": "Plaine agricole entre Ypres, Roulers et la frontière française, sans tradition viticole. Les plantations y sont toutes postérieures à 2017, souvent en reconversion d'exploitations horticoles.",
+      "notes_objectives": "La plaine agricole entre Ypres, Roulers et la frontière française : sables limoneux, altitudes de quinze à quarante mètres, aucun relief exploitable et aucune tradition viticole.\n\nToutes les plantations y sont postérieures à 2017, et plusieurs résultent de reconversions d'exploitations horticoles — le cas le mieux documenté étant celui d'un floriculteur de Wervik passé intégralement à la vigne en 2017, avec haies mixtes plantées pour la biodiversité et ancienne grange transformée en cuverie. C'est le modèle dominant du Westhoek : ni terroir ni antériorité, mais du foncier, un savoir-faire agricole transposable et un marché local. Le secteur compte aujourd'hui quatre à cinq vignobles, de vingt ares à quatre hectares et demi, tous hors appellation. Aucun d'eux ne revendique un argument de terroir : ils mettent en avant la conduite, la biodiversité ou l'accueil.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "westhoek",
+        "jeune-domaine"
+      ],
+      "source": "wijndomein-ravenstein.be ; wijngoedchoupette.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-collines-de-la-lys-et-de-la-haute-escaut-anzegem-zwevegem",
+      "nom": "Collines de la Lys et de la haute Escaut (Anzegem, Zwevegem)",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Leiestreek en Bovenschelde",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "env. 30-80 m",
+      "sols": "Limons de versant sur substrat tertiaire",
+      "caracteristiques_rapides": "Dernières collines avant la plaine de l'Escaut, prolongement direct des Ardennes flamandes : le Kluisberg est à une dizaine de kilomètres. Quatre vignobles y sont installés depuis 2018.",
+      "notes_objectives": "Les dernières collines avant la plaine de l'Escaut, dans le sud-est de la province. Le secteur prolonge directement les Ardennes flamandes — le Kluisberg est à une dizaine de kilomètres, de l'autre côté de la limite provinciale — et la fédération le rattache explicitement au bassin de la haute Escaut.\n\nLes sols sont des limons de versant sur substrat tertiaire, à des altitudes qui ne dépassent guère quatre-vingts mètres mais suffisent à dégager des expositions utilisables. Quatre vignobles y sont installés, dont deux dépassent quatre hectares, ce qui en fait le second foyer de la province après le Heuvelland. La continuité géologique avec la Flandre orientale est ici parfaite : seules les limites administratives séparent ces coteaux de ceux d'Audenarde.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "leiestreek"
+      ],
+      "source": "glaronne.com ; beerbosch.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-vallee-de-la-lys-deerlijk-menen",
+      "nom": "Vallée de la Lys (Deerlijk, Menen)",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Leiestreek en Bovenschelde",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 15-35 m",
+      "sols": "Alluvions et sables limoneux de vallée",
+      "caracteristiques_rapides": "Ancien pays du lin et du textile, entre Courtrai et la frontière française, où la vigne n'apparaît qu'après 2018. Le seul domaine du secteur reconnu l'est en mousseux de qualité flamand, faute d'appellation territoriale.",
+      "notes_objectives": "L'ancien pays du lin et du textile, entre Courtrai et la frontière française, sur des alluvions et des sables limoneux de fond de vallée. Le rouissage du lin dans les eaux de la Lys a fait la richesse de la région pendant des siècles ; la vigne, elle, n'y apparaît qu'après 2018.\n\nLe secteur illustre bien la contrainte réglementaire flamande : aucune appellation territoriale ne couvre la vallée de la Lys, et le seul domaine reconnu du secteur l'est en mousseux de qualité flamand. Faute de pouvoir revendiquer un lieu, on revendique une méthode — même logique que dans les Ardennes flamandes, où les vignerons se rattachent au label BelBul. Trois vignobles s'y sont installés depuis 2018, dont un planté en 2023 — parmi les toutes dernières implantations du corpus belge. Les altitudes ne dépassent pas trente-cinq mètres.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "leiestreek",
+        "jeune-domaine"
+      ],
+      "source": "sentier74.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-houtland-tielt-aarsele",
+      "nom": "Houtland (Tielt, Aarsele)",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Houtland en Kust",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 10-35 m",
+      "sols": "Sables limoneux de la Flandre sablonneuse, bocage résiduel",
+      "caracteristiques_rapides": "Pays du bois entre Bruges et Courtrai : bocage, champs clos, relief presque nul. Deux domaines y sont installés, dont l'un engage une extension de deux à dix hectares.",
+      "notes_objectives": "Le pays du bois — c'est le sens littéral du nom — entre Bruges et Courtrai : un paysage de bocage, de champs clos et de haies, sur des sables limoneux de la Flandre sablonneuse, avec un relief presque nul.\n\nDeux domaines y sont installés, tous deux autour de Tielt, dont l'un engage une extension de deux à dix hectares — l'une des plus importantes actuellement en cours en Belgique. Ce type de saut d'échelle n'apparaît qu'après 2017 et signale un modèle économique validé, la même dynamique qu'à Kruisem en Flandre orientale ou à Annevoie en province de Namur. Le secteur n'a aucune antériorité viticole. La proximité de Bruges et de la côte assure en revanche un flux touristique appréciable, ce qui compte pour l'écoulement de la production, et l'un des deux domaines est reconnu en IGP Vlaamse landwijn depuis 2018.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "houtland"
+      ],
+      "source": "hoogenhove.be ; wijngoedkapelle.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-plaine-de-bruges-et-oostkamp",
+      "nom": "Plaine de Bruges et Oostkamp",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Houtland en Kust",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 5-20 m",
+      "sols": "Sables et sables limoneux, nappe haute",
+      "caracteristiques_rapides": "Secteur plat et sableux au sud de Bruges, sans antériorité viticole, où un domaine annonce pourtant vingt-cinq hectares — surface qui en ferait l'un des trois plus grands du pays, mais qui reste à confirmer.",
+      "notes_objectives": "Un secteur plat et sableux au sud de Bruges, avec une nappe haute et aucune antériorité viticole — le profil pédologique le moins favorable qu'on puisse imaginer pour la vigne.\n\nC'est pourtant là qu'un domaine annonce vingt-cinq hectares répartis entre Oostkamp, Bruges et Ruddervoorde, ce qui en ferait le troisième vignoble de Belgique, devant Vin de Liège et le Domaine du Chapitre. L'information appelle la plus grande prudence : le nom n'apparaît pratiquement pas dans la presse spécialisée belge, et ni l'encépagement, ni l'année de plantation, ni la gamme ne sont documentés publiquement. C'est l'écart le plus important de tout le corpus entre une surface déclarée et une visibilité effective, et il demande une vérification directe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "houtland"
+      ],
+      "source": "merulawines.com ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-westvlaanderen-terr-littoral-et-polders-de-bredene",
+      "nom": "Littoral et polders de Bredene",
+      "type": "secteur",
+      "region": "West-Vlaanderen",
+      "sous_region": "Houtland en Kust",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 0-10 m",
+      "sols": "Sables dunaires et sols de polder, embruns salins",
+      "caracteristiques_rapides": "Le seul terroir maritime du corpus belge : deux hectares à quelques centaines de mètres de la mer du Nord. Aucun paramètre classique du terroir belge, mais une ventilation marine permanente qui limite la pression cryptogamique.",
+      "notes_objectives": "Le seul terroir maritime du corpus belge : deux hectares à quelques centaines de mètres de la mer du Nord, sur des sables dunaires et des sols de polder.\n\nAucun des paramètres classiques du terroir belge n'y est présent — ni pente, ni exposition différenciée, ni substrat calcaire, ni protection contre le vent. En revanche, deux facteurs jouent en faveur du site. La ventilation marine est permanente, ce qui assèche vite le feuillage et limite fortement la pression du mildiou et de l'oïdium : c'est exactement l'avantage que le Vignoble des Agaises doit à son parc éolien, obtenu ici gratuitement. Et la masse maritime amortit les extrêmes thermiques, réduisant le risque de gel printanier. Restent les embruns salins et la pauvreté des sables, dont on ne connaît pas encore l'effet à long terme sur la vigne. Le domaine se présente comme le premier vignoble commercial de la côte belge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "kust",
+        "jeune-domaine"
+      ],
+      "source": "vitse-boydens.be ; belgischewijnbouwers.be"
+    }
+  ]
+}

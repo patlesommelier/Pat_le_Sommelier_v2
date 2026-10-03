@@ -1,0 +1,905 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Ribera del Duero",
+  "source_file": "terroirs_riberadelduero_To_Import.xlsx",
+  "built_at": "2026-08-11T16:09:13",
+  "count": 34,
+  "items": [
+    {
+      "id": "es-castillayleon-terr-valle-de-atauta",
+      "nom": "Valle de Atauta",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Soria",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "950–1000 m",
+      "sols": "Sables calcaires (arena caliza) sur socle, vignes franches de pied",
+      "caracteristiques_rapides": "Vallée haute et isolée à l'est de la DO, épargnée par le phylloxéra : concentration unique de vignes centenaires de Tinto Fino franches de pied, berceau de Dominio de Atauta.",
+      "notes_objectives": "Le Valle de Atauta est l'un des plus grands trésors viticoles d'Espagne, et sans doute le terroir le plus singulier de toute la Ribera del Duero. Cette vallée haute et isolée se situe à l'extrémité orientale de l'appellation, dans la province de Soria, à près de mille mètres d'altitude, dans un cul-de-sac géographique enserré par les reliefs. Cet isolement lui a valu un privilège rarissime : le phylloxéra, qui a ravagé le vignoble européen à la fin du XIXe siècle, n'y est jamais parvenu. Il en résulte une concentration exceptionnelle de vieilles vignes de Tinto Fino franches de pied, non greffées, plantées sur des sols de sables calcaires — l'arena caliza — qui ont protégé les racines de l'insecte. Certaines de ces vignes en gobelet dépassent le siècle, voire les cent soixante ans, à des rendements infimes. Le vignoble, morcelé en une multitude de petites parcelles étagées sur les coteaux, constitue un conservatoire génétique vivant. Le climat de la vallée est d'une rudesse extrême : continental, avec des nuits glaciales et des amplitudes thermiques qui atteignent vingt-cinq degrés entre le jour et la nuit pendant les vendanges. Des vents forts et constants balaient les vignes, les asséchant et les protégeant des maladies. Cette combinaison d'altitude, de sable, de vieilles vignes et de fraîcheur donne des Tinto Fino d'une finesse et d'une acidité qui n'ont rien à voir avec la puissance des Riberas de la vallée basse : ce sont des vins floraux, épicés, tendus, d'une élégance presque bourguignonne. C'est Dominio de Atauta qui a révélé le lieu au tournant des années 2000, en vinifiant séparément les meilleures parcelles — La Mala, Valdegatiles, Llanos del Almendro. La vallée compte plus de cinq siècles de tradition viticole documentée, avec des ensembles de bodegas creusées dans la roche comme El Plantío. Pour un sommelier, Atauta est un lieu à raconter autant qu'à faire goûter : il incarne la face aérienne et parcellaire de la Ribera, et prouve qu'à mille mètres d'altitude, sur du sable et des vignes centenaires, l'appellation peut donner des vins d'une finesse rare. Les cuvées de lieu demandent de la garde et surprennent toujours par leur fraîcheur. Le domaine a essaimé une petite école de vignerons attachés à la vallée, faisant d'Atauta la référence de ceux qui cherchent la finesse plutôt que la concentration.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "altitude",
+        "soria",
+        "prephylloxerique",
+        "franc-de-pied",
+        "sables",
+        "prov-soria"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-milla-de-oro",
+      "nom": "Milla de Oro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Argilo-calcaires et terrasses de galets en bord de Duero",
+      "caracteristiques_rapides": "Le tronçon mythique du Duero entre Pesquera et Quintanilla : Vega Sicilia, Pingus, Alión, Hacienda Monasterio et Villacreces s'y concentrent sur quelques kilomètres.",
+      "notes_objectives": "La Milla de Oro — le « mille d'or » — est le tronçon mythique de la vallée du Duero, sur la rive vallisoletane de l'appellation, où se concentre la plus forte densité de domaines prestigieux de toute l'Espagne. Sur quelques kilomètres à peine, entre Pesquera de Duero et Quintanilla de Onésimo, en passant par Valbuena, se côtoient Vega Sicilia, Dominio de Pingus, Alión, Hacienda Monasterio et Finca Villacreces — un rassemblement d'icônes sans équivalent dans le pays. Le terroir doit beaucoup à la proximité du fleuve. Le Duero, qui serpente en méandres, tempère le climat continental extrême de la région et entretient une humidité favorable à la maturation lente. Les sols associent des terrasses de galets roulés déposés par le fleuve, bien drainés, à des argilo-calcaires et des passages sableux, sur des altitudes autour de sept à huit cents mètres. Cette diversité de terroirs, sur une bande étroite, explique la richesse des expressions que l'on y trouve. Le Tinto Fino y règne, mais la Milla de Oro est aussi le berceau de l'encépagement bordelais de la Ribera : c'est ici, à Valbuena, que Vega Sicilia a planté au XIXe siècle le Cabernet-Sauvignon, le Merlot et le Malbec qui font encore la singularité de ses assemblages. La combinaison de ces cépages avec le Tinto Fino, sur les terrasses du fleuve, donne des vins d'une profondeur et d'une capacité de garde exceptionnelles. La renommée du lieu a un revers : la pression foncière y est intense, et le prix des vignes parmi les plus élevés d'Espagne. Mais aucune autre portion de la Ribera ne concentre autant de terroirs de premier ordre, et la Milla de Oro reste la vitrine qualitative de l'appellation. Pour un sommelier, c'est un repère incontournable : évoquer la Milla de Oro, c'est situer d'un mot les plus grands crus de la Ribera et expliquer pourquoi cette bande de fleuve concentre autant de légendes. Les vins qui en sont issus figurent parmi les plus recherchés du pays. La Milla de Oro n'est pas une appellation officielle mais une dénomination d'usage, née de la réputation accumulée par ses domaines. Elle n'en structure pas moins la géographie mentale de la Ribera et sert de repère à tous les amateurs, par contraste avec les villages d'altitude de la rive burgalaise.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "milla-de-oro",
+        "valladolid",
+        "icones",
+        "bord-de-duero",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pago-de-la-horra",
+      "nom": "Pago de La Horra",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–850 m",
+      "sols": "Argilo-calcaires d'altitude sur socle calcaire",
+      "caracteristiques_rapides": "Village burgalais aux vieilles vignes de gobelet légendaires, berceau de Pingus et de Corimbo : l'un des grands terroirs de Tinto Fino de la rive burgalaise.",
+      "notes_objectives": "La Horra est l'un des grands terroirs de Tinto Fino de la rive burgalaise, et le village dont les vieilles vignes ont révélé le potentiel de toute la Ribera moderne. Situé sur les hauteurs du nord de la province de Burgos, autour de huit cents à huit cent cinquante mètres d'altitude, il repose sur des sols argilo-calcaires d'altitude sur un socle calcaire, propices à des vins à la fois puissants et frais. Ce qui fait la réputation de La Horra, c'est son patrimoine exceptionnel de vieilles vignes de Tinto Fino en gobelet, à faible rendement, plantées sur les meilleurs coteaux. C'est là que Peter Sisseck a repéré, au milieu des années 1990, les parcelles qui allaient donner naissance à Pingus, le premier vin culte moderne d'Espagne — un choix qui a mis en lumière la qualité des vignes du village. C'est là aussi que la famille Roda, venue de Rioja, a établi Bodegas La Horra pour son projet Corimbo, et que les Hermanos Sastre puisent la matière de leurs cuvées les plus recherchées. L'altitude et les sols calcaires confèrent aux vins de La Horra une structure imposante alliée à une fraîcheur qui les distingue : des Tinto Fino denses, profonds, mais dotés d'une acidité et d'une capacité de garde remarquables. Le village est ainsi devenu l'un des symboles de la Ribera de terroir, celle qui cherche l'expression du lieu plutôt que la seule puissance. La reconnaissance a fait grimper la valeur des vieilles vignes du secteur, aujourd'hui parmi les plus convoitées de la rive burgalaise. Pour un sommelier, La Horra est un nom-clé : derrière lui se cachent Pingus, Corimbo et les grandes cuvées Sastre, et il permet d'expliquer pourquoi la rive burgalaise, plus haute et plus fraîche, produit certaines des Riberas les plus profondes. Les vins du village demandent de la garde et récompensent la patience. Il faut aussi rappeler le rôle du calado historique de La Horra dans le style de Pingus : Sisseck a toujours attaché une grande importance à ce lieu d'élevage frais et stable, creusé sous le village, qui permet des fermentations longues et un vieillissement serein. Le terroir de La Horra ne se limite donc pas au sol et à l'altitude : il inclut ce patrimoine de caves souterraines qui participe pleinement à la naissance de ses grands vins.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "la-horra",
+        "burgos",
+        "vieilles-vignes",
+        "altitude",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pago-de-valderramiro",
+      "nom": "Pago de Valderramiro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "760–800 m",
+      "sols": "Argilo-calcaires caillouteux, sous-sol calcaire",
+      "caracteristiques_rapides": "Parcelle plantée en 1924 à Pesquera dont Emilio Moro tire le Malleolus de Valderramiro : l'un des lieux-dits emblématiques de la rive vallisoletane.",
+      "notes_objectives": "Valderramiro est l'un des lieux-dits emblématiques de la rive vallisoletane de la Ribera, à Pesquera de Duero. La parcelle, plantée en 1924, appartient à la famille Moro, qui en tire le Malleolus de Valderramiro, l'un de ses parcellaires phares. Le nom du lieu figure sur l'étiquette, dans une logique de vin de terroir revendiquée. Le vignoble s'étage autour de sept cent soixante à huit cents mètres d'altitude, sur des sols argilo-calcaires caillouteux reposant sur un socle calcaire. L'âge des vignes, proche du siècle, et le faible rendement confèrent au Tinto Fino une concentration et une profondeur remarquables. Emilio Moro y applique un élevage soigné en chêne français, dans une production volontairement limitée. Le vin qui en résulte est dense, profond et taillé pour une longue garde, tout en conservant l'équilibre et la fraîcheur que recherche la maison. Valderramiro illustre la manière dont, dès les années 2000, la Ribera a commencé à nommer et valoriser ses grandes parcelles, à rebours de la logique de marque qui prévalait. Pour un sommelier, Valderramiro est un lieu-dit à connaître : il incarne le virage parcellaire d'une des grandes maisons de la région, et son vin, produit en quantités limitées, constitue une belle bouteille de garde à faire découvrir à l'amateur de Tinto Fino de vieilles vignes. Il demande quelques années de cave pour s'ouvrir pleinement.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilio-moro",
+        "pesquera",
+        "vieilles-vignes",
+        "parcellaire",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pago-de-sanchomartin",
+      "nom": "Pago de Sanchomartín",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "820–870 m",
+      "sols": "Coteau argilo-calcaire d'altitude, forte pente",
+      "caracteristiques_rapides": "Majuelo en coteau d'altitude à Pesquera, vieilles vignes jusqu'à 60 ans, à l'origine du Malleolus de Sanchomartín d'Emilio Moro : puissance et garde.",
+      "notes_objectives": "Sanchomartín est un majuelo — une parcelle de vieilles vignes — situé sur un coteau d'altitude à Pesquera de Duero, sur la rive vallisoletane. La famille Moro en tire le Malleolus de Sanchomartín, la plus intense et la plus structurée de ses cuvées parcellaires, issue de vignes pouvant atteindre soixante ans. Le lieu se distingue par son altitude et sa forte pente : le vignoble s'étage autour de huit cent vingt à huit cent soixante-dix mètres, sur des sols argilo-calcaires en coteau. Cette position élevée préserve l'acidité et donne au Tinto Fino une trame tannique dense et une capacité de garde marquée. La fermentation malolactique et l'élevage se font en barriques neuves de chêne français, ce qui accentue la puissance du vin. Sanchomartín donne un vin intense, rotond et profond, conçu pour un long vieillissement — l'une des expressions les plus imposantes du parcellaire ribérien moderne. Il contraste avec Valderramiro, plus ancien et plus classique, par sa position de coteau et son profil plus vertical. Pour un sommelier, Sanchomartín illustre le rôle de l'altitude et de la pente dans la structure des grands Tinto Fino : un lieu-dit de coteau qui donne un vin de garde puissant, à réserver aux grandes occasions et à carafer largement dans sa jeunesse. Une belle démonstration de la diversité des terroirs de Pesquera.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilio-moro",
+        "pesquera",
+        "coteau",
+        "altitude",
+        "parcellaire",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-cuesta-de-las-liebres",
+      "nom": "Cuesta de las Liebres",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "780–850 m",
+      "sols": "Coteau argilo-calcaire exposé au sud face à Peñafiel",
+      "caracteristiques_rapides": "Coteau de vieilles vignes de Pago de Carraovejas, à Peñafiel, dont sort la cuvée El Anejón : l'un des grands amphithéâtres de la rive vallisoletane.",
+      "notes_objectives": "La Cuesta de las Liebres est l'un des grands amphithéâtres de vieilles vignes de la rive vallisoletane, à Peñafiel, exploité par Pago de Carraovejas. Ce coteau exposé au sud, face au château de Peñafiel, fournit les raisins de la cuvée El Anejón, l'une des expressions les plus abouties du domaine. Le lieu s'étage autour de sept cent quatre-vingts à huit cent cinquante mètres d'altitude, sur des sols argilo-calcaires en pente. L'exposition plein sud favorise une maturité pleine du Tinto Fino, tandis que l'altitude préserve la fraîcheur et l'acidité. La cuvée assemble le Tinto Fino à une part de Cabernet-Sauvignon et de Merlot, dans le style bordelais assumé qui fait la signature de Carraovejas. Le vin qui en résulte est dense, profond et racé, avec la structure et le fruit noir caractéristiques du domaine, mais une dimension de terroir plus marquée. La Cuesta de las Liebres illustre la viticulture de précision et la lecture parcellaire qui ont fait de Carraovejas l'un des grands crus modernes de la Ribera. Pour un sommelier, ce coteau est un lieu à connaître pour raconter la montée en gamme de la rive vallisoletane et le rôle des amphithéâtres exposés au sud dans la maturité des grands Tinto Fino. El Anejón est une belle bouteille de garde, à servir sur une cuisine de caractère après quelques années de cave.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "carraovejas",
+        "penafiel",
+        "coteau",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pago-el-picon",
+      "nom": "Pago El Picón",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "820–860 m",
+      "sols": "Argilo-calcaires d'altitude sur socle calcaire",
+      "caracteristiques_rapides": "Parcelle de vieilles vignes de Pago de los Capellanes à Pedrosa, dont sort l'un des grands parcellaires de la rive burgalaise.",
+      "notes_objectives": "El Picón est l'un des grands parcellaires de la rive burgalaise, exploité par Pago de los Capellanes à Pedrosa de Duero. La parcelle, plantée de vieilles vignes de Tinto Fino, donne l'un des vins les plus ambitieux et les plus recherchés du domaine, dans une logique de vin de lieu revendiquée. Le vignoble s'étage autour de huit cent vingt à huit cent soixante mètres d'altitude, sur des sols argilo-calcaires reposant sur un socle calcaire, caractéristiques des meilleurs coteaux de Pedrosa. L'âge des vignes et le faible rendement confèrent au Tinto Fino une concentration et une profondeur remarquables, tandis que l'altitude préserve la fraîcheur. L'élevage se fait en chêne français, avec une production limitée. Le vin qui en résulte est dense, profond et taillé pour la garde, dans le style moderne mais équilibré qui fait la réputation de Pago de los Capellanes. El Picón illustre le potentiel des coteaux calcaires de Pedrosa, l'un des secteurs les plus réputés de la rive burgalaise. Pour un sommelier, El Picón est un lieu-dit à connaître pour raconter le parcellaire burgalais et la qualité des coteaux de Pedrosa. Le vin, produit en quantités limitées, constitue une belle bouteille de garde, à faire découvrir à l'amateur de Tinto Fino de terroir. Il mérite quelques années de cave.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "capellanes",
+        "pedrosa",
+        "vieilles-vignes",
+        "parcellaire",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-la-aguilera",
+      "nom": "La Aguilera",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor",
+        "Garnacha"
+      ],
+      "altitude": "850–950 m",
+      "sols": "Argilo-calcaires d'altitude, coteaux frais, vignes complantées",
+      "caracteristiques_rapides": "Village burgalais d'altitude aux vieilles vignes complantées, berceau de Dominio del Águila : cœur de la renaissance du clarete et de l'Albillo.",
+      "notes_objectives": "La Aguilera est un village burgalais d'altitude devenu, en quelques années, l'un des cœurs de la renaissance de la Ribera del Duero. Situé sur les hauteurs du nord de la province de Burgos, entre huit cent cinquante et neuf cent cinquante mètres, il repose sur des sols argilo-calcaires d'altitude et abrite, sur ses coteaux frais, un patrimoine rare de vieilles vignes complantées. Ces vignes, souvent centenaires et préphylloxériques, mêlent dans le même rang le Tinto Fino, l'Albillo Mayor, la Garnacha et diverses variétés, selon la tradition paysanne antérieure à la spécialisation. C'est ce patrimoine qui a attiré Jorge Monzón et Isabel Rodero, dont le Dominio del Águila a révélé le potentiel du lieu, berceau de la réhabilitation du clarete et de l'Albillo de vieilles vignes. L'altitude et la complantation donnent des vins d'une fraîcheur et d'une finesse peu communes en Ribera, à rebours de la puissance qui a longtemps fait la réputation de la région. Le village, dont les coteaux sont creusés de bodegas et de merenderos traditionnels, illustre la face la plus historique et la plus parcellaire de l'appellation. Pour un sommelier, La Aguilera est un nom à connaître pour raconter le renouveau de la Ribera : celui des vieilles vignes complantées, du clarete et de l'Albillo. Les vins qui en sont issus, rares et recherchés, comptent parmi les plus originaux de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "la-aguilera",
+        "burgos",
+        "complantation",
+        "clarete",
+        "albillo",
+        "altitude",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pedrosa-de-duero",
+      "nom": "Pedrosa de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–870 m",
+      "sols": "Coteaux argilo-calcaires bien exposés, sous-sol calcaire",
+      "caracteristiques_rapides": "Village burgalais réputé pour la qualité de ses coteaux calcaires, fief des Pérez Pascuas, Rodero et Pago de los Capellanes.",
+      "notes_objectives": "Pedrosa de Duero est l'un des villages de référence de la rive burgalaise, réputé pour la qualité de ses coteaux calcaires. Situé sur les hauteurs du nord de la province de Burgos, autour de huit cents à huit cent soixante-dix mètres d'altitude, il repose sur des sols argilo-calcaires bien exposés sur un socle calcaire, particulièrement propices au Tinto Fino. La qualité de ces coteaux explique la concentration de domaines réputés installés au village : la famille Pérez Pascuas avec Viña Pedrosa, Carmelo Rodero, et Pago de los Capellanes, dont les parcellaires El Nogal et El Picón sont issus de ces sols. Les vieilles vignes y sont nombreuses, à faible rendement, sur des coteaux qui préservent la fraîcheur. Les vins de Pedrosa, dominés par le Tinto Fino, se distinguent par leur équilibre entre profondeur et finesse, avec une trame tannique élégante et une capacité de garde marquée. Le village illustre le potentiel de la rive burgalaise, plus haute et plus fraîche que la vallée vallisoletane. Pour un sommelier, Pedrosa est un nom-clé pour situer la qualité de la rive burgalaise : derrière lui se cachent Viña Pedrosa, Carmelo Rodero et El Picón, et il permet d'expliquer pourquoi les coteaux calcaires de ce secteur donnent des Riberas à la fois profondes et raffinées. Un repère utile pour orienter un amateur.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "pedrosa",
+        "burgos",
+        "coteau",
+        "calcaire",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-roa-de-duero",
+      "nom": "Roa de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "800–850 m",
+      "sols": "Argilo-calcaires et sables sur socle calcaire",
+      "caracteristiques_rapides": "Capitale historique de la rive burgalaise, vieilles vignes préphylloxériques, cœur du projet PSI de Sisseck et fief de Goyo García Viadero et Francisco Barona.",
+      "notes_objectives": "Roa de Duero est la capitale historique de la rive burgalaise et l'un des secteurs les plus riches en vieilles vignes de toute la Ribera. Situé sur les hauteurs du nord de la province de Burgos, autour de huit cents à huit cent cinquante mètres d'altitude, le village repose sur des sols variés d'argilo-calcaires et de sables sur socle calcaire. Son patrimoine de vieilles vignes préphylloxériques, souvent franches de pied sur les parcelles sableuses, en fait un terroir de choix pour la Ribera de terroir. C'est autour de Roa que Peter Sisseck a bâti son projet PSI, destiné à réhabiliter ces vieilles vignes en aidant les petits viticulteurs à les conserver plutôt qu'à les arracher. Le village est aussi le fief de Goyo García Viadero, figure du vin nature, et de Francisco Barona, qui travaille des vignes centenaires. Les vins de Roa, dominés par le Tinto Fino, vont du plus puissant au plus tendu selon l'altitude et le sol des parcelles. Le village illustre la diversité et la richesse ampélographique de la rive burgalaise, entre tradition classique et nouvelle vague. Pour un sommelier, Roa est un nom à connaître pour raconter le patrimoine de vieilles vignes de la Ribera et le rôle de Sisseck dans sa préservation. C'est aussi le point de départ pour découvrir la nouvelle génération parcellaire et nature du secteur burgalais, à des prix encore souvent raisonnables.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roa",
+        "burgos",
+        "prephylloxerique",
+        "vieilles-vignes",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-anguix",
+      "nom": "Anguix",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Argilo-calcaires d'altitude, coteaux frais et ventés",
+      "caracteristiques_rapides": "Village d'altitude du nord burgalais, terroir frais recherché pour la finesse, exploité par Aalto, Áster (La Rioja Alta) et Pagos de Anguix.",
+      "notes_objectives": "Anguix est un village d'altitude du nord de la province de Burgos, dont les coteaux frais et ventés sont recherchés pour la finesse qu'ils confèrent aux vins. Situé entre huit cent cinquante et neuf cent vingt mètres d'altitude, il repose sur des sols argilo-calcaires d'altitude, parmi les plus élevés de la rive burgalaise. Cette altitude, jointe à la ventilation des coteaux, préserve l'acidité naturelle et ralentit la maturation du Tinto Fino, donnant des vins plus élancés et plus frais que ceux de la vallée basse. Le secteur a attiré des projets de premier plan : Aalto y sélectionne certaines de ses meilleures parcelles, La Rioja Alta y a établi son domaine Áster, et Pagos de Anguix, projet de la famille Juvé venue du Penedès, y travaille des viñedos singulares. Les vins d'Anguix, dominés par le Tinto Fino, se distinguent par leur fraîcheur et leur finesse de tanin, dans le mouvement de la Ribera vers l'altitude et l'élégance. Le village illustre le déplacement de la géographie qualitative de l'appellation vers ses secteurs les plus hauts. Pour un sommelier, Anguix est un nom à suivre pour proposer des Riberas fraîches et racées, issues de l'un des terroirs d'altitude les plus prometteurs de la rive burgalaise. Les vins qui en sont issus offrent souvent un bon rapport qualité-prix au regard de leur qualité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "anguix",
+        "burgos",
+        "altitude",
+        "fraicheur",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-paramo-de-corcos-valbuena",
+      "nom": "Páramo de Corcos — Valbuena",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Terrasses de galets et argilo-calcaires en bord de Duero",
+      "caracteristiques_rapides": "Cœur de la Milla de Oro à Valbuena de Duero, berceau de Vega Sicilia : terrasses en bord de fleuve où le Tinto Fino côtoie les cépages bordelais historiques.",
+      "notes_objectives": "Le secteur de Valbuena de Duero, au cœur de la Milla de Oro, est le berceau historique de la Ribera moderne : c'est là que Vega Sicilia a été fondée en 1864 et y a planté l'encépagement bordelais qui fait encore sa singularité. Situé sur la rive vallisoletane, en bord de fleuve, il s'étage autour de sept cents à huit cents mètres d'altitude. Le terroir associe des terrasses de galets roulés déposés par le Duero, bien drainés, à des sols argilo-calcaires. La proximité du fleuve tempère le climat continental extrême et favorise une maturation lente et régulière. C'est sur ces terrasses que le Tinto Fino côtoie le Cabernet-Sauvignon, le Merlot et le Malbec plantés au XIXe siècle, dans l'assemblage qui donne Único et Valbuena 5º. Les vins issus de ce secteur se distinguent par leur profondeur, leur complexité et leur capacité de garde exceptionnelle, fruit de la combinaison des terrasses de fleuve et de l'encépagement bordelais. Valbuena illustre la face la plus historique et la plus prestigieuse de la Milla de Oro. Pour un sommelier, ce terroir est indissociable du nom de Vega Sicilia : l'évoquer, c'est raconter la naissance du grand vin de garde ribérien et l'originalité de son encépagement. Les vins qui en sont issus figurent parmi les plus recherchés et les plus longévifs d'Espagne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "milla-de-oro",
+        "valbuena",
+        "vega-sicilia",
+        "bordelais",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-tinta-del-pais-tinto-fino",
+      "nom": "Tinta del País / Tinto Fino",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tempranillo"
+      ],
+      "altitude": "700–1000 m",
+      "sols": "S'exprime sur argilo-calcaires, sables et galets de toute la DO",
+      "caracteristiques_rapides": "Le clone local de Tempranillo, à peau épaisse et petites baies, adapté au climat extrême : colonne vertébrale de plus de 95 % de la production ribérienne.",
+      "notes_objectives": "Le Tinto Fino, aussi appelé Tinta del País, est le clone local du Tempranillo adapté depuis des siècles au climat extrême de la Ribera del Duero, et la colonne vertébrale de plus de quatre-vingt-quinze pour cent de la production de l'appellation. Il s'exprime sur toute la diversité des sols de la région, des argilo-calcaires aux sables en passant par les terrasses de galets, entre sept cents et mille mètres d'altitude. Ce Tempranillo ribérien se distingue de ses cousins de Rioja ou de la Meseta par une adaptation poussée aux conditions locales : baies plus petites, peau plus épaisse, cycle plus court. Ces caractéristiques lui permettent de concentrer couleur, tanins et arômes tout en préservant l'acidité, ce qui donne aux vins de la Ribera leur profondeur et leur capacité de garde. Longtemps vinifié dans un registre puissant et boisé, le Tinto Fino connaît aujourd'hui une relecture vers plus de fraîcheur et d'expression du lieu, portée par la génération parcellaire. Sur les vieilles vignes d'altitude, franches de pied à Atauta ou complantées à La Aguilera, il révèle une finesse insoupçonnée. Pour un sommelier, comprendre le Tinto Fino est essentiel pour raconter la Ribera : c'est le même cépage que le Tempranillo de Rioja, mais adapté à un climat plus rude, ce qui explique la différence de style entre les deux grandes appellations espagnoles du Tempranillo. Un point de comparaison toujours parlant à table.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "cepage",
+        "tempranillo",
+        "transversal",
+        "tinto-fino",
+        "prov-castilla-y-leon"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pesquera-de-duero",
+      "nom": "Pesquera de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "760–850 m",
+      "sols": "Argilo-calcaires et coteaux, sous-sol calcaire",
+      "caracteristiques_rapides": "Village clé de la rive vallisoletane, berceau de Tinto Pesquera et d'Emilio Moro, aux coteaux qui abritent Valderramiro et Sanchomartín.",
+      "notes_objectives": "Pesquera de Duero est l'un des villages clés de la rive vallisoletane, au cœur de la Ribera moderne. Situé sur les hauteurs dominant le fleuve, autour de sept cent soixante à huit cent cinquante mètres d'altitude, il repose sur des coteaux argilo-calcaires sur socle calcaire. C'est ici qu'Alejandro Fernández a fondé Tinto Pesquera au début des années 1970, révélant la Ribera au monde, et c'est ici que la famille Moro a bâti Emilio Moro. Les coteaux du village abritent les grands parcellaires Valderramiro et Sanchomartín, sur des vieilles vignes de Tinto Fino. Les vins de Pesquera se distinguent par leur profondeur et leur équilibre, entre puissance et fraîcheur selon l'altitude des parcelles. Pour un sommelier, c'est un nom historique incontournable de la Ribera, à associer aux pionniers de l'appellation et à ses lieux-dits les plus réputés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "pesquera",
+        "valladolid",
+        "coteau",
+        "historique",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-penafiel",
+      "nom": "Peñafiel",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "750–850 m",
+      "sols": "Argilo-calcaires en coteaux dominés par le château",
+      "caracteristiques_rapides": "Capitale historique et symbolique de la DO, dominée par son château-forteresse, fief de Protos et de Pago de Carraovejas.",
+      "notes_objectives": "Peñafiel est la capitale historique et symbolique de la Ribera del Duero, dominée par son imposant château-forteresse qui abrite aujourd'hui un musée du vin. Situé sur la rive vallisoletane, autour de sept cent cinquante à huit cent cinquante mètres d'altitude, le village repose sur des coteaux argilo-calcaires. Il concentre plusieurs maisons majeures : Protos, la plus ancienne bodega de l'appellation, dont les galeries sont creusées sous le château, et Pago de Carraovejas, dont les coteaux font face à la forteresse. Le secteur mêle grandes maisons historiques et domaines modernes de premier plan. Les vins de Peñafiel, dominés par le Tinto Fino, vont du classique au moderne le plus ambitieux. Pour un sommelier, Peñafiel est un repère central de la Ribera, à la fois cœur historique et vitrine touristique de l'appellation, avec un château qui domine tout le paysage viticole.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "penafiel",
+        "valladolid",
+        "historique",
+        "coteau",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-quintanilla-de-onesimo",
+      "nom": "Quintanilla de Onésimo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "700–800 m",
+      "sols": "Terrasses de galets et argilo-calcaires en bord de Duero",
+      "caracteristiques_rapides": "Village de la Milla de Oro en bord de fleuve, fief d'Arzuaga, Villacreces, Alión et Pingus : l'un des cœurs qualitatifs de la rive vallisoletane.",
+      "notes_objectives": "Quintanilla de Onésimo est l'un des villages phares de la Milla de Oro, sur la rive vallisoletane, en bord de Duero. Situé autour de sept cents à huit cents mètres d'altitude, il repose sur des terrasses de galets roulés et des sols argilo-calcaires en bord de fleuve. Le village concentre plusieurs domaines de premier plan : Arzuaga, Finca Villacreces, ainsi qu'Alión et une partie du vignoble de Pingus. La proximité du Duero tempère le climat et favorise une maturation lente, tandis que les terrasses de galets assurent un bon drainage. Les vins de Quintanilla se distinguent par leur profondeur et leur équilibre, dans le style prestigieux de la Milla de Oro. Pour un sommelier, c'est un nom à connaître pour situer plusieurs grands crus de la rive vallisoletane et raconter la richesse des terroirs de bord de fleuve.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "milla-de-oro",
+        "quintanilla",
+        "valladolid",
+        "bord-de-duero",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-sotillo-de-la-ribera",
+      "nom": "Sotillo de la Ribera",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Argilo-calcaires d'altitude, coteaux frais",
+      "caracteristiques_rapides": "Village burgalais d'altitude aux calados traditionnels, fief de Félix Callejo et Ismael Arroyo, entre tradition et nouvelle vague.",
+      "notes_objectives": "Sotillo de la Ribera est un village burgalais d'altitude, aux calados traditionnels creusés sous les maisons, à cheval entre tradition classique et nouvelle vague. Situé autour de huit cent cinquante à neuf cent vingt mètres d'altitude, il repose sur des coteaux argilo-calcaires frais. Le village est le fief de la famille Callejo, pionnière du parcellaire et de l'Albillo dans le secteur, et d'Ismael Arroyo, connu pour ses longs élevages classiques sous la marque ValSotillo. Cette cohabitation illustre la diversité des styles de la rive burgalaise. Les vins de Sotillo, dominés par le Tinto Fino, bénéficient de l'altitude qui préserve leur fraîcheur. Pour un sommelier, c'est un nom à connaître pour raconter à la fois la tradition des calados et le renouveau parcellaire de la Ribera burgalaise, avec un travail réputé sur l'Albillo Mayor.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sotillo",
+        "burgos",
+        "altitude",
+        "calados",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-gumiel-de-mercado",
+      "nom": "Gumiel de Mercado",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "850–950 m",
+      "sols": "Argilo-calcaires d'altitude, sables et calcaires",
+      "caracteristiques_rapides": "Village burgalais d'altitude, fief de Valduero, Goyo García Viadero et Basconcillos, entre longs élevages classiques et vins nature.",
+      "notes_objectives": "Gumiel de Mercado est un village burgalais d'altitude, entre longs élevages classiques et vins nature. Situé autour de huit cent cinquante à neuf cent cinquante mètres d'altitude, il repose sur des sols variés d'argilo-calcaires, de sables et de calcaires. Le village abrite des styles opposés : Bodegas Valduero, réputée pour ses Gran Reserva de longue garde, et Goyo García Viadero, figure du vin nature qui travaille des vignes d'altitude au-dessus de neuf cents mètres dans un lagar romain. Dominio Basconcillos y pratique la viticulture biologique. Les vins de Gumiel, dominés par le Tinto Fino, bénéficient de l'altitude qui préserve leur fraîcheur. Pour un sommelier, c'est un nom à connaître pour illustrer l'étendue des styles de la rive burgalaise, du classique le plus patiné au nature le plus radical, sur un même terroir d'altitude.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gumiel",
+        "burgos",
+        "altitude",
+        "nouvelle-vague",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-gumiel-de-izan",
+      "nom": "Gumiel de Izán",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "850–950 m",
+      "sols": "Argilo-calcaires et sables d'altitude",
+      "caracteristiques_rapides": "Village burgalais d'altitude, fief de Portia et Territorio Luthier, aux vieilles vignes complantées de plus en plus valorisées.",
+      "notes_objectives": "Gumiel de Izán est un village burgalais d'altitude, dont les vieilles vignes complantées sont de plus en plus valorisées. Situé autour de huit cent cinquante à neuf cent cinquante mètres d'altitude, il repose sur des sols argilo-calcaires et sableux d'altitude. Le village abrite Portia, bodega spectaculaire signée Norman Foster du groupe Faustino, et Territorio Luthier, projet parcellaire récent tourné vers les vieilles vignes complantées et l'Albillo. Cette cohabitation illustre la transition de la Ribera vers l'expression du lieu. Les vins de Gumiel de Izán, dominés par le Tinto Fino, bénéficient de l'altitude qui préserve leur fraîcheur. Pour un sommelier, c'est un nom à suivre pour la génération montante de la Ribera burgalaise, qui redécouvre les vieilles vignes complantées et les cépages historiques du secteur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gumiel",
+        "burgos",
+        "altitude",
+        "complantation",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-quintana-del-pidio",
+      "nom": "Quintana del Pidio",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Argilo-calcaires d'altitude, coteaux calcaires",
+      "caracteristiques_rapides": "Village burgalais d'altitude, fief de Cillar de Silos et Hornillos Ballesteros, aux vieilles vignes et à l'Albillo réputé.",
+      "notes_objectives": "Quintana del Pidio est un village burgalais d'altitude aux vieilles vignes réputées, notamment pour l'Albillo. Situé autour de huit cent cinquante à neuf cent vingt mètres d'altitude, il repose sur des coteaux argilo-calcaires d'altitude. Le village est le fief de Cillar de Silos, domaine familial réputé pour sa régularité et son travail sur l'Albillo Mayor, et de Hornillos Ballesteros. Les vieilles vignes de Tinto Fino y côtoient les parcelles blanches, sur des sols calcaires bien exposés. Les vins de Quintana del Pidio se distinguent par leur équilibre et leur fraîcheur, gage de l'altitude. Pour un sommelier, c'est un nom à connaître pour de bons rapports qualité-prix et pour illustrer l'intérêt croissant de la rive burgalaise pour l'Albillo, aux côtés du Tinto Fino classique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "quintana-del-pidio",
+        "burgos",
+        "altitude",
+        "albillo",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-aranda-de-duero",
+      "nom": "Aranda de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–900 m",
+      "sols": "Argilo-calcaires et sables, réseau de calados médiévaux",
+      "caracteristiques_rapides": "Capitale de la Ribera burgalaise, célèbre pour son immense réseau de bodegas souterraines médiévales, fief de Torremilanos et Milú.",
+      "notes_objectives": "Aranda de Duero est la capitale de la Ribera burgalaise, célèbre pour son immense réseau de bodegas souterraines médiévales creusées sous la ville. Situé autour de huit cents à neuf cents mètres d'altitude, le secteur repose sur des sols argilo-calcaires et sableux. La ville abrite un patrimoine unique de caves creusées entre le XIIe et le XVIIIe siècle, témoignage de l'ancienneté de la tradition viticole locale. Elle est le fief de Torremilanos, grand domaine converti à la biodynamie, et de projets plus récents comme Milú. Les vins du secteur d'Aranda, dominés par le Tinto Fino, bénéficient de l'altitude qui préserve leur fraîcheur. Pour un sommelier, Aranda est un nom à connaître pour son patrimoine souterrain exceptionnel et pour son rôle de capitale de la rive burgalaise, entre tradition et biodynamie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aranda",
+        "burgos",
+        "calados",
+        "historique",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-fuentenebro",
+      "nom": "Fuentenebro",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "900–1000 m",
+      "sols": "Sables sur socle calcaire, très haute altitude",
+      "caracteristiques_rapides": "Village le plus haut de la DO au sud de Burgos, vignes de sable préphylloxériques, terroir de fraîcheur exploité par Pago de los Capellanes (Fuentenebro).",
+      "notes_objectives": "Fuentenebro est l'un des villages les plus hauts de la Ribera, au sud de la province de Burgos, terroir de fraîcheur par excellence. Situé entre neuf cents et mille mètres d'altitude, il repose sur des sols de sable sur socle calcaire, qui abritent de précieuses vignes préphylloxériques franches de pied. Cette très haute altitude et ces sols sableux donnent des vins d'une fraîcheur et d'une acidité remarquables, à rebours de la puissance des Riberas de la vallée basse. Pago de los Capellanes y a établi un projet sur les coteaux hauts de Fuentenebro, attiré par ce potentiel de fraîcheur. Les vins de Fuentenebro, dominés par le Tinto Fino, se distinguent par leur tension et leur finesse. Pour un sommelier, c'est un nom à suivre pour raconter le virage de la Ribera vers l'altitude, avec des vins tendus issus de vignes de sable préphylloxériques, encore rares mais très prometteurs.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "fuentenebro",
+        "burgos",
+        "altitude",
+        "sables",
+        "prephylloxerique",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-fompedraza-paramo",
+      "nom": "Fompedraza — Páramo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "880–950 m",
+      "sols": "Argilo-calcaires du páramo d'altitude",
+      "caracteristiques_rapides": "Páramo élevé de la rive vallisoletane, terroir de fraîcheur exploité par Briego et Celeste (Torres).",
+      "notes_objectives": "Fompedraza est un páramo d'altitude de la rive vallisoletane, terroir de fraîcheur recherché. Situé autour de huit cent quatre-vingts à neuf cent cinquante mètres d'altitude, il repose sur des sols argilo-calcaires du plateau, pauvres et bien drainés. Cette altitude élevée, sur le páramo qui domine la vallée, préserve l'acidité naturelle et ralentit la maturation du Tinto Fino. Le secteur est exploité par Briego, domaine familial appuyé sur des vieilles vignes, et par Celeste, le projet de la famille Torres tourné vers l'altitude. Les vins de Fompedraza se distinguent par leur fraîcheur et leur équilibre. Pour un sommelier, c'est un nom à connaître pour illustrer le rôle des páramos élevés de la rive vallisoletane dans la recherche de fraîcheur, un enjeu devenu central pour la Ribera contemporaine.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "fompedraza",
+        "valladolid",
+        "paramo",
+        "altitude",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-pinel-de-arriba-paramo",
+      "nom": "Piñel de Arriba — Páramo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "880–950 m",
+      "sols": "Argilo-calcaires du páramo, sols pauvres d'altitude",
+      "caracteristiques_rapides": "Páramo d'altitude de la rive vallisoletane, terroir frais exploité par Valtravieso, l'un des points hauts de la DO.",
+      "notes_objectives": "Piñel de Arriba est un páramo d'altitude de la rive vallisoletane, parmi les points les plus hauts de la Ribera. Situé autour de huit cent quatre-vingts à neuf cent cinquante mètres d'altitude, il repose sur des sols argilo-calcaires du plateau, pauvres et d'altitude. Cette position élevée, sur le páramo, donne des vignes fraîches et tardives, dont le Tinto Fino conserve une belle acidité. Le secteur est le fief de Valtravieso, domaine qui a fait de l'altitude son argument principal, avec des vignes proches de neuf cents mètres. Les vins de Piñel se distinguent par leur fraîcheur et leur équilibre, gage de l'altitude. Pour un sommelier, c'est un nom à connaître pour illustrer le potentiel des páramos élevés de la rive vallisoletane, où la hauteur compense la chaleur estivale et préserve la tension des vins.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "pinel",
+        "valladolid",
+        "paramo",
+        "altitude",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-castrillo-de-duero",
+      "nom": "Castrillo de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–880 m",
+      "sols": "Coteaux argilo-calcaires en pente, altitude moyenne-haute",
+      "caracteristiques_rapides": "Village de coteau de la rive vallisoletane, fief de Montecastro et Cepa 21, aux terrasses fraîches et bien exposées.",
+      "notes_objectives": "Castrillo de Duero est un village de coteau de la rive vallisoletane, aux terrasses fraîches et bien exposées. Situé autour de huit cents à huit cent quatre-vingts mètres d'altitude, il repose sur des coteaux argilo-calcaires en pente, à altitude moyenne-haute. Le village est le fief de Montecastro, domaine de coteau appuyé sur des vieilles vignes en terrasses, et de Cepa 21, la seconde maison d'Emilio Moro. L'altitude et l'exposition des coteaux préservent la fraîcheur des vins. Les vins de Castrillo, dominés par le Tinto Fino, se distinguent par leur équilibre entre matière et fraîcheur. Pour un sommelier, c'est un nom à connaître pour proposer des Riberas de coteau bien faites à des prix raisonnables, dans un secteur d'altitude moyenne de la rive vallisoletane.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "castrillo",
+        "valladolid",
+        "coteau",
+        "altitude",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-curiel-de-duero",
+      "nom": "Curiel de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–870 m",
+      "sols": "Coteaux argilo-calcaires dominés par le château",
+      "caracteristiques_rapides": "Village de coteau de la rive vallisoletane, dominé par sa forteresse, fief de Comenge et Legaris.",
+      "notes_objectives": "Curiel de Duero est un village de coteau de la rive vallisoletane, dominé par sa forteresse médiévale. Situé autour de huit cents à huit cent soixante-dix mètres d'altitude, il repose sur des coteaux argilo-calcaires bien exposés. Le village est le fief de Comenge, domaine familial converti au biologique, et de Legaris, bodega du groupe Codorníu pionnière des vins de village dans la Ribera. La position de coteau et l'altitude modérée donnent des vins équilibrés. Les vins de Curiel, dominés par le Tinto Fino, se distinguent par leur régularité. Pour un sommelier, c'est un nom à connaître pour situer des domaines fiables de la rive vallisoletane, et pour évoquer, avec Legaris, l'émergence de la notion de vin de village dans l'appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "curiel",
+        "valladolid",
+        "coteau",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-valbuena-de-duero",
+      "nom": "Valbuena de Duero",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Valladolid",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Cabernet-Sauvignon",
+        "Merlot"
+      ],
+      "altitude": "700–780 m",
+      "sols": "Terrasses de galets et argilo-calcaires en bord de Duero",
+      "caracteristiques_rapides": "Village de la Milla de Oro en bord de fleuve, siège de Vega Sicilia et de Lleiroso : terroir historique du grand Tinto Fino de garde.",
+      "notes_objectives": "Valbuena de Duero est un village de la Milla de Oro, en bord de fleuve, siège de Vega Sicilia. Situé autour de sept cents à sept cent quatre-vingts mètres d'altitude, il repose sur des terrasses de galets roulés et des sols argilo-calcaires en bord de Duero. Le village est indissociable de Vega Sicilia, fondée là en 1864, dont le vignoble d'un seul tenant s'étend sur ces terrasses de fleuve où le Tinto Fino côtoie les cépages bordelais. Bodegas Lleiroso y est également installée, sur des vieilles vignes. Les vins de Valbuena se distinguent par leur profondeur et leur capacité de garde, dans le style historique du grand Tinto Fino. Pour un sommelier, c'est un nom-clé de la Milla de Oro, à associer directement à Vega Sicilia et au berceau du grand vin de garde ribérien.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "milla-de-oro",
+        "valbuena",
+        "valladolid",
+        "vega-sicilia",
+        "prov-valladolid"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-olmedillo-de-roa",
+      "nom": "Olmedillo de Roa",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–870 m",
+      "sols": "Argilo-calcaires et sables du secteur de Roa",
+      "caracteristiques_rapides": "Village du secteur qualitatif de Roa, aux coteaux calcaires, fief de Pagos de Matanegra.",
+      "notes_objectives": "Olmedillo de Roa est un village du secteur qualitatif de Roa, sur la rive burgalaise. Situé autour de huit cents à huit cent soixante-dix mètres d'altitude, il repose sur des sols argilo-calcaires et sableux caractéristiques du secteur de Roa. Le village bénéficie de la réputation des coteaux calcaires de la rive burgalaise et abrite Pagos de Matanegra. Les vieilles vignes de Tinto Fino y donnent des vins de bonne facture, dans un secteur réputé pour la qualité de ses terroirs. Les vins d'Olmedillo se distinguent par leur équilibre. Pour un sommelier, c'est un nom à connaître pour proposer des Riberas fiables à bon rapport qualité-prix, dans le secteur de Roa qui compte parmi les plus qualitatifs de la rive burgalaise.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "roa",
+        "burgos",
+        "coteau",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-mambrilla-de-castrejon",
+      "nom": "Mambrilla de Castrejón",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "800–860 m",
+      "sols": "Argilo-calcaires et coteaux du secteur de Roa",
+      "caracteristiques_rapides": "Village burgalais du secteur de Roa, fief de Vizcarra, aux vieilles vignes de Tinto Fino.",
+      "notes_objectives": "Mambrilla de Castrejón est un village burgalais du secteur de Roa, aux vieilles vignes de Tinto Fino. Situé autour de huit cents à huit cent soixante mètres d'altitude, il repose sur des coteaux argilo-calcaires du secteur de Roa. Le village est le fief de Vizcarra, domaine réputé pour ses Tinto Fino charnus issus de vieilles vignes. Les coteaux calcaires et l'altitude modérée donnent des vins denses et équilibrés. Les vins de Mambrilla, dominés par le Tinto Fino, se distinguent par leur matière généreuse. Pour un sommelier, c'est un nom à connaître pour situer Vizcarra et proposer des Riberas modernes et charpentées, dans le secteur qualitatif de Roa sur la rive burgalaise.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "roa",
+        "burgos",
+        "vieilles-vignes",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-berlangas-de-roa",
+      "nom": "Berlangas de Roa",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "820–880 m",
+      "sols": "Argilo-calcaires d'altitude du secteur de Roa",
+      "caracteristiques_rapides": "Village d'altitude du secteur de Roa, fief d'O. Fournier, aux coteaux frais et bien drainés.",
+      "notes_objectives": "Berlangas de Roa est un village d'altitude du secteur de Roa, sur la rive burgalaise. Situé autour de huit cent vingt à huit cent quatre-vingts mètres d'altitude, il repose sur des sols argilo-calcaires d'altitude, frais et bien drainés. Le village est le fief d'O. Fournier, bodega architecturale au style moderne bien diffusé à l'international. Les coteaux frais et l'altitude préservent l'acidité des vins. Les vins de Berlangas, dominés par le Tinto Fino, se distinguent par leur fraîcheur. Pour un sommelier, c'est un nom à connaître pour situer O. Fournier et proposer des Riberas modernes issues d'un secteur d'altitude de la rive burgalaise, à des prix raisonnables.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "roa",
+        "burgos",
+        "altitude",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-albillo-mayor",
+      "nom": "Albillo Mayor",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Albillo Mayor"
+      ],
+      "altitude": "700–1000 m",
+      "sols": "S'exprime sur sables et calcaires de toute la DO",
+      "caracteristiques_rapides": "Cépage blanc autochtone, parent du Tempranillo, longtemps confiné aux claretes : cœur de la catégorie blanche récente de la Ribera et de sa renaissance qualitative.",
+      "notes_objectives": "L'Albillo Mayor est le cépage blanc autochtone de la Ribera del Duero, longtemps confiné aux claretes et aujourd'hui au cœur de la renaissance qualitative de la région. Il s'exprime sur les sables et les calcaires de toute l'appellation, entre sept cents et mille mètres d'altitude, souvent sur de vieilles vignes complantées avec le Tinto Fino. Découverte majeure : l'Albillo Mayor s'est révélé être l'un des parents du Tempranillo lui-même, ce qui souligne son ancienneté dans la région. Cépage à faible rendement, à maturité précoce, il donne des blancs amples, texturés, à l'acidité modérée, capables d'une belle profondeur lorsqu'ils sont issus de vieilles vignes et élevés avec soin. Longtemps arraché ou relégué à l'assemblage des claretes, il connaît depuis peu une reconnaissance nouvelle : la Ribera a créé une catégorie officielle de blancs, dont il doit constituer au moins trois quarts. Des producteurs comme Dominio del Águila, Callejo ou Goyo García Viadero en ont fait des blancs de terroir remarqués. Pour un sommelier, l'Albillo Mayor est un atout précieux pour surprendre : il permet de proposer un blanc de la Ribera, chose impensable il y a peu, et de raconter la redécouverte d'un patrimoine ampélographique unique. Une belle carte à jouer face à une clientèle curieuse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cepage",
+        "albillo",
+        "transversal",
+        "blancs",
+        "prov-castilla-y-leon"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-el-clarete-de-castilla",
+      "nom": "El Clarete de Castilla",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero (transversal)",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino",
+        "Albillo Mayor"
+      ],
+      "altitude": "700–1000 m",
+      "sols": "Co-fermentation de raisins rouges et blancs des vieilles vignes",
+      "caracteristiques_rapides": "Vin clair historique de Castille, obtenu par co-fermentation de rouge et de blanc dans les vieilles vignes complantées : tradition réhabilitée par Dominio del Águila et Goyo.",
+      "notes_objectives": "Le clarete est un vin clair historique de Castille, obtenu par co-fermentation de raisins rouges et blancs, aujourd'hui réhabilité comme un symbole du renouveau de la Ribera. Il naît des vieilles vignes complantées de toute l'appellation, entre sept cents et mille mètres d'altitude, où le Tinto Fino cohabite dans le même rang avec l'Albillo Mayor et diverses variétés. Traditionnellement, ces vignes étaient vendangées et fermentées ensemble, rouge et blanc mêlés, donnant un vin clair — ni tout à fait rouge, ni rosé — qui constituait le quotidien des vignerons castillans avant la spécialisation autour du grand rouge de garde. Cette tradition a failli disparaître, jugée archaïque et peu prestigieuse. Sa réhabilitation est l'œuvre de vignerons comme Jorge Monzón à Dominio del Águila, dont le Pícaro clarete a montré qu'un tel vin pouvait être fin, complexe et gastronomique, ou Goyo García Viadero. Le clarete est ainsi devenu un emblème de la Ribera de terroir, attachée à ses vieilles vignes complantées et à ses traditions. Pour un sommelier, le clarete est une curiosité de premier ordre : un vin clair au carrefour du rouge et du rosé, chargé d'histoire, à réserver à une clientèle curieuse. Il offre une porte d'entrée inattendue vers le patrimoine viticole castillan.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "clarete",
+        "complantation",
+        "transversal",
+        "tradition",
+        "prov-castilla-y-leon"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-fuentelisendo",
+      "nom": "Fuentelisendo",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Argilo-calcaires d'altitude du sud burgalais",
+      "caracteristiques_rapides": "Village d'altitude du sud burgalais, fief de Prado de Olmedo, aux coteaux frais et bien exposés.",
+      "notes_objectives": "Fuentelisendo est un village d'altitude du sud de la province de Burgos, aux coteaux frais et bien exposés. Situé autour de huit cent cinquante à neuf cent vingt mètres d'altitude, il repose sur des sols argilo-calcaires d'altitude. Le village bénéficie de la fraîcheur que confère l'altitude du sud burgalais et abrite Prado de Olmedo. Les vieilles vignes de Tinto Fino y donnent des vins qui préservent leur acidité malgré le climat continental. Les vins de Fuentelisendo se distinguent par leur équilibre. Pour un sommelier, c'est un nom à connaître pour situer des domaines fiables du sud burgalais, dans un secteur d'altitude qui bénéficie de la fraîcheur, à des prix raisonnables.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "burgos",
+        "altitude",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    },
+    {
+      "id": "es-castillayleon-terr-milagros",
+      "nom": "Milagros",
+      "type": "lieu-dit",
+      "region": "Castilla y León",
+      "sous_region": "Ribera del Duero — Burgos",
+      "pays": "Espagne",
+      "cepages_rois": [
+        "Tinto Fino"
+      ],
+      "altitude": "850–920 m",
+      "sols": "Argilo-calcaires et sables d'altitude du sud burgalais",
+      "caracteristiques_rapides": "Village d'altitude du sud burgalais, fief de Valdubón (Freixenet), aux vignes fraîches et tardives.",
+      "notes_objectives": "Milagros est un village d'altitude du sud de la province de Burgos, aux vignes fraîches et tardives. Situé autour de huit cent cinquante à neuf cent vingt mètres d'altitude, il repose sur des sols argilo-calcaires et sableux d'altitude. Le village bénéficie de la fraîcheur du sud burgalais et abrite Valdubón, la bodega du groupe Freixenet. L'altitude et les sols bien drainés donnent des vins qui préservent leur acidité. Les vins de Milagros, dominés par le Tinto Fino, se distinguent par leur fraîcheur. Pour un sommelier, c'est un nom à connaître pour situer des domaines du sud burgalais, dans un secteur d'altitude aux vignes tardives, complémentaire des villages plus chauds de la vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "burgos",
+        "altitude",
+        "prov-burgos"
+      ],
+      "source": "Recherche web juillet 2026 (riberadelduero.es, spanishwinelover, Tim Atkin 2025, sites producteurs)"
+    }
+  ]
+}

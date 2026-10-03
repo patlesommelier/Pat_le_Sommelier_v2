@@ -1,0 +1,501 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "friuli",
+  "region_label": "Friuli-Venezia Giulia (Italie)",
+  "source_file": "terroirs_friuli.json",
+  "built_at": "2026-07-07",
+  "count": 17,
+  "items": [
+    {
+      "id": "it-friuli-terr-collio-collio-goriziano",
+      "nom": "Collio (Collio Goriziano)",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio (Gorizia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Friulano",
+        "Ribolla Gialla",
+        "Sauvignon",
+        "Pinot Bianco",
+        "Malvasia Istriana"
+      ],
+      "altitude": "~100-250 m",
+      "sols": "ponca (marnes et grès éocènes) sur collines frontalières",
+      "caracteristiques_rapides": "L'appellation-phare des grands blancs italiens : collines de ponca à la frontière slovène, blancs aromatiques, purs et complexes (Friulano, Ribolla, Sauvignon).",
+      "notes_objectives": "Le Collio (Collio Goriziano) est l'appellation-phare des grands blancs italiens et l'un des terroirs les plus réputés du pays. Ces collines douces s'étendent autour de Gorizia, à la frontière slovène — qu'elles franchissent pour former, côté slovène, la Goriška Brda —, dans un amphithéâtre protégé des vents froids par les Alpes Juliennes et rafraîchi par les brises de l'Adriatique toute proche.\n\nLe secret du Collio tient à son sol : la ponca, un flysch éocène de marnes et de grès en couches alternées, qui s'effrite facilement et oblige la vigne à plonger ses racines en profondeur. Ce terroir minéral, joint à un microclimat idéal, donne des blancs d'une pureté, d'une finesse et d'une complexité rares : Friulano (l'ancien Tocai), Ribolla Gialla, Sauvignon, Pinot Bianco, Malvasia Istriana et Chardonnay y atteignent un équilibre remarquable entre fruit, salinité et tension. C'est ici que Mario Schiopetto révolutionna, dès les années 1960, la vinification des blancs italiens, et qu'une constellation de grands domaines (Schiopetto, Villa Russiz, Venica, Borgo del Tiglio, Gravner, Radikon…) a bâti la réputation mondiale de la région. Le Collio produit aussi de bons rouges (Merlot, Cabernet), mais ce sont ses blancs — secs, de macération ou d'assemblage — qui font sa gloire.\n\nTerroir de ponca et de grands blancs, le Collio est le sommet du vin blanc friulan et l'un des plus prestigieux d'Italie. Entre tradition et avant-garde (du blanc technologique au vin orange), il incarne, mieux qu'aucun autre, l'excellence et la diversité du vin du nord-est.\n\nL'histoire du Collio est indissociable des frontières mouvantes de cette terre de confins, longtemps disputée entre l'Italie, l'Autriche et le monde slave : cette identité plurielle se lit dans les noms des vignerons, italiens et slovènes mêlés, et dans une culture du vin sans équivalent. La ponca, en s'effritant, se renouvelle sans cesse en surface, offrant à la vigne un sol vivant et minéral qui marque profondément les vins. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages, les blancs du Collio séduisent par leur équilibre entre richesse et fraîcheur, et les meilleurs se patinent sur une décennie. La région a connu deux révolutions : celle des blancs technologiques dans les années 1960, qui a fait sa réputation, puis celle du vin orange à Oslavia, qui l'a replacée à l'avant-garde mondiale. Cette capacité à conjuguer précision moderne et retour aux sources fait du Collio un terroir unique, où chaque domaine, sur quelques hectares, cisèle des blancs d'auteur d'une grande personnalité.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "collio",
+        "ponca",
+        "blanc",
+        "friulano",
+        "ribolla",
+        "doc"
+      ],
+      "source": "jancisrobinson|grokipedia"
+    },
+    {
+      "id": "it-friuli-terr-friuli-colli-orientali",
+      "nom": "Friuli Colli Orientali",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Friulano",
+        "Ribolla Gialla",
+        "Sauvignon",
+        "Refosco",
+        "Schioppettino",
+        "Pignolo",
+        "Picolit"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "ponca (marnes et grès) sur collines en terrasses",
+      "caracteristiques_rapides": "Le cœur des Colli Orientali : mêmes sols de ponca que le Collio, grands blancs et rouges autochtones (Refosco, Schioppettino, Pignolo), plus les doux (Picolit).",
+      "notes_objectives": "Les Friuli Colli Orientali (« collines orientales du Frioul ») forment, avec le Collio voisin, l'un des deux grands terroirs de collines de la région. Situées dans la province d'Udine, un peu plus à l'intérieur des terres, ces collines partagent avec le Collio le même sol emblématique — la ponca, flysch de marnes et de grès — mais offrent un registre plus large, embrassant aussi bien les grands blancs que les rouges autochtones et les vins doux.\n\nSur ces coteaux en terrasses, entre 100 et 400 mètres d'altitude, le Friulano, la Ribolla Gialla et le Sauvignon donnent des blancs d'une grande profondeur, tandis que les cépages rouges locaux — Refosco dal Peduncolo Rosso, Schioppettino, Pignolo — signent des vins de caractère, longtemps oubliés puis ressuscités. La zone abrite aussi les grands vins doux du Friuli : le Picolit et, à Ramandolo, le Verduzzo. C'est le fief de domaines cultes comme Miani, Le Due Terre ou Ronchi di Cialla, et de grandes maisons comme Livio Felluga. La sous-zone de Rosazzo, autour de son abbaye, en constitue le cœur historique (aujourd'hui DOCG). La diversité des expositions et des micro-terroirs explique la richesse ampélographique de l'appellation.\n\nGrand terroir de ponca aux mille facettes, les Colli Orientali conjuguent blancs d'exception, rouges autochtones et vins doux rares. Aux côtés du Collio, ils forment le sommet qualitatif du Friuli et l'un des terroirs les plus complets d'Italie.\n\nL'histoire viticole des Colli Orientali est ancienne, portée dès le Moyen Âge par les abbayes, dont celle de Rosazzo. Après le phylloxéra et les guerres qui ont ravagé cette terre frontalière, la région a patiemment reconstruit son vignoble, avec des figures comme Livio Felluga. La grande richesse des Colli Orientali tient à leur diversité : selon l'exposition, l'altitude et la nuance des sols de ponca, chaque coteau donne des vins différents, des blancs les plus fins aux rouges les plus structurés. Servis sur des poissons et viandes blanches pour les blancs, sur du gibier et des fromages pour les rouges, sur des desserts pour le Picolit et le Ramandolo, les vins de la zone couvrent un spectre exceptionnel. C'est ici que le Schioppettino, le Pignolo et le Refosco, cépages autochtones menacés, ont été sauvés, faisant des Colli Orientali un conservatoire vivant du patrimoine friulan autant qu'un terroir d'excellence pour les grands blancs.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "ponca",
+        "friulano",
+        "refosco",
+        "doc"
+      ],
+      "source": "wine-searcher|decanter"
+    },
+    {
+      "id": "it-friuli-terr-oslavia",
+      "nom": "Oslavia",
+      "type": "zone (cru)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio (Gorizia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Ribolla Gialla"
+      ],
+      "altitude": "~100-200 m",
+      "sols": "ponca, exposition sud, village frontalier",
+      "caracteristiques_rapides": "Le village-berceau du vin orange : la Ribolla Gialla macérée sur peaux (Gravner, Radikon, La Castellada) y a redéfini le vin blanc, référence mondiale de la macération.",
+      "notes_objectives": "Oslavia est un petit village de collines du Collio, près de Gorizia et de la frontière slovène, devenu un lieu mythique du vin mondial : c'est ici qu'est né, dans les années 1990, le renouveau du vin orange. Sur ce terroir de ponca exposé au sud, marqué par l'histoire tragique de la Première Guerre mondiale, une poignée de vignerons a réinventé le vin blanc en renouant avec des techniques ancestrales.\n\nLe cépage roi d'Oslavia est la Ribolla Gialla, blanc autochtone à la peau épaisse, idéal pour la macération. En la vinifiant comme un rouge — longue macération sur les peaux, sans intrants —, Josko Gravner (inspiré par les amphores géorgiennes), Stanko Radikon et la famille Bensa (La Castellada) ont créé des blancs ambrés, tanniques et d'une complexité vertigineuse, capables de vieillir des décennies. Ces vins de macération, dits « orange », ont acquis un statut culte et inspiré des vignerons du monde entier, de la Slovénie à la Californie. Le consortium Ribolla di Oslavia fédère ces producteurs autour d'une identité forte, où le terroir de ponca et le savoir-faire de la macération donnent des vins uniques, à la croisée de la tradition et de l'avant-garde.\n\nBerceau mondial du vin orange, Oslavia a redéfini le vin blanc à partir de la Ribolla Gialla et de la ponca. Village-cru minuscule mais universellement admiré, il est l'un des lieux les plus influents et les plus fascinants du vin contemporain.\n\nOslavia porte les stigmates de l'histoire : théâtre de combats effroyables durant la Première Guerre mondiale, le village fut entièrement détruit, et un ossuaire monumental y domine aujourd'hui les vignes. C'est sur cette terre meurtrie que la Ribolla Gialla, cépage ancestral du Collio, a trouvé sa plus haute expression. La macération sur peaux, longtemps pratiquée par les grands-mères de la région avant d'être abandonnée, a été réinventée par Gravner et Radikon comme un retour aux sources autant qu'un geste d'avant-garde. Servis sur des viandes blanches, du gibier à plume, des fromages affinés ou une cuisine épicée, les vins orange d'Oslavia demandent de l'aération et du temps, mais offrent une complexité et une longévité rares. Leur couleur ambrée, leurs tanins et leur profondeur en font des vins de méditation qui ont bouleversé la définition même du vin blanc. Oslavia, minuscule sur la carte, est ainsi devenue un nom immense dans le monde du vin, un pèlerinage pour les amateurs du monde entier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "ribolla",
+        "orange",
+        "macere",
+        "cru"
+      ],
+      "source": "flatironwines|decanter"
+    },
+    {
+      "id": "it-friuli-terr-rosazzo",
+      "nom": "Rosazzo",
+      "type": "appellation (DOCG)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Friulano",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Ribolla Gialla"
+      ],
+      "altitude": "~100-280 m",
+      "sols": "ponca minérale autour de l'abbaye de Rosazzo",
+      "caracteristiques_rapides": "DOCG dédiée à un grand blanc d'assemblage minéral, sur les collines de l'abbaye millénaire de Rosazzo : le Terre Alte de Livio Felluga en est l'archétype.",
+      "notes_objectives": "Rosazzo est une DOCG des Colli Orientali, au cœur des collines de ponca qui entourent l'abbaye millénaire de Rosazzo. Ce lieu chargé d'histoire, où les moines cultivaient la vigne depuis le Moyen Âge, est le berceau d'un grand blanc d'assemblage devenu l'une des références de l'Italie.\n\nLe Rosazzo DOCG est un blanc à dominante Friulano, complété de Pinot Bianco, Sauvignon, Ribolla Gialla et Chardonnay, né sur les sols minéraux et bien exposés de la zone. Son archétype est le Terre Alte de Livio Felluga, l'un des plus grands blancs italiens, ample, complexe et de longue garde, qui a démontré qu'un assemblage friulan pouvait rivaliser avec les plus prestigieux. La ponca apporte salinité et tension, tandis que le microclimat préservé favorise une maturité harmonieuse. Le terroir de Rosazzo, longtemps identité informelle, a été consacré par l'obtention de la DOCG, signe de son excellence.\n\nTerroir historique et minéral des Colli Orientali, Rosazzo donne un grand blanc d'assemblage dont le Terre Alte est l'emblème. C'est l'un des sommets qualitatifs du Friuli, ancré autour de son abbaye millénaire. L'abbaye de Rosazzo, perchée sur sa colline, veille depuis plus de mille ans sur ces vignes que les moines ont contribué à façonner. Servi sur des poissons nobles, des viandes blanches ou des fromages, le Rosazzo séduit par son ampleur et sa minéralité, et les meilleures cuvées vieillissent superbement, gagnant en complexité. La consécration en DOCG a reconnu l'excellence d'un terroir longtemps identifié par les seuls initiés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "rosazzo",
+        "docg",
+        "blanc",
+        "assemblage",
+        "terre-alte"
+      ],
+      "source": "wine-searcher|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-terr-carso-carso-kras",
+      "nom": "Carso (Carso-Kras)",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Carso (Trieste)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vitovska",
+        "Malvasia Istriana",
+        "Terrano"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "calcaire karstique (roche mère affleurante), terre rouge",
+      "caracteristiques_rapides": "Le plateau karstique de Trieste : sols calcaires, vents (bora), cépages autochtones Vitovska (blanc) et Terrano (rouge), souvent en macération (Vodopivec, Zidarich).",
+      "notes_objectives": "Le Carso (Carso-Kras en italien et slovène) est un terroir spectaculaire et singulier, sur le plateau karstique qui domine Trieste, à la frontière slovène. Ici, la vigne pousse sur un sol de pierre : le calcaire karstique affleure partout, recouvert par endroits d'une mince couche de terre rouge (la fameuse « terra rossa »), et le vent glacial de la bora balaie régulièrement le plateau.\n\nCe terroir extrême, aride et minéral, est le domaine des cépages autochtones : la Vitovska et la Malvasia Istriana en blanc, le Terrano (une variante du Refosco) en rouge. Sur le calcaire, ces cépages donnent des vins d'une salinité et d'une minéralité incomparables, souvent vinifiés en macération dans la tradition locale. Des vignerons comme Vodopivec, Zidarich, Skerk et Kante, aux caves parfois creusées dans la roche, en ont fait des vins cultes, d'une pureté et d'une tension remarquables. Le Terrano, rouge acidulé et sanguin, accompagne traditionnellement la cuisine triestine. Le Carso est un terroir à part, où l'âpreté du milieu se traduit par une intensité rare.\n\nPlateau calcaire battu par la bora, le Carso donne des vins autochtones (Vitovska, Terrano) d'une minéralité saisissante. C'est l'un des terroirs les plus singuliers et les plus authentiques d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "carso",
+        "vitovska",
+        "terrano",
+        "calcaire",
+        "mineral",
+        "doc"
+      ],
+      "source": "decanter|falstaff"
+    },
+    {
+      "id": "it-friuli-terr-friuli-isonzo",
+      "nom": "Friuli Isonzo",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo (Gorizia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sauvignon",
+        "Chardonnay",
+        "Pinot Grigio",
+        "Friulano"
+      ],
+      "altitude": "~0-50 m",
+      "sols": "graves blanches (rive droite) et argilo-calcaires (rive gauche)",
+      "caracteristiques_rapides": "La plaine alluviale de l'Isonzo, entre brises marines et vents alpins : grands blancs modernes, structurés et sur lies (Vie di Romans, Lis Neris).",
+      "notes_objectives": "Le Friuli Isonzo est un terroir de plaine alluviale, au sud du Collio, façonné par le fleuve Isonzo qui lui a donné son nom. Loin de l'image des grands vins de coteaux, cette plaine a démontré qu'elle pouvait produire des blancs de tout premier plan, au point de rivaliser avec les collines voisines.\n\nLe terroir se divise entre la rive droite (Isonzo destro), aux graves blanches et caillouteuses idéales pour les blancs, et la rive gauche, aux sols plus argilo-calcaires. La proximité de l'Adriatique et les vents alpins créent un microclimat aux fortes amplitudes thermiques, favorable à la maturité aromatique et à la fraîcheur. Sauvignon, Chardonnay, Pinot Grigio et Friulano y donnent des blancs amples, structurés et souvent élevés sur lies, d'une grande précision. C'est le terroir de Vie di Romans, qui a hissé l'Isonzo au rang des plus grands, et de domaines comme Lis Neris ou Ronco del Gelso. La zone produit aussi de bons rouges (Merlot, Refosco). L'Isonzo illustre le potentiel des terroirs de graves pour les blancs de garde.\n\nPlaine de graves entre Alpes et Adriatique, le Friuli Isonzo donne de grands blancs modernes, structurés et précis. Révélé par Vie di Romans, c'est l'un des terroirs de blanc les plus qualitatifs du Friuli.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "isonzo",
+        "sauvignon",
+        "chardonnay",
+        "graves",
+        "doc"
+      ],
+      "source": "vino|grokipedia"
+    },
+    {
+      "id": "it-friuli-terr-cialla",
+      "nom": "Cialla",
+      "type": "sottozona",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Prepotto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schioppettino",
+        "Ribolla Gialla",
+        "Verduzzo",
+        "Picolit",
+        "Refosco"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "ponca dans une vallée reculée et fraîche",
+      "caracteristiques_rapides": "Sous-zone confidentielle des Colli Orientali, sanctuaire des cépages autochtones : berceau du renouveau du Schioppettino (Ronchi di Cialla), rouges poivrés et doux rares.",
+      "notes_objectives": "Cialla est une sous-zone confidentielle des Colli Orientali, nichée dans une petite vallée reculée et fraîche près de Prepotto. Ce sanctuaire préservé, aux sols de ponca, est l'un des hauts lieux des cépages autochtones du Friuli, à l'écart des circuits commerciaux.\n\nC'est ici que la famille Rapuzzi (Ronchi di Cialla) a, dès les années 1970, sauvé de l'oubli le Schioppettino, cépage rouge local alors presque disparu, et l'a hissé au rang de grand vin. La sous-zone Cialla est ainsi dédiée aux cépages traditionnels : Schioppettino et Refosco en rouge, Ribolla Gialla, Verduzzo et Picolit en blanc et en doux. Le microclimat frais de la vallée et les sols de ponca donnent des vins d'une élégance et d'une fraîcheur remarquables, souvent commercialisés après plusieurs années de cave. Le Schioppettino di Cialla, poivré et fin, en est l'emblème. La sous-zone incarne une viticulture patiente, patrimoniale et authentique.\n\nVallée-sanctuaire des cépages autochtones, Cialla a sauvé le Schioppettino et perpétue une viticulture rare et élégante. C'est l'une des sous-zones les plus attachantes des Colli Orientali. Le microclimat frais et l'isolement de la vallée protègent Cialla des excès de chaleur et préservent la fraîcheur des vins. Servis sur des viandes, du gibier ou des fromages pour les rouges, sur des desserts pour les doux, les vins de Cialla séduisent par leur élégance et leur authenticité. La sous-zone, à la production minuscule, reste un secret bien gardé des amateurs de cépages autochtones et de vins de garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "cialla",
+        "sottozona",
+        "schioppettino",
+        "autochtone"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-terr-ramandolo",
+      "nom": "Ramandolo",
+      "type": "appellation (DOCG)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Nimis)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verduzzo Friulano"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "sols marno-gréseux d'altitude, versant alpin",
+      "caracteristiques_rapides": "DOCG de vin doux : le Verduzzo Friulano passerillé, mielleux, légèrement tannique et vif, sur les collines fraîches de Nimis ; grand accord avec le prosciutto de San Daniele.",
+      "notes_objectives": "Ramandolo est une DOCG dédiée au vin doux, sur les collines fraîches et pentues de Nimis, au nord des Colli Orientali, là où la plaine friulane rencontre les premiers reliefs alpins. C'est l'un des plus anciens et des plus typés des vins doux d'Italie.\n\nLe Ramandolo est élaboré à partir du Verduzzo Friulano, cépage blanc autochtone à la peau épaisse, récolté tardivement puis souvent passerillé. Il en résulte un vin doux d'or profond, aux arômes de miel, de fruits secs, de fleurs et d'abricot confit, avec une légère astringence tannique caractéristique qui le distingue des autres vins doux et lui donne de la fraîcheur. Les sols marno-gréseux d'altitude et le climat frais, aux fortes amplitudes, préservent l'acidité et les arômes. Vin de tradition, le Ramandolo accompagne merveilleusement les desserts, les fromages affinés et, localement, le prosciutto de San Daniele. Sa production, confidentielle, en fait une spécialité recherchée.\n\nDOCG de vin doux, Ramandolo perpétue la tradition du Verduzzo passerillé, mielleux et légèrement tannique. C'est l'un des vins doux les plus typés et les plus anciens du Friuli. La forte pente des coteaux de Nimis, parfois vertigineuse, impose une viticulture manuelle et héroïque. Servi sur des pâtisseries, des fromages bleus ou, selon la tradition locale, sur le prosciutto de San Daniele, le Ramandolo séduit par son équilibre entre douceur, fraîcheur et légère astringence. Sa production confidentielle et son caractère unique en font une spécialité recherchée du patrimoine friulan.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "ramandolo",
+        "docg",
+        "verduzzo",
+        "doux",
+        "nimis"
+      ],
+      "source": "wine-searcher|decanter"
+    },
+    {
+      "id": "it-friuli-terr-colli-orientali-del-friuli-picolit",
+      "nom": "Colli Orientali del Friuli Picolit",
+      "type": "appellation (DOCG)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Picolit"
+      ],
+      "altitude": "~100-350 m",
+      "sols": "ponca, cépage à faible rendement (avortement floral)",
+      "caracteristiques_rapides": "DOCG du Picolit, cépage doux rarissime et coûteux : vin de méditation délicat et floral, longtemps prestige des cours européennes, aux rendements infimes.",
+      "notes_objectives": "La DOCG Colli Orientali del Friuli Picolit est dédiée au plus rare et au plus prestigieux des vins doux du Friuli : le Picolit. Ce cépage blanc autochtone, cultivé sur les collines de ponca, est célèbre autant pour la finesse de son vin que pour ses rendements dérisoires.\n\nLe Picolit souffre en effet d'un phénomène naturel d'avortement floral (l'« acinellatura ») qui réduit drastiquement le nombre de baies par grappe : d'où une production minuscule et un vin coûteux. Récolté à maturité puis parfois passerillé, il donne un vin doux délicat et élégant, aux arômes de fleurs, de miel, d'abricot et d'amande, moins liquoreux et plus subtil que d'autres vins doux. Vin de méditation par excellence, le Picolit fut, aux XVIIIe et XIXe siècles, prisé des cours européennes et comparé aux plus grands nectars. Aujourd'hui préservé par une poignée de vignerons, il demeure un joyau confidentiel du patrimoine friulan, à déguster seul ou sur des pâtisseries fines.\n\nDOCG du Picolit, ce terroir perpétue l'un des vins doux les plus rares et les plus raffinés d'Italie. Vin de méditation aux rendements infimes, le Picolit est un trésor historique du Friuli. Le Picolit fut si prisé aux XVIIIe et XIXe siècles qu'il figurait sur les tables des cours de Vienne, de Londres et de Saint-Pétersbourg, comparé aux plus grands vins de dessert d'Europe. Servi seul, en méditation, ou sur des pâtisseries fines et des fromages, il séduit par sa délicatesse plutôt que par la puissance. Sa rareté, due à l'avortement floral, en fait aujourd'hui l'un des vins doux les plus précieux et confidentiels d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "picolit",
+        "docg",
+        "doux",
+        "rare",
+        "meditation"
+      ],
+      "source": "jancisrobinson|wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-prepotto",
+      "nom": "Prepotto",
+      "type": "sottozona",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schioppettino"
+      ],
+      "altitude": "~100-250 m",
+      "sols": "ponca sur collines près de la frontière slovène",
+      "caracteristiques_rapides": "Fief du Schioppettino, autour du village de Prepotto : rouge autochtone poivré et épicé, longtemps oublié puis ressuscité, aujourd'hui identité forte de la zone.",
+      "notes_objectives": "Prepotto est un village des Colli Orientais, près de la frontière slovène, devenu la capitale du Schioppettino. Sur ses collines de ponca, ce cépage rouge autochtone — longtemps menacé de disparition — a retrouvé ses lettres de noblesse et façonne aujourd'hui l'identité de la zone.\n\nLe Schioppettino di Prepotto est reconnu comme une sous-zone spécifique, gage d'authenticité. Le cépage y donne un rouge élégant et racé, marqué par des arômes caractéristiques de poivre noir, de fruits rouges et d'épices, à la trame fraîche et fine, loin des rouges puissants et concentrés. Les sols de ponca et le microclimat des collines frontalières lui confèrent finesse et fraîcheur. Après avoir failli disparaître au XXe siècle, le Schioppettino a été sauvé par des vignerons passionnés (à Cialla puis à Prepotto) et connaît aujourd'hui un beau renouveau, porté par une association de producteurs. Prepotto en est l'épicentre et le gardien.\n\nCapitale du Schioppettino, Prepotto perpétue un rouge autochtone poivré et élégant, sauvé de l'oubli. C'est l'un des terroirs de rouge les plus identitaires des Colli Orientali. Le renouveau du Schioppettino, porté par une association de vignerons de Prepotto, illustre la volonté de préserver l'identité des cépages autochtones face à l'uniformisation. Servi sur des viandes, du gibier à plume ou des fromages, ce rouge poivré et frais séduit par son élégance, à mille lieues des rouges surmûris. Prepotto s'affirme comme le gardien et l'ambassadeur d'un cépage devenu emblème de la finesse friulane.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "prepotto",
+        "schioppettino",
+        "rouge",
+        "autochtone"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-terr-buttrio",
+      "nom": "Buttrio",
+      "type": "commune",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali (Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Friulano",
+        "Sauvignon",
+        "Merlot",
+        "Refosco"
+      ],
+      "altitude": "~100-200 m",
+      "sols": "ponca particulièrement propice aux grands blancs",
+      "caracteristiques_rapides": "Commune de référence des Colli Orientali : ses coteaux de ponca donnent des blancs d'une densité rare, terre des domaines cultes Miani et Meroi.",
+      "notes_objectives": "Buttrio est une commune de référence des Colli Orientali, au sud de la zone, réputée pour la qualité exceptionnelle de ses blancs. Ses coteaux de ponca, particulièrement bien exposés, comptent parmi les plus grands terroirs de blanc du Friuli.\n\nC'est à Buttrio que se trouve Miani, le domaine le plus culte de la région, dont les blancs (Friulano, Sauvignon, Chardonnay) atteignent une intensité et une densité comparées aux plus grands bourgognes. D'autres domaines réputés — Meroi, Bastianich, Girolamo Dorigo — y cultivent aussi la ponca, dont le sol marno-gréseux donne aux blancs une profondeur et une minéralité rares. La commune produit également de beaux rouges (Refosco, Merlot) et des cépages autochtones. La réputation de Buttrio tient à cette conjonction d'un sol d'exception et de vignerons exigeants, qui en ont fait un nom qui compte pour les amateurs de grands blancs.\n\nCommune-cru des Colli Orientali, Buttrio donne des blancs d'une densité rare sur ses coteaux de ponca. Terre du mythique Miani, c'est l'un des terroirs de blanc les plus prestigieux du Friuli. La proximité de Buttrio avec les meilleurs coteaux de ponca explique la concentration de grands domaines sur son territoire. Servis sur des poissons nobles, des viandes blanches ou des fromages, les blancs de Buttrio séduisent par leur densité et leur profondeur, et vieillissent remarquablement. La réputation de la commune, portée par le mythe Miani, en fait un nom de référence pour les amateurs de grands blancs italiens, à l'égal des plus prestigieux crus de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "buttrio",
+        "ponca",
+        "friulano",
+        "miani",
+        "commune"
+      ],
+      "source": "wine-searcher|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-terr-friuli-grave",
+      "nom": "Friuli Grave",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Grave (Pordenone-Udine)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio",
+        "Merlot",
+        "Friulano",
+        "Cabernet"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "graves alluviales (galets) de la grande plaine",
+      "caracteristiques_rapides": "La plus vaste DOC du Friuli, dans la plaine caillouteuse entre Alpes et Adriatique : gros volumes de blancs et rouges accessibles (Pinot Grigio, Merlot), qualité en hausse.",
+      "notes_objectives": "Le Friuli Grave est la plus vaste appellation de la région, couvrant la grande plaine caillouteuse qui s'étend entre les Alpes et l'Adriatique, de part et d'autre du Tagliamento. Son nom vient des « grave », ces sols de galets et d'alluvions déposés par les fleuves, très drainants. Terroir de volume, il produit une large gamme de blancs et de rouges accessibles — Pinot Grigio, Friulano, Merlot, Cabernet, Refosco —, dans un style net et fruité. Longtemps synonyme de production de masse, la zone a vu sa qualité progresser grâce à des producteurs soigneux. Le Pinot Grigio y règne, l'un des vins les plus exportés d'Italie. Vaste plaine de graves, le Friuli Grave fournit l'essentiel du volume régional, dans des vins accessibles et fiables de plus en plus soignés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "grave",
+        "pinot-grigio",
+        "plaine",
+        "volume",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-friuli-aquileia",
+      "nom": "Friuli Aquileia",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Pianura (Aquileia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio",
+        "Refosco",
+        "Friulano"
+      ],
+      "altitude": "~0-30 m",
+      "sols": "sols alluviaux de la plaine côtière (Aquileia romaine)",
+      "caracteristiques_rapides": "DOC de la plaine littorale autour de l'antique Aquileia : blancs et rouges de plaine (Pinot Grigio, Refosco), à l'histoire viticole remontant aux Romains.",
+      "notes_objectives": "Le Friuli Aquileia est une DOC de la plaine littorale, autour de l'antique cité romaine d'Aquileia, dont l'histoire viticole remonte à l'Antiquité. Sur les sols alluviaux de cette plaine proche de la lagune, l'appellation produit des blancs et des rouges de plaine — Pinot Grigio, Friulano, Refosco, Merlot — dans un style accessible et fruité. Le climat, tempéré par la proximité de l'Adriatique, favorise des vins souples et désaltérants. Riche d'un patrimoine historique exceptionnel (Aquileia fut l'une des grandes cités de l'Empire romain), la zone perpétue une tradition viticole millénaire. DOC de la plaine d'Aquileia, à l'histoire romaine, elle offre des blancs et rouges accessibles, témoins d'une viticulture deux fois millénaire.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "aquileia",
+        "pinot-grigio",
+        "plaine",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-friuli-latisana",
+      "nom": "Friuli Latisana",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Pianura (Latisana)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio",
+        "Merlot",
+        "Refosco"
+      ],
+      "altitude": "~0-20 m",
+      "sols": "alluvions de la basse plaine, proche de l'Adriatique",
+      "caracteristiques_rapides": "Petite DOC de la basse plaine, près de la lagune : blancs et rouges de consommation courante (Pinot Grigio, Merlot, Refosco), production confidentielle.",
+      "notes_objectives": "Le Friuli Latisana est une petite DOC de la basse plaine friulane, entre le Tagliamento et l'Adriatique, près de la station balnéaire de Lignano. Sur les sols alluviaux de cette zone littorale, elle produit des blancs et des rouges de consommation courante — Pinot Grigio, Merlot, Refosco, Friulano — dans un style léger et accessible. La proximité de la mer tempère le climat et donne des vins souples et désaltérants. La production, confidentielle et largement locale, reste à l'écart des grands circuits. Petite DOC de la basse plaine, le Friuli Latisana offre des vins simples et accessibles, marqués par la proximité de l'Adriatique. Située sur la route des stations balnéaires de l'Adriatique, la zone reste largement tournée vers une consommation locale et estivale, dans une production discrète et de proximité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "latisana",
+        "plaine",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-friuli-annia",
+      "nom": "Friuli Annia",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Pianura (Annia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio",
+        "Friulano",
+        "Refosco"
+      ],
+      "altitude": "~0-15 m",
+      "sols": "sols argilo-sableux de la plaine littorale",
+      "caracteristiques_rapides": "L'une des plus petites DOC du Friuli, dans la plaine côtière : blancs et rouges de plaine, à l'échelle très locale, influencés par la proximité de la mer.",
+      "notes_objectives": "Le Friuli Annia est l'une des plus petites appellations du Friuli, dans la plaine côtière entre Aquileia et la lagune de Marano. Son nom évoque la Via Annia romaine qui traversait la zone. Sur des sols argilo-sableux de plaine, influencés par la proximité de la mer, elle produit des blancs et des rouges à l'échelle très locale — Pinot Grigio, Friulano, Refosco, Malvasia. Les vins, souples et frais, sont surtout destinés à la consommation régionale. La zone, discrète, perpétue une viticulture de plaine traditionnelle. Minuscule DOC littorale, le Friuli Annia offre des vins de plaine frais et locaux, marqués par l'influence adriatique. Discrète et rarement exportée, l'appellation témoigne de la mosaïque des petits terroirs de la plaine friulane, chacun perpétuant à son échelle une tradition viticole ancienne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "annia",
+        "plaine",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-friuli-doc-regionale",
+      "nom": "Friuli (DOC régionale)",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio",
+        "Friulano",
+        "Ribolla Gialla",
+        "Merlot"
+      ],
+      "altitude": "~0-400 m",
+      "sols": "sols variés sur toute la région (ponca, graves, calcaire)",
+      "caracteristiques_rapides": "Appellation-cadre régionale créée en 2016 pour structurer et valoriser la production friulane, du Pinot Grigio au Friulano, à l'échelle de toute la région.",
+      "notes_objectives": "La DOC Friuli (ou Friuli-Venezia Giulia) est l'appellation-cadre régionale, créée en 2016 pour fédérer et valoriser la production de toute la région sous une bannière commune, à côté des DOC et DOCG plus prestigieuses. Elle couvre une grande diversité de sols — ponca, graves, calcaire — et de cépages, du Pinot Grigio au Friulano en passant par la Ribolla Gialla et le Merlot. Son objectif est de donner une identité claire et une garantie d'origine à la vaste production régionale, notamment pour l'export. Appellation générale, elle englobe des vins de styles et de niveaux variés. Appellation-cadre du Friuli, la DOC régionale structure et promeut l'identité viticole de toute la région. En donnant une bannière commune à toute la région, la DOC Friuli vise à renforcer la visibilité et la lisibilité des vins friulans sur les marchés internationaux, en complément des appellations prestigieuses de collines.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "doc-regionale",
+        "pinot-grigio",
+        "friulano"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-terr-delle-venezie-pinot-grigio",
+      "nom": "Delle Venezie (Pinot Grigio)",
+      "type": "appellation (DOC)",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Régionale (Triveneto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Grigio"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "vastes plaines alluviales du nord-est",
+      "caracteristiques_rapides": "Grande DOC interrégionale (Frioul, Vénétie, Trentin) dédiée au Pinot Grigio : immense production de blancs frais et accessibles, l'un des vins italiens les plus exportés.",
+      "notes_objectives": "La DOC Delle Venezie est une grande appellation interrégionale, à cheval sur le Frioul, la Vénétie et le Trentin, dédiée avant tout au Pinot Grigio. Créée pour encadrer et valoriser ce cépage emblématique du nord-est, elle couvre les vastes plaines alluviales du Triveneto. Le Pinot Grigio y donne des blancs frais, légers et fruités, aux notes d'agrumes et de fleurs, dans un style immédiat et accessible qui a conquis le monde : c'est l'un des vins italiens les plus exportés, notamment vers les États-Unis. Si la production est massive, la DOC vise à garantir une qualité et une origine. Grande DOC du Pinot Grigio du nord-est, Delle Venezie fournit l'un des vins italiens les plus exportés, frais et accessible. Le succès planétaire du Pinot Grigio du nord-est repose sur ce profil frais et facile, mais la DOC vise aussi à en relever le niveau moyen, en encadrant rendements et origine pour distinguer les meilleures cuvées de la production de masse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "friuli",
+        "delle-venezie",
+        "pinot-grigio",
+        "volume",
+        "export",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

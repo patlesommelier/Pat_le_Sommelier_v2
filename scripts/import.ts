@@ -36,6 +36,33 @@ async function upsert(client: pg.PoolClient, table: string, lignes: Ligne[], con
   return lignes.length;
 }
 
+/**
+ * Applique les migrations de supabase/migrations qui ne l'ont pas encore été (suivi dans la table schema_migration).
+ * Une base créée avant ce suivi (0001 collé à la main dans Supabase) est reconnue : 0001 est marquée comme faite.
+ */
+async function migrer(client: pg.PoolClient) {
+  await client.query('create table if not exists schema_migration (nom text primary key, appliquee_le timestamptz not null default now())');
+  const { rows } = await client.query<{ nom: string }>('select nom from schema_migration');
+  const faites = new Set(rows.map((r) => r.nom));
+  if (!faites.size) {
+    const { rows: t } = await client.query("select to_regclass('public.restaurant') as t");
+    if (t[0].t) { await client.query("insert into schema_migration (nom) values ('0001_schema.sql')"); faites.add('0001_schema.sql'); }
+  }
+  const dossier = path.join('supabase', 'migrations');
+  for (const f of fs.readdirSync(dossier).filter((f) => f.endsWith('.sql')).sort()) {
+    if (faites.has(f)) continue;
+    console.log(`Migration ${f}…`);
+    await client.query(fs.readFileSync(path.join(dossier, f), 'utf8'));
+    await client.query('insert into schema_migration (nom) values ($1)', [f]);
+  }
+}
+
+/** Supprime les lignes qui ne figurent plus dans les fichiers (les fichiers de Pat font foi). */
+async function nettoyer(client: pg.PoolClient, table: string, ids: unknown[], filtre = 'true') {
+  const r = await client.query(`delete from ${table} where ${filtre} and not (id = any($1))`, [ids]);
+  if (r.rowCount) console.log(`  ${table} : ${r.rowCount} ligne(s) retirée(s), absentes des fichiers`);
+}
+
 async function main() {
   console.log('Lecture des fichiers de Pat…');
   const { principes, questions } = await importerPrincipes(path.join('data', 'pat', 'principes_pat_V5.xlsx'));
@@ -70,7 +97,8 @@ async function main() {
       vins_relies_a_une_appellation: r.vins.filter((v) => v.appellation_id).length,
       vins_avec_etiquette: r.vins.filter((v) => v.etiquette_url).length,
       accords: r.accords.length,
-      regles: r.regles.length,
+      regles_selection: r.reglesSelection.length,
+      regles_ponctuelles: r.regles.length,
     })),
   };
   console.log(JSON.stringify(bilan, null, 2));
@@ -86,6 +114,7 @@ async function main() {
   const client = await pool.connect();
   try {
     await client.query('begin');
+    await migrer(client);
     await upsert(client, 'principe', principes);
     await upsert(client, 'question_pat', questions, 'numero');
     // Terroirs en deux temps : d'abord sans parent, puis les liens parent → enfant.
@@ -96,6 +125,13 @@ async function main() {
     const tousLiens = [...liens, ...restos.flatMap((r) => r.liens)];
     await upsert(client, 'producteur_terroir', tousLiens, 'producteur_id, terroir_id');
     await upsert(client, 'cuvee', cuvees);
+    // Ménage : terroirs, producteurs et cuvées qui ne sont plus dans les fichiers (ids changés, doublons retirés).
+    const tousProd = [...producteurs, ...restos.flatMap((r) => r.nouveauxProducteurs)];
+    await nettoyer(client, 'cuvee', cuvees.map((c) => c.id));
+    await client.query('delete from producteur_terroir where not ((producteur_id, terroir_id) in (select * from unnest($1::text[], $2::text[])))',
+      [tousLiens.map((l) => l.producteur_id), tousLiens.map((l) => l.terroir_id)]);
+    await nettoyer(client, 'producteur', tousProd.map((p) => p.id));
+    await nettoyer(client, 'terroir', terroirs.map((t) => t.id));
     for (const r of restos) {
       await upsert(client, 'restaurant', [r.restaurant]);
       await upsert(client, 'plat', r.plats);
@@ -119,7 +155,10 @@ async function main() {
           valeurs,
         );
       }
+      await nettoyer(client, 'regle_sommelier', r.regles.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
       await upsert(client, 'regle_sommelier', r.regles);
+      await nettoyer(client, 'regle_selection', r.reglesSelection.map((x) => x.id), `restaurant_id = '${r.restaurant.id}'`);
+      await upsert(client, 'regle_selection', r.reglesSelection);
     }
     await client.query('commit');
     console.log('Import terminé.');

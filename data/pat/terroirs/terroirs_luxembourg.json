@@ -1,0 +1,184 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "luxembourg",
+  "region_label": "Luxembourg",
+  "source_file": "terroirs_luxembourg_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 7,
+  "items": [
+    {
+      "id": "be-luxembourg-terr-cuesta-de-torgny",
+      "nom": "Cuesta de Torgny",
+      "type": "coteau",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Auxerrois",
+        "Pinot Noir",
+        "Chardonnay",
+        "Pinot Blanc"
+      ],
+      "altitude": "env. 220-320 m",
+      "sols": "Argilo-calcaire bajocien (Jurassique moyen), cuesta exposée au sud",
+      "caracteristiques_rapides": "Le seul terroir jurassique de Belgique et le point le plus méridional du pays. Trois vignobles sur un même versant, dont le seul vignoble communal du corpus, et un microclimat qui vaut au village le surnom de petite Provence belge.",
+      "notes_objectives": "Le seul terroir jurassique de Belgique. Partout ailleurs dans le pays, la vigne pousse sur la craie du Crétacé, les sables et grès du Tertiaire, les calcaires carbonifères ou le socle paléozoïque ; ici, et ici seulement, sur une cuesta au sol argilo-calcaire d'âge bajocien, soit le Jurassique moyen. C'est le prolongement direct de la Lorraine, et le même ensemble géologique que celui de la Moselle luxembourgeoise et de ses douze cents hectares, à une trentaine de kilomètres à l'est.\n\nS'y ajoute un microclimat que rien d'autre en Wallonie n'égale. Torgny est le village le plus méridional du pays, adossé au front de cuesta et exposé plein sud, ce qui lui vaut le surnom de petite Provence belge. La réserve naturelle Raymond Mayné, sur les hauteurs, abrite une flore thermophile exceptionnelle qui confirme la singularité climatique du site.\n\nTrois vignobles se partagent ce versant, ce qui fait de Torgny le point le plus dense du corpus belge rapporté à la taille de la commune : le Clos de la Fouchère depuis 1983, le Clos de l'Épinette et le vignoble communal du Poirier du Loup depuis 1990, propriété de la commune de Rouvroy et géré par une coopérative à finalité sociale. La tradition viticole locale est attestée depuis l'époque gallo-romaine, ce qui, avec les coteaux hutois, en fait l'une des deux mémoires viticoles continues de Wallonie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "gaume",
+        "bio",
+        "methode-traditionnelle",
+        "clos-historique"
+      ],
+      "source": "vignoblelepoirierduloup.be ; granderegion.net ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-terr-lorraine-belge-orientale-musson-arlon",
+      "nom": "Lorraine belge orientale (Musson, Arlon)",
+      "type": "secteur",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 250-330 m",
+      "sols": "Calcaires et marnes du Jurassique inférieur, plateaux et vallons ouverts",
+      "caracteristiques_rapides": "Frange sud-est du pays, aux confins des trois frontières. Même ensemble géologique lorrain que la Moselle luxembourgeoise et ses 1 200 hectares, à une trentaine de kilomètres.",
+      "notes_objectives": "La frange sud-est du pays, aux confins de la France et du Grand-Duché, sur les calcaires et marnes du Jurassique inférieur. Le paysage est celui de la Lorraine : plateaux ouverts, vallons larges, villages en pierre claire, à des altitudes de deux cent cinquante à trois cent trente mètres.\n\nL'intérêt du secteur est sa position. Musson se trouve à une trentaine de kilomètres de la Moselle luxembourgeoise, où douze cents hectares sont plantés sur des sols de même famille — calcaires au nord, marnes argileuses au sud. La Gaume orientale est donc la seule zone viticole belge qui prolonge directement un vignoble étranger établi de longue date. Les plantations y sont pourtant récentes et minuscules : soixante-douze ares en 2021, en cépages résistants.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "gaume",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; fr.wikipedia.org"
+    },
+    {
+      "id": "be-luxembourg-terr-vallee-de-la-semois-gaumaise-tintigny-florenville",
+      "nom": "Vallée de la Semois gaumaise (Tintigny, Florenville)",
+      "type": "secteur",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 200-300 m",
+      "sols": "Argilo-calcaires et sables du Jurassique inférieur, cuesta sinémurienne",
+      "caracteristiques_rapides": "La Semois gaumaise coule au pied de la cuesta sinémurienne, dans un paysage de villages en pierre calcaire. Climat sensiblement plus doux que l'Ardenne toute proche, mais vignobles réduits à quelques ares.",
+      "notes_objectives": "La Semois gaumaise coule au pied de la cuesta sinémurienne, dans un paysage de villages en pierre calcaire dont Chassepierre est le plus photographié. Les sols sont des argilo-calcaires et des sables du Jurassique inférieur, à des altitudes de deux cents à trois cents mètres.\n\nLe climat y est sensiblement plus doux que sur le plateau ardennais tout proche — c'est la même faveur climatique qui bénéficie à Torgny, un peu atténuée. Le secteur compte pourtant des vignobles réduits à quelques ares, six à huit au maximum, à Lambermont et à Saint-Vincent. La Gaume compense par le nombre ce qu'elle n'a pas en surface : sur une douzaine d'exploitations dans toute la province, la moitié fait moins de trente ares.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "gaume"
+      ],
+      "source": "clos-de-gueuye.be ; marcvanel.be ; info-lux.com"
+    },
+    {
+      "id": "be-luxembourg-terr-boucle-de-la-semois-ardennaise-rochehaut-bouillon",
+      "nom": "Boucle de la Semois ardennaise (Rochehaut, Bouillon)",
+      "type": "coteau",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 200-380 m",
+      "sols": "Schistes et grès ardennais, versants très pentus au-dessus de la rivière",
+      "caracteristiques_rapides": "L'un des panoramas les plus connus d'Ardenne, où un demi-hectare est planté depuis 2003 sur les hauteurs. Modèle typique des zones difficiles : la vigne s'appuie sur une activité touristique déjà établie.",
+      "notes_objectives": "En aval de la Gaume, la Semois entre en Ardenne et s'encaisse profondément dans les schistes et les grès, dessinant des méandres serrés dominés par des versants très pentus. Celui de Rochehaut, face au village de Frahan, est l'un des panoramas les plus connus du pays.\n\nOn change complètement de contexte par rapport à la Gaume : sols schisteux acides, altitudes de deux cents à trois cent quatre-vingts mètres, pluviométrie ardennaise. Un demi-hectare y est planté depuis 2003 sur les hauteurs, en cépages classiques, adossé à une auberge — modèle typique des zones difficiles, où la vigne n'est viable que parce qu'une activité touristique déjà établie absorbe la production et amortit le risque. C'est la même logique qu'au Château de Bioul, à Saffelberg ou au Domaine du Chapitre, à des échelles très différentes.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "semois"
+      ],
+      "source": "aubergederochehaut.com ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-terr-plateau-ardennais-redu-neufchateau-libramont",
+      "nom": "Plateau ardennais (Redu, Neufchâteau, Libramont)",
+      "type": "secteur",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 400-460 m",
+      "sols": "Schistes et grès acides, sols froids et drainage médiocre",
+      "caracteristiques_rapides": "Quatre cents à quatre cent soixante mètres d'altitude, saison courte, pluviométrie forte : la limite absolue de la culture en Belgique. Trois vignobles seulement, tous plantés entre 2016 et 2020.",
+      "notes_objectives": "La limite absolue de la culture de la vigne en Belgique. Quatre cents à quatre cent soixante mètres d'altitude, sols schisteux et gréseux acides, drainage médiocre, saison végétative courte et pluviométrie forte : rien ici ne plaide pour la vigne.\n\nTrois vignobles s'y sont pourtant installés entre 2016 et 2020 — six ares à Libramont, vingt à Neufchâteau, un hectare et huit à Redu, ce dernier étant le plus grand vignoble ardennais de la province. Les cépages résistants n'y sont pas un confort mais une condition, et encore faut-il qu'ils soient précoces.\n\nCes parcelles ont une valeur documentaire qui dépasse leur production. Avec Jalhay, Bièvre et Chimay, elles forment un réseau de points-tests apparu en moins d'une décennie dans les quatre provinces du sud, et constituent le meilleur indicateur belge du déplacement de la limite de culture.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "vinsdelibramont.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-terr-vallee-de-lourthe-et-de-laisne-rendeux-erezee",
+      "nom": "Vallée de l'Ourthe et de l'Aisne (Rendeux, Erezée)",
+      "type": "secteur",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 200-330 m",
+      "sols": "Schistes et grès famenniens, versants courts, quelques bancs calcaires",
+      "caracteristiques_rapides": "Vallées encaissées entre Famenne calcaire et Ardenne schisteuse, où trois projets collectifs se sont installés depuis 2020 — dont une coopérative annonçant sept hectares, plus grosse ambition de la province.",
+      "notes_objectives": "Des vallées encaissées à la charnière entre la Famenne calcaire et l'Ardenne schisteuse, avec des versants courts sur schistes et grès famenniens, quelques bancs calcaires, et des altitudes de deux cents à trois cent trente mètres.\n\nLe secteur est remarquable moins par sa géologie que par sa dynamique humaine : trois projets collectifs s'y sont installés depuis 2020, dont une coopérative annonçant sept hectares — de loin la plus grosse ambition viticole de la province, qui doublerait à elle seule sa surface plantée. Le mot thier, en wallon, désigne un versant pentu, la même racine que les tiennes du Condroz : le choix du coteau est explicite dans une région où le relief ne manque pas mais où les bonnes expositions sont rares. Le format collectif, ici, sert à mutualiser un savoir-faire absent plutôt que du capital.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ourthe",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "thierdeblier.be ; vigneronsrendeux.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-terr-famenne-calcaire-weris-durbuy",
+      "nom": "Famenne calcaire (Wéris, Durbuy)",
+      "type": "secteur",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 200-300 m",
+      "sols": "Calcaires et schistes famenniens, poudingue affleurant",
+      "caracteristiques_rapides": "Charnière entre Condroz et Ardenne, au relief marqué et aux sols plus variés que le plateau voisin. Wéris est connu pour ses mégalithes en poudingue, uniques en Belgique.",
+      "notes_objectives": "La charnière entre le Condroz et l'Ardenne, dans un secteur au relief marqué et aux sols plus variés que le plateau ardennais voisin : calcaires et schistes famenniens, avec des affleurements de poudingue.\n\nC'est de ce poudingue que sont taillés les dolmens et menhirs de Wéris, uniques en Belgique, qui font du village l'un des sites néolithiques majeurs du pays et l'un des plus beaux villages de Wallonie. Deux vignobles sont installés sur la commune de Durbuy, trente-cinq ares à Wéris et cinquante à Borlon, tous deux récents. La proximité de Durbuy, l'un des pôles touristiques majeurs de l'Ardenne, offre un débouché direct que peu de secteurs de la province peuvent revendiquer. Le contraste avec le plateau ardennais voisin est net : on gagne ici cent mètres d'altitude en moins, des sols calcaires et un relief qui dégage de vraies expositions.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ourthe"
+      ],
+      "source": "marcvanel.be"
+    }
+  ]
+}

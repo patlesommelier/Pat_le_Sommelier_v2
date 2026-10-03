@@ -1,0 +1,441 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "limburg",
+  "region_label": "Limburg",
+  "source_file": "terroirs_limburg_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 16,
+  "items": [
+    {
+      "id": "be-limburg-terr-clos-dopleeuw",
+      "nom": "Clos d'Opleeuw",
+      "type": "lieu-dit",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 90-110 m",
+      "sols": "Limons éoliens profonds (loess) sur socle de marne calcaire",
+      "caracteristiques_rapides": "Le seul vrai clos muré de Belgique : un hectare ceint d'un mur de briques de 1840, pente plein sud à Gors-Opleeuw. Le mur crée un microclimat qui décale le débourrement et écarte le gel de printemps.",
+      "notes_objectives": "Un mur de briques rouges élevé vers 1840, un hectare de coteau plein sud, et le seul clos au sens strict du vignoble belge. La vigne murée est une figure courante en Bourgogne et en Champagne, inexistante ailleurs en Belgique : c'est ce qui fait de ce site un terroir identifiable plutôt qu'une simple parcelle. Le mur n'est pas décoratif. Il emmagasine la chaleur pendant la journée et la restitue la nuit aux rangs qui le longent, il coupe les vents froids et il écarte pratiquement le risque de gel printanier, lequel reste le principal aléa de la viticulture belge. Le différentiel suffit à faire mûrir du Chardonnay à 50°48' de latitude nord, dans des conditions qui ressemblent à celles de la Côte d'Or il y a quelques décennies.\n\nLe sous-sol explique le reste. On est ici sur le plateau de la Hesbaye flamande, couvert de plusieurs mètres de limon éolien déposé par les vents pendant les dernières glaciations, sur un socle de marne calcaire crétacée. Le limon est profond, fertile et surtout capable de retenir l'eau tout en drainant correctement, ce qui limite le stress hydrique sans favoriser la vigueur excessive ; le calcaire sous-jacent apporte la trame acide et la tension recherchées dans les blancs. Cette combinaison, explicitement rapprochée de la Bourgogne blanche, a dicté le choix du Chardonnay planté vers 1994 et resté presque seul sur le site, avec une frange de Pinot Noir.\n\nLa lecture parcellaire est poussée jusqu'au bout : la cuvée prestige du domaine s'appelle Pleistoceen, du nom de l'époque géologique pendant laquelle ces limons se sont accumulés, et elle provient exclusivement des rangs plantés le long du mur, les mieux réchauffés. Le reste du clos donne la cuvée du domaine. Rendements de l'ordre de 27 hl/ha, vendange en une seule fois, élevage d'un an en barriques françaises et en fûts de chêne belge.\n\nL'intérêt du lieu dépasse le domaine qui l'exploite. Servi à l'aveugle, ce Chardonnay a été confondu avec un bourgogne blanc par des dégustateurs de premier plan, ce qui a fait plus pour la crédibilité du vin belge que n'importe quelle campagne institutionnelle. Le clos est aussi devenu un argument d'imitation : plusieurs projets récents de la province revendiquent une parcelle murée.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "clos-historique",
+        "loess",
+        "craie"
+      ],
+      "source": "clos-d-opleeuw.be ; belgianwines.com ; presse spécialisée"
+    },
+    {
+      "id": "be-limburg-terr-coteaux-de-genoelselderen",
+      "nom": "Coteaux de Genoelselderen",
+      "type": "coteau",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "altitude": "env. 100-125 m",
+      "sols": "Limon de couverture sur marne calcaire (craie du Crétacé)",
+      "caracteristiques_rapides": "Cinq parcelles ceinturant le château de Genoelselderen, à Riemst, le long de l'ancienne voie romaine Tongres-Maastricht. Le socle marno-calcaire y a été choisi pour sa parenté bourguignonne.",
+      "notes_objectives": "Cinq parcelles ceinturant le château néoclassique de Genoelselderen, à Riemst, entre Tongres et Maastricht, le long de l'ancienne voie romaine. La configuration — un vignoble d'un seul tenant autour du bâti — est unique en Belgique et permet de presser vite après la cueillette, ce qui compte pour des blancs et des bases de mousseux.\n\nLe sol a été choisi avant les cépages : une nappe de limon de couverture sur un socle de marne calcaire crétacée, la même formation tendre que les carrières souterraines de Riemst et du Sint-Pietersberg voisin. Cette parenté avec la Côte d'Or a été explicitement recherchée : plus de cent clones ont été testés avant de retenir les sélections plantées à partir de 1991, à raison de 4 300 pieds l'hectare — 18 hectares de Chardonnay, 4 de Pinot Noir, un demi-hectare de Pinot Gris. Le secteur bénéficie en outre de l'ombre pluviométrique de l'Ardenne, qui fait de la Hesbaye orientale une des zones les plus sèches du pays.\n\nLes pentes sont douces, entre une centaine et cent vingt-cinq mètres d'altitude, exposées de façon à capter le maximum de lumière sur une saison courte. Le désherbage est mécanique, sans herbicides, mais le site n'est pas certifié en bio. Les meilleures pentes, plantées des vignes les plus âgées, fournissent la cuvée Goud ; les bases d'effervescents, elles, sont récoltées à moins de 40 hl/ha et vinifiées à partir du seul cœur de cuvée.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "craie",
+        "loess"
+      ],
+      "source": "wijnkasteel.com ; wijnimportbart.nl ; test-aankoop.be"
+    },
+    {
+      "id": "be-limburg-terr-clos-du-chateau-de-duras",
+      "nom": "Clos du château de Duras",
+      "type": "lieu-dit",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "env. 60-80 m",
+      "sols": "Sable limoneux sur substrat tertiaire",
+      "caracteristiques_rapides": "Quatre-vingts ares de Riesling plantés dans l'ancien potager muré du château de Duras, près de Saint-Trond. Second clos historique de la Hesbaye flamande, sans gel de printemps grâce au mur.",
+      "notes_objectives": "Quatre-vingts ares plantés dans l'ancien potager muré du château de Duras, au sud de Saint-Trond : après Opleeuw, le second clos historique de la Hesbaye flamande, et le seul consacré au Riesling. Le principe est le même — une enceinte de brique héritée du jardin seigneurial, qui accumule la chaleur, abrite du vent et supprime pratiquement le gel de printemps — mais l'application diffère : ici, l'inclinaison du terrain a été retenue pour optimiser l'angle d'incidence du soleil, et le mur sert surtout à prolonger la saison de maturation, ce dont un Riesling planté à cette latitude a besoin plus que tout.\n\nLes sols sont des sables limoneux sur substrat tertiaire, plus légers et plus filtrants que les loess profonds du plateau de Borgloon : moins de réserve hydrique, une vigueur plus contenue, un profil qui convient au cépage rhénan retenu. La plantation date de 2017, ce qui fait de ce clos un terroir encore jeune, dont on ne connaîtra le potentiel réel qu'avec l'âge des vignes.\n\nLe lieu porte aussi une histoire administrative : au Moyen Âge, le village voisin de Wilderen relevait de la seigneurie de Duras, et c'est de cette dépendance que le domaine exploitant tire son nom. L'ensemble est revendiqué en AOP Haspengouwse wijn, et les visites du clos s'organisent au printemps, pendant la floraison des vergers qui entourent le château.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "clos-historique"
+      ],
+      "source": "gloirededuras.be ; belgianwines.com ; vinetiq.eu"
+    },
+    {
+      "id": "be-limburg-terr-zuidhelling-de-vliermaal",
+      "nom": "Zuidhelling de Vliermaal",
+      "type": "coteau",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Blanc",
+        "Auxerrois"
+      ],
+      "altitude": "env. 70-95 m",
+      "sols": "Limons de plateau sur substrat sableux tertiaire",
+      "caracteristiques_rapides": "Versant sud de Vliermaal, à Kortessem, planté à la fin des années 1980 : l'un des rares coteaux belges à porter des vignes de plus de trente ans. Voué exclusivement à la méthode traditionnelle.",
+      "notes_objectives": "Un versant sud de moins de deux hectares à Vliermaal, hameau de Kortessem, qui a la particularité rare en Belgique de porter des vignes âgées : plantées à la fin des années 1980, elles avaient trente-six ans en 2025. Dans un vignoble national dont l'essentiel date d'après 2000, c'est un point de comparaison précieux : on y observe ce que l'enracinement profond et la régulation naturelle des rendements apportent sous climat frais — des jus plus riches, une acidité plus fine, une régularité que les jeunes plantations n'atteignent pas.\n\nLe sol est un limon de plateau sur substrat sableux tertiaire, à une altitude modeste de soixante-dix à quatre-vingt-quinze mètres, dans la partie centrale de la Hesbaye flamande. L'exposition plein sud compense la latitude, sans donner les surmaturités qui nuiraient à la destination du raisin.\n\nCar ce coteau a une vocation unique : il ne produit que de l'effervescent, en méthode traditionnelle. L'encépagement est champenois élargi — Chardonnay, Pinot Noir, Pinot Gris, Pinot Blanc, Auxerrois et Riesling —, récolté à maturité modérée pour conserver l'acidité des bases, puis longuement élevé sur lattes. C'est l'un des rares sites belges dont toute la production part en bulle, sans gamme tranquille pour absorber les millésimes difficiles, ce qui impose une régularité rare à cette latitude.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "methode-traditionnelle"
+      ],
+      "source": "schorpion.com ; Gault&Millau Wine Guide Belgium"
+    },
+    {
+      "id": "be-limburg-terr-besselkes-grech-et-ellicht-vlijtingen",
+      "nom": "Bèsselkes Grech et Ellicht (Vlijtingen)",
+      "type": "coteau",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier",
+        "Pinot Blanc"
+      ],
+      "altitude": "env. 100-130 m",
+      "sols": "Limons profonds sur marne calcaire",
+      "caracteristiques_rapides": "Deux vignobles nommés au sud-est de Riemst, plantés de 2014 à 2016 : Bèsselkes Grech pour l'effervescent, Ellicht pour les vins tranquilles. Une des rares distinctions parcellaires revendiquées en Flandre.",
+      "notes_objectives": "Deux vignobles nommés sur les coteaux du sud-est de Riemst, plantés en trois vagues de 2014 à 2016. La distinction est intéressante parce qu'elle est fonctionnelle : Bèsselkes Grech, deux hectares, est affecté aux bases d'effervescents — Chardonnay dominant, Pinot Noir, Pinot Meunier — tandis qu'Ellicht, deux hectares et demi, porte les vins tranquilles, Chardonnay et un peu de Pinot Blanc.\n\nLe contexte pédologique est celui du cœur historique de la Hesbaye flamande : des limons profonds sur un socle de marne calcaire, à une altitude de cent à cent trente mètres. Aucun cépage résistant n'y a été planté, ce qui est un choix assumé et minoritaire dans la province. La nomination des parcelles reste rare en Flandre et mérite d'être notée : elle esquisse une lecture parcellaire encore embryonnaire dans le vignoble belge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "methode-traditionnelle"
+      ],
+      "source": "wijndomein-vlijtingen.be"
+    },
+    {
+      "id": "be-limburg-terr-hoenshoven",
+      "nom": "Hoenshoven",
+      "type": "lieu-dit",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 70-95 m",
+      "sols": "Limon sur marne, sous-sol calcaire",
+      "caracteristiques_rapides": "Hameau de Borgloon où les Houben cultivent 25 à 30 cépages sur des terres familiales depuis 1907 : le laboratoire variétal du vignoble belge, entre classiques et PIWI.",
+      "notes_objectives": "Hameau de Borgloon où les Houben cultivent, sur des terres familiales depuis 1907, ce qui est de fait le laboratoire variétal du vignoble belge : vingt-cinq à trente cépages sur six hectares et demi, classiques bourguignons et cépages résistants mêlés, avec de nouveaux assemblages à chaque millésime. L'intérêt du site est moins son sol — limon sur marne, comme tout le plateau de Borgloon — que ce qu'on y apprend sur le comportement des variétés en climat frais.\n\nLe lieu est aussi celui du premier vin de glace belge, obtenu par cryo-extraction et décliné sur le raisin comme sur les fruits du pays de Loon : pomme, poire, fraise, cerise. Certification biologique depuis 2022. La production est revendiquée en IGP Vlaamse landwijn plutôt qu'en AOP Haspengouwse wijn, précisément parce que l'appellation limiterait la liberté d'encépagement qui fait l'identité du lieu.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "piwi",
+        "loess",
+        "bio"
+      ],
+      "source": "hoenshof.be ; belgischewijnbouwers.be ; wijnimportbart.nl"
+    },
+    {
+      "id": "be-limburg-terr-coteaux-de-borgloon-gotem-jesseren-kerniel-haren",
+      "nom": "Coteaux de Borgloon (Gotem, Jesseren, Kerniel, Haren)",
+      "type": "secteur",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Blanc",
+        "Johanniter",
+        "Muscaris"
+      ],
+      "altitude": "env. 70-100 m",
+      "sols": "Limons de plateau sur marne calcaire",
+      "caracteristiques_rapides": "Le cœur historique de la Hesbaye viticole : Borgloon avait dès le Xe siècle une guilde du vin, les Wijnluyden, et une cinquantaine d'hectares de vigne. Reconversion progressive des vergers depuis 2000.",
+      "notes_objectives": "Le cœur historique de la Hesbaye viticole. Dès le Xe siècle, Borgloon abritait une guilde du vin, les Wijnluyden, et le comté de Looz comptait une cinquantaine d'hectares de vigne. La viticulture disparaît au petit âge glaciaire et la région devient le verger de la Belgique ; c'est sur le recul de l'arboriculture, pommiers et poiriers arrachés parcelle par parcelle depuis 2000, que le vignoble s'est reconstitué.\n\nLes hameaux de Gotem, Jesseren, Kerniel et Haren se partagent des limons de plateau sur marne calcaire, entre soixante-dix et cent mètres, avec des expositions variées et de courtes pentes. L'encépagement y est plus hétérogène qu'ailleurs dans la province : à côté du Chardonnay et du Pinot Blanc, on trouve une forte proportion de cépages résistants — Johanniter, Muscaris, Würzer, Muscat Bleu, Dornfelder. La plupart de ces micro-domaines restent hors appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "piwi"
+      ],
+      "source": "belgianwines.com ; closlesramiers.be ; heteenhoornhof.be"
+    },
+    {
+      "id": "be-limburg-terr-wilderen",
+      "nom": "Wilderen",
+      "type": "lieu-dit",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Auxerrois",
+        "Riesling"
+      ],
+      "altitude": "env. 55-80 m",
+      "sols": "Sable limoneux (zandleem)",
+      "caracteristiques_rapides": "Ancienne seigneurie de Duras au sud de Saint-Trond, replantée à partir de 2015 à 4 000 pieds/ha. Zone de vergers en pleine reconversion viticole, exclusivement en blanc.",
+      "notes_objectives": "Village au sud de Saint-Trond qui relevait au Moyen Âge de la seigneurie de Duras, dans une zone de vergers en pleine reconversion viticole. Les sols y sont des sables limoneux — les zandleemgronden qui font la transition entre les loess lourds du plateau de Borgloon et les terres plus légères du nord-ouest de la Hesbaye —, à une altitude modeste de cinquante-cinq à quatre-vingts mètres.\n\nLes premières plantations datent de 2015, à quatre mille pieds l'hectare : Chardonnay, Pinot Gris et Auxerrois, puis Riesling en 2017. Le secteur ne produit que du blanc, tranquille et effervescent, en AOP Haspengouwse wijn. Il illustre bien le modèle dominant de la zone de Saint-Trond, où l'arboriculteur devenu vigneron conserve ses fruits et ouvre son domaine aux visiteurs pendant la floraison des vergers, au printemps.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "source": "gloirededuras.be ; visitlimburg.be"
+    },
+    {
+      "id": "be-limburg-terr-plateau-de-heers-batsheers-klein-gelmen",
+      "nom": "Plateau de Heers (Batsheers, Klein-Gelmen)",
+      "type": "secteur",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 90-120 m",
+      "sols": "Loess épais de plateau",
+      "caracteristiques_rapides": "Extrémité occidentale de la zone viticole hesbignonne, en limite du Brabant flamand et de la province de Liège : plateau limoneux de vergers et de fermes en carré, ouvert à la vigne depuis les années 2010.",
+      "notes_objectives": "L'extrémité occidentale de la zone viticole hesbignonne, en limite du Brabant flamand et de la province de Liège : un plateau de loess épais, entaillé de vallons discrets, occupé par des vergers, des betteraves et de grandes fermes en carré. Le secteur de Batsheers est classé en zone de silence, ce qui dit assez sa densité de population.\n\nC'est l'une des dernières parties de la Hesbaye flamande à s'être ouverte à la vigne : les premières plantations datent de 2014 à Batsheers, de 2008 environ à Klein-Gelmen, sur des surfaces d'un à deux hectares et demi. Le loess de plateau y est profond et homogène, sans le socle marno-calcaire affleurant qui caractérise l'est de la province. Les toponymes gardent trace du paysage ancien : les cartes de l'abbaye de Herkenrode mentionnaient en 1660 « Het Marsenil velt », le champ de l'île marécageuse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "loess",
+        "jeune-domaine"
+      ],
+      "source": "domeinmarsnil.be ; kitsberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-terr-alden-biesen-et-eigenbilzen",
+      "nom": "Alden Biesen et Eigenbilzen",
+      "type": "secteur",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 50-90 m",
+      "sols": "Sable limoneux mêlé de silex et de graviers",
+      "caracteristiques_rapides": "Flancs de la colline de la commanderie d'Alden Biesen et boucle du canal Albert à Eigenbilzen. Quatre hectares concédés par la ville de Bilzen en 2021, premières bouteilles annoncées pour 2026.",
+      "notes_objectives": "Deux sites distincts dans la commune de Bilzen, à la charnière entre la Hesbaye et la Campine. À Eigenbilzen, les parcelles occupent la boucle du canal Albert, sur des sables limoneux mêlés de silex et de graviers — un sol filtrant, plus proche de la logique mosane que du plateau limoneux, planté depuis 2017 en Chardonnay et en Pinots Gris, Blanc et Noir.\n\nLe second site est plus emblématique : quatre hectares sur les flancs ensoleillés de la colline de la commanderie d'Alden Biesen, le plus grand château-commanderie de l'Ordre teutonique dans les anciens Pays-Bas. La ville de Bilzen a lancé en 2021 un appel à candidatures pour y installer un vignoble de qualité, à la fois production et attrait touristique ; les premières bouteilles sont annoncées pour 2026. Le tracé d'une ancienne allée d'accès disparue traverse la vigne et a été restitué.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "source": "montepertini.be ; visitbilzenhoeselt.be ; vrt.be"
+    },
+    {
+      "id": "be-limburg-terr-coteaux-de-tongres",
+      "nom": "Coteaux de Tongres",
+      "type": "secteur",
+      "region": "Limburg",
+      "sous_region": "Haspengouw",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Auxerrois"
+      ],
+      "altitude": "env. 80-110 m",
+      "sols": "Silex mêlé d'argile et de calcaire",
+      "caracteristiques_rapides": "Abords de la plus ancienne ville de Belgique, seule capitale administrative romaine du territoire. Sous-sol chargé de silex, exploité depuis les années 2010 par quelques vignobles récents.",
+      "notes_objectives": "Les abords de Tongres, la plus ancienne ville de Belgique et unique capitale administrative romaine du territoire, ont une valeur documentaire particulière : c'est le secteur auquel on rattache le plus volontiers l'hypothèse d'une viticulture antique en Hesbaye, même si les preuves matérielles manquent.\n\nLa ville a par ailleurs donné son nom au Tongrien, étage régional de l'Oligocène inférieur défini sur les dépôts locaux, ce qui dit assez la nature du sous-sol : des sables et argiles tertiaires, ici surmontés de limons et fortement chargés de silex mêlé de calcaire — la base du discours des vignerons du secteur sur la minéralité. Les altitudes tournent autour de quatre-vingts à cent dix mètres. Les plantations sont récentes, orientées vers le Pinot Noir, le Chardonnay et l'Auxerrois, sur de petites surfaces encore hors appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "haspengouw",
+        "jeune-domaine"
+      ],
+      "source": "eburonestate.com ; hetwijnhuis.nl"
+    },
+    {
+      "id": "be-limburg-terr-terrasses-daldeneik-et-heerenlaak",
+      "nom": "Terrasses d'Aldeneik et Heerenlaak",
+      "type": "terrasse",
+      "region": "Limburg",
+      "sous_region": "Maasvallei Limburg",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Pinot Noir",
+        "Chardonnay",
+        "Riesling"
+      ],
+      "altitude": "env. 25-40 m",
+      "sols": "Graviers et galets mosans épais, coiffés d'une mince nappe de limon chaud",
+      "caracteristiques_rapides": "Versant sud-est en bord de Meuse, à Maaseik : drainage parfait, galets réverbérants, abri du plateau campinois. L'un des points les plus chauds et les plus secs du Benelux, et le cœur de l'AOP transfrontalière.",
+      "notes_objectives": "Le meilleur terroir de graviers du pays, et le seul dont la qualité tienne à une rivière plutôt qu'à un plateau. Au fil du Pléistocène, la Meuse a déposé sur ses berges et ses terrasses moyennes d'épaisses couches de galets et de graviers arrachés à l'Ardenne, recouvertes d'une mince nappe de limon. Le résultat est l'inverse exact du plateau hesbignon : au lieu de plusieurs mètres de limon retenant l'eau, quelques décimètres de terre fine sur un matelas caillouteux qui draine instantanément et restitue la nuit la chaleur emmagasinée dans la journée. La vigne y plonge profond, les rendements s'autorégulent, et la maturité arrive plus tôt que partout ailleurs en Flandre.\n\nLe climat fait le reste. Le secteur est abrité par le plateau campinois, qui le place dans une zone d'ombre pluviométrique : c'est l'un des coins les plus chauds et les plus secs du Benelux, avec des extrêmes amortis par la masse d'eau du fleuve. Ces conditions autorisent, à cette latitude, un encépagement entièrement bourguignon et alsacien — Pinot Blanc, Pinot Gris, Pinot Noir, ce dernier constituant les plantations les plus septentrionales d'Europe pour ce cépage —, complété depuis 2012 par du Chardonnay sur le lieu-dit Heerenlaak, en bord de Meuse près de la halte nautique, et par des sélections récentes de Riesling. Les vins du Maasland se reconnaissent à des acidités fines et à un caractère minéral que les vignerons attribuent aux couches de graviers profondes.\n\nLe site a une antériorité que peu de terroirs belges peuvent revendiquer : autour de l'abbaye d'Aldeneik, fondée au VIIIe siècle par Harlindis et Relindis, on cultivait la vigne vers 750, avant que le refroidissement médiéval et les troubles n'effacent la pratique pour un millénaire.\n\nDepuis 2017, la zone constitue le cœur belge de l'AOP Maasvallei Limburg, première appellation d'origine transfrontalière d'Europe, partagée avec le Limbourg néerlandais : les raisins doivent provenir intégralement de l'aire protégée et y être vinifiés. Rendements plafonnés autour de 50 hl/ha, vendange manuelle. C'est aujourd'hui la vitrine touristique du vignoble mosan, et le seul terroir belge dont les vins circulent régulièrement à l'étranger.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "maasvallei",
+        "terrasse-meuse",
+        "transfrontalier"
+      ],
+      "source": "wijndomein-aldeneyck.be ; baetenvinopolis.be ; wijnhuisbodde.nl"
+    },
+    {
+      "id": "be-limburg-terr-terrasses-de-la-vieille-meuse-dilsen-rotem",
+      "nom": "Terrasses de la Vieille Meuse (Dilsen-Rotem)",
+      "type": "terrasse",
+      "region": "Limburg",
+      "sous_region": "Maasvallei Limburg",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Auxerrois",
+        "Pinot Blanc",
+        "Pinot Gris",
+        "Riesling"
+      ],
+      "altitude": "env. 30-45 m",
+      "sols": "Alluvions et graviers de la Meuse sur substrat sableux",
+      "caracteristiques_rapides": "Berges de la Vieille Meuse à Dilsen-Stokkem, en amont d'Aldeneik : même logique de terrasses graveleuses, tradition de vin de ménage ancienne, reconversion des vergers du Maasland.",
+      "notes_objectives": "En amont d'Aldeneik, les berges de la Vieille Meuse à Dilsen-Stokkem relèvent de la même logique géologique : des alluvions et des graviers déposés par le fleuve sur un substrat sableux, coiffés d'une couche de limon chaud. Le drainage est excellent, la réverbération des galets avance la maturité, et l'abri du plateau campinois maintient le secteur parmi les plus secs de Flandre.\n\nLe Maasland a une tradition de vin de ménage ancienne, antérieure à la viticulture commerciale : on y faisait du vin pour la maison, comme on y plantait des vergers, la fertilité du sol s'y prêtant. Les plantations actuelles suivent l'encépagement de la vallée — Auxerrois, Pinot Blanc, Pinot Gris, Riesling — et donnent des blancs à l'acidité fine. Le secteur est inclus dans l'AOP transfrontalière Maasvallei Limburg, reconnue en 2017, dont l'un des trois initiateurs exploite précisément ici.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "maasvallei",
+        "terrasse-meuse",
+        "transfrontalier"
+      ],
+      "source": "wijndomein-thilesna.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-terr-het-crindael-teuven",
+      "nom": "Het Crindael (Teuven)",
+      "type": "coteau",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Auxerrois",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 130-200 m",
+      "sols": "Limon mince sur craie crétacée très riche en silex et fossiles",
+      "caracteristiques_rapides": "Pente plein sud dans la vallée de la Gulp, où la craie affleure à quelques décimètres. Les toponymes Wiegersberg et Wiegershaeghe attestent une viticulture médiévale dans ces collines.",
+      "notes_objectives": "Une pente exposée plein sud dans la vallée de la Gulp, au hameau de Nurop près de Teuven, au cœur du pays des Fourons. Le sol y est l'exception géologique du Limbourg viticole : sous quelques décimètres de limon, la craie du Crétacé supérieur affleure, chargée de silex et de fossiles — les restes de la mer qui recouvrait la région il y a environ soixante-dix millions d'années. Le vigneron résume volontiers son vin comme un vin de fond marin : c'est le même type de substrat crayeux que celui du bassin de Mons et de la Champagne, mais dans un relief tout autre.\n\nCar on est ici à plus de cent trente mètres d'altitude, dans un paysage de collines, de vallées encaissées et de prairies bocagères qui n'a rien du plateau hesbignon. Deux conséquences : la pluviométrie est nettement plus élevée, ce qui impose un travail intensif du palissage pour limiter les traitements antifongiques ; et la maturité arrive avec une à deux semaines de retard sur la Hesbaye, ce qui affine les acidités.\n\nLe lieu a une mémoire viticole : les toponymes anciens du secteur — Wiegersberg, Wiegershaeghe, littéralement le mont et la haie de la vigne — attestent une culture médiévale sur ces coteaux. La reprise moderne date de 2000, sur environ 2,4 hectares en cépages classiques. Particularité administrative : depuis 2021, la vinification se fait de l'autre côté de la frontière, à Margraten, ce qui écarte de fait le site des appellations belges.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "craie",
+        "clos-historique"
+      ],
+      "source": "pietershofwijn.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-limburg-terr-crutzberg-sint-martens-voeren",
+      "nom": "Crutzberg (Sint-Martens-Voeren)",
+      "type": "coteau",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 140-200 m",
+      "sols": "Limons de couverture sur craie et silex",
+      "caracteristiques_rapides": "Coteau du Crutzberg, dans la vallée du Voer : l'un des plus anciens vignobles fouronnais, sur les hauteurs de l'enclave néerlandophone coincée entre Liège et les Pays-Bas.",
+      "notes_objectives": "Coteau du Crutzberg, dans la vallée du Voer, sur les hauteurs de Sint-Martens-Voeren : l'un des plus anciens vignobles du pays des Fourons, cette enclave néerlandophone rattachée administrativement au Limbourg mais géographiquement coincée entre la province de Liège et les Pays-Bas.\n\nLe contexte est celui de tout le secteur fouronnais : des limons de couverture reposant sur la craie du Crétacé supérieur chargée de silex, des pentes courtes et bien exposées dans des vallées encaissées, et des altitudes de cent quarante à deux cents mètres qui décalent le cycle végétatif par rapport à la Hesbaye. Aucune appellation belge ne couvre l'enclave, si bien que les vins des Fourons sont tous commercialisés hors AOP, quel que soit leur niveau. L'année de plantation et l'encépagement du site ne sont pas documentés publiquement.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "craie"
+      ],
+      "source": "crutzberg.be ; voerstreek.be"
+    },
+    {
+      "id": "be-limburg-terr-vallee-du-voer-a-sint-pieters-voeren",
+      "nom": "Vallée du Voer à Sint-Pieters-Voeren",
+      "type": "secteur",
+      "region": "Limburg",
+      "sous_region": "Voeren (Voerstreek)",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 130-200 m",
+      "sols": "Limons sur craie et silex, pentes courtes bien exposées",
+      "caracteristiques_rapides": "Vallon de la commanderie, entre sources du Voer et bois. Altitude élevée pour la Belgique, vendanges décalées d'une à deux semaines par rapport à la Hesbaye. Parcelles-test et micro-vignobles.",
+      "notes_objectives": "Le vallon de la commanderie, entre les sources du Voer, les étangs et les bois : l'un des paysages les plus visités des Fourons, et un secteur où la vigne reste anecdotique en surface mais s'intègre à une économie de randonnée, de chambres d'hôtes et de gastronomie.\n\nLes conditions sont celles du pays de Herve élargi : limons sur craie et silex, pentes courtes bien exposées, altitudes dépassant les cent trente mètres, pluviométrie élevée. Les vendanges y arrivent avec une à deux semaines de retard sur la Hesbaye, ce qui pousse vers les cépages précoces et les sélections résistantes. Le secteur abrite d'ailleurs une parcelle-test plantée de plusieurs cépages et de plusieurs clones par cépage, dont la vocation est explicitement expérimentale : savoir ce qui pourra être planté ici à mesure que le climat se réchauffe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "voerstreek",
+        "craie",
+        "jeune-domaine"
+      ],
+      "source": "zwaeneberg.com ; belgischewijnbouwers.be ; voerstreek.be"
+    }
+  ]
+}

@@ -1,0 +1,478 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "liguria",
+  "region_label": "Liguria (Italie)",
+  "source_file": "terroirs_liguria.json",
+  "built_at": "2026-07-12",
+  "count": 16,
+  "items": [
+    {
+      "id": "it-liguria-terr-rossese-di-dolceacqua",
+      "nom": "Rossese di Dolceacqua",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Rossese"
+      ],
+      "altitude": "~100-600 m",
+      "sols": "marnes et argiles calcaires des vallées alpines (Val Nervia, Val Verbone), terrasses de pierre sèche",
+      "caracteristiques_rapides": "Le fleuron rouge de la Ligurie et son premier DOC (1972, adoré de Napoléon) : Rossese fin et floral (rose, garrigue), tanins soyeux, avec une logique de crus parcellaires quasi bourguignonne.",
+      "notes_objectives": "Le Rossese di Dolceacqua est le fleuron rouge de la Ligurie et le premier vin de la région à avoir obtenu la DOC, en 1972. Produit à l'extrême ouest, dans les vallées alpines de la Val Nervia et de la Val Verbone, autour du village de Dolceacqua, à quelques kilomètres de la frontière française, il est aussi le rouge le plus admiré d'une région de blancs.\n\nÉlaboré exclusivement à partir du Rossese (aussi appelé Rossese di Ventimiglia), il séduit par une élégance inattendue : robe rubis claire, virant au grenat avec l'âge, arômes de rose, de violette, de fruits rouges frais, de garrigue et d'épices méditerranéennes, bouche fraîche aux tanins soyeux, à l'acidité vive et à cette finale légèrement amère caractéristique. Loin des rouges puissants, c'est un vin de dentelle, d'une finesse presque bourguignonne. La légende veut que Napoléon, l'ayant goûté, en ait fait expédier des barriques à Paris ; le pape Paul III en aurait été également friand. Sur des terrasses vertigineuses soutenues par des murets de pierre sèche, les meilleurs vignerons — Maccario Dringenberg, Terre Bianche, Ka' Manciné, Testalonga — vinifient aujourd'hui parcelle par parcelle (Posaú, Luvaira, Arcagna, Beragna, Curli), révélant une véritable logique de crus. C'est un accord idéal avec le lapin aux olives, les champignons et la cuisine ligure.\n\nLe fleuron rouge de la Ligurie et son premier DOC (1972, adoré de Napoléon) : Rossese fin et floral (rose, garrigue), tanins soyeux, avec une logique de crus parcellaires quasi bourguignonne.\n\nLa renaissance du Rossese di Dolceacqua est l'une des plus belles histoires du vin italien contemporain. Dans une région où la viticulture, longtemps paysanne et morcelée, a massivement reculé au XXe siècle — au profit des serres florales et de l'abandon —, une poignée de vignerons a refusé de laisser mourir ce patrimoine. Ils ont restauré les terrasses, ces « fasce » soutenues par des murets de pierre sèche bâtis à la main au fil des siècles, et repris le travail sur des pentes qui peuvent dépasser 50 % d'inclinaison, où tout se fait à dos d'homme. Surtout, ils ont compris que le Rossese, comme le Nebbiolo ou le pinot noir, était un cépage translateur de terroir : d'où la vinification parcellaire, cru par cru, chaque lieu-dit — le Posaú aux marnes profondes, le Luvaira plus frais et élevé, l'Arcagna aux sols blancs, le Beragna, le Curli — imprimant sa signature. Servi sur la cuisine ligure — le coniglio alla ligure (lapin aux olives et pignons), les plats de champignons, les viandes blanches, les poissons charnus, les fromages de chèvre —, il séduit par son parfum de rose et de garrigue et sa digestibilité remarquable ; les meilleures cuvées se patinent sur cinq à dix ans. Recherché par les sommeliers du monde entier, produit à quelques dizaines de milliers de bouteilles seulement, le Rossese di Dolceacqua est devenu le symbole d'une Ligurie viticole qui, malgré sa taille minuscule, peut atteindre l'excellence mondiale.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "doc",
+        "cru",
+        "reference",
+        "icone"
+      ],
+      "source": "wine-searcher|gamberorosso|carpe-travel"
+    },
+    {
+      "id": "it-liguria-terr-cinque-terre",
+      "nom": "Cinque Terre",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "altitude": "~0-500 m",
+      "sols": "schistes et grès des falaises, terrasses de pierre sèche plongeant dans la mer",
+      "caracteristiques_rapides": "Le vignoble le plus spectaculaire d'Italie (UNESCO) : sur des terrasses vertigineuses au-dessus de la mer, un blanc de Bosco léger, minéral et salin. Viticulture héroïque, 100 % manuelle.",
+      "notes_objectives": "Les Cinque Terre forment le vignoble le plus spectaculaire d'Italie et l'un des paysages viticoles les plus saisissants au monde. Sur la côte escarpée de la Riviera di Levante, cinq villages de pêcheurs accrochés à la falaise — Monterosso, Vernazza, Corniglia, Manarola, Riomaggiore — sont entourés de terrasses vertigineuses plongeant droit dans la mer Ligure, classées au patrimoine mondial de l'UNESCO.\n\nLe vin y repose sur le Bosco (cépage autochtone qui apporte corps et texture), complété d'Albarola et de Vermentino. Sur les sols de schiste et de grès, balayés par les embruns, il donne un blanc léger, frais et minéral, aux arômes d'agrumes, de fruits blancs, de fleurs séchées et d'herbes marines, avec une salinité saisissante — l'accord parfait avec les anchois, les fritures de poisson et la cuisine de la mer. Mais la véritable prouesse est humaine : ces terrasses, soutenues par des milliers de kilomètres de murets de pierre sèche bâtis au fil des siècles, imposent une viticulture entièrement manuelle, où l'on transporte les raisins par monorails ou à dos d'homme. Menacé d'abandon, ce vignoble héroïque a été sauvé par la coopérative et par des vignerons passionnés (Walter De Batté, Possa, Cheo). Boire un Cinque Terre, c'est soutenir un paysage.\n\nLe vignoble le plus spectaculaire d'Italie (UNESCO) : sur des terrasses vertigineuses au-dessus de la mer, un blanc de Bosco léger, minéral et salin. C'est la viticulture héroïque à l'état pur.\n\nLe vignoble des Cinque Terre est autant un monument qu'une exploitation agricole. Ces terrasses, dont les murets de pierre sèche totaliseraient près de sept mille kilomètres — davantage que la Grande Muraille de Chine —, ont été édifiées par des générations de paysans qui ont littéralement sculpté la montagne pour y cultiver la vigne et l'olivier. Le poète Pétrarque, dès le XIVe siècle, célébrait déjà ces vignes accrochées au vide. Mais l'exode rural du XXe siècle a failli tout emporter : les terrasses abandonnées s'effondrent, provoquant glissements de terrain et érosion, menaçant les villages eux-mêmes. La viticulture y est donc devenue un enjeu de survie du paysage, ce qui a motivé la création de la coopérative et l'engagement de vignerons comme Walter De Batté, Possa, Cheo ou Forlini Cappellini. Le travail y est d'une pénibilité extrême : pas de mécanisation possible, des monorails à crémaillère pour transporter les raisins, tout le reste à dos d'homme. Servi bien frais sur les anchois de Monterosso, les fritures de poisson, les fruits de mer ou la cuisine marine, le Cinque Terre séduit par sa légèreté saline. Boire ce vin, c'est participer à la sauvegarde de l'un des paysages les plus émouvants du monde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "bosco",
+        "blanc",
+        "doc",
+        "heroique",
+        "unesco",
+        "icone"
+      ],
+      "source": "wine-searcher|tasteatlas|lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-terr-sciacchetra",
+      "nom": "Sciacchetrà",
+      "type": "style / passito (DOC)",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "altitude": "~0-500 m",
+      "sols": "schistes et grès des terrasses des Cinque Terre",
+      "caracteristiques_rapides": "Le légendaire passito des Cinque Terre (Slow Food) : raisins séchés deux mois sur claies, un liquoreux ambré (miel, abricot, noisette), l'un des vins doux les plus rares d'Italie.",
+      "notes_objectives": "Le Sciacchetrà (prononcer « chah-keh-tra ») est le légendaire vin doux des Cinque Terre, l'un des passito les plus rares et les plus exquis d'Italie, protégé par Slow Food. Produit en quantités infimes sur les terrasses héroïques du parc national, il est un trésor de la gastronomie ligure.\n\nIl est élaboré à partir des mêmes cépages que le Cinque Terre blanc — le Bosco (au moins 40 %), complété d'Albarola et de Vermentino —, dont les raisins, triés grappe par grappe puis baie par baie, sont laissés à sécher naturellement pendant environ deux mois sur des claies, ce qui concentre extraordinairement les sucres et les arômes. Après pressurage, le vin est élevé au moins un an en petits fûts de chêne. Il en résulte un liquoreux à la robe ambrée, d'une grande harmonie, aux arômes de miel, de fruits secs, de confiture d'abricot, d'herbes méditerranéennes, avec des notes sous-jacentes de caramel et de noisette. Riche mais toujours équilibré par une belle fraîcheur, il se déguste seul, en méditation, ou sur les desserts traditionnels ligures et les fromages affinés. Certains, comme Possa, le vieillissent même sous la mer. C'est l'un des grands vins doux méconnus d'Italie.\n\nLe légendaire passito des Cinque Terre (Slow Food) : raisins séchés deux mois sur claies, un liquoreux ambré (miel, abricot, noisette). C'est l'un des vins doux les plus rares d'Italie.\n\nLe Sciacchetrà est un vin de patience et de sacrifice. Il faut environ dix kilos de raisin pour obtenir un seul litre de vin, et chaque étape se fait à la main : la sélection des plus belles grappes sur les terrasses vertigineuses, le tri baie par baie pour n'écarter que les fruits parfaits, la disposition minutieuse sur des claies dans des locaux ventilés, la surveillance quotidienne du séchage pendant des semaines — le moindre champignon peut ruiner un lot. La production totale de l'appellation se compte en quelques milliers de bouteilles, souvent en demi-flacons, ce qui en fait l'un des vins les plus rares d'Italie et explique son prix. Slow Food en a fait un Presidio pour éviter sa disparition. Le nom lui-même viendrait du dialecte « sciacca trà » (« presse et tire »), évoquant la vinification traditionnelle. Servi sur les desserts ligures (les canestrelli, la torta di riso), les fromages affinés, les fromages bleus, ou tout simplement seul, en méditation après le repas, il déploie une palette d'une complexité fascinante : miel, abricot confit, figue, noisette grillée, herbes séchées, avec une fraîcheur qui l'empêche de devenir écœurant. Certains, comme Possa, l'immergent même en mer pour l'affiner. C'est un trésor du patrimoine viticole italien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "sciacchetra",
+        "doux",
+        "passito",
+        "rare",
+        "icone"
+      ],
+      "source": "tasteatlas|laurelevans"
+    },
+    {
+      "id": "it-liguria-terr-pigato",
+      "nom": "Pigato",
+      "type": "cépage",
+      "region": "Liguria",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pigato"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "s'exprime sur les terrasses de la Riviera di Ponente (Valle Arroscia, Albenganese)",
+      "caracteristiques_rapides": "Le blanc emblématique du Ponente : biotype de Vermentino aux baies tachetées (« pigau »), plus herbacé, balsamique et structuré, avec une vraie aptitude à la garde (Bruna, U Baccan).",
+      "notes_objectives": "Le Pigato est le blanc emblématique de la Riviera di Ponente, à l'ouest de la Ligurie, et l'un des cépages les plus fascinants d'Italie. Son nom vient du dialecte ligure « pigau » ou « picau », signifiant « taché », en référence aux petites taches couleur rouille qui apparaissent sur les baies à maturité.\n\nLe Pigato est au cœur de l'un des débats ampélographiques les plus vifs d'Italie : l'analyse ADN a établi qu'il est génétiquement identique au Vermentino (et à la Favorita du Piémont), mais les producteurs ligures refusent catégoriquement l'amalgame, arguant — non sans raison — que le biotype et le terroir en font un vin radicalement différent. Et de fait, le Pigato se distingue : plus intense, plus herbacé et plus structuré que le Vermentino, il déploie des arômes d'herbes méditerranéennes (romarin, thym, sauge), de fruits blancs et jaunes, d'amande, d'agrumes et de notes balsamiques, avec une salinité et une amertume noble caractéristiques. Cultivé presque exclusivement dans la Valle Arroscia et l'arrière-pays d'Albenga et d'Imperia, sur des terrasses de 200 à 400 mètres, il possède une aptitude à la garde inattendue. Bruna, à Ranzo, en est la référence absolue. C'est l'accord parfait avec le pesto, les fruits de mer et les tartes salées ligures.\n\nLe blanc emblématique du Ponente : biotype de Vermentino aux baies tachetées (« pigau »), plus herbacé, balsamique et structuré, avec une vraie aptitude à la garde (Bruna, U Baccan).\n\nLa querelle Pigato-Vermentino est devenue un cas d'école de l'ampélographie italienne. Les analyses microsatellites de l'ADN sont formelles : Pigato, Vermentino et Favorita partagent un profil génétique identique. Pourtant, les producteurs ligures — et bien des dégustateurs — refusent de les confondre, et l'on « s'accorde à ne pas s'accorder », comme le résume Ian d'Agata. Car la réalité du verre est têtue : le Pigato de la Valle Arroscia, cultivé sur des terrasses d'altitude où le Vermentino n'a historiquement jamais été planté, produit des vins d'une intensité, d'une amertume noble et d'une richesse balsamique sans équivalent. Les sols jouent aussi : les terres blanches et calcaires donnent des vins plus fins et frais, les terres rouges, riches en fer, autour de Ranzo, davantage de corps et de profondeur minérale. Servi sur le pesto genovese, les fruits de mer, les tartes salées aux légumes, les poissons charnus, les viandes blanches rôties ou les fritures, le Pigato séduit par sa personnalité affirmée ; les meilleures cuvées, comme le U Baccan de Bruna — que d'Agata cite parmi les plus belles expressions de la variété — se patinent sur plusieurs années, chose rare pour un blanc de la côte. Le Pigato est ainsi devenu l'un des blancs italiens les plus recherchés des connaisseurs.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "pigato",
+        "cepage",
+        "blanc",
+        "ponente",
+        "autochtone",
+        "reference"
+      ],
+      "source": "winewithseth|lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-terr-colli-di-luni",
+      "nom": "Colli di Luni",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino",
+        "Sangiovese",
+        "Albarola",
+        "Ciliegiolo"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols alluviaux et argilo-calcaires, entre mer Tyrrhénienne et Alpes Apuanes",
+      "caracteristiques_rapides": "Le grand terroir du Vermentino ligure, à la frontière toscane (l'antique Luni) : blancs salins, texturés et de garde (Lunae Etichetta Nera), aux côtés de rouges de Sangiovese.",
+      "notes_objectives": "Les Colli di Luni forment le grand terroir du Vermentino ligure, à l'extrémité orientale de la région, à cheval sur la frontière toscane. Le nom évoque l'antique cité romaine de Luna (Luni), port marmoréen d'où l'on expédiait le marbre de Carrare.\n\nCoincés entre la mer Tyrrhénienne et les Alpes Apuanes, ces coteaux bénéficient d'un microclimat idéal : sols alluviaux et argilo-calcaires, brises marines salines, amplitudes thermiques marquées. Le Vermentino y atteint son sommet ligure : un blanc structuré, salin et texturé, aux arômes d'agrumes, de fruits blancs, d'herbes méditerranéennes et de fleurs, doté d'une réelle profondeur et d'une aptitude à la garde rare pour ce cépage. Les Cantine Lunae Bosoni, avec leur Etichetta Nera couronnée de Tre Bicchieri, en ont fait l'un des grands blancs d'Italie, aux côtés d'Ottaviano Lambruschi (Costa Marina) et de Santa Caterina. La DOC produit aussi des rouges, assemblages de Sangiovese (par proximité toscane) et de Ciliegiolo ligure, fragrants et équilibrés. C'est un accord idéal avec les trofie al pesto, les fruits de mer et les poissons grillés.\n\nLe grand terroir du Vermentino ligure, à la frontière toscane (l'antique Luni) : blancs salins, texturés et de garde (Lunae Etichetta Nera), aux côtés de rouges de Sangiovese.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "blanc",
+        "doc",
+        "reference"
+      ],
+      "source": "wine-searcher|laurelevans"
+    },
+    {
+      "id": "it-liguria-terr-riviera-ligure-di-ponente",
+      "nom": "Riviera Ligure di Ponente",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pigato",
+        "Vermentino",
+        "Rossese",
+        "Ormeasco"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "terrasses argilo-calcaires et rocheuses de la Riviera occidentale",
+      "caracteristiques_rapides": "La plus grande DOC ligure, de Gênes à Vintimille : Pigato et Vermentino en blanc, Ormeasco et Rossese en rouge, avec cinq sous-zones (Albenganese, Riviera dei Fiori, Finalese…).",
+      "notes_objectives": "La Riviera Ligure di Ponente est la plus grande appellation de Ligurie, s'étendant sur toute la côte occidentale, de l'ouest de Gênes jusqu'à Vintimille et la frontière française — soit environ 115 communes réparties sur les provinces d'Imperia, de Savone et de Gênes.\n\nElle repose principalement sur deux blancs : le Pigato (le plus caractéristique, herbacé et structuré) et le Vermentino (plus marin et frais), qui doivent représenter au moins 95 % des cuvées varietales. En rouge, elle produit de l'Ormeasco (le nom local du Dolcetto) et du Rossese. La DOC reconnaît cinq sous-zones — Albenganese (autour d'Albenga), Finalese (autour de Finale Ligure), Riviera dei Fiori (la plus vaste, autorisée à utiliser tous les cépages), et d'autres —, qui traduisent la diversité des terroirs. Sur les terrasses argilo-calcaires et rocheuses, souvent en altitude et face à la mer, les cépages expriment cette salinité et cette intensité aromatique qui font la signature ligure. Des domaines comme Bruna, BioVio, Laura Aschero, Durin ou Punta Crena en sont les fers de lance. C'est un accord idéal avec les fruits de mer, le pesto et la cuisine de la Riviera.\n\nLa plus grande DOC ligure, de Gênes à Vintimille : Pigato et Vermentino en blanc, Ormeasco et Rossese en rouge, avec cinq sous-zones (Albenganese, Riviera dei Fiori, Finalese…).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "vermentino",
+        "doc",
+        "blanc",
+        "rouge"
+      ],
+      "source": "wine-searcher|winewithseth"
+    },
+    {
+      "id": "it-liguria-terr-vermentino-ligure",
+      "nom": "Vermentino ligure",
+      "type": "cépage",
+      "region": "Liguria",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino"
+      ],
+      "altitude": "~0-400 m",
+      "sols": "s'exprime sur les sols argilo-calcaires côtiers, sous influence marine",
+      "caracteristiques_rapides": "Le blanc de la Riviera : Vermentino salin, minéral et vif (agrumes, herbes méditerranéennes), compagnon idéal du pesto et des fruits de mer, sommet dans les Colli di Luni.",
+      "notes_objectives": "Le Vermentino est le blanc de la Riviera par excellence, le cépage le plus planté de Ligurie et sa carte de visite. On le retrouve tout le long de la côte, des Colli di Luni à l'est jusqu'au Ponente à l'ouest, où il côtoie le Pigato.\n\nCépage résolument méditerranéen (on le retrouve aussi en Sardaigne, en Corse et sur la côte toscane), il s'épanouit dans les vignobles côtiers, où les brises marines et les sols rocheux lui confèrent une minéralité et une salinité inimitables. Il donne des blancs vifs et aromatiques, aux notes d'agrumes (citron, pamplemousse), de pomme verte, de poire et de fruits à noyau, rehaussées de touches florales et d'herbes méditerranéennes, avec une belle acidité et cette signature saline qui évoque la mer toute proche. Plus léger et plus marin que le Pigato, il est aussi plus immédiat, même si ses meilleures expressions — dans les Colli di Luni — peuvent gagner en texture et en profondeur. C'est le compagnon idéal de la cuisine ligure : trofie al pesto, fruits de mer, poissons grillés, fritures et focaccia. Un blanc de plaisir et de gastronomie.\n\nLe blanc de la Riviera : Vermentino salin, minéral et vif (agrumes, herbes méditerranéennes), compagnon idéal du pesto et des fruits de mer, sommet dans les Colli di Luni.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "vermentino",
+        "cepage",
+        "blanc",
+        "marin",
+        "reference"
+      ],
+      "source": "tasteatlas|italiancookingandliving"
+    },
+    {
+      "id": "it-liguria-terr-rossese",
+      "nom": "Rossese",
+      "type": "cépage",
+      "region": "Liguria",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Rossese"
+      ],
+      "altitude": "~100-600 m",
+      "sols": "s'exprime sur les marnes calcaires des vallées de l'extrême ouest",
+      "caracteristiques_rapides": "Le grand rouge autochtone de Ligurie : robe claire, arômes de rose, violette, fruits rouges et garrigue, tanins souples et finale légèrement amère, d'une finesse presque bourguignonne.",
+      "notes_objectives": "Le Rossese est le grand cépage rouge autochtone de la Ligurie, et pratiquement le seul qui compte dans cette région de blancs. Il est cultivé principalement dans la province d'Imperia, à l'extrême ouest, où il donne le Rossese di Dolceacqua.\n\nSa singularité tient à sa finesse : loin des rouges méridionaux puissants, il donne des vins à la robe rubis claire, légers à moyennement corsés, aux arômes envoûtants de rose, de violette, de fruits rouges (cerise, framboise), d'herbes méditerranéennes et d'épices, parfois avec une note terreuse. En bouche, il séduit par son acidité rafraîchissante, ses tanins souples et sa finale légèrement amère, typique. Cette élégance lui vaut des comparaisons avec le pinot noir ou les vins de Bourgogne. Il se boit volontiers jeune, sur son fruit, mais les meilleures cuvées — notamment les vinifications parcellaires de Dolceacqua — gagnent en complexité après quelques années, développant des notes de fleurs séchées et d'épices. Sa polyvalence à table est remarquable : il accompagne aussi bien le lapin aux olives et les champignons que des poissons charnus.\n\nLe grand rouge autochtone de Ligurie : robe claire, arômes de rose, violette, fruits rouges et garrigue, tanins souples et finale légèrement amère, d'une finesse presque bourguignonne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "rossese",
+        "cepage",
+        "rouge",
+        "autochtone",
+        "dolceacqua"
+      ],
+      "source": "tasteatlas|carpe-travel"
+    },
+    {
+      "id": "it-liguria-terr-golfo-del-tigullio-e-portofino",
+      "nom": "Golfo del Tigullio & Portofino",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Riviera di Levante (GE)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino",
+        "Bianchetta Genovese",
+        "Ciliegiolo"
+      ],
+      "altitude": "~0-400 m",
+      "sols": "sols argileux et schisteux des collines dominant le golfe",
+      "caracteristiques_rapides": "La Riviera chic de Portofino : Vermentino et Bianchetta Genovese en blanc, Ciliegiolo en rouge, et le fameux Abissi (metodo classico vieilli au fond de la mer, Bisson).",
+      "notes_objectives": "Le Golfo del Tigullio, rebaptisé aussi Portofino, est l'appellation de la Riviera di Levante, cette portion chic de la côte ligure qui abrite Portofino, Santa Margherita, Rapallo et Chiavari — le repaire des yachts et des villégiatures élégantes.\n\nSur les collines dominant le golfe, aux sols argileux et schisteux, l'appellation produit des blancs de Vermentino et de Bianchetta Genovese (le cépage historique de Gênes), frais, salins et floraux, ainsi que des rouges et rosés légers de Ciliegiolo et de Dolcetto, et même des effervescents et un passito. Mais la zone doit surtout sa notoriété au domaine Bisson, de Chiavari, et à son fameux Abissi : un metodo classico dont la seconde fermentation et le vieillissement s'effectuent au fond de la mer, à une soixantaine de mètres de profondeur. Les bouteilles, remontées couvertes de concrétions marines, bénéficient d'une pression, d'une obscurité et d'une température constantes qui affinent la bulle. C'est un accord idéal avec les fruits de mer, les fritures, les anchois et la cuisine de la Riviera, dans un cadre d'exception.\n\nLa Riviera chic de Portofino : Vermentino et Bianchetta Genovese en blanc, Ciliegiolo en rouge, et le fameux Abissi (metodo classico vieilli au fond de la mer, Bisson).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "tigullio",
+        "portofino",
+        "vermentino",
+        "bianchetta",
+        "doc",
+        "sous-marin"
+      ],
+      "source": "wine-searcher|lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-terr-ormeasco-di-pornassio",
+      "nom": "Ormeasco di Pornassio",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Ormeasco (Dolcetto)"
+      ],
+      "altitude": "~300-800 m",
+      "sols": "sols calcaires d'altitude des Alpes ligures, arrière-pays d'Imperia",
+      "caracteristiques_rapides": "Le Dolcetto ligure d'altitude : importé du Piémont au XIVe siècle, l'Ormeasco donne un rouge rubis, chaleureux et fruité, y compris en version rosée (Sciac-trà).",
+      "notes_objectives": "L'Ormeasco di Pornassio est le rouge d'altitude de la Ligurie occidentale, produit dans l'arrière-pays montagneux d'Imperia, sur les contreforts des Alpes ligures, autour du village de Pornassio.\n\nL'Ormeasco n'est autre que le Dolcetto piémontais, importé en Ligurie autour du XIVe siècle et acclimaté depuis des siècles à ces terroirs calcaires d'altitude (300 à 800 mètres), où il a développé une identité propre. Il donne un rouge à la robe rubis, au caractère sec et chaleureux, aux arômes de fruits rouges mûrs, de cerise, d'épices et de notes florales, avec une belle rondeur. Il existe aussi une version rosée, le Sciac-trà (à ne pas confondre avec le Sciacchetrà des Cinque Terre), obtenue par macération courte, ainsi qu'une version Superiore. L'appellation, confidentielle, illustre le lien historique entre la Ligurie et le Piémont voisin, et la diversité insoupçonnée d'une région que l'on croit vouée aux seuls blancs. C'est un accord idéal avec les pâtes farcies, les viandes braisées et la cuisine de l'arrière-pays.\n\nLe Dolcetto ligure d'altitude : importé du Piémont au XIVe siècle, l'Ormeasco donne un rouge rubis, chaleureux et fruité, y compris en version rosée (Sciac-trà).\n\nL'histoire de l'Ormeasco raconte les liens anciens entre la Ligurie et le Piémont : le sel et le poisson remontaient de la côte vers les Langhe, et les cépages redescendaient. Acclimaté depuis sept siècles à ces terroirs d'altitude, le Dolcetto y a développé une identité propre, plus fraîche et plus tendue que dans le Piémont, du fait de l'altitude et des influences maritimes. Servi sur les pâtes farcies, les viandes braisées, les fromages ou la cuisine rustique de l'arrière-pays, il séduit par sa rondeur fruitée. C'est un rouge à découvrir, témoin d'une Ligurie montagnarde et méconnue.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "pornassio",
+        "ormeasco",
+        "dolcetto",
+        "rouge",
+        "doc",
+        "altitude"
+      ],
+      "source": "wine-searcher|laurelevans"
+    },
+    {
+      "id": "it-liguria-terr-bosco",
+      "nom": "Bosco",
+      "type": "cépage",
+      "region": "Liguria",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bosco"
+      ],
+      "altitude": "~0-500 m",
+      "sols": "s'exprime sur les schistes des terrasses des Cinque Terre",
+      "caracteristiques_rapides": "Le cépage roi des Cinque Terre : le Bosco apporte corps, texture et poids aux blancs et au Sciacchetrà, cépage quasi exclusif de ces falaises, assemblé à l'Albarola et au Vermentino.",
+      "notes_objectives": "Le Bosco est le cépage roi des Cinque Terre, une variété blanche autochtone quasi exclusive de ces falaises vertigineuses de la Riviera di Levante. C'est lui qui donne au Cinque Terre blanc et au Sciacchetrà leur colonne vertébrale. Le Bosco apprécie les terrains secs et pentus, ce qui explique son adaptation parfaite aux terrasses de schiste des Cinque Terre. Il apporte aux assemblages le corps, le poids et la texture qui font défaut à ses partenaires : l'Albarola (léger et neutre) et le Vermentino (plus aromatique). Il doit représenter au moins 40 % du Sciacchetrà. Ses vins, marqués par les embruns, présentent une belle minéralité et une salinité caractéristique. Confidentiel et cultivé sur des surfaces minuscules, le Bosco est indissociable du paysage des Cinque Terre, dont il est le témoin ampélographique. C'est un accord idéal avec les anchois, les fritures de poisson et la cuisine de la mer, un cépage rare à découvrir absolument.\n\nLe cépage roi des Cinque Terre : le Bosco apporte corps, texture et poids aux blancs et au Sciacchetrà, cépage quasi exclusif de ces falaises, assemblé à l'Albarola et au Vermentino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "bosco",
+        "cepage",
+        "blanc",
+        "cinque-terre",
+        "autochtone"
+      ],
+      "source": "oldtownexplorer|tasteatlas"
+    },
+    {
+      "id": "it-liguria-terr-colline-di-levanto",
+      "nom": "Colline di Levanto",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Riviera di Levante (SP)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino",
+        "Albarola",
+        "Bosco",
+        "Sangiovese"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "schistes et grès des collines de Levanto, aux portes des Cinque Terre",
+      "caracteristiques_rapides": "Le voisin septentrional des Cinque Terre : blancs de Vermentino, Albarola et Bosco, et rouges de Sangiovese, sur des terrasses proches de la mer, terroir méconnu du Levante.",
+      "notes_objectives": "Les Colline di Levanto forment une petite appellation de la Riviera di Levante, située quelques kilomètres au nord des Cinque Terre, aux portes du célèbre parc national. C'est un terroir méconnu et confidentiel. Sur des terrasses de schiste et de grès proches de la mer, l'appellation produit des blancs à base de Vermentino, d'Albarola et de Bosco — les mêmes cépages que les Cinque Terre voisines —, frais, salins et minéraux, ainsi que des rouges de Sangiovese et de Ciliegiolo, légers et fruités. La proximité de la mer et les sols pentus confèrent aux vins cette signature saline caractéristique du Levante ligure. Restée dans l'ombre de sa prestigieuse voisine, l'appellation illustre la continuité viticole de cette côte escarpée et mérite d'être découverte. C'est un accord idéal avec les fruits de mer, les poissons et la cuisine de la Riviera, chez un terroir discret de la Ligurie orientale.\n\nLe voisin septentrional des Cinque Terre : blancs de Vermentino, Albarola et Bosco, et rouges de Sangiovese, sur des terrasses proches de la mer. C'est un terroir méconnu du Levante.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "levanto",
+        "vermentino",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-terr-val-polcevera",
+      "nom": "Val Polcevera",
+      "type": "appellation (DOC)",
+      "region": "Liguria",
+      "sous_region": "Genova (GE)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bianchetta Genovese",
+        "Vermentino",
+        "Dolcetto",
+        "Ciliegiolo"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "sols argileux et schisteux des vallées autour de Gênes",
+      "caracteristiques_rapides": "L'appellation des collines de Gênes : la Bianchetta Genovese, blanc historique des marins et dockers du port, aux côtés du Vermentino et de rouges légers.",
+      "notes_objectives": "La Val Polcevera est l'appellation des collines qui entourent Gênes, la capitale ligure, dans les vallées de l'arrière-pays de la Superbe. C'est le terroir historique du vin des Génois. Sa spécialité est la Bianchetta Genovese, un cépage blanc autochtone qui donne le vin classique des dockers et des marins du port de Gênes : un blanc léger, frais et désaltérant, longtemps bu au quotidien dans les tavernes du vieux port. L'appellation produit aussi du Vermentino, de l'Albarola en blanc, et des rouges légers (Dolcetto, Sangiovese, Ciliegiolo), ainsi que des effervescents et un passito. Sur les sols argileux et schisteux de ces vallées, les cépages donnent des vins de plaisir, ancrés dans la tradition urbaine et maritime de Gênes. La Val Polcevera est un terroir à découvrir pour la Bianchetta Genovese, mémoire liquide du grand port, sur les fritures, les anchois et la focaccia.\n\nL'appellation des collines de Gênes : la Bianchetta Genovese, blanc historique des marins et dockers du port, aux côtés du Vermentino et de rouges légers.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "val-polcevera",
+        "genova",
+        "bianchetta",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher|laurelevans"
+    },
+    {
+      "id": "it-liguria-terr-lumassina",
+      "nom": "Lumassina",
+      "type": "cépage",
+      "region": "Liguria",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lumassina"
+      ],
+      "altitude": "~0-300 m",
+      "sols": "s'exprime sur les sols côtiers du Savonese (Finale Ligure)",
+      "caracteristiques_rapides": "Curiosité du Savonese : la Lumassina (nommée d'après les escargots qu'elle accompagnait) donne un blanc sec, très vif et léger en alcool, vin de soif minéral et rare.",
+      "notes_objectives": "La Lumassina est l'une des curiosités ampélographiques les plus attachantes de la Ligurie, un cépage blanc autochtone rare cultivé sur la côte du Savonese, autour de Finale Ligure. Son nom viendrait des « lumasse », les escargots, plat traditionnel avec lequel on l'accompagnait volontiers. Elle donne un blanc sec, très vif et léger en alcool, à l'acidité tranchante et à la minéralité marquée, aux arômes discrets d'agrumes, de fleurs blanches et d'herbes. C'est un vin de soif par excellence, désaltérant et facile, longtemps bu au quotidien sur la côte, parfois légèrement pétillant. Longtemps menacée d'oubli, la Lumassina est préservée par quelques vignerons passionnés (Punta Crena, Sancho), qui en font une curiosité recherchée. C'est un accord idéal avec les salades de fruits de mer, les fritures, les anchois et bien sûr les escargots, un blanc rare et authentique du littoral ligure.\n\nCuriosité du Savonese : la Lumassina (nommée d'après les escargots qu'elle accompagnait) donne un blanc sec, très vif et léger en alcool, vin de soif minéral et rare.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "lumassina",
+        "cepage",
+        "blanc",
+        "savona",
+        "rare",
+        "curiosite"
+      ],
+      "source": "lacucinaitaliana|wine-searcher"
+    },
+    {
+      "id": "it-liguria-terr-granaccia-e-cepages-rares",
+      "nom": "Granaccia & cépages rares",
+      "type": "cépage / groupe",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Granaccia",
+        "Mataòssu",
+        "Scimiscià",
+        "Massaretta"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols variés des terrasses ligures",
+      "caracteristiques_rapides": "Le patrimoine menacé : la Granaccia (parente du Grenache), le Mataòssu (Punta Crena), la Scimiscià et la Massaretta, cépages rarissimes sauvés par une poignée de vignerons.",
+      "notes_objectives": "La Ligurie possède un patrimoine ampélographique d'une richesse insoupçonnée — plus de cent variétés autochtones recensées —, mais aussi l'un des plus menacés d'Italie, la viticulture ayant reculé au profit des serres et de l'abandon. Quelques vignerons se battent pour sauver ces trésors. La Granaccia, parente du Grenache (Garnacha), donne dans le Savonese des rouges chaleureux et épicés. Le Mataòssu, quasi éteint, a été sauvé par Punta Crena, qui en fait un blanc salin d'une grande originalité. La Scimiscià (ou Cimixià), variété ancienne du Levante, était au bord de l'extinction dans les années 1990 avant d'être ressuscitée par des passionnés. La Massaretta, rouge des Colli di Luni, ou encore le Buzzetto et le Rossese Bianco complètent cette liste. Ces cépages rares, produits en quantités infimes, sont autant de curiosités précieuses pour les amateurs et les témoins vivants d'une culture viticole millénaire.\n\nLe patrimoine menacé : la Granaccia (parente du Grenache), le Mataòssu (Punta Crena), la Scimiscià et la Massaretta, cépages rarissimes sauvés par une poignée de vignerons.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "granaccia",
+        "mataossu",
+        "scimiscia",
+        "massaretta",
+        "rare",
+        "autochtone",
+        "patrimoine"
+      ],
+      "source": "tasteatlas|lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-terr-liguria-igt-regionales",
+      "nom": "Liguria (IGT régionales)",
+      "type": "appellation (IGT)",
+      "region": "Liguria",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino",
+        "Pigato",
+        "Rossese",
+        "Bosco",
+        "Ciliegiolo"
+      ],
+      "altitude": "~0-600 m",
+      "sols": "sols variés (schistes, marnes, argiles) de toute la Riviera",
+      "caracteristiques_rapides": "Les quatre IGT ligures (Terrazze dell'Imperiese, Colline Savonesi, Colline del Genovesato, Liguria di Levante) : cadre souple pour cuvées d'auteur, macérations et cépages rares.",
+      "notes_objectives": "La Ligurie compte quatre indications géographiques typiques (IGT), qui couvrent, d'ouest en est, l'ensemble de la région : Terrazze dell'Imperiese (province d'Imperia, créée en 2011), Colline Savonesi (province de Savone), Colline del Genovesato (autour de Gênes) et Liguria di Levante (autour de La Spezia, anciennement Golfo dei Poeti). Ces cadres souples offrent aux vignerons une grande liberté, hors des cahiers des charges plus stricts des DOC. Ils accueillent tous les cépages ligures — Vermentino, Pigato, Rossese, Bosco, Ciliegiolo — ainsi que des variétés rares et des cuvées expérimentales. C'est notamment sous ces IGT que sont commercialisées de nombreuses cuvées d'auteur, macérations (comme l'Harmoge de Walter De Batté, chef-d'œuvre de l'œnologie ligure) et vins nature qui sortent du cadre des appellations. Souples et créatives, les IGT ligures sont un espace de liberté précieux, et souvent le refuge des vins les plus intéressants de la région.\n\nLes quatre IGT ligures (Terrazze dell'Imperiese, Colline Savonesi, Colline del Genovesato, Liguria di Levante) : cadre souple pour cuvées d'auteur, macérations et cépages rares.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "liguria",
+        "igt",
+        "souple",
+        "auteur",
+        "macere"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

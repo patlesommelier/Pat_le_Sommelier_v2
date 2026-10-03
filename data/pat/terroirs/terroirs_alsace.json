@@ -1,0 +1,850 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "alsace",
+  "region_label": "Alsace",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_alsace_vPat.xlsx",
+  "built_at": "2026-05-15T08:28:10+00:00",
+  "count": 31,
+  "items": [
+    {
+      "id": "als-alsace",
+      "nom": "Alsace",
+      "type": "appellation_regionale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Pinot Noir",
+        "Muscat",
+        "Sylvaner",
+        "Auxerrois",
+        "Chasselas",
+        "Klevener"
+      ],
+      "altitude": "170-400 m",
+      "sols": "Très diversifiés (granite, gneiss, schistes, calcaires, marnes, grès, volcanique) — ~13 grandes natures de sol",
+      "caracteristiques_rapides": "AOC ~14 000 ha sur le piémont vosgien (Bas-Rhin et Haut-Rhin). Spécificité française : étiquetage par cépage. Mosaïque géologique exceptionnelle. 13 cépages autorisés.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": "Très grande variété",
+      "tags": [
+        "aoc",
+        "regionale",
+        "mosaique",
+        "cepages-multiples"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-alsace-grand-cru",
+      "nom": "Alsace Grand Cru",
+      "type": "mention_transversale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat",
+        "Sylvaner (Zotzenberg)",
+        "Chasselas (Zotzenberg)",
+        "Pinot Noir (Hengst, Kirchberg de Barr)"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Très divers, propres à chaque GC",
+      "caracteristiques_rapides": "Mention pour 51 climats classés Grands Crus (depuis 1975, derniers ajouts 2007). Chaque GC = un cahier des charges propre (cépages autorisés, rendements). Hengst et Kirchberg de Barr autorisent depuis peu le Pinot Noir.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": "Variété de qualité en fonction des producteurs",
+      "tags": [
+        "mention",
+        "grand-cru",
+        "51-climats",
+        "terroir"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-cremant-alsace",
+      "nom": "Crémant d'Alsace",
+      "type": "appellation_effervescente",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Blanc",
+        "Auxerrois",
+        "Pinot Gris",
+        "Pinot Noir",
+        "Riesling",
+        "Chardonnay (effervescent uniquement)"
+      ],
+      "altitude": "170-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC effervescente méthode traditionnelle (~3 800 ha). Premier Crémant français en volume.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": "Quelques très bons producteurs.",
+      "tags": [
+        "aoc",
+        "effervescent",
+        "cremant",
+        "methode-traditionnelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-vendanges-tardives",
+      "nom": "Vendanges Tardives",
+      "type": "mention_transversale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "170-450 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "Mention pour vins de surmaturation (vendanges tardives, raisins concentrés, parfois botrytisés). Sucres résiduels élevés, garde longue. Ne peut concerner que 4 cépages (Ri, Gw, PG, Muscat).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "mention",
+        "vt",
+        "surmaturation",
+        "moelleux-liquoreux"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-sgn",
+      "nom": "Sélection de Grains Nobles",
+      "type": "mention_transversale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "170-450 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "Mention pour vins issus exclusivement de raisins botrytisés (tri grain par grain), critère de sucre minimum élevé. Style liquoreux le plus concentré d'Alsace.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "mention",
+        "sgn",
+        "botrytis",
+        "liquoreux",
+        "tri"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-aoc-communales",
+      "nom": "Alsace Communales / Lieux-dits",
+      "type": "mention_transversale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Pinot Blanc",
+        "Sylvaner",
+        "Pinot Noir"
+      ],
+      "altitude": "170-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "Mention récente (depuis 2011/2022) reconnaissant les communales (13 communes) et lieux-dits hors GC. Permet de revendiquer un terroir précis avec cahier des charges plus exigeant que l'AOC Alsace.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": "Grande variabilité",
+      "tags": [
+        "mention",
+        "communale",
+        "lieu-dit",
+        "terroir",
+        "recente"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-klevener-heiligenstein",
+      "nom": "Klevener de Heiligenstein",
+      "type": "denomination",
+      "region": "Alsace",
+      "sous_region": "Bas-Rhin",
+      "pays": "France",
+      "cepages_rois": [
+        "Savagnin Rose (= Klevener)"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Calcaires marno-gréseux",
+      "caracteristiques_rapides": "Dénomination AOC Alsace ~30 ha sur 5 communes autour de Heiligenstein. Cépage rare : Savagnin Rose (cousin du Savagnin du Jura, distinct du Klevner = Pinot Blanc). Aromatique et épicé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": "Quelques très bons vins",
+      "tags": [
+        "denomination",
+        "klevener",
+        "savagnin-rose",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-edelzwicker-gentil",
+      "nom": "Edelzwicker / Gentil d Alsace",
+      "type": "mention_transversale",
+      "region": "Alsace",
+      "sous_region": "Alsace",
+      "pays": "France",
+      "cepages_rois": [
+        "Assemblage de cépages alsaciens"
+      ],
+      "altitude": "170-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "Mentions pour assemblages : Edelzwicker (assemblage libre) ; Gentil (50% min de cépages \"nobles\" : Ri, Gw, PG, Muscat, vinifiés séparément). Hugel revendique le Gentil.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "mention",
+        "assemblage",
+        "edelzwicker",
+        "gentil"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-rosacker",
+      "nom": "Rosacker",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Hunawihr)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "260-330 m",
+      "sols": "Calcaires dolomitiques (calcaires du Muschelkalk)",
+      "caracteristiques_rapides": "Grand Cru ~26 ha à Hunawihr. Calcaires durs. Le Clos Sainte Hune de Trimbach est une parcelle au cœur du Rosacker — paradoxalement non revendiqué en GC. Mittnacht-Klack, Sipp Mack.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "riesling",
+        "hunawihr",
+        "clos-ste-hune"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-geisberg",
+      "nom": "Geisberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Ribeauvillé)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "250-350 m",
+      "sols": "Marno-calcaires (Muschelkalk supérieur)",
+      "caracteristiques_rapides": "Grand Cru ~8,5 ha à Ribeauvillé. Riesling presque exclusivement. Pente très raide. Trimbach (cuvée Geisberg), Kientzler, Robert Faller.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "riesling",
+        "ribeauville",
+        "trimbach"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-osterberg",
+      "nom": "Osterberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Ribeauvillé)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris"
+      ],
+      "altitude": "230-350 m",
+      "sols": "Marno-calcaires, marnes du Keuper",
+      "caracteristiques_rapides": "Grand Cru ~25 ha à Ribeauvillé. Voisin du Geisberg. Trimbach utilisait Geisberg et Osterberg pour la cuvée Frédéric Émile.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "ribeauville",
+        "trimbach",
+        "cuvee-frederic-emile"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-kirchberg-ribeauville",
+      "nom": "Kirchberg de Ribeauvillé",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Ribeauvillé)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "250-350 m",
+      "sols": "Marno-calcaires",
+      "caracteristiques_rapides": "Grand Cru ~11 ha à Ribeauvillé. Style minéral et tendu. Référence pour les rieslings et muscats.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "ribeauville",
+        "riesling"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-schoenenbourg",
+      "nom": "Schoenenbourg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Riquewihr)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "265-380 m",
+      "sols": "Marnes du Keuper, gypse",
+      "caracteristiques_rapides": "Grand Cru ~53 ha à Riquewihr. Sols singuliers (gypse). Riesling de référence, longue garde. Hugel, Marcel Deiss, Dopff au Moulin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "riquewihr",
+        "gypse",
+        "riesling",
+        "hugel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-sporen",
+      "nom": "Sporen",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Riquewihr)",
+      "pays": "France",
+      "cepages_rois": [
+        "Gewurztraminer",
+        "Pinot Gris"
+      ],
+      "altitude": "265-360 m",
+      "sols": "Marnes calcaires",
+      "caracteristiques_rapides": "Grand Cru ~24 ha à Riquewihr. Réputé pour les Gewurztraminer et Pinot Gris VT/SGN. Hugel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "riquewihr",
+        "gewurztraminer",
+        "hugel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-schlossberg",
+      "nom": "Schlossberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Kientzheim/Kaysersberg)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "230-350 m",
+      "sols": "Granites des Vosges",
+      "caracteristiques_rapides": "Premier Grand Cru classé d'Alsace (1975), ~80 ha à Kientzheim et Kaysersberg. Granite. Riesling roi. Domaine Weinbach (Cuvée Sainte Catherine, L'Inédit), Paul Blanck, Albert Mann, Trapet.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "kientzheim",
+        "granite",
+        "riesling",
+        "weinbach",
+        "premier-classe"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-furstentum",
+      "nom": "Furstentum",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Kientzheim/Sigolsheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Gewurztraminer",
+        "Riesling",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "260-400 m",
+      "sols": "Calcaires durs",
+      "caracteristiques_rapides": "Grand Cru ~30 ha à Kientzheim et Sigolsheim. Sols calcaires, exposition sud. Gewurztraminer puissant, parcelle des Trois Chemins. Weinbach, Albert Mann, Marcel Deiss.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "kientzheim",
+        "calcaire",
+        "gewurztraminer",
+        "weinbach"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-mambourg",
+      "nom": "Mambourg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Sigolsheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Gewurztraminer",
+        "Pinot Gris"
+      ],
+      "altitude": "230-380 m",
+      "sols": "Calcaires marneux",
+      "caracteristiques_rapides": "Grand Cru ~62 ha à Sigolsheim, exposition plein sud. Climat le plus chaud d'Alsace. Marcel Deiss en cuvée \"complanté\" (mariage de cépages, hors cépage unique).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "sigolsheim",
+        "chaud",
+        "marcel-deiss",
+        "complante"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-sommerberg",
+      "nom": "Sommerberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Niedermorschwihr/Katzenthal)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Pinot Gris",
+        "Gewurztraminer"
+      ],
+      "altitude": "270-400 m",
+      "sols": "Granites des Vosges (arènes)",
+      "caracteristiques_rapides": "Grand Cru ~28 ha à Niedermorschwihr et Katzenthal. Granite, exposition sud-est, pente raide. Riesling iconique de Boxler (Lieu-dit \"Eckberg\" dans le Sommerberg).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "niedermorschwihr",
+        "granite",
+        "riesling",
+        "boxler"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-brand",
+      "nom": "Brand",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Turckheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Pinot Gris",
+        "Gewurztraminer",
+        "Muscat"
+      ],
+      "altitude": "250-380 m",
+      "sols": "Granites",
+      "caracteristiques_rapides": "Grand Cru ~58 ha à Turckheim. Granite, exposition sud. Zind-Humbrecht (parcelles Brand et Heimbourg), Albert Mann.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "turckheim",
+        "granite",
+        "zind-humbrecht"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-hengst",
+      "nom": "Hengst",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Wintzenheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat",
+        "Pinot Noir (récent)"
+      ],
+      "altitude": "270-360 m",
+      "sols": "Calcaires marneux",
+      "caracteristiques_rapides": "Grand Cru ~76 ha à Wintzenheim. Sols calcaires marneux. Premier GC à autoriser le Pinot Noir (depuis 2022). Josmeyer, Zind-Humbrecht, Albert Mann.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "wintzenheim",
+        "calcaire",
+        "pinot-noir-autorise",
+        "josmeyer"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-eichberg",
+      "nom": "Eichberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Eguisheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "220-330 m",
+      "sols": "Marno-calcaires, conglomérats",
+      "caracteristiques_rapides": "Grand Cru ~57 ha à Eguisheim. Léon Beyer, Émile Beyer, Paul Ginglinger.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "eguisheim",
+        "beyer"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-pfersigberg",
+      "nom": "Pfersigberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Eguisheim/Wettolsheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "220-330 m",
+      "sols": "Calcaires durs jurassiques",
+      "caracteristiques_rapides": "Grand Cru ~74 ha à Eguisheim et Wettolsheim. Sols calcaires. Albert Mann, Léon Beyer, Émile Beyer.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "eguisheim",
+        "calcaire",
+        "albert-mann"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-goldert",
+      "nom": "Goldert",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Gueberschwihr)",
+      "pays": "France",
+      "cepages_rois": [
+        "Gewurztraminer",
+        "Muscat",
+        "Pinot Gris",
+        "Riesling"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Calcaires durs jurassiques",
+      "caracteristiques_rapides": "Grand Cru ~46 ha à Gueberschwihr. Réputé pour le Muscat et le Gewurztraminer. Zind-Humbrecht.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "gueberschwihr",
+        "muscat",
+        "zind-humbrecht"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-vorbourg",
+      "nom": "Vorbourg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Rouffach/Westhalten)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "215-330 m",
+      "sols": "Calcaires conglomératiques (\"poudingue\")",
+      "caracteristiques_rapides": "Grand Cru ~73 ha à Rouffach et Westhalten. Le Clos Saint-Landelin (monopole de Muré) en est le climat-vedette.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "rouffach",
+        "mure",
+        "clos-saint-landelin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-pfingstberg",
+      "nom": "Pfingstberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Orschwihr)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "250-380 m",
+      "sols": "Grès, calcaires, marnes",
+      "caracteristiques_rapides": "Grand Cru ~28 ha à Orschwihr. Sols variés (grès et marnes). Dirler-Cadé, Camille Braun.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "orschwihr",
+        "dirler-cade"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-kitterle",
+      "nom": "Kitterlé",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Guebwiller)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat"
+      ],
+      "altitude": "250-380 m",
+      "sols": "Grès, schistes volcaniques",
+      "caracteristiques_rapides": "Grand Cru ~26 ha à Guebwiller. Pente très raide en terrasses. Domaine Schlumberger principal exploitant.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "guebwiller",
+        "schlumberger",
+        "terrasses"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-kessler",
+      "nom": "Kessler",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Guebwiller)",
+      "pays": "France",
+      "cepages_rois": [
+        "Gewurztraminer",
+        "Riesling",
+        "Pinot Gris"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Grès, marnes",
+      "caracteristiques_rapides": "Grand Cru ~28 ha à Guebwiller. Schlumberger principal exploitant.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "guebwiller",
+        "schlumberger"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-rangen",
+      "nom": "Rangen",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Haut-Rhin (Thann/Vieux-Thann)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Pinot Gris",
+        "Gewurztraminer"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Roches volcaniques (tuf, andésite)",
+      "caracteristiques_rapides": "Grand Cru ~19 ha à Thann, le plus méridional et le plus pentu d'Alsace. Sols volcaniques uniques. Référence absolue : Zind-Humbrecht (Clos Saint-Urbain), Schoffit (Clos Saint-Théobald).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "thann",
+        "volcanique",
+        "zind-humbrecht",
+        "clos-saint-urbain",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-zotzenberg",
+      "nom": "Zotzenberg",
+      "type": "grand_cru",
+      "region": "Alsace",
+      "sous_region": "Bas-Rhin (Mittelbergheim)",
+      "pays": "France",
+      "cepages_rois": [
+        "Sylvaner",
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris"
+      ],
+      "altitude": "250-350 m",
+      "sols": "Marnes calcaires",
+      "caracteristiques_rapides": "Grand Cru ~36 ha à Mittelbergheim. Particularité : seul GC à autoriser le Sylvaner (de prestige). Rietsch, Schaller, Boeckel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "grand-cru",
+        "mittelbergheim",
+        "sylvaner-autorise",
+        "rietsch"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "als-clos-sainte-hune",
+      "nom": "Clos Sainte-Hune",
+      "type": "lieu_dit",
+      "region": "Alsace",
+      "sous_region": "Hunawihr (Rosacker)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "260-330 m",
+      "sols": "Calcaires dolomitiques",
+      "caracteristiques_rapides": "Lieu-dit clos de 1,67 ha au cœur du Grand Cru Rosacker. Riesling pur de Trimbach (depuis 1801). Trimbach refuse de revendiquer le GC pour le différencier (mention \"Clos Sainte Hune\" seule). Iconique mondial du Riesling sec.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "trimbach",
+        "iconique-mondial",
+        "riesling",
+        "hors-grand-cru"
+      ],
+      "source": "trimbach|lpv"
+    },
+    {
+      "id": "als-clos-saint-landelin",
+      "nom": "Clos Saint-Landelin",
+      "type": "lieu_dit",
+      "region": "Alsace",
+      "sous_region": "Rouffach (Vorbourg)",
+      "pays": "France",
+      "cepages_rois": [
+        "Riesling",
+        "Gewurztraminer",
+        "Pinot Gris",
+        "Muscat",
+        "Pinot Noir"
+      ],
+      "altitude": "215-330 m",
+      "sols": "Calcaires conglomératiques",
+      "caracteristiques_rapides": "Lieu-dit clos de ~15 ha au cœur du Grand Cru Vorbourg, monopole du Domaine Muré. Tous styles (sec, VT, SGN, Pinot Noir).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "monopole",
+        "mure",
+        "vorbourg"
+      ],
+      "source": "mure|lpv"
+    }
+  ]
+}

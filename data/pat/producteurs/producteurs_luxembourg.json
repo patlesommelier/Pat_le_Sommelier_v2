@@ -1,0 +1,448 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "luxembourg",
+  "region_label": "Luxembourg",
+  "source_file": "producteurs_luxembourg_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 14,
+  "items": [
+    {
+      "id": "be-luxembourg-prod-vignoble-du-poirier-du-loup",
+      "nom": "Vignoble du Poirier du Loup",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Torgny (Rouvroy)",
+      "pays": "Belgique",
+      "cepages": [
+        "Auxerrois",
+        "Pinot Noir",
+        "Pinot Blanc",
+        "Chardonnay",
+        "Müller-Thurgau",
+        "Muscat"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le vignoble le plus méridional de Belgique, et le seul vignoble communal du corpus. En 1990, un groupe d'amis plante 93 ares sur les hauteurs de Torgny — pinot noir, auxerrois, chardonnay, pinot blanc et rivaner — avant de chercher un repreneur quelques années plus tard. En 1999, la commune de Rouvroy achète le terrain et en confie la gestion à la coopérative à finalité sociale Ecoculture. Le vignoble atteint aujourd'hui 2,13 hectares, après une extension de 2 700 pieds en 2021.\n\nLe terroir est unique dans le corpus belge : une cuesta au sol argilo-calcaire d'âge bajocien, donc du Jurassique moyen. Partout ailleurs en Belgique, la vigne pousse sur du Crétacé, du Tertiaire, du Carbonifère ou du socle paléozoïque ; ici seulement, on est sur les calcaires jurassiques qui prolongent la Lorraine. À quoi s'ajoute le microclimat gaumais, qui vaut à Torgny le surnom de petite Provence belge et son classement parmi les plus beaux villages de Wallonie.\n\nLa production tourne autour de cinq mille bouteilles de crémant biologique par an, vinifiées dans une cave installée au cœur du village et louée à la commune par la coopérative. Le nom vient d'une légende médiévale : les loups abattus étaient suspendus à un poirier à l'orée des bois pour éloigner leurs congénères. Le vignoble revendique une continuité avec une tradition gaumaise attestée depuis l'époque gallo-romaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume",
+        "bio",
+        "methode-traditionnelle",
+        "clos-historique"
+      ],
+      "a_verifier": "Certification bio et appellation revendiquée (Crémant de Wallonie ou Vin mousseux de qualité) à confirmer. Surface : 90 ares en 1990, 2,13 ha aujourd'hui, 2 ha selon d'autres sources.",
+      "source": "vignoblelepoirierduloup.be ; granderegion.net ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-clos-de-la-fouchere",
+      "nom": "Clos de la Fouchère",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Torgny (Rouvroy)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares à Torgny, plantés en 1983 en cépages classiques et résistants mêlés : le plus ancien vignoble de la Gaume, et l'un des trois plus anciens de Wallonie encore en activité, avec le Clos Bois Marie de Huy et les clos hutois des années 1970.\n\nCette antériorité mérite d'être soulignée : en 1983, la viticulture wallonne n'existait pratiquement pas, et planter en Gaume relevait de la curiosité locale plus que du projet économique. Le clos bénéficie du même contexte que ses voisins — cuesta bajocienne argilo-calcaire, microclimat méridional — sur le coteau exposé au sud qui domine le village. Continuité d'exploitation depuis 1983 et encépagement détaillé restent à confirmer. Le domaine est l'un des trois vignobles de Torgny, village qui concentre à lui seul un quart des exploitations viticoles de la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume"
+      ],
+      "a_verifier": "Continuité d'exploitation depuis 1983 et encépagement détaillé à confirmer.",
+      "source": "closdelafouchere.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-clos-de-lepinette",
+      "nom": "Clos de l'Épinette",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Torgny (Rouvroy)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares à Torgny, plantés en 1990 en cépages classiques — la même année que le Poirier du Loup, sur le même coteau exposé au sud.\n\nTorgny concentre ainsi trois vignobles sur son seul territoire, ce qui en fait, rapporté à la taille du village, le point le plus dense du corpus belge. La raison tient au microclimat : le village bénéficie d'un ensoleillement et de températures que l'on ne retrouve nulle part ailleurs en Wallonie, grâce à sa position au pied de la cuesta et à sa latitude — c'est le point le plus méridional du pays. Encépagement, couleurs produites et volumes ne sont pas publiés. La proximité immédiate du vignoble communal, sur le même versant, permettra à terme des comparaisons utiles entre deux conduites différentes sur un substrat identique — la cuesta bajocienne argilo-calcaire, seul terroir jurassique du corpus belge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes non publiés.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-vignoble-de-la-haie-des-morts",
+      "nom": "Vignoble de la Haie des Morts",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Musson",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante-douze ares plantés en 2021 à Musson, en cépages résistants, dans la Gaume orientale à quelques kilomètres de la frontière française et du Grand-Duché.\n\nLe secteur est intéressant par sa position : Musson se trouve à une trentaine de kilomètres de la Moselle luxembourgeoise, où douze cents hectares de vigne sont plantés sur des sols calcaires et marneux de même famille. La Gaume belge et la Moselle grand-ducale appartiennent au même ensemble géologique lorrain, ce qui fait de cette frange méridionale du pays la seule zone viticole belge prolongeant directement un vignoble étranger établi. Encépagement et premier millésime restent à documenter, de même que l'origine du toponyme. Musson est une commune agricole de la Lorraine belge, aux confins des trois pays, dans un paysage de plateaux et de vallons ouverts.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, premier millésime et origine du toponyme à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-clos-de-gueuye",
+      "nom": "Clos de Gueuye",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Saint-Vincent (Tintigny)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Huit ares plantés en 2012 à Saint-Vincent, dans la commune de Tintigny, en cépages classiques et résistants mêlés.\n\nC'est un micro-clos gaumais typique de la vague des années 2010, à une échelle où la production ne quitte pas le cercle familial et amical. Ces parcelles de quelques ares représentent pourtant la majorité des vignobles recensés dans la province : sur une douzaine d'exploitations pour dix à onze hectares, la moitié fait moins de trente ares. La Gaume compense par le nombre ce qu'elle n'a pas en surface. Encépagement et volumes restent à documenter. Tintigny se situe dans la vallée de la Semois gaumaise, sur des sols argilo-calcaires et sableux du Jurassique inférieur, avec un climat sensiblement plus doux que l'Ardenne toute proche. Encépagement détaillé et couleurs produites restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes à documenter.",
+      "source": "clos-de-gueuye.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-clos-de-fernand",
+      "nom": "Clos de Fernand",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Gaume",
+      "commune": "Lambermont (Florenville)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Six ares plantés en 2009 à Lambermont, dans la commune de Florenville, en cépages classiques : l'un des plus petits vignobles recensés de tout le corpus belge.\n\nFlorenville est au cœur de la Gaume, à proximité immédiate de l'abbaye d'Orval, et le secteur bénéficie du même microclimat que Torgny, quoique légèrement plus au nord. À six ares, on parle de quelques centaines de bouteilles au mieux — une vigne d'agrément plus qu'une exploitation, mais qui figure au recensement officiel des vignobles wallons. Encépagement, couleurs et existence d'une mise en bouteille commercialisée restent à documenter. Le secteur de Florenville et de Chassepierre, au pied de la cuesta sinémurienne le long de la Semois, est l'un des paysages les plus caractéristiques de la Gaume.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "gaume"
+      ],
+      "a_verifier": "Encépagement, couleurs et existence d'une mise en bouteille commercialisée à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-domaine-de-la-croix-du-pendu",
+      "nom": "Domaine de la Croix du Pendu",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "commune": "Redu (Libin)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et huit ares plantés en 2020 à Redu, en cépages résistants : le plus grand vignoble ardennais de la province.\n\nLa position est extrême. Redu, le village du livre, se situe sur le plateau ardennais à plus de quatre cents mètres d'altitude, sur des sols schisteux acides, avec une saison végétative sensiblement plus courte qu'en Gaume, à cinquante kilomètres de là. Les cépages résistants n'y sont pas un choix mais une condition, et encore faut-il qu'ils soient précoces. Avec Jalhay, Bièvre et Libramont, ce domaine fait partie du petit groupe de vignobles ardennais qui testent la limite septentrionale et altitudinale de la culture en Belgique. Le nom, comme celui du Poirier du Loup à Torgny, renvoie à une mémoire de justice ou de chasse attachée aux lisières de bois — toponymie fréquente sur ces hauteurs. Encépagement et premier millésime restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Altitude exacte, encépagement et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-clos-du-champ-la-haut",
+      "nom": "Clos du Champ là-haut",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "commune": "Rochehaut (Bouillon)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2003 à Rochehaut, sur les hauteurs qui dominent la boucle de la Semois, en cépages classiques.\n\nLe site est spectaculaire — l'un des panoramas les plus connus d'Ardenne — et le vignoble est adossé à l'Auberge de Rochehaut, gros pôle touristique de la vallée. Le modèle est celui qu'on retrouve dans toutes les zones difficiles du corpus : la vigne y est viable parce qu'elle s'appuie sur une activité d'accueil déjà établie, qui absorbe la production et amortit le risque. Le contexte pédologique est celui de l'Ardenne schisteuse, à plus de trois cents mètres, avec des versants très pentus au-dessus de la rivière. Encépagement et volumes restent à documenter. Le nom du clos dit simplement sa position : le champ d'en haut, au-dessus du village et de la rivière.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "semois"
+      ],
+      "a_verifier": "Encépagement, volumes et articulation avec l'activité hôtelière à documenter.",
+      "source": "aubergederochehaut.com ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-coteaux-de-hays",
+      "nom": "Coteaux de Hays",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "commune": "Neufchâteau",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2018 à Neufchâteau : le second vignoble communal de la province, après celui de Torgny.\n\nLe fait mérite d'être relevé, car il n'existe que deux vignobles communaux dans tout le corpus belge, et les deux sont dans cette province. La formule — une commune propriétaire du foncier, une gestion déléguée — répond à une logique de valorisation patrimoniale et touristique plus que de rentabilité. Neufchâteau se situe en pleine Ardenne, à environ quatre cents mètres, ce qui en fait l'une des implantations les plus exposées du pays. Le recensement de référence signale lui-même le manque d'informations : encépagement, mode de gestion et premier millésime restent entièrement à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites, mode de gestion et premier millésime entièrement à documenter — le recensement de référence signale lui-même le manque d'informations.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-les-vins-de-libramont",
+      "nom": "Les Vins de Libramont",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Semois et Ardenne",
+      "commune": "Libramont-Chevigny",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Six ares plantés en 2016 à Libramont, en cépages classiques et résistants mêlés, à plus de quatre cent cinquante mètres d'altitude.\n\nC'est, avec le vignoble de Jalhay aux abords des Hautes Fagnes, l'un des deux vignobles les plus élevés de Belgique. À cette altitude, sur des sols schisteux acides et sous une pluviométrie ardennaise, la culture relève de l'expérimentation pure — et c'est précisément son intérêt. Ces parcelles-tests d'altitude, apparues dans les quatre provinces du sud entre 2016 et 2021, constituent le meilleur indicateur belge du déplacement de la limite de culture. Encépagement et volumes restent à documenter. Libramont est surtout connue pour sa foire agricole, la plus importante de Wallonie — un cadre inattendu pour l'un des vignobles les plus improbables du pays.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi"
+      ],
+      "a_verifier": "Altitude exacte, encépagement et volumes à documenter.",
+      "source": "vinsdelibramont.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-les-vignerons-de-rendeux",
+      "nom": "Les Vignerons de Rendeux",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "commune": "Cheoux (Rendeux)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Environ un hectare et demi réparti sur plusieurs parcelles et plusieurs viticulteurs à Rendeux, dans la vallée de l'Ourthe, planté à partir de 2021 en cépages classiques et résistants.\n\nLe projet est collectif et a été inauguré en août 2021, accompagné de conférences de formation — l'une d'elles s'intitulait « planter sa vigne sans se planter », ce qui dit assez le niveau de départ. C'est le troisième modèle collectif du corpus wallon, après les coopératives citoyennes de Sirault et du Pays de Herve et les confréries de clos historiques. Ici, il ne s'agit ni de capital ni de patrimoine, mais de mutualisation du savoir-faire dans une région qui n'en avait aucun. Structure juridique et encépagement restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ourthe",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Structure juridique du collectif, nombre de viticulteurs et encépagement à documenter.",
+      "source": "vigneronsrendeux.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-thier-de-blier",
+      "nom": "Thier de Blier",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "commune": "Erezée",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Coopérative fondée en 2020 à Erezée, avec environ un hectare et demi planté en cépages classiques et résistants, et un projet annoncé de sept hectares — de loin la plus grosse ambition viticole de la province.\n\nSept hectares dans la Famenne ardennaise représenteraient à eux seuls les deux tiers de la surface actuellement plantée dans tout le Luxembourg belge. Le mot thier, en wallon, désigne un versant pentu — la même racine que les tiennes du Condroz — et signale le choix d'un coteau dans une région où le relief ne manque pas mais où les expositions favorables sont rares. L'avancement réel du projet et la surface plantée à ce jour restent à vérifier. Erezée se situe dans la vallée de l'Aisne, affluent de l'Ourthe, dans un secteur de transition entre Famenne calcaire et Ardenne schisteuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ourthe",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface réellement plantée à ce jour et avancement du projet de 7 ha à vérifier ; encépagement et structure coopérative à documenter.",
+      "source": "thierdeblier.be ; marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-loperle-moulin-de-hamoul",
+      "nom": "Loperlé – Moulin de Hamoul",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "commune": "Rendeux",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux parcelles de dix ares plantées en 2015, l'une à Rendeux, l'autre à Marche-en-Famenne, en cépages classiques.\n\nLe domaine participe à la dynamique collective née autour des Vignerons de Rendeux, et illustre une pratique fréquente dans les zones difficiles : plutôt qu'une seule parcelle, on en plante deux distantes, ce qui diversifie l'exposition au gel et aux accidents climatiques. La vallée de l'Ourthe offre ici des versants courts sur schistes et grès famenniens. La parcelle de Marche-en-Famenne se situe à la limite provinciale, ce qui demandera une vérification lors d'une éventuelle révision du fichier namurois. Le nom du domaine renvoie à un ancien moulin, bâti typique des vallées ardennaises où l'énergie hydraulique a longtemps structuré l'économie locale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ourthe"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes à documenter ; la parcelle de Marche-en-Famenne se situe en Famenne namuroise ou luxembourgeoise, à préciser.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-luxembourg-prod-vignoble-de-la-famille-galand",
+      "nom": "Vignoble de la famille Galand",
+      "type": "domaine",
+      "region": "Luxembourg",
+      "sous_region": "Famenne et Ourthe",
+      "commune": "Wéris (Durbuy)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente-cinq ares à Wéris, dans la commune de Durbuy, en cépages classiques.\n\nLe village est classé parmi les plus beaux de Wallonie et surtout connu pour ses mégalithes néolithiques — dolmens et menhirs en poudingue, uniques en Belgique. On est ici en Famenne calcaire, à la charnière entre le Condroz et l'Ardenne, dans un secteur au relief marqué et aux sols plus variés que le plateau ardennais voisin. Durbuy est par ailleurs l'un des pôles touristiques majeurs de la province, ce qui offre un débouché direct. Année de plantation inconnue, encépagement et volumes restent à documenter. La commune de Durbuy s'étend sur un vaste territoire rural qui compte aujourd'hui deux vignobles, celui-ci et une parcelle de cinquante ares à Borlon plantée en 2020.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ourthe"
+      ],
+      "a_verifier": "Année de plantation inconnue, encépagement et volumes à documenter.",
+      "source": "marcvanel.be"
+    }
+  ]
+}

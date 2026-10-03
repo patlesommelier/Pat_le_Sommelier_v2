@@ -1,0 +1,779 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "namur",
+  "region_label": "Namur",
+  "source_file": "producteurs_namur_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 24,
+  "items": [
+    {
+      "id": "be-namur-prod-chateau-bon-baron",
+      "nom": "Château Bon Baron",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Houx (Yvoir)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine planté en 2003 sur les coteaux mosans entre Namur et Dinant, aujourd'hui de quinze à dix-sept hectares selon les sources, avec quatorze cépages cultivés — l'un des encépagements les plus larges de Wallonie, qui permet une gamme complète en blanc, rouge, rosé et effervescent.\n\nLe domaine a été le premier vignoble belge à obtenir le label européen de durabilité Fair'n Green, démarche distincte du bio qui évalue l'ensemble de l'exploitation, de la biodiversité à l'empreinte carbone. Il exploite en outre environ trois hectares pour compte de tiers, répartis sur plusieurs clos de la vallée : Falmagne, Saint-Héribert, Valburnot, Bon Air, L'Agauche, Clos de Beezelay. Cette prestation viticole pour propriétaires non vignerons est un modèle spécifiquement namurois, à distinguer du négoce.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Surface : 15 ha selon Marc Vanel, 17 ha selon le tourisme wallon. Encépagement détaillé (quatorze cépages) à documenter. Revendication de l'AOP Côtes de Sambre et Meuse à vérifier.",
+      "source": "chateaubonbaron.com ; marcvanel.be ; visitwallonia.be"
+    },
+    {
+      "id": "be-namur-prod-chateau-de-bioul",
+      "nom": "Château de Bioul",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Bioul (Anhée)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vignoble planté en 2009 par Vanessa Vaxelaire-Wyckmans et Andy Wyckmans autour du château familial d'Anhée, au lieu-dit Le Vignoulle — toponyme qui atteste un passé viticole sur ces coteaux. Douze à quatorze hectares en parcelles éclatées, entièrement en cépages résistants, certifiés bio depuis fin 2019, avec deux hectares de Souvignier Gris plantés en 2020.\n\nLe domaine est représentatif d'un modèle wallon en plein essor : la production, environ 46 000 bouteilles, s'accompagne d'un parcours muséal, d'un restaurant et d'une offre événementielle complète. La contrainte est assumée — la cuverie plafonne la capacité à un ou deux hectares supplémentaires, et le domaine ne cherche pas à croître au-delà. Le Brut de Bioul, effervescent zéro dosage, s'est écoulé intégralement dès sa sortie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "bio"
+      ],
+      "a_verifier": "Surface : 12 ha en 2022, 14 ha selon des sources récentes ; le domaine précisait en 2020 être plus proche de 8 ha en nombre de pieds effectifs. Encépagement détaillé à documenter.",
+      "source": "chateaudebioul.be ; marcvanel.be ; visitwallonia.be"
+    },
+    {
+      "id": "be-namur-prod-les-jardins-dannevoie",
+      "nom": "Les Jardins d'Annevoie",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Annevoie (Anhée)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Onze hectares et demi plantés en 2020 en cépages résistants à Annevoie, dans la vallée de la Meuse : l'une des plus grosses plantations d'un seul tenant réalisées en Wallonie ces dernières années, et d'emblée le troisième vignoble de la province en surface.\n\nLe site est connu pour ses jardins d'eau du XVIIIe siècle, l'un des ensembles paysagers les plus visités de Wallonie, ce qui donne au projet un débouché œnotouristique immédiat. L'arrivée d'un opérateur de cette taille en une seule opération, sans montée en puissance progressive, est un fait nouveau : elle signale que la viticulture namuroise attire désormais des capitaux qui ne viennent pas du monde agricole. Encépagement et premier millésime restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, premier millésime commercialisé et structure d'exploitation à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-du-rocher-bayard",
+      "nom": "Domaine du Rocher Bayard",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Dinant",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares et demi plantés en 2021 à Dinant, en cépages classiques, au pied des falaises calcaires qui resserrent la Meuse à cet endroit. Le nom renvoie au Rocher Bayard, aiguille rocheuse emblématique de la ville, détachée de la falaise par les troupes de Louis XIV selon la tradition locale.\n\nLe choix de cépages classiques sur cinq hectares et demi est notable dans une province où les plantations récentes de cette taille sont presque toutes en résistants. Il suppose un programme de traitements conséquent, que le microclimat de la vallée mosane — versants abrités, réverbération calcaire, amplitude thermique amortie par le fleuve — rend défendable. Encépagement détaillé et premier millésime commercialisé restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, exposition des parcelles et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-du-diedre-noir",
+      "nom": "Domaine du Dièdre noir",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Marche-les-Dames (Namur)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares plantés en 2019 par la famille Dohy à Marche-les-Dames, en cépages classiques, sur les versants rocheux de la Meuse en aval de Namur. Le nom renvoie à une voie d'escalade des rochers voisins, site d'entraînement historique des grimpeurs belges et lieu où le roi Albert Ier a trouvé la mort en 1934.\n\nLe secteur est l'un des plus abrupts de la vallée : falaises calcaires, versants exposés au sud, sols peu profonds et caillouteux. Ces conditions expliquent qu'on y plante des cépages classiques malgré l'humidité générale du climat belge — le drainage y est excellent et le feuillage sèche vite. Encépagement détaillé et premier millésime restent à documenter. La famille Dohy a mené le projet de bout en bout, de la plantation à la cave, dans un secteur où la vigne n'existait plus depuis des siècles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement détaillé et premier millésime commercialisé à documenter.",
+      "source": "diedrenoir.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-clos-de-mostombe",
+      "nom": "Clos de Mostombe",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Landenne (Andenne)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares plantés en 2018 à Landenne, sur les hauteurs d'Andenne, en cépages résistants.\n\nLe domaine s'inscrit dans une dynamique locale organisée : l'association VignAndenne, créée en 2019, fédère une demi-douzaine de vignobles de la commune, du Clos du Bure au Domaine des Carriers en passant par la Corneille aveugle et le Domaine des Arches. Andenne concentre ainsi le plus grand nombre de vignobles de la province, presque tous minuscules, sur les plateaux calcaires qui dominent la Meuse — un modèle de densification par le nombre plutôt que par la surface, comparable à celui de la Houwaartseberg dans le Hageland. Le domaine, l'un des rares andennais à dépasser l'hectare, fait figure de locomotive locale : à quatre hectares, il produit à lui seul davantage que l'ensemble des micro-parcelles voisines réunies. Encépagement et gamme restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement et gamme à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-terres-de-crompechine",
+      "nom": "Terres de Crompechine",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Marche-les-Dames (Namur)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et quart planté en 2018 à Marche-les-Dames, en cépages résistants, dans le cadre d'un projet global associant vignoble, biodiversité et agroforesterie.\n\nL'approche est représentative d'une génération de vignerons wallons pour qui la vigne n'est qu'un élément d'un système agricole plus large — haies, arbres, prairies fleuries, cultures associées — plutôt qu'une monoculture. Le domaine partage la géologie du Dièdre noir voisin : calcaires carbonifères de la vallée mosane, versants pentus, sols superficiels. Le mode de conduite exact reste à trancher, les sources hésitant entre biodynamie et démarche de biodiversité sans certification. Un hectare et quart reste une surface où la mécanisation ne s'amortit pas : tout le travail se fait à la main, ce qui est la condition d'une conduite aussi exigeante et explique le nombre de projets de ce type dans la vallée mosane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Mode de conduite : les sources hésitent entre biodynamie et démarche de biodiversité sans certification — à trancher. Encépagement à documenter.",
+      "source": "crompechine.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-lion-fontaine",
+      "nom": "Domaine Lion Fontaine",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Coutisse (Andenne)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante ares plantés en 2008 à Coutisse, sur le plateau qui domine la Meuse à Andenne, en cépages résistants : l'un des plus anciens des micro-domaines andennais, antérieur d'une décennie à la vague de plantations qui a suivi.\n\nÀ cette date, choisir des variétés résistantes en Wallonie était encore un pari : le Domaine du Chenoy venait tout juste d'ouvrir la voie et les références locales manquaient. Le domaine fait partie du réseau andennais fédéré par VignAndenne. Encépagement, couleurs produites et volumes ne sont pas publiés, ce qui est la règle pour cette catégorie d'exploitations. Coutisse occupe un plateau calcaire à une centaine de mètres au-dessus de la Meuse, avec des versants bien exposés et des sols superficiels — des conditions qui expliquent la densité de vignobles autour d'Andenne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et volumes non publiés.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-vignoble-de-maredsous",
+      "nom": "Vignoble de Maredsous",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Maredsous (Anhée)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares plantés en 2020 en cépages résistants dans la vallée de la Molignée, aux abords de l'abbaye bénédictine de Maredsous.\n\nLe lieu est l'un des plus visités de la province, connu pour sa bière, son fromage et son architecture néogothique — l'abbaye a été fondée en 1872, ce qui en fait une implantation récente à l'échelle monastique belge. L'ajout d'un vignoble à cette gamme de produits abbatiaux est cohérent commercialement, et s'inscrit dans un mouvement plus large : Brogne, Floreffe, Villers, Saint-Denis, plusieurs sites monastiques wallons ont replanté de la vigne depuis 2000. Rattachement exact au domaine abbatial et encépagement restent à documenter. La vallée de la Molignée, affluent de la Meuse, offre des versants courts et bien exposés, sur les calcaires carbonifères qui font aussi la réputation des carrières voisines.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Rattachement exact au domaine abbatial, encépagement et existence d'une mise en bouteille commercialisée à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-clos-du-bure-carre-de-tramaka",
+      "nom": "Clos du Bure-Carré de Tramaka",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Seilles (Andenne)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 1995 à Seilles, en cépages classiques : l'un des plus anciens vignobles de la province encore en activité, antérieur de huit ans à la vague namuroise des années 2000.\n\nCette antériorité mérite d'être relevée. Avant Bon Baron et le Chenoy, tous deux plantés en 2003, la viticulture namuroise se limitait à quelques clos confrériques et à des initiatives individuelles de cette taille. Le domaine appartient aujourd'hui au réseau andennais fédéré par VignAndenne. Encépagement, volumes et continuité d'exploitation depuis 1995 restent à confirmer. Le vignoble occupe les hauteurs de Seilles, sur le plateau calcaire de la rive gauche de la Meuse, où se sont installés depuis quatre autres micro-domaines. À vingt ares, la production ne sort pas du circuit local.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse"
+      ],
+      "a_verifier": "Encépagement, volumes et statut d'exploitation à documenter ; continuité depuis 1995 à confirmer.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-corneille-aveugle",
+      "nom": "Corneille aveugle",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "commune": "Seilles (Andenne)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2015 à Seilles, en cépages résistants, dans le foyer viticole andennais.\n\nAndenne compte à elle seule sept ou huit vignobles recensés, dont un seul dépasse l'hectare : c'est la commune la plus densément pourvue de la province, sur les plateaux calcaires qui bordent la Meuse. Cette concentration doit beaucoup au travail de l'association VignAndenne, qui mutualise conseils, matériel et événements. Encépagement, couleurs et volumes ne sont pas publiés. Le nom, qui n'a pas d'origine documentée, illustre la liberté de dénomination des micro-domaines wallons, souvent affranchis des conventions toponymiques. La parcelle occupe le plateau calcaire de la rive gauche de la Meuse, à une centaine de mètres au-dessus du fleuve, avec les mêmes sols superficiels et bien drainés que ses voisins de Seilles. La production, de quelques centaines de bouteilles, se vend au domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement, couleurs et volumes non publiés.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-du-chenoy",
+      "nom": "Domaine du Chenoy",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Hesbaye namuroise",
+      "commune": "Emines (La Bruyère)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le domaine qui a fait des cépages résistants une signature plutôt qu'un compromis. Philippe Grafé plante dix hectares à Emines en 2003, entièrement en variétés résistantes, à une époque où ce choix passait encore pour un renoncement à la qualité. La surface est portée à quatorze hectares en 2020, sous droit de superficie de trente-quatre ans conclu avec un fermier voisin, après une étude de sol menée avec le concours de l'université de Louvain.\n\nLa cohérence du projet tient à l'enchaînement : les résistants permettent de réduire massivement les traitements, ce qui rend le bio tenable, et la certification est acquise avec la récolte 2019, la première entièrement conduite en biologique. Le domaine est situé sur le plateau de la Hesbaye namuroise, au nord de Namur, sur des limons profonds — un contexte très différent des coteaux mosans qui font l'image viticole de la province.\n\nL'équipe technique est inhabituelle pour la Belgique : les vins sont vinifiés par Jean-Bernard Despatures, ancien directeur technique des châteaux Dutruch Grand Poujeaux et Anthonic à Moulis-en-Médoc, et les assemblages supervisés par Éric Boissenot, œnologue conseil de grands crus classés bordelais. La gamme s'articule autour de la Citadelle en blanc, de Terra Nova en rouge, de la Perle de Wallonie en blanc et rosé et du Grand Chenoy. La production est passée de 55 000 bouteilles sur dix hectares à des ventes annuelles dépassant 80 000 cols, ce qui a justifié l'agrandissement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Citadelle",
+        "Perle de Wallonie",
+        "Terra Nova",
+        "Grand Chenoy"
+      ],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "piwi",
+        "bio"
+      ],
+      "a_verifier": "Encépagement détaillé (variétés résistantes) et cuvées phares à documenter ; revendication d'appellation à vérifier.",
+      "source": "domaine-du-chenoy.com ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-du-ry-dargent",
+      "nom": "Domaine du Ry d'Argent",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Hesbaye namuroise",
+      "commune": "Bovesse (La Bruyère)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Jean-François Baele a converti l'exploitation agricole familiale en vignoble à partir de 2005, ce qui en fait l'un des rares cas belges de reconversion d'une ferme en domaine viticole professionnel. Treize hectares et demi aujourd'hui, en encépagement mixte associant classiques et résistants, avec une gamme complète incluant des effervescents.\n\nLa structure est éclatée et déborde la province : huit hectares à Bovesse, deux à Verlaine et trois à Berloz — soit en province de Liège —, un demi à Ronchinne, dans le Condroz namurois. Baele assure en outre la gestion du vignoble de Ronchinne pour son propriétaire. Cette dispersion sur quatre sites et deux provinces est un cas d'école du vignoble wallon contemporain, où la disponibilité foncière prime souvent sur la cohérence géographique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "piwi",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Cas transprovincial : les parcelles de Verlaine et Berloz se situent en province de Liège, celle de Ronchinne en Condroz namurois. À recouper avec le fichier Liège. Encépagement détaillé à documenter.",
+      "source": "domainedurydargent.com ; marcvanel.be ; wawmagazine.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-de-la-falize",
+      "nom": "Domaine de la Falize",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Hesbaye namuroise",
+      "commune": "Rhisnes (La Bruyère)",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Savagnin",
+        "Pinot Noir"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Côtes de Sambre et Meuse (AOP)"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares de vigne au sein d'un domaine de plus de deux cents hectares de terres et de bois, propriété de la famille de Mévius et conduit en agriculture biologique depuis une vingtaine d'années. Les premiers Chardonnays sont plantés en 2012, complétés en 2015 par plusieurs parcelles distinctes, sur les sols les plus pauvres et les plus pierreux de la propriété — choix délibéré, à rebours de l'usage belge qui consiste à planter la vigne sur les meilleures terres agricoles.\n\nLe dispositif technique explique le positionnement. Le vignoble est certifié en biodynamie par Demeter, conseillé par Sylvain Pellegrinelli, du Domaine Leflaive en Bourgogne, pour la vigne, et par Peter Colemont, du Clos d'Opleeuw, pour la cave ; Alice Danzin en assure la conduite. Chaque parcelle est vendangée et vinifiée séparément, en fût de chêne, en fermentation spontanée avec malolactique complète, avant assemblage — une approche parcellaire qu'aucun autre domaine belge ne pousse aussi loin sur une surface aussi réduite. Le premier millésime, 2018, a bénéficié de conditions exceptionnelles.\n\nÀ côté du Chardonnay dominant, le domaine cultive quarante ares de Savagnin et trente-cinq de Pinot Noir, ce dernier en micro-vinification. La production tient dans quelques milliers de bouteilles, vendues sur allocation, à un prix sans équivalent en Belgique. Les vins sont revendiqués en AOP Côtes de Sambre et Meuse, et la comparaison qui revient n'est pas Chablis mais Meursault.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "hesbaye"
+      ],
+      "a_verifier": "Surface de vigne : 2 ha selon le recensement de 2022, cinq parcelles selon le domaine (dont 0,40 ha de Savagnin et 0,35 ha de Pinot Noir) — à réactualiser. Prix et allocations à revérifier.",
+      "source": "lafalize.com ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-de-ronchinne",
+      "nom": "Domaine de Ronchinne",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Condroz",
+      "commune": "Maillen (Assesse)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2017 dans le parc du château de Ronchinne, à Maillen, en cépages résistants. Le château, construit au début du XXe siècle pour la famille royale et aujourd'hui reconverti en hôtellerie, donne au vignoble un cadre et un débouché.\n\nLa particularité est le mode d'exploitation : le vignoble est géré par Jean-François Baele, du Domaine du Ry d'Argent, qui l'a intégré à sa propre surface. Cette gestion déléguée, où un vigneron professionnel exploite les vignes d'un propriétaire non vigneron, se développe en Wallonie — Château Bon Baron pratique la même chose sur six clos de la vallée mosane. Le vignoble se situe dans le Condroz, à la limite du plateau condrusien et de la vallée mosane, sur des sols calcaires. Encépagement et articulation contractuelle avec le Ry d'Argent restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "condroz",
+        "piwi",
+        "negoce-partiel"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et articulation contractuelle avec le Ry d'Argent à documenter.",
+      "source": "domainederonchinne.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-clos-du-pontois",
+      "nom": "Clos du Pontois",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Condroz",
+      "commune": "Ciney",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quarante ares plantés en 2020 à Ciney, en cépages classiques, sur les tiennes du Condroz — ces crêtes calcaires qui alternent avec les dépressions schisteuses et donnent à la région son relief caractéristique en vagues parallèles.\n\nLe Condroz est l'un des secteurs les plus difficiles de la province pour la vigne : altitude moyenne de deux cents à trois cents mètres, saison plus courte, gelées tardives fréquentes. Les trois vignobles condrusiens recensés sont tous postérieurs à 2017 et tous minuscules, ce qui en fait un terrain d'observation du déplacement de la limite de culture. Encépagement et premier millésime restent à documenter. Ciney est la principale ville du Condroz namurois, dans un paysage de grandes fermes en pierre calcaire et de cultures fourragères. Encépagement, couleurs et premier millésime restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "condroz",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-les-vignes-de-la-preale",
+      "nom": "Les vignes de la Préale",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Condroz",
+      "commune": "Achet (Hamois)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2021 à Achet, dans la commune de Hamois, en cépages résistants : l'un des vignobles les plus récents et les plus élevés de la province.\n\nOn est ici en plein Condroz, sur les crêtes calcaires qui structurent le paysage entre Meuse et Ardenne. Le choix des résistants n'y est pas un confort mais une nécessité : la saison végétative est sensiblement plus courte qu'en vallée mosane, et les cépages précoces à cycle rapide sont les seuls à atteindre une maturité fiable. Encépagement, couleurs et premier millésime restent à documenter ; le recensement de référence liste cette parcelle en double. Hamois se situe entre Ciney et Andenne, sur la ligne de crêtes qui domine la Meuse à une vingtaine de kilomètres au sud. Le domaine est représentatif de la vague de plantations de 2020-2021, la plus importante qu'ait connue la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "condroz",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter ; le recensement de référence liste cette parcelle en double.",
+      "source": "preale.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-oze-le-vignoble",
+      "nom": "Oze le vignoble",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "commune": "Floreffe",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares plantés en 2012 à Floreffe, en cépages classiques, sur les coteaux de la Sambre en amont de Namur.\n\nLe lieu est dominé par l'abbaye prémontrée fondée en 1121, l'une des plus anciennes de Wallonie, dont les moines cultivaient la vigne au Moyen Âge — la basse vallée de la Sambre faisait partie des secteurs viticoles documentés avant le refroidissement des XVIe et XVIIe siècles. Le domaine relève du bassin hydrographique de la Sambre, donc de l'aire de l'AOP Côtes de Sambre et Meuse. Encépagement et volumes restent à documenter. Floreffe se situe à une dizaine de kilomètres en amont de Namur, sur des versants exposés au sud qui dominent la vallée. La production, très limitée, se vend au domaine et dans le circuit local ; le vignoble compte parmi les rares de la province plantés avant 2015.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "sambre"
+      ],
+      "a_verifier": "Encépagement, volumes et couleurs produites à documenter.",
+      "source": "ozelevignoble.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-les-heros-de-la-vigne",
+      "nom": "Les Héros de la Vigne",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "commune": "Sombreffe",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2020 à Sombreffe, en cépages classiques, dans la plaine limoneuse du nord de la province, aux confins du Brabant wallon.\n\nLe secteur n'a ni relief ni tradition viticole : on est sur les grandes terres de culture de Hesbaye occidentale, où la vigne arrive uniquement portée par des projets individuels. C'est la situation de la majorité des micro-vignobles wallons plantés après 2018, et elle pose une question que les dix prochaines années trancheront — la viabilité de ces structures dépend moins du terroir que de la persévérance de leurs porteurs. Encépagement et premier millésime restent à documenter. Le nom, comme celui de plusieurs micro-domaines wallons récents, relève du clin d'œil plutôt que de la toponymie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "sambre",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "lesherosdelavigne.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-clos-de-brogne",
+      "nom": "Clos de Brogne",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "commune": "Saint-Gérard (Mettet)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt ares plantés en 2003 à Saint-Gérard, dans la commune de Mettet, en cépages classiques, sur le site de l'ancienne abbaye de Brogne.\n\nLe lieu est d'une antériorité remarquable : l'abbaye a été fondée au Xe siècle par saint Gérard de Brogne, réformateur monastique dont l'influence s'est étendue à toute la Lotharingie. La replantation de vigne sur un site de cette nature relève de la restitution patrimoniale autant que de la production — les volumes sont symboliques. Le domaine est aussi l'un des plus anciens vignobles namurois encore en activité, contemporain du Chenoy et de Bon Baron. Le site abrite aujourd'hui un centre culturel et une brasserie qui exploitent la mémoire abbatiale ; le vignoble s'inscrit dans cette valorisation d'ensemble, sur les limons du plateau qui domine la vallée de la Molignée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "sambre",
+        "clos-historique"
+      ],
+      "a_verifier": "Encépagement, volumes et statut d'exploitation à documenter.",
+      "source": "brogne.eu ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-du-tienneal-gatte",
+      "nom": "Domaine du Tienne'al Gatte",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "commune": "Sautour (Philippeville)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinquante ares plantés en 2020 à Sautour, dans la commune de Philippeville, en cépages classiques, au cœur de l'Entre-Sambre-et-Meuse.\n\nLe nom est un toponyme wallon désignant une pente sèche et caillouteuse — un tienne, dans le vocabulaire local, est une crête calcaire, la même formation que celle qui structure le Condroz et la Calestienne. Ces sols superficiels sur calcaire, pauvres et drainants, sont précisément ceux que la vigne préfère, et ils expliquent l'apparition récente de vignobles dans un secteur agricole traditionnellement voué à l'élevage. Encépagement et premier millésime restent à documenter. Philippeville, ancienne place forte espagnole puis française, se trouve à la charnière entre la Fagne et le Condroz, à une altitude proche de deux cents mètres.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "sambre",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter ; sens exact du toponyme à confirmer.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-de-bellefontaine",
+      "nom": "Domaine de Bellefontaine",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Calestienne et Ardenne namuroise",
+      "commune": "Bellefontaine (Bièvre)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sept hectares plantés en 2015 à Bellefontaine, dans la commune de Bièvre, en cépages classiques et résistants mêlés : de loin le plus grand vignoble de l'Ardenne namuroise.\n\nL'implantation est audacieuse. On est à l'entrée de l'Ardenne, sur des sols schisteux, à une altitude et sous une pluviométrie qui rendaient la viticulture improbable il y a vingt ans encore. Sept hectares dans ce contexte représentent un pari industriel autant qu'agronomique, et le domaine est à ce titre l'un des meilleurs indicateurs belges du déplacement de la limite septentrionale de culture. La gamme inclut des effervescents. Encépagement détaillé, altitude exacte et dates de vendange restent à documenter. Bièvre est l'une des communes les plus méridionales de la province, à la frontière de la province de Luxembourg, dans un paysage de forêts et de clairières agricoles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi"
+      ],
+      "a_verifier": "Encépagement détaillé, gamme et appellation éventuelle à documenter ; altitude et dates de vendange à préciser.",
+      "source": "vignobledebellefontaine.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-de-doriemont",
+      "nom": "Domaine de Doriémont",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Calestienne et Ardenne namuroise",
+      "commune": "Gochenée (Doische)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare planté en 2018 à Gochenée, dans la commune de Doische, en cépages résistants, sur la Calestienne.\n\nCette bande étroite de calcaires dévoniens sépare la Fagne de l'Ardenne et constitue l'une des curiosités géologiques de Wallonie : les sols calcaires superficiels, très drainants, y créent un microclimat sensiblement plus chaud et plus sec que les schistes environnants, d'où les pelouses sèches et une flore méridionale unique en Belgique. La vigne y trouve logiquement sa place, et la Calestienne pourrait devenir l'un des secteurs les plus intéressants du sud wallon. Encépagement et premier millésime restent à documenter. Doische se situe à la frontière française, entre Meuse et Viroin, dans un secteur rural peu peuplé où la vigne était totalement absente avant 2018.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "calestienne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-prod-domaine-metz-hologne",
+      "nom": "Domaine Metz Hologne",
+      "type": "domaine",
+      "region": "Namur",
+      "sous_region": "Calestienne et Ardenne namuroise",
+      "commune": "Mazée (Viroinval)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Soixante-cinq ares plantés en 2021 à Mazée, dans la vallée du Viroin, en cépages classiques : l'un des points les plus méridionaux du vignoble namurois.\n\nLe domaine occupe la même bande calcaire que Doriémont, la Calestienne, dans un secteur classé pour sa biodiversité et connu des naturalistes pour ses pelouses calcicoles. Le choix de cépages classiques à cette latitude et sur ces reliefs suppose de miser sur les meilleures expositions ; c'est justement ce que permettent les versants sud des tiennes calcaires. Encépagement, couleurs et premier millésime restent à documenter. Viroinval, à la frontière française, abrite aussi un vignoble didactique planté en 2021 : deux initiatives simultanées dans une commune qui n'en comptait aucune, ce qui donne la mesure de la rapidité du mouvement dans le sud de la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "wallonie",
+        "calestienne",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs et premier millésime à documenter.",
+      "source": "marcvanel.be"
+    }
+  ]
+}

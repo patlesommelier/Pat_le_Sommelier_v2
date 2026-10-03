@@ -1,0 +1,442 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "valledaosta",
+  "region_label": "Valle d'Aosta (Italie)",
+  "source_file": "terroirs_valledaosta.json",
+  "built_at": "2026-07-12",
+  "count": 15,
+  "items": [
+    {
+      "id": "it-valledaosta-terr-blanc-de-morgex-et-de-la-salle",
+      "nom": "Blanc de Morgex et de La Salle",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Valdigne (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Prié Blanc"
+      ],
+      "altitude": "~900-1200 m",
+      "sols": "moraines glaciaires et sables granitiques, au pied du Mont-Blanc",
+      "caracteristiques_rapides": "Les plus hauts vignobles d'Europe (jusqu'à 1200 m) : Prié Blanc franc de pied (le phylloxéra n'y est jamais monté), blanc alpin pur, floral et minéral, en pergolas basses.",
+      "notes_objectives": "Le Blanc de Morgex et de La Salle est l'un des vignobles les plus extraordinaires d'Europe : ses vignes, étagées entre 900 et 1 200 mètres d'altitude sur les communes de Morgex et de La Salle, dans la Valdigne, à l'ombre du Mont-Blanc, comptent parmi les plus hautes du continent.\n\nCette sous-zone repose sur un unique cépage, le Prié Blanc, variété autochtone parfaitement adaptée à ces conditions extrêmes. Conduit en basses pergolas près du sol, pour profiter de la chaleur restituée par la terre, il possède un cycle de maturation court qui permet de vendanger avant les premières neiges d'automne. Fait exceptionnel : à cette altitude, le phylloxéra n'est jamais parvenu à s'installer, si bien que les vignes sont franches de pied — non greffées —, un cas rarissime en Europe, qui fait de ce vignoble un conservatoire vivant d'avant la crise phylloxérique. Le vin qui en est issu est un blanc alpin d'une pureté saisissante : léger en alcool, délicat et floral, aux arômes de pêche, de citron, de pomme verte et de fleurs de montagne, marqué par une acidité vive et une minéralité tranchante. Il excelle aussi en effervescent (la Cuvée des Guides de la Cave Mont Blanc vieillit à 2 200 mètres). Sur des centaines de parcelles minuscules travaillées à la main, c'est la « viticulture héroïque » à son extrême.\n\nLes plus hauts vignobles d'Europe (jusqu'à 1200 m) : Prié Blanc franc de pied (le phylloxéra n'y est jamais monté), blanc alpin pur, floral et minéral. C'est l'un des vignobles les plus extraordinaires du continent.\n\nCe vignoble tient de la prouesse permanente. Sur des centaines de parcelles minuscules éparpillées sur les pentes — soixante-dix acres à peine au total, cultivés par cinq vignerons et une coopérative —, tout se fait à la main : impossible d'y mécaniser quoi que ce soit. Le gel, la neige précoce, la saison végétative très courte imposent une vigilance de tous les instants, et les rendements sont dérisoires. Mais c'est précisément cette adversité qui donne au vin son caractère : à ces altitudes, l'ensoleillement intense conjugué à des nuits glaciales produit des blancs d'une tension et d'une pureté cristallines, faibles en alcool et hauts en acidité, à des années-lumière des blancs solaires du Sud. Servi bien frais à l'apéritif, sur les poissons de rivière, la fondue valdôtaine, les fromages de montagne ou une cuisine légère, il séduit par sa fraîcheur désaltérante et sa minéralité saline. Les versions effervescentes en méthode traditionnelle, dont l'extraordinaire Cuvée des Guides de la Cave Mont Blanc — dont la seconde fermentation et le vieillissement s'effectuent à 2 200 mètres, à même le massif —, ajoutent une dimension mythique à ce terroir. Le Blanc de Morgex n'est pas seulement un vin : c'est un symbole, celui de la viticulture héroïque poussée à sa limite, et le témoignage vivant qu'à l'ombre du toit de l'Europe, la vigne peut encore donner des vins d'une grande beauté.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "morgex",
+        "la-salle",
+        "prie-blanc",
+        "blanc",
+        "altitude",
+        "franc-de-pied",
+        "icone"
+      ],
+      "source": "wine-searcher|winewithseth|winespectator"
+    },
+    {
+      "id": "it-valledaosta-terr-torrette",
+      "nom": "Torrette",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Vallée centrale (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Petit Rouge",
+        "Fumin",
+        "Cornalin",
+        "Vien de Nus"
+      ],
+      "altitude": "~500-900 m",
+      "sols": "sols morainiques et sableux des coteaux exposés sud, au-dessus de la Dora Baltea",
+      "caracteristiques_rapides": "La plus grande et la plus emblématique des sous-zones : rouge d'assemblage à base de Petit Rouge (min. 70 %), fruité, floral et élégant, le vin le plus connu de la vallée.",
+      "notes_objectives": "Le Torrette est la plus grande et la plus emblématique des sept sous-zones de la Vallée d'Aoste, et le vin le plus connu de la région. Produit dans la vallée centrale, autour d'Aoste, sur les coteaux exposés plein sud dominant la Dora Baltea, il est le rouge de référence des Valdôtains.\n\nLe Torrette est un vin d'assemblage, dont le cahier des charges exige au minimum 70 % de Petit Rouge, le cépage rouge le plus planté de la vallée. Il est complété par d'autres variétés autochtones — Fumin, Cornalin, Vien de Nus, Mayolet, Premetta —, dans une véritable tradition de complantation et d'assemblage de terroir. Sur les sols morainiques et sableux des coteaux d'altitude (500 à 900 mètres), le Petit Rouge donne un rouge à la robe pourpre, aux arômes intenses de myrtille, de framboise, de violette et d'églantine, à la bouche chaleureuse et joliment tannique, avec cette fraîcheur alpine caractéristique. La mention Supérieur impose des rendements plus faibles et un degré plus élevé, pour des vins plus concentrés et de garde. Des domaines comme Les Crêtes, Grosjean, Château Feuillet ou Di Barrò en signent de belles versions. C'est un accord idéal avec la cuisine valdôtaine : fontina, carbonade, polenta concia, charcuteries et gibier de montagne.\n\nLa plus grande et la plus emblématique des sous-zones : rouge d'assemblage à base de Petit Rouge (min. 70 %), fruité, floral et élégant. C'est le vin le plus connu de la Vallée d'Aoste.\n\nLe Torrette est bien plus qu'une appellation : c'est l'identité liquide de la Vallée d'Aoste, le vin que l'on sert dans les auberges de montagne et sur les tables familiales, le compagnon naturel de la cuisine valdôtaine. Sa tradition d'assemblage, où le Petit Rouge dominant s'enrichit de touches de Fumin (pour la structure), de Cornalin (pour l'épice), de Vien de Nus ou de Mayolet, reflète l'histoire même du vignoble : de petites parcelles complantées de plusieurs variétés, héritées d'une viticulture paysanne de subsistance. Ce qui pouvait passer pour un archaïsme s'avère aujourd'hui une richesse, chaque cépage apportant sa nuance à un vin d'une belle complexité aromatique. Servi sur la fontina, la carbonade valdôtaine, la polenta concia, les charcuteries de montagne ou le gibier, le Torrette séduit par sa gourmandise fruitée et sa fraîcheur alpine, qui le rendent étonnamment digeste malgré la chaleur de l'alcool. Les versions Supérieur, plus concentrées, se patinent sur plusieurs années. Distingué par le New York Times parmi les vins du monde offrant le meilleur rapport qualité-prix tout en exprimant fidèlement leur origine, le Torrette est aujourd'hui l'ambassadeur d'une région minuscule mais fière, dont il porte haut les couleurs bien au-delà des Alpes.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "torrette",
+        "petit-rouge",
+        "rouge",
+        "sous-zone",
+        "reference"
+      ],
+      "source": "wine-searcher|moretimetotravel"
+    },
+    {
+      "id": "it-valledaosta-terr-donnas",
+      "nom": "Donnas",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Basse vallée (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Picotendro)"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "terrasses de granit et sols morainiques, à la frontière du Piémont",
+      "caracteristiques_rapides": "Le Nebbiolo alpin (dit Picotendro) : sur des terrasses de granit vertigineuses, un Nebbiolo de montagne fin, tendu et racé, l'un des grands Nebbiolo d'altitude d'Italie.",
+      "notes_objectives": "Le Donnas est le Nebbiolo alpin de la Vallée d'Aoste, produit à l'entrée sud de la région, aux portes du Piémont. Sur des terrasses de granit vertigineuses, soutenues par des murets de pierre sèche, le grand cépage piémontais — appelé ici Picotendro — donne l'une de ses expressions les plus originales et les plus fines.\n\nLe Donnas fut l'une des premières appellations reconnues de la région (dès 1971, avant d'être intégrée en 1985 à la DOC unifiée Valle d'Aosta). L'altitude et les sols granitiques transforment le Nebbiolo : là où le Barolo et le Barbaresco gagnent en puissance et en structure, le Donnas gagne en finesse, en tension et en élégance. Il en résulte un rouge à la robe claire, aux arômes typiques de rose, de cerise, d'amande et de goudron, aux tanins soyeux et à la minéralité granitique marquée, avec une belle acidité et une réelle aptitude à la garde. C'est, aux côtés du Nebbiolo de la Valtellina et de celui de l'Alto Piemonte, l'un des grands Nebbiolo de montagne d'Italie, longtemps méconnu. Les Caves Coopératives de Donnas en sont les gardiennes. C'est un accord idéal avec le gibier, les viandes rouges, la fontina et les fromages affinés de la montagne.\n\nLe Nebbiolo alpin (dit Picotendro) : sur des terrasses de granit vertigineuses, un Nebbiolo de montagne fin, tendu et racé. C'est l'un des grands Nebbiolo d'altitude d'Italie.\n\nLe Donnas illustre à merveille ce que l'altitude et le granit font au Nebbiolo. Ce cépage, dont l'histoire s'entremêle depuis des siècles avec celle du Piémont, a trouvé ici, à la frontière des deux régions, une expression radicalement différente. Les terrasses de Donnas, soutenues par des murets de pierre sèche construits au fil des générations, sont le fruit d'un travail titanesque : chaque mètre carré de vigne a été arraché à la montagne, et tout y est cultivé à la main. Cette viticulture héroïque, conjuguée aux sols granitiques pauvres et drainants et aux fortes amplitudes thermiques, donne un Nebbiolo qui privilégie la finesse et la tension à la puissance. Ses tanins, plus soyeux que ceux du Barolo, sa robe claire et sa minéralité en font un vin d'une élégance presque bourguignonne. Servi sur le gibier de montagne, la carbonade, les viandes rôties ou les fromages affinés comme la fontina, il se patine sur une décennie et plus, développant des notes tertiaires de cuir, de tabac et de sous-bois. Longtemps confidentiel, il bénéficie aujourd'hui de l'engouement croissant pour les Nebbiolo de montagne — aux côtés de ceux de la Valtellina et de l'Alto Piemonte —, et s'affirme comme l'un des plus beaux joyaux de la Vallée d'Aoste.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "donnas",
+        "nebbiolo",
+        "picotendro",
+        "rouge",
+        "sous-zone",
+        "altitude"
+      ],
+      "source": "wine-searcher|winewithseth"
+    },
+    {
+      "id": "it-valledaosta-terr-petite-arvine",
+      "nom": "Petite Arvine",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Petite Arvine"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les coteaux morainiques de la vallée centrale",
+      "caracteristiques_rapides": "Le grand blanc de la vallée, venu du Valais suisse (1970s) : riche en alcool et en acidité, arômes de zeste d'orange, d'aubépine et de fruits blancs, tendu et salin.",
+      "notes_objectives": "La Petite Arvine est le grand cépage blanc de la Vallée d'Aoste, et sans doute le plus prometteur. Originaire du Valais suisse voisin, elle fut importée dans la vallée dans les années 1970 et s'y est parfaitement acclimatée, au point de devenir aujourd'hui la signature blanche de la région.\n\nSur les coteaux morainiques de la vallée centrale, elle donne des blancs à la personnalité affirmée : riches en alcool mais dotés d'une acidité élevée, aux arômes caractéristiques de zeste d'orange, d'aubépine, de fruits blancs, d'agrumes et de fleurs de montagne, avec une salinité finale reconnaissable. Cette combinaison rare de puissance et de tension, favorisée par les fortes amplitudes thermiques entre des journées ensoleillées et des nuits très froides, en fait un blanc de gastronomie capable de vieillir. On la vinifie aussi bien en cuve (pour la pureté du fruit) qu'en fût ou en foudre (pour la texture et la complexité). Des domaines comme Grosjean (Vigna Rovettaz), Les Crêtes (Fleur) ou Ottin en signent des versions remarquées. C'est un accord idéal avec les fromages de montagne (fontina, fondue), les poissons de rivière, les viandes blanches et la cuisine alpine.\n\nLe grand blanc de la vallée, venu du Valais suisse (années 1970) : riche en alcool et en acidité, arômes de zeste d'orange, d'aubépine et de fruits blancs, tendu et salin. C'est la signature blanche de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "petite-arvine",
+        "cepage",
+        "blanc",
+        "reference"
+      ],
+      "source": "winewithseth|winespectator"
+    },
+    {
+      "id": "it-valledaosta-terr-fumin",
+      "nom": "Fumin",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Fumin"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les coteaux morainiques et sableux de la vallée centrale",
+      "caracteristiques_rapides": "Le rouge le plus structuré et le plus apte à la garde de la vallée : sombre, corsé, épicé, aux notes fumées (d'où son nom), cépage autochtone sauvé de l'oubli.",
+      "notes_objectives": "Le Fumin est le rouge le plus structuré et le plus apte à la garde de la Vallée d'Aoste, et l'un de ses cépages autochtones les plus précieux. Son nom fait référence aux notes fumées qui caractérisent les vins qu'il produit.\n\nLongtemps négligé, voire au bord de l'extinction, le Fumin a été sauvé et remis à l'honneur grâce au travail de sélection mené dans les années 1980-90 par l'Institut Agricole Régional et par des vignerons comme les Grosjean. Il donne des rouges à la robe sombre et profonde, corsés et pénétrants, aux arômes de fruits noirs, d'épices, de poivre, d'herbes et de notes fumées et végétales, dotés de tanins fermes et d'une belle structure. Élevé en fût, il gagne en rondeur et développe une réelle complexité, avec une aptitude à la garde d'une décennie et plus, rare dans une région où l'on boit surtout jeune. Il entre aussi dans l'assemblage du Torrette. Des domaines comme Grosjean (Vigne Merletta), Les Crêtes, Lo Triolet ou Ottin en signent de belles versions. C'est un accord idéal avec le gibier de montagne, les viandes rouges, la carbonade et les fromages affinés.\n\nLe rouge le plus structuré et le plus apte à la garde de la vallée : sombre, corsé, épicé, aux notes fumées (d'où son nom). C'est un cépage autochtone sauvé de l'oubli.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "fumin",
+        "cepage",
+        "rouge",
+        "garde",
+        "autochtone"
+      ],
+      "source": "winewithseth|winespectator"
+    },
+    {
+      "id": "it-valledaosta-terr-chambave",
+      "nom": "Chambave",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Chambave (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Muscat",
+        "Petit Rouge",
+        "Vien de Nus"
+      ],
+      "altitude": "~500-750 m",
+      "sols": "sols morainiques et rocheux des coteaux ensoleillés de Chambave",
+      "caracteristiques_rapides": "La sous-zone du Muscat : le Chambave Muscat (sec et surtout flétri/passito) est un joyau aromatique de la vallée, aux côtés de rouges de Petit Rouge et Vien de Nus.",
+      "notes_objectives": "Chambave est la sous-zone du Muscat de la Vallée d'Aoste, l'une des plus réputées de la région, située dans la vallée centrale à l'est d'Aoste, sur des coteaux particulièrement ensoleillés. Le Chambave Muscat est un joyau aromatique de la vallée. En version sèche, il donne un blanc floral, parfumé et vif, où l'exubérance aromatique typique du Muscat est tenue par la fraîcheur alpine. Mais c'est surtout en version flétrie (passito, à partir de raisins passerillés) qu'il atteint son sommet : un vin doux d'une grande finesse, aux arômes de miel, d'abricot sec, de fleurs et d'agrumes confits, riche mais jamais lourd grâce à son acidité. La sous-zone produit aussi des rouges à base de Petit Rouge et de Vien de Nus. Des domaines comme La Crotta di Vegneron ou La Vrille en sont les références. C'est un accord idéal avec les fromages (dont les bleus), la pâtisserie et les desserts pour le flétri, l'apéritif et les poissons pour le sec.\n\nLa sous-zone du Muscat : le Chambave Muscat (sec et surtout flétri/passito) est un joyau aromatique de la vallée, aux côtés de rouges de Petit Rouge et Vien de Nus.\n\nLe Muscat de Chambave doit sa réputation à une figure locale, Ezio Voyat, pionnier légendaire qui, dans les années 1970-80, révéla au monde la finesse de ce vin doux et fit de Chambave un nom qui compte. Les coteaux de cette portion de la vallée, particulièrement bien exposés et abrités, offrent au Muscat une maturité complète tout en préservant l'acidité vive de la montagne — un équilibre rare pour ce cépage aromatique, souvent pataud ailleurs. Servi à l'apéritif ou sur les poissons pour la version sèche, sur les fromages bleus, la pâtisserie, les desserts aux fruits ou en méditation pour le flétri, il séduit par son intensité florale et sa digestibilité. Le passito, produit en quantités infimes, compte parmi les plus beaux vins doux d'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "chambave",
+        "muscat",
+        "blanc",
+        "doux",
+        "sous-zone",
+        "passito"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-terr-enfer-darvier",
+      "nom": "Enfer d'Arvier",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Arvier (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Petit Rouge",
+        "Vien de Nus",
+        "Neyret"
+      ],
+      "altitude": "~600-800 m",
+      "sols": "amphithéâtre rocheux réverbérant la chaleur, sols morainiques escarpés",
+      "caracteristiques_rapides": "L'« enfer » : un amphithéâtre naturel de roche où la chaleur devient étouffante, donnant un rouge de Petit Rouge rare, chaleureux et épicé. Sous-zone spectaculaire et confidentielle.",
+      "notes_objectives": "L'Enfer d'Arvier est l'une des sous-zones les plus spectaculaires et les plus confidentielles de la Vallée d'Aoste. Son nom évoque un amphithéâtre rocheux naturel où la chaleur, réverbérée par les parois de pierre, devient étouffante en été : « l'enfer ». Sur ces pentes vertigineuses, à 600-800 mètres d'altitude, le Petit Rouge (complété de Vien de Nus et de Neyret) bénéficie d'un microclimat exceptionnellement chaud, unique dans cette vallée alpine. Il en résulte un rouge rare et de caractère : plus chaleureux, plus mûr et plus épicé que les autres vins de Petit Rouge, tout en conservant la fraîcheur que lui confère l'altitude. Fruité, floral et savoureux, il compte parmi les curiosités les plus attachantes de la région. La production, minuscule, est portée par une poignée de vignerons, dont Danilo Thomain. C'est un accord idéal avec la cuisine de montagne, les viandes, la carbonade et les fromages, chez une sous-zone au nom évocateur et au terroir hors du commun.\n\nL'« enfer » : un amphithéâtre naturel de roche où la chaleur devient étouffante, donnant un rouge de Petit Rouge rare, chaleureux et épicé. C'est une sous-zone spectaculaire et confidentielle.\n\nLe nom, à lui seul, vaut le voyage. Cet amphithéâtre rocheux, où les parois de pierre réverbèrent la chaleur au point de rendre l'endroit étouffant en plein été, constitue un microclimat unique dans une vallée alpine réputée pour sa fraîcheur. Le paradoxe est saisissant : à quelques kilomètres des glaciers, la vigne y mûrit comme au sud. Le travail y est extrême, sur des pentes qui peuvent atteindre 70 % d'inclinaison. Servi sur la cuisine de montagne, la carbonade, les viandes ou les fromages, l'Enfer d'Arvier séduit par sa générosité fruitée et sa fraîcheur retrouvée en finale. Produit à quelques milliers de bouteilles seulement, il reste l'une des perles rares et les plus attachantes du vignoble valdôtain.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "arvier",
+        "enfer-darvier",
+        "petit-rouge",
+        "rouge",
+        "sous-zone",
+        "rare",
+        "curiosite"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-terr-petit-rouge",
+      "nom": "Petit Rouge",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Petit Rouge"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les coteaux morainiques de la vallée centrale",
+      "caracteristiques_rapides": "Le cépage rouge le plus planté de la vallée (20 %) : base du Torrette, il donne des rouges frais et parfumés (myrtille, framboise, violette, églantine), parfois comparés au Beaujolais.",
+      "notes_objectives": "Le Petit Rouge est le cépage rouge le plus planté de la Vallée d'Aoste (environ 20 % de l'encépagement) et l'un des rares autochtones véritables de la région. Il est le cœur du Torrette, le vin le plus emblématique de la vallée. Ses baies, petites et sombres, à la peau teintée d'un voile gris poussiéreux, donnent des vins à la robe pourpre et au parfum intense : myrtille, framboise, violette, églantine, avec des notes épicées. En bouche, il est frais, élégant et joliment tannique, avec une chaleur maîtrisée — on le compare parfois au Gamay du Beaujolais pour sa gourmandise et sa buvabilité. Il est surtout utilisé en assemblage, où il apporte couleur, fruit et notes florales : c'est la base du Torrette (min. 70 %), mais aussi du Chambave Rouge, du Nus Rouge et de l'Enfer d'Arvier. Il est aussi vinifié en monocépage. Des extractions douces et un élevage en cuve font ressortir son parfum délicat. C'est un accord idéal avec la cuisine valdôtaine : fontina, charcuteries, polenta, viandes.\n\nLe cépage rouge le plus planté de la vallée (20 %) : base du Torrette, il donne des rouges frais et parfumés (myrtille, framboise, violette, églantine), parfois comparés au Beaujolais.\n\nCépage véritablement autochtone — une rareté dans une région où beaucoup de variétés sont venues d'ailleurs —, le Petit Rouge est l'ossature du vignoble valdôtain. Sa polyvalence explique son omniprésence : il forme la colonne vertébrale de presque tous les rouges d'assemblage de la vallée (Torrette, Chambave Rouge, Nus Rouge, Enfer d'Arvier), auxquels il apporte couleur, parfum floral et gourmandise. Les vinificateurs privilégient aujourd'hui des extractions douces et un élevage en cuve pour préserver son fruit délicat, plutôt que de le masquer sous le bois. Servi légèrement rafraîchi sur les charcuteries de montagne, la fontina, la polenta ou une cuisine conviviale, il séduit par sa buvabilité et son parfum. C'est le vin de tous les jours des Valdôtains, et la porte d'entrée idéale dans les rouges alpins.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "petit-rouge",
+        "cepage",
+        "rouge",
+        "torrette",
+        "autochtone"
+      ],
+      "source": "moretimetotravel|signorvino"
+    },
+    {
+      "id": "it-valledaosta-terr-nus",
+      "nom": "Nus",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Nus (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vien de Nus",
+        "Petit Rouge",
+        "Pinot Gris (Malvoisie)"
+      ],
+      "altitude": "~500-750 m",
+      "sols": "sols morainiques et rocheux des coteaux de Nus, à l'est d'Aoste",
+      "caracteristiques_rapides": "La petite sous-zone aux deux visages : le Nus Rouge (Vien de Nus et Petit Rouge) et le rare Nus Malvoisie (un Pinot Gris local, aussi en version flétrie), joyau confidentiel.",
+      "notes_objectives": "Nus est une petite sous-zone de la Vallée d'Aoste, située dans la vallée centrale juste à l'est d'Aoste, autour du bourg du même nom. Elle a la particularité de produire deux vins bien distincts, dont un joyau confidentiel. Le Nus Rouge est un rouge d'assemblage à base de Vien de Nus (le cépage local qui porte le nom du village) et de Petit Rouge : un vin fruité, frais et élégant, typique de la vallée. Mais la véritable curiosité de la sous-zone est le Nus Malvoisie : malgré son nom, il ne s'agit pas d'une malvoisie mais d'un Pinot Gris local, qui donne un blanc riche, aromatique et texturé. Il existe aussi en version flétrie (passito, à partir de raisins passerillés), un vin doux rare et remarquable, aux arômes de miel, de fruits secs et d'épices. Ces deux vins, produits en très petites quantités, comptent parmi les spécialités les plus recherchées de la région. C'est un accord idéal avec les fromages de montagne, la cuisine alpine et, pour le Malvoisie flétri, les desserts.\n\nLa petite sous-zone aux deux visages : le Nus Rouge (Vien de Nus et Petit Rouge) et le rare Nus Malvoisie (un Pinot Gris local, aussi en version flétrie). C'est un joyau confidentiel de la vallée.\n\nLe Nus Malvoisie est l'un des secrets les mieux gardés de la Vallée d'Aoste. Le nom prête à confusion : il ne s'agit nullement d'une malvoisie, mais bien d'un Pinot Gris, désigné localement par cette appellation traditionnelle héritée d'un usage ancien. Cultivé sur les coteaux ensoleillés de Nus, il y trouve des conditions idéales, donnant un blanc d'une richesse et d'une texture inhabituelles pour la région. La version flétrie, issue de raisins passerillés, est un vin doux d'une grande complexité, produit en quantités confidentielles et très recherché. Servi sur les fromages de montagne, la cuisine alpine ou les viandes blanches pour le sec, sur les desserts et les fromages bleus pour le flétri, il incarne la finesse discrète de cette petite sous-zone.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "nus",
+        "vien-de-nus",
+        "malvoisie",
+        "rouge",
+        "blanc",
+        "sous-zone",
+        "rare"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-terr-cornalin",
+      "nom": "Cornalin",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cornalin (Humagne Rouge)"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les coteaux de la vallée centrale",
+      "caracteristiques_rapides": "Cépage autochtone d'une grande élégance et structure : le Cornalin donne des rouges épicés, complexes et racés, l'un des trésors ampélographiques sauvés de la vallée.",
+      "notes_objectives": "Le Cornalin est l'un des trésors ampélographiques de la Vallée d'Aoste, un cépage autochtone d'une grande élégance et d'une belle structure, appartenant à la famille des Oriou. Il est apparenté à l'Humagne Rouge du Valais suisse voisin. Longtemps menacé de disparition, il a été sauvé grâce au travail de sélection mené dans les années 1980-90 par l'Institut Agricole Régional et par des vignerons comme les Grosjean, qui l'ont replanté et remis à l'honneur. Il donne des rouges épicés, complexes et racés, aux arômes de fruits rouges et noirs, de poivre, d'herbes de montagne et de notes florales, dotés d'une belle structure tannique et d'une fraîcheur alpine caractéristique. Vinifié en monocépage ou entrant dans l'assemblage du Torrette, il séduit par sa finesse et son originalité. Des domaines comme Grosjean, Rosset Terroir, La Vrille ou Château Feuillet en signent de belles versions. C'est un accord idéal avec le gibier, les viandes de montagne et les fromages affinés.\n\nCépage autochtone d'une grande élégance et structure : le Cornalin donne des rouges épicés, complexes et racés. C'est l'un des trésors ampélographiques sauvés de la vallée.\n\nLe cas du Cornalin illustre à merveille l'entreprise de sauvetage ampélographique menée en Vallée d'Aoste. Au bord de l'extinction il y a quarante ans, ce cépage doit sa survie au travail patient de l'Institut Agricole Régional et de vignerons convaincus, qui l'ont identifié, sélectionné, multiplié et replanté. Aujourd'hui, il est l'un des rouges les plus appréciés de la région, et ses meilleures cuvées comptent parmi les plus fines de la vallée. Son lien de parenté avec l'Humagne Rouge du Valais rappelle la profonde continuité culturelle et viticole de l'arc alpin, par-delà les frontières. Servi sur le gibier, les viandes de montagne, la carbonade ou les fromages affinés, il séduit par sa complexité épicée et sa fraîcheur, et se patine sur plusieurs années.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "cornalin",
+        "cepage",
+        "rouge",
+        "autochtone",
+        "rescape"
+      ],
+      "source": "winespectator|grosjeanvins"
+    },
+    {
+      "id": "it-valledaosta-terr-arnad-montjovet",
+      "nom": "Arnad-Montjovet",
+      "type": "sous-zone (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Basse vallée (AO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo (Picotendro)"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "sols morainiques et granitiques de la basse vallée",
+      "caracteristiques_rapides": "La seconde sous-zone du Nebbiolo alpin, voisine de Donnas : Picotendro plus souple et accessible, sur les coteaux de la basse vallée, vers le Piémont.",
+      "notes_objectives": "Arnad-Montjovet est la seconde sous-zone du Nebbiolo alpin de la Vallée d'Aoste, voisine du Donnas, dans la basse vallée, aux abords du Piémont. Comme à Donnas, le Nebbiolo y est appelé Picotendro et cultivé sur des coteaux et terrasses de sols morainiques et granitiques. Le style y est généralement un peu plus souple et plus accessible qu'à Donnas : un rouge à la robe claire, aux arômes de cerise, de rose et d'amande, aux tanins présents mais plus fondus, doté de cette fraîcheur alpine caractéristique. Confidentielle et peu diffusée, l'appellation illustre, aux côtés du Donnas, l'excellente adaptation du Nebbiolo aux terroirs d'altitude de la basse vallée. C'est un accord idéal avec la cuisine de montagne, les viandes, le gibier et les fromages affinés, chez une sous-zone méconnue à découvrir pour les amateurs de Nebbiolo alpin, dans un registre plus souple que son illustre voisin.\n\nLa seconde sous-zone du Nebbiolo alpin, voisine de Donnas : Picotendro plus souple et accessible, sur les coteaux de la basse vallée, vers le Piémont.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "arnad-montjovet",
+        "nebbiolo",
+        "picotendro",
+        "rouge",
+        "sous-zone"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-terr-prie-blanc",
+      "nom": "Prié Blanc",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (blanc)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Prié Blanc"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime uniquement sur les moraines d'altitude de la Valdigne",
+      "caracteristiques_rapides": "Le cépage alpin extrême : cultivé en pergolas basses jusqu'à 1200 m, franc de pied, à cycle court, il donne des blancs vifs et délicats (pêche, citron), uniques au monde.",
+      "notes_objectives": "Le Prié Blanc est le cépage alpin extrême par excellence, cultivé uniquement dans la Valdigne, au pied du Mont-Blanc, où il donne le Blanc de Morgex et de La Salle. C'est l'un des cépages les plus singuliers d'Italie. Adapté à des conditions extrêmes, il est conduit en basses pergolas près du sol, pour bénéficier de la chaleur restituée par la terre, et possède un cycle de maturation court qui permet de vendanger avant les neiges. Sa particularité la plus remarquable : à ces altitudes (900-1200 m), le phylloxéra n'a jamais pu s'installer, si bien que les vignes sont franches de pied, non greffées — un cas rarissime en Europe. Il donne des blancs vifs et délicats, légers en alcool, aux arômes de pêche, de citron, de pomme et de fleurs de montagne, à la minéralité tranchante. Il excelle aussi en effervescent (metodo classico). C'est un accord idéal avec l'apéritif, les poissons de rivière, la fondue valdôtaine et les fromages de montagne, un blanc alpin unique au monde.\n\nLe cépage alpin extrême : cultivé en pergolas basses jusqu'à 1200 m, franc de pied, à cycle court, il donne des blancs vifs et délicats (pêche, citron), uniques au monde.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "prie-blanc",
+        "cepage",
+        "blanc",
+        "altitude",
+        "franc-de-pied",
+        "autochtone"
+      ],
+      "source": "winewithseth|winespectator"
+    },
+    {
+      "id": "it-valledaosta-terr-vallee-daoste-valle-daosta-doc",
+      "nom": "Vallée d'Aoste (Valle d'Aosta) DOC",
+      "type": "appellation (DOC)",
+      "region": "Valle d'Aosta",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Petit Rouge",
+        "Nebbiolo",
+        "Prié Blanc",
+        "Fumin",
+        "Petite Arvine",
+        "Chardonnay"
+      ],
+      "altitude": "~300-1200 m",
+      "sols": "moraines, granites et sables des coteaux exposés sud de la Dora Baltea",
+      "caracteristiques_rapides": "La DOC unique de la région (1985), qui englobe les 7 sous-zones : cadre bilingue franco-italien, ~400 ha, la plus petite et la plus haute appellation d'Italie.",
+      "notes_objectives": "La Vallée d'Aoste DOC (ou Valle d'Aosta, la région étant officiellement bilingue) est l'appellation unique de la plus petite région viticole d'Italie, créée en 1985 pour unifier les appellations préexistantes. Elle englobe les sept sous-zones : Blanc de Morgex et de La Salle, Enfer d'Arvier, Torrette, Nus, Chambave, Arnad-Montjovet et Donnas. Elle couvre à peine 400 hectares de vignes, étagées de 300 à 1 200 mètres d'altitude, sur les coteaux exposés sud dominant la Dora Baltea, le long d'une vallée d'environ 70 kilomètres. C'est aussi la plus haute appellation d'Italie. Elle permet la production de nombreux vins de cépage — Petite Arvine, Fumin, Cornalin, Chardonnay, Pinot Noir, Gamay, Syrah, Nebbiolo — en plus des vins de sous-zone. Environ 60 % de la production est en rouge ou rosé, 40 % en blanc, et les trois quarts proviennent de coopératives. Le tout dans une viticulture héroïque, entièrement manuelle, en terrasses.\n\nLa DOC unique de la région (1985), qui englobe les 7 sous-zones : cadre bilingue franco-italien, ~400 ha, la plus petite et la plus haute appellation d'Italie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "doc",
+        "regionale",
+        "multi-cepages",
+        "altitude"
+      ],
+      "source": "winewithseth|wine-searcher"
+    },
+    {
+      "id": "it-valledaosta-terr-premetta-prie-rouge",
+      "nom": "Premetta (Prié Rouge)",
+      "type": "cépage",
+      "region": "Valle d'Aosta",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Premetta"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les coteaux de la vallée centrale",
+      "caracteristiques_rapides": "Curiosité ampélographique : cépage ancien à peau fine donnant un rouge très clair, presque rosé, léger, floral et désaltérant, quasi unique à la vallée.",
+      "notes_objectives": "La Premetta, également appelée Prié Rouge, est l'une des curiosités ampélographiques les plus attachantes de la Vallée d'Aoste. C'est un cépage ancien et rare, quasi unique à la région. Sa particularité tient à sa peau très fine et délicate, qui donne des vins à la robe extrêmement claire, presque rosée — au point qu'on hésite parfois à les classer en rouge ou en rosé. Il en résulte un vin léger, floral et désaltérant, aux arômes de fruits rouges frais, de fleurs et d'épices douces, à boire jeune et frais, d'une buvabilité remarquable. Longtemps menacée de disparition, la Premetta a été préservée grâce au travail de sélection de l'Institut Agricole Régional et de vignerons comme les Grosjean, qui en signent de belles versions. Elle entre aussi parfois dans l'assemblage du Torrette. C'est un accord idéal avec les charcuteries de montagne, la cuisine légère et les fromages frais, servie légèrement rafraîchie, une curiosité à découvrir absolument.\n\nCuriosité ampélographique : cépage ancien à peau fine donnant un rouge très clair, presque rosé, léger, floral et désaltérant. C'est une variété quasi unique à la vallée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "premetta",
+        "prie-rouge",
+        "cepage",
+        "rouge",
+        "clair",
+        "rare",
+        "curiosite"
+      ],
+      "source": "grosjeanvins|chambersstwines"
+    },
+    {
+      "id": "it-valledaosta-terr-vin-de-glace-e-vin-de-paille",
+      "nom": "Vin de glace & Vin de paille",
+      "type": "style / spécialité",
+      "region": "Valle d'Aosta",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Prié Blanc",
+        "Muscat",
+        "Petite Arvine"
+      ],
+      "altitude": "~600-1200 m",
+      "sols": "coteaux d'altitude, vendanges tardives ou passerillage",
+      "caracteristiques_rapides": "Les spécialités douces alpines : vin de glace (raisins gelés sur pied) et vins flétris/passito (Chambave Muscat Flétri, Nus Malvoisie Flétri), joyaux rares de la montagne.",
+      "notes_objectives": "Le vin de glace et les vins flétris (passito, ou « vin de paille ») sont les spécialités douces de la Vallée d'Aoste, des joyaux rares nés des conditions extrêmes de la montagne. Le vin de glace (vin de glace / ice wine) est produit à partir de raisins laissés à geler sur pied, puis pressés encore gelés, ce qui concentre extraordinairement les sucres et les arômes : la région, avec ses hivers rigoureux et ses vignobles d'altitude, offre des conditions idéales pour cette pratique rarissime en Italie. Les vins flétris, eux, sont issus de raisins passerillés (séchés) après la vendange : le Chambave Muscat Flétri (aux arômes de miel, d'abricot et de fleurs) et le rare Nus Malvoisie Flétri en sont les fleurons. Ces vins doux, riches mais toujours équilibrés par l'acidité alpine, comptent parmi les plus belles curiosités de la région. C'est un accord idéal avec les fromages affinés et les bleus, la pâtisserie, les desserts aux fruits, ou à déguster seuls, en méditation.\n\nLes spécialités douces alpines : vin de glace (raisins gelés sur pied) et vins flétris/passito (Chambave Muscat Flétri, Nus Malvoisie Flétri), joyaux rares de la montagne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valle-daosta",
+        "vin-de-glace",
+        "passito",
+        "fletri",
+        "doux",
+        "specialite",
+        "rare"
+      ],
+      "source": "signorvino"
+    }
+  ]
+}

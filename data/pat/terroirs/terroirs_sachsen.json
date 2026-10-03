@@ -1,0 +1,389 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "sachsen",
+  "region_label": "Sachsen (Allemagne)",
+  "source_file": "terroirs_sachsen_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 14,
+  "items": [
+    {
+      "id": "de-sachsen-terr-proschwitzer-katzensprung",
+      "nom": "Proschwitzer Katzensprung",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Grauburgunder",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "altitude": "110-180 m",
+      "sols": "granite et lœss, en terrasses",
+      "caracteristiques_rapides": "Le grand coteau emblématique de Schloss Proschwitz, près de Meissen ; sur granite et lœss, de grands Burgunder (Grauburgunder en tête), référence de la Saxe.",
+      "notes_objectives": "Le Proschwitzer Katzensprung est le grand coteau emblématique de la Saxe, près de Meissen. Sur un sol de granite et de lœss, exposé au sud au-dessus de l'Elbe, il bénéficie des longues heures d'ensoleillement de la vallée, précieuses dans cette région septentrionale. Le granite confère aux Burgunder — Grauburgunder en tête, mais aussi Weissburgunder et Spätburgunder — finesse, ampleur et minéralité. Le terroir est le fleuron du domaine Schloss Proschwitz, le plus ancien et le plus grand domaine privé de Saxe. Classé au sommet de la hiérarchie régionale, le Katzensprung illustre l'excellence des grands Burgunder de l'Elbe. Le Katzensprung doit son caractère à une combinaison rare en Allemagne : un sol de granite et de syénite, recouvert par endroits de lœss, sur un coteau plein sud dominant l'Elbe. Le granite, pierre primaire qui réchauffe et draine, confère aux vins une minéralité et une droiture particulières, tandis que la vallée du fleuve offre, à cette latitude septentrionale, un ensoleillement précieux. Le domaine Schloss Proschwitz y signe ses plus grandes cuvées : des Grauburgunder amples et profonds, mais aussi des Weissburgunder et des Spätburgunder, héritiers d'une viticulture attestée ici dès le XIIe siècle, lorsque les moines plantaient déjà la vigne sur ces coteaux. Pour l'amateur, le Katzensprung est le terroir qui incarne, à lui seul, la renaissance de la viticulture saxonne après la réunification et la capacité de cette petite région à produire de grands Burgunder de terroir. La restauration de ce grand coteau, après des décennies de collectivisation qui avaient ruiné la viticulture saxonne, est l'œuvre de Georg Prinz zur Lippe, dont la famille avait été spoliée et exilée par le régime communiste. En rachetant et en replantant ces terrasses dès les années 1990, il en a refait le fleuron de la région. Les Grauburgunder du Katzensprung, amples, mûrs et minéraux, comptent aujourd'hui parmi les plus beaux blancs de l'est de l'Allemagne. Pour l'amateur, ce terroir est la porte d'entrée idéale vers les grands vins de l'Elbe, et le symbole de la résurrection d'un vignoble que l'histoire avait failli effacer.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "granite",
+        "grauburgunder",
+        "vdp-grosse-lage",
+        "meissen"
+      ],
+      "source": "winewitandwisdom|simply-saxony"
+    },
+    {
+      "id": "de-sachsen-terr-pillnitzer-koeniglicher-weinberg",
+      "nom": "Pillnitzer Königlicher Weinberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Dresden",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Grauburgunder",
+        "Riesling",
+        "Traminer"
+      ],
+      "altitude": "110-220 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau escarpé plein sud au-dessus du château de Pillnitz, près de Dresde ; le terroir de granite culte de Klaus Zimmerling, donnant des blancs d'une grande densité.",
+      "notes_objectives": "Le Pillnitzer Königlicher Weinberg est un coteau escarpé de granite, exposé plein sud, au-dessus du château baroque de Pillnitz, près de Dresde. Sa pente raide et son sol de roche primaire en font un terroir d'exception. Il donne des blancs d'une grande densité et concentration — Grauburgunder, Riesling, Traminer —, fruits de rendements volontairement très faibles. Le terroir est indissociable du domaine culte de Klaus Zimmerling, dont les vins, jalonnés des sculptures de Malgorzata Chodakowska, comptent parmi les plus admirés d'Allemagne de l'Est. Classé au sommet de la hiérarchie régionale, le Königlicher Weinberg illustre l'expression la plus aboutie du granite saxon. Le Königlicher Weinberg, sur la Rysselkuppe, est un coteau abrupt de granite exposé plein sud, qui domine le château baroque de Pillnitz, ancienne résidence d'été des rois de Saxe — d'où son nom de « vignoble royal ». La roche primaire, la pente raide et l'exposition idéale en font l'un des plus grands terroirs de la région. Klaus Zimmerling y a fait le choix radical de la qualité : des rendements minuscules, une culture sans désherbants ni pesticides de synthèse, et des vins — Grauburgunder, Riesling, Traminer — d'une densité et d'une concentration peu communes en Allemagne du Nord. Chaque millésime est aussi une œuvre d'art, orné d'une sculpture de Malgorzata Chodakowska. Pour l'amateur, le Königlicher Weinberg est le terroir qui prouve que le granite saxon peut donner des blancs profonds, cultes et inimitables. Le lien entre ce terroir et l'art en fait un lieu unique : les sculptures de femmes en bois de Malgorzata Chodakowska peuplent les vignes et le chai, et chaque étiquette en reproduit une, différente à chaque millésime. Cette dimension esthétique prolonge l'exigence viticole de Klaus Zimmerling, pour qui le vin est un objet de contemplation autant que de plaisir. Produits en quelques milliers de bouteilles, les vins du Königlicher Weinberg sont parmi les plus rares et les plus recherchés d'Allemagne. Pour l'amateur, ce coteau de granite au-dessus de Pillnitz est l'âme de la Saxe : un terroir confidentiel qui prouve qu'une région minuscule peut donner de très grands vins.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "dresden"
+      ],
+      "source": "dresden-magazin"
+    },
+    {
+      "id": "de-sachsen-terr-radebeuler-goldener-wagen",
+      "nom": "Radebeuler Goldener Wagen",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder",
+        "Traminer"
+      ],
+      "altitude": "110-220 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Le grand coteau le plus célèbre de Radebeul ; terrasses de granite plein sud donnant Riesling et Burgunder (Aust, Wackerbarth, Hoflössnitz).",
+      "notes_objectives": "Le Radebeuler Goldener Wagen est le grand coteau le plus célèbre de Radebeul. Aménagé en terrasses de granite exposées au sud, au-dessus de l'Elbe, il donne des Riesling, des Burgunder et du Traminer. Le terroir est exploité par les meilleurs domaines de Radebeul, dont Karl Friedrich Aust, Schloss Wackerbarth et Hoflössnitz. Classé en grand cru, le Goldener Wagen illustre la qualité des terroirs de granite de Radebeul, cœur viticole de la Saxe. Le Goldener Wagen — « le char d'or » — est le terroir le plus emblématique de Radebeul, aménagé en terrasses de granite soutenues par des murs de pierre sèche, héritage de la viticulture historique de la région. Son exposition plein sud, au-dessus de l'Elbe, en fait l'un des coteaux les plus chauds de la Saxe. Karl Friedrich Aust, Schloss Wackerbarth et Hoflössnitz y signent des Riesling et des Burgunder droits et minéraux. Le cru illustre la qualité des grands terroirs de granite de Radebeul, cœur viticole et historique de la région, face à Dresde. La beauté du Goldener Wagen, avec ses terrasses de pierre dominant l'Elbe face à Dresde, en fait l'un des paysages viticoles les plus célèbres de la Saxe. Réunissant plusieurs des meilleurs domaines de Radebeul, il offre une belle lecture du granite saxon : des Riesling tendus et des Burgunder fins, à l'acidité fraîche caractéristique de la région. Le cru illustre la grandeur et l'histoire des coteaux de Radebeul, au cœur du paysage culturel de la vallée de l'Elbe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "radebeul"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-terr-meissner-kapitelberg",
+      "nom": "Meißner Kapitelberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Grand coteau de granite à Meissen ; Riesling et rouges précis (Martin Schwarz, Vincenz Richter).",
+      "notes_objectives": "Le Meißner Kapitelberg est un grand coteau de granite à Meissen. Bien exposé, il donne des Riesling et des rouges précis et minéraux. Le terroir est exploité par des domaines comme Martin Schwarz et Vincenz Richter. Classé en grand cru, le Kapitelberg illustre la qualité des coteaux de granite de Meissen, berceau de la viticulture saxonne. Grand coteau de granite au-dessus de Meissen, le Kapitelberg doit son nom au chapitre de la cathédrale, qui le possédait jadis. Sa pente bien exposée donne des Riesling et des rouges précis et minéraux, magnifiés par des domaines comme Martin Schwarz et Vincenz Richter. Le cru illustre la qualité des coteaux de granite de Meissen, berceau de la viticulture saxonne, au pied de l'Albrechtsburg et de la célèbre manufacture de porcelaine. Dominé par la silhouette de l'Albrechtsburg, premier château résidentiel d'Allemagne, et de la cathédrale de Meissen, le Kapitelberg unit patrimoine et grand terroir. Son granite donne aux Riesling et aux rouges de Martin Schwarz une minéralité et une précision remarquables. Le cru illustre la qualité des coteaux historiques de Meissen, cité fondatrice de la viticulture saxonne et capitale de la porcelaine européenne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "meissen"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-terr-seusslitzer-heinrichsburg",
+      "nom": "Seußlitzer Heinrichsburg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Diesbar-Seußlitz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "100-180 m",
+      "sols": "granite et lœss, en terrasses",
+      "caracteristiques_rapides": "Coteau de granite et lœss à l'extrémité nord du vignoble, à Seußlitz ; Weissburgunder et Riesling au bord de l'Elbe (Jan Ulrich).",
+      "notes_objectives": "La Seußlitzer Heinrichsburg est un coteau de granite et de lœss à l'extrémité nord du vignoble saxon, à Diesbar-Seußlitz. Bien exposé au bord de l'Elbe, il donne des Weissburgunder et des Riesling. Le terroir est exploité par le domaine Jan Ulrich. Classé en grand cru, la Heinrichsburg illustre la qualité des coteaux du nord de la Saxe. À l'extrémité nord du vignoble saxon, la Heinrichsburg, sur granite et lœss, est l'un des terroirs les plus septentrionaux de la région. Bien exposée au bord de l'Elbe, elle donne des Weissburgunder et des Riesling, magnifiés par le domaine Jan Ulrich. Le cru illustre la qualité des coteaux du secteur de Diesbar-Seußlitz, où la vigne longe le fleuve dans un paysage pittoresque, à la limite nord de la viticulture saxonne. Marquant la pointe nord du vignoble saxon, la Heinrichsburg bénéficie d'un microclimat favorable au bord de l'Elbe. Ses Weissburgunder et Riesling, frais et délicats, expriment le style classique de la région. Le domaine Jan Ulrich en est l'interprète attitré. Le cru illustre la qualité, parfois méconnue, des coteaux du nord de la Saxe, dans le pittoresque secteur de Diesbar-Seußlitz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "weissburgunder",
+        "vdp-grosse-lage",
+        "diesbar-seusslitz"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-sachsen-terr-seusslitzer-schlossweinberg",
+      "nom": "Seußlitzer Schlossweinberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Diesbar-Seußlitz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "100-180 m",
+      "sols": "granite et lœss, en terrasses",
+      "caracteristiques_rapides": "Coteau historique autour du château baroque de Seußlitz ; Riesling et Burgunder du nord de la région.",
+      "notes_objectives": "Le Seußlitzer Schlossweinberg est un coteau historique autour du château baroque de Seußlitz, au nord du vignoble. Sur granite et lœss, il donne des Riesling et des Burgunder. Le terroir, l'un des plus pittoresques de la région, illustre l'alliance du patrimoine et de la vigne. Classé en grand cru, le Schlossweinberg illustre la qualité des coteaux du secteur de Seußlitz. Niché autour du château baroque de Seußlitz, le Schlossweinberg est l'un des coteaux les plus pittoresques de la région. Sur granite et lœss, il donne des Riesling et des Burgunder, dans un cadre patrimonial remarquable. Le cru illustre l'alliance, si caractéristique de la Saxe, entre l'architecture princière et la vigne, et la qualité des terroirs du nord du vignoble, autour de Seußlitz. Le château baroque de Seußlitz et son parc, qui surplombent ce coteau, en font l'un des sites les plus romantiques de la viticulture saxonne. Sur granite et lœss, le Schlossweinberg donne des Riesling et des Burgunder de belle facture. Le cru illustre l'union du patrimoine princier et de la vigne, et la qualité des terroirs du nord de la région, autour de Seußlitz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "historique",
+        "vdp-grosse-lage",
+        "diesbar-seusslitz"
+      ],
+      "source": "winewitandwisdom"
+    },
+    {
+      "id": "de-sachsen-terr-radebeuler-johannisberg",
+      "nom": "Radebeuler Johannisberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Traminer",
+        "Weissburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite de Radebeul, bien exposé ; Riesling et Traminer (Hoflössnitz et divers domaines).",
+      "notes_objectives": "Le Radebeuler Johannisberg est un coteau de granite de Radebeul, bien exposé. Il donne des Riesling, du Traminer et des Burgunder. Le terroir est exploité par des domaines comme Hoflössnitz. Classé en grand cru, le Johannisberg illustre la qualité des terroirs de granite de Radebeul, sur les coteaux de l'Elbe. Coteau de granite bien exposé de Radebeul, le Johannisberg donne des Riesling, du Traminer et des Burgunder, dans le style classique et frais de la région. Exploité notamment par Hoflössnitz, il participe à la mosaïque des grands coteaux de Radebeul. Le cru illustre la qualité des terrasses de granite de l'Elbe, qui font de Radebeul l'un des cœurs viticoles de la Saxe, au cœur d'un paysage classé. Apprécié pour la finesse de ses Riesling et de ses Traminer, le Johannisberg compte parmi les bons coteaux de granite de Radebeul. Sa belle exposition au-dessus de l'Elbe assure une maturité régulière. Le cru confirme la richesse du patrimoine viticole de Radebeul, dont les multiples coteaux de granite font l'un des secteurs les plus réputés de la Saxe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "radebeul"
+      ],
+      "source": "intowine"
+    },
+    {
+      "id": "de-sachsen-terr-weinboehlaer-gellertberg",
+      "nom": "Weinböhlaer Gellertberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Goldriesling"
+      ],
+      "altitude": "110-200 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite à Weinböhla, près de Meissen ; blancs secs dont le Goldriesling, spécialité saxonne.",
+      "notes_objectives": "Le Weinböhlaer Gellertberg est un coteau de granite à Weinböhla, près de Meissen. Bien exposé, il donne des blancs secs, dont le Goldriesling, spécialité saxonne. Le terroir est exploité par divers domaines de la région. Classé en grand cru, le Gellertberg illustre la qualité des coteaux de granite du secteur de Meissen. Coteau de granite à Weinböhla, à la lisière nord-ouest du secteur de Meissen, le Gellertberg donne des blancs secs, dont le Goldriesling, ce cépage précoce exclusif à la Saxe. Sa bonne exposition assure une maturité régulière. Le cru illustre la qualité des coteaux de granite du secteur de Meissen et la place du Goldriesling, spécialité identitaire de la région, dans son encépagement. Apprécié pour ses blancs secs et son Goldriesling, le Gellertberg illustre la place de ce cépage précoce et identitaire, qui ne pousse qu'en Saxe. Son granite bien exposé en fait un bon terroir du secteur de Meissen. Le cru confirme la diversité ampélographique de la région et l'attachement des vignerons saxons à leurs spécialités, sur les coteaux de l'Elbe.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "goldriesling",
+        "vdp-grosse-lage",
+        "meissen"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-sachsen-terr-meissner-ratsweinberg",
+      "nom": "Meißner Ratsweinberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Riesling"
+      ],
+      "altitude": "110-190 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite de Meissen ; blancs secs et frais, dans la cité de la porcelaine.",
+      "notes_objectives": "Le Meißner Ratsweinberg est un coteau de granite de Meissen. Bien exposé, il donne des blancs secs et frais. Le terroir illustre la qualité des coteaux de la cité de la porcelaine, berceau de la viticulture saxonne. Coteau de granite de Meissen, le Ratsweinberg — ancien vignoble du conseil de la ville — donne des blancs secs et frais. Bien exposé au-dessus de l'Elbe, il illustre la qualité des coteaux de la cité de la porcelaine, berceau de la viticulture saxonne, où la vigne s'étage au pied des monuments historiques. Il compte parmi les bons coteaux de granite de Meissen, au pied de l'Albrechtsburg. Bien exposé au-dessus de l'Elbe, il donne des blancs secs et frais d'un bon rapport qualité-prix, dans la cité de la porcelaine.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "grand-coteau",
+        "meissen"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-terr-radebeuler-steinruecken",
+      "nom": "Radebeuler Steinrücken",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite de Radebeul ; Riesling et Burgunder sur les terrasses de l'Elbe.",
+      "notes_objectives": "Le Radebeuler Steinrücken est un coteau de granite de Radebeul. Bien exposé, il donne des Riesling et des Burgunder. Le terroir illustre la qualité des terrasses de granite de Radebeul, sur les coteaux de l'Elbe. Coteau de granite de Radebeul, le Steinrücken donne des Riesling et des Burgunder sur les terrasses de l'Elbe. Bien exposé, il complète la série des bons coteaux de Radebeul, l'un des cœurs viticoles de la Saxe. Le cru illustre la qualité des terroirs de granite qui dominent le fleuve, face à Dresde, dans un paysage viticole classé. Il participe à la mosaïque des grands coteaux de granite de Radebeul, face à Dresde. Ses terrasses de granite, soutenues par d'anciens murs de pierre, témoignent de la viticulture historique de Radebeul.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "radebeul"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-terr-soernewitzer-eulengrund",
+      "nom": "Sörnewitzer Eulengrund",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Goldriesling"
+      ],
+      "altitude": "110-190 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite à Sörnewitz, près de Meissen ; blancs secs dont le Goldriesling (Schuh).",
+      "notes_objectives": "Le Sörnewitzer Eulengrund est un coteau de granite à Sörnewitz, près de Meissen. Bien exposé, il donne des blancs secs, dont le Goldriesling. Le terroir est exploité par des domaines comme le Weingut Schuh. Il illustre la qualité des coteaux du secteur de Meissen. Coteau de granite à Sörnewitz, près de Meissen, l'Eulengrund donne des blancs secs, dont le Goldriesling, spécialité saxonne, et du Müller-Thurgau. Exploité par des domaines comme le Weingut Schuh, il illustre la qualité des coteaux du secteur de Meissen et l'attachement de la région à ses cépages traditionnels, sur les terrasses de granite de l'Elbe. Il met en valeur le Goldriesling, cépage emblématique et exclusif de la Saxe. Exploité notamment par le Weingut Schuh, il témoigne de la vitalité des petits coteaux du secteur de Meissen.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "goldriesling",
+        "grand-coteau",
+        "meissen"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-terr-pesterwitzer-jochhoeh",
+      "nom": "Pesterwitzer Jochhöh",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Dresden",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Müller-Thurgau"
+      ],
+      "altitude": "150-250 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite à Pesterwitz, aux portes de Dresde ; blancs secs d'altitude, dans le secteur de Dresde.",
+      "notes_objectives": "Le Pesterwitzer Jochhöh est un coteau de granite à Pesterwitz, aux portes de Dresde. Situé en altitude, il donne des blancs secs et frais. Le terroir illustre la viticulture du secteur de Dresde, à la limite occidentale du vignoble saxon. Coteau de granite à Pesterwitz, aux portes occidentales de Dresde, le Jochhöh est l'un des vignobles les plus élevés de la région. Son altitude lui confère fraîcheur et tension, qualités précieuses à l'heure du réchauffement. Il donne des blancs secs et frais. Le cru illustre la viticulture du secteur de Dresde, à la limite ouest du vignoble saxon. Son altitude en fait un terroir frais et tendu, à suivre à l'heure du réchauffement. Il marque la limite occidentale du vignoble saxon, aux portes de Dresde.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "grand-coteau",
+        "dresden"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-sachsen-terr-coswiger-spitzberg",
+      "nom": "Coswiger Spitzberg",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteau de granite à Coswig, entre Meissen et Radebeul ; blancs secs et rouges au bord de l'Elbe.",
+      "notes_objectives": "Le Coswiger Spitzberg est un coteau de granite à Coswig, entre Meissen et Radebeul. Bien exposé, il donne des blancs secs et des rouges. Le terroir illustre la qualité des coteaux de l'Elbe dans le cœur du vignoble saxon. Coteau de granite à Coswig, entre Meissen et Radebeul, le Spitzberg donne des blancs secs et des rouges, sur les terrasses de l'Elbe. Bien exposé, il participe à la continuité des grands coteaux du cœur du vignoble saxon. Le cru illustre la qualité des terroirs de granite qui jalonnent la vallée du fleuve, dans le secteur central de la région. Il illustre la continuité des coteaux de granite du cœur du vignoble saxon. Il s'inscrit dans la continuité des grands coteaux de l'Elbe, entre Meissen et Radebeul.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "grand-coteau",
+        "meissen"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-sachsen-terr-dresdner-elbhang",
+      "nom": "Dresdner Elbhang",
+      "type": "lieu-dit",
+      "region": "Sachsen",
+      "sous_region": "Dresden",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Traminer"
+      ],
+      "altitude": "110-220 m",
+      "sols": "granite et syénite (Urgestein), en terrasses",
+      "caracteristiques_rapides": "Coteaux de granite des bords de l'Elbe à Dresde (Loschwitz, Wachwitz) ; petits vignobles urbains pittoresques.",
+      "notes_objectives": "Les Dresdner Elbhang désignent les coteaux de granite des bords de l'Elbe à Dresde (Loschwitz, Wachwitz). Ces petits vignobles urbains pittoresques, au cœur de la ville, donnent des Riesling, des Burgunder et du Traminer. Le terroir illustre la place singulière de la vigne dans le paysage de Dresde, l'une des plus belles villes d'Allemagne. Sur les versants de l'Elbe à Dresde — à Loschwitz et Wachwitz —, de petits vignobles de granite s'accrochent aux coteaux, au cœur même de la ville. Ces vignes urbaines pittoresques, jadis bien plus étendues, donnent des Riesling, des Burgunder et du Traminer. Le cru illustre la place singulière de la vigne dans le paysage de Dresde, l'une des plus belles villes d'Allemagne, où la viticulture côtoie le patrimoine baroque. Ces vignes urbaines comptent parmi les plus pittoresques d'Allemagne, au cœur de Dresde. Vestiges d'un vignoble jadis bien plus vaste, ils marient patrimoine baroque et vigne au cœur de la ville.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "urbain",
+        "grand-coteau",
+        "dresden"
+      ],
+      "source": "dresden-magazin"
+    }
+  ]
+}

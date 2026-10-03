@@ -1,0 +1,577 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "puglia",
+  "region_label": "Puglia (Italie)",
+  "source_file": "terroirs_puglia.json",
+  "built_at": "2026-07-08",
+  "count": 20,
+  "items": [
+    {
+      "id": "it-puglia-terr-primitivo-di-manduria",
+      "nom": "Primitivo di Manduria",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Primitivo"
+      ],
+      "altitude": "~0-150 m",
+      "sols": "calcaro-sableux et terres rouges près de la mer Ionienne",
+      "caracteristiques_rapides": "Le berceau du Primitivo : rouges puissants, chaleureux et épicés, souvent de vieilles vignes en alberello, sur les terres solaires de la côte ionienne.",
+      "notes_objectives": "Primitivo di Manduria est l'appellation-reine du Primitivo et l'un des terroirs les plus emblématiques de la Pouilles. Autour de Manduria, dans la province de Tarente, entre la mer Ionienne et l'arrière-pays du Salento, le cépage trouve son expression la plus solaire et la plus puissante, sur des terres rouges et sableuses reposant sur un socle calcaire.\n\nLe climat chaud et lumineux, tempéré par les brises marines, et les vieilles vignes souvent conduites en alberello (petit gobelet non palissé) donnent des raisins d'une grande maturité, riches en sucre. Il en résulte des rouges généreux, chaleureux et veloutés, titrant souvent 14-15°, aux arômes de fruits noirs confits, de prune, d'épices, de cacao et de garrigue. Longtemps produit pour le coupage et vendu en vrac, le Primitivo di Manduria a connu une spectaculaire montée en gamme depuis les années 2000, portée par des vignerons comme Gianfranco Fino (Es), Felline ou Morella, qui ont prouvé qu'il pouvait donner de grands vins de garde, denses mais équilibrés. Les vieilles vignes franches de pied constituent un patrimoine précieux. La zone produit aussi le rare Dolce Naturale (DOCG), version douce issue de raisins surmûris.\n\nAppellation-reine du Primitivo, Manduria donne des rouges puissants, solaires et veloutés, dont les meilleurs rivalisent avec les grands vins de garde. C'est le terroir le plus emblématique du cépage et un symbole du renouveau du vin pugliese.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "alberello",
+        "rouge",
+        "doc"
+      ],
+      "source": "italysfinestwines|tasteatlas"
+    },
+    {
+      "id": "it-puglia-terr-gioia-del-colle",
+      "nom": "Gioia del Colle",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Primitivo",
+        "Malvasia Nera",
+        "Aleatico"
+      ],
+      "altitude": "~300-450 m",
+      "sols": "calcaire et terres rouges (terra rossa) d'altitude, Murgia",
+      "caracteristiques_rapides": "Le Primitivo d'altitude : sur les hauteurs de la Murgia, des rouges plus frais, tendus et minéraux que ceux de Manduria ; berceau ancestral du cépage.",
+      "notes_objectives": "Gioia del Colle est l'un des grands terroirs du Primitivo en Italie et le berceau ancestral du cépage : c'est ici, sur les hauteurs de la Murgia au centre de la Pouilles, que le Primitivo aurait été identifié et diffusé à la fin du XVIIIe siècle. Loin du Primitivo solaire et opulent de Manduria, celui de Gioia del Colle offre un visage différent, plus frais et plus racé.\n\nLa clé est l'altitude : le vignoble s'étage entre 300 et 450 mètres sur le plateau calcaire des Murge, où les nuits fraîches et les fortes amplitudes thermiques préservent l'acidité, la finesse aromatique et la couleur. Sur des sols de calcaire et de terres rouges (la « terra rossa »), souvent sur des vignes franches de pied conduites en alberello, le Primitivo donne des rouges plus tendus, minéraux et digestes que sur la côte ionienne, aux arômes de fruits rouges et noirs, d'épices, de garrigue et de notes balsamiques, avec une réelle aptitude à la garde. Le cahier des charges impose une part majoritaire de Primitivo, souvent complété d'un peu de Malvasia Nera. Des domaines comme Polvanera, Chiaromonte, Pietraventosa ou Guttarolo ont révélé, à partir des années 2000, ce potentiel de fraîcheur et d'élégance, hissant Gioia del Colle au rang des terroirs qui comptent. La zone abrite aussi un rare Aleatico doux, spécialité locale.\n\nBerceau ancestral et terroir d'altitude du Primitivo, Gioia del Colle donne des rouges frais, minéraux et élégants, à distance des versions solaires de Manduria. C'est l'appellation qui a révélé la finesse du cépage et l'un des terroirs les plus prometteurs de la Pouilles.\n\nCette redécouverte du Primitivo d'altitude a bouleversé la hiérarchie établie : là où le cépage rimait avec puissance et sucrosité, Gioia del Colle a imposé une esthétique de la fraîcheur et de la digestibilité, plus proche dans l'esprit des grands rouges de climat frais. Le contraste avec Manduria, à moins de cent kilomètres, est saisissant, et illustre à quel point l'altitude et le sol comptent autant que le cépage. Servis sur des viandes rouges, de l'agneau, du gibier ou des fromages affinés, les Primitivo de Gioia del Colle séduisent par leur équilibre entre générosité méridionale et tension minérale, et les meilleurs se patinent sur une décennie. La conduite en alberello, héritée de l'Antiquité, et la présence de nombreuses vignes franches de pied — le phylloxéra survivant mal dans certains sols — constituent un patrimoine précieux que les meilleurs domaines s'attachent à préserver. En quelques années, Gioia del Colle est ainsi passée du statut d'appellation méconnue à celui de terroir de référence du Primitivo, prouvant que le cépage pugliese pouvait donner des vins d'une réelle finesse, capables de rivaliser avec les grands rouges d'Italie tout en gardant leur âme du Sud.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "altitude",
+        "murgia",
+        "doc"
+      ],
+      "source": "winewordswisdom|inwander"
+    },
+    {
+      "id": "it-puglia-terr-salice-salentino",
+      "nom": "Salice Salentino",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "altitude": "~30-100 m",
+      "sols": "terres rouges argilo-calcaires du Salento",
+      "caracteristiques_rapides": "L'appellation-phare du Negroamaro : rouges profonds, balsamiques et épicés, et de grands rosés (dont le Five Roses), sur les terres rouges du Salento.",
+      "notes_objectives": "Salice Salentino est l'appellation-phare du Negroamaro et l'un des terroirs les plus réputés du Salento, cette péninsule qui forme le « talon » de la botte italienne. Sur les terres rouges argilo-calcaires de la zone, entre Adriatique et mer Ionienne, le Negroamaro — dont le nom évoque l'amertume et la couleur sombre — donne des vins de caractère.\n\nLes rouges de Salice Salentino, à base de Negroamaro souvent complété de Malvasia Nera, sont profonds, chaleureux et balsamiques, aux arômes de fruits noirs, de prune, de tabac, d'épices et de notes de garrigue, avec une amertume noble caractéristique en finale. Les meilleures Riserva vieillissent remarquablement. Mais l'appellation est aussi célèbre pour ses rosés : c'est ici que Leone de Castris créa en 1943 le Five Roses, considéré comme le premier rosé italien mis en bouteille, référence des grands rosés du Sud, délicats et gastronomiques. Le climat chaud et ensoleillé, tempéré par la double influence maritime, et le savoir-faire de maisons comme Leone de Castris, Candido ou Due Palme font de Salice Salentino un terroir majeur du vin salentin.\n\nAppellation-phare du Negroamaro, Salice Salentino donne des rouges profonds et balsamiques et de grands rosés (dont le Five Roses). C'est l'un des terroirs les plus réputés du Salento et un pilier du vin de la Pouilles.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "salice-salentino",
+        "negroamaro",
+        "rose",
+        "doc"
+      ],
+      "source": "italysfinestwines|butterfield"
+    },
+    {
+      "id": "it-puglia-terr-castel-del-monte",
+      "nom": "Castel del Monte",
+      "type": "appellation (DOCG)",
+      "region": "Puglia",
+      "sous_region": "Castel del Monte (BAT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero di Troia",
+        "Bombino Nero",
+        "Aglianico"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "calcaire de la Murgia, au pied du château de Frédéric II",
+      "caracteristiques_rapides": "Fief du Nero di Troia : rouges structurés et de garde (Riserva DOCG) et le rosé de Bombino Nero (DOCG), sur les hauteurs calcaires du nord de la Pouilles.",
+      "notes_objectives": "Castel del Monte est le grand terroir du nord de la Pouilles, au pied du célèbre château octogonal édifié par l'empereur Frédéric II au XIIIe siècle, sur les hauteurs calcaires de la Murgia. C'est le fief du Nero di Troia (ou Uva di Troia), cépage rouge autochtone à la personnalité affirmée, dont l'appellation a fait sa spécialité.\n\nÉlevée au rang de DOCG pour ses meilleures expressions, Castel del Monte décline le Nero di Troia en rouges structurés, tanniques et de garde (Rosso Riserva et Nero di Troia Riserva), aux arômes de fruits noirs, d'épices et de notes balsamiques. L'appellation est aussi la seule DOCG dédiée à un rosé : le Castel del Monte Bombino Nero, issu de ce cépage à la teinte claire, donne des rosés délicats et aromatiques. L'altitude (200-450 m) et les sols calcaires de la Murgia apportent fraîcheur et minéralité, distinguant ces vins de ceux, plus solaires, du Salento. Des domaines comme Rivera (Il Falcone), Torrevento ou Santa Lucia ont révélé le potentiel du Nero di Troia, longtemps sous-estimé.\n\nFief du Nero di Troia, Castel del Monte donne des rouges structurés et de garde (DOCG) et un rare rosé de Bombino Nero (DOCG), sur les hauteurs calcaires de la Murgia. C'est le grand terroir du nord de la Pouilles.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "castel-del-monte",
+        "nero-di-troia",
+        "bombino-nero",
+        "docg",
+        "rouge",
+        "rose"
+      ],
+      "source": "pugliaparadise|italysfinestwines"
+    },
+    {
+      "id": "it-puglia-terr-primitivo-di-manduria-dolce-naturale",
+      "nom": "Primitivo di Manduria Dolce Naturale",
+      "type": "appellation (DOCG)",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Primitivo"
+      ],
+      "altitude": "~0-150 m",
+      "sols": "calcaro-sableux, raisins surmûris sur souche",
+      "caracteristiques_rapides": "La seule DOCG entièrement pugliese : un Primitivo doux naturel issu de raisins passerillés sur pied, riche et velouté, spécialité ancestrale de Manduria.",
+      "notes_objectives": "Primitivo di Manduria Dolce Naturale est la seule DOCG entièrement pugliese, et l'une des plus originales d'Italie. Elle consacre une spécialité ancestrale de Manduria : un Primitivo doux naturel, obtenu sans ajout de sucre ni fortification, par le seul passerillage des raisins sur la souche.\n\nLes grappes de Primitivo sont laissées à surmûrir sur pied, où elles se flétrissent et concentrent leurs sucres, avant une vendange tardive. La fermentation s'arrête naturellement, laissant un vin riche en sucre résiduel : un rouge doux, velouté et chaleureux, aux arômes de fruits noirs confits, de figue, de prune, de chocolat et d'épices, titrant un degré d'alcool élevé. Vin de méditation ou de dessert, il accompagne les pâtisseries, le chocolat et les fromages affinés. Cette tradition, héritée d'un temps où le Primitivo mûr donnait spontanément des vins puissants et sucrés, a été codifiée par la DOCG pour préserver un patrimoine unique. Rare et confidentiel, le Dolce Naturale est produit par quelques domaines et coopératives de Manduria.\n\nSeule DOCG entièrement pugliese, le Primitivo di Manduria Dolce Naturale est un rouge doux issu de raisins passerillés sur souche, riche et velouté. C'est une spécialité ancestrale et un joyau confidentiel de Manduria.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "dolce-naturale",
+        "doux",
+        "docg"
+      ],
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-puglia-terr-copertino",
+      "nom": "Copertino",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "altitude": "~30-80 m",
+      "sols": "terres rouges argilo-calcaires du Salento méridional",
+      "caracteristiques_rapides": "Voisine de Salice Salentino, une DOC de Negroamaro : rouges chaleureux et rosés du sud du Salento, dont le Copertino Riserva est réputé.",
+      "notes_objectives": "Copertino est une appellation du Salento méridional, voisine de Salice Salentino, dédiée au Negroamaro. Autour de la ville de Copertino, dans la province de Lecce, le cépage roi du Salento donne des vins chaleureux et généreux sur les terres rouges argilo-calcaires de la zone.\n\nLes rouges de Copertino, à base de Negroamaro souvent complété de Malvasia Nera, sont profonds, veloutés et balsamiques, aux arômes de fruits noirs, de prune, de tabac et d'épices, avec l'amertume noble caractéristique du cépage. Le Copertino Rosso Riserva, longuement élevé, est particulièrement réputé pour sa capacité de garde. L'appellation produit aussi des rosés de Negroamaro. Le climat chaud et ensoleillé du Salento méridional donne des vins solaires et puissants. Longtemps dans l'ombre de Salice Salentino, Copertino a gagné en reconnaissance grâce à quelques bons producteurs (dont la coopérative locale et Masseria Monaci) qui en ont révélé le potentiel.\n\nAppellation de Negroamaro du Salento méridional, Copertino donne des rouges chaleureux et balsamiques et de beaux rosés. C'est un terroir de caractère, voisin et cousin de Salice Salentino. Servis sur des viandes rouges, de l'agneau, du gibier ou des fromages affinés, les rouges de Copertino séduisent par leur générosité et leur profondeur, et les Riserva vieillissent avec grâce. L'appellation, encore relativement méconnue, offre souvent un excellent rapport qualité-prix pour de beaux Negroamaro, et illustre la richesse des terroirs du Salento méridional autour de son cépage roi.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "copertino",
+        "negroamaro",
+        "doc"
+      ],
+      "source": "winewordswisdom"
+    },
+    {
+      "id": "it-puglia-terr-brindisi",
+      "nom": "Brindisi",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Brindisi",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Susumaniello",
+        "Malvasia Nera"
+      ],
+      "altitude": "~0-50 m",
+      "sols": "terres rouges et alluvions côtières de l'Adriatique",
+      "caracteristiques_rapides": "DOC du Brindisino : Negroamaro et, de plus en plus, Susumaniello (Torre Testa), rouges de caractère entre Adriatique et plaine salentine.",
+      "notes_objectives": "Brindisi est une appellation du Salento septentrional, sur la côte adriatique, qui connaît un beau renouveau grâce à un cépage rare : le Susumaniello. Autour de la ville portuaire de Brindisi, sur les terres rouges et les alluvions côtières, la DOC valorise les cépages autochtones du Brindisino.\n\nHistoriquement, l'appellation repose sur le Negroamaro, souvent complété de Malvasia Nera, pour des rouges chaleureux et des rosés. Mais c'est la renaissance du Susumaniello — cépage autrefois au bord de l'extinction, relancé notamment par Tenute Rubino avec sa cuvée Torre Testa — qui fait aujourd'hui l'originalité de Brindisi : un rouge profond, épicé et vibrant, aux tanins fermes, à la forte personnalité. Le nom du cépage évoquerait la charge (« soma ») que portait l'âne, tant la vigne était productive dans sa jeunesse. Le climat maritime et les sols côtiers donnent aux vins de Brindisi une identité propre. L'appellation illustre le dynamisme du Salento autour de ses cépages autochtones retrouvés.\n\nAppellation du Salento septentrional, Brindisi conjugue Negroamaro de tradition et renaissance du Susumaniello (Torre Testa). C'est un terroir en plein renouveau, à la forte identité autochtone. Servi sur des viandes, du gibier ou des fromages, le Susumaniello de Brindisi séduit par son originalité et son caractère, tandis que les Negroamaro plus classiques accompagnent une cuisine méditerranéenne. Le dynamisme de l'appellation, porté par la redécouverte d'un cépage rare, en fait l'un des terroirs les plus intéressants à suivre de la Pouilles, à la croisée de la tradition et de l'innovation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "brindisi",
+        "negroamaro",
+        "susumaniello",
+        "doc"
+      ],
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-terr-nardo",
+      "nom": "Nardò",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Primitivo"
+      ],
+      "altitude": "~30-90 m",
+      "sols": "terres rouges argilo-calcaires proches de la mer Ionienne",
+      "caracteristiques_rapides": "DOC solaire du Salento méridional, près de Nardò : Negroamaro et Primitivo concentrés et mûrs, sous l'influence de la mer Ionienne.",
+      "notes_objectives": "Nardò est une appellation du Salento méridional, près de la mer Ionienne, réputée pour ses rouges solaires et concentrés. Autour de la ville baroque de Nardò, dans la province de Lecce, la DOC valorise le Negroamaro et le Primitivo sur les terres rouges argilo-calcaires de la zone.\n\nLe climat chaud et lumineux du Salento méridional, tempéré par l'influence de la mer Ionienne toute proche, donne des raisins d'une grande maturité et des vins puissants, mûrs et généreux, aux arômes de fruits noirs confits, d'épices et de garrigue. Les rouges de Negroamaro et de Primitivo y sont particulièrement concentrés, et l'appellation produit aussi des rosés. Des domaines comme Schola Sarmenti ont révélé, avec des cuvées primées, le potentiel de ce terroir solaire. Nardò illustre l'expression la plus chaleureuse et la plus mûre des cépages du Salento, sous le soleil de la pointe de la péninsule.\n\nAppellation solaire du Salento méridional, Nardò donne des Negroamaro et Primitivo concentrés et mûrs, sous l'influence de la mer Ionienne. C'est un terroir de rouges puissants et généreux. Servis sur des viandes rouges, de l'agneau, du gibier ou des fromages affinés, les rouges de Nardò séduisent par leur concentration et leur chaleur solaire. L'appellation, portée par quelques domaines ambitieux, illustre l'expression la plus mûre et la plus généreuse des cépages du Salento, sous le soleil de la pointe de la péninsule, et gagne peu à peu en reconnaissance.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "nardo",
+        "negroamaro",
+        "primitivo",
+        "doc"
+      ],
+      "source": "terrachevive"
+    },
+    {
+      "id": "it-puglia-terr-locorotondo",
+      "nom": "Locorotondo",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Valle d'Itria (Bari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdeca",
+        "Bianco d'Alessano"
+      ],
+      "altitude": "~400-500 m",
+      "sols": "calcaire karstique d'altitude de la Valle d'Itria",
+      "caracteristiques_rapides": "Enclave de blancs dans une région de rouges : Verdeca et Bianco d'Alessano frais et minéraux, sur les hauteurs de la Valle d'Itria des trulli.",
+      "notes_objectives": "Locorotondo est une enclave de blancs dans une Pouilles de rouges, l'un des rares terroirs de vin blanc de la région. Autour du célèbre village aux maisons rondes (les « trulli ») de la Valle d'Itria, sur les hauteurs calcaires du plateau des Murge, la DOC produit des blancs frais et minéraux.\n\nÀ base de Verdeca et de Bianco d'Alessano, cépages autochtones de la Valle d'Itria, complétés parfois de Fiano Minutolo, les blancs de Locorotondo sont légers, secs et vifs, aux arômes floraux et d'agrumes, avec une belle salinité. La clé est l'altitude (400-500 m) : la fraîcheur des nuits et les sols calcaires karstiques préservent l'acidité et la finesse, permettant des blancs désaltérants rares sous ces latitudes méridionales. Historiquement, ces vins servaient aussi de base au vermouth. Le paysage unique des trulli, classé à l'UNESCO, ajoute au charme du terroir. Locorotondo, avec sa voisine Martina Franca, incarne la vocation blanche de la Valle d'Itria.\n\nRare terroir de blanc de la Pouilles, Locorotondo donne des blancs frais et minéraux de Verdeca et Bianco d'Alessano, sur les hauteurs de la Valle d'Itria des trulli. C'est une enclave de fraîcheur au cœur du Sud. Servis sur des poissons, des fruits de mer, des fritures ou une cuisine légère, les blancs de Locorotondo séduisent par leur fraîcheur et leur salinité, contrepoint bienvenu aux rouges solaires de la région. Dans le cadre enchanteur des trulli, l'appellation cultive une identité blanche rare, portée par des domaines comme I Pastini ou Cardone, et rappelle la diversité méconnue du vin pugliese.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "valle-d-itria",
+        "locorotondo",
+        "verdeca",
+        "blanc",
+        "doc"
+      ],
+      "source": "butterfield|hazelstravels"
+    },
+    {
+      "id": "it-puglia-terr-cacce-mitte-di-lucera",
+      "nom": "Cacc'e Mitte di Lucera",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Nord Puglia (Foggia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero di Troia",
+        "Montepulciano",
+        "Bombino Bianco"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "sols argilo-calcaires de la Daunia (Foggia)",
+      "caracteristiques_rapides": "DOC historique de Lucera (1976) : rouge d'assemblage à dominante Nero di Troia, structuré et fruité, emblème du vin de la Daunia.",
+      "notes_objectives": "Cacc'e Mitte di Lucera est une appellation historique du nord de la Pouilles, dans la Daunia (province de Foggia), autour de la ville de Lucera. Son nom dialectal pittoresque — « caccia e metti », « enlève et remets » — évoque l'ancienne pratique consistant à remplir sans cesse le tonneau au fur et à mesure de la consommation.\n\nLa DOC, créée en 1976, produit un rouge d'assemblage à dominante de Nero di Troia (Uva di Troia), complété de Montepulciano et parfois d'une pointe de Bombino Bianco et d'autres cépages. Il en résulte un rouge structuré mais fruité et accessible, aux arômes de fruits rouges et noirs et d'épices, un peu plus souple que le Nero di Troia en pureté de Castel del Monte. Sur les sols argilo-calcaires de la Daunia, à bonne altitude, le terroir bénéficie d'une fraîcheur relative. Longtemps confidentielle, l'appellation a été remise en lumière par des domaines comme Alberto Longo, qui en ont révélé le potentiel. Cacc'e Mitte di Lucera est l'emblème du vin de la Daunia et du Nero di Troia septentrional.\n\nAppellation historique de la Daunia, Cacc'e Mitte di Lucera est un rouge d'assemblage à dominante Nero di Troia, structuré et fruité. C'est l'emblème du vin du nord de la Pouilles, autour de Lucera.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "daunia",
+        "lucera",
+        "nero-di-troia",
+        "cacc-e-mitte",
+        "doc"
+      ],
+      "source": "albertolongo.it|licata.be"
+    },
+    {
+      "id": "it-puglia-terr-squinzano",
+      "nom": "Squinzano",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "altitude": "~20-60 m",
+      "sols": "terres rouges du Salento septentrional",
+      "caracteristiques_rapides": "DOC de Negroamaro au nord du Salento, entre Lecce et Brindisi : rouges chaleureux et rosés de tradition, longtemps vins de coupage aujourd'hui valorisés.",
+      "notes_objectives": "Squinzano est une appellation du Salento septentrional, entre Lecce et Brindisi, dédiée au Negroamaro. Autour de la ville de Squinzano, sur les terres rouges du Salento, la DOC valorise le cépage roi de la péninsule.\n\nLes rouges de Squinzano, à base de Negroamaro complété de Malvasia Nera, sont chaleureux, corsés et balsamiques, aux arômes de fruits noirs, d'épices et de garrigue, avec l'amertume noble caractéristique du cépage. L'appellation produit aussi des rosés de tradition. Historiquement, Squinzano fut l'un des grands fournisseurs de vins de coupage puissants et colorés, expédiés vers le nord de l'Italie et la France pour renforcer des vins plus légers. Aujourd'hui, la zone cherche à valoriser ses vins en bouteille et à révéler la qualité de son Negroamaro. Squinzano illustre l'histoire du vin salentin, longtemps tourné vers le volume avant sa montée en gamme.\n\nAppellation de Negroamaro du nord du Salento, Squinzano donne des rouges corsés et balsamiques et des rosés. Longtemps terre de vins de coupage, elle valorise aujourd'hui son cépage roi en bouteille. Servis sur des viandes, des plats mijotés ou des fromages, les rouges de Squinzano séduisent par leur caractère corsé et balsamique. L'appellation, longtemps synonyme de vin de coupage, illustre la mutation du Salento, qui passe peu à peu de la logique du volume à celle de la qualité en bouteille, en valorisant enfin son Negroamaro sur son propre nom.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "squinzano",
+        "negroamaro",
+        "doc"
+      ],
+      "source": "winewordswisdom"
+    },
+    {
+      "id": "it-puglia-terr-gravina",
+      "nom": "Gravina",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Gravina (Bari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Greco",
+        "Malvasia",
+        "Fiano"
+      ],
+      "altitude": "~350-450 m",
+      "sols": "calcaire d'altitude de la Murgia (hauteurs de Gravina)",
+      "caracteristiques_rapides": "Rare terroir de blanc de l'intérieur : Greco et Malvasia frais et minéraux sur les hauteurs calcaires de la Murgia, autour de Gravina.",
+      "notes_objectives": "Gravina est un rare terroir de blanc de l'intérieur de la Pouilles, sur les hauteurs calcaires de la Murgia, dans la province de Bari. Autour de la spectaculaire ville de Gravina in Puglia, bâtie sur un ravin, la DOC produit des blancs frais et minéraux, singularité dans une région de rouges.\n\nÀ base de Greco et de Malvasia (parfois complétés de Fiano ou de Bianco d'Alessano), les blancs de Gravina sont secs, vifs et parfumés, aux arômes floraux et d'agrumes, avec une belle salinité. La clé est l'altitude (350-450 m) et les sols calcaires karstiques de la Murgia, qui préservent la fraîcheur et l'acidité. L'appellation produit aussi quelques rouges (Nero di Troia, Montepulciano). Longtemps méconnue, Gravina a été remise en lumière par des domaines comme Botromagno, qui ont révélé le potentiel de ses blancs d'altitude. C'est un terroir à part, qui rappelle que la Pouilles, malgré sa réputation de terre de rouges solaires, sait aussi produire des blancs frais et minéraux.\n\nRare terroir de blanc de l'intérieur, Gravina donne des blancs frais et minéraux de Greco et Malvasia, sur les hauteurs calcaires de la Murgia. C'est une singularité rafraîchissante au cœur de la Pouilles. Servis sur des poissons, des fruits de mer ou une cuisine légère, les blancs de Gravina séduisent par leur fraîcheur et leur minéralité, rareté dans une région de rouges. Portée par des domaines comme Botromagno, l'appellation rappelle que l'intérieur de la Pouilles, sur les hauteurs de la Murgia, sait produire des blancs d'altitude d'une belle tension, à découvrir.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "gravina",
+        "murgia",
+        "greco",
+        "malvasia",
+        "blanc",
+        "doc"
+      ],
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-terr-moscato-di-trani",
+      "nom": "Moscato di Trani",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Nord Puglia (BAT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Moscato Bianco"
+      ],
+      "altitude": "~50-250 m",
+      "sols": "calcaire et terres rouges de la côte de Trani",
+      "caracteristiques_rapides": "DOC de vin doux : Moscato Bianco en version douce et liquoreuse (passito), spécialité aromatique et mielleuse du nord de la Pouilles.",
+      "notes_objectives": "Moscato di Trani est une appellation de vin doux du nord de la Pouilles, sur la côte adriatique autour de la ville de Trani. Elle est dédiée au Moscato Bianco (Moscato Reale), cépage aromatique qui donne ici l'un des grands vins doux du Sud de l'Italie.\n\nSur les sols calcaires et les terres rouges de la zone, sous le climat chaud et lumineux tempéré par l'Adriatique, le Moscato Bianco atteint une belle maturité aromatique. Le Moscato di Trani se décline en version douce (« dolce ») et liquoreuse (« liquoroso », muté), donnant des vins d'or profond, riches et mielleux, aux arômes intenses de raisin muscaté, d'abricot, de miel, de fleurs et d'épices. Vin de dessert par excellence, il accompagne les pâtisseries, les fruits secs et les fromages. Cette tradition ancienne, liée à l'histoire marchande de Trani, est perpétuée par quelques domaines (dont Torrevento). Le Moscato di Trani est l'un des joyaux doux de la Pouilles, à côté du Primitivo Dolce Naturale et de l'Aleatico.\n\nAppellation de vin doux du nord de la Pouilles, le Moscato di Trani donne des vins mielleux et aromatiques de Moscato Bianco, doux ou liquoreux. C'est l'un des grands vins de dessert du Sud de l'Italie. Servi sur des pâtisseries, des amandes, des figues sèches ou des fromages affinés, le Moscato di Trani séduit par sa richesse mielleuse et son intense parfum muscaté. Perpétué par quelques domaines attachés à la tradition, il compte, aux côtés du Primitivo Dolce Naturale et de l'Aleatico, parmi les précieux vins doux qui font aussi la richesse du patrimoine viticole de la Pouilles.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "trani",
+        "moscato",
+        "doux",
+        "doc"
+      ],
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-terr-alezio",
+      "nom": "Alezio",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "altitude": "~30-80 m",
+      "sols": "terres rouges du Salento méridional près de Gallipoli",
+      "caracteristiques_rapides": "DOC réputée pour ses rosés de Negroamaro (le Mjère de Michele Calò) : rosés délicats et gastronomiques, et rouges du sud du Salento.",
+      "notes_objectives": "Alezio est une petite appellation du Salento méridional, près de Gallipoli et de la mer Ionienne, réputée avant tout pour ses rosés. Sur les terres rouges de la zone, la DOC valorise le Negroamaro, souvent complété de Malvasia Nera. Le rosé d'Alezio, dont le Mjère du domaine Michele Calò est la référence historique, est un rosé de Negroamaro délicat, fin et gastronomique, à mille lieues des rosés anonymes, considéré comme l'un des grands rosés du Salento. L'appellation produit aussi des rouges chaleureux. Le climat solaire du Salento méridional, tempéré par la mer, et le savoir-faire local font d'Alezio un terroir de référence pour le rosé pugliese. Petite appellation du Salento méridional, Alezio est réputée pour ses rosés de Negroamaro délicats et gastronomiques (dont le Mjère), une référence du grand rosé de la Pouilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "alezio",
+        "negroamaro",
+        "rose",
+        "doc"
+      ],
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-terr-san-severo",
+      "nom": "San Severo",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Nord Puglia (Foggia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bombino Bianco",
+        "Nero di Troia",
+        "Montepulciano"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "sols alluviaux et calcaires du Tavoliere (Foggia)",
+      "caracteristiques_rapides": "L'une des plus anciennes DOC des Pouilles (1968), dans la plaine du Tavoliere : blancs de Bombino, rouges de Nero di Troia et base du spumante d'Araprì.",
+      "notes_objectives": "San Severo est l'une des plus anciennes appellations de la Pouilles (DOC dès 1968), dans la plaine du Tavoliere, au nord de la région (province de Foggia). Sur les sols alluviaux et calcaires de cette vaste plaine céréalière, la DOC produit surtout des blancs de Bombino Bianco et de Trebbiano, frais et légers, ainsi que des rouges et rosés de Nero di Troia et Montepulciano. Le Bombino Bianco, cépage à l'acidité vive, y sert aussi de base au spumante metodo classico, notamment celui de la maison d'Araprì, qui a fait la réputation qualitative de la zone. Le climat chaud de la plaine, tempéré par les vents, et les sols variés donnent des vins accessibles. Longtemps tournée vers le volume, San Severo cherche à valoriser ses cépages. Ancienne appellation du Tavoliere, San Severo produit des blancs de Bombino et des rouges de Nero di Troia, ainsi que la base des bulles d'Araprì. C'est un terroir historique du nord de la Pouilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "daunia",
+        "san-severo",
+        "bombino",
+        "nero-di-troia",
+        "doc"
+      ],
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-terr-leverano",
+      "nom": "Leverano",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Malvasia Nera",
+        "Chardonnay"
+      ],
+      "altitude": "~30-70 m",
+      "sols": "terres rouges argilo-calcaires du Salento",
+      "caracteristiques_rapides": "DOC du Salento (fief de Conti Zecca) : Negroamaro en rouge et rosé, et quelques blancs, sur les terres rouges autour de Leverano.",
+      "notes_objectives": "Leverano est une appellation du Salento, dans la province de Lecce, dédiée principalement au Negroamaro. Sur les terres rouges argilo-calcaires de la zone, la DOC produit des rouges chaleureux et balsamiques, des rosés et quelques blancs (dont des Chardonnay et Malvasia). Le Negroamaro, souvent complété de Malvasia Nera, y donne des vins profonds et généreux, dans le style solaire du Salento. L'appellation est notamment le fief de la grande maison Conti Zecca, qui en a révélé le potentiel avec des cuvées réputées. Le climat chaud et ensoleillé, tempéré par la double influence maritime, donne aux vins de Leverano une belle maturité. Leverano illustre la richesse des terroirs de Negroamaro du Salento. Appellation du Salento, Leverano donne des Negroamaro chaleureux, des rosés et quelques blancs, notamment autour de la maison Conti Zecca. C'est un terroir représentatif du vin salentin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "leverano",
+        "negroamaro",
+        "doc"
+      ],
+      "source": "butterfield"
+    },
+    {
+      "id": "it-puglia-terr-martina-franca",
+      "nom": "Martina Franca",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Valle d'Itria (Taranto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdeca",
+        "Bianco d'Alessano"
+      ],
+      "altitude": "~400-450 m",
+      "sols": "calcaire karstique d'altitude de la Valle d'Itria",
+      "caracteristiques_rapides": "DOC blanche de la Valle d'Itria, voisine de Locorotondo : Verdeca et Bianco d'Alessano frais, base historique du vermouth et des blancs des trulli.",
+      "notes_objectives": "Martina Franca est une appellation de blancs de la Valle d'Itria, dans la province de Tarente, voisine et cousine de Locorotondo. Sur les hauteurs calcaires du plateau des Murge, autour de la ville baroque de Martina Franca, la DOC produit des blancs frais et légers à base de Verdeca et de Bianco d'Alessano, cépages autochtones de la Valle d'Itria. Ces blancs secs et vifs, aux arômes floraux et d'agrumes, doivent leur fraîcheur à l'altitude (autour de 400-450 m) et aux sols karstiques. Historiquement, la Verdeca de Martina Franca servait de base au vermouth et aux vins de coupage. Aujourd'hui, l'appellation valorise ses blancs en bouteille, dans une région de rouges. Martina Franca, avec Locorotondo, incarne la vocation blanche des trulli. Appellation blanche de la Valle d'Itria, Martina Franca donne des blancs frais de Verdeca et Bianco d'Alessano sur les hauteurs des trulli. C'est une enclave de fraîcheur au cœur de la Pouilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "valle-d-itria",
+        "martina-franca",
+        "verdeca",
+        "blanc",
+        "doc"
+      ],
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-terr-ostuni",
+      "nom": "Ostuni",
+      "type": "appellation (DOC)",
+      "region": "Puglia",
+      "sous_region": "Salento (Brindisi)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Impigno",
+        "Francavidda",
+        "Ottavianello"
+      ],
+      "altitude": "~100-200 m",
+      "sols": "terres rouges et calcaire de la « ville blanche »",
+      "caracteristiques_rapides": "DOC autour d'Ostuni : blancs de cépages rares (Impigno, Francavidda) et rouge d'Ottavianello (Cinsault), curiosité ampélographique du haut Salento.",
+      "notes_objectives": "Ostuni est une appellation confidentielle du haut Salento, autour de la célèbre « ville blanche » perchée dans la province de Brindisi. Sa singularité tient à ses cépages rares : en blanc, l'Impigno et la Francavidda, variétés autochtones que l'on ne trouve quasiment nulle part ailleurs, donnent des blancs légers, secs et délicats ; en rouge, l'Ottavianello (nom local du Cinsault) donne un rouge léger, fruité et peu tannique, curiosité ampélographique de la zone. Sur les terres rouges et les sols calcaires du haut Salento, sous un climat maritime, ces vins ont une identité propre, à rebours des rouges puissants de la région. Longtemps menacée, l'appellation témoigne de la richesse et de la diversité du patrimoine viticole pugliese. Appellation confidentielle du haut Salento, Ostuni cultive des cépages rares (Impigno, Francavidda, Ottavianello) pour des vins légers et originaux. C'est une curiosité ampélographique de la Pouilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "ostuni",
+        "ottavianello",
+        "autochtone",
+        "doc"
+      ],
+      "source": "pugliaparadise"
+    },
+    {
+      "id": "it-puglia-terr-salento",
+      "nom": "Salento",
+      "type": "appellation (IGT)",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce/Brindisi/Taranto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Negroamaro",
+        "Primitivo",
+        "Malvasia Nera",
+        "Susumaniello"
+      ],
+      "altitude": "~0-150 m",
+      "sols": "terres rouges argilo-calcaires de la péninsule salentine",
+      "caracteristiques_rapides": "La grande IGT de la péninsule salentine : cadre souple pour Negroamaro, Primitivo, Susumaniello et rosés, du vin de tous les jours aux cuvées d'auteur.",
+      "notes_objectives": "Le Salento (IGT) est la grande indication géographique de la péninsule salentine, qui couvre le « talon » de la botte italienne à travers les provinces de Lecce, Brindisi et Tarente. Cadre souple et transversal, elle permet aux producteurs des cuvées qui sortent du cadre plus strict des DOC. Elle rassemble les cépages emblématiques du Salento — Negroamaro et Primitivo en tête, mais aussi Malvasia Nera, Susumaniello et cépages blancs — dans tous les styles : rouges chaleureux et balsamiques, grands rosés (spécialité de la région), et blancs. Sur les terres rouges argilo-calcaires et sous le climat solaire tempéré par la double influence maritime, l'IGT Salento produit une grande partie des vins de la zone, du plus simple au plus ambitieux. C'est sous cette bannière que sont commercialisées de nombreuses cuvées de qualité. Grande IGT de la péninsule salentine, le Salento offre un cadre souple pour Negroamaro, Primitivo, Susumaniello et rosés, du vin de tous les jours aux cuvées d'auteur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "salento",
+        "igt",
+        "negroamaro",
+        "primitivo",
+        "rose"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-puglia-terr-valle-ditria",
+      "nom": "Valle d'Itria",
+      "type": "appellation (IGT)",
+      "region": "Puglia",
+      "sous_region": "Valle d'Itria (Bari-Brindisi-Taranto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Verdeca",
+        "Minutolo",
+        "Bianco d'Alessano",
+        "Susumaniello"
+      ],
+      "altitude": "~350-500 m",
+      "sols": "calcaire karstique d'altitude, pays des trulli",
+      "caracteristiques_rapides": "IGT des blancs d'altitude des trulli : Verdeca, Bianco d'Alessano et surtout le Minutolo aromatique, fraîcheur rare dans une Pouilles de rouges.",
+      "notes_objectives": "La Valle d'Itria (IGT) est le terroir des blancs d'altitude de la Pouilles, sur le plateau calcaire des Murge à cheval sur les provinces de Bari, Brindisi et Tarente. C'est le pays des trulli, ces maisons de pierre sèche à toit conique classées à l'UNESCO, autour de Locorotondo, Martina Franca et Cisternino. L'IGT valorise les cépages blancs autochtones de la zone — la Verdeca et le Bianco d'Alessano, mais surtout le Minutolo (ou Fiano Minutolo), cépage aromatique redécouvert aux notes de muscat et d'agrumes — ainsi que, en rouge, le Susumaniello. La clé du terroir est l'altitude (350-500 m) et les sols karstiques, qui préservent la fraîcheur et l'acidité, rares sous ces latitudes. La Valle d'Itria produit ainsi des blancs frais, minéraux et parfumés, singularité dans une Pouilles de rouges solaires. IGT des blancs d'altitude du pays des trulli, la Valle d'Itria valorise Verdeca, Bianco d'Alessano et le Minutolo aromatique. C'est une précieuse enclave de fraîcheur au cœur de la Pouilles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "puglia",
+        "valle-d-itria",
+        "verdeca",
+        "minutolo",
+        "blanc",
+        "igt"
+      ],
+      "source": "hazelstravels"
+    }
+  ]
+}

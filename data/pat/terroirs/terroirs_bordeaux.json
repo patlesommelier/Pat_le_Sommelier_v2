@@ -1,0 +1,716 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "bordeaux",
+  "region_label": "Bordeaux",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_bordeaux_vPat.xlsx",
+  "built_at": "2026-05-15T08:30:06+00:00",
+  "count": 26,
+  "items": [
+    {
+      "id": "bdx-bordeaux",
+      "nom": "Bordeaux",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Gironde",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot",
+        "Petit Verdot",
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "0-130 m",
+      "sols": "Très variés (graves, argiles, calcaires, sables, alluvions)",
+      "caracteristiques_rapides": "AOC régionale couvrant l'ensemble de la Gironde (~36 000 ha). Rouges, blancs secs, rosés/clairets.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "gironde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-bordeaux-superieur",
+      "nom": "Bordeaux Supérieur",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Gironde",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot",
+        "Petit Verdot"
+      ],
+      "altitude": "0-130 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC régionale ~10 000 ha exigeant un degré supérieur, des rendements plus bas et un élevage plus long. Uniquement rouge (et un peu de blanc moelleux).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "garde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-entre-deux-mers",
+      "nom": "Entre-Deux-Mers",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Gironde",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle",
+        "Sauvignon Gris"
+      ],
+      "altitude": "20-130 m",
+      "sols": "Argilo-calcaires, graves, boulbènes",
+      "caracteristiques_rapides": "AOC blanc sec (~1 400 ha) sur le plateau entre Garonne et Dordogne. Style frais et fruité. Production largement coopérative.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "blanc-sec",
+        "plateau"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-medoc",
+      "nom": "Médoc",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Cot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes, argiles, sables",
+      "caracteristiques_rapides": "AOC régionale ~5 000 ha au nord du Médoc (Bas-Médoc), entre Saint-Estèphe et la Pointe de Grave. Merlot souvent dominant, plus rustique que le Haut-Médoc.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "bas-medoc",
+        "merlot"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-haut-medoc",
+      "nom": "Haut-Médoc",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes",
+      "caracteristiques_rapides": "AOC ~4 600 ha couvrant la partie sud du Médoc autour des 6 communales. Style intermédiaire. Compte 5 Crus Classés (1855) hors communales.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "graves",
+        "crus-classes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-margaux",
+      "nom": "Margaux",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes fines",
+      "caracteristiques_rapides": "AOC communale ~1 500 ha. La plus grande surface des communales du Médoc, sur 5 communes. Style élégant et parfumé. Compte le Premier Cru Château Margaux et 20 Crus Classés.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cru-classe",
+        "elegance"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-saint-julien",
+      "nom": "Saint-Julien",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes profondes",
+      "caracteristiques_rapides": "AOC communale ~900 ha. La plus dense en Crus Classés (11 sur 1 100 ha). Style équilibré entre l'élégance de Margaux et la puissance de Pauillac. Trois Léoville, Ducru, Beychevelle…",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cru-classe",
+        "leoville",
+        "ducru"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-pauillac",
+      "nom": "Pauillac",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes profondes",
+      "caracteristiques_rapides": "AOC communale ~1 200 ha. Cabernet Sauvignon roi (60-80%). Trois des cinq Premiers Crus 1855 : Lafite, Latour, Mouton. Style structuré, longue garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "premier-cru",
+        "cabernet"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-saint-estephe",
+      "nom": "Saint-Estèphe",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-40 m",
+      "sols": "Graves günziennes sur substrat argileux",
+      "caracteristiques_rapides": "AOC communale ~1 230 ha. Plus argileux que les communales voisines, donc plus de Merlot. Style robuste. Cos d'Estournel, Montrose, Calon-Ségur.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cru-classe",
+        "argiles",
+        "cos"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-listrac",
+      "nom": "Listrac-Médoc",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "20-43 m",
+      "sols": "Calcaires de Listrac, graves",
+      "caracteristiques_rapides": "AOC communale ~600 ha sur le \"plateau de Listrac\", point culminant du Médoc. Pas de Crus Classés. Style plus robuste, moins prestigieux.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "plateau",
+        "sans-cru-classe"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-moulis",
+      "nom": "Moulis-en-Médoc",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Médoc (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Graves günziennes, argilo-calcaires",
+      "caracteristiques_rapides": "AOC communale ~600 ha, la plus petite des communales. Pas de Crus Classés. Chasse-Spleen, Poujeaux en pointe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sans-cru-classe",
+        "chasse-spleen"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-graves",
+      "nom": "Graves",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Graves (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle"
+      ],
+      "altitude": "0-80 m",
+      "sols": "Graves (galets et sables sur substrat argileux)",
+      "caracteristiques_rapides": "AOC ~3 200 ha au sud de Bordeaux. Rouges et blancs secs. Doit son nom à ses sols caillouteux. Une partie ancienne classée \"Graves Crus Classés 1959\".",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "graves",
+        "cru-classe-1959"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-pessac-leognan",
+      "nom": "Pessac-Léognan",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Graves (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Sauvignon",
+        "Sémillon"
+      ],
+      "altitude": "20-80 m",
+      "sols": "Graves profondes",
+      "caracteristiques_rapides": "AOC ~1 800 ha détachée du Graves en 1987 (partie nord). Reprend tous les Crus Classés 1959 du Graves. Rouges (avec Haut-Brion en Premier Cru 1855) et blancs secs très tendus. Haut-Brion, Mission Haut-Brion, Smith Haut Lafitte, Chevalier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "cru-classe",
+        "haut-brion"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-sauternes",
+      "nom": "Sauternes",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Sauternais (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "20-80 m",
+      "sols": "Graves, argilo-calcaires, sables",
+      "caracteristiques_rapides": "AOC liquoreuse ~1 800 ha, vendanges botrytisées (Ciron + Garonne). Sémillon dominant. Yquem en Premier Cru Supérieur 1855, plus 26 Crus Classés. Iconique mondial.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "iconique",
+        "botrytis",
+        "yquem"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-barsac",
+      "nom": "Barsac",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Sauternais (rive gauche)",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "20-50 m",
+      "sols": "Calcaires à astéries (sols rouges)",
+      "caracteristiques_rapides": "AOC liquoreuse ~600 ha, dans le Sauternais (a droit aux deux appellations). Style généralement plus vif et tendu que Sauternes. Climens, Coutet, Doisy-Daëne.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "liquoreux",
+        "calcaires",
+        "climens"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-loupiac",
+      "nom": "Loupiac",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Rive droite Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "30-80 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "AOC liquoreuse ~280 ha sur la rive droite de la Garonne face à Sauternes. Style un peu moins riche que Sauternes mais belle qualité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "rive-droite-garonne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-sainte-croix-du-mont",
+      "nom": "Sainte-Croix-du-Mont",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Rive droite Garonne",
+      "pays": "France",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon",
+        "Muscadelle"
+      ],
+      "altitude": "30-80 m",
+      "sols": "Calcaires fossilifères (huîtres)",
+      "caracteristiques_rapides": "AOC liquoreuse ~370 ha voisine de Loupiac. Sols spectaculaires de calcaires fossilifères (banc d'huîtres).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "liquoreux",
+        "calcaires-fossiles"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-saint-emilion",
+      "nom": "Saint-Émilion / Saint-Émilion Grand Cru",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "5-100 m",
+      "sols": "Très variés : calcaires à astéries (plateau), molasses, graves, argiles, sables",
+      "caracteristiques_rapides": "AOC ~5 400 ha sur 8 communes. Merlot/Cabernet Franc rois. Classement Saint-Émilion (révisé tous les 10 ans). Cheval Blanc, Ausone, Figeac, Pavie, Angélus, Tertre-Roteboeuf.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "classement",
+        "cheval-blanc",
+        "ausone"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-lussac-saint-emilion",
+      "nom": "Lussac-Saint-Émilion",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Argilo-calcaires, sables",
+      "caracteristiques_rapides": "Satellite AOC ~1 400 ha au nord-est de Saint-Émilion. Merlot dominant. Style plus accessible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "satellite",
+        "saint-emilion"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-montagne-saint-emilion",
+      "nom": "Montagne-Saint-Émilion",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Argilo-calcaires",
+      "caracteristiques_rapides": "Satellite AOC ~1 600 ha (la plus grande des satellites). Style proche de Saint-Émilion.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "satellite",
+        "saint-emilion"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-pomerol",
+      "nom": "Pomerol",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-40 m",
+      "sols": "Argiles bleues, graves, crasse de fer (centre du plateau)",
+      "caracteristiques_rapides": "AOC ~800 ha exclusivement rouge, pas de classement officiel. Merlot roi (80% min en moyenne). Pétrus, Le Pin, Lafleur, VCC, Trotanoy, Église-Clinet. Iconique mondial.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "merlot",
+        "petrus",
+        "pas-de-classement"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-lalande-de-pomerol",
+      "nom": "Lalande-de-Pomerol",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-50 m",
+      "sols": "Argilo-calcaires, graves, sables",
+      "caracteristiques_rapides": "AOC ~1 100 ha au nord de Pomerol. Voisine et apparentée mais sans la \"crasse de fer\". Style plus accessible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "merlot",
+        "voisine-pomerol"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-fronsac",
+      "nom": "Fronsac / Canon-Fronsac",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-80 m",
+      "sols": "Argilo-calcaires (calcaires à astéries), molasses",
+      "caracteristiques_rapides": "Deux AOC ~1 100 ha sur les coteaux de la Dordogne. Canon-Fronsac est le \"cru\" interne (sols les plus calcaires). Merlot dominant. Souvent sous-cotée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "merlot",
+        "sous-cotee"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-castillon",
+      "nom": "Castillon Côtes de Bordeaux",
+      "type": "appellation_village",
+      "region": "Bordeaux",
+      "sous_region": "Castillon (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "30-100 m",
+      "sols": "Argilo-calcaires (continuation du plateau de Saint-Émilion)",
+      "caracteristiques_rapides": "AOC ~3 000 ha à l'est de Saint-Émilion. Mêmes sols, prix plus accessibles. \"Garagistes\" et bio en pointe : Domaine de l'A, Clos Puy Arnaud, Joanin Bécot.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cotes-bordeaux",
+        "saint-emilion-bis"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-blaye",
+      "nom": "Blaye Côtes de Bordeaux",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Blayais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Sauvignon",
+        "Sémillon",
+        "Muscadelle"
+      ],
+      "altitude": "0-80 m",
+      "sols": "Argiles, calcaires, graves",
+      "caracteristiques_rapides": "AOC ~6 000 ha sur la rive droite de la Gironde face au Médoc. Rouges principalement. Domaines bio en progression.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cotes-bordeaux",
+        "blayais"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bdx-cotes-de-bourg",
+      "nom": "Côtes de Bourg",
+      "type": "appellation_regionale",
+      "region": "Bordeaux",
+      "sous_region": "Bourgeais (rive droite)",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Cot"
+      ],
+      "altitude": "20-80 m",
+      "sols": "Argilo-calcaires, graves",
+      "caracteristiques_rapides": "AOC ~3 800 ha sur la rive droite de la Dordogne près de son confluent avec la Garonne. Merlot dominant. Bon rapport qualité/prix.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cotes-bordeaux",
+        "bourgeais"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

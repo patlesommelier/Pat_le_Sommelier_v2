@@ -54,18 +54,35 @@ export async function importerPrincipes(fichier: string) {
 
 // ───────────────────────────── Terroirs ─────────────────────────────
 
-const TYPES_TERROIR = ['appellation_regionale', 'appellation', 'appellation_village', 'premier_cru', 'grand_cru', 'climat', 'lieu-dit'];
-
 function altitudes(a: unknown): [number | null, number | null] {
   const n = (String(a ?? '').match(/\d+/g) ?? []).map(Number);
   if (!n.length) return [null, null];
   return [n[0], n[1] ?? n[0]];
 }
 
+/** Type d'origine, légèrement uniformisé (lieu_dit → lieu-dit). Les fichiers en comptent une quarantaine. */
 function typeTerroir(t: unknown): string {
-  const s = slug(String(t ?? '')).replace(/-/g, '_');
-  if (s === 'lieu_dit') return 'lieu-dit';
-  return TYPES_TERROIR.includes(s) ? s : 'appellation';
+  const s = String(t ?? '').trim();
+  if (!s) return 'appellation';
+  return /^lieu[_ -]dit$/i.test(s) ? 'lieu-dit' : s;
+}
+
+/** Range un type dans une des cinq familles de l'app : appellation, zone, cru, lieu-dit, autre. */
+export function niveauTerroir(type: string): string {
+  const s = slug(type);
+  if (/cepage|style|mention|producteur/.test(s)) return 'autre';
+  if (/premier-cru|grand-cru$|^cru|commune-cru|zone-cru/.test(s) && !/^appellation/.test(s)) return 'cru';
+  if (/lieu-dit|climat|vigna|contrada|coteau|terrasse/.test(s)) return 'lieu-dit';
+  if (/^appellation|denomination|^igp|^doc|^aoc/.test(s)) return 'appellation';
+  if (/zone|secteur|sottozona|sous-region|vallee|commune/.test(s)) return 'zone';
+  return 'appellation';
+}
+
+/** Identifiant court : ce qui suit « -terr- » / « -prod- », ou l'id sans son préfixe régional (bgn-, lr-, jus-…). */
+function base(ancien: string, marque: string) {
+  const i = ancien.indexOf(marque);
+  if (i >= 0) return ancien.slice(i + marque.length);
+  return ancien.replace(/^(bgn|bdx|loi|lr|jus|so|als|cha|bjs|prov|corse|aut|rhone)-/, '');
 }
 
 interface TerroirBrut { regionKey: string; item: Ligne }
@@ -104,13 +121,14 @@ export async function importerTerroirs(dossier: string) {
   const unique = uniques();
   const terroirs: Ligne[] = bruts.map(({ regionKey, item: t }) => {
     const ancien = String(t.id ?? slug(String(t.nom)));
-    const base = ancien.replace(/^(it-)?[a-z]+-terr-/, '').replace(/^bgn-/, '');
     const [amin, amax] = altitudes(t.altitude);
+    const type = typeTerroir(t.type);
     return {
-      id: unique(`${regionKey}-terr-${slug(base)}`),
+      id: unique(`${regionKey}-terr-${slug(base(ancien, '-terr-'))}`),
       ancien_id: ancien,
       nom: texte(t.nom),
-      type: typeTerroir(t.type),
+      type,
+      niveau: niveauTerroir(type),
       parent_id: null as string | null,
       pays: texte(t.pays) ?? 'France',
       region: texte(t.region),
@@ -123,7 +141,8 @@ export async function importerTerroirs(dossier: string) {
       notes_objectives: texte(t.notes_objectives),
       niveau_reference: entier(t.niveau_reference),
       ranking_pat: entier(t.ranking_pat),
-      avis_pat: texte(t.mes_notes),
+      avis_critique: texte(t.mes_notes),
+      avis_pat: texte(t.notes_pat),
       tags: liste(t.tags),
       source: texte(t.source),
       _region_key: regionKey,
@@ -131,7 +150,7 @@ export async function importerTerroirs(dossier: string) {
   });
 
   // Hiérarchie : un climat, un cru ou un lieu-dit est rangé sous l'appellation dont il porte le tag ou le nom.
-  const appellations = terroirs.filter((t) => ['appellation', 'appellation_village', 'appellation_regionale'].includes(String(t.type)));
+  const appellations = terroirs.filter((t) => t.niveau === 'appellation');
   let relies = 0;
   for (const t of terroirs) {
     if (appellations.includes(t)) continue;
@@ -206,29 +225,49 @@ export function cuveesDepuis(prod: Ligne, phrases: string[], terroirs: Ligne[]):
   });
 }
 
+const COULEURS_PROD: Record<string, string> = {
+  rouge: 'rouge', blanc: 'blanc', rose: 'rose', effervescent: 'bulles', bulles: 'bulles',
+  doux: 'doux', liquoreux: 'doux', moelleux: 'doux', ambre: 'orange', orange: 'orange',
+};
+function couleursProducteur(v: unknown): string[] {
+  return [...new Set(liste(v).map((c) => COULEURS_PROD[slug(c)] ?? slug(c)))];
+}
+
+/** connu_de_pat : true, « oui », ou une note laissée dans la colonne → connu ; « non » → non connu. */
+function connu(v: unknown): boolean | null {
+  if (v === true || v === 'true' || /^oui$/i.test(String(v)) || (typeof v === 'number' && v > 0)) return true;
+  if (v === false || /^non$/i.test(String(v))) return false;
+  return null;
+}
+
 /** Normalise une fiche producteur (JSON ou Excel) vers la table `producteur`. */
 export function ficheProducteur(p: Ligne, regionKey: string, unique: (s: string) => string, statut = 'valide'): Ligne {
   const ancien = String(p.id ?? slug(String(p.nom)));
   const sp = statutProduction(p.statut_production);
   const gp = texte(p.gamme_prix);
-  const aVerifier = [texte(p.a_verifier), gp && !GAMMES[gp] ? `gamme_prix d'origine : ${gp}` : null].filter(Boolean).join(' — ') || null;
-  const base = ancien.replace(/^(it-)?[a-z]+-prod-/, '').replace(/^(bgn|loi|bdx|lr|rhone|bjs|prov)-/, '');
+  const aVerifier = [
+    texte(p.a_verifier),
+    gp && !GAMMES[gp] ? `gamme_prix d'origine : ${gp}` : null,
+    texte(p.ranking_pat_suggere) ? `ranking suggéré : ${p.ranking_pat_suggere}` : null,
+  ].filter(Boolean).join(' — ') || null;
   return {
-    id: unique(`${regionKey}-prod-${slug(base)}`),
+    id: unique(`${regionKey}-prod-${slug(base(ancien, '-prod-'))}`),
     ancien_id: ancien,
     nom: texte(p.nom),
     pays: texte(p.pays),
     region: texte(p.region),
     sous_region: texte(p.sous_region),
-    localisation: texte(p.localisation),
-    appellations_texte: liste(p.appellations_principales),
+    // Deux schémas coexistent : l'ancien (localisation, appellations_principales, couleurs_principales, cepages_rois)
+    // et le nouveau (type « domaine », commune, appellations_lieux_dits, couleurs, cepages).
+    localisation: texte(p.localisation) ?? texte(p.commune),
+    appellations_texte: liste(p.appellations_principales ?? p.appellations_lieux_dits),
     statut_production: sp.statut,
     statut_precision: sp.precision,
-    couleurs: liste(p.couleurs_principales),
-    cepages_rois: liste(p.cepages_rois),
+    couleurs: couleursProducteur(p.couleurs_principales ?? p.couleurs),
+    cepages_rois: liste(p.cepages_rois ?? p.cepages),
     niveau_reference: entier(p.niveau_reference),
     ranking_pat: entier(p.ranking_pat),
-    connu_de_pat: p.connu_de_pat === true || p.connu_de_pat === 'true' ? true : null,
+    connu_de_pat: connu(p.connu_de_pat),
     gamme_prix: gp ? GAMMES[gp] ?? null : null,
     notes_objectives: texte(p.notes_objectives),
     avis_critique: texte(p.mes_notes),

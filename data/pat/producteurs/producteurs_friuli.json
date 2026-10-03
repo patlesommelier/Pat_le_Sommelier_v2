@@ -1,0 +1,1884 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "friuli",
+  "region_label": "Friuli-Venezia Giulia (Italie)",
+  "source_file": "producteurs_friuli.json",
+  "built_at": "2026-07-06",
+  "count": 42,
+  "items": [
+    {
+      "id": "it-friuli-prod-miani",
+      "nom": "Miani",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Buttrio",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Sauvignon",
+        "Chardonnay",
+        "Ribolla Gialla",
+        "Merlot",
+        "Refosco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Buttrio, dans les Colli Orientali del Friuli, Miani est le domaine le plus culte et le plus recherché de toute la région. Derrière ce nom se cache Enzo Pontoni, vigneron-perfectionniste quasi ermite, qui cultive lui-même ses parcelles de vieilles vignes avec une obsession du détail devenue légendaire.\n\nMiani produit des quantités infimes — quelques milliers de bouteilles réparties sur de nombreuses cuvées parcellaires —, ce qui en fait des vins rarissimes et coûteux, comparés par la critique aux plus grands bourgognes blancs. Le Friulano (dont les cuvées Buri et Filip), le Sauvignon, le Chardonnay et la Ribolla Gialla y atteignent une intensité, une densité et une profondeur inouïes, portées par des rendements dérisoires et des sols de ponca (marnes et grès). Pontoni signe aussi des rouges remarquables — Merlot et Refosco (Calvari) — qui comptent parmi les plus chers d'Italie. Chaque vin naît d'un travail acharné à la vigne, où l'homme connaît chaque cep ; la cave, elle, se contente d'accompagner une matière déjà exceptionnelle. Cette recherche absolue de concentration et de pureté a fait de Miani une référence mythique, un étalon de ce que le terroir friulan peut donner de plus grand.\n\nDomaine-culte par excellence, Miani incarne le sommet qualitatif du Friuli. Ses blancs (et ses rouges) d'une intensité rare, produits en quantités confidentielles par un vigneron d'exception, sont parmi les vins les plus convoités d'Italie et une référence absolue pour tous les amateurs de grands blancs.\n\nLe mythe Miani tient autant à la personnalité d'Enzo Pontoni qu'à la qualité de ses vins. Homme secret, réfractaire à la publicité, il refuse les visites et laisse ses bouteilles parler pour lui. Son travail à la vigne est d'une intensité rare : ébourgeonnages sévères, rendements parfois inférieurs à 20 hl/ha, vendanges parcelle par parcelle à maturité optimale. La ponca des Colli Orientali, roche marno-gréseuse tendre, donne à ses vins une minéralité et une densité incomparables. Servis sur des poissons nobles, des viandes blanches ou de la volaille pour les blancs, sur du gibier pour les rouges, ses vins déploient une concentration presque irréelle tout en gardant de la fraîcheur. Leur rareté — quelques centaines à quelques milliers de bouteilles par cuvée — et leur réputation ont fait grimper les prix à des niveaux dignes des plus grands crus bourguignons, et chaque millésime s'arrache auprès d'un cercle d'initiés. Miani n'est pas seulement un domaine : c'est une leçon sur ce que le travail obsessionnel d'un homme et la vérité d'un terroir peuvent produire de plus grand, et une source d'inspiration pour toute une génération de vignerons friulans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Friulano",
+        "Buri Sauvignon",
+        "Calvari Refosco",
+        "Filip Chardonnay"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "buttrio",
+        "friulano",
+        "culte",
+        "pontoni"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-gravner",
+      "nom": "Gravner",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Oslavia (Gorizia)",
+      "pays": "Italie",
+      "cepages": [
+        "Ribolla Gialla",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oslavia, sur les collines du Collio face à la frontière slovène, Josko Gravner est l'inventeur du vin orange friulan moderne et l'un des vignerons les plus influents du monde. Après avoir été, dans les années 1980, un maître des blancs technologiques, il a opéré une conversion radicale qui a bouleversé le Collio et bien au-delà.\n\nInspiré par un voyage en Géorgie, Gravner a adopté dès la fin des années 1990 les amphores enterrées (qvevri) pour macérer longuement ses blancs sur les peaux, sans levures ni intrants, sans ou presque sans soufre. Sa Ribolla Gialla et son assemblage Breg, ambrés, tanniques et d'une complexité vertigineuse, sont devenus les archétypes du vin orange, capables de vieillir des décennies. Ce sont des vins de méditation, exigeants, qui demandent du temps, de la nourriture et de la patience, mais offrent une profondeur unique. Membre fondateur du consortium d'Oslavia, Gravner a essaimé une philosophie — retour à la tradition, minimalisme, respect du terroir — qui a inspiré des vignerons du monde entier, de la Slovénie voisine aux États-Unis. Il produit aussi un rouge (Rosso Gravner). Chaque bouteille est le fruit d'une vision intransigeante, quasi mystique, du vin.\n\nPère du vin orange moderne, Josko Gravner a redéfini ce que pouvait être un vin blanc et fait d'Oslavia un lieu de pèlerinage pour les amateurs. Ses Ribolla d'amphore, cultes et longévifs, comptent parmi les vins les plus singuliers et les plus admirés d'Italie.\n\nLa conversion de Gravner ne fut pas un simple choix technique, mais une véritable révolution intérieure. Déçu par les blancs propres et prévisibles qu'il maîtrisait pourtant à la perfection, il chercha une autre voie, remontant aux sources mêmes du vin. Le voyage en Géorgie, berceau de la viticulture, fut la révélation : les qvevri, ces grandes jarres de terre cuite enterrées, devinrent le cœur de sa cave. La macération longue des blancs sur les peaux, à la manière des rouges, donne à la Ribolla sa couleur ambrée, ses tanins et sa profondeur. Le passage fut douloureux — pertes, incompréhension, moqueries — mais Gravner tint bon, porté par une conviction quasi spirituelle. Servis sur des plats riches, des viandes blanches, des fromages affinés ou une cuisine épicée, ses vins déroutent puis fascinent. Ils demandent de l'aération et se bonifient sur des décennies. Au-delà de ses propres bouteilles, Gravner a changé la manière de penser le vin blanc dans le monde entier, et son influence se mesure aujourd'hui de la Slovénie à la Californie. Figure quasi mythique, il reste fidèle à Oslavia et à une vision du vin comme lien entre l'homme, la terre et le temps.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ribolla Gialla",
+        "Breg",
+        "Rosso Gravner"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "ribolla",
+        "orange",
+        "amphore",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines|jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-radikon",
+      "nom": "Radikon",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Oslavia (Gorizia)",
+      "pays": "Italie",
+      "cepages": [
+        "Ribolla Gialla",
+        "Friulano",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oslavia, voisin et complice de Gravner, Stanko Radikon (aujourd'hui son fils Saša) est l'autre grand pionnier du vin orange friulan et une icône mondiale du vin nature. La famille cultive la vigne à Oslavia depuis 1948 ; c'est au début des années 1990 que Stanko a fait le choix radical des macérations longues sur peaux.\n\nLes Radikon élaborent des blancs ambrés d'une intensité et d'une texture saisissantes — Ribolla Gialla, Jakot (anagramme de Tocai/Friulano), Oslavje — par de longues macérations, sans soufre ajouté, dans une philosophie « zéro intrant » qui a influencé le vin nature dans le monde entier. Ces vins sauvages, vibrants et profondément vivants, sont des références du genre, reconnaissables aussi à leurs bouteilles au format singulier (Stanko avait repensé contenances et bouchages). Loin de toute facilité, ils demandent de l'air, du temps et un accord mets-vins réfléchi, mais récompensent par une complexité et une longévité remarquables. Le domaine incarne une fidélité sans compromis à une vision du vin comme expression brute du terroir et du millésime, transmise de père en fils.\n\nPionnier et icône du vin orange et du vin nature, Radikon a redéfini le blanc friulan avec ses Ribolla de macération. Ses vins ambrés, intenses et sans compromis, comptent parmi les plus admirés d'Italie et ont inspiré toute une génération de vignerons dans le monde.\n\nL'aventure des Radikon est celle d'une famille soudée autour d'une conviction. Stanko, disparu en 2016, avait fait le pari fou de renoncer au soufre ajouté, cherchant à comprendre comment les vins de ses ancêtres se conservaient sans lui. Ses recherches, notamment sur les formats de bouteilles et l'oxygène, sont devenues des références du vin nature. Son fils Saša poursuit l'œuvre avec la même rigueur, sur les vignes d'Oslavia plantées sur la ponca, face à la Slovénie. Les macérations, longues de plusieurs semaines à plusieurs mois, donnent des vins ambrés, tanniques et d'une grande énergie, qui expriment le millésime dans sa vérité. Servis sur des plats de caractère — viandes blanches, gibier à plume, fromages, cuisine épicée —, ils déploient une complexité et une persistance rares. Loin d'être des curiosités, ce sont des vins profonds, capables de vieillir des décennies, qui ont acquis un statut culte auprès des amateurs du monde entier. Les Radikon, aux côtés de leur voisin Gravner, ont fait d'Oslavia l'épicentre mondial du vin orange et prouvé qu'un blanc de macération pouvait compter parmi les plus grands vins d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ribolla Gialla",
+        "Jakot",
+        "Oslavje",
+        "Slatnik"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "ribolla",
+        "orange",
+        "nature",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines|falstaff"
+    },
+    {
+      "id": "it-friuli-prod-vie-di-romans",
+      "nom": "Vie di Romans",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "Mariano del Friuli",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Sauvignon",
+        "Pinot Grigio",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mariano del Friuli, dans la plaine de l'Isonzo, Vie di Romans est le domaine qui a hissé le Friuli Isonzo au rang des plus grands terroirs de blanc d'Italie. Mené par Gianfranco Gallo, qui a repris et transformé le domaine familial à partir des années 1980, il est devenu une référence de l'élégance et de la structure.\n\nSur une soixantaine d'hectares de sols alluviaux (graves et argiles), le domaine signe des blancs amples, structurés et racés, élevés sur lies, à la fois modernes et profonds : Chardonnay (Vie di Romans), Sauvignon (Piere, Vieris), Pinot Grigio (Dessimis) et l'assemblage Flors di Uis comptent parmi les blancs les plus primés d'Italie. L'influence maritime et les brises de l'Isonzo apportent fraîcheur et tension, qui équilibrent la richesse des vins. Le style Gallo — maturité optimale, faibles rendements, vinifications précises — vise la plénitude sans lourdeur, avec une réelle aptitude à la garde, rare pour la zone. Le domaine, exemplaire dans sa régularité et son exigence, a démontré que la plaine de l'Isonzo pouvait rivaliser avec les collines du Collio.\n\nRéférence absolue de l'Isonzo, Vie di Romans signe des blancs structurés et élégants qui comptent parmi les plus grands d'Italie. Gianfranco Gallo y a prouvé le potentiel d'un terroir de plaine, dans des vins d'une précision et d'une profondeur remarquables.\n\nQuand Gianfranco Gallo reprit le domaine familial au début des années 1980, alors qu'il n'avait qu'une vingtaine d'années, la plaine de l'Isonzo n'avait pas la réputation des collines du Collio. Il a patiemment démontré le contraire, en misant sur la sélection parcellaire, les faibles rendements et des vinifications d'une précision exemplaire. Les sols de graves et d'argiles, la proximité de la mer et les brises rafraîchissantes donnent à ses blancs une matière ample équilibrée par une belle fraîcheur. L'élevage sur lies, souvent long, leur confère texture, profondeur et aptitude à la garde, rare pour la zone. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages, les vins de Vie di Romans séduisent par leur plénitude et leur allonge. Leur régularité, millésime après millésime, et leur présence au sommet des dégustations italiennes ont fait de Gallo une figure respectée et de son domaine un modèle. En imposant l'Isonzo comme un grand terroir de blanc, Vie di Romans a élargi la carte des vins d'excellence du Friuli au-delà des collines historiques.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Vie di Romans",
+        "Ciampagnis Vieris Sauvignon",
+        "Dessimis Pinot Grigio",
+        "Flors di Uis"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "chardonnay",
+        "sauvignon",
+        "gallo",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|grokipedia"
+    },
+    {
+      "id": "it-friuli-prod-livio-felluga",
+      "nom": "Livio Felluga",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Grigio",
+        "Sauvignon",
+        "Picolit",
+        "Refosco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rosazzo DOCG",
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Brazzano di Cormons, Livio Felluga est l'une des grandes maisons historiques du Friuli et un symbole de la renaissance du vin de la région après-guerre. Livio Felluga, disparu centenaire en 2016, a reconstruit le vignoble des Colli Orientali et fait de la célèbre étiquette à la carte géographique ancienne un emblème du vin italien.\n\nLe fleuron du domaine est le Terre Alte, assemblage blanc (Friulano, Pinot Bianco, Sauvignon) né sur les hauteurs de Rosazzo : l'un des plus grands blancs d'Italie, ample, complexe et de longue garde, régulièrement primé. La gamme, vaste et d'une grande régularité, décline aussi l'Illivio, le Sharis, de purs Friulano, Pinot Grigio et Sauvignon, ainsi que le Picolit (doux) et des rouges (Refosco, Sossó). Sur les sols de ponca des Colli Orientali et de Rosazzo (aujourd'hui DOCG), la maison conjugue tradition et précision, dans un style élégant et fidèle au terroir. Menée aujourd'hui par les enfants de Livio (dont Filippo), elle demeure un pilier de la région, à la fois ambassadrice et gardienne de son identité.\n\nGrande maison historique du Friuli, Livio Felluga a marqué la renaissance du vin régional et signé, avec le Terre Alte, l'un des plus grands blancs d'Italie. C'est une référence incontournable des Colli Orientali et de Rosazzo.\n\nL'histoire de Livio Felluga se confond avec celle du renouveau du vin friulan. Après la Seconde Guerre mondiale, dans une région dévastée et redécoupée par les frontières, Livio a patiemment reconstitué un vignoble de qualité sur les collines des Colli Orientali, convaincu du potentiel de la ponca. L'étiquette à la carte géographique ancienne, devenue iconique, symbolise cet attachement à la terre. Le Terre Alte, créé sur les hauteurs de Rosazzo, a prouvé qu'un assemblage blanc friulan pouvait rivaliser avec les plus grands, et il figure depuis des décennies au sommet de la hiérarchie italienne. La maison, d'une régularité exemplaire, décline une gamme large où chaque vin exprime son terroir avec élégance. Servis sur des poissons, des viandes blanches ou des fromages, ses blancs séduisent par leur équilibre ; le Picolit, doux et rare, couronne l'ensemble. Aujourd'hui menée par les enfants de Livio, la maison conjugue l'héritage d'un fondateur visionnaire et une exigence constante, restant l'un des piliers et des ambassadeurs les plus respectés du vin friulan dans le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Terre Alte",
+        "Illivio",
+        "Vertigo",
+        "Picolit"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "rosazzo",
+        "terre-alte",
+        "friulano",
+        "historique",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-jermann",
+      "nom": "Jermann",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Farra d'Isonzo",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Sauvignon",
+        "Ribolla Gialla",
+        "Picolit",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT",
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Farra d'Isonzo, aux confins du Collio et de l'Isonzo, Jermann est l'une des maisons les plus emblématiques du Friuli, celle qui a porté le vin de la région sur la scène internationale. Silvio Jermann, héritier d'une famille d'origine autrichienne installée depuis la fin du XIXe siècle, a créé des cuvées devenues iconiques.\n\nSon vin-culte est le Vintage Tunina, assemblage de plusieurs cépages blancs (Sauvignon, Chardonnay, Ribolla, Malvasia, Picolit) vendangés tardivement : un blanc riche, complexe et de garde, considéré comme l'un des grands blancs d'Italie et pionnier des assemblages ambitieux. Le Capo Martino (assemblage de cépages autochtones élevé sous bois) et le Chardonnay « Were Dreams… » (au nom fantasque) comptent aussi parmi ses signatures, aux côtés de la Vinnae (Ribolla) et de purs cépages. Le style Jermann, entre richesse et fraîcheur, mise sur la personnalité et la gourmandise plutôt que sur la seule typicité variétale. La notoriété de ces cuvées, servies sur les plus grandes tables, a fait connaître le Friuli dans le monde entier.\n\nMaison iconique du Friuli, Jermann a fait connaître la région à l'international avec des cuvées cultes comme le Vintage Tunina et le Capo Martino. C'est l'une des références les plus reconnues du vin blanc italien.\n\nSilvio Jermann a bâti sa renommée sur une idée audacieuse pour l'époque : sortir de la logique du mono-cépage, alors dominante en Friuli, pour créer des assemblages de personnalité portant des noms évocateurs plutôt que celui d'une variété. Le Vintage Tunina, né à la fin des années 1970, en fut le manifeste : un blanc riche et complexe qui fit sensation et ouvrit la voie à toute une génération. La maison, installée aux confins du Collio et de l'Isonzo, cultive un vignoble soigné dont elle tire des vins à la fois gourmands et racés. Servis sur des poissons, des crustacés, des viandes blanches ou une cuisine raffinée, les cuvées Jermann séduisent par leur ampleur et leur équilibre. Le Capo Martino, élevé sous bois, et le Chardonnay au nom fantasque « Were Dreams, Now It Is Just Wine! » témoignent d'une créativité assumée. Cette capacité à conjuguer qualité, identité forte et communication a fait de Jermann une marque mondialement reconnue, servie sur les plus grandes tables, et l'un des principaux ambassadeurs du vin friulan à l'international.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vintage Tunina",
+        "Capo Martino",
+        "Where Dreams (Chardonnay)",
+        "Vinnae Ribolla"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "vintage-tunina",
+        "chardonnay",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-borgo-del-tiglio",
+      "nom": "Borgo del Tiglio",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Cormons (Brazzano)",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Sauvignon",
+        "Chardonnay",
+        "Malvasia",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Brazzano, près de Cormons, Borgo del Tiglio est un domaine artisanal culte, référence des amateurs et des collectionneurs de grands blancs du Collio. Nicola Manferrari, ancien pharmacien devenu vigneron d'exception, y élabore avec une exigence rare des vins d'une grande complexité et d'une longue garde.\n\nSur de petites parcelles de ponca, en rendements très bas, il signe des Friulano (dont la cuvée Ronco della Chiesa, un sommet du cépage), des Chardonnay Selezione, des Sauvignon et des assemblages (Studio di Bianco), ainsi que quelques rouges (Merlot Rosso della Centa). Le style Manferrari, tout en finesse, précision et profondeur, cherche l'équilibre et la capacité de vieillissement plutôt que la démonstration ; ses meilleurs blancs se patinent magnifiquement sur une décennie et plus. La production, confidentielle et très recherchée, fait l'objet d'une quête assidue des connaisseurs. Manferrari, figure discrète mais adulée, est considéré comme l'un des plus grands vinificateurs de blancs d'Italie.\n\nDomaine artisanal et culte du Collio, Borgo del Tiglio signe des blancs d'une complexité et d'une longévité rares, dont le Friulano Ronco della Chiesa est un sommet. C'est l'une des références les plus recherchées du vin blanc friulan.\n\nNicola Manferrari incarne une certaine idée de l'excellence discrète. Ancien pharmacien revenu à la vigne familiale, il a fait de Borgo del Tiglio un domaine minuscule mais adulé, où chaque geste vise la précision et la longévité. Sur la ponca du Collio, en rendements très bas, il travaille avec une patience d'orfèvre, cherchant à révéler le terroir plutôt qu'à imposer un style. Le Friulano Ronco della Chiesa, issu d'une parcelle historique, est considéré comme l'une des plus grandes expressions du cépage : un blanc profond, salin et de très longue garde. Servis sur des poissons nobles, des viandes blanches ou des fromages, ses vins déploient une complexité qui se révèle pleinement après plusieurs années de cave. La production, confidentielle, échappe largement au grand public et circule dans un cercle de connaisseurs qui guettent chaque millésime. Figure respectée mais peu médiatique, Manferrari est régulièrement cité parmi les plus grands vinificateurs de blancs d'Italie, et Borgo del Tiglio comme l'un des sommets qualitatifs du Collio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ronco della Chiesa Friulano",
+        "Studio di Bianco",
+        "Chardonnay Selezione",
+        "Malvasia"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "brazzano",
+        "friulano",
+        "manferrari",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-schiopetto",
+      "nom": "Schiopetto",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Capriva del Friuli",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Bianco",
+        "Pinot Grigio",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Capriva del Friuli, au cœur du Collio, Schiopetto est une maison-pionnière du vin blanc moderne italien. Mario Schiopetto, disparu en 2003, fut l'un des premiers, dès les années 1960, à introduire la vinification à température contrôlée et une hygiène rigoureuse, révélant une pureté de fruit inédite et faisant du Collio une région de référence.\n\nLe domaine élabore des blancs nets, précis et élégants — Friulano, Pinot Bianco, Pinot Grigio, Sauvignon — sur les sols de ponca du Collio, ainsi que l'assemblage Blanc des Rosis et la cuvée M dédiée au fondateur. Le style, classique et raffiné, privilégie la fraîcheur et la définition variétale. Institution de la région, Schiopetto demeure un gardien de l'excellence des blancs friulans.\n\nPionnier de la vinification moderne en Friuli, Schiopetto a fait du Collio une terre de grands blancs. Ses vins purs et précis restent une référence historique de la région.\n\nL'apport de Mario Schiopetto fut décisif pour toute l'Italie du vin blanc : en maîtrisant les températures de fermentation et l'hygiène de cave, il révéla une pureté aromatique qui fit école bien au-delà du Friuli. Le domaine, aujourd'hui séparé du fondateur mais fidèle à son héritage, cultive la ponca du Collio avec rigueur. Servis sur des poissons, des crustacés ou une cuisine méditerranéenne, ses blancs séduisent par leur netteté et leur définition variétale. La cuvée M rend hommage au fondateur, tandis que le Blanc des Rosis assemble les cépages du Collio. Schiopetto reste un repère historique et une valeur constante de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Friulano",
+        "Blanc des Rosis",
+        "Pinot Grigio",
+        "M (Mario Schiopetto)"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "capriva",
+        "friulano",
+        "pionnier",
+        "schiopetto"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wine-searcher"
+    },
+    {
+      "id": "it-friuli-prod-villa-russiz",
+      "nom": "Villa Russiz",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Capriva del Friuli",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Friulano",
+        "Pinot Bianco",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Capriva del Friuli, Villa Russiz est un domaine historique du Collio doublé d'une institution caritative : ses bénéfices financent une fondation pour l'enfance créée à la fin du XIXe siècle. Sur les sols de ponca, il produit des blancs d'une grande régularité.\n\nLe Sauvignon de La Tour et le Merlot Graf de La Tour comptent parmi les références du Collio, aux côtés de purs Friulano, Pinot Bianco et Chardonnay. Le style, précis et élégant, met en valeur la fraîcheur et la minéralité des terroirs du Collio. La double vocation, viticole et sociale, confère au domaine une aura particulière. La qualité constante de sa gamme en fait une valeur sûre de la région.\n\nDomaine historique et caritatif du Collio, Villa Russiz signe des blancs (et un Merlot) élégants et réguliers, dont le Sauvignon de La Tour est emblématique. C'est l'une des références classiques de la région.\n\nLa double vocation de Villa Russiz — grand domaine viticole et fondation pour l'enfance née à la fin du XIXe siècle grâce au comte de La Tour et à son épouse Elvine Ritter — en fait un lieu unique, où chaque bouteille soutient une œuvre sociale. Sur la ponca du Collio, le vignoble bénéficie d'un soin constant. Servis sur des poissons, des viandes blanches ou des fromages, les blancs séduisent par leur fraîcheur et leur minéralité, tandis que le Merlot Graf de La Tour compte parmi les meilleurs rouges de la région. La régularité de la gamme et l'aura du lieu en font une valeur sûre et attachante du Collio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sauvignon de La Tour",
+        "Merlot Graf de La Tour",
+        "Friulano",
+        "Pinot Bianco"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "capriva",
+        "sauvignon",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-venica-e-venica",
+      "nom": "Venica & Venica",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Dolegna del Collio",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Friulano",
+        "Ribolla Gialla",
+        "Pinot Bianco"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dolegna del Collio, Venica & Venica est l'un des domaines familiaux les plus renommés du Collio, réputé pour la vivacité et la précision de ses blancs. Sur les collines de ponca, la famille cultive un vignoble soigné depuis les années 1930.\n\nSa cuvée-phare, le Sauvignon Ronco delle Mele, est l'un des plus réputés d'Italie : un blanc d'une grande finesse aromatique, floral et précis. Le domaine excelle aussi sur le Friulano, la Ribolla Gialla et le Pinot Bianco, dans un style net, fruité et fidèle au terroir. L'accueil œnotouristique soigné et la régularité de la gamme ont bâti une réputation qui dépasse les frontières. Le travail sur les différents crus (Ronco del Cerò, Cime) témoigne d'une belle sensibilité au terroir.\n\nRéférence familiale du Collio, Venica & Venica signe des blancs vibrants et précis, dont le Sauvignon Ronco delle Mele est emblématique. C'est l'un des domaines les plus appréciés de la région.\n\nSur les collines de Dolegna, la famille Venica cultive la vigne depuis trois générations, avec un souci constant de la qualité et de l'accueil. Le Sauvignon Ronco delle Mele, issu d'une parcelle en altitude entourée de bois, est né en 1995 d'une recherche du site idéal pour ce cépage ; il est devenu l'un des Sauvignon les plus réputés d'Italie. Servis sur des poissons, des fruits de mer ou une cuisine légère, les blancs de Venica séduisent par leur vivacité et leur fruit. Le domaine soigne aussi la Ribolla Gialla, cépage historique du Friuli, et propose un œnotourisme réputé. Sa régularité en fait l'un des piliers du Collio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ronco delle Mele Sauvignon",
+        "Ronco del Cerò",
+        "Tre Vignis",
+        "Malvasia"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "dolegna",
+        "sauvignon",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines|italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-russiz-superiore-marco-felluga",
+      "nom": "Russiz Superiore (Marco Felluga)",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Capriva del Friuli",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Merlot",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Capriva del Friuli, Russiz Superiore est le domaine du Collio de la famille Felluga (Marco Felluga, frère de Livio), au cœur d'un vignoble de collines réputé. La maison y perpétue une tradition d'excellence sur les sols de ponca.\n\nElle signe des blancs de terroir soignés — le Col Disôre (assemblage), de purs Friulano, Pinot Bianco et Sauvignon — ainsi que des rouges bordelais de belle tenue (Riserva degli Orzoni). Le style, classique et précis, met en valeur la fraîcheur et la minéralité du Collio. La régularité et la profondeur de la gamme en font une valeur sûre. Aujourd'hui menée par la sixième génération (Ilaria Felluga), la maison conjugue héritage et exigence.\n\nDomaine du Collio de la famille Felluga, Russiz Superiore signe des blancs de terroir et des rouges soignés, dont le Col Disôre est emblématique. C'est l'une des références classiques de la région.\n\nLe domaine, séparé de la maison de négoce Marco Felluga, occupe un amphithéâtre de collines au cœur du Collio, sur des sols de ponca idéaux pour les blancs. La sixième génération, avec Ilaria Felluga, y perpétue une exigence de qualité et un respect du terroir. Servis sur des poissons, des viandes blanches ou des fromages, les blancs séduisent par leur fraîcheur et leur précision, tandis que la Riserva degli Orzoni (rouge bordelais) témoigne de l'ambition maison. Le Col Disôre, assemblage phare, incarne le meilleur du domaine. Russiz Superiore demeure l'une des valeurs sûres et régulières du Collio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Col Disôre",
+        "Friulano",
+        "Pinot Bianco",
+        "Riserva degli Orzoni"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "capriva",
+        "friulano",
+        "felluga"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-damijan-podversic",
+      "nom": "Damijan Podversic",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Gorizia",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Ribolla Gialla",
+        "Malvasia",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gorizia, sur les collines du Collio, Damijan Podversic est l'un des grands noms du vin de macération friulan. Élève et ami de Josko Gravner, il a développé, à partir de la fin des années 1990, un style personnel de blancs orange d'une grande profondeur.\n\nEn agriculture biologique et fermentations naturelles, il macère longuement ses blancs sur les peaux — Friulano, Ribolla Gialla, Malvasia, Chardonnay — pour des vins ambrés, texturés et territoriaux (Kaplja, Nekaj), ainsi qu'un rouge (Prelit). Ses vins, riches et complexes, expriment le terroir de ponca de Gorizia avec une intensité rare et une belle aptitude à la garde. Figure respectée du mouvement orange, Damijan est une référence pour les amateurs de vins authentiques et de macération.\n\nGrand nom du vin orange friulan, Damijan Podversic signe des blancs de macération profonds et territoriaux. C'est l'une des références du Collio pour les vins de macération et le vin nature.\n\nFormé au contact de Gravner, Damijan Podversic a su développer une voix personnelle dans l'univers du vin orange. Sur les collines de ponca de Gorizia, en bio, il pousse la maturité et macère longuement, cherchant la profondeur et l'ancrage au terroir plutôt que l'effet. Servis sur des plats de caractère — viandes blanches, fromages affinés, cuisine épicée —, ses blancs ambrés déploient une complexité qui se révèle à l'aération et gagne avec les années. Ses cuvées Kaplja et Nekaj sont recherchées des amateurs. Damijan s'est imposé comme l'un des noms qui comptent du vin de macération friulan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kaplja",
+        "Nekaj",
+        "Ribolla Gialla",
+        "Prelit"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "gorizia",
+        "ribolla",
+        "orange",
+        "bio",
+        "macere"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-la-castellada",
+      "nom": "La Castellada",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Oslavia (Gorizia)",
+      "pays": "Italie",
+      "cepages": [
+        "Ribolla Gialla",
+        "Friulano",
+        "Chardonnay",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oslavia, épicentre du vin orange, La Castellada est un pilier du mouvement de macération. La famille Bensa y élabore, sur les collines de ponca face à la Slovénie, des blancs ambrés d'une grande complexité.\n\nPar de longues macérations sur peaux et des élevages patients, le domaine signe une Ribolla Gialla de référence, un Bianco della Castellada (assemblage), des Friulano et Chardonnay, ainsi qu'un rouge. Ces vins, riches, tanniques et de garde, s'inscrivent dans la tradition d'Oslavia partagée avec Gravner et Radikon. Le style, authentique et profond, exprime le terroir avec force. Aujourd'hui la nouvelle génération (dont Matteo Bensa) perpétue et renouvelle cet héritage.\n\nPilier du vin orange d'Oslavia, La Castellada signe des blancs de macération complexes et de garde, dont la Ribolla Gialla est emblématique. C'est l'une des références du mouvement dans le Collio.\n\nÀ Oslavia, la famille Bensa a été de l'aventure du vin orange dès ses débuts, aux côtés de ses voisins Gravner et Radikon. Sur la ponca face à la Slovénie, elle élabore des blancs de longue macération qui comptent parmi les plus complexes de la zone. Servis sur des viandes blanches, du gibier à plume ou des fromages, ces vins ambrés et tanniques déploient une profondeur remarquable et vieillissent longtemps. La Ribolla Gialla, cépage roi d'Oslavia, en est la plus belle expression. La nouvelle génération, dont Matteo Bensa, perpétue cet héritage tout en le renouvelant, confirmant La Castellada parmi les piliers du vin orange.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ribolla Gialla",
+        "Bianco della Castellada",
+        "Friulano",
+        "Rosso della Castellada"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "ribolla",
+        "orange",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-dario-princic",
+      "nom": "Dario Princic",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Oslavia (Gorizia)",
+      "pays": "Italie",
+      "cepages": [
+        "Ribolla Gialla",
+        "Pinot Grigio",
+        "Friulano",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oslavia, Dario Princic est l'un des artisans historiques du vin de macération friulan. Depuis les années 1980, il élabore, sur les collines de ponca, des blancs orange devenus des références du vin nature.\n\nPar de longues macérations et un minimum d'intervention, il signe des Ribolla Gialla, Pinot Grigio (ramato), Friulano (Jakot) et Sauvignon (Trebez) riches, complexes et texturés, très appréciés des amateurs de vins authentiques. Ses vins, ambrés et profonds, expriment le terroir d'Oslavia avec sincérité. Le domaine, artisanal et confidentiel, s'inscrit dans la lignée des grands d'Oslavia. La démarche, exigeante et sans compromis, en fait un nom recherché du vin nature.\n\nArtisan historique du vin orange d'Oslavia, Dario Princic signe des blancs de macération riches et authentiques. C'est une référence appréciée des amateurs de vin nature.\n\nArtisan discret d'Oslavia, Dario Princic a suivi très tôt la voie de la macération, dans la lignée des pionniers de son village. Sur la ponca, il travaille avec un minimum d'intervention, laissant le terroir et le millésime s'exprimer. Servis sur des viandes blanches, des fromages ou une cuisine relevée, ses blancs ambrés séduisent par leur richesse et leur authenticité. La Ribolla Gialla et le Pinot Grigio ramato comptent parmi ses cuvées les plus appréciées. Sa production confidentielle et sa fidélité à une vision sans compromis en font un nom recherché de la scène du vin nature.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ribolla Gialla",
+        "Trebez",
+        "Jakot",
+        "Pinot Grigio"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "orange",
+        "nature",
+        "macere"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-edi-keber",
+      "nom": "Edi Keber",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Ribolla Gialla",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cormons, Edi Keber est une figure emblématique du Collio, connue pour une démarche radicale : ne produire qu'un seul grand vin, un assemblage de terroir plutôt qu'une collection de cépages. Sur les collines de ponca, la famille cultive un vignoble conduit avec soin.\n\nSon unique blanc, le Collio (Friulano, Ribolla Gialla, Malvasia), incarne une philosophie : privilégier l'expression du lieu à celle de la variété, à l'image des grands terroirs. Le vin, précis, salin et digeste, se veut le reflet fidèle du Collio. Cette approche, rare en Friuli où domine le mono-cépage, a fait d'Edi Keber (et de son fils Kristian) une référence intellectuelle autant que qualitative. Le domaine défend une vision du Collio comme appellation de terroir.\n\nFigure emblématique du Collio, Edi Keber signe un unique grand blanc d'assemblage, manifeste d'un vin de terroir. C'est l'une des références conceptuelles et qualitatives de la région.\n\nLe choix d'Edi Keber de ne produire qu'un seul vin est un acte fort dans une région où le mono-cépage règne : il affirme que le Collio est d'abord un terroir, et que son assemblage traditionnel (Friulano dominant, Ribolla, Malvasia) l'exprime mieux qu'une variété isolée. Sur la ponca de Cormons, le vignoble est conduit avec soin. Servi sur des poissons, des viandes blanches ou une cuisine méditerranéenne, ce blanc salin et digeste se veut le miroir du Collio. Cette démarche, portée aujourd'hui avec son fils Kristian, a fait d'Edi Keber une référence intellectuelle et qualitative, souvent citée dans le débat sur l'identité de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Collio Bianco",
+        "Ribolla Gialla"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "cormons",
+        "friulano",
+        "assemblage"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-franco-toros",
+      "nom": "Franco Toros",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cormons, Franco Toros est un nom historique du Collio, réputé pour ses blancs minéraux et de longue garde. Sur les collines de ponca de Sottomonte, la famille cultive un vignoble en rendements maîtrisés.\n\nLe domaine signe de purs Friulano, Pinot Bianco, Sauvignon et Pinot Grigio d'une grande identité territoriale : des blancs concentrés, salins et précis, qui vieillissent remarquablement. Le style Toros, exigeant et fidèle au terroir, privilégie la profondeur et la tension. La régularité et la qualité constante de la gamme en font une valeur sûre et respectée du Collio, appréciée des connaisseurs.\n\nNom historique du Collio, Franco Toros signe des blancs minéraux, concentrés et de garde, d'une grande fidélité au terroir. C'est l'une des valeurs sûres de la région.\n\nSur les pentes de Sottomonte à Cormons, Franco Toros cultive un vignoble en rendements maîtrisés, cherchant la concentration et la longévité. La ponca y donne des blancs d'une minéralité et d'une densité remarquables. Servis sur des poissons nobles, des viandes blanches ou des fromages, ses Friulano et Pinot Bianco séduisent par leur profondeur et leur tension, et vieillissent remarquablement. Le style Toros, exigeant et fidèle au terroir, privilégie la vérité du lieu à la mode. Sa régularité, millésime après millésime, en fait l'une des valeurs sûres et respectées du Collio, prisée des connaisseurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Friulano",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Pinot Grigio"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "cormons",
+        "friulano",
+        "mineral"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-ronco-del-gnemiz",
+      "nom": "Ronco del Gnemiz",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "San Giovanni al Natisone",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Chardonnay",
+        "Friulano",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Giovanni al Natisone, dans les Colli Orientali, Ronco del Gnemiz est un domaine raffiné, réputé pour la précision et la structure de ses blancs. Sur les sols de ponca, il pratique une approche parcellaire poussée.\n\nLe Sauvignon (San Zuan) et le Chardonnay (Sol) comptent parmi les plus aboutis des Colli Orientali : des blancs structurés, tendus et de garde, salués par la critique. Le domaine, mené par Serena Palazzolo avec l'œnologue Christian Patat, soigne aussi le Friulano et de beaux rouges. Le style, précis et élégant, vise la profondeur et la définition. Le travail sur les vieilles vignes et les crus témoigne d'une grande sensibilité au terroir.\n\nDomaine raffiné des Colli Orientali, Ronco del Gnemiz signe des Sauvignon et Chardonnay structurés et précis, parmi les plus aboutis de la zone. C'est une référence qualitative de la région.\n\nRonco del Gnemiz a bâti sa réputation sur une approche parcellaire rigoureuse, rare pour les blancs. Serena Palazzolo et l'œnologue Christian Patat vinifient séparément les meilleures vignes pour en révéler les nuances. Sur la ponca des Colli Orientali, le Sauvignon San Zuan et le Chardonnay Sol atteignent une structure et une précision qui les placent parmi les grands blancs de la zone. Servis sur des poissons, des crustacés ou une cuisine raffinée, ils séduisent par leur profondeur et leur allonge. Le domaine soigne aussi le Friulano et de beaux rouges. Sa recherche constante de finesse en fait une référence qualitative des Colli Orientali.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sol Chardonnay",
+        "San Zuan Sauvignon",
+        "Ronco del Gnemiz Chardonnay",
+        "Rosso"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "sauvignon",
+        "chardonnay"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-ronchi-di-cialla",
+      "nom": "Ronchi di Cialla",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Prepotto",
+      "pays": "Italie",
+      "cepages": [
+        "Schioppettino",
+        "Refosco",
+        "Verduzzo",
+        "Ribolla Gialla",
+        "Picolit"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Prepotto, au fond d'une vallée reculée des Colli Orientali, Ronchi di Cialla est le gardien des cépages autochtones du Friuli. La famille Rapuzzi y a, dès les années 1970, sauvé et remis à l'honneur le Schioppettino, cépage rouge local alors presque disparu.\n\nLe Schioppettino di Cialla, rouge poivré, élégant et de garde, est l'emblème du domaine, aux côtés du Refosco, de la Ribolla Gialla, du Verduzzo et du Picolit, tous issus de la sous-zone de Cialla. Le style, patient et fidèle à la tradition, privilégie l'authenticité et la longévité ; les vins sont souvent commercialisés après plusieurs années de cave. Le travail de sauvegarde ampélographique de la famille a été déterminant pour le patrimoine viticole friulan.\n\nGardien des cépages autochtones, Ronchi di Cialla a sauvé le Schioppettino et signe des rouges et des blancs authentiques d'une vallée reculée. C'est une référence patrimoniale des Colli Orientali.\n\nLe travail de sauvegarde mené par la famille Rapuzzi à partir des années 1970 a été déterminant : en replantant le Schioppettino alors presque disparu, ils ont sauvé un pan du patrimoine viticole friulan. La vallée isolée de Cialla, aux sols de ponca, offre un microclimat idéal pour les cépages autochtones. Servis sur des viandes, du gibier ou des fromages, les rouges de Cialla séduisent par leur caractère poivré et leur élégance, et vieillissent longtemps. Le domaine soigne aussi la Ribolla, le Verduzzo et le Picolit. Ronchi di Cialla demeure un conservatoire vivant et une référence patrimoniale des Colli Orientali.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Schioppettino di Cialla",
+        "Refosco di Cialla",
+        "Ribolla Gialla di Cialla",
+        "Picolit"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "prepotto",
+        "schioppettino",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines|decanter"
+    },
+    {
+      "id": "it-friuli-prod-le-due-terre",
+      "nom": "Le Due Terre",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Prepotto",
+      "pays": "Italie",
+      "cepages": [
+        "Schioppettino",
+        "Refosco",
+        "Pinot Nero",
+        "Friulano",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Prepotto, dans les Colli Orientali, Le Due Terre est un micro-domaine culte, adulé des amateurs. Silvana Forte et Flavio Basilicata y élaborent, sur quelques hectares, des vins d'une grande personnalité en quantités confidentielles.\n\nLe Sacrisassi Rosso (assemblage Schioppettino-Refosco) et le Sacrisassi Bianco (Friulano-Sauvignon) sont leurs cuvées emblématiques : des vins profonds, complexes et de garde, dont Decanter a écrit que le rouge serait un premier cru s'il était bordelais. Le domaine soigne aussi un Pinot Nero remarquable. Le style, artisanal et précis, vise la finesse et la profondeur. La rareté et la qualité de ces vins en font des bouteilles très recherchées.\n\nMicro-domaine culte des Colli Orientali, Le Due Terre signe des vins rares et profonds, dont le Sacrisassi est emblématique. C'est l'une des références confidentielles les plus admirées du Friuli.\n\nLe domaine, minuscule, ne produit que quelques milliers de bouteilles, ce qui rend ses vins aussi rares que recherchés. Silvana Forte et Flavio Basilicata y travaillent avec une précision d'artisans, sur les sols de ponca de Prepotto. Le Sacrisassi, dans ses versions rouge et blanche, est leur manifeste : des vins profonds, complexes et de garde, salués par la critique internationale. Servis sur des viandes, du gibier ou des fromages pour le rouge, sur une cuisine raffinée pour le blanc, ils déploient une finesse remarquable. Leur Pinot Nero est également très réputé. Le Due Terre s'est imposé comme l'un des micro-domaines cultes du Friuli.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sacrisassi Rosso",
+        "Sacrisassi Bianco",
+        "Pinot Nero",
+        "Implicito"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "prepotto",
+        "schioppettino",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-prod-vignai-da-duline",
+      "nom": "Vignai da Duline",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "San Giovanni al Natisone",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Friulano",
+        "Malvasia",
+        "Refosco",
+        "Schioppettino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Giovanni al Natisone, Vignai da Duline est un domaine en biodynamie qui a fait de la préservation des vieilles vignes sa signature. Sur des parcelles anciennes, souvent conduites en méthodes traditionnelles, il élabore des vins d'une grande personnalité friulane.\n\nLe Chardonnay (Ronco Pitotti) et le Friulano y ont un caractère marqué, loin des standards internationaux, aux côtés de la Malvasia et de rouges autochtones (Refosco, Schioppettino). Le style, respectueux du vivant et fidèle au terroir, privilégie l'authenticité et la fraîcheur. La démarche biodynamique et la défense des vieilles vignes font l'originalité et la valeur du domaine, salué par la critique.\n\nDomaine biodynamique des Colli Orientali, Vignai da Duline signe des blancs et des rouges d'une forte personnalité, sur vieilles vignes. C'est l'une des belles adresses authentiques de la région.\n\nLa préservation des vieilles vignes est au cœur de la démarche de Vignai da Duline : certaines parcelles, conduites en méthodes anciennes, ont plusieurs décennies et donnent des vins d'une personnalité rare. La biodynamie et le respect du vivant guident le travail. Sur la ponca des Colli Orientali, le Chardonnay et le Friulano prennent une identité profondément friulane, loin des standards internationaux. Servis sur des poissons, des viandes blanches ou des fromages, ces blancs séduisent par leur fraîcheur et leur caractère. Le domaine soigne aussi des rouges autochtones (Refosco, Schioppettino). Salué par la critique, il incarne une viticulture respectueuse et authentique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay Ronco Pitotti",
+        "Friulano",
+        "Morus (Refosco)",
+        "Malvasia"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "chardonnay",
+        "biodynamie",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines"
+    },
+    {
+      "id": "it-friuli-prod-meroi",
+      "nom": "Meroi",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Buttrio",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Sauvignon",
+        "Chardonnay",
+        "Merlot",
+        "Refosco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Buttrio, dans les Colli Orientali, Meroi est un domaine familial réputé pour ses blancs parcellaires riches et texturés. Paolo Meroi y cultive, en agriculture biologique, des vignes sur les sols de ponca.\n\nLe domaine signe des Friulano (Zitelle), Chardonnay et Sauvignon amples et profonds, souvent élevés sur lies, ainsi que de beaux rouges (Refosco, Merlot). Le style, généreux et personnel, cherche la densité et l'expression du terroir. Le travail parcellaire (Zitelle, Dominin) témoigne d'une sensibilité fine aux différents crus de Buttrio. La démarche biologique et la régularité de la gamme en font une valeur sûre des Colli Orientali.\n\nDomaine bio de Buttrio, Meroi signe des blancs parcellaires riches et texturés, ainsi que de beaux rouges. C'est une belle référence des Colli Orientali.\n\nÀ Buttrio, sur les mêmes coteaux de ponca que Miani, Paolo Meroi cultive en bio des vignes dont il tire des blancs d'une belle densité. Le travail parcellaire (Zitelle, Dominin) révèle les nuances des crus de Buttrio. Les blancs, souvent élevés sur lies, gagnent en texture et en profondeur. Servis sur des poissons, des viandes blanches ou des fromages, ils séduisent par leur ampleur, tandis que les rouges (Refosco, Merlot) apportent du caractère. Le style Meroi, généreux et personnel, cherche la densité et l'expression du terroir. La démarche biologique et la régularité de la gamme en font une valeur sûre des Colli Orientali.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Friulano Zitelle",
+        "Ros di Buri",
+        "Nini",
+        "Dominin"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "buttrio",
+        "friulano",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-vodopivec",
+      "nom": "Vodopivec",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Carso",
+      "commune": "Sgonico",
+      "pays": "Italie",
+      "cepages": [
+        "Vitovska"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur le plateau du Carso, à Sgonico, près de Trieste, Vodopivec est le maître incontesté de la Vitovska, cépage blanc autochtone du karst. Paolo Vodopivec en a fait une expression d'une pureté et d'une profondeur uniques.\n\nSur les sols rouges et calcaires du Carso, en agriculture biologique, il macère la Vitovska en amphores géorgiennes enterrées, pour des blancs salins, minéraux et d'une grande finesse (Vitovska, Vitovska Solo, Origine). Le style, épuré et exigeant, cherche à révéler l'essence du terroir karstique plutôt qu'à imposer une technique. Ses vins, rares et recherchés, sont devenus des références du Carso et du vin de macération. La spécialisation sur un seul cépage témoigne d'une quête d'absolu.\n\nMaître de la Vitovska sur le Carso, Vodopivec signe des blancs d'amphore salins et purs, expression du karst calcaire. C'est l'une des références les plus admirées du plateau de Trieste.\n\nLa démarche de Paolo Vodopivec relève de l'ascèse : concentrer tout son art sur un seul cépage, la Vitovska, pour en révéler l'essence sur le karst calcaire. Les amphores enterrées, les longues macérations et l'agriculture biologique servent cette quête de pureté. Le Carso, terroir rude de pierres et de bora, donne des vins d'une salinité et d'une minéralité uniques. Servis sur des poissons, des crustacés ou une cuisine méditerranéenne, ces blancs déploient une finesse et une profondeur remarquables. Rares et recherchés, ils sont devenus des références du Carso et du vin de macération. Vodopivec incarne une viticulture d'absolu, entièrement dévouée à l'expression d'un lieu et d'un cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vitovska",
+        "Vitovska Solo",
+        "Origine"
+      ],
+      "tags": [
+        "friuli",
+        "carso",
+        "vitovska",
+        "amphore",
+        "mineral",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "flatironwines|decanter"
+    },
+    {
+      "id": "it-friuli-prod-zidarich",
+      "nom": "Zidarich",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Carso",
+      "commune": "Duino-Aurisina",
+      "pays": "Italie",
+      "cepages": [
+        "Vitovska",
+        "Malvasia",
+        "Terrano",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Carso DOC",
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Duino-Aurisina, sur le Carso, Zidarich est l'un des grands noms du plateau karstique, aux caves spectaculaires creusées dans la roche calcaire. Benjamin Zidarich y élabore des vins de macération d'une belle minéralité.\n\nSur les sols rouges et pierreux du Carso, en agriculture biologique et intervention minimale, il signe la Vitovska, la Malvasia, l'assemblage Prulke et le Terrano (rouge nerveux et salin du karst). Les blancs, macérés, sont salins, racés et profondément marqués par le terroir calcaire. Le style, authentique et exigeant, exprime la rudesse et la beauté du Carso. Le domaine, artisanal, est une référence du plateau, aux côtés de ses voisins Skerk et Kante.\n\nGrand nom du Carso, Zidarich signe des blancs de macération et un Terrano salins et racés, expression du karst. C'est l'une des références du plateau de Trieste.\n\nLes caves de Zidarich, creusées sur plusieurs niveaux dans la roche calcaire du Carso, sont un spectacle en soi et un outil au service du vin. Benjamin Zidarich y travaille en bio, avec un minimum d'intervention, laissant le terroir karstique s'exprimer. La Vitovska et le Terrano, cépages emblématiques du plateau, y donnent des vins salins, tendus et racés. Servis sur des poissons, des viandes ou des fromages, ils séduisent par leur minéralité et leur caractère. L'assemblage Prulke est particulièrement réputé. Zidarich, aux côtés de ses voisins, a fait du Carso l'un des terroirs les plus singuliers d'Italie et s'impose comme l'une de ses références.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vitovska",
+        "Prulke",
+        "Malvasia",
+        "Terrano"
+      ],
+      "tags": [
+        "friuli",
+        "carso",
+        "vitovska",
+        "terrano",
+        "amphore",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-prod-skerk",
+      "nom": "Skerk",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Carso",
+      "commune": "Sgonico",
+      "pays": "Italie",
+      "cepages": [
+        "Vitovska",
+        "Malvasia",
+        "Terrano",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Carso DOC",
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sgonico, sur le Carso, Sandi Skerk est l'un des maîtres du plateau karstique, réputé pour ses blancs de macération d'une grande minéralité. Sur les sols calcaires et rouges du Carso, il travaille en intervention minimale.\n\nLe domaine signe la Vitovska, la Malvasia et l'assemblage Ograde, macérés sur peaux, ainsi que le Terrano, rouge autochtone du karst. Les vins, salins, tendus et profondément minéraux, expriment le terroir calcaire avec force. Les caves, creusées dans la roche, offrent un cadre spectaculaire. Le style, exigeant et authentique, s'inscrit dans la tradition des grands vins de macération du Carso. Skerk est une référence du plateau, aux côtés de Vodopivec et Zidarich.\n\nMaître du Carso, Skerk signe des blancs de macération et un Terrano d'une grande minéralité calcaire. C'est l'une des références du plateau de Trieste.\n\nSandi Skerk travaille sur le fil, entre tradition et précision, pour révéler la minéralité du Carso. Sur les sols rouges et calcaires du plateau, en intervention minimale, il macère ses blancs sur peaux pour leur donner structure et profondeur. La Vitovska, la Malvasia et l'assemblage Ograde en sont les fleurons, aux côtés du Terrano rouge. Servis sur des poissons, des viandes ou des fromages, ces vins salins et tendus expriment le karst avec force. Les caves creusées dans la roche ajoutent à la magie du lieu. Skerk demeure, avec Vodopivec et Zidarich, l'un des maîtres incontestés du plateau de Trieste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ograde",
+        "Vitovska",
+        "Malvasia",
+        "Terrano"
+      ],
+      "tags": [
+        "friuli",
+        "carso",
+        "vitovska",
+        "terrano",
+        "mineral",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-prod-kante",
+      "nom": "Kante",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Carso",
+      "commune": "Duino-Aurisina",
+      "pays": "Italie",
+      "cepages": [
+        "Vitovska",
+        "Malvasia",
+        "Chardonnay",
+        "Sauvignon",
+        "Terrano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Carso DOC",
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Duino-Aurisina, Edi Kante est un pionnier du Carso, qui a démontré dès les années 1980 le potentiel du plateau karstique pour de grands blancs. Ses caves, taillées sur plusieurs niveaux dans la roche calcaire, sont spectaculaires.\n\nLe domaine signe des blancs précis et minéraux — Vitovska, Malvasia, Chardonnay, Sauvignon — ainsi que le Terrano rouge. Contrairement à certains de ses voisins, Kante privilégie souvent un style net et tendu plutôt que de longues macérations, révélant la minéralité calcaire du Carso avec éclat. Figure fondatrice du renouveau du plateau, il a inspiré la génération suivante (Vodopivec, Zidarich, Skerk). Ses vins conjuguent fraîcheur, salinité et profondeur.\n\nPionnier du Carso, Kante signe des blancs précis et minéraux, expression du karst calcaire. C'est une référence fondatrice du plateau de Trieste.\n\nEdi Kante fut un défricheur : dans les années 1980, alors que le Carso ne comptait guère de vins d'exception, il révéla le potentiel du plateau calcaire pour de grands blancs et creusa ses caves spectaculaires dans la roche. Son influence sur la génération suivante fut déterminante. Privilégiant souvent la netteté et la tension à la longue macération, il révèle la minéralité du karst avec éclat. Servis sur des poissons, des crustacés ou une cuisine méditerranéenne, ses Vitovska, Malvasia et Chardonnay séduisent par leur fraîcheur et leur salinité. Le Terrano apporte une touche rouge nerveuse. Kante demeure une figure fondatrice et respectée du Carso.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vitovska",
+        "Malvasia",
+        "Chardonnay",
+        "Terrano"
+      ],
+      "tags": [
+        "friuli",
+        "carso",
+        "vitovska",
+        "mineral",
+        "kante"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-prod-lis-neris",
+      "nom": "Lis Neris",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "San Lorenzo Isontino",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Grigio",
+        "Sauvignon",
+        "Chardonnay",
+        "Friulano"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Lorenzo Isontino, dans l'Isonzo, Lis Neris est un domaine moderne de référence, réputé pour ses blancs de sélection amples et raffinés. Alvaro Pecorari y conduit un vignoble soigné sur les graves de l'Isonzo.\n\nLe domaine signe des blancs élevés sur lies d'une belle profondeur — Pinot Grigio (Gris), Sauvignon (Picol), Chardonnay, Friulano — ainsi que les assemblages Confini et Lis, ambitieux et de garde. Le style, moderne et précis, conjugue richesse et fraîcheur grâce à l'influence maritime. La régularité et la montée en gamme du domaine en ont fait une valeur sûre de l'Isonzo, appréciée à l'international.\n\nDomaine moderne de l'Isonzo, Lis Neris signe des blancs de sélection amples et raffinés, de bonne garde. C'est l'une des références de la zone.\n\nAlvaro Pecorari a fait de Lis Neris un domaine moderne et ambitieux, misant sur la sélection parcellaire et l'élevage sur lies pour donner à ses blancs profondeur et aptitude à la garde. Sur les graves de l'Isonzo, sous l'influence maritime, les vins gagnent en richesse tout en conservant de la fraîcheur. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages, ils séduisent par leur ampleur et leur raffinement. Les cuvées Gris (Pinot Grigio) et les assemblages Confini et Lis témoignent de l'ambition maison. La régularité et la qualité constante en font une valeur sûre de l'Isonzo, reconnue à l'international.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gris Pinot Grigio",
+        "Confini",
+        "Lis",
+        "Picol Sauvignon"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "pinot-grigio",
+        "sauvignon",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-ronco-del-gelso",
+      "nom": "Ronco del Gelso",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Grigio",
+        "Friulano",
+        "Sauvignon",
+        "Riesling",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cormons, dans l'Isonzo, Ronco del Gelso est l'un des domaines les plus précis de la zone. Giorgio Badin y élabore, sur les graves et argiles de l'Isonzo, des blancs d'une grande netteté.\n\nLe Pinot Grigio (Sot lis Rivis), le Friulano (Toc Bas) et le Riesling comptent parmi les plus fines expressions du terroir isontino : des blancs frais, salins et raffinés, élevés sur lies. Le style Badin, tout en précision et en fraîcheur, vise la pureté et l'équilibre. La régularité de la gamme et la qualité constante en font une valeur sûre et respectée de l'Isonzo. Le travail sur le Riesling, rare en Friuli, témoigne d'une belle sensibilité.\n\nDomaine précis de l'Isonzo, Ronco del Gelso signe des blancs nets, frais et raffinés, dont le Pinot Grigio et le Riesling. C'est l'une des références de la zone.\n\nGiorgio Badin a fait de Ronco del Gelso une référence de précision dans l'Isonzo. Sur les graves et argiles de la zone, il vinifie avec une grande rigueur, cherchant la pureté et l'équilibre plutôt que la démonstration. Le Pinot Grigio Sot lis Rivis et le Friulano Toc Bas comptent parmi les plus fines expressions du terroir isontino, tandis que le Riesling, rare en Friuli, révèle une belle sensibilité. Servis sur des poissons, des crustacés ou une cuisine légère, ces blancs séduisent par leur fraîcheur et leur netteté. La régularité de la gamme en fait l'une des valeurs sûres de l'Isonzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sot lis Rivis Pinot Grigio",
+        "Toc Bas Friulano",
+        "Riesling",
+        "Latimis"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "pinot-grigio",
+        "riesling"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-borgo-san-daniele",
+      "nom": "Borgo San Daniele",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Grigio",
+        "Sauvignon",
+        "Refosco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cormons, à la frontière du Collio et de l'Isonzo, Borgo San Daniele est un domaine familial en biologique, réputé pour ses blancs profonds et personnels. Alessandra et Mauro Mauri y conduisent un vignoble avec soin.\n\nLe domaine signe des blancs d'assemblage et de cépage d'une belle densité — l'Arbis Blanc, le Friulano, le Pinot Grigio — souvent longuement élevés, ainsi que des rouges (Arbis Ros). Le style, personnel et fidèle au terroir, privilégie la profondeur et la texture plutôt que l'immédiateté. La démarche biologique et les longs élevages témoignent d'une exigence rare. Le domaine s'est imposé comme une belle référence de l'Isonzo.\n\nDomaine bio de Cormons, Borgo San Daniele signe des blancs profonds et personnels, longuement élevés, dont l'Arbis. C'est une belle référence de l'Isonzo.\n\nAlessandra et Mauro Mauri ont fait de Borgo San Daniele un domaine à part, misant sur le bio, les longs élevages et une vision personnelle du terroir de Cormons, à la charnière du Collio et de l'Isonzo. Leurs blancs, denses et profonds, se distinguent par leur texture et leur capacité à vieillir. Servis sur des poissons, des viandes blanches ou des fromages, ils séduisent par leur caractère et leur profondeur. L'Arbis, en blanc comme en rouge, incarne le meilleur du domaine. La démarche biologique et l'exigence des élevages en font une belle référence de l'Isonzo, appréciée des amateurs de vins de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Arbis Blanc",
+        "Friulano",
+        "Arbis Ros",
+        "Gortmarin"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "friulano",
+        "bio",
+        "arbis"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-bastianich",
+      "nom": "Bastianich",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Buttrio",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Sauvignon",
+        "Chardonnay",
+        "Picolit"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans les Colli Orientali, à Buttrio, Bastianich est le domaine créé par Joe Bastianich, restaurateur italo-américain célèbre. Sur les sols de ponca, il élabore des blancs modernes et gourmands, avec l'aide de conseils œnologiques réputés. Le Vespa Bianco (assemblage Chardonnay-Sauvignon-Picolit) et le Friulano Plus (élevé sur lies) sont ses cuvées phares, aux côtés du Vespa Rosso. Le style, ample et accessible, conjugue identité friulane et facture contemporaine. La notoriété de son fondateur a contribué à faire connaître le Friuli à l'international. Valeur sûre des Colli Orientali, Bastianich signe des blancs gourmands et bien faits, dont le Vespa et le Friulano Plus sont emblématiques. Servis sur des poissons, des viandes blanches ou une cuisine conviviale, les vins de Bastianich séduisent par leur générosité et leur accessibilité, et le domaine soigne aussi un œnotourisme apprécié dans les collines de Buttrio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vespa Bianco",
+        "Friulano Plus",
+        "Vespa Rosso",
+        "Calabrone"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "buttrio",
+        "friulano",
+        "bastianich"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-friuli-prod-volpe-pasini",
+      "nom": "Volpe Pasini",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Torreano",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Sauvignon",
+        "Pinot Bianco",
+        "Ribolla Gialla"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torreano, dans les Colli Orientali, Volpe Pasini est un domaine réputé au vignoble étendu sur les collines de ponca. La ligne Zuc di Volpe propose des blancs soignés et réguliers — Sauvignon, Friulano, Ribolla Gialla — d'une belle précision, aux côtés de rouges. Le style, net et fidèle au terroir, met en valeur la fraîcheur des Colli Orientali. La longue histoire du domaine et la régularité de sa gamme en font une valeur sûre de la zone. Bonne référence des Colli Orientali, Volpe Pasini signe des blancs précis et réguliers, dont la ligne Zuc di Volpe est la plus aboutie. Servis sur des poissons, des viandes blanches ou des fromages, les blancs de Volpe Pasini séduisent par leur netteté et leur fraîcheur ; le domaine, restauré avec soin, propose aussi un accueil œnotouristique dans un cadre historique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Zuc di Volpe Sauvignon",
+        "Zuc di Volpe Friulano",
+        "Ribolla Gialla",
+        "Togliano"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "torreano",
+        "sauvignon"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-torre-rosazza",
+      "nom": "Torre Rosazza",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Manzano",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Grigio",
+        "Sauvignon",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manzano, dans les Colli Orientali, Torre Rosazza est un domaine au vaste vignoble sur les collines de ponca. Il produit des blancs et des rouges accessibles et fiables — Friulano, Pinot Grigio, Sauvignon, Merlot — dans un style net et fruité, ainsi que la cuvée L'Altromerlot. Le bon rapport qualité-prix et la régularité de la gamme en font une valeur sûre de la zone. Le travail sur les crus (Ronco della Torre) témoigne d'une attention au terroir. Valeur sûre des Colli Orientali, Torre Rosazza offre des blancs et des rouges fiables et bien faits, représentatifs de la région. Servis sur une cuisine variée, des poissons aux viandes, les vins de Torre Rosazza séduisent par leur fruit et leur équilibre, offrant une belle porte d'entrée dans les Colli Orientali à un excellent rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "L'Altromerlot",
+        "Friulano",
+        "Pinot Grigio",
+        "Ronco della Torre"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "manzano",
+        "friulano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-girolamo-dorigo",
+      "nom": "Girolamo Dorigo",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Buttrio",
+      "pays": "Italie",
+      "cepages": [
+        "Pignolo",
+        "Schioppettino",
+        "Refosco",
+        "Friulano",
+        "Picolit"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Buttrio, dans les Colli Orientali, Girolamo Dorigo est une maison historique, pionnière de la renaissance du Pignolo, cépage rouge autochtone rare et tannique. Sur les sols de ponca, le domaine élabore des rouges de garde ambitieux — le Montsclapade (assemblage bordelais), le Pignolo, le Schioppettino — ainsi que des blancs et un Picolit doux. Le style, structuré et fidèle aux cépages autochtones, privilégie la profondeur et la longévité. Le travail de sauvegarde du Pignolo a marqué le patrimoine viticole friulan. Pionnier du Pignolo, Girolamo Dorigo signe des rouges autochtones de garde et de beaux blancs. C'est une référence patrimoniale des Colli Orientali. Servis sur des viandes rouges, du gibier ou des fromages affinés, les rouges de Dorigo révèlent leur profondeur après quelques années de cave ; le Pignolo, tannique et rare, en est l'expression la plus ambitieuse et la plus recherchée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montsclapade",
+        "Pignolo",
+        "Schioppettino",
+        "Picolit"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "buttrio",
+        "pignolo",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-pierpaolo-pecorari",
+      "nom": "Pierpaolo Pecorari",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "San Lorenzo Isontino",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Pinot Grigio",
+        "Friulano",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Lorenzo Isontino, dans l'Isonzo, Pierpaolo Pecorari est un domaine réputé pour ses blancs parcellaires précis. Sur les graves de la rive droite de l'Isonzo, il élabore des Sauvignon (Kolaus), Pinot Grigio (Olivers) et Friulano d'une belle netteté, ainsi que des rouges. Le style, moderne et précis, met en valeur la fraîcheur et la salinité du terroir isontino. Le travail parcellaire et la régularité de la gamme en font une valeur sûre de la zone. Bonne référence de l'Isonzo, Pierpaolo Pecorari signe des blancs parcellaires nets et précis, dont le Sauvignon Kolaus est emblématique. Servis sur des poissons, des crustacés ou une cuisine légère, les blancs de Pierpaolo Pecorari séduisent par leur fraîcheur et leur salinité, expression fidèle des graves de l'Isonzo travaillées avec précision.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kolaus Sauvignon",
+        "Olivers Pinot Grigio",
+        "Soligo",
+        "Altis"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "sauvignon",
+        "pinot-grigio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-borgo-conventi",
+      "nom": "Borgo Conventi",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Farra d'Isonzo",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Friulano",
+        "Pinot Grigio",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC",
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Farra d'Isonzo, à la charnière du Collio et de l'Isonzo, Borgo Conventi est un domaine classique aujourd'hui dans le giron du groupe Folonari. Il produit des blancs fiables et réguliers — Sauvignon, Friulano, Pinot Grigio — dans un style net et accessible, ainsi que des rouges (Colle Russian). La régularité de la gamme et le bon rapport qualité-prix en font une valeur sûre. Le domaine bénéficie des terroirs du Collio et de l'Isonzo. Valeur sûre du Collio, Borgo Conventi signe des blancs classiques et fiables, représentatifs de la région. Servis sur des poissons, des viandes blanches ou une cuisine méditerranéenne, les vins de Borgo Conventi séduisent par leur netteté et leur régularité, bénéficiant de la double richesse des terroirs du Collio et de l'Isonzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sauvignon",
+        "Friulano",
+        "Pinot Grigio",
+        "Colle Russian"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "farra",
+        "sauvignon"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-friuli-prod-primosic",
+      "nom": "Primosic",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Oslavia (Gorizia)",
+      "pays": "Italie",
+      "cepages": [
+        "Ribolla Gialla",
+        "Friulano",
+        "Sauvignon",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC",
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oslavia, dans le Collio, Primosic est un domaine à double visage, entre tradition orange et blancs classiques. Sur les collines de ponca, il élabore une Ribolla Gialla de macération (Klin, Skin, Ribolla di Oslavia Riserva), héritée de la tradition d'Oslavia, ainsi que des blancs frais et nets (Friulano, Sauvignon, Pinot Grigio, Gmajne). Le style conjugue le meilleur des deux mondes, du vin orange au blanc fruité. Le domaine illustre la richesse stylistique d'Oslavia. Domaine polyvalent d'Oslavia, Primosic signe des Ribolla de macération et des blancs classiques soignés. C'est une belle porte d'entrée dans les vins du Collio. Servis selon les cuvées sur des viandes blanches et fromages pour les Ribolla de macération, sur des poissons pour les blancs classiques, les vins de Primosic illustrent toute la palette stylistique d'Oslavia, du vin orange au blanc frais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ribolla di Oslavia Riserva",
+        "Klin",
+        "Skin",
+        "Gmajne"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "oslavia",
+        "ribolla",
+        "orange"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-livon",
+      "nom": "Livon",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Dolegna del Collio",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Chardonnay",
+        "Sauvignon",
+        "Malvasia",
+        "Picolit"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC",
+        "Friuli Colli Orientali DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dolegna del Collio, Livon est une importante maison familiale présente sur le Collio et les Colli Orientali. Elle produit une gamme large et complexe — le Braide Alte (assemblage blanc ambitieux), le Ronc di Zorz (Friulano), des Chardonnay, Sauvignon et Picolit — dans un style soigné et régulier. Le vaste vignoble et la maîtrise œnologique en font une valeur reconnue de la région. Le Braide Alte, riche et aromatique, est sa cuvée la plus célèbre. Maison familiale de référence, Livon signe une gamme complète et soignée à cheval sur Collio et Colli Orientali, dont le Braide Alte est emblématique. Servis sur des poissons, des viandes blanches ou des fromages, les vins de Livon séduisent par leur ampleur et leur régularité ; le Braide Alte, riche et aromatique, compte parmi les blancs d'assemblage les plus connus du Friuli.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Braide Alte",
+        "Ronc di Zorz Friulano",
+        "TouRnimel",
+        "Solarco"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "dolegna",
+        "friulano",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-i-clivi",
+      "nom": "I Clivi",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Colli Orientali",
+      "commune": "Corno di Rosazzo",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Malvasia",
+        "Ribolla Gialla",
+        "Verduzzo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Colli Orientali DOC",
+        "Collio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Corno di Rosazzo, à la charnière du Collio et des Colli Orientali, I Clivi est un domaine en biologique fondé par Ferdinando Zanusso, réputé pour ses blancs de vieilles vignes. Sur des parcelles de 60 à 100 ans, en faibles rendements, il élabore des blancs purs et digestes — Friulano, Malvasia, Ribolla Gialla, Verduzzo — d'une grande fraîcheur (Galea, San Pietro). Le style, épuré et fidèle au terroir, privilégie la finesse et la buvabilité plutôt que la concentration. Le travail sur les vieilles vignes et la démarche bio en font une référence des amateurs. Domaine bio de vieilles vignes, I Clivi signe des blancs purs, frais et digestes, d'une grande fidélité au terroir. C'est une belle référence à la frontière du Collio et des Colli Orientali.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Galea",
+        "San Pietro",
+        "Ribolla Gialla RBL",
+        "Malvasia"
+      ],
+      "tags": [
+        "friuli",
+        "colli-orientali",
+        "corno",
+        "friulano",
+        "vieilles-vignes",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-friuli-prod-tenuta-luisa",
+      "nom": "Tenuta Luisa",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Isonzo",
+      "commune": "Mariano del Friuli",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Pinot Grigio",
+        "Merlot",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Isonzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mariano del Friuli, dans l'Isonzo, Tenuta Luisa est un domaine familial de quatre générations, à la charnière du Collio et de l'Isonzo. Il produit des blancs et des rouges bien faits — Friulano, Pinot Grigio, Sauvignon, Merlot — dans un style net et accessible, avec un bon rapport qualité-prix. Le travail sur les crus (I Ferretti, Desiderium) témoigne d'une attention au terroir. La régularité de la gamme en fait une valeur sûre de l'Isonzo. Valeur sûre de l'Isonzo, Tenuta Luisa signe des blancs et des rouges fiables et accessibles, représentatifs de la zone. Servis sur une cuisine variée, des poissons aux viandes, les vins de Tenuta Luisa séduisent par leur fiabilité et leur bon rapport qualité-prix, fruit du travail patient d'une famille installée depuis quatre générations.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Friulano",
+        "Pinot Grigio",
+        "I Ferretti Merlot",
+        "Desiderium"
+      ],
+      "tags": [
+        "friuli",
+        "isonzo",
+        "friulano",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-friuli-prod-nikolas-juretic",
+      "nom": "Nikolas Juretic",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "Cormons",
+      "pays": "Italie",
+      "cepages": [
+        "Friulano",
+        "Malvasia Istriana",
+        "Ribolla Gialla",
+        "Picolit",
+        "Pinot Bianco"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Collio DOC",
+        "Venezia Giulia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cormons, au cœur du Collio Goriziano, Nikolas Juretic est l'un des jeunes vignerons les plus prometteurs de la scène nature friulane. Après avoir grandi sur le Monte Quarin et passé douze ans chez Simonit & Sirch (les célèbres consultants en taille de la vigne), il a lancé son propre projet en 2018, en louant une petite cave dans le centre historique de Cormons pour vinifier les raisins familiaux, jusque-là vendus à d'autres.\n\nAvec son épouse Lelle et son père Robert, il cultive environ deux hectares de vieilles vignes (plus de 50 ans) sur la ponca, le sol marno-calcaire emblématique du Collio, en agriculture propre, sans produits chimiques et tout à la main. Il travaille les cépages historiques de la zone — Friulano, Malvasia Istriana, Ribolla Gialla — ainsi que le Picolit et le Pinot Bianco. Sa cuvée phare, le Mali, est un vin orange issu d'un assemblage Picolit-Pinot Bianco-Malvasia, macéré sept mois en grappes entières : un blanc de macération vibrant, aux notes florales et de fruits secs, qui exprime la tension et la profondeur de la ponca. Juretic est aussi le fondateur de Senza Meja (« sans frontières »), une association d'une vingtaine de jeunes artisans des deux côtés de la frontière italo-slovène, née d'un groupe de dégustation avec Ivana Radikon.\n\nVigneron artisan et figure montante du Collio, Nikolas Juretic signe des vins nature d'une belle énergie et fédère la nouvelle génération transfrontalière. C'est l'un des noms à suivre de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mali (orange)",
+        "Friulano",
+        "Malvasia",
+        "Ribolla Gialla"
+      ],
+      "tags": [
+        "friuli",
+        "collio",
+        "cormons",
+        "orange",
+        "nature",
+        "senza-meja",
+        "montant"
+      ],
+      "a_verifier": null,
+      "source": "florwine|natives|themorningclaret"
+    },
+    {
+      "id": "it-friuli-prod-blancjat",
+      "nom": "Blancjat",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "",
+      "pays": "Italie",
+      "cepages": [],
+      "couleurs": [],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Producteur distingué par Pat (rang 3), situé en Friuli (Collio). À ce jour, les informations publiques sur le domaine sont indisponibles : zone précise, cépages, cuvées et style restent à confirmer directement auprès du vigneron. Cette fiche sera complétée dès réception de ces éléments — aucune donnée n'a été inventée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "friuli",
+        "a-completer"
+      ],
+      "a_verifier": "Producteur ajouté par Pat — introuvable en recherche web. À préciser : zone/commune, cépages, cuvées, style. (NB : le domaine Franc Lizêr a une maison dite « Cjase Blancje » en Friuli Grave — lien possible avec « Blancjat » ?)",
+      "source": "ajout Pat"
+    },
+    {
+      "id": "it-friuli-prod-franc-lizer",
+      "nom": "Franc Lizêr",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Grave",
+      "commune": "Ca' Bianca (Friuli Grave)",
+      "pays": "Italie",
+      "cepages": [
+        "Glera",
+        "Pinot Grigio",
+        "Ribolla Gialla",
+        "Merlot",
+        "Pinot Nero",
+        "Traminer"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Friuli Grave DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Friuli Grave, la vaste plaine entre Alpes et Adriatique, Franc Lizêr est un projet singulier et résolument contemporain. Porté par la famille Spadotto (LEA Winery), il s'est structuré à partir de 2018 autour du borgo historique de Ca' Bianca — « Cjase Blancje » en frioulan —, une résidence du XVIIIe siècle jadis liée au grand entrepreneur friulan Jacopo Linussio.\n\nLa particularité de Franc Lizêr, dont le nom signifie « libre et léger » en dialecte frioulan, tient à sa spécialisation dans les vins désalcoolisés : à partir de 2021, le domaine a fait le pari d'une gamme sans alcool (effervescents et vins tranquilles), obtenue par osmose inverse et filtration membranaire à basse température, en maîtrisant toute la chaîne de la vigne au verre afin de préserver au mieux les arômes. Sur un domaine de 132 hectares, dont 105 de vignes certifiées bio, il cultive Glera, Pinot Grigio, Ribolla Gialla, Merlot, Pinot Nero et Traminer. Les vins, frais et aromatiques, revendiquent une logique d'« évolution » plutôt que de simple soustraction, pour accompagner les nouveaux modes de consommation. C'est l'un des projets pionniers du no/low alcool en Italie.\n\nAtypique dans le paysage friulan des grands blancs de terroir, Franc Lizêr explore une voie moderne et assumée, celle du vin désalcoolisé de qualité. C'est une curiosité à part, portée par une famille et une vision tournées vers l'avenir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Franc Lizêr White (désalcoolisé)",
+        "Franc Lizêr Rosso (désalcoolisé)",
+        "Spumante désalcoolisé"
+      ],
+      "tags": [
+        "friuli",
+        "grave",
+        "desalcoolise",
+        "no-low",
+        "bio",
+        "spadotto",
+        "atypique"
+      ],
+      "a_verifier": null,
+      "source": "franclizer.com|vino.com|tuscanysommelier"
+    },
+    {
+      "id": "it-friuli-prod-andrea-c",
+      "nom": "Andrea C.",
+      "type": "domaine",
+      "region": "Friuli-Venezia Giulia",
+      "sous_region": "Collio",
+      "commune": "",
+      "pays": "Italie",
+      "cepages": [],
+      "couleurs": [],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Producteur distingué par Pat (rang 3), situé en Friuli (Collio). À ce jour, les informations publiques sur le domaine sont indisponibles : zone précise, cépages, cuvées et style restent à confirmer directement auprès du vigneron. Cette fiche sera complétée dès réception de ces éléments — aucune donnée n'a été inventée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "friuli",
+        "a-completer"
+      ],
+      "a_verifier": "Producteur ajouté par Pat — nom abrégé, introuvable. À préciser : nom complet, zone/commune, cépages, cuvées.",
+      "source": "ajout Pat"
+    }
+  ]
+}

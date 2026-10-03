@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "bruxelles",
+  "region_label": "Bruxelles-Capitale",
+  "source_file": "producteurs_bruxelles_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 4,
+  "items": [
+    {
+      "id": "be-bruxelles-prod-vignoble-du-kauwberg",
+      "nom": "Vignoble du Kauwberg",
+      "type": "domaine",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Uccle et vallées du sud",
+      "commune": "Uccle",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Le plus ancien et le plus grand vignoble de la capitale, ce qui à Bruxelles veut dire environ 240 pieds. Marc De Brouwer, professeur de mathématiques, lance l'aventure en 1986 ; menacé par la pression immobilière en 2006, il replante trois cents ceps sur les coteaux du Kauwberg, espace vert classé du sud d'Uccle. Gérard Rivoalan a repris le domaine et signé sa première vendange en 2022.\n\nLa singularité tient à l'encépagement : une quarantaine de variétés sur 240 pieds, soit une poignée de ceps par cépage. C'est un conservatoire ampélographique autant qu'un vignoble, et c'est le seul du corpus belge à fonctionner ainsi. La production tourne autour de trois cents litres par an, vendangés collectivement entre amis. Année de création et liste des variétés restent à préciser.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bruxelles",
+        "clos-historique",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface exacte non publiée (240 à 300 pieds selon les années). Année de création : 1986 selon une source, 2009 selon une autre qui date la reprise à treize ans avant 2022 — à trancher. Liste des quarante variétés à documenter.",
+      "source": "bx1.be ; brusselslife.be ; vignes.be"
+    },
+    {
+      "id": "be-bruxelles-prod-vignoble-paola",
+      "nom": "Vignoble Paola",
+      "type": "domaine",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Uccle et vallées du sud",
+      "commune": "Uccle",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Projet coopératif lancé en 2022 à Uccle, avec deux cents pieds de vigne : le second vignoble de la commune et l'une des rares initiatives viticoles collectives de la Région bruxelloise.\n\nLe format — quelques centaines de pieds, un collectif d'habitants, une production symbolique — est celui de toute la viticulture bruxelloise, et il rapproche ces projets des clos confrériques wallons plus que des domaines commerciaux. La démarche relève de la reconquête d'un espace urbain et de la mémoire d'un passé viticole attesté dans les vallées de l'Ukkelbeek et du Geleytsbeek jusqu'aux hivers rigoureux du XVIIe siècle, pas d'un modèle économique. Uccle concentre trois des quatre vignobles bruxellois, grâce à son relief. Encépagement, structure juridique et premier millésime restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bruxelles",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, structure juridique de la coopérative et premier millésime à documenter.",
+      "source": "vino.be"
+    },
+    {
+      "id": "be-bruxelles-prod-vignoble-duccle-melkriek",
+      "nom": "Vignoble d'Uccle-Melkriek",
+      "type": "domaine",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Uccle et vallées du sud",
+      "commune": "Uccle",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vignoble recensé au lieu-dit Melkriek, dans le sud d'Uccle, à proximité de la forêt de Soignes.\n\nLe secteur est le mieux doté de la Région : Uccle est la commune la plus vallonnée de Bruxelles-Capitale, et les coteaux qui dominent les vallées de l'Ukkelbeek et du Geleytsbeek portaient de la vigne au Moyen Âge — la tradition veut que Charles Quint appréciait le vin ucclois après ses parties de chasse en forêt de Soignes. Attention toutefois : ce vignoble n'est mentionné que par un inventaire d'amateurs et n'apparaît dans aucune source récente. Surface, encépagement, année de plantation et existence actuelle restent entièrement à vérifier avant toute exploitation de la fiche, la Région ne disposant par ailleurs d'aucun recensement viticole officiel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bruxelles"
+      ],
+      "a_verifier": "Surface, encépagement, année de plantation et existence actuelle entièrement à vérifier — le site est recensé par un inventaire d'amateurs mais n'apparaît dans aucune source récente.",
+      "source": "vignes.be"
+    },
+    {
+      "id": "be-bruxelles-prod-clos-du-coovi",
+      "nom": "Clos du COOVI",
+      "type": "domaine",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Anderlecht et vallée de la Senne",
+      "commune": "Anderlecht",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Planté en 2024 sur le site du COOVI, l'école hôtelière néerlandophone d'Anderlecht, ce vignoble est présenté comme le plus grand vignoble urbain de Bruxelles.\n\nSa configuration en fait un cas unique du corpus. La parcelle occupe une cour verte enserrée sur trois côtés par les bâtiments du centre de formation — boulangerie, cuisine, brasserie, viticulture — le quatrième côté, exposé au sud, étant fermé par une élévation artificielle. C'est un clos au sens strict, mais dont l'enceinte est constituée de bâtiments et d'un talus plutôt que d'un mur de pierre, à l'inverse d'Opleeuw ou de Duras. L'effet thermique et l'abri au vent sont pourtant les mêmes.\n\nLa conduite est en permaculture et la vocation est pédagogique autant que productive : le vignoble sert de support d'enseignement aux futurs professionnels de l'horeca. Surface, encépagement et premier millésime restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bruxelles",
+        "clos-historique",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface exacte non publiée ; encépagement, premier millésime et statut pédagogique du vignoble à documenter.",
+      "source": "vino.be"
+    }
+  ]
+}

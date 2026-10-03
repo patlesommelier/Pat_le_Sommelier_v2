@@ -1,0 +1,508 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "abruzzo",
+  "region_label": "Abruzzo (Italie)",
+  "source_file": "terroirs_abruzzo.json",
+  "built_at": "2026-07-08",
+  "count": 18,
+  "items": [
+    {
+      "id": "it-abruzzo-terr-montepulciano-dabruzzo",
+      "nom": "Montepulciano d'Abruzzo",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "argilo-calcaires des collines, de la mer à la montagne",
+      "caracteristiques_rapides": "Le grand rouge de l'Abruzzo, l'un des plus célèbres d'Italie : Montepulciano fruité, épicé et profond, du vin de plaisir au grand vin de garde, sur toute la région.",
+      "notes_objectives": "Le Montepulciano d'Abruzzo est le grand rouge de la région et l'un des vins italiens les plus connus au monde, présent sur toutes les tables. Produit à partir du cépage Montepulciano — à ne pas confondre avec le Vino Nobile di Montepulciano toscan, à base de Sangiovese —, il couvre l'ensemble de l'Abruzzo, de la côte adriatique aux contreforts des Apennins.\n\nLe cépage, tardif et coloré, donne des rouges au fruité généreux (mûre, prune, cerise noire), aux notes d'épices et de réglisse, à la trame souple et charnue. L'appellation embrasse une immense diversité de styles : du Montepulciano simple, fruité et gouleyant, vinifié en cuve pour une consommation rapide, au grand vin de garde, issu de faibles rendements et élevé en bois, dense, structuré et capable de vieillir dix ans et plus. Sur les sols argilo-calcaires des collines, le Montepulciano exprime aussi les nuances des différents terroirs, des zones chaudes de la côte aux secteurs frais d'altitude. Sa polyvalence, son fruité et son excellent rapport qualité-prix en ont fait un ambassadeur mondial du vin italien. C'est le compagnon idéal de l'agneau (roi de la cuisine abruzzaise), des arrosticini, des pâtes au ragù et des fromages.\n\nGrand rouge emblématique de l'Abruzzo, le Montepulciano d'Abruzzo séduit par son fruité généreux et sa polyvalence, du vin de plaisir au grand vin de garde. C'est l'un des rouges italiens les plus populaires au monde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "montepulciano",
+        "rouge",
+        "doc",
+        "emblematique"
+      ],
+      "source": "wine-searcher|decanter|italywinelist"
+    },
+    {
+      "id": "it-abruzzo-terr-montepulciano-dabruzzo-colline-teramane",
+      "nom": "Montepulciano d'Abruzzo Colline Teramane",
+      "type": "appellation (DOCG)",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "argilo-calcaires des collines de Teramo (Gran Sasso/Adriatique)",
+      "caracteristiques_rapides": "La seule zone d'élite du Montepulciano, promue DOCG : rouges concentrés, structurés et de garde, sur les collines de Teramo, entre le Gran Sasso et l'Adriatique.",
+      "notes_objectives": "Le Montepulciano d'Abruzzo Colline Teramane est la seule appellation d'élite de l'Abruzzo, la seule DOCG dédiée au Montepulciano et le sommet qualitatif de la région. Elle couvre les collines de la province de Teramo, au nord de l'Abruzzo, entre le massif du Gran Sasso — le plus haut des Apennins, coiffé de son glacier — et la mer Adriatique.\n\nCe positionnement unique, entre haute montagne et mer, crée un microclimat idéal : les influences maritimes adoucissent le climat tandis que l'air frais descendu du Gran Sasso apporte de fortes amplitudes thermiques, gages de fraîcheur et de finesse aromatique. Sur des sols argilo-calcaires, à 200-450 mètres, le Montepulciano y donne des rouges plus concentrés, structurés et aptes à la garde que dans le reste de la région, aux arômes de fruits noirs, de tabac, de fer et d'épices, portés par des tanins fermes qui s'intègrent sur quatre à huit ans. Le cahier des charges, plus strict (rendements limités, élevage prolongé, dont une Riserva), garantit une qualité supérieure. Des domaines comme Illuminati (Zanna), Emidio Pepe, Nicodemi ou San Lorenzo en sont les fers de lance. La conduite traditionnelle en pergola abruzzaise (tendone), lorsqu'elle est menée en faibles rendements, donne ici de très beaux résultats.\n\nSeule zone d'élite du Montepulciano et unique DOCG rouge de l'Abruzzo, les Colline Teramane donnent des rouges concentrés et de garde, entre le Gran Sasso et l'Adriatique. C'est le sommet qualitatif du grand cépage abruzzais.\n\nLa promotion des Colline Teramane au rang de DOCG, en 2003, a été un événement majeur pour l'Abruzzo : elle a consacré l'existence d'une zone d'élite au sein d'une région longtemps réduite au volume, et donné au Montepulciano ses lettres de noblesse. Le débat reste vif entre les tenants d'une viticulture moderne, en cordon bas et faibles rendements, et les défenseurs de la pergola traditionnelle, qui protège les raisins du soleil intense ; l'une comme l'autre, bien menées, donnent ici de grands vins. Servis sur l'agneau, les arrosticini (brochettes de mouton emblématiques de la région), le gibier ou des fromages affinés comme le pecorino, les Montepulciano des Colline Teramane déploient puissance et profondeur, et se patinent sur une décennie et plus, développant des arômes tertiaires de cuir, de tabac et de sous-bois. La proximité du glacier du Calderone, le plus méridional d'Europe, et de la mer confère à ce terroir une identité unique en Italie. C'est cette dualité montagne-mer qui fait la signature des Colline Teramane et explique leur statut de sommet qualitatif de l'Abruzzo.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano",
+        "docg",
+        "garde"
+      ],
+      "source": "decanter|wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-trebbiano-dabruzzo",
+      "nom": "Trebbiano d'Abruzzo",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Trebbiano Abruzzese",
+        "Trebbiano Toscano"
+      ],
+      "altitude": "~100-450 m",
+      "sols": "argilo-calcaires des collines abruzzaises",
+      "caracteristiques_rapides": "Le grand blanc de l'Abruzzo : souvent simple, mais capable, chez les meilleurs (Valentini, Tiberio, Amorotti), d'une texture, d'une salinité et d'une longévité rares.",
+      "notes_objectives": "Le Trebbiano d'Abruzzo est le grand blanc de la région, longtemps sous-estimé mais capable, chez les meilleurs producteurs, de figurer parmi les plus grands blancs d'Italie. Il souffre d'une confusion : le nom Trebbiano recouvre plusieurs cépages, et le meilleur — le Trebbiano Abruzzese — n'a rien à voir avec le banal Trebbiano Toscano souvent planté ailleurs.\n\nLa plupart des Trebbiano d'Abruzzo sont des blancs simples, frais et légers, destinés à une consommation rapide. Mais entre les mains de vignerons d'exception — Valentini (le « pape » du cépage), Tiberio, Amorotti —, le vrai Trebbiano Abruzzese, issu de vieilles vignes et de faibles rendements, donne des blancs d'une texture cireuse, d'une salinité et d'une complexité remarquables, aux arômes de citron confit, d'amande, de camomille et de cire d'abeille, capables de vieillir une décennie et plus. Sur les sols argilo-calcaires des collines, ce cépage révèle alors une profondeur insoupçonnée. La reconnaissance croissante de ces grands Trebbiano a redoré le blason d'une appellation longtemps méprisée. C'est un accord idéal avec les poissons et fruits de mer de l'Adriatique.\n\nGrand blanc de l'Abruzzo, le Trebbiano d'Abruzzo est souvent simple, mais capable, chez les meilleurs, d'une texture, d'une salinité et d'une longévité rares. C'est l'un des blancs italiens les plus sous-estimés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "trebbiano",
+        "blanc",
+        "doc",
+        "garde"
+      ],
+      "source": "decanter|gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-terr-cerasuolo-dabruzzo",
+      "nom": "Cerasuolo d'Abruzzo",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~100-450 m",
+      "sols": "argilo-calcaires ; courte macération du Montepulciano",
+      "caracteristiques_rapides": "Le rosé de l'Abruzzo, promu DOC autonome : Montepulciano macéré quelques heures, cerise soutenue, vineux et structuré, l'un des rosés les plus longévifs du monde.",
+      "notes_objectives": "Le Cerasuolo d'Abruzzo est le rosé de la région, élevé au rang de DOC autonome en 2010 — une reconnaissance rare qui souligne son importance et sa singularité. Son nom vient de « cerasa » (cerise), en référence à sa robe d'un rose cerise soutenu, plus intense que les rosés pâles à la mode.\n\nIl est élaboré à partir du seul Montepulciano, par une courte macération du jus sur les peaux (de quelques heures à une demi-journée) avant fermentation, ce qui lui donne sa couleur, sa structure et son fruité. Le résultat n'est pas un rosé léger et anodin, mais un vin vineux, charnu et savoureux, à mi-chemin entre le rosé et le rouge léger, aux arômes de cerise, de fraise des bois, de grenade et d'amande, avec une belle acidité et une légère amertume noble en finale. Servi frais (10-12°C), il accompagne aussi bien les poissons et les charcuteries que les plats de pâtes ou une pizza. Fait remarquable, les meilleurs Cerasuolo (Valentini, Cataldi Madonna, Tiberio, Torre dei Beati) peuvent vieillir plusieurs années sans perdre leur fraîcheur, ce qui en fait l'un des rosés les plus longévifs du monde. Très populaire en Abruzzo, il gagne peu à peu les tables internationales.\n\nRosé de garde emblématique de l'Abruzzo, le Cerasuolo est un Montepulciano brièvement macéré, vineux, charnu et savoureux. Promu DOC autonome, c'est l'un des rosés les plus structurés et les plus longévifs du monde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "cerasuolo",
+        "rose",
+        "montepulciano",
+        "doc"
+      ],
+      "source": "italywinelist|decanter"
+    },
+    {
+      "id": "it-abruzzo-terr-abruzzo-pecorino",
+      "nom": "Abruzzo Pecorino",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pecorino"
+      ],
+      "altitude": "~150-600 m",
+      "sols": "argilo-calcaires, souvent en altitude",
+      "caracteristiques_rapides": "Le cépage blanc star du renouveau abruzzais : Pecorino vif et salin, aux notes de sauge, de pêche et d'agrumes, brillant en altitude ; sauvé de l'oubli.",
+      "notes_objectives": "Le Pecorino est le cépage blanc star du renouveau de l'Abruzzo, une variété autochtone sauvée de l'oubli qui a connu un succès spectaculaire depuis les années 2000. Son nom — qui évoque le mouton — viendrait du goût des brebis pour ses raisins précoces, sur les routes de transhumance des Apennins.\n\nQuasi disparu au XXe siècle, le Pecorino a été redécouvert et replanté, notamment sous l'impulsion de vignerons comme Luigi Cataldi Madonna. Le cépage, à l'acidité vive et au potentiel alcoolique élevé, donne des blancs structurés, salins et aromatiques, aux notes de sauge, de thym, de pêche blanche, de pomme verte et d'agrumes, avec une belle minéralité. Il s'exprime particulièrement bien en altitude et à l'abri du soleil direct, ce qui préserve sa fraîcheur. Contrairement à beaucoup de blancs méridionaux, les meilleurs Pecorino ont une réelle aptitude à la garde et gagnent en complexité (Tiberio, Cataldi Madonna, Feudo Antico). Sa réussite a dépassé l'Abruzzo, gagnant les Marches voisines. C'est un accord idéal avec les poissons et fruits de mer de l'Adriatique. Le Pecorino incarne le renouveau et l'ambition retrouvée des blancs abruzzais.\n\nCépage blanc star du renouveau abruzzais, le Pecorino donne des blancs vifs, salins et aromatiques, brillants en altitude et capables de garde. Sauvé de l'oubli, il est devenu l'un des grands blancs autochtones d'Italie centrale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "pecorino",
+        "blanc",
+        "autochtone",
+        "altitude",
+        "doc"
+      ],
+      "source": "decanter|italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-terr-tullum-terre-tollesi",
+      "nom": "Tullum (Terre Tollesi)",
+      "type": "appellation (DOCG)",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pecorino",
+        "Passerina",
+        "Montepulciano"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "argilo-calcaires autour de Tollo (Chieti)",
+      "caracteristiques_rapides": "L'une des deux DOCG d'Abruzzo, autour du village de Tollo : Pecorino, Passerina et Montepulciano de terroir, la plus petite et intime appellation de la région.",
+      "notes_objectives": "Tullum, ou Terre Tollesi, est l'une des deux DOCG de l'Abruzzo et sans doute la plus originale : c'est l'une des plus petites appellations d'origine contrôlée et garantie d'Italie, entièrement contenue dans le territoire d'une seule commune, le village de Tollo, dans la province de Chieti. Cette singularité en fait une appellation intime, presque villageoise, à l'échelle rare en Italie.\n\nSur les sols argilo-calcaires des collines qui entourent Tollo, à faible altitude mais bien ventilées, la DOCG valorise à la fois le Montepulciano en rouge et, surtout, les cépages blancs autochtones qui ont fait le renouveau de l'Abruzzo : le Pecorino, vif, salin et complexe, et la Passerina, plus florale et légère. Le Tullum se décline ainsi en rouge (Montepulciano de belle structure), en blanc (Pecorino, Passerina) et même en spumante. La promotion de ce petit terroir au rang de DOCG, portée notamment par la coopérative Cantina Tollo et par le domaine Feudo Antico (pionnier de l'appellation, en bio), témoigne d'une volonté de valoriser un cru identitaire et la qualité des cépages locaux. C'est aussi une reconnaissance du potentiel du Chietino, longtemps réduit au volume, et de sa capacité à produire des blancs et des rouges de terroir. Tullum incarne ainsi la montée en gamme et l'affirmation identitaire du sud de l'Abruzzo.\n\nMinuscule DOCG contenue dans la seule commune de Tollo, Tullum valorise le Pecorino, la Passerina et le Montepulciano de terroir. C'est l'une des appellations les plus intimes d'Italie et un symbole de la montée en gamme du Chietino.\n\nL'histoire de Tullum illustre un mouvement de fond en Abruzzo : le passage d'une logique de quantité à une logique de qualité et d'identité. Tollo, longtemps synonyme de coopération et de volume, a su faire reconnaître la valeur de son terroir en obtenant, en 2019, le statut de DOCG — une consécration rare pour une zone aussi restreinte. Ce pari collectif, porté par la Cantina Tollo (l'une des meilleures coopératives d'Italie) et par des domaines comme Feudo Antico, montre qu'un territoire peut se hisser vers l'excellence sans renier ses racines populaires. Servis sur des poissons et fruits de mer de l'Adriatique pour les blancs, sur l'agneau et les viandes pour le Montepulciano, les Tullum séduisent par leur fraîcheur et leur ancrage territorial. La petite taille de l'appellation garantit une attention particulière à chaque parcelle. En valorisant le Pecorino et la Passerina autant que le Montepulciano, Tullum incarne aussi le renouveau des blancs autochtones qui a transformé l'image de l'Abruzzo, et fait figure de modèle pour d'autres crus de la région en quête de reconnaissance.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "tullum",
+        "tollo",
+        "pecorino",
+        "montepulciano",
+        "docg"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-controguerra",
+      "nom": "Controguerra",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Chardonnay",
+        "Cabernet",
+        "Merlot"
+      ],
+      "altitude": "~150-350 m",
+      "sols": "argilo-calcaires de l'extrême nord de l'Abruzzo",
+      "caracteristiques_rapides": "DOC versatile de l'extrême nord (Colline Teramane) : ouverte aux cépages internationaux et aux assemblages, du rouge au passito, singularité de l'Abruzzo.",
+      "notes_objectives": "Controguerra est une DOC singulière de l'extrême nord de l'Abruzzo, dans la province de Teramo, à la frontière des Marches. Sa particularité est d'être l'une des rares appellations abruzzaises ouvertes aux cépages internationaux et aux assemblages, offrant une grande liberté aux producteurs. Sur les collines argilo-calcaires du secteur, elle autorise, aux côtés du Montepulciano et du Trebbiano, des cépages comme le Chardonnay, le Cabernet Sauvignon, le Merlot ou la Passerina, en rouge, blanc, spumante et même passito. Cette versatilité en fait un laboratoire d'expérimentation dans une région dominée par les cépages autochtones. Des domaines comme Illuminati ou Orlandi Contucci Ponno y produisent des vins variés et originaux. Controguerra illustre la diversité et l'ouverture du nord de l'Abruzzo, à la croisée des influences abruzzaises et marchigianes.\n\nDOC versatile de l'extrême nord de l'Abruzzo, Controguerra est ouverte aux cépages internationaux et aux assemblages. C'est une singularité expérimentale dans une région de cépages autochtones.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "controguerra",
+        "international",
+        "assemblage",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-terre-di-casauria",
+      "nom": "Terre di Casauria",
+      "type": "sottozona",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "argilo-calcaires de la vallée du Pescara (abbaye de Casauria)",
+      "caracteristiques_rapides": "Sous-zone du Montepulciano d'Abruzzo dans la vallée du Pescara, autour de l'abbaye de San Clemente a Casauria : Montepulciano de belle structure et de garde.",
+      "notes_objectives": "Terre di Casauria est l'une des sous-zones officielles du Montepulciano d'Abruzzo, dans la vallée du fleuve Pescara, au centre de la région. Elle tire son nom de la célèbre abbaye bénédictine de San Clemente a Casauria, joyau roman fondé au IXe siècle, qui témoigne de l'ancienneté de la culture de la vigne dans ce secteur.\n\nSur les sols argilo-calcaires des collines qui bordent la vallée du Pescara, à bonne altitude et bien ventilées, le Montepulciano y donne des rouges de belle structure, profonds et aptes à la garde, considérés comme parmi les plus qualitatifs de la région. La reconnaissance de cette sous-zone (« sottozona ») vise à distinguer un terroir de caractère au sein de la vaste appellation Montepulciano d'Abruzzo. Le secteur bénéficie d'un microclimat favorable, entre les influences des Apennins et de la vallée. Terre di Casauria illustre la volonté de hiérarchiser le vaste vignoble abruzzais et de mettre en avant les meilleurs terroirs du Montepulciano.\n\nSous-zone du Montepulciano d'Abruzzo dans la vallée du Pescara, autour de l'abbaye de Casauria, Terre di Casauria donne des rouges structurés et de garde. C'est l'un des terroirs de caractère du grand cépage abruzzais. La vallée du Pescara, axe de communication majeur depuis l'Antiquité, a toujours été une terre de vigne, et l'abbaye de Casauria en est le témoin le plus prestigieux. Servis sur l'agneau, le gibier ou des fromages affinés, les Montepulciano de Casauria se patinent sur plusieurs années. La reconnaissance de cette sous-zone, encore méconnue du grand public, participe de la volonté de faire émerger les meilleurs terroirs du Montepulciano et d'offrir aux amateurs des repères plus précis au sein de la vaste appellation régionale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "casauria",
+        "montepulciano",
+        "sottozona"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-terre-dei-vestini",
+      "nom": "Terre dei Vestini",
+      "type": "sottozona",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "argilo-calcaires des collines de Loreto Aprutino",
+      "caracteristiques_rapides": "Sous-zone du Montepulciano autour de Loreto Aprutino, terre de Valentini et de l'école bio (Torre dei Beati, De Fermo) : Montepulciano élégants et racés.",
+      "notes_objectives": "Terre dei Vestini est l'une des sous-zones les plus prestigieuses du Montepulciano d'Abruzzo, dans les collines de la province de Pescara autour de Loreto Aprutino. Son nom évoque les Vestins, l'un des peuples italiques qui habitaient la région dans l'Antiquité.\n\nC'est ici, sur les sols argilo-calcaires de Loreto Aprutino, que se trouve le légendaire domaine Valentini, ainsi que toute une école de vignerons d'exception qui s'en réclament — Torre dei Beati, De Fermo, Chiara Ciavolich, Amorotti —, souvent en bio ou biodynamie. Le Montepulciano y donne des rouges d'une élégance et d'une race particulières, alliant profondeur et fraîcheur, ainsi que de grands Trebbiano et Cerasuolo. La reconnaissance de cette sous-zone consacre l'un des terroirs les plus qualitatifs de l'Abruzzo, berceau d'une viticulture d'auteur exemplaire. Terre dei Vestini est ainsi indissociable de l'excellence de Loreto Aprutino et de l'influence de Valentini sur toute une génération.\n\nSous-zone prestigieuse du Montepulciano autour de Loreto Aprutino, Terre dei Vestini est le berceau de Valentini et de l'école bio abruzzaise. Elle donne des Montepulciano élégants et racés, parmi les plus fins de la région. Le rayonnement de Valentini, dont l'exemple a essaimé sur toute une génération de vignerons de Loreto Aprutino, fait de Terre dei Vestini un terroir à part, presque mythique pour les amateurs. Servis sur l'agneau, le gibier ou des fromages pour les rouges, sur des poissons pour le Trebbiano, les vins de la zone séduisent par leur élégance et leur fraîcheur. La forte présence du bio et de la biodynamie y témoigne d'une culture du respect du terroir, qui fait de cette sous-zone l'une des plus qualitatives et des plus admirées de tout l'Abruzzo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "loreto-aprutino",
+        "vestini",
+        "montepulciano",
+        "sottozona"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-alto-tirino-ofena",
+      "nom": "Alto Tirino (Ofena)",
+      "type": "sottozona",
+      "region": "Abruzzo",
+      "sous_region": "L'Aquila",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Pecorino"
+      ],
+      "altitude": "~350-600 m",
+      "sols": "sols d'altitude du bassin d'Ofena (Aquilano)",
+      "caracteristiques_rapides": "Terroir d'altitude du haut Tirino, dont le bassin d'Ofena, « le four de l'Abruzzo » : jours chauds, nuits froides, Montepulciano racés et grands Pecorino.",
+      "notes_objectives": "Alto Tirino est un terroir d'altitude au cœur de la province de L'Aquila, dans la haute vallée du fleuve Tirino, dominée par les massifs du Gran Sasso et de la Majella. Il comprend notamment le bassin d'Ofena, surnommé « le four de l'Abruzzo » (il forno d'Abruzzo).\n\nCe surnom pittoresque décrit un microclimat extrême : le bassin, encaissé et exposé, connaît des chaleurs estivales intenses le jour, mais des nuits très fraîches grâce à l'altitude (350-600 m) et à la proximité des sommets enneigés. Ces fortes amplitudes thermiques sont idéales pour une maturation lente et complète, préservant acidité et arômes. Sur des sols d'altitude, le Montepulciano y gagne race et fraîcheur, et le Pecorino y trouve un terroir de prédilection. C'est le fief du domaine Cataldi Madonna, pionnier du Pecorino et référence du secteur. Alto Tirino illustre le potentiel des terroirs d'altitude de l'intérieur abruzzais, à contre-courant de l'image solaire de la région, pour des vins d'une belle tension.\n\nTerroir d'altitude de l'Aquilano, dont le bassin d'Ofena (« le four de l'Abruzzo »), Alto Tirino conjugue jours chauds et nuits froides. Il donne des Montepulciano racés et de grands Pecorino, expression de l'Abruzzo montagnard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "l-aquila",
+        "ofena",
+        "alto-tirino",
+        "montepulciano",
+        "pecorino",
+        "altitude",
+        "sottozona"
+      ],
+      "source": "italywinelist"
+    },
+    {
+      "id": "it-abruzzo-terr-villamagna",
+      "nom": "Villamagna",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "argilo-calcaires autour de Villamagna (Chieti)",
+      "caracteristiques_rapides": "Petite DOC du Chietino dédiée au Montepulciano, autour de Villamagna : rouges de terroir, appellation confidentielle valorisant un cru historique.",
+      "notes_objectives": "Villamagna est une petite DOC de la province de Chieti, dédiée au Montepulciano, autour du village éponyme sur les collines qui dominent la vallée du fleuve Foro. C'est l'une des appellations les plus confidentielles de l'Abruzzo, née de la volonté de valoriser un cru historique.\n\nSur les sols argilo-calcaires de ces collines bien exposées, le Montepulciano donne des rouges de terroir, structurés et de belle facture, que le cahier des charges (rendements limités, élevage) cherche à distinguer de la production courante. La reconnaissance de cette DOC, portée par une poignée de producteurs locaux, témoigne de la volonté croissante en Abruzzo de hiérarchiser les terroirs et de mettre en avant les meilleurs crus du Montepulciano. Villamagna reste une appellation à petite échelle, presque intime, dont la production confidentielle est surtout connue des amateurs. Elle illustre le mouvement de valorisation des crus historiques du Chietino.\n\nPetite DOC confidentielle du Chietino dédiée au Montepulciano, Villamagna valorise un cru historique en rouges de terroir et de garde. C'est l'une des appellations les plus intimes de l'Abruzzo. La reconnaissance d'une DOC aussi confidentielle, contenue dans un petit secteur du Chietino, illustre la volonté croissante en Abruzzo de valoriser les crus historiques et de hiérarchiser un vignoble longtemps indistinct. Servis sur l'agneau, le gibier ou des fromages affinés, les Montepulciano de Villamagna se patinent sur plusieurs années. Portée par une poignée de producteurs passionnés, l'appellation reste un secret d'initiés, représentatif du mouvement de montée en gamme qui anime aujourd'hui tout le sud de l'Abruzzo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "villamagna",
+        "montepulciano",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-abruzzo-passerina",
+      "nom": "Abruzzo Passerina",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Passerina"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines abruzzaises",
+      "caracteristiques_rapides": "Cépage blanc autochtone à l'acidité vive : la Passerina donne des blancs frais et floraux, secs ou en spumante, aux côtés du Pecorino dans le renouveau blanc.",
+      "notes_objectives": "La Passerina est un cépage blanc autochtone de l'Abruzzo (et des Marches voisines), qui participe, aux côtés du Pecorino, au renouveau des blancs de la région. Son nom évoque les passereaux (« passeri »), friands de ses raisins. Cépage à l'acidité vive et à la maturation régulière, la Passerina donne des blancs frais, légers et floraux, aux arômes d'agrumes, de fleurs blanches et de pomme verte, plus délicats et moins structurés que le Pecorino. Sa fraîcheur en fait un vin de plaisir idéal à l'apéritif ou sur les poissons, ainsi qu'une bonne base de spumante. Sur les sols argilo-calcaires de l'Abruzzo, elle exprime un profil méditerranéen et désaltérant. Sa valorisation, notamment dans la DOCG Tullum et sous la mention Abruzzo Passerina, participe de l'affirmation des cépages blancs autochtones. C'est une belle porte d'entrée, fraîche et accessible, dans les blancs d'Abruzzo.\n\nCépage blanc autochtone de l'Abruzzo, la Passerina donne des blancs frais, floraux et légers, secs ou en spumante. Elle accompagne le Pecorino dans le renouveau des blancs autochtones de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "passerina",
+        "blanc",
+        "autochtone",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-abruzzo-cococciola",
+      "nom": "Abruzzo Cococciola",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cococciola"
+      ],
+      "altitude": "~100-350 m",
+      "sols": "argilo-calcaires du Chietino",
+      "caracteristiques_rapides": "Cépage blanc rare surtout cultivé dans le Chietino : la Cococciola donne des blancs vifs, salins et agrumés, souvent en spumante, curiosité autochtone de l'Abruzzo.",
+      "notes_objectives": "La Cococciola est un cépage blanc autochtone de l'Abruzzo, cultivé principalement dans la province de Chieti, où il connaît un regain d'intérêt. Longtemps utilisé comme cépage d'appoint ou pour la distillation, il s'affirme aujourd'hui comme un blanc de caractère, reconnu par sa propre mention d'appellation.\n\nCépage productif et à l'acidité vive, la Cococciola donne des blancs frais, légers et désaltérants, aux arômes d'agrumes, de fleurs blanches et d'herbes, avec une belle salinité et parfois une nuance fumée. Sa forte acidité en fait aussi une excellente base de spumante metodo classico ou charmat. Sur les sols argilo-calcaires du Chietino, la Cococciola exprime un profil vif et méditerranéen, idéal sur les poissons et fruits de mer de l'Adriatique. Sa valorisation, portée notamment par des coopératives comme Cantina Frentana et par des domaines du Chietino, participe du renouveau des blancs autochtones abruzzais, aux côtés du Pecorino et de la Passerina. La Cococciola illustre la richesse et la diversité du patrimoine blanc de l'Abruzzo, longtemps méconnu.\n\nCépage blanc autochtone du Chietino, la Cococciola donne des blancs vifs, salins et agrumés, souvent en spumante. C'est l'une des belles curiosités du renouveau des blancs autochtones de l'Abruzzo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "cococciola",
+        "blanc",
+        "autochtone",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-abruzzo-montonico",
+      "nom": "Abruzzo Montonico",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montonico"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "argilo-calcaires du Teramano (Bisenti)",
+      "caracteristiques_rapides": "Cépage blanc autochtone rarissime du Teramano : le Montonico donne des blancs vifs et légers, autrefois vins de garde paysans, aujourd'hui préservé par quelques domaines.",
+      "notes_objectives": "Le Montonico est un cépage blanc autochtone rarissime de l'Abruzzo, cultivé presque exclusivement dans le Teramano, autour du village de Bisenti. Sa préservation, portée par quelques rares vignerons, en fait une curiosité ampélographique précieuse, désormais reconnue par une mention d'appellation.\n\nCépage vigoureux et à l'acidité élevée, le Montonico donne des blancs vifs, légers et frais, aux arômes floraux et d'agrumes, souvent avec une belle salinité. Historiquement, il servait à produire des vins de garde paysans, conservés parfois plusieurs années, ainsi que des vins doux et des spumante grâce à sa forte acidité. Longtemps menacé de disparition, il est aujourd'hui défendu par des domaines comme Faraone, qui en ont fait un marqueur identitaire. Sur les sols argilo-calcaires du Teramano, le Montonico exprime une fraîcheur rare et un caractère authentique. La reconnaissance de ce cépage participe du mouvement de valorisation du riche patrimoine ampélographique de l'Abruzzo, aux côtés du Pecorino, de la Passerina et de la Cococciola.\n\nCépage blanc autochtone rarissime du Teramano, le Montonico donne des blancs vifs, frais et salins, autrefois vins de garde paysans. C'est une curiosité précieuse du patrimoine ampélographique abruzzais.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montonico",
+        "blanc",
+        "autochtone",
+        "rare",
+        "doc"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-terr-ortona",
+      "nom": "Ortona",
+      "type": "appellation (DOC)",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Trebbiano Abruzzese"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "argilo-calcaires et sols côtiers d'Ortona (Chieti)",
+      "caracteristiques_rapides": "DOC de la côte du Chietino, autour d'Ortona : Montepulciano et blancs de terroir, appellation récente valorisant un secteur historique proche de l'Adriatique.",
+      "notes_objectives": "Ortona est une DOC récente de la province de Chieti, sur la côte adriatique autour de la ville portuaire d'Ortona. Elle valorise le Montepulciano et les cépages abruzzais sur un secteur à l'histoire viticole ancienne, longtemps noyé dans la production de masse du Chietino. Sur les sols argilo-calcaires et les terrasses proches de la mer, sous un climat maritime, l'appellation produit des Montepulciano de terroir et des blancs (Trebbiano, Pecorino). La création de cette DOC, portée par des producteurs locaux, participe du mouvement de hiérarchisation et de valorisation des terroirs du Chietino, premier bassin de production de l'Abruzzo. Ortona illustre la volonté de donner une identité à des secteurs côtiers historiques, longtemps anonymes. C'est une appellation confidentielle, représentative du potentiel qualitatif de la côte chietine.\n\nDOC récente de la côte du Chietino autour d'Ortona, elle valorise le Montepulciano et les blancs de terroir. C'est une appellation confidentielle qui affirme l'identité d'un secteur côtier historique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "ortona",
+        "montepulciano",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-terre-dei-peligni",
+      "nom": "Terre dei Peligni",
+      "type": "sottozona",
+      "region": "Abruzzo",
+      "sous_region": "L'Aquila",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~350-700 m",
+      "sols": "sols d'altitude de la vallée Peligna (Prezza, Vittorito)",
+      "caracteristiques_rapides": "Sous-zone d'altitude du Montepulciano dans la vallée Peligna (Prezza, Vittorito) : climat continental, Montepulciano traditionnels et de garde (Praesidium).",
+      "notes_objectives": "Terre dei Peligni est une sous-zone d'altitude du Montepulciano d'Abruzzo, dans la vallée Peligna au cœur de la province de L'Aquila. Son nom évoque les Peligni, peuple italique de l'Antiquité qui habitait cette vallée intérieure entourée par les massifs des Apennins.\n\nLoin des collines côtières, ce terroir montagneux (autour de Prezza, Vittorito, dans la vallée du fleuve Sagittario et de l'Aterno) connaît un climat continental marqué : nuits fraîches, fortes amplitudes thermiques, altitude élevée (350-700 m). Le Montepulciano y donne des rouges d'une fraîcheur et d'une finesse particulières, traditionnels et de très longue garde, à l'image de ceux du domaine culte Praesidium (Prezza). La conduite en pergola et les vinifications à l'ancienne y perpétuent une viticulture ancestrale. La reconnaissance de cette sous-zone consacre un terroir d'altitude à part, où le Montepulciano révèle une élégance et une capacité de vieillissement rares, à contre-courant des vins solaires de la côte. Terre dei Peligni illustre le potentiel de l'intérieur montagneux abruzzais.\n\nSous-zone d'altitude du Montepulciano dans la vallée Peligna (Prezza, Vittorito), Terre dei Peligni donne des rouges frais, fins et de très longue garde. C'est un terroir montagnard à part, illustré par Praesidium.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "l-aquila",
+        "peligna",
+        "prezza",
+        "montepulciano",
+        "altitude",
+        "sottozona"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-terr-terre-teatine-teate",
+      "nom": "Terre Teatine (Teate)",
+      "type": "sottozona",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Pecorino"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Chieti",
+      "caracteristiques_rapides": "Sous-zone du Montepulciano autour de Chieti (Teate) : cœur historique du Chietino, gros bassin de production, avec de belles expressions du Montepulciano.",
+      "notes_objectives": "Terre Teatine est une sous-zone du Montepulciano d'Abruzzo autour de la ville de Chieti, l'antique Teate, chef-lieu de la province la plus vaste et la plus productive de la région. Cœur historique du Chietino, ce secteur est le premier bassin de production de l'Abruzzo. Sur les collines argilo-calcaires qui entourent Chieti, le Montepulciano y donne des rouges représentatifs du cépage, du vin de volume aux belles expressions de terroir. La reconnaissance de cette sous-zone vise à distinguer, au sein de l'immense production du Chietino, les vins d'une origine plus précise. Le Pecorino et les autres blancs y sont aussi cultivés. Terre Teatine illustre le poids du Chietino dans l'économie viticole abruzzaise et la volonté de valoriser des sous-zones au sein de la vaste appellation Montepulciano d'Abruzzo.\n\nSous-zone du Montepulciano autour de Chieti (l'antique Teate), cœur productif de l'Abruzzo, Terre Teatine donne des rouges représentatifs du cépage. C'est le grand bassin historique du Chietino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "teate",
+        "montepulciano",
+        "sottozona"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-terr-terre-di-chieti",
+      "nom": "Terre di Chieti",
+      "type": "appellation (IGT)",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Cococciola",
+        "Chardonnay"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols variés de la province de Chieti",
+      "caracteristiques_rapides": "La grande IGT du Chietino, premier bassin de production d'Abruzzo : cadre souple pour tous cépages, du vin de volume aux cuvées d'auteur, souvent en Pecorino.",
+      "notes_objectives": "Terre di Chieti est la grande IGT de la province de Chieti, premier bassin de production viticole de l'Abruzzo et l'un des plus vastes d'Italie. Créée en 1995, cette indication géographique offre un cadre souple qui couvre une immense diversité de vins. Elle rassemble tous les cépages de la région — Montepulciano, Trebbiano, Pecorino, Cococciola, Passerina — ainsi que des cépages internationaux (Chardonnay, Merlot), en rouge, blanc et rosé, du vin de volume aux cuvées d'auteur. C'est notamment sous cette IGT que sont commercialisés de nombreux Pecorino et Montepulciano de qualité, hors du cadre plus strict des DOC. Terre di Chieti illustre le poids économique du Chietino et sa capacité à produire aussi bien des vins accessibles et bien faits que des cuvées ambitieuses. C'est une bannière transversale, souple et productive, du vin d'Abruzzo.\n\nGrande IGT de la province de Chieti, premier bassin de l'Abruzzo, Terre di Chieti offre un cadre souple pour tous cépages, du volume à l'auteur. C'est une bannière productive et polyvalente, souvent brillante en Pecorino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "igt",
+        "montepulciano",
+        "pecorino",
+        "volume"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

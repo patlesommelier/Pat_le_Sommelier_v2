@@ -1,0 +1,1242 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Bierzo & autres DO",
+  "source_file": "producteurs_bierzo_reste_To_Import.xlsx",
+  "built_at": "2026-08-12T11:42:27",
+  "count": 30,
+  "items": [
+    {
+      "id": "es-castillayleon-prod-descendientes-de-j-palacios",
+      "nom": "Descendientes de J. Palacios",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Corullón",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "La Faraona",
+        "Las Lamas",
+        "Moncerbal",
+        "Corullón",
+        "Pétalos"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Descendientes de J. Palacios est le domaine qui a refondé le Bierzo et l'a hissé, en une génération, au rang des grandes régions viticoles d'Espagne. Le projet naît en 1999 de la rencontre d'Álvaro Palacios — déjà auteur de L'Ermita au Priorat et de la renaissance de Palacios Remondo en Rioja — et de son neveu Ricardo Pérez Palacios, tout juste formé en Bourgogne et à Bordeaux. Le nom rend hommage à José Palacios, père d'Álvaro et grand-père de Ricardo, disparu en l'an 2000. En arrivant à Corullón, sur les coteaux escarpés qui dominent le Bierzo, les deux hommes reconnaissent un potentiel comparable à celui du Priorat : de vieilles vignes de Mencía suspendues à flanc de montagne, sur des sols d'ardoise, à des altitudes qui montent jusqu'à plus de neuf cents mètres. Leur parti pris, révolutionnaire pour la région, est double : rechercher activement les parcelles les plus anciennes, les plus abruptes et les plus élevées, et rompre avec la vinification extractive au profit d'une approche qui révèle la personnalité subtile de chaque terroir. Ricardo est par ailleurs l'un des premiers à défendre la biodynamie en Espagne. La gamme reproduit une hiérarchie bourguignonne pionnière en Espagne : Pétalos, assemblage de nombreuses petites parcelles, sert de porte d'entrée déjà remarquable ; Corullón est le vin de village, issu de près de deux cents parcelles de Mencía autour du bourg. Viennent ensuite les vins de lieu — Las Lamas, juteux et expressif, Moncerbal, plus sapide et minéral — puis, au sommet, La Faraona, issue d'une parcelle unique à plus de neuf cents mètres, produite à environ mille bouteilles et vendue au-delà de mille euros, dans l'esprit de L'Ermita. Descendientes de J. Palacios a servi de modèle et d'aimant : son exemple a attiré au Bierzo une génération entière de vignerons. Pour un sommelier, c'est le nom qui incarne le Bierzo de terroir : Pétalos pour une carte au verre, les vins de lieu pour les grandes tables. Des Mencía d'une finesse insoupçonnée, à carafer et à garder. Avec son passé monastique, sa situation sur le chemin de Saint-Jacques et ses vieilles vignes accrochées aux pentes, le Bierzo devait apparaître à Álvaro Palacios comme un petit Priorat en devenir — une intuition que le succès du domaine a pleinement confirmée, au point d'entraîner dans son sillage toute une région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "palacios",
+        "mencia",
+        "ardoise",
+        "corullon",
+        "biodynamie",
+        "icone",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-raul-perez-viticultor",
+      "nom": "Raúl Pérez Viticultor",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Valtuille de Abajo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello",
+        "Albarín"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Ultreia",
+        "El Pecado",
+        "La Vizcaína",
+        "Sketch"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Raúl Pérez est le vinificateur le plus influent du nord-ouest de l'Espagne, et l'une des figures les plus créatives du vin espagnol contemporain. Né dans une famille de vignerons de Valtuille de Abajo, au cœur du Bierzo, il commence par élaborer les vins du domaine familial, Castro Ventosa, avant de recevoir dès la fin des années 1990 une reconnaissance internationale qui ne s'est jamais démentie. Le lancement de sa marque personnelle, Ultreia, en 2003, marque le début d'une œuvre foisonnante. Son approche mêle un profond respect du patrimoine — vieilles vignes de Mencía et de Godello, cépages autochtones, viticulture peu interventionniste — et une inépuisable curiosité expérimentale : fermentations en grappes entières, élevages en foudres, barriques, béton, et même, pour son célèbre Sketch, un Albariño élevé quelques mois immergé dans la mer, en Galice. Car Raúl Pérez déborde largement du Bierzo : il travaille aussi en Rías Baixas, à Monterrei, à Ribeira Sacra, et conseille des domaines dans toute la péninsule. Au Bierzo, sa gamme s'articule autour d'Ultreia — Ultreia de Valtuille, issu de vieilles vignes de Mencía, et Ultreia Saint Jacques, plus accessible — et de la série La Vizcaína, parcellaires de Valtuille comme El Pecado ou La Poulosa, d'une grande finesse. Ses blancs de Godello et d'Albarín comptent parmi les plus recherchés de la région. Au-delà de ses propres vins, Raúl Pérez a formé, conseillé ou inspiré une génération entière de vignerons — de sa nièce et de son neveu César Márquez à Verónica Ortega — ce qui fait de lui le véritable parrain de la nouvelle scène du nord-ouest. Pour un sommelier, c'est une signature incontournable et foisonnante : des Mencía et des Godello de terroir d'une précision rare, souvent produits en petites quantités et très recherchés. Les cuvées de lieu méritent la garde ; Ultreia Saint Jacques offre une entrée plus accessible dans l'univers du maître. Personnage inclassable, capable de sortir chaque année de nouvelles cuvées confidentielles et de bousculer les certitudes de l'appellation, Raúl Pérez cultive une réputation de génie fantasque autant que de technicien hors pair. Cette liberté, jointe à une exigence absolue sur la qualité du raisin, explique l'aura dont il jouit auprès des amateurs les plus pointus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "raul-perez",
+        "mencia",
+        "godello",
+        "culte",
+        "icone",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-y-vinedos-castro-ventosa",
+      "nom": "Bodegas y Viñedos Castro Ventosa",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Valtuille de Abajo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "El Castro de Valtuille",
+        "Valtuille Cepas Centenarias",
+        "Villegas"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Castro Ventosa est le domaine familial des Pérez à Valtuille de Abajo, et le berceau de Raúl Pérez, qui y a fait ses armes avant de voler de ses propres ailes. La bodega, ancrée dans une longue tradition, incarne aujourd'hui l'esprit le plus authentique de la vinification du Bierzo, transmis de génération en génération. Le domaine tire son nom d'un ancien castro celte planté sur une colline de Valtuille, l'un des secteurs les plus réputés de l'appellation. Il repose sur un patrimoine considérable de vieilles vignes de Mencía, sur des sols mêlant sables et ardoises, cultivées en propre pour garantir la personnalité des vins. La conduite est biologique, et les vinifications privilégient l'expression du fruit et du terroir sur l'extraction. La gamme est construite autour du lieu de Valtuille. El Castro de Valtuille, en Mencía comme en Godello, constitue le cœur de gamme, précis et gourmand. Les cuvées de vieilles vignes — Valtuille Cepas Centenarias, issu de ceps centenaires, et le parcellaire Villegas — montent en profondeur et en complexité, comptant parmi les Mencía les plus réputés de la région. Pour un sommelier, c'est une adresse sûre et attachante : El Castro de Valtuille pour une entrée de gamme de qualité, les cuvées centenaires et Villegas pour une montée en gamme. Des Mencía de terroir à des prix raisonnables, dans un style traditionnel abouti.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "valtuille",
+        "mencia",
+        "vieilles-vignes",
+        "famille",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-mengoba",
+      "nom": "Bodega Mengoba",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "San Juan de Carracedo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello",
+        "Doña Blanca",
+        "Alicante Bouschet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Mengoba",
+        "Brezo",
+        "Estaladiña",
+        "Flor de Brezo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Mengoba est le projet de Gregory Pérez, vinificateur franco-espagnol installé à San Juan de Carracedo, au cœur du Bierzo. Formé en France, il a rejoint la région séduit par son patrimoine de vieilles vignes et ses cépages autochtones, et s'y est imposé comme l'une des voix les plus sérieuses de la nouvelle génération. Sa démarche repose sur des principes clairs : connaissance du sol, cépages indigènes, absence de traitements agressifs, faibles rendements et vinification traditionnelle. Il travaille les vieilles vignes des secteurs de Grisón et d'Espanillo, sur des sols d'ardoise et de sable, et a progressivement intégré la Garnacha Tintorera à ses Mencía, la plupart fermentés en proportion variable de grappes entières. Pionnier de l'usage des tinajas — jarres de terre cuite — au Bierzo, il utilise une grande variété de contenants. La gamme, partie d'un simple blanc et d'un rouge Mengoba, s'est considérablement étoffée. Brezo, l'entrée de gamme en Mencía et en Godello, offre un excellent rapport qualité-prix. Les cuvées supérieures, dont un rare Estaladiña issu d'un cépage presque disparu, montent en finesse et en complexité. Les Godello de Mengoba comptent parmi les plus raffinés de la région. Pour un sommelier, Mengoba est une adresse précieuse : Brezo pour une carte au verre, les cuvées parcellaires pour une clientèle en quête de terroir. Des Mencía et des Godello purs et frais, à des prix encore raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "nouvelle-vague",
+        "mencia",
+        "godello",
+        "franco-espagnol",
+        "biologique",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-veronica-ortega",
+      "nom": "Bodega Verónica Ortega",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Cacabelos",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello",
+        "Palomino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Cobrana",
+        "Roter",
+        "Quite",
+        "La Cova"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Verónica Ortega est l'une des voix les plus fines de la nouvelle génération du Bierzo. Andalouse d'origine, formée dans quelques-uns des plus grands domaines — en Bourgogne, en Champagne, au Priorat auprès d'Álvaro Palacios — elle s'installe à Valtuille au tournant des années 2010 avec l'ambition de produire des Mencía d'une grande délicatesse. Son travail repose sur de petites parcelles de vieilles vignes de Mencía, sur des sols d'ardoise et de sable, conduites en biologique, avec des rendements très bas et une viticulture soignée. Les vinifications, peu interventionnistes, privilégient les levures indigènes, une part de grappes entières et des élevages respectueux, dans une recherche constante de finesse et de fraîcheur plutôt que de puissance. La gamme s'articule autour de parcellaires. Quite, l'entrée, est déjà d'une belle définition. Cobrana, issu d'une parcelle sur ardoise, et Roter, plus sapide et minéral, comptent parmi les Mencía les plus élégants de l'appellation. Elle produit aussi un blanc, La Cova, à partir de Godello et de Palomino de vieilles vignes. Pour un sommelier, c'est une signature à recommander pour des Mencía racés et digestes, à mille lieues des rouges rustiques d'autrefois. Des vins de terroir produits en petites quantités, à faire découvrir à une clientèle en quête d'élégance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "nouvelle-vague",
+        "mencia",
+        "ardoise",
+        "parcellaire",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-estefania",
+      "nom": "Bodegas Estefanía — Tilenus",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Dehesas",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Tilenus Pagos de Posada",
+        "Tilenus Pieros",
+        "Tilenus Alto de la Cava"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Estefanía, connue pour sa marque Tilenus, est l'une des références du Mencía de garde au Bierzo. Installée à Dehesas, près de Ponferrada, la maison s'appuie sur un patrimoine exceptionnel de vieilles vignes, dont certaines dépassent le siècle, pour produire des rouges taillés pour le vieillissement. Le vignoble repose sur des vieilles vignes de Mencía réparties sur plusieurs pagos, sur des sols mêlant ardoise, argile et galets. La maison a fait le choix d'un style classique et patient, avec des élevages soignés qui visent à révéler la profondeur et la capacité de garde du cépage, longtemps sous-estimée. La gamme Tilenus décline plusieurs expressions parcellaires. Pieros et Alto de la Cava proviennent de vieilles vignes identifiées ; Pagos de Posada, issu de ceps centenaires, constitue le sommet, un Mencía dense et profond capable de vieillir de longues années. La maison a d'ailleurs bâti une réputation sur ses millésimes anciens, régulièrement remis en vente. Tilenus illustre une facette plus classique du Bierzo, celle du Mencía de garde, complémentaire des cuvées parcellaires de la nouvelle vague. Pour un sommelier, c'est une adresse précieuse pour proposer du Mencía de garde à maturité : les Pagos de Posada anciens offrent une expérience rare, et l'ensemble de la gamme se distingue par sa capacité de vieillissement. Des vins à carafer, à des prix raisonnables au regard de leur âge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "vieilles-vignes",
+        "garde",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-gancedo",
+      "nom": "Bodegas Gancedo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Quilós",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello",
+        "Doña Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Ucedo",
+        "Herencia del Capricho",
+        "Xestal"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Gancedo est un domaine familial installé à Quilós, au cœur du Bierzo, conduit en agriculture biologique et attaché à l'expression des vieilles vignes sur ardoise. La famille s'est imposée comme une référence discrète mais sérieuse de l'appellation, sur les rouges comme sur les blancs. Le vignoble repose sur de vieilles vignes de Mencía et de Godello, ainsi que de la rare Doña Blanca, sur des sols d'ardoise en coteau. La conduite biologique et les faibles rendements visent à préserver la fraîcheur et la minéralité qui caractérisent les meilleurs terroirs du Bierzo. Les vinifications, soignées, cherchent l'équilibre et la tension. La gamme monte de cuvées accessibles aux parcellaires. Xestal, issu de vieilles vignes de Mencía, et Ucedo comptent parmi les cuvées de tête, denses et profondes. Herencia del Capricho, blanc de Godello et Doña Blanca de vieilles vignes, se distingue par sa grande tension et sa complexité, illustrant le potentiel méconnu des blancs du Bierzo. Gancedo fait partie des domaines qui ont contribué à révéler la qualité des blancs de la région, souvent éclipsés par la Mencía. Pour un sommelier, c'est une adresse à connaître pour des Mencía frais et des Godello de terroir, à des prix raisonnables. Une signature familiale sérieuse, idéale pour faire découvrir la diversité du Bierzo au-delà des grands noms.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "godello",
+        "vieilles-vignes",
+        "biologique",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-cesar-marquez",
+      "nom": "César Márquez",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Valtuille de Abajo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Valtuille Vino de Villa",
+        "Parajes",
+        "El Raposo",
+        "La Salvación"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "César Márquez est l'un des talents les plus prometteurs de la nouvelle génération du Bierzo. Neveu de Raúl Pérez, formé à ses côtés, il lance son propre projet à Valtuille de Abajo à la fin des années 2010 et s'impose rapidement par la finesse et la précision de ses vins. Son travail repose sur une mosaïque de petites parcelles de vieilles vignes de Mencía et de Godello, sur des sols d'ardoise et de sable autour de Valtuille, conduites en biologique. Les vinifications, dans la lignée de son oncle, privilégient les levures indigènes, une part de grappes entières et des élevages respectueux, dans une recherche de fraîcheur et de digestibilité. La gamme suit une hiérarchie de terroir. Valtuille, le vin de village, offre déjà une belle lecture de l'appellation. Les parcellaires — El Raposo, La Salvación et d'autres parajes — montent en complexité et en minéralité, révélant les nuances des différents sols de Valtuille. Les blancs de Godello complètent une production encore confidentielle mais très recherchée. César Márquez incarne la relève du Bierzo, celle formée par Raúl Pérez et attachée à l'expression parcellaire. Pour un sommelier, c'est une signature à suivre de près : des Mencía purs et frais, d'une grande précision, encore à des prix raisonnables au regard de leur qualité. Une belle option pour faire découvrir la nouvelle vague du Bierzo à une clientèle curieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "nouvelle-vague",
+        "mencia",
+        "parcellaire",
+        "valtuille",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-y-vinedos-luna-beberide",
+      "nom": "Bodegas y Viñedos Luna Beberide",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Cacabelos",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Finca La Cuesta",
+        "Art",
+        "Paixar"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Luna Beberide est une maison de Cacabelos au style moderne et net, l'une des marques les plus diffusées du Bierzo. Elle s'appuie sur un vignoble propre de Mencía pour produire une gamme large et fiable, du vin accessible à la cuvée de prestige. Le vignoble repose sur des vignes de Mencía sur les sols variés de l'appellation. Le style, moderne et propre, mise sur le fruit et un élevage bien intégré. La gamme monte de Finca La Cuesta et Art jusqu'à Paixar, cuvée de tête née d'une coentreprise avec la famille Eguren, dense et ambitieuse. Pour un sommelier, Luna Beberide est une valeur d'usage fiable : une gamme lisible de Mencía à tous les niveaux de prix, avec Paixar pour une montée en gamme. Une adresse sûre pour une carte cherchant des Bierzo modernes et réguliers, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "moderne",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-dominio-de-tares",
+      "nom": "Bodegas Dominio de Tares",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "San Román de Bembibre",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Bembibre",
+        "Cepas Viejas",
+        "P3"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio de Tares est l'une des références du Bierzo Alto, installée à San Román de Bembibre, dans la partie plus fraîche et plus élevée de l'appellation. Fondée en 2000, la maison s'est imposée par la qualité et la régularité de ses Mencía de vieilles vignes. Le vignoble repose sur de vieilles vignes de Mencía réparties sur plusieurs pagos du Bierzo Alto, sur des sols d'ardoise et d'argile. Le style, moderne mais équilibré, mise sur la profondeur et la fraîcheur que confère l'altitude. La maison produit aussi un Godello remarqué. La gamme monte de Cepas Viejas à Bembibre, Mencía centenaire issu de six pagos, cuvée de tête réputée. Pour un sommelier, Dominio de Tares est une adresse fiable et bien diffusée : Bembibre pour une belle bouteille de Mencía de garde, la gamme courante pour des Bierzo réguliers à bon rapport qualité-prix. Une valeur sûre de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "bierzo-alto",
+        "mencia",
+        "vieilles-vignes",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-casar-de-burbia",
+      "nom": "Bodegas Casar de Burbia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Carracedelo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Casar de Burbia",
+        "Hombros",
+        "Tebaida"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Casar de Burbia est un domaine familial de Carracedelo, conduit en biologique, attaché à l'expression des vieilles vignes de Mencía. La maison s'est bâti une réputation de sérieux sur des vins purs et frais, à l'écart des projets les plus médiatisés. Le vignoble repose sur de vieilles vignes de Mencía, complétées de Godello, sur des sols d'ardoise et de galets. La conduite biologique et les faibles rendements visent à préserver la fraîcheur et la minéralité. Le style, pur et net, privilégie l'équilibre. La gamme monte du Casar de Burbia à Hombros et surtout Tebaida, cuvée parcellaire de vieilles vignes de haut niveau. Pour un sommelier, Casar de Burbia est une adresse à connaître pour des Mencía de terroir frais et précis : Tebaida pour une montée en gamme, la cuvée de base pour un excellent rapport qualité-prix. Une signature biologique sérieuse du Bierzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "vieilles-vignes",
+        "biologique",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-pittacum",
+      "nom": "Bodega Pittacum",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Arganza",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Garnacha Tintorera"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Pittacum",
+        "Petit Pittacum",
+        "La Prohibición"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Pittacum est un domaine d'Arganza appartenant au groupe galicien Terras Gauda, appuyé sur un patrimoine de vieilles vignes de Mencía. La maison produit un Bierzo de style moderne et charnu, bien diffusé. Le vignoble repose sur de vieilles vignes de Mencía, complétées de Garnacha Tintorera, sur les sols de l'appellation. Le style, moderne, mise sur la matière et un élevage soigné. La gamme monte de Petit Pittacum au Pittacum, plus structuré, et à La Prohibición, cuvée rare de Garnacha Tintorera. Pour un sommelier, Pittacum est une adresse fiable pour des Mencía modernes et charnus, avec l'originalité de La Prohibición en Garnacha Tintorera. Une valeur d'usage du Bierzo, à des prix raisonnables, adossée à un groupe solide.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "moderne",
+        "garnacha-tintorera",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-losada-vinos-de-finca",
+      "nom": "Losada Vinos de Finca",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Cacabelos",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Losada",
+        "Altos de Losada",
+        "La Bienquerida"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Losada Vinos de Finca est un domaine de Cacabelos conseillé un temps par le réputé Amancio Fernández, attaché aux vieilles vignes de Mencía conduites en biologique. La maison s'est imposée comme une référence qualitative discrète de l'appellation. Le vignoble repose sur de vieilles vignes de Mencía sur les sols variés du Bierzo, en biologique. Le style privilégie le fruit et la fraîcheur, avec des élevages soignés. La gamme monte du Losada à Altos de Losada et surtout La Bienquerida, cuvée parcellaire de vieilles vignes réputée. Pour un sommelier, Losada est une adresse fiable pour des Mencía de terroir bien faits : La Bienquerida pour une montée en gamme, le Losada pour un bon rapport qualité-prix. Une signature sérieuse et biologique du Bierzo, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "vieilles-vignes",
+        "biologique",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-akilia-wines",
+      "nom": "Akilia Wines",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Villafranca del Bierzo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello",
+        "Palomino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Akilia",
+        "Villaria",
+        "K"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Akilia est le projet de Mario Rovira, conduit en biodynamie, attaché aux vieilles vignes de Mencía sur ardoise autour de Villafranca del Bierzo. La maison s'inscrit dans la nouvelle vague de l'appellation, en quête de fraîcheur et de digestibilité. Le vignoble repose sur de vieilles vignes de Mencía, complétées de Godello et de Palomino, sur des sols d'ardoise en coteau, conduites en biodynamie. Le style, frais et digeste, privilégie l'expression du terroir sur la puissance. La gamme monte du K et Villaria à l'Akilia, plus abouti. Pour un sommelier, Akilia est une adresse à connaître pour des Mencía frais et biodynamiques, dans l'esprit de la nouvelle vague du Bierzo. Des vins de terroir digestes, à faire découvrir à une clientèle curieuse, à des prix encore raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "nouvelle-vague",
+        "mencia",
+        "biodynamie",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-palacio-de-canedo",
+      "nom": "Palacio de Canedo — Prada a Tope",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Canedo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Palacio de Canedo",
+        "Prada a Tope"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Palacio de Canedo est le domaine emblématique de José Luis Prada, dit Prada a Tope, figure haute en couleur du Bierzo qui a beaucoup fait pour la notoriété gastronomique et œnotouristique de la région. Le domaine, installé à Canedo, mêle vin, cuisine et hébergement. Le vignoble repose sur des vignes de Mencía et de Godello sur les sols de l'appellation, conduites en biologique. Le style, traditionnel, mise sur le fruit et l'authenticité. La gamme, large, couvre le Mencía en rouge et rosé et le Godello en blanc, sous les marques Palacio de Canedo et Prada a Tope. Pour un sommelier, Palacio de Canedo est une adresse à connaître autant pour ses vins que pour son rôle dans la promotion du Bierzo : une gamme fiable et une belle histoire à raconter. Un domaine emblématique de l'œnotourisme régional, à des prix accessibles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "oenotourisme",
+        "famille",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-peique",
+      "nom": "Bodegas Peique",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Valtuille de Abajo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Peique",
+        "Seleccion Familiar",
+        "Los Barredos"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Peique est une maison familiale de Valtuille de Abajo, l'un des meilleurs villages du Bierzo, appuyée sur un patrimoine de vieilles vignes de Mencía. La famille produit une gamme fiable de bon rapport qualité-prix. Le vignoble repose sur de vieilles vignes de Mencía autour de Valtuille, sur des sols de sable et d'ardoise. Le style, équilibré, mise sur le fruit et un élevage bien dosé. La gamme monte du Peique à Selección Familiar et Los Barredos, cuvée de vieilles vignes plus ambitieuse. Pour un sommelier, Peique est une adresse fiable pour des Mencía de Valtuille à bon rapport qualité-prix : Los Barredos pour une montée en gamme, la gamme courante pour une carte au verre. Une signature familiale sérieuse du Bierzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "famille",
+        "valtuille",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-del-abad",
+      "nom": "Bodega del Abad",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Carracedelo",
+      "pays": "Espagne",
+      "cepages": [
+        "Mencía",
+        "Godello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Abad Dom Bueno",
+        "Gotín del Risc",
+        "Carracedo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodega del Abad est un domaine de Carracedelo conduit en biologique, attaché à la Mencía et au Godello, à la gamme moderne bien diffusée. La maison s'inscrit dans le mouvement qualitatif du Bierzo. Le vignoble repose sur des vignes de Mencía et de Godello sur les sols de l'appellation, en biologique. Le style, moderne et propre, mise sur le fruit et la fraîcheur. La gamme monte de l'Abad Dom Bueno à Gotín del Risc et Carracedo, cuvées plus ambitieuses. Pour un sommelier, Bodega del Abad est une adresse fiable pour des Mencía et des Godello modernes, à des prix raisonnables. Une valeur d'usage du Bierzo, bien diffusée, avec l'argument du biologique apprécié d'une clientèle sensible à ces questions.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "mencia",
+        "godello",
+        "biologique",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-godelia",
+      "nom": "Bodegas Godelia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Bierzo",
+      "commune": "Pieros-Cacabelos",
+      "pays": "Espagne",
+      "cepages": [
+        "Godello",
+        "Mencía"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Bierzo",
+        "Godelia",
+        "Libamus",
+        "Viernes"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Godelia est une maison de Cacabelos spécialiste du Godello, le grand cépage blanc du Bierzo, aux côtés de la Mencía. Son nom même dit son attachement à cette variété, dont elle propose des expressions abouties. Le vignoble repose sur des vieilles vignes de Godello et de Mencía sur les sols de l'appellation. Le style, moderne et propre, mise sur la pureté et la fraîcheur. La gamme monte du Godelia blanc et rouge à Libamus et Viernes, cuvées plus ambitieuses de vieilles vignes. Pour un sommelier, Godelia est une adresse à connaître pour découvrir le Godello du Bierzo, blanc de grande personnalité, aux côtés de la Mencía. Des vins modernes et fiables, à des prix raisonnables, utiles pour élargir une carte au-delà des rouges.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-bierzo",
+        "godello",
+        "mencia",
+        "moderne",
+        "prov-leon"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-traslanzas",
+      "nom": "Bodega Traslanzas",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Cigales",
+      "commune": "Cigales",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Cigales",
+        "Traslanzas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Traslanzas est la référence qualitative de la DO Cigales, cette appellation du nord de la dépression du Duero longtemps réputée pour ses seuls rosados. Le projet, né de la passion d'un groupe de femmes pour un patrimoine de vieilles vignes, a montré que Cigales pouvait produire de grands rouges. Le domaine repose sur un patrimoine de vieilles vignes de Tinta del País — le Tempranillo local — sur les sols sableux et caillouteux de Cigales. La démarche est celle d'un vin unique : un seul rouge par millésime, issu des meilleures parcelles, vinifié avec soin et élevé en chêne pour révéler la densité et la profondeur du terroir. Le Traslanzas, produit en quantités limitées, se distingue par sa concentration et son équilibre, dans un registre moderne mais ancré dans le terroir. Il a largement contribué à changer le regard porté sur Cigales, en prouvant que l'appellation ne se réduisait pas à ses rosados traditionnels, aussi respectables soient-ils. Traslanzas illustre le potentiel des vieilles vignes de Tinta del País de Cigales, longtemps sous-exploité. Pour un sommelier, c'est l'adresse à connaître pour faire découvrir un grand rouge de Cigales, à rebours des idées reçues sur cette appellation de rosé. Un vin de terroir confidentiel, à des prix raisonnables au regard de sa qualité, idéal pour surprendre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-cigales",
+        "tempranillo",
+        "vieilles-vignes",
+        "confidentiel",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-cesar-principe",
+      "nom": "Bodegas César Príncipe",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Cigales",
+      "commune": "Fuensaldaña",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Cigales",
+        "César Príncipe"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "César Príncipe est l'un des domaines qui ont révélé le potentiel des rouges de Cigales, appuyé sur de vieilles vignes de Tinta del País à Fuensaldaña. La cuvée éponyme est devenue un emblème du renouveau de l'appellation. Le vignoble repose sur de vieilles vignes de Tinta del País sur les sols sableux et caillouteux de Cigales. Le style, dense et boisé, révèle la profondeur du terroir, longtemps réservée aux seuls rosados. Le César Príncipe, produit avec soin et élevé en chêne, s'est imposé comme un rouge de référence de la DO. Pour un sommelier, César Príncipe est une adresse à connaître pour un grand rouge de Cigales, à rebours de l'image de rosé de l'appellation. Un vin de vieilles vignes dense et fiable, à des prix raisonnables, idéal pour surprendre une clientèle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-cigales",
+        "tempranillo",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-frutos-villar",
+      "nom": "Bodegas Frutos Villar (Cigales)",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Cigales",
+      "commune": "Cigales",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Verdejo",
+        "Albillo"
+      ],
+      "couleurs": [
+        "Rosé",
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Cigales",
+        "Calderona",
+        "Conde Ansúrez"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Frutos Villar est une maison historique de Cigales, gardienne du rosado traditionnel — le clarete — qui a fait la réputation de l'appellation. La maison produit de gros volumes sur une gamme large couvrant toutes les couleurs. Le vignoble repose sur les sols sableux et caillouteux de Cigales, où le Tempranillo côtoie la Garnacha, le Verdejo et l'Albillo. Le rosado, obtenu par l'assemblage traditionnel de raisins rouges et blancs, reste la spécialité de la maison, aux côtés de rouges et de blancs. Les marques Calderona et Conde Ansúrez couvrent la gamme. Pour un sommelier, Frutos Villar est une adresse à connaître pour le rosado traditionnel de Cigales, spécialité historique de l'appellation, à des prix contenus. Une valeur d'usage pour raconter la tradition du clarete castillan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-cigales",
+        "rosado",
+        "clarete",
+        "volume",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-museum",
+      "nom": "Bodegas Museum",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Cigales",
+      "commune": "Cigales",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Cigales",
+        "Museum Real",
+        "Vinea"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Museum est une bodega moderne de Cigales, appuyée sur de vieilles vignes de Tinta del País, à la gamme bien diffusée à l'export. La maison a contribué à la montée en gamme des rouges de l'appellation. Le vignoble repose sur de vieilles vignes de Tinta del País sur les sols de Cigales. Le style, moderne, mise sur la matière et un élevage soigné. La gamme monte de Vinea au Museum Real, cuvée de vieilles vignes plus ambitieuse, bien notée. Pour un sommelier, Museum est une adresse fiable pour des rouges modernes de Cigales, à des prix raisonnables. Une valeur d'usage bien diffusée, qui illustre le potentiel de l'appellation au-delà de ses rosados traditionnels.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-cigales",
+        "tempranillo",
+        "moderne",
+        "volume",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-frontio",
+      "nom": "Bodega Frontio",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Arribes",
+      "commune": "Fermoselle",
+      "pays": "Espagne",
+      "cepages": [
+        "Juan García",
+        "Bruñal",
+        "Malvasía",
+        "Doña Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Arribes",
+        "Frontio",
+        "Barcia",
+        "Xafardan"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Frontio est la figure de proue du renouveau des Arribes, cette DO sauvage et méconnue nichée dans les gorges du Duero, à la frontière du Portugal. Cette jeune bodega de Fermoselle, conduite en biologique, a misé sur les cépages autochtones et l'expression d'un terroir extrême pour révéler le potentiel de la région. Le vignoble repose sur de vieilles vignes des cépages locaux — Juan García et Bruñal en rouge, Malvasía et Doña Blanca en blanc — sur des sols de granite et d'ardoise en terrasses escarpées, dans un microclimat méditerranéen abrité au fond des gorges. Ces variétés, cultivées depuis le Moyen Âge, sont d'une acidité vive et d'un caractère marqué. La conduite biologique et les faibles rendements visent à préserver leur identité. La gamme met en valeur ces cépages rares. Barcia et Xafardan explorent les parcellaires et les variétés autochtones, dans un style frais et minéral qui tranche avec l'image rustique d'autrefois. Le Bruñal, cépage à très faible rendement, donne des rouges denses et originaux, tandis que les blancs de Malvasía offrent une aromatique peu commune en Castille. Pour un sommelier, c'est une adresse à connaître pour des vins de cépages autochtones rares, sur granite, à réserver à une clientèle curieuse. Des bouteilles originales, à raconter autant qu'à servir, encore à des prix accessibles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-arribes",
+        "nouvelle-vague",
+        "juan-garcia",
+        "brunal",
+        "granite",
+        "biologique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-el-hato-y-el-garabato",
+      "nom": "Bodega El Hato y el Garabato",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Arribes",
+      "commune": "Pereruela",
+      "pays": "Espagne",
+      "cepages": [
+        "Juan García",
+        "Rufete",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Arribes",
+        "Callejón del Cristo",
+        "La Setera"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "El Hato y el Garabato est un projet singulier de Pereruela, dans les Arribes zamorans, qui mêle vin et culture populaire de la région. La bodega, conduite en biologique, mise sur les cépages autochtones et une démarche artisanale. Le vignoble repose sur de vieilles vignes des cépages locaux — Juan García, Rufete, Malvasía — sur les sols de granite et d'ardoise des Arribes, en biologique. Le style, frais et authentique, met en valeur ces variétés rares. Les cuvées Callejón del Cristo et La Setera explorent le terroir des gorges du Duero. Pour un sommelier, El Hato y el Garabato est une adresse à connaître pour des vins de cépages autochtones des Arribes, originaux et biologiques. Des bouteilles singulières, à raconter autant qu'à servir, à des prix accessibles, pour une clientèle curieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-arribes",
+        "nouvelle-vague",
+        "juan-garcia",
+        "biologique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-arribes-del-duero",
+      "nom": "Bodegas Arribes del Duero",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Arribes",
+      "commune": "Corporario-Aldeadávila",
+      "pays": "Espagne",
+      "cepages": [
+        "Juan García",
+        "Bruñal",
+        "Rufete",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Arribes",
+        "Arribes de Vettonia",
+        "Pagos de Vallilera",
+        "El Secreto del Vetton"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Arribes del Duero est la grande coopérative des Arribes salmantins, gardienne des cépages autochtones Juan García et Bruñal. Fondée en 1993 à Corporario, elle produit de gros volumes sur une gamme large et couvre toutes les couleurs. Le vignoble rassemble de nombreuses parcelles sur les terrasses de granite et d'ardoise des gorges du Duero, où le Juan García domine, complété de Bruñal, Rufete et Malvasía. Le style, traditionnel, met en valeur ces variétés locales. Les marques Arribes de Vettonia et Pagos de Vallilera couvrent la gamme, avec El Secreto del Vetton en cuvée de Bruñal fermenté en barrique. Pour un sommelier, la coopérative des Arribes est une valeur d'usage pour découvrir les cépages autochtones de la zone à des prix contenus. Une adresse fiable pour raconter le patrimoine viticole singulier des gorges du Duero.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-arribes",
+        "cooperative",
+        "juan-garcia",
+        "brunal",
+        "volume",
+        "prov-salamanca"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-vaelico",
+      "nom": "Bodega Vaélico",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Arribes",
+      "commune": "Sobradillo",
+      "pays": "Espagne",
+      "cepages": [
+        "Juan García",
+        "Bruñal",
+        "Rufete"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Arribes",
+        "Vaélico",
+        "Bruñal"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vaélico est une jeune bodega de Sobradillo, dans les Arribes salmantins, conduite en biologique, tournée vers les monocépages de Bruñal et de Juan García. Le projet illustre l'ambition de terroir de la nouvelle génération de la région. Le vignoble repose sur de vieilles vignes des cépages autochtones — Bruñal, Juan García, Rufete — sur les sols de granite et d'ardoise des gorges du Duero, en biologique. Le style, frais et précis, met en valeur ces variétés rares, notamment le Bruñal à très faible rendement. Pour un sommelier, Vaélico est une adresse à suivre pour des monocépages de Bruñal et de Juan García, curiosités des Arribes. Des vins de terroir originaux, à des prix accessibles, pour une clientèle en quête de cépages rares et de singularité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-arribes",
+        "nouvelle-vague",
+        "brunal",
+        "juan-garcia",
+        "biologique",
+        "prov-salamanca"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-cambrico",
+      "nom": "Bodega Cámbrico",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Sierra de Salamanca",
+      "commune": "Villanueva del Conde",
+      "pays": "Espagne",
+      "cepages": [
+        "Rufete",
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOP Sierra de Salamanca",
+        "Cámbrico Rufete",
+        "Viñas del Cámbrico",
+        "612"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Cámbrico est la référence de la Sierra de Salamanca, cette petite appellation de montagne du sud de la province, tournée vers le cépage autochtone Rufete. Le domaine, conduit en biologique, s'est imposé comme le pionnier qualitatif de la zone, en révélant la finesse de ce cépage longtemps déconsidéré. Le vignoble repose sur de vieilles vignes de Rufete, complétées de Tempranillo, sur des sols de granite en terrasses escarpées, à bonne altitude dans la sierra. Le Rufete, cépage à peau fine et à maturité délicate, donne des vins clairs, parfumés et frais, à condition d'être issu de vieilles vignes et vinifié avec soin. La conduite biologique et les faibles rendements visent à préserver cette finesse. La gamme met en valeur le terroir de granite. Cámbrico Rufete offre une lecture aboutie du cépage, tandis que les parcellaires Viñas del Cámbrico, issus de vignes très anciennes, montent en complexité et en profondeur. Le 612, assemblage, complète la gamme. Les vins se distinguent par leur fraîcheur et leur élégance, aux antipodes des rouges puissants de Castille. Pour un sommelier, c'est une adresse à connaître pour des Rufete de terroir, fins et parfumés, sur granite. Des vins de montagne originaux, à faire découvrir à une clientèle en quête de fraîcheur et de singularité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-sierra-salamanca",
+        "rufete",
+        "granite",
+        "vieilles-vignes",
+        "biologique",
+        "prov-salamanca"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-compania-de-vinos-la-zorra",
+      "nom": "Bodega Compañía de Vinos La Zorra (Sierra)",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Sierra de Salamanca",
+      "commune": "San Esteban de la Sierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Rufete",
+        "Calabrés"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOP Sierra de Salamanca",
+        "8 Virtudes Rufete",
+        "Raro"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "La Zorra en Sierra de Salamanca est le pendant salmantin du projet éponyme de Toro, installé à San Esteban de la Sierra, tourné vers le Rufete de vieilles vignes sur granite. La bodega s'inscrit dans la nouvelle vague dynamique de la zone. Le vignoble repose sur de vieilles vignes de Rufete, complétées de Calabrés, sur les sols de granite en terrasses de la sierra, en biologique. Le style, frais et digeste, met en valeur la finesse du Rufete, cépage à peau fine et à maturité délicate. Les cuvées 8 Virtudes et Raro explorent le terroir de montagne. Pour un sommelier, La Zorra est une adresse à connaître pour des Rufete frais et parfumés, sur granite, dans l'esprit de la nouvelle vague salmantine. Des vins de montagne originaux, à des prix raisonnables, pour une clientèle en quête de fraîcheur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-sierra-salamanca",
+        "nouvelle-vague",
+        "rufete",
+        "granite",
+        "prov-salamanca"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-autenticos-vinadores",
+      "nom": "Auténticos Viñadores",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Sierra de Salamanca",
+      "commune": "San Esteban de la Sierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Rufete"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOP Sierra de Salamanca",
+        "Vinos de Terroir Rufete"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Auténticos Viñadores est un collectif de vignerons de terroir de la Sierra de Salamanca, tourné vers le Rufete de vieilles vignes sur granite. Le projet met en valeur le patrimoine de micro-parcelles de la zone à travers des cuvées confidentielles. Le vignoble rassemble de vieilles vignes de Rufete sur les sols de granite en terrasses de la sierra, en biologique. Le style, artisanal, met en valeur la finesse du cépage à travers des cuvées parcellaires produites en très petites quantités, parfois issues d'une seule vieille vigne. Pour un sommelier, Auténticos Viñadores est une adresse pointue pour des Rufete de terroir rares, à réserver à une clientèle avertie. Des micro-cuvées de vieilles vignes sur granite, illustrant le renouveau de la Sierra de Salamanca, à raconter autant qu'à servir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-sierra-salamanca",
+        "nouvelle-vague",
+        "rufete",
+        "granite",
+        "vieilles-vignes",
+        "prov-salamanca"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    },
+    {
+      "id": "es-castillayleon-prod-vinas-del-cenit",
+      "nom": "Viñas del Cénit",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Tierra del Vino de Zamora",
+      "commune": "Villamor de los Escuderos",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Tierra del Vino de Zamora",
+        "Cénit",
+        "Venta Mazarrón"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Viñas del Cénit est le domaine phare de la Tierra del Vino de Zamora, petite DO au sud de la province, appuyé sur de vieilles vignes de Tempranillo préphylloxérique. Le projet a révélé le potentiel de cette zone méconnue. Le vignoble repose sur de vieilles vignes de Tempranillo — dont des parcelles préphylloxériques franches de pied — sur les sols sableux de la zone. Le style, moderne mais ancré dans le terroir, mise sur la densité et la profondeur. La gamme monte de Venta Mazarrón au Cénit, cuvée de vieilles vignes dense et bien notée. Pour un sommelier, Viñas del Cénit est l'adresse à connaître pour découvrir la Tierra del Vino de Zamora, à travers un Tempranillo de vieilles vignes préphylloxériques. Un vin de terroir dense et fiable, à des prix raisonnables, pour sortir des sentiers battus castillans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-tierra-del-vino-zamora",
+        "tempranillo",
+        "vieilles-vignes",
+        "prephylloxerique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (Decanter Bierzo 2025, spanishwinelover, vinissimus, doarribes, sobremesa)"
+    }
+  ]
+}

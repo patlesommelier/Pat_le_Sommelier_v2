@@ -1,0 +1,672 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "pfalz",
+  "region_label": "Pfalz (Allemagne)",
+  "source_file": "build_pfalz (recherche web 2026-06)",
+  "built_at": "2026-06-14",
+  "count": 24,
+  "items": [
+    {
+      "id": "de-pfalz-terr-forster-kirchenstueck",
+      "nom": "Forster Kirchenstück",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-130 m",
+      "sols": "argile et lœss sur sous-sol de basalte, parsemé de grès coloré (Buntsandstein)",
+      "caracteristiques_rapides": "Le lieu-dit le plus prestigieux du Pfalz, minuscule clos au cœur de Forst. Rieslings d'une densité et d'une profondeur uniques, parmi les plus chers d'Allemagne. Bürklin-Wolf, von Winning, von Buhl. VDP Grosse Lage.",
+      "notes_objectives": "Le Forster Kirchenstück est considéré comme le plus grand terroir de Riesling du Pfalz, et l'un des plus prestigieux d'Allemagne. Ce petit clos historique, blotti contre l'église de Forst sur la Mittelhaardt, repose sur un sol unique : des argiles et du lœss reposant sur un sous-sol de basalte noir, dont les éclats parsèment les vignes et emmagasinent la chaleur. Cette géologie volcanique confère aux Riesling une profondeur, une densité et une minéralité fumée incomparables, alliées à une grande capacité de garde. Dès la célèbre classification bavaroise de 1828, le Kirchenstück était le vignoble le plus chèrement taxé de tout le Pfalz. Le cru est exploité par une pléiade de grands domaines — Reichsrat von Buhl, Bassermann-Jordan, Bürklin-Wolf, von Winning, Georg Mosbacher —, dont les Grosses Gewächs comptent parmi les Riesling les plus recherchés du pays. Classé en VDP Grosse Lage, le Kirchenstück demeure le joyau absolu de Forst et l'un des sommets du Riesling sec allemand. Le clos, ceint de murs et planté presque exclusivement de Riesling, ne couvre que quelques hectares, ce qui en fait un grand cru d'une rareté absolue. Le basalte, vestige d'un ancien volcanisme, est ici la clé : il réchauffe le sol, draine l'eau et imprime aux vins cette salinité fumée si caractéristique. Les Grosses Gewächs du Kirchenstück, signés par les plus grands domaines de la Mittelhaardt, sont parmi les Riesling secs les plus chers et les plus convoités d'Allemagne, capables de vieillir plusieurs décennies. À l'image des plus grands crus de la Mosel ou du Rheingau, le Kirchenstück a valeur de référence : c'est l'étalon auquel se mesure tout le Riesling du Pfalz, et un monument du patrimoine viticole allemand. La hiérarchie historique n'a jamais varié : déjà au XIXe siècle, les cartes fiscales bavaroises plaçaient le Kirchenstück au sommet, loin devant tous les autres crus de la région. On le compare volontiers, pour le Riesling, à ce que le Montrachet est au Chardonnay. Chaque domaine y imprime sa signature — Bürklin-Wolf dans un style biodynamique épuré, von Winning avec un élevage sous bois marqué, Mosbacher dans un registre plus classique —, mais tous révèlent la même profondeur saline et la même droiture. Rarissimes et chers, ces vins se bonifient sur vingt ans et plus, et constituent l'un des sommets absolus du Riesling sec mondial. Pour l'amateur français, c'est sans doute le terroir qui rend le mieux justice à l'idée que le Pfalz peut produire des Riesling secs de tout premier plan mondial.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "basalte",
+        "gres",
+        "forst",
+        "kirchenstueck",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-forster-pechstein",
+      "nom": "Forster Pechstein",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-130 m",
+      "sols": "basalte noir concassé sur grès coloré — d'où le nom (« pierre de poix »)",
+      "caracteristiques_rapides": "Sols de basalte qui emmagasinent la chaleur, signature fumée et saline. L'un des grands GG de Forst, structure et tension remarquables. von Winning, Bürklin-Wolf, Mosbacher. VDP Grosse Lage.",
+      "notes_objectives": "Le Forster Pechstein doit son nom — « pierre de poix » — au basalte noir concassé qui couvre ses sols, sur un soubassement de grès coloré. Sur la Mittelhaardt, à Forst, ce terroir volcanique est l'un des plus singuliers du Pfalz. Les blocs de basalte, qui accumulent et restituent la chaleur, donnent des Riesling puissants, profonds et marqués par une minéralité fumée et saline très reconnaissable, dotés d'une belle aptitude à la garde. Le Pechstein est exploité par les meilleurs domaines de Forst — Bürklin-Wolf, von Buhl, Georg Mosbacher —, qui en tirent des Grosses Gewächs parmi les plus typés de la région. Classé en VDP Grosse Lage, le Pechstein illustre, aux côtés du Kirchenstück, la vocation exceptionnelle des sols basaltiques de Forst pour le grand Riesling. Les blocs de basalte noir qui jonchent la surface sont si caractéristiques qu'ils ont donné son nom au cru ; ils agissent comme des radiateurs naturels, prolongeant la maturation et marquant les vins d'une empreinte minérale unique. Bürklin-Wolf et Reichsrat von Buhl, parmi d'autres, y produisent des Grosses Gewächs d'une grande énergie, plus tendus et plus « fumés » que ceux des crus voisins, à la garde impressionnante. Aux côtés du Kirchenstück et du Jesuitengarten, le Pechstein forme la trinité volcanique de Forst, qui place ce petit village parmi les hauts lieux du Riesling mondial. Là où le Kirchenstück joue la profondeur et la rondeur, le Pechstein mise sur la tension et l'énergie : ses vins, souvent décrits comme « fumés » ou « pierreux », sont parmi les plus reconnaissables du Pfalz. Le basalte, en réchauffant le sol, aide aussi la vigne à résister aux sécheresses estivales de plus en plus fréquentes. Les meilleurs millésimes de Pechstein, signés Bürklin-Wolf, von Buhl ou Mosbacher, possèdent une garde de plusieurs décennies et un statut de cru culte. Avec le Kirchenstück et le Jesuitengarten, il fait de Forst l'un des très grands villages du Riesling à l'échelle mondiale. Les amateurs y cherchent cette tension fumée si particulière, signature d'un des rares grands terroirs volcaniques voués au Riesling en Allemagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "basalte",
+        "forst",
+        "pechstein",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-forster-jesuitengarten",
+      "nom": "Forster Jesuitengarten",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-130 m",
+      "sols": "grès coloré, basalte et argile",
+      "caracteristiques_rapides": "Voisin du Kirchenstück, l'un des joyaux de Forst. Rieslings parfumés, profonds et de grande garde. von Winning, Bürklin-Wolf, Mosbacher. VDP Grosse Lage.",
+      "notes_objectives": "Le Forster Jesuitengarten est l'un des grands crus historiques de Forst, voisin immédiat du Kirchenstück. Son sol mêle grès coloré, basalte et argile, une combinaison qui conjugue chaleur, minéralité et finesse. Le terroir donne des Riesling à la fois racés et aromatiques, d'une élégance remarquable, un peu plus souples que ceux du Kirchenstück mais tout aussi profonds et de longue garde. Le Jesuitengarten est exploité par de grands noms comme Bürklin-Wolf, von Buhl et von Winning. Classé en VDP Grosse Lage, il fait partie du trio de tête des grands crus de Forst, et compte parmi les terroirs de Riesling les plus prestigieux du Pfalz. Ancien jardin des Jésuites, le cru bénéficie d'une situation idéale au pied du village, à deux pas du Kirchenstück. Le mélange de grès, de basalte et d'argile y donne des Riesling à la fois charmeurs et profonds, où la finesse aromatique le dispute à la minéralité. Bürklin-Wolf, von Buhl et von Winning — ce dernier dans un style plus marqué par l'élevage sous bois — en livrent des Grosses Gewächs très recherchés. Le Jesuitengarten complète le trio des grands crus de Forst et confirme la place du village au sommet de la hiérarchie des terroirs du Pfalz. Plus accessible et aromatique dans sa jeunesse que ses voisins, le Jesuitengarten n'en possède pas moins une grande profondeur et une belle capacité de garde. Son histoire, liée à l'ordre des Jésuites, ajoute à son prestige. Bürklin-Wolf, von Buhl et von Winning y signent des Grosses Gewächs très recherchés, chacun dans son style. Petit par la taille mais immense par la réputation, le Jesuitengarten parachève la trinité de Forst et confirme que ce minuscule village concentre quelques-uns des plus grands terroirs de Riesling d'Allemagne. Réunissant finesse et profondeur, il offre souvent l'une des plus belles portes d'entrée vers les grands crus volcaniques de Forst.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "basalte",
+        "gres",
+        "forst",
+        "jesuitengarten",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-forster-ungeheuer",
+      "nom": "Forster Ungeheuer",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-150 m",
+      "sols": "grès coloré, basalte, argile et calcaire",
+      "caracteristiques_rapides": "Grand site de Forst au nom « monstrueux », plus large que les clos voisins. Vins puissants et épicés. von Buhl, von Winning, Mosbacher. VDP Grosse Lage.",
+      "notes_objectives": "Le Forster Ungeheuer est l'un des grands crus de Forst, sur la Mittelhaardt. Son sol mêle grès coloré, basalte, argile et calcaire, une diversité qui donne aux Riesling à la fois puissance et finesse. Le terroir, bien exposé, produit des Riesling amples, profonds et de garde, à la minéralité marquée. Il est exploité par de grands domaines comme Reichsrat von Buhl et Georg Mosbacher. Classé en VDP Grosse Lage, l'Ungeheuer compte parmi les grands terroirs de Forst, dans le sillage du Kirchenstück et du Pechstein. Son nom (« le monstre ») renvoie à sa réputation ancienne de cru hors normes — Bismarck lui-même l'appréciait, dit-on. La diversité de ses sols, où le basalte se mêle au grès et au calcaire, lui confère une palette plus large que les autres crus de Forst : des Riesling charnus et puissants, mais d'une belle finesse. Von Buhl, Mosbacher et Eugen Müller y produisent de remarquables Grosses Gewächs, qui font de l'Ungeheuer l'un des grands terroirs du village, juste derrière le trio de tête. Avec ses Riesling à la fois opulents et racés, l'Ungeheuer est l'archétype du grand cru de Forst « hors les murs » du trio de tête, et l'un des terroirs les plus fiables de la Mittelhaardt. Les amateurs y trouvent un grand cru de Forst un peu plus abordable que le trio de tête, sans rien céder sur la profondeur.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "basalte",
+        "forst",
+        "ungeheuer"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-deidesheimer-kalkofen",
+      "nom": "Deidesheimer Kalkofen",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-150 m",
+      "sols": "calcaire (Kalk) et grès coloré — comme l'indique le nom (« four à chaux »)",
+      "caracteristiques_rapides": "Lieu-dit calcaire rare à Deidesheim, vins droits, salins et minéraux. von Winning, Bassermann-Jordan, von Buhl. VDP Grosse Lage.",
+      "notes_objectives": "Le Deidesheimer Kalkofen, sur la Mittelhaardt, doit son nom au calcaire (« four à chaux ») qui domine son sol, mêlé de grès coloré. Ce socle calcaire donne des Riesling structurés et de garde. Le terroir est exploité par de grands domaines de Deidesheim comme Bassermann-Jordan et von Winning, qui en tirent des Grosses Gewächs racés. Classé en VDP Grosse Lage, le Kalkofen illustre la finesse des terroirs calcaires de Deidesheim, l'un des grands villages du Riesling du Pfalz. Le calcaire y joue le même rôle qu'à l'Idig de Königsbach : il apporte tension, salinité et finesse, et favorise une belle aptitude à la garde. Bassermann-Jordan et von Winning, parmi les grands noms de Deidesheim, en tirent des Grosses Gewächs racés et précis. Le Kalkofen confirme que Deidesheim, avec sa mosaïque de sols, est l'un des villages les plus complets de la Mittelhaardt pour le grand Riesling. Plus confidentiel que les crus de Forst, le Kalkofen n'en demeure pas moins un grand terroir calcaire, dont les Riesling gagnent en complexité avec quelques années de garde. Il fait partie de ces terroirs calcaires de Deidesheim qui récompensent la patience par une complexité saline remarquable.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "gres",
+        "deidesheim",
+        "kalkofen"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-deidesheimer-hohenmorgen",
+      "nom": "Deidesheimer Hohenmorgen",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-160 m",
+      "sols": "grès coloré, lœss et calcaire",
+      "caracteristiques_rapides": "Site de coteau de Deidesheim, exposition sud, vins concentrés et de garde. Bassermann-Jordan, von Winning. VDP Grosse Lage.",
+      "notes_objectives": "Le Deidesheimer Hohenmorgen est l'un des grands crus de Deidesheim, sur des sols de grès coloré, de lœss et de calcaire. Bien exposé, il donne des Riesling profonds et élégants. Le terroir est exploité par les meilleurs domaines de la commune, dont Bürklin-Wolf, Bassermann-Jordan et von Winning. Classé en VDP Grosse Lage, le Hohenmorgen compte parmi les terroirs de référence de Deidesheim pour le grand Riesling de la Mittelhaardt. Bien exposé et précoce, le Hohenmorgen est l'un des crus les plus réputés de Deidesheim, capable de Riesling profonds et de longue garde. Bürklin-Wolf, qui le classe au plus haut, ainsi que Bassermann-Jordan et von Winning, en font des Grosses Gewächs très recherchés. Le cru illustre l'élégance et la densité que les grands terroirs de Deidesheim savent conjuguer. Souvent considéré comme le meilleur cru de Deidesheim, le Hohenmorgen donne des Riesling à la fois puissants et fins, qui comptent parmi les belles réussites de la Mittelhaardt. Sa réputation en fait l'un des crus les plus convoités de la commune, recherché des amateurs de Riesling de garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "deidesheim",
+        "hohenmorgen"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-deidesheimer-kieselberg",
+      "nom": "Deidesheimer Kieselberg",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-150 m",
+      "sols": "galets et grès coloré sur argile (d'où « Kiesel », gravier)",
+      "caracteristiques_rapides": "Sols caillouteux drainants à Deidesheim, vins droits et fruités. Bassermann-Jordan, von Winning. VDP Grosse Lage.",
+      "notes_objectives": "Le Deidesheimer Kieselberg tire son nom des galets (« Kiesel ») qui parsèment son sol de grès coloré sur argile. Ce terroir bien drainé donne des Riesling fins et aromatiques. Il est exploité par de grands domaines de Deidesheim comme von Winning et Bassermann-Jordan. Classé en VDP Grosse Lage, le Kieselberg illustre la diversité des sols de Deidesheim et leur aptitude à produire des Riesling racés et de garde. Les galets qui parsèment le sol assurent un excellent drainage et une bonne restitution de la chaleur, donnant des Riesling au fruit éclatant et à la trame fine. Von Winning, dans son style marqué par l'élevage en barrique, et Bassermann-Jordan en sont de beaux interprètes. Le Kieselberg fait partie des grands crus qui font de Deidesheim un village de référence du Riesling de la Mittelhaardt. Le Kieselberg illustre l'importance des galets et du grès dans la palette des terroirs de Deidesheim, donnant des Riesling éclatants et précis, prisés des amateurs. Son fruit éclatant et sa précision en font un cru particulièrement séduisant dans sa jeunesse comme à la garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "gravier",
+        "deidesheim",
+        "kieselberg"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-deidesheimer-grainhuebel",
+      "nom": "Deidesheimer Grainhübel",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-140 m",
+      "sols": "argile, calcaire et grès coloré",
+      "caracteristiques_rapides": "Petit grand site de Deidesheim, vins riches et structurés. Bassermann-Jordan, von Buhl. VDP Grosse Lage.",
+      "notes_objectives": "Le Deidesheimer Grainhübel est un grand cru de Deidesheim sur des sols d'argile, de calcaire et de grès coloré. Cette combinaison donne des Riesling structurés et profonds. Le terroir est exploité par des domaines de premier plan comme Bürklin-Wolf et Bassermann-Jordan. Classé en VDP Grosse Lage, le Grainhübel compte parmi les bons terroirs de Deidesheim pour le Riesling de garde de la Mittelhaardt. La proportion d'argile et de calcaire confère aux Riesling du Grainhübel une structure ferme et une belle profondeur. Bürklin-Wolf et Bassermann-Jordan y signent des Grosses Gewächs de garde. Aux côtés du Hohenmorgen, du Kieselberg et du Kalkofen, le Grainhübel complète la remarquable série de grands crus de Deidesheim. Avec sa trame ferme et sa profondeur, le Grainhübel complète la remarquable série de grands crus qui font de Deidesheim l'un des villages phares du Riesling du Pfalz. Il confirme la richesse de la mosaïque de sols qui fait de Deidesheim l'un des villages les plus complets de la Mittelhaardt.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "argile",
+        "deidesheim",
+        "grainhuebel"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-ruppertsberger-reiterpfad",
+      "nom": "Ruppertsberger Reiterpfad",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-150 m",
+      "sols": "grès coloré et calcaire, sables",
+      "caracteristiques_rapides": "Grande lieu-dit de Ruppertsberg, exposition sud, vins souples et parfumés. von Winning (Erste Lage), von Buhl. VDP en partie.",
+      "notes_objectives": "Le Ruppertsberger Reiterpfad est un vaste et grand cru de la Mittelhaardt, à Ruppertsberg. Ses sols de grès coloré, de calcaire et de sables donnent des Riesling élégants et aromatiques. Le terroir est exploité par de grands domaines comme von Winning, Bürklin-Wolf et A. Christmann, dont certaines parcelles (comme le « Reiterpfad ») sont particulièrement réputées. Classé en VDP Grosse Lage, le Reiterpfad illustre la finesse des terroirs de Ruppertsberg, à la pointe sud du cœur historique de la Mittelhaardt. Vaste et réputé, le Reiterpfad abrite en son sein des parcelles d'élite, comme « In der Hohl », particulièrement prisées. Ses sols de grès et de calcaire donnent des Riesling élégants et aromatiques, parfois plus accessibles dans leur jeunesse que ceux de Forst. Von Winning, Bürklin-Wolf et Christmann comptent parmi ses meilleurs interprètes, faisant du Reiterpfad l'un des grands crus de la pointe sud du cœur historique de la Mittelhaardt. Ses meilleures parcelles, comme « In der Hohl », donnent des Riesling d'une grande finesse, et font du Reiterpfad l'un des grands crus les plus appréciés de la Mittelhaardt méridionale. Vaste mais inégal, il révèle le mieux sa grandeur dans ses parcelles d'élite, travaillées par les meilleurs domaines.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "calcaire",
+        "ruppertsberg",
+        "reiterpfad"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-ruppertsberger-gaisboehl",
+      "nom": "Ruppertsberger Gaisböhl",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-160 m",
+      "sols": "grès coloré et lœss",
+      "caracteristiques_rapides": "Monopole de Dr. Bürklin-Wolf à Ruppertsberg, vinifié en Grand Cru maison. Vins fins et précis. VDP Grosse Lage.",
+      "notes_objectives": "Le Ruppertsberger Gaisböhl est un grand cru de Ruppertsberg, exploité en monopole par le domaine Bürklin-Wolf. Ses sols de grès coloré et de lœss donnent des Riesling racés et de garde. Le monopole, conduit en biodynamie, permet une expression très cohérente de ce terroir bien exposé. Classé en VDP Grosse Lage, le Gaisböhl illustre, par son statut de monopole, la logique parcellaire des grands crus du Pfalz et la signature de Bürklin-Wolf. Le statut de monopole, rare en Allemagne, permet à Bürklin-Wolf d'y exprimer une vision très cohérente du terroir, conduite en biodynamie depuis les années 1990. Les Riesling du Gaisböhl, sur grès et lœss, allient rondeur et précision. Le cru illustre la philosophie parcellaire et le classement « Premier/Grand Cru » à la bourguignonne qu'a adopté ce grand domaine de la Mittelhaardt. Le Gaisböhl illustre, par son statut de monopole et sa conduite biodynamique, la vision parcellaire à la bourguignonne qui a fait la réputation moderne de Bürklin-Wolf. Sa conduite en monopole en fait un cas d'école de la lecture parcellaire des grands terroirs du Pfalz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "ruppertsberg",
+        "gaisboehl",
+        "monopole",
+        "buerklin-wolf"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-wachenheimer-geruempel",
+      "nom": "Wachenheimer Gerümpel",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-160 m",
+      "sols": "calcaire, argile et grès coloré",
+      "caracteristiques_rapides": "Grand site de Wachenheim, vins élégants et minéraux. Bürklin-Wolf, Bart. VDP Grosse Lage.",
+      "notes_objectives": "Le Wachenheimer Gerümpel est l'un des grands crus de Wachenheim, sur la Mittelhaardt. Ses sols de calcaire, d'argile et de grès coloré donnent des Riesling fins et structurés. Le terroir est exploité par de grands domaines comme Bürklin-Wolf et J.L. Wolf. Classé en VDP Grosse Lage, le Gerümpel compte parmi les terroirs de référence de Wachenheim, l'un des grands villages du Riesling de la Mittelhaardt. Wachenheim, à la limite nord du cœur de la Mittelhaardt, possède en le Gerümpel l'un de ses meilleurs terroirs. Les sols calcaires et argileux y donnent des Riesling fins, structurés et de garde. Bürklin-Wolf en est le grand interprète, confirmant la place de Wachenheim parmi les villages de premier plan du Riesling du Pfalz. Le Gerümpel confirme la place de Wachenheim parmi les grands villages de la Mittelhaardt, avec des Riesling structurés qui gagnent en complexité au vieillissement. Il demeure la référence de Wachenheim, village charnière entre le cœur historique de la Mittelhaardt et ses marges nord.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "wachenheim",
+        "geruempel"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-wachenheimer-rechbaechel",
+      "nom": "Wachenheimer Rechbächel",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-150 m",
+      "sols": "grès coloré et argile",
+      "caracteristiques_rapides": "Monopole de Dr. Bürklin-Wolf à Wachenheim. Vins droits et salins. VDP Grosse Lage.",
+      "notes_objectives": "Le Wachenheimer Rechbächel est un grand cru de Wachenheim exploité en monopole par le domaine Bürklin-Wolf. Ses sols de grès coloré et d'argile donnent des Riesling élégants et précis. Le statut de monopole, conduit en biodynamie, en fait un terroir d'une grande cohérence. Classé en VDP Grosse Lage, le Rechbächel illustre, comme le Gaisböhl, l'art des monopoles parcellaires de Bürklin-Wolf sur la Mittelhaardt. Petit clos exploité en monopole par Bürklin-Wolf, le Rechbächel offre, comme le Gaisböhl, une expression d'une grande pureté grâce à la maîtrise totale du domaine sur son terroir. Ses Riesling, sur grès et argile, séduisent par leur élégance et leur précision. Le cru illustre l'art des monopoles parcellaires qui distingue ce domaine de la Mittelhaardt. Petit monopole d'une grande pureté, le Rechbächel témoigne du soin extrême apporté par Bürklin-Wolf à ses terroirs en propre à Wachenheim. Sa rareté, liée à son statut de monopole, en fait un cru recherché des connaisseurs du Pfalz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "wachenheim",
+        "rechbaechel",
+        "monopole",
+        "buerklin-wolf"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-koenigsbacher-idig",
+      "nom": "Königsbacher Idig",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-200 m",
+      "sols": "calcaire (Muschelkalk) et argile",
+      "caracteristiques_rapides": "Site phare de A. Christmann à Königsbach, sur calcaire. Rieslings (et Spätburgunder) profonds et salins, parmi les plus complets du Pfalz. VDP Grosse Lage.",
+      "notes_objectives": "Le Königsbacher Idig est l'un des plus grands terroirs de la Mittelhaardt, sur les hauteurs de Königsbach. À la différence des sols volcaniques de Forst, il repose sur le calcaire (Muschelkalk) et l'argile, un socle propice aussi bien au Riesling qu'au Spätburgunder. Son exposition et sa pente en font un site précoce et régulier, qui donne des Riesling profonds et salins ainsi que de grands Pinots Noirs. L'Idig est indissociable du domaine A. Christmann, qui en est le maître incontesté et en tire des Grosses Gewächs parmi les plus aboutis du Pfalz. Classé en VDP Grosse Lage, l'Idig illustre la grandeur des terroirs calcaires de la Mittelhaardt, capables de produire de très grands blancs comme de très grands rouges. Le calcaire confère ici aux vins une tension et une race particulières, distinctes du style volcanique de Forst. C'est aussi l'un des rares grands crus du Pfalz à exceller autant en Riesling qu'en Spätburgunder. Steffen Christmann, longtemps président du VDP national, y conduit le vignoble en biodynamie et en a fait l'un des terroirs les plus aboutis de la région, dont les Grosses Gewächs rouges et blancs comptent parmi les références allemandes. L'Idig illustre la grandeur méconnue des terroirs calcaires de la Mittelhaardt, capables de rivaliser avec les sols volcaniques de Forst. L'Idig est l'un des rares grands crus du Pfalz à porter une double couronne : ses Riesling figurent parmi les plus profonds de la Mittelhaardt, et son Spätburgunder compte parmi les tout meilleurs Pinots Noirs d'Allemagne. Le travail de Steffen Christmann, en biodynamie et avec une approche parcellaire très bourguignonne, y a porté la précision à son comble. L'Idig illustre ainsi la modernité du Pfalz et la capacité de ses terroirs calcaires à produire, sur un même coteau, de très grands blancs et de très grands rouges. Rares sont les terroirs allemands à atteindre un tel niveau dans les deux couleurs : c'est ce qui fait de l'Idig un cru à part dans le Pfalz.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "koenigsbach",
+        "idig",
+        "christmann",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-kallstadter-saumagen",
+      "nom": "Kallstadter Saumagen",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-220 m",
+      "sols": "calcaire coquillier (Kalkmergel), ancienne carrière de chaux",
+      "caracteristiques_rapides": "Amphithéâtre calcaire de Kallstadt, terroir mythique des secs de garde. Koehler-Ruprecht en référence absolue. Vins puissants, droits et de très longue garde. VDP Grosse Lage.",
+      "notes_objectives": "Le Kallstadter Saumagen est l'un des terroirs les plus singuliers du Pfalz, au nord de la Mittelhaardt. Ancienne carrière de calcaire d'époque romaine, ce coteau en cuvette repose sur un sol de marne calcaire (Kalkmergel) très particulier. Ce socle calcaire donne des Riesling d'une structure, d'une tension et d'une longevité exceptionnelles, souvent austères dans leur jeunesse mais d'une garde remarquable. Le Saumagen est rendu célèbre par le domaine Koehler-Ruprecht, dont les Riesling élevés à l'ancienne (notamment la légendaire cuvée « R ») sont des références mondiales ; le domaine Rings y produit aussi de grands vins. Classé en VDP Grosse Lage, le Saumagen illustre la capacité des terroirs calcaires du Pfalz à donner des Riesling de très longue garde, à la personnalité affirmée. Sa forme en cuvette, héritée de l'exploitation de la pierre par les Romains, crée un microclimat chaud et abrité, tandis que le calcaire impose aux vins une trame serrée qui demande du temps pour s'ouvrir. Le domaine Koehler-Ruprecht en a fait une légende : ses Riesling vinifiés à l'ancienne, en grands foudres et sans artifice — au premier rang desquels la cuvée « R » —, comptent parmi les vins blancs allemands les plus capables de vieillir. Le domaine Rings y signe aussi de remarquables crus. Le Saumagen est ainsi l'un des terroirs les plus singuliers et les plus respectés du Pfalz, à part dans le paysage de la Mittelhaardt. Le nom du cru — qui désigne aussi un plat emblématique du Pfalz, le « Saumagen », rendu célèbre par le chancelier Helmut Kohl — ajoute à son aura populaire. Mais c'est sa géologie de marne calcaire, dans une ancienne carrière romaine, qui en fait la singularité. Sous l'impulsion de Bernd Philippi puis de la nouvelle équipe, Koehler-Ruprecht y perpétue une vinification d'un autre âge, sans technologie, qui donne des Riesling d'une longévité légendaire — certaines vieilles bouteilles rivalisent avec les plus grands blancs du monde. Le Saumagen est un cas à part, à la fois terroir d'exception et conservatoire d'un savoir-faire ancestral. Patient et exigeant, il récompense la garde comme peu d'autres terroirs allemands, et fascine autant les amateurs que les vignerons.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "kallstadt",
+        "saumagen",
+        "koehler-ruprecht",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-ungsteiner-weilberg",
+      "nom": "Ungsteiner Weilberg",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-200 m",
+      "sols": "calcaire et grès rouge",
+      "caracteristiques_rapides": "Grand site d'Ungstein sur calcaire, exposition sud. Pfeffingen en référence. Vins amples et minéraux. VDP Grosse Lage.",
+      "notes_objectives": "L'Ungsteiner Weilberg est un grand cru du nord de la Mittelhaardt, à Ungstein. Ses sols de calcaire et de grès rouge donnent des Riesling amples et minéraux. Le terroir est notamment exploité par le domaine Pfeffingen (Fuhrmann-Eymael), réputé pour ses Riesling et ses Scheurebe. Classé en VDP Grosse Lage, le Weilberg illustre le potentiel des terroirs calcaires du secteur de Bad Dürkheim et d'Ungstein. Le secteur d'Ungstein et de Bad Dürkheim, au nord de la Mittelhaardt, repose sur des sols calcaires et gréseux qui donnent des Riesling amples et savoureux. Le domaine Pfeffingen y excelle, tant en Riesling qu'en Scheurebe, dont il est l'un des meilleurs spécialistes. Le Weilberg illustre le potentiel de ce secteur septentrional, longtemps dans l'ombre de Forst et Deidesheim. Le Weilberg illustre la qualité retrouvée du secteur d'Ungstein et de Bad Dürkheim, où les sols calcaires donnent des Riesling savoureux et de belle tenue. Il incarne le renouveau qualitatif du nord de la Mittelhaardt, longtemps éclipsé par Forst et Deidesheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "ungstein",
+        "weilberg",
+        "pfeffingen"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-haardter-buergergarten",
+      "nom": "Haardter Bürgergarten",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-200 m",
+      "sols": "grès coloré et lœss",
+      "caracteristiques_rapides": "Site phare de Müller-Catoir à Haardt (près de Neustadt). Rieslings, Rieslaner et Scheurebe d'une intensité aromatique remarquable. Cuvée « Im Breumel ». VDP Grosse Lage.",
+      "notes_objectives": "Le Haardter Bürgergarten est un grand cru du sud de la Mittelhaardt, à Haardt près de Neustadt. Ses sols de grès coloré et de lœss donnent des Riesling d'une grande finesse aromatique. Le terroir est indissociable du domaine Müller-Catoir, l'un des plus réputés du Pfalz, qui en tire des Riesling et des cépages aromatiques d'une pureté remarquable. Classé en VDP Grosse Lage, le Bürgergarten illustre l'élégance des terroirs de grès du sud de la Mittelhaardt. Le secteur de Haardt et de Neustadt, au sud de la Mittelhaardt, doit beaucoup à la réputation du domaine Müller-Catoir, qui y produit des Riesling et des cépages aromatiques d'une pureté et d'une intensité saluées dans le monde entier. Les sols de grès et de lœss du Bürgergarten donnent des vins d'une grande finesse aromatique, confirmant le statut de grand cru de ce coteau du sud de la Mittelhaardt. Porté par l'excellence de Müller-Catoir, le Bürgergarten compte parmi les terroirs les plus fins du sud de la Mittelhaardt, autant pour le Riesling que pour les cépages aromatiques. Sous la main de Müller-Catoir, il atteint une pureté aromatique qui en fait l'un des plus beaux terroirs du sud de la Mittelhaardt.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "haardt",
+        "buergergarten",
+        "mueller-catoir"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-gimmeldinger-mandelgarten",
+      "nom": "Gimmeldinger Mandelgarten",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Mittelhaardt",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-200 m",
+      "sols": "grès coloré, lœss et sables",
+      "caracteristiques_rapides": "Site de Gimmeldingen dans le Meerspinne, vins parfumés et souples. Christmann, Müller-Catoir. VDP Grosse Lage.",
+      "notes_objectives": "Le Gimmeldinger Mandelgarten est un grand cru du sud de la Mittelhaardt, à Gimmeldingen. Ses sols de grès coloré, de lœss et de sables donnent des Riesling fins ainsi que de beaux cépages aromatiques (Muskateller, Scheurebe). Le terroir est exploité par de grands domaines comme Müller-Catoir et A. Christmann. Classé en VDP Grosse Lage, le Mandelgarten illustre la vocation aromatique des terroirs de grès et de sable du secteur de Neustadt. Le Mandelgarten, dont le nom évoque les amandiers du sud du Pfalz, est réputé pour la finesse aromatique de ses vins. Outre le Riesling, il excelle dans les cépages aromatiques comme le Muskateller et la Scheurebe. Müller-Catoir et A. Christmann en sont de grands interprètes, faisant de ce coteau de grès et de sable l'un des bons terroirs du secteur de Neustadt. Le Mandelgarten illustre la vocation aromatique des terroirs de grès et de sable du secteur de Neustadt, sublimée par les meilleurs vignerons de la commune. Il illustre la vocation du secteur de Neustadt pour des vins aromatiques d'une grande finesse.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "gres",
+        "gimmeldingen",
+        "mandelgarten"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-birkweiler-kastanienbusch",
+      "nom": "Birkweiler Kastanienbusch",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "250-330 m",
+      "sols": "schiste rouge et mélaphyre (Rotliegendes), en altitude",
+      "caracteristiques_rapides": "Le grand terroir d'altitude de la Südpfalz, sur schiste rouge volcanique (rare en Pfalz). Rieslings (et Spätburgunder) tendus, salins et de grande garde. Rebholz, Wehrheim. VDP Grosse Lage.",
+      "notes_objectives": "Le Birkweiler Kastanienbusch est le grand cru phare de la Südpfalz, sur les hauteurs de Birkweiler. Son terroir est unique dans la région : un schiste rouge et de la mélaphyre (roche volcanique) du Rotliegendes, qui en font l'un des points culminants du vignoble du sud. Ce sol volcanique et ferrugineux, conjugué à l'altitude et à la fraîcheur, donne des Riesling d'une grande minéralité, tendus et profonds, parmi les plus racés du Pfalz. Le Kastanienbusch est le terroir de prédilection des domaines Ökonomierat Rebholz et Dr. Wehrheim, dont les Grosses Gewächs sont des références de la Südpfalz. Classé en VDP Grosse Lage, le Kastanienbusch illustre la singularité géologique du sud du Pfalz et son potentiel pour de grands Riesling de schiste. Point culminant du vignoble de Birkweiler, le Kastanienbusch doit sa singularité à son sol de schiste rouge et de mélaphyre, vestige d'un volcanisme ancien, qui n'a pas d'équivalent ailleurs en Südpfalz. L'altitude et la fraîcheur y préservent une acidité vibrante. Le domaine Ökonomierat Rebholz, pionnier du renouveau de la Südpfalz, en a révélé tout le potentiel ; ses Riesling du Kastanienbusch, et notamment de la parcelle d'élite « Im Sonnenschein » voisine, comptent parmi les plus grands du Pfalz, aux côtés de ceux de Dr. Wehrheim. Le Kastanienbusch est devenu le symbole de la renaissance qualitative du sud du Pfalz et l'un de ses terroirs les plus prestigieux. Hansjörg Rebholz, héritier d'un domaine pionnier du vin sec en Allemagne, y a démontré dès les années 1980-1990 que la Südpfalz pouvait produire de grands Riesling de terroir, à une époque où la région était surtout connue pour ses vins de masse. Sa parcelle d'élite et ses Grosses Gewächs du Kastanienbusch sont aujourd'hui des références. Avec Dr. Wehrheim et quelques autres, Rebholz a fait de Birkweiler l'épicentre de la renaissance qualitative du sud du Pfalz. Le Kastanienbusch, par son sol volcanique unique et son altitude, en est le symbole le plus éclatant. Il demeure le porte-drapeau de la Südpfalz moderne et l'un des terroirs de Riesling les plus singuliers de toute l'Allemagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-rouge",
+        "birkweiler",
+        "kastanienbusch",
+        "rebholz",
+        "iconique",
+        "altitude"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-birkweiler-mandelberg",
+      "nom": "Birkweiler Mandelberg",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling"
+      ],
+      "altitude": "200-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Site calcaire de Birkweiler, terre d'élection du Weissburgunder (Pinot Blanc) le plus complet d'Allemagne. Rebholz et Wehrheim y excellent. VDP Grosse Lage.",
+      "notes_objectives": "Le Birkweiler Mandelberg est un grand cru de la Südpfalz, à Birkweiler, sur un sol de calcaire coquillier (Muschelkalk). À la différence du Kastanienbusch volcanique voisin, ce terroir calcaire est particulièrement propice au Weissburgunder. Il donne de grands Weissburgunder (Pinot Blanc) ainsi que de beaux Riesling, racés et minéraux. Il est exploité par les domaines Dr. Wehrheim et Rebholz. Classé en VDP Grosse Lage, le Mandelberg illustre la vocation du calcaire de la Südpfalz pour les grands Burgundern blancs. Sur le calcaire du Mandelberg, le Weissburgunder (Pinot Blanc) atteint l'un de ses sommets allemands : Dr. Wehrheim en est l'un des maîtres incontestés. Le terroir donne aussi de beaux Riesling, tendus et salins. Aux côtés du Kastanienbusch volcanique, le Mandelberg illustre la diversité géologique de Birkweiler, partagé entre schiste rouge et calcaire. Aux côtés du Kastanienbusch, le Mandelberg fait de Birkweiler un village majeur de la Südpfalz, où calcaire et schiste rouge offrent deux visages complémentaires du grand vin. Référence allemande du Weissburgunder, il complète idéalement le Kastanienbusch dans la palette de Birkweiler.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "weissburgunder",
+        "pinot-blanc",
+        "calcaire",
+        "birkweiler",
+        "mandelberg"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-siebeldinger-im-sonnenschein",
+      "nom": "Siebeldinger Im Sonnenschein",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "altitude": "180-240 m",
+      "sols": "calcaire, grès et argile (parcelle « Ganshorn » sur galets)",
+      "caracteristiques_rapides": "Site phare d'Ökonomierat Rebholz à Siebeldingen. Rieslings et Weissburgunder précis et salins ; parcelle Ganshorn en pointe. VDP Grosse Lage.",
+      "notes_objectives": "Le Siebeldinger Im Sonnenschein est un grand cru de la Südpfalz, à Siebeldingen, sur des sols de calcaire, de grès et d'argile. Sa parcelle la plus célèbre, le « Ganshorn », est un joyau. Le terroir donne de grands Riesling et Weissburgunder, tendus et profonds. Il est indissociable du domaine Ökonomierat Rebholz, l'un des plus grands du Pfalz, qui en tire des Grosses Gewächs de référence. Classé en VDP Grosse Lage, l'Im Sonnenschein illustre l'excellence des terroirs calcaires de la Südpfalz. La parcelle historique du « Ganshorn », au cœur de l'Im Sonnenschein, est l'un des joyaux de la Südpfalz. Le domaine Ökonomierat Rebholz y produit des Riesling et des Weissburgunder parmi les plus grands de la région, d'une tension et d'une pureté remarquables. Le cru illustre, avec le Kastanienbusch, l'excellence atteinte par la Südpfalz sur ses meilleurs terroirs calcaires. Magnifié par le domaine Rebholz, l'Im Sonnenschein est l'un des sommets de la Südpfalz, où le calcaire donne des blancs d'une tension et d'une longueur remarquables. Magnifié par Rebholz, il compte parmi les sommets blancs de toute la Südpfalz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "weissburgunder",
+        "calcaire",
+        "siebeldingen",
+        "im-sonnenschein",
+        "rebholz"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-burrweiler-schaewer",
+      "nom": "Burrweiler Schäwer",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-260 m",
+      "sols": "schiste (ardoise) — unique en Südpfalz",
+      "caracteristiques_rapides": "Rare lieu-dit sur schiste de la Südpfalz, signature minérale tranchante. Messmer en référence. VDP Grosse Lage.",
+      "notes_objectives": "Le Burrweiler Schäwer est un terroir unique en Südpfalz : c'est l'un des très rares coteaux de schiste (ardoise) de la région, à Burrweiler. Ce sol singulier donne aux Riesling une minéralité et une finesse particulières, évoquant ceux des régions d'ardoise du nord. Le terroir est notamment exploité par les domaines Messmer et Theo Minges. Classé en VDP Grosse Lage, le Schäwer illustre la diversité géologique de la Südpfalz et l'expression si particulière du Riesling de schiste dans le sud du Pfalz. Dans une Südpfalz dominée par le calcaire et le grès, l'affleurement de schiste du Schäwer fait figure d'exception géologique, presque un clin d'œil aux grands terroirs ardoisiers du nord de l'Allemagne. Les Riesling y gagnent une minéralité et une finesse singulières. Messmer et Theo Minges en sont les principaux interprètes, faisant de ce cru rare l'une des curiosités les plus intéressantes du sud du Pfalz. Curiosité géologique autant que grand terroir, le Schäwer prouve que la Südpfalz, terre de calcaire et de grès, peut aussi offrir de grands Riesling de schiste. Cru rare et atypique, il enrichit la diversité géologique déjà remarquable du sud du Pfalz.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste",
+        "burrweiler",
+        "schaewer"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-schweigener-sonnenberg",
+      "nom": "Schweigener Sonnenberg",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "200-300 m",
+      "sols": "calcaire coquillier (Muschelkalk), parcelles à cheval sur la frontière française",
+      "caracteristiques_rapides": "Grand terroir de Pinot Noir de la Südpfalz, dont certaines parcelles sont situées côté français. Friedrich Becker en référence : parmi les meilleurs Spätburgunder d'Allemagne. VDP Grosse Lage.",
+      "notes_objectives": "Le Schweigener Sonnenberg est un grand terroir de l'extrême sud du Pfalz, à Schweigen, sur la frontière franco-allemande — une partie de ses parcelles se trouve même en territoire français, en Alsace. Son sol de calcaire coquillier (Muschelkalk) est propice aux cépages bourguignons comme au Riesling. Le terroir, chaud et bien exposé, donne de grands Spätburgunder d'inspiration bourguignonne ainsi que de beaux Riesling et Weissburgunder. Il est indissociable du domaine Friedrich Becker, l'un des plus grands spécialistes du Pinot Noir d'Allemagne, dont les vignes s'étendent de part et d'autre de la frontière. Classé en VDP Grosse Lage, le Sonnenberg illustre la vocation du calcaire de Schweigen pour le grand Pinot Noir, dans un secteur transfrontalier unique en son genre. La particularité de Schweigen est unique en Allemagne : une part importante des vignes du Sonnenberg se trouve de l'autre côté de la frontière, sur le sol français, tout en étant vinifiée et commercialisée en vin allemand. Fritz Becker a bâti sur ce calcaire transfrontalier l'une des plus grandes réputations du Pinot Noir allemand, avec des Spätburgunder d'une finesse bourguignonne — dont les célèbres crus « Sankt Paul » et « Kammerberg » sont issus. Le Sonnenberg illustre ainsi la vocation rouge du Pfalz méridional et une histoire viticole qui ignore les frontières, sur un terroir calcaire d'exception. Cette situation transfrontalière, héritée de l'histoire mouvementée de la région, donne lieu à une réglementation unique en Europe, qui autorise la vinification en Allemagne de raisins récoltés en France. Fritz Becker, puis son fils, en ont fait un argument de grandeur plutôt qu'une contrainte. Les Pinots Noirs issus du Sonnenberg et de ses parcelles d'élite comptent, millésime après millésime, parmi les tout meilleurs d'Allemagne, salués pour leur finesse bourguignonne. Le Sonnenberg incarne ainsi une viticulture sans frontières et la consécration du Pfalz comme grande terre de Pinot Noir. Pour qui veut comprendre le grand Pinot Noir allemand, Schweigen et son Sonnenberg sont une étape obligée, à la croisée des cultures française et allemande.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "pinot-noir",
+        "calcaire",
+        "schweigen",
+        "sonnenberg",
+        "becker",
+        "rouge",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-schweigener-kammerberg",
+      "nom": "Schweigener Kammerberg",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "220-300 m",
+      "sols": "calcaire coquillier (Muschelkalk), versant français",
+      "caracteristiques_rapides": "Lieu-dit monopole de fait de Friedrich Becker, côté français de la frontière. Spätburgunder de très grande garde. VDP Grosse Lage.",
+      "notes_objectives": "Le Schweigener Kammerberg est un grand cru de Schweigen, à l'extrême sud du Pfalz, sur la frontière franco-allemande. Son sol de calcaire coquillier est propice au Pinot Noir. Le terroir, chaud et bien exposé, donne de grands Spätburgunder d'inspiration bourguignonne. Il est exploité par le domaine Friedrich Becker, référence du Pinot Noir allemand. Classé en VDP Grosse Lage, le Kammerberg illustre, aux côtés du Sonnenberg, la vocation du calcaire transfrontalier de Schweigen pour le grand Pinot Noir. Comme le Sonnenberg voisin, le Kammerberg s'étend en partie sur le sol français, témoignant de l'histoire transfrontalière de Schweigen. Son calcaire coquillier, chaud et bien drainé, donne des Spätburgunder d'une grande finesse. Fritz Becker en tire l'un de ses crus de prestige, confirmant la place de Schweigen parmi les plus grands terroirs de Pinot Noir d'Allemagne. Avec le Sonnenberg et le Sankt Paul, le Kammerberg compose la constellation des grands crus de Schweigen, où Friedrich Becker a porté le Pinot Noir allemand à son sommet. Il participe pleinement à la réputation de Schweigen comme l'un des grands villages du Pinot Noir allemand.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "pinot-noir",
+        "calcaire",
+        "schweigen",
+        "kammerberg",
+        "becker",
+        "rouge"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    },
+    {
+      "id": "de-pfalz-terr-sankt-paul-schweigen",
+      "nom": "Sankt Paul (Schweigen)",
+      "type": "lieu-dit",
+      "region": "Pfalz",
+      "sous_region": "Südpfalz",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "220-300 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Site phare du domaine Jülg à Schweigen, sur calcaire à la frontière. Spätburgunder et Riesling ciselés. VDP Grosse Lage.",
+      "notes_objectives": "Le Sankt Paul est l'un des plus grands terroirs de Pinot Noir d'Allemagne, à Schweigen, sur la frontière franco-allemande — comme souvent à Schweigen, une partie des vignes se trouve côté français. Son sol de calcaire coquillier est idéal pour le Spätburgunder. Le terroir donne des Pinots Noirs d'une grande finesse et d'une profondeur remarquable. Il est le grand cru emblématique du domaine Friedrich Becker, dont le « St. Paul » compte parmi les meilleurs Pinots du pays. Classé en VDP Grosse Lage, le Sankt Paul illustre au plus haut niveau la vocation bourguignonne du calcaire de Schweigen. Le « St. Paul » de Friedrich Becker est régulièrement cité parmi les tout meilleurs Pinots Noirs d'Allemagne, capable de rivaliser avec de grands bourgognes. Le calcaire, l'exposition et le travail méticuleux du domaine y donnent des vins d'une profondeur et d'une élégance rares. Le cru, à cheval sur la frontière, est l'aboutissement de la quête bourguignonne menée à Schweigen depuis des décennies. Sommet de la quête bourguignonne de Schweigen, le Sankt Paul est l'un des très rares terroirs allemands capables de produire un Pinot Noir de rang mondial. Pour beaucoup, il représente tout simplement l'un des plus grands terroirs de Pinot Noir hors de Bourgogne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "riesling",
+        "calcaire",
+        "schweigen",
+        "sankt-paul",
+        "juelg"
+      ],
+      "source": "vdp.de|grosse-lage.de|jamessuckling"
+    }
+  ]
+}

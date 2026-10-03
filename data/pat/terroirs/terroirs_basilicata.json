@@ -1,0 +1,387 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "basilicata",
+  "region_label": "Basilicata (Italie)",
+  "source_file": "terroirs_basilicata.json",
+  "built_at": "2026-07-11",
+  "count": 13,
+  "items": [
+    {
+      "id": "it-basilicata-terr-aglianico-del-vulture-superiore",
+      "nom": "Aglianico del Vulture Superiore",
+      "type": "appellation (DOCG)",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~400-700 m",
+      "sols": "pyroclastiques (basalte, lapilli, tuf) du Monte Vulture, sur les meilleures pentes",
+      "caracteristiques_rapides": "La seule DOCG de la Basilicata (2010) : Aglianico de crus et de vieilles vignes, longuement élevé (3 ans mini), profond, minéral et de très longue garde, sommet du « Barolo du Sud ».",
+      "notes_objectives": "L'Aglianico del Vulture Superiore est la seule DOCG de la Basilicata, consacrée en 2010, et le sommet qualitatif du grand rouge de la région. Produit sur les meilleures pentes du Monte Vulture, un volcan éteint du nord de la Basilicata, il représente l'élite de l'Aglianico, ce cépage majestueux surnommé « le Barolo du Sud ».\n\nLa mention Superiore impose des règles plus strictes que la DOC : rendements plus faibles, degré minimum de 13,5 %, et surtout un élevage prolongé d'au moins trois ans (dont douze mois en fût et douze mois en bouteille), ce qui en fait un vin de sélection, souvent issu de parcelles uniques ou de vieilles vignes. Sur les sols pyroclastiques du Vulture — basalte, lapilli, tuf, hérités des éruptions du stratovolcan éteint depuis quelque 40 000 ans —, l'Aglianico donne des rouges d'une profondeur, d'une minéralité et d'une structure remarquables. Puissants et tanniques dans leur jeunesse, marqués par la cerise noire, la prune, le poivre, la réglisse et des notes minérales, ils se patinent magnifiquement sur quinze à vingt-cinq ans, développant une complexité tertiaire (cuir, tabac, terre, goudron) tandis que les tanins se fondent en une texture soyeuse. Des domaines comme Elena Fucci (Titolo), Cantine del Notaio (Il Sigillo, La Firma) ou Paternoster (Don Anselmo) en sont les fers de lance. C'est l'accord parfait avec l'agneau, le sanglier, le gibier et les fromages affinés.\n\nLa seule DOCG de la Basilicata (2010) : Aglianico de crus et de vieilles vignes, longuement élevé (3 ans mini), profond, minéral et de très longue garde. C'est le sommet du « Barolo du Sud ».\n\nLa création de la DOCG Superiore en 2010 a couronné plusieurs décennies de montée en qualité du Vulture. Longtemps, cette région isolée — la Basilicata est la deuxième moins peuplée et moins productive d'Italie — était dominée par les coopératives, et son Aglianico, souvent vendu en vrac pour renforcer d'autres vins, restait méconnu du grand public. L'émergence, à partir des années 2000, d'une génération de vignerons ambitieux a tout changé, révélant que le Vulture pouvait rivaliser avec les plus grands terroirs à Aglianico, à commencer par le Taurasi campanien. L'Aglianico du Vulture s'en distingue d'ailleurs : considéré comme un biotype à part, il exprime davantage la minéralité et le fruit bleu, là où le Taurasi tend vers des tanins plus fermes et un fruit plus noir. Le style du Superiore a lui aussi évolué : les producteurs ont délaissé les excès de maturité et de bois pour rechercher la pureté du fruit et l'expression du terroir, certains vieillissant même leurs vins bien au-delà des minima légaux pour les proposer proches de leur apogée. Servi sur l'agneau (l'accord régional par excellence), le sanglier, le gibier ou des fromages très affinés, le Superiore se patine sur une génération, gagnant en soyeux et en complexité. Il incarne aujourd'hui le sommet de la Basilicata viticole et l'un des plus beaux ambassadeurs de l'Aglianico, ce grand cépage du Sud longtemps resté dans l'ombre du Nebbiolo et du Sangiovese.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rouge",
+        "docg",
+        "garde",
+        "cru",
+        "volcanique"
+      ],
+      "source": "winewithseth|winealchemy|vinous"
+    },
+    {
+      "id": "it-basilicata-terr-aglianico-del-vulture",
+      "nom": "Aglianico del Vulture",
+      "type": "appellation (DOC)",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "volcaniques (basalte, lapilli, tuf, pouzzolane) du Monte Vulture",
+      "caracteristiques_rapides": "Le grand rouge de la Basilicata (DOC 1971) : Aglianico pur sur les pentes du volcan éteint, structuré, tannique et de garde, comparé au Nebbiolo, l'un des plus grands rouges du Sud.",
+      "notes_objectives": "L'Aglianico del Vulture est le grand rouge de la Basilicata, l'un des plus grands vins du Sud de l'Italie et l'un des tout premiers vins classés du pays (DOC dès 1971). Produit exclusivement à partir du cépage Aglianico, sur les pentes du Monte Vulture, il incarne à lui seul l'identité viticole de la région.\n\nLe Monte Vulture, stratovolcan éteint culminant à 1 326 mètres, est le seul volcan de la région et l'un des rares d'Italie situés à l'est des Apennins. Sa dernière éruption remonte à environ 40 000 ans, et deux lacs occupent aujourd'hui son cratère. Ses sols volcaniques — riches, sombres, drainants, faits de basalte, de lapilli, de tuf et de pouzzolane — comptent parmi les rares terroirs du Sud capables de donner un Aglianico aussi riche et racé (seuls Taurasi et Taburno, en Campanie, rivalisent). L'Aglianico est un cépage tardif (vendangé fin octobre, parfois en novembre), à l'acidité naturelle élevée et à la peau épaisse, donc riche en tanins : le temps et un vinificateur habile en font un vin d'élégance plutôt que de rusticité, capable de vieillir vingt à vingt-cinq ans. La loi impose une altitude de 200 à 700 mètres, les meilleures parcelles se situant entre 300 et 500 mètres sur les versants sud-est. C'est l'accord idéal avec les viandes rôties, l'agneau et le gibier, un grand vin d'hiver.\n\nLe grand rouge de la Basilicata (DOC 1971) : Aglianico pur sur les pentes du volcan éteint, structuré, tannique et de garde, comparé au Nebbiolo. C'est l'un des plus grands rouges du Sud de l'Italie.\n\nL'Aglianico est un cépage très ancien, cultivé en Basilicata depuis au moins le VIe siècle av. J.-C. Son origine reste débattue : deux théories l'attribuent aux Grecs (qui l'auraient planté dans leur colonie de Metaponto, sur la côte lucanienne, ou en Campanie pour élaborer le fameux Falerne des Romains), tandis qu'une troisième, plus récente, le considère comme autochtone du sud de l'Italie, découvert et nommé par les Grecs. Son nom même évoquerait le mot « hellénique ». Sur le Vulture, ce cépage majestueux a trouvé l'un de ses grands terroirs d'élection. Le climat y joue un rôle clé : bien que situé dans le Sud, le massif, par son altitude, connaît un climat étonnamment frais, avec de fortes amplitudes thermiques et un ensoleillement parmi les plus généreux au monde, une combinaison idéale pour un cépage tardif qui a besoin de temps pour mûrir pleinement sans perdre son acidité. Servi sur les viandes rôties, l'agneau, le sanglier et le gibier — c'est un vin d'hiver par excellence —, l'Aglianico du Vulture se boit jeune sur son fruit et sa fougue tannique, ou patiné après une décennie, quand il déploie une complexité tertiaire remarquable. Longtemps l'un des secrets les mieux gardés d'Italie, il est aujourd'hui reconnu comme l'un des plus grands rouges du Sud, et sa réputation grandissante attire enfin l'attention que ce terroir volcanique unique mérite.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rouge",
+        "doc",
+        "garde",
+        "volcanique",
+        "autochtone"
+      ],
+      "source": "wine-searcher|deliciousitaly"
+    },
+    {
+      "id": "it-basilicata-terr-barile",
+      "nom": "Barile",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~450-600 m",
+      "sols": "tufs volcaniques et pouzzolane, amphithéâtre exposé, grottes de tuf",
+      "caracteristiques_rapides": "Le « grand cru » du Vulture : sur les meilleures pentes de Barile (Titolo, Sheshe), l'Aglianico atteint son sommet d'élégance et de minéralité (Elena Fucci, Paternoster, Basilisco).",
+      "notes_objectives": "Barile est considéré comme le « grand cru » du Vulture, le village-terroir le plus prestigieux de l'Aglianico del Vulture, celui qui abrite les parcelles les plus réputées et les plus grands domaines de l'appellation. Le nom même du village est célébré par un dicton local : « Non c'è Barolo senza Barile » (« Il n'y a pas de Barolo sans Barile »).\n\nBarile bénéficie d'un terroir d'exception : des sols de tuf volcanique et de pouzzolane, disposés en amphithéâtre sur les pentes du Vulture, et de célèbres grottes de tuf creusées dans la roche, utilisées depuis des siècles pour l'élevage des vins. C'est ici que se trouvent les contrade les plus fameuses : la Solagna del Titolo, d'où Elena Fucci tire son Titolo culte, et le complexe historique du Sheshe, où Basilisco vieillit ses crus dans des caves du XVe siècle. Sur ce terroir, l'Aglianico atteint son sommet d'élégance, de profondeur et de minéralité, dans des vins d'une grande finesse et d'une longue garde. Les plus grands noms du Vulture y sont installés (Elena Fucci, Paternoster, Basilisco, Macarico). C'est un accord idéal avec l'agneau, le sanglier, le gibier et les fromages affinés, chez le village qui incarne l'excellence de l'Aglianico del Vulture.\n\nLe « grand cru » du Vulture : sur les meilleures pentes de Barile (Titolo, Sheshe), l'Aglianico atteint son sommet d'élégance et de minéralité (Elena Fucci, Paternoster, Basilisco). C'est le village le plus prestigieux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "barile",
+        "aglianico",
+        "rouge",
+        "cru",
+        "grand-cru"
+      ],
+      "source": "wineenthusiast|winewithseth"
+    },
+    {
+      "id": "it-basilicata-terr-rionero-in-vulture",
+      "nom": "Rionero in Vulture",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~450-650 m",
+      "sols": "volcaniques (tuf, lapilli) des pentes de Rionero, grottes de tuf",
+      "caracteristiques_rapides": "L'un des grands villages-crus du Vulture : berceau des maisons historiques (D'Angelo, Cantine del Notaio), Aglianico profonds et de garde, souvent élevés en grottes de tuf.",
+      "notes_objectives": "Rionero in Vulture est l'un des grands villages-crus de l'Aglianico del Vulture, un haut lieu historique de l'appellation. Centre agricole accueillant du massif du Vulture, riche d'un passé remontant à l'époque romaine, il est le berceau de plusieurs des maisons fondatrices du grand rouge de la Basilicata.\n\nSur les pentes volcaniques de Rionero, à 450-650 mètres d'altitude, l'Aglianico donne des vins profonds, structurés et de garde, expression classique du Vulture. Le village abrite des domaines historiques comme D'Angelo (active depuis les années 1920, pionnière du barrique dans le Sud avec son Canneto) et Cantine del Notaio (l'un des sommets de l'appellation, avec La Firma et Il Sigillo), qui vieillissent leurs vins dans les grottes de tuf caractéristiques de la région. Rionero est ainsi l'un des cœurs battants du Vulture, à la fois gardien de la tradition et acteur du renouveau qualitatif. Sur ses sols de tuf et de lapilli, l'Aglianico exprime toute sa puissance et sa minéralité. C'est un accord idéal avec l'agneau, le sanglier, le gibier et les fromages affinés, chez un village historique qui a façonné l'identité de l'Aglianico del Vulture.\n\nL'un des grands villages-crus du Vulture : berceau des maisons historiques (D'Angelo, Cantine del Notaio), Aglianico profonds et de garde, souvent élevés en grottes de tuf. C'est un cœur historique de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "rionero",
+        "aglianico",
+        "rouge",
+        "cru",
+        "historique"
+      ],
+      "source": "winewithseth|intowine"
+    },
+    {
+      "id": "it-basilicata-terr-maschito",
+      "nom": "Maschito",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~500-600 m",
+      "sols": "volcaniques d'altitude, vieilles vignes (jusqu'à 80 ans)",
+      "caracteristiques_rapides": "Village-cru réputé pour ses vieilles vignes : à Maschito, l'Aglianico donne des vins riches, concentrés et terreux (Damaschito de Grifalco, Musto Carmelitano), expression profonde du terroir.",
+      "notes_objectives": "Maschito est un village-cru réputé du Vulture, particulièrement connu pour ses vieilles vignes d'Aglianico, parmi les plus anciennes de l'appellation. Sur les pentes de ce village, le cépage donne certaines de ses expressions les plus riches et les plus profondes.\n\nÀ Maschito, on trouve des parcelles de vignes très âgées (jusqu'à 80 ans), plantées en gobelet sur les sols volcaniques d'altitude, parfois entremêlées d'arbres fruitiers et d'oliviers selon la tradition. Ces vieilles vignes, à faibles rendements, donnent des Aglianico concentrés, riches et terreux, d'une grande profondeur, expression puissante du terroir volcanique du Vulture. C'est de Maschito que provient, par exemple, le Damaschito de Grifalco (un mono-cru de vieilles vignes salué par la critique), tandis que le domaine bio Musto Carmelitano y est installé. Le terroir de Maschito illustre la valeur du patrimoine de vieilles vignes du Vulture, gage de concentration et de complexité. Sur ses sols volcaniques élevés, l'Aglianico gagne en richesse et en caractère. C'est un accord idéal avec l'agneau, le sanglier, le gibier et les fromages très affinés, chez un village-cru réputé pour la profondeur de ses Aglianico issus de vieilles vignes.\n\nVillage-cru réputé pour ses vieilles vignes : à Maschito, l'Aglianico donne des vins riches, concentrés et terreux (Damaschito de Grifalco, Musto Carmelitano). C'est une expression profonde du terroir du Vulture.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "maschito",
+        "aglianico",
+        "rouge",
+        "cru",
+        "vieilles-vignes"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-basilicata-terr-venosa",
+      "nom": "Venosa",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~350-450 m",
+      "sols": "volcaniques et argilo-calcaires, terrains plus vastes et bas",
+      "caracteristiques_rapides": "Le grand village de l'est du Vulture (patrie du poète Horace) : terrains plus bas et amples, Aglianico structurés, du vin accessible aux crus (Terra dei Re, Cantina di Venosa, Re Manfredi).",
+      "notes_objectives": "Venosa est le grand village de l'est du Vulture, l'un des principaux terroirs de l'Aglianico del Vulture, et un lieu chargé d'histoire : c'est la patrie du poète latin Horace, né ici en 65 av. J.-C. Sur ce terroir, l'Aglianico se décline du vin accessible aux crus les plus sérieux.\n\nContrairement aux pentes escarpées de Barile ou Rionero, Venosa se caractérise par des terrains plus bas et plus amples, aux sols mêlant influences volcaniques et argilo-calcaires. L'Aglianico y donne des vins structurés, parfois un peu plus souples et accessibles que sur les hauteurs, tout en offrant, sur les meilleures parcelles, des crus profonds et de garde. Venosa est aussi un important centre de production : on y trouve la grande coopérative historique Cantina di Venosa (Carato Venusio), ainsi que des domaines comme Terra dei Re (Nocte), Grifalco ou Re Manfredi. Le village conjugue ainsi volume et qualité, tradition et modernité. Sur ses terroirs variés, l'Aglianico exprime différentes facettes, du rouge convivial au vin de garde. C'est un accord idéal avec l'agneau, le gibier, les viandes en sauce et les fromages, chez un grand village viticole du Vulture au riche passé antique.\n\nLe grand village de l'est du Vulture (patrie du poète Horace) : terrains plus bas et amples, Aglianico structurés, du vin accessible aux crus (Terra dei Re, Cantina di Venosa, Re Manfredi).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "venosa",
+        "aglianico",
+        "rouge",
+        "cru"
+      ],
+      "source": "wine-searcher|intowine"
+    },
+    {
+      "id": "it-basilicata-terr-rapolla",
+      "nom": "Rapolla",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~400-500 m",
+      "sols": "volcaniques (tuf, pouzzolane) des pentes de Rapolla",
+      "caracteristiques_rapides": "Village-cru du Vulture réputé pour ses vins minéraux et sa scène nature : à Rapolla, l'Aglianico exprime le terroir volcanique avec fraîcheur (Camerlengo), aux côtés de vieilles vignes.",
+      "notes_objectives": "Rapolla est un village-cru du Vulture réputé pour la minéralité de ses Aglianico et pour sa scène naturelle dynamique. Sur les pentes volcaniques de ce village, le cépage exprime le terroir avec fraîcheur et authenticité.\n\nSur les sols de tuf et de pouzzolane de Rapolla, à 400-500 mètres d'altitude, l'Aglianico donne des vins minéraux et racés, où la signature volcanique du Vulture s'exprime avec précision. Le village est notamment associé à la scène du vin nature de la région, avec des vignerons comme Antonio Cascarano (Camerlengo), gardien de vieilles vignes et de cépages autochtones, qui y vinifie des Aglianico authentiques et vivants, ou encore le domaine bio Tenuta I Gelsi. Rapolla illustre ainsi le versant artisanal et naturel du Vulture, aux côtés des grands domaines plus classiques des villages voisins. Sur ce terroir volcanique, l'Aglianico gagne en fraîcheur et en minéralité, dans des vins de caractère. C'est un accord idéal avec l'agneau, le gibier, une cuisine de caractère et les fromages, chez un village-cru du Vulture qui conjugue minéralité et vin nature.\n\nVillage-cru du Vulture réputé pour ses vins minéraux et sa scène nature : à Rapolla, l'Aglianico exprime le terroir volcanique avec fraîcheur (Camerlengo), aux côtés de vieilles vignes.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "rapolla",
+        "aglianico",
+        "rouge",
+        "cru",
+        "nature"
+      ],
+      "source": "vinous"
+    },
+    {
+      "id": "it-basilicata-terr-ginestra-e-ripacandida",
+      "nom": "Ginestra & Ripacandida",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~550-700 m",
+      "sols": "volcaniques d'altitude, parmi les plus hautes pentes du Vulture",
+      "caracteristiques_rapides": "Les villages d'altitude du Vulture : sur les pentes les plus élevées, l'Aglianico gagne en fraîcheur et en finesse, terroirs frais et tardifs (Michele Laluce), face plus élégante du cépage.",
+      "notes_objectives": "Ginestra et Ripacandida sont les villages d'altitude du Vulture, situés sur les pentes les plus élevées du massif, et représentent la face la plus fraîche et la plus fine de l'Aglianico del Vulture. À mesure que l'on monte sur les flancs du volcan, le terroir change de nature, et avec lui le caractère du vin.\n\nÀ des altitudes atteignant 600 à 700 mètres, parmi les plus hautes de l'appellation, l'Aglianico bénéficie d'un climat plus frais et de fortes amplitudes thermiques entre le jour et la nuit. Sur les sols volcaniques de ces hauteurs, il donne des rouges plus tendus, plus frais et plus fins que ceux des villages bas, où la chaleur produit des vins plus solaires et puissants. La maturation y est plus tardive, préservant l'acidité et la finesse aromatique du cépage, pour des vins d'une belle élégance et d'une réelle aptitude à la garde, où la minéralité volcanique s'exprime avec précision. Cette identité d'altitude, longtemps sous-estimée, est aujourd'hui recherchée par les amateurs en quête de fraîcheur et de définition, à l'heure où le réchauffement climatique valorise les terroirs élevés. Des vignerons comme Michele Laluce (à Ginestra) en révèlent le potentiel. C'est un accord idéal avec l'agneau, le gibier à plumes, les viandes blanches et les fromages, dans un style plus racé et élégant que les Aglianico de plaine.\n\nLes villages d'altitude du Vulture : sur les pentes les plus élevées, l'Aglianico gagne en fraîcheur et en finesse, terroirs frais et tardifs (Michele Laluce). C'est la face la plus élégante du cépage.\n\nL'intérêt pour les villages d'altitude du Vulture s'inscrit dans une tendance de fond qui traverse toute la viticulture italienne : la recherche de fraîcheur face au réchauffement climatique. Là où, jadis, les pentes basses et ensoleillées étaient privilégiées pour garantir une maturité pleine, ce sont aujourd'hui les hauteurs fraîches qui suscitent le plus d'enthousiasme, car elles préservent l'acidité, la finesse aromatique et la tension qui font les grands Aglianico. Ginestra et Ripacandida, parmi les communes les plus élevées de l'appellation, incarnent cette face plus élégante et plus racée du cépage. La maturation tardive y donne des vins au fruit plus frais (cerise, fruits bleus), à la structure plus verticale et à la minéralité volcanique affirmée, à l'opposé des expressions plus solaires et rondes des villages bas comme Melfi ou Lavello. Ce gradient d'altitude, qui va de 200 à 700 mètres au sein d'une même appellation, fait la richesse et la complexité du Vulture, offrant une palette de styles rare pour une région mono-cépage. Servis sur l'agneau, le gibier à plumes, les viandes blanches ou des fromages, les Aglianico de ces hauteurs séduisent par leur finesse et se patinent avec grâce. Portés par des vignerons attentifs comme Michele Laluce, ces terroirs d'altitude représentent l'une des directions les plus prometteuses du Vulture contemporain, celle d'un Aglianico d'élégance et de fraîcheur, taillé pour l'avenir.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "ginestra",
+        "ripacandida",
+        "aglianico",
+        "rouge",
+        "cru",
+        "altitude"
+      ],
+      "source": "winewithseth"
+    },
+    {
+      "id": "it-basilicata-terr-matera",
+      "nom": "Matera",
+      "type": "appellation (DOC)",
+      "region": "Basilicata",
+      "sous_region": "Matera",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Primitivo",
+        "Greco",
+        "Sangiovese",
+        "Malvasia"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "argilo-calcaires et sols du plateau des Murge",
+      "caracteristiques_rapides": "L'autre visage de la Basilicata, au sud : DOC de Matera (la cité des Sassi), Primitivo et Sangiovese en rouge, Greco et Malvasia en blanc, vins solaires et méridionaux (Dragone).",
+      "notes_objectives": "Le Matera est l'autre visage viticole de la Basilicata, une DOC produite dans le sud de la région, autour de la célèbre cité de Matera et de ses Sassi (quartiers troglodytiques classés au patrimoine mondial de l'UNESCO). Loin du Vulture volcanique, ce terroir méridional donne des vins solaires et généreux. Sur les sols argilo-calcaires du plateau des Murge, sous un climat chaud et sec, la DOC Matera produit des rouges à base de Primitivo et de Sangiovese, ainsi que des blancs de Greco et de Malvasia, et parfois de l'Aglianico. Ces vins, plus méridionaux et ensoleillés que l'Aglianico du Vulture, expriment une autre facette de la Basilicata. Des domaines comme Dragone en sont représentatifs. Le Matera illustre la diversité viticole de la région, entre le nord volcanique et le sud plus chaud. C'est un accord idéal avec la cuisine du sud de la Basilicata, les viandes grillées et les légumes pour les rouges, les poissons et les fromages frais pour les blancs, sur un terroir au patrimoine culturel exceptionnel.\n\nL'autre visage de la Basilicata, au sud : DOC de Matera (la cité des Sassi), Primitivo et Sangiovese en rouge, Greco et Malvasia en blanc, vins solaires et méridionaux (Dragone). C'est un terroir au riche patrimoine.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "matera",
+        "primitivo",
+        "greco",
+        "rouge",
+        "blanc",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-terr-terre-dellalta-val-dagri",
+      "nom": "Terre dell'Alta Val d'Agri",
+      "type": "appellation (DOC)",
+      "region": "Basilicata",
+      "sous_region": "Val d'Agri",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Aglianico"
+      ],
+      "altitude": "~400-700 m",
+      "sols": "argilo-calcaires de la haute vallée de l'Agri",
+      "caracteristiques_rapides": "La seconde DOC de la région (2003) : dans une vallée intérieure d'altitude, assemblages de Merlot, Cabernet et Aglianico, terroir méconnu du sud de la Basilicata (Battifarano).",
+      "notes_objectives": "Les Terre dell'Alta Val d'Agri forment la seconde DOC de la Basilicata (créée en 2003, trente-deux ans après l'Aglianico del Vulture), produite dans la haute vallée de l'Agri, une vallée intérieure et montagneuse du sud de la région. C'est un terroir méconnu, à l'écart des sentiers battus. Sur les sols argilo-calcaires de cette vallée d'altitude, sous un climat continental, la DOC produit surtout des rouges d'assemblage à base de Merlot, de Cabernet Sauvignon et d'Aglianico, un mariage inhabituel de cépages internationaux et autochtone. Ces vins, structurés et de caractère, diffèrent nettement de l'Aglianico pur du Vulture. Des domaines comme Battifarano en sont représentatifs. La Val d'Agri illustre la diversité méconnue de la Basilicata viticole, au-delà de son grand cépage roi. C'est un accord idéal avec les viandes rouges, le gibier et les fromages de la cuisine montagnarde locale, chez une appellation confidentielle d'une vallée intérieure du sud de la région.\n\nLa seconde DOC de la région (2003) : dans une vallée intérieure d'altitude, assemblages de Merlot, Cabernet et Aglianico, terroir méconnu du sud de la Basilicata (Battifarano).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "val-dagri",
+        "merlot",
+        "cabernet",
+        "aglianico",
+        "rouge",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-terr-grottino-di-roccanova",
+      "nom": "Grottino di Roccanova",
+      "type": "appellation (DOC)",
+      "region": "Basilicata",
+      "sous_region": "Roccanova",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Malvasia Nera",
+        "Montepulciano"
+      ],
+      "altitude": "~300-600 m",
+      "sols": "grès et argiles des collines de Roccanova",
+      "caracteristiques_rapides": "Curiosité unique : DOC où les vins vieillissent dans des « grottini », grottes creusées dans le grès tendre, à température idéale. Rouges de Sangiovese et Malvasia Nera, tradition insolite.",
+      "notes_objectives": "Le Grottino di Roccanova est une curiosité viticole unique de la Basilicata, une DOC produite autour du village de Roccanova, dans le sud de la région, célèbre pour une tradition de vieillissement insolite. Sa singularité tient en effet à ses « grottini » : des grottes creusées à même le grès tendre des collines, où les vins vieillissent traditionnellement dans des conditions naturelles de température et d'humidité idéales, une pratique ancestrale devenue l'emblème de l'appellation. Sur les sols de grès et d'argiles de Roccanova, la DOC produit des rouges à base de Sangiovese, de Malvasia Nera et de Montepulciano, des vins de tradition à la personnalité locale. Des domaines comme Tenuta Marino en sont représentatifs. Le Grottino di Roccanova illustre les traditions viticoles insolites et le patrimoine méconnu de la Basilicata, loin du Vulture. C'est un accord idéal avec la cuisine locale, les viandes et les fromages du sud de la région, chez une appellation curieuse où le vin mûrit dans le grès, pour les amateurs de spécialités rares.\n\nCuriosité unique : DOC où les vins vieillissent dans des « grottini », grottes creusées dans le grès tendre. Rouges de Sangiovese et Malvasia Nera, tradition insolite du sud de la Basilicata (Tenuta Marino).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "roccanova",
+        "grottino",
+        "sangiovese",
+        "rouge",
+        "grottes",
+        "doc",
+        "curiosite"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-terr-melfi-e-lavello",
+      "nom": "Melfi & Lavello",
+      "type": "commune / cru",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "volcaniques et argileux du nord du Vulture, terrains plus bas",
+      "caracteristiques_rapides": "Le nord du Vulture, plus bas et chaud : autour de Melfi (cité de Frédéric II) et Lavello, Aglianico plus solaires et généreux, terroirs de la frange septentrionale (Carbone, Bisceglia).",
+      "notes_objectives": "Melfi et Lavello forment la frange septentrionale du Vulture, la partie nord et basse de l'appellation Aglianico del Vulture, où le cépage donne des vins au profil plus solaire. Ces terroirs plus chauds offrent une expression différente de celle des villages hauts.\n\nÀ des altitudes plus faibles (200-450 mètres) et sous un climat plus chaud, sur des sols volcaniques et argileux, l'Aglianico y mûrit plus tôt et donne des vins plus généreux, ronds et solaires que sur les hauteurs fraîches de Ginestra ou de Barile. Melfi, ancienne capitale normande et cité chère à l'empereur Frédéric II (qui y promulgua ses célèbres Constitutions), abrite des domaines comme Carbone, tandis que Lavello accueille Bisceglia. Ces terroirs de la frange nord illustrent le gradient du Vulture, du sud volcanique et frais en altitude au nord plus bas et chaud. Sur ces sols, l'Aglianico exprime une facette plus accessible et fruitée. C'est un accord idéal avec l'agneau, les viandes rouges et les fromages, chez des villages du nord du Vulture au riche passé historique, pour des Aglianico plus solaires et généreux.\n\nLe nord du Vulture, plus bas et chaud : autour de Melfi (cité de Frédéric II) et Lavello, Aglianico plus solaires et généreux, terroirs de la frange septentrionale (Carbone, Bisceglia).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "vulture",
+        "melfi",
+        "lavello",
+        "aglianico",
+        "rouge",
+        "cru"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-terr-basilicata",
+      "nom": "Basilicata",
+      "type": "appellation (IGT)",
+      "region": "Basilicata",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico",
+        "Primitivo",
+        "Greco",
+        "Malvasia",
+        "Merlot"
+      ],
+      "altitude": "~0-700 m",
+      "sols": "sols variés (volcaniques, argilo-calcaires) de la région",
+      "caracteristiques_rapides": "La grande IGT régionale : cadre souple pour l'Aglianico et tous les cépages de la région, autochtones et internationaux, dont des cuvées d'auteur et nature hors DOC.",
+      "notes_objectives": "L'IGT Basilicata est l'indication géographique régionale, qui couvre l'ensemble du territoire de la région. Cadre souple et transversal, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC et de la DOCG. Elle rassemble tous les cépages de la région — au premier rang desquels l'Aglianico, mais aussi le Primitivo, le Greco, la Malvasia — ainsi que des cépages internationaux (Merlot, Cabernet), en rouge, blanc, rosé et effervescent. C'est notamment sous cette IGT que sont commercialisées de nombreuses cuvées qui sortent du cadre des appellations : des Aglianico d'entrée de gamme ou d'auteur, des vins nature, des expérimentations. Souple et créative, l'IGT Basilicata est un espace de liberté pour les vignerons, du vin accessible aux cuvées plus originales. Elle illustre la diversité de la production régionale, au-delà du seul Aglianico del Vulture, et accompagne le dynamisme retrouvé du vignoble lucanien. C'est un cadre à découvrir pour des vins variés de la région, sur une large palette de la cuisine locale.\n\nLa grande IGT régionale : cadre souple pour l'Aglianico et tous les cépages de la région, autochtones et internationaux, dont des cuvées d'auteur et nature hors DOC. C'est l'espace de liberté des vignerons lucaniens.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "basilicata",
+        "igt",
+        "aglianico",
+        "souple",
+        "multi-cepages"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

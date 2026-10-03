@@ -1,0 +1,2121 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "bordeaux",
+  "region_label": "Bordeaux",
+  "source_file": "France/Fichiers Producteurs finaux/producteurs_bordeaux_vPat.xlsx",
+  "built_at": "2026-05-16T20:45:00+00:00",
+  "count": 37,
+  "items": [
+    {
+      "id": "bdx-prod-ausone",
+      "nom": "Château Ausone",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": "Saint-Émilion (33330), coteau sud-est sous les remparts",
+      "statut_production": "conventionnel raisonné très avancé sur la biodiversité, pas de certification bio à ce jour",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "Domaine emblématique de **Saint-Émilion**, propriété de la **famille Vauthier depuis 1690** — soit **11 générations** de continuité familiale, ce qui est exceptionnel dans le Bordelais moderne. Aujourd'hui dirigé par **Alain Vauthier** (entré en 1976), avec ses enfants **Pauline Vauthier** (œnologue, présente depuis 2005), **Constance Vauthier** et **Édouard Vauthier** (co-gérant, parle de la onzième génération). Sœur d'Alain : Catherine Vauthier (co-propriétaire). **Point capital à intégrer dans tout conseil** : Ausone était classé **Premier Grand Cru Classé A** depuis 1955 (aux côtés de Cheval Blanc), mais **n'a plus ce rang depuis la réclassification de 2022** — le domaine a **volontairement quitté le classement de Saint-Émilion** (avec Cheval Blanc et Angélus) pour protester contre les critères considérés comme inadaptés (poids du marketing, du tourisme, de l'image dans la notation). Le terroir et la qualité du vin n'ont évidemment pas changé, mais la communication officielle a perdu ce repère. **Domaine de seulement 7 hectares** (parmi les plus petits des domaines iconiques mondiaux), sur le **coteau sud-est de Saint-Émilion**, sous les remparts médiévaux, en pente raide avec terrasses en pierre. Sols : **¼ argilo-calcaire mince sur calcaire à astéries, ¾ argilo-calcaire sur calcaire** — un terroir considéré par de nombreux vignerons bordelais comme **le plus grand de Saint-Émilion**. Exposition est-sud-est, abrité du nord et de l'ouest par les rochers — micro-climat idéal qui a permis à Ausone d'échapper sans dégât au gel terrible de 1956. Encépagement : ~50-55% **Cabernet Franc** (ce qui est rare et distinctif — la plupart des Saint-Émilion sont à dominance merlot), 45-50% Merlot, parfois 2% Cabernet Sauvignon résiduel. Densité 6 500 pieds/ha. Âge moyen des vignes 45-50 ans, certaines parcelles bien plus. Conduite traditionnelle, ébourgeonnage, effeuillage, **vendanges manuelles** sur **deux après-midis** typiquement (taille minuscule du vignoble). Approche très orientée biodiversité (haies, arbres fruitiers, plantes aromatiques, insectes/oiseaux/chauves-souris encouragés), recherche active sur la lutte contre le gel et le mildiou. **Pas de certification bio officielle à ce jour**, mais des pratiques très avancées. **Vinification** : macération froide, **fermentation en cuves bois traditionnelles de 54 hl** (rareté), **malolactique en barriques depuis 1995**, **élevage 18-24 mois en barriques 85% neuves** (réduit du 100% historique). **Michel Rolland a été consultant** à partir de 2002 (point qui divise — voir lecture Pat ci-dessous). **Élevage en carrière** sous le château (galeries creusées dans le calcaire au XVIe siècle, T° et hygrométrie constantes) — pratique séculaire maintenue. **Second vin** : **La Chapelle d'Ausone** depuis 1995 (~600 caisses/an, blend ~50% Merlot 50% Cabernet Franc). **Production Grand Vin** : ~1 500 caisses/an, soit **~18 000 bouteilles** — une rareté quasi absolue. **Autres propriétés Vauthier** : Château Moulin Saint-Georges, Château Fonbel, Château Simard, Haut Simard, et **Château La Clotte** (acquis 2014). **Prix indicatifs 2024-2026** : Grand Vin 400-900 € selon millésime, **2010, 2016, 2018, 2019, 2020 souvent au-delà de 600 €** ; La Chapelle d'Ausone 150-300 €. **Lecture Pat — terroir absolu, vinification discutable** : (1) **terroir probablement le plus grand de Saint-Émilion** — exposition, calcaire à astéries, pente, micro-climat, c'est rare absolu ; (2) **part de Cabernet Franc inhabituellement haute** = signature unique qui apporte fraîcheur, épice, finesse là où d'autres Saint-Émilion sombrent dans le merlot opulent ; (3) **11 générations Vauthier** = continuité humaine qui force le respect ; (4) **MAIS Michel Rolland consultant + 85% bois neuf + maître ès extraction** = la vinification a longtemps tiré le vin vers un profil plus puissant/uniforme que ce que le terroir suggère. Pat trouve les Ausone des années 1980-1990 (vinification plus retenue) souvent plus émouvants que les 2000-2010 dans leur jeunesse — il faut attendre 20-30 ans pour que le terroir reprenne le dessus ; (5) **sortie du classement 2022** = position assumée contre la dérive marketing du classement, à saluer même si la com en pâtit ; (6) **prix qui restent corrects pour un vin aussi rare** (face à un Latour ou un Cheval Blanc). À boire à **20-25 ans minimum**, idéalement 30-40 sur les grandes années. Service 16-17°C, **carafage 3-4h sur jeunesse**, verre Bordeaux large.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "premier-grand-cru-A",
+        "vauthier",
+        "iconique",
+        "garde",
+        "11-generations",
+        "alain-vauthier",
+        "pauline-vauthier",
+        "edouard-vauthier",
+        "constance-vauthier",
+        "cabernet-franc-dominant",
+        "calcaire-asteries",
+        "argilo-calcaire",
+        "coteau-sud-est",
+        "elevage-carriere",
+        "michel-rolland-consultant",
+        "bois-neuf-85",
+        "sortie-classement-2022",
+        "ex-premier-grand-cru-classe-A",
+        "7-hectares",
+        "rarete"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
+      "cuvees_phares": [
+        "Château Ausone (Grand Vin, ~1500 caisses, ~50% Cab Franc)",
+        "La Chapelle d'Ausone (second vin depuis 1995, ~600 caisses)"
+      ]
+    },
+    {
+      "id": "bdx-prod-climens",
+      "nom": "Château Climens",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Barsac",
+      "appellations_principales": [
+        "Barsac",
+        "Sauternes"
+      ],
+      "localisation": "Barsac (33720), plateau calcaire",
+      "statut_production": "biodynamie certifiée Demeter, pionnier de Bordeaux et du Sauternais",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**Premier Cru Classé 1855 de Barsac**, surnommé **« le Seigneur de Barsac »**. **Le plus grand cru de l'appellation Barsac** (qui peut juridiquement se vendre soit en Barsac, soit en Sauternes — Climens revendique fièrement le Barsac, plus rare et plus identitaire). Le nom Climens apparaît pour la première fois en **1547**. **Cinq familles seulement** se sont succédé en quasiment cinq siècles : Roborel de Climens (jusqu'en 1802), Binaud, Lacoste, Gounouilhou, **Lurton (depuis 1971)**, et désormais **Moitry (depuis 2022)**. **Lucien Lurton** (le patriarche de la dynastie qui possède aussi Brane-Cantenac, Bouscaut, Durfort-Vivens, etc.) achète Climens en 1971. **Sa fille Bérénice Lurton** prend la direction du domaine **à 22 ans en 1992** et le dirige pendant **30 ans**, dans une cohérence remarquable et une discrétion totale. **Juillet 2022 : Bérénice Lurton vend la participation majoritaire à la famille Moitry** via leur société Patrimonia Développement. **Jean-Hubert Moitry** (avocat d'affaires puis immobilier), son frère **Jérôme Moitry** et son épouse **Catherine Moitry** (issue d'une famille de négociants en vins de Corrèze) reprennent les rênes. **Bérénice Lurton conserve un rôle de conseil** dans la continuité. **Le directeur technique historique, Frédéric Nivelle (en poste depuis 1998), reste en place** — c'est la garantie de continuité technique qui rassure. **31 hectares en un seul tenant** sur le **plateau de Barsac**, à l'endroit le plus drainant de l'appellation où le **calcaire à astéries affleure sous des sables argileux** — terroir radicalement différent de celui d'Yquem (qui est sur graves). **Monocépage 100% Sémillon** — exception dans le Sauternais où la plupart des grands crus pratiquent le blend 80/20 Sémillon/Sauvignon. **Cette monoculture est la signature** : sur le calcaire de Barsac, le Sémillon développe **une finesse, une tension et une élégance** que peu de cuvées sauternaises atteignent. **Conversion biodynamique sous Bérénice Lurton et Frédéric Nivelle, certification Demeter** — **Climens devient pionnier de la biodynamie dans le Sauternais** (et un des très rares premiers crus classés 1855 entièrement en biodynamie, aux côtés de Pontet-Canet et Latour). **Tisanerie** sur place : plantes séchées récoltées au domaine et alentours pour préparer les décoctions biodynamiques. **Vinification** : vendanges manuelles par **tries successives** comme à Yquem (5 à 7 passages), **fermentation et élevage longs en barriques** (~30% bois neuf, beaucoup moins qu'Yquem — **expression du terroir avant tout**, pas du chêne), élevage 20-24 mois. **Sélection drastique** comme partout dans les grands Sauternes/Barsac : certains millésimes ne sont **pas produits**. **2018 : création d'Asphodèle**, premier vin blanc sec du domaine, avec l'aide de **Pascal Jolivet** (vigneron de Sancerre célèbre pour ses cuvées parcellaires) — manière intelligente de valoriser les baies pré-botrytis et d'élargir l'offre face à la désaffection des liquoreux. Nom inspiré du lis sauvage qui pousse sur les sols calcaires. **Production** : ~25 000 à 35 000 bouteilles de Climens par an selon le millésime, plus le second vin **Cyprès de Climens** et désormais Asphodèle. **Prix indicatifs 2024-2026** : Climens 75 cl **120-250 €** selon millésime (2001, 2007, 2009, 2011 considérés comme parmi les meilleurs récents) ; Cyprès de Climens 40-70 € ; Asphodèle (blanc sec) 40-60 €. **Vieux millésimes (1988, 1989, 1990) parfois 250-400 €**. **Lecture Pat — le liquoreux des amateurs avertis** : (1) **biodynamie certifiée Demeter dans le Sauternais** = pionnière, conviction n°1 et n°5 cochées à fond ; (2) **monocépage Sémillon sur calcaire** = expression de terroir unique, conviction n°3 ; (3) **30% de bois neuf seulement** vs 100% chez Yquem = on entend le terroir et le sémillon, pas la barrique — c'est ce qui rend Climens **plus tendu, plus précis, plus minéral** qu'Yquem, et c'est pourquoi Pat préfère souvent Climens à Yquem dans la dégustation comparative ; (4) **transition Lurton → Moitry à surveiller** mais signaux rassurants (Nivelle en place, Bérénice en conseil, valeurs partagées affichées) — pas de panique mais on regarde 2023-2026 ; (5) **prix raisonnables** pour un premier cru classé de cette qualité — un Climens 2011 à 150 € est un investissement émotionnel imbattable ; (6) **Asphodèle 2018+** est un blanc sec à découvrir, l'aide de Jolivet (Sancerre) garantit une approche tendue ; (7) **point d'inquiétude générale** : les liquoreux sont mal aimés par les buveurs modernes, le Sauternais traverse une crise depuis 20 ans (plusieurs châteaux ferment ou pivotent vers le blanc sec), donc soutenir Climens c'est soutenir tout un patrimoine. **Garde** : 20-50 ans facilement, idéalement à boire entre 15 et 30 ans. **Service 9-10°C**, ouvrir 30 min avant, pas de carafage, verre tulipe blanc moyen. **Accords** : foie gras, Roquefort, tartes aux fruits jaunes, **et surtout** : Climens convient mieux qu'Yquem sur **les volailles à la crème** et certains **plats asiatiques épicés-sucrés** (canard laqué, porc au caramel) — sa tension lui permet ces accords que la puissance d'Yquem peine à tenir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "barsac",
+        "premier-cru",
+        "1855",
+        "biodynamie",
+        "lurton",
+        "semillon-pur",
+        "sauternes",
+        "premier-cru-classe-1855",
+        "moitry-2022",
+        "ex-lurton-1971-2022",
+        "berenice-lurton-conseil",
+        "jean-hubert-moitry",
+        "jerome-moitry",
+        "frederic-nivelle-directeur-technique",
+        "biodynamie-demeter",
+        "monocepage-semillon",
+        "calcaire-asteries",
+        "pionnier-biodynamie-sauternais",
+        "asphodele-blanc-sec",
+        "pascal-jolivet-sancerre",
+        "tisanerie",
+        "tries-successives",
+        "seigneur-de-barsac",
+        "liquoreux",
+        "iconique"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller (Moitry/Climens, Reybier/Cos)",
+      "cepages_rois": [
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Château Climens (100% Sémillon, biodynamie Demeter, ~30% bois neuf)",
+        "Cyprès de Climens (second vin)",
+        "Asphodèle (blanc sec depuis 2018, aide Pascal Jolivet)"
+      ]
+    },
+    {
+      "id": "bdx-prod-cos",
+      "nom": "Château Cos d'Estournel",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Estèphe",
+      "appellations_principales": [
+        "Saint-Estèphe"
+      ],
+      "localisation": "Saint-Estèphe (33180), Médoc nord, frontière Pauillac",
+      "statut_production": "conversion biodynamie engagée depuis 2023, conventionnel raisonné auparavant, pas encore certifié",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Second Grand Cru Classé 1855 de Saint-Estèphe**, surnommé le « Maharadjah de Saint-Estèphe ». Fondé en **1811 par Louis-Gaspard d'Estournel**, négociant ayant développé un commerce florissant avec l'Inde (d'où les pagodes orientales, les sculptures d'éléphants et la porte de Zanzibar qui font de Cos un château hors-norme dans le Médoc). **Propriété de Michel Reybier depuis 2000**, industriel français (Hediard, Réserve Hôtels, intérêts en Champagne et à Tokaji). **Directeur technique : Dominique Arangoïts depuis 2000-2004** (continuité exceptionnelle), bras droit en cave **Angélique Vigouroux** depuis 2007. Œnologue consultant : **Pascal Chatonnet** (Vega Sicilia, Beaucastel). Côté direction générale, succession agitée : **Jean-Guillaume Prats** (1998-2012, fils de Bruno Prats), **Aymeric de Gironde** (2012-2017), puis **Michel Reybier reprend la direction** depuis 2017. **91 hectares** sur la commune de Saint-Estèphe, jouxtant la limite nord de Pauillac (voisin direct de Lafite-Rothschild — le ruisseau Jalle du Breuil sépare les deux). Le nom **« Cos »** vient du gascon et signifie **« colline de galets »** : terroir de **graves garonnaises profondes sur croupes**, sous-sol argilo-calcaire par endroits — proche du profil pauillacais plutôt que du saint-estèphe classique plus argileux. **61 parcelles, 19 types de sols différents** identifiés. Encépagement : ~60% Cabernet Sauvignon, 38% Merlot, plus parcelles minoritaires de Cabernet Franc et Petit Verdot. Âge moyen 45 ans, certaines vignes **80 à 100 ans**, le Grand Vin issu de vignes ~55 ans en moyenne. **Conversion à la biodynamie engagée depuis 2023** (chez Cos d'Estournel et Cos Labory racheté 2023) — c'est un virage récent et significatif, à suivre. **Chai gravitaire spectaculaire achevé en 2008-2009** : 2 000 m², **72 à 84 cuves inox tronconiques isothermes** (selon sources) de capacités variées, fonctionnement **100% par gravité** sans pompes (4 monte-jus à verre soulèvent le moût d'un étage à l'autre) — c'est une innovation rare à Bordeaux. **Vinification parcellaire stricte**. **Depuis 2023, le style a changé** sous l'impulsion d'Arangoïts : macérations raccourcies (3 semaines au lieu de 4), températures de fermentation plus basses, fermentations en baies entières, recherche de fraîcheur et de précision. Le Grand Vin 2025 est annoncé à **13,25% d'alcool** — repère intéressant pour quelqu'un qui se rappelle les Cos 2009-2010 chargés à 14,5%. **Élevage 18 mois en barriques, environ 60% bois neuf** pour le Grand Vin. **Gamme** : (1) **Château Cos d'Estournel rouge** Grand Vin ; (2) **Les Pagodes de Cos**, second vin créé 1994, devenu un des meilleurs seconds vins de Bordeaux depuis 2005 (~40% bois neuf) ; (3) **Cos d'Estournel Blanc** créé 2005, ~80% Sauvignon Blanc + 20% Sémillon, microscopique (~600 caisses) ; (4) **Goulée by Cos d'Estournel** AOC Médoc (autres vignes au nord). **Autres propriétés Reybier** : Château Cos Labory (depuis 2023), Château Tronquoy (Saint-Estèphe), Maison d'Estournel (hôtel ouvert 2019), La Mascaronne (Provence, 2020), intérêts à Tokaji (Hetszölö depuis 2009). **Prix indicatifs 2024-2026** : Grand Vin 150-300 € selon millésime (2009, 2010, 2016, 2018-2020 au sommet de la fourchette) ; Les Pagodes de Cos 60-120 € (excellent rapport qualité-prix dans le contexte des seconds vins de stars) ; Cos d'Estournel Blanc 200-400 € ; Goulée 30-50 €. **Lecture Pat — l'évolution intelligente d'un château jadis trop maquillé** : (1) **dans les années Prats (2000-2012), Cos a été poussé vers un profil ultra-extrait, ultra-boisé, à la Pavie** — c'était la mode bordelaise du parkerisme, et Cos s'y est jeté avec virtuosité mais sans recul ; (2) **le changement de cap engagé sous Aymeric de Gironde et amplifié par Arangoïts à partir de 2023 va dans la bonne direction** — moins d'extraction, moins de bois, plus de tension, plus de cabernet identitaire, conversion biodynamie ; (3) **chai gravitaire 100%** = vrai bel outil au service de la vigne (conviction n°5 : on respecte le fruit) ; (4) **conversion biodynamie 2023** = excellente nouvelle, le rang de Pat à 5 commence vraiment à se justifier sur ce critère (avant c'était le terroir et l'investissement qui portaient le rang) ; (5) **les millésimes 2023-2025 seront à goûter** comme symbole de cette mue. **Garde** : 15-25 ans sur les grandes années, ne pas ouvrir avant 12-15 ans. Service 17°C, **carafage 2-3h sur jeunesse**, verre Bordeaux. Pour le Blanc : 12°C, ouvrir 30 min avant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-estephe",
+        "deuxieme-cru",
+        "1855",
+        "reybier",
+        "super-second",
+        "second-grand-cru-classe-1855",
+        "michel-reybier",
+        "dominique-arangoits",
+        "angelique-vigouroux",
+        "biodynamie-2023",
+        "chai-gravitaire",
+        "84-cuves",
+        "61-parcelles",
+        "19-types-de-sols",
+        "graves-garonnaises",
+        "pagodes-orientales",
+        "maharadjah",
+        "voisin-lafite",
+        "evolution-style-2023",
+        "iconique"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller (Moitry/Climens, Reybier/Cos)",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Sauvignon Blanc",
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Château Cos d'Estournel rouge (Grand Vin, ~60% Cab Sauv)",
+        "Les Pagodes de Cos (second vin depuis 1994)",
+        "Cos d'Estournel Blanc (depuis 2005, microscopique)",
+        "Goulée by Cos d'Estournel (AOC Médoc, Nord-Médoc)"
+      ]
+    },
+    {
+      "id": "bdx-prod-yquem",
+      "nom": "Château d'Yquem",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Sauternes",
+      "appellations_principales": [
+        "Sauternes"
+      ],
+      "localisation": "Sauternes (33210), point culminant de l'appellation",
+      "statut_production": "conventionnel raisonné rigoureux, pas de certification bio",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**Premier Cru Supérieur de Sauternes** — seul cru à porter ce rang unique dans le classement de 1855, au-dessus des Premiers Crus Classés. **Le plus grand vin liquoreux du monde** par consensus quasi universel. **Propriété de LVMH depuis 2004** (Bernard Arnault) — opération hostile : LVMH avait pris 50% en 1996 pour ~100 millions de dollars, puis racheté les parts restantes en 2004 au terme de procès longs avec les héritiers de la **famille Lur-Saluces** qui possédait Yquem depuis 1785 (mariage de Françoise-Joséphine de Sauvage d'Yquem avec le comte Louis-Amédée de Lur-Saluces — **plus de 200 ans** de lignée). **Direction : Pierre Lurton depuis 2004** (qui dirige aussi Cheval Blanc depuis 1991 pour les mêmes propriétaires). Œnologue consultant historique : **Denis Dubourdieu** dès le milieu des années 2000 jusqu'à son décès en 2016 — figure tutélaire des blancs bordelais modernes, qui a notamment fait évoluer la cuvée « Y ». **113 hectares de vignes** sur les **hauteurs de Sauternes** (point culminant de l'appellation), domaine total de plus de 200 hectares. ~12 hectares en repos ou jeunes vignes. **Encépagement : 75% Sémillon + 25% Sauvignon Blanc**. **Terroir unique** : **graves günziennes en surface sur argiles**, sous-sol calcaire par endroits, **affleurements coquilliers de Barsac** sur certaines parcelles qui apportent finesse — c'est cette combinaison qui fait l'identité d'Yquem (entre puissance sauternaise et élégance barsacaise). **Microclimat critique** : les rivières **Ciron** (froide) et **Garonne** (plus chaude) créent des brumes matinales automnales qui favorisent le **Botrytis cinerea**, la **pourriture noble** — champignon microscopique qui se développe sur les baies bien mûres, concentre les sucres et les arômes par évaporation tout en respectant l'acidité. **Sans botrytis, pas de grand Sauternes**. **Vendanges manuelles légendaires** : les équipes passent **5 à 9 fois** dans les vignes (« tries successives ») sur plusieurs semaines, septembre à novembre voire décembre, **grain par grain**, ne ramassant que les baies parfaitement botrytisées. **Rendement minuscule** : **environ 9 hl/ha**, soit **un verre par pied de vigne**, contre 50-60 hl/ha pour un Bordeaux générique. **Vinification** : pressurage doux, **fermentation 100% en barriques de chêne français neuves**, malolactique évitée, **élevage 24 à 36 mois en barriques 100% neuves** — c'est un des seuls vins où ce taux est défendable (la matière est si dense qu'elle absorbe le bois). **Sélection draconienne** : **dix millésimes non produits depuis 1910** (dont 1992 et 2012 récemment) — quand le millésime n'est pas digne, **rien n'est mis sous l'étiquette Yquem**. **Production** : ~65 000 à 100 000 bouteilles par an selon le millésime, parfois beaucoup moins. **Cuvées** : (1) **Château d'Yquem** : le liquoreux iconique ; (2) **« Y » d'Yquem** (Ygrec) : blanc sec créé en 1959, ~75% Sauvignon Blanc + 25% Sémillon, vendangé plus tôt, vinifié à part — depuis la refonte sous Dubourdieu (cuves inox + style off-dry actuel), Y est devenu un grand blanc sec de Bordeaux. **Restauration complète du chai sous LVMH** (depuis 2004), nouvelle salle de dégustation 2009. **Capacité de garde mythique** : **50 à 100 ans facilement**, bouteilles du XIXe siècle encore vivantes. **Prix indicatifs 2024-2026** : Yquem millésimes récents (2017-2020) : **350-700 € la bouteille de 75 cl**, **demi-bouteille 37,5 cl 200-400 €** (format souvent recommandé, moins de gaspillage à la dégustation). Millésimes mythiques (1989, 1990, 2001) : **800-2000 €**. Vieux millésimes (1947, 1959, 1967) : **2000-10 000+ €**. **« Y » d'Yquem 200-350 €**. **Lecture Pat — l'évidence absolue** : (1) **terroir unique au monde** pour le botrytis (Ciron + Garonne + altitude + sols composites), conviction n°3 à son sommet liquoreux ; (2) **rigueur de production hors-norme** : 9 hl/ha, 5 à 9 tries, déclassements impitoyables — l'opposé de tout opportunisme ; (3) **continuité humaine** : Lur-Saluces 200 ans, **Pierre Lurton à la direction depuis 20 ans**, équipes stables ; (4) **100% bois neuf défendable ici** car la matière sucrée et le botrytis « absorbent » le bois sans masquer le terroir — exception qui confirme la règle de la conviction n°5 ; (5) **liquoreux délaissés par le marché depuis 20 ans** = nombreux grands millésimes Yquem encore accessibles en vieilles bouteilles à des prix plus raisonnables que les rouges équivalents (un Yquem 1989 reste sous 1500 €, un Latour 1989 dépasse 2000 €) ; (6) **point d'attention LVMH** : la marque a survalorisé la communication depuis 2004 (parfums, etc.) au risque de transformer le vin en produit de luxe — heureusement la rigueur de production n'a pas faibli. **Service à 8-10°C** (jamais glacé, sinon arômes disparaissent), **ouvrir 30 min à 1h avant**, pas de carafage agressif, **verre tulipe blanc moyen**. **Accords** : foie gras mi-cuit, Roquefort âgé, volaille à la crème et morilles, tarte aux fruits jaunes — **pas sur le chocolat** (rupture). Excellent seul en méditation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "sauternes",
+        "premier-cru-superieur",
+        "1855",
+        "lvmh",
+        "iconique-mondial",
+        "premier-cru-superieur-1855",
+        "bernard-arnault",
+        "pierre-lurton",
+        "ex-lur-saluces-200-ans",
+        "denis-dubourdieu-historique",
+        "botrytis-cinerea",
+        "ciron-garonne",
+        "9-hl-ha",
+        "tries-successives",
+        "100-bois-neuf",
+        "10-millesimes-non-produits",
+        "semillon-sauvignon",
+        "graves-gunziennes",
+        "iconique",
+        "garde-mythique",
+        "liquoreux",
+        "y-ygrec-1959"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller (Moitry/Climens, Reybier/Cos)",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Château d'Yquem (liquoreux, 100% bois neuf, élevage 24-36 mois)",
+        "Y d'Yquem (Ygrec, blanc sec créé 1959, ~75% Sauvignon)"
+      ]
+    },
+    {
+      "id": "bdx-prod-haut-brion",
+      "nom": "Château Haut-Brion",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pessac-Léognan",
+      "appellations_principales": [
+        "Pessac-Léognan"
+      ],
+      "localisation": "Pessac et Talence (33600), agglomération de Bordeaux",
+      "statut_production": "conventionnel raisonné, HVE, pas de certification bio",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé 1855**, seul cru hors Médoc à figurer dans cette classification historique (sa renommée à Londres au XVIIe siècle a forcé son inclusion). Propriété du **Domaine Clarence Dillon** depuis 1935, achat de **Clarence Dillon** (banquier new-yorkais) pour 2,3 millions de francs. Présidé depuis 2008 par **Prince Robert de Luxembourg** (arrière-petit-fils de Clarence, 4e génération). Directeur général délégué vin et propriétés : **Jean-Philippe Delmas** depuis 2003 (a succédé à son père Jean-Bernard Delmas, lui-même fils de Georges Delmas régisseur depuis 1921 — trois générations Delmas à Haut-Brion). Situé à **Pessac et Talence**, **en pleine zone urbaine de Bordeaux** (microclimat plus chaud et plus précoce que le Médoc, vendanges souvent les premières de la région). **48 hectares de rouge** (45% Merlot, 44% Cabernet Sauvignon, 10% Cabernet Franc, 1% Petit Verdot) + **2,87 hectares de blanc** (Sémillon + Sauvignon Blanc) sur les fameuses **graves günziennes** : sables et galets roulés profonds, drainage exceptionnel, sous-sol argilo-calcaire. Appellation **Pessac-Léognan** depuis sa création en 1987. **Grand vin rouge** : production ~8 000-10 000 caisses par an. **Second vin rouge** : **Le Clarence de Haut-Brion** depuis le millésime 2007 (ex-Bahans Haut-Brion, renommé pour le 75e anniversaire de l'acquisition Dillon). **Grand vin blanc** : **Château Haut-Brion Blanc**, production microscopique (~600-700 caisses), un des grands blancs secs de Bordeaux. **Second vin blanc** : **La Clarté de Haut-Brion** (ex-Plantiers du Haut-Brion). **Vinifications** : Haut-Brion a été **premier château bordelais à passer aux cuves inox en 1961** (innovation majeure pour l'époque), aujourd'hui des **cuves inox à double paroi** introduites en 1991. Vendanges manuelles, tri sur table à la vigne et au cuvier. Fermentation alcoolique dans la partie haute des cuves, malolactique dans la partie basse, le vin descendant par gravité — système unique. Assemblage rapidement après malo, avant l'élevage, pour ne pas figer chaque lot dans son bois. **Élevage** : auparavant 100% bois neuf, **aujourd'hui réduit à 35% pour le Grand Vin rouge** (et 25% pour Le Clarence), 40-45% pour le Blanc — durée 18 à 24 mois. **Tonnellerie maison sur place** (en partenariat Seguin Moreau) qui produit ~70% des barriques utilisées : maîtrise de la chauffe et du grain. **Pas de certification bio**, démarche HVE et expérimentations diverses mais pas de pas franchi. Le château et ses installations ont été rénovés sous Robert de Luxembourg (architecte Annabelle Selldorf), réception et bibliothèque ouvertes en 2026. **Autres propriétés du groupe** : Château La Mission Haut-Brion (juste en face, 30 ha), Château Quintus (Saint-Émilion, 45 ha depuis acquisitions successives 2011-2021), gamme Clarendelle (créée 2005), et **Klara** (Provence/Sud bio, lancement 2024). **Prix indicatifs 2024-2026** : Grand Vin rouge 400-900 € selon millésime (2009, 2010, 2016, 2019, 2020 au sommet, **2019 et 2020 souvent au-delà de 700 €**) ; Le Clarence 130-250 € ; Haut-Brion Blanc **600-1000 € voire plus** (rareté absolue, un des blancs secs les plus chers du monde) ; La Clarté 130-200 €. **Lecture Pat — finesse plus que puissance** : (1) **terroir unique**, graves profondes en zone urbaine qui donnent un profil plus chaud et plus fin que le Médoc, plus en pâte qu'en muscle ; (2) **réduction du bois neuf de 100% à 35%** sur deux décennies = mouvement intelligent qui laisse plus parler le fruit et le terroir (conviction n°5 partiellement satisfaite, mais 35% reste marqué pour un vin de cette puissance fruitée) ; (3) **continuité humaine remarquable** — famille Dillon 4 générations, famille Delmas 3 générations dans la direction = la continuité de personnes que Pat valorise ; (4) **Haut-Brion Blanc** : un des plus singuliers blancs secs de France, équivalent bordelais d'un grand Montrachet par sa puissance et sa garde, à 25-30 ans il devient bouleversant ; (5) **prix élevés** mais légèrement plus accessibles que Latour ou Pétrus à millésime équivalent — c'est relatif évidemment. **Garde** : 15-25 ans pour le rouge sur belles années, **jusqu'à 40-50 ans pour le Blanc**. Service rouge à 17°C, carafage 2h sur jeunesse ; Blanc à 12-13°C, ouverture sans carafage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pessac-leognan",
+        "premier-cru",
+        "1855",
+        "dillon",
+        "iconique",
+        "graves",
+        "premier-grand-cru-classe-1855",
+        "robert-de-luxembourg",
+        "jean-philippe-delmas",
+        "delmas-3-generations",
+        "graves-gunziennes",
+        "zone-urbaine",
+        "inox-1961",
+        "double-paroi-1991",
+        "tonnellerie-maison",
+        "bois-neuf-35",
+        "blanc-iconique",
+        "garde-longue"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Château Haut-Brion rouge (Grand Vin, ~8-10k caisses)",
+        "Le Clarence de Haut-Brion (second vin rouge, depuis 2007, ex-Bahans)",
+        "Château Haut-Brion Blanc (~600-700 caisses, légende mondiale)",
+        "La Clarté de Haut-Brion (second vin blanc, ex-Plantiers)"
+      ]
+    },
+    {
+      "id": "bdx-prod-latour",
+      "nom": "Château Latour",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": "Pauillac (33250), Médoc",
+      "statut_production": "bio certifié AB depuis le millésime 2018 sur les 90 ha. 54 ha en biodynamie pratiquée sans certification (consultant Vincent Masson)",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé 1855 de Pauillac**, propriété de **François Pinault** (Artémis Domaines) depuis **1993**. Domaine de **90 hectares** sur les croupes graveleuses de Pauillac surplombant la Gironde, dont **47 hectares dans l'Enclos** (la parcelle historique qui borde le fleuve, source du Grand Vin). Encépagement : ~80% Cabernet Sauvignon, 18% Merlot, le reste en Cabernet Franc et Petit Verdot. **Directrice technique : Hélène Génin** (entrée comme stagiaire en 2001, prend la direction technique). **Trois vins** : (1) **Château Latour** Grand Vin, environ 30% de la récolte, issu exclusivement de l'Enclos, vignes de 40+ ans ; (2) **Les Forts de Latour**, second vin créé en 1966, ~45% de la production, vignes plus jeunes ou parcelles hors Enclos ; (3) **Pauillac de Latour**, troisième vin ~25%, vignes les plus jeunes. **Conversion bio totale** lancée pour le millésime 2016, **certification AB obtenue en 2018** sur l'ensemble des 90 hectares — première propriété parmi les premiers grands crus classés 1855 du Médoc à franchir ce pas intégralement (Pontet-Canet l'avait fait avant, mais sur un autre rang). Au moment de la certification, **54 hectares étaient déjà en biodynamie**, avec accompagnement du consultant **Vincent Masson** (préparations 501, infusions de prêle). Pas de certification biodynamique recherchée à ce jour : la propriété revendique une approche agronomique sans label sur ce volet. **Cheval réintroduit dans les vignes dès 2008**, herbicides chimiques arrêtés depuis les années 1990. **Décision historique de 2012** : sortie du système des **primeurs**. Latour ne vend plus son millésime en avant-première — les vins sont commercialisés via les négociants bordelais **uniquement quand le château juge qu'ils sont prêts à boire**. C'est l'inverse de la spéculation primeurs. Cellier renouvelé en 2002. **Vinification** : cuves inox thermo-régulées de tailles variables (adaptées aux parcelles), levures non systématiquement indigènes, fermentation classique, **élevage 18-20 mois en barriques 100% neuves pour le Grand Vin** (50% pour Les Forts, 25% pour le Pauillac). **Production Grand Vin** : ~10 000 caisses bonnes années, ~180 000 bouteilles tous vins confondus. **Prix indicatifs 2024-2026** (selon millésime et marché) : Grand Vin 600-1200 € la bouteille pour les millésimes courants 2014-2019, **2010 et 2009 souvent au-delà de 1500 €**, **2000 et 1982 dans les 2500-5000 €** ; Les Forts de Latour 200-400 € ; Pauillac de Latour 80-150 €. **Lecture Pat — admiration mesurée** : (1) **conversion bio à grande échelle d'un premier cru classé**, c'est un signal fort pour Bordeaux qui en avait besoin, et l'engagement est réel (pas du marketing) ; (2) **sortie des primeurs** = position courageuse contre le système spéculatif, à saluer ; (3) **terroir absolument exceptionnel** — graves profondes, drainage naturel, vue sur l'estuaire qui régule les températures, c'est l'archétype du grand terroir bordelais ; (4) **mais 100% de bois neuf sur le Grand Vin** reste un parti pris fort qui marque toujours le vin dans sa jeunesse — Pat trouve qu'on entend moins le terroir et davantage la barrique sur les premiers 10-15 ans ; (5) **prix totalement déconnectés de la consommation réelle** — Latour est devenu un objet financier autant qu'un vin, et ce n'est pas la faute du domaine, mais c'est un fait à intégrer. À boire à **18-20 ans minimum**, plutôt vers 25-30 pour les grandes années. Service à 16-17°C, **carafage 2-3h sur jeunesse**, verre Bordeaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "premier-cru",
+        "1855",
+        "pinault",
+        "iconique",
+        "garde",
+        "premier-grand-cru-classe-1855",
+        "artemis",
+        "helene-genin",
+        "bio-ab-2018",
+        "biodynamie-partielle",
+        "sortie-primeurs-2012",
+        "enclos",
+        "vincent-masson",
+        "cabernet-sauvignon",
+        "bois-neuf-100",
+        "garde-longue"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Latour (Grand Vin, Enclos exclusif, ~30% production, 100% bois neuf)",
+        "Les Forts de Latour (second vin créé 1966, ~45% production)",
+        "Pauillac de Latour (troisième vin, ~25% production)"
+      ]
+    },
+    {
+      "id": "bdx-prod-pontet-canet",
+      "nom": "Château Pontet-Canet",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": "Pauillac (33250), à côté de Mouton-Rothschild",
+      "statut_production": "bio Ecocert + biodynamie Biodyvin depuis 2010, certification Demeter depuis 2014, sur les 81 hectares en totalité",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Cinquième Grand Cru Classé 1855 de Pauillac**, mais **incontestablement parmi les meilleurs grands crus classés de Bordeaux toutes catégories confondues** depuis 20 ans. **Propriété de la famille Tesseron depuis 1975** (Guy Tesseron, négociant cognaçais, l'achète après-guerre puis transmet à son fils **Alfred Tesseron en 1994**). Aujourd'hui, **Alfred Tesseron** dirige avec **ses enfants Justine et Noé Tesseron**, et **ses nièces Mélanie et Philippine Tesseron**. **L'histoire moderne, c'est l'aventure Alfred + Jean-Michel Comme**. **Jean-Michel Comme, régisseur de 1990 à mai 2020**, est le cerveau silencieux derrière la révolution biodynamique. **Remplacé en 2020 par Mathieu Bessonnet**. Œnologue consultant : **Michel Rolland de 1999 à 2023, remplacé par Thomas Duclos en 2023** (changement notable : Duclos est l'œnologue de la nouvelle vague bordelaise, plus orientée précision et fraîcheur que extraction). **Vignoble de 81 hectares en un seul tenant**, sur les plus belles graves de Pauillac, **à côté de Mouton-Rothschild** (limite nord) et en face du Pibran et de Pichon Comtesse. Encépagement : 60% Cabernet Sauvignon, 33% Merlot, 5% Cabernet Franc, 2% Petit Verdot. Densité 9 500 pieds/ha. **Le tournant** : **1995, premiers essais bio** sous l'impulsion de Comme. **2004, conversion à la biodynamie** initiée sur 14 hectares de merlot — l'année d'après, **conversion totale du vignoble**. **2010, certification bio (Ecocert) et biodynamique (Biodyvin) sur l'intégralité du domaine** — **Pontet-Canet devient le premier Grand Cru Classé du Médoc certifié bio ET biodynamique en intégralité**. **2014, certification Demeter** ajoutée (label biodynamique le plus exigeant). C'est une révolution pour le Médoc, où le bio était presque inexistant à l'époque. **10 chevaux** utilisés pour le labour sur près de la moitié des parcelles (pour éviter le tassement). **Traitements homéopathiques** à base de plantes cultivées sur la propriété. **Tisanerie** sur place pour préparer les décoctions. **Préparations biodynamiques** réalisées à la propriété (bouses, silice, etc.). **Vinification** : vendanges manuelles, tri à la vigne et au chai, **levures indigènes systématiques** (rareté absolue à Pauillac), **macérations longues 4 semaines** avec remontages doux à la gravité, malolactique en cuve. **Élevage 16-18 mois** dans un mix devenu signature : **50% barriques neuves, 35% en amphores de béton (« dolia »), 15% en barriques d'un vin**. Les amphores de béton, introduites en 2012, sont **moulées à la propriété avec des graviers et calcaires des meilleures parcelles** — manière de garder le contact terroir-vin pendant l'élevage tout en limitant le bois. **Trois types de cuves** utilisées dans le chai : cuves bois Skawinski du XIXe, cuves béton « Nicole » de 2005, et amphores créées en 2017 **sans électricité** (pour éviter le contact onde-vin, point biodynamique militant). **Production** : ~40 000 caisses par an pour le Grand Vin, ~15 000 pour Les Hauts de Pontet-Canet (second vin). **Robert Parker a attribué 100/100 aux millésimes 2009 et 2010** — événement marquant pour un cinquième cru. **Prix indicatifs 2024-2026** : Grand Vin 80-150 € pour millésimes courants (2014-2019), **2009 et 2010 souvent 200-300 €**, 2016, 2018, 2019, 2020 dans les 130-180 € ; Les Hauts de Pontet-Canet 30-50 €. **Lecture Pat — le grand cru classé qui démontre concrètement que la biodynamie produit du grand vin dans le Médoc** : (1) **première certification bio + biodynamie + Demeter en grand cru classé 1855 du Médoc** = exemplarité totale, c'est probablement le château le plus aligné avec les convictions de Pat de tout le classement de 1855 ; (2) **conviction n°1 (le vin est simple) + conviction n°5 (méfiance du bois)** : Pontet-Canet a **divisé son bois neuf de 100% à 50% en 20 ans**, remplaçant par des amphores en béton — c'est la démarche inverse de la plupart des classés ; (3) **levures indigènes systématiques** = ancrage terroir radical ; (4) **chevaux + tisanerie + préparations sur place** = autonomie biodynamique réelle, pas du marketing ; (5) **passage de Michel Rolland à Thomas Duclos en 2023** = signal d'évolution vers encore plus de fraîcheur ; (6) **prix qui restent raisonnables** comparés à un Pichon ou un Lynch Bages = Pontet-Canet est un des meilleurs rapports qualité-prix-conviction du Médoc, et c'est rare ; (7) **2009 et 2010 100/100 Parker** ont médiatisé l'aventure, ce qui a fait bouger d'autres châteaux (Latour a suivi pour le bio en 2018 — la pression d'exemple a compté). **Garde** : 12-25 ans selon millésime, ouverture possible à 8-10 ans pour les amateurs de jeunesse. Service 17°C, **carafage 2h sur jeunesse**, verre Bordeaux. **À conseiller chaque fois qu'on cherche un grand Médoc honnête et habité.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "cinquieme-cru",
+        "1855",
+        "biodynamie",
+        "tesseron",
+        "pionnier",
+        "cinquieme-grand-cru-classe-1855",
+        "alfred-tesseron",
+        "justine-tesseron",
+        "noe-tesseron",
+        "jean-michel-comme-historique",
+        "mathieu-bessonnet",
+        "thomas-duclos-2023",
+        "bio-2010",
+        "biodynamie-2010",
+        "demeter-2014",
+        "premier-grand-cru-classe-medoc-bio",
+        "amphores-beton-dolia",
+        "10-chevaux",
+        "tisanerie",
+        "preparations-maison",
+        "levures-indigenes",
+        "parker-100-2009-2010",
+        "conviction-n1",
+        "conviction-n5",
+        "exemplaire",
+        "iconique"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller (Moitry/Climens, Reybier/Cos)",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Pontet-Canet (Grand Vin, élevage 50% bois neuf + 35% amphores béton + 15% un vin)",
+        "Les Hauts de Pontet-Canet (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-petrus",
+      "nom": "Pétrus",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pomerol",
+      "appellations_principales": [
+        "Pomerol"
+      ],
+      "localisation": "Pomerol (33500), plateau supérieur",
+      "statut_production": "conventionnel raisonné, vendanges vertes systématiques pionnières, pas de certification bio",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Le mythe de Pomerol**. Domaine sans château (juste un bâtiment vinaire), **11,4 hectares au sommet du plateau de Pomerol** — le point culminant de l'appellation à environ 40 mètres d'altitude. Propriété **famille Moueix depuis 1964** (achat progressif initié 1945, finalisé 1969 par Jean-François Moueix), aujourd'hui dirigé par **Jean Moueix** (3e génération, depuis 2011 — fils de Jean-François). **En 2018, Alejandro Santo Domingo (entrepreneur colombo-américain) a acquis ~20% du capital**, opération discrète mais notable. **Madame Loubat** (Edmonde Loubat, propriétaire d'un hôtel à Libourne) a fait monter Pétrus depuis 1925, devenue unique propriétaire en 1945, et a su faire servir son vin au mariage d'Elizabeth II en 1947 puis au couronnement de 1953 — c'est elle qui a propulsé le domaine sur la scène internationale, bien avant Moueix. **Œnologue : Olivier Berrouet depuis 2008** (33 ans à l'époque), qui a succédé à son père **Jean-Claude Berrouet** (en poste 1964-2007, **plus de 40 ans à Pétrus** et sur l'ensemble du portefeuille Moueix — figure historique de la vinification bordelaise). Continuité familiale exemplaire des deux côtés (Moueix et Berrouet). **Le terroir, c'est l'essence de Pétrus** : la fameuse **« boutonnière Pétrus »**, ressurgence d'**argiles bleues smectiques vieilles de 40 millions d'années** au sommet d'un coteau. Cette argile a la propriété unique d'être **imperméable aux racines mais hygroscopique** : elle retient l'eau dans ses espaces moléculaires et la redistribue à la plante en période sèche — drainage et alimentation hydrique idéaux. Argile noire en surface (humifère), argile bleue dure (smectite) en sous-sol, dross de fer rougeâtre — combinaison **inexistante ailleurs en Pomerol**. **Encépagement : 100% Merlot depuis 2010** (auparavant ~95% Merlot + 5% Cabernet Franc, le Cabernet Franc a été retiré du fait du réchauffement climatique et du fait que les meilleures parcelles étaient en merlot). Densité élevée, **vignes de 40-45 ans en moyenne**, certaines bien plus anciennes. **Vendanges manuelles sur 5-6 jours**, généralement **uniquement les après-midis** pour éviter la rosée du matin, équipe de plus de 100 personnes mobilisées sur la fenêtre courte. Tri impitoyable à la vigne et au chai. **Vendanges vertes parfois drastiques** : jusqu'à 50% de la récolte éliminée certaines années (parmi les plus basses rendements de Bordeaux, autour de 30-35 hl/ha typiquement, parfois bien moins). **Vinification dans des cuves béton thermo-régulées** (chai modernisé en 2005), fermentation alcoolique classique, malolactique en cuve. **Élevage 12-18 mois en barriques de chêne français, dont environ 50% neuves** (et non 100% — c'est un point sous-estimé : Pétrus utilise moins de bois neuf que la plupart des premiers crus du Médoc). **Pas de second vin** — la sélection se fait par déclassement vers des cuvées de la famille Moueix ou non-publication. **Production : ~30 000 bouteilles par an seulement**, à comparer aux ~180 000 d'un Latour ou aux 200 000+ de Mouton. **Pas de classement officiel** (Pomerol n'a pas de classification), mais considéré universellement comme le sommet de l'appellation et l'un des plus grands rouges du monde. **Pas de certification bio**, mais pratiques agronomiques irréprochables (premier domaine bordelais à avoir systématisé les vendanges vertes). **Prix indicatifs 2024-2026** : **2 500 à 6 000 € la bouteille selon millésime** pour les années récentes (2018-2020 souvent 3 500-5 000 €), millésimes mythiques **(1947, 1961, 1989, 1990, 2000) au-delà de 5 000 € voire 15 000-30 000 € pour les bouteilles authentifiées des grandes années anciennes**. **Vin le plus contrefait du monde** — vigilance absolue sur les bouteilles anciennes hors circuits certifiés. **Lecture Pat — terroir surnaturel, prix surréalistes** : (1) **le terroir est probablement le plus singulier de Bordeaux** — la boutonnière d'argile bleue est un accident géologique unique au monde dans le vin, donc oui, c'est exceptionnel, conviction n°3 dans son expression la plus pure ; (2) **continuité humaine remarquable** (Moueix 3 générations, Berrouet 2 générations) ; (3) **vinification mesurée** — 50% de bois neuf seulement, vendanges manuelles draconiennes, c'est moins agressif que la plupart des premiers crus médocains (à mettre au crédit, conviction n°5) ; (4) **MAIS prix totalement déconnectés** — Pétrus est devenu un actif financier autant qu'un vin, ce qui est un constat plus qu'un reproche au domaine ; (5) **monocépage Merlot 100%** sur ce terroir = expression d'un cépage à son sommet absolu, démonstration qu'un grand merlot peut être un des plus grands vins du monde quand le terroir et la main sont au rendez-vous ; (6) **rareté quasi mythologique** — 30 000 bouteilles c'est rien à l'échelle mondiale, donc oui, ça nourrit la spéculation. À boire à **15-20 ans minimum**, idéalement **25-40 ans** sur les grandes années. Service 17-18°C, **carafage 2h sur jeunesse**, **verre Bourgogne large** (le merlot mûr de Pétrus s'épanouit mieux dans un calice ample que dans un Bordeaux étroit). **Pour le buveur réel** : si l'occasion se présente, ne pas refuser — pour acheter, regarder ailleurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pomerol",
+        "iconique-mondial",
+        "moueix",
+        "merlot",
+        "argile-bleue",
+        "jean-moueix",
+        "olivier-berrouet",
+        "jean-claude-berrouet",
+        "berrouet-2-generations",
+        "moueix-3-generations",
+        "alejandro-santo-domingo-2018",
+        "smectite",
+        "boutonniere-petrus",
+        "100-merlot-depuis-2010",
+        "vendanges-vertes-pionniere",
+        "11-4-hectares",
+        "30000-bouteilles",
+        "bois-neuf-50",
+        "sans-classement",
+        "iconique",
+        "rarete-extreme",
+        "vin-le-plus-contrefait"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — prix marché à actualiser avec millésimes 2022-2024, transmission familiale en cours à surveiller",
+      "cepages_rois": [
+        "Merlot"
+      ],
+      "cuvees_phares": [
+        "Pétrus (Grand Vin unique, 100% Merlot, ~30 000 bouteilles)"
+      ]
+    },
+    {
+      "id": "bdx-prod-angelus",
+      "nom": "Château Angélus",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé A à Saint-Émilion** (depuis **2012**, comme Pavie — promu en même temps), **sorti du classement en 2022** comme Cheval Blanc et Ausone (les classements Saint-Émilion font l'objet de tensions politiques récurrentes). **Famille de Boüard de Laforest** depuis 1782 (Hubert puis sa fille **Stéphanie de Boüard**). **~39 ha** sur **pied de coteau de Saint-Émilion**, exposition sud. **Encépagement Merlot ~50% + Cabernet Franc fort ~47% + Cabernet Sauvignon ~3%** — la forte proportion de Cabernet Franc fait la signature aromatique. Style **moderne, concentré, opulent**, élevage en barriques 100% neuves. **Garde 25-40 ans**. Second vin **Carillon d'Angélus**, troisième **No. 3 d'Angélus**. Prix : **300-700 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "premier-grand-cru-A",
+        "bouard",
+        "moderne",
+        "ex-premier-grand-cru-classe-a",
+        "sorti-classement-2022",
+        "famille-de-bouard",
+        "cabernet-franc-fort",
+        "style-moderne"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~382 à 737 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "cuvees_phares": [
+        "Château Angélus (Premier Grand Cru Classé A 2012-2022, sorti du classement)",
+        "Carillon d'Angélus (second vin)",
+        "No. 3 d'Angélus"
+      ]
+    },
+    {
+      "id": "bdx-prod-cheval-blanc",
+      "nom": "Château Cheval Blanc",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé A** à Saint-Émilion **jusqu'en 2022** (sortie volontaire du classement avec Ausone — geste politique majeur contestant les critères du classement Saint-Émilion), **LVMH + famille Frère** depuis 1998. **~37 ha** sur **sols mixtes graves bordelaises + argiles** (terroir unique à Saint-Émilion, proche géographiquement de Pomerol). **Encépagement atypique pour la rive droite** : **Cabernet Franc dominant ~52% + Merlot ~43% + autres** — rare en Saint-Émilion (où le Merlot domine partout). Style **soyeux, aromatique, complexité unique** entre Pomerol (rondeur) et Saint-Émilion (structure). Profil violette + framboise + cèdre + tabac + truffe avec l'âge. **Garde 30-50 ans**. Second vin **Le Petit Cheval**, blanc sec **Le Petit Cheval Blanc** (créé 2014, en AOC Bordeaux). Prix : **600-1500 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "premier-grand-cru-A",
+        "lvmh",
+        "iconique",
+        "cabernet-franc",
+        "premier-grand-cru-classe-a",
+        "sorti-classement-2022",
+        "lvmh-frere",
+        "cabernet-franc-dominant",
+        "soyeux-aromatique"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~424 à 824 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Merlot"
+      ],
+      "cuvees_phares": [
+        "Château Cheval Blanc (Premier Grand Cru Classé A, sorti du classement 2022)",
+        "Le Petit Cheval (second vin)",
+        "Le Petit Cheval Blanc (blanc sec, créé 2014)"
+      ]
+    },
+    {
+      "id": "bdx-prod-ducru-beaucaillou",
+      "nom": "Château Ducru-Beaucaillou",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Julien",
+      "appellations_principales": [
+        "Saint-Julien"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**2e Grand Cru Classé 1855 à Saint-Julien**, **famille Borie** depuis 1941 (**Bruno-Eugène Borie** aujourd'hui, 3e génération). **~75 ha** sur **plateau de Saint-Julien**, sols de **graves günziennes profondes** (d'où le nom \"Beaucaillou\"). **Cabernet Sauvignon dominant ~80% + Merlot + Cabernet Franc**. Style **classique-élégant**, équilibre Saint-Julien typique entre la puissance de Pauillac (au nord) et la finesse de Margaux (au sud) — l'un des Saint-Julien les plus aboutis. Profil cèdre + cassis + violette + tabac blond. **Garde 25-40 ans**. Élevage 18 mois en barriques, ~60-80% neuves. Second vin **La Croix de Beaucaillou** (depuis 1995, très soigné). Prix : **120-250 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-julien",
+        "deuxieme-cru",
+        "1855",
+        "borie",
+        "2e-grand-cru-classe-1855",
+        "famille-borie",
+        "bruno-eugene-borie",
+        "classique-elegant"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~342 à 685 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Ducru-Beaucaillou (2e Grand Cru Classé 1855)",
+        "La Croix de Beaucaillou (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-figeac",
+      "nom": "Château Figeac",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé A à Saint-Émilion** (promu en **2022**, à l'occasion du classement qui a vu sortir Cheval Blanc, Angélus et Ausone), **famille Manoncourt** depuis 1892 (Thierry Manoncourt jusqu'en 2010, puis ses descendants). **~54 ha** sur **sols de graves bordelaises** (proche géographiquement de Cheval Blanc, exception en Saint-Émilion). **Encépagement unique à 1/3 chacun** : **Cabernet Sauvignon ~35% + Cabernet Franc ~35% + Merlot ~30%** — c'est le seul Saint-Émilion à donner cette place au Cabernet Sauvignon (le terroir de graves le permet). Style **classique, élégant, structuré**, profil cèdre + cassis + violette + cuir avec l'âge. **Garde 30-50 ans**. Élevage 18 mois en barriques ~80% neuves. Second vin **Petit-Figeac**. Prix : **250-500 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "premier-grand-cru-A",
+        "manoncourt",
+        "cabernet-medocain",
+        "premier-grand-cru-classe-a",
+        "promu-2022",
+        "famille-manoncourt",
+        "graves-saint-emilion",
+        "tiers-tiers-tiers",
+        "classique-elegant"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~429 à 770 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot"
+      ],
+      "cuvees_phares": [
+        "Château Figeac (Premier Grand Cru Classé A, promu 2022)",
+        "Petit-Figeac (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-mission-haut-brion",
+      "nom": "Château La Mission Haut-Brion",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pessac-Léognan",
+      "appellations_principales": [
+        "Pessac-Léognan"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Cru Classé de Graves** à Pessac-Léognan, **propriété de la famille Dillon (Domaine Clarence Dillon)** depuis 1983 (rachat à la famille Woltner) — **même propriétaire que Haut-Brion** (situé juste en face, séparés par une route). **~26 ha rouges + 3,5 ha blancs** sur **sols de graves du Pessac urbain** (le vignoble est cerné par l'agglomération bordelaise — terroir historique préservé depuis le XVe siècle). **Merlot dominant ~47% + Cabernet Sauvignon ~42% + Cabernet Franc ~11%**. Style **plus puissant et chaleureux que Haut-Brion**, profil **tabac + cuir + épices + cassis** marqué, presque \"fumé\" (terroir des Graves). **Garde 30-50 ans**. Second vin **La Chapelle de La Mission Haut-Brion**. Blanc sec **La Mission Haut-Brion Blanc** (rare, ~10% de la production blanche). Prix : **250-500 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pessac-leognan",
+        "cru-classe-graves",
+        "dillon",
+        "iconique",
+        "famille-dillon",
+        "domaine-clarence-dillon",
+        "voisin-haut-brion",
+        "puissant-chaleureux"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~478 à 803 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Château La Mission Haut-Brion (Cru Classé de Graves)",
+        "La Chapelle de La Mission Haut-Brion (second vin)",
+        "Château La Mission Haut-Brion Blanc"
+      ]
+    },
+    {
+      "id": "bdx-prod-lafite",
+      "nom": "Château Lafite Rothschild",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé 1855 à Pauillac**, propriété de la **famille Rothschild (branche Eric de Rothschild)** depuis **1868**. **~110 ha** sur le **plateau nord de Pauillac**, sols de **graves günziennes profondes** sur sous-sol argilo-calcaire (terroir d'élection du Cabernet Sauvignon). Encépagement **Cabernet Sauvignon ~70% + Merlot ~25% + Cabernet Franc + Petit Verdot**. Style **classique-aérien** historique de Pauillac — *« la plus féminine des trois Premiers du Médoc »*, élégance plus que puissance, profil cèdre + cassis + graphite. **Élevage 18-24 mois en barriques 100% neuves**. **Garde 30-50 ans facile** sur les grands millésimes (1953, 1959, 1982, 1986, 2000, 2010, 2015, 2016, 2018). Second vin **Carruades de Lafite** (~25% de la production, garde 15-25 ans). Prix Premier Cru : **600-1500 € sortie négoce**, plus en cave.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "premier-cru",
+        "1855",
+        "rothschild",
+        "iconique",
+        "premier-grand-cru-classe-1855",
+        "famille-rothschild",
+        "cabernet-sauvignon",
+        "garde-longue",
+        "elegance"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~406 à 845 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Lafite Rothschild (Premier Grand Cru Classé 1855)",
+        "Carruades de Lafite (second vin)",
+        "Moulin des Carruades"
+      ]
+    },
+    {
+      "id": "bdx-prod-lafleur",
+      "nom": "Château Lafleur",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pomerol",
+      "appellations_principales": [
+        "Pomerol"
+      ],
+      "localisation": "Pomerol (33500), plateau central, voisin direct de Pétrus, Vieux Château Certan, Hosanna et Le Gay",
+      "statut_production": "viticulture traditionnelle pure, aucun pesticide ni produit chimique depuis 1872, bio dans les faits sans certification annoncée",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**L'antithèse de Pétrus à 200 mètres de distance**. Domaine de **4,5 hectares au cœur du plateau de Pomerol**, jouxtant directement Pétrus, Vieux Château Certan, Hosanna et Le Gay — voisinage absolument exceptionnel. **Fondé en 1872 par Henri Greloud**, déjà propriétaire de Château Le Gay — **premier producteur de Pomerol à faire un vin parcellaire mono-domaine**, vision pionnière. **Le domaine n'a jamais quitté la famille depuis 1872** : Greloud → famille **Robin** (André Robin dans les années 1930) → ses filles **Thérèse et Marie Robin** de 1946 à 1984 → **Jacques et Sylvie Guinaudeau** (arrière-arrière-petits-enfants d'Henri Greloud) en fermage de 1984 à 2001, puis pleine propriété en 2002 → **Baptiste et Julie Guinaudeau** rejoignent en 2002, aujourd'hui en charge des vinifications. **L'apport historique d'André Robin** dans les années 1930 : **sélection massale du Bouchet** (nom local du Cabernet Franc), créant une lignée végétale propre à Lafleur — toujours plantée aujourd'hui, **matériel végétal qui sert aussi de pépinière pour Grand Village**. **40 ans d'old-school sous les sœurs Robin (1946-1984)** : tout fait à la main, **labour au bœuf jusqu'en 1979**, **aucun pesticide ni produit chimique** depuis l'origine du domaine. **Terroir** : forme presque carrée, **24 parcelles distinctes**, géologie complexe sur ces 4,5 ha : graves sablo-argileuses au nord-ouest, graves argileuses au centre, sables graveleux à l'est. Ce qui distingue Lafleur de Pétrus voisin : **les graves dominent ici**, l'argile bleue smectique de la « boutonnière Pétrus » est absente — Lafleur n'est pas un terroir d'argile pure, c'est un terroir composite avec une influence forte du Cabernet Franc. **Encépagement unique en Pomerol** : **environ 50% Merlot, 50% Cabernet Franc (Bouchet) plantés en complantation** (cépages mélangés dans chaque parcelle, vinification ensemble) — c'est la signature absolue, alors que la quasi-totalité des Pomerol sont à dominante merlot 80%+. **Vinification d'une grande simplicité revendiquée** : **fermentation en petites cuves inox + cuves béton**, malolactique en barriques. **Élevage 14-18 mois en barriques avec seulement ~25% de bois neuf pour le Grand Vin** — c'est un chiffre extrêmement bas pour un vin de ce statut ; **les barriques d'occasion proviennent de Grand Village**, le domaine sœur — économie circulaire familiale. **Modernisation des chais en 2018** (premier vrai chantier depuis des décennies), mais ferme française historique laissée intacte. **Cuvées** : (1) **Château Lafleur** : Grand Vin, ~12 000-14 000 bouteilles ; (2) **Les Pensées de Lafleur** (rebrandé « Les Pensées » depuis 2018) — **pas considéré comme un second vin**, c'est un vin distinct issu d'une parcelle spécifique de 0,7 ha, sols plus argileux et sableux, blend 60% Merlot + 40% Cabernet Franc, élevage 18 mois (50% bois neuf), ~3 000 bouteilles. **Production totale microscopique** : ~17 000 bouteilles annuelles, à comparer aux ~30 000 de Pétrus et aux ~180 000 d'un Latour. **Prix indicatifs 2024-2026** : Château Lafleur **600-1500 € selon millésime** (2009, 2010, 2015, 2016, 2018-2020 souvent au-delà de 900 € ; millésimes mythiques 1947, 1961, 1982 au-delà de 3 000-10 000 €) ; Les Pensées 200-400 €. **Lecture Pat — sommet absolu, plus aligné que Pétrus sur les convictions** : (1) **continuité familiale exceptionnelle depuis 1872** (5 générations Greloud-Robin-Guinaudeau) = dimension humaine que Pat valorise comme aucune autre à Bordeaux ; (2) **50% Cabernet Franc en complantation** = audace identitaire absolue dans une appellation merlot, conviction n°3 à son sommet — **le Bouchet de Lafleur est un trésor végétal protégé en sélection massale depuis les années 1930** ; (3) **jamais de pesticides depuis 1872, labour au bœuf jusqu'en 1979** = viticulture traditionnelle pure, conviction n°1 absolue ; (4) **25% bois neuf seulement** = un des taux les plus bas parmi les vins mondiaux de ce niveau, conviction n°5 (méfiance du bois) parfaitement incarnée ; (5) **Lafleur est plus cher que Vieux Château Certan ou L'Église-Clinet, moins cher que Pétrus à millésime équivalent** — mais c'est probablement le plus grand Pomerol avec Pétrus, et le plus aligné avec les convictions Pat ; (6) **profil du vin** : là où Pétrus est dans la puissance et l'opulence merlot, **Lafleur est dans la finesse, la verticalité, la complexité aromatique** (truffe, pivoine, violette, réglisse, poivre) — c'est un vin qui se boit, pas qui se collectionne. **Garde mythique : 15-50 ans facilement**, idéalement entre 20 et 40 ans. Service 16-17°C, **carafage 1-2h sur jeunesse**, **verre Bourgogne large** plutôt que Bordeaux étroit (l'aromatique Cabernet Franc s'épanouit dans un calice ample). **Le grand Pomerol de la lucidité.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pomerol",
+        "iconique",
+        "guinaudeau",
+        "cabernet-franc",
+        "jacques-guinaudeau",
+        "sylvie-guinaudeau",
+        "baptiste-guinaudeau",
+        "julie-guinaudeau",
+        "henri-greloud-1872",
+        "andre-robin-selection-massale-1930",
+        "soeurs-robin-1946-1984",
+        "5-generations-1872",
+        "4-5-hectares",
+        "voisin-petrus",
+        "50-pct-cabernet-franc",
+        "bouchet-selection-massale",
+        "complantation",
+        "graves-sablo-argileuses",
+        "graves-argileuses",
+        "sables-graveleux",
+        "labour-au-boeuf-1979",
+        "jamais-pesticides",
+        "bio-de-fait-non-certifie",
+        "25-pct-bois-neuf",
+        "barriques-occasion-grand-village",
+        "modernisation-chais-2018",
+        "les-pensees-de-lafleur",
+        "pas-de-second-vin",
+        "garde-50-ans",
+        "12-14000-bouteilles",
+        "antithese-petrus",
+        "finesse-verticalite",
+        "conviction-n1",
+        "conviction-n3",
+        "conviction-n5",
+        "5-sur-5-pat-2026"
+      ],
+      "source": "lpv|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026, ranking_pat monté de 4 à 5 sur décision Pat (conviction Lafleur > Pétrus côté philosophie). Prix marché à actualiser avec millésimes 2022-2024.",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "cuvees_phares": [
+        "Château Lafleur (Grand Vin, ~12-14000 bouteilles, 50% Merlot + 50% Cabernet Franc en complantation, 25% bois neuf)",
+        "Les Pensées de Lafleur (parcelle 0,7 ha, 60% Merlot + 40% Cab Franc, 50% bois neuf, ~3000 bouteilles, pas un second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-lynch-bages",
+      "nom": "Château Lynch-Bages",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**5e Grand Cru Classé 1855 à Pauillac**, **famille Cazes** depuis 1939 (Jean-Charles Cazes aujourd'hui, 3e génération). **~100 ha** sur **plateau de Bages**, graves günziennes. **Cabernet Sauvignon dominant ~73% + Merlot ~15% + Cabernet Franc + Petit Verdot**. **Réputé pour son rapport qualité-prix exceptionnel parmi les Crus Classés** — souvent considéré comme un **\"quasi-second cru\"**, surperformant son rang depuis les années 1980. Style **structuré, fruité-épicé, garde 20-30 ans**. Élevage 18 mois en barriques, ~70% neuves. Second vin **Echo de Lynch-Bages** (excellent, ~30-50 €). Également **Blanc de Lynch-Bages** (blanc sec en Bordeaux AOC, Sauvignon Blanc + Sémillon + Muscadelle). Prix : **80-180 €** — la grande aubaine du 1855 pour qui veut du Pauillac sérieux sans casser sa tirelire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "cinquieme-cru",
+        "1855",
+        "cazes",
+        "sur-classement",
+        "5e-grand-cru-classe-1855",
+        "famille-cazes",
+        "rapport-qualite-prix",
+        "quasi-second-cru"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~388 à 802 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Lynch-Bages (5e Grand Cru Classé 1855)",
+        "Echo de Lynch-Bages (second vin)",
+        "Blanc de Lynch-Bages (blanc sec)"
+      ]
+    },
+    {
+      "id": "bdx-prod-leoville-barton",
+      "nom": "Château Léoville-Barton",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Julien",
+      "appellations_principales": [
+        "Saint-Julien"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**2e Grand Cru Classé 1855 à Saint-Julien**, **famille Barton** d'origine irlandaise depuis **1826** (Lilian Barton-Sartorius aujourd'hui, **8e génération** — l'une des plus anciennes continuités familiales du Médoc). **~50 ha** sur plateau de Saint-Julien. **Cabernet Sauvignon dominant ~74% + Merlot ~23% + Cabernet Franc**. Style **traditionaliste, austère jeune, magnifique avec l'âge** — Léoville-Barton est connu pour vieillir merveilleusement et libérer sa complexité après 10-15 ans (cèdre + tabac + cuir + cassis confit). **Garde 30-50 ans**. Élevage 18 mois en barriques, ~50% neuves (proportion modérée pour un 1855). **Prix raisonnables pour son rang** — l'un des meilleurs rapports qualité-prix du 1855, à 80-180 €. Second vin **Réserve de Léoville-Barton**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-julien",
+        "deuxieme-cru",
+        "1855",
+        "barton",
+        "classique",
+        "2e-grand-cru-classe-1855",
+        "famille-barton",
+        "irlandais",
+        "depuis-1826",
+        "tradition",
+        "rapport-qualite-prix"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~421 à 771 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "cuvees_phares": [
+        "Château Léoville-Barton (2e Grand Cru Classé 1855)",
+        "Réserve de Léoville-Barton (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-leoville-las-cases",
+      "nom": "Château Léoville-Las Cases",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Julien",
+      "appellations_principales": [
+        "Saint-Julien"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**2e Grand Cru Classé 1855 à Saint-Julien**, **famille Delon** depuis 1900 (**Jean-Hubert Delon** aujourd'hui). **~98 ha**, dont le **Grand Clos historique** (parcelle emblématique de 55 ha enclose de murs en pierre, voisine de Latour à la frontière nord de Saint-Julien). **Cabernet Sauvignon dominant ~67% + Merlot ~25% + Cabernet Franc + Petit Verdot**. Style **le plus puissant et structuré des Saint-Julien**, parfois considéré comme un **\"super second\"** au niveau qualitatif des Premiers Crus — profil dense, fruits noirs + graphite + tabac. **Garde 30-50 ans**. Élevage 18-24 mois en barriques ~70% neuves. Second vin **Le Petit Lion** (créé en 2007, très soigné), **Clos du Marquis** est une autre étiquette du même propriétaire mais distincte. Prix : **200-400 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-julien",
+        "deuxieme-cru",
+        "1855",
+        "delon",
+        "super-second",
+        "2e-grand-cru-classe-1855",
+        "famille-delon",
+        "jean-hubert-delon",
+        "structure-puissance"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~408 à 775 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Léoville-Las Cases (2e Grand Cru Classé 1855)",
+        "Le Petit Lion (second vin, créé 2007)",
+        "Clos du Marquis (troisième vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-margaux",
+      "nom": "Château Margaux",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Margaux",
+      "appellations_principales": [
+        "Margaux"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé 1855 à Margaux**, **famille Mentzelopoulos** depuis 1977 (André Mentzelopoulos puis sa fille **Corinne Mentzelopoulos** aujourd'hui). **~99 ha**, dont **80 ha en rouge + 12 ha en blanc**. **Cabernet Sauvignon dominant ~75% + Merlot ~20% + Cabernet Franc + Petit Verdot**, sur **sols de graves fines günziennes** (les plus fines du Médoc — voir le nom \"Margaux\"). Style **floral et soyeux** — *« le plus féminin des Premiers »*, archétype de l'élégance bordelaise, profil rose + violette + cassis + cèdre. **Garde 30-50 ans**. Élevage 18-24 mois en barriques 100% neuves. Second vin **Pavillon Rouge**, **blanc sec Pavillon Blanc 100% Sauvignon Blanc** (atypique pour le Médoc), troisième vin **Margaux du Château Margaux**. Prix : **500-1200 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "margaux",
+        "premier-cru",
+        "1855",
+        "mentzelopoulos",
+        "iconique",
+        "elegance",
+        "premier-grand-cru-classe-1855",
+        "famille-mentzelopoulos",
+        "graves-fines",
+        "feminin-soyeux",
+        "elegance-florale"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~421 à 773 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Château Margaux (Premier Grand Cru Classé 1855)",
+        "Pavillon Rouge (second vin)",
+        "Pavillon Blanc (blanc sec, 100% Sauvignon Blanc)",
+        "Margaux du Château Margaux (troisième vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-mouton",
+      "nom": "Château Mouton Rothschild",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé 1855 à Pauillac** (promu en **1973** — **seule promotion de l'histoire du classement**, fruit du combat acharné de Philippe de Rothschild), **famille Rothschild (branche Philippine de Rothschild puis ses enfants Camille, Philippe Sereys et Julien de Beaumarchais)**. **~90 ha** sur **plateau de Pauillac**, sols de graves profondes. Encépagement très dominé par le **Cabernet Sauvignon ~85%** (le plus cabernet-dominant des Premiers) + Merlot + Cabernet Franc. Style **puissant et opulent**, profil cassis confit + cèdre + chocolat + cuir avec l'âge. **Garde 30-50 ans**. **Étiquettes d'artistes depuis 1945** (Picasso, Chagall, Bacon, Soulages, Koons, Kapoor…) — institution culturelle unique en France. Second vin **Le Petit Mouton**. Prix : **500-1200 €**, plus pour millésimes mythiques (1945, 1959, 1986, 2000, 2010).",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "premier-cru",
+        "1855",
+        "rothschild",
+        "iconique",
+        "etiquettes-artistes",
+        "premier-grand-cru-classe-1855",
+        "promu-1973",
+        "famille-rothschild",
+        "cabernet-sauvignon"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~406 à 849 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Mouton Rothschild (Premier Grand Cru Classé 1855)",
+        "Le Petit Mouton (second vin)",
+        "Aile d'Argent (blanc sec, Pessac-Léognan)"
+      ]
+    },
+    {
+      "id": "bdx-prod-palmer",
+      "nom": "Château Palmer",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Margaux",
+      "appellations_principales": [
+        "Margaux"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**3e Grand Cru Classé 1855 à Margaux** (mais **considéré au niveau des Premiers** par toute la critique sérieuse — l'écart classement/qualité le plus flagrant du 1855), **familles Sichel et Mähler-Besse** depuis 1938 (deux familles propriétaires associées, équipe dirigée par Thomas Duroux). **~55 ha** sur les plus belles graves de Margaux. **Encépagement Merlot exceptionnellement fort ~47% + Cabernet Sauvignon ~47% + Petit Verdot ~6%** — le plus merlot-dominant du Médoc supérieur, d'où le côté **\"plus chaleureux\"**. **Biodynamie certifiée depuis 2008** (très rare à ce niveau du 1855 — Palmer est pionnier biodynamique parmi les Crus Classés). Style **opulent, aromatique, soyeux**. **Garde 30-50 ans**. Second vin **Alter Ego de Palmer**. Cuvée **\"Historical XIXth Century Wine\"** (recréation expérimentale historique). Prix : **250-500 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "margaux",
+        "troisieme-cru",
+        "1855",
+        "biodynamie",
+        "super-second",
+        "3e-grand-cru-classe-1855",
+        "familles-sichel-mahler-besse",
+        "biodynamie-certifiee-2008",
+        "merlot-fort",
+        "super-troisieme"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~414 à 848 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Palmer (3e Grand Cru Classé 1855)",
+        "Alter Ego de Palmer (second vin)",
+        "Historical XIXth Century Wine (cuvée historique)"
+      ]
+    },
+    {
+      "id": "bdx-prod-pavie",
+      "nom": "Château Pavie",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Premier Grand Cru Classé A à Saint-Émilion** (depuis **2012**, promotion controversée), **famille Perse** depuis 1998 (**Gérard Perse**, ancien entrepreneur de supermarchés reconverti). **~37 ha** sur **coteau sud et plateau calcaire** de Saint-Émilion. **Merlot dominant ~60% + Cabernet Franc ~25% + Cabernet Sauvignon ~15%**. Style **moderne, puissant, concentré et boisé** — **\"Pavie nouvelle vague\" sous Perse**, **controversé** : apprécié par Robert Parker (qui lui donnait régulièrement 100/100), critiqué par les amateurs de classicisme bordelais (Jancis Robinson en a fait l'archétype du style \"hyper-concentré\" critiquable). **Garde 25-40 ans**. Élevage **18-24 mois en barriques 100% neuves**, vendanges très tardives, extractions poussées. Second vin **Arômes de Pavie**. Prix : **300-700 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "premier-grand-cru-A",
+        "perse",
+        "riche",
+        "premier-grand-cru-classe-a",
+        "gerard-perse",
+        "style-moderne-puissant",
+        "controverse-parker",
+        "concentre-boise"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~411 à 806 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "cuvees_phares": [
+        "Château Pavie (Premier Grand Cru Classé A, depuis 2012)",
+        "Arômes de Pavie (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-pichon-baron",
+      "nom": "Château Pichon-Longueville Baron",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**2e Grand Cru Classé 1855 à Pauillac**, **groupe AXA Millésimes** (assurances AXA) depuis 1987 — gestion **Christian Seely** puis **Pierre Montégut**. **~73 ha** sur **plateau sud de Pauillac**, voisin de Latour. **Cabernet Sauvignon dominant ~70% + Merlot + Cabernet Franc + Petit Verdot**. Style **structuré et puissant**, plus austère que sa voisine la Comtesse, profil tabac + cassis + graphite. **Garde 25-40 ans**. Élevage 18 mois en barriques, ~80% neuves. Second vin **Les Tourelles de Longueville**. **Spectaculaire bâtiment néo-Renaissance** (1851) avec ses tours coniques, l'un des plus photogéniques du Médoc. Prix : **150-300 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "deuxieme-cru",
+        "1855",
+        "axa",
+        "classique",
+        "2e-grand-cru-classe-1855",
+        "axa-millesimes",
+        "cabernet-dominant",
+        "structure-puissance"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~325 à 644 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Pichon-Longueville Baron (2e Grand Cru Classé 1855)",
+        "Les Tourelles de Longueville (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-pichon-comtesse",
+      "nom": "Château Pichon-Longueville Comtesse de Lalande",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pauillac",
+      "appellations_principales": [
+        "Pauillac"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**2e Grand Cru Classé 1855 à Pauillac**, **famille Rouzaud (Champagne Louis Roederer)** depuis 2007 (rachat à la famille de Lencquesaing). **~89 ha** sur **plateau sud de Pauillac**, parcelles partagées historiquement avec Pichon Baron. **Encépagement atypique pour Pauillac** : **Cabernet Sauvignon ~45% + Merlot fort ~35% + Cabernet Franc ~12% + Petit Verdot ~8%** — la forte proportion de Merlot explique le style. **Plus féminin, soyeux et aromatique** que son voisin le Baron, profil violette + framboise + cassis + tabac blond, **l'un des plus beaux Pauillac de récolte parfaite**. **Garde 25-40 ans**. Second vin **Réserve de la Comtesse**. Prix : **150-300 €** — souvent légèrement supérieur au Baron sur les grands millésimes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pauillac",
+        "deuxieme-cru",
+        "1855",
+        "roederer",
+        "elegance",
+        "2e-grand-cru-classe-1855",
+        "louis-roederer",
+        "merlot-fort",
+        "feminin-soyeux"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~375 à 735 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Château Pichon-Longueville Comtesse de Lalande (2e Grand Cru Classé 1855)",
+        "Réserve de la Comtesse (second vin)"
+      ]
+    },
+    {
+      "id": "bdx-prod-smith-haut-lafitte",
+      "nom": "Château Smith Haut Lafitte",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pessac-Léognan",
+      "appellations_principales": [
+        "Pessac-Léognan"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Cru Classé de Graves rouge ET blanc** à Pessac-Léognan, **famille Cathiard** depuis 1990 (Daniel et Florence Cathiard, anciens skieurs olympiques reconvertis). **~78 ha** sur **sols de graves günziennes**, **conversion biologique puis biodynamie** sous l'impulsion des Cathiard (rare à ce niveau du Cru Classé de Graves). **Rouge** : Cabernet Sauvignon ~55% + Merlot ~30% + Cabernet Franc + Petit Verdot, élevage 18 mois en barriques ~60% neuves. **Blanc** : Sauvignon Blanc dominant ~90% + Sauvignon Gris (rare) + Sémillon, élevage en barriques. **Le blanc est devenu une des références mondiales** depuis les années 2000 — agrumes + fruits exotiques + minéralité longue, garde 15-25 ans. Style **moderne, précis, soigné**, élevages soignés. Second vin **Les Hauts de Smith**. Prix : Rouge **100-220 €**, Blanc **130-280 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pessac-leognan",
+        "cru-classe-graves",
+        "cathiard",
+        "bio",
+        "cru-classe-graves-rouge-et-blanc",
+        "famille-cathiard",
+        "biodynamie",
+        "moderne-precis",
+        "blanc-reference-mondiale"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~470 à 828 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Sauvignon Blanc",
+        "Sauvignon Gris",
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Château Smith Haut Lafitte Rouge (Cru Classé de Graves)",
+        "Château Smith Haut Lafitte Blanc (Cru Classé de Graves Blanc)",
+        "Les Hauts de Smith (second vin rouge et blanc)"
+      ]
+    },
+    {
+      "id": "bdx-prod-tertre-roteboeuf",
+      "nom": "Château Tertre-Roteboeuf",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Saint-Émilion",
+      "appellations_principales": [
+        "Saint-Émilion Grand Cru"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**\"Garagiste\" légendaire de Saint-Émilion**, **François Mitjavile** (et son fils Louis aujourd'hui), **non classé volontairement** (Mitjavile a toujours refusé d'entrer dans le classement). **~6 ha** seulement, plateau calcaire de Saint-Laurent-des-Combes. **Merlot dominant + Cabernet Franc**. **Vendanges tardives volontaires**, vinifications très marquées, élevage en barriques neuves. Style **opulent, exotique, signature inimitable**. Garde 20-30 ans. **Production confidentielle**, allocations rares. Prix : 250-500 €.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "saint-emilion",
+        "hors-classement",
+        "mitjavile",
+        "culte",
+        "tardif",
+        "non-classe-volontairement",
+        "francois-mitjavile",
+        "louis-mitjavile",
+        "garagiste-legendaire",
+        "vendanges-tardives",
+        "signature-inimitable",
+        "6-hectares"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés.",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "cuvees_phares": [
+        "Château Tertre-Roteboeuf",
+        "Roc de Cambes (Côtes de Bourg, autre propriété Mitjavile)"
+      ]
+    },
+    {
+      "id": "bdx-prod-trotanoy",
+      "nom": "Château Trotanoy",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pomerol",
+      "appellations_principales": [
+        "Pomerol"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Référence de Pomerol**, **famille Moueix** (**Jean-Pierre Moueix** puis son fils Christian, dynastie de négoce et propriétaires Pomerol-Saint-Émilion incluant Pétrus) depuis 1953. **~7,2 ha** seulement (production confidentielle ~2000 caisses/an) sur **plateau de Pomerol**, sol typique d'**argile bleue + graves** — l'argile bleue est le terroir signature des grands Pomerol, c'est elle qui donne le côté dense et structuré. **Merlot dominant ~90% + Cabernet Franc ~10%**. Style **dense, structuré, terrien** — l'un des Pomerol les plus *« masculins »* (à l'opposé du soyeux de Pétrus voisin, pourtant même propriétaire). **Garde 30-50 ans**. Élevage 16-20 mois en barriques ~50% neuves. **Pas de second vin** (production trop confidentielle). Prix : **200-500 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pomerol",
+        "moueix",
+        "argile-bleue",
+        "famille-moueix",
+        "depuis-1953",
+        "merlot-dominant",
+        "structure-terrienne",
+        "confidentiel"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~398 à 768 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "cuvees_phares": [
+        "Château Trotanoy"
+      ]
+    },
+    {
+      "id": "bdx-prod-domaine-chevalier",
+      "nom": "Domaine de Chevalier",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pessac-Léognan",
+      "appellations_principales": [
+        "Pessac-Léognan"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Cru Classé de Graves rouge ET blanc** à Pessac-Léognan, **famille Bernard** depuis 1983 (**Olivier Bernard** aujourd'hui). **~45 ha rouges + 5 ha blancs** sur **sols de graves günziennes profondes** dans une clairière forestière (microclimat tempéré par les pins). **Rouge** : Cabernet Sauvignon dominant ~65% + Merlot ~30% + Cabernet Franc + Petit Verdot, élevage 18 mois en barriques. **Blanc** : Sauvignon Blanc dominant ~70% + Sémillon ~30%, **élevage 18-20 mois en barriques** (rare pour un blanc) avec bâtonnage régulier — **le blanc est l'une des références mondiales des grands blancs secs de Bordeaux**, **garde 20-30 ans facile** (rarissime pour un blanc sec). Rouge classique élégant, garde 25-40 ans. Second vin **L'Esprit de Chevalier**. Prix : Rouge **80-180 €**, Blanc **150-300 €**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pessac-leognan",
+        "cru-classe-graves",
+        "bernard",
+        "blanc-iconique",
+        "cru-classe-graves-rouge-et-blanc",
+        "famille-bernard",
+        "olivier-bernard",
+        "grand-blanc-sec",
+        "garde-longue-blanc"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~440 à 800 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Sauvignon Blanc",
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Domaine de Chevalier Rouge (Cru Classé de Graves)",
+        "Domaine de Chevalier Blanc (Cru Classé de Graves Blanc, référence absolue)",
+        "L'Esprit de Chevalier (second vin rouge et blanc)"
+      ]
+    },
+    {
+      "id": "bdx-prod-le-pin",
+      "nom": "Le Pin",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pomerol",
+      "appellations_principales": [
+        "Pomerol"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Micro-domaine culte de Pomerol** créé en **1979** par **Jacques Thienpont** (famille négociante belge des Thienpont). **~2,7 hectares seulement** sur **sols de graves et argiles** au cœur du plateau de Pomerol. **100% Merlot** (vinification monocépage très rare à ce niveau de prestige). **Production ~6 000-7 500 bouteilles/an** — l'un des vins les plus rares et chers du monde. **Élevage 18 mois en barriques 100% neuves**. Style **opulent, soyeux, aromatique extrême** — le \"garage wine\" originel qui a inspiré tout un mouvement à Saint-Émilion dans les années 1990. **Garde 25-40 ans**. **Pas de second vin**. **Prix de spéculation** : **3000-6000 € sortie négoce**, **5000-15000 € sur marché secondaire** sur grands millésimes. *Plus un objet de collection qu'un vin à boire.*",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pomerol",
+        "iconique",
+        "micro-domaine",
+        "thienpont",
+        "garage",
+        "jacques-thienpont",
+        "fonde-1979",
+        "2-7-hectares",
+        "100-merlot",
+        "vin-culte",
+        "speculation",
+        "production-confidentielle"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~414 à 783 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Merlot"
+      ],
+      "cuvees_phares": [
+        "Le Pin (100% Merlot)"
+      ]
+    },
+    {
+      "id": "bdx-prod-vcc",
+      "nom": "Vieux Château Certan",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Pomerol",
+      "appellations_principales": [
+        "Pomerol"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": ">100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Référence historique de Pomerol** (l'une des plus anciennes propriétés viticoles du Bordelais, mentionnée dès le XVe siècle), **famille Thienpont** depuis 1924 (Alexandre Thienpont puis son fils Guillaume aujourd'hui — cousins des Thienpont du Pin). **~14 ha** sur plateau de Pomerol. **Encépagement atypique pour Pomerol** : Merlot + Cabernet Franc fort (~25%) + Cabernet Sauvignon (~10%). Style **élégant et classique**, à contre-courant des Pomerol modernes opulents. Garde 30-50 ans. Prix : 200-450 €.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "pomerol",
+        "thienpont",
+        "cabernet-franc",
+        "finesse",
+        "famille-thienpont",
+        "depuis-1924",
+        "alexandre-guillaume-thienpont",
+        "cabernet-franc-fort",
+        "elegance-classique",
+        "historique-xve-siecle"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés.",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "cuvees_phares": [
+        "Vieux Château Certan (VCC)"
+      ]
+    },
+    {
+      "id": "bdx-prod-suduiraut",
+      "nom": "Château Suduiraut",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Sauternes",
+      "appellations_principales": [
+        "Sauternes"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "blanc",
+        "doux"
+      ],
+      "notes_objectives": "**Premier Cru Classé 1855 à Sauternes** (Preignac, sur la rive droite du Ciron), **groupe AXA Millésimes** depuis 1992 (même groupe que Pichon Baron). **~92 ha** sur **sols graveleux et argilo-calcaires**, exposition optimale pour le **développement du botrytis** (la fameuse \"pourriture noble\" — Botrytis cinerea — qui concentre les sucres et arômes des baies, grâce aux brumes matinales du Ciron qui rencontrent l'air chaud des Graves). Encépagement classique **Sémillon dominant ~90% + Sauvignon Blanc ~10%**. **Vendanges manuelles en plusieurs tries successives** (4 à 6 passages sur les mêmes vignes) sur grains botrytisés. **Élevage 24-36 mois en barriques ~50% neuves**. Style **opulent, miellé, complexe** (abricot confit, écorce d'orange, miel, safran), **garde 30-50 ans facile**. Sec **\"S de Suduiraut\"** depuis 2005. Prix : 50-150 €.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "sauternes",
+        "premier-cru",
+        "1855",
+        "axa",
+        "premier-cru-classe-1855",
+        "axa-millesimes",
+        "botrytis-cinerea",
+        "semillon-dominant",
+        "preignac",
+        "garde-longue"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct ranking 4) — notes objectives + cuvées phares + cépages + gamme_prix + appellations ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~467 à 845 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Sémillon",
+        "Sauvignon Blanc"
+      ],
+      "cuvees_phares": [
+        "Château Suduiraut (Premier Cru Classé 1855)",
+        "Castelnau de Suduiraut (second vin)",
+        "S de Suduiraut (blanc sec, depuis 2005)"
+      ]
+    },
+    {
+      "id": "bdx-prod-durfort-vivens",
+      "nom": "Château Durfort-Vivens",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Margaux (Médoc, rive gauche)",
+      "appellations_principales": [
+        "Margaux"
+      ],
+      "localisation": "Margaux, Cantenac, Soussans et Arsac (33460), Médoc",
+      "statut_production": "bio + biodynamie certifié Demeter depuis 2016 sur l'intégralité du vignoble, premier Grand Cru Classé de Margaux doublement certifié",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Second Grand Cru Classé 1855 de Margaux**, **propriété de Gonzague Lurton depuis 1992** (fils de Lucien Lurton qui avait acheté le château en 1961 après une longue période d'effacement où Durfort était vinifié dans les chais de Château Margaux). **Domaine de 55 hectares plantés** (sur ~65 ha totaux), sur les communes de **Margaux, Cantenac, Soussans et Arsac** — coeur de l'appellation. **Encépagement** : ~85% Cabernet Sauvignon, 13% Merlot, 2% Cabernet Franc — **taux de Cabernet Sauvignon parmi les plus élevés du Médoc**, signature de l'identité du vin (austérité jeune, finesse mûre). Augmentation progressive du Cabernet depuis 20 ans (replantation au détriment du Merlot, qualité en hausse). Âge moyen 50 ans, densité 6 600 à 8 300 pieds/ha. **Mosaïque de terroirs** : graves sur **3 terrasses géologiques différentes**, décomposées par le domaine en **28 familles de sols et 92 sous-catégories** — niveau de précision parcellaire rare à Bordeaux. **Le tournant historique** : Gonzague Lurton prend les rênes en 1992 avec une vision claire — *« pureté, précision, expression du terroir margalais »*. Refus du style médocain ultra-mûr et boisé des années 2000. **2009 : lancement de la conversion biodynamique** à 20%, puis montée en puissance progressive sur 7 ans. **2016 : double certification bio + Demeter sur l'intégralité du vignoble** — **Durfort-Vivens devient le premier Grand Cru Classé de l'appellation Margaux** doublement certifié. Aux côtés de Pontet-Canet (Pauillac), Climens (Barsac) et désormais Latour (Pauillac), c'est l'un des très rares classés 1855 entièrement en biodynamie. **Pratiques détaillées** : préparations biodynamiques 500/501, phytothérapie, compost maison, agroécologie (haies, couverts végétaux ciblés), agroforesterie, **vignes franches de pied** (non greffées) sur certaines parcelles — démarche de **conservatoire du patrimoine végétal médocain** assez unique. **Vinification** : chais rénovés en 2012, mix de **cuves bois, béton et amphores**. **2017 : introduction des amphores en terre cuite pour l'élevage** — aujourd'hui **plus grand chai d'amphores au monde en volume avec plus de 160 unités** (point de référence à connaître). Vinification parcellaire stricte, **levures indigènes** sur une part croissante. **Élevage 18 mois** dans un mix barriques de chêne français à grain fin **~60% bois neuf + amphores de terre cuite** — le bois neuf reste à 60% (point classique médocain à modérer côté Pat), mais les amphores compensent par leur transparence aromatique. **Gamme** : (1) **Château Durfort-Vivens** Grand Vin ; (2) **Vivens**, second vin ; (3) depuis 2019, série des **« Parcellaires »** — cuvées monoparcellaires expérimentales en très petits volumes, démarche bourguignonne de mise en valeur du terroir. **Autres activités Gonzague Lurton** : co-fondateur avec son épouse Claire Villars-Lurton (Haut-Bages-Libéral, Ferrière, La Gurgue) du **Château Acaïbo** en Sonoma. **Reconnaissance critique** : Bettane et Desseauve, Yves Beck, Vinum parlent de « renaissance » et de « futur vin culte ». Le 2018 est régulièrement cité comme le millésime de bascule qualitative ; 2019 et 2020 confirment. **Prix indicatifs 2024-2026** : Grand Vin **60-100 € selon millésime** (2018-2020 dans le haut), Vivens 25-40 €. **Rapport qualité-prix exceptionnel** pour un deuxième cru classé en biodynamie totale. **Lecture Pat — sur la voie du 5/5, à confirmer** : (1) **premier Grand Cru Classé de Margaux en bio + biodynamie Demeter (2016)** = exemplarité totale, profil pionnier identique à Pontet-Canet à Pauillac, conviction n°1 et n°5 cochées ; (2) **chai d'amphores le plus grand au monde** = engagement esthétique radical, refus du tout-bois sur les élevages parcellaires ; (3) **précision parcellaire spectaculaire** (28 familles de sols, série Parcellaires) = vision bourguignonne du Médoc, conviction n°3 ; (4) **85% Cabernet Sauvignon** = retour à l'identité margalaise vraie, refus de la course au merlot opulent ; (5) **mais 60% bois neuf sur le Grand Vin** reste un parti pris médocain classique qui marque le vin dans sa jeunesse — c'est pour cela que Pat ne met pas Durfort au 5/5 absolu de Pontet-Canet (descendu à 50% + 35% amphores), mais à un 5/5 *« sur la voie du sommet, à confirmer sur prochains millésimes »* ; (6) **prix encore raisonnables** comparés à un Palmer ou un Brane-Cantenac voisins, alors que la démarche bio-biodynamique justifierait des prix bien supérieurs ; (7) **série Parcellaires** depuis 2019 = chantier en cours, à suivre — si les Parcellaires confirment dans la durée, Durfort glisse vers le 5/5 absolu sans réserve. **Garde** : 10-25 ans selon millésime, ouverture possible à 7-8 ans. Service 17°C, **carafage 2h sur jeunesse**, verre Bordeaux. **À recommander chaque fois qu'on cherche un grand Margaux honnête, qui n'a pas honte de son cabernet, à un prix qui reste atteignable.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "margaux",
+        "second-grand-cru-classe-1855",
+        "lurton",
+        "gonzague-lurton",
+        "ex-lucien-lurton-1961",
+        "bio-certifie-2016",
+        "biodynamie-demeter-2016",
+        "premier-margaux-bio-biodynamie",
+        "55-hectares",
+        "graves",
+        "3-terrasses-geologiques",
+        "28-familles-de-sols",
+        "92-sous-categories",
+        "cabernet-sauvignon-85",
+        "amphores-terre-cuite",
+        "plus-grand-chai-amphores-monde",
+        "160-amphores",
+        "parcellaires-depuis-2019",
+        "vignes-franches-de-pied",
+        "conservatoire-patrimoine-medocain",
+        "agroecologie",
+        "agroforesterie",
+        "levures-indigenes-partielles",
+        "18-mois-elevage",
+        "60-bois-neuf",
+        "renaissance-2015",
+        "vivens-second-vin",
+        "acaibo-sonoma-co-fondateur",
+        "claire-villars-lurton-epouse",
+        "rapport-qualite-prix",
+        "conviction-n1",
+        "conviction-n3",
+        "conviction-n5",
+        "sur-la-voie-du-5-absolu"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, session d'enrichissement de la base Bordeaux après bouclage des 8 domaines 5/5 (Lots 1 et 2). Domaine signalé comme manquant à la base. (b) Sources web croisées : site officiel gc-lurton-estates.com, lagunacellar.com, jean-merlaut.com (négociant), cavissima.com, thewinecellarinsider.com, vinatis.com. (c) Points à vérifier avant validation : confirmer le ranking_pat à 5 'sur la voie du sommet' tel que demandé par l'utilisateur (vs 5/5 absolu ou 4/5) — décision rendue mais à entériner ; surface plantée exacte (55 ha selon Wine Cellar Insider, 65 ha selon site officiel, probablement 55 ha plantés sur 65 ha totaux) ; pourcentage exact de bois neuf actuel (60% selon Jean-Merlaut, à confirmer car peut avoir baissé depuis 2020) ; statut des Parcellaires (cuvées commercialisées ou réservées dégustation, prix, volumes) ; vérifier que Claire Villars-Lurton (épouse) n'est pas formellement impliquée dans la direction de Durfort (elle dirige Haut-Bages-Libéral, Ferrière et La Gurgue de son côté).",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "cuvees_phares": [
+        "Château Durfort-Vivens (Grand Vin, ~85% Cabernet Sauvignon, élevage 18 mois en barriques 60% neuves + amphores terre cuite)",
+        "Vivens (second vin)",
+        "Les Parcellaires de Durfort-Vivens (depuis 2019, série monoparcellaire expérimentale)"
+      ]
+    },
+    {
+      "id": "bdx-prod-clos-du-jaugueyron",
+      "nom": "Clos du Jaugueyron",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Margaux et Haut-Médoc (Arsac, Macau, Cantenac)",
+      "appellations_principales": [
+        "Margaux",
+        "Haut-Médoc"
+      ],
+      "localisation": "Arsac (33460), chai et résidence au cœur du Médoc",
+      "statut_production": "bio + biodynamie certifiée sur l'intégralité du vignoble depuis le début des années 2000",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Micro-domaine confidentiel du Médoc**, fondé en **2000 par Michel Théron** et **Stéphanie Destruhaut**, sa compagne. **Histoire à rebours du Bordelais classique** : Michel Théron est un **Languedocien du Minervois** (famille de vignerons), arrivé à Bordeaux en 1988 pour son BTS Viti-Œno à Blanquefort, où il rencontre Stéphanie. **Pas de château, pas de classement, pas de dynastie** — juste un fermage de 40 ares à Cantenac en 2000, puis acquisition progressive de parcelles, le tout depuis une bâtisse landaise discrète à **Arsac** au sud de l'appellation Margaux. Stéphanie a longtemps travaillé dans les grands crus médocains côté commercial, puis rejoint Michel à temps plein en 2010 — **toutes les décisions se prennent en duo**. **Domaine actuel : ~7-8 hectares au total**, répartis sur **une quinzaine à seize parcelles** en 3 secteurs : **Perrin et Le Tertre** à Arsac (Margaux, sables et graviers riches en quartz, voisin du 5e Cru Classé du Tertre), **Macau** (Haut-Médoc, gravettes fines et sables filtrants), et parcelles complémentaires sur graves quaternaires plus argileuses. **Encépagement Margaux** : ~70% Cabernet Sauvignon, 25% Merlot, 5% Cabernet Franc. **Encépagement Haut-Médoc** : ~53% Cabernet Sauvignon, 40% Merlot, 7% Petit Verdot. Le nom du domaine vient des lieux-dits **Grand Jaugueyron et Petit Jaugueyron**. **Pratiques** : Michel Théron, formé à l'agriculture conventionnelle (« nous sommes de purs produits de l'agro-chimie » dit-il), bascule progressivement à partir des années 2000 sous l'influence d'amis vignerons ligériens et bordelais. **Bio et biodynamie certifiées sur l'intégralité du vignoble** aujourd'hui. Enherbements, préparations biodynamiques, observation parcellaire, recherche d'autonomie des sols. **Vinification en cave** : c'est là que le domaine se démarque vraiment du voisinage médocain. **Cuves béton de 30 à 50 hl** (et inox), température contrôlée, **pas de foulage**, **levures indigènes**, **macérations courtes ~20 jours**, **extractions douces** (pas de pigeage agressif), **soufre minimal**, **élevages sur lies fines en milieu réducteur**. **Point d'attention sur le bois neuf** : les sources se contredisent — Wine Cellar Insider parle de **30% bois neuf en moyenne** pour le Grand Vin Margaux, alors que les fiches techniques de Les Passionnés du Vin annoncent **80% pour le Margaux 2019** et **85% pour Nout 2016**. Une partie de la réponse vient probablement du fait que le Margaux Grand Vin voit plus de bois neuf que les autres cuvées (qui n'en voient pas ou peu — barriques d'un ou deux vins). Le **Haut-Médoc et le second vin Petit Jaug n'utilisent pas de bois neuf**, ce qui correspond à la philosophie minimaliste affichée. **Élevage 12 mois en barriques** puis quelques mois en cuves avant mise. **Cuvées** : (1) **Margaux Clos du Jaugueyron** (Grand Vin, ~2 000 caisses) ; (2) **Petit Jaug** (second vin Margaux) ; (3) **Margaux Nout** (cuvée biodynamique d'après la déesse égyptienne du ciel, 55% Merlot + 45% Cab Sauv) ; (4) **Haut-Médoc** (Macau, plus précoce). **Production totale microscopique** — quelques dizaines de milliers de bouteilles tous vins confondus. Distribution confidentielle chez les meilleurs cavistes et restaurants alignés. **Reconnaissance critique** : **Guide RVF des meilleurs vins de France 2022** parle de *« projet tout à fait original et très abouti »* et de *« vins à la personnalité bien affirmée et d'une grâce superbe »*. **Prix indicatifs 2024-2026** : Haut-Médoc 25-40 €, Margaux Nout 50-80 €, Margaux Clos du Jaugueyron 70-130 €. **Lecture Pat — l'incarnation du Médoc qu'on aimerait voir partout** : (1) **autodidacte hors-dynastie** qui a construit son domaine de zéro à Arsac, l'anti-héritier total (conviction n°3 dans sa forme la plus pure) ; (2) **bio + biodynamie certifiées** dans un Médoc encore majoritairement conventionnel = engagement réel et ancien ; (3) **vinification minimaliste** (cuves béton, levures indigènes, peu de soufre, extractions douces) = conviction n°5 portée au maximum sur l'essentiel de la gamme ; (4) **bémol honnête sur le Grand Vin Margaux** : si les fiches techniques disent vrai sur les 80% bois neuf, c'est plus que ce qu'on attendrait — à clarifier. Les autres cuvées respectent l'esprit annoncé ; (5) **microscopique mais militant** : un grand cru classé sort 200 000 bouteilles, Clos du Jaugueyron dix fois moins — mais chaque bouteille porte un discours cohérent (conviction n°6). **Garde** : 6-15 ans selon cuvée, le Margaux Grand Vin tient 20 ans sur les bons millésimes (2015, 2016, 2018-2020). Service 16-17°C, **carafage 1-2h sur jeunesse**, verre Bordeaux. **À recommander à qui cherche un Margaux ou Haut-Médoc honnête, vrai, vivant, qui ne ressemble à aucun voisin.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "margaux",
+        "haut-medoc",
+        "arsac",
+        "macau",
+        "cantenac",
+        "clos-du-jaugueyron",
+        "michel-theron",
+        "stephanie-destruhaut",
+        "languedocien-minervois-origine",
+        "fondation-2000",
+        "autodidacte",
+        "anti-grand-cru-classe",
+        "micro-domaine",
+        "7-8-hectares",
+        "15-parcelles",
+        "bio-certifie",
+        "biodynamie-certifiee",
+        "graves-sables-quartz",
+        "gravettes-fines",
+        "cabernet-sauvignon-70",
+        "cuves-beton",
+        "levures-indigenes",
+        "pas-de-foulage",
+        "soufre-minimal",
+        "extractions-douces",
+        "elevage-sur-lies",
+        "milieu-reducteur",
+        "barriques-vieilles",
+        "bois-neuf-grand-vin-a-clarifier",
+        "nout-cuvee-biodynamie",
+        "petit-jaug-second-vin",
+        "rvf-eloge",
+        "guide-rvf-2022",
+        "vinification-minimaliste",
+        "production-confidentielle",
+        "distribution-cavistes-restaurants",
+        "conviction-n3",
+        "conviction-n5",
+        "conviction-n6",
+        "anti-grand-cru-classe-modele",
+        "iconique-confidentiel"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, troisième ajout d'une série d'enrichissement Bordeaux après Domaine Chapel/Smith-Chapel et Durfort-Vivens. (b) Sources web croisées : viamo.fr (interview vigneron), lespassionnesduvin.com (fiches techniques cuvées 2016, 2019, 2020), lacaveduchateau.com, thewinecellarinsider.com, vigneronsdexception.com, closdujaugueyron.com (site officiel). (c) Points à vérifier avant validation : (1) **incohérence sur le % bois neuf du Grand Vin Margaux** — Wine Cellar Insider dit 30%, Les Passionnés du Vin (fiches techniques cuvées datées) disent 80% sur Margaux 2019 et 85% sur Nout 2016. Demander directement au domaine, ou consulter les fiches techniques les plus récentes (millésimes 2020-2022). C'est un point matériel pour le Lecture Pat. (2) Surface exacte du domaine : 7,30 ha selon La Cave du Château, 8 ha selon Viamo, 10-11 ha selon Wine Cellar Insider en comptant tous les fermages — clarifier propriété vs fermage. (3) Statut de certification : bio confirmé, mais certification biodynamique formelle (Demeter ? Biodyvin ?) à confirmer (sources parlent de pratiques biodynamiques sans toujours préciser l'organisme certificateur). (4) Production totale annuelle en bouteilles — estimation ~30 000 à confirmer.",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "cuvees_phares": [
+        "Margaux Clos du Jaugueyron (Grand Vin, ~70% Cab Sauv, Arsac)",
+        "Petit Jaug (second vin Margaux)",
+        "Margaux Nout (55% Merlot + 45% Cab Sauv, cuvée biodynamique signature)",
+        "Haut-Médoc Clos du Jaugueyron (Macau, gravettes fines, élevage barriques 1-2 vins)"
+      ]
+    },
+    {
+      "id": "bdx-prod-galouchey",
+      "nom": "Domaine de Galouchey",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Libournais (Beychac-et-Caillau, rive gauche de la Dordogne)",
+      "appellations_principales": [
+        "Vin de France"
+      ],
+      "localisation": "Beychac-et-Caillau (33750), à 7 km de Libourne",
+      "statut_production": "bio strict (pratiques rigoureuses, statut de certification formelle à clarifier), sans intrants, sols vierges de viticulture avant 2002",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Micro-domaine confidentiel à Beychac-et-Caillau** (33750), à 7 km de Libourne, **« du mauvais côté de la Dordogne »** comme disent ses fondateurs avec autodérision — face à Saint-Émilion et Pomerol qui regardent « sinon de haut, du moins amusés ». **0,94 hectare** : c'est, littéralement, un jardin. **Histoire à rebours de tout** : pas une dynastie vigneronne, **un projet d'amateurs éclairés** monté par quatre amis parisiens en 2002. **Les fondateurs** : (1) **Gérard Pantanacce**, ancien décorateur, co-fondateur à la Bastille du bar à vins **Le Café du Passage** ; (2) **Marco Pelletier**, **ex-chef sommelier au Bristol et chez Taillevent**, considéré comme l'un des plus brillants sommeliers au monde, aujourd'hui propriétaire du restaurant **Vantre** à Paris — c'est lui qui rejoint le projet et prend la direction œnologique ; (3) **Jean et Claudia Terrade**, voyagistes, fondateurs de l'agence **Quimbaya Latin America**. **2002** : plantation des vignes sur une **terre vierge qui n'avait jamais connu ni le raisin ni l'engrais** — point décisif, un sol non épuisé par des décennies de viticulture intensive. **Pas de droits de plantation** à l'origine, d'où le statut juridique en **Vin de France**. **Premier essai 2004, première commercialisation 2007** (630 bouteilles), rythme de croisière à **~3 000-4 000 bouteilles** dès 2010. **Encépagement** : **majorité Merlot**, complété par **Cabernet Franc, Cabernet Sauvignon, Petit Verdot et Carménère** — l'inclusion du Petit Verdot et du Carménère est particulièrement intéressante, ces deux cépages bordelais oubliés y reprennent vie sur sol neuf. Une seconde parcelle, **La Chapelle** (~2,5 ha au total selon certaines sources), est venue agrandir le projet. **Pratiques** : **bio strict** (sans certification annoncée formellement), **vendanges manuelles** avec parfois harnais de sécurité tant la parcelle est en pente, **égrenage à la main grain par grain** au cuvier (« mets seulement les grains que tu as envie de croquer » est la règle) — pratique **quasi unique au monde**, qui explique les rendements microscopiques de **~3 000-4 000 bouteilles par hectare** contre 6 000-7 000 pour un cru bordelais classique. **Vinification revendiquée « à la bourguignonne »** au cœur du Bordelais : **infusion plutôt qu'extraction**, pas de pigeage, pas de remontage ; levures indigènes ; **pas de bois neuf** — élevage en **fûts de seconds vins offerts par des amis des grands châteaux** voisins ; **élevage 30 mois en barriques** (50% Bourgogne, 50% Bordeaux), puis **+12 mois en bouteille** avant commercialisation ; mise sans collage ni filtration, soufre minimal. **Cuvées** : **Vin de Jardin** (la cuvée signature, clin d'œil ironique aux « vins de garage » bordelais des années 90 — « à la mécanique, nous préférons le bucolique ») ; **Les Cabernets** (cuvée parcellaire depuis 2014, profil floral). **Statut** : pépite servie au verre dans certains des plus grands restaurants du monde — **Le Bernardin** et **Eleven Madison Park** (New York), **Seasons** (San Francisco), **Vantre** (Paris). Distribution allocation, principalement Japon, États-Unis, France via cavistes spécialisés. **Prix indicatifs 2024-2026** : Vin de Jardin **40-60 €** au domaine ; **80-150 €** chez les cavistes selon millésime et rareté. **Lecture Pat — pépite confidentielle, profil d'amateurs surdoués** : (1) **projet anti-bordelais par construction** — quatre Parisiens (deux voyagistes, un décorateur, un sommelier-star) qui font le vin dont ils rêvent sur un hectare, sans château et sans dynastie ; (2) **honnêteté radicale des fondateurs** qui revendiquent ne **pas avoir de terroir d'exception** (« pas de terroir d'exception, mais une matière à sublimer »), démarche d'humilité rarissime à Bordeaux — conviction n°4 (l'appellation ne garantit rien) ; (3) **égrenage à la main grain par grain + infusion sans extraction + pas de bois neuf** = artisanat absolu, manifeste contre le style bordelais surextrait et boisé des années 2000, conviction n°5 incarnée ; (4) **vinification à la bourguignonne au cœur du Bordelais** = les sommeliers du monde entier surnomment Galouchey « le bourguignon de Bordeaux » ; (5) **MAIS** ce n'est pas un domaine vigneron au sens traditionnel (pas de famille, pas de filiation, pas de terroir d'origine) — c'est une démonstration de ce que peuvent faire des amateurs bien entourés sur un sol propre, avec une vision claire ; (6) **rareté quasi absolue** = très difficile à conseiller en pratique, à chercher en allocation ou à boire au verre dans les restaurants alignés. **Garde** : 5-12 ans, idéalement entre 6 et 10 ans. **Service 16°C**, **carafage énergique 30 min sur jeunesse**, verre Bourgogne large. **À recommander aux curieux et aux contre-courant** comme symbole d'un Bordeaux qui peut encore se réinventer.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "libournais",
+        "beychac-et-caillau",
+        "vin-de-france",
+        "micro-domaine",
+        "0-94-hectare",
+        "amateurs-eclaires",
+        "projet-parisien",
+        "gerard-pantanacce",
+        "marco-pelletier",
+        "jean-terrade",
+        "claudia-terrade",
+        "ex-chef-sommelier-bristol",
+        "ex-chef-sommelier-taillevent",
+        "vantre-paris",
+        "cafe-du-passage",
+        "quimbaya-latin-america",
+        "fondation-2002",
+        "premier-millesime-commercial-2007",
+        "sol-vierge-2002",
+        "bio-non-certifie-officiel",
+        "merlot-majoritaire",
+        "petit-verdot",
+        "carmenere",
+        "cabernet-franc",
+        "cabernet-sauvignon",
+        "egrenage-main-grain-par-grain",
+        "infusion-pas-extraction",
+        "pas-de-bois-neuf",
+        "fut-seconds-vins-grands-chateaux",
+        "30-mois-elevage",
+        "50-bourgogne-50-bordeaux",
+        "vinification-bourguignonne",
+        "vin-de-jardin-cuvee",
+        "les-cabernets-cuvee",
+        "anti-vin-de-garage",
+        "anti-bordeaux-extrait",
+        "bourguignon-de-bordeaux",
+        "le-bernardin-new-york",
+        "eleven-madison-park",
+        "seasons-san-francisco",
+        "allocation-tres-rare",
+        "2000-3600-bouteilles",
+        "japon-usa-export",
+        "pepite-confidentielle",
+        "conviction-n4",
+        "conviction-n5",
+        "conviction-n6",
+        "anti-grand-cru-classe",
+        "iconique-confidentiel"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, quatrième ajout d'une série d'enrichissement Bordeaux (après Domaine Chapel, Durfort-Vivens, Clos du Jaugueyron). (b) Sources web croisées : vindejardin.com (site officiel des fondateurs), chaisdoeuvre.fr (interview), parcellewine.com, leonandsonwine.com, albatrosswines.com, gaultmillau.com, satellitesb.com, twil.fr (achat direct), facebook.com/galouchey. (c) Points à vérifier avant validation : (1) **surface exacte du domaine** — 0,94 ha selon la majorité des sources cohérentes (Parcelle Wine, Satellite SB, Comptoir Wine), mais Albatross et Leon&Son parlent de 2,5 ha 'au total de la parcelle La Chapelle' — vraisemblablement 0,94 ha initial + extension récente sur La Chapelle, à clarifier avec le domaine. (2) **Présence de cépages blancs** : Comptoir Wine mentionne Sémillon, Sauvignon Blanc, Sauvignon Gris, Muscadelle en plus des 5 rouges officiels — encépagement à confirmer (peut-être plantation tardive non encore vinifiée). (3) **Certification bio formelle** annoncée comme strictement bio par toutes les sources, mais aucune ne précise l'organisme certificateur (Ecocert ? AB ?) — à clarifier. (4) Statut juridique du domaine et droits de plantation actuels. (5) Production annuelle exacte (~2 000 à 3 600 selon les sources et les millésimes).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Verdot",
+        "Carménère"
+      ],
+      "cuvees_phares": [
+        "Vin de Jardin (cuvée signature, assemblage 5 cépages dont Petit Verdot et Carménère, élevage 30 mois fûts seconds vins Bordeaux+Bourgogne)",
+        "Les Cabernets (cuvée parcellaire depuis 2014, isolation Cab Sauv + Cab Franc, profil floral)"
+      ]
+    },
+    {
+      "id": "bdx-prod-grand-village",
+      "nom": "Château Grand Village",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Fronsac (Mouillac, rive droite, nord de l'appellation)",
+      "appellations_principales": [
+        "Bordeaux Supérieur (rouge)",
+        "Bordeaux (blanc)"
+      ],
+      "localisation": "Mouillac (33240), nord du canton de Fronsac, entre Côtes de Bourg et Fronsac proprement dit",
+      "statut_production": "viticulture durable, pratiques bio dans les faits sans certification formelle, intrants minimaux, soufre infime",
+      "niveau_reference": 3,
+      "connu_de_pat": null,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Le berceau historique de la famille Guinaudeau et la « propriété-école » de Lafleur**. Domaine fondé en **1650 par Jacques Verdery**, ancêtre lointain de la lignée Guinaudeau — la famille y vit depuis **375 ans**. Situé à **Mouillac**, **commune du nord de l'appellation Fronsac** (entre Côtes de Bourg et Fronsac proprement dit), terroir argilo-calcaire proche de Saint-Émilion par sa composition. **Reprise par Jacques et Sylvie Guinaudeau en 1980** — ils y vivent encore aujourd'hui, alors que **Baptiste et Julie ont rejoint en 2002-2003** depuis Lafleur. **Domaine total : 50 hectares**, dont seulement **20 hectares de vignes** sur les meilleurs plateaux et coteaux (15 ha rouge + 2 ha blanc selon certaines sources) — **30 hectares de bois, prairies, élevage de bovins et cultures céréalières**. C'est ici aussi que se trouve la **pépinière familiale de sélection massale** qui alimente les replantations de Lafleur — donc le lien végétal entre les deux domaines est total. **Le tournant 2002** : **Baptiste et Julie décident de vinifier Grand Village exactement avec la même philosophie et la même équipe que Lafleur**. Mêmes mains, mêmes pratiques, mêmes choix — la seule différence est le terroir (argilo-calcaire de Mouillac vs graves de Pomerol). C'est cette décision audacieuse qui transforme Grand Village en l'un des Bordeaux Supérieurs les plus passionnants de l'appellation. **Encépagement rouge** : ~75-85% Merlot + 15-25% **Bouchet** (Cabernet Franc) — bouchet **issu en très grande partie des sélections massales de Lafleur** repiquées à Grand Village pour repeupler le vignoble. **Encépagement blanc** (depuis le début des années 1990) : Sauvignon Blanc dominant + un peu de Sémillon. **Pratiques** : viticulture durable avec attention à la biodiversité, **traitements parcellaires personnalisés**, **tri double à la vigne et triple au chai**, intrants minimaux, **soufre en quantités infimes**, pas de certification bio formelle mais pratiques bio dans les faits. **Vinification rouge** : **cuves inox et béton**, macération douce, extraction modérée. **Élevage 12 mois en barriques avec un mix précis : 30% bois neuf, 40% barriques d'un vin, 30% barriques de deux vins** — bois mesuré et progressif. **Cuvées sœurs sur le même terroir Grand Village** : (1) **Château Grand Village rouge** (Bordeaux Supérieur) — la cuvée historique ; (2) **Château Grand Village blanc** (Bordeaux sec, depuis ~1990) ; (3) **Les Perrières de Lafleur** (parcelle unique de quatre îlots adjacents, **50% Bouchet de Lafleur + 50% Merlot**, sols argileux peu profonds sur roche calcaire, élevage 15 mois 1/3 bois neuf + 2/3 un vin — **premier millésime sous ce nom : 2018** ; auparavant ces vins sortaient sous le nom **« Acte »** numéroté 1 à 9) ; (4) **Les Champs Libres** : cuvée blanche d'élite, **100% Sauvignon Blanc** issu de quatre meilleures parcelles calcaires (À Louima, Les Pêchers, Les Acacias, Mathilde), **clones venus de Sancerre**, **pressurage direct, fermentation et élevage en barriques neuves 8 mois sur lies fines** avec 5 mois de bâtonnage doux — **premier millésime 2013**, profil bourguignon-sancerrois remarquable. **Prix indicatifs 2024-2026** : Grand Village rouge **25-45 €**, Grand Village blanc **25-40 €**, Les Perrières **45-80 €**, Les Champs Libres **70-130 €** (peut atteindre 150-200 € sur les meilleurs millésimes). **Lecture Pat — sur la voie du 5/5, conviction n°4 incarnée** : (1) **mêmes mains, même philosophie, même matériel végétal que Lafleur, sur un terroir moins prestigieux** = démonstration parfaite que **l'appellation ne garantit rien** (conviction n°4) — un Bordeaux Supérieur à 30 € peut écraser des Grand Cru Classé à 200 € quand la philosophie et le travail sont au rendez-vous ; (2) **continuité familiale exceptionnelle depuis 1650** sur la même propriété, **Jacques et Sylvie y vivent encore** = enracinement total que Pat respecte ; (3) **bois mesuré (30% neuf sur le rouge, mix d'âges)** = conviction n°5 ; (4) **Les Champs Libres** = pari intelligent sur le calcaire en blanc, **un des meilleurs blancs secs de la rive droite** ; (5) **Les Perrières** depuis 2018 = passerelle entre Grand Village et Lafleur, montée en gamme cohérente ; (6) **prix encore raisonnables** pour le pedigree — Grand Village est probablement le meilleur rapport qualité-prix de toute la galaxie Guinaudeau ; (7) **4/5 et non 5/5** : la stature de domaine reste inférieure à celle de Lafleur (terroir moins exceptionnel), mais le projet est **sur la voie du 5/5 absolu** — à confirmer sur les prochaines années. **Garde** : Grand Village rouge 5-15 ans, Les Perrières 10-25 ans, Les Champs Libres 8-20 ans. **À recommander sans hésiter** quand on cherche un Bordeaux droit, frais, vivant, qui ne casse pas la banque.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "fronsac",
+        "mouillac",
+        "bordeaux-superieur",
+        "guinaudeau",
+        "jacques-guinaudeau",
+        "sylvie-guinaudeau",
+        "baptiste-guinaudeau",
+        "julie-guinaudeau",
+        "societe-civile-chateau-lafleur",
+        "lafleur-soeur",
+        "verdery-1650",
+        "375-ans-famille",
+        "fondation-1650",
+        "reprise-guinaudeau-1980",
+        "20-hectares-vignes",
+        "50-hectares-domaine",
+        "argilo-calcaire",
+        "merlot",
+        "bouchet-cabernet-franc",
+        "selection-massale-lafleur",
+        "pepiniere-lafleur",
+        "viticulture-durable",
+        "bio-de-fait-non-certifie",
+        "soufre-minimal",
+        "tri-double-vigne-triple-chai",
+        "elevage-mix-bois-30-40-30",
+        "vinification-equipe-lafleur",
+        "philosophie-lafleur",
+        "vignoble-ecole-lafleur",
+        "grand-village-rouge",
+        "grand-village-blanc",
+        "les-perrieres-de-lafleur",
+        "ex-acte",
+        "premier-millesime-perrieres-2018",
+        "les-champs-libres",
+        "champs-libres-2013",
+        "sauvignon-blanc-clones-sancerre",
+        "100-pct-sauvignon-blanc",
+        "fermentation-barriques-neuves-blanc",
+        "8-mois-elevage-blanc-batonnage",
+        "rapport-qualite-prix-exceptionnel",
+        "conviction-n4",
+        "conviction-n5",
+        "sur-la-voie-du-5-absolu",
+        "passerelle-lafleur"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, cinquième ajout de la série d'enrichissement Bordeaux (après Domaine Chapel/Smith-Chapel, Durfort-Vivens, Clos du Jaugueyron, Galouchey). Demandé en duo avec l'enrichissement de la fiche Lafleur existante (passage 4→5). (b) Ranking_pat_suggere : 4/5 avec mention 'sur la voie du 5/5, conviction n°4 incarnée' — décision Pat. (c) Sources web croisées : cavesa.ch (interview Sylvie/Jacques 2024), frw.co.uk, taubfamilyselections.com, justerinis.com, thewinedoctor.com, grandcruselections.com, idealwine.com (Champs Libres aux enchères), jeroboams.co.uk. (d) Points à vérifier avant validation : (1) surface exacte vignes : 14-15 ha rouge selon certaines sources, 20 ha total selon d'autres, 17 ha (15 rouge + 2 blanc) selon Jeroboams — à clarifier en distinguant 'planté' vs 'productif' vs 'jeune' ; (2) certification bio formelle (annoncée comme 'durable' mais pas 'bio certifié' dans les sources) ; (3) prix Les Champs Libres extrêmement variables selon millésime et marché secondaire ; (4) liens commerciaux exacts entre Société Civile du Château Lafleur (entité parent) et Grand Village (statut juridique à clarifier).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc (Bouchet)",
+        "Sauvignon Blanc",
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Château Grand Village rouge (Bordeaux Supérieur, ~75-85% Merlot + 15-25% Bouchet, élevage 12 mois mix 30% neuf + 40% un vin + 30% deux vins)",
+        "Château Grand Village blanc (Bordeaux, depuis ~1990, Sauvignon + Sémillon)",
+        "Les Perrières de Lafleur (depuis 2018, 50% Bouchet de Lafleur + 50% Merlot, élevage 15 mois 1/3 bois neuf — auparavant 'Acte' numéroté)",
+        "Les Champs Libres (depuis 2013, 100% Sauvignon Blanc clones Sancerre, fermentation et élevage barriques neuves 8 mois sur lies)"
+      ]
+    },
+    {
+      "id": "bdx-prod-clos-puy-arnaud",
+      "nom": "Clos Puy Arnaud",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Castillon Côtes de Bordeaux (Belvès-de-Castillon, rive droite)",
+      "appellations_principales": [
+        "Castillon Côtes de Bordeaux",
+        "Vin de France"
+      ],
+      "localisation": "Belvès-de-Castillon (33350), plateau calcaire altitude 75-100 m, prolongement géologique du plateau de Saint-Émilion",
+      "statut_production": "bio certifié AB depuis 2009, biodynamie certifiée Biodyvin depuis 2010 et Demeter depuis 2014, conversion engagée dès 2001",
+      "niveau_reference": 3,
+      "connu_de_pat": null,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge"
+      ],
+      "notes_objectives": "**Phare bio-biodynamie de Castillon Côtes de Bordeaux**, propriété de **Thierry Valette depuis 2000**. **Histoire familiale exceptionnelle** : la **famille Valette** est une dynastie historique du Bordelais ; **Alexandre Valette, l'arrière-grand-père de Thierry**, fondateur en 1870 des **Établissements Valette** (négoce avec **plus de 450 boutiques dans la région parisienne** dans les années 1950, ancêtre des Coop et Nicolas modernes), achète **Château Pavie et Château Troplong-Mondot en 1937**. **Thierry Valette était co-actionnaire de Pavie de 1979 à 1998** sous la direction de son cousin **Jean-Paul Valette** (grand ambassadeur des Premiers Crus de Saint-Émilion). **1998 : Pavie est vendu à Gérard Perse**. **Deux ans plus tard, en avril 2000**, Thierry Valette s'installe à **Belvès-de-Castillon** et acquiert Clos Puy Arnaud — domaine déjà mentionné dans les guides Féret du XIXe siècle. **Trajectoire personnelle remarquable** : formé musicien classique avant le vin, formation au contact de **François Mitjavile, Peter Sichel, Maryse Barre**, puis **Stéphane Derenoncourt** (conseil de 2000 à 2004), enfin **Anne Calderoni** (conseil en biodynamie depuis 2004-2005, déjà à l'œuvre chez Canon-La-Gaffelière et Pavie-Macquin). **Domaine** : **12 à 15,5 hectares en un seul tenant** (la surface a évolué par acquisitions), sur le **plateau argilo-calcaire de Castillon**, **altitude 75-100 m** — point culminant du Libournais, **au même niveau exact que Troplong-Mondot, Pavie-Macquin et le haut de Pavie**, mais sur l'appellation voisine. **Sols** : **calcaires à astéries** (étoiles fossiles marines) recouverts d'argiles — **prolongation géologique directe du plateau de Saint-Émilion** vers l'est, séparation purement administrative. **Exposition plein sud avec brise rafraîchissante**. **Encépagement** : ~70-80% Merlot, 15-25% Cabernet Franc, soupçon de Cabernet Sauvignon. **Pratiques** : **conversion bio dès 2001**, **conversion biodynamie hiver 2004-2005** sous l'impulsion d'Anne Calderoni, **certifications : AB en 2009, Biodyvin en 2010, Demeter en 2014**. Vendanges manuelles, **vinification parcellaire**, **levures indigènes**, **extractions douces**, soufre minimal. **Élevage en plusieurs contenants** : **barriques, amphores en terre cuite, cuves béton** — signature reconnue, refus du tout-bois. **Cuvées** : (1) **Clos Puy Arnaud** (Grand Vin Castillon, dominante Merlot, élevage 18 mois en mix) ; (2) **Les Ormeaux** (second vin) ; (3) **Pervenche, Vibrato, Silt** (cuvées parcellaires/expérimentales) ; (4) cuvées en **Vin de France** comme **Cuvée Bistrot** (« dans l'esprit Brouilly »), démarche assumée de sortir des cadres AOC. **Phrase signée Thierry Valette** : *« retrouver une partie de l'héritage des grands Saint-Émilion des années 60, axés sur le fruit et l'expression pure des calcaires à astéries »* — programme limpide. **Repère sur l'appellation** : **25% de Castillon Côtes de Bordeaux est en biodynamie ou en conversion** — singularité absolue à Bordeaux. Clos Puy Arnaud est l'un des moteurs avec Domaine de l'A et Joanin Bécot. **Prix indicatifs 2024-2026** : Clos Puy Arnaud Grand Vin **25-45 €**, Les Ormeaux 18-28 €, cuvées Vin de France 15-22 €. **Rapport qualité-prix exceptionnel**. **Lecture Pat — conviction n°4 incarnée à la perfection** : (1) **mêmes sols, même altitude, même expérience humaine que les voisins Saint-Émilion à 200 € la bouteille, pour 30 €** — c'est exactement *« l'appellation ne garantit rien »* dans son expression la plus utile ; (2) **trajectoire de Thierry Valette** : ex-Pavie qui choisit volontairement de repartir en Castillon en bio-biodynamie après la vente familiale, geste rare et beau ; (3) **certifications complètes (Biodyvin + Demeter)** = engagement réel, pas du marketing ; (4) **élevage barriques + amphores + béton** = refus du tout-bois, conviction n°5 ; (5) **filiation Derenoncourt puis Calderoni** = formation par les meilleurs conseillers indépendants de Bordeaux ; (6) **soutien actif au mouvement biodynamie sur Castillon** = vision collective ; (7) **4/5 et non 5/5** : la stature historique reste celle d'un domaine de Castillon, terroir excellent mais sans atteindre la puissance d'un grand cru classé de Saint-Émilion à maturité — mais c'est probablement **l'un des 3-4 plus beaux Castillon** et l'un des Bordeaux les plus alignés avec les convictions Pat à ce niveau de prix. **Garde** : 8-20 ans selon millésime, idéalement entre 6 et 15 ans. Service 16-17°C, **carafage 1h sur jeunesse**, verre Bordeaux ou Bourgogne large. **À recommander systématiquement** quand on cherche un Bordeaux rive droite de caractère, en biodynamie, à prix raisonnable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "castillon-cotes-de-bordeaux",
+        "belves-de-castillon",
+        "rive-droite",
+        "valette",
+        "thierry-valette",
+        "alexandre-valette-arriere-grand-pere",
+        "etablissements-valette-1870",
+        "ex-co-actionnaire-pavie-1979-1998",
+        "famille-pavie-troplong-mondot-1937",
+        "pavie-vendu-perse-1998",
+        "reprise-2000",
+        "musicien-classique-formation",
+        "stephane-derenoncourt-conseil-2000-2004",
+        "anne-calderoni-biodynamie-2004",
+        "bio-certifie-ab-2009",
+        "biodynamie-biodyvin-2010",
+        "demeter-2014",
+        "12-15-hectares",
+        "plateau-calcaire-asteries",
+        "altitude-75-100m",
+        "meme-altitude-troplong-mondot-pavie",
+        "prolongement-saint-emilion",
+        "exposition-sud",
+        "merlot-majoritaire",
+        "cabernet-franc",
+        "vinification-parcellaire",
+        "levures-indigenes",
+        "extractions-douces",
+        "elevage-mix-barriques-amphores-beton",
+        "amphores-terre-cuite",
+        "anti-tout-bois",
+        "les-ormeaux-second-vin",
+        "cuvee-bistrot-vdf",
+        "esprit-saint-emilion-annees-60",
+        "moteur-biodynamie-castillon",
+        "25-pct-castillon-en-biodynamie",
+        "conviction-n1",
+        "conviction-n4",
+        "conviction-n5",
+        "rapport-qualite-prix",
+        "alternative-saint-emilion",
+        "moderne"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, septième ajout/enrichissement de la série Bordeaux (après Domaine Chapel/Smith-Chapel, Durfort-Vivens, Clos du Jaugueyron, Galouchey, Lafleur enrichi et Grand Village). (b) Ranking_pat_suggere : 4/5 (décision Pat assumée — la stature reste celle d'un Castillon, pas d'un grand cru classé, malgré l'alignement parfait avec les convictions). (c) Sources web croisées : clospuyarnaud.com (site officiel, histoire détaillée Valette), biodyvin.com (fiche adhérent), idealwine.net, paramourduvin.com, pipette.canalblog.com, hachette-vins.com, ardoneo.com, businessfrance.fr (marketplace). (d) Points à vérifier avant validation : (1) surface exacte actuelle : 7 ha à l'arrivée 2000, 12 ha selon Hachette et Ardoneo, 15 ha selon Par Amour Du Vin, 15,5 ha selon Business France — clarifier l'évolution par acquisitions ; (2) liste exhaustive et hiérarchie exacte des cuvées (Pervenche, Vibrato, Silt, Les Ormeaux, Bistrot — assemblages et statuts AOC vs VdF à confirmer) ; (3) statut commercial actuel (distribution, allocations) ; (4) production annuelle en bouteilles à confirmer.",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "cuvees_phares": [
+        "Clos Puy Arnaud (Grand Vin Castillon, dominante Merlot, élevage 18 mois mix barriques + amphores terre cuite + béton)",
+        "Les Ormeaux (second vin, vignes plus jeunes ou parcelles secondaires)",
+        "Pervenche, Vibrato, Silt (cuvées parcellaires/expérimentales)",
+        "Cuvée Bistrot (Vin de France, 'dans l'esprit Brouilly', sortie volontaire du cadre AOC)"
+      ]
+    },
+    {
+      "id": "bdx-prod-champ-des-treilles",
+      "nom": "Château du Champ des Treilles",
+      "pays": "France",
+      "region": "Bordeaux",
+      "sous_region": "Sainte-Foy Côtes de Bordeaux (Margueron, extrême est de la Gironde)",
+      "appellations_principales": [
+        "Sainte-Foy Côtes de Bordeaux",
+        "Bordeaux blanc"
+      ],
+      "localisation": "Margueron (33220), près de Sainte-Foy-la-Grande, frontière Périgord",
+      "statut_production": "biodynamie certifiée depuis le début des années 2000, pratiques rigoureuses ancrées (Corinne Comme formée par François Bouchet)",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Le laboratoire historique de la biodynamie bordelaise**, domaine personnel de **Jean-Michel et Corinne Comme**, situé à **Margueron**, à l'extrême est de la Gironde, près de **Sainte-Foy-la-Grande**. **Histoire fondatrice de l'évolution moderne de Bordeaux**. **Jean-Michel Comme** est **directeur technique de Château Pontet-Canet (5e Cru Classé de Pauillac) de 1990 à 2020** — 30 ans à transformer un grand cru classé. **Corinne Comme** travaille à l'origine dans l'agroalimentaire, qu'elle quitte par dégoût de la chimie. Mariés depuis le lycée à Sainte-Foy-la-Grande, ils décident en **1998 de reprendre le vignoble familial** (5 hectares de **vieilles vignes plantées pendant la Seconde Guerre Mondiale**, 60+ ans aujourd'hui), Corinne devient la vigneronne du domaine pendant que Jean-Michel continue à Pauillac. **Conseillée par François Bouchet** (un des pères fondateurs de la biodynamie française), Corinne convertit immédiatement en biodynamie. **2004 : Jean-Michel et Corinne convainquent Alfred Tesseron**, propriétaire de Pontet-Canet, **d'appliquer les principes biodynamiques aux 80 hectares de Pauillac** — Champ des Treilles avait servi de **terrain d'essai** pendant 6 ans. La conversion Pontet-Canet aboutit aux **certifications bio Ecocert 2010, Biodyvin 2010, Demeter 2014** — **premier Grand Cru Classé du Médoc doublement certifié**. Sans Champ des Treilles, pas de Pontet-Canet bio. Et sans Pontet-Canet bio, **Latour, Palmer, Durfort-Vivens, Climens, La Lagune** n'auraient probablement pas suivi (les Comme ont conseillé plusieurs d'entre eux). **2020 : Jean-Michel quitte Pontet-Canet à 56 ans** pour se consacrer pleinement à Champ des Treilles et à son activité de consulting en biodynamie (société créée en février 2021). **Corinne consulte également**, notamment **Château Fonplégade à Saint-Émilion**. **Domaine actuel** : **10 hectares**, **sols argilo-calcaires fins**, à l'est de Bordeaux où le Libournais finit et où le Périgord commence. **Densité de plantation de 10 000 pieds/hectare** — densité médocaine des grands crus appliquée à une appellation modeste, c'est révélateur de l'ambition. **Encépagement** : 7 cépages plantés — Merlot dominant, Cabernet Franc, Cabernet Sauvignon, **Petit Verdot**, Malbec, plus en blanc **Sauvignon Blanc, Sémillon, Muscadelle**. **Pratiques** : biodynamie certifiée, vendanges manuelles en petites cagettes, rendements modestes, enherbement et travail mécanique du sol, préparations biodynamiques maison. **Vinification** : **extractions très douces, pigeage à la main, pas de remontage**, **levures indigènes**, soufre minimal. **Élevage** : **tout en cuves béton, pas de bois du tout sur la majorité des cuvées** — Jean-Michel revendique cette absence radicale : *« pour éviter tout maquillage, préserver la pureté, et préserver nos forêts »*. **Seule exception** : le **Grand Vin Champ des Treilles** (issu des vignes de 60 ans) **élevé 16 mois en barriques d'un vin venues directement de Pontet-Canet** — économie circulaire émouvante : le grand cru classé que Jean-Michel a transformé lui renvoie ses barriques pour élever son propre vin. **Évolution récente** : **depuis le millésime 2020, les Comme ont décidé de ne plus produire qu'une seule cuvée rouge** (les cuvées Petit Champ et Grand Vin distinctes ont été supprimées). **Cuvées actuelles** : Château du Champ des Treilles rouge (cuvée unique depuis 2020, élevage 16 mois en barriques d'un vin Pontet-Canet) ; Champ des Treilles blanc (Sauvignon, Sémillon, Muscadelle, vinifié en cuve) ; cuvée **Vin Passion**. **Prix indicatifs 2024-2026** : rouge **15-25 €**, blanc 15-22 €, cuvées plus haut de gamme 25-35 €. **Rapport qualité-prix-philosophie probablement le meilleur de tout Bordeaux** à ce niveau. **Lecture Pat — exemplarité historique absolue** : (1) **les Comme sont à l'origine de toute la dynamique biodynamie bordelaise moderne** — sans eux, ni Pontet-Canet, ni les autres conversions, convictions n°5 et n°6 incarnées à un niveau historique ; (2) **leur domaine personnel est l'expression la plus pure de leur philosophie** — pas de bois sur la plupart des cuvées, élevage 100% béton, refus radical du maquillage ; (3) **la boucle des barriques Pontet-Canet** qui reviennent à Champ des Treilles = poésie circulaire qui dit tout ; (4) **densité 10 000 pieds/ha sur une appellation modeste** = conviction n°4 textuelle ; (5) **prix dérisoires pour ce niveau d'engagement et d'expertise** = un cas unique à Bordeaux ; (6) **à recommander systématiquement** — c'est probablement la fiche la plus politique de toute la base. **Garde** : 6-15 ans. Service 16-17°C, carafage 1h sur jeunesse, verre Bordeaux. **Un domaine à connaître absolument.**",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bordeaux",
+        "sainte-foy-cotes-de-bordeaux",
+        "margueron",
+        "extreme-est-gironde",
+        "frontiere-perigord",
+        "comme",
+        "jean-michel-comme",
+        "corinne-comme",
+        "ex-regisseur-pontet-canet-1990-2020",
+        "architecte-pontet-canet-bio",
+        "francois-bouchet-mentor-corinne",
+        "reprise-1998",
+        "vignoble-familial",
+        "vignes-2eme-guerre-mondiale",
+        "10-hectares",
+        "argilo-calcaire",
+        "densite-10000-pieds-ha",
+        "7-cepages",
+        "petit-verdot",
+        "malbec",
+        "muscadelle",
+        "biodynamie",
+        "vendanges-manuelles-cagettes",
+        "rendements-modestes",
+        "preparations-maison",
+        "pigeage-main",
+        "pas-de-remontage",
+        "levures-indigenes",
+        "soufre-minimal",
+        "elevage-tout-cuve-beton",
+        "pas-de-bois-philosophie",
+        "anti-maquillage",
+        "barriques-un-vin-pontet-canet",
+        "economie-circulaire-pontet-canet",
+        "cuvee-unique-depuis-2020",
+        "fusion-petit-champ-grand-vin",
+        "rapport-qualite-prix-exceptionnel",
+        "15-25-euros",
+        "consulting-biodynamie",
+        "fonplegade",
+        "laboratoire-historique-biodynamie-bordeaux",
+        "deroule-medoc-biodynamie",
+        "conviction-n4",
+        "conviction-n5",
+        "conviction-n6",
+        "5-sur-5-pat-2026",
+        "iconique-confidentiel",
+        "exemplarite-historique"
+      ],
+      "source": "conversation|web|enrichissement-2026-05",
+      "lpv_pages": null,
+      "a_verifier": "(a) Contexte d'identification : demande explicite de l'utilisateur le 16 mai 2026, huitième ajout/enrichissement de la série Bordeaux (après Lots 1+2, Chapel, Durfort-Vivens, Clos du Jaugueyron, Galouchey, Lafleur enrichi, Grand Village, Clos Puy Arnaud). Domaine d'importance historique majeure pour Bordeaux moderne — laboratoire de la conversion biodynamique du Médoc. (b) Ranking_pat_suggere : 5/5 (décision Pat — exemplarité historique reconnue, conviction Pat absolue). (c) Sources web croisées : champdestreilles.com (site officiel des Comme), vinetrail.co.uk (importateur UK, données techniques fines), vistonvin.fr (interview Corinne 2025), lapassionduvin.com (interview historique), generationvignerons.com (portrait), insidelaplace.rcassocies.com (interview Jean-Michel post-Pontet-Canet), meilleursvinsbio.com, savio-soares.com. (d) Points à vérifier avant validation : (1) **certifications biodynamiques formelles** : Biodyvin ou Demeter pour Champ des Treilles ? Aucune source ne précise clairement l'organisme certificateur (à la différence de Pontet-Canet où la certification est explicite) — à clarifier directement avec le domaine ; (2) liste exacte des cuvées actuelles depuis la fusion 2020 (Petit Champ et Grand Vin sont supprimées selon Vine Trail, mais on continue à voir 'Vin Passion' et d'autres dénominations selon les sources) ; (3) production annuelle en bouteilles (pas trouvée dans les sources) ; (4) implication exacte de Jean-Michel post-2020 (consulting + Champ des Treilles, hors-temps plein à confirmer) ; (5) liste complète des domaines conseillés par Corinne Comme (Fonplégade confirmé, autres à recenser).",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Petit Verdot",
+        "Malbec",
+        "Sauvignon Blanc",
+        "Sémillon",
+        "Muscadelle"
+      ],
+      "cuvees_phares": [
+        "Château du Champ des Treilles rouge (cuvée unique depuis 2020, élevage 16 mois en barriques d'un vin Pontet-Canet)",
+        "Champ des Treilles blanc (Sauvignon + Sémillon + Muscadelle, élevage cuve sans bois)",
+        "Vin Passion (cuvée signature)"
+      ]
+    }
+  ]
+}

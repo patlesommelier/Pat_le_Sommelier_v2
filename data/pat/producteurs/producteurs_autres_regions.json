@@ -1,0 +1,556 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "autres_regions",
+  "region_label": "Autres régions",
+  "source_file": "France/Fichiers Producteurs finaux/producteurs_autres_regions_vPat.xlsx",
+  "built_at": "2026-05-09T18:33:28+00:00",
+  "count": 12,
+  "items": [
+    {
+      "id": "aut-prod-saint-nicolas",
+      "nom": "Domaine Saint-Nicolas",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Fiefs Vendéens Brem",
+      "appellations_principales": [
+        "Fiefs Vendéens Brem",
+        "Vin de France"
+      ],
+      "localisation": "Brem-sur-Mer (85470)",
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Le seul domaine de Vendée à stature internationale**, et le pionnier absolu de la biodynamie sur la côte atlantique. Trois générations : **Patrice Michon** s'installe à Brem-sur-Mer en **1960** ; ses fils Éric et **Thierry** le rejoignent dans les **années 1980** et construisent en **1985** un chai moderne à L'Île d'Olonne — c'est là que le « Vignoble Michon » devient **Domaine Saint-Nicolas**. Thierry prend la tête, Éric se sépare ensuite pour son propre vignoble à Brem. **Conversion biodynamique amorcée dès 1993**, certification **Demeter et Biodyvin en 1998** — Thierry est alors à peu près seul en Vendée à pratiquer cette discipline. Les **Fiefs Vendéens** ne passent en **AOC qu'en 2011** (ex-VDQS), en grande partie grâce à la trajectoire qualitative imposée par les Michon. Depuis **2013-2014**, ses fils **Antoine** et **Mickaël** travaillent au domaine — transmission en cours, sereine.\n\n**Domaine** : environ **35 hectares** étalés sur **12 km**, de Brétignolles à L'Île d'Olonne. Vignoble en **îlot isolé** entre forêt d'Olonne et anciens marais salants — Thierry a méthodiquement **racheté les parcelles voisines** pour créer des **zones tampons** contre les pulvérisations chimiques alentour, démarche rare qui dit le sérieux du projet. **Sous-sol de rhyolites, schistes et quartz** sur argiles et sables littoraux : géologie volcanique ancienne, exceptionnellement structurante, qui donne aux vins leur **salinité tendue**. **Cépages** : chenin et chardonnay en blanc, **pinot noir** comme cépage rouge principal (rarissime à cette latitude atlantique), complétés par **négrette** (cépage historique de Brem), gamay, cabernet franc.\n\n**Pratiques** : **biodynamie totale**, labour au cheval sur les parcelles fragiles, tisanes de prêle et d'ortie, rendements **très bas**. Thierry est allé chercher conseil chez **Lalou Bize-Leroy** et **Anne-Claude Leflaive** — la référence est explicite.\n\n**Vinification** : levures indigènes, vinification parcelle par parcelle. Blancs en **foudres** dans le chai Les Clous (2015), **élevages longs sur lies**. Rouges en cuves bois et foudres, parfois en **amphore**. **Bois neuf inexistant** — recherche de **transparence du terroir**, pas de signature aromatique. Détail administratif : les parcellaires monocépages sont déclassés en **Vin de France**, le cahier AOC interdisant lieux-dits et monocépages.\n\n**Cuvées repères**. En **blanc** : **Les Chemins** (ex-Les Clous), chenin-chardonnay-grolleau gris, ~25-30 €, déjà magnifique de tension saline ; **Les Hauts Chemins** (ex-**Le Haut des Clous**), parcellaire de vieilles vignes de chenin sur schistes, ~40-50 € — **grand chenin atlantique** qui rivalise sans complexe avec les meilleurs Savennières. En **rouge** : **Reflets** / **Les Rives**, pinot noir-négrette, ~25-30 €, cuvée signature ; **Cuvée Jacques**, pinot noir pur, ~35-40 € ; **La Grande Pièce**, pinot noir vieilles vignes, ~55-70 € ; **Plante Gâte**, pinot noir parcellaire, ~55-70 € — la plus recherchée, **épicée, iodée, d'une finesse rare** ; **Le Poiré**, négrette pure.\n\n**Style** : tout tourne autour de **salinité** et **tension**. Les blancs sont **droits comme des fils**, **finale iodée** unique en France — le Noma à Copenhague en a longtemps servi. Les rouges sont **frais, élancés, peu extraits**, à mille lieues du pinot bourguignon : moins de chair, plus de nerf, fruits rouges acidulés, poivre, iode. **Réserve honnête** : certains critiques (RVF) ont émis des réserves sur l'extraction parfois appuyée des rouges sur certains millésimes — à goûter pour se faire son idée. Les blancs font l'unanimité.\n\n**Garde** : blancs Les Hauts Chemins **10 à 15 ans**. Pinots (Jacques, La Grande Pièce, Plante Gâte) **15-20 ans** — vins de garde sérieux, à **carafer 1 heure** sur leur jeunesse.\n\n**Prix** : **20 €** (vins de soif), **25-30 €** (cuvées principales), **40-50 €** (parcellaires blancs), **55-70 €** (têtes de gamme). Pour un domaine biodynamique de cette stature, **les prix restent extraordinairement contenus**. Bouteilles parfois introuvables à cause des rendements faibles.\n\n**Profil Pat** : domaine qui coche toutes les cases. (1) **Pionniers en zone hostile** : convertir un vignoble atlantique à la biodynamie dès les années 1990, racheter les parcelles voisines en zone tampon — engagement à l'os. (2) **Grand vigneron + grand terroir** = conviction n°3 textuelle : sans Michon, les rhyolites de Brem n'auraient jamais parlé ; sans Brem, Michon n'aurait pas signé ces blancs. (3) **Pas d'effets de bois**, foudres et amphore = conviction n°5. (4) **Région périphérique défendue avec panache** : la Vendée, personne n'y croyait il y a 30 ans, le domaine produit aujourd'hui des chenins servis au Noma = conviction n°6 incarnée. (5) **Prix justes** pour un travail biodynamique de très haut niveau. **À recommander les yeux fermés** sur les blancs ; **à goûter d'abord** sur les rouges parcellaires selon la sensibilité à l'extraction. Une fierté.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "atlantique",
+        "biodynamie",
+        "biodyvin",
+        "brem",
+        "chenin",
+        "demeter",
+        "iconique",
+        "michon",
+        "negrette",
+        "pinot-noir",
+        "pionnier",
+        "producteur",
+        "vendee"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": null
+    },
+    {
+      "id": "aut-prod-vaux",
+      "nom": "Château de Vaux",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Moselle",
+      "appellations_principales": [
+        "Moselle"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [],
+      "notes_objectives": "**Référence absolue de l'AOC Moselle** (Lorraine) — **Château de Vaux (Vignobles Molozay)** à **Vaux et Scy-Chazelles (Moselle)**, **Marie-Geneviève et Norbert Molozay** (couple — elle Messine fille de négociants, lui Beaujolais œnologue \"flying winemaker\" ayant vinifié en Nouvelle-Zélande, Australie, USA, Bourgogne, Beaujolais, Alsace, Languedoc), **reprise en 1999**. **Biodynamie Demeter certifiée depuis ~2010**. **AOC Moselle reconnue en 2011** (l'une des AOC les plus jeunes de France — 70 ha seulement, contre 6000 ha au début du XXe siècle), **Château de Vaux a été l'un des artisans majeurs du renouveau** (remembrement parcellaire, défrichement de coteaux abandonnés). **15 ha aujourd'hui** (depuis 4,5 ha en 1999), **80-100 000 bouteilles/an, 16 cuvées, 9 cépages** : Auxerrois, Müller-Thurgau, Pinot Gris, Riesling, Gewurztraminer, Pinot Blanc, Chardonnay, Pinot Noir, Gamay. **Norbert Molozay est président de l'AOC Moselle**. Cuvée signature **\"Septentrion\"** (Müller-Thurgau + Pinot Gris + Auxerrois, élevage en fûts, *« expression la plus méridionale du vignoble le plus septentrional de France »*).",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "moselle",
+        "chateau-de-vaux",
+        "aoc-moselle-2011",
+        "lorraine",
+        "metz",
+        "vignobles-molozay",
+        "marie-genevieve-norbert-molozay",
+        "depuis-1999",
+        "biodynamie-demeter",
+        "15-hectares",
+        "septentrion",
+        "muller-thurgau",
+        "auxerrois",
+        "renouveau-aoc-moselle",
+        "norbert-molozay-president-aoc"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Auxerrois",
+        "Müller-Thurgau",
+        "Pinot Gris",
+        "Riesling",
+        "Pinot Noir"
+      ],
+      "cuvees_phares": [
+        "Septentrion (Müller-Thurgau + Pinot Gris + Auxerrois, fûts, signature)",
+        "Les Gryphées Blanc (cuvée fraîcheur)",
+        "Maddalena (100% Müller-Thurgau vieilles vignes, fûts)",
+        "Les Clos (Pinot Noir, rouge)",
+        "Pylae (Pinot Gris blanc, Pinot Noir rouge — fûts de chêne de la forêt voisine de Lessy)"
+      ]
+    },
+    {
+      "id": "aut-prod-clos-saint-marc",
+      "nom": "Clos Saint-Marc",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Coteaux du Lyonnais",
+      "appellations_principales": [
+        "Coteaux du Lyonnais"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "Domaine en **Coteaux du Lyonnais** (AOC depuis 1984, **petite appellation au sud de Lyon entre Beaujolais et Côte-Rôtie**, ~250 ha, **majoritairement plantée en Gamay**). **Clos Saint-Marc** est l'un des producteurs locaux. Style **classique-traditionnel**, **Gamay sur sols granitiques et schisteux** dans la lignée du Beaujolais voisin, prix très accessibles. **Distribution régionale lyonnaise** principalement — l'appellation est surtout consommée localement. Bon producteur familial fiable, sans positionnement marqué dans le bio ou la biodynamie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "coteaux-lyonnais",
+        "clos-saint-marc",
+        "coteaux-du-lyonnais",
+        "gamay",
+        "tradition",
+        "regional"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay"
+      ],
+      "cuvees_phares": [
+        "Coteaux du Lyonnais Rouge (Gamay)",
+        "Coteaux du Lyonnais Blanc (Chardonnay)"
+      ]
+    },
+    {
+      "id": "aut-prod-coirier",
+      "nom": "Domaine Coirier",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Fiefs Vendéens Pissotte",
+      "appellations_principales": [
+        "Fiefs Vendéens Pissotte"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Domaine Coirier** en **AOC Fiefs Vendéens — Pissotte** (l'un des 5 fiefs de l'AOC, le plus septentrional), **famille Coirier** sur plusieurs générations. **Producteur historique du fief de Pissotte** (~10 communes en Vendée). Cépages traditionnels Loire/Sud-Ouest : **Chenin, Chardonnay** en blanc, **Pinot Noir, Cabernet Franc, Négrette** en rouge. Style **frais, fruité, accessible**, **rapport qualité-prix solide** pour cette appellation confidentielle. Distribution régionale et sur cavistes spécialisés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "vendee",
+        "pissotte",
+        "coirier",
+        "fiefs-vendeens-pissotte",
+        "famille-coirier",
+        "negrette",
+        "loire-meridionale"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Chenin",
+        "Chardonnay",
+        "Pinot Noir",
+        "Cabernet Franc",
+        "Négrette"
+      ],
+      "cuvees_phares": [
+        "Fiefs Vendéens Pissotte Blanc (Chenin + Chardonnay)",
+        "Fiefs Vendéens Pissotte Rouge (assemblage)",
+        "Fiefs Vendéens Pissotte Rosé"
+      ]
+    },
+    {
+      "id": "aut-prod-petite-gallee",
+      "nom": "Domaine de la Petite Gallée",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Coteaux du Lyonnais",
+      "appellations_principales": [
+        "Coteaux du Lyonnais"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "Domaine en **Coteaux du Lyonnais**, **Domaine de la Petite Gallée**. **AOC mineure mais authentique**, **Gamay sur sols granitiques** comme en Beaujolais voisin (les Coteaux du Lyonnais sont géologiquement la prolongation sud du Beaujolais Sud). Style **classique-traditionnel, fruité-éclatant** sur le Gamay, prix très accessibles, distribution régionale. Bon producteur familial fiable sans positionnement marqué.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "coteaux-lyonnais",
+        "petite-gallee",
+        "descotes",
+        "coteaux-du-lyonnais",
+        "gamay",
+        "granit",
+        "tradition"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay"
+      ],
+      "cuvees_phares": [
+        "Coteaux du Lyonnais Rouge",
+        "Coteaux du Lyonnais Blanc"
+      ]
+    },
+    {
+      "id": "aut-prod-lelievre",
+      "nom": "Domaine Lelièvre",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Côtes de Toul",
+      "appellations_principales": [
+        "Côtes de Toul"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "**Référence locale de l'AOC Côtes de Toul (Lorraine)** — **Domaine Lelièvre** à **Lucey**, **Vincent et David Lelièvre** (frères). **AOC Côtes de Toul depuis 1998** (~110 ha à l'ouest de Nancy, ~25 vignerons), réputée pour son **\"Gris de Toul\"** (vin gris pâle de Gamay 80% + Pinot Noir, vinifié par pressurage direct sans macération, 14 nuances de gris). **Bio** (les deux tiers de l'appellation sont en bio), **4 cépages** : **Gamay, Pinot Noir, Auxerrois** (blanc — cépage local, sans lien avec l'Auxerrois de Cahors qui est en fait du Malbec), **Pinot Gris**. Cuvées emblématiques : **Gris de Toul** (signature historique), **Auxerrois** (blanc), **Pinot Noir** (rouge). Style **frais, fruité, accessible**, distribution régionale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cotes-de-toul",
+        "lelievre",
+        "aoc-1998",
+        "lucey",
+        "lorraine",
+        "freres-lelievre",
+        "vincent-david-lelievre",
+        "gris-de-toul",
+        "auxerrois-blanc",
+        "pressurage-direct",
+        "bio"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Auxerrois",
+        "Pinot Gris"
+      ],
+      "cuvees_phares": [
+        "Côtes de Toul Gris de Toul (signature)",
+        "Côtes de Toul Auxerrois (blanc)",
+        "Côtes de Toul Pinot Noir (rouge)"
+      ]
+    },
+    {
+      "id": "aut-prod-oury-schreiber",
+      "nom": "Domaine Oury-Schreiber",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Moselle",
+      "appellations_principales": [
+        "Moselle"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [],
+      "notes_objectives": "**Domaine Oury-Schreiber** en **AOC Moselle (Lorraine)**. **Producteur familial** de cette **petite AOC reconnue seulement en 2011** (~70 ha), aux côtés du Château de Vaux et de quelques autres. Cépages typiques de la Moselle française : **Auxerrois, Müller-Thurgau, Pinot Gris** en blanc, **Pinot Noir, Gamay** en rouge. Style **frais, élégant, influence germanique** (le vignoble de la Moselle française est la prolongation occidentale du grand vignoble luxembourgeois et allemand de la Moselle). Distribution régionale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "moselle",
+        "oury-schreiber",
+        "aoc-moselle",
+        "lorraine",
+        "domaine-oury-schreiber",
+        "auxerrois",
+        "muller-thurgau"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Auxerrois",
+        "Müller-Thurgau",
+        "Pinot Gris",
+        "Pinot Noir"
+      ],
+      "cuvees_phares": [
+        "Moselle Auxerrois (blanc)",
+        "Moselle Pinot Gris",
+        "Moselle Pinot Noir (rouge)"
+      ]
+    },
+    {
+      "id": "aut-prod-patriarche",
+      "nom": "Domaine Patriarche",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Coteaux du Lyonnais",
+      "appellations_principales": [
+        "Coteaux du Lyonnais"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "Domaine en **Coteaux du Lyonnais**, **Domaine Patriarche** (à ne pas confondre avec la grande maison de négoce Patriarche de Beaune — homonymie). Producteur local de l'appellation, **Gamay rouge et Chardonnay blanc**, style traditionnel. Prix accessibles, distribution régionale, bon producteur familial fiable de cette petite appellation à la lisière sud du Beaujolais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "coteaux-lyonnais",
+        "patriarche",
+        "coteaux-du-lyonnais",
+        "gamay",
+        "tradition",
+        "homonymie-patriarche-beaune"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay"
+      ],
+      "cuvees_phares": [
+        "Coteaux du Lyonnais Rouge",
+        "Coteaux du Lyonnais Blanc"
+      ]
+    },
+    {
+      "id": "aut-prod-regina",
+      "nom": "Maison Régina",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Côtes de Toul",
+      "appellations_principales": [
+        "Côtes de Toul"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "**Maison Régina** en **AOC Côtes de Toul (Lorraine)**. **Producteur local** de l'appellation, **Gris de Toul** (vin gris de Gamay + Pinot Noir signature), **Auxerrois** (blanc), **Pinot Noir** (rouge). **Petite appellation confidentielle** (~110 ha, ~25 vignerons à l'ouest de Nancy). Style **classique-frais, accessible**, distribution régionale lorraine. Bon producteur familial fiable de cette appellation périphérique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cotes-de-toul",
+        "regina",
+        "lorraine",
+        "maison-regina",
+        "gris-de-toul",
+        "auxerrois"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Auxerrois"
+      ],
+      "cuvees_phares": [
+        "Côtes de Toul Gris de Toul",
+        "Côtes de Toul Auxerrois",
+        "Côtes de Toul Pinot Noir"
+      ]
+    },
+    {
+      "id": "aut-prod-laroppe",
+      "nom": "Vignoble Laroppe",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Côtes de Toul",
+      "appellations_principales": [
+        "Côtes de Toul"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "<15",
+      "couleurs_principales": [],
+      "notes_objectives": "**Vignoble Laroppe** en **AOC Côtes de Toul (Lorraine)**, **Vincent Laroppe**. **Bio certifié depuis le millésime 2020**. **4 cépages autorisés** : **Gamay (45% — pour le Gris), Pinot Noir (45% — rouge), Auxerrois (10% — blanc), Aubin** (cépage blanc local très rare, autorisé par le décret de l'AOC). Cuvées emblématiques : **Gris de Toul** (signature, **8-10 € la bouteille**, garde 4-6 ans), **Auxerrois Tradition**, **Pinot Noir** (rouge), **Aubin** (blanc rare, **exclusivité Laroppe**). Élevages aussi en fûts de chêne pour certaines cuvées. Style **classique-frais, accessible**, distribution régionale lorraine et caves à vin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cotes-de-toul",
+        "laroppe",
+        "aubin",
+        "lorraine",
+        "vincent-laroppe",
+        "bio-depuis-2020",
+        "aubin-cepage-rare",
+        "auxerrois",
+        "gris-de-toul"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Auxerrois",
+        "Aubin"
+      ],
+      "cuvees_phares": [
+        "Côtes de Toul Gris de Toul (Gamay 80% + Pinot Noir)",
+        "Côtes de Toul Auxerrois Tradition (blanc)",
+        "Côtes de Toul Pinot Noir (rouge)",
+        "Côtes de Toul Aubin (blanc rare, exclusivité)"
+      ]
+    },
+    {
+      "id": "aut-prod-mourat",
+      "nom": "Vignoble Mourat",
+      "pays": "France",
+      "region": "Autres régions",
+      "sous_region": "Fiefs Vendéens Mareuil",
+      "appellations_principales": [
+        "Fiefs Vendéens Mareuil"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Plus important producteur des Fiefs Vendéens (AOC Mareuil)** — **Vignobles Mourat** à **Mareuil-sur-Lay (Vendée)**, **famille Mourat** depuis 1974 (Jean Mourat fonde le Château Marie du Fou — siège historique de 96 ha, **propriété la plus importante de l'AOC**), aujourd'hui **Jérémie Mourat** (depuis 1998, avec création parallèle des domaines **Clos Saint-André en 2006** et **Moulin Blanc en 2011**). **Bio certifié ou en conversion sur l'ensemble** depuis 10+ ans — **120 ha bio au total, plus grande surface bio de la Loire**. **AOC Fiefs Vendéens depuis 2011** (5 fiefs : Mareuil, Brem-sur-Mer, Vix, Pissotte, Chantonnay — ~337 ha). **Terroirs uniques** : **schistes et rhyolites (roches volcaniques) sous influence maritime** — la Vendée est la pointe sud-ouest de la Vallée de la Loire. **Cépages cosmopolites** mariant Loire et Sud-Ouest : Chenin, Chardonnay en blanc, Pinot Noir, Cabernet Franc, Gamay, et **Négrette** (cépage emblématique du Sud-Ouest implanté ici, signature locale). Style **élégant, fruité, fraîcheur maritime préservée**.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "vendee",
+        "mareuil",
+        "mourat",
+        "bio",
+        "fiefs-vendeens-mareuil",
+        "mareuil-sur-lay",
+        "famille-mourat",
+        "jean-jeremie-mourat",
+        "depuis-1974",
+        "120-hectares-bio",
+        "plus-grande-surface-bio-loire",
+        "schistes",
+        "rhyolite",
+        "negrette",
+        "loire-meridionale"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (création depuis fiche vide vers format succinct ranking 3).",
+      "cepages_rois": [
+        "Chenin",
+        "Chardonnay",
+        "Pinot Noir",
+        "Cabernet Franc",
+        "Gamay",
+        "Négrette"
+      ],
+      "cuvees_phares": [
+        "Château Marie du Fou (rouge, blanc, rosé — propriété historique)",
+        "Clos Saint-André Blanc (Chenin + Chardonnay, cuve béton ovoïde)",
+        "Moulin Blanc Pinot Noir",
+        "Grenouillère Négrette (cépage emblématique)",
+        "Grenouillère Négrette Préphylloxérique (vignes franches de pied, rare)"
+      ]
+    },
+    {
+      "id": "autres-maupertuis",
+      "nom": "Domaine Jean Maupertuis",
+      "pays": "France",
+      "region": "Auvergne",
+      "sous_region": "Côtes d'Auvergne",
+      "appellations_principales": [
+        "Vin de France",
+        "Côtes d'Auvergne"
+      ],
+      "localisation": "Saint-Georges-ès-Allier (63800)",
+      "statut_production": "nature",
+      "niveau_reference": 4,
+      "connu_de_pat": null,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "Vigneron installé en 1993 à Saint-Georges-ès-Allier (Puy-de-Dôme), pionnier discret du vin nature en Auvergne. Ancien informaticien dans la vallée du Rhône, formation viti-oeno à Mâcon (1990s) où il rencontre les vins de Marcel Lapierre et de Pierre Overnoy. A co-fondé en 1999 le domaine du Peyra avec Eric Garnier et Stéphane Majeune avant de poursuivre seul à partir de 2003. Domaine d'environ 3 à 4 hectares, plus depuis l'extension récente, sur sols volcaniques (basalte, argile, sable, silice), entre 400 et 450 m d'altitude — l'amplitude thermique jour/nuit produit des vins légers, peu alcoolisés (10,5 à 11,5° fréquents), tendus. Cépages : gamay d'Auvergne principalement, pinot noir, chardonnay, quelques cépages anciens. Travail manuel, sans engrais ni désherbants. Vinifications en grappes entières, macérations courtes, fermentations spontanées, ni collage ni filtration, sulfitage nul ou très faible selon les cuvées. La majeure partie des vins est en Vin de France (refus historique du système AOC). Cuvées récurrentes : La Guillaume (gamay), Les Pierres Noires (gamay vieilles vignes sur basalte), Pink Bulles (pétillant naturel).",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "auvergne",
+        "nature",
+        "gamay",
+        "basalte",
+        "altitude-450m",
+        "sans-soufre",
+        "vin-de-france"
+      ],
+      "source": "web|presse spécialisée",
+      "lpv_pages": null,
+      "a_verifier": "Fiche créée le 2026-05-19 suite à identification du trou Auvergne (région totalement absente). Source web validée (iDealwine, Cave Pur Jus, La Pangée, VinsChezNous). Ranking provisoire à 4 — vraie référence régionale, mais discrétion volontaire et production confidentielle."
+    }
+  ]
+}

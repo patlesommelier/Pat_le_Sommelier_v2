@@ -1,0 +1,810 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "rheingau",
+  "region_label": "Rheingau (Allemagne)",
+  "source_file": "build_rheingau (recherche web 2026-06)",
+  "built_at": "2026-06-14",
+  "count": 29,
+  "items": [
+    {
+      "id": "de-rheingau-terr-ruedesheimer-berg-schlossberg",
+      "nom": "Rüdesheimer Berg Schlossberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "quartzite du Taunus et schistes dévoniens (phyllite), pente extrême (jusqu'à 70%)",
+      "caracteristiques_rapides": "Le plus raide et le plus iconique du Rheingau, plein sud au-dessus du Rhin. Rieslings tendus et minéraux de grande garde. Leitz, Breuer, Künstler y excellent. VDP Grosse Lage.",
+      "notes_objectives": "Le Rüdesheimer Berg Schlossberg est l'un des plus grands terroirs du Rheingau, sur les pentes vertigineuses du « Berg » de Rüdesheim, là où le Rhin oblique vers l'ouest. Son sol de quartzite du Taunus et de schiste, sur des terrasses parmi les plus raides de la région, en fait un site chaud et précoce. Le terroir donne des Riesling secs puissants, profonds et d'une grande minéralité, à la garde remarquable. Il est exploité par les meilleurs domaines de Rüdesheim, dont Georg Breuer, Josef Leitz et Künstler. Classé au sommet de la hiérarchie du Rheingau, le Berg Schlossberg illustre la grandeur des Riesling de quartzite des coteaux escarpés du Rhin. Le « Berg » de Rüdesheim forme une muraille de vignes orientée plein sud, là où le Rhin tourne brusquement vers l'ouest : une situation unique qui expose le coteau au soleil de l'après-midi et au fleuve, miroir de lumière et régulateur thermique. Le quartzite du Taunus, roche dure et pauvre, oblige la vigne à plonger ses racines et donne des vins d'une grande énergie. Le Schlossberg, le plus raide et le plus chaud du Berg, est le domaine des Riesling secs les plus puissants et les plus profonds de Rüdesheim. Georg Breuer en a fait l'un de ses crus phares, aux côtés de Leitz et de Künstler, dont les Grosses Gewächs comptent parmi les plus grands secs du Rheingau, capables de vieillir des décennies. Le paysage du Berg, avec ses terrasses étroites accrochées à la pente au-dessus du Rhin et du téléphérique de Rüdesheim, est l'un des plus spectaculaires d'Allemagne et attire les visiteurs du monde entier. La forte déclivité impose un travail manuel et héroïque, qui explique la rareté et le prix des meilleures cuvées. Dans les grands millésimes, les Riesling secs du Schlossberg développent une profondeur saline et une longueur impressionnantes, et figurent au sommet des Grosses Gewächs du Rheingau. Pour l'amateur, le Berg Schlossberg incarne le retour en grâce du Rheingau sec, qui retrouve, après des décennies dominées par les vins demi-doux, sa place parmi les grandes régions de Riesling. Pour l'amateur français, c'est l'un des terroirs qui rendent le mieux justice à l'idée d'un grand Riesling sec, minéral et taillé pour la garde, à mille lieues des clichés sur les vins allemands. Le Berg Schlossberg figure aujourd'hui sans conteste parmi les tout premiers crus du Rheingau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "quartzite",
+        "schiste",
+        "ruedesheim",
+        "berg-schlossberg",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-ruedesheimer-berg-rottland",
+      "nom": "Rüdesheimer Berg Rottland",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-180 m",
+      "sols": "quartzite du Taunus, lœss et schistes",
+      "caracteristiques_rapides": "Voisin de Berg Schlossberg, un peu plus de lœss, exposition sud. Vins plus charnus et exubérants. VDP Grosse Lage.",
+      "notes_objectives": "Le Rüdesheimer Berg Rottland est l'un des grands crus du « Berg » de Rüdesheim, sur des sols de quartzite, de lœss et de schiste. Légèrement moins abrupt que le Schlossberg voisin, il bénéficie d'une excellente exposition au Rhin. Le terroir donne des Riesling racés et aromatiques, alliant puissance et finesse. Il est exploité par de grands domaines comme Josef Leitz et Georg Breuer. Classé en grand cru, le Berg Rottland illustre la finesse minérale des Riesling du Berg de Rüdesheim. Au pied du Schlossberg, le Berg Rottland bénéficie d'un peu plus de lœss, qui adoucit la rudesse du quartzite et apporte de la générosité aux vins. C'est l'un des coteaux les plus réputés de Rüdesheim. Josef Leitz en est l'interprète emblématique, avec des Riesling secs d'une grande pureté et d'une belle profondeur, qui ont porté la réputation du domaine et du cru bien au-delà des frontières. Le Berg Rottland illustre l'équilibre, propre au Berg de Rüdesheim, entre la minéralité du quartzite et la rondeur apportée par le lœss. Au fil des années, le Berg Rottland s'est imposé comme l'un des terroirs les plus fiables et les plus appréciés de Rüdesheim, capable de Riesling à la fois charmeurs dans leur jeunesse et aptes à une belle garde. Josef Leitz, parti d'un tout petit domaine pour devenir une référence internationale, y a joué un rôle décisif. Le cru, exposé plein sud face au Rhin, bénéficie d'un ensoleillement maximal qui mûrit pleinement le Riesling tout en préservant sa fraîcheur grâce à l'influence du fleuve. Le Berg Rottland illustre parfaitement la signature du Berg de Rüdesheim : des vins lumineux, mariant la puissance du quartzite à l'élégance. Régulièrement salué par la critique, le Berg Rottland est devenu, sous l'impulsion de Leitz, l'un des ambassadeurs internationaux du renouveau du Riesling sec du Rheingau, alliant accessibilité et profondeur.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "quartzite",
+        "ruedesheim",
+        "berg-rottland"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-ruedesheimer-berg-roseneck",
+      "nom": "Rüdesheimer Berg Roseneck",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-220 m",
+      "sols": "quartzite et schistes, plus en altitude",
+      "caracteristiques_rapides": "Partie la plus haute et la plus fraîche du Rüdesheimer Berg. Vins fins et aériens, acidité vibrante. VDP Grosse Lage.",
+      "notes_objectives": "Le Rüdesheimer Berg Roseneck est l'un des grands crus du « Berg » de Rüdesheim, sur des sols de quartzite et de schiste, un peu plus en hauteur que le Schlossberg et le Rottland. Bien exposé, il donne des Riesling racés et minéraux. Le terroir produit des vins fins et tendus, exploités par des domaines comme Josef Leitz et Georg Breuer. Classé en grand cru, le Berg Roseneck complète le trio des grands coteaux de quartzite de Rüdesheim. Situé un peu plus en hauteur, le Berg Roseneck bénéficie de la même exposition privilégiée au Rhin que ses voisins, sur un sol de quartzite et de schiste. Ses Riesling, racés et tendus, complètent la trilogie des grands crus du Berg de Rüdesheim. Leitz et Breuer en signent de belles cuvées, confirmant la place du Berg parmi les sommets du Riesling sec du Rheingau. Apprécié pour sa finesse, le Berg Roseneck offre souvent des Riesling un peu plus aériens que le Schlossberg, tout en partageant la signature minérale du quartzite de Rüdesheim. Il participe pleinement au prestige retrouvé du Berg, fer de lance du grand Riesling sec du Rheingau. Il complète le trio des grands crus du Berg de Rüdesheim, au sommet du Riesling sec du Rheingau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "quartzite",
+        "ruedesheim",
+        "berg-roseneck"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-assmannshaeuser-hoellenberg",
+      "nom": "Assmannshäuser Höllenberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "100-200 m",
+      "sols": "phyllite (schiste tendre) et argile",
+      "caracteristiques_rapides": "Le grand terroir rouge du Rheingau, sur phyllite. Spätburgunder (Pinot Noir) parmi les meilleurs d'Allemagne. August Kesseler, Robert König, Krone. VDP Grosse Lage.",
+      "notes_objectives": "L'Assmannshäuser Höllenberg est le plus grand terroir de Pinot Noir (Spätburgunder) du Rheingau, et l'un des meilleurs d'Allemagne. À Assmannshausen, où le Rhin entre dans sa gorge, il repose sur un sol singulier de phyllite (schiste tendre) et d'ardoise, qui réchauffe le sol et convient idéalement au Pinot. Le terroir donne des Spätburgunder fins, parfumés et élégants, d'une grande capacité de garde. Il est exploité par des domaines spécialisés comme August Kesseler, Künstler et Krone. Classé en grand cru, le Höllenberg est une exception rouge dans un Rheingau voué au Riesling, et l'un des hauts lieux du Pinot Noir allemand. La culture du Pinot Noir à Assmannshausen remonte au Moyen Âge, introduite dit-on par les cisterciens ; c'est l'un des très rares secteurs du Rheingau, et de toute l'Allemagne septentrionale, à s'être spécialisé dans le rouge. La phyllite, schiste rougeâtre et tendre, réchauffe le sol et apporte aux vins finesse et parfum. August Kesseler a porté la réputation du Höllenberg au plus haut, avec des Spätburgunder d'une élégance toute bourguignonne ; Künstler, Krone et quelques autres en livrent d'autres grandes lectures. Le cru illustre la capacité du Rheingau, sur ce terroir singulier, à produire des Pinots Noirs de rang national. Assmannshausen, blotti à l'entrée de la gorge du Rhin classée au patrimoine mondial, est une véritable enclave rouge, où la tradition du Pinot Noir se perpétue depuis des siècles dans un océan de Riesling. Le Höllenberg y bénéficie d'un microclimat chaud et d'un sol de phyllite qui conviennent idéalement au cépage. Les Spätburgunder du Höllenberg, fins, soyeux et parfumés, comptent parmi les meilleurs Pinots d'Allemagne et peuvent vieillir magnifiquement ; ceux d'August Kesseler ont acquis une réputation internationale. Le cru illustre une facette méconnue du Rheingau et confirme la capacité de l'Allemagne septentrionale à produire de grands vins rouges d'élégance. Pour qui s'intéresse au Pinot Noir allemand, le Höllenberg est une étape incontournable, à la hauteur des meilleurs terroirs rouges de Baden ou de la Pfalz, et la preuve que le Rheingau ne se résume pas au seul Riesling.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "spaetburgunder",
+        "pinot-noir",
+        "phyllite",
+        "assmannshausen",
+        "hoellenberg",
+        "iconique",
+        "rouge"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-lorcher-krone",
+      "nom": "Lorcher Krone",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "schistes dévoniens (transition vers le Mittelrhein)",
+      "caracteristiques_rapides": "Lieu-dit en pente raide de Lorch, remis sur le devant de la scène par Eva Fricke. Rieslings salins et tranchants. VDP Grosse Lage.",
+      "notes_objectives": "La Lorcher Krone est l'un des grands crus de Lorch, à l'extrême ouest du Rheingau, à la transition avec la Mittelrhein. Son sol de schistes dévoniens, proche de ceux de la Mosel, donne des Riesling tendus et minéraux, plus nerveux que la moyenne du Rheingau. Le terroir a été remis en lumière par des vigneronnes et vignerons comme Eva Fricke, ainsi que par le domaine Graf von Kanitz. Classé en grand cru, la Krone illustre le style plus ardoisier et tendu des Riesling de Lorch. Lorch, à l'extrême ouest, marque la transition avec la vallée du Rhin moyen : ses schistes dévoniens, proches de ceux de la Mosel, y donnent des Riesling plus nerveux et ardoisiers que dans le cœur du Rheingau. Eva Fricke, figure montante de la région, a fait de la Krone l'un de ses crus phares, prouvant que Lorch recelait de grands terroirs longtemps oubliés. Le succès d'Eva Fricke à Lorch a braqué les projecteurs sur ce secteur longtemps oublié, désormais reconnu comme l'un des plus excitants du Rheingau pour le Riesling tendu et minéral. La Krone en est l'un des plus beaux fleurons, à la croisée des styles du Rheingau et de la Mittelrhein. Elle est aujourd'hui l'un des symboles de la renaissance de Lorch et de l'ouest du Rheingau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste",
+        "lorch",
+        "krone",
+        "eva-fricke"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-lorcher-pfaffenwies",
+      "nom": "Lorcher Pfaffenwies",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-200 m",
+      "sols": "schistes et quartzite",
+      "caracteristiques_rapides": "Autre grand site de Lorch sur schiste, à la frontière du Mittelrhein. Style minéral et tendu. VDP Grosse Lage.",
+      "notes_objectives": "La Lorcher Pfaffenwies est un grand cru de Lorch, sur des sols de schistes et de quartzite, à la frontière du Rheingau et de la Mittelrhein. Bien exposée, elle donne des Riesling tendus et salins. Le terroir, dans le style plus ardoisier de Lorch, est notamment exploité par Eva Fricke et Graf von Kanitz. Classé en grand cru, la Pfaffenwies illustre le renouveau des terroirs d'ardoise de l'ouest du Rheingau. Comme la Krone voisine, la Pfaffenwies appartient au secteur ardoisier de Lorch, où le Riesling gagne en tension et en salinité. Eva Fricke et Graf von Kanitz y produisent des vins d'une grande pureté minérale. Le cru illustre la singularité de Lorch au sein du Rheingau, un avant-poste au style plus proche de la Mosel et de la Mittelrhein. La renaissance de Lorch, portée par une nouvelle génération, a révélé tout le potentiel de ces coteaux d'ardoise. La Pfaffenwies, avec ses Riesling salins et nerveux, illustre cette identité singulière, plus septentrionale, à l'extrémité occidentale du Rheingau. Elle confirme le potentiel des coteaux d'ardoise de Lorch, longtemps sous-estimés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste",
+        "lorch",
+        "pfaffenwies"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-geisenheimer-rothenberg",
+      "nom": "Geisenheimer Rothenberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-150 m",
+      "sols": "lœss profond mêlé de schiste rouge ferrugineux",
+      "caracteristiques_rapides": "Lieu-dit de Geisenheim, le schiste rouge donne profondeur et chaleur. Wegeler en référence. VDP Grosse Lage.",
+      "notes_objectives": "Le Geisenheimer Rothenberg est un grand cru de Geisenheim, sur un sol profond de lœss mêlé de schiste rouge. Bien exposé, il donne des Riesling riches et aromatiques. Le terroir, dont le nom évoque le schiste rouge, produit des vins amples et de garde, exploités par des domaines comme Wegeler et Johannishof. Classé en grand cru, le Rothenberg illustre la diversité des sols de Geisenheim, ville aussi célèbre pour sa grande école de viticulture. Le nom du cru évoque le schiste rouge qui se mêle au lœss profond, donnant des Riesling à la fois riches et structurés. Wegeler et Johannishof y signent de belles cuvées. Geisenheim, célèbre dans le monde entier pour sa haute école de viticulture et d'œnologie, possède en le Rothenberg l'un de ses terroirs les plus intéressants. Le mariage du lœss profond et du schiste rouge donne au Rothenberg des Riesling à la personnalité affirmée, riches mais structurés. Le cru rappelle que Geisenheim n'est pas seulement la capitale mondiale de la recherche viticole, mais aussi un terroir de belle qualité au sein du Rheingau. Il compte parmi les terroirs les plus typés de Geisenheim, capitale de la viticulture allemande.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "schiste-rouge",
+        "loess",
+        "geisenheim",
+        "rothenberg"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-geisenheimer-klaeuserweg",
+      "nom": "Geisenheimer Kläuserweg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-140 m",
+      "sols": "lœss, marnes et gravier",
+      "caracteristiques_rapides": "Grand site de Geisenheim sur lœss, vins plus opulents et accessibles. VDP Grosse Lage.",
+      "notes_objectives": "Le Geisenheimer Kläuserweg est un grand cru de Geisenheim, sur des sols de lœss, de marnes et de gravier. Bien exposé, il donne des Riesling racés et de belle garde. Le terroir produit des vins équilibrés, exploités notamment par le domaine Wegeler. Classé en grand cru, le Kläuserweg illustre la qualité des terroirs de lœss et de marnes du secteur de Geisenheim. Sur des sols de lœss, de marnes et de gravier, le Kläuserweg donne des Riesling équilibrés et de belle garde. Le domaine Wegeler en est l'un des principaux interprètes. Le cru illustre la qualité des terroirs de Geisenheim, ville-phare de la viticulture allemande, et complète la palette des grands coteaux de l'ouest du Rheingau. Régulier et équilibré, le Kläuserweg offre des Riesling fiables et de belle garde, fidèles au style du secteur de Geisenheim. Il complète, avec le Rothenberg, la palette des bons terroirs de cette commune emblématique de l'ouest du Rheingau. Il illustre la qualité régulière des terroirs de lœss et de marnes de Geisenheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "geisenheim",
+        "klaeuserweg"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-schloss-johannisberg",
+      "nom": "Schloss Johannisberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-180 m",
+      "sols": "lœss et lehm sur sous-sol de quartzite et schiste (phyllite)",
+      "caracteristiques_rapides": "Colline-monopole historique au cœur du Rheingau, là où la Spätlese serait née (1775). Domaine du groupe Oetker. Iconique. VDP Grosse Lage.",
+      "notes_objectives": "Schloss Johannisberg est l'un des domaines et terroirs les plus illustres d'Allemagne, sur une colline dominant le Rhin. C'est ici qu'aurait été « inventée » la vendange tardive (Spätlese) en 1775, à la suite d'un retard dans l'autorisation de vendanger. Le sol mêle lœss et lehm sur un sous-sol de quartzite. Le terroir, entièrement planté de Riesling, donne des vins racés et de garde, dans toute la gamme du sec au liquoreux. Il est exploité par le domaine éponyme, Schloss Johannisberg. Monument de l'histoire viticole, le Schloss Johannisberg illustre l'ancienneté et le prestige du Riesling du Rheingau. La légende du « Spätlesereiter », le messager dont le retard aurait conduit à vendanger des raisins botrytisés en 1775, fait de Schloss Johannisberg le berceau revendiqué de la vendange tardive. Le domaine, longtemps propriété des princes de Metternich, conserve une cave-bibliothèque de vieux millésimes exceptionnelle. Entièrement planté de Riesling depuis des siècles, le coteau de lœss sur quartzite donne des vins racés et de garde, identifiés par un célèbre code de capsules de couleur selon le niveau de maturité. Plus qu'un cru, Schloss Johannisberg est un monument de l'histoire du Riesling mondial. La silhouette du château baroque dominant le vignoble et le Rhin est l'une des images les plus célèbres du vignoble allemand. Le domaine, qui revendique plus de mille ans d'histoire viticole, a profondément marqué la culture du Riesling, de l'invention de la Spätlese au système de capsules colorées encore en usage aujourd'hui. Ses Riesling, racés et de garde, conjuguent la finesse apportée par le sous-sol de quartzite et l'ampleur venue du lœss. Lieu de mémoire autant que grand terroir, Schloss Johannisberg demeure un passage obligé pour qui veut comprendre l'histoire et la grandeur du Riesling du Rheingau. Visité chaque année par des amateurs venus du monde entier, le domaine reste un symbole : celui d'une région et d'un cépage qui ont écrit quelques-unes des plus belles pages de l'histoire du vin blanc.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "johannisberg",
+        "monopole",
+        "spaetlese",
+        "iconique",
+        "legacy"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-winkeler-hasensprung",
+      "nom": "Winkeler Hasensprung",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-140 m",
+      "sols": "lœss, loam et gravier",
+      "caracteristiques_rapides": "Grand site de Winkel, exposition sud, vins parfumés et souples. VDP Grosse Lage en partie.",
+      "notes_objectives": "Le Winkeler Hasensprung est un grand cru de Winkel, sur des sols de lœss, de loam et de gravier. Bien exposé, il donne des Riesling fins et aromatiques. Le terroir, voisin de Schloss Vollrads, produit des vins équilibrés et de garde. Classé en grand cru, le Hasensprung illustre la finesse des Riesling de lœss du cœur du Rheingau. Vaste coteau de lœss, de loam et de gravier, le Hasensprung donne des Riesling fins et aromatiques, d'une belle régularité. Situé près de Schloss Vollrads, il bénéficie de la longue tradition viticole de Winkel. Le cru illustre la finesse des Riesling de lœss du cœur du Rheingau, dans un registre accessible mais racé. Apprécié pour sa régularité et son fruité, le Hasensprung est l'un des grands coteaux de Winkel, village riche d'une longue tradition viticole autour de Schloss Vollrads. Ses Riesling, fins et accessibles, illustrent le charme des terroirs de lœss du cœur du Rheingau. Il demeure l'un des grands coteaux de lœss du cœur du Rheingau, près de Schloss Vollrads.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "winkel",
+        "hasensprung"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-schloss-vollrads",
+      "nom": "Schloss Vollrads",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-200 m",
+      "sols": "lœss, loam et phyllite en hauteur",
+      "caracteristiques_rapides": "Domaine-monopole historique (l'un des plus anciens du monde, vente de vin depuis le XVe s.). Site en hauteur, frais. VDP Grosse Lage.",
+      "notes_objectives": "Schloss Vollrads est l'un des plus anciens domaines et terroirs du Rheingau, à Winkel, dont l'histoire viticole remonte à plusieurs siècles. Son coteau mêle lœss, loam et phyllite sur les hauteurs. Le terroir, entièrement planté de Riesling, donne des vins racés et de garde, dans toute la gamme du sec au liquoreux. Il est exploité par le domaine éponyme. Monument historique, Schloss Vollrads illustre, aux côtés de Schloss Johannisberg, l'ancienneté et le prestige du Riesling du Rheingau. Propriété de la famille Greiffenclau pendant des siècles, Schloss Vollrads est l'un des plus anciens domaines viticoles du monde encore en activité. Son coteau, qui mêle lœss et phyllite, donne des Riesling élégants, du sec au liquoreux. Comme Schloss Johannisberg, il incarne la grandeur historique et l'ancienneté du Riesling du Rheingau, perpétuée jusqu'à aujourd'hui. Aujourd'hui encore, Schloss Vollrads demeure un ambassadeur du Riesling du Rheingau, conjuguant patrimoine architectural exceptionnel et tradition viticole millénaire. Ses vins, élégants et de garde, perpétuent l'esprit des grands domaines historiques de la région. Il reste l'un des grands ambassadeurs historiques du Riesling du Rheingau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "winkel",
+        "vollrads",
+        "monopole",
+        "legacy"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-oestricher-lenchen",
+      "nom": "Oestricher Lenchen",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-130 m",
+      "sols": "lœss profond et argile, parcelles basses près du Rhin",
+      "caracteristiques_rapides": "Grand site d'Oestrich, propice aux vendanges tardives et botrytisés. Spreitzer, Wegeler. VDP Grosse Lage en partie.",
+      "notes_objectives": "Le Oestricher Lenchen est un grand cru d'Oestrich, sur des sols profonds de lœss et d'argile. Bien exposé, il est particulièrement réputé pour ses vins riches et liquoreux (Auslese, Beerenauslese). Le terroir donne des Riesling amples et aromatiques, exploités par des domaines comme Spreitzer et Peter Jakob Kühn. Classé en grand cru, le Lenchen illustre la vocation des sols profonds d'Oestrich pour des Riesling généreux et de grands liquoreux. Les sols profonds et argileux du Lenchen, qui retiennent bien l'eau, en font un terroir de prédilection pour les vendanges tardives et les grands liquoreux botrytisés. Spreitzer, avec sa cuvée « Eisvogel », et Peter Jakob Kühn en tirent de très beaux vins. Le cru illustre la vocation des sols profonds d'Oestrich pour des Riesling généreux et de splendides nectars. Réputé pour ses grands liquoreux, le Lenchen a vu naître de mémorables Beerenauslese et Trockenbeerenauslese. Spreitzer et Kühn y révèlent aussi de beaux secs. Le cru illustre la richesse des sols profonds d'Oestrich, terre d'élection des Riesling généreux et des nectars botrytisés. Il demeure une terre d'élection pour les grands liquoreux botrytisés du Rheingau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "oestrich",
+        "lenchen",
+        "botrytis"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-oestricher-doosberg",
+      "nom": "Oestricher Doosberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-160 m",
+      "sols": "lœss, loam et quartzite, sols plus drainants que Lenchen",
+      "caracteristiques_rapides": "Site phare de Peter Jakob Kühn (biodynamie). Rieslings secs énergiques et minéraux. VDP Grosse Lage.",
+      "notes_objectives": "Le Oestricher Doosberg est l'un des grands crus d'Oestrich, sur des sols de lœss, de loam et de quartzite. Bien exposé, il donne des Riesling racés et profonds, à la belle minéralité. Le terroir est magnifié par le domaine Peter Jakob Kühn, l'un des grands maîtres de la biodynamie en Allemagne, dont les Riesling secs du Doosberg sont des références. Classé en grand cru, le Doosberg illustre le renouveau du Riesling sec de terroir dans le centre du Rheingau. Le Doosberg, qui s'étend en pente douce au-dessus d'Oestrich, a longtemps été sous-estimé avant que Peter Jakob Kühn n'en révèle tout le potentiel. Converti à la biodynamie dès les années 2000, ce domaine pionnier y produit des Riesling secs d'une pureté et d'une vibration remarquables. Le sol de lœss, de loam et de quartzite donne des vins à la fois amples et minéraux, qui figurent aujourd'hui parmi les références du Riesling sec de terroir du Rheingau. Le Doosberg illustre le renouveau qualitatif de la région, porté par une viticulture plus respectueuse et plus parcellaire. Le travail de Peter Jakob Kühn a transformé la perception du Doosberg, désormais considéré comme l'un des grands terroirs secs du Rheingau. La conversion à la biodynamie, radicale pour la région, a donné des vins d'une vibration et d'une profondeur nouvelles, salués par la critique internationale. Les Riesling du Doosberg, à la fois amples et minéraux, vieillissent remarquablement et incarnent le renouveau qualitatif du Rheingau contemporain. Le cru illustre comment une viticulture exigeante et respectueuse peut révéler tout le potentiel d'un terroir longtemps tenu pour ordinaire. Devenu une référence du Riesling sec biodynamique, le Doosberg illustre la capacité du Rheingau contemporain à se réinventer et à révéler des terroirs longtemps tenus pour secondaires.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "oestrich",
+        "doosberg",
+        "kuehn",
+        "biodynamie"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hallgartener-schoenhell",
+      "nom": "Hallgartener Schönhell",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "marnes calcaires (Mergel) et phyllite, en altitude",
+      "caracteristiques_rapides": "Site d'altitude de Hallgarten, marnes calcaires rares dans le Rheingau. Prinz en référence. Vins tendus et salins. VDP Grosse Lage.",
+      "notes_objectives": "Le Hallgartener Schönhell est un grand cru de Hallgarten, sur des sols de marnes calcaires et de phyllite, sur les hauteurs du Rheingau. Bien exposé, il donne des Riesling racés et minéraux. Le terroir produit des vins tendus et de garde, exploités par des domaines comme Prinz von Hessen et Fred Prinz. Classé en grand cru, le Schönhell illustre la finesse des Riesling des coteaux d'altitude de Hallgarten. Perché sur les hauteurs de Hallgarten, point culminant du vignoble du Rheingau, le Schönhell bénéficie d'un sol de marnes calcaires et de phyllite qui donne des Riesling racés et minéraux. Prinz von Hessen et Fred Prinz y signent de belles cuvées. Le cru illustre la finesse des terroirs d'altitude, plus frais, des hauteurs de Hallgarten. Sur les hauteurs les plus élevées du Rheingau, le Schönhell bénéficie d'une fraîcheur qui affine ses Riesling. Sa combinaison de marnes calcaires et de phyllite donne des vins racés et minéraux. Le cru illustre la finesse des terroirs d'altitude de Hallgarten, prisés pour leur tension. Il illustre la finesse des terroirs d'altitude, les plus élevés de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "marne",
+        "phyllite",
+        "hallgarten",
+        "schoenhell",
+        "prinz",
+        "altitude"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hattenheimer-nussbrunnen",
+      "nom": "Hattenheimer Nussbrunnen",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-150 m",
+      "sols": "marnes, lœss et loam",
+      "caracteristiques_rapides": "Petit grand site très réputé de Hattenheim, vins riches et profonds. Schloss Schönborn, Barth. VDP Grosse Lage.",
+      "notes_objectives": "Le Hattenheimer Nussbrunnen est un grand cru de Hattenheim, sur des sols de marnes, de lœss et de loam. Bien exposé, il donne des Riesling riches et profonds. Le terroir, réputé pour la générosité de ses vins, est exploité par des domaines comme Schloss Schönborn et Barth. Classé en grand cru, le Nussbrunnen illustre la richesse des Riesling de marnes de Hattenheim. Réputé pour la richesse de ses vins, le Nussbrunnen repose sur des marnes et du lœss qui donnent des Riesling amples, profonds et de garde. Schloss Schönborn et Barth en sont de beaux interprètes. Le cru illustre la générosité des grands terroirs de marnes de Hattenheim, l'un des villages les plus réputés de la rive du Rhin. Considéré comme l'un des meilleurs crus de Hattenheim, le Nussbrunnen donne des Riesling riches et profonds, parmi les plus généreux de la rive du Rhin. Schloss Schönborn et Barth en perpétuent la réputation, confirmant le rang de Hattenheim parmi les grands villages du Rheingau. Il compte parmi les meilleurs crus de marnes de Hattenheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "marne",
+        "loess",
+        "hattenheim",
+        "nussbrunnen"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hattenheimer-wisselbrunnen",
+      "nom": "Hattenheimer Wisselbrunnen",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "100-150 m",
+      "sols": "lœss-argile et marnes",
+      "caracteristiques_rapides": "Voisin de Nussbrunnen, exposition sud, vins charnus et structurés. VDP Grosse Lage.",
+      "notes_objectives": "Le Hattenheimer Wisselbrunnen est un grand cru de Hattenheim, sur des sols de lœss-argile et de marnes. Bien exposé, il donne des Riesling amples et aromatiques. Le terroir produit des vins équilibrés et de garde, exploités par des domaines comme Hans Lang, Barth et Peter Jakob Kühn. Classé en grand cru, le Wisselbrunnen illustre la qualité des terroirs de marnes et de lœss de Hattenheim. Sur ses sols de lœss-argile et de marnes, le Wisselbrunnen donne des Riesling amples et aromatiques, d'une belle profondeur. Hans Lang, Barth et Peter Jakob Kühn y produisent de belles cuvées. Le cru complète, aux côtés du Nussbrunnen, la remarquable série de grands crus de marnes de Hattenheim. Apprécié pour l'ampleur et l'équilibre de ses vins, le Wisselbrunnen complète la remarquable série de grands crus de marnes de Hattenheim. Hans Lang, Barth et Kühn y signent de belles cuvées, qui illustrent la générosité et la finesse des terroirs de ce village réputé. Il complète la belle série des grands crus de Hattenheim.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "marne",
+        "hattenheim",
+        "wisselbrunnen"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hattenheimer-pfaffenberg",
+      "nom": "Hattenheimer Pfaffenberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-160 m",
+      "sols": "marnes calcaires et lœss",
+      "caracteristiques_rapides": "Monopole historique de Schloss Schönborn, plus de calcaire. Style minéral. VDP Grosse Lage.",
+      "notes_objectives": "Le Hattenheimer Pfaffenberg est un grand cru de Hattenheim, sur des sols de marnes calcaires et de lœss, exploité en monopole par le domaine Schloss Schönborn. Bien exposé, il donne des Riesling racés et de garde. Le terroir, historiquement réputé, produit des vins fins et profonds. Classé en grand cru, le Pfaffenberg illustre, par son statut de monopole, le patrimoine de terroirs des grands domaines historiques du Rheingau. Monopole du domaine Schloss Schönborn, le Pfaffenberg bénéficie d'un sol de marnes calcaires et de lœss qui donne des Riesling racés et de longue garde. Son statut de monopole permet une expression cohérente du terroir. Le cru illustre le patrimoine de grands crus des domaines historiques du Rheingau, comme Schloss Schönborn, l'un des plus anciens de la région. Joyau en monopole de Schloss Schönborn, l'un des plus anciens domaines du Rheingau, le Pfaffenberg illustre l'héritage des grandes maisons historiques. Ses Riesling racés et de garde, issus de marnes calcaires, témoignent de la qualité constante de ce terroir maîtrisé d'un seul tenant. Monopole historique, il témoigne du patrimoine des grands domaines du Rheingau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "marne",
+        "hattenheim",
+        "pfaffenberg",
+        "schoenborn",
+        "monopole"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-steinberg",
+      "nom": "Steinberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "130-180 m",
+      "sols": "phyllite et lœss, clos de murs",
+      "caracteristiques_rapides": "Clos historique cistercien (XIIe s.) ceint de murs, monopole de Kloster Eberbach (Hessische Staatsweingüter). L'un des sites légendaires d'Allemagne. VDP Grosse Lage.",
+      "notes_objectives": "Le Steinberg est l'un des terroirs les plus mythiques du Rheingau : un clos ceint de murs de pierre, créé par les moines cisterciens de l'abbaye d'Eberbach, à l'image du Clos de Vougeot bourguignon. Son sol de phyllite et de lœss, sur un coteau bien exposé, en fait un grand cru historique. Le terroir, monopole des domaines de l'État de Hesse (Kloster Eberbach), donne des Riesling racés et de garde. Classé en grand cru, le Steinberg illustre l'héritage monastique et l'ancienneté de la viticulture de qualité du Rheingau. Créé au XIIe siècle par les moines de l'abbaye d'Eberbach, le Steinberg est entouré d'un mur de pierre de plusieurs kilomètres, à l'image des grands clos cisterciens de Bourgogne. C'est l'un des berceaux de la viticulture allemande de qualité : c'est notamment ici qu'aurait été conceptualisée la notion de « Cabinet » (Kabinett), réservé aux meilleures cuvées. Aujourd'hui géré par les domaines de l'État de Hesse, le clos, planté de Riesling sur phyllite et lœss, donne des vins racés et de garde. Le Steinberg, indissociable de la majestueuse abbaye d'Eberbach, est autant un terroir d'exception qu'un haut lieu du patrimoine viticole européen. L'abbaye d'Eberbach, l'un des plus beaux ensembles cisterciens d'Europe, a servi de décor au film « Le Nom de la rose » et demeure le cœur historique du vignoble du Rheingau. Le Steinberg, son clos emblématique, a inspiré les classifications et le vocabulaire mêmes du vin allemand. Les Riesling du Steinberg, racés et de garde, perpétuent un héritage millénaire dans toute la gamme du sec au liquoreux. Plus qu'un simple grand cru, le Steinberg est un symbole : celui de la naissance, sous l'impulsion des moines, d'une viticulture de terroir en Allemagne, dont le Rheingau fut le berceau. Indissociable de l'abbaye d'Eberbach, le Steinberg demeure un pèlerinage obligé pour qui veut toucher du doigt les racines monastiques et bourguignonnes de la viticulture allemande.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "hattenheim",
+        "steinberg",
+        "clos",
+        "monopole",
+        "kloster-eberbach",
+        "legacy",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-erbacher-marcobrunn",
+      "nom": "Erbacher Marcobrunn",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "85-110 m",
+      "sols": "lœss-argile profond sur marnes calcaires tertiaires, en bord de Rhin",
+      "caracteristiques_rapides": "Lieu-dit légendaire d'Erbach, au ras du Rhin, microclimat chaud. Vins puissants, riches et de très grande garde. Schloss Schönborn, Schloss Reinhartshausen, Künstler. VDP Grosse Lage.",
+      "notes_objectives": "L'Erbacher Marcobrunn est l'un des terroirs les plus prestigieux du Rheingau, au bord du Rhin à Erbach. Son sol profond de lœss-argile sur des marnes, exceptionnellement riche et bien exposé, en fait un site légendaire. Le terroir donne des Riesling parmi les plus puissants et les plus opulents du Rheingau, riches et de très longue garde. Il est exploité par de grands domaines comme Schloss Schönborn et Schloss Reinhartshausen. Classé au sommet de la hiérarchie du Rheingau, le Marcobrunn illustre la richesse et la profondeur des grands Riesling de la rive du Rhin. Situé presque au niveau du Rhin, le Marcobrunn doit son nom à une fontaine (Brunnen) qui marquait jadis la limite entre Erbach et Hattenheim — limite si convoitée qu'elle donna lieu à des litiges fameux, tant le terroir était réputé. Son sol profond de lœss-argile sur marnes retient la chaleur et l'eau, donnant des vins d'une puissance peu commune dans le Rheingau. Dès le XIXe siècle, le Marcobrunn figurait parmi les vins blancs les plus chers du monde. Schloss Schönborn et Schloss Reinhartshausen en sont aujourd'hui les principaux interprètes, avec des Riesling riches, denses et d'une très longue garde. Le Marcobrunn demeure l'un des sommets absolus du Rheingau. Au fil des siècles, le Marcobrunn a figuré sur toutes les tables princières et dans tous les grands classements ; sa réputation, intacte, en fait l'un des noms les plus prestigieux du Rheingau. Sa situation au ras du Rhin, conjuguée à des sols profonds, lui confère une chaleur et une richesse exceptionnelles. Les Riesling du Marcobrunn, parmi les plus opulents et les plus complexes de la région, atteignent leur apogée après de longues années de garde. Schloss Schönborn et Schloss Reinhartshausen en perpétuent la grandeur. Le Marcobrunn demeure l'archétype du grand Riesling riche et profond de la rive du Rhin. Pour beaucoup d'amateurs, le Marcobrunn reste tout simplement l'un des plus grands terroirs de Riesling du monde, synonyme de richesse, de profondeur et de très longue garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "marne",
+        "erbach",
+        "marcobrunn",
+        "iconique",
+        "legacy"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-erbacher-siegelsberg",
+      "nom": "Erbacher Siegelsberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-130 m",
+      "sols": "lœss, loam et gravier",
+      "caracteristiques_rapides": "Voisin de Marcobrunn, exposition sud, vins élégants et accessibles. VDP Grosse Lage.",
+      "notes_objectives": "L'Erbacher Siegelsberg est un grand cru d'Erbach, voisin du prestigieux Marcobrunn, sur des sols de lœss, de loam et de gravier. Bien exposé, il donne des Riesling amples et racés. Le terroir produit des vins de belle garde, exploités notamment par le domaine Schloss Reinhartshausen. Classé en grand cru, le Siegelsberg illustre la qualité des terroirs de la rive du Rhin à Erbach, dans le sillage du Marcobrunn. Voisin immédiat du légendaire Marcobrunn, le Siegelsberg partage avec lui la situation privilégiée de la rive du Rhin à Erbach, sur des sols de lœss, de loam et de gravier. Schloss Reinhartshausen en est l'un des interprètes. Ses Riesling amples et de garde profitent du prestige et de la qualité des grands terroirs d'Erbach. Profitant du voisinage prestigieux du Marcobrunn, le Siegelsberg donne des Riesling amples et de garde sur la rive du Rhin à Erbach. Schloss Reinhartshausen en est un interprète attitré. Le cru illustre la qualité d'ensemble des grands terroirs d'Erbach, parmi les plus réputés du Rheingau. Il profite du prestige des grands terroirs d'Erbach, dans le sillage du Marcobrunn.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "loess",
+        "erbach",
+        "siegelsberg"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-kiedricher-graefenberg",
+      "nom": "Kiedricher Gräfenberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "200-250 m",
+      "sols": "phyllite (schiste tendre) caillouteux, en altitude",
+      "caracteristiques_rapides": "Site d'altitude de Kiedrich, sol de phyllite. Domaine du fer de lance de Robert Weil. Rieslings cristallins, garde immense, botrytisés mythiques. VDP Grosse Lage.",
+      "notes_objectives": "Le Kiedricher Gräfenberg est l'un des plus grands terroirs du Rheingau, sur les hauteurs de Kiedrich. Son sol de phyllite (schiste tendre) caillouteux, en pente raide et en altitude, donne des Riesling d'une grande minéralité et d'une remarquable capacité de garde. Le terroir est indissociable du domaine Robert Weil, qui en a fait l'un des crus les plus réputés d'Allemagne, des grands secs aux liquoreux nobles d'anthologie. Classé au sommet de la hiérarchie du Rheingau, le Gräfenberg illustre l'excellence des Riesling de phyllite des coteaux d'altitude de Kiedrich. Perché sur les hauteurs de Kiedrich, le Gräfenberg bénéficie d'une altitude et d'une fraîcheur qui préservent une acidité vibrante, tandis que sa phyllite caillouteuse donne aux vins une minéralité profonde. C'est l'un des terroirs les plus complets du Rheingau. Le domaine Robert Weil, fondé en 1875, en a fait l'un des crus les plus célèbres d'Allemagne : ses Grosses Gewächs secs y côtoient des liquoreux nobles d'une perfection légendaire, parmi les vins les plus chers du pays. Le Gräfenberg illustre l'alliance rare de la minéralité, de la finesse et de la capacité à produire de grands liquoreux. La saga du domaine Robert Weil, fondé à la fin du XIXe siècle et aujourd'hui propriété du japonais Suntory, est indissociable du Gräfenberg : c'est ici que le domaine produit, certaines années, des Trockenbeerenauslese qui comptent parmi les vins les plus chers du monde aux enchères. Mais le Gräfenberg brille aussi par ses Grosses Gewächs secs, d'une minéralité profonde et d'une grande longévité. Le cru illustre la double vocation des plus grands terroirs du Rheingau : produire à la fois de grands vins secs et de sublimes liquoreux, sur un même coteau de phyllite d'altitude. Indissociable du domaine Robert Weil, le Gräfenberg est aujourd'hui l'un des noms les plus prestigieux du Riesling allemand, aussi bien pour ses secs que pour ses liquoreux d'exception.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "kiedrich",
+        "graefenberg",
+        "robert-weil",
+        "iconique",
+        "altitude"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-kiedricher-turmberg",
+      "nom": "Kiedricher Turmberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-230 m",
+      "sols": "phyllite et lœss",
+      "caracteristiques_rapides": "Voisin de Gräfenberg, monopole de fait de Robert Weil (Erste/Grosse Lage selon parcelles). Style tendu et fin.",
+      "notes_objectives": "Le Kiedricher Turmberg est un grand cru de Kiedrich, sur des sols de phyllite et de lœss, exploité en monopole par le domaine Robert Weil. Bien exposé, il donne des Riesling racés et minéraux. Le terroir, voisin du grand Gräfenberg, produit des vins tendus et de garde. Classé en grand cru, le Turmberg illustre, aux côtés du Gräfenberg, l'excellence des terroirs de phyllite de Kiedrich. Monopole du domaine Robert Weil, le Turmberg, dominé par une ancienne tour, repose sur la même phyllite que le grand Gräfenberg voisin. Conduit avec le même soin, il donne des Riesling secs racés et minéraux. Le cru illustre, aux côtés du Gräfenberg, l'excellence des terroirs de phyllite de Kiedrich et le savoir-faire du domaine Robert Weil. Ressuscité par le domaine Robert Weil, le Turmberg, longtemps tombé en désuétude, est aujourd'hui l'un des beaux monopoles du Rheingau. Ses Riesling secs, racés et minéraux, profitent du même soin et de la même phyllite que le grand Gräfenberg voisin, dont il est le complément naturel. Il complète idéalement le grand Gräfenberg dans la palette du domaine Robert Weil.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "kiedrich",
+        "turmberg",
+        "robert-weil"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-rauenthaler-baiken",
+      "nom": "Rauenthaler Baiken",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-250 m",
+      "sols": "phyllite et lœss, en altitude",
+      "caracteristiques_rapides": "Le plus célèbre site de Rauenthal, en hauteur et frais. Rieslings épicés et salins (signature « Rauenthaler »). Kloster Eberbach. VDP Grosse Lage.",
+      "notes_objectives": "Le Rauenthaler Baiken est l'un des grands crus historiques du Rheingau, sur les hauteurs de Rauenthal. Son sol de phyllite et de lœss, en altitude et bien exposé, donne des Riesling racés, épicés et d'une grande finesse. Réputé de longue date comme l'un des meilleurs terroirs de la région, le Baiken produit des vins tendus et de garde. Il est notamment exploité par les domaines de l'État (Kloster Eberbach). Classé en grand cru, le Baiken illustre la finesse aromatique et la minéralité des Riesling d'altitude de Rauenthal. Sur les hauteurs de Rauenthal, le Baiken jouit d'une altitude qui lui donne fraîcheur et finesse, et d'une phyllite qui imprime aux vins une minéralité épicée très caractéristique. Au début du XXe siècle, les Riesling de Rauenthal comptaient parmi les vins blancs les plus chers du monde, dépassant parfois les premiers crus de Bordeaux. Aujourd'hui surtout exploité par les domaines de l'État (Kloster Eberbach), le Baiken donne des Riesling racés, tendus et de longue garde. Le cru illustre la grandeur historique des terroirs d'altitude de Rauenthal, longtemps considérés comme l'élite du Rheingau. L'histoire du Baiken rappelle qu'au tournant du XXe siècle, le Rheingau, et Rauenthal en particulier, produisaient les vins blancs les plus chers et les plus recherchés au monde, devant les plus grands crus français. Cette gloire passée témoigne du potentiel exceptionnel du terroir. Aujourd'hui, le Baiken donne des Riesling racés, épicés et de longue garde, fidèles à la finesse des hauteurs de Rauenthal. Le cru illustre la grandeur historique du Rheingau et la renaissance de ses terroirs d'altitude, longtemps considérés comme l'aristocratie du Riesling allemand. Témoin de l'âge d'or du Rheingau, le Baiken demeure, pour les connaisseurs, l'un des plus nobles terroirs de la région, dont la finesse minérale n'a rien perdu de sa superbe.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "rauenthal",
+        "baiken",
+        "altitude",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-rauenthaler-nonnenberg",
+      "nom": "Rauenthaler Nonnenberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-240 m",
+      "sols": "phyllite et lœss",
+      "caracteristiques_rapides": "Monopole de Georg Breuer à Rauenthal, en altitude. Rieslings tendus, épicés, de garde. VDP Grosse Lage.",
+      "notes_objectives": "Le Rauenthaler Nonnenberg est un grand cru de Rauenthal, sur des sols de phyllite et de lœss, exploité en monopole par le domaine Georg Breuer. Bien exposé et en altitude, il donne des Riesling secs racés et minéraux. Le terroir produit des vins tendus et de garde, dans le style sec abouti de Breuer. Classé en grand cru, le Nonnenberg illustre la finesse des Riesling de phyllite des hauteurs de Rauenthal. Monopole du domaine Georg Breuer, le Nonnenberg, sur les hauteurs de Rauenthal, repose sur la phyllite et le lœss qui font la finesse des vins du secteur. Breuer en tire des Riesling secs racés, tendus et de garde, dans son style sec très abouti. Le cru illustre la qualité des terroirs d'altitude de Rauenthal et la vision parcellaire de ce domaine pionnier du sec. Monopole de Georg Breuer, pionnier du grand Riesling sec du Rheingau, le Nonnenberg illustre la vision parcellaire et exigeante de ce domaine. Ses Riesling secs, tendus et de garde, comptent parmi les plus aboutis des hauteurs de Rauenthal, secteur réputé pour la finesse de ses vins. Il illustre la vision parcellaire et le talent de Georg Breuer pour le Riesling sec.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "rauenthal",
+        "nonnenberg",
+        "breuer",
+        "monopole"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-rauenthaler-gehrn",
+      "nom": "Rauenthaler Gehrn",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "170-230 m",
+      "sols": "phyllite, marnes et lœss",
+      "caracteristiques_rapides": "Autre grand site de Rauenthal, vins épicés caractéristiques du village. VDP Grosse Lage.",
+      "notes_objectives": "Le Rauenthaler Gehrn est un grand cru de Rauenthal, sur des sols de phyllite, de marnes et de lœss. Bien exposé et en altitude, il donne des Riesling racés et épicés. Le terroir produit des vins fins et de garde, exploités notamment par les domaines de l'État (Kloster Eberbach) et Georg Breuer. Classé en grand cru, le Gehrn illustre, aux côtés du Baiken et du Nonnenberg, la qualité des terroirs d'altitude de Rauenthal. Sur les hauteurs de Rauenthal, le Gehrn bénéficie d'un sol de phyllite, de marnes et de lœss qui donne des Riesling racés et épicés, dans le style minéral et tendu propre au secteur. Les domaines de l'État et Georg Breuer en sont de beaux interprètes. Le cru complète, avec le Baiken et le Nonnenberg, la remarquable série des grands coteaux d'altitude de Rauenthal. Avec le Baiken et le Nonnenberg, le Gehrn complète la trilogie des grands coteaux d'altitude de Rauenthal, jadis considérés comme l'élite du Rheingau. Ses Riesling racés et épicés, issus de phyllite et de marnes, perpétuent cette tradition de finesse minérale propre au secteur. Avec le Baiken et le Nonnenberg, il parachève la trilogie des hauteurs de Rauenthal.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "phyllite",
+        "rauenthal",
+        "gehrn"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hochheimer-domdechaney",
+      "nom": "Hochheimer Domdechaney",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-120 m",
+      "sols": "lœss calcaire profond sur marnes, riche en argile",
+      "caracteristiques_rapides": "Site historique de Hochheim au-dessus du Main. Sols lourds et calcaires, vins puissants, riches et épicés. Domdechant Werner, Künstler. VDP Grosse Lage.",
+      "notes_objectives": "Le Hochheimer Domdechaney est l'un des grands crus de Hochheim, à l'extrême est du Rheingau, sur les bords du Main. Son sol profond de lœss calcaire sur des marnes donne des Riesling particulièrement riches, corsés et épicés. Le terroir, l'un des plus chauds du Rheingau, produit des vins puissants et de garde. Il est exploité par des domaines comme Künstler et Schloss Schönborn. Classé en grand cru, le Domdechaney illustre le style plus opulent et terrien des Riesling de Hochheim, à part dans le Rheingau. Hochheim, isolé à l'est sur les bords du Main, forme une enclave singulière du Rheingau, aux sols calcaires plus lourds qui donnent des Riesling plus corsés et épicés qu'ailleurs dans la région. Le Domdechaney en est l'un des fleurons, sur un sol profond de lœss calcaire. Künstler, domaine de référence de Hochheim, et Schloss Schönborn en tirent des Riesling riches, denses et de longue garde. Le Domdechaney illustre la personnalité à part des vins de Hochheim, ces fameux « hock » qui firent la réputation du Rheingau en Angleterre. L'isolement géographique de Hochheim, sur le Main et loin du cœur du Rheingau, a forgé une identité à part : des Riesling plus charnus, plus épicés et plus terriens, que les amateurs reconnaissent immédiatement. Le Domdechaney en est l'expression la plus opulente. Le domaine Künstler, installé à Hochheim, a porté ces terroirs au plus haut niveau contemporain, avec des Riesling secs d'une grande profondeur. Le Domdechaney illustre la singularité précieuse de Hochheim au sein du Rheingau, et la richesse de ses Riesling de lœss calcaire, taillés pour la garde. Porté au sommet par le domaine Künstler, le Domdechaney incarne aujourd'hui la renaissance qualitative de Hochheim et la singularité précieuse de ses Riesling opulents.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "loess",
+        "hochheim",
+        "domdechaney",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hochheimer-hoelle",
+      "nom": "Hochheimer Hölle",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-120 m",
+      "sols": "lœss calcaire et marnes",
+      "caracteristiques_rapides": "Grand site de Hochheim, microclimat chaud, vins denses et terreux. Künstler en référence. VDP Grosse Lage.",
+      "notes_objectives": "Le Hochheimer Hölle est l'un des grands crus de Hochheim, sur des sols de lœss calcaire et de marnes. Bien exposé, il donne des Riesling riches et profonds, dans le style généreux propre à Hochheim. Le terroir produit des vins corsés et de garde, exploités par des domaines comme Künstler et Schloss Schönborn. Classé en grand cru, le Hölle illustre la puissance et la richesse des Riesling de Hochheim, au confluent du Main et du Rhin. Comme ses voisins de Hochheim, le Hölle profite d'un sol calcaire et marneux qui donne aux Riesling chaleur, ampleur et longueur. Le climat plus continental de cette enclave orientale du Rheingau accentue la générosité des vins. Künstler et Schloss Schönborn y signent des Riesling corsés et profonds, taillés pour la garde. Le Hölle illustre, aux côtés du Domdechaney et du Kirchenstück, le style opulent et terrien qui distingue Hochheim du reste du Rheingau. Comme tout Hochheim, le Hölle profite d'un climat plus continental et de sols calcaires qui donnent des Riesling pleins, mûrs et savoureux, à la longueur épicée. C'est l'un des terroirs qui firent la réputation des « hock » outre-Manche. Künstler et Schloss Schönborn y signent des Riesling secs riches et de garde, qui comptent parmi les belles réussites de Hochheim. Le Hölle illustre, aux côtés du Domdechaney et du Kirchenstück, ce style opulent et caractéristique qui distingue l'enclave de Hochheim du reste du Rheingau. Avec ses Riesling pleins et savoureux, le Hölle confirme la place de Hochheim parmi les terroirs les plus caractéristiques et les plus attachants du Rheingau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "hochheim",
+        "hoelle",
+        "kuenstler"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hochheimer-kirchenstueck",
+      "nom": "Hochheimer Kirchenstück",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-115 m",
+      "sols": "lœss calcaire profond sur sous-sol marno-calcaire",
+      "caracteristiques_rapides": "Le joyau de Hochheim, petit clos près de l'église. Rieslings secs (GG) parmi les plus complets du Rheingau. Künstler. VDP Grosse Lage.",
+      "notes_objectives": "Le Hochheimer Kirchenstück est considéré comme le meilleur terroir de Hochheim, à l'est du Rheingau. Son sol profond de lœss calcaire sur un sous-sol de marnes donne des Riesling d'une grande richesse, mais aussi d'une belle finesse. Le terroir, historiquement prisé jusqu'à la cour d'Angleterre (les Anglais surnommaient le vin de Hochheim « hock »), produit des vins puissants et de très longue garde. Il est exploité par Künstler et Schloss Schönborn. Classé en grand cru, le Kirchenstück illustre au plus haut niveau le style opulent et racé des Riesling de Hochheim. Souvent considéré comme le plus grand cru de Hochheim, le Kirchenstück, blotti près de l'église, bénéficie d'un sol profond et d'un microclimat particulièrement favorable. Ses Riesling allient la richesse propre à Hochheim à une finesse et une longueur remarquables. La reine Victoria contribua à la célébrité des vins de Hochheim, au point que le terme « hock » désigna longtemps en Angleterre l'ensemble des vins du Rhin. Künstler et Schloss Schönborn en sont les grands interprètes. Le Kirchenstück illustre au plus haut niveau la grandeur opulente et la longévité des Riesling de Hochheim. Souvent placé en tête des crus de Hochheim, le Kirchenstück conjugue la richesse propre à ce secteur à une élégance et une race remarquables, fruit d'un sol profond et d'une situation idéale près de l'église. Ses Riesling comptent parmi les plus complets de l'est du Rheingau. La célébrité des vins de Hochheim auprès de la cour d'Angleterre, où « hock » devint synonyme de grand vin du Rhin, doit beaucoup à des crus comme le Kirchenstück. Künstler et Schloss Schönborn en perpétuent la grandeur, avec des Riesling secs opulents et de très longue garde. Souvent considéré comme le sommet de Hochheim, le Kirchenstück illustre, mieux qu'aucun autre cru, la grandeur opulente et la longévité des « hock » qui firent la renommée du Rhin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "hochheim",
+        "kirchenstueck",
+        "kuenstler",
+        "iconique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    },
+    {
+      "id": "de-rheingau-terr-hochheimer-koenigin-victoriaberg",
+      "nom": "Hochheimer Königin Victoriaberg",
+      "type": "lieu-dit",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-115 m",
+      "sols": "lœss calcaire et marnes",
+      "caracteristiques_rapides": "Site nommé en l'honneur de la reine Victoria (qui en raffolait, popularisant le « Hock » en Angleterre). Monopole historique. VDP Grosse Lage.",
+      "notes_objectives": "Le Hochheimer Königin Victoriaberg est un grand cru de Hochheim, dont le nom rend hommage à la reine Victoria, qui visita le vignoble en 1845 et appréciait les vins de Hochheim (les fameux « hock »). Son sol de lœss calcaire et de marnes donne des Riesling riches et corsés. Le terroir, exploité notamment par le domaine Hupfeld, produit des vins amples et de garde. Classé en grand cru, le Königin Victoriaberg illustre le style généreux des Riesling de Hochheim et leur lien historique avec la couronne britannique. La visite de la reine Victoria en 1845 marqua durablement la réputation de Hochheim : le coteau prit son nom, et ses vins, les « hock », devinrent synonymes de grand vin du Rhin outre-Manche. Sur son sol de lœss calcaire et de marnes, le Königin Victoriaberg donne des Riesling riches et corsés, exploités notamment par Hupfeld. Le cru illustre le lien historique unique entre Hochheim et la couronne britannique. Unique en son genre, le Königin Victoriaberg porte le nom d'une reine et illustre, mieux qu'aucun autre, le lien historique entre Hochheim et l'Angleterre. Ses Riesling riches et corsés, fidèles au style opulent de Hochheim, perpétuent la mémoire des « hock » qui firent la gloire du Rheingau outre-Manche. Unique, il perpétue le lien historique entre Hochheim et la couronne britannique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vdp-grosse-lage",
+        "riesling",
+        "calcaire",
+        "hochheim",
+        "koenigin-victoriaberg",
+        "monopole",
+        "historique"
+      ],
+      "source": "vdp.de|grosse-lage.de|mosel-fine-wines"
+    }
+  ]
+}

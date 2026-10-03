@@ -1,0 +1,2237 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "sicilia",
+  "region_label": "Sicilia (Italie)",
+  "source_file": "producteurs_sicilia.json",
+  "built_at": "2026-07-01",
+  "count": 50,
+  "items": [
+    {
+      "id": "it-sicilia-prod-benanti",
+      "nom": "Benanti",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Viagrande",
+      "pays": "Italie",
+      "cepages": [
+        "Carricante",
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC",
+        "Etna Bianco Superiore DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Viagrande, sur le versant sud-est de l'Etna, Benanti est le pionnier de la renaissance moderne du plus grand terroir volcanique d'Italie. Fondé en 1988 par Giuseppe Benanti, qui a ressuscité une tradition familiale remontant au XIXe siècle, le domaine a démontré, dès les années 1990, que l'Etna pouvait produire des vins de classe mondiale.\n\nAujourd'hui domaine purement etnéen, Benanti travaille les trois cépages emblématiques du volcan : le Carricante (blanc) et les Nerello Mascalese et Cappuccio (rouges), sur des contrade réparties autour du cratère. Son vin-phare, le Pietramarina, est un Carricante issu des hauteurs de Milo (seule zone habilitée à l'Etna Bianco Superiore) : un blanc volcanique d'une minéralité tranchante et d'une longévité exceptionnelle, capable de vieillir dix à quinze ans et souvent cité comme l'un des plus grands blancs d'Italie. En rouge, le Serra della Contessa (vieilles vignes) et le Rovittello expriment la finesse et la tension propres au Nerello de montagne. Les sols de laves et de cendres, l'altitude et les amplitudes thermiques signent des vins d'une fraîcheur et d'une salinité inimitables.\n\nRéférence historique et étalon de l'Etna, Benanti a ouvert la voie à toute une génération de vignerons. Entre le Pietramarina et ses rouges de contrada, le domaine demeure l'un des plus respectés de Sicile et le gardien de l'identité volcanique de l'île.\n\nL'Etna est un terroir sans équivalent : un volcan actif dont les coulées successives ont créé une mosaïque de sols de laves, de cendres et de sables noirs, où la vigne pousse en terrasses jusqu'à plus de 1000 mètres d'altitude. Benanti a compris très tôt que cette altitude, ces amplitudes thermiques et cette minéralité pouvaient donner des vins d'une fraîcheur inconnue sous les latitudes siciliennes. Le Carricante, cépage blanc autochtone tardif, y trouve à Milo son expression suprême, tandis que le Nerello Mascalese rappelle, par sa clarté et sa tension, les grands pinots. Servis sur des poissons, des fruits de mer ou une cuisine méditerranéenne pour les blancs, sur des viandes et des champignons pour les rouges, les vins de Benanti se distinguent par leur digestibilité et leur aptitude au vieillissement. Le domaine, longtemps mené par les fils de Giuseppe Benanti, continue d'affiner ses contrade et reste, plus de trente ans après ses débuts, la boussole qualitative du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pietramarina",
+        "Serra della Contessa",
+        "Rovittello",
+        "Contrada Monte Serra"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "carricante",
+        "nerello",
+        "pionnier",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "foodandwinegazette|decanter"
+    },
+    {
+      "id": "it-sicilia-prod-tenuta-delle-terre-nere",
+      "nom": "Tenuta delle Terre Nere",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Randazzo",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Randazzo, sur le versant nord de l'Etna, Tenuta delle Terre Nere est l'un des domaines qui ont porté la réputation du volcan à l'international. Fondé en 2002 par Marc de Grazia, négociant et découvreur de talents devenu vigneron par passion pour les vieilles vignes de l'Etna, il a fait de la logique de cru sa signature.\n\nLe domaine vinifie séparément une mosaïque de contrade — Calderara Sottana, Guardiola, Feudo di Mezzo, San Lorenzo — comme autant de climats bourguignons, révélant les nuances de chaque parcelle de lave. Le joyau est la cuvée Prephylloxera La Vigna di Don Peppino, issue de vignes franches de pied de Nerello Mascalese âgées de plus de 130 ans, l'un des plus grands rouges de l'île : tendu, complexe et profond. Le style de Terre Nere, souvent qualifié de bourguignon, mise sur la finesse, la minéralité et la fraîcheur plutôt que sur la puissance, grâce à l'altitude et aux sols de roches volcaniques. La conversion au biologique renforce cette recherche de pureté.\n\nRéférence des crus de l'Etna, Tenuta delle Terre Nere a démontré au monde le potentiel des vieilles vignes du volcan. Ses Nerello parcellaires, d'une élégance rare, comptent parmi les vins les plus recherchés de Sicile et figurent régulièrement au sommet des dégustations internationales.\n\nMarc de Grazia, longtemps intermédiaire entre les grands domaines italiens et le marché américain, connaissait mieux que quiconque les terroirs d'exception ; il a reconnu dans les vieilles vignes de l'Etna un potentiel comparable aux plus grands crus. Son travail a consisté à cartographier et vinifier séparément les contrade, dont les sols de lave d'âges différents impriment chacun leur signature. Le nom « Terre Nere » évoque ces terres noires volcaniques qui font la singularité du volcan. Servis sur des viandes blanches, des volailles, des champignons ou des fromages, les Nerello du domaine séduisent par leur parfum et leur allonge, et se patinent magnifiquement sur dix à quinze ans. La cuvée Prephylloxera, issue de ceps ayant survécu à tous les fléaux, est un témoignage vivant de l'histoire viticole de l'Etna. Sous l'impulsion de Marc de Grazia puis de son fils, le domaine n'a cessé d'affiner son approche parcellaire, confirmant à chaque millésime son statut de référence du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Prephylloxera La Vigna di Don Peppino",
+        "Calderara Sottana",
+        "Guardiola",
+        "Feudo di Mezzo"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrade",
+        "prephylloxera",
+        "nerello",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling|livingaftermidnite"
+    },
+    {
+      "id": "it-sicilia-prod-passopisciaro",
+      "nom": "Passopisciaro",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Chardonnay",
+        "Petit Verdot"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre Siciliane IGT",
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le haut versant nord de l'Etna, Passopisciaro est le domaine fondé en 2000 par Andrea Franchetti, figure visionnaire également propriétaire de Tenuta di Trinoro en Toscane. Il fut l'un des premiers à croire au potentiel des contrade d'altitude du volcan, jusqu'à 1000 mètres.\n\nLe domaine s'est fait un nom en vinifiant le Nerello Mascalese pur, non assemblé, par contrada : Rampante, Sciaranuova, Porcaria, Chiappemacine, Guardiola, autant de crus révélant chacun un profil de sol et d'altitude. Ces rouges, d'une finesse et d'une transparence toutes bourguignonnes, sont des références de l'Etna. Franchetti y a aussi planté des cépages inattendus — Chardonnay d'altitude parmi les plus hauts d'Europe, Petit Verdot et Cesanese d'Affile pour sa cuvée Franchetti — sur des sols volcaniques exceptionnels. Les vendanges tardives, parfois en novembre, et l'altitude signent des vins d'une grande fraîcheur. Après la disparition d'Andrea Franchetti en 2021, son fils Benjamin poursuit l'œuvre.\n\nPionnier des crus de l'Etna, Passopisciaro a imposé l'idée que le Nerello Mascalese de contrada pouvait rivaliser avec les plus grands pinots. C'est l'un des domaines les plus influents et les plus admirés du volcan, et une référence mondiale du renouveau sicilien.\n\nAndrea Franchetti fut un personnage hors norme du vin italien : esthète, voyageur et provocateur, il a bâti en Toscane puis en Sicile deux domaines cultes. Sur l'Etna, il a eu l'intuition que les contrade du versant nord, avec leurs vieilles vignes et leur altitude, pouvaient donner des Nerello d'une finesse inédite, et il a créé, en 2007, la manifestation « Contrade dell'Etna » qui réunit chaque année les vignerons du volcan. Ses cuvées parcellaires, identifiées par le seul nom de la contrada, ont contribué à imposer l'idée de crus sur l'Etna, à l'image de la Bourgogne. Servis sur des viandes, du gibier à plume ou des champignons, ces rouges d'une transparence remarquable révèlent les nuances de chaque terroir. La cuvée Franchetti, elle, mêle des cépages plantés en altitude extrême. Depuis la disparition d'Andrea en 2021, son fils Benjamin perpétue cette vision exigeante, et le domaine, qui a aussi investi le Carricante à Milo, demeure l'un des piliers du renouveau de l'Etna.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Contrada Rampante",
+        "Contrada Sciaranuova",
+        "Contrada Porcaria",
+        "Franchetti"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrade",
+        "franchetti",
+        "nerello",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|decanter"
+    },
+    {
+      "id": "it-sicilia-prod-graci",
+      "nom": "Graci",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Randazzo",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Randazzo, sur le versant nord de l'Etna, Graci est l'un des domaines les plus admirés du volcan. Alberto Graci a quitté une carrière dans la finance en 2004 pour reprendre des vignes familiales et se consacrer au Nerello Mascalese, avec une quête constante d'élégance et de fidélité au terroir.\n\nEn biologique, sur des vieilles vignes franches de pied souvent centenaires conduites en alberello, le domaine signe des Nerello d'une finesse remarquable, dans un registre pur et minéral. L'Arcurìa, issu d'une contrada de référence, et la Quota 600, du versant sud, comptent parmi les sommets de l'Etna, tandis que le Barbabecchi provient de vignes prephylloxera perchées en altitude. Le domaine excelle aussi en Carricante blanc. Le style Graci, tout en transparence, mise sur la fraîcheur et la minéralité volcanique plutôt que sur l'extraction, grâce aux sols de laves et à l'altitude. La comparaison avec les grands bourgognes revient souvent.\n\nFigure de proue du renouveau de l'Etna, Alberto Graci signe des Nerello d'une élégance et d'une profondeur rares, au grand potentiel de garde. C'est l'un des domaines les plus recherchés du volcan et un ambassadeur majeur de la finesse volcanique sicilienne.\n\nLe geste d'Alberto Graci — quitter la finance milanaise pour revenir cultiver les vignes de son grand-père à Randazzo — est emblématique de l'attrait qu'exerce l'Etna sur toute une génération. Sur le versant nord, ses vieilles vignes en gobelet, franches de pied et souvent centenaires, plongent leurs racines dans les sols de lave et de sable noir. Graci les vinifie avec une grande retenue, cherchant à révéler le lieu plutôt qu'à imprimer un style, dans des cuvées d'une pureté cristalline. La Quota 600, issue du versant sud, a montré que ce côté encore méconnu du volcan pouvait donner des vins d'une élégance saisissante. Servis sur des viandes blanches, des volailles ou des champignons, les rouges de Graci séduisent par leur finesse et leur fraîcheur, et vieillissent remarquablement. Le domaine s'est aussi engagé dans la préservation des vieilles parcelles et la défense de l'identité de l'Etna. En une vingtaine d'années, Alberto Graci s'est imposé comme l'une des consciences et l'un des plus grands talents du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Arcurìa",
+        "Quota 600",
+        "Barbabecchi",
+        "Etna Bianco Arcurìa"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "elegance",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|decanter"
+    },
+    {
+      "id": "it-sicilia-prod-cos",
+      "nom": "COS",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Vittoria",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Frappato",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerasuolo di Vittoria DOCG",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vittoria, dans le sud-est de la Sicile, COS est le pionnier du vin nature de l'île et l'un des domaines les plus influents d'Italie. Fondé en 1980 dans un garage par trois amis (dont l'initiale des noms forme le sigle COS), il est aujourd'hui mené par Giambattista Cilia et Giusto Occhipinti, apôtres d'une viticulture biodynamique et de vinifications à intervention minimale.\n\nCOS est la référence du Cerasuolo di Vittoria, unique DOCG de Sicile, assemblage de Nero d'Avola et de Frappato. Le domaine a remis à l'honneur la vinification en amphore (les jarres enterrées « Pithos »), qui donne des rouges et des blancs d'une pureté et d'une énergie remarquables. Le Pithos Rosso, le Cerasuolo di Vittoria Classico et les Frappato en pureté sont devenus des classiques du vin nature, salués dans le monde entier. Le style, tout en fraîcheur, digestibilité et transparence du fruit, tranche avec les rouges siciliens puissants d'autrefois. L'engagement écologique et artisanal irrigue toute la démarche.\n\nPionnier et référence mondiale du vin nature, COS a prouvé qu'un rouge sicilien pouvait être léger, précis et profondément digeste. Le domaine demeure l'un des plus admirés d'Italie et l'âme du renouveau de Vittoria.\n\nL'aventure de COS a commencé comme un pari d'étudiants et est devenue l'un des projets les plus influents du vin italien. Giusto Occhipinti, architecte de formation, a appliqué au vin une pensée du lieu et de la matière : c'est lui qui a introduit, dès 2000, les amphores en terre cuite (Pithos) inspirées des jarres antiques, pour des fermentations et des élevages sans bois ni artifice. Le résultat est un Cerasuolo di Vittoria d'une pureté et d'une énergie qui ont redéfini l'appellation. Le domaine, en biodynamie certifiée, cultive le Nero d'Avola et le Frappato sur les sols sableux et calcaires de Vittoria, ainsi que le Grillo en blanc. Servis légèrement rafraîchis sur des charcuteries, des poissons ou la cuisine sicilienne, les vins de COS séduisent par leur fraîcheur et leur digestibilité. Leur influence dépasse largement la Sicile : ils ont inspiré tout un mouvement de retour à des vins vivants et de terroir en Italie. Référence absolue du vin nature, COS demeure fidèle à sa philosophie artisanale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pithos Rosso",
+        "Cerasuolo di Vittoria Classico",
+        "Frappato",
+        "Pithos Bianco"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "cerasuolo",
+        "frappato",
+        "amphore",
+        "nature",
+        "biodynamie"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|decanter"
+    },
+    {
+      "id": "it-sicilia-prod-arianna-occhipinti",
+      "nom": "Arianna Occhipinti",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Vittoria",
+      "pays": "Italie",
+      "cepages": [
+        "Frappato",
+        "Nero d'Avola",
+        "Albanello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerasuolo di Vittoria DOCG",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vittoria, dans le sud-est de la Sicile, Arianna Occhipinti est devenue, en une quinzaine d'années, l'une des figures les plus emblématiques du vin nature dans le monde. Nièce de Giusto Occhipinti (COS), elle a fondé son domaine à seulement 22 ans, en 2004, avec une poignée d'hectares et une conviction : faire des vins vivants, authentiques et ancrés dans son terroir.\n\nEn biodynamie et avec un minimum d'intervention (levures indigènes, peu ou pas de soufre), elle signe l'un des Frappato les plus gracieux de Sicile : un rouge léger, floral et vibrant, devenu une référence. Sa gamme va de l'accessible et populaire SP68 (rouge et blanc) aux cuvées parcellaires ambitieuses comme le Grotte Alte (Cerasuolo di Vittoria de garde) et les Contrade en Nero d'Avola (Siccagno). Le style, tout en énergie, fraîcheur et pureté du fruit, a fait école auprès de toute une génération. Le travail des sols calcaro-sableux de Vittoria et la défense des vieilles vignes sont au cœur de sa démarche.\n\nIcône internationale du vin nature, Arianna Occhipinti a porté le Frappato et Vittoria sur le devant de la scène mondiale. Ses vins, polarisants mais d'une vitalité rare, comptent parmi les plus recherchés d'Italie et incarnent une nouvelle Sicile, jeune et libre.\n\nLe parcours d'Arianna Occhipinti est devenu une légende du vin contemporain : partie de rien, sinon d'une passion héritée de son oncle et d'un refus des conventions, elle a bâti en moins de vingt ans un domaine mondialement admiré et un modèle pour toute une génération de vigneronnes et de vignerons. Sa philosophie — biodynamie, vieilles vignes, levures indigènes, soufre minimal, expression du contrada — s'accompagne d'un discours engagé sur l'agriculture et le territoire, qu'elle défend dans ses écrits et ses prises de position. Ses cuvées parcellaires (Grotte Alte, les Contrade de Nero d'Avola) montrent que le vin nature peut viser la profondeur et la garde, tandis que le SP68 est devenu un vin de bistrot culte dans le monde entier. Servis frais sur la cuisine méditerranéenne, des charcuteries aux poissons, ses vins séduisent par leur vitalité. Elle a aussi contribué à faire de Vittoria un nom qui compte sur la carte du vin mondial. Icône générationnelle, Arianna Occhipinti incarne une Sicile libre, authentique et tournée vers l'avenir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Frappato",
+        "SP68",
+        "Grotte Alte",
+        "Siccagno"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "frappato",
+        "nature",
+        "biodynamie",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|grapeguru"
+    },
+    {
+      "id": "it-sicilia-prod-marco-de-bartoli",
+      "nom": "Marco De Bartoli",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Grillo",
+        "Zibibbo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Ambré"
+      ],
+      "appellations_lieux_dits": [
+        "Marsala DOC",
+        "Terre Siciliane IGT",
+        "Passito di Pantelleria DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, sur la côte ouest de la Sicile, Marco De Bartoli est le gardien légendaire du vrai Marsala et l'un des plus grands noms du vin sicilien. Marco De Bartoli, disparu en 2011 et dont les enfants perpétuent l'œuvre, a consacré sa vie à réhabiliter ce vin fortifié tombé dans l'oubli commercial, et à révéler le potentiel du cépage Grillo.\n\nSon chef-d'œuvre est le Vecchio Samperi, un vin non fortifié élaboré selon la méthode solera (perpetuo), vieilli de longues années : un nectar sec, oxydatif et d'une complexité vertigineuse, cousin du Xérès amontillado, hors de toute appellation par refus des compromis. Le domaine produit aussi de grands Marsala Superiore et Vergine, des Grillo secs et minéraux (Grappoli del Grillo), et, sur l'île de Pantelleria, le sublime passito Bukkuram. Le style De Bartoli, exigeant et sans concession, cultive l'authenticité et le respect de la tradition, à contre-courant de la production industrielle de Marsala.\n\nIcône du vin sicilien, Marco De Bartoli a sauvé l'honneur du Marsala et hissé le Grillo au rang de grand cépage. Ses vins, rares et profonds, sont des monuments du patrimoine viticole italien et une référence pour tous les amateurs de vins oxydatifs.\n\nMarco De Bartoli fut un rebelle magnifique : à une époque où le Marsala n'était plus qu'un vin de cuisine industriel, il a voulu prouver qu'il pouvait être un grand vin de méditation, digne des plus nobles vins oxydatifs du monde. Son Vecchio Samperi, élaboré sans fortification par la méthode du perpetuo (une solera où de vieux millésimes rafraîchissent les plus anciens), est le manifeste de cette conviction, salué par les plus grands critiques. Cette intransigeance lui a valu des démêlés avec l'administration et l'appellation, qu'il a affrontés sans céder. Le domaine défend aussi le Grillo, cépage blanc du Marsala, en versions sèches et minérales, et produit à Pantelleria le Bukkuram, passito de Zibibbo d'anthologie. Servis sur des fromages affinés, des fruits secs, une cuisine relevée ou en méditation, les vins de De Bartoli déploient une complexité rare. Depuis la disparition de Marco en 2011, ses enfants Renato, Sebastiano et Giuseppina perpétuent son œuvre avec la même exigence. Le domaine reste le gardien de l'âme du Marsala et une référence pour tous les amateurs de grands vins oxydatifs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vecchio Samperi",
+        "Marsala Superiore Riserva",
+        "Grappoli del Grillo",
+        "Bukkuram"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "grillo",
+        "solera",
+        "pantelleria",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-donnafugata",
+      "nom": "Donnafugata",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Zibibbo",
+        "Grillo",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Passito di Pantelleria DOC",
+        "Contessa Entellina DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, Donnafugata est l'une des maisons phares de la révolution qualitative sicilienne. Née dans les années 1980 de la reconversion de la famille Rallo, longtemps productrice de Marsala, elle tire son nom (« la femme en fuite ») du roman Le Guépard. Présente sur plusieurs terroirs — Marsala, Contessa Entellina, Pantelleria, l'Etna —, elle allie qualité, image soignée et engagement durable.\n\nSes vins sont devenus des classiques : le Ben Ryé, passito de Pantelleria issu de Zibibbo séché au soleil, est l'un des plus grands vins doux d'Italie, d'une intensité et d'une fraîcheur remarquables ; le Mille e una Notte (Nero d'Avola) est un grand rouge de Contessa Entellina. La maison décline aussi des blancs frais et populaires (Anthilia, Lighea) et s'est implantée sur l'Etna. Le soin apporté à la communication, au design des étiquettes et à la durabilité a fait de Donnafugata une marque de référence, servie sur des desserts et fromages pour les doux, sur des viandes pour les rouges.\n\nGrande maison de la Sicile moderne, Donnafugata a porté le vin de l'île sur la scène internationale, du Ben Ryé de Pantelleria aux rouges de l'ouest. C'est l'un des noms les plus reconnus et les plus réguliers du vin sicilien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ben Ryé",
+        "Mille e una Notte",
+        "Tancredi",
+        "Lighea"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "pantelleria",
+        "nero-davola",
+        "ben-rye",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-tasca-dalmerita",
+      "nom": "Tasca d'Almerita",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Sicilia centrale",
+      "commune": "Sclafani Bagni",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Chardonnay",
+        "Carricante",
+        "Nerello Mascalese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Contea di Sclafani DOC",
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sclafani Bagni, au cœur de la Sicile, Tasca d'Almerita est l'une des plus grandes familles historiques du vin italien, présente depuis huit générations et plus de deux siècles. Autour du domaine ancestral de Regaleali, la maison a joué un rôle majeur dans la modernisation du vin sicilien.\n\nLe vaste domaine de Regaleali, en altitude au centre de l'île, est le berceau du Rosso del Conte, l'un des premiers grands rouges siciliens de garde (à dominante Nero d'Avola), et du Nozze d'Oro (blanc). La famille a essaimé sur cinq terroirs : Tenuta Tascante sur l'Etna (Nerello de contrade), Capofaro sur l'île de Salina (Malvasia), Whitaker sur l'île de Mozia (Grillo) et Sallier de La Tour. Cette diversité, conjuguée à un engagement pionnier pour la durabilité (protocole SOStain), fait de Tasca un acteur complet et exemplaire. Le style, classique et raffiné, conjugue cépages autochtones et savoir-faire éprouvé.\n\nPilier historique du vin sicilien, Tasca d'Almerita a porté l'image de l'île à l'international tout en préservant son patrimoine. Du Rosso del Conte aux vins insulaires, la maison demeure une référence incontournable et l'un des grands noms du vin italien.\n\nL'histoire de Tasca d'Almerita se confond avec celle du vin sicilien moderne. Dès les années 1970, alors que l'île était synonyme de vin en vrac, la famille a misé sur la qualité et expérimenté avec des cépages internationaux, tout en préservant le patrimoine autochtone. Le domaine de Regaleali, immense propriété d'altitude au centre de la Sicile, en est le cœur historique : c'est là qu'est né le Rosso del Conte, l'un des premiers rouges siciliens conçus comme un grand vin de garde. La famille a ensuite essaimé sur des terroirs insulaires et volcaniques, faisant de la maison un véritable panorama de la Sicile viticole, de l'Etna aux îles Éoliennes. Son engagement pour la durabilité, à travers la fondation SOStain, en fait un modèle environnemental sur l'île. Servis sur des viandes, des poissons ou des fromages selon les cuvées, les vins de Tasca conjuguent classicisme et raffinement. Comptant parmi les plus anciennes familles vigneronnes d'Italie, Tasca d'Almerita demeure un repère de constance et de qualité, et un ambassadeur de premier plan du vin sicilien dans le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rosso del Conte",
+        "Nozze d'Oro",
+        "Tenuta Tascante (Etna)",
+        "Cygnus"
+      ],
+      "tags": [
+        "sicilia",
+        "regaleali",
+        "nero-davola",
+        "historique",
+        "multi-site",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "foodandwinegazette|grapeguru"
+    },
+    {
+      "id": "it-sicilia-prod-planeta",
+      "nom": "Planeta",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Menfi",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Nero d'Avola",
+        "Carricante",
+        "Grillo",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Cerasuolo di Vittoria DOCG",
+        "Etna DOC",
+        "Noto DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Planeta est l'un des domaines les plus ambitieux et les plus emblématiques de la Sicile moderne. Fondée commercialement en 1995 par une famille présente sur l'île depuis dix-sept générations, la maison a joué un rôle décisif dans la révolution qualitative sicilienne, avant de partir à la conquête des terroirs de toute l'île.\n\nDepuis sa base de Menfi (sud-ouest), Planeta s'est implantée sur six terroirs, chacun dédié aux cépages qui y réussissent le mieux : Chardonnay et Fiano (Cometa) à Menfi, Nero d'Avola à Noto (Santa Cecilia), Cerasuolo à Vittoria, Nerello sur l'Etna (Eruzione 1614), jusqu'au Capo Milazzo. Le Chardonnay de Planeta fut l'un des vins qui firent connaître la Sicile au monde, tandis que la Cometa (Fiano) et le Santa Cecilia sont devenus des références. Cette approche, alliant cépages internationaux et autochtones, s'accompagne d'un fort engagement environnemental et œnotouristique. La régularité et la diversité de la gamme, de l'accessible La Segreta aux cuvées de terroir, font la force de la maison.\n\nAmbassadeur majeur du vin sicilien, Planeta a fait connaître l'île sur toutes les tables du monde tout en explorant la richesse de ses terroirs. C'est l'un des domaines les plus complets et les plus influents de Sicile.\n\nL'ascension de Planeta a accompagné et symbolisé la renaissance du vin sicilien. Dans les années 1990, alors que l'île peinait à se défaire de son image de région à vin de masse, la famille — en particulier Diego Planeta, longtemps à la tête de la grande coopérative Settesoli — a parié sur la qualité et l'ouverture, avec des Chardonnay et des Syrah qui ont impressionné la critique internationale. Puis Planeta a entrepris de cartographier les terroirs de l'île, plantant chaque cépage là où il s'exprime le mieux, des collines de Menfi aux pentes de l'Etna. Cette démarche a fait connaître au monde des cépages autochtones comme le Fiano (Cometa) ou le Nero d'Avola de Noto (Santa Cecilia). Servis sur une cuisine variée, des poissons aux viandes, les vins de Planeta séduisent par leur régularité et leur précision. Le domaine s'est aussi imposé comme un acteur culturel et œnotouristique majeur, ouvrant ses caves aux visiteurs. Ambassadeur infatigable de la Sicile, Planeta reste l'un des domaines les plus complets et les plus dynamiques de l'île.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chardonnay",
+        "Santa Cecilia",
+        "Cometa",
+        "Etna Eruzione 1614"
+      ],
+      "tags": [
+        "sicilia",
+        "menfi",
+        "chardonnay",
+        "nero-davola",
+        "multi-site",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|foodandwinegazette"
+    },
+    {
+      "id": "it-sicilia-prod-palari",
+      "nom": "Palari",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Faro (Messina)",
+      "commune": "Santo Stefano Briga",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Nocera"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Faro DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Santo Stefano Briga, sur les collines dominant Messine, Palari est le domaine qui a sauvé et incarné le Faro, appellation autrefois moribonde de la pointe nord-est de la Sicile. L'architecte Salvatore Geraci, encouragé par le critique Luigi Veronelli, a replanté les vignes escarpées de sa famille à la fin des années 1980 pour ressusciter ce vin oublié.\n\nLe Faro Palari, assemblage de Nerello Mascalese, Nerello Cappuccio et Nocera (et de cépages locaux plus rares), est un rouge d'une finesse et d'une complexité remarquables, souvent comparé aux grands vins de Bourgogne : parfumé, minéral et d'une grande élégance. Le Rosso del Soprano, cuvée plus accessible, en partage l'esprit. Les vignes, perchées sur des pentes vertigineuses face au détroit de Messine, bénéficient d'un terroir unique de sols meubles et d'influence maritime. La production, confidentielle, est très recherchée. À force de rigueur, Geraci a fait du Faro une appellation de nouveau respectée.\n\nSauveur et icône du Faro, Palari a démontré qu'un grand rouge d'élégance pouvait naître aux portes de Messine. Ses vins, rares et raffinés, comptent parmi les plus admirés de Sicile et ont ressuscité une appellation entière.\n\nL'histoire de Palari est celle d'une résurrection. Dans les années 1980, l'appellation Faro, à la pointe nord-est de la Sicile, ne comptait pratiquement plus de producteurs et menaçait de disparaître. Salvatore Geraci, architecte messinois passionné, décida de replanter les vignes escarpées de sa famille et fut encouragé par le grand critique Luigi Veronelli, qui pressentait le potentiel du lieu. Le résultat dépassa les espérances : le Faro Palari, assemblage complexe de Nerello Mascalese, Nerello Cappuccio, Nocera et de cépages locaux, se révéla un rouge d'une finesse et d'un parfum dignes des plus grands. Les vignes, accrochées à des pentes vertigineuses face au détroit de Messine, bénéficient d'un terroir singulier de sols meubles et de brises marines. Servis sur des viandes, du gibier à plume ou des fromages, les vins de Palari séduisent par leur élégance et leur complexité, et vieillissent avec grâce. La production, minuscule, en fait des bouteilles recherchées. En sauvant le Faro, Geraci a non seulement ressuscité une appellation, mais aussi prouvé que Messine pouvait produire l'un des plus beaux rouges de Sicile.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Faro Palari",
+        "Rosso del Soprano",
+        "Santa Nè"
+      ],
+      "tags": [
+        "sicilia",
+        "faro",
+        "messina",
+        "nerello",
+        "geraci",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "utejunker|timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-pietradolce",
+      "nom": "Pietradolce",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le versant nord de l'Etna, Pietradolce est un domaine acclamé de la nouvelle génération. La famille Faro y cultive de vieilles vignes de Nerello Mascalese, dont certaines centenaires et franches de pied, avec une exigence qui l'a rapidement hissée parmi les références du volcan.\n\nSon joyau est le Barbagalli, issu d'une parcelle de vignes prephylloxera de la Contrada Rampante : l'un des plus grands rouges de l'Etna, d'une finesse et d'une profondeur remarquables. L'Archineri (rouge et Carricante blanc) et les cuvées de contrada confirment la maîtrise du domaine, tant sur le Nerello que sur le Carricante. Le style, précis et minéral, mise sur l'élégance et la fraîcheur volcanique. L'architecture contemporaine de la cave témoigne de l'ambition maison.\n\nRéférence du versant nord de l'Etna, Pietradolce signe des Nerello et des Carricante d'une grande finesse, dont le Barbagalli compte parmi les sommets du volcan. C'est l'un des domaines les plus admirés de la nouvelle Sicile.\n\nLa cave de Pietradolce, à l'architecture contemporaine et ornée d'œuvres d'art, illustre l'ambition esthétique du domaine. Les vieilles vignes de la Contrada Rampante, dont certaines ont survécu au phylloxéra, sont un trésor que la famille Faro exploite avec un soin extrême. Servis sur des viandes blanches, des champignons ou des fromages pour les rouges, sur des poissons pour le Carricante, les vins séduisent par leur minéralité volcanique et leur allonge. Le Barbagalli, produit en petites quantités, s'est imposé parmi les cuvées les plus recherchées de l'Etna, confirmant à chaque millésime le rang du domaine parmi l'élite du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Barbagalli",
+        "Archineri Rosso",
+        "Archineri Etna Bianco",
+        "Vigna Barbagalli"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "carricante",
+        "contrade"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-girolamo-russo",
+      "nom": "Girolamo Russo",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le versant nord de l'Etna, Giuseppe Russo — surnommé Girolamo, du prénom de son père — a quitté une carrière de pianiste pour reprendre le domaine familial en 2005. Il en a fait, en quelques millésimes, l'une des références du volcan.\n\nEn biologique, il vinifie séparément plusieurs contrade (San Lorenzo, Feudo, Calderara Sottana) dont les vieilles vignes de Nerello Mascalese donnent des rouges parfumés, floraux et minéraux, d'une grande élégance. La cuvée d'assemblage 'a Rina offre une belle porte d'entrée, tandis que les crus révèlent les nuances de chaque terroir de lave. Le domaine excelle aussi sur le Carricante. Le style Russo, tout en finesse et en fraîcheur, s'inscrit dans la mouvance bourguignonne de l'Etna.\n\nFigure du renouveau de l'Etna, Girolamo Russo signe des Nerello de contrada d'une grande pureté, au potentiel de garde. C'est l'un des domaines les plus recherchés et les plus réguliers du versant nord du volcan.\n\nAncien pianiste, Giuseppe Russo aborde le vin avec la sensibilité d'un musicien, cherchant l'harmonie et la nuance dans chacune de ses contrade. Le nom des cuvées — San Lorenzo, Feudo — renvoie à autant de lieux-dits dont les sols de lave et l'altitude signent des profils distincts. Servis sur des volailles, du gibier à plume ou des champignons, ses Nerello parfumés révèlent la finesse du versant nord et se patinent avec grâce sur une décennie. Le travail biologique et le respect des vieilles vignes ancrent la démarche dans le terroir. En quelques années, Russo est passé du statut de nouveau venu à celui de valeur sûre de l'Etna.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "San Lorenzo",
+        "Feudo",
+        "'a Rina",
+        "Calderara Sottana"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "contrade",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-frank-cornelissen",
+      "nom": "Frank Cornelissen",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre Siciliane IGT",
+        "Etna DOC"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le haut versant nord de l'Etna, Frank Cornelissen est l'un des vignerons les plus radicaux et les plus cultes du vin nature dans le monde. Ce Belge, ancien négociant et alpiniste, s'est installé sur le volcan en 2001 avec une conviction absolue : intervenir le moins possible, à la vigne comme en cave, pour laisser le terroir volcanique s'exprimer sans filtre.\n\nSur des parcelles de vieilles vignes franches de pied, souvent centenaires et conduites en alberello, perchées en altitude sur les sols de lave, Cornelissen cultive le Nerello Mascalese sans aucun traitement de synthèse et vinifie sans soufre ajouté, sans bois, longtemps en jarres enterrées. Sa cuvée mythique, le Magma, issue de la contrada Barbabecchi à plus de 900 mètres, est l'un des vins les plus rares et les plus recherchés d'Italie ; les MunJebel, assemblages de contrade et de millésimes, et le pétillant Susucaru complètent une gamme entièrement pensée autour de la pureté et de l'énergie. Ces vins vivants, parfois déroutants, ont profondément marqué le mouvement nature international. Au fil des années, Cornelissen a affiné son approche, gagnant en précision sans rien renier de sa philosophie. Servis sur une cuisine de caractère, ses Nerello expriment une facette brute et minérale du volcan.\n\nFigure radicale et adulée du vin nature, Frank Cornelissen a fait de l'Etna un laboratoire de la non-intervention et signe des Nerello d'une intensité unique. Ses vins, confidentiels et convoités, comptent parmi les plus fascinants de Sicile et ont inspiré des vignerons du monde entier.\n\nL'Etna a offert à Cornelissen un terrain d'expression idéal : ses sols de lave, sa haute altitude et ses vieilles vignes prephylloxera permettent une viticulture extrême, où la pureté du fruit et la minéralité volcanique priment sur toute technique. Installé au cœur du versant nord, il fut, avec quelques autres, l'un des étrangers séduits par le volcan qui ont contribué à sa renommée mondiale. Servis frais sur une cuisine franche — charcuteries, viandes grillées, plats mijotés —, ses vins déroutent puis fascinent par leur énergie brute et leur salinité. Objets de quête pour les amateurs, le Magma et les MunJebel s'échangent à prix d'or et figurent sur les plus grandes cartes de vin nature de la planète. En deux décennies, Frank Cornelissen est passé du statut de marginal à celui de maître révéré, sans jamais renier la radicalité qui fait sa singularité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Magma",
+        "MunJebel Rosso",
+        "Susucaru",
+        "Barbabecchi"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "nature",
+        "culte",
+        "cornelissen"
+      ],
+      "a_verifier": null,
+      "source": "decanter|grapeguru"
+    },
+    {
+      "id": "it-sicilia-prod-i-vigneri-salvo-foti",
+      "nom": "I Vigneri (Salvo Foti)",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Milo",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur l'Etna, Salvo Foti est une figure tutélaire, gardien de la mémoire et des traditions du volcan. Œnologue emblématique (longtemps aux côtés de Benanti), il a fondé la coopérative de vignerons I Vigneri, du nom de l'antique maestranza des vignerons de l'Etna, pour perpétuer les savoir-faire ancestraux.\n\nFoti défend l'alberello etnéen, les vieilles vignes franches de pied, la vinification en palmento et les cépages historiques. Sa cuvée Vinupetra, issue de vieilles vignes de Nerello, est un rouge profond et authentique, tandis que le Vinujancu (Carricante) exprime la minéralité du volcan. En biologique, dans un profond respect du lieu et des hommes, il signe des vins d'une grande sincérité. Son influence, à travers ses écrits et son enseignement, dépasse largement son propre domaine.\n\nGardien des traditions de l'Etna, Salvo Foti signe avec I Vigneri des vins authentiques et enracinés dans l'histoire du volcan. C'est l'une des consciences et l'une des figures les plus respectées de la Sicile viticole.\n\nAu-delà de ses propres cuvées, Salvo Foti a joué un rôle majeur dans la transmission des savoir-faire de l'Etna, formant des vignerons et défendant la dignité des hommes de la vigne à travers la maestranza I Vigneri. Sa vision, profondément humaniste et écologique, fait de lui une conscience du volcan. Servis sur des viandes, des champignons ou des fromages pour les rouges, sur des poissons pour le Vinujancu, ses vins expriment une Etna authentique, enracinée dans l'histoire. Le Vinupetra, issu de vieilles vignes en alberello, en est le manifeste. Foti demeure une figure incontournable et respectée de la Sicile viticole.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vinupetra",
+        "Vinujancu",
+        "Aurora",
+        "Palmento Caselle"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "foti",
+        "alberello",
+        "tradition",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-cottanera",
+      "nom": "Cottanera",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le versant nord-est de l'Etna, Cottanera est un domaine familial qui a accompagné le renouveau du volcan. La famille Cambria y cultive un vaste vignoble en altitude, autour de la Contrada Iannazzo, avec une gamme étoffée et régulière.\n\nLe domaine décline plusieurs contrade (Zottorinoto, Feudo di Mezzo, Diciassettesalme) en Nerello Mascalese, ainsi que des cuvées d'assemblage élégantes comme le Fatagione. Il travaille aussi le Carricante en blanc et a expérimenté des cépages internationaux à ses débuts. Le style, fin et parfumé, exprime la minéralité et la fraîcheur de l'Etna, dans des vins accessibles comme dans des crus plus ambitieux. La régularité de la production en fait une valeur sûre.\n\nValeur sûre du versant nord de l'Etna, Cottanera signe des Nerello de contrada élégants et une gamme cohérente. C'est l'un des domaines familiaux les plus fiables du volcan.\n\nSur le versant nord-est, un peu à l'écart des contrade les plus courues, Cottanera a su bâtir une identité propre autour d'un vaste vignoble familial. La régularité de sa production, du vin accessible au cru ambitieux, en fait un ambassadeur fiable de l'Etna. Servis sur des viandes, des pâtes aux champignons ou des fromages, les Nerello de contrada du domaine séduisent par leur parfum et leur fraîcheur. Le travail sur le Carricante confirme la polyvalence de la maison, qui figure parmi les valeurs constantes du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fatagione",
+        "Contrada Zottorinoto",
+        "Contrada Feudo di Mezzo",
+        "Diciassettesalme"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "contrade",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-tenuta-di-fessina",
+      "nom": "Tenuta di Fessina",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rovittello, sur le versant nord de l'Etna, Tenuta di Fessina est un domaine réputé fondé par Silvia Maestrelli. Autour d'un ancien palmento restauré, il cultive de vieilles vignes de Nerello Mascalese et de Carricante avec une recherche d'élégance.\n\nLe Musmeci, issu de vieilles vignes, est la cuvée-phare du domaine : un Nerello profond et raffiné, l'une des belles expressions du volcan. L'A' Puddara (Carricante) est un blanc etnéen minéral et tendu, et l'Erse décline le Nerello de manière plus accessible. Le style, précis et fin, s'inscrit dans la mouvance des grands Etna de terroir. Le domaine soigne aussi un rosato apprécié.\n\nBelle référence du versant nord, Tenuta di Fessina signe des Nerello et des Carricante élégants, dont le Musmeci illustre la finesse. C'est l'un des domaines réputés du renouveau de l'Etna.\n\nSilvia Maestrelli, également active en Toscane, a fait de Tenuta di Fessina un domaine d'élégance sur le versant nord de l'Etna. La restauration de l'ancien palmento et le respect des vieilles vignes témoignent d'un attachement au patrimoine du volcan. Servis sur des viandes blanches ou des champignons pour les rouges, sur des poissons pour l'A' Puddara, les vins séduisent par leur finesse minérale. Le Musmeci, issu des plus vieilles parcelles, s'impose comme l'une des belles cuvées de contrada de l'Etna, confirmant la place du domaine parmi les références du renouveau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Musmeci",
+        "Erse",
+        "A' Puddara",
+        "Il Musmeci Rosato"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "carricante"
+      ],
+      "a_verifier": null,
+      "source": "thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-calabretta",
+      "nom": "Calabretta",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Randazzo",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Randazzo, sur le versant nord de l'Etna, Calabretta est le gardien d'un style traditionaliste et intransigeant. La famille Calabretta, en biologique, y cultive de vieilles vignes de Nerello Mascalese et signe des vins à contre-courant des modes.\n\nSes Nerello Mascalese Vigne Vecchie, issus de ceps souvent centenaires, sont élevés longuement et commercialisés après plusieurs années de cave, dans un style classique, austère et taillé pour la garde. Loin des Etna immédiatement séduisants, ces rouges profonds et tanniques révèlent tout leur potentiel avec le temps, à la manière des grands vins de tradition. Le domaine défend une vision patiente et authentique du volcan.\n\nTraditionaliste et fidèle à ses vieilles vignes, Calabretta signe des Nerello de longue garde d'un classicisme rare sur l'Etna. C'est l'un des domaines les plus attachants et les plus singuliers du volcan.\n\nÀ rebours des Etna séduisants dès leur jeunesse, Calabretta cultive la patience : ses Nerello sont élevés de longues années et ne sortent qu'à maturité, dans un style tannique et austère qui rappelle les grands vins de garde d'autrefois. Cette approche, longtemps à contre-courant, séduit aujourd'hui les amateurs en quête d'authenticité et de vins de terroir non maquillés. Servis sur des viandes rouges, du gibier ou des fromages affinés, ces rouges profonds révèlent leur complexité après des années de cave. Le travail biologique et le classicisme assumé font de Calabretta l'un des domaines les plus singuliers et attachants du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Nerello Mascalese Vigne Vecchie",
+        "Calabretta Rosso",
+        "Gaio Gaio"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "vieilles-vignes",
+        "tradition",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-palmento-costanzo",
+      "nom": "Palmento Costanzo",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le versant nord de l'Etna, Palmento Costanzo est un domaine soigné bâti autour d'un palmento (cave à pressoir traditionnel) restauré. La famille Costanzo y cultive de vieilles vignes en altitude, dans la Contrada Santo Spirito.\n\nLe domaine signe des Nerello Mascalese de contrada, dont la cuvée Prefillossera issue de vignes franches de pied, ainsi que la gamme accessible Mofete et un bon Carricante (Bianco di Sei). Le style, précis et frais, exprime la minéralité volcanique dans des vins bien construits. La restauration du palmento témoigne d'un attachement au patrimoine de l'Etna.\n\nBonne référence du versant nord, Palmento Costanzo signe des Nerello de contrada et des Carricante soignés, dans le respect de la tradition du volcan.\n\nLa restauration du palmento traditionnel, cœur historique de la vinification etnéenne, illustre l'attachement du domaine au patrimoine du volcan. Sur la Contrada Santo Spirito, les vieilles vignes franches de pied donnent des Nerello d'une belle minéralité. Servis sur des viandes blanches, des champignons ou des fromages, les rouges de Palmento Costanzo séduisent par leur fraîcheur, tandis que le Carricante apporte tension et salinité. La régularité de la gamme, de l'accessible Mofete aux cuvées de contrada, confirme le sérieux d'un domaine bien installé parmi les bonnes adresses du versant nord.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Contrada Santo Spirito",
+        "Mofete",
+        "Prefillossera",
+        "Bianco di Sei"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "contrade",
+        "palmento"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-gulfi",
+      "nom": "Gulfi",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Chiaramonte Gulfi",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Nerello Mascalese",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Cerasuolo di Vittoria DOCG",
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Chiaramonte Gulfi, dans le sud-est de la Sicile, Gulfi est une référence du Nero d'Avola de terroir. Le domaine, en biologique, a bâti sa réputation sur une approche parcellaire rare pour ce cépage, dans la région de Pachino, berceau historique du Nero d'Avola.\n\nGulfi vinifie séparément plusieurs crus — NeroBufaleffj, NeroMàccarj, NeroSanlorè — issus de vieilles vignes en alberello, révélant les nuances de chaque terroir : des Nero d'Avola profonds, structurés et de garde, à mille lieues des versions industrielles du cépage. Le domaine s'est aussi implanté sur l'Etna (Reseca). Le style, ambitieux et fidèle au lieu, a redonné ses lettres de noblesse au Nero d'Avola. La démarche biologique et le respect des vieilles vignes sont au cœur du projet.\n\nRéférence du Nero d'Avola de cru, Gulfi a prouvé que ce cépage pouvait donner de grands rouges de terroir. C'est l'un des domaines les plus sérieux du sud-est sicilien.\n\nLe travail de Gulfi a été décisif pour réhabiliter le Nero d'Avola, longtemps galvaudé par la production de masse. En vinifiant séparément les crus de Pachino, sur de vieilles vignes en alberello, le domaine a révélé que ce cépage pouvait donner des rouges de terroir, profonds et de garde. Servis sur des viandes rouges, du gibier ou des fromages, les Nero d'Avola de contrada de Gulfi expriment chacun une nuance du sud-est sicilien. L'engagement biologique et la présence sur l'Etna élargissent encore la démarche. Gulfi s'impose comme l'un des domaines les plus sérieux et les plus cohérents de l'île.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "NeroBufaleffj",
+        "NeroMàccarj",
+        "NeroSanlorè",
+        "Reseca (Etna)"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "nero-davola",
+        "cru",
+        "pachino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-valle-dellacate",
+      "nom": "Valle dell'Acate",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Acate",
+      "pays": "Italie",
+      "cepages": [
+        "Frappato",
+        "Nero d'Avola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerasuolo di Vittoria DOCG",
+        "Vittoria DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Acate, dans la région de Vittoria, Valle dell'Acate est un domaine familial de référence du Cerasuolo di Vittoria, l'unique DOCG de Sicile. La famille Jacono y perpétue une longue tradition viticole sur les sols sableux et calcaires du sud-est.\n\nLe domaine excelle sur le Frappato, cépage local qu'il décline en pureté (Il Frappato) dans un style frais, floral et gourmand, ainsi que sur le Cerasuolo di Vittoria (assemblage Nero d'Avola-Frappato). Les cuvées Tané et Il Moro témoignent d'une gamme soignée. Le style, tout en fraîcheur et en fruit, illustre l'élégance retrouvée des vins de Vittoria. Le travail des cépages autochtones est au cœur de l'identité maison.\n\nRéférence familiale du Cerasuolo di Vittoria, Valle dell'Acate signe des Frappato et des Cerasuolo frais et élégants. C'est l'un des piliers de l'appellation.\n\nSur les terres de la vallée de l'Acate, la famille Jacono perpétue une tradition viticole séculaire tout en modernisant son approche. Le Frappato, cépage fragile et parfumé longtemps sous-estimé, y trouve une expression de référence, fraîche et florale. Servis légèrement rafraîchis sur des charcuteries, des poissons ou la cuisine sicilienne, les vins du domaine séduisent par leur digestibilité et leur fruit. Le Cerasuolo di Vittoria, seule DOCG de l'île, y est travaillé avec soin. Valle dell'Acate demeure l'un des piliers historiques et fiables de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Frappato",
+        "Cerasuolo di Vittoria",
+        "Tané",
+        "Il Moro"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "cerasuolo",
+        "frappato",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-marabino",
+      "nom": "Marabino",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Noto (SE)",
+      "commune": "Noto",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Moscato Bianco",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Noto DOC",
+        "Sicilia DOC",
+        "Eloro DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Noto, dans l'extrême sud-est de la Sicile, Marabino est un domaine bio réputé pour l'élégance de ses vins. Sur les terroirs de Noto et d'Eloro, il travaille le Nero d'Avola, le Moscato et les cépages locaux avec une recherche de finesse.\n\nLe domaine signe des Nero d'Avola frais et raffinés (Archimede, cuvées de contrada), à rebours des versions lourdes du cépage, ainsi qu'un Moscato di Noto et des blancs soignés. Le style, précis et digeste, et l'engagement biologique, parfois jusqu'à des expérimentations sans soufre, situent Marabino parmi les domaines les plus intéressants du sud-est. Le travail parcellaire révèle les nuances du terroir de Noto.\n\nBelle adresse bio de Noto, Marabino signe des Nero d'Avola élégants et des blancs soignés, dans un style frais et précis. C'est l'un des domaines montants de l'extrême sud sicilien.\n\nSur les terroirs de Noto, réputés pour le Nero d'Avola et le Moscato, Marabino a fait le choix de l'élégance et de la fraîcheur, à rebours des rouges surmûris. L'engagement biologique, poussé jusqu'à des cuvées expérimentales, témoigne d'une démarche exigeante. Servis sur des viandes blanches, des poissons ou des fromages, les vins du domaine séduisent par leur précision. Le travail parcellaire révèle les nuances du terroir de l'extrême sud-est. Marabino s'impose parmi les domaines les plus intéressants et prometteurs de Noto.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Archimede Nero d'Avola",
+        "Rosso di Contrada",
+        "Moscato di Noto",
+        "Eureka"
+      ],
+      "tags": [
+        "sicilia",
+        "noto",
+        "nero-davola",
+        "moscato",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-firriato",
+      "nom": "Firriato",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Paceco",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Nerello Mascalese",
+        "Perricone"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Trapanais, à Paceco, Firriato est l'un des grands domaines de l'ouest de la Sicile, présent aussi sur l'Etna (Cavanera) et sur les îles. La maison, fondée par Salvatore Di Gaetano, a bâti une gamme étendue et une solide réputation.\n\nSon vin le plus réputé est l'Harmonium, un Nero d'Avola concentré et ambitieux, aux côtés de cuvées de l'Etna (Cavanera) et de vins des îles. Le domaine décline aussi des cépages autochtones (Perricone, Nerello) et des blancs. Le style, généreux et soigné, conjugue puissance méridionale et travail précis. La diversité des terroirs exploités témoigne de l'ambition maison.\n\nGrand domaine de l'ouest sicilien, Firriato signe avec l'Harmonium l'un des Nero d'Avola les plus réputés, et rayonne du Trapanais à l'Etna. C'est une valeur sûre de la Sicile viticole.\n\nFirriato a bâti son succès sur une double ambition : maîtriser les terroirs de l'ouest sicilien et conquérir l'Etna, où son domaine Cavanera signe des Nerello et des Carricante de belle tenue. Cette diversité, des îles au volcan, fait de la maison un acteur complet. Servis sur des viandes pour l'Harmonium, sur des poissons pour les blancs, les vins séduisent par leur générosité et leur soin. La gamme, étendue et régulière, conjugue cépages autochtones et cuvées de prestige. Firriato demeure l'un des grands domaines de la Sicile occidentale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Harmonium",
+        "Cavanera (Etna)",
+        "Ribeca",
+        "Le Sabbie dell'Etna"
+      ],
+      "tags": [
+        "sicilia",
+        "trapani",
+        "nero-davola",
+        "etna"
+      ],
+      "a_verifier": null,
+      "source": "foodandwinegazette"
+    },
+    {
+      "id": "it-sicilia-prod-cusumano",
+      "nom": "Cusumano",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Partinico",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Insolia",
+        "Nerello Mascalese",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Partinico, dans l'ouest de la Sicile, Cusumano est un domaine dynamique fondé à la fin des années 1990 par les frères Diego et Alberto Cusumano. Avec des vignes réparties sur l'île et une ligne dédiée à l'Etna (Alta Mora), il s'est imposé par un excellent rapport qualité-prix.\n\nLa gamme va des cuvées d'entrée (Insolia, Nero d'Avola, l'assemblage Benuara) aux vins de prestige Sàgana et Noà (Nero d'Avola), en passant par les Etna d'Alta Mora, salués pour leur finesse. Le style, moderne et régulier, conjugue accessibilité et ambition selon les cuvées. La montée en gamme sur l'Etna a renforcé la crédibilité qualitative de la maison.\n\nDomaine dynamique et fiable, Cusumano offre une gamme large et régulière, de l'accessible au haut de gamme, et brille aussi sur l'Etna avec Alta Mora. C'est l'une des bonnes valeurs de l'ouest sicilien.\n\nLa force de Cusumano tient à son rapport qualité-prix et à sa capacité à décliner une gamme cohérente sur toute l'île. La montée en puissance de la ligne Alta Mora, sur l'Etna, a démontré que les frères Cusumano pouvaient viser la finesse autant que le volume. Servis sur une cuisine variée, des viandes aux poissons, leurs vins séduisent par leur régularité. Les cuvées de prestige Sàgana et Noà confirment l'ambition maison. Cusumano s'est imposé, en une vingtaine d'années, comme une valeur sûre et populaire de la Sicile.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sàgana",
+        "Noà",
+        "Alta Mora (Etna)",
+        "Benuara"
+      ],
+      "tags": [
+        "sicilia",
+        "nero-davola",
+        "etna",
+        "alta-mora",
+        "rapport-qp"
+      ],
+      "a_verifier": null,
+      "source": "foodandwinegazette"
+    },
+    {
+      "id": "it-sicilia-prod-tenuta-rapitala",
+      "nom": "Tenuta Rapitalà",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Camporeale",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Camporeale, dans l'ouest de la Sicile, Tenuta Rapitalà est un grand domaine né de l'alliance d'une famille sicilienne et d'un comte français, aujourd'hui dans le giron du groupe GIV. Sur un vaste vignoble de collines, il produit une gamme étendue.\n\nLe domaine s'est fait connaître par l'Hugonis, assemblage de Nero d'Avola et de Cabernet Sauvignon, ainsi que par le Nuhar et de bons Chardonnay et Catarratto. Le style, soigné et accessible, conjugue cépages autochtones et internationaux. La régularité de la production et l'altitude des vignes signent des vins équilibrés.\n\nValeur sûre de l'ouest sicilien, Tenuta Rapitalà signe des rouges d'assemblage réputés (Hugonis) et une gamme cohérente. C'est l'un des domaines établis de Camporeale.\n\nNée de la rencontre entre la Sicile et la France, Tenuta Rapitalà a bâti sa réputation sur des assemblages mariant cépages autochtones et internationaux, à l'image de l'Hugonis. Le vaste vignoble d'altitude de Camporeale apporte fraîcheur et équilibre. Servis sur des viandes ou des fromages pour les rouges, sur des poissons pour les blancs, les vins séduisent par leur régularité et leur accessibilité. La gamme, complète, va de l'entrée aux cuvées de prestige. Rapitalà demeure l'un des domaines établis et fiables de l'ouest sicilien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Hugonis",
+        "Nuhar",
+        "Nadir",
+        "Grand Cru Chardonnay"
+      ],
+      "tags": [
+        "sicilia",
+        "camporeale",
+        "nero-davola",
+        "cabernet"
+      ],
+      "a_verifier": null,
+      "source": "foodandwinegazette"
+    },
+    {
+      "id": "it-sicilia-prod-baglio-del-cristo-di-campobello",
+      "nom": "Baglio del Cristo di Campobello",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Campobello di Licata",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Grillo",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Campobello di Licata, dans la province d'Agrigente, Baglio del Cristo di Campobello (« CdC ») est un domaine familial très bien noté du sud-ouest sicilien. La famille Bonetta y cultive un vignoble soigné sur des sols propices au Nero d'Avola et aux blancs autochtones.\n\nLe Lu Patri, Nero d'Avola de vieilles vignes, et le Lusirà comptent parmi les meilleurs rouges de la région, tandis que la gamme C'D'C' (rouge et blanc) offre un excellent rapport qualité-prix. Le style, précis et généreux, met en valeur le potentiel d'Agrigente. La régularité et la qualité de la gamme ont bâti la réputation du domaine.\n\nDomaine réputé du sud-ouest sicilien, Baglio del Cristo di Campobello signe des Nero d'Avola et des blancs soignés, dont le Lu Patri illustre l'excellence. C'est l'une des belles adresses d'Agrigente.\n\nDans la province d'Agrigente, encore peu connue pour ses grands vins, la famille Bonetta a hissé Baglio del Cristo di Campobello parmi les meilleures adresses du sud-ouest. Le soin apporté à la vigne et à la vinification se lit dans la précision des cuvées. Servis sur des viandes pour les rouges, sur des poissons pour les blancs, les vins séduisent par leur équilibre entre générosité méridionale et fraîcheur. Le Lu Patri, Nero d'Avola de vieilles vignes, en est le fleuron. Le domaine confirme, millésime après millésime, le potentiel d'Agrigente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lu Patri",
+        "Lusirà",
+        "C'D'C' Rosso",
+        "Adènzia"
+      ],
+      "tags": [
+        "sicilia",
+        "agrigento",
+        "nero-davola",
+        "grillo"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-alessandro-di-camporeale",
+      "nom": "Alessandro di Camporeale",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Camporeale",
+      "pays": "Italie",
+      "cepages": [
+        "Syrah",
+        "Catarratto",
+        "Nero d'Avola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Monreale DOC",
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Camporeale, dans l'ouest de la Sicile, Alessandro di Camporeale est un domaine familial pionnier du Syrah sur l'île. Sur les collines de la Monreale DOC, la famille Alessandro cultive ce cépage avec une réussite qui a fait école.\n\nLe Kaid, Syrah en pureté, est la cuvée-phare du domaine et l'une des références du cépage en Sicile : un rouge épicé, profond et bien équilibré. Le domaine soigne aussi le Catarratto (Donnata, Vigna di Mandranova) et le Nero d'Avola. Le style, précis et fidèle au terroir, conjugue la générosité méridionale et la fraîcheur des collines. Le travail familial et l'engagement qualitatif en font une valeur montante.\n\nPionnier du Syrah sicilien, Alessandro di Camporeale signe avec le Kaid l'une des références du cépage sur l'île, ainsi que de beaux Catarratto. C'est l'un des bons domaines familiaux de l'ouest.\n\nEn misant sur le Syrah quand ce cépage était encore rare en Sicile, la famille Alessandro a fait un pari gagnant : le Kaid s'est imposé comme l'une des références du cépage sur l'île. Les collines fraîches de Camporeale, dans la Monreale DOC, apportent équilibre et finesse. Servis sur des viandes grillées ou des fromages, les vins séduisent par leur caractère épicé et leur précision. Le travail sur le Catarratto confirme la polyvalence du domaine. Alessandro di Camporeale s'impose comme une valeur montante de l'ouest sicilien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kaid Syrah",
+        "Donnata",
+        "Vigna di Mandranova",
+        "Benedè"
+      ],
+      "tags": [
+        "sicilia",
+        "camporeale",
+        "syrah",
+        "catarratto",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-caruso-e-minini",
+      "nom": "Caruso & Minini",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Grillo",
+        "Catarratto",
+        "Perricone"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, dans l'ouest de la Sicile, Caruso & Minini est un domaine familial en biologique qui valorise les cépages autochtones du Trapanais. Né de l'alliance de deux familles, il cultive un vignoble soigné sur les terroirs de Marsala.\n\nLe domaine décline le Nero d'Avola, le Grillo, le Catarratto et le Perricone dans des cuvées parcellaires (Sachia) et la ligne Naturalmente Bio, dans un style frais et précis. Le travail biologique et le respect des variétés locales sont au cœur de la démarche. La gamme, régulière et accessible, offre un bon rapport qualité-prix.\n\nBelle adresse bio de Marsala, Caruso & Minini signe des cuvées autochtones soignées (Nero d'Avola, Grillo). C'est une valeur sûre de l'ouest sicilien.\n\nL'alliance des familles Caruso et Minini a donné naissance à un domaine bio soucieux de valoriser les cépages du Trapanais. Les cuvées parcellaires (Sachia) et la ligne Naturalmente Bio témoignent d'une démarche cohérente. Servis sur des viandes pour les rouges, sur des poissons pour le Grillo, les vins séduisent par leur fraîcheur et leur netteté. Le travail biologique et le respect des variétés locales ancrent la maison dans son terroir. Caruso & Minini demeure une belle valeur sûre de Marsala.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sachia",
+        "Naturalmente Bio",
+        "Delia Nivolelli",
+        "Terre di Giumara"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "nero-davola",
+        "grillo",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-feudo-montoni",
+      "nom": "Feudo Montoni",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Sicilia centrale",
+      "commune": "Cammarata",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Catarratto",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cammarata, sur les hauteurs du centre de la Sicile, Feudo Montoni est un domaine culte pour le Nero d'Avola. Fabio Sireci y perpétue un patrimoine exceptionnel de vieilles vignes franches de pied, en altitude et en biologique, à l'écart des modes.\n\nLe Vrucara, Nero d'Avola issu de vignes centenaires franches de pied, est considéré comme l'un des plus grands du cépage : profond, complexe et de longue garde, il exprime un terroir d'altitude unique. Le Lagnusa (Nero d'Avola) et de bons Catarratto et Grillo complètent la gamme. Le style, authentique et précis, mise sur la fraîcheur apportée par l'altitude et sur la pureté du fruit. Le domaine est un conservatoire vivant du Nero d'Avola historique.\n\nRéférence du Nero d'Avola de terroir, Feudo Montoni signe avec le Vrucara l'un des plus grands rouges de Sicile, issu de vieilles vignes d'altitude. C'est l'un des domaines les plus respectés de l'île.\n\nLe patrimoine de Feudo Montoni est unique : perché en altitude au centre de la Sicile, à l'écart de tout, le domaine a conservé un massal de Nero d'Avola de vieilles vignes franches de pied qui constitue un trésor génétique. Fabio Sireci le cultive en biologique, avec un profond respect du lieu. Servis sur des viandes rouges, du gibier ou des fromages affinés, les Nero d'Avola de Montoni révèlent une fraîcheur et une profondeur rares pour le cépage, fruit de l'altitude. Le Vrucara, issu des plus vieux ceps, s'impose comme l'un des plus grands rouges de Sicile et fait du domaine un conservatoire vivant du Nero d'Avola authentique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vrucara Nero d'Avola",
+        "Lagnusa",
+        "Catarratto Masio",
+        "Grillo della Timpa"
+      ],
+      "tags": [
+        "sicilia",
+        "cammarata",
+        "nero-davola",
+        "vrucara",
+        "altitude",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "timatkin|thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-florio",
+      "nom": "Florio",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Grillo",
+        "Inzolia",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Ambré",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Marsala DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, Florio est la grande maison historique du vin fortifié sicilien, fondée en 1833. Institution du Marsala, elle en est aujourd'hui la gardienne la plus emblématique, dans ses vastes chais en bord de mer.\n\nFlorio perpétue tous les styles de Marsala, du sec au doux, avec des cuvées de référence : le Marsala Vergine Riserva, le Targa Riserva 1840, le Terre Arse. Élaborés à partir de Grillo, Inzolia et Catarratto, ces vins oxydatifs et fortifiés, longuement vieillis en fûts, incarnent l'histoire et le savoir-faire du Marsala. La maison illustre le patrimoine de ce vin qui fit la gloire de la Sicile. On les sert sur des fromages, des desserts ou en méditation.\n\nGardienne historique du Marsala, Florio en perpétue les grands styles avec des cuvées de référence. C'est une institution du vin fortifié sicilien et un pilier du patrimoine de Marsala.\n\nLes chais historiques de Florio, en bord de mer à Marsala, abritent des trésors de vieux millésimes et témoignent de l'âge d'or du Marsala, quand ce vin s'exportait dans le monde entier. La maison perpétue ce savoir-faire séculaire de l'élevage oxydatif en fûts. Servis sur des fromages affinés, des desserts ou en méditation, les Marsala de Florio déploient une complexité de fruits secs, d'épices et de rancio. Des cuvées comme le Vergine Riserva ou le Targa Riserva 1840 comptent parmi les plus belles expressions du genre. Florio demeure l'ambassadeur historique d'un vin qui fit la gloire de la Sicile.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Marsala Vergine Riserva",
+        "Targa Riserva 1840",
+        "Terre Arse",
+        "Donna Franca"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "fortifie",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-salvatore-murana",
+      "nom": "Salvatore Murana",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Pantelleria",
+      "commune": "Pantelleria",
+      "pays": "Italie",
+      "cepages": [
+        "Zibibbo"
+      ],
+      "couleurs": [
+        "Doux",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Passito di Pantelleria DOC",
+        "Moscato di Pantelleria DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur l'île volcanique de Pantelleria, entre la Sicile et la Tunisie, Salvatore Murana est le maître incontesté du passito. Vigneron-artisan, il cultive le Zibibbo (Muscat d'Alexandrie) sur les terrasses de lave battues par les vents, dans des conditions héroïques.\n\nLe Martingana, issu d'une contrada réputée, et le Khamma sont des passiti d'anthologie : le Zibibbo, séché au soleil sur des claies, y donne des vins doux d'une concentration et d'une complexité rares — abricot, figue, miel, épices —, équilibrés par une fraîcheur saline. Murana décline aussi des versions plus légères (Turbè) et des Moscato. Le travail des vignes en gobelet enterré (l'alberello pantesco, inscrit à l'UNESCO) et le séchage traditionnel sont au cœur de son art. Sa production, confidentielle, est très recherchée.\n\nMaître du passito de Pantelleria, Salvatore Murana signe des vins doux de Zibibbo d'une profondeur unique. C'est l'une des références mondiales du genre et le gardien d'une tradition héroïque.\n\nCultiver la vigne à Pantelleria relève de l'héroïsme : les ceps sont plantés dans des cuvettes creusées à même la lave (l'alberello pantesco, classé au patrimoine de l'UNESCO) pour les protéger des vents violents. Salvatore Murana, figure tutélaire de l'île, en a tiré des passiti d'une pureté et d'une complexité qui ont fait sa renommée mondiale. Servis sur des pâtisseries, des fromages bleus, du foie gras ou en méditation, ses vins doux de Zibibbo déploient une richesse d'abricot, de figue et de miel équilibrée par la salinité marine. Le Martingana, issu de sa meilleure contrada, en est le sommet. Murana demeure une référence absolue du passito de Pantelleria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Martingana",
+        "Khamma",
+        "Mueggen",
+        "Turbè"
+      ],
+      "tags": [
+        "sicilia",
+        "pantelleria",
+        "zibibbo",
+        "passito",
+        "doux",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-bonavita",
+      "nom": "Bonavita",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Faro (Messina)",
+      "commune": "Faro Superiore",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Nocera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Faro DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Faro Superiore, sur les collines dominant Messine, Bonavita est un petit domaine artisanal qui incarne le renouveau du Faro. Giovanni Scarfone y cultive, en biologique, quelques hectares de vieilles vignes sur des pentes escarpées face au détroit.\n\nLe Faro de Bonavita, assemblage de Nerello Mascalese, Nerello Cappuccio et Nocera, est un rouge d'une grande finesse, parfumé et minéral, dans la lignée des grands vins de Messine. La production, minuscule et artisanale, séduit les amateurs par son authenticité et sa fraîcheur. Le style, tout en élégance, tranche avec les rouges méridionaux puissants. Le travail bio et le respect du terroir sont au cœur de la démarche.\n\nFer de lance du renouveau du Faro, Bonavita signe un rouge d'une grande finesse, artisanal et confidentiel. C'est l'un des domaines les plus attachants de la pointe nord-est de la Sicile.\n\nLe renouveau du Faro doit beaucoup à des artisans comme Giovanni Scarfone, qui ont replanté et vinifié avec soin les vieilles vignes des collines de Messine. Sur des pentes escarpées face au détroit, le terroir de sols meubles et l'influence maritime donnent des rouges d'une finesse rare. Servis sur des viandes blanches, du gibier à plume ou des fromages, les Faro de Bonavita séduisent par leur parfum et leur élégance, à mille lieues des rouges méridionaux puissants. La production, minuscule et biologique, est recherchée des amateurs. Bonavita s'impose comme l'un des artisans les plus prometteurs de la pointe nord-est de la Sicile.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Faro",
+        "Rosato",
+        "Terre Siciliane Rosso"
+      ],
+      "tags": [
+        "sicilia",
+        "faro",
+        "messina",
+        "nerello",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-federico-graziani",
+      "nom": "Federico Graziani",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Ancien meilleur sommelier d'Italie, Federico Graziani a réalisé son rêve en devenant vigneron sur l'Etna, à Castiglione di Sicilia. Sur le versant nord, il cultive de vieilles vignes de Nerello Mascalese en altitude, dont il tire sa cuvée emblématique, le Profumo di Vulcano : un rouge parfumé et minéral qui exprime la finesse du volcan. Le Mareneve, issu de vignes perchées très haut, et un Carricante complètent la gamme. Le regard aiguisé de l'ancien sommelier se lit dans la précision et l'élégance de ses vins. Servis sur des viandes blanches ou des champignons, ils séduisent par leur fraîcheur. Graziani s'impose comme l'un des vignerons attachants du renouveau de l'Etna. Sa double casquette de sommelier et de vigneron lui confère une sensibilité particulière à l'équilibre et à la buvabilité, qui fait la marque de ses cuvées d'altitude.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Profumo di Vulcano",
+        "Mareneve",
+        "Etna Bianco"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "sommelier"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-fattorie-romeo-del-castello",
+      "nom": "Fattorie Romeo del Castello",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Randazzo",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Randazzo, sur le versant nord de l'Etna, Fattorie Romeo del Castello est un domaine chargé d'histoire, dont les vignes furent miraculeusement épargnées par la coulée de lave de 1981, qui s'arrêta à leurs portes. La famille y cultive de vieilles vignes de Nerello Mascalese en biologique. Ses cuvées Vigo (vieilles vignes) et Allegracore sont des Nerello purs, authentiques et minéraux, qui expriment la singularité de ce terroir marqué par le volcan. Servis sur des viandes ou des champignons, ces rouges séduisent par leur finesse et leur fraîcheur. Le domaine, à la production confidentielle, est l'un des témoins vivants de l'histoire de l'Etna. Chiara Vigo, qui mène le domaine, incarne cet attachement à un patrimoine de vieilles vignes préservé, et défend une Etna authentique et sans artifice.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigo",
+        "Allegracore"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "lave",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "thefiftybest"
+    },
+    {
+      "id": "it-sicilia-prod-biondi",
+      "nom": "Biondi",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Trecastagni",
+      "pays": "Italie",
+      "cepages": [
+        "Carricante",
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trecastagni, sur le versant sud-est de l'Etna, le domaine Biondi est l'un des rares à valoriser ce côté moins connu du volcan. Sur des contrade rares (Cisterna Fuori, Chianta), la famille cultive le Carricante et le Nerello avec soin. L'Outis (blanc et rouge) et le San Nicolò sont des vins minéraux et élégants, qui révèlent le potentiel du versant méridional. Servis sur des poissons pour les blancs, sur des viandes pour les rouges, ils séduisent par leur tension volcanique. La production, confidentielle, témoigne d'un attachement à un terroir singulier. Biondi s'impose comme une belle adresse du sud de l'Etna. Le versant sud-est, plus confidentiel que le nord, gagne en reconnaissance grâce à des domaines comme Biondi, qui en révèlent la minéralité et la finesse propres.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Outis",
+        "San Nicolò",
+        "Cisterna Fuori",
+        "Chianta"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "carricante",
+        "nerello",
+        "versant-sud"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-torre-mora",
+      "nom": "Torre Mora",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Castiglione di Sicilia",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione di Sicilia, sur le versant nord de l'Etna, Torre Mora est un domaine bio du groupe toscan Piccini. Sur les sols volcaniques entre 600 et 750 mètres, il cultive Nerello Mascalese, Nerello Cappuccio et Carricante. Les cuvées Scalunera (Etna Rosso, Bianco, Rosato) et Cauru offrent des expressions accessibles et bien faites du volcan, dans un style frais et minéral. La certification biologique et le travail manuel témoignent d'une démarche soignée. Servis sur des viandes blanches ou des poissons, ces vins séduisent par leur fraîcheur. Torre Mora est une bonne porte d'entrée dans les vins de l'Etna. L'expérience toscane de la famille Piccini, conjuguée à la certification biologique, garantit une production régulière et fidèle au caractère volcanique de l'Etna.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Scalunera",
+        "Cauru",
+        "Etna Rosato"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "nerello",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "livingaftermidnite"
+    },
+    {
+      "id": "it-sicilia-prod-murgo",
+      "nom": "Murgo",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "commune": "Santa Venerina",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Carricante"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Etna DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Santa Venerina, sur le versant est de l'Etna, la famille Scammacca del Murgo est une pionnière de l'effervescent volcanique. Autour de la Tenuta San Michele, elle élabore l'un des premiers metodo classico de l'Etna, le Murgo Brut, à partir de Nerello Mascalese vinifié en blanc : des bulles fines et minérales qui expriment le terroir de lave. Le domaine produit aussi un Brut Rosé et des Etna tranquilles. Servis à l'apéritif ou sur des poissons, ces effervescents séduisent par leur fraîcheur. Murgo s'est imposé comme la référence des bulles de l'Etna et une curiosité incontournable du volcan. Le domaine a démontré, dès les années 1980, que le Nerello Mascalese pouvait donner d'excellents effervescents, ouvrant une voie aujourd'hui suivie par de nombreux vignerons du volcan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Murgo Brut",
+        "Brut Rosé",
+        "Tenuta San Michele",
+        "Etna Rosso"
+      ],
+      "tags": [
+        "sicilia",
+        "etna",
+        "metodo-classico",
+        "nerello",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru"
+    },
+    {
+      "id": "it-sicilia-prod-santa-tresa",
+      "nom": "Santa Tresa",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Vittoria",
+      "pays": "Italie",
+      "cepages": [
+        "Frappato",
+        "Nero d'Avola",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerasuolo di Vittoria DOCG",
+        "Sicilia DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vittoria, dans le sud-est de la Sicile, Santa Tresa est un domaine bio qui valorise les cépages du terroir de Vittoria. Sur les sols sableux et calcaires de la région, il produit du Cerasuolo di Vittoria (seule DOCG de l'île), du Frappato (Rina Russa) et des blancs autochtones (Grillo). Le style, frais et accessible, met en valeur le fruit et la légèreté des cépages locaux. L'engagement biologique et le bon rapport qualité-prix caractérisent la maison. Servis légèrement rafraîchis sur des charcuteries ou la cuisine sicilienne, ces vins séduisent par leur gourmandise. Santa Tresa est une bonne adresse de Vittoria. La conversion au biologique et l'attention portée aux cépages autochtones font de Santa Tresa un ambassadeur fiable et accessible du terroir de Vittoria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cerasuolo di Vittoria",
+        "Rina Russa Frappato",
+        "Grillo"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "cerasuolo",
+        "frappato",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-feudi-del-pisciotto",
+      "nom": "Feudi del Pisciotto",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "commune": "Niscemi",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Frappato",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cerasuolo di Vittoria DOCG",
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Niscemi, dans la région de Vittoria, Feudi del Pisciotto est un domaine du groupe Castellare di Castellina, connu pour ses étiquettes signées par de grands stylistes de la mode italienne. Sur les terroirs du sud-est, il produit du Cerasuolo di Vittoria, du Nero d'Avola et du Frappato, ainsi que de bons blancs. Le style, soigné et accessible, conjugue tradition sicilienne et présentation originale. Servis sur des viandes ou la cuisine locale, ces vins séduisent par leur fruit. Feudi del Pisciotto est une valeur sûre et originale de Vittoria. L'originalité des étiquettes, signées par des maisons de mode, s'accompagne d'un réel sérieux dans la vinification des cépages siciliens, sur les terroirs du sud-est. Servis sur la cuisine sicilienne, ces vins conjuguent le plaisir du fruit et une présentation qui a contribué à leur notoriété au-delà de l'île.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cerasuolo di Vittoria",
+        "Versace Nero d'Avola",
+        "Carolina Marengo"
+      ],
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "cerasuolo",
+        "nero-davola"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-prod-riofavara",
+      "nom": "Riofavara",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Noto (SE)",
+      "commune": "Ispica",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Moscato Bianco",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Doux",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Noto DOC",
+        "Sicilia DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ispica, dans l'extrême sud-est de la Sicile, Riofavara est un domaine bio familial réputé pour ses vins élégants. Sur les terroirs de Noto, il travaille le Nero d'Avola (Sciave, Spaccaforno) dans un style frais et précis, ainsi que le Moscato di Noto, spécialité douce de la région. L'engagement biologique et la recherche de finesse situent Riofavara parmi les bonnes adresses du sud-est. Servis sur des viandes pour les rouges, sur des desserts pour le Moscato, ces vins séduisent par leur netteté. Le domaine illustre l'élégance retrouvée des vins de l'extrême sud sicilien. La famille Padova, qui mène le domaine, défend une viticulture bio et une expression fine du Nero d'Avola et du Moscato, à l'extrémité sud-est de l'île.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sciave Nero d'Avola",
+        "Spaccaforno",
+        "Moscato di Noto",
+        "Marzaiolo"
+      ],
+      "tags": [
+        "sicilia",
+        "noto",
+        "ispica",
+        "nero-davola",
+        "moscato",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-feudo-maccari",
+      "nom": "Feudo Maccari",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Noto (SE)",
+      "commune": "Noto",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Grillo",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Noto DOC",
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Noto, dans le sud-est de la Sicile, Feudo Maccari est un domaine créé par l'entrepreneur toscan Antonio Moretti (Tenuta Sette Ponti). Sur les sols sableux de Noto, il cultive le Nero d'Avola avec soin, dans un vignoble conduit en alberello. Le Saia, Nero d'Avola de sélection, est sa cuvée-phare : un rouge généreux et bien construit. Le domaine produit aussi de bons blancs (Grillo) et le Maharis. Servis sur des viandes ou des fromages, ces vins séduisent par leur richesse et leur précision. Feudo Maccari est une belle adresse du terroir de Noto. Le savoir-faire toscan d'Antonio Moretti, appliqué au terroir sableux de Noto et à l'alberello, donne des Nero d'Avola généreux et bien construits, appréciés à l'export.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Saia",
+        "Maharis",
+        "Olli",
+        "Grillo"
+      ],
+      "tags": [
+        "sicilia",
+        "noto",
+        "nero-davola",
+        "sable"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-settesoli-mandrarossa",
+      "nom": "Settesoli (Mandrarossa)",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "commune": "Menfi",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Grillo",
+        "Chardonnay",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Menfi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Menfi, dans le sud-ouest de la Sicile, Settesoli est l'une des plus grandes coopératives d'Italie, réunissant des milliers de vignerons. Longtemps synonyme de volume, elle a hissé sa qualité avec la ligne premium Mandrarossa, qui propose des cuvées de terroir (Cartagho, Urra di Mare, Timperosse) au excellent rapport qualité-prix. Le style, moderne et soigné, valorise cépages autochtones et internationaux. Servis sur une cuisine variée, ces vins séduisent par leur régularité. Settesoli et Mandrarossa illustrent la capacité d'une grande coopérative à produire des vins de qualité et accessibles. Le succès de la coopérative, qui a su fédérer des milliers de petits vignerons autour d'une exigence commune, en fait un modèle de viticulture collective de qualité en Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mandrarossa Cartagho",
+        "Urra di Mare",
+        "Timperosse",
+        "Costadune"
+      ],
+      "tags": [
+        "sicilia",
+        "menfi",
+        "coop",
+        "mandrarossa",
+        "rapport-qp"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru"
+    },
+    {
+      "id": "it-sicilia-prod-duca-di-salaparuta-corvo",
+      "nom": "Duca di Salaparuta (Corvo)",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Sicilia centrale",
+      "commune": "Casteldaccia",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Inzolia",
+        "Grillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Casteldaccia, près de Palerme, Duca di Salaparuta est une maison historique du vin sicilien, célèbre pour sa marque Corvo, diffusée dans le monde entier. Elle a marqué l'histoire de l'île avec le Duca Enrico, l'un des premiers grands Nero d'Avola vinifiés en pureté, dans les années 1980. La gamme, large et populaire, va des accessibles Corvo aux cuvées plus ambitieuses (Lavico, Kados). Servis sur une cuisine variée, ces vins séduisent par leur régularité. Duca di Salaparuta demeure une institution du vin sicilien et un ambassadeur historique du Nero d'Avola. Avec le Duca Enrico, la maison a prouvé dès les années 1980 que le Nero d'Avola méritait d'être vinifié en grand vin, ouvrant la voie au renouveau du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Duca Enrico",
+        "Corvo Rosso",
+        "Lavico",
+        "Kados"
+      ],
+      "tags": [
+        "sicilia",
+        "nero-davola",
+        "corvo",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-abbazia-santanastasia",
+      "nom": "Abbazia Sant'Anastasia",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Sicilia centrale",
+      "commune": "Castelbuono",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Cabernet Sauvignon",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelbuono, dans les montagnes des Madonie près de Cefalù, Abbazia Sant'Anastasia est un domaine bio installé autour d'une ancienne abbaye. En altitude, sur des terroirs frais, il produit des rouges d'assemblage ambitieux, dont le Litra (Cabernet Sauvignon) et le Passomaggio, ainsi que des cépages autochtones. Le style, généreux et soigné, bénéficie de la fraîcheur des Madonie. Servis sur des viandes ou des fromages, ces vins séduisent par leur structure. L'engagement biologique et le cadre exceptionnel font l'originalité du domaine. Abbazia Sant'Anastasia est une belle adresse du nord de la Sicile. L'altitude des Madonie apporte aux vins une fraîcheur bienvenue sous le climat sicilien, et l'engagement biologique de longue date renforce l'identité du domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Litra",
+        "Passomaggio",
+        "Montenero",
+        "Sensuale"
+      ],
+      "tags": [
+        "sicilia",
+        "madonie",
+        "cabernet",
+        "nero-davola",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-morgante",
+      "nom": "Morgante",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Sicilia centrale",
+      "commune": "Grotte",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Grotte, dans la province d'Agrigente, Morgante est un domaine familial spécialiste du Nero d'Avola. Sur les collines du centre-sud de la Sicile, la famille Morgante a fait de ce cépage emblématique sa signature.\n\nLe Don Antonio, Nero d'Avola de sélection, est la cuvée-phare du domaine : un rouge puissant, solaire et généreux, représentatif du meilleur du cépage dans sa région d'origine. La gamme, centrée sur le Nero d'Avola (dont un Scjàvuru plus accessible), illustre une belle maîtrise. Le style, chaleureux et fruité, exprime le terroir ensoleillé d'Agrigente. La spécialisation sur un seul cépage témoigne d'un savoir-faire affirmé.\n\nSpécialiste du Nero d'Avola, Morgante signe avec le Don Antonio une référence puissante et solaire du cépage. C'est une valeur sûre du centre-sud sicilien.\n\nEn se concentrant sur le Nero d'Avola dans sa région d'origine, la famille Morgante a fait le choix d'un savoir-faire spécialisé. Les collines ensoleillées de Grotte, dans l'Agrigentin, donnent au cépage une maturité pleine et une générosité solaire. Servis sur des viandes grillées, du gibier ou des fromages, les Nero d'Avola de Morgante séduisent par leur richesse et leur fruit. Le Don Antonio, cuvée de sélection, en est le fleuron. Morgante demeure l'une des références du Nero d'Avola du centre-sud sicilien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Don Antonio",
+        "Nero d'Avola",
+        "Scjàvuru"
+      ],
+      "tags": [
+        "sicilia",
+        "agrigento",
+        "nero-davola",
+        "grotte"
+      ],
+      "a_verifier": null,
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-prod-assuli",
+      "nom": "Assuli",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Mazara del Vallo",
+      "pays": "Italie",
+      "cepages": [
+        "Nero d'Avola",
+        "Grillo",
+        "Perricone"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mazara del Vallo, dans le Trapanais, Assuli est un domaine familial qui valorise les cépages autochtones de l'ouest sicilien. Il décline le Nero d'Avola (Lorlando, Carusu, Furioso), le Grillo et le Perricone dans une gamme soignée et accessible. Le style, généreux et fruité, exprime le terroir ensoleillé du Trapanais. Servis sur des viandes pour les rouges, sur des poissons pour le Grillo, ces vins séduisent par leur rapport qualité-prix. Assuli est une valeur sûre de la Sicile occidentale. Le domaine met un point d'honneur à valoriser les cépages autochtones du Trapanais, dans des cuvées qui allient générosité solaire et bon rapport qualité-prix. Servis sur des grillades, des charcuteries ou la cuisine locale, les vins d'Assuli séduisent par leur générosité et leur accessibilité, représentatifs de l'ouest sicilien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lorlando",
+        "Carusu",
+        "Furioso",
+        "Grillo"
+      ],
+      "tags": [
+        "sicilia",
+        "trapani",
+        "nero-davola",
+        "grillo"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-sicilia-prod-fina",
+      "nom": "Fina",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Grillo",
+        "Nero d'Avola",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, dans l'ouest de la Sicile, Fina est un domaine familial dynamique qui met en valeur les cépages du Trapanais. Il excelle sur le Grillo (Bianco di Valeria, Kebrilla), blanc frais et minéral, ainsi que sur les rouges autochtones (Mamarossa, Naviganti). Le style, moderne et soigné, offre un bon rapport qualité-prix. Servis sur des poissons pour les blancs, sur des viandes pour les rouges, ces vins séduisent par leur netteté. Fina est une bonne adresse familiale de Marsala. La montée en qualité de Fina, portée par le travail sur le Grillo, illustre le dynamisme d'une nouvelle génération de vignerons du Trapanais. Servis sur des poissons et fruits de mer pour les blancs, sur des viandes pour les rouges, les vins de Fina illustrent la fraîcheur retrouvée des cépages du Trapanais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bianco di Valeria",
+        "Kebrilla Grillo",
+        "Mamarossa",
+        "Naviganti"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "grillo",
+        "nero-davola",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-sicilia-prod-rallo",
+      "nom": "Rallo",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "commune": "Marsala",
+      "pays": "Italie",
+      "cepages": [
+        "Grillo",
+        "Nero d'Avola",
+        "Catarratto"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Ambré"
+      ],
+      "appellations_lieux_dits": [
+        "Sicilia DOC",
+        "Marsala DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marsala, Rallo est une maison historique (fondée en 1860) convertie au biologique. Longtemps productrice de Marsala, elle s'est recentrée sur les cépages autochtones, en particulier le Grillo (Bianco Maggiore, Beleda), tout en perpétuant des Marsala de tradition. Le style, frais et soigné, met en valeur le terroir du Trapanais. Servis sur des poissons pour les blancs, en méditation pour les Marsala, ces vins séduisent par leur authenticité. L'engagement biologique et l'héritage historique font de Rallo une belle adresse de Marsala. La conversion au biologique et le recentrage sur les cépages autochtones ont redonné un nouvel élan à cette maison historique de Marsala. Servis sur des poissons pour les blancs et en méditation pour les Marsala, les vins de Rallo témoignent d'un savoir-faire séculaire remis au goût du jour.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Grillo Bianco Maggiore",
+        "Beleda",
+        "Al-Qasar",
+        "Marsala"
+      ],
+      "tags": [
+        "sicilia",
+        "marsala",
+        "grillo",
+        "bio",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-sicilia-prod-abraxas",
+      "nom": "Abraxas",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Pantelleria",
+      "commune": "Pantelleria",
+      "pays": "Italie",
+      "cepages": [
+        "Zibibbo"
+      ],
+      "couleurs": [
+        "Doux",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Passito di Pantelleria DOC",
+        "Sicilia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur l'île volcanique de Pantelleria, Abraxas est un domaine qui exprime le terroir singulier de cette île battue par les vents, entre Sicile et Tunisie. À partir du Zibibbo (Muscat d'Alexandrie), il produit le célèbre passito de Pantelleria, vin doux d'une grande richesse, ainsi que des Zibibbo secs (Kuddia del Moro) plus rares. Le travail des vignes en alberello pantesco, enterrées pour résister au vent, relève de l'héroïsme. Servis sur des desserts et fromages pour le passito, à l'apéritif pour le sec, ces vins séduisent par leur caractère. Abraxas est une belle adresse de Pantelleria. La viticulture héroïque de Pantelleria, avec ses vignes enterrées classées à l'UNESCO, confère à ces vins une identité et une rareté précieuses.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kuddia del Moro",
+        "Passito di Pantelleria",
+        "Zibibbo Secco"
+      ],
+      "tags": [
+        "sicilia",
+        "pantelleria",
+        "zibibbo",
+        "passito",
+        "doux"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-prod-le-casematte",
+      "nom": "Le Casematte",
+      "type": "domaine",
+      "region": "Sicilia",
+      "sous_region": "Faro (Messina)",
+      "commune": "Messina",
+      "pays": "Italie",
+      "cepages": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Nocera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Faro DOC",
+        "Terre Siciliane IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Messine, sur les collines du Faro, Le Casematte est un domaine du renouveau de cette appellation confidentielle, cofondé par l'ancien footballeur Gianfranco Sorrentino. Sur les pentes escarpées face au détroit, il cultive Nerello Mascalese, Nerello Cappuccio et Nocera. Le Faro et le Peloro (rouge et blanc) sont des vins frais et fins, qui participent à la renaissance des vins de Messine. Servis sur des viandes blanches ou des poissons, ils séduisent par leur élégance. Le Casematte contribue, aux côtés de Palari et Bonavita, à faire revivre le Faro. Le domaine participe activement, aux côtés de Palari et Bonavita, à la renaissance du Faro, appellation confidentielle qui retrouve peu à peu ses lettres de noblesse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Faro",
+        "Peloro Rosso",
+        "Peloro Bianco",
+        "Nocera"
+      ],
+      "tags": [
+        "sicilia",
+        "faro",
+        "messina",
+        "nerello",
+        "renouveau"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    }
+  ]
+}

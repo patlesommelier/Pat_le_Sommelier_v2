@@ -40,7 +40,7 @@ async function main() {
       where pl.restaurant_id = $1 and pl.actif ${seulPlat ? 'and pl.id = $2' : ''} order by pl.ordre`,
     seulPlat ? [restaurant, seulPlat] : [restaurant]);
 
-  const nombre = Number(regles.find((r) => r.type === 'nombre_propositions')?.valeur ?? 2);
+  const nombre = Number(regles.find((r) => r.type === 'nombre_propositions')?.valeur ?? 5);
   const client = new Anthropic();
   const systeme = systemePat(restaurant, principes, regles);
   const codes = new Set(carte.map((v) => v.id));

@@ -1,0 +1,1874 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "puglia",
+  "region_label": "Puglia (Italie)",
+  "source_file": "producteurs_puglia.json",
+  "built_at": "2026-07-07",
+  "count": 42,
+  "items": [
+    {
+      "id": "it-puglia-prod-gianfranco-fino",
+      "nom": "Gianfranco Fino",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manduria, dans la province de Tarente, Gianfranco Fino est le domaine le plus culte de la Pouilles et l'un des artisans majeurs de la reconnaissance du vin du Sud de l'Italie. Fondé en 2004 par Gianfranco Fino et son épouse Simona Natale avec l'achat d'un tout petit vignoble de vieilles vignes de Primitivo, le domaine a connu une ascension fulgurante.\n\nSa cuvée Es, un Primitivo di Manduria issu de vignes cinquantenaires et plus, conduites en alberello (gobelet traditionnel non palissé), est devenue une icône : un rouge d'une concentration, d'une profondeur et d'une pureté remarquables, régulièrement classé parmi les meilleurs vins rouges d'Italie. Fino y révèle un Primitivo loin des versions lourdes et confiturées : dense mais équilibré, aux arômes de fruits noirs, d'épices, de garrigue et de réglisse, avec une fraîcheur préservée. Le domaine signe aussi le Jo (Primitivo plus accessible) et le Se (Negroamaro). Le travail est minutieux : rendements infimes, vendange manuelle, respect des vieilles vignes franches de pied. En 2010, Fino reçut le prix de « Vigneron de l'année » du Gambero Rosso, l'un des premiers vignerons du Sud à être ainsi distingué, marquant un tournant pour l'image des vins méridionaux.\n\nDomaine culte par excellence, Gianfranco Fino a hissé le Primitivo di Manduria au rang de grand vin avec son Es, issu de vieilles vignes en alberello. C'est la référence absolue de la Pouilles et un symbole du renouveau du vin du Sud de l'Italie.\n\nL'histoire de Gianfranco Fino est celle d'une conviction : celle qu'un cépage longtemps méprisé, cultivé pour produire des vins de coupage vendus en vrac, pouvait donner l'un des grands rouges d'Italie. En rachetant de vieilles vignes en alberello que d'autres arrachaient, Fino a sauvé un patrimoine et démontré leur valeur. L'alberello, ce mode de conduite en petit gobelet non palissé, hérité de l'Antiquité, limite les rendements et concentre la matière, mais impose un travail entièrement manuel et pénible sous le soleil du Sud. Servi sur des viandes rouges, de l'agneau, du gibier ou des fromages affinés, l'Es impressionne par sa densité alliée à une fraîcheur inattendue, et se patine sur une décennie et plus. Le succès du domaine, salué par toute la critique internationale, a eu un effet d'entraînement sur toute la Pouilles, encourageant les vignerons à préserver leurs vieilles vignes et à viser la qualité plutôt que le volume. Fino reste fidèle à une production limitée et artisanale, refusant de sacrifier l'exigence à la demande, ce qui rend ses vins d'autant plus recherchés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Es (Primitivo di Manduria)",
+        "Jo (Primitivo)",
+        "Se (Negroamaro)"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "alberello",
+        "culte",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|tasteatlas"
+    },
+    {
+      "id": "it-puglia-prod-tormaresca",
+      "nom": "Tormaresca",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Castel del Monte (BAT)",
+      "commune": "Minervino Murge / San Pietro Vernotico",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Negroamaro",
+        "Nero di Troia",
+        "Fiano",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Castel del Monte DOCG",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Tormaresca est le grand domaine de la famille Antinori en Pouilles, fondé à la fin des années 1990 dans le cadre de son expansion hors de Toscane. La célèbre maison florentine a choisi la Pouilles pour son potentiel exceptionnel, et y a bâti l'une des références qualitatives de la région, sur deux propriétés distinctes couvrant les meilleurs terroirs.\n\nLa première, dans le nord, à Castel del Monte, est dédiée aux cépages autochtones du secteur, dont l'Aglianico : c'est là qu'est produit le Bocca di Lupo, un Aglianico structuré et raffiné, l'un des grands rouges des Pouilles. La seconde, la Masseria Maìme dans le Salento, est le domaine du Negroamaro, dont est issue la cuvée éponyme, profonde et balsamique. Tormaresca cultive aussi le Nero di Troia, le Primitivo, le Fiano et des cépages internationaux (Chardonnay pour le Pietrabianca), dans une gamme complète et régulière. Le style, moderne et précis, bénéficie du savoir-faire œnologique des Antinori et met en valeur l'identité des terroirs pugliesi. Le domaine, à grande échelle mais soucieux de qualité, a joué un rôle majeur dans la montée en gamme et la reconnaissance internationale des vins de la région.\n\nDomaine pugliese des Antinori, Tormaresca signe de grands rouges autochtones (Bocca di Lupo en Aglianico, Masseria Maìme en Negroamaro) et une gamme complète et régulière. C'est l'une des références majeures de la Pouilles, entre savoir-faire toscan et terroirs du Sud.\n\nL'arrivée des Antinori en Pouilles, à la fin des années 1990, a marqué un tournant : l'une des plus prestigieuses familles du vin italien misait sur le potentiel d'une région alors surtout connue pour ses vins de masse. En répartissant leur activité entre Castel del Monte, au nord, et le Salento, au sud, ils ont pu travailler les meilleurs cépages de chaque terroir. Le Bocca di Lupo a prouvé que l'Aglianico pouvait, en Pouilles, donner un rouge de grande garde, tandis que le Masseria Maìme a hissé le Negroamaro à un niveau d'élégance rare. Servis sur des viandes rouges, du gibier ou des fromages, ces vins allient puissance méridionale et raffinement. La gamme, large et régulière, du Pietrabianca (Chardonnay-Fiano) au Torcicoda (Primitivo), couvre tous les registres avec constance. Au-delà de ses propres bouteilles, Tormaresca a contribué à faire évoluer l'image des vins pugliesi sur les marchés internationaux, apportant la crédibilité et le savoir-faire d'une grande maison, tout en respectant l'identité des cépages et des terroirs du Sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bocca di Lupo (Aglianico)",
+        "Masseria Maìme (Negroamaro)",
+        "Pietrabianca",
+        "Torcicoda"
+      ],
+      "tags": [
+        "puglia",
+        "castel-del-monte",
+        "salento",
+        "antinori",
+        "aglianico",
+        "negroamaro"
+      ],
+      "a_verifier": null,
+      "source": "pugliaparadise|terrachevive"
+    },
+    {
+      "id": "it-puglia-prod-felline-racemi",
+      "nom": "Felline (Racemi)",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Sussumaniello"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manduria, Felline est le domaine de Gregory Perrucci et le cœur de l'Accademia dei Racemi, l'organisation qui a joué un rôle décisif dans la révolution qualitative du vin pugliese. Fondée en 1998, l'Accademia a fédéré plusieurs vignerons autour d'un objectif commun : améliorer la qualité, valoriser les cépages autochtones et sauver des variétés menacées.\n\nC'est notamment grâce à ce travail que le Sussumaniello et l'Ottavianello, cépages rares au bord de l'extinction, ont été préservés et remis en culture. Felline élabore des Primitivo di Manduria de référence — dont le Vigna del Feudo et le Sinfarosa Terra Nera, issus de vieilles vignes en alberello — d'une belle concentration mais aussi d'une fraîcheur et d'une finesse qui ont contribué à changer l'image du Primitivo, longtemps cantonné aux vins de coupage puissants et rustiques. Le style Perrucci privilégie l'authenticité, le terroir et le respect des vieilles vignes. Au-delà de ses propres vins, l'influence de l'Accademia dei Racemi sur toute une génération de vignerons pugliesi a été considérable, faisant de Felline un domaine-phare de la renaissance du vin du Salento.\n\nDomaine de Gregory Perrucci et cœur de l'Accademia dei Racemi, Felline a été un moteur de la révolution qualitative pugliese et un sauveur de cépages rares. Ses Primitivo di Manduria de vieilles vignes comptent parmi les références de l'appellation.\n\nGregory Perrucci est l'un des personnages clés du vin pugliese contemporain. En fondant l'Accademia dei Racemi, il a voulu prouver que le Salento pouvait produire des vins d'auteur, à rebours de la réputation de région de quantité qui lui collait à la peau. Le sauvetage du Sussumaniello et de l'Ottavianello, cépages presque disparus, illustre cet engagement pour la biodiversité et le patrimoine. Sur les vieilles vignes de Primitivo en alberello, Felline a cherché la fraîcheur et la définition plutôt que la seule puissance, ouvrant la voie à un Primitivo plus élégant. Servis sur des viandes, du gibier ou des fromages, ses vins séduisent par leur profondeur et leur équilibre. Le travail de l'Accademia — partage des savoir-faire, valorisation des terroirs, exigence qualitative — a essaimé bien au-delà de Felline, contribuant à l'essor de toute une génération de vignerons du Salento. Aujourd'hui encore, Perrucci demeure une figure respectée et influente, gardien d'une certaine idée du vin pugliese, authentique et ancré dans son territoire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna del Feudo",
+        "Sinfarosa Terra Nera (Primitivo)",
+        "Zinfandel",
+        "Alberello"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "racemi",
+        "perrucci",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "winewordswisdom|inwander"
+    },
+    {
+      "id": "it-puglia-prod-morella",
+      "nom": "Morella",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manduria, Morella est un domaine culte fondé par Gaetano Morella et son épouse australienne Lisa Gilbee, œnologue de formation internationale. Le couple s'est spécialisé dans l'expression la plus pure et la plus authentique du Primitivo, à partir de vieilles vignes franches de pied, dans une démarche artisanale et peu interventionniste.\n\nSur des vignes anciennes, souvent centenaires, conduites en alberello sur les sols sableux et rouges de Manduria, le domaine signe des Primitivo d'une grande profondeur et d'une belle définition : la cuvée Old Vines et, surtout, La Signora, issue des plus vieilles parcelles, sont des rouges concentrés mais équilibrés, aux arômes de fruits noirs, d'épices et de garrigue, loin des Primitivo lourds et confiturés. Le travail en agriculture biologique, les levures indigènes et le respect des vieilles vignes donnent des vins d'une réelle personnalité. Morella cultive aussi un peu de Malbec, clin d'œil au parcours de Lisa Gilbee. La production, confidentielle, est très appréciée des amateurs de Primitivo authentique et de vins de terroir.\n\nDomaine culte de Manduria, Morella signe des Primitivo profonds et purs sur vieilles vignes franches de pied, en bio. C'est l'une des expressions les plus authentiques et les plus recherchées du cépage.\n\nLa rencontre de Gaetano Morella, enfant de Manduria, et de Lisa Gilbee, œnologue australienne venue faire les vendanges dans les Pouilles, a donné naissance à l'un des domaines les plus singuliers de la région. Ensemble, ils ont fait le pari de vieilles vignes franches de pied que beaucoup jugeaient sans avenir, et en ont tiré des Primitivo d'une profondeur rare. L'alberello, les rendements infimes et le travail manuel donnent des raisins d'une concentration naturelle, que la cave se contente d'accompagner sans forcer le trait. Servis sur des viandes rouges, de l'agneau, du gibier ou des fromages, les Primitivo de Morella séduisent par leur densité maîtrisée et leur fraîcheur, loin des versions caricaturales du cépage. La Signora, issue des plus vieilles vignes, est un vin de garde d'une grande personnalité. La démarche biologique et l'approche peu interventionniste, portées par la double culture du couple, font de Morella un domaine à part, très prisé des amateurs de vin authentique et l'une des plus belles expressions du Primitivo di Manduria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Old Vines (Primitivo)",
+        "La Signora",
+        "Malbec"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "franc-de-pied",
+        "bio",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "inwander|italysfinestwines"
+    },
+    {
+      "id": "it-puglia-prod-polvanera",
+      "nom": "Polvanera",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Gioia del Colle",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Aleatico",
+        "Minutolo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gioia del Colle, au centre de la Pouilles, Polvanera est le domaine de référence du Primitivo d'altitude, fondé en 2003 par Filippo Cassano. Contrairement au Primitivo solaire et puissant de Manduria, celui de Gioia del Colle, cultivé plus haut (jusqu'à 400 m) et sur des sols différents, donne des vins plus frais, plus tendus et plus minéraux.\n\nSur une soixantaine d'hectares certifiés en agriculture biologique, souvent sur vignes franches de pied, Polvanera signe des Primitivo parcellaires identifiés par leur degré alcoolique (16, 17, 14…), dont le célèbre Primitivo 16 issu de la Vigna San Benedetto, régulièrement primé (Tre Bicchieri). Ces vins, d'une belle profondeur mais d'une fraîcheur remarquable, ont révélé une facette plus élégante et plus digeste du Primitivo, contribuant à hisser Gioia del Colle au rang des grands terroirs du cépage. Le domaine cultive aussi le Minutolo (blanc aromatique) et l'Aleatico. Le style, à la fois authentique et précis, mise sur le terroir d'altitude, les vieilles vignes et le travail biologique. Polvanera est devenu l'ambassadeur du Primitivo de Gioia del Colle.\n\nRéférence du Primitivo d'altitude en bio, Polvanera signe des rouges frais, minéraux et parcellaires à Gioia del Colle, souvent sur vignes franches de pied. C'est le domaine qui a révélé la finesse du Primitivo, à distance des versions solaires de Manduria.\n\nFilippo Cassano a bâti Polvanera sur une intuition : que Gioia del Colle, avec son altitude et ses sols de calcaire rouge (la « polvanera », terre noire poudreuse qui donne son nom au domaine), pouvait donner un Primitivo radicalement différent de celui de Manduria — plus frais, plus tendu, plus digeste. Le pari était audacieux à une époque où le Primitivo rimait avec puissance et sucrosité. Les vignes franches de pied, l'agriculture biologique et les rendements maîtrisés servent cette recherche de finesse. Servis sur des viandes, du gibier ou des fromages, les Primitivo de Polvanera surprennent par leur fraîcheur et leur buvabilité, tout en gardant la générosité méridionale. La déclinaison parcellaire, identifiée par le degré alcoolique, permet de comparer les nuances du terroir. Le succès critique de ces vins, notamment le Primitivo 16, a fait de Gioia del Colle une appellation qui compte et de Polvanera son ambassadeur. Le domaine soigne aussi des cépages rares comme le Minutolo, confirmant son rôle de défricheur du potentiel qualitatif du centre de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Primitivo 16 (Vigna San Benedetto)",
+        "Primitivo 17",
+        "Primitivo 14",
+        "Minutolo"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "bio",
+        "franc-de-pied",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "pugliaparadise|inwander"
+    },
+    {
+      "id": "it-puglia-prod-cantine-san-marzano",
+      "nom": "Cantine San Marzano",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "San Marzano di San Giuseppe",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Malvasia Nera",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Marzano di San Giuseppe, dans la province de Tarente, Cantine San Marzano est l'une des coopératives les plus influentes de la Pouilles et un ambassadeur mondial du Primitivo. Fondée en 1962, elle rassemble de nombreux vignerons du Salento autour d'une démarche qualitative devenue exemplaire.\n\nSon vin-phare, le Sessantanni, est un Primitivo di Manduria issu de vignes de soixante ans conduites en alberello : un rouge concentré, velouté et généreux, aux arômes de fruits noirs confits, d'épices et de cacao, devenu un best-seller international. La coopérative décline une gamme large et régulière (Talò, Il Pumo, Anniversario 62) sur les cépages autochtones — Primitivo, Negroamaro, Malvasia Nera, Fiano —, dans un style mûr, équilibré et accessible. L'accent mis sur la préservation des vieilles vignes, la coopération entre producteurs et une œnologie moderne a fait de San Marzano une référence reconnue, qui a largement contribué à faire connaître le Primitivo dans le monde.\n\nCoopérative de référence du Salento, Cantine San Marzano a fait du Sessantanni un ambassadeur mondial du Primitivo di Manduria. C'est l'un des noms les plus diffusés et les plus fiables de la Pouilles.\n\nLe succès du Sessantanni illustre la capacité des meilleures coopératives pugliesi à conjuguer volume et qualité, en s'appuyant sur un patrimoine de vieilles vignes que les petits vignoble adhérents cultivent en alberello. Servi sur des viandes rouges, de l'agneau, des plats mijotés ou des fromages affinés, le Primitivo de San Marzano séduit par sa rondeur et sa générosité. L'engagement de la coopérative en faveur de la durabilité, de la coopération entre producteurs et de la préservation du vignoble en fait un modèle, et son rôle dans la diffusion mondiale du Primitivo a été déterminant pour l'image de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sessantanni (Primitivo)",
+        "Anniversario 62",
+        "Talò",
+        "Il Pumo"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "sessantanni",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "tasteatlas|hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-produttori-di-manduria",
+      "nom": "Produttori di Manduria",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Primitivo di Manduria Dolce Naturale DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le Consorzio Produttori Vini di Manduria est la cave coopérative historique de Manduria, fondée en 1932, gardienne de la tradition du Primitivo dans son berceau. Rassemblant de nombreux vignerons aux vieilles vignes en alberello, elle est un pilier de l'appellation.\n\nElle produit une gamme complète de Primitivo di Manduria secs — Lirica, Elegia, et le Sonetto Riserva, structuré et de garde — ainsi que le rare Primitivo di Manduria Dolce Naturale (DOCG), un rouge doux issu de raisins surmûris, spécialité ancestrale de la zone. Le style, fidèle à la tradition, met en valeur la générosité et la chaleur du Primitivo de Manduria. La coopérative abrite aussi un musée de la civilisation du vin primitif, témoignant de son rôle patrimonial. Sa production, régulière et représentative, en fait une référence pour découvrir le Primitivo de Manduria dans ses différentes expressions, du sec au doux.\n\nCoopérative historique de Manduria, les Produttori di Manduria sont les gardiens du Primitivo dans son berceau, du sec (Sonetto) au rare Dolce Naturale (DOCG). C'est une référence patrimoniale de l'appellation.\n\nLe berceau du Primitivo, c'est Manduria, et cette coopérative en est la mémoire vivante depuis les années 1930. Son musée du vin primitif témoigne de l'attachement au patrimoine. Servis sur des viandes, des plats de caractère ou, pour le Dolce Naturale, sur des desserts et des fromages bleus, ses vins couvrent toute la palette du cépage. La coopérative joue un rôle social et patrimonial essentiel, préservant les vieilles vignes des nombreux petits vignerons de la zone et perpétuant des traditions comme le rare Primitivo doux naturel, l'une des spécialités les plus anciennes de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sonetto (Primitivo Riserva)",
+        "Lirica",
+        "Elegia",
+        "Madrigale (Dolce Naturale)"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "cooperative",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "winewordswisdom"
+    },
+    {
+      "id": "it-puglia-prod-varvaglione-1921",
+      "nom": "Varvaglione 1921",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Leporano",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Susumaniello",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Tarente, à Leporano, Varvaglione 1921 est une maison familiale fondée en 1921 par Cosimo Varvaglione et aujourd'hui menée par la quatrième génération. Ancrée dans le Salento, aux sols rouges riches en fer, elle allie tradition, dynamisme et forte identité régionale.\n\nLe domaine se concentre sur les cépages autochtones — Primitivo, Negroamaro, Susumaniello, Malvasia, Verdeca, Fiano — et signe des Primitivo di Manduria soignés, dont le Papale et le Cosimo Varvaglione Collezione Privata, concentrés et veloutés. Le style, mûr et gourmand, avec des élevages sous bois soignés, séduit un large public international. La maison a considérablement monté en gamme au fil des générations, tout en conservant une belle régularité sur toute sa production. Varvaglione illustre la réussite des maisons familiales pugliesi qui ont su conjuguer héritage et modernité.\n\nMaison familiale du Salento fondée en 1921, Varvaglione signe des Primitivo di Manduria concentrés et veloutés (Papale, Collezione Privata). C'est une valeur sûre et dynamique de la Pouilles.\n\nUn siècle d'histoire familiale a permis à Varvaglione de bâtir une identité forte et une réputation internationale, portées par la nouvelle génération qui a modernisé la production sans renier ses racines. Servis sur des viandes rouges, des grillades ou des fromages, les Primitivo di Manduria du domaine séduisent par leur concentration veloutée et leurs notes de fruits noirs et d'épices. La maison travaille aussi de beaux cépages autochtones plus confidentiels (Susumaniello, Verdeca), témoignant d'un attachement à la diversité du Salento, et compte parmi les familles qui incarnent la réussite du vin pugliese contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Papale Oro (Primitivo)",
+        "Cosimo Varvaglione Collezione Privata",
+        "Moi (Negroamaro)"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-puglia-prod-tenute-chiaromonte",
+      "nom": "Tenute Chiaromonte",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Acquaviva delle Fonti",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC",
+        "Primitivo di Manduria DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Acquaviva delle Fonti, dans la zone de Gioia del Colle, Tenute Chiaromonte est un domaine historique (fondé en 1826) et l'une des références du Primitivo d'altitude, en agriculture biologique. Gioia del Colle est considérée comme le berceau ancestral du Primitivo en Italie, et Chiaromonte en est un gardien.\n\nSa cuvée Muro Sant'Angelo Contrada Barbatto, issue de vieilles vignes franches de pied, est un sommet de l'appellation : un Primitivo à la fois profond et frais, minéral et racé, régulièrement primé. Le domaine décline aussi des Primitivo plus accessibles et des blancs (Fiano), dans un style qui met en valeur la fraîcheur et l'élégance permises par l'altitude de Gioia del Colle. Le travail biologique, le respect des vieilles vignes et la recherche de définition font de Chiaromonte l'un des domaines phares de la renaissance du Primitivo du centre de la Pouilles.\n\nDomaine bio historique de Gioia del Colle, Tenute Chiaromonte signe avec le Muro Sant'Angelo Contrada Barbatto un Primitivo profond et frais sur vieilles vignes. C'est une référence du Primitivo d'altitude.\n\nGioia del Colle est reconnue comme le berceau ancestral du Primitivo, et Chiaromonte, active depuis 1826, en est l'un des gardiens les plus respectés. Le travail biologique et le respect des vieilles vignes franches de pied sont au cœur de sa démarche. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Muro Sant'Angelo Contrada Barbatto séduit par sa profondeur alliée à une fraîcheur rare, révélant tout ce que l'altitude de Gioia del Colle apporte au Primitivo. Le domaine a contribué de façon décisive à faire reconnaître cette appellation comme un grand terroir du cépage, distinct de Manduria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Muro Sant'Angelo Contrada Barbatto",
+        "Primitivo Gioia del Colle",
+        "Kimìa"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "bio",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "inwander|pugliaparadise"
+    },
+    {
+      "id": "it-puglia-prod-vigne-chiaromonte-giuliani",
+      "nom": "Vigne Chiaromonte / Giuliani",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Gioia del Colle",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gioia del Colle, Vito Donato Giuliani est un domaine de référence pour le Primitivo d'altitude du centre de la Pouilles. Sur les sols calcaires et rouges de la zone, à bonne altitude, la famille cultive le cépage roi de Gioia del Colle avec une recherche de qualité.\n\nSa cuvée Baronaggio (Primitivo Riserva) est un rouge structuré, profond et de garde, régulièrement primé (Tre Bicchieri), qui exprime la fraîcheur et la minéralité caractéristiques du Primitivo de Gioia del Colle, distinct de celui, plus solaire, de Manduria. Le domaine décline aussi des Primitivo plus accessibles. Le style, soigné et fidèle au terroir, mise sur l'équilibre entre la générosité du cépage et la fraîcheur de l'altitude. Giuliani est l'une des valeurs sûres de l'appellation Gioia del Colle.\n\nRéférence de Gioia del Colle, Vito Donato Giuliani signe avec le Baronaggio un Primitivo Riserva structuré et primé. C'est une belle expression du Primitivo d'altitude du centre de la Pouilles.\n\nSur les hauteurs de Gioia del Colle, Vito Donato Giuliani a fait le choix de la qualité et de la fraîcheur, à rebours des Primitivo lourds et solaires. Le Baronaggio, récompensé par les guides, en est la plus belle expression. Servi sur des viandes rouges, du gibier ou des fromages, ce Primitivo Riserva séduit par sa structure et sa fraîcheur d'altitude. Le domaine illustre la montée en puissance de Gioia del Colle, appellation qui s'affirme comme l'un des grands terroirs du Primitivo italien, capable de donner des vins plus tendus et plus élégants que ceux de la côte ionienne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Baronaggio (Primitivo Riserva)",
+        "Primitivo Gioia del Colle"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "giuliani"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-pietraventosa",
+      "nom": "Pietraventosa",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Gioia del Colle",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gioia del Colle, Pietraventosa est un petit domaine soigné, en agriculture biologique, qui incarne la nouvelle génération du Primitivo d'altitude. Sur les sols calcaires et bien ventilés du centre de la Pouilles, le domaine cultive le cépage avec une recherche d'élégance et de fraîcheur.\n\nSes Primitivo — la cuvée Selva et l'Allegoria Riserva — sont des rouges frais, fins et digestes, aux tanins soyeux, qui privilégient l'équilibre et la buvabilité plutôt que la seule puissance, dans l'esprit des meilleurs vins de Gioia del Colle. Le domaine signe aussi un rosé (Aglaea) apprécié. Le travail biologique, les rendements maîtrisés et une vinification précise donnent des vins d'une belle personnalité. Pietraventosa illustre le potentiel de finesse du Primitivo d'altitude et compte parmi les adresses montantes de l'appellation.\n\nPetit domaine bio de Gioia del Colle, Pietraventosa signe des Primitivo frais et élégants (Selva, Allegoria). C'est une belle expression de la finesse du Primitivo d'altitude.\n\nLa nouvelle génération de Gioia del Colle, dont Pietraventosa est un beau représentant, mise sur le bio, la fraîcheur et la finesse pour révéler une facette plus élégante du Primitivo. Servis sur des viandes, du gibier ou des fromages, les vins du domaine séduisent par leur équilibre et leur buvabilité, loin des versions surmûries. Les rendements maîtrisés et le travail biologique donnent des vins d'une réelle personnalité. Pietraventosa confirme, avec d'autres, que Gioia del Colle est en train de s'imposer comme le terroir de l'élégance pour le Primitivo, offrant une alternative rafraîchissante aux Primitivo puissants de Manduria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Selva (Primitivo)",
+        "Allegoria Riserva",
+        "Aglaea (rosé)"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "bio",
+        "elegance"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-puglia-prod-guttarolo",
+      "nom": "Guttarolo",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Gioia del Colle",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Verdeca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gioia del Colle, Cristiano Guttarolo est l'une des figures du vin nature en Pouilles. Sur ce terroir d'altitude, il élabore, en biodynamie et intervention minimale, des vins vivants et purs, à rebours des Primitivo lourds et boisés.\n\nSon Primitivo, notamment la cuvée Lamie delle Vigne et la version en amphore, est un rouge d'une grande buvabilité, frais, fin et digeste, vinifié sans intrants ni artifice, qui révèle une facette insoupçonnée du cépage. Guttarolo travaille aussi la Verdeca (blanc autochtone) en macération. Le style, artisanal et sincère, cherche à exprimer le terroir et le millésime dans leur vérité, avec une identité forte. La production, confidentielle, est très appréciée des amateurs de vin nature en Italie et à l'étranger. Guttarolo est l'un des noms qui comptent de la scène naturelle pugliese.\n\nFigure du vin nature à Gioia del Colle, Guttarolo signe des Primitivo frais et purs, parfois en amphore, en biodynamie. C'est une référence de la scène naturelle de la Pouilles.\n\nCristiano Guttarolo a fait le choix radical du vin nature dans une région où domine une œnologie plus conventionnelle, prouvant que le Primitivo pouvait être frais, digeste et vibrant. Ses vinifications en amphore et sans intrants donnent des vins d'une grande pureté. Servis sur une cuisine de caractère, des charcuteries ou des plats méditerranéens, ils séduisent par leur énergie et leur buvabilité. La démarche biodynamique et l'intervention minimale, exigeantes et sans filet, en font un vigneron respecté de la scène naturelle internationale, et l'un des rares à porter cette approche haut et fort dans le centre de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Primitivo Lamie delle Vigne",
+        "Anfora Primitivo",
+        "Verdeca"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "nature",
+        "amphore",
+        "biodynamie"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-leone-de-castris",
+      "nom": "Leone de Castris",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Salice Salentino",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Primitivo di Manduria DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Salice Salentino, au cœur du Salento, Leone de Castris est l'une des plus anciennes et des plus prestigieuses maisons de la Pouilles, dont l'histoire remonte au XVIIe siècle. Elle a marqué l'histoire du vin italien à plus d'un titre.\n\nC'est en effet ici qu'est né, en 1943, le Five Roses, considéré comme le premier vin rosé italien mis en bouteille : un rosé de Negroamaro et Malvasia Nera devenu une véritable institution, référence des grands rosés du Sud. La maison signe aussi de grands Negroamaro, dont le Salice Salentino Donna Lisa Riserva, structuré et de garde, emblème de l'appellation. Sur une gamme large et régulière, Leone de Castris met en valeur les cépages autochtones du Salento — Negroamaro, Malvasia Nera, Primitivo — dans un style à la fois traditionnel et soigné. Le rôle historique de la maison, tant pour le rosé que pour le Negroamaro, en fait un pilier du vin salentin.\n\nMaison historique du Salento, Leone de Castris a créé le Five Roses, premier rosé italien en bouteille, et signe de grands Negroamaro (Donna Lisa). C'est un pilier du vin de la Pouilles.\n\nCréer un rosé en bouteille en 1943, en pleine guerre, à destination notamment des soldats américains stationnés en Italie, fut une intuition géniale : le Five Roses est ainsi devenu le premier rosé italien commercialisé en bouteille, et une véritable institution. Servi frais à l'apéritif ou sur une cuisine méditerranéenne, il incarne l'art du rosé salentin. Les grands Negroamaro de la maison, comme le Donna Lisa, accompagnent viandes et fromages et vieillissent avec grâce. Le double héritage — pionnier du rosé et gardien du Negroamaro — fait de Leone de Castris l'une des maisons les plus emblématiques et les plus respectées de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Five Roses (rosé)",
+        "Donna Lisa Riserva (Salice Salentino)",
+        "Per Lui",
+        "Maiana"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "salice-salentino",
+        "negroamaro",
+        "rose",
+        "historique",
+        "five-roses"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|butterfield"
+    },
+    {
+      "id": "it-puglia-prod-vallone",
+      "nom": "Vallone",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Lecce",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lecce, au cœur du Salento, l'azienda Vallone est un domaine réputé pour l'un des vins cultes de la Pouilles : la Graticciaia. La famille Vallone y cultive les cépages autochtones du Salento sur de beaux terroirs argilo-calcaires.\n\nLa Graticciaia est un Negroamaro élaboré à partir de raisins passerillés sur des claies (les « graticci »), à la manière d'un Amarone : un rouge puissant, concentré et presque doux, aux arômes de fruits noirs confits, de figue, de tabac et d'épices, d'une grande complexité, qui compte parmi les vins les plus impressionnants de la région. Le domaine signe aussi des Negroamaro plus classiques (Vereto, Passo delle Viscarde) et des rosés. Le style, entre puissance et élégance, met en valeur le potentiel du Negroamaro passerillé. La Graticciaia, produite seulement les meilleures années, a acquis un statut culte et fait la réputation de Vallone.\n\nDomaine du Salento réputé pour la Graticciaia, Vallone signe l'un des grands Negroamaro cultes de la Pouilles, issu de raisins passerillés. C'est une référence du vin salentin.\n\nLa Graticciaia, née dans les années 1980, a démontré que le Negroamaro pouvait, par le passerillage, donner un vin d'une profondeur et d'une complexité dignes des plus grands, révolutionnant l'image du cépage. Produite seulement les meilleures années, elle est devenue un vin culte. Servie sur des viandes en sauce, du gibier, des fromages affinés ou même en méditation, elle impressionne par sa richesse maîtrisée. Le domaine Vallone, avec ce vin et ses Negroamaro plus classiques, a joué un rôle important dans la reconnaissance du potentiel qualitatif du Salento et demeure une référence de l'élégance salentine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Graticciaia (Negroamaro)",
+        "Vereto",
+        "Passo delle Viscarde"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "graticciaia",
+        "passerillage",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "terrachevive|butterfield"
+    },
+    {
+      "id": "it-puglia-prod-cantele",
+      "nom": "Cantele",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Guagnano",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo",
+        "Malvasia Nera",
+        "Fiano",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salento IGT",
+        "Salice Salentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Guagnano, dans le Salento, Cantele est un domaine familial dynamique, l'un des plus réputés de la région pour la qualité et la constance de ses vins. Fondée au milieu du XXe siècle, la maison est aujourd'hui menée par la troisième génération.\n\nElle met à l'honneur les cépages autochtones du Salento — Negroamaro, Primitivo, Malvasia Nera, Fiano — dans une gamme moderne et fiable. L'Amativo (assemblage Primitivo-Negroamaro) et le Teresa Manara (Negroamaro) sont ses cuvées phares, aux côtés du rosé Rohesia. Le style, net et bien maîtrisé, allie l'expression solaire des cépages salentins à une belle précision. Cantele a joué un rôle actif dans la promotion et la modernisation du vin du Salento, avec une distribution internationale importante. C'est un bel ambassadeur des cépages autochtones de la Pouilles, apprécié pour son rapport qualité-prix.\n\nDomaine familial dynamique de Guagnano, Cantele signe des Negroamaro et Primitivo modernes et fiables (Amativo, Teresa Manara). C'est un bel ambassadeur des cépages du Salento.\n\nPortée par une famille attachée à son territoire, Cantele a su moderniser le vin du Salento sans en trahir l'identité, avec une gamme accessible et régulière qui a conquis les marchés internationaux. Servis sur des viandes, des pâtes au ragù ou des fromages, ses Negroamaro et Primitivo séduisent par leur générosité et leur netteté. Le rosé Rohesia illustre le savoir-faire salentin en la matière. Le dynamisme de la maison, son engagement dans la promotion des cépages autochtones et son bon rapport qualité-prix en font l'un des ambassadeurs les plus efficaces du vin pugliese à l'étranger.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Amativo (Primitivo-Negroamaro)",
+        "Teresa Manara",
+        "Rohesia (rosé)"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "primitivo",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels|butterfield"
+    },
+    {
+      "id": "it-puglia-prod-conti-zecca",
+      "nom": "Conti Zecca",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Leverano",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera",
+        "Cabernet",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Leverano DOC",
+        "Salice Salentino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Leverano, dans le Salento, Conti Zecca est l'une des grandes maisons familiales de la Pouilles, à la tête d'un vaste domaine sur plusieurs propriétés. La famille Zecca y cultive les cépages autochtones et internationaux depuis des générations.\n\nSon vin phare, le Nero, est un assemblage Negroamaro-Cabernet Sauvignon, structuré et de garde, l'un des grands rouges du Salento. La maison signe aussi le Cantalupi Riserva (Salice Salentino) et une gamme large et régulière (Donna Marzia), en rouge, blanc et rosé. Le style, soigné et moderne, met en valeur le Negroamaro, parfois marié aux cépages internationaux, dans des vins amples et équilibrés. La taille du domaine et la constance de sa production en font une référence fiable et diffusée du vin salentin. Conti Zecca illustre la réussite des grandes maisons familiales de la Pouilles.\n\nGrande maison familiale de Leverano, Conti Zecca signe avec le Nero (Negroamaro-Cabernet) un grand rouge du Salento, sur une gamme complète et régulière. C'est une valeur sûre de la Pouilles.\n\nAvec le Nero, assemblage audacieux de Negroamaro et de Cabernet Sauvignon, Conti Zecca a montré que le cépage salentin pouvait dialoguer avec les variétés internationales pour donner un grand rouge de garde. Servi sur des viandes rouges, du gibier ou des fromages affinés, il séduit par sa structure et son équilibre. La maison, à la tête d'un vaste domaine, conjugue tradition familiale et modernité, avec une gamme complète et régulière qui couvre tous les registres. Sa longévité et sa constance en font l'une des grandes familles historiques du vin salentin, respectée pour la fiabilité de sa production.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Nero (Negroamaro-Cabernet)",
+        "Cantalupi Riserva",
+        "Donna Marzia"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "leverano",
+        "negroamaro",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "butterfield"
+    },
+    {
+      "id": "it-puglia-prod-masseria-li-veli",
+      "nom": "Masseria Li Veli",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Brindisi)",
+      "commune": "Cellino San Marco",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo",
+        "Susumaniello",
+        "Verdeca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cellino San Marco, dans le Salento, Masseria Li Veli est un domaine soigné, repris par la famille Falvo (venue de Toscane), qui a fait de la valorisation des cépages autochtones sa signature. Sur une belle masseria historique, le domaine cultive le Negroamaro et des variétés rares.\n\nIl signe des Negroamaro de belle facture (Passamante, Pezzo Morgana) et a contribué à la renaissance de cépages quasi oubliés comme le Susumaniello (cuvée Askos) et la Verdeca. Le style, précis et moderne, met en valeur l'identité du terroir salentin et la personnalité de ces cépages autochtones. Le travail de Li Veli sur les variétés anciennes, en plus de ses Negroamaro et Primitivo, en fait un domaine de référence pour découvrir la diversité ampélographique du Salento. La qualité constante et l'engagement patrimonial ont bâti sa réputation.\n\nDomaine soigné du Salento, Masseria Li Veli valorise le Negroamaro et des cépages rares ressuscités (Susumaniello, Verdeca). C'est une belle référence de la diversité salentine.\n\nEn reprenant une masseria historique du Salento, la famille Falvo a choisi de miser sur les cépages autochtones, y compris les plus rares, contribuant à la sauvegarde du Susumaniello et de la Verdeca. Servis sur des viandes, des poissons pour les blancs, ou l'apéritif pour les rosés, les vins de Li Veli séduisent par leur précision et leur identité territoriale. Le travail sur les variétés anciennes, en plus des Negroamaro et Primitivo, fait du domaine un conservatoire vivant de la diversité salentine et une adresse recherchée des amateurs de cépages rares.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Askos Susumaniello",
+        "Pezzo Morgana (Primitivo)",
+        "Passamante (Negroamaro)"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "susumaniello",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-masseria-monaci-severino-garofano",
+      "nom": "Masseria Monaci (Severino Garofano)",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Copertino",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Copertino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Copertino, dans le Salento, Masseria Monaci est un domaine indissociable de la figure de Severino Garofano, l'un des plus grands œnologues qu'ait connus la Pouilles, artisan de la reconnaissance du Negroamaro. Le domaine perpétue son héritage sur un beau terroir salentin.\n\nSa cuvée Le Braci est un grand Negroamaro de garde, issu de raisins récoltés tardivement, d'une profondeur et d'une élégance rares, considéré comme l'une des plus belles expressions du cépage. Le domaine signe aussi l'Eloquenzia et le I Censi, dans un style qui privilégie la finesse et la capacité de vieillissement, à rebours des Negroamaro rustiques. Le travail de Severino Garofano, poursuivi par ses enfants, a démontré que le Negroamaro pouvait être un grand vin de terroir. Masseria Monaci reste une référence de l'élégance salentine et un hommage vivant à l'un des maîtres du vin pugliese.\n\nDomaine lié au grand œnologue Severino Garofano, Masseria Monaci signe avec Le Braci un Negroamaro de garde d'une élégance rare. C'est une référence de la finesse salentine.\n\nSeverino Garofano fut à la Pouilles ce que les grands consultants furent à d'autres régions : un révélateur de potentiel, qui a prouvé que le Negroamaro pouvait donner de grands vins de terroir. Son domaine de Copertino perpétue cette vision. Servi sur des viandes rouges, du gibier ou des fromages affinés, Le Braci séduit par sa profondeur et son élégance, et se patine sur une décennie. Poursuivi par ses enfants, l'héritage de Garofano fait de Masseria Monaci un lieu de mémoire autant qu'un grand domaine, symbole de l'élégance retrouvée du Negroamaro salentin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Braci (Negroamaro)",
+        "Eloquenzia",
+        "I Censi"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "copertino",
+        "negroamaro",
+        "garofano",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "butterfield"
+    },
+    {
+      "id": "it-puglia-prod-castello-monaci",
+      "nom": "Castello Monaci",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Salice Salentino",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Salice Salentino, dans le Salento, Castello Monaci est un domaine réputé installé autour d'un château historique, aujourd'hui dans le giron du Gruppo Italiano Vini. Sur de beaux terroirs salentins, il produit une gamme soignée de cépages autochtones.\n\nSes Primitivo (Piluna, Artas) et Negroamaro (Maru) sont des rouges modernes, mûrs et bien maîtrisés, aux côtés du Liante et du Kreos (rosé). Le style, net et gourmand, met en valeur la générosité des cépages du Salento dans des vins accessibles et réguliers, bien diffusés à l'international. La taille du domaine et la constance de sa production en font une valeur sûre. Castello Monaci illustre la réussite des grands domaines salentins qui conjuguent qualité, régularité et large diffusion.\n\nDomaine réputé de Salice Salentino, Castello Monaci signe des Primitivo (Artas) et Negroamaro (Maru) modernes et réguliers. C'est une valeur sûre du Salento.\n\nAutour de son château historique, Castello Monaci a su bâtir une gamme moderne et régulière qui met en valeur la générosité des cépages du Salento. Servis sur des viandes, des grillades ou des fromages, ses Primitivo et Negroamaro séduisent par leur rondeur et leur fruit. La taille du domaine et l'appui d'un grand groupe lui assurent une diffusion internationale et une constance appréciées. Castello Monaci illustre la catégorie des grands domaines salentins bien menés, capables de proposer des vins fiables et gourmands à large échelle, tout en restant fidèles à l'identité des cépages autochtones.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Artas (Primitivo)",
+        "Maru (Negroamaro)",
+        "Liante",
+        "Kreos"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "salice-salentino",
+        "primitivo",
+        "negroamaro"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-francesco-candido",
+      "nom": "Francesco Candido",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "San Donaci",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Donaci, dans le Salento, Francesco Candido est une maison historique et l'un des piliers du vin salentin. Fondée au début du XXe siècle, la famille Candido a joué un rôle majeur dans la reconnaissance du Negroamaro.\n\nElle signe trois grands rouges de garde qui ont fait sa réputation : le Cappello di Prete, le Duca d'Aragona et l'Immensum, tous à base de Negroamaro (parfois assemblé), profonds et structurés. La maison est aussi réputée pour son rosé (Le Pozzelle) et une gamme complète et régulière. Le style, traditionnel et soigné, met en valeur le Negroamaro dans toute sa profondeur, avec de beaux élevages. La constance et la qualité de la production, sur plusieurs décennies, ont fait de Francesco Candido une référence incontournable du Salento et un ambassadeur historique de ses cépages.\n\nMaison historique du Salento, Francesco Candido signe de grands Negroamaro de garde (Cappello di Prete, Duca d'Aragona). C'est un pilier du vin salentin.\n\nSur plusieurs décennies, la famille Candido a construit une réputation d'excellence sur le Negroamaro, avec des rouges de garde qui comptent parmi les plus respectés du Salento. Servis sur des viandes rouges, du gibier ou des fromages affinés, le Cappello di Prete et le Duca d'Aragona séduisent par leur profondeur et leur capacité de vieillissement. La maison excelle aussi dans le rosé, autre gloire salentine. Sa longévité, sa constance et son rôle dans la reconnaissance du Negroamaro en font une référence historique incontournable, ambassadrice du meilleur du vin salentin traditionnel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cappello di Prete",
+        "Duca d'Aragona",
+        "Immensum",
+        "Le Pozzelle"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "historique",
+        "candido"
+      ],
+      "a_verifier": null,
+      "source": "butterfield"
+    },
+    {
+      "id": "it-puglia-prod-tenute-rubino",
+      "nom": "Tenute Rubino",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Brindisi",
+      "commune": "Brindisi",
+      "pays": "Italie",
+      "cepages": [
+        "Susumaniello",
+        "Negroamaro",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Brindisi DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Brindisi, Tenute Rubino est le domaine qui a relancé le Susumaniello, cépage autochtone rare autrefois au bord de l'extinction, dont il a fait sa signature. La famille Rubino cultive un beau vignoble sur les terroirs de Brindisi, entre Adriatique et plaine salentine.\n\nSa cuvée Torre Testa, Susumaniello en pureté, est devenue une référence : un rouge original, profond et épicé, aux tanins fermes, qui a révélé le potentiel de ce cépage méconnu. Le domaine signe aussi de beaux Negroamaro (Marmorelle, Jaddico), un Primitivo (Visellio) et des blancs et rosés. Le style, moderne et précis, met en valeur les cépages autochtones du Brindisino avec une belle identité. Le travail de Rubino sur le Susumaniello a enrichi la palette ampélographique de la Pouilles et fait du domaine l'un des plus intéressants de la région.\n\nDomaine de Brindisi, Tenute Rubino a relancé le Susumaniello (Torre Testa) et signe de beaux Negroamaro. C'est une référence des cépages autochtones du Brindisino.\n\nEn pariant sur le Susumaniello, cépage que presque tout le monde avait abandonné, Tenute Rubino a réussi un joli coup : faire du Torre Testa une référence et enrichir la palette des Pouilles. Servi sur des viandes, du gibier ou des fromages, ce Susumaniello séduit par son originalité, ses arômes épicés et ses tanins fermes. Le domaine soigne aussi de beaux Negroamaro et blancs, dans un style moderne et précis. Le travail de sauvegarde et de valorisation d'un cépage rare, conjugué à la qualité de sa gamme, fait de Rubino l'un des domaines les plus intéressants et les plus identitaires du Brindisino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torre Testa (Susumaniello)",
+        "Marmorelle",
+        "Visellio (Primitivo)",
+        "Jaddico"
+      ],
+      "tags": [
+        "puglia",
+        "brindisi",
+        "susumaniello",
+        "negroamaro",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-rivera",
+      "nom": "Rivera",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Castel del Monte (BAT)",
+      "commune": "Andria",
+      "pays": "Italie",
+      "cepages": [
+        "Nero di Troia",
+        "Bombino Nero",
+        "Aglianico",
+        "Bombino Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Castel del Monte DOCG",
+        "Castel del Monte DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Andria, dans le nord de la Pouilles, Rivera est la référence de l'appellation Castel del Monte et l'un des domaines qui a révélé le potentiel du Nero di Troia, cépage autochtone de la région. La famille De Corato y cultive un vaste vignoble au pied du célèbre château octogonal de Frédéric II.\n\nSa cuvée Il Falcone (Nero di Troia Riserva) est un grand rouge structuré et de garde, emblème de l'appellation, aux côtés du Puer Apuliae (Nero di Troia haut de gamme). Le domaine a aussi été pionnier dans la valorisation du Bombino Nero, cépage à l'origine du rosé Castel del Monte (DOCG), et signe de beaux blancs (Preludio) et rosés (Violante). Le style, précis et fidèle au terroir, met en valeur les cépages autochtones du nord de la Pouilles. Le travail de Rivera a été déterminant pour hisser Castel del Monte au rang de terroir de qualité et faire reconnaître le Nero di Troia.\n\nRéférence de Castel del Monte, Rivera signe avec Il Falcone un grand Nero di Troia de garde et a révélé le Bombino Nero. C'est le domaine phare du nord de la Pouilles.\n\nEn révélant le potentiel du Nero di Troia et du Bombino Nero, Rivera a fait de Castel del Monte une appellation qui compte, là où le nord de la Pouilles restait dans l'ombre du Salento. Il Falcone, né dans les années 1970, en est la démonstration. Servi sur des viandes rouges, du gibier ou des fromages affinés, ce Nero di Troia Riserva séduit par sa structure et sa capacité de garde. Le domaine, pionnier et régulier, a formé le goût pour les cépages autochtones du nord de la Pouilles et demeure la référence de Castel del Monte, aux côtés de beaux blancs et rosés qui complètent sa gamme.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Falcone (Nero di Troia Riserva)",
+        "Puer Apuliae",
+        "Preludio N.1",
+        "Violante"
+      ],
+      "tags": [
+        "puglia",
+        "castel-del-monte",
+        "nero-di-troia",
+        "bombino-nero",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "pugliaparadise|butterfield"
+    },
+    {
+      "id": "it-puglia-prod-torrevento",
+      "nom": "Torrevento",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Castel del Monte (BAT)",
+      "commune": "Corato",
+      "pays": "Italie",
+      "cepages": [
+        "Nero di Troia",
+        "Aglianico",
+        "Moscato"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Castel del Monte DOCG",
+        "Moscato di Trani DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Corato, dans la zone de Castel del Monte, Torrevento est un domaine important du nord de la Pouilles, réputé pour ses Nero di Troia et son Moscato di Trani. Installé dans une ancienne abbaye, il cultive un vaste vignoble sur les hauteurs de la Murgia.\n\nSa cuvée Vigna Pedale (Nero di Troia Riserva) est un rouge structuré et de belle facture, aux côtés de l'Ottagono et d'une gamme complète. Le domaine est aussi réputé pour son Moscato di Trani (Dulcis in Fundo), vin doux traditionnel du secteur. Le style, soigné et régulier, met en valeur les cépages autochtones du nord de la Pouilles — Nero di Troia, Moscato, Bombino — dans des vins accessibles et bien diffusés. La taille du domaine et la constance de sa production en font une valeur sûre de Castel del Monte.\n\nDomaine important de Castel del Monte, Torrevento signe de beaux Nero di Troia (Vigna Pedale) et le Moscato di Trani doux. C'est une valeur sûre du nord de la Pouilles.\n\nInstallé dans une ancienne abbaye sur les hauteurs de la Murgia, Torrevento allie cadre historique et production sérieuse, sur un vaste vignoble d'altitude. Servi sur des viandes ou des fromages, le Vigna Pedale séduit par sa structure ; le Moscato di Trani, doux et parfumé, accompagne desserts et pâtisseries. Le domaine, régulier et bien diffusé, met en valeur les cépages du nord de la Pouilles — Nero di Troia, Moscato, Bombino — dans des vins accessibles. Sa taille et sa constance en font une valeur sûre de Castel del Monte, appréciée pour son rapport qualité-prix et son ancrage dans le terroir de la Murgia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna Pedale (Nero di Troia Riserva)",
+        "Ottagono",
+        "Dulcis in Fundo (Moscato di Trani)"
+      ],
+      "tags": [
+        "puglia",
+        "castel-del-monte",
+        "nero-di-troia",
+        "moscato-di-trani"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-santa-lucia",
+      "nom": "Santa Lucia",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Castel del Monte (BAT)",
+      "commune": "Corato",
+      "pays": "Italie",
+      "cepages": [
+        "Nero di Troia",
+        "Bombino Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Castel del Monte DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Corato, dans la zone de Castel del Monte, Santa Lucia est un domaine familial qui monte, réputé pour ses Nero di Troia. Sur les terroirs de la Murgia, la famille Perrone cultive les cépages autochtones du nord de la Pouilles avec une recherche de qualité.\n\nSes cuvées de Nero di Troia — Le More et le Vigna del Melograno Riserva — sont des rouges de belle facture, structurés et fidèles au terroir de Castel del Monte, aux côtés de rosés de Bombino Nero. Le style, soigné et moderne, met en valeur le Nero di Troia dans des vins équilibrés. Le domaine a gagné en reconnaissance ces dernières années et compte parmi les valeurs montantes de l'appellation Castel del Monte. Santa Lucia illustre le dynamisme qualitatif du nord de la Pouilles.\n\nDomaine familial montant de Castel del Monte, Santa Lucia signe de beaux Nero di Troia (Le More, Vigna del Melograno) et des rosés de Bombino Nero. C'est une valeur montante du nord de la Pouilles.\n\nLa montée en qualité de Santa Lucia illustre le dynamisme du nord de la Pouilles, longtemps éclipsé par le Salento mais aujourd'hui en pleine affirmation autour du Nero di Troia. Servis sur des viandes rouges, du gibier ou des fromages, les vins du domaine séduisent par leur structure et leur fidélité au terroir de Castel del Monte. Le travail sur le Bombino Nero, cépage à rosé de la zone, complète la gamme. Domaine familial ambitieux, Santa Lucia compte parmi les adresses à suivre de l'appellation et confirme le beau potentiel qualitatif du Nero di Troia bien vinifié.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le More (Nero di Troia)",
+        "Vigna del Melograno Riserva",
+        "Bombino Nero"
+      ],
+      "tags": [
+        "puglia",
+        "castel-del-monte",
+        "nero-di-troia"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-puglia-prod-darapri",
+      "nom": "d'Araprì",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Nord Puglia (Foggia)",
+      "commune": "San Severo",
+      "pays": "Italie",
+      "cepages": [
+        "Bombino Bianco",
+        "Nero di Troia",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Severo, dans le nord de la Pouilles (province de Foggia), d'Araprì est une rareté : une maison entièrement dédiée au spumante metodo classico, dans une région de grands rouges solaires. Fondée en 1979 par trois amis (dont les initiales forment le nom : d'Amico, Rapini, Priore), elle a fait le pari audacieux des bulles de qualité dans le Sud.\n\nÀ partir de cépages locaux — le Bombino Bianco surtout, complété de Nero di Troia et de Montepulciano —, elle élabore des spumante de méthode traditionnelle (Brut, Pas Dosé, Gran Cuvée XXI Secolo, rosé) d'une belle finesse, avec de longs élevages sur lies. Le style, précis et élégant, a démontré que la Pouilles pouvait produire de grandes bulles, à rebours des idées reçues. La maison, restée à taille humaine et artisanale, est devenue une référence unique du spumante méridional, saluée par la critique. d'Araprì est une curiosité précieuse de la Pouilles.\n\nMaison de spumante metodo classico à San Severo, d'Araprì élabore de belles bulles à partir du Bombino Bianco, rareté dans le Sud. C'est une référence unique de la Pouilles.\n\nFaire du grand spumante metodo classico dans le Sud, à partir du modeste Bombino Bianco, relevait du défi : d'Araprì l'a relevé avec brio depuis 1979, prouvant que la Pouilles pouvait aussi briller en bulles. Servis à l'apéritif, sur des fruits de mer ou une cuisine fine, ses spumante séduisent par leur finesse et leur fraîcheur, fruits de longs élevages sur lies. La maison, restée artisanale et à taille humaine, cultive une singularité précieuse dans le paysage pugliese. Saluée par la critique, elle est devenue la référence incontournable du spumante méridional et une curiosité que les amateurs de bulles se doivent de connaître.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "d'Araprì Brut",
+        "Gran Cuvée XXI Secolo",
+        "Pas Dosé",
+        "Rosé"
+      ],
+      "tags": [
+        "puglia",
+        "san-severo",
+        "metodo-classico",
+        "bombino",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-coppi",
+      "nom": "Coppi",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gioia del Colle (Bari)",
+      "commune": "Turi",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Aleatico",
+        "Verdeca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Gioia del Colle DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Turi, dans la province de Bari, Coppi est un domaine historique de la zone de Gioia del Colle, réputé pour son Primitivo et pour un rare Aleatico doux. Fondée par Antonio Coppi, ancien œnologue et sénateur de la République, la maison perpétue une tradition ancrée dans le terroir.\n\nSa cuvée Senatore, un Primitivo de Gioia del Colle dédié au fondateur, est un rouge structuré et primé, aux côtés du Peucetico. Le domaine est aussi l'un des rares à produire l'Aleatico en version passito (doux), spécialité locale presque disparue, ainsi que la Verdeca en blanc. Le style, soigné et fidèle aux cépages du terroir, met en valeur le patrimoine viticole de Turi et de Gioia del Colle. La qualité de ses vins et son attachement aux variétés autochtones font de Coppi une belle référence du centre de la Pouilles.\n\nDomaine historique de Turi, Coppi signe le Primitivo Senatore et un rare Aleatico doux. C'est une belle référence du terroir de Gioia del Colle et des cépages autochtones du centre de la Pouilles.\n\nDomaine de mémoire à Turi, Coppi perpétue à la fois le Primitivo de Gioia del Colle et des spécialités locales menacées comme l'Aleatico doux, témoignant d'un attachement rare au patrimoine ampélographique. Servi sur des viandes ou des fromages, le Primitivo Senatore séduit par sa structure ; l'Aleatico passito, lui, accompagne desserts et fromages bleus. Le style, fidèle aux cépages du terroir, met en valeur la diversité du centre de la Pouilles. La longévité de la maison et son engagement pour les variétés autochtones en font une belle référence de Gioia del Colle et de Turi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Senatore (Primitivo)",
+        "Peucetico",
+        "Aleatico Passito"
+      ],
+      "tags": [
+        "puglia",
+        "gioia-del-colle",
+        "primitivo",
+        "aleatico",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "terrachevive"
+    },
+    {
+      "id": "it-puglia-prod-vespa-vignaioli-per-passione",
+      "nom": "Vespa Vignaioli per Passione",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manduria, Vespa Vignaioli per Passione est le domaine du célèbre journaliste italien Bruno Vespa, qui a réalisé là une passion de longue date pour le vin. Sur de beaux terroirs du Salento, avec le concours d'œnologues réputés (dont Riccardo Cotarella), le domaine produit des vins soignés et ambitieux.\n\nSes cuvées de Primitivo (Raccontami, primé) et de Negroamaro, ainsi que le Terracruda, sont des rouges mûrs et structurés, dans un style moderne et gourmand qui met en valeur les cépages du Salento. La notoriété de son fondateur et la qualité des vins ont assuré au domaine une belle visibilité. Le style, soigné et accessible, séduit un large public. Vespa Vignaioli per Passione illustre l'attrait qu'exerce la Pouilles, y compris sur des personnalités venues d'autres horizons, et compte parmi les domaines bien diffusés de Manduria.\n\nDomaine du journaliste Bruno Vespa à Manduria, Vespa Vignaioli per Passione signe des Primitivo et Negroamaro soignés (Raccontami). C'est une belle adresse du Salento, à la notoriété affirmée.\n\nQue Bruno Vespa, l'un des journalistes les plus connus d'Italie, ait choisi la Pouilles pour réaliser sa passion du vin en dit long sur l'attrait de la région. Avec le concours d'œnologues réputés, le domaine vise l'excellence sur les cépages du Salento. Servis sur des viandes, des grillades ou des fromages, ses Primitivo et Negroamaro séduisent par leur générosité et leur soin. La notoriété du fondateur assure une belle visibilité, mais c'est la qualité constante des vins qui a convaincu la critique. Le domaine compte parmi les adresses bien diffusées et appréciées de Manduria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Raccontami (Primitivo)",
+        "Terracruda",
+        "Bruno Vespa Futura"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "negroamaro",
+        "vespa"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-i-pastini",
+      "nom": "I Pastini",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Valle d'Itria (Bari)",
+      "commune": "Locorotondo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdeca",
+        "Bianco d'Alessano",
+        "Minutolo",
+        "Susumaniello"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Locorotondo DOC",
+        "Valle d'Itria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans la Valle d'Itria, autour de Locorotondo et de ses trulli, I Pastini est un domaine spécialisé dans les cépages blancs autochtones de ce terroir frais et calcaire, rare enclave de blancs dans une région de rouges. La famille Carparelli y cultive la Verdeca, le Bianco d'Alessano et surtout le Minutolo, cépage aromatique redécouvert dont la cuvée Rampone est une référence. Le domaine soigne aussi le Susumaniello en rouge. Le style, frais et parfumé, met en valeur la minéralité et l'aromatique des blancs de la Valle d'Itria. I Pastini est l'un des meilleurs ambassadeurs des blancs des trulli, à découvrir sur des poissons et des fruits de mer. C'est une belle porte d'entrée dans la Pouilles blanche, trop souvent méconnue.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rampone (Minutolo)",
+        "Faraone (Verdeca)",
+        "Le Vigne di Sabbie"
+      ],
+      "tags": [
+        "puglia",
+        "valle-d-itria",
+        "locorotondo",
+        "verdeca",
+        "minutolo",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-cardone",
+      "nom": "Cardone",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Valle d'Itria (Bari)",
+      "commune": "Locorotondo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdeca",
+        "Bianco d'Alessano",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Locorotondo DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Locorotondo, dans la Valle d'Itria, Cardone est une maison familiale réputée pour ses blancs frais des trulli et un Primitivo soigné. Sur les sols calcaires de ce terroir d'altitude, la famille cultive les cépages blancs autochtones — Verdeca, Bianco d'Alessano — qui donnent le Locorotondo DOC, blanc vif et minéral, ainsi que le Primitivo en rouge. Le style, net et accessible, met en valeur la fraîcheur des blancs de la Valle d'Itria, contrepoint bienvenu aux rouges solaires de la région. Le bon rapport qualité-prix et la régularité de la gamme en font une valeur sûre. Cardone illustre la vocation blanche de la Valle d'Itria, à apprécier sur des poissons et une cuisine légère. La régularité de la maison et son ancrage dans la Valle d'Itria en font une adresse fiable pour les blancs frais des trulli, encore trop rares dans le paysage viticole pugliese.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Locorotondo",
+        "Primitivo",
+        "Bianco d'Alessano"
+      ],
+      "tags": [
+        "puglia",
+        "valle-d-itria",
+        "locorotondo",
+        "verdeca",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-apollonio",
+      "nom": "Apollonio",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Monteroni di Lecce",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salento IGT",
+        "Copertino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monteroni di Lecce, dans le Salento, Apollonio est une maison familiale de tradition, réputée pour ses longs élevages et son style ample et chaleureux. La famille cultive les cépages autochtones du Salento — Negroamaro, Primitivo, Malvasia Nera — dont elle tire des rouges de garde (Divoto en Negroamaro, Terragnolo en Primitivo) et des rosés. Le style, traditionnel et généreux, avec des élevages soignés, met en valeur la profondeur des cépages salentins. La maison, ancrée dans son territoire, perpétue un savoir-faire familial et compte parmi les valeurs sûres du Salento. Apollonio est une belle adresse pour découvrir les Negroamaro et Primitivo de tradition, à apprécier sur des viandes et des fromages. La fidélité de la famille à un style traditionnel, avec de longs élevages, donne des vins de garde qui témoignent de la profondeur que peut atteindre le Negroamaro salentin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Divoto (Negroamaro)",
+        "Terragnolo (Primitivo)",
+        "Elfo"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "primitivo"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-cantine-due-palme",
+      "nom": "Cantine Due Palme",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Brindisi)",
+      "commune": "Cellino San Marco",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Salice Salentino DOC",
+        "Squinzano DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cellino San Marco, dans le Salento, Cantine Due Palme est une grande coopérative moderne devenue l'une des plus primées de la Pouilles. Rassemblant de nombreux vignerons, elle produit une gamme large et régulière de cépages autochtones — Negroamaro, Primitivo, Malvasia Nera. Sa cuvée Selvarossa (Salice Salentino Riserva) est régulièrement distinguée, aux côtés de l'Angelico et du Serre. Le style, moderne et gourmand, met en valeur la générosité des cépages salentins dans des vins accessibles et bien faits. La réussite de Due Palme illustre la capacité des coopératives pugliesi à conjuguer volume et qualité. C'est une valeur sûre du Salento, à apprécier sur des viandes et des grillades. Le nombre de récompenses obtenues par cette coopérative témoigne d'une exigence qualitative rare à cette échelle, qui a fait sa réputation bien au-delà des frontières de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Selvarossa (Salice Salentino Riserva)",
+        "Angelico",
+        "Serre (Primitivo)"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "hazelstravels"
+    },
+    {
+      "id": "it-puglia-prod-cantine-paolo-leo",
+      "nom": "Cantine Paolo Leo",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Brindisi)",
+      "commune": "San Donaci",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Donaci, dans le Salento, Cantine Paolo Leo est une maison familiale dont les origines remontent au XIXe siècle. Elle met à l'honneur les cépages autochtones — Negroamaro, Primitivo, Malvasia Nera — dans une gamme généreuse et accessible. Son Negroamaro Orfeo a été distingué (Tre Bicchieri), aux côtés du Passitivo (Primitivo) et du Nero della Cappella. Le style, mûr et gourmand, met en valeur la chaleur des cépages salentins. La maison, bien diffusée à l'international, offre un bon rapport qualité-prix et une belle régularité. Paolo Leo compte parmi les valeurs sûres du Salento, à apprécier sur des viandes rouges et des fromages, dans un registre solaire et convivial. L'ancienneté de la maison et sa distribution internationale en font l'un des noms les mieux diffusés du Salento, apprécié pour la constance et la générosité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Orfeo (Negroamaro)",
+        "Passitivo",
+        "Nero della Cappella"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "primitivo",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-natalino-del-prete",
+      "nom": "Natalino del Prete",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Anfiano di Salice",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salento IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Salice Salentino, Natalino del Prete est un petit domaine nature du Salento, prisé des amateurs de vin authentique. En agriculture biologique et vinifications artisanales, sans artifice, la famille del Prete élabore des Negroamaro et Primitivo d'une grande sincérité (cuvées Anne, Antico). Le style, sans compromis, cherche à exprimer le terroir et le cépage dans leur vérité, loin des vins technologiques. La production, confidentielle, est très appréciée de la scène naturelle. Natalino del Prete illustre le renouveau artisanal et nature de la Pouilles, à apprécier sur une cuisine de caractère. C'est une adresse recherchée pour son authenticité et son ancrage dans le terroir salentin. Dans une région dominée par une œnologie conventionnelle, ce petit domaine porte haut les valeurs du vin nature, avec des cuvées vivantes et sincères très prisées des connaisseurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Anne (Negroamaro)",
+        "Antico",
+        "Piccolo Batti"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "nature",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-michele-calo-e-figli",
+      "nom": "Michele Calò & Figli",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Tuglie",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Malvasia Nera"
+      ],
+      "couleurs": [
+        "Rosé",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alezio DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tuglie, dans le Salento méridional, Michele Calò & Figli est un maître du rosé, spécialité de la zone d'Alezio. Sur les terroirs proches de la mer, la famille cultive le Negroamaro et la Malvasia Nera. Sa cuvée Mjère Rosato, rosé de Negroamaro délicat et gastronomique, est une référence historique du rosé pugliese, aux côtés du Mjère Rosso et du Vigna Spano. Le style, fin et élégant, illustre l'art du rosé salentin, l'un des plus réputés d'Italie. La maison, ancrée dans la tradition d'Alezio, perpétue un savoir-faire précieux. Michele Calò est une belle adresse pour découvrir le grand rosé de la Pouilles, à apprécier à l'apéritif ou sur une cuisine méditerranéenne. Dans une région où le rosé est une véritable gloire, Michele Calò en perpétue l'art avec une élégance rare, faisant du Mjère l'un des rosés de référence de tout le Salento.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mjère Rosato",
+        "Mjère Rosso (Negroamaro)",
+        "Vigna Spano"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "alezio",
+        "negroamaro",
+        "rose"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-schola-sarmenti",
+      "nom": "Schola Sarmenti",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Nardò",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Nardò DOC",
+        "Salento IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Nardò, dans le Salento méridional, Schola Sarmenti est un domaine réputé pour ses Primitivo et Negroamaro concentrés et primés. Sur les terroirs solaires de Nardò, proches de la mer Ionienne, la famille cultive les cépages autochtones du Salento. Sa cuvée Eighteen (Primitivo) et le Roccamora (Negroamaro) sont des rouges puissants et mûrs, régulièrement distingués. Le style, généreux et solaire, met en valeur la chaleur du Salento méridional dans des vins amples et gourmands. La qualité constante et les récompenses obtenues en font une valeur sûre de la zone de Nardò. Schola Sarmenti est une belle adresse pour les amateurs de Primitivo et Negroamaro concentrés, à apprécier sur des viandes et des fromages. Les nombreuses distinctions obtenues par le domaine confirment la qualité de ses Primitivo et Negroamaro, expression solaire et concentrée du Salento méridional autour de Nardò.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Eighteen (Primitivo)",
+        "Roccamora (Negroamaro)",
+        "Cubardi"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "nardo",
+        "primitivo",
+        "negroamaro"
+      ],
+      "a_verifier": null,
+      "source": "terrachevive"
+    },
+    {
+      "id": "it-puglia-prod-botromagno",
+      "nom": "Botromagno",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Gravina (Bari)",
+      "commune": "Gravina in Puglia",
+      "pays": "Italie",
+      "cepages": [
+        "Greco",
+        "Malvasia",
+        "Nero di Troia",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gravina DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gravina in Puglia, sur les hauteurs de la Murgia, Botromagno est une référence rare du vin blanc pugliese. Le domaine s'est fait connaître par le Gravina DOC, un blanc frais et minéral à base de Greco et de Malvasia, sur les sols calcaires d'altitude de Gravina — une singularité dans une région de rouges. Il signe aussi des rouges (Nero di Troia, Montepulciano) comme le Pier delle Vigne. Le style, frais et précis, met en valeur la fraîcheur permise par l'altitude de la Murgia. Botromagno illustre le potentiel méconnu des blancs de l'intérieur de la Pouilles. C'est une belle adresse pour découvrir le Gravina, à apprécier sur des poissons et une cuisine légère, loin des clichés sur le vin pugliese. En défendant le blanc de Gravina sur les hauteurs calcaires de la Murgia, Botromagno cultive une singularité précieuse et rappelle que la Pouilles sait aussi produire de beaux vins blancs frais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gravina Bianco",
+        "Pier delle Vigne",
+        "Silvium"
+      ],
+      "tags": [
+        "puglia",
+        "gravina",
+        "greco",
+        "malvasia",
+        "blanc",
+        "murgia"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-a-mano",
+      "nom": "A Mano",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Turi",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "A Mano est un projet né de la rencontre de Mark Shannon, œnologue américain, et d'Elvezia Sbalchiero, qui ont choisi la Pouilles pour élaborer des vins modernes à partir de cépages autochtones. Basé dans la région de Manduria et Gioia del Colle, le domaine signe des Primitivo (dont le Prima Mano) et des Fiano soignés, pensés pour exprimer le fruit et le terroir avec précision, dans un style accessible et bien fait. Le nom « A Mano » (« à la main ») souligne l'attention artisanale portée à la vinification. Le regard international des fondateurs et le bon rapport qualité-prix ont assuré au domaine une belle diffusion. A Mano est une adresse fiable et gourmande pour découvrir le Primitivo et le Fiano de la Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Primitivo A Mano",
+        "Prima Mano (Primitivo)",
+        "Fiano"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "fiano",
+        "export"
+      ],
+      "a_verifier": null,
+      "source": "inwander"
+    },
+    {
+      "id": "it-puglia-prod-amastuola",
+      "nom": "Amastuola",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Taranto)",
+      "commune": "Massafra",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Puglia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Massafra, entre le Salento et Tarente, Amastuola est un grand domaine en agriculture biologique, célèbre pour son vignoble paysager spectaculaire dessiné par l'architecte-paysagiste Fernando Caruncho, formant de vastes vagues de vignes. Sur ce site remarquable, le domaine cultive Primitivo, Negroamaro et Fiano en bio. Ses vins (Centoconi en Primitivo, Amastuola Rosso, Fiano) sont soignés et fidèles au terroir, dans un style moderne. Au-delà de l'esthétique du lieu, l'engagement biologique et la qualité de la gamme font d'Amastuola une belle adresse. Le domaine, qui allie viticulture, art et œnotourisme, est l'un des sites les plus spectaculaires de la Pouilles, à découvrir autant pour ses vins que pour son paysage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Centoconi (Primitivo)",
+        "Amastuola Rosso",
+        "Fiano"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "massafra",
+        "primitivo",
+        "bio",
+        "paysage"
+      ],
+      "a_verifier": null,
+      "source": "pugliaparadise"
+    },
+    {
+      "id": "it-puglia-prod-carvinea",
+      "nom": "Carvinea",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Brindisi)",
+      "commune": "Carovigno",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Negroamaro",
+        "Montepulciano",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Puglia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Carovigno, dans le haut Salento non loin d'Ostuni, Carvinea est un domaine bio confidentiel qui signe des rouges de caractère. Sur ses terroirs, la famille cultive en agriculture biologique les cépages autochtones et méridionaux — Primitivo, Negroamaro, Montepulciano, Aglianico — dont elle tire des vins profonds et personnels (Idea, Origine, Ognibene). Le style, ambitieux et soigné, cherche l'expression du terroir dans des rouges structurés. La production, limitée, est appréciée des amateurs de vins bio de caractère. Carvinea illustre le dynamisme du haut Salento et de la zone d'Ostuni. C'est une adresse à découvrir pour ses rouges bio de belle tenue, à apprécier sur des viandes et des fromages. L'engagement biologique et la recherche de caractère font de ce domaine confidentiel une belle découverte du haut Salento, dans la mouvance qualitative qui anime la région d'Ostuni.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Idea (Primitivo)",
+        "Origine",
+        "Ognibene"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "carovigno",
+        "primitivo",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "pugliaparadise"
+    },
+    {
+      "id": "it-puglia-prod-attanasio",
+      "nom": "Attanasio",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Manduria (Taranto)",
+      "commune": "Manduria",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Primitivo di Manduria DOC",
+        "Primitivo di Manduria Dolce Naturale DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manduria, Attanasio est un petit domaine historique voué au Primitivo, dans le berceau du cépage. La famille perpétue une tradition de Primitivo di Manduria classiques, du sec au rare Dolce Naturale (DOCG), ce Primitivo doux issu de raisins surmûris qui est l'une des plus anciennes spécialités de la zone. Le style, traditionnel, met en valeur la générosité et la chaleur du Primitivo de Manduria. Le domaine, à taille humaine, offre une expression authentique et abordable du cépage. Attanasio est une belle adresse pour découvrir le Primitivo de Manduria dans sa version traditionnelle, sec sur des viandes et des fromages, ou doux sur des desserts et des fromages bleus. La fidélité de ce petit domaine aux traditions de Manduria, jusqu'au rare Primitivo doux naturel, en fait un témoin authentique du patrimoine viticole du berceau du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Primitivo di Manduria",
+        "Dolce Naturale",
+        "Riserva"
+      ],
+      "tags": [
+        "puglia",
+        "manduria",
+        "primitivo",
+        "dolce-naturale",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "winewordswisdom"
+    },
+    {
+      "id": "it-puglia-prod-alberto-longo",
+      "nom": "Alberto Longo",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Nord Puglia (Foggia)",
+      "commune": "Lucera",
+      "pays": "Italie",
+      "cepages": [
+        "Nero di Troia",
+        "Falanghina",
+        "Bombino Bianco",
+        "Montepulciano",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cacc'e Mitte di Lucera DOC",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lucera, dans le nord des Pouilles (la Daunia, province de Foggia), Alberto Longo est l'un des grands champions du Nero di Troia, le cépage rouge autochtone de la Pouilles septentrionale. Ancien consultant de haut niveau (KPMG) devenu vigneron par passion au début des années 2000, il a restauré une ferme du XIXe siècle — l'ancienne cave de la famille Cavalli, active de 1906 aux années 1960 — pour en faire un domaine de qualité doublé d'un lieu d'accueil œnotouristique.\n\nSur 35 hectares répartis entre la Fattoria Cavalli et la Masseria Celentano, en vendange manuelle et rendements maîtrisés, le domaine a fait du Nero di Troia son étendard : la cuvée Le Cruste, Nero di Troia en pureté élevé en barriques et tonneaux français, est un rouge intense, structuré et de garde, aux arômes de mûre, de prune mûre et d'herbes balsamiques, qui a contribué à réhabiliter ce cépage difficile. Le domaine défend aussi la DOC locale Cacc'e Mitte di Lucera (assemblage à dominante Nero di Troia, Montepulciano et Bombino Bianco), fut un pionnier de la Falanghina et du rosé pâle dans le Foggiano (blanc Le Fossette, rosé Donna Adele), et cultive Primitivo, Moscato et cépages internationaux (Merlot, Syrah, Cabernet Franc). Le style, moderne et soigné, allie technologie de cave et respect du raisin.\n\nRéférence de la Daunia et ambassadeur du Nero di Troia, Alberto Longo a hissé ce cépage du nord des Pouilles au rang de grand rouge de terroir. C'est l'une des belles adresses, à la fois viticole et œnotouristique, de la province de Foggia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Cruste (Nero di Troia)",
+        "Cacc'e Mitte di Lucera",
+        "Le Fossette (Falanghina)",
+        "Donna Adele (rosé)"
+      ],
+      "tags": [
+        "puglia",
+        "daunia",
+        "foggia",
+        "lucera",
+        "nero-di-troia",
+        "cacc-e-mitte",
+        "falanghina"
+      ],
+      "a_verifier": null,
+      "source": "albertolongo.it|quattrocalici|licata.be"
+    },
+    {
+      "id": "it-puglia-prod-collezione-ventidiciotto",
+      "nom": "Collezione Ventidiciotto",
+      "type": "domaine",
+      "region": "Puglia",
+      "sous_region": "Salento (Lecce)",
+      "commune": "Masseria Parlangeli (Salento)",
+      "pays": "Italie",
+      "cepages": [
+        "Negroamaro",
+        "Primitivo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Salento IGT",
+        "Puglia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "La Collezione Ventidiciotto est un projet récent du Salento, né en 2018 (d'où son nom, « vingt-dix-huit ») autour de la Masseria Parlangeli, au cœur de la péninsule salentine. Il est porté par le groupe Cantine Ermes (Orestiadi, Molino a Vento), qui a voulu créer une collection dédiée aux cépages les plus représentatifs des Pouilles.\n\nLa gamme met à l'honneur le Negroamaro et le Primitivo, les deux grands cépages rouges du Salento, particulièrement à leur aise ici grâce à des sols profonds et meubles à belle matrice calcaire et à un microclimat singulier : la cave se situe sur une langue de terre balayée à la fois par les vents de l'Adriatique et de la mer Ionienne, qui apportent fraîcheur et ventilation. Il en résulte des vins expressifs et fidèles à leur terroir, le Negroamaro offrant des rouges profonds, balsamiques et épicés, le Primitivo des vins chaleureux, mûrs et veloutés. Le projet, à vocation contemporaine, cherche à exprimer au mieux l'identité de chaque cépage et l'authenticité du Salento, dans un style accessible et gourmand.\n\nJeune collection salentine du groupe Cantine Ermes, la Collezione Ventidiciotto valorise le Negroamaro et le Primitivo sur les terroirs de la Masseria Parlangeli. C'est une expression moderne et soignée des grands cépages des Pouilles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Negroamaro",
+        "Primitivo"
+      ],
+      "tags": [
+        "puglia",
+        "salento",
+        "negroamaro",
+        "primitivo",
+        "cantine-ermes",
+        "recent"
+      ],
+      "a_verifier": "licata.be",
+      "source": "Confirmer la commune exacte de la Masseria Parlangeli et les noms de cuvées (projet Cantine Ermes, 2018)."
+    }
+  ]
+}

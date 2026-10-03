@@ -1,0 +1,251 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "oostvlaanderen",
+  "region_label": "Oost-Vlaanderen",
+  "source_file": "terroirs_oostvlaanderen_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 10,
+  "items": [
+    {
+      "id": "be-oostvlaanderen-terr-collines-de-kruisem",
+      "nom": "Collines de Kruisem",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier",
+        "Pinot Blanc"
+      ],
+      "altitude": "env. 20-60 m",
+      "sols": "Limons quaternaires sur sables et argiles tertiaires",
+      "caracteristiques_rapides": "Quatorze hectares sur une seule commune, dont les dix du plus grand vignoble de la province : le premier foyer viticole de Flandre orientale, entièrement voué au trio champenois et à l'effervescent.",
+      "notes_objectives": "Le premier foyer viticole de Flandre orientale, et le seul de la province où la concentration produise un effet d'échelle : quatorze hectares sur une seule commune, dont les dix du plus grand vignoble provincial, plus trois hectares et demi à Huise.\n\nLe sol n'a rien qui le distingue — des limons quaternaires sur sables et argiles tertiaires, comme tout le sud de la province — et le relief est modeste, à la charnière entre la plaine de l'Escaut et les premières ondulations des Ardennes flamandes. Ce qui fait le lieu, c'est un choix : un encépagement strictement champenois, Chardonnay dominant avec les trois Pinots, et une production exclusivement tournée vers l'effervescent en méthode traditionnelle, avec deux ans d'élevage sur lattes.\n\nLa montée en puissance a été rapide et documentée : 3 200 pieds en 2017, 2,3 hectares en 2019, puis 38 000 pieds plantés d'un coup en avril 2020 pour atteindre dix hectares. Cinq ans se sont écoulés entre la première vigne et la première bouteille commercialisée, en décembre 2022. Ce délai est le prix de la bulle, et il explique pourquoi les vignobles orientés vers l'effervescent apparaissent tardivement sur le marché — un décalage qu'on retrouve à Meerdael, à Saintes et au Château de Fumal. Le secteur a rejoint en 2025 le label BelBul, l'une des rares démarches à réunir vignerons flamands et wallons.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "methode-traditionnelle",
+        "cremant"
+      ],
+      "source": "cruysem.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-crete-daudenarde-a-brakel-varentberg-schampenberg",
+      "nom": "Crête d'Audenarde à Brakel (Varentberg, Schampenberg)",
+      "type": "coteau",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 60-120 m",
+      "sols": "Limons minces sur sables tertiaires, argiles yprésiennes à la base des versants",
+      "caracteristiques_rapides": "Ligne de crête qui structure tout le sud de la province. Les vignobles s'y installent à mi-pente sur les flancs exposés au sud, position explicitement revendiquée comme la seule viable.",
+      "notes_objectives": "La ligne de crête qui court d'Audenarde à Brakel structure tout le sud de la province, et c'est elle qui rend la vigne possible en Flandre orientale. Les vignerons y décrivent leur position avec une précision qu'on ne trouve nulle part ailleurs dans le corpus flamand : à mi-pente, sur les flancs exposés au sud du Varentberg et du Schampenberg.\n\nLa formulation n'est pas anodine. Elle dit que le sommet est trop exposé et trop mince, que le pied de versant est froid et lourd, et que seule la position intermédiaire réunit drainage, exposition et profondeur de sol. C'est la même logique que sur les tiennes du Condroz ou les versants de la Meuse, transposée à un relief bien plus modeste — les buttes ne dépassent guère cent vingt mètres. Les sols sont des limons minces sur sables tertiaires, avec des argiles yprésiennes imperméables à la base des versants.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "source": "wijngoedtvarent.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-kluisberg-et-hotondberg",
+      "nom": "Kluisberg et Hotondberg",
+      "type": "coteau",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 40-151 m",
+      "sols": "Sables tertiaires coiffant des argiles imperméables, sources de versant",
+      "caracteristiques_rapides": "Les points hauts de la Flandre : le Hotondberg culmine à 151 mètres, le Kluisberg le prolonge vers l'ouest. Même ligne de buttes que le Mont-de-l'Enclus wallon, coupée par la frontière linguistique.",
+      "notes_objectives": "Les points hauts de la Flandre. Le Hotondberg culmine à 151 mètres, le Kluisberg le prolonge vers l'ouest, dans un paysage de bois de crête et de routes pavées que le cyclisme a rendu célèbre.\n\nCes buttes sont des reliefs résiduels : des sables tertiaires plus résistants ont protégé de l'érosion les terrains sous-jacents, tandis que les argiles imperméables de la base font sourdre des sources sur les versants — d'où les noms de plusieurs domaines locaux et la présence de bois humides au flanc des collines.\n\nLe point à retenir dépasse la province : cette ligne de buttes est exactement la même que celle du Mont-de-l'Enclus, côté wallon, traitée dans le fichier Hainaut. Une seule colline, coupée par la frontière linguistique, et qui porte des vignes des deux côtés sans que les vignerons des deux versants se connaissent nécessairement.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "transfrontalier"
+      ],
+      "source": "voosbeke.be ; en.wikipedia.org"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-vallons-de-la-zwalm",
+      "nom": "Vallons de la Zwalm",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 20-80 m",
+      "sols": "Limons de versant sur sables et argiles tertiaires",
+      "caracteristiques_rapides": "Réseau dense de vallons entaillés par la Zwalmbeek et ses affluents, connu pour ses moulins à eau. Les versants sud de ces petites vallées offrent les microsites qui rendent la vigne possible.",
+      "notes_objectives": "Un réseau dense de vallons entaillés par la Zwalmbeek et ses affluents, dans une commune connue pour ses moulins à eau — leur nombre dit assez la densité du réseau hydrographique, et donc celle des versants.\n\nC'est là tout l'intérêt du secteur. Le climat général de la Flandre orientale est médiocre pour la vigne, mais chaque petit vallon dégage un flanc exposé au sud qui constitue un microsite viable. Le plus ancien vignoble de Zwalm est ainsi planté sur un versant sud dominant la Zwalmbeek, et revendique explicitement le microclimat de ce vallon. Les sols sont des limons de versant sur sables et argiles tertiaires, entre vingt et quatre-vingts mètres d'altitude. Les domaines y restent minuscules, de trente-cinq ares à quelques hectares.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "source": "wijndomein-vijflinden.be ; bocclo.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-collines-de-zottegem-et-brakel",
+      "nom": "Collines de Zottegem et Brakel",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-120 m",
+      "sols": "Limons sur sables tertiaires, bois de crête",
+      "caracteristiques_rapides": "Secteur le plus vallonné de la province, entre Zottegem, Brakel et Herzele, ponctué de bois de jacinthes. Berceau de la viticulture amateur locale : la guilde de Zottegem est active depuis plus de trente ans.",
+      "notes_objectives": "Le secteur le plus vallonné de la province, entre Zottegem, Brakel et Herzele, ponctué de bois de jacinthes — le Brakelbos et le Muziekbos — qui coiffent les crêtes.\n\nSon importance est autant humaine que géologique. Zottegem est le berceau de la viticulture locale : la guilde de vignerons et de maîtres du vin y est active depuis plus de trente ans, bien avant la vague de plantations commerciales, et une bonne partie des micro-domaines des Ardennes flamandes en sont issus. On retrouve ici le même mécanisme qu'à Villers-la-Ville ou à Huy : des confréries et des associations d'amateurs ont maintenu un savoir-faire pendant les décennies où la viticulture professionnelle n'existait pas, et la génération actuelle en a hérité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "source": "landgoeddorrebeek.be ; erov.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-vallee-de-lescaut-de-gavere-a-audenarde",
+      "nom": "Vallée de l'Escaut de Gavere à Audenarde",
+      "type": "coteau",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 10-60 m",
+      "sols": "Limons et sables de versant sur substrat tertiaire, alluvions en fond de vallée",
+      "caracteristiques_rapides": "Charnière entre la plaine alluviale de l'Escaut et les premières pentes des Ardennes flamandes : les vignobles s'installent sur le rebord, jamais dans la plaine.",
+      "notes_objectives": "La charnière entre la plaine alluviale de l'Escaut et les premières pentes des Ardennes flamandes. Les vignobles s'y installent systématiquement sur le rebord, jamais dans la plaine : les alluvions de fond de vallée sont trop lourdes, trop froides et trop humides.\n\nLe secteur va de Gavere à Wortegem-Petegem, avec des altitudes comprises entre dix et soixante mètres et des sols de limons et sables de versant sur substrat tertiaire. Les plantations y sont récentes, presque toutes postérieures à 2017, et toutes hors appellation — la Flandre orientale ne disposant d'aucune AOP territoriale, contrairement au Hageland, à la Hesbaye flamande ou au Heuvelland. Le secteur est aussi celui où la province touche à la fois le Hainaut et la Flandre occidentale, ce qui en fait un carrefour utile pour lire les continuités géologiques par-delà les frontières administratives.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "jeune-domaine"
+      ],
+      "source": "wijndomein-vaneyck.be ; voosbeke.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-couronne-gantoise-et-basse-vallee-de-lescaut",
+      "nom": "Couronne gantoise et basse vallée de l'Escaut",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 5-30 m",
+      "sols": "Sables et sables limoneux de la Flandre sablonneuse, alluvions de l'Escaut",
+      "caracteristiques_rapides": "De Zwijnaarde à Lochristi et Laarne, sept vignobles ceinturent Gand sans le moindre relief. La vigne y arrive par diversification horticole ou par projet périurbain, et l'abbaye Saint-Pierre y cultivait des vignes jusqu'au XVe siècle.",
+      "notes_objectives": "De Zwijnaarde à Lochristi, Laarne et Destelbergen, sept vignobles ceinturent Gand sans le moindre relief à exploiter. Les sols sont ceux de la Flandre sablonneuse — sables et sables limoneux — avec les alluvions de l'Escaut en fond de vallée.\n\nCe qui rend le secteur viable n'est donc pas le terroir mais la ville : un bassin de clientèle immédiat, un foncier détenu par des exploitations horticoles qui diversifient, et la présence d'institutions de recherche agronomique liées à l'université de Gand.\n\nLe lieu a pourtant une mémoire : l'abbaye Saint-Pierre de Gand possédait des vignes, et le vignoble gantois est mentionné pour la dernière fois au XVe siècle avant que le refroidissement ne l'efface. Replanter à Zwijnaarde en 2005 revenait à renouer un fil interrompu depuis cinq siècles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "gent",
+        "clos-historique"
+      ],
+      "source": "wijndomeinwaes.be ; erov.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-vallee-de-la-dendre",
+      "nom": "Vallée de la Dendre",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Dender en Meetjesland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 5-40 m",
+      "sols": "Alluvions et limons sableux, versants courts entaillés dans le plateau",
+      "caracteristiques_rapides": "Entre Grammont et Termonde, la Dendre entaille le plateau limoneux et dégage quelques versants — les seuls du nord de la province. Secteur sujet aux inondations, ce qui impose les positions hautes.",
+      "notes_objectives": "Entre Grammont et Termonde, la Dendre entaille le plateau limoneux et dégage quelques versants courts — les seuls du nord de la province.\n\nLes sols y sont des alluvions et des limons sableux, à des altitudes très basses, entre cinq et quarante mètres. Le secteur est sujet aux inondations, ce qui impose de rester sur les positions hautes des parcelles et exclut de fait les fonds. Deux domaines y sont installés, à Herdersem et à Denderbelle, tous deux hors appellation, dans un paysage maraîcher et betteravier. C'est un terroir de contrainte plus que d'opportunité : la vigne y est possible, mais rien dans le lieu ne la désignait, et l'implantation tient entièrement au porteur de projet. Grammont, à l'amont, est par ailleurs l'une des rares villes flamandes à conserver une toponymie viticole ancienne sur ses coteaux.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "dender"
+      ],
+      "source": "domein-de-kluizen.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-waasland",
+      "nom": "Waasland",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Waasland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 5-20 m",
+      "sols": "Sables et sables limoneux, nappe haute, prairies humides de bord d'Escaut",
+      "caracteristiques_rapides": "Plaine sableuse entre Gand et Anvers, sans relief ni tradition viticole, où les premières plantations datent d'après 2015. L'un des contextes pédologiques les moins favorables du corpus.",
+      "notes_objectives": "Une plaine sableuse entre Gand et Anvers, sans relief, sans tradition viticole et sans appellation. Les sols sont sableux à sablo-limoneux, la nappe est haute, et les bords de l'Escaut et de la Durme sont occupés par des prairies humides et des réserves naturelles.\n\nC'est l'un des contextes pédologiques les moins favorables de tout le corpus belge, et pourtant deux à trois exploitations s'y sont installées après 2015, dont une de plus de trois hectares plantée en 2021. Le fait mérite d'être noté pour ce qu'il dit de la période : à cette date, les références belges existent, les cépages résistants sont éprouvés, et un porteur de projet n'a plus besoin de la phase d'essai que s'imposaient les pionniers des années 2000. On plante d'emblée, y compris là où personne n'aurait tenté vingt ans plus tôt.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "waasland",
+        "jeune-domaine"
+      ],
+      "source": "molendyck.be ; wijndomeinmira.be"
+    },
+    {
+      "id": "be-oostvlaanderen-terr-meetjesland-et-polders-dassenede",
+      "nom": "Meetjesland et polders d'Assenede",
+      "type": "secteur",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Dender en Meetjesland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 3-10 m",
+      "sols": "Polders et sols sableux, réseau de digues et de canaux",
+      "caracteristiques_rapides": "Extrême nord de la province, à la frontière néerlandaise, dans un paysage de polders hérité des assèchements médiévaux. Cinq hectares y constituent la seule implantation viticole notable.",
+      "notes_objectives": "L'extrême nord de la province, à la frontière néerlandaise, dans un paysage de polders et de canaux hérité des grands travaux d'assèchement médiévaux. Les altitudes tournent autour de cinq mètres, les sols sont sableux, et le réseau de digues structure tout le parcellaire.\n\nUne seule implantation viticole notable y existe, de cinq hectares, adossée à une structure de boissons artisanales plus large — approche entrepreneuriale plutôt que strictement viticole, encore rare en Belgique. Le secteur n'a aucune antériorité viticole et aucun argument de terroir à faire valoir ; il figure dans le corpus pour la couverture géographique et parce que son évolution dira jusqu'où la viticulture belge peut s'étendre hors de ses zones naturelles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "meetjesland",
+        "jeune-domaine"
+      ],
+      "source": "woest.be ; belgischewijnbouwers.be"
+    }
+  ]
+}

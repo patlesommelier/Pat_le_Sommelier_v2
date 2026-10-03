@@ -1,0 +1,756 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "toscana",
+  "region_label": "Toscana (Italie)",
+  "source_file": "terroirs_toscana.json",
+  "built_at": "2026-06-28",
+  "count": 30,
+  "items": [
+    {
+      "id": "it-toscana-terr-panzano",
+      "nom": "Panzano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~280-500 m",
+      "sols": "galestro et alberese, sols caillouteux bien drainés",
+      "caracteristiques_rapides": "UGA de Greve formant le célèbre amphithéâtre de la « Conca d'Oro » : Sangiovese mûr et structuré, à la fois puissant et élégant ; berceau de Fontodi (Flaccianello).",
+      "notes_objectives": "UGA de la commune de Greve in Chianti, Panzano doit sa renommée à la « Conca d'Oro », vaste amphithéâtre de vignes exposé plein sud qui descend en pente douce sous le bourg. Ce cirque naturel, l'un des paysages viticoles les plus célèbres de Toscane, conjugue une excellente exposition, une bonne altitude (de 280 à 500 mètres environ) et des sols de galestro et d'alberese — schistes argileux et marnes calcaires caillouteuses, parfaitement drainés. La combinaison donne au Sangiovese une maturité pleine sans excès, une chair généreuse adossée à une fraîcheur et à une trame minérale qui placent Panzano parmi les sommets du Chianti Classico.\n\nStylistiquement, les vins se distinguent par leur ampleur et leur densité : robe profonde, fruit rouge et noir mûr, épices douces et notes florales, tanins fins mais présents, finale longue et savoureuse. Ils marient la puissance solaire de l'amphithéâtre à la verticalité apportée par l'altitude et le galestro. C'est ici qu'est né l'un des Super Toscans cultes, le Flaccianello della Pieve de Fontodi — dont le propriétaire Giovanni Manetti préside le Consorzio du Chianti Classico — aux côtés de références majeures comme Castello dei Rampolla, Vecchie Terre di Montefili ou Il Molino di Grace. Panzano fut aussi pionnier du bio en Toscane, avec la première « union » de viticulteurs biologiques d'Italie.\n\nTerroir d'élite reconnu de longue date et désormais inscrit parmi les onze UGA officielles du Chianti Classico (2023), Panzano produit des Gran Selezione et des Riserva taillés pour une garde de quinze à vingt ans, parmi les expressions les plus complètes et les plus gourmandes du Sangiovese chiantigiano.\n\nLe nom de Panzano est aujourd'hui un gage de qualité : la Conca d'Oro concentre, sur un périmètre restreint, une densité exceptionnelle de domaines de premier plan, ce qui en fait l'un des secteurs les plus homogènes et les plus fiables de toute la dénomination. L'exposition en cuvette, qui capte et restitue la chaleur tout en profitant de la ventilation des hauteurs, joue un rôle déterminant dans la régularité des maturités d'un millésime à l'autre. Les meilleures cuvées — Gran Selezione et Riserva — y déploient une allonge remarquable et une aptitude à la garde qui révèle, après une décennie de cave, des notes tertiaires de cuir, de tabac et de sous-bois venant napper le fruit. Plus qu'un simple village, Panzano s'est imposé comme une véritable marque de terroir, étendard de la nouvelle hiérarchie du Chianti Classico.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "panzano",
+        "conca-doro",
+        "galestro"
+      ],
+      "source": "chianticlassico|decanter"
+    },
+    {
+      "id": "it-toscana-terr-radda",
+      "nom": "Radda",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~400-600 m",
+      "sols": "galestro et grès (macigno), altitude élevée",
+      "caracteristiques_rapides": "L'une des UGA les plus hautes et fraîches : Sangiovese fin, racé, savoureux, à l'acidité vibrante et au profil floral et minéral, taillé pour la garde.",
+      "notes_objectives": "Perchée au cœur des Monti del Chianti, Radda in Chianti est l'une des UGA les plus hautes et les plus fraîches de la dénomination, avec des vignobles s'étageant souvent de 400 à 600 mètres. Ses sols mêlent galestro et grès (le macigno), pauvres et caillouteux, et l'altitude y impose des nuits fraîches et des maturités tardives. Le résultat est un Sangiovese d'une grande finesse : moins charnu que celui des secteurs plus chauds, mais d'une race et d'une tension remarquables, à l'acidité vibrante et au grain de tanin élégant.\n\nLes vins de Radda séduisent par leur profil aromatique floral et épicé, leurs fruits rouges éclatants, leur minéralité saline et leur allonge rectiligne. Ce sont des Chianti Classico d'altitude, taillés pour la garde, qui gagnent en complexité après plusieurs années de cave. Le réchauffement climatique a renforcé l'atout de ces hauteurs, longtemps jugées trop froides : elles préservent aujourd'hui fraîcheur et équilibre. Radda abrite des noms emblématiques du renouveau qualitatif chiantigiano, à commencer par Montevertine et son légendaire Le Pergole Torte — pur Sangiovese culte —, le Castello di Volpaia, Val delle Corti ou encore Pruneto.\n\nAujourd'hui reconnue parmi les UGA du Chianti Classico, Radda incarne l'expression la plus aérienne et la plus racée du Sangiovese de la dénomination, une référence pour les amateurs de vins fins, frais et de longue garde, à mille lieues des clichés du Chianti rustique d'autrefois.\n\nRadda fut, dès le XIVe siècle, l'un des membres fondateurs de la Lega del Chianti, à l'origine même du nom de la région : c'est dire l'ancrage historique de ce terroir au cœur de l'identité chiantigiane. Son altitude, longtemps perçue comme un handicap lorsque clones et pratiques peinaient à mûrir le Sangiovese, est devenue à l'ère du réchauffement un atout maître, garante de fraîcheur, d'équilibre et de digestibilité. Les sols de galestro, pauvres et friables, contraignent la vigne et concentrent les baies tout en préservant l'acidité ; le grès des secteurs les plus élevés apporte une dimension saline et aérienne. Il en naît des Chianti Classico d'une grande pureté, qui demandent souvent quelques années pour s'ouvrir mais récompensent la patience par une complexité et une persistance remarquables. Aux côtés de Montevertine et Volpaia, des domaines comme Castello d'Albola, Caparsa ou Val delle Corti perpétuent cette signature d'altitude qui fait de Radda l'un des terroirs les plus admirés des amateurs de Sangiovese fin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "radda",
+        "altitude",
+        "galestro"
+      ],
+      "source": "decanter|chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-gaiole",
+      "nom": "Gaiole",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~300-600 m",
+      "sols": "grès en hauteur, marnes et calcaire à mi-pente",
+      "caracteristiques_rapides": "La plus vaste UGA, où l'altitude commande le style : hauteurs fraîches proches de Radda, mi-pentes plus riches en fruits noirs ; terre de Castello di Ama, Brolio (Ricasoli) et Riecine.",
+      "notes_objectives": "Gaiole in Chianti est la plus vaste des onze UGA du Chianti Classico, et l'une des plus historiques : c'est au château de Brolio que le baron Bettino Ricasoli mit au point, au XIXe siècle, la « formule » du Chianti moderne. Sur ce vaste territoire, l'altitude est le grand facteur de style : les hauteurs sablonneuses et de grès, jusqu'à 600 mètres, donnent des vins proches de Radda par leur finesse et leur fraîcheur, tandis que les mi-pentes sur marnes et calcaires offrent une chair plus sombre et plus dense.\n\nLes Sangiovese de Gaiole conjuguent en général structure, profondeur et capacité de garde, avec un fruit qui va du cerise éclatant des hauteurs aux notes plus noires et épicées des coteaux mieux abrités. La diversité des expositions et des altitudes fait de Gaiole un terroir mosaïque, où chaque domaine cisèle son propre équilibre entre puissance et tension. On y trouve quelques-uns des plus grands noms de la dénomination : Castello di Ama (et son San Lorenzo en Gran Selezione, ou l'Apparita en Merlot), Barone Ricasoli avec le château de Brolio, Riecine, Rocca di Montegrossi ou Badia a Coltibuono.\n\nBerceau du Chianti tel qu'on le connaît et aujourd'hui UGA officielle, Gaiole produit des Riserva et des Gran Selezione de grande garde, parmi les plus profonds et les plus complets du Chianti Classico — un terroir d'altitude où le Sangiovese atteint l'un de ses plus beaux équilibres entre élégance et puissance.\n\nLa diversité de Gaiole tient aussi à son histoire : c'est l'un des secteurs où la grande propriété aristocratique a longtemps dominé, de Brolio à Coltibuono, ce qui a favorisé très tôt une viticulture ambitieuse et des vins de garde. Hauteurs boisées, châteaux imposants et vallons encaissés composent un paysage où chaque exposition compte. Sur les sites les plus élevés, le grès donne des vins tendus, droits et parfumés, proches de l'esprit de Radda ; sur les coteaux mieux abrités à mi-pente, marnes et calcaire apportent une chair plus sombre, des tanins plus enrobés et une profondeur supplémentaire. Les grandes cuvées de Gaiole — Gran Selezione comme le San Lorenzo de Castello di Ama ou les sélections parcellaires de Ricasoli — comptent parmi les Sangiovese les plus complets de Toscane, capables d'une garde de quinze à vingt ans. Castello di Ama y a même hissé le Merlot au rang d'icône avec l'Apparita, preuve de la polyvalence de ce terroir d'exception.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "gaiole",
+        "altitude"
+      ],
+      "source": "decanter|chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-lamole",
+      "nom": "Lamole",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~450-650 m",
+      "sols": "galestro et alberese, vignes en terrasses",
+      "caracteristiques_rapides": "L'UGA la plus haute du Chianti Classico (~585 m), en terrasses au-dessus de Greve : Sangiovese aérien, floral et tendu, d'une grande finesse aromatique.",
+      "notes_objectives": "Nichée sur les hauteurs de Greve in Chianti, Lamole est l'UGA la plus élevée du Chianti Classico, avec des vignes culminant autour de 600 mètres et une altitude moyenne proche de 585 mètres. Ses coteaux escarpés, façonnés en terrasses soutenues par des murets de pierre sèche, reposent sur des sols sableux issus de la décomposition du grès, mêlés de galestro et d'alberese. Ce site d'altitude, frais et lumineux, donne au Sangiovese une signature inimitable.\n\nLes vins de Lamole sont parmi les plus aériens et les plus floraux du Chianti Classico : robe souvent claire, parfum délicat de violette et de fruits rouges, bouche tendue, saline et d'une grande finesse aromatique. L'altitude y préserve une fraîcheur et une élégance qui en font un terroir culte pour les amateurs de Sangiovese ciselé, à mille lieues des versions plus puissantes des secteurs bas. Le domaine éponyme Lamole di Lamole et I Fabbri en sont les ambassadeurs.\n\nReconnue parmi les UGA officielles, Lamole est une niche d'exception, dont les vins finement parfumés et taillés par l'altitude séduisent ceux qui recherchent la grâce et la tension plutôt que la puissance — l'une des plus belles expressions de finesse du Chianti Classico.\n\nCe profil d'altitude, longtemps jugé atypique, s'impose aujourd'hui comme un atout précieux face au réchauffement : Lamole conserve une fraîcheur et une élégance que beaucoup de secteurs plus bas envient, ce qui en fait l'un des terroirs les plus recherchés par les amateurs de Sangiovese ciselé.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "lamole",
+        "altitude",
+        "terrasses"
+      ],
+      "source": "lamole|decanter"
+    },
+    {
+      "id": "it-toscana-terr-castellina",
+      "nom": "Castellina",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~350-550 m",
+      "sols": "alberese et galestro, parfois tuf",
+      "caracteristiques_rapides": "UGA à la plus grande surface plantée, sur les versants vers la vallée de l'Elsa : Sangiovese aux arômes de fruits noirs et à la trame minérale tendue.",
+      "notes_objectives": "Stratégiquement perchée sur l'ancienne route reliant Florence à Sienne, Castellina in Chianti est l'UGA qui possède la plus grande superficie de vignes du Chianti Classico. Ses coteaux, entre 350 et 550 mètres, descendent en larges nappes vers la vallée de l'Elsa, sur des sols d'alberese et de galestro parfois mêlés de tuf. L'altitude module subtilement le style des vins, qui conservent toutefois une signature reconnaissable.\n\nLes Sangiovese de Castellina se distinguent par leurs arômes de fruits noirs et leur trame minérale tendue, qui leur donne fraîcheur et nervosité. Ce sont des Chianti Classico structurés et équilibrés, conjuguant maturité du fruit et tension, taillés pour une bonne garde. La diversité des expositions et des altitudes y autorise une belle variété d'expressions, des cuvées plus souples aux Riserva et Gran Selezione plus ambitieux. Le secteur abrite des domaines réputés comme Castellare di Castellina, Rocca delle Macìe ou Nittardi.\n\nInscrite parmi les onze UGA officielles, Castellina est l'un des grands secteurs centraux du Chianti Classico, dont les vins, marqués par le fruit noir et la minéralité, comptent parmi les expressions les plus fiables et harmonieuses de la dénomination.\n\nCarrefour historique entre Florence et Sienne, Castellina bénéficie d'une large palette d'expositions qui nourrit la diversité de ses vins, des cuvées plus immédiates aux Gran Selezione les plus profonds, tous marqués par cette tension minérale qui signe le secteur.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "castellina",
+        "alberese"
+      ],
+      "source": "decanter|chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-castelnuovo-berardenga",
+      "nom": "Castelnuovo Berardenga",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~250-400 m",
+      "sols": "argilo-calcaire, climat plus chaud",
+      "caracteristiques_rapides": "UGA la plus méridionale et la plus chaude, au paysage méditerranéen : Sangiovese plus rond, charnu et structuré ; terre de Fèlsina (Rancia, Colonia).",
+      "notes_objectives": "À l'extrémité sud-est du Chianti Classico, Castelnuovo Berardenga est l'UGA la plus méridionale et la plus chaude de la dénomination. Le paysage y change : les collines s'arrondissent vers les Crete Senesi, la végétation se fait plus méditerranéenne, et le climat plus clément. Sur des sols argilo-calcaires, à des altitudes plus modestes (250 à 400 mètres environ), le Sangiovese atteint une maturité pleine et régulière.\n\nLes vins de Castelnuovo Berardenga se distinguent par leur rondeur, leur chair et leur structure : plus charnus et généreux que ceux des secteurs d'altitude, ils gardent néanmoins l'ossature tannique du Sangiovese. C'est le territoire de Fèlsina, dont les Riserva Rancia (sur le secteur du Berardenga) et les Gran Selezione Colonia figurent parmi les plus grands Chianti Classico, et qui indique « Berardenga » sur ses étiquettes depuis des décennies, bien avant l'ère des UGA. Castello di Bossi, San Felice (avec son légendaire Vigorello et le Gran Selezione Il Grigio) y sont également installés.\n\nDésormais UGA officielle, Castelnuovo Berardenga produit des Chianti Classico amples, structurés et de belle garde, expression la plus solaire et la plus charnue de la dénomination, portée par des domaines de tout premier plan.\n\nCette générosité méridionale n'exclut nullement la finesse : les meilleurs Riserva du secteur, à l'image du Rancia de Fèlsina, allient une chair opulente à une fraîcheur et une longueur remarquables, et figurent régulièrement parmi les sommets du Chianti Classico.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "castelnuovo-berardenga",
+        "meridional"
+      ],
+      "source": "decanter|felsina"
+    },
+    {
+      "id": "it-toscana-terr-san-donato-in-poggio",
+      "nom": "San Donato in Poggio",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "alberese, galestro et argiles",
+      "caracteristiques_rapides": "UGA de Barberino Tavarnelle, à cheval Florence/Sienne : Sangiovese structuré et équilibré ; voisinage de Monsanto et Isole e Olena.",
+      "notes_objectives": "À cheval sur la limite des provinces de Florence et de Sienne, dans la commune de Barberino Tavarnelle, l'UGA de San Donato in Poggio occupe la frange occidentale du Chianti Classico. Ses vignobles, entre 250 et 450 mètres, reposent sur des sols d'alberese, de galestro et d'argiles, dans un secteur de collines bien exposées qui conjugue maturité et fraîcheur.\n\nLes Sangiovese de San Donato in Poggio se signalent par leur structure et leur équilibre : fruit mûr, tanins fermes, belle acidité et bon potentiel de garde. Le secteur jouit d'un prestige certain grâce au voisinage de domaines de référence comme Castello di Monsanto — dont Il Poggio fut, en 1962, le premier Chianti Classico à mentionner un cru sur son étiquette — et la proche Isole e Olena, l'un des grands noms du Sangiovese toscan (Cepparello).\n\nDésormais UGA officielle, San Donato in Poggio est un terroir solide et harmonieux du Chianti Classico occidental, capable de produire des Riserva et des Gran Selezione structurés et de bonne longévité, porté par un voisinage de domaines historiques de premier plan.\n\nLe secteur conjugue la fraîcheur de la frange occidentale et une bonne maturité du Sangiovese, ce qui en fait un terroir taillé pour des vins de garde équilibrés. Le voisinage de Monsanto et d'Isole e Olena, deux maisons cultes du Sangiovese toscan, témoigne du potentiel d'un secteur longtemps resté dans l'ombre et désormais valorisé par sa reconnaissance en UGA.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "san-donato-in-poggio"
+      ],
+      "source": "chianticlassico|decanter"
+    },
+    {
+      "id": "it-toscana-terr-greve",
+      "nom": "Greve",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "alberese, galestro et alluvions de la vallée",
+      "caracteristiques_rapides": "UGA de vallée au nord, plus tempérée : Sangiovese classique, souple et fruité, d'accès plus immédiat.",
+      "notes_objectives": "UGA de la vallée homonyme au nord du Chianti Classico, Greve in Chianti occupe un secteur plus tempéré et plus ouvert que les hauteurs voisines. Ses vignobles, entre 200 et 450 mètres, reposent sur des sols d'alberese, de galestro et d'alluvions, et bénéficient d'un climat un peu plus doux qui favorise des maturités régulières.\n\nLe Sangiovese y donne des Chianti Classico classiques, souples et fruités, d'accès plus immédiat que ceux des secteurs d'altitude, sans renoncer à l'ossature et à la fraîcheur typiques de la dénomination. La grande diversité du territoire — qui englobe des frazioni aussi réputées que Panzano, Lamole ou Montefioralle, désormais UGA à part entière — fait de Greve un carrefour majeur du Chianti Classico, riche de domaines de tout premier plan.\n\nReconnue parmi les UGA officielles, Greve offre un visage équilibré et avenant du Sangiovese chiantigiano, à la fois représentatif et accueillant, point d'entrée idéal dans la diversité de la dénomination.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "greve"
+      ],
+      "source": "chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-montefioralle",
+      "nom": "Montefioralle",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~300-450 m",
+      "sols": "galestro et alberese",
+      "caracteristiques_rapides": "Petite UGA autour du bourg médiéval de Montefioralle (Greve) : Sangiovese de caractère, fin et parfumé.",
+      "notes_objectives": "Petite UGA blottie autour du bourg médiéval fortifié de Montefioralle, dans la commune de Greve in Chianti, ce secteur confidentiel séduit par son caractère et son authenticité. Ses vignes, entre 300 et 450 mètres, reposent sur des sols de galestro et d'alberese, dans un amphithéâtre de collines bien exposées.\n\nLe Sangiovese y donne des vins fins et parfumés, à la fois structurés et élégants, marqués par le fruit rouge, les notes florales et une trame minérale. La petite taille du secteur et la qualité de ses domaines artisanaux lui valent une réputation grandissante auprès des amateurs en quête d'expressions précises et de caractère.\n\nDésormais inscrite parmi les onze UGA officielles du Chianti Classico, Montefioralle illustre la diversité fine de la dénomination : un terroir de niche, historique et pittoresque, dont les Sangiovese soignés méritent l'attention.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "montefioralle",
+        "greve"
+      ],
+      "source": "chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-san-casciano",
+      "nom": "San Casciano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "alluvions profondes, argiles, sables",
+      "caracteristiques_rapides": "UGA la plus septentrionale, aux sols souvent plus profonds : Sangiovese souple et fruité, à maturité plus précoce.",
+      "notes_objectives": "UGA la plus septentrionale du Chianti Classico, San Casciano in Val di Pesa marque la porte d'entrée de la dénomination au sud de Florence. Ses vignobles, à des altitudes plus modestes (200 à 350 mètres), reposent souvent sur des sols plus profonds — alluvions, argiles et sables — ce qui, joint à un climat un peu plus doux, favorise une maturité précoce du Sangiovese.\n\nLes vins y sont en général souples, fruités et d'accès aisé, à la chair tendre et aux tanins enrobés, sans l'austérité des secteurs d'altitude. Le secteur abrite quelques grands noms historiques, à commencer par Antinori, dont la tenuta Tignanello-Solaia se situe à proximité, ainsi que d'autres domaines majeurs implantés de longue date.\n\nReconnue parmi les UGA officielles, San Casciano offre un visage plus charnu et plus accessible du Chianti Classico, représentatif du versant nord de la dénomination, et abrite plusieurs maisons emblématiques de la Toscane viticole.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "san-casciano",
+        "septentrional"
+      ],
+      "source": "chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-vagliagli",
+      "nom": "Vagliagli",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~350-500 m",
+      "sols": "galestro et alberese, altitude moyenne",
+      "caracteristiques_rapides": "UGA de la frazione de Vagliagli (Castelnuovo Berardenga), plus haute et fraîche que le cœur de la commune : Sangiovese équilibré et structuré.",
+      "notes_objectives": "UGA correspondant à la frazione de Vagliagli, dans la partie nord de la commune de Castelnuovo Berardenga, ce secteur se distingue de son chef-lieu par une altitude plus élevée et un climat plus frais. Ses vignobles, entre 350 et 500 mètres, reposent sur des sols de galestro et d'alberese, propices à des Sangiovese équilibrés.\n\nLes vins de Vagliagli conjuguent la chair des secteurs méridionaux et une fraîcheur apportée par l'altitude : structurés et fruités, dotés d'une bonne acidité et de tanins fermes, ils offrent un profil harmonieux et de bonne garde. La présence de domaines soigneux y nourrit une réputation qui s'affirme depuis la reconnaissance des UGA.\n\nInscrite parmi les onze UGA du Chianti Classico, Vagliagli illustre la finesse du découpage récent de la dénomination, distinguant un terroir d'altitude au sein d'une commune par ailleurs réputée pour ses vins plus solaires.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "chianti-classico",
+        "vagliagli"
+      ],
+      "source": "chianticlassico"
+    },
+    {
+      "id": "it-toscana-terr-montosoli",
+      "nom": "Montosoli",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~270-350 m",
+      "sols": "galestro calcaire, colline isolée au nord",
+      "caracteristiques_rapides": "Le cru le plus distinctif de Montalcino, colline fraîche au nord : Brunello d'une grande finesse de tanins, salin et minéral, alliant élégance et intensité ; Baricci, Altesino, Caparzo.",
+      "notes_objectives": "Directement au nord de la ville de Montalcino, Montosoli est sans doute le cru le plus distinctif du Brunello, et celui qui a le plus tôt revendiqué une identité de terroir. Cette colline isolée, qui forme une terrasse naturelle surplombant la vallée, doit sa singularité à un sol de galestro calcaire et à un microclimat plus frais que la moyenne de l'appellation, autour de 270 à 350 mètres d'altitude. La roche de galestro y apporte une salinité et une minéralité marquées, tandis que la fraîcheur du site préserve l'éclat aromatique du Sangiovese Grosso.\n\nLes Brunello de Montosoli sont réputés pour la finesse de leurs tanins et leur intensité parfumée : floraux et savoureux, ils allient l'élégance à une profondeur et une énergie qui rivalisent avec les sites les plus puissants de Montalcino. C'est un terroir qui produit des vins droits, sapides et d'une grande digestibilité, taillés pour une longue garde. Altesino fut, dès 1978, le premier à embouteiller une cuvée Montosoli séparée ; mais c'est la famille Baricci, installée exclusivement sur la colline depuis 1955, qui en est l'âme historique, avec un Brunello d'altitude et d'exposition idéales, ripe et droit à la fois. Caparzo et d'autres y possèdent aussi des parcelles convoitées.\n\nCru emblématique du nord de Montalcino, Montosoli est devenu la référence de ceux qui plaident pour une reconnaissance officielle des sous-zones du Brunello. Il incarne un style d'une finesse et d'une fraîcheur exemplaires, où le galestro signe des vins minéraux, élégants et profonds — un point de repère absolu pour comprendre la diversité de Montalcino.\n\nL'histoire récente de Montosoli est indissociable du débat sur le zonage de Montalcino : la singularité criante de ses vins en a fait l'argument-massue des partisans d'une reconnaissance officielle des sous-zones, dans une appellation qui a jusqu'ici résisté à toute subdivision. Sa petite taille, sa géologie homogène et la constance de son profil — chose rare à Montalcino — en font un cas d'école. La colline, en terrasse exposée au sud-est, jouit d'un microclimat où la fraîcheur nocturne préserve les arômes tandis que l'ensoleillement assure une maturité complète. Les Brunello qui en sont issus se reconnaissent à leur signature saline et florale, au soyeux de leurs tanins et à leur capacité à vieillir avec grâce sur deux décennies. Au-delà de Baricci, Altesino et Caparzo, Montosoli reste l'un des très rares lieux-dits de Montalcino dont le seul nom suffit à garantir un style et un niveau — un authentique grand cru de fait, sinon de droit.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "montosoli",
+        "nord",
+        "galestro"
+      ],
+      "source": "decanter|vinfolio"
+    },
+    {
+      "id": "it-toscana-terr-castelnuovo-dellabate",
+      "nom": "Castelnuovo dell'Abate",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~150-450 m",
+      "sols": "marnes calcaires et schistes, influence du Monte Amiata",
+      "caracteristiques_rapides": "Sous-zone du sud-est, la plus chaude mais ventée par l'Amiata et l'Orcia : Brunello puissant et mûr mais frais et parfumé, équilibre rare entre force et grâce ; Poggio di Sotto, Mastrojanni.",
+      "notes_objectives": "Au sud-est de la colline de Montalcino, surplombant la vallée de l'Orcia et l'abbaye de Sant'Antimo, Castelnuovo dell'Abate s'est imposé ces dernières années comme l'une des sous-zones les plus convoitées du Brunello. C'est le secteur le plus chaud de l'appellation, mais sa position le sauve des excès : adossé au volcan éteint du Monte Amiata, qui le protège des vents froids d'est, il est balayé par les brises de la vallée de l'Orcia et par l'air frais venu de la montagne, ce qui crée de fortes amplitudes thermiques jour/nuit. Les meilleurs vignobles, entre 150 et 450 mètres, reposent sur des marnes calcaires mêlées de schistes.\n\nLe style qui en résulte fait l'unanimité parmi les spécialistes : des Brunello à la fois mûrs et puissants, mais frais, parfumés et d'une élégance rare, où la chair généreuse du fruit s'adosse à une acidité vibrante et à des notes florales et herbacées. Cet équilibre singulier entre force et grâce explique l'engouement des amateurs et des collectionneurs. Mastrojanni, fondé en 1975 et resté fidèle aux grands foudres, en fut le pionnier ; Poggio di Sotto en est aujourd'hui la star, célébré pour sa fraîcheur et sa buvabilité, aux côtés de Ciacci Piccolomini d'Aragona, Uccelliera ou Stella di Campalto.\n\nSous-zone encore « officieuse » mais unanimement reconnue par le négoce et la critique, Castelnuovo dell'Abate produit des Brunello d'une profondeur et d'un raffinement qui en font l'un des terroirs les plus recherchés de Montalcino, capables d'allier la puissance solaire du sud à une élégance et une longévité remarquables.\n\nL'essor de Castelnuovo dell'Abate accompagne l'expansion du vignoble de Montalcino entre les années 1980 et 2000, lorsque de nombreux producteurs du nord vinrent y acquérir des terres, séduits par le potentiel de ce versant sud-est. Mais c'est l'implantation de domaines entièrement dédiés à la sous-zone qui lui a forgé une identité propre. Les sols, d'une mosaïque inhabituelle de marnes calcaires et de schistes, conjugués à la fraîcheur nocturne et à la ventilation constante, donnent des vins qui réconcilient deux qualités souvent opposées : la puissance solaire et la fraîcheur aromatique. Les spécialistes affirment reconnaître à l'aveugle les Brunello de Castelnuovo, tant leur équilibre entre profondeur, énergie et parfum est singulier. Cette réputation, longtemps cantonnée aux cercles d'initiés et de collectionneurs, déborde aujourd'hui largement, portée par l'aura de Poggio di Sotto et de Stella di Campalto.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "castelnuovo-dellabate",
+        "sud-est",
+        "amiata"
+      ],
+      "source": "decanter|cluboenologique"
+    },
+    {
+      "id": "it-toscana-terr-tavernelle",
+      "nom": "Tavernelle",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~300-450 m",
+      "sols": "sols calcaires et argilo-sableux du sud-ouest",
+      "caracteristiques_rapides": "Sous-zone du sud-ouest, haut lieu historique : Brunello élégant et structuré ; terre de Soldera (Case Basse), Pieve Santa Restituta et Poggio Antico.",
+      "notes_objectives": "Au sud-ouest de la colline de Montalcino, à proximité de Sant'Angelo in Colle, Tavernelle est un secteur historique de l'appellation, où plusieurs des fondateurs du Brunello moderne se sont installés. Ses coteaux, entre 300 et 450 mètres, reposent sur des sols calcaires et argilo-sableux et bénéficient d'une exposition généreuse, tempérée par l'altitude et par les courants d'air venus du sud. Le Sangiovese Grosso y trouve un équilibre singulier entre maturité et tension, qui a fait la réputation de ce terroir.\n\nTavernelle doit sa célébrité à une figure devenue légendaire : Gianfranco Soldera, dont le domaine Case Basse a produit pendant des décennies l'un des Brunello (puis, après un différend avec le Consorzio, l'un des Toscana IGT) les plus recherchés au monde, parangon d'un style traditionnel, translucide, parfumé et d'une longévité hors norme. À ses côtés, le secteur abrite Pieve Santa Restituta (propriété de Gaja à Montalcino) et Poggio Antico. Les vins de Tavernelle se distinguent par leur structure ferme, leur finesse aromatique et leur grande aptitude au vieillissement.\n\nBien qu'« officieuse » comme toutes les sous-zones de Montalcino, Tavernelle jouit d'un prestige considérable, porté par l'aura de Soldera et par la qualité constante de ses domaines. C'est un terroir de Brunello élégants et structurés, taillés pour la très longue garde, qui occupe une place à part dans la géographie fine de l'appellation.\n\nL'aura de Tavernelle tient pour beaucoup au mythe Soldera : pendant un demi-siècle, Gianfranco Soldera a cultivé à Case Basse un Sangiovese d'une pureté et d'une longévité légendaires, conduit avec un soin extrême, vinifié sans concession et capable de défier le temps sur plusieurs décennies — un vin devenu l'une des références absolues du Sangiovese mondial, recherché à prix d'or. Mais le secteur ne se résume pas à ce seul nom : sa position sud-ouest, son altitude et ses sols calcaires en font un terroir taillé pour des Brunello à la fois mûrs et tendus, dont la structure ferme se patine en élégance avec l'âge. Pieve Santa Restituta, reprise par Angelo Gaja, y a apporté la rigueur d'un grand nom du Piémont ; Poggio Antico, perché en altitude, y signe des vins droits et profonds. Ce voisinage d'excellence confère à Tavernelle un prestige qui dépasse largement sa modeste superficie.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "tavernelle",
+        "sud-ouest",
+        "soldera"
+      ],
+      "source": "vinfolio|decanter"
+    },
+    {
+      "id": "it-toscana-terr-santangelo-in-colle",
+      "nom": "Sant'Angelo in Colle",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~300-450 m",
+      "sols": "argilo-limoneux, climat méditerranéen chaud",
+      "caracteristiques_rapides": "Sous-zone du sud-ouest, chaude et ensoleillée, balayée par les brises de la Maremme : Brunello le plus musclé et puissant ; Il Poggione, Lisini, Col d'Orcia, Argiano.",
+      "notes_objectives": "Au sud-ouest de la colline de Montalcino, Sant'Angelo in Colle est l'un des secteurs historiques du Brunello, où beaucoup des fondateurs de l'appellation ont posé leurs racines. Perché sur des coteaux exposés au sud, entre 300 et 450 mètres, sur des sols argilo-limoneux, il subit de plein fouet le climat méditerranéen chaud et sec de cette partie de l'appellation, balayé par les brises chaudes venues de la Maremme. La maturité du Sangiovese Grosso y est précoce et généreuse.\n\nLes Brunello de Sant'Angelo in Colle comptent parmi les plus musclés et les plus puissants de Montalcino : robe dense, fruit noir mûr, structure tannique imposante, ampleur et chaleur en bouche. Ce sont des vins de garde, qui demandent du temps pour fondre leur matière. Le secteur réunit des noms majeurs et historiques de l'appellation — Il Poggione, Lisini, Col d'Orcia, Argiano, Tenuta di Sesta — qui ont longtemps défini l'image classique du Brunello : un vin généreux, solaire et imposant.\n\nSous-zone officieuse mais clairement identifiée, Sant'Angelo in Colle incarne le versant le plus puissant et le plus méridional du Brunello, à l'opposé de la finesse fraîche du nord. C'est le terroir des Sangiovese amples et structurés, taillés pour les grandes tables et la longue garde.\n\nL'ensoleillement, la sécheresse relative et les sols argilo-limoneux y donnent des vins parmi les plus colorés et les plus corsés de l'appellation, dont la matière imposante demande souvent une décennie pour se fondre pleinement. C'est, avec Castelnuovo dell'Abate, le grand pôle du Brunello méridional.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "santangelo-in-colle",
+        "sud",
+        "puissance"
+      ],
+      "source": "vinfolio|frw"
+    },
+    {
+      "id": "it-toscana-terr-montalcino-centro",
+      "nom": "Montalcino (centro)",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~400-500 m",
+      "sols": "marnes, calcaire et schistes en altitude autour du bourg",
+      "caracteristiques_rapides": "Cœur historique en altitude autour de la ville : Brunello frais, structuré et longiligne, austère jeune et bâti pour la garde ; Biondi-Santi (Il Greppo), Fuligni.",
+      "notes_objectives": "Autour de la ville de Montalcino, sur les hauteurs qui couronnent la colline, se trouve le cœur historique de l'appellation. C'est ici, sur des sols de marnes, de calcaire et de schistes, à des altitudes souvent comprises entre 400 et 500 mètres, que naquit le Brunello moderne. La fraîcheur de l'altitude et la pauvreté des sols y façonnent un Sangiovese Grosso droit et structuré, à l'acidité marquée, austère dans sa jeunesse mais bâti pour traverser les décennies.\n\nLe style du secteur central privilégie la tension et la longévité plutôt que la puissance immédiate : robe souvent translucide, parfum floral et savoureux, tanins fermes, allonge minérale. C'est l'expression la plus classique et la plus austère du Brunello, celle qui réclame le plus de patience. Le terroir est indissociable de Biondi-Santi et de son domaine du Greppo, à près de 480 mètres, berceau historique du Brunello, où l'on vendange tôt pour préserver la fraîcheur ; on y trouve aussi Fuligni et d'autres maisons de référence attachées à ce style structuré.\n\nCœur battant de l'appellation, le secteur de Montalcino-centre produit des Brunello droits, frais et de très longue garde, qui incarnent l'âme traditionnelle du Sangiovese de Montalcino — des vins exigeants, faits pour le temps.\n\nCette austérité de jeunesse, longtemps réservée aux connaisseurs, est précisément ce qui fait la grandeur des Brunello du secteur central : ce sont des vins de très longue garde, qui se révèlent et se complexifient sur vingt ou trente ans, fidèles à l'esprit fondateur de Biondi-Santi.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "montalcino-centro",
+        "altitude",
+        "historique"
+      ],
+      "source": "vinfolio|jancisrobinson"
+    },
+    {
+      "id": "it-toscana-terr-canalicchio",
+      "nom": "Canalicchio",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~250-400 m",
+      "sols": "calcaire et argiles riches en minéraux, versant nord-est",
+      "caracteristiques_rapides": "Sous-zone du nord/nord-est réputée pour ses sols minéraux : Brunello parfumé, complexe et plus fin que puissant.",
+      "notes_objectives": "Au nord et au nord-est de la colline de Montalcino, Canalicchio est l'une des sous-zones les plus réputées du versant frais de l'appellation. Ses vignobles, entre 250 et 400 mètres, reposent sur des sols mêlant calcaire et argiles riches en éléments minéraux, qui apportent complexité et profondeur au Sangiovese Grosso. Plus tardive que le sud, cette zone septentrionale donne des vins moins solaires, mais d'une grande finesse et d'une expression aromatique délicate.\n\nLes Brunello de Canalicchio se signalent par leur bouquet parfumé et nuancé, leur élégance plutôt que leur puissance, et une trame minérale qui leur confère fraîcheur et longueur. Ce sont des vins de garde équilibrés, prisés des amateurs de Brunello classiques et raffinés. Le secteur a donné son nom à plusieurs domaines de référence, comme Canalicchio di Sopra ou Canalicchio di Franco Pacenti, ardents défenseurs de l'identité de ce terroir nordique.\n\nSous-zone officieuse mais reconnue, Canalicchio illustre le visage le plus fin du Brunello, là où l'altitude et la fraîcheur du nord ciselent des Sangiovese minéraux, parfumés et élégants, complémentaires des expressions plus puissantes du sud de Montalcino.\n\nL'exposition nord-est, plus fraîche et plus tardive, y préserve une acidité naturelle et une finesse de tanin qui distinguent nettement ces vins des expressions solaires du sud. Les meilleurs Brunello de Canalicchio comptent parmi les plus élégants et les plus aptes au vieillissement de toute l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "canalicchio",
+        "nord-est",
+        "mineral"
+      ],
+      "source": "thepaperplane|vinfolio"
+    },
+    {
+      "id": "it-toscana-terr-camigliano",
+      "nom": "Camigliano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "argilo-sableux, climat méditerranéen",
+      "caracteristiques_rapides": "Sous-zone du sud-ouest, plus chaude et précoce : Brunello rond et accessible ; Castelgiocondo (Frescobaldi).",
+      "notes_objectives": "Au sud-ouest de la colline de Montalcino, Camigliano est l'une des sous-zones méridionales du Brunello, plus chaude et plus précoce. Ses vignobles, entre 200 et 350 mètres, reposent sur des sols argilo-sableux, sous un climat méditerranéen marqué qui favorise une maturité pleine du Sangiovese Grosso.\n\nLes Brunello de Camigliano se signalent par leur rondeur, leur générosité de fruit et leur accessibilité : des vins charnus, mûrs et chaleureux, dont les tanins, plus souples, autorisent un abord assez précoce tout en conservant une capacité de garde honorable. C'est dans ce secteur que se trouve notamment Castelgiocondo (Frescobaldi), grande propriété emblématique du sud de l'appellation.\n\nSous-zone officieuse du versant chaud de Montalcino, Camigliano produit des Brunello généreux et avenants, qui complètent par leur rondeur méridionale les expressions plus fraîches et plus structurées du nord de l'appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "camigliano",
+        "sud"
+      ],
+      "source": "cluboenologique"
+    },
+    {
+      "id": "it-toscana-terr-torrenieri",
+      "nom": "Torrenieri",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese Grosso"
+      ],
+      "altitude": "~250-350 m",
+      "sols": "sols argileux plus lourds, secteur nord-est",
+      "caracteristiques_rapides": "Sous-zone du nord-est, plus argileuse et fraîche, longtemps moins cotée : Brunello souple, à la trame plus tendre.",
+      "notes_objectives": "Au nord-est de la colline de Montalcino, en direction de la Val d'Orcia, Torrenieri est une sous-zone à part dans le paysage du Brunello. Ses sols, plus argileux et plus lourds, et son secteur de plus basse altitude lui ont longtemps valu une réputation moindre, les traditionalistes craignant que ce zonage ne pénalise les terroirs jugés moins prestigieux.\n\nLes Brunello de Torrenieri y présentent souvent une trame plus tendre et plus souple, des tanins moins fermes et un profil plus accessible que ceux des grands coteaux. La qualité du travail à la vigne et à la cave y fait toutefois toute la différence, et plusieurs domaines y signent des vins équilibrés et sincères.\n\nSous-zone discutée du Brunello, Torrenieri illustre la complexité du débat sur le zonage de Montalcino : un terroir plus argileux et plus frais, dont les vins, plus souples, demandent à être jugés domaine par domaine plutôt que sur la seule réputation du secteur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "brunello",
+        "torrenieri",
+        "nord-est",
+        "argile"
+      ],
+      "source": "decanter|wine365"
+    },
+    {
+      "id": "it-toscana-terr-bolgheri",
+      "nom": "Bolgheri",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot"
+      ],
+      "altitude": "~0-120 m",
+      "sols": "graves, alluvions et dépôts marins, proche du littoral",
+      "caracteristiques_rapides": "Appellation côtière des cépages bordelais : graviers drainants, brises maritimes et fort ensoleillement donnent des rouges denses, soyeux et opulents (Bolgheri Rosso/Superiore).",
+      "notes_objectives": "Sur la côte tyrrhénienne de la Maremme, autour du village de Bolgheri et de sa célèbre allée de cyprès, s'étend l'appellation qui a réinventé le vin toscan. Longtemps considérée comme un arrière-pays sans intérêt viticole, Bolgheri s'est imposée dans le sillage de Sassicaia comme la terre d'élection des cépages bordelais — Cabernet Sauvignon, Cabernet Franc, Merlot, parfois Petit Verdot ou Syrah. Le terroir, à basse altitude (du niveau de la mer à environ 120 mètres), repose sur des graviers, des alluvions et des dépôts d'origine marine, bien drainés.\n\nLe climat méditerranéen, l'ensoleillement intense renforcé par la réverbération de la mer et les brises maritimes qui rafraîchissent les fins d'après-midi permettent une maturité pleine et régulière. Il en résulte des rouges denses, soyeux et opulents, à la chair généreuse et aux tanins veloutés, dans un style bordelais solaire reconnaissable. Au-delà des icônes Sassicaia, Ornellaia, Masseto et Guado al Tasso, l'appellation compte une pléiade de domaines de haut niveau (Grattamacco, Le Macchiole, Michele Satta…) déclinant Bolgheri Rosso et Rosso Superiore.\n\nOfficialisée en 1994 après des années où ces vins « hors-normes » étaient vendus en vino da tavola, Bolgheri reste jeune et expérimentale, mais déjà installée au sommet de la hiérarchie italienne. C'est le grand terroir bordelais de Toscane, où les cépages du Médoc trouvent au bord de la Méditerranée une expression riche et immédiatement séduisante.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "bolgheri",
+        "cotier",
+        "bordelais",
+        "graves"
+      ],
+      "source": "winesearcher|cellartours"
+    },
+    {
+      "id": "it-toscana-terr-sassicaia",
+      "nom": "Sassicaia",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc"
+      ],
+      "altitude": "~80-300 m",
+      "sols": "graviers caillouteux (« sassi »), flanc oriental de l'appellation",
+      "caracteristiques_rapides": "Le « champ de pierres » de Tenuta San Guido, seule DOC mono-domaine d'Italie (Bolgheri Sassicaia) : Cabernet d'une élégance racée, à la minéralité graveleuse, archétype du Super Toscan.",
+      "notes_objectives": "Sassicaia n'est pas un simple lieu-dit : c'est la seule DOC mono-domaine d'Italie. Né dans les années 1940-1960 de l'intuition du marquis Mario Incisa della Rocchetta, qui planta des cépages bordelais (Cabernet Sauvignon et Cabernet Franc, dit-on issus de Château Lafite) sur les graviers caillouteux du flanc oriental de Bolgheri, ce « champ de pierres » — c'est le sens du nom en dialecte — donna le premier des Super Toscans. Le millésime 1968, commercialisé en 1971, bouleversa le paysage du vin italien et ouvrit la voie à Ornellaia, Masseto et à toute la révolution de Bolgheri.\n\nLe terroir, situé sur les hauteurs de Castiglioncello, plus élevé et plus frais que la plaine bolgheraise, repose sur des graves drainantes qui rappellent celles des Graves et du Haut-Médoc. Conjuguées à l'ensoleillement intense et aux brises maritimes, elles donnent un Cabernet d'une élégance racée, à la minéralité graveleuse, structuré mais jamais lourd, souvent comparé — face à l'Ornellaia plus opulent — au Lafite de Bolgheri pour sa retenue et sa pureté. C'est un vin de très grande garde, qui se patine sur des décennies.\n\nConsacré par sa DOC propre en 1994, fait unique en Italie, Sassicaia est devenu une icône mondiale et l'archétype même du Super Toscan : un Cabernet bordelais d'inspiration médocaine né sur le littoral toscan, dont la régularité et le raffinement en font l'un des plus grands vins du pays, et le symbole fondateur de tout le terroir de Bolgheri.\n\nL'histoire de Sassicaia est celle d'une révolution discrète : pendant près de vingt ans, le marquis Incisa della Rocchetta produisit ce vin pour sa seule consommation, convaincu que le sol caillouteux de Bolgheri pouvait rivaliser avec le Médoc, avant que son neveu Piero Antinori et l'œnologue Giacomo Tachis ne le persuadent de le commercialiser. Le triomphe du millésime 1968, puis des victoires retentissantes face aux plus grands Bordeaux lors de dégustations internationales, firent de Sassicaia un symbole et déclenchèrent la ruée vers Bolgheri. Le terroir, sur les hauteurs de Castiglioncello, se distingue du reste de l'appellation par son altitude et sa fraîcheur, qui apportent au Cabernet une dimension aérienne et une acidité préservée. L'assemblage, dominé par le Cabernet Sauvignon et complété de Cabernet Franc, est élevé selon les canons bordelais. Tout en retenue et en pureté, d'une régularité qui force l'admiration millésime après millésime, il privilégie l'élégance à la démonstration.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "bolgheri",
+        "sassicaia",
+        "doc-monodomaine",
+        "graves",
+        "icone"
+      ],
+      "source": "winesearcher|drinkitalian"
+    },
+    {
+      "id": "it-toscana-terr-masseto",
+      "nom": "Masseto",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Merlot"
+      ],
+      "altitude": "~120 m",
+      "sols": "argiles plioceniques bleu-gris compactes (« massi »)",
+      "caracteristiques_rapides": "La colline d'argile bleue de l'Ornellaia, plantée en Merlot : terroir unique en Bolgheri donnant l'un des plus grands Merlots du monde, riche, structuré et velouté.",
+      "notes_objectives": "Masseto est l'un des terroirs les plus singuliers d'Italie : une colline isolée d'à peine sept hectares, au sein du domaine de l'Ornellaia à Bolgheri, plantée exclusivement en Merlot. Sa renommée tient tout entière à son sol — un cas unique dans une appellation dominée par les graviers. Le nom dérive de massi, « gros blocs », en référence aux mottes compactes d'argile bleu-gris pliocène qui affleurent ici. Cette argile, si dense que la noble famille Della Gherardesca y prélevait jadis de quoi fabriquer des briques, retient l'eau et tempère le cycle de la vigne, ce qui s'est révélé idéal pour le Merlot.\n\nC'est l'œnologue André Tchelistcheff qui, en prospectant pour Lodovico Antinori, pressentit le potentiel de cette parcelle alors plantée d'oliviers. Le Merlot y fut planté, et après un essai en 1986, le premier millésime officiel (1987) connut un succès immédiat. Masseto s'est imposé comme l'un des plus grands Merlots du monde, souvent rapproché de Pétrus : un vin d'une richesse profonde, à la texture veloutée et opulente, aux arômes de fruits noirs, de chocolat et d'épices, soutenu par des tanins fermes mais enrobés, et d'une grande longévité.\n\nEmbouteillé en Toscana IGT plutôt qu'en Bolgheri DOC, Masseto illustre à merveille la part de terroir d'estate qui caractérise Bolgheri : ici, c'est une poche d'argile unique, et non une tradition de cru partagé, qui définit le lieu. Devenu l'un des vins italiens les plus chers et les plus convoités, il demeure le grand Merlot de référence du pays.\n\nLa singularité de Masseto en a fait un objet de culte : sept hectares de Merlot sur une poche d'argile bleue unique, vinifiés parcelle par parcelle avec une précision quasi bourguignonne. Là où le reste de Bolgheri repose sur des graviers et privilégie le Cabernet, Masseto a démontré que l'argile compacte de cette colline pouvait porter le Merlot à un sommet mondial, à la manière des grands terroirs de Pomerol. Le vin, d'abord confidentiel, s'est hissé en quelques millésimes parmi les plus prestigieux et les plus chers d'Italie, et dispose désormais de sa propre cave dédiée et d'un second vin, Massetino. Son profil conjugue une concentration impressionnante et une texture veloutée, une richesse de fruit noir et une complexité épicée, portées par des tanins fermes mais soyeux et une allonge qui en fait un vin de très longue garde. Plus qu'un cru, Masseto est devenu une référence mondiale du Merlot.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "bolgheri",
+        "masseto",
+        "merlot",
+        "argile",
+        "icone"
+      ],
+      "source": "winesearcher|wineenthusiast"
+    },
+    {
+      "id": "it-toscana-terr-carmignano",
+      "nom": "Carmignano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Carmignano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "sols alluviaux et argilo-calcaires, près de Florence",
+      "caracteristiques_rapides": "Petite DOCG historique près de Florence, autorisant le Cabernet (« uva francesca ») depuis l'époque des Médicis : Sangiovese complété de bordelais, structuré et racé.",
+      "notes_objectives": "Au nord-ouest de Florence, sur les collines du Montalbano près de Prato, Carmignano est l'une des plus petites DOCG d'Italie — à peine plus d'une centaine d'hectares — mais aussi l'une des plus historiques. Réputée dès le Moyen Âge, elle fut distinguée dès 1716 par un édit du grand-duc Cosme III de Médicis, qui en fit l'une des quatre zones viticoles d'élite de Toscane et lui accorda une protection juridique pionnière. Ses sols, sous 400 mètres d'altitude, mêlent marnes calcaires (alberese), schistes argileux (galestro) et grès.\n\nLa grande singularité de Carmignano est d'avoir, bien avant les Super Toscans, codifié l'assemblage du Sangiovese avec le Cabernet — l'« uva francesca » introduite, dit la tradition, à l'époque des Médicis. Le décret impose aujourd'hui un minimum de 50 % de Sangiovese et 10 à 20 % de Cabernet Sauvignon ou Franc. Plus chaude et plus abritée que le Chianti, la zone permet au Cabernet de mûrir pleinement, apportant structure, profondeur et notes balsamiques. Il en résulte des rouges élégants et veloutés, plus « bordelais » que le Chianti, à la garde affirmée. Capezzana en est le domaine emblématique, aux côtés de Piaggia.\n\nDOCG depuis 1990, Carmignano est un véritable « Super Toscan avant l'heure », terroir confidentiel mais d'un grand pedigree historique, dont les assemblages Sangiovese-Cabernet d'une élégance distinctive méritent bien mieux que la relative discrétion qui les entoure.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "carmignano",
+        "medici",
+        "cabernet",
+        "historique"
+      ],
+      "source": "wikipedia|decanter"
+    },
+    {
+      "id": "it-toscana-terr-chianti-rufina",
+      "nom": "Chianti Rufina",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Chianti Rufina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "galestro et marnes, vallée fraîche de la Sieve",
+      "caracteristiques_rapides": "Zone fraîche d'altitude à l'est de Florence : Sangiovese tendu, frais et apte à une longue garde, plus austère jeune ; Selvapiana, Frescobaldi (Nipozzano).",
+      "notes_objectives": "À l'est de Florence, dans la vallée de la Sieve au pied de l'Apennin, le Chianti Rufina est la plus petite et la plus fraîche des sous-zones du Chianti. L'altitude (souvent 200 à 450 mètres et au-delà) et les courants d'air frais venus des montagnes y imposent un climat continental marqué, sur des sols de galestro et de marnes. Le Sangiovese y mûrit lentement, conservant une acidité élevée et une grande capacité de garde.\n\nLes Chianti Rufina sont réputés pour leur fraîcheur, leur structure et leur longévité : plus austères et tendus dans leur jeunesse que les Chianti Classico, ils gagnent en complexité et en finesse au vieillissement, déployant des arômes de fruits rouges, d'épices et de sous-bois. Longtemps tenus pour les Chianti les plus aptes à la garde, ils sont portés par des domaines emblématiques comme Selvapiana et Frescobaldi (avec le château de Nipozzano). La DOC voisine de Pomino, plus haute encore, prolonge cette veine d'altitude.\n\nPetite zone de caractère, le Chianti Rufina offre un visage frais, racé et de longue garde du Sangiovese toscan, distinct du Chianti Classico, et constitue souvent l'une des plus belles affaires qualité-prix parmi les grands terroirs de Sangiovese de Toscane.\n\nCette aptitude au vieillissement, exceptionnelle pour un Chianti, est la grande signature de la Rufina : les meilleurs crus, à l'image du Bucerchiale de Selvapiana ou des sélections de Nipozzano, se patinent magnifiquement sur dix à quinze ans, gagnant en complexité et en velouté.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "chianti-rufina",
+        "altitude",
+        "garde",
+        "sieve"
+      ],
+      "source": "jancisrobinson|decanter"
+    },
+    {
+      "id": "it-toscana-terr-vino-nobile-di-montepulciano",
+      "nom": "Vino Nobile di Montepulciano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Vino Nobile di Montepulciano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Prugnolo Gentile"
+      ],
+      "altitude": "~250-600 m",
+      "sols": "sables et argiles plioceniques",
+      "caracteristiques_rapides": "DOCG du Prugnolo Gentile (clone de Sangiovese) : rouges parfumés, équilibrés et accessibles ; nouvelles UGA « Pieve » introduites récemment pour zoner le territoire.",
+      "notes_objectives": "Autour de la cité Renaissance de Montepulciano, dans le sud-est de la Toscane, le Vino Nobile fut l'une des premières DOCG d'Italie (1980) et l'un des plus anciens vins « nobles » du pays. Il repose sur le Prugnolo Gentile, clone local de Sangiovese, planté entre 250 et 600 mètres sur des sols sablo-argileux d'origine pliocène, plus tendres et plus chauds que ceux du Chianti ou de Montalcino.\n\nLes vins en tirent un profil parfumé, souple et équilibré : fruits rouges et noirs, notes florales et épicées, tanins plus fondus, allonge harmonieuse. Plus accessibles et veloutés que le Brunello, ils n'en possèdent pas moins une vraie capacité de garde dans leurs versions Riserva. La dénomination a engagé un travail de zonage et introduit récemment les UGA « Pieve » pour mieux distinguer ses terroirs et hisser ses meilleures cuvées. Avivino, Boscarelli, Poliziano ou Avignonesi en sont des références reconnues.\n\nSouvent éclipsé par ses voisins de Montalcino, le Vino Nobile di Montepulciano n'en demeure pas moins un grand terroir de Sangiovese, dont les meilleures expressions, parfumées et structurées, allient l'accessibilité à un réel potentiel de vieillissement.\n\nCette identité, distincte du Brunello voisin malgré un cépage cousin, repose sur des sols plus tendres et un style plus avenant. L'introduction des UGA Pieve, en distinguant les meilleurs secteurs, vise précisément à révéler le potentiel longtemps sous-estimé des grands terroirs de Montepulciano.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "vino-nobile",
+        "montepulciano",
+        "prugnolo-gentile",
+        "pieve"
+      ],
+      "source": "wikipedia|consorzio"
+    },
+    {
+      "id": "it-toscana-terr-pomino",
+      "nom": "Pomino",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Pomino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "sols caillouteux d'altitude, secteur frais",
+      "caracteristiques_rapides": "Petite DOC d'altitude voisine de la Rufina, terre des Frescobaldi : rouges et blancs frais (y compris cépages bordelais et bourguignons), élégants et tendus.",
+      "notes_objectives": "Voisine de la Rufina, à l'est de Florence, la petite DOC de Pomino occupe les hauteurs fraîches de l'Apennin, où les vignes grimpent souvent au-dessus de 600 mètres. Ses sols caillouteux d'altitude et son climat frais en font l'un des terroirs les plus septentrionaux et les plus élevés de Toscane, historiquement lié à la famille Frescobaldi.\n\nPomino se distingue par sa polyvalence : on y produit des rouges (Sangiovese complété de cépages bordelais) et surtout des blancs frais et élégants, parfois issus de Chardonnay et de Pinot, une rareté en Toscane. L'altitude y signe des vins tendus, fins et aromatiques, à l'acidité préservée.\n\nPetite DOC d'altitude au caractère affirmé, Pomino offre un visage atypique de la Toscane viticole — frais, montagnard et ouvert aux cépages internationaux — qui en fait un complément singulier des grands terroirs de Sangiovese.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "pomino",
+        "altitude",
+        "frescobaldi",
+        "blanc"
+      ],
+      "source": "frescobaldi|wikipedia"
+    },
+    {
+      "id": "it-toscana-terr-morellino-di-scansano",
+      "nom": "Morellino di Scansano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Maremma (Morellino di Scansano)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "sols variés de la Maremme côtière, climat chaud",
+      "caracteristiques_rapides": "DOCG de la Maremme méridionale autour du Sangiovese (« Morellino ») : rouges chaleureux, mûrs et souples, d'accès gourmand et immédiat.",
+      "notes_objectives": "Dans la Maremme méridionale, autour du bourg de Scansano, le Morellino di Scansano est la grande DOCG de Sangiovese de la côte toscane — « Morellino » étant le nom local du cépage. Ses vignobles, entre 100 et 300 mètres, sur des sols variés et sous un climat chaud et maritime, donnent une maturité pleine et précoce.\n\nLes vins en tirent un profil chaleureux, mûr et souple : fruits noirs gorgés de soleil, tanins fondus, acidité plus modérée que celle des Sangiovese de l'intérieur. Ce sont des rouges gourmands et d'accès immédiat, à boire plutôt sur leur fruit, dont les versions Riserva offrent davantage de structure. La proximité de la mer et l'ensoleillement signent un style méridional reconnaissable.\n\nDOCG depuis 2007, le Morellino di Scansano incarne le visage solaire et accessible du Sangiovese toscan, un Maremma généreux et convivial, complémentaire des expressions plus austères du Chianti ou de Montalcino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "morellino",
+        "maremma",
+        "scansano"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-toscana-terr-vernaccia-di-san-gimignano",
+      "nom": "Vernaccia di San Gimignano",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Vernaccia di San Gimignano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vernaccia"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "sables et argiles plioceniques, tuf",
+      "caracteristiques_rapides": "Le grand blanc de Toscane, autour des tours de San Gimignano : Vernaccia vive et saline, aux notes d'agrumes et d'amande, à la finale amère typique.",
+      "notes_objectives": "Autour des célèbres tours médiévales de San Gimignano, la Vernaccia est le plus illustre vin blanc de Toscane, et l'un des plus anciens vins italiens à appellation. Le cépage Vernaccia, autochtone, y est planté entre 200 et 400 mètres sur des sols sablo-argileux d'origine pliocène et de tuf, qui lui confèrent fraîcheur et minéralité.\n\nLes vins se distinguent par leur vivacité et leur salinité, leurs arômes d'agrumes, de fleurs et d'amande, et leur finale légèrement amère, signature typique du cépage. Loin du cliché du blanc toscan neutre, les meilleures Vernaccia gagnent en texture et en complexité avec un léger vieillissement, certaines passant en fût. C'est une rareté dans une région presque entièrement vouée au rouge.\n\nPremière DOC blanche d'Italie (1966) puis DOCG, la Vernaccia di San Gimignano demeure le grand blanc historique de Toscane : un vin sapide et caractériel, indissociable de son paysage de tours, qui mérite une place à part dans la géographie des terroirs toscans.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "vernaccia",
+        "san-gimignano",
+        "blanc"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-toscana-terr-cortona",
+      "nom": "Cortona",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Cortona",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Syrah"
+      ],
+      "altitude": "~250-500 m",
+      "sols": "sols argilo-sableux du Val di Chiana, climat chaud",
+      "caracteristiques_rapides": "DOC de l'est toscan devenue référence pour la Syrah : rouges épicés, mûrs et profonds ; Tenimenti Luigi d'Alessandro.",
+      "notes_objectives": "Dans l'est de la Toscane, sur les collines du Val di Chiana au pied de la cité étrusque de Cortona, la DOC Cortona s'est forgé une identité singulière autour de la Syrah. Plantée entre 250 et 500 mètres sur des sols argilo-sableux, sous un climat chaud et continental, la Syrah y trouve des conditions de maturité idéales.\n\nLes Cortona Syrah se signalent par leur profil épicé, mûr et profond : fruits noirs, poivre, notes balsamiques, chair généreuse et tanins enveloppants, dans un style qui peut évoquer les grandes Syrah du Rhône ou du Nouveau Monde. Le domaine Tenimenti Luigi d'Alessandro a largement contribué à révéler le potentiel du cépage sur ce terroir.\n\nDOC originale dans le paysage toscan dominé par le Sangiovese, Cortona est devenue une petite référence pour la Syrah en Italie, un terroir de niche dont les meilleurs vins, riches et épicés, méritent la curiosité des amateurs.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "cortona",
+        "syrah",
+        "val-di-chiana"
+      ],
+      "source": "wikipedia|dalessandro"
+    },
+    {
+      "id": "it-toscana-terr-val-di-cornia---suvereto",
+      "nom": "Val di Cornia / Suvereto",
+      "type": "lieu-dit",
+      "region": "Toscana",
+      "sous_region": "Maremma (Val di Cornia/Suvereto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Sangiovese"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "sols caillouteux et argileux de la côte tyrrhénienne",
+      "caracteristiques_rapides": "Secteur côtier au sud de Bolgheri, terre des cépages bordelais et du Sangiovese : rouges denses et solaires ; Tua Rita (Redigaffi).",
+      "notes_objectives": "Au sud de Bolgheri, sur la côte tyrrhénienne, le secteur de la Val di Cornia et de Suvereto prolonge la veine bordelaise de la Maremme. Ses sols caillouteux et argileux, sous un climat méditerranéen chaud et ensoleillé, conviennent aussi bien aux cépages bordelais — Merlot, Cabernet — qu'au Sangiovese.\n\nIl en résulte des rouges denses, mûrs et solaires, à la chair généreuse et aux tanins veloutés. Le secteur doit une large part de sa réputation à Tua Rita, dont le Redigaffi (Merlot) figure parmi les Merlots les plus encensés d'Italie, révélant le potentiel de ce coin de la Maremme. Suvereto a d'ailleurs accédé au rang de DOCG.\n\nTerroir côtier dans le sillage de Bolgheri, la Val di Cornia / Suvereto confirme la vocation de la Maremme pour les cépages bordelais et les rouges puissants, un secteur encore confidentiel mais capable de signatures de très haut niveau.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "val-di-cornia",
+        "suvereto",
+        "maremma",
+        "tuarita"
+      ],
+      "source": "wikipedia|tuarita"
+    }
+  ]
+}

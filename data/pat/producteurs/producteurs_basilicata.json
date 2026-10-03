@@ -1,0 +1,1082 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "basilicata",
+  "region_label": "Basilicata (Italie)",
+  "source_file": "producteurs_basilicata.json",
+  "built_at": "2026-07-11",
+  "count": 25,
+  "items": [
+    {
+      "id": "it-basilicata-prod-elena-fucci",
+      "nom": "Elena Fucci",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Barile",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barile, sur les pentes volcaniques du Monte Vulture, Elena Fucci est le domaine de référence de l'Aglianico del Vulture et l'une des vigneronnes les plus célébrées d'Italie. Son histoire tient du conte : en 2000, alors étudiante en œnologie et décidée à quitter son village natal, elle renonce à ses projets pour sauver les vignes que son grand-père Generoso s'apprêtait à vendre, et fonde son domaine.\n\nLe domaine repose sur un joyau : environ six hectares de très vieilles vignes d'Aglianico (jusqu'à 70 ans), situées sur la partie la plus haute de la contrada Solagna del Titolo, un terroir volcanique d'exception. De cette parcelle unique naît le Titolo, un Aglianico del Vulture mono-cru devenu culte : un rouge d'une couleur rubis intense, au nez complexe (rose séchée, mûre, agrumes, lavande, thé), à la fois puissant et d'une élégance rare, aux tanins fins et à la longue garde. Cultivé en agriculture biologique et élevé dans des barriques de 200 litres aux douelles épaisses, le Titolo est considéré comme la référence de l'Aglianico moderne, celui qui a prouvé que le cépage pouvait allier profondeur et finesse, loin des vins rustiques. Multiple lauréate des Tre Bicchieri, encensée par Robert Parker et Wine Spectator, régulièrement présente à OperaWine, Elena Fucci a hissé le Vulture sur la carte des grands vins du monde. Son domaine est aujourd'hui l'ambassadeur incontesté de la Basilicata viticole.\n\nLE domaine de référence du Vulture : le Titolo, mono-cru de vieilles vignes bio, est un Aglianico culte, référence mondiale de l'élégance moderne du cépage. Elena Fucci est l'ambassadrice de la Basilicata viticole.\n\nL'ascension d'Elena Fucci illustre la révolution qu'a connue le Vulture en une génération. Il y a vingt-cinq ans, cette région isolée de la Basilicata — la deuxième moins peuplée et moins productive d'Italie — était dominée par les coopératives et les gros producteurs, et son Aglianico, souvent vendu en vrac (jusqu'à 40 % de la production partait améliorer d'autres vins, y compris le Chianti), restait méconnu. En misant sur une parcelle unique de vieilles vignes, sur le bio et sur une vinification précise, Elena Fucci a incarné le passage d'une viticulture de masse à une viticulture d'auteur, révélant au monde le potentiel de terroir du Vulture. Le Titolo, servi sur l'agneau, le gibier, les viandes rôties ou les fromages affinés — accords parfaits avec ce vin d'hiver puissant —, se patine sur quinze à vingt ans et plus, développant des notes tertiaires de cuir, de tabac et de sous-bois. Son terroir, sur les sols volcaniques les plus élevés de la contrada, à l'ombre du volcan éteint, conjugue altitude, fraîcheur et ensoleillement, une combinaison rare qui donne à l'Aglianico du Vulture sa signature minérale et sa fraîcheur, distincte de celle du Taurasi campanien. Figure de proue d'une nouvelle génération, Elena Fucci est devenue un symbole : celui d'une Basilicata qui, longtemps restée l'un des secrets les mieux gardés d'Italie, s'affirme désormais comme l'une des grandes terres de rouge du Sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Titolo (Aglianico del Vulture)",
+        "Titolo Riserva",
+        "Amph"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "barile",
+        "rouge",
+        "bio",
+        "icone",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winealchemy|wineenthusiast|vinous"
+    },
+    {
+      "id": "it-basilicata-prod-paternoster",
+      "nom": "Paternoster",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Barile",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barile, sur les pentes du Monte Vulture, Paternoster est l'une des maisons historiques et fondatrices de l'Aglianico del Vulture, un pilier de l'appellation. Fondée en 1925 par Anselmo Paternoster, elle a traversé quatre générations et joué un rôle majeur dans la reconnaissance du grand rouge de la Basilicata.\n\nLe fils du fondateur, Pino Paternoster, l'un des premiers œnologues formés de la région, fut un moteur de la modernisation du Vulture : dans les années 1970, il fit partie de ceux qui, avec D'Angelo, mirent en bouteille l'Aglianico sous la nouvelle DOC ; puis il délaissa les traditionnels fûts de châtaignier pour le chêne de Slavonie et les barriques, afin d'affiner l'expression du cépage. La cuvée phare, le Don Anselmo (du nom du fondateur), est un Aglianico del Vulture de référence : un rouge profond, structuré et de longue garde, benchmark de l'appellation, élevé pour moitié en grands foudres de Slavonie et pour moitié en barriques. Le domaine signe aussi le Rotondo (mono-cru plus moderne) et le Synthesi (plus accessible), ainsi que de la Falanghina en blanc. Depuis 2016, la maison est majoritairement détenue par la famille Tommasi (Vénétie), qui a renforcé l'orientation biologique et durable, sous la houlette de Fabio Mecca, quatrième génération. Paternoster demeure l'un des noms les plus respectés et les plus constants du Vulture.\n\nMaison historique et pilier du Vulture (1925, groupe Tommasi depuis 2016) : le Don Anselmo et le Rotondo sont des Aglianico de référence, benchmark de l'appellation, en bio. C'est l'une des maisons fondatrices de la Basilicata.\n\nLe rôle de Paternoster dans l'histoire du Vulture est celui d'un passeur : la maison a fait le lien entre la tradition ancestrale de l'Aglianico et sa reconnaissance moderne. Avant que des vignerons comme les Paternoster n'entreprennent de le mettre en bouteille et de l'élever avec soin, l'Aglianico du Vulture restait un vin de terroir méconnu, souvent vendu en vrac ou noyé dans l'anonymat. En pariant sur la qualité, l'embouteillage sous DOC et un élevage plus raffiné, la maison a contribué à révéler ce que l'on appelle aujourd'hui « le Barolo du Sud ». Le Don Anselmo, servi sur l'agneau, le sanglier, le gibier ou des fromages affinés, se patine sur vingt ans et plus, développant la complexité tertiaire (cuir, tabac, terre, cerise séchée) caractéristique des grands Aglianico patinés, tandis que ses tanins, fermes dans la jeunesse, se fondent en une texture soyeuse. L'arrivée de la famille Tommasi en 2016 a apporté des moyens et une vision durable, sans dénaturer l'identité de la maison, toujours menée par un Paternoster. Le domaine, avec sa cinquantaine d'hectares en bio répartis autour de Barile, incarne la continuité et la constance : quatre générations au service d'un même grand cépage, faisant de Paternoster l'un des piliers incontournables et l'une des mémoires vivantes de l'Aglianico del Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Don Anselmo",
+        "Rotondo",
+        "Synthesi"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "barile",
+        "rouge",
+        "historique",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "wineenthusiast|winewithseth|intowine"
+    },
+    {
+      "id": "it-basilicata-prod-cantine-del-notaio",
+      "nom": "Cantine del Notaio",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Moscato",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, sur les pentes du Monte Vulture, Cantine del Notaio est l'un des sommets qualitatifs de l'Aglianico del Vulture, fondé par Gerardo Giuratrabocchetti (dont le grand-père était notaire, d'où le nom). Depuis les années 1990, le domaine s'est imposé comme une référence de l'appellation.\n\nLe domaine cultive l'Aglianico sur de beaux terroirs volcaniques et vieillit ses vins dans des grottes de tuf creusées à même la roche, un atout naturel pour l'élevage. Ses cuvées portent des noms évoquant le monde notarial et sont parmi les plus réputées et les plus recherchées de la Basilicata : Il Sigillo (le sceau) et La Firma (la signature) sont des Aglianico del Vulture Superiore d'une grande complexité et d'une longue garde, denses, profonds et racés, régulièrement encensés par la critique internationale ; Il Repertorio est plus accessible. Le domaine signe aussi des vins doux et des effervescents (à partir d'Aglianico, de Moscato et de Malvasia). Le style, ambitieux et soigné, met en valeur la puissance et la profondeur de l'Aglianico du Vulture dans des vins de garde. La qualité constante et l'aura de ses grandes cuvées font de Cantine del Notaio l'une des références incontournables du Vulture, aux côtés d'Elena Fucci et de Paternoster.\n\nDomaine de Gerardo Giuratrabocchetti, l'un des sommets du Vulture : La Firma et Il Sigillo sont des Aglianico complexes et de longue garde, vieillis dans des grottes de tuf. C'est une référence incontournable de la région.\n\nCe qui distingue Cantine del Notaio, au-delà de la qualité de ses vins, c'est l'usage de ses grottes de tuf : creusées dans la roche volcanique tendre du Vulture, ces caves naturelles offrent des conditions de température et d'humidité idéales pour l'élevage, un atout que peu de régions possèdent. Gerardo Giuratrabocchetti, en fondant le domaine dans les années 1990, a su conjuguer ce patrimoine souterrain, de vieilles vignes d'Aglianico et un savoir-faire œnologique moderne pour créer des vins qui comptent parmi les plus ambitieux du Sud. Servis sur l'agneau, le gibier, les viandes en sauce ou des fromages affinés, Il Sigillo et La Firma se patinent sur quinze à vingt ans, révélant toute la profondeur et la complexité de l'Aglianico du Vulture. Le domaine illustre aussi la polyvalence du cépage et du terroir volcanique : outre ses grands rouges de garde, il produit des vins doux et des effervescents, l'acidité naturelle élevée de l'Aglianico se prêtant bien à la méthode traditionnelle. Régulièrement primé et bien noté par la critique internationale (Wine-Searcher, guides italiens), Cantine del Notaio a contribué, aux côtés d'Elena Fucci et de Paternoster, à faire du Vulture l'une des appellations montantes d'Italie, et demeure une référence pour qui veut découvrir l'Aglianico dans ses expressions les plus profondes et les plus abouties.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Sigillo",
+        "La Firma",
+        "Il Repertorio"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge",
+        "garde",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|intowine"
+    },
+    {
+      "id": "it-basilicata-prod-grifalco",
+      "nom": "Grifalco",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Venosa",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Venosa, sur les terres du Vulture, Grifalco (della Lucania) est un domaine bio réputé pour l'élégance de ses Aglianico, chouchou de la critique. Il a une histoire singulière : Fabrizio et Cecilia Piccin, qui possédaient le domaine Salcheto à Montepulciano en Toscane, l'ont vendu au tournant des années 2000 pour venir s'installer dans le Vulture, alors totalement méconnu, et y recommencer.\n\nFort de leur expérience toscane, la famille (aujourd'hui menée par les fils Andrea et Lorenzo) produit des Aglianico d'un style frais, minéral et précis, à rebours des vins lourds et surextraits : le Damaschito (mono-cru de Maschito, de vieilles vignes, riche et profond), le Gricos (plus accessible et fruité) et le Grifalco (de base). En agriculture biologique, sur les sols volcaniques du Vulture, le domaine cherche à exprimer le terroir avec fraîcheur et définition. Le style, élégant et vibrant, régulièrement salué par Vinous et les guides, en fait l'un des domaines les plus admirés de l'appellation. Grifalco est une belle adresse pour découvrir l'Aglianico du Vulture dans un style bio, frais et racé, chez une famille venue de Toscane qui a su révéler la finesse du cépage.\n\nDomaine bio de la famille Piccin (ex-Salcheto en Toscane), Grifalco signe des Aglianico élégants et minéraux (Damaschito, Gricos), chouchou de Vinous. C'est l'un des domaines les plus admirés du Vulture.\n\n Le regard extérieur des Piccin, venus de Toscane, a compté dans l'affirmation d'un style plus frais et digeste pour le Vulture. Servis sur l'agneau, le gibier ou des fromages affinés, leurs Aglianico se patinent sur une décennie et plus, révélant finesse et minéralité. Le domaine incarne le passage d'une viticulture de puissance à une viticulture d'élégance, saluée par la critique internationale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Damaschito",
+        "Gricos",
+        "Tecum"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "venosa",
+        "rouge",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "vinous|wineenthusiast"
+    },
+    {
+      "id": "it-basilicata-prod-basilisco",
+      "nom": "Basilisco",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Barile",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barile, sur les pentes du Monte Vulture, Basilisco est un domaine réputé pour ses Aglianico de crus, propriété du groupe campanien Feudi di San Gregorio depuis 2011. Sous la houlette de l'œnologue Viviana Malafarina, il s'est imposé comme l'une des références qualitatives de l'appellation.\n\nLe domaine cultive de vieilles vignes d'Aglianico et vieillit ses vins dans de spectaculaires grottes de tuf du XVe siècle, dans le complexe historique du Sheshe à Barile. Il produit plusieurs Aglianico del Vulture Superiore en versions parcellaires (dont le Basilisco et le Teodosio), des rouges profonds, structurés et longuement élevés, souvent gardés en cave avant leur sortie pour être proposés proches de leur apogée. Le style, ambitieux et de garde, met en valeur la puissance et la minéralité de l'Aglianico du Vulture. Les moyens du groupe Feudi di San Gregorio et le savoir-faire de Viviana Malafarina en font un domaine de haut niveau. Basilisco est une belle adresse pour découvrir l'Aglianico du Vulture en versions de crus, profondes et de longue garde, dans des caves de tuf historiques, chez un domaine porté par l'un des grands groupes du Sud.\n\nDomaine du groupe Feudi di San Gregorio (Viviana Malafarina), Basilisco signe des Aglianico de crus vieillis dans des grottes de tuf du XVe siècle, mono-parcelles profonds et longuement élevés. C'est une référence du Vulture.\n\n L'appui de Feudi di San Gregorio a donné à Basilisco les moyens d'une viticulture parcellaire ambitieuse, rare dans le Vulture. Servis sur l'agneau, le sanglier ou des fromages affinés, ses crus se patinent sur quinze ans et plus. Les grottes de tuf du Sheshe, où vieillissent les vins, ajoutent une dimension patrimoniale à ce domaine devenu l'une des locomotives qualitatives de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Basilisco (Superiore)",
+        "Teodosio",
+        "Storico"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "barile",
+        "rouge",
+        "cru"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth|vinous"
+    },
+    {
+      "id": "it-basilicata-prod-dangelo",
+      "nom": "D'Angelo",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, D'Angelo (Casa Vinicola D'Angelo) est l'une des maisons historiques et fondatrices de l'Aglianico del Vulture, active depuis les années 1920 sur quatre générations. Avec Paternoster, elle fut pionnière de la mise en bouteille du grand rouge de la Basilicata.\n\nLa maison, aujourd'hui menée par Erminia et Rocco D'Angelo, est notamment connue pour le Canneto, un Aglianico issu d'un seul vignoble et l'un des premiers vins du Sud de l'Italie à avoir été élevé en barrique, dans les années 1980. Elle signe aussi la gamme Donato D'Angelo et un Aglianico del Vulture « classique » d'excellent rapport qualité-prix, considéré comme l'un des plus grands producteurs de la région. Le style, fidèle à la tradition tout en ayant intégré les techniques modernes, met en valeur la structure et la garde de l'Aglianico. Le rôle historique de la maison dans la reconnaissance du Vulture et la constance de sa qualité en font une référence. D'Angelo est une belle adresse pour découvrir l'Aglianico del Vulture chez l'une de ses maisons fondatrices, du vin accessible au mono-cru Canneto, à un excellent rapport qualité-prix.\n\nMaison historique du Vulture (années 1920), pionnière du barrique dans le Sud, D'Angelo signe le Canneto (mono-cru), un classique à excellent rapport qualité-prix. C'est l'une des maisons fondatrices de l'appellation.\n\n Le rôle fondateur de D'Angelo, aux côtés de Paternoster, dans la naissance de l'Aglianico del Vulture moderne lui confère une place à part. Servi sur l'agneau, le gibier ou des fromages, le Canneto se patine sur une décennie et plus. Le domaine reste une mémoire vivante de l'appellation, offrant un excellent point d'entrée dans le grand rouge de la Basilicata à prix raisonnable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Canneto",
+        "Donato D'Angelo",
+        "Aglianico del Vulture"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "intowine|winewithseth"
+    },
+    {
+      "id": "it-basilicata-prod-re-manfredi-terre-degli-svevi",
+      "nom": "Re Manfredi (Terre degli Svevi)",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Venosa",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Venosa, sur les terres du Vulture, Re Manfredi (domaine Terre degli Svevi) est le domaine lucanien du grand groupe GIV (Gruppo Italiano Vini), une belle porte d'entrée dans l'Aglianico del Vulture. Sur un beau vignoble, il produit des vins soignés et bien diffusés.\n\nLe domaine signe des Aglianico del Vulture de bon niveau, dont le Re Manfredi (une référence à bon rapport qualité-prix, cité par la critique) et le Serpara (une sélection plus ambitieuse), ainsi qu'un blanc (à base de Müller-Thurgau, cépage inhabituel pour la région). Le style, moderne et fiable, met en valeur la structure de l'Aglianico dans des vins équilibrés et accessibles. Les moyens du groupe GIV et la bonne distribution en font une valeur sûre pour découvrir le Vulture. Re Manfredi est une belle adresse pour une première approche de l'Aglianico del Vulture, fiable et à prix raisonnable, chez un domaine bien équipé de Venosa, du vin accessible à la cuvée Serpara plus sérieuse.\n\nDomaine du groupe GIV à Venosa, Re Manfredi signe des Aglianico soignés et bien diffusés (Re Manfredi, Serpara). C'est une belle porte d'entrée dans le Vulture à bon rapport qualité-prix.\n\n L'appartenance au groupe GIV assure à Re Manfredi régularité et bonne diffusion, ce qui en fait un ambassadeur accessible du Vulture. Servis sur l'agneau, les viandes rouges ou des fromages, ses Aglianico séduisent par leur équilibre ; le Serpara se patine sur quelques années. Le domaine constitue une porte d'entrée fiable pour découvrir l'appellation sans se ruiner.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Re Manfredi (Aglianico)",
+        "Serpara",
+        "Manfredi Bianco"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "venosa",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "intowine|wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-macarico",
+      "nom": "Macarico",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Barile",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barile, au cœur du meilleur secteur du Vulture, Macarico est un petit domaine familial, belle adresse artisanale de l'Aglianico del Vulture. Sur un beau terroir volcanique, la famille cultive le cépage roi de la Basilicata avec soin.\n\nLe domaine signe des Aglianico del Vulture de terroir, dont le Macarico (Superiore) et le Macmarò, des rouges structurés et fidèles au lieu, ainsi qu'un rosé d'Aglianico. Le style, artisanal et authentique, met en valeur la puissance et la minéralité de l'Aglianico de Barile, dans des vins de garde. La taille humaine du domaine et la qualité constante de la gamme en font une belle adresse de l'appellation. Macarico illustre la vitalité des petits domaines familiaux du Vulture, capables de produire des Aglianico de qualité avec passion. C'est une adresse à découvrir pour l'Aglianico del Vulture dans un style authentique et de terroir, chez un domaine familial de Barile, sur l'agneau, le gibier et les fromages affinés.\n\nPetit domaine familial de Barile, Macarico signe des Aglianico de terroir soignés (Macarico, Macmarò). C'est une belle adresse artisanale au cœur du meilleur secteur du Vulture.\n\n La taille humaine de Macarico permet un soin artisanal à chaque cuvée, sur le terroir privilégié de Barile. Servis sur l'agneau, le gibier ou des fromages affinés, ses Aglianico se patinent sur une décennie, révélant la minéralité du terroir volcanique. Le domaine illustre la vitalité des petits producteurs familiaux qui font aujourd'hui la richesse et la diversité du Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Macarico (Superiore)",
+        "Macmarò",
+        "Rosato"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "barile",
+        "rouge",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "deliciousitaly"
+    },
+    {
+      "id": "it-basilicata-prod-musto-carmelitano",
+      "nom": "Musto Carmelitano",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Maschito",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Maschito, sur les terres du Vulture, Musto Carmelitano est un petit domaine bio et familial, l'une des belles adresses chaleureuses et durables de l'Aglianico del Vulture. La famille cultive le cépage en agriculture biologique, sur de vieilles vignes.\n\nLe domaine signe des Aglianico del Vulture authentiques et de terroir, dont le Serra del Prete et le Pian del Moro (issus de vieilles vignes), des rouges élégants et fidèles au lieu, ainsi que le Maschitano. Le style, bio et artisanal, privilégie l'expression du terroir volcanique de Maschito et la fraîcheur, dans des vins de belle tenue. L'accueil chaleureux, l'engagement biologique et la qualité de la gamme en font une adresse appréciée de l'appellation. Musto Carmelitano illustre le renouveau des petits domaines familiaux et bio du Vulture. C'est une belle adresse pour découvrir l'Aglianico del Vulture dans un style authentique et durable, chez une famille accueillante de Maschito, sur l'agneau et les fromages, à bon rapport qualité-prix.\n\nPetit domaine bio et familial de Maschito, Musto Carmelitano signe des Aglianico authentiques de vieilles vignes (Serra del Prete, Pian del Moro). C'est une belle adresse chaleureuse et durable du Vulture.\n\n L'engagement bio et l'accueil chaleureux de la famille Musto distinguent ce petit domaine de Maschito. Servis sur l'agneau, le gibier ou des fromages, ses Aglianico de vieilles vignes séduisent par leur fraîcheur et leur authenticité, et se patinent sur plusieurs années. Le domaine incarne le renouveau d'une viticulture familiale, durable et sincère, qui transforme le visage du Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Serra del Prete",
+        "Pian del Moro",
+        "Maschitano"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "maschito",
+        "rouge",
+        "bio",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "deliciousitaly"
+    },
+    {
+      "id": "it-basilicata-prod-camerlengo",
+      "nom": "Camerlengo",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rapolla",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rapolla, sur les terres du Vulture, Camerlengo est un domaine nature d'Antonio Cascarano, belle adresse de la scène naturelle de l'Aglianico del Vulture. Sur un terroir volcanique préservé, il cultive l'Aglianico et des cépages autochtones en agriculture biologique, avec des vinifications peu interventionnistes.\n\nLe domaine signe des Aglianico authentiques et vivants, dont l'Antelio et le Camerlengo, des rouges de vieilles vignes vinifiés sans artifice, ainsi que des cépages rares préservés par le vigneron. Le style, nature et sincère, privilégie l'expression du terroir volcanique et la buvabilité, à rebours des vins technologiques. Le travail de préservation d'anciennes vignes et de variétés autochtones, ainsi que la qualité des vins, en font une belle adresse originale du Vulture, saluée par la critique (Vinous). Camerlengo est une adresse à découvrir pour un Aglianico del Vulture nature et authentique, chez un vigneron passionné de Rapolla, gardien du patrimoine viticole de la région, pour les amateurs de vin vivant.\n\nDomaine nature d'Antonio Cascarano à Rapolla, Camerlengo signe des Aglianico authentiques et vivants (Antelio). C'est une belle adresse de la scène naturelle du Vulture, gardien de vieilles vignes et cépages autochtones.\n\n La démarche de préservation d'Antonio Cascarano, gardien de vieilles vignes et de cépages autochtones, donne à Camerlengo une valeur patrimoniale au-delà de la seule qualité. Servis sur l'agneau, le gibier ou une cuisine de caractère, ses Aglianico nature séduisent par leur vivacité. Le domaine illustre la richesse de la scène naturelle émergente du Vulture, recherchée par les amateurs de vin vivant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Antelio",
+        "Camerlengo",
+        "Aglianico"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rapolla",
+        "rouge",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-basilicata-prod-bisceglia",
+      "nom": "Bisceglia",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Lavello",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Chardonnay",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lavello, sur les terres du Vulture, Bisceglia (Tenuta Terra dei Re) est un domaine moderne, l'une des belles adresses œnotouristiques de l'Aglianico del Vulture. Sur un beau vignoble équipé d'une cave contemporaine, il produit des vins soignés.\n\nLe domaine signe des Aglianico del Vulture de bon niveau, dont le Gudarrà (Superiore, sa cuvée ambitieuse) et le Terra di Vulcano, des rouges structurés et modernes, ainsi que des blancs (Chardonnay, Fiano) et le Le More. Le style, moderne et abouti, met en valeur la puissance de l'Aglianico dans des vins concentrés et bien élevés. La belle cave, l'accueil œnotouristique et la qualité de la gamme en font une valeur sûre de l'appellation. Bisceglia est une belle adresse pour découvrir l'Aglianico del Vulture dans un style moderne et concentré, chez un domaine bien équipé de Lavello, avec le Gudarrà comme fer de lance, sur l'agneau, le gibier et les fromages, dans un beau cadre œnotouristique.\n\nDomaine moderne de Lavello, Bisceglia signe des Aglianico soignés (Gudarrà, Terra di Vulcano) et des blancs. C'est une belle adresse œnotouristique du Vulture, au style moderne et abouti.\n\n Les moyens et la belle cave de Bisceglia en font une vitrine œnotouristique de l'appellation. Servis sur l'agneau, le sanglier ou des fromages affinés, ses Aglianico concentrés se patinent sur plusieurs années ; le Gudarrà, plus ambitieux, gagne à être attendu. Le domaine illustre le versant moderne et abouti du Vulture, entre puissance maîtrisée et accueil du public.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gudarrà (Superiore)",
+        "Terra di Vulcano",
+        "Le More"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "lavello",
+        "rouge",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-terra-dei-re",
+      "nom": "Terra dei Re",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Venosa",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Venosa, sur les terres du Vulture, Terra dei Re est un domaine réputé pour ses Aglianico structurés et de garde, belle adresse fiable de l'appellation. Sur un beau vignoble volcanique, il produit des rouges ambitieux.\n\nLe domaine signe des Aglianico del Vulture de caractère, dont le Nocte (Superiore, sa cuvée de prestige), le Vultur et le Divinus, des rouges concentrés, structurés et de longue garde. Le style, moderne et concentré, met en valeur la puissance et la profondeur de l'Aglianico du Vulture dans des vins amples et de garde. La qualité constante et le style abouti en font une valeur sûre de l'appellation. Terra dei Re est une belle adresse pour découvrir l'Aglianico del Vulture dans un style riche et de garde, avec le Nocte comme fleuron, chez un domaine réputé de Venosa, sur l'agneau, le sanglier, le gibier et les fromages affinés, pour les amateurs de rouges puissants du Sud.\n\nDomaine de Venosa, Terra dei Re signe des Aglianico structurés et de garde (Nocte, Vultur, Divinus). C'est une belle adresse fiable de l'appellation, dans un style moderne et concentré.\n\n Le style riche et concentré de Terra dei Re, incarné par le Nocte, séduit les amateurs de rouges puissants du Sud. Servis sur l'agneau, le sanglier, le gibier ou des fromages très affinés, ses Aglianico de garde se patinent sur une décennie et plus. Le domaine constitue une valeur sûre pour qui recherche la profondeur et la structure caractéristiques de l'Aglianico du Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Nocte (Superiore)",
+        "Vultur",
+        "Divinus"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "venosa",
+        "rouge",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "intowine|wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-carbone",
+      "nom": "Carbone",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Melfi",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Melfi, sur les terres du Vulture, Carbone est un domaine familial dynamique, belle adresse de l'Aglianico del Vulture. Sur un beau terroir volcanique, la famille cultive le cépage roi de la Basilicata avec une recherche de qualité et d'originalité.\n\nLe domaine signe des Aglianico del Vulture soignés, dont le Stupor Mundi (en hommage à l'empereur Frédéric II, qui aimait Melfi) et le Carbone (Superiore), des rouges structurés et fidèles au terroir, ainsi qu'un rare spumante rosé d'Aglianico (700 Once), original et réussi. Le style, précis et dynamique, met en valeur la puissance de l'Aglianico et exploite son acidité naturelle pour les bulles. La qualité de la gamme et l'originalité de l'effervescent en font une belle adresse de l'appellation. Carbone est une adresse à découvrir pour l'Aglianico del Vulture, du rouge de garde au spumante rosé, chez un domaine familial de Melfi, sur l'agneau et les fromages pour les rouges, à l'apéritif pour les bulles.\n\nDomaine familial de Melfi, Carbone signe des Aglianico soignés (Stupor Mundi) et un rare spumante rosé d'Aglianico. C'est une belle adresse dynamique du Vulture, au style précis.\n\n L'originalité de Carbone, avec son spumante rosé d'Aglianico, illustre la polyvalence du cépage et de son acidité naturelle. Servis sur l'agneau et les fromages pour les rouges, à l'apéritif pour les bulles, ses vins séduisent par leur précision. Le clin d'œil historique à Frédéric II, empereur amoureux de Melfi, ancre le domaine dans le riche passé de cette cité du Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Stupor Mundi",
+        "Carbone (Superiore)",
+        "700 Once (spumante)"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "melfi",
+        "rouge",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-vigneti-del-vulture",
+      "nom": "Vigneti del Vulture",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Barile",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barile, sur les terres du Vulture, Vigneti del Vulture est le domaine lucanien du groupe Farnese/Fantini, une belle porte d'entrée dans l'Aglianico del Vulture. Sur un beau vignoble, il produit des vins fiables et bien diffusés.\n\nLe domaine signe des Aglianico del Vulture accessibles et de qualité, dont le Piano del Cerro (une cuvée soignée, bien notée) et le Pipoli (excellent rapport qualité-prix, très diffusé), ainsi qu'un blanc (Pipoli Bianco, à base de Fiano-Greco). Le style, fiable et flatteur, met en valeur le fruit de l'Aglianico dans des vins équilibrés et abordables. Les moyens du groupe Farnese, la bonne distribution et le rapport qualité-prix en font une valeur sûre pour découvrir le Vulture. Vigneti del Vulture est une belle adresse pour une première approche de l'Aglianico del Vulture, à prix accessible, avec le Pipoli comme porte d'entrée et le Piano del Cerro plus ambitieux, chez un domaine bien équipé de Barile.\n\nDomaine du groupe Farnese/Fantini, Vigneti del Vulture signe des Aglianico fiables et bien diffusés (Piano del Cerro, Pipoli). C'est une excellente porte d'entrée dans le Vulture à prix accessible.\n\n L'appartenance au groupe Farnese assure au domaine un excellent rapport qualité-prix et une large diffusion, faisant du Pipoli l'une des meilleures portes d'entrée dans l'Aglianico. Servis sur l'agneau, les viandes ou des fromages, ses rouges séduisent par leur fruit ; le Piano del Cerro se patine sur quelques années. Le domaine rend le Vulture accessible au plus grand nombre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Piano del Cerro",
+        "Pipoli (Aglianico)",
+        "Pipoli Bianco"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "barile",
+        "rouge",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-michele-laluce",
+      "nom": "Michele Laluce",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Ginestra",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ginestra, sur les terres du Vulture, Michele Laluce est un petit domaine nature, belle adresse artisanale de l'Aglianico del Vulture. Sur un terroir volcanique, le vigneron cultive le cépage en agriculture biologique et vinifie avec peu d'intervention.\n\nLe domaine signe des Aglianico del Vulture authentiques et vivants, dont Le Drude et le Gagliardo, des rouges de terroir vinifiés de façon artisanale, dans un style nature qui privilégie la fraîcheur et l'expression du lieu. Le style, sincère et peu interventionniste, met en valeur l'Aglianico de Ginestra dans des vins de caractère, à rebours des vins technologiques. Le travail artisanal et la démarche nature en font une belle adresse à découvrir de l'appellation. Michele Laluce illustre la scène naturelle du Vulture, aux côtés de Camerlengo. C'est une adresse à découvrir pour un Aglianico del Vulture nature et authentique, chez un petit vigneron de Ginestra, sur une cuisine de caractère, pour les amateurs de vin vivant.\n\nPetit domaine nature de Ginestra, Michele Laluce signe des Aglianico authentiques et vivants (Le Drude, Gagliardo). C'est une belle adresse artisanale et naturelle du Vulture.\n\n La démarche artisanale et nature de Michele Laluce s'inscrit dans le renouveau qualitatif et durable du Vulture. Servis sur l'agneau, le gibier ou une cuisine de caractère, ses Aglianico séduisent par leur fraîcheur et leur sincérité. Le domaine, aux côtés de Camerlengo, illustre l'émergence d'une scène naturelle qui apporte au Vulture une diversité de styles bienvenue.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Drude",
+        "Gagliardo",
+        "Aglianico"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "ginestra",
+        "rouge",
+        "nature",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-basilicata-prod-cantina-di-venosa",
+      "nom": "Cantina di Venosa",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Venosa",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Aglianico del Vulture Superiore DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Venosa, sur les terres du Vulture, la Cantina di Venosa est une grande coopérative historique, l'un des piliers de la production d'Aglianico del Vulture. Rassemblant de nombreux vignerons de la région, elle valorise le cépage roi de la Basilicata à grande échelle. La coopérative signe des Aglianico del Vulture fiables et bien diffusés, dont le Carato Venusio (sa cuvée de prestige, longuement élevée) et le Verbo, ainsi que le Terra Strepitosa, à des prix accessibles. Le style, fiable et représentatif, met en valeur la structure de l'Aglianico dans des vins équilibrés. La taille de la coopérative, sa régularité et son rôle économique en font une valeur sûre du Vulture. Cantina di Venosa est une belle porte d'entrée dans l'Aglianico del Vulture, du vin accessible au Carato Venusio plus ambitieux, chez une coopérative historique de Venosa (la cité natale du poète latin Horace), à bon rapport qualité-prix, sur l'agneau et les fromages.\n\nGrande coopérative historique de Venosa, la Cantina di Venosa signe des Aglianico fiables et bien diffusés (Carato Venusio, Verbo). C'est une belle porte d'entrée dans le Vulture à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Carato Venusio",
+        "Verbo",
+        "Terra Strepitosa"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "venosa",
+        "rouge",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "deliciousitaly"
+    },
+    {
+      "id": "it-basilicata-prod-madonna-delle-grazie",
+      "nom": "Madonna delle Grazie",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Venosa",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Venosa, sur les terres du Vulture, Madonna delle Grazie est un domaine familial, belle adresse fiable de l'Aglianico del Vulture. Sur un beau terroir volcanique, la famille cultive le cépage roi de la Basilicata avec soin. Le domaine signe des Aglianico del Vulture soignés, dont le Bauccio et le Liscone, des rouges structurés et fidèles au terroir, ainsi que le Maninit. Le style, authentique et régulier, met en valeur la puissance de l'Aglianico dans des vins équilibrés et de belle facture. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de l'appellation. Madonna delle Grazie est une belle adresse pour découvrir l'Aglianico del Vulture dans un style authentique et fiable, chez un domaine familial de Venosa, sur l'agneau, le gibier et les fromages affinés, à bon rapport qualité-prix, pour une belle découverte du grand rouge de la Basilicata.\n\nDomaine familial de Venosa, Madonna delle Grazie signe des Aglianico soignés (Bauccio, Liscone). C'est une belle adresse fiable de l'appellation, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bauccio",
+        "Liscone",
+        "Maninit"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "venosa",
+        "rouge",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-eubea-regina",
+      "nom": "Eubea (Regina)",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, sur les terres du Vulture, Eubea (Azienda Agricola Regina) est un domaine de l'Aglianico del Vulture, belle adresse fidèle au terroir volcanique. Sur un beau vignoble, la famille cultive le cépage roi de la Basilicata. Le domaine signe des Aglianico del Vulture soignés, dont la cuvée Eubea, des rouges structurés et fidèles au lieu, dans un style authentique. Le style, représentatif, met en valeur la puissance et la minéralité de l'Aglianico du Vulture dans des vins équilibrés. La qualité et le bon rapport qualité-prix en font une belle adresse de l'appellation. Eubea est une adresse à découvrir pour l'Aglianico del Vulture dans un style fidèle au terroir, chez un domaine de Rionero, l'un des villages emblématiques du Vulture, sur l'agneau, le gibier et les fromages, pour une belle découverte du grand rouge autochtone de la Basilicata.\n\nDomaine de Rionero (Az. Agr. Regina), Eubea signe des Aglianico soignés et fidèles au terroir volcanique du Vulture. C'est une belle adresse de l'appellation à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Eubea",
+        "Aglianico del Vulture"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-consalvo",
+      "nom": "Consalvo",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, sur les terres du Vulture, Consalvo est un petit domaine de l'Aglianico del Vulture, belle adresse artisanale à découvrir. Sur un beau terroir volcanique, le vigneron cultive le cépage roi de la Basilicata avec soin. Le domaine signe des Aglianico del Vulture authentiques et fidèles au terroir, dans un style artisanal qui met en valeur la puissance et la minéralité du cépage. Le style, sincère et représentatif, exprime le terroir volcanique du Vulture dans des vins de caractère. La taille humaine du domaine et le bon rapport qualité-prix en font une belle adresse à découvrir de l'appellation. Consalvo illustre la vitalité des petits producteurs du Vulture. C'est une adresse à découvrir pour l'Aglianico del Vulture dans un style authentique, chez un petit vigneron de Rionero, sur l'agneau, le gibier et les fromages affinés, pour les amateurs curieux de découvrir les petites adresses de la Basilicata.\n\nPetit domaine de Rionero, Consalvo signe des Aglianico authentiques et fidèles au terroir. C'est une belle adresse artisanale du Vulture à découvrir, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Consalvo (Aglianico)",
+        "Superiore"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-tenuta-i-gelsi",
+      "nom": "Tenuta I Gelsi",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rapolla",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rapolla, sur les terres du Vulture, Tenuta I Gelsi est un petit domaine bio de l'Aglianico del Vulture, belle adresse artisanale et durable. Sur un beau terroir volcanique, la famille cultive le cépage roi de la Basilicata en agriculture biologique. Le domaine signe des Aglianico del Vulture soignés et authentiques, dans un style bio qui met en valeur la puissance et la minéralité du cépage, avec une recherche de fidélité au terroir. Le style, authentique et durable, exprime le terroir volcanique de Rapolla dans des vins de caractère. L'engagement biologique, la taille humaine et le bon rapport qualité-prix en font une belle adresse à découvrir. Tenuta I Gelsi illustre le renouveau des petits domaines bio du Vulture. C'est une adresse à découvrir pour l'Aglianico del Vulture dans un style bio et authentique, chez un petit vigneron de Rapolla, sur l'agneau et les fromages, pour les amateurs de vins durables et de terroir.\n\nPetit domaine bio de Rapolla, Tenuta I Gelsi signe des Aglianico soignés et authentiques. C'est une belle adresse artisanale et durable du Vulture, fidèle au terroir volcanique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tenuta I Gelsi (Aglianico)",
+        "Superiore"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rapolla",
+        "rouge",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-cantine-sasso",
+      "nom": "Cantine Sasso",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, Cantine Sasso est une maison historique de l'Aglianico del Vulture, belle adresse fidèle au style classique de l'appellation. Sur un beau terroir volcanique, la maison perpétue une tradition ancienne de l'Aglianico. Le domaine signe des Aglianico del Vulture de tradition, dont une Riserva, des rouges structurés et fidèles au style classique du Vulture, aux tanins fermes et à la belle garde. Le style, traditionnel et authentique, met en valeur la puissance et la structure de l'Aglianico dans des vins de garde. Le rôle historique de la maison dans l'appellation et la qualité de sa gamme en font une valeur sûre. Cantine Sasso est une belle adresse pour découvrir l'Aglianico del Vulture dans un style classique et traditionnel, chez une maison historique de Rionero, sur l'agneau, le sanglier, le gibier et les fromages affinés, pour les amateurs du style traditionnel du grand rouge de la Basilicata.\n\nMaison historique de Rionero, Cantine Sasso signe des Aglianico de tradition, fidèles au style classique du Vulture. C'est une valeur sûre à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sasso (Aglianico)",
+        "Riserva"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-strapellum",
+      "nom": "Strapellum",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Vulture",
+      "commune": "Rionero in Vulture",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Vulture DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rionero in Vulture, sur les terres du Vulture, Strapellum (Cantine Strapellum) est un domaine de l'Aglianico del Vulture, belle adresse à découvrir de l'appellation. Sur un beau terroir volcanique, la famille cultive le cépage roi de la Basilicata avec soin. Le domaine signe des Aglianico del Vulture soignés, dont le Rës, des rouges structurés et fidèles au terroir, dans un style authentique. Le style, représentatif, met en valeur la puissance et la minéralité de l'Aglianico du Vulture dans des vins équilibrés. La qualité et le bon rapport qualité-prix en font une belle adresse à découvrir de l'appellation. Strapellum illustre la vitalité des domaines du Vulture. C'est une adresse à découvrir pour l'Aglianico del Vulture dans un style fidèle au terroir, chez un domaine de Rionero, sur l'agneau, le gibier et les fromages affinés, pour une belle découverte du grand rouge autochtone de la Basilicata.\n\nDomaine de Rionero (Cantine Strapellum), Strapellum signe des Aglianico soignés (Rës) et fidèles au terroir. C'est une belle adresse de l'appellation à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rës (Aglianico)",
+        "Strapellum"
+      ],
+      "tags": [
+        "basilicata",
+        "vulture",
+        "aglianico",
+        "rionero",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-dragone",
+      "nom": "Dragone",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Matera",
+      "commune": "Matera",
+      "pays": "Italie",
+      "cepages": [
+        "Primitivo",
+        "Greco",
+        "Malvasia",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Matera DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Matera, dans le sud de la Basilicata (loin du Vulture), Dragone est un domaine historique de la DOC Matera, belle adresse représentative de cette autre facette de la région. Autour de la célèbre cité des Sassi (classée à l'UNESCO), la famille cultive les cépages du sud de la Basilicata. Le domaine signe des vins de la DOC Matera : du Primitivo (le Dragone Rosso), du Greco et de la Malvasia en blanc, ainsi qu'un Moscato, des vins solaires et méridionaux, différents de l'Aglianico du Vulture. Le style, fidèle au terroir du Matérano, met en valeur les cépages du sud dans des vins généreux. La représentativité de cette zone méconnue et la qualité de la gamme en font une belle adresse. Dragone est une adresse à découvrir pour les vins de Matera, du Primitivo au Greco, une autre facette de la Basilicata viticole, loin du Vulture, sur la cuisine du sud de la région, pour les amateurs curieux de diversité.\n\nDomaine historique de Matera, Dragone signe des Primitivo, Greco et Malvasia de la DOC Matera. C'est une belle adresse représentative du sud de la Basilicata, hors du Vulture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Dragone Rosso (Primitivo)",
+        "Greco",
+        "Moscato"
+      ],
+      "tags": [
+        "basilicata",
+        "matera",
+        "primitivo",
+        "greco",
+        "rouge",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-battifarano",
+      "nom": "Battifarano",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Val d'Agri",
+      "commune": "Sant'Arcangelo",
+      "pays": "Italie",
+      "cepages": [
+        "Merlot",
+        "Cabernet",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Terre dell'Alta Val d'Agri DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Arcangelo, dans le Val d'Agri (une vallée intérieure du sud de la Basilicata), Battifarano est un domaine de la DOC Terre dell'Alta Val d'Agri, la seconde appellation de la région, belle adresse représentative de cette zone méconnue. Sur un terroir de vallée, la famille cultive des cépages variés. Le domaine signe des vins de la DOC Val d'Agri, notamment des assemblages de Merlot, Cabernet et Aglianico, ainsi que des cépages en purs, des rouges de caractère différents de l'Aglianico du Vulture. Le style, fidèle au terroir du Val d'Agri, met en valeur les cépages internationaux et autochtones dans des vins équilibrés. La représentativité de cette appellation méconnue (la seconde DOC de la région, créée en 2003) en fait une belle adresse. Battifarano est une adresse à découvrir pour les vins du Val d'Agri, une autre facette de la Basilicata, loin du Vulture, sur la cuisine locale, pour les amateurs curieux de diversité régionale.\n\nDomaine du Val d'Agri (seconde DOC de la région), Battifarano signe des assemblages de Merlot, Cabernet et Aglianico. C'est une belle adresse représentative de cette vallée intérieure méconnue.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Val d'Agri Rosso",
+        "Merlot",
+        "Aglianico"
+      ],
+      "tags": [
+        "basilicata",
+        "val-dagri",
+        "merlot",
+        "cabernet",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-basilicata-prod-tenuta-marino",
+      "nom": "Tenuta Marino",
+      "type": "domaine",
+      "region": "Basilicata",
+      "sous_region": "Roccanova",
+      "commune": "Roccanova",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Malvasia Nera",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Grottino di Roccanova DOC",
+        "Basilicata IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Roccanova, dans le sud de la Basilicata, Tenuta Marino est un domaine du Grottino di Roccanova, curieuse DOC représentative d'une tradition unique. Sur un terroir de collines, la famille cultive les cépages locaux. La singularité de cette appellation tient à ses grottes : les vins y vieillissent traditionnellement dans des cavités creusées dans le grès tendre, qui offrent des conditions de température idéales. Le domaine signe des rouges de la DOC Grottino di Roccanova, à base de Sangiovese, Malvasia Nera et Montepulciano, des vins de tradition, ainsi que des IGT. Le style, fidèle au terroir et à la tradition des grottes, met en valeur les cépages du sud de la Basilicata. La représentativité de cette DOC méconnue et originale en fait une belle adresse. Tenuta Marino est une adresse à découvrir pour le Grottino di Roccanova, spécialité insolite de la Basilicata où les vins vieillissent dans le grès, loin du Vulture, pour les amateurs de curiosités.\n\nDomaine du Grottino di Roccanova, curieuse DOC où les vins vieillissent dans des grottes de grès, Tenuta Marino signe des rouges de tradition. C'est une spécialité méconnue et insolite de la Basilicata.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Grottino di Roccanova",
+        "Rosso"
+      ],
+      "tags": [
+        "basilicata",
+        "roccanova",
+        "grottino",
+        "sangiovese",
+        "rouge",
+        "grottes",
+        "curiosite"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    }
+  ]
+}

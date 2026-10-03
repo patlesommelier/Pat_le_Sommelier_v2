@@ -1,0 +1,485 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "lazio",
+  "region_label": "Lazio (Italie)",
+  "source_file": "terroirs_lazio.json",
+  "built_at": "2026-07-11",
+  "count": 16,
+  "items": [
+    {
+      "id": "it-lazio-terr-cesanese-del-piglio",
+      "nom": "Cesanese del Piglio",
+      "type": "appellation (DOCG)",
+      "region": "Lazio",
+      "sous_region": "Cesanese (FR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "altitude": "~200-550 m",
+      "sols": "volcaniques, argilo-calcaires des collines de la vallée du Sacco",
+      "caracteristiques_rapides": "Le grand rouge du Latium et sa seule DOCG rouge : Cesanese, « le pinot noir du Latium », épicé, floral et de garde, la sous-région la plus prometteuse de la région (Coletti Conti, Casale della Ioria).",
+      "notes_objectives": "Le Cesanese del Piglio est le grand rouge du Latium et la seule DOCG rouge de la région, consacrée en 2008 (la première du Latium). Produit sur les collines de la vallée du Sacco, autour des villages de Piglio, Serrone, Acuto, Anagni et Paliano, au sud-est de Rome, il est l'expression la plus noble du Cesanese, cépage autochtone emblématique de la région.\n\nLe Cesanese — dont on distingue deux sous-variétés, le Cesanese di Affile (le plus fin) et le Cesanese Comune — est un cépage difficile : à maturation très tardive, il donne des vins verts et végétaux s'il n'est pas pleinement mûr, et pousse en forts rendements qu'il faut maîtriser. Bien vinifié, il révèle une personnalité unique qui lui a valu le surnom de « pinot noir du Latium » : des rouges d'une couleur rubis, aux arômes envoûtants de fruits rouges et noirs, de violette, de rose, d'épices et de réglisse, à la structure tannique fine et à la belle fraîcheur. Sur les sols volcaniques et argilo-calcaires des collines, à 200-550 mètres d'altitude, le cépage donne le meilleur de lui-même. La DOCG se décline en versions de base, Superiore et Riserva (élevées plus longtemps). Des domaines comme Coletti Conti (Hernicus) et Casale della Ioria en sont les fers de lance. C'est un accord idéal avec la cuisine romaine, l'agneau, les viandes grillées et les fromages affinés.\n\nGrand rouge du Latium et sa seule DOCG rouge, le Cesanese del Piglio est l'expression la plus noble du Cesanese, « le pinot noir du Latium » : épicé, floral et de garde. C'est la sous-région la plus prometteuse de la région.\n\nLe destin du Cesanese del Piglio illustre la renaissance viticole de tout le Latium. Longtemps, cette région, pourtant l'une des plus anciennes terres de vin d'Italie (Rome buvait le vin de ses collines depuis l'Antiquité), fut réduite à un immense réservoir de vin bon marché, écoulé sans souci de qualité sur le marché romain qui « achetait tout ». Le Cesanese n'échappait pas à la règle, donnant des rouges rustiques et sans éclat. L'obtention de la DOCG en 2008, la première du Latium, a marqué un tournant, consacrant le potentiel d'un cépage que les meilleurs vignerons avaient commencé à révéler. Car le Cesanese, difficile à maîtriser, récompense l'exigence : rendements maîtrisés, maturité pleinement atteinte, vinifications respectueuses. Ses meilleures cuvées, notamment en Riserva, se patinent sur une décennie et développent une complexité épicée et florale qui justifie la comparaison flatteuse avec le pinot noir. Servi sur la cuisine romaine généreuse — l'abbacchio (agneau), la coda alla vaccinara, les pâtes à l'amatriciana —, dont il équilibre le gras par sa fraîcheur et ses tanins fins, le Cesanese del Piglio est le grand rouge de table du Latium. Porté par une nouvelle génération de vignerons ambitieux et par un consortium dynamique tourné vers la qualité, il s'affirme aujourd'hui comme la sous-région la plus prometteuse de la région, celle qui prouve que le Latium peut produire de grands rouges autochtones, capables de rivaliser dans un paysage italien très concurrentiel.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "cesanese",
+        "piglio",
+        "rouge",
+        "docg",
+        "autochtone",
+        "garde"
+      ],
+      "source": "cellartours|tasteatlas"
+    },
+    {
+      "id": "it-lazio-terr-frascati-superiore",
+      "nom": "Frascati Superiore",
+      "type": "appellation (DOCG)",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Candia",
+        "Malvasia del Lazio",
+        "Trebbiano"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tufs volcaniques et pouzzolane des Colli Albani (monts Albains)",
+      "caracteristiques_rapides": "Le grand blanc de Rome, promu DOCG : Malvasia sur les tufs volcaniques des Castelli Romani, frais, floral et minéral, réhabilité par les meilleurs (Castel de Paolis, Fontana Candida).",
+      "notes_objectives": "Le Frascati Superiore est le grand blanc de Rome, la version qualitative du plus célèbre vin du Latium, promue DOCG en 2011. Produit sur les collines volcaniques des Castelli Romani (les Colli Albani), juste au sud-est de la capitale, autour de la ville de Frascati, il incarne le renouveau d'une appellation longtemps galvaudée.\n\nLe Frascati fut en effet, comme l'Orvieto, synonyme de vin blanc surproduit et souvent insipide, écoulé par fleuves entiers dans les trattorias romaines. Mais les collines volcaniques de Rome peuvent donner de bien meilleurs vins. Le Frascati Superiore repose sur la Malvasia (di Candia et surtout la Malvasia del Lazio, dite Puntinata, plus fine et aromatique), complétée de Trebbiano. Sur les sols de tuf volcanique et de pouzzolane des Colli Albani, riches en minéraux, il donne un blanc frais, floral et minéral, aux arômes de fleurs blanches, de fruits à noyau et d'agrumes, avec une belle vivacité. La mention Superiore impose des rendements plus faibles et un degré plus élevé, gage de concentration. Des domaines comme Castel de Paolis (premier Tre Bicchieri de l'appellation), Fontana Candida (Luna Mater) ou Villa Simone en ont révélé le potentiel. C'est l'accord parfait avec la cuisine romaine, la cacio e pepe, les poissons, les fritures et les fromages frais.\n\nGrand blanc de Rome, promu DOCG, le Frascati Superiore est un blanc de Malvasia sur les tufs volcaniques des Castelli Romani, frais, floral et minéral. C'est l'appellation phare de la région, réhabilitée par les meilleurs.\n\nLe Frascati porte le poids d'une réputation contrastée : mondialement connu, il a longtemps souffert de son succès même, la demande romaine ayant encouragé une surproduction au détriment de la qualité. Comme l'Orvieto voisin, il était devenu synonyme de blanc anonyme servi à la carafe. La création des DOCG Frascati Superiore et Cannellino di Frascati en 2011 a acté la volonté de séparer l'ivraie du bon grain et de rendre justice au potentiel réel des collines volcaniques de Rome. Car le terroir des Colli Albani est remarquable : ces anciens volcans ont laissé des sols de tuf et de pouzzolane riches en minéraux et en potassium, capables de donner de grands blancs à condition de maîtriser la vigueur naturelle de la vigne. La clé fut aussi le retour à la Malvasia del Lazio (Puntinata), cépage aromatique plus noble que la Malvasia di Candia ou le Trebbiano productif. Servi sur la cuisine romaine — cacio e pepe, carbonara, fritti, poissons —, dont il souligne la richesse par sa fraîcheur saline, le Frascati Superiore séduit par sa minéralité volcanique. Des domaines pionniers comme Castel de Paolis, premier à décrocher les Tre Bicchieri, ou les sélections parcellaires de Fontana Candida (Luna Mater), ont prouvé qu'il pouvait être un vrai vin de terroir, réhabilitant l'image du plus célèbre blanc de Rome.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "malvasia",
+        "blanc",
+        "docg",
+        "volcanique"
+      ],
+      "source": "tasteatlas|wine-searcher"
+    },
+    {
+      "id": "it-lazio-terr-cesanese-di-olevano-romano",
+      "nom": "Cesanese di Olevano Romano",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cesanese di Affile",
+        "Cesanese Comune"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "volcaniques (tuf) des collines d'Olevano",
+      "caracteristiques_rapides": "Le terroir du Cesanese le plus acclamé : à Olevano, sur sols volcaniques, des rouges d'une finesse remarquable (Damiano Ciolli), premier Tre Bicchieri du secteur, sommet du cépage.",
+      "notes_objectives": "Le Cesanese di Olevano Romano est, aux yeux de nombreux amateurs, le terroir du Cesanese le plus abouti et le plus acclamé, celui qui a révélé au monde le potentiel de ce cépage. Produit autour du village d'Olevano Romano, dans les collines à l'est de Rome, il doit sa réputation à un terroir volcanique singulier et à une génération de vignerons talentueux.\n\nSur les sols volcaniques (tuf) d'Olevano, à 200-500 mètres d'altitude, le Cesanese di Affile donne des rouges d'une finesse, d'une fraîcheur et d'une définition remarquables, à mille lieues des vins rustiques d'autrefois. C'est ici que Damiano Ciolli, figure de proue du renouveau, a hissé le cépage au rang de grand vin, avec ses cuvées Silene (fruité et frais) et Cirsium (vieilles vignes, de garde), le premier Tre Bicchieri jamais attribué à Olevano. Sa philosophie — un Cesanese léger, frais et digeste, « l'opposé de l'Amarone », parfois comparé au pinot noir ou à un grand cru bourguignon — a inspiré toute une génération (Alberto Giacobbe, Gabriele Magno). Le terroir volcanique d'Olevano, conjugué à un travail bio et respectueux, s'impose comme l'un des grands terroirs à Cesanese. C'est un accord idéal avec la cuisine romaine, l'agneau, les viandes et les fromages.\n\nLe terroir du Cesanese le plus acclamé : à Olevano, sur sols volcaniques, des rouges d'une finesse remarquable (Damiano Ciolli), premier Tre Bicchieri du secteur. C'est l'un des grands terroirs à Cesanese du Latium.\n\nOlevano Romano occupe une place à part dans la géographie du Cesanese : c'est ici, plus que dans le Piglio voisin pourtant élevé au rang de DOCG, que le cépage a connu sa révélation qualitative, au point que beaucoup considèrent ce terroir comme le véritable grand cru du Cesanese. Le secret tient à la conjonction d'un sol volcanique particulier, issu de l'activité des volcans des Colli Albani, et d'un microclimat frais favorisé par l'altitude, qui préserve l'acidité et les arômes du cépage. Damiano Ciolli fut le premier à en tirer pleinement parti, en abaissant les rendements, en travaillant en bio et en refusant la surextraction et le boisé, pour laisser parler le fruit et le terroir. Le résultat — un Cesanese léger, épicé, floral, d'une fraîcheur et d'une buvabilité rares, capable de vieillir avec grâce — a bouleversé l'image du cépage et attiré l'attention de la critique internationale. Servi sur la cuisine romaine, l'agneau, les viandes grillées ou des fromages, le Cesanese d'Olevano séduit par son élégance et sa digestibilité, à mille lieues des rouges lourds. Le succès de Ciolli a fait des émules — Alberto Giacobbe, Gabriele Magno et d'autres —, faisant d'Olevano Romano un petit terroir culte, l'épicentre de la renaissance du Cesanese et l'un des plus beaux exemples de ce que le Latium peut offrir en matière de vin autochtone de haut niveau.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "cesanese",
+        "olevano",
+        "rouge",
+        "doc",
+        "volcanique",
+        "reference"
+      ],
+      "source": "winespectator|gamberorosso"
+    },
+    {
+      "id": "it-lazio-terr-cesanese-di-affile",
+      "nom": "Cesanese di Affile",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Cesanese (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cesanese di Affile"
+      ],
+      "altitude": "~400-700 m",
+      "sols": "calcaires et volcaniques d'altitude des monts autour d'Affile",
+      "caracteristiques_rapides": "Le berceau du plus noble des Cesanese : le Cesanese di Affile, en altitude, donne les rouges les plus fins et racés du cépage, fruités, épicés et tanniques (Formiconi).",
+      "notes_objectives": "Le Cesanese di Affile est le berceau du plus noble des Cesanese : la sous-variété qui porte le nom du village d'Affile, dans les montagnes à l'est de Rome, est considérée comme la plus fine et la plus qualitative du cépage. C'est ici, sur ces terroirs d'altitude, que le Cesanese di Affile trouve son expression la plus racée.\n\nÀ la différence du Cesanese Comune, plus productif et rustique, le Cesanese di Affile donne des grappes plus petites et des vins plus concentrés, fins et structurés. Cultivé en altitude (400-700 mètres, parmi les plus élevées de la région), sur des sols calcaires et volcaniques, sous un climat frais aux fortes amplitudes thermiques, il donne des rouges d'une belle fraîcheur, aux arômes de fruits rouges, d'épices, de réglisse et de notes florales, dotés d'une structure tannique fine et d'une réelle aptitude à la garde. L'appellation, confidentielle, impose au moins 90 % de Cesanese di Affile. C'est ce sous-cépage qui fait la noblesse des meilleurs Cesanese, y compris ceux d'Olevano et du Piglio voisins, où il est largement planté. Des domaines comme Formiconi en sont les spécialistes. C'est un accord idéal avec la cuisine romaine, l'agneau, le gibier et les fromages affinés, sur un terroir de montagne qui donne au cépage sa plus belle finesse.\n\nLe berceau du plus noble des Cesanese : le Cesanese di Affile, en altitude, donne les rouges les plus fins et racés du cépage, fruités, épicés et de garde. C'est le sous-cépage qui fait la noblesse du grand rouge du Latium.\n\nLe Cesanese di Affile occupe une position singulière : c'est à la fois une appellation confidentielle, centrée sur le village d'Affile et ses montagnes, et surtout le nom du sous-cépage qui fait la noblesse de tous les grands Cesanese de la région. Car le « Cesanese » recouvre en réalité deux variétés distinctes : le Cesanese Comune, plus productif, à grosses grappes, plus facile mais plus rustique ; et le Cesanese di Affile, aux grappes et baies plus petites, moins généreux mais infiniment plus fin, concentré et racé. Ce sont les vignerons soucieux de qualité qui privilégient l'Affile, y compris à Olevano et dans le Piglio, où il donne les meilleures cuvées. Sur les terroirs d'altitude d'Affile, parmi les plus élevés de la région (jusqu'à 700 mètres), sur des sols calcaires et volcaniques, le cépage bénéficie d'un climat frais aux fortes amplitudes thermiques qui exalte sa finesse aromatique et sa fraîcheur. Il en résulte des rouges d'une grande élégance, aux tanins fins et à la belle aptitude à la garde. Servi sur la cuisine romaine, l'agneau, le gibier ou des fromages affinés, le Cesanese di Affile séduit par sa complexité épicée et florale. Cépage exigeant et confidentiel, il est le trésor caché du Latium, la clé de voûte qualitative sur laquelle repose toute la renaissance du grand rouge autochtone de la région, admiré des amateurs pour sa finesse presque bourguignonne.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "cesanese",
+        "affile",
+        "rouge",
+        "doc",
+        "altitude",
+        "autochtone"
+      ],
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-lazio-terr-frascati",
+      "nom": "Frascati",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Candia",
+        "Malvasia del Lazio",
+        "Trebbiano",
+        "Bombino"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tufs volcaniques et pouzzolane des Colli Albani",
+      "caracteristiques_rapides": "Le blanc emblématique de Rome, jadis synonyme de vin de masse : Malvasia et Trebbiano en blanc frais et léger, vin des trattorias romaines, en montée qualitative sur ses meilleures cuvées.",
+      "notes_objectives": "Le Frascati est le blanc emblématique de Rome, l'un des vins les plus célèbres d'Italie, produit sur les collines volcaniques des Castelli Romani au sud-est de la capitale. Depuis l'Antiquité, il abreuve la Ville éternelle : c'est le vin des trattorias romaines par excellence.\n\nLe Frascati repose sur la Malvasia (di Candia et del Lazio) et le Trebbiano, complétés parfois de Bombino et d'autres cépages. Longtemps synonyme, comme l'Orvieto, de vin blanc surproduit et souvent banal, écoulé en grande quantité, il a pâti d'une image de vin de masse. Pourtant, sur les sols de tuf volcanique et de pouzzolane des Colli Albani, il peut donner un blanc frais, léger et agréable, aux arômes floraux et d'agrumes, désaltérant et convivial. La version tranquille et sèche (secco) est la plus courante, à boire jeune. Ses meilleures expressions se trouvent dans le Frascati Superiore (promu DOCG), plus concentré. Le Frascati « classique » reste le vin de tous les jours des Romains, parfait sur la cuisine locale. C'est un accord idéal avec la cacio e pepe, les fritures, les poissons, la porchetta et les antipasti, servi bien frais.\n\nLe blanc emblématique de Rome, jadis synonyme de vin de masse : Malvasia et Trebbiano en blanc frais et léger, vin des trattorias romaines, en montée qualitative sur ses meilleures cuvées (Superiore).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "frascati",
+        "castelli-romani",
+        "malvasia",
+        "blanc",
+        "doc",
+        "volcanique"
+      ],
+      "source": "wine-searcher|cellartours"
+    },
+    {
+      "id": "it-lazio-terr-est-est-est-di-montefiascone",
+      "nom": "Est! Est!! Est!!! di Montefiascone",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Trebbiano",
+        "Malvasia",
+        "Rossetto"
+      ],
+      "altitude": "~300-600 m",
+      "sols": "volcaniques du cratère du lac de Bolsena",
+      "caracteristiques_rapides": "L'appellation à la légende célèbre (le prélat et son serviteur) : blanc frais et léger de Trebbiano et Malvasia sur les sols volcaniques de Bolsena, dans le Haut-Latium.",
+      "notes_objectives": "L'Est! Est!! Est!!! di Montefiascone est l'appellation à la légende la plus célèbre d'Italie, un blanc produit autour de Montefiascone, sur les pentes volcaniques du lac de Bolsena, dans le Haut-Latium (province de Viterbe). Son nom insolite est indissociable d'une histoire fameuse, mi-légende mi-réalité.\n\nLa légende raconte qu'au XIIe siècle, un prélat allemand voyageant vers Rome envoyait son serviteur en éclaireur pour repérer les bonnes tavernes, celui-ci devant inscrire « Est » (« il y en a », sous-entendu du bon vin) sur les portes. À Montefiascone, émerveillé, le serviteur aurait écrit trois fois « Est! Est!! Est!!! » ; le prélat y serait resté et y aurait fini ses jours. Au-delà du récit, le vin lui-même est un blanc d'assemblage de Trebbiano, Malvasia et Rossetto (Trebbiano Giallo), frais, léger et floral, longtemps de qualité inégale mais en progrès chez les meilleurs. Sur les sols volcaniques du cratère de Bolsena, à 300-600 mètres, il gagne en minéralité et en fraîcheur. Des domaines comme Trappolini, Tenuta La Pazzaglia ou Mazziotti en révèlent le potentiel. C'est un accord idéal avec les poissons du lac de Bolsena, les fritures, les fruits de mer et la cuisine légère, un blanc de plaisir chargé d'histoire.\n\nL'appellation à la légende célèbre (le prélat et son serviteur) : blanc frais et léger de Trebbiano et Malvasia sur les sols volcaniques de Bolsena. C'est le blanc historique et emblématique du Haut-Latium.\n\nAu-delà de sa légende — l'une des plus savoureuses du monde du vin —, l'Est! Est!! Est!!! di Montefiascone raconte l'histoire d'un terroir volcanique remarquable et d'une appellation en quête de rédemption qualitative. Le lac de Bolsena, immense cratère volcanique du Haut-Latium, a laissé sur ses pentes des sols riches en minéraux, propices à la vigne depuis l'Antiquité étrusque et romaine. Longtemps, pourtant, la célébrité du nom a nui au vin : porté par sa légende et par le tourisme, l'Est! Est!! Est!!! s'est vendu tout seul, sans incitation à la qualité, donnant des blancs souvent dilués et anonymes. Mais une nouvelle génération de vignerons a entrepris de révéler le potentiel du terroir, en valorisant notamment le Rossetto (Trebbiano Giallo), cépage local plus intéressant que le Trebbiano Toscano banal, et en maîtrisant les rendements. Les meilleures cuvées gagnent alors en minéralité, en fraîcheur et en caractère, exprimant la signature volcanique de Bolsena. Servi sur les poissons du lac (l'anguille, le corégone), les fritures, les fruits de mer ou une cuisine légère, l'Est! Est!! Est!!! séduit par sa vivacité désaltérante. Des domaines comme Trappolini, Tenuta La Pazzaglia ou Mazziotti en montrent le vrai visage. Chargé d'histoire et porté par un terroir de qualité, il illustre, comme le Frascati, le pari du Latium de transformer ses appellations célèbres mais galvaudées en vins de terroir dignes de leur réputation.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "viterbo",
+        "est-est-est",
+        "montefiascone",
+        "bolsena",
+        "blanc",
+        "doc",
+        "volcanique"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-terr-cori",
+      "nom": "Cori",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Cori/Latina (LT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bellone",
+        "Nero Buono"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "calcaires des monts Lepini et sols volcaniques",
+      "caracteristiques_rapides": "Le terroir des autochtones du sud du Latium : le Bellone (blanc) et le Nero Buono (rouge), cépages bus dès l'Antiquité romaine, en pleine réhabilitation (Marco Carpineti, Cincinnato).",
+      "notes_objectives": "Le Cori est le terroir des cépages autochtones du sud du Latium, produit autour de la ville antique de Cori, sur les premières collines des monts Lepini, à une vingtaine de kilomètres de la mer Tyrrhénienne. C'est un haut lieu de la préservation du patrimoine ampélographique de la région.\n\nCori est le fief de deux cépages autochtones emblématiques, que l'on dit bus dès l'Antiquité par les Romains : le Bellone (blanc), qui donne des vins frais, salins et structurés, aux arômes de fruits blancs et d'agrumes, et le Nero Buono (di Cori), un rouge profond et coloré, aux arômes de fruits noirs et d'épices. Sur les sols calcaires des monts Lepini et les sols volcaniques, sous un climat méditerranéen tempéré par la proximité de la mer, ces cépages expriment tout leur caractère. Longtemps sous-estimés, ils connaissent une belle réhabilitation, portée notamment par Marco Carpineti (premier domaine bio du Latium) et la coopérative Cincinnato, qui en ont fait des vins de terroir. C'est un accord idéal avec la cuisine méditerranéenne, les poissons et légumes pour le Bellone, les viandes pour le Nero Buono.\n\nLe terroir des autochtones du sud du Latium : le Bellone (blanc) et le Nero Buono (rouge), cépages bus dès l'Antiquité romaine, en pleine réhabilitation (Marco Carpineti, Cincinnato). C'est un fief du patrimoine local.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "cori",
+        "bellone",
+        "nero-buono",
+        "autochtone",
+        "doc"
+      ],
+      "source": "winespectator|vino2travel"
+    },
+    {
+      "id": "it-lazio-terr-grechetto-de-lalto-lazio",
+      "nom": "Grechetto de l'Alto Lazio",
+      "type": "cépage / zone",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grechetto"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "volcaniques et argilo-calcaires du Haut-Latium (Civitella d'Agliano)",
+      "caracteristiques_rapides": "Le grand blanc du nord de la région, à la frontière ombrienne : Grechetto minéral et de garde, hissé au sommet par Sergio Mottura (Latour a Civitella), sur les terres volcaniques de Bolsena.",
+      "notes_objectives": "Le Grechetto de l'Alto Lazio est le grand blanc du nord de la région, produit dans le Haut-Latium (province de Viterbe), notamment autour de Civitella d'Agliano, à la frontière de l'Ombrie et de la zone d'Orvieto. C'est ici que ce cépage blanc, souvent cantonné à l'assemblage, atteint son sommet.\n\nLe Grechetto est un cépage à la peau épaisse et au caractère affirmé, résistant et qualitatif. Sur les sols volcaniques et argilo-calcaires du Haut-Latium, sous l'influence du lac de Bolsena, il donne des blancs structurés, minéraux et aromatiques, aux arômes de fleurs, de fruits à noyau, d'amande et d'agrumes, avec une réelle aptitude à la garde, chose rare pour un blanc d'Italie centrale. C'est Sergio Mottura, pionnier du bio dans la région, qui a hissé le Grechetto du Latium au premier plan, avec ses cuvées Poggio della Costa et surtout Latour a Civitella, régulièrement primées (Tre Bicchieri). Le cépage se prête aussi à de beaux vins botrytisés (le Muffo de Mottura). Souvent commercialisé sous l'IGT Lazio ou en Grechetto varietal, il illustre le potentiel méconnu des blancs du nord de la région. C'est un accord idéal avec les poissons, les fruits de mer, la volaille et une cuisine méditerranéenne raffinée.\n\nLe grand blanc du nord de la région, à la frontière ombrienne : Grechetto minéral et de garde, hissé au sommet par Sergio Mottura (Latour a Civitella), sur les terres volcaniques de Bolsena.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "viterbo",
+        "grechetto",
+        "blanc",
+        "civitella",
+        "garde"
+      ],
+      "source": "italysfinestwines|gamberorosso"
+    },
+    {
+      "id": "it-lazio-terr-roma",
+      "nom": "Roma",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Roma (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia",
+        "Bellone",
+        "Montepulciano",
+        "Cesanese",
+        "Syrah"
+      ],
+      "altitude": "~50-350 m",
+      "sols": "volcaniques et alluviaux autour de Rome",
+      "caracteristiques_rapides": "L'appellation créée en 2011 autour de la capitale : blancs (Malvasia, Bellone) et rouges (Montepulciano, Cesanese), un cadre marketing moderne pour les vins de Rome (Poggio Le Volpi).",
+      "notes_objectives": "L'appellation Roma est une DOC créée en 2011 pour les vignobles entourant la capitale, un cadre moderne et marketing destiné à donner un nom fort et reconnaissable aux vins de Rome. Elle chevauche partiellement de nombreuses autres appellations du Latium.\n\nLa DOC Roma couvre une large palette : en blanc, des vins à base de Malvasia (del Lazio surtout) et de Bellone, frais et floraux ; en rouge, des assemblages à base de Montepulciano, de Cesanese, de Sangiovese et parfois de cépages internationaux (Syrah). Sur les sols volcaniques et alluviaux autour de Rome, ces cépages donnent des vins équilibrés, du blanc de plaisir au rouge structuré (notamment en version Riserva). Conçue pour valoriser un terroir sous une marque forte — le nom de Rome —, l'appellation a permis à des domaines comme Poggio Le Volpi (Roma Rosso Edizione Limitata, Tre Bicchieri) ou Principe Pallavicini de proposer des vins ambitieux et identifiables. Plus souple que les DOC historiques voisines, elle illustre la volonté de moderniser l'image du vin romain. C'est un accord idéal avec la cuisine romaine, des poissons pour les blancs aux viandes pour les rouges.\n\nL'appellation créée en 2011 autour de la capitale : blancs (Malvasia, Bellone) et rouges (Montepulciano, Cesanese), un cadre moderne pour les vins de Rome, valorisé par les meilleurs domaines (Poggio Le Volpi).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "roma",
+        "malvasia",
+        "montepulciano",
+        "blanc",
+        "rouge",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-terr-marino",
+      "nom": "Marino",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Candia",
+        "Malvasia del Lazio",
+        "Trebbiano"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "tufs volcaniques des Colli Albani",
+      "caracteristiques_rapides": "Le voisin du Frascati dans les Castelli Romani : blanc de Malvasia et Trebbiano, frais et floral, terroir volcanique historique révélé par Colle Picchioni (Paola Di Mauro).",
+      "notes_objectives": "Le Marino est le voisin direct du Frascati dans les Castelli Romani, un blanc volcanique historique produit autour de la ville de Marino, sur les pentes des Colli Albani au sud de Rome. Il partage avec le Frascati le même terroir et les mêmes cépages, tout en cultivant sa propre identité.\n\nComme le Frascati, le Marino repose sur la Malvasia (di Candia et del Lazio) et le Trebbiano. Sur les sols de tuf volcanique des Colli Albains, il donne un blanc frais, floral et minéral, aux arômes de fleurs blanches et d'agrumes, désaltérant. Marino est célèbre pour sa fête du vin (la Sagra dell'Uva, où la fontaine du village coule de vin) et fut longtemps un vin de grande consommation romaine. Mais le terroir a aussi révélé de grands vins : c'est ici que la légendaire Paola Di Mauro, au domaine Colle Picchioni, a prouvé dès les années 1980 le potentiel des Castelli, avec ses blancs (Le Vignole) et son rouge d'assemblage bordelais (Vigna del Vassallo). Le Marino illustre, aux côtés du Frascati, la richesse des blancs volcaniques de Rome. C'est un accord idéal avec la cuisine romaine, les fritures, les poissons et les antipasti.\n\nLe voisin du Frascati dans les Castelli Romani : blanc de Malvasia et Trebbiano, frais et floral, sur terroir volcanique, révélé par Colle Picchioni (Paola Di Mauro). C'est un grand blanc volcanique historique de Rome.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "marino",
+        "castelli-romani",
+        "malvasia",
+        "blanc",
+        "doc",
+        "volcanique"
+      ],
+      "source": "wine-searcher|vino2travel"
+    },
+    {
+      "id": "it-lazio-terr-cannellino-di-frascati",
+      "nom": "Cannellino di Frascati",
+      "type": "appellation (DOCG)",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Candia",
+        "Malvasia del Lazio"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tufs volcaniques des Colli Albani",
+      "caracteristiques_rapides": "La version douce et noble du Frascati, promue DOCG : Malvasia en vin moelleux issu de raisins surmûris, blanc doux traditionnel des Castelli Romani, aux notes de miel et d'agrumes confits.",
+      "notes_objectives": "Le Cannellino di Frascati est la version douce et noble du Frascati, promue DOCG en 2011 (aux côtés du Frascati Superiore). C'est le blanc moelleux traditionnel des Castelli Romani, un vin de dessert historique de la région de Rome. Il est élaboré à partir de Malvasia (di Candia et surtout del Lazio, plus fine), issue de raisins laissés à surmûrir sur la vigne, parfois touchés par la pourriture noble, ce qui concentre les sucres. Sur les sols de tuf volcanique des Colli Albani, il donne un blanc doux mais équilibré, aux arômes de miel, d'abricot, d'agrumes confits et de fleurs, avec une belle fraîcheur qui évite la lourdeur. Moins connu que le Frascati sec, le Cannellino perpétue une tradition ancienne de vin doux dans les Castelli Romani. Des domaines comme Villa Simone en produisent de belles versions. C'est un accord idéal avec les desserts, la pâtisserie romaine (les maritozzi, les crostate), les fromages affinés ou à déguster seul, en fin de repas.\n\nLa version douce et noble du Frascati, promue DOCG : Malvasia en vin moelleux issu de raisins surmûris, aux notes de miel et d'agrumes confits. C'est le blanc doux traditionnel des Castelli Romani.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "frascati",
+        "cannellino",
+        "castelli-romani",
+        "malvasia",
+        "doux",
+        "docg"
+      ],
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-lazio-terr-aleatico-di-gradoli",
+      "nom": "Aleatico di Gradoli",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Alto Lazio (VT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aleatico"
+      ],
+      "altitude": "~300-500 m",
+      "sols": "volcaniques des pentes du lac de Bolsena",
+      "caracteristiques_rapides": "Le rouge doux aromatique du Haut-Latium : Aleatico en vin doux (et passito) sur les sols volcaniques de Bolsena, aux parfums de rose et de fruits rouges, curiosité de Gradoli.",
+      "notes_objectives": "L'Aleatico di Gradoli est le rouge doux aromatique du Haut-Latium, une spécialité produite autour du village de Gradoli, sur les pentes volcaniques du lac de Bolsena (province de Viterbe). C'est l'une des rares appellations dédiées à l'Aleatico, cépage aromatique cousin du Muscat. L'Aleatico donne un vin doux d'une couleur rubis, aux parfums envoûtants de rose, de fruits rouges, de cerise et d'épices, à la fois riche et parfumé. Sur les sols volcaniques de Bolsena, il s'exprime avec intensité. Traditionnellement produit en version douce (et en passito, à partir de raisins séchés), il perpétue une tradition ancienne de vin de dessert. Longtemps confidentielle, l'appellation est aujourd'hui portée par quelques vignerons ; certains, comme Andrea Occhipinti à Gradoli, ont même exploré l'Aleatico en version sèche, révélant une autre facette du cépage. C'est un accord idéal avec les desserts aux fruits rouges, la pâtisserie, le chocolat ou les fromages, à déguster en fin de repas, une curiosité aromatique du terroir volcanique du Haut-Latium.\n\nLe rouge doux aromatique du Haut-Latium : Aleatico en vin doux (et passito) sur les sols volcaniques de Bolsena, aux parfums de rose et de fruits rouges. C'est une curiosité de Gradoli.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "viterbo",
+        "gradoli",
+        "aleatico",
+        "doux",
+        "rouge",
+        "doc",
+        "volcanique"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-lazio-terr-cerveteri",
+      "nom": "Cerveteri",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Roma (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Giacchè",
+        "Bellone",
+        "Trebbiano",
+        "Montepulciano"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "volcaniques et sableux de la côte étrusque",
+      "caracteristiques_rapides": "Le terroir de la côte étrusque au nord de Rome : rouges et blancs, gardien du rare cépage autochtone Giacchè (Casale Cento Corvi), sur les terres de l'antique Caere.",
+      "notes_objectives": "Le Cerveteri est le terroir viticole de la côte étrusque, au nord-ouest de Rome, autour de l'antique cité de Caere (l'actuelle Cerveteri), célèbre pour ses nécropoles étrusques classées au patrimoine mondial. C'est un terroir chargé d'histoire, où la vigne est cultivée depuis les Étrusques. L'appellation produit des rouges et des blancs à partir de cépages variés : Montepulciano, Sangiovese et Cesanese en rouge, Trebbiano et Malvasia en blanc. Mais sa singularité tient à la préservation du Giacchè, un cépage rouge autochtone rarissime, quasi disparu, dont le domaine Casale Cento Corvi s'est fait le gardien, ainsi qu'au Bellone. Sur les sols volcaniques et sableux de la côte, sous l'influence maritime, ces cépages donnent des vins de caractère. Longtemps zone de production courante, Cerveteri gagne en intérêt grâce à la valorisation de ses cépages rares. C'est un accord idéal avec la cuisine locale, les poissons de la côte pour les blancs, les viandes pour les rouges, sur un terroir au patrimoine étrusque unique.\n\nLe terroir de la côte étrusque au nord de Rome : rouges et blancs, gardien du rare cépage autochtone Giacchè (Casale Cento Corvi), sur les terres de l'antique Caere. C'est un terroir chargé d'histoire étrusque.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "cerveteri",
+        "giacche",
+        "bellone",
+        "rouge",
+        "blanc",
+        "doc",
+        "autochtone"
+      ],
+      "source": "vino2travel"
+    },
+    {
+      "id": "it-lazio-terr-castelli-romani",
+      "nom": "Castelli Romani",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Castelli Romani (RM)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia",
+        "Trebbiano",
+        "Cesanese",
+        "Montepulciano"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tufs volcaniques des Colli Albains",
+      "caracteristiques_rapides": "L'appellation-cadre des collines volcaniques au sud de Rome : blancs (Malvasia, Trebbiano), rouges et rosés, le vin de tous les jours des Romains, du frais au convivial.",
+      "notes_objectives": "L'appellation Castelli Romani est le cadre général des collines volcaniques au sud-est de Rome, un vaste terroir qui englobe les zones plus spécifiques de Frascati, Marino et d'autres. Les « châteaux romains » désignent les villages perchés des Colli Albani, lieux de villégiature traditionnels des Romains. L'appellation, souple et vaste, produit surtout des blancs à base de Malvasia et de Trebbiano, frais et légers, mais aussi des rouges (Cesanese, Montepulciano, Sangiovese) et des rosés. Sur les sols de tuf volcanique des Colli Albani, riches en minéraux, les cépages donnent des vins de plaisir, à boire jeunes. C'est le vin de tous les jours des Romains, servi dans les fraschette (les tavernes traditionnelles des Castelli) et les trattorias de la capitale. Moins prestigieuse que les DOCG Frascati Superiore ou Cannellino, l'appellation Castelli Romani reste le vin convivial et populaire par excellence de la région de Rome. C'est un accord idéal avec la cuisine romaine, la porchetta, les fritures, la cacio e pepe et les antipasti, servi bien frais.\n\nL'appellation-cadre des collines volcaniques au sud de Rome : blancs (Malvasia, Trebbiano), rouges et rosés, le vin de tous les jours des Romains. C'est le vin convivial et populaire des Castelli.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "castelli-romani",
+        "malvasia",
+        "blanc",
+        "rouge",
+        "doc"
+      ],
+      "source": "cellartours"
+    },
+    {
+      "id": "it-lazio-terr-moscato-di-terracina",
+      "nom": "Moscato di Terracina",
+      "type": "appellation (DOC)",
+      "region": "Lazio",
+      "sous_region": "Terracina (LT)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Moscato"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "calcaires des falaises côtières du Monte Sant'Angelo",
+      "caracteristiques_rapides": "La spécialité aromatique de la côte tyrrhénienne : Moscato (di Terracina) en sec, doux ou spumante, sur les falaises calcaires du sud du Latium, blanc parfumé et solaire.",
+      "notes_objectives": "Le Moscato di Terracina est la spécialité aromatique de la côte tyrrhénienne du sud du Latium, produit autour de la ville balnéaire de Terracina, sur les falaises calcaires du Monte Sant'Angelo. C'est l'une des expressions les plus méridionales et solaires du vin du Latium. Il est élaboré à partir du Moscato (une variété locale, le Moscato di Terracina), cépage aromatique de la famille des Muscats. Sur les sols calcaires des falaises côtières, sous un climat méditerranéen chaud et venté, il donne des vins parfumés, aux arômes typiques de fleurs, de raisin frais, d'agrumes et de fruits exotiques. Sa singularité est de se décliner en trois styles : sec (asciutto), doux (amabile) et effervescent (spumante), du vin d'apéritif au vin de dessert. Longtemps confidentielle, l'appellation valorise ce Moscato local sur un terroir côtier spectaculaire. C'est un accord idéal avec les poissons et fruits de mer pour la version sèche, les desserts et la pâtisserie pour la version douce, ou à l'apéritif pour le spumante, un blanc parfumé et ensoleillé du littoral du Latium.\n\nLa spécialité aromatique de la côte tyrrhénienne : Moscato (di Terracina) en sec, doux ou spumante, sur les falaises calcaires du sud du Latium. C'est un blanc parfumé et solaire du littoral.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "terracina",
+        "moscato",
+        "blanc",
+        "doux",
+        "doc",
+        "cote"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-lazio-terr-lazio",
+      "nom": "Lazio",
+      "type": "appellation (IGT)",
+      "region": "Lazio",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cesanese",
+        "Malvasia",
+        "Bellone",
+        "Grechetto",
+        "Merlot",
+        "Syrah"
+      ],
+      "altitude": "~0-700 m",
+      "sols": "sols variés (volcaniques, calcaires, sableux) de la région",
+      "caracteristiques_rapides": "La grande IGT régionale : cadre souple pour tous cépages, autochtones et internationaux, dont des cuvées d'auteur majeures (Montiano, Habemus, vins nature) hors DOC.",
+      "notes_objectives": "L'IGT Lazio est l'indication géographique régionale, qui couvre l'ensemble du territoire du Latium. Cadre souple et transversal, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC et DOCG. Elle rassemble tous les cépages de la région — Cesanese, Malvasia, Bellone, Nero Buono, Grechetto, Trebbiano — ainsi que de nombreux cépages internationaux (Merlot, Syrah, Cabernet, Chardonnay), en rouge, blanc, rosé et effervescent. C'est notamment sous cette IGT que sont commercialisées certaines des cuvées les plus prestigieuses de la région, qui sortent du cadre des appellations : le Montiano de Falesco (Merlot culte), le Habemus de San Giovenale (assemblage acclamé), les Grechetto de Sergio Mottura, ainsi que de nombreux vins nature (Le Coste, Cantina Ribelà). Souple et créative, l'IGT Lazio est un espace de liberté précieux pour les vignerons, du vin de tous les jours aux cuvées d'auteur les plus ambitieuses. Elle illustre la diversité et le dynamisme retrouvé du vin du Latium.\n\nLa grande IGT régionale : cadre souple pour tous cépages, dont des cuvées d'auteur majeures (Montiano, Habemus, vins nature) hors DOC. C'est l'espace de liberté et de créativité des vignerons du Latium.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lazio",
+        "igt",
+        "souple",
+        "auteur",
+        "multi-cepages"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

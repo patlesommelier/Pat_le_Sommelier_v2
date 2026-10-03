@@ -1,0 +1,1472 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "umbria",
+  "region_label": "Umbria (Italie)",
+  "source_file": "producteurs_umbria.json",
+  "built_at": "2026-07-08",
+  "count": 33,
+  "items": [
+    {
+      "id": "it-umbria-prod-arnaldo-caprai",
+      "nom": "Arnaldo Caprai",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco / Bevagna",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Arnaldo Caprai est LE domaine qui a fait renaître le Sagrantino et l'a hissé au rang de grand vin italien. Fondé en 1971 par Arnaldo Caprai, entrepreneur du textile, il a pris son essor sous la houlette de son fils Marco, qui, à partir des années 1980-90, a mené un travail de recherche déterminant sur ce cépage austère et difficile.\n\nEn collaboration avec l'Université de Milan, Marco Caprai a étudié et sélectionné le Sagrantino pour en adoucir les tanins rugueux tout en préservant sa personnalité, et introduit des méthodes de vinification modernes (notamment la vinification intégrale de Michel Rolland). Le résultat, le Sagrantino 25 Anni (lancé en 1993 pour le 25e anniversaire du domaine), est devenu la référence mondiale du Montefalco : un rouge riche, profond et velouté, capable de rivaliser avec les plus grands. Le domaine, le plus important de la DOCG, signe aussi le Sagrantino Collepiano, le Montefalco Rosso et un beau Grechetto (Grecante). Pionnier de la durabilité (projet New Green Revolution) et créateur de la Strada del Sagrantino, Caprai a joué un rôle culturel et économique majeur pour toute l'appellation.\n\nDomaine qui a fait renaître le Sagrantino, Arnaldo Caprai signe avec le 25 Anni la référence mondiale du Montefalco. C'est le nom le plus important de l'appellation et l'artisan de son essor international.\n\n Le rôle de Marco Caprai a dépassé son seul domaine : en fédérant les producteurs et en investissant dans la recherche et la promotion, il a fait de Montefalco une appellation qui compte, comparée aujourd'hui au Barolo et au Brunello. Servi sur du sanglier, des viandes rouges ou des fromages affinés, le 25 Anni se patine sur une décennie et plus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino 25 Anni",
+        "Sagrantino Collepiano",
+        "Montefalco Rosso",
+        "Grecante (Grechetto)"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "25-anni",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|decanter|winetravelguides"
+    },
+    {
+      "id": "it-umbria-prod-paolo-bea",
+      "nom": "Paolo Bea",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, au cœur de l'Umbrie, Paolo Bea est un domaine culte, considéré comme le « père » du vin naturel ombrien et l'une des références du vin artisanal en Italie. La famille Bea cultive la vigne depuis des générations sur ce terroir du Sagrantino, mais c'est l'approche radicalement authentique de Paolo et de ses fils (dont Giampiero, également architecte) qui a fait la légende du domaine.\n\nEn agriculture biologique et avec une intervention minimale, la famille élabore des vins d'une personnalité exceptionnelle, aux antipodes des vins standardisés : longues macérations, levures indigènes, élevages prolongés, soufre minimal, ni filtration ni collage. Le Sagrantino Pagliaro, issu des meilleures vignes, est un rouge puissant, complexe et d'une très longue garde, à la fois tannique et profond, aux arômes sauvages de fruits noirs, d'épices, de cuir et de garrigue. Le Pipparello (Rosso Riserva, assemblage de Sangiovese, Montepulciano et Sagrantino) et le rare Sagrantino Passito (version douce traditionnelle, souvent citée comme la plus belle expression du genre) complètent une gamme d'une grande cohérence. Ces vins, produits en quantités limitées et vieillis longuement avant leur sortie, sont recherchés dans le monde entier par les amateurs de vin authentique. L'influence de Paolo Bea sur toute une génération de vignerons ombriens et italiens a été considérable, faisant du domaine un symbole du retour à un vin vrai, ancré dans son terroir.\n\nDomaine culte et « père » du vin nature en Umbria, Paolo Bea signe des Sagrantino profonds et de très longue garde, artisanaux et sans compromis. C'est l'une des références du vin authentique en Italie et un symbole de Montefalco.\n\nCe qui distingue Paolo Bea, c'est un refus radical des recettes et des modes : ici, le vin se fait à la vigne et au fil du temps, sans chercher à plaire à tout prix. Cette approche, longtemps marginale, a fait du domaine un phare pour le mouvement naturel bien au-delà de l'Umbrie. Le Sagrantino, réputé pour être l'un des cépages les plus tanniques du monde, y est dompté non par la technique mais par la patience : longues macérations, élevages prolongés en grands foudres, années de bouteille avant la sortie. Servis sur des viandes rouges, du sanglier (spécialité ombrienne), du gibier ou des fromages affinés, les Sagrantino de Bea déploient une puissance maîtrisée et une complexité rare, et se patinent sur des décennies. Le Passito, version douce du Sagrantino issue de raisins séchés, perpétue la forme historique du cépage et compte parmi les plus grands vins doux d'Italie. Giampiero Bea, également fondateur de l'association ViniVeri, a fait du domaine un porte-drapeau du vin artisanal. Recherchés et rares, ces vins sont devenus des références absolues pour les amateurs du monde entier, et incarnent, mieux que tout autre, l'âme sauvage et authentique de Montefalco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino Pagliaro",
+        "Pipparello (Rosso Riserva)",
+        "Sagrantino Passito",
+        "Cerrete"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "nature",
+        "bio",
+        "culte",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|italymagazine"
+    },
+    {
+      "id": "it-umbria-prod-lungarotti",
+      "nom": "Lungarotti",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Torgiano (PG)",
+      "commune": "Torgiano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Canaiolo",
+        "Grechetto",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Torgiano Rosso Riserva DOCG",
+        "Torgiano DOC",
+        "Montefalco Sagrantino DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torgiano, entre Pérouse et Assise, Lungarotti est la maison qui a créé l'Umbrie viticole moderne et l'un des noms les plus respectés du vin italien. Dans les années 1960, Giorgio Lungarotti, agronome visionnaire, transforma l'agriculture mixte de ce coin d'Italie centrale en un vignoble spécialisé de qualité, faisant de Torgiano une appellation reconnue et hissant l'Umbrie sur la carte des grands vins.\n\nSon œuvre majeure est le Rubesco Vigna Monticchio, un Torgiano Rosso Riserva à base de Sangiovese, cru complexe et de longue garde qui mérite sa place parmi les plus grands rouges d'Italie, distingué seize fois par les Tre Bicchieri du Gambero Rosso. Le domaine, aujourd'hui mené par les filles de Giorgio, Chiara et Teresa Severini Lungarotti, signe aussi le Rubesco « classique », le blanc Torre di Giano et le San Giorgio (assemblage), ainsi que des vins issus de son domaine de Montefalco. La maison a bâti tout un univers autour du vin : un musée du vin (MUVIT) mondialement réputé, un hôtel, une fondation. L'engagement en agriculture biologique et la constance qualitative sur des décennies confirment le statut de pionnier et de référence de Lungarotti. C'est le domaine qui, le premier, a prouvé que l'Umbrie pouvait produire de grands vins de garde.\n\nMaison pionnière qui a créé l'Umbrie viticole moderne, Lungarotti signe avec le Rubesco Vigna Monticchio l'un des grands rouges d'Italie, seize fois Tre Bicchieri. C'est une référence historique et le porte-drapeau de Torgiano.\n\nL'histoire de Lungarotti se confond avec celle du vin ombrien moderne : sans la vision de Giorgio Lungarotti, Torgiano ne serait qu'un nom parmi d'autres. En pariant, dès les années 1960, sur la spécialisation viticole et sur la garde — à une époque où l'Italie centrale produisait surtout des vins de consommation courante —, il a ouvert la voie à toute une génération. Le Rubesco Vigna Monticchio, dont les premiers millésimes des années 1960 vieillissent encore admirablement, a prouvé la longévité exceptionnelle du Sangiovese de Torgiano. Servi sur des viandes rouges, du gibier, des truffes ou des fromages affinés, il séduit par sa profondeur et son fruité persistant, et se patine sur plusieurs décennies. Au-delà des vins, la famille a créé un véritable écosystème culturel autour du vin et de l'huile d'olive, avec son musée MUVIT, référence mondiale, qui témoigne de son attachement au patrimoine. Menée aujourd'hui par les sœurs Severini Lungarotti, converties au bio, la maison conjugue héritage et modernité. Pionnière, constante et respectée, Lungarotti demeure le symbole de l'excellence et de la longévité du vin ombrien, et une ambassadrice de tout un art de vivre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rubesco Vigna Monticchio (Torgiano Riserva)",
+        "Rubesco",
+        "Torre di Giano",
+        "San Giorgio"
+      ],
+      "tags": [
+        "umbria",
+        "torgiano",
+        "sangiovese",
+        "rubesco",
+        "historique",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|decanter"
+    },
+    {
+      "id": "it-umbria-prod-castello-della-sala-antinori",
+      "nom": "Castello della Sala (Antinori)",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Ficulle",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Chardonnay",
+        "Sauvignon",
+        "Procanico"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ficulle, près d'Orvieto, le Castello della Sala est le domaine ombrien de la famille Antinori, célèbre pour produire l'un des plus grands vins blancs d'Italie. Autour d'un château médiéval du XIVe siècle, Antinori y a développé, dès les années 1980, une viticulture d'excellence orientée vers le blanc.\n\nLe fleuron est le Cervaro della Sala, un assemblage de Chardonnay et de Grechetto élevé en barriques, d'une richesse, d'une complexité et d'une longévité exceptionnelles, qui a démontré le potentiel de grand blanc de garde de l'Umbrie et remporté un record de trente distinctions Tre Bicchieri. Le domaine signe aussi le Bramìto (Chardonnay plus accessible), le Conte della Vipera (Sauvignon-Sémillon) et le rare Muffato della Sala, un blanc doux issu de raisins botrytisés, l'un des plus beaux liquoreux d'Italie. Sur les sols volcaniques et argilo-calcaires de la région d'Orvieto, le savoir-faire des Antinori révèle toute la finesse du Grechetto et des cépages internationaux. Le Castello della Sala est ainsi une référence absolue du blanc italien et un ambassadeur du potentiel qualitatif de l'Umbrie.\n\nDomaine ombrien d'Antinori, le Castello della Sala produit avec le Cervaro l'un des plus grands blancs d'Italie, recordman des Tre Bicchieri. C'est une référence absolue du blanc italien et du potentiel de l'Umbrie.\n\n Le Cervaro della Sala, créé en 1985, fut l'un des premiers grands blancs italiens à revendiquer la garde et l'élevage en barrique, ouvrant la voie à toute une génération. Servi sur des poissons nobles, des crustacés, de la volaille ou des fromages, il se patine dix ans et plus, développant une complexité rare.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cervaro della Sala",
+        "Bramìto (Chardonnay)",
+        "Muffato della Sala (doux)",
+        "Conte della Vipera"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "antinori",
+        "chardonnay",
+        "grechetto",
+        "blanc",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-tabarrini",
+      "nom": "Tabarrini",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Trebbiano Spoletino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Spoleto DOC",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Giampaolo Tabarrini est l'une des grandes figures du renouveau du Sagrantino et une star montante du vin ombrien. Sur son domaine familial, ce vigneron passionné et charismatique a fait le choix, rare à Montefalco, de vinifier le Sagrantino en versions parcellaires, révélant les nuances des différents terroirs de l'appellation.\n\nSes trois Sagrantino de cru — Campo alla Cerqua, Colle Grimaldesco et Colle alle Macchie — expriment chacun un terroir distinct, dans un style qui allie la puissance et les tanins caractéristiques du cépage à une réelle finesse et une grande définition. Mais Tabarrini s'est aussi imposé comme l'un des grands ambassadeurs du Trebbiano Spoletino, ce cépage blanc autochtone redécouvert : son Adarmando, issu de très vieilles vignes, est considéré comme l'un des plus grands blancs d'Umbrie, tendu, complexe et de garde, régulièrement primé (Tre Bicchieri). Le domaine signe aussi un Montefalco Rosso de belle facture. L'approche de Giampaolo Tabarrini — attachement au terroir, vinifications parcellaires, valorisation des cépages autochtones et forte personnalité — a fait de lui l'un des vignerons les plus admirés et les plus influents de Montefalco, aux côtés des grands noms historiques. Son domaine incarne le dynamisme et la montée en gamme de toute l'appellation.\n\nStar montante de Montefalco, Giampaolo Tabarrini signe des Sagrantino parcellaires racés (Campo alla Cerqua) et l'un des plus grands Trebbiano Spoletino d'Umbrie (Adarmando). C'est l'un des vignerons les plus admirés de l'appellation.\n\nLe parcours de Giampaolo Tabarrini illustre la mutation de Montefalco : d'un domaine familial vendant son raisin, il a fait, en une génération, l'une des adresses les plus courues de l'appellation. Son intuition — traiter le Sagrantino comme un grand cépage de terroir, digne de vinifications parcellaires à la manière bourguignonne — était audacieuse dans une région où l'on assemblait plutôt les vignes. Chacun de ses crus exprime ainsi un sol et une exposition propres, révélant que le Sagrantino, loin d'être monolithique, peut offrir une belle diversité. Servis sur des viandes rouges, du sanglier, du gibier ou des fromages affinés, ses Sagrantino se patinent sur une décennie et plus. Sa redécouverte du Trebbiano Spoletino, cépage blanc oublié qu'il a hissé au rang de grand vin avec l'Adarmando, a été tout aussi déterminante, ouvrant la voie à une nouvelle génération de blancs ombriens de garde. Personnage haut en couleur, communicant né et infatigable promoteur de son terroir, Giampaolo Tabarrini est devenu l'un des visages du renouveau de Montefalco, prouvant qu'un domaine familial pouvait rivaliser avec les plus grands noms tout en cultivant une forte identité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino Campo alla Cerqua",
+        "Sagrantino Colle Grimaldesco",
+        "Adarmando (Trebbiano Spoletino)"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "trebbiano-spoletino",
+        "cru"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-antonelli-san-marco",
+      "nom": "Antonelli San Marco",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Trebbiano Spoletino",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Spoleto DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Antonelli San Marco est un domaine historique et bio, l'une des références qualitatives et durables de l'appellation. La famille Antonelli cultive ce terroir du Sagrantino depuis la fin du XIXe siècle, avec un attachement profond à l'authenticité et à l'environnement.\n\nEn agriculture biologique, le domaine signe des Sagrantino élégants et fidèles au terroir, dont le Chiusa di Pannone (issu des meilleures vignes) est l'expression la plus aboutie, ainsi que d'excellents Montefalco Rosso (dont une Riserva) et un beau Trebbiano Spoletino, cépage blanc autochtone qu'il valorise. Le style, précis et respectueux, privilégie la finesse et la buvabilité, à rebours des Sagrantino les plus extraits. L'engagement biologique, la qualité constante de la gamme et le travail sur les cépages autochtones ont fait d'Antonelli San Marco l'une des adresses les plus respectées de Montefalco. C'est une belle référence pour découvrir le Sagrantino dans un style élégant et durable.\n\nDomaine historique et bio de Montefalco, Antonelli San Marco signe des Sagrantino élégants (Chiusa di Pannone) et un beau Trebbiano Spoletino. C'est une référence qualitative et durable de l'appellation.\n\n L'attachement de la famille à son terroir et à l'environnement, sur plus d'un siècle, donne à ses vins une belle cohérence. Servis sur du sanglier, des viandes rouges ou des fromages pour les Sagrantino, sur des poissons pour le Trebbiano Spoletino, ils séduisent par leur élégance et leur équilibre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino Chiusa di Pannone",
+        "Montefalco Sagrantino",
+        "Trebbiano Spoletino",
+        "Montefalco Rosso Riserva"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "italymagazine|homeinitaly"
+    },
+    {
+      "id": "it-umbria-prod-colpetrone",
+      "nom": "Còlpetrone",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Gualdo Cattaneo",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gualdo Cattaneo, dans la zone de Montefalco, Còlpetrone est un domaine réputé pour ses Sagrantino concentrés et réguliers. Intégré au groupe Tenute del Cerro, il dispose de moyens qui lui permettent une production soignée sur un beau vignoble du terroir de Sagrantino.\n\nLe domaine signe des Montefalco Sagrantino de belle facture, dont la cuvée Gold, plus ambitieuse et longuement élevée, ainsi qu'un Montefalco Rosso. Le style, moderne et concentré, met en valeur la puissance du Sagrantino dans des vins structurés et de garde, régulièrement primés. La qualité constante et la bonne diffusion en font une valeur sûre de l'appellation. Còlpetrone illustre le savoir-faire des domaines bien équipés de Montefalco, capables de produire des Sagrantino fiables et représentatifs. C'est une belle adresse pour découvrir le grand cépage tannique de l'Umbrie, dans un style généreux et abouti.\n\nDomaine réputé de la zone de Montefalco, Còlpetrone signe des Sagrantino concentrés et réguliers (Gold). C'est une valeur sûre et primée du grand cépage tannique ombrien.\n\n Les moyens du groupe Tenute del Cerro permettent au domaine un travail soigné à la vigne comme en cave. Servi sur du sanglier, des viandes en sauce ou des fromages affinés, le Sagrantino de Còlpetrone se patine sur plusieurs années, révélant toute la puissance et la profondeur du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino Gold",
+        "Montefalco Sagrantino",
+        "Montefalco Rosso"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino"
+      ],
+      "a_verifier": null,
+      "source": "italymagazine"
+    },
+    {
+      "id": "it-umbria-prod-tenute-lunelli-castelbuono",
+      "nom": "Tenute Lunelli - Castelbuono",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Bevagna",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bevagna, dans la zone de Montefalco, la Tenuta Castelbuono est le domaine ombrien de la famille Lunelli (la maison Ferrari du Trentodoc), acquis en 2001 et converti à l'agriculture biologique. Il est mondialement célèbre pour sa cave spectaculaire.\n\nLe Carapace, une cave-sculpture monumentale en forme de carapace de tortue conçue par le grand artiste Arnaldo Pomodoro, est une œuvre d'art unique au monde, devenue une icône de l'œnotourisme. Au-delà du bâtiment, le domaine produit en bio des Montefalco Sagrantino (Carapace) et Montefalco Rosso (dont la Riserva Lampante, primée) soignés, qui allient la puissance du terroir à une recherche d'élégance. Le style, précis et abouti, bénéficie du savoir-faire du groupe Lunelli. La conversion bio, la qualité de la gamme et le caractère exceptionnel du lieu font de Tenuta Castelbuono une adresse incontournable de Montefalco, à la croisée du vin et de l'art.\n\nDomaine bio des Lunelli (Ferrari) à Bevagna, célèbre pour sa cave-sculpture Carapace d'Arnaldo Pomodoro, il signe de beaux Sagrantino et Montefalco Rosso. C'est une adresse incontournable, entre vin et art.\n\n La rencontre du vin et de l'art, incarnée par le Carapace, illustre la vision culturelle des Lunelli, déjà à l'œuvre dans le Trentodoc. Servis sur des viandes rouges, du gibier ou des fromages, les Sagrantino du domaine séduisent par leur élégance, fruit de la conversion bio et d'un travail précis.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Carapace (Montefalco Sagrantino)",
+        "Lampante (Montefalco Rosso Riserva)",
+        "Ziggurat"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio",
+        "lunelli",
+        "carapace"
+      ],
+      "a_verifier": null,
+      "source": "homeinitaly|gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-tenuta-bellafonte",
+      "nom": "Tenuta Bellafonte",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Bevagna",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Trebbiano Spoletino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bevagna, dans la zone de Montefalco, la Tenuta Bellafonte est un domaine bio de Peter Heilbron, l'une des belles adresses montantes du Sagrantino. Sur un terroir soigné, le domaine cultive le Sagrantino et le Sangiovese en agriculture biologique, avec une recherche d'élégance.\n\nIl signe un Montefalco Sagrantino (Collenottolo) profond et racé, un Montefalco Rosso (Pomontino) primé et apprécié, ainsi qu'un beau Trebbiano Spoletino (Arneto). Le style, précis et fidèle au terroir, privilégie la finesse et la définition plutôt que la seule puissance, dans l'esprit des meilleurs Sagrantino contemporains. L'engagement biologique, la qualité constante et la belle progression du domaine en font une valeur montante de Montefalco, saluée par la critique. Tenuta Bellafonte est une belle adresse pour découvrir un Sagrantino élégant et un Montefalco Rosso de caractère, dans une démarche durable.\n\nDomaine bio montant de Bevagna, Tenuta Bellafonte signe un Sagrantino racé (Collenottolo) et un Montefalco Rosso primé (Pomontino). C'est une belle adresse en pleine ascension de Montefalco.\n\n Le choix de la finesse plutôt que de la seule extraction, porté par Peter Heilbron, s'inscrit dans le renouveau qualitatif de Montefalco. Servis sur du sanglier, des viandes rouges ou des fromages, les Sagrantino de Bellafonte se patinent avec grâce, dans un style élégant qui séduit la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Collenottolo (Sagrantino)",
+        "Pomontino (Montefalco Rosso)",
+        "Arneto (Trebbiano Spoletino)"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-adanti",
+      "nom": "Adanti",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Bevagna",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bevagna, dans la zone de Montefalco, Adanti est un domaine historique, l'un des pionniers du Sagrantino sec. Dès les années 1970-80, la famille Adanti a contribué à faire connaître ce cépage en version sèche, alors qu'il n'était traditionnellement produit qu'en passito.\n\nLe domaine signe des Montefalco Sagrantino de tradition, dont le Il Domenico (cuvée de prestige), un Montefalco Rosso, un bel Grechetto et d'autres vins (Arquata). Le style, classique et fidèle au terroir, met en valeur la puissance et la personnalité du Sagrantino dans des vins de garde. En tant que l'un des noms fondateurs de l'appellation moderne, Adanti occupe une place à part dans l'histoire de Montefalco. La qualité et la régularité de la gamme en font une valeur sûre. C'est une belle adresse pour découvrir le Sagrantino dans un style traditionnel et authentique, chez l'un des pionniers de son renouveau.\n\nDomaine historique de Bevagna, pionnier du Sagrantino sec, Adanti signe des rouges de tradition (Il Domenico) et un beau Grechetto. C'est l'un des noms fondateurs de Montefalco.\n\n Le rôle pionnier d'Adanti dans la reconnaissance du Sagrantino sec lui confère une place à part dans l'histoire de l'appellation. Servi sur du sanglier, des viandes rouges ou des fromages affinés, le Il Domenico se patine sur une décennie, illustrant le style traditionnel et authentique de ce domaine fondateur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sagrantino Il Domenico",
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Arquata"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "italymagazine"
+    },
+    {
+      "id": "it-umbria-prod-scacciadiavoli",
+      "nom": "Scacciadiavoli",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Scacciadiavoli est un domaine historique fondé en 1884, au nom évocateur (« chasse-diables », en référence à un exorciste qui vivait là). Sur un beau terroir du Sagrantino, la famille Pambuffetti perpétue une tradition viticole de plus d'un siècle.\n\nLe domaine signe des Montefalco Sagrantino de belle facture et des Montefalco Rosso soignés, ainsi qu'une rareté : un metodo classico rosé de Sagrantino, l'un des seuls spumante élaborés à partir de ce cépage, original et réussi. Le style, fidèle au terroir, met en valeur le Sagrantino dans des vins structurés et de garde. La cave historique, à la gravité (les raisins descendent d'étage en étage), et la qualité constante en font une valeur sûre de l'appellation. Scacciadiavoli est une belle adresse pour découvrir le Sagrantino chez l'un des plus anciens domaines de Montefalco, avec la curiosité de son spumante.\n\nDomaine historique (1884) de Montefalco, Scacciadiavoli signe de beaux Sagrantino et un rare spumante de Sagrantino. C'est une valeur sûre et originale de l'appellation.\n\n La cave historique conçue sur le principe de la gravité, où les raisins descendent d'étage en étage, témoigne d'un savoir-faire ancien. Servi sur du sanglier, des viandes rouges ou des fromages, le Sagrantino de Scacciadiavoli se patine sur plusieurs années ; le spumante, lui, surprend et séduit à l'apéritif.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Spumante (Sagrantino)"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-perticaia",
+      "nom": "Perticaia",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Trebbiano Spoletino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Spoleto DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Perticaia est un domaine soigné, réputé pour l'authenticité de ses vins. Le nom vient d'un ancien outil de labour, symbole de l'attachement du domaine à la terre et à la tradition. Sur un beau terroir, il cultive le Sagrantino et les cépages ombriens.\n\nLe domaine signe un Montefalco Sagrantino fidèle au terroir, un Montefalco Rosso apprécié et un beau Trebbiano Spoletino, cépage blanc autochtone qu'il valorise. Le style, authentique et bien maîtrisé, met en valeur la puissance du Sagrantino dans des vins équilibrés, à un bon rapport qualité-prix. La régularité de la gamme et le soin apporté aux vinifications en font une valeur sûre de Montefalco. Perticaia est une belle adresse pour découvrir le Sagrantino et le Trebbiano Spoletino dans un style fidèle à la tradition, sans excès, représentatif du savoir-faire de l'appellation.\n\nDomaine soigné de Montefalco, Perticaia signe un Sagrantino authentique, un Montefalco Rosso apprécié et un beau Trebbiano Spoletino. C'est une valeur sûre à bon rapport qualité-prix.\n\n L'attachement du domaine à la tradition, symbolisé par son nom (un outil de labour), se retrouve dans des vins authentiques et sans esbroufe. Servis sur du sanglier ou des viandes pour le Sagrantino, sur des poissons pour le Trebbiano Spoletino, ils offrent un excellent rapport qualité-prix et une belle fidélité au terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Trebbiano Spoletino"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "trebbiano-spoletino"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-bocale",
+      "nom": "Bocale",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Bocale est un petit domaine familial, l'une des valeurs montantes de l'appellation. Le nom vient du surnom d'un aïeul de la famille Valentini, qui cultive la vigne sur ce terroir du Sagrantino avec un bel esprit artisanal.\n\nLe domaine signe des Montefalco Sagrantino soignés, dont la cuvée Ennio (hommage familial), et des Montefalco Rosso de belle facture. Le style, précis et authentique, met en valeur la puissance et la personnalité du Sagrantino dans des vins de garde, avec le soin que permet une petite production. La qualité, le bel accueil et la régularité en font une adresse appréciée de Montefalco. Bocale illustre la vitalité des petits domaines familiaux de l'appellation, capables de produire des Sagrantino de qualité avec passion. C'est une belle découverte pour les amateurs du grand cépage tannique ombrien.\n\nPetit domaine familial de Montefalco, Bocale signe des Sagrantino soignés (Ennio) et de beaux Montefalco Rosso. C'est une valeur montante et attachante de l'appellation.\n\n La petite taille du domaine permet un soin artisanal à chaque cuvée. Servi sur du sanglier, des viandes rouges ou des fromages affinés, le Sagrantino de Bocale se patine sur plusieurs années, révélant la profondeur du cépage. L'accueil chaleureux de la famille Valentini ajoute au plaisir de la découverte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Sagrantino Ennio",
+        "Montefalco Rosso"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-rocca-di-fabbri",
+      "nom": "Rocca di Fabbri",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Colli Martani DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Rocca di Fabbri est un domaine réputé, l'une des valeurs sûres de l'appellation. La famille Vitali-Buini cultive un beau vignoble sur le terroir du Sagrantino, avec une production diversifiée et régulière.\n\nLe domaine signe des Montefalco Sagrantino de bon niveau, des Montefalco Rosso soignés et un beau Grechetto (Colli Martani), régulièrement cité parmi les meilleurs du cépage. Le style, fidèle au terroir, met en valeur la puissance du Sagrantino et la finesse du Grechetto dans des vins équilibrés. La qualité constante et la diversité de la gamme, du grand rouge tannique au blanc frais, en font une valeur sûre de Montefalco. Rocca di Fabbri est une belle adresse pour découvrir à la fois le Sagrantino et le Grechetto, deux cépages emblématiques de l'Umbrie, chez un domaine régulier et bien établi.\n\nDomaine réputé de Montefalco, Rocca di Fabbri signe de bons Sagrantino et Montefalco Rosso ainsi qu'un beau Grechetto. C'est une valeur sûre de l'appellation.\n\n La double excellence du domaine, sur le grand rouge tannique et sur le blanc frais, illustre la diversité de l'Umbrie. Servi sur du sanglier ou des viandes pour le Sagrantino, sur des poissons pour le Grechetto, chacun trouve son accord. La régularité de la gamme en fait une valeur sûre appréciée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Grechetto Colli Martani"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "grechetto"
+      ],
+      "a_verifier": null,
+      "source": "italymagazine"
+    },
+    {
+      "id": "it-umbria-prod-fratelli-pardi",
+      "nom": "Fratelli Pardi",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Trebbiano Spoletino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Spoleto DOC",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, la Cantina Fratelli Pardi est un domaine réputé pour son travail sur le Trebbiano Spoletino et ses Sagrantino authentiques. Issue d'une famille d'industriels du textile de Montefalco, la cave a été relancée avec un bel attachement aux cépages autochtones.\n\nLe domaine est l'un des grands ambassadeurs du Trebbiano Spoletino, ce cépage blanc autochtone redécouvert : sa cuvée issue de vieilles vignes (Vigna Belvedere) est un blanc frais, structuré et de caractère, emblème du renouveau des blancs ombriens. Il signe aussi des Montefalco Sagrantino et Montefalco Rosso fidèles au terroir. Le style, authentique et soigné, met en valeur les cépages autochtones de Montefalco. La qualité et l'engagement pour le Trebbiano Spoletino en font une belle adresse de l'appellation. Fratelli Pardi est une référence pour découvrir ce blanc autochtone en plein essor, aux côtés du grand Sagrantino.\n\nDomaine de Montefalco, Fratelli Pardi est un ambassadeur du Trebbiano Spoletino (Vigna Belvedere) et signe de beaux Sagrantino. C'est une belle adresse du renouveau des cépages autochtones.\n\n Le pari du Trebbiano Spoletino, cépage blanc oublié, a payé : Fratelli Pardi en est aujourd'hui l'un des ambassadeurs reconnus. Servi sur des poissons, des fritures ou une cuisine méditerranéenne, ce blanc de caractère séduit par sa fraîcheur ; les Sagrantino, eux, accompagnent viandes et fromages.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trebbiano Spoletino Vigna Belvedere",
+        "Montefalco Sagrantino",
+        "Montefalco Rosso"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "trebbiano-spoletino"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-di-filippo",
+      "nom": "Di Filippo",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Cannara",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Grechetto dei Colli Martani DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cannara, dans la zone de Montefalco, Di Filippo est un domaine bio réputé pour sa démarche écologique exemplaire. La famille cultive le Sagrantino et les cépages ombriens en agriculture biologique, avec des pratiques originales et respectueuses de la biodiversité.\n\nLe domaine est connu pour ses vignes plantées en cercles autour de rosiers et pour ses oies qui désherbent naturellement les rangs, symboles d'une viticulture en harmonie avec la nature. Il signe des Montefalco Sagrantino authentiques, des Montefalco Rosso (dont le cuvée Etnico) et un beau Grechetto, dans un style bio et fidèle au terroir. La qualité de la gamme et l'engagement environnemental en font une référence de la viticulture durable de Montefalco. Di Filippo est une belle adresse pour découvrir le Sagrantino et les cépages ombriens dans une démarche biologique aboutie, chez un domaine pionnier de l'écologie viticole.\n\nDomaine bio de Cannara à la démarche écologique exemplaire (vignes en cercles, oies désherbeuses), Di Filippo signe de beaux Sagrantino et Grechetto. C'est une référence de la viticulture durable de Montefalco.\n\n La démarche écologique de Di Filippo, avec ses vignes en cercles et ses oies désherbeuses, dépasse le simple label bio pour incarner une vraie philosophie. Servis sur du sanglier ou des viandes pour les Sagrantino, sur des poissons pour le Grechetto, ses vins séduisent par leur authenticité et leur franchise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso Etnico",
+        "Grechetto"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio",
+        "durable"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-moretti-omero",
+      "nom": "Moretti Omero",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Giano dell'Umbria",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Grechetto dei Colli Martani DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Giano dell'Umbria, dans la zone de Montefalco, Moretti Omero est un domaine bio, l'une des belles adresses de la viticulture biologique de l'appellation. Sur un beau terroir, la famille cultive le Sagrantino et les cépages ombriens en agriculture biologique.\n\nLe domaine signe des Montefalco Sagrantino authentiques, des Montefalco Rosso soignés (dont une cuvée Vigna Vecchia, de vieilles vignes) et un beau Grechetto (Colli Martani). Le style, bio et fidèle au terroir, met en valeur la puissance du Sagrantino dans des vins équilibrés, à un bon rapport qualité-prix. L'engagement biologique et la qualité constante en font une valeur sûre de Montefalco. Moretti Omero est une belle adresse pour découvrir le Sagrantino et le Grechetto dans une démarche biologique, chez un domaine familial soigné et représentatif du terroir de Giano dell'Umbria.\n\nDomaine bio de Giano dell'Umbria, Moretti Omero signe de beaux Sagrantino, Montefalco Rosso et Grechetto. C'est une belle adresse de la viticulture biologique de Montefalco.\n\n L'engagement biologique de longue date du domaine témoigne d'une conviction sincère. Servis sur du sanglier, des viandes rouges ou des fromages pour les Sagrantino et Montefalco Rosso, sur des poissons pour le Grechetto, les vins de Moretti Omero séduisent par leur authenticité, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso Vigna Vecchia",
+        "Grechetto"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-barberani",
+      "nom": "Barberani",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Baschi",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Procanico",
+        "Trebbiano",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto Classico Superiore DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Baschi, au bord du lac de Corbara près d'Orvieto, Barberani est un domaine bio de référence pour le blanc ombrien. La famille cultive un beau vignoble sur les collines qui dominent le lac, un microclimat propice à la pourriture noble.\n\nLe domaine signe de grands Orvieto Classico (Castagnolo, et surtout le Luigi e Giovanna, cuvée de prestige), ainsi que le Calcaia, un Orvieto moelleux issu de raisins botrytisés, considéré comme l'un des plus beaux liquoreux d'Italie centrale. Sur des sols argilo-calcaires et sous l'influence bénéfique du lac (qui favorise le botrytis), les blancs de Barberani, en agriculture biologique, allient fraîcheur, minéralité et profondeur, capables de vieillir. Le style, précis et racé, a hissé l'Orvieto au-dessus de sa réputation de vin simple. La qualité constante et le travail sur les moelleux font de Barberani un sommet du blanc orviétan et une référence de l'Umbrie. C'est une belle adresse pour découvrir le meilleur de l'Orvieto, du sec au liquoreux.\n\nDomaine bio de référence à Orvieto, au bord du lac de Corbara, Barberani signe de grands Orvieto (Luigi e Giovanna) et un moelleux botrytisé d'exception (Calcaia). C'est un sommet du blanc orviétan.\n\n L'influence du lac de Corbara, qui favorise le brouillard matinal et le botrytis, fait la singularité du terroir de Barberani. Servis sur des poissons, des crustacés ou une cuisine fine pour les secs, sur des desserts et des fromages bleus pour le Calcaia, ses blancs séduisent par leur profondeur et leur race.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Calcaia (Orvieto moelleux)",
+        "Luigi e Giovanna (Orvieto)",
+        "Castagnolo",
+        "Villa Monticelli"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "grechetto",
+        "bio",
+        "moelleux",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|homeinitaly"
+    },
+    {
+      "id": "it-umbria-prod-decugnano-dei-barbi",
+      "nom": "Decugnano dei Barbi",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Orvieto",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Procanico",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto Classico DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Orvieto, sur une colline dominant le paysage, Decugnano dei Barbi est un domaine réputé, l'une des références de l'appellation. Sur des sols d'origine volcanique et marine (riches en fossiles), le domaine cultive les cépages orviétans avec une recherche de qualité.\n\nIl signe de beaux Orvieto Classico (dont la cuvée IL, ambitieuse, et le Villa Barbi), un moelleux botrytisé réputé (Pourriture Noble) et un metodo classico (Decugnano Brut), l'un des rares spumante d'Umbrie. Le style, précis et soigné, met en valeur le Grechetto et le Procanico dans des blancs frais, minéraux et parfois aptes à la garde. La diversité de la gamme, du sec au moelleux et à l'effervescent, et la qualité constante en font une valeur sûre d'Orvieto. Decugnano dei Barbi est une belle adresse pour découvrir la richesse du blanc orviétan, sur un terroir volcanique remarquable.\n\nDomaine réputé d'Orvieto sur sols volcaniques, Decugnano dei Barbi signe de beaux Orvieto Classico (IL), un moelleux botrytisé et un metodo classico. C'est une référence de l'appellation.\n\n Les sols riches en fossiles marins et l'orientation qualitative du domaine donnent des Orvieto de caractère, loin du vin simple. Servis sur des poissons, des fruits de mer ou une cuisine légère, ils séduisent par leur fraîcheur ; le moelleux et le spumante élargissent encore la palette du domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Orvieto Classico IL",
+        "Pourriture Noble (moelleux)",
+        "Villa Barbi",
+        "Decugnano Brut"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "grechetto",
+        "blanc",
+        "moelleux"
+      ],
+      "a_verifier": null,
+      "source": "homeinitaly"
+    },
+    {
+      "id": "it-umbria-prod-palazzone",
+      "nom": "Palazzone",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Orvieto",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Procanico",
+        "Verdello",
+        "Drupeggio"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto Classico Superiore DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Orvieto, Palazzone est un domaine réputé pour ses Orvieto Classico Superiore de terroir, parmi les plus fins de l'appellation. Autour d'un ancien relais de pèlerins médiéval, la famille Dubini cultive un beau vignoble sur les sols volcaniques et argilo-calcaires d'Orvieto.\n\nLe domaine signe des Orvieto Classico Superiore ambitieux — le Terre Vineate et surtout le Campo del Guardiano, issu des meilleures vignes —, blancs de Grechetto, Procanico, Verdello et Drupeggio, d'une belle minéralité et d'une réelle aptitude à la garde, à rebours de l'Orvieto simple et neutre. Il produit aussi un moelleux botrytisé (Muffa Nobile). Le style, précis et racé, a démontré le potentiel de garde et de complexité de l'Orvieto. La qualité constante et le travail sur le terroir en font l'une des références du blanc orviétan. Palazzone est une belle adresse pour découvrir un Orvieto de haut niveau, capable de vieillir.\n\nDomaine réputé d'Orvieto, Palazzone signe des Orvieto Classico Superiore de terroir (Campo del Guardiano), fins et aptes à la garde. C'est l'une des références du blanc orviétan.\n\n La démonstration faite par Palazzone que l'Orvieto peut vieillir et gagner en complexité a changé le regard sur l'appellation. Servis sur des poissons nobles, des crustacés ou une cuisine raffinée, le Campo del Guardiano et le Terre Vineate se patinent sur quelques années, révélant la finesse du Grechetto orviétan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Campo del Guardiano (Orvieto)",
+        "Terre Vineate",
+        "Muffa Nobile (moelleux)"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "grechetto",
+        "blanc",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-umbria-prod-roccafiore",
+      "nom": "Roccafiore",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Todi (PG)",
+      "commune": "Todi",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Sangiovese",
+        "Trebbiano Spoletino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Todi DOC",
+        "Grechetto di Todi DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Todi, dans le centre de l'Umbrie, Roccafiore est un domaine bio montant, l'une des références du renouveau du Grechetto di Todi. Sur un beau terroir de collines, la famille Baccarelli cultive ce cépage blanc autochtone et les cépages ombriens en agriculture biologique.\n\nLe domaine signe de beaux Grechetto di Todi, dont le Fiordaliso (cuvée de prestige), blancs frais, minéraux et de caractère qui ont contribué à faire reconnaître ce cépage comme l'un des plus intéressants d'Italie centrale, ainsi que des rouges soignés (Sangiovese). Le style, bio et précis, met en valeur la finesse du Grechetto dans des vins tendus et aptes à un certain vieillissement. La qualité, l'engagement biologique et le beau projet œnotouristique (avec un hôtel) en font une adresse montante saluée par la critique. Roccafiore est une belle référence pour découvrir le Grechetto di Todi et le renouveau du blanc ombrien.\n\nDomaine bio montant de Todi, Roccafiore est une référence du Grechetto di Todi (Fiordaliso), blanc frais et minéral. C'est un bel ambassadeur du renouveau du Grechetto.\n\n Le travail de Roccafiore sur le Grechetto di Todi a contribué à hisser ce cépage parmi les blancs autochtones les plus intéressants d'Italie centrale. Servi sur des poissons, des fruits de mer ou une cuisine légère, le Fiordaliso séduit par sa minéralité et sa tension, dans un beau cadre œnotouristique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiordaliso (Grechetto di Todi)",
+        "Grechetto Vign. Roccafiore",
+        "Melograno (Sangiovese)"
+      ],
+      "tags": [
+        "umbria",
+        "todi",
+        "grechetto",
+        "bio",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|decanter"
+    },
+    {
+      "id": "it-umbria-prod-leonardo-bussoletti",
+      "nom": "Leonardo Bussoletti",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Narni/Amelia (TR)",
+      "commune": "Narni",
+      "pays": "Italie",
+      "cepages": [
+        "Ciliegiolo",
+        "Grechetto",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Umbria IGT",
+        "Amelia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Narni, dans le sud de l'Umbrie, Leonardo Bussoletti est le champion du Ciliegiolo, cépage rouge autochtone qu'il a relancé, et l'une des révélations de la région. Agronome de formation, il s'est consacré à la valorisation des cépages locaux du Ternano.\n\nLe domaine signe des rouges de Ciliegiolo frais, fruités et parfumés (arômes de cerise, comme son nom l'indique), dont les cuvées 05035 (le nom d'un clone qu'il a sélectionné) et Brecciaro, qui ont révélé le potentiel de ce cépage longtemps négligé. Il produit aussi de beaux blancs (Grechetto Colle Ozio) et des assemblages (Ràmici). Le style, précis et respectueux du terroir, met en valeur la fraîcheur et l'élégance du Ciliegiolo, à rebours des rouges lourds. La qualité et le travail de sélection ont fait de Bussoletti l'un des vignerons les plus salués du renouveau ombrien (cité par Gambero Rosso et Decanter). C'est une révélation du sud de l'Umbrie.\n\nChampion du Ciliegiolo à Narni, Leonardo Bussoletti signe des rouges frais et parfumés (05035) qui ont relancé ce cépage autochtone. C'est l'une des révélations du sud de l'Umbrie.\n\n Le travail de sélection clonale de Bussoletti sur le Ciliegiolo a valeur d'exemple pour tout le sud de l'Umbrie. Servis légèrement frais sur des charcuteries, des viandes blanches ou une cuisine méditerranéenne, ses rouges séduisent par leur fraîcheur et leur digestibilité, à rebours des rouges lourds et solaires.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "05035 (Ciliegiolo)",
+        "Brecciaro (Ciliegiolo)",
+        "Ràmici",
+        "Colle Ozio (Grechetto)"
+      ],
+      "tags": [
+        "umbria",
+        "narni",
+        "ciliegiolo",
+        "autochtone",
+        "revelation"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|decanter"
+    },
+    {
+      "id": "it-umbria-prod-sportoletti",
+      "nom": "Sportoletti",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Assisi/Spello (PG)",
+      "commune": "Spello",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Merlot",
+        "Cabernet",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Assisi DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Spello, entre Assise et Foligno, Sportoletti est un domaine réputé de l'Assisano, l'une des valeurs sûres de l'Umbrie. Conseillée par le célèbre œnologue Riccardo Cotarella, la famille Sportoletti cultive un beau vignoble avec une recherche de qualité.\n\nLe domaine est surtout connu pour son Villa Fidelia Rosso, un assemblage de facture bordelaise (Cabernet, Merlot) et de Sangiovese, rouge concentré et primé, ainsi que pour le Villa Fidelia Bianco et de beaux Grechetto (Assisi). Le style, moderne et soigné, met en valeur les cépages internationaux et ombriens dans des vins équilibrés et réguliers. La qualité constante, le conseil de Cotarella et la bonne diffusion en font une valeur sûre de l'Assisano. Sportoletti est une belle adresse pour découvrir les rouges d'assemblage de qualité de l'Umbrie, dans la belle région d'Assise, à un bon rapport qualité-prix.\n\nDomaine réputé de Spello (conseil de Cotarella), Sportoletti signe le Villa Fidelia (assemblage bordelais-Sangiovese) primé et de beaux blancs. C'est une valeur sûre de l'Assisano.\n\n Le conseil de Riccardo Cotarella, l'un des œnologues les plus réputés d'Italie, assure au domaine une belle constance. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Villa Fidelia Rosso se patine sur plusieurs années ; le blanc et le Grechetto, eux, accompagnent poissons et cuisine légère.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Villa Fidelia Rosso",
+        "Villa Fidelia Bianco",
+        "Assisi Grechetto"
+      ],
+      "tags": [
+        "umbria",
+        "assisi",
+        "spello",
+        "bordeaux",
+        "sangiovese"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-romanelli",
+      "nom": "Romanelli",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Trebbiano Spoletino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC",
+        "Spoleto DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Romanelli est un petit domaine bio et familial, l'une des adresses attachantes de l'appellation. Sur un beau terroir du Sagrantino, la famille cultive le cépage roi de Montefalco et les cépages ombriens en agriculture biologique. Le domaine signe des Montefalco Sagrantino authentiques (dont le Terra Cupa), des Montefalco Rosso soignés et un beau Trebbiano Spoletino, cépage blanc autochtone qu'il valorise. Le style, bio et fidèle au terroir, met en valeur la puissance du Sagrantino dans des vins équilibrés, à un bon rapport qualité-prix. L'accueil chaleureux, les produits fermiers et la qualité de la gamme en font une belle découverte. Romanelli illustre la vitalité des petits domaines bio de Montefalco, à découvrir pour son Sagrantino et son Trebbiano Spoletino, sur du sanglier, des viandes ou des poissons selon la couleur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino Terra Cupa",
+        "Montefalco Rosso",
+        "Trebbiano Spoletino"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-fongoli",
+      "nom": "Fongoli",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Fongoli est un domaine bio et nature, apprécié des amateurs de vin authentique. La famille cultive le Sagrantino et les cépages ombriens en agriculture biologique, avec des vinifications artisanales et peu interventionnistes. Le domaine signe des Montefalco Sagrantino et Montefalco Rosso élaborés avec peu d'intrants, dans un style nature qui privilégie la pureté et l'expression du terroir, à rebours des vins technologiques. Le Sagrantino, cépage puissant, y est dompté par la patience plutôt que par la technique. La démarche bio-nature et la sincérité des vins en font une belle adresse pour les amateurs. Fongoli illustre la scène naturelle de Montefalco, à découvrir pour ses Sagrantino authentiques et vivants, sur du sanglier, des viandes rouges ou des fromages affinés, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Vignaguercia"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italianwinetales"
+    },
+    {
+      "id": "it-umbria-prod-napolini",
+      "nom": "Napolini",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Montefalco",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefalco, Napolini est un petit domaine bio familial, à découvrir parmi les adresses authentiques de l'appellation. Sur un beau terroir du Sagrantino, la famille cultive le cépage roi de Montefalco et le Sangiovese en agriculture biologique. Le domaine signe des Montefalco Sagrantino et Montefalco Rosso soignés et fidèles au terroir, dans un style authentique qui met en valeur la puissance du cépage. La démarche biologique, la taille humaine et le bon rapport qualité-prix en font une belle découverte. Napolini illustre la vitalité des petits domaines familiaux de Montefalco, capables de produire des Sagrantino de qualité avec passion et sincérité. C'est une adresse à découvrir pour les amateurs du grand cépage tannique ombrien, sur du sanglier, des viandes rouges ou des fromages affinés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "bio",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-briziarelli",
+      "nom": "Briziarelli",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "commune": "Bevagna",
+      "pays": "Italie",
+      "cepages": [
+        "Sagrantino",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montefalco Sagrantino DOCG",
+        "Montefalco Rosso DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bevagna, dans la zone de Montefalco, Briziarelli est un domaine à la production soignée, dans un beau cadre œnotouristique. Issue d'une famille d'entrepreneurs (briqueterie), la cave cultive le Sagrantino et les cépages ombriens avec une recherche de qualité. Le domaine signe des Montefalco Sagrantino et Montefalco Rosso de belle facture, ainsi qu'un Grechetto, dans un style fidèle au terroir. Le style, moderne et accessible, met en valeur la puissance du Sagrantino dans des vins équilibrés. Le beau cadre (avec hébergement et restaurant) et la qualité de la gamme en font une valeur sûre et accueillante de Montefalco. Briziarelli est une belle adresse pour découvrir le Sagrantino dans un cadre œnotouristique soigné, sur du sanglier, des viandes ou des fromages, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montefalco Sagrantino",
+        "Montefalco Rosso",
+        "Grechetto"
+      ],
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino"
+      ],
+      "a_verifier": null,
+      "source": "homeinitaly"
+    },
+    {
+      "id": "it-umbria-prod-cardeto",
+      "nom": "Cardeto",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Orvieto",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Procanico",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto Classico DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Orvieto, Cardeto est une grande coopérative, l'un des acteurs importants du blanc orviétan. Rassemblant de nombreux vignerons, elle valorise les terroirs volcaniques et argilo-calcaires d'Orvieto. La coopérative produit des Orvieto Classico fiables et bien diffusés, ainsi que des rouges (Sangiovese) et des sélections de qualité (Nero della Greca). Le style, fiable et accessible, met en valeur le Grechetto et le Procanico dans des blancs frais à bon rapport qualité-prix. La taille de la coopérative et la régularité de sa production en font une valeur sûre pour découvrir l'Orvieto. Cardeto illustre le rôle des coopératives dans l'économie viticole d'Orvieto, capable de produire des blancs représentatifs et abordables. C'est une belle porte d'entrée dans le blanc orviétan, sur des poissons, des fritures ou une cuisine légère.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Orvieto Classico",
+        "Nero della Greca",
+        "Pòdere"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "grechetto",
+        "cooperative",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-umbria-prod-madonna-del-latte",
+      "nom": "Madonna del Latte",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "commune": "Orvieto",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Trebbiano",
+        "Sangiovese",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Orvieto DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Orvieto, Madonna del Latte est un petit domaine bio-nature, apprécié des amateurs de vins authentiques. Sur les terroirs d'Orvieto, la famille cultive le Grechetto et les cépages ombriens en agriculture biologique, avec des vinifications artisanales. Le domaine signe des Orvieto et des rouges élaborés avec peu d'intervention, parfois en macération (vins « orange »), dans un style nature qui privilégie la pureté et l'expression du terroir. La démarche bio-nature et la sincérité des vins en font une belle adresse pour les amateurs. Madonna del Latte illustre la scène naturelle d'Orvieto, à découvrir pour ses blancs et rouges authentiques et de caractère, à rebours des Orvieto standardisés. C'est une adresse à découvrir pour les curieux, sur une cuisine de caractère, des poissons aux viandes légères selon la cuvée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Orvieto",
+        "Rosso",
+        "Poderi (macération)"
+      ],
+      "tags": [
+        "umbria",
+        "orvieto",
+        "nature",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-umbria-prod-terre-margaritelli",
+      "nom": "Terre Margaritelli",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Torgiano (PG)",
+      "commune": "Torgiano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Grechetto",
+        "Trebbiano Spoletino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Torgiano DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torgiano, près de Pérouse, Terre Margaritelli est un domaine bio, l'une des belles adresses montantes du terroir de Torgiano. La famille Margaritelli cultive le Sangiovese et les cépages ombriens en agriculture biologique. Le domaine signe des rouges de Sangiovese soignés (dont la Freccia degli Scacchi), des Torgiano et de beaux blancs (Grechetto), dans un style bio et fidèle au terroir. Le style, précis et respectueux, met en valeur le Sangiovese de Torgiano dans des vins équilibrés, à un bon rapport qualité-prix. La démarche biologique et la qualité croissante en font une adresse montante saluée par la critique. Terre Margaritelli est une belle adresse pour découvrir le terroir de Torgiano, aux côtés du grand Lungarotti, sur des viandes rouges, des pâtes au ragù ou des fromages.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Freccia degli Scacchi (Sangiovese)",
+        "Torgiano Rosso",
+        "Greco (Grechetto)"
+      ],
+      "tags": [
+        "umbria",
+        "torgiano",
+        "sangiovese",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-goretti",
+      "nom": "Goretti",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Perugia (PG)",
+      "commune": "Perugia",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Grechetto",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Colli Perugini DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pérouse, Goretti est un domaine familial des Colli Perugini, l'une des valeurs sûres du secteur de Pérouse. Autour d'une belle tour médiévale (la Torre di Montenero), la famille cultive le Sangiovese, le Grechetto et les cépages ombriens. Le domaine signe de beaux Grechetto (Colli Martani), des rouges de Sangiovese (L'Arringatore) et des vins des Colli Perugini, dans un style soigné et fidèle au terroir. Le style, net et accessible, met en valeur les cépages ombriens dans des vins équilibrés, à un bon rapport qualité-prix. Le beau cadre historique et la qualité de la gamme en font une valeur sûre locale. Goretti est une belle adresse pour découvrir les vins des collines de Pérouse, du Grechetto frais au Sangiovese, sur une cuisine régionale et conviviale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Grechetto dei Colli Martani",
+        "L'Arringatore (Sangiovese)",
+        "Colli Perugini"
+      ],
+      "tags": [
+        "umbria",
+        "perugia",
+        "grechetto",
+        "sangiovese"
+      ],
+      "a_verifier": null,
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-prod-cantina-peppucci",
+      "nom": "Cantina Peppucci",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Todi (PG)",
+      "commune": "Todi",
+      "pays": "Italie",
+      "cepages": [
+        "Grechetto",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Todi DOC",
+        "Grechetto di Todi DOC",
+        "Umbria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Todi, dans le centre de l'Umbrie, Cantina Peppucci est un petit domaine bio, à découvrir dans la mouvance du renouveau du Grechetto di Todi. Sur un beau terroir de collines, la famille cultive ce cépage blanc autochtone et le Sangiovese en agriculture biologique. Le domaine signe de beaux Grechetto di Todi, blancs frais et minéraux, ainsi que des rouges soignés (dont le Nummus), dans un style bio et fidèle au terroir. Le style, précis et authentique, met en valeur la finesse du Grechetto dans des vins de caractère. La démarche biologique et la qualité en font une adresse montante à découvrir. Cantina Peppucci illustre le dynamisme du renouveau du Grechetto di Todi, à découvrir pour ses blancs autochtones, sur des poissons, des fruits de mer ou une cuisine légère, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Grechetto di Todi",
+        "Sangiovese",
+        "Nummus"
+      ],
+      "tags": [
+        "umbria",
+        "todi",
+        "grechetto",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-umbria-prod-la-palazzola",
+      "nom": "La Palazzola",
+      "type": "domaine",
+      "region": "Umbria",
+      "sous_region": "Terni (TR)",
+      "commune": "Terni",
+      "pays": "Italie",
+      "cepages": [
+        "Riesling",
+        "Chardonnay",
+        "Pinot Nero",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Umbria IGT",
+        "Spoleto DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Terni, dans le sud de l'Umbrie, La Palazzola est un domaine original mené par Stefano Grilli, curiosité qualitative de la région. Sur un terroir d'altitude, le domaine cultive des cépages inhabituels pour l'Umbrie. Il est notamment réputé pour ses rares metodo classico (spumante de méthode traditionnelle, longuement élevés) et pour son Riesling, cépage rare dans la région, ainsi que pour des rouges (Merlot, Pinot Nero). Le style, précis et original, met en valeur des cépages et des styles peu répandus en Umbrie, avec une belle qualité. L'originalité de la gamme et le savoir-faire du domaine en font une curiosité appréciée des amateurs. La Palazzola est une adresse à découvrir pour ses bulles et son Riesling, à rebours des cépages classiques de l'Umbrie, sur des poissons, une cuisine fine ou à l'apéritif.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Spumante Brut (metodo classico)",
+        "Riesling",
+        "Rubino (Merlot)"
+      ],
+      "tags": [
+        "umbria",
+        "terni",
+        "metodo-classico",
+        "riesling",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    }
+  ]
+}

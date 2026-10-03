@@ -11,7 +11,8 @@
     "carte": [
       "carte_vins_1.xlsx",
       "carte_vins_2.xlsx"
-    ]
+    ],
+    "regles_selection": "regles_selection.xlsx"
   },
   "noms_courts": [
     [

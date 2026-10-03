@@ -1,0 +1,214 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "brabantwallon",
+  "region_label": "Brabant wallon",
+  "source_file": "terroirs_brabantwallon_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 8,
+  "items": [
+    {
+      "id": "be-brabantwallon-terr-coteaux-de-saintes-tubize",
+      "nom": "Coteaux de Saintes (Tubize)",
+      "type": "coteau",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier"
+      ],
+      "altitude": "env. 50-100 m",
+      "sols": "Limons éoliens sur sables tertiaires, ferme brabançonne en bordure de vallée",
+      "caracteristiques_rapides": "Terres familiales retenues après analyses de sol et d'ensoleillement en 2012, aujourd'hui huit hectares en biodynamie certifiée : le seul site belge dont les effervescents soutiennent la comparaison avec la Champagne.",
+      "notes_objectives": "Un cas rare en Belgique : un terroir choisi sur analyse avant d'être planté. En 2012, Sophie Wautier et Dimitri Vander Heyden font étudier les sols et l'ensoleillement de la ferme familiale de Saintes avant d'engager quoi que ce soit ; les premiers pieds ne sortent de terre qu'en 2016. Huit hectares et 35 000 pieds aujourd'hui, sur des limons éoliens reposant sur les sables tertiaires du plateau brabançon, en bordure de la vallée de la Senne.\n\nLe site n'a rien de spectaculaire — pas de coteau abrupt, pas de roche affleurante, pas d'antériorité viticole. Ce qui le distingue est ailleurs : c'est le seul vignoble belge conduit à la fois en biologique et en biodynamie certifiée Demeter, et l'environnement fait partie du dispositif plutôt que du décor. Cinq mille arbres et arbustes, prés fleuris, ruches, haies : la parcelle de vigne s'inscrit dans un système agricole complet sur une propriété de quarante hectares.\n\nL'encépagement est strictement champenois — Chardonnay, Pinot Noir, Meunier — et voué exclusivement à la méthode traditionnelle, avec un suivi assuré par des experts champenois. C'est aujourd'hui le site belge dont les effervescents soutiennent le mieux la comparaison avec la Champagne, davantage que les grands vignobles crayeux du Hainaut, pourtant mieux dotés géologiquement : la démonstration que le mode de conduite peut compter autant que le substrat.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "methode-traditionnelle",
+        "cremant",
+        "bio",
+        "biodynamie"
+      ],
+      "source": "domaine-w.be ; marcvanel.be ; lavenir.net"
+    },
+    {
+      "id": "be-brabantwallon-terr-coteaux-de-genappe-bousval-glabais",
+      "nom": "Coteaux de Genappe (Bousval, Glabais)",
+      "type": "coteau",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "altitude": "env. 70-130 m",
+      "sols": "Limons de plateau et de versant sur sables tertiaires, vallons de la Dyle naissante",
+      "caracteristiques_rapides": "Les versants qui dominent la haute Dyle au sud de Genappe concentrent douze hectares de vigne sur deux domaines, dont l'un certifié bio depuis 2021. L'un des rares secteurs brabançons à offrir un vrai dénivelé.",
+      "notes_objectives": "Les versants qui dominent la haute Dyle au sud de Genappe forment l'un des rares secteurs brabançons à offrir un vrai dénivelé — l'absence de vallée encaissée étant, de l'aveu des vignerons wallons eux-mêmes, le principal handicap de la province. Les sols sont des limons de plateau et de versant reposant sur les sables tertiaires, entre soixante-dix et cent trente mètres d'altitude.\n\nDeux domaines s'y partagent une douzaine d'hectares. À Bousval, huit hectares plantés en 2014 après deux années consacrées à la revitalisation des sols, en trois cépages classiques seulement — Chardonnay, Pinot Noir, Pinot Gris — sur les conseils d'un vigneron bourguignon, et certifiés bio depuis 2021. À Glabais, quatre hectares et quart plantés en 2016, orientés vers l'effervescent.\n\nLe secteur illustre un phénomène récent et probablement décisif : la circulation des compétences. Le maître de chai de Bousval partage son temps avec le Domaine W, à Saintes, distant d'une vingtaine de kilomètres. Dans un vignoble trop jeune pour avoir formé ses propres cadres en nombre, ce type de partage explique une part de la montée en qualité observée depuis 2020. Le secteur est aussi celui où la Dyle prend sa source, avant de traverser toute la province vers le nord : ces têtes de vallon offrent des pentes courtes mais réelles, orientées de façon variable, ce qui permet une sélection parcellaire impossible sur les grands plateaux voisins.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "bio",
+        "methode-traditionnelle"
+      ],
+      "source": "chateaudebousval.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-plateau-de-nivelles-et-baulers",
+      "nom": "Plateau de Nivelles et Baulers",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 100-150 m",
+      "sols": "Limons éoliens profonds sur substrat tertiaire",
+      "caracteristiques_rapides": "Plateau limoneux au nord de Nivelles, où le plus grand vignoble de la province occupe treize hectares d'un seul tenant et sert aussi d'atelier de vinification à de plus petits domaines.",
+      "notes_objectives": "Plateau limoneux au nord de Nivelles, sur des loess profonds reposant sur le substrat tertiaire. Le relief est nul, le foncier de qualité et disponible en blocs — ce qui a permis d'y installer treize hectares d'un seul tenant, le plus grand vignoble de la province.\n\nL'intérêt du site est moins pédologique que fonctionnel. Le domaine qui l'occupe maîtrise toute la chaîne, de la vigne à la mise en bouteille, et met cet outil à disposition de vignobles plus petits qui n'ont pas les moyens de s'équiper. Dans une province où vingt vignobles sur trente-quatre font moins d'un hectare, cette fonction d'atelier partagé conditionne l'existence commerciale d'une bonne partie de la production brabançonne. Le secteur est aussi l'un des rares de la province à produire du Crémant de Wallonie sous appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "loess",
+        "cremant",
+        "negoce-partiel"
+      ],
+      "source": "chapitre.vin ; pointbw.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-vallon-de-villers-la-ville",
+      "nom": "Vallon de Villers-la-Ville",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Nivellois, Senne et Pays de Waterloo",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 80-150 m",
+      "sols": "Limons sur socle paléozoïque du massif du Brabant, affleurant dans les vallons",
+      "caracteristiques_rapides": "Autour des ruines de l'abbaye cistercienne de 1146, où les moines cultivaient la vigne : un clos confrérique de 1990 et cinq hectares plantés en 2022 cohabitent sur la même commune.",
+      "notes_objectives": "Autour des ruines de l'abbaye cistercienne fondée en 1146, l'une des plus vastes d'Europe, où les moines cultivaient la vigne. Les limons de plateau y reposent sur le socle paléozoïque du massif du Brabant, qui affleure par endroits dans les vallons sous forme de veines de schistes — l'un des rares points de la province où la roche primaire se montre.\n\nLe secteur juxtapose deux époques de la viticulture wallonne : un clos confrérique de quatorze ares planté en 1990 dans l'enceinte abbatiale, et cinq hectares de cépages résistants plantés d'un coup en 2022 à Tilly. Trente-deux ans séparent les deux, et tout le changement d'échelle du vignoble belge tient dans cet écart. Le clos abbatial, animé par une confrérie, a fourni à l'Association des Vignerons de Wallonie l'un de ses responsables : ces structures ont structuré le milieu bien avant l'arrivée des domaines professionnels.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "clos-historique",
+        "piwi"
+      ],
+      "source": "villerslavigne.be ; marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-plateau-de-lasne-et-pays-de-waterloo",
+      "nom": "Plateau de Lasne et Pays de Waterloo",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 100-160 m",
+      "sols": "Limons éoliens profonds, rares pentes en bordure de vallons",
+      "caracteristiques_rapides": "Trois vignobles sur une même commune, de trente-cinq ares à sept hectares, à proximité immédiate du champ de bataille de Waterloo et d'un bassin de clientèle parmi les plus aisés du pays.",
+      "notes_objectives": "Plateau limoneux profond au nord-est de la province, sans relief marqué hormis quelques pentes en bordure de vallons — un try, en toponymie locale, désigne précisément ces raidillons recherchés faute de mieux.\n\nTrois vignobles cohabitent sur la commune de Lasne, de trente-cinq ares plantés en 2000 à sept hectares plantés en 2022, à proximité immédiate du champ de bataille de Waterloo. Le facteur déterminant ici n'est pas le sol mais la clientèle : Lasne est l'une des communes les plus aisées de Belgique, et la proximité de Bruxelles garantit l'écoulement de productions qui n'auraient aucun débouché ailleurs. Dans une province sans tradition viticole, c'est un paramètre aussi structurant que la géologie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "loess",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; espacevie.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-vallee-de-la-dyle-wavre-ottignies-chaumont-gistoux",
+      "nom": "Vallée de la Dyle (Wavre, Ottignies, Chaumont-Gistoux)",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Vallée de la Dyle et est bruxellois",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 30-140 m",
+      "sols": "Limons décarbonatés sur sables bruxelliens, socle cambro-silurien affleurant en fond de vallée",
+      "caracteristiques_rapides": "La Dyle entaille légèrement les limons du plateau central et dégage les seuls versants exploitables de cette partie de la province. Vignobles éclatés en petites parcelles, souvent périurbains.",
+      "notes_objectives": "La Dyle entaille les limons du plateau central et dégage les seuls versants réellement exploitables de cette partie de la province. Sous le limon décarbonaté affleurent les sables bruxelliens, fauves et très drainants, exploités en sablières de Mont-Saint-Guibert à Chaumont-Gistoux ; en fond de vallée, l'érosion atteint par endroits le socle cambro-silurien.\n\nLes vignobles y sont éclatés en petites parcelles et souvent périurbains — l'un d'eux est installé à Ottignies, dans une commune façonnée par l'université et la ville nouvelle. Cette proximité de l'habitat fait de la réduction des traitements un enjeu de voisinage autant qu'agronomique, ce qui explique le recours quasi systématique aux cépages résistants.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-vallee-du-train-et-de-la-grande-gette",
+      "nom": "Vallée du Train et de la Grande Gette",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 40-140 m",
+      "sols": "Limons éoliens décarbonatés sur sables bruxelliens à bancs coquilliers ; calcaire de Gobertange à l'est",
+      "caracteristiques_rapides": "Est de la province, à la limite du Brabant flamand : la frontière régionale coïncide ici avec une frontière géologique, les collines de grès ferrugineux du Hageland commençant de l'autre côté.",
+      "notes_objectives": "L'est de la province, à la limite du Brabant flamand, sur des limons éoliens décarbonatés reposant sur les sables bruxelliens. Ces sables, d'âge lutétien, sont traversés de bancs de coquilles durcies — des lentilles gréseuses cimentées par le carbonate de coquillages fossiles — sur lesquels repose l'essentiel du discours local sur la minéralité. Il ne s'agit donc pas d'un terroir calcaire au sens strict : le limon de surface est lessivé de ses carbonates, et la roche calcaire proprement dite ne se trouve qu'à quarante ou quarante-cinq mètres de profondeur.\n\nElle remonte en revanche vers l'est, à Gobertange, où cette pierre calcaro-gréseuse d'âge paléocène a été extraite pendant des siècles. Le secteur marque enfin une frontière géologique : quelques kilomètres au nord commencent les collines de grès ferrugineux du Hageland.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "piwi"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-brabantwallon-terr-hesbaye-brabanconne-perwez-orp-jauche-helecine",
+      "nom": "Hesbaye brabançonne (Perwez, Orp-Jauche, Hélécine)",
+      "type": "secteur",
+      "region": "Brabant wallon",
+      "sous_region": "Hesbaye brabançonne",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Pinot Noir",
+        "Riesling"
+      ],
+      "altitude": "env. 100-160 m",
+      "sols": "Loess profonds et fertiles, plateau sans relief",
+      "caracteristiques_rapides": "Plateau betteravier prolongeant les Hesbaye liégeoise et flamande, sans relief ni tradition viticole, mais berceau du vignoble brabançon : c'est ici que Mellemont a été planté au début des années 1990.",
+      "notes_objectives": "Plateau betteravier prolongeant les Hesbaye liégeoise et flamande, sur des loess profonds et fertiles, sans relief ni tradition viticole. C'est pourtant ici qu'est né le vignoble brabançon : Pierre Rion plante ses premiers pieds à Thorembais au début des années 1990, atteint 3 200 pieds en 1994, et Mellemont devient alors le plus grand vignoble de Wallonie, position tenue une dizaine d'années.\n\nLe choix variétal initial — le Müller-Thurgau, retenu pour sa précocité et sa résistance — dit l'état des connaissances de l'époque. Trente ans plus tard, le secteur accueille des paris plus singuliers, dont deux hectares de Pinot Noir et de Riesling à Malèves-Sainte-Marie, cépage rhénan rarissime en Wallonie et peu compatible, en principe, avec des limons aussi profonds.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "loess"
+      ],
+      "source": "domaine-de-mellemont.be ; marcvanel.be ; vigneronsdewallonie.be"
+    }
+  ]
+}

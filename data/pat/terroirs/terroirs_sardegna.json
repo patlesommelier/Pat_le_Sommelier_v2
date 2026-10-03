@@ -1,0 +1,500 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "sardegna",
+  "region_label": "Sardegna (Italie)",
+  "source_file": "terroirs_sardegna.json",
+  "built_at": "2026-06-28",
+  "count": 18,
+  "items": [
+    {
+      "id": "it-sardegna-terr-vermentino-di-gallura",
+      "nom": "Vermentino di Gallura",
+      "type": "appellation (DOCG)",
+      "region": "Sardegna",
+      "sous_region": "Gallura",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "granit décomposé (« sabbione »), sols sableux et drainants",
+      "caracteristiques_rapides": "L'unique DOCG de Sardaigne, dans le nord-est granitique : le Vermentino y atteint sa plus belle expression, salin, minéral et aromatique (Capichera, Siddùra, Surrau).",
+      "notes_objectives": "Le Vermentino di Gallura est l'unique DOCG de Sardaigne et le grand terroir du vin blanc de l'île. Située à l'extrême nord-est, autour de Tempio Pausania et des collines qui dominent la Costa Smeralda, la Gallura doit sa singularité à sa géologie : un sous-sol de granit décomposé, localement appelé « sabbione », qui donne des sols sableux, pauvres et parfaitement drainants.\n\nSur ce terroir granitique, sous un climat chaud et constamment balayé par les vents (le Maestrale en tête), le Vermentino atteint son expression la plus aboutie : un blanc à la fois aromatique et tendu, aux notes d'agrumes, de fleurs blanches, d'herbes méditerranéennes et d'amande, marqué par une salinité et une minéralité caractéristiques. La DOCG, obtenue en 1996, impose des rendements plus stricts et donne des vins de plus grande concentration que le Vermentino di Sardegna. Les meilleures cuvées, comme celles de Capichera, Siddùra ou Vigne Surrau, peuvent même vieillir et gagner en complexité, démentant l'image d'un simple vin de soif. Le vent, qui aère les vignes et limite les maladies, favorise aussi une viticulture saine.\n\nVitrine du Vermentino et seul terroir de Sardaigne à porter le rang de DOCG, la Gallura a hissé ce cépage blanc au rang de grand vin. C'est l'un des terroirs blancs les plus distinctifs de la Méditerranée et le porte-drapeau de l'île à l'international.\n\nLa Gallura forme un monde à part en Sardaigne : un paysage de chaos granitiques, de chênes-lièges et de maquis, où l'érosion du granit sur des millénaires a créé ce sol sableux et pauvre qui est la clé de l'identité du Vermentino local. Cette pauvreté contraint la vigne, limite les rendements et concentre le fruit, tandis que les vents incessants assainissent les grappes et concentrent les arômes. Le résultat est un Vermentino plus dense, plus salin et plus complexe que partout ailleurs sur l'île. Servis sur des poissons, des crustacés, des pâtes aux fruits de mer ou la bottarga, ces blancs séduisent par leur fraîcheur et leur tension. La DOCG distingue d'ailleurs une version Superiore, aux exigences renforcées, qui révèle le potentiel de garde du cépage. Pionnier dès les années 1980, Capichera a montré la voie, suivi depuis par Siddùra, Vigne Surrau et de nombreux domaines qui ont fait de la Gallura l'une des régions de blanc les plus dynamiques d'Italie. Le succès touristique de la Costa Smeralda voisine a accompagné cet essor.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "gallura",
+        "vermentino",
+        "docg",
+        "granit"
+      ],
+      "source": "jancisrobinson|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-carignano-del-sulcis",
+      "nom": "Carignano del Sulcis",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Sulcis",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Carignano"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "sables côtiers (vignes franches de pied), parfois argiles",
+      "caracteristiques_rapides": "Dans le sud-ouest, le Carignano sur sable et vieilles vignes franches de pied (épargnées par le phylloxéra) : rouges chauds, profonds et de garde (Terre Brune, Barrua).",
+      "notes_objectives": "Le Carignano del Sulcis est l'un des terroirs rouges les plus singuliers d'Italie, à l'extrême sud-ouest de la Sardaigne, autour de l'archipel de Sant'Antioco et de San Pietro. Sa particularité tient à un trait rare au monde : une grande partie des vignes y sont franches de pied, c'est-à-dire non greffées, le phylloxéra n'ayant jamais pu prospérer dans les sols sableux de la côte.\n\nSur ces sables côtiers, balayés par les vents marins et gorgés de soleil, le Carignano (le Carignan) — souvent conduit en gobelet bas, parfois sur des vignes centenaires — donne des rouges d'une générosité et d'une profondeur remarquables : robe sombre, arômes de fruits noirs mûrs, d'épices, de garrigue et de notes balsamiques, bouche ample aux tanins enrobés. C'est ici que la Cantina Santadi, guidée par Giacomo Tachis, a créé le Terre Brune, premier Carignano del Sulcis Superiore et chef-d'œuvre de l'île, et qu'Agricola Punica élabore le Barrua. Les sols sableux, qui stressent la vigne et limitent les rendements, concentrent le fruit, tandis que la proximité de la mer tempère les excès de chaleur.\n\nTerroir du Carignano de vieilles vignes franches de pied, le Sulcis prouve que ce cépage longtemps déprécié peut donner de grands rouges de garde. C'est l'un des terroirs les plus précieux et les plus authentiques de la Sardaigne, et un trésor ampélographique unique au monde.\n\nLe Sulcis est un terroir hors du temps : sur les îles de Sant'Antioco et San Pietro et le littoral voisin, des vignes franches de pied, certaines âgées de plus d'un siècle, poussent directement dans le sable, défiant le phylloxéra qui a ravagé presque tous les vignobles du monde. Cette survie exceptionnelle fait du Sulcis un conservatoire vivant et un trésor pour les amateurs. Conduites en gobelet bas pour résister au vent et à la sécheresse, ces vieilles vignes donnent des raisins d'une concentration remarquable. Le génie de Giacomo Tachis fut de révéler, dans les années 1980, que ce Carignano pouvait, par des rendements maîtrisés et un élevage soigné, rivaliser avec les grands rouges méditerranéens : le Terre Brune de Santadi en fut la démonstration éclatante, bientôt suivi du Barrua d'Agricola Punica. Servis sur des viandes grillées, du gibier, du sanglier ou un pecorino affiné, ces rouges conjuguent chaleur solaire et structure. Le Carignano del Sulcis incarne, mieux qu'aucun autre, la rencontre entre un cépage, un sable et la mer.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "sulcis",
+        "carignano",
+        "sable",
+        "franc-de-pied",
+        "doc"
+      ],
+      "source": "jancisrobinson|vinovest"
+    },
+    {
+      "id": "it-sardegna-terr-mamoiada",
+      "nom": "Mamoiada",
+      "type": "zone (cru)",
+      "region": "Sardegna",
+      "sous_region": "Barbagia",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau"
+      ],
+      "altitude": "~600-800 m",
+      "sols": "granit décomposé d'altitude, vieilles vignes en gobelet",
+      "caracteristiques_rapides": "Épicentre du renouveau du Cannonau : village de Barbagia où de vieilles vignes franches de pied, en altitude sur granit, donnent des rouges fins et profonds, devenus cultes (Montisci, Sedilesu).",
+      "notes_objectives": "Mamoiada est devenu, en une dizaine d'années, l'un des terroirs rouges les plus fascinants d'Italie. Ce village perché de la Barbagia, au cœur montagneux de la Sardaigne, est l'épicentre d'une véritable révolution autour du Cannonau d'altitude, qui a propulsé des vignerons confidentiels au rang de stars internationales.\n\nLe secret de Mamoiada tient à la conjonction de plusieurs facteurs : un sous-sol de granit décomposé, une altitude élevée (souvent 600 à 800 mètres) qui apporte de fortes amplitudes thermiques, et un patrimoine exceptionnel de vieilles vignes franches de pied, conduites en gobelet (alberello), parfois pluricentenaires. De ces conditions naît un Cannonau à contre-courant des versions lourdes et alcooleuses : un rouge d'une finesse, d'une transparence et d'une fraîcheur presque bourguignonnes, aux arômes de fruits rouges, d'herbes méditerranéennes, d'épices et de granit. Des vignerons comme Giovanni Montisci (Barrosu) ou Giuseppe Sedilesu en ont fait des cuvées cultes, recherchées et chères, tandis qu'une nouvelle génération d'artisans perpétue cette dynamique. Chaque parcelle, chaque vieille vigne, exprime une nuance du terroir.\n\nCru officieux mais incontournable du Cannonau, Mamoiada a révélé que le Grenache sarde de montagne pouvait compter parmi les grands rouges d'Italie. C'est le terroir le plus en vue de la Sardaigne contemporaine et un nom mythique pour les amateurs du monde entier.\n\nL'histoire de Mamoiada est celle d'une renaissance : pendant des décennies, les vignerons du village vendaient leur raisin ou produisaient pour la consommation familiale, sans imaginer la valeur de leur patrimoine. C'est la prise de conscience, dans les années 2000-2010, que ces vieilles vignes franches de pied sur granit d'altitude constituaient un terroir d'exception qui a tout changé. Le village est aujourd'hui une mosaïque de micro-parcelles, chacune avec son sol, son exposition et ses vignes centenaires, que les vignerons vinifient avec un minimalisme assumé pour en révéler les nuances. Le Cannonau de Mamoiada surprend par sa fraîcheur et sa finesse, là où on attendait puissance et chaleur : c'est cette tension, héritée de l'altitude et du granit, qui a séduit la critique et les sommeliers du monde entier. Servis sur du gibier, des viandes de montagne ou un fromage de brebis, ces vins se patinent avec grâce. Mamoiada est aussi célèbre pour son carnaval ancestral et ses masques (Mamuthones), qui ont donné leur nom à certaines cuvées. En quelques millésimes, ce village isolé est devenu une référence mondiale, comparé aux plus grands terroirs de Grenache de la planète.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "mamoiada",
+        "cannonau",
+        "altitude",
+        "granit",
+        "cru",
+        "culte"
+      ],
+      "source": "vinovest|lacucinaitaliana"
+    },
+    {
+      "id": "it-sardegna-terr-nepente-di-oliena",
+      "nom": "Nepente di Oliena",
+      "type": "sottozona",
+      "region": "Sardegna",
+      "sous_region": "Barbagia (Oliena)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau"
+      ],
+      "altitude": "~300-500 m",
+      "sols": "sols calcaires et granitiques au pied du Supramonte",
+      "caracteristiques_rapides": "Sous-zone historique du Cannonau au pied du Supramonte, chantée par D'Annunzio : rouges chaleureux, profonds et typés, parmi les plus réputés de l'île.",
+      "notes_objectives": "Le Nepente di Oliena est l'une des sous-zones historiques les plus réputées du Cannonau, au pied du Supramonte, massif calcaire spectaculaire de la province de Nuoro. Le terroir, à plusieurs centaines de mètres d'altitude, associe sols calcaires et granitiques, sous un climat de montagne.\n\nLe Cannonau d'Oliena (et de la commune voisine d'Orgosolo) y donne des rouges chaleureux, profonds et typés, aux notes de fruits mûrs, de garrigue et d'épices. Le vin doit sa célébrité au poète Gabriele D'Annunzio, qui célébra son caractère enivrant sous le nom de « Nepente », terme évoquant un breuvage des dieux. L'altitude et les amplitudes thermiques préservent une certaine fraîcheur, qui équilibre la puissance solaire du cépage. Des domaines comme Gostolai en perpétuent la tradition.\n\nSous-zone emblématique du Cannonau, le Nepente di Oliena conjugue la générosité du Grenache sarde et la fraîcheur du Supramonte. C'est l'un des terroirs de rouge les plus prestigieux et les plus chargés d'histoire de la Sardaigne.\n\nLe Supramonte, immense massif calcaire qui domine Oliena, façonne le terroir et le climat de cette sous-zone : ses reliefs créent des amplitudes thermiques marquées et protègent les vignes, tandis que les sols mêlent calcaire et granit. Le Cannonau y gagne une profondeur et une complexité particulières, qui ont fait sa réputation dès le XIXe siècle. Servis sur du gibier, des viandes grillées au feu de bois ou des fromages affinés, les rouges d'Oliena expriment toute la générosité du terroir. La célébrité du Nepente, popularisée par D'Annunzio, en a fait l'un des noms historiques du vin sarde, et une nouvelle génération de vignerons en explore aujourd'hui les nuances parcellaires, dans la lignée du mouvement né à Mamoiada toute proche.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "oliena",
+        "nepente",
+        "cannonau",
+        "supramonte",
+        "sottozona"
+      ],
+      "source": "wineandtravelitaly|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-cannonau-di-sardegna-classico",
+      "nom": "Cannonau di Sardegna Classico",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Nuoro-Ogliastra",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "granit, schistes et calcaires de l'est montagneux",
+      "caracteristiques_rapides": "Le cœur historique du Cannonau (provinces de Nuoro et Ogliastra) : Grenache sarde puissant, fruité et épicé, vin emblématique et le plus produit de l'île.",
+      "notes_objectives": "Le Cannonau di Sardegna Classico désigne le cœur historique du grand cépage rouge de l'île, le Cannonau (le nom local du Grenache) : les provinces montagneuses de Nuoro et de l'Ogliastra, à l'est, où la mention Classico est réservée aux meilleures zones traditionnelles.\n\nSur des sols de granit, de schistes et de calcaires, à des altitudes variées, le Cannonau y donne le vin emblématique de la Sardaigne : un rouge puissant, chaleureux, aux arômes de fruits rouges et noirs mûrs, de garrigue, d'épices et d'herbes méditerranéennes, à la bouche ample et généreuse. C'est le vin le plus produit de l'île (environ une bouteille sarde sur cinq), décliné en rosso, classico, riserva, mais aussi en versions liquoreuses et passito. Récemment, des recherches archéologiques ont suggéré que le Cannonau pourrait être originaire de Sardaigne plutôt qu'importé d'Espagne, ce qui en ferait l'un des plus anciens Grenache du monde. L'est montagneux, plus frais et plus élevé, en donne les expressions les plus fines.\n\nCœur identitaire du Cannonau, la zone Classico de Nuoro et d'Ogliastra produit le rouge emblématique de la Sardaigne. C'est le grand terroir rouge de l'île et le socle de sa réputation viticole.\n\nLe Cannonau est bien plus qu'un cépage en Sardaigne : c'est un emblème culturel, associé à la longévité légendaire des habitants de l'île (la fameuse « zone bleue » de l'Ogliastra), ses vins étant riches en antioxydants. La zone Classico, dans l'est montagneux, en est le berceau historique, là où le Grenache sarde donne ses expressions les plus authentiques. Le climat méditerranéen chaud, tempéré par l'altitude et les brises, et la diversité des sols créent une grande variété de styles, des Cannonau souples et fruités aux Riserva profondes et de garde. Servis sur des viandes en sauce, du sanglier, des grillades ou des fromages affinés, ils accompagnent à merveille la cuisine sarde. La découverte de pépins de raisin millénaires sur l'île a nourri l'hypothèse d'une origine sarde du cépage, renforçant son statut identitaire. Aujourd'hui, le regain d'intérêt pour les Cannonau d'altitude et de terroir redonne tout son lustre à cette appellation historique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "cannonau",
+        "classico",
+        "nuoro",
+        "ogliastra",
+        "doc"
+      ],
+      "source": "wine-searcher|vino"
+    },
+    {
+      "id": "it-sardegna-terr-vernaccia-di-oristano",
+      "nom": "Vernaccia di Oristano",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Oristano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vernaccia di Oristano"
+      ],
+      "altitude": "~0-100 m",
+      "sols": "alluvions sableuses de la plaine du Tirso (Sinis)",
+      "caracteristiques_rapides": "Blanc oxydatif élevé sous voile (« flor »), à la manière du Xérès : sec, complexe, aux notes de fruits secs et d'amande, l'un des vins les plus singuliers d'Italie (Contini).",
+      "notes_objectives": "La Vernaccia di Oristano est l'un des vins les plus singuliers et les plus fascinants d'Italie, produit dans la plaine du Tirso et la péninsule du Sinis, autour d'Oristano (centre-ouest). Il s'agit d'un blanc oxydatif, élevé sous un voile de levures à la manière du Xérès andalou ou du Vin Jaune du Jura.\n\nLe cépage Vernaccia di Oristano (sans lien avec la Vernaccia toscane) est vinifié sec, puis élevé de longues années dans des fûts de châtaignier ou de chêne partiellement remplis, où se développe la « flor » qui protège et transforme le vin. Il en résulte un blanc complexe et profond, aux arômes de fruits secs, d'amande amère, de noix, d'épices et de fleurs séchées, à la bouche sèche, saline et d'une grande persistance. Produit en faibles quantités et exigeant une patience extrême, il est porté par la maison Contini, dont l'Antico Gregori (solera de très vieux millésimes) est un trésor confidentiel. On le sert sur la bottarga, les amandes, les fromages affinés ou en méditation.\n\nVin oxydatif rarissime, la Vernaccia di Oristano perpétue une tradition unique en Italie. C'est l'un des terroirs les plus originaux de la Sardaigne et un patrimoine vivant que peu de domaines maintiennent encore.\n\nL'élaboration de la Vernaccia di Oristano relève d'un art patient et risqué : les fûts, volontairement non remplis, laissent une surface de vin au contact de l'air, sur laquelle se développe la « flor », ce voile de levures qui protège le vin de l'oxydation brutale tout en lui donnant ses arômes si particuliers. Le vieillissement, qui peut durer des décennies, se fait souvent en solera, par assemblage de millésimes successifs. Ce savoir-faire, proche de celui du Xérès, est aujourd'hui menacé par sa faible rentabilité et le recul des surfaces, ce qui rend chaque bouteille précieuse. La maison Contini en demeure le gardien emblématique. Servie sur la bottarga de Cabras, les amandes grillées, les fromages de brebis affinés ou simplement en méditation, la Vernaccia di Oristano déroute autant qu'elle fascine. C'est un vin de connaisseurs, témoin d'une Sardaigne ancienne et d'une tradition que la modernité a failli emporter.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "oristano",
+        "vernaccia",
+        "oxydatif",
+        "voile",
+        "doc",
+        "rare"
+      ],
+      "source": "jancisrobinson|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-romangia",
+      "nom": "Romangia",
+      "type": "zone (IGT)",
+      "region": "Sardegna",
+      "sous_region": "Romangia (Sennori-Sorso)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau",
+        "Vermentino",
+        "Moscato"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "calcaires et collines proches de la mer (Maestrale)",
+      "caracteristiques_rapides": "Petite zone du nord-ouest (Sennori, Sorso), terre du domaine Dettori : Cannonau intenses et Moscato, sous l'influence du vent et de la mer ; haut lieu du vin nature.",
+      "notes_objectives": "La Romangia est une petite zone viticole du nord-ouest de la Sardaigne, autour des communes de Sennori et Sorso, entre les collines et la mer, non loin de Sassari. Bien que ne disposant que du statut d'IGT, elle jouit d'une réputation grandissante, portée par des vins de caractère.\n\nSur des sols calcaires, sous l'influence du vent (le Maestrale) et de la proximité maritime, la Romangia donne des Cannonau intenses et structurés, ainsi que des Vermentino et des Moscato. C'est surtout la terre du domaine Tenute Dettori, figure majeure du vin nature italien, dont les Cannonau puissants et sans intrants ont fait connaître la zone dans le monde entier. Le terroir, ensoleillé et venté, donne des raisins très mûrs, à l'origine de vins souvent riches et de caractère affirmé. La tradition viticole y est ancienne.\n\nTerre du vin nature et de Cannonau puissants, la Romangia s'est imposée comme l'un des terroirs les plus singuliers du nord de la Sardaigne, portée par des vignerons au style sans compromis.\n\nCoincée entre Sassari et la mer, la Romangia est l'une des plus petites zones viticoles de Sardaigne, mais l'une des plus médiatisées grâce à Alessandro Dettori. En faisant le choix radical du vin nature — biodynamie, vendanges manuelles, vinifications sans levures ni soufre ajoutés —, Dettori a transformé ce terroir ensoleillé et venté en laboratoire d'une viticulture sans compromis. Ses Cannonau, riches et parfois déroutants, chaque cuvée portant le nom d'une parcelle, sont devenus des objets de culte dans le monde du vin nature. Le terroir, marqué par le calcaire et l'influence maritime, donne des raisins très mûrs, à l'origine de vins puissants et solaires. Servis sur des viandes en sauce, du gibier ou des fromages de caractère, ils ne laissent personne indifférent. Au-delà de Dettori, la Romangia perpétue aussi des traditions de Moscato et de Vermentino, mais c'est bien le Cannonau nature qui a fait sa renommée internationale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "romangia",
+        "cannonau",
+        "dettori",
+        "nature",
+        "igt"
+      ],
+      "source": "bevisardo|vinovest"
+    },
+    {
+      "id": "it-sardegna-terr-jerzu",
+      "nom": "Jerzu",
+      "type": "sottozona",
+      "region": "Sardegna",
+      "sous_region": "Ogliastra",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "schistes et granit des pentes escarpées de l'Ogliastra",
+      "caracteristiques_rapides": "Sous-zone du Cannonau sur les pentes abruptes de l'Ogliastra (côte est) : rouges chaleureux et structurés, expression solaire et montagnarde du cépage.",
+      "notes_objectives": "Jerzu est l'une des sous-zones reconnues du Cannonau, perchée dans l'Ogliastra, région montagneuse et sauvage de la côte est de la Sardaigne. Surnommée la « cité du vin », elle est tout entière vouée à ce cépage, sur des pentes souvent vertigineuses.\n\nSur des sols de schistes et de granit, à plusieurs centaines de mètres d'altitude, le Cannonau de Jerzu donne des rouges chaleureux, structurés et typés, à l'image de ce terroir abrupt et ensoleillé : arômes de fruits mûrs, de garrigue et d'épices, bouche ample et généreuse. La Cantina di Jerzu, coopérative locale, en est la gardienne principale, avec des cuvées comme le Josto Miglior. L'altitude apporte une certaine fraîcheur qui équilibre la puissance solaire du cépage. La fête du vin (Sagra del Vino), en août, célèbre cette identité.\n\nSous-zone montagnarde du Cannonau, Jerzu en offre une expression solaire et structurée, ancrée dans les paysages escarpés de l'Ogliastra. C'est l'un des terroirs traditionnels les plus réputés du Cannonau de la côte est.\n\nL'Ogliastra, l'une des régions les plus sauvages et les moins peuplées d'Italie, offre à Jerzu un cadre spectaculaire : des montagnes abruptes plongeant vers la mer, où la vigne s'accroche à des pentes escarpées sur schistes et granit. Ce terroir difficile, à l'altitude rafraîchissante, donne au Cannonau structure et caractère. La Cantina di Jerzu, fondée dans les années 1950, a fédéré les petits vignawerons et fait connaître ce Cannonau de montagne au-delà de l'île. Servis sur du sanglier, des viandes grillées ou un pecorino affiné, les rouges de Jerzu expriment la puissance solaire et la rusticité noble de l'Ogliastra. L'attachement de toute une communauté à son vin, célébré chaque été lors de la Sagra del Vino, fait de Jerzu un terroir vivant et identitaire, l'un des plus emblématiques du Cannonau traditionnel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "jerzu",
+        "cannonau",
+        "ogliastra",
+        "sottozona"
+      ],
+      "source": "winetravelguides|italysfinestwines"
+    },
+    {
+      "id": "it-sardegna-terr-alghero-nurra",
+      "nom": "Alghero (Nurra)",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Nurra (Alghero)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Torbato",
+        "Cabernet Sauvignon",
+        "Cannonau"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "calcaires et sols rouges de la plaine de la Nurra",
+      "caracteristiques_rapides": "Autour d'Alghero (nord-ouest) : terre du Torbato (cépage blanc rare sauvé par Sella & Mosca) et de rouges internationaux (Marchese di Villamarina), plus le passito Anghelu Ruju.",
+      "notes_objectives": "La zone d'Alghero, dans la plaine de la Nurra au nord-ouest de la Sardaigne, est un terroir à part, marqué par l'influence catalane de la ville et par la présence du grand domaine historique Sella & Mosca. La DOC Alghero y couvre une large gamme de styles.\n\nSur des sols calcaires et des terres rouges, ce terroir chaud et maritime est surtout réputé pour le Torbato, cépage blanc rare d'origine espagnole que Sella & Mosca a sauvé de l'oubli et décline en blanc tranquille (Terre Bianche) comme en effervescent. La zone produit aussi des rouges d'inspiration internationale (le Marchese di Villamarina, à base de Cabernet) et le mythique Anghelu Ruju, passito de Cannonau évoquant un Porto. La diversité des cépages et des styles fait l'originalité de ce terroir, entre tradition sarde et influences venues d'ailleurs.\n\nTerre du Torbato et des cuvées de prestige de Sella & Mosca, la Nurra d'Alghero est un terroir singulier du nord-ouest, où cohabitent cépages rares et rouges ambitieux. C'est l'un des secteurs les plus originaux de la Sardaigne.\n\nAlghero, enclave de langue catalane héritée de la domination aragonaise, possède une identité culturelle unique en Sardaigne, qui se reflète dans son terroir. La plaine de la Nurra, chaude et maritime, est dominée par la figure historique de Sella & Mosca, fondée en 1899, dont l'immense vignoble d'un seul tenant a façonné la réputation de la zone. C'est ici que le Torbato, cépage blanc d'origine espagnole quasi disparu ailleurs, a été sauvegardé et valorisé, en blanc sec comme en effervescent. La DOC Alghero, très souple, autorise aussi des cépages internationaux : le Marchese di Villamarina (Cabernet) en est l'exemple le plus prestigieux. Le mythique Anghelu Ruju, passito de Cannonau, complète cette palette. Servis selon les cuvées sur des poissons, des viandes ou des desserts, les vins d'Alghero séduisent par leur diversité. Terroir cosmopolite mêlant cépages rares et influences étrangères, la Nurra occupe une place singulière dans le paysage viticole sarde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "alghero",
+        "nurra",
+        "torbato",
+        "cabernet",
+        "doc"
+      ],
+      "source": "lacucinaitaliana|vinovest"
+    },
+    {
+      "id": "it-sardegna-terr-malvasia-di-bosa",
+      "nom": "Malvasia di Bosa",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Planargia (Bosa)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Sardegna"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "sols calcaires et volcaniques de la côte ouest",
+      "caracteristiques_rapides": "Pépite oxydative de la côte ouest (Planargia) : Malvasia élevée sous voile, souvent en version douce ou sèche aux notes d'amande et d'épices, rarissime et confidentielle.",
+      "notes_objectives": "La Malvasia di Bosa est l'une des pépites confidentielles de la Sardaigne, produite sur la côte ouest, dans la région de la Planargia autour de la petite ville de Bosa. Comme la Vernaccia di Oristano, c'est un vin oxydatif élevé sous voile, mais à base de Malvasia.\n\nSur des sols calcaires et volcaniques, sous l'influence de la mer et du vent, la Malvasia y est vinifiée le plus souvent en version douce ou sèche, puis élevée sous un voile de levures qui lui confère sa complexité. Il en résulte un vin rare et raffiné, aux arômes d'amande, d'abricot sec, de fleurs et d'épices, à la bouche saline et persistante. Produite en quantités infimes par une poignée de vignerons et de coopératives, la Malvasia di Bosa reste l'un des secrets les mieux gardés de l'île, à déguster sur des fromages, des pâtisseries aux amandes ou en méditation. La tradition y est ancienne et fragile.\n\nJoyau oxydatif de la côte ouest, la Malvasia di Bosa perpétue, comme sa cousine d'Oristano, une tradition rarissime de vins sous voile. C'est l'un des terroirs les plus précieux et les plus confidentiels de la Sardaigne.\n\nLa région de la Planargia, autour de Bosa et de son fleuve le Temo, possède un microclimat et des sols (calcaires, volcaniques) particulièrement propices à la Malvasia. Comme pour la Vernaccia di Oristano, l'élevage sous voile demande patience et savoir-faire, et la production, déjà confidentielle, est portée par une poignée de vignerons et de petites coopératives décidés à préserver ce patrimoine. Le résultat est un vin d'une grande finesse, oscillant entre douceur et sécheresse selon les interprétations, à la complexité aromatique remarquable. Servie sur des pâtisseries aux amandes (les seadas), des fromages affinés ou en méditation, la Malvasia di Bosa est un vin de connaisseurs. Sa rareté et la fragilité de sa tradition en font l'un des trésors les plus menacés mais les plus précieux de la Sardaigne, à l'image de toute une facette oxydative et ancestrale de la viticulture de l'île.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "bosa",
+        "malvasia",
+        "planargia",
+        "oxydatif",
+        "rare",
+        "doc"
+      ],
+      "source": "vino|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-vermentino-di-sardegna",
+      "nom": "Vermentino di Sardegna",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Toute l'île",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Vermentino"
+      ],
+      "altitude": "~0-500 m",
+      "sols": "sols variés (granit, calcaire, sable) sur toute l'île",
+      "caracteristiques_rapides": "L'appellation Vermentino à l'échelle de l'île : blancs frais, salins et floraux, du simple vin de soif aux cuvées plus structurées, cépage blanc roi de la Sardaigne.",
+      "notes_objectives": "Le Vermentino di Sardegna est l'appellation qui couvre la production de Vermentino sur l'ensemble de l'île, par opposition à la DOCG de Gallura cantonnée au nord-est. C'est le grand cépage blanc de la Sardaigne, le plus répandu et le plus emblématique de sa production blanche.\n\nCultivé sur des sols variés — granit, calcaire, sable — selon les régions, le Vermentino donne ici des blancs frais, salins et floraux, aux notes d'agrumes, de fruits à chair blanche, de fleurs et d'herbes méditerranéennes, avec souvent une légère amertume noble en finale. Le style va du simple vin de soif, désaltérant et immédiat, idéal sur les poissons et fruits de mer, à des cuvées plus structurées et ambitieuses signées par les meilleurs domaines de l'île (Argiolas, Pala, Antonella Corda…). La proximité de la mer et les vents marquent partout ces vins de leur salinité caractéristique. C'est le compagnon naturel de la cuisine sarde.\n\nCépage blanc roi de la Sardaigne, le Vermentino di Sardegna en offre le visage le plus large et le plus accessible, des vins de soif aux cuvées de garde. C'est l'un des piliers de l'identité viticole de l'île.\n\nSi la Gallura en donne la version la plus concentrée, le Vermentino di Sardegna en offre le visage le plus universel, décliné du nord au sud de l'île selon une infinité de terroirs et de styles. Cépage adapté à la chaleur et à la sécheresse méditerranéennes, le Vermentino conserve, grâce à la proximité constante de la mer et aux vents, une fraîcheur et une salinité qui en font un compagnon de table idéal. Les meilleurs domaines en tirent des cuvées plus ambitieuses, parfois élevées sur lies ou en partie sous bois, capables de gagner en complexité. Servi sur la cuisine sarde — poissons, fruits de mer, fregola, bottarga, fromages frais —, il en est l'accompagnement naturel. Son succès commercial, en Italie comme à l'export, en a fait l'ambassadeur le plus accessible des vins de l'île, et il reste le cépage blanc le plus planté de Sardaigne, garant de son identité viticole.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "vermentino",
+        "blanc",
+        "doc",
+        "ile"
+      ],
+      "source": "vino|propostavini"
+    },
+    {
+      "id": "it-sardegna-terr-mandrolisai",
+      "nom": "Mandrolisai",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Mandrolisai (Sorgono)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Bovale (Muristellu)",
+        "Cannonau",
+        "Monica"
+      ],
+      "altitude": "~400-700 m",
+      "sols": "granit et schistes du centre montagneux",
+      "caracteristiques_rapides": "DOC du centre de l'île (autour de Sorgono), en altitude : assemblage rouge typique (Bovale, Cannonau, Monica), rustique et de caractère, en plein regain d'intérêt.",
+      "notes_objectives": "Le Mandrolisai est une DOC du centre montagneux de la Sardaigne, autour de Sorgono, en altitude. Sur des sols de granit et de schistes, ce terroir d'intérieur produit un rouge (et un rosé) d'assemblage typique, mariant le Bovale (Muristellu), le Cannonau et la Monica. Rustique, épicé et de caractère, le vin du Mandrolisai exprime l'âme de la Sardaigne profonde et connaît un regain d'intérêt grâce à une nouvelle génération de vignerons. L'altitude apporte fraîcheur et structure. Terroir d'assemblage de montagne, le Mandrolisai illustre une tradition vivante et authentique du centre de l'île.\n\nAu cœur géographique de la Sardaigne, le Mandrolisai a longtemps vécu à l'écart des circuits commerciaux, préservant des traditions d'assemblage anciennes. La complantation de Bovale, Cannonau et Monica, vinifiés ensemble, donne des rouges de caractère, à la fois rustiques et digestes, qui séduisent aujourd'hui les amateurs en quête d'authenticité. Servis sur des viandes ou des fromages, ils accompagnent la cuisine de montagne. Porté par de jeunes vignerons, ce terroir d'altitude connaît un renouveau prometteur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "mandrolisai",
+        "bovale",
+        "assemblage",
+        "altitude",
+        "doc"
+      ],
+      "source": "lestradedelvino|winedexer"
+    },
+    {
+      "id": "it-sardegna-terr-capo-ferrato",
+      "nom": "Capo Ferrato",
+      "type": "sottozona",
+      "region": "Sardegna",
+      "sous_region": "Sarrabus (côte sud-est)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cannonau"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "sables et granit de la côte sud-est",
+      "caracteristiques_rapides": "Sous-zone du Cannonau sur la côte sud-est (Castiadas, Muravera) : rouges solaires, ronds et chaleureux, marqués par le climat maritime.",
+      "notes_objectives": "Capo Ferrato est une sous-zone du Cannonau située sur la côte sud-est de la Sardaigne, dans le Sarrabus (communes de Castiadas, Muravera, Villasimius…). Sur des sols sableux et granitiques, sous un climat chaud et maritime, le Cannonau y donne des rouges solaires, ronds et chaleureux, aux arômes de fruits mûrs et d'épices, marqués par l'influence de la mer toute proche. Plus souples et immédiats que les Cannonau de montagne, ils expriment le visage côtier du cépage. Sous-zone maritime du Cannonau, Capo Ferrato en offre une version généreuse et ensoleillée, typique du sud-est de l'île.\n\nSur la côte du Sarrabus, baignée de soleil et de brises marines, le Cannonau de Capo Ferrato mûrit pleinement et donne des rouges généreux et accessibles. Les sols sableux et granitiques, proches de la mer, apportent rondeur et souplesse, dans un style plus immédiat que les Cannonau de montagne. Servis sur des grillades, des viandes ou des fromages, ils expriment le visage solaire et côtier du cépage. Sous-zone ensoleillée du sud-est, Capo Ferrato illustre la diversité des expressions du Cannonau selon l'altitude et la proximité de la mer.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "capo-ferrato",
+        "cannonau",
+        "sarrabus",
+        "cote",
+        "sottozona"
+      ],
+      "source": "wineandtravelitaly"
+    },
+    {
+      "id": "it-sardegna-terr-monica-di-sardegna",
+      "nom": "Monica di Sardegna",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Toute l'île",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Monica"
+      ],
+      "altitude": "~0-400 m",
+      "sols": "sols variés, surtout dans le sud (Campidano, Parteolla)",
+      "caracteristiques_rapides": "Rouge autochtone souple et fruité, moins structuré que le Cannonau : tanins doux, arômes de fruits des bois, idéal sur la cuisine sarde, à boire jeune.",
+      "notes_objectives": "La Monica di Sardegna est l'appellation dédiée à la Monica, cépage rouge autochtone répandu surtout dans le sud de l'île (Campidano, Parteolla). Plus souple et plus léger que le Cannonau, il donne des rouges fruités et accessibles, aux tanins doux et aux arômes de fruits des bois et d'épices douces, à boire jeunes et volontiers légèrement rafraîchis. C'est le compagnon idéal de la cuisine sarde du quotidien, des pâtes aux viandes. Cépage convivial par excellence, la Monica offre un visage plus tendre et gourmand du rouge sarde, complémentaire de la puissance du Cannonau.\n\nLongtemps considérée comme un cépage secondaire, la Monica gagne en reconnaissance grâce à des vinifications plus soignées qui en révèlent le charme. Sur les sols du sud de l'île, elle donne des rouges souples et parfumés, faciles à boire et gastronomiques, parfaits sur la cuisine sarde du quotidien. Quelques vignerons la vinifient désormais en pureté avec ambition, montrant qu'elle peut dépasser son statut de simple vin de table. Cépage convivial et polyvalent, la Monica offre une alternative tendre et fruitée à la puissance du Cannonau.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "monica",
+        "rouge",
+        "souple",
+        "doc"
+      ],
+      "source": "villaflor|bevisardo"
+    },
+    {
+      "id": "it-sardegna-terr-nuragus-di-cagliari",
+      "nom": "Nuragus di Cagliari",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Campidano (Cagliari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nuragus"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "alluvions et sols fertiles de la plaine du Campidano",
+      "caracteristiques_rapides": "L'un des plus vieux cépages blancs de l'île : blanc léger, frais et désaltérant, aux notes d'agrumes et de fleurs, vin de soif populaire du sud.",
+      "notes_objectives": "Le Nuragus di Cagliari est l'une des plus anciennes appellations blanches de la Sardaigne, dédiée au Nuragus, cépage autochtone parmi les plus vieux de l'île, cultivé dans la plaine du Campidano au sud. Sur des sols alluviaux et fertiles, il donne un blanc léger, frais et désaltérant, aux notes d'agrumes et de fleurs, à l'acidité vive, conçu pour être bu jeune. Longtemps produit en grands volumes comme vin de soif, il connaît aujourd'hui des interprétations plus soignées. Blanc populaire et historique du sud, le Nuragus di Cagliari illustre la tradition des vins de soif sardes et la richesse ampélographique de l'île.\n\nCépage parmi les plus anciens de l'île, le Nuragus tire son nom des nuraghes, ces tours de pierre préhistoriques emblématiques de la Sardaigne, signe de son ancrage millénaire. Cultivé dans la vaste plaine du Campidano, il donne un blanc léger et désaltérant, longtemps produit en abondance comme vin de soif populaire. Aujourd'hui, des interprétations plus précises en révèlent la fraîcheur et la finesse. Servi sur des poissons, des fruits de mer ou à l'apéritif, c'est un blanc simple et rafraîchissant. Le Nuragus témoigne de la profondeur historique de la viticulture sarde.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "nuragus",
+        "campidano",
+        "blanc-leger",
+        "doc"
+      ],
+      "source": "jancisrobinson|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-moscato-di-sorso-sennori",
+      "nom": "Moscato di Sorso-Sennori",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Romangia",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Moscato bianco"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "calcaires des collines du nord-ouest",
+      "caracteristiques_rapides": "Petite DOC de la Romangia : Moscato doux et aromatique (parfois liquoreux ou fortifié), spécialité sucrée traditionnelle du nord de l'île.",
+      "notes_objectives": "Le Moscato di Sorso-Sennori est une petite DOC de la Romangia, dans le nord-ouest de la Sardaigne, autour des communes de Sorso et Sennori. Sur des collines calcaires proches de la mer, le Moscato bianco y donne un vin doux et aromatique, aux notes de raisin frais, de fleurs et de fruits confits, décliné parfois en version liquoreuse ou fortifiée. Spécialité sucrée traditionnelle, produite en petites quantités, il accompagne pâtisseries et fromages. Vin doux de tradition, le Moscato di Sorso-Sennori perpétue une facette sucrée et historique de la viticulture du nord de l'île.\n\nSur les collines calcaires de la Romangia, le Moscato bianco trouve un terroir propice à l'élaboration de vins doux aromatiques, dans une tradition ancienne du nord-ouest sarde. Décliné en version douce, parfois liquoreuse ou fortifiée, le Moscato di Sorso-Sennori séduit par ses arômes intenses de raisin, de fleurs et de fruits confits. Produit en petites quantités, il accompagne pâtisseries, fromages et fins de repas. Spécialité sucrée traditionnelle, il perpétue une facette gourmande et confidentielle de la viticulture du nord de l'île.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "moscato",
+        "sorso-sennori",
+        "doux",
+        "doc"
+      ],
+      "source": "villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-nasco-di-cagliari",
+      "nom": "Nasco di Cagliari",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Campidano (Cagliari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nasco"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "sols calcaires et sableux du sud",
+      "caracteristiques_rapides": "Cépage blanc autochtone rare du sud : décliné en sec ou, surtout, en doux et liquoreux, aux arômes de fleurs, de miel et de muscade, vin de tradition.",
+      "notes_objectives": "Le Nasco di Cagliari est une appellation rare dédiée au Nasco, cépage blanc autochtone ancien du sud de la Sardaigne, cultivé dans la région de Cagliari. Sur des sols calcaires et sableux, il est décliné en version sèche mais surtout douce et liquoreuse, aux arômes caractéristiques de fleurs, de miel, d'agrumes confits et de muscade. Produit en faibles quantités, c'est un vin de tradition, longtemps réservé aux grandes occasions, que l'on sert sur les desserts ou en méditation. Cépage rare et patrimonial, le Nasco di Cagliari illustre la richesse des vins doux autochtones du sud de l'île.\n\nLe Nasco, dont le nom dériverait du latin « muscus » (musc) en référence à ses arômes, est l'un des cépages blancs les plus anciens et les plus rares de la Sardaigne. Cultivé dans le sud, il est surtout vinifié en doux et liquoreux, dans une tradition séculaire de vins de méditation. Ses arômes de fleurs, de miel, d'agrumes confits et de muscade en font un vin de dessert raffiné, servi sur les pâtisseries ou les fromages. Produit aujourd'hui en quantités infimes, le Nasco di Cagliari est un témoignage précieux du patrimoine des cépages doux autochtones du sud de l'île.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "nasco",
+        "cagliari",
+        "doux",
+        "rare",
+        "doc"
+      ],
+      "source": "lacucinaitaliana|villaflor"
+    },
+    {
+      "id": "it-sardegna-terr-giro-di-cagliari",
+      "nom": "Girò di Cagliari",
+      "type": "appellation (DOC)",
+      "region": "Sardegna",
+      "sous_region": "Campidano (Cagliari)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Girò"
+      ],
+      "altitude": "~0-200 m",
+      "sols": "sols sableux et calcaires du sud",
+      "caracteristiques_rapides": "Rouge autochtone rarissime du sud, surtout en version douce et liquoreuse : grenat profond, notes de fruits confits et d'épices, vin de dessert de tradition.",
+      "notes_objectives": "Le Girò di Cagliari est l'une des appellations les plus confidentielles de la Sardaigne, dédiée au Girò, cépage rouge autochtone rarissime du sud de l'île. Sur des sols sableux et calcaires de la région de Cagliari, il est surtout vinifié en version douce et liquoreuse : un vin grenat profond, aux arômes de fruits rouges confits, de prune, d'épices et de notes balsamiques, à la bouche suave. Produit en quantités infimes, il a failli disparaître et survit grâce à quelques passionnés. Vin de dessert rarissime, le Girò di Cagliari est un témoignage précieux du patrimoine des cépages doux du sud de la Sardaigne.\n\nLe Girò est l'un des cépages les plus menacés de la Sardaigne, qui a failli disparaître au XXe siècle et ne survit que grâce à l'obstination de quelques vignerons. Cultivé dans le sud, il est traditionnellement vinifié en version douce et liquoreuse, donnant un vin grenat aux arômes de fruits rouges confits, de prune et d'épices, à la bouche suave et persistante. Servi sur des desserts au chocolat, des fruits secs ou en méditation, c'est un vin de tradition rarissime. Le Girò di Cagliari incarne la fragilité et la richesse du patrimoine ampélographique sucré du sud de la Sardaigne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sardegna",
+        "giro",
+        "cagliari",
+        "doux",
+        "rare",
+        "doc"
+      ],
+      "source": "villaflor"
+    }
+  ]
+}

@@ -52,6 +52,10 @@ export interface Vin {
   resume_court: string | null;
   etiquette_url: string | null;
   coup_de_coeur: boolean;
+  ordre: number;
+  ranking_producteur: number | null;
+  ranking_terroir: number | null;
+  pays: string | null;
 }
 
 export interface Accord {

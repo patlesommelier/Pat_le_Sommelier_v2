@@ -1,0 +1,679 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "wurttemberg",
+  "region_label": "Württemberg (Allemagne)",
+  "source_file": "producteurs_wurttemberg_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 17,
+  "items": [
+    {
+      "id": "de-wurttemberg-prod-aldinger",
+      "nom": "Aldinger",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Fellbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling",
+        "Trollinger",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fellbacher Lämmler",
+        "Untertürkheimer Gips",
+        "Marbacher Neckarhälde"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Fellbach, dans le Remstal aux portes de Stuttgart, le domaine Aldinger est, avec Schnaitmann, l'un des deux plus grands du Württemberg. Domaine familial depuis 1492, il est aujourd'hui mené par Gert Aldinger et ses fils Hansjörg et Matthias, qui l'ont conduit au sommet de la région tout en le convertissant à l'agriculture biologique. Le grand cru Fellbacher Lämmler en est le fleuron : sur ce coteau, Aldinger signe des Lemberger et des Spätburgunder Grosses Gewächs d'une finesse toute bourguignonne, régulièrement primés parmi les meilleurs rouges d'Allemagne. Le domaine valorise aussi l'Untertürkheimer Gips, terroir classique du Lemberger, et de beaux Riesling. Aldinger prend également le Trollinger au sérieux et produit l'un des plus grands Sekt d'Allemagne, son Brut Nature ayant été plusieurs fois sacré meilleur effervescent du pays. Élu vigneron de l'année par la critique, le domaine incarne l'excellence du Württemberg et la capacité du Lemberger à rivaliser avec les plus grands rouges allemands. L'histoire du domaine se confond avec celle de Fellbach : transmis de génération en génération depuis le XVe siècle, il a pris son essor qualitatif sous Gert Aldinger, avant que ses fils ne le hissent au tout premier rang allemand et ne le convertissent au bio. L'Untertürkheimer Gips, acquis en 1973, est devenu un terroir de référence pour le Lemberger. Les Grosses Gewächs du Fellbacher Lämmler — Lemberger, Spätburgunder mais aussi Riesling — comptent parmi les plus grands d'Allemagne : le Lämmler Lemberger a notamment été classé parmi les 150 meilleurs vins du monde par la critique internationale. Les rouges, d'inspiration bourguignonne, allient finesse, fraîcheur et longue garde. Pour l'amateur, Aldinger est la démonstration éclatante que le Württemberg, longtemps réputé pour ses rouges simples, peut produire des Lemberger et des Spätburgunder de rang mondial. Dans une région où plus de trois quarts du raisin partent en coopérative, Aldinger fait figure de phare : un domaine indépendant qui a prouvé, médaille après médaille, que le Württemberg pouvait jouer dans la cour des grands. Son Sekt Brut Nature, plusieurs fois sacré meilleur effervescent d'Allemagne, témoigne de cette quête d'excellence sur tous les fronts. Pour qui veut découvrir le meilleur du Lemberger et du Spätburgunder allemands, Fellbach et le domaine Aldinger sont une étape incontournable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "spaetburgunder",
+        "icone",
+        "vdp",
+        "bio",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth|weingut-aldinger"
+    },
+    {
+      "id": "de-wurttemberg-prod-rainer-schnaitmann",
+      "nom": "Rainer Schnaitmann",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Fellbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fellbacher Lämmler",
+        "Uhlbacher Götzenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Fellbach, dans le Remstal, le domaine Rainer Schnaitmann est l'autre grand nom du Württemberg. Fondé seulement en 1997 par Rainer Schnaitmann, membre du VDP depuis 2006, il s'est hissé en une génération parmi les meilleurs domaines d'Allemagne, conduit en agriculture biologique. Schnaitmann excelle dans les rouges : ses Lemberger et ses Spätburgunder, sur le Fellbacher Lämmler et l'Uhlbacher Götzenberg, allient finesse, énergie et précision, dans un style vivant et raffiné. Ses cuvées parcellaires (Simonroth, Steinwiege) comptent parmi les rouges les plus aboutis de la région. Le domaine signe aussi de remarquables blancs : Riesling racés et Grauburgunder, ainsi qu'un Sauvignon Blanc réputé. Référence du renouveau du Württemberg, Schnaitmann illustre la montée en puissance spectaculaire des grands rouges allemands et la noblesse retrouvée du Lemberger. L'ascension de Schnaitmann est l'une des plus spectaculaires d'Allemagne : parti de rien en 1997, Rainer Schnaitmann a bâti en une génération un domaine régulièrement cité parmi les tout meilleurs du pays, entièrement converti au bio. Son vignoble, étagé sur des sols très variés (calcaire coquillier, gypse, grès), nourrit une gamme d'une grande diversité. Ses rouges — Lemberger et Spätburgunder du Lämmler, cuvées parcellaires Simonroth et Steinwiege — séduisent par leur énergie, leur finesse et leur précision, dans un style vivant inspiré par les vins nature. Ses blancs (Riesling, Grauburgunder, Sauvignon Blanc) et ses rosés sont tout aussi salués. Avec Aldinger, Schnaitmann incarne le visage moderne et ambitieux du Württemberg, et la reconnaissance internationale croissante du Lemberger. Dans un vignoble longtemps dominé par les coopératives et les rouges simples, l'ascension de Schnaitmann a valeur de manifeste : elle a montré qu'un vigneron parti de zéro pouvait, en deux décennies, porter le Lemberger et le Spätburgunder du Württemberg à un niveau internationalement reconnu. Pour l'amateur français, Schnaitmann est l'une des plus belles portes d'entrée vers le grand vin rouge allemand, encore trop méconnu hors des frontières.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "spaetburgunder",
+        "icone",
+        "vdp",
+        "bio",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth|thegwc"
+    },
+    {
+      "id": "de-wurttemberg-prod-dautel",
+      "nom": "Dautel",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Bönnigheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bönnigheimer Sonnenberg",
+        "Besigheimer Wurmberg",
+        "Grübenstein"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bönnigheim, dans le Württembergisch Unterland, le domaine Dautel est l'une des références modernes de la région. Mené par Christian Dautel, formé en Bourgogne et à l'étranger, il conjugue tradition familiale et précision contemporaine. Le domaine signe des Lemberger et des Spätburgunder élégants et structurés, sur des terroirs comme le Bönnigheimer Sonnenberg et le Besigheimer Wurmberg, ainsi que de grands Riesling (notamment la cuvée Grübenstein). Le style Dautel recherche la finesse, la fraîcheur et l'expression du terroir, dans des vins racés et de garde. Membre du VDP, le domaine illustre la nouvelle génération qui hisse le Württemberg vers de nouveaux sommets, et compte parmi les adresses les plus sûres de la région. Christian Dautel, qui a parfait sa formation en Bourgogne, en Nouvelle-Zélande et ailleurs, a donné au domaine familial une dimension nouvelle, tout en finesse. Ses Lemberger et Spätburgunder, élevés avec retenue, et ses Riesling de la cuvée Grübenstein figurent parmi les vins les plus précis du Württemberg. Membre du VDP, Dautel illustre la nouvelle génération qui conjugue racines régionales et exigence internationale, et compte parmi les valeurs les plus sûres du Unterland.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "spaetburgunder",
+        "vdp",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|wine-searcher"
+    },
+    {
+      "id": "de-wurttemberg-prod-woehrwag",
+      "nom": "Wöhrwag",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "commune": "Untertürkheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Lemberger"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Untertürkheimer Herzogenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Untertürkheim, au cœur de Stuttgart, le domaine Wöhrwag est l'une des grandes adresses du Neckar. Mené par la famille Wöhrwag, il est surtout réputé pour ses Riesling de l'Untertürkheimer Herzogenberg, grand coteau qu'il exploite presque en totalité. Sur ce terroir, le domaine signe des Riesling Grosse Lage racés et de garde, ainsi que de beaux Spätburgunder. Le style Wöhrwag, classique et soigné, met en avant la minéralité et l'élégance. Le domaine illustre la capacité de Stuttgart, l'une des plus grandes villes viticoles d'Allemagne, à produire de grands Riesling et de beaux rouges sur ses coteaux urbains. L'Untertürkheimer Herzogenberg, que le domaine exploite presque en monopole, est l'un des grands terroirs de Riesling de Stuttgart : le domaine Wöhrwag en tire des vins racés, minéraux et de garde, classés en Grosse Lage, ainsi que de beaux Spätburgunder. Dans une ville plus connue pour son industrie automobile que pour son vin, Wöhrwag rappelle que Stuttgart compte parmi les plus grandes communes viticoles d'Allemagne et abrite de véritables grands crus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "vdp",
+        "stuttgart"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|weingut-aldinger"
+    },
+    {
+      "id": "de-wurttemberg-prod-karl-haidle",
+      "nom": "Karl Haidle",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Kernen-Stetten",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Lemberger",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Stettener Pulvermächer",
+        "Stettener Mönchberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kernen-Stetten, dans le Remstal, le domaine Karl Haidle est l'une des références du Riesling du Württemberg. Mené par Moritz Haidle, il est conduit en biodynamie (Demeter) depuis 2020. Le domaine consacre près de la moitié de son vignoble au Riesling, sur le grand coteau du Stettener Pulvermächer, dont il tire des vins minéraux et racés ; il signe aussi de beaux Lemberger. Le style Haidle conjugue pureté, fraîcheur et expression du terroir, dans des vins précis et de garde. Membre du VDP, le domaine illustre la double vocation du Remstal — grand Riesling et Lemberger — et le tournant biodynamique d'une partie de l'élite régionale. Sous l'impulsion de Moritz Haidle, le domaine a opéré un tournant biodynamique et placé le Riesling au cœur de son identité, sur le grand coteau du Stettener Pulvermächer, aux sols de grès et de marnes. Ses Riesling, minéraux et tendus, et ses Lemberger comptent parmi les références du Remstal. Membre du VDP, Haidle illustre la double vocation de la vallée de la Rems, où le Riesling rivalise avec le grand rouge, et le virage écologique d'une partie de l'élite.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "lemberger",
+        "vdp",
+        "biodynamie",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-prod-graf-neipperg",
+      "nom": "Graf Neipperg",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Schwaigern",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling",
+        "Muskateller"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schwaigerner Ruthe",
+        "Neipperger Schlossberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Schwaigern, dans le Württembergisch Unterland, le domaine du Graf von Neipperg est l'une des grandes maisons historiques du pays du Lemberger. La famille Neipperg, qui possède aussi des crus réputés à Bordeaux (Saint-Émilion), cultive la vigne en Württemberg depuis des siècles. Le domaine signe des Lemberger et des Spätburgunder structurés et de garde, sur des coteaux comme le Schwaigerner Ruthe et le Neipperger Schlossberg, ainsi que de beaux blancs (Riesling, Muskateller). Le style Neipperg, classique et soigné, met en avant la structure et l'expression du terroir. Riche d'une longue histoire et d'un savoir-faire partagé entre l'Allemagne et Bordeaux, le domaine illustre la grande tradition du Lemberger dans le Unterland. Le lien de la famille Neipperg avec Bordeaux — où elle possède des crus de Saint-Émilion comme Canon-La Gaffelière — confère au domaine un savoir-faire singulier dans les rouges. En Württemberg, sur les coteaux de Schwaigern, elle signe des Lemberger structurés et de garde, dans le cœur historique de ce cépage. Riche d'une tradition séculaire, le domaine illustre la grandeur du Lemberger dans le Unterland et le pont rare entre deux cultures du vin rouge, allemande et bordelaise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "spaetburgunder",
+        "vdp",
+        "historique",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|grapeguru"
+    },
+    {
+      "id": "de-wurttemberg-prod-graf-adelmann",
+      "nom": "Graf Adelmann",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Kleinbottwar",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Trollinger",
+        "Riesling",
+        "Samtrot"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kleinbottwarer Süßmund",
+        "Burg Schaubeck"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kleinbottwar, dans le Württembergisch Unterland, le domaine du Graf Adelmann, installé autour du château de Schaubeck, est réputé pour l'élégance de ses rouges. Le domaine signe des Lemberger fins et bourguignons, notamment sur le grand coteau du Kleinbottwarer Süßmund, ainsi que des Riesling de garde et de beaux Trollinger. Ses cuvées, dont le « Der Weisse Löwe » en blanc, sont reconnaissables à leurs étiquettes raffinées. Le style Adelmann recherche la finesse et l'élégance plutôt que la puissance, dans des vins de longue garde. Membre du VDP, le domaine illustre une approche raffinée du Lemberger et compte parmi les belles adresses historiques du Unterland. Installé dans le château fortifié de Schaubeck, le domaine cultive une approche raffinée du Lemberger, recherchant l'élégance bourguignonne plutôt que la puissance. Le grand coteau du Kleinbottwarer Süßmund en est le fleuron, donnant des rouges fins et de longue garde. Ses étiquettes soignées et ses cuvées originales ont forgé une identité reconnaissable. Membre du VDP, Adelmann illustre une vision élégante et historique du rouge de Württemberg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "riesling",
+        "vdp",
+        "historique",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "grapeguru|winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-prod-jochen-beurer",
+      "nom": "Jochen Beurer",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Kernen-Stetten",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Lemberger",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Stettener Pulvermächer",
+        "Stettener Schilfsandstein"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kernen-Stetten, dans le Remstal, le domaine de Jochen Beurer est l'une des figures du renouveau de la région. Conduit en biodynamie (Demeter), il est réputé pour ses Riesling vinifiés par type de sol (Schilfsandstein, gypse…). Le domaine signe des Riesling vibrants et salins, sur le Stettener Pulvermächer, ainsi que des Lemberger et des rouges dans un esprit nature. Le style Beurer, énergique et précis, met en avant la pureté et l'expression géologique. Figure montante du Württemberg, le domaine illustre la nouvelle vague de vignerons qui réinventent le Remstal autour du Riesling et du Lemberger. Ancien champion de moto-cross devenu vigneron, Jochen Beurer a fait du domaine familial l'une des figures du Remstal contemporain. Sa spécialité : des Riesling vinifiés séparément selon le sous-sol — grès des roseaux, gypse, grès siliceux —, qui révèlent les nuances géologiques du Pulvermächer. Conduit en biodynamie, le domaine signe aussi des Lemberger dans un esprit nature. Beurer incarne la nouvelle vague qui réinvente le Württemberg autour du terroir et de la pureté.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "lemberger",
+        "biodynamie",
+        "vdp",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|grapeguru"
+    },
+    {
+      "id": "de-wurttemberg-prod-rainer-wachtstetter",
+      "nom": "Rainer Wachtstetter",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Pfaffenhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Schwarzriesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Pfaffenhofener Hohenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pfaffenhofen, dans le Württembergisch Unterland, le domaine de Rainer Wachtstetter est l'un des grands spécialistes du Lemberger. Avec environ 75% de rouge, il incarne l'identité rouge du Württemberg. Sur le coteau du Pfaffenhofener Hohenberg, il signe des Lemberger minéraux et profonds, parmi les meilleurs de la région, ainsi que des Schwarzriesling et Spätburgunder. Le style Wachtstetter recherche la précision, la minéralité et l'expression du terroir. Membre du VDP depuis 2009, le domaine illustre le potentiel premium du Lemberger et compte parmi les références du rouge dans le Unterland. Spécialiste du Lemberger, Rainer Wachtstetter a fait du coteau du Pfaffenhofener Hohenberg sa signature, avec des rouges minéraux et profonds qui comptent parmi les meilleurs de la région. Avec trois quarts de sa production en rouge, le domaine incarne l'identité du Württemberg. Membre du VDP depuis 2009, il illustre le potentiel premium du Lemberger, longtemps sous-estimé et aujourd'hui reconnu comme l'un des grands cépages rouges allemands.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "schwarzriesling",
+        "vdp",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-prod-juergen-ellwanger",
+      "nom": "Jürgen Ellwanger",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Winterbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Zweigelt",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schnaiter Altenberg",
+        "Winterbacher Hungerberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Winterbach, dans le Remstal, le domaine Jürgen Ellwanger est un pionnier de la région : il fut l'un des premiers à introduire l'élevage en barrique et les cépages internationaux en Württemberg. Le domaine signe des Lemberger, des Spätburgunder et des cuvées rouges ambitieuses (avec parfois du Zweigelt), sur des coteaux comme le Schnaiter Altenberg, ainsi que de bons Riesling. Le style Ellwanger, structuré et moderne, a contribué à faire évoluer l'image des rouges de la région. Domaine reconnu, transmis à la nouvelle génération, il illustre la modernisation du Württemberg et la montée en gamme de ses vins rouges. Jürgen Ellwanger a marqué l'histoire récente du Württemberg en introduisant, dès les années 1980, l'élevage en barrique et des cépages comme le Zweigelt, contribuant à moderniser l'image des rouges régionaux. Le domaine, aujourd'hui mené par la nouvelle génération, signe des Lemberger et des Spätburgunder structurés, sur des coteaux du Remstal comme le Schnaiter Altenberg. Il illustre la montée en gamme et l'ouverture du vignoble württembergeois.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "spaetburgunder",
+        "vdp",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-prod-knauss",
+      "nom": "Knauß",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Weinstadt-Strümpfelbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Strümpfelbacher Nonnenberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Strümpfelbach, dans le Remstal, le domaine Knauß est l'une des étoiles montantes du Württemberg. Conduit en biodynamie, il travaille les coteaux escarpés de la vallée de la Rems. Le domaine signe des Lemberger et des Spätburgunder précis et élégants, ainsi que de beaux Riesling, dans un style frais et soigné. Le style Knauß met en avant la finesse, la pureté et l'expression des terroirs en forte pente. Représentant d'une nouvelle génération ambitieuse et respectueuse, le domaine illustre la vitalité du Remstal et compte parmi les adresses à suivre de près dans la région. Andreas Knauß a fait de ce domaine de Strümpfelbach l'une des révélations récentes du Württemberg, en travaillant en biodynamie les coteaux escarpés du Remstal. Ses Lemberger et Spätburgunder, précis et élégants, et ses Riesling salins séduisent une nouvelle génération d'amateurs. Le domaine illustre la vitalité de la vallée de la Rems, où de jeunes vignerons exigeants révèlent le potentiel de terroirs en forte pente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "biodynamie",
+        "montant",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus|wine-searcher"
+    },
+    {
+      "id": "de-wurttemberg-prod-staatsweingut-weinsberg",
+      "nom": "Staatsweingut Weinsberg",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Weinsberg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Lemberger",
+        "Spätburgunder",
+        "Kerner"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Weinsberger Schemelsberg",
+        "Verrenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Weinsberg, dans le Württembergisch Unterland, le domaine de l'État abrite la plus ancienne école viticole d'Allemagne, fondée en 1868. C'est ici qu'est né le cépage Kerner, croisement créé par l'établissement et nommé d'après le poète Justinus Kerner. Le domaine propose une large gamme — Riesling, Lemberger, Spätburgunder — sur des coteaux comme le Weinsberger Schemelsberg et le Verrenberg. Institution de référence pour la formation et la recherche, le Staatsweingut Weinsberg illustre le rôle historique de l'enseignement viticole dans le Württemberg. Au-delà de la production, l'établissement de Weinsberg a profondément marqué la viticulture allemande : on y a créé de nombreux croisements, dont le Kerner, devenu populaire bien au-delà du Württemberg. Domaine d'application de l'école, il propose une gamme étendue et illustre le rôle central de la formation et de la recherche dans l'histoire du vignoble régional.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "historique",
+        "riesling",
+        "lemberger",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-prod-herzog-von-wuerttemberg",
+      "nom": "Herzog von Württemberg",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "commune": "Untertürkheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Lemberger",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Maulbronner Eilfingerberg",
+        "Untertürkheimer Mönchberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Le domaine de la maison royale de Wurtemberg exploite de beaux coteaux historiques autour de Stuttgart et de Maulbronn. Son joyau est le Maulbronner Eilfingerberg, ancien clos des moines cisterciens de l'abbaye de Maulbronn, classée au patrimoine mondial. Le domaine signe des Riesling et des rouges (Lemberger, Spätburgunder) de tradition, sur des terroirs chargés d'histoire. Riche d'un patrimoine remarquable, il illustre les racines monastiques et princières de la viticulture du Württemberg. Le Maulbronner Eilfingerberg, ancien clos des cisterciens de l'abbaye de Maulbronn — l'un des monastères médiévaux les mieux conservés d'Europe —, confère au domaine un patrimoine historique exceptionnel. Le domaine royal y perpétue, ainsi que sur ses coteaux de Stuttgart, une tradition de Riesling et de rouges, héritée des moines et des princes qui ont façonné le vignoble du Württemberg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "lemberger",
+        "historique",
+        "stuttgart"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-prod-drautz-able",
+      "nom": "Drautz-Able",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "commune": "Heilbronn",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Samtrot",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Heilbronner Stiftsberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heilbronn, au cœur du vignoble du Neckar, le domaine Drautz-Able est une maison familiale réputée pour ses rouges. Il signe de beaux Lemberger et du Samtrot — spécialité du Württemberg, mutation du Schwarzriesling —, ainsi que des Riesling, sur des coteaux comme le Heilbronner Stiftsberg. Soigné et régulier, le domaine illustre la tradition rouge de Heilbronn, l'une des capitales historiques du vignoble du Württemberg. Le Samtrot, mutation locale du Schwarzriesling, est l'une des spécialités du domaine et du Württemberg, donnant des rouges souples et veloutés. Aux côtés de ses Lemberger et de ses Riesling, Drautz-Able perpétue la tradition rouge de Heilbronn, ville qui fut longtemps l'une des capitales du vignoble régional, au cœur de la vallée du Neckar.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "samtrot",
+        "wuerttembergisch-unterland"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-prod-albrecht-schwegler",
+      "nom": "Albrecht Schwegler",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Korb",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Spätburgunder",
+        "Zweigelt"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Korber Hörnle"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Korb, dans le Remstal, le domaine Albrecht Schwegler est un petit producteur culte, fondé en 1990. Il s'est fait connaître par ses cuvées rouges d'assemblage — Granat, Saphir, Beryll —, élaborées avec un grand soin à partir de Lemberger, Spätburgunder et Zweigelt, en viticulture proche du bio. Confidentiel et recherché, le domaine illustre la créativité d'une nouvelle génération de vignerons qui ont misé sur des rouges ambitieux en Württemberg. À contre-courant de la tradition régionale, Albrecht puis Andreas Schwegler ont misé dès 1990 sur des assemblages rouges ambitieux, longuement élevés, qui ont acquis un statut culte parmi les amateurs. Sur une douzaine d'hectares seulement, le domaine produit des cuvées rares et recherchées, et illustre l'audace d'une viticulture de niche au sein du Württemberg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "cuvees",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-prod-kuhnle",
+      "nom": "Kuhnle",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Weinstadt-Strümpfelbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Trollinger",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Strümpfelbacher Altenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Strümpfelbach, dans le Remstal, le domaine Kuhnle est une adresse bio qui travaille les coteaux escarpés de la vallée de la Rems. Il signe des Lemberger, des Trollinger et des Riesling sincères et soignés, dans un esprit respectueux de l'environnement. Le domaine illustre l'essor de la viticulture biologique dans le Remstal et compte parmi les bonnes adresses familiales de la région. Engagé dans le bio, le domaine Kuhnle travaille les coteaux escarpés de Strümpfelbach et propose une gamme fidèle à l'identité régionale : Lemberger, Trollinger et Riesling. Avec son auberge et son accueil, il incarne aussi la tradition conviviale du Remstal, où la culture du vin se vit au quotidien. Le domaine illustre l'essor de la viticulture biologique dans la vallée de la Rems.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "bio",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-prod-markus-heid",
+      "nom": "Markus Heid",
+      "type": "domaine",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "commune": "Fellbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Lemberger",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fellbacher Lämmler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Fellbach, dans le Remstal, le domaine Markus Heid travaille dans le sillage de ses prestigieux voisins. Sur le grand coteau du Fellbacher Lämmler, il signe des Lemberger et des Riesling de belle facture, soignés et accessibles. Le domaine illustre la profondeur du vignoble de Fellbach, où, à l'ombre des plus grands, de bonnes adresses contribuent à la réputation du Württemberg. Travaillant le grand coteau du Fellbacher Lämmler aux côtés de ses illustres voisins, le domaine Markus Heid signe des Lemberger et des Riesling soignés, à des prix accessibles. Il illustre la profondeur du vignoble de Fellbach, l'un des villages phares du Württemberg, où la qualité ne se limite pas aux quelques grands noms les plus célèbres.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "lemberger",
+        "riesling",
+        "remstal"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    }
+  ]
+}

@@ -1,0 +1,1081 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "piemonte",
+  "region_label": "Piemonte",
+  "source_file": "terroirs_piemonte.json",
+  "built_at": "2026-06-15",
+  "count": 45,
+  "items": [
+    {
+      "id": "it-piemonte-terr-brunate",
+      "nom": "Brunate",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (La Morra/Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~240-400 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru à cheval sur La Morra et Barolo : Barolo alliant finesse parfumée et structure, d'une grande longévité ; l'un des sommets de l'appellation.",
+      "notes_objectives": "À cheval sur La Morra et le village de Barolo, Brunate est l'un des tout premiers crus de l'appellation, classé parmi les meilleurs depuis plus d'un siècle. Le coteau descend de la crête (vers 400 m, où il rejoint La Serra) jusqu'à environ 230 m, sur les marnes calcaires tortoniennes gris-bleu (Sant'Agata Fossili) typiques de l'ouest du Barolo. Une particularité topographique majeure en fait la singularité : un repli du versant oriente une grande partie des vignes plein sud, exposition exceptionnelle qui apporte maturité et puissance. Le résultat est un Barolo qui transcende le profil habituellement tendre de La Morra : un vin à la fois parfumé — rose, fruits rouges, épices — et doté d'une structure tannique sérieuse et d'une profondeur peu commune, capable de très longue garde. C'est l'un des rares sites jugés au sommet par les trois cartographes historiques des crus. La liste de ses vignerons est un who's who du Barolo : Giuseppe Rinaldi et Roberto Voerzio en signent des versions cultes, aux côtés de Vietti, Ceretto, Marcarini, Elio Altare, Oddero ou Marchesi di Barolo, chacun avec sa lecture du cru. Selon le style, Brunate offre soit une finesse aromatique éclatante, soit une concentration spectaculaire, mais toujours avec cette tension et cette persistance qui le distinguent. Austère et serré dans sa jeunesse, il demande une dizaine d'années pour s'ouvrir et tient admirablement vingt à trente ans. Cru de référence, à la fois élégant et puissant, Brunate figure parmi les grands sommets du Barolo et l'un des terroirs les plus complets de toute la Langhe. Sur le plan stylistique, Brunate occupe une place à part : il réconcilie les deux visages du Barolo, la finesse de l'ouest et la puissance de l'est, ce qui explique sa réputation séculaire et la diversité des grands vins qui en sont issus. La pente, raide et bien drainée, limite naturellement les rendements et concentre les raisins. Selon les parcelles et les mains, le cru peut donner aussi bien un Barolo d'une rare élégance florale qu'un vin d'une densité spectaculaire, mais toujours reconnaissable à sa longueur saline et à sa fraîcheur sous-jacente. À table, ces Barolo accompagnent magnifiquement les grands plats de la cuisine piémontaise — viandes braisées au vin, gibier, fromages affinés et truffe blanche d'Alba.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "la-morra",
+        "grand-cru",
+        "tortonien"
+      ],
+      "source": "winescholarguild|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-cerequio",
+      "nom": "Cerequio",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (La Morra/Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-380 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Coteau très ensoleillé entre La Morra et Barolo : Barolo riches, amples et parfumés, d'un grand raffinement.",
+      "notes_objectives": "Partagé entre La Morra et le village de Barolo, voisin de Brunate dont il prolonge la grande crête, Cerequio est un cru historique, déjà cité parmi les meilleurs il y a plus d'un siècle. Le coteau, exposé au sud et au sud-est entre environ 300 et 380 m, repose sur les marnes calcaires tortoniennes (Sant'Agata Fossili) de l'ouest du Barolo, mais bénéficie d'un ensoleillement remarquable qui en fait l'un des sites les plus chauds et les plus précoces de La Morra. Il en résulte un Barolo plus riche, plus ample et plus puissant que la moyenne de la commune, sans rien perdre du parfum et de la finesse aromatique propres au terroir tortonien : nez de rose, de cerise et d'épices, bouche généreuse aux tanins enrobés. Roberto Voerzio et Michele Chiarlo en signent les versions les plus célèbres, le premier dans un registre d'une concentration extrême, et le cru a donné son nom à un relais d'exception au cœur des vignes. Les meilleurs Cerequio conjuguent opulence et raffinement, avec une trame qui leur assure une belle garde de quinze à vingt-cinq ans ; ils s'ouvrent généralement un peu plus tôt que les Barolo de Serralunga, tout en gagnant en complexité avec le temps. Entre la rondeur de La Morra et la structure du village de Barolo, Cerequio occupe une place de choix parmi les grands crus de l'appellation, prisé pour cette synthèse d'élégance et de puissance solaire qui le rend immédiatement reconnaissable. Le caractère solaire de Cerequio en fait un cru particulièrement complet : la chaleur du site mûrit pleinement les tanins, tandis que le sol tortonien préserve le parfum et la finesse, d'où cette sensation d'opulence raffinée propre aux meilleures bouteilles. C'est un terroir qui pardonne moins les millésimes très chauds, où le risque de surmaturité existe, mais qui atteint des sommets les belles années. À table, ses Barolo amples et parfumés s'accordent avec les viandes rôties, le gibier, les risottos truffés et les fromages de longue affinage. Ils s'ouvrent généralement après une dizaine d'années et tiennent admirablement vingt à vingt-cinq ans, gagnant en complexité tertiaire — cuir, sous-bois, épices — avec le temps. Voisin immédiat de Brunate, dont il partage la grande crête, Cerequio en offre une lecture plus chaleureuse et généreuse, et compte parmi les crus historiques les plus sûrs de toute l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "la-morra",
+        "grand-cru",
+        "tortonien"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-rocche-dellannunziata",
+      "nom": "Rocche dell'Annunziata",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (La Morra)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-320 m",
+      "sols": "marnes tortoniennes (Sant'Agata Fossili) avec veines sableuses",
+      "caracteristiques_rapides": "Cru exceptionnel de La Morra : Barolo d'un parfum éclatant et d'une finesse rare, alliés à une profondeur inattendue.",
+      "notes_objectives": "Au pied du village de La Morra, Rocche dell'Annunziata est l'un des crus les plus aimés du Barolo, un magnifique amphithéâtre exposé au sud-ouest entre environ 250 et 350 m, sur des marnes tortoniennes parcourues de veines sableuses. Ce sol fin et ce microclimat lumineux donnent un Barolo célébré avant tout pour son parfum — une explosion de rose, de fruits rouges et d'épices — allié à une finesse de texture rare et, fait remarquable pour La Morra, à une profondeur et une capacité de garde dignes des plus grands. On dit du cru qu'« il y a le nom Barolo, mais qu'ici il y a le parfum ». Vaste d'environ vingt-sept hectares, il est partagé entre près de vingt vignerons, ce qui en fait l'un des crus les plus diversement interprétés de l'appellation. Renato Ratti en tire son Marcenasco historique, Roberto Voerzio sa cuvée Torriglione d'une concentration extrême, Paolo Scavino, Mauro Veglio, Corino et Rocche Costamagna leurs versions respectives ; même Bartolo Mascarello y possède une parcelle entrant dans son assemblage. Les vins se reconnaissent à leur élégance aérienne et à leur bouquet floral envoûtant, soutenus par des tanins fins et une fraîcheur qui les portent loin dans le temps. Serrés et parfumés dans leur jeunesse, ils s'épanouissent sur quinze à vingt-cinq ans en gagnant en complexité. Monument de finesse, Rocche dell'Annunziata est l'expression la plus séduisante du génie aromatique de La Morra et l'un des terroirs les plus convoités du Barolo. La forme en amphithéâtre concentre la lumière et abrite les vignes des vents froids, créant un microclimat idéal qui explique à la fois le parfum exubérant et la maturité régulière du cru. Le sol fin, mêlant marne et sable, donne des vins à la robe souvent claire mais à la persistance trompeuse. C'est un terroir qui illustre à merveille l'idée que la grandeur, en Barolo, ne tient pas qu'à la puissance : ici, c'est la finesse qui impressionne. À table, ces Barolo aériens et parfumés appellent des mets délicats — agnolotti au plin, viandes blanches, volailles, fromages crémeux — autant que les classiques braisés. Ils s'ouvrent après une dizaine d'années et s'épanouissent sur quinze à vingt-cinq ans, leur bouquet floral se muant en notes de truffe et d'épices. Très recherché et morcelé entre de nombreux vignerons, Rocche dell'Annunziata offre, selon la signature, autant de variations sur un même thème : la quintessence du parfum de La Morra.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "la-morra",
+        "grand-cru",
+        "tortonien"
+      ],
+      "source": "decanter|vinfolio"
+    },
+    {
+      "id": "it-piemonte-terr-la-serra",
+      "nom": "La Serra",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (La Morra)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~380-420 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru d'altitude de La Morra : Barolo fins, aromatiques et frais, marqués par l'élévation.",
+      "notes_objectives": "À La Morra, La Serra est un cru d'altitude situé au sommet de la grande colline de la commune, vers 380-420 m, là où le coteau rejoint Brunate, sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Cette élévation, parmi les plus hautes de La Morra, apporte fraîcheur et amplitude thermique, gages de Barbaresco — pardon, de Barolo — fins, aromatiques et tendus, marqués par un parfum floral éclatant et une belle acidité. Historiquement, les vignes les plus hautes de La Morra étaient jugées un peu fraîches pour mûrir pleinement le Nebbiolo, mais le réchauffement récent a révélé tout le potentiel de ces sites d'altitude, désormais très recherchés. Roberto Voerzio en signe une version concentrée et célèbre, aux côtés de Marcarini, dans un registre plus classique et parfumé. Les vins de La Serra se reconnaissent à leur finesse, leur fraîcheur et leur bouquet de rose et de fruits rouges, soutenus par des tanins fins ; ils s'ouvrent après quelques années et vieillissent bien sur une quinzaine d'années. Cru d'altitude élégant et de plus en plus apprécié, La Serra illustre la finesse aromatique propre à La Morra et offre une belle alternative, plus fraîche et tendue, aux grands crus voisins de Brunate et Rocche dell'Annunziata.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "la-morra",
+        "tortonien"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-arborina",
+      "nom": "Arborina",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (La Morra)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~240-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru emblématique de l'école moderne (Altare) : Barolo souples, parfumés et accessibles.",
+      "notes_objectives": "À La Morra, Arborina est un cru devenu emblématique de l'école moderne du Barolo, situé à mi-coteau vers 240-280 m sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Le terroir donne des Barolo dans le style le plus séduisant de La Morra : souples, parfumés et d'un abord plus facile, au bouquet de rose, de cerise et d'épices, avec des tanins fondus. Le cru doit sa célébrité à Elio Altare, pionnier de la révolution moderne, qui en fit sa cuvée phare en y appliquant macérations courtes et élevage en barriques pour obtenir un Nebbiolo charnu, pur et accessible ; le nom Arborina est ainsi devenu synonyme d'une certaine modernité élégante. Mauro Veglio et d'autres vignerons de La Morra en signent également de belles versions. Les vins se reconnaissent à leur fruit éclatant, leur velouté et leur parfum, et séduisent assez jeunes tout en conservant une bonne capacité de garde sur une dizaine à une quinzaine d'années. Moins monumental que les grands crus voisins, Arborina offre une expression gourmande et raffinée du Barolo de La Morra, et reste un terroir de référence pour comprendre l'histoire récente de l'appellation et le style des « Barolo Boys ».",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "la-morra",
+        "tortonien",
+        "moderne"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-cannubi",
+      "nom": "Cannubi",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~220-320 m",
+      "sols": "sols mixtes, marnes tortoniennes et grès serravalliens",
+      "caracteristiques_rapides": "Le plus célèbre cru du Barolo, sur sols mixtes tortonien/serravallien : équilibre et complexité, finesse et profondeur réunies.",
+      "notes_objectives": "Au cœur du village de Barolo, sur une longue échine douce qui domine la vallée, Cannubi est sans conteste le cru le plus célèbre et le plus historique de l'appellation : des documents en attestent l'importance dès le XVIIIe siècle, bien avant que la notion de cru ne soit codifiée. Sa singularité géologique fait sa grandeur : la colline réunit les deux grandes formations du Barolo, les marnes tortoniennes (Sant'Agata Fossili) tendres et les sols serravalliens plus anciens et compacts. De cette rencontre naît un Barolo d'un équilibre rare, qui marie le parfum floral et la finesse de l'ouest à une structure tannique et une profondeur dignes de l'est — complexité et harmonie réunies dans un même verre. Situé à basse altitude (environ 220-320 m), bien abrité, Cannubi mûrit régulièrement et donne des vins d'une grande constance. Le cru a fait l'objet d'une bataille mémorable sur ses limites historiques, que défendirent notamment Giuseppe Rinaldi, Maria Teresa Mascarello et Enzo Brezza. Ses vignerons forment une liste prestigieuse : Luciano Sandrone (avec l'Aleste, ex-Cannubi Boschis), Marchesi di Barolo, Damilano, E. Pira – Chiara Boschis, Francesco Rinaldi, Brezza ou Michele Chiarlo, chacun en livrant une lecture singulière. Les Cannubi se distinguent par leur bouquet de rose et d'épices, leur ampleur et des tanins à la fois présents et raffinés ; ils s'ouvrent après quelques années et vieillissent superbement sur vingt ans et plus. Emblème du Barolo et de son histoire, Cannubi reste un point de repère absolu et l'un des « grands crus » incontestés d'Italie. Sa position centrale, sur une échine basse et bien ventilée, lui assure des maturités régulières millésime après millésime, ce qui contribue à sa réputation de constance. Le mariage des deux formations géologiques sur une même colline est rarissime et fait de Cannubi un cas d'école : on y trouve à la fois la grâce aromatique et la trame tannique, sans qu'aucune ne domine l'autre. À table, ces Barolo équilibrés conviennent aussi bien aux grands braisés et au gibier qu'aux plats truffés ou aux fromages affinés, leur polyvalence reflétant leur harmonie intrinsèque. Ils s'ouvrent après quelques années mais méritent une décennie de patience, et les meilleurs tiennent superbement au-delà de vingt ou trente ans.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "cannubi",
+        "grand-cru",
+        "historique"
+      ],
+      "source": "justerinis|wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-sarmassa",
+      "nom": "Sarmassa",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~240-320 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru réputé du village de Barolo : Barolo structurés et parfumés, classiques et de garde.",
+      "notes_objectives": "Au village de Barolo, juste au nord-ouest de Cannubi et bordant Cerequio, Sarmassa est un cru réputé, exposé au sud sur des marnes calcaires tortoniennes (Sant'Agata Fossili), entre environ 240 et 320 m. Le terroir donne des Barolo qui conjuguent le parfum et la finesse propres au village avec une structure et une concentration un peu plus affirmées, héritées de sa proximité avec Cerequio. Les vins se distinguent par des aromatiques perfumées — rose, fruits rouges, épices — et une bouche ample mais raciée, dotée de tanins de qualité et d'une belle aptitude à la garde. Le cru est interprété par de grands noms : Marchesi di Barolo (qui en détient une parcelle historique en monopole, la Vigna Cannubi... pardon, la Sarmassa), Roberto Voerzio, Giacomo Brezza et Bergadano en signent des versions de référence, dans des styles allant du classique au plus concentré. Les vins, structurés et parfumés, demandent quelques années pour s'ouvrir et tiennent bien la garde sur quinze à vingt ans. Souvent un peu dans l'ombre de son voisin Cannubi, Sarmassa n'en est pas moins l'un des beaux crus du village de Barolo, prisé pour cette alliance de parfum et de structure qui en fait une valeur sûre de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "tortonien"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-bricco-delle-viole",
+      "nom": "Bricco delle Viole",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~400-480 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Parmi les vignes les plus hautes du Barolo (Vergne) : Barolo d'un parfum floral éclatant, frais et élégants, de longue garde.",
+      "notes_objectives": "Au village de Barolo, sur les hauteurs du hameau de Vergne, Bricco delle Viole compte parmi les vignobles les plus élevés de toute l'appellation, vers 400-480 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Cette altitude exceptionnelle apporte fraîcheur, amplitude thermique et maturité tardive, gages de Barolo d'un parfum floral éclatant — d'où son nom évoquant les violettes —, frais, élégants et taillés pour la longue garde. Le cru doit sa célébrité à G.D. Vajra, dont le Bricco delle Viole est devenu l'emblème du style maison : un Nebbiolo lumineux, parfumé et d'une grande pureté, qui figure parmi les plus belles expressions du Barolo de finesse et d'altitude. Les vins se reconnaissent à leur bouquet de fleurs et de fruits rouges, leur fraîcheur vibrante et leurs tanins fins ; ils séduisent assez jeunes par leur parfum tout en vieillissant superbement sur quinze à vingt ans. À l'heure du réchauffement climatique, ces sites d'altitude, autrefois jugés trop frais, sont devenus particulièrement précieux. Bricco delle Viole illustre la voie d'un Barolo plus aérien et parfumé, et constitue l'un des terroirs les plus séduisants et les plus reconnaissables du village de Barolo.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "altitude",
+        "tortonien"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-coste-di-rose",
+      "nom": "Coste di Rose",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Barolo)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~280-360 m",
+      "sols": "marnes tortoniennes (Sant'Agata Fossili) avec veines sableuses",
+      "caracteristiques_rapides": "Cru sableux du village de Barolo : Barolo fins, parfumés et au tanin délicat.",
+      "notes_objectives": "Au village de Barolo, Coste di Rose est un cru réputé pour ses sols particulièrement sableux, exposé au sud entre environ 280 et 360 m, sur des marnes tortoniennes (Sant'Agata Fossili) à forte composante de sable. Ce terroir donne des Barolo tout en finesse : parfumés, au fruit délicat et aux tanins particulièrement fins et soyeux, dans un registre plus aérien que structuré. Les vins se reconnaissent à leur bouquet floral — d'où le nom évoquant les roses — et à leur élégance, qui les rend séduisants assez jeunes tout en leur assurant une bonne tenue sur une dizaine d'années. Le cru est notamment interprété par G.D. Vajra, qui en tire un Barolo parfumé et raffiné. Cru qui illustre le rôle du sable dans la finesse des Barolo du village, Coste di Rose offre une expression délicate et parfumée du Nebbiolo, d'accès relativement précoce.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "tortonien"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-monprivato",
+      "nom": "Monprivato",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-300 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru d'exception (monopole G. Mascarello) : Barolo d'une pureté, d'une finesse et d'une longévité remarquables.",
+      "notes_objectives": "À Castiglione Falletto, Monprivato est l'un des crus les plus aristocratiques du Barolo, exploité en quasi-monopole par la famille Mascarello (Giuseppe Mascarello) depuis que Maurizio Mascarello en acquit la vigne et la maison en 1904. Le coteau, exposé au sud-ouest entre environ 250 et 300 m, repose sur les grès de Diano et les bancs d'argile du Serravallien qui font le caractère de Castiglione, commune de transition entre la finesse de l'ouest et la puissance de l'est. Il en résulte un Barolo d'une pureté, d'une précision aromatique et d'une longévité exceptionnelles, plus tourné vers la grâce et la finesse que vers la seule puissance — une signature reconnaissable entre toutes. La famille y a préservé le rare sous-cépage Michét, plus concentré et capricieux, dont elle tira dès 1970 l'un des grands Barolo de l'après-guerre, puis, à partir de 1993, la super-riserva Cà d'Morissio, issue d'une parcelle replantée en Michét : une bouteille rangée aux côtés du Monfortino de Conterno et des Riserva étiquette rouge de Giacosa parmi les Barolo les plus mythiques et les plus rares. Les vins de Monprivato, austères et serrés dans leur jeunesse, déploient avec l'âge un parfum complexe, une texture soyeuse et une persistance remarquable, sur deux à trois décennies. Cru d'une régularité et d'une noblesse rares, étroitement lié au nom des Mascarello, Monprivato incarne l'idéal du grand Barolo de cru fondé sur la finesse et la patience. La régularité du cru sous la main des Mascarello en a fait un point de repère stylistique : là où d'autres grands Barolo impressionnent par la puissance, Monprivato séduit par la dentelle, la précision et la persistance. Le microclimat de Castiglione, ni trop chaud ni trop frais, et le sol de grès de Diano expliquent cette signature de finesse. À table, ses Barolo raffinés s'accordent avec les viandes braisées délicates, les volailles nobles, les pâtes truffées et les fromages affinés. Ils demandent de la patience — une bonne décennie au minimum — et atteignent leur apogée après quinze à vingt-cinq ans, certaines grandes bouteilles vieillissant bien au-delà. Quasi-monopole d'une seule famille fidèle à la tradition, Monprivato est un cas rare en Barolo : un cru et un nom de domaine devenus indissociables, à l'image de quelques grands monopoles bourguignons, et l'un des terroirs les plus aristocratiques de toute l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione",
+        "grand-cru",
+        "monopole"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-villero",
+      "nom": "Villero",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-320 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Grand cru de Castiglione : Barolo conjuguant structure et finesse, profonds et de garde.",
+      "notes_objectives": "À Castiglione Falletto, Villero est l'un des grands crus de la commune, un coteau exposé au sud et au sud-ouest entre environ 250 et 320 m, sur les grès de Diano et les argiles du Serravallien. Situé sur la commune-charnière du Barolo, il offre une synthèse remarquable des deux grands styles de l'appellation : la structure et la profondeur de l'est, alliées à une finesse aromatique et à une élégance qui rappellent l'ouest. Il en résulte des Barolo complets, profonds et racés, dotés d'une trame tannique noble et d'une grande aptitude à la garde, qui comptent parmi les plus équilibrés de Castiglione. Le cru a donné quelques bouteilles légendaires : Bruno Giacosa y signa de mémorables Villero, et Giuseppe Mascarello en tire l'un de ses plus beaux Barolo aux côtés de Monprivato ; Cordero di Montezemolo (avec l'Enrico VI), Brovia et Oddero en proposent également des versions de référence. Les vins se reconnaissent à leur bouquet de fruits rouges, de rose et d'épices, soutenu par une bouche dense et fraîche, et demandent une dizaine d'années pour révéler toute leur complexité avant de tenir vingt ans et plus. Moins médiatisé que Cannubi ou Monprivato, Villero n'en est pas moins l'un des terroirs les plus sûrs et les plus profonds du Barolo, prisé des amateurs en quête d'un grand cru alliant puissance et raffinement. Sa position sur la commune-charnière en fait un terroir de synthèse, capable de produire des Barolo qui réunissent le meilleur des deux mondes : la chair et la profondeur de l'est, la finesse et le parfum de l'ouest. C'est cette dualité qui explique la régularité du cru au plus haut niveau et les bouteilles légendaires qui en sont issues. À table, ses Barolo complets accompagnent les grands braisés, le gibier, les risottos truffés et les fromages de longue affinage. Ils demandent une dizaine d'années pour s'ouvrir et tiennent admirablement vingt ans et plus, développant une complexité tertiaire remarquable. Souvent cité par les connaisseurs comme l'un des crus les plus sous-estimés au regard de sa qualité réelle, Villero offre un superbe rapport prestige-finesse, et reste l'un des terroirs les plus profonds et les plus équilibrés de Castiglione Falletto et de tout le Barolo.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione",
+        "grand-cru"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-rocche-di-castiglione",
+      "nom": "Rocche di Castiglione",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-320 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru de la crête de Castiglione : Barolo d'une élégance et d'un parfum remarquables, finesse avant puissance.",
+      "notes_objectives": "À Castiglione Falletto, Rocche di Castiglione (autrefois Rocche di Castiglione Falletto) est l'un des crus les plus élégants du Barolo, perché sur la crête escarpée qui traverse la commune, exposé au sud-est entre environ 250 et 320 m, sur les grès de Diano et les argiles du Serravallien. Ce site, l'un des premiers vinifiés en cru dès 1961 par Vietti, est réputé pour produire des Barolo qui privilégient la finesse et le parfum à la puissance : un bouquet éclatant de rose, de cerise et d'herbes balsamiques, une bouche tendue, minérale et raffinée, aux tanins fins et nobles. C'est, comme on le dit volontiers, un cru qui « prise l'élégance avant tout ». Ses interprètes forment une élite : Vietti en signe une version emblématique, aux côtés de Brovia, Oddero et Roagna, chacun mettant en valeur cette signature de pureté aérienne. Les vins, plus précoces d'accès que les Barolo très structurés de Serralunga, n'en possèdent pas moins une belle capacité de garde et gagnent en complexité sur quinze à vingt-cinq ans, leur finesse se muant en profondeur. Souvent cité parmi les meilleurs crus de la commune-charnière de Castiglione, Rocche di Castiglione séduit par cette alliance d'élégance et de tension qui en fait un terroir de prédilection pour les amateurs de Barolo de finesse, et l'un des plus beaux ambassadeurs du style raffiné de l'appellation. La crête escarpée sur laquelle il s'étire, bien drainée et ventilée, favorise des maturités complètes tout en préservant l'acidité, d'où cette tension qui structure les vins. Le cru illustre la vocation de Castiglione à produire des Barolo d'équilibre, où la finesse l'emporte sans sacrifier la profondeur. À table, ses Barolo élégants et parfumés s'accordent aux viandes braisées, aux volailles nobles, aux pâtes truffées et aux fromages affinés. Ils s'ouvrent un peu plus tôt que les Barolo très structurés de Serralunga, mais récompensent la patience : leur finesse aromatique se mue en complexité sur quinze à vingt-cinq ans. Berceau, en 1961, de l'un des tout premiers Barolo de cru de l'histoire, Rocche di Castiglione occupe une place particulière dans la mémoire de l'appellation, et reste l'un des terroirs les plus admirés pour son alliance d'élégance et de race.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione",
+        "grand-cru"
+      ],
+      "source": "wineenthusiast|vinfolio"
+    },
+    {
+      "id": "it-piemonte-terr-bricco-boschis",
+      "nom": "Bricco Boschis",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-320 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Coteau quasi-monopole (Cavallotto) : Barolo droits et purs, de longue garde.",
+      "notes_objectives": "À Castiglione Falletto, Bricco Boschis est un coteau réputé exploité en quasi-monopole par la famille Cavallotto, exposé au sud entre environ 250 et 320 m, sur les grès de Diano et les argiles du Serravallien. Situé sur la commune-charnière du Barolo, il donne des vins qui marient la structure de l'est à une certaine finesse, dans un style résolument classique. Cavallotto y pratique de longues macérations et des élevages patients en grands foudres, mettant le vin sur le marché après une garde prolongée : il en tire le Barolo Bricco Boschis et surtout la superbe Riserva Vigna San Giuseppe, issue du cœur du cru et produite uniquement les grandes années, l'un des Barolo traditionnels les plus gracieux et les plus réguliers de la commune. Les vins se reconnaissent à leur pureté, leur droiture et leur profondeur minérale, soutenues par des tanins fermes mais nobles ; austères dans leur jeunesse, ils demandent une dizaine d'années et tiennent admirablement vingt ans et plus. Cultivé en bio et d'un grand sérieux, Bricco Boschis offre une expression classique et fidèle du terroir de Castiglione Falletto, et reste l'un des crus les plus authentiques et les plus sûrs de l'appellation, indissociable du nom de Cavallotto.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-bricco-rocche",
+      "nom": "Bricco Rocche",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-350 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Petit cru au sommet de Castiglione (monopole Ceretto) : Barolo racés et parfumés.",
+      "notes_objectives": "À Castiglione Falletto, Bricco Rocche est un petit cru perché au sommet de la commune, exploité en monopole par la maison Ceretto, exposé au sud entre environ 300 et 350 m, sur les grès de Diano du Serravallien. Sa position élevée et son sol confèrent à ce Barolo une grande finesse aromatique et une belle fraîcheur, dans un style racé et parfumé qui privilégie l'élégance. Ceretto en a fait l'un de ses fleurons, vinifié avec un soin extrême et, depuis la conversion du domaine, dans une viticulture biodynamique qui a affiné encore le profil du vin vers davantage de salinité et de transparence du terroir. Les vins de Bricco Rocche se reconnaissent à leur bouquet de rose, de cerise et d'épices, leurs tanins fins et leur persistance minérale ; ils demandent quelques années pour s'ouvrir et tiennent bien la garde sur quinze à vingt ans. Petit par la taille mais grand par la réputation, ce cru emblématique de Castiglione Falletto illustre la capacité de la commune-charnière à produire des Barolo alliant finesse et structure, et compte parmi les plus belles expressions du savoir-faire de Ceretto. Sa taille modeste et sa position de monopole en font une bouteille recherchée, dont la production limitée renforce le statut. Servis après quelques années ou attendus une quinzaine d'années, ces Barolo fins et minéraux illustrent la vocation de Castiglione à conjuguer élégance et structure, et comptent parmi les plus belles réussites de Ceretto.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione",
+        "monopole"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-fiasco",
+      "nom": "Fiasco",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-320 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru de Castiglione (Bric del Fiasc) : Barolo précis et équilibrés, entre parfum et structure.",
+      "notes_objectives": "À Castiglione Falletto, Fiasco (souvent désigné par le lieu-dit Bric del Fiasc) est un cru réputé de la commune, exposé au sud et au sud-ouest entre environ 250 et 320 m, sur les grès de Diano et les argiles du Serravallien. Situé sur la commune-charnière du Barolo, il donne des Barolo qui marient la structure et la profondeur de l'est à une finesse aromatique propre à Castiglione, dans un registre précis et équilibré. Le cru doit beaucoup à Paolo Scavino, dont le Barolo Bric del Fiasc est la cuvée historique et emblématique de la maison : un Nebbiolo charnu, parfumé et soigné, au boisé bien intégré, représentatif d'une modernité maîtrisée. Les vins de Fiasco se reconnaissent à leur bouquet de fruits rouges, de rose et d'épices, leurs tanins polis et leur belle netteté ; ils séduisent assez jeunes tout en conservant une bonne capacité de garde sur une quinzaine d'années. Cru représentatif de la diversité de Castiglione Falletto, Fiasco offre une expression équilibrée et raffinée du Barolo, entre parfum et structure, et reste une valeur sûre de l'appellation, indissociable du nom de Scavino. Servis assez jeunes pour leur fruit ou attendus une quinzaine d'années, les Barolo de Fiasco séduisent par leur netteté et leur équilibre entre parfum et structure. Cru représentatif du savoir-faire de Scavino et de la diversité de Castiglione Falletto, il offre une lecture moderne et raffinée du Nebbiolo de la commune-charnière.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-mariondino",
+      "nom": "Mariondino",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Castiglione Falletto)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~280-340 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru de Castiglione : Barolo classiques et accessibles, de bon caractère.",
+      "notes_objectives": "À Castiglione Falletto, Mariondino (parfois San Ponzio-Mariondino) est un cru de la commune-charnière du Barolo, exposé au sud et au sud-ouest entre environ 280 et 340 m, sur les grès de Diano et les argiles du Serravallien. Le terroir donne des Barolo classiques et équilibrés, qui marient une certaine structure à un parfum et une finesse propres à Castiglione, dans un registre accessible et de bon caractère. Les vins se reconnaissent à leur bouquet de fruits rouges, de rose et d'épices, leurs tanins fermes mais nobles et leur belle netteté ; ils demandent quelques années pour s'ouvrir et tiennent bien la garde sur une dizaine à une quinzaine d'années. Le cru est interprété par plusieurs vignerons de la commune, notamment Parusso (qui en signe un Barolo Mariondino).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "castiglione"
+      ],
+      "source": "veronelli"
+    },
+    {
+      "id": "it-piemonte-terr-bussia",
+      "nom": "Bussia",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Monforte d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Vaste et grand cru de Monforte (sous-zones Romirasco, Cicala, Colonnello) : Barolo puissants, profonds et de très longue garde.",
+      "notes_objectives": "À Monforte d'Alba, Bussia est l'un des plus vastes et des plus grands crus du Barolo, un ensemble de coteaux qui s'étagent entre environ 250 et 450 m sur les grès de Diano et les bancs d'argile du Serravallien. Sa taille et sa diversité abritent plusieurs sous-zones historiques de premier ordre — Romirasco, Cicala, Colonnello — que les meilleurs vignerons vinifient séparément. Le terroir donne des Barolo dans le grand style de Monforte : puissants, profonds et structurés, dotés d'une trame tannique imposante et d'une aptitude à la garde parmi les plus longues de l'appellation, avec une évolution lente et majestueuse. C'est ici que Prunotto signa, en 1961, l'un des tout premiers Barolo de cru de l'histoire. La liste de ses interprètes est éclatante : Poderi Aldo Conterno y produit la légendaire Granbussia Riserva ainsi que ses crus Cicala, Colonnello et Romirasco ; Giacomo Fenocchio, Parusso et Prunotto en tirent également de belles versions, chacun révélant une facette du cru. Les vins de Bussia se reconnaissent à leur profondeur de fruit noir, leurs notes de goudron et de réglisse et leur structure architecturale ; austères et fermés jeunes, ils demandent dix à quinze ans et tiennent admirablement au-delà de vingt-cinq ans. Vaste, varié et profond, Bussia est l'un des terroirs phares de Monforte et abrite quelques-uns des Barolo les plus monumentaux de toute la Langhe. Sa vaste étendue et sa diversité de sols et d'expositions expliquent la variété des styles qu'on y rencontre, des versions les plus monumentales aux plus parfumées, selon la sous-zone et la main du vigneron. Les meilleurs secteurs — Romirasco, Cicala, Colonnello — comptent parmi les plus grands de Monforte. À table, ces Barolo puissants et profonds appellent des mets de caractère : viandes braisées longuement, gibier, daubes, fromages affinés et truffe. Ils exigent de la patience — souvent quinze ans — et déploient ensuite, sur deux à trois décennies, une complexité majestueuse de fruit confit, de cuir, de goudron et d'épices. Cru historique s'il en est, puisqu'il fut, avec Rocche di Castiglione, l'un des premiers embouteillés en cru dès 1961, Bussia demeure l'un des grands noms de Monforte et abrite quelques-uns des Barolo les plus profonds et les plus longévifs de toute la Langhe.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "monforte",
+        "grand-cru",
+        "bussia"
+      ],
+      "source": "vinfolio|wineenthusiast"
+    },
+    {
+      "id": "it-piemonte-terr-ginestra",
+      "nom": "Ginestra",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Monforte d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-400 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Grand cru de Monforte : Barolo structurés, profonds et complexes, à l'évolution lente.",
+      "notes_objectives": "À Monforte d'Alba, Ginestra est l'un des plus grands crus de la commune, un coteau exposé au sud et au sud-ouest entre environ 300 et 400 m, sur les argiles et les grès de Diano du Serravallien, où l'argile domine davantage qu'à Serralunga. Ce terroir donne des Barolo dans le style le plus monumental de Monforte : structurés, profonds et complexes, à la trame tannique puissante et à l'évolution lente, taillés pour la très longue garde. Le cru est célèbre pour ses sous-secteurs de premier ordre, dont Casa Maté et le Sorì Ginestra, et pour la qualité constante de ses Nebbiolo. Ses interprètes comptent parmi les meilleurs de la commune : Elio Grasso (Ginestra Casa Maté), Domenico Clerico (Ciabot Mentin et Pajana, sur Ginestra et Mosconi) et Conterno Fantino (Sorì Ginestra) en signent des versions de référence, dans des styles allant du classicisme équilibré à la modernité concentrée. Les vins de Ginestra se distinguent par leur profondeur de fruit noir, leurs notes balsamiques et épicées et leur ampleur ; serrés et puissants dans leur jeunesse, ils demandent une bonne décennie pour fondre leur matière et révèlent ensuite, sur vingt ans et plus, une complexité remarquable. Avec Bussia, Ginestra est l'un des deux grands terroirs qui font la réputation de Monforte pour ses Barolo puissants et de garde, et l'un des crus les plus recherchés de l'est de l'appellation. L'argile dominante du sol confère aux vins une densité et une assise tanniques particulières, qui demandent du temps pour se fondre mais garantissent une longévité remarquable. C'est un terroir qui exprime le Barolo dans sa dimension la plus architecturale, sans renoncer à la complexité aromatique. À table, ses Barolo profonds et structurés s'accordent aux viandes braisées, au gibier à poil, aux daubes et aux fromages de longue affinage, idéalement avec une touche de truffe. Ils exigent une bonne décennie de patience et atteignent leur apogée après quinze à vingt-cinq ans, certaines bouteilles vieillissant bien au-delà. Interprété par des vignerons aux styles très différents — du classicisme équilibré d'Elio Grasso à la modernité concentrée de Clerico —, Ginestra montre toute l'étendue de son potentiel, et confirme, avec Bussia, son rang parmi les deux grands terroirs qui font la réputation de Monforte.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "monforte",
+        "grand-cru"
+      ],
+      "source": "primalwine"
+    },
+    {
+      "id": "it-piemonte-terr-mosconi",
+      "nom": "Mosconi",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Monforte d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-400 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru réputé de Monforte : Barolo riches et puissants, de belle garde.",
+      "notes_objectives": "À Monforte d'Alba, Mosconi est un cru réputé de la commune, voisin de Ginestra, exposé au sud entre environ 300 et 400 m, sur les argiles et grès de Diano du Serravallien. Le terroir donne des Barolo dans le style puissant et profond de Monforte : riches, structurés et complexes, à la trame tannique solide et à l'évolution lente, taillés pour la longue garde. Le cru a gagné en réputation grâce à plusieurs vignerons de premier plan : Domenico Clerico (avec une partie de ses cuvées de Ginestra-Mosconi), Conterno Fantino et E. Pira – Chiara Boschis en signent des versions de référence, dans des styles allant de la modernité concentrée au classicisme soigné. Les vins de Mosconi se reconnaissent à leur profondeur de fruit noir, leurs notes balsamiques et épicées et leur ampleur ; serrés et puissants dans leur jeunesse, ils demandent une dizaine d'années pour fondre leur matière et tiennent admirablement vingt ans et plus. Aux côtés de Ginestra et de Bussia, Mosconi confirme la vocation de Monforte pour les Barolo puissants et de garde, et constitue l'un des beaux terroirs de l'est de l'appellation, prisé des amateurs de Nebbiolo structuré et profond.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "monforte"
+      ],
+      "source": "veronelli"
+    },
+    {
+      "id": "it-piemonte-terr-gavarini",
+      "nom": "Gavarini",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Monforte d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-400 m",
+      "sols": "grès de Diano et bancs d'argile (Serravallien)",
+      "caracteristiques_rapides": "Cru de Monforte (Elio Grasso) : Barolo équilibrés, fins et profonds.",
+      "notes_objectives": "À Monforte d'Alba, Gavarini est un cru réputé de la commune, étroitement associé au domaine Elio Grasso, exposé au sud entre environ 300 et 400 m, sur les argiles et grès de Diano du Serravallien. Le terroir donne des Barolo dans le style de Monforte, structurés et profonds, mais souvent dotés d'une finesse et d'un équilibre particuliers qui en font des vins très harmonieux. Elio Grasso y signe son Barolo Gavarini Chiniera, l'une des cuvées emblématiques du domaine, dans un registre qui incarne le juste milieu entre tradition et modernité : tanins mûrs mais fins, grande pureté de fruit, fraîcheur et profondeur sans excès de bois ni de concentration. Les vins de Gavarini se reconnaissent à leur bouquet de fruits rouges et noirs, de rose et d'épices, et à leur trame élégante ; ils s'ouvrent après quelques années et vieillissent magnifiquement sur quinze à vingt-cinq ans. Cru qui illustre le visage le plus équilibré de Monforte, Gavarini offre une expression raffinée du Barolo de la commune, à la fois structurée et fine, et reste un terroir de référence, indissociable du savoir-faire d'Elio Grasso. Servis après quelques années ou attendus quinze à vingt-cinq ans, ces Barolo d'équilibre comptent parmi les plus harmonieux de Monforte. Indissociable du domaine Elio Grasso, Gavarini illustre le visage le plus fin et le plus équilibré de la commune, à la croisée de la tradition et de la modernité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "monforte"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-vigna-rionda",
+      "nom": "Vigna Rionda",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~320-360 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "L'un des plus grands crus de Serralunga : Barolo profonds, puissants et d'une longévité exceptionnelle.",
+      "notes_objectives": "À Serralunga d'Alba, Vigna Rionda (ou Vignarionda) est l'un des crus les plus prestigieux de tout le Barolo, un coteau exposé au sud-ouest aux alentours de 340 m, sur les marnes et grès serravalliens de la formation de Lequio, riches en calcaire et en fer qui donnent au sol sa teinte gris-rouge. Bien abrité et idéalement exposé, il produit certains des Barolo les plus profonds, les plus puissants et les plus longévifs de l'appellation — au point que de nombreux amateurs le comparent, pour son rang, à un grand cru bourguignon, voire à Romanée-Conti. Sa légende doit beaucoup à Bruno Giacosa, qui y signa jusqu'en 1993 des Barolo Collina Rionda d'anthologie, comptés parmi les plus grands vins italiens jamais produits, et au vieillissant Bruno Massolino. Après le démantèlement du domaine Canale en 2011, des parcelles de vieilles vignes sont passées à Giovanni Rosso (cuvée Ester Canale Rosso) et à Guido Porro, tandis que Massolino et Oddero en perpétuent la grande tradition, notamment au travers de Riserva longuement élevées. Les vins de Vigna Rionda se reconnaissent à leur puissance noble, leur profondeur de fruit sombre, leurs notes de fer, de goudron et de réglisse et leur colonne tannique majestueuse ; ils exigent de longues années de cave et atteignent leur sommet après deux ou trois décennies. Sommet absolu de Serralunga, Vigna Rionda est l'un des terroirs les plus mythiques et les plus convoités du Barolo. Le microclimat abrité du coteau et la richesse minérale du sol expliquent à la fois la puissance et la profondeur extraordinaires des vins, ainsi que leur capacité de garde quasi sans limite. C'est le terroir qui incarne le mieux la grandeur austère et majestueuse de Serralunga. À table, ces Barolo monumentaux réclament des mets puissants — viandes braisées longuement, gibier à poil, daubes, fromages très affinés —, idéalement après un long carafage les premières décennies. Ils ne se livrent qu'avec le temps : il faut souvent quinze à vingt ans pour qu'ils commencent à s'ouvrir, et les grandes bouteilles atteignent leur apogée après vingt-cinq ou trente ans, certaines traversant le demi-siècle. Indissociable des légendes de Giacosa et de Massolino, Vigna Rionda est, pour beaucoup d'amateurs, le sommet absolu de Serralunga et l'un des plus grands terroirs à Nebbiolo du monde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga",
+        "grand-cru"
+      ],
+      "source": "flatiron|primalwine"
+    },
+    {
+      "id": "it-piemonte-terr-lazzarito",
+      "nom": "Lazzarito",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-400 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Grand cru de Serralunga : Barolo structurés, riches et de longue garde.",
+      "notes_objectives": "À Serralunga d'Alba, Lazzarito est l'un des grands crus de la commune, un vaste coteau exposé au sud et au sud-ouest entre environ 300 et 400 m, sur les marnes et grès serravalliens de la formation de Lequio, riches en calcaire et en fer. Ce terroir, l'un des plus réputés de Serralunga, donne des Barolo dans le grand style du village : structurés, riches et puissants, dotés d'une trame tannique solide et d'une profondeur de fruit sombre, taillés pour la longue garde. Les vins allient cette puissance caractéristique à une certaine générosité et à des notes typiques de Serralunga — fer, goudron, réglisse, cerise noire, épices. Le cru est interprété par de grands noms : Vietti en signe une version racée et de cru, aux côtés de Fontanafredda (Vigna La Rosa et Lazzarito), Ettore Germano et Guido Porro, chacun avec sa lecture. Austères et serrés dans leur jeunesse, les Lazzarito demandent une dizaine d'années pour s'ouvrir et tiennent admirablement vingt ans et plus, gagnant en complexité et en velouté avec le temps. Aux côtés de Vigna Rionda, Francia et Falletto, Lazzarito compte parmi les terroirs qui font la grandeur de Serralunga, et offre l'une des plus belles expressions de la puissance et de la longévité du Barolo de cette commune ; c'est un cru de choix pour les amateurs de Nebbiolo structuré et de très longue garde. Sa belle exposition et son ampleur en font l'un des crus les plus généreux de Serralunga, capable d'allier la puissance de la commune à une certaine rondeur de fruit. Le sol calcaire et ferrugineux donne aux vins leur assise et leur minéralité caractéristiques. À table, ces Barolo structurés accompagnent les viandes braisées, le gibier, les daubes et les fromages affinés. Ils demandent une dizaine d'années pour commencer à s'ouvrir et atteignent leur apogée après quinze à vingt-cinq ans, développant des notes complexes de fruit confit, de cuir, de goudron et de réglisse. Interprété par de grands noms — Vietti, Fontanafredda, Ettore Germano, Guido Porro —, Lazzarito offre des lectures variées d'un même grand terroir, et confirme, aux côtés de Vigna Rionda, Francia et Falletto, son rang parmi les crus qui font la grandeur de Serralunga et la réputation du Barolo de très longue garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga",
+        "grand-cru"
+      ],
+      "source": "primalwine"
+    },
+    {
+      "id": "it-piemonte-terr-francia",
+      "nom": "Francia",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~350-400 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Monopole de Giacomo Conterno (Cascina Francia) : source du Monfortino, puissance et garde quasi illimitée.",
+      "notes_objectives": "À Serralunga d'Alba, à l'extrémité sud de la commune, Cascina Francia (officiellement Francia depuis le millésime 2010) est l'un des crus les plus mythiques du Barolo, exploité en monopole par Giacomo Conterno depuis son acquisition par Giovanni Conterno en 1974. Le coteau, exposé au sud-ouest aux alentours de 350-400 m, repose sur les marnes calcaires et grès serravalliens de la formation de Lequio, qui donnent au sol son assise et sa minéralité. C'est de ce seul vignoble que sont longtemps issus tous les vins de la maison : le Barolo « Francia », référence absolue contre laquelle se mesurent les autres, et surtout le Barolo Monfortino Riserva, sélectionné dans les meilleures parcelles uniquement les grands millésimes et élevé six à huit ans en grands foudres — pour beaucoup le plus grand vin de Nebbiolo qui soit. Le terroir donne des Barolo d'une puissance, d'une profondeur et d'une longévité quasi sans égales : austères et serrés dans leur jeunesse, ils déploient avec deux ou trois décennies de cave une complexité bouleversante de fruit sombre, de goudron, de cuir et d'épices, sur une colonne tannique majestueuse. Indissociable du nom de Conterno et du Monfortino, Francia est l'un des terroirs les plus célèbres et les plus convoités au monde, symbole même de la grandeur et de la garde du Barolo de Serralunga. Le fait qu'un seul domaine en détienne le monopole, et que ce domaine soit Giacomo Conterno, a forgé la légende du cru : Francia et le Monfortino sont devenus indissociables dans l'imaginaire des amateurs. Le sol de Lequio, l'exposition et l'altitude y donnent un Nebbiolo d'une assise et d'une minéralité exceptionnelles. À table, ces Barolo monumentaux réclament les mets les plus puissants — grandes pièces braisées, gibier, daubes, fromages très affinés — et un long carafage dans leur jeunesse. Ils exigent une patience considérable : le Barolo Francia demande dix à quinze ans, le Monfortino bien davantage, et les deux peuvent traverser les décennies sans faiblir, comptant parmi les vins les plus longévifs du monde. Symbole de la grandeur de Serralunga et du génie de la maison Conterno, Francia est l'un des terroirs les plus célèbres et les plus mythiques de tout le vignoble italien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga",
+        "monopole",
+        "icone"
+      ],
+      "source": "rarewineco|primalwine"
+    },
+    {
+      "id": "it-piemonte-terr-falletto",
+      "nom": "Falletto",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~280-350 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Monopole de Bruno Giacosa : Barolo d'une rare alliance de puissance et de finesse, étiquette rouge en Riserva.",
+      "notes_objectives": "À Serralunga d'Alba, Falletto est l'un des crus les plus prestigieux du Barolo, exploité en monopole par Bruno Giacosa depuis son acquisition en 1982. Le coteau, exposé au sud-ouest entre environ 280 et 350 m, repose sur les marnes et grès serravalliens de la formation de Lequio, dont il tire une assise et une minéralité caractéristiques de Serralunga. Ce terroir devint la source des plus grands Barolo de Giacosa, qui en signa jusqu'à trois cuvées distinctes, dont la légendaire Riserva Vigna Le Rocche à l'étiquette rouge, réservée aux millésimes exceptionnels et comptée parmi les plus grands vins rouges jamais produits. Le génie de Giacosa fut d'y obtenir une alliance rare de puissance et de finesse : des Barolo profonds et structurés, à la trame tannique noble, mais d'une définition aromatique et d'une élégance qui transcendent la rusticité parfois prêtée à Serralunga. Depuis la disparition de Bruno Giacosa en 2018, sa fille Bruna et l'œnologue Dante Scaglione perpétuent ce style au sommet. Les vins de Falletto se reconnaissent à leur bouquet complexe de fruits sombres, de rose, de goudron et d'épices, et à leur persistance ; serrés dans leur jeunesse, ils demandent dix à quinze ans et tiennent magnifiquement au-delà de vingt-cinq ans. Indissociable du nom de Giacosa, Falletto est l'un des terroirs les plus admirés du Barolo et un sommet de l'art du Nebbiolo de Serralunga. Le génie de Bruno Giacosa fut de révéler, sur ce terroir puissant de Serralunga, une finesse et une définition aromatique inattendues, prouvant que structure et élégance pouvaient coexister au plus haut niveau. Le monopole et la rareté des Riserva à l'étiquette rouge ont fait du cru un objet de culte. À table, ces Barolo profonds mais raffinés accompagnent les viandes braisées, le gibier, les pâtes truffées et les fromages affinés. Ils demandent dix à quinze ans pour s'ouvrir et atteignent leur apogée après vingt à trente ans, leur bouquet se chargeant de notes de truffe, de cuir et d'épices. Indissociable du nom de Giacosa et perpétué aujourd'hui par sa fille Bruna et Dante Scaglione, Falletto est l'un des terroirs les plus admirés de Serralunga, et la preuve éclatante que les plus grands Barolo de la commune peuvent unir la puissance à la grâce.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga",
+        "monopole",
+        "icone"
+      ],
+      "source": "rarewineco"
+    },
+    {
+      "id": "it-piemonte-terr-cerretta",
+      "nom": "Cerretta",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-380 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Cru de Serralunga : Barolo structurés et minéraux, de belle garde.",
+      "notes_objectives": "À Serralunga d'Alba, Cerretta est un cru réputé de la commune, situé au nord du village au-dessus de Prapò, exposé au sud et au sud-ouest entre environ 300 et 380 m, sur les marnes et grès serravalliens de la formation de Lequio, riches en calcaire et en argile. Le terroir donne des Barolo dans le style de Serralunga : structurés, profonds et minéraux, à la trame tannique solide et à la belle aptitude à la garde, avec une signature tendue et droite. Le cru est interprété par de grands noms : Giacomo Conterno (qui en acquit une parcelle en 2008), Ettore Germano et Giovanni Rosso en signent des versions de référence, dans des styles allant du classicisme intransigeant à une précision moderne. Les vins de Cerretta se reconnaissent à leur bouquet de fruits sombres, de rose, de goudron et d'épices, et à leur colonne tannique ; austères dans leur jeunesse, ils demandent une dizaine d'années pour s'ouvrir et tiennent admirablement vingt ans et plus. Aux côtés des grands crus voisins de Serralunga, Cerretta offre une expression structurée et minérale du Barolo de la commune, et constitue un terroir de premier plan, prisé des amateurs de Nebbiolo puissant et de longue garde.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga"
+      ],
+      "source": "winedecoded"
+    },
+    {
+      "id": "it-piemonte-terr-prapo",
+      "nom": "Prapò",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~320-400 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Cru de Serralunga : Barolo tendus et minéraux, classiques et de garde.",
+      "notes_objectives": "À Serralunga d'Alba, Prapò est un cru réputé de la commune, situé au nord du village sous Cerretta, exposé au sud et au sud-ouest entre environ 320 et 400 m, sur les marnes et grès serravalliens de la formation de Lequio. Le terroir donne des Barolo dans le grand style de Serralunga : tendus, minéraux et structurés, dotés d'une trame tannique solide et d'une belle profondeur, taillés pour la longue garde. Le cru doit beaucoup à Ettore Germano, dont le Barolo Prapò est l'une des cuvées de référence, ainsi qu'à Ceretto, qui y possède une parcelle. Les vins de Prapò se reconnaissent à leur bouquet de fruits sombres, de fleurs fanées, de goudron et d'épices, et à leur belle tension minérale ; austères et serrés dans leur jeunesse, ils demandent une dizaine d'années pour s'ouvrir et tiennent admirablement quinze à vingt-cinq ans. Cru représentatif du caractère droit et structuré de Serralunga, Prapò offre une expression classique et minérale du Barolo de la commune, et constitue une valeur sûre pour les amateurs de Nebbiolo de garde, à un niveau de prestige légèrement en retrait des plus grands crus voisins mais d'une grande régularité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga"
+      ],
+      "source": "ettoregermano"
+    },
+    {
+      "id": "it-piemonte-terr-ornato",
+      "nom": "Ornato",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-380 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Cru de Serralunga (Pio Cesare) : Barolo puissants et profonds.",
+      "notes_objectives": "À Serralunga d'Alba, Ornato est un cru réputé de la commune, étroitement associé à la maison Pio Cesare, exposé au sud entre environ 300 et 380 m, sur les marnes et grès serravalliens de la formation de Lequio, riches en calcaire. Le terroir donne des Barolo dans le grand style de Serralunga : puissants, profonds et structurés, dotés d'une trame tannique imposante et d'une belle aptitude à la garde. Pio Cesare y signe son Barolo Ornato, cuvée parcellaire ambitieuse qui contraste avec son Barolo classique d'assemblage et qui figure parmi les plus belles expressions modernes de la maison historique d'Alba. Les vins d'Ornato se reconnaissent à leur profondeur de fruit sombre, leurs notes de goudron, de réglisse et d'épices et leur colonne tannique ; serrés dans leur jeunesse, ils demandent une dizaine d'années pour s'ouvrir et tiennent admirablement vingt ans et plus. Cru représentatif de la puissance et de la longévité du Barolo de Serralunga, Ornato offre une expression structurée et profonde du Nebbiolo de la commune, et constitue un terroir de premier plan, indissociable du nom de Pio Cesare et de son ambition retrouvée. Servis après une dizaine d'années ou attendus vingt ans et plus, les Barolo d'Ornato déploient la profondeur et la puissance caractéristiques de Serralunga. Indissociable de Pio Cesare, ce cru illustre l'ambition retrouvée de la maison historique d'Alba et la grandeur du Nebbiolo de la commune.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-margheria",
+      "nom": "Margheria",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-380 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Cru de Serralunga (Massolino) : Barolo structurés et parfumés.",
+      "notes_objectives": "À Serralunga d'Alba, Margheria est un cru réputé de la commune, étroitement associé au domaine Massolino, exposé au sud et au sud-ouest entre environ 300 et 380 m, sur les marnes et grès serravalliens de la formation de Lequio. Le terroir donne des Barolo dans le style de Serralunga, structurés et puissants, mais souvent dotés d'un parfum et d'une élégance particuliers qui en font des vins très équilibrés. Massolino y signe son Barolo Margheria, l'une des cuvées de référence du domaine, aux côtés de ses autres crus de Serralunga. Les vins de Margheria se reconnaissent à leur bouquet de fruits rouges et sombres, de rose et d'épices, et à leur trame tannique solide mais raciée ; ils demandent quelques années pour s'ouvrir et tiennent bien la garde sur quinze à vingt-cinq ans. Cru représentatif du savoir-faire de Serralunga, Margheria offre une expression structurée mais parfumée du Barolo de la commune, et constitue une valeur sûre pour les amateurs de Nebbiolo puissant et de garde, à un niveau de prestige légèrement en retrait des tout premiers crus mais d'une grande qualité et d'une belle régularité, indissociable du nom de Massolino.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-arione",
+      "nom": "Arione",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Serralunga d'Alba)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~320-380 m",
+      "sols": "marnes et grès serravalliens (formation de Lequio), riches en calcaire et fer",
+      "caracteristiques_rapides": "Cru du sud de Serralunga (G. Conterno) : Barolo profonds et de longue garde, exposition sud.",
+      "notes_objectives": "À Serralunga d'Alba, à l'extrémité sud de la commune, Arione est un cru de premier plan, voisin de Cascina Francia, exposé plein sud entre environ 320 et 380 m, sur les marnes et grès serravalliens de la formation de Lequio. Sa belle exposition et son sol calcaire en font un terroir capable de Barolo profonds, structurés et de très longue garde, au caractère typiquement serralunghese. Le cru a gagné en notoriété depuis que Giacomo Conterno en a acquis une portion en 2015 : Roberto Conterno en signe désormais un Barolo Arione de cru, qui complète Francia et Cerretta et entre, les très grandes années, dans la sélection du Monfortino. D'autres vignerons de la commune en tirent également de belles versions. Les vins d'Arione se reconnaissent à leur profondeur de fruit sombre, leurs notes de goudron, de réglisse et d'épices et leur colonne tannique ; austères dans leur jeunesse, ils demandent une dizaine d'années pour s'ouvrir et tiennent admirablement vingt ans et plus. Cru d'exposition sud privilégiée à l'extrémité de Serralunga, Arione offre une expression profonde et structurée du Barolo de la commune, et a vu son prestige grimper récemment, indissociable désormais du nom de Conterno.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "serralunga"
+      ],
+      "source": "finewinegeek"
+    },
+    {
+      "id": "it-piemonte-terr-monvigliero",
+      "nom": "Monvigliero",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Verduno)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~240-300 m",
+      "sols": "marnes tortoniennes (Sant'Agata Fossili) avec veines sableuses",
+      "caracteristiques_rapides": "Le grand cru de Verduno : Barolo d'un parfum floral et épicé envoûtant, finesse et digestibilité ; très recherché.",
+      "notes_objectives": "À Verduno, à l'extrémité nord du Barolo, Monvigliero est le grand cru de la commune et l'un des terroirs les plus recherchés du moment. Le coteau, exposé plein sud entre environ 240 et 300 m, repose sur des marnes calcaires tortoniennes (Sant'Agata Fossili) parcourues de veines sableuses, qui donnent des vins d'une grande finesse. Verduno, longtemps sous-estimé, s'impose aujourd'hui comme l'un des secteurs les plus excitants de l'appellation, et Monvigliero en est l'incarnation : il produit des Barolo d'un parfum floral et épicé envoûtant, d'une couleur souvent claire et d'une texture soyeuse, qui privilégient l'élégance, la fraîcheur et la digestibilité plutôt que la seule puissance. La renommée du cru doit beaucoup à G.B. Burlotto, dont le Monvigliero — vinifié à l'ancienne, en grappes entières foulées au pied — est devenu l'un des Barolo les plus convoités et les plus discutés des amateurs, ainsi qu'à Fratelli Alessandria, Comm. G.B. Burlotto et Castello di Verduno, qui en signent également de superbes versions. Les vins se reconnaissent à leur bouquet de rose, de violette et d'épices, à leurs tanins fins et à une persistance aérienne ; ils séduisent assez jeunes par leur parfum tout en tenant bien la garde sur quinze à vingt ans. Emblème du renouveau du Barolo de finesse, Monvigliero est aujourd'hui l'un des crus les plus désirés de l'appellation et le porte-drapeau de Verduno. La nature sableuse du sol et l'exposition plein sud, conjuguées à la tradition locale de la vinification en grappes entières, donnent des Barolo d'une signature aromatique immédiatement reconnaissable, tout en rose, violette et épices. C'est le terroir emblématique du renouveau du Barolo de finesse. À table, ces Barolo parfumés et soyeux s'accordent admirablement aux viandes blanches, volailles nobles, agnolotti et fromages crémeux, autant qu'aux classiques braisés. Ils séduisent assez jeunes par leur bouquet exubérant, mais gagnent en complexité sur quinze à vingt ans, leur parfum se patinant de notes tertiaires. Porté au sommet par Burlotto et Fratelli Alessandria, devenu l'un des Barolo les plus convoités et les plus discutés du moment, Monvigliero illustre la montée en puissance de Verduno et incarne, mieux qu'aucun autre cru, la voie d'un Barolo aérien, parfumé et digeste.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "verduno",
+        "grand-cru"
+      ],
+      "source": "winescholarguild|primalwine"
+    },
+    {
+      "id": "it-piemonte-terr-ravera",
+      "nom": "Ravera",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barolo (Novello)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~380-480 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru d'altitude de Novello : Barolo fins, frais et complexes, en forte ascension.",
+      "notes_objectives": "À Novello, à l'ouest de l'appellation, Ravera est l'un des grands crus du Barolo en pleine ascension, un vaste coteau d'altitude qui s'étage entre environ 380 et 480 m sur des marnes calcaires tortoniennes. Cette élévation, parmi les plus élevées de l'appellation, apporte fraîcheur, amplitude thermique et maturité tardive, gages d'un Barolo à la fois fin, frais et complexe, à l'acidité vibrante et à la garde assurée. Le cru a vu sa réputation grandir spectaculairement ces deux dernières décennies, porté par des vignerons de premier plan : Elvio Cogno (avec le Ravera et le Bricco Pernice), Vietti, G.D. Vajra et Giuseppe Rinaldi (dont le Tre Tine intègre une part de Ravera) en signent des versions de référence, chacun mettant en valeur la finesse et la profondeur du site. Les vins de Ravera se reconnaissent à leur parfum floral et fruité, leur structure tannique fine mais présente et leur belle fraîcheur, qui leur permettent de s'épanouir sur quinze à vingt-cinq ans tout en restant relativement accessibles dans leur jeunesse. Cru d'altitude par excellence à l'heure du réchauffement climatique, Ravera illustre la montée en puissance de Novello et figure désormais parmi les terroirs les plus prometteurs et les plus convoités du Barolo, apprécié pour cette synthèse d'élégance, de fraîcheur et de potentiel de garde. L'altitude, en apportant fraîcheur et amplitude thermique, préserve l'acidité et le parfum tout en assurant des maturités complètes, ce qui fait de Ravera un cru particulièrement précieux à l'heure du réchauffement climatique. Son ampleur abrite plusieurs expositions et sous-secteurs de grande qualité. À table, ces Barolo fins et frais s'accordent aux viandes braisées, au gibier, aux pâtes truffées et aux fromages affinés. Ils s'ouvrent après quelques années mais méritent une décennie de patience, et tiennent admirablement quinze à vingt-cinq ans, leur fraîcheur garantissant une belle évolution. Révélé au plus haut niveau par Elvio Cogno, puis par Vietti, Vajra et Giuseppe Rinaldi, Ravera est l'un des crus dont la réputation a le plus progressé ces deux dernières décennies, et figure désormais parmi les terroirs les plus prometteurs et les plus recherchés de tout le Barolo, symbole de la montée en puissance de Novello.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barolo",
+        "novello",
+        "grand-cru",
+        "altitude"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-asili",
+      "nom": "Asili",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Référence absolue de Barbaresco : Barbaresco d'une finesse et d'une élégance exemplaires, complexes et de garde.",
+      "notes_objectives": "À Barbaresco, Asili est considéré comme la référence absolue de l'appellation, un cru d'environ quatorze hectares occupant la crête de la colline du même nom, au centre de la commune. Le cœur du vignoble forme une cuvette protégée exposée au sud-ouest, voisine de Pora mais plus éloignée de l'influence de la rivière, au microclimat chaud et abrité ; à l'est, le coteau se termine par un bricco bordant Rabajà. À une altitude modeste pour Barbaresco (environ 200-280 m), sur des marnes calcaires tortoniennes (Sant'Agata Fossili) mêlant limon, argile et silt riches en magnésium et en calcium, Asili donne des Barbaresco dont la signature est la finesse : un vin certes intense et à la personnalité imposante, mais qui mise sur l'élégance, le parfum et la complexité plutôt que sur la puissance brute. Souvent fermé dans sa jeunesse, il s'ouvre lentement avec une race et un raffinement remarquables. Bruno Giacosa en fit un Barbaresco que Robert Parker qualifia de « point de référence » pour toute l'appellation ; Ceretto (Bricco Asili), Roagna, Ca' del Baio, Produttori del Barbaresco et Gaja comptent aussi parmi ses interprètes. Les vins se reconnaissent à leur bouquet floral et fruité, leur finesse de texture et leur persistance ; ils demandent quelques années et tiennent quinze à vingt ans et plus. Sommet de la crête grand cru d'Asili-Rabajà-Martinenga, Asili est l'un des plus beaux terroirs de tout le Barbaresco et l'archétype de son élégance. La cuvette protégée et l'exposition sud-ouest créent un microclimat chaud mais tempéré, qui mûrit les raisins tout en préservant le parfum et la finesse caractéristiques du cru. Le sol fin, riche en magnésium et en calcium, est tenu pour responsable de cette élégance singulière. À table, ces Barbaresco raffinés s'accordent aux viandes blanches, aux volailles nobles, aux pâtes truffées et aux fromages crémeux, autant qu'aux braisés délicats. Souvent fermés dans leur jeunesse, ils demandent quelques années et s'épanouissent sur quinze à vingt ans, leur finesse aromatique gagnant en complexité. Rendu célèbre par le Barbaresco de Bruno Giacosa, érigé en point de référence de toute l'appellation, et interprété par Ceretto, Roagna, Ca' del Baio ou Gaja, Asili est unanimement considéré comme l'un des plus beaux terroirs du Barbaresco, l'archétype même de son élégance et le joyau de la crête grand cru.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "grand-cru",
+        "tortonien"
+      ],
+      "source": "wikipedia|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-rabaja",
+      "nom": "Rabajà",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-300 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru en amphithéâtre : Barbaresco structurés, riches et opulents, d'une grande harmonie.",
+      "notes_objectives": "À Barbaresco, Rabajà est l'un des plus grands crus de l'appellation, une étroite bande de vignes lovée dans l'un des plus beaux amphithéâtres naturels de la zone, sur la crête grand cru qui réunit aussi Asili et Martinenga. Exposé au sud et au sud-ouest entre environ 200 et 300 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili), le cru bénéficie de la proximité de la rivière Tanaro et d'une altitude modérée qui favorisent une belle maturité. S'il borde Asili, son sol et son microclimat en font un Barbaresco d'un style plus affirmé : plus structuré, plus riche et plus opulent que ses voisins, mais d'une harmonie et d'un équilibre qui font sa réputation. Les vins de Rabajà se reconnaissent à leur profondeur de fruit, leur ampleur en bouche et leur trame tannique généreuse, soutenues par un parfum complexe ; ce sont des Barbaresco de longue garde, qui demandent quelques années et tiennent quinze à vingt ans et plus. Le cru est interprété par de grands noms : Bruno Rocca en signe une version de référence, aux côtés de Giuseppe Cortese (le plus important propriétaire du cru), Cascina Luisin, Produttori del Barbaresco et Bruno Giacosa, dans des styles allant du plus classique au plus moderne. Aux côtés d'Asili et de Martinenga, Rabajà forme le véritable cœur grand cru de Barbaresco, et offre l'expression la plus structurée et la plus opulente du Nebbiolo de l'appellation. L'amphithéâtre dans lequel il s'inscrit, conjugué à un sol et un microclimat plus chauds, donne aux Barbaresco de Rabajà cette ampleur et cette opulence qui les distinguent de leurs voisins, sans sacrifier l'harmonie. C'est le cru qui exprime le Nebbiolo de Barbaresco dans sa dimension la plus structurée et la plus complète. À table, ces Barbaresco profonds accompagnent les viandes braisées, le gibier, les risottos truffés et les fromages affinés. Ils demandent quelques années pour s'ouvrir et tiennent admirablement quinze à vingt ans et plus, développant une complexité tertiaire remarquable. Interprété par des vignerons aux styles très divers — du classicisme austère de Giuseppe Cortese et Cascina Luisin à la richesse soignée de Bruno Rocca —, Rabajà offre autant de variations sur un terroir d'exception, et confirme, aux côtés d'Asili et de Martinenga, son rang de véritable grand cru au cœur de l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "grand-cru",
+        "tortonien"
+      ],
+      "source": "barolowineclub|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-martinenga",
+      "nom": "Martinenga",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Monopole des Marchesi di Grésy : Barbaresco d'une grande élégance et finesse aromatique.",
+      "notes_objectives": "À Barbaresco, Martinenga est l'un des plus beaux crus de l'appellation, un amphithéâtre parfaitement dessiné exposé au sud, niché sur la crête grand cru entre Asili et Rabajà, et exploité en monopole par les Marchesi di Grésy. À une altitude modérée (environ 200-280 m), sur des marnes calcaires tortoniennes (Sant'Agata Fossili), le site jouit d'un microclimat et d'une exposition idéaux qui en font l'un des terroirs les plus réguliers et les plus racés de Barbaresco. Sa signature est l'élégance : des Barbaresco d'une grande finesse aromatique, au bouquet floral et fruité, à la texture soyeuse et aux tanins fins, qui privilégient le raffinement et la transparence du terroir plutôt que la puissance. Le monopole donne un Martinenga d'assemblage, complété par deux crus issus de parcelles distinctes du même coteau, Camp Gros et Gaiun, plus structurés et profonds, qui montrent l'étendue du potentiel du site. Les vins, équilibrés et harmonieux, s'ouvrent après quelques années et tiennent bien la garde sur quinze ans et plus, gagnant en complexité avec le temps. Privilège rare que de posséder en monopole l'un des grands crus de l'appellation, Martinenga offre une expression aérienne et noble du Nebbiolo de Barbaresco, et compte, aux côtés d'Asili et de Rabajà, parmi les cinq plus grands terroirs de toute la zone — un véritable grand cru, en tout sauf le nom. Le privilège du monopole permet aux Marchesi di Grésy une maîtrise totale du terroir, et la régularité du cru au plus haut niveau en témoigne. L'amphithéâtre sud, parfaitement dessiné, conjugue maturité et fraîcheur, d'où cette signature de finesse et d'équilibre. À table, ces Barbaresco élégants s'accordent aux viandes blanches, volailles nobles, pâtes truffées et fromages crémeux, autant qu'aux braisés délicats. Ils s'ouvrent après quelques années et tiennent bien la garde sur quinze ans et plus, leur finesse aromatique gagnant en complexité. Avec le Martinenga d'assemblage et les crus Camp Gros et Gaiun, le domaine décline toute la palette d'un terroir d'exception. Rares sont les grands crus d'une appellation à appartenir à un seul domaine : Martinenga est de ceux-là, et compte, aux côtés d'Asili et de Rabajà, parmi les cinq plus grands terroirs du Barbaresco — un véritable grand cru, en tout sauf le nom.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "grand-cru",
+        "monopole"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-montestefano",
+      "nom": "Montestefano",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru le plus 'barolesque' de Barbaresco : Barbaresco austères, tanniques et de longue garde.",
+      "notes_objectives": "À Barbaresco, Montestefano est l'un des crus les plus réputés de la commune, souvent décrit comme le plus « barolesque » de l'appellation. Exposé au sud entre environ 200 et 280 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili) un peu moins argileuses que celles de ses voisins, il donne des Barbaresco austères, tanniques et structurés, plus proches du profil puissant et de longue garde du Barolo que de la finesse habituelle de Barbaresco. Les vins se reconnaissent à leur densité, leur profondeur et leur colonne tannique, soutenues par un parfum de fruits sombres, de goudron et d'épices ; ils demandent du temps pour s'assouplir et figurent parmi les Barbaresco les plus longévifs. Le cru est notamment interprété par la Produttori del Barbaresco, dont la Riserva Montestefano est l'une des plus structurées de sa gamme, ainsi que par d'autres vignerons de la commune. Serrés et imposants dans leur jeunesse, les Montestefano demandent une bonne décennie pour s'ouvrir et tiennent admirablement quinze à vingt ans et plus. Cru qui incarne le visage le plus puissant et le plus tannique de Barbaresco, Montestefano offre une expression structurée et de garde du Nebbiolo de l'appellation, et constitue un terroir de premier plan pour les amateurs de Barbaresco taillés pour le vieillissement.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "clubo|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-montefico",
+      "nom": "Montefico",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru argileux de Barbaresco : Barbaresco structurés et profonds, plus opaques.",
+      "notes_objectives": "À Barbaresco, Montefico est un cru réputé de la commune, voisin d'Ovello et de Montestefano, exposé à l'est et au sud-est entre environ 200 et 280 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili) plus riches en argile. Ce sol argilo-calcaire donne des Barbaresco structurés et profonds, plus opaques et puissants que la moyenne de l'appellation, dotés d'une trame tannique solide et d'une belle aptitude à la garde. Les vins se reconnaissent à leur densité, leur profondeur de fruit et leur structure, soutenues par un parfum de fruits sombres et d'épices ; ils demandent du temps pour s'assouplir et comptent parmi les Barbaresco les plus longévifs. Le cru est interprété par la Produttori del Barbaresco (dont la Riserva Montefico) et par plusieurs vignerons de la commune, comme La Ca' Nova. Serrés dans leur jeunesse, les Montefico demandent une dizaine d'années pour s'ouvrir et tiennent bien la garde sur quinze à vingt ans. Cru qui illustre le visage structuré et profond de Barbaresco, Montefico offre une expression de garde du Nebbiolo de l'appellation, et constitue un terroir de premier plan pour les amateurs de Barbaresco puissants, dans la lignée de son voisin Montestefano.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "clubo"
+    },
+    {
+      "id": "it-piemonte-terr-ovello",
+      "nom": "Ovello",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~220-320 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru au nord de Barbaresco : Barbaresco frais, structurés et de garde.",
+      "notes_objectives": "À Barbaresco, Ovello est l'un des plus grands crus de la commune par la taille, situé au nord, exposé au sud et au sud-est entre environ 220 et 320 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Sa position plus septentrionale et son altitude lui confèrent une fraîcheur particulière, qui donne des Barbaresco structurés, frais et dotés d'une belle tension, à mi-chemin entre la puissance et la finesse. Les vins se reconnaissent à leur bouquet de fruits rouges et d'épices, leur structure tannique et leur fraîcheur, qui leur assurent une bonne aptitude à la garde. Le cru est notamment interprété par la Produttori del Barbaresco (dont la Riserva Ovello) et par Albino Rocca (avec sa Vigna Loreto), ainsi que par d'autres vignerons de la commune. Les vins demandent quelques années pour s'ouvrir et tiennent bien la garde sur quinze ans et plus. Cru qui illustre le visage frais et structuré du nord de Barbaresco, Ovello offre une expression équilibrée du Nebbiolo de l'appellation, alliant tension et profondeur, et constitue un terroir de premier plan, apprécié pour sa fraîcheur et sa capacité de vieillissement. Servis après quelques années ou attendus une quinzaine d'années, les Barbaresco d'Ovello séduisent par leur fraîcheur et leur structure. Cru du nord de l'appellation interprété par la Produttori del Barbaresco et Albino Rocca, il offre une expression tendue et équilibrée du Nebbiolo, à mi-chemin entre puissance et finesse.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-pora",
+      "nom": "Pora",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru argileux voisin d'Asili : Barbaresco souples, opulents et parfumés.",
+      "notes_objectives": "À Barbaresco, Pora est un cru réputé de la commune, voisin d'Asili, exposé au sud et au sud-ouest entre environ 200 et 280 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili) riches en argile. Ce sol argilo-calcaire donne des Barbaresco souples, opulents et parfumés, plus charnus et accessibles que les crus les plus austères de l'appellation, tout en conservant équilibre et finesse. Les vins se reconnaissent à leur bouquet floral et fruité, leur rondeur en bouche et leurs tanins enrobés ; ils séduisent assez jeunes tout en gardant une bonne aptitude à la garde sur une dizaine à une quinzaine d'années. Le cru est notamment interprété par la Produttori del Barbaresco (dont la Riserva Pora) et par d'autres vignerons de la commune. Situé non loin de la rivière et bénéficiant d'un terroir généreux, Pora offre une expression séduisante et accessible du Nebbiolo de Barbaresco, alliant parfum et opulence, et constitue un terroir de premier plan, apprécié pour son charme immédiat et son bel équilibre, voisin direct du grand cru d'Asili. Servis assez jeunes pour leur fruit ou attendus une dizaine d'années, les Barbaresco de Pora séduisent par leur rondeur et leur parfum. Voisin direct du grand cru d'Asili et interprété notamment par la Produttori del Barbaresco, il offre une expression accessible et charmeuse du Nebbiolo de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "clubo|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-paje",
+      "nom": "Pajè",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru argileux de Barbaresco (Roagna) : Barbaresco fins et parfumés.",
+      "notes_objectives": "À Barbaresco, Pajè est un cru réputé de la commune, exposé au sud et au sud-ouest entre environ 200 et 280 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili) riches en argile. Ce sol argilo-calcaire donne des Barbaresco fins et parfumés, mais aussi dotés d'une belle structure et d'une profondeur qui leur assurent une bonne aptitude à la garde. Le cru doit beaucoup au domaine Roagna, traditionaliste extrême, qui y possède de très vieilles vignes et en tire des Barbaresco d'une profondeur rare — notamment le Crichët Pajé, cuvée de vieilles vignes parmi les Nebbiolo les plus profonds qui soient. Les vins de Pajè se reconnaissent à leur bouquet complexe de fleurs séchées, de fruits rouges et d'épices, à leur texture éthérée et à leur persistance ; austères et fermés dans leur jeunesse, ils demandent de la patience et tiennent admirablement quinze à vingt ans et plus. Cru indissociable du nom de Roagna et de son approche radicale, Pajè offre une expression profonde et singulière du Nebbiolo de Barbaresco, et constitue un terroir de premier plan pour les amateurs en quête du Barbaresco le plus authentique et le plus émouvant.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-rio-sordo",
+      "nom": "Rio Sordo",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Barbaresco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru de Barbaresco proche de la rivière : Barbaresco souples et accessibles.",
+      "notes_objectives": "À Barbaresco, Rio Sordo est un cru réputé de la commune, situé dans la partie sud près de la rivière, exposé au sud et au sud-ouest entre environ 200 et 280 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Sa position à plus basse altitude et la proximité du Tanaro lui confèrent un microclimat plus chaud, qui donne des Barbaresco souples, parfumés et d'un abord plus facile, au fruit généreux et aux tanins enrobés. Les vins se reconnaissent à leur bouquet floral et fruité et à leur rondeur en bouche ; ils séduisent assez jeunes tout en conservant une bonne aptitude à la garde sur une dizaine d'années. Le cru est notamment interprété par la Produttori del Barbaresco (dont la Riserva Rio Sordo) et par d'autres vignerons de la commune. Cru qui illustre le visage souple et accessible de Barbaresco, Rio Sordo offre une expression parfumée et charmeuse du Nebbiolo de l'appellation, et constitue un terroir de premier plan, apprécié pour son équilibre et son accessibilité, idéal pour découvrir le style séduisant des Barbaresco de la rive de la rivière. Servis assez jeunes ou attendus une dizaine d'années, les Barbaresco de Rio Sordo séduisent par leur souplesse et leur parfum. Cru de la rive proche de la rivière, interprété par la Produttori del Barbaresco, il offre une porte d'entrée idéale vers le style accessible et parfumé du Barbaresco.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "tortonien"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-santo-stefano-albesani",
+      "nom": "Santo Stefano (Albesani)",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Neive)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~220-300 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru de Neive (rendu célèbre par Giacosa) : Barbaresco racés, parfumés et de garde.",
+      "notes_objectives": "À Neive, l'un des trois villages historiques du Barbaresco, Santo Stefano est un cru d'exception situé au sein de la MGA d'Albesani, sur des marnes calcaires tortoniennes, à une altitude modérée d'environ 220-300 m et à belle exposition. Sa renommée mondiale doit énormément à Bruno Giacosa, qui le rendit célèbre en l'embouteillant en cru dès le millésime 1964 (à partir de raisins issus des vignes d'Italo Stupino, au Castello di Neive) et en signa pendant des décennies des Barbaresco d'anthologie, dont de mémorables Riserva à l'étiquette rouge — jusqu'à ce que la maison se recentre, à partir de 2012, sur ses propres vignobles. Le terroir donne des Barbaresco racés, parfumés et élégants, à mi-chemin entre la finesse de Barbaresco et un supplément de structure, dotés d'une belle aptitude à la garde. Les vins se reconnaissent à leur bouquet floral et épicé, leur définition aromatique et leur persistance ; ils demandent quelques années et tiennent quinze à vingt ans et plus. Aux côtés du Castello di Neive, plusieurs vignerons de la commune en perpétuent la réputation. Considéré, avec Asili, Rabajà, Martinenga et Pajoré, comme l'un des cinq plus grands terroirs du Barbaresco, Santo Stefano d'Albesani est le fleuron de Neive et l'un des crus les plus prestigieux de toute l'appellation, indissociable de la légende Giacosa. La douceur du coteau et le sol tortonien donnent des Barbaresco où la finesse de l'appellation se double d'un supplément de chair et de structure, signature qui fit la gloire des bouteilles de Giacosa. À table, ces vins racés s'accordent aux viandes braisées, volailles nobles, pâtes truffées et fromages affinés. Ils demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt ans, leur bouquet floral et épicé se patinant de notes tertiaires. Au-delà de la légende Giacosa, le cru est aujourd'hui défendu par le Castello di Neive et plusieurs vignerons de la commune, qui en perpétuent la réputation. Considéré, avec Asili, Rabajà, Martinenga et Pajoré, comme l'un des cinq plus grands terroirs du Barbaresco, Santo Stefano d'Albesani demeure le fleuron de Neive et l'un des crus les plus prestigieux de toute l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "neive",
+        "grand-cru"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-terr-gallina",
+      "nom": "Gallina",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Neive)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~220-300 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Cru réputé de Neive : Barbaresco riches et parfumés.",
+      "notes_objectives": "À Neive, l'un des trois villages historiques du Barbaresco, Gallina est un cru réputé, exposé au sud et au sud-ouest entre environ 220 et 300 m, sur des marnes calcaires tortoniennes (Sant'Agata Fossili). Le terroir donne des Barbaresco riches et parfumés, au fruit généreux et à la belle structure, dans un style un peu plus charnu et solaire que les crus du village de Barbaresco. Le cru doit beaucoup à La Spinetta, qui en signe l'un de ses Barbaresco de cru emblématiques (et y produit aussi une Barbera réputée), ainsi qu'à d'autres vignerons de Neive. Les vins de Gallina se reconnaissent à leur bouquet floral et fruité, leur ampleur en bouche et leurs tanins mûrs ; ils séduisent assez jeunes tout en conservant une bonne aptitude à la garde sur une dizaine à une quinzaine d'années. Cru représentatif du caractère généreux des Barbaresco de Neive, Gallina offre une expression riche et parfumée du Nebbiolo de l'appellation, et constitue un terroir de premier plan, apprécié pour sa générosité et son équilibre, et l'un des plus beaux ambassadeurs de la commune de Neive aux côtés de Santo Stefano. Servis assez jeunes pour leur fruit ou attendus une quinzaine d'années, les Barbaresco de Gallina séduisent par leur générosité et leur équilibre. Cru emblématique de Neive porté par La Spinetta, il offre une expression riche et parfumée du Nebbiolo, et compte parmi les plus beaux ambassadeurs de la commune aux côtés de Santo Stefano.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "neive"
+      ],
+      "source": "la-spinetta"
+    },
+    {
+      "id": "it-piemonte-terr-pajore",
+      "nom": "Pajoré",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco (Treiso)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~250-350 m",
+      "sols": "marnes calcaires tortoniennes (Sant'Agata Fossili), gris-bleu, fines",
+      "caracteristiques_rapides": "Grand cru de Treiso (premier cru historique, Moresco) : Barbaresco d'un caractère élégant et classique.",
+      "notes_objectives": "À Treiso, la plus haute et la plus fraîche des communes du Barbaresco, Pajoré est l'un des plus grands crus de l'appellation, un coteau bien exposé à une altitude d'environ 250-350 m, sur des marnes calcaires tortoniennes. Le site jouit d'une combinaison rare de sol, d'altitude et d'exposition qui en fait l'un des terroirs les plus élégants et les plus classiques de toute la zone. Sa réputation est ancienne et prestigieuse : c'est à Pajoré que Giovanni Moresco produisit, dès 1967, l'un des premiers grands Barbaresco de cru de l'histoire, des bouteilles aujourd'hui quasi introuvables et entrées dans la légende. Le terroir donne des Barbaresco d'un caractère à la fois fin et structuré, au bouquet éthéré, intense et épicé mêlant fruits et fleurs, et à la bouche pleine mais veloutée et raffinée. Les vins se reconnaissent à leur élégance et à leur équilibre, soutenus par des tanins fins et une fraîcheur propre à l'altitude de Treiso ; ils demandent quelques années pour s'épanouir et vieillissent bien sur quinze ans et plus. Sottimano et La Spinetta (avec son Valeirano voisin) comptent parmi les vignerons qui révèlent aujourd'hui le potentiel de la commune. Considéré, avec Asili, Rabajà, Martinenga et Santo Stefano, comme l'un des cinq plus grands terroirs du Barbaresco, Pajoré est le fleuron de Treiso et l'une des plus belles expressions du Nebbiolo d'altitude de l'appellation. L'altitude de Treiso, la plus fraîche des communes du Barbaresco, apporte tension et fraîcheur, gages d'élégance et de longévité, tandis que l'exposition et le sol tortonien assurent la maturité et le parfum. C'est un terroir qui exprime le Nebbiolo dans un registre particulièrement classique et fin. À table, ces Barbaresco élégants s'accordent aux viandes braisées, volailles nobles, pâtes truffées et fromages affinés. Ils demandent quelques années pour s'épanouir et tiennent bien la garde sur quinze ans et plus, gagnant en complexité avec le temps. Berceau, dès 1967, de l'un des premiers grands Barbaresco de cru (les bouteilles légendaires de Moresco), Pajoré est aujourd'hui révélé par Sottimano, La Spinetta et d'autres, qui confirment son potentiel. Considéré comme l'un des cinq plus grands terroirs du Barbaresco, il est le fleuron de Treiso et l'une des plus belles expressions du Nebbiolo d'altitude de l'appellation.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "barbaresco",
+        "treiso",
+        "grand-cru"
+      ],
+      "source": "belcolle|decanter"
+    },
+    {
+      "id": "it-piemonte-terr-osso-san-grato",
+      "nom": "Osso San Grato",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Gattinara)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~300-420 m",
+      "sols": "sols volcaniques de porphyre, acides",
+      "caracteristiques_rapides": "Cru de Gattinara (Antoniolo) : Nebbiolo (Spanna) fin, minéral et tendu, de longue garde sur porphyre.",
+      "notes_objectives": "À Gattinara, dans le Haut-Piémont volcanique, Osso San Grato est l'un des plus grands crus de l'appellation et de tout l'Alto Piemonte, étroitement associé au domaine Antoniolo. Le coteau, exposé au sud entre environ 300 et 420 m, repose sur les sols de porphyre et de roches volcaniques acides qui font la singularité de Gattinara, à une altitude et sous un climat plus frais que dans la Langhe. Le terroir donne un Nebbiolo (ici appelé Spanna) d'un profil singulier : couleur claire, parfum de petits fruits rouges, de violette et d'épices, bouche tendue, saline et minérale, d'une grande fraîcheur et d'une finesse rare. Antoniolo en signe une version de référence, l'une des plus belles expressions du Nebbiolo de montagne. Les vins d'Osso San Grato se reconnaissent à leur élégance, leur tension minérale et leur persistance, et possèdent une belle aptitude à la garde, souvent supérieure à dix ou quinze ans. À l'heure où le Haut-Piémont connaît un fort regain d'intérêt, ce cru fait figure de point de repère pour comprendre le potentiel de Gattinara, et offre une alternative fine et minérale aux grands Nebbiolo de Barolo et Barbaresco, sur un terroir volcanique unique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "gattinara",
+        "alto-piemonte",
+        "volcanique"
+      ],
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-piemonte-terr-valmaggiore",
+      "nom": "Valmaggiore",
+      "type": "lieu-dit",
+      "region": "Piemonte",
+      "sous_region": "Roero",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nebbiolo"
+      ],
+      "altitude": "~200-280 m",
+      "sols": "sables marins fins",
+      "caracteristiques_rapides": "Côte réputée du Roero : Nebbiolo souples, parfumés et élégants sur sables.",
+      "notes_objectives": "Dans le Roero, sur l'autre rive du Tanaro face à la Langhe, Valmaggiore est l'un des crus les plus réputés pour le Nebbiolo, une côte très pentue exposée au sud sur des sables marins fins, entre environ 200 et 280 m. Ce sol sableux, bien différent des marnes du Barolo et du Barbaresco, donne des Nebbiolo (ici en Roero) d'un style particulier : souples, parfumés et élégants, au fruit éclatant et aux tanins fins, plus tendres et d'un abord plus précoce que leurs cousins de la rive gauche. Les vins se reconnaissent à leur bouquet floral et fruité, leur fraîcheur et leur finesse de texture ; ils séduisent assez jeunes tout en conservant une bonne tenue sur une dizaine d'années. Le cru est interprété par plusieurs bons vignerons du Roero, dont Cascina Chicco et Matteo Correggia, ainsi que par Luciano Sandrone, qui y produit un Nebbiolo d'Alba Valmaggiore. Cru emblématique du Roero, Valmaggiore offre une expression tendre et parfumée du Nebbiolo sur sables, et constitue un terroir de premier plan pour découvrir le visage le plus aimable et le plus accessible de ce grand cépage, dans une appellation roéraine en pleine ascension. Servis assez jeunes pour leur fruit éclatant ou attendus une dizaine d'années, les Nebbiolo de Valmaggiore séduisent par leur finesse et leur parfum. Cru emblématique du Roero porté par Cascina Chicco, Matteo Correggia et Sandrone, il offre le visage le plus aimable et accessible du grand cépage, sur des sables uniques.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "roero",
+        "sables"
+      ],
+      "source": "visititaly"
+    }
+  ]
+}

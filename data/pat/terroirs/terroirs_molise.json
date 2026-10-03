@@ -1,0 +1,358 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "molise",
+  "region_label": "Molise (Italie)",
+  "source_file": "terroirs_molise.json",
+  "built_at": "2026-07-12",
+  "count": 12,
+  "items": [
+    {
+      "id": "it-molise-terr-tintilia-del-molise",
+      "nom": "Tintilia del Molise",
+      "type": "appellation (DOC)",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB/IS)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Tintilia"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "marnes argilo-calcaires et argiles des collines intérieures, au-dessus de 200 m",
+      "caracteristiques_rapides": "La DOC identitaire du Molise (2011) : cépage quasi éteint ressuscité, le Tintilia donne des rouges colorés, tanniques, fruités et poivrés, de garde. C'est l'âme retrouvée de la région.",
+      "notes_objectives": "Le Tintilia del Molise est l'appellation identitaire de la région, celle qui a redonné une âme et une voix à un vignoble longtemps invisible. Reconnue DOC en 2011, elle couvre l'ensemble des terres situées au-dessus de 200 mètres d'altitude — soit la quasi-totalité du Molise intérieur, entre les provinces de Campobasso et d'Isernia.\n\nSon histoire est celle d'un sauvetage. Le Tintilia, cépage rouge autochtone probablement introduit au XVIIIe siècle sous la domination espagnole des Bourbons — son nom viendrait du castillan « tinto », rouge —, devint au XIXe le plus planté de la région. Puis l'après-guerre le condamna : rustique, peu vigoureux et à faible rendement, il fut arraché au profit de variétés plus productives et de vignobles de plaine, jusqu'à ne subsister que dans les récits des vieux paysans. Ce sont quelques vignerons — Claudio Cipressi en tête, puis Cianfagna, Angelo d'Uva — qui, dans les années 1990-2000, sont allés le rechercher, ont fait valider son ADN par l'Université du Molise (2001) et lui ont rendu sa dignité. Il donne des rouges à la robe intense, tanniques et structurés, aux arômes de fruits noirs, d'épices, de garrigue et d'une note poivrée caractéristique, avec une réelle aptitude à la garde. C'est l'accord parfait avec l'agneau rôti, le mouton, le gibier et les viandes grillées.\n\nLa DOC identitaire du Molise (2011) : cépage quasi éteint ressuscité, le Tintilia donne des rouges colorés, tanniques, fruités et poivrés, de garde. C'est l'âme retrouvée de la région.\n\nL'histoire du Tintilia del Molise dit beaucoup de ce que fut la viticulture italienne du XXe siècle, et de ce qu'elle est devenue. Pendant des décennies, le Molise — deuxième plus petite région viticole d'Italie après le Val d'Aoste, avec à peine trente-cinq caves et un vignoble morcelé où beaucoup d'exploitations n'atteignent pas l'hectare — a bradé son raisin en vrac, sans identité ni ambition, écrasé par l'ombre de l'Abruzzo dont il ne s'est séparé politiquement qu'en 1963. Les pionniers de la région, quand ils cherchèrent la qualité, se tournèrent d'abord vers les cépages des régions voisines : le Montepulciano abruzzais, la Falanghina campanienne. Il fallut l'obstination de quelques-uns pour comprendre que la vraie chance du Molise était ce cépage que nul autre au monde ne possédait. La reconnaissance en DOC, en 2011, a scellé cette renaissance. Le style, lui aussi, a mûri : on est loin des vins hyper-concentrés et sur-boisés des débuts, et le bois, aujourd'hui mieux calibré, laisse s'exprimer la personnalité poivrée et fruitée du cépage. Servi sur l'agneau rôti (le gigot ou le mouton, plats emblématiques de la table molisane), le gibier, les viandes grillées ou les fromages affinés, le Tintilia se patine sur plusieurs années. Il est aujourd'hui la fierté et la carte de visite d'une région qui, lentement mais sûrement, sort de l'oubli.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge",
+        "doc",
+        "autochtone",
+        "altitude",
+        "icone",
+        "rescape"
+      ],
+      "source": "gamberorosso|filippobartolotta|skurnik"
+    },
+    {
+      "id": "it-molise-terr-tintilia",
+      "nom": "Tintilia",
+      "type": "cépage",
+      "region": "Molise",
+      "sous_region": "Cépage (rouge)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Tintilia"
+      ],
+      "altitude": "—",
+      "sols": "s'exprime sur les collines intérieures du Molise, au-dessus de 200 m",
+      "caracteristiques_rapides": "Le cépage unique au monde du Molise : introduit sous les Bourbons (« tinto »), quasi disparu après-guerre, sauvé dans les années 1990-2000. Rustique, peu productif, tannique et poivré.",
+      "notes_objectives": "Le Tintilia est le cépage unique au monde du Molise, sa seule variété véritablement autochtone, et le symbole de la renaissance viticole de cette région longtemps oubliée. Aucune autre région d'Italie ne le cultive : il est l'identité liquide du Molise.\n\nSon origine remonte probablement à la seconde moitié du XVIIIe siècle, lorsque les Bourbons d'Espagne dominaient le royaume de Naples ; son nom dériverait du castillan « tinto » (rouge). Il trouva dans le Molise, sur ses collines intérieures fraîches et venteuses, des conditions idéales — il résiste bien au froid — et devint au XIXe siècle le cépage le plus répandu de la région. L'après-guerre faillit l'anéantir : peu vigoureux et à faible productivité, il fut abandonné au profit de variétés rentables. Redécouvert et réhabilité dans les années 1990-2000, il est aujourd'hui vinifié en pureté, en Riserva et même en rosé. Rustique et exigeant, il donne des vins à la couleur profonde, très tanniques et structurés, aux arômes de fruits noirs et rouges (mûre, myrtille, cerise), d'épices, de garrigue méditerranéenne, de graphite et de goudron, avec cette signature délicatement poivrée qui lui appartient en propre. Il vieillit remarquablement bien. C'est un accord idéal avec l'agneau, le mouton, le gibier et les fromages affinés.\n\nLe cépage unique au monde du Molise : introduit sous les Bourbons (« tinto »), quasi disparu après-guerre, sauvé dans les années 1990-2000. Rustique, peu productif, tannique et poivré.\n\nCe qui rend le Tintilia précieux, c'est précisément ce qui avait failli le tuer : sa rusticité, sa faible vigueur et ses rendements modestes. Là où l'agriculture productiviste de l'après-guerre ne voyait qu'un défaut, les vignerons d'aujourd'hui reconnaissent la marque des grands cépages — concentration, caractère, capacité de garde. Son sauvetage tient à une chaîne d'événements improbables : le souvenir de vieux paysans, la curiosité d'un homme (Claudio Cipressi) prêt à tout quitter, la validation scientifique de l'Université du Molise qui confirma en 2001 qu'il s'agissait bien d'une variété autochtone unique, enfin la première bouteille de Tintilia pur mise en marché par Di Majo Norante. On compte aujourd'hui une quinzaine de producteurs, contre presque aucun il y a vingt-cinq ans. Le Tintilia aime l'altitude — la DOC couvre les terres au-dessus de 200 mètres, où les amplitudes thermiques préservent sa fraîcheur et ses arômes. Servi sur l'agneau rôti, le mouton, le gibier, les viandes grillées ou les fromages très affinés, il séduit par sa densité, sa note poivrée et sa structure tannique ; les meilleures cuvées se patinent sur une décennie. Il existe aussi en rosé, une facette vive et savoureuse encore méconnue. Un cépage sauvé de justesse, devenu l'âme d'une région.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "tintilia",
+        "cepage",
+        "rouge",
+        "autochtone",
+        "rescape",
+        "unique"
+      ],
+      "source": "gamberorosso|skurnik"
+    },
+    {
+      "id": "it-molise-terr-biferno",
+      "nom": "Biferno",
+      "type": "appellation (DOC)",
+      "region": "Molise",
+      "sous_region": "Basso Molise (CB)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Aglianico",
+        "Trebbiano",
+        "Falanghina"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "argiles, sables et calcaires des collines descendant vers l'Adriatique",
+      "caracteristiques_rapides": "L'appellation historique du Molise (années 1980), du nom du fleuve : rouges de Montepulciano et Aglianico (surtout en Riserva), blancs et rosés, sur les collines de Campobasso à la mer.",
+      "notes_objectives": "Le Biferno est l'appellation historique du Molise, créée dans les années 1980 — l'une des premières de cette région qui ne s'était séparée politiquement des Abruzzes qu'en 1963. Elle tire son nom du fleuve Biferno, qui descend de Campobasso, chef-lieu du Molise, jusqu'à la mer Adriatique.\n\nC'est dans cette vallée vallonnée que se trouvent les producteurs les plus connus de la région. Le Biferno rouge est un assemblage à base de Montepulciano (majoritaire) et d'Aglianico, complété de Trebbiano : un vin ample, généreux et structuré, aux arômes de fruits noirs, d'épices et de notes balsamiques, particulièrement abouti en version Riserva, plus longuement élevée et de garde. L'appellation produit aussi des blancs (Trebbiano, Falanghina, Malvasia) et des rosés. Sur les sols d'argile, de sable et de calcaire, sous un climat qui s'adoucit à mesure que l'on approche de la mer — les brises adriatiques tempèrent la chaleur —, les cépages donnent des vins équilibrés. Des domaines comme Borgo di Colloredo (Gironia), Camillo de Lellis (Palladino) ou Di Majo Norante en sont les références. C'est un accord idéal avec l'agneau rôti, les viandes grillées et les fromages affinés.\n\nL'appellation historique du Molise (années 1980), du nom du fleuve : rouges de Montepulciano et Aglianico (surtout en Riserva), blancs et rosés, sur les collines de Campobasso à la mer.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "aglianico",
+        "rouge",
+        "blanc",
+        "doc",
+        "historique"
+      ],
+      "source": "filippobartolotta|winedexer"
+    },
+    {
+      "id": "it-molise-terr-molise-doc-regionale",
+      "nom": "Molise (DOC régionale)",
+      "type": "appellation (DOC)",
+      "region": "Molise",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Aglianico",
+        "Tintilia",
+        "Falanghina",
+        "Trebbiano"
+      ],
+      "altitude": "~50-700 m",
+      "sols": "sols variés (marnes, argiles, sables) de toute la région",
+      "caracteristiques_rapides": "La DOC-cadre de la région : tous les cépages molisans, autochtones et internationaux, en rouge, blanc et rosé, un cadre souple qui couvre l'ensemble du territoire.",
+      "notes_objectives": "La DOC Molise (ou « del Molise ») est l'appellation-cadre de la région, qui couvre l'ensemble du territoire et complète les DOC plus spécifiques (Tintilia del Molise, Biferno, Pentro di Isernia). Souple et transversale, elle offre aux producteurs une grande liberté.\n\nElle autorise l'ensemble des cépages molisans : en rouge, le Montepulciano (le plus planté, environ la moitié du vignoble), l'Aglianico, le Tintilia, mais aussi des variétés internationales (Cabernet Sauvignon, Merlot, Pinot Noir, Sangiovese) ; en blanc, la Falanghina, le Trebbiano, le Bombino Bianco, le Greco, la Malvasia, le Chardonnay, le Pinot Grigio. Les vins peuvent être rouges, blancs ou rosés, en versions varietales ou d'assemblage. Sur les sols variés de cette région entièrement vallonnée ou montagneuse — pas la moindre plaine —, entre les Apennins et trente-cinq kilomètres de côte adriatique, les cépages expriment une belle diversité. La DOC Molise est le cadre le plus utilisé par les producteurs de la région et une bonne porte d'entrée dans ses vins, du rouge de caractère au blanc frais.\n\nLa DOC-cadre de la région : tous les cépages molisans, autochtones et internationaux, en rouge, blanc et rosé, un cadre souple qui couvre l'ensemble du territoire.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "doc",
+        "regionale",
+        "multi-cepages"
+      ],
+      "source": "italysfinestwines|winedexer"
+    },
+    {
+      "id": "it-molise-terr-montepulciano-du-molise",
+      "nom": "Montepulciano du Molise",
+      "type": "cépage / zone",
+      "region": "Molise",
+      "sous_region": "Basso Molise (CB)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano"
+      ],
+      "altitude": "~50-500 m",
+      "sols": "argiles et calcaires des collines adriatiques",
+      "caracteristiques_rapides": "Le cépage le plus planté (~50 % du vignoble) : sur les collines du Basso Molise, le Montepulciano donne des rouges amples et généreux, dont le Don Luigi, icône régionale (Di Majo Norante).",
+      "notes_objectives": "Le Montepulciano est le cépage le plus planté du Molise — environ la moitié du vignoble régional —, et le pilier de ses rouges les plus prestigieux. Venu des Abruzzes voisines, dont le Molise fut administrativement partie jusqu'en 1963, il s'est parfaitement acclimaté aux collines de la région.\n\nSur les sols d'argile et de calcaire du Basso Molise, sous l'influence tempérante des brises adriatiques, il donne des rouges amples, généreux et colorés, aux arômes de fruits noirs mûrs (mûre, prune), d'épices et de notes balsamiques, dotés de tanins présents et d'une belle rondeur. Il est le cépage principal du Biferno rouge, où il s'assemble à l'Aglianico, mais aussi de belles cuvées en pureté. Le sommet est atteint par le Don Luigi Riserva de Di Majo Norante, icône régionale qui a poussé le cépage à son maximum expressif : un vin dense et complexe, aux tanins puissants tenus par une acidité remarquable, capable de vieillir plus d'une décennie. C'est un accord idéal avec l'agneau rôti, le mouton, les viandes grillées, les pâtes au ragù et les fromages affinés.\n\nLe cépage le plus planté (~50 % du vignoble) : sur les collines du Basso Molise, le Montepulciano donne des rouges amples et généreux, dont le Don Luigi, icône régionale (Di Majo Norante).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "montepulciano",
+        "cepage",
+        "rouge",
+        "biferno"
+      ],
+      "source": "italysfinestwines|callmewine"
+    },
+    {
+      "id": "it-molise-terr-falanghina-e-blancs-du-molise",
+      "nom": "Falanghina & blancs du Molise",
+      "type": "cépage / groupe",
+      "region": "Molise",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Falanghina",
+        "Trebbiano Molisano",
+        "Bombino Bianco",
+        "Greco",
+        "Malvasia"
+      ],
+      "altitude": "~100-600 m",
+      "sols": "marnes calcaires et argiles des collines molisanes",
+      "caracteristiques_rapides": "Les blancs du Molise : Falanghina (campanienne acclimatée), Trebbiano Molisano, Bombino et Greco, des vins frais et salins, influencés par les régions voisines et la brise adriatique.",
+      "notes_objectives": "Les blancs du Molise, longtemps discrets, gagnent en intérêt à mesure que la région affirme son identité viticole. Ils reflètent la position charnière du Molise, à la croisée des influences des régions voisines : Abruzzes au nord, Campanie à l'ouest, Pouilles au sud.\n\nLa Falanghina, cépage campanien par excellence (son nom signifie « attachée au pieu », en référence à la conduite antique de la vigne), s'y est parfaitement acclimatée et donne des blancs frais, floraux et savoureux, aux arômes d'agrumes, de fruits blancs et de fleurs. Le Trebbiano Molisano (variété locale), le Bombino Bianco, le Greco Bianco et la Malvasia complètent la palette autochtone, aux côtés de cépages internationaux (Chardonnay, Pinot Grigio) largement plantés. Sur les marnes calcaires et les argiles des collines, sous l'influence des brises adriatiques et des fortes amplitudes thermiques de l'intérieur, ces cépages donnent des blancs frais et salins, d'une belle vivacité. C'est un accord idéal avec les poissons et fruits de mer de la côte adriatique, les antipasti et les plateaux de fromages.\n\nLes blancs du Molise : Falanghina (campanienne acclimatée), Trebbiano Molisano, Bombino et Greco, des vins frais et salins, influencés par les régions voisines et la brise adriatique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "falanghina",
+        "trebbiano",
+        "blanc",
+        "cepage"
+      ],
+      "source": "callmewine|vinello"
+    },
+    {
+      "id": "it-molise-terr-pentro-di-isernia",
+      "nom": "Pentro di Isernia",
+      "type": "appellation (DOC)",
+      "region": "Molise",
+      "sous_region": "Isernia (IS)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Sangiovese",
+        "Trebbiano",
+        "Bombino Bianco"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "sols calcaires d'altitude des montagnes du Sannio (province d'Isernia)",
+      "caracteristiques_rapides": "La DOC confidentielle des montagnes : dans la province d'Isernia, au climat continental (neige en hiver), rouges de Montepulciano-Sangiovese et blancs, l'appellation la plus rare du Molise.",
+      "notes_objectives": "Le Pentro di Isernia est la DOC la plus confidentielle et la plus montagnarde du Molise, produite dans la province d'Isernia, à l'intérieur des terres, sur les contreforts du massif du Sannio. Son nom évoque les Pentri, une tribu du peuple samnite qui habitait ces montagnes avant les Romains. Créée dans les années 1980 en même temps que le Biferno, elle produit des rouges et des rosés à base de Montepulciano et de Sangiovese, ainsi que des blancs de Trebbiano et de Bombino Bianco. Le climat y est nettement continental et rigoureux : températures négatives et neige en hiver, fortes amplitudes thermiques, ce qui confère aux vins une fraîcheur et une tension particulières. Sur les sols calcaires d'altitude (300 à 700 mètres), les cépages mûrissent lentement. Très peu produite et rarement exportée, cette appellation reste une curiosité pour les amateurs de terroirs confidentiels. C'est un accord idéal avec la cuisine rustique de montagne, les viandes et les fromages.\n\nLa DOC confidentielle des montagnes : dans la province d'Isernia, au climat continental (neige en hiver), rouges de Montepulciano-Sangiovese et blancs. C'est l'appellation la plus rare du Molise.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "pentro",
+        "isernia",
+        "montepulciano",
+        "rouge",
+        "blanc",
+        "doc",
+        "rare",
+        "altitude"
+      ],
+      "source": "winedexer|filippobartolotta"
+    },
+    {
+      "id": "it-molise-terr-terre-degli-osci",
+      "nom": "Terre degli Osci",
+      "type": "appellation (IGT)",
+      "region": "Molise",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Tintilia",
+        "Falanghina",
+        "Pinot Grigio",
+        "Trebbiano"
+      ],
+      "altitude": "~50-700 m",
+      "sols": "sols variés des collines molisanes",
+      "caracteristiques_rapides": "L'IGT phare du Molise, du nom du peuple antique des Osques : cadre souple pour tous cépages, autochtones et internationaux, très utilisée pour les vins accessibles et d'auteur.",
+      "notes_objectives": "Les Terre degli Osci forment l'IGT phare du Molise, un cadre souple et très utilisé qui couvre une large part du territoire régional. Son nom rend hommage aux Osques, peuple antique de l'Italie centrale et méridionale qui habitait ces terres bien avant les Romains — un rappel de l'ancienneté de la viticulture locale, qui remonte au moins aux Samnites, vers 500 av. J.-C. L'IGT autorise l'ensemble des cépages, autochtones comme internationaux : Montepulciano, Tintilia, Aglianico en rouge ; Falanghina, Trebbiano, Pinot Grigio, Chardonnay en blanc. Elle est largement utilisée pour les vins accessibles et bien diffusés (comme l'Osco Pinot Grigio ou les cuvées de Caldora), mais aussi pour des cuvées d'auteur qui sortent du cadre des DOC. Souple et pratique, elle permet aux producteurs d'expérimenter et de proposer des vins à bon rapport qualité-prix. C'est une bonne porte d'entrée dans les vins du Molise, sur une large palette de la cuisine régionale.\n\nL'IGT phare du Molise, du nom du peuple antique des Osques : cadre souple pour tous cépages, autochtones et internationaux, très utilisée pour les vins accessibles et d'auteur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "terre-degli-osci",
+        "igt",
+        "souple",
+        "osques"
+      ],
+      "source": "winedexer|vinello"
+    },
+    {
+      "id": "it-molise-terr-aglianico-du-molise",
+      "nom": "Aglianico du Molise",
+      "type": "cépage / zone",
+      "region": "Molise",
+      "sous_region": "Basso Molise (CB)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Aglianico"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "argiles et calcaires des collines du Biferno",
+      "caracteristiques_rapides": "Le grand cépage du Sud dans le Molise : l'Aglianico apporte structure, tanins et garde aux assemblages du Biferno, et donne de belles Riserva en pureté (Contado, Di Majo Norante).",
+      "notes_objectives": "L'Aglianico, le grand cépage rouge du Sud de l'Italie — celui du Taurasi campanien et de l'Aglianico del Vulture en Basilicate —, trouve aussi sa place dans le Molise, où il joue un rôle précieux. Dans le Biferno rouge, il accompagne le Montepulciano (majoritaire), auquel il apporte ce qui lui manque parfois : de la structure tannique, de l'acidité, de la profondeur et une réelle aptitude à la garde. Cet assemblage, particulièrement abouti en version Riserva, donne les rouges les plus sérieux de l'appellation. L'Aglianico est aussi vinifié en pureté dans de belles cuvées, comme le Contado de Di Majo Norante, une Riserva qui exprime le caractère puissant, épicé et tannique du cépage. Sur les sols d'argile et de calcaire des collines du Biferno, sous l'influence adriatique, il mûrit tardivement, préservant sa fraîcheur. C'est un accord idéal avec l'agneau, le mouton, le gibier, les viandes en sauce et les fromages très affinés.\n\nLe grand cépage du Sud dans le Molise : l'Aglianico apporte structure, tanins et garde aux assemblages du Biferno, et donne de belles Riserva en pureté (Contado, Di Majo Norante).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "aglianico",
+        "cepage",
+        "rouge",
+        "biferno",
+        "garde"
+      ],
+      "source": "callmewine|italysfinestwines"
+    },
+    {
+      "id": "it-molise-terr-vallee-du-biferno",
+      "nom": "Vallée du Biferno",
+      "type": "vallée / zone",
+      "region": "Molise",
+      "sous_region": "Basso Molise (CB)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Montepulciano",
+        "Aglianico",
+        "Tintilia",
+        "Falanghina"
+      ],
+      "altitude": "~50-600 m",
+      "sols": "argiles, sables et calcaires, de Campobasso à la côte adriatique",
+      "caracteristiques_rapides": "Le cœur historique du vignoble molisan : la vallée qui descend de Campobasso vers l'Adriatique abrite les producteurs les plus connus, entre influence continentale et brises marines.",
+      "notes_objectives": "La vallée du Biferno est le cœur historique du vignoble molisan. Descendant de Campobasso, le chef-lieu perché à l'intérieur des terres, jusqu'à la côte adriatique, cette vallée vallonnée abrite les producteurs les plus connus de la région. Elle offre un gradient remarquable : dans sa partie haute, le climat est sub-continental, frais et ensoleillé, avec de fortes amplitudes thermiques entre le jour et la nuit ; à mesure que l'on descend vers la mer, il devient plus doux et méditerranéen, sous l'influence bénéfique des brises adriatiques. Les sols varient eux aussi, des marnes argilo-calcaires de l'intérieur aux sables des zones proches de la côte. Cette diversité permet une belle palette de vins : rouges de Montepulciano et d'Aglianico (l'appellation Biferno), blancs, rosés, et Tintilia sur les hauteurs. C'est un terroir à découvrir, entre montagne et mer, sur toute la gamme de la cuisine molisane.\n\nLe cœur historique du vignoble molisan : la vallée qui descend de Campobasso vers l'Adriatique abrite les producteurs les plus connus, entre influence continentale et brises marines.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "biferno",
+        "vallee",
+        "campobasso",
+        "adriatique"
+      ],
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-molise-terr-alto-molise",
+      "nom": "Alto Molise",
+      "type": "zone / altitude",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB/IS)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "marnes argilo-calcaires des collines et montagnes intérieures",
+      "caracteristiques_rapides": "Le Molise intérieur, sauvage et montagneux : climat sub-continental, fortes amplitudes thermiques, terroir de prédilection du Tintilia, qui y gagne fraîcheur, tension et finesse.",
+      "notes_objectives": "L'Alto Molise désigne l'intérieur montagneux et vallonné de la région, un territoire rural resté sauvage et authentique, longtemps à l'écart des circuits du vin. C'est le terroir de prédilection du Tintilia. Le paysage y est verdoyant et préservé, comparable aux Abruzzes voisines mais plus sauvage encore. Le climat est sub-continental : frais et ensoleillé, marqué par de fortes amplitudes thermiques entre le jour et la nuit, conditions idéales pour préserver l'acidité et la finesse aromatique des raisins. Sur les marnes argilo-calcaires de ces collines et montagnes (de 300 à 700 mètres), le Tintilia — cépage rustique qui résiste bien au froid — gagne en fraîcheur, en tension et en finesse, donnant ses expressions les plus racées. La DOC Tintilia del Molise couvre d'ailleurs précisément les terres situées au-dessus de 200 mètres. C'est un terroir à découvrir pour les amateurs de rouges autochtones frais et structurés, sur l'agneau et la cuisine rustique de montagne.\n\nLe Molise intérieur, sauvage et montagneux : climat sub-continental, fortes amplitudes thermiques, terroir de prédilection du Tintilia, qui y gagne fraîcheur, tension et finesse.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "alto-molise",
+        "tintilia",
+        "altitude",
+        "frais"
+      ],
+      "source": "callmewine|filippobartolotta"
+    },
+    {
+      "id": "it-molise-terr-rosato-di-tintilia",
+      "nom": "Rosato di Tintilia",
+      "type": "style / rosé (DOC)",
+      "region": "Molise",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Tintilia"
+      ],
+      "altitude": "~200-700 m",
+      "sols": "marnes argilo-calcaires des collines intérieures",
+      "caracteristiques_rapides": "Le rosé du cépage autochtone, reconnu par la DOC : le Tintilia, à la peau très colorante, donne des rosés vifs, fruités et savoureux, une facette méconnue de la région (Collequinto).",
+      "notes_objectives": "Le Rosato di Tintilia est une facette méconnue mais séduisante du cépage emblématique du Molise, reconnue par le cahier des charges de la DOC Tintilia del Molise, qui autorise les versions rouge, Riserva et rosé. Le Tintilia, doté d'une peau très colorante et riche en anthocyanes, se prête particulièrement bien à la vinification en rosé : une macération courte suffit à extraire une belle couleur, souvent soutenue, tandis que l'acidité naturelle du cépage apporte fraîcheur et tension. Il en résulte des rosés vifs, fruités (fraise, cerise, framboise) et savoureux, dotés d'une belle structure et parfois d'une légère note poivrée, signature du cépage. Des vignerons comme Claudio Cipressi (avec son Collequinto) en signent de belles versions. Ces rosés, encore confidentiels, méritent d'être découverts. C'est un accord idéal avec les fruits de mer, les poissons de l'Adriatique, les antipasti et la cuisine estivale.\n\nLe rosé du cépage autochtone, reconnu par la DOC : le Tintilia, à la peau très colorante, donne des rosés vifs, fruités et savoureux, une facette méconnue de la région (Collequinto).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "molise",
+        "tintilia",
+        "rose",
+        "doc",
+        "specialite"
+      ],
+      "source": "gamberorosso|winedexer"
+    }
+  ]
+}

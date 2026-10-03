@@ -1,0 +1,1855 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "abruzzo",
+  "region_label": "Abruzzo (Italie)",
+  "source_file": "producteurs_abruzzo.json",
+  "built_at": "2026-07-08",
+  "count": 40,
+  "items": [
+    {
+      "id": "it-abruzzo-prod-valentini",
+      "nom": "Valentini",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano Abruzzese",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Trebbiano d'Abruzzo DOC",
+        "Montepulciano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, sur les collines de la province de Pescara, entre l'Adriatique et les cimes glacées du Gran Sasso, Valentini est le domaine le plus mythique et le plus mystérieux d'Abruzzo, une légende du vin italien. La famille cultive la vigne depuis le XVIIe siècle, mais c'est Edoardo Valentini, le « pape du Trebbiano », disparu en 2006, qui a porté le domaine au sommet ; son fils Francesco Paolo perpétue aujourd'hui son œuvre avec la même exigence intransigeante.\n\nLa philosophie Valentini est unique : le domaine possède un vaste vignoble mais ne met en bouteille sous son nom qu'une infime sélection des meilleurs lots, les meilleures années, vendant le reste en vrac. Le résultat est d'une rareté et d'une qualité extraordinaires. Le Trebbiano d'Abruzzo, vinifié à l'ancienne, est un blanc d'une texture, d'une profondeur et d'une longévité stupéfiantes, capable de vieillir vingt ans et plus, qui a démontré au monde que ce cépage réputé banal pouvait donner l'un des plus grands blancs d'Italie. Le Montepulciano d'Abruzzo, puissant et racé, et surtout le Cerasuolo — un rosé de Montepulciano d'une intensité et d'une capacité de garde rares, considéré comme l'un des plus grands rosés du monde — complètent une trilogie culte. Tout ici est artisanal, secret et sans compromis : ni recette, ni communication, ni concession à la mode.\n\nDomaine-légende d'Abruzzo, Valentini signe un Trebbiano de garde entré dans l'histoire, un grand Montepulciano et un Cerasuolo culte, en sélection drastique. C'est la référence absolue de la région et l'un des noms les plus vénérés du vin italien.\n\nLa démarche de Valentini défie toute logique commerciale : refuser de vendre la quasi-totalité de sa récolte sous son étiquette, pour ne garder que l'infime part digne du nom, relève d'une exigence quasi mystique. Edoardo Valentini se voyait avant tout comme un paysan et un artisan, cultivant ses vignes en agriculture proche du naturel et vinifiant selon des méthodes transmises de génération en génération. Cette philosophie a fait de chaque bouteille un objet rare et convoité, aux prix qui rivalisent avec les plus grands crus. Servi sur des poissons nobles, des crustacés, de la volaille ou des fromages, le Trebbiano déploie une richesse et une salinité qui s'épanouissent après des années de cave ; le Montepulciano, sur des viandes rouges et du gibier, se patine sur des décennies ; le Cerasuolo, d'une intensité inouïe, accompagne aussi bien les charcuteries que des plats plus riches. Au-delà de ses propres vins, l'influence de Valentini sur toute une génération de vignerons abruzzais a été immense : nombre des meilleurs domaines actuels de Loreto Aprutino et d'ailleurs se réclament de son exemple, et Francesco Paolo Valentini a joué un rôle de mentor discret auprès d'eux. Le domaine demeure ainsi la boussole morale et qualitative de toute la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trebbiano d'Abruzzo",
+        "Montepulciano d'Abruzzo",
+        "Cerasuolo d'Abruzzo"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "trebbiano",
+        "montepulciano",
+        "culte",
+        "icone",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "decanter|winespectator|italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-emidio-pepe",
+      "nom": "Emidio Pepe",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Torano Nuovo",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Colli Aprutini IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torano Nuovo, dans les collines de Teramo au nord de l'Abruzzo, Emidio Pepe est une icône mondiale du vin nature et du vin de garde. Fondé en 1964, le domaine familial, aujourd'hui mené par les filles et petites-filles du patriarche (dont Sofia Pepe à la vinification), a bâti une réputation légendaire sur des méthodes ancestrales et une intransigeance rare.\n\nEn agriculture biologique, Emidio Pepe vinifie à l'ancienne, sans concession à la technologie : Trebbiano foulé aux pieds, Montepulciano égrappé à la main, fermentations en cuves de verre et de ciment, ni bois, ni filtration, soufre minimal. Les vins sont vieillis longuement en cave et souvent redégorgés à la main avant expédition. Il en résulte des Montepulciano d'Abruzzo profonds, élégants et d'une longévité exceptionnelle, capables de traverser les décennies, et des Trebbiano et Pecorino d'une pureté et d'une tension remarquables. Le domaine conserve une immense bibliothèque de vieux millésimes, témoignage de cette foi dans le vieillissement. Loin d'être des curiosités, ce sont des vins profonds et racés, devenus des références du vin nature et des tables les plus prestigieuses du monde.\n\nIcône du vin nature et de la garde, Emidio Pepe signe des Montepulciano et des Trebbiano bio vinifiés à l'ancienne, d'une longévité extraordinaire. C'est l'un des domaines les plus admirés d'Italie et un ambassadeur mondial de l'Abruzzo.\n\nLa constance d'Emidio Pepe, à travers plus d'un demi-siècle, tient à une conviction jamais démentie : le vin se fait à la vigne et se révèle avec le temps. Là où d'autres cherchaient la modernité, la famille est restée fidèle à des gestes ancestraux, quitte à passer longtemps pour des marginaux avant d'être reconnus comme des visionnaires. Le foulage aux pieds, la décantation des vieux millésimes bouteille par bouteille, la conservation d'une vaste cave de garde : tout concourt à une quête de pureté et de longévité. Servis sur des viandes rouges, du gibier ou des fromages affinés pour le Montepulciano, sur des poissons et des viandes blanches pour les blancs, les vins d'Emidio Pepe surprennent par leur jeunesse préservée et leur profondeur. La transmission familiale, exclusivement féminine sur les dernières générations, a assuré la continuité de cette vision. Aujourd'hui servis dans les plus grands restaurants du monde et recherchés par les collectionneurs, ces vins ont fait de Torano Nuovo un lieu de pèlerinage et d'Emidio Pepe l'un des symboles les plus éclatants du renouveau et de l'authenticité du vin italien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montepulciano d'Abruzzo",
+        "Trebbiano d'Abruzzo",
+        "Pecorino Colli Aprutini"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montepulciano",
+        "trebbiano",
+        "nature",
+        "bio",
+        "garde",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "winespectator|wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-masciarelli",
+      "nom": "Masciarelli",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "San Martino sulla Marrucina",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Cabernet",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Colline Teramane DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Martino sulla Marrucina, dans la province de Chieti, Masciarelli est le domaine qui a modernisé l'Abruzzo et l'a placé sur la carte des grands vins. Fondé en 1981 par Gianni Masciarelli, figure charismatique et visionnaire disparue prématurément en 2008, il est aujourd'hui mené par son épouse Marina Cvetic et leur fille Miriam, qui perpétuent son ambition.\n\nGianni Masciarelli fut un pionnier : il introduisit en Abruzzo la barrique, les basses rendements et une exigence qualitative nouvelle, prouvant que le Montepulciano pouvait rivaliser avec les grands rouges italiens. Le Villa Gemma, Montepulciano d'Abruzzo puissant, dense et de longue garde, est devenu l'un des vins les plus réputés de la région, aux côtés de la ligne Marina Cvetic (Montepulciano et Trebbiano de sélection, élevés en bois) et du Castello di Semivicoli (grand Trebbiano). Le domaine s'étend aujourd'hui sur quelque 300 hectares à travers les quatre provinces de l'Abruzzo, produisant aussi une gamme accessible d'excellent rapport qualité-prix. Cette double réussite — vins d'élite et cuvées populaires de qualité — fait de Masciarelli le domaine le plus emblématique et le plus influent de l'Abruzzo moderne.\n\nDomaine qui a modernisé l'Abruzzo, Masciarelli signe avec Villa Gemma et la ligne Marina Cvetic des références du Montepulciano et du Trebbiano. C'est le domaine le plus influent de la région, de l'élite à l'entrée de gamme.\n\nGianni Masciarelli était un personnage hors norme : autodidacte génial, bâtisseur infatigable, il a cru au potentiel de l'Abruzzo quand la région n'était encore synonyme que de vins de masse. En quelques années, il a constitué un immense vignoble et imposé une exigence qualitative qui a rejailli sur toute la région. Sa rencontre avec Marina Cvetic, d'origine monténégrine, fut décisive : elle donna son nom à la ligne haut de gamme et poursuit aujourd'hui l'œuvre avec rigueur. Servis sur des viandes rouges, du gibier ou des fromages affinés, les Montepulciano de Villa Gemma et Marina Cvetic déploient puissance et profondeur, et se patinent sur une décennie ; les Trebbiano de sélection, sur des poissons et des viandes blanches, révèlent une belle richesse. La force de Masciarelli est d'exceller à tous les niveaux, du grand vin de garde à la cuvée d'entrée de gamme d'un rapport qualité-prix imbattable, qui a fait connaître le Montepulciano dans le monde entier. Domaine phare, école pour toute une génération de vignerons, Masciarelli demeure le point de repère de l'Abruzzo contemporain, entre ambition et générosité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Villa Gemma (Montepulciano)",
+        "Marina Cvetic S. Martino Rosso",
+        "Marina Cvetic Trebbiano",
+        "Villa Gemma Bianco"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "villa-gemma",
+        "masciarelli",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "decanter|wine-searcher|italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-tiberio",
+      "nom": "Tiberio",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Cugnoli",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Trebbiano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cugnoli, sur les collines de la province de Pescara, Tiberio est le domaine qui a hissé les blancs d'Abruzzo au rang des plus grands d'Italie. Fondé en 2000 par Riccardo Tiberio, qui eut le flair d'acquérir de très vieilles vignes de Trebbiano en altitude, il est aujourd'hui mené par ses enfants Cristiana (l'œnologue, l'une des plus douées d'Italie) et Antonio.\n\nSur des sols argilo-calcaires en altitude (jusqu'à 350 m), balayés par les vents des Apennins, le domaine signe des blancs d'une précision, d'une salinité et d'une finesse remarquables. Le Trebbiano d'Abruzzo Fonte Canale, issu de vignes de plus de soixante ans, est considéré comme l'un des plus grands Trebbiano d'Italie, et le Pecorino de Tiberio, tendu et complexe, a largement contribué à la reconnaissance de ce cépage. Le Cerasuolo, délicat et racé, et le Montepulciano Archivio complètent une gamme d'une régularité et d'une pureté exemplaires. La philosophie de Cristiana Tiberio — respect du raisin, vinifications précises, refus de la surextraction et du bois marquant — donne des vins d'une élégance et d'une buvabilité rares, salués par la critique internationale.\n\nDomaine de référence pour les blancs d'Abruzzo, Tiberio signe avec le Trebbiano Fonte Canale et le Pecorino des vins d'une précision et d'une salinité rares. Porté par le talent de Cristiana Tiberio, c'est l'un des plus grands noms de la région.\n\nL'histoire de Tiberio est celle d'un pari gagnant : en repérant et préservant de très vieilles vignes de Trebbiano Abruzzese — le vrai, distinct des Trebbiano plus communs — sur les hauteurs de Cugnoli, Riccardo Tiberio a jeté les bases d'un domaine d'exception. Sa fille Cristiana, formée à l'économie avant de se consacrer au vin, s'est imposée comme l'une des vinificatrices les plus talentueuses et les plus respectées d'Italie, défendant une vision de fraîcheur, de précision et de terroir. L'altitude, les vents et les sols calcaires donnent à ses blancs une tension et une salinité rares sous ces latitudes. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages, le Trebbiano Fonte Canale et le Pecorino séduisent par leur pureté et leur allonge, et vieillissent remarquablement ; le Cerasuolo, délicat, accompagne charcuteries et cuisine méditerranéenne. En refusant la surextraction et le bois marquant, Cristiana Tiberio a prouvé que l'Abruzzo pouvait produire des blancs d'une finesse comparable aux plus grands d'Italie, et a fait du Pecorino et du Trebbiano des cépages enfin pris au sérieux. Le domaine est aujourd'hui une référence incontournable et un modèle pour toute la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trebbiano d'Abruzzo Fonte Canale",
+        "Pecorino",
+        "Cerasuolo d'Abruzzo",
+        "Archivio (Montepulciano)"
+      ],
+      "tags": [
+        "abruzzo",
+        "cugnoli",
+        "trebbiano",
+        "pecorino",
+        "altitude",
+        "blanc",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|decanter|winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-illuminati",
+      "nom": "Illuminati",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Controguerra",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Colline Teramane DOCG",
+        "Controguerra DOC",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Controguerra, à l'extrême nord de l'Abruzzo, Illuminati est une maison historique des Colline Teramane, fondée en 1890. Sous l'impulsion de Dino Illuminati, figure respectée de la région, le domaine a bâti une réputation d'excellence sur le Montepulciano de la zone la plus qualitative de l'Abruzzo.\n\nSa cuvée Zanna, un Montepulciano d'Abruzzo Colline Teramane Riserva issu d'un cru historique, est une référence : un rouge structuré, profond et de longue garde. Le Lumen (Montepulciano et Trebbiano de sélection) et le Riparosso, plus accessible, complètent une gamme large et régulière. Sur les sols argilo-calcaires du Teramano, le domaine met en valeur le Montepulciano dans un style qui allie puissance et élégance, ainsi que de beaux blancs (Trebbiano, Pecorino) et le Controguerra, appellation ouverte à quelques cépages internationaux. La constance et la qualité de la production, sur plusieurs générations, font d'Illuminati l'un des piliers du nord de l'Abruzzo.\n\nMaison historique des Colline Teramane, Illuminati signe avec le Zanna et le Lumen des Montepulciano de référence. C'est l'un des piliers du nord de l'Abruzzo, entre tradition et régularité.\n\nSur plus d'un siècle, la famille Illuminati a fait de Controguerra un nom qui compte, en misant sur le cru Zanna, l'un des terroirs historiques des Colline Teramane. Dino Illuminati, figure tutélaire de la région, a défendu l'identité du Montepulciano du nord de l'Abruzzo avec constance. Servis sur des viandes rouges, de l'agneau, du gibier ou des fromages affinés, les grands Montepulciano de la maison se patinent sur une décennie. La gamme, du Riparosso accessible aux cuvées de garde, offre une belle porte d'entrée dans les Colline Teramane, et la régularité du domaine en fait une référence fiable du nord de l'Abruzzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Zanna (Colline Teramane Riserva)",
+        "Lumen",
+        "Riparosso",
+        "Controguerra"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "decanter|winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-nicodemi",
+      "nom": "Nicodemi",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Notaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Colline Teramane DOCG",
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Notaresco, dans les Colline Teramane, Nicodemi est un domaine familial réputé pour ses Montepulciano riches et polis. Sur les collines argilo-calcaires du Teramano, entre le Gran Sasso et l'Adriatique, la famille cultive un vignoble avec une recherche de qualité et d'élégance.\n\nLe domaine signe des Montepulciano d'Abruzzo (dont le Notàri, en Colline Teramane, et le Neromoro) profonds et soignés, ainsi que de beaux blancs (Trebbiano, Pecorino) et un Cerasuolo. Le style, moderne et précis, met en valeur le Montepulciano dans des vins équilibrés, ni rustiques ni surextraits, salués par la critique. Le domaine a gagné en reconnaissance ces dernières années et compte parmi les valeurs sûres du nord de l'Abruzzo. La régularité de la gamme et le soin apporté aux blancs comme aux rouges en font une belle adresse des Colline Teramane.\n\nDomaine réputé des Colline Teramane, Nicodemi signe des Montepulciano riches et polis (Notàri, Neromoro) et de beaux blancs. C'est une valeur sûre du nord de l'Abruzzo.\n\nLa montée en qualité de Nicodemi illustre le renouveau des Colline Teramane, où une nouvelle génération soigne autant les rouges que les blancs. Le style, poli et équilibré, évite les excès de puissance et de bois. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour les blancs, les vins de Nicodemi séduisent par leur netteté et leur régularité. Le domaine, attaché à son terroir argilo-calcaire entre Gran Sasso et Adriatique, s'est imposé comme l'une des valeurs sûres du nord de l'Abruzzo, appréciée pour son rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Notàri (Colline Teramane)",
+        "Neromoro",
+        "Trebbiano d'Abruzzo",
+        "Cerasuolo"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-abruzzo-prod-san-lorenzo",
+      "nom": "San Lorenzo",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Castilenti",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Colline Teramane DOCG",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castilenti, dans les Colline Teramane, le domaine San Lorenzo (Gianni Di Carlo) est une référence bio montante du nord de l'Abruzzo. Sur un vignoble d'altitude soigné, la famille cultive le Montepulciano et les cépages autochtones en agriculture biologique.\n\nSa cuvée Oinos, un Montepulciano d'Abruzzo Colline Teramane primé, est un rouge structuré et de belle facture, aux côtés de l'Antares et de blancs (Escol, en Pecorino). Le style, précis et respectueux du terroir, met en valeur le Montepulciano dans des vins équilibrés et de garde, ainsi que de beaux Pecorino. La démarche biologique et la qualité constante de la gamme ont bâti la réputation du domaine, qui compte parmi les adresses à suivre des Colline Teramane. San Lorenzo illustre le dynamisme et la montée en gamme bio du nord de l'Abruzzo.\n\nDomaine bio montant des Colline Teramane, San Lorenzo signe avec l'Oinos un Montepulciano primé et de beaux Pecorino. C'est une belle adresse du nord de l'Abruzzo.\n\nL'engagement biologique et le travail sur les terroirs d'altitude des Colline Teramane font de San Lorenzo une adresse à suivre. Gianni Di Carlo y cherche l'équilibre entre la puissance du Montepulciano et la fraîcheur de l'altitude. Servi sur des viandes rouges, du gibier ou des fromages, l'Oinos se patine sur plusieurs années ; les Pecorino accompagnent poissons et fruits de mer. La démarche bio, la qualité constante et les récompenses obtenues confirment la montée en gamme du domaine, représentatif du dynamisme de la nouvelle génération du nord de l'Abruzzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Oinos (Colline Teramane)",
+        "Antares (Montepulciano)",
+        "Escol (Pecorino)"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-barone-cornacchia",
+      "nom": "Barone Cornacchia",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Torano Nuovo",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Colline Teramane DOCG",
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torano Nuovo, dans les Colline Teramane, Barone Cornacchia est un domaine historique et bio, l'un des plus anciens de la zone. Sur les collines argilo-calcaires du Teramano, la famille cultive le Montepulciano en agriculture biologique, dans la tradition du nord de l'Abruzzo.\n\nLe domaine signe des Montepulciano d'Abruzzo élégants (dont le Vigna Le Coste et le Poggio Varano, en Colline Teramane) et de beaux blancs (Trebbiano, Pecorino), dans un style qui privilégie la finesse et l'équilibre. Le travail biologique et le respect du terroir donnent des vins authentiques et fidèles à leur origine. La longévité du domaine et la constance de sa production en font une valeur sûre des Colline Teramane. Barone Cornacchia illustre la tradition qualitative du nord de l'Abruzzo, conjuguée à une démarche écologique.\n\nDomaine historique et bio de Torano Nuovo, Barone Cornacchia signe des Montepulciano élégants et de beaux blancs. C'est une valeur sûre des Colline Teramane.\n\nL'ancienneté du domaine et son engagement biologique en font un témoin de la tradition qualitative des Colline Teramane. La famille Cornacchia privilégie la finesse à la puissance, dans des Montepulciano élégants et digestes. Servis sur des viandes rouges, de l'agneau ou des fromages, ils séduisent par leur équilibre ; les blancs accompagnent poissons et cuisine légère. Le respect du terroir et la constance de la production font de Barone Cornacchia une valeur sûre du nord de l'Abruzzo, alliant héritage historique et démarche écologique, à un rapport qualité-prix attractif.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna Le Coste",
+        "Poggio Varano (Colline Teramane)",
+        "Trebbiano d'Abruzzo"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano",
+        "bio",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-cerulli-spinozzi",
+      "nom": "Cerulli Spinozzi",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Canzano",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Colline Teramane DOCG",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Canzano, dans les Colline Teramane, Cerulli Spinozzi est un domaine familial réputé du nord de l'Abruzzo. Sur les collines argilo-calcaires du Teramano, la famille cultive le Montepulciano et les cépages autochtones avec une recherche de qualité.\n\nLe domaine signe des Montepulciano d'Abruzzo de belle facture (dont le Torre Migliori, en Colline Teramane, et le Cortalto) ainsi que des blancs frais (Trebbiano, Pecorino). Le style, soigné et fidèle au terroir, met en valeur le Montepulciano dans des vins équilibrés et de garde. La régularité de la gamme et la qualité constante en font une valeur sûre du nord de l'Abruzzo. Cerulli Spinozzi illustre le savoir-faire des domaines familiaux des Colline Teramane, entre tradition et modernité.\n\nDomaine familial réputé des Colline Teramane, Cerulli Spinozzi signe des Montepulciano de belle facture (Torre Migliori) et des blancs frais. C'est une valeur sûre du nord de l'Abruzzo.\n\nAncré dans les Colline Teramane, le domaine familial cultive un savoir-faire transmis de génération en génération, sur les sols argilo-calcaires propices au Montepulciano. Servis sur des viandes rouges, du gibier ou des fromages, les Montepulciano de Cerulli Spinozzi séduisent par leur équilibre et leur profondeur ; les blancs (Trebbiano, Pecorino) apportent fraîcheur et salinité. La régularité de la gamme et l'attachement au terroir en font une valeur sûre du nord de l'Abruzzo, représentative de la qualité des domaines familiaux des Colline Teramane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Torre Migliori (Colline Teramane)",
+        "Cortalto",
+        "Montepulciano d'Abruzzo"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "colline-teramane",
+        "montepulciano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-tenuta-terraviva",
+      "nom": "Tenuta Terraviva",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Tortoreto",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Pecorino",
+        "Trebbiano Abruzzese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tortoreto, dans le Teramano, Tenuta Terraviva est un domaine bio dynamique, l'une des références montantes de l'Abruzzo. Pietro Topi y cultive le Montepulciano et le Pecorino en agriculture biologique, dans un style précis et vibrant qui a séduit la critique.\n\nLe domaine signe des Montepulciano d'Abruzzo (Polifemo, Emere) profonds et frais, des Pecorino (Giusi) tendus et salins, ainsi qu'un Cerasuolo (Kimì) apprécié. Le style, bio et peu interventionniste, met en valeur la fraîcheur et l'authenticité des cépages abruzzais, à rebours des vins lourds et surextraits. Le domaine a rapidement gagné en reconnaissance et compte parmi les belles adresses bio de la région. Tenuta Terraviva illustre le dynamisme de la nouvelle génération abruzzaise, attachée au bio et à l'expression du terroir.\n\nDomaine bio dynamique du Teramano, Tenuta Terraviva signe des Montepulciano frais (Polifemo) et de beaux Pecorino. C'est une belle référence bio montante de l'Abruzzo.\n\nLe dynamisme de Pietro Topi et son engagement biologique ont fait de Tenuta Terraviva l'une des révélations de l'Abruzzo. Le style, frais et vibrant, tranche avec les Montepulciano lourds d'autrefois. Servis sur des viandes pour les rouges, sur des poissons et fruits de mer pour les Pecorino, les vins du domaine séduisent par leur pureté et leur énergie. La reconnaissance rapide de la critique confirme la qualité du travail. Tenuta Terraviva incarne la nouvelle génération abruzzaise, attachée au bio, à la fraîcheur et à l'expression authentique de ses cépages.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Polifemo (Montepulciano)",
+        "Emere",
+        "Giusi (Pecorino)",
+        "Kimì (Cerasuolo)"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montepulciano",
+        "pecorino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-francesco-cirelli",
+      "nom": "Francesco Cirelli",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Atri",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Colli Aprutini IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Atri, dans le Teramano, Francesco Cirelli est un domaine bio réputé pour ses cuvées en amphore, l'un des noms de la scène bio-nature abruzzaise. Sur ses terres, où il pratique aussi l'élevage, Cirelli cultive le Montepulciano et le Trebbiano en agriculture biologique.\n\nSes cuvées « Anfora » — Montepulciano et Trebbiano vinifiés et élevés en amphores de terre cuite — sont des vins authentiques, vivants et texturés, très appréciés des amateurs de vin nature, aux côtés d'une gamme plus classique (dont le Cerasuolo) et de la ligne Wines of Anarchy. Le style, bio et peu interventionniste, cherche à exprimer le terroir et le cépage dans leur vérité. La démarche écologique globale (agriculture mixte, autosuffisance) et la qualité des vins en font une belle référence. Francesco Cirelli illustre le renouveau bio et nature de l'Abruzzo, avec une identité forte.\n\nDomaine bio d'Atri réputé pour ses cuvées en amphore, Francesco Cirelli signe des Montepulciano et Trebbiano authentiques et vivants. C'est une belle référence de la scène bio-nature abruzzaise.\n\nAu-delà du vin, Francesco Cirelli a conçu une ferme mixte et autosuffisante, dans un esprit écologique global qui donne du sens à sa démarche. Les cuvées en amphore, sans intrants, expriment le terroir d'Atri avec sincérité. Servis sur une cuisine de caractère, des viandes pour le Montepulciano, des poissons pour le Trebbiano, ces vins vivants séduisent les amateurs de vin nature. La cohérence de la démarche et la qualité des vins ont fait de Cirelli une référence de la scène bio-nature abruzzaise, à l'identité affirmée et de plus en plus reconnue à l'international.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Anfora Montepulciano",
+        "Anfora Trebbiano",
+        "Wines of Anarchy",
+        "Cerasuolo"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "atri",
+        "montepulciano",
+        "amphore",
+        "bio",
+        "nature"
+      ],
+      "a_verifier": null,
+      "source": "winespectator"
+    },
+    {
+      "id": "it-abruzzo-prod-torre-dei-beati",
+      "nom": "Torre dei Beati",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, sur les collines de Pescara, Torre dei Beati est un domaine bio culte, l'un des fleurons de la nouvelle génération abruzzaise. Fausto Albanesi et Adriana Galasso, encouragés et conseillés à leurs débuts par Francesco Paolo Valentini, y élaborent des vins d'une grande pureté en agriculture biologique.\n\nLe domaine signe des Montepulciano d'Abruzzo remarquables — le Mazzamurello, profond et de garde, et le Cocciapazza —, un Cerasuolo (Rosa-ae) salué comme l'un des meilleurs de la région, et un Trebbiano (Bianchi Grilli) tendu et salin. Le style, bio et précis, privilégie la fraîcheur, l'équilibre et l'expression du terroir de Loreto Aprutino, dans la lignée de Valentini. La qualité et la régularité des vins, salués par toute la critique (Gambero Rosso en tête), ont fait de Torre dei Beati l'une des références de l'Abruzzo contemporain et un modèle de la viticulture bio de qualité.\n\nDomaine bio culte de Loreto Aprutino, Torre dei Beati signe de grands Montepulciano (Mazzamurello), un Cerasuolo d'exception et un beau Trebbiano. C'est l'une des références de l'Abruzzo contemporain.\n\nLe parcours de Fausto Albanesi et Adriana Galasso illustre la fécondité de l'exemple Valentini : encouragés par le maître de Loreto Aprutino, ils ont bâti l'un des domaines les plus admirés de l'Abruzzo. Le style, bio et précis, privilégie la fraîcheur et la définition. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour le Trebbiano et le Cerasuolo, les vins séduisent par leur pureté et leur profondeur. Salués année après année par la critique, ils ont fait de Torre dei Beati un modèle de la viticulture bio de qualité et une référence de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mazzamurello (Montepulciano)",
+        "Cocciapazza",
+        "Cerasuolo Rosa-ae",
+        "Trebbiano Bianchi Grilli"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "montepulciano",
+        "cerasuolo",
+        "bio",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|winespectator"
+    },
+    {
+      "id": "it-abruzzo-prod-de-fermo",
+      "nom": "De Fermo",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, De Fermo est un domaine en biodynamie, l'une des belles adresses de la nouvelle vague abruzzaise. Stefano Papetti Ceroni, encouragé lui aussi par Francesco Paolo Valentini, y élabore des vins purs et vibrants dans le respect du vivant.\n\nLe domaine signe un Montepulciano d'Abruzzo (Prologo) profond et élégant, un Pecorino (Concrete) tendu, un Trebbiano (Le Cince) et le Launegild, dans un style biodynamique qui privilégie la fraîcheur, la buvabilité et l'expression du terroir de Loreto Aprutino. Le travail respectueux de la vigne, les levures indigènes et les vinifications précises donnent des vins authentiques et racés. La qualité et la cohérence de la gamme ont bâti la réputation du domaine, qui compte parmi les références bio-nature de l'Abruzzo. De Fermo illustre l'esprit de Loreto Aprutino, dans la lignée de Valentini.\n\nDomaine en biodynamie de Loreto Aprutino, De Fermo signe des Montepulciano (Prologo), Pecorino et Trebbiano purs et vibrants. C'est une belle référence de la nouvelle vague abruzzaise.\n\nComme Torre dei Beati, De Fermo doit beaucoup à l'exemple et aux encouragements de Francesco Paolo Valentini, dans l'esprit de Loreto Aprutino. La biodynamie et le respect du vivant sont au cœur de la démarche. Servis sur des viandes pour le Prologo, sur des poissons et fruits de mer pour le Pecorino et le Trebbiano, les vins de De Fermo séduisent par leur fraîcheur et leur buvabilité. La cohérence de la gamme et l'exigence de Stefano Papetti Ceroni en font l'une des belles références bio-nature de l'Abruzzo, fidèle à l'âme de son terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Prologo (Montepulciano)",
+        "Concrete (Pecorino)",
+        "Launegild",
+        "Le Cince (Trebbiano)"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "montepulciano",
+        "biodynamie",
+        "nature"
+      ],
+      "a_verifier": null,
+      "source": "winespectator"
+    },
+    {
+      "id": "it-abruzzo-prod-chiara-ciavolich",
+      "nom": "Chiara Ciavolich",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, Chiara Ciavolich mène un domaine familial dont l'histoire remonte au XIXe siècle, qu'elle a relancé avec une vision personnelle. Sur de beaux terroirs de collines dans le Pescarese, elle cultive le Montepulciano et les cépages abruzzais entre tradition et modernité.\n\nLe domaine signe des Montepulciano d'Abruzzo de caractère (Fosso Cancelli, issu de vieilles vignes, et Divus) ainsi que de beaux blancs (Pecorino Aries, Trebbiano). Le style, soigné et personnel, met en valeur le Montepulciano dans des vins équilibrés et fidèles au terroir. La relance du domaine par Chiara Ciavolich, avec le concours d'œnologues réputés, a été saluée par la critique. Chiara Ciavolich illustre le dynamisme des domaines familiaux abruzzais menés par une nouvelle génération, attachée à son héritage et à la qualité.\n\nDomaine familial relancé par Chiara Ciavolich à Loreto Aprutino, il signe des Montepulciano de caractère (Fosso Cancelli) et de beaux blancs. C'est une belle adresse du Pescarese.\n\nLa relance d'un domaine familial séculaire par une femme déterminée, Chiara Ciavolich, illustre le renouveau de l'Abruzzo par une nouvelle génération. Le Fosso Cancelli, issu de vieilles vignes, en est le fleuron. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour les blancs, les vins séduisent par leur caractère et leur équilibre. Le soin apporté à la vigne et à la cave, avec le concours d'œnologues réputés, a été salué par la critique, confirmant Chiara Ciavolich parmi les belles adresses du Pescarese.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fosso Cancelli (Montepulciano)",
+        "Divus (Montepulciano)",
+        "Aries (Pecorino)"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "montepulciano",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-prod-amorotti",
+      "nom": "Amorotti",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Trebbiano Abruzzese",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trebbiano d'Abruzzo DOC",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, Amorotti est un petit domaine bio célèbre pour son Trebbiano d'Abruzzo issu de très vieilles vignes, parmi les plus anciennes de la région. Sur ce terroir prestigieux, la famille perpétue une viticulture traditionnelle et respectueuse.\n\nLe Trebbiano d'Abruzzo d'Amorotti, issu de vignes parfois bicentenaires, est un blanc complexe, salin et de garde, régulièrement cité par la critique (Gambero Rosso) parmi les meilleurs du cépage : un vin multidimensionnel, aux arômes de tisane, de camomille, de citron confit et de miel. Le domaine signe aussi un Montepulciano d'Abruzzo de belle tenue. Le style, traditionnel et bio, met en valeur le patrimoine des vieilles vignes de Loreto Aprutino, dans la lignée de Valentini. La rareté et la qualité de ces vins en font une adresse recherchée des amateurs de grand Trebbiano.\n\nPetit domaine bio de Loreto Aprutino, Amorotti signe un Trebbiano de très vieilles vignes, complexe et salin, parmi les meilleurs du cépage. C'est une belle adresse pour les amateurs de grand Trebbiano.\n\nLe trésor d'Amorotti, ce sont ses vignes de Trebbiano parfois bicentenaires, un patrimoine unique à Loreto Aprutino que la famille préserve avec soin. Le Trebbiano qui en est issu, multidimensionnel et salin, figure régulièrement parmi les meilleurs d'Abruzzo. Servi sur des poissons nobles, des crustacés, des viandes blanches ou des fromages, il révèle après quelques années de cave une complexité rare pour le cépage. Dans l'esprit de Valentini, le domaine défend une viticulture traditionnelle et bio, et sa production confidentielle est recherchée des amateurs de grand Trebbiano de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trebbiano d'Abruzzo",
+        "Montepulciano d'Abruzzo",
+        "Vino della Cardata"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "trebbiano",
+        "vieilles-vignes",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-prod-fattoria-la-valentina",
+      "nom": "Fattoria La Valentina",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Spoltore",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Spoltore, dans le Pescarese, Fattoria La Valentina est un domaine bio de référence, mené par les frères Di Properzio avec le conseil de l'œnologue renommé Luca D'Attoma. Créé dans les années 1990, il incarne la double âme du vin abruzzais, entre Apennins et Adriatique.\n\nLe domaine signe un Montepulciano d'Abruzzo Bellovedere, considéré comme l'une des références du cépage, ainsi que le Binomio (Montepulciano, en collaboration), un Trebbiano (Spelt) salué par la critique et un Cerasuolo soigné. Le style, bio et précis, allie la richesse du Montepulciano à une belle fraîcheur, dans des vins équilibrés et de garde. La certification biologique, le concours de Luca D'Attoma et la régularité de la gamme ont bâti la réputation du domaine. Fattoria La Valentina compte parmi les références du Pescarese et de l'Abruzzo bio.\n\nDomaine bio de référence du Pescarese, Fattoria La Valentina signe le Montepulciano Bellovedere et le Trebbiano Spelt, précis et de garde. C'est une belle adresse conseillée par Luca D'Attoma.\n\nLe conseil de Luca D'Attoma, l'un des œnologues les plus réputés d'Italie, et l'engagement biologique des frères Di Properzio ont hissé Fattoria La Valentina au rang de référence. Le Bellovedere est régulièrement cité parmi les grands Montepulciano d'Abruzzo. Servis sur des viandes rouges, du gibier ou des fromages pour les rouges, sur des poissons pour le Trebbiano Spelt, les vins séduisent par leur équilibre entre richesse et fraîcheur. La régularité de la gamme et la double implantation (Apennins et Adriatique) en font une valeur sûre du Pescarese et de l'Abruzzo bio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bellovedere (Montepulciano)",
+        "Spelt (Trebbiano)",
+        "Binomio (Montepulciano)",
+        "Cerasuolo"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "trebbiano",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "decanter|gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-prod-marramiero",
+      "nom": "Marramiero",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Rosciano",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rosciano, dans la vallée du Pescara, Marramiero est un domaine moderne et soigné, réputé pour ses Montepulciano et Trebbiano de sélection. Sur un vignoble bien exposé, la famille cultive les cépages abruzzais avec une recherche de précision.\n\nLe domaine signe des Montepulciano d'Abruzzo structurés (dont l'Inferi Riserva) et des Trebbiano de belle facture (Altare), régulièrement primés, ainsi qu'un Cerasuolo et d'autres cuvées (Incanto). Le style, moderne et précis, avec des élevages soignés, met en valeur le Montepulciano dans des vins amples et de garde. La qualité constante et les récompenses obtenues en font une valeur sûre du Pescarese. Marramiero illustre le savoir-faire des domaines modernes de l'Abruzzo, entre tradition du cépage et technique maîtrisée.\n\nDomaine moderne et soigné de la vallée du Pescara, Marramiero signe des Montepulciano structurés (Inferi) et de beaux Trebbiano (Altare). C'est une valeur sûre du Pescarese.\n\nLe soin apporté aux vinifications et aux élevages fait de Marramiero l'un des domaines modernes les plus réguliers de la vallée du Pescara. L'Inferi Riserva et l'Altare sont régulièrement primés. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour le Trebbiano, les vins séduisent par leur ampleur et leur précision. Le style, moderne mais équilibré, évite les excès, et la constance de la production fait de Marramiero une valeur sûre du Pescarese, appréciée pour la qualité de ses cuvées de sélection.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Inferi (Montepulciano Riserva)",
+        "Altare (Trebbiano)",
+        "Incanto"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "trebbiano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-valle-reale",
+      "nom": "Valle Reale",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Popoli",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Popoli, dans l'intérieur montagneux entre le Gran Sasso, la Majella et le Sirente, Valle Reale est un domaine bio d'altitude, l'un des plus originaux de l'Abruzzo. Leonardo Pizzolo, venu de Vénétie, y cultive la vigne dans un environnement sauvage et frais, à l'intersection de trois parcs nationaux.\n\nLe domaine signe des Montepulciano d'Abruzzo d'une fraîcheur et d'une tension rares, fruits de l'altitude et du climat continental : le San Calisto (issu des meilleures parcelles), les Vigne Nuove et le Vigneto di Popoli, ainsi que de beaux Trebbiano et Cerasuolo. Le style, bio et précis, privilégie l'élégance et la finesse plutôt que la puissance, offrant une expression montagnarde et rafraîchissante du Montepulciano, à rebours des vins solaires de la côte. La qualité et l'originalité de la gamme ont bâti la réputation du domaine. Valle Reale illustre le potentiel des terroirs d'altitude de l'Abruzzo.\n\nDomaine bio d'altitude entre Gran Sasso et Majella, Valle Reale signe des Montepulciano frais et tendus (San Calisto). C'est une expression montagnarde et originale de l'Abruzzo.\n\nLe pari de Leonardo Pizzolo — faire du grand vin dans un environnement de montagne réputé trop frais pour le Montepulciano — s'est révélé visionnaire : ses vins d'altitude offrent une élégance et une tension rares. Le San Calisto en est le fleuron. Servis sur des viandes, du gibier ou des fromages, les Montepulciano de Valle Reale séduisent par leur fraîcheur et leur finesse, à rebours des vins solaires de la côte. La démarche bio, l'originalité du terroir et la qualité de la gamme ont fait du domaine une référence des vins d'altitude de l'Abruzzo, salué par la critique internationale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "San Calisto (Montepulciano)",
+        "Vigne Nuove",
+        "Vigneto di Popoli",
+        "Trebbiano"
+      ],
+      "tags": [
+        "abruzzo",
+        "popoli",
+        "montepulciano",
+        "altitude",
+        "bio",
+        "montagne"
+      ],
+      "a_verifier": null,
+      "source": "winespectator"
+    },
+    {
+      "id": "it-abruzzo-prod-pasetti",
+      "nom": "Pasetti",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Francavilla al Mare",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Pecorino",
+        "Trebbiano Abruzzese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Colline Teramane DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine historique à cheval entre la côte (Francavilla al Mare) et la montagne (Ofena, dans le bassin de l'Aquilano), Pasetti cultive des vignes de la mer jusqu'à près de 1100 mètres d'altitude. Cette double implantation lui donne une palette rare, entre chaleur adriatique et fraîcheur d'altitude.\n\nLe domaine signe des Montepulciano d'Abruzzo de belle tenue (dont le Testarossa, issu des vignes d'altitude de l'Aquilano, et le Zaraosti) ainsi que de beaux Pecorino et Trebbiano. Le style, soigné et fidèle au terroir, met en valeur le Montepulciano dans des vins équilibrés, et tire parti de la fraîcheur des vignes de montagne. La qualité et la diversité de la gamme en font une valeur sûre de l'Abruzzo. Pasetti illustre la richesse des terroirs abruzzais, de la mer à la haute montagne.\n\nDomaine historique aux vignes de la mer à la haute altitude (Ofena), Pasetti signe des Montepulciano (Testarossa) et des Pecorino de belle tenue. C'est une valeur sûre de l'Abruzzo.\n\nLa double implantation de Pasetti, de la côte adriatique aux vignes de haute altitude d'Ofena, offre une diversité rare et permet des vins aux profils variés. Le Testarossa, issu des vignes de montagne, en est un bel exemple. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour les Pecorino et Trebbiano, les vins séduisent par leur équilibre. La qualité et la diversité de la gamme, ainsi que l'exploitation de terroirs d'altitude, font de Pasetti une valeur sûre et une belle illustration de la richesse des terroirs abruzzais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Testarossa Terre Aquilane",
+        "Zaraosti (Montepulciano)",
+        "Pecorino"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "pecorino",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-cataldi-madonna",
+      "nom": "Cataldi Madonna",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "L'Aquila",
+      "commune": "Ofena",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Pecorino",
+        "Trebbiano Abruzzese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ofena, dans un bassin d'altitude de la province de L'Aquila surnommé « le four de l'Abruzzo » pour ses chaleurs estivales et ses nuits fraîches, Cataldi Madonna est un domaine culte, mené par Luigi Cataldi Madonna, universitaire passionné surnommé « le professeur ». Ce terroir extrême, à 350-400 m, donne des vins d'une personnalité marquée.\n\nLe domaine est un pionnier du Pecorino, cépage qu'il a largement contribué à faire redécouvrir, et signe un Montepulciano d'Abruzzo (Tonì) profond et racé, ainsi qu'un Cerasuolo (Piè delle Vigne) considéré comme l'un des plus grands d'Abruzzo, d'une intensité et d'une garde remarquables. Le style, précis et fidèle au terroir d'altitude, allie la puissance solaire du bassin d'Ofena à la fraîcheur de l'altitude. La qualité et l'originalité de la gamme, portées par la personnalité de Luigi Cataldi Madonna, en font une référence de l'Abruzzo intérieur.\n\nDomaine culte d'Ofena, Cataldi Madonna est un pionnier du Pecorino et signe un grand Cerasuolo (Piè delle Vigne) et un beau Montepulciano (Tonì). C'est une référence des terroirs d'altitude de l'Abruzzo.\n\nUniversitaire et philosophe autant que vigneron, Luigi Cataldi Madonna a fait d'Ofena un laboratoire du Pecorino et du Montepulciano d'altitude, avec une personnalité et un franc-parler qui ont marqué la région. Le bassin d'Ofena, très chaud le jour et frais la nuit, donne des vins puissants mais équilibrés. Servis sur des viandes, du gibier ou des fromages pour les rouges, sur des poissons pour le Pecorino, sur charcuteries pour le grand Cerasuolo Piè delle Vigne, les vins séduisent par leur caractère. Le rôle pionnier du domaine pour le Pecorino et la qualité de sa gamme en font une référence de l'Abruzzo intérieur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tonì (Montepulciano)",
+        "Pecorino",
+        "Piè delle Vigne (Cerasuolo)",
+        "Malandrino"
+      ],
+      "tags": [
+        "abruzzo",
+        "ofena",
+        "montepulciano",
+        "pecorino",
+        "cerasuolo",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "italywinelist|decanter"
+    },
+    {
+      "id": "it-abruzzo-prod-praesidium",
+      "nom": "Praesidium",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "L'Aquila",
+      "commune": "Prezza",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Cerasuolo (Montepulciano)"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Prezza, dans la vallée Peligna au cœur de la province de L'Aquila, Praesidium est un domaine culte pour les amateurs de Montepulciano d'Abruzzo traditionnel. Loin des collines côtières, dans cet intérieur montagneux entouré par les massifs des Apennins, la famille Ottaviani perpétue une viticulture ancestrale et une vinification sans concession à la modernité.\n\nLe domaine cultive le Montepulciano en pergola abruzzaise (tendone) sur des sols argilo-calcaires d'altitude, sous un climat continental aux nuits fraîches qui préserve l'acidité et la finesse. Les vins sont élaborés à l'ancienne, avec de longs élevages en grands foudres et une patience rare, dans un style traditionnel qui privilégie l'authenticité et la profondeur. Le Montepulciano d'Abruzzo de Praesidium, et sa Riserva, sont des rouges denses, complexes et de très longue garde, aux arômes de fruits noirs, de cuir, de tabac et d'épices, qui vieillissent magnifiquement et comptent parmi les plus purs représentants du cépage. Le Cerasuolo, lui, est régulièrement cité parmi les plus grands rosés d'Abruzzo, d'une intensité et d'une profondeur remarquables. La production, confidentielle et artisanale, est très recherchée des connaisseurs, qui voient en Praesidium l'un des gardiens de l'âme du Montepulciano traditionnel.\n\nDomaine culte de la vallée Peligna, Praesidium signe des Montepulciano d'Abruzzo traditionnels, profonds et de très longue garde, et un Cerasuolo remarquable. C'est l'une des expressions les plus authentiques et les plus recherchées du cépage, au cœur de l'intérieur montagneux.\n\nL'intérieur montagneux de l'Abruzzo, dominé par les massifs du Gran Sasso, de la Majella et du Sirente, offre un visage radicalement différent de la côte : altitude, nuits fraîches, climat continental. C'est dans ce décor sauvage, à Prezza, que Praesidium défend une viticulture d'un autre temps, à contre-courant des modes. La conduite en tendone, souvent décriée, y donne pourtant des vins remarquables lorsque les rendements sont maîtrisés, et la fraîcheur de l'altitude apporte au Montepulciano une élégance et une capacité de garde peu communes. Les longs élevages en grands foudres et le refus de toute recette donnent des vins profondément authentiques, qui demandent du temps mais récompensent par une complexité rare. Servi sur des viandes rouges, de l'agneau (roi de la cuisine abruzzaise), du gibier ou des fromages affinés, le Montepulciano de Praesidium se patine sur une décennie et plus, développant des arômes tertiaires de cuir, de sous-bois et d'épices. Le Cerasuolo, dense et vineux, illustre l'excellence de ce rosé de garde typiquement abruzzais. Confidentiel et sans compromis, Praesidium est devenu un nom de référence pour les amateurs en quête du Montepulciano traditionnel dans sa forme la plus pure et la plus émouvante.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montepulciano d'Abruzzo Riserva",
+        "Montepulciano d'Abruzzo",
+        "Cerasuolo d'Abruzzo"
+      ],
+      "tags": [
+        "abruzzo",
+        "prezza",
+        "montepulciano",
+        "cerasuolo",
+        "tradition",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-feudo-antico",
+      "nom": "Feudo Antico",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Tollo",
+      "pays": "Italie",
+      "cepages": [
+        "Pecorino",
+        "Montepulciano",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Tullum DOCG",
+        "Abruzzo Pecorino DOC",
+        "Montepulciano d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tollo, dans le Chietino, Feudo Antico est le domaine pionnier de la petite DOCG Tullum (Terre Tollesi), l'une des deux DOCG de l'Abruzzo. En agriculture biologique, il valorise les cépages du terroir de Tollo avec une exigence qualitative.\n\nLe domaine signe des Tullum Pecorino et Passerina — blancs frais, salins et de terroir — ainsi que de beaux Montepulciano (Tullum Rosso), dans un style précis et bio. Le travail sur cette petite appellation confidentielle, la certification biologique et la qualité constante de la gamme ont fait de Feudo Antico une référence. Le domaine illustre le potentiel qualitatif du Chietino, souvent réduit au volume, et la valorisation des cépages blancs autochtones (Pecorino, Passerina). Feudo Antico est l'ambassadeur de la DOCG Tullum.\n\nPionnier de la DOCG Tullum, Feudo Antico signe des Pecorino et Passerina bio et de terroir, ainsi que de beaux Montepulciano. C'est la référence de cette petite appellation du Chietino.\n\nEn misant sur la petite DOCG Tullum et sur les cépages blancs autochtones, Feudo Antico a contribué à faire reconnaître le potentiel qualitatif du Chietino, longtemps réduit au volume. La démarche biologique renforce l'ancrage territorial. Servis sur des poissons, des fruits de mer ou une cuisine méditerranéenne pour les blancs, sur des viandes pour le Montepulciano, les vins séduisent par leur fraîcheur et leur salinité. La qualité constante et le travail sur une appellation confidentielle font de Feudo Antico l'ambassadeur de la DOCG Tullum et une belle référence du sud de l'Abruzzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tullum Pecorino",
+        "Tullum Passerina",
+        "Tullum Rosso (Montepulciano)",
+        "Biologico"
+      ],
+      "tags": [
+        "abruzzo",
+        "tollo",
+        "tullum",
+        "pecorino",
+        "montepulciano",
+        "bio",
+        "docg"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-il-feuduccio",
+      "nom": "Il Feuduccio",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Orsogna",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Orsogna, dans le Chietino, Il Feuduccio est un domaine réputé pour ses Montepulciano riches et polis. Sur les collines du sud de l'Abruzzo, la famille cultive le Montepulciano avec une recherche de concentration et d'élégance.\n\nLe domaine signe des Montepulciano d'Abruzzo profonds et soignés (dont l'Ursonia et le Margae) ainsi que des blancs (Yentru, en Pecorino). Le style, moderne et ambitieux, avec des élevages sous bois, met en valeur le Montepulciano dans des vins amples et de garde, salués par la critique (Decanter). La qualité et la régularité de la gamme en font une valeur sûre du Chietino. Il Feuduccio illustre le potentiel qualitatif du sud de l'Abruzzo, souvent associé au volume mais capable de grands Montepulciano.\n\nDomaine réputé d'Orsogna, Il Feuduccio signe des Montepulciano riches et polis (Ursonia, Margae) et de beaux blancs. C'est une valeur sûre du Chietino.\n\nL'ambition de la famille a fait d'Il Feuduccio l'un des domaines qui ont démontré que le Chietino pouvait donner de grands Montepulciano, et non seulement des vins de volume. L'Ursonia en est le fleuron. Servis sur des viandes rouges, du gibier ou des fromages affinés, les Montepulciano du domaine se patinent sur plusieurs années ; les blancs apportent fraîcheur et équilibre. Le style, moderne et concentré mais soigné, a été salué par la critique. La régularité de la gamme fait d'Il Feuduccio une valeur sûre du sud de l'Abruzzo, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ursonia (Montepulciano)",
+        "Margae",
+        "Yentru (Pecorino)"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "orsogna",
+        "montepulciano"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-abruzzo-prod-valori",
+      "nom": "Valori",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Sant'Omero",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Colline Teramane DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Omero, dans le Teramano, Valori est un domaine bio mené par Luigi Valori, réputé pour ses Montepulciano authentiques à bon rapport qualité-prix. Sur les collines du nord de l'Abruzzo, la famille cultive le Montepulciano en agriculture biologique.\n\nLe domaine signe des Montepulciano d'Abruzzo francs et fidèles au terroir (dont le Vigna Sant'Angelo et le Nero), ainsi que des blancs (Trebbiano, Pecorino), dans un style respectueux et sans artifice. Le travail biologique et la recherche d'authenticité donnent des vins sincères, d'un excellent rapport qualité-prix. La régularité de la gamme et l'engagement écologique en font une belle adresse du Teramano. Valori illustre la vague bio de l'Abruzzo et la valorisation du Montepulciano dans un registre authentique et accessible.\n\nDomaine bio du Teramano, Valori signe des Montepulciano authentiques et francs à bon rapport qualité-prix. C'est une belle adresse bio du nord de l'Abruzzo.\n\nL'engagement biologique de Luigi Valori et sa recherche d'authenticité donnent des Montepulciano francs et sincères, fidèles au terroir du Teramano. Servis sur des viandes rouges, de l'agneau ou des fromages, ils séduisent par leur caractère et leur équilibre, à un rapport qualité-prix remarquable ; les blancs accompagnent poissons et cuisine légère. La démarche écologique, la constance de la gamme et le refus des artifices font de Valori une belle adresse bio du nord de l'Abruzzo, appréciée des amateurs de vins authentiques et accessibles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montepulciano d'Abruzzo Vigna Sant'Angelo",
+        "Nero (Montepulciano)",
+        "Trebbiano"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montepulciano",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-tenuta-i-fauri",
+      "nom": "Tenuta I Fauri",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Ari",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Cococciola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ari, dans le Chietino, Tenuta I Fauri est un domaine familial dynamique, mené par la famille Di Camillo (Luigi et ses enfants Valentina et Domenico). Sur les collines du sud de l'Abruzzo, la famille cultive les cépages abruzzais avec un bel esprit artisanal.\n\nLe domaine signe des Montepulciano d'Abruzzo précis et gourmands (dont l'Ottobre Rosso et le Baldovino), un Cerasuolo apprécié et des blancs (Trebbiano, et le rare Cococciola, cépage local). Le style, franc et soigné, met en valeur les cépages abruzzais dans des vins équilibrés et de belle buvabilité, à bon rapport qualité-prix. La régularité de la gamme et le dynamisme de la famille ont bâti la réputation du domaine, salué par la critique (Gambero Rosso). Tenuta I Fauri illustre le renouveau des domaines familiaux du Chietino.\n\nDomaine familial dynamique du Chietino, Tenuta I Fauri signe des Montepulciano et Cerasuolo précis et gourmands, ainsi que le rare Cococciola. C'est une belle adresse du sud de l'Abruzzo.\n\nLe dynamisme de la famille Di Camillo, portée par la nouvelle génération (Valentina et Domenico), a fait de Tenuta I Fauri l'une des belles révélations du Chietino. L'attachement aux cépages locaux, y compris le rare Cococciola, témoigne d'un bel esprit territorial. Servis sur des viandes pour les Montepulciano, sur des poissons et fruits de mer pour les blancs, sur charcuteries pour le Cerasuolo, les vins séduisent par leur franchise et leur buvabilité. Salué par la critique et d'un excellent rapport qualité-prix, le domaine illustre le renouveau des familles vigneronnes du sud de l'Abruzzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ottobre Rosso (Montepulciano)",
+        "Baldovino",
+        "Cerasuolo",
+        "Cococciola"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "cerasuolo",
+        "cococciola",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-prod-villa-medoro",
+      "nom": "Villa Medoro",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Atri",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Colline Teramane DOCG",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Atri, dans le Teramano, Villa Medoro est un domaine réputé mené par Federica Morricone, entre les collines de Teramo et l'Adriatique. Sur de beaux terroirs, la famille cultive le Montepulciano et les cépages abruzzais avec une recherche de qualité.\n\nLe domaine signe des Montepulciano d'Abruzzo de belle facture (dont l'Adrano et le Rosso di Montepagano) ainsi que des blancs (Trebbiano, Pecorino) et un Cerasuolo. Le style, soigné et fidèle au terroir, met en valeur le Montepulciano dans des vins équilibrés et de garde. La régularité de la gamme et la qualité constante en font une valeur sûre du Teramano. Villa Medoro illustre le savoir-faire des domaines du nord de l'Abruzzo, entre collines et mer, dans un style moderne et accessible.\n\nDomaine réputé d'Atri mené par Federica Morricone, Villa Medoro signe des Montepulciano de belle facture (Adrano) et de beaux blancs. C'est une valeur sûre du Teramano.\n\nMenée par Federica Morricone, Villa Medoro conjugue tradition familiale et vision moderne, sur les terroirs d'Atri entre collines de Teramo et Adriatique. L'Adrano en est le fleuron. Servis sur des viandes rouges, du gibier ou des fromages pour les Montepulciano, sur des poissons pour les blancs, les vins séduisent par leur équilibre et leur régularité. Le style, soigné et accessible, met en valeur le Montepulciano sans excès. La constance de la production et le bon rapport qualité-prix font de Villa Medoro une valeur sûre du Teramano, représentative du savoir-faire du nord de l'Abruzzo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Adrano (Montepulciano)",
+        "Montepulciano d'Abruzzo",
+        "Rosso di Montepagano"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "atri",
+        "montepulciano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-zaccagnini",
+      "nom": "Zaccagnini",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Bolognano",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolognano, dans le Pescarese, Cantina Zaccagnini est l'un des domaines les plus connus d'Abruzzo, notamment pour son Montepulciano « dal tralcetto », reconnaissable au petit sarment de vigne attaché à chaque bouteille. Fondée dans les années 1970, la maison a bâti une large diffusion internationale. Elle signe une gamme étendue de Montepulciano, Trebbiano et Pecorino, dans un style gourmand et accessible, ainsi que des cuvées plus ambitieuses (San Clemente, Capsico). L'esthétique reconnaissable et le marketing soigné ont fait la notoriété du domaine, parfois au détriment de son image qualitative, mais la gamme reste fiable et représentative. Zaccagnini est l'un des noms les plus diffusés de l'Abruzzo, à découvrir sur des viandes et une cuisine conviviale, avec un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Vino dal Tralcetto (Montepulciano)",
+        "San Clemente",
+        "Capsico"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "tralcetto",
+        "diffusion"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-cantina-tollo",
+      "nom": "Cantina Tollo",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Tollo",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tollo, dans le Chietino, Cantina Tollo est l'une des plus importantes et des meilleures coopératives d'Abruzzo, saluée par la critique pour sa démarche qualitative et durable. Rassemblant de nombreux vignerons sur un vaste vignoble, elle produit des Montepulciano, Pecorino et Trebbiano réguliers et souvent primés (Cagiòlo, Aldiano, Rocca Ventosa). Le style, moderne et fiable, met en valeur les cépages abruzzais dans des vins accessibles et bien faits, à excellent rapport qualité-prix. L'engagement en faveur de la viticulture durable et la qualité constante de la gamme font de Cantina Tollo un modèle de coopérative, moteur qualitatif du Chietino. C'est une valeur sûre pour découvrir les vins d'Abruzzo, du quotidien aux sélections plus ambitieuses.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cagiòlo (Montepulciano Riserva)",
+        "Aldiano",
+        "Pecorino",
+        "Rocca Ventosa"
+      ],
+      "tags": [
+        "abruzzo",
+        "tollo",
+        "montepulciano",
+        "pecorino",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "decanter|italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-codice-citra",
+      "nom": "Codice Citra",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Ortona",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ortona, dans le Chietino, Codice Citra (Citra Vini) est l'une des plus grandes coopératives d'Abruzzo, rassemblant des milliers d'hectares et de nombreux vignerons. Elle produit une gamme très étendue de Montepulciano, Trebbiano, Pecorino et Cerasuolo, à toutes les gammes de prix. Si la production de volume domine, la coopérative soigne aussi des sélections de qualité (Laus Vitae, Ferzo) qui montrent le potentiel de ses meilleurs terroirs. Le style, fiable et accessible, met en valeur les cépages abruzzais dans des vins gourmands à bon rapport qualité-prix. Codice Citra illustre le poids et le rôle des grandes coopératives dans l'économie viticole de l'Abruzzo, et leur capacité croissante à produire des vins de qualité. C'est une adresse fiable pour découvrir la région à prix doux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Laus Vitae (Montepulciano)",
+        "Bacco",
+        "Ferzo (Pecorino)"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "cooperative",
+        "volume"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-talamonti",
+      "nom": "Talamonti",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Loreto Aprutino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Loreto Aprutino, dans le Pescarese, Talamonti est un domaine moderne réputé pour son bon rapport qualité-prix. Sur de beaux terroirs de collines, il produit une gamme soignée de Montepulciano, Trebbiano et Pecorino (Kudos, Moda, Trecballi), dans un style net et accessible, salué par la critique (Decanter). Le domaine met en valeur les cépages abruzzais dans des vins équilibrés et gourmands, sensément tarifés. La régularité de la gamme et le soin apporté aux vinifications en font une valeur sûre du Pescarese. Talamonti illustre la catégorie des domaines modernes de l'Abruzzo qui proposent des vins fiables et bien faits à des prix attractifs, à découvrir sur une cuisine variée, des viandes aux poissons. Le domaine, relativement récent, a rapidement trouvé sa place grâce à un positionnement malin, offrant des vins soignés et gourmands qui séduisent autant les amateurs que les professionnels en quête de bons rapports qualité-prix abruzzais.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kudos (Montepulciano)",
+        "Moda",
+        "Trecballi (Trebbiano)"
+      ],
+      "tags": [
+        "abruzzo",
+        "loreto-aprutino",
+        "montepulciano",
+        "trebbiano"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-abruzzo-prod-tenuta-ulisse",
+      "nom": "Tenuta Ulisse",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Crecchio",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC",
+        "Cerasuolo d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Crecchio, dans le Chietino, Tenuta Ulisse est un domaine moderne à forte notoriété, notamment à l'international. Sur un vaste vignoble, il produit des Montepulciano riches et gourmands (Amaranta, 10 Vendemmie) et des blancs (Unico, en Pecorino), dans un style ample, mûr et accessible, qui a séduit un large public. La gamme, bien diffusée et à l'esthétique soignée, met en valeur les cépages abruzzais dans des vins généreux. Si le style, parfois marqué par le bois et la concentration, vise avant tout la gourmandise, la qualité reste au rendez-vous. Tenuta Ulisse illustre la réussite commerciale des domaines modernes du Chietino, à découvrir sur des viandes et une cuisine généreuse. Le succès du domaine, notamment sur les marchés export, illustre l'appétit international pour les Montepulciano riches et généreux, dont Tenuta Ulisse est devenu l'un des ambassadeurs les plus visibles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Amaranta (Montepulciano)",
+        "Unico (Pecorino)",
+        "10 Vendemmie"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "pecorino",
+        "diffusion"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-podere-castorani",
+      "nom": "Podere Castorani",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Alanno",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Alanno, dans le Pescarese, Podere Castorani est un domaine historique relancé par le pilote de Formule 1 Jarno Trulli, originaire de la région. Sur de beaux terroirs, il produit des Montepulciano et des blancs soignés (Castorani, Amorino, Coste delle Plaie), dans un style moderne et fiable. La notoriété de son propriétaire et la qualité régulière de la gamme ont assuré au domaine une belle visibilité. Le style, net et accessible, met en valeur les cépages abruzzais dans des vins équilibrés. Podere Castorani illustre l'attrait qu'exerce l'Abruzzo, y compris sur des personnalités venues d'autres horizons, et compte parmi les domaines bien diffusés du Pescarese, à découvrir sur des viandes et une cuisine variée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Castorani (Montepulciano)",
+        "Amorino",
+        "Coste delle Plaie"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "trulli"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-pietrantonj",
+      "nom": "Pietrantonj",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "L'Aquila",
+      "commune": "Vittorito",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Cerasuolo (Montepulciano)"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Cerasuolo d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vittorito, dans la vallée Peligna (province de L'Aquila), Pietrantonj est un domaine historique de l'intérieur montagneux, aux caves anciennes remarquables. Sur ce terroir d'altitude au climat continental, la famille perpétue une tradition de Montepulciano et de Cerasuolo. Le domaine signe des Montepulciano d'Abruzzo et un Cerasuolo de tradition, ainsi que des blancs (Trebbiano), dans un style fidèle au terroir de l'Aquilano. La fraîcheur de l'altitude apporte de l'équilibre aux vins. L'ancienneté du domaine, ses caves historiques et son ancrage dans l'intérieur en font une belle adresse. Pietrantonj illustre la tradition viticole des terroirs d'altitude de l'Abruzzo, à découvrir sur l'agneau et la cuisine de montagne, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montepulciano d'Abruzzo",
+        "Cerasuolo d'Abruzzo",
+        "Trebbiano"
+      ],
+      "tags": [
+        "abruzzo",
+        "vittorito",
+        "montepulciano",
+        "cerasuolo",
+        "altitude",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-camillo-montori",
+      "nom": "Camillo Montori",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Controguerra",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Controguerra DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Controguerra, dans le Teramano, Camillo Montori est une maison réputée du nord de l'Abruzzo. Sur les collines argilo-calcaires des Colline Teramane, la famille cultive le Montepulciano et les cépages abruzzais. Le domaine signe des Montepulciano d'Abruzzo (Fonte Cupa) et des Trebbiano fiables et représentatifs du Teramano, ainsi que des vins de l'appellation Controguerra, dans un style soigné et accessible. La régularité de la gamme et le bon rapport qualité-prix en font une valeur sûre du nord de l'Abruzzo. Camillo Montori illustre le savoir-faire des maisons familiales des Colline Teramane, à découvrir sur des viandes et une cuisine régionale, dans un registre fidèle au terroir. L'ancrage à Controguerra, à l'extrême nord de la région, place le domaine au cœur des Colline Teramane, gage d'un Montepulciano de belle tenue et fidèle à l'identité du Teramano.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fonte Cupa (Montepulciano)",
+        "Trebbiano d'Abruzzo",
+        "Controguerra"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "controguerra",
+        "montepulciano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-orlandi-contucci-ponno",
+      "nom": "Orlandi Contucci Ponno",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Roseto degli Abruzzi",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Controguerra DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Roseto degli Abruzzi, dans le Teramano, Orlandi Contucci Ponno est un domaine ouvert aux cépages internationaux, originalité dans une région dominée par les cépages autochtones. Sur ses terroirs, il cultive le Montepulciano mais aussi le Chardonnay, le Cabernet et le Merlot. Le domaine signe des Montepulciano (La Regia Specula), des assemblages (Roggio del Filare) et de beaux Chardonnay et Trebbiano, dans un style soigné et original. L'ouverture aux cépages internationaux, permise notamment par l'appellation Controguerra, distingue ce domaine. La qualité et l'originalité de la gamme en font une belle adresse du Teramano. Orlandi Contucci Ponno illustre la diversité de l'Abruzzo, à découvrir sur une cuisine variée, entre tradition et cépages internationaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "La Regia Specula (Montepulciano)",
+        "Roggio del Filare",
+        "Chardonnay"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montepulciano",
+        "chardonnay"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-abruzzo-prod-contesa",
+      "nom": "Contesa",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Collecorvino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Collecorvino, dans le Pescarese, Contesa est le domaine de Rocco Pasetti, réputé pour ses Montepulciano et Pecorino bien faits. Sur de beaux terroirs de collines, il cultive les cépages abruzzais avec une recherche de qualité. Le domaine signe des Montepulciano d'Abruzzo (Vigneto Corvino), des Pecorino et un Cerasuolo, dans un style soigné et gourmand. La régularité de la gamme et le bon rapport qualité-prix en font une valeur sûre du Pescarese. Contesa illustre le savoir-faire des domaines familiaux de l'Abruzzo, à découvrir sur des viandes pour les rouges et des poissons pour les blancs, dans un registre fidèle au terroir et accessible. Rocco Pasetti, issu d'une famille profondément liée au vin abruzzais, met son savoir-faire au service de cuvées équilibrées et sincères, qui font de Contesa une valeur sûre et attachante du Pescarese.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigneto Corvino (Montepulciano)",
+        "Pecorino",
+        "Cerasuolo"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "pecorino"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-spinelli",
+      "nom": "Spinelli",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Atessa",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Cococciola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Atessa, dans le Chietino, Spinelli est une maison bien connue à l'export, fondée en 1973. Sur un vaste approvisionnement, complété par son propre vignoble, elle produit une gamme large de Montepulciano, Trebbiano, Pecorino et Cococciola, dans un style fiable et accessible. La nouvelle génération a récemment renforcé l'orientation qualitative et le marché intérieur. Le domaine met en valeur les cépages abruzzais, y compris les blancs autochtones, dans des vins gourmands à bon rapport qualité-prix. Spinelli illustre la catégorie des maisons abruzzaises tournées vers la diffusion, capables de proposer des vins représentatifs et bien faits à grande échelle. C'est une adresse fiable pour découvrir la région, à prix doux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montepulciano d'Abruzzo",
+        "Trebbiano d'Abruzzo",
+        "Cococciola",
+        "Pecorino"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "export",
+        "volume"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-abruzzo-prod-cantina-frentana",
+      "nom": "Cantina Frentana",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Chieti",
+      "commune": "Rocca San Giovanni",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Cococciola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Abruzzo Pecorino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rocca San Giovanni, dans le Chietino, Cantina Frentana est une coopérative attachée aux cépages locaux, notamment le rare Cococciola, cépage blanc autochtone dont elle est l'un des principaux défenseurs. Elle produit des Montepulciano, Pecorino, Trebbiano et Cococciola, dans un style fiable et représentatif du terroir frentano. Le style, franc et accessible, met en valeur les cépages abruzzais à bon rapport qualité-prix. La valorisation du Cococciola et l'ancrage territorial distinguent cette coopérative. Cantina Frentana illustre le rôle des coopératives dans la préservation des cépages autochtones de l'Abruzzo, à découvrir notamment pour son Cococciola, blanc frais et original, sur des poissons et fruits de mer.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Costa del Mulino",
+        "Cococciola",
+        "Pecorino",
+        "Montepulciano"
+      ],
+      "tags": [
+        "abruzzo",
+        "chieti",
+        "montepulciano",
+        "cococciola",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-abruzzo-prod-chiusa-grande",
+      "nom": "Chiusa Grande",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Pescara",
+      "commune": "Nocciano",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Nocciano, dans le Pescarese, Chiusa Grande est un domaine bio, l'un des pionniers de l'agriculture biologique en Abruzzo. Sur ses terroirs de collines, il cultive le Montepulciano et les cépages abruzzais dans une démarche écologique. Le domaine signe des Montepulciano d'Abruzzo (Perla Nera) et des blancs authentiques, dans un style respectueux du terroir. Le travail biologique et la recherche d'authenticité donnent des vins sincères. La démarche écologique et la qualité de la gamme en font une belle adresse du Pescarese. Chiusa Grande illustre l'ancrage précoce du bio en Abruzzo, à découvrir sur des viandes pour les rouges et des poissons pour les blancs, dans un registre authentique et accessible. En s'engageant tôt dans le bio, alors que la démarche restait rare en Abruzzo, le domaine a joué un rôle de précurseur, et sa Perla Nera illustre le potentiel d'un Montepulciano cultivé dans le respect de l'environnement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Perla Nera (Montepulciano)",
+        "Néon",
+        "Bianchella"
+      ],
+      "tags": [
+        "abruzzo",
+        "pescara",
+        "montepulciano",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-abruzzo-prod-faraone",
+      "nom": "Faraone",
+      "type": "domaine",
+      "region": "Abruzzo",
+      "sous_region": "Teramo",
+      "commune": "Giulianova",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano Abruzzese",
+        "Pecorino",
+        "Montonico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Montepulciano d'Abruzzo DOC",
+        "Trebbiano d'Abruzzo DOC",
+        "Colline Teramane DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Giulianova, dans le Teramano, Faraone est un domaine attaché aux cépages autochtones, dont le rare Montonico, variété blanche locale qu'il défend. Sur les collines du nord de l'Abruzzo, la famille cultive le Montepulciano et les cépages abruzzais. Le domaine signe des Montepulciano d'Abruzzo (Le Vigne di Federico), des Trebbiano et le rare Montonico, dans un style fidèle au terroir. La valorisation des cépages autochtones et le bon rapport qualité-prix distinguent ce domaine. Faraone illustre l'attachement au patrimoine ampélographique de l'Abruzzo, à découvrir notamment pour son Montonico, blanc original, ainsi que ses Montepulciano de terroir, sur une cuisine régionale. La défense du Montonico, cépage blanc autochtone que peu de vignerons cultivent encore, témoigne d'un attachement rare au patrimoine ampélographique du Teramano et fait toute l'originalité du domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Vigne di Federico (Montepulciano)",
+        "Montonico",
+        "Trebbiano"
+      ],
+      "tags": [
+        "abruzzo",
+        "teramo",
+        "montepulciano",
+        "montonico",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    }
+  ]
+}

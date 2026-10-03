@@ -1,0 +1,998 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "altoadige",
+  "region_label": "Alto Adige (Italie)",
+  "source_file": "producteurs_altoadige.json",
+  "built_at": "2026-06-28",
+  "count": 22,
+  "items": [
+    {
+      "id": "it-altoadige-prod-cantina-terlano",
+      "nom": "Cantina Terlano",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "commune": "Terlano",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Bianco",
+        "Sauvignon",
+        "Chardonnay",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Terlano DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Terlano, au-dessus de Bolzano, la Cantina Terlano (Kellerei Terlan) est la référence absolue des grands blancs d'Alto Adige et l'une des coopératives les plus prestigieuses d'Italie. Fondée en 1893 et réunissant aujourd'hui quelque 143 familles de vignerons, elle a fait de la qualité et de la longévité sa philosophie : ses blancs comptent parmi les rares vins italiens capables de vieillir des décennies.\n\nSur les sols de porphyre quartzeux qui font la singularité de Terlano, le Pinot Bianco (Weissburgunder) trouve son expression la plus aboutie, aux côtés du Sauvignon, du Chardonnay et du Pinot Grigio. La gamme est dominée par des sommets : le Vorberg (Pinot Bianco Riserva élevé en grands foudres), la Nova Domus (assemblage terlaner), le Quarz (Sauvignon) et surtout la Terlaner Primo Grande Cuvée, qui a décroché la note parfaite de 100 points chez Falstaff et le titre de meilleur vin blanc. Plus singulière encore, la série Rarity propose de très vieux millésimes redégorgés après des décennies sur lies, témoignage unique du potentiel de garde de ces blancs.\n\nÉtalon des blancs alpins et locomotive qualitative de toute la région, la Cantina Terlano démontre qu'un grand vin blanc de garde peut naître d'une coopérative. Année après année, elle truste les sommets des guides internationaux et demeure la référence incontournable de l'Alto Adige.\n\nLe secret de Terlano tient à sa géologie : des sols de porphyre quartzeux, riches en minéraux, qui confèrent aux blancs une tension saline et une capacité de garde uniques en Italie. Les vins fermentent et s'élèvent longuement, souvent en grands foudres, et les meilleures cuvées ne sont commercialisées qu'après plusieurs années. La fameuse série Rarity pousse cette logique à l'extrême : des bouteilles conservées des décennies sur lies dans la cave avant dégorgement, qui démontrent qu'un Pinot Bianco peut rivaliser de longévité avec les plus grands blancs du monde. Servis sur des poissons, des asperges (spécialité locale), des volailles ou des fromages, ces vins gagnent en complexité — fruits mûrs, miel, épices, notes grillées — sur dix, vingt ans et au-delà. Dirigée de longue date par l'œnologue Rudi Kofler, la cave incarne une vision patiente et exigeante du vin blanc, et son influence rayonne sur toute la viticulture de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Terlaner Primo Grande Cuvée",
+        "Vorberg Pinot Bianco Riserva",
+        "Nova Domus Riserva",
+        "Quarz Sauvignon",
+        "Rarity"
+      ],
+      "tags": [
+        "alto-adige",
+        "terlano",
+        "pinot-bianco",
+        "coop",
+        "garde",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "wineenthusiast|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-tramin",
+      "nom": "Cantina Tramin",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Termeno (Tramin)",
+      "pays": "Italie",
+      "cepages": [
+        "Gewürztraminer",
+        "Pinot Grigio",
+        "Pinot Nero",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Termeno (Tramin), village qui a donné son nom au Gewürztraminer, la Cantina Tramin est la coopérative de référence de ce cépage emblématique et l'une des plus réputées d'Alto Adige. Sous l'impulsion de son œnologue Willi Stürz, elle a porté ses vins au plus haut niveau international.\n\nLe fleuron est le Gewürztraminer Nussbaumer, considéré comme la référence mondiale du cépage : un vin d'une intensité aromatique spectaculaire — rose, litchi, épices, fruits exotiques — mais d'un équilibre et d'une fraîcheur remarquables, à mille lieues des Gewürztraminer lourds. La cuvée Terminum (vendange tardive) et surtout l'Epokale, affiné plusieurs années dans une ancienne mine d'argent à 2000 mètres, comptent parmi les plus grands vins doux d'Italie. La cave excelle aussi sur le Pinot Grigio (Unterebner) et le Pinot Nero. Le travail soigné des coteaux d'altitude préserve l'acidité et la finesse de cépages réputés capricieux.\n\nAmbassadrice du Gewürztraminer dans le monde, la Cantina Tramin signe des blancs aromatiques d'une précision rare et des vins doux d'exception. C'est l'une des grandes coopératives d'Italie et un pilier de la réputation de l'Alto Adige.\n\nLe village de Tramin a non seulement donné son nom au Gewürztraminer, mais offre aussi à ce cépage capricieux des coteaux d'altitude idéaux, où l'amplitude thermique préserve l'acidité et affine les arômes. Le Nussbaumer, issu des meilleures parcelles, est élevé pour révéler toute la palette du cépage sans jamais verser dans la lourdeur — un équilibre que peu de Gewürztraminer atteignent. L'Epokale relève d'une démarche unique : une vendange tardive affinée plusieurs années dans les galeries d'une ancienne mine d'argent du Monteneve, à 2000 mètres, dans des conditions de température et d'humidité constantes. Servis sur des cuisines épicées, des fromages persillés ou en méditation, les grands Gewürztraminer de Tramin sont d'une longévité surprenante. Sous l'impulsion de Willi Stürz, la coopérative a hissé l'ensemble de sa gamme — Pinot Grigio Unterebner, Pinot Nero Maglen, Sauvignon — au plus haut niveau, et truste les sommets des guides année après année.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gewürztraminer Nussbaumer",
+        "Epokale",
+        "Terminum",
+        "Unterebner Pinot Grigio"
+      ],
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "gewurztraminer",
+        "nussbaumer",
+        "coop",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-st-michael-eppan",
+      "nom": "St. Michael-Eppan",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "commune": "Appiano (Eppan)",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Pinot Bianco",
+        "Chardonnay",
+        "Pinot Grigio",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Appiano (Eppan), au cœur de l'Oltradige, la cave St. Michael-Eppan (San Michele Appiano) est l'une des coopératives les plus titrées d'Italie. Réunissant des centaines de familles sur des terroirs variés, elle conjugue volume et excellence sous la houlette d'un chef de cave de renom.\n\nLa ligne Sanct Valentin, qui décline les meilleurs cépages de la région — Sauvignon, Chardonnay, Pinot Grigio, Pinot Nero, Gewürztraminer —, figure parmi les références de l'Alto Adige, régulièrement saluée par les guides. Au sommet, l'Appius est une cuvée d'auteur, assemblage confidentiel composé par le chef de cave dans les meilleurs millésimes et commercialisé après un long élevage : l'un des grands vins blancs d'Italie. La diversité des terroirs d'Appiano, des coteaux frais en altitude aux secteurs plus chauds, permet une gamme d'une rare étendue et d'une grande régularité.\n\nModèle de coopérative d'excellence, St. Michael-Eppan rivalise avec les meilleurs domaines de la région, du Sanct Valentin accessible à l'Appius de prestige. C'est l'une des valeurs les plus sûres et les plus titrées de l'Alto Adige.\n\nLa force de St. Michael-Eppan tient à la diversité de ses terroirs, des coteaux frais et venteux en altitude — propices au Sauvignon et au Pinot Nero — aux secteurs plus chauds de la vallée. Cette palette permet à la cave d'exceller sur une gamme exceptionnellement large. La ligne Sanct Valentin, lancée dans les années 1980, fut pionnière dans la quête qualitative des coopératives d'Alto Adige et reste une référence. L'Appius, lui, relève de l'exception : conçu comme une œuvre d'auteur par le chef de cave Hans Terzer, il n'est produit que dans les grands millésimes, longuement élevé, et présenté dans un flacon collector. Servis sur des poissons, des volailles, des fromages ou une cuisine raffinée, les vins de la cave séduisent par leur précision et leur profondeur. Régulièrement classée deuxième producteur le plus titré de la région derrière Terlano, St. Michael-Eppan incarne l'excellence des grandes coopératives de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Appius",
+        "Sanct Valentin Sauvignon",
+        "Sanct Valentin Chardonnay",
+        "The Wine Collection"
+      ],
+      "tags": [
+        "alto-adige",
+        "appiano",
+        "sanct-valentin",
+        "appius",
+        "coop",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|wineindustryadvisor"
+    },
+    {
+      "id": "it-altoadige-prod-alois-lageder",
+      "nom": "Alois Lageder",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Magrè (Margreid)",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Bianco",
+        "Cabernet Sauvignon",
+        "Pinot Nero",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Magrè (Margreid), dans le sud de l'Alto Adige, Alois Lageder est l'un des plus grands domaines familiaux de la région et un pionnier mondial de la biodynamie à grande échelle. Sur six générations, la famille a fait de la durabilité et du respect du vivant une philosophie globale, jusqu'à l'architecture de sa cave.\n\nLe domaine cultive un large éventail de cépages, des autochtones (Lagrein, Gewürztraminer) aux internationaux (Chardonnay, Cabernet, Pinot Nero), en biodynamie certifiée. Les cuvées Löwengang (Chardonnay et Cabernet, sur l'un des premiers vignobles d'altitude plantés en cépages bordelais et bourguignons), Cor Römigberg (Cabernet Sauvignon) et Krafuss (Pinot Nero) figurent parmi les références. Le style Lageder vise la finesse, la fraîcheur et l'expression du terroir, dans une recherche constante d'équilibre. Le domaine joue aussi un rôle culturel et écologique majeur dans la région.\n\nRéférence de la biodynamie italienne et grand nom de l'Alto Adige, Alois Lageder conjugue envergure, exigence qualitative et engagement environnemental. C'est l'un des domaines les plus respectés et les plus influents de toute l'Italie du Nord.\n\nConverti de longue date à la biodynamie, Lageder a fait de son domaine un laboratoire du vin durable : énergie renouvelable, polyculture, respect des cycles naturels, recherche permanente sur les cépages adaptés au réchauffement. Le Löwengang, planté dès les années 1980 en Chardonnay et en cépages bordelais sur un coteau d'altitude, fut un geste visionnaire qui a prouvé le potentiel de l'Alto Adige pour ces variétés. La gamme se structure en plusieurs niveaux, des vins de cépage aux grands crus parcellaires (Comète, Cor Römigberg, Krafuss), tous marqués par une recherche de fraîcheur et de digestibilité. Servis sur une cuisine variée, des poissons aux viandes, ces vins privilégient l'élégance à la puissance. Au-delà du vin, la famille Lageder joue un rôle culturel et écologique de premier plan dans la région, et son influence dépasse largement les frontières de l'Alto Adige : c'est l'un des domaines les plus respectés d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Löwengang Chardonnay",
+        "Cor Römigberg Cabernet",
+        "Krafuss Pinot Nero",
+        "Comète"
+      ],
+      "tags": [
+        "alto-adige",
+        "magre",
+        "biodynamie",
+        "lageder",
+        "icone",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "wineenthusiast|wineindustryadvisor"
+    },
+    {
+      "id": "it-altoadige-prod-j-hofstatter",
+      "nom": "J. Hofstätter",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Termeno (Tramin)",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Nero",
+        "Gewürztraminer",
+        "Pinot Bianco",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Termeno (Tramin), J. Hofstätter est l'un des grands domaines familiaux de l'Alto Adige, célèbre pour signer l'un des meilleurs Pinot Nero d'Italie. La famille y cultive des vignobles de part et d'autre de la vallée de l'Adige, profitant d'expositions opposées idéales pour les différents cépages.\n\nSon joyau est le Pinot Nero Barthenau Vigna S. Urbano, issu d'un coteau historique de Mazon : un Pinot Nero d'une finesse, d'une profondeur et d'une aptitude à la garde remarquables, régulièrement cité comme une référence nationale. Côté blanc, le Gewürztraminer Kolbenhof, issu d'un cru de Tramin, compte parmi les plus aboutis de la région. Le domaine soigne aussi le Pinot Bianco et le Pinot Grigio. Le style, précis et élégant, mise sur l'expression fidèle de chaque terroir.\n\nRéférence du Pinot Nero italien et grand nom du Gewürztraminer, Hofstätter conjugue tradition familiale et excellence parcellaire, et compte parmi les domaines les plus respectés de l'Alto Adige.\n\nLa singularité d'Hofstätter est de posséder des vignobles sur les deux versants de la vallée de l'Adige : à l'est, le coteau de Mazon, idéalement exposé pour le Pinot Nero ; à l'ouest, les pentes de Tramin, propices au Gewürztraminer et aux blancs. Cette double implantation permet au domaine d'exceller dans des registres opposés. Le Barthenau Vigna S. Urbano, issu des plus vieilles vignes de Mazon, est régulièrement comparé aux meilleurs Pinot Nero d'Europe pour sa finesse et sa capacité de garde. Servis sur des volailles, du gibier à plume ou des fromages, les vins d'Hofstätter séduisent par leur précision. Domaine familial fidèle à son terroir, il demeure l'une des références majeures de l'Alto Adige, en rouge comme en blanc.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Barthenau Vigna S. Urbano Pinot Nero",
+        "Kolbenhof Gewürztraminer",
+        "Yngram"
+      ],
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "pinot-nero",
+        "barthenau",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "winefolly|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-manincor",
+      "nom": "Manincor",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "commune": "Caldaro (Kaltern)",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Pinot Bianco",
+        "Pinot Nero",
+        "Cabernet",
+        "Lagrein"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au bord du lac de Caldaro, Manincor est le domaine du comte Michael Goëss-Enzenberg, l'un des plus beaux d'Alto Adige et un modèle de biodynamie. La cave, enterrée et autosuffisante, illustre une approche holistique du vin et du paysage.\n\nEn biodynamie certifiée, le domaine signe des blancs et des rouges d'une grande précision : le Sauvignon Lieben Aich (noté jusqu'à 98 points), les assemblages Réserve della Contessa (blanc) et Cassiano (rouge), le Pinot Nero Mason. Le style vise la finesse, la fraîcheur et la transparence du terroir, dans des vins équilibrés et de garde. Élu domaine de l'année par le guide Vinum, Manincor est devenu une référence de la viticulture respectueuse en Italie.\n\nModèle de biodynamie et de précision, Manincor signe certains des plus beaux blancs et rouges de l'Alto Adige, et compte parmi les domaines les plus admirés de la région.\n\nLa cave de Manincor, entièrement enterrée et fonctionnant par gravité, est un manifeste : aucune climatisation, une intégration totale dans le paysage, une autonomie énergétique. En biodynamie certifiée, le comte Goëss-Enzenberg recherche avant tout la transparence du terroir et l'équilibre, dans des vins qui privilégient la fraîcheur à la démonstration. Le Sauvignon Lieben Aich, perché en altitude, est l'un des plus grands d'Italie, tandis que les assemblages Réserve della Contessa et Cassiano illustrent l'art de la composition. Servis sur des poissons, des viandes blanches ou une cuisine fine, les vins de Manincor confirment, millésime après millésime, le statut de référence du domaine et de la biodynamie italienne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lieben Aich Sauvignon",
+        "Réserve della Contessa",
+        "Mason Pinot Nero",
+        "Cassiano"
+      ],
+      "tags": [
+        "alto-adige",
+        "caldaro",
+        "biodynamie",
+        "manincor",
+        "sauvignon"
+      ],
+      "a_verifier": null,
+      "source": "wineindustryadvisor|winecouture"
+    },
+    {
+      "id": "it-altoadige-prod-elena-walch",
+      "nom": "Elena Walch",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Termeno (Tramin)",
+      "pays": "Italie",
+      "cepages": [
+        "Gewürztraminer",
+        "Chardonnay",
+        "Sauvignon",
+        "Pinot Grigio",
+        "Lagrein",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Termeno (Tramin), Elena Walch est l'un des domaines familiaux les plus réputés de l'Alto Adige et une figure de la modernité régionale. Arrivée dans une famille de vignerons de longue date, Elena Walch a révolutionné l'approche maison en misant, dès les années 1980, sur la viticulture de cru et la réduction drastique des rendements, à rebours des habitudes locales.\n\nLe domaine s'appuie sur deux vignobles d'exception : Castel Ringberg, au-dessus du lac de Caldaro, et Kastelaz, coteau escarpé de Tramin. Il en tire des vins parcellaires de premier plan : le Gewürztraminer Kastelaz, le Merlot Kastelaz, le Sauvignon et le Chardonnay de Castel Ringberg. La cuvée Beyond the Clouds (assemblage à dominante Chardonnay) est devenue une signature de prestige, ample et complexe. Le style Elena Walch conjugue précision, élégance et expression du terroir, sur l'ensemble d'une gamme étendue, des blancs aromatiques aux rouges de garde.\n\nPionnière de la viticulture de cru en Alto Adige et ambassadrice de la région dans le monde, aujourd'hui épaulée par ses filles, Elena Walch signe des vins d'une grande finesse qui comptent parmi les plus aboutis et les plus recherchés de la province. C'est l'une des références familiales majeures de l'appellation.\n\nLa révolution Elena Walch tient à un pari : appliquer en Alto Adige, terre de coopératives et de gros volumes, une logique de cru et de bas rendements inspirée des grandes régions du monde. Castel Ringberg, sur les pentes dominant le lac de Caldaro, et Kastelaz, coteau abrupt de Tramin, sont devenus de véritables signatures, chacun exprimant un caractère propre. Le Beyond the Clouds, assemblage de prestige à dominante Chardonnay, illustre l'ambition de la maison : un grand blanc complexe et de garde, capable de rivaliser avec les références internationales. Servis sur des poissons, des volailles, des fromages ou une cuisine gastronomique, les vins du domaine conjuguent fruit, minéralité et longueur. Aujourd'hui épaulée par ses filles Julia et Karoline, qui poursuivent le travail de cru et l'engagement environnemental, Elena Walch demeure l'une des figures les plus influentes de l'Alto Adige et l'un de ses meilleurs ambassadeurs dans le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Beyond the Clouds",
+        "Gewürztraminer Kastelaz",
+        "Castel Ringberg",
+        "Merlot Kastelaz"
+      ],
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "cru",
+        "elena-walch",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|wine-searcher"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-girlan",
+      "nom": "Cantina Girlan",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "commune": "Cornaiano (Girlan)",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Nero",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Schiava"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cornaiano (Girlan), dans l'Oltradige, la Cantina Girlan (Kellerei Girlan) est l'une des coopératives les plus régulières et les plus titrées de l'Alto Adige. Elle s'est forgé une réputation particulière sur le Pinot Nero.\n\nSon fleuron est le Pinot Nero Trattmann (cru Vigna Ganger), l'un des meilleurs de la région : un rouge fin, parfumé et de belle structure. La cave excelle aussi sur le Pinot Bianco (Flora) et le Sauvignon, et perpétue la tradition du Schiava (Vernatsch) léger et gourmand. Le travail sur des coteaux variés et l'exigence de sélection donnent une gamme d'une grande constance, fréquemment saluée par les guides.\n\nRéférence du Pinot Nero d'Alto Adige et coopérative d'excellence, Girlan signe des rouges et des blancs réguliers et aboutis, parmi les valeurs les plus sûres de la région.\n\nAu-delà du Pinot Nero, qui a fait sa réputation, Girlan cultive un large éventail de cépages sur les coteaux variés de l'Oltradige, des blancs frais aux Schiava traditionnels. Le Trattmann, issu du cru Vigna Ganger, est régulièrement cité parmi les meilleurs Pinot Nero d'Alto Adige : un rouge délicat, parfumé et structuré, capable de vieillir. La cave conjugue volume et exigence, avec une sélection rigoureuse de ses meilleures parcelles. Servis sur des volailles, des viandes blanches ou des fromages, les vins de Girlan séduisent par leur régularité. Coopérative parmi les plus titrées des guides, elle demeure l'une des valeurs les plus sûres de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trattmann Pinot Nero Riserva",
+        "Vigna Ganger",
+        "Flora Pinot Bianco"
+      ],
+      "tags": [
+        "alto-adige",
+        "appiano",
+        "pinot-nero",
+        "trattmann",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|wineindustryadvisor"
+    },
+    {
+      "id": "it-altoadige-prod-nals-margreid",
+      "nom": "Nals Margreid",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "commune": "Nalles (Nals)",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Bianco",
+        "Sauvignon",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Nalles (Nals), la coopérative Nals Margreid est l'une des plus régulières de l'Alto Adige, fréquemment distinguée par les guides internationaux. Réunissant des vignerons sur des terroirs étagés, elle mise sur la précision et la finesse.\n\nLe Chardonnay Nama et la ligne Baron Salvadori comptent parmi ses sommets, aux côtés d'un Pinot Bianco Sirmian réputé : des blancs nets, minéraux et bien construits, qui illustrent le savoir-faire de la cave sur les cépages phares de la région. La diversité des altitudes, des coteaux frais aux secteurs plus chauds, nourrit une gamme cohérente et de bon niveau.\n\nCoopérative de référence, Nals Margreid signe des blancs précis et réguliers, parmi les plus fiables de l'Alto Adige, du Pinot Bianco au Chardonnay.\n\nLa coopérative étire ses vignobles sur une large gamme d'altitudes, des fonds de vallée aux coteaux élevés, ce qui lui permet d'adapter chaque cépage à son terroir idéal et de préserver la fraîcheur dans ses blancs. Le Chardonnay Nama et le Pinot Bianco Sirmian comptent parmi ses plus belles réussites, salués pour leur précision et leur minéralité. La ligne Baron Salvadori regroupe les sélections les plus ambitieuses. Servis sur des poissons, des volailles ou des fromages, ces blancs nets et tendus illustrent le savoir-faire de la cave. Régulièrement distinguée par les guides, Nals Margreid s'impose comme l'une des coopératives les plus fiables et constantes de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Nama Chardonnay",
+        "Baron Salvadori",
+        "Sirmian Pinot Bianco"
+      ],
+      "tags": [
+        "alto-adige",
+        "nalles",
+        "chardonnay",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|winecouture"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-kurtatsch",
+      "nom": "Cantina Kurtatsch",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Cortaccia (Kurtatsch)",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cortaccia (Kurtatsch), dans le sud de l'Alto Adige, la Cantina Kurtatsch est une coopérative remarquable par l'amplitude de ses dénivelés : ses vignobles s'étagent sur plusieurs centaines de mètres, des fonds chauds aux coteaux frais d'altitude, ce qui lui permet d'exceller aussi bien en rouge qu'en blanc.\n\nLes secteurs bas et ensoleillés donnent de remarquables rouges bordelais — le Cabernet Sauvignon Freienfeld et le Merlot Brenntal, parmi les meilleurs de la région —, tandis que les hauteurs produisent des blancs vifs et tendus (Sauvignon Kofl). Cette double vocation, rare en Alto Adige, fait la singularité de la cave. Le travail d'adaptation cépage-altitude est mené avec rigueur.\n\nCoopérative singulière par son étagement, Kurtatsch signe à la fois de grands rouges de garde et des blancs d'altitude précis, et compte parmi les références du sud de l'Alto Adige.\n\nL'étagement spectaculaire des vignes de Kurtatsch — sur près de mille mètres de dénivelé — fait de la cave un cas d'école : chaque cépage est planté à l'altitude qui lui convient, du Cabernet et du Merlot dans les fonds chauds aux blancs vifs des hauteurs. Cette logique d'adaptation, poussée à l'ère du réchauffement, permet des rouges bordelais de garde rares en Alto Adige, comme le Freienfeld et le Brenntal, régulièrement primés. Servis sur des viandes rouges, du gibier ou des fromages, ces rouges structurés tranchent avec l'image de région blanche de l'Alto Adige. Coopérative rigoureuse et singulière, Kurtatsch compte parmi les références du sud de la province, en rouge comme en blanc.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Freienfeld Cabernet Riserva",
+        "Brenntal Merlot Riserva",
+        "Sauvignon Kofl"
+      ],
+      "tags": [
+        "alto-adige",
+        "cortaccia",
+        "cabernet",
+        "sauvignon",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-bolzano",
+      "nom": "Cantina Bolzano",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bolzano",
+      "commune": "Bolzano (Bozen)",
+      "pays": "Italie",
+      "cepages": [
+        "Lagrein",
+        "Schiava",
+        "Sauvignon",
+        "Pinot Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Santa Maddalena DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolzano, la Cantina Bolzano (Kellerei Bozen), née en 2001 de la fusion des caves de Gries et de Santa Maddalena, est la référence des rouges autochtones de la ville : le Lagrein et le Santa Maddalena (Schiava).\n\nSon fleuron est le Lagrein Riserva Taber, régulièrement primé, l'un des plus grands rouges autochtones de la région : profond, structuré, aux tanins veloutés et aux notes de fruits noirs et d'épices. La cave excelle aussi sur le Santa Maddalena Classico (Schiava des coteaux de Bolzano), frais et fruité, et signe de bons blancs. Le terroir chaud du fond de vallée de Bolzano est idéal pour le Lagrein, cépage exigeant.\n\nRéférence du Lagrein et du Santa Maddalena, la Cantina Bolzano signe des rouges autochtones de premier plan, dont le Taber compte parmi les sommets de l'Alto Adige.\n\nLe terroir de Bolzano, l'un des plus chauds de l'Alto Adige, est le berceau historique du Lagrein, cépage autochtone exigeant et tardif. La Cantina Bolzano en a fait sa spécialité, et le Lagrein Riserva Taber, issu des meilleures parcelles de Gries, est régulièrement primé parmi les grands rouges de la région. La cave perpétue aussi la tradition du Santa Maddalena, ce rouge léger de Schiava qui fit la réputation des coteaux de Bolzano. Servis sur des viandes braisées, des charcuteries ou des fromages, ces rouges autochtones expriment l'identité profonde de la ville. Référence du Lagrein, la cave figure parmi les valeurs sûres de l'Alto Adige rouge.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lagrein Riserva Taber",
+        "Santa Maddalena Classico",
+        "Mock"
+      ],
+      "tags": [
+        "alto-adige",
+        "bolzano",
+        "lagrein",
+        "taber",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-tiefenbrunner",
+      "nom": "Tiefenbrunner",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Cortaccia (Kurtatsch)",
+      "pays": "Italie",
+      "cepages": [
+        "Müller-Thurgau",
+        "Chardonnay",
+        "Gewürztraminer",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Mitterberg IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cortaccia (Kurtatsch), le domaine Tiefenbrunner, autour du Schloss Turmhof, est l'un des noms historiques de l'Alto Adige, célèbre pour un vin hors norme : le Müller-Thurgau Feldmarschall von Fenner.\n\nIssu de l'un des vignobles les plus hauts d'Europe, vers 1000 mètres d'altitude, le Feldmarschall est un Müller-Thurgau d'une fraîcheur, d'une tension et d'une complexité inattendues, qui a démontré le potentiel des très hautes vignes alpines. Le domaine signe aussi de bons Chardonnay, Gewürztraminer et rouges (gamme Linticlarus). Le travail en altitude, gage de fraîcheur, est au cœur de l'identité maison.\n\nPionnier de la viticulture de très haute altitude, Tiefenbrunner et son Feldmarschall von Fenner illustrent l'une des singularités les plus fascinantes de l'Alto Adige.\n\nLe domaine, autour du château Turmhof à Cortaccia, est dans la famille depuis plusieurs générations et a marqué l'histoire de l'Alto Adige avec le Feldmarschall von Fenner, planté sur les hauteurs du Favogna. À près de 1000 mètres d'altitude, ce vignoble compte parmi les plus élevés d'Europe, et son Müller-Thurgau — cépage souvent déprécié — y atteint une finesse et une longévité inattendues. Le domaine décline par ailleurs une gamme étendue, des blancs aromatiques aux rouges (Linticlarus). Servis sur des poissons, des volailles ou une cuisine de montagne, ses vins séduisent par leur fraîcheur alpine. Pionnier de la haute altitude, Tiefenbrunner illustre l'une des aventures les plus originales de la viticulture d'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Feldmarschall von Fenner",
+        "Linticlarus",
+        "Turmhof Gewürztraminer"
+      ],
+      "tags": [
+        "alto-adige",
+        "cortaccia",
+        "muller-thurgau",
+        "altitude",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-colterenzio",
+      "nom": "Cantina Colterenzio",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "commune": "Cornaiano (Girlan)",
+      "pays": "Italie",
+      "cepages": [
+        "Sauvignon",
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cornaiano (Girlan), la Cantina Colterenzio (Schreckbichl) est une coopérative réputée de l'Oltradige, distinguée par sa ligne haut de gamme Lafóa. Elle s'est imposée parmi les références régionales pour le Sauvignon et les rouges bordelais.\n\nLe Lafóa Sauvignon, primé jusqu'au plus haut niveau (Platinum aux Decanter World Wine Awards), et le Lafóa Cabernet comptent parmi les sommets de l'Alto Adige : des vins concentrés, précis et de garde. La gamme Cornell et la sélection LR Riserva confirment l'ambition de la cave. Le travail sur des coteaux variés et l'exigence de sélection donnent une production régulière et saluée.\n\nCoopérative de premier plan, Colterenzio signe avec la ligne Lafóa des Sauvignon et Cabernet parmi les plus aboutis de l'Alto Adige.\n\nFondée en 1960, la coopérative Colterenzio (Schreckbichl) s'est hissée parmi les meilleures de la région grâce à une recherche qualitative constante et à sa ligne de prestige Lafóa. Le Lafóa Sauvignon, distingué jusqu'au plus haut niveau dans les concours internationaux, et le Lafóa Cabernet illustrent l'ambition de la cave : des vins concentrés, précis et de garde, issus des meilleurs coteaux de l'Oltradige. La gamme Cornell et la sélection LR Riserva confirment cette exigence. Servis sur des poissons, des viandes ou des fromages, ces vins séduisent par leur définition. Coopérative de premier plan, Colterenzio compte parmi les références régulières des guides en Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lafóa Sauvignon",
+        "Lafóa Cabernet",
+        "Cornell",
+        "LR Riserva"
+      ],
+      "tags": [
+        "alto-adige",
+        "appiano",
+        "lafoa",
+        "sauvignon",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|wineindustryadvisor"
+    },
+    {
+      "id": "it-altoadige-prod-klosterkellerei-muri-gries",
+      "nom": "Klosterkellerei Muri-Gries",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bolzano",
+      "commune": "Bolzano (Gries)",
+      "pays": "Italie",
+      "cepages": [
+        "Lagrein",
+        "Schiava",
+        "Pinot Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Santa Maddalena DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gries, quartier de Bolzano, la Klosterkellerei Muri-Gries est une cave monastique historique, l'une des références absolues du Lagrein. Adossée à une abbaye bénédictine, elle perpétue une tradition viticole séculaire dans le berceau de ce cépage.\n\nLe terroir chaud et alluvial de Gries est le foyer historique du Lagrein, et la cave en signe les expressions les plus abouties : le Lagrein Riserva Abtei Muri, profond et structuré, et le Lagrein Grieser, plus immédiat. Elle produit aussi un bon Santa Maddalena et quelques blancs. Le savoir-faire ancien et l'attachement au Lagrein font de Muri-Gries un gardien de l'identité rouge de Bolzano.\n\nRéférence historique du Lagrein, la Klosterkellerei Muri-Gries signe des rouges autochtones profonds et fidèles à leur terroir, parmi les sommets du cépage en Alto Adige.\n\nL'abbaye bénédictine de Muri-Gries, installée à Bolzano depuis le XIXe siècle, est l'un des plus anciens producteurs de Lagrein et le gardien de la tradition dans le quartier de Gries, foyer historique du cépage. Le terroir alluvial et chaud y est idéal pour ce rouge tardif et puissant. Le Lagrein Riserva Abtei Muri, longuement élevé, en est l'expression la plus aboutie : profond, structuré, aux tanins veloutés. La cave produit aussi un Lagrein Grieser plus immédiat et un bon Santa Maddalena. Servis sur des viandes en sauce, du gibier ou des fromages affinés, ces rouges autochtones expriment toute la générosité de Bolzano. Muri-Gries demeure une référence incontournable du Lagrein.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lagrein Riserva Abtei Muri",
+        "Lagrein Grieser",
+        "Santa Maddalena"
+      ],
+      "tags": [
+        "alto-adige",
+        "bolzano",
+        "gries",
+        "lagrein",
+        "monastique"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-franz-haas",
+      "nom": "Franz Haas",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Montagna (Montan)",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Nero",
+        "Pinot Grigio",
+        "Gewürztraminer",
+        "Moscato Giallo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montagna (Montan), sur les coteaux du sud-est de l'Alto Adige, Franz Haas est un domaine familial réputé pour son Pinot Nero d'altitude et son assemblage blanc Manna. La maison cultive un style précis et de garde.\n\nLe Pinot Nero, décliné jusqu'aux sélections Schweizer et Pònkler, compte parmi les références régionales du cépage : un rouge fin, parfumé et structuré, issu de vignes en altitude. Le Manna, assemblage blanc original (Riesling, Chardonnay, Gewürztraminer, Sauvignon…), est une signature aromatique de la maison. Le domaine soigne aussi le Pinot Grigio et le Moscato Giallo. Le travail en altitude préserve fraîcheur et tension.\n\nRéférence du Pinot Nero d'altitude en Alto Adige, Franz Haas signe des rouges élégants et un blanc Manna singulier, et compte parmi les domaines familiaux les plus respectés du sud de la région.\n\nLe domaine, mené par la famille Haas sur les coteaux d'altitude de Montagna, s'est imposé comme l'un des spécialistes du Pinot Nero en Alto Adige, cépage exigeant qui trouve ici, en altitude, la fraîcheur nécessaire à sa finesse. Les sélections Schweizer et Pònkler comptent parmi les références régionales. Le Manna, assemblage blanc original et aromatique, est l'autre signature de la maison. Le travail en altitude, gage de fraîcheur et de tension, est au cœur de l'identité du domaine, qui soigne aussi Pinot Grigio et Moscato Giallo. Servis sur des volailles, du gibier à plume ou des fromages, les vins de Franz Haas séduisent par leur élégance, et le domaine demeure l'un des plus respectés du sud de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pinot Nero Schweizer",
+        "Manna",
+        "Pinot Nero Pònkler"
+      ],
+      "tags": [
+        "alto-adige",
+        "montagna",
+        "pinot-nero",
+        "manna",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-altoadige-prod-abbazia-di-novacella",
+      "nom": "Abbazia di Novacella",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Valle Isarco",
+      "commune": "Varna (Vahrn)",
+      "pays": "Italie",
+      "cepages": [
+        "Kerner",
+        "Sylvaner",
+        "Grüner Veltliner",
+        "Riesling",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige Valle Isarco DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au nord de Bressanone, dans la Valle Isarco (Eisacktal), l'Abbazia di Novacella (Stiftskellerei Neustift) est l'une des plus anciennes caves en activité au monde, fondée en 1142 par les chanoines augustiniens. Elle est le fleuron de cette vallée alpine vouée aux blancs.\n\nSur les coteaux les plus septentrionaux et les plus hauts de l'Alto Adige, elle cultive les cépages emblématiques de la Valle Isarco — Kerner, Sylvaner, Grüner Veltliner, Riesling, Pinot Grigio —, qui y donnent des blancs d'une vivacité, d'une minéralité et d'une pureté remarquables. La gamme Praepositus, au sommet, en propose les expressions les plus abouties, régulièrement primées. L'altitude et le climat frais signent des vins d'une grande tension aromatique.\n\nJoyau de la Valle Isarco et cave millénaire, l'Abbazia di Novacella signe des blancs alpins d'une fraîcheur et d'une précision rares, parmi les références de l'Alto Adige.\n\nFondée en 1142, l'abbaye de Novacella est non seulement l'une des plus anciennes caves du monde encore en activité, mais aussi le porte-drapeau de la Valle Isarco, la vallée la plus septentrionale et la plus fraîche de l'Alto Adige. Les coteaux escarpés, l'altitude et le climat alpin y donnent des blancs d'une tension et d'une précision rares. Le Kerner, le Sylvaner et le Grüner Veltliner y atteignent des sommets, notamment dans la gamme Praepositus, régulièrement primée. Servis sur des poissons, des asperges, des plats de montagne ou des fromages, ces blancs vifs et minéraux séduisent par leur fraîcheur aromatique. À la fois lieu spirituel, culturel et viticole, l'Abbazia di Novacella perpétue une tradition millénaire et demeure la référence absolue de la Valle Isarco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Praepositus Kerner",
+        "Praepositus Sylvaner",
+        "Praepositus Pinot Grigio"
+      ],
+      "tags": [
+        "alto-adige",
+        "valle-isarco",
+        "kerner",
+        "sylvaner",
+        "abbaye",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-prod-kuenhof-peter-pliger",
+      "nom": "Kuenhof (Peter Pliger)",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Valle Isarco",
+      "commune": "Bressanone (Brixen)",
+      "pays": "Italie",
+      "cepages": [
+        "Riesling",
+        "Sylvaner",
+        "Grüner Veltliner",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige Valle Isarco DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bressanone, dans la Valle Isarco, le Kuenhof de Peter Pliger est un petit domaine culte, l'un des artisans les plus admirés des blancs alpins d'Alto Adige. En culture biologique et avec une intervention minimale, Pliger y signe des vins d'une grande pureté.\n\nSur des terrasses escarpées, il cultive Riesling, Sylvaner, Grüner Veltliner et Gewürztraminer, qui donnent des blancs tendus, minéraux et d'une grande précision. Le Riesling Kaiton, en particulier, est devenu une référence recherchée, capable de vieillir. La production, confidentielle, et l'approche artisanale font du Kuenhof un objet de désir pour les amateurs de blancs alpins. Le travail respectueux de la vigne et du sol est au cœur de la démarche.\n\nArtisan culte de la Valle Isarco, Peter Pliger signe au Kuenhof des Riesling et Sylvaner d'une pureté et d'une minéralité exemplaires, parmi les plus beaux blancs de montagne d'Italie.\n\nPeter Pliger fait partie de ces quelques artisans qui ont révélé le potentiel des blancs alpins de la Valle Isarco. Sur des terrasses escarpées, en culture biologique et avec une intervention minimale en cave, il cherche la pureté absolue du fruit et l'expression du sol. Le Riesling Kaiton, devenu culte, conjugue tension, minéralité et capacité de garde, tandis que le Sylvaner et le Grüner Veltliner expriment toute la fraîcheur de la vallée. La production, confidentielle, est très recherchée des amateurs. Servis sur des poissons, des coquillages ou une cuisine délicate, ces blancs d'une grande précision comptent parmi les plus beaux d'Italie alpine. Le Kuenhof incarne l'excellence artisanale de la Valle Isarco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Riesling Kaiton",
+        "Sylvaner",
+        "Grüner Veltliner"
+      ],
+      "tags": [
+        "alto-adige",
+        "valle-isarco",
+        "riesling",
+        "bio",
+        "culte",
+        "kuenhof"
+      ],
+      "a_verifier": null,
+      "source": "winescholarguild"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-kaltern",
+      "nom": "Cantina Kaltern",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "commune": "Caldaro (Kaltern)",
+      "pays": "Italie",
+      "cepages": [
+        "Schiava",
+        "Pinot Bianco",
+        "Moscato Giallo",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Lago di Caldaro DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Au bord du lac de Caldaro (Kalterersee), la Cantina Kaltern (Kellerei Kaltern) est l'une des plus grandes et des plus historiques coopératives de l'Alto Adige, réunissant des centaines de familles. Le microclimat doux du lac est idéal pour le Schiava (Vernatsch), dont elle produit des versions fraîches et fruitées (Lago di Caldaro), ainsi que de bons Pinot Bianco et un passito Quintessenz primé. Vaste et régulière, la cave offre une porte d'entrée fiable et accessible dans les vins de l'Alto Adige, du Schiava convivial aux cuvées plus ambitieuses.\n\nLe microclimat doux du lac de Caldaro, le plus chaud de la région, est idéal pour le Schiava, qui y donne des rouges légers, frais et fruités, à boire jeunes. La cave produit aussi de bons Pinot Bianco et Chardonnay, ainsi qu'un passito de Moscato Giallo (Quintessenz) distingué jusqu'au plus haut niveau. Servis sur des charcuteries, des plats légers ou en terrasse, les Schiava de Caldaro incarnent la convivialité de l'Alto Adige. Vaste et fiable, la cave demeure une excellente porte d'entrée dans les vins de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lago di Caldaro Leuchtenberg",
+        "Quintessenz Moscato Giallo",
+        "Pinot Bianco"
+      ],
+      "tags": [
+        "alto-adige",
+        "caldaro",
+        "schiava",
+        "kalterersee",
+        "coop"
+      ],
+      "a_verifier": null,
+      "source": "wineenthusiast|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-prod-cantina-andrian",
+      "nom": "Cantina Andrian",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "commune": "Andriano (Andrian)",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Bianco",
+        "Sauvignon",
+        "Merlot",
+        "Lagrein"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Terlano DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Andriano (Andrian), la Cantina Andrian est la plus ancienne cave coopérative d'Alto Adige (1893), aujourd'hui associée à Terlano. Sur des terroirs proches de Terlano, elle signe des blancs soignés (Pinot Bianco, Sauvignon) et un Merlot Gant réputé, régulièrement primé. Le partage du savoir-faire avec Terlano garantit une qualité régulière. Cave historique et fiable, Andrian offre des vins représentatifs du meilleur des terroirs de Terlano, des blancs alpins au Merlot de garde.\n\nPremière coopérative d'Alto Adige par son ancienneté, Andrian bénéficie aujourd'hui du partage de savoir-faire avec Terlano, dont elle est proche géographiquement et stylistiquement. Ses blancs de Terlano (Pinot Bianco, Sauvignon) affichent la même tension minérale, tandis que le Merlot Gant, issu d'un coteau réputé, compte parmi les beaux rouges de la région. Servis sur des poissons, des volailles ou des viandes, ces vins illustrent la qualité des terroirs de Terlano. Cave historique et régulière, Andrian est une valeur sûre de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gant Merlot",
+        "Floradego",
+        "Tor di Lupo"
+      ],
+      "tags": [
+        "alto-adige",
+        "andriano",
+        "terlano",
+        "coop",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-prod-tenuta-castelfeder",
+      "nom": "Tenuta Castelfeder",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "commune": "Egna (Neumarkt)",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Nero",
+        "Chardonnay",
+        "Gewürztraminer",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Egna (Neumarkt), Castelfeder est un domaine familial très régulier du sud de l'Alto Adige, fréquemment distingué par les guides. Le Pinot Nero Burgum Novum Riserva et le Chardonnay Kreuzweg Family Reserve comptent parmi ses cuvées les plus primées, aux côtés de bons Gewürztraminer et Pinot Grigio. Le style, précis et accessible, conjugue fraîcheur et fruit. Domaine fiable et dynamique, Castelfeder signe des rouges et des blancs réguliers, parmi les bonnes valeurs de l'Alto Adige.\n\nDomaine familial dynamique du sud de l'Alto Adige, Castelfeder s'est imposé par la régularité de sa gamme et quelques cuvées remarquables. Le Pinot Nero Burgum Novum Riserva et le Chardonnay Kreuzweg Family Reserve figurent parmi les vins les plus primés de la région ces dernières années. Le style, précis et accessible, mise sur le fruit et la fraîcheur, des blancs aromatiques aux rouges de garde. Servis sur une cuisine variée, les vins de Castelfeder offrent un excellent rapport qualité-prix, et le domaine s'impose comme l'une des bonnes valeurs de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Burgum Novum Pinot Nero Riserva",
+        "Kreuzweg Chardonnay Riserva",
+        "Doss"
+      ],
+      "tags": [
+        "alto-adige",
+        "egna",
+        "pinot-nero",
+        "castelfeder",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-kofererhof-gunther-kerschbaumer",
+      "nom": "Köfererhof (Günther Kerschbaumer)",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Valle Isarco",
+      "commune": "Novacella (Neustift)",
+      "pays": "Italie",
+      "cepages": [
+        "Kerner",
+        "Sylvaner",
+        "Riesling",
+        "Gewürztraminer",
+        "Grüner Veltliner"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige Valle Isarco DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Novacella, dans la Valle Isarco, le Köfererhof de Günther Kerschbaumer est l'un des bons domaines familiaux de cette vallée alpine vouée aux blancs. Sur des coteaux d'altitude, il cultive Kerner, Sylvaner, Riesling, Grüner Veltliner et Gewürztraminer, qui donnent des blancs nets, vifs et minéraux, fidèles au caractère frais de la Valle Isarco. Le travail soigné et la régularité font du Köfererhof une valeur sûre des blancs alpins de l'Alto Adige.\n\nSur les coteaux d'altitude de la Valle Isarco, le Köfererhof cultive les cépages emblématiques de la vallée — Kerner, Sylvaner, Riesling, Grüner Veltliner, Gewürztraminer — avec un soin d'artisan. Günther Kerschbaumer en tire des blancs nets, vifs et minéraux, fidèles au caractère frais et tendu de la Valle Isarco. Servis sur des poissons, des asperges ou des plats de montagne, ces vins séduisent par leur pureté aromatique. Domaine familial régulier, le Köfererhof compte parmi les bonnes adresses des blancs alpins de l'Alto Adige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kerner",
+        "Sylvaner",
+        "Riesling"
+      ],
+      "tags": [
+        "alto-adige",
+        "valle-isarco",
+        "kerner",
+        "sylvaner",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "winecouture|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-prod-pfannenstielhof",
+      "nom": "Pfannenstielhof",
+      "type": "domaine",
+      "region": "Alto Adige",
+      "sous_region": "Bolzano",
+      "commune": "Bolzano (Bozen)",
+      "pays": "Italie",
+      "cepages": [
+        "Lagrein",
+        "Schiava"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Alto Adige DOC",
+        "Santa Maddalena DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolzano, le Pfannenstielhof de Johannes Pfeifer est un petit domaine familial spécialiste des rouges autochtones de la ville : le Lagrein et le Santa Maddalena (Schiava). Sur le terroir chaud de Bolzano, il signe un Lagrein Riserva profond et un Santa Maddalena Classico Annver, tous deux régulièrement primés. La taille humaine du domaine permet une grande attention au détail. Artisan réputé, le Pfannenstielhof offre des rouges autochtones soignés, représentatifs de l'identité de Bolzano.\n\nSur le terroir chaud de Bolzano, foyer historique du Lagrein, Johannes Pfeifer signe au Pfannenstielhof des rouges autochtones soignés : un Lagrein Riserva profond et structuré, et un Santa Maddalena Classico (Annver) frais et fruité, tous deux régulièrement primés. La taille modeste du domaine permet une grande attention au détail, du vignoble à l'élevage. Servis sur des viandes braisées, des charcuteries ou des fromages, ces vins expriment l'identité rouge de Bolzano. Artisan réputé, le Pfannenstielhof est une belle adresse du Lagrein et du Santa Maddalena.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lagrein Riserva",
+        "Santa Maddalena Classico Annver"
+      ],
+      "tags": [
+        "alto-adige",
+        "bolzano",
+        "lagrein",
+        "santa-maddalena",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "suedtirolwein"
+    }
+  ]
+}

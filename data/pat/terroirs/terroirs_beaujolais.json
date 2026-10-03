@@ -1,0 +1,693 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "beaujolais",
+  "region_label": "Beaujolais",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_beaujolais_vPat.xlsx",
+  "built_at": "2026-05-15T08:24:02+00:00",
+  "count": 28,
+  "items": [
+    {
+      "id": "bjs-beaujolais",
+      "nom": "Beaujolais",
+      "type": "appellation_regionale",
+      "region": "Beaujolais",
+      "sous_region": "Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay (en blanc)"
+      ],
+      "altitude": "180-450 m",
+      "sols": "Granites au sud (Bas-Beaujolais), argilo-calcaires au nord",
+      "caracteristiques_rapides": "AOC régionale ~6 800 ha, principalement au sud (Bas-Beaujolais), sols variés. Gamay roi, Beaujolais Nouveau (3e jeudi de novembre) en grande partie sur cette AOC.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "gamay",
+        "beaujolais-nouveau"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-beaujolais-villages",
+      "nom": "Beaujolais Villages",
+      "type": "appellation_village",
+      "region": "Beaujolais",
+      "sous_region": "Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay (en blanc)"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Granites (arènes) majoritaires",
+      "caracteristiques_rapides": "AOC ~3 100 ha sur 38 communes du Haut-Beaujolais (entre les 10 crus). Gamay sur granite. Renouveau qualitatif important : Karim Vionnet, Romain des Grottes, Damien Coquelet.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "gamay",
+        "granite",
+        "nature"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-beaujolais-blanc",
+      "nom": "Beaujolais Blanc / Beaujolais Villages Blanc",
+      "type": "denomination",
+      "region": "Beaujolais",
+      "sous_region": "Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Granites, argilo-calcaires",
+      "caracteristiques_rapides": "Production confidentielle de Chardonnay en Beaujolais (~250 ha au total). Style proche du Mâconnais voisin.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "blanc",
+        "chardonnay",
+        "confidentiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-coteaux-bourguignons",
+      "nom": "Coteaux Bourguignons",
+      "type": "appellation_regionale",
+      "region": "Beaujolais",
+      "sous_region": "Bourgogne-Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Chardonnay",
+        "Aligoté"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC transversale Bourgogne + Beaujolais (depuis 2011, ex-Bourgogne Grand Ordinaire). Permet l'assemblage Gamay/Pinot Noir et le déclassement de cuvées hors cadre.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "transversale",
+        "bourgogne-beaujolais"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-saint-amour",
+      "nom": "Saint-Amour",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "240-450 m",
+      "sols": "Granites, argilo-siliceux",
+      "caracteristiques_rapides": "Cru ~280 ha, le plus septentrional (à la frontière du Mâconnais). Gamay charnel et fruité. Ducroux, Patissier.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "septentrional"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-julienas",
+      "nom": "Juliénas",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-430 m",
+      "sols": "Schistes (au nord), granite (au sud)",
+      "caracteristiques_rapides": "Cru ~570 ha. Gamay structuré et de garde. Domaine Pascal Aufranc, Château de Juliénas.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "garde",
+        "julienas"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-chenas",
+      "nom": "Chénas",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-430 m",
+      "sols": "Granite, argile",
+      "caracteristiques_rapides": "Cru ~210 ha (le plus petit). Voisin de Moulin-à-Vent et Juliénas. Gamay fin et tendu. Hubert Lapierre, Daniel Bouland.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "le-plus-petit"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-moulin-a-vent",
+      "nom": "Moulin-à-Vent",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "Granite à manganèse, argiles roses",
+      "caracteristiques_rapides": "Cru ~600 ha autour du moulin éponyme. Sols à manganèse, vins puissants et de très longue garde — \"le Bourgogne du Beaujolais\". Climats : Champ de Cour, La Rochelle, Les Thorins. Château du Moulin-à-Vent, Château des Jacques (Jadot), Diochon.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "iconique",
+        "gamay",
+        "garde",
+        "manganese"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-fleurie",
+      "nom": "Fleurie",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-470 m",
+      "sols": "Granites roses (arènes)",
+      "caracteristiques_rapides": "Cru ~870 ha. Gamay floral et soyeux, le plus \"féminin\" des crus. Climats reconnus : La Madone, Poncié, Grille-Midi, Les Garants, Les Moriers. Yvon Métras (icône), Jean-Louis Dutraive, Anne-Sophie Dubois, Marc Delienne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "iconique",
+        "gamay",
+        "granite-rose",
+        "metras"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-chiroubles",
+      "nom": "Chiroubles",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "300-450 m",
+      "sols": "Granites (arènes)",
+      "caracteristiques_rapides": "Cru ~290 ha. Le plus en altitude des crus (~400 m moyenne). Gamay frais et délicat. Jean-Pierre Brun, Damien Coquelet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "altitude",
+        "fraicheur"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-morgon",
+      "nom": "Morgon",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-450 m",
+      "sols": "Schistes \"morgon\" (roches en décomposition, sols ferreux)",
+      "caracteristiques_rapides": "Cru ~1 100 ha, le 2e plus grand. Gamay structuré et de garde, le plus \"bourguignon\". Climats : Côte du Py, Charmes, Corcelette, Douby, Grand Cras, Château Gaillard, Les Micouds. Marcel Lapierre (icône), Foillard, Thévenet, Breton, Bouland.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "iconique",
+        "gamay",
+        "garde",
+        "schistes",
+        "gang-of-four"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-regnie",
+      "nom": "Régnié",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-450 m",
+      "sols": "Granites roses (arènes)",
+      "caracteristiques_rapides": "Cru le plus récent (1988) ~360 ha. Gamay fruité et accessible. Christian Ducroux, Julien Sunier.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "recent",
+        "granite"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-brouilly",
+      "nom": "Brouilly",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "200-470 m",
+      "sols": "Granites, schistes, sables, alluvions",
+      "caracteristiques_rapides": "Cru le plus grand (~1 200 ha) et le plus méridional. Sols variés en éventail autour du Mont Brouilly. Jean-Claude Lapalu, Château Thivin (sur Côte de Brouilly), Rémi Dufaitre.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "le-plus-grand",
+        "brouilly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-cote-brouilly",
+      "nom": "Côte de Brouilly",
+      "type": "cru",
+      "region": "Beaujolais",
+      "sous_region": "Crus du Beaujolais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "300-485 m",
+      "sols": "Pierres bleues (cornéennes, schistes métamorphisés du Mont Brouilly), diorites",
+      "caracteristiques_rapides": "Cru ~310 ha sur les pentes du Mont Brouilly (volcan ancien). Sols singuliers (\"pierres bleues\" cornéennes). Vins plus structurés et minéraux que Brouilly. Château Thivin (référence), Lapalu.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gamay",
+        "pierres-bleues",
+        "cornes",
+        "thivin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "bjs-cote-du-py",
+      "nom": "Côte du Py (Morgon)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Morgon",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "300-380 m",
+      "sols": "Roches schisto-volcaniques décomposées (\"morgon\"), oxydes de manganèse",
+      "caracteristiques_rapides": "Climat-emblème de Morgon (~80 ha). Sols singuliers de roche manganésifère. Gamay puissant, structuré, garde longue. Foillard (cuvée éponyme), Lapierre, Thévenet, Bouland.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "morgon",
+        "iconique",
+        "schistes",
+        "manganese",
+        "foillard"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-charmes-morgon",
+      "nom": "Charmes (Morgon)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Morgon",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-300 m",
+      "sols": "Granite, sables",
+      "caracteristiques_rapides": "Climat de Morgon plus accessible et fruité que Côte du Py.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "morgon",
+        "granite"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-corcelette-morgon",
+      "nom": "Corcelette (Morgon)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Morgon",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-300 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Climat de Morgon, vins fins et précis. Foillard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "morgon",
+        "foillard"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-douby-morgon",
+      "nom": "Douby (Morgon)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Morgon",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-300 m",
+      "sols": "Sables, granite",
+      "caracteristiques_rapides": "Climat de Morgon. Plus léger et fruité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "morgon",
+        "sable"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-champ-de-cour-mav",
+      "nom": "Champ de Cour (Moulin-à-Vent)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Moulin-à-Vent",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-280 m",
+      "sols": "Granite à manganèse, argiles roses",
+      "caracteristiques_rapides": "Climat de Moulin-à-Vent, l'un des plus reconnus. Vins très structurés. Château du Moulin-à-Vent, Diochon.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "moulin-a-vent",
+        "garde"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-rochelle-mav",
+      "nom": "La Rochelle (Moulin-à-Vent)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Moulin-à-Vent",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-280 m",
+      "sols": "Granite, manganèse",
+      "caracteristiques_rapides": "Climat de Moulin-à-Vent. Vins puissants. Château des Jacques (Jadot).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "moulin-a-vent",
+        "jadot",
+        "garde"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-thorins-mav",
+      "nom": "Les Thorins (Moulin-à-Vent)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Moulin-à-Vent",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-280 m",
+      "sols": "Granite, argiles",
+      "caracteristiques_rapides": "Climat de Moulin-à-Vent.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "moulin-a-vent"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-madone-fleurie",
+      "nom": "La Madone (Fleurie)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Fleurie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "300-400 m",
+      "sols": "Granite rose en altitude",
+      "caracteristiques_rapides": "Climat de Fleurie autour de la chapelle de la Madone (point culminant). Vins fins et tendus. Chignard, Dutraive.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "fleurie",
+        "chapelle",
+        "altitude"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-poncie-fleurie",
+      "nom": "Poncié (Fleurie)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Fleurie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "270-380 m",
+      "sols": "Granite rose",
+      "caracteristiques_rapides": "Climat de Fleurie, structure et précision. Yvon Métras, Marc Delienne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "fleurie",
+        "metras"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-grille-midi-fleurie",
+      "nom": "Grille-Midi (Fleurie)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Fleurie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "280-380 m",
+      "sols": "Granite rose",
+      "caracteristiques_rapides": "Climat de Fleurie, exposition sud (\"grille midi\"). Chignard.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "fleurie",
+        "exposition-sud"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-garants-fleurie",
+      "nom": "Les Garants (Fleurie)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Fleurie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "280-380 m",
+      "sols": "Granite rose",
+      "caracteristiques_rapides": "Climat de Fleurie, vins fins. Chignard (cuvée éponyme).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "fleurie",
+        "chignard"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-moriers-fleurie",
+      "nom": "Les Moriers (Fleurie)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Fleurie",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "230-300 m",
+      "sols": "Granite, argiles",
+      "caracteristiques_rapides": "Climat de Fleurie à la frontière de Moulin-à-Vent. Vins plus structurés que la moyenne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "fleurie",
+        "frontiere-mav"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-pierreux-cote-brouilly",
+      "nom": "Pierreux (Côte de Brouilly)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Côte de Brouilly",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Pierres bleues (cornéennes)",
+      "caracteristiques_rapides": "Climat de Côte de Brouilly sur les pierres bleues du Mont Brouilly.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "cote-brouilly",
+        "pierres-bleues"
+      ],
+      "source": "lpv"
+    },
+    {
+      "id": "bjs-vignot-thivin",
+      "nom": "Cuvée Zaccharie / Les 7 Vignes (Château Thivin)",
+      "type": "lieu_dit",
+      "region": "Beaujolais",
+      "sous_region": "Côte de Brouilly",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Pierres bleues",
+      "caracteristiques_rapides": "Sélections parcellaires emblématiques de Château Thivin sur la Côte de Brouilly (cuvées Zaccharie, La Chapelle, Les 7 Vignes).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "lieu-dit",
+        "cote-brouilly",
+        "thivin",
+        "zaccharie"
+      ],
+      "source": "thivin|lpv"
+    }
+  ]
+}

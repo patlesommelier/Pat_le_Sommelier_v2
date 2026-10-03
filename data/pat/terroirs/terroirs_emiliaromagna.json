@@ -1,0 +1,467 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "emiliaromagna",
+  "region_label": "Emilia-Romagna (Italie)",
+  "source_file": "terroirs_emiliaromagna.json",
+  "built_at": "2026-07-11",
+  "count": 16,
+  "items": [
+    {
+      "id": "it-emiliaromagna-terr-romagna-sangiovese",
+      "nom": "Romagna Sangiovese",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC/RA/RN)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "spungone (calcaire coquillier), argiles et marnes des collines de Romagne",
+      "caracteristiques_rapides": "Le grand rouge de l'est de la région : Sangiovese des collines de Romagne, du vin fruité au grand cru de garde, en pleine renaissance (Predappio, Bertinoro, Modigliana).",
+      "notes_objectives": "Le Romagna Sangiovese est le grand rouge de l'est de l'Émilie-Romagne et l'expression romagnole du plus italien des cépages. Produit sur les collines qui s'étendent de la province de Bologne à celle de Rimini, il connaît depuis les années 2000 une véritable renaissance qualitative.\n\nLongtemps synonyme de vin de masse rustique et bon marché — le « Sangiovese di Romagna » était l'archétype du rouge de table italien —, il a été réhabilité par une nouvelle génération de vignerons qui ont révélé la noblesse de leur terroir. Sur les sols de spungone (un calcaire coquillier caractéristique), d'argiles et de marnes, le Sangiovese de Romagne donne des rouges plus souples, fruités et parfumés que ceux de Toscane, mais capables, dans leurs meilleures versions, d'une réelle profondeur et d'une belle aptitude à la garde. La reconnaissance officielle de seize sous-zones (sottozone) — au premier rang desquelles Predappio, Bertinoro et Modigliana — a consacré l'idée de terroir et hissé la région parmi les grands du Sangiovese. Des domaines comme Zerbina, Chiara Condello, Drei Donà ou Nicolucci en sont les fers de lance. C'est l'accord idéal avec les viandes rouges, le gibier et les pâtes au ragù de la cuisine romagnole.\n\nGrand rouge de l'est de la région, le Romagna Sangiovese est en pleine renaissance : plus souple et parfumé qu'en Toscane, il révèle ses terroirs à travers ses sous-zones (Predappio, Bertinoro, Modigliana).",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "sangiovese",
+        "rouge",
+        "doc",
+        "garde",
+        "renaissance"
+      ],
+      "source": "jancisrobinson|cellartours"
+    },
+    {
+      "id": "it-emiliaromagna-terr-lambrusco-di-sorbara",
+      "nom": "Lambrusco di Sorbara",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena (Lambrusco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lambrusco di Sorbara",
+        "Lambrusco Salamino"
+      ],
+      "altitude": "~20-50 m",
+      "sols": "sables alluviaux de la plaine du Pô, entre Secchia et Panaro",
+      "caracteristiques_rapides": "Le plus délicat et le plus acclamé des Lambrusco : robe rose pâle, acidité vive, arômes de violette et framboise, sec et vibrant, star de la renaissance du Lambrusco.",
+      "notes_objectives": "Le Lambrusco di Sorbara est le plus délicat, le plus élégant et le plus acclamé des Lambrusco, et l'un des vins effervescents les plus originaux d'Italie. Il est produit au nord de Modène, dans la plaine alluviale comprise entre les rivières Secchia et Panaro, autour du village de Sorbara qui lui a donné son nom.\n\nSa singularité tient d'abord au cépage : le Lambrusco di Sorbara, à la particularité d'être en partie stérile (mauvaise nouaison), ce qui réduit les rendements et concentre le vin, lui donnant une acidité vive et une grande finesse. Sur les sols sableux de la plaine, il donne un Lambrusco à la robe très pâle, rose clair (presque un rosé), aux fines bulles, à l'acidité tranchante et aux arômes délicats de violette, de framboise, de fraise et d'agrumes. Contrairement à l'image sucrée du Lambrusco industriel, le vrai Sorbara est le plus souvent sec (secco), vif et désaltérant, d'une buvabilité remarquable. Les meilleures versions sont refermentées en bouteille (metodo ancestrale ou classico), gagnant en complexité et en finesse. Longtemps méprisé, le Sorbara connaît une véritable renaissance qualitative, porté par des vignerons comme Paltrinieri, Cavicchioli (Vigna del Cristo), Cantina della Volta ou Bergianti, et est devenu le chouchou des sommeliers. C'est l'accord parfait avec la charcuterie grasse de Modène, le gnocco fritto, le parmesan et la cuisine émilienne.\n\nLe plus délicat et le plus acclamé des Lambrusco : robe rose pâle, acidité vive, arômes de violette et de framboise, sec et vibrant. Star de la renaissance du Lambrusco, le Sorbara est le chouchou des sommeliers.\n\nLe destin du Lambrusco di Sorbara illustre à merveille la réhabilitation d'un vin longtemps caricaturé. Dans l'imaginaire collectif, le Lambrusco reste associé au vin rouge doux, mousseux et industriel exporté par millions de bouteilles dans les années 1970-80, symbole d'un certain mauvais goût. Le Sorbara authentique est tout le contraire : sec, tendu, pâle et racé, il a été redécouvert par les sommeliers et les amateurs comme l'un des vins effervescents les plus gastronomiques et rafraîchissants d'Italie. Sa quasi-stérilité naturelle, longtemps considérée comme un défaut, est en réalité la clé de sa qualité : en réduisant les rendements, elle concentre le jus et exalte l'acidité, donnant ce vin d'une vivacité électrique. Sa couleur rose pâle, presque translucide, surprend pour un « rouge » et en fait un vin caméléon, à mi-chemin du rosé. Servi bien frais à l'apéritif, sur la charcuterie grasse de Modène (le culatello, la coppa), le gnocco fritto, les fritures ou même des poissons, il nettoie le palais avec une efficacité redoutable, sa bulle et son acidité tranchant dans le gras. Les versions les plus abouties, refermentées en bouteille sur lies à la manière ancestrale ou en metodo classico, développent une complexité et une finesse qui rivalisent avec de belles bulles. Le Sorbara est ainsi devenu l'emblème de tout un mouvement de réhabilitation du Lambrusco de terroir, et l'un des vins les plus tendance de la sommellerie contemporaine, en Italie comme à l'étranger.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "sorbara",
+        "lambrusco",
+        "effervescent",
+        "doc",
+        "reference"
+      ],
+      "source": "firstleaf|lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-terr-romagna-sangiovese-predappio",
+      "nom": "Romagna Sangiovese Predappio",
+      "type": "sous-zone (sottozona)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~100-350 m",
+      "sols": "spungone calcaire des collines de Predappio",
+      "caracteristiques_rapides": "Le grand cru du Sangiovese de Romagne : sur le spungone de Predappio, des rouges d'une finesse et d'une minéralité remarquables (Chiara Condello, Nicolucci), sommet de la région.",
+      "notes_objectives": "Predappio est considérée comme le grand cru du Sangiovese de Romagne, la sous-zone (sottozona) la plus prestigieuse de l'appellation. Située dans les collines au sud de Forlì, elle doit sa réputation à un terroir singulier et à une génération de vignerons talentueux.\n\nLe sol de Predappio est marqué par le spungone, un calcaire coquillier riche en fossiles marins, qui confère au Sangiovese une finesse, une minéralité et une profondeur remarquables, à mille lieues des rouges rustiques d'autrefois. Sur ces collines, le cépage donne des vins d'une pureté et d'une élégance rares, structurés et de garde, qui figurent parmi les plus grands Sangiovese d'Italie hors de Toscane. La sous-zone est devenue l'épicentre du renouveau de la Romagne, portée par des vignerons comme Chiara Condello (sa figure de proue), Nicolucci (gardien historique avec le Vigna del Generale), Condé ou Noelia Ricci. Curieusement, Predappio est aussi connue comme le village natal de Mussolini, mais c'est bien son Sangiovese qui fait aujourd'hui sa renommée. C'est un accord idéal avec les viandes rouges, le gibier et les fromages affinés.\n\nLe grand cru du Sangiovese de Romagne : sur le spungone calcaire de Predappio, des rouges d'une finesse et d'une minéralité remarquables (Chiara Condello, Nicolucci), sommet qualitatif de la région.\n\nLa consécration de Predappio comme grand cru du Sangiovese de Romagne est l'aboutissement d'un long travail de redécouverte. Ce terroir bénéficie d'une combinaison rare : le spungone, affleurement calcaire coquillier riche en fossiles marins vieux de plusieurs millions d'années, qui traverse les collines et donne au vin une signature minérale et saline unique, ainsi qu'une belle diversité de sols (marnes, argiles, sables) selon les vallées. Cette mosaïque a conduit les vignerons, à l'image de ce qui se fait en Bourgogne ou dans le Barolo, à identifier des lieux-dits et à vinifier parcellairement, révélant que Predappio n'est pas un terroir uniforme mais un ensemble de micro-terroirs. La reconnaissance officielle de la sous-zone, obtenue de haute lutte par une poignée de vignerons passionnés, a validé cette approche et hissé Predappio au rang des grands crus italiens de Sangiovese. Servis sur des viandes rouges, du gibier, des pâtes au ragù ou des fromages affinés, les Sangiovese de Predappio séduisent d'abord par leur finesse et leur parfum, puis se patinent sur une décennie et plus, développant une complexité tertiaire (cuir, sous-bois, épices) qui n'a rien à envier aux meilleurs Chianti Classico ou Brunello. Portée par Chiara Condello, aujourd'hui figure de proue internationale, mais aussi par des gardiens historiques comme Nicolucci et par une nouvelle génération (Condé, Noelia Ricci), Predappio est devenue le symbole de la renaissance qualitative de toute la Romagne, la preuve que le Sangiovese peut y atteindre des sommets et rivaliser avec les plus grands terroirs toscans.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "predappio",
+        "sangiovese",
+        "rouge",
+        "sottozona",
+        "cru",
+        "garde"
+      ],
+      "source": "jancisrobinson|winepages"
+    },
+    {
+      "id": "it-emiliaromagna-terr-romagna-sangiovese-bertinoro",
+      "nom": "Romagna Sangiovese Bertinoro",
+      "type": "sous-zone (sottozona)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "spungone calcaire des collines de Bertinoro",
+      "caracteristiques_rapides": "Sous-zone réputée du Sangiovese de Romagne : sur le spungone de Bertinoro, des rouges élégants et racés, terroir aussi célèbre pour son Albana (Celli, Fattoria Paradiso).",
+      "notes_objectives": "Bertinoro est l'une des sous-zones (sottozone) les plus réputées du Sangiovese de Romagne, célèbre pour l'élégance de ses rouges et pour son terroir calcaire. Perchée sur une colline dominant la plaine romagnole, la petite cité de Bertinoro est aussi renommée pour son hospitalité (la « colonne des anneaux »).\n\nComme à Predappio, le sol de Bertinoro est dominé par le spungone, ce calcaire coquillier qui donne au Sangiovese finesse et minéralité. Les rouges de Bertinoro sont réputés parmi les plus élégants et racés de la Romagne, structurés mais fins, avec une belle aptitude à la garde. Mais Bertinoro est aussi le grand terroir de l'Albana : c'est ici que ce cépage blanc autochtone donne certaines de ses plus belles expressions, sèches comme passito. La sous-zone conjugue ainsi excellence en rouge et en blanc. Des domaines comme Celli, Fattoria Paradiso (gardien du rare Barbarossa) ou Tenuta La Viola en sont les références. C'est un accord idéal avec les viandes rouges, le gibier et les fromages pour le Sangiovese, les poissons et la cuisine fine pour l'Albana.\n\nSous-zone réputée du Sangiovese de Romagne : sur le spungone de Bertinoro, des rouges élégants et racés, terroir aussi célèbre pour son Albana (Celli, Fattoria Paradiso).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "bertinoro",
+        "sangiovese",
+        "albana",
+        "sottozona"
+      ],
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-terr-romagna-sangiovese-modigliana",
+      "nom": "Romagna Sangiovese Modigliana",
+      "type": "sous-zone (sottozona)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese"
+      ],
+      "altitude": "~300-600 m",
+      "sols": "grès (marnoso-arenacea) et marnes d'altitude des Apennins",
+      "caracteristiques_rapides": "La sous-zone d'altitude du Sangiovese de Romagne : dans les Apennins près de la Toscane, des rouges frais, tendus et racés (Villa Papiano), renouveau des terroirs de montagne.",
+      "notes_objectives": "Modigliana est la sous-zone (sottozona) d'altitude du Sangiovese de Romagne, symbole du renouveau des terroirs de montagne de la région. Située dans les Apennins, à la frontière de la Toscane, elle se distingue par son climat frais et ses vins tendus.\n\nÀ des altitudes bien plus élevées que les autres sous-zones (jusqu'à 500-600 mètres), sur des sols de grès et de marnes (la formation marnoso-arenacea des Apennins), le Sangiovese de Modigliana gagne en fraîcheur, en tension et en finesse, donnant des rouges plus verticaux, minéraux et racés, à l'opposé des vins solaires de plaine. Cette identité d'altitude a fait de Modigliana l'une des sous-zones les plus recherchées du renouveau romagnol, portée par des vignerons comme Villa Papiano, qui en ont révélé le potentiel. Les vallées de Modigliana (notamment Acerreta, Ibola et Tramazzo) sont parfois considérées comme de véritables crus. C'est un accord idéal avec les viandes blanches, le gibier à plumes et les fromages, dans un style plus frais et élégant que les autres Sangiovese de Romagne.\n\nLa sous-zone d'altitude du Sangiovese de Romagne : dans les Apennins près de la Toscane, des rouges frais, tendus et racés (Villa Papiano), fer de lance du renouveau des terroirs de montagne.\n\nModigliana s'est imposée en quelques années comme l'une des sous-zones les plus fascinantes et les plus recherchées de la Romagne, au point d'être parfois surnommée la « Bourgogne de Romagne » pour sa logique de terroirs d'altitude. Contrairement aux collines basses et solaires de la plaine romagnole, Modigliana se niche dans les Apennins, à la frontière toscane, sur des sols de marnoso-arenacea (alternance de grès et de marnes) qui n'ont rien à voir avec le spungone calcaire de Predappio ou Bertinoro. L'altitude élevée, les fortes amplitudes thermiques et cette géologie particulière donnent des Sangiovese d'un profil radicalement différent : plus frais, plus tendus, plus verticaux, marqués par une acidité vive et une minéralité qui leur confèrent une réelle aptitude à la garde et une élégance rare. Les vignerons y ont identifié trois vallées principales — Acerreta, Ibola et Tramazzo —, considérées comme de véritables crus, chacune imprimant sa signature au vin, dans une démarche de terroir désormais reconnue. Servis sur des viandes blanches, du gibier à plumes, des champignons ou des fromages, les Sangiovese de Modigliana séduisent par leur fraîcheur et leur définition, et vieillissent avec grâce. Portée par des domaines comme Villa Papiano et par un collectif de vignerons engagés, Modigliana incarne le renouveau des terroirs de montagne et l'idée que le Sangiovese de Romagne, loin d'être un simple vin de plaine, peut offrir, en altitude, quelques-unes de ses expressions les plus fines et les plus racées.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "modigliana",
+        "sangiovese",
+        "altitude",
+        "sottozona",
+        "frais"
+      ],
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-terr-romagna-albana",
+      "nom": "Romagna Albana",
+      "type": "appellation (DOCG)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC/RA/BO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Albana"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "argilo-calcaires et spungone des collines de Romagne",
+      "caracteristiques_rapides": "Le premier blanc DOCG d'Italie (1987) : Albana en sec, macéré ou passito botrytisé, cépage autochtone en pleine réhabilitation (Zerbina, Monticino Rosso, Leone Conti).",
+      "notes_objectives": "Le Romagna Albana est le grand cépage blanc autochtone de la Romagne et un vin chargé d'histoire : ce fut, en 1987, le premier vin blanc d'Italie à obtenir la DOCG, la plus haute distinction du système italien. Produit sur les collines de Romagne, l'Albana connaît une réhabilitation méritée après des décennies de sous-estimation.\n\nL'attribution de la DOCG, à l'époque, fut controversée — beaucoup y virent une décision plus politique que qualitative, l'Albana étant alors surtout un blanc rustique et sans éclat. Mais une nouvelle génération de vignerons a depuis révélé le vrai potentiel du cépage. Sur les sols argilo-calcaires et de spungone, l'Albana se décline en plusieurs styles : en sec (secco), un blanc structuré, riche et parfois tannique (grâce à sa peau épaisse, il se prête bien à la macération, donnant de beaux vins « orange ») ; et surtout en passito, un liquoreux botrytisé d'une grande richesse (abricot, miel, agrumes), qui constitue son expression la plus noble. Des domaines comme Zerbina (avec le Scaccomatto, l'un des plus grands passito d'Italie), Fattoria Monticino Rosso (Codronchio) ou Leone Conti en sont les champions. C'est un accord idéal avec la cuisine locale pour le sec, les desserts et les fromages bleus pour le passito.\n\nPremier blanc DOCG d'Italie (1987), l'Albana de Romagne se décline en sec, macéré ou passito botrytisé. Cépage autochtone longtemps sous-estimé, il est en pleine réhabilitation (Zerbina, Monticino Rosso).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "albana",
+        "blanc",
+        "docg",
+        "passito",
+        "autochtone"
+      ],
+      "source": "jancisrobinson|winetourism"
+    },
+    {
+      "id": "it-emiliaromagna-terr-lambrusco-grasparossa-di-castelvetro",
+      "nom": "Lambrusco Grasparossa di Castelvetro",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena (Lambrusco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lambrusco Grasparossa"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Castelvetro",
+      "caracteristiques_rapides": "Le plus puissant des Lambrusco : sur les collines de Castelvetro, robe foncée, corps plein, tanins et notes de mûre, cerise noire et amande, le Lambrusco de garde et de caractère.",
+      "notes_objectives": "Le Lambrusco Grasparossa di Castelvetro est le plus puissant, le plus foncé et le plus structuré des Lambrusco, à l'opposé du délicat Sorbara. Il est produit sur les collines au sud de Modène, autour du village de Castelvetro, seule des grandes appellations de Lambrusco à être située en coteaux plutôt qu'en plaine.\n\nLe cépage Grasparossa (dont le nom vient de la rafle rougeâtre de ses grappes) donne un Lambrusco à la robe pourpre profonde, au corps plein, doté d'une légère structure tannique inhabituelle pour un effervescent, et aux arômes de mûre, de cerise noire, de prune et d'amande. Plus corsé et vineux que les autres Lambrusco, il existe en versions sèche, demi-sèche et douce. Sa mousse abondante et sa couleur intense en font le Lambrusco le plus « sérieux » et le plus gastronomique, capable d'accompagner des plats riches. Sur les collines argilo-calcaires de Castelvetro, le Grasparossa exprime toute sa puissance. Des domaines comme Cleto Chiarli (Vigneto Cialdini), Fattoria Moretto ou la Tenuta La Fiaminga en sont les références. C'est l'accord parfait avec les viandes grasses, le zampone, le cotechino, les salaisons et la cuisine riche de Modène.\n\nLe plus puissant des Lambrusco : sur les collines de Castelvetro, robe foncée, corps plein, tanins et arômes de mûre, cerise noire et amande. C'est le Lambrusco de garde, gastronomique et de caractère.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "castelvetro",
+        "grasparossa",
+        "lambrusco",
+        "effervescent",
+        "doc"
+      ],
+      "source": "firstleaf|filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-terr-colli-bolognesi-pignoletto",
+      "nom": "Colli Bolognesi Pignoletto",
+      "type": "appellation (DOCG)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Bolognesi (BO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pignoletto (Grechetto Gentile)"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires et gypse (gesso) des collines de Bologne",
+      "caracteristiques_rapides": "La DOCG blanche des collines de Bologne : Pignoletto (Grechetto Gentile) frizzante et spumante, frais et floral, blanc de plaisir en plein renouveau qualitatif.",
+      "notes_objectives": "Le Colli Bolognesi Pignoletto est la DOCG blanche des collines de Bologne, dédiée au Pignoletto, cépage local emblématique de la région. Produit sur les coteaux au sud et à l'ouest de Bologne, ce blanc frais et pétillant est le compagnon idéal de la riche cuisine bolognaise.\n\nLe Pignoletto, dont on a établi qu'il s'agit en réalité du Grechetto Gentile (le même cépage que le Grechetto d'Ombrie), donne un blanc sec, léger et floral, aux arômes de fleurs blanches, de pomme verte et d'amande, avec une belle vivacité. Il est le plus souvent produit en version frizzante (légèrement pétillante) ou spumante, mais aussi en tranquille. Sur les sols argilo-calcaires et de gypse (gesso) des collines de Bologne, le cépage exprime fraîcheur et légèreté. Longtemps cantonné au rôle de vin de soif local, servi dans les trattorias bolognaises avec la charcuterie et les tortellini, le Pignoletto connaît un renouveau qualitatif, porté notamment par la scène nature (Orsi - Vigneto San Vito). L'obtention de la DOCG a consacré son statut. C'est un accord idéal avec la charcuterie, les fritures et la cuisine bolognaise, servi frais.\n\nDOCG blanche des collines de Bologne, le Pignoletto (Grechetto Gentile) donne un blanc frais et floral, frizzante ou spumante. Vin de plaisir de la cuisine bolognaise, il est en plein renouveau qualitatif.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "colli-bolognesi",
+        "pignoletto",
+        "blanc",
+        "effervescent",
+        "docg"
+      ],
+      "source": "lacucinaitaliana|jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-terr-gutturnio",
+      "nom": "Gutturnio",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Piacentini (PC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Barbera",
+        "Bonarda (Croatina)"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Plaisance",
+      "caracteristiques_rapides": "Le rouge emblématique des Colli Piacentini : assemblage Barbera-Bonarda, du frizzante gouleyant au Superiore de garde, spécialité de l'ouest de l'Émilie.",
+      "notes_objectives": "Le Gutturnio est le rouge emblématique des Colli Piacentini, à l'extrémité ouest de l'Émilie, aux confins de la Lombardie et du Piémont. Son nom vient du « gutturnium », un récipient à vin romain retrouvé dans la région, témoignant d'une longue tradition viticole.\n\nC'est un vin d'assemblage, à base de Barbera (qui apporte acidité et structure) et de Bonarda, le nom local de la Croatina (qui apporte couleur, corps et rondeur). Cette combinaison donne un rouge coloré, fruité et généreux, aux arômes de fruits rouges et noirs. Le Gutturnio se décline en plusieurs styles typiques de la région : le frizzante (légèrement pétillant), gouleyant et rafraîchissant, très prisé localement ; et le tranquille, notamment en version Superiore ou Riserva, plus structuré et de garde. Sur les sols argilo-calcaires des collines de Plaisance, ces cépages expriment générosité et caractère. Le Gutturnio est le compagnon idéal de la riche charcuterie de Plaisance (coppa, pancetta, salame piacentino). Des domaines comme La Tosa ou La Stoppa (dans un style nature) en sont les références. C'est l'accord parfait avec la charcuterie et la cuisine régionale.\n\nRouge emblématique des Colli Piacentini, le Gutturnio assemble Barbera et Bonarda, du frizzante gouleyant au Superiore de garde. C'est la spécialité de l'ouest de l'Émilie, compagnon de la charcuterie de Plaisance.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "colli-piacentini",
+        "gutturnio",
+        "barbera",
+        "bonarda",
+        "rouge",
+        "doc"
+      ],
+      "source": "enotecaproperzio"
+    },
+    {
+      "id": "it-emiliaromagna-terr-lambrusco-salamino-di-santa-croce",
+      "nom": "Lambrusco Salamino di Santa Croce",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena (Lambrusco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lambrusco Salamino"
+      ],
+      "altitude": "~20-50 m",
+      "sols": "sables et limons alluviaux de la plaine de Modène",
+      "caracteristiques_rapides": "Le Lambrusco du cépage Salamino (grappe en forme de petit salami) : robe rubis, corps moyen, fruité et floral, entre la finesse du Sorbara et la puissance du Grasparossa.",
+      "notes_objectives": "Le Lambrusco Salamino di Santa Croce est l'une des grandes appellations de Lambrusco de Modène, produite dans la plaine au nord de la ville, autour du hameau de Santa Croce. Il tient son nom du cépage Salamino, dont les grappes petites et allongées évoquent la forme d'un petit salami.\n\nLe Lambrusco Salamino occupe une place intermédiaire entre les deux autres grands Lambrusco de Modène : plus corsé et coloré que le délicat Sorbara, mais plus léger et vif que le puissant Grasparossa. Il donne un Lambrusco à la robe rubis, au fruité généreux et floral, aux fines bulles, existant en versions sèche à douce. C'est aussi le cépage de Lambrusco le plus planté de la région, en raison de sa productivité et de sa fiabilité, souvent utilisé aussi en assemblage. Sur les sols alluviaux de la plaine de Modène, il exprime un profil fruité et équilibré. Polyvalent et gourmand, il est un excellent compagnon de la charcuterie et de la cuisine émilienne. C'est un accord idéal avec le gnocco fritto, la charcuterie de Modène, le parmesan et les plats conviviaux de la région.\n\nLe Lambrusco du cépage Salamino (grappe en forme de petit salami), entre la finesse du Sorbara et la puissance du Grasparossa : robe rubis, fruité et floral. C'est le Lambrusco le plus planté de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "salamino",
+        "lambrusco",
+        "effervescent",
+        "doc"
+      ],
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-terr-reggiano-lambrusco-reggiano",
+      "nom": "Reggiano (Lambrusco Reggiano)",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Reggio Emilia (Lambrusco)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lambrusco Salamino",
+        "Lambrusco Marani",
+        "Ancellotta"
+      ],
+      "altitude": "~30-150 m",
+      "sols": "alluvions de plaine et collines de Reggio Emilia",
+      "caracteristiques_rapides": "Le Lambrusco de Reggio : assemblage de plusieurs Lambrusco (Salamino, Marani) et Ancellotta, rouge fruité et coloré, du populaire au qualitatif (Medici Ermete, Concerto).",
+      "notes_objectives": "Le Reggiano, ou Lambrusco Reggiano, est le Lambrusco de la province de Reggio Emilia, voisine de celle de Modène. C'est le grand bassin de production du Lambrusco, à la fois populaire et, dans ses meilleures versions, qualitatif. Il repose sur un assemblage de plusieurs cépages Lambrusco (Salamino, Marani, Montericco) et surtout d'Ancellotta, un cépage très coloré et productif, souvent utilisé pour renforcer la couleur et la douceur. Le Reggiano donne un Lambrusco rouge vif, fruité et gourmand, le plus souvent en version douce ou demi-sèche, emblème du Lambrusco populaire et convivial. Mais des vignerons comme Medici Ermete (avec le Concerto) ou Lini 910 ont prouvé que le Lambrusco reggiano pouvait aussi être sec, structuré et raffiné, notamment en metodo classico. Sur les sols de plaine et de collines de Reggio, ces cépages expriment fruit et générosité. C'est un accord idéal avec la charcuterie et la cuisine émilienne, du populaire au gastronomique.\n\nLe Lambrusco de Reggio : assemblage de plusieurs Lambrusco et d'Ancellotta, rouge fruité et coloré, du populaire au qualitatif (Medici Ermete, Concerto). C'est le grand bassin du Lambrusco.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "reggio-emilia",
+        "lambrusco",
+        "effervescent",
+        "doc"
+      ],
+      "source": "firstleaf|filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-terr-colli-piacentini",
+      "nom": "Colli Piacentini",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Piacentini (PC)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Candia",
+        "Ortrugo",
+        "Barbera",
+        "Bonarda"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Plaisance",
+      "caracteristiques_rapides": "L'appellation-cadre des Colli Piacentini : blancs de Malvasia di Candia aromatique et d'Ortrugo, rouges et scène nature réputée (La Stoppa), à l'ouest de l'Émilie.",
+      "notes_objectives": "Les Colli Piacentini forment l'appellation-cadre des collines de Plaisance, à l'extrémité ouest de l'Émilie, une région viticole diverse et réputée, notamment pour sa scène nature. Au-delà du fameux Gutturnio (rouge de Barbera-Bonarda), la DOC couvre une belle palette de vins. En blanc, elle est réputée pour la Malvasia di Candia aromatica, qui donne des vins parfumés, secs ou doux, ainsi que pour l'Ortrugo, un cépage local qui donne un blanc frais et léger, souvent frizzante. En rouge, outre le Gutturnio, on y trouve la Bonarda et la Barbera en purs. Sur les sols argilo-calcaires de ces collines, sous un climat continental, la région exprime une belle diversité. Les Colli Piacentini sont aussi devenus un haut lieu du vin naturel italien, grâce au domaine culte La Stoppa (Ageno, Macchiona). C'est un terroir à découvrir pour sa Malvasia aromatique, son Ortrugo et ses vins nature, sur la charcuterie de Plaisance et la cuisine régionale.\n\nL'appellation-cadre des Colli Piacentini : Malvasia di Candia aromatique et Ortrugo en blanc, rouges, et scène nature réputée (La Stoppa). C'est un terroir divers de l'ouest de l'Émilie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "colli-piacentini",
+        "malvasia",
+        "ortrugo",
+        "doc",
+        "nature"
+      ],
+      "source": "lacucinaitaliana|enotecaproperzio"
+    },
+    {
+      "id": "it-emiliaromagna-terr-romagna-trebbiano",
+      "nom": "Romagna Trebbiano",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna (FC/RA)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Trebbiano Romagnolo"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "argiles et limons des collines et plaines de Romagne",
+      "caracteristiques_rapides": "Le blanc de tous les jours de Romagne : Trebbiano Romagnolo sec, léger et neutre, vin de soif et base d'effervescents, très répandu à l'est de la région.",
+      "notes_objectives": "Le Romagna Trebbiano est le blanc de tous les jours de la Romagne, produit à partir du Trebbiano Romagnolo, un cépage local très répandu dans l'est de la région. C'est un vin simple et populaire, omniprésent sur les tables romagnoles. Le Trebbiano Romagnolo donne un blanc sec, léger et neutre, à l'acidité modérée et aux arômes discrets d'agrumes et de fleurs, sans grande complexité mais désaltérant et facile à boire. Il est le vin blanc de soif de la Romagne, servi jeune et frais, et sert aussi de base à des vins effervescents ainsi qu'à la production de vinaigre. Sur les sols d'argiles et de limons des collines et plaines de Romagne, il exprime un profil léger. Moins noble que l'Albana, le Trebbiano Romagnolo n'en reste pas moins un vin de tradition, ancré dans la culture locale. C'est un accord simple avec les fritures, les poissons et la cuisine quotidienne romagnole, à boire sans façon.\n\nLe blanc de tous les jours de Romagne : Trebbiano Romagnolo sec, léger et neutre, vin de soif et base d'effervescents. C'est un blanc simple et populaire, très répandu à l'est de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "trebbiano",
+        "blanc",
+        "doc"
+      ],
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-terr-bosco-eliceo",
+      "nom": "Bosco Eliceo",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Ferrara (côte)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Fortana",
+        "Merlot",
+        "Sauvignon"
+      ],
+      "altitude": "~0-5 m",
+      "sols": "sables côtiers du littoral de Ferrare (Delta du Pô)",
+      "caracteristiques_rapides": "Curiosité des sables du littoral de Ferrare : le Fortana (« vin des sables »), rouge vif et rustique de vignes franches de pied, sur le cordon dunaire du Delta du Pô.",
+      "notes_objectives": "Le Bosco Eliceo est l'une des curiosités viticoles les plus singulières d'Italie : un vignoble planté à même les sables du littoral de Ferrare, sur le cordon dunaire du Delta du Pô, au bord de l'Adriatique. Cette situation unique lui confère un caractère à part. Sa singularité tient à ses sols entièrement sableux, qui présentent un avantage rare : le phylloxéra ne s'y développe pas, ce qui permet de cultiver des vignes franches de pied (non greffées), une rareté en Europe. Le cépage emblème est le Fortana (aussi appelé « uva d'oro »), qui donne un rouge vif, acidulé et rustique, souvent légèrement pétillant, le « vin des sables » traditionnel de la région, idéal sur l'anguille du Delta et les poissons grillés. La DOC produit aussi des blancs (Sauvignon, Malvasia) et des rouges de Merlot. Sur ces sables battus par les vents marins, la viticulture relève de l'exploit. Le Bosco Eliceo est un terroir à découvrir pour son histoire, ses vignes franches de pied et son Fortana, curiosité du littoral émilien.\n\nCuriosité des sables du littoral de Ferrare : le Fortana (« vin des sables »), rouge vif et rustique de vignes franches de pied, sur le cordon dunaire du Delta du Pô. C'est un terroir unique et insolite.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "ferrara",
+        "bosco-eliceo",
+        "fortana",
+        "sables",
+        "doc",
+        "curiosite"
+      ],
+      "source": "winetourism"
+    },
+    {
+      "id": "it-emiliaromagna-terr-colli-bolognesi",
+      "nom": "Colli Bolognesi",
+      "type": "appellation (DOC)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Bolognesi (BO)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Barbera",
+        "Pignoletto"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "argilo-calcaires des collines de Bologne",
+      "caracteristiques_rapides": "Les collines de Bologne (hors Pignoletto DOCG) : réputées pour leurs cépages bordelais (Cabernet, Merlot) et la Barbera, terroir en montée qualitative au sud de Bologne.",
+      "notes_objectives": "Les Colli Bolognesi forment l'appellation des collines de Bologne (hors du Pignoletto, promu DOCG à part), réputée notamment pour ses cépages bordelais. Sur les coteaux au sud et à l'ouest de la ville, ce terroir bénéficie d'un beau potentiel qualitatif. La DOC est particulièrement connue pour ses rouges à base de Cabernet Sauvignon et de Merlot, qui trouvent sur les collines bolognaises des conditions favorables et donnent des vins structurés et de garde, ainsi que pour la Barbera. Elle couvre aussi des blancs (Chardonnay, Sauvignon, Pignoletto). Sur les sols argilo-calcaires de ces collines, sous un climat continental tempéré, les cépages internationaux comme autochtones s'expriment avec caractère. Longtemps dans l'ombre du Pignoletto pétillant, les Colli Bolognesi connaissent une montée qualitative sur leurs rouges. C'est un terroir à découvrir pour ses Cabernet et Merlot, aux côtés du Pignoletto, sur les viandes et la cuisine bolognaise.\n\nLes collines de Bologne (hors Pignoletto DOCG) : réputées pour leurs cépages bordelais (Cabernet, Merlot) et la Barbera, un terroir en montée qualitative au sud de Bologne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "colli-bolognesi",
+        "cabernet",
+        "merlot",
+        "rouge",
+        "doc"
+      ],
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-terr-emilia",
+      "nom": "Emilia",
+      "type": "appellation (IGT)",
+      "region": "Emilia-Romagna",
+      "sous_region": "Régionale (Emilia)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lambrusco",
+        "Malvasia",
+        "Barbera",
+        "Trebbiano",
+        "Spergola"
+      ],
+      "altitude": "~0-500 m",
+      "sols": "sols variés de la plaine et des collines d'Émilie",
+      "caracteristiques_rapides": "La grande IGT de l'ouest : cadre souple pour le Lambrusco et les cépages émiliens, dont beaucoup de cuvées nature majeures (La Stoppa, Camillo Donati) hors DOC.",
+      "notes_objectives": "L'IGT Emilia est l'indication géographique régionale de l'ouest de la région (l'Émilie proprement dite), un cadre souple et très utilisé, notamment pour le Lambrusco. Transversale, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC. Elle couvre l'ensemble des cépages émiliens — Lambrusco, Malvasia, Barbera, Trebbiano, Spergola, Ancellotta — en rouge, blanc, rosé et surtout effervescent. C'est notamment sous cette IGT (souvent « Lambrusco dell'Emilia ») qu'est commercialisée une grande partie du Lambrusco, ainsi que de nombreuses cuvées d'auteur et nature qui sortent du cadre des appellations : les vins de La Stoppa (Colli Piacentini), de Camillo Donati (Parme) ou de Cà de Noci (Reggio) y trouvent leur place. Souple et créative, l'IGT Emilia est un espace de liberté précieux pour les vignerons, du Lambrusco populaire aux vins nature les plus recherchés. Elle illustre la diversité et le dynamisme du vignoble émilien.\n\nLa grande IGT de l'ouest : cadre souple pour le Lambrusco et les cépages émiliens, dont beaucoup de cuvées nature majeures (La Stoppa, Camillo Donati) hors DOC. C'est l'espace de liberté des vignerons d'Émilie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "emilia-romagna",
+        "emilia",
+        "igt",
+        "lambrusco",
+        "nature",
+        "souple"
+      ],
+      "source": "jancisrobinson"
+    }
+  ]
+}

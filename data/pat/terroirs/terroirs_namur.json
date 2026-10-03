@@ -1,0 +1,341 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "namur",
+  "region_label": "Namur",
+  "source_file": "terroirs_namur_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 13,
+  "items": [
+    {
+      "id": "be-namur-terr-coteaux-mosans-de-namur-a-dinant",
+      "nom": "Coteaux mosans de Namur à Dinant",
+      "type": "coteau",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 90-200 m",
+      "sols": "Calcaires carbonifères et schistes, sols superficiels et drainants sur fortes pentes",
+      "caracteristiques_rapides": "Le cœur historique et actuel du vignoble namurois : versants abrupts et bien exposés entre Namur et Dinant, sur calcaire, avec les amplitudes thermiques amorties par le fleuve. Les plus grands domaines de la province y sont installés.",
+      "notes_objectives": "Le terroir qui donne son nom à l'appellation wallonne et son image à la viticulture namuroise. Entre Namur et Dinant, la Meuse s'encaisse dans les calcaires carbonifères et dégage des versants abrupts, hauts de cent mètres, exposés au sud ou au sud-est. Les sols y sont superficiels, caillouteux, parfaitement drainants ; la roche emmagasine la chaleur et la restitue ; la masse d'eau du fleuve amortit les extrêmes et retarde les gelées. C'est, avec les craies du Haut-Pays hennuyer, le seul secteur belge où le relief travaille réellement pour la vigne.\n\nL'antériorité est documentée : la vigne est attestée dans la région namuroise depuis la fin du Xe siècle et jusqu'au milieu du XIXe, avant que le refroidissement puis la concurrence des vins importés ne l'effacent. Le retour date de 2003, avec les plantations de Château Bon Baron à Houx, suivies en 2009 par le Château de Bioul et en 2020 par les onze hectares et demi d'Annevoie.\n\nL'ensemble relève de l'AOP Côtes de Sambre et Meuse, reconnue en 2004 et définie non par des limites administratives mais par les bassins hydrographiques wallons — un choix de délimitation rare en Europe, qui suit la logique du relief plutôt que celle des communes. Les encépagements y divergent nettement : cépages résistants à Bioul et Annevoie, éventail très large de quatorze variétés chez Bon Baron, qui a été le premier vignoble belge certifié Fair'n Green.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "cotes-de-sambre-et-meuse"
+      ],
+      "source": "chateaubonbaron.com ; chateaudebioul.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-le-vignoulle-bioul",
+      "nom": "Le Vignoulle (Bioul)",
+      "type": "lieu-dit",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 150-200 m",
+      "sols": "Limons sur substrat calcaire et schisteux, parcelles morcelées",
+      "caracteristiques_rapides": "Lieu-dit au toponyme explicitement viticole, sur les meilleurs coteaux entourant le château de Bioul, replanté en 2009 et certifié bio depuis 2019.",
+      "notes_objectives": "Lieu-dit au toponyme explicitement viticole — le Vignoulle — sur les coteaux entourant le château de Bioul, dans la commune d'Anhée. Le nom atteste une occupation ancienne de ces pentes par la vigne, avant sa disparition régionale.\n\nLa replantation date de 2009, entièrement en cépages résistants, avec certification bio acquise fin 2019 et deux hectares de Souvignier Gris ajoutés en 2020. Les parcelles sont morcelées autour du château et dans les environs proches, sur des limons reposant sur un substrat calcaire et schisteux. Le morcellement est un trait récurrent du vignoble mosan : les surfaces d'un seul tenant y sont rares, le relief et le parcellaire agricole imposant de composer avec ce qui est disponible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "bio"
+      ],
+      "source": "chateaudebioul.be ; vinsetgourmandisesdewallonie.be"
+    },
+    {
+      "id": "be-namur-terr-falaises-de-dinant",
+      "nom": "Falaises de Dinant",
+      "type": "coteau",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 90-180 m",
+      "sols": "Calcaires carbonifères massifs, éboulis et sols squelettiques",
+      "caracteristiques_rapides": "Verrou calcaire où la Meuse se resserre entre des falaises verticales. Réverbération forte, drainage parfait, sols très pauvres : un site planté seulement depuis 2021, sur cinq hectares et demi.",
+      "notes_objectives": "Le verrou calcaire où la Meuse se resserre entre des parois verticales, dominé par la citadelle et par le Rocher Bayard, aiguille détachée de la falaise. Le substrat est un calcaire carbonifère massif, avec éboulis et sols squelettiques au pied des parois.\n\nLes conditions sont extrêmes au sens agronomique : réverbération forte, drainage total, réserve hydrique quasi nulle, sols très pauvres. Ce sont précisément celles qui limitent la vigueur et concentrent les jus, à condition de disposer d'assez d'eau au moment critique. Le secteur n'a pourtant été planté qu'en 2021, sur cinq hectares et demi et en cépages classiques — un pari récent, dont les premiers résultats diront ce que ce type de site peut donner en Belgique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-rochers-de-marche-les-dames",
+      "nom": "Rochers de Marche-les-Dames",
+      "type": "coteau",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 80-160 m",
+      "sols": "Calcaires carbonifères, versants sud très pentus, sols peu profonds",
+      "caracteristiques_rapides": "Massif rocheux en aval de Namur, site d'escalade historique, où deux vignobles se sont installés depuis 2018 sur des versants sud abrupts et drainants.",
+      "notes_objectives": "Massif rocheux en aval de Namur, sur la rive droite de la Meuse : falaises calcaires, versants sud très pentus, sols peu profonds et drainants. Le site est connu des grimpeurs — c'est l'un des berceaux de l'escalade belge — et de l'histoire nationale, le roi Albert Ier y ayant trouvé la mort en 1934.\n\nDeux vignobles s'y sont installés depuis 2018, l'un de cinq hectares en cépages classiques, l'autre d'un hectare et quart en résistants et conduit dans une logique d'agroforesterie et de biodiversité. Le contraste des approches sur un même coteau est intéressant : mêmes conditions, deux stratégies opposées quant au risque sanitaire. Ces versants comptent parmi les mieux exposés de toute la vallée, et le secteur n'avait plus porté de vigne depuis des siècles.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "diedrenoir.be ; crompechine.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-plateau-dandenne-seilles-landenne-coutisse",
+      "nom": "Plateau d'Andenne (Seilles, Landenne, Coutisse)",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 150-220 m",
+      "sols": "Limons sur plateau calcaire, versants courts vers la Meuse",
+      "caracteristiques_rapides": "La commune la plus densément pourvue en vignobles de la province : sept à huit domaines recensés, presque tous sous l'hectare, fédérés depuis 2019 par l'association VignAndenne.",
+      "notes_objectives": "La commune la plus densément pourvue en vignobles de la province : sept à huit domaines recensés à Seilles, Landenne, Coutisse et Thon-Samson, presque tous sous l'hectare, sur les plateaux limoneux qui dominent la Meuse d'une centaine de mètres, avec un substrat calcaire et de courts versants orientés vers le fleuve.\n\nLa densification s'est faite par le nombre plutôt que par la surface, comme sur la Houwaartseberg dans le Hageland. Elle doit beaucoup à l'association VignAndenne, créée en 2019 pour mutualiser conseils, matériel et événements entre vignerons de la commune. Le secteur a aussi de l'antériorité : le Clos du Neuf Moulin remonte à 1990 et le Clos du Bure à 1995, soit près de dix ans avant le redémarrage viticole namurois proprement dit.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-vallee-de-la-molignee",
+      "nom": "Vallée de la Molignée",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 120-200 m",
+      "sols": "Calcaires carbonifères, versants courts et bien exposés",
+      "caracteristiques_rapides": "Vallée affluente de la Meuse, connue pour l'abbaye de Maredsous et ses carrières. Versants calcaires courts, plantés depuis 2020 en cépages résistants.",
+      "notes_objectives": "Vallée affluente de la Meuse, entaillée dans les calcaires carbonifères, connue pour ses draisines, ses carrières et surtout l'abbaye de Maredsous, fondée en 1872 et devenue une marque à part entière avec sa bière et son fromage.\n\nLes versants y sont courts, pentus et bien exposés, sur des sols calcaires superficiels — des conditions comparables à celles de la vallée principale, à une échelle plus réduite. La plantation de trente ares aux abords de l'abbaye, en 2020 et en cépages résistants, s'inscrit dans un mouvement plus large de retour de la vigne sur les sites monastiques wallons : Brogne, Floreffe, Villers, Saint-Denis. Dans presque tous les cas, la production reste symbolique et l'enjeu est autant patrimonial que viticole.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-clos-du-buley-namur",
+      "nom": "Clos du Buley (Namur)",
+      "type": "lieu-dit",
+      "region": "Namur",
+      "sous_region": "Vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 100-160 m",
+      "sols": "Versant calcaire dominant la Meuse, sous la citadelle",
+      "caracteristiques_rapides": "Créé en 1233 et reconstitué en 1983 : la plus ancienne référence viticole documentée du corpus belge. Douze ares seulement, gérés par une confrérie, sur le versant de La Plante.",
+      "notes_objectives": "La plus ancienne référence viticole documentée du corpus belge : le clos est mentionné dès 1233, sur le versant de La Plante, en contrebas de la citadelle de Namur. Il a été reconstitué en 1983 et compte aujourd'hui douze ares, gérés par une confrérie.\n\nSa valeur est entièrement historique — la production est symbolique et ne sort pas du cercle des compagnons. Mais il documente ce que la région a perdu : la vigne est attestée à Namur de la fin du Xe siècle jusque vers 1850, sur les versants calcaires qui dominent la confluence de la Sambre et de la Meuse, avant que le refroidissement climatique puis l'arrivée massive des vins français par voie d'eau et de chemin de fer ne la rendent économiquement absurde. Le clos est l'un des rares témoins matériels de cette continuité, et le point de repère chronologique le plus reculé dont dispose le fichier belge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "clos-historique"
+      ],
+      "source": "marcvanel.be ; namur.be"
+    },
+    {
+      "id": "be-namur-terr-plateau-de-la-hesbaye-namuroise",
+      "nom": "Plateau de la Hesbaye namuroise",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Hesbaye namuroise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Savagnin",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 140-200 m",
+      "sols": "Limons éoliens profonds sur substrat calcaro-gréseux, parcelles pierreuses en bordure",
+      "caracteristiques_rapides": "Le plateau au nord de Namur, à l'écart des coteaux mosans : c'est là que sont installés les trois domaines les plus ambitieux de la province, sur limons profonds ou, pour les meilleures parcelles, sur sols pierreux.",
+      "notes_objectives": "Le contre-pied de l'image mosane. À une dizaine de kilomètres au nord de Namur, sur le plateau limoneux de la Hesbaye namuroise, sans relief marqué ni panorama, se trouvent les trois domaines les plus ambitieux de la province : le Chenoy à Emines, le Ry d'Argent à Bovesse, La Falize à Rhisnes. Aucun n'est en vallée, et c'est de là que sortent les vins les mieux notés.\n\nLe sol est un limon éolien profond, fertile, à bonne réserve hydrique — a priori l'inverse de ce que la vigne demande. Deux réponses opposées y ont été apportées. Le Chenoy a fait valider la qualité du terrain par une étude pédologique menée avec l'université de Louvain avant d'étendre son vignoble, et mise sur des cépages résistants pour tenir la vigueur et le sanitaire. La Falize, à l'inverse, a sélectionné dans un domaine de plus de deux cents hectares les parcelles les plus pauvres et les plus pierreuses, précisément parce que le limon profond y était un handicap.\n\nLe secteur concentre aussi les démarches les plus poussées du corpus wallon : certification bio au Chenoy depuis 2019, biodynamie Demeter à La Falize, avec un conseil viticole venu du Domaine Leflaive et un conseil de cave assuré par Peter Colemont, du Clos d'Opleeuw. Un plateau agricole banal qui produit les vins les plus recherchés de Wallonie : la leçon vaut d'être retenue.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "piwi",
+        "bio"
+      ],
+      "source": "domaine-du-chenoy.com ; lafalize.com ; domainedurydargent.com"
+    },
+    {
+      "id": "be-namur-terr-tiennes-du-condroz-ciney-hamois-assesse",
+      "nom": "Tiennes du Condroz (Ciney, Hamois, Assesse)",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Condroz",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 200-300 m",
+      "sols": "Crêtes calcaires (tiennes) alternant avec dépressions schisteuses et gréseuses",
+      "caracteristiques_rapides": "Paysage en vagues parallèles, où crêtes calcaires et dépressions schisteuses se succèdent. Altitude élevée, saison courte, gelées tardives : trois vignobles seulement, tous postérieurs à 2017.",
+      "notes_objectives": "Un paysage en vagues parallèles, où alternent crêtes calcaires — les tiennes, dans le vocabulaire wallon — et dépressions creusées dans les schistes et les grès. Cette alternance, orientée sud-ouest/nord-est, donne au Condroz sa physionomie unique en Belgique.\n\nPour la vigne, tout se joue sur les tiennes : sols superficiels, très drainants, qui se réchauffent vite, à l'inverse des dépressions froides et lourdes. Mais le contexte général reste difficile — deux cents à trois cents mètres d'altitude, saison végétative sensiblement plus courte qu'en vallée mosane, gelées tardives fréquentes. Les trois vignobles recensés sont tous postérieurs à 2017, tous minuscules et tous en cépages précoces ou résistants. Le Condroz est à ce titre un bon indicateur du déplacement de la limite de culture.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "condroz",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be ; domainederonchinne.be"
+    },
+    {
+      "id": "be-namur-terr-coteaux-de-la-sambre-a-floreffe",
+      "nom": "Coteaux de la Sambre à Floreffe",
+      "type": "coteau",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 90-160 m",
+      "sols": "Calcaires et schistes de la vallée sambrienne, versants sud",
+      "caracteristiques_rapides": "Versants exposés au sud en amont de Namur, dominés par l'abbaye prémontrée de 1121 dont les moines cultivaient la vigne. Secteur inclus dans l'aire de l'AOP Côtes de Sambre et Meuse.",
+      "notes_objectives": "Versants exposés au sud dominant la Sambre à une dizaine de kilomètres en amont de Namur, sur des calcaires et des schistes. Le site est surplombé par l'abbaye prémontrée de Floreffe, fondée en 1121, l'une des plus anciennes de Wallonie et dont les moines cultivaient la vigne au Moyen Âge.\n\nLa basse vallée de la Sambre faisait partie des secteurs viticoles documentés avant le refroidissement des XVIe et XVIIe siècles, au même titre que les coteaux mosans. Le retour y est récent et modeste — trente ares plantés en 2012 en cépages classiques. Point réglementaire : le secteur relève du bassin hydrographique de la Sambre, donc de l'aire de l'AOP Côtes de Sambre et Meuse, au même titre que les coteaux mosans et que les communes sambriennes du Hainaut.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "sambre",
+        "cotes-de-sambre-et-meuse",
+        "clos-historique"
+      ],
+      "source": "ozelevignoble.be ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-entre-sambre-et-meuse-mettet-philippeville",
+      "nom": "Entre-Sambre-et-Meuse (Mettet, Philippeville)",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Basse-Sambre et Entre-Sambre-et-Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 180-250 m",
+      "sols": "Tiennes calcaires et limons sur schistes, sols superficiels et drainants",
+      "caracteristiques_rapides": "Plateau agricole entre Sambre et Meuse, à la charnière de la Fagne et du Condroz. Terres d'élevage où la vigne apparaît depuis 2003, sur les crêtes calcaires sèches dites tiennes.",
+      "notes_objectives": "Le plateau agricole compris entre les deux rivières, à la charnière de la Fagne et du Condroz : terres d'élevage et de cultures fourragères, altitudes de cent quatre-vingts à deux cent cinquante mètres, sols limoneux sur schistes entrecoupés de crêtes calcaires sèches.\n\nCe sont ces tiennes qui portent la vigne : sols superficiels, pauvres et drainants, réchauffement rapide au printemps. Le secteur a de l'antériorité — le Clos de Brogne, planté en 2003 sur le site d'une abbaye fondée au Xe siècle par saint Gérard, est contemporain du Chenoy et de Bon Baron — mais les surfaces restent dérisoires. Philippeville, ancienne place forte espagnole puis française, marque la limite sud de ce plateau avant l'entrée dans la Fagne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "sambre",
+        "jeune-domaine"
+      ],
+      "source": "brogne.eu ; marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-calestienne-doische-viroinval",
+      "nom": "Calestienne (Doische, Viroinval)",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Calestienne et Ardenne namuroise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 150-250 m",
+      "sols": "Calcaires dévoniens, sols superficiels très drainants, pelouses calcicoles",
+      "caracteristiques_rapides": "Bande étroite de calcaires dévoniens séparant la Fagne de l'Ardenne, au microclimat plus chaud et plus sec que les schistes voisins. Flore méridionale unique en Belgique, et vigne présente depuis 2018.",
+      "notes_objectives": "Une bande étroite de calcaires dévoniens, large de quelques kilomètres seulement, qui court d'ouest en est en séparant la Fagne schisteuse de l'Ardenne. C'est l'une des curiosités géologiques de Wallonie, et l'un des secteurs les plus prometteurs du sud du pays pour la vigne.\n\nLa raison tient au sol : des calcaires superficiels et très drainants créent ici un microclimat sensiblement plus chaud et plus sec que sur les schistes voisins, à altitude pourtant comparable. Les pelouses calcicoles de la Calestienne abritent ainsi une flore méridionale unique en Belgique, orchidées comprises.\n\nLa vigne n'y est arrivée qu'en 2018, puis 2021, sur deux vignobles d'un hectare et de soixante-cinq ares. C'est très peu, mais le raisonnement est solide : si un secteur du sud wallon doit se révéler viticole à mesure que le climat se réchauffe, c'est celui-là.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "calestienne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-namur-terr-ardenne-namuroise-bievre",
+      "nom": "Ardenne namuroise (Bièvre)",
+      "type": "secteur",
+      "region": "Namur",
+      "sous_region": "Calestienne et Ardenne namuroise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 300-380 m",
+      "sols": "Schistes et grès ardennais, sols acides et froids",
+      "caracteristiques_rapides": "Entrée de l'Ardenne, à la frontière de la province de Luxembourg : altitude élevée, pluviométrie forte, sols schisteux acides. Sept hectares y ont pourtant été plantés en 2015.",
+      "notes_objectives": "L'entrée de l'Ardenne, à la frontière de la province de Luxembourg : trois cents à trois cent quatre-vingts mètres d'altitude, sols schisteux et gréseux acides, pluviométrie élevée, saison courte et gelées tardives. C'est, avec la Botte du Hainaut et la Gaume, l'un des contextes les plus hostiles de Belgique pour la vigne.\n\nSept hectares y ont pourtant été plantés en 2015 à Bellefontaine, en cépages classiques et résistants mêlés, ce qui en fait de loin le plus grand vignoble ardennais. L'échelle du pari est notable : là où la plupart des vignerons de zones difficiles se limitent à quelques ares de test, il s'agit ici d'une exploitation dimensionnée pour vivre de sa production. Ce site est l'un des meilleurs indicateurs belges du déplacement vers le sud et vers l'altitude de la limite de culture de la vigne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi"
+      ],
+      "source": "vignobledebellefontaine.be ; marcvanel.be"
+    }
+  ]
+}

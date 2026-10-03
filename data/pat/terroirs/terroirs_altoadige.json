@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "altoadige",
+  "region_label": "Alto Adige (Italie)",
+  "source_file": "terroirs_altoadige.json",
+  "built_at": "2026-06-28",
+  "count": 19,
+  "items": [
+    {
+      "id": "it-altoadige-terr-terlano-terlan",
+      "nom": "Terlano (Terlan)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Bianco",
+        "Sauvignon",
+        "Chardonnay"
+      ],
+      "altitude": "~250-900 m",
+      "sols": "porphyre quartzeux, sols minéraux et drainants",
+      "caracteristiques_rapides": "Le grand terroir des blancs de garde d'Alto Adige : sur le porphyre quartzeux, Pinot Bianco et Sauvignon d'une tension saline et d'une longévité uniques en Italie.",
+      "notes_objectives": "Terlano (Terlan), sur les coteaux au nord-ouest de Bolzano, est le grand terroir des blancs de garde de l'Alto Adige et l'un des plus singuliers d'Italie. Sa réputation tient à sa géologie : un sol de porphyre quartzeux rouge, riche en minéraux et parfaitement drainant, qui imprime aux vins une tension saline et une longévité uniques.\n\nSur ces pentes étagées, le Pinot Bianco (Weissburgunder) trouve son expression la plus aboutie, aux côtés du Sauvignon et du Chardonnay : des blancs d'une grande pureté, à la minéralité tranchante, qui se distinguent par leur capacité hors norme à vieillir — chose rare pour des vins blancs. Les meilleures cuvées, longuement élevées en grands foudres, peuvent se patiner sur dix, vingt ans et au-delà, développant des notes de fruits mûrs, de miel, d'épices et de pierre. C'est ici que la Cantina Terlano a bâti sa renommée mondiale, avec le Vorberg, la Nova Domus, le Quarz et la célèbre série Rarity de très vieux millésimes. Le climat, abrité et ensoleillé, conjugué à l'amplitude thermique, préserve l'acidité et la finesse.\n\nÉtalon des blancs alpins, Terlano démontre qu'un grand vin blanc de garde peut naître sur le porphyre quartzeux. C'est l'un des terroirs les plus distinctifs de l'Alto Adige et un repère de la viticulture de blanc en Italie.\n\nLe porphyre quartzeux de Terlano est unique en Italie : ce sol cristallin, pauvre et drainant, contraint la vigne et confère aux vins une signature saline et une structure minérale qui les rendent presque inaltérables. C'est ce qui explique le phénomène le plus fascinant de l'appellation — la longévité des blancs —, illustré par la série Rarity de la Cantina Terlano, ces très vieux millésimes conservés des décennies sur lies avant dégorgement. Le climat, abrité des vents froids et généreusement ensoleillé mais rafraîchi la nuit, parachève cet équilibre entre maturité et fraîcheur. Servis sur des poissons, des asperges (spécialité de Terlano), des volailles ou des fromages, les grands blancs du cru gagnent en complexité sur dix à vingt ans, déployant miel, fruits confits, épices et notes grillées. Au-delà du Pinot Bianco, le Sauvignon (Quarz) et le Chardonnay y atteignent aussi des sommets. Terlano incarne, mieux qu'aucun autre terroir italien, l'idée d'un grand vin blanc de garde né de la roche.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "terlano",
+        "porphyre",
+        "pinot-bianco",
+        "blanc-de-garde"
+      ],
+      "source": "wineenthusiast|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-tramin-termeno",
+      "nom": "Tramin (Termeno)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gewürztraminer",
+        "Pinot Nero",
+        "Pinot Bianco"
+      ],
+      "altitude": "~250-700 m",
+      "sols": "sols calcaires et volcaniques, coteaux pentus",
+      "caracteristiques_rapides": "Berceau et grand terroir du Gewürztraminer : coteaux d'altitude où le cépage atteint son équilibre entre intensité aromatique et fraîcheur (Nussbaumer, Kastelaz).",
+      "notes_objectives": "Tramin (Termeno), sur la Route des Vins au sud de Bolzano, est le berceau et le grand terroir du Gewürztraminer, ce cépage aromatique auquel le village a donné son nom. C'est ici que naissent quelques-uns des plus grands Gewürztraminer du monde.\n\nSur des sols mêlant calcaire et matrices volcaniques, sur des coteaux pentus exposés au soleil mais rafraîchis par l'altitude, le Gewürztraminer atteint un équilibre rare : une intensité aromatique spectaculaire — rose, litchi, épices, fruits exotiques — tempérée par une acidité et une fraîcheur qui évitent la lourdeur. Les meilleures vigne, comme Nussbaumer (Cantina Tramin) ou Kastelaz (Elena Walch), en sont les expressions les plus abouties, capables de vieillir et de gagner en complexité. Le terroir convient aussi remarquablement au Pinot Nero et aux blancs. L'amplitude thermique entre le jour et la nuit, déterminante, préserve l'éclat aromatique et la tension.\n\nPatrie du Gewürztraminer, Tramin signe des blancs aromatiques d'une précision et d'une profondeur uniques, ainsi que de beaux rouges. C'est l'un des terroirs les plus emblématiques de l'Alto Adige et la référence mondiale du cépage.\n\nLe village de Tramin a non seulement donné son nom au Gewürztraminer, mais lui offre un terroir d'exception : des coteaux pentus où alternent calcaire et roches volcaniques, à une altitude qui préserve l'acidité d'un cépage naturellement riche et capiteux. C'est cette tension qui distingue les Gewürztraminer de Tramin des versions lourdes produites ailleurs. Les meilleures vigne — Nussbaumer pour la Cantina Tramin, Kastelaz pour Elena Walch — en sont les expressions les plus abouties, et la cuvée Epokale, affinée dans une ancienne mine d'argent à 2000 mètres, en pousse l'ambition à l'extrême. Servis sur des cuisines épicées, des fromages persillés, du foie gras ou en méditation, les grands Gewürztraminer de Tramin surprennent par leur longévité. Le terroir réussit aussi remarquablement au Pinot Nero, sur ses parcelles les plus fraîches. Tramin demeure la capitale mondiale d'un cépage dont il porte le nom.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "gewurztraminer",
+        "calcaire"
+      ],
+      "source": "wine-searcher|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-mazon-mazzon",
+      "nom": "Mazon (Mazzon)",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Nero"
+      ],
+      "altitude": "~250-400 m",
+      "sols": "moraines et sols caillouteux, versant est de l'Adige",
+      "caracteristiques_rapides": "La colline du Pinot Nero d'Italie : sur le versant est, terroir d'élection du cépage (Hofstätter Barthenau Vigna S. Urbano), rouges fins, profonds et de garde.",
+      "notes_objectives": "Mazon (Mazzon), petit hameau perché sur le versant est de la vallée de l'Adige, au-dessus d'Egna, est considéré comme le grand terroir du Pinot Nero d'Italie. Cette colline discrète, exposée à l'ouest et bien ventilée, offre au cépage bourguignon des conditions d'exception.\n\nSur des sols morainiques et caillouteux, à des altitudes et expositions idéales, le Pinot Nero (Blauburgunder) y atteint une finesse, une profondeur et une aptitude à la garde rares sous ces latitudes. C'est ici que J. Hofstätter produit son Barthenau Vigna S. Urbano, régulièrement cité comme le meilleur Pinot Nero d'Italie et comparé aux grands vins de Bourgogne : un rouge délicat, parfumé — petits fruits rouges, sous-bois, épices —, à la trame fine et persistante. D'autres domaines réputés y possèdent des parcelles. L'amplitude thermique et la fraîcheur du versant préservent l'acidité et la complexité aromatique du cépage.\n\nGrand cru officieux du Pinot Nero italien, Mazon a prouvé que ce cépage exigeant pouvait atteindre, en Alto Adige, un niveau d'excellence international. C'est l'un des terroirs de rouge les plus prestigieux de la région et un repère pour les amateurs de Pinot Nero.\n\nLa réputation de Mazon s'est construite discrètement, parcelle après parcelle, autour de quelques familles convaincues que ce versant pouvait rivaliser avec les grands terroirs bourguignons. Le Barthenau Vigna S. Urbano d'Hofstätter en est la preuve éclatante : un Pinot Nero d'une finesse, d'une complexité et d'une garde qui figurent parmi les sommets du cépage en Italie. Le secret tient à la conjonction d'une exposition à l'ouest — qui étire la maturation jusque tard dans la journée —, d'une altitude modérée et d'une ventilation constante, qui préservent l'acidité et la délicatesse aromatique du Blauburgunder. Servis sur des volailles nobles, du gibier à plume, des champignons ou des fromages, les Pinot Nero de Mazon se patinent sur dix à quinze ans, gagnant des notes de sous-bois, de truffe et d'épices. Petit hameau au grand destin, Mazon est devenu le repère du Pinot Nero italien et l'un des terroirs de rouge les plus prestigieux de l'Alto Adige.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "mazon",
+        "pinot-nero",
+        "cru",
+        "barthenau"
+      ],
+      "source": "winefolly|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-gries-bolzano",
+      "nom": "Gries (Bolzano)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bolzano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Lagrein",
+        "Schiava"
+      ],
+      "altitude": "~250-350 m",
+      "sols": "alluvions sableuses et chaudes du fond de vallée",
+      "caracteristiques_rapides": "Foyer historique du Lagrein : terroir chaud et alluvial de Bolzano, idéal pour ce cépage tardif et puissant (Muri-Gries, Cantina Bolzano).",
+      "notes_objectives": "Gries, quartier de Bolzano, est le foyer historique du Lagrein, le grand cépage rouge autochtone de l'Alto Adige. Sur les sols alluviaux, sableux et chauds du fond de la vallée, ce cépage tardif et exigeant trouve son terroir d'élection.\n\nLa chaleur de Bolzano, l'une des villes les plus chaudes d'Italie en été, permet au Lagrein d'atteindre une maturité pleine, donnant des rouges profonds et structurés : robe sombre, arômes de fruits noirs, d'épices et de violette, bouche dense aux tanins veloutés. C'est ici que la Klosterkellerei Muri-Gries et la Cantina Bolzano signent leurs références (Lagrein Riserva Abtei Muri, Taber). Le terroir convient aussi au Santa Maddalena voisin. Le travail soigné a permis d'affiner un cépage longtemps rustique.\n\nBerceau du Lagrein, Gries donne les expressions les plus abouties de ce cépage autochtone, profondes et de garde. C'est le grand terroir de rouge de Bolzano et un repère de l'identité de l'Alto Adige.\n\nLe Lagrein, longtemps cantonné aux vins de soif, a connu une véritable renaissance à Gries, où la maturité pleine du raisin et un élevage soigné ont révélé son potentiel de garde. Les sols alluviaux et sableux, déposés par l'Isarco et l'Adige, et la chaleur estivale de Bolzano créent des conditions idéales pour ce cépage tardif. Servis sur des viandes braisées, du gibier, des charcuteries fumées ou des fromages affinés, les grands Lagrein de Gries — le Riserva Abtei Muri de Muri-Gries, le Taber de la Cantina Bolzano — se patinent sur dix à quinze ans, leurs tanins se fondant en une trame veloutée. Foyer historique et qualitatif du Lagrein, Gries reste le grand terroir de rouge autochtone de l'Alto Adige.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "bolzano",
+        "gries",
+        "lagrein",
+        "chaud"
+      ],
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-santa-maddalena-st-magdalener",
+      "nom": "Santa Maddalena (St. Magdalener)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bolzano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schiava",
+        "Lagrein"
+      ],
+      "altitude": "~250-500 m",
+      "sols": "porphyre quartzeux des coteaux au-dessus de Bolzano",
+      "caracteristiques_rapides": "Coteaux exposés au-dessus de Bolzano : le Schiava (avec un peu de Lagrein) y donne le Santa Maddalena, rouge léger, fruité et parfumé, fleuron historique de la ville.",
+      "notes_objectives": "Santa Maddalena (St. Magdalener) désigne les coteaux exposés au sud-est juste au-dessus de Bolzano, l'un des terroirs historiques les plus réputés de l'Alto Adige. Sur le porphyre quartzeux, le Schiava (Vernatsch) y donne un rouge emblématique.\n\nAssemblage dominé par le Schiava, complété d'un peu de Lagrein, le Santa Maddalena est un rouge léger mais d'une finesse particulière : robe claire, nez de cerise, de violette et d'amande, bouche fraîche, fruitée et désaltérante, plus complexe et structurée que les Schiava ordinaires. Le terroir chaud et bien exposé de ces coteaux, jadis comptés parmi les plus prestigieux d'Italie pour le vin rouge, lui confère son caractère. Servi sur la cuisine locale, il illustre une tradition vivante.\n\nFleuron historique du Schiava, le Santa Maddalena est l'un des terroirs de rouge les plus typiques de l'Alto Adige, où le porphyre des coteaux de Bolzano donne un vin léger et raffiné, à part dans le paysage des rouges italiens.\n\nAu tournant du XXe siècle, le Santa Maddalena comptait parmi les vins rouges les plus réputés d'Italie, preuve de la qualité exceptionnelle de ces coteaux. Le porphyre quartzeux, l'exposition sud-est et la chaleur de Bolzano y donnent au Schiava une profondeur et une finesse qu'il n'atteint nulle part ailleurs. L'ajout d'une petite proportion de Lagrein apporte couleur et structure. Servi légèrement rafraîchi sur des charcuteries, des plats de montagne ou des fromages, le Santa Maddalena séduit par sa fraîcheur et sa digestibilité. Longtemps déprécié à l'ère des rouges puissants, il revient en grâce auprès des amateurs en quête de légèreté et d'authenticité, et demeure l'un des terroirs de rouge les plus identitaires de l'Alto Adige.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "santa-maddalena",
+        "schiava",
+        "porphyre",
+        "bolzano"
+      ],
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-terr-valle-isarco-eisacktal",
+      "nom": "Valle Isarco (Eisacktal)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Valle Isarco",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Kerner",
+        "Sylvaner",
+        "Grüner Veltliner",
+        "Riesling"
+      ],
+      "altitude": "~300-900 m",
+      "sols": "quartz phyllite et moraines, vallée alpine fraîche",
+      "caracteristiques_rapides": "La vallée la plus septentrionale et la plus fraîche : Kerner, Sylvaner et Veltliner d'altitude, blancs tendus et minéraux (Novacella, Kuenhof, Köfererhof).",
+      "notes_objectives": "La Valle Isarco (Eisacktal), au nord-est de Bolzano vers Bressanone, est la vallée la plus septentrionale et la plus fraîche de l'Alto Adige, vouée presque exclusivement aux blancs. Son climat alpin en fait un terroir à part.\n\nSur des sols de quartz phyllite et de moraines, à des altitudes élevées, les cépages emblématiques de la vallée — Kerner, Sylvaner, Grüner Veltliner, Riesling — donnent des blancs d'une vivacité, d'une tension et d'une minéralité remarquables : des vins droits, aromatiques et nerveux, marqués par la fraîcheur de l'altitude. L'Abbazia di Novacella (cave millénaire), le Kuenhof de Peter Pliger et le Köfererhof en sont les références. Le climat frais et l'ensoleillement de la vallée préservent l'acidité et l'éclat aromatique.\n\nGrand terroir des blancs alpins, la Valle Isarco offre des Kerner, Sylvaner et Veltliner d'une fraîcheur et d'une précision rares, parmi les plus distinctifs de l'Alto Adige et de toute l'Italie de montagne.\n\nLa Valle Isarco est un univers à part : vallée étroite et encaissée, aux coteaux escarpés exposés pour capter le moindre rayon de soleil, elle pousse la viticulture alpine à ses limites septentrionales. Le Kerner, croisement moderne particulièrement adapté à ces hauteurs, y donne des blancs aromatiques et tendus ; le Sylvaner et le Grüner Veltliner, des vins d'une minéralité tranchante ; le Riesling, des cuvées capables de vieillir. Servis sur des poissons, des asperges, des plats de montagne ou des fromages, ces blancs vifs et nerveux expriment la pureté de l'altitude. L'Abbazia di Novacella, cave millénaire, et des artisans comme Peter Pliger (Kuenhof) en ont fait l'une des vallées de blanc les plus passionnantes d'Italie. La Valle Isarco illustre, mieux qu'aucun autre terroir, la vocation alpine de l'Alto Adige.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "valle-isarco",
+        "kerner",
+        "sylvaner",
+        "altitude",
+        "blanc"
+      ],
+      "source": "altoadigewines|winescholarguild"
+    },
+    {
+      "id": "it-altoadige-terr-oltradige-appiano-eppan",
+      "nom": "Oltradige (Appiano-Eppan)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Bianco",
+        "Sauvignon",
+        "Pinot Nero",
+        "Chardonnay"
+      ],
+      "altitude": "~250-650 m",
+      "sols": "moraines, calcaires et porphyre, coteaux variés",
+      "caracteristiques_rapides": "Cœur de la Route des Vins, terroir varié d'Appiano : Pinot Bianco, Sauvignon, Chardonnay et Pinot Nero de belle tenue (St. Michael-Eppan, Girlan, Colterenzio).",
+      "notes_objectives": "L'Oltradige, autour d'Appiano (Eppan), est le cœur de la Route des Vins de l'Alto Adige et l'un de ses terroirs les plus variés. Sur un patchwork de sols — moraines, calcaires, porphyre — et d'altitudes, il offre une grande diversité de cépages.\n\nLes coteaux frais et élevés conviennent au Sauvignon, au Pinot Nero et aux blancs aromatiques, tandis que les secteurs plus bas et plus chauds donnent de beaux Pinot Bianco et Chardonnay. C'est le fief de grandes coopératives d'excellence — St. Michael-Eppan, Girlan, Colterenzio — qui en tirent une gamme étendue et régulièrement primée, du Pinot Bianco au Pinot Nero. La tradition du Schiava y reste vivante. La diversité des expositions et des altitudes explique la richesse de ce terroir.\n\nCœur viticole de l'Alto Adige, l'Oltradige d'Appiano conjugue diversité des sols et excellence des coopératives, et signe certains des blancs et rouges les plus réguliers de la région.\n\nL'Oltradige est le poumon viticole de l'Alto Adige : c'est ici, le long de la Route des Vins, que se concentrent une grande part des vignobles et des coopératives les plus titrées de la région. La mosaïque de sols — des moraines glaciaires aux affleurements de porphyre et de calcaire — et l'étagement des altitudes permettent de cultiver avec succès une palette exceptionnellement large de cépages. St. Michael-Eppan, Girlan et Colterenzio y signent aussi bien de grands Sauvignon et Pinot Bianco que des Pinot Nero de cru (Trattmann) et des Schiava traditionnels. Servis sur une cuisine variée, des poissons aux viandes blanches, les vins de l'Oltradige séduisent par leur régularité et leur précision. C'est le cœur battant de l'appellation et l'un de ses terroirs les plus complets.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "appiano",
+        "oltradige",
+        "pinot-bianco",
+        "sauvignon"
+      ],
+      "source": "wineenthusiast|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-cortaccia-kurtatsch",
+      "nom": "Cortaccia (Kurtatsch)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Sauvignon",
+        "Gewürztraminer"
+      ],
+      "altitude": "~200-1000 m",
+      "sols": "calcaires et sols volcaniques, fort étagement",
+      "caracteristiques_rapides": "Terroir au dénivelé spectaculaire (jusqu'à ~1000 m) : grands rouges bordelais dans les fonds chauds (Freienfeld, Brenntal), blancs vifs en altitude.",
+      "notes_objectives": "Cortaccia (Kurtatsch), dans le sud de l'Alto Adige, est un terroir remarquable par son étagement spectaculaire : ses vignobles s'étirent sur près de mille mètres de dénivelé, des fonds chauds de la vallée aux coteaux frais d'altitude.\n\nCette amplitude permet une double vocation rare dans la région : les secteurs bas et ensoleillés, sur calcaires et sols volcaniques, donnent de grands rouges bordelais — Cabernet Sauvignon et Merlot de garde, parmi les meilleurs d'Alto Adige (Freienfeld, Brenntal de la Cantina Kurtatsch) —, tandis que les hauteurs produisent des blancs vifs et tendus, du Sauvignon au Gewürztraminer. L'adaptation cépage-altitude, poussée à l'ère du réchauffement, est au cœur de l'identité du terroir. La fraîcheur des nuits préserve l'acidité.\n\nTerroir d'étagement unique, Cortaccia donne à la fois de grands rouges de garde et des blancs d'altitude précis, et compte parmi les secteurs les plus singuliers du sud de l'Alto Adige.\n\nL'étagement de Cortaccia est un cas d'école de la viticulture d'adaptation : on passe, sur quelques kilomètres, de vignes plantées à 200 mètres dans la chaleur de la vallée à des parcelles perchées à près de 1000 mètres. Cette verticalité permet à chaque cépage de trouver son altitude idéale, et offre à la région ce qu'elle produit de plus rare : de grands rouges bordelais de garde. Le Cabernet Sauvignon Freienfeld et le Merlot Brenntal de la Cantina Kurtatsch, régulièrement primés, en sont les fleurons. Servis sur des viandes rouges, du gibier ou des fromages affinés, ces rouges structurés se patinent sur de longues années, tandis que les blancs d'altitude apportent fraîcheur et tension. Terroir singulier et complet, Cortaccia illustre toute la diversité du sud de l'Alto Adige.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "cortaccia",
+        "cabernet",
+        "altitude",
+        "etagement"
+      ],
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-terr-lago-di-caldaro-kalterersee",
+      "nom": "Lago di Caldaro (Kalterersee)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Oltradige (Appiano-Caldaro)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schiava",
+        "Pinot Bianco"
+      ],
+      "altitude": "~210-450 m",
+      "sols": "moraines glaciaires autour du lac, microclimat doux",
+      "caracteristiques_rapides": "Autour du lac de Caldaro, microclimat doux propice au Schiava : rouge léger, frais et fruité (Lago di Caldaro / Kalterersee), convivial et désaltérant.",
+      "notes_objectives": "Autour du lac de Caldaro (Kalterersee), au sud d'Appiano, ce terroir bénéficie d'un microclimat particulièrement doux, tempéré par la masse d'eau du lac. C'est le domaine de prédilection du Schiava.\n\nSur des moraines glaciaires, dans cette cuvette chaude et ensoleillée, le Schiava donne le Lago di Caldaro (Kalterersee) : un rouge léger, frais et fruité, aux notes de cerise et d'amande, d'une grande buvabilité, à boire jeune. Le terroir convient aussi à de bons blancs (Pinot Bianco). C'est ici que la Cantina Kaltern, l'une des plus grandes coopératives de la région, puise l'essentiel de sa production. La douceur du microclimat lacustre signe des vins souples et désaltérants.\n\nTerroir du Schiava par excellence, le Lago di Caldaro donne des rouges légers et conviviaux, emblématiques de la tradition de soif de l'Alto Adige et du microclimat doux du lac.\n\nLe lac de Caldaro agit comme un régulateur thermique, adoucissant les nuits et accélérant la maturation du Schiava sur les moraines qui l'entourent. Le résultat est un rouge léger par excellence, à la robe rubis clair, gorgé de fruit et d'une fraîcheur désaltérante, que l'on sert volontiers légèrement rafraîchi. Longtemps produit en grands volumes, le Kalterersee retrouve ses lettres de noblesse grâce à des sélections plus exigeantes, notamment dans sa version Classico Superiore. Servi sur des charcuteries, des plats légers ou en terrasse l'été, il incarne la convivialité du vin alto-adigeois. Grand terroir du Schiava, le Lago di Caldaro perpétue une tradition de rouge léger et joyeux, à contre-courant des modes, et séduit les amateurs en quête de buvabilité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "caldaro",
+        "kalterersee",
+        "schiava",
+        "lac"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-altoadige-terr-vorberg",
+      "nom": "Vorberg",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Bianco"
+      ],
+      "altitude": "~450-900 m",
+      "sols": "porphyre quartzeux des terrasses hautes de Terlano",
+      "caracteristiques_rapides": "Terrasse haute de Terlano, cru du Pinot Bianco Riserva de la Cantina Terlano : blanc minéral, dense et d'une grande aptitude au vieillissement.",
+      "notes_objectives": "Le Vorberg est l'une des plus belles vigne de l'Alto Adige : une terrasse haute de Terlano, montant jusqu'à près de 900 mètres d'altitude, qui donne son nom au Pinot Bianco Riserva emblématique de la Cantina Terlano.\n\nSur le porphyre quartzeux caractéristique de Terlano, à cette altitude qui préserve une fraîcheur essentielle, le Pinot Bianco atteint une densité, une minéralité et une longévité exceptionnelles. Élevé en grands foudres, le Vorberg Riserva est un blanc d'une grande profondeur, à la fois ample et tendu, aux notes de fruits mûrs, d'amande, de pierre et d'épices, qui se révèle pleinement après plusieurs années et peut vieillir sur deux décennies. La haute altitude et le sol minéral signent un vin d'une rare verticalité.\n\nCru de référence du Pinot Bianco en Italie, le Vorberg illustre tout ce que ce cépage, souvent jugé discret, peut offrir de profondeur et de garde sur les hauteurs de Terlano. C'est l'une des grandes vigne de blanc de l'Alto Adige.\n\nL'altitude est la clé du Vorberg : à près de 900 mètres, sur des terrasses étagées exposées au soleil mais rafraîchies la nuit, le Pinot Bianco conserve une acidité et une définition que peu de blancs atteignent. Le sol de porphyre quartzeux, pauvre et minéral, contraint les rendements et concentre le fruit sans jamais l'alourdir. La Cantina Terlano y récolte le raisin de son Vorberg Pinot Bianco Riserva, élevé longuement en grands foudres puis sur lies, qui ne se livre pleinement qu'après plusieurs années. Servi sur des poissons riches, des risottos, des volailles ou des fromages, le Vorberg développe avec l'âge des notes de fruits mûrs, de noisette, de miel et de pierre, et peut traverser deux décennies. C'est l'une des démonstrations les plus convaincantes que le Pinot Bianco, souvent jugé modeste, peut donner de très grands vins de garde — et le Vorberg en est le cru de référence en Italie.\n\nPlus largement, le Vorberg est devenu un symbole de l'identité de Terlano et de sa capacité à produire des blancs qui défient le temps. À une époque où la plupart des vins blancs se consomment dans leurs premières années, ce cru rappelle qu'un grand Pinot Bianco peut, comme les meilleurs Riesling ou Chardonnay du monde, gagner en profondeur sur deux décennies. Cette longévité, validée par les vieux millésimes régulièrement remis sur le marché, en fait un vin de collection autant que de table, et l'un des arguments les plus convaincants de la renaissance qualitative des blancs d'Alto Adige.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "terlano",
+        "vorberg",
+        "pinot-bianco",
+        "cru"
+      ],
+      "source": "wineenthusiast|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-quarz",
+      "nom": "Quarz",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sauvignon"
+      ],
+      "altitude": "~300-500 m",
+      "sols": "porphyre et quartz purs de Terlano",
+      "caracteristiques_rapides": "Vigna de Terlano sur quartz et porphyre, cru du Sauvignon Quarz de la Cantina Terlano : Sauvignon minéral, tendu et de garde, l'un des plus réputés d'Italie.",
+      "notes_objectives": "Le Quarz est une vigna de Terlano dont le nom dit tout : un sol de quartz et de porphyre quasi purs, parmi les plus minéraux de l'appellation. C'est de cette parcelle que la Cantina Terlano tire son Sauvignon Quarz, l'un des plus réputés d'Italie.\n\nSur cette roche cristalline, le Sauvignon perd tout caractère végétal ou exubérant pour gagner en tension, en minéralité et en profondeur : un blanc droit, salin et complexe, aux notes d'agrumes, de fruits à chair blanche, de silex et d'herbes nobles, doté d'une persistance remarquable et d'une réelle aptitude à la garde. L'altitude et le sol quartzeux signent un Sauvignon à l'opposé des versions aromatiques et immédiates, dans un registre de grande précision. Élevé avec soin, il gagne en complexité avec quelques années de cave.\n\nCru du Sauvignon par excellence en Alto Adige, le Quarz montre comment un sol cristallin peut sublimer ce cépage et lui donner tension et longévité. C'est l'une des vigne les plus distinctives de Terlano et un sommet du Sauvignon italien.\n\nLe nom de la vigna dit son secret : un sol de quartz et de porphyre quasi purs, d'une dureté et d'une minéralité extrêmes, qui imposent à la vigne un effort considérable. C'est cette contrainte qui sublime le Sauvignon, en effaçant ses notes les plus végétales au profit de la tension, du sel et de la profondeur. Le Sauvignon Quarz de la Cantina Terlano en est l'expression : un blanc droit et cristallin, aux arômes d'agrumes, de fruits à chair blanche, de silex et d'herbes nobles, d'une persistance et d'une aptitude à la garde rares pour ce cépage. Servi sur des poissons, des coquillages, des asperges ou une cuisine fine, il gagne en complexité avec le temps, à rebours des Sauvignon à boire jeunes. Le Quarz illustre la conviction de Terlano selon laquelle un sol cristallin peut faire d'un cépage aromatique un vin de terroir et de longévité, et compte parmi les plus grands Sauvignon d'Italie.\n\nLe Quarz a aussi valeur de démonstration : il prouve qu'un cépage aromatique et à la mode comme le Sauvignon peut, sur le bon sol, devenir un vin de terroir et de garde plutôt qu'un simple vin de plaisir immédiat. Récompensé au plus haut niveau dans les concours internationaux, il a contribué à hisser le Sauvignon d'Alto Adige parmi les meilleurs du monde, aux côtés des grands secteurs de la Loire ou de Styrie. C'est l'une des plus belles réussites de la viticulture de cru en Italie, et un fleuron du savoir-faire de la Cantina Terlano.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "terlano",
+        "quarz",
+        "sauvignon",
+        "cru"
+      ],
+      "source": "wineindustryadvisor|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-kastelaz",
+      "nom": "Kastelaz",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gewürztraminer",
+        "Merlot"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "coteau abrupt et chaud exposé au sud, Tramin",
+      "caracteristiques_rapides": "Coteau escarpé de Tramin, cru d'Elena Walch : Gewürztraminer aromatique et Merlot concentré, l'une des plus belles vigne de la région.",
+      "notes_objectives": "Le Kastelaz est l'une des plus belles vigne de l'Alto Adige : un coteau escarpé et chaud de Tramin, exposé plein sud, rendu célèbre par le domaine Elena Walch. Sa forte pente et son exposition en font un terroir d'exception.\n\nSur ce coteau abrupt, le Gewürztraminer atteint une intensité aromatique et une finesse remarquables, dans le Gewürztraminer Kastelaz, l'une des références du cépage. Le terroir donne aussi un Merlot concentré et profond (Merlot Kastelaz), preuve de la polyvalence de ce site exceptionnellement exposé. L'altitude et la pente préservent la fraîcheur et la définition aromatique. Le travail de cru, pionnier d'Elena Walch, a révélé tout le potentiel de cette vigna.\n\nCru emblématique de Tramin, le Kastelaz illustre la viticulture de coteau escarpé et donne des Gewürztraminer et Merlot d'une grande finesse, parmi les plus beaux vins parcellaires de l'Alto Adige.\n\nLa pente vertigineuse du Kastelaz, l'une des plus raides de Tramin, impose une viticulture entièrement manuelle mais offre une exposition solaire idéale, tempérée par l'altitude. Elena Walch, qui a fait de cette vigna l'un des symboles de son approche de cru, y récolte un Gewürztraminer d'une grande intensité aromatique mais parfaitement équilibré, ainsi qu'un Merlot étonnamment concentré et profond pour la région. Servis sur des cuisines épicées, des fromages ou des viandes selon la cuvée, ces vins parcellaires illustrent la puissance et la finesse que peut donner un grand coteau. Le Kastelaz est devenu une référence de la viticulture de cru en Alto Adige et l'une des plus belles vigne de Tramin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "kastelaz",
+        "gewurztraminer",
+        "cru"
+      ],
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-terr-nussbaumer",
+      "nom": "Nussbaumer",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gewürztraminer"
+      ],
+      "altitude": "~350-550 m",
+      "sols": "sols calcaires et caillouteux des coteaux de Tramin",
+      "caracteristiques_rapides": "Cru de Gewürztraminer de la Cantina Tramin, référence mondiale du cépage : intensité aromatique spectaculaire et fraîcheur préservée.",
+      "notes_objectives": "Le Nussbaumer est la vigna qui donne son nom au Gewürztraminer emblématique de la Cantina Tramin, considéré comme la référence mondiale du cépage. Située sur les coteaux de Tramin, dans le secteur de Söll, c'est l'un des grands crus de blanc aromatique d'Italie.\n\nSur des sols calcaires et caillouteux, à une altitude qui préserve la fraîcheur, le Gewürztraminer y atteint un équilibre rare entre puissance aromatique et tension : un vin d'une intensité spectaculaire — rose, litchi, épices, fruits exotiques —, mais structuré, salin et persistant, à mille lieues des Gewürztraminer lourds. Élevé avec soin, le Nussbaumer est capable de vieillir et de gagner en complexité, développant des notes de miel, d'abricot confit et d'épices. L'amplitude thermique des coteaux de Tramin est déterminante.\n\nRéférence mondiale du Gewürztraminer, le Nussbaumer démontre tout ce que le cépage peut offrir de profondeur et d'équilibre sur son terroir d'origine. C'est l'une des grandes vigne de blanc aromatique de l'Alto Adige.\n\nLe secret du Nussbaumer tient à l'altitude et aux sols caillouteux du secteur de Söll, à Tramin, qui apportent au Gewürztraminer la fraîcheur et la tension nécessaires pour discipliner un cépage exubérant. La Cantina Tramin, sous l'impulsion de l'œnologue Willi Stürz, en a fait la référence mondiale du cépage, récoltée et vinifiée avec un soin extrême. Servi sur des cuisines asiatiques épicées, du foie gras, des fromages persillés ou en méditation, le Nussbaumer surprend par sa longévité, développant avec l'âge des notes de miel, d'abricot confit, de safran et d'épices douces. Sa régularité au sommet des guides année après année en a fait l'étalon du Gewürztraminer. Le Nussbaumer démontre qu'un grand vin aromatique peut être à la fois spectaculaire et profondément équilibré.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "tramin",
+        "nussbaumer",
+        "gewurztraminer",
+        "cru",
+        "icone"
+      ],
+      "source": "wine-searcher|altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-favogna-fennberg",
+      "nom": "Favogna (Fennberg)",
+      "type": "vigna",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Pinot Bianco"
+      ],
+      "altitude": "~700-1000 m",
+      "sols": "haut plateau alpin, sols morainiques",
+      "caracteristiques_rapides": "Plateau d'altitude au-dessus de Magrè, l'un des vignobles les plus hauts d'Europe : le Müller-Thurgau Feldmarschall von Fenner (Tiefenbrunner) en est l'icône.",
+      "notes_objectives": "Favogna (Fennberg) est un haut plateau perché au-dessus de Magrè, dans le sud de l'Alto Adige, abritant l'un des vignobles les plus élevés d'Europe, vers 1000 mètres d'altitude. C'est un terroir d'altitude extrême.\n\nSur des sols morainiques, dans la fraîcheur de ces hauteurs, c'est ici que le domaine Tiefenbrunner cultive le vignoble du Müller-Thurgau Feldmarschall von Fenner, qui a démontré le potentiel insoupçonné de ce cépage souvent déprécié : un blanc d'une fraîcheur, d'une tension et d'une complexité inattendues, capable de vieillir. L'altitude préserve une acidité vibrante et des arômes nets, et signe des vins d'une grande pureté alpine. Le Pinot Bianco y trouve aussi un beau terrain.\n\nTerroir de très haute altitude, Favogna illustre l'aventure des vignes alpines de l'Alto Adige, et donne, avec le Feldmarschall von Fenner, l'une des expressions les plus originales et les plus fascinantes du Müller-Thurgau en Italie.\n\nPerché à près de 1000 mètres au-dessus de Magrè, le plateau de Favogna est un avant-poste de la viticulture alpine, où la vigne côtoie prairies et forêts. C'est ici, sur ce balcon battu par les vents et marqué par des amplitudes thermiques extrêmes, que le domaine Tiefenbrunner cultive depuis des décennies son Müller-Thurgau Feldmarschall von Fenner, l'un des vins les plus singuliers d'Italie. À cette altitude, ce cépage souvent jugé banal acquiert une fraîcheur cristalline, une complexité aromatique inattendue et une réelle aptitude à la garde. Servi sur des poissons, des plats de montagne ou des fromages, le Feldmarschall a démontré le potentiel des très hautes vignes alpines. Favogna illustre la quête d'altitude qui caractérise l'Alto Adige moderne, à l'heure où la fraîcheur devient un atout précieux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "favogna",
+        "fennberg",
+        "altitude",
+        "muller-thurgau"
+      ],
+      "source": "altoadigewines|suedtirolwein"
+    },
+    {
+      "id": "it-altoadige-terr-magre-margreid",
+      "nom": "Magrè (Margreid)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Chardonnay",
+        "Gewürztraminer"
+      ],
+      "altitude": "~210-500 m",
+      "sols": "sols chauds et graveleux du sud de la vallée",
+      "caracteristiques_rapides": "L'un des secteurs les plus chauds et méridionaux : Cabernet, Chardonnay et Gewürztraminer mûrs (Alois Lageder, Löwengang).",
+      "notes_objectives": "Magrè (Margreid) est l'un des secteurs les plus chauds et les plus méridionaux de l'Alto Adige. Sur des sols graveleux et bien exposés, le terroir convient aux cépages exigeant de la maturité : Cabernet, Chardonnay, Gewürztraminer. C'est ici qu'Alois Lageder a planté le Löwengang, l'un des premiers vignobles d'altitude de cépages bordelais et bourguignons de la région. Le climat doux et ensoleillé, tempéré par les vents, donne des vins mûrs mais équilibrés, et fait de Magrè un terroir de référence pour les rouges de garde et les grands Chardonnay du sud de l'Alto Adige.\n\nLe microclimat chaud de Magrè, l'un des plus doux de l'Alto Adige, en a fait un laboratoire pour les cépages internationaux : c'est ici qu'Alois Lageder a planté, dès les années 1980, le Löwengang en Chardonnay et en cépages bordelais, un geste pionnier. Servis sur des viandes ou une cuisine gastronomique, les rouges de garde et les grands Chardonnay de Magrè confirment la vocation de ce terroir méridional pour les vins mûrs mais équilibrés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "magre",
+        "chaud",
+        "cabernet",
+        "lageder"
+      ],
+      "source": "wineindustryadvisor"
+    },
+    {
+      "id": "it-altoadige-terr-valle-venosta-vinschgau",
+      "nom": "Valle Venosta (Vinschgau)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Valle Venosta",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Riesling",
+        "Pinot Bianco",
+        "Pinot Nero"
+      ],
+      "altitude": "~600-1000 m",
+      "sols": "schistes et moraines, vallée sèche et ensoleillée",
+      "caracteristiques_rapides": "La vallée la plus occidentale, sèche et haute : petite production de Riesling, Pinot Bianco et Pinot Nero d'altitude, vifs et minéraux.",
+      "notes_objectives": "La Valle Venosta (Vinschgau) est la vallée la plus occidentale et l'une des plus hautes de l'Alto Adige, au climat sec et ensoleillé, balayé par les vents. Sur des sols de schistes et de moraines, à des altitudes élevées, ce terroir confidentiel donne de petites quantités de blancs et de rouges d'altitude : Riesling, Pinot Bianco et Pinot Nero d'une vivacité et d'une minéralité marquées. L'amplitude thermique extrême et la sécheresse alpine signent des vins tendus et nerveux. Encore méconnue, la Valle Venosta séduit les amateurs de blancs de montagne et illustre la diversité des terroirs d'altitude de l'Alto Adige.\n\nVallée alpine sèche et venteuse, la Valle Venosta produit en très petites quantités des vins d'altitude d'une grande pureté. Le Riesling y trouve un terrain de prédilection, tendu et minéral, tandis que le Pinot Nero et le Pinot Bianco bénéficient de la fraîcheur des hauteurs. Servis sur des poissons ou des plats de montagne, ces vins confidentiels séduisent les amateurs de blancs alpins. Méconnue, la Valle Venosta illustre la diversité des terroirs d'altitude de l'Alto Adige et leur potentiel à l'ère du réchauffement.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "venosta",
+        "vinschgau",
+        "riesling",
+        "altitude",
+        "confidentiel"
+      ],
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-meranese-merano",
+      "nom": "Meranese (Merano)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Meranese",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Schiava"
+      ],
+      "altitude": "~300-700 m",
+      "sols": "porphyre des coteaux autour de Merano",
+      "caracteristiques_rapides": "Coteaux autour de Merano (Burggräfler) : le Schiava y donne le Meranese di collina, rouge léger et désaltérant typique de la tradition locale.",
+      "notes_objectives": "Le Meranese désigne les coteaux autour de Merano (Burggräfler), dans le nord-ouest de l'Alto Adige. Sur le porphyre de ces collines au climat doux, le Schiava donne le Meranese di collina, un rouge léger, frais et fruité, à boire jeune, typique de la tradition de soif locale. Le terroir convient aussi à quelques blancs. Le microclimat clément de la région de Merano, réputée pour sa douceur, signe des vins souples et désaltérants. Terroir traditionnel du Schiava, le Meranese perpétue une identité conviviale et locale, à l'écart des grands circuits, et complète le panorama des rouges légers de l'Alto Adige.\n\nAutour de Merano, ville thermale réputée pour la douceur de son climat, les coteaux de porphyre donnent le Meranese di collina, un Schiava léger et parfumé qui incarne la tradition de soif locale. À boire jeune et légèrement rafraîchi, sur des charcuteries ou des plats légers, c'est un rouge convivial et désaltérant. Le microclimat clément de la région signe des vins souples et fruités. Terroir traditionnel et discret, le Meranese complète le panorama des rouges légers de l'Alto Adige et perpétue une identité locale attachante.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "meranese",
+        "merano",
+        "schiava",
+        "leger"
+      ],
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-bassa-atesina-egna-ora",
+      "nom": "Bassa Atesina (Egna-Ora)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Bassa Atesina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Nero",
+        "Pinot Grigio",
+        "Gewürztraminer"
+      ],
+      "altitude": "~210-600 m",
+      "sols": "moraines et alluvions, coteaux du sud-est",
+      "caracteristiques_rapides": "Secteur méridional autour d'Egna et Ora : Pinot Nero d'altitude (Franz Haas, Castelfeder) et blancs aromatiques, sur des coteaux frais et bien exposés.",
+      "notes_objectives": "La Bassa Atesina, autour d'Egna (Neumarkt) et d'Ora (Auer) dans le sud-est de l'Alto Adige, est un secteur de coteaux frais et bien exposés, devenu un terroir de référence pour le Pinot Nero et les blancs aromatiques.\n\nSur des moraines et des alluvions, à des altitudes variées, le Pinot Nero y trouve la fraîcheur nécessaire à sa finesse : des domaines comme Franz Haas (à Montagna) ou Castelfeder (à Egna) en tirent des rouges fins et de garde. Le secteur donne aussi de beaux Pinot Grigio et Gewürztraminer. Voisine de la colline de Mazon, la Bassa Atesina partage sa vocation pour le Pinot Nero d'altitude. L'amplitude thermique et l'exposition signent des vins équilibrés et parfumés.\n\nTerroir montant du Pinot Nero, la Bassa Atesina d'Egna et Ora donne des rouges fins et des blancs aromatiques de qualité, et complète, avec Mazon, le grand domaine du Pinot Nero dans le sud de l'Alto Adige.\n\nLe sud-est de l'Alto Adige, autour d'Egna et d'Ora, profite de coteaux frais et bien orientés qui en font, avec Mazon tout proche, l'un des grands berceaux du Pinot Nero de la région. La fraîcheur de l'altitude et l'amplitude thermique y préservent la finesse et l'acidité d'un cépage exigeant. Franz Haas, à Montagna, et Castelfeder, à Egna, y signent des Pinot Nero parmi les plus réputés de l'Alto Adige, ainsi que de beaux Pinot Grigio et Gewürztraminer. Servis sur des volailles, du gibier à plume ou des fromages, ces rouges parfumés et de garde confirment la vocation du secteur. Terroir en pleine ascension, la Bassa Atesina d'Egna et Ora illustre la montée en puissance du Pinot Nero dans le sud de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "egna",
+        "ora",
+        "pinot-nero",
+        "sud"
+      ],
+      "source": "altoadigewines"
+    },
+    {
+      "id": "it-altoadige-terr-andriano-andrian",
+      "nom": "Andriano (Andrian)",
+      "type": "zone",
+      "region": "Alto Adige",
+      "sous_region": "Terlano",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Pinot Bianco",
+        "Sauvignon",
+        "Merlot"
+      ],
+      "altitude": "~250-500 m",
+      "sols": "porphyre quartzeux, prolongement de Terlano",
+      "caracteristiques_rapides": "Voisin de Terlano, sur le même porphyre quartzeux : blancs minéraux (Pinot Bianco, Sauvignon) et Merlot Gant réputé (Cantina Andrian).",
+      "notes_objectives": "Andriano (Andrian), village voisin de Terlano, partage avec lui le porphyre quartzeux qui fait la réputation des blancs de garde de l'Alto Adige. C'est un prolongement naturel du grand terroir de Terlano.\n\nSur ces sols minéraux et drainants, le Pinot Bianco et le Sauvignon donnent des blancs tendus, salins et précis, dans la lignée des grands Terlano, tandis que les secteurs plus chauds permettent un Merlot réputé, le Gant, l'un des beaux rouges de la région. La Cantina Andrian, plus ancienne coopérative d'Alto Adige et associée à Terlano, y puise des vins d'une belle régularité. Le terroir bénéficie du même climat abrité et ensoleillé que son voisin.\n\nVoisin et complice de Terlano, Andriano offre, sur le même porphyre, des blancs minéraux et un Merlot Gant de caractère, et illustre l'excellence des terroirs de porphyre du nord de l'Alto Adige.\n\nAndriano partage avec Terlano non seulement le porphyre quartzeux, mais aussi le climat abrité et ensoleillé qui fait la réputation de ce secteur. La proximité et l'association historique avec la Cantina Terlano garantissent un savoir-faire commun, qui se lit dans la tension et la minéralité des blancs. Le Pinot Bianco et le Sauvignon y affichent la même droiture saline que leurs voisins, tandis que les parcelles plus chaudes donnent le Merlot Gant, l'un des beaux rouges de la région. Servis sur des poissons, des volailles ou des viandes, les vins d'Andriano illustrent l'excellence des terroirs de porphyre du nord de l'Alto Adige. Souvent dans l'ombre de Terlano, Andriano n'en partage pas moins l'un des sols les plus nobles de la province pour les blancs de garde.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "alto-adige",
+        "andriano",
+        "terlano",
+        "porphyre",
+        "blanc"
+      ],
+      "source": "altoadigewines|suedtirolwein"
+    }
+  ]
+}

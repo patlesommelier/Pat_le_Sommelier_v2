@@ -1,0 +1,588 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "ahr",
+  "region_label": "Ahr (Allemagne)",
+  "source_file": "producteurs_ahr_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 15,
+  "items": [
+    {
+      "id": "de-ahr-prod-meyer-naekel",
+      "nom": "Meyer-Näkel",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Dernau",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dernauer Pfarrwingert",
+        "Neuenahrer Sonnenberg",
+        "Walporzheimer Kräuterberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Dernau, Meyer-Näkel est le nom le plus célèbre du Pinot Noir de l'Ahr et l'un des grands ambassadeurs du Spätburgunder allemand dans le monde. Le domaine doit sa renommée à Werner Näkel, instituteur devenu vigneron, qui a hissé la propriété au sommet à partir des années 1980 ; il est aujourd'hui dirigé par ses filles Meike et Dörte Näkel, cinquième génération. Sur les coteaux d'ardoise les plus escarpés de la vallée — Dernauer Pfarrwingert, Neuenahrer Sonnenberg, Walporzheimer Kräuterberg —, le domaine produit des Spätburgunder d'inspiration bourguignonne, à faible rendement et élevés en barrique, dont les cuvées de prestige « S » et « G ». Il signe aussi un Blanc de Noir réputé, « Illusion ». En juillet 2021, le domaine a été dévasté par la crue de l'Ahr — les deux sœurs n'ont dû leur survie qu'à un arbre auquel elles se sont accrochées des heures durant — avant de reconstruire l'outil de production hors du village. Fidèle à la recherche de finesse et d'expression du terroir d'ardoise, Meyer-Näkel demeure une référence majeure du grand Pinot Noir de l'Ahr. Werner Näkel a aussi porté le savoir-faire du domaine au-delà des frontières, à travers des projets de Pinot en Afrique du Sud et au Portugal. Salué par toute la critique, Meyer-Näkel demeure, malgré l'épreuve de 2021, le porte-drapeau du Spätburgunder de l'Ahr, fidèle à une recherche d'élégance et de transparence du terroir d'ardoise.",
+      "mes_notes": null,
+      "notes_pat": "Pinots Noirs intéressants.",
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "icone",
+        "vdp",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|jancisrobinson|thegwc"
+    },
+    {
+      "id": "de-ahr-prod-jean-stodden",
+      "nom": "Jean Stodden",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Rech",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Recher Herrenberg",
+        "Gärkammer",
+        "Alte Reben"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Rech, au cœur de la vallée, Jean Stodden est l'un des domaines rouges les plus réputés de l'Ahr, fondé en 1900 et mené par Alexander Stodden. La maison s'est bâtie une réputation de spécialiste du Spätburgunder de garde, dans un style concentré et ambitieux. Sur de grands coteaux d'ardoise et de grauwacke — le Recher Herrenberg en tête, ainsi que la Gärkammer et le Kräuterberg de Walporzheim —, le domaine produit des Pinots Noirs denses et structurés, longuement élevés en barrique, dont la cuvée de prestige « JS ». Il vinifie aussi le Frühburgunder, mutation précoce du Pinot typique de la région. Le style Stodden, marqué par un élevage sous bois généreux et une réelle capacité de garde, vise la profondeur et la complexité. Comptant parmi les figures qui ont prouvé que l'Allemagne pouvait produire de grands vins rouges, Jean Stodden reste l'une des adresses phares de l'Ahr pour le Spätburgunder de caractère. Le domaine, resté familial depuis plus d'un siècle, possède aussi une part de la minuscule Gärkammer de Walporzheim. Ses Spätburgunder, bâtis pour la garde et reconnaissables à leur élevage ambitieux, comptent parmi les rouges allemands les plus recherchés des amateurs en quête de densité et de longévité.",
+      "mes_notes": null,
+      "notes_pat": "Bons vins, mais trop de bois.",
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "icone",
+        "barrique",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|jancisrobinson|rotweinjaeger"
+    },
+    {
+      "id": "de-ahr-prod-deutzerhof",
+      "nom": "Deutzerhof",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Obere Ahr",
+      "commune": "Mayschoß",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Mayschosser Mönchberg",
+        "Ahrweiler Silberberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mayschoß, dans la haute Ahr, le Deutzerhof est l'un des domaines les plus réputés de la région pour ses vins rouges, régulièrement cités parmi les meilleurs Spätburgunder d'Allemagne. Sur des coteaux d'ardoise escarpés comme le Mayschosser Mönchberg et l'Ahrweiler Silberberg, le domaine produit des Pinots Noirs complexes et raffinés, élevés avec soin en barrique, ainsi que du Frühburgunder et quelques blancs. Ses cuvées de prestige, profondes et de garde, témoignent d'une grande exigence. Le style Deutzerhof recherche la complexité aromatique, la structure et l'élégance, dans des rouges capables de rivaliser avec de grands Pinots internationaux tout en gardant l'empreinte de l'ardoise de l'Ahr. Discret mais unanimement respecté, le domaine compte parmi les valeurs sûres et les plus qualitatives de la vallée. Le domaine, longtemps associé à la cuvée de prestige « Grand Duc », a su préserver au fil des générations un niveau d'exigence rare. Ses Spätburgunder de la haute Ahr, profonds et patinés par le temps, lui valent une place régulière au sommet des dégustations comparatives de Pinot Noir allemand.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "obere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|rotweinjaeger"
+    },
+    {
+      "id": "de-ahr-prod-j-j-adeneuer",
+      "nom": "J.J. Adeneuer",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Bad Neuenahr-Ahrweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Walporzheimer Gärkammer",
+        "Ahrweiler Rosenthal",
+        "Ahrweiler Silberberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ahrweiler, J.J. Adeneuer est l'un des domaines familiaux historiques de l'Ahr, mené par les frères Adeneuer dans un style classique et soigné. Le domaine possède une part du plus petit cru classé d'Allemagne, la Walporzheimer Gärkammer, qu'il exploite quasiment en monopole, ainsi que de belles parcelles dans l'Ahrweiler Rosenthal et le Silberberg. Il en tire des Spätburgunder racés — au premier rang desquels la cuvée « No. 1 » — ainsi que du Frühburgunder et quelques blancs et Blanc de Noir. Le style Adeneuer conjugue tradition et précision, dans des Pinots Noirs élégants et de belle garde, fidèles au caractère d'ardoise de la vallée. Gardien d'un patrimoine de crus remarquable, le domaine demeure l'une des adresses de référence d'Ahrweiler et du Spätburgunder de l'Ahr. La Gärkammer, à peine plus grande qu'un jardin, est l'un des joyaux du domaine et l'un des plus petits crus classés d'Europe. Transmis de génération en génération, Adeneuer perpétue un style classique et fiable, et figure parmi les ambassadeurs les plus constants du Spätburgunder d'Ahrweiler.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "vdp",
+        "monopole",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-h-j-kreuzberg",
+      "nom": "H.J. Kreuzberg",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Dernau",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dernauer Hardtberg",
+        "Dernauer Pfarrwingert"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dernau, le domaine H.J. Kreuzberg est une maison familiale réputée pour ses vins rouges, l'une des bonnes adresses du cœur de la vallée. Sur les coteaux d'ardoise de Dernau — le Hardtberg et le Pfarrwingert —, le domaine produit des Spätburgunder structurés et de belle facture, élevés en barrique, ainsi que du Frühburgunder et quelques blancs. Ses cuvées parcellaires, notamment celles issues du grand Pfarrwingert, témoignent d'une réelle ambition qualitative. Le style Kreuzberg recherche l'équilibre entre le fruit, la structure et l'expression minérale de l'ardoise, dans des Pinots Noirs accessibles comme dans ses cuvées de garde. Régulier et apprécié, le domaine compte parmi les valeurs sûres de l'Ahr pour le Spätburgunder de Dernau. Le domaine décline aussi des cuvées mettant en avant l'ardoise (« Devonschiefer ») qui façonne le caractère minéral de ses vins. Régulier et bien diffusé, Kreuzberg offre une belle porte d'entrée vers le Pinot Noir de Dernau, du registre fruité aux cuvées parcellaires de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|rotweinjaeger"
+    },
+    {
+      "id": "de-ahr-prod-burggarten",
+      "nom": "Burggarten",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "commune": "Heppingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Heppinger Burggarten",
+        "Neuenahrer Sonnenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heppingen, dans la basse Ahr, le domaine Burggarten est une maison familiale en vue, qui a connu une belle montée en gamme ces dernières années. Il exploite de grands coteaux du secteur, dont le Heppinger Burggarten et le Neuenahrer Sonnenberg, sur ardoise et lœss, d'où il tire des Spätburgunder fins et précis ainsi que de beaux Burgundern blancs. Le travail soigné à la vigne et des vinifications maîtrisées assurent une qualité régulière. Le style Burggarten privilégie la finesse, la fraîcheur et l'expression du terroir, dans des Pinots Noirs élégants et de belle tenue. En progression constante, le domaine compte parmi les bonnes adresses de la basse Ahr et confirme la vitalité du Spätburgunder de la région. Membre du VDP, le domaine s'est imposé en quelques années parmi les bonnes adresses montantes de la basse Ahr, salué pour la précision croissante de ses Spätburgunder. Le travail de la nouvelle génération y est pour beaucoup, conjuguant respect du terroir d'ardoise et style contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "vdp",
+        "untere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-bertram-baltes",
+      "nom": "Bertram-Baltes",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Dernau",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Dernauer Pfarrwingert",
+        "Recher Herrenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dernau, Bertram-Baltes est l'une des étoiles montantes de l'Ahr, née de l'union de deux jeunes vignerons talentueux, Julia Bertram et Benedikt Baltes, qui ont rapidement attiré l'attention de la critique. Travaillant des coteaux d'ardoise du secteur, dont le Pfarrwingert, dans une approche biologique et minimaliste, le domaine produit des Spätburgunder d'inspiration bourguignonne, tendus, fins et purs, ainsi que du Frühburgunder. Faibles rendements, vendange entière et élevages délicats caractérisent leur travail. Le style Bertram-Baltes recherche l'élégance, la fraîcheur et la digestibilité, à rebours des rouges les plus extraits. Jeune mais déjà très remarqué, le domaine incarne le renouveau du Pinot Noir de l'Ahr et compte parmi les adresses les plus prometteuses de la vallée. Benedikt Baltes s'était fait connaître en faisant renaître de grands terroirs de Pinot ailleurs en Allemagne avant de revenir dans l'Ahr ; uni à Julia Bertram, il y signe des vins acclamés par la critique. Le duo incarne, aux côtés de la nouvelle génération, l'avenir d'un Pinot Noir de l'Ahr plus fin, plus pur et plus digeste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "bio",
+        "montant",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-ahr-prod-nelles",
+      "nom": "Nelles",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "commune": "Bad Neuenahr-Heimersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Heimersheimer Landskrone",
+        "Heimersheimer Burggarten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Heimersheim, dans la basse Ahr, le domaine Nelles est une maison familiale au passé exceptionnellement ancien — la famille revendique une tradition viticole remontant à l'époque romaine. Il exploite de grands coteaux du secteur, dont la Heimersheimer Landskrone, cône de basalte volcanique singulier dans la vallée, d'où il tire des Spätburgunder de garde, structurés et profonds, dont la cuvée « Madeleine », ainsi que du Frühburgunder et quelques blancs. Le style Nelles, classique et soigné, recherche la finesse aromatique et la capacité de garde, dans des Pinots Noirs élégants marqués par leurs terroirs. Riche d'un patrimoine remarquable, le domaine compte parmi les noms historiques de l'Ahr et une référence pour le Spätburgunder de la basse vallée. Le domaine a même développé son propre système de classification inspiré des modèles français, témoignant d'une vision très aboutie de la hiérarchie des terroirs. Avec ses Spätburgunder issus notamment du basalte de la Landskrone, Nelles propose une lecture singulière et élégante du Pinot Noir de la basse Ahr.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "vdp",
+        "untere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|rotweinjaeger"
+    },
+    {
+      "id": "de-ahr-prod-maibachfarm",
+      "nom": "Maibachfarm",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Bad Neuenahr-Ahrweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ahrweiler Rosenthal"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Près d'Ahrweiler, Maibachfarm est un petit domaine conduit en agriculture biologique, apprécié des amateurs pour la sincérité de ses vins. Travaillant des coteaux d'ardoise de la vallée, dont l'Ahrweiler Rosenthal, il produit des Spätburgunder purs et fins ainsi que du Frühburgunder et quelques blancs, dans une approche soignée et respectueuse du terroir. Confidentiel et attachant, Maibachfarm compte parmi les belles adresses bio de l'Ahr, à découvrir pour les amateurs de Pinot Noir authentique. À taille humaine et sans esbroufe, le domaine illustre la montée d'une viticulture bio et soignée dans la vallée. Ses Spätburgunder, purs et délicats, séduisent les amateurs en quête d'authenticité et d'une autre facette, plus confidentielle, du Pinot Noir de l'Ahr.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bio",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-sermann",
+      "nom": "Sermann",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Obere Ahr",
+      "commune": "Altenahr",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Altenahrer Eck"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Altenahr, à l'amont de la vallée, le domaine Sermann est mené en agriculture biologique sur des coteaux d'ardoise parmi les plus escarpés de l'Ahr, dont l'Altenahrer Eck. Il produit des Spätburgunder et des Frühburgunder tendus et minéraux, ainsi que quelques blancs, dans un style naturel et authentique qui privilégie la fraîcheur et l'expression du schiste. Engagé et à taille humaine, Sermann compte parmi les bonnes adresses bio de la haute Ahr, appréciées pour la pureté de leurs vins de coteaux. Le domaine illustre le potentiel des coteaux les plus escarpés de la haute Ahr, où le travail manuel est considérable. Conduits avec patience sur des pentes vertigineuses, ses vins offrent une lecture sincère et tendue du terroir d'ardoise de l'amont de la vallée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bio",
+        "obere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-peter-kriechel",
+      "nom": "Peter Kriechel",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Bad Neuenahr-Ahrweiler",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ahrweiler Rosenthal",
+        "Walporzheimer Kräuterberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ahrweiler, le domaine Peter Kriechel est une maison d'une certaine envergure, proposant une large gamme de vins de l'Ahr. Sur des coteaux d'ardoise du secteur, dont l'Ahrweiler Rosenthal et le Walporzheimer Kräuterberg, il produit des Spätburgunder et des Frühburgunder, ainsi que des blancs et des effervescents, dans un style accessible et d'un bon rapport qualité-prix. Bien diffusé, le domaine contribue à faire connaître le Pinot Noir de l'Ahr auprès d'un large public, tout en soignant ses meilleures cuvées de terroir. Le domaine joue un rôle utile dans la diffusion des vins de l'Ahr, tout en proposant quelques cuvées de terroir plus abouties. Avec sa large gamme et ses effervescents, le domaine s'adresse à un public étendu tout en restant ancré dans les grands coteaux d'Ahrweiler.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-brogsitter",
+      "nom": "Brogsitter",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Walporzheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Walporzheimer Kräuterberg",
+        "Walporzheimer Domlay"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Walporzheim, la maison Brogsitter est une institution ancienne de l'Ahr, adossée au célèbre restaurant gastronomique Sanct Peter, l'une des plus vieilles auberges d'Allemagne. Le domaine exploite des coteaux d'ardoise du secteur, dont le Walporzheimer Kräuterberg, et propose une large gamme de Spätburgunder, du vin accessible aux cuvées de garde, ainsi que des effervescents. Entre tradition viticole et gastronomie, Brogsitter occupe une place à part dans la vallée et reste une adresse connue pour ses Pinots Noirs et son accueil. L'ensemble, qui conjugue domaine, négoce et gastronomie, contribue largement à la notoriété de la vallée. Adresse connue bien au-delà de la vallée grâce à sa table étoilée d'histoire, la maison reste un nom familier du Spätburgunder de Walporzheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "gastronomie",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-winzergenossenschaft-mayschoss-altenahr",
+      "nom": "Winzergenossenschaft Mayschoß-Altenahr",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Obere Ahr",
+      "commune": "Mayschoß",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Mayschosser Mönchberg",
+        "Altenahrer Eck"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mayschoß, cette cave coopérative est un monument de l'histoire viticole : fondée en 1868, elle est considérée comme la plus ancienne coopérative de vignerons du monde. Réunissant de nombreux vignerons de la haute Ahr, elle exploite de grands coteaux d'ardoise comme le Mayschosser Mönchberg et l'Altenahrer Eck, et propose une vaste gamme de Spätburgunder et de Frühburgunder, du vin de tous les jours aux cuvées plus ambitieuses. Témoin vivant du patrimoine de l'Ahr, la coopérative de Mayschoß-Altenahr demeure un acteur incontournable et un symbole de la vallée. Au-delà du vin, elle incarne l'esprit coopératif qui a permis aux vignerons de l'Ahr de traverser les crises, dont celle de 2021. Pour le visiteur, c'est aussi une étape incontournable de la route des vins, à la fois cave historique et symbole de la résilience de l'Ahr.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "cooperative",
+        "historique",
+        "obere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-weingut-sonnenberg-linke",
+      "nom": "Weingut Sonnenberg (Linke)",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Untere Ahr",
+      "commune": "Bad Neuenahr",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Neuenahrer Sonnenberg",
+        "Neuenahrer Schieferlay"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bad Neuenahr, le domaine familial Sonnenberg, mené par la famille Linke, exploite de beaux coteaux d'ardoise du secteur, dont le grand cru du Neuenahrer Sonnenberg et le Schieferlay. Il produit des Spätburgunder et des Frühburgunder marqués par le schiste, soignés et d'un bon rapport qualité-prix, ainsi que quelques blancs. Le travail attentif au vignoble confère aux vins fraîcheur et caractère. Fiable et accessible, le domaine compte parmi les bonnes adresses familiales de la basse Ahr pour le Pinot Noir de coteau. Attaché au grand cru du Sonnenberg, le domaine propose des Pinots de schiste sincères, à des prix mesurés. Régulier et accessible, le domaine compte parmi les valeurs familiales fiables de Bad Neuenahr pour le Pinot Noir de schiste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "untere-ahr"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wein-plus"
+    },
+    {
+      "id": "de-ahr-prod-kloster-marienthal",
+      "nom": "Kloster Marienthal",
+      "type": "domaine",
+      "region": "Ahr",
+      "sous_region": "Mittelahr",
+      "commune": "Marienthal",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Frühburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Marienthaler Klostergarten",
+        "Ahrweiler Rosenthal"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Marienthal, au cœur de la vallée, le domaine de Kloster Marienthal est installé dans un ancien couvent et perpétue une longue tradition viticole monastique. Sur des coteaux d'ardoise du secteur, dont le Klostergarten et l'Ahrweiler Rosenthal, il produit des Spätburgunder et des Frühburgunder de tradition, ainsi que quelques blancs. Riche d'un patrimoine historique remarquable, Kloster Marienthal compte parmi les adresses emblématiques de l'Ahr et un témoin de l'ancienneté de la vigne dans la vallée. Le cadre du couvent et la longue histoire du lieu en font aussi une étape marquante de la route des vins de l'Ahr. Entre vignoble et patrimoine monastique, le domaine perpétue une tradition plusieurs fois centenaire au cœur de la vallée de l'Ahr.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "historique",
+        "mittelahr"
+      ],
+      "a_verifier": null,
+      "source": "wein-plus"
+    }
+  ]
+}

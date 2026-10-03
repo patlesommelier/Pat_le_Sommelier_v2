@@ -1,0 +1,1335 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "provence",
+  "region_label": "Provence",
+  "source_file": "France/Fichiers Producteurs finaux/producteurs_provence_vPat.xlsx",
+  "built_at": "2026-05-17",
+  "enriched_at": "2026-05-17",
+  "enrichment_note": "Lots 1 et 2 — fiches enrichies au format Champagne pour les 8 producteurs ranking_pat=5 (Trévallon, Simone, Hauvette, Cibonne, Tempier, Pibarnon, Pradeaux, Terrebrune). Mai 2026 : ajout de 3 producteurs via conversation Pat — Domaine du Gros'Noré (Bandol, ranking 4), Domaine Les Terres Promises (Coteaux Varois/Bandol, ranking 4), Domaine Saint-Jean (Bellet, ranking 3). Les 11 producteurs ranking_pat=4 existants restent au format léger initial.",
+  "count": 22,
+  "items": [
+    {
+      "id": "prov-prod-pibarnon",
+      "nom": "Château de Pibarnon",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": "La Cadière-d'Azur (83740), Var, sur la colline du télégraphe (ancien télégraphe optique Toulon-Paris), commune de La Cadière, à proximité du Castellet",
+      "statut_production": "agriculture biologique non certifiée (pratiques bio assumées sans label-marketing depuis l'origine), labours, recherche permanente de biodiversité, vendanges manuelles, pigeage manuel quotidien pour extraction douce, fermentations longues",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**L'un des trois piliers de Bandol** avec Tempier et Pradeaux. Fondé en **1977-1978** par **Henri de Saint-Victor** et son épouse **Catherine**. La saga commence par un coup de cœur — en 1977, après avoir prospecté plusieurs vignobles en France, ils déjeunent dans un petit restaurant du port de Bandol et apprennent l'existence d'une propriété à reprendre sur les hauteurs. **Henri de Saint-Victor décède en 2018** ; le domaine est dirigé depuis **2000 par son fils Éric de Saint-Victor**, assisté de la cheffe de culture/œnologue **Marie Laroze**. **Le terroir est l'élément central** : Pibarnon est **le point le plus haut de l'appellation Bandol**, **300 mètres d'altitude**, en plein **amphithéâtre orienté sud-est** mais avec quelques rares parcelles nord pour le blanc. **La bastide** est une reconstruction d'une bastide provençale du XVIIIe sur la colline du télégraphe (ancien télégraphe optique Chappe reliant Toulon à Paris au XIXe). **Sol exceptionnel et atypique** : forte proportion de **calcaire issu du Trias** (200-250 millions d'années), particularité géologique qu'on ne trouve pas chez les voisins plus bas dans la pente, et surtout **présence de marnes bleues** — la même formation géologique que celle qu'on trouve sous **Pétrus** ou **Château d'Yquem**, ce qui pourrait paraître anecdotique si on ne dégustait pas le vin. **Climat** : altitude = **fraîcheur nocturne**, **maturation lente du mourvèdre**, **pas de brouillards** (au-dessus de la couche basse). **Restanques** (terrasses) sculptées dans la colline pour limiter l'érosion et maximiser l'absorption d'eau. **Vignoble** : **50 hectares au total** (passé de 45 à 50 sur la dernière décennie), dont **45 ha de rouges** et **5 ha de blancs**. Encépagement rouge dominé par le **mourvèdre** (85-95% selon la cuvée), grenache en complément. Blanc : **clairette + bourboulenc** sur les rares faces nord. **Cuvées** : (1) **Château de Pibarnon Rouge** (cuvée emblématique, **90% mourvèdre + 10% grenache**, vieilles vignes, **élevage 18-20 mois en foudres de chêne**, mise en bouteille sans collage ni filtration, vin de **garde 10-25 ans facile**). (2) **Les Restanques** (rouge accessible, **70% mourvèdre + 30% grenache**, jeunes vignes, plus immédiat, structure plus souple). (3) **Château de Pibarnon Rosé** (mourvèdre + cinsault, élevage court, **l'un des grands rosés de Bandol**, à boire dans les 3-5 ans). (4) **Château de Pibarnon Blanc** (clairette + bourboulenc des faces nord, **un blanc de gastronomie rare** sur l'appellation — fraîcheur, salinité, langoustines/coquilles Saint-Jacques). **Statut** : **Bettane & Desseauve 4 étoiles**, RVF, Wine Advocate (\"any reader wanting to taste the best expression of Bandol should get on this estate's bandwagon\"). **Prix 2024-2026** : Les Restanques 22-28 €, Château Rouge 35-45 €, Rosé 25-35 €, Blanc 30-40 €. **Profil Pat — iconique absolu** : (1) **conviction n°3 incarnée** : grand terroir (Trias + marnes bleues + altitude unique sur Bandol) + grands vignerons (Saint-Victor sur 2 générations) ; (2) **bio sans certification** = refus du label-marketing (cf. conviction Pat : pratiques sérieuses sans marketing) ; (3) **pigeage manuel et extraction douce** = conviction n°5 (transparence du terroir, pas d'extraction violente) ; (4) **profil signature** : mourvèdre en velours, *« kissing hands »* selon Pierre Casamayor (RVF 1994) — l'un des Bandols les plus civilisés, sans renier la structure ; (5) **prix encore raisonnable** pour le niveau (35-45 € pour le grand vin, c'est une affaire en regard de la garde).",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "iconique",
+        "mourvedre",
+        "altitude",
+        "saint-victor",
+        "henri-saint-victor",
+        "eric-saint-victor",
+        "marie-laroze",
+        "fonde-1977-1978",
+        "depuis-2000-eric",
+        "la-cadiere-d-azur",
+        "300m-altitude",
+        "amphitheatre-sud-est",
+        "colline-telegraphe",
+        "calcaire-trias",
+        "marnes-bleues",
+        "comme-petrus-yquem",
+        "restanques",
+        "50-hectares",
+        "mourvedre-90-pourcent",
+        "elevage-foudre-18-20-mois",
+        "pigeage-manuel",
+        "bio-non-certifie",
+        "cuvee-restanques",
+        "cuvee-chateau",
+        "bandol-blanc-face-nord",
+        "conviction-n3",
+        "conviction-n5"
+      ],
+      "source": "lpv|pibarnon|1jour1vin|skurnik|maisondesvins-bandol|lacaveduchateau|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer surface précise (45 vs 50 ha). Vérifier date exacte de fondation (1977 vs 1978 selon sources).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Clairette",
+        "Bourboulenc"
+      ],
+      "cuvees_phares": [
+        "Château de Pibarnon Rouge (90% mourvèdre + 10% grenache, élevage 18-20 mois en foudres, garde 10-25 ans)",
+        "Les Restanques Rouge (70% mourvèdre + 30% grenache, jeunes vignes, accessible)",
+        "Château de Pibarnon Rosé (mourvèdre + cinsault)",
+        "Château de Pibarnon Blanc (clairette + bourboulenc des rares faces nord, vin de gastronomie)"
+      ]
+    },
+    {
+      "id": "prov-prod-pradeaux",
+      "nom": "Château Pradeaux",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": "Saint-Cyr-sur-Mer (83270), Var, quartier des Lecques, en bord de Méditerranée entre Toulon et Marseille",
+      "statut_production": "agriculture biologique pratiquée historiquement (sans certification), moutons en pâturage printanier dans les vignes (compost naturel, suppression des herbes), labours, travail manuel et mécanique de la vigne, vendanges manuelles, vinification sans égrappage (rafles entières), levures indigènes",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Le plus traditionaliste des trois piliers de Bandol** — Tempier, Pibarnon, Pradeaux — et **le plus austère, le plus mourvèdre, le plus long à vivre**. Propriété de la **famille Portalis depuis 1752**, soit avant la Révolution française. **Jean-Marie-Étienne Portalis** (qui hérite cette année-là) n'est pas n'importe qui : **ministre de Napoléon Ier**, **co-rédacteur du Code civil de 1804**, **auteur du Concordat** — autant dire un personnage historique majeur. **Renaissance du domaine en 1940** : la **Comtesse Arlette Portalis** et sa mère Suzanne, vivant à Paris, se replient sur leur maison de vacances de Saint-Cyr-sur-Mer pendant la guerre. Les troupes d'occupation saccagent les vignes ; **la Comtesse Arlette reprend l'exploitation et fait un choix radical : plus de 80% de mourvèdre dans le vin rouge**, alors que la plupart des Bandols de l'époque sont des assemblages plus dilués. **Pradeaux devient ainsi \"le royaume du mourvèdre\"**. La Comtesse Arlette est l'une des amies et alliées de **Lucien Peyraud (Domaine Tempier)** et du **Dr Roethlisberger** dans la création de l'AOC Bandol en 1941 et la défense du mourvèdre comme cépage central. **Transmission en 1983** : la Comtesse Arlette, qui n'a pas d'enfant, transmet à son neveu et fils adoptif **Cyrille Portalis**, formé au lycée viticole de Beaune (Bourgogne). La Comtesse dira de lui : *« c'est mon sauveur, un vrai vigneron et un excellent caviste »*. **Aujourd'hui** : Cyrille et son épouse **Magali Portalis** dirigent le domaine, assistés de leurs deux fils **Étienne** et **Édouard** (génération suivante en place). **Vignoble** : **26 hectares au total dont 21 ha en AOC Bandol**. **Sols** : **terrains argilo-calcaires à dominante calcaire, terre rouge, roches à fleur de terre** — peu profond, donc rendements bas et vins concentrés. **Pratiques radicales et traditionalistes** : **moutons pâturent dans les vignes au printemps** (suppression des herbes et compost naturel, donc pas d'herbicide), aucun pesticide systémique, traitements limités au soufre et au cuivre. **Vinification \"à l'ancienne\"** : (1) **vinification en rafles entières (pas d'égrappage)** — choix très rare en Bandol et qui assume une part d'amertume tannique dans la jeunesse, mais offre une structure de garde exceptionnelle ; (2) **les vignes de moins de 25 ans ne sont pas utilisées pour le grand vin rouge** ; (3) **élevage en foudres de chêne ancien pouvant aller jusqu'à 4 ans** (alors que le cahier des charges Bandol exige 18 mois) — l'un des plus longs élevages de l'appellation. **Cuvées** : (1) **Château Pradeaux Bandol Rouge** (**95% mourvèdre + 5% grenache**, vieilles vignes, élevage 36-48 mois en foudres anciens, **vin à garder 15-30 ans minimum** — Pradeaux jeune est *« tannique, fermé, parfois rétif »* selon le distributeur historique Rosenthal, c'est sa nature). (2) **Château Pradeaux Bandol Rosé** (mourvèdre + cinsault, courte macération pour couleur claire, élevé en cuves béton, mise en bouteille au printemps suivant — un rosé d'une autre époque, sans filtration aromatique). (3) **Bastide Blanche Bandol** (cuvée d'accès). (4) Olive oil également produite, propriété historique d'oliviers. **Prix 2024-2026** : Pradeaux Bandol Rouge 35-50 €, Rosé 22-30 €. **Profil Pat — iconique radical** : (1) **conviction n°3** absolument : grand vigneron-famille (Portalis sur 6 générations) + grand terroir argilo-calcaire ; (2) **vinification traditionnelle radicale** (rafles entières, élevages 4 ans, refus du conventionnel moderne) = conviction n°5 (transparence du terroir, pas d'artifices œnologiques) ; (3) **note Pat \"garde\"** = LE Bandol à attendre, le moins immédiatement séduisant des trois, mais le plus profond avec le temps ; (4) **histoire familiale exceptionnelle** (Portalis-Code civil 1804) qui ancre le domaine dans l'histoire de France ; (5) **prix raisonnable** pour ce niveau de garde — un Pradeaux 2005 dégusté en 2026 est une expérience à laquelle peu de vins du monde rivalisent à ce prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "historique",
+        "mourvedre",
+        "garde",
+        "famille-portalis",
+        "depuis-1752",
+        "code-civil-1804",
+        "comtesse-arlette-portalis",
+        "cyrille-portalis",
+        "magali-portalis",
+        "etienne-portalis",
+        "edouard-portalis",
+        "saint-cyr-sur-mer",
+        "les-lecques",
+        "26-hectares",
+        "argilo-calcaire",
+        "terre-rouge",
+        "mourvedre-95-pourcent",
+        "rafles-entieres",
+        "pas-d-egrappage",
+        "elevage-foudres-4-ans",
+        "moutons-vignes",
+        "bio-non-certifie",
+        "vin-tannique-jeune",
+        "garde-15-30-ans",
+        "co-fondateur-aoc-bandol-1941",
+        "conviction-n3",
+        "conviction-n5"
+      ],
+      "source": "lpv|bandoltourisme|rosenthalwinemerchant|maisondesvins-bandol|chateau-pradeaux|dico-du-vin|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer rôles actuels Étienne et Édouard Portalis (génération en place ou en formation). Vérifier durée exacte d'élevage cuvée Bandol (variable selon millésime, 24 à 48 mois).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault"
+      ],
+      "cuvees_phares": [
+        "Château Pradeaux Bandol Rouge (95% mourvèdre + 5% grenache, rafles entières, élevage 36-48 mois en foudres anciens, garde 15-30 ans)",
+        "Château Pradeaux Bandol Rosé (mourvèdre + cinsault, élevage cuve béton)",
+        "Bastide Blanche Bandol (cuvée d'accès)"
+      ]
+    },
+    {
+      "id": "prov-prod-simone",
+      "nom": "Château Simone",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Palette",
+      "appellations_principales": [
+        "Palette"
+      ],
+      "localisation": "Meyreuil (13590), à 4 km à l'est d'Aix-en-Provence, à cheval sur les communes de Meyreuil et Le Tholonet",
+      "statut_production": "agriculture biologique certifiée (depuis le millésime 2021), pratiques ancestrales sans engrais chimiques, sans désherbants, sans insecticides, taille en gobelet palissée sur tuteurs, vendanges manuelles avec double tri, transport en bacs de 40 kg, levures indigènes",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Référence absolue de l'appellation Palette** et l'un des plus célèbres domaines de Provence. Propriété de la **famille Rougier depuis 1830**, lorsque **Nicolas-Toussaint Rougier** acquiert le domaine. Aujourd'hui dirigé par **Jean-François Rougier** (6e génération), assisté de son fils **Jean-Baptiste Rougier**. **L'appellation Palette est elle-même l'œuvre de Jean Rougier** (4e génération), qui dépose le dossier et obtient l'AOC en **1948** — l'une des plus petites appellations de France, environ 50 hectares en tout, dont **Château Simone représente à lui seul près de la moitié (21-23 hectares)**. **Le domaine n'a que 3 voisins dans l'appellation**. **Histoire** : le château tient son nom de l'une des anciennes propriétaires, **Madame de Simon**. Il fut au 16e siècle la propriété des **moines Grands Carmes d'Aix**, qui creusèrent les caves voûtées à étages encore utilisées aujourd'hui (et idéales pour l'élevage, fraîches et humides toute l'année). La célèbre étiquette représentant la façade et la terrasse à l'italienne est **millésimée 1890** — l'une des plus anciennes étiquettes de France encore en service. **Terroir exceptionnel et atypique pour la Provence** : le vignoble est adossé au **versant nord de la colline du Montaiguet**, exposé plein nord (rarissime dans le Sud), entre **150 et 250 mètres d'altitude**, en bordure de la rivière de l'Arc, **serti de pins** qui apportent humidité et fraîcheur. Le sol est constitué d'**éboulis dérivés du calcaire de Langesse** (formation lacustre, argiles + cailloux + graviers). **L'exposition nord protège la vigne de la morsure du soleil provençal** : maturation lente, conservation de l'acidité, vins de garde — c'est la signature Simone. **Vignoble** : **moyenne d'âge exceptionnelle**, certaines parcelles ont plus de **125 ans** (vignes pré-phylloxériques replantées par Albert Rougier en clairette après la crise), remplacement des pieds manquants à l'unité (\"complantage\" pour préserver la mosaïque variétale). Encépagement très diversifié, conservation de **cépages rares typiquement provençaux** (manosquin, castet, picpoul, téoulier, brun fourca, durif…) en plus des cépages principaux. **Blanc (la cuvée emblématique)** : **Clairette 80%**, complétée par grenache blanc, ugni blanc, bourboulenc, muscat blanc, viognier. **Rouge** : Grenache 45%, Mourvèdre 30%, Cinsault 5%, plus syrah et carignan en compléments. **Rosé** : assemblage des mêmes cépages rouges, **vinifié et élevé sous bois** (rarissime), production volontairement limitée. **Vinifications** : pressurage doux, **levures indigènes**, **élevages longs et bordés** : 8 mois en petits foudres puis 12 mois en barriques de chêne d'âges divers (renouvellement très partiel), **mise en bouteille sans filtration**. Le blanc est élevé **2 ans avant commercialisation**, le rouge **2-3 ans**. **Prix 2024-2026** : Blanc 35-45 €, Rouge 35-45 €, Rosé 35-45 € (le seul rosé provençal vendu au prix d'un blanc ou d'un rouge sérieux). **Profil Pat — iconique absolu** : (1) **un microclimat unique en Provence** (exposition nord, altitude, pins, calcaire) qui produit des vins de fraîcheur et de garde dans une région où la plupart des vins peinent à les obtenir — conviction n°3 incarnée (grand terroir + grand vigneron) ; (2) **rosé de gastronomie élevé sous bois**, à l'opposé du rosé d'été industriel — note Pat \"très grands rosés\" ; (3) **continuité familiale de 6 générations** et préservation des cépages anciens = transmission patrimoniale réelle ; (4) **prix encore raisonnables vu la qualité et l'unicité du style** (35-45 € pour les trois couleurs).",
+      "mes_notes": null,
+      "notes_pat": "Très grands rosés",
+      "tags": [
+        "producteur",
+        "palette",
+        "iconique",
+        "monopole",
+        "rougier",
+        "depuis-1830",
+        "aoc-1948",
+        "exposition-nord",
+        "moines-carmes",
+        "calcaire-langesse",
+        "vignes-125-ans",
+        "clairette-80-pourcent",
+        "rose-sous-bois",
+        "rose-de-gastronomie",
+        "vinification-traditionnelle",
+        "levures-indigenes",
+        "elevage-foudre-barrique",
+        "bio-certifie-2021",
+        "cepages-rares-provencaux",
+        "manosquin",
+        "castet",
+        "conviction-n3"
+      ],
+      "source": "lpv|idealwine|leclubterroirsandco|provencewine-shop|laroutedesvins|lacaveduchateau|1jour1vin|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer transmission Jean-Baptiste Rougier (6e/7e génération). Vérifier nouveau découpage des cépages secondaires.",
+      "cepages_rois": [
+        "Clairette",
+        "Grenache",
+        "Mourvèdre",
+        "Grenache blanc",
+        "Cinsault",
+        "Ugni blanc",
+        "Bourboulenc",
+        "Muscat blanc",
+        "Manosquin",
+        "Castet"
+      ],
+      "cuvees_phares": [
+        "Château Simone Blanc (Clairette 80%, grenache blanc, ugni blanc, bourboulenc, muscat, viognier — élevage 8 mois foudre + 12 mois barrique)",
+        "Château Simone Rouge (Grenache 45%, Mourvèdre 30%, Cinsault 5%, syrah, carignan — grand vin de garde)",
+        "Château Simone Rosé (rosé de saignée des cépages rouges, élevage sous bois, gastronomie)"
+      ]
+    },
+    {
+      "id": "prov-prod-cibonne",
+      "nom": "Clos Cibonne",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Côtes de Provence",
+      "appellations_principales": [
+        "Côtes de Provence Cru Classé"
+      ],
+      "localisation": "Le Pradet (83220), Var, entre Toulon et Hyères, 800 m de la Méditerranée, adossé aux collines de la Colle Noire (massif des Maures)",
+      "statut_production": "agriculture biologique certifiée (à partir du millésime 2020 sur la cuvée Tradition), labours, sans désherbants, sans engrais chimiques, vendanges manuelles, pressurage direct, élevage sous voile de levures (fleurette) en foudres centenaires",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Domaine fondateur de la culture du tibouren moderne** et **l'un des 18 Crus Classés des Côtes de Provence** (classement de 1955). La propriété remonte à **1793-1797**, quand la **famille Roux** rachète le domaine à **Jean-Baptiste de Cibon**, capitaine des vaisseaux de la Marine Royale de Louis XVI (de qui le domaine tient son nom). **Le tournant** : dans les **années 1930**, **André Roux** (arrière-grand-père des actuels propriétaires) modernise le domaine et prend une décision visionnaire — **remplacer tout le mourvèdre par du tibouren**, cépage local quasi disparu, dont il est convaincu qu'il est le plus apte à exprimer ce terroir maritime. **André Roux est aussi l'un des artisans de la création de l'AOC Côtes de Provence en 1977** et obtient l'inscription du tibouren dans le cahier des charges. Après une période difficile dans les années 1980 (au décès d'André Roux en 1989), **Brigitte Roux** (petite-fille d'André) et son mari **Claude Deforges** reprennent en 1993 et restaurent le domaine. Aujourd'hui c'est la **5e génération** qui œuvre — **Olivier Deforges** (œnologue et ingénieur agronome) et sa sœur **Caroline Deforges** (école de commerce). **Vignoble** : **15 à 24 hectares** (sources variables, selon parcelles louées) en **AOP Côtes de Provence**, à seulement **800 mètres de la mer**, dans une cuvette adossée aux **collines argilo-schisteuses de la Colle Noire** orientées vers la rade de Toulon. **Sols** : argilo-schisteux drainant, particularité géologique rare en Provence (la plupart des vignobles provençaux sont sur calcaire). **Climat** : entrées maritimes constantes, vents d'est et d'ouest, fraîcheur estivale exceptionnelle pour la latitude. **Cépage emblématique** : le **tibouren**, vieux cépage méditerranéen (présent en basse Mésopotamie et à Rome dès l'Antiquité, importé à Saint-Tropez fin XVIIIe par un capitaine d'Antiboul, d'où son nom déformé). Cultivé sur seulement **433 hectares en France** aujourd'hui — Cibonne en cultive une part majeure. Le tibouren donne des rosés de couleur soutenue (saumon-orangé), structurés, capables de vieillir 10 ans et plus. **Cuvées (production ~100 000 bouteilles/an)** : (1) **Cuvée Tradition Rosé** (90% tibouren + 10% grenache, vignes 20-30 ans en gobelet, **élevage 12-18 mois sous voile de fleurette en foudres de chêne centenaires de 500 L** — procédé unique en Provence, analogue au vin jaune du Jura ou au sherry). (2) **Cuvée Tradition Rouge** (même assemblage, même élevage en foudres). (3) **Cuvée Spéciale des Vignettes Rosé** (parcellaire des plus vieilles vignes plantées vers 1955, foudres centenaires, production limitée numérotée). (4) **Cuvées Prestige Caroline et Olivier** (rosé et rouge, élevage en barriques de 300 L). (5) **Cibonne Tentations** (gamme négoce accessible, raisins achetés de partenaires de longue date à La Crau et Carqueiranne). **Profil aromatique signature** : robe saumon-orangée à reflets ambrés, nez floral/épicé/agrumes, bouche vineuse et structurée (presque tanique sur les Vignettes), finale légèrement saline avec amertume noble qui appelle le verre suivant. **Prix 2024-2026** : Tradition Rosé 25-35 €, Tradition Rouge 30-40 €, Vignettes 50-70 €, Caroline/Olivier 35-50 €. **Statut** : note Pat \"plus grand rosé de France?\", carte des plus grandes tables (Taillevent, Guy Savoy), Decanter 95/100 sur 2018. **Profil Pat — iconique absolu** : (1) **rosé de gastronomie capable de garde**, à l'opposé radical du rosé pâle d'été industriel — démontre que le rosé peut être un vrai vin sérieux ; (2) **élevage sous voile de fleurette en foudres centenaires** = procédé unique, transmission directe des années 1930 ; (3) **défense d'un cépage rare et local** (tibouren) qui aurait disparu sans Cibonne — illustre la conviction n°6 (les régions et cépages périphériques méritent d'être défendus) ; (4) **terroir maritime atypique** sur schistes plutôt que calcaire ; (5) **prix encore très accessibles** pour ce niveau (Tradition à 25-35 € est une affaire pour un Cru Classé).",
+      "mes_notes": null,
+      "notes_pat": "plus grand rosé de France?",
+      "tags": [
+        "producteur",
+        "cotes-provence",
+        "tibouren",
+        "rose-garde",
+        "iconique",
+        "cru-classe-1955",
+        "depuis-1793",
+        "famille-roux",
+        "famille-deforges",
+        "andre-roux-1930",
+        "olivier-deforges",
+        "caroline-deforges",
+        "le-pradet",
+        "800m-mer",
+        "colle-noire",
+        "schistes",
+        "argilo-schisteux",
+        "elevage-voile-fleurette",
+        "foudres-centenaires",
+        "rose-gastronomie",
+        "cepage-rare",
+        "tibouren-90-pourcent",
+        "bio-certifie-2020",
+        "cuvee-tradition",
+        "cuvee-vignettes",
+        "conviction-n6"
+      ],
+      "source": "lpv|demaisonselections|idealwine|aeternus|dico-du-vin|meilleur-vin-provence|thewinehutnyc|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer surface exacte (15 vs 24 ha — différence vignes propres / parcelles louées). Volume Tentations vs domaine à préciser.",
+      "cepages_rois": [
+        "Tibouren",
+        "Grenache",
+        "Cinsault",
+        "Syrah"
+      ],
+      "cuvees_phares": [
+        "Cuvée Tradition Rosé (90% tibouren + 10% grenache, élevage 12-18 mois sous voile de fleurette en foudres centenaires)",
+        "Cuvée Tradition Rouge (90% tibouren + 10% grenache, foudres centenaires)",
+        "Cuvée Spéciale des Vignettes (vieilles vignes 1955, parcellaire numéroté)",
+        "Cuvée Prestige Caroline (rosé, élevage barriques 300 L)",
+        "Cuvée Prestige Olivier (rouge, 25% tibouren + 15% grenache + 60% syrah, barriques 300 L)"
+      ]
+    },
+    {
+      "id": "prov-prod-terrebrune",
+      "nom": "Domaine de Terrebrune",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": "Ollioules (83190), Var, à l'extrémité sud-est de l'AOP Bandol, sur les contreforts du massif du Gros Cerveau, face à la Méditerranée",
+      "statut_production": "agriculture biologique certifiée (de fait depuis l'origine, certification officialisée années 1990) ET biodynamique depuis 2010s grâce à Patrick Aparicio, labours, sans désherbant, piochage manuel entre les pieds, utilisation de soufre et sulfate de cuivre uniquement, pas de systémique, ébourgeonnage et effruitage manuels, vendanges manuelles en caissettes de 30 kg, vinifications par gravité (pas de pompage), levures indigènes pour les rouges",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Le quatrième pilier de Bandol** (avec Tempier, Pibarnon, Pradeaux) qui s'est imposé plus tardivement dans la hiérarchie — **enfin reconnu 3 étoiles RVF dans le Guide Vert 2020**, après plus de 20 ans à n'être primé que sur ses rosés. Fondé en **1963** par **Georges Delille**, **sommelier de formation**, qui rachète une propriété abandonnée à Ollioules (eau courante et électricité absentes à l'époque) et entreprend des travaux titanesques : terrassements, **reconstruction des restanques**, repos des terres, replantation totale. **La cave est creusée et enterrée dans la roche en 1975** — choix exceptionnel pour la vinification par gravité et l'élevage en conditions naturellement fraîches. **Première bouteille en 1980**, baptisée *« Terrebrune »* d'après la couleur du sol (argiles brunes sur calcaire bleu du Trias). La même année, son fils **Reynald Delille**, diplômé en œnologie, intègre le domaine. **Georges Delille s'éteint au printemps 2021**. **Patrick Aparicio**, biodynamiste éclairé, est l'autre pilier — chef de culture qui a poussé en interne la conversion biodynamique. **Tournant 2020** : Reynald Delille s'associe à **Jean d'Arthuys**, ancien dirigeant de médias (Antenne 2, Endemol) passionné par le vin, pour assurer la pérennité financière et le développement. **Géologie unique** : **terroir du Trias** (200-250 millions d'années), **en surface des cailloutis calcaires dans de l'argile brune**, **en sous-sol des marnes calcaires filtrantes et un enrochement de calcaire bleu** — la vigne s'enracine profondément dans les fissures du calcaire. **Microclimat** : situé à l'**extrémité sud-est de l'appellation**, donc plus chaud le jour mais avec une **influence maritime forte** (vue directe sur la mer) et un **mistral régulier qui assèche et rafraîchit**. Les **nuits fraîches de septembre** ralentissent la maturation du mourvèdre — c'est la clef du style. **Vignoble** : **30-35 hectares en AOP Bandol**, cultivés en **terrasses (restanques)**. Encépagement : **mourvèdre dominant** (85% sur le rouge, 40% sur le rosé), complété par grenache et cinsault ; pour le blanc, une **multitude de cépages** (marsanne, rolle, ugni blanc, bourboulenc, clairette, trebbiano). **Vinifications très soignées** : **chargement des cuves par gravité** (pas de pompage, protection maximale de la peau du raisin), **fermentations en cuves inox thermo-régulées sans levurage ni chaptalisation**, **fermentation malolactique** en foudres. **Élevage du rouge : 18 mois en foudres de chêne de 40 à 60 hl**, puis **galeries souterraines fraîches et humides pour le vieillissement bouteille**. **Cuvées** : (1) **Bandol Rouge** (85% mourvèdre + 10% grenache + 5% cinsault — vin de précision, **garde 15-25 ans**, profil élégant et ciselé plutôt que démonstratif, notes de garrigue, fruits noirs, fine fraîcheur mentholée). (2) **Bandol Rosé** (40% mourvèdre + 30% grenache + 30% cinsault — pressurage direct, élevage cuve inox — **rosé de gastronomie de garde**, en 2020 le domaine a montré des rosés de 10 ans encore éclatants). (3) **Bandol Blanc** (assemblage à dominante clairette/rolle/marsanne — un blanc de Bandol parmi les rares à pouvoir vieillir 10 ans). **Statut** : **3 étoiles RVF Guide Vert 2020**, Bettane & Desseauve, présence dans les grandes tables. Reynald Delille tient sa philosophie : **les prix ne bougent pas malgré la reconnaissance, les volumes ne bougent pas non plus**. **Prix 2024-2026** : Bandol Rouge 32-42 €, Rosé 25-35 €, Blanc 30-40 €. **Profil Pat — iconique discret** : (1) **conviction n°3** : grand terroir Trias (unique sur l'appellation) + grand vigneron-famille (Delille sur 2 générations + Aparicio) ; (2) **vinifications par gravité, biodynamie, levures indigènes, foudres anciens** = conviction n°5 absolument (pas d'artifices, transparence du terroir) ; (3) **rosé de garde**, comme chez Tempier et Cibonne, démontre que le rosé peut être grand ; (4) **note Pat \"bio, Delille, schistes\"** = repère mais à corriger sur \"schistes\" : Terrebrune est sur **calcaire du Trias avec argiles brunes**, pas des schistes (à clarifier dans la base) ; (5) **profil ciselé et frais** plutôt que démonstratif — l'anti-Pradeaux du même Bandol, ce qui en fait un point d'entrée plus facile pour qui veut goûter le mourvèdre sans en attendre 20 ans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "bio",
+        "delille",
+        "schistes",
+        "georges-delille",
+        "reynald-delille",
+        "patrick-aparicio",
+        "jean-d-arthuys",
+        "fonde-1963",
+        "premiere-bouteille-1980",
+        "decede-2021-georges",
+        "ollioules",
+        "gros-cerveau",
+        "extremite-sud-est-appellation",
+        "trias",
+        "argiles-brunes",
+        "calcaire-bleu",
+        "marnes-filtrantes",
+        "30-35-hectares",
+        "restanques",
+        "mourvedre-85-pourcent",
+        "biodynamie",
+        "vinif-gravite",
+        "levures-indigenes",
+        "elevage-foudre-18-mois",
+        "rose-de-garde",
+        "blanc-de-garde",
+        "3-etoiles-rvf-2020",
+        "association-arthuys-2020",
+        "conviction-n3",
+        "conviction-n5"
+      ],
+      "source": "lpv|mundovin|generationvignerons|maisondesvins-bandol|terrebrune|cavissima|lacaveduchateau|vigneronsdexception|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Tag historique 'schistes' à corriger en 'calcaire-trias' lors de la prochaine refonte de la base — Terrebrune est sur Trias argilo-calcaire, pas sur schistes. Confirmer surface actuelle (30 vs 35 ha selon sources).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault",
+        "Clairette",
+        "Rolle",
+        "Marsanne",
+        "Bourboulenc",
+        "Ugni Blanc"
+      ],
+      "cuvees_phares": [
+        "Bandol Rouge (85% mourvèdre + 10% grenache + 5% cinsault, élevage 18 mois en foudres, garde 15-25 ans)",
+        "Bandol Rosé (40% mourvèdre + 30% grenache + 30% cinsault, pressurage direct, rosé de garde)",
+        "Bandol Blanc (assemblage clairette/rolle/marsanne, blanc de garde rare en Bandol)"
+      ]
+    },
+    {
+      "id": "prov-prod-trevallon",
+      "nom": "Domaine de Trévallon",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "IGP Alpilles",
+      "appellations_principales": [
+        "IGP Alpilles"
+      ],
+      "localisation": "Saint-Étienne-du-Grès (13103), versant nord des Alpilles, Bouches-du-Rhône, près de Saint-Rémy-de-Provence",
+      "statut_production": "agriculture biologique certifiée depuis 1973 (de fait, certification officielle ultérieure), aucun herbicide ni insecticide ni engrais chimique depuis l'origine, fumier de mouton, labours profonds, taille courte, rendements <25 hl/ha, sélection massale avec le pépiniériste Lilian Bérillon, vinifications minimalistes (\"le moins on en fait, le mieux c'est\" — Eloi Dürrbach), levures indigènes",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc"
+      ],
+      "notes_objectives": "**Le plus grand vin de Provence** et l'un des plus grands de France, point. Fondé en **1973** par **Eloi Dürrbach** (1950-novembre 2021), fils du peintre-sculpteur **René Dürrbach** (disciple d'Albert Gleizes, ami de Picasso) et de la tapissière **Jacqueline de La Baume** (qui avait tissé une version monumentale de *Guernica* pour l'ONU à New York). **Genèse** : les parents d'Eloi achètent dans les années 1950 une propriété en très mauvais état au pied des Alpilles. Eloi, après 7 ans d'études d'architecture et de maths à Paris, plaque tout en 1973 (à 21 ans) pour planter de la vigne dans ces collines de garrigue rocailleuse — *« fi des pierres, fi des racines, fi des défaitistes »*. **Choix d'encépagement révolutionnaire** : Eloi et son père lisent *l'Étude des Vignobles de France* de **Jules Guyot** (XIXe siècle), qui documente la présence massive de **cabernet sauvignon en Provence avant le phylloxéra**. Inspirés aussi par **Georges Brunet** (ancien propriétaire de Château La Lagune à Bordeaux, alors à Vignelaure près d'Aix), ils plantent **moitié cabernet sauvignon, moitié syrah** — assemblage inédit en Provence. **Bras de fer avec l'INAO en 1993** : à la création de l'AOC Baux-de-Provence, l'INAO refuse d'homologuer Trévallon (cabernet sauvignon limité à 20%). Eloi refuse de replanter et accepte le déclassement en **Vin de Pays des Bouches-du-Rhône**, puis **IGP Alpilles à partir de 2009**. Le marché s'en moque : Trévallon est devenu l'un des vins les plus recherchés de France. **Reconnaissance internationale précoce** : dès la fin des années 1970, **Aubert de Villaine (Romanée-Conti)**, **Kermit Lynch** (importateur américain culte) et **Robert Parker** (\"la plus grande découverte de sa carrière en Provence\") consacrent Trévallon mythique. **Vignoble** : **17 hectares** au total, **petites parcelles dans un rayon de 2 km autour de la cave**, dans les \"trois vallons\" qui donnent leur nom au domaine. **15 ha de rouges** (50% cabernet / 50% syrah), **2 ha de blancs** (marsanne + roussanne + un peu de grenache blanc + clairette + chardonnay + depuis 2022 une touche homéopathique de muscat à petits grains). **Sols** : calcaires de Crétacé et marnes bleues, ponctués de blocs rocheux qu'il a fallu dynamiter à la création. **Climat** : versant **nord** des Alpilles (fraîcheur, maturation lente, garrigue, microclimat unique pour la Provence). **Élevage** : foudres et demi-muids anciens, **24 mois pour le rouge**, **12 mois pour le blanc**. **Étiquettes mythiques** : avant son décès en 2000, **René Dürrbach a peint 50 affiches** que la famille décline en étiquettes — chaque année, l'étiquette choisie correspond au caractère du millésime (rouges/oranges chauds pour 2003, bleus/violets pour millésimes frais). **Transmission** : **Antoine Dürrbach** (formé chez Laurent Vaillé à la Grange des Pères, chez Jean-Louis Chave à Hermitage et chez Coche-Dury à Meursault — excusez du peu) et **Ostiane Dürrbach** (formée à la viti-œno après un premier rôle commercial) continuent le domaine depuis le décès d'Eloi en novembre 2021. **Influence** : Marc Delienne (Fleurie), Clément Pinard (Sancerre), Laurent Vaillé (Grange des Pères) sont passés par Trévallon. **Prix 2024-2026** : Rouge IGP Alpilles **70-150 €** selon millésime (jusqu'à 250 € sur vieux millésimes), Blanc IGP Alpilles **80-180 €**. **Profil Pat — iconique absolu, avec nuance** : (1) **rencontre absolue entre un grand vigneron et un grand terroir** = conviction n°3 incarnée ; (2) **refus de l'AOC pour ne pas trahir le vin** = conviction n°4 absolue (l'appellation ne fait pas le vin) ; (3) **vinifications minimalistes** = conviction n°5 (pas d'artifices) ; (4) **microclimat frais versant nord** explique la fraîcheur des rouges malgré le cabernet en Provence — par causalité, pas par adjectif ; (5) **note Pat importante** : *« Parmi les plus grands vins de France. Les derniers millésimes, à partir de 2000, peut-être un peu moins précis et plus boisés »* — vigilance sur l'évolution récente du style, à confirmer sur dégustations futures.",
+      "mes_notes": null,
+      "notes_pat": "Parmis les plus grands vins de France. Les derniers millésimes, à partir de 2000, peut-être un peu moins précis et plus boisés",
+      "tags": [
+        "producteur",
+        "igp",
+        "iconique",
+        "cabernet",
+        "durrbach",
+        "alpilles",
+        "eloi-durrbach",
+        "antoine-durrbach",
+        "ostiane-durrbach",
+        "fonde-1973",
+        "refus-aoc-1993",
+        "vin-de-pays",
+        "igp-alpilles-2009",
+        "saint-etienne-du-gres",
+        "versant-nord",
+        "cabernet-syrah-50-50",
+        "marsanne-roussanne",
+        "jules-guyot",
+        "kermit-lynch",
+        "aubert-de-villaine",
+        "robert-parker",
+        "bio-depuis-origine",
+        "selection-massale-berillon",
+        "etiquettes-rene-durrbach",
+        "garrigue-calcaire",
+        "transmission-2021",
+        "decede-novembre-2021",
+        "conviction-n3",
+        "conviction-n4",
+        "conviction-n5"
+      ],
+      "source": "lpv|polanerselections|idealwine|laroutedesblancs|paramourduvin|vinsetmillesimes|la-pangee|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer évolution style sous Antoine/Ostiane post-2021. Vérifier dosage muscat à petits grains 2022 sur blanc.",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Syrah",
+        "Marsanne",
+        "Roussanne",
+        "Grenache blanc",
+        "Clairette",
+        "Chardonnay",
+        "Muscat à petits grains"
+      ],
+      "cuvees_phares": [
+        "Trévallon Rouge IGP Alpilles (50% cabernet sauvignon + 50% syrah, élevage 24 mois en foudres et demi-muids)",
+        "Trévallon Blanc IGP Alpilles (marsanne, roussanne, grenache blanc, clairette, chardonnay, muscat à petits grains depuis 2022 — élevage 12 mois)"
+      ]
+    },
+    {
+      "id": "prov-prod-hauvette",
+      "nom": "Domaine Hauvette",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Baux-de-Provence",
+      "appellations_principales": [
+        "Baux-de-Provence",
+        "IGP Alpilles"
+      ],
+      "localisation": "Saint-Rémy-de-Provence (13210), versant nord des Alpilles, Bouches-du-Rhône",
+      "statut_production": "agriculture biologique certifiée, biodynamie certifiée depuis 2003, labours superficiels, préparations végétales, calendrier lunaire, vendanges manuelles, éraflage total, infusion des baies (style \"infusion\" plutôt que macération musclée), levures indigènes, élevages en cuve béton, foudres, fûts et œufs en béton selon les cuvées, peu ou pas de soufre",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Vigneronne discrète, référence absolue des Alpilles** côté biodynamie et précision. **Dominique Hauvette** s'installe en **1988** à Saint-Rémy-de-Provence avec **2 hectares et une cave délabrée**. Femme du métier de cheval à l'origine (formation d'écuyère, puis reconversion totale), elle bâtit le domaine pierre par pierre, sans formation œnologique classique. **Reconnaissance progressive** : **Vigneronne de l'année 2020** par la **Revue des Vins de France**, **3 étoiles sur 3** (sommet absolu) au guide Bettane & Desseauve dès 2020, présence sur les plus grandes cartes (3 étoiles RVF maintenu depuis). **Vignoble** : **17 hectares** sur le **versant nord des Alpilles** (le bon côté, comme chez Trévallon), sur les communes de Saint-Rémy-de-Provence et alentours. **Sols** : **argilo-calcaires** caractéristiques du nord des Alpilles, avec présence de cailloux roulés en surface, idéaux pour le drainage. **Climat** : malgré la latitude, **les nuits sont fraîches** (effet Alpilles + mistral), ce qui permet une maturation lente — explique pourquoi Hauvette parvient à des rouges si fins et des blancs si tendus dans une région où ce n'est pas la norme. **Encépagement** : pour les **rouges** — Cinsault, Grenache, Syrah, Carignan, Cabernet Sauvignon ; pour les **blancs** — Clairette, Roussanne, Marsanne, un peu d'Ugni Blanc. **Pratiques** : **biodynamie certifiée depuis 2003**, vinifications très douces avec **éraflage total** (cohérent avec un style \"infusion\" plutôt qu'extraction), **élevages en contenants variés** selon les cuvées (cuve béton, foudres anciens, fûts, **œufs en béton** — outil de prédilection pour la précision aromatique des blancs), **levures indigènes**, **peu ou pas de soufre**. **Cuvées emblématiques** : (1) **Améthyste** (AOP Baux-de-Provence rouge) : dominante **Cinsault** complétée par Carignan et Grenache, vin de finesse, profond mais aérien, le plus \"féminin\" du domaine — note Pat de la pratique : élégance et souplesse. (2) **Cornaline** (AOP Baux-de-Provence rouge) : assemblage **Grenache + Syrah + Cabernet Sauvignon**, plus puissant, racé, structuré, vin de garde 10-15 ans, notes de truffe, olive noire, pin maritime. (3) **Roucas** (IGP Alpilles rouge) : cuvée d'accès, jeunes vignes du domaine, fruit immédiat, le plus accessible. (4) **Petra** (IGP Alpilles rosé) : **rosé de gastronomie de garde**, considéré comme l'un des plus grands rosés de table de France, à boire avec un peu de bouteille. (5) **Jaspe** (blanc IGP Alpilles) : **Clairette + Marsanne + Roussanne**, **pressé en grappes entières**, gras, salin, amers nobles, un blanc rare en Provence où **la sous-maturité et l'acidité forcée font la loi** — Hauvette fait l'inverse, vendange à pleine maturité, et produit des blancs comparables à des grands Jurançons ou Hermitage Blanc. (6) **Dolia** (blanc 100% Roussanne, micro-cuvée). **Prix 2024-2026** : Roucas 30-40 €, Améthyste 45-60 €, Cornaline 55-75 €, Petra rosé 35-50 €, Jaspe et Dolia 50-80 €. **Profil Pat — iconique** : (1) **rencontre d'une grande vigneronne (autodidacte) et d'un grand terroir** (versant nord des Alpilles, argilo-calcaire, nuits fraîches) = conviction n°3 ; (2) **biodynamie réelle et précoce depuis 2003**, pas en mode marketing ; (3) **vinification \"infusion\" sans extraction violente** = conviction n°5 (pas d'artifices, transparence du terroir) ; (4) **note Pat \"très grands vins blancs\"** = parmi les rares blancs du Sud qui rivalisent avec ceux du Nord ; (5) **œufs en béton** pour les blancs = précision aromatique sans bois, signature moderne ; (6) **rosé Petra de garde** = même esprit que Cibonne, démontre que le rosé peut être un vin sérieux.",
+      "mes_notes": null,
+      "notes_pat": "Très grands vins blancs",
+      "tags": [
+        "producteur",
+        "baux",
+        "biodynamie",
+        "hauvette",
+        "alpilles",
+        "dominique-hauvette",
+        "fondee-1988",
+        "saint-remy-de-provence",
+        "versant-nord-alpilles",
+        "argilo-calcaire",
+        "17-hectares",
+        "biodynamie-2003",
+        "vigneronne-annee-rvf-2020",
+        "bettane-3-etoiles",
+        "infusion",
+        "erafflage-total",
+        "levures-indigenes",
+        "elevage-oeuf-beton",
+        "peu-de-soufre",
+        "cuvee-amethyste",
+        "cuvee-cornaline",
+        "cuvee-roucas",
+        "cuvee-petra-rose",
+        "cuvee-jaspe-blanc",
+        "rose-de-garde",
+        "blancs-d-exception",
+        "conviction-n3",
+        "conviction-n5"
+      ],
+      "source": "lpv|nasti|walter-wine|infinivin|mundovin|ardoneo|idealwine|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Confirmer composition exacte Jaspe (présence d'ugni blanc selon millésime). Vérifier statut Petra (IGP Alpilles vs Méditerranée).",
+      "cepages_rois": [
+        "Cinsault",
+        "Grenache",
+        "Syrah",
+        "Cabernet Sauvignon",
+        "Carignan",
+        "Clairette",
+        "Roussanne",
+        "Marsanne",
+        "Ugni Blanc"
+      ],
+      "cuvees_phares": [
+        "Améthyste (AOP Baux-de-Provence rouge — dominante Cinsault + Carignan + Grenache)",
+        "Cornaline (AOP Baux-de-Provence rouge — Grenache + Syrah + Cabernet Sauvignon, vin de garde)",
+        "Roucas (IGP Alpilles rouge — cuvée d'accès)",
+        "Petra (IGP Alpilles rosé de gastronomie de garde)",
+        "Jaspe (IGP Alpilles blanc — Clairette + Marsanne + Roussanne, pressé en grappes entières)",
+        "Dolia (blanc 100% Roussanne, micro-cuvée)"
+      ]
+    },
+    {
+      "id": "prov-prod-tempier",
+      "nom": "Domaine Tempier",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": "Le Plan du Castellet (83330), Var, parcelles sur les communes du Castellet, du Beausset et de La Cadière-d'Azur, au cœur de l'amphithéâtre de Bandol",
+      "statut_production": "agriculture biologique certifiée, sans herbicide ni molécule chimique, vendanges manuelles, tri à la vigne et à la cave, égrappage total, levures indigènes, fermentations en cuves béton (3-4 semaines), pas de chaptalisation, pas de collage ni filtration à la mise",
+      "niveau_reference": 5,
+      "connu_de_pat": null,
+      "ranking_pat": 5,
+      "gamme_prix": "50-100",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Domaine mythique et père spirituel du Bandol moderne**. Une histoire qui commence avec un mariage : en **1936**, **Lucie Tempier** (héritière du domaine familial qui existait déjà sous Louis XV — bastide de 1834, cave à foudres bâtie en 1880 par son arrière-grand-mère Léonie) épouse **Lucien Peyraud**, fils d'un commerçant en soies et rubans de Saint-Étienne, qui rêvait d'être vigneron depuis toujours. **Ils s'installent au domaine en 1940** au début de la guerre. **Le combat de Lucien Peyraud (1940-1982)** : pendant **37 ans**, Lucien défend une idée révolutionnaire pour l'époque — **faire du mourvèdre le cépage central de Bandol**, alors que la plupart des vins de l'appellation étaient des assemblages dilués vendus moins cher que les vins de table. **Premier rosé bouteillé en octobre 1943**. **Président du syndicat de Bandol de 1945 à 1982** (presque 40 ans), membre de l'INAO dès 1947, allié du baron Le Roy de Boiseaumarié, du Dr Roethlisberger et de la Comtesse Portalis (Pradeaux), Lucien Peyraud impose progressivement le mourvèdre dans le cahier des charges — c'est aujourd'hui le cépage marqueur de l'appellation. **Lulu Peyraud** (Lucie, décédée en 2020 à 102 ans) reçoit toutes les grandes tables du monde dans la bastide ; **Kermit Lynch**, importateur américain, devient l'un des plus fervents promoteurs internationaux de Tempier dès les années 1970-80, et fait connaître **Alice Waters** (Chez Panisse, Berkeley) au domaine — d'où l'aura mythique de Tempier dans la gastronomie californienne et new-yorkaise. **Génération 2 (1960-2000)** : les fils **Jean-Marie Peyraud** (vinifications/commercial) et **François Peyraud** (cultures) prennent le relais. Inspirés par leurs voyages en Bourgogne où ils découvrent la notion de **climat**, ils créent à partir des années 1970 **les cuvées parcellaires** qui définissent encore aujourd'hui le domaine. **Génération 3 / direction actuelle** : depuis 2000, **Daniel Ravier** (ingénieur agronome savoyard) dirige l'exploitation, en lien avec le conseil d'administration où siègent Jean-Marie, François et leurs sœurs (Fleurine, Marion, Laurence, Véronique). **Vignoble** : **38 à 50 hectares** (sources variables, le domaine s'est étendu en 2016 avec 18 hectares supplémentaires à 300 m d'altitude pour les blancs et rosés frais), parcelles dispersées sur Le Castellet, Beausset et La Cadière. **Sols** : argilo-calcaires partout, mais **trois terroirs distincts** pour les cuvées parcellaires : (1) **La Migoua** : versant du Beausset Vieux, **270-300 m d'altitude** (le plus haut), accident géologique avec marnes anciennes et calcaire dolomitique, **\"le plus floral et éthéré\"** des trois, **moins de mourvèdre** (~50%) et plus de grenache, garrigue et pin maritime tout autour. (2) **La Tourtine** : **5,5-6,5 ha plein sud**, sol argilo-calcaire du Santonien (75-90 millions d'années), gypse en surface, **\"puissant et tannique\"**, **80% mourvèdre + 10% grenache + 10% cinsault**, vignes de 40 ans. (3) **Cabassaou** : **petite parcelle en bas du coteau de la Tourtine**, **abritée du mistral** (microclimat très chaud), petits murets de pierre, **\"ça cabasse\"** = ça donne un coup en provençal, **95% mourvèdre + 4% syrah + 1% cinsault**, vignes de 50 ans, rendement 25 hl/ha — **la cuvée la plus dense et la plus tannique** du domaine, garde 20-30 ans. **Cuvée Classique** (rouge + rosé) : assemblage des terroirs y compris La Bastide, **75% mourvèdre + grenache + cinsault**. **Rosé Tempier** : **l'un des grands rosés de France**, **50% mourvèdre + 30% grenache + 20% cinsault**, structuré, gastronomie, déjà mythique chez Alice Waters et la nouvelle cuisine californienne. **Élevage** : foudres de chêne anciens, **18-20 mois pour les rouges parcellaires**, mise sans collage ni filtration. **Statut** : Bettane & Desseauve, RVF, Wine Advocate, Decanter — référence absolue. **Prix 2024-2026** : Rosé Tempier 35-50 €, Cuvée Classique rouge 35-50 €, La Migoua 55-80 €, La Tourtine 65-95 €, Cabassaou 85-130 €. **Profil Pat — iconique absolu** : (1) **conviction n°3** dans sa forme la plus pure : trois grands terroirs distincts + une grande famille-vigneronne (Peyraud sur 4 générations) + une direction technique exceptionnelle (Daniel Ravier) ; (2) **cuvées parcellaires inspirées de la Bourgogne** = on transpose la logique du climat à un terroir méridional — conviction n°4 ; (3) **biodynamie de fait, levures indigènes, pas de collage/filtration** = conviction n°5 (pas d'artifices) ; (4) **rôle historique** dans l'appellation : sans Lucien Peyraud, Bandol ne serait pas Bandol — le mourvèdre n'aurait jamais été imposé comme cépage central ; (5) **Rosé Tempier** = preuve que le rosé peut être un grand vin de gastronomie de garde ; (6) **prix encore relativement raisonnables** sur la Cuvée Classique et le Rosé (35-50 €) en regard du statut iconique mondial — Cabassaou est cher mais c'est l'une des grandes expressions mondiales du mourvèdre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "iconique",
+        "mourvedre",
+        "peyraud",
+        "famille-peyraud",
+        "lulu-peyraud",
+        "lucien-peyraud",
+        "jean-marie-peyraud",
+        "francois-peyraud",
+        "daniel-ravier-direction",
+        "depuis-1834",
+        "mariage-1936",
+        "installation-1940",
+        "pere-spirituel-bandol",
+        "syndicat-bandol-1945-1982",
+        "aoc-bandol-1941",
+        "cuvees-parcellaires",
+        "logique-bourgogne-climat",
+        "la-migoua",
+        "la-tourtine",
+        "cabassaou",
+        "cuvee-classique",
+        "rose-tempier",
+        "rose-gastronomie",
+        "alice-waters-chez-panisse",
+        "kermit-lynch",
+        "38-50-hectares",
+        "le-castellet",
+        "beausset",
+        "la-cadiere",
+        "elevage-foudres-18-20-mois",
+        "bio-certifie",
+        "levures-indigenes",
+        "sans-collage-sans-filtration",
+        "conviction-n3",
+        "conviction-n4",
+        "conviction-n5"
+      ],
+      "source": "lpv|domainetempier|nasti|oenopole|lacave-eclairee|dico-du-vin|perrineswine|web",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026. Vérifier surface actuelle (38 ha historique vs 50 ha avec extension 2016). Confirmer date décès Lulu Peyraud (2020 vs 2021). Daniel Ravier toujours en poste (2026) ?",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault",
+        "Syrah"
+      ],
+      "cuvees_phares": [
+        "Cuvée Classique Rouge (75% mourvèdre + grenache + cinsault, assemblage de terroirs)",
+        "Rosé Tempier (50% mourvèdre + 30% grenache + 20% cinsault, rosé de gastronomie mythique)",
+        "La Migoua (270-300 m, ~50% mourvèdre, profil floral et éthéré, le plus haut)",
+        "La Tourtine (80% mourvèdre + 10% grenache + 10% cinsault, vignes 40 ans, puissant)",
+        "Cabassaou (95% mourvèdre + 4% syrah + 1% cinsault, vignes 50 ans, abrité du mistral, cuvée d'élite)"
+      ]
+    },
+    {
+      "id": "prov-prod-clos-saint-vincent",
+      "nom": "Clos Saint-Vincent",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bellet",
+      "appellations_principales": [
+        "Bellet"
+      ],
+      "localisation": null,
+      "statut_production": "biodynamie",
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Référence absolue de la micro-appellation Bellet** — l'un des plus petits et plus confidentiels vignobles français, perché sur les hauteurs de Nice. Domaine relancé en **1993** par les **familles Sicardi et Sergi** qui rachètent ce vignoble historique (AOC Bellet depuis 1941, mais à l'abandon dans les années 80-90). **Joseph Sergi dit \"Gio\"** mène la résurrection avec son fils **Julien Sergi** désormais à ses côtés — domaine 100% familial. **Adresse** : 516 chemin de Crémat, 06200 Nice. **Histoire de l'appellation Bellet** : créée en 1941, l'une des plus anciennes AOC de France, mais quasiment effacée par l'urbanisation niçoise et l'abandon viticole après-guerre. **Aujourd'hui seulement ~10 producteurs** sur **moins de 50 ha au total** — Bellet est l'une des plus petites appellations françaises, étranglée entre la ville et la mer. **Le terroir** : vignoble sur **terrasses étroites (restanques)** à flanc de colline au-dessus de Nice, **altitude 200-350 m**, **double influence climatique** unique en France : **brise marine méditerranéenne** + **vent frais des Préalpes du Sud**. **Amplitude thermique jour/nuit considérable**, ce qui préserve l'acidité et donne aux vins leur **fraîcheur inattendue pour une appellation aussi méridionale**. **Sols silico-calcaires** avec **galets roulés du Pliocène et poudingue** (conglomérat sédimentaire), exposition sud sud-ouest. **Domaine** : **10 hectares** (relancé à partir de 6 ha en 1993, étendu progressivement), **vignes anciennes** patiemment restaurées sur terrasses. **Pratiques** : **biologique de longue date**, **biodynamie certifiée depuis 2007** — calendrier lunaire, **préparations végétales** (tisanes d'orties), **animales** (compost de fumier), **minérales** (silice pilée), **aucun produit chimique**. **Vendanges manuelles**, tri rigoureux. **Cépages autochtones de Bellet** — c'est ici que se joue la singularité du domaine : (1) **Folle Noire** (cépage rouge endémique, ailleurs presque disparu, donne des rouges étonnamment frais et floraux pour le Sud) ; (2) **Braquet** (cépage rosé endémique, ailleurs introuvable, donne le rosé signature) ; (3) **Rolle** (cépage blanc méditerranéen, parent du Vermentino corse/italien) ; (4) un peu de **grenache** et **mourvèdre** en complément sur les rouges. **Vinification** : cuves inox thermo-régulées, **pigeage manuel**, **cuvaisons longues jusqu'à 30 jours** sur les rouges, **élevage 12-16 mois en fûts de chêne français** (pas de bois neuf marqué), **ni collage ni filtration**. **Cuvées** (l'ensemble du domaine, ~5 vins seulement) : (1) **Le Clos Rouge** — **90% Folle Noire + 10% Grenache**, parcelles sur galets et poudingue, garde 8-12 ans, profil **fruits rouges croquants, fleurs séchées, rare fraîcheur florale pour le Sud**. (2) **Vino di Gio Rouge** — **100% Folle Noire** vieilles vignes, cuvée parcellaire haut de gamme, *« avec son caractère très latin nous évoque les doux paysages toscans »* (Bettane+Desseauve), garde 12-18 ans. (3) **Le Clos Blanc** — **100% Rolle**, fermentation et élevage cuve inox, garde 5-8 ans, **plus vineux que les blancs classiques de Provence**, profil **agrumes, fleurs blanches, salinité marine**. (4) **Vino di Gio Blanc** — **100% Rolle** vieilles vignes, élevage partiel en fût, garde 8-12 ans, complexité supérieure. (5) **Le Clos Rosé** — **100% Braquet**, macération pelliculaire courte, fermentation basse température (~18°C), couleur saumon clair, **profil floral (rose sauvage) très typé**, **3000 à 4500 bouteilles seulement/an**, *« l'un des rosés les plus authentiques de l'Hexagone »* (Bettane+Desseauve) — **OVNI** servi au mariage du Prince Albert II de Monaco et Charlene en 2011. **Style global** : **précision, audace, expression des cépages autochtones**, fraîcheur préservée par l'altitude et les vents, salinité marine subtile. *« Joseph Sergi n'hésite jamais à sortir des sentiers battus pour mettre en valeur les cépages autochtones, livrant des vins précis et audacieux »* (Bettane+Desseauve, 4 étoiles sur 5). **Statut** : **petit domaine culte des amateurs de cépages rares et de biodynamie radicale**, allocations très serrées (production totale ~30 000-40 000 bouteilles tous formats confondus), peu présent à l'export. **Prix 2024-2026** : Le Clos Rouge/Blanc **35-50 €**, Vino di Gio Rouge/Blanc **55-80 €**, Le Clos Rosé **30-45 €** (rareté absolue). **Profil Pat — référence indispensable et cas d'école** : (1) **résurrection patiente d'une micro-appellation oubliée** sur 30 ans = conviction n°6 dans sa forme la plus pure (les régions périphériques méritent d'être défendues), Bellet en est l'exemple le plus extrême puisque ce n'est même pas une région mais une enclave urbaine ; (2) **sauvegarde des cépages autochtones Folle Noire et Braquet** = patrimoine vivant, ces cépages auraient disparu sans des vignerons comme les Sergi ; (3) **biodynamie certifiée 2007 sur terrasses vertigineuses** = conviction n°5 (travail à la vigne avant tout, refus des artifices) ; (4) **cohabitation marine + altitude + vents alpins** = terroir improbable qui produit des rouges aussi frais que des rouges de Loire, conviction n°3 dans son expression la plus surprenante ; (5) **Le Clos Rosé à 35 € en Braquet pur** = rosé qui réinvente la catégorie, à l'opposé des rosés industriels de Côtes-de-Provence ; (6) **production totale ~40 000 bouteilles** sur l'ensemble = échelle artisanale assumée.",
+      "mes_notes": null,
+      "notes_pat": "Bellet, c'est le genre d'appellation qu'on oublie parce qu'elle est minuscule, urbaine et peu exportée — et c'est précisément pour cela qu'il faut la défendre. Le Clos Saint-Vincent en est la conscience. Le Clos Rosé en Braquet pur est l'un des rares rosés français qui m'intéresse vraiment au-delà de l'effet été, et la Folle Noire en rouge est une surprise à chaque dégustation. Si vous croisez une bouteille de Vino di Gio dans une cave, prenez sans hésiter.",
+      "tags": [
+        "producteur",
+        "bellet",
+        "biodynamie",
+        "cepages-locaux",
+        "sergi",
+        "micro-appellation",
+        "nice",
+        "famille-sicardi-sergi",
+        "joseph-gio-sergi",
+        "julien-sergi",
+        "biodynamie-certifiee-2007",
+        "folle-noire",
+        "braquet",
+        "rolle",
+        "cepages-autochtones",
+        "10-hectares",
+        "restanques",
+        "terrasses-vertigineuses",
+        "reference-absolue-bellet",
+        "appellation-confidentielle"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — ranking_pat promu de 4 à 5 (niveau_reference était déjà à 5). Joseph Sergi alias 'Gio' (acquisition 1993 avec familles Sicardi+Sergi), fils Julien Sergi associé. Bio puis biodynamie certifiée depuis 2007. 10 ha sur restanques vertigineuses au-dessus de Nice. Cépages autochtones de Bellet : Folle Noire (rouge), Braquet (rosé), Rolle (blanc). Production confidentielle ~30 000-40 000 bouteilles totales. Le Clos Rosé en Braquet pur servi au mariage Albert II/Charlene 2011. Bettane+Desseauve 4*/5. Adresse : 516 chemin de Crémat, 06200 Nice.",
+      "cepages_rois": [
+        "Folle Noire",
+        "Braquet",
+        "Rolle",
+        "Grenache",
+        "Mourvèdre"
+      ],
+      "cuvees_phares": [
+        "Bellet Le Clos Rouge (90% Folle Noire + 10% Grenache, garde 8-12 ans)",
+        "Bellet Vino di Gio Rouge (100% Folle Noire vieilles vignes, cuvée parcellaire, garde 12-18 ans)",
+        "Bellet Le Clos Blanc (100% Rolle, élevage inox, garde 5-8 ans)",
+        "Bellet Vino di Gio Blanc (100% Rolle vieilles vignes, élevage partiel fût, garde 8-12 ans)",
+        "Bellet Le Clos Rosé (100% Braquet, ~3000-4500 bouteilles/an, rareté absolue)"
+      ]
+    },
+    {
+      "id": "prov-prod-sainte-magdeleine",
+      "nom": "Clos Sainte-Magdeleine",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Cassis",
+      "appellations_principales": [
+        "Cassis"
+      ],
+      "localisation": null,
+      "statut_production": "biologique-certifie",
+      "niveau_reference": 5,
+      "connu_de_pat": true,
+      "ranking_pat": 5,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Référence absolue de l'appellation Cassis** et l'un des terroirs les plus spectaculaires de France — domaine perché sur la **presqu'île du Cap Canaille**, **plus haute falaise maritime de France** (~400 m), au cœur du **Parc national des Calanques**, **face à la mer Méditerranée**. **Histoire** : **plus vieux vignoble de Cassis** documenté, **traces écrites du XIVe siècle** au lieu-dit *« l'Arène »* (emplacement exact du domaine). Le **Clos Sainte Magdeleine moderne** est créé fin XIXe par **Jules Savon** (ancien maire de Cassis, artisan du renouveau viticole post-phylloxéra). Médaille d'or pour son blanc à l'**Exposition Universelle de Paris en 1900**. **1920-1921** : acquisition par **Georges Zafiropulo**, industriel grec d'origine immigré à Marseille — début de la dynastie familiale actuelle. **Famille Sack-Zafiropulo depuis 4 générations** (Zafiropulo → Sack par alliance) : Georges, puis sa fille Georgina, puis François Sack et son épouse Georgina (35 ans à la barre), aujourd'hui **Jonathan Sack-Zafiropulo et son épouse Aurélie** depuis **2010**. **Continuité familiale rare** sur 100+ ans. **L'appellation Cassis** : **l'une des premières AOC créées par l'INAO**, en **1936** (parmi les huit pionnières françaises), célèbre dans le monde entier pour ses **blancs et rosés** — l'une des très rares AOC françaises **dominée par le blanc**, particularité méditerranéenne. Petite appellation (~210 ha au total), 12 producteurs environ. **Domaine** : **20 hectares dont 12 hectares de vignes** sur les **flancs du Cap Canaille**, plantés en **restanques (terrasses)** face à la mer. **10,5 ha en cépages blancs, 1,5 ha en rouges** (proportion inverse de la Provence classique). **Production ~40 000 bouteilles/an**. **Le terroir** : (a) **sols de grès et marnes sableuses du Crétacé** + **calcaires caillouteux**, particulièrement minéraux ; (b) **exposition ouest / nord-ouest** (atypique : protection des coups de chaleur, prolongation de la maturation) ; (c) **embruns marins constants** qui déposent des aérosols salins sur les feuilles et les baies — d'où la **salinité signature** des vins ; (d) **enracinement profond** grâce au sous-sol calcaire fracturé. **Âge moyen des vignes** : **35 ans**, certaines parcelles 60+ ans. **Encépagement blanc (typique Cassis)** : **Marsanne 51%** (dominante, donne le gras), **Ugni Blanc / Trebbiano 25%** (cépage typique de Cassis, donne l'acidité — rare en France où on l'utilise surtout pour le Cognac), **Clairette 24%** (donne la rondeur et les notes florales). **Encépagement rouge** : Grenache 70%, Cinsault 15%, Mourvèdre 15%. **Pratiques** : **virage bio sous Jonathan Sack à partir de 2010**, **certification bio acquise** depuis. **Vendanges manuelles obligatoires** (terrasses inaccessibles aux machines), tri rigoureux. **Cuveries** : magnifiques caves XIXe en partie souterraines (température constante naturelle), cuves **inox, béton, jarres en grès et demi-muids** — mix volontaire des contenants pour préserver des profils différents selon les cuvées. **Steven Spurrier (le \"juge de Paris\" du Jugement de 1976) défendait les vins du Clos Sainte Magdeleine** dès 1976 dans sa fameuse \"Caves de la Madeleine\" parisienne — caution historique de la qualité du domaine bien avant la mode des blancs de Provence. **Cuvées** : (1) **Clos Sainte Magdeleine Blanc Cassis** — cuvée signature, assemblage Marsanne + Ugni Blanc + Clairette, élevage inox (préservation de la salinité), profil **agrumes, fleurs blanches, iode, salinité longue, finale minérale**, garde 5-10 ans (étonnamment, le blanc de Cassis vieillit bien). (2) **Cuvée Bel-Arme Blanc** — la cuvée parcellaire haut de gamme, **vieilles vignes**, assemblage Marsanne + Clairette + Ugni Blanc, élevage partiel en demi-muids et jarres de grès, *« l'expression la plus noble de Cassis »*, **complexité remarquable** (jasmin, mangue, fruits blancs, chèvrefeuille, bouche ample et satinée, finale longue et vive), garde 10-15 ans. (3) **Clos Sainte Magdeleine Rosé Cassis** — assemblage Grenache + Cinsault + Mourvèdre, **rosé de gastronomie** plus charnu que la moyenne provençale, profil **fruits rouges, garrigue, salinité marine**, garde 3-5 ans. **Pas de vraie cuvée de rouge en propre du Clos** — la famille Sack possède aussi le **Mas de Rey en Camargue** (acquis pendant la guerre par Jean-Flavien Borelli, beau-frère de Georges Zafiropulo) qui produit les rouges du portefeuille familial. **Style** : **minéralité, salinité, fraîcheur** — l'antithèse des blancs de Provence ronds et fruités, profil **plus austère et noble** que la moyenne de l'appellation. **Statut** : référence historique mondiale de Cassis, **3 étoiles RVF**, allocations sur Bel-Arme. **Prix 2024-2026** : Cassis Blanc **25-40 €**, Bel-Arme Blanc **40-65 €**, Cassis Rosé **25-35 €**. **Profil Pat — référence canonique et défense d'un terroir rare** : (1) **terroir unique au monde** (presqu'île + Cap Canaille + Parc national + AOC pionnière 1936) = conviction n°3 dans une forme géographique exceptionnelle ; (2) **4 générations de Sack-Zafiropulo sur le même terroir** = continuité familiale rare, comparable à Brunier en Vieux Télégraphe ou Chave en Hermitage ; (3) **virage bio sous Jonathan Sack depuis 2010** = modernisation patiente sans rupture, transition générationnelle réussie ; (4) **AOC blanche méridionale** = défense d'un cas singulier (la Provence n'est pas que du rosé) — conviction n°6 ; (5) **encépagement Marsanne + Ugni Blanc + Clairette** = patrimoine cépages méditerranéens authentique, à l'opposé des modes internationales ; (6) **Bel-Arme à 50-60 €** = grand blanc méditerranéen sous-évalué, sortant du carcan \"rosé d'été\" associé à la Provence ; (7) **caution historique Steven Spurrier dès 1976** = qualité reconnue depuis 50 ans, pas un effet de mode.",
+      "mes_notes": null,
+      "notes_pat": "Le Clos Sainte Magdeleine, c'est l'antidote au cliché du rosé de Provence. Les blancs de Cassis bien faits ont une salinité et une longueur qui surprennent ceux qui ne connaissent que les blancs de Provence ronds et faciles. La cuvée Bel-Arme est l'un des grands blancs méditerranéens que l'on oublie de citer, à tort. Sur un loup grillé ou une bouillabaisse simplifiée, c'est imparable. Et le terroir physique du Cap Canaille — falaise maritime + restanques + Parc national — vaut le déplacement à lui seul.",
+      "tags": [
+        "producteur",
+        "cassis",
+        "maritime",
+        "blancs",
+        "iconique",
+        "aoc-1936",
+        "cap-canaille",
+        "parc-national-calanques",
+        "famille-sack-zafiropulo",
+        "4-generations",
+        "jonathan-sack",
+        "biologique-certifie",
+        "biologique-depuis-2010",
+        "blanc-mediterranee",
+        "marsanne-ugni-blanc-clairette",
+        "bel-arme",
+        "vieilles-vignes",
+        "salinite-marine",
+        "steven-spurrier",
+        "12-hectares",
+        "reference-absolue-cassis"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 — ranking_pat promu de 4 à 5 (niveau_reference était déjà à 5). Famille Sack-Zafiropulo depuis 1920-1921 (Georges Zafiropulo industriel grec installé à Marseille), 4 générations. Jonathan Sack-Zafiropulo aux commandes depuis 2010, virage bio sous sa direction. Plus vieux vignoble documenté de Cassis (XIVe siècle au lieu-dit l'Arène). 12 ha de vignes sur le Cap Canaille (plus haute falaise maritime de France), Parc national des Calanques. Sols grès et marnes sableuses du Crétacé. Encépagement blanc dominant : Marsanne 51% + Ugni Blanc 25% + Clairette 24%. Production ~40 000 bouteilles/an. Caution historique de Steven Spurrier dès 1976.",
+      "cepages_rois": [
+        "Marsanne",
+        "Ugni Blanc",
+        "Clairette",
+        "Grenache",
+        "Cinsault",
+        "Mourvèdre"
+      ],
+      "cuvees_phares": [
+        "Cassis Blanc Clos Sainte Magdeleine (Marsanne + Ugni Blanc + Clairette, élevage inox, garde 5-10 ans)",
+        "Cassis Blanc Cuvée Bel-Arme (vieilles vignes, élevage partiel demi-muids et jarres de grès, garde 10-15 ans)",
+        "Cassis Rosé Clos Sainte Magdeleine (Grenache + Cinsault + Mourvèdre, rosé de gastronomie)"
+      ]
+    },
+    {
+      "id": "prov-prod-leoube",
+      "nom": "Château Léoube",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Côtes de Provence La Londe",
+      "appellations_principales": [
+        "Côtes de Provence La Londe"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Bormes-les-Mimosas (Côtes de Provence La Londe)**, **propriété de la famille Bamford** (Lord Bamford, JCB) depuis 1997. **~70 ha bio certifiés** face à la **mer Méditerranée**, dans le **Parc national de Port-Cros**. Cuvée **\"Léoube Rosé\"** (entrée de gamme rosé gastronomique, ~25 €), **\"Secret de Léoube\"** (haut de gamme rosé, ~50 €, l'un des rosés français les plus reconnus à l'international), également **rouge** (Grenache + Cinsault + Mourvèdre + Syrah) et **blanc** (Rolle + Sémillon). Style **précis, fruité-frais, élégance sans excès** — fer de lance du **rosé provençal de qualité gastronomique**, à l'opposé des rosés industriels de Côtes-de-Provence. Distribution internationale soignée, allocations pour Secret de Léoube.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "la-londe",
+        "bio",
+        "maritime",
+        "bormes-les-mimosas",
+        "famille-bamford",
+        "biologique-certifie",
+        "rose-gastronomique",
+        "front-de-mer"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~324 à 747 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Grenache",
+        "Cinsault",
+        "Mourvèdre",
+        "Syrah",
+        "Rolle",
+        "Sémillon"
+      ],
+      "cuvees_phares": [
+        "Côtes de Provence Léoube Rosé",
+        "Côtes de Provence Secret de Léoube Rosé (haut de gamme)",
+        "Côtes de Provence Léoube Rouge",
+        "Côtes de Provence Léoube Blanc"
+      ]
+    },
+    {
+      "id": "prov-prod-revelette",
+      "nom": "Château Revelette",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Coteaux d'Aix-en-Provence",
+      "appellations_principales": [
+        "Coteaux d'Aix-en-Provence"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Jouques (Bouches-du-Rhône, Coteaux d'Aix-en-Provence)**, **Peter Fischer** (vigneron allemand installé en Provence depuis 1985), aujourd'hui avec ses fils. **~35 ha bio certifiés** sur **plateau d'altitude (400 m)** — c'est l'altitude qui fait la singularité du domaine : **maturation tardive, fraîcheur préservée, acidité conservée**, rare dans le Sud. Cuvée **\"Le Grand Blanc\"** (chardonnay 100% — atypique en Provence, élevage en fûts bourguignons, garde 8-12 ans, **référence du Chardonnay de Provence**), **\"Le Grand Rouge\"** (Cabernet Sauvignon + Syrah, garde 10-15 ans), **\"Revelette\"** classique en rouge et rosé. Style **atypique pour la région, élégance et fraîcheur d'altitude**, l'un des domaines les plus singuliers de Provence intérieure.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "coteaux-aix",
+        "bio",
+        "fischer",
+        "jouques",
+        "peter-fischer",
+        "biologique-certifie",
+        "altitude-400m",
+        "chardonnay-provence"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~362 à 764 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Chardonnay",
+        "Cabernet Sauvignon",
+        "Syrah",
+        "Grenache"
+      ],
+      "cuvees_phares": [
+        "Coteaux d'Aix-en-Provence Le Grand Blanc (chardonnay)",
+        "Coteaux d'Aix-en-Provence Le Grand Rouge (cabernet + syrah)",
+        "Coteaux d'Aix-en-Provence Revelette Rouge",
+        "Coteaux d'Aix-en-Provence Revelette Rosé"
+      ]
+    },
+    {
+      "id": "prov-prod-romanin",
+      "nom": "Château Romanin",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Baux-de-Provence",
+      "appellations_principales": [
+        "Baux-de-Provence"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine aux **Baux-de-Provence**, **biodynamie Demeter depuis 1988** — **l'un des pionniers absolus de la biodynamie dans le Sud de la France** (avec Comte Abbatucci en Corse et Henri Milan en Alpilles). **Caves troglodytiques spectaculaires** creusées dans la roche calcaire des Alpilles (température et hygrométrie naturellement régulées). **~58 ha** sur **sols calcaires** typiques des Baux. **Acquisition par Jean-André Charial** (Oustau de Baumanière) **en 2006**, puis cession ultérieure. Cuvée **\"La Chapelle\"** (rouge classique, garde 10-15 ans), **\"Le Cœur\"** (haut de gamme rouge parcellaire), **Rosé**, **Blanc** (Rolle dominant). Style **élégant, mûr, soigné**, garde correcte. Référence historique des Baux biodynamiques.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "baux",
+        "biodynamie",
+        "alpilles",
+        "baux-de-provence",
+        "biodynamie-demeter",
+        "caves-troglodytiques",
+        "pionnier-biodynamie-sud"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~292 à 734 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cabernet Sauvignon",
+        "Mourvèdre",
+        "Rolle"
+      ],
+      "cuvees_phares": [
+        "Les Baux-de-Provence La Chapelle Rouge",
+        "Les Baux-de-Provence Le Cœur Rouge",
+        "Les Baux-de-Provence Rosé",
+        "Coteaux d'Aix-en-Provence Blanc"
+      ]
+    },
+    {
+      "id": "prov-prod-begude",
+      "nom": "Domaine de la Bégude",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine au **Castellet (Var, Bandol)**, **famille Tari** (anciens propriétaires de **Château Giscours à Margaux**) depuis 1996. **~17 ha bio en Bandol**, **altitude 400 m** sur la colline du Camp du Castellet — c'est l'altitude qui fait la signature du domaine, **fraîcheur préservée et maturation lente** du Mourvèdre. Cuvée **\"La Brulade\"** signature (Mourvèdre dominant ~80%, vieilles vignes, élevage **18-24 mois en foudres**, **garde 20-30 ans**), **\"Bandol Rouge\"** classique, **Bandol Rosé** gastronomique, **Bandol Blanc**. Style **élégant et frais**, à mi-chemin entre la pureté de Tempier et la structure de Pibarnon — l'un des Bandol biodynamiques de la nouvelle vague à suivre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "altitude",
+        "tari",
+        "famille-tari",
+        "ex-giscours-margaux",
+        "biologique",
+        "altitude-400m"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~347 à 689 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault",
+        "Syrah"
+      ],
+      "cuvees_phares": [
+        "Bandol Rouge La Brulade (mourvèdre dominante, garde longue)",
+        "Bandol Rouge",
+        "Bandol Rosé",
+        "Bandol Blanc"
+      ]
+    },
+    {
+      "id": "prov-prod-tour-du-bon",
+      "nom": "Domaine de la Tour du Bon",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine au **Castellet (Var, Bandol)**, **famille Hocquard** depuis **1968**, **Agnès Henry** (petite-fille) aux commandes aujourd'hui. **Bio**, **~12 ha** sur **coteaux calcaires** de Bandol, exposition sud, proximité maritime. **Mourvèdre dominant** (~70% sur la cuvée parcellaire), Grenache + Cinsault + Syrah en complément. Cuvée **\"Saint-Ferréol\"** signature (parcellaire Mourvèdre, **élevage 18-24 mois en foudres**, **garde 15-25 ans**), **Bandol Rouge** classique, **Bandol Rosé** gastronomique, **Bandol Blanc Saint-Ferréol** (rare, Clairette + Bourboulenc). Style **traditionnel, garde longue, salinité marine** — Bandol authentique, l'un des domaines les plus sérieux et sous-évalués de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "hocquard",
+        "famille-hocquard",
+        "agnes-henry",
+        "biologique",
+        "tradition"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~284 à 712 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault",
+        "Syrah"
+      ],
+      "cuvees_phares": [
+        "Bandol Rouge Cuvée Saint-Ferréol (parcellaire mourvèdre)",
+        "Bandol Rouge",
+        "Bandol Rosé",
+        "Bandol Blanc Saint-Ferréol"
+      ]
+    },
+    {
+      "id": "prov-prod-bagnol",
+      "nom": "Domaine du Bagnol",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Cassis",
+      "appellations_principales": [
+        "Cassis"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Cassis**, **famille Genovesi** (Sébastien Genovesi aujourd'hui). **Bio certifié**, **~6 ha en AOC Cassis** sur les **flancs calcaires du Cap Canaille** — terroir spectaculaire face à la Méditerranée. **Marsanne + Clairette + Ugni Blanc** dominants pour les blancs (encépagement classique de Cassis, atypique en France où l'Ugni Blanc sert au Cognac). Cuvée **Cassis Blanc** classique, **\"Cuvée Tradition\"** (sélection vieilles vignes), **Cassis Rosé** (Grenache + Cinsault + Mourvèdre). Style **net, salin, frais** — l'antithèse des blancs de Provence ronds. L'une des références sérieuses de Cassis à côté de Clos Sainte-Magdeleine (ranking 5), bon rapport qualité-prix dans une appellation rare.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "cassis",
+        "blancs",
+        "famille-genovesi",
+        "biologique-certifie",
+        "salinite-marine"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~294 à 709 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Marsanne",
+        "Clairette",
+        "Ugni Blanc",
+        "Grenache",
+        "Cinsault"
+      ],
+      "cuvees_phares": [
+        "Cassis Blanc",
+        "Cassis Rosé",
+        "Cassis Blanc Cuvée Tradition"
+      ]
+    },
+    {
+      "id": "prov-prod-milan",
+      "nom": "Domaine Henri Milan",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "IGP Alpilles",
+      "appellations_principales": [
+        "IGP Alpilles"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Saint-Rémy-de-Provence (Alpilles)**, **Henri Milan** (pionnier des vins natures du Sud des années 1990), aujourd'hui avec ses fils. **Bio puis biodynamie**, **~14 ha**. Cuvée **\"Le Vallon\"** (rouge classique), **\"Le Grand Blanc\"** (blanc parcellaire), et surtout **\"Papillon\"** (rouge et blanc) — **cuvée sans soufre ajouté** devenue **référence du mouvement nature français** dans les années 2000. Encépagements variés : Syrah + Grenache + Cabernet Sauvignon en rouge, Roussanne + Chardonnay en blanc (atypique pour les Alpilles). Style **libre, parfois clivant, toujours singulier** — Milan assume les irrégularités de millésimes inhérentes au nature radical. Allocations pour Papillon, distribution sur cavistes spécialisés.",
+      "mes_notes": null,
+      "notes_pat": "Grands vins, mais certaines cuvées parfois inégales",
+      "tags": [
+        "producteur",
+        "igp",
+        "nature",
+        "pionnier",
+        "alpilles",
+        "henri-milan",
+        "vin-nature",
+        "sans-soufre",
+        "biodynamie",
+        "pionnier-nature-sud"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~296 à 739 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Cabernet Sauvignon",
+        "Roussanne",
+        "Chardonnay"
+      ],
+      "cuvees_phares": [
+        "IGP Alpilles Le Vallon (rouge)",
+        "IGP Alpilles Le Grand Blanc",
+        "IGP Alpilles Papillon Rouge (sans soufre)",
+        "IGP Alpilles Papillon Blanc (sans soufre)"
+      ]
+    },
+    {
+      "id": "prov-prod-richeaume",
+      "nom": "Domaine Richeaume",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Côtes de Provence Sainte-Victoire",
+      "appellations_principales": [
+        "Côtes de Provence Sainte-Victoire"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine à **Puyloubier (Côtes de Provence Sainte-Victoire)**, **Henning Hoesch** (vigneron allemand installé en 1972 — **pionnier absolu du bio en Provence depuis 1972**, l'un des tout premiers en France) puis son fils **Sylvain Hoesch**. **~30 ha bio** sur **piémont de la Montagne Sainte-Victoire** (le terroir cher à Cézanne), sols mêlés argile-calcaire et grès. Cuvée **\"Tradition\"** (rouge classique, Syrah + Cabernet Sauvignon + Grenache), **\"Columelle\"** (haut de gamme parcellaire, **garde 10-15 ans**), **\"Cuvée H\"** (sélection vieilles vignes), **Rosé**. Style **mûr, structuré, élevages soignés**, à contre-courant des rosés faciles de Provence. Référence historique du bio provençal.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "sainte-victoire",
+        "bio",
+        "hoesch",
+        "pionnier",
+        "henning-sylvain-hoesch",
+        "bio-depuis-1972",
+        "pionnier-bio-provence",
+        "garde"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~322 à 695 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Syrah",
+        "Cabernet Sauvignon",
+        "Grenache",
+        "Merlot"
+      ],
+      "cuvees_phares": [
+        "Côtes de Provence Sainte-Victoire Tradition Rouge",
+        "Côtes de Provence Sainte-Victoire Columelle (haut de gamme)",
+        "Côtes de Provence Sainte-Victoire Cuvée H",
+        "Côtes de Provence Sainte-Victoire Rosé"
+      ]
+    },
+    {
+      "id": "prov-prod-sulauze",
+      "nom": "Domaine Sulauze",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "IGP Méditerranée",
+      "appellations_principales": [
+        "IGP Méditerranée"
+      ],
+      "localisation": null,
+      "statut_production": null,
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [],
+      "notes_objectives": "Domaine à **Miramas (Bouches-du-Rhône)**, **Karina et Guillaume Lefèvre** (installation années 2000). **Biodynamie Demeter**, **~45 ha** sur Coteaux d'Aix-en-Provence et IGP Méditerranée. **Vinifications natures sans intrants**, **élevages longs en jarres de grès, foudres et amphores** — pratique rare en Provence. Cuvée **\"Pomponette\"** (rosé signature en Coteaux d'Aix, et rouge en IGP Méditerranée), **\"Skin Contact\"** (orange wine, blanc macéré sur peaux), **blanc** Coteaux d'Aix. Style **vivant, libre**, l'un des **pionniers du nature en Provence**. Distribution sur cavistes spécialisés et restaurants de nature.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "igp",
+        "biodynamie",
+        "nature",
+        "miramas",
+        "karina-guillaume-lefevre",
+        "biodynamie-demeter",
+        "vin-nature",
+        "jarres-en-gres"
+      ],
+      "source": "lpv",
+      "lpv_pages": null,
+      "a_verifier": "Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~298 à 621 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Cinsault",
+        "Mourvèdre",
+        "Rolle",
+        "Clairette"
+      ],
+      "cuvees_phares": [
+        "Coteaux d'Aix-en-Provence Pomponette (rosé)",
+        "IGP Méditerranée Pomponette (rouge)",
+        "IGP Méditerranée Skin Contact (orange)",
+        "Coteaux d'Aix-en-Provence Blanc"
+      ]
+    },
+    {
+      "id": "prov-prod-gros-nore",
+      "nom": "Domaine du Gros'Noré",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bandol",
+      "appellations_principales": [
+        "Bandol"
+      ],
+      "localisation": "La Cadière-d'Azur (83740), Var",
+      "statut_production": "bio certifié Ecocert (depuis ~2020), vendanges manuelles, levures indigènes, sans collage ni filtration",
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "30-50",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "Domaine au **Castellet (Bandol)**, **Alain Pascal** — **ancien vendeur de raisin pour Tempier et Pibarnon** pendant des décennies, **devenu vigneron en propre en 1997** sur ses propres vignes (geste tardif d'émancipation à 50+ ans). **~20 ha bio en Bandol**, **vieilles vignes Mourvèdre** héritage familial. **Une cuvée unique de Bandol Rouge** signature (pas de hiérarchie marketing — Mourvèdre dominant ~70-80%, élevage **18-24 mois en foudres anciens**, **garde 15-20 ans**). Également **Bandol Rosé** et **Blanc**. Style **traditionnel, austère jeune, magnifique avec l'âge** — Bandol à l'ancienne dans la lignée Tempier/Pibarnon. **Allocations**, distribution sur cavistes spécialisés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bandol",
+        "mourvedre",
+        "alain-pascal",
+        "ex-pibarnon",
+        "fonde-1997",
+        "la-cadiere-d-azur",
+        "17-hectares",
+        "argilo-calcaire",
+        "cuvee-antoinette",
+        "bio-certifie",
+        "garde-15-25-ans",
+        "biologique",
+        "vieilles-vignes",
+        "foudres-anciens",
+        "tradition"
+      ],
+      "source": "web|gros-nore.com|vintageandvine|maisondesvins-bandol",
+      "lpv_pages": null,
+      "a_verifier": "Fiche ajoutée mai 2026 via conversation Pat. Fondé en 1997 par Alain Pascal. Avant cette date, les raisins partaient au Château de Pibarnon — Pascal cite Henri de Saint-Victor (Pibarnon) et Jean-Daniel Ott comme mentors. 17 ha argilo-calcaires. Cuvée Antoinette (créée 2008) sur les vignes les plus hautes de l'appellation, face nord, 95% mourvèdre. Bandol traditionnel de garde 15-25 ans. Niveau cohérent avec La Bégude et Tour du Bon déjà à ranking 4. À vérifier : date exacte certification Ecocert, statut commercial du blanc. | Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~318 à 690 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Mourvèdre",
+        "Grenache",
+        "Cinsault"
+      ],
+      "cuvees_phares": [
+        "Bandol Rouge (cuvée signature, mourvèdre dominante)",
+        "Bandol Rosé",
+        "Bandol Blanc"
+      ]
+    },
+    {
+      "id": "prov-prod-terres-promises",
+      "nom": "Domaine Les Terres Promises",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Coteaux Varois / Bandol",
+      "appellations_principales": [
+        "Coteaux Varois en Provence",
+        "Bandol",
+        "IGP Sainte-Baume"
+      ],
+      "localisation": "La Roquebrussanne (83136), Var, 400 m d'altitude, contreforts de la Sainte-Baume",
+      "statut_production": "bio certifié, vin nature (sans intrants, SO2 minimal), levures indigènes, vendanges manuelles",
+      "niveau_reference": 4,
+      "connu_de_pat": true,
+      "ranking_pat": 4,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose",
+        "effervescent"
+      ],
+      "notes_objectives": "Domaine à **La Roquebrussanne (Var, Coteaux Varois en Provence)**, **Jean-Christophe Comor** (ancien restaurateur reconverti vigneron). **Biodynamie**, ~12 ha. **Élevages en amphores et foudres** (rare en Coteaux Varois). Multiples cuvées parcellaires aux noms évocateurs : **\"Du Côté de Chez Geant\"** (rouge signature, Grenache + Syrah + Mourvèdre), **\"Le Cri du Caillou\"** (parcellaire sur galets), **\"Femmes de Lune\"** (cuvée biodynamique vendangée selon le calendrier lunaire). Également **IGP Méditerranée** et cuvée Bandol. Style **libre, créatif, vivant** — l'une des belles découvertes du **Var contemporain**, à mi-chemin entre rigueur biodynamique et nature assumé. Distribution sur cavistes spécialisés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "coteaux-varois",
+        "bandol",
+        "igp-sainte-baume",
+        "nature",
+        "bio-certifie",
+        "jean-christophe-comor",
+        "fonde-2004",
+        "la-roquebrussanne",
+        "400m-altitude",
+        "argilo-calcaire",
+        "etiquettes-ferrandez",
+        "cuvees-litteraires",
+        "csomor-cepage-hongrois",
+        "biodynamie",
+        "amphores",
+        "var-contemporain"
+      ],
+      "source": "web|lesterrespromises.fr|routedesvinsdeprovence|lespeauxdevins",
+      "lpv_pages": null,
+      "a_verifier": "Fiche ajoutée mai 2026 via conversation Pat. Fondé en 2004 par Jean-Christophe Comor, ex-conseiller politique (Séguin, Pasqua) et prof Sciences Po reconverti. 13-15 ha à 400 m d'altitude couvrant trois appellations (IGP Sainte-Baume / Coteaux Varois / Bandol). Étiquettes signées Jacques Ferrandez (illustrateur de Camus et Giono). Cuvées aux noms littéraires (Antidote, Amourvèdre, Apostrophe, Abracadabrantesque). Cépage hongrois Csomor greffé en hommage au grand-père. Famille 'Provence nature sérieuse', cohérent avec Milan et Sulauze (ranking 4). À vérifier : surface exacte 2024-2026, statut commercial du Csomor. | Fiche enrichie mai 2026 (format succinct) — ranking_pat=4, notes objectives + cuvées phares + cépages ajoutés. | Fiche enrichie mai 2026 (passe 2 — passage de ~348 à 714 chars pour standardiser le niveau de détail des ranking 4).",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "Rolle",
+        "Ugni Blanc"
+      ],
+      "cuvees_phares": [
+        "Coteaux Varois en Provence Du Côté de Chez Geant",
+        "Coteaux Varois en Provence Le Cri du Caillou",
+        "Coteaux Varois en Provence Femmes de Lune",
+        "IGP Méditerranée"
+      ]
+    },
+    {
+      "id": "prov-prod-saint-jean-bellet",
+      "nom": "Domaine Saint-Jean",
+      "pays": "France",
+      "region": "Provence",
+      "sous_region": "Bellet",
+      "appellations_principales": [
+        "Bellet"
+      ],
+      "localisation": "Nice (06200), coteaux ouest de Nice, à 20 min de la Baie des Anges",
+      "statut_production": "bio dès l'origine, vendanges manuelles, vignoble en restanques",
+      "niveau_reference": 3,
+      "connu_de_pat": true,
+      "ranking_pat": 3,
+      "gamme_prix": "15-30",
+      "couleurs_principales": [
+        "rouge",
+        "blanc",
+        "rose"
+      ],
+      "notes_objectives": "**Micro-domaine confidentiel de Bellet** (Nice, coteaux ouest), **2 hectares seulement** créé en **2006 par Nathalie et Jean-Patrick Pacioselli**. **Bio dès l'origine**, vendanges manuelles, vignoble en restanques. Cépages locaux de Bellet : **Folle Noire** (rouge), **Braquet** (rosé), **Rolle** (blanc). Production très confidentielle, domaine en construction.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "producteur",
+        "bellet",
+        "bio",
+        "pacioselli",
+        "fonde-2006",
+        "cepages-locaux",
+        "braquet",
+        "folle-noire",
+        "rolle",
+        "micro-domaine",
+        "2-hectares",
+        "nice",
+        "famille-pacioselli",
+        "bio-des-origine"
+      ],
+      "source": "web|legoutdenice.fr|niceshopping",
+      "lpv_pages": null,
+      "a_verifier": "Fiche ajoutée mai 2026 via conversation Pat. Micro-domaine confidentiel de 2 hectares à Bellet, créé en 2006 par Nathalie et Jean-Patrick Pacioselli. Vignoble en restanques sur les coteaux ouest de Nice. Bio dès l'installation. Médaille d'argent (blanc 2015) et bronze (rouge 2015) au Concours Général Agricole Paris 2017. Bellet = AOC minuscule (8 producteurs principaux dans la seule commune de Nice). Cépages locaux rares : Braquet (rosé), Folle Noire (rouge), Rolle (blanc). Ranking 3 — micro-domaine encore en construction, Clos Saint-Vincent reste la référence Bellet à ranking 4. | Fiche enrichie mai 2026 (format succinct) — ranking_pat=3, notes objectives + cuvées phares + cépages ajoutés.",
+      "cepages_rois": [
+        "Folle Noire",
+        "Braquet",
+        "Rolle"
+      ],
+      "cuvees_phares": [
+        "Bellet Blanc (Rolle)",
+        "Bellet Rouge (Folle Noire)",
+        "Bellet Rosé (Braquet)"
+      ]
+    }
+  ]
+}

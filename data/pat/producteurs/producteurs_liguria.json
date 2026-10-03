@@ -1,0 +1,1297 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "liguria",
+  "region_label": "Liguria (Italie)",
+  "source_file": "producteurs_liguria.json",
+  "built_at": "2026-07-12",
+  "count": 29,
+  "items": [
+    {
+      "id": "it-liguria-prod-maccario-dringenberg",
+      "nom": "Maccario Dringenberg",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "San Biagio della Cima",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Biagio della Cima, dans l'extrême ouest de la Ligurie, aux confins de la France, Maccario Dringenberg est le domaine de référence du Rossese di Dolceacqua et l'un des plus admirés d'Italie. Giovanna Maccario y a hissé ce cépage autochtone au rang de grand vin, dans une démarche parcellaire d'une rigueur quasi bourguignonne.\n\nSur des terrasses vertigineuses soutenues par des murets de pierre sèche, dans les vallées alpines de la Val Nervia, elle vinifie séparément ses meilleurs lieux-dits : le Posaú, le Luvaira, le Curli, autant de crus qui expriment chacun une facette du terroir. Les vins, régulièrement couronnés par les Tre Bicchieri du Gambero Rosso, séduisent par leur finesse : robe rubis claire, arômes de rose, de violette, de framboise, d'herbes méditerranéennes et d'épices, tanins soyeux, acidité vive et cette saveur saline caractéristique des vignes proches de la mer. Loin des rouges puissants et extraits, ce sont des vins de dentelle, d'une élégance et d'une digestibilité rares, qui vieillissent avec grâce. Le Rossese, premier vin ligure classé en DOC (1972) et jadis adoré de Napoléon, trouve ici son expression la plus aboutie. Giovanna Maccario est devenue une figure culte, recherchée par les sommeliers du monde entier, et l'ambassadrice d'une Ligurie viticole longtemps confidentielle.\n\nLE domaine du Rossese : Giovanna Maccario signe des Rossese di Dolceacqua parcellaires d'une finesse bourguignonne (Posaú, Luvaira, Curli), Tre Bicchieri. C'est la référence culte de la Ligurie.\n\nL'approche parcellaire de Giovanna Maccario est une petite révolution dans une région où la viticulture est restée longtemps paysanne et anonyme. En vinifiant séparément chaque lieu-dit — le Posaú, le plus célèbre, aux sols marneux ; le Luvaira, plus haut et plus frais ; le Curli, plus solaire —, elle a révélé que le Rossese, loin d'être un simple rouge de soif de la Riviera, possédait une capacité rare à traduire son terroir. Le travail y est d'une pénibilité extrême : les vignes, plantées sur des pentes qui peuvent dépasser 50 % d'inclinaison, sont entretenues à la main, sur des terrasses bâties au fil des siècles et qu'il faut sans cesse réparer. Servis sur la cuisine ligure — les coniglio alla ligure (lapin aux olives), les plats de champignons, les viandes légères, les poissons riches —, les Rossese de Maccario Dringenberg séduisent par leur parfum de rose et de garrigue et leur finale amère, typique du cépage ; ils gagnent en complexité après quelques années de garde, développant des notes de fleurs séchées et d'épices. Rares (la production totale est infime) et recherchés dans le monde entier, ils sont devenus le symbole d'une Ligurie qui, malgré ses 500 hectares de DOC seulement, peut produire des vins de rang mondial. Giovanna Maccario est aujourd'hui l'une des vigneronnes les plus admirées d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Posaú",
+        "Luvaira",
+        "Curli",
+        "Rossese di Dolceacqua"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "cru",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|carpe-travel"
+    },
+    {
+      "id": "it-liguria-prod-terre-bianche",
+      "nom": "Terre Bianche",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "Dolceacqua",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese",
+        "Pigato",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC",
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dolceacqua, dans l'arrière-pays de Vintimille, Terre Bianche est le domaine historique du Rossese, fondé en 1870 lorsque Tommaso Rondelli y planta le premier vignoble de ce cépage. Cinq générations plus tard, la famille perpétue cette tradition et compte parmi les références absolues de l'appellation.\n\nSur des terrasses spectaculaires dominant la mer, aux sols argilo-calcaires blancs (d'où le nom du domaine), la famille cultive le Rossese avec exigence. Sa cuvée phare, le Bricco Arcagna, est un Rossese di Dolceacqua de référence, régulièrement couronné par les Tre Bicchieri : un rouge d'une grande élégance, aux arômes de rose, de mûre, d'herbes méditerranéennes et d'épices, aux tanins fins et à la belle fraîcheur, capable de bien vieillir. Le domaine signe aussi le Rossese di Dolceacqua classique et de beaux blancs de Pigato et de Vermentino, qui expriment la salinité et le caractère aromatique de la Riviera. Le style, précis et fidèle au terroir, met en valeur les cépages ligures sans artifice. Avec Maccario Dringenberg, Terre Bianche forme le duo de tête de Dolceacqua, cette petite appellation devenue le fleuron rouge de la Ligurie.\n\nDomaine historique de Dolceacqua (1870, famille Rondelli) : le Bricco Arcagna est un Rossese de référence (Tre Bicchieri), aux côtés de beaux Pigato. C'est l'un des deux piliers de l'appellation.\n\nL'ancienneté de Terre Bianche lui confère une place à part : c'est ici que le Rossese de Dolceacqua a véritablement pris racine en tant que vin de qualité, dès 1870, bien avant que l'appellation ne devienne, en 1972, la première DOC de toute la Ligurie. Le nom du domaine évoque les sols blancs, argilo-calcaires, qui donnent au Rossese sa finesse et sa salinité. La légende veut que Napoléon, ayant goûté ce vin lors de sa campagne d'Italie, en ait fait expédier des barriques à Paris ; le pape Paul III en aurait été également friand. Au-delà de l'anecdote, ces vins ont toujours joui d'une réputation dans le cercle restreint de ceux qui les connaissaient. Servis sur le lapin aux olives, les champignons, les viandes blanches ou même des poissons charnus, les Rossese de Terre Bianche séduisent par leur élégance florale et leur fraîcheur ; le Bricco Arcagna se patine sur plusieurs années, gagnant en complexité. Les Pigato et Vermentino du domaine, eux, accompagnent idéalement les fruits de mer, le pesto et la cuisine de la Riviera. Cinq générations de Rondelli ont ainsi bâti l'une des plus belles maisons de Ligurie, gardienne d'un patrimoine viticole qui a bien failli disparaître.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bricco Arcagna (Rossese)",
+        "Rossese di Dolceacqua",
+        "Pigato",
+        "Vermentino"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "pigato",
+        "rouge",
+        "blanc",
+        "historique",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|carpe-travel"
+    },
+    {
+      "id": "it-liguria-prod-cantine-lunae-bosoni",
+      "nom": "Cantine Lunae Bosoni",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "commune": "Ortonovo",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Sangiovese",
+        "Albarola",
+        "Ciliegiolo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Luni DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ortonovo, dans les Colli di Luni, à la frontière de la Toscane, les Cantine Lunae Bosoni sont la référence absolue du Vermentino ligure et l'un des plus grands producteurs de blancs d'Italie. Paolo Bosoni y a bâti, sur les terres de l'antique cité romaine de Luni, un domaine devenu emblématique.\n\nSa cuvée phare, le Vermentino Colli di Luni Etichetta Nera, est unanimement saluée : longuement élevée sur lies, elle donne un blanc d'une richesse, d'une texture et d'une complexité remarquables — bien loin du Vermentino simple et fruité —, aux arômes d'agrumes, de fruits blancs, d'herbes méditerranéennes et de fleurs, doté d'une salinité marquée et d'une réelle aptitude à la garde. Régulièrement couronnée par les Tre Bicchieri et citée parmi les plus beaux blancs italiens, elle a démontré le potentiel de garde et de grandeur du Vermentino. Le domaine signe aussi le Cavagino, le Numero Chiuso, et de beaux rouges (le Niccolò V, à base de Sangiovese et de Ciliegiolo). Sur les sols alluviaux et argilo-calcaires des Colli di Luni, rafraîchis par les brises de la mer Tyrrhénienne, les Bosoni conjuguent exigence et régularité, faisant de leur maison l'ambassadrice du grand Vermentino ligure.\n\nLa référence du Vermentino ligure (Paolo Bosoni, Colli di Luni) : l'Etichetta Nera est un Vermentino magnifique et primé (Tre Bicchieri). C'est l'un des grands blancs d'Italie.\n\nLe succès des Cantine Lunae tient à une intuition : que le Vermentino, souvent réduit à un blanc de plage frais et anonyme, pouvait donner de grands vins de gastronomie et de garde. Sur les Colli di Luni, ce terroir frontalier qui doit son nom à l'antique cité romaine de Luna, entre mer et Apuanes, le cépage bénéficie de conditions idéales : sols variés, brises marines salines, amplitudes thermiques marquées. Paolo Bosoni, en multipliant les sélections parcellaires, les élevages sur lies prolongés et les vinifications précises, a bâti une gamme qui décline toutes les facettes du cépage, du Vermentino frais et immédiat à l'Etichetta Nera, dense et complexe. Servis sur les trofie al pesto, les fruits de mer, les poissons grillés, les fritures ou une cuisine méditerranéenne raffinée, ces blancs séduisent par leur salinité et leur profondeur ; les meilleurs se patinent sur plusieurs années, chose rare pour un Vermentino. La maison, l'une des plus importantes de Ligurie, conjugue volume et excellence, et a joué un rôle déterminant dans la reconnaissance internationale des vins de cette région minuscule. Les Cantine Lunae sont aujourd'hui l'un des plus beaux ambassadeurs du blanc italien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vermentino Etichetta Nera",
+        "Cavagino",
+        "Niccolò V (rouge)",
+        "Numero Chiuso"
+      ],
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "blanc",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|laurelevans"
+    },
+    {
+      "id": "it-liguria-prod-punta-crena",
+      "nom": "Punta Crena",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (SV)",
+      "commune": "Varigotti",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Lumassina",
+        "Pigato",
+        "Granaccia",
+        "Mataòssu"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC",
+        "Colline Savonesi IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Varigotti, sur la côte du Savonese, Punta Crena est un domaine culte, propriété de la famille Ruffino depuis le XVe siècle. Sur des terrasses spectaculaires plongeant vers la mer, il est le gardien de cépages autochtones rarissimes.\n\nLe domaine cultive le Mataòssu (une variété quasi éteinte, dont le Vigneto Isasco est la référence), la Lumassina (blanc vif et minéral), la Granaccia (parente du Grenache) ainsi que du Vermentino et du Pigato. Ces cépages, que peu d'autres cultivent encore, donnent des vins d'une originalité et d'une salinité remarquables, marqués par la proximité de la mer. Le style, artisanal et fidèle au patrimoine, privilégie l'authenticité et l'expression du terroir maritime. Le travail de préservation ampélographique, la beauté du site et la qualité des vins ont fait de Punta Crena un domaine culte, recherché par les amateurs. C'est une belle adresse pour découvrir les cépages les plus rares de Ligurie, chez une famille installée là depuis six siècles, sur les fruits de mer et la cuisine de la Riviera.\n\nDomaine culte de Varigotti (famille Ruffino depuis le XVe s.) : gardien de cépages rarissimes (Mataòssu, Lumassina, Granaccia) sur des terrasses face à la mer. C'est un chouchou des amateurs.\n\n Six siècles au même endroit : la continuité des Ruffino à Varigotti force le respect, et fait du domaine un conservatoire vivant. Le Mataòssu, cépage quasi éteint que Punta Crena a sauvé, en est le symbole. Servis sur les fruits de mer, les anchois, les poissons grillés et la cuisine de la Riviera, ses blancs séduisent par leur salinité maritime ; la Granaccia, sur les viandes, surprend. C'est l'une des adresses les plus attachantes et les plus rares d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigneto Isasco (Mataòssu)",
+        "Lumassina",
+        "Granaccia",
+        "Vermentino"
+      ],
+      "tags": [
+        "liguria",
+        "varigotti",
+        "mataossu",
+        "lumassina",
+        "granaccia",
+        "autochtone",
+        "culte",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-walter-de-batte",
+      "nom": "Walter De Batté",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "commune": "Riomaggiore",
+      "pays": "Italie",
+      "cepages": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Cinque Terre DOC",
+        "Liguria di Levante IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Riomaggiore, dans les Cinque Terre, Walter De Batté est une légende de l'œnologie ligure. Sur les terrasses vertigineuses de ce parc national classé à l'UNESCO, il pratique une viticulture héroïque, entièrement manuelle, sur des murets de pierre sèche bâtis au fil des siècles.\n\nPionnier du renouveau qualitatif des Cinque Terre, il a redonné ses lettres de noblesse à un vignoble menacé d'abandon. Son Harmoge, un blanc macéré issu des cépages locaux (Bosco, Albarola, Vermentino), est considéré comme l'un des chefs-d'œuvre du vin ligure : un vin texturé, complexe et enveloppant, aux arômes de résine, de fruits confits et d'herbes méditerranéennes, d'une salinité saisissante. Il signe aussi un Sciacchetrà, le légendaire passito des Cinque Terre. Le style, artisanal, bio et peu interventionniste, privilégie l'expression du terroir maritime et minéral. Le rôle pionnier de De Batté et la qualité de ses vins en font une figure admirée. C'est une belle adresse pour découvrir les Cinque Terre au sommet, sur les soupes de poisson et la cuisine de la mer.\n\nLégende des Cinque Terre : ses blancs macérés (Harmoge) sont des chefs-d'œuvre de l'œnologie ligure, sur les terrasses vertigineuses de Riomaggiore, en viticulture héroïque.\n\n Le sauvetage des Cinque Terre est un enjeu qui dépasse le vin : ces terrasses, bâties sur des milliers de kilomètres de murets de pierre sèche, façonnent un paysage classé à l'UNESCO que l'abandon menaçait de ruine. En y produisant des vins d'exception, De Batté a prouvé que la viticulture héroïque avait un avenir. Servi sur les soupes de poisson, les anchois, les fruits de mer ou une cuisine riche, l'Harmoge séduit par sa texture et sa salinité vertigineuse. C'est un monument du vin italien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Harmoge (macéré)",
+        "Sciacchetrà",
+        "Cinque Terre"
+      ],
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "riomaggiore",
+        "bosco",
+        "macere",
+        "nature",
+        "legende"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-possa",
+      "nom": "Possa",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "commune": "Riomaggiore",
+      "pays": "Italie",
+      "cepages": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Cinque Terre DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Riomaggiore, dans les Cinque Terre, Possa est le domaine de Samuele Heydi Bonanini, l'un des artisans les plus passionnés du renouveau de ce vignoble héroïque. Sur des terrasses accrochées à la falaise, il cultive les cépages locaux à la main, dans des conditions extrêmes.\n\nLe domaine signe un Cinque Terre Bianco (à base de Bosco, Albarola et Vermentino) d'une grande minéralité et un Sciacchetrà d'exception, le légendaire passito de la région, issu de raisins séchés sur claies pendant des semaines puis élevé en fût. Sa version la plus spectaculaire, le Sciacchetrà Underwater, est vieillie pendant un an à 52 mètres de profondeur dans la baie de Portofino : la pression, l'obscurité et la température constante des fonds marins confèrent au vin une évolution unique. Le style, héroïque et artisanal, exprime le terroir maritime des Cinque Terre avec sincérité. Possa est une belle adresse pour découvrir le Sciacchetrà, l'un des vins doux les plus rares d'Italie, sur les fromages affinés et les desserts traditionnels.\n\nDomaine héroïque de Riomaggiore (Samuele Heydi Bonanini) : Cinque Terre et Sciacchetrà d'exception, dont une version vieillie sous la mer à 52 m de profondeur (Underwater).\n\n L'idée du vieillissement sous-marin, que Possa partage avec Bisson, n'est pas un simple coup marketing : l'absence de lumière, la pression et la température constante des fonds marins créent des conditions de cave idéales, et les bouteilles remontent couvertes de coquillages, devenues des objets à part. Servi sur les fromages affinés, la pâtisserie ligure ou en méditation, le Sciacchetrà séduit par ses arômes de miel, d'abricot sec et de noisette. C'est l'un des vins doux les plus rares au monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sciacchetrà Underwater",
+        "Sciacchetrà",
+        "Cinque Terre Bianco"
+      ],
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "riomaggiore",
+        "sciacchetra",
+        "doux",
+        "heroique",
+        "sous-marin"
+      ],
+      "a_verifier": null,
+      "source": "laurelevans"
+    },
+    {
+      "id": "it-liguria-prod-bisson",
+      "nom": "Bisson",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Golfo del Tigullio (GE)",
+      "commune": "Chiavari",
+      "pays": "Italie",
+      "cepages": [
+        "Bianchetta Genovese",
+        "Vermentino",
+        "Ciliegiolo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Golfo del Tigullio DOC",
+        "Portofino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Chiavari, sur le golfe du Tigullio, Bisson est un domaine réputé, mené par Pierluigi Lugano, célèbre pour l'un des vins les plus originaux d'Italie. Sur la Riviera di Levante, il cultive les cépages autochtones de la région génoise.\n\nSa création la plus fameuse est l'Abissi, un metodo classico dont la seconde fermentation et le vieillissement s'effectuent au fond de la mer, dans les eaux du golfe : les bouteilles, immergées à une soixantaine de mètres de profondeur, bénéficient d'une pression, d'une obscurité et d'une température constantes qui affinent la bulle et complexifient le vin — elles remontent couvertes de concrétions marines, devenues des objets de collection. Le domaine signe aussi de beaux vins de cépages locaux : la Bianchetta Genovese (le blanc historique des dockers et marins du port de Gênes), le Vermentino (U Pastine, Vigna Erta) et le Ciliegiolo. Le style, curieux et authentique, met en valeur le patrimoine ligure. Bisson est une belle adresse pour découvrir les cépages autochtones du Levante et le fameux Abissi, sur les fruits de mer.\n\nDomaine réputé de Chiavari (Pierluigi Lugano) : célèbre pour l'Abissi, un metodo classico vieilli au fond de la mer, et pour ses cépages autochtones (Bianchetta, Vermentino).\n\n L'Abissi de Pierluigi Lugano est devenu une curiosité célèbre : ces bouteilles remontées des profondeurs, incrustées de concrétions marines, symbolisent l'audace créative de la Ligurie viticole. Mais Bisson est aussi un gardien : la Bianchetta Genovese, le blanc historique des dockers du port de Gênes, aurait pu disparaître sans lui. Servis sur les fruits de mer, les fritures, les anchois et le pesto, ses vins séduisent par leur fraîcheur saline.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Abissi (metodo classico sous-marin)",
+        "Bianchetta Genovese",
+        "U Pastine",
+        "Vigna Erta"
+      ],
+      "tags": [
+        "liguria",
+        "tigullio",
+        "chiavari",
+        "bianchetta",
+        "effervescent",
+        "sous-marin",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-ottaviano-lambruschi",
+      "nom": "Ottaviano Lambruschi",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "commune": "Castelnuovo Magra",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Luni DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelnuovo Magra, dans les Colli di Luni, Ottaviano Lambruschi est l'une des références du Vermentino ligure. Sur ce terroir frontalier de la Toscane, la famille cultive le cépage roi des blancs de la région avec une exigence reconnue.\n\nSa cuvée phare, le Costa Marina, issue de vieilles vignes, est un Vermentino salué par la critique (notamment par La Cucina Italiana) : un blanc aux arômes de fruits et d'herbes aromatiques — basilic, sauge —, à la bouche légère, souple, iodée et savoureuse, l'accord parfait avec les trofie al pesto, plat emblématique de la Ligurie. Le domaine signe aussi Il Maggiore et le Sarticola. Le style, précis et fidèle au terroir, met en valeur la salinité et la fraîcheur du Vermentino des Colli di Luni, sous l'influence des brises marines. La qualité constante et la réputation du domaine en font une valeur sûre. Ottaviano Lambruschi est une belle adresse pour découvrir le Vermentino ligure dans une version élégante et iodée, sur le pesto et les fruits de mer.\n\nRéférence du Vermentino des Colli di Luni : le Costa Marina (vieilles vignes) est un blanc iodé et savoureux, cité par La Cucina Italiana, parfait sur les trofie al pesto.\n\n L'accord du Costa Marina avec les trofie al pesto est un classique absolu de la gastronomie ligure : les notes de basilic et de sauge du vin dialoguent avec celles du pesto, tandis que sa salinité et sa fraîcheur équilibrent la richesse des pignons et du fromage. Servi aussi sur les fruits de mer, les poissons grillés ou les fritures, ce Vermentino séduit par sa finesse iodée, et gagne à être attendu deux ou trois ans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Costa Marina (Vermentino)",
+        "Il Maggiore",
+        "Sarticola"
+      ],
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "blanc",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-testalonga-antonio-perrino",
+      "nom": "Testalonga (Antonio Perrino)",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "Dolceacqua",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Dolceacqua, dans l'extrême ouest ligure, Testalonga est le domaine culte d'Antonio Perrino, figure artisanale et nature du Rossese. Sur de minuscules parcelles en terrasses, ce vigneron discret produit quelques milliers de bouteilles seulement, très recherchées.\n\nSon Rossese di Dolceacqua est un vin juteux et sincère, aux arômes de cerise, de poivre noir, de fleurs et d'herbes méditerranéennes, à la bouche fraîche et pleine de caractère — cité par La Cucina Italiana parmi les vins ligures à découvrir absolument. Le style, artisanal et peu interventionniste, privilégie l'expression du terroir et l'authenticité, à rebours des vins technologiques. La rareté des bouteilles, la sincérité de la démarche et la personnalité des vins ont fait de Testalonga une adresse culte parmi les amateurs de vin nature. C'est une belle adresse pour découvrir le Rossese dans sa version la plus pure et la plus artisanale, sur les tagliatelle au ragù, le lapin ligure et les viandes légères.\n\nVigneron culte de Dolceacqua (Antonio Perrino) : Rossese juteux et sincères, aux arômes de cerise et de poivre noir. C'est une référence artisanale et nature de l'appellation.\n\n La rareté des vins d'Antonio Perrino — quelques milliers de bouteilles à peine, sans site internet ni communication — participe à leur aura : ce sont des vins que l'on se transmet entre amateurs. Servis sur les tagliatelle au ragù, le lapin ligure, les champignons ou les viandes légères, ses Rossese séduisent par leur fruit croquant et leur fraîcheur épicée. Le domaine incarne une Ligurie authentique, paysanne et sans compromis.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rossese di Dolceacqua"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "nature",
+        "bio",
+        "culte",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-fontanacota",
+      "nom": "Fontanacota",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "Perinaldo",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese",
+        "Vermentino",
+        "Pigato"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC",
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Perinaldo, sur les hauteurs de la Val Nervia, Fontanacota est un domaine bio réputé de l'appellation Rossese di Dolceacqua. Sur des terrasses d'altitude dominant la mer, la famille cultive le cépage phare de la Ligurie avec exigence.\n\nLe domaine, salué par le Gambero Rosso (qui l'a fait revenir dans son élite après plusieurs années), signe un Rossese di Dolceacqua de haut niveau : un rouge élégant et parfumé, aux arômes de rose, de fruits rouges et d'herbes méditerranéennes, aux tanins fins et à la belle fraîcheur, marqué par l'altitude. Il produit aussi de beaux blancs (Vermentino, Pigato) qui expriment la salinité de la Riviera. Le style, bio et fidèle au terroir, privilégie l'expression du lieu et la finesse. La qualité constante et la reconnaissance critique en font une référence de l'appellation. Fontanacota est une belle adresse pour découvrir le Rossese de Dolceacqua dans une version bio et racée, chez un domaine des hauteurs de la Val Nervia.\n\nDomaine bio réputé de Perinaldo : Rossese di Dolceacqua de haut niveau (retour au sommet du Gambero Rosso), aux côtés de blancs de terroir, sur les hauteurs de la Val Nervia.\n\n L'altitude de Perinaldo, sur les hauteurs de la Val Nervia, confère aux Rossese de Fontanacota une fraîcheur et une tension supplémentaires, précieuses à l'heure du réchauffement climatique. Servis sur le lapin aux olives, les champignons, les viandes blanches ou des poissons charnus, ses vins séduisent par leur parfum floral et leur digestibilité ; le Rossese se patine sur plusieurs années. Le domaine incarne le versant bio et exigeant de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rossese di Dolceacqua",
+        "Vermentino",
+        "Pigato"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-liguria-prod-ka-mancine",
+      "nom": "Ka' Manciné",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "Soldano",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Soldano, dans la Val Verbone, Ka' Manciné est un domaine familial très prisé, l'une des belles adresses du Rossese di Dolceacqua. Sur des terrasses escarpées, la famille cultive le cépage avec une approche parcellaire.\n\nLe domaine vinifie séparément ses meilleurs lieux-dits — le Beragna et le Galeae —, révélant les nuances du terroir : des Rossese racés et parfumés, aux arômes de rose, de fruits rouges, d'épices et de garrigue, aux tanins souples et à la belle acidité, avec cette finale légèrement amère typique du cépage. Le style, artisanal et précis, met en valeur la finesse du Rossese. La qualité constante et la belle réputation à l'export en font une adresse recherchée. Ka' Manciné est une belle adresse pour découvrir le Rossese di Dolceacqua dans une approche de crus, chez un domaine familial de Soldano, sur le lapin aux olives, les champignons et la cuisine ligure.\n\nDomaine familial de Soldano : Rossese di Dolceacqua parcellaires et racés (Beragna, Galeae). C'est une belle adresse artisanale de l'appellation, très prisée à l'export.\n\n L'approche parcellaire de Ka' Manciné, comme celle de Maccario Dringenberg, confirme que le Rossese est un cépage de terroir, capable de traduire les nuances de chaque lieu-dit. Servis sur le lapin aux olives, les champignons, les viandes légères ou une cuisine méditerranéenne, ses Rossese séduisent par leur parfum de rose et de garrigue et leur finale légèrement amère, signature du cépage. Ils gagnent en complexité après quelques années.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Beragna",
+        "Galeae",
+        "Rossese di Dolceacqua"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "cru",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-biovio",
+      "nom": "BioVio",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (SV)",
+      "commune": "Albenga",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Granaccia"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Albenga, sur la Riviera di Ponente, BioVio est le domaine bio de référence de la famille Vio, figure du renouveau qualitatif et durable de la Ligurie occidentale. Sur des terrasses cultivées en agriculture biologique, la famille valorise les cépages locaux.\n\nLe domaine signe de beaux Pigato de terroir — le MaRene, le Bon in da Bon —, des blancs aromatiques et minéraux aux notes d'herbes méditerranéennes, d'agrumes et de fruits blancs, avec cette salinité caractéristique de la Riviera. Il produit aussi du Vermentino et la rare Granaccia en rouge (Aimone). Le style, bio et précis, privilégie l'expression du terroir et l'authenticité, dans une démarche durable exemplaire. L'engagement biologique, la qualité constante et le dynamisme de la famille en font une référence de la Riviera di Ponente. BioVio est une belle adresse pour découvrir le Pigato dans une version bio et de terroir, sur les fruits de mer, le pesto et les tartes salées ligures.\n\nDomaine bio de référence d'Albenga (famille Vio) : Pigato de terroir (MaRene, Bon in da Bon). C'est une figure du renouveau qualitatif et durable de la Riviera di Ponente.\n\n L'engagement bio précoce de la famille Vio, dans une région où la viticulture reste très paysanne, en fait une figure du renouveau ligure. Servis sur les fruits de mer, les poissons, le pesto, les tartes salées aux légumes (spécialité de la Riviera) ou les fritures, ses Pigato séduisent par leur intensité aromatique et leur salinité. Le domaine illustre le potentiel du Pigato, cépage encore méconnu hors de Ligurie mais capable de vraie profondeur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "MaRene (Pigato)",
+        "Bon in da Bon",
+        "Aimone (Granaccia)"
+      ],
+      "tags": [
+        "liguria",
+        "albenga",
+        "pigato",
+        "blanc",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-durin",
+      "nom": "Durin",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (SV)",
+      "commune": "Ortovero",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Ormeasco",
+        "Granaccia"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ortovero, dans la Valle Arroscia, Durin est un domaine réputé de la famille Basso, l'une des valeurs sûres de la Riviera di Ponente. Sur des terrasses de la vallée, berceau historique du Pigato, la famille cultive les cépages ligures.\n\nLe domaine signe de beaux Pigato (dont le Braje, une sélection plus ambitieuse) et Vermentino, des blancs aromatiques, minéraux et salins, aux notes d'herbes méditerranéennes et d'agrumes. Il produit aussi des rouges autochtones : l'Ormeasco (le nom local du Dolcetto, importé du Piémont au XIVe siècle) et la Granaccia. Le style, soigné et fidèle au terroir, met en valeur la palette ligure avec régularité. La qualité constante et la belle gamme en font une valeur sûre de la région. Durin est une belle adresse pour découvrir le Pigato et le Vermentino du Ponente, ainsi que les rouges locaux, sur les fruits de mer, le pesto et la cuisine de la Riviera.\n\nDomaine réputé d'Ortovero (famille Basso) : Pigato et Vermentino soignés, ainsi que des rouges autochtones. C'est l'une des valeurs sûres de la Riviera di Ponente.\n\n La présence de Durin dans la Valle Arroscia, berceau spirituel du Pigato, l'ancre au cœur de l'histoire du cépage. Servis sur les fruits de mer, le pesto, les poissons et la cuisine de la Riviera pour les blancs, sur les viandes pour l'Ormeasco et la Granaccia, ses vins séduisent par leur franchise. La diversité de la gamme, des blancs salins aux rouges autochtones, en fait une belle porte d'entrée dans les vins du Ponente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pigato",
+        "Pigato Braje",
+        "Vermentino",
+        "Ormeasco"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "vermentino",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-laura-aschero",
+      "nom": "Laura Aschero",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Pontedassio",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Rossese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pontedassio, près d'Imperia, Laura Aschero est un domaine historique et emblématique du Pigato, l'une des références classiques de la Riviera di Ponente. Sur les collines de l'arrière-pays, il perpétue une tradition reconnue.\n\nLe domaine signe des Pigato aromatiques et minéraux, aux notes caractéristiques d'herbes méditerranéennes, de fleurs, d'amande et d'agrumes, avec cette salinité qui rappelle la proximité de la mer, ainsi que du Vermentino et du Rossese. Le style, classique et fidèle au terroir, met en valeur le Pigato dans des blancs francs et structurés. La longévité du domaine, sa belle diffusion et sa régularité en font une référence établie de la région, l'une des rares maisons ligures que l'on trouve hors de la région. Laura Aschero est une belle adresse pour découvrir le Pigato dans un style classique et abouti, sur les fruits de mer, le pesto et la cuisine ligure.\n\nDomaine historique et emblématique du Pigato (Pontedassio) : blancs aromatiques et minéraux. C'est une référence classique de la Riviera di Ponente, très bien diffusée.\n\n Le fait que Laura Aschero soit l'une des rares maisons ligures que l'on trouve hors de la région dit beaucoup : dans un vignoble minuscule où la production part presque entièrement en circuit local, l'export relève de l'exception. Servis sur les fruits de mer, les anchois, le pesto, les fritures ou la cuisine de la Riviera, ses Pigato séduisent par leur caractère herbacé et salin, signature inimitable du cépage ligure.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pigato",
+        "Vermentino",
+        "Rossese"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "vermentino",
+        "blanc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-poggio-dei-gorleri",
+      "nom": "Poggio dei Gorleri",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Diano Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Diano Marina, sur la Riviera di Ponente, Poggio dei Gorleri est un domaine moderne et dynamique, l'une des belles adresses qualitatives de la région. Sur des terrasses face à la mer, il cultive les cépages blancs ligures avec précision.\n\nLe domaine signe des Pigato et des Vermentino primés — le Cycnus (Pigato), l'Albium (Vermentino), le Pigato Vigneto Sori —, des blancs précis, aromatiques et salins, qui expriment le caractère maritime du terroir. Le style, moderne et soigné, met en valeur la fraîcheur, la minéralité et l'intensité aromatique des cépages du Ponente, avec une belle maîtrise technique. La qualité constante, les distinctions obtenues et le dynamisme du domaine en font une valeur sûre de la Riviera. Poggio dei Gorleri est une belle adresse pour découvrir le Pigato et le Vermentino dans des versions modernes et précises, sur les fruits de mer, les poissons grillés et le pesto.\n\nDomaine moderne de Diano Marina : Pigato et Vermentino précis et primés (Cycnus, Albium). C'est une belle adresse dynamique et qualitative de la Riviera di Ponente.\n\n La maîtrise technique de Poggio dei Gorleri, alliée à des vignes bien situées face à la mer, donne des blancs d'une netteté remarquable. Servis sur les fruits de mer, les poissons grillés, le pesto ou les fritures, ses Pigato et Vermentino séduisent par leur fraîcheur et leur intensité aromatique. Le domaine illustre le versant moderne et ambitieux de la Riviera di Ponente, où une nouvelle génération élève le niveau qualitatif.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cycnus (Pigato)",
+        "Albium (Vermentino)",
+        "Pigato Vigneto Sori"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "vermentino",
+        "blanc",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-santa-caterina",
+      "nom": "Santa Caterina",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "commune": "Sarzana",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Albarola",
+        "Massaretta",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Luni DOC",
+        "Liguria di Levante IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sarzana, dans les Colli di Luni, Santa Caterina est le domaine bio-nature d'Andrea Kihlgren, belle adresse artisanale et sincère de la Ligurie orientale. Sur ce terroir frontalier de la Toscane, il cultive les cépages locaux avec une approche peu interventionniste.\n\nLe domaine signe des Vermentino de terroir (le Poggi Alti), précis et salins, ainsi que des vins issus de cépages rares qu'il contribue à préserver : l'Albarola (blanc) et la Massaretta (rouge autochtone), quasi introuvables ailleurs. Le style, bio et nature, privilégie l'expression du terroir et l'authenticité, dans des vins vivants et de caractère. La démarche, la préservation ampélographique et la qualité des vins en font une belle adresse recherchée. Santa Caterina est une adresse à découvrir pour le Vermentino des Colli di Luni et les cépages rares de Ligurie, chez un vigneron nature de Sarzana, pour les amateurs de vin vivant.\n\nDomaine bio-nature d'Andrea Kihlgren (Sarzana) : Vermentino de terroir et cépages rares (Albarola, Massaretta). C'est une belle adresse artisanale et sincère des Colli di Luni.\n\n Le travail d'Andrea Kihlgren sur l'Albarola et la Massaretta, cépages quasi introuvables ailleurs, participe à la sauvegarde du patrimoine ampélographique ligure, l'un des plus menacés d'Italie. Servis sur les fruits de mer, le pesto, les poissons pour les blancs, sur les viandes pour les rouges, ses vins séduisent par leur authenticité et leur énergie. Le domaine incarne la scène nature discrète mais vivante des Colli di Luni.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggi Alti (Vermentino)",
+        "Giuncaro",
+        "Ombra Rosso"
+      ],
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "albarola",
+        "bio",
+        "nature",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-cooperativa-agricola-cinque-terre",
+      "nom": "Cooperativa Agricola Cinque Terre",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "commune": "Riomaggiore (Groppo)",
+      "pays": "Italie",
+      "cepages": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Cinque Terre DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Groppo, au-dessus de Riomaggiore, la Cooperativa Agricola Cinque Terre est la gardienne du vignoble le plus spectaculaire d'Italie. Fondée pour sauver les terrasses des Cinque Terre menacées d'abandon, elle rassemble des centaines de petits vignerons du parc national, classé au patrimoine mondial de l'UNESCO. La coopérative produit le Cinque Terre Bianco (à base de Bosco, Albarola et Vermentino), un blanc léger, minéral et salin, parfait sur les fritures de poisson, ainsi que le légendaire Sciacchetrà, ce passito doré issu de raisins séchés sur claies, aux arômes de miel, de fruits secs et d'abricot. Son rôle dépasse le vin : en maintenant la viticulture, elle préserve les murets de pierre sèche qui façonnent ce paysage unique et le protègent de l'érosion. La Cooperativa Agricola Cinque Terre est une belle adresse pour découvrir les vins des Cinque Terre, sur les poissons et les fromages, chez la gardienne d'un patrimoine mondial.\n\nLa coopérative des Cinque Terre : sauveuse des terrasses du parc national, elle produit le Cinque Terre Bianco et le Sciacchetrà. C'est la gardienne d'un paysage classé à l'UNESCO.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cinque Terre Bianco",
+        "Sciacchetrà",
+        "Costa da Posa"
+      ],
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "bosco",
+        "sciacchetra",
+        "cooperative",
+        "patrimoine"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-forlini-cappellini",
+      "nom": "Forlini Cappellini",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "commune": "Riomaggiore (Manarola)",
+      "pays": "Italie",
+      "cepages": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Cinque Terre DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Manarola, dans les Cinque Terre, Forlini Cappellini est un domaine familial héroïque, l'une des belles adresses traditionnelles de ce vignoble vertigineux. Sur des terrasses accrochées à la falaise, au-dessus de la mer, la famille cultive les cépages locaux entièrement à la main. Le domaine signe un Cinque Terre Bianco (Bosco, Albarola, Vermentino) minéral et salin, marqué par les embruns, ainsi que le rare Sciacchetrà, ce passito doux issu de raisins séchés, aux arômes de miel et de fruits confits. Le style, traditionnel et artisanal, exprime le caractère maritime et minéral des Cinque Terre. La beauté du site, la difficulté du travail et la qualité des vins en font une adresse emblématique. Forlini Cappellini est une belle adresse pour découvrir les vins des Cinque Terre, sur les fritures de poisson et les fruits de mer, chez une famille de vignerons héroïques de Manarola.\n\nDomaine familial héroïque de Manarola : Cinque Terre Bianco et Sciacchetrà sur les terrasses les plus vertigineuses du parc. C'est une belle adresse traditionnelle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cinque Terre Bianco",
+        "Sciacchetrà"
+      ],
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "manarola",
+        "bosco",
+        "sciacchetra",
+        "heroique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-cheo",
+      "nom": "Cheo",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Cinque Terre (SP)",
+      "commune": "Vernazza",
+      "pays": "Italie",
+      "cepages": [
+        "Bosco",
+        "Albarola",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Doux"
+      ],
+      "appellations_lieux_dits": [
+        "Cinque Terre DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vernazza, dans les Cinque Terre, Cheo est un petit domaine bio de la famille Bordoni, belle adresse artisanale de ce vignoble héroïque. Sur des terrasses spectaculaires dominant le plus beau village des Cinque Terre, la famille cultive les cépages locaux en agriculture biologique. Le domaine signe un Cinque Terre Bianco (Bosco, Albarola, Vermentino) frais, minéral et salin, ainsi que le rare Sciacchetrà, ce passito doux traditionnel de la région. Le style, bio et artisanal, privilégie l'expression du terroir maritime et l'authenticité, dans des vins sincères et de caractère. L'engagement biologique, la taille humaine et la beauté du lieu en font une belle adresse à découvrir. Cheo est une adresse à découvrir pour les vins des Cinque Terre dans une version bio et artisanale, sur les poissons et les fruits de mer, chez une famille de Vernazza.\n\nPetit domaine bio de Vernazza (famille Bordoni) : Cinque Terre et Sciacchetrà artisanaux, sur des terrasses spectaculaires au-dessus du village. C'est une belle adresse à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cinque Terre Bianco",
+        "Sciacchetrà"
+      ],
+      "tags": [
+        "liguria",
+        "cinque-terre",
+        "vernazza",
+        "bosco",
+        "sciacchetra",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-tenuta-anfosso",
+      "nom": "Tenuta Anfosso",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Dolceacqua (IM)",
+      "commune": "Soldano",
+      "pays": "Italie",
+      "cepages": [
+        "Rossese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rossese di Dolceacqua DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Soldano, dans la Val Verbone, la Tenuta Anfosso est un domaine de l'appellation Rossese di Dolceacqua, belle adresse à découvrir. Sur des terrasses escarpées, la famille cultive le cépage phare de la Ligurie avec soin. Le domaine pratique une approche parcellaire, vinifiant séparément ses lieux-dits — le Poggio Pini, le Luvaira —, pour révéler les nuances du terroir. Ses Rossese sont des rouges parfumés et racés, aux arômes de rose, de fruits rouges, d'épices et d'herbes méditerranéennes, aux tanins souples et à la belle fraîcheur. Le style, soigné et fidèle au terroir, met en valeur la finesse du Rossese. La qualité de la gamme et l'approche de crus en font une belle adresse de l'appellation. La Tenuta Anfosso est une adresse à découvrir pour le Rossese di Dolceacqua dans une approche parcellaire, sur le lapin aux olives, les champignons et la cuisine ligure.\n\nDomaine de Soldano : Rossese di Dolceacqua parcellaires et soignés (Poggio Pini, Luvaira). C'est une belle adresse de l'appellation à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggio Pini",
+        "Luvaira",
+        "Rossese di Dolceacqua"
+      ],
+      "tags": [
+        "liguria",
+        "dolceacqua",
+        "rossese",
+        "rouge",
+        "cru"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-vis-amoris",
+      "nom": "Vis Amoris",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Imperia",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Imperia, sur la Riviera di Ponente, Vis Amoris est une petite exploitation familiale, belle adresse à découvrir du Pigato. Sur des terrasses de l'arrière-pays, la famille cultive les cépages blancs ligures avec passion. Le domaine signe des Pigato de caractère, dont le Dream, un blanc multifacette, fruité et balsamique, cité par La Cucina Italiana parmi les vins ligures à découvrir. Il produit aussi du Vermentino. Le style, artisanal et soigné, met en valeur l'intensité aromatique et la salinité du Pigato, avec ces notes d'herbes méditerranéennes caractéristiques. La taille humaine du domaine et la qualité de ses vins en font une belle adresse. Vis Amoris est une adresse à découvrir pour le Pigato dans une version artisanale et expressive, sur les fruits de mer, le pesto et la cuisine de la Riviera, chez une petite famille d'Imperia.\n\nPetite exploitation familiale d'Imperia : Pigato fruité et balsamique (Dream), cité par La Cucina Italiana. C'est une belle adresse à découvrir de la Riviera di Ponente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Dream (Pigato)",
+        "Pigato",
+        "Vermentino"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "blanc",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-cantine-bregante",
+      "nom": "Cantine Bregante",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Golfo del Tigullio (GE)",
+      "commune": "Sestri Levante",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Bianchetta",
+        "Ciliegiolo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Golfo del Tigullio DOC",
+        "Colline di Levanto DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sestri Levante, sur le golfe du Tigullio, les Cantine Bregante sont un domaine historique de la Riviera di Levante, belle adresse fidèle aux cépages locaux. Sur les collines dominant la mer, la famille cultive les variétés de la région génoise. Le domaine signe des Vermentino salins et frais, ainsi que de la Bianchetta Genovese (le blanc historique de Gênes) et du Ciliegiolo en rouge, dans un style fidèle à la tradition. Le style, classique et authentique, met en valeur les cépages du Levante, marqués par la proximité de la mer. La longévité du domaine et la qualité de sa gamme en font une belle adresse de la région. Les Cantine Bregante sont une belle adresse pour découvrir les vins du Golfo del Tigullio, cette portion méconnue de la Riviera, sur les fruits de mer, le pesto et les poissons.\n\nDomaine historique du Tigullio (Sestri Levante) : Vermentino et Bianchetta de la Riviera di Levante. C'est une belle adresse fidèle aux cépages locaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vermentino",
+        "Bianchetta",
+        "Ciliegiolo"
+      ],
+      "tags": [
+        "liguria",
+        "tigullio",
+        "vermentino",
+        "bianchetta",
+        "blanc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-la-baia-del-sole-federici",
+      "nom": "La Baia del Sole (Federici)",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "commune": "Ortonovo",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Sangiovese",
+        "Albarola"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Luni DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ortonovo, dans les Colli di Luni, La Baia del Sole est le domaine de la famille Federici, belle adresse fiable de la zone frontalière avec la Toscane. Sur les collines dominant la mer, la famille cultive le Vermentino et les cépages locaux. Le domaine signe de beaux Vermentino — le Sarticola, l'Oro d'Isée —, des blancs salins, aromatiques et frais, qui expriment le caractère maritime des Colli di Luni, ainsi que des rouges (Sangiovese). Le style, soigné et fidèle au terroir, met en valeur la finesse du Vermentino ligure. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de la région. La Baia del Sole est une belle adresse pour découvrir le Vermentino des Colli di Luni dans une version soignée, sur les fruits de mer, le pesto et les poissons grillés, à bon rapport qualité-prix.\n\nDomaine des Colli di Luni (famille Federici) : Vermentino soignés (Sarticola, Oro d'Isée). C'est une belle adresse fiable de la zone frontalière avec la Toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sarticola (Vermentino)",
+        "Oro d'Isée",
+        "Ortonovo"
+      ],
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-il-monticello",
+      "nom": "Il Monticello",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Colli di Luni (SP)",
+      "commune": "Sarzana",
+      "pays": "Italie",
+      "cepages": [
+        "Vermentino",
+        "Sangiovese",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Luni DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sarzana, dans les Colli di Luni, Il Monticello est un domaine familial, belle adresse fiable de la Ligurie orientale. Sur les collines proches de la Toscane, la famille cultive le Vermentino et les cépages locaux. Le domaine signe de beaux Vermentino, dont le Poggio Paterno, des blancs salins et frais, aux notes d'agrumes et d'herbes méditerranéennes, ainsi que des rouges (Groppolo, à base de Sangiovese et de Merlot). Le style, soigné et fidèle au terroir, met en valeur le caractère maritime des Colli di Luni. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de la région. Il Monticello est une belle adresse pour découvrir le Vermentino et les rouges des Colli di Luni dans des versions fiables et soignées, sur les fruits de mer, le pesto et la cuisine ligure, à bon rapport qualité-prix.\n\nDomaine familial de Sarzana : Vermentino (Poggio Paterno) et rouges des Colli di Luni. C'est une belle adresse fiable à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggio Paterno (Vermentino)",
+        "Groppolo",
+        "Rosso"
+      ],
+      "tags": [
+        "liguria",
+        "colli-di-luni",
+        "vermentino",
+        "blanc",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-lupi-tommaso-e-angelo-lupi",
+      "nom": "Lupi (Tommaso e Angelo Lupi)",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Pieve di Teco",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Ormeasco",
+        "Rossese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC",
+        "Ormeasco di Pornassio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pieve di Teco, dans l'arrière-pays d'Imperia, la maison Lupi est une pionnière historique de la qualité en Ligurie. Depuis des décennies, les frères Lupi ont œuvré à la reconnaissance des cépages de la Riviera di Ponente. La maison signe de beaux Pigato (dont Le Serre) et Vermentino, des blancs aromatiques et salins, ainsi que des rouges autochtones : l'Ormeasco (le nom local du Dolcetto, importé du Piémont au XIVe siècle) et le Rossese, notamment dans la cuvée Vignamare. Le style, classique et fidèle au patrimoine, met en valeur les cépages du Ponente. Le rôle pionnier de la maison dans la valorisation des variétés ligures et la qualité de sa gamme en font une adresse historique importante. Lupi est une belle adresse pour découvrir les cépages du Ponente, du Pigato à l'Ormeasco, chez une maison qui a contribué à sauver le patrimoine viticole ligure.\n\nMaison historique de Pieve di Teco : pionnière de la qualité en Ligurie, Pigato, Vermentino et Ormeasco (le Dolcetto local). C'est une gardienne des cépages du Ponente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Serre (Pigato)",
+        "Vignamare",
+        "Ormeasco"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "ormeasco",
+        "historique",
+        "pionnier"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-sancho-cascina-delle-terre-rosse",
+      "nom": "Sancho (Cascina delle Terre Rosse)",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (SV)",
+      "commune": "Finale Ligure",
+      "pays": "Italie",
+      "cepages": [
+        "Lumassina",
+        "Pigato",
+        "Vermentino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC",
+        "Colline Savonesi IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Finale Ligure, dans le Savonese, Sancho (Cascina delle Terre Rosse) est le gardien de la Lumassina, un cépage autochtone rare de la Ligurie. Sur ce terroir côtier, le domaine perpétue une tradition menacée. La Lumassina (dont le nom viendrait des escargots, « lumasse », avec lesquels on l'accompagnait) donne un blanc sec, minéral et vif, à l'acidité marquée et à la faible teneur en alcool, un vin de soif désaltérant, cité par La Cucina Italiana parmi les curiosités ligures à découvrir. Le domaine signe aussi du Pigato et du Vermentino. Le style, artisanal et attaché au patrimoine, met en valeur ce cépage confidentiel. Le rôle de préservation et l'originalité de la gamme en font une belle adresse. Sancho est une adresse à découvrir pour la Lumassina, curiosité ampélographique du Savonese, sur les salades de fruits de mer, les fritures et les anchois.\n\nDomaine de Finale Ligure : gardien de la Lumassina, cépage autochtone rare donnant un blanc minéral et vif, cité par La Cucina Italiana. C'est une curiosité du Savonese.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lumassina",
+        "Pigato",
+        "Vermentino"
+      ],
+      "tags": [
+        "liguria",
+        "savona",
+        "lumassina",
+        "blanc",
+        "autochtone",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-liguria-prod-ramoino",
+      "nom": "Ramoino",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Imperia",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Rossese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Imperia, sur la Riviera di Ponente, Ramoino est un domaine bio, belle adresse artisanale et durable à découvrir. Sur des terrasses de l'arrière-pays, la famille cultive les cépages ligures en agriculture biologique. Le domaine signe des Pigato et des Vermentino de terroir, des blancs aromatiques, salins et minéraux, aux notes d'herbes méditerranéennes, ainsi que du Rossese en rouge. Le style, bio et artisanal, privilégie l'expression du terroir et l'authenticité, dans des vins sincères. L'engagement biologique, la taille humaine et la qualité de la gamme en font une belle adresse de la région. Ramoino est une adresse à découvrir pour le Pigato et le Vermentino dans une version bio et artisanale, sur les fruits de mer, le pesto et la cuisine de la Riviera, chez un vigneron durable d'Imperia.\n\nDomaine bio d'Imperia : Pigato et Vermentino de terroir. C'est une belle adresse artisanale et durable de la Riviera di Ponente, à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pigato",
+        "Vermentino",
+        "Rossese"
+      ],
+      "tags": [
+        "liguria",
+        "ponente",
+        "pigato",
+        "blanc",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-cantine-calleri",
+      "nom": "Cantine Calleri",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (SV)",
+      "commune": "Albenga",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Granaccia"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Albenga, sur la Riviera di Ponente, les Cantine Calleri sont un domaine fiable de la région, belle adresse à bon rapport qualité-prix. Sur les collines de l'Albenganese, la famille cultive les cépages ligures. Le domaine signe des Pigato et des Vermentino soignés, des blancs salins et aromatiques aux notes d'herbes méditerranéennes, ainsi que la rare Granaccia (parente du Grenache) en rouge, cépage autochtone qu'il contribue à préserver. Le style, soigné et fidèle au terroir, met en valeur les variétés de la Riviera di Ponente. La qualité constante et le bon rapport qualité-prix en font une valeur sûre. Les Cantine Calleri sont une belle adresse pour découvrir le Pigato, le Vermentino et la rare Granaccia, sur les fruits de mer, le pesto et la cuisine ligure, à bon rapport qualité-prix.\n\nDomaine d'Albenga : Pigato et Vermentino soignés, ainsi que la rare Granaccia. C'est une belle adresse fiable de la Riviera di Ponente à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pigato",
+        "Vermentino",
+        "Granaccia"
+      ],
+      "tags": [
+        "liguria",
+        "albenga",
+        "pigato",
+        "granaccia",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-liguria-prod-bruna",
+      "nom": "Bruna",
+      "type": "domaine",
+      "region": "Liguria",
+      "sous_region": "Riviera di Ponente (IM)",
+      "commune": "Ranzo",
+      "pays": "Italie",
+      "cepages": [
+        "Pigato",
+        "Vermentino",
+        "Granaccia",
+        "Rossese",
+        "Syrah"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Riviera Ligure di Ponente DOC",
+        "Valle Arroscia"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ranzo, dans la Valle Arroscia, au cœur de la Riviera di Ponente, Bruna est le producteur de référence du Pigato — le « benchmark » du cépage, selon l'ampélographe Ian d'Agata, qui cite son U Baccan parmi les plus belles expressions de la variété. Fondé en 1970 par Riccardo Bruna, le domaine est aujourd'hui mené par sa fille Francesca et son mari Roberto.\n\nRiccardo Bruna fut un pionnier : premier de son village à mettre en bouteille son Pigato, il créa dès 1972, avec Le Russeghine, le tout premier Pigato de vignoble unique de Ligurie, issu d'une parcelle dont le nom remonte à un cadastre de 1700. Sur 7,5 hectares de terrasses taillées dans la montagne, à 200-300 mètres d'altitude et à quinze kilomètres de la mer, la famille cultive en bio (depuis 2009) ce biotype de Vermentino aux baies tachetées de rouille (« pigau », « taché »). La Valle Arroscia est considérée comme le berceau historique et spirituel du Pigato, la seule zone où le Vermentino n'a jamais été planté à ses côtés. Le U Baccan (« le patron », en hommage au fondateur), élevé sur lies en fûts d'acacia et de chêne, est un blanc riche, balsamique et minéral, d'une profondeur rare. Bruna est le domaine incontournable du Pigato.\n\nLE producteur de référence du Pigato (Ian d'Agata) : à Ranzo, dans la Valle Arroscia, le U Baccan et Le Russeghine (premier Pigato de vignoble unique, 1972) sont les sommets du cépage.\n\n Le débat Pigato/Vermentino — génétiquement identiques selon l'ADN, mais tenus pour distincts par les producteurs — trouve chez Bruna son meilleur argument : la personnalité de ces vins, façonnée par les terrasses et les sols de la Valle Arroscia (blancs calcaires pour la finesse, rouges ferreux pour le corps), ne ressemble à aucun autre Vermentino. Servis sur les fruits de mer, le pesto, les poissons charnus, les viandes blanches rôties ou les fritures, ses Pigato séduisent par leur intensité balsamique et leur salinité ; le U Baccan se patine sur plusieurs années, chose rare pour un blanc ligure.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "U Baccan (Pigato)",
+        "Le Russeghine (Pigato)",
+        "Majè",
+        "Villa Torrachetta"
+      ],
+      "tags": [
+        "liguria",
+        "ranzo",
+        "valle-arroscia",
+        "pigato",
+        "blanc",
+        "bio",
+        "reference",
+        "benchmark"
+      ],
+      "a_verifier": null,
+      "source": "winewithseth|bowlerwine|callmewine"
+    }
+  ]
+}

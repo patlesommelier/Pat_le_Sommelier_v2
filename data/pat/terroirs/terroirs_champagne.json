@@ -1,0 +1,802 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "champagne",
+  "region_label": "Champagne",
+  "source_file": "France/Fichiers Terroirs finaux/terroirs_champagne_vPat.xlsx",
+  "built_at": "2026-05-13T15:11:57+00:00",
+  "count": 30,
+  "items": [
+    {
+      "id": "cha-champagne",
+      "nom": "Champagne",
+      "type": "appellation_regionale",
+      "region": "Champagne",
+      "sous_region": "Champagne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier",
+        "Pinot Blanc",
+        "Pinot Gris",
+        "Arbane",
+        "Petit Meslier"
+      ],
+      "altitude": "90-300 m",
+      "sols": "Craie (calcaires crayeux), marnes kimméridgiennes (Aube)",
+      "caracteristiques_rapides": "AOC ~34 000 ha sur 5 départements (Marne, Aube, Aisne, Haute-Marne, Seine-et-Marne). 320 villages classés sur l'échelle des crus (de 80 à 100%). Méthode champenoise (= traditionnelle).",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "aoc",
+        "effervescent",
+        "methode-champenoise",
+        "craie"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-coteaux-champenois",
+      "nom": "Coteaux Champenois",
+      "type": "appellation_regionale",
+      "region": "Champagne",
+      "sous_region": "Champagne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Pinot Meunier"
+      ],
+      "altitude": "90-300 m",
+      "sols": "Craie, marnes",
+      "caracteristiques_rapides": "AOC pour les vins tranquilles (rouges et blancs) sur l'aire Champagne. Production confidentielle. Bouzy Rouge historiquement célèbre.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "aoc",
+        "tranquille",
+        "rare",
+        "bouzy-rouge"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-rose-des-riceys",
+      "nom": "Rosé des Riceys",
+      "type": "appellation_village",
+      "region": "Champagne",
+      "sous_region": "Côte des Bar",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "170-300 m",
+      "sols": "Marnes kimméridgiennes",
+      "caracteristiques_rapides": "AOC ~80 ha exclusivement rosé tranquille (saignée), sur les Riceys (Aube). Vinification très technique, garde longue. Olivier Horiot, Alexandre Bonnet.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "aoc",
+        "rose-tranquille",
+        "kimmeridgien",
+        "riceys",
+        "saignee"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-grand-cru",
+      "nom": "Champagne Grand Cru",
+      "type": "mention_transversale",
+      "region": "Champagne",
+      "sous_region": "Champagne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier"
+      ],
+      "altitude": "120-300 m",
+      "sols": "Craie, marnes",
+      "caracteristiques_rapides": "Mention pour les Champagnes issus à 100% de raisins de l'un des 17 villages Grands Crus (Aÿ, Ambonnay, Avize, Beaumont-sur-Vesle, Bouzy, Chouilly, Cramant, Louvois, Mailly, Le Mesnil-sur-Oger, Oger, Oiry, Puisieulx, Sillery, Tours-sur-Marne, Verzenay, Verzy).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "mention",
+        "grand-cru",
+        "17-villages",
+        "echelle-crus"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-premier-cru",
+      "nom": "Champagne Premier Cru",
+      "type": "mention_transversale",
+      "region": "Champagne",
+      "sous_region": "Champagne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier"
+      ],
+      "altitude": "90-300 m",
+      "sols": "Craie, marnes",
+      "caracteristiques_rapides": "Mention pour les Champagnes issus à 100% de raisins de l'un des 42 villages Premiers Crus (90-99% sur l'échelle des crus).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "mention",
+        "premier-cru",
+        "42-villages"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-montagne-de-reims",
+      "nom": "Montagne de Reims",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Pinot Meunier"
+      ],
+      "altitude": "90-280 m",
+      "sols": "Craie sur substrat marneux",
+      "caracteristiques_rapides": "Sous-région nord, entre Reims et Épernay. Pinot Noir dominant. Compte 9 Grands Crus dont Verzenay, Verzy, Mailly, Bouzy, Ambonnay. Champagnes structurés, vinosité.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "pinot-noir",
+        "reims",
+        "grands-crus"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-vallee-de-la-marne",
+      "nom": "Vallée de la Marne",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Marne-Aisne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Meunier",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "60-280 m",
+      "sols": "Argiles, sables, marnes (sols plus riches)",
+      "caracteristiques_rapides": "Sous-région le long de la Marne, d'Épernay à Château-Thierry. Pinot Meunier roi (cépage rustique adapté aux gels). Aÿ et Tours-sur-Marne en Grands Crus.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "pinot-meunier",
+        "marne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-cote-des-blancs",
+      "nom": "Côte des Blancs",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "120-280 m",
+      "sols": "Craie pure (calcaires crayeux blancs)",
+      "caracteristiques_rapides": "Sous-région au sud d'Épernay, dédiée au Chardonnay. Compte 4 Grands Crus 100% blanc : Avize, Cramant, Le Mesnil-sur-Oger, Oger (+ Chouilly, Oiry plus mixtes). Champagnes minéraux et tendus, longue garde. Sommet du Blanc de Blancs.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "chardonnay",
+        "craie-pure",
+        "blanc-de-blancs"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-cote-de-sezanne",
+      "nom": "Côte de Sézanne",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "100-200 m",
+      "sols": "Craie, argiles",
+      "caracteristiques_rapides": "Sous-région au sud de la Côte des Blancs. Chardonnay dominant mais sols plus argileux. Style fruité, plus accessible.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "chardonnay",
+        "sezanne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-cote-des-bar",
+      "nom": "Côte des Bar (Aubois)",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Aube",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay",
+        "Arbane",
+        "Petit Meslier",
+        "Pinot Blanc"
+      ],
+      "altitude": "170-300 m",
+      "sols": "Marnes kimméridgiennes (mêmes que Chablis)",
+      "caracteristiques_rapides": "Sous-région sud (Aube, autour de Bar-sur-Seine et Bar-sur-Aube). Pinot Noir dominant, terroir kimméridgien. Berceau de la révolution \"Champagne de vigneron\" : Selosse (origine), Bouchard, Vouette et Sorbée, Marie-Courtin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "aube",
+        "kimmeridgien",
+        "grower-revolution"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-vitryat",
+      "nom": "Vitryat / Coteaux du Petit Morin",
+      "type": "sous_region",
+      "region": "Champagne",
+      "sous_region": "Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "100-180 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Petite sous-région sud (Vitry-le-François). Confidentielle. Lassaigne (Montgueux, en marge) en référence proche.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "sous-region",
+        "vitryat",
+        "chardonnay",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-ay",
+      "nom": "Aÿ",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "70-200 m",
+      "sols": "Craie sur substrat marno-calcaire",
+      "caracteristiques_rapides": "Grand Cru historique (100%) au sud-est d'Épernay. Berceau du Champagne. Pinot Noir vinosé, longue garde. Bollinger, Deutz, Henri Giraud, Goutorbe, Geoffroy.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "iconique",
+        "bollinger",
+        "ay"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-ambonnay",
+      "nom": "Ambonnay",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "120-260 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100%) sud-est de la Montagne de Reims. Pinot Noir charnu, expression solaire. Egly-Ouriet, Marie-Noëlle Ledru, Eric Rodez, André Beaufort.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "iconique",
+        "egly-ouriet",
+        "ambonnay"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-bouzy",
+      "nom": "Bouzy",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "120-260 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100%) voisin d'Ambonnay. Pinot Noir puissant. Connue pour son Bouzy Rouge (Coteaux Champenois). André Clouet, Paul Bara, Jean Vesselle.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "iconique",
+        "bouzy-rouge",
+        "clouet"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-verzenay",
+      "nom": "Verzenay",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "180-280 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100%) sur le versant nord de la Montagne de Reims. Exposition nord = fraîcheur, Pinot Noir tendu et minéral. Mumm de Cramant, Roederer (Cristal), Louis Roederer.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "exposition-nord",
+        "verzenay"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-verzy",
+      "nom": "Verzy",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "180-280 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100%) voisin de Verzenay. Pinot Noir tendu, expression nordique. Penet-Chardonnet, Lallement.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "verzy"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-mailly",
+      "nom": "Mailly-Champagne",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "120-280 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100%) sur le versant nord de la Montagne. Coopérative Mailly Grand Cru (référence des coop Grand Cru).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "mailly",
+        "cooperative-reference"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-avize",
+      "nom": "Avize",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "130-200 m",
+      "sols": "Craie pure",
+      "caracteristiques_rapides": "Grand Cru (100%) au cœur de la Côte des Blancs. Chardonnay minéral et tendu. Jacques Selosse (icône), Agrapart, De Sousa.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "chardonnay",
+        "iconique",
+        "selosse",
+        "avize"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-cramant",
+      "nom": "Cramant",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "130-220 m",
+      "sols": "Craie pure (très épaisse)",
+      "caracteristiques_rapides": "Grand Cru (100%) Côte des Blancs. Chardonnay floral et délicat. Diebolt-Vallois, Bonnaire, Suenen, Mumm de Cramant.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "chardonnay",
+        "cramant",
+        "diebolt"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-mesnil-sur-oger",
+      "nom": "Le Mesnil-sur-Oger",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "130-200 m",
+      "sols": "Craie pure",
+      "caracteristiques_rapides": "Grand Cru (100%) Côte des Blancs. Chardonnay puissant et minéral, garde monumentale. Salon, Pierre Péters, Krug (Clos du Mesnil), Robert Moncuit.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "chardonnay",
+        "iconique",
+        "salon",
+        "peters",
+        "mesnil"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-oger",
+      "nom": "Oger",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "130-200 m",
+      "sols": "Craie pure",
+      "caracteristiques_rapides": "Grand Cru (100%) Côte des Blancs, voisin du Mesnil. Chardonnay précis. Henri Goutorbe (no, ça c'est Aÿ), Jean Milan, Roederer.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "chardonnay",
+        "oger"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-chouilly",
+      "nom": "Chouilly",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "120-200 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Grand Cru (100% pour Chardonnay seulement, Pinot Noir Premier Cru). Plus accessible que les Grands Crus voisins. Pierre Gimonnet, Vazart-Coquart.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "chardonnay",
+        "chouilly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-tours-sur-marne",
+      "nom": "Tours-sur-Marne",
+      "type": "grand_cru",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "70-200 m",
+      "sols": "Craie, marnes",
+      "caracteristiques_rapides": "Grand Cru (100% pour Pinot Noir seulement, Chardonnay 90%). Voisin d'Aÿ. Laurent-Perrier basé ici.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "grand-cru",
+        "pinot-noir",
+        "tours-sur-marne",
+        "laurent-perrier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "cha-clos-du-mesnil",
+      "nom": "Clos du Mesnil",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Côte des Blancs (Le Mesnil-sur-Oger)",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "~150 m",
+      "sols": "Craie pure",
+      "caracteristiques_rapides": "Lieu-dit clos de murs (1,87 ha) à Krug, au cœur du Mesnil-sur-Oger. Chardonnay pur, monoparcellaire. Une des cuvées les plus mythiques au monde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "krug",
+        "mythique",
+        "chardonnay",
+        "monoparcellaire"
+      ],
+      "source": "krug|lpv"
+    },
+    {
+      "id": "cha-clos-des-goisses",
+      "nom": "Clos des Goisses",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne (Mareuil-sur-Aÿ)",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "~150 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Clos de 5,5 ha à Philipponnat, exposition sud, pente très raide (\"goisse\" en patois). Pinot Noir + Chardonnay, garde monumentale. Premier monoparcellaire de Champagne (1935).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "philipponnat",
+        "monoparcellaire",
+        "premier-clos"
+      ],
+      "source": "philipponnat|lpv"
+    },
+    {
+      "id": "cha-clos-d-ambonnay",
+      "nom": "Clos d'Ambonnay",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Montagne de Reims (Ambonnay)",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "~150 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Lieu-dit clos de 0,68 ha à Krug. Pinot Noir pur, monoparcellaire ultra-confidentiel. Pendant rouge du Clos du Mesnil.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "krug",
+        "mythique",
+        "pinot-noir",
+        "monoparcellaire"
+      ],
+      "source": "krug|lpv"
+    },
+    {
+      "id": "cha-clos-saint-hilaire",
+      "nom": "Clos Saint-Hilaire",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne (Mareuil-sur-Aÿ)",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "~150 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Clos d'1 ha à Billecart-Salmon. Pinot Noir pur, monoparcellaire vinifié en fûts. Confidentiel, garde longue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "billecart",
+        "pinot-noir",
+        "monoparcellaire"
+      ],
+      "source": "billecart|lpv"
+    },
+    {
+      "id": "cha-clos-lanson",
+      "nom": "Clos Lanson",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Reims",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "~120 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Clos d'1 ha au cœur de Reims (centre-ville). Chardonnay monoparcellaire vinifié par Lanson. Confidentiel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "clos",
+        "lanson",
+        "chardonnay",
+        "monoparcellaire",
+        "reims-centre"
+      ],
+      "source": "lanson|lpv"
+    },
+    {
+      "id": "cha-vieilles-vignes-francaises",
+      "nom": "Vieilles Vignes Françaises (Aÿ)",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne (Aÿ)",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "~140 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Trois parcelles préphylloxériques (Chaudes Terres, Clos Saint-Jacques, Croix Rouge) cultivées en franc de pied à Bollinger. Pinot Noir pur, ~3 000 bouteilles/an, mythique.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "bollinger",
+        "prephylloxerique",
+        "franc-de-pied",
+        "pinot-noir",
+        "mythique"
+      ],
+      "source": "bollinger|lpv"
+    },
+    {
+      "id": "cha-cote-aux-enfants",
+      "nom": "La Côte aux Enfants",
+      "type": "lieu_dit",
+      "region": "Champagne",
+      "sous_region": "Vallée de la Marne (Aÿ)",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir"
+      ],
+      "altitude": "~140 m",
+      "sols": "Craie",
+      "caracteristiques_rapides": "Coteau d'Aÿ exploité par Bollinger pour son Coteaux Champenois rouge éponyme et un Champagne Grand Cru.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "notes_pat": null,
+      "tags": [
+        "lieu-dit",
+        "bollinger",
+        "coteaux-champenois",
+        "pinot-noir"
+      ],
+      "source": "bollinger|lpv"
+    }
+  ]
+}

@@ -1,0 +1,800 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "veneto",
+  "region_label": "Veneto (Italie)",
+  "source_file": "terroirs_veneto.json",
+  "built_at": "2026-06-28",
+  "count": 30,
+  "items": [
+    {
+      "id": "it-veneto-terr-foscarino",
+      "nom": "Foscarino",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~100-280 m",
+      "sols": "basaltes volcaniques bruns, bonne profondeur",
+      "caracteristiques_rapides": "UGA volcanique emblématique entre Soave et Monteforte : Garganega ample, complexe et minérale, l'un des plus grands crus de l'appellation (Inama, Pieropan).",
+      "notes_objectives": "Le Monte Foscarino est l'une des collines les plus célèbres du Soave, une butte volcanique isolée qui s'élève entre les villages de Soave et de Monteforte d'Alpone. Ses sols de basalte brun, profonds et bien drainés, lui confèrent une identité minérale très marquée, et en font l'un des grands crus de l'appellation, officialisé parmi les UGA en 2019.\n\nLa Garganega y atteint une ampleur et une complexité rares : robe dorée, nez de fruits jaunes mûrs, d'herbes aromatiques, d'agrumes confits et de miel d'acacia, bouche dense, saline et persistante, capable de vieillir plusieurs années. Le caractère volcanique du Foscarino imprime aux vins une énergie et une profondeur qui les distinguent des secteurs calcaires. C'est ici qu'Inama produit ses cuvées phares, des Vigneti di Foscarino jusqu'au prestigieux I Palchi, et que d'autres grands noms comme Pieropan possèdent des parcelles convoitées.\n\nCru emblématique du Soave volcanique, le Foscarino démontre tout ce que la Garganega peut offrir de plus profond et de plus complexe. Sa minéralité saline, sa structure et son aptitude au vieillissement en font une référence absolue de l'appellation, et l'un des arguments majeurs de la renaissance qualitative du Soave.\n\nCette butte volcanique, vestige d'une activité éruptive ancienne, se distingue nettement des sols calcaires des vallées occidentales de l'appellation : là où le calcaire donne des Garganega plus souples et florales, le basalte du Foscarino signe des vins plus profonds, plus salins et plus tendus, dotés d'une énergie minérale qui leur confère une réelle aptitude au vieillissement.\n\nC'est ici qu'Inama a hissé la Garganega au rang de grand vin blanc : le Vigneti di Foscarino, puis surtout le I Palchi — élevé en grands foudres et en barriques usées, tiré à quelques milliers de bouteilles seulement — comptent parmi les Soave les plus ambitieux et les plus complexes du marché. Le travail des meilleurs producteurs y privilégie les faibles rendements et un élevage soigné, qui révèlent la capacité du cru à évoluer sur cinq à dix ans vers des notes de fruits confits, de miel et d'épices. Servi sur des poissons riches, des risottos ou des fromages affinés, le Foscarino démontre que le Soave peut être un blanc de gastronomie et de garde.\n\nPilier de la renaissance qualitative de l'appellation et étendard du Soave volcanique, le Foscarino incarne mieux que tout autre cru la noblesse retrouvée de la Garganega, longtemps déconsidérée.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "foscarino",
+        "volcanique",
+        "basalte",
+        "cru"
+      ],
+      "source": "winemag|winescritic"
+    },
+    {
+      "id": "it-veneto-terr-calvarino",
+      "nom": "Calvarino",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~150-250 m",
+      "sols": "basalte volcanique et calcaire (tuf)",
+      "caracteristiques_rapides": "La vigna historique de Pieropan, premier cru de vin blanc d'Italie (1971) : Garganega-Trebbiano d'une grande pureté, minéral et tendu, taillé pour la garde.",
+      "notes_objectives": "Le Calvarino est l'une des parcelles les plus mythiques du Soave : c'est la vigna historique de la famille Pieropan, qui en fit, dès 1971, le tout premier cru de vin blanc embouteillé séparément en Italie — quarante ans avant l'officialisation des UGA. Le nom, qui évoque un « petit calvaire », renvoie à la difficulté de cultiver ces coteaux escarpés.\n\nSur des sols mêlant basalte volcanique et calcaire (tuf), la Garganega, complétée d'un peu de Trebbiano di Soave, y donne un vin d'une grande pureté et d'une tension remarquable : nez d'amande, de fleurs blanches et d'agrumes, bouche saline, minérale et droite, à la finale légèrement amère typique du cépage. Élevé en cuve pour préserver son éclat, le Calvarino de Pieropan se distingue par sa longévité exceptionnelle, capable de défier une décennie ou plus en cave et de développer des notes complexes de miel, d'épices et d'hydrocarbure.\n\nVigna pionnière et indissociable du nom de Pieropan, le Calvarino a montré la voie de la viticulture de cru en Soave. Il demeure l'un des plus beaux exemples du potentiel de garde et de finesse de la Garganega, et un repère historique de toute l'appellation.\n\nLa parcelle, plantée en pergola adaptée à de hautes densités et à de faibles rendements, est cultivée par la famille Pieropan depuis des générations avec un soin extrême. Le Calvarino se distingue de l'autre grand cru du domaine, La Rocca — élevé sous bois et issu de sols plus calcaires —, par son élevage en cuve, qui préserve la pureté cristalline et la minéralité volcanique du fruit. Les deux crus offrent ainsi deux visages complémentaires du Soave de Pieropan.\n\nL'importance historique du Calvarino dépasse le seul domaine : en isolant ce terroir dès 1971, Leonildo Pieropan a ouvert la voie à toute la viticulture de cru en Italie blanche, bien avant l'officialisation des UGA en 2019. Les verticales de Calvarino, qui remontent sur plusieurs décennies, démontrent une longevité exceptionnelle pour un blanc italien, et ont durablement changé la perception du Soave. Servi sur des poissons, des coquillages ou une cuisine délicate, il révèle une finesse et une persistance rares.\n\nVigna fondatrice et indissociable du nom de Pieropan, le Calvarino demeure un repère absolu de l'appellation, et l'un des plus beaux témoignages du potentiel de finesse et de garde de la Garganega sur sols volcaniques.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "calvarino",
+        "pieropan",
+        "vigna",
+        "icone"
+      ],
+      "source": "wineenthusiast|decanter"
+    },
+    {
+      "id": "it-veneto-terr-monte-carbonare",
+      "nom": "Monte Carbonare",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "basaltes noirs (« carbonare »)",
+      "caracteristiques_rapides": "UGA sur sols noirs basaltiques au nord de Soave : Garganega saline, tendue et précise, signature du domaine Suavia.",
+      "notes_objectives": "Le Monte Carbonare est l'un des crus volcaniques les plus réputés du Soave, situé sur les hauteurs au nord de l'appellation, dans le secteur de Fittà. Son nom même évoque la couleur de ses sols : des basaltes noirs (« carbonare », comme le charbon) qui marquent profondément le caractère des vins.\n\nSur ces sols volcaniques sombres, la Garganega donne un Soave d'une salinité et d'une tension marquées, au profil minéral et nerveux : arômes de fruits jaunes, d'herbes méditerranéennes et de pierre à fusil, bouche vive et sapide, d'une grande énergie. C'est le cru emblématique du domaine Suavia, dont la cuvée éponyme est l'une des plus belles expressions de la minéralité volcanique du Soave.\n\nRéférence du Soave de terroir, le Monte Carbonare illustre tout ce que le basalte apporte de tension et de profondeur, et compte parmi les crus les plus distinctifs et les plus recherchés de l'appellation.\n\nLe secteur, perché et bien ventilé, bénéficie d'amplitudes thermiques marquées qui préservent l'acidité et les arômes du raisin. Le basalte y impose des rendements naturellement contenus et une maturité régulière. Au-delà de Suavia, le Monte Carbonare est revendiqué par plusieurs producteurs attachés à l'expression volcanique du Soave. Servis sur des poissons ou des plats relevés, ses vins gagnent en complexité avec quelques années de cave, confirmant le potentiel de garde des grands crus basaltiques de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "carbonare",
+        "volcanique",
+        "suavia",
+        "cru"
+      ],
+      "source": "winemag|vinepair"
+    },
+    {
+      "id": "it-veneto-terr-castelcerino",
+      "nom": "Castelcerino",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~250-400 m",
+      "sols": "sols volcaniques et calcaires d'altitude",
+      "caracteristiques_rapides": "UGA la plus haute du Soave Classico, fraîche et tardive : Garganega vive et fine (Coffele, Filippi, La Rocca de Pieropan).",
+      "notes_objectives": "Castelcerino est l'UGA la plus haute du Soave Classico, perchée sur les hauteurs au-dessus du village de Soave, à des altitudes pouvant atteindre 400 mètres. Cette position en altitude, fraîche et tardive, en fait un terroir à part dans l'appellation.\n\nSur des sols mêlant matrice volcanique et calcaire, la Garganega y conserve une acidité vive et une grande finesse aromatique, dans des vins tendus, frais et élégants. L'altitude, longtemps perçue comme un handicap, est devenue un atout à l'ère du réchauffement. Le secteur abrite des domaines de référence comme Coffele et Filippi, et c'est ici que Pieropan situe son cru La Rocca, élevé sous bois.\n\nTerroir d'altitude du Soave Classico, Castelcerino donne des Garganega fraîches et racées, taillées pour la garde, qui comptent parmi les plus fines de l'appellation.\n\nLe secteur, longtemps réputé pour ses raisins de qualité mais difficile à cultiver, profite aujourd'hui pleinement de la recherche de fraîcheur liée au réchauffement. Les meilleurs Castelcerino, issus de faibles rendements et d'un élevage soigné, vieillissent remarquablement, développant des notes complexes de fruits secs, de miel et d'épices. C'est l'un des secteurs où la diversité des sols — entre matrice volcanique et veines calcaires — autorise une belle variété d'expressions, des plus tendues aux plus amples, et confirme la place de Castelcerino parmi les grands crus d'altitude du Soave.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "castelcerino",
+        "altitude",
+        "cru"
+      ],
+      "source": "winemag|ilsoave"
+    },
+    {
+      "id": "it-veneto-terr-frosca",
+      "nom": "Froscà",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "basaltes volcaniques de Monteforte",
+      "caracteristiques_rapides": "UGA volcanique de Monteforte d'Alpone : Garganega structurée et minérale ; cru de référence du domaine Gini (La Frosca).",
+      "notes_objectives": "La Froscà est un cru volcanique réputé de Monteforte d'Alpone, dans le cœur oriental du Soave Classico. Ses sols de basalte donnent à la Garganega une structure et une minéralité marquées.\n\nLes vins y sont denses et profonds, dotés d'une belle acidité et d'une trame saline, avec un fruit jaune mûr et des notes florales et minérales. La Froscà est le cru de référence du domaine Gini, qui en tire une Garganega structurée et apte au vieillissement. Le caractère volcanique du secteur imprime aux vins une énergie reconnaissable.\n\nCru de terroir du Soave volcanique, la Froscà illustre la profondeur que peut atteindre la Garganega sur basalte, et compte parmi les beaux secteurs de Monteforte.\n\nLe caractère volcanique du secteur, conjugué à une viticulture exigeante, donne des Garganega d'une réelle aptitude au vieillissement, qui se patinent sur plusieurs années. Sandro et Claudio Gini, ardents défenseurs du Soave comme grand vin blanc, en tirent une expression dense et minérale, fidèle au terroir de Monteforte. La Froscà illustre, aux côtés du Foscarino et du Monte Grande, la profondeur que peut atteindre la Garganega sur les basaltes de la Val d'Alpone, et compte parmi les crus les plus sérieux de cette partie de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "frosca",
+        "volcanique",
+        "gini",
+        "cru"
+      ],
+      "source": "winemag|decanter"
+    },
+    {
+      "id": "it-veneto-terr-monte-grande",
+      "nom": "Monte Grande",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "basaltes volcaniques de Monteforte",
+      "caracteristiques_rapides": "UGA réputée de Monteforte d'Alpone : Garganega élégante et apte au vieillissement ; cru phare de Graziano Prà.",
+      "notes_objectives": "Le Monte Grande est l'un des crus les plus réputés de Monteforte d'Alpone, sur les collines volcaniques du Soave Classico. Ses sols de basalte en font un terroir de prédilection pour une Garganega ambitieuse.\n\nLes vins y sont élégants, structurés et d'une grande aptitude au vieillissement : minéralité saline, fruit précis, texture soignée et longueur. Le Monte Grande est le cru phare de Graziano Prà, qui en signe l'une des plus belles expressions, souvent élevée sur lies. Le secteur conjugue la profondeur du basalte et la finesse d'une viticulture exigeante.\n\nRéférence du Soave de Monteforte, le Monte Grande donne des Garganega élégantes et de garde, parmi les plus régulières et les plus appréciées de l'appellation.\n\nLe caractère volcanique du secteur et l'élevage sur lies pratiqué par Graziano Prà donnent des vins d'une texture et d'une profondeur remarquables, qui comptent parmi les Soave les plus réguliers et les plus appréciés de leur millésime. Le Monte Grande gagne nettement avec quelques années de garde, développant des notes complexes de fruits mûrs, d'amande et de pierre. Avec le Foscarino et la Froscà, il fait partie des grands crus volcaniques de Monteforte qui ont porté la réputation du Soave de terroir.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "monte-grande",
+        "volcanique",
+        "pra",
+        "cru"
+      ],
+      "source": "winemag|decanter"
+    },
+    {
+      "id": "it-veneto-terr-fitta",
+      "nom": "Fittà",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "collines basaltiques au nord de Soave",
+      "caracteristiques_rapides": "UGA volcanique des hauteurs de Soave, secteur de Suavia : Garganega saline et nerveuse, marquée par le basalte.",
+      "notes_objectives": "Fittà est une UGA volcanique perchée sur les hauteurs au nord du village de Soave. Ses collines de basalte, bien ventilées, en font un terroir d'altitude au caractère affirmé.\n\nSur ces sols volcaniques, la Garganega y donne des vins salins et nerveux, à la minéralité marquée par le basalte et à la belle fraîcheur, soutenue par les amplitudes thermiques. C'est l'un des secteurs où le domaine Suavia possède des parcelles. Le caractère volcanique et l'altitude signent des Soave tendus et énergiques.\n\nUGA volcanique des hauteurs de Soave, Fittà illustre la minéralité saline que le basalte confère à la Garganega, dans des vins frais et caractériels.\n\nLe secteur, encore en voie de reconnaissance, illustre la diversité des hauteurs volcaniques du nord de Soave, où l'altitude et la ventilation donnent des vins plus tendus que ceux des fonds de vallée. Les meilleures parcelles y révèlent une Garganega d'une belle énergie minérale, complémentaire des grands crus voisins.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "fitta",
+        "volcanique"
+      ],
+      "source": "winemag"
+    },
+    {
+      "id": "it-veneto-terr-costalunga",
+      "nom": "Costalunga",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~100-250 m",
+      "sols": "sols calcaires des vallées occidentales",
+      "caracteristiques_rapides": "UGA sur sols calcaires : Garganega plus souple et florale que les crus volcaniques, expression du versant calcaire du Soave.",
+      "notes_objectives": "Costalunga est une UGA du Soave située sur les sols calcaires des vallées, par opposition aux secteurs volcaniques de l'appellation. Cette matrice calcaire imprime aux vins un profil distinct.\n\nLa Garganega y donne des Soave plus souples et floraux que les crus volcaniques, à la trame plus tendre et au fruit plus immédiat, tout en conservant la salinité et la finale amère typiques du cépage. C'est l'une des expressions du versant calcaire du Soave, complémentaire des crus basaltiques.\n\nUGA calcaire du Soave, Costalunga offre une Garganega souple et florale, témoin de la diversité des sols qui font la richesse de l'appellation.\n\nCe profil calcaire, plus rare dans une appellation dominée par le volcanique, élargit la palette des expressions du Soave. Les vins de Costalunga, plus accessibles dans leur jeunesse, séduisent par leur fruit et leur souplesse, tout en conservant la salinité caractéristique de la Garganega.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "costalunga",
+        "calcaire"
+      ],
+      "source": "winemag|volcanic"
+    },
+    {
+      "id": "it-veneto-terr-ronca---monte-calvarina",
+      "nom": "Roncà – Monte Calvarina",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Soave",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~90-600 m",
+      "sols": "basaltes des cônes volcaniques (Calvarina, Crocetta)",
+      "caracteristiques_rapides": "UGA volcanique de la Val d'Alpone, hors zone Classico : forte ventilation et amplitudes thermiques, Garganega de grand potentiel évolutif.",
+      "notes_objectives": "Roncà – Monte Calvarina est une UGA volcanique de la Val d'Alpone, à l'est de l'appellation, hors de la zone Soave Classico. Elle réunit les cônes volcaniques récents de Calvarina et Crocetta, sur des sols entièrement issus de basaltes.\n\nCette matrice volcanique, conjuguée à une forte ventilation et à des amplitudes thermiques marquées, donne une Garganega d'un grand potentiel évolutif, tendue, minérale et saine. Le secteur, longtemps dans l'ombre du Classico, révèle aujourd'hui des Soave de caractère et de garde, parfois plus frais et plus vifs que ceux de la zone historique.\n\nUGA volcanique de la Val d'Alpone, Roncà – Monte Calvarina illustre l'élargissement qualitatif du Soave au-delà du Classico, avec des Garganega minérales et de bon potentiel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "soave",
+        "ronca",
+        "calvarina",
+        "volcanique",
+        "val-dalpone"
+      ],
+      "source": "winemag"
+    },
+    {
+      "id": "it-veneto-terr-monte-lodoletta",
+      "nom": "Monte Lodoletta",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~150-250 m",
+      "sols": "sols caillouteux de la Val d'Illasi",
+      "caracteristiques_rapides": "La vigna de Romano Dal Forno à Cellore d'Illasi : berceau d'Amarone et de Valpolicella d'une concentration et d'une précision extrêmes, terroir-icône moderne.",
+      "notes_objectives": "Le Monte Lodoletta est le vignoble emblématique de Romano Dal Forno, à Cellore d'Illasi, dans la vallée orientale de la Valpolicella, à l'écart de la zone Classica. C'est de ce coteau que naissent l'Amarone et le Valpolicella Superiore qui ont fait de Dal Forno l'icône moderne de l'appellation.\n\nTout y est pensé pour la concentration et la précision : densités de plantation très élevées, rendements infimes, tri draconien et maîtrise totale du séchage des raisins. Les sols caillouteux de la Val d'Illasi, conjugués à ce travail obsessionnel, donnent des vins d'une densité spectaculaire — robe presque opaque, profondeur de fruits noirs confits, de chocolat et d'épices, structure imposante soutenue par une acidité qui préserve l'équilibre. Ces vins rares et recherchés se patinent sur des décennies. Plus qu'une parcelle, le Monte Lodoletta est devenu un nom à part entière, synonyme d'une vision intransigeante de la Valpolicella.\n\nTerroir-icône de l'Amarone contemporain, le Monte Lodoletta incarne, aux côtés des grands sites de Quintarelli à Negrar, le sommet absolu de l'appellation. Il a prouvé qu'avec une exigence sans limite, la Valpolicella pouvait rivaliser avec les plus grands rouges du monde.\n\nAu vignoble, Romano Dal Forno a tout repensé : plantations très serrées, palissage rigoureux, effeuillage et vendanges-vertes drastiques, tri impitoyable. En cave, la modernité des installations et la maîtrise du séchage des raisins, sur des claies parfaitement ventilées, permettent d'atteindre une concentration sans déviation ni lourdeur. Le Monte Lodoletta donne aussi un rarissime passito sucré, la Vigna Sere, qui pousse cette quête de pureté à l'extrême.\n\nLa production, infime, et les prix élevés réservent ces vins à une élite de collectionneurs, mais leur influence dépasse de loin leur diffusion : en portant l'appassimento et l'élevage à un niveau de précision inédit, Dal Forno a redéfini, depuis ce coteau d'Illasi, le potentiel qualitatif de toute la Valpolicella. Servis sur des viandes de caractère ou attendus quinze à vingt ans, l'Amarone et le Valpolicella Superiore du Monte Lodoletta comptent parmi les rouges les plus impressionnants d'Italie.\n\nAux côtés des grands sites de Quintarelli, le Monte Lodoletta forme l'un des deux pôles souverains de l'appellation — la preuve qu'un seul vignoble, travaillé avec une exigence absolue, peut hisser la Valpolicella au rang des plus grands terroirs de rouge du monde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "monte-lodoletta",
+        "dal-forno",
+        "amarone",
+        "vigna",
+        "icone"
+      ],
+      "source": "allamarone|vinous"
+    },
+    {
+      "id": "it-veneto-terr-marano-di-valpolicella",
+      "nom": "Marano di Valpolicella",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~250-500 m",
+      "sols": "tufs volcaniques et calcaires d'altitude",
+      "caracteristiques_rapides": "Vallée haute et fraîche de la Valpolicella Classica : Amarone et Valpolicella d'une grande finesse et fraîcheur (Ca' La Bionda).",
+      "notes_objectives": "Marano di Valpolicella est l'une des cinq vallées historiques de la Valpolicella Classica, et l'une des plus hautes et des plus fraîches. Ses coteaux, qui montent jusqu'à environ 500 mètres, sur des tufs volcaniques et des calcaires d'altitude, en font un terroir réputé pour la finesse.\n\nL'altitude et la fraîcheur de Marano donnent des Amarone et des Valpolicella d'une élégance et d'une vivacité particulières, à rebours des styles les plus lourds : fruit éclatant, acidité préservée, tanins fins. C'est le terroir de Ca' La Bionda, l'un des chefs de file des traditionalistes modernes de l'appellation. La haute vallée se prête idéalement à des vins frais et digestes.\n\nVallée d'altitude de la Valpolicella Classica, Marano est l'un des secteurs les plus prisés pour la fraîcheur et la finesse de ses vins, emblème du renouveau qualitatif de l'appellation.\n\nLes sols volcaniques et calcaires de la vallée, conjugués à l'altitude, donnent aux vins une trame fine et une salinité particulière. Marano est devenu, ces dernières années, l'un des terroirs phares du courant qui réoriente la Valpolicella vers la fraîcheur et la digestibilité, à rebours des Amarone surconcentrés des années 1990-2000. Ca' La Bionda, mais aussi d'autres artisans de la vallée, y signent des vins droits et parfumés. Servis sur une cuisine de caractère, ces Amarone d'altitude séduisent par leur équilibre et leur buvabilité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "marano",
+        "classica",
+        "altitude"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-veneto-terr-fumane",
+      "nom": "Fumane",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "calcaires et marnes de la Valpolicella Classica",
+      "caracteristiques_rapides": "Vallée historique de la Valpolicella Classica : terroir d'Allegrini (La Grola, La Poja) et de Monte dei Ragni, rouges structurés et de garde.",
+      "notes_objectives": "Fumane est l'une des vallées historiques de la Valpolicella Classica, réputée pour la qualité de ses coteaux. Sur des sols de calcaire et de marnes, elle donne des vins structurés et de belle garde.\n\nC'est ici que se trouve le domaine Allegrini, dont les crus La Grola et La Poja (Corvina pure) figurent parmi les plus beaux vins de l'appellation, ainsi que l'artisan culte Monte dei Ragni. Les Amarone et Valpolicella de Fumane allient la générosité de l'appassimento à une recherche d'équilibre et de précision. La diversité des expositions y permet une belle variété d'expressions.\n\nVallée majeure de la Valpolicella Classica, Fumane abrite quelques-uns des plus grands noms de l'appellation et produit des rouges structurés et de garde parmi les plus réputés.\n\nLe travail de l'appassimento y est mené avec une grande maîtrise, dans des fruitières modernes qui assurent un séchage sain des raisins. La Poja, issu du sommet de la colline de La Grola et vinifié en Corvina pure, est l'une des plus belles expressions mono-cépage de toute la région, preuve du potentiel du terroir de Fumane. À l'opposé du spectre, l'artisan Monte dei Ragni y élabore des Amarone d'une authenticité presque archaïque. Cette diversité d'approches, sur un même terroir de calcaire et de marnes, fait de Fumane l'une des vallées les plus passionnantes de la Valpolicella Classica.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "fumane",
+        "classica"
+      ],
+      "source": "garrafeira|decanter"
+    },
+    {
+      "id": "it-veneto-terr-negrar",
+      "nom": "Negrar",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~150-450 m",
+      "sols": "calcaires, marnes et tufs",
+      "caracteristiques_rapides": "Grande vallée de la Valpolicella Classica, terre de Giuseppe Quintarelli : Amarone profonds et de très longue garde.",
+      "notes_objectives": "Negrar est la plus orientale et l'une des plus vastes des vallées de la Valpolicella Classica. Sur des sols variés mêlant calcaires, marnes et tufs, à des altitudes très diverses, elle offre une mosaïque de terroirs.\n\nC'est dans la haute vallée de Negrar que Giuseppe Quintarelli a établi son domaine légendaire, produisant les Amarone les plus mythiques de l'appellation, profonds et de très longue garde. Negrar abrite aussi des crus d'altitude réputés comme Mazzano. La diversité des expositions y donne des styles allant des Amarone les plus puissants aux expressions plus fraîches des hauteurs.\n\nBerceau de domaines mythiques et terre de grands Amarone, Negrar est l'une des vallées les plus emblématiques de la Valpolicella Classica, indissociable de l'histoire de l'appellation.\n\nLa grande étendue de Negrar et la variété de ses expositions en font un terroir mosaïque, où coexistent des styles très différents : les fonds de vallée donnent des vins plus amples, les hauteurs des expressions plus fraîches et tendues. C'est cette diversité, et la présence de domaines mythiques comme Quintarelli, qui ont fait la réputation de la vallée. Servis sur des viandes en sauce ou du gibier, ou attendus de longues années, les grands Amarone de Negrar comptent parmi les plus profonds et les plus complexes de l'appellation, et incarnent l'âme historique de la Valpolicella Classica.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "negrar",
+        "classica",
+        "quintarelli"
+      ],
+      "source": "cultwine"
+    },
+    {
+      "id": "it-veneto-terr-santambrogio-di-valpolicella",
+      "nom": "Sant'Ambrogio di Valpolicella",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~150-500 m",
+      "sols": "calcaires et tufs, secteurs d'altitude",
+      "caracteristiques_rapides": "Vallée de la Valpolicella Classica (Gargagnago), terre de Masi et Serego Alighieri : crus d'altitude réputés (Mazzano, Campolongo di Torbe).",
+      "notes_objectives": "Sant'Ambrogio di Valpolicella, qui englobe le hameau de Gargagnago, est l'une des vallées historiques de la Valpolicella Classica. Ses coteaux, sur calcaires et tufs, montent jusqu'à des altitudes élevées qui abritent des crus réputés.\n\nC'est ici que se trouvent Masi et le domaine Serego Alighieri (propriété des descendants de Dante), ainsi que les crus d'altitude Mazzano et Campolongo di Torbe, qui donnent des Amarone parmi les plus profonds et les plus aptes à la garde de l'appellation. Les hauteurs de Sant'Ambrogio, fraîches et bien exposées, permettent des maturités équilibrées et des vins d'une grande longévité.\n\nVallée de la Valpolicella Classica riche en crus d'altitude, Sant'Ambrogio est l'un des secteurs les plus réputés de l'appellation, terre de grands Amarone de garde.\n\nLes crus d'altitude du secteur, comme Mazzano et Campolongo di Torbe, bénéficient de fortes amplitudes thermiques qui préservent fraîcheur et arômes, et donnent des Amarone d'une grande longévité, produits uniquement dans les meilleurs millésimes. Masi, qui y exploite aussi le domaine Serego Alighieri, a largement contribué à faire connaître ces vins de cru. Servis sur la grande cuisine ou attendus deux décennies, les Amarone de Sant'Ambrogio figurent parmi les plus profonds de la Valpolicella Classica, et illustrent tout l'intérêt des hauteurs de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "santambrogio",
+        "gargagnago",
+        "classica"
+      ],
+      "source": "allamarone|winescurated"
+    },
+    {
+      "id": "it-veneto-terr-san-pietro-in-cariano",
+      "nom": "San Pietro in Cariano",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "alluvions, calcaires et marnes",
+      "caracteristiques_rapides": "Vallée centrale de la Valpolicella Classica (Pedemonte), cœur des Famiglie Storiche : Tommasi, Speri, Nicolis, Brigaldara.",
+      "notes_objectives": "San Pietro in Cariano, qui englobe le hameau de Pedemonte, est la vallée centrale de la Valpolicella Classica et le cœur historique de l'appellation. Sur des sols mêlant alluvions, calcaires et marnes, elle réunit une densité exceptionnelle de grands domaines.\n\nC'est ici que sont installées plusieurs des Famiglie Storiche — Tommasi, Speri, Nicolis, Brigaldara — qui ont façonné l'image classique de l'Amarone. Le secteur produit des vins amples et structurés, dans le registre généreux et traditionnel de l'appellation, et concentre une grande part du savoir-faire historique de la Valpolicella.\n\nCœur de la Valpolicella Classica, San Pietro in Cariano est la vallée des familles historiques et des Amarone classiques, l'un des secteurs les plus emblématiques et les plus densément plantés de l'appellation.\n\nLa densité de grands domaines y est exceptionnelle : sur ce seul secteur se concentrent plusieurs des familles historiques qui ont défini l'image classique de l'Amarone, élevé en grands foudres dans un registre généreux et traditionnel. Le savoir-faire accumulé, la diversité des parcelles et la proximité de la plaine comme des coteaux font de San Pietro in Cariano un véritable carrefour de la Valpolicella Classica. Servis sur des plats riches, ses Amarone conjuguent ampleur, structure et fidélité au style historique de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "san-pietro-in-cariano",
+        "classica"
+      ],
+      "source": "winescurated"
+    },
+    {
+      "id": "it-veneto-terr-val-dillasi",
+      "nom": "Val d'Illasi",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "sols caillouteux et calcaires de la vallée orientale",
+      "caracteristiques_rapides": "Vallée orientale de la Valpolicella, plus fraîche : terre de Romano Dal Forno (Cellore), Amarone d'une grande intensité.",
+      "notes_objectives": "La Val d'Illasi est l'une des vallées orientales de la Valpolicella, à l'écart de la zone Classica historique. Plus fraîche et plus ouverte, elle s'est imposée ces dernières décennies comme un terroir de premier plan.\n\nC'est à Cellore d'Illasi que Romano Dal Forno a établi son domaine et son vignoble du Monte Lodoletta, donnant des Amarone d'une intensité et d'une précision extrêmes. Sur des sols caillouteux et calcaires, la vallée donne des vins d'une grande profondeur, où la fraîcheur du secteur tempère la puissance de l'appassimento. La Val d'Illasi a ainsi prouvé que les plus grands vins de Valpolicella pouvaient naître hors de la zone Classica.\n\nVallée orientale devenue terre de grands Amarone, la Val d'Illasi doit beaucoup à l'aura de Dal Forno et compte parmi les secteurs les plus réputés de la Valpolicella contemporaine.\n\nLa fraîcheur de la vallée, plus marquée que dans la zone Classica, tempère la puissance de l'appassimento et préserve l'équilibre des vins. Au-delà de Dal Forno, d'autres producteurs y travaillent des Amarone et Valpolicella de belle tenue. En quelques décennies, la Val d'Illasi a bouleversé la hiérarchie de l'appellation en démontrant que les plus grands vins de Valpolicella pouvaient naître hors de la zone Classica historique, sur les coteaux orientaux. C'est aujourd'hui l'un des secteurs les plus respectés et les plus convoités de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "illasi",
+        "dal-forno",
+        "orientale"
+      ],
+      "source": "allamarone"
+    },
+    {
+      "id": "it-veneto-terr-mazzano",
+      "nom": "Mazzano",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~350-500 m",
+      "sols": "calcaires d'altitude exposés",
+      "caracteristiques_rapides": "Cru d'altitude de la haute Valpolicella (Negrar), vigna emblématique de Masi : l'un des Amarone les plus profonds et de plus longue garde.",
+      "notes_objectives": "Mazzano est un cru d'altitude de la haute vallée de Negrar, dans la Valpolicella Classica. Perché sur des coteaux calcaires bien exposés, autour de 350 à 500 mètres, c'est l'un des terroirs les plus élevés et les plus réputés de l'appellation.\n\nL'altitude y assure une maturité lente et des amplitudes thermiques marquées, qui préservent fraîcheur et arômes. Mazzano est la vigna emblématique de Masi, qui en tire l'un de ses Amarone les plus profonds, les plus complexes et les plus aptes à la très longue garde, produit uniquement dans les grands millésimes. Le caractère d'altitude imprime aux vins une élégance et une tension singulières.\n\nCru d'altitude d'exception, Mazzano illustre le potentiel des hauteurs de la Valpolicella Classica, et donne des Amarone parmi les plus profonds et les plus aptes au vieillissement de l'appellation.\n\nL'altitude et l'exposition de ce cru imposent des maturités lentes et des rendements faibles, qui concentrent les raisins tout en préservant l'acidité. Masi y vinifie son Amarone Mazzano séparément, comme un véritable cru parcellaire, dans une démarche rare pour l'appellation. Le résultat est un vin d'une profondeur et d'une longévité exceptionnelles, austère dans sa jeunesse mais bâti pour traverser les décennies. Mazzano illustre, mieux que tout autre, le potentiel des hauteurs de Negrar et de la Valpolicella Classica.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "mazzano",
+        "masi",
+        "altitude",
+        "vigna"
+      ],
+      "source": "allamarone|winescurated"
+    },
+    {
+      "id": "it-veneto-terr-valpantena",
+      "nom": "Valpantena",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "sols calcaires de la vallée parallèle",
+      "caracteristiques_rapides": "Sottozona de la vallée parallèle à l'est de la Classica, terre de Bertani : Amarone de style classique et de longue garde.",
+      "notes_objectives": "La Valpantena est une sottozona de la Valpolicella, occupant une vallée parallèle à la zone Classica, juste à l'est de Vérone. Sur des sols essentiellement calcaires, elle constitue un terroir bien identifié, mention que les producteurs peuvent porter sur l'étiquette.\n\nC'est ici que se trouve le berceau de Bertani, gardienne du style classique de l'Amarone : des vins amples, équilibrés et d'une longévité remarquable. La Valpantena, plus large et en partie travaillée par la coopération, donne des Amarone et Valpolicella de bon niveau, dans un registre traditionnel.\n\nSottozona historique de la Valpolicella, la Valpantena est indissociable du style classique de l'Amarone incarné par Bertani, et demeure un terroir de référence de l'appellation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "valpantena",
+        "bertani",
+        "sottozona"
+      ],
+      "source": "allamarone"
+    },
+    {
+      "id": "it-veneto-terr-val-di-mezzane",
+      "nom": "Val di Mezzane",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Valpolicella",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Corvinone",
+        "Rondinella"
+      ],
+      "altitude": "~100-350 m",
+      "sols": "calcaires et marnes de la vallée orientale",
+      "caracteristiques_rapides": "Vallée orientale fraîche et ventée : Amarone et Valpolicella d'élégance et de fraîcheur (Corte Sant'Alda, Roccolo Grassi).",
+      "notes_objectives": "La Val di Mezzane est l'une des vallées orientales de la Valpolicella, à l'écart de la zone Classica. Plus fraîche et plus ventée, elle s'est imposée comme un terroir d'élégance.\n\nSur des sols de calcaires et de marnes, la vallée donne des Amarone et des Valpolicella d'une fraîcheur et d'une finesse particulières, où la ventilation et les amplitudes thermiques préservent l'acidité et les arômes. C'est le terroir de domaines réputés comme Corte Sant'Alda (en biodynamie) et Roccolo Grassi, qui y signent des vins lumineux et précis.\n\nVallée orientale fraîche, la Val di Mezzane illustre le visage le plus élégant de la Valpolicella, avec des vins de finesse qui tranchent avec les Amarone les plus puissants.\n\nLa ventilation et les amplitudes thermiques de la vallée préservent l'acidité et les arômes, et donnent des vins plus frais et digestes que les Amarone les plus puissants. Corte Sant'Alda, en biodynamie, et Roccolo Grassi y ont fait de la Val di Mezzane l'un des secteurs phares du renouveau de la Valpolicella vers l'élégance et la fraîcheur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "valpolicella",
+        "mezzane",
+        "orientale",
+        "fraicheur"
+      ],
+      "source": "decanter|garrafeira"
+    },
+    {
+      "id": "it-veneto-terr-cartizze",
+      "nom": "Cartizze",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Glera"
+      ],
+      "altitude": "~250-350 m",
+      "sols": "grès marins, argiles et sables, fortes pentes",
+      "caracteristiques_rapides": "Le « grand cru » du Prosecco : pentagone de 107 ha sur les coteaux les plus pentus de Valdobbiadene (San Pietro di Barbozza, Santo Stefano, Saccol), bulles fines et raffinées.",
+      "notes_objectives": "Le Cartizze est, sans conteste, le « grand cru » du Prosecco : un pentagone d'à peine 107 hectares niché sur les coteaux les plus pentus de Valdobbiadene, entre les frazioni de San Pietro di Barbozza, Santo Stefano et Saccol. Ces terres, parmi les plus chères d'Italie au mètre carré, occupent le cœur des collines classées au patrimoine mondial de l'UNESCO depuis 2019.\n\nLes sols, mêlant grès marins, argiles et sables, et l'exposition idéale de ces pentes vertigineuses — où la vendange se fait entièrement à la main, parfois suspendu aux flancs des collines — donnent une Glera d'une maturité et d'une finesse particulières. Le Cartizze se décline le plus souvent en version Dry, légèrement plus dosée, qui met en valeur son fruit mûr (poire, pomme, pêche), ses notes florales et sa texture crémeuse, dans un équilibre raffiné entre douceur, acidité et bulle fine. C'est l'expression la plus prestigieuse et la plus élégante du Prosecco Superiore.\n\nSommet de la hiérarchie du Prosecco, le Cartizze incarne la viticulture héroïque de coteau et la quintessence de la Glera. Travaillé par les meilleures maisons de Valdobbiadene, il demeure le grand cru qui hisse toute la dénomination vers le haut.\n\nLa singularité du Cartizze tient à la conjonction d'une exposition idéale, plein sud, et de pentes parmi les plus raides du vignoble italien, où chaque geste se fait à la main, parfois à l'aide de treuils ou suspendu aux flancs des collines. Cette viticulture héroïque, et la rareté foncière du secteur, expliquent le prix des terres, parmi les plus élevés d'Europe. Le morcellement de la propriété y est extrême, chaque grande maison de Valdobbiadene possédant souvent quelques rangs convoités.\n\nSi le Cartizze se décline traditionnellement en Dry, plus rond, certaines maisons en proposent aussi des versions plus sèches qui en révèlent la pureté et la tension. Dans tous les cas, la finesse de la bulle, l'intensité du fruit et la longueur distinguent ces vins du Prosecco courant. Le Cartizze illustre à lui seul tout ce qui sépare le Prosecco Superiore de coteau des immenses volumes de Prosecco DOC de plaine : un travail manuel, des rendements maîtrisés et une véritable expression de terroir.\n\nJoyau de Valdobbiadene et grand cru incontesté de la Glera, le Cartizze hisse toute la dénomination vers le haut et demeure l'expression la plus prestigieuse et la plus raffinée du Prosecco.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "prosecco",
+        "cartizze",
+        "valdobbiadene",
+        "grand-cru",
+        "glera"
+      ],
+      "source": "winesearcher|falstaff"
+    },
+    {
+      "id": "it-veneto-terr-rive-di-san-floriano",
+      "nom": "Rive di San Floriano",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Glera"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "grès et argiles de coteau escarpé",
+      "caracteristiques_rapides": "Rive (cru de coteau) de Valdobbiadene, fleuron de Nino Franco : Prosecco Superiore d'une définition et d'une aptitude à la garde remarquables.",
+      "notes_objectives": "Les « Rive » désignent, dans le Prosecco Superiore, les coteaux les plus escarpés rattachés à une commune ou à un hameau précis, vendangés à la main et toujours millésimés — l'équivalent de petits crus. La Rive di San Floriano, sur les pentes de Valdobbiadene, est l'une des plus réputées.\n\nSur des sols de grès et d'argiles de coteau escarpé, la Glera y donne un Prosecco Superiore d'une grande définition et d'une finesse particulière. C'est le fleuron de la maison Nino Franco, référence qualitative de la dénomination, dont le Rive di San Floriano révèle une aptitude au vieillissement rare pour un Prosecco. La forte pente et l'exposition de ces coteaux signent des vins tendus, purs et persistants.\n\nRive de premier plan de Valdobbiadene, San Floriano illustre tout ce que le Prosecco Superiore de coteau peut offrir de précision et de finesse, et figure parmi les expressions les plus abouties de la dénomination.\n\nLa forte déclivité de ces coteaux impose une viticulture entièrement manuelle, gage de sélection rigoureuse et de qualité. Nino Franco, qui a fêté ses cent ans, y puise son flagship et démontre, par des verticales remontant aux années 1980, que ce Prosecco de coteau peut vieillir et gagner en complexité — chose rare dans la dénomination. La Rive di San Floriano incarne ainsi la montée en gamme du Prosecco Superiore, où l'origine précise et le travail de coteau priment sur le volume, et compte parmi les Rive les plus réputées de Valdobbiadene.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "prosecco",
+        "rive",
+        "san-floriano",
+        "nino-franco",
+        "glera"
+      ],
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-veneto-terr-rive-di-santo-stefano",
+      "nom": "Rive di Santo Stefano",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Glera"
+      ],
+      "altitude": "~200-350 m",
+      "sols": "grès et argiles des coteaux de Valdobbiadene",
+      "caracteristiques_rapides": "Rive au cœur de Valdobbiadene, secteur de Ruggeri et des plus belles pentes : Prosecco Superiore fin et expressif.",
+      "notes_objectives": "La Rive di Santo Stefano se situe au cœur de Valdobbiadene, dans le hameau qui concentre certaines des plus belles pentes du Prosecco Superiore. C'est l'un des secteurs les plus réputés de la dénomination.\n\nSur des sols de grès et d'argiles, la Glera y donne un Prosecco fin et expressif, aux arômes de fruits frais et de fleurs, à la bulle délicate et à la trame saline. Santo Stefano est le berceau de maisons de référence comme Ruggeri, qui y puise ses meilleures cuvées. La forte déclivité des coteaux impose une viticulture entièrement manuelle, gage de sélection et de qualité.\n\nRive emblématique au cœur de Valdobbiadene, Santo Stefano donne des Prosecco Superiore précis et expressifs, parmi les plus représentatifs de l'excellence de la dénomination.\n\nLa forte déclivité des coteaux de Santo Stefano impose une vendange entièrement manuelle, et le millésime figure toujours sur l'étiquette des Rive. Ruggeri, l'une des maisons phares de la dénomination, y puise ses meilleures cuvées, dont des sélections de vieilles vignes qui révèlent toute la profondeur dont la Glera est capable. Au cœur du village qui concentre certaines des plus belles pentes de Valdobbiadene, Santo Stefano illustre l'excellence du Prosecco Superiore de coteau et la valeur des terroirs les plus pentus de la dénomination.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "prosecco",
+        "rive",
+        "santo-stefano",
+        "glera"
+      ],
+      "source": "gamberorosso|doctorwine"
+    },
+    {
+      "id": "it-veneto-terr-rive-di-colbertaldo",
+      "nom": "Rive di Colbertaldo",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Conegliano-Valdobbiadene",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Glera"
+      ],
+      "altitude": "~150-300 m",
+      "sols": "grès, argiles et sables de coteau",
+      "caracteristiques_rapides": "Rive de Vidor abritant le Vigneto Giardino (Adami), l'un des grands sites historiques du Prosecco : cuvées de cru parmi les plus réputées.",
+      "notes_objectives": "La Rive di Colbertaldo, dans la commune de Vidor, abrite l'un des sites les plus historiques du Prosecco : le Vigneto Giardino, dans la famille Adami depuis 1933. C'est l'une des Rive les plus réputées de la dénomination.\n\nSur des sols de grès, d'argiles et de sables de coteau, la Glera y donne un Prosecco Superiore au fruit mûr et généreux, souvent embouteillé en Dry pour en révéler toute l'expression. Le travail de cru d'Adami, sur ce site historique, a contribué à faire reconnaître la valeur des terroirs du Prosecco. Les coteaux de Colbertaldo offrent une belle harmonie entre fruit, fraîcheur et finesse.\n\nRive historique du Prosecco, Colbertaldo et son Vigneto Giardino comptent parmi les sites les plus emblématiques de la dénomination, témoins de l'ancienneté de la viticulture de cru à Valdobbiadene.\n\nLe Vigneto Giardino, conduit comme un cru depuis près d'un siècle, est l'un des symboles de l'ancienneté de la viticulture de parcelle dans le Prosecco, bien avant la reconnaissance officielle des Rive. Adami, qui sélectionne par ailleurs ses raisins sur une trentaine de secteurs, y signe des cuvées au fruit mûr et généreux, souvent embouteillées en Dry pour en révéler toute l'expression. Colbertaldo et son Giardino témoignent ainsi que le Prosecco de terroir possède, lui aussi, ses sites historiques et ses crus, à l'image des grandes régions effervescentes.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "prosecco",
+        "rive",
+        "colbertaldo",
+        "adami",
+        "glera"
+      ],
+      "source": "gamberorosso|falstaff"
+    },
+    {
+      "id": "it-veneto-terr-asolo-colli-asolani",
+      "nom": "Asolo (Colli Asolani)",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Asolo (Colli Asolani)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Glera"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "argiles et calcaires des contreforts du Grappa",
+      "caracteristiques_rapides": "DOCG distincte sur les collines d'Asolo, au pied du Monte Grappa : Prosecco Superiore plus confidentiel, souvent vinifié en Brut Nature ou Extra Brut.",
+      "notes_objectives": "Asolo, ou Colli Asolani, est une DOCG distincte du Prosecco, sur les collines qui s'étendent au pied du Monte Grappa, à l'ouest de Conegliano-Valdobbiadene. Plus confidentielle que sa célèbre voisine, elle revendique une identité propre.\n\nSur des sols d'argiles et de calcaires, la Glera y donne un Prosecco Superiore souvent vinifié dans des versions plus sèches — Brut Nature ou Extra Brut — qui mettent en avant la tension et la pureté du cépage. Le secteur, plus petit et plus récent en notoriété, séduit par des bulles fraîches et précises, parfois plus gastronomiques que les Prosecco classiques.\n\nDOCG voisine et complémentaire de Conegliano-Valdobbiadene, Asolo offre un Prosecco Superiore plus confidentiel et souvent plus sec, témoin de la diversité des terroirs de la Glera.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "prosecco",
+        "asolo",
+        "colli-asolani",
+        "docg",
+        "glera"
+      ],
+      "source": "winesearcher|vino"
+    },
+    {
+      "id": "it-veneto-terr-lugana",
+      "nom": "Lugana",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Lugana",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Turbiana"
+      ],
+      "altitude": "~50-130 m",
+      "sols": "argiles calcaires d'origine glaciaire, riches en sels minéraux",
+      "caracteristiques_rapides": "Sur la rive sud du Garda, terroir d'argile blanche : la Turbiana (Trebbiano di Lugana) y donne des blancs salins, minéraux et étonnamment aptes à la garde (Ottella, Ca' dei Frati, Zenato).",
+      "notes_objectives": "La Lugana s'étend sur la rive sud du lac de Garde, à cheval sur les provinces de Vérone et de Brescia, sur un bassin d'argile d'origine glaciaire. Ces sols, riches en sels minéraux et façonnés par les moraines, constituent un terroir unique, célébré dès l'Antiquité par le poète Catulle.\n\nLe cépage Turbiana (Trebbiano di Lugana), proche du Verdicchio mais génétiquement distinct, y trouve son expression la plus aboutie : des blancs frais, salins et minéraux, aux notes d'agrumes, de fleurs et d'amande, qui peuvent gagner en complexité et vieillir plusieurs années dans leurs versions Superiore et Riserva. L'influence tempérante du lac et la finesse des argiles signent des vins d'une grande élégance. Ottella, Ca' dei Frati ou Zenato en sont les références.\n\nÉtoile montante des blancs italiens, la Lugana offre, sur ses argiles glaciaires, des Turbiana salins et élégants d'une finesse insoupçonnée, qui ont fait sa réputation internationale grandissante.\n\nSi la majorité des Lugana se boivent jeunes, sur leur fraîcheur saline, les meilleures cuvées — Superiore, Riserva ou de vieilles vignes — démentent l'image d'un simple blanc de soif estival : elles développent, avec quelques années, des notes d'amande, de fruits mûrs et de miel, et une texture qui gagne en complexité. La popularité de la Lugana a explosé ces dernières années, au point que sa surface a été multipliée plusieurs fois depuis 2000. Servie sur des poissons de lac, des fruits de mer ou des risottos, la Turbiana de Lugana confirme son statut de grand blanc italien en pleine ascension, porté par des domaines comme Ottella, Ca' dei Frati ou Zenato.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lugana",
+        "turbiana",
+        "garda",
+        "argile",
+        "blanc"
+      ],
+      "source": "decanter|ottella"
+    },
+    {
+      "id": "it-veneto-terr-gambellara",
+      "nom": "Gambellara",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Gambellara",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega"
+      ],
+      "altitude": "~50-250 m",
+      "sols": "basaltes volcaniques, prolongement du Soave",
+      "caracteristiques_rapides": "Voisine volcanique du Soave : la Garganega y donne des blancs salins et énergiques, terre du vin nature (La Biancara) et du Recioto di Gambellara.",
+      "notes_objectives": "Gambellara est une petite appellation volcanique située juste à l'est du Soave, dont elle prolonge la veine basaltique. Sur ces sols noirs d'origine volcanique, la Garganega trouve un terroir d'élection.\n\nLes vins y sont salins, énergiques et minéraux, dans le sillage du Soave mais avec une identité propre. Gambellara est surtout devenue célèbre comme haut lieu du vin nature, grâce au domaine La Biancara d'Angiolino Maule, figure majeure du mouvement. L'appellation produit aussi un Recioto di Gambellara, liquoreux passerillé issu de Garganega.\n\nVoisine volcanique du Soave, Gambellara offre des Garganega salines et vibrantes, et s'est imposée comme une référence du vin nature et des blancs de caractère du Veneto.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gambellara",
+        "garganega",
+        "volcanique",
+        "nature"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-terr-bardolino",
+      "nom": "Bardolino",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Bardolino",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Corvina",
+        "Rondinella"
+      ],
+      "altitude": "~70-250 m",
+      "sols": "moraines glaciaires et sols caillouteux du Garda",
+      "caracteristiques_rapides": "Sur la rive est du Garda : Corvina et Rondinella en rouges légers et fruités et en Chiaretto (rosé) ; sottozone récentes Montebaldo, La Rocca, Sommacampagna.",
+      "notes_objectives": "Bardolino s'étend sur la rive est du lac de Garde, sur des sols morainiques d'origine glaciaire et des coteaux caillouteux. L'influence tempérante du lac y façonne un style de vin léger et fruité.\n\nÀ partir de Corvina et de Rondinella — les cépages de la Valpolicella voisine —, Bardolino produit des rouges souples, frais et gourmands, ainsi qu'un rosé réputé, le Chiaretto, d'une grande buvabilité. L'appellation a récemment introduit des sottozone (Montebaldo, La Rocca, Sommacampagna) pour mieux valoriser la diversité de ses terroirs. Les vins, à boire plutôt jeunes, séduisent par leur légèreté et leur fraîcheur.\n\nAppellation conviviale du Garda, Bardolino offre des rouges légers et des Chiaretto fruités, expressions rafraîchissantes des cépages véronais, désormais affinées par un zonage récent.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bardolino",
+        "garda",
+        "chiaretto",
+        "corvina",
+        "sottozona"
+      ],
+      "source": "quattrocalici|wikipedia"
+    },
+    {
+      "id": "it-veneto-terr-custoza",
+      "nom": "Custoza",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Custoza",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Garganega",
+        "Trebbiano Toscano",
+        "Cortese"
+      ],
+      "altitude": "~50-200 m",
+      "sols": "collines morainiques au sud du Garda",
+      "caracteristiques_rapides": "Sur les collines morainiques au sud du Garda : assemblage blanc (Garganega, Trebbiano, Bianca Fernanda) frais, floral et gourmand.",
+      "notes_objectives": "Custoza, ou Bianco di Custoza, s'étend sur les collines morainiques au sud du lac de Garde, voisines de celles du Bardolino. Ces sols d'origine glaciaire et le climat tempéré par le lac en font un terroir propice aux blancs.\n\nLe Custoza est un vin d'assemblage, élaboré à partir de Garganega, Trebbiano Toscano, Bianca Fernanda (un clone local de Cortese) et d'autres cépages : un blanc frais, floral et gourmand, à la trame souple et au fruit immédiat. C'est l'un des blancs de soif les plus appréciés de la région véronaise, à boire jeune sur sa fraîcheur.\n\nBlanc d'assemblage des collines morainiques du sud du Garda, le Custoza séduit par sa fraîcheur florale et sa buvabilité, complément naturel des rouges légers de Bardolino.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "custoza",
+        "garda",
+        "morenico",
+        "blanc",
+        "assemblage"
+      ],
+      "source": "wikipedia"
+    },
+    {
+      "id": "it-veneto-terr-lessini-monti-lessini",
+      "nom": "Lessini (Monti Lessini)",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Lessini (Monti Lessini)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Durella"
+      ],
+      "altitude": "~200-600 m",
+      "sols": "basaltes volcaniques des Monti Lessini",
+      "caracteristiques_rapides": "Sur les hauteurs volcaniques des Lessini : le cépage Durella, très acide, donne des effervescents (Lessini Durello) tendus et minéraux, souvent en méthode classique.",
+      "notes_objectives": "Les Monti Lessini, au nord de Vérone et de Vicence, forment un massif volcanique d'altitude où l'on cultive un cépage rare et très acide, la Durella. Ces sols de basalte et ces hauteurs fraîches en font un terroir à part.\n\nLa Durella, à la forte acidité naturelle, est idéalement adaptée à l'effervescent : le Lessini Durello, élaboré en cuve close ou en méthode classique, séduit par sa tension, sa minéralité et ses notes d'agrumes, de fruits exotiques et d'épices. Les meilleures cuvées, vinifiées en méthode traditionnelle avec un long élevage sur lies, atteignent une belle complexité. Le caractère volcanique signe des bulles droites et salines.\n\nTerroir volcanique d'altitude, les Monti Lessini donnent, avec la Durella, des effervescents tendus et minéraux d'un grand potentiel, encore confidentiels mais en pleine ascension.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lessini",
+        "durello",
+        "durella",
+        "volcanique",
+        "effervescent"
+      ],
+      "source": "winescritic|wikipedia"
+    },
+    {
+      "id": "it-veneto-terr-colli-euganei",
+      "nom": "Colli Euganei",
+      "type": "lieu-dit",
+      "region": "Veneto",
+      "sous_region": "Colli Euganei",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Moscato Giallo",
+        "Merlot",
+        "Glera"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "collines volcaniques d'origine éruptive près de Padoue",
+      "caracteristiques_rapides": "Collines volcaniques isolées près de Padoue : palette large allant du Fior d'Arancio (Moscato Giallo, doux et sec) aux rouges bordelais et au Serprino effervescent.",
+      "notes_objectives": "Les Colli Euganei forment un archipel de collines volcaniques isolées au sud-ouest de Padoue, d'origine éruptive. Cette géologie singulière et ce climat particulier en font un terroir d'une grande diversité.\n\nL'appellation décline une palette large : le Fior d'Arancio (Moscato Giallo), en versions douce, sèche et effervescente, en est l'emblème aromatique ; les rouges, souvent d'inspiration bordelaise (Cabernet, Merlot), peuvent atteindre une belle profondeur ; le Serprino (à base de Glera) offre un effervescent local convivial. La matrice volcanique apporte minéralité et caractère à l'ensemble.\n\nTerroir volcanique méconnu près de Padoue, les Colli Euganei surprennent par leur diversité, du Fior d'Arancio aromatique aux rouges structurés, et constituent l'un des secteurs les plus originaux du Veneto.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "colli-euganei",
+        "volcanique",
+        "moscato",
+        "fior-darancio",
+        "padova"
+      ],
+      "source": "wikipedia"
+    }
+  ]
+}

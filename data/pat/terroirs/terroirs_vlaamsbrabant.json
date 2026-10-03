@@ -1,0 +1,317 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "vlaamsbrabant",
+  "region_label": "Vlaams-Brabant",
+  "source_file": "terroirs_vlaamsbrabant_To_Import.xlsx",
+  "built_at": "2026-07-30",
+  "count": 12,
+  "items": [
+    {
+      "id": "be-vlaamsbrabant-terr-houwaartseberg",
+      "nom": "Houwaartseberg",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Ortega",
+        "Chardonnay"
+      ],
+      "altitude": "env. 30-63 m",
+      "sols": "Sable limoneux sur grès ferrugineux diestien (ijzerzandsteen)",
+      "caracteristiques_rapides": "La colline fondatrice de la viticulture belge moderne : Jos Daems y plante en 1970-1973 le plus ancien vignoble commercial du pays. Une dizaine de vignerons s'y partagent aujourd'hui le versant sud.",
+      "notes_objectives": "Soixante-trois mètres d'altitude : c'est peu, et c'est pourtant la colline la plus importante de l'histoire viticole belge. C'est sur son versant sud que Jos Daems plante, entre 1970 et 1973, le premier vignoble commercial du pays après plusieurs siècles d'interruption. Avec Marcel Saenen, Maurice Fol, Jacques Cypers et Achilles Schrevens, il fonde en 1972 l'association des Hagelandse wijnliefhebbers ; de ce noyau sortira, en 1997, la première appellation belge.\n\nLe sol est le grès ferrugineux diestien, coiffé d'une mince nappe de sable limoneux déposée par les vents glaciaires. La roche, brun rouille, emmagasine la chaleur du jour et la restitue lentement, ce qui compense une saison courte : la région annonce environ 1 600 heures d'ensoleillement, 11 °C de moyenne et 800 millimètres de pluie. Le bois de crête sert de brise-vent, et la position en hauteur réduit le gel printanier, l'air froid s'écoulant vers les vallons.\n\nLa colline est devenue le point de concentration du vignoble belge : plus de dix vignerons s'y partagent le versant, de la parcelle historique de 3,5 hectares aux vignobles de trente-cinq ares, auxquels s'ajoute le vignoble communal exploité par une coopérative de neuf producteurs. L'encépagement reste marqué par les choix des pionniers — Müller-Thurgau, Ortega —, avec du Chardonnay depuis 2012. Sentiers balisés et caves ouvertes en font le cœur de l'œnotourisme hagelandais.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "source": "perswijn.nl ; belgianwines.com ; vlaamsruraalnetwerk.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-wijngaardberg-de-wezemaal",
+      "nom": "Wijngaardberg de Wezemaal",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Bacchus",
+        "Sirius"
+      ],
+      "altitude": "env. 30-65 m",
+      "sols": "Sable limoneux sur grès ferrugineux diestien, terrasses",
+      "caracteristiques_rapides": "Le site viticole le plus chargé d'histoire du Hageland : un mur de pierre sèche de 1 546 mètres, élevé vers 1814 par le duc d'Ursel pour un vignoble en terrasses de trente hectares, replanté depuis 1999.",
+      "notes_objectives": "Le site viticole le plus spectaculaire de Flandre, et une leçon de méthode historique. La crête de la Wijngaardberg porte le Wijnmuur : un mur de pierre sèche en blocs de grès ferrugineux, long de 1 546 mètres, large de 1,7 mètre et haut de 2 mètres. On l'a longtemps cru médiéval, vestige d'une supposée grande viticulture d'abbayes ; l'étude des sources cadastrales a établi qu'il datait du début du XIXe siècle. Il fut élevé par le duc d'Ursel pour abriter un vignoble en terrasses d'une trentaine d'hectares, exploité de 1814 à 1845 environ.\n\nLa colline est un cas d'école de relief inversé. Des bancs de sable marins du Miocène, cimentés par l'oxyde de fer en un grès résistant, ont protégé de l'érosion les terrains qu'ils coiffaient : ce qui était le fond de la mer forme aujourd'hui le point haut. La pierre a été exploitée en carrière sur le versant nord et a servi à bâtir les églises de la région. En surface, une couche de sable limoneux éolien déposée pendant la dernière glaciation.\n\nLa viticulture y est attestée depuis le XIIe siècle, généralement dans des vignes d'abbayes destinées au vin de messe. Une association fondée en 1996 a replanté un hectare sur le versant sud à partir de 1999, avec six cépages blancs dont Chardonnay, Bacchus et Sirius, revendiqués en AOP Hagelandse wijn. Le centre d'interprétation du vin hagelandais est installé au pied de la colline.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "clos-historique"
+      ],
+      "source": "inventaris.onroerenderfgoed.be ; steenenmuur.be ; rotselaar.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-kluisberg-assent",
+      "nom": "Kluisberg (Assent)",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Pinot Gris",
+        "Kerner",
+        "Chardonnay",
+        "Lemberger"
+      ],
+      "altitude": "env. 40-70 m",
+      "sols": "Sable limoneux plus argileux que la moyenne régionale, sur grès ferrugineux",
+      "caracteristiques_rapides": "Coteau d'Assent, à Bekkevoort, où des ermites cultivaient déjà la vigne. Pentes raides et chargées de grès ferrugineux, avec une proportion d'argile qui donne des vins plus pleins qu'ailleurs dans le Hageland.",
+      "notes_objectives": "Un coteau d'Assent, à Bekkevoort, dont le nom garde la mémoire des ermites — kluizenaars — qui y cultivaient la vigne il y a des siècles. C'est aujourd'hui l'un des rares sites du Hageland exploité à une échelle professionnelle : sept à huit hectares d'un seul tenant, quelque vingt-cinq mille pieds, conduits par une même famille depuis 1983 et sur trois générations.\n\nLa particularité pédologique mérite d'être notée parce qu'elle est mesurable dans le verre. Le substrat est le grès ferrugineux diestien commun à toute la région, mais la couverture de sable limoneux y contient une proportion d'argile plus élevée que la moyenne hagelandaise. Conséquence : une meilleure réserve hydrique, une maturation plus régulière et des vins d'un caractère plus plein que ceux des versants sableux voisins — la critique belge en fait le trait distinctif du lieu. Les parcelles occupent les positions hautes, sur des pentes raides bien exposées.\n\nL'encépagement est entièrement classique, ce qui est minoritaire dans une région largement acquise aux cépages résistants : Müller-Thurgau, Pinot Gris, Pinot Blanc, Kerner et Chardonnay en blanc, Lemberger, Dornfelder et Merlot en rouge. Le site fournit une gamme complète en AOP Hagelandse wijn, y compris en rouge, ce qui reste rare à cette latitude et tient autant au sol qu'au choix de variétés allemandes précoces.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "source": "wineguidebelgium.be ; kluisberg.be ; visitvlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-deelberg-tienen",
+      "nom": "Deelberg (Tienen)",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 50-80 m",
+      "sols": "Sable limoneux sur substrat tertiaire, transition vers les limons hesbignons",
+      "caracteristiques_rapides": "Colline au nord de Tienen, plantée en 1993 de cépages résistants et conduite en bio dès l'origine : le berceau de la viticulture biologique belge, à la limite méridionale du Hageland.",
+      "notes_objectives": "Colline au nord de Tienen, à la limite méridionale du Hageland, là où les buttes de grès ferrugineux cèdent la place au plateau limoneux betteravier de la Hesbaye brabançonne. Les sols y sont des sables limoneux sur substrat tertiaire, plus légers que les loess du sud.\n\nLe site a une valeur documentaire particulière : c'est ici qu'ont été plantés en 1993 trois mille pieds de cépages résistants, conduits sans engrais chimiques, sans insecticides ni herbicides. Le vignoble porte le label Biogarantie depuis 1995 et le label bio européen depuis la vendange 2012. À cette date, les PIWI relevaient encore de l'expérimentation en Belgique : le Deelberg est de fait le berceau de la viticulture biologique belge, et l'argument avancé alors reste valable — la sortie progressive du cuivre rend les résistants indispensables sous climat atlantique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "bio",
+        "piwi"
+      ],
+      "source": "hageling-bio.be ; toerismevlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-beninksberg-et-chartreuzenberg-holsbeek",
+      "nom": "Beninksberg et Chartreuzenberg (Holsbeek)",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-60 m",
+      "sols": "Sable limoneux sur grès ferrugineux diestien",
+      "caracteristiques_rapides": "Deux buttes diestiennes de la frange occidentale du Hageland, là où les collines s'abaissent vers la vallée de la Dyle. Toponymie héritée des chartreux de Louvain.",
+      "notes_objectives": "Deux buttes diestiennes de Holsbeek, sur la frange occidentale du Hageland, là où les collines s'abaissent vers la vallée de la Dyle. La fédération range ce secteur sous l'appellation de région vallonnée du Brabant oriental.\n\nMême géologie que partout dans la région — sable limoneux sur grès ferrugineux, versants sud courts et bien exposés — mais avec deux caractéristiques propres. La proximité de Louvain, à quelques kilomètres, donne à ces micro-vignobles un bassin de clientèle que n'ont pas les collines de l'est. Et la toponymie garde la trace des abbayes brabançonnes : le Chartreuzenberg renvoie à un ancien bien des chartreux de Louvain, rappel que ces coteaux étaient exploités avant que le petit âge glaciaire n'efface la vigne de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "source": "chartreuzenberg.be ; graevenberger.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-haksberg-et-weydenbosch-tielt-winge",
+      "nom": "Haksberg et Weydenbosch (Tielt-Winge)",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-60 m",
+      "sols": "Sable limoneux sur grès ferrugineux, lisières boisées de crête",
+      "caracteristiques_rapides": "Versants de la commune la plus viticole du Hageland, entre la Houwaartseberg et le Vlooybergtoren. Vignobles adossés à des domaines boisés et à une activité d'accueil.",
+      "notes_objectives": "Versants de Tielt-Winge, commune la plus viticole du Hageland, entre la Houwaartseberg et le Vlooybergtoren. Sable limoneux sur grès ferrugineux, pentes courtes, lisières boisées en crête : le paysage type de la région, où le couvert forestier de sommet joue un rôle réel de brise-vent sur les parcelles de versant.\n\nLe secteur illustre un modèle économique plus qu'un terroir distinct : les vignobles y sont adossés à des domaines boisés, à des maisons de maître du XIXe siècle et à une activité d'accueil — visites, dégustations, événements. À trois hectares et demi pour le plus étendu, aucune de ces exploitations ne vivrait de la seule vente de bouteilles. L'encépagement mêle cépages traditionnels et variétés résistantes, sans qu'aucune liste complète soit publiée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen"
+      ],
+      "source": "wijndomeinhaksberg.be ; terweydenbosch.com"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-flanc-sud-de-linden-lubbeek",
+      "nom": "Flanc sud de Linden (Lubbeek)",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Tempranillo",
+        "Grüner Veltliner"
+      ],
+      "altitude": "env. 30-60 m",
+      "sols": "Argile limoneuse sur sous-couche ferrugineuse",
+      "caracteristiques_rapides": "Versant sud du domaine du Witte Kasteel, à l'ouest du Hageland : plus de 33 000 pieds plantés depuis 2013, dont des cépages méridionaux plantés en pari sur le réchauffement.",
+      "notes_objectives": "Versant sud du domaine du Witte Kasteel, à Linden, aux portes de Louvain : un cas isolé dans le Hageland occidental, par l'échelle comme par l'ambition. Plus de trente-trois mille pieds y ont été plantés depuis 2013, sur sept à onze hectares selon les sources.\n\nLe sol se distingue de la norme régionale : une argile limoneuse posée sur une sous-couche ferrugineuse, donc plus lourde et plus fraîche que les sables limoneux des collines voisines. C'est aussi le site le plus expérimental de la province en matière d'encépagement — à côté du Chardonnay, du Pinot Noir et du Riesling, on y trouve Tempranillo, Albariño, Barbera et les Veltliner, plantés en pari explicite sur le réchauffement du climat. Le lieu a donc une valeur d'observation : il dira dans quinze ans si les cépages méridionaux tiennent à cette latitude.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "ijzerzandsteen",
+        "jeune-domaine"
+      ],
+      "source": "wijnkasteel-vandeurzen.be ; visitvlaamsbrabant.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-vallee-du-gete-geetbets-linter",
+      "nom": "Vallée du Gete (Geetbets, Linter)",
+      "type": "secteur",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Hageland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 25-60 m",
+      "sols": "Sols sablo-limoneux passant aux limons de la Hesbaye brabançonne",
+      "caracteristiques_rapides": "Extrémité orientale du Hageland, en limite du Limbourg : zone de transition où les collines de grès ferrugineux cèdent la place au plateau limoneux betteravier. Plantations des années 2020.",
+      "notes_objectives": "Extrémité orientale du Hageland, en limite de la province de Limbourg, de part et d'autre de la vallée du Gete. Zone de transition au sens propre : les dernières buttes de grès ferrugineux y cèdent la place au plateau limoneux qui court ensuite sans interruption jusqu'à Saint-Trond et Tongres.\n\nLes sols sont sablo-limoneux à Geetbets, franchement limoneux à Linter : profonds, fertiles, sans le drainage rapide des versants diestiens, ce qui déplace l'enjeu technique vers la maîtrise de la vigueur. Les plantations y sont récentes, presque toutes postérieures à 2020, et le secteur est intéressant à suivre pour une raison précise : la vigne y arrive par le Hageland et ses cépages résistants, mais les conditions pédologiques sont déjà celles de la Hesbaye, où dominent Chardonnay et Pinots. On saura d'ici une décennie laquelle des deux logiques l'emporte.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "hageland",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "toerismevlaamsbrabant.be ; beenshoeve.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-plateau-du-pajottenland-gooik-pepingen-lennik",
+      "nom": "Plateau du Pajottenland (Gooik, Pepingen, Lennik)",
+      "type": "secteur",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Sirius",
+        "Merzling",
+        "Regent",
+        "Léon Millot"
+      ],
+      "altitude": "env. 50-110 m",
+      "sols": "Limons de plateau profonds sur substrat tertiaire",
+      "caracteristiques_rapides": "Plateau limoneux entaillé par la Senne et la Marcq, à l'ouest de Bruxelles : pays de la gueuze et du lambic, où la vigne n'est revenue que dans les années 2000, largement en cépages résistants.",
+      "notes_objectives": "Le plateau limoneux à l'ouest de Bruxelles, entaillé par les vallées de la Senne et de la Marcq, dans un paysage de collines douces, de fermes en carré et de villages que Bruegel a peints. Les sols sont des limons de plateau profonds sur substrat tertiaire : fertiles, à bonne réserve hydrique, sans relief marqué ni pierrosité.\n\nC'est le pays de la gueuze et du lambic, mais la vigne n'y a aucune continuité historique documentée : elle est revenue dans les années 2000. Deux traits en découlent. D'abord la prédominance des cépages résistants — Sirius, Merzling, Regent, Léon Millot —, choix rationnel là où la pression du mildiou est forte. Ensuite l'absence d'appellation territoriale : seules les appellations flamandes transversales sont accessibles ici. Gooik, Pepingen et Lennik concentrent l'essentiel des surfaces.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "pajottenland",
+        "piwi",
+        "loess"
+      ],
+      "source": "domaineholvast.be ; dappersveldwoestijn.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-coteaux-de-la-senne-a-beersel",
+      "nom": "Coteaux de la Senne à Beersel",
+      "type": "coteau",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Pajottenland en Zennevallei",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 40-90 m",
+      "sols": "Limons de versant sur substrat sableux tertiaire",
+      "caracteristiques_rapides": "Versants dominant la vallée de la Senne au sud-ouest de Bruxelles, plantés depuis 2015 : l'une des zones viticoles les plus récentes du pays, en pleine périphérie urbaine.",
+      "notes_objectives": "Versants limoneux dominant la vallée de la Senne au sud-ouest de Bruxelles, à une quinzaine de kilomètres du centre-ville. Le secteur est connu pour son château médiéval et pour la gueuze, pas pour sa vigne : les plantations y datent presque toutes de l'après-2015.\n\nC'est l'une des zones viticoles les plus récentes du pays, et un cas de viticulture franchement périurbaine, sur des versants qui surplombent une vallée industrialisée. Les conditions pédologiques — limons de versant sur substrat sableux tertiaire — ne distinguent guère le lieu du reste du Brabant central ; ce qui le rend viable, c'est la proximité immédiate d'un bassin de consommateurs considérable, qui permet à un hectare et demi de trouver preneur en vente directe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "zennevallei",
+        "jeune-domaine"
+      ],
+      "source": "krayenberg.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-lisiere-du-bois-de-meerdael-oud-heverlee",
+      "nom": "Lisière du bois de Meerdael (Oud-Heverlee)",
+      "type": "secteur",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Dijleland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay"
+      ],
+      "altitude": "env. 30-70 m",
+      "sols": "Sables limoneux du Dijleland",
+      "caracteristiques_rapides": "Abords du massif forestier au sud de Louvain, où huit hectares de Chardonnay sont voués depuis 1994 au seul effervescent. Surfaces plantables limitées par la forêt et les sites protégés.",
+      "notes_objectives": "Les abords du massif forestier de Meerdael, au sud de Louvain, sur les sables limoneux du Dijleland. Le relief y est beaucoup plus doux que dans le Hageland voisin, et la forêt comme les sites protégés limitent fortement les surfaces plantables : les domaines y dépassent rarement deux hectares.\n\nL'exception est notable — huit hectares plantés en 1994, exclusivement en Chardonnay et exclusivement destinés à l'effervescent en méthode traditionnelle. Ce parti pris, adopté trente ans avant que le label BelBul ne popularise la bulle belge, repose sur la même logique qu'en Champagne : sous climat frais, une maturité modérée et une acidité élevée sont un atout. C'est l'un des rares sites belges entièrement voués au mousseux, et le seul du Brabant flamand à cette échelle.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "dijleland",
+        "methode-traditionnelle"
+      ],
+      "source": "chardonnaymeerdael.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-vlaamsbrabant-terr-sables-du-nord-brabancon-londerzeel-perk",
+      "nom": "Sables du nord brabançon (Londerzeel, Perk)",
+      "type": "secteur",
+      "region": "Vlaams-Brabant",
+      "sous_region": "Nord du Brabant flamand",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 10-30 m",
+      "sols": "Sables et sables limoneux, relief quasi nul",
+      "caracteristiques_rapides": "Campagne périurbaine entre Bruxelles et Anvers, sans tradition viticole ni appellation territoriale : quelques plantations postérieures à 2015, sous IGP ou hors appellation.",
+      "notes_objectives": "La campagne périurbaine entre Bruxelles et Anvers, de Londerzeel à Steenokkerzeel : sols sableux à sablo-limoneux, plus légers que les limons du sud de la province, relief quasi nul, aucune tradition viticole documentée.\n\nLe secteur n'est couvert par aucune appellation territoriale, si bien que les domaines qui s'y sont installés depuis 2015 travaillent sous IGP Vlaamse landwijn, en mousseux de qualité flamand, ou hors appellation. Les surfaces restent minimes — de cinquante ares à deux hectares — sur d'anciennes terres maraîchères et d'élevage. L'intérêt du lieu est prospectif : deux plantations voisines à quelques centaines de mètres l'une de l'autre, au lieu-dit Zwaantje, suffisent parfois à amorcer une zone viticole, comme cela s'est produit sur la Houwaartseberg.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "jeune-domaine"
+      ],
+      "source": "belgischewijnbouwers.be ; landakkershof.be"
+    }
+  ]
+}

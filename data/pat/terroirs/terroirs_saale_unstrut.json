@@ -1,0 +1,413 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "saale-unstrut",
+  "region_label": "Saale-Unstrut (Allemagne)",
+  "source_file": "terroirs_saale_unstrut_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 15,
+  "items": [
+    {
+      "id": "de-saale-unstrut-terr-freyburger-edelacker",
+      "nom": "Freyburger Edelacker",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Freyburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Silvaner"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Le grand coteau emblématique de la vallée de l'Unstrut, à Freyburg ; terrasses de calcaire coquillier donnant des Weissburgunder et Silvaner précis et salins (Pawis).",
+      "notes_objectives": "Le Freyburger Edelacker est le grand coteau emblématique de la vallée de l'Unstrut, sur les hauteurs de Freyburg. Aménagé en terrasses de calcaire coquillier (Muschelkalk) et exposé au sud, il bénéficie, dans ce vignoble parmi les plus septentrionaux du monde, d'un microclimat favorable. Le calcaire confère aux Weissburgunder, Silvaner et Riesling une salinité et une précision caractéristiques, dans des vins secs et tendus. Le terroir est magnifié par le domaine Pawis, l'un des deux meilleurs de la région. Classé au sommet de la hiérarchie de Saale-Unstrut, l'Edelacker illustre le potentiel des grands coteaux de calcaire de la vallée de l'Unstrut. L'Edelacker doit son caractère à la combinaison rare, à cette latitude, d'un sol de calcaire coquillier — pauvre, drainant et réchauffant — et d'une exposition plein sud sur des terrasses qui captent le moindre rayon. Car ici, dans l'un des vignobles les plus septentrionaux du monde, chaque minute de soleil compte. Le calcaire imprime aux Weissburgunder, Silvaner et Riesling une salinité et une droiture caractéristiques ; les meilleures cuvées, sèches et tendues, vieillissent fort bien. Le domaine Pawis, installé dans le site monastique voisin de Zscheiplitz, en est l'interprète de référence. Dominant la jolie ville de Freyburg — patrie du Sekt Rotkäppchen —, l'Edelacker est le grand coteau qui incarne, à lui seul, le potentiel qualitatif de la vallée de l'Unstrut et de toute la région de Saale-Unstrut. Le maintien et la restauration de ce grand coteau, sur des terrasses de calcaire que l'histoire mouvementée de l'Allemagne de l'Est avait laissées en friche, ont valeur de symbole : c'est sur l'Edelacker que Bernard Pawis a bâti, après la réunification, l'un des plus beaux domaines de la région. Les Weissburgunder et les Silvaner qui en sont issus, salins et tendus, comptent parmi les meilleurs blancs secs de l'est de l'Allemagne, et leur réputation a contribué à faire sortir Saale-Unstrut de l'anonymat. Pour l'amateur, l'Edelacker est le terroir par lequel découvrir l'élégance saline des grands blancs de l'Unstrut. Dans une région où la grande majorité du raisin part en coopérative, l'Edelacker fait figure de vitrine : la preuve qu'un grand terroir de calcaire, patiemment restauré, peut porter Saale-Unstrut au plus haut niveau du vin allemand.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "muschelkalk",
+        "weissburgunder",
+        "vdp-grosse-lage",
+        "unstrut"
+      ],
+      "source": "vinello|maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-terr-karsdorfer-hohe-graete",
+      "nom": "Karsdorfer Hohe Gräte",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau escarpé de calcaire coquillier près de Karsdorf ; Silvaner et Riesling salins et crayeux, signature du domaine Lützkendorf.",
+      "notes_objectives": "La Karsdorfer Hohe Gräte est l'un des plus grands terroirs de la vallée de la Saale, sur un coteau escarpé de calcaire coquillier près de Karsdorf. Sa forte pente et son sol crayeux donnent des vins d'une salinité et d'une minéralité remarquables. Le terroir est la signature du domaine Lützkendorf, qui en tire des Silvaner et des Riesling secs, tendus et salins, salués par la critique internationale. Classé au sommet de la hiérarchie de Saale-Unstrut, la Hohe Gräte illustre l'expression la plus aboutie du calcaire coquillier dans cette région du nord. La Hohe Gräte (« haute arête ») doit son nom à sa silhouette escarpée : un coteau abrupt de calcaire coquillier, dont la roche affleurante et le sol crayeux donnent des vins d'une minéralité saline incisive. La pente, qui impose un travail manuel, et la chaleur réfléchie par la Saale concourent à la maturité. Le domaine Lützkendorf en a fait sa signature : ses Silvaner et ses Riesling, secs, droits et profondément salins, ont attiré l'attention de la critique internationale, jusqu'à Decanter, qui voit en eux l'expression aboutie du calcaire de la région. Pour l'amateur, la Karsdorfer Hohe Gräte est le terroir qui prouve que Saale-Unstrut, malgré son climat marginal, peut donner de grands vins de calcaire, à la tension remarquable. Comme l'Edelacker, la Hohe Gräte incarne la renaissance viticole de la région après 1990 : c'est en révélant ce terroir que le domaine Lützkendorf, premier de Saale-Unstrut au VDP dès 1996, a posé les fondations du renouveau qualitatif. La constance de ses vins, millésime après millésime, a fait de ce coteau une référence. La salinité crayeuse et la tension de ses Silvaner et Riesling sont devenues une signature reconnaissable, qui illustre à merveille le lien entre le calcaire coquillier et le vin. Pour l'amateur, la Karsdorfer Hohe Gräte est l'un des plus beaux terroirs de calcaire du nord de l'Allemagne. Dans une région encore largement méconnue hors d'Allemagne, elle est l'un des terroirs qui justifient, à eux seuls, le détour : un grand cru de calcaire au caractère salin inimitable, fleuron de la vallée de la Saale.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "muschelkalk",
+        "silvaner",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "schiller-wine|decanter"
+    },
+    {
+      "id": "de-saale-unstrut-terr-koeppelberg",
+      "nom": "Köppelberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "110-190 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau historique créé par les cisterciens en 1154, à Pforta ; calcaire coquillier, large gamme de blancs et de Spätburgunder (Landesweingut Kloster Pforta).",
+      "notes_objectives": "Le Köppelberg est un coteau historique de la vallée de la Saale, à Pforta, créé par les moines cisterciens en 1154 et toujours en activité. Sur le calcaire coquillier, il donne des Weissburgunder, des Riesling et des Spätburgunder. Le terroir est exploité par le Landesweingut Kloster Pforta, installé dans l'ancienne abbaye. Classé en grand cru, le Köppelberg illustre les racines monastiques millénaires de la viticulture de Saale-Unstrut. Planté par les cisterciens de l'abbaye de Pforta dès 1154, le Köppelberg est l'un des plus anciens coteaux en activité d'Allemagne : un témoignage vivant de la viticulture monastique millénaire de la région. Sur le calcaire coquillier, le Landesweingut Kloster Pforta y produit des Weissburgunder, Riesling et Spätburgunder, perpétuant l'héritage des moines. Le cru illustre la profondeur historique de Saale-Unstrut, où la vigne est cultivée depuis plus de mille ans, et le rôle des ordres religieux dans la naissance des grands terroirs allemands. La longévité du Köppelberg — près de neuf siècles de viticulture ininterrompue — en fait un monument vivant de l'histoire viticole allemande. Le Landesweingut Kloster Pforta, gardien de ce patrimoine, y conjugue tradition, production et recherche. Le cru illustre le rôle fondateur des cisterciens dans la région et la continuité d'un savoir-faire transmis depuis le Moyen Âge.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "historique",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "wein.plus|maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-terr-saalhaeuser",
+      "nom": "Saalhäuser",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau de calcaire coquillier au-dessus de la Saale, près de Bad Kösen ; Riesling et Silvaner racés (Lützkendorf, Kloster Pforta).",
+      "notes_objectives": "Le Saalhäuser est un coteau de calcaire coquillier au-dessus de la Saale, près de Bad Kösen. Bien exposé, il donne des Riesling et des Silvaner racés. Le terroir est exploité par des domaines comme Lützkendorf et le Landesweingut Kloster Pforta. Classé en grand cru, le Saalhäuser illustre la qualité des coteaux de calcaire de la vallée de la Saale. Coteau de calcaire coquillier dominant la Saale, près de Bad Kösen, le Saalhäuser bénéficie d'une belle exposition qui donne des Riesling et des Silvaner racés et salins. Exploité par des domaines de premier plan comme Lützkendorf et le Landesweingut Kloster Pforta, il compte parmi les bons terroirs de la vallée de la Saale. Le cru illustre la qualité du calcaire coquillier, socle géologique des meilleurs vins blancs de la région. Apprécié pour la finesse saline de ses Riesling et de ses Silvaner, le Saalhäuser bénéficie du travail de domaines de premier plan. Sa belle exposition au-dessus de la Saale et son calcaire coquillier en font un terroir de référence de la vallée. Le cru confirme la vocation de la Saale pour les grands blancs secs, sur le socle de calcaire qui caractérise les meilleurs vins de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "riesling",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-naumburger-sonneck",
+      "nom": "Naumburger Sonneck",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Silvaner"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau bien exposé de Naumburg ; calcaire coquillier propice aux Spätburgunder et aux blancs amples (Gussek).",
+      "notes_objectives": "Le Naumburger Sonneck est un coteau bien exposé de Naumburg, sur le calcaire coquillier. Son nom évoque le soleil, précieux dans cette région septentrionale. Il donne des Spätburgunder et des blancs amples, magnifiés par le domaine Gussek. Classé en grand cru, le Sonneck illustre le potentiel, encore méconnu, des vins rouges de Saale-Unstrut. Comme son nom l'indique (« coin de soleil »), le Sonneck est un coteau particulièrement ensoleillé de Naumburg, atout précieux dans ce vignoble du nord. Sur le calcaire coquillier, André Gussek y signe des Spätburgunder ambitieux — rares dans la région — et des blancs amples. Le cru illustre le potentiel, encore largement méconnu, des vins rouges de Saale-Unstrut, porté par l'un des pionniers de la région. Sous la main d'André Gussek, figure pionnière et mentor de la région, le Sonneck est devenu l'un des rares terroirs où le Spätburgunder atteint, à Saale-Unstrut, un réel niveau de qualité. Sa belle exposition et son calcaire favorisent la maturité des rouges. Le cru illustre l'émergence d'une vocation rouge dans une région longtemps vouée presque exclusivement aux blancs secs.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "spaetburgunder",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-naumburger-steinmeister",
+      "nom": "Naumburger Steinmeister",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Silvaner"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau de calcaire coquillier de Naumburg ; Riesling et Weissburgunder précis et minéraux (Matthias Hey).",
+      "notes_objectives": "Le Naumburger Steinmeister est un coteau de calcaire coquillier de Naumburg. Bien exposé, il donne des Riesling et des Weissburgunder précis et minéraux. Le terroir est exploité par le domaine Matthias Hey. Classé en grand cru, le Steinmeister illustre la qualité des coteaux de calcaire de Naumburg, cœur viticole de la région. Coteau de calcaire coquillier de Naumburg, le Steinmeister donne des Riesling et des Weissburgunder précis et minéraux, magnifiés par le jeune domaine Matthias Hey, formé à Geisenheim. Bien exposé, il bénéficie de la chaleur de la vallée de la Saale. Le cru illustre la qualité des coteaux de Naumburg, cœur viticole et historique de la région, et le travail de la nouvelle génération qui en révèle le potentiel. Magnifié par le jeune domaine Matthias Hey, le Steinmeister illustre le travail de la nouvelle génération sur les coteaux de calcaire de Naumburg. Ses Riesling et Weissburgunder, précis et minéraux, comptent parmi les plus prometteurs de la région. Le cru confirme la place de Naumburg, cité épiscopale chargée d'histoire, parmi les grands secteurs viticoles de Saale-Unstrut.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "riesling",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-grossjenaer-bluetengrund",
+      "nom": "Großjenaer Blütengrund",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "100-180 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau au confluent spectaculaire de la Saale et de l'Unstrut, à Großjena ; calcaire, blancs et rouges (Gussek).",
+      "notes_objectives": "Le Großjenaer Blütengrund est un coteau de calcaire situé au confluent spectaculaire de la Saale et de l'Unstrut, à Großjena. Bien exposé, il donne des blancs et des rouges. Le terroir est exploité par le domaine Gussek. Classé en grand cru, le Blütengrund illustre l'alliance du paysage et de la vigne, dans l'un des sites les plus remarquables de Saale-Unstrut. Situé au confluent spectaculaire de la Saale et de l'Unstrut, à Großjena, le Blütengrund est l'un des sites les plus remarquables de la région, où les vignes en terrasses dominent la rencontre des deux rivières. Sur le calcaire, le domaine Gussek y produit des blancs et des rouges. Le cru illustre l'alliance, si caractéristique de Saale-Unstrut, entre paysage, histoire et viticulture, dans un décor préservé classé. Le panorama du Blütengrund, où les vignes dominent le confluent de la Saale et de l'Unstrut, compte parmi les plus beaux paysages viticoles de l'est de l'Allemagne. Le domaine Gussek y produit des blancs et des rouges de caractère. Le cru illustre l'union, si typique de la région, entre la beauté préservée des paysages fluviaux et une viticulture de terrasses sur calcaire.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "paysage",
+        "vdp-grosse-lage",
+        "saale"
+      ],
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-zscheiplitzer",
+      "nom": "Zscheiplitzer",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Freyburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Silvaner",
+        "Gutedel"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau de calcaire autour de l'ancien domaine monastique de Zscheiplitz, à Freyburg ; blancs secs et Gutedel (Pawis).",
+      "notes_objectives": "Le Zscheiplitzer est un coteau de calcaire autour de l'ancien domaine monastique de Zscheiplitz, à Freyburg. Bien exposé, il donne des blancs secs et du Gutedel, spécialité locale. Le terroir est le fief du domaine Pawis, installé dans ce site historique. Classé en grand cru, le Zscheiplitzer illustre la qualité des coteaux de calcaire de la vallée de l'Unstrut. Autour de l'ancien domaine monastique de Zscheiplitz, qui surplombe l'Unstrut près de Freyburg, ce coteau de calcaire est le fief du domaine Pawis. On y cultive, outre les Burgunder, le Gutedel (Chasselas), spécialité régionale qui rappelle la proximité historique avec d'autres traditions viticoles. Le cru illustre la richesse ampélographique de Saale-Unstrut et le lien profond entre la vigne et le patrimoine monastique de la vallée de l'Unstrut. La présence du Gutedel (Chasselas) sur ce coteau monastique fait l'originalité du Zscheiplitzer : ce cépage, rare en Allemagne, témoigne de la diversité ampélographique de Saale-Unstrut. Le domaine Pawis y signe des blancs secs de caractère. Le cru illustre le lien profond entre la vigne et le patrimoine monastique de la vallée de l'Unstrut, et la richesse des traditions de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "historique",
+        "vdp-grosse-lage",
+        "unstrut"
+      ],
+      "source": "vinello"
+    },
+    {
+      "id": "de-saale-unstrut-terr-freyburger-schweigenberg",
+      "nom": "Freyburger Schweigenberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Freyburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Silvaner"
+      ],
+      "altitude": "110-200 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Grand coteau de Freyburg, en terrasses de calcaire ; large gamme de blancs (Winzervereinigung Freyburg).",
+      "notes_objectives": "Le Freyburger Schweigenberg est un grand coteau de Freyburg, aménagé en terrasses de calcaire. Bien exposé, il donne une large gamme de blancs. Le terroir est notamment exploité par la Winzervereinigung Freyburg. Il illustre la qualité des coteaux de calcaire de la vallée de l'Unstrut. Grand coteau en terrasses de calcaire au-dessus de Freyburg, le Schweigenberg est l'un des plus vastes de la région. Exploité notamment par la Winzervereinigung Freyburg, il fournit une large gamme de blancs, du quotidien aux cuvées plus ambitieuses. Le cru illustre l'importance des grands coteaux de calcaire de la vallée de l'Unstrut et le rôle des coopératives qui les valorisent. Vaste et bien exposé, il demeure l'un des grands coteaux de référence de la vallée de l'Unstrut.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "unstrut"
+      ],
+      "source": "intowine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-naumburger-paradies",
+      "nom": "Naumburger Paradies",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "110-190 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau de calcaire de Naumburg ; Weissburgunder et Silvaner secs (Frölich-Hake).",
+      "notes_objectives": "Le Naumburger Paradies est un coteau de calcaire de Naumburg. Bien exposé, il donne des Weissburgunder et des Silvaner secs. Le terroir est notamment exploité par le domaine Frölich-Hake. Il illustre la qualité des coteaux de Naumburg. Au nom évocateur, le Paradies est un coteau de calcaire bien exposé de Naumburg, qui donne des Weissburgunder et des Silvaner secs. Exploité notamment par le domaine Frölich-Hake, il complète la série des bons coteaux de Naumburg, cœur viticole de la région. Le cru illustre la qualité du calcaire coquillier de la vallée de la Saale pour les blancs secs. Il compte parmi les bons coteaux de calcaire de Naumburg, cœur viticole de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "saale"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-terr-rossbacher-koenigsberg",
+      "nom": "Roßbacher Königsberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "altitude": "120-210 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Coteau de calcaire à Roßbach, près de Naumburg ; Silvaner salins, terroir des vignerons nature (Konni & Evi, Schulze).",
+      "notes_objectives": "Le Roßbacher Königsberg est un coteau de calcaire à Roßbach, près de Naumburg. Bien exposé, il donne des Silvaner salins. Le terroir est exploité par des vignerons nature comme Konni & Evi et le Weingut Schulze. Il illustre le renouveau de la région, porté par une jeune génération. Coteau de calcaire à Roßbach, près de Naumburg, le Königsberg est devenu l'un des terroirs phares de la scène nature de la région : c'est là que des vignerons comme Konni & Evi et le Weingut Schulze puisent des Silvaner salins et terriens, en vinifications libres. Le cru illustre le renouveau de Saale-Unstrut, porté par une jeune génération créative qui réinvente l'image de la région. Il est devenu l'un des emblèmes de la scène nature de Saale-Unstrut.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "silvaner",
+        "grand-coteau",
+        "saale"
+      ],
+      "source": "decanter|maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-terr-kirchscheidunger-muehlberg",
+      "nom": "Kirchscheidunger Mühlberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Kirchscheidungen)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Weissburgunder",
+        "Traminer"
+      ],
+      "altitude": "120-210 m",
+      "sols": "calcaire coquillier et grès (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau de la vallée de l'Unstrut, à Kirchscheidungen ; Riesling et cépages aromatiques (Klaus Böhme).",
+      "notes_objectives": "Le Kirchscheidunger Mühlberg est un coteau de la vallée de l'Unstrut, à Kirchscheidungen, sur calcaire et grès. Bien exposé, il donne des Riesling et des cépages aromatiques. Le terroir est exploité par le domaine Klaus Böhme. Il illustre la qualité des coteaux de la vallée de l'Unstrut. Coteau de la vallée de l'Unstrut, à Kirchscheidungen, le Mühlberg associe calcaire et grès. Bien exposé, il donne des Riesling et des cépages aromatiques comme le Traminer, magnifiés par le domaine Klaus Böhme. Le cru illustre la qualité des coteaux de la vallée de l'Unstrut, où le calcaire et le grès façonnent des blancs frais et aromatiques. Il illustre la qualité des coteaux aromatiques de la vallée de l'Unstrut.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "grand-coteau",
+        "unstrut"
+      ],
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-terr-hoehnstedter-kreisberg",
+      "nom": "Höhnstedter Kreisberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Mansfelder Seen",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Silvaner",
+        "Portugieser"
+      ],
+      "altitude": "100-180 m",
+      "sols": "calcaire coquillier et grès (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau du secteur excentré des lacs de Mansfeld, à Höhnstedt ; blancs secs et rouges légers (Born).",
+      "notes_objectives": "Le Höhnstedter Kreisberg est un coteau du secteur excentré des lacs de Mansfeld, à Höhnstedt, sur calcaire et grès. Il donne des blancs secs et des rouges légers. Le terroir est exploité par le domaine Born. Il illustre la diversité géographique de Saale-Unstrut, dont certains secteurs sont éloignés des vallées principales. Coteau du secteur excentré des lacs de Mansfeld, à Höhnstedt, le Kreisberg, sur calcaire et grès, donne des blancs secs et des rouges légers (Portugieser). Exploité par le domaine Born, il témoigne de l'étendue de Saale-Unstrut, dont certains terroirs se trouvent loin des vallées de la Saale et de l'Unstrut. Le cru illustre la diversité géographique méconnue de la région. Il porte les couleurs du secteur excentré des lacs de Mansfeld.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "mansfeld",
+        "gres",
+        "grand-coteau",
+        "mansfelder-seen"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-terr-nebraer-steinkloebe",
+      "nom": "Nebraer Steinklöbe",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Nebra)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "altitude": "130-220 m",
+      "sols": "calcaire coquillier et grès (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau escarpé près de Nebra (terre du fameux disque céleste) ; calcaire et grès, terroir sauvage de la haute Unstrut.",
+      "notes_objectives": "Le Nebraer Steinklöbe est un coteau escarpé près de Nebra — la terre du fameux disque céleste préhistorique —, sur calcaire et grès. Sa forte pente en fait un terroir sauvage de la haute Unstrut. Il donne des Silvaner et des Weissburgunder secs. Le cru illustre le caractère préservé et confidentiel des coteaux de la haute vallée de l'Unstrut. Coteau escarpé près de Nebra — célèbre pour le disque céleste préhistorique découvert à proximité —, le Steinklöbe, sur calcaire et grès, est l'un des terroirs les plus sauvages de la haute Unstrut. Sa forte pente et son isolement en font un site préservé, qui donne des Silvaner et des Weissburgunder secs. Le cru illustre le caractère rural et confidentiel des coteaux de la haute vallée de l'Unstrut. Son cadre sauvage, près du célèbre disque de Nebra, en fait un terroir à part.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "paysage",
+        "gres",
+        "grand-coteau",
+        "unstrut"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-terr-vitzenburger-schlossberg",
+      "nom": "Vitzenburger Schloßberg",
+      "type": "lieu-dit",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Querfurt)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Weissburgunder",
+        "Müller-Thurgau"
+      ],
+      "altitude": "130-220 m",
+      "sols": "calcaire coquillier et grès (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau de la haute vallée de l'Unstrut, à Vitzenburg ; Silvaner et Burgunder secs (Lüttmer).",
+      "notes_objectives": "Le Vitzenburger Schloßberg est un coteau de la haute vallée de l'Unstrut, à Vitzenburg, sur calcaire et grès. Bien exposé, il donne des Silvaner et des Burgunder secs. Le terroir est exploité par le domaine Lüttmer. Il illustre la viticulture de la haute Unstrut, partie plus rurale et confidentielle de la région. Coteau de la haute vallée de l'Unstrut, à Vitzenburg, le Schloßberg associe calcaire et grès. Dominé par un château, il donne des Silvaner et des Burgunder secs, exploités par le domaine Lüttmer. Le cru illustre la viticulture de la haute Unstrut, partie plus rurale et confidentielle de Saale-Unstrut, où la vigne s'accroche à des coteaux isolés au caractère préservé. Il fait vivre la viticulture préservée de la haute vallée de l'Unstrut.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "gres",
+        "silvaner",
+        "grand-coteau",
+        "unstrut"
+      ],
+      "source": "wein.plus"
+    }
+  ]
+}

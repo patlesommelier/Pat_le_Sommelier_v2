@@ -1,0 +1,1272 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "castillayleon",
+  "region_label": "Castilla y León — Toro & Rueda",
+  "source_file": "producteurs_toro_rueda_To_Import.xlsx",
+  "built_at": "2026-08-11T16:21:35",
+  "count": 32,
+  "items": [
+    {
+      "id": "es-castillayleon-prod-bodega-teso-la-monja",
+      "nom": "Bodega Teso La Monja — Familia Eguren",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Valdefinjas",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Alabaster",
+        "Victorino",
+        "Almirez",
+        "Románico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Teso La Monja est le sommet actuel de la DO Toro, et l'aboutissement d'un long compagnonnage de la famille Eguren avec ce terroir extrême. Les Eguren, déjà à la tête de Sierra Cantabria en Rioja, avaient été les premiers, avec Numanthia à la fin des années 1990, à révéler au monde le potentiel du Tinta de Toro. Quand le groupe LVMH leur fait une offre irrésistible pour Numanthia en 2008, ils vendent — mais restent sur place, ayant déjà acquis une centaine d'hectares des meilleures vieilles vignes, pour bâtir un projet plus ambitieux encore. Pour cette seconde vie à Toro, Marcos Eguren, l'œnologue de la famille, a délibérément choisi des sols plus frais — argiles à veines calcaires, surfaces de galets — et des expositions orientées au nord, qui allongent le cycle végétatif et tempèrent la puissance solaire du Tinta de Toro. C'est là toute l'intelligence du projet : chercher la fraîcheur et la finesse là où Toro n'offrait longtemps que la force brute. Les vignes, souvent centenaires et franches de pied sur les sables, sont conduites en biologique. La gamme est construite comme une pyramide limpide. Románico et Almirez, les deux entrées, offrent des rapports qualité-prix remarquables, ce dernier issu de vignes de quinze à soixante-cinq ans. Au-dessus, Victorino, cuvée de vieilles vignes, incarne le style raffiné de la maison. Au sommet, Alabaster, issu des parcelles les plus anciennes et produit en quantités infimes, est l'un des grands rouges d'Espagne : dense, profond, mais doté d'une trame et d'une allonge qui transcendent la rusticité traditionnelle de l'appellation. Marcos Eguren est décrit dans la région comme une sorte de roi Midas : tout ce qu'il touche à Toro se transforme en vin d'exception. Pour un sommelier, Teso La Monja est la démonstration qu'un grand Toro peut être à la fois puissant et racé. Alabaster et Victorino sont des bouteilles de garde à carafer largement ; Almirez, plus accessible, permet de faire découvrir le style de la maison à moindre coût. Le contraste avec la première aventure de la famille est éclairant : là où Numanthia jouait la puissance et la concentration, Teso La Monja cherche la tension et la buvabilité, signe de l'évolution du goût et de la maturité stylistique de Marcos Eguren. C'est aujourd'hui l'une des adresses les plus sûres de toute la Castille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "eguren",
+        "vieilles-vignes",
+        "franc-de-pied",
+        "icone",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-san-roman",
+      "nom": "Bodega San Román — Familia García",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Villaester",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "San Román",
+        "Prima",
+        "Cartago"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "San Román est le projet de Mariano García à Toro, et l'une des expressions les plus fines que l'appellation ait produites. García, chef de cave légendaire de Vega Sicilia pendant trois décennies avant de fonder Mauro et Aalto, s'est installé à Toro à la fin des années 1990 avec une conviction à contre-courant : ce terroir réputé pour ses rouges rustiques et alcooleux pouvait, entre de bonnes mains, donner des vins d'une réelle élégance. Le domaine, aujourd'hui dirigé avec ses fils, repose sur un patrimoine de vieilles vignes de Tinta de Toro autour de Villaester, sur des sols sableux et caillouteux, souvent franches de pied car épargnées par le phylloxéra. García y applique tout son savoir : maîtrise des extractions, recherche d'équilibre, élevage soigné qui vise à envelopper la puissance naturelle du cépage plutôt qu'à l'exacerber. La gamme est resserrée. Prima, l'entrée, offre déjà une belle lecture du Tinta de Toro dans un registre gourmand et frais. San Román, le vin principal, est plus profond et plus structuré, mais conserve cette finesse de tanin qui signe la maison. Cartago, issu d'une parcelle unique de très vieilles vignes et produit en quantités infimes, constitue le sommet : un Toro d'une densité et d'une race exceptionnelles, taillé pour une longue garde. San Román compte parmi les « quatre magnifiques » de Toro, aux côtés de Pintia, Numanthia et Victorino, mais s'en distingue par son parti pris de finesse. Pour un sommelier, San Román est le Toro à sortir pour convaincre un amateur sceptique : la preuve que l'appellation peut donner des rouges profonds et raffinés. Les vins demandent de la garde et gagnent à être carafés ; Cartago est une bouteille de prestige. Le parcours de Mariano García donne au domaine une aura particulière : l'homme qui a façonné les grands Vega Sicilia pendant trente ans a choisi Toro, terroir mal-aimé, pour y démontrer qu'un lieu extrême pouvait engendrer de la finesse. Cette caution, celle de l'un des plus grands œnologues d'Espagne, a contribué à changer le regard porté sur toute l'appellation. Sur une carte, San Román a l'avantage rare d'un nom qui parle aux connaisseurs tout en restant à un prix cohérent au regard de sa qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "mariano-garcia",
+        "vieilles-vignes",
+        "finesse",
+        "icone",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-y-vinedos-pintia",
+      "nom": "Bodegas y Viñedos Pintia — Vega Sicilia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "San Román de Hornija",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Pintia",
+        "TerraDorada"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Pintia est le domaine de Toro du groupe Vega Sicilia, lancé en 2001 après plusieurs années d'observation discrète du terroir. Quand la maison de Valbuena décide de s'implanter à Toro, c'est un signal fort : l'appellation la plus prestigieuse d'Espagne juge le Tinta de Toro digne de son savoir-faire. Le domaine s'installe à San Román de Hornija et applique à ce terroir extrême la rigueur qui fait la marque du groupe. Le vignoble repose sur de vieilles vignes de Tinta de Toro, souvent franches de pied sur les sols sableux qui ont protégé les racines du phylloxéra, complétées de parcelles sur sols caillouteux. La viticulture est menée avec une précision inhabituelle dans la région, et les vinifications cherchent à discipliner la puissance naturelle du cépage, à extraire sans durcir, à préserver le fruit et la fraîcheur. Pintia, le vin principal, est un Tinta de Toro moderne, dense et concentré, mais construit avec un souci d'équilibre et de netteté qui le distingue des Toros les plus rustiques. TerraDorada complète la gamme. Le style, sans être aussi aérien que San Román, allie la force du terroir à une finition soignée et à un boisé bien intégré, dans une logique de garde. Pour un sommelier, Pintia est une valeur sûre : un Toro moderne et fiable, signé par le plus grand nom du vin espagnol, qui plaît largement tout en offrant une vraie profondeur. Il gagne à être carafé dans sa jeunesse et vieillit bien sur une dizaine d'années.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "vega-sicilia",
+        "moderne",
+        "icone",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-numanthia",
+      "nom": "Bodega Numanthia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Valdefinjas",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Termanthia",
+        "Numanthia",
+        "Termes"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Numanthia est le domaine qui a révélé Toro au monde. Fondé en 1998 par la famille Eguren, il fut le premier à comprendre le potentiel du Tinta de Toro et à en tirer un vin de dimension internationale. Le nom rend hommage aux habitants de Numance, cité celtibère qui résista vingt ans à l'armée romaine avant de préférer le sacrifice à la reddition. Le domaine, installé à Valdefinjas, repose sur un patrimoine exceptionnel de vieilles vignes de Tinta de Toro, certaines âgées de plus de cent cinquante ans, franches de pied sur des sols sableux et caillouteux, cultivées en gobelet et sans irrigation. C'est de ces ceps ancestraux que naît Termanthia, la cuvée sommet, issue des vignes préphylloxériques les plus vénérables et produite en quantités infimes. La gamme monte de Termes, l'entrée vibrante et fruitée, à Numanthia, plus profond et structuré, puis à Termanthia, monument de concentration et de puissance. Le style, dense et intense, joue la force et la richesse plutôt que la finesse — l'expression la plus démonstrative du Tinta de Toro. Le rachat par le groupe LVMH en 2008 a donné au domaine des moyens considérables et une diffusion mondiale. Pour un sommelier, c'est un nom connu et rassurant, à sortir pour l'amateur de rouges puissants et concentrés. Termanthia est une bouteille de prestige à carafer longuement ; Termes offre une entrée accessible dans le style maison. Les vins demandent de la garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "lvmh",
+        "vieilles-vignes",
+        "franc-de-pied",
+        "puissance",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-elias-mora",
+      "nom": "Bodega Elías Mora",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "San Román de Hornija",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Gran Elías Mora",
+        "2V Premium",
+        "Viñas Elías Mora"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodega Elías Mora est l'une des références de la viticulture traditionnelle de Toro, fondée en 2000 et dirigée par Victoria Benavides. Le domaine tire son nom de l'ancien propriétaire du vignoble, et s'est imposé comme un gardien du style authentique de l'appellation, appuyé sur un patrimoine de vieilles vignes. Le vignoble, installé à San Román de Hornija, repose sur de vieilles vignes de Tinta de Toro, conduites en biologique, sur les sols sableux et caillouteux caractéristiques de la région. La maison privilégie une viticulture respectueuse et des vinifications qui cherchent à exprimer la puissance du terroir tout en préservant l'équilibre. La gamme est large : Viñas Elías Mora et Elías Mora Crianza pour le cœur de gamme, puis Gran Elías Mora et 2V Premium, cuvées de vieilles vignes qui constituent le haut de gamme, dans un registre dense et structuré. La maison produit aussi un rouge doux, Benavides, plus confidentiel. Le style, traditionnel et charpenté, illustre le Toro classique bien fait. Le domaine, tenu par une femme dans une région longtemps dominée par les hommes, fait figure de référence respectée de l'appellation. Pour un sommelier, Elías Mora est une valeur sûre du Toro traditionnel : des rouges puissants et structurés à des prix raisonnables, avec Gran Elías Mora pour une montée en gamme. Les cuvées de tête demandent de la garde et une aération généreuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "vieilles-vignes",
+        "traditionnel",
+        "famille",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-farina",
+      "nom": "Bodegas Fariña",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Casaseca de las Chanas",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Gran Colegiata",
+        "Primero",
+        "Dama de Toro"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Fariña est la maison historique de Toro, celle qui a fait connaître le Tinta de Toro et qui fut la cheville ouvrière de la création de la DO en 1987. Manuel Fariña, à la tête de l'entreprise familiale, a joué un rôle décisif dans la reconnaissance de l'appellation, à une époque où le vin de Toro n'était qu'un vin de messe et de négoce rustique. Le domaine, installé à Casaseca de las Chanas, repose sur un vignoble important de Tinta de Toro, complété de parcelles de blanc et de rosé. La maison a été pionnière dans la modernisation des vinifications de la région, tout en conservant un ancrage traditionnel. Gran Colegiata, sa cuvée phare, fut l'un des premiers grands Toros embouteillés et reste une référence historique. La gamme est large et couvre tous les niveaux, du Primero jeune et gourmand aux Reserva de Gran Colegiata, en passant par Dama de Toro. Le style, classique et fiable, illustre le Toro de tradition dans sa version accessible. La maison produit aussi un rosé et un blanc de Malvasía. Fariña occupe une place particulière dans l'histoire de l'appellation : sans elle, la reconnaissance de Toro aurait sans doute pris beaucoup plus de temps. Pour un sommelier, Fariña est un nom historique et pédagogique, à des prix contenus : Gran Colegiata permet de raconter la naissance de la DO, et la gamme large offre des options fiables à tous les niveaux. Une valeur d'usage de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "historique",
+        "pionnier",
+        "famille",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-matsu",
+      "nom": "Matsu — Bodegas Vintae",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "El Pícaro",
+        "El Recio",
+        "El Viejo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Matsu est le projet toresan du groupe Vintae, immédiatement reconnaissable à ses étiquettes ornées de portraits en noir et blanc de vignerons — El Pícaro le jeune, El Recio l'homme mûr, El Viejo le vieillard — qui symbolisent les trois âges de la vigne et du vin. Ce concept marketing habile recouvre un vrai travail de terroir. Le domaine repose sur de vieilles vignes de Tinta de Toro conduites en biologique, sur les sols sableux et caillouteux de l'appellation. Les trois cuvées correspondent à trois âges de vignes croissants : El Pícaro sur des vignes jeunes, vinifié pour le fruit et la buvabilité ; El Recio sur des vignes d'âge mûr, plus structuré ; El Viejo sur des ceps centenaires, dense et profond, issu du meilleur du patrimoine. Le style, pur et gourmand, cherche à exprimer le fruit du Tinta de Toro sans excès de boisé ni d'extraction, ce qui a beaucoup contribué au succès international de la gamme. El Pícaro, en particulier, est devenu l'un des Toros les plus vendus au verre et à l'export, grâce à son excellent rapport qualité-prix et à son habillage marquant. Matsu illustre la capacité de Vintae à conjuguer identité visuelle forte et sérieux viticole. Pour un sommelier, Matsu est une gamme précieuse : El Pícaro pour une carte au verre à petit prix, El Viejo pour une montée en gamme sur vignes centenaires. Les étiquettes séduisent immédiatement la clientèle, et le contenu tient ses promesses.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "vintae",
+        "vieilles-vignes",
+        "biologique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-rejadorada",
+      "nom": "Bodegas Rejadorada",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Bravo de Rejadorada",
+        "Novellum",
+        "Sango"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas Rejadorada est une maison de Toro installée dans une demeure seigneuriale du XVe siècle en plein centre de la ville, dont elle a tiré son nom. Fondée par un groupe de familles locales, elle s'est construit une réputation de Toro structuré et élégant, bien diffusé à l'international. Le vignoble repose sur de vieilles vignes de Tinta de Toro, sur les sols sableux et caillouteux de l'appellation. La maison cherche un équilibre entre la puissance naturelle du cépage et une finition soignée, avec des élevages en chêne bien maîtrisés. La gamme monte de Novellum, l'entrée, à Bravo de Rejadorada et Sango, cuvées de vieilles vignes qui constituent le haut de gamme. Le style, plus élégant que la moyenne de l'appellation, mise sur la structure et la profondeur sans verser dans la rusticité. Le cadre patrimonial de la bodega, dans une demeure historique, ajoute à son attrait œnotouristique. Rejadorada illustre le Toro de qualité intermédiaire, sérieux et régulier, à l'écart des grands noms médiatisés comme des coopératives de volume. Pour un sommelier, c'est une adresse fiable, aux prix raisonnables, qui offre un Toro structuré et bien fait. Sango et Bravo permettent une montée en gamme dans une signature maîtrisée, et le cadre historique constitue un argument pour une clientèle sensible au récit.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "patrimoine",
+        "elegance",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-dominio-del-bendito",
+      "nom": "Bodegas Dominio del Bendito",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "El Titán del Bendito",
+        "Las Sabias",
+        "El Primer Paso"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dominio del Bendito est le projet d'Anthony Terryn, un Français installé à Toro au milieu des années 2000, qui a su marier le respect du patrimoine de vieilles vignes de l'appellation et une approche plus contemporaine, tournée vers la fraîcheur. Le domaine s'est imposé comme l'une des voix les plus intéressantes du renouveau toresan. Le vignoble repose sur de très vieilles vignes de Tinta de Toro, dont certaines centenaires et franches de pied, conduites en biologique sur les sols sableux et caillouteux de la région. Terryn cherche à dompter la puissance du cépage par des vinifications douces et des élevages respectueux, dans une quête d'équilibre et de buvabilité rare à Toro. La gamme monte d'El Primer Paso, l'entrée gourmande et accessible, à Las Sabias, puis à El Titán del Bendito, issu des ceps centenaires, cuvée de tête à la fois puissante et fraîche. Le style, qui conserve la densité du Tinta de Toro tout en cherchant la finesse, illustre la manière dont une nouvelle génération réinterprète l'appellation. Dominio del Bendito fait partie, avec quelques autres, des projets qui montrent que Toro peut produire des vins profonds sans sacrifier l'élégance. Pour un sommelier, c'est une adresse à connaître pour le renouveau de Toro : El Titán pour une belle bouteille de garde, El Primer Paso pour une entrée de gamme fiable. Une signature encore à des prix raisonnables au regard de sa qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "nouvelle-vague",
+        "francais",
+        "vieilles-vignes",
+        "biologique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-divina-proporcion",
+      "nom": "Bodegas Divina Proporción",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Abracadabra",
+        "Encomienda de la Vega",
+        "45 rpm"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Divina Proporción est une petite bodega de Toro au style moderne et soigné, appuyée sur un patrimoine de vieilles vignes de Tinta de Toro. Le nom, référence au nombre d'or, dit l'ambition d'équilibre de la maison, à rebours de la rusticité traditionnelle de l'appellation. Le vignoble repose sur des vieilles vignes sur les sols sableux et caillouteux de la région. Les vinifications cherchent la pureté du fruit et un boisé bien intégré. La gamme, lisible, va d'Abracadabra à Encomienda de la Vega et 45 rpm, dans un registre net et accessible. Pour un sommelier, Divina Proporción est une adresse discrète offrant de bons rapports qualité-prix, dans un style moderne qui rend le Tinta de Toro plus abordable. Une valeur d'usage utile pour une carte cherchant un Toro fiable et équilibré.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "moderne",
+        "famille",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-liberalia-enologica",
+      "nom": "Liberalia Enológica",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Liberalia Cinco",
+        "Liberalia Cero",
+        "Tres Lustros"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Liberalia Enológica est une bodega familiale de Toro à l'univers artistique singulier, dont les étiquettes et l'ambiance s'inspirent de la musique classique. Fondée par la famille Álvarez, elle allie un ancrage traditionnel à une identité visuelle forte. Le vignoble repose sur des vieilles vignes de Tinta de Toro, complétées de Malvasía pour un blanc. La gamme, numérotée de Liberalia Cero à Cinco, monte selon l'âge des vignes et la durée d'élevage, avec la cuvée Tres Lustros en tête. Le style est classique-moderne, structuré. Pour un sommelier, Liberalia est une adresse attachante par son univers et ses vins fiables, à des prix raisonnables. Le blanc de Malvasía, rare à Toro, et la gamme numérotée offrent des options intéressantes pour une carte cherchant de l'originalité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "famille",
+        "malvasia",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-covitoro",
+      "nom": "Bodegas Covitoro",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Cañus Verus",
+        "Marqués de la Villa",
+        "Gran Cermeño"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Covitoro est la grande coopérative de Toro, au patrimoine de vieilles vignes considérable — l'un des plus importants de l'appellation. Elle regroupe de nombreux viticulteurs et produit de gros volumes fiables à des prix contenus. Le vignoble rassemble des vieilles vignes de Tinta de Toro, dont certaines centenaires, sur les sols sableux et caillouteux de la région. La cuvée Cañus Verus, issue de ceps centenaires, illustre le potentiel de ce patrimoine, tandis que Marqués de la Villa et Gran Cermeño couvrent le cœur de gamme. Pour un sommelier, Covitoro est une valeur d'usage précieuse : Cañus Verus offre un Toro de vieilles vignes à prix imbattable, et la gamme large permet de proposer des rouges fiables du secteur. Une coopérative qui vaut bien mieux que l'image parfois associée à ce statut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "cooperative",
+        "vieilles-vignes",
+        "volume",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-estancia-piedra",
+      "nom": "Bodegas Estancia Piedra",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Paredinas",
+        "Piedra Roja",
+        "La Garona"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Estancia Piedra est un domaine de Toro fondé par un Écossais, au style moderne et net, bien diffusé à l'international. La maison s'appuie sur des vieilles vignes de Tinta de Toro et une approche contemporaine du cépage. Le vignoble repose sur les sols sableux et caillouteux de l'appellation. Les vinifications cherchent l'équilibre et la pureté du fruit, avec un élevage soigné. La gamme monte de Piedra Roja à Paredinas, cuvée de vieilles vignes, et La Garona. Pour un sommelier, Estancia Piedra est une adresse fiable, aux prix raisonnables, qui offre un Toro moderne bien fait. Paredinas permet une montée en gamme sur vieilles vignes, dans une signature lisible et bien distribuée à l'export. La bodega, bien intégrée au circuit œnotouristique de Toro, propose des visites appréciées, ce qui ajoute à sa visibilité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "moderne",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-vega-sauco",
+      "nom": "Bodegas Vega Saúco",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Morales de Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Vega Saúco Selección",
+        "El Beybi",
+        "Wamba"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vega Saúco est une maison familiale de Morales de Toro, appuyée sur des vieilles vignes de Tinta de Toro, au style classique-moderne. La famille y perpétue une tradition viticole ancrée dans le terroir de la rive du Duero. Le vignoble repose sur les sols sableux et caillouteux de la région. La gamme, fiable, va d'El Beybi et Wamba à la cuvée Vega Saúco Selección, dans un registre structuré à prix contenus. Pour un sommelier, Vega Saúco est une adresse discrète et honnête, aux prix raisonnables, qui offre un Toro traditionnel bien fait. Une valeur d'usage utile pour une carte cherchant des rouges du secteur à l'écart des grands noms. Morales de Toro, sur la rive nord du Duero, compte parmi les communes historiques de l'appellation, ce qui ancre la maison dans une tradition ancienne. La régularité de sa production en fait une adresse de confiance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "morales",
+        "famille",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-frontaura",
+      "nom": "Bodegas Frontaura",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "Dominio de Valdelacasa",
+        "Frontaura Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Frontaura est un domaine de Toro au style moderne et boisé, à la gamme régulière et bien présente à l'export. La maison s'appuie sur des vignes de Tinta de Toro et un savoir-faire contemporain. Le vignoble repose sur les sols sableux et caillouteux de l'appellation. Le style, marqué par le chêne, joue la densité et la structure. La gamme monte de Frontaura Reserva à Dominio de Valdelacasa, cuvée plus ambitieuse. Pour un sommelier, Frontaura est une adresse fiable au style moderne assumé, aux prix mesurés. Une valeur d'usage pour une carte cherchant un Toro charpenté et boisé qui plaît à une partie de la clientèle. Le domaine dispose d'un vignoble d'altitude qui apporte un peu de fraîcheur à des vins par ailleurs marqués par la puissance solaire du Tinta de Toro. Une adresse régulière, sans surprise mais fiable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "moderne",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-compania-de-vinos-la-zorra",
+      "nom": "Compañía de Vinos La Zorra",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Toro",
+      "commune": "Toro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tinta de Toro"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DO Toro",
+        "La Zorra",
+        "8 Virtudes"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "La Zorra est un projet jeune et nature de Toro, tourné vers les vieilles vignes en biologique et un style frais qui tranche avec la puissance locale. Le nom — « la renarde » — dit l'esprit indépendant de la démarche. Le vignoble repose sur des vieilles vignes de Tinta de Toro conduites en biologique, sur les sols sableux de la région. Les vinifications privilégient la buvabilité et la fraîcheur, à rebours de la concentration traditionnelle. La gamme, resserrée, va de La Zorra à 8 Virtudes. Pour un sommelier, La Zorra est une adresse à connaître pour un Toro différent, plus digeste et frais, à réserver à une clientèle curieuse. Une belle option pour montrer que l'appellation peut aussi produire des rouges élancés, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-toro",
+        "nouvelle-vague",
+        "nature",
+        "biologique",
+        "prov-zamora"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-belondrade",
+      "nom": "Belondrade — Belondrade y Lurton",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Belondrade y Lurton",
+        "Quinta Apolonia",
+        "Quinta Clarisa"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Belondrade est le domaine qui a inventé le Rueda haut de gamme, et prouvé que le Verdejo pouvait être un grand blanc de garde. Quand Didier Belondrade, Français tombé amoureux de la région, lance son premier millésime de Belondrade y Lurton en 1994, Rueda n'est encore qu'une terre de blancs simples et bon marché, vinifiés en inox pour une consommation immédiate. Son pari — fermenter et élever le Verdejo en barrique, comme un grand bourgogne blanc — passe alors pour une folie. Le domaine, installé à La Seca, au cœur de la DO, repose sur des vieilles vignes de Verdejo conduites en biologique, sur les sols sableux et caillouteux du plateau castillan, à sept à huit cents mètres d'altitude. Le climat continental extrême — étés courts et brûlants, nuits fraîches, fortes amplitudes thermiques — préserve l'acidité et la tension du raisin. La fermentation en fût et l'élevage prolongé sur lies, avec bâtonnage, donnent au vin volume, complexité et surtout une capacité de garde que personne ne soupçonnait au Verdejo. Belondrade y Lurton, le vin phare, est devenu la référence absolue du Rueda ambitieux : ample, texturé, doté d'une allonge saline et d'un potentiel de vieillissement de dix ans et plus. Le domaine produit aussi Quinta Apolonia, un Verdejo plus immédiat mais déjà sérieux, et Quinta Clarisa, un rosé de Tempranillo. Trente ans après sa création, Belondrade reste le mètre-étalon du Verdejo de garde, celui que tous les producteurs ambitieux de Rueda ont pris pour modèle. Pour un sommelier, c'est une bouteille précieuse : elle bouscule l'image du Rueda comme simple blanc d'apéritif et se comporte comme un grand blanc de gastronomie, capable d'accompagner des plats élaborés et de vieillir. Un vin à carafer et à ne pas servir trop froid. L'influence de Belondrade dépasse largement ses propres bouteilles : en montrant la voie du Verdejo de terroir et de garde, Didier Belondrade a ouvert un chemin qu'ont ensuite emprunté Ossian, Menade, José Pariente ou Naia. Toute la partie qualitative de Rueda lui doit quelque chose. C'est le vin à servir pour raconter la mutation d'une appellation, passée en une génération du blanc de supermarché au grand blanc de gastronomie capable de vieillir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "garde",
+        "barrique",
+        "icone",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-jose-pariente",
+      "nom": "Bodegas José Pariente",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "José Pariente Verdejo",
+        "Cuvée Especial",
+        "Finca Las Comas"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "José Pariente est l'une des références absolues de Rueda, installée à La Seca, le village le plus qualitatif de l'appellation. La maison porte le nom du père de la fondatrice, un viticulteur qui élaborait déjà des blancs artisanaux à partir de vieilles vignes de Verdejo dans les années 1960. C'est sa fille, Victoria Pariente, qui a créé le domaine moderne en 1998 et en a fait une marque de premier plan. Le vignoble repose sur des vieilles vignes de Verdejo, en partie en gobelet, sur les sols sableux et caillouteux du plateau, à sept à huit cents mètres d'altitude, où l'amplitude thermique préserve l'acidité. La famille a mené, avec l'université, une sélection de levures indigènes issues de ses propres vignes, et vendange à la main les parcelles en gobelet. La gamme illustre la versatilité du Verdejo. Le José Pariente Verdejo, produit phare tiré à près d'un million de bouteilles, mise sur la fraîcheur et le fruit plutôt que sur les arômes tropicaux. Les Fincas de José Pariente, fermenté en barrique à partir de vieilles vignes de La Seca et de Ségovie, et la cuvée élevée en œuf de béton montent en complexité et en profondeur. La maison produit aussi un Sauvignon Blanc. Pour un sommelier, José Pariente est une valeur sûre à tous les niveaux : le Verdejo de base pour une carte au verre, les cuvées parcellaires pour une montée en gamme. Une signature fiable et élégante, emblématique du Rueda de qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "famille",
+        "reference",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-ossian-vides-y-vinos",
+      "nom": "Ossian Vides y Vinos",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Nieva",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Ossian",
+        "Quintaluna",
+        "Capitel",
+        "Verdling"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Ossian est l'un des blancs de terroir les plus profonds d'Espagne, né d'un patrimoine viticole exceptionnel : des vignes préphylloxériques de Verdejo, franches de pied, à Nieva, dans la province de Ségovie, à plus de neuf cents mètres d'altitude. Ces ceps centenaires, plantés sur des sables qui ont protégé leurs racines du phylloxéra, constituent l'un des plus vieux vignobles de Verdejo au monde. Le domaine, conduit en biodynamie, tire de ces vignes un Verdejo à mille lieues du blanc frais et immédiat qui a fait la réputation de Rueda. L'altitude extrême et les sols pauvres donnent des raisins d'une grande concentration et d'une acidité vibrante. La vinification et l'élevage en bois, avec un long passage sur lies, produisent un vin ample, minéral, structuré, taillé pour la garde. Ossian, le vin principal, est un blanc de méditation autant que de gastronomie, régulièrement salué par la critique internationale. Quintaluna offre une lecture plus accessible mais déjà sérieuse, et Capitel ou Verdling poussent l'ambition et l'originalité plus loin encore. Le domaine, aujourd'hui dans le giron du groupe Pago de Carraovejas, a conservé son identité de terroir. Pour un sommelier, c'est une bouteille précieuse pour surprendre : un Verdejo de garde, profond et minéral, qui n'a rien à voir avec l'image de l'appellation. À carafer et à servir pas trop froid, sur une belle table.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "prephylloxerique",
+        "altitude",
+        "biodynamie",
+        "prov-segovia"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-menade",
+      "nom": "Bodegas Menade",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Rueda",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Menade Verdejo",
+        "Nosso",
+        "V3 Viñas Viejas"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Menade est le projet des frères Sanz — Richard, Marco et Alejandra — héritiers de l'une des plus anciennes lignées de vignerons de Rueda, remontant au XIXe siècle. Ils ont fait de leur domaine l'un des plus sérieux de l'appellation sur le plan environnemental, avec une conversion à la biodynamie certifiée et un travail poussé sur la biodiversité. Le vignoble repose sur des vieilles vignes de Verdejo, dont certaines préphylloxériques, sur les sols argilo-calcaires et caillouteux du plateau, à plus de sept cents mètres d'altitude. La maison privilégie les levures indigènes et cherche à préserver la typicité variétale et la fraîcheur, dans une démarche respectueuse du vivant. La gamme illustre cette philosophie. Le Menade Verdejo, monovariétal frais et net, constitue l'entrée. Nosso, premier vin de la maison sans soufre ajouté, « comme autrefois », est en partie fermenté en barrique et illustre l'approche nature. V3 Viñas Viejas, issu de vieilles vignes, constitue le haut de gamme, plus profond et structuré. La maison produit aussi un Sauvignon Blanc. Pour un sommelier, c'est une adresse à connaître pour proposer un Rueda engagé et de terroir : le Verdejo de base pour une carte au verre, Nosso et V3 pour une clientèle sensible au bio et aux vins nature. Des prix raisonnables au regard de la démarche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "biodynamie",
+        "famille",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-naia",
+      "nom": "Bodegas Naia",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Naia",
+        "Naiades",
+        "Las Brisas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Naia est l'un des domaines de Rueda les plus attachés à l'expression du terroir et des vieilles vignes, installé à La Seca, le village de référence de l'appellation. À contre-courant de la production industrielle qui domine la DO, la maison mise sur la qualité du raisin et sur des vinifications soignées pour révéler le potentiel du Verdejo. Le vignoble repose sur des vieilles vignes de Verdejo, sur les sols sableux et caillouteux du plateau de La Seca, à bonne altitude. La maison explore différentes vinifications — inox, barrique, béton — pour tirer le meilleur de chaque parcelle, avec une attention particulière portée aux vieilles vignes. La gamme monte de Las Brisas, l'entrée fraîche et accessible, à Naia, le cœur de gamme net et précis, puis à Naiades, Verdejo de vieilles vignes fermenté en barrique qui constitue le sommet du domaine. Naiades compte parmi les Verdejos les plus aboutis de Rueda, ample et complexe, doté d'une réelle capacité de garde. Le style, précis et gastronomique, illustre le Rueda de qualité. Naia fait partie des domaines qui, dans le sillage de Belondrade, ont prouvé que le Verdejo pouvait donner de grands blancs. Pour un sommelier, c'est une adresse fiable et bien positionnée : Naia pour une carte au verre de qualité, Naiades pour une montée en gamme sur vieilles vignes. Une signature sérieuse, à des prix raisonnables au regard de sa qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "vieilles-vignes",
+        "reference",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-marques-de-riscal",
+      "nom": "Bodegas Marqués de Riscal (Rueda)",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Rueda",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Marqués de Riscal Verdejo",
+        "Finca Montico",
+        "Limousin"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Marqués de Riscal est la maison qui a relancé Rueda dans les années 1970, en misant sur le Verdejo à une époque où l'appellation périclitait. La grande maison de Rioja, conseillée alors par Émile Peynaud, a joué un rôle décisif dans la renaissance de la DO. Le domaine produit d'énormes volumes de Verdejo fiable à Rueda, du basique très diffusé au Finca Montico, cuvée parcellaire plus ambitieuse, en passant par une version Sauvignon Blanc et un Verdejo élevé en bois (Limousin). Le style est net, aromatique et régulier. Pour un sommelier, Riscal est une valeur d'usage incontournable : un Verdejo fiable et disponible partout, à des prix contenus, avec Finca Montico pour une montée en gamme. Un nom qui rassure la clientèle et raconte l'histoire de la renaissance de Rueda.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "pionnier",
+        "volume",
+        "marques-de-riscal",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-javier-sanz-viticultor",
+      "nom": "Javier Sanz Viticultor",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Verdejo Malcorta",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Villa Narcisa",
+        "V Malcorta",
+        "Sauvignon"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Javier Sanz Viticultor est une maison familiale de La Seca, sur plusieurs générations, gardienne du rare Verdejo Malcorta, un clone ancien à grappe particulière presque disparu. La famille perpétue un patrimoine viticole précieux. Le vignoble repose sur des vieilles vignes de Verdejo, dont le Malcorta, sur les sols sableux et caillouteux de La Seca. La gamme monte de la cuvée Sauvignon à Villa Narcisa, Verdejo de vieilles vignes, et V Malcorta, qui met en valeur ce clone rare. Pour un sommelier, Javier Sanz est une adresse à connaître pour le Malcorta, curiosité ampélographique de Rueda, et pour ses Verdejos fiables de vieilles vignes. Une signature familiale sérieuse, à des prix raisonnables, avec un angle patrimonial intéressant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "famille",
+        "cepages-rares",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-protos",
+      "nom": "Bodegas Protos (Rueda)",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Rueda",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Protos Verdejo",
+        "Protos Rosé"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Protos, la maison de Ribera del Duero, produit à Rueda un Verdejo net et régulier, très diffusé. Elle a étendu son savoir-faire à l'appellation voisine pour compléter sa gamme avec un blanc. Le vignoble et les approvisionnements couvrent le secteur de Rueda, sur les sols sableux du plateau. Le Protos Verdejo, aromatique et frais, mise sur la pureté variétale, complété d'un rosé. Le style est moderne et fiable. Pour un sommelier, le Verdejo de Protos est une valeur d'usage : un blanc net et bien diffusé, à bon rapport qualité-prix, adossé à un nom connu de la Ribera. Utile pour une carte cherchant un Rueda fiable et sans surprise. La présence de Protos à la fois en Ribera del Duero et à Rueda illustre la logique des grandes maisons castillanes, qui couvrent rouge et blanc sur les deux appellations voisines. Le Verdejo complète ainsi une offre bien pensée pour la restauration.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "volume",
+        "protos",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-palacio-de-bornos",
+      "nom": "Bodegas Palacio de Bornos",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Rueda",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Palacio de Bornos Verdejo",
+        "Bornos La Caprichosa",
+        "Vendimia Seleccionada"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Palacio de Bornos est une maison historique de Rueda, pionnière du Verdejo fermenté en barrique et des espumosos de l'appellation. Elle a joué un rôle dans la diversification qualitative de la DO. Le vignoble repose sur les sols sableux et caillouteux du plateau. La gamme est large : Palacio de Bornos Verdejo net et frais, La Caprichosa et Vendimia Seleccionada plus ambitieux, ainsi que des effervescents. Le style est fiable et régulier. Pour un sommelier, Palacio de Bornos est une adresse fiable, aux prix mesurés, dont la gamme large inclut des effervescents de Rueda, plus rares. Une valeur d'usage utile pour une carte cherchant de la diversité dans l'appellation. Le rôle pionnier de la maison dans le Verdejo de barrique et l'effervescent lui donne une place particulière dans l'histoire qualitative de Rueda. Une adresse à connaître pour la diversité de sa gamme.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "historique",
+        "effervescent",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-cuatro-rayas",
+      "nom": "Bodega Cuatro Rayas",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Cuarenta Vendimias",
+        "Rayo Vello",
+        "5000"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cuatro Rayas est une grande coopérative de La Seca, l'un des plus gros producteurs de Rueda, au patrimoine de vieilles vignes important. Elle produit de gros volumes fiables et quelques cuvées de vieilles vignes remarquées. Le vignoble rassemble de nombreuses parcelles de Verdejo, dont des vieilles vignes préphylloxériques, sur les sols sableux de La Seca. La cuvée Rayo Vello, issue de vignes préphylloxériques, illustre le potentiel de ce patrimoine, tandis que Cuarenta Vendimias couvre le cœur de gamme. Pour un sommelier, Cuatro Rayas est une valeur d'usage précieuse : Rayo Vello offre un Verdejo de vieilles vignes préphylloxériques à prix contenu, et la gamme large permet de proposer des blancs fiables du secteur. Une coopérative de bon niveau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "cooperative",
+        "volume",
+        "vieilles-vignes",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-shaya",
+      "nom": "Bodegas Shaya — Familia Gil",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Aldeanueva del Codonal",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Shaya",
+        "Shaya Habis",
+        "Arindo"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Shaya est le projet de Rueda de la famille Gil (Juan Gil, Murcia), sur de vieilles vignes de Verdejo de la province de Ségovie, à bonne altitude. La maison mise sur le terroir et les vieilles vignes plutôt que sur le volume. Le vignoble repose sur des vieilles vignes de Verdejo, sur les sols sableux d'altitude de Ségovie, conduites en biologique. La gamme monte d'Arindo à Shaya, puis à Shaya Habis, Verdejo fermenté en barrique qui constitue le haut de gamme, plus profond et structuré. Pour un sommelier, Shaya est une adresse fiable et bien positionnée : Shaya pour une carte au verre de qualité, Habis pour une montée en gamme sur vieilles vignes d'altitude. Une signature sérieuse adossée au savoir-faire du groupe Juan Gil.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "vieilles-vignes",
+        "juan-gil",
+        "altitude",
+        "prov-segovia"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-de-alberto",
+      "nom": "Bodegas de Alberto",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Serrada",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Palomino"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Finca Valdemoya",
+        "De Alberto Verdejo",
+        "Dorado"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Bodegas de Alberto est une maison de Serrada connue pour ses calados historiques et son Dorado, vin rancio traditionnel de Rueda élaboré selon un système de vieillissement oxydatif. Elle perpétue un patrimoine unique aux côtés du Verdejo moderne. Le vignoble repose sur les sols sableux et caillouteux du plateau. Outre le Verdejo net et frais (Finca Valdemoya, De Alberto Verdejo), la maison produit le Dorado, vin de Palomino et Verdejo vieilli en solera, spécialité oubliée de l'appellation. Les caves souterraines de Serrada ajoutent à son intérêt. Pour un sommelier, de Alberto est une adresse à connaître pour le Dorado, curiosité historique de Rueda proche des vins de Jerez, à raconter autant qu'à servir. Le Verdejo moderne complète une gamme fiable, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "dorado",
+        "patrimoine",
+        "calados",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-angel-lorenzo-cachazo",
+      "nom": "Bodegas Ángel Lorenzo Cachazo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Pozaldez",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Martivillí Verdejo",
+        "Lorenzo Cachazo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Ángel Lorenzo Cachazo est une bodega familiale de Pozaldez, dont la gamme Martivillí est très diffusée. La maison produit un Verdejo net et fiable à des prix contenus. Le vignoble repose sur les sols sableux du plateau. Le Martivillí Verdejo, aromatique et frais, mise sur la pureté variétale, complété d'effervescents. Le style est régulier et accessible. Pour un sommelier, c'est une valeur d'usage : un Verdejo fiable et bien diffusé, à bon rapport qualité-prix, utile pour une carte cherchant un Rueda accessible et sans surprise. Une maison familiale de bon niveau. Pozaldez, au cœur du plateau de Rueda, bénéficie de l'altitude et des sols sableux qui font la typicité du Verdejo. La maison y perpétue une tradition familiale ancrée dans le terroir local.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "famille",
+        "volume",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodega-palomo",
+      "nom": "Bodega Palomo — Palomo Cojo",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Palomo Cojo Verdejo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Palomo Cojo est une marque populaire de Rueda au bon rapport qualité-prix, très présente en restauration. Le Verdejo aromatique et frais de la maison est devenu une référence d'entrée de gamme. Le vignoble repose sur les sols sableux du plateau. Le Palomo Cojo Verdejo mise sur l'expression variétale, avec des arômes de fruits frais et une finale nette. Le style est immédiat et gourmand. Pour un sommelier, Palomo Cojo est une valeur d'usage efficace : un Verdejo fiable et abordable, très demandé au verre. Une option sûre pour une carte cherchant un Rueda de qualité constante à petit prix. Le nom pittoresque de la marque et son excellent rapport qualité-prix en ont fait un habitué des cartes de bars à vins et de restaurants, où le Verdejo frais séduit une large clientèle. Une valeur sûre du quotidien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "rapport-qualite-prix",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-prieto-pariente",
+      "nom": "Prieto Pariente",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "La Seca",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo",
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vino de la Tierra de Castilla y León",
+        "El Origen",
+        "Iris"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Prieto Pariente est le projet de la troisième génération de la famille Pariente — Martina et Ignacio — hors DO Rueda, sur plusieurs terroirs de Castilla y León. Il illustre l'esprit nouvelle vague de la jeune génération. Le domaine travaille des parcelles de Verdejo et de Tempranillo sur différents terroirs de la région, conduites en biologique, dans une logique parcellaire. Les cuvées El Origen et Iris explorent l'expression du lieu, en blanc comme en rouge, hors des contraintes de l'appellation. Pour un sommelier, Prieto Pariente est une adresse à suivre pour la nouvelle génération castillane : des vins de terroir, frais et parcellaires, qui prolongent l'héritage familial dans un esprit plus contemporain. À des prix raisonnables, pour une clientèle curieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "nouvelle-vague",
+        "hors-do",
+        "pariente",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    },
+    {
+      "id": "es-castillayleon-prod-bodegas-val-de-vid",
+      "nom": "Bodegas Val de Vid",
+      "type": "domaine",
+      "region": "Castilla y León",
+      "sous_region": "Rueda",
+      "commune": "Serrada",
+      "pays": "Espagne",
+      "cepages": [
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DO Rueda",
+        "Val de Vid Verdejo",
+        "Condesa Eylo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Val de Vid est une bodega familiale de Serrada, dont le Verdejo net et régulier constitue une valeur fiable de Rueda. La maison mise sur la pureté variétale à des prix mesurés. Le vignoble repose sur les sols sableux et caillouteux du plateau. La gamme, resserrée, va du Val de Vid Verdejo à la cuvée Condesa Eylo, dans un registre frais et accessible. Pour un sommelier, Val de Vid est une adresse discrète et fiable, aux prix raisonnables, qui offre un Verdejo bien fait. Une valeur d'usage utile pour une carte cherchant un Rueda régulier à l'écart des grands noms. Serrada, au cœur du plateau de Rueda, bénéficie des sols sableux et de l'altitude qui font la typicité du Verdejo. La maison y perpétue une tradition familiale, avec une gamme resserrée et cohérente.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "do-rueda",
+        "verdejo",
+        "famille",
+        "prov-valladolid"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (spanishwinelover, vinissimus, Peñín, presse spécialisée Toro & Rueda)"
+    }
+  ]
+}

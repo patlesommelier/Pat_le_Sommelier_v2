@@ -1,0 +1,1945 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "campania",
+  "region_label": "Campania (Italie)",
+  "source_file": "producteurs_campania.json",
+  "built_at": "2026-07-07",
+  "count": 44,
+  "items": [
+    {
+      "id": "it-campania-prod-mastroberardino",
+      "nom": "Mastroberardino",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Atripalda",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Atripalda, aux portes d'Avellino, Mastroberardino est la maison qui a sauvé le vin d'Irpinia et, avec lui, l'Aglianico et les grands cépages autochtones de Campanie. Alors qu'au XXe siècle la région arrachait ses vieilles vignes au profit de cépages plus rentables, la famille Mastroberardino a résisté, préservant l'Aglianico, le Fiano et le Greco, et démontrant leur potentiel de tout premier plan.\n\nSon vin-phare, le Taurasi Radici, est la référence absolue du « Barolo du Sud » : un Aglianico puissant, tannique et de très longue garde, élevé en grands foudres de chêne de Slavonie et considéré comme l'étalon de l'appellation. Le millésime 1968, encore présent dans les ventes aux enchères, a prouvé que l'Aglianico irpinien pouvait vieillir des décennies. En blanc, le Fiano di Avellino More Maiorum et le Greco di Tufo Nova Serra comptent parmi les références de leurs cépages. La maison mène aussi le projet « Villa dei Misteri », reconstitution des vins de la Rome antique sur les pentes du Vésuve, à Pompéi, en collaboration avec la Surintendance archéologique. Ce lien unique entre histoire, science et vin fait de Mastroberardino un gardien du patrimoine autant qu'un grand producteur.\n\nSauveuse de l'Aglianico et matrice du renouveau du vin campanien, la maison Mastroberardino a fait du Taurasi Radici un monument du vin italien. C'est la référence historique de l'Irpinia et l'une des plus grandes maisons du Sud.\n\nL'Irpinia, arrière-pays montagneux et frais à l'est de Naples, doit une part immense de sa reconnaissance à cette famille qui, génération après génération, a cru en ses terroirs quand tous les abandonnaient. Antonio Mastroberardino, figure tutélaire disparue en 2014, fut l'artisan de cette fidélité, isolant les meilleures souches d'Aglianico, de Fiano et de Greco et bâtissant une réputation qui rejaillit sur toute la Campanie. Le Taurasi Radici, issu des meilleures parcelles et longuement élevé, se patine sur des décennies, développant des arômes de cerise noire, de cuir, de tabac, de réglisse et de sous-bois. Servi sur des viandes braisées, du gibier ou des fromages affinés, il est l'un des grands vins de garde d'Italie. Les blancs, eux, accompagnent poissons et crustacés. Au-delà des vins, l'entreprise a mené des projets scientifiques et culturels majeurs, dont la reconstitution des cépages et des vins de Pompéi, qui témoignent de son lien profond avec l'histoire du vin en Campanie. Aujourd'hui encore, la maison demeure la boussole qualitative et morale de l'Irpinia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Radici Riserva",
+        "Fiano di Avellino More Maiorum",
+        "Greco di Tufo Nova Serra",
+        "Villa dei Misteri"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "fiano",
+        "greco",
+        "historique",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winetravelguides"
+    },
+    {
+      "id": "it-campania-prod-quintodecimo",
+      "nom": "Quintodecimo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Mirabella Eclano",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mirabella Eclano, au cœur de l'Irpinia, Quintodecimo est le domaine de Luigi Moio, l'un des œnologues les plus respectés d'Italie, professeur d'œnologie et théoricien reconnu du vin. Fondé en 2001, ce domaine incarne sa vision la plus personnelle et la plus aboutie : marier science et terroir pour révéler l'excellence des cépages irpiniens.\n\nSur des sols argilo-calcaires d'altitude, Quintodecimo décline avec une précision remarquable le trio des DOCG d'Irpinia : le Taurasi (Vigna Quintodecimo), l'un des plus raffinés de l'appellation, l'Aglianico Terra d'Eclano, le Fiano di Avellino Exultet et le Greco di Tufo Giallo d'Arles, tous d'une profondeur et d'un équilibre exemplaires. Le style Moio conjugue maturité optimale, élevages soignés en barriques et recherche constante de finesse, à rebours des Aglianico rustiques ou sur-extraits ; ses blancs, amples et tendus, expriment une grande complexité. Chaque cuvée porte le nom d'une œuvre musicale ou d'une figure chère au vigneron, témoignant de sa sensibilité. La rigueur scientifique de Moio, appliquée à un terroir d'exception, place Quintodecimo au sommet qualitatif de la Campanie.\n\nDomaine de l'œnologue Luigi Moio, Quintodecimo signe des Taurasi, Fiano et Greco d'une précision et d'une élégance rares. C'est l'un des sommets du vin d'Irpinia et une référence pour tout amateur de grands vins du Sud.\n\nLuigi Moio n'est pas un vigneron ordinaire : auteur d'ouvrages de référence sur les arômes du vin et longtemps consultant recherché, il a voulu, avec Quintodecimo, appliquer à ses propres vignes la somme de son savoir. Le résultat est d'une cohérence rare : des vins d'une netteté aromatique et d'un équilibre qui font école. Les sols d'altitude de Mirabella Eclano, frais et bien exposés, permettent à l'Aglianico d'atteindre une maturité complète sans lourdeur, et aux blancs de conserver tension et fraîcheur. Servis sur des viandes rouges et du gibier pour les Taurasi, sur des poissons et des viandes blanches pour le Fiano et le Greco, les vins de Quintodecimo se distinguent par leur profondeur et leur digestibilité. Moio soigne chaque détail, de la vigne au verre, avec une exigence quasi scientifique, sans jamais sacrifier l'émotion. En quelques années, il a hissé son domaine au rang des tout meilleurs de Campanie, prouvant que l'Aglianico d'Irpinia, bien travaillé, peut compter parmi les grands rouges du monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna Quintodecimo (Taurasi)",
+        "Exultet (Fiano)",
+        "Giallo d'Arles (Greco)",
+        "Terra d'Eclano"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "moio",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "justerinis|italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-feudi-di-san-gregorio",
+      "nom": "Feudi di San Gregorio",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Sorbo Serpico",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sorbo Serpico, en Irpinia, Feudi di San Gregorio est le grand domaine moderne qui a porté la Campanie sur la scène internationale. Fondée à la fin des années 1980, la maison a conjugué ambition, moyens et savoir-faire pour révéler au monde le potentiel des cépages autochtones d'Irpinia, avec un succès retentissant.\n\nSur un vaste vignoble, Feudi décline l'ensemble du trio des DOCG : le Taurasi (dont le grand Piano di Montevergine), le Fiano di Avellino Pietracalda, le Greco di Tufo Cutizzi — références de leurs appellations — ainsi que le rouge Serpico et une gamme complète. Le style, moderne et précis, allie technologie de pointe et respect du terroir, dans des vins réguliers et raffinés, accessibles comme ambitieux. Le domaine s'est aussi doté d'un centre œnologique contemporain et d'un restaurant réputé, faisant figure de vitrine de la Campanie. Son travail sur la sélection parcellaire et la préservation des vieilles vignes (projet des « vigne vecchie ») témoigne d'une exigence qualitative constante. Feudi di San Gregorio a joué un rôle majeur dans la reconnaissance mondiale des vins campaniens.\n\nGrande maison moderne de l'Irpinia, Feudi di San Gregorio a fait rayonner le Taurasi, le Fiano et le Greco sur les tables du monde. C'est l'un des domaines les plus complets, les plus réguliers et les plus influents du Sud de l'Italie.\n\nL'ascension de Feudi di San Gregorio a symbolisé la renaissance du vin campanien : en une génération, la maison est passée du statut de nouvelle venue à celui d'ambassadrice mondiale de l'Irpinia. Les moyens investis — vignoble, chai, recherche — ont permis une régularité et une qualité qui ont convaincu la critique et les marchés internationaux. Mais loin de se contenter d'une approche industrielle, le domaine a mené un travail de fond sur les vieilles vignes, les sélections parcellaires et la préservation du patrimoine ampélographique. Servis sur une cuisine variée, des poissons pour les blancs aux viandes braisées pour le Taurasi, ses vins séduisent par leur précision et leur constance. Le Piano di Montevergine, Taurasi de garde, en est le sommet, tandis que le Pietracalda et le Cutizzi figurent parmi les Fiano et Greco de référence. Le centre œnologique contemporain et le restaurant étoilé ont fait du domaine une destination. Feudi di San Gregorio demeure la vitrine la plus éclatante du vin d'Irpinia dans le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Piano di Montevergine",
+        "Pietracalda (Fiano)",
+        "Cutizzi (Greco)",
+        "Serpico"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "fiano",
+        "greco",
+        "moderne",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-pietracupa",
+      "nom": "Pietracupa",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Montefredane",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Greco",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefredane, sur les collines de l'Irpinia, Pietracupa est un domaine culte, adulé des amateurs de grands blancs du Sud. Sabino Loffredo, vigneron perfectionniste, y élabore en quantités limitées des Greco et des Fiano d'une pureté et d'une tension qui les placent parmi les plus grands blancs d'Italie.\n\nSur les sols argilo-calcaires de Montefredane, en rendements maîtrisés, Loffredo signe un Greco di Tufo et un Fiano di Avellino d'une précision cristalline, salins, minéraux et d'une grande capacité de garde, ainsi que la cuvée Cupo (Fiano de sélection) et un peu de rouge (Quo Vadis, à base d'Aglianico). Le style Pietracupa, épuré et exigeant, cherche à révéler le terroir dans sa vérité la plus nue, sans artifice ni excès de bois : le résultat est d'une élégance et d'une profondeur remarquables, comparé aux plus grands blancs de garde. La production, confidentielle, est très recherchée. Figure discrète mais unanimement admirée, Sabino Loffredo est considéré comme l'un des plus grands vinificateurs de blancs du Sud de l'Italie.\n\nDomaine culte de Montefredane, Pietracupa signe des Greco et des Fiano d'une pureté et d'une minéralité exceptionnelles. C'est l'une des références absolues des grands blancs d'Irpinie et un nom recherché des connaisseurs.\n\nLe domaine doit tout à la vision d'un homme, Sabino Loffredo, qui a fait de la recherche de la pureté une obsession. Sur les collines de Montefredane, réputées pour la finesse de leurs blancs, il travaille avec une minutie extrême, cherchant à capturer l'énergie du terroir plutôt qu'à imprimer un style. Ses Greco et Fiano, vinifiés sans esbroufe, révèlent une tension saline et une profondeur qui se déploient magnifiquement avec le temps : loin d'être de simples blancs de soif, ce sont des vins de garde, capables d'évoluer une décennie et plus. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages, ils séduisent par leur précision cristalline. Leur rareté et leur réputation en font des bouteilles convoitées, difficiles à trouver hors d'Italie. Discret et peu porté sur la communication, Loffredo laisse ses vins parler pour lui, et ils disent l'un des plus beaux dialogues entre un homme, un cépage et une colline. Pietracupa est, pour beaucoup, le sommet des blancs d'Irpinia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Tufo",
+        "Fiano di Avellino",
+        "Cupo (Fiano)",
+        "Quo Vadis"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "fiano",
+        "greco",
+        "culte",
+        "loffredo"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines|jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-luigi-tecce",
+      "nom": "Luigi Tecce",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Paternopoli",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Paternopoli, dans les hauteurs de l'Irpinia, Luigi Tecce est un vigneron culte du Taurasi, figure d'une viticulture artisanale et authentique. Sur de vieilles vignes d'Aglianico, souvent centenaires, il élabore en petites quantités des rouges profonds, sauvages et sans compromis, devenus des objets de quête pour les amateurs.\n\nLe Poliphemo, son Taurasi emblématique, est un Aglianico dense, complexe et de très longue garde, issu de vieilles parcelles et vinifié avec un minimum d'intervention, dans un style qui privilégie l'énergie et la vérité du terroir à la technique. Le Satyricon et le Puro Sangue complètent une gamme confidentielle et recherchée. Le travail des vieilles vignes, les levures indigènes et les élevages patients donnent des vins d'une intensité et d'une personnalité rares, à des années-lumière des Aglianico standardisés. Tecce incarne, pour le Taurasi, la même quête d'authenticité et de terroir que les grands vignerons-artisans d'ailleurs, et son domaine est devenu une référence pour les amateurs de vins naturels et de grands Aglianico de garde.\n\nVigneron culte du Taurasi, Luigi Tecce signe des Aglianico profonds et sauvages sur vieilles vignes, dont le Poliphemo est l'emblème. C'est l'une des expressions les plus intenses et les plus recherchées de l'Irpinia.\n\nLuigi Tecce est l'un de ces vignerons qui incarnent l'âme d'un terroir. À Paternopoli, dans les hauteurs fraîches de l'Irpinia, il veille sur de vieilles vignes d'Aglianico dont il tire des vins d'une intensité peu commune. Son approche, artisanale et instinctive, refuse les recettes et les corrections : levures indigènes, élevages patients, interventions minimales, pour laisser le millésime et le lieu s'exprimer dans toute leur vérité. Le Poliphemo, puissant et profond, peut dérouter par son caractère brut, mais récompense par une complexité et une longévité remarquables. Servi sur des viandes braisées, du gibier ou des fromages affinés, il déploie des arômes de fruits noirs, de garrigue, d'épices et de fumée. La production, confidentielle, s'arrache auprès d'un cercle d'amateurs fervents. Tecce a redonné au Taurasi une dimension artisanale et émotionnelle, à rebours des versions lissées, et s'est imposé comme l'une des figures les plus attachantes et les plus admirées de l'Irpinia, comparé aux grands vignerons-artisans des plus prestigieuses appellations.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poliphemo (Taurasi)",
+        "Satyricon",
+        "Puro Sangue"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "culte",
+        "nature",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-montevetrano",
+      "nom": "Montevetrano",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Salerno (Picentini)",
+      "commune": "San Cipriano Picentino",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli di Salerno IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Cipriano Picentino, sur les collines des Picentini près de Salerne, Montevetrano est le domaine d'un rouge culte né presque par hasard. Silvia Imparato, photographe passionnée, y produisait un vin pour ses amis quand, avec l'aide de l'œnologue Riccardo Cotarella, elle créa au début des années 1990 une cuvée qui allait devenir l'un des grands rouges d'Italie du Sud.\n\nLe Montevetrano, assemblage de Cabernet Sauvignon, Merlot et Aglianico, est un rouge d'une élégance et d'une profondeur remarquables, alliant la structure des cépages bordelais à la personnalité de l'Aglianico local, sur des sols de collines bien exposées. Salué dès ses premiers millésimes par la critique internationale, il a acquis un statut culte et une réputation mondiale, tout en restant produit en quantités limitées. Le domaine signe aussi le Core (rouge d'Aglianico et blanc de Fiano-Greco), plus accessible. Le style, raffiné et équilibré, privilégie la finesse à la puissance. Silvia Imparato a prouvé qu'un grand vin pouvait naître hors des sentiers battus, dans une zone sans tradition prestigieuse.\n\nDomaine culte des collines de Salerne, Montevetrano signe l'un des grands rouges du Sud, assemblage bordelais-Aglianico d'une grande élégance. C'est une référence recherchée du vin campanien.\n\nLe succès de Montevetrano a fait figure de symbole : il a montré qu'un vin de classe mondiale pouvait naître d'une passion privée, hors des zones consacrées. Sur les collines des Picentini, fraîches et bien exposées, l'assemblage trouve un équilibre entre la puissance des cépages bordelais et la fraîcheur apportée par l'Aglianico et l'altitude. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Montevetrano séduit par son élégance veloutée et se patine sur une décennie. Silvia Imparato, restée fidèle à une production limitée et artisanale, a fait de son domaine une référence recherchée, dont chaque millésime est attendu par les amateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Montevetrano",
+        "Core Rosso",
+        "Core Bianco"
+      ],
+      "tags": [
+        "campania",
+        "salerno",
+        "cabernet",
+        "aglianico",
+        "culte",
+        "imparato"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winedexer"
+    },
+    {
+      "id": "it-campania-prod-galardi",
+      "nom": "Galardi",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "commune": "Sessa Aurunca",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Roccamonfina IGT",
+        "Terra di Lavoro"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sessa Aurunca, dans la Terra di Lavoro au nord de la Campanie, Galardi est le domaine d'un rouge culte : le Terra di Lavoro. Sur les pentes volcaniques du massif éteint du Roccamonfina, la famille (avec le concours de l'œnologue Riccardo Cotarella) élabore ce vin devenu, dans les années 1990, l'un des grands rouges du Sud de l'Italie.\n\nLe Terra di Lavoro, assemblage d'Aglianico et de Piedirosso issu de vignes plantées sur des sols volcaniques riches, est un rouge puissant, profond et velouté, aux arômes de fruits noirs, d'épices et de notes minérales, salué par la critique internationale dès ses premiers millésimes. Produit en quantités limitées, il a acquis un statut culte et une réputation qui dépasse largement les frontières de la région. Le domaine, à taille humaine, concentre son savoir-faire sur cette cuvée d'exception, expression d'un terroir volcanique singulier et de deux cépages autochtones sublimés. Galardi a démontré que la Terra di Lavoro, loin des zones les plus réputées de Campanie, pouvait produire un vin de classe mondiale.\n\nDomaine du rouge culte Terra di Lavoro, Galardi signe l'un des plus grands Aglianico-Piedirosso d'Italie, né sur les pentes volcaniques du Roccamonfina. C'est une référence recherchée du nord de la Campanie.\n\nL'histoire de Galardi est celle d'une révélation. Au début des années 1990, sur les terres familiales du Roccamonfina, un volcan éteint du nord de la Campanie, la famille décide de produire un vin ambitieux à partir de l'Aglianico et du Piedirosso, avec l'aide de l'œnologue Riccardo Cotarella. Le Terra di Lavoro qui en naît impressionne d'emblée la critique par sa profondeur et son velouté, et devient rapidement l'un des rouges les plus recherchés du Sud. Les sols volcaniques, riches et bien drainés, et le climat propice donnent au vin une matière dense mais équilibrée, aux tanins soyeux. Servi sur des viandes rouges, du gibier ou des fromages, il se patine sur une décennie. Le domaine, resté à taille humaine, concentre son énergie sur cette cuvée d'exception, refusant la dispersion. En prouvant qu'un grand vin pouvait naître loin des zones les plus célèbres de Campanie, Galardi a élargi la carte des terroirs d'excellence de la région et acquis une aura culte qui perdure.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Terra di Lavoro"
+      ],
+      "tags": [
+        "campania",
+        "terra-di-lavoro",
+        "roccamonfina",
+        "aglianico",
+        "piedirosso",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|tasteatlas"
+    },
+    {
+      "id": "it-campania-prod-marisa-cuomo",
+      "nom": "Marisa Cuomo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Costa d'Amalfi",
+      "commune": "Furore",
+      "pays": "Italie",
+      "cepages": [
+        "Fenile",
+        "Ripoli",
+        "Ginestra",
+        "Falanghina",
+        "Biancolella",
+        "Piedirosso",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Costa d'Amalfi Furore DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Furore, accroché aux falaises de la côte amalfitaine, le domaine Marisa Cuomo (Gran Furor Divina Costiera) pratique l'une des viticultures les plus héroïques d'Italie. Sur des terrasses vertigineuses arrachées à la roche, au-dessus de la mer Tyrrhénienne, Marisa Cuomo et Andrea Ferraioli cultivent des cépages autochtones rarissimes pour signer des vins d'exception.\n\nLe Fiorduva (Furore Bianco Fiorduva) est leur chef-d'œuvre : un blanc iconique issu de trois cépages locaux presque disparus — Fenile, Ripoli et Ginestra —, vendangés tardivement et partiellement élevés en bois, d'une richesse, d'une complexité et d'une salinité remarquables, devenu l'un des grands blancs d'Italie. Le domaine produit aussi le Furore Rosso Riserva (Aglianico, Piedirosso), le Ravello et des blancs à base de Falanghina et Biancolella. Les sols calcaires et volcaniques, l'exposition maritime et les rendements infimes des terrasses donnent des vins d'une minéralité et d'une tension uniques. La cave, creusée dans la falaise, ajoute à la magie du lieu. Marisa Cuomo est l'ambassadeur le plus illustre du vin de la côte amalfitaine.\n\nDomaine héroïque de la côte amalfitaine, Marisa Cuomo signe avec le Fiorduva l'un des grands blancs d'Italie, né de cépages rares sur des terrasses vertigineuses. C'est une référence iconique du vin de falaise.\n\nLa viticulture de la côte amalfitaine relève du défi permanent : sur des pentes si abruptes que tout se fait à la main, en paniers, le long de terrasses (les « macere ») soutenues par des murets de pierre sèche, chaque hectare exige un travail considérable. C'est dans ce décor spectaculaire, entre ciel et mer, que Marisa Cuomo et Andrea Ferraioli ont bâti leur domaine, sauvant des cépages autochtones que plus personne ne cultivait. Le Fiorduva, né des raisins Fenile, Ripoli et Ginestra, est un blanc d'une richesse et d'une originalité saisissantes, aux arômes de fruits mûrs, d'abricot, de miel et d'épices, équilibré par une salinité marine. Servi sur des poissons, des crustacés ou une cuisine méditerranéenne raffinée, il est devenu l'un des blancs italiens les plus célèbres. Les rouges (Furore Rosso Riserva) et les autres blancs confirment le talent du domaine. La cave, creusée dans la falaise, et le cadre exceptionnel ajoutent à la légende. Marisa Cuomo a fait de la côte amalfitaine une terre de grands vins, et de la viticulture héroïque un art.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Furore Bianco Fiorduva",
+        "Furore Rosso Riserva",
+        "Ravello Bianco",
+        "Furore Bianco"
+      ],
+      "tags": [
+        "campania",
+        "costa-amalfi",
+        "furore",
+        "fiorduva",
+        "heroique",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-colli-di-lapio",
+      "nom": "Colli di Lapio",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Lapio",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lapio, l'un des berceaux du Fiano di Avellino, le domaine Colli di Lapio de Clelia Romano est une référence absolue du cépage. Sur les sols argilo-calcaires de ce village réputé, la famille cultive un vignoble avec un soin qui a fait sa renommée.\n\nSon Fiano di Avellino est considéré comme l'un des étalons de l'appellation : un blanc floral et fruité dans sa jeunesse, développant avec le temps des notes de noisette, de miel et de minéral, d'une grande fraîcheur et d'un beau potentiel de garde. La cuvée Aléthéia (Fiano Riserva) et un Greco di Tufo complètent la gamme. Le style, pur et précis, exprime la finesse du terroir de Lapio, sans lourdeur ni excès de bois. La régularité et la qualité constante des vins de Clelia Romano en font une valeur sûre et une référence pour tout amateur de Fiano.\n\nRéférence du Fiano di Avellino, Colli di Lapio (Clelia Romano) signe un blanc floral, minéral et de garde, étalon du cépage. C'est l'une des adresses incontournables de l'Irpinia.\n\nLapio est réputé pour donner les Fiano les plus fins et les plus aptes à la garde de l'appellation, et Clelia Romano en est l'ambassadrice. Son travail méticuleux à la vigne et une vinification respectueuse, sans excès technologique, laissent le terroir s'exprimer. Servi sur des poissons, des crustacés, des viandes blanches ou des fromages, son Fiano séduit jeune par sa fraîcheur florale et, après quelques années, par sa complexité minérale et beurrée. La régularité exemplaire du domaine, millésime après millésime, en a fait une référence unanime, souvent citée comme l'un des tout meilleurs Fiano di Avellino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino",
+        "Aléthéia (Fiano Riserva)",
+        "Greco di Tufo"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "lapio",
+        "fiano",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|cerratolimo"
+    },
+    {
+      "id": "it-campania-prod-ciro-picariello",
+      "nom": "Ciro Picariello",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Summonte",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Summonte, sur les hauteurs de l'Irpinia, Ciro Picariello est un domaine réputé pour la fraîcheur et la longévité de ses Fiano. Sur des vignes plantées en altitude, parmi les plus élevées de l'appellation, la famille cultive le cépage avec une recherche de tension et de pureté.\n\nLe Fiano di Avellino et, surtout, la cuvée 906 (du nom de l'altitude des vignes) sont des blancs d'une grande vivacité, salins et précis, taillés pour la garde : ils gagnent en complexité au fil des années, développant des notes de fruits secs et de minéral. Le domaine soigne aussi un peu de Greco et un spumante (Brut Contadino). Le style, tout en fraîcheur et en énergie, tire parti de l'altitude et du climat frais de Summonte. La régularité et le caractère des vins ont bâti une solide réputation. Ciro Picariello est l'un des noms de référence du Fiano de garde.\n\nRéférence du Fiano d'altitude, Ciro Picariello signe des blancs frais, salins et de garde, dont le 906 est emblématique. C'est l'une des belles adresses de l'Irpinia.\n\nL'altitude de Summonte, parmi les plus élevées de l'appellation, est la clé du style Picariello : maturation lente, acidité préservée, définition aromatique. Le 906, issu des vignes les plus hautes, en est l'expression la plus aboutie, un Fiano de garde qui gagne en complexité au fil des ans. Servi sur des poissons, des fruits de mer ou une cuisine légère, il séduit par sa vivacité et sa tension. La famille Picariello, discrète et exigeante, a bâti en quelques années une réputation solide, et ses Fiano figurent parmi les plus recherchés pour leur fraîcheur et leur potentiel de vieillissement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino 906",
+        "Fiano di Avellino",
+        "Brut Contadino"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "summonte",
+        "fiano",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "cerratolimo|italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-guido-marsella",
+      "nom": "Guido Marsella",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Summonte",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Summonte, en Irpinia, Guido Marsella est un vigneron célèbre pour un seul vin : un grand Fiano di Avellino, qu'il commercialise volontairement après un long affinage. Sur ses vignes d'altitude, il cultive le cépage avec une exigence rare.\n\nSon Fiano di Avellino, sorti plus tardivement que la plupart, est un blanc riche, complexe et taillé pour la garde : là où beaucoup de Fiano sont bus jeunes, celui de Marsella révèle, après quelques années, une profondeur et des arômes tertiaires (fruits secs, miel, minéral) qui le placent parmi les plus grands du cépage. Le style, concentré et patient, mise sur le temps et le terroir plutôt que sur la fraîcheur immédiate. La production, limitée à cette unique cuvée, est recherchée des amateurs. Guido Marsella est une référence culte du Fiano di Avellino de garde.\n\nVigneron d'un seul grand Fiano di Avellino de garde, Guido Marsella signe un blanc riche et complexe, longuement affiné. C'est une référence recherchée de l'Irpinia.\n\nLe choix de Guido Marsella de ne sortir qu'un seul vin, longuement affiné, est un acte de conviction : il attend que son Fiano ait acquis la profondeur qu'il recherche avant de le commercialiser. Sur ses vignes d'altitude, en rendements maîtrisés, il obtient une matière riche qui supporte et récompense la garde. Servi sur des poissons nobles, des viandes blanches ou des fromages, son Fiano déploie, après quelques années, des arômes de fruits secs, de miel et de minéral d'une grande complexité. Sa production confidentielle et son parti pris de la patience en font un vin culte, recherché des amateurs de grands blancs de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "summonte",
+        "fiano",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-villa-diamante",
+      "nom": "Villa Diamante",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Montefredane",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefredane, en Irpinia, Villa Diamante est un domaine réputé pour ses Fiano di Avellino de garde, fondé par Antoine Gaita. Sur les sols argilo-calcaires de Montefredane, réputés pour la finesse de leurs blancs, le domaine cultive le cépage avec patience et en biologique.\n\nSa cuvée Vigna della Congregazione est un Fiano original et profond, vinifié avec de longues macérations et élevages qui lui donnent structure et complexité, à rebours des Fiano immédiats : un blanc de gastronomie et de garde, salin et texturé. Le style, personnel et exigeant, cherche à révéler tout le potentiel du terroir de Montefredane. La production, confidentielle, est appréciée des amateurs de blancs de caractère. Villa Diamante est une référence du Fiano di Avellino ambitieux et de garde.\n\nRéférence du Fiano de garde à Montefredane, Villa Diamante signe un blanc profond et original (Vigna della Congregazione), en bio. C'est une belle adresse de l'Irpinia.\n\nLe parti pris d'Antoine Gaita — macérations et élevages longs, patience, agriculture biologique — fait de la Vigna della Congregazione un Fiano à part, plus proche d'un grand blanc de gastronomie que d'un vin de soif. Sur les sols de Montefredane, réputés pour la finesse, ce style révèle une profondeur et une texture remarquables. Servi sur des poissons, des viandes blanches ou des fromages, il séduit par sa complexité et sa salinité, et vieillit avec grâce. La production, confidentielle, est prisée des amateurs de Fiano ambitieux et de caractère, en quête d'une expression plus profonde du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino Vigna della Congregazione"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "montefredane",
+        "fiano",
+        "garde",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-benito-ferrara",
+      "nom": "Benito Ferrara",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Tufo",
+      "pays": "Italie",
+      "cepages": [
+        "Greco",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tufo, berceau du Greco di Tufo, le domaine Benito Ferrara est une référence de l'appellation. Sur les sols soufrés et argileux de ce village, autrefois marqué par l'extraction du soufre, la famille cultive le Greco avec un soin qui a fait sa réputation.\n\nSa cuvée Vigna Cicogna, issue d'une parcelle réputée, est l'un des plus grands Greco di Tufo : un blanc salin, minéral et vibrant, aux notes d'agrumes, de fruits à noyau et de silex, d'une belle capacité de garde. Le Greco di Tufo « classique » et le Terra d'Uva complètent la gamme. Le style, précis et territorial, exprime toute la personnalité du terroir de tuf soufré, qui donne au Greco sa minéralité fumée caractéristique. La régularité et la qualité des vins en font une valeur sûre. Benito Ferrara est l'une des références du Greco di Tufo.\n\nRéférence du Greco di Tufo, Benito Ferrara signe avec la Vigna Cicogna un blanc salin et minéral, expression du terroir de tuf. C'est l'une des belles adresses de l'Irpinia.\n\nLe terroir de Tufo, marqué par la présence de soufre dans le sous-sol (le village vécut longtemps de son extraction), donne au Greco une minéralité fumée et saline caractéristique, que la Vigna Cicogna exprime au plus haut niveau. La famille Ferrara y travaille avec soin, cherchant à révéler cette signature minérale. Servi sur des poissons, des crustacés, la mozzarella di bufala ou une cuisine de mer, le Greco de Benito Ferrara séduit par sa tension saline et vieillit mieux que sa couleur claire ne le laisse penser. La régularité du domaine en fait une référence incontournable du Greco di Tufo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Tufo Vigna Cicogna",
+        "Greco di Tufo",
+        "Terra d'Uva"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "tufo",
+        "greco",
+        "vigna-cicogna"
+      ],
+      "a_verifier": null,
+      "source": "cerratolimo|jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-cantine-dellangelo",
+      "nom": "Cantine dell'Angelo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Tufo",
+      "pays": "Italie",
+      "cepages": [
+        "Greco"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tufo, au cœur de l'appellation Greco di Tufo, les Cantine dell'Angelo sont un domaine artisanal réputé pour l'authenticité de ses Greco. Sur les sols soufrés du village, parfois au-dessus d'anciennes mines de soufre, la famille Muto cultive le cépage dans le plus grand respect du terroir.\n\nLe Greco di Tufo du domaine, dont la cuvée Miniere (en référence aux mines), est un blanc salin, minéral et fumé, d'une grande pureté et d'un beau potentiel de garde, considéré comme l'une des expressions les plus authentiques du cépage. Le style, artisanal et précis, met en avant la minéralité si particulière du tuf soufré de Tufo. La production, à taille humaine, est appréciée des amateurs de vins de terroir. Cantine dell'Angelo est une référence du Greco di Tufo authentique.\n\nRéférence artisanale du Greco di Tufo, Cantine dell'Angelo signe des blancs salins et minéraux, expression pure du terroir de tuf soufré. C'est une belle adresse de l'Irpinia.\n\nLa famille Muto, installée à Tufo au cœur de l'appellation, a fait le choix d'une expression sans compromis du Greco, au plus près du terroir de tuf soufré. Ses vins, salins et minéraux, aux notes fumées et parfois presque austères dans leur jeunesse, gagnent en complexité avec quelques années de cave. Servi sur des poissons, des crustacés ou une cuisine de mer, le Greco des Cantine dell'Angelo séduit les amateurs de vins de terroir authentiques. La cuvée Miniere, en hommage aux anciennes mines de soufre, en est l'expression la plus emblématique, l'une des plus pures du Greco di Tufo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Tufo",
+        "Greco di Tufo Miniere",
+        "Torrefavale"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "tufo",
+        "greco",
+        "mineral",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-rocca-del-principe",
+      "nom": "Rocca del Principe",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Lapio",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lapio, l'un des grands terroirs du Fiano di Avellino, Rocca del Principe est un domaine réputé pour la finesse de ses blancs. Sur les sols argilo-calcaires de ce village d'altitude, la famille Aquino-Muto cultive le Fiano avec une recherche de précision.\n\nLe Fiano di Avellino du domaine, et sa cuvée Tognano Riserva, sont des blancs d'une grande fraîcheur et d'une belle tension minérale, aux notes florales et fruitées évoluant vers le miel et la noisette, taillés pour la garde. Le style, pur et précis, exprime la finesse du terroir de Lapio. La régularité et la qualité constante des vins en font une valeur sûre de l'appellation. Rocca del Principe est l'une des références du Fiano di Avellino de Lapio.\n\nRéférence du Fiano di Avellino à Lapio, Rocca del Principe signe des blancs fins, frais et de garde. C'est une belle adresse de l'Irpinia.\n\nSur les hauteurs de Lapio, réputées pour les grands Fiano, la famille Aquino-Muto cultive le cépage avec une recherche de finesse et de fraîcheur. Ses vins, floraux et fruités dans leur jeunesse, développent avec le temps une belle complexité minérale et une texture cireuse typique du Fiano. Servi sur des poissons, des viandes blanches ou des fromages, le Fiano de Rocca del Principe séduit par son équilibre et sa tension, et la cuvée Tognano Riserva témoigne de son beau potentiel de garde. La régularité du domaine en fait une valeur sûre du Fiano di Avellino de Lapio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino",
+        "Fiano di Avellino Tognano Riserva"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "lapio",
+        "fiano"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-villa-raiano",
+      "nom": "Villa Raiano",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "San Michele di Serino",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Greco",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Michele di Serino, en Irpinia, Villa Raiano est un domaine soigné et régulier, valeur sûre du trio des DOCG irpiniennes. Sur des vignes réparties dans les meilleures zones, la famille Basso produit une gamme complète de Fiano, Greco et Taurasi.\n\nLe domaine décline des Fiano di Avellino (dont la cuvée Ventidue et des sélections parcellaires), des Greco di Tufo (Contrada Marotta) et des Taurasi d'une belle précision, dans un style net et fidèle au terroir. La recherche parcellaire, sur des crus identifiés, témoigne d'une belle sensibilité au terroir. La régularité de la gamme et la qualité constante en font une référence fiable de l'Irpinia. Villa Raiano est l'une des bonnes valeurs du trio irpinien.\n\nValeur sûre de l'Irpinia, Villa Raiano signe des Fiano, Greco et Taurasi précis et parcellaires. C'est une belle adresse pour découvrir le trio des DOCG.\n\nLa force de Villa Raiano est de proposer, chez un seul producteur, une lecture complète et fiable du trio des DOCG irpiniennes, avec un travail parcellaire de plus en plus précis. La famille Basso a investi dans une belle cave et dans la connaissance de ses terroirs, distinguant les crus de Fiano, Greco et Taurasi. Servis sur des poissons pour les blancs, sur des viandes pour le Taurasi, les vins séduisent par leur netteté et leur régularité. Le domaine s'est imposé comme une valeur sûre de l'Irpinia, à la fois accessible et sérieuse, idéale pour découvrir la diversité des grands cépages autochtones.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino Ventidue",
+        "Greco di Tufo Contrada Marotta",
+        "Fiano Alimata"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "fiano",
+        "greco",
+        "regulier"
+      ],
+      "a_verifier": null,
+      "source": "cerratolimo"
+    },
+    {
+      "id": "it-campania-prod-terredora-di-paolo",
+      "nom": "Terredora di Paolo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Montefusco",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montefusco, sur les hauteurs de l'Irpinia, Terredora di Paolo est né en 1994 de la scission de la famille Mastroberardino : les Terredora ont conservé une grande partie des vignes, sur certains des meilleurs terroirs d'altitude de la région.\n\nLe domaine décline l'ensemble du trio irpinien : le Taurasi (dont le cru Fatica Contadina / CampoRe), structuré et minéral, reflet des sites élevés de Montefusco, ainsi que d'excellents Fiano di Avellino et Greco di Tufo (Loggia della Serra). Le style, classique et fidèle au terroir, allie tradition familiale et rigueur. La possibilité de déguster le trio des DOCG chez un seul producteur, et la qualité constante de la gamme, en font une référence de l'Irpinia. Terredora perpétue, sur ses propres terres, le grand héritage viticole de sa famille.\n\nHéritière d'une partie du vignoble Mastroberardino, Terredora di Paolo signe Taurasi, Fiano et Greco d'altitude de référence. C'est l'une des maisons majeures de l'Irpinia.\n\nNée d'une scission familiale douloureuse, Terredora a su rebâtir une identité forte sur ses terroirs d'altitude de Montefusco, parmi les plus élevés de l'Irpinia, qui donnent des vins minéraux et frais. La maison a conservé un savoir-faire et des vignes exceptionnels. Servis sur des viandes rouges et du gibier pour le Taurasi, sur des poissons et fromages pour les blancs, les vins séduisent par leur fidélité au terroir et leur régularité. Le Taurasi CampoRe, structuré et de garde, et les Fiano et Greco d'altitude figurent parmi les références de leurs appellations, perpétuant le grand héritage viticole de la famille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi CampoRe",
+        "Fiano di Avellino",
+        "Greco di Tufo Loggia della Serra"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "montefusco",
+        "taurasi",
+        "fiano",
+        "greco"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides|jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-antonio-caggiano",
+      "nom": "Antonio Caggiano",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Taurasi",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au village même de Taurasi, Antonio Caggiano est un domaine emblématique de l'appellation. Ancien photographe et ingénieur, Antonio Caggiano s'est lancé dans le vin dans les années 1990, apportant à sa cave (un lieu spectaculaire bâti en pierre) une précision et un sens esthétique remarquables.\n\nSa cuvée Vigna Macchia dei Goti est l'un des Taurasi les plus réputés : un Aglianico structuré, profond et raffiné, aux tanins mûrs et à la belle capacité de garde, régulièrement cité parmi les meilleurs de l'appellation. Le Taurasi Salae Domini et le rouge Taurì complètent la gamme, aux côtés de blancs (Fiano, Greco). Le style, ambitieux et soigné, allie puissance et élégance. La qualité constante et le lieu, devenu une destination œnotouristique, ont bâti la réputation du domaine. Antonio Caggiano est l'une des références du Taurasi moderne.\n\nRéférence du Taurasi, Antonio Caggiano signe avec la Vigna Macchia dei Goti un Aglianico structuré et raffiné. C'est l'un des noms majeurs de l'appellation.\n\nLe regard de l'ancien photographe se retrouve dans le soin apporté à chaque détail, de la vigne à la cave de pierre devenue une destination œnotouristique au village de Taurasi. La Vigna Macchia dei Goti, issue de belles parcelles, allie puissance et raffinement dans un style qui a séduit la critique. Servi sur des viandes braisées, du gibier ou des fromages affinés, ce Taurasi se patine sur une décennie et plus. Le domaine, régulier et ambitieux, s'est imposé comme l'une des références du Taurasi moderne, aux côtés des grands noms historiques de l'appellation, et attire de nombreux visiteurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Vigna Macchia dei Goti",
+        "Taurasi Salae Domini",
+        "Taurì"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "caggiano"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides|jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-salvatore-molettieri",
+      "nom": "Salvatore Molettieri",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Montemarano",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montemarano, dans les hauteurs de l'Irpinia, Salvatore Molettieri est un grand nom du Taurasi traditionnel. Montemarano, l'un des sites les plus élevés et les plus tardifs de l'appellation, où l'Aglianico est parfois récolté en novembre, donne des vins d'une structure et d'une longévité exceptionnelles.\n\nSa cuvée Vigna Cinque Querce, en version normale et Riserva, est un Taurasi puissant, tannique et de très longue garde, taillé pour vieillir des décennies : un Aglianico à l'ancienne, profond et authentique, aux arômes de fruits noirs, de cuir, de tabac et d'épices. Le style, traditionnel et sans concession, privilégie la structure et le potentiel de garde. La régularité et le caractère des vins en font une référence pour les amateurs de Taurasi classique. Salvatore Molettieri incarne le Taurasi de garde dans sa version la plus pure.\n\nRéférence du Taurasi traditionnel à Montemarano, Salvatore Molettieri signe avec la Vigna Cinque Querce un Aglianico puissant et de très longue garde. C'est un nom majeur de l'appellation.\n\nMontemarano, site d'altitude où l'Aglianico mûrit très tardivement, donne des Taurasi parmi les plus structurés et les plus aptes à la garde de l'appellation. Salvatore Molettieri y perpétue un style traditionnel, fait de longs élevages et de patience. La Vigna Cinque Querce, en version normale et Riserva, est un Aglianico puissant qui demande des années pour se fondre et peut vieillir des décennies. Servi sur des viandes braisées, du gibier ou des fromages affinés, il séduit les amateurs de Taurasi classique par sa profondeur et sa longévité. Le domaine est une référence du Taurasi de garde traditionnel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Vigna Cinque Querce",
+        "Taurasi Riserva Vigna Cinque Querce",
+        "Cinque Querce Aglianico"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "montemarano",
+        "taurasi",
+        "aglianico",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-perillo",
+      "nom": "Perillo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Castelfranci",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Coda di Volpe"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelfranci, dans la haute vallée de l'Irpinia, Perillo est un domaine artisanal culte pour les amateurs de Taurasi traditionnel. Sur les vignes d'altitude de ce secteur frais et tardif, la famille Perillo élabore des Aglianico à l'ancienne, d'une intensité et d'une authenticité rares.\n\nLe Taurasi de Perillo, longuement élevé et commercialisé tardivement, est un rouge profond, rustique et de très longue garde, qui séduit les puristes par sa fidélité au style traditionnel : puissance, tanins fermes, arômes de fruits noirs, de cuir et d'épices. Le domaine soigne aussi un Coda di Volpe (blanc autochtone). Le style, artisanal et sans compromis, à rebours des Taurasi modernes et lissés, en fait une référence pour les amateurs de vins authentiques. Perillo incarne le Taurasi de garde dans sa version la plus traditionnelle.\n\nDomaine culte du Taurasi traditionnel, Perillo signe un Aglianico profond, rustique et de longue garde, à Castelfranci. C'est une référence recherchée des puristes.\n\nLe style de Perillo, à contre-courant des Taurasi modernes et lissés, séduit les puristes en quête d'authenticité : longs élevages, sorties tardives, Aglianico brut et profond. Sur les vignes d'altitude de Castelfranci, fraîches et tardives, le cépage donne des vins de très longue garde. Servi sur des viandes braisées, du gibier ou des fromages affinés, le Taurasi de Perillo demande de la patience mais récompense par une profondeur et une complexité rares. La production, confidentielle et artisanale, s'arrache auprès d'un cercle d'amateurs fervents de Taurasi traditionnel, faisant de Perillo un nom culte de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi",
+        "Taurasi Riserva",
+        "Coda di Volpe"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "castelfranci",
+        "taurasi",
+        "aglianico",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-campania-prod-contrade-di-taurasi",
+      "nom": "Contrade di Taurasi",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Taurasi",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au village de Taurasi, Contrade di Taurasi (domaine de la famille Lonardo) est une référence de l'Aglianico de vieilles vignes. Enza Lonardo et sa famille ont fait revivre un patrimoine de parcelles anciennes pour signer des Taurasi d'une grande authenticité.\n\nLe domaine vinifie l'Aglianico par cru — Vigne d'Alto, Coste — issu de vieilles vignes du terroir de Taurasi, dans un style qui privilégie l'élégance et la fidélité au lieu plutôt que la seule puissance. Les vins, profonds et racés, aux tanins mûrs, expriment les nuances des différentes contrade et vieillissent remarquablement. Le travail des vieilles vignes et l'approche parcellaire témoignent d'une belle sensibilité au terroir. Contrade di Taurasi est une référence de l'Aglianico de vieilles vignes et des crus de l'appellation.\n\nRéférence de l'Aglianico de vieilles vignes, Contrade di Taurasi (Lonardo) signe des Taurasi parcellaires élégants et racés. C'est une belle adresse au cœur de l'appellation.\n\nLe travail d'Enza Lonardo et de sa famille a consisté à faire revivre un patrimoine de vieilles vignes au cœur du terroir de Taurasi, et à en révéler les nuances par une approche parcellaire. Les cuvées Vigne d'Alto et Coste expriment chacune un caractère propre, dans un style qui privilégie l'élégance à la seule puissance. Servis sur des viandes, du gibier ou des fromages, ces Taurasi séduisent par leur finesse et leur capacité de garde. La fidélité du domaine aux vieilles vignes et aux crus en fait une référence de l'Aglianico de terroir et une belle expression de la diversité de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Vigne d'Alto",
+        "Taurasi Coste",
+        "Taurasi"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "lonardo",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-campania-prod-la-sibilla",
+      "nom": "La Sibilla",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Campi Flegrei",
+      "commune": "Bacoli",
+      "pays": "Italie",
+      "cepages": [
+        "Falanghina",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Campi Flegrei DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bacoli, sur les Campi Flegrei (les « champs Phlégréens ») à l'ouest de Naples, La Sibilla est un domaine culte de ce terroir volcanique unique. Sur des sables volcaniques où la vigne pousse souvent franche de pied (le phylloxéra ne survit pas dans le sable), la famille Di Meo cultive les cépages autochtones napolitains.\n\nLa Falanghina des Campi Flegrei, dont la cuvée Cruna deLago (vieilles vignes), est un blanc salin, minéral et structuré, d'une belle capacité de garde, à mille lieues des Falanghina simples ; le Piedirosso (Per 'e Palummo) donne un rouge fin et épicé. Le style, précis et territorial, exprime toute la singularité du terroir volcanique et maritime des Campi Flegrei. Les vignes franches de pied, parfois centenaires, sont un patrimoine précieux. La Sibilla est la référence des Campi Flegrei.\n\nRéférence des Campi Flegrei, La Sibilla signe des Falanghina salines et de garde (Cruna deLago) sur vignes franches de pied. C'est l'une des belles adresses du terroir volcanique napolitain.\n\nLes Campi Flegrei, terre volcanique aux sables profonds, offrent un cas rare en Europe : le phylloxéra n'y survivant pas, de nombreuses vignes sont franches de pied, parfois centenaires, un patrimoine précieux que La Sibilla préserve. La Falanghina y gagne une minéralité et une structure inhabituelles, loin des versions simples et fruitées. Servie sur des poissons, des crustacés ou une friture napolitaine, la Cruna deLago séduit par sa salinité et sa profondeur, et vieillit remarquablement. Le Piedirosso apporte un rouge léger et épicé. La famille Di Meo a fait de La Sibilla la référence incontestée des Campi Flegrei.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cruna deLago (Falanghina)",
+        "Falanghina",
+        "Piedirosso"
+      ],
+      "tags": [
+        "campania",
+        "campi-flegrei",
+        "falanghina",
+        "piedirosso",
+        "franc-de-pied",
+        "volcanique"
+      ],
+      "a_verifier": null,
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-cantine-astroni",
+      "nom": "Cantine Astroni",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Campi Flegrei",
+      "commune": "Napoli",
+      "pays": "Italie",
+      "cepages": [
+        "Falanghina",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Campi Flegrei DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naples, au cœur d'un cratère volcanique du parc des Campi Flegrei, les Cantine Astroni sont un domaine réputé de ce terroir singulier. Sur les sables volcaniques, souvent sur vignes franches de pied, la famille Varchetta cultive les cépages napolitains avec une recherche de qualité.\n\nLe domaine signe des Falanghina des Campi Flegrei (Colle Rotondella, Vigna Astroni) fraîches, salines et précises, ainsi que des Piedirosso (Strione) fins et épicés. Le style, net et soigné, met en valeur la minéralité du terroir volcanique et maritime. La régularité de la gamme et le beau travail sur les cépages autochtones en font une valeur sûre des Campi Flegrei. Cantine Astroni est l'une des références du terroir volcanique napolitain.\n\nRéférence des Campi Flegrei, Cantine Astroni signe des Falanghina et Piedirosso précis et salins, sur terroir volcanique. C'est une belle adresse napolitaine.\n\nInstallées dans un cratère volcanique classé réserve naturelle, les Cantine Astroni allient un cadre exceptionnel et un travail sérieux sur les cépages napolitains. Sur les sables volcaniques, souvent sur vignes franches de pied, la famille Varchetta obtient des Falanghina d'une belle minéralité et des Piedirosso fins. Servis sur des poissons, des fruits de mer ou une cuisine napolitaine, ces vins séduisent par leur fraîcheur et leur salinité. Les cuvées Colle Rotondella (Falanghina) et Strione (Piedirosso) témoignent de la qualité du domaine, devenu l'une des références fiables et régulières des Campi Flegrei.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falanghina Colle Rotondella",
+        "Piedirosso Strione",
+        "Falanghina Vigna Astroni"
+      ],
+      "tags": [
+        "campania",
+        "campi-flegrei",
+        "falanghina",
+        "piedirosso",
+        "volcanique"
+      ],
+      "a_verifier": null,
+      "source": "cerratolimo"
+    },
+    {
+      "id": "it-campania-prod-agnanum",
+      "nom": "Agnanum",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Campi Flegrei",
+      "commune": "Napoli",
+      "pays": "Italie",
+      "cepages": [
+        "Falanghina",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Campi Flegrei DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naples, sur les sables volcaniques d'Agnano dans les Campi Flegrei, Agnanum est le domaine d'un vigneron héroïque, Raffaele Moccia. Sur des terrasses escarpées de sable volcanique, il cultive des vignes franches de pied, parfois centenaires, dans des conditions d'une difficulté extrême.\n\nLa Falanghina d'Agnanum, dont la cuvée Vigna del Pino, est un blanc d'une grande minéralité et d'une belle tension, expression pure du terroir volcanique et des vieilles vignes franches de pied ; le Piedirosso apporte un rouge fin et épicé. Le style, artisanal et authentique, tire parti d'un patrimoine de vignes exceptionnel et d'un travail manuel considérable. La production, confidentielle, est très appréciée des amateurs. Agnanum et Raffaele Moccia sont une référence culte des Campi Flegrei et de la viticulture héroïque.\n\nDomaine héroïque des Campi Flegrei, Agnanum (Raffaele Moccia) signe des Falanghina minérales sur vignes franches de pied. C'est une référence culte du terroir volcanique napolitain.\n\nRaffaele Moccia est l'archétype du vigneron héroïque : sur les pentes sableuses d'Agnano, il travaille seul des terrasses escarpées où tout se fait à la main, veillant sur des vignes franches de pied d'un âge vénérable. Ses Falanghina, d'une minéralité et d'une tension remarquables, sont à mille lieues des versions commerciales du cépage. Servies sur des poissons, des crustacés ou une friture, elles séduisent par leur profondeur et leur salinité. La cuvée Vigna del Pino, issue des plus vieilles vignes, est particulièrement recherchée. Agnanum est devenu un domaine culte, emblème de la viticulture héroïque des Campi Flegrei.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falanghina",
+        "Falanghina Vigna del Pino",
+        "Piedirosso"
+      ],
+      "tags": [
+        "campania",
+        "campi-flegrei",
+        "falanghina",
+        "franc-de-pied",
+        "moccia",
+        "heroique"
+      ],
+      "a_verifier": null,
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-san-salvatore-1988",
+      "nom": "San Salvatore 1988",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Cilento",
+      "commune": "Giungano",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Aglianico",
+        "Greco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Paestum IGT",
+        "Cilento DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Giungano, dans le Cilento près des temples de Paestum, San Salvatore 1988 est un grand domaine bio du sud de la Campanie. Porté par un projet écologique et esthétique ambitieux (avec aussi un élevage de bufflonnes pour la mozzarella), le domaine cultive les cépages autochtones du Cilento.\n\nIl signe des Fiano (Pian di Sisto, Trentenare) d'une belle fraîcheur, des Aglianico (Ceraso) structurés et des Greco, dans un style précis et soigné, sur les sols du parc national du Cilento. Le style, net et moderne, allie rigueur bio et expression du terroir méridional et maritime. La qualité de la gamme et l'engagement écologique en font une référence du Cilento. San Salvatore 1988 est l'un des domaines phares du sud de la Campanie.\n\nRéférence bio du Cilento, San Salvatore 1988 signe des Fiano, Aglianico et Greco précis, près de Paestum. C'est l'un des domaines phares du sud de la Campanie.\n\nLe projet San Salvatore, à la fois viticole, écologique et agricole (avec son élevage de bufflonnes), illustre une vision globale et durable du terroir cilentain. Sur les sols du parc national, en bio, le domaine obtient des Fiano d'une belle fraîcheur maritime et des Aglianico structurés. Servis sur des poissons pour les blancs, sur des viandes pour les rouges, ses vins séduisent par leur précision et leur netteté. Les cuvées Pian di Sisto et Trentenare (Fiano) et Ceraso (Aglianico) témoignent de la qualité de la gamme, qui a fait de San Salvatore l'un des domaines phares du sud de la Campanie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pian di Sisto (Fiano)",
+        "Jungano",
+        "Ceraso Aglianico",
+        "Trentenare Fiano"
+      ],
+      "tags": [
+        "campania",
+        "cilento",
+        "paestum",
+        "fiano",
+        "aglianico",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-luigi-maffini",
+      "nom": "Luigi Maffini",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Cilento",
+      "commune": "Castellabate",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cilento DOC",
+        "Paestum IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castellabate, sur la côte du Cilento, Luigi Maffini est une référence de cette région méridionale et maritime. Dans le parc national du Cilento, le domaine cultive Fiano et Aglianico avec une recherche de précision et d'élégance.\n\nLe Fiano Kratos, frais et salin, et l'Aglianico Cenito, structuré et solaire, sont ses cuvées phares, aux côtés du Klèos et du Pietraincatenata (Fiano de sélection). Le style, précis et soigné, exprime le terroir côtier et ensoleillé du Cilento, avec une belle fraîcheur préservée. La qualité constante des vins en fait une valeur sûre de la région. Luigi Maffini est l'une des références du Cilento.\n\nRéférence du Cilento, Luigi Maffini signe le Fiano Kratos et l'Aglianico Cenito, précis et solaires. C'est une belle adresse du sud de la Campanie.\n\nSur la côte du Cilento, dans le cadre préservé du parc national, Luigi Maffini a bâti une réputation de précision et d'élégance, rare dans cette région méridionale. Ses vins allient la générosité solaire du Sud à une fraîcheur bien maîtrisée. Servis sur des poissons et fruits de mer pour le Fiano Kratos, sur des viandes pour l'Aglianico Cenito, ils séduisent par leur équilibre. Le travail sur les crus (Pietraincatenata) témoigne d'une belle ambition. La qualité constante et le style soigné de Maffini en font une référence du Cilento, à la fois fidèle au terroir et d'une grande buvabilité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kratos (Fiano)",
+        "Cenito (Aglianico)",
+        "Klèos",
+        "Pietraincatenata"
+      ],
+      "tags": [
+        "campania",
+        "cilento",
+        "castellabate",
+        "fiano",
+        "aglianico"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-de-conciliis",
+      "nom": "De Conciliis",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Cilento",
+      "commune": "Prignano Cilento",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Paestum IGT",
+        "Cilento DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Prignano Cilento, dans le Cilento, De Conciliis est un domaine inspiré et personnel, l'une des figures du sud de la Campanie. Bruno De Conciliis, vigneron passionné de jazz (ses étiquettes y font référence), y cultive Fiano et Aglianico avec une approche sensible et de plus en plus tournée vers le bio.\n\nLe Fiano Perella et l'Aglianico Naima (du nom du morceau de Coltrane) sont ses cuvées les plus réputées : des vins profonds et personnels, aux côtés du Donnaluna et du Ka. Le style, expressif et singulier, cherche l'émotion et l'expression du terroir méridional plutôt que la seule typicité. La personnalité du vigneron et la qualité des vins en font une référence attachante du Cilento. De Conciliis est l'un des domaines les plus intéressants du sud de la Campanie.\n\nDomaine inspiré du Cilento, De Conciliis signe le Fiano Perella et l'Aglianico Naima, profonds et personnels. C'est une belle adresse du sud de la Campanie.\n\nBruno De Conciliis est une figure singulière du vin campanien : passionné de jazz, de culture et de terroir, il imprime à ses vins une personnalité forte et une émotion rare. Sur les collines du Cilento, il cherche l'expression la plus sincère de ses cépages. Servis sur des viandes pour l'Aglianico Naima, sur des poissons pour le Fiano Perella, ses vins séduisent par leur profondeur et leur caractère. La démarche, de plus en plus tournée vers le bio et le respect du vivant, et la sensibilité du vigneron en font l'un des domaines les plus attachants et les plus intéressants du sud de la Campanie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Naima (Aglianico)",
+        "Perella (Fiano)",
+        "Donnaluna",
+        "Ka"
+      ],
+      "tags": [
+        "campania",
+        "cilento",
+        "fiano",
+        "aglianico",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-campania-prod-villa-matilde",
+      "nom": "Villa Matilde",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "commune": "Cellole",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Piedirosso",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Falerno del Massico DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cellole, dans la Terra di Lavoro au nord de la Campanie, Villa Matilde est la gardienne du Falerno del Massico, le vin le plus célèbre de l'Antiquité romaine. La famille Avallone a, dès les années 1960, retrouvé et replanté les cépages historiques de ce terroir mythique, sur les pentes du volcan éteint du Roccamonfina.\n\nLe Falerno del Massico Vigna Camarato (Aglianico, Piedirosso), issu des meilleurs millésimes, est un grand rouge de garde, tandis que la Falanghina Vigna Caracci est un blanc de référence ; le Cecubo complète la gamme. Le style, soigné et fidèle au terroir, ressuscite un patrimoine viticole deux fois millénaire. La qualité des vins et le travail historique de la famille en font une référence du nord de la Campanie. Villa Matilde perpétue la légende du Falernum.\n\nGardienne du Falerno antique, Villa Matilde signe des Aglianico (Vigna Camarato) et des Falanghina de référence. C'est une maison historique du nord de la Campanie.\n\nLe pari des Avallone, dans les années 1960, de ressusciter le Falernum antique à partir de cépages retrouvés, fut un acte pionnier pour toute la Campanie. Sur les pentes volcaniques du Roccamonfina, la famille a reconstitué un terroir chargé d'histoire. Servi sur des viandes rouges et du gibier, le Falerno Vigna Camarato se patine sur une décennie ; la Falanghina Vigna Caracci, ample et minérale, accompagne poissons et fruits de mer. Le travail historique et la qualité constante de la maison en font une référence du nord de la Campanie, gardienne d'un des plus anciens noms du vin mondial.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falerno del Massico Vigna Camarato",
+        "Falanghina Vigna Caracci",
+        "Cecubo",
+        "Falerno Bianco"
+      ],
+      "tags": [
+        "campania",
+        "falerno",
+        "terra-di-lavoro",
+        "aglianico",
+        "falanghina",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-terre-del-principe",
+      "nom": "Terre del Principe",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "commune": "Castel Campagnano",
+      "pays": "Italie",
+      "cepages": [
+        "Pallagrello Nero",
+        "Pallagrello Bianco",
+        "Casavecchia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre del Volturno IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castel Campagnano, dans le Casertano, Terre del Principe est le domaine qui a sauvé les cépages rares de la Terra di Lavoro. Peppe Mancini et Manuela Piancastelli ont fait revivre le Pallagrello (blanc et noir) et le Casavecchia, variétés autochtones quasi disparues, pour en faire des vins de caractère.\n\nLe domaine signe des rouges de Casavecchia (Ambruco, Centomoggia) et de Pallagrello Nero, structurés et originaux, ainsi que des blancs de Pallagrello Bianco (Le Sèrole) et l'assemblage Vigna Piancastelli. Le style, ambitieux et identitaire, met en valeur des cépages introuvables ailleurs, sur les sols du Casertano. Le travail de sauvegarde ampélographique et la qualité des vins en font une référence. Terre del Principe est le gardien des cépages rares de la Terra di Lavoro.\n\nSauveur des cépages rares du Casertano, Terre del Principe signe des Casavecchia et Pallagrello originaux et de caractère. C'est une référence du nord de la Campanie.\n\nLe combat de Peppe Mancini et Manuela Piancastelli pour sauver le Pallagrello et le Casavecchia, cépages que plus personne ne cultivait, a enrichi le patrimoine viticole italien. Ces variétés, aux profils originaux, donnent des vins introuvables ailleurs. Servis sur des viandes, du gibier ou des fromages pour les rouges, sur une cuisine de caractère pour les blancs, ils séduisent par leur singularité. Les cuvées de Casavecchia (Ambruco, Centomoggia) et de Pallagrello témoignent de ce travail de mémoire. Terre del Principe est devenu la référence des cépages rares de la Terra di Lavoro.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ambruco (Casavecchia)",
+        "Centomoggia (Casavecchia)",
+        "Le Sèrole (Pallagrello Bianco)",
+        "Vigna Piancastelli"
+      ],
+      "tags": [
+        "campania",
+        "terra-di-lavoro",
+        "pallagrello",
+        "casavecchia",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-prod-nanni-cope",
+      "nom": "Nanni Copè",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "commune": "Castel Campagnano",
+      "pays": "Italie",
+      "cepages": [
+        "Pallagrello Nero",
+        "Casavecchia",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Terre del Volturno IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castel Campagnano, dans le Casertano, Nanni Copè est un micro-domaine culte, fondé par Giovanni Ascione. Sur quelques parcelles de la Terra di Lavoro, il signe un vin unique et recherché à partir de cépages autochtones rares.\n\nLe Sabbie di Sopra il Bosco, assemblage à dominante Pallagrello Nero (complété de Casavecchia et Aglianico), est un rouge rare, fin et complexe, devenu culte auprès des amateurs : un vin de terroir d'une grande personnalité, sur les sols sableux du Casertano. Le style, artisanal et précis, valorise un patrimoine ampélographique unique. La production, minuscule, est très recherchée. Nanni Copè est une référence confidentielle des cépages rares de Campanie.\n\nMicro-domaine culte du Casertano, Nanni Copè signe le Sabbie di Sopra il Bosco (Pallagrello Nero), rare et fin. C'est une référence recherchée des amateurs.\n\nGiovanni Ascione, ancien communicant du vin devenu vigneron, a créé avec le Sabbie di Sopra il Bosco un vin qui a immédiatement séduit la critique et les amateurs. Issu du Pallagrello Nero, cépage rare du Casertano, complété de Casavecchia et d'Aglianico, il exprime un terroir sableux singulier avec finesse et profondeur. Servi sur des viandes, du gibier ou des fromages, il séduit par son élégance et sa personnalité. Produit en quantités minuscules, ce vin unique est devenu culte, faisant de Nanni Copè l'un des noms les plus recherchés des cépages autochtones de Campanie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sabbie di Sopra il Bosco"
+      ],
+      "tags": [
+        "campania",
+        "terra-di-lavoro",
+        "pallagrello",
+        "culte",
+        "ascione"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-campania-prod-fattoria-la-rivolta",
+      "nom": "Fattoria La Rivolta",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "commune": "Torrecuso",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Falanghina",
+        "Coda di Volpe"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Taburno DOCG",
+        "Sannio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torrecuso, sur les pentes du massif du Taburno dans le Sannio, Fattoria La Rivolta est une référence bio de l'Aglianico del Taburno. Sur ce terroir d'altitude, la famille Cotroneo cultive l'Aglianico et les cépages du Sannio en agriculture biologique.\n\nL'Aglianico del Taburno (dont la cuvée Terra di Rivolta) est un rouge structuré et de garde, à la belle fraîcheur apportée par l'altitude, aux côtés d'une Falanghina del Sannio et d'un Coda di Volpe soignés. Le style, précis et respectueux du terroir, exprime la personnalité de l'Aglianico du Taburno, distincte de celle du Taurasi. La démarche biologique et la qualité constante en font une référence de la zone. Fattoria La Rivolta est l'un des domaines phares de l'Aglianico del Taburno.\n\nRéférence bio de l'Aglianico del Taburno, Fattoria La Rivolta signe des rouges structurés et une Falanghina soignée. C'est un domaine phare du Sannio.\n\nSur les pentes du Taburno, terroir d'altitude distinct de celui du Taurasi, l'Aglianico donne des vins un peu plus souples et frais, que Fattoria La Rivolta sublime en agriculture biologique. La famille Cotroneo y travaille avec rigueur, dans le respect du terroir. Servi sur des viandes braisées, du gibier ou des fromages, l'Aglianico del Taburno Terra di Rivolta séduit par sa structure et sa fraîcheur ; la Falanghina del Sannio, elle, accompagne poissons et fruits de mer. La démarche bio et la qualité constante en font l'un des domaines phares et les plus fiables de l'Aglianico del Taburno.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Aglianico del Taburno Terra di Rivolta",
+        "Aglianico del Taburno",
+        "Falanghina del Sannio"
+      ],
+      "tags": [
+        "campania",
+        "taburno",
+        "aglianico",
+        "falanghina",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-campania-prod-mustilli",
+      "nom": "Mustilli",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "commune": "Sant'Agata de' Goti",
+      "pays": "Italie",
+      "cepages": [
+        "Falanghina",
+        "Aglianico",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sannio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Agata de' Goti, dans le Sannio, Mustilli est une maison pionnière : c'est ici que la Falanghina fut, dans les années 1970-80, remise à l'honneur et vinifiée en pureté pour la première fois, sauvant ce cépage de l'oubli. La famille Mustilli, dans son palais historique, perpétue cet héritage.\n\nLe domaine signe des Falanghina del Sannio (dont la Vigna Segreta) fraîches et parfumées, référence du cépage, ainsi que des rouges d'Aglianico (Artus) et de Piedirosso. Le style, classique et fidèle au terroir, met en valeur les cépages autochtones du Sannio. Le rôle historique de la maison dans la renaissance de la Falanghina et la qualité de ses vins en font une référence. Mustilli est un nom pionnier du Sannio.\n\nPionnière de la Falanghina en pureté, Mustilli signe des blancs de référence et des rouges autochtones à Sant'Agata de' Goti. C'est une maison historique du Sannio.\n\nLe rôle historique de Mustilli est immense : en vinifiant la Falanghina en pureté dans les années 1970-80, la famille a sauvé et relancé un cépage aujourd'hui emblématique de la Campanie. Dans le cadre de son palais historique de Sant'Agata de' Goti, elle perpétue cet héritage. Servie sur des poissons, des fruits de mer ou une cuisine méditerranéenne, la Falanghina Vigna Segreta séduit par sa fraîcheur et son parfum ; les rouges (Artus) apportent structure et caractère. Le rôle pionnier de la maison et la qualité de ses vins en font une référence patrimoniale du Sannio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falanghina Sant'Agata dei Goti",
+        "Artus Aglianico",
+        "Vigna Segreta Falanghina"
+      ],
+      "tags": [
+        "campania",
+        "sannio",
+        "falanghina",
+        "pionnier",
+        "mustilli"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-campania-prod-cantina-giardino",
+      "nom": "Cantina Giardino",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Ariano Irpino",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Greco",
+        "Coda di Volpe",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Irpinia DOC",
+        "Campania IGT"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ariano Irpino, en Irpinia, Cantina Giardino est un domaine emblématique de la scène du vin nature en Campanie. Depuis 2003, autour d'Antonio et Daniela De Gruttola, le domaine valorise de vieilles vignes de cépages autochtones (Fiano, Greco, Coda di Volpe, Aglianico) qu'il vinifie en macérations, avec un minimum d'intervention et souvent en amphore. Les cuvées Paski (Fiano), Gaia (Greco), T'Ara Rà et Le Fole sont des vins vivants, texturés et authentiques, très prisés des amateurs de vin naturel. Le style, artisanal et sans compromis, cherche à révéler le terroir et les vieilles vignes dans leur vérité. Cantina Giardino est l'une des références du vin nature d'Irpinia et de Campanie. Servis sur une cuisine de caractère, ces vins vivants et texturés séduisent les amateurs de vin nature en quête d'authenticité, et le domaine est devenu une référence du mouvement en Italie du Sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Paski (Fiano)",
+        "Gaia (Greco)",
+        "T'Ara Rà",
+        "Le Fole"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "nature",
+        "macere",
+        "vieilles-vignes",
+        "biodynamie"
+      ],
+      "a_verifier": null,
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-campania-prod-tenuta-cavalier-pepe",
+      "nom": "Tenuta Cavalier Pepe",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Sant'Angelo all'Esca",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Angelo all'Esca, en Irpinia, Tenuta Cavalier Pepe est un domaine dynamique mené par Milena Pepe, qui couvre l'ensemble du trio des DOCG irpiniennes. Sur un beau vignoble, le domaine signe des Taurasi (Opera Mia, La Loggia del Cavaliere Riserva), des Fiano di Avellino (Refiano) et des Greco di Tufo (Nestor) réguliers et soignés, dans un style accessible et fidèle au terroir. L'accueil œnotouristique, avec restaurant et hébergement, en fait aussi une destination. La qualité constante de la gamme et le dynamisme du domaine en font une valeur sûre de l'Irpinia. Tenuta Cavalier Pepe est une belle adresse pour découvrir le trio des DOCG irpiniennes. Formée en Belgique et en Bourgogne, Milena Pepe apporte une touche moderne et internationale à un domaine profondément ancré dans le terroir irpinien, ce qui séduit un large public.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Opera Mia (Taurasi)",
+        "Refiano (Fiano)",
+        "Nestor (Greco)",
+        "La Loggia del Cavaliere Riserva"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "fiano",
+        "greco"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-campania-prod-cantine-di-marzo",
+      "nom": "Cantine di Marzo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Tufo",
+      "pays": "Italie",
+      "cepages": [
+        "Greco"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Tufo, au cœur de l'appellation Greco di Tufo, Cantine di Marzo est la plus ancienne cave d'Irpinia, fondée en 1647. Cette maison historique, qui a contribué à l'introduction et à la diffusion du Greco dans la zone, cultive le cépage sur les sols de tuf soufré du village. Ses Greco di Tufo (Colle Serrone, Vigna Laure) sont salins, minéraux et de bonne garde, et le domaine produit aussi un spumante metodo classico (Anni Venti). Le style, fidèle à la tradition, met en valeur la minéralité si particulière du terroir de Tufo. Le rôle historique et la qualité des vins en font une référence patrimoniale. Cantine di Marzo est la gardienne de l'histoire du Greco di Tufo. Près de quatre siècles d'histoire font de cette maison un témoin unique de l'évolution du Greco di Tufo, qu'elle continue de défendre avec des vins fidèles à la tradition et au terroir de tuf.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Tufo Colle Serrone",
+        "Greco di Tufo Vigna Laure",
+        "Anni Venti (spumante)"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "tufo",
+        "greco",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-casa-dambra",
+      "nom": "Casa d'Ambra",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Ischia",
+      "commune": "Forio",
+      "pays": "Italie",
+      "cepages": [
+        "Biancolella",
+        "Forastera",
+        "Piedirosso"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Ischia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur l'île volcanique d'Ischia, dans le golfe de Naples, Casa d'Ambra est le domaine historique et emblématique de l'île. Fondée en 1888 par Francesco d'Ambra, la maison, aujourd'hui menée par la famille D'Ambra (dont l'œnologue Andrea D'Ambra), est le gardien du patrimoine viticole insulaire et son principal ambassadeur.\n\nLa viticulture y est héroïque : les vignes s'accrochent à des terrasses vertigineuses de tuf vert, parfois desservies par un petit monorail, au-dessus de la mer. Casa d'Ambra valorise les cépages autochtones de l'île : la Biancolella, blanc salin et parfumé dont la cuvée Frassitelli (issue de terrasses perchées) est la référence, la Forastera (blanc) et le Per 'e Palummo, le nom local du Piedirosso (rouge). Les sols volcaniques et l'influence marine donnent des vins d'une grande minéralité et d'une belle fraîcheur, à l'identité insulaire marquée. Le domaine a aussi contribué à sauver des cépages rares et à faire reconnaître l'Ischia DOC.\n\nDomaine historique et référence d'Ischia, Casa d'Ambra signe des blancs volcaniques salins et typés, dont la Biancolella Frassitelli est l'emblème. C'est le gardien d'un terroir insulaire unique et de ses cépages autochtones. Ischia, l'une des plus anciennes terres viticoles d'Italie, a longtemps vécu du vin avant le tourisme ; Casa d'Ambra en incarne la mémoire et la renaissance qualitative. Servis sur des poissons, des fruits de mer, la cuisine insulaire ou de simples spaghetti alle vongole, ses blancs séduisent par leur salinité et leur tension, tandis que le Per 'e Palummo apporte une touche rouge légère et épicée. Le domaine décline plusieurs crus et expressions, du frais et accessible aux sélections parcellaires plus ambitieuses.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Biancolella Frassitelli",
+        "Forastera",
+        "Per 'e Palummo (Piedirosso)",
+        "Kalimera"
+      ],
+      "tags": [
+        "campania",
+        "ischia",
+        "biancolella",
+        "insulaire",
+        "volcanique"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-prod-sorrentino",
+      "nom": "Sorrentino",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Vesuvio",
+      "commune": "Boscotrecase",
+      "pays": "Italie",
+      "cepages": [
+        "Piedirosso",
+        "Aglianico",
+        "Caprettone",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lacryma Christi del Vesuvio DOC",
+        "Vesuvio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Boscotrecase, sur les pentes du Vésuve, Sorrentino est un domaine familial qui cultive les cépages vésuviens en agriculture biologique. Sur les sols de lave du volcan, dans le parc national, le domaine signe des Lacryma Christi del Vesuvio rouge (Piedirosso, Aglianico) et blanc (Caprettone, Falanghina), ainsi que des cuvées comme Frupa ou Vigna Lapillo. Le style, soigné et respectueux du terroir, met en valeur le cépage autochtone Caprettone et l'expression volcanique du Vésuve. La démarche bio et la qualité de la gamme en font une valeur sûre. Sorrentino est l'une des belles adresses du terroir vésuvien. Servis sur une cuisine napolitaine, poissons ou pizza, les Lacryma Christi de Sorrentino séduisent par leur fraîcheur volcanique et mettent en valeur le Caprettone, cépage identitaire du Vésuve.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lacryma Christi Rosso",
+        "Lacryma Christi Bianco",
+        "Frupa",
+        "Vigna Lapillo"
+      ],
+      "tags": [
+        "campania",
+        "vesuvio",
+        "lacryma-christi",
+        "piedirosso",
+        "caprettone",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-prod-grotta-del-sole",
+      "nom": "Grotta del Sole",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Campi Flegrei",
+      "commune": "Quarto",
+      "pays": "Italie",
+      "cepages": [
+        "Falanghina",
+        "Piedirosso",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Campi Flegrei DOC",
+        "Gragnano della Penisola Sorrentina DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Quarto, dans les Campi Flegrei, Grotta del Sole (famille Martusciello) est un domaine qui valorise les cépages autochtones napolitains. Le domaine signe des Falanghina et des Piedirosso des Campi Flegrei, mais il est aussi connu pour le Gragnano, un rouge pétillant et frais de la péninsule sorrentine, spécialité napolitaine de tradition. Le style, fidèle aux cépages et aux typicités locales, met en valeur un patrimoine viticole parfois oublié. La gamme, large et accessible, et le travail sur des vins typiques en font une valeur sûre. Grotta del Sole est une référence des cépages et des vins traditionnels napolitains. Le Gragnano, rouge pétillant et désaltérant à servir frais sur la pizza et la cuisine napolitaine, est une spécialité que peu de domaines défendent encore avec ce sérieux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falanghina Campi Flegrei",
+        "Gragnano",
+        "Piedirosso Campi Flegrei",
+        "Quarto Giallo"
+      ],
+      "tags": [
+        "campania",
+        "campi-flegrei",
+        "falanghina",
+        "gragnano",
+        "piedirosso"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-prod-fontanavecchia",
+      "nom": "Fontanavecchia",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Sannio-Taburno (Benevento)",
+      "commune": "Torrecuso",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Aglianico del Taburno DOCG",
+        "Falanghina del Sannio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torrecuso, sur les pentes du Taburno dans le Sannio, Fontanavecchia est un domaine familial voué à l'Aglianico del Taburno et à la Falanghina del Sannio. Sur ce terroir d'altitude, la famille Rillo signe des Aglianico del Taburno (Vigna Cataratte, Grave Mora) structurés et de garde, ainsi que des Falanghina (Facetus) fraîches et parfumées. Le style, soigné et fidèle au terroir, offre un bon rapport qualité-prix. La régularité de la gamme en fait une valeur sûre du Sannio. Fontanavecchia est une belle adresse de l'Aglianico del Taburno et de la Falanghina del Sannio. Servis sur des viandes pour l'Aglianico, sur des poissons pour la Falanghina, les vins de Fontanavecchia offrent une belle porte d'entrée dans les appellations du Taburno et du Sannio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Aglianico del Taburno Vigna Cataratte",
+        "Grave Mora",
+        "Falanghina Facetus"
+      ],
+      "tags": [
+        "campania",
+        "taburno",
+        "sannio",
+        "aglianico",
+        "falanghina"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-campania-prod-masseria-felicia",
+      "nom": "Masseria Felicia",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Terra di Lavoro (Caserta)",
+      "commune": "Sessa Aurunca",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Piedirosso",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Falerno del Massico DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sessa Aurunca, sur les pentes du Roccamonfina dans la Terra di Lavoro, Masseria Felicia est un petit domaine du Falerno del Massico. Sur ce terroir volcanique chargé d'histoire (le Falernum antique), la famille signe un Falerno del Massico rouge (Etichetta Bronzo, à base d'Aglianico et Piedirosso) d'une belle finesse, ainsi qu'une Falanghina et la cuvée Aria di Caiati. Le style, artisanal et soigné, met en valeur le terroir du Roccamonfina à petite échelle. La qualité et le caractère des vins en font une belle adresse confidentielle. Masseria Felicia est un domaine attachant du Falerno del Massico. Servi sur des viandes et du gibier, le Falerno rouge de Masseria Felicia séduit par sa finesse ; la petite échelle du domaine garantit un travail soigné et une réelle personnalité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Falerno del Massico Rosso Etichetta Bronzo",
+        "Aria di Caiati",
+        "Falanghina"
+      ],
+      "tags": [
+        "campania",
+        "falerno",
+        "roccamonfina",
+        "aglianico",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "greatitalianchefs"
+    },
+    {
+      "id": "it-campania-prod-di-meo",
+      "nom": "Di Meo",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Salza Irpina",
+      "pays": "Italie",
+      "cepages": [
+        "Fiano",
+        "Greco",
+        "Aglianico",
+        "Coda di Volpe"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG",
+        "Taurasi DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Salza Irpina, à quelques kilomètres d'Avellino, au cœur de l'Irpinia entre les monts Picentini et le Partenio, Di Meo est l'un des domaines de référence de la Campanie, réputé pour la longévité exceptionnelle de ses blancs. La famille Di Meo — les frères et sœurs Erminia, Generoso et Roberto — a repris au début des années 1980 la propriété parentale, un ancien pavillon de chasse du XVIIIe siècle ayant appartenu aux princes Caracciolo, pour donner naissance en 1986 à la cave familiale.\n\nSur une vingtaine d'hectares plantés dans les meilleures zones des trois DOCG d'Irpinia, le domaine ne cultive que des cépages autochtones : Fiano, Greco, Aglianico et Coda di Volpe. Sa signature est la « Linea Tempo » : Roberto Di Meo, l'œnologue, y pousse à l'extrême le potentiel de garde des blancs, laissant reposer certains Fiano di Avellino et Greco di Tufo dix à douze ans, voire davantage, avant leur commercialisation — une pratique rare en Italie qui a fait la renommée internationale de la maison. Les cuvées de vieux millésimes (Erminia, Alessandra, Vittorio), le Greco Vigna Olmo, le Taurasi Riserva et la sélection Hamilton témoignent de cette quête de raffinement et d'évolution. Le style Di Meo, précis, tendu et profondément territorial, allie modernité de vinification (pressurage doux sous gaz inerte, soufre limité) et fidélité aux appellations. La famille cultive aussi un lien fort avec l'art, à travers son célèbre calendrier annuel, et produit grappe, brandy et liqueurs traditionnelles.\n\nRéférence de l'Irpinia et gardienne d'un patrimoine autochtone, la maison Di Meo signe des Fiano et des Greco d'une longévité et d'une complexité rares, ainsi que de beaux Taurasi. C'est l'un des domaines les plus élégants et les plus originaux de Campanie, pionnier du vieillissement des grands blancs du Sud.\n\nL'Irpinia, arrière-pays montagneux et frais à l'est de Naples, offre à ces cépages un terroir idéal : l'altitude, les fortes amplitudes thermiques et les sols volcaniques et argileux préservent l'acidité et la minéralité qui font la longévité des grands blancs. Di Meo l'a compris mieux que quiconque, faisant du temps son allié : là où le Fiano et le Greco sont souvent bus jeunes, ses cuvées de garde révèlent, après une décennie, des arômes complexes de fruits secs, de miel, d'hydrocarbures et d'épices, dignes des plus grands blancs de garde d'Europe. Servis sur des poissons, des crustacés, des viandes blanches ou des fromages affinés, ces vins surprennent par leur jeunesse préservée. Le Taurasi, lui, accompagne viandes braisées et gibier. Fidèle à son double héritage — la vigne et la culture —, la famille Di Meo a fait de son domaine un ambassadeur raffiné de l'Irpinia dans le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fiano di Avellino (Linea Tempo)",
+        "Greco di Tufo",
+        "Taurasi Riserva",
+        "Selezione Hamilton"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "salza-irpina",
+        "fiano",
+        "greco",
+        "taurasi",
+        "longevite",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "dimeo.it|jancisrobinson|filippobartolotta"
+    },
+    {
+      "id": "it-campania-prod-sella-delle-spine",
+      "nom": "Sella delle Spine",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Taurasi",
+      "pays": "Italie",
+      "cepages": [
+        "Aglianico",
+        "Fiano",
+        "Greco",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Taurasi DOCG",
+        "Irpinia Campi Taurasini DOC",
+        "Fiano di Avellino DOCG",
+        "Greco di Tufo DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Taurasi, au cœur de la moyenne vallée du Calore en Irpinia, Sella delle Spine est un domaine familial voué à l'Aglianico depuis 1970. Le nom évoque la forme du terroir, en « selle de cheval » (sella), bordé de rosiers (spine, les épines) plantés en tête des rangs. La famille Caggiano, aujourd'hui menée par Luigi Caggiano, y perpétue une tradition taurasine ancrée dans le territoire.\n\nLe vignoble-phare, la Vigna Piano d'Angelo, repose sur des sols volcaniques de lapilli, d'argile et de tuf, parfaitement ventilés et ensoleillés, qui donnent à l'Aglianico une belle intensité aromatique. Le domaine décline le cépage en plusieurs rouges — le Taurasi DOCG Vigna Piano d'Angelo (récompensé par la critique), l'Irpinia Campi Taurasini « Sella » et l'Irpinia Aglianico « Rosso Tau » — aux côtés d'une gamme de blancs où brillent le Greco di Tufo « Don Raffaele » et le Fiano di Avellino « Eugenia », complétés d'une Falanghina. Le travail, respectueux de l'environnement et adapté à chaque parcelle, vise des vins de forte personnalité, fidèles aux arômes du terroir taurasin.\n\nDomaine familial et authentique de Taurasi, Sella delle Spine signe des Aglianico structurés et de beaux blancs d'Irpinia. C'est une belle adresse traditionnelle au cœur de l'appellation reine du « Barolo du Sud ».",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Taurasi Vigna Piano d'Angelo",
+        "Rosso Tau (Aglianico)",
+        "Sella (Campi Taurasini)",
+        "Eugenia (Fiano)",
+        "Don Raffaele (Greco)"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "taurasi",
+        "aglianico",
+        "piano-dangelo",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "selladellespine.com|taurasidocg"
+    },
+    {
+      "id": "it-campania-prod-bellaria",
+      "nom": "Bellaria",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Irpinia (Avellino)",
+      "commune": "Roccabascerana",
+      "pays": "Italie",
+      "cepages": [
+        "Greco",
+        "Fiano",
+        "Aglianico",
+        "Falanghina",
+        "Coda di Volpe"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Tufo DOCG",
+        "Fiano di Avellino DOCG",
+        "Taurasi DOCG",
+        "Irpinia DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Roccabascerana, en Irpinia, entre les vallées du Sabato et du Calore et au pied du parc du Partenio, l'Agricola Bellaria est un domaine jeune mais déjà remarqué. Fondée en 2011 par la famille Maffei de Roccabascerana et Antonio Pepe (issu de trois générations de vignerons de Montefalcione), après de premières cuvées en 2007-2008, la maison arbore sur ses étiquettes le tilleul tricentenaire qui orne le centre historique du village.\n\nSur 21 hectares répartis dans plusieurs communes réputées de l'Irpinia (Paternopoli, Montemiletto, Candida, Montefusco, Montefalcione…), Bellaria produit environ 100 000 bouteilles issues exclusivement de cépages autochtones, sur des sols marqués par les résidus volcaniques des éruptions du Vésuve et des Campi Flegrei. La gamme couvre les trois DOCG d'Irpinia — Greco di Tufo (dont la sélection « Oltre »), Fiano di Avellino et Taurasi (et sa Riserva) — ainsi que l'Aglianico, la Falanghina, un Coda di Volpe et un Fiano passito (« Senso »). Le domaine travaille en lutte intégrée (agriculture durable, certifiée depuis 2023), avec des vinifications naturelles sans altérations chimiques. Ses vins ont été maintes fois primés dans les concours internationaux (Decanter, International Wine Challenge…), signe d'une montée en qualité rapide.\n\nJeune domaine ambitieux de l'Irpinia, Bellaria valorise les cépages autochtones sur sols volcaniques, du Greco au Taurasi. C'est l'une des belles révélations récentes de la Campanie, à l'excellent rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Tufo Oltre",
+        "Fiano di Avellino",
+        "Taurasi",
+        "Ottant'anni (Coda di Volpe)",
+        "Senso (Fiano passito)"
+      ],
+      "tags": [
+        "campania",
+        "irpinia",
+        "roccabascerana",
+        "greco",
+        "fiano",
+        "taurasi",
+        "durable",
+        "montant"
+      ],
+      "a_verifier": null,
+      "source": "agricolabellaria.com|lucianopignataro|winetourism"
+    },
+    {
+      "id": "it-campania-prod-cantine-matrone",
+      "nom": "Cantine Matrone",
+      "type": "domaine",
+      "region": "Campania",
+      "sous_region": "Vesuvio",
+      "commune": "Boscotrecase",
+      "pays": "Italie",
+      "cepages": [
+        "Piedirosso",
+        "Caprettone",
+        "Falanghina",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lacryma Christi del Vesuvio DOC",
+        "Vesuvio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Boscotrecase, sur les pentes du Vésuve et au cœur du parc national, face au golfe de Naples, Cantine Matrone est un petit domaine artisanal attachant. Les cousins Andrea et Francesco Matrone ont repris la culture des vieilles terres familiales, de longue date appelées « Territorio dei Matroni ».\n\nLa production, minuscule et confidentielle, se limite à deux vins issus d'un peu plus de deux hectares, pour environ 10 000 bouteilles : le Lacryma Christi del Vesuvio rouge (Piedirosso, Aglianico) et blanc (Caprettone, Falanghina). Sur les sables volcaniques du Vésuve — souvent propices à des vignes franches de pied —, le domaine signe une expression pure et authentique du plus célèbre vin vésuvien, connu depuis l'Antiquité romaine et jadis produit par les moines des pentes du volcan. Le travail, soigné et à petite échelle, met en avant le terroir volcanique et les cépages autochtones de la région.\n\nDomaine artisanal du Vésuve, Cantine Matrone perpétue le Lacryma Christi dans sa version la plus sincère. C'est une belle adresse confidentielle pour découvrir l'authenticité du terroir vésuvien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lacryma Christi del Vesuvio Rosso",
+        "Lacryma Christi del Vesuvio Bianco"
+      ],
+      "tags": [
+        "campania",
+        "vesuvio",
+        "boscotrecase",
+        "lacryma-christi",
+        "artisan",
+        "volcanique"
+      ],
+      "a_verifier": null,
+      "source": "licata.be|cantinematrone.it"
+    }
+  ]
+}

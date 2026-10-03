@@ -1,0 +1,3058 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "rioja",
+  "region_label": "La Rioja (DOCa Rioja)",
+  "source_file": "producteurs_rioja_To_Import.xlsx",
+  "built_at": "2026-07-24T09:59:02",
+  "count": 73,
+  "items": [
+    {
+      "id": "es-rioja-prod-r-lopez-de-heredia-vina-tondonia",
+      "nom": "R. López de Heredia Viña Tondonia",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viña Tondonia",
+        "Viña Bosconia",
+        "Viña Cubillo",
+        "Viña Gravonia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1877 par Rafael López de Heredia y Landeta, la maison est le cœur battant du Barrio de la Estación de Haro et sans doute le domaine le plus intransigeant d'Espagne. Quatre générations plus tard, María José, Mercedes et Julio César perpétuent un modèle qui n'a pratiquement pas bougé depuis un siècle : vendanges issues exclusivement des vignes du domaine, fermentations en cuves de chêne, élevages d'une longueur presque irréelle en barriques fabriquées et réparées sur place par la tonnellerie maison, soutirages manuels à la bougie deux fois l'an, collage au blanc d'œuf frais, mise en bouteille sans concession au calendrier commercial. Le patrimoine repose sur quatre vignobles : Viña Tondonia, une centaine d'hectares plantés en 1913 dans un méandre de l'Èbre, colonne vertébrale de la maison ; Viña Bosconia, plus étroite et plus dense, souvent décrite comme la « bourguignonne » du domaine ; Viña Cubillo, plus accessible et plus immédiate ; Viña Zaconia, qui donne le blanc Gravonia. Les rouges sortent après six, dix, parfois quinze ans de cave ; les blancs Tondonia Gran Reserva passent une décennie en barrique et développent ce registre oxydatif, noisette, cire et curry doux, qui n'a d'équivalent qu'en Jura ou à Jerez. Le rosé Tondonia Gran Reserva, élevé plusieurs années sous bois, est devenu un objet de culte mondial, régulièrement en rupture avant même son arrivée sur les linéaires. Les caves creusées sous la colline, tapissées de moisissures, participent pleinement au style. Ce refus obstiné de la mode a longtemps fait passer la maison pour un conservatoire poussiéreux ; elle est aujourd'hui la référence absolue du Rioja classique, citée par la génération parcellaire comme la preuve qu'un grand vin de terroir peut naître d'un assemblage et d'un élevage long. Pour un sommelier, c'est une maison inépuisable : les millésimes anciens restent disponibles à des prix encore raisonnables au regard de leur âge, et les accords avec les cuisines de garde, gibiers, champignons et fromages affinés, y sont d'une évidence rare. Le pavillon de dégustation dessiné par Zaha Hadid, greffé sur le kiosque d'origine de l'Exposition universelle de 1910, résume l'esprit de la maison : rien ne se jette, tout se transmet.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "haro",
+        "barrio-de-la-estacion",
+        "vieilles-vignes",
+        "culte"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-la-rioja-alta-s-a",
+      "nom": "La Rioja Alta S.A.",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Garnacha"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viña Ardanza",
+        "Gran Reserva 890",
+        "Gran Reserva 904"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Née en 1890 de l'association de cinq familles de vignerons de Haro et de Labastida, La Rioja Alta S.A. occupe le Barrio de la Estación aux côtés de López de Heredia, Muga, CVNE et Roda. Elle incarne une version particulièrement aboutie du classicisme riojan : le chêne américain, mais dosé avec une finesse que peu de maisons atteignent, et surtout des élevages conduits avec une patience devenue rarissime. Le rituel des soutirages manuels résume la philosophie du lieu : chaque barrique est soutirée à la main, deux fois par an, à la bougie, opération répétée jusqu'à vingt fois sur la durée d'un Gran Reserva. Le domaine possède sa propre tonnellerie et fait vieillir ses fûts avant usage. La gamme se lit comme une échelle limpide : Viña Alberdi pour l'entrée en matière, Viña Arana pour la précision et l'élégance florale, Viña Ardanza — Tempranillo complété d'une belle proportion de Garnacha venue de la Rioja Oriental — pour la générosité, avec ses Selección Especial réservées aux grandes années. Au sommet, deux monuments : Gran Reserva 904, assemblage de Tempranillo et de Graciano élevé quatre ans sous bois, et Gran Reserva 890, produit uniquement dans les millésimes d'exception et gardé six ans en barrique puis de longues années en bouteille. Les chiffres renvoient aux dates de fondation des maisons absorbées au fil du temps. Le vignoble s'étend sur plusieurs fincas de la Rioja Alta et de l'Oriental, dont La Pedriza à Tudelilla, plantée en Garnacha d'altitude. Le groupe possède aussi Torre de Oña en Rioja Alavesa, Áster en Ribera del Duero et Lagar de Cervera en Rías Baixas. C'est probablement la maison la plus régulière de toute la DOCa : les millésimes moyens y donnent encore de très bons vins, et les grandes années vieillissent trente ans sans faiblir. Un 904 servi à l'aveugle en face d'un grand bourgogne mûr reste l'un des plus beaux tours qu'un sommelier puisse jouer à sa table. Un dernier détail dit tout du lieu : les chiffres 904 et 890 ne sont pas des références de cuve mais les années de fondation de maisons rachetées au fil du temps et intégrées au patrimoine. Toute la culture de La Rioja Alta tient dans ce respect méticuleux de la mémoire, y compris commerciale. Les prix, longtemps restés très en dessous de la qualité livrée, commencent à se corriger : il reste urgent d'acheter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "haro",
+        "barrio-de-la-estacion",
+        "gran-reserva"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-muga",
+      "nom": "Bodegas Muga",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Prado Enea",
+        "Torre Muga",
+        "Aro"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Isaac Muga et Aurora Caño fondent la maison en 1932 ; elle s'installe en 1971 dans les bâtiments du Barrio de la Estación de Haro qu'elle occupe toujours. Trois générations de la famille y travaillent aujourd'hui, et Muga a réussi l'exercice délicat de rester une maison profondément traditionnelle tout en produisant certaines des cuvées les plus ambitieuses de la Rioja moderne. Le socle technique est spectaculaire. Muga possède la seule tonnellerie intégrée d'envergure de la région : ses propres tonneliers montent, cintrent et réparent plusieurs milliers de barriques et de foudres, ce qui permet un contrôle total sur les bois, les origines et les chauffes. Les fermentations se font en cuves de chêne, les clarifications au blanc d'œuf frais battu, les décantations par gravité, et les grands vins ne sont pas filtrés. La gamme est large et lisible. Le Reserva, produit en volume conséquent, est l'un des meilleurs rapports qualité-prix de la région. Selección Especial monte d'un cran en densité. Prado Enea, Gran Reserva élaboré seulement dans les bons millésimes, passe douze mois en cuve de bois puis trois ans en barrique et plusieurs années en bouteille : c'est un classique absolu, à la fois épicé, cuir et fleuri. À l'opposé, Torre Muga, né en 1991, et surtout Aro, apparu en 2000 en quantités infimes à partir de Tempranillo et de Graciano de vieilles vignes, illustrent la version concentrée et boisée de la maison. Muga excelle aussi sur les autres couleurs : le blanc de Viura et Malvasía fermenté en barrique, le rosé Flor de Muga, sérieux et gastronomique, et le cava Conde de Haro, rare exemple d'effervescent élaboré en Rioja. C'est la maison idéale pour faire comprendre la Rioja à une table : la lisibilité du Reserva, la profondeur du Prado Enea et la puissance d'Aro racontent à eux trois toute l'histoire moderne de l'appellation. Sur le plan pratique, Muga est aussi l'une des maisons les plus accueillantes de Haro : visites très bien conçues, passage obligé par la tonnellerie en activité, et une gamme suffisamment large pour construire une verticale ou un accord à tous les niveaux de budget. Peu de domaines espagnols offrent une telle amplitude sans jamais décrocher qualitativement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "haro",
+        "barrio-de-la-estacion",
+        "tonnellerie"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-cvne",
+      "nom": "CVNE — Compañía Vinícola del Norte de España",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Imperial",
+        "Viña Real",
+        "Contino",
+        "Monopole"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1879 par les frères Real de Asúa, la Compañía Vinícola del Norte de España est l'une des quatre grandes maisons historiques du Barrio de la Estación de Haro et reste aujourd'hui contrôlée par leurs descendants. Le groupe s'articule autour de trois caves distinctes : Cune à Haro, dont la halle en fer forgé est attribuée à l'atelier d'Eiffel ; Viña Real, bâtiment circulaire posé sur la colline de Laguardia, en Rioja Alavesa ; et le domaine Contino, à Laserna. La gamme couvre tout le spectre. Cune Crianza et Reserva assurent le volume avec une régularité sans faille. Imperial, produit uniquement en Gran Reserva et Reserva à partir des meilleures parcelles de la Rioja Alta, est le fleuron classique de la maison : son millésime 2004 a été élu vin de l'année par la critique américaine, première fois pour un vin espagnol. Viña Real Gran Reserva offre la lecture plus fraîche et plus tendue de l'Alavesa. Monopole, blanc de Viura créé en 1915, est le plus ancien blanc de marque d'Espagne, et sa version Clásico réintroduit l'ancienne pratique de l'ajout d'une pointe de manzanilla. CVNE incarne la Rioja de maison plutôt que la Rioja de vigneron : c'est une force, en termes de disponibilité, de régularité et de vieux millésimes accessibles, plus qu'une signature de terroir. La maison remet régulièrement en vente des Imperial anciens depuis ses propres caves : une source précieuse pour bâtir une verticale à budget maîtrisé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "haro",
+        "barrio-de-la-estacion",
+        "groupe"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-marques-de-murrieta",
+      "nom": "Marqués de Murrieta",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Logroño",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Mazuelo",
+        "Graciano",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Castillo Ygay",
+        "Finca Ygay",
+        "Dalmau",
+        "Capellanía"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Luciano de Murrieta fonde le domaine en 1852 après un séjour bordelais : il est le premier à élever et embouteiller du Rioja pour l'exportation, geste fondateur de l'appellation moderne. Le domaine s'installe en 1872 sur la finca Ygay, aux portes de Logroño, où il n'a plus bougé depuis. La propriété appartient depuis 1983 à la famille Cebrián-Sagarriga, comtes de Creixell, et est dirigée aujourd'hui par Vicente Dalmau Cebrián-Sagarriga. L'originalité de Murrieta tient à sa structure : environ trois cents hectares d'un seul tenant, cas unique en Rioja à cette échelle, sur des sols argilo-calcaires et des terrasses caillouteuses, avec un travail parcellaire mené finement depuis la rénovation des installations. Chaque cuvée correspond à une zone identifiée de la finca. Castillo Ygay Gran Reserva Especial est le sommet, produit dans les seuls millésimes jugés dignes du nom et gardé de très longues années en cave avant commercialisation ; les 1942 et 1917 restent des légendes du vin espagnol, et le millésime 2010 a été sacré vin de l'année par la presse américaine. Le Reserva, Tempranillo dominant complété de Mazuelo, Graciano et Garnacha, offre un classicisme d'une régularité impressionnante. Dalmau, né en 1994, propose la lecture moderne, avec une part de Cabernet-Sauvignon et un élevage en chêne français. Les blancs comptent tout autant : Capellanía, Viura pure issue d'une parcelle identifiée et élevée sous bois, vieillit magnifiquement et rappelle que la Rioja fut d'abord une grande terre de blancs de garde. Primer Rosé, élaboré à partir de Mazuelo, complète la gamme dans un registre gastronomique. La maison possède également le Pazo de Barrantes en Rías Baixas. Pour un sommelier, Murrieta est l'argument imparable face à celui qui croit que le Rioja est un vin de négoce : c'est un domaine, au sens le plus bourguignon du terme, avec deux siècles d'archives derrière lui. Le style maison reste reconnaissable entre tous : un fruit rouge mûr sans lourdeur, une trame tannique fine, et cette note de bois de santal et de tabac blond que donne le long élevage. Les Castillo Ygay anciens, régulièrement remis en vente par la propriété, comptent parmi les bouteilles les plus émouvantes du vignoble espagnol.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "monopole",
+        "gran-reserva",
+        "logrono"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-y-vinedos-artadi",
+      "nom": "Bodegas y Viñedos Artadi",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Viñas de Gain",
+        "El Carretil",
+        "La Poza de Ballesteros",
+        "Valdeginés",
+        "Viña El Pisón"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Artadi naît en 1985 sous la forme d'une coopérative de cosecheros de Laguardia, que Juan Carlos López de Lacalle transforme en une décennie en l'un des domaines les plus influents d'Espagne. La conviction du fondateur est simple et radicale : ce qui compte n'est ni la marque, ni la durée d'élevage, mais la parcelle. Cette conviction l'a conduit en 2015 à un geste sans équivalent — quitter la DOCa Rioja, dont il jugeait le système de classement par vieillissement incapable de reconnaître les grands lieux. Les vins portent désormais une simple mention géographique, sans contre-étiquette du Consejo. Le vignoble s'étend sur la Rioja Alavesa, autour de Laguardia et de Villabuena, sur des sols argilo-calcaires en coteaux, conduits en biologique avec un travail de sol systématique et des rendements très bas. Les vinifications sont sobres : levures indigènes, extractions douces, élevage en chêne français, mise sans filtration. Viña El Pisón est le joyau : deux hectares et demi de Tempranillo plantés en 1945 dans un clos ceint de murs, vendangés parcelle par parcelle, qui produisent l'un des vins les plus chers et les plus recherchés d'Espagne. Autour gravitent une série de lieux-dits — El Carretil, La Poza de Ballesteros, Valdeginés — chacun avec sa signature, du plus floral au plus minéral. Viñas de Gain, assemblage de plusieurs parcelles du village, sert d'entrée en matière remarquable, et le blanc de Viura de vieilles vignes mérite le détour. La famille a essaimé ailleurs, avec Artazu en Navarre et El Sequé à Alicante, toujours sur la Garnacha et le Monastrell. Artadi divise encore : certains lui reprochent des prix vertigineux et un boisé marqué dans les années 2000. Le style s'est nettement affiné depuis, et le domaine reste la démonstration la plus convaincante que la Rioja possède des grands crus. Sur le plan commercial, la sortie de la DOCa a compliqué la vie du domaine à l'export, la mention Rioja ayant disparu des étiquettes ; c'est un point à expliquer systématiquement au client, car il fait partie intégrante de l'histoire du vin. Le style, lui, s'exprime aujourd'hui dans un registre plus élancé et plus salin que dans la décennie 2000, avec des élevages nettement allégés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "parcellaire",
+        "culte",
+        "hors-doca",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-fernando-remirez-de-ganuza",
+      "nom": "Fernando Remírez de Ganuza",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Samaniego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Trasnocho",
+        "María Remírez de Ganuza"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fernando Remírez de Ganuza était courtier en vignes : il connaissait, parcelle par parcelle, les meilleurs coteaux de la Rioja Alavesa avant même d'en acheter. Quand il fonde son domaine à Samaniego en 1989, il choisit donc les vieilles vignes en gobelet des meilleures expositions de Samaniego, Baños de Ebro, Leza, Navaridas et Villabuena, aujourd'hui près de quatre-vingts hectares. La signature technique de la maison est unique en Espagne. Sur la table de tri, chaque grappe est coupée en deux : les « épaules », partie haute mieux exposée et plus mûre, partent dans les grands vins ; la pointe, plus verte, alimente les cuvées de deuxième ligne. Ce tri manuel, d'une lourdeur logistique considérable, explique à lui seul la densité et la maturité de tanin caractéristiques de la maison. S'y ajoutent le foulage aux pieds pour certains lots, les décuvages par gravité, des élevages en chêne français neuf conduits avec beaucoup de soin, et un vieillissement en bouteille prolongé avant la mise en marché. La gamme monte par paliers : Erre Punto, rouge de macération semi-carbonique, joyeux et immédiat ; Fincas de Ganuza, Reserva de bel équilibre ; le Reserva et le Gran Reserva du domaine, colonne vertébrale de la maison ; Trasnocho, sélection parcellaire dense et sculptée ; et María Remírez de Ganuza, blanc de Viura et Malvasía élevé sous bois, d'une profondeur inattendue. Le style est ouvertement moderne — matière ample, tanin poli, boisé présent dans la jeunesse — mais il n'a rien de caricatural : les vins se referment puis s'ouvrent après une bonne décennie et gagnent en épices et en garrigue. C'est la référence à sortir face à un amateur de rouges structurés et charnus qui trouverait le Rioja classique trop diaphane. Le domaine, resté strictement familial, a passé le cap de la transmission sans changer de cap : la table de tri fonctionne toujours de la même façon, et les vieilles vignes en gobelet achetées à la fin des années 1980 constituent aujourd'hui un patrimoine irremplaçable en Rioja Alavesa. Les Gran Reserva, sortis très tardivement, comptent parmi les plus impressionnants de la région à l'ouverture, à condition de les carafer largement et de les servir autour de seize degrés sur une viande rôtie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "rioja-alavesa",
+        "selection-parcellaire"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodega-contador",
+      "nom": "Bodega Contador — Benjamín Romeo",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Contador",
+        "La Cueva del Contador",
+        "La Viña de Andrés Romeo",
+        "Que Bonito Cacareaba"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Benjamín Romeo est né à San Vicente de la Sonsierra et y a toujours vécu. Après dix ans passés comme chef de cave chez Artadi, aux côtés de Juan Carlos López de Lacalle, il achète en 1996 un calado — une petite cave creusée sous le château du village — et commence à y vinifier quelques barriques issues de parcelles familiales. Le premier Contador naît cette année-là ; une décennie plus tard, les millésimes 2004 et 2005 obtiennent la note maximale de la critique américaine et propulsent le domaine au rang de cru culte espagnol. Le vignoble, conduit en biologique, se compose d'une mosaïque de petites parcelles de vieilles vignes réparties sur les coteaux de la Sonsierra, entre les alluvions de l'Èbre et les calcaires du piémont. Romeo travaille en levures indigènes, avec des extractions modérées, des élevages en chêne français et une attention obsessionnelle à l'état sanitaire de la vendange. La hiérarchie est claire : Predicador, en rouge comme en blanc, sert de porte d'entrée déjà très aboutie ; La Cueva del Contador exprime une matière plus mûre et plus généreuse ; Contador, produit en quelques milliers de bouteilles, reste le vin de la maison, dense, profond, taillé pour vingt ans ; La Viña de Andrés Romeo, hommage à son père, provient d'une parcelle unique et signe la version la plus intériorisée du domaine. Les blancs comptent autant que les rouges : Que Bonito Cacareaba, assemblage de Viura, Malvasía et Garnacha blanca de vieilles vignes fermenté en barrique, est l'un des blancs les plus complexes de la région. Romeo est de ces vignerons qui ont montré qu'un Rioja pouvait naître d'un lieu et d'une main plutôt que d'une catégorie d'élevage. À table, ses vins demandent de l'air : une carafe longue leur va beaucoup mieux qu'un service précipité. Le domaine reste minuscule au regard de son influence : quelques dizaines de milliers de bouteilles au total, réparties sur une gamme volontairement resserrée, et une allocation serrée sur les cuvées de tête. Benjamín Romeo a essaimé bien au-delà de la Rioja, ses vins servant de référence à toute une génération de vignerons parcellaires espagnols. C'est aussi l'un des rares domaines espagnols où le blanc et le rouge se disputent réellement la première place.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "culte",
+        "parcellaire",
+        "sonsierra",
+        "moderne"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-remelluri",
+      "nom": "Remelluri — La Granja Nuestra Señora de Remelluri",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Labastida",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Remelluri Reserva",
+        "Gran Remelluri",
+        "Lindes de Remelluri"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Jaime Rodríguez Salís rachète en 1967 les ruines d'une grange monastique du XIVe siècle adossée à la Sierra de Toloño, au-dessus de Labastida, et en fait le premier domaine embouteillant intégralement sa propre récolte en Rioja Alavesa. Le vignoble, d'un seul tenant sur près de cent hectares entre cinq cents et huit cents mètres d'altitude, occupe des terrasses calcaires étagées, très fraîches et tardives à l'échelle de la région. Son fils Telmo Rodríguez, parti fonder sa propre compagnie en 1994, revient diriger la propriété avec sa sœur Amaia en 2010 et engage un virage net : abandon des raisins achetés, retour à la stricte notion de vin de domaine, conversion en biologique, élevages allégés en foudres et fûts usagés, replantation en sélection massale. Le Remelluri Reserva y a gagné en droiture et en digestibilité ; le Gran Remelluri, issu des parcelles les plus hautes, est produit avec parcimonie ; la gamme Lindes de Remelluri, issue de vignerons voisins de Labastida et de San Vicente, offre une entrée en matière remarquable. Le blanc de Remelluri est l'un des vins les plus originaux d'Espagne : une douzaine de variétés complantées, dont Viura, Malvasía, Garnacha blanca et des cépages rares, élevées sous bois pour un résultat ample, herbacé et salin, sans équivalent régional. La montée jusqu'aux terrasses hautes, avec vue sur toute la Sonsierra, explique mieux que tout commentaire la fraîcheur de ces vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "domaine-unique",
+        "altitude",
+        "rioja-alavesa",
+        "telmo-rodriguez"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-roda",
+      "nom": "Bodegas Roda",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Roda I",
+        "Cirsion"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Mario Rotllant et Carmen Daurella, Barcelonais venus du monde de l'entreprise, fondent Roda en 1987 dans un bâtiment du Barrio de la Estación de Haro, adossé aux caves creusées dans la falaise au-dessus de l'Èbre. Le nom vient de la contraction de leurs deux patronymes. Leur démarche est celle d'une recherche méthodique, presque scientifique, appliquée à une question simple : quelles vieilles vignes de Tempranillo de la Rioja Alta et Alavesa donnent les meilleurs raisins, et pourquoi. Le domaine a cartographié et suivi pendant des années plusieurs dizaines de parcelles de plus de trente ans, vinifiées séparément, pour bâtir un patrimoine de terroirs identifiés plutôt qu'une simple marque d'élevage. La cave, entièrement gravitaire, est un modèle du genre, et le vieillissement se fait presque exclusivement en chêne français. La gamme est courte, ce qui est en soi une déclaration. Sela offre la lecture la plus fruitée et la plus immédiate. Roda, l'ancien Roda II, joue la finesse et la fraîcheur florale. Roda I, issu des parcelles les plus structurées, ajoute de la profondeur et une capacité de garde nettement supérieure. Au sommet, Cirsion, né en 1998, provient de grappes sélectionnées pour leur maturité phénolique la plus précoce et n'est élevé que quelques mois en bois neuf, dans l'idée de préserver un fruit vibrant sans le masquer : c'est l'un des rouges les plus singuliers d'Espagne. Le groupe possède aussi Corimbo à La Horra, en Ribera del Duero, et produit l'huile d'olive Dauro. Roda a durablement changé la perception du Rioja moderne : ni caricature boisée, ni nostalgie, mais une lecture précise du Tempranillo de coteau. Les vins gagnent énormément à être ouverts entre huit et quinze ans. La maison a par ailleurs été pionnière dans la recherche appliquée : ses travaux publiés sur le comportement des vieilles vignes de Tempranillo et sur la maturité phénolique ont nourri le débat régional bien au-delà de ses murs. Sur une carte, Roda I offre l'un des meilleurs compromis entre lisibilité pour un client peu familier de la Rioja et vraie profondeur de terroir, et Sela constitue une découverte de verre au restaurant particulièrement convaincante. La bodega, adossée à la falaise au-dessus de l'Èbre, se visite et compte parmi les plus belles réussites architecturales sobres de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "haro",
+        "barrio-de-la-estacion",
+        "selection-parcellaire"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-palacios-remondo",
+      "nom": "Bodegas Palacios Remondo",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "commune": "Alfaro",
+      "pays": "Espagne",
+      "cepages": [
+        "Garnacha",
+        "Tempranillo",
+        "Viura",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "La Montesa",
+        "Propiedad",
+        "Quiñón de Valmira"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Palacios Remondo est le domaine familial des Palacios, à Alfaro, tout au sud-est de la Rioja Oriental. José Palacios Remondo l'avait bâti sur cent hectares d'un seul tenant, étagés sur les pentes du Monte Yerga entre quatre cent cinquante et six cents mètres d'altitude. À la mort de son père en 2000, Álvaro Palacios — déjà auréolé du succès du Priorat avec L'Ermita et de Corullón au Bierzo — revient diriger la propriété, contre l'avis général qui voyait dans la Rioja Baja une zone de vins chauds et sans relief. Son diagnostic est immédiat : la vraie richesse du lieu n'est pas le Tempranillo mais la Garnacha, plantée là depuis toujours, mal considérée parce que trop généreuse en plaine, mais admirable dès qu'on monte en altitude sur les sols calcaires et les argiles rouges du piémont. Le domaine, converti en agriculture biologique, a progressivement réorienté son encépagement dans ce sens, réduit les rendements et abandonné le vocabulaire des Crianza et Reserva au profit d'une hiérarchie de lieux. La Vendimia ouvre la gamme sur un fruit gourmand. La Montesa, cuvée historique de la maison, est devenue une Garnacha dominante d'une élégance remarquable et l'un des meilleurs rapports qualité-prix de toute l'Espagne. Propiedad monte d'un cran en densité et en profondeur. Quiñón de Valmira, né en 2015, provient d'une seule parcelle de Garnacha de haute altitude vendangée en vieilles souches : floral, épicé, presque bourguignon dans sa texture, c'est l'une des plus grandes Garnachas du monde. Plácet Valtomelloso, blanc de Viura pure, complète la gamme. Álvaro Palacios a réhabilité à lui seul l'image de la Rioja Oriental. C'est le domaine à servir pour démontrer qu'un grand Rioja peut être aérien plutôt que massif. Le contraste avec le reste de l'appellation est saisissant : là où la Rioja Alta cherche la finesse par l'élevage, Alfaro l'obtient par l'altitude et le cépage. La conversion a été menée sans compromis, y compris commercial, en assumant des étiquettes dépouillées et une hiérarchie inspirée de la Bourgogne. Álvaro Palacios est aujourd'hui l'une des rares signatures espagnoles reconnues au même niveau que les grands noms bourguignons, et ses vins de la Rioja Oriental restent, pour l'instant, la partie la plus abordable de son œuvre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "garnacha",
+        "rioja-oriental",
+        "altitude",
+        "alvaro-palacios"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-compania-de-vinos-telmo-rodriguez",
+      "nom": "Compañía de Vinos Telmo Rodríguez — Bodega Lanzaga",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Lanciego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Lanzaga",
+        "LZ",
+        "Altos de Lanzaga",
+        "Las Beatas",
+        "Tabuérniga"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Telmo Rodríguez est le fils de Jaime Rodríguez Salís, fondateur de Remelluri, et l'une des figures intellectuelles les plus importantes du vin espagnol contemporain. Formé à Bordeaux, il crée en 1994 avec Pablo Eguzkiza la Compañía de Vinos Telmo Rodríguez, sorte de compagnie itinérante partie retrouver, région par région, les vignobles historiques oubliés d'Espagne : Málaga, Toro, Rueda, Cebreros, Valdeorras, Alicante, Ribera del Duero. Son port d'attache riojan est Bodega Lanzaga, installée à Lanciego, en Rioja Alavesa, sur une trentaine d'hectares de vieilles vignes en coteau conduites en biologique, avec une part de traction animale et un travail de sol minutieux. Les vinifications se font en levures indigènes, souvent en grappes entières partielles, avec des élevages en foudres et fûts anciens qui laissent le lieu s'exprimer. La gamme est construite comme une pyramide bourguignonne assumée : LZ pour le vin de la zone, franc et désaltérant ; Lanzaga pour le vin de village ; Altos de Lanzaga pour la sélection des meilleures parcelles ; puis les vins de lieu. Las Beatas, moins de deux hectares en terrasses très pentues au-dessus de Lanciego, restaurés à la main pierre par pierre et complantés d'une douzaine de variétés, est le sommet — et l'une des bouteilles les plus rares d'Espagne. Tabuérniga et Yjar complètent cette collection de parcellaires. Au-delà de ses vins, Telmo Rodríguez s'est battu pendant vingt ans, souvent seul contre le Consejo Regulador, pour l'instauration d'une hiérarchie de villages et de lieux-dits en Rioja ; les mentions Viñedo Singular et vino de pueblo lui doivent beaucoup. Il a par ailleurs repris avec son frère la direction de Remelluri en 2010. Un vigneron à faire connaître autant pour son discours que pour ses vins : les deux se tiennent. Sur une carte, la gamme Lanzaga a l'avantage rare de fonctionner à tous les étages : LZ tient parfaitement au verre, Lanzaga accompagne l'essentiel d'un menu, et Altos de Lanzaga soutient sans difficulté un plat de caractère. Les millésimes récents ont gagné en précision et en fraîcheur, la maison ayant nettement allégé ses élevages depuis le début des années 2010. Les quantités sur les cuvées de lieu restent minuscules et les allocations très serrées, mais LZ et Lanzaga sont largement disponibles en France.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "parcellaire",
+        "rioja-alavesa",
+        "vins-de-lieu",
+        "culte"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-sierra-cantabria",
+      "nom": "Sierra Cantabria — Familia Eguren",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Sierra Cantabria",
+        "Señorío de San Vicente",
+        "Viñedos de Páganos",
+        "El Puntido",
+        "La Nieta"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Eguren, installée à San Vicente de la Sonsierra depuis 1870, dirige aujourd'hui l'un des ensembles les plus performants de la Rioja, réparti en plusieurs maisons complémentaires. Sierra Cantabria couvre la gamme la plus large, du Crianza gourmand au Colección Privada et à l'Amancio, avec une régularité qui en fait une valeur sûre. Señorío de San Vicente ne produit qu'un seul vin, issu du Tempranillo Peludo, variété locale à feuille duveteuse récupérée par la famille, planté dans la finca La Canoca. Viñedos de Páganos, en Rioja Alavesa, décline El Puntido et La Nieta, deux parcellaires de haut vol issus de vieilles vignes de Páganos. Le style Eguren est identifiable : maturité pleine, tanin dense et poli, élevage soigné en chêne français, sans les excès de boisé de la fin des années 1990. La rigueur viticole est remarquable, avec des rendements très bas et des vendanges triées grappe par grappe. La famille exporte aussi son savoir-faire à Toro, avec Teso La Monja, dans un registre encore plus concentré. Pour un sommelier, l'intérêt tient à la lisibilité : chaque marque correspond à un niveau de prix et d'ambition parfaitement défini, ce qui rend la construction d'une carte particulièrement simple. Seule réserve : l'abondance des marques et des cuvées peut désorienter, et il vaut mieux se concentrer sur quelques références bien choisies plutôt que de tenter de couvrir toute la production familiale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "sonsierra",
+        "parcellaire",
+        "moderne"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-vinedos-del-contino",
+      "nom": "Viñedos del Contino",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Garnacha"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Contino Reserva",
+        "Viña del Olivo",
+        "Graciano"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Créé en 1973 à l'initiative de CVNE et d'un groupe de viticulteurs, Contino est le premier domaine de la Rioja à avoir adopté explicitement le modèle du château bordelais : soixante hectares d'un seul tenant dans le méandre de Laserna, près de Laguardia, une maison du XVIe siècle, et des vins issus exclusivement de la propriété. À une époque où la région entière fonctionnait par achat de raisin et assemblage de zones, le geste était révolutionnaire. Les sols, alluvions caillouteuses et argiles calcaires, bénéficient de l'effet thermique de l'Èbre qui enserre la propriété sur trois côtés. Le vignoble est conduit en biologique certifié, avec un travail parcellaire de plus en plus fin. Le Reserva reste la carte de visite : Tempranillo majoritaire complété de Graciano, Mazuelo et Garnacha, élevage mesuré, profil épicé et frais. Contino Graciano, lancé en 1994, fut le premier monocépage de ce cépage difficile commercialisé en Rioja et demeure une référence pour comprendre son acidité et ses notes de menthe et d'encre. Viña del Olivo, issu de la parcelle entourant l'olivier centenaire du domaine, constitue le sommet de la gamme. Un blanc de Viura et Garnacha blanca complète l'ensemble. Contino a longtemps été sous-estimé parce que rattaché à un grand groupe ; c'est pourtant l'un des rares vrais domaines d'un seul tenant de la Rioja, avec une identité de lieu parfaitement lisible d'un millésime à l'autre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "domaine-unique",
+        "laserna",
+        "graciano",
+        "cvne"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-marques-de-riscal",
+      "nom": "Bodegas Marqués de Riscal",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Elciego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Cabernet-Sauvignon",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Barón de Chirel",
+        "Viñedo Singular Las Cien Doncellas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée à Elciego en 1858, Riscal est la plus ancienne bodega de la Rioja Alavesa et l'une des deux maisons qui ont importé le savoir-faire bordelais dans la région, avec l'aide d'un régisseur venu du Médoc. Elle est aussi la seule à avoir conservé jusqu'à aujourd'hui l'autorisation d'utiliser le Cabernet-Sauvignon, planté au XIXe siècle et toujours présent dans le Barón de Chirel. La bodega est mondialement connue pour la Ciudad del Vino, hôtel-restaurant aux toitures de titane coloré dessiné par Frank Gehry et inauguré en 2006, devenu l'emblème œnotouristique de l'Espagne. Derrière l'image, la maison conserve une cathédrale de vieux millésimes exceptionnelle, avec des bouteilles remontant aux années 1860 régulièrement redégustées. La gamme est très large : le Reserva assure le volume international, le Gran Reserva reste un classique fiable, et le Barón de Chirel, né en 1986 à partir de vieilles vignes complantées, marque la véritable ambition du domaine. L'entrée récente dans les Viñedos Singulares, avec Las Cien Doncellas, confirme le virage parcellaire. Riscal produit également des blancs en Rueda, dont elle fut l'un des artisans de la renaissance dans les années 1970. Le contraste entre les volumes considérables de la gamme courante et l'exigence du Barón de Chirel demande d'être expliqué : c'est le même domaine, mais deux mondes différents dans le verre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "rioja-alavesa",
+        "vinedo-singular",
+        "cabernet"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-bilbainas",
+      "nom": "Bodegas Bilbaínas — Viña Pomal",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viña Pomal",
+        "La Vicalanda",
+        "Viñedo Singular La Cantera"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installée au Barrio de la Estación de Haro depuis 1901, Bodegas Bilbaínas est l'un des grands noms historiques de la Rioja, longtemps propriétaire du plus vaste vignoble de la zone. Rachetée en 1997 par Codorníu, elle a été patiemment remise à niveau depuis, avec un recentrage sur ses propres parcelles autour de Haro. Viña Pomal, marque créée en 1908, reste l'étendard : Crianza et Reserva bien construits, dans un registre classique et digeste. La Vicalanda, née en 1991, propose la lecture plus moderne et plus concentrée de la maison, avec des élevages en chêne français. Le domaine a rejoint récemment les Viñedos Singulares avec La Cantera, parcelle de Graciano, et travaille aussi Vicalanda blanc. La singularité de Bilbaínas tient à sa production de Cava : elle est l'une des rares maisons à en élaborer en Rioja, sous la marque Royal Carlton, avec des dégorgements tardifs qui donnent des effervescents d'une belle profondeur, très peu connus hors d'Espagne. Les caves souterraines, plusieurs kilomètres de galeries creusées sous la ville, comptent parmi les plus impressionnantes de Haro et se visitent. Longtemps délaissée par la critique, la maison retrouve aujourd'hui une vraie considération, et ses prix restent parmi les plus doux du Barrio de la Estación pour un niveau de qualité comparable à celui de ses voisines.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "haro",
+        "barrio-de-la-estacion",
+        "classique",
+        "cava"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-gomez-cruzado",
+      "nom": "Gómez Cruzado",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Tempranillo Blanco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Pancrudo",
+        "Montes Obarenes",
+        "Honorable"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Petite maison du Barrio de la Estación de Haro fondée en 1886, Gómez Cruzado a longtemps vécu dans l'ombre de ses voisins avant une relance spectaculaire au tournant des années 2010, sous l'impulsion de David González et Juan Antonio Leza. La démarche est claire : abandonner la logique de marque au profit d'une lecture des altitudes et des sols de la Rioja Alta et Alavesa, parcelle par parcelle. Pancrudo est la cuvée qui a fait connaître le domaine : une Garnacha de Badarán plantée vers six cents mètres sur des sols pauvres, élevée avec retenue, floral et élancé, à des années-lumière des Garnachas chaudes de la région. Montes Obarenes, blanc issu de Viura et Tempranillo Blanco de vieilles vignes de Villalba, fermenté et élevé sous bois, est l'un des blancs les plus complets de la Rioja actuelle. Honorable, assemblage de parcelles d'altitude, incarne la version la plus ambitieuse en rouge. Le Crianza et le Reserva, plus classiques, restent d'excellents rapports qualité-prix. Le style général privilégie la fraîcheur, la tension et un boisé discret : c'est l'un des domaines qui illustrent le mieux le renouveau qualitatif de Haro. Le domaine reste petit et sa distribution limitée, ce qui en fait une belle carte à jouer face à un client qui connaît déjà les grands noms de Haro et cherche quelque chose de moins évident.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "haro",
+        "barrio-de-la-estacion",
+        "altitude",
+        "renaissance"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-y-vinedos-artuke",
+      "nom": "Bodegas y Viñedos Artuke",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Baños de Ebro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Finca de los Locos",
+        "Paso Las Mañas",
+        "La Condenada",
+        "K4"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Arturo et Kike de Miguel représentent la onzième génération d'une famille de cosecheros de Baños de Ebro ; ils créent Artuke en 1991 mais donnent au projet sa physionomie actuelle à partir du milieu des années 2000, en devenant l'un des porte-drapeaux de la nouvelle Rioja parcellaire. Le vignoble, conduit en biologique, s'étend sur une soixantaine de petites parcelles de Baños de Ebro, Samaniego et Villabuena, souvent en gobelet et complantées. Les vinifications font une large place à la grappe entière et aux fermentations en levures indigènes, avec des élevages en foudres, fûts anciens et béton qui laissent le fruit intact. Artuke, macération semi-carbonique vendu en primeur, reste l'un des rouges les plus désaltérants d'Espagne. Pies Negros ajoute une dimension de village. Puis viennent les parcellaires : Finca de los Locos, Paso Las Mañas et surtout La Condenada, vieille vigne complantée reconnue en Viñedo Singular, d'une profondeur remarquable. K4 complète la série. Le style est tendu, salin, avec des tanins fins et une nette baisse de degré par rapport aux standards régionaux. Artuke a beaucoup fait pour convaincre le Consejo Regulador d'adopter les mentions parcellaires. Les vins se boivent jeunes avec un immense plaisir mais tiennent aussi très bien la garde, ce qui est rare dans cette esthétique. Un domaine à mettre entre toutes les mains, du verre au comptoir à la grande bouteille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "parcellaire",
+        "vinedo-singular",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-abel-mendoza-monge",
+      "nom": "Abel Mendoza Monge",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura",
+        "Malvasía",
+        "Torrontés",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Jarrarte",
+        "Selección Personal",
+        "Grano a Grano"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Abel Mendoza et Maite Fernández travaillent une trentaine de petites parcelles autour de San Vicente de la Sonsierra, dans un domaine artisanal qui n'a jamais cherché à grandir. Le couple est surtout connu pour avoir bâti la collection de blancs la plus originale de toute la Rioja : chaque variété autorisée y est vinifiée séparément, en fût, sans assemblage — Viura, Malvasía, Garnacha blanca, Torrontés, Tempranillo Blanco, Maturana Blanca. Cette série constitue un outil pédagogique sans équivalent pour comprendre l'encépagement blanc riojan, longtemps réduit à la seule Viura. Les vins sont amples, texturés, marqués par un élevage sur lies soigné, et vieillissent bien mieux qu'on ne l'imagine. En rouge, Jarrarte est la version fruitée et immédiate, en macération carbonique ou en élevage court selon les cuvées ; Selección Personal offre une lecture plus ambitieuse des vieilles vignes ; Grano a Grano, égrappé baie par baie à la main comme son nom l'indique, existe en Tempranillo et en Graciano et représente le sommet de la maison. Le style privilégie la définition du fruit et la finesse de tanin plutôt que la puissance. Peu de bouteilles, beaucoup de précision : un domaine de sommelier. Les quantités sont faibles et la distribution française reste modeste, mais une seule bouteille de la série des blancs monovariétaux suffit à changer l'idée qu'un client se fait de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "blancs",
+        "sonsierra",
+        "artisan",
+        "monocepage"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-olivier-riviere",
+      "nom": "Olivier Rivière",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Ábalos",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Rayos Uva",
+        "Ganko",
+        "El Quemado",
+        "Viñedo Singular La Salvación"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Charentais formé à Bordeaux, passé par le Roussillon et par Telmo Rodríguez, Olivier Rivière s'installe en Rioja en 2004 et y bâtit un projet de vigneron-négociant devenu l'une des signatures les plus attachantes de la région. Il travaille depuis Ábalos, dans la Sonsierra, ainsi qu'en Arlanza et à Rueda. Sa méthode se lit dans le verre : achat et location de vieilles parcelles en gobelet, viticulture biologique, vendanges précoces pour préserver l'acidité, fermentations en levures indigènes avec une part de grappe entière, extractions par infusion sans pigeage brutal, élevages en foudres et fûts anciens, sulfitage minimal. Le résultat est une famille de vins clairs, épicés, souvent floraux, à la buvabilité redoutable. Rayos Uva, assemblage joyeux de Tempranillo, Garnacha et Graciano, est devenu un classique du bistrot espagnol. Ganko, dominé par la Garnacha et le Mazuelo, monte en complexité. El Quemado provient d'une parcelle de Garnacha de vieilles vignes, et La Salvación, reconnue en Viñedo Singular, constitue le sommet de la gamme. Les blancs de Viura de vieilles vignes méritent tout autant l'attention. Un vigneron français en Espagne, mais dont le style ne doit rien à une transposition : il est profondément riojan. Ses prix sont restés très raisonnables et sa distribution en France est correcte, ce qui en fait l'une des portes d'entrée les plus efficaces vers la nouvelle Rioja parcellaire.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "francais",
+        "parcellaire",
+        "infusion"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-tentenublo-wines",
+      "nom": "Tentenublo Wines",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Lanciego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Malvasía",
+        "Calagraño"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Tentenublo",
+        "Xérico",
+        "El Escondite del Ardacho",
+        "Custero"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Roberto Oliván vit à Viñaspre, hameau de quelques habitants rattaché à Lanciego, où il a restauré de ses mains une ancienne maison d'aperos entourée de murs. Son projet, lancé en 2011, s'appuie sur une dizaine d'hectares de vignes familiales et sur une conviction : le cosechero, celui qui cultive, vinifie et vend lui-même, est le seul acteur véritablement libre de la filière. La viticulture est biologique certifiée, sur de vieilles parcelles complantées où cohabitent Tempranillo, Garnacha, Viura, Malvasía et des variétés minoritaires comme le Calagraño. Les vinifications se font sans intrant, en levures indigènes, avec des élevages en fûts anciens et des sulfitages très faibles. Le style, un peu déroutant à ses débuts, s'est nettement stabilisé et gagne chaque millésime en netteté. Xérico est le vin d'entrée, immédiat et digeste. Tentenublo, en rouge et en blanc, correspond à la notion de vin de village. Custero pousse l'ambition d'un cran. La collection El Escondite del Ardacho rassemble les parcellaires, chacun nommé et vinifié séparément, avec des expressions très contrastées d'un lieu à l'autre. L'une des voix les plus sincères de la nouvelle Rioja Alavesa, à réserver à un public curieux. Les quantités sont infimes, à peine quelques dizaines de milliers de bouteilles selon les millésimes, et certaines cuvées demandent un peu d'aération pour se mettre en place.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "vins-de-village",
+        "parcellaire",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-sierra-de-tolono",
+      "nom": "Sierra de Toloño",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Sierra de Toloño",
+        "El Süeño de Bruno",
+        "Sensaciones"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Sandra Bravo a travaillé en Nouvelle-Zélande, en Toscane, dans le Priorat et à Ribera del Duero avant de revenir en 2011 fonder son domaine à Villabuena de Álava, sur les pentes les plus hautes du piémont de la Sierra de Toloño. Le nom dit l'essentiel : ce sont l'altitude et le calcaire de cette barrière montagneuse qui structurent tous ses vins. Le vignoble, conduit en biologique, réunit une quarantaine de petites parcelles de vieilles vignes entre cinq cents et sept cents mètres, réparties sur plusieurs villages de l'Alavesa. Les vinifications privilégient les levures indigènes, une part de grappe entière et des élevages en foudres, fûts usagés et béton, avec très peu de soufre. Sierra de Toloño, en rouge comme en blanc, constitue la cuvée de référence : fraîcheur, tanin fin, salinité franche, degré modéré. El Süeño de Bruno et les parcellaires poussent l'exercice plus loin, sur des vignes centenaires. Sensaciones apporte une lecture plus fruitée et immédiate. C'est l'un des domaines qui démontrent le mieux que la Rioja Alavesa peut produire des rouges élancés et digestes sans rien perdre en profondeur. Le rapport qualité-prix reste, pour l'instant, très favorable. Sandra Bravo est aussi devenue l'une des figures les plus visibles d'une région où les femmes vigneronnes indépendantes restent rares, ce qui ajoute à l'intérêt du récit à table.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "altitude",
+        "calcaire",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodega-bideona",
+      "nom": "Bodega Bideona",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura",
+        "Garnacha"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Las Parcelas",
+        "V(ILLABUENA)",
+        "S(AMANIEGO)",
+        "L(AGUARDIA)",
+        "E(LVILLAR)"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Bideona — « le bon chemin » en basque — naît en 2018 du rachat de Bodegas Arabarte par l'entrepreneur Gorka Izagirre, associé à Península Viticultores, la structure des Masters of Wine Andreas Kubach et Sam Harrop. L'ambition est explicite : appliquer à la Rioja Alavesa une hiérarchie bourguignonne fondée sur le village et le lieu-dit plutôt que sur la durée d'élevage. Le domaine dispose de plus de trois cents micro-parcelles, d'une taille moyenne inférieure à un tiers d'hectare, réparties sur Villabuena, Samaniego, Laguardia, Leza, Baños de Ebro, Navaridas, Lanciego et Elciego, avec un âge moyen de vignes dépassant cinquante ans. La conduite est biologique et les vinifications volontairement sobres : cuves inox, béton, foudres, boisé neuf marginal. Las Parcelas, assemblage de vieilles vignes des différents villages, sert d'entrée en matière remarquablement tendue. Viennent ensuite les vins de village, identifiés par une lettre — V pour Villabuena, S pour Samaniego, L pour Laguardia, E pour Elvillar — qui permettent de comparer les terroirs à niveau de vinification égal. L'exercice est passionnant à mener en dégustation comparée. Un projet jeune, mais déjà l'un des plus intelligents de la région. Les prix restent contenus au regard de l'ambition affichée, et la lisibilité des étiquettes, avec le nom du village en évidence, facilite énormément la présentation au client.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "vins-de-village",
+        "rioja-alavesa",
+        "peninsula"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-exopto",
+      "nom": "Exopto",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Leza",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Bozeto",
+        "Horizonte",
+        "Exopto"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Tom Puyaubert, Bordelais arrivé en Rioja à la fin des années 1990, fonde Exopto en 2003 et s'installe à Leza, au cœur de la Rioja Alavesa. Le nom, tiré du latin, signifie « je souhaite ardemment » et résume bien un projet mené sans capital initial, à partir de raisins achetés puis de parcelles progressivement acquises. Sa particularité tient à l'encépagement : là où la région écrase tout sous le Tempranillo, Puyaubert donne une place considérable à la Garnacha et surtout au Graciano, cépage tardif, acide et coloré, qu'il considère comme la clé de la fraîcheur riojane. Les vignes, majoritairement anciennes et en gobelet, sont conduites en biologique sur des sols argilo-calcaires. Bozeto est l'entrée de gamme, assemblage vif et gourmand qui figure parmi les meilleures affaires de la région. Horizonte monte d'un cran en structure, avec un élevage plus soigné. La cuvée Exopto, produite en petite quantité, exprime la version la plus aboutie du projet. Un blanc de Viura et Malvasía complète la gamme. Le style est aérien, épicé, avec des tanins fins et un boisé fondu. Un domaine encore accessible, qui mérite d'être suivi de près. Tom Puyaubert produit peu et vend beaucoup à l'export, mais ses vins restent trouvables en France ; le Bozeto est l'une des meilleures propositions au verre qu'on puisse trouver en Rioja.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "francais",
+        "graciano",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-valenciso",
+      "nom": "Bodegas Valenciso",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Ollauri",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Valenciso Reserva",
+        "Valenciso 10 Años Después"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Carmen Enciso et Luis Valentín, tous deux issus de grandes maisons riojanes, créent Valenciso en 1998 avec une idée à contre-courant : ne produire qu'un seul vin par millésime, sans hiérarchie de gamme, sans Crianza ni Gran Reserva, en n'utilisant que la mention Reserva. La contrainte est devenue leur signature. Le domaine, installé à Ollauri au cœur de la Rioja Alta, travaille des parcelles d'altitude autour de Villalba et Ollauri, conduites en biologique, sur des sols argilo-calcaires frais. Les élevages se font exclusivement en chêne français, avec des barriques de plusieurs vins, et les vins sont mis en bouteille sans filtration puis gardés en cave avant commercialisation. Le Valenciso Reserva est d'une constance impressionnante : Tempranillo pur, fruit rouge net, tanin soyeux, boisé fondu, une élégance presque bourguignonne dans la texture. La cuvée 10 Años Después, gardée dix ans par le domaine avant sortie, montre le potentiel de garde du style. Le blanc de Viura fermenté en fût est excellent, et le rosé, sérieux et pâle, se comporte comme un vin de gastronomie. Un domaine sans esbroufe, exemplaire de la Rioja Alta contemporaine. Le refus des mentions traditionnelles a longtemps compliqué la commercialisation de la maison ; c'est aujourd'hui devenu un argument, et les prix restent très en dessous de ce que la qualité justifierait.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "artisan",
+        "reserva",
+        "elegance",
+        "ollauri"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-finca-allende",
+      "nom": "Finca Allende",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Briones",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Aurus",
+        "Calvario",
+        "Martires"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Miguel Ángel de Gregorio, œnologue formé à Madrid, fonde Finca Allende en 1995 dans un palais du XVIe siècle au cœur de Briones, l'un des plus beaux villages de la Rioja Alta. Il fait partie de la génération qui, dans les années 1990, a rompu avec la logique de marque pour parier sur des parcelles précises et des élevages en chêne français. Le vignoble réunit une centaine de parcelles autour de Briones, sur des sols argilo-calcaires et des terrasses caillouteuses, avec un travail viticole très poussé sur la maîtrise des rendements et la maturité phénolique. Allende, le vin de base, est déjà d'une belle profondeur. Aurus, assemblage de Tempranillo et de Graciano issu des meilleures parcelles, fut l'un des grands vins de la Rioja moderne dès son premier millésime en 1996. Calvario, issu d'une parcelle complantée plantée en 1945 sur un coteau escarpé, est plus intériorisé et plus minéral, et reste la cuvée la plus recherchée du domaine. Mártires, blanc de Viura pure issu d'une seule parcelle, fermenté et élevé sous bois, a démontré à lui seul que la Rioja pouvait produire des blancs de garde de niveau mondial. Le boisé, très marqué au tournant des années 2000, s'est nettement assagi. Les vins demandent du temps et de l'aération. Le domaine gère aussi un hôtel et une table à Briones, ce qui en fait une étape logique lors d'un séjour dans la région, entre Haro et San Vicente de la Sonsierra.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "parcellaire",
+        "briones",
+        "blancs"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-luis-canas-amaren",
+      "nom": "Bodegas Luis Cañas / Amaren",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Amaren",
+        "Luis Cañas Selección de Familia",
+        "Viñedos Singulares"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Cañas cultive la vigne à Villabuena de Álava depuis 1928 et embouteille sous son nom depuis 1970. Juan Luis Cañas a fait de la maison l'un des acteurs majeurs de la Rioja Alavesa, avec un patrimoine de vieilles vignes considérable — plus de quatre cents hectares, dont beaucoup de gobelets antérieurs à 1950 — qui en fait l'un des propriétaires les mieux dotés en Viñedos Singulares certifiés. La gamme Luis Cañas couvre l'ensemble du spectre classique, du Crianza à la Selección de Familia, avec une régularité qui explique son succès commercial. Le blanc de Viura et Malvasía fermenté en barrique est nettement au-dessus de la moyenne régionale. Amaren, créée en 1995 en hommage à la mère du fondateur, constitue la marque haute : Tempranillo et Graciano de vieilles vignes, élevages longs en chêne français, et une série de parcellaires qui traduit le virage terroir de la maison. Le Graciano d'Amaren est l'un des rares monocépages sérieux de cette variété en Rioja. Le style est ample, mûr, avec un boisé assumé mais maîtrisé, dans une esthétique moderne plus que classique. Un domaine solide, très présent à l'export. La disponibilité est excellente et les formats variés, ce qui facilite la construction d'une carte ; les cuvées parcellaires méritent en revanche d'être servies carafées et pas trop jeunes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-alavesa",
+        "vinedo-singular",
+        "famille"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-izadi",
+      "nom": "Bodegas Izadi",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Izadi El Regalo",
+        "Izadi Selección"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Gonzalo Antón, restaurateur et caviste de Vitoria, fonde Izadi en 1987 à Villabuena de Álava avec un groupe d'amis. Le projet est devenu la tête de pont du groupe familial Artevino, qui possède également Vetus à Toro et Orben en Rioja Alavesa. Le domaine s'appuie sur des vignes de Villabuena, Samaniego et Leza, souvent en gobelet, sur des sols argilo-calcaires bien exposés au pied de la Sierra de Cantabria. La conduite viticole a été progressivement affinée, avec un travail parcellaire renforcé et des rendements en baisse. Izadi Crianza reste l'un des rapports qualité-prix les plus fiables de la Rioja Alavesa, avec un fruit net et un boisé mesuré. Izadi Selección monte en densité. El Regalo, issu de la parcelle du même nom plantée dans les années 1940, constitue le sommet de la gamme, dans un registre profond et épicé qui demande quelques années de bouteille. Le blanc, Viura et Malvasía fermenté en fût, mérite le détour. Le style est moderne et net, sans excès d'extraction, avec une constance remarquable d'un millésime à l'autre. Une valeur sûre pour une carte, particulièrement au verre ou sur les formats intermédiaires. Le groupe Artevino propose par ailleurs Orben, projet voisin et plus confidentiel, qui mérite d'être goûté en parallèle pour saisir l'étendue du savoir-faire de la maison.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "rioja-alavesa",
+        "groupe-artevino"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-ostatu",
+      "nom": "Bodegas Ostatu",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Samaniego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Ostatu",
+        "Lore de Ostatu",
+        "Gloria de Ostatu"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Sáenz de Samaniego cultive la vigne à Samaniego depuis le XIXe siècle et embouteille sous le nom d'Ostatu — « l'auberge » en basque — depuis 1989. Cinq frères et sœurs dirigent aujourd'hui l'exploitation, avec un ancrage villageois particulièrement fort. Le domaine dispose d'une trentaine d'hectares répartis en petites parcelles autour de Samaniego, au pied de la Sierra de Cantabria, sur des terrasses argilo-calcaires en pente conduites en biologique. La proportion de vieilles vignes est élevée et le travail de sol systématique. Le rouge Ostatu, dans sa version jeune comme en Crianza, offre un fruit franc et une buvabilité rare à ce niveau de prix. Lore de Ostatu, issu des meilleures parcelles, propose une lecture plus dense. Gloria de Ostatu, produit uniquement dans les grands millésimes à partir d'une vieille vigne identifiée, constitue le sommet. Les blancs sont l'autre force du domaine : assemblage de Viura et de Malvasía de vieilles vignes, fermenté en barrique, il compte parmi les plus texturés et les plus vieillissants de l'Alavesa. Le rosé, obtenu par saignée, est également très abouti. Un domaine familial exemplaire, à prix encore raisonnables. C'est typiquement le producteur qu'on découvre sans attente particulière et qu'on garde ensuite en référence permanente, tant la régularité et le rapport qualité-prix sont constants d'un millésime à l'autre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "rioja-alavesa",
+        "blancs",
+        "vieilles-vignes"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-y-vinedos-pujanza",
+      "nom": "Bodegas y Viñedos Pujanza",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Norte",
+        "Cisma",
+        "Finca Valdepoleo",
+        "Añadas Frías"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Carlos San Pedro Pérez de Viñaspre fonde Pujanza en 1998 à Laguardia, sur les terres familiales, avec l'idée de produire un Rioja de terroir sans passer par la grille des Crianza et Reserva. Les étiquettes n'ont jamais porté ces mentions, ce qui était une provocation à l'époque. Le vignoble s'étage sur les coteaux calcaires au-dessus de Laguardia, jusqu'à près de six cents mètres, en conduite biologique, avec une part significative de vieilles vignes en gobelet. Le Tempranillo domine presque exclusivement. Pujanza Norte provient des parcelles les plus fraîches, exposées au nord, et signe un style élancé et minéral. Finca Valdepoleo offre une lecture plus large et plus accessible. Cisma, issu d'une parcelle unique de haute altitude, est le vin le plus recherché du domaine, dense et vertical. Añadas Frías, produit uniquement dans les millésimes tendus, assume une acidité et une austérité peu communes en Rioja. Un blanc de Viura et Malvasía complète la gamme. Le style, très pur, mise sur la tension plutôt que sur la puissance ; les élevages en chêne français neuf, marqués au début, se sont assouplis. Un domaine à faire découvrir aux amateurs de rouges droits. Le domaine a été l'un des tout premiers à revendiquer publiquement la notion de lieu en Rioja, bien avant l'instauration officielle des Viñedos Singulares, et cette antériorité mérite d'être rappelée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "parcellaire",
+        "rioja-alavesa",
+        "altitude"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-bhilar",
+      "nom": "Bodegas Bhilar — David Sampedro Gil",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Elvillar",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Bhilar Plots",
+        "Phinca Lali",
+        "Phinca Hapa",
+        "Phinca Encanto"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "David Sampedro Gil, issu d'une famille de viticulteurs d'Elvillar, et son épouse américaine Melanie Hickman ont fait de Bhilar l'un des rares domaines de la Rioja conduits en biodynamie stricte, avec préparations, compost et labours à cheval sur les parcelles les plus escarpées. Le vignoble réunit une quarantaine de parcelles autour d'Elvillar, Laguardia et Villabuena, essentiellement de vieux gobelets sur des sols calcaires et graveleux d'altitude. Les vinifications se font en levures indigènes, souvent en grappes entières, dans des cuves de béton et des amphores, avec des élevages en foudres et fûts anciens et un sulfitage minimal. Bhilar Plots, assemblage de plusieurs parcelles, sert d'entrée en matière et fait partie des meilleures affaires de la région. La série Phinca rassemble les vins de lieu : Phinca Hapa, Phinca Lali, Phinca Encanto, chacun issu d'une parcelle nommée et vinifié séparément, avec des personnalités très différenciées, du plus floral au plus austère. Les blancs de Viura de vieilles vignes, souvent élevés longuement, sont remarquables. Des vins sans maquillage, salins et parfois exigeants dans leur jeunesse, à réserver à une clientèle avertie. Les volumes sont faibles et les étiquettes déroutantes pour un néophyte, mais aucun autre domaine de la région ne donne une lecture aussi nue de ses calcaires d'altitude.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "biodynamie",
+        "parcellaire",
+        "nouvelle-vague",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-y-vinedos-alegre-valganon",
+      "nom": "Bodegas y Viñedos Alegre Valgañón",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Ábalos",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura",
+        "Malvasía",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "La Calleja",
+        "Alegre Valgañón Tinto",
+        "Alegre Valgañón Blanco"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Óscar Alegre et Eva Valgañón lancent leur domaine en 2011 à Ábalos, sur les contreforts de la Sierra de Cantabria, après avoir travaillé pour d'autres maisons de la région. Ils exploitent une quinzaine d'hectares de vieilles parcelles héritées et rachetées, dispersées sur les coteaux de la Sonsierra riojane. La conduite est biologique, avec un travail de sol assidu et des vendanges manuelles précoces destinées à préserver l'acidité naturelle. En cave, la philosophie est celle de la non-intervention raisonnée : levures indigènes, part de grappe entière, extractions douces, élevages en foudres et fûts usagés, sulfitage réduit et absence de filtration. Le rouge Alegre Valgañón, assemblage de Tempranillo et de Garnacha de vieilles vignes, est l'un des plus digestes de la région, avec un profil floral et épicé qui rappelle davantage les Garnachas de Gredos que les Riojas classiques. La Calleja, issue d'une parcelle unique, monte en densité et en profondeur. Le blanc, mêlant Viura, Malvasía et Garnacha blanca, offre une belle tension saline. Petites quantités, prix encore doux : un domaine à recommander avant qu'il ne devienne difficile à trouver. Le couple travaille seul ou presque, ce qui explique la confidentialité de la production ; la reconnaissance critique est venue vite et les allocations se resserrent déjà chez les importateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "sonsierra",
+        "artisan",
+        "vieilles-vignes"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-y-vinedos-arizcuren",
+      "nom": "Bodegas y Viñedos Arizcuren",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "commune": "Quel",
+      "pays": "Espagne",
+      "cepages": [
+        "Garnacha",
+        "Mazuelo",
+        "Tempranillo",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Solomiedo",
+        "Malas Fama",
+        "Rehilador",
+        "Viñedo Singular Sologarnacha"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Javier Arizcuren, architecte de formation, revient dans les années 2010 sur les terres familiales de Quel, dans la Rioja Oriental, pour y relever un vignoble que tout le monde considérait comme condamné. Sa démarche a largement contribué à réhabiliter cette partie de l'appellation, longtemps réduite à un rôle de fournisseur de volume. Il travaille des vignes basses en gobelet, plantées en terrasses au pied de la Sierra de Yerga, entre quatre cents et sept cents mètres, sur des sols calcaires et argileux très pauvres. Les cépages dominants ne sont pas le Tempranillo mais la Garnacha et le Mazuelo, ce dernier vinifié en monocépage, exercice rarissime en Espagne. La conduite est biologique et les vinifications se font en levures indigènes, en cuves de béton et foudres, avec des élevages sobres. Solomiedo et Sologarnacha, cette dernière reconnue en Viñedo Singular, incarnent le haut de la gamme. Mala Fama et Rehilador offrent des lectures plus immédiates. Les vins sont fins, épicés, avec une acidité naturelle élevée et un degré maîtrisé malgré le climat chaud. L'une des plus belles surprises de la Rioja actuelle, et l'argument idéal contre les préjugés sur la Rioja Oriental. Arizcuren produit très peu et vend l'essentiel en Espagne, mais quelques cuvées circulent en France ; le Mazuelo en monocépage vaut à lui seul la recherche, tant les points de comparaison manquent.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-oriental",
+        "garnacha",
+        "mazuelo",
+        "nouvelle-vague"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-juan-carlos-sancha",
+      "nom": "Juan Carlos Sancha",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Baños de Río Tobía",
+      "pays": "Espagne",
+      "cepages": [
+        "Garnacha",
+        "Tempranillo",
+        "Maturana Tinta",
+        "Monastel",
+        "Maturana Blanca",
+        "Tempranillo Blanco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Ad Libitum",
+        "Peña El Gato",
+        "Viñedo Singular Cerro La Isa"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Docteur en viticulture et enseignant à l'université de La Rioja, Juan Carlos Sancha est à la fois chercheur et vigneron. On lui doit une part essentielle du travail de récupération des variétés minoritaires riojanes menacées de disparition : Maturana Tinta, Maturana Blanca, Monastel, Tempranillo Blanco, aujourd'hui autorisées dans la DOCa grâce à ses recherches. Son domaine, installé à Baños de Río Tobía dans la haute vallée du Najerilla, exploite des parcelles d'altitude conduites en biologique, dont plusieurs vignes centenaires en gobelet plantées sur des pentes extrêmement raides. Peña El Gato est l'une des plus spectaculaires, et Cerro La Isa a été reconnue en Viñedo Singular. La gamme Ad Libitum décline en monocépage les variétés rares qu'il a sauvées, ce qui en fait un outil pédagogique irremplaçable pour comprendre l'ampleur réelle de l'encépagement riojan. Les Garnachas de vieilles vignes, floral et élancées, constituent l'autre force de la maison, avec un rosé de saignée très abouti. Les vinifications sont sobres, en levures indigènes et élevages courts. Un domaine indispensable dès qu'il s'agit de raconter la Rioja autrement que par le Tempranillo. Ses vins se trouvent à des prix étonnamment doux compte tenu de la difficulté du travail en forte pente et de la rareté des variétés vinifiées. Une adresse d'initié.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cepages-rares",
+        "najerilla",
+        "vinedo-singular",
+        "recherche"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-benjamin-de-rothschild-vega-sicilia",
+      "nom": "Bodegas Benjamín de Rothschild & Vega Sicilia — Macán",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Samaniego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Macán",
+        "Macán Clásico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Macán naît en 2004 de la rencontre entre deux dynasties : la famille Álvarez, propriétaire de Vega Sicilia, et la Compagnie Vinicole Baron Edmond de Rothschild. Le projet, installé à Samaniego au cœur de la Rioja Alavesa, a été construit avec une lenteur assumée, la première commercialisation n'intervenant qu'une décennie après les premières acquisitions de vignes. Le domaine s'appuie sur une centaine d'hectares répartis en petites parcelles sur plusieurs villages de l'Alavesa, sélectionnées pour leur altitude et leurs sols argilo-calcaires. La cave, sobre et fonctionnelle, a été conçue pour vinifier chaque parcelle séparément. Le Tempranillo règne seul. Deux vins seulement, dans une logique de premier et second vin toute bordelaise. Macán Clásico, plus immédiat et plus fruité, offre déjà une belle définition. Macán, issu des meilleures cuves, joue la profondeur, la densité de tanin et une capacité de garde évidente. Les élevages se font en chêne français avec une part de bois neuf importante mais bien intégrée. Le style est international dans le meilleur sens du terme : précis, net, sans excès. Une lecture bordelaise du grand Rioja, à un niveau de prix élevé mais cohérent. Le nom des deux maisons ouvre bien des portes commercialement, mais le vin tient réellement la comparaison avec les meilleures cuvées modernes de l'appellation, ce qui n'allait pas de soi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "joint-venture",
+        "moderne",
+        "rioja-alavesa",
+        "haut-de-gamme"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-ontanon-dominio-de-queiron",
+      "nom": "Bodegas Ontañón / Dominio de Queirón",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Oriental",
+      "commune": "Quel",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Antología",
+        "Viñedo Singular El Arca",
+        "Mi Lugar"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Pérez Marco est implantée à Quel, dans la Rioja Oriental, depuis plusieurs générations. Elle a bâti avec Ontañón une maison de taille moyenne à Logroño, doublée depuis 2016 d'un projet nettement plus ambitieux, Dominio de Queirón, installé dans le village d'origine et entièrement tourné vers les vignes d'altitude de la Sierra de Yerga. Le patrimoine viticole est le vrai atout : plusieurs centaines d'hectares en propriété, dont de nombreuses parcelles en terrasses entre cinq cents et huit cents mètres, conduites en biologique. L'altitude compense largement la chaleur de la Rioja Oriental et donne des vins bien plus frais que la réputation de la zone ne le laisse supposer. Antología, assemblage des meilleures parcelles, constitue le fleuron d'Ontañón, dans un registre classique et ample. El Arca, reconnu en Viñedo Singular, et Mi Lugar incarnent l'ambition parcellaire de Queirón. La maison travaille aussi le Graciano et la Garnacha en petites quantités. Ontañón se distingue également par son musée de la culture du vin à Logroño et une offre œnotouristique très construite. Un producteur à connaître pour ne pas réduire la Rioja Oriental au vin de volume. La distinction entre les deux marques mérite d'être expliquée au client : Ontañón pour la maison historique et le volume, Queirón pour les parcelles d'altitude et l'ambition.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-oriental",
+        "vinedo-singular",
+        "famille",
+        "altitude"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-marques-de-vargas",
+      "nom": "Bodegas Marqués de Vargas",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Logroño",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Mazuelo",
+        "Garnacha",
+        "Graciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Reserva Privada",
+        "Hacienda Pradolagar"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Le domaine occupe la Hacienda Pradolagar, propriété familiale des marquis de Vargas située à quelques kilomètres de Logroño, en bordure de l'Èbre. La commercialisation sous le nom du domaine ne commence qu'en 1991, mais les vignes, elles, sont anciennes et n'ont jamais quitté la famille. L'originalité tient à la structure : une soixantaine d'hectares d'un seul tenant, cas rare en Rioja, complantés à l'ancienne — Tempranillo dominant mêlé de Mazuelo, Garnacha et Graciano dans la même parcelle, ce qui impose des vendanges en un seul passage et donne des assemblages naturels plutôt que composés en cave. Les sols sont argilo-calcaires avec des passages de galets. Le Reserva constitue la carte de visite, dans un registre classique et épicé. Reserva Privada monte en concentration, avec un élevage plus long et une sélection resserrée. Hacienda Pradolagar, produit uniquement dans les grands millésimes et en très petite quantité, est le sommet de la maison, dense et taillé pour la garde. Le style reste fidèle à une esthétique traditionnelle assouplie, sans recherche de puissance. La famille possède également Pazo San Mauro en Rías Baixas et Conde San Cristóbal en Ribera del Duero. La production reste modeste et confidentielle en France, mais le Reserva Privada offre l'un des meilleurs rapports qualité-prix de la Rioja Alta dans le registre classique de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "domaine-unique",
+        "logrono",
+        "classique"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-miguel-merino",
+      "nom": "Bodegas Miguel Merino",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Briones",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Miguel Merino Gran Reserva",
+        "Viña Mayor de Migueloa",
+        "Unnum"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Miguel Merino, ancien commercial dans le vin, fonde en 1994 à Briones l'une des plus petites bodegas de la Rioja Alta, avec une idée précise : ne produire que des vins de long élevage, dans un registre classique, à partir de vieilles vignes achetées ou louées autour du village. Son fils Miguel a repris la direction et a affiné le style. Le domaine ne dépasse pas quelques dizaines de milliers de bouteilles, réparties sur une gamme volontairement courte. Le Reserva et le Gran Reserva, assemblages de Tempranillo et de Graciano élevés longuement en barriques de chêne américain et français, offrent une droiture et une netteté remarquables, sans la lourdeur qui guette parfois cette catégorie. Viña Mayor de Migueloa provient d'une parcelle unique de vieilles vignes plantée dans les années 1940. Unnum, monocépage de Graciano, est l'un des rares exemples convaincants de cette variété en solo : encre, menthol, acidité tranchante, très longue garde. Un blanc de Viura élevé en fût complète l'ensemble. C'est le profil du micro-domaine classique qu'on croyait disparu : peu de bouteilles, beaucoup de patience, et des prix restés très raisonnables au regard de la qualité livrée. La distribution française est étroite mais réelle, et le domaine conserve quelques millésimes anciens à la propriété, ce qui permet parfois de mettre la main sur des Gran Reserva déjà à maturité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "artisan",
+        "briones",
+        "classique",
+        "gran-reserva"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-laventura",
+      "nom": "Laventura — MacRobert & Canals",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Leza",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Laventura Tempranillo",
+        "Laventura Garnacha",
+        "Laventura Graciano"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Bryan MacRobert, Sud-Africain formé à Stellenbosch et passé par plusieurs domaines européens, s'installe en Rioja Alavesa au début des années 2010 et fonde Laventura avec sa compagne. Il travaille depuis Leza une série de petites parcelles louées sur plusieurs villages de l'Alavesa et de la Sonsierra, toutes en vieilles vignes de gobelet. La conduite est biologique et les vinifications d'une grande sobriété : levures indigènes, part de grappe entière, élevages en amphores de terre cuite, cuves de béton et vieux foudres, sulfitage très faible, aucune filtration. Le projet s'inscrit pleinement dans la mouvance des vins de lieu qui redessine la région. Laventura Tempranillo, issu de plusieurs parcelles d'altitude, est le vin de référence : fruit clair, tanin fin, salinité marquée. Laventura Garnacha et Laventura Graciano proposent des monocépages rares et très aboutis, ce dernier particulièrement réussi dans un registre floral et poivré. Le blanc de Viura, élevé longuement, gagne beaucoup à être carafé. Production confidentielle, style franc et sans artifice. Un domaine encore méconnu, idéal pour surprendre un amateur qui pense connaître la Rioja. Les cuvées changent légèrement d'un millésime à l'autre au gré des parcelles disponibles, ce qui demande de goûter à chaque nouvelle arrivée plutôt que de commander sur réputation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "amphore",
+        "rioja-alavesa",
+        "monocepage"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-vina-ijalba",
+      "nom": "Bodegas Viña Ijalba",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Logroño",
+      "pays": "Espagne",
+      "cepages": [
+        "Graciano",
+        "Tempranillo",
+        "Maturana Tinta",
+        "Maturana Blanca",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Ijalba Graciano",
+        "Múrice",
+        "Selección Especial"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1975 par Dionisio Ruiz Ijalba sur d'anciennes carrières de gravier réhabilitées près de Logroño, Ijalba est la première bodega de la Rioja à avoir obtenu la certification biologique, à une époque où la démarche paraissait excentrique dans la région. Elle est restée pionnière sur ce terrain, avec une conduite intégralement écologique de son vignoble. Le domaine s'est surtout illustré par son travail sur les cépages minoritaires. Il fut le premier à commercialiser un Graciano en monocépage, cépage tardif et acide alors quasiment abandonné, et l'un des premiers à replanter la Maturana Tinta et la Maturana Blanca, variétés historiques riojanes récupérées avec l'appui de la recherche universitaire. Le Graciano d'Ijalba reste la référence pour découvrir cette variété : couleur intense, menthol, poivre, acidité vive et longue garde. Múrice et Selección Especial couvrent le registre classique avec un bon rapport qualité-prix. Les cuvées de Maturana, produites en petites quantités, ont une réelle valeur pédagogique. Le style est franc, sans boisé excessif, dans une esthétique plus terrienne que sophistiquée. Une maison utile sur une carte pour illustrer la diversité ampélographique de la Rioja. La bodega, construite sur d'anciennes gravières remises en état, est aussi un exemple précoce de restauration écologique de site industriel, argument qui parle à une clientèle sensible à ces sujets.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "biologique",
+        "graciano",
+        "cepages-rares",
+        "pionnier"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-ysios",
+      "nom": "Bodegas Ysios",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Ysios Reserva",
+        "Viñedos Singulares"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Ysios est d'abord un bâtiment : la bodega dessinée par Santiago Calatrava et inaugurée en 2001 à Laguardia, dont la toiture ondulée en bois de cèdre et aluminium épouse la silhouette de la Sierra de Cantabria, est devenue une image emblématique du vignoble espagnol. Elle appartient au groupe Pernod Ricard. Derrière l'architecture, la maison a opéré un virage qualitatif notable dans les années 2010, en abandonnant progressivement la logique de marque au profit d'une lecture parcellaire de son vignoble. Elle dispose d'une centaine d'hectares en propriété autour de Laguardia, sur des coteaux calcaires bien exposés au pied de la sierra, et compte parmi les domaines les plus dotés en Viñedos Singulares certifiés. Le Reserva, Tempranillo pur élevé en chêne français, constitue le socle de la gamme, dans un style net et fruité. Les cuvées parcellaires, produites en petites quantités, montrent une ambition réelle et une matière nettement plus profonde. L'ensemble reste marqué par une esthétique moderne et policée, sans grande prise de risque, mais la régularité est bonne et l'accueil œnotouristique de premier ordre. Un nom qui parle immédiatement au client, ce qui n'est pas négligeable sur une carte. Attention toutefois à ne pas confondre l'image du bâtiment avec le contenu de la bouteille : la gamme courante reste correcte sans plus, et l'intérêt réel se concentre sur les parcellaires.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "architecture",
+        "rioja-alavesa",
+        "vinedo-singular",
+        "pernod-ricard"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-riojanas",
+      "nom": "Bodegas Riojanas",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Cenicero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viña Albina",
+        "Monte Real"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1890 à Cenicero, au cœur de la Rioja Alta, Bodegas Riojanas est l'une des maisons centenaires qui ont façonné le style classique de la région, avec ses tours néogothiques devenues un repère du paysage local. Elle est restée fidèle à une logique de longs élevages en chêne américain et de sorties tardives, à l'écart des modes. Deux marques structurent la gamme : Viña Albina, plus fine et florale, et Monte Real, plus charnue et plus ample, toutes deux déclinées en Reserva et Gran Reserva. Le blanc de Viura Viña Albina, élevé sous bois, appartient à cette famille de blancs riojans oxydatifs de plus en plus recherchée. Les prix restent doux et la disponibilité bonne, y compris sur des millésimes déjà anciens : une valeur d'usage précieuse pour proposer du Gran Reserva mûr sans faire exploser une carte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "cenicero",
+        "gran-reserva"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-marques-de-caceres",
+      "nom": "Bodegas Marqués de Cáceres",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Cenicero",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Gaudium",
+        "MC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Enrique Forner, exilé espagnol devenu propriétaire à Bordeaux, fonde Marqués de Cáceres à Cenicero en 1970 avec le conseil d'Émile Peynaud. La maison introduit alors en Rioja des pratiques inédites dans la région : barriques bordelaises de chêne français, fermentations en inox thermorégulé, élevages plus courts et fruit préservé. Ce virage a divisé la région avant d'être largement imité ; il constitue l'un des tournants majeurs de l'histoire moderne du Rioja. Le Crianza, produit en très grand volume, reste l'un des vins espagnols les plus diffusés au monde. Au-dessus, MC et surtout Gaudium, issu de vieilles vignes sélectionnées, montrent une ambition réelle. La gamme comprend aussi des blancs et un rosé bien faits. Un producteur de référence pour raconter la modernisation du vignoble, plus que pour la finesse de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moderne",
+        "cenicero",
+        "bordeaux",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-beronia",
+      "nom": "Bodegas Beronia",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Ollauri",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura",
+        "Verdejo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Beronia III a.C.",
+        "Viñas Viejas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Créée en 1973 à Ollauri par un groupe d'amis gastronomes, Beronia appartient depuis 1982 à González Byass, la maison de Jerez. Le nom rend hommage aux Berones, peuple celtibère installé dans la région avant l'arrivée des Romains. Sa signature technique est la barrique mixte, montée avec des douelles de chêne américain pour les côtés et de chêne français pour les fonds, conçue pour marier les épices douces de l'un et la finesse de tanin de l'autre. La bodega, construite en 2015, figure parmi les plus économes en énergie de la région. La gamme couvre tout le spectre, du Crianza abondant et fiable aux cuvées III a.C. et Viñas Viejas, nettement plus ambitieuses. Le blanc de Viura et Verdejo est correct. Un producteur de volume qui n'a jamais bradé sa qualité, très utile au verre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "groupe",
+        "ollauri",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-ramon-bilbao",
+      "nom": "Bodegas Ramón Bilbao",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Haro",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Mirto",
+        "Lalomba",
+        "Viñedos de Altura"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1924 à Haro, Ramón Bilbao appartient depuis 1999 au groupe galicien Zamora Company, qui lui a donné les moyens d'une montée en gamme rapide. La maison est aujourd'hui l'une des plus exportées d'Espagne tout en conservant des cuvées de vraie ambition. Mirto, issu de vieilles vignes de Tempranillo de la Rioja Alta, constitue le sommet de la gamme, dans un registre moderne et dense. Le programme Viñedos de Altura explore les parcelles fraîches de la Sierra de Cantabria, avec des vins nettement plus tendus. Lalomba, projet dédié au rosé parcellaire, mérite une attention particulière : la Finca Lalinde et surtout la Finca Ladero, rosé de Garnacha issu d'une seule parcelle, comptent parmi les rosés les plus sérieux d'Espagne. Un producteur à connaître pour ses rosés autant que pour ses rouges.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "haro",
+        "groupe",
+        "rose",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-lan",
+      "nom": "Bodegas LAN",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Fuenmayor",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viña Lanciano",
+        "Culmen",
+        "Xtrème"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1970 à Fuenmayor, LAN doit son nom aux initiales des trois provinces de la DOCa : Logroño, Álava, Navarra. La maison appartient aujourd'hui au groupe portugais Sogrape et produit des volumes importants avec une régularité constante. Son atout majeur est la finca Viña Lanciano, soixante-douze hectares d'un seul tenant dans un méandre de l'Èbre, sur des sols de galets et d'argiles, dont sont issues les cuvées supérieures. Culmen, sélection des meilleures parcelles élevée en chêne français, constitue le sommet du domaine et se compare sans rougir aux références de la Rioja Alta. Xtrème et les Reserva assurent un registre plus accessible. Le style est net, fruité, avec un boisé bien intégré. Une maison fiable, dont le haut de gamme reste sous-estimé au regard de son prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "fuenmayor",
+        "domaine-unique",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-el-coto-de-rioja",
+      "nom": "Bodegas El Coto de Rioja",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Oyón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Coto de Imaz",
+        "Coto Real"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Créée en 1970 et installée à Oyón, en Rioja Alavesa, El Coto est l'une des plus grosses productions de la DOCa et l'une des marques les plus vendues d'Espagne. Elle dispose d'un vignoble propre considérable, réparti sur les trois sous-zones, ce qui lui permet une constance rare à cette échelle. El Coto Crianza, Tempranillo pur élevé en chêne américain, est un modèle de Rioja d'usage : fruit rouge, vanille douce, tanin fondu, immédiatement lisible. Coto de Imaz Gran Reserva reste la référence de la maison, avec de longs élevages et une capacité de garde honorable. Coto Real ajoute une part de Graciano et de Garnacha. Rien de spectaculaire, mais un rapport qualité-prix solide et une disponibilité totale : c'est le Rioja de service par excellence.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "volume",
+        "rioja-alavesa",
+        "gran-reserva"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-faustino",
+      "nom": "Bodegas Faustino",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Oyón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Faustino I",
+        "Faustino de Autor"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Martínez Zabala cultive la vigne à Oyón depuis 1861 et a bâti l'une des marques les plus reconnaissables du vin espagnol. La bouteille dépolie du Faustino I Gran Reserva, ornée du portrait de Rembrandt, est un objet familier bien au-delà des frontières de l'Espagne. Le groupe possède un vignoble immense et surtout un stock de vieux millésimes considérable, ce qui lui permet de commercialiser en permanence des Gran Reserva de dix à quinze ans d'âge à des prix sans équivalent. C'est le principal intérêt de la maison pour un sommelier. Le style est traditionnel, marqué par le chêne américain et une évolution tertiaire précoce. La gamme Faustino de Autor et quelques cuvées parcellaires récentes traduisent une volonté de montée en gamme. Un classique populaire, à connaître pour ce qu'il est.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "volume",
+        "gran-reserva",
+        "rioja-alavesa",
+        "classique"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-baron-de-ley",
+      "nom": "Barón de Ley",
+      "type": "domaine",
+      "region": "Navarra",
+      "sous_region": "Rioja Oriental",
+      "commune": "Mendavia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Cabernet-Sauvignon",
+        "Graciano",
+        "Viura",
+        "Malvasía",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Finca Monasterio",
+        "Tres Viñas",
+        "Viña Imas"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1985 autour d'un ancien monastère bénédictin du XVIe siècle à Mendavia, en Navarre mais dans l'aire de la DOCa Rioja, Barón de Ley a bâti sa réputation sur un modèle rare dans la région : un domaine d'un seul tenant de plus de deux cents hectares, entièrement en propriété. Finca Monasterio, issue des meilleures parcelles, incarne le haut de gamme dans un style moderne, dense et boisé. Le Reserva, Tempranillo pur élevé en chêne américain, offre une constance et un prix qui expliquent son succès international. Viña Imas complète l'offre. Le blanc Tres Viñas, assemblage de Viura, Malvasía et Garnacha blanca fermenté et élevé en fût, mérite une mention particulière : c'est l'un des rares blancs riojans de bois largement distribués. Une maison efficace, sans grande émotion mais sans faute.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "domaine-unique",
+        "rioja-oriental",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-campillo",
+      "nom": "Bodegas Campillo",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Campillo Reserva Especial",
+        "Finca Cuesta Clara"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installée à Laguardia dans un château néoclassique construit dans les années 1990, Campillo appartient au groupe Faustino et joue une partition nettement plus soignée que sa maison mère. Le domaine dispose de vignes en propriété sur les meilleurs coteaux de la Rioja Alavesa. Le style est résolument classique : Tempranillo dominant, élevages longs, sorties tardives, sans recherche d'extraction. Le Reserva Especial et le Gran Reserva offrent une belle expression du registre traditionnel à prix contenu. La cuvée la plus intéressante est Finca Cuesta Clara, issue d'une parcelle plantée en Tempranillo Peludo, variante à feuille duveteuse presque disparue de la région, qui donne un vin plus épicé et plus acidulé que la moyenne. Un producteur discret, souvent oublié, qui mérite mieux que sa réputation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-alavesa",
+        "cepages-rares",
+        "classique"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-baigorri",
+      "nom": "Bodegas Baigorri",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Samaniego",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Baigorri de Garage",
+        "Belus"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Jesús Baigorri fonde son domaine à Samaniego en 2002 et confie à l'architecte Iñaki Aspiazu un bâtiment devenu emblématique : un cube de verre affleurant au ras des vignes, sous lequel la bodega se déploie sur sept niveaux enterrés, jusqu'à trente mètres de profondeur. L'architecture n'est pas décorative : elle permet une vinification entièrement gravitaire, sans pompe ni tapis, la vendange descendant d'étage en étage par simple chute. Le procédé préserve l'intégrité des baies et donne des vins au tanin particulièrement lisse. La gamme, resserrée, va du Crianza au Baigorri de Garage, sélection de vieilles vignes élevée en chêne français, en passant par Belus. Le style est moderne, net, avec un fruit mûr et un boisé bien dosé. Une visite spectaculaire et des vins d'une régularité sans faille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "architecture",
+        "gravitaire",
+        "rioja-alavesa",
+        "moderne"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-sonsierra",
+      "nom": "Bodegas Sonsierra",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Perfume de Sonsierra",
+        "Viñedos Singulares"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Coopérative fondée en 1959 à San Vicente de la Sonsierra, elle regroupe environ trois cents viticulteurs et exploite l'un des patrimoines de vieilles vignes les plus remarquables de la Rioja : plusieurs centaines d'hectares en gobelet, souvent sur les coteaux calcaires les mieux exposés du village. Ce patrimoine explique qu'elle figure parmi les structures les plus dotées en Viñedos Singulares certifiés, aux côtés de domaines bien plus prestigieux. Perfume de Sonsierra, issu de vignes centenaires, constitue la cuvée de tête et surprend par sa profondeur. La gamme courante, du jeune au Gran Reserva, reste d'un rapport qualité-prix redoutable. Le style est classique, franc, sans recherche de sophistication. L'exemple typique de la coopérative riojane qui vaut bien mieux que l'image généralement associée à ce statut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cooperative",
+        "sonsierra",
+        "vinedo-singular",
+        "vieilles-vignes"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-valdemar",
+      "nom": "Bodegas Valdemar — Familia Martínez Bujanda",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Oyón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Maturana Tinta",
+        "Garnacha",
+        "Viura",
+        "Tempranillo Blanco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Inspiración Valdemar",
+        "Conde de Valdemar"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Martínez Bujanda cultive la vigne à Oyón depuis 1889 et compte parmi les familles les plus inventives de la Rioja Alavesa. Le domaine, entièrement en propriété, a été l'un des premiers à expérimenter la vinification en inox et à replanter des variétés minoritaires. On lui doit notamment la réhabilitation du Maturana Tinta et un travail précoce sur le Tempranillo Blanco. La gamme Inspiración Valdemar rassemble ces cuvées expérimentales, souvent monocépages et produites en petites quantités, particulièrement utiles pour raconter la diversité riojane. Conde de Valdemar couvre le registre classique avec des Reserva et Gran Reserva bien construits. Le rosé de saignée, fermenté partiellement en barrique, fut l'un des premiers rosés riojans de gastronomie. Une maison familiale sérieuse, à la production régulière et bien distribuée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "rioja-alavesa",
+        "cepages-rares",
+        "rose"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-vivanco",
+      "nom": "Bodegas Vivanco",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Briones",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Maturana Tinta",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Vivanco Colección Parcelas",
+        "4 Varietales"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Vivanco, viticultrice depuis 1915, a bâti à Briones un ensemble unique en Europe : une bodega moderne doublée du Museo de la Cultura del Vino, plusieurs milliers de mètres carrés retraçant huit mille ans d'histoire du vin, complété d'un jardin ampélographique réunissant plus de deux cents variétés du monde entier. Ce fonds patrimonial nourrit directement la production. La Colección Vivanco décline en monocépage des variétés rarement vinifiées seules, dont la Maturana Tinta et le Graciano. Le 4 Varietales, assemblage des quatre cépages rouges historiques de la DOCa, a une vraie valeur pédagogique. Les Crianza et Reserva sont bien faits, dans un registre moderne et accessible. C'est avant tout une étape œnotouristique incontournable de la Rioja, et un producteur solide.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "musee",
+        "briones",
+        "oenotourisme",
+        "cepages-rares"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-muriel",
+      "nom": "Bodegas Muriel — Conde de los Andes",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Ollauri",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Conde de los Andes",
+        "Muriel Fincas de la Villa"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Muriel exploite un vignoble important en Rioja Alavesa et en Rioja Alta, mais son intérêt principal tient à la reprise de deux patrimoines historiques d'Ollauri : les calados du XVIe siècle creusés sous le village, parmi les plus impressionnants de la région, et la marque Conde de los Andes, illustre au début du XXe siècle puis tombée dans l'oubli. Relancée dans les années 2010, Conde de los Andes propose des Reserva et Gran Reserva élevés dans ces caves souterraines, dans un style classique restauré, avec un blanc de Viura oxydatif particulièrement réussi. La gamme Muriel, plus large et plus commerciale, assure le volume avec des Crianza et Reserva corrects. Un producteur en pleine montée en gamme, dont les cuvées historiques méritent d'être suivies.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "ollauri",
+        "classique",
+        "calados",
+        "famille"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-amezola-de-la-mora",
+      "nom": "Bodegas Amézola de la Mora",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Torremontalbo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Íñigo Amézola",
+        "Solar de Amézola"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Íñigo Amézola relance en 1986 la propriété familiale de Torremontalbo, dans la vallée du Najerilla, sur des terres viticoles documentées depuis le XIXe siècle mais abandonnées après le phylloxéra. Ses filles Maria et Cristina dirigent aujourd'hui le domaine. Les quelque soixante-dix hectares d'un seul tenant, sur des sols argilo-calcaires frais en bordure de rivière, donnent des vins d'une belle acidité naturelle. Le style est traditionnel : Tempranillo largement dominant, élevages en chêne américain et français, sorties respectant les catégories classiques. Solar de Amézola et surtout Íñigo Amézola, cuvée de vieilles vignes élevée en chêne français, constituent le haut de la gamme. Un domaine familial discret, de bonne facture, avec des prix restés très abordables pour la qualité proposée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "najerilla",
+        "classique"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-finca-valpiedra",
+      "nom": "Finca Valpiedra",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Fuenmayor",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Maturana Tinta"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Finca Valpiedra",
+        "Cantos de Valpiedra"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Propriété de la famille Martínez Bujanda, Finca Valpiedra occupe quatre-vingts hectares d'un seul tenant dans un méandre de l'Èbre à Fuenmayor, sur une terrasse de galets roulés déposée par le fleuve — d'où son nom. C'est l'un des rares domaines riojans membres des Grandes Pagos de España. La conduite est biologique et le modèle explicitement inspiré du château bordelais : un vin principal issu du cœur du domaine, un second vin, et rien d'autre. Finca Valpiedra, Tempranillo dominant complété de Graciano et de Maturana Tinta, est élevé en chêne français et sort tardivement. Cantos de Valpiedra offre la version plus immédiate. Le style est droit, frais, plus structuré que charnu, avec une signature minérale liée aux galets. Un domaine cohérent, encore un peu confidentiel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "domaine-unique",
+        "grandes-pagos",
+        "fuenmayor"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-fernandez-de-pierola",
+      "nom": "Bodegas Fernández de Piérola",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Moreda de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Vitium",
+        "Piérola Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Petite maison familiale installée à Moreda de Álava, à l'extrémité orientale de la Rioja Alavesa, Fernández de Piérola travaille une quarantaine d'hectares en propriété, majoritairement plantés en Tempranillo sur des sols argilo-calcaires d'altitude moyenne. La gamme est courte et lisible : un jeune fruité, un Crianza et un Reserva de facture classique, puis Vitium, sélection des meilleures parcelles élevée en chêne français, qui constitue le sommet du domaine dans un registre plus dense et plus épicé. Un blanc de Viura fermenté en barrique complète l'ensemble. Le style est net, sans excès de bois, avec un fruit franc. Le domaine reste peu connu hors d'Espagne et pratique des prix modérés : une bonne option pour un Rioja honnête sans marque ronflante.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-alavesa",
+        "famille"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-hermanos-pecina",
+      "nom": "Bodegas Hermanos Peciña",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Señorío de P. Peciña",
+        "Chobeo de Peciña"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Pedro Peciña a passé quinze ans chez López de Heredia avant de fonder son propre domaine à San Vicente de la Sonsierra en 1992, avec ses fils. Autant dire que la maison assume un classicisme absolu, à contre-courant de la modernisation qui balayait alors la région. Tout y est traditionnel : chêne américain, élevages très longs, soutirages manuels, sorties tardives, et une gamme construite sur les catégories Crianza, Reserva et Gran Reserva. Le Señorío de P. Peciña Gran Reserva, souvent commercialisé avec dix ans de bouteille, offre un rapport qualité-prix presque anormal. Chobeo de Peciña propose une lecture plus concentrée et plus moderne. Le blanc de Viura élevé sous bois s'inscrit dans la tradition oxydative. Un domaine idéal pour proposer du Rioja classique mûr sans passer par les grands noms.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "sonsierra",
+        "gran-reserva",
+        "famille"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-ramirez-de-la-piscina",
+      "nom": "Bodegas Ramírez de la Piscina",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Vicente de la Sonsierra",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Ramírez de la Piscina Selección"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Le domaine tire son nom d'une ermita romane des environs de San Vicente de la Sonsierra et appartient à la famille Ramírez, viticultrice de longue date sur les coteaux de la Sonsierra riojane. Il dispose d'une centaine d'hectares en propriété, sur des sols argilo-calcaires bien exposés. La production reste résolument classique : Tempranillo largement dominant, élevages en chêne américain, gamme organisée autour du Crianza, du Reserva et du Gran Reserva, avec des sorties respectant les durées réglementaires sans excès. La cuvée Selección, issue des meilleures parcelles, monte d'un cran en densité. Les prix sont parmi les plus doux de la Rioja Alta pour ce niveau de qualité, ce qui en fait une valeur d'usage utile, notamment sur les millésimes déjà évolués.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "classique",
+        "sonsierra",
+        "famille"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-zuazo-gaston",
+      "nom": "Bodegas Zuazo Gastón",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Oyón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Zuazo Gastón Reserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1985 à Oyón, en Rioja Alavesa, Zuazo Gastón est une petite structure familiale bâtie sur un patrimoine de vignes anciennes hérité de plusieurs générations de cosecheros. Le domaine exploite une trentaine d'hectares sur les coteaux d'Oyón et de Yécora. La production, modeste en volume, se concentre sur le Tempranillo, dans un style moderne mais sans excès : fruit net, élevages mesurés en chêne français et américain, tanins souples. Le Crianza et le Reserva forment le cœur de la gamme, complétés d'un blanc de Viura. Rien de révolutionnaire, mais une régularité appréciable et des prix contenus. C'est le type de producteur familial qui constitue le tissu réel de la Rioja Alavesa, loin des grandes marques et des projets médiatiques.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "famille",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-casa-primicia",
+      "nom": "Bodegas Casa Primicia",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Maturana Tinta",
+        "Viura",
+        "Tempranillo Blanco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Julián Madrid Reserva de la Familia",
+        "Carravalseca"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Casa Primicia occupe le plus ancien bâtiment de Laguardia, une maison du XVe siècle où l'on percevait autrefois la dîme en raisin — la primicia — d'où son nom. Julián Madrid y a fondé son domaine en 1985 et en a fait l'un des acteurs les plus intéressants de la Rioja Alavesa sur le plan ampélographique. La maison travaille en effet plusieurs variétés minoritaires, dont la Maturana Tinta et le Tempranillo Blanco, aux côtés du Tempranillo classique, sur des vieilles vignes en gobelet autour de Laguardia. Carravalseca, issu d'une parcelle identifiée, et Julián Madrid Reserva de la Familia constituent le haut de la gamme. Le style est classique, avec des élevages soignés. L'ensemble reste discret commercialement, ce qui rend les prix intéressants.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "rioja-alavesa",
+        "patrimoine",
+        "cepages-rares"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-javier-san-pedro-ortega",
+      "nom": "Bodegas Javier San Pedro Ortega",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Viñedo Singular La Taconera",
+        "Anahí",
+        "Cueva de Lobos"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Javier San Pedro Ortega représente la cinquième génération d'une famille de bodegueros de Laguardia. Il lance son propre projet en 2012, à trente ans à peine, avec l'ambition d'associer les vieilles vignes familiales à une esthétique plus contemporaine. La Taconera, première parcelle qu'il ait acquise, figure parmi les premiers Viñedos Singulares certifiés de la DOCa : une vieille vigne de Tempranillo en gobelet dont il tire un vin de production très limitée. Anahí, blanc de Viura et Malvasía, et Cueva de Lobos, gamme plus accessible, complètent l'offre. Le style est moderne et net, avec un fruit franc et des élevages en chêne français bien dosés. Un producteur jeune, dynamique, dont la trajectoire mérite d'être suivie sur les prochains millésimes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-generation",
+        "vinedo-singular",
+        "rioja-alavesa"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-nivarius",
+      "nom": "Bodegas Nivarius",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Nalda",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo Blanco",
+        "Viura",
+        "Maturana Blanca",
+        "Garnacha Blanca"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Nivarius",
+        "Nivei"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Nivarius est l'un des très rares domaines de la Rioja entièrement consacrés au vin blanc, ce qui suffit à en faire un cas à part dans une appellation où le blanc représente à peine un dixième de la production. Il est installé à Nalda, dans la vallée de l'Iregua, au sud de Logroño. Le vignoble s'étage entre six cents et huit cents mètres d'altitude, sur des sols pauvres et frais, ce qui donne des acidités élevées inhabituelles dans la région. La maison travaille la Viura, la Garnacha blanca, la Maturana Blanca et surtout le Tempranillo Blanco, mutation récente dont elle est l'un des principaux défenseurs. Nivarius, élevé sur lies avec une part de bois, offre une belle tension. Nivei propose une version plus immédiate. Un producteur indispensable pour illustrer le renouveau des blancs riojans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "blancs",
+        "altitude",
+        "iregua",
+        "tempranillo-blanco"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-eguren-ugarte",
+      "nom": "Eguren Ugarte",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Laguardia",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Martín Cendoya",
+        "Anastasio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installée sur les hauteurs de Laguardia, face à la Sierra de Cantabria, Eguren Ugarte est connue avant tout pour ses caves : près de deux kilomètres de galeries creusées sur cinq niveaux dans la colline, où les clients peuvent louer une niche pour y faire vieillir leurs bouteilles. L'offre œnotouristique, complétée d'un hôtel, est l'une des plus développées de la région. Le domaine dispose d'environ cent trente hectares en propriété, plantés majoritairement en Tempranillo sur des sols argilo-calcaires. La gamme couvre le registre classique, du jeune au Gran Reserva, avec Martín Cendoya et Anastasio en cuvées de tête. Les vins sont bien faits, dans un style traditionnel accessible, sans grande ambition de terroir. À retenir surtout pour une visite.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "oenotourisme",
+        "rioja-alavesa",
+        "calados"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-corral",
+      "nom": "Bodegas Corral — Don Jacobo",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Navarrete",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Don Jacobo",
+        "Altos de Corral"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1898 par Saturnino Daroca, Bodegas Corral est installée à Navarrete, sur le chemin de Saint-Jacques, ce dont la maison a fait un axe de communication assumé. Le domaine exploite une soixantaine d'hectares en propriété autour de Navarrete et de Sotés. Don Jacobo, marque historique de la maison, décline le registre classique du Crianza au Gran Reserva, dans un style traditionnel marqué par le chêne américain. Altos de Corral, issu d'une parcelle unique de vieilles vignes plantée en 1974 sur les hauteurs du domaine, constitue le haut de la gamme et montre un potentiel nettement supérieur. L'ensemble est honnête et bien tenu, à des prix modérés. Un producteur de la Rioja Alta occidentale peu médiatisé mais régulier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "navarrete",
+        "classique",
+        "camino"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-altanza",
+      "nom": "Bodegas Altanza",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Fuenmayor",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Lealtanza",
+        "Altanza Colección"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Fondée en 1998 à Fuenmayor, Altanza s'est spécialisée dans un exercice rare en Rioja : le Tempranillo en monocépage à tous les niveaux de la gamme, sans l'appoint habituel de Graciano, Mazuelo ou Garnacha. Le domaine dispose d'une centaine d'hectares en propriété dans la Rioja Alta. La marque Lealtanza couvre le spectre du Crianza au Gran Reserva, avec des élevages soignés en chêne américain et français et une régularité qui lui a valu de nombreuses distinctions à l'export. Les séries artistiques, aux étiquettes consacrées à des peintres espagnols, ont beaucoup fait pour sa notoriété internationale. Le style est moderne, fruité, avec un boisé présent mais maîtrisé. Une maison efficace, sans revendication de terroir, mais d'un rapport qualité-prix constant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "fuenmayor",
+        "monocepage",
+        "volume"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodega-classica",
+      "nom": "Bodega Classica — Hacienda López de Haro",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Tirgo",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Hacienda López de Haro",
+        "Vinos de la Hacienda"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Bodega Classica, installée à Tirgo dans l'ouest de la Rioja Alta, est le projet du groupe familial Vintae consacré à la réinterprétation du style classique riojan. La marque Hacienda López de Haro y décline une gamme complète, du Crianza au Gran Reserva, avec un parti pris assumé de longs élevages et de sorties respectant les usages anciens. Les raisins proviennent de vieilles vignes de la Rioja Alta, souvent en gobelet, et les élevages associent chêne américain et français. Le résultat est étonnamment abouti pour le prix pratiqué : fruit net, épices douces, tanins fondus. La série Vinos de la Hacienda pousse l'exercice plus loin, avec des sélections parcellaires. C'est probablement l'un des meilleurs rapports qualité-prix de toute l'appellation dans le registre traditionnel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "vintae",
+        "classique",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-vintae",
+      "nom": "Vintae",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Logroño",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "El Coto Alto de la Reina",
+        "Matsu (hors Rioja)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Vintae est la structure créée par la famille Ezquerro à Logroño au début des années 2000, à mi-chemin entre maison de négoce et incubateur de projets viticoles. Elle est devenue l'un des acteurs les plus inventifs d'Espagne, avec une vingtaine de bodegas réparties dans une dizaine d'appellations, de la Rioja au Bierzo en passant par Toro, Rueda et les Canaries. En Rioja, le groupe pilote Bodega Classica et Hacienda López de Haro pour le registre classique, ainsi que plusieurs projets parcellaires plus récents. Sa force est de savoir identifier des terroirs délaissés et de leur donner une lisibilité commerciale immédiate. La qualité varie selon les gammes, mais le niveau moyen est élevé et les prix restent contenus. Un nom à connaître pour comprendre la structure du vignoble espagnol contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "negoce",
+        "groupe",
+        "logrono"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-lecea",
+      "nom": "Bodegas Lecea",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "San Asensio",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Viura"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Lecea Corazón de Lago"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Bodegas Lecea occupe un calado du XVIe siècle dans le quartier historique des Cuevas de San Asensio, une colline percée de dizaines de caves creusées à flanc de coteau par les vignerons du village. La famille Lecea y perpétue des gestes que la région a presque entièrement abandonnés. Le domaine vinifie encore une partie de sa récolte au lagar, cuve de pierre où le raisin est foulé aux pieds puis pressé sous une poutre de bois, méthode qui donne le vin de cosechero traditionnel de la Rioja. La cuvée Corazón de Lago en est issue. Le reste de la gamme, du jeune au Reserva, reste classique et abordable. L'intérêt est autant patrimonial que gustatif : c'est l'une des visites les plus instructives de la région. Les prix sont bas et la distribution française quasi inexistante : à rapporter d'un voyage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "patrimoine",
+        "lagar",
+        "oenotourisme",
+        "calados"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-vinedos-y-bodegas-de-la-marquesa",
+      "nom": "Viñedos y Bodegas de la Marquesa — Valserrano",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Mazuelo",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Valserrano",
+        "Finca Monteviejo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La propriété appartient à la famille Herrera Bethencourt depuis le XIXe siècle et occupe le cœur de Villabuena de Álava, village qui compte le plus grand nombre de bodegas par habitant de toute l'Espagne. Le domaine exploite une cinquantaine d'hectares d'un seul tenant sur les coteaux environnants et figure parmi les membres des Grandes Pagos de España. La marque Valserrano couvre l'ensemble de la gamme, du Crianza au Gran Reserva, dans un style classique bien tenu. Finca Monteviejo, issue d'une parcelle de vieilles vignes, constitue le haut de gamme. Le Valserrano Graciano, monocépage rare et bien réussi, et le blanc de Viura et Malvasía élevé en fût méritent une attention particulière. Un domaine familial sérieux, à prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "grandes-pagos",
+        "rioja-alavesa",
+        "famille",
+        "graciano"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-barbarot",
+      "nom": "Barbarot — Bárbara Palacios",
+      "type": "domaine",
+      "region": "País Vasco",
+      "sous_region": "Rioja Alavesa",
+      "commune": "Villabuena de Álava",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Graciano",
+        "Garnacha"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Barbarot",
+        "Barbarot Aluvión"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Bárbara Palacios appartient à l'une des grandes familles du vin espagnol — celle de Palacios Remondo, d'Álvaro Palacios et de Descendientes de J. Palacios — et a choisi de bâtir un projet strictement personnel et de très petite taille, installé à Villabuena de Álava. Elle travaille quelques hectares de vieilles vignes en gobelet sur les coteaux calcaires de la Rioja Alavesa, en conduite biologique, avec des vinifications sobres et des élevages en chêne français mesurés. La production ne dépasse pas quelques milliers de bouteilles. Barbarot, assemblage de Tempranillo et de Graciano, offre un profil élancé, floral et salin, très éloigné de l'esthétique dominante. Barbarot Aluvión complète la gamme. Un domaine confidentiel, difficile à trouver, mais d'une réelle personnalité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nouvelle-vague",
+        "artisan",
+        "rioja-alavesa",
+        "micro-production"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    },
+    {
+      "id": "es-rioja-prod-bodegas-tobia",
+      "nom": "Bodegas Tobía",
+      "type": "domaine",
+      "region": "La Rioja",
+      "sous_region": "Rioja Alta",
+      "commune": "Cuzcurrita de Río Tirón",
+      "pays": "Espagne",
+      "cepages": [
+        "Tempranillo",
+        "Garnacha",
+        "Graciano",
+        "Viura",
+        "Malvasía"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "DOCa Rioja",
+        "Óscar Tobía",
+        "Alma de Tobía"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "La famille Tobía est installée à Cuzcurrita de Río Tirón, dans l'extrémité nord-ouest de la Rioja Alta, une zone d'altitude et de fraîcheur longtemps considérée comme marginale et aujourd'hui recherchée pour cette raison même. Óscar Tobía dirige le domaine depuis les années 1990. Le vignoble, réparti entre la vallée du Tirón et les coteaux de la Sonsierra, donne des vins d'une acidité naturelle élevée. La gamme est large : Tobía Selección, Alma de Tobía et Óscar Tobía pour les rouges, avec des élevages en chêne français. La maison s'est surtout fait remarquer par ses rosés, dont Alma de Tobía, fermenté en barrique et élevé sur lies, l'un des premiers rosés riojans conçus comme un vin de gastronomie. Un producteur régulier et abordable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "tiron",
+        "altitude",
+        "famille",
+        "rose"
+      ],
+      "a_verifier": "",
+      "source": "Recherche web juillet 2026 (riojawine.com, spanishwinelover.com, presse spécialisée)"
+    }
+  ]
+}

@@ -1,0 +1,1381 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "languedoc_roussillon",
+  "region_label": "Languedoc-Roussillon",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_languedoc_roussillon_vPat.xlsx",
+  "built_at": "2026-05-15T08:35:48+00:00",
+  "count": 48,
+  "items": [
+    {
+      "id": "lr-languedoc",
+      "nom": "Languedoc",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Roussanne",
+        "Marsanne",
+        "Vermentino",
+        "Bourboulenc",
+        "Clairette",
+        "Picpoul",
+        "Viognier"
+      ],
+      "altitude": "0-400 m",
+      "sols": "Très variés : calcaires, schistes, galets roulés, grès, basaltes",
+      "caracteristiques_rapides": "AOC régionale (depuis 2007, ex-Coteaux du Languedoc) ~10 000 ha couvrant le bassin de l'Aude à Nîmes. Englobe encore plusieurs dénominations géographiques (Grès de Montpellier, Pézenas, Sommières…). Production majoritairement rouge.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "rouge",
+        "vaste"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-pic-saint-loup",
+      "nom": "Pic Saint-Loup",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Cinsault",
+        "Carignan"
+      ],
+      "altitude": "100-450 m",
+      "sols": "Argilo-calcaires, marnes, éboulis du Pic et de l'Hortus",
+      "caracteristiques_rapides": "Cru AOC depuis 2017 ~1 000 ha autour du Pic Saint-Loup et de l'Hortus. Climat plus frais (influence cévenole), syrah marquée. Hortus, Mas Bruguière, Mas Foulaquier, Clos Marie.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "syrah",
+        "fraicheur"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-terrasses-du-larzac",
+      "nom": "Terrasses du Larzac",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Cinsault",
+        "Carignan"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Galets, calcaires dolomitiques, schistes, basaltes, ruffes",
+      "caracteristiques_rapides": "Cru AOC depuis 2014 ~2 000 ha au pied du Larzac. Forte amplitude thermique grâce à l'altitude et au causse. Référence pour les rouges de garde du Languedoc. Mas Jullien, Mas Cal Demoura, Granges des Pères (en IGP).",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "iconique",
+        "altitude",
+        "amplitude-thermique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-la-clape",
+      "nom": "La Clape",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Bourboulenc",
+        "Grenache Blanc",
+        "Vermentino",
+        "Roussanne",
+        "Marsanne",
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "0-200 m",
+      "sols": "Calcaires durs (massif insulaire), marnes, sables",
+      "caracteristiques_rapides": "Cru AOC depuis 2015 ~700 ha sur l'ancien massif insulaire face à Narbonne. Climat très ventilé et maritime. Particularité : blancs sur Bourboulenc (cuvée sur lies, salins). Château Pech-Redon, Château d'Anglès, Château Rouquette.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "maritime",
+        "bourboulenc",
+        "blancs"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-gres-de-montpellier",
+      "nom": "Grès de Montpellier",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Cinsault",
+        "Carignan"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Grès, calcaires, galets",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc englobant l'arrière-pays de Montpellier. Climat plus chaud, rouges méditerranéens classiques.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "montpellier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-pezenas",
+      "nom": "Pézenas",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Schistes, basaltes, grès, calcaires",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc autour de Pézenas. Sols variés (notamment basaltes). Prieuré Saint-Jean de Bébian (référence historique), Mas Conscience.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "basaltes",
+        "pezenas"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-montpeyroux",
+      "nom": "Montpeyroux",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Calcaires, schistes",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc, village historique au pied du Larzac. Rouges structurés. Domaine d'Aupilhac, Domaine de l'Aiguelière.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "larzac",
+        "aupilhac"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-saint-saturnin",
+      "nom": "Saint-Saturnin",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Ruffes (argiles rouges), calcaires",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc voisine de Montpeyroux. Connue pour ses sols de ruffes (argiles rouges du Permien).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "ruffes",
+        "permien"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-cabrieres",
+      "nom": "Cabrières",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Cinsault",
+        "Carignan"
+      ],
+      "altitude": "150-300 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc historiquement reconnue pour ses rosés (cinsault sur schistes). Petite production.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "schistes",
+        "rose"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-sommieres",
+      "nom": "Sommières",
+      "type": "denomination",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Galets, marnes, calcaires",
+      "caracteristiques_rapides": "Dénomination AOC Languedoc à la limite du Gard, près des Costières de Nîmes. Mas Granier, Château Saint-Julien.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "gard"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-corbieres",
+      "nom": "Corbières",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Carignan",
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Cinsault",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Roussanne",
+        "Marsanne",
+        "Vermentino",
+        "Bourboulenc",
+        "Macabeu"
+      ],
+      "altitude": "50-450 m",
+      "sols": "Très variés : calcaires, schistes, marnes, grès, galets",
+      "caracteristiques_rapides": "AOC ~10 500 ha entre Carcassonne, Narbonne et Perpignan. Vaste massif des Corbières, 11 terroirs identifiés. Carignan en pointe sur les meilleurs producteurs (vieilles vignes).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "carignan",
+        "massif"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-corbieres-boutenac",
+      "nom": "Corbières-Boutenac",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Carignan",
+        "Grenache",
+        "Mourvèdre",
+        "Syrah"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Galets roulés, grès, calcaires",
+      "caracteristiques_rapides": "Cru AOC depuis 2005 ~250 ha au cœur des Corbières. Carignan vieilles vignes (40% min en encépagement). Rouges de garde puissants. Pierre Cros, Château Ollieux Romanis.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "carignan",
+        "garde",
+        "vieilles-vignes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-minervois",
+      "nom": "Minervois",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Macabeu",
+        "Bourboulenc",
+        "Marsanne",
+        "Roussanne",
+        "Vermentino"
+      ],
+      "altitude": "50-450 m",
+      "sols": "Calcaires, schistes, grès, marnes",
+      "caracteristiques_rapides": "AOC ~4 500 ha sur le piémont sud de la Montagne Noire. Climat plus continental que les Corbières. Rouges méditerranéens, blancs en progression. Domaine Maris, Hegarty Chamans.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "montagne-noire"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-minervois-la-liviniere",
+      "nom": "Minervois-La Livinière",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "150-350 m",
+      "sols": "Calcaires, marnes du Petit Causse",
+      "caracteristiques_rapides": "Cru AOC depuis 1999 ~340 ha sur le Petit Causse de La Livinière. Premier cru du Languedoc. Rouges concentrés. Clos Centeilles, Domaine Maris, Borie de Maurel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "petit-causse",
+        "premier-cru"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-saint-chinian",
+      "nom": "Saint-Chinian",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Roussanne",
+        "Marsanne",
+        "Vermentino",
+        "Bourboulenc"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Schistes (nord) et calcaires/marnes (sud)",
+      "caracteristiques_rapides": "AOC ~3 100 ha entre Béziers et la Montagne Noire. Dualité géologique nord (schistes) / sud (calcaires). Mas Champart, Borie La Vitarèle.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "schistes",
+        "calcaires",
+        "dualite"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-saint-chinian-berlou",
+      "nom": "Saint-Chinian Berlou",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "200-400 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Cru AOC depuis 2005, sols schisteux (commune de Berlou). Rouges minéraux et structurés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "schistes",
+        "berlou"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-saint-chinian-roquebrun",
+      "nom": "Saint-Chinian Roquebrun",
+      "type": "cru",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "200-400 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Cru AOC depuis 2005, sur les schistes de Roquebrun. Rouges précis sur syrah.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "schistes",
+        "roquebrun"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-faugeres",
+      "nom": "Faugères",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Mourvèdre",
+        "Carignan",
+        "Cinsault",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Roussanne",
+        "Marsanne",
+        "Vermentino"
+      ],
+      "altitude": "150-400 m",
+      "sols": "Schistes (intégralité)",
+      "caracteristiques_rapides": "AOC ~2 000 ha exclusivement sur schistes. Rouges minéraux, identité forte. Léon Barral (icône en biodynamie), Cébène, Alquier.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "schistes",
+        "monolithique",
+        "barral"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-cabardes",
+      "nom": "Cabardès",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot",
+        "Cot",
+        "Cinsault"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Schistes, calcaires, grès",
+      "caracteristiques_rapides": "AOC ~400 ha au nord-ouest de Carcassonne. Particularité : assemblage obligatoire 40% min cépages atlantiques (cabernet, merlot) + 40% min cépages méditerranéens (syrah, grenache). Charnière océan/Méditerranée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "atlantique-mediterraneen",
+        "carcassonne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-malepere",
+      "nom": "Malepère",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Merlot",
+        "Cabernet Franc",
+        "Cot",
+        "Cinsault",
+        "Grenache",
+        "Syrah"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Calcaires, grès, argiles",
+      "caracteristiques_rapides": "AOC ~250 ha au sud-ouest de Carcassonne. À dominante atlantique (Merlot 50% min). Charnière climatique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "atlantique",
+        "merlot",
+        "carcassonne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-limoux",
+      "nom": "Limoux",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Chenin",
+        "Mauzac",
+        "Pinot Noir",
+        "Merlot",
+        "Syrah",
+        "Grenache",
+        "Cot"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Calcaires, grès, marnes",
+      "caracteristiques_rapides": "AOC pour vins tranquilles (~470 ha). Influence atlantique et altitude. Limoux Blanc (chardonnay/chenin/mauzac), Limoux Rouge (méditerranéens + atlantiques). Domaine de l'Aigle, Sieur d'Arques.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "altitude",
+        "chardonnay",
+        "chenin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-blanquette-limoux",
+      "nom": "Blanquette de Limoux",
+      "type": "appellation_effervescente",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Mauzac",
+        "Chardonnay",
+        "Chenin"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Calcaires, grès",
+      "caracteristiques_rapides": "AOC effervescente méthode traditionnelle (mauzac 90% min). Considérée comme le plus ancien effervescent au monde (1531). Versions méthode ancestrale (mauzac pur, demi-sec) également.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "effervescent",
+        "mauzac",
+        "methode-traditionnelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-cremant-limoux",
+      "nom": "Crémant de Limoux",
+      "type": "appellation_effervescente",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Chardonnay",
+        "Chenin",
+        "Mauzac",
+        "Pinot Noir"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Calcaires, grès",
+      "caracteristiques_rapides": "AOC depuis 1990, méthode traditionnelle, chardonnay/chenin majoritaires (90% min combinés). Style plus international que la Blanquette.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "effervescent",
+        "cremant",
+        "methode-traditionnelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-picpoul-de-pinet",
+      "nom": "Picpoul de Pinet",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Picpoul Blanc"
+      ],
+      "altitude": "0-100 m",
+      "sols": "Calcaires, marnes, sables",
+      "caracteristiques_rapides": "AOC depuis 2013 ~1 400 ha autour de l'étang de Thau (entre Sète et Béziers). Picpoul Blanc monovariétal, vin maritime tendu et iodé.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "monovariétale",
+        "picpoul",
+        "maritime"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-muscat-frontignan",
+      "nom": "Muscat de Frontignan",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains"
+      ],
+      "altitude": "0-100 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "AOC VDN ~750 ha près de Sète. Mutage à l'alcool. Référence historique du Muscat doux français.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat",
+        "sete"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-muscat-mireval",
+      "nom": "Muscat de Mireval",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains"
+      ],
+      "altitude": "0-100 m",
+      "sols": "Calcaires",
+      "caracteristiques_rapides": "AOC VDN ~250 ha entre Frontignan et Montpellier. Style proche de Frontignan.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-muscat-st-jean-minervois",
+      "nom": "Muscat de Saint-Jean-de-Minervois",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Calcaires durs",
+      "caracteristiques_rapides": "AOC VDN ~180 ha sur le plateau calcaire au-dessus du Minervois. Le plus tendu et frais des Muscats du Languedoc grâce à l'altitude. Domaine de Barroubio.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat",
+        "altitude",
+        "minervois"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-muscat-lunel",
+      "nom": "Muscat de Lunel",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains"
+      ],
+      "altitude": "0-100 m",
+      "sols": "Galets",
+      "caracteristiques_rapides": "AOC VDN ~250 ha entre Montpellier et Nîmes. Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-clairette-languedoc",
+      "nom": "Clairette du Languedoc",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Clairette"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Calcaires, schistes",
+      "caracteristiques_rapides": "AOC ~60 ha (en chute) consacrée à la Clairette. Versions sec, moelleux et rancio (élevage oxydatif). Une des plus anciennes AOC du Languedoc (1948).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "monovariétale",
+        "clairette",
+        "rancio"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-igp-pays-doc",
+      "nom": "IGP Pays d'Oc",
+      "type": "igp",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc-Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Toutes les variétés autorisées (méditerranéennes + internationales)"
+      ],
+      "altitude": "Variable",
+      "sols": "Très variés",
+      "caracteristiques_rapides": "IGP la plus produite de France (~5,5 millions hl). Couvre l'ensemble Languedoc-Roussillon. Vins de cépage majoritairement.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "generaliste",
+        "cepages-libres"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-igp-herault",
+      "nom": "IGP Pays d Hérault",
+      "type": "igp",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Sauvignon",
+        "Syrah",
+        "Grenache",
+        "Carignan",
+        "Chardonnay",
+        "Viognier",
+        "Sauvignon",
+        "Vermentino"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP départementale (~10 000 ha). Cadre de Mas de Daumas Gassac, Grange des Pères et autres iconiques refusant le cadre AOC.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "herault",
+        "iconiques-hors-aoc",
+        "daumas-gassac",
+        "grange-peres"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-igp-cevennes",
+      "nom": "IGP Cévennes",
+      "type": "igp",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Languedoc",
+      "pays": "France",
+      "cepages_rois": [
+        "Syrah",
+        "Grenache",
+        "Merlot",
+        "Cabernet",
+        "Chardonnay",
+        "Viognier"
+      ],
+      "altitude": "100-500 m",
+      "sols": "Schistes, granites, calcaires",
+      "caracteristiques_rapides": "IGP couvrant le piémont cévenol (Gard et Hérault). Climat plus frais et altitude.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "cevennes",
+        "altitude"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-cotes-du-roussillon",
+      "nom": "Côtes du Roussillon",
+      "type": "appellation_regionale",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Lledoner Pelut",
+        "Grenache Blanc",
+        "Macabeu",
+        "Roussanne",
+        "Marsanne",
+        "Vermentino",
+        "Tourbat",
+        "Muscat"
+      ],
+      "altitude": "50-650 m",
+      "sols": "Schistes, gneiss, granites, calcaires, galets",
+      "caracteristiques_rapides": "AOC régionale ~5 000 ha (Pyrénées-Orientales). Très grande diversité de sols (schistes noirs, gneiss, granites…) et d'altitudes. Rouges majoritaires, blancs en progression.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "diversite-sols"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-cotes-roussillon-villages",
+      "nom": "Côtes du Roussillon Villages",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Lledoner Pelut"
+      ],
+      "altitude": "100-650 m",
+      "sols": "Schistes, gneiss, granites, calcaires",
+      "caracteristiques_rapides": "AOC ~2 000 ha exclusivement rouge sur 32 communes du nord du Roussillon (Agly, Aspres). Cinq villages ont droit à leur nom (Caramany, Latour-de-France, Lesquerde, Tautavel, Les Aspres).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "rouge",
+        "agly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-crv-caramany",
+      "nom": "Côtes du Roussillon Villages Caramany",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Carignan",
+        "Mourvèdre"
+      ],
+      "altitude": "150-450 m",
+      "sols": "Gneiss",
+      "caracteristiques_rapides": "Village dénommé sur sols de gneiss (rare en France). Vins concentrés et minéraux.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "gneiss",
+        "caramany"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-crv-latour-france",
+      "nom": "Côtes du Roussillon Villages Latour-de-France",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Carignan",
+        "Mourvèdre"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Schistes noirs",
+      "caracteristiques_rapides": "Village dénommé dans la vallée de l'Agly, sols de schistes noirs (lustrés). Domaine du Clos des Fées, Olivier Pithon (en Côtes Catalanes).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "schistes",
+        "agly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-crv-lesquerde",
+      "nom": "Côtes du Roussillon Villages Lesquerde",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Carignan",
+        "Mourvèdre"
+      ],
+      "altitude": "200-500 m",
+      "sols": "Granites (arènes)",
+      "caracteristiques_rapides": "Village dénommé sur arènes granitiques, le seul du Roussillon. Vins fins et structurés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "granit",
+        "lesquerde"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-crv-tautavel",
+      "nom": "Côtes du Roussillon Villages Tautavel",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Carignan",
+        "Mourvèdre"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Calcaires, marnes, schistes",
+      "caracteristiques_rapides": "Village dénommé sur sols mixtes calcaires/schistes. Climat sec et venté (tramontane).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "tautavel",
+        "tramontane"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-crv-les-aspres",
+      "nom": "Côtes du Roussillon Villages Les Aspres",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Galets, calcaires",
+      "caracteristiques_rapides": "Village dénommé (depuis 2017) au sud du Roussillon, contreforts du Canigou.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "aspres",
+        "canigou"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-collioure",
+      "nom": "Collioure",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Mourvèdre",
+        "Syrah",
+        "Carignan",
+        "Cinsault",
+        "Grenache Gris",
+        "Grenache Blanc",
+        "Macabeu",
+        "Tourbat",
+        "Vermentino"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Schistes (terrasses face mer)",
+      "caracteristiques_rapides": "AOC ~600 ha sur les mêmes terrasses que Banyuls (Côte Vermeille). Vins secs (Banyuls = VDN sur même terroir). Domaine de la Rectorie, Mas Blanc, Coume del Mas.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cote-vermeille",
+        "schistes",
+        "terrasses"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-banyuls",
+      "nom": "Banyuls",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Grenache Gris",
+        "Grenache Blanc",
+        "Mourvèdre",
+        "Carignan"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Schistes (terrasses face mer)",
+      "caracteristiques_rapides": "AOC VDN sur les terrasses face Méditerranée à la frontière espagnole. Mutage à l'alcool. Élevages oxydatifs (rimage, ambré, hors d'âge). Vinification héroïque.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "iconique",
+        "cote-vermeille",
+        "schistes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-banyuls-grand-cru",
+      "nom": "Banyuls Grand Cru",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache (75% min)"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "AOC VDN avec exigences supérieures (élevage minimum 30 mois en bois, grenache 75% min, rendements bas). Sommet du genre.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "grand-cru",
+        "iconique",
+        "grenache"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-maury-sec",
+      "nom": "Maury (sec)",
+      "type": "appellation_village",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Lledoner Pelut"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Schistes noirs (vallée de l'Agly)",
+      "caracteristiques_rapides": "AOC sec depuis 2011 ~190 ha dans la haute vallée de l'Agly. Schistes noirs lustrés, rouges puissants et minéraux. Roc des Anges, Mas Amiel.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sec",
+        "schistes",
+        "agly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-maury-vdn",
+      "nom": "Maury (VDN)",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache (75% min)",
+        "Grenache Gris",
+        "Grenache Blanc",
+        "Macabeu",
+        "Tourbat"
+      ],
+      "altitude": "100-300 m",
+      "sols": "Schistes noirs",
+      "caracteristiques_rapides": "AOC VDN sur la vallée de l'Agly (jumelle de Banyuls mais à l'intérieur). Mutage à l'alcool. Versions grenat (réduction) et tuilé/ambré (oxydation). Mas Amiel iconique.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "grenache",
+        "agly",
+        "mas-amiel"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-rivesaltes",
+      "nom": "Rivesaltes",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Grenache Gris",
+        "Grenache Blanc",
+        "Macabeu",
+        "Tourbat",
+        "Mourvèdre",
+        "Carignan",
+        "Syrah",
+        "Muscat"
+      ],
+      "altitude": "0-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC VDN ~3 000 ha (en forte baisse) sur le département. Quatre styles : grenat, tuilé, ambré, rosé. Vieux Rivesaltes hors d'âge en pointe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "hors-d-age"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-muscat-rivesaltes",
+      "nom": "Muscat de Rivesaltes",
+      "type": "appellation_vdn",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains",
+        "Muscat d Alexandrie"
+      ],
+      "altitude": "0-400 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC VDN ~3 000 ha. Mariage Muscat petits grains + Muscat d'Alexandrie. Style plus large et fruité que les Muscats du Languedoc.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat",
+        "assemblage"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-igp-cotes-catalanes",
+      "nom": "IGP Côtes Catalanes",
+      "type": "igp",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Syrah",
+        "Mourvèdre",
+        "Carignan",
+        "Macabeu",
+        "Grenache Gris",
+        "Grenache Blanc",
+        "Muscat",
+        "Vermentino",
+        "cépages internationaux"
+      ],
+      "altitude": "0-650 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant l'ensemble du département. Cadre de nombreux iconiques refusant le cadre AOC : Gauby, Matassa, Le Soula, Padié, Olivier Pithon (pour certaines cuvées).",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "iconiques-hors-aoc",
+        "gauby",
+        "matassa",
+        "soula"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "lr-igp-cote-vermeille",
+      "nom": "IGP Côte Vermeille",
+      "type": "igp",
+      "region": "Languedoc-Roussillon",
+      "sous_region": "Roussillon",
+      "pays": "France",
+      "cepages_rois": [
+        "Grenache",
+        "Mourvèdre",
+        "Syrah",
+        "Carignan",
+        "Grenache Gris",
+        "Macabeu"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "IGP correspondant à la frange littorale (Banyuls, Collioure, Cerbère). Permet une production hors cadre AOC (vins secs sur les schistes).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "cote-vermeille",
+        "schistes"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

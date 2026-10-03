@@ -1,0 +1,1292 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "baden",
+  "region_label": "Baden (Allemagne)",
+  "source_file": "producteurs_baden_To_Import.xlsx",
+  "built_at": "2026-06-12",
+  "count": 31,
+  "items": [
+    {
+      "id": "de-baden-prod-bernhard-huber",
+      "nom": "Bernhard Huber",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Malterdingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bienenberg",
+        "Sommerhalde",
+        "Schlossberg (Hecklingen)",
+        "Wildenstein"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Malterdingen, dans le Breisgau, Bernhard Huber est tout simplement le plus grand domaine de Spätburgunder (Pinot Noir) de Baden, et l'un des tout meilleurs d'Allemagne. Son histoire est liée à une intuition : celle de la vocation bourguignonne de Malterdingen, où des moines cisterciens venus de Cluny auraient implanté le Pinot dès le Moyen Âge — le cépage y était autrefois appelé « Malterer ». En 1987, Bernhard Huber quitta la coopérative locale pour vinifier lui-même ses raisins et révéler le potentiel de ces coteaux de calcaire coquillier (Muschelkalk), si proches de ceux de la Côte d'Or. À la disparition de Bernhard en 2014, son fils Julian, alors très jeune, a repris le flambeau et porté le domaine à un niveau plus élevé encore. Sur ses grands crus classés en VDP Grosse Lage — Bienenberg, Sommerhalde, Schlossberg de Hecklingen et le minuscule Wildenstein planté de vieilles vignes —, il signe des Spätburgunder d'une finesse et d'une tension minérale remarquables, vinifiés à faible rendement, souvent en vendange entière et élevés en barrique avec retenue. Le domaine ne se limite pas au Pinot : ses Chardonnay et Weissburgunder comptent parmi les plus aboutis du pays, et il est aussi l'un des meilleurs producteurs de Sekt de méthode traditionnelle d'Allemagne. Le style Huber recherche avant tout l'élégance, la précision et la pureté, dans des vins de garde d'une régularité sans faille. Référence absolue du Pinot Noir allemand, recherché dans le monde entier, le domaine incarne au plus haut point l'idée d'une Bourgogne badoise. L'histoire du domaine tient aussi à la redécouverte d'un lien oublié : c'est en s'appuyant sur des recherches historiques que Bernhard Huber put démontrer la parenté ancienne entre Malterdingen et la Bourgogne, et planter le Pinot là où la coopérative cultivait surtout du Müller-Thurgau. Julian Huber, formé notamment auprès de grands domaines, a poursuivi ce travail avec une maturité saluée par toute la critique : ses Spätburgunder figurent régulièrement parmi les plus hautes notes attribuées à des Pinots allemands, et leurs prix aux enchères rivalisent désormais avec ceux de grands crus bourguignons. La cuvée du Wildenstein, issue d'une parcelle minuscule de très vieilles vignes, en est le sommet absolu, suivie des grands crus Bienenberg, Sommerhalde et Schlossberg. Le Sekt « Huber », élevé de longues années sur lattes, est unanimement considéré comme l'un des trois ou quatre meilleurs effervescents d'Allemagne. Cette polyvalence au sommet — Pinot Noir, Chardonnay, Weissburgunder et Sekt — fait du domaine un cas presque unique dans le pays.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "chardonnay",
+        "vdp",
+        "icone",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|jancisrobinson|grosse-lage.de|vomboden"
+    },
+    {
+      "id": "de-baden-prod-dr-heger",
+      "nom": "Dr. Heger",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Ihringen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ihringer Winklerberg",
+        "Achkarrer Schlossberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ihringen, sur le Kaiserstuhl, Dr. Heger est l'une des références historiques du grand Pinot allemand. Fondé en 1935 par le docteur Max Heger, le domaine s'est bâti sur l'un des terroirs les plus spectaculaires du pays : l'Ihringer Winklerberg, coteau volcanique en terrasses, parmi les plus chauds et les plus escarpés d'Allemagne, où la roche volcanique altérée se mêle au lœss. Mené depuis 1992 par Joachim Heger, épaulé par la nouvelle génération, le domaine exploite une vingtaine d'hectares, dont le Winklerberg et l'Achkarrer Schlossberg. Il en tire des Spätburgunder profonds et structurés, ainsi que des Grauburgunder et Weissburgunder amples et racés. Volontiers marqués par un élevage soigné en barrique dans leur jeunesse, ces vins se patinent admirablement et possèdent une longévité remarquable. Le domaine se double d'une activité de négoce sous l'étiquette « Weinhaus Joachim Heger », réservant le nom « Weingut Dr. Heger » à ses grands crus parcellaires. Le style Heger conjugue puissance, densité et minéralité volcanique, dans des vins de garde d'une grande noblesse. Pionnier de la viticulture de qualité au Kaiserstuhl, Dr. Heger demeure une référence incontournable du Spätburgunder et du Grauburgunder de terroir volcanique, et l'un des ambassadeurs majeurs de Baden à l'international. Le Winklerberg, dont les terrasses étroites épousent une roche volcanique sombre qui emmagasine la chaleur, est l'un des sites où le raisin mûrit le plus aisément en Allemagne, ce qui donne aux vins de Heger leur densité caractéristique. Le domaine décline ses meilleurs crus dans la hiérarchie du VDP, jusqu'aux Grosses Gewächs, à la fois en Spätburgunder et en Grauburgunder, ce dernier comptant parmi les plus profonds du pays. La distinction entre les deux étiquettes structure toute l'offre : le négoce « Weinhaus Joachim Heger » propose des vins accessibles et fiables issus de raisins achetés, tandis que le « Weingut Dr. Heger » est réservé aux parcelles en propre des grands coteaux volcaniques. Au fil des décennies, Joachim Heger a su faire évoluer le style vers davantage de précision et de fraîcheur, sans rien perdre de la puissance solaire du Kaiserstuhl. Le domaine reste l'une des locomotives de la région et l'un des noms qui, dès les années 1980 et 1990, ont convaincu la critique internationale que Baden pouvait produire de très grands Pinots.",
+      "mes_notes": "Très bons spatburgunder, parfois un peu boisés, mais qui vieillissent en se patinant très bien.",
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "grauburgunder",
+        "kaiserstuhl",
+        "winklerberg",
+        "vdp",
+        "icone",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|jancisrobinson|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-ziereisen",
+      "nom": "Ziereisen",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "commune": "Efringen-Kirchen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Gutedel",
+        "Chardonnay",
+        "Syrah"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Jaspis",
+        "Rhini",
+        "Schulen",
+        "Steingrüble"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Efringen-Kirchen, à l'extrême sud du Markgräflerland — à un jet de pierre de la Suisse et de l'Alsace —, Hanspeter Ziereisen conduit l'un des domaines les plus cultes et les plus admirés d'Allemagne. Ayant converti en 1991 l'exploitation familiale de polyculture à la seule vigne, ce vigneron autodidacte et passionné s'est imposé en quelques années comme une figure majeure du Pinot Noir allemand. Sa philosophie est radicale : il embouteille presque tous ses vins en simple « Landwein », refusant la hiérarchie des Prädikate et du VDP, convaincu que seul compte le vin dans le verre, non la mention sur l'étiquette. Au vignoble, il travaille de façon naturelle (« naturnah ») des coteaux calcaires d'origine jurassique. Sa gamme est d'une diversité remarquable : un Gutedel (Chasselas) hissé à un niveau de sérieux inédit, longuement élevé sur lies ; des Spätburgunder d'une retenue toute bourguignonne ; du Chardonnay et même de la Syrah. Au sommet, ses cuvées « Jaspis », issues de vieilles vignes, et « Rhini » atteignent une grande profondeur, toujours dans un registre de fraîcheur, de faible degré et d'élégance. Le style Ziereisen privilégie la finesse, la tension et la digestibilité, à rebours de toute opulence. Modèle pour toute une génération, le domaine a prouvé que le Markgräflerland pouvait produire de très grands Pinots et que le Gutedel pouvait être profond. Ses cuvées sont devenues des objets de culte : le Spätburgunder « Jaspis » (dont la fameuse sélection de vieilles vignes), le Chardonnay « Jaspis », ou encore les Gutedel parcellaires comme « Steingrüble », tous élevés longuement et sans recours à un boisé neuf marqué. Hanspeter Ziereisen a même planté de la Syrah, vinifiée sous le nom de « Gestad », démontrant l'étonnant potentiel de ce coin de Bade chauffé par le soleil. Son obsession de la fraîcheur le pousse à vendanger tôt et à rechercher des degrés modérés, à contre-courant d'une certaine Allemagne plus opulente : ses vins, d'une grande tension et d'une digestibilité remarquable, peuvent paraître austères dans leur jeunesse avant de s'épanouir avec les années. Importé et célébré dans le monde entier, copié par toute une génération de jeunes vignerons, Ziereisen est aujourd'hui un véritable modèle. Son exemple a contribué à faire reconnaître le Markgräflerland — longtemps réduit au Gutedel de soif — comme une terre capable de très grands vins de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "gutedel",
+        "markgraeflerland",
+        "culte",
+        "jaspis",
+        "markgraeflerland"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|decanter|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-franz-keller",
+      "nom": "Franz Keller",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Oberbergen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oberbergener Bassgeige",
+        "Achkarrer Schlossberg",
+        "Ihringer Winklerberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oberbergen, au cœur du Kaiserstuhl, Franz Keller est l'un des domaines les plus prestigieux de Baden, indissociable de son célèbre restaurant étoilé, le Schwarzer Adler, qui détient une étoile au Michelin depuis 1969 — un haut lieu de la gastronomie allemande. La maison élabore de grands vins depuis 1892. Trois générations ont marqué le domaine : le fondateur Franz Keller, puis Fritz Keller — figure publique, par ailleurs président de la Fédération allemande de football —, et aujourd'hui son fils Friedrich, qui en assure la vinification dans une cave ultramoderne fonctionnant par gravité, inaugurée en 2018. Sur les sols volcaniques du Kaiserstuhl, le domaine exploite de grands sites comme l'Oberbergener Bassgeige, l'Achkarrer Schlossberg et l'Ihringer Winklerberg. Fidèle à un style résolument sec et bourguignon, Franz Keller produit des Spätburgunder d'une grande finesse et des Burgundern blancs d'exception ; son Grauburgunder du Schlossberg est considéré comme l'un des plus grands terroirs de pinot gris au monde. Ces vins, rouges comme blancs, vieillissent magnifiquement. Le style Keller recherche la précision, l'élégance et la pureté. Resté fidèle à la sécheresse et à la finesse quand d'autres cédaient aux modes, le domaine est l'un de ceux qui ont placé Baden sur la carte des grands vins, et demeure une référence absolue de la région. Le Schwarzer Adler n'est pas qu'un restaurant : c'est un ensemble réunissant table gastronomique, hôtel et l'une des plus belles caves de vins français d'Allemagne, qui a profondément nourri la sensibilité bourguignonne de la maison. La nouvelle cave de vinification, spectaculaire bâtiment fonctionnant entièrement par gravité, a encore affiné la précision des vins. La gamme s'organise en une hiérarchie claire, des cuvées d'entrée jusqu'aux Grosses Gewächs parcellaires, en passant par les célèbres sélections « A ». Sur les sols volcaniques du Kaiserstuhl, les Spätburgunder gagnent en finesse et en éclat depuis l'arrivée de Friedrich Keller, tandis que les Grauburgunder, en particulier celui du Schlossberg, atteignent une dimension rare, alliant densité, minéralité et garde. Resté fidèle à une vision sèche et élégante du vin allemand à une époque où dominaient les styles sucrés, Franz Keller a joué un rôle de précurseur. Aujourd'hui encore, le domaine conjugue patrimoine, gastronomie et excellence viticole, et demeure l'un des piliers de la réputation de Baden.",
+      "mes_notes": "Le Schlossberg est peut-être un des plus grands terroirs de pinot gris au monde. Ces vins rouges et blancs vieillissent parfaitement.",
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "kaiserstuhl",
+        "schwarzer-adler",
+        "vdp",
+        "keller",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|decanter|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-peter-wagner",
+      "nom": "Peter Wagner",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Oberrotweil",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Grauburgunder",
+        "Weissburgunder",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oberrotweiler Eichberg",
+        "Henkenberg",
+        "Kirchberg",
+        "Schlossberg"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oberrotweil, sur le Kaiserstuhl, Peter Wagner est l'une des plus belles révélations récentes de Baden. Enfant du Kaiserstuhl et diplômé de Geisenheim, il a affûté son art en travaillant comme chef de cave au domaine Franz Keller, le plus réputé de la région, aux côtés de son ami Friedrich Keller. C'est cet héritage qu'il prolonge aujourd'hui, en y apportant une touche résolument moderne. À partir du millésime 2016, il a transformé l'exploitation familiale — jusque-là simple fournisseur de la coopérative — en un domaine indépendant d'environ sept hectares, sur les grands coteaux volcaniques d'Oberrotweil (Eichberg, Henkenberg, Kirchberg, Schlossberg). Il y conduit le vignoble en biodynamie (en cours de certification), avec moutons, fumier de cheval et enherbement généreux. Sa gamme s'articule autour du Spätburgunder, du Grauburgunder et du Chardonnay, complétés par le Weissburgunder, le Müller-Thurgau et de purs Sekt « brut nature ». Le style, d'une grande cohérence d'un bout à l'autre de la gamme, recherche l'élégance, la fraîcheur et la précision : des vins élancés, sans gras superflu, marqués par la minéralité volcanique, un boisé discret et de longs élevages sur lies. Salué dès ses débuts comme « révélation de l'année » par la critique allemande et promis à un grand avenir, Peter Wagner est aujourd'hui considéré comme l'un des vignerons les plus doués de sa génération au Kaiserstuhl, et un nom à suivre de tout près. Son passage chez Franz Keller fut décisif : avec Friedrich Keller, rencontré sur les bancs de Geisenheim, il a entièrement repensé les méthodes de vinification et d'élevage du domaine, une expérience formatrice dont il a tiré sa propre grammaire. Lorsqu'il a décidé de voler de ses propres ailes, il a méthodiquement résilié les contrats qui liaient ses parents à la coopérative pour produire et commercialiser lui-même ses vins. Le pari fut payant : dès ses premiers millésimes, il décrochait les plus hautes distinctions réservées aux nouveaux domaines et était sacré « révélation de l'année » par le plus influent guide allemand, dont l'équipe pronostiquait qu'il « deviendra un très grand ». Ses Spätburgunder « Alte Reben » et ses crus parcellaires du Henkenberg, comme ses Chardonnay et Grauburgunder, séduisent par leur droiture et leur énergie minérale, et s'écoulent désormais en quantités limitées. Là où certains opposent tradition et modernité, Peter Wagner les réconcilie : héritier du savoir-faire de Keller, il l'infléchit vers plus de fraîcheur, d'élan et de pureté. À peine installé, il s'est déjà imposé comme l'un des artisans les plus prometteurs de tout le Kaiserstuhl.",
+      "mes_notes": "Peter Wagner est sans doutes le vigneron le plus doué du Kaiserstuhl de sa génération. Il reprend l'héritage de Keller en amenant une touche moderne à ses vins",
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Spätburgunder Alte Reben",
+        "Grauburgunder Henkenberg",
+        "Chardonnay Oberrotweil"
+      ],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "grauburgunder",
+        "kaiserstuhl",
+        "oberrotweil",
+        "biodynamie",
+        "aufsteiger",
+        "wagner"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|weinkenner|eichelmann|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-wasenhaus",
+      "nom": "Wasenhaus",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "commune": "Staufen im Breisgau",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Weissburgunder",
+        "Gutedel"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ehrenstetten Öhlberg (Bellen, Möhlin)"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Staufen, dans le sud du Markgräflerland, Wasenhaus est sans doute le projet le plus commenté de l'Allemagne viticole récente. Fondé en 2016 par Christoph Wolber et Alexander Götze, deux jeunes vignerons formés dans les plus grands domaines de Bourgogne — de Leflaive à Comte Armand en passant par de Montille —, le domaine s'est imposé en quelques millésimes comme une véritable icône. Ne disposant au départ que de très peu de vignes, le duo a patiemment réuni des parcelles travaillées en biodynamie, au premier rang desquelles les meilleurs lieux de l'Ehrenstetten Öhlberg (Bellen, Möhlin). Comme d'autres avant eux, ils embouteillent tout en « Landwein », s'affranchissant des contraintes d'appellation. Leur signature : des Spätburgunder d'une légèreté, d'une clarté et d'une finesse rares, qui semblent défier la pesanteur, ainsi que de superbes Chardonnay, Weissburgunder et Gutedel. La vinification, en intervention minimale, recourt à très peu de soufre et limite les pigeages, au profit d'une texture soyeuse et d'une grande précision. Devenus cultes, leurs vins s'arrachent dès leur sortie et figurent parmi les plus recherchés du pays. Pour l'amateur français, Wasenhaus est sans doute la plus belle porte d'entrée vers le grand Pinot Noir allemand : une démonstration éclatante que Baden peut rivaliser, en finesse, avec la Bourgogne elle-même. Avant de revenir en Allemagne, Christoph Wolber et Alexander Götze ont passé des années en Côte d'Or, où ils ont assimilé l'art bourguignon de la vigne et de la cave ; c'est là qu'est née leur envie de produire ensemble. De retour à Staufen, ville natale de Wolber, ils ont cherché parcelle par parcelle les terroirs capables d'exprimer cette finesse. On compare souvent Wasenhaus à Enderle & Moll, autre domaine culte du Pinot badois : si ce dernier se montre plus structuré, plus sauvage, les vins de Wasenhaus se distinguent par une légèreté presque immatérielle et une texture d'une élégance désarmante. Leurs Chardonnay et Gutedel, eux aussi, ont contribué à hisser ces cépages à un niveau inattendu. Le succès a été fulgurant : importateurs longtemps focalisés sur la France, sommeliers et collectionneurs se disputent désormais leurs quelques bouteilles. En quelques années, Wasenhaus est devenu l'un des symboles du renouveau du Pinot Noir allemand et la preuve que Baden — miroir de l'Alsace de l'autre côté du Rhin — possède des terroirs de classe mondiale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "culte",
+        "nature",
+        "wasenhaus",
+        "markgraeflerland"
+      ],
+      "a_verifier": null,
+      "source": "vomboden|wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-enderle-moll",
+      "nom": "Enderle & Moll",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Münchweier",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Buntsandstein",
+        "Muschelkalk",
+        "Liaison"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Münchweier, dans le nord de Baden, Sven Enderle et Florian Moll ont créé en 2007 l'un des domaines les plus cultes du Pinot Noir allemand. Partis de quelques parcelles de très vieilles vignes sur grès rouge (Buntsandstein) et calcaire coquillier (Muschelkalk), les deux amis se sont imposés, presque malgré eux, comme des figures de proue du renouveau du Spätburgunder. Leur production, minuscule, se décline en cuvées parcellaires — « Buntsandstein », « Muschelkalk », « Liaison », « Basalt » — auxquelles s'ajoute un Müller-Thurgau de vieilles vignes étonnant. La vinification, proche du nature, fait la part belle aux vendanges entières, à un faible niveau de soufre et à des élevages en fûts neutres, dans une recherche de pureté et de tension. Les vins d'Enderle & Moll, à la fois fins et sauvages, structurés et vibrants, ont conquis une clientèle internationale d'amateurs et de sommeliers, et s'arrachent dès leur sortie. Discret mais immensément admiré, le domaine a largement contribué à faire reconnaître, hors d'Allemagne, le potentiel du Pinot Noir badois, aux côtés de Wasenhaus. Une référence absolue pour qui s'intéresse au Pinot allemand de terroir. Les deux amis ont commencé presque en amateurs, sur quelques ares de vignes que personne ne voulait, avant de voir leurs cuvées s'imposer sur les cartes des meilleurs bars à vin du monde. Si Wasenhaus évoque la musique de chambre, Enderle & Moll tient plutôt du rock : des Pinots plus tendus, plus sauvages, d'une énergie brute. Une production minuscule qui ne suffit jamais à étancher la demande.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "nature",
+        "culte",
+        "breisgau",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "vomboden|wine-searcher|jancisrobinson"
+    },
+    {
+      "id": "de-baden-prod-salwey",
+      "nom": "Salwey",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Oberrotweil",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Eichberg",
+        "Henkenberg",
+        "Kirchberg",
+        "Glottertäler Eichberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oberrotweil, au cœur du Kaiserstuhl, le domaine Salwey est l'un des grands spécialistes des cépages bourguignons d'Allemagne. Mené par Konrad Salwey, troisième génération à la tête de la propriété et seul maître à bord depuis 2011, le domaine fut, dès 1926, le premier membre badois du VDP. Sur environ vingt-trois hectares de sols volcaniques et de lœss, Salwey ne produit que des vins de la famille des Pinots, toujours secs et entièrement fermentés : Spätburgunder, Grauburgunder et Weissburgunder. Ses Grosses Gewächs des grands coteaux d'Oberrotweil — Eichberg, Henkenberg, Kirchberg — comptent parmi les plus aboutis du Kaiserstuhl, le Grauburgunder étant le véritable porte-drapeau de la maison. Formé à Geisenheim puis en Bourgogne et en Alsace, Konrad Salwey est réputé pour son goût de l'expérimentation et sa maîtrise des élevages en bois, dans un style net, droit et taillé par le terroir. Le vignoble est en conversion biologique, avec fermentations spontanées et vins ni collés ni filtrés. Élu « vigneron de l'année » par Falstaff en 2017, Konrad Salwey a hissé le domaine au sommet de la hiérarchie badoise et en a fait une référence du grand Pinot sec du Kaiserstuhl. Le domaine peut se targuer d'une histoire singulière — ses vins furent servis à bord du dirigeable Graf Zeppelin dans les années 1930. La gamme s'organise en trois niveaux, des vins de domaine aux réserves « RS » et aux Grosses Gewächs. Réputé pour son audace, Konrad Salwey n'hésite pas à expérimenter de nouvelles techniques pour affiner encore son style, toujours au service du terroir volcanique et de lœss.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "grauburgunder",
+        "kaiserstuhl",
+        "vdp",
+        "salwey",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-bercher",
+      "nom": "Bercher",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Burkheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Burkheimer Feuerberg",
+        "Sasbacher Limburg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Burkheim, sur le Kaiserstuhl, le domaine familial Bercher est l'une des valeurs sûres de Baden, réputé pour ses cépages bourguignons sur sols volcaniques et de lœss. Membre du VDP, il est aujourd'hui mené par la nouvelle génération de la famille. Le domaine exploite de grands coteaux comme le Burkheimer Feuerberg et le Sasbacher Limburg, dont il tire des Spätburgunder structurés et de garde, ainsi que de beaux Grauburgunder, Weissburgunder et Chardonnay. Le travail soigné et des vinifications maîtrisées, avec une cave moderne fonctionnant par gravité, assurent une grande régularité sur l'ensemble de la gamme. Le style Bercher recherche l'équilibre, la précision et l'expression du terroir volcanique, dans des vins racés offrant un excellent rapport qualité-prix. Fidèle et constant, Bercher compte parmi les piliers du Kaiserstuhl et une adresse de confiance pour découvrir les grands Pinots et Burgundern de Baden. Aujourd'hui portée par Arne et Martin Bercher, la maison conjugue une longue tradition familiale et une exigence constante, qui lui valent une reconnaissance régulière de la critique. Ses Chardonnay et Weissburgunder, comme ses Spätburgunder de grands crus, illustrent la capacité du Kaiserstuhl à produire des Burgundern de haut niveau à des prix encore raisonnables, ce qui en fait une adresse particulièrement appréciée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "grauburgunder",
+        "kaiserstuhl",
+        "vdp",
+        "bercher",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-karl-h-johner",
+      "nom": "Karl H. Johner",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Bischoffingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Chardonnay",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bischoffinger Steinbuck",
+        "Enselberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bischoffingen, sur le Kaiserstuhl, Karl Heinz Johner est l'un des pionniers de l'élevage en barrique en Allemagne. De retour d'Angleterre, où il dirigea longtemps un domaine, il a appliqué dès les années 1980 une vision internationale du vin à son Kaiserstuhl natal, bousculant les codes locaux. Aujourd'hui épaulé par son fils Patrick, le domaine produit des Spätburgunder et des Chardonnay riches, profonds et marqués par un élevage soigné en bois, au premier rang desquels les cuvées « SJ » (Selektion Johner). Il exploite aussi le Bischoffinger Steinbuck et l'Enselberg, sur sols volcaniques et de lœss. La famille possède même un domaine en Nouvelle-Zélande, signe de son ouverture au monde. Le style Johner, plus opulent et boisé que la moyenne badoise, vise la générosité et la garde, dans des vins de facture résolument internationale. Précurseur influent, Karl H. Johner a montré très tôt que Baden pouvait produire de grands Pinots et Chardonnay de style moderne, et demeure une référence reconnue du Kaiserstuhl. Ses cuvées « SJ », élevées en barrique, ont marqué toute une génération d'amateurs et contribué à faire évoluer le goût allemand vers des Pinots et Chardonnay plus structurés. La famille a même essaimé jusqu'en Nouvelle-Zélande, dans la région de Wairarapa, prolongeant outre-mer sa passion du Pinot. Patrick Johner perpétue aujourd'hui ce style généreux et internationalement reconnu.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "barrique",
+        "kaiserstuhl",
+        "johner",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-reinhold-cornelia-schneider",
+      "nom": "Reinhold & Cornelia Schneider",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Endingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Endinger Engelsberg",
+        "Kapellenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Endingen, sur le Kaiserstuhl, le domaine Reinhold & Cornelia Schneider est l'un des secrets les mieux gardés de Baden. Confidentiel et discret, il s'est forgé une solide réputation auprès des connaisseurs pour la qualité de ses Spätburgunder. Sur les coteaux de lœss et de roche volcanique d'Endingen, dont l'Engelsberg, le domaine produit des Pinots Noirs profonds, structurés et de belle garde, ainsi que de beaux Grauburgunder et Weissburgunder. Le travail soigné et des élevages maîtrisés confèrent aux vins finesse et densité. Le style Schneider privilégie l'élégance, la pureté et l'expression du terroir, dans des vins d'un rapport qualité-prix souvent remarquable. Loin des projecteurs, le domaine compte parmi les meilleures adresses méconnues du Kaiserstuhl, et une valeur sûre pour les amateurs de grand Pinot Noir badois à prix raisonnable. Régulièrement salués par la critique allemande malgré leur discrétion, les Schneider offrent certains des meilleurs rapports qualité-prix de tout le Kaiserstuhl. Leurs Spätburgunder, profonds et patinés par le temps, n'ont rien à envier à ceux de domaines bien plus célèbres, et font le bonheur des amateurs qui savent les dénicher.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "kaiserstuhl",
+        "endingen",
+        "schneider",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-stigler",
+      "nom": "Stigler",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Ihringen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Riesling",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ihringer Winklerberg",
+        "Freiburger Schlossberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ihringen, sur le Kaiserstuhl, le domaine Stigler est une maison familiale fondée en 1881, aujourd'hui menée par Andreas et Regina Stigler, quatrième génération, épaulés par leur fils Maximilian. Membre du VDP, le domaine exploite une treizaine d'hectares. Son terroir phare est l'Ihringer Winklerberg, grand coteau volcanique en terrasses, complété par le Freiburger Schlossberg. Stigler y produit des Spätburgunder et des Weissburgunder racés, mais aussi — fait rare à Baden — un Riesling de belle tenue, héritage d'une longue tradition familiale. Le style Stigler, conduit en agriculture biologique, recherche la finesse, la fraîcheur et l'expression minérale du volcan, dans des vins précis et de garde. Discret mais constant au plus haut niveau, le domaine compte parmi les bonnes adresses du Kaiserstuhl et l'un des rares à défendre le Riesling dans une région vouée aux Pinots. La présence d'un Riesling, héritée d'une longue tradition, distingue Stigler de la plupart de ses voisins, vouée aux seuls Pinots. Sur les terrasses brûlantes du Winklerberg, où la roche volcanique restitue la chaleur, le domaine signe des vins solaires mais d'une belle fraîcheur, et compte parmi les bonnes adresses familiales et abordables du Kaiserstuhl, désormais portée par une cinquième génération.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "weissburgunder",
+        "riesling",
+        "kaiserstuhl",
+        "vdp",
+        "stigler",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-andreas-laible",
+      "nom": "Andreas Laible",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "commune": "Durbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Scheurebe",
+        "Gewürztraminer"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Durbacher Plauelrain"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Durbach, dans l'Ortenau, le domaine Andreas Laible est l'un des maîtres des grands blancs de Baden, sur les sols de granite décomposé qui font la singularité du secteur. Membre du VDP, il est aujourd'hui conduit par Andreas Laible junior, qui perpétue l'excellence familiale. Sur le grand coteau du Durbacher Plauelrain, le domaine excelle dans les cépages aromatiques : le Riesling (appelé ici Klingelberger), mais aussi la Scheurebe, le Traminer et le Muskateller, déclinés du sec au liquoreux noble avec une pureté et une précision remarquables. Il signe aussi de beaux Spätburgunder. Le style Laible privilégie l'éclat aromatique, la finesse et la tension minérale, dans des blancs d'une grande netteté et d'un raffinement constant. Référence du Riesling et des blancs aromatiques de l'Ortenau, Andreas Laible illustre une facette plus septentrionale et plus fraîche de Baden, et compte parmi les meilleurs vignerons de la région. Les meilleures cuvées du domaine, comme les Riesling « Achat » et de vieilles vignes, atteignent une finesse et une complexité remarquables, du sec aux liquoreux nobles. Maître des cépages aromatiques, Andreas Laible démontre que l'Ortenau, avec ses granites et son climat plus frais, peut produire des blancs parmi les plus précis et les plus raffinés de toute l'Allemagne du Sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "scheurebe",
+        "ortenau",
+        "durbach",
+        "vdp",
+        "laible",
+        "ortenau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-shelter-winery",
+      "nom": "Shelter Winery",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Kenzingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kenzinger Roter Bur"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kenzingen, dans le Breisgau, Shelter Winery est un domaine singulier fondé par Silke Wolf et Hans-Bert Espe, qui se sont rencontrés et formés en Oregon, l'une des grandes terres mondiales du Pinot Noir. De retour en Allemagne, ils ont fait du Spätburgunder leur cheval de bataille, dans un style d'inspiration bourguignonne et nord-américaine. Le domaine, dont le nom évoque l'ancien abri militaire qui leur servit de premier chai, produit des Pinots Noirs élégants et purs, ainsi que de beaux Chardonnay et Weissburgunder. Le travail soigné à la vigne et des vinifications précises visent la finesse et l'expression du terroir plutôt que la puissance. Le style Shelter recherche l'élégance, la fraîcheur et la digestibilité, dans des vins d'une grande buvabilité. Atypique et attachant, ce domaine fondé par deux passionnés au parcours international illustre l'ouverture de Baden et compte parmi les bonnes adresses du Breisgau pour le Pinot Noir de style fin. Forts de leur expérience auprès de grandes maisons de l'Oregon, Silke Wolf et Hans-Bert Espe ont importé en Allemagne une approche du Pinot Noir centrée sur la finesse et la fraîcheur. Leurs Spätburgunder, élégants et digestes, ont rapidement séduit la critique et les amateurs en quête d'un style bourguignon, faisant de ce domaine atypique l'une des belles histoires du Breisgau contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "breisgau",
+        "shelter",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|jancisrobinson"
+    },
+    {
+      "id": "de-baden-prod-martin-wassmer",
+      "nom": "Martin Wassmer",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "commune": "Schliengen-Mauchen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Gutedel",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Mauchener Sonnenstück",
+        "Schliengener Sonnenstück"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mauchen, dans le Markgräflerland, Martin Wassmer s'est imposé comme l'un des meilleurs domaines du sud de Baden. Travaillant des coteaux du Markgräflerland mais aussi des parcelles plus au nord, il décline une gamme ambitieuse autour du Spätburgunder, du Chardonnay et du Gutedel. Sur des sites comme le Mauchener et le Schliengener Sonnenstück, le domaine produit des Spätburgunder précis et profonds, des Chardonnay racés et un Gutedel (Chasselas) hissé bien au-dessus de son image de vin de soif. Le travail rigoureux et des élevages soignés confèrent aux vins finesse et profondeur. Le style Martin Wassmer privilégie la précision, la fraîcheur et l'expression du terroir, dans des vins d'une belle constance. En quelques années, le domaine est devenu une référence du Markgräflerland, démontrant, aux côtés de Ziereisen, le potentiel de ce secteur méridional pour les grands cépages bourguignons. Le domaine a particulièrement contribué à réhabiliter le Gutedel, cépage emblématique du Markgräflerland trop souvent cantonné aux vins de soif, en en tirant des blancs de terroir d'une réelle profondeur. Avec ses Spätburgunder et ses Chardonnay salués par la critique, Martin Wassmer s'est hissé parmi les références incontournables du sud de Baden.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "gutedel",
+        "markgraeflerland",
+        "wassmer",
+        "markgraeflerland"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winewithseth"
+    },
+    {
+      "id": "de-baden-prod-fritz-wassmer",
+      "nom": "Fritz Waßmer",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Bad Krozingen-Schlatt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schlatter Maltesergarten"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Schlatt, près de Bad Krozingen (Breisgau), Fritz Waßmer — frère de Martin — a fondé son domaine en 1998, après des expériences marquantes en Bourgogne et en Oregon. Il s'est rapidement fait un nom parmi les bons producteurs de Pinot du sud de Baden. Le domaine se consacre avant tout au Spätburgunder et au Chardonnay, issus notamment du Schlatter Maltesergarten, dans un style qui cherche à concilier puissance et élégance. Le travail soigné à la vigne et des élevages maîtrisés en barrique confèrent aux vins structure et profondeur. Le style Fritz Waßmer privilégie la densité, la finesse et l'expression du terroir, dans des rouges et des blancs de belle garde. Salué par la critique, le domaine illustre, comme celui de son frère, le dynamisme retrouvé du Breisgau et du Markgräflerland, et compte parmi les bonnes adresses du sud pour le Pinot Noir et le Chardonnay. Son parcours international — la Bourgogne, l'Oregon — transparaît dans des vins qui cherchent l'équilibre entre la générosité solaire du sud de Baden et la finesse bourguignonne. Régulièrement primé, Fritz Waßmer a bâti en un peu plus de deux décennies une réputation solide, et confirme, aux côtés de son frère Martin, le renouveau qualitatif du Breisgau et du Markgräflerland.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "chardonnay",
+        "breisgau",
+        "wassmer",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "maxiwines|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-holger-koch",
+      "nom": "Holger Koch",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Bickensohl",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bickensohler Herrenstück",
+        "Steinfelsen"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bickensohl, sur le Kaiserstuhl, Holger Koch s'est imposé comme l'une des belles adresses montantes de Baden, attaché à une viticulture respectueuse de l'environnement. Sur les coteaux de lœss et de roche volcanique de Bickensohl, dont le Herrenstück et le Steinfelsen, il produit des vins d'une grande précision. Le domaine excelle dans le Spätburgunder, fin et tendu, ainsi que dans les Burgundern blancs — Weissburgunder et Grauburgunder — d'une belle fraîcheur. Le travail soigné à la vigne et des vinifications précises visent la pureté et l'expression du terroir volcanique, plutôt que la puissance. Le style Koch recherche l'élégance, la salinité et la finesse, dans des vins d'un excellent rapport qualité-prix. En pleine ascension critique, Holger Koch compte parmi les vignerons les plus prometteurs du Kaiserstuhl et une très belle découverte pour les amateurs de Pinot badois élégant et abordable. Souvent cité parmi les meilleurs rapports qualité-prix de Baden, le domaine séduit par la droiture et la salinité de ses vins. Holger Koch incarne cette nouvelle génération du Kaiserstuhl qui privilégie la finesse à la puissance et révèle une autre facette, plus aérienne, des terroirs volcaniques de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "weissburgunder",
+        "kaiserstuhl",
+        "bio",
+        "koch",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-graeflich-wolff-metternich",
+      "nom": "Gräflich Wolff Metternich",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "commune": "Durbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Durbacher Schlossberg",
+        "Schloss Grohl"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Durbach, dans l'Ortenau, le Gräflich Wolff Metternich'sches Weingut est un domaine comtal historique, l'un des plus anciens et des plus prestigieux du secteur. Membre du VDP, il exploite de grands coteaux de granite, dont le Durbacher Schlossberg et le Schloss Grohl. Le domaine produit des Riesling (appelés ici Klingelberger) racés et minéraux, ainsi que de beaux Spätburgunder et Weissburgunder, dans un style classique fidèle à la tradition de l'Ortenau. Le travail soigné et l'attachement aux grands sites de granite confèrent aux vins finesse et tension. Le style Wolff Metternich privilégie l'élégance, la pureté et l'expression du terroir granitique, dans des vins de belle garde. Fort d'un patrimoine remarquable, le domaine demeure l'un des noms historiques de l'Ortenau et une référence pour le Riesling et le Pinot Noir de ce secteur plus septentrional de Baden. Riche de plusieurs siècles d'histoire, le domaine comtal a longtemps incarné le prestige viticole de l'Ortenau. Ses Klingelberger (Riesling) de granite, tendus et minéraux, et ses Spätburgunder classiques en font un gardien de la tradition de Durbach, l'un des villages les plus réputés de ce secteur septentrional de Baden.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "ortenau",
+        "durbach",
+        "vdp",
+        "metternich",
+        "ortenau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|faessle"
+    },
+    {
+      "id": "de-baden-prod-henrik-moebitz",
+      "nom": "Henrik Möbitz",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Kenzingen-Bombach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bombacher Sommerhalde"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bombach, dans le Breisgau, Henrik Möbitz conduit un micro-domaine devenu culte, dédié au Pinot Noir de très haute couture. Travaillant de vieilles vignes en intervention minimale, ce vigneron perfectionniste et discret produit des quantités infimes de vins extrêmement recherchés. Sur des coteaux comme la Bombacher Sommerhalde, il signe des Spätburgunder d'une grande finesse et d'une rare élégance, ainsi que quelques blancs, dans une approche proche du nature. La rareté et la qualité de ses cuvées en ont fait des objets de désir pour les amateurs avertis. Le style Möbitz recherche la pureté, la tension et la délicatesse, dans des Pinots d'une grande digestibilité. Confidentiel à l'extrême, le domaine illustre, aux côtés d'Enderle & Moll et de Wasenhaus, l'éclosion d'une scène badoise du Pinot Noir d'auteur, fine et recherchée dans le monde entier. Produits en quantités infimes et devenus difficiles à trouver, ses vins ont vu leurs prix grimper à mesure que se répandait leur réputation. Travailleur de l'ombre et perfectionniste absolu, Henrik Möbitz fait partie de ces vignerons d'auteur qui ont révélé au monde la finesse insoupçonnée du Pinot Noir de Baden.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "culte",
+        "nature",
+        "breisgau",
+        "moebitz",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "vomboden|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-knab",
+      "nom": "Knab",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Endingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Endinger Steingrüble",
+        "Kapellenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Endingen, sur le Kaiserstuhl, le domaine familial Knab est une bonne adresse conduite en agriculture biologique, attachée aux terroirs de lœss et de roche volcanique du secteur. Il exploite des coteaux comme l'Endinger Steingrüble et le Kapellenberg, dont il tire des Spätburgunder de belle facture et des Burgundern blancs, ainsi qu'une réputation reconnue pour ses Eiswein. Le travail bio et des vinifications soignées confèrent aux vins fraîcheur et pureté. Discret et régulier, Knab compte parmi les bonnes adresses bio du Kaiserstuhl, appréciées pour la sincérité de ses Pinots et la qualité de ses vins liquoreux. Le domaine illustre bien la montée en gamme du Kaiserstuhl bio, et reste une valeur sûre et abordable pour découvrir les Pinots et les liquoreux de ce terroir volcanique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "kaiserstuhl",
+        "bio",
+        "knab",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-freiherr-von-gleichenstein",
+      "nom": "Freiherr von Gleichenstein",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Oberrotweil",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oberrotweiler Henkenberg",
+        "Eichberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oberrotweil, au cœur du Kaiserstuhl, le domaine Freiherr von Gleichenstein est une propriété noble historique, attachée aux cépages bourguignons sur sols volcaniques et de lœss. Il exploite de grands coteaux d'Oberrotweil, comme le Henkenberg et l'Eichberg, dont il tire des Spätburgunder classiques et de beaux Grauburgunder et Weissburgunder. Le travail soigné et la fidélité à la tradition confèrent aux vins équilibre et finesse. Fort de son histoire et de son ancrage local, von Gleichenstein demeure l'une des adresses établies du Kaiserstuhl, appréciée pour ses Pinots fiables et son patrimoine. Le domaine, qui doit aussi une part de sa notoriété à son histoire familiale ancienne, conjugue patrimoine et savoir-faire, et propose des Pinots de bonne facture à des prix mesurés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "kaiserstuhl",
+        "gleichenstein",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|vdp.de"
+    },
+    {
+      "id": "de-baden-prod-stadt-lahr-woehrle",
+      "nom": "Stadt Lahr (Wöhrle)",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "commune": "Lahr",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Chardonnay",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lahrer Herrentisch",
+        "Kronenbühl"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lahr, dans le Breisgau, le domaine municipal de la ville (Weingut Stadt Lahr) est mené par Markus Wöhrle en agriculture biologique, et s'est imposé comme l'une des références du secteur. Membre du VDP, il est réputé pour ses Burgundern blancs. Sur des coteaux comme le Lahrer Herrentisch et le Kronenbühl, le domaine produit des Weissburgunder et Chardonnay précis et racés, ainsi que de beaux Spätburgunder. Le travail bio et des vinifications soignées assurent pureté et régularité, à des prix mesurés. Dynamique et exigeant, Stadt Lahr compte parmi les bonnes adresses du Breisgau pour les Burgundern blancs de terroir. Sous l'impulsion de Markus Wöhrle, le domaine municipal s'est hissé parmi les meilleurs de Lahr, et démontre que le Breisgau est, avec ses Burgundern blancs, l'un des secteurs montants de Baden.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "spaetburgunder",
+        "breisgau",
+        "bio",
+        "woehrle",
+        "vdp",
+        "breisgau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-schloss-neuweier",
+      "nom": "Schloss Neuweier",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "commune": "Baden-Baden",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Mauerberg",
+        "Schlossberg",
+        "Heiligenstein"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Neuweier, près de Baden-Baden, dans le nord de l'Ortenau, Schloss Neuweier est l'un des rares domaines de Baden entièrement voué au Riesling, sur des sols de granite. Fait singulier, il embouteille ses vins dans le Bocksbeutel, la bouteille trapue traditionnelle. Sur de grands coteaux comme le Mauerberg, le Schlossberg et le Heiligenstein, le domaine, conduit en bio, produit des Riesling secs minéraux et de belle garde, dans un style tendu qui tranche avec l'image bourguignonne de Baden. Référence du Riesling badois, Schloss Neuweier illustre une facette plus septentrionale et plus fraîche de la région, et compte parmi ses adresses les plus originales. Avec ses Riesling de granite embouteillés en Bocksbeutel, le domaine cultive une identité unique en Baden et compte parmi les rares à porter haut ce cépage dans une région dominée par les Pinots.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ortenau",
+        "neuweier",
+        "bocksbeutel",
+        "vdp",
+        "ortenau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-duijn",
+      "nom": "Duijn",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "commune": "Bühl",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bühler Sätzler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bühl, dans l'Ortenau, le domaine Duijn, mené par Jürgen Duijn, s'est fait une spécialité du seul Spätburgunder (Pinot Noir), dans une approche d'inspiration bourguignonne. Travaillant des coteaux du secteur, dont le Bühler Sätzler, le domaine produit des Pinots Noirs structurés et de garde, élevés avec soin en barrique. La concentration sur un seul cépage témoigne d'une recherche d'excellence et de cohérence de style. Discret mais respecté, Duijn compte parmi les bonnes adresses de l'Ortenau pour le Pinot Noir de facture sérieuse et soignée. En se consacrant entièrement au Pinot Noir, Jürgen Duijn a fait de son domaine une adresse de spécialiste, recherchée des amateurs de rouges de l'Ortenau élevés à la bourguignonne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "ortenau",
+        "duijn",
+        "ortenau"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-abril",
+      "nom": "Abril",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "commune": "Vogtsburg-Bischoffingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bischoffinger Enselberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bischoffingen, sur le Kaiserstuhl, le domaine Abril est une maison moderne conduite en agriculture biologique certifiée, attachée aux terroirs de lœss et de roche volcanique. Il produit des Spätburgunder et des Burgundern blancs — Weissburgunder, Grauburgunder, Chardonnay — issus notamment de l'Enselberg, dans un style net et soigné, avec un bon rapport qualité-prix. Le travail bio et des vinifications précises confèrent aux vins fraîcheur et pureté. Engagé et régulier, Abril compte parmi les bonnes adresses bio du Kaiserstuhl, appréciées pour la qualité et l'accessibilité de leurs vins. Le domaine, doté d'installations modernes et d'un bel accueil œnotouristique, compte parmi les bonnes adresses bio et accessibles du Kaiserstuhl, à la fois sérieuses et conviviales.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bio",
+        "kaiserstuhl",
+        "abril",
+        "kaiserstuhl"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-seeger",
+      "nom": "Seeger",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Badische Bergstraße",
+      "commune": "Leimen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Sauvignon Blanc"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Leimener Herrenberg",
+        "Herrenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Leimen, sur la Badische Bergstraße au sud de Heidelberg, le domaine Seeger est mené par Thomas Seeger, réputé pour ses vins rouges dans le nord de Baden. Sur des coteaux comme le Leimener Herrenberg, le domaine produit des Spätburgunder structurés et de garde, élevés en barrique, ainsi que de beaux blancs (Weissburgunder, Sauvignon Blanc). Le travail soigné et des élevages maîtrisés confèrent aux rouges densité et profondeur. Référence du Pinot Noir de la Bergstraße, Seeger compte parmi les meilleures adresses du nord de Baden et une valeur sûre pour les amateurs de rouges allemands. Travaillant un secteur plus septentrional et confidentiel, Thomas Seeger a démontré que la Badische Bergstraße pouvait produire de grands Spätburgunder, et son domaine jouit d'une réputation qui dépasse largement sa région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bergstrasse",
+        "leimen",
+        "seeger",
+        "badische-bergstrasse"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|jancisrobinson"
+    },
+    {
+      "id": "de-baden-prod-heitlinger-burg-ravensburg",
+      "nom": "Heitlinger / Burg Ravensburg",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Kraichgau",
+      "commune": "Sulzfeld",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling",
+        "Weissburgunder",
+        "Lemberger"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sulzfelder Burg Ravensburg Husarenkappe",
+        "Löchle",
+        "Dicker Franz"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Kraichgau, l'ensemble Heitlinger et Burg Ravensburg forme l'un des plus importants domaines biodynamiques de Baden, sur des sols calcaires propices à des cépages variés. Autour de Sulzfeld, le domaine exploite de grands coteaux comme la Burg Ravensburg Husarenkappe et le Löchle, dont il tire des Spätburgunder, des Riesling et des Lemberger de belle facture. Le travail en biodynamie et des vinifications soignées visent l'expression du terroir calcaire. En plein essor qualitatif, l'ensemble Heitlinger/Burg Ravensburg compte parmi les références montantes du Kraichgau et illustre le potentiel de ce secteur méconnu de Baden. Porté par d'importants investissements et une équipe ambitieuse, l'ensemble s'est imposé comme une locomotive du Kraichgau, secteur calcaire encore méconnu mais au potentiel reconnu pour le Pinot et le Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "kraichgau",
+        "biodynamie",
+        "vdp",
+        "heitlinger",
+        "kraichgau"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-prod-aufricht",
+      "nom": "Aufricht",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Bodensee",
+      "commune": "Meersburg-Stetten",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Müller-Thurgau",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Stettener Säurnberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Au bord du lac de Constance (Bodensee), à Meersburg-Stetten, le domaine familial Aufricht est l'une des bonnes adresses de ce secteur méridional au climat tempéré par le lac. Sur des coteaux comme le Stettener Säurnberg, le domaine produit des Spätburgunder fins et des Burgundern blancs frais — Grauburgunder, Weissburgunder, Müller-Thurgau —, marqués par la fraîcheur du climat lacustre. Le travail soigné confère aux vins élégance et vivacité. Réputé et régulier, Aufricht compte parmi les meilleures adresses du Bodensee et une belle illustration du style frais et délicat de ce coin de Baden. Le domaine, qui jouit d'un cadre magnifique au-dessus du lac, compte parmi les ambassadeurs les plus fiables du Bodensee et de son style de vins frais, fins et désaltérants.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bodensee",
+        "aufricht",
+        "bodensee"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-markgraf-von-baden-schloss-salem",
+      "nom": "Markgraf von Baden (Schloss Salem)",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Bodensee",
+      "commune": "Salem",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Grauburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schloss Salem",
+        "Bermatinger Leopoldsberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Au bord du lac de Constance, le domaine du Markgraf von Baden, installé au château de Salem (Schloss Salem), est un vaste domaine princier au riche patrimoine, en conversion vers l'agriculture biologique. Sur des coteaux du Bodensee comme le Bermatinger Leopoldsberg, il produit des Spätburgunder et des Burgundern blancs frais, ainsi que du Müller-Thurgau, marqués par le climat lacustre. L'ampleur du domaine et son histoire en font un acteur important de la région. Entre patrimoine monumental et viticulture en mutation, Schloss Salem compte parmi les adresses emblématiques du Bodensee badois. Par sa taille et son rayonnement, le domaine princier contribue à faire connaître les vins du lac de Constance, tout en valorisant un patrimoine architectural et historique exceptionnel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "bodensee",
+        "salem",
+        "markgraf",
+        "bodensee"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|vdp.de"
+    },
+    {
+      "id": "de-baden-prod-laemmlin-schindler",
+      "nom": "Lämmlin-Schindler",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "commune": "Schliengen-Mauchen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Gutedel",
+        "Spätburgunder",
+        "Weissburgunder",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Mauchener Frauenberg",
+        "Sonnenstück"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mauchen, dans le Markgräflerland, le domaine Lämmlin-Schindler est un pionnier de l'agriculture biologique dans le sud de Baden, attaché aux terroirs du secteur. Il exploite des coteaux comme le Mauchener Frauenberg, dont il tire un Gutedel (Chasselas) de terroir, ainsi que de beaux Spätburgunder, Weissburgunder et Chardonnay. Le travail bio et des vinifications soignées confèrent aux vins fraîcheur et sincérité. Engagé de longue date dans le bio, Lämmlin-Schindler compte parmi les bonnes adresses du Markgräflerland, appréciées pour l'authenticité de leur Gutedel et de leurs Pinots. Pionnier respecté du bio dans le sud de Baden, le domaine reste une référence pour les amateurs de Gutedel de terroir et de Pinots sincères, à des prix raisonnables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "gutedel",
+        "spaetburgunder",
+        "markgraeflerland",
+        "bio",
+        "laemmlin",
+        "markgraeflerland"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|falstaff"
+    },
+    {
+      "id": "de-baden-prod-heinrich-maennle",
+      "nom": "Heinrich Männle",
+      "type": "domaine",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "commune": "Durbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Durbacher Kochberg",
+        "Plauelrain"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Durbach, dans l'Ortenau, le domaine familial Heinrich Männle est une bonne adresse du secteur, connue notamment pour ses vins rouges. Sur les coteaux de granite de Durbach, comme le Kochberg et le Plauelrain, le domaine produit des Spätburgunder élevés en barrique, ainsi que des Riesling (Klingelberger) et des Weissburgunder de belle facture. Le travail soigné confère aux vins structure et caractère. Fidèle à la tradition de Durbach, Heinrich Männle compte parmi les valeurs locales sûres de l'Ortenau, appréciée pour ses Pinots et ses blancs de granite. Le domaine perpétue avec constance la tradition rouge de Durbach et compte parmi les bonnes adresses familiales de l'Ortenau pour le Spätburgunder de barrique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "riesling",
+        "ortenau",
+        "durbach",
+        "maennle",
+        "ortenau"
+      ],
+      "a_verifier": null,
+      "source": "wine-searcher|faessle"
+    }
+  ]
+}

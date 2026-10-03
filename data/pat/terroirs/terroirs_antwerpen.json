@@ -1,0 +1,178 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "antwerpen",
+  "region_label": "Antwerpen",
+  "source_file": "terroirs_antwerpen_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 7,
+  "items": [
+    {
+      "id": "be-antwerpen-terr-coteaux-de-boechout",
+      "nom": "Coteaux de Boechout",
+      "type": "coteau",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Auxerrois",
+        "Pinot Noir",
+        "Chardonnay",
+        "Muscat"
+      ],
+      "altitude": "env. 10-30 m",
+      "sols": "Sables limoneux sur substrat tertiaire, légères ondulations",
+      "caracteristiques_rapides": "Quatre vignobles sur quatre sites reliés par un circuit cycliste, autour d'un moulin du XVIIIe siècle : le seul ensemble viticole structuré de la province, planté depuis 2014.",
+      "notes_objectives": "Le seul ensemble viticole structuré de la province, et l'un des rares du corpus belge où le lieu a été construit plutôt que trouvé. Le premier demi-hectare est planté en 2014 à l'ombre du moulin du XVIIIe siècle de Boechout, au sud-est d'Anvers ; le domaine compte aujourd'hui quatre vignobles sur quatre sites distincts, reliés par un circuit cycliste de dix kilomètres dont le moulin est le point de départ et d'arrivée, avec une extension annoncée à dix-neuf hectares.\n\nLa géologie n'offre pourtant aucun argument : des sables limoneux sur substrat tertiaire, à dix ou trente mètres d'altitude, dans un secteur périurbain de légères ondulations. Rien qui distingue Boechout des dizaines de communes voisines. Ce qui fait le site, c'est l'encépagement — Auxerrois en blanc, Pinot Noir en rouge, avec Chardonnay et Muscat — et surtout une intégration verticale rare : production, effervescents, distillation des marcs, accueil, œnotourisme cycliste.\n\nLe cas mérite d'être versé au dossier ouvert par le corpus wallon. À Saintes, en Brabant wallon, le meilleur effervescent belge sort de limons banals sur sables tertiaires ; à Torgny, le seul terroir jurassique du pays ne produit que du correct. Boechout va dans le même sens : dans un vignoble jeune, la cohérence du projet pèse plus lourd que le substrat, et un lieu sans qualité géologique particulière peut devenir le point de référence d'une province entière.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "nete",
+        "methode-traditionnelle"
+      ],
+      "source": "oudconynsbergh.be ; magazine.vab.be"
+    },
+    {
+      "id": "be-antwerpen-terr-colline-de-heist-op-den-berg",
+      "nom": "Colline de Heist-op-den-Berg",
+      "type": "coteau",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 20-50 m",
+      "sols": "Sables campinois sur substrat tertiaire, pente et drainage",
+      "caracteristiques_rapides": "L'une des rares éminences de la Campine, qui culmine à une cinquantaine de mètres et domine toute la plaine. Le seul site de la province à disposer d'un vrai argument topographique, et l'un des rares reconnus en IGP.",
+      "notes_objectives": "L'une des rares éminences de la Campine anversoise : une cinquantaine de mètres seulement, mais qui dominent toute la plaine environnante et donnent son nom à la commune.\n\nC'est le seul site de la province à disposer d'un vrai argument topographique — une pente, une exposition, un drainage — dans un contexte où tout le reste est plat et sableux. Le fait que ce soit aussi l'un des seuls vignobles anversois reconnus en IGP Vlaamse landwijn n'est probablement pas une coïncidence : là où le lieu offre quelque chose, la démarche qualitative suit. Les sols restent ceux de la Campine, des sables sur substrat tertiaire, mais la position en butte change la donne thermique et hydrique. La commune se situe à mi-chemin entre Anvers, Malines et le Hageland, dans un secteur de transition entre la Campine sableuse et les terres plus limoneuses du sud.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "source": "wijngaardberghoven.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-terr-vallee-des-nethes-ranst-zandhoven-wijnegem",
+      "nom": "Vallée des Nèthes (Ranst, Zandhoven, Wijnegem)",
+      "type": "secteur",
+      "region": "Antwerpen",
+      "sous_region": "Antwerpen en Netevallei",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 5-25 m",
+      "sols": "Sables et sables limoneux de vallée, nappe proche",
+      "caracteristiques_rapides": "Couronne est d'Anvers, où se concentrent les projets les plus récents de la province. Le nom de Wijnegem, dérivé du vin, atteste une viticulture médiévale dans le secteur.",
+      "notes_objectives": "La couronne est d'Anvers, le long de la Grande et de la Petite Nèthe : sables et sables limoneux de vallée, nappe proche de la surface, altitudes de cinq à vingt-cinq mètres.\n\nC'est ici que se concentrent les projets les plus récents de la province, et la plus grande surface plantée — huit hectares à Wijnegem, davantage que le domaine phare de Boechout. Le nom même de la commune, dérivé du vin, atteste une viticulture médiévale dans le secteur, à une époque où les abbayes brabançonnes et anversoises produisaient leur vin de messe. Le facteur décisif aujourd'hui n'est plus le sol mais la proximité : un bassin de plus d'un demi-million d'habitants garantit l'écoulement en vente directe de productions que rien d'autre ne soutiendrait.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "nete",
+        "jeune-domaine"
+      ],
+      "source": "vignawijn.be ; emmelhof.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-terr-campine-centrale-kasterlee-lille-herentals",
+      "nom": "Campine centrale (Kasterlee, Lille, Herentals)",
+      "type": "secteur",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 15-35 m",
+      "sols": "Sables quaternaires acides et très pauvres, réserve hydrique faible",
+      "caracteristiques_rapides": "Plateau de landes et de pinèdes mis en culture tardivement, au sol le plus pauvre de Flandre avec le Waasland. Quatre vignobles y sont installés, dont le plus étendu de la Campine.",
+      "notes_objectives": "Le cœur du plateau campinois : des sables quaternaires acides et très pauvres, à faible réserve hydrique, longtemps couverts de landes et de bois de pins et mis en culture tardivement.\n\nC'est, avec le pays de Waes, le contexte pédologique le moins favorable de Flandre. La vigne y souffre des étés secs faute de réserve, et la pauvreté du sol, qui serait un atout sur un coteau bien exposé, n'est ici compensée par aucun relief. Quatre vignobles s'y sont pourtant installés, dont le plus étendu de la Campine avec quatre hectares. Kasterlee, connue pour ses dunes intérieures et ses pinèdes, offre en contrepartie un flux touristique appréciable. La mise en culture de ces landes n'a été rendue possible qu'au XIXe siècle par les amendements et le creusement des canaux ; la vigne n'y arrive qu'après 2015, en toute fin de cette longue conquête agricole.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "source": "eersselshof.be ; domeinwalterus.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-terr-campine-meridionale-meerhout-balen",
+      "nom": "Campine méridionale (Meerhout, Balen)",
+      "type": "secteur",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 20-40 m",
+      "sols": "Sables campinois drainants, vallée de la Grande Nèthe",
+      "caracteristiques_rapides": "Frange sud-est de la province, à la limite du Limbourg et à une trentaine de kilomètres des collines du Hageland. Deux vignobles précurseurs, plantés dès 2015.",
+      "notes_objectives": "La frange sud-est de la province, à la limite du Limbourg, dans la vallée de la Grande Nèthe. Sables campinois drainants, altitudes de vingt à quarante mètres, secteur agricole peu peuplé marqué par d'anciennes carrières de sable.\n\nLa position est intéressante par ce qu'elle n'est pas : on se trouve à une trentaine de kilomètres seulement des collines de grès ferrugineux du Hageland, mais de l'autre côté d'une frontière géologique nette — ici, plus de relief diestien, seulement les sables du plateau. Deux vignobles précurseurs y ont été plantés dès 2015, avant la vague campinoise, ce qui en fait les plus anciens de la province avec celui de Boechout. Le secteur illustre bien ce que le corpus a montré ailleurs : les frontières géologiques ne coïncident pas avec les frontières administratives, et deux communes voisines peuvent relever de contextes viticoles sans rapport.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "kempen"
+      ],
+      "source": "chappel.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-terr-campine-septentrionale-hoogstraten-minderhout",
+      "nom": "Campine septentrionale (Hoogstraten, Minderhout)",
+      "type": "secteur",
+      "region": "Antwerpen",
+      "sous_region": "Kempen",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 15-30 m",
+      "sols": "Sables de plaine, terres maraîchères intensives",
+      "caracteristiques_rapides": "Premier bassin de production de fraises et de légumes de Belgique, à la frontière néerlandaise. La vigne y arrive comme diversification d'un maraîchage à forte valeur ajoutée.",
+      "notes_objectives": "L'extrême nord de la province, à la frontière néerlandaise, sur des sables de plaine. Le contexte agricole est remarquable : Hoogstraten est le premier bassin de production de fraises et de légumes de Belgique, avec une criée qui fait référence à l'échelle européenne.\n\nLa vigne y arrive donc comme diversification d'un maraîchage intensif à très forte valeur ajoutée, selon la logique déjà observée en Hesbaye avec les vergers, autour de Gand avec l'horticulture ornementale et à Lochristi avec les plantes en pot. Le schéma se répète dans tout le corpus : la vigne belge s'installe rarement sur des terres vierges, elle succède presque toujours à une culture spécialisée qui disposait déjà du foncier, du matériel et des circuits de vente.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "kempen",
+        "jeune-domaine"
+      ],
+      "source": "wijndomeinhoogstraten.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-antwerpen-terr-scheldeland-puurs-bornem",
+      "nom": "Scheldeland (Puurs, Bornem)",
+      "type": "secteur",
+      "region": "Antwerpen",
+      "sous_region": "Scheldeland",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 2-15 m",
+      "sols": "Sols sableux à limoneux de polders intérieurs, nappe haute",
+      "caracteristiques_rapides": "Boucles de l'Escaut entre Anvers et Termonde, dans un paysage de polders et de prairies alluviales. Deux vignobles se font face de part et d'autre du fleuve.",
+      "notes_objectives": "Les boucles de l'Escaut entre Anvers et Termonde, dans un paysage de polders intérieurs, de digues et de prairies alluviales. Les sols sont sableux à limoneux, la nappe est haute, et les altitudes ne dépassent pas quinze mètres.\n\nDeux vignobles se font face de part et d'autre du fleuve, à Liezele et à Hingene, dans un contexte comparable à celui du pays de Waes voisin — l'un des moins favorables du corpus. Le secteur bénéficie en revanche d'un flux touristique lié aux boucles de l'Escaut et au château de Bornem, et l'un des deux domaines est conduit par un vigneron également actif dans le conseil viticole, cas unique en Belgique. La proximité de Bruxelles et d'Anvers, à moins de trente kilomètres de chacune, assure par ailleurs un débouché commercial que la qualité du sol ne justifierait pas à elle seule.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "flandre",
+        "scheldeland"
+      ],
+      "source": "valkevleug.be ; belgischewijnbouwers.be"
+    }
+  ]
+}

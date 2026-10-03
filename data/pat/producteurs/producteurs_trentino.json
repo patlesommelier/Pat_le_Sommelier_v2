@@ -1,0 +1,1516 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "trentino",
+  "region_label": "Trentino (Italie)",
+  "source_file": "producteurs_trentino.json",
+  "built_at": "2026-07-08",
+  "count": 34,
+  "items": [
+    {
+      "id": "it-trentino-prod-ferrari-fratelli-lunelli",
+      "nom": "Ferrari (Fratelli Lunelli)",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Trento",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trento, Ferrari est la grande maison du Trentodoc et l'un des noms les plus prestigieux du vin effervescent italien, véritable ambassadeur du metodo classico de montagne. Fondée en 1902 par Giulio Ferrari, pionnier qui eut l'intuition d'acclimater le Chardonnay et les méthodes champenoises dans les Alpes trentines, la maison est passée en 1952 aux mains de la famille Lunelli, qui l'a hissée au sommet.\n\nFerrari élabore ses bulles exclusivement selon la méthode traditionnelle, à partir de raisins de montagne (Chardonnay surtout, complété de Pinot Nero) cultivés sur des coteaux d'altitude où la fraîcheur préserve l'acidité et la finesse. Le fleuron, le Giulio Ferrari Riserva del Fondatore, issu d'une seule parcelle et vieilli de nombreuses années sur lies, est considéré comme l'un des plus grands spumante d'Italie, capable de rivaliser avec les champagnes de garde par sa profondeur, sa complexité et sa longévité. La gamme, du Ferrari Brut au Perlé et au Perlé Nero, est d'une régularité et d'une qualité exemplaires à tous les niveaux. La maison a largement contribué à créer et à faire reconnaître l'appellation Trento DOC (Trentodoc), première AOC italienne dédiée au metodo classico, dont elle demeure le porte-drapeau mondial. Les Lunelli ont aussi bâti un groupe (vins, grappa, eaux) mais sans jamais transiger sur l'exigence des bulles.\n\nGrande maison du Trentodoc, Ferrari signe avec le Giulio Ferrari Riserva l'un des plus grands spumante d'Italie, rival des champagnes de garde. C'est le porte-drapeau mondial du metodo classico de montagne et une référence absolue du vin trentin.\n\nL'histoire de Ferrari est celle d'une intuition visionnaire : croire, dès le début du XXe siècle, que les Alpes trentines pouvaient rivaliser avec la Champagne. Giulio Ferrari, formé en France et en Allemagne, importa le Chardonnay et la méthode traditionnelle dans une région alors vouée à de tout autres cépages ; n'ayant pas d'héritier, il choisit en 1952 de céder sa maison à Bruno Lunelli, caviste de Trente, dont la famille perpétue l'œuvre avec un soin extrême. Servis à l'apéritif, sur des poissons, des crustacés, une cuisine raffinée ou même, pour les grandes Riserva, sur des plats plus riches, les Trentodoc de Ferrari séduisent par leur finesse, leur tension et leur profondeur. Le Giulio Ferrari, vieilli une dizaine d'années sur lies avant dégorgement, se patine ensuite en cave comme un grand champagne. Au-delà de ses propres cuvées, Ferrari a joué un rôle moteur dans la création de l'appellation Trentodoc et dans la promotion collective du metodo classico trentin, dont il demeure la locomotive. Cette conjonction d'histoire, de terroir de montagne et d'exigence familiale fait de Ferrari un symbole du meilleur du vin effervescent italien et un ambassadeur de l'art de vivre trentin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Giulio Ferrari Riserva del Fondatore",
+        "Ferrari Perlé",
+        "Ferrari Brut",
+        "Perlé Nero"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "trentodoc",
+        "metodo-classico",
+        "chardonnay",
+        "icone",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc|gamberorosso|cellartours"
+    },
+    {
+      "id": "it-trentino-prod-foradori",
+      "nom": "Foradori",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzolombardo",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Manzoni Bianco",
+        "Nosiola",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzolombardo, au cœur de la Piana Rotaliana, Foradori est le domaine le plus admiré du Trentino et l'un des plus emblématiques d'Italie du Nord. Elisabetta Foradori, qui a repris le domaine familial très jeune dans les années 1980, a consacré sa vie à un cépage : le Teroldego, variété autochtone de la plaine du Campo Rotaliano qu'elle a sauvée de la banalisation et hissée au rang de grand vin.\n\nConvertie à la biodynamie (certifiée), Elisabetta Foradori a entrepris une sélection massale rigoureuse pour restaurer la diversité génétique du Teroldego, et vinifie une partie de sa production en amphores de terre cuite (tinajas). Le Granato, son grand Teroldego issu des meilleures vignes, est un rouge profond, racé et de longue garde, aux arômes de fruits noirs, de violette, d'épices et de garrigue alpine ; les cuvées parcellaires Morei et Sgarzon, en amphore, explorent d'autres facettes du cépage. Le domaine excelle aussi en blanc, notamment avec le Fontanasanta (Manzoni Bianco) et la Nosiola, d'une pureté remarquable. La démarche d'Elisabetta Foradori — biodynamie, amphores, respect du terroir et du cépage — a fait école bien au-delà du Trentino et inspiré toute une génération de vignerons. Ses vins, vibrants et authentiques, figurent sur les plus grandes tables du monde.\n\nDomaine culte d'Elisabetta Foradori, sauveur du Teroldego en biodynamie et amphore, Foradori signe avec le Granato l'un des grands rouges d'Italie du Nord. C'est le sommet qualitatif du Trentino et une référence mondiale du vin naturel de terroir.\n\nLe parcours d'Elisabetta Foradori est celui d'une vigneronne visionnaire : reprenant à dix-neuf ans un domaine orienté vers la production courante, elle a peu à peu tout remis en question — sélection des plants, agriculture, vinification — pour aller au bout de sa quête d'authenticité. La conversion à la biodynamie, puis l'adoption des amphores de terre cuite, ont marqué les étapes d'une recherche radicale de pureté et d'expression du terroir. Son travail de sélection massale sur le Teroldego, mené sur des décennies, a restauré la diversité d'un cépage appauvri par le clonage intensif. Servis sur des viandes rouges, du gibier, des plats alpins ou des fromages pour les rouges, sur des poissons et des viandes blanches pour les blancs, les vins de Foradori séduisent par leur énergie, leur finesse et leur profondeur, loin des Teroldego rustiques d'autrefois. Le Granato, en particulier, a prouvé que ce cépage pouvait donner un grand vin de garde. L'influence d'Elisabetta Foradori dépasse largement le Trentino : figure du renouveau naturel italien, mentor et modèle, elle a contribué à faire reconnaître les vins de terroir authentiques et a inscrit son domaine parmi les plus grands d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Granato (Teroldego)",
+        "Morei",
+        "Sgarzon",
+        "Fontanasanta (Manzoni Bianco)"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "biodynamie",
+        "amphore",
+        "culte",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling|tasteatlas"
+    },
+    {
+      "id": "it-trentino-prod-tenuta-san-leonardo",
+      "nom": "Tenuta San Leonardo",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Borghetto all'Adige",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc",
+        "Merlot",
+        "Carmenère"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vigneti delle Dolomiti IGT",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Borghetto all'Adige, dans la Vallagarina au sud du Trentino, la Tenuta San Leonardo est l'un des grands domaines de rouge d'Italie du Nord, célèbre pour son assemblage bordelais mythique. La famille Guerrieri Gonzaga y cultive la vigne sur un domaine historique, avec le conseil, à l'origine, du légendaire œnologue Giacomo Tachis (père du Sassicaia).\n\nLe San Leonardo, assemblage de Cabernet Sauvignon, Cabernet Franc, Merlot et Carmenère, est un rouge aristocratique et racé, souvent comparé aux grands Médoc : élégant, frais et d'une longévité exceptionnelle, aux arômes de cassis, de graphite, de cèdre et d'épices. Produit dans un climat alpin tempéré par l'Adige, il conjugue la structure bordelaise à une fraîcheur toute montagnarde. Les cuvées Villa Gresti et Terre di San Leonardo complètent la gamme. Le domaine illustre l'excellence des assemblages bordelais en Italie du Nord, dans un style tout en finesse et en retenue.\n\nGrand domaine de la Vallagarina, San Leonardo signe l'un des plus beaux assemblages bordelais d'Italie, racé et de longue garde. C'est une référence du rouge alpin, entre structure médocaine et fraîcheur de montagne.\n\n La comparaison avec le Sassicaia n'est pas fortuite : Giacomo Tachis, artisan des deux vins, a insufflé à San Leonardo la même quête d'élégance à la bordelaise. Servi sur des viandes rouges, du gibier ou des fromages affinés, le San Leonardo se patine magnifiquement sur quinze à vingt ans, gagnant en complexité. La famille Guerrieri Gonzaga, attachée à un style de retenue et de fraîcheur, refuse la surmaturité et le boisé ostentatoire, ce qui distingue ce grand rouge alpin des cuvées plus solaires du Sud et en fait une référence d'équilibre et de longévité, à contre-courant des modes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "San Leonardo",
+        "Villa Gresti",
+        "Terre di San Leonardo"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "bordeaux",
+        "cabernet",
+        "merlot",
+        "icone",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "tasteatlas|jamessuckling|cellartours"
+    },
+    {
+      "id": "it-trentino-prod-pojer-e-sandri",
+      "nom": "Pojer e Sandri",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Val d'Adige",
+      "commune": "Faedo",
+      "pays": "Italie",
+      "cepages": [
+        "Müller-Thurgau",
+        "Chardonnay",
+        "Pinot Nero",
+        "Nosiola"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vigneti delle Dolomiti IGT",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Faedo, sur les hauteurs du Val d'Adige, Pojer e Sandri est un domaine pionnier et emblématique du Trentino, fondé en 1975 par Mario Pojer et Fiorentino Sandri. Sur des vignobles d'altitude, il a bâti une réputation d'excellence et d'innovation, notamment sur les blancs de montagne.\n\nLe domaine est une référence pour le Müller-Thurgau, cépage aromatique qui trouve en altitude une expression tendue et parfumée, ainsi que pour ses autres blancs frais et purs (Nosiola, Chardonnay). Il élabore aussi un Trentodoc, des rouges et des cuvées originales comme le Zero Infinito (pétillant naturel) ou le Faye (assemblage). L'esprit d'innovation, la recherche constante et le soin apporté à la vigne comme à la cave ont fait de Pojer e Sandri l'un des domaines les plus respectés du Trentino, régulièrement salué par la critique. C'est une référence des blancs d'altitude et de la viticulture de montagne.\n\nDomaine pionnier de Faedo, Pojer e Sandri est une référence du Müller-Thurgau et des blancs d'altitude, avec un bel esprit d'innovation. C'est l'un des domaines les plus respectés du Trentino.\n\n L'esprit de recherche du domaine se traduit par des expérimentations constantes, du travail sur les cépages résistants à la distillation en passant par les pétillants naturels. Servis sur des poissons, des fromages de montagne ou une cuisine légère, les blancs de Pojer e Sandri séduisent par leur fraîcheur et leur pureté. La fidélité au terroir d'altitude de Faedo et l'exigence de Mario Pojer, figure respectée du vin trentin, ont fait du domaine une référence durable et une source d'inspiration pour la viticulture de montagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Müller-Thurgau",
+        "Zero Infinito",
+        "Faye",
+        "Cuvée '900"
+      ],
+      "tags": [
+        "trentino",
+        "faedo",
+        "muller-thurgau",
+        "altitude",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "prowein|cellartours"
+    },
+    {
+      "id": "it-trentino-prod-cesconi",
+      "nom": "Cesconi",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Val d'Adige",
+      "commune": "Lavis",
+      "pays": "Italie",
+      "cepages": [
+        "Pinot Grigio",
+        "Chardonnay",
+        "Manzoni Bianco",
+        "Nosiola"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lavis, sur les coteaux de Pressano au nord de Trente, Cesconi est un domaine familial réputé pour ses blancs de terroir. La famille Cesconi, en agriculture biologique, cultive un vignoble d'altitude avec une recherche de pureté et d'élégance.\n\nLe domaine signe des blancs de grande finesse — Pinot Grigio (loin des versions banales), Chardonnay, Manzoni Bianco et Nosiola — souvent élevés avec soin et capables de vieillir, aux arômes précis et à la belle minéralité. L'Olivar, assemblage de blancs, est l'une de ses cuvées emblématiques. Le style, précis et respectueux du terroir, met en valeur la fraîcheur des coteaux de Pressano. La qualité constante et le soin artisanal ont fait de Cesconi l'une des références du blanc trentin, appréciée des amateurs de vins de terroir. C'est une belle adresse pour découvrir l'élégance des blancs de montagne.\n\nDomaine bio de Pressano, Cesconi est une référence du blanc trentin : Pinot Grigio, Chardonnay et Manzoni Bianco élégants et de garde. C'est une belle adresse pour les amateurs de blancs de terroir.\n\n Le choix du bio et le refus des rendements élevés donnent aux blancs de Cesconi une densité et une capacité de garde rares dans la région. Servis sur des poissons, des fruits de mer, des viandes blanches ou des fromages, ils gagnent à être carafés et révèlent leur complexité après quelques années. L'attachement de la famille à Pressano et à ses cépages, travaillés avec un soin quasi bourguignon, fait de Cesconi une adresse recherchée des amateurs de blancs de terroir authentiques et précis.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pinot Grigio",
+        "Olivar (blanc)",
+        "Nosiola",
+        "Chardonnay"
+      ],
+      "tags": [
+        "trentino",
+        "lavis",
+        "pressano",
+        "blanc",
+        "pinot-grigio",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-trentino-prod-letrari",
+      "nom": "Letrari",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Rovereto",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Marzemino"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rovereto, dans la Vallagarina, Letrari est une maison réputée, à la fois pour ses Trentodoc et pour son Marzemino, cépage identitaire du sud du Trentino. Fondée par Leonello Letrari, œnologue de renom, elle est aujourd'hui menée par sa fille Lucia.\n\nLe domaine élabore de grands Trentodoc, dont la cuvée Riserva del Fondatore (976), longuement vieillie sur lies, parmi les plus belles bulles de montagne de l'appellation. Il signe aussi un Marzemino réputé — ce cépage frais et parfumé cher à Mozart, spécialité de la Vallagarina — ainsi que des assemblages bordelais et d'autres cuvées. Le style, précis et soigné, conjugue l'excellence du metodo classico et la valorisation du cépage local. La qualité constante et la double spécialité (bulles et Marzemino) font de Letrari l'une des références de Rovereto et du sud du Trentino. C'est une belle adresse pour découvrir le meilleur de la Vallagarina.\n\nMaison réputée de Rovereto, Letrari signe de grands Trentodoc (Riserva 976) et un Marzemino de référence. C'est l'une des belles adresses du sud du Trentino, entre bulles de montagne et cépage identitaire.\n\n L'héritage de Leonello Letrari, œnologue pionnier, et la reprise par sa fille Lucia assurent une continuité de savoir-faire rare. Servis à l'apéritif ou sur une cuisine fine pour les Trentodoc, sur des viandes légères et des plats de montagne pour le Marzemino, les vins du domaine séduisent par leur équilibre. La double excellence — grandes bulles de garde et valorisation du cépage identitaire de la Vallagarina — fait de Letrari une adresse complète et respectée, ambassadrice du meilleur de Rovereto et du sud du Trentino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Letrari Riserva 976",
+        "Trentodoc Brut",
+        "Marzemino"
+      ],
+      "tags": [
+        "trentino",
+        "rovereto",
+        "trentodoc",
+        "marzemino",
+        "vallagarina"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-maso-martis",
+      "nom": "Maso Martis",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Martignano",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Pinot Meunier"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Martignano, sur les coteaux qui dominent Trento au pied du Monte Calisio, Maso Martis est l'une des grandes références du Trentodoc et un pionnier du metodo classico biologique dans la région. Fondé par Antonio et Roberta Stelzer, le domaine familial, aujourd'hui porté par leurs filles, s'est entièrement consacré aux bulles de montagne.\n\nSur un vignoble d'altitude (autour de 450 m) cultivé en agriculture biologique, Maso Martis élabore des Trentodoc d'une grande finesse à partir de Chardonnay, Pinot Nero et Pinot Meunier — cépage rare en Italie qu'il affectionne particulièrement. La fraîcheur de l'altitude et le travail bio donnent des bulles tendues, complexes et minérales, dont la cuvée de prestige Madame Martis, longuement vieillie sur lies, est l'expression la plus aboutie : un metodo classico racé et profond, régulièrement salué par la critique. La gamme, du Brut au Dosaggio Zero et au Rosé, est d'une belle régularité. L'engagement biologique précoce, la maîtrise du vieillissement et la recherche de finesse font de Maso Martis l'un des domaines les plus qualitatifs et les plus respectés du Trentodoc, à taille humaine et fidèle à son terroir de montagne au-dessus de la capitale trentine.\n\nDomaine bio de référence du Trentodoc, Maso Martis signe des bulles de montagne complexes et minérales, dont la cuvée Madame Martis. Pionnier du metodo classico biologique, c'est l'une des plus belles adresses de l'appellation.\n\nLe choix du bio, opéré tôt par Antonio et Roberta Stelzer, puis poursuivi par leurs filles, a fait de Maso Martis un précurseur dans un domaine — le metodo classico — où l'agriculture biologique reste rare et exigeante. Sur les pentes du Monte Calisio, au-dessus de Trente, le domaine a patiemment bâti une réputation d'excellence, fondée sur la finesse plutôt que sur le volume. L'attachement au Pinot Meunier, cépage discret et peu répandu en Italie, témoigne d'une sensibilité particulière et apporte à ses assemblages rondeur et complexité. Servis à l'apéritif, sur des poissons, des crustacés ou une cuisine gastronomique, les Trentodoc de Maso Martis séduisent par leur tension minérale et leur profondeur ; la cuvée Madame Martis, longuement vieillie, rivalise avec les plus belles bulles italiennes. La conduite familiale, le respect de l'altitude et du vivant, et la constance de la qualité font de Maso Martis un modèle du Trentodoc contemporain, à la fois artisanal et ambitieux, et l'une des adresses les plus respectées de l'appellation pour qui cherche des bulles de montagne authentiques et racées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Madame Martis Riserva",
+        "Brut",
+        "Dosaggio Zero",
+        "Rosé"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "trentodoc",
+        "bio",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-dorigati",
+      "nom": "Dorigati",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzocorona",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzocorona, au cœur de la Piana Rotaliana, Dorigati est une maison familiale historique, fondée en 1858 et aujourd'hui menée par la sixième génération. Sur ce terroir prestigieux du Campo Rotaliano, la famille conjugue depuis plus d'un siècle et demi la tradition du Teroldego et l'excellence du Trentodoc.\n\nLe domaine est l'une des grandes références du Teroldego Rotaliano : son Diedri, une Riserva issue des meilleures vignes et longuement élevée, est un rouge profond, structuré et de garde, aux arômes de fruits noirs, de violette et d'épices, considéré comme l'une des plus belles expressions du cépage. Côté bulles, le Methius (Trentodoc), élaboré avec un long vieillissement sur lies, est un metodo classico complexe et racé, régulièrement primé, qui place Dorigati parmi les grands noms de l'appellation. Le domaine signe aussi une gamme complète de vins trentins de belle facture. Ce double savoir-faire — grand cépage rouge autochtone et bulles de montagne de haut niveau — fait la singularité de Dorigati, à la croisée des deux gloires du Trentino. La taille humaine du domaine, restée familiale, garantit un soin artisanal et une belle régularité à tous les niveaux de la gamme.\n\nMaison historique de la Rotaliana (depuis 1858), Dorigati signe un grand Teroldego (Diedri) et un Trentodoc de référence (Methius). Ce double savoir-faire, entre cépage roi et bulles de montagne, en fait l'une des plus belles adresses du Trentino.\n\nTraverser six générations sans perdre son âme, tout en montant en gamme, est la marque des grandes maisons familiales : Dorigati incarne cette continuité au cœur de la Piana Rotaliana, ce petit amphithéâtre de graviers alpins considéré comme le grand cru du Teroldego. La famille y a toujours cru au potentiel de son cépage roi, à une époque où beaucoup le reléguaient au rang de vin de comptoir. Servi sur des viandes rouges, du gibier, de la polenta et des plats alpins ou des fromages affinés, le Teroldego Diedri déploie profondeur et structure, et se patine sur une décennie. Le Methius, lui, s'apprécie à l'apéritif ou sur une cuisine fine, illustrant la maîtrise du domaine dans l'art délicat du metodo classico. Cette capacité à exceller à la fois dans le grand rouge autochtone et dans les bulles de montagne, les deux fiertés du Trentino, est rare et distingue Dorigati. Restée à taille humaine, attachée à son terroir de Mezzocorona et à la transmission familiale, la maison conjugue tradition séculaire et exigence contemporaine, ce qui en fait l'une des adresses les plus complètes et les plus attachantes de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Diedri (Teroldego Riserva)",
+        "Methius (Trentodoc)",
+        "Teroldego Rotaliano"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "trentodoc",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-endrizzi",
+      "nom": "Endrizzi",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "San Michele all'Adige",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Michele all'Adige, dans la Piana Rotaliana, Endrizzi est un domaine historique (fondé en 1885), l'une des valeurs sûres du Teroldego. Sur ce terroir prestigieux du Campo Rotaliano, la famille Endrici cultive le cépage roi de la plaine avec une recherche de qualité.\n\nSa cuvée Gran Masetto, un Teroldego issu de raisins partiellement passerillés et longuement élevé, est un rouge concentré, profond et de garde, multiprimé, considéré comme l'une des grandes expressions du cépage. Le domaine signe aussi un Teroldego Rotaliano classique et une gamme complète (blancs, Trentodoc, rouges). Le style, moderne et soigné, met en valeur le Teroldego dans des vins structurés et fidèles au terroir. La qualité et la régularité de la production font d'Endrizzi une référence de la Rotaliana. C'est une belle adresse pour découvrir le Teroldego, du classique au grand vin de garde.\n\nDomaine historique de la Rotaliana, Endrizzi signe avec le Gran Masetto un Teroldego concentré et multiprimé. C'est une valeur sûre du grand cépage rouge du Trentino.\n\n L'ancienneté du domaine (plus de 135 ans) et son attachement au Teroldego en font un gardien de la tradition de la Rotaliana. Le Gran Masetto, par sa concentration et sa capacité de garde, a démontré que le Teroldego pouvait rivaliser avec de grands rouges. Servi sur des viandes rouges, du gibier, de la polenta ou des fromages affinés, il se patine sur une décennie. La régularité de la gamme, du Teroldego classique aux cuvées de prestige, fait d'Endrizzi une valeur sûre et une belle porte d'entrée dans le grand cépage rouge du Trentino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gran Masetto (Teroldego)",
+        "Teroldego Rotaliano",
+        "Piancastello"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-zeni-roberto-zeni",
+      "nom": "Zeni (Roberto Zeni)",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "San Michele all'Adige",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Nero",
+        "Nosiola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Michele all'Adige (Grumo), dans la Piana Rotaliana, Roberto Zeni mène un domaine familial réputé pour son Teroldego et son Trentodoc, ainsi que pour sa grappa. Sur le terroir du Campo Rotaliano, la famille cultive le cépage roi de la plaine avec soin.\n\nLe domaine signe des Teroldego Rotaliano soignés et fidèles au terroir, ainsi que le Maso Nero, un Trentodoc de belle facture, et des blancs (Nosiola, Pinot Nero). Réputée aussi pour sa distillerie (grappa de Teroldego), la maison conjugue tradition et qualité. Le style, précis et authentique, met en valeur le Teroldego et les cépages trentins. La régularité de la gamme et le savoir-faire familial font de Zeni une belle adresse de la Rotaliana, entre grand cépage rouge, bulles de montagne et art de la distillation. C'est une valeur sûre du Trentino.\n\nDomaine familial de la Rotaliana, Zeni signe de beaux Teroldego, un Trentodoc (Maso Nero) et une grappa réputée. C'est une belle adresse du grand cépage rouge trentin.\n\n La double compétence de la maison — vin et grappa — témoigne d'un savoir-faire complet, ancré dans la tradition de la Rotaliana. Servis sur des viandes et des plats de montagne pour le Teroldego, à l'apéritif pour le Maso Nero, les vins de Zeni séduisent par leur authenticité. L'attachement de Roberto Zeni à son terroir et aux cépages trentins, ainsi que la réputation de sa distillerie, font du domaine une adresse complète et attachante de la Piana Rotaliana, à découvrir pour le Teroldego comme pour la grappa.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Teroldego Rotaliano",
+        "Maso Nero (Trentodoc)",
+        "Pinot Nero"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "trentodoc"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-de-vescovi-ulzbach",
+      "nom": "de Vescovi Ulzbach",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzocorona",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzocorona, dans la Piana Rotaliana, de Vescovi Ulzbach est un domaine spécialiste du Teroldego, mené par Giulio de Vescovi. Sur le terroir du Campo Rotaliano, le domaine s'est fait une réputation pour la pureté et la finesse de ses rouges.\n\nSa cuvée Vigilius, un Teroldego issu des meilleures vignes, est un rouge racé et de terroir, expression fine et élégante du cépage, à rebours des versions rustiques ou surextraites. Le domaine signe aussi un Teroldego Rotaliano classique et le Terodela, dans un style précis qui privilégie l'authenticité et la fraîcheur. Le travail soigné à la vigne et en cave, la recherche d'élégance et le respect du terroir font de de Vescovi Ulzbach l'une des belles adresses artisanales de la Rotaliana. C'est un domaine pour les amateurs de Teroldego fin et racé, dans la lignée des meilleurs de la plaine.\n\nDomaine spécialiste du Teroldego à Mezzocorona, de Vescovi Ulzbach signe des rouges purs et racés (Vigilius). C'est une belle adresse artisanale du cépage roi de la Rotaliana.\n\n La quête de finesse de Giulio de Vescovi, à rebours des Teroldego rustiques ou surextraits d'autrefois, illustre le renouveau qualitatif du cépage. Servi sur des viandes rouges, du gibier ou des fromages, le Vigilius séduit par sa race et sa fraîcheur, et se patine sur plusieurs années. Le travail artisanal, le respect du terroir de la Rotaliana et la recherche d'élégance font de ce domaine confidentiel une adresse prisée des amateurs de Teroldego fin, dans la lignée des meilleurs de la plaine, aux côtés de Foradori.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigilius (Teroldego)",
+        "Teroldego Rotaliano",
+        "Terodela"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-trentino-prod-marco-donati",
+      "nom": "Marco Donati",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzocorona",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Moscato Rosa"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzocorona, dans la Piana Rotaliana, Marco Donati mène un domaine familial ancré dans la tradition du Teroldego. Sur le terroir du Campo Rotaliano, la famille cultive le cépage roi de la plaine, ainsi que quelques raretés.\n\nSa cuvée Sangue di Drago (« sang de dragon »), un Teroldego de vieilles vignes, est un rouge de belle facture, profond et fidèle au terroir. Le domaine signe aussi un Teroldego Rotaliano classique et le rare Moscato Rosa, un cépage aromatique qui donne un vin rosé délicatement parfumé, spécialité peu répandue. Le style, traditionnel et soigné, met en valeur le Teroldego et le patrimoine ampélographique de la plaine. La qualité et l'attachement aux cépages locaux font de Marco Donati une belle adresse de la Rotaliana. C'est un domaine pour découvrir le Teroldego de vieilles vignes et le rare Moscato Rosa.\n\nDomaine familial de Mezzocorona, Marco Donati signe de beaux Teroldego (Sangue di Drago) et un rare Moscato Rosa. C'est une belle adresse traditionnelle de la Rotaliana.\n\n L'attachement de la famille aux cépages du patrimoine, du Teroldego de vieilles vignes au rare Moscato Rosa, témoigne d'un beau souci de préservation. Servi sur des viandes et des plats de montagne, le Sangue di Drago séduit par sa profondeur ; le Moscato Rosa, délicatement parfumé, accompagne desserts et fromages. La fidélité de Marco Donati à la tradition de Mezzocorona et à la diversité ampélographique de la Rotaliana fait de ce domaine familial une belle adresse authentique, à découvrir pour ses raretés autant que pour son Teroldego.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sangue di Drago (Teroldego)",
+        "Teroldego Rotaliano",
+        "Moscato Rosa"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "teroldego",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-eugenio-rosi",
+      "nom": "Eugenio Rosi",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Volano",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Cabernet",
+        "Merlot",
+        "Nosiola"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Vigneti delle Dolomiti IGT",
+        "Trentino DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Volano, dans la Vallagarina, Eugenio Rosi est un vigneron nature culte, l'un des noms les plus respectés de la scène artisanale du Trentino. Sur un petit vignoble, il élabore des vins vivants et authentiques, en agriculture biologique et avec une intervention minimale.\n\nSa cuvée Poiema, un Marzemino partiellement passerillé et vinifié sans artifice, révèle une profondeur et une complexité rares pour ce cépage souvent cantonné à des vins légers. Il signe aussi l'Esegesi (assemblage bordelais et Marzemino) et l'Anisos (assemblage de blancs), dans un style nature qui privilégie la pureté, la buvabilité et l'expression du terroir. Les vinifications sans intrants, les levures indigènes et le respect du raisin donnent des vins d'une grande sincérité, très prisés des amateurs de vin nature. Eugenio Rosi est une référence du vin artisanal trentin et une belle expression du Marzemino de caractère.\n\nVigneron nature culte de la Vallagarina, Eugenio Rosi signe un Marzemino profond (Poiema) et de beaux assemblages authentiques. C'est une référence du vin artisanal et nature du Trentino.\n\n Figure respectée du vin nature italien, Eugenio Rosi a prouvé que le Marzemino, souvent réduit à un rouge léger et anodin, pouvait donner un vin profond et de caractère. Servis sur une cuisine de caractère, des viandes ou des fromages, ses vins vivants séduisent par leur pureté et leur énergie. L'intervention minimale, les levures indigènes et le respect du raisin, exigeants et sans filet, font de ses cuvées des vins d'auteur recherchés, et d'Eugenio Rosi l'une des références de la scène artisanale et nature du Trentino et d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poiema (Marzemino)",
+        "Esegesi",
+        "Anisos (blanc)"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "marzemino",
+        "nature",
+        "bio",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-prod-moser-cantine-monfort",
+      "nom": "Moser (Cantine Monfort)",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Trento",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trento, la maison Moser est l'une des références du Trentodoc, portée par une famille au nom célèbre : celle de Francesco Moser, légende du cyclisme italien et ancien recordman du monde de l'heure, aujourd'hui vigneron, épaulé par ses fils et ses cousins. Le domaine perpétue la tradition du metodo classico de montagne avec exigence.\n\nSur les coteaux d'altitude autour de Trento, la maison élabore des Trentodoc à partir de Chardonnay et de Pinot Nero, longuement vieillis sur lies, d'une belle finesse et d'une régularité constante. La cuvée 51,151 — clin d'œil au record de l'heure établi par Francesco Moser en 1984 (51,151 km) — et le Brut Nature comptent parmi ses expressions les plus abouties, aux côtés d'une gamme complète de bulles de montagne élégantes et racées. Le domaine, associé à la marque Cantine Monfort, conjugue l'image sportive de son fondateur et un vrai savoir-faire œnologique, salué par la critique. La fraîcheur de l'altitude trentine et le soin apporté aux élevages donnent des Trentodoc précis et gastronomiques. Entre notoriété médiatique et exigence qualitative, la maison Moser s'est imposée comme l'une des valeurs sûres et sympathiques du metodo classico trentin, fidèle à l'esprit de montagne de l'appellation.\n\nMaison de Trentodoc de la famille du champion cycliste Francesco Moser, elle signe des bulles de montagne élégantes et régulières (51,151, Brut Nature). C'est l'une des valeurs sûres du metodo classico trentin, entre notoriété et savoir-faire.\n\nL'histoire de la maison Moser tient à une reconversion peu banale : celle de Francesco Moser, l'un des plus grands cyclistes italiens, vainqueur de Paris-Roubaix et recordman du monde de l'heure, devenu vigneron sur les terres familiales des collines de Trente. Loin d'un simple produit dérivé de sa notoriété, le domaine s'est appuyé sur un vrai savoir-faire, transmis et perfectionné par les générations suivantes, pour s'imposer dans l'univers exigeant du Trentodoc. La cuvée 51,151, référence directe au record de l'heure de 1984, illustre ce trait d'union entre le sport et le vin. Servis à l'apéritif, sur des poissons, des crustacés ou une cuisine fine, les Trentodoc Moser séduisent par leur élégance, leur fraîcheur d'altitude et leur régularité. Le domaine, associé à la marque Cantine Monfort, a su transformer un capital d'image en crédibilité œnologique, salué par la critique spécialisée. Fidèle à l'esprit de montagne du metodo classico trentin, misant sur la finesse et la buvabilité, la maison Moser s'est fait une place durable parmi les valeurs sûres et sympathiques de l'appellation, appréciée autant des amateurs de bulles que du grand public séduit par la légende de son fondateur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trentodoc Brut Nature",
+        "51,151 (Trentodoc)",
+        "Rosé"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "trentodoc",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-trentino-prod-cesarini-sforza",
+      "nom": "Cesarini Sforza",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Trento",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trento, Cesarini Sforza est une maison réputée de Trentodoc, l'une des références du metodo classico trentin. Aujourd'hui adossée au groupe La Vis, elle perpétue une tradition d'excellence dans les bulles de montagne.\n\nLa maison élabore des Trentodoc à partir de Chardonnay et de Pinot Nero, longuement vieillis sur lies, d'une belle finesse et d'une régularité constante. Sa cuvée de prestige Tridentum Riserva et l'Aquila Reale Riserva, issues des meilleurs raisins de montagne, comptent parmi les plus belles expressions de l'appellation, aux côtés d'une gamme complète et accessible (1673 Brut). Le style, précis et gastronomique, met en valeur la fraîcheur et la tension des bulles trentines. La qualité constante et la diffusion de la maison en font une valeur sûre du Trentodoc. Cesarini Sforza est une belle adresse pour découvrir le metodo classico de montagne, de l'entrée de gamme aux grandes Riserva.\n\nMaison réputée de Trentodoc, Cesarini Sforza signe des bulles de montagne fiables et primées (Tridentum, Aquila Reale). C'est une valeur sûre du metodo classico trentin.\n\n L'adossement au groupe La Vis assure au domaine des moyens tout en préservant l'exigence de ses cuvées de prestige. Servis à l'apéritif, sur des poissons ou une cuisine fine, les Trentodoc de Cesarini Sforza séduisent par leur finesse et leur régularité. La cuvée Aquila Reale, issue d'un seul vignoble de montagne, illustre l'ambition de la maison. Entre gamme accessible et grandes Riserva, Cesarini Sforza offre un large éventail du metodo classico trentin et demeure une valeur sûre de l'appellation, bien diffusée et fiable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tridentum Riserva",
+        "Aquila Reale Riserva",
+        "1673 Brut"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "trentodoc",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "prowein|trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-abate-nero",
+      "nom": "Abate Nero",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Trento",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trento, Abate Nero est une petite maison de Trentodoc réputée pour la finesse et la régularité de ses bulles. Spécialisée dans le metodo classico, elle élabore des cuvées de montagne longuement élevées, avec un soin artisanal.\n\nÀ partir de Chardonnay et de Pinot Nero cultivés sur les coteaux d'altitude autour de Trente, la maison signe des Trentodoc élégants et tendus, dont la cuvée Domini Riserva et la Cuvée dell'Abate, longuement vieillies sur lies, comptent parmi les plus belles expressions de l'appellation. Le style, précis et racé, privilégie la finesse et la minéralité des bulles trentines. La taille humaine de la maison et son exigence qualitative en font une référence appréciée des amateurs de metodo classico. Abate Nero est une belle adresse pour découvrir des Trentodoc de caractère, à la fois élégants et gastronomiques, dans la grande tradition des bulles de montagne.\n\nPetite maison réputée de Trentodoc, Abate Nero signe des bulles de montagne élégantes et longuement élevées (Domini Riserva). C'est une belle adresse spécialisée du metodo classico trentin.\n\n La discrétion et l'exigence d'Abate Nero, qui privilégie la qualité au volume, en font une maison appréciée des connaisseurs. Les longs élevages sur lies donnent à ses Trentodoc une belle complexité et une maturité rare. Servis à l'apéritif, sur des poissons, des crustacés ou une cuisine gastronomique, ils séduisent par leur finesse et leur tension. Fidèle à l'esprit de montagne du metodo classico, misant sur l'élégance, Abate Nero s'est imposé comme l'une des belles maisons artisanales du Trentodoc, à découvrir pour ses cuvées Riserva racées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Domini Riserva",
+        "Cuvée dell'Abate",
+        "Trentodoc Brut"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "trentodoc",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-balter",
+      "nom": "Balter",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Rovereto",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rovereto, dans la Vallagarina, Balter est un domaine familial installé sur un ancien castelliere du XVIe siècle, réputé pour ses Trentodoc et ses rouges. Sur les coteaux du sud du Trentino, la famille Balter cultive un vignoble avec soin.\n\nLe domaine élabore de beaux Trentodoc, dont une Riserva longuement vieillie sur lies, d'une belle finesse, ainsi que des rouges de la Vallagarina (Cabernet, assemblages) et des blancs. Le style, soigné et régulier, conjugue l'excellence du metodo classico de montagne et la production de vins tranquilles de terroir. Le cadre historique du domaine et la qualité constante de la gamme en font une belle adresse familiale du sud du Trentino. Balter est une valeur sûre pour découvrir les bulles trentines et les rouges de la Vallagarina, dans un esprit artisanal et authentique.\n\nDomaine familial de Rovereto, Balter signe de beaux Trentodoc (Riserva) et des rouges de la Vallagarina. C'est une belle adresse du sud du Trentino, entre bulles de montagne et vins tranquilles.\n\n Le cadre historique du castelliere et l'attachement de la famille Balter à son terroir de Rovereto donnent au domaine une identité forte. Servis à l'apéritif pour les Trentodoc, sur des viandes pour les rouges de la Vallagarina, les vins séduisent par leur équilibre et leur régularité. La double production — bulles de montagne et vins tranquilles — et le soin artisanal font de Balter une belle adresse familiale du sud du Trentino, à découvrir pour ses Trentodoc de belle facture comme pour ses rouges de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Balter Riserva (Trentodoc)",
+        "Trentodoc Brut",
+        "Cabernet"
+      ],
+      "tags": [
+        "trentino",
+        "rovereto",
+        "trentodoc",
+        "vallagarina"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-gino-pedrotti",
+      "nom": "Gino Pedrotti",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "commune": "Cavedine",
+      "pays": "Italie",
+      "cepages": [
+        "Nosiola",
+        "Chardonnay",
+        "Schiava"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino Vino Santo DOC",
+        "Trentino DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cavedine, dans la Valle dei Laghi, Gino Pedrotti est un domaine bio de référence pour la Nosiola et le Vino Santo, les spécialités de cette vallée des lacs entre Trente et le lac de Garde. La famille perpétue une viticulture artisanale et respectueuse.\n\nEn agriculture biologique, le domaine élabore des Nosiola — ce cépage blanc autochtone, souvent vinifié en amphore, aux arômes de fruits secs et à la belle minéralité — ainsi que le rare et précieux Vino Santo Trentino, un vin doux de méditation issu de Nosiola longuement passerillée sur les claies (jusqu'aux fêtes de Pâques), d'une richesse et d'une complexité remarquables. Le domaine signe aussi des rouges (Schiava). Le style, bio et artisanal, met en valeur le patrimoine de la Valle dei Laghi. Gino Pedrotti est une référence de la Nosiola et du Vino Santo, à découvrir pour ces spécialités rares du Trentino.\n\nDomaine bio de la Valle dei Laghi, Gino Pedrotti est une référence de la Nosiola (en amphore) et du grand Vino Santo Trentino. C'est une belle adresse pour ces spécialités rares de la vallée des lacs.\n\n La Valle dei Laghi, balayée par l'Ora del Garda (le vent du lac), offre un microclimat idéal pour le passerillage de la Nosiola. Le Vino Santo, l'un des vins doux les plus rares d'Italie, demande des années de patience et un rendement infime. Servi sur des desserts, des fromages bleus ou en méditation, il séduit par sa richesse et sa complexité. L'engagement bio de Gino Pedrotti et son travail en amphore font de ce domaine une référence artisanale, gardienne des spécialités les plus précieuses de la vallée des lacs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vino Santo Trentino",
+        "Nosiola",
+        "Bianco di Toblino"
+      ],
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "vino-santo",
+        "bio",
+        "amphore"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-prod-pisoni-fratelli-pisoni",
+      "nom": "Pisoni (Fratelli Pisoni)",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "commune": "Pergolese",
+      "pays": "Italie",
+      "cepages": [
+        "Nosiola",
+        "Chardonnay",
+        "Teroldego"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino Vino Santo DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pergolese, dans la Valle dei Laghi, les Fratelli Pisoni mènent un domaine et une distillerie historiques, réputés pour le Vino Santo et le Trentodoc. Dans cette vallée des lacs au microclimat particulier, la famille perpétue des traditions anciennes.\n\nLe domaine élabore un grand Vino Santo Trentino, ce vin doux de méditation issu de Nosiola longuement passerillée, spécialité rare et précieuse de la Valle dei Laghi, ainsi qu'un Trentodoc de belle facture et des cuvées originales (Maso Gobbo). Réputée aussi pour sa grappa, la maison conjugue vin, bulles et distillation. Le style, traditionnel et soigné, met en valeur le patrimoine de la vallée. La qualité et l'attachement aux spécialités locales font de Pisoni une belle adresse de la Valle dei Laghi. C'est un domaine pour découvrir le Vino Santo, le Trentodoc et l'art de la distillation trentine.\n\nDomaine et distillerie historiques de la Valle dei Laghi, Pisoni signe un grand Vino Santo, un Trentodoc et une grappa réputée. C'est une belle adresse pour les spécialités de la vallée des lacs.\n\n L'histoire familiale, entre vigne et alambic, remonte à plusieurs générations et fait des Pisoni des gardiens du patrimoine de la Valle dei Laghi. Le Vino Santo, longuement passerillé et élevé, est un trésor rare, servi sur des desserts, des fromages ou en méditation. Le Trentodoc et les cuvées originales complètent une gamme identitaire. L'attachement aux traditions de la vallée des lacs et la double expertise du vin et de la grappa font de Pisoni une adresse complète et authentique du Trentino méridional.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vino Santo Trentino",
+        "Trentodoc",
+        "Maso Gobbo"
+      ],
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "vino-santo",
+        "trentodoc"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-pravis",
+      "nom": "Pravis",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "commune": "Lasino",
+      "pays": "Italie",
+      "cepages": [
+        "Nosiola",
+        "Müller-Thurgau",
+        "Rebo",
+        "Groppello"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lasino, dans la Valle dei Laghi, Pravis est un domaine attaché aux cépages autochtones et à la viticulture d'altitude. Dans cette vallée des lacs, la famille cultive un vignoble varié avec une recherche d'originalité et de qualité.\n\nLe domaine signe des Nosiola sèches (Le Frate), du Müller-Thurgau d'altitude et met à l'honneur des cépages rares ou anciens comme le Groppello, le Rebo (croisement Merlot-Teroldego) ou des sélections originales (Stravino di Stravino, Naran). Le style, soigné et curieux, met en valeur le patrimoine ampélographique de la Valle dei Laghi et la fraîcheur des vins d'altitude. Le travail sur les cépages autochtones et la diversité de la gamme font de Pravis une belle adresse originale du Trentino. C'est un domaine pour les amateurs de blancs de terroir et de cépages rares, à découvrir dans la vallée des lacs.\n\nDomaine de la Valle dei Laghi attaché aux cépages autochtones, Pravis signe des Nosiola, du Müller-Thurgau et des cépages rares (Groppello, Rebo). C'est une belle adresse originale du Trentino.\n\n La curiosité ampélographique de Pravis, qui exhume et valorise des cépages rares ou oubliés, en fait un domaine à part dans le paysage trentin. Servis sur des poissons, des fromages ou une cuisine légère, ses blancs d'altitude séduisent par leur fraîcheur et leur originalité. Le travail sur la Nosiola, le Groppello ou le Rebo témoigne d'un bel attachement au patrimoine de la Valle dei Laghi. C'est une adresse recherchée des amateurs de vins de terroir originaux et de cépages autochtones, à découvrir dans la vallée des lacs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Frate (Nosiola)",
+        "Stravino di Stravino",
+        "Naran"
+      ],
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "autochtone",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-vallarom",
+      "nom": "Vallarom",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Avio",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Cabernet",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Avio, à l'extrême sud du Trentino dans la basse Vallagarina, Vallarom est un petit domaine bio artisanal, réputé pour ses rouges et ses assemblages. Sur ce terroir méridional de la région, la famille Scienza cultive un vignoble en agriculture biologique.\n\nLe domaine signe des assemblages bordelais soignés (Campi Sarni, à base de Cabernet), du Marzemino — le cépage identitaire de la Vallagarina —, du Chardonnay et un Trentodoc, dans un style précis et respectueux du terroir. Le travail biologique, la taille humaine du domaine et le soin apporté aux vinifications donnent des vins authentiques et de belle facture. Lié à la famille du célèbre professeur d'ampélographie Attilio Scienza, le domaine conjugue savoir et artisanat. Vallarom est une belle adresse de la basse Vallagarina, à découvrir pour ses rouges bio et ses assemblages soignés.\n\nPetit domaine bio d'Avio, Vallarom signe des assemblages bordelais (Campi Sarni), du Marzemino et du Chardonnay soignés. C'est une belle adresse artisanale du sud du Trentino.\n\n Le lien avec Attilio Scienza, l'un des plus grands spécialistes mondiaux de l'ampélographie, imprègne le domaine d'une culture du cépage et du terroir. L'engagement bio et la taille humaine garantissent un soin artisanal. Servis sur des viandes pour les rouges, sur des poissons pour le Chardonnay, les vins de Vallarom séduisent par leur précision et leur authenticité. À l'extrême sud du Trentino, le domaine illustre le potentiel de la basse Vallagarina pour les assemblages bordelais et le Marzemino, dans un registre bio et soigné.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Campi Sarni (Cabernet)",
+        "Marzemino",
+        "Chardonnay"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "avio",
+        "marzemino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-trentino-prod-cavit",
+      "nom": "Cavit",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Trento",
+      "commune": "Trento",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Teroldego",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)",
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Trento, Cavit est l'immense consortium coopératif du Trentino, qui rassemble la majorité des vignerons de la région (une part considérable du vignoble). C'est l'un des plus grands acteurs du vin italien, très présent à l'export.\n\nSi Cavit produit d'énormes volumes de vins accessibles, le consortium soigne aussi des lignes de qualité, au premier rang desquelles Altemasi, sa gamme de Trentodoc : la cuvée Graal, longuement vieillie sur lies, est un metodo classico de belle facture, régulièrement primé, qui montre le savoir-faire de la coopérative dans les bulles de montagne. La ligne Bottega Vinai et d'autres sélections complètent une gamme très large. Le style, fiable et accessible, met en valeur les cépages trentins à toutes les gammes de prix. Cavit illustre le poids déterminant de la coopération dans le Trentino et sa capacité à conjuguer volume et qualité, notamment sur le Trentodoc avec Altemasi.\n\nImmense consortium coopératif du Trentino, Cavit produit à grande échelle mais soigne la ligne Altemasi (Trentodoc Graal), de belle facture. C'est un acteur majeur, entre volume et sélections de qualité.\n\n Le poids de Cavit dans l'économie viticole trentine est considérable, mais le consortium a su, avec Altemasi, prouver qu'il pouvait aussi viser l'excellence. Servi à l'apéritif ou sur une cuisine fine, le Graal rivalise avec de belles maisons de Trentodoc. Le rôle de Cavit, qui valorise les raisins d'une multitude de petits vignerons, est essentiel au maintien du vignoble trentin. Entre production de masse et lignes de qualité, le consortium illustre la force et la diversité de la coopération dans le Trentino, et reste une valeur sûre à tous les niveaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Altemasi Graal (Trentodoc)",
+        "Altemasi Brut",
+        "Bottega Vinai"
+      ],
+      "tags": [
+        "trentino",
+        "trento",
+        "cooperative",
+        "trentodoc",
+        "volume"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-trentino-prod-mezzacorona",
+      "nom": "Mezzacorona",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzocorona",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Nero",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzocorona, dans la Piana Rotaliana, Mezzacorona est l'une des grandes coopératives du Trentino, acteur majeur et très diffusé de la région. Sur le vaste vignoble de la plaine et au-delà, elle produit une gamme étendue de vins trentins.\n\nLa coopérative est un producteur important de Teroldego Rotaliano, qu'elle décline du vin accessible aux sélections Riserva, ainsi que de bulles sous la marque Rotari, l'un des plus gros producteurs de Trentodoc. Elle signe aussi une large gamme de blancs et rouges trentins (dont la ligne NOS). Si la production de volume domine, la coopérative soigne des sélections de qualité qui montrent le potentiel de ses meilleurs terroirs. Le style, fiable et accessible, met en valeur les cépages trentins à bon rapport qualité-prix. Mezzacorona illustre le poids des grandes coopératives dans l'économie viticole du Trentino et leur capacité à produire des vins réguliers à grande échelle.\n\nGrande coopérative de la Rotaliana, Mezzacorona produit du Teroldego et les bulles Rotari (Trentodoc) à grande échelle, avec des sélections de qualité. C'est un acteur majeur et diffusé du Trentino.\n\n La marque Rotari a fait de Mezzacorona l'un des plus gros producteurs de Trentodoc, démocratisant les bulles de montagne à grande échelle. Servis à l'apéritif pour les bulles, sur des viandes pour le Teroldego, les vins de la coopérative séduisent par leur fiabilité. Si le volume domine, les sélections Riserva montrent le potentiel des meilleurs terroirs. Acteur économique majeur du Trentino, Mezzacorona illustre la capacité des grandes coopératives à conjuguer diffusion, régularité et sélections de qualité, à un rapport qualité-prix attractif.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rotari (Trentodoc)",
+        "Teroldego Rotaliano Riserva",
+        "NOS"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "cooperative",
+        "teroldego",
+        "trentodoc"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-cantina-rotaliana-di-mezzolombardo",
+      "nom": "Cantina Rotaliana di Mezzolombardo",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Piana Rotaliana",
+      "commune": "Mezzolombardo",
+      "pays": "Italie",
+      "cepages": [
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Teroldego Rotaliano DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mezzolombardo, au cœur de la Piana Rotaliana, la Cantina Rotaliana est une coopérative gardienne du Teroldego Rotaliano, le grand cépage rouge de la plaine. Rassemblant de nombreux vignerons du Campo Rotaliano, elle est un acteur important de l'appellation.\n\nLa coopérative produit des Teroldego Rotaliano fiables et représentatifs, dont la cuvée Clesurae (Riserva), issue des meilleures vignes, offre une belle expression du terroir, ainsi qu'un Trentodoc et d'autres vins trentins. Le style, soigné pour une coopérative, met en valeur le Teroldego dans des vins accessibles et d'un bon rapport qualité-prix. L'ancrage au cœur de la Rotaliana et la qualité des sélections font de la Cantina Rotaliana une valeur sûre pour découvrir le Teroldego. C'est une belle porte d'entrée, à prix doux, dans le grand cépage rouge du Trentino.\n\nCoopérative au cœur de la Rotaliana, la Cantina Rotaliana est gardienne du Teroldego, avec de belles sélections (Clesurae). C'est une valeur sûre et abordable du grand cépage rouge trentin.\n\n Au cœur du Campo Rotaliano, considéré comme le grand cru du Teroldego, la coopérative bénéficie d'un terroir d'exception qu'elle valorise dans ses meilleures cuvées. Servi sur des viandes, de la polenta ou des fromages, le Clesurae séduit par sa structure et sa fidélité au terroir. Le rôle social et patrimonial de la coopérative, gardienne des vignes de nombreux petits vignerons, et la qualité de ses sélections en font une valeur sûre et une belle porte d'entrée, à prix doux, dans le Teroldego Rotaliano.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Clesurae (Teroldego Riserva)",
+        "Teroldego Rotaliano",
+        "Trentodoc"
+      ],
+      "tags": [
+        "trentino",
+        "rotaliana",
+        "cooperative",
+        "teroldego"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-la-vis",
+      "nom": "La Vis",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Val d'Adige",
+      "commune": "Lavis",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Grigio",
+        "Müller-Thurgau",
+        "Teroldego"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Trento DOC (Trentodoc)",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lavis, au nord de Trente, La Vis est une coopérative importante du Trentino, réputée pour sa gamme complète de blancs et de rouges. Rassemblant de nombreux vignerons, elle valorise les terroirs de la vallée de l'Avisio et au-delà.\n\nLa coopérative produit une large gamme de vins trentins — Chardonnay, Pinot Grigio, Müller-Thurgau, Teroldego — déclinée en plusieurs lignes, dont Ritratti et Simboli, qui montrent le potentiel de ses meilleurs terroirs, ainsi qu'un Trentodoc. Le style, fiable et soigné pour une coopérative, met en valeur les cépages trentins, notamment les blancs de montagne, dans des vins accessibles et d'un bon rapport qualité-prix. La qualité des sélections et la diversité de la gamme font de La Vis une valeur sûre du Trentino. C'est une belle adresse pour découvrir les vins trentins, en particulier les blancs, à prix doux.\n\nCoopérative importante de Lavis, La Vis produit une gamme complète de blancs et rouges trentins (lignes Ritratti, Simboli). C'est une valeur sûre et abordable, notamment pour les blancs de montagne.\n\n La coopérative valorise notamment les terroirs d'altitude de la vallée de l'Avisio, propices aux blancs de montagne. Servis sur des poissons, des fromages ou une cuisine légère, les blancs de La Vis séduisent par leur fraîcheur ; les rouges (Teroldego) accompagnent viandes et plats de montagne. Les lignes Ritratti et Simboli montrent le potentiel qualitatif de la coopérative. Acteur important du Trentino, La Vis illustre la capacité des coopératives à produire une gamme complète et fiable, à bon rapport qualité-prix, notamment sur les blancs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ritratti",
+        "Simboli",
+        "Trentodoc"
+      ],
+      "tags": [
+        "trentino",
+        "lavis",
+        "cooperative",
+        "blanc",
+        "volume"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-cantina-toblino",
+      "nom": "Cantina Toblino",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Valle dei Laghi",
+      "commune": "Sarche",
+      "pays": "Italie",
+      "cepages": [
+        "Nosiola",
+        "Chardonnay",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Trentino Vino Santo DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sarche, dans la Valle dei Laghi, la Cantina Toblino est une coopérative gardienne de la Nosiola et du Vino Santo, les spécialités de cette vallée des lacs entre Trente et le lac de Garde. Rassemblant de nombreux vignerons, elle valorise le patrimoine viticole local, en partie en agriculture biologique. La coopérative signe des blancs de terroir (Nosiola, Pinot Bianco Pràal, Müller-Thurgau) et surtout le rare Vino Santo Trentino, ce vin doux de méditation issu de Nosiola longuement passerillée, d'une richesse remarquable. Le style, soigné pour une coopérative et de plus en plus tourné vers le bio, met en valeur la Nosiola et les cépages de la vallée. La Cantina Toblino est une belle porte d'entrée dans les spécialités de la Valle dei Laghi, à bon rapport qualité-prix, à découvrir notamment pour son Vino Santo et ses blancs frais, sur des poissons ou en fin de repas.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vino Santo Trentino",
+        "Pràal (Pinot Bianco)",
+        "Nosiola"
+      ],
+      "tags": [
+        "trentino",
+        "valle-dei-laghi",
+        "nosiola",
+        "vino-santo",
+        "cooperative",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jamessuckling|italianwineselection"
+    },
+    {
+      "id": "it-trentino-prod-cantina-disera",
+      "nom": "Cantina d'Isera",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Isera",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Isera, dans la Vallagarina, la Cantina d'Isera est une coopérative historique, fief du Marzemino, le cépage identitaire du sud du Trentino, cher à Mozart (qui le cite dans Don Giovanni). Rassemblant les vignerons d'Isera, elle est la gardienne de ce cépage. La coopérative signe un Marzemino d'Isera réputé, rouge frais, fruité et parfumé (arômes de violette et de fruits rouges), à boire jeune sur sa gourmandise, ainsi que des blancs, un Trentodoc et d'autres vins de la Vallagarina. Le style, fiable et fidèle au terroir, met en valeur le Marzemino dans des vins accessibles et identitaires. La Cantina d'Isera est une valeur sûre pour découvrir ce cépage emblématique de la Vallagarina, à découvrir sur une cuisine légère, des charcuteries ou des plats de montagne, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Marzemino d'Isera",
+        "Trentodoc",
+        "Cimalta"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "isera",
+        "marzemino",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "tasteatlas"
+    },
+    {
+      "id": "it-trentino-prod-cantina-mori-colli-zugna",
+      "nom": "Cantina Mori Colli Zugna",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Mori",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Chardonnay",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Mori, dans la basse Vallagarina, la Cantina Mori Colli Zugna est une coopérative du sud du Trentino, réputée pour son Marzemino et sa gamme complète. Rassemblant les vignerons du secteur, au pied du Monte Zugna, elle valorise les terroirs de la vallée. La coopérative produit du Marzemino, des blancs (Chardonnay), des rouges (Cabernet) et d'autres vins trentins, dans un style fiable et accessible. Le Ràno et d'autres sélections montrent le potentiel de ses meilleurs terroirs. Le style, soigné pour une coopérative, met en valeur les cépages de la Vallagarina à bon rapport qualité-prix. La Cantina Mori Colli Zugna est une valeur sûre du sud du Trentino, à découvrir pour son Marzemino et sa gamme variée, sur une cuisine conviviale et des plats de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Marzemino",
+        "Ràno",
+        "Chardonnay"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "mori",
+        "marzemino",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-concilio",
+      "nom": "Concilio",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Volano",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Teroldego",
+        "Chardonnay",
+        "Pinot Grigio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Volano, dans la Vallagarina, Concilio est une maison à la production diversifiée, ancrée dans le sud du Trentino. Sur les terroirs de la vallée de l'Adige, elle valorise une large gamme de cépages trentins. La maison signe du Marzemino, du Teroldego, des blancs (Chardonnay, Pinot Grigio) et un Trentodoc, dans un style fiable et accessible. La diversité de la gamme et la bonne diffusion en font une valeur sûre de la Vallagarina. Le style, net et représentatif, met en valeur les cépages trentins à bon rapport qualité-prix. Concilio est une belle adresse pour découvrir la variété des vins du sud du Trentino, du Marzemino aux bulles de montagne, dans un registre accessible et convivial, sur une cuisine variée. L'ancienneté de la maison et la largeur de sa gamme en font un acteur fiable de la Vallagarina, capable de proposer aussi bien des cépages autochtones comme le Marzemino que des bulles de montagne, à des prix accessibles qui en font une belle porte d'entrée dans les vins du sud du Trentino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Marzemino",
+        "Teroldego",
+        "Trentodoc"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "volano",
+        "marzemino"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-revi",
+      "nom": "Revì",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Aldeno",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aldeno, dans la Vallagarina, Revì est une petite maison de Trentodoc spécialisée dans le metodo classico de montagne. Sur les coteaux du sud du Trentino, elle élabore des bulles avec un soin artisanal.\n\nÀ partir de Chardonnay et de Pinot Nero, la maison signe des Trentodoc soignés et réguliers, dont une Riserva longuement vieillie sur lies et un Rosé, d'une belle finesse. Le style, précis et gastronomique, met en valeur la fraîcheur et la tension des bulles trentines. La taille humaine de la maison et sa spécialisation dans le Trentodoc en font une belle adresse pour les amateurs de metodo classico. Revì illustre la vitalité de l'appellation, portée aussi par de petites maisons dédiées et exigeantes. C'est une valeur sûre pour découvrir les bulles de montagne du Trentino, dans un esprit artisanal.\n\nPetite maison de Trentodoc à Aldeno, Revì signe des bulles de montagne soignées et régulières. C'est une belle adresse spécialisée du metodo classico trentin.\n\n La spécialisation exclusive de Revì dans le metodo classico et sa taille humaine garantissent un soin artisanal à chaque cuvée. Les longs élevages sur lies donnent à ses Trentodoc finesse et complexité. Servis à l'apéritif, sur des poissons ou une cuisine fine, ils séduisent par leur élégance et leur fraîcheur de montagne. Revì illustre la vitalité de l'appellation Trentodoc, portée par de petites maisons dédiées, et constitue une belle adresse pour les amateurs de bulles trentines authentiques et bien faites, à un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Revì Brut (Trentodoc)",
+        "Revì Riserva",
+        "Rosé"
+      ],
+      "tags": [
+        "trentino",
+        "aldeno",
+        "trentodoc",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-madonna-delle-vittorie",
+      "nom": "Madonna delle Vittorie",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Alto Garda",
+      "commune": "Riva del Garda",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Casetta"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Riva del Garda, sur l'Alto Garda au sud-ouest du Trentino, Madonna delle Vittorie est un domaine de la famille Marzadro, au bord du lac de Garde. Ce terroir singulier, entre montagne et climat quasi méditerranéen adouci par le lac, donne des vins d'une belle personnalité. Le domaine signe un Trentodoc, des blancs (Chardonnay) et des rouges, dont le rare Casetta, cépage autochtone local, dans un style soigné qui met en valeur l'influence du lac. L'huile d'olive, autre spécialité de l'Alto Garda, complète la production. Le cadre unique au bord du Garde et la qualité de la gamme font de Madonna delle Vittorie une belle adresse du sud-ouest du Trentino, à découvrir pour ses vins de terroir lacustre et son Trentodoc, dans un décor spectaculaire entre montagne et lac.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Trentodoc Brut",
+        "Chardonnay",
+        "Casetta"
+      ],
+      "tags": [
+        "trentino",
+        "alto-garda",
+        "riva-del-garda",
+        "trentodoc"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    },
+    {
+      "id": "it-trentino-prod-villa-corniole",
+      "nom": "Villa Corniole",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Val di Cembra",
+      "commune": "Verla di Giovo",
+      "pays": "Italie",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Nero",
+        "Müller-Thurgau",
+        "Teroldego"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Trento DOC (Trentodoc)",
+        "Trentino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Verla di Giovo, dans la Val di Cembra, Villa Corniole est un domaine réputé pour ses vins d'altitude sur les spectaculaires terrasses de porphyre de la vallée. Dans ce paysage escarpé, la famille cultive un vignoble de montagne avec soin.\n\nLe domaine signe un Trentodoc (Salisa), issu des raisins de montagne longuement vieillis, ainsi que des blancs d'altitude (Müller-Thurgau) et des rouges (Teroldego), dans un style qui met en valeur la fraîcheur et la minéralité du terroir de porphyre de la Val di Cembra. Le travail en terrasses, la viticulture héroïque et la qualité de la gamme font de Villa Corniole une belle expression de la vallée du Cembra, l'un des terroirs les plus escarpés du Trentino. C'est une belle adresse pour découvrir les bulles et les blancs d'altitude de cette vallée spectaculaire.\n\nDomaine de la Val di Cembra en terrasses de porphyre, Villa Corniole signe un Trentodoc (Salisa) et des blancs d'altitude. C'est une belle expression du terroir escarpé de la vallée du Cembra.\n\n La viticulture en terrasses de porphyre de la Val di Cembra, l'une des plus escarpées et héroïques du Trentino, donne des vins d'une fraîcheur et d'une minéralité rares. Servis à l'apéritif pour le Trentodoc, sur des poissons pour les blancs, les vins de Villa Corniole séduisent par leur tension d'altitude. Le travail difficile en terrasses et l'attachement au terroir de porphyre font de ce domaine une belle expression de la vallée du Cembra, l'un des terroirs les plus spectaculaires et les plus originaux de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Salisa (Trentodoc)",
+        "Müller-Thurgau",
+        "Teroldego"
+      ],
+      "tags": [
+        "trentino",
+        "val-di-cembra",
+        "trentodoc",
+        "porphyre",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-zanotelli",
+      "nom": "Zanotelli",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Val di Cembra",
+      "commune": "Cembra",
+      "pays": "Italie",
+      "cepages": [
+        "Müller-Thurgau",
+        "Chardonnay",
+        "Schiava",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Trento DOC (Trentodoc)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cembra, dans la Val di Cembra, Zanotelli est un domaine familial réputé pour ses vins d'altitude sur les terrasses de porphyre de la vallée. Dans ce paysage escarpé et spectaculaire, la famille cultive un vignoble de montagne. Le domaine signe du Müller-Thurgau (spécialité de la Val di Cembra), des blancs d'altitude, un Trentodoc et des rouges légers (Schiava, Pinot Nero), dans un style qui met en valeur la fraîcheur et la minéralité du terroir de porphyre. Le travail en terrasses, la viticulture héroïque et la qualité de la gamme font de Zanotelli une belle expression de la Val di Cembra. C'est une adresse à découvrir pour le Müller-Thurgau d'altitude et les vins de cette vallée escarpée, sur des poissons ou une cuisine de montagne, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Müller-Thurgau",
+        "Pinèt",
+        "Trentodoc"
+      ],
+      "tags": [
+        "trentino",
+        "val-di-cembra",
+        "muller-thurgau",
+        "altitude",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "prowein"
+    },
+    {
+      "id": "it-trentino-prod-cantina-aldeno",
+      "nom": "Cantina Aldeno",
+      "type": "domaine",
+      "region": "Trentino",
+      "sous_region": "Vallagarina",
+      "commune": "Aldeno",
+      "pays": "Italie",
+      "cepages": [
+        "Marzemino",
+        "Chardonnay",
+        "Teroldego"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Trentino DOC",
+        "Vigneti delle Dolomiti IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Aldeno, dans la Vallagarina, la Cantina Aldeno est une coopérative historique du sud du Trentino, réputée pour son Marzemino et sa gamme complète. Rassemblant les vignerons du secteur, elle valorise les terroirs de la vallée de l'Adige. La coopérative signe du Marzemino, des blancs (Chardonnay), un Trentodoc et d'autres vins trentins (dont la ligne Athesis), dans un style fiable et accessible. Le style, soigné pour une coopérative, met en valeur les cépages de la Vallagarina à bon rapport qualité-prix. La Cantina Aldeno est une valeur sûre du sud du Trentino, à découvrir pour son Marzemino et sa gamme variée, sur une cuisine conviviale et des plats de terroir, dans un registre accessible et représentatif de la vallée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Marzemino",
+        "Athesis",
+        "Trentodoc"
+      ],
+      "tags": [
+        "trentino",
+        "vallagarina",
+        "aldeno",
+        "marzemino",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "trentodoc"
+    }
+  ]
+}

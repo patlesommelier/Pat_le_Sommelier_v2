@@ -1,0 +1,1478 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "marche",
+  "region_label": "Marche (Italie)",
+  "source_file": "producteurs_marche.json",
+  "built_at": "2026-07-08",
+  "count": 34,
+  "items": [
+    {
+      "id": "it-marche-prod-bucci-villa-bucci",
+      "nom": "Bucci (Villa Bucci)",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Ostra Vetere",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Rosso Piceno DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ostra Vetere, au cœur des Castelli di Jesi, Bucci est le domaine qui a fait du Verdicchio un grand vin de garde et l'une des références absolues du blanc italien. La famille cultive la terre dans les Marche depuis le XVIIIe siècle, mais c'est Ampelio Bucci, figure visionnaire disparue récemment, qui a écrit la légende du domaine à partir des années 1980.\n\nÀ contre-courant d'une région qui produisait alors du Verdicchio bon marché dans des bouteilles en forme d'amphore, Ampelio Bucci a fait le pari radical de la qualité : rendements réduits, vieilles vignes préservées, agriculture biologique adoptée très tôt. Son Villa Bucci Riserva, issu des meilleures parcelles et élevé en grands foudres de chêne de Slavonie, est devenu un vin culte : un Verdicchio d'une profondeur, d'une complexité et d'une longévité exceptionnelles, aux arômes d'amande, de tilleul, d'anis et de camomille, qui vieillit magnifiquement sur une à deux décennies et a prouvé au monde entier que ce cépage pouvait rivaliser avec les plus grands blancs. Le domaine signe aussi un Verdicchio Classico plus immédiat et un Villa Bucci Rosso (Montepulciano-Sangiovese). En 2024, Ampelio Bucci ayant disparu, le domaine a été repris par la famille Veronesi, mais l'équipe technique (Gabriele Tànfani et Gianni Gasperi) et le style sont maintenus, assurant la continuité de ce joyau. Le Villa Bucci demeure la pierre de touche du Verdicchio et un monument du vin italien.\n\nLE domaine qui a fait du Verdicchio un grand vin de garde, Bucci signe avec le Villa Bucci Riserva l'un des blancs les plus profonds et longévifs d'Italie. C'est une référence absolue, pionnière du bio et pierre de touche du cépage.\n\nL'histoire de Bucci est celle d'un homme seul contre son époque : quand les Marche noyaient le Verdicchio dans des bouteilles-amphores vendues au litre, Ampelio Bucci — par ailleurs consultant en mode à Milan, esthète et esprit libre — a choisi de faire l'inverse : peu de bouteilles, beaucoup d'exigence, et un pari sur le temps long. Le recours au grand foudre, plutôt qu'à la barrique, laisse le Verdicchio s'exprimer sans le masquer, dans une quête de pureté et d'authenticité. Servi sur des poissons, des crustacés, du brodetto (la soupe de poisson adriatique) ou une volaille, le Villa Bucci Riserva séduit d'abord par sa finesse, puis se révèle au vieillissement : après dix ans et plus, il développe des notes de fruits secs, de miel, d'hydrocarbure et d'épices dignes des plus grands blancs de garde. Ce fut la démonstration qui a changé le regard du monde sur le Verdicchio, longtemps méprisé, et inspiré toute une génération de vignerons des Marche. La disparition d'Ampelio et la reprise par la famille Veronesi en 2024 ouvrent un nouveau chapitre, mais avec la même équipe et la même philosophie : Villa Bucci reste le vin auquel on compare tous les autres Verdicchio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Villa Bucci Riserva (Verdicchio)",
+        "Verdicchio Classico",
+        "Villa Bucci Rosso"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "bio",
+        "reference",
+        "icone",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "decanter|vinous|gamberorosso"
+    },
+    {
+      "id": "it-marche-prod-umani-ronchi",
+      "nom": "Umani Ronchi",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Osimo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano",
+        "Cabernet",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Conero Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Rosso Conero DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Osimo, près d'Ancône, Umani Ronchi est l'un des grands domaines des Marche, sacré Winery of the Year 2024 par le Gambero Rosso. Fondé au milieu du XXe siècle et développé par la famille Bianchi-Bernetti, il a joué un rôle majeur dans la reconnaissance internationale des vins de la région, tout en atteignant une taille considérable (environ 220 hectares, entièrement en bio).\n\nLe domaine excelle à la fois en blanc et en rouge. En Verdicchio, il signe des cuvées de référence : le Casal di Serra et surtout le Vecchie Vigne (vieilles vignes) et le Plenio Riserva, des blancs riches, profonds et de garde. En rouge, sur le Monte Conero, il produit d'excellents Rosso Conero, dont le Cùmaro (Conero Riserva, 100 % Montepulciano), ainsi que le célèbre Pelago, un « super-marchigiano » (Montepulciano, Cabernet, Merlot) qui remporta le International Wine Challenge de Londres en 1997, plaçant Umani Ronchi et les Marche sur la carte mondiale. La gamme, de l'entrée de gamme fiable aux grandes cuvées d'élite, allie volume et qualité, le tout en agriculture biologique. Le domaine opère aussi dans les Abruzzes voisines. Par son ambition, sa régularité et son rayonnement, Umani Ronchi est l'un des ambassadeurs majeurs du vin des Marche.\n\nGrand domaine bio des Marche (Winery of the Year 2024), Umani Ronchi excelle en Verdicchio (Vecchie Vigne, Plenio) et en Conero (Cùmaro), et signe le fameux Pelago. C'est un ambassadeur majeur de la région, entre volume et élite.\n\nLa force d'Umani Ronchi est d'avoir prouvé qu'un grand domaine pouvait conjuguer volume et excellence, sans jamais sacrifier l'un à l'autre. La conversion de l'ensemble du vignoble à l'agriculture biologique, sur une aussi vaste surface, illustre cette ambition. Le triomphe du Pelago à Londres en 1997 fut un tournant : il révéla au monde que les Marche pouvaient produire des rouges de niveau international, à une époque où seule la Toscane comptait. Servis sur des poissons et des crustacés pour les Verdicchio, sur des viandes rouges, du gibier ou des fromages affinés pour les Conero et le Pelago, les vins d'Umani Ronchi séduisent par leur régularité et leur profondeur ; les grandes cuvées se patinent sur une décennie. Le domaine a aussi accompagné la reconnaissance du Conero, ce terroir de Montepulciano sur les pentes calcaires du promontoire adriatique. Par son rôle d'ambassadeur, son exigence et sa capacité à faire rayonner les Marche à l'export, Umani Ronchi occupe une place centrale dans le paysage viticole de la région, saluée par la consécration du Gambero Rosso en 2024.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pelago (Marche Rosso)",
+        "Cùmaro (Conero Riserva)",
+        "Vecchie Vigne (Verdicchio)",
+        "Plenio"
+      ],
+      "tags": [
+        "marche",
+        "conero",
+        "verdicchio",
+        "montepulciano",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "stefangourmet|gamberorosso"
+    },
+    {
+      "id": "it-marche-prod-la-monacesca",
+      "nom": "La Monacesca",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Matelica",
+      "commune": "Matelica",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio di Matelica Riserva DOCG",
+        "Verdicchio di Matelica DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Matelica, dans la vallée intérieure de l'ouest des Marche, La Monacesca est le domaine phare de la seconde zone du Verdicchio et l'un des plus grands producteurs de ce cépage. Loin de la côte adriatique, dans cette vallée continentale cernée par les Apennins, la famille Cifola cultive un terroir unique, à plus de 350 mètres d'altitude.\n\nContrairement au Verdicchio de Jesi, plus rond et salin sous l'influence maritime, celui de Matelica est plus minéral, tendu et vertical, marqué par les fortes amplitudes thermiques et les sols riches en minéraux de cette vallée fermée. La Monacesca en donne l'expression la plus aboutie : le Mirum, un Verdicchio di Matelica Riserva issu des meilleures vignes, est considéré comme l'un des plus grands Verdicchio d'Italie, un blanc profond, complexe et d'une longévité remarquable, aux arômes d'agrumes, d'herbes de montagne, d'amande et de miel. Le domaine signe aussi un Verdicchio di Matelica « classique » d'un excellent niveau et l'Ecclesia. La régularité, la pureté et la capacité de garde de ses vins ont fait de La Monacesca la référence incontestée de Matelica et l'un des noms qui comptent pour le Verdicchio dans son ensemble. C'est le domaine à connaître pour découvrir la face minérale et continentale de ce grand cépage blanc.\n\nDomaine phare de Matelica, La Monacesca signe avec le Mirum l'un des plus grands Verdicchio d'Italie, minéral, tendu et de longue garde. C'est la référence incontestée de la face continentale du cépage.\n\nLe débat Jesi contre Matelica rappelle celui qui oppose Barolo et Barbaresco : un même cépage, deux terroirs, deux visages. La Monacesca incarne le versant matelicais, plus rare (Matelica ne compte qu'une poignée de producteurs) et plus confidentiel, mais dont les meilleurs vins atteignent des sommets de minéralité et de longévité. La situation de Matelica, vallée fermée à haute altitude et au climat continental marqué, prolonge la maturation et concentre les arômes. Servi sur des poissons, des crustacés, du vincisgrassi (la lasagne locale) ou une volaille, le Mirum séduit par sa tension et sa profondeur, et se patine sur dix à quinze ans, développant des notes de miel, de fruits secs et d'hydrocarbure comparables à celles d'un grand Riesling. La régularité de La Monacesca, millésime après millésime, a fait du Mirum une référence recherchée des amateurs de Verdicchio, et a démontré que Matelica méritait sa place aux côtés de Jesi. Le domaine reste le porte-drapeau de cette petite vallée, dont il exprime avec constance le caractère minéral et vertical, à contre-courant des Verdicchio plus solaires de la côte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mirum (Verdicchio di Matelica Riserva)",
+        "Verdicchio di Matelica",
+        "Ecclesia"
+      ],
+      "tags": [
+        "marche",
+        "matelica",
+        "verdicchio",
+        "minéral",
+        "garde",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "decanter|italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-oasi-degli-angeli",
+      "nom": "Oasi degli Angeli",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Cupra Marittima",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Bordò (Grenache)"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Marche IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cupra Marittima, dans le sud des Marche, Oasi degli Angeli est un domaine culte, célèbre pour l'un des rouges les plus rares et les plus recherchés d'Italie : le Kurni. Marco Casolanetti et Eleonora Rossi y mènent, depuis les années 1990, une viticulture extrême et sans concession, en agriculture biologique.\n\nLe Kurni est un Montepulciano hors norme : issu de vignes conduites en très haute densité et à des rendements minuscules (parmi les plus bas d'Italie), vinifié et élevé avec une recherche de concentration maximale, c'est un rouge opulent, dense, riche et puissant, à la fois généreux et profond, qui a acquis un statut culte auprès des amateurs du monde entier. Produit en quantités limitées, il atteint des prix élevés et se fait rare. Le domaine signe aussi une version passito du Kurni et l'Aleph. Le style, résolument moderne et concentré, tranche avec les vins plus classiques de la région, et divise parfois la critique, mais la singularité et la qualité du Kurni en font une expérience à part, symbole du potentiel du Montepulciano dans le sud des Marche. Oasi degli Angeli est ainsi devenu une véritable légende, un domaine confidentiel et recherché, à la démarche radicale.\n\nDomaine culte du sud des Marche, Oasi degli Angeli signe le Kurni, un Montepulciano opulent, concentré et rare, en très faible rendement bio. C'est l'un des rouges les plus recherchés et légendaires d'Italie.\n\nLa démarche de Marco Casolanetti relève presque de l'obsession : densité de plantation extrême, rendements proches de zéro, refus de tout compromis, dans une quête de concentration qui fait du Kurni un vin unique en Italie. Ce parti pris radical, à l'opposé de la tradition légère des Marche, a d'abord surpris avant de séduire une clientèle de connaisseurs prête à chercher (et à payer) ce vin rare. Servi sur des viandes rouges puissantes, du gibier ou des fromages très affinés, le Kurni déploie une richesse et une densité impressionnantes, sur un registre opulent et velouté qui masque sa puissance. Sa capacité de garde est réelle, même si le vin séduit déjà dans sa jeunesse par son exubérance. Le couple Casolanetti-Rossi a aussi joué un rôle dans la redécouverte de cépages autochtones rares et dans le soutien à d'autres vignerons de la région. Objet de culte, parfois contesté pour son style hors norme, le Kurni n'en demeure pas moins l'un des vins italiens les plus recherchés et les plus emblématiques du potentiel du Montepulciano dans le sud des Marche, symbole d'une viticulture de l'extrême portée par une conviction sans faille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Kurni (Montepulciano)",
+        "Kurni Passito",
+        "Aleph"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "montepulciano",
+        "culte",
+        "bio",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-garofoli",
+      "nom": "Garofoli",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Castelfidardo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Conero Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelfidardo, près d'Ancône, Garofoli est l'une des plus anciennes maisons familiales des Marche, fondée en 1901, et une référence historique du Verdicchio comme du Rosso Conero. Sur cinq générations, la famille a bâti une réputation d'excellence et de régularité.\n\nEn Verdicchio, Garofoli signe des cuvées de haut niveau : le Podium, un Verdicchio dei Castelli di Jesi Superiore élevé sur lies, riche et de garde, et le Serra Fiorese, une Riserva élevée en bois, parmi les plus ambitieuses de l'appellation. La maison est aussi pionnière du Verdicchio en metodo classico, avec de superbes bulles de longue maturation. En rouge, elle produit d'excellents Rosso Conero (Grosso Agontano, Piancarda), à base de Montepulciano. Le style, précis et abouti, conjugue tradition et maîtrise technique. La longévité de la maison, la largeur de sa gamme et sa régularité en font l'un des piliers du vin des Marche. Garofoli est une belle adresse pour découvrir toute la palette régionale, du grand Verdicchio de garde aux bulles et au Rosso Conero.\n\nUne des plus anciennes maisons des Marche (1901), Garofoli signe de grands Verdicchio (Podium, Serra Fiorese), des metodo classico et de beaux Rosso Conero. C'est une référence historique et complète de la région.\n\n Plus d'un siècle d'histoire familiale confère à Garofoli une profondeur d'expérience rare dans la région. Servis sur des poissons et fruits de mer pour les Verdicchio et les bulles, sur des viandes rouges et du gibier pour le Rosso Conero, ses vins séduisent par leur régularité ; les grandes cuvées se patinent sur une décennie. La maison est un repère fiable pour explorer toute la palette des Marche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Podium (Verdicchio)",
+        "Serra Fiorese (Verdicchio Ris.)",
+        "Grosso Agontano (Conero)"
+      ],
+      "tags": [
+        "marche",
+        "verdicchio",
+        "conero",
+        "historique",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "decanter|stefangourmet"
+    },
+    {
+      "id": "it-marche-prod-sartarelli",
+      "nom": "Sartarelli",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Poggio San Marcello",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Poggio San Marcello, dans les Castelli di Jesi, Sartarelli est un domaine entièrement dédié au Verdicchio, spécialiste incontournable du cépage. La famille Sartarelli cultive un vignoble consacré à cette seule variété, qu'elle décline dans toute sa palette.\n\nSa cuvée emblématique, le Balciana, est un Verdicchio issu d'une vendange tardive de raisins parfois botrytisés : un blanc riche, opulent et complexe, aux arômes de fruits mûrs, de miel et d'épices, l'un des Verdicchio secs les plus réputés et les plus originaux d'Italie. Le domaine signe aussi le Tralivio (Superiore) et un Verdicchio Classico d'excellent niveau, ainsi qu'un musée dédié au cépage. Le style, soigné et expressif, met en valeur la richesse et l'aromatique du Verdicchio de Jesi. La spécialisation totale, la qualité constante et l'originalité du Balciana ont fait de Sartarelli une référence du cépage. C'est une adresse à connaître pour découvrir le Verdicchio dans ses expressions les plus abouties, du frais au riche.\n\nDomaine 100 % dédié au Verdicchio, Sartarelli signe avec le Balciana (vendange tardive) l'un des Verdicchio les plus réputés et originaux d'Italie. C'est un spécialiste incontournable du cépage.\n\n Le pari du Balciana — un Verdicchio riche issu de raisins surmûris, parfois botrytisés — a montré une facette insoupçonnée du cépage. Servis sur des poissons, des crustacés ou une cuisine relevée, les Verdicchio de Sartarelli séduisent par leur intensité aromatique. La spécialisation totale du domaine sur une seule variété en fait un véritable laboratoire du Verdicchio, salué par la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Balciana (Verdicchio)",
+        "Tralivio",
+        "Verdicchio Classico"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "specialiste"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides|decanter"
+    },
+    {
+      "id": "it-marche-prod-santa-barbara-stefano-antonucci",
+      "nom": "Santa Barbara (Stefano Antonucci)",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Barbara",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Marche IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbara, dans les Castelli di Jesi, le domaine Santa Barbara est celui de Stefano Antonucci, l'une des figures les plus charismatiques et inimitables des Marche. Autodidacte passionné, il a bâti une réputation sur des Verdicchio modernes, impeccables et à fort rayonnement.\n\nLe domaine signe des Verdicchio d'une grande netteté et d'une belle intensité : le Stefano Antonucci (cuvée éponyme, souvent avec une touche de bois), le Le Vaglie et le Tardivo ma non Tardo, ainsi que des rouges (Pathos). Le style, moderne et abouti, avec des vins flatteurs et précis, a séduit un large public et la critique internationale. La personnalité de Stefano Antonucci, son marketing soigné (étiquettes à son effigie) et la qualité constante de la gamme ont fait de Santa Barbara l'un des noms les plus visibles du Verdicchio. C'est une belle adresse pour découvrir un Verdicchio moderne et impeccable, dans un style accessible et abouti.\n\nDomaine de Stefano Antonucci, figure charismatique des Marche, Santa Barbara signe des Verdicchio modernes et impeccables (Le Vaglie, cuvée éponyme). C'est l'un des noms les plus visibles du cépage.\n\n Le personnage de Stefano Antonucci, avec son franc-parler et ses étiquettes à son effigie, incarne une certaine modernité décomplexée des Marche. Servis sur des poissons, des fruits de mer ou une cuisine fine, ses Verdicchio séduisent par leur netteté et leur générosité. La régularité et l'accessibilité de la gamme, du Verdicchio flatteur aux cuvées plus ambitieuses, en font une valeur sûre appréciée d'un large public.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Stefano Antonucci (Verdicchio)",
+        "Le Vaglie",
+        "Pathos"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "decanter|italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-andrea-felici",
+      "nom": "Andrea Felici",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Apiro",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Apiro, sur les hauteurs des Castelli di Jesi, Andrea Felici mène un petit domaine bio devenu culte pour la pureté de ses Verdicchio. En altitude, sur des sols argilo-calcaires, la famille cultive le cépage en agriculture biologique avec une recherche d'authenticité.\n\nLe domaine signe des Verdicchio d'une grande tension et d'une belle minéralité, à rebours des versions opulentes : le Andrea Felici (Classico Superiore) et surtout Il Cantico della Figura, une Riserva issue des meilleures vignes, pur, vibrant et de garde, considéré comme l'un des plus beaux Verdicchio des Castelli di Jesi. Le style, précis et peu interventionniste, met en valeur la fraîcheur et l'élégance du cépage cultivé en altitude. La qualité remarquable et le caractère artisanal du domaine lui ont valu un statut culte auprès des amateurs et de la critique. Andrea Felici est une belle adresse pour découvrir un Verdicchio d'altitude, tendu et minéral, dans sa forme la plus pure.\n\nPetit domaine bio culte d'Apiro, Andrea Felici signe des Verdicchio purs, tendus et minéraux d'altitude (Il Cantico della Figura). C'est l'un des plus beaux blancs des Castelli di Jesi.\n\n L'altitude d'Apiro et le travail bio donnent aux Verdicchio de ce domaine une tension et une finesse rares. Servis sur des poissons, des crustacés ou une cuisine légère, ils gagnent à être carafés et se patinent sur plusieurs années. Le statut culte d'Andrea Felici auprès des amateurs de Verdicchio exigeants témoigne de la pureté et de l'authenticité d'une production artisanale et confidentielle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Cantico della Figura (Verdicchio Ris.)",
+        "Andrea Felici (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "bio",
+        "altitude",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-marche-prod-pievalta",
+      "nom": "Pievalta",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Maiolati Spontini",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Maiolati Spontini, dans les Castelli di Jesi, Pievalta est un domaine en biodynamie certifiée, référence de cette approche dans les Marche. Propriété du groupe Barone Pizzini (pionnier du bio en Franciacorta), il est mené avec une exigence écologique et qualitative constante.\n\nLe domaine signe des Verdicchio purs et vibrants, marqués par la biodynamie : le Pievalta (Classico), le Dominè et le San Paolo, une Riserva issue des meilleures parcelles, tendue, minérale et de garde. Le style, précis et respectueux du vivant, met en valeur la fraîcheur et l'énergie du Verdicchio de Jesi. Le travail biodynamique, rare dans la région, et la qualité constante ont fait de Pievalta une référence de la viticulture durable des Marche. C'est une belle adresse pour découvrir un Verdicchio biodynamique, pur et vibrant, à la fois fidèle au terroir et respectueux de l'environnement.\n\nDomaine en biodynamie certifiée (groupe Barone Pizzini), Pievalta signe des Verdicchio purs et vibrants (San Paolo, Dominè). C'est la référence de la viticulture biodynamique des Marche.\n\n Le choix de la biodynamie, rare dans les Marche, distingue Pievalta et donne à ses Verdicchio une énergie particulière. Servis sur des poissons, des fruits de mer ou une cuisine légère, ils séduisent par leur pureté et leur vibration ; le San Paolo se patine sur plusieurs années. L'appartenance au groupe Barone Pizzini assure des moyens tout en préservant l'exigence écologique et qualitative du domaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "San Paolo (Verdicchio Ris.)",
+        "Dominè",
+        "Pievalta (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "biodynamie"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides"
+    },
+    {
+      "id": "it-marche-prod-fattoria-coroncino",
+      "nom": "Fattoria Coroncino",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Staffolo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Staffolo, dans les Castelli di Jesi, la Fattoria Coroncino est un domaine artisanal culte, l'un des noms les plus respectés du Verdicchio de caractère. Sur un terroir soigné, la famille cultive le cépage avec une approche personnelle et exigeante.\n\nLe domaine signe des Verdicchio profonds et de terroir, à rebours des versions commerciales : le Gaiospino (élevé sur lies, riche et complexe), le Coroncino et le Stracacio, des blancs intenses, texturés et de garde, qui expriment une facette plus austère et profonde du cépage. Le style, artisanal et sans concession, privilégie la matière et l'authenticité. La qualité et le caractère de ses vins ont valu à Coroncino un statut culte auprès des amateurs de Verdicchio exigeants. C'est une belle adresse pour découvrir un Verdicchio de caractère, profond et texturé, dans une approche artisanale et fidèle au terroir de Staffolo.\n\nDomaine artisanal culte de Staffolo, Fattoria Coroncino signe des Verdicchio profonds et de terroir (Gaiospino). C'est l'un des noms les plus respectés du Verdicchio de caractère.\n\n L'approche sans concession de Coroncino, qui cherche la matière et la profondeur plutôt que la facilité, révèle une facette austère et sérieuse du Verdicchio. Servis sur des poissons riches, des crustacés ou une volaille, ses vins gagnent à vieillir et se patinent sur une décennie. Le statut culte du domaine auprès des connaisseurs confirme la singularité de ses Verdicchio de terroir, texturés et profonds.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gaiospino (Verdicchio)",
+        "Il Coroncino",
+        "Stracacio"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "bio",
+        "artisan",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-marche-prod-marotti-campi",
+      "nom": "Marotti Campi",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Morro d'Alba",
+      "commune": "Morro d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Lacrima"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Lacrima di Morro d'Alba DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morro d'Alba, dans les Castelli di Jesi, Marotti Campi est un domaine réputé pour sa double spécialité : le Verdicchio et le Lacrima. Sur un beau vignoble, la famille cultive ces deux cépages emblématiques avec une recherche de qualité.\n\nEn Verdicchio, le domaine signe trois cuvées récoltées à maturité croissante et élevées de plus en plus longtemps sur lies : le Luzano, le Salmariano (Riserva) — riche, complexe et de garde. En rouge, il produit l'un des meilleurs Lacrima di Morro d'Alba, ce cépage aromatique rare : l'Orgiolo, un rouge floral et parfumé (rose, violette), ainsi qu'un pétillant rosé de Lacrima (Rubico). Le style, soigné et précis, met en valeur les deux cépages dans des vins équilibrés. La double excellence, blanc et rouge aromatique, et la qualité constante en font une valeur sûre des Marche. Marotti Campi est une belle adresse pour découvrir à la fois le Verdicchio et le Lacrima, deux emblèmes de la région.\n\nDomaine réputé de Morro d'Alba, Marotti Campi signe de beaux Verdicchio (Salmariano) et l'un des meilleurs Lacrima (Orgiolo). C'est une belle double spécialité blanc-rouge aromatique des Marche.\n\n La double spécialité du domaine illustre la richesse ampélographique de Morro d'Alba, où Verdicchio et Lacrima cohabitent. Servis sur des poissons pour le Verdicchio, sur des charcuteries ou une cuisine parfumée pour le Lacrima (idéalement un peu frais), les vins de Marotti Campi séduisent par leur netteté et leur fruité. La régularité de la gamme en fait une valeur sûre pour découvrir les deux emblèmes de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Salmariano (Verdicchio Ris.)",
+        "Orgiolo (Lacrima)",
+        "Rubico"
+      ],
+      "tags": [
+        "marche",
+        "verdicchio",
+        "lacrima",
+        "morro-dalba"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly|italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-tenuta-di-tavignano",
+      "nom": "Tenuta di Tavignano",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Cingoli",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cingoli, dans les Castelli di Jesi, la Tenuta di Tavignano est un domaine bio réputé pour ses Verdicchio de terroir. Sur un beau domaine de collines, la famille cultive le cépage en agriculture biologique avec une recherche de qualité et d'authenticité.\n\nLe domaine signe des Verdicchio soignés : le Tavignano (Classico), le Misco (Superiore et Riserva) — riche, minéral et de garde, issu des meilleures parcelles — et la Villa Torre, ainsi que des rouges. Le style, bio et précis, met en valeur la fraîcheur et la minéralité du Verdicchio de Jesi. Le travail biologique, la qualité constante et le beau terroir de collines en font une valeur sûre de l'appellation. Tenuta di Tavignano est une belle adresse pour découvrir un Verdicchio de terroir en bio, tendu et fidèle à son origine, sur les collines de Cingoli.\n\nDomaine bio réputé de Cingoli, la Tenuta di Tavignano signe des Verdicchio de terroir soignés (Misco). C'est une belle adresse des collines des Castelli di Jesi.\n\n Le beau terroir de collines de Cingoli et le travail bio donnent aux Verdicchio de Tavignano fraîcheur et minéralité. Servis sur des poissons, des fruits de mer ou une cuisine légère, ils séduisent par leur tension ; le Misco Riserva se patine sur plusieurs années. La régularité et l'engagement biologique du domaine en font une valeur sûre des Castelli di Jesi, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Misco (Verdicchio Ris.)",
+        "Villa Torre",
+        "Tavignano (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-la-staffa",
+      "nom": "La Staffa",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Staffolo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Staffolo, dans les Castelli di Jesi, La Staffa est le domaine bio de Riccardo Baldi, l'une des belles révélations du Verdicchio contemporain. Jeune vigneron passionné, il a hissé son domaine parmi les plus intéressants de l'appellation en quelques années.\n\nLe domaine signe des Verdicchio purs, énergiques et de terroir : le La Staffa (Classico), le Selva di Sotto et la Rincrocca, une Riserva tendue, minérale et de garde. Le style, bio et peu interventionniste, privilégie la fraîcheur, l'énergie et l'expression du terroir de Staffolo, dans une approche moderne et précise. La qualité remarquable et la montée en puissance rapide du domaine lui ont valu les éloges de la critique. La Staffa est une belle adresse pour découvrir un Verdicchio contemporain, pur et vibrant, chez l'un des jeunes vignerons les plus prometteurs des Marche.\n\nDomaine bio montant de Riccardo Baldi à Staffolo, La Staffa signe des Verdicchio purs et énergiques (Rincrocca). C'est l'une des belles révélations du Verdicchio contemporain.\n\n La jeune énergie de Riccardo Baldi et son approche peu interventionniste ont fait de La Staffa l'un des noms qui montent dans les Marche. Servis sur des poissons, des crustacés ou une cuisine légère, ses Verdicchio séduisent par leur pureté et leur vibration ; la Rincrocca se patine sur plusieurs années. La reconnaissance rapide de la critique confirme le talent de ce vigneron prometteur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rincrocca (Verdicchio Ris.)",
+        "Selva di Sotto",
+        "La Staffa (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "bio",
+        "revelation"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-marche-prod-fazi-battaglia",
+      "nom": "Fazi Battaglia",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Castelplanio",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelplanio, dans les Castelli di Jesi, Fazi Battaglia est une maison historique, célèbre pour avoir créé l'image même du Verdicchio. C'est elle qui, en 1954, commanda la fameuse bouteille en forme d'amphore qui rendit le Verdicchio mondialement reconnaissable et fit son succès commercial.\n\nAujourd'hui intégrée au groupe Angelini, la maison produit une gamme large de Verdicchio, du vin accessible aux cuvées de qualité : le Titulus, le Le Moie et surtout le San Sisto, une Riserva élevée avec soin, riche et de garde. Le style, fiable et soigné, met en valeur le Verdicchio de Jesi dans des vins réguliers. Si la bouteille-amphore a parfois nui à l'image qualitative du Verdicchio (associé au vin bon marché), Fazi Battaglia n'en reste pas moins un acteur historique majeur, qui a fait connaître le cépage dans le monde entier et produit aussi de belles cuvées sérieuses. C'est une adresse à connaître pour son rôle patrimonial et ses Verdicchio de qualité.\n\nMaison historique créatrice de la célèbre bouteille-amphore du Verdicchio (1954), Fazi Battaglia signe une gamme large et de belles cuvées (San Sisto). C'est un acteur patrimonial majeur des Marche.\n\n Le rôle de Fazi Battaglia dans l'histoire du Verdicchio est paradoxal : la bouteille-amphore a fait sa gloire commerciale tout en brouillant son image qualitative. Servis sur des poissons, des fruits de mer ou une cuisine légère, ses Verdicchio séduisent par leur netteté ; le San Sisto se patine sur plusieurs années. La maison reste un acteur patrimonial incontournable, qui a fait connaître le cépage dans le monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "San Sisto (Verdicchio Ris.)",
+        "Le Moie",
+        "Titulus"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "historique",
+        "amphore"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-marche-prod-bisci",
+      "nom": "Bisci",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Matelica",
+      "commune": "Matelica",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio di Matelica Riserva DOCG",
+        "Verdicchio di Matelica DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Matelica, dans la vallée intérieure de l'ouest des Marche, Bisci est l'un des grands noms du Verdicchio di Matelica. Sur ce terroir continental et minéral, à l'écart de la côte, la famille cultive le cépage avec une recherche de qualité et de fidélité au lieu.\n\nLe domaine signe des Verdicchio di Matelica tendus, minéraux et de garde, marqués par le climat continental et les sols riches en minéraux de la vallée : le Bisci (classique) et surtout le Vigneto Fogliano, une Riserva issue des meilleures vignes, profonde et longévive. Le style, précis et fidèle au terroir, met en valeur la face verticale et minérale du Verdicchio, différente de celle de Jesi. La qualité constante et l'ancrage à Matelica font de Bisci l'une des références de cette petite zone. C'est une belle adresse pour découvrir le Verdicchio di Matelica, tendu et de garde, chez l'un de ses meilleurs interprètes.\n\nUn des grands noms du Verdicchio di Matelica, Bisci signe des blancs minéraux, tendus et de garde (Vigneto Fogliano). C'est une référence du terroir continental de Matelica.\n\n La situation de Matelica, vallée fermée à haute altitude, donne aux Verdicchio de Bisci une minéralité et une tension marquées. Servis sur des poissons, des crustacés ou le vincisgrassi local, ils se patinent sur une décennie et développent des notes complexes. La fidélité du domaine à son terroir continental en fait l'un des meilleurs interprètes du Verdicchio di Matelica, différent et complémentaire de celui de Jesi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigneto Fogliano (Verdicchio Matelica Ris.)",
+        "Bisci (Verdicchio di Matelica)"
+      ],
+      "tags": [
+        "marche",
+        "matelica",
+        "verdicchio",
+        "minéral",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides"
+    },
+    {
+      "id": "it-marche-prod-collestefano",
+      "nom": "Collestefano",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Matelica",
+      "commune": "Castelraimondo",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio di Matelica DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelraimondo, dans la zone de Matelica, Collestefano est un petit domaine bio devenu une référence du Verdicchio di Matelica, célèbre pour son rapport qualité-prix exceptionnel. Fabio Marchionni cultive le cépage en agriculture biologique depuis plus de vingt ans.\n\nLe domaine consacre l'essentiel de sa production à une seule cuvée, un Verdicchio di Matelica pur, minéral et tendu, d'une régularité et d'une qualité remarquables pour son prix — un vin devenu culte auprès des amateurs et régulièrement encensé par la critique. Le domaine produit aussi un metodo classico de Verdicchio. Le style, bio et précis, met en valeur la fraîcheur et la minéralité du terroir continental de Matelica. La cohérence, la pureté et l'accessibilité de ce Verdicchio en ont fait l'un des meilleurs achats d'Italie du centre. Collestefano est une belle adresse pour découvrir le Verdicchio di Matelica dans une version pure, bio et d'un rapport qualité-prix imbattable.\n\nPetit domaine bio de Matelica, Collestefano signe un Verdicchio pur, minéral et d'un rapport qualité-prix exceptionnel. C'est un chouchou de la critique et l'un des meilleurs achats du centre de l'Italie.\n\n Le choix de concentrer la production sur une seule cuvée, en bio, garantit une attention totale et une régularité exemplaire. Servi sur des poissons, des fruits de mer ou une cuisine légère, le Verdicchio de Collestefano séduit par sa pureté et sa fraîcheur minérale. Son rapport qualité-prix, souvent cité comme l'un des meilleurs d'Italie, en fait un vin de référence pour découvrir Matelica sans se ruiner.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Collestefano (Verdicchio di Matelica)",
+        "Metodo Classico"
+      ],
+      "tags": [
+        "marche",
+        "matelica",
+        "verdicchio",
+        "bio",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-belisario",
+      "nom": "Belisario",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Matelica",
+      "commune": "Matelica",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio di Matelica Riserva DOCG",
+        "Verdicchio di Matelica DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Matelica, Belisario est la principale coopérative de la zone et, selon Decanter, la meilleure cave coopérative pour le Verdicchio. Rassemblant une centaine de vignerons de la vallée, elle valorise le terroir continental de Matelica avec une exigence qualitative rare pour une structure de cette taille.\n\nLa coopérative signe des Verdicchio di Matelica fiables et souvent primés, dont le Cambrugiano, une Riserva élevée avec soin (parfois avec macération et bois), structurée, minérale et de garde, régulièrement distinguée. Elle produit aussi des cépages blancs autochtones (Pecorino, Passerina) et une gamme accessible. Le style, soigné et fidèle au terroir, met en valeur la face minérale du Verdicchio de Matelica, à un excellent rapport qualité-prix. La qualité de ses sélections et son rôle central dans la vallée font de Belisario un pilier de Matelica. C'est une belle adresse pour découvrir le Verdicchio di Matelica, du vin accessible à la grande Riserva de garde.\n\nMeilleure coopérative pour le Verdicchio (Decanter), Belisario signe le Cambrugiano (Matelica Riserva) primé et de garde. C'est un pilier de Matelica à excellent rapport qualité-prix.\n\n Le rôle d'une coopérative capable de produire un vin de la qualité du Cambrugiano, tout en valorisant les raisins de nombreux petits vignerons, est essentiel à la vitalité de Matelica. Servis sur des poissons, des crustacés ou une volaille, ses Verdicchio séduisent par leur minéralité ; la Riserva se patine sur plusieurs années. Belisario prouve qu'une cave coopérative peut viser l'excellence à un prix accessible.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cambrugiano (Verdicchio Matelica Ris.)",
+        "Vigneti B. (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "matelica",
+        "verdicchio",
+        "cooperative",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "decanter|italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-moroder",
+      "nom": "Moroder",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Ancona",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Conero Riserva DOCG",
+        "Rosso Conero DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les pentes du Monte Conero, près d'Ancône, Moroder est un domaine bio historique, l'une des références du Rosso Conero. Sur ce promontoire calcaire qui plonge dans l'Adriatique, la famille cultive le Montepulciano en agriculture biologique.\n\nLe domaine signe des Rosso Conero profonds et de garde : le Dorico, une Conero Riserva issue des meilleures vignes, dense, structurée et longévive, considérée comme l'une des plus belles expressions du Montepulciano de la côte, ainsi qu'un Rosso Conero classique et l'Aión. Le style, fidèle au terroir, met en valeur la puissance et la profondeur du Montepulciano cultivé sur les sols calcaires du Conero, sous l'influence maritime. Le travail biologique et la qualité constante en font une référence du terroir. Moroder est une belle adresse pour découvrir le Rosso Conero, ce Montepulciano adriatique le plus septentrional d'Italie, dans sa version la plus aboutie et de garde.\n\nDomaine bio historique du Monte Conero, Moroder signe des Rosso Conero profonds et de garde (Dorico). C'est l'une des références du Montepulciano de la côte adriatique.\n\n Le terroir du Monte Conero, promontoire calcaire face à l'Adriatique, confère au Montepulciano une profondeur et une fraîcheur particulières. Servis sur des viandes rouges, du gibier ou des fromages affinés, les Rosso Conero de Moroder se patinent sur une décennie. L'engagement bio de longue date et la fidélité au terroir font du domaine l'une des références de ce Montepulciano adriatique, le plus septentrional d'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Dorico (Conero Riserva)",
+        "Rosso Conero",
+        "Aión"
+      ],
+      "tags": [
+        "marche",
+        "conero",
+        "montepulciano",
+        "rouge",
+        "bio",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-fattoria-le-terrazze",
+      "nom": "Fattoria Le Terrazze",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Numana",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Conero Riserva DOCG",
+        "Rosso Conero DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Numana, sur le Monte Conero, la Fattoria Le Terrazze est un domaine réputé du Rosso Conero, connu pour ses cuvées originales. Sur ce terroir calcaire face à l'Adriatique, la famille Terni cultive le Montepulciano avec une belle personnalité.\n\nLe domaine signe des Rosso Conero de caractère : le Sassi Neri (Conero Riserva), profond et structuré, le Chaos (assemblage Montepulciano-Syrah-Merlot) et surtout le fameux Visions of J, une cuvée hommage à Bob Dylan (dont le propriétaire est un grand admirateur), au style ambitieux. Le style, moderne et soigné, met en valeur le Montepulciano du Conero dans des vins amples et de garde, avec une touche d'originalité. La qualité des cuvées et leur identité forte en font une valeur sûre du terroir. Fattoria Le Terrazze est une belle adresse pour découvrir le Rosso Conero, entre tradition du Montepulciano et cuvées originales, sur les pentes spectaculaires du Conero.\n\nDomaine réputé du Conero, la Fattoria Le Terrazze signe des Rosso Conero de caractère (Sassi Neri) et des cuvées originales (Visions of J, hommage à Bob Dylan). C'est une valeur sûre du Montepulciano de la côte.\n\n L'originalité des cuvées, du Sassi Neri au facétieux Visions of J, donne au domaine une identité forte, à l'image de la passion de la famille Terni pour la musique. Servis sur des viandes rouges, du gibier ou des fromages, les Rosso Conero du domaine se patinent sur plusieurs années. Le mariage de la tradition du Montepulciano et d'une touche créative fait de Le Terrazze une adresse attachante du Conero.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sassi Neri (Rosso Conero)",
+        "Visions of J",
+        "Chaos"
+      ],
+      "tags": [
+        "marche",
+        "conero",
+        "montepulciano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-velenosi",
+      "nom": "Velenosi",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Ascoli Piceno",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC",
+        "Piceno DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ascoli Piceno, dans le sud des Marche, Velenosi est l'un des grands domaines du Piceno, porté par la figure énergique d'Angela Velenosi. En quelques décennies, la maison est devenue un ambassadeur du sud de la région à l'international.\n\nLe domaine signe une gamme complète et de qualité : en rouge, le Roggio del Filare (Rosso Piceno Superiore), un Montepulciano-Sangiovese concentré et primé, et le Ludi ; en blanc, de beaux cépages autochtones du Piceno, Pecorino et Passerina (souvent en Offida DOCG), frais et aromatiques, ainsi qu'un metodo classico. Le style, moderne et abouti, met en valeur les cépages du sud des Marche dans des vins soignés et flatteurs. La qualité constante, la large diffusion et le dynamisme de la maison en font une référence du Piceno. Velenosi est une belle adresse pour découvrir les rouges et les blancs autochtones du sud des Marche, du Rosso Piceno au Pecorino.\n\nGrand domaine du Piceno (Angela Velenosi), Velenosi signe le Rosso Piceno Roggio del Filare, le Pecorino et la Passerina de qualité. C'est un ambassadeur du sud des Marche à l'international.\n\n Le dynamisme d'Angela Velenosi a fait de ce domaine l'un des visages du sud des Marche à l'international. Servis sur des viandes pour le Rosso Piceno, sur des poissons et fruits de mer pour le Pecorino et la Passerina, les vins de Velenosi séduisent par leur netteté et leur générosité. La largeur de la gamme, du rouge de garde aux blancs autochtones, en fait un bel ambassadeur des cépages du Piceno.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Roggio del Filare (Rosso Piceno)",
+        "Ludi",
+        "Pecorino Offida",
+        "Passerina"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "ascoli",
+        "montepulciano",
+        "pecorino"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly|italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-cocci-grifoni",
+      "nom": "Cocci Grifoni",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Ripatransone",
+      "pays": "Italie",
+      "cepages": [
+        "Pecorino",
+        "Passerina",
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ripatransone, dans le Piceno, Cocci Grifoni est un domaine pionnier, célèbre pour avoir sauvé le Pecorino de l'oubli. Dans les années 1980, Guido Cocci Grifoni a retrouvé et replanté ce cépage blanc autochtone alors quasi disparu, avant qu'il ne connaisse le succès que l'on sait dans les Marche et les Abruzzes.\n\nLe domaine signe des Pecorino de référence, dont le Colle Vecchio, issu des premières vignes replantées, un blanc structuré, aromatique et de caractère, ainsi que de la Passerina et de beaux Rosso Piceno (Superiore) à base de Montepulciano et Sangiovese. Le style, fidèle au terroir, met en valeur les cépages autochtones du Piceno. Le rôle historique de la famille dans la sauvegarde du Pecorino et la qualité constante de la gamme en font une référence incontournable du sud des Marche. Cocci Grifoni est une belle adresse pour découvrir le Pecorino chez celui qui l'a sauvé, aux côtés du Rosso Piceno et de la Passerina.\n\nDomaine pionnier qui a sauvé le Pecorino de l'oubli, Cocci Grifoni signe des blancs autochtones de référence (Colle Vecchio) et de beaux Rosso Piceno. C'est le gardien historique d'un cépage.\n\n Sans Guido Cocci Grifoni, le Pecorino aurait peut-être disparu : ce rôle de sauveur d'un cépage confère au domaine une place à part dans l'histoire des Marche. Servis sur des poissons, des fruits de mer ou une cuisine relevée pour le Pecorino, sur des viandes pour le Rosso Piceno, les vins séduisent par leur authenticité. Le domaine reste la référence incontournable du Pecorino, chez celui qui l'a fait renaître.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pecorino Colle Vecchio",
+        "Rosso Piceno Superiore",
+        "Passerina"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "pecorino",
+        "passerina",
+        "pionnier",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-prod-saladini-pilastri",
+      "nom": "Saladini Pilastri",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Spinetoli",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Spinetoli, dans le Piceno, Saladini Pilastri est un domaine bio historique, l'une des références du sud des Marche en agriculture biologique. Sur un vaste domaine familial noble, la famille cultive les cépages du Piceno dans le respect de l'environnement.\n\nLe domaine signe des Rosso Piceno de terroir, à base de Montepulciano et Sangiovese, dont le Vigna Monteprandone et le Montetinello (Superiore), ainsi que de beaux blancs autochtones (Pecorino, Passerina, souvent en Offida DOCG). Le style, bio et fidèle au terroir, met en valeur les cépages du sud des Marche dans des vins authentiques et équilibrés, à bon rapport qualité-prix. L'engagement biologique de longue date et la qualité constante en font une valeur sûre du Piceno. Saladini Pilastri est une belle adresse pour découvrir les rouges et les blancs autochtones du sud des Marche dans une démarche biologique, chez un domaine historique.\n\nDomaine bio historique du Piceno, Saladini Pilastri signe des Rosso Piceno de terroir (Vigna Monteprandone) et de beaux blancs autochtones. C'est une référence du sud des Marche en bio.\n\n L'engagement biologique de longue date de ce domaine noble et la fidélité au terroir du Piceno donnent des vins authentiques et équilibrés. Servis sur des viandes pour le Rosso Piceno, sur des poissons et fruits de mer pour le Pecorino et la Passerina, ils séduisent par leur franchise, à bon rapport qualité-prix. Saladini Pilastri est une valeur sûre pour découvrir le sud des Marche en bio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rosso Piceno Superiore Vigna Monteprandone",
+        "Pecorino",
+        "Passerina"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "montepulciano",
+        "pecorino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-prod-lucchetti",
+      "nom": "Lucchetti",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Morro d'Alba",
+      "commune": "Morro d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Lacrima",
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lacrima di Morro d'Alba DOC",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morro d'Alba, dans les Castelli di Jesi, Lucchetti est une référence du Lacrima di Morro d'Alba, ce cépage rouge aromatique rare cultivé quasi exclusivement autour de ce village. La famille en est l'un des meilleurs interprètes.\n\nLe Lacrima donne un rouge très particulier, intensément floral et parfumé, aux arômes caractéristiques de violette, de rose et de fruits rouges, à la trame souple et gouleyante. Lucchetti en signe plusieurs versions, dont le Mariasole, issu de vieilles vignes, un Lacrima plus profond et structuré que la moyenne, salué par la critique (Vinous) pour son potentiel. Le domaine produit aussi du Verdicchio et du Montepulciano. Le style, fidèle au cépage, met en valeur l'aromatique unique du Lacrima. La qualité et l'engagement pour ce cépage rare en font une référence de Morro d'Alba. Lucchetti est une belle adresse pour découvrir le Lacrima, l'un des rouges les plus originaux et parfumés d'Italie.\n\nRéférence du Lacrima di Morro d'Alba, Lucchetti signe des rouges floraux et parfumés (violette, rose), dont le Mariasole de vieilles vignes. C'est un ambassadeur de ce cépage aromatique rare.\n\n Le Lacrima est l'un des cépages les plus reconnaissables d'Italie par son parfum de fleurs, et Lucchetti en est l'un des meilleurs gardiens. Servi légèrement frais sur des charcuteries, des viandes blanches ou une cuisine parfumée, il séduit par son fruité et sa buvabilité ; le Mariasole, plus structuré, gagne à être attendu. Le domaine illustre le potentiel de ce cépage rare et original, longtemps sous-estimé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Mariasole (Lacrima)",
+        "Lacrima di Morro d'Alba",
+        "Superiore"
+      ],
+      "tags": [
+        "marche",
+        "morro-dalba",
+        "lacrima",
+        "rouge",
+        "aromatique"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-prod-la-distesa",
+      "nom": "La Distesa",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Cupramontana",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Marche IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cupramontana, la « capitale du Verdicchio » dans les Castelli di Jesi, La Distesa est le domaine bio-nature de Corrado Dottori, l'une des figures de la scène naturelle des Marche. Écrivain autant que vigneron, il défend une viticulture artisanale et engagée. Sur un terroir d'altitude, il cultive le Verdicchio en agriculture biologique et vinifie avec une intervention minimale (levures indigènes, peu ou pas de soufre, parfois macération). Le domaine signe des Verdicchio vivants et de terroir — Gli Eremi, Nur, Terre Silvate — appréciés des amateurs de vin nature. Le style, authentique et sans concession, privilégie l'expression du terroir et la buvabilité. La démarche militante et la sincérité des vins ont fait de La Distesa une référence de la scène naturelle italienne. C'est une belle adresse pour découvrir un Verdicchio nature et authentique, sur des poissons ou une cuisine de caractère, chez un vigneron-penseur engagé.\n\nDomaine bio-nature de Corrado Dottori à Cupramontana, La Distesa signe des Verdicchio vivants et authentiques (Gli Eremi, Nur). C'est une figure de la scène naturelle des Marche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gli Eremi (Verdicchio)",
+        "Nur",
+        "Terre Silvate"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides"
+    },
+    {
+      "id": "it-marche-prod-fattoria-san-lorenzo",
+      "nom": "Fattoria San Lorenzo",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Montecarotto",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC",
+        "Marche IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montecarotto, dans les Castelli di Jesi, la Fattoria San Lorenzo est le domaine bio-nature de Natalino Crognaletti, apprécié des amateurs de vins authentiques. Sur un terroir familial, il cultive le Verdicchio et les cépages des Marche en agriculture biologique, avec des vinifications peu interventionnistes. Le domaine signe des Verdicchio de terroir et de caractère — la Vigna delle Oche (sa cuvée phare, de vieilles vignes), le Di Gino, le Le Oche — ainsi que des rouges (Montepulciano). Le style, nature et authentique, privilégie l'expression du terroir et la vivacité. La sincérité et la qualité des vins ont fait de San Lorenzo une belle adresse de la scène naturelle des Marche. C'est une adresse à découvrir pour un Verdicchio artisanal et de terroir, sur des poissons ou une cuisine authentique, chez un vigneron passionné et respectueux du vivant.\n\nDomaine bio-nature de Natalino Crognaletti à Montecarotto, la Fattoria San Lorenzo signe des Verdicchio de terroir (Vigna delle Oche). C'est une belle adresse de la scène naturelle des Marche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna delle Oche (Verdicchio)",
+        "Di Gino",
+        "Le Oche"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winetravelguides"
+    },
+    {
+      "id": "it-marche-prod-colonnara",
+      "nom": "Colonnara",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "Cupramontana",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cupramontana, dans les Castelli di Jesi, Colonnara est une coopérative réputée pour ses Verdicchio spumante. Rassemblant des vignerons de la « capitale du Verdicchio », elle valorise le cépage en versions tranquille et effervescente. La coopérative est notamment connue pour ses metodo classico de Verdicchio (Ubaldo Rosi), des bulles de belle facture qui exploitent l'acidité naturelle du cépage, ainsi que pour ses Verdicchio tranquilles (Cuprese, Tornamagno) fiables et bien diffusés. Le style, soigné pour une coopérative, met en valeur le Verdicchio à bon rapport qualité-prix. La spécialité effervescente et la qualité constante en font une valeur sûre. Colonnara est une belle adresse pour découvrir le Verdicchio, notamment dans sa version metodo classico, trop rare et pourtant réussie, ainsi que les blancs tranquilles de Cupramontana, à prix doux.\n\nCoopérative de Cupramontana réputée pour ses Verdicchio spumante (metodo classico, Ubaldo Rosi), Colonnara signe aussi de bons blancs tranquilles. C'est une valeur sûre à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ubaldo Rosi (Metodo Classico)",
+        "Cuprese (Verdicchio)",
+        "Tornamagno"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "cooperative",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "italiancookingandliving"
+    },
+    {
+      "id": "it-marche-prod-vignamato",
+      "nom": "Vignamato",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Castelli di Jesi",
+      "commune": "San Paolo di Jesi",
+      "pays": "Italie",
+      "cepages": [
+        "Verdicchio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Castelli di Jesi Verdicchio Riserva DOCG",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Paolo di Jesi, dans les Castelli di Jesi, Vignamato est un domaine familial fiable, ancré dans les collines du sud de l'appellation. La famille cultive le Verdicchio et les cépages des Marche avec une recherche de qualité. Le domaine signe des Verdicchio soignés — l'Ambrosia (Riserva), le Sensae, ainsi qu'un Verdicchio Classico — et des rouges (Montepulciano). Le style, net et fidèle au terroir, met en valeur le Verdicchio de Jesi dans des vins équilibrés et accessibles, à bon rapport qualité-prix. La régularité de la gamme et le beau terroir de San Paolo di Jesi en font une valeur sûre de l'appellation. Vignamato est une belle adresse pour découvrir le Verdicchio de Jesi dans un style franc et soigné, sur des poissons et fruits de mer, chez un domaine familial représentatif du savoir-faire local.\n\nDomaine familial de San Paolo di Jesi, Vignamato signe des Verdicchio soignés (Ambrosia) et des rouges. C'est une valeur sûre et accessible des Castelli di Jesi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ambrosia (Verdicchio Ris.)",
+        "Sensae",
+        "Vignamato (Verdicchio)"
+      ],
+      "tags": [
+        "marche",
+        "castelli-di-jesi",
+        "verdicchio",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-marche-prod-lanari",
+      "nom": "Lanari",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Ancona",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Conero Riserva DOCG",
+        "Rosso Conero DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur le Monte Conero, près d'Ancône, Lanari est un petit domaine bio, belle adresse artisanale du Rosso Conero. Sur ce terroir calcaire face à l'Adriatique, la famille cultive le Montepulciano en agriculture biologique. Le domaine signe des Rosso Conero soignés et fidèles au terroir, dont le Fibbio (Conero Riserva), profond et de garde, ainsi qu'un Rosso Conero classique. Le style, bio et authentique, met en valeur la puissance et la profondeur du Montepulciano du Conero dans des vins équilibrés. Le travail biologique et la taille humaine du domaine en font une belle adresse artisanale du terroir. Lanari est une adresse à découvrir pour un Rosso Conero de caractère, en bio, sur des viandes rouges, du gibier ou des fromages affinés, chez un petit producteur passionné du Montepulciano de la côte adriatique.\n\nPetit domaine bio du Conero, Lanari signe des Rosso Conero soignés et de garde (Fibbio). C'est une belle adresse artisanale du Montepulciano de la côte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fibbio (Conero Riserva)",
+        "Rosso Conero",
+        "Lanari"
+      ],
+      "tags": [
+        "marche",
+        "conero",
+        "montepulciano",
+        "bio",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-stefano-mancinelli",
+      "nom": "Stefano Mancinelli",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Morro d'Alba",
+      "commune": "Morro d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Lacrima",
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lacrima di Morro d'Alba DOC",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morro d'Alba, dans les Castelli di Jesi, Stefano Mancinelli est un domaine bio historique du Lacrima, ambassadeur de longue date de ce cépage aromatique rare. La famille cultive le Lacrima et le Verdicchio en agriculture biologique. Le domaine signe des Lacrima di Morro d'Alba floraux et parfumés (violette, rose, fruits rouges), dont une version Superiore et un rare Lacrima passito (doux), ainsi que du Verdicchio. Le style, bio et fidèle au cépage, met en valeur l'aromatique unique du Lacrima. L'engagement de longue date pour ce cépage rare et la qualité de la gamme en font une référence de Morro d'Alba. Stefano Mancinelli est une belle adresse pour découvrir le Lacrima sous toutes ses formes, du sec au passito, sur des charcuteries, une cuisine parfumée ou, pour le doux, des desserts, chez un ambassadeur historique du cépage.\n\nDomaine bio historique du Lacrima à Morro d'Alba, Stefano Mancinelli signe des rouges floraux et un rare Lacrima passito. C'est un ambassadeur de longue date de ce cépage aromatique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lacrima di Morro d'Alba Superiore",
+        "Lacrima Passito",
+        "Santa Maria del Fiore"
+      ],
+      "tags": [
+        "marche",
+        "morro-dalba",
+        "lacrima",
+        "bio",
+        "aromatique"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-marche-prod-vicari",
+      "nom": "Vicari",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Morro d'Alba",
+      "commune": "Morro d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Lacrima",
+        "Verdicchio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lacrima di Morro d'Alba DOC",
+        "Verdicchio dei Castelli di Jesi DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Morro d'Alba, dans les Castelli di Jesi, Vicari est un domaine et wine resort réputé pour son Lacrima. Sur les collines de Morro d'Alba, la famille cultive ce cépage aromatique rare et le Verdicchio. Le domaine signe des Lacrima di Morro d'Alba parfumés (violette, rose), dont une version Superiore (Vigna Vallesanta), ainsi qu'un pétillant rosé de Lacrima (Rubico), original et gourmand, et du Verdicchio. Le style, fidèle au cépage, met en valeur l'aromatique du Lacrima dans des vins gourmands. Le beau cadre œnotouristique (avec hébergement) et la qualité de la gamme en font une belle adresse. Vicari est une adresse à découvrir pour le Lacrima, notamment dans sa version pétillante rosée, originale, sur une cuisine conviviale ou à l'apéritif, dans un cadre agréable de Morro d'Alba.\n\nDomaine et wine resort de Morro d'Alba, Vicari signe des Lacrima parfumés et un pétillant rosé de Lacrima (Rubico). C'est une belle adresse œnotouristique du cépage aromatique local.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rubico (Lacrima rosé)",
+        "Lacrima di Morro d'Alba",
+        "Vigna Vallesanta"
+      ],
+      "tags": [
+        "marche",
+        "morro-dalba",
+        "lacrima",
+        "rouge",
+        "aromatique"
+      ],
+      "a_verifier": null,
+      "source": "flavorofitaly"
+    },
+    {
+      "id": "it-marche-prod-ciu-ciu",
+      "nom": "Ciù Ciù",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Offida",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Offida, dans le Piceno, Ciù Ciù est un grand domaine bio, valeur sûre et bien diffusée du sud des Marche. La famille Bartolomei cultive les cépages du Piceno en agriculture biologique sur un vaste vignoble. Le domaine signe une gamme complète : des Rosso Piceno (Gotico, Superiore) à base de Montepulciano et Sangiovese, de beaux blancs autochtones (Pecorino Oppidum, Passerina) et des assemblages (Merlettaie). Le style, bio et accessible, met en valeur les cépages du sud des Marche dans des vins fiables et gourmands, à bon rapport qualité-prix. L'engagement biologique, la large diffusion et la qualité constante en font une valeur sûre du Piceno. Ciù Ciù est une belle adresse pour découvrir les rouges et les blancs autochtones du sud des Marche en bio, du Rosso Piceno au Pecorino, à prix doux, sur la cuisine régionale.\n\nGrand domaine bio d'Offida, Ciù Ciù signe des Rosso Piceno (Gotico), du Pecorino et de la Passerina fiables et bien diffusés. C'est une valeur sûre du sud des Marche à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gotico (Rosso Piceno Sup.)",
+        "Oppidum (Pecorino)",
+        "Merlettaie"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "offida",
+        "montepulciano",
+        "pecorino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "vinous"
+    },
+    {
+      "id": "it-marche-prod-le-caniette",
+      "nom": "Le Caniette",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Ripatransone",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Passerina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ripatransone, dans le Piceno, Le Caniette est un domaine bio familial, belle adresse artisanale du sud des Marche. La famille Vagnoni cultive les cépages du Piceno en agriculture biologique avec un bel esprit artisanal. Le domaine signe des Rosso Piceno de caractère, dont le Morellone (Superiore), à base de Montepulciano et Sangiovese, ainsi que de beaux blancs autochtones (Pecorino Io Sono Gaia, Passerina). Le style, bio et soigné, met en valeur les cépages du sud des Marche dans des vins authentiques et de terroir. Le travail biologique et la qualité de la gamme en font une belle adresse du Piceno. Le Caniette est une adresse à découvrir pour un Rosso Piceno de caractère et des blancs autochtones, en bio, sur des viandes ou des poissons selon la couleur, chez un domaine familial passionné.\n\nDomaine bio familial du Piceno, Le Caniette signe des Rosso Piceno de caractère (Morellone) et de beaux blancs autochtones (Pecorino, Passerina). C'est une belle adresse artisanale du sud des Marche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Morellone (Rosso Piceno Sup.)",
+        "Io Sono Gaia (Pecorino)",
+        "Passerina"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "montepulciano",
+        "pecorino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-boccadigabbia",
+      "nom": "Boccadigabbia",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Conero",
+      "commune": "Civitanova Marche",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Montepulciano",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Rosso Piceno DOC",
+        "Marche IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Civitanova Marche, dans les Marche centrales, Boccadigabbia est un domaine bio réputé pour ses cépages bordelais, une rareté dans la région. Le vignoble a une histoire singulière : il fut planté en cépages français à l'époque napoléonienne, héritage que le domaine perpétue. En agriculture biologique, Boccadigabbia signe des rouges de caractère à base de cépages bordelais : l'Akronte (Cabernet Sauvignon), cuvée phare concentrée et de garde, ainsi que des vins de Montepulciano (Pix) et de Sangiovese (Saltapicchio), et des blancs. Le style, soigné et original, met en valeur des cépages inhabituels pour les Marche. L'héritage historique et la qualité de la gamme en font une curiosité intéressante de la région. Boccadigabbia est une belle adresse pour découvrir des rouges bordelais bio dans les Marche, sur des viandes rouges et du gibier, chez un domaine à l'histoire singulière.\n\nDomaine bio réputé pour ses cépages bordelais hérités d'un vignoble napoléonien, Boccadigabbia signe le Cabernet Akronte et des rouges de caractère. C'est une curiosité originale des Marche centrales.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Akronte (Cabernet)",
+        "Saltapicchio (Sangiovese)",
+        "Pix (Montepulciano)"
+      ],
+      "tags": [
+        "marche",
+        "cabernet",
+        "bordeaux",
+        "bio",
+        "original"
+      ],
+      "a_verifier": null,
+      "source": "italianwineselection"
+    },
+    {
+      "id": "it-marche-prod-carminucci",
+      "nom": "Carminucci",
+      "type": "domaine",
+      "region": "Marche",
+      "sous_region": "Piceno",
+      "commune": "Grottammare",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Sangiovese",
+        "Pecorino",
+        "Passerina",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Offida DOCG",
+        "Rosso Piceno DOC",
+        "Rosso Piceno Superiore DOC",
+        "Falerio DOC",
+        "Marche IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Grottammare, dans le Piceno au sud des Marche, Carminucci est une maison bio historique, fondée en 1928 par Giovanni Carminucci. Aujourd'hui menée par la troisième génération, elle cultive une cinquantaine d'hectares en agriculture biologique certifiée, entre Offida, Ripatransone et Grottammare.\n\nSur les collines argileuses du sud des Marche, qui descendent des Apennins vers l'Adriatique, le domaine signe une gamme complète et soignée : des Rosso Piceno et Rosso Piceno Superiore (Viabore, Grotte sul Mare) à base de Montepulciano et Sangiovese, de beaux blancs autochtones — le Belato (Offida Pecorino DOCG), aromatique et élégant, et la Passerina (Casta, aussi en spumante) —, ainsi que le Paccaosso (Marche Rosso), cuvée emblématique du domaine. Le style, bio et fidèle au terroir, met en valeur les cépages du Piceno dans des vins équilibrés et d'un bon rapport qualité-prix, régulièrement primés. La longévité de la maison (près d'un siècle), son engagement biologique et la qualité constante de sa gamme en font une valeur sûre du sud des Marche. Carminucci est une belle adresse pour découvrir le Rosso Piceno, le Pecorino et la Passerina, dans une démarche bio et authentique.\n\nMaison bio historique du Piceno (Grottammare, depuis 1928), Carminucci signe des Rosso Piceno, un Offida Pecorino (Belato) et de la Passerina soignés. C'est une valeur sûre et durable du sud des Marche.\n\n Près d'un siècle de présence à Grottammare et un engagement biologique constant font de Carminucci un pilier discret mais fiable du Piceno. Servis sur des viandes et des charcuteries pour le Rosso Piceno, sur des poissons et fruits de mer pour le Pecorino et la Passerina, les vins de la maison séduisent par leur franchise et leur bon rapport qualité-prix. La troisième génération perpétue l'exigence familiale, faisant du domaine une valeur sûre du sud des Marche.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Belato (Offida Pecorino)",
+        "Paccaosso (Marche Rosso)",
+        "Viabore (Rosso Piceno)",
+        "Grotte sul Mare"
+      ],
+      "tags": [
+        "marche",
+        "piceno",
+        "grottammare",
+        "montepulciano",
+        "pecorino",
+        "bio",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "carminucci.com|hellotaste|strictlywine"
+    }
+  ]
+}

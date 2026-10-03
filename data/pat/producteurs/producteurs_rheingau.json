@@ -1,0 +1,1172 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "rheingau",
+  "region_label": "Rheingau (Allemagne)",
+  "source_file": "producteurs_rheingau_To_Import.xlsx",
+  "built_at": "2026-06-12",
+  "count": 29,
+  "items": [
+    {
+      "id": "de-rheingau-prod-robert-weil",
+      "nom": "Robert Weil",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Kiedrich",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kiedricher Gräfenberg",
+        "Kiedricher Turmberg",
+        "Kiedricher Klosterberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Kiedrich, le domaine Robert Weil est l'un des plus prestigieux et des plus célèbres de tout le Rheingau. Fondé en 1875, il est dirigé avec un perfectionnisme légendaire par Wilhelm Weil, arrière-petit-fils du fondateur ; depuis 1988, il est majoritairement détenu par le groupe japonais Suntory, tout en conservant une autonomie totale et un ancrage familial. Sur quelque quatre-vingt-dix hectares, le domaine est le maître absolu du Kiedricher Gräfenberg, grand coteau escarpé sur sols de phyllite et de schiste, complété par le Turmberg et le Klosterberg. C'est l'un des très rares domaines au monde à exceller aussi bien dans le sec — des Grosses Gewächs racés et profonds — que dans le sublime : ses Auslese, Beerenauslese, Trockenbeerenauslese et Eiswein du Gräfenberg, fruits de tries manuelles minutieuses, comptent parmi les plus grands liquoreux de la planète et atteignent des prix records aux enchères. Le style Weil conjugue précision, pureté et opulence maîtrisée, dans des vins d'une régularité sans faille et d'une garde quasi infinie. Référence mondiale du Riesling, Robert Weil incarne au plus haut niveau l'excellence et le classicisme du Rheingau. Malgré l'actionnariat japonais, le domaine est resté entièrement autonome et profondément rhingovien, et Wilhelm Weil y perpétue une exigence quasi obsessionnelle, multipliant les tries successives dans le Gräfenberg pour ses liquoreux d'exception. Ses bouteilles figurent régulièrement parmi les Riesling allemands les plus chers du monde aux enchères.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "kiedrich",
+        "graefenberg",
+        "suntory",
+        "botrytis",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-josef-leitz",
+      "nom": "Josef Leitz",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Rüdesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Rüdesheimer Berg Schlossberg",
+        "Rüdesheimer Berg Rottland",
+        "Rüdesheimer Berg Roseneck"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Rüdesheim, Johannes Leitz a transformé un minuscule domaine familial hérité dans les années 1980 en l'une des plus belles réussites du Rheingau contemporain, fort aujourd'hui de plusieurs dizaines d'hectares. Le cœur de son vignoble se trouve sur les pentes vertigineuses du Rüdesheimer Berg — Berg Schlossberg, Berg Roseneck, Berg Rottland — sur quartzite et schiste, dont il tire des Grosses Gewächs secs d'une grande minéralité et d'une belle énergie. Mais Leitz s'est aussi rendu célèbre par ses Riesling plus légers et demi-secs, d'une buvabilité exemplaire, et par un succès mondial inattendu : ses vins désalcoolisés (la gamme « Eins-Zwei-Zero »), qui ont fait de lui un pionnier et un leader international de cette catégorie en plein essor. Le style Leitz, à la fois sérieux sur le haut de gamme et accessible sur l'entrée de gamme, conjugue précision minérale et plaisir immédiat. Dynamique et inventif, Johannes Leitz est l'un des vignerons les plus influents et les plus exportés du Rheingau, capable de séduire les puristes comme un très large public. Parti de trois hectares à la fin des années 1980, Johannes Leitz a bâti un empire tout en restant fidèle à ses grands crus de Rüdesheim ; sa gamme désalcoolisée s'écoule aujourd'hui par millions de bouteilles à travers le monde, faisant de lui un cas d'école du Rheingau entrepreneurial. Une réussite saluée par toute la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ruedesheim",
+        "berg-schlossberg",
+        "leitz",
+        "desalcoolise"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-georg-breuer",
+      "nom": "Georg Breuer",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Rüdesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rüdesheimer Berg Schlossberg",
+        "Rüdesheimer Berg Rottland",
+        "Rauenthaler Nonnenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Rüdesheim, au pied des pentes vertigineuses du Berg, Georg Breuer est l'une des références historiques du Riesling sec du Rheingau. Le domaine doit son rayonnement à Bernhard Breuer, figure intellectuelle et visionnaire du vin allemand : dès les années 1980, il fut l'un des plus ardents défenseurs du retour au sec et de la classification des terroirs à la bourguignonne (cofondateur de l'association Charta), à contre-courant d'une Allemagne alors dominée par les vins demi-secs et sucrés. Sa disparition soudaine en 2004 a placé très jeune sa fille Theresa Breuer à la tête du domaine ; elle en a depuis fait l'une des vigneronnes les plus respectées du pays, dans une fidélité totale à la vision paternelle. Sur environ trente-quatre hectares, le domaine exploite quelques-uns des plus grands coteaux de Rüdesheim — Berg Schlossberg et Berg Rottland, sur quartzite et schiste, parmi les sites les plus raides et les plus iconiques du Rheingau — ainsi que le Rauenthaler Nonnenberg, en altitude sur ardoise, qu'il exploite en quasi-monopole. La viticulture, certifiée Fair'n Green et conduite de façon de plus en plus respectueuse de l'environnement, s'accompagne en cave de fermentations spontanées, sans chaptalisation, et de vendanges tardives pour atteindre une maturité parfaite. Les Rieslings Breuer sont secs jusqu'à l'os, taillés pour la garde, d'une grande minéralité et d'une remarquable précision. Outre les Grosses Gewächs parcellaires, le domaine produit la cuvée d'assemblage « Terra Montosa », issue de ses meilleures parcelles de coteaux et devenue une référence du rapport qualité-prix, ainsi que d'élégants Sekt. Theresa Breuer s'attache aussi à replanter l'antique cépage Orléans, autrefois répandu dans le Rheingau. Entre héritage d'un pionnier et vision contemporaine, Georg Breuer demeure un domaine majeur, dont les secs comptent parmi les plus aboutis et les plus aptes à vieillir de toute la région. Au-delà des Grosses Gewächs, la maison structure sa gamme autour de cuvées « villages » et de la fameuse Terra Montosa, assemblage de jeunes parcelles des grands coteaux qui offre un avant-goût très abordable du style maison. Bernhard Breuer avait aussi marqué l'histoire en militant pour une hiérarchie des crus inspirée de la Bourgogne, bien avant que le VDP n'institue sa propre classification : une bataille intellectuelle dont le Rheingau d'aujourd'hui est largement l'héritier. Theresa Breuer, devenue l'une des vigneronnes les plus en vue d'Allemagne et figure de la nouvelle génération, perpétue cette exigence tout en accentuant le virage environnemental et en redonnant vie à des cépages et des parcelles oubliés. Entre mémoire d'un pionnier et énergie contemporaine, Georg Breuer reste un repère cardinal du Riesling sec rhingovien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "bio",
+        "ruedesheim",
+        "rauenthal",
+        "breuer",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-kuenstler",
+      "nom": "Künstler",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "commune": "Hochheim am Main",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hochheimer Kirchenstück",
+        "Hochheimer Hölle",
+        "Hochheimer Domdechaney",
+        "Erbacher Marcobrunn"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hochheim, à l'extrémité orientale du Rheingau au-dessus du Main, Künstler est l'un des très grands noms du Riesling sec allemand. Le domaine a été fondé en 1965 par Franz Künstler, réfugié des Sudètes (Bohême) qui dut tout reconstruire après-guerre ; c'est son fils Gunter Künstler qui, depuis 1992, l'a hissé au sommet. Marqué par un voyage en Californie où il découvrit de grands blancs secs issus de raisins à pleine maturité, il a forgé un style de Riesling sec puissant, mûr et profond, alors rare en Allemagne. Sur une cinquantaine d'hectares, le domaine est le maître incontesté des grands lieux-dits de Hochheim, dont les sols de lœss calcaire et de marnes, plus chauds, donnent des vins amples et terreux : le Kirchenstück, joyau absolu, mais aussi la Hölle et la Domdechaney. Künstler a par la suite étendu son empreinte aux pentes de quartzite de Rüdesheim (Berg Schlossberg, Berg Rottland) et jusqu'au légendaire Marcobrunn d'Erbach. La maison produit aussi un Spätburgunder de belle tenue. Le style Künstler conjugue puissance, densité et structure avec une trame minérale et saline qui assure une longue garde ; ses Grosses Gewächs comptent parmi les secs les plus complets d'Allemagne. La reconnaissance est venue couronner cette constance : le Hölle GG 2021 a notamment été désigné « vin allemand de l'année » par James Suckling. Domaine de premier plan, à la fois ancré dans le terroir si particulier de Hochheim et porté par une exigence sans faille, Künstler illustre la renaissance du grand Riesling sec rhingovien. Hochheim, perchée au-dessus du Main à l'écart du reste du Rheingau, jouit d'une histoire prestigieuse : ses vins, jadis prisés jusqu'à la cour d'Angleterre — la reine Victoria leur aurait donné leur surnom anglais de « Hock » —, reposent sur des sols de lœss calcaire profonds qui donnent des Rieslings plus charpentés et épicés que la moyenne de la région. Künstler en est aujourd'hui le porte-drapeau, déclinant chaque grand cru séparément, du sec ample et terreux aux liquoreux nobles, avec une régularité qui en fait l'un des piliers du VDP. La distinction de « vin allemand de l'année » décernée à son Hölle GG par la critique internationale a confirmé un statut bâti, millésime après millésime, sur la maturité du raisin et la profondeur du terroir calcaire de Hochheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "hochheim",
+        "kirchenstueck",
+        "kuenstler",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-peter-jakob-kuehn",
+      "nom": "Peter Jakob Kühn",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oestricher Doosberg",
+        "Hallgartener Jungfer",
+        "Oestricher Sankt Nikolaus"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oestrich, Peter Jakob Kühn est l'un des domaines les plus singuliers et les plus radicaux du Rheingau. La famille y cultive la vigne depuis le XVIIe siècle, mais c'est Peter Jakob Kühn et son épouse Angela, rejoints aujourd'hui par leur fils Peter Bernhard, qui en ont fait une référence de la biodynamie : le domaine, certifié Demeter depuis 2007, fut un pionnier de cette approche au sommet du vignoble allemand. Sur une vingtaine d'hectares, le domaine exploite notamment l'Oestricher Doosberg, la Hallgartener Jungfer et l'Oestricher Sankt Nikolaus. La démarche se veut intégrale : fermentations spontanées, élevages longs sur lies, recours à des amphores et jarres d'argile, soufre minimal, intervention réduite à son strict minimum. Il en résulte des Rieslings secs « électriques », d'une énergie et d'une complexité peu communes, parfois déroutants voire sauvages dans leur jeunesse, qui exigent de l'air et de la patience mais récompensent par une profondeur rare. Cette approche assumée, qui frôle parfois le registre nature sans jamais sacrifier la précision, divise autant qu'elle fascine — mais elle a placé le domaine parmi les expressions les plus profondes et les plus personnelles du Riesling allemand. Les cuvées parcellaires (le Doosberg en tête) comme les sélections nobles témoignent d'une cohérence et d'une intégrité rares. Peter Jakob Kühn incarne ainsi une voie à part dans le Rheingau : celle d'un domaine qui a fait de la biodynamie et du vivant non un argument, mais le cœur même de son identité. La gamme illustre cette quête d'authenticité jusque dans ses cuvées les plus pointues : le Doosberg et la Jungfer en Grosses Gewächs, mais aussi des bouteilles plus expérimentales élevées en amphore, et des liquoreux d'une grande pureté. La réception critique a longtemps été clivée — certains déconcertés par le caractère réducteur ou « sauvage » des vins jeunes, d'autres fascinés par leur énergie —, mais le domaine s'est imposé comme l'une des signatures les plus profondes et les plus cohérentes du Riesling allemand. Chez les Kühn, la biodynamie n'est pas un argument commercial mais une philosophie de vie et de cave, au service d'une expression sans filtre du terroir d'Oestrich.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "biodynamie",
+        "demeter",
+        "oestrich",
+        "doosberg",
+        "kuehn",
+        "amphore"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-schloss-johannisberg",
+      "nom": "Schloss Johannisberg",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Geisenheim (Johannisberg)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schloss Johannisberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Perché sur sa colline au-dessus du Rhin, Schloss Johannisberg est l'un des domaines les plus mythiques d'Allemagne, fort de plus de neuf siècles d'histoire viticole. C'est ici qu'aurait été « découverte » en 1775 la vendange tardive (Spätlese), épisode fondateur de la tradition des Prädikate allemands. Le domaine appartient aujourd'hui à la famille Oetker (groupe Henkell) et est dirigé par Christian Witte, en lien avec le voisin G.H. von Mumm. Le domaine exploite en monopole le coteau du Schloss Johannisberg, planté à 100 % de Riesling sur quartzite et lœss. Son statut historique lui permet, comme un Grand Cru, de se passer du nom du village sur l'étiquette. La hiérarchie des cuvées y est signalée par des capsules de couleur (jaune, rouge, verte…), un système emblématique remontant au XIXe siècle. Le style maison, classique et racé, décline des Riesling élégants et de garde, du sec aux liquoreux nobles. Icône absolue du Rheingau et du Riesling allemand, Schloss Johannisberg demeure un haut lieu du patrimoine viticole mondial. Le domaine abrite une cave-bibliothèque souterraine légendaire et des millésimes remontant au XIXe siècle. Dès 1797, Thomas Jefferson visita le château et jugea ses vins « les meilleurs du Rheingau ». Géré conjointement avec le voisin G.H. von Mumm, Schloss Johannisberg demeure un lieu de pèlerinage pour les amateurs de Riesling du monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "johannisberg",
+        "monopole",
+        "oetker",
+        "spaetlese",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-kloster-eberbach-hessische-staatsweingueter",
+      "nom": "Kloster Eberbach (Hessische Staatsweingüter)",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Eltville (Eberbach)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Steinberg",
+        "Rauenthaler Baiken",
+        "Erbacher Marcobrunn",
+        "Hattenheimer Wisselbrunnen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installé autour de la magnifique abbaye cistercienne médiévale de Kloster Eberbach, le domaine des Hessische Staatsweingüter (domaines de l'État de Hesse) est le plus vaste d'Allemagne, avec quelque deux cents hectares. Propriété publique, il perpétue une tradition viticole née au XIIe siècle avec les moines cisterciens venus de Bourgogne. Son joyau est le Steinberg, vignoble clos de murs au cœur du Rheingau — véritable « Clos de Vougeot » allemand — doté d'un chai ultramoderne creusé à ses pieds. Le domaine exploite aussi de nombreux grands sites du Rheingau, dont le domaine d'Assmannshausen, dédié au Pinot Noir. Sous la direction de Dieter Greiner, il produit une gamme immense, des Riesling secs et Prädikate aux effervescents. Le style recherche l'authenticité et la lisibilité du terroir, avec une mention particulière pour les Riesling du Steinberg, longtemps stars des grandes enchères allemandes. Entre patrimoine monastique unique et production de grande échelle, Kloster Eberbach est une institution incontournable du Rheingau. L'abbaye, l'un des plus beaux ensembles cisterciens d'Europe, a notamment servi de décor au film « Le Nom de la rose ». Au-delà de la production, le domaine joue un rôle culturel et pédagogique majeur, et ses vieilles bouteilles du Steinberg, conservées dans la Cabinetkeller historique, témoignent d'un patrimoine sans équivalent en Allemagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "steinberg",
+        "kloster-eberbach",
+        "monopole",
+        "domaine-etat",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-eva-fricke",
+      "nom": "Eva Fricke",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Eltville / Lorch",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lorcher Krone",
+        "Lorcher Schlossberg",
+        "Kiedricher Berg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Eva Fricke est l'une des plus belles révélations du Rheingau contemporain et l'une des figures de la nouvelle génération du vin allemand. Après avoir été régisseuse et cheffe de culture chez Leitz à Rüdesheim, elle fonde son propre domaine en 2006, d'abord à toute petite échelle, en se concentrant sur un secteur alors largement délaissé : les coteaux d'ardoise de Lorch, à l'extrême ouest de la région, à la charnière avec le Mittelrhein. C'est elle qui, à elle seule ou presque, a remis ces terroirs sur la carte, à commencer par le Lorcher Krone et le Lorcher Schlossberg, dont elle tire des Rieslings secs d'une salinité et d'une précision remarquables — le Krone Trocken a notamment été noté jusqu'à la perfection par la critique. Le domaine, conduit en bio et désormais établi à Eltville, s'est étoffé pour atteindre une taille plus conséquente tout en gardant son exigence d'origine. Le style Eva Fricke privilégie la tension, la fraîcheur et la transparence du terroir : des vins droits, énergiques, peu démonstratifs mais d'une grande finesse, qui ont rapidement séduit la critique internationale et les meilleures tables. En l'espace d'une quinzaine d'années, Eva Fricke s'est imposée comme une vigneronne majeure, symbole d'un Rheingau qui se réinvente et redécouvre des terroirs oubliés à travers le prisme du sec et d'une viticulture respectueuse. Formée à Geisenheim et aguerrie par des expériences à l'international, Eva Fricke a bâti son domaine pierre par pierre, en rachetant et en restaurant des parcelles en forte pente que plus personne ne voulait travailler. Son pari sur Lorch, terroir d'ardoise à la lisière du Mittelrhein, est aujourd'hui salué comme l'une des plus belles redécouvertes du vignoble allemand récent. Devenue une figure de proue de la nouvelle génération et l'une des vigneronnes les plus médiatisées du pays, elle conjugue engagement environnemental, sens aigu du terroir et un style sec, salin et lumineux qui a conquis la critique comme les grandes tables internationales.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "bio",
+        "lorch",
+        "krone",
+        "eva-fricke",
+        "nouvelle-generation",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-weingut-spreitzer",
+      "nom": "Weingut Spreitzer",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oestricher Lenchen",
+        "Oestricher Doosberg",
+        "Hallgartener Jungfer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oestrich, au cœur du Rheingau, le domaine Spreitzer est mené par les frères Andreas et Bernd Spreitzer, qui en ont fait l'un des noms les plus en vue de la nouvelle génération de vignerons de la région. Sur les coteaux d'Oestrich et de ses environs — Oestricher Lenchen, Doosberg, Hallgartener Jungfer —, ils produisent des Rieslings secs d'une grande pureté, cristallins et précis, dans un style résolument moderne. Le travail s'appuie sur des fermentations spontanées, des élevages soignés et une recherche constante de fraîcheur et de tension plutôt que de puissance. La cuvée parcellaire « 303 », issue de très vieilles vignes du Lenchen (et nommée d'après le numéro de la parcelle au cadastre), est devenue emblématique du domaine et illustre sa capacité à tirer de ces terroirs des vins profonds et salins. Les frères produisent aussi de jolis Sekt et une gamme d'entrée d'un excellent rapport qualité-prix. Régulier, accessible et néanmoins capable de sommets sur ses meilleures cuvées, Spreitzer incarne ce Rheingau dynamique et sans complexe qui a renoué avec le sec et la précision. Un domaine qui conjugue le sérieux du terroir et une certaine légèreté de touche, et qui s'est solidement installé parmi les valeurs sûres de la région. Andreas et Bernd Spreitzer se partagent les tâches — l'un à la vigne, l'autre à la cave — avec une complicité qui transparaît dans des vins gourmands mais toujours tendus. Au-delà du « 303 », le domaine décline une gamme cohérente d'Oestrich et de Hallgarten, du vin de soif au Grosses Gewächs, et produit d'excellents Sekt. En une vingtaine d'années, les frères ont fait passer la propriété familiale du statut de bon domaine local à celui de valeur sûre de la scène rhingovienne, citée parmi les meilleurs rapports qualité-prix de la région pour le Riesling sec.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "oestrich",
+        "lenchen",
+        "spreitzer",
+        "sec",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-schloss-schoenborn",
+      "nom": "Schloss Schönborn",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Hattenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hattenheimer Pfaffenberg",
+        "Erbacher Marcobrunn",
+        "Rüdesheimer Berg Schlossberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hattenheim, le Schloss Schönborn est l'un des plus anciens et des plus vastes domaines familiaux du Rheingau, propriété de la famille des comtes von Schönborn depuis des siècles. Son histoire et son parcellaire en font un véritable conservatoire des grands terroirs de la région. Le domaine possède des parcelles dans certains des plus prestigieux lieux-dits du Rheingau : l'Erbacher Marcobrunn, le Hattenheimer Pfaffenberg (qu'il exploite en monopole), le Rüdesheimer Berg Schlossberg ou encore la Hochheimer Domdechaney. De ces sols variés — argilo-calcaires, phyllite, quartzite — naissent des Riesling classiques, du sec aux liquoreux nobles. Le style Schönborn s'inscrit dans la grande tradition rhingovienne, privilégiant l'élégance, la minéralité et la garde. Riche d'un patrimoine exceptionnel, le domaine demeure l'un des noms historiques majeurs du Rheingau, gardien de quelques-uns des plus beaux crus de la région. Comptant parmi les plus anciens domaines familiaux d'Europe, la maison von Schönborn a traversé les siècles en préservant un parcellaire d'exception réparti sur toute la longueur du Rheingau. Ses Riesling, fidèles à un classicisme sans concession, séduisent les amateurs attachés à la tradition et à l'histoire de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "hattenheim",
+        "pfaffenberg",
+        "schoenborn",
+        "monopole",
+        "legacy",
+        "grand-domaine"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-schloss-vollrads",
+      "nom": "Schloss Vollrads",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schloss Vollrads"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Winkel, Schloss Vollrads est l'un des plus anciens domaines viticoles du monde, fort de plus de huit cents ans d'histoire — la première vente documentée de ses vins remonte au XIIIe siècle. Propriété de la famille Matuschka-Greiffenclau jusqu'à la mort d'Erwein en 1997, qui mit fin à près de huit siècles de tradition familiale, il est aujourd'hui géré par la Nassauische Sparkasse, sous la direction de Ralf Bengel. Le domaine exploite en monopole le vaste coteau qui entoure son château, planté exclusivement de Riesling sur des sols variés. Engagé dans une conversion à la viticulture biologique, il conduit aussi avec l'université de Geisenheim des projets de recherche pionniers, dont un « vignoble de la biodiversité » réunissant tous les clones de Riesling connus. Le style Vollrads recherche la pureté, la finesse et l'élégance, dans des Riesling délicats et caractéristiques. Doté d'un château, d'un restaurant et d'une intense activité événementielle, le domaine conjugue patrimoine monumental et viticulture moderne. Monument vivant du Rheingau, Schloss Vollrads demeure un symbole de la longévité et de la noblesse du Riesling. La célèbre tour résidentielle, l'une des plus anciennes d'Allemagne, domine le vignoble et symbolise cette continuité millénaire. Sauvé après la fin de la lignée familiale, le domaine conjugue aujourd'hui rigueur qualitative, ouverture au public et recherche scientifique, et reste l'un des emblèmes les plus visités et les plus aimés du Rheingau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "winkel",
+        "vollrads",
+        "monopole",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-august-kesseler",
+      "nom": "August Kesseler",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Assmannshausen / Rüdesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Assmannshäuser Höllenberg",
+        "Rüdesheimer Berg Schlossberg",
+        "Rüdesheimer Berg Rottland"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Installé à Assmannshausen, dans le bas Rheingau où la vallée du Rhin se resserre, August Kesseler est l'un des grands seigneurs du vin de la région et une référence absolue du Spätburgunder (Pinot Noir) allemand. Le domaine a été fondé en 1924 par Josef Kesseler, à partir de l'ancienne cave coopérative du village ; son petit-fils August Kesseler en a pris la responsabilité dès 1977, à dix-neuf ans, et l'a transformé, après des expériences en France, en Italie et aux États-Unis, en l'un des fleurons du Rheingau. Sa contribution majeure remonte à la fin des années 1980 : avec son vinificateur de longue date Max Himstedt, il a profondément renouvelé le style du Pinot Noir rhingovien — réduction des rendements, macérations plus longues, élevage maîtrisé en grands foudres et en pièces bourguignonnes — et porté le Spätburgunder allemand au rang des grands rouges sur la scène internationale. Le cœur de cette réputation est l'Assmannshäuser Höllenberg, coteau de schiste (phyllite) où le Pinot est cultivé depuis le XIVe siècle, qui donne des rouges élégants, frais, « féminins » et de grande garde. Mais le domaine, qui couvre une trentaine d'hectares partagés entre Riesling (≈60 %) et Pinot Noir (≈40 %), brille aussi par ses Rieslings, notamment les Grosses Gewächs du Rüdesheimer Berg Schlossberg, d'une minéralité saisissante alliée à une texture presque voluptueuse. La philosophie maison est exigeante : chaque parcelle est embouteillée séparément, et un vin qui ne se hisse pas au niveau d'un Grosses Gewächs n'est tout simplement pas produit comme tel. Entre tradition (la cave creusée dans la roche en 1792, la bouteille Schlegel) et quête d'un style « frais et minéral », August Kesseler demeure l'ambassadeur historique du grand Pinot Noir du Rheingau. Dans sa logique d'expansion, August Kesseler avait racheté dès 1984 le domaine Valentin Schlotter, renforçant sa présence sur les meilleurs coteaux d'Assmannshausen et de Rüdesheim. Le domaine, niché dans le paysage classé au patrimoine mondial de l'UNESCO de la vallée du Haut-Rhin moyen, s'appuie sur une équipe fidèle — Max Himstedt à la cave, Simon Batarseh à l'assemblage et au commerce — et reste membre du VDP comme du Barrique-Forum. Référence intemporelle, Kesseler continue d'incarner le pont entre la finesse mosellane et la puissance rhingovienne, et la preuve que le Rheingau sait produire de très grands rouges autant que de très grands blancs.",
+      "mes_notes": "Les plus grands pinot noirs d'Allemagne, sans aucuns doutes.",
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "riesling",
+        "assmannshausen",
+        "hoellenberg",
+        "kesseler",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-geheimrat-j-wegeler",
+      "nom": "Geheimrat J. Wegeler",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Geisenheimer Rothenberg",
+        "Oestricher Lenchen",
+        "Winkeler Hasensprung"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Établi à Oestrich-Winkel, le domaine Geheimrat J. Wegeler a été fondé en 1882 par Julius Wegeler, négociant et producteur de Sekt issu de la célèbre maison Deinhard. Resté familial sur plusieurs générations, il est aujourd'hui dirigé par Richard Grosche et concentre tout son art sur le Riesling. Le domaine exploite de grands coteaux du Rheingau — Geisenheimer Rothenberg, Winkeler Hasensprung, Oestricher Lenchen — et possède aussi un domaine distinct sur la Mosel, doté d'une part convoitée du légendaire Bernkasteler Doctor. Wegeler détient par ailleurs le domaine Krone d'Assmannshausen, spécialiste du Pinot Noir. Le style Wegeler s'inscrit dans une tradition de vins de garde : Riesling élégants et minéraux, élevés patiemment, dans une recherche d'équilibre et de pureté. Maison de négoce devenue grand domaine de terroir, Wegeler demeure une référence classique et constante du Rheingau, à cheval entre le Rhin et la Mosel. La cuvée « Geheimrat J », assemblage des meilleures parcelles, est devenue emblématique de la maison. Héritier de la grande tradition marchande de Deinhard — où l'on gardait les vins de longues années avant de les vendre —, Wegeler perpétue cet art du temps long, avec un pied dans le Rheingau et l'autre sur la Mosel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "oestrich",
+        "geisenheim",
+        "rothenberg",
+        "wegeler",
+        "grand-domaine"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-prinz",
+      "nom": "Prinz",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Hallgarten",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Hallgartener Schönhell",
+        "Hallgartener Jungfer",
+        "Hallgartener Hendelberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hallgarten, l'un des villages les plus hauts et les plus frais du Rheingau, Fred Prinz et son épouse Sabine animent un petit domaine d'environ huit hectares qui a, à lui seul, replacé ce secteur longtemps méconnu sur la carte des grands terroirs. Hallgarten se distingue par ses sites d'altitude sur marnes calcaires et phyllite, plus tardifs et plus frais que la moyenne de la région — un atout précieux à l'heure du réchauffement. Conduit en bio, le domaine concentre son travail sur quelques lieux-dits, au premier rang desquels le Hallgartener Schönhell, dont le Grosses Gewächs est devenu très recherché, complété par la Jungfer et le Hendelberg. Les Rieslings Prinz sont secs, tendus, droits et profondément salins, d'une grande énergie minérale et d'une belle aptitude à la garde — l'exact opposé de l'image opulente parfois associée au Rheingau. Restée confidentielle par sa taille, la production s'écoule en grande partie auprès d'amateurs avertis et de sommeliers, qui voient dans ce domaine l'un des secrets les mieux gardés de la région. Par la finesse et la rigueur de ses vins, Prinz illustre parfaitement le potentiel de ces terroirs d'altitude du Rheingau et compte aujourd'hui, malgré sa discrétion, parmi les adresses les plus pointues pour le Riesling sec de la région. L'altitude et la fraîcheur de Hallgarten, longtemps perçues comme un handicap, sont devenues un atout décisif face au réchauffement, permettant à Prinz de signer des Rieslings d'une acidité éclatante et d'une grande capacité de garde. Le couple travaille en bio avec un soin maniaque, vendange parcelle par parcelle et privilégie des vinifications sobres qui laissent parler la marne calcaire. Resté volontairement à taille humaine, le domaine cultive une forme de perfectionnisme discret qui en fait l'un des secrets les mieux gardés du Rheingau — et l'une de ses adresses les plus pointues pour qui cherche le sec minéral et tendu.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "bio",
+        "hallgarten",
+        "schoenhell",
+        "prinz",
+        "sec",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-domdechant-werner",
+      "nom": "Domdechant Werner",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Hochheim",
+      "commune": "Hochheim am Main",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Hochheimer Domdechaney",
+        "Hochheimer Hölle",
+        "Hochheimer Kirchenstück"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hochheim, à l'extrémité orientale du Rheingau au-dessus du Main, le domaine Domdechant Werner est un domaine familial historique, gardien des grands terroirs calcaires de Hochheim. Il exploite quelques-uns des meilleurs lieux-dits du secteur : la Hochheimer Domdechaney, le Kirchenstück et la Hölle, dont les sols profonds de lœss calcaire donnent des Riesling plus charpentés, épicés et amples que la moyenne du Rheingau. Ces vins de Hochheim, jadis très prisés jusqu'en Angleterre où on les appelait « Hock », possèdent une vraie aptitude à la garde. Le style maison reste fidèle à la tradition rhingovienne, privilégiant la structure, la minéralité calcaire et l'élégance, du sec aux Prädikate nobles. Discret mais constant, Domdechant Werner est l'un des plus fidèles ambassadeurs du terroir si particulier de Hochheim, et une valeur sûre du Rheingau classique. Hochheim, dont les vins firent les délices de la cour d'Angleterre — la reine Victoria s'y arrêta en 1850, donnant son nom au cru « Victoriaberg » —, trouve en Domdechant Werner l'un de ses plus dignes représentants. Le domaine perpétue ce style ample et épicé, à part dans le paysage du Rheingau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "hochheim",
+        "domdechaney",
+        "werner",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-j-b-becker",
+      "nom": "J.B. Becker",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Walluf",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Wallufer Walkenberg",
+        "Eltviller Sonnenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Walluf, à l'entrée orientale du Rheingau, J.B. Becker est un domaine culte, gardien d'une tradition que le reste de la région a largement abandonnée. Longtemps incarné par l'inimitable Hans-Josef Becker, épaulé par sa sœur Maria, le domaine s'est fait une spécialité des Rieslings secs (trocken) de très longue garde, vinifiés de façon classique et — fait rarissime — souvent mis sur le marché avec plusieurs années, voire décennies, de vieillissement en bouteille à la propriété. Cette politique de garde à contre-courant est la signature de la maison : Becker conserve ses millésimes et les commercialise à pleine maturité, offrant aux amateurs des vins prêts à boire que presque plus personne ne propose ainsi. Les Rieslings, issus notamment du Wallufer Walkenberg et de l'Eltviller Sonnenberg, sont droits, fermes, minéraux et d'une longévité impressionnante. Le domaine produit aussi un Spätburgunder de facture classique, élevé dans la grande tradition. Fidèle à des méthodes éprouvées, rétif aux modes et aux artifices, J.B. Becker cultive une forme d'intransigeance qui lui vaut un statut de référence auprès des connaisseurs en quête d'authenticité et de Rieslings secs de garde. Loin des projecteurs, avec des allocations confidentielles, le domaine incarne une mémoire vivante du Rheingau sec et classique, et reste l'une des adresses les plus singulières et attachantes de la région. Cette intransigeance se double d'un savoir-faire rare : maîtrise des fermentations, élevages patients, refus des artifices œnologiques modernes. Là où la plupart des domaines courent après la nouveauté, Becker mise sur le temps long et la fidélité à un style, offrant régulièrement à la vente d'anciens millésimes parfaitement à point. Ses Spätburgunder, élevés à l'ancienne, prolongent cette philosophie. Devenu une référence pour les amateurs de Riesling sec de garde et de vins « vrais », J.B. Becker occupe une place unique dans le paysage rhingovien : celle d'un gardien du temple, à rebours des modes, dont les bouteilles s'échangent sous le manteau entre connaisseurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "walluf",
+        "walkenberg",
+        "becker",
+        "tradition",
+        "sec",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-johannishof-h-h-eser",
+      "nom": "Johannishof (H.H. Eser)",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Geisenheim (Johannisberg)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Johannisberger Hölle",
+        "Rüdesheimer Berg Rottland",
+        "Geisenheimer Kläuserweg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Johannisberg, le Johannishof, propriété de la famille Eser, est un domaine de tradition mené aujourd'hui par Johannes Eser, réputé pour ses caves profondes et son style classique. Le domaine exploite de beaux coteaux autour de Johannisberg, de Geisenheim et de Rüdesheim, dont il tire des Riesling élégants et purs, du sec aux Prädikate fruités. Le travail patient en cave et de longs élevages confèrent aux vins une belle profondeur et une réelle aptitude à la garde. Le style Eser privilégie la finesse, la fraîcheur et la lisibilité du terroir, dans des Riesling racés offrant souvent un excellent rapport qualité-prix. Fidèle à une certaine idée du classicisme rhingovien, le Johannishof demeure une adresse sûre et appréciée pour les amateurs de Riesling authentique du Rheingau. Le domaine est réputé pour ses spectaculaires caves souterraines en catacombes, où reposent de nombreux millésimes anciens. Transmis de génération en génération, le Johannishof offre des Riesling d'un classicisme rassurant et d'une grande régularité, à des prix souvent très raisonnables au regard de leur qualité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "johannisberg",
+        "eser",
+        "johannishof",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-dr-corvers-kauter",
+      "nom": "Dr. Corvers-Kauter",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Rüdesheimer Berg Schlossberg",
+        "Hallgartener Schönhell",
+        "Erbacher Marcobrunn"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oestrich-Winkel, le domaine Dr. Corvers-Kauter, mené par la famille Corvers, s'est imposé comme l'un des acteurs montants du Rheingau, attaché à une viticulture respectueuse de l'environnement et à l'expression du terroir. Le domaine exploite des coteaux du Rheingau, notamment sur les grandes pentes du Rüdesheimer Berg et autour d'Oestrich, dont il tire des Riesling secs précis et minéraux, ainsi que de beaux Pinots. Le travail au vignoble, conduit en bio, et des vinifications soignées visent à révéler la pureté et la fraîcheur propres aux meilleurs sites de la région. Le style Corvers-Kauter, droit et terroir-driven, conjugue modernité et fidélité au classicisme rhingovien. En pleine ascension qualitative, le domaine compte parmi les adresses dynamiques du Rheingau, à suivre de près pour ses Riesling et ses vins de Bourgogne. Sous l'impulsion de la nouvelle génération, le domaine a opéré une montée en gamme remarquée, conjuguant conversion écologique, sélection parcellaire et vinifications précises. Ses Riesling des grands coteaux de Rüdesheim et ses vins de Bourgogne lui valent une reconnaissance critique croissante parmi les domaines à suivre du Rheingau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "oestrich",
+        "corvers-kauter",
+        "grand-domaine",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-robert-koenig",
+      "nom": "Robert König",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Assmannshausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Assmannshäuser Höllenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Assmannshausen, dans le bas Rheingau, le petit domaine Robert König est un spécialiste du Pinot Noir, perpétuant une tradition familiale attestée depuis 1704. Depuis la disparition de Robert König en 2015, c'est son fils Philipp König qui en assure la conduite. Sur environ sept hectares de coteaux escarpés de phyllite — Assmannshäuser Höllenberg, Frankenthal, Rüdesheimer Drachenstein —, le domaine cultive à 90 % des cépages rouges, Pinot Noir (Spätburgunder) et Frühburgunder, vinifiés presque exclusivement en sec. Après macération traditionnelle, les rouges sont élevés en grands foudres ou en barriques. Le style König recherche l'élégance et la pureté, dans des Pinots fins et digestes qui ont conquis les marchés export, notamment aux États-Unis et en Asie. Discret mais respecté, Robert König illustre la vocation singulière d'Assmannshausen pour le grand Pinot Noir du Rheingau. Travaillant des coteaux escarpés de phyllite dans la grande tradition rouge d'Assmannshausen, Philipp König signe des Pinots d'une finesse remarquable, dans un secteur où le cépage est cultivé depuis le Moyen Âge. Une adresse confidentielle mais sûre pour les amateurs de grand Spätburgunder rhingovien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "assmannshausen",
+        "hoellenberg",
+        "koenig",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-weingut-krone",
+      "nom": "Weingut Krone",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau occidental",
+      "commune": "Assmannshausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Assmannshäuser Höllenberg",
+        "Assmannshäuser Frankenthal"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Assmannshausen, le Weingut Krone est l'un des plus prestigieux spécialistes du Pinot Noir d'Allemagne. Riche d'une histoire de plus de cent cinquante ans, il appartient depuis 2007 à la famille Wegeler-Drieseberg, sous la direction du Dr. Tom Drieseberg, et travaille en étroite collaboration avec les domaines Wegeler. Sur à peine plus de cinq hectares de coteaux de phyllite, le domaine se consacre presque exclusivement au Pinot Noir de l'Assmannshäuser Höllenberg et du Frankenthal, avec un trésor rare : des vignes franches de pied issues du grand cru bourguignon de Chambertin, plantées dans les années 1960. Les vins reposent dans une cave creusée dans la roche en 1860, longue de soixante mètres, à l'humidité quasi totale. Le style Krone privilégie l'élégance et la profondeur, dans des Pinots Noirs racés et de garde, comptant parmi les plus fins du pays. Membre du VDP, le domaine est l'une des références absolues du Pinot Noir allemand, et un fleuron de la tradition rouge d'Assmannshausen. Acceptée au VDP en 2016, la maison conjugue patrimoine historique — hôtel, cave troglodyte, vieilles vignes — et exigence contemporaine, sous la houlette conjointe des familles propriétaires et de l'équipe Wegeler. Ses Pinots Noirs du Höllenberg comptent, millésime après millésime, parmi les plus grands rouges d'Allemagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "assmannshausen",
+        "hoellenberg",
+        "krone",
+        "rouge",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-chat-sauvage",
+      "nom": "Chat Sauvage",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Geisenheim (Johannisberg)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Assmannshäuser Höllenberg",
+        "Lorcher Schlossberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Chat Sauvage est un domaine singulier du Rheingau, entièrement dédié aux cépages bourguignons — Pinot Noir et Chardonnay — dans une région avant tout vouée au Riesling. Fondé au début des années 2010, il a fait le pari de produire de grands vins de Bourgogne sur les terroirs rhingoviens. Le domaine vinifie des raisins issus de plusieurs grands sites du Rheingau, de Rüdesheim et d'Assmannshausen jusqu'à Lorch et Johannisberg, dans un style résolument bourguignon : vendanges soignées, vinifications parfois en grappes entières, élevages en barriques. Il en résulte des Pinots Noirs élégants et tendus et des Chardonnay ciselés, qui ont rapidement compté parmi les références allemandes pour ces deux cépages. Jeune mais déjà remarqué, Chat Sauvage illustre la montée en puissance des grands vins de Bourgogne allemands et la capacité du Rheingau à briller au-delà du seul Riesling. En quelques millésimes seulement, le domaine s'est fait un nom auprès des amateurs de grands Pinots et Chardonnays allemands, porté par la conviction que les phyllites et les sols du Rheingau peuvent rivaliser avec la Bourgogne. Une démarche audacieuse qui élargit l'horizon d'une région encore identifiée au seul Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "spaetburgunder",
+        "pinot-noir",
+        "chardonnay",
+        "chat-sauvage",
+        "bourgogne",
+        "nouvelle-generation",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-balthasar-ress",
+      "nom": "Balthasar Ress",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Hattenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hattenheimer Nussbrunnen",
+        "Rüdesheimer Berg Schlossberg",
+        "Schloss Reichartshausen"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hattenheim, le domaine Balthasar Ress est une maison familiale réputée, conduite par Stefan Ress en agriculture biologique. Sur des coteaux du cœur du Rheingau — Hattenheimer Wisselbrunnen et Nussbrunnen, Rüdesheimer Berg — ainsi que sur son monopole de Schloss Reichartshausen, il produit des Riesling élégants et précis, du sec aux Prädikate nobles. Le domaine se distingue par une démarche moderne et créative, jusque dans ses étiquettes d'artistes, tout en restant fidèle à la grande tradition rhingovienne. Doté d'un hôtel-restaurant, il conjugue accueil et exigence qualitative. Régulier et engagé dans une viticulture respectueuse, Balthasar Ress compte parmi les valeurs sûres et sympathiques du Rheingau, appréciées pour leur pureté et leur rapport qualité-prix. La maison illustre bien ce Rheingau qui sait conjuguer héritage et ouverture, sans jamais sacrifier la finesse du Riesling.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "hattenheim",
+        "ress",
+        "monopole",
+        "bio",
+        "grand-domaine"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-allendorf",
+      "nom": "Allendorf",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Winkeler Jesuitengarten",
+        "Rüdesheimer Berg Rottland",
+        "Oestricher Lenchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oestrich-Winkel, le domaine Allendorf est l'un des plus vastes domaines familiaux du Rheingau, fort de plusieurs dizaines d'hectares répartis sur de nombreux coteaux, dont le Winkeler Jesuitengarten et le Rüdesheimer Berg. La maison décline une gamme étendue de Riesling, du vin de soif accessible aux cuvées plus ambitieuses, ainsi que d'excellents Sekt et des Pinots. Son positionnement, axé sur un bon rapport qualité-prix et une offre œnotouristique dynamique (dégustations, événements), en fait une porte d'entrée appréciée vers le Riesling du Rheingau. Fiable et accessible, Allendorf joue un rôle important dans la diffusion du Riesling rhingovien auprès d'un large public, tout en soignant ses meilleures cuvées de terroir. Par son volume et son rayonnement, le domaine contribue à faire connaître le Riesling rhingovien bien au-delà des cercles d'initiés, tout en cultivant ses plus belles parcelles avec soin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "oestrich",
+        "allendorf",
+        "grand-domaine",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-prinz-von-hessen",
+      "nom": "Prinz von Hessen",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Geisenheim (Johannisberg)",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Johannisberger Klaus",
+        "Winkeler Jesuitengarten",
+        "Kiedricher Sandgrub"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Johannisberg, le domaine Prinz von Hessen appartient à la maison princière de Hesse et compte parmi les domaines historiques du Rheingau. Sur une quarantaine d'hectares, il exploite de beaux coteaux autour de Johannisberg, Winkel et Kiedrich (notamment le Kiedricher Wasseros). Le domaine produit des Riesling classiques, du sec aux liquoreux nobles, ainsi que d'élégants Sekt, dans un style fidèle à la tradition rhingovienne : finesse, minéralité et belle aptitude à la garde. Adossé à un prestigieux patrimoine familial, Prinz von Hessen demeure une adresse sûre et régulière du Rheingau, appréciée pour la constance et l'élégance de ses vins. Le domaine soigne particulièrement ses Sekt et ses cuvées issues du Wasseros, et demeure, derrière sa discrétion aristocratique, un témoin fidèle du classicisme du Rheingau et de son attachement au Riesling de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "johannisberg",
+        "prinz-von-hessen",
+        "klaus",
+        "grand-domaine"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-querbach",
+      "nom": "Querbach",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Oestrich-Winkel",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Oestricher Doosberg",
+        "Oestricher Lenchen",
+        "Hallgartener Jungfer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oestrich, le petit domaine familial Querbach, mené par la famille du même nom, s'est forgé une solide réputation auprès des amateurs exigeants. Travaillant principalement l'Oestricher Doosberg et le Lenchen, il produit des Riesling majoritairement secs, vinifiés par fermentation spontanée. Le style Querbach privilégie la précision, la fraîcheur et l'expression du terroir, dans des vins droits, salins et taillés pour la garde, à mille lieues des clichés sucrés du Rheingau. Resté à taille humaine et exigeant, Querbach compte parmi les adresses pointues et confidentielles de la région, recherchées pour la pureté et la finesse de leurs Riesling secs. Fermentés lentement et élevés avec patience, leurs vins gagnent en complexité avec le temps. Querbach est de ces petits domaines qui, loin du tapage, cultivent une idée très pure et très exigeante du Riesling sec rhingovien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "oestrich",
+        "doosberg",
+        "querbach",
+        "sec",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-barth",
+      "nom": "Barth",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Hattenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hattenheimer Nussbrunnen",
+        "Hallgartener Schönhell"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hattenheim, le domaine Barth, mené par Mark Barth en agriculture biologique, s'est fait une spécialité de l'effervescent : il fut l'un des pionniers du Sekt biologique de qualité en Allemagne, avec sa cuvée « Primus », premier Sekt bio du VDP. Outre ses bulles élaborées en méthode traditionnelle, le domaine produit de beaux Riesling tranquilles, secs et minéraux, issus de coteaux de Hattenheim et de Hallgarten. La conduite biodynamique et le soin apporté aux élevages confèrent à l'ensemble une belle pureté. Référence pour le Sekt de terroir et engagé de longue date dans le bio, Barth occupe une place originale et estimée dans le paysage du Rheingau. Entre Sekt de terroir, Riesling ciselés et engagement écologique de longue date, Mark Barth a su donner à son domaine une identité forte et singulière, saluée par les amateurs de bulles allemandes de caractère.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "sekt",
+        "bio",
+        "hattenheim",
+        "barth",
+        "cremant"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-jakob-jung",
+      "nom": "Jakob Jung",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Erbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Erbacher Siegelsberg",
+        "Erbacher Marcobrunn",
+        "Erbacher Hohenrain"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Erbach, le domaine familial Jakob Jung perpétue une longue tradition viticole au cœur du Rheingau. Il exploite de beaux coteaux du secteur, dont l'Erbacher Steinmorgen et le Hohenrain, ainsi que des parcelles proches du légendaire Marcobrunn. Le domaine produit des Riesling classiques, fruités et équilibrés, du sec aux Prädikate, ainsi que des Pinots, dans un style fidèle au caractère d'Erbach : ampleur, finesse et minéralité. Discret et régulier, Jakob Jung offre des vins authentiques d'un excellent rapport qualité-prix, et compte parmi les bonnes adresses familiales pour découvrir le Riesling du Rheingau classique. À taille familiale et sans esbroufe, le domaine perpétue un savoir-faire transmis de génération en génération, et reste une valeur sûre pour qui cherche l'authenticité du Riesling d'Erbach à prix doux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "erbach",
+        "siegelsberg",
+        "jung",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-bibo-runge",
+      "nom": "Bibo Runge",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Hallgarten",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Hallgartener Schönhell",
+        "Hallgartener Hendelberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hallgarten, le domaine Bibo Runge est l'un des projets les plus en vue de la nouvelle génération du Rheingau. Fondé en 2013 par Walter Bibo — longtemps directeur de Schloss Reinhartshausen — et Kai Runge, il est aujourd'hui mené par Walter Bibo, Markus Bonsels et Monika Eichner. Sur quelques hectares des coteaux de Hallgarten (Hendelberg, Jungfer, Schönhell, Würzgarten) et d'Oestrich (Lenchen), le domaine produit des Riesling et des Pinots au style moderne et précis, reconnaissables à leurs étiquettes audacieuses et graphiques. Jeune mais déjà remarqué par la critique, Bibo Runge incarne l'énergie créative d'un Rheingau qui se réinvente, et compte parmi les adresses montantes de la région. Entre sites prestigieux de Hallgarten, vinifications soignées et identité visuelle affirmée, le domaine s'est imposé comme l'un des symboles du dynamisme et de la créativité du Rheingau d'aujourd'hui.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "hallgarten",
+        "bibo-runge",
+        "moderne",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheingau-prod-schloss-reinhartshausen",
+      "nom": "Schloss Reinhartshausen",
+      "type": "domaine",
+      "region": "Rheingau",
+      "sous_region": "Rheingau central",
+      "commune": "Erbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Erbacher Marcobrunn",
+        "Erbacher Hohenrain",
+        "Hattenheimer Wisselbrunnen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Erbach, Schloss Reinhartshausen est un domaine historique et prestigieux du Rheingau, jadis propriété de la famille royale de Prusse. Il possède des parcelles dans quelques-uns des plus grands lieux-dits de la région, au premier rang desquels le légendaire Erbacher Marcobrunn, ainsi qu'un vignoble unique sur l'île de la Mariannenaue, au milieu du Rhin (l'Erbacher Rheinhell). Le domaine produit des Riesling classiques et de beaux Pinots, dans un style fidèle à la tradition rhingovienne, et a connu ces dernières années un travail de revalorisation de son patrimoine exceptionnel. Fort d'une histoire et d'un parcellaire remarquables, Schloss Reinhartshausen demeure l'un des grands noms patrimoniaux du Rheingau, gardien de terroirs parmi les plus prestigieux de la région. Le vignoble insulaire de la Mariannenaue, baigné par le Rhin, constitue une curiosité unique en Allemagne et symbolise la singularité d'un domaine au patrimoine sans équivalent.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "erbach",
+        "marcobrunn",
+        "reinhartshausen",
+        "grand-domaine",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    }
+  ]
+}

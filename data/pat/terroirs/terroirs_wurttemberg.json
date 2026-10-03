@@ -1,0 +1,643 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "wurttemberg",
+  "region_label": "Württemberg (Allemagne)",
+  "source_file": "terroirs_wurttemberg_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 24,
+  "items": [
+    {
+      "id": "de-wurttemberg-terr-fellbacher-laemmler",
+      "nom": "Fellbacher Lämmler",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "230-330 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Le grand cru emblématique du Württemberg, à Fellbach ; sur le keuper, des Lemberger et Spätburgunder de référence et de beaux Riesling (Aldinger, Schnaitmann).",
+      "notes_objectives": "Le Fellbacher Lämmler est le grand cru emblématique du Württemberg, sur les coteaux de Fellbach, aux portes de Stuttgart. Son sol de keuper (marne gypseuse et grès des roseaux), exposé au sud, en fait un terroir de premier plan, aussi bien pour les rouges que pour les blancs. Le keuper, qui réchauffe le sol et lui donne de la profondeur, permet des Lemberger et des Spätburgunder d'une grande finesse, ainsi que de beaux Riesling. Le terroir est magnifié par les deux plus grands domaines de la région, Aldinger et Schnaitmann, dont les Grosses Gewächs comptent parmi les plus grands rouges d'Allemagne. Classé au sommet de la hiérarchie du Württemberg, le Lämmler est le symbole du grand Lemberger. Le Lämmler est une vaste pente exposée au sud au-dessus de Fellbach, dont le keuper — marne gypseuse et grès des roseaux — offre à la fois la chaleur nécessaire à la maturité des rouges et la fraîcheur qui préserve l'acidité. Cette polyvalence en fait un terroir complet, capable d'exceller sur le Lemberger, le Spätburgunder et le Riesling. Deux des plus grands domaines d'Allemagne, Aldinger et Schnaitmann, s'y côtoient et y signent des Grosses Gewächs qui ont fait connaître le grand Lemberger bien au-delà des frontières : le Lämmler Lemberger d'Aldinger a même figuré parmi les meilleurs vins du monde dans des classements internationaux. Pour l'amateur, le Fellbacher Lämmler est le terroir qui incarne, à lui seul, l'ascension qualitative du Württemberg et la noblesse retrouvée de son cépage rouge phare. Dans une région où l'écrasante majorité du raisin part en coopérative, le Lämmler fait figure de vitrine du Württemberg de qualité : c'est ici que se mesurent, côte à côte, les deux domaines qui ont porté la région au plus haut. Les Lemberger du Lämmler, profonds et structurés, peuvent vieillir une décennie ou plus, gagnant en complexité. Les Spätburgunder y gagnent une finesse bourguignonne, et les Riesling une belle tension minérale. Cette capacité à exceller sur trois grands cépages, rouges comme blancs, est rare et fait du Lämmler un terroir à part. Pour qui veut comprendre pourquoi le Lemberger est aujourd'hui considéré comme un grand cépage d'avenir, le Fellbacher Lämmler est le point de départ obligé. Pour beaucoup d'amateurs et de critiques, le Lämmler est aujourd'hui le plus grand terroir rouge du Württemberg, et le symbole de la reconnaissance internationale du Lemberger.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "keuper",
+        "lemberger",
+        "vdp-grosse-lage",
+        "remstal"
+      ],
+      "source": "thegwc|weingut-aldinger"
+    },
+    {
+      "id": "de-wurttemberg-terr-stettener-pulvermaecher",
+      "nom": "Stettener Pulvermächer",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "250-360 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Grand coteau de keuper et de grès des roseaux à Kernen-Stetten ; l'un des plus grands terroirs de Riesling du Württemberg (Karl Haidle, Beurer).",
+      "notes_objectives": "Le Stettener Pulvermächer est l'un des plus grands terroirs de Riesling du Württemberg, sur les coteaux de Kernen-Stetten, dans le Remstal. Son sol de keuper et de grès des roseaux, en pente raide, donne des Riesling minéraux et racés. Le terroir convient aussi au Lemberger, mais c'est par ses Riesling tendus et salins qu'il s'est forgé une réputation. Il est magnifié par les domaines Karl Haidle et Jochen Beurer, dont les cuvées comptent parmi les références du Riesling régional. Classé au sommet de la hiérarchie du Württemberg, le Pulvermächer illustre la grande vocation blanche du Remstal. Sur les hauteurs de Kernen-Stetten, dans le Remstal, le Pulvermächer doit son caractère à un sol de keuper et de grès des roseaux (Schilfsandstein) qui imprime aux Riesling une minéralité tendue et saline. La pente raide et la fraîcheur du site préservent une belle vivacité. Moritz Haidle (Karl Haidle), en biodynamie, et Jochen Beurer, qui vinifie ses Riesling séparément selon le type de roche, en ont fait l'un des plus grands terroirs blancs du Württemberg, démontrant que la région ne se résume pas à ses rouges. Classé parmi les sommets de la région, le Pulvermächer illustre la grande vocation du Remstal pour le Riesling de terroir, minéral et de garde. Le Pulvermächer illustre une facette souvent oubliée du Württemberg : sa capacité à produire de grands Riesling, à l'égal des meilleures régions blanches d'Allemagne. Le grès des roseaux et le keuper y donnent des vins à la minéralité fumée et saline, d'une grande précision, qui vieillissent remarquablement. Le travail de Moritz Haidle en biodynamie et l'approche géologique de Jochen Beurer, qui isole chaque type de roche, ont fait de ce coteau un véritable laboratoire du Riesling de terroir. Pour l'amateur, le Pulvermächer prouve que le Remstal n'est pas qu'une terre de rouges, mais aussi l'un des grands terroirs blancs du sud de l'Allemagne. Devenu une référence du Riesling de terroir, il prouve que le Remstal compte parmi les grands secteurs blancs du sud de l'Allemagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "keuper",
+        "riesling",
+        "vdp-grosse-lage",
+        "remstal"
+      ],
+      "source": "winewithseth|grapeguru"
+    },
+    {
+      "id": "de-wurttemberg-terr-untertuerkheimer-herzogenberg",
+      "nom": "Untertürkheimer Herzogenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "230-320 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Grand cru de Riesling de Stuttgart, exploité presque en monopole par Wöhrwag ; sur le keuper, des Riesling racés et de garde.",
+      "notes_objectives": "L'Untertürkheimer Herzogenberg est l'un des plus grands terroirs de Riesling de Stuttgart, sur les coteaux du Neckar à Untertürkheim. Son sol de keuper, en pente raide, donne des Riesling racés et de garde. Le terroir est exploité presque en totalité par le domaine Wöhrwag, qui en a fait sa signature, avec des Riesling classés en Grosse Lage, ainsi que de beaux Spätburgunder. Classé au sommet de la hiérarchie du Württemberg, le Herzogenberg illustre la capacité de Stuttgart, l'une des plus grandes villes viticoles d'Allemagne, à produire de grands Riesling sur ses coteaux urbains. Sur les coteaux du Neckar à Untertürkheim, au cœur de Stuttgart, le Herzogenberg est un grand terroir de keuper en pente raide, que le domaine Wöhrwag exploite presque en totalité — une situation rare qui en fait l'un des plus beaux terroirs de Riesling de la métropole. Le keuper donne ici des Riesling racés, minéraux et de longue garde, classés en Grosse Lage, ainsi que de beaux Spätburgunder. La proximité du fleuve et la chaleur urbaine favorisent la maturité. Classé parmi les grands terroirs du Württemberg, le Herzogenberg rappelle que Stuttgart, ville surtout connue pour son industrie, est aussi l'une des plus grandes communes viticoles d'Allemagne, capable de produire de véritables grands crus de Riesling. Le quasi-monopole du domaine Wöhrwag sur le Herzogenberg permet une lecture cohérente et patiente de ce grand terroir de keuper, dont les Riesling, racés et salins, comptent parmi les plus aboutis de Stuttgart. La forte pente, qui impose un travail manuel, et la chaleur de la cuvette urbaine concourent à leur maturité. Ces Riesling de longue garde, à la minéralité affirmée, démontrent que la métropole souabe n'a rien à envier aux grandes régions blanches sur ses meilleurs coteaux. Le Herzogenberg illustre la singularité d'un vignoble urbain de premier plan, où la vigne s'accroche aux pentes au cœur même de la ville. Indissociable du domaine Wöhrwag, il demeure l'un des plus beaux grands crus de Riesling de Stuttgart.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "keuper",
+        "riesling",
+        "vdp-grosse-lage",
+        "stuttgart"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-wurttemberg-terr-untertuerkheimer-gips",
+      "nom": "Untertürkheimer Gips",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder"
+      ],
+      "altitude": "230-320 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de gypse-keuper de Stuttgart, terroir classique du Lemberger depuis les années 1970 (Aldinger).",
+      "notes_objectives": "L'Untertürkheimer Gips est un grand cru de Stuttgart, sur un sol de gypse-keuper qui lui donne son nom. Terroir classique du Lemberger, il donne des rouges structurés et de garde. Il est indissociable du domaine Aldinger, qui l'a acquis en 1973 et en a fait une référence du Lemberger. Classé en grand cru, le Gips illustre la vocation des sols de keuper de Stuttgart pour le grand rouge du Württemberg. Le nom du Gips (« gypse ») dit tout de sa géologie : un keuper riche en gypse, qui donne au Lemberger structure et profondeur. Le domaine Aldinger, qui a acquis ce coteau en 1973, en a fait l'un des terroirs de référence du cépage en Allemagne, avec des rouges denses et de garde. Le cru illustre la vocation des sols de keuper de Stuttgart pour le grand Lemberger, dans un vignoble urbain souvent méconnu. Terroir historique du Lemberger, le Gips a contribué, sous l'impulsion d'Aldinger, à faire reconnaître ce cépage comme un grand rouge à part entière. Ses vins, structurés et de garde, comptent parmi les plus profonds de Stuttgart. Le cru illustre l'importance des sols de gypse-keuper de la métropole pour le Lemberger, et la patience avec laquelle les grands domaines révèlent ces terroirs urbains.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "lemberger",
+        "vdp-grosse-lage",
+        "stuttgart"
+      ],
+      "source": "winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-terr-untertuerkheimer-moenchberg",
+      "nom": "Untertürkheimer Mönchberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "240-330 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de keuper de Stuttgart ; Lemberger et Riesling racés (Schnaitmann, Herzog von Württemberg).",
+      "notes_objectives": "L'Untertürkheimer Mönchberg est un grand cru de Stuttgart, sur le keuper du Neckar. Bien exposé, il donne des Lemberger et des Riesling racés. Le terroir est exploité par des domaines comme Schnaitmann et Herzog von Württemberg. Classé en grand cru, le Mönchberg illustre la qualité des coteaux de keuper d'Untertürkheim, au cœur du vignoble urbain de Stuttgart. Sur le keuper du Neckar, le Mönchberg donne des Lemberger et des Riesling racés, magnifiés par Schnaitmann et le domaine du Herzog von Württemberg. Voisin du Herzogenberg et du Gips, il participe à la remarquable concentration de grands coteaux d'Untertürkheim. Le cru illustre la qualité d'ensemble du vignoble de Stuttgart, l'une des plus grandes villes viticoles d'Allemagne. Voisin des plus grands coteaux d'Untertürkheim, le Mönchberg bénéficie du même keuper de qualité et donne des Lemberger et des Riesling racés. Magnifié par Schnaitmann et le Herzog von Württemberg, il participe à la remarquable densité de grands terroirs de Stuttgart. Le cru confirme la place de la métropole parmi les grands secteurs viticoles du Württemberg.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "lemberger",
+        "vdp-grosse-lage",
+        "stuttgart"
+      ],
+      "source": "thegwc"
+    },
+    {
+      "id": "de-wurttemberg-terr-uhlbacher-goetzenberg",
+      "nom": "Uhlbacher Götzenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "240-340 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de keuper au-dessus du Neckar à Stuttgart-Uhlbach ; Riesling et Spätburgunder Grosses Gewächs (Schnaitmann).",
+      "notes_objectives": "L'Uhlbacher Götzenberg est un grand cru de Stuttgart-Uhlbach, sur le keuper dominant le Neckar. Bien exposé, il donne des Riesling et des Spätburgunder de qualité. Le terroir est notamment magnifié par le domaine Schnaitmann, qui en tire des Grosses Gewächs. Classé en grand cru, le Götzenberg illustre la double vocation, blanche et rouge, des coteaux de keuper de Stuttgart. Dominant le Neckar à Stuttgart-Uhlbach, le Götzenberg bénéficie d'un keuper bien exposé qui convient aussi bien au Riesling qu'au Spätburgunder. Le domaine Schnaitmann en tire des Grosses Gewächs racés, blancs comme rouges. Le cru illustre la double vocation des coteaux de keuper de Stuttgart, capables de grands blancs minéraux et de Pinots élégants, au cœur du vignoble urbain. Apprécié pour sa polyvalence, le Götzenberg donne aussi bien de grands Riesling minéraux que de beaux Spätburgunder, sous la main de Schnaitmann. Sa belle exposition au-dessus du Neckar en fait l'un des coteaux les plus complets de Stuttgart-Uhlbach. Le cru illustre la richesse du vignoble urbain de la métropole, capable d'exceller sur les blancs comme sur les rouges.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "riesling",
+        "vdp-grosse-lage",
+        "stuttgart"
+      ],
+      "source": "winedexer|thegwc"
+    },
+    {
+      "id": "de-wurttemberg-terr-neipperger-schlossberg",
+      "nom": "Neipperger Schlossberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder"
+      ],
+      "altitude": "220-310 m",
+      "sols": "gypse-keuper et calcaire coquillier",
+      "caracteristiques_rapides": "Grand cru du pays du Lemberger, à Neipperg ; sur le keuper et le calcaire, des Lemberger structurés et de garde (Graf Neipperg).",
+      "notes_objectives": "Le Neipperger Schlossberg est un grand cru du pays du Lemberger, à Neipperg, dans le Württembergisch Unterland. Son sol de gypse-keuper et de calcaire donne des Lemberger structurés et de garde. Le terroir est le fief du domaine du Graf von Neipperg, qui en est l'interprète historique. Classé en grand cru, le Schlossberg illustre la grande tradition du Lemberger dans le Unterland. Au cœur du pays du Lemberger, le Schlossberg de Neipperg associe gypse-keuper et calcaire pour donner des rouges structurés et de garde. Le domaine du Graf von Neipperg, qui possède aussi des crus à Saint-Émilion, en est l'interprète historique, apportant un savoir-faire bordelais à ce terroir allemand. Le cru illustre la grande tradition du Lemberger dans le Württembergisch Unterland. Le savoir-faire bordelais de la famille Neipperg, propriétaire de crus à Saint-Émilion, confère à ses Lemberger du Schlossberg une structure et une élégance particulières. Sur ce terroir de gypse-keuper et de calcaire, les rouges gagnent en profondeur et en capacité de garde. Le cru illustre la grandeur du Lemberger dans le cœur historique du Unterland, entre tradition allemande et influence bordelaise.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "keuper",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-wurttemberg-terr-schwaigerner-ruthe",
+      "nom": "Schwaigerner Ruthe",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Riesling"
+      ],
+      "altitude": "210-300 m",
+      "sols": "calcaire coquillier et keuper",
+      "caracteristiques_rapides": "Coteau de Schwaigern, dans le cœur du Lemberger ; rouges structurés et beaux blancs (Graf Neipperg).",
+      "notes_objectives": "La Schwaigerner Ruthe est un grand cru du Württembergisch Unterland, à Schwaigern, dans le cœur du Lemberger. Son sol de calcaire et de keuper donne des rouges structurés et de beaux blancs. Le terroir est exploité par le domaine du Graf von Neipperg. Classé en grand cru, la Ruthe illustre, aux côtés du Schlossberg voisin, la qualité des terroirs du pays du Lemberger. Voisine du Schlossberg, la Ruthe de Schwaigern repose sur le calcaire et le keuper du cœur du Lemberger. Exploitée par le Graf von Neipperg, elle donne des rouges structurés et de beaux blancs. Le cru illustre la qualité des terroirs de Schwaigern, l'un des hauts lieux du Lemberger dans le Unterland, où ce cépage trouve l'un de ses plus beaux écrins. Au cœur du pays du Lemberger, la Ruthe bénéficie de sols de calcaire et de keuper qui donnent des rouges structurés et de beaux blancs. Exploitée par le Graf von Neipperg, elle complète, aux côtés du Schlossberg, le patrimoine de grands terroirs de Schwaigern. Le cru confirme la place de ce secteur parmi les hauts lieux du Lemberger dans le Württembergisch Unterland.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-wurttemberg-terr-kleinbottwarer-suessmund",
+      "nom": "Kleinbottwarer Süßmund",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Riesling"
+      ],
+      "altitude": "220-310 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Grand coteau de keuper à Kleinbottwar, autour du château de Schaubeck ; Lemberger élégants et bourguignons (Graf Adelmann).",
+      "notes_objectives": "Le Kleinbottwarer Süßmund est un grand cru du Württembergisch Unterland, à Kleinbottwar, sur le keuper. Bien exposé, il donne des Lemberger élégants et de garde. Le terroir est le fief du domaine du Graf Adelmann, installé au château de Schaubeck, réputé pour la finesse bourguignonne de ses rouges. Classé en grand cru, le Süßmund illustre une approche raffinée du Lemberger dans le Unterland. Sur le keuper de Kleinbottwar, autour du château fortifié de Schaubeck, le Süßmund donne des Lemberger d'une grande élégance. Le domaine du Graf Adelmann, qui en est le fief, y recherche la finesse bourguignonne plutôt que la puissance, avec des rouges de longue garde. Le cru illustre une approche raffinée et historique du Lemberger dans le Unterland. Sous la main du Graf Adelmann, le Süßmund donne des Lemberger d'une élégance rare, recherchant la finesse plutôt que la puissance. Le keuper de Kleinbottwar, conjugué à un travail soigné, confère à ces rouges une longue garde et une grande race. Le cru illustre une vision raffinée et bourguignonne du Lemberger, dans un Unterland souvent associé à des vins plus charpentés.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "keuper",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "grapeguru|winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-terr-pfaffenhofener-hohenberg",
+      "nom": "Pfaffenhofener Hohenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Schwarzriesling"
+      ],
+      "altitude": "220-320 m",
+      "sols": "marne de keuper",
+      "caracteristiques_rapides": "Coteau de keuper à Pfaffenhofen ; l'un des grands terroirs du Lemberger minéral (Rainer Wachtstetter).",
+      "notes_objectives": "Le Pfaffenhofener Hohenberg est un grand cru du Württembergisch Unterland, à Pfaffenhofen, sur la marne de keuper. Bien exposé, il donne des Lemberger minéraux et profonds. Le terroir est le fief du domaine Rainer Wachtstetter, l'un des grands spécialistes du Lemberger. Classé en grand cru, le Hohenberg illustre le potentiel premium du Lemberger sur le keuper du Unterland. Sur la marne de keuper de Pfaffenhofen, le Hohenberg donne des Lemberger minéraux et profonds, parmi les plus aboutis de la région. Le domaine Rainer Wachtstetter, grand spécialiste du cépage, en a fait sa signature. Le cru illustre le potentiel premium du Lemberger, longtemps sous-estimé et désormais reconnu comme l'un des grands rouges allemands. Devenu la signature de Rainer Wachtstetter, le Hohenberg illustre le potentiel du Lemberger sur le keuper du Unterland. Ses rouges, minéraux et profonds, comptent parmi les meilleurs de la région et démontrent que ce cépage peut donner des vins de grande garde. Le cru participe à la reconnaissance croissante du Lemberger comme l'un des grands rouges d'Allemagne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "keuper",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "winewithseth"
+    },
+    {
+      "id": "de-wurttemberg-terr-boennigheimer-sonnenberg",
+      "nom": "Bönnigheimer Sonnenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "200-290 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de keuper à Bönnigheim ; Lemberger et Spätburgunder élégants (Dautel).",
+      "notes_objectives": "Le Bönnigheimer Sonnenberg est un grand cru du Württembergisch Unterland, à Bönnigheim, sur le keuper. Bien exposé, il donne des Lemberger et des Spätburgunder élégants. Le terroir est exploité par le domaine Dautel, l'une des références modernes de la région. Classé en grand cru, le Sonnenberg illustre la finesse des rouges de keuper du Unterland. Sur le keuper de Bönnigheim, le Sonnenberg donne des Lemberger et des Spätburgunder élégants, magnifiés par le domaine Dautel. Christian Dautel y apporte une précision toute bourguignonne, dans des rouges fins et de garde. Le cru illustre la finesse des terroirs de keuper du Unterland, entre les mains de la nouvelle génération. Sous la main de Christian Dautel, le Sonnenberg donne des Lemberger et des Spätburgunder d'une grande finesse, élevés avec retenue. Le keuper de Bönnigheim, conjugué à une approche bourguignonne, confère à ces rouges précision et élégance. Le cru illustre la montée en gamme des terroirs du Unterland entre les mains de la nouvelle génération.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "keuper",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-wurttemberg-terr-besigheimer-wurmberg",
+      "nom": "Besigheimer Wurmberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Terrasses spectaculaires de calcaire au-dessus de l'Enz et du Neckar, à Besigheim ; Riesling et Lemberger (Dautel).",
+      "notes_objectives": "Le Besigheimer Wurmberg est un grand cru du Württembergisch Unterland, sur des terrasses spectaculaires de calcaire au-dessus de l'Enz et du Neckar, à Besigheim. Sa forte pente donne des Riesling et des Lemberger de coteaux héroïques. Le terroir est notamment exploité par le domaine Dautel. Classé en grand cru, le Wurmberg illustre la viticulture en terrasses des boucles du Neckar. Le Wurmberg déploie des terrasses de calcaire spectaculaires au-dessus de la confluence de l'Enz et du Neckar, à Besigheim. Sa forte pente, soutenue par des murs de pierre, donne des Riesling et des Lemberger de coteaux héroïques. Le domaine Dautel en est l'un des interprètes. Le cru illustre la viticulture en terrasses des boucles du Neckar, à la fois magnifique et exigeante. Les terrasses du Wurmberg, soutenues par des kilomètres de murs de pierre sèche, comptent parmi les plus belles du Neckar. Cette viticulture héroïque, sur le calcaire, donne des Riesling et des Lemberger de caractère, magnifiés notamment par Dautel. Le cru illustre la beauté et l'exigence des coteaux en terrasses des boucles du fleuve, emblématiques du paysage württembergeois.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "terrasses",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-wurttemberg-terr-verrenberg",
+      "nom": "Verrenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "230-300 m",
+      "sols": "marnes et calcaire (keuper)",
+      "caracteristiques_rapides": "Grand coteau exploité en monopole par Fürst zu Hohenlohe-Oehringen, près d'Öhringen ; Riesling et Lemberger de garde.",
+      "notes_objectives": "Le Verrenberg est un grand cru du Württembergisch Unterland, près d'Öhringen, exploité en monopole par le domaine du Fürst zu Hohenlohe-Oehringen. Sur ses marnes et son calcaire, il donne des Riesling et des Lemberger de garde. Le terroir, exploité d'un seul tenant, permet une expression cohérente du grand vin. Classé en grand cru, le Verrenberg illustre la tradition des grands monopoles princiers du Württemberg. Exploité en monopole par le domaine du Fürst zu Hohenlohe-Oehringen, le Verrenberg est l'un des grands coteaux du nord-est de la région. Sur ses marnes et son calcaire, il donne des Riesling et des Lemberger de garde, dans une expression cohérente permise par son statut de monopole. Le cru illustre la tradition des grands domaines princiers du Württemberg. Le statut de monopole du Verrenberg, exploité par le Fürst zu Hohenlohe-Oehringen, permet une expression d'une grande cohérence sur ce coteau du nord-est de la région. Ses Riesling et ses Lemberger, de garde, perpétuent une longue tradition princière. Le cru illustre l'héritage des grands domaines aristocratiques qui ont façonné le vignoble du Württemberg.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "monopole",
+        "riesling",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-maulbronner-eilfingerberg",
+      "nom": "Maulbronner Eilfingerberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "230-300 m",
+      "sols": "marne de keuper et grès",
+      "caracteristiques_rapides": "Ancien clos des cisterciens de l'abbaye de Maulbronn (patrimoine mondial) ; Riesling de tradition (Herzog von Württemberg).",
+      "notes_objectives": "Le Maulbronner Eilfingerberg est un grand cru du Württembergisch Unterland, ancien clos des moines cisterciens de l'abbaye de Maulbronn, classée au patrimoine mondial. Son sol de keuper et de grès donne des Riesling de tradition. Le terroir est exploité par le domaine du Herzog von Württemberg. Classé en grand cru, l'Eilfingerberg illustre les racines monastiques de la viticulture du Württemberg. Ancien clos des moines cisterciens de l'abbaye de Maulbronn — l'un des monastères médiévaux les mieux conservés d'Europe, classé au patrimoine mondial —, l'Eilfingerberg est chargé d'histoire. Sur son keuper et son grès, le domaine du Herzog von Württemberg y signe des Riesling de tradition. Le cru illustre les racines monastiques de la viticulture du Württemberg. L'abbaye de Maulbronn, où les cisterciens plantèrent la vigne dès le Moyen Âge, demeure l'un des plus beaux ensembles monastiques d'Europe. L'Eilfingerberg, ancien clos des moines, perpétue cet héritage : le domaine du Herzog von Württemberg y signe des Riesling de tradition. Le cru illustre les racines monastiques de la viticulture württembergeoise, comme tant de grands terroirs allemands.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "riesling",
+        "historique",
+        "keuper",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-wurttemberg-terr-mundelsheimer-kaesberg",
+      "nom": "Mundelsheimer Käsberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Terrasses vertigineuses de calcaire dans une boucle du Neckar, à Mundelsheim ; rouges et Riesling de coteaux héroïques.",
+      "notes_objectives": "Le Mundelsheimer Käsberg est un grand cru du Württembergisch Unterland, sur des terrasses vertigineuses de calcaire dans une boucle du Neckar, à Mundelsheim. Sa forte pente donne des Lemberger, des Spätburgunder et des Riesling de coteaux héroïques. Le terroir, l'un des plus spectaculaires de la région, témoigne de la viticulture en terrasses du Neckar. Classé en grand cru, le Käsberg illustre la beauté et la difficulté des grands coteaux du fleuve. Le Käsberg compte parmi les terroirs les plus spectaculaires de la région : des terrasses vertigineuses de calcaire accrochées à une boucle du Neckar, à Mundelsheim. Sa forte pente donne des Lemberger, des Spätburgunder et des Riesling de coteaux héroïques. Le cru illustre la beauté et la difficulté de la viticulture en terrasses du fleuve, emblématique du paysage württembergeois. Accroché à une boucle vertigineuse du Neckar, le Käsberg est l'archétype du coteau héroïque : des terrasses de calcaire si raides qu'elles imposent un travail entièrement manuel. Ses Lemberger, Spätburgunder et Riesling y gagnent une minéralité particulière. Le cru illustre la viticulture spectaculaire des terrasses du Neckar, qui compte parmi les plus beaux paysages viticoles d'Allemagne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "terrasses",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-hessigheimer-felsengaerten",
+      "nom": "Hessigheimer Felsengärten",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk), en terrasses",
+      "caracteristiques_rapides": "Falaises et terrasses de calcaire spectaculaires au bord du Neckar, à Hessigheim ; Riesling et Lemberger.",
+      "notes_objectives": "Les Hessigheimer Felsengärten forment un grand cru spectaculaire du Württembergisch Unterland, sur des falaises et des terrasses de calcaire au bord du Neckar, à Hessigheim. Ce site donne des Riesling et des Lemberger de caractère. Le terroir, aux paysages saisissants, illustre la viticulture héroïque des boucles du Neckar. Classé en grand cru, les Felsengärten comptent parmi les terroirs les plus remarquables de la région. Les Felsengärten de Hessigheim, avec leurs falaises et leurs terrasses de calcaire dominant le Neckar, forment l'un des paysages viticoles les plus saisissants d'Allemagne. Ce terroir spectaculaire donne des Riesling et des Lemberger de caractère. Le cru illustre la viticulture héroïque des boucles du Neckar, où la vigne s'accroche à la roche au-dessus du fleuve. Les falaises de calcaire des Felsengärten, classées pour leur intérêt naturel, dominent le Neckar de façon spectaculaire. Sur ce terroir héroïque, les Riesling et les Lemberger gagnent en minéralité et en caractère. Le cru illustre, aux côtés du Käsberg voisin, la grandeur des terrasses calcaires des boucles du fleuve, emblématiques de la viticulture du Württemberg.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "terrasses",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "winedexer|wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-schnaiter-altenberg",
+      "nom": "Schnaiter Altenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Riesling"
+      ],
+      "altitude": "250-360 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de keuper du haut Remstal, à Schnait ; Lemberger et Riesling (Jürgen Ellwanger).",
+      "notes_objectives": "Le Schnaiter Altenberg est un coteau de keuper du haut Remstal, à Schnait. Bien exposé, il donne des Lemberger et des Riesling de belle facture. Le terroir est notamment exploité par le domaine Jürgen Ellwanger. Il illustre la qualité des coteaux du Remstal, voués au Lemberger comme au Riesling. Sur le keuper du haut Remstal, l'Altenberg de Schnait donne des Lemberger et des Riesling de belle facture, magnifiés par le domaine Jürgen Ellwanger, pionnier du barrique dans la région. Le cru illustre la qualité des coteaux du Remstal, voués aussi bien au grand rouge qu'au Riesling de terroir. Il illustre la qualité des coteaux de keuper du haut Remstal, voués au Lemberger comme au Riesling. Porté par Jürgen Ellwanger, il compte parmi les bons coteaux du haut Remstal.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "lemberger",
+        "grand-coteau",
+        "remstal"
+      ],
+      "source": "thegwc|wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-rotenberger-schlossberg",
+      "nom": "Rotenberger Schlossberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "240-340 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau de keuper de Stuttgart, dominé par la chapelle funéraire royale ; Riesling et Lemberger.",
+      "notes_objectives": "Le Rotenberger Schlossberg est un coteau de keuper de Stuttgart, dominé par la chapelle funéraire royale de Wurtemberg. Bien exposé, il donne des Riesling et des Lemberger. Le terroir illustre, au cœur du vignoble urbain de Stuttgart, l'alliance du patrimoine et de la vigne. Dominé par la chapelle funéraire de la maison royale de Wurtemberg, le Schlossberg de Rotenberg, sur le keuper de Stuttgart, donne des Riesling et des Lemberger. Le cru illustre, au cœur du vignoble urbain de la métropole, l'alliance singulière du patrimoine historique et de la vigne. Il illustre l'alliance du patrimoine royal et de la vigne au cœur du vignoble urbain de Stuttgart. Coteau emblématique de Stuttgart, il marie patrimoine et vigne urbaine.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "riesling",
+        "grand-coteau",
+        "stuttgart"
+      ],
+      "source": "thegwc"
+    },
+    {
+      "id": "de-wurttemberg-terr-struempfelbacher-nonnenberg",
+      "nom": "Strümpfelbacher Nonnenberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "250-350 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Coteau escarpé de keuper du Remstal, à Strümpfelbach ; Lemberger et Spätburgunder (Knauß, Kuhnle).",
+      "notes_objectives": "Le Strümpfelbacher Nonnenberg est un coteau escarpé de keuper du Remstal, à Strümpfelbach. Bien exposé, il donne des Lemberger, des Spätburgunder et des Riesling. Le terroir est exploité par des domaines comme Knauß et Kuhnle. Il illustre la qualité des coteaux en forte pente de la vallée de la Rems. Sur les coteaux escarpés de keuper de Strümpfelbach, dans le Remstal, le Nonnenberg donne des Lemberger, des Spätburgunder et des Riesling. Exploité par des domaines comme Knauß et Kuhnle, il illustre la qualité des terroirs en forte pente de la vallée de la Rems, travaillés par une nouvelle génération souvent en bio. Il illustre la qualité des coteaux escarpés du Remstal, travaillés par une nouvelle génération souvent en bio. Il est l'un des terroirs phares des jeunes vignerons en bio du Remstal.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "lemberger",
+        "grand-coteau",
+        "remstal"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-grossheppacher-wartbuehl",
+      "nom": "Grossheppacher Wartbühl",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Remstal",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "240-340 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Grand coteau de keuper du Remstal, à Großheppach ; Riesling et rouges de belle facture.",
+      "notes_objectives": "Le Grossheppacher Wartbühl est un grand coteau de keuper du Remstal, à Großheppach. Bien exposé, il donne des Riesling et des rouges de belle facture. Le terroir illustre la qualité des coteaux de keuper du Remstal, voués au Riesling comme au Lemberger. Grand coteau de keuper du Remstal, à Großheppach, le Wartbühl donne des Riesling et des rouges de belle facture. Le cru illustre la qualité régulière des coteaux de keuper de la vallée de la Rems, l'un des cœurs viticoles du Württemberg, voué au Riesling comme au Lemberger. Il illustre la qualité régulière des coteaux de keuper de la vallée de la Rems. Il demeure une valeur sûre des coteaux de keuper du Remstal.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "riesling",
+        "grand-coteau",
+        "remstal"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-wurttemberg-terr-heilbronner-stiftsberg",
+      "nom": "Heilbronner Stiftsberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Lemberger",
+        "Riesling"
+      ],
+      "altitude": "190-280 m",
+      "sols": "marnes et calcaire",
+      "caracteristiques_rapides": "Coteau de Heilbronn, capitale historique du vignoble ; Lemberger et Samtrot (Drautz-Able).",
+      "notes_objectives": "Le Heilbronner Stiftsberg est un coteau de Heilbronn, capitale historique du vignoble du Württemberg. Sur ses marnes et son calcaire, il donne des Lemberger et du Samtrot. Le terroir est notamment exploité par le domaine Drautz-Able. Il illustre la tradition rouge de Heilbronn, au cœur de la vallée du Neckar. À Heilbronn, l'une des capitales historiques du vignoble württembergeois, le Stiftsberg donne, sur ses marnes et son calcaire, des Lemberger et du Samtrot, spécialité locale. Le domaine Drautz-Able en est un interprète attitré. Le cru illustre la tradition rouge de Heilbronn, au cœur de la vallée du Neckar. Il illustre la tradition rouge de Heilbronn, capitale historique du vignoble du Württemberg. Il perpétue la tradition rouge de Heilbronn, sur le Neckar.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "lemberger",
+        "grand-coteau",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-weinsberger-schemelsberg",
+      "nom": "Weinsberger Schemelsberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "210-300 m",
+      "sols": "marne de keuper",
+      "caracteristiques_rapides": "Coteau de Weinsberg, siège de la célèbre école viticole ; Riesling et Lemberger (Staatsweingut Weinsberg).",
+      "notes_objectives": "Le Weinsberger Schemelsberg est un coteau de keuper à Weinsberg, siège de la célèbre école viticole. Bien exposé, il donne des Riesling et des Lemberger. Le terroir est exploité par le Staatsweingut Weinsberg. Il illustre le rôle historique de l'enseignement viticole dans la région. À Weinsberg, siège de la plus ancienne école viticole d'Allemagne, le Schemelsberg, sur le keuper, donne des Riesling et des Lemberger. Exploité par le Staatsweingut Weinsberg, il illustre le rôle historique de l'enseignement et de la recherche — c'est ici qu'est né le cépage Kerner — dans la viticulture du Württemberg. Il illustre le rôle historique de l'école viticole de Weinsberg, berceau du cépage Kerner. Il reste lié à l'histoire de l'enseignement viticole allemand.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "historique",
+        "grand-coteau",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-wurttemberg-terr-lauffener-katzenbeisser",
+      "nom": "Lauffener Katzenbeißer",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Württembergisch Unterland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Trollinger",
+        "Schwarzriesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "grès coloré (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau de grès coloré à Lauffen, dans une boucle du Neckar ; berceau du Trollinger de tradition.",
+      "notes_objectives": "Le Lauffener Katzenbeißer est un coteau de grès coloré à Lauffen, dans une boucle du Neckar. Sa géologie particulière en fait un berceau du Trollinger de tradition. Le terroir illustre l'identité du Trollinger, cépage rouge emblématique et quotidien du Württemberg. Sur le grès coloré de Lauffen, dans une boucle du Neckar, le Katzenbeißer est un berceau du Trollinger, cépage rouge quotidien et identitaire du Württemberg. Sa géologie particulière le distingue des coteaux de keuper. Le cru illustre la tradition populaire du Trollinger, indissociable de la culture viticole régionale. Il illustre la tradition populaire du Trollinger, cépage emblématique et quotidien de la région. Il demeure un berceau du Trollinger, cépage identitaire de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "trollinger",
+        "buntsandstein",
+        "grand-coteau",
+        "wuerttembergisch-unterland"
+      ],
+      "source": "grapeguru"
+    },
+    {
+      "id": "de-wurttemberg-terr-stuttgarter-kriegsberg",
+      "nom": "Stuttgarter Kriegsberg",
+      "type": "lieu-dit",
+      "region": "Württemberg",
+      "sous_region": "Stuttgart (Neckar)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Lemberger"
+      ],
+      "altitude": "250-330 m",
+      "sols": "marne de keuper (gypse, grès des roseaux)",
+      "caracteristiques_rapides": "Vignoble urbain au cœur de Stuttgart, l'une des plus grandes villes viticoles d'Allemagne ; Riesling et Lemberger.",
+      "notes_objectives": "Le Stuttgarter Kriegsberg est un vignoble urbain au cœur même de Stuttgart, l'une des plus grandes villes viticoles d'Allemagne. Sur le keuper, il donne des Riesling et des Lemberger. Le terroir illustre la place singulière de la vigne dans la métropole, où les coteaux côtoient la ville. Au cœur même de Stuttgart, le Kriegsberg est un vignoble urbain emblématique d'une métropole qui compte parmi les plus grandes villes viticoles d'Allemagne. Sur le keuper, il donne des Riesling et des Lemberger. Le cru illustre la place singulière de la vigne dans la ville, où les coteaux côtoient les quartiers. Il illustre la place singulière de la vigne au cœur de la métropole souabe. Il incarne la vigne au cœur de la grande ville viticole qu'est Stuttgart.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "urbain",
+        "grand-coteau",
+        "stuttgart"
+      ],
+      "source": "grapeguru"
+    }
+  ]
+}

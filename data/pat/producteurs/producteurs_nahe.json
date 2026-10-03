@@ -1,0 +1,824 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "nahe",
+  "region_label": "Nahe (Allemagne)",
+  "source_file": "producteurs_nahe_To_Import.xlsx",
+  "built_at": "2026-06-12",
+  "count": 21,
+  "items": [
+    {
+      "id": "de-nahe-prod-doennhoff",
+      "nom": "Dönnhoff",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Oberhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niederhäuser Hermannshöhle",
+        "Oberhäuser Brücke",
+        "Schlossböckelheimer Kupfergrube",
+        "Norheimer Dellchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Oberhausen, sur la Nahe moyenne, le domaine Hermann Dönnhoff est l'icône absolue de la région et l'un des plus grands noms du Riesling allemand. La famille y cultive la vigne depuis 1750, mais c'est Helmut Dönnhoff qui, dans la seconde moitié du XXe siècle, en a fait une légende vivante, par un travail d'orfèvre sur quelques-uns des plus beaux terroirs d'Allemagne ; son fils Cornelius Dönnhoff lui a depuis succédé, perpétuant sans rupture une quête de pureté devenue la marque du domaine. Le vignoble, d'environ vingt-huit hectares, réunit une mosaïque de grands crus qui résume à elle seule la diversité géologique de la Nahe : la Niederhäuser Hermannshöhle (ardoise grise, roche volcanique et porphyre), considérée comme l'un des plus grands lieux-dits du pays ; l'Oberhäuser Brücke, minuscule monopole au bord de la rivière, berceau d'Eiswein et de liquoreux mythiques ; les sites volcaniques spectaculaires de Schlossböckelheim, Kupfergrube et Felsenberg ; ainsi que le Norheimer Dellchen et le Kirschheck. La signature Dönnhoff tient à une recherche de transparence quasi obsessionnelle : tri rigoureux, pressurage rapide pour préserver la limpidité du jus, vinifications qui visent l'expression la plus claire possible du cépage et du terroir. Il en résulte des Rieslings d'une précision cristalline, à la fois ciselés et profonds, salins et lumineux, capables d'un vieillissement remarquable. La gamme couvre tout le spectre, des Grosses Gewächs secs d'une rare allonge jusqu'aux Prädikate les plus nobles. C'est dans le registre liquoreux que le domaine a atteint des sommets absolus : la Hermannshöhle Trockenbeerenauslese 2015 a été notée 100/100, et les Eiswein de Dönnhoff comptent parmi les très rares vins allemands à avoir reçu, à plusieurs reprises, la note parfaite de la critique internationale. Référence intemporelle et étalon de toute une région, Dönnhoff incarne ce paradoxe heureux d'une Nahe longtemps méconnue du grand public, mais dont les meilleurs vins rivalisent avec les plus grands Riesling de la planète. La gamme illustre à merveille la mosaïque géologique de la Nahe : le domaine décline ses crus selon les sols — ardoise, porphyre, roche volcanique — jusque dans le nom de certaines cuvées, et propose aussi bien des Kabinett délicats que de grands secs et des nobles liquoreux. Vendus aux enchères, ses Eiswein et Trockenbeerenauslese atteignent des prix qui les placent au sommet de la hiérarchie allemande. Malgré cette aura, la famille Dönnhoff cultive une discrétion et une modestie qui forcent le respect, et incarne l'idée que la Nahe, longtemps dans l'ombre de la Mosel et du Rheingau, abrite désormais quelques-uns des plus grands Riesling du monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "oberhausen",
+        "hermannshoehle",
+        "bruecke",
+        "doennhoff",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-schaefer-froehlich",
+      "nom": "Schäfer-Fröhlich",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "commune": "Bockenau",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bockenauer Felseneck",
+        "Bockenauer Stromberg",
+        "Monzinger Halenberg",
+        "Schlossböckelheimer Felsenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bockenau, dans une vallée latérale de la haute Nahe, Tim Fröhlich a hissé le domaine familial Schäfer-Fröhlich au tout premier rang du Riesling sec allemand. Après avoir repris les rênes au milieu des années 1990, il a entièrement repensé le travail à la vigne comme à la cave et révélé le potentiel de terroirs jusque-là négligés — à commencer par le Bockenauer Felseneck, coteau d'altitude sur ardoise bleue dont il a fait l'un des grands crus les plus recherchés du pays. Le style Schäfer-Fröhlich est immédiatement reconnaissable : des Rieslings d'une minéralité tranchante, marqués par des notes de silex et de fumée issues de fermentations spontanées et d'une approche volontairement réductrice, d'une salinité saisissante et d'une tension extrême. Ce sont des vins « radicaux », bâtis pour une très longue garde, qui assument une part d'austérité juvénile au profit d'une profondeur et d'une authenticité de terroir hors normes. Outre le Felseneck, le domaine exploite le Bockenauer Stromberg, le Monzinger Halenberg et le Schlossböckelheimer Felsenberg, déclinant ainsi plusieurs facettes de la géologie complexe de la Nahe. La cuvée « Final », rare et confidentielle, figure parmi les vins blancs secs les plus chers d'Allemagne et illustre l'aura atteinte par le domaine auprès des collectionneurs. Le domaine produit aussi de superbes liquoreux botrytisés, dans la grande tradition de la région, témoins d'une maîtrise complète de tous les registres du Riesling. En l'espace d'une génération, Tim Fröhlich est passé du statut de vigneron prometteur à celui de référence incontournable, et Schäfer-Fröhlich figure aujourd'hui, aux côtés de Dönnhoff, parmi les noms qui font de la Nahe l'une des régions les plus excitantes du vignoble allemand. Le domaine, ancré de longue date à Bockenau, a vu sa cote grimper en flèche à mesure que la critique — Gault & Millau, Falstaff, presse internationale — saluait la singularité et la régularité de ses Grosses Gewächs, souvent classés parmi les meilleurs secs d'Allemagne. Les meilleures cuvées partent en allocations confidentielles et s'arrachent aux enchères. Sous des dehors discrets, Tim Fröhlich est devenu l'un des vinificateurs les plus admirés du pays, et son nom suffit désormais à attirer l'attention sur des terroirs que personne ne regardait il y a trente ans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ardoise-bleue",
+        "bockenau",
+        "felseneck",
+        "schaefer-froehlich",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-emrich-schoenleber",
+      "nom": "Emrich-Schönleber",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "commune": "Monzingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Monzinger Halenberg",
+        "Monzinger Frühlingsplätzchen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Monzingen, dans la partie haute et fraîche de la Nahe, Emrich-Schönleber est l'un des grands artisans de la renommée moderne de la région. Le domaine doit son ascension à Werner Schönleber, qui a patiemment restauré et hissé au sommet les coteaux d'ardoise bleue de Monzingen ; son fils Frank Schönleber en assure aujourd'hui la conduite, dans une continuité de style remarquable. Le joyau du domaine est le Monzinger Halenberg, grand cru d'altitude sur ardoise bleue dévonienne, qui donne des Rieslings d'une minéralité « taillée dans la roche », d'une pureté et d'une tension extrêmes, et d'une aptitude à la garde impressionnante. À ses côtés, le Frühlingsplätzchen (ardoise et quartzite) offre un registre un peu plus tendre et parfumé, tandis que la cuvée Auf der Ley, issue des meilleures parcelles, est devenue l'une des bouteilles les plus recherchées d'Allemagne aux enchères. Le style Emrich-Schönleber privilégie la précision, la fraîcheur et la transparence : des Grosses Gewächs secs droits et salins, mais aussi de splendides Prädikate et des liquoreux nobles d'une grande race, le domaine excellant aussi bien dans le sec que dans le sucré. Conduit avec un soin extrême, à l'écart des grands axes touristiques de la Nahe, le domaine cultive une discrétion qui contraste avec le niveau exceptionnel de ses vins. Régulièrement classé parmi les tout meilleurs producteurs d'Allemagne par la critique, Emrich-Schönleber illustre, à Monzingen, ce que l'alliance de l'ardoise bleue, de l'altitude et d'un travail méticuleux peut produire de plus grand. Monzingen, petit village longtemps anonyme de la haute Nahe, doit à Emrich-Schönleber d'être aujourd'hui cité parmi les grands noms du Riesling allemand. La cuvée Auf der Ley, en particulier, a vu son prix grimper régulièrement aux enchères, reflet d'une reconnaissance enfin à la hauteur du travail accompli. Discret, rigoureux et fidèle à son terroir d'ardoise bleue, le domaine s'est hissé sans tapage au tout premier rang, prouvant qu'en Allemagne la grandeur d'un cru se construit autant par la main du vigneron que par la roche elle-même.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ardoise-bleue",
+        "monzingen",
+        "halenberg",
+        "emrich-schoenleber",
+        "sec"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-gut-hermannsberg",
+      "nom": "Gut Hermannsberg",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Niederhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Schlossböckelheimer Kupfergrube",
+        "Niederhäuser Hermannsberg",
+        "Schlossböckelheimer Felsenberg",
+        "Traiser Bastei"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Niederhausen, au cœur de la Nahe, Gut Hermannsberg occupe une place à part : c'est l'ancien domaine d'État prussien, fondé au tout début du XXe siècle, qui a littéralement façonné le paysage viticole de la région. C'est en effet le domaine royal qui, autour de 1901-1902, a créé de toutes pièces les célèbres coteaux volcaniques de Schlossböckelheim — dont la Kupfergrube, aménagée à flanc d'ancienne mine de cuivre, en partie avec de la main-d'œuvre pénale —, terrasses spectaculaires qui comptent aujourd'hui parmi les plus grands terroirs d'Allemagne. Privatisé en 2009 et racheté par Jens Reidel et Christine Dinse, le domaine a entamé une renaissance qualitative spectaculaire sous la houlette de l'œnologue Karsten Peter. Il exploite un ensemble exceptionnel de grands crus : la Kupfergrube et le Felsenberg (volcaniques), le Hermannsberg en monopole — qui donne son nom au domaine —, ainsi que la Steinberg et la Traiser Bastei. Le style Gut Hermannsberg recherche l'authenticité et la profondeur plutôt que la séduction immédiate : des Rieslings secs (Grosses Gewächs) puissants, salins et minéraux, élevés longuement dans la cave historique du domaine et bâtis pour une très longue garde. Les meilleures cuvées, parfois mises en marché après plusieurs années de vieillissement, témoignent d'une ambition de premier plan. Symbole d'un patrimoine viticole sauvé et porté vers de nouveaux sommets, Gut Hermannsberg s'est réimposé en une quinzaine d'années comme l'un des grands noms de la Nahe, gardien des terroirs volcaniques qui font l'identité de la région. Au-delà des vins, le domaine est aussi un lieu : un imposant bâtiment du début du XXe siècle dominant la vallée, avec hébergement et salle de dégustation, au cœur d'un amphithéâtre de terrasses volcaniques spectaculaires qu'il partage avec son voisin Dönnhoff. Sous la direction de Karsten Peter, la renommée critique du domaine n'a cessé de croître, au point d'en faire l'un des ambassadeurs les plus visibles de la Nahe. Gut Hermannsberg conjugue ainsi mémoire d'un grand domaine d'État, patrimoine paysager unique et ambition qualitative résolument tournée vers l'avenir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "volcanique",
+        "niederhausen",
+        "kupfergrube",
+        "gut-hermannsberg",
+        "domaine-etat"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-schlossgut-diel",
+      "nom": "Schlossgut Diel",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Burg Layen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Dorsheimer Goldloch",
+        "Dorsheimer Pittermännchen",
+        "Dorsheimer Burgberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Burg Layen, au-dessus de Dorsheim sur la basse Nahe, Schlossgut Diel est installé dans un ancien château et compte parmi les domaines les plus réputés de la région. Longtemps dirigé par Armin Diel — figure médiatique du vin allemand, critique et coauteur de guides influents —, il est aujourd'hui mené par sa fille Caroline Diel, qui en a encore élevé le niveau et la précision. Le domaine est le maître des trois grands crus de Dorsheim, dont les sols très différents donnent une remarquable palette de styles : le Goldloch, sur graviers, produit des Rieslings riches et profonds ; le Pittermännchen, sur ardoise et quartzite, des vins plus tendus et fins ; le Burgberg, caillouteux, des vins droits et minéraux. Au-delà des Grosses Gewächs de Riesling, Schlossgut Diel s'est forgé une réputation d'excellence dans deux registres complémentaires : le Sekt, élaboré en méthode traditionnelle avec de longs élevages et considéré parmi les meilleurs d'Allemagne, et le Spätburgunder (Pinot Noir). La cuvée « ARA » figure régulièrement parmi les vins les plus cotés aux enchères allemandes. Le style Diel conjugue richesse et précision, générosité du fruit et trame minérale, dans des vins immédiatement séduisants mais aptes à la garde. Entre héritage d'une figure marquante et exigence d'une nouvelle génération, Schlossgut Diel demeure l'une des adresses les plus complètes et les plus élégantes de la Nahe. Armin Diel n'était pas seulement vigneron : critique reconnu et coauteur de guides influents, il a longtemps été une voix majeure du vin allemand, ce qui a contribué au rayonnement du domaine bien au-delà de la région. Caroline Diel, formée notamment à l'étranger, a su s'affranchir de cet héritage encombrant pour imposer son propre style, plus précis encore. Entre les Grosses Gewächs de Dorsheim, des Sekt parmi les plus aboutis d'Allemagne et de fins Spätburgunder, le château de Burg Layen — qui abrite aussi une élégante hôtellerie — demeure l'une des adresses les plus complètes et raffinées de la Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "spaetburgunder",
+        "sekt",
+        "dorsheim",
+        "goldloch",
+        "diel"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-kruger-rumpf",
+      "nom": "Kruger-Rumpf",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Münster-Sarmsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Münsterer Dautenpflänzer",
+        "Münsterer Pittersberg",
+        "Münsterer Rheinberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Münster-Sarmsheim, sur la basse Nahe, Kruger-Rumpf est l'un des domaines les plus réputés du secteur, mené par Stefan Rumpf et ses fils Georg et Philipp. Sur une vingtaine d'hectares, la famille exploite de grands coteaux de quartzite et d'ardoise : le Münsterer Dautenpflänzer, le Pittersberg et le Rheinberg, ainsi que le Binger Scharlachberg de l'autre côté de la frontière rhénane. Membre du VDP, le domaine décline toute la gamme du Riesling, du sec minéral aux Prädikate fruités et liquoreux nobles, dans un style classique privilégiant la pureté, la fraîcheur et la finesse. Le travail soigné au vignoble et en cave assure une grande régularité. Le domaine entretient aussi une Gutsschänke (auberge) réputée, qui contribue à son rayonnement et à son accueil. Fiable, élégant et d'un excellent rapport qualité-prix, Kruger-Rumpf compte parmi les valeurs sûres de la Nahe et l'un de ses plus fidèles ambassadeurs, à la croisée de la tradition et de la précision moderne. Installée de longue date dans un beau domaine de Münster-Sarmsheim, la famille Rumpf a patiemment hissé ses crus de quartzite au niveau des meilleurs de la basse Nahe. La transmission en cours vers Georg et Philipp garantit la continuité d'un style à la fois classique et précis, salué chaque année par la critique allemande.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "muenster-sarmsheim",
+        "dautenpflaenzer",
+        "kruger-rumpf"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-dr-crusius",
+      "nom": "Dr. Crusius",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Traisen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Traiser Bastei",
+        "Traiser Rotenfels",
+        "Schlossböckelheimer Felsenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Traisen, au cœur de la Nahe, le domaine Dr. Crusius est une maison familiale historique, aujourd'hui portée par la nouvelle génération avec Rebecca Crusius. Son joyau est la Traiser Bastei, minuscule lieu-dit blotti au pied du Rotenfels — la plus haute paroi rocheuse d'Europe au nord des Alpes —, sur éboulis volcaniques de porphyre rouge, qui donne des Riesling d'une minéralité spectaculaire. Le domaine exploite aussi de grands sites volcaniques de Schlossböckelheim (Felsenberg, Kupfergrube) et de Niederhausen, déclinant ainsi plusieurs facettes de la géologie complexe de la Nahe. Membre du VDP, il produit des Riesling classiques, du sec aux Prädikate nobles. Le style Crusius privilégie la précision, la salinité et l'expression du terroir volcanique, dans des vins droits et de belle garde. Gardien de l'un des terroirs les plus singuliers de la région, Dr. Crusius demeure une référence du Riesling minéral de la Nahe. Au pied du Rotenfels, paroi de porphyre rouge spectaculaire qui domine la vallée, la Bastei produit en quantités infimes l'un des Riesling les plus singuliers d'Allemagne. La nouvelle génération, avec Rebecca Crusius, a encore affûté la précision des vins, confirmant le domaine parmi les valeurs montantes de la Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "porphyre",
+        "traisen",
+        "bastei",
+        "crusius"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-korrell-johanneshof",
+      "nom": "Korrell (Johanneshof)",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Kreuznacher Kahlenberg",
+        "Kreuznacher Paradies"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bad Kreuznach, le domaine Korrell (Johanneshof) est l'une des belles montées en puissance de la Nahe, mené par Martin Korrell. Sur un vaste éventail de parcelles autour de Kreuznach, le domaine décline une gamme large et cohérente, du vin de soif accessible aux cuvées parcellaires plus ambitieuses. Attaché à une viticulture soignée et de plus en plus respectueuse de l'environnement, Korrell produit des Riesling secs précis et salins, ainsi que de beaux Burgundern (Pinots), dans un style net et moderne. La régularité et le rapport qualité-prix ont rapidement attiré l'attention de la critique. En quelques années, le domaine est passé du statut d'adresse familiale à celui de valeur montante reconnue de la région. Dynamique et accessible, Korrell illustre le renouveau d'un secteur — Bad Kreuznach — longtemps dans l'ombre des grands crus de la Nahe moyenne, et compte parmi les domaines à suivre. Membre du VDP, le domaine a multiplié les distinctions ces dernières années, porté par une vision moderne et un travail rigoureux à la vigne comme en cave. Sa large palette, du Riesling sec aux Burgundern, en fait l'une des adresses les plus complètes et les plus prometteuses du secteur de Bad Kreuznach.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "bad-kreuznach",
+        "korrell"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-goettelmann",
+      "nom": "Göttelmann",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Münster-Sarmsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Münsterer Pittersberg",
+        "Münsterer Rheinberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Münster-Sarmsheim, sur la basse Nahe, le domaine Göttelmann est mené par Ruth Göttelmann et Götz Blessing, sur des coteaux de quartzite et d'ardoise voisins de ceux de Kruger-Rumpf. Il exploite notamment le Münsterer Dautenpflänzer, le Pittersberg et le Rheinberg, ainsi que le Binger Scharlachberg. Le domaine privilégie un style sec, droit et minéral, fidèle au caractère plus salin et tendu de la basse Nahe, avec des vinifications soignées et une recherche de pureté. La gamme couvre aussi de beaux Prädikate fruités. Resté à taille humaine, Göttelmann offre des Riesling d'un excellent rapport qualité-prix, appréciés des amateurs en quête d'authenticité. Discret mais régulier, le domaine compte parmi les bonnes adresses de la basse Nahe et participe, avec ses voisins, à la reconnaissance de ce secteur de quartzite face au Rheingau. Travaillant avec patience des coteaux exigeants, le couple signe des Riesling d'une belle énergie minérale, marqués par le quartzite et l'exposition. Le domaine, fidèle à un style sec et droit, a contribué, aux côtés de ses voisins, à faire reconnaître le potentiel longtemps sous-estimé de la basse Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "muenster-sarmsheim",
+        "pittersberg",
+        "goettelmann"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-hexamer",
+      "nom": "Hexamer",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "commune": "Meddersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Meddersheimer Rheingrafenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Meddersheim, dans la partie haute de la Nahe, le domaine Hexamer est mené par Harald Hexamer, qui s'est fait une spécialité des terroirs volcaniques du secteur. Son site phare est le Meddersheimer Rheingrafenberg, sur roche volcanique, complété par le Sonnenberg et des parcelles à Monzingen. Le domaine produit avant tout des Riesling secs précis, salins et minéraux, ainsi que de jolis vins fruités, dans un style moderne et net. Le travail méticuleux et le souci constant du rapport qualité-prix ont valu à Hexamer une solide réputation auprès des amateurs avisés. Souvent cité parmi les meilleures affaires de la Nahe, le domaine offre une grande constance sur l'ensemble de sa gamme. Discret et sérieux, Hexamer illustre le potentiel des terroirs volcaniques de la haute Nahe et compte parmi les valeurs sûres et accessibles de la région. Régulièrement cité parmi les meilleurs rapports qualité-prix d'Allemagne, le domaine séduit autant les amateurs avertis que les sommeliers en quête de Riesling secs sincères et abordables. Harald Hexamer y cultive une approche moderne et précise, au service de l'expression du terroir volcanique de Meddersheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "quartzite",
+        "porphyre",
+        "meddersheim",
+        "hexamer",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-jakob-schneider",
+      "nom": "Jakob Schneider",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Niederhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niederhäuser Hermannshöhle",
+        "Niederhäuser Kertz"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Niederhausen, au cœur de la Nahe, le domaine Jakob Schneider est une maison familiale historique, transmise depuis de nombreuses générations. Il exploite de très grands coteaux du secteur, dont une part de la légendaire Niederhäuser Hermannshöhle — qu'il partage avec Dönnhoff —, ainsi que la Klamm et le Kertz. Travaillant souvent de vieilles vignes, le domaine produit des Riesling classiques, du sec aux Prädikate fruités et liquoreux, dans un style fidèle à la tradition de la Nahe : finesse, minéralité et belle aptitude à la garde. Resté à l'écart des projecteurs, Jakob Schneider offre des vins d'un excellent rapport qualité-prix, issus de terroirs parmi les plus prestigieux de la région. Gardien discret de grands crus de Niederhausen, le domaine demeure une adresse sûre et authentique pour les amateurs de Riesling classique de la Nahe. Avec sa part de la Hermannshöhle et ses vieilles vignes, le domaine dispose d'un patrimoine que bien des maisons plus célèbres pourraient lui envier. Fidèle à un classicisme sans esbroufe et à des prix mesurés, Jakob Schneider demeure l'un des secrets bien gardés de Niederhausen pour les amateurs de Riesling de terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "niederhausen",
+        "hermannshoehle",
+        "jakob-schneider",
+        "tradition"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-prinz-salm-salm-dalberg",
+      "nom": "Prinz Salm (Salm-Dalberg)",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Wallhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Wallhäuser Felseneck",
+        "Wallhäuser Johannisberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Wallhausen, sur la basse Nahe, le domaine Prinz Salm (Salm-Dalberg) détient un titre unique : c'est le plus ancien domaine viticole d'Allemagne resté sans interruption dans la même famille — les princes zu Salm-Salm y cultivent la vigne depuis environ 850 ans, la première mention documentée remontant à l'an 1200. Il est aujourd'hui dirigé par Felix Prinz zu Salm-Salm, trente-deuxième génération, depuis le Schloss Wallhausen et sa cave voûtée de 450 ans. Sur ses meilleurs coteaux — Wallhäuser Felseneck et Johannisberg sur la Nahe, auxquels s'ajoutent des sites en Rheinhessen (Bingen) —, le domaine, conduit en bio, produit des Riesling allant des Grosses Gewächs profonds aux Kabinett enjoués, ainsi que d'élégants Sekt. Le style Salm conjugue tradition séculaire et fraîcheur d'approche, dans des vins précis et de belle garde. Entre patrimoine exceptionnel et viticulture engagée, Prinz Salm demeure l'un des grands noms historiques de la Nahe. Le Schloss Wallhausen, avec sa cave voûtée séculaire, abrite aussi une production d'effervescents soignés. Loin de tout immobilisme, la famille a engagé le domaine dans la viticulture biologique et continue d'investir, prouvant que la plus longue tradition viticole d'Allemagne peut rimer avec modernité et fraîcheur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "wallhausen",
+        "salm",
+        "legacy"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-mathern",
+      "nom": "Mathern",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Niederhausen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niederhäuser Hermannshöhle",
+        "Niederhäuser Klamm"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Niederhausen, au cœur de la Nahe, le domaine familial Mathern exploite de beaux coteaux du secteur, dont des parcelles dans de grands sites de Niederhausen et de Norheim. Il produit des Riesling classiques, du sec aux Prädikate fruités, dans un style fidèle à la tradition de la Nahe moyenne : minéralité, fraîcheur et équilibre. Le travail soigné au vignoble et des vinifications maîtrisées confèrent aux vins une belle pureté et un bon rapport qualité-prix. Resté à taille humaine et discret, Mathern compte parmi les bonnes adresses familiales de la région, appréciées pour leur authenticité. Gardien d'un savoir-faire local transmis de génération en génération, le domaine offre une porte d'entrée sûre vers le Riesling classique de Niederhausen et de la Nahe. Fidèle aux grands sites de Niederhausen et de Norheim, le domaine met l'accent sur la pureté du fruit et l'équilibre, dans des Riesling accessibles et bien faits. Mathern compte parmi ces maisons familiales discrètes qui assurent, sans tapage, la qualité et la diversité de l'offre de la Nahe moyenne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "niederhausen",
+        "hermannshoehle",
+        "mathern"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-tesch",
+      "nom": "Tesch",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Langenlonsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Langenlonsheimer Löhrer Berg",
+        "Laubenheimer Karthäuser"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Langenlonsheim, sur la basse Nahe, le domaine Tesch occupe une place à part, grâce à la personnalité de Martin Tesch, docteur en microbiologie devenu vigneron iconoclaste. Il a connu un grand succès avec sa gamme « Riesling Unplugged » : des Riesling secs, vifs et purs, vinifiés sans artifice, à l'esthétique inspirée de la culture rock. Le domaine décline ses cuvées par lieu-dit — Laubenheimer Karthäuser, Krone, St. Remigiusberg, Königsschild —, mettant en avant la signature de chaque terroir dans un registre résolument sec et désaltérant. Le style, droit et sans concession, tranche avec l'image classique de la Nahe. Marketing audacieux et vins sérieux : Tesch a su séduire un public jeune et international tout en gagnant le respect de la critique. Singulier et identifiable entre tous, le domaine Tesch est l'un des visages les plus modernes et les plus inattendus du Riesling sec de la Nahe. Refusant les Prädikate sucrés au profit du seul sec, Martin Tesch a bâti une marque immédiatement identifiable, soutenue par une communauté fidèle en Allemagne comme à l'étranger. Derrière l'image décalée, les vins sont d'une grande rigueur, faisant de Tesch un cas unique de réussite à la fois commerciale et qualitative dans la Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "langenlonsheim",
+        "tesch",
+        "sec",
+        "unplugged"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-bamberger",
+      "nom": "Bamberger",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Haute Nahe",
+      "commune": "Meddersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Meddersheimer Rheingrafenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Meddersheim, dans la haute Nahe, le domaine Bamberger, conduit par Heiko Bamberger en agriculture biologique, s'est imposé comme l'une des bonnes adresses montantes de la région. Sur des coteaux de Meddersheim et de Monzingen, dont le Rheingrafenberg, il produit des Riesling secs précis et salins, ainsi que de beaux Pinots. Le travail bio au vignoble et des vinifications soignées visent une grande pureté et une expression nette du terroir. Le domaine offre un rapport qualité-prix souvent remarquable, qui lui a valu une reconnaissance critique croissante. En pleine ascension, Bamberger illustre le dynamisme de la haute Nahe et d'une nouvelle génération attachée au bio et à la précision. Discret mais sérieux, le domaine compte parmi les valeurs sûres et abordables de la région, à suivre de près pour ses Riesling secs. Salué par une critique de plus en plus attentive, le domaine illustre la dynamique bio et qualitative de la haute Nahe. Heiko Bamberger y signe des Riesling secs nets et salins ainsi que des Pinots convaincants, à des prix qui en font régulièrement de très belles découvertes pour les amateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "weissburgunder",
+        "bio",
+        "meddersheim",
+        "bamberger"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-sinss",
+      "nom": "Sinß",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Windesheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Windesheimer Rosenberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Windesheim, dans le discret Guldenbachtal — une vallée latérale de la basse Nahe abritée par les pentes du Hunsrück —, le domaine familial Sinß est l'une des plus belles révélations récentes du vignoble allemand. La famille y cultive la vigne depuis 1791, et ce sont aujourd'hui les frères Johannes (formé à l'œnologie à Geisenheim) et Markus Sinß qui, épaulés par leurs parents, mènent la huitième génération et ont transformé l'exploitation familiale en domaine moderne et pointu. Sur environ treize hectares, Sinß a fait un choix singulier pour la Nahe : plus des deux tiers du vignoble sont plantés en cépages bourguignons — Spätburgunder (Pinot Noir), Weissburgunder (Pinot Blanc) et Grauburgunder (Pinot Gris) —, le reste en Riesling. Les sols variés des lieux-dits de Windesheim (Römerberg, Rosenberg, Sonnenmorgen), mêlant sable, argile, veines de graviers et parcelles de schiste rouge (Rotliegendes), conviennent particulièrement à ces variétés. Conduit en agriculture biologique (le domaine a été primé lors des concours ECOVIN), Sinß recherche avant tout l'authenticité et la finesse : élevages adaptés à chaque cuvée (cuves inox, foudres, fûts de 500 litres pour les blancs ; grands bois et barriques pour les rouges), vinifications douces, faibles rendements. Il en résulte des blancs concentrés et minéraux qui demandent du temps pour s'ouvrir, et des Spätburgunder puissants, soyeux et profonds. Situé dans la partie la plus fraîche de la Nahe, à l'écart des grands axes et des lieux-dits célèbres, le domaine a longtemps été sous-estimé par la critique — un comble pour des vins d'une telle précision. Les distinctions récentes (révélation et étoile montante de la Nahe) ont changé la donne. Symbole d'une nouvelle génération qui réinvente la région par le prisme des Burgondes et du bio, Sinß s'est imposé comme l'une des adresses les plus prometteuses et les plus attachantes de la Nahe. Les cuvées phares disent bien cette identité : le Windesheim Weissburgunder « -S- », devenu une référence du Pinot Blanc allemand, et le Rosenberg Spätburgunder, dense et profond. Les distinctions ont fini par suivre — révélation de l'année à la Nahe selon Wein-Plus, étoile montante saluée par le guide VINUM —, consacrant un domaine longtemps resté dans l'ombre faute de lieux-dits célèbres et de goût pour l'autopromotion. Fidèles à leur vallée tranquille et à des vins « loin des modes », les frères Sinß cultivent une élégance discrète qui en fait l'un des secrets les mieux gardés, et les plus sûrs, de la nouvelle Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "windesheim",
+        "sinss",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-hahnmuehle",
+      "nom": "Hahnmühle",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Mannweiler-Cölln",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Silvaner"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "Dans la vallée de l'Alsenz, au nord de la Nahe, à l'écart des grands axes, la Hahnmühle est un domaine singulier mené par Peter et Martina Linxweiler. Travaillant des coteaux de ce secteur plus frais et confidentiel, le domaine cultive notamment des cépages anciens et rares, dans une démarche traditionnelle et personnelle. Hahnmühle produit avant tout des Riesling secs, droits et minéraux, ainsi que des vins issus de variétés patrimoniales, dans un style authentique et sans concession aux modes. Le travail patient et la fidélité au lieu confèrent à ces vins un caractère affirmé. Resté à l'écart des projecteurs, le domaine séduit les amateurs en quête d'originalité et de vins de terroir sincères. Gardien d'un patrimoine ampélographique et d'un secteur méconnu, la Hahnmühle illustre la diversité et la richesse cachée de la Nahe. En cultivant des cépages anciens et en restant fidèle à un secteur que l'histoire avait délaissé, Peter et Martina Linxweiler perpétuent une mémoire viticole précieuse. Leurs vins, francs et caractériels, séduisent un cercle d'amateurs attachés à l'originalité et à la diversité du patrimoine de la Nahe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "silvaner",
+        "bio",
+        "alsenz",
+        "hahnmuehle"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-loetzbeyer",
+      "nom": "Lötzbeyer",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Feilbingert",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Feilbingert, dans la vallée de l'Alsenz au nord de la Nahe, le domaine Lötzbeyer, mené par Adolf Lötzbeyer, travaille des coteaux de roche volcanique (porphyre), notamment le Feilbingerter Königsfels et le Königsgarten. Le domaine privilégie une approche proche du naturel et produit des Riesling secs minéraux et expressifs, marqués par le caractère volcanique du terroir, ainsi que quelques cuvées plus fruitées. Resté confidentiel et à taille humaine, Lötzbeyer compte parmi les adresses originales de ce secteur méconnu de la Nahe, appréciées des amateurs en quête de vins de terroir authentiques. Le domaine illustre la singularité géologique de la vallée de l'Alsenz et la richesse de ses sols volcaniques, encore largement à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "nature",
+        "feilbingert",
+        "loetzbeyer"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-joh-bapt-schaefer",
+      "nom": "Joh. Bapt. Schäfer",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Burg Layen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Dorsheimer Goldloch"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Burg Layen, sur la basse Nahe, le domaine Joh. Bapt. Schäfer est mené par la jeune génération avec Sebastian Schäfer, l'un des noms montants du secteur. Il exploite de beaux coteaux autour de Dorsheim — Goldloch, Pittermännchen, Burgberg — et de Burg Layen, dont il tire des Riesling majoritairement secs, précis, salins et tendus, dans un style moderne attaché à l'expression du terroir. En pleine ascension critique, le domaine illustre le renouveau de la basse Nahe par une nouvelle génération exigeante, et compte parmi les adresses prometteuses de la région. Travaillant avec soin de grands coteaux de Dorsheim aux côtés de noms plus établis, Sebastian Schäfer affirme une signature personnelle qui attire de plus en plus l'attention de la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "burg-layen",
+        "dorsheim",
+        "schaefer"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-buergermeister-schweinhardt",
+      "nom": "Bürgermeister Schweinhardt",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Basse Nahe",
+      "commune": "Langenlonsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Langenlonsheimer Rothenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Langenlonsheim, sur la basse Nahe, le domaine Bürgermeister Schweinhardt est une maison familiale d'une certaine envergure, exploitant de nombreux coteaux du secteur. Il décline une gamme étendue de Riesling et d'autres cépages, du vin accessible aux cuvées plus ambitieuses, dans un style fidèle à la tradition de la Nahe et soucieux du rapport qualité-prix. Fiable et bien diffusé, le domaine contribue à faire connaître le Riesling de la basse Nahe auprès d'un large public, tout en soignant ses meilleures parcelles. Le domaine joue un rôle utile dans la diffusion du Riesling de la Nahe auprès d'un large public, tout en proposant quelques cuvées de terroir plus abouties pour les amateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "langenlonsheim",
+        "schweinhardt",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-nahe-prod-reichsgraf-von-plettenberg",
+      "nom": "Reichsgraf von Plettenberg",
+      "type": "domaine",
+      "region": "Nahe",
+      "sous_region": "Nahe centrale",
+      "commune": "Bad Kreuznach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Kreuznacher Brückes",
+        "Kreuznacher Kahlenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bad Kreuznach, le domaine Reichsgraf von Plettenberg est une grande propriété historique de la Nahe, riche d'un long passé et d'un vaste parcellaire autour de Kreuznach. Il produit une large gamme de Riesling classiques, du sec aux Prädikate, dans un style fidèle à la tradition régionale, privilégiant la finesse et l'équilibre. Fort de son histoire et de son patrimoine de coteaux, le domaine demeure l'un des noms anciens du secteur de Bad Kreuznach, et une adresse de référence pour le Riesling classique de la Nahe. Témoin d'une époque où Bad Kreuznach comptait parmi les hauts lieux du vin allemand, le domaine perpétue ce patrimoine et propose des Riesling classiques d'un bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bad-kreuznach",
+        "plettenberg",
+        "grand-domaine"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    }
+  ]
+}

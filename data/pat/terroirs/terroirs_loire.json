@@ -1,0 +1,1201 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "loire",
+  "region_label": "Loire",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_loire_vPat.xlsx",
+  "built_at": "2026-05-15T08:41:59+00:00",
+  "count": 46,
+  "items": [
+    {
+      "id": "loi-muscadet",
+      "nom": "Muscadet",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Schistes, gabbros, granites, gneiss",
+      "caracteristiques_rapides": "AOC ~1 200 ha autour de Nantes (générique). Melon de Bourgogne monovariétal. Souvent supplanté par Sèvre et Maine en qualité.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "melon",
+        "monovariétale"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-sevre-maine",
+      "nom": "Muscadet Sèvre et Maine",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Gabbros, gneiss, granites, micaschistes (très diversifiés)",
+      "caracteristiques_rapides": "AOC ~6 000 ha (cœur historique du Muscadet). \"Sur lie\" très répandu. 10 crus communaux reconnus depuis 2011. Mention obligatoire du cru sur étiquette.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sur-lie",
+        "crus-communaux"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-coteaux-loire",
+      "nom": "Muscadet Coteaux de la Loire",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Schistes, gneiss",
+      "caracteristiques_rapides": "AOC ~150 ha sur la rive droite de la Loire en aval d'Ancenis. Style plus charpenté.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "melon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-cotes-grandlieu",
+      "nom": "Muscadet Côtes de Grandlieu",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-50 m",
+      "sols": "Sables, graviers, gneiss",
+      "caracteristiques_rapides": "AOC ~210 ha autour du lac de Grandlieu. Plus rare et confidentiel.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "grandlieu"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-clisson",
+      "nom": "Muscadet Sèvre et Maine Clisson (cru)",
+      "type": "cru",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Granites",
+      "caracteristiques_rapides": "Cru communal du Muscadet Sèvre et Maine. Granites, élevage 24 mois min sur lies. Style le plus charpenté et de garde. Marc Ollivier (Pépière), Brégeon, Luneau-Papin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "granite",
+        "garde",
+        "melon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-gorges",
+      "nom": "Muscadet Sèvre et Maine Gorges (cru)",
+      "type": "cru",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Gabbros (sols noirs)",
+      "caracteristiques_rapides": "Cru communal du Muscadet Sèvre et Maine. Gabbros (rare), élevage 24 mois min sur lies. Style minéral et iodé. Pépière, Luneau-Papin.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gabbros",
+        "melon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-muscadet-le-pallet",
+      "nom": "Muscadet Sèvre et Maine Le Pallet (cru)",
+      "type": "cru",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Gneiss",
+      "caracteristiques_rapides": "Cru communal du Muscadet Sèvre et Maine. Gneiss, élevage 18 mois min sur lies. Style aromatique et tendu. Brégeon en référence.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "gneiss",
+        "melon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-gros-plant",
+      "nom": "Gros Plant du Pays Nantais",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Pays Nantais",
+      "pays": "France",
+      "cepages_rois": [
+        "Folle Blanche (Gros Plant)"
+      ],
+      "altitude": "0-90 m",
+      "sols": "Variés (mêmes sols que Muscadet)",
+      "caracteristiques_rapides": "AOC ~410 ha. Folle Blanche en monovariétale (= Gros Plant). Style très acide, marin, longtemps déconsidéré, en regain qualitatif.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "folle-blanche",
+        "sur-lie"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-anjou",
+      "nom": "Anjou",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Gamay",
+        "Grolleau",
+        "Chardonnay"
+      ],
+      "altitude": "20-150 m",
+      "sols": "Schistes ardoisiers (Anjou Noir) et tuffeau (Anjou Blanc)",
+      "caracteristiques_rapides": "AOC régionale (~3 000 ha). Rouges (Cabernet Franc dominant), blancs (Chenin), rosés. Dualité géologique majeure : Anjou Noir (schistes) à l'ouest, Anjou Blanc (tuffeau) à l'est.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "chenin",
+        "cabernet-franc",
+        "dualite"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-anjou-villages",
+      "nom": "Anjou Villages",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-100 m",
+      "sols": "Schistes, sables",
+      "caracteristiques_rapides": "AOC ~600 ha exclusivement rouge sur 47 communes du nord-est de l'Anjou. Rendements plus bas qu'Anjou.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "rouge",
+        "cabernet-franc"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-anjou-villages-brissac",
+      "nom": "Anjou Villages Brissac",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-100 m",
+      "sols": "Schistes (Anjou Noir)",
+      "caracteristiques_rapides": "AOC ~250 ha rouge autour de Brissac. Schistes, vins plus structurés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "brissac",
+        "schistes"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cabernet-anjou",
+      "nom": "Cabernet d'Anjou",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "20-100 m",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC ~1 800 ha. Rosé demi-sec (10-30 g/L sucre). Style \"goûté\" populaire.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "rose",
+        "demi-sec"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-coteaux-du-layon",
+      "nom": "Coteaux du Layon",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "20-100 m",
+      "sols": "Schistes (Anjou Noir)",
+      "caracteristiques_rapides": "AOC ~1 500 ha de liquoreux botrytisé (Chenin) sur la vallée du Layon. 7 villages dénommés (Beaulieu, Faye, Rablay, Rochefort, Saint-Aubin, Saint-Lambert, Chaume). Patrick Baudouin, Pierre Bise.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "liquoreux",
+        "botrytis",
+        "chenin",
+        "layon"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-bonnezeaux",
+      "nom": "Bonnezeaux",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "20-90 m",
+      "sols": "Schistes gréseux",
+      "caracteristiques_rapides": "AOC liquoreuse ~80 ha à Thouarcé (vallée du Layon). Premier cru historique des liquoreux d'Anjou. Domaine des Petits Quarts en référence.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "liquoreux",
+        "premier-cru-historique",
+        "chenin"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-quarts-de-chaume",
+      "nom": "Quarts de Chaume Grand Cru",
+      "type": "appellation_grand_cru",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "20-50 m",
+      "sols": "Schistes en coteau ouest-sud-ouest",
+      "caracteristiques_rapides": "Seul Grand Cru de la Loire (depuis 2011) ~40 ha à Rochefort-sur-Loire. Liquoreux botrytisé Chenin pur. Sommet du genre. Baumard, Bellerive, Pierre Bise.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "grand-cru",
+        "liquoreux",
+        "iconique",
+        "chenin",
+        "seul-grand-cru-loire"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-coteaux-aubance",
+      "nom": "Coteaux de l'Aubance",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "20-90 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "AOC liquoreuse ~200 ha sur la vallée de l'Aubance. Style entre Layon et Chaume. Plus méconnu.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "liquoreux",
+        "aubance"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-savennieres",
+      "nom": "Savennières",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "50-90 m",
+      "sols": "Schistes pourpres, rhyolites, sables",
+      "caracteristiques_rapides": "AOC ~150 ha de blanc sec exclusivement (Chenin). Coteau exceptionnel sur la rive droite de la Loire. Garde longue. Joly (Coulée de Serrant), Baumard, Closel, FL, Laureau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sec",
+        "chenin",
+        "joly",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-savennieres-roche-aux-moines",
+      "nom": "Savennières Roche aux Moines",
+      "type": "appellation_grand_cru",
+      "region": "Loire",
+      "sous_region": "Anjou",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "50-90 m",
+      "sols": "Schistes pourpres, sables",
+      "caracteristiques_rapides": "Cru de Savennières ~33 ha. La \"Coulée de Serrant\" (monopole de Joly) est techniquement un climat de la Roche aux Moines. Damien Laureau, Domaine FL, Pierre & Yves Soulez.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "cru",
+        "chenin",
+        "coulee-de-serrant",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-saumur",
+      "nom": "Saumur",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Saumur",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin",
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Pineau d Aunis"
+      ],
+      "altitude": "40-110 m",
+      "sols": "Tuffeau jaune (craie de Touraine)",
+      "caracteristiques_rapides": "AOC régionale ~2 000 ha. Blancs (Chenin), rouges (Cabernet Franc) et rosés. Sols typiques de tuffeau. Saumur Brut effervescent très répandu.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "tuffeau",
+        "chenin",
+        "cabernet-franc"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-saumur-champigny",
+      "nom": "Saumur-Champigny",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Saumur",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Pineau d Aunis"
+      ],
+      "altitude": "40-110 m",
+      "sols": "Tuffeau jaune (sables et graviers en surface)",
+      "caracteristiques_rapides": "AOC ~1 600 ha sur 8 communes au sud de Saumur. Rouges sur Cabernet Franc dominant. Clos Rougeard (Foucault), Roches Neuves (Germain), Filliatreau, Romain Guiberteau.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cabernet-franc",
+        "tuffeau",
+        "rougeard",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-saumur-puy-notre-dame",
+      "nom": "Saumur Puy-Notre-Dame",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Saumur",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "50-110 m",
+      "sols": "Tuffeau",
+      "caracteristiques_rapides": "AOC ~50 ha, dénomination plus exigeante de Saumur sur 12 communes du Layon-Saumurois.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "tuffeau",
+        "saumur"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cremant-de-loire",
+      "nom": "Crémant de Loire",
+      "type": "appellation_effervescente",
+      "region": "Loire",
+      "sous_region": "Anjou-Saumur-Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin",
+        "Chardonnay",
+        "Cabernet Franc",
+        "Pinot Noir",
+        "Pineau d Aunis",
+        "Grolleau",
+        "Orbois"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "AOC effervescente ~3 000 ha. Méthode traditionnelle. Plus large géographiquement que Saumur Brut. Bouvet-Ladubay, Langlois-Château.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "effervescent",
+        "cremant",
+        "methode-traditionnelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-touraine",
+      "nom": "Touraine",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon",
+        "Chenin",
+        "Cot",
+        "Cabernet Franc",
+        "Gamay",
+        "Pinot Noir"
+      ],
+      "altitude": "50-150 m",
+      "sols": "Tuffeau, argilo-calcaires, sables",
+      "caracteristiques_rapides": "AOC régionale ~4 000 ha. Sauvignon dominant en blanc, Cot/Gamay en rouge. Plusieurs dénominations géographiques (Amboise, Mesland, Chenonceaux, Oisly...).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "sauvignon",
+        "tuffeau"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-touraine-amboise",
+      "nom": "Touraine Amboise",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Cot",
+        "Cabernet Franc",
+        "Gamay",
+        "Chenin"
+      ],
+      "altitude": "50-130 m",
+      "sols": "Argilo-calcaires, sables",
+      "caracteristiques_rapides": "Dénomination géographique de Touraine sur 10 communes autour d'Amboise. Cot (Malbec) en pointe. Damien Delecheneau (Grange Tiphaine).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "cot",
+        "amboise"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-bourgueil",
+      "nom": "Bourgueil",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "50-90 m",
+      "sols": "Sables et graviers (rive droite Loire) et coteaux de tuffeau",
+      "caracteristiques_rapides": "AOC ~1 350 ha. Cabernet Franc dominant. Deux terroirs : graviers (vins fruités) et tuffeau (vins de garde). Yannick Amirault, Catherine et Pierre Breton, Pierre Sourdais.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cabernet-franc",
+        "graviers",
+        "tuffeau"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-st-nicolas-bourgueil",
+      "nom": "Saint-Nicolas-de-Bourgueil",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon"
+      ],
+      "altitude": "40-70 m",
+      "sols": "Sables et graviers",
+      "caracteristiques_rapides": "AOC ~1 100 ha voisine de Bourgueil. Sols essentiellement sableux, vins plus souples et fruités. Yannick Amirault.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cabernet-franc",
+        "sables"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-chinon",
+      "nom": "Chinon",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Cabernet Franc",
+        "Cabernet Sauvignon",
+        "Chenin"
+      ],
+      "altitude": "40-100 m",
+      "sols": "Sables, graviers, tuffeau, argilo-siliceux",
+      "caracteristiques_rapides": "AOC ~2 350 ha. Cabernet Franc dominant. Aussi un peu de blanc (Chenin). Trois terroirs : graviers (\"vins de gravier\"), coteaux (tuffeau, \"vins de garde\"), plateau. Bernard Baudry, Charles Joguet, Philippe Alliet, Olga Raffault.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "cabernet-franc",
+        "tuffeau",
+        "baudry",
+        "joguet"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-vouvray",
+      "nom": "Vouvray",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Tuffeau (craie de Touraine), argiles à silex",
+      "caracteristiques_rapides": "AOC ~2 000 ha de Chenin pur. Tous les styles : sec, demi-sec, moelleux, liquoreux, effervescent (méthode traditionnelle). Garde monumentale. Huet, Foreau (Clos Naudin), Champalou, Pinon, Carême.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "chenin",
+        "tuffeau",
+        "tous-styles",
+        "huet",
+        "foreau"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-montlouis-sur-loire",
+      "nom": "Montlouis-sur-Loire",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Tuffeau, argiles à silex",
+      "caracteristiques_rapides": "AOC ~400 ha sur la rive sud de la Loire face à Vouvray. Chenin pur. Tous styles (sec, demi-sec, moelleux, effervescent). Souvent considéré comme le \"jumeau\" plus accessible de Vouvray. Chidaine, Jacky Blot (Taille aux Loups), Grange Tiphaine.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "chenin",
+        "tuffeau",
+        "chidaine",
+        "blot"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cheverny",
+      "nom": "Cheverny",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon",
+        "Chardonnay",
+        "Pinot Noir",
+        "Gamay",
+        "Cot"
+      ],
+      "altitude": "60-130 m",
+      "sols": "Argilo-siliceux, sables",
+      "caracteristiques_rapides": "AOC ~570 ha autour du château de Cheverny. Blancs majoritaires (Sauvignon/Chardonnay). Domaine du Salvard.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "cheverny"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cour-cheverny",
+      "nom": "Cour-Cheverny",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Touraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Romorantin"
+      ],
+      "altitude": "60-130 m",
+      "sols": "Argilo-siliceux",
+      "caracteristiques_rapides": "AOC ~50 ha consacrée au seul Romorantin (cépage local très rare). Style minéral et tendu. Hervé Villemade, Domaine des Huards.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "monovariétale",
+        "romorantin",
+        "cepage-local"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-jasnieres",
+      "nom": "Jasnières",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Vallée du Loir",
+      "pays": "France",
+      "cepages_rois": [
+        "Chenin"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Tuffeau (argiles à silex)",
+      "caracteristiques_rapides": "AOC ~65 ha sur la vallée du Loir (affluent de la Sarthe, à ne pas confondre avec la Loire). Chenin pur, sec à liquoreux, garde monumentale. Domaine de Bellivière, Joël Gigou.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "chenin",
+        "loir",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-coteaux-du-loir",
+      "nom": "Coteaux du Loir",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Vallée du Loir",
+      "pays": "France",
+      "cepages_rois": [
+        "Pineau d Aunis",
+        "Cabernet Franc",
+        "Cot",
+        "Chenin"
+      ],
+      "altitude": "50-100 m",
+      "sols": "Argilo-siliceux, tuffeau",
+      "caracteristiques_rapides": "AOC ~80 ha de la vallée du Loir. Particularité : Pineau d'Aunis comme cépage roi en rouge (épicé et fin). Domaine de Bellivière, Pascal Janvier.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "pineau-d-aunis",
+        "loir",
+        "epice"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-sancerre",
+      "nom": "Sancerre",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc",
+        "Pinot Noir"
+      ],
+      "altitude": "200-400 m",
+      "sols": "Caillottes (calcaires kimméridgiens), terres blanches (marnes), silex",
+      "caracteristiques_rapides": "AOC ~2 900 ha. Sauvignon majoritaire (~80%) et Pinot Noir. Trois grands terroirs (caillottes, terres blanches, silex) qui font des styles très différents. Cotat, Edmond Vatan, Vacheron, Mellot, Bourgeois.",
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "kimmeridgien",
+        "silex",
+        "cotat",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-pouilly-fume",
+      "nom": "Pouilly-Fumé",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc"
+      ],
+      "altitude": "150-300 m",
+      "sols": "Calcaires kimméridgiens, silex (les plus typiques)",
+      "caracteristiques_rapides": "AOC ~1 300 ha sur la rive droite de la Loire face à Sancerre. Sauvignon Blanc pur. Silex en pointe (notes \"fumées\" historiques). Didier Dagueneau iconique.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "silex",
+        "dagueneau",
+        "iconique"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-pouilly-sur-loire",
+      "nom": "Pouilly-sur-Loire",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Chasselas"
+      ],
+      "altitude": "150-300 m",
+      "sols": "Calcaires, silex",
+      "caracteristiques_rapides": "AOC ~30 ha consacrée au Chasselas (autrefois cépage dominant ici). Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "chasselas",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-menetou-salon",
+      "nom": "Menetou-Salon",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc",
+        "Pinot Noir"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Calcaires kimméridgiens, marnes",
+      "caracteristiques_rapides": "AOC ~520 ha au sud-ouest de Sancerre. Sauvignon et Pinot Noir, cépages identiques à Sancerre. Henry Pellé, Jean-Max Roger.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "kimmeridgien",
+        "pelle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-quincy",
+      "nom": "Quincy",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc"
+      ],
+      "altitude": "100-200 m",
+      "sols": "Sables, graviers (terrasses du Cher)",
+      "caracteristiques_rapides": "AOC ~290 ha consacrée au Sauvignon (la plus ancienne AOC blanche du Centre Loire, 1936). Sols sableux, vins plus fruités et accessibles que Sancerre.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "sables",
+        "cher"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-reuilly",
+      "nom": "Reuilly",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "altitude": "100-200 m",
+      "sols": "Calcaires kimméridgiens, sables",
+      "caracteristiques_rapides": "AOC ~250 ha à l'ouest de Quincy. Particularité : Pinot Gris autorisé (rosé ou \"vinifié en blanc\"). Confidentielle.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "sauvignon",
+        "pinot-gris",
+        "reuilly"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-coteaux-giennois",
+      "nom": "Coteaux du Giennois",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Sauvignon Blanc",
+        "Pinot Noir",
+        "Gamay"
+      ],
+      "altitude": "150-280 m",
+      "sols": "Calcaires, marnes, silex",
+      "caracteristiques_rapides": "AOC ~190 ha entre Cosne-Cours-sur-Loire et Gien. Confidentielle, en progression.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "giennois"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-chateaumeillant",
+      "nom": "Châteaumeillant",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Centre Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Pinot Gris"
+      ],
+      "altitude": "200-300 m",
+      "sols": "Argilo-siliceux",
+      "caracteristiques_rapides": "AOC ~80 ha au sud du Berry. Spécialiste du \"vin gris\" (rosé clair de Gamay).",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "vin-gris",
+        "gamay",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cotes-auvergne",
+      "nom": "Côtes d'Auvergne",
+      "type": "appellation_regionale",
+      "region": "Loire",
+      "sous_region": "Auvergne",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Chardonnay"
+      ],
+      "altitude": "350-500 m",
+      "sols": "Volcaniques (basaltes, pépérites), calcaires, granits",
+      "caracteristiques_rapides": "AOC ~400 ha autour de Clermont-Ferrand. Sols volcaniques uniques en France. Gamay sur basaltes en pointe. Cinq villages dénommés (Boudes, Châteaugay, Chanturgue, Corent, Madargue). Vincent Marie & Tricot.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "volcanique",
+        "basaltes",
+        "gamay",
+        "tricot"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-saint-pourcain",
+      "nom": "Saint-Pourçain",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Allier",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Pinot Noir",
+        "Tressallier",
+        "Chardonnay",
+        "Sauvignon"
+      ],
+      "altitude": "200-400 m",
+      "sols": "Argilo-calcaires, sables",
+      "caracteristiques_rapides": "AOC ~600 ha en Allier. Tressallier (cépage local) en blanc, parfois en assemblage avec Chardonnay/Sauvignon.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "tressallier",
+        "allier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cote-roannaise",
+      "nom": "Côte Roannaise",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Loire amont",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay (Gamay Saint-Romain local)"
+      ],
+      "altitude": "400-500 m",
+      "sols": "Granites, sables",
+      "caracteristiques_rapides": "AOC ~200 ha dans les monts du Beaujolais (Loire département). Gamay sur granits. Domaine des Pothiers.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "gamay",
+        "granit",
+        "roanne"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-cotes-forez",
+      "nom": "Côtes du Forez",
+      "type": "appellation_village",
+      "region": "Loire",
+      "sous_region": "Loire amont",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay"
+      ],
+      "altitude": "350-450 m",
+      "sols": "Granits, basaltes",
+      "caracteristiques_rapides": "AOC ~150 ha dans les monts du Forez. Gamay confidentiel.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "gamay",
+        "forez"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "loi-igp-val-de-loire",
+      "nom": "IGP Val de Loire",
+      "type": "igp",
+      "region": "Loire",
+      "sous_region": "Val de Loire",
+      "pays": "France",
+      "cepages_rois": [
+        "Toutes variétés autorisées"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés",
+      "caracteristiques_rapides": "IGP couvrant l'ensemble du bassin de la Loire (~13 départements). Cadre des cuvées hors AOC.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "val-de-loire",
+        "generaliste"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

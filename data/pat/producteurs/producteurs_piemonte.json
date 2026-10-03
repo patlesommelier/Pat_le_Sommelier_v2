@@ -1,0 +1,2281 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "piemonte",
+  "region_label": "Piemonte (Italie)",
+  "source_file": "producteurs_piemonte.json",
+  "built_at": "2026-06-28",
+  "count": 60,
+  "items": [
+    {
+      "id": "it-piemonte-prod-bruno-giacosa",
+      "nom": "Bruno Giacosa",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Neive",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Asili",
+        "Barbaresco Rabajà",
+        "Barolo Falletto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Neive, sur les terres du Barbaresco et du Barolo, le domaine d'un homme considéré comme l'un des plus grands vinificateurs de l'histoire du Nebbiolo, surnommé le « génie de Neive ». Entré dans l'affaire familiale à quinze ans, Bruno Giacosa (1929-2018) bâtit d'abord sa légende en négociant au palais infaillible : dès les années 1960 il sélectionne et embouteille des crus issus de raisins achetés, signant des bouteilles devenues mythiques — le Barbaresco Santo Stefano à partir de 1964, et surtout la série héroïque de Barolo Collina Rionda de 1967 à 1993. Face à la généralisation de la mise en bouteille à la propriété, il achète son propre vignoble : le majestueux Falletto di Serralunga d'Alba en 1982 (monopole, source de ses plus grands Barolo), puis des parcelles dans Asili et Rabajà en Barbaresco, sans doute les deux plus beaux crus de l'appellation. Sa philosophie, qu'il qualifiait de « traditionnelle actualisée », repose sur de longues macérations (trente à cinquante jours) et un élevage en grands bois. Les vins de cru portent une étiquette blanche ; seuls les millésimes jugés exceptionnels donnent une Riserva à l'étiquette rouge, devenue l'un des objets les plus convoités du vin mondial. Giacosa refusait d'embouteiller les années qui ne le satisfaisaient pas (2006, 2010). Depuis sa disparition en 2018, sa fille Bruna et son œnologue de longue date Dante Scaglione perpétuent l'œuvre, dans la fidélité au style. La maison produit aussi un Roero Arneis et un remarquable Spumante. Des Barbaresco et Barolo d'une intensité aromatique, d'une finesse et d'une longévité rares — souvent rangés parmi les plus grands vins rouges jamais faits —, sommet absolu de la tradition piémontaise. La signature Giacosa tient à un équilibre rare entre puissance et finesse, à une définition aromatique d'une précision presque chirurgicale et à une longévité qui place ses meilleures bouteilles parmi les plus émouvantes jamais produites. Les vins issus du domaine portent le nom « Azienda Agricola Falletto », ceux d'achat l'ancien « Casa Vinicola ». Falletto, à Serralunga, donne des Barolo d'une densité et d'une assise impressionnantes ; Asili et Rabajà, à Barbaresco, offrent l'un la grâce et le parfum, l'autre une trame plus minérale et tendue. Servis sur la grande cuisine ou attendus deux à trois décennies, les Riserva à l'étiquette rouge restent des objets de désir absolu, et le simple nom de Giacosa suffit à faire battre le cœur des amateurs de Nebbiolo du monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "barbaresco",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-gaja",
+      "nom": "Gaja",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Sorì San Lorenzo",
+        "Sorì Tildìn",
+        "Costa Russi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, le nom italien le plus célèbre au monde. Sur les fondations d'une maison familiale née en 1859, Angelo Gaja a, à partir des années 1960-70, révolutionné le Nebbiolo et porté le Barbaresco — jusque-là dans l'ombre du Barolo — au rang de grand vin international : rendements maîtrisés, sélections parcellaires, tri sévère, élevages soignés et communication visionnaire. Le domaine produit un Barbaresco d'assemblage issu d'une mosaïque de parcelles, et surtout trois crus légendaires — Sorì San Lorenzo, Sorì Tildìn et Costa Russi — qu'Angelo a déclassés en Langhe Nebbiolo de 1996 à 2012 (avec une pointe de Barbera) avant de les ramener en Barbaresco à partir de 2013. Côté Barolo, il a acquis de grandes parcelles à Serralunga (Sperss) et à La Morra/Cerequio (Conteisa). Pionnier audacieux, il a aussi planté du Cabernet (Darmagi) et signé des Chardonnay de référence (Gaia & Rey, Rossj-Bass), puis étendu l'empire hors du Piémont, à Bolgheri (Ca'Marcanda) et à Montalcino (Pieve Santa Restituta). Aujourd'hui, ses enfants Gaia, Rossana et Giovanni mènent la maison, avec un retour assumé vers la finesse et la fraîcheur, et une viticulture toujours plus respectueuse. Le style Gaja conjugue puissance, densité de fruit, race tannique et capacité de garde considérable ; les crus comptent parmi les vins les plus prestigieux et les plus chers du pays. Au-delà des bouteilles, Gaja a changé le regard du monde entier sur le vin italien : c'est à la fois une maison de tout premier plan et un symbole. Une référence incontournable pour comprendre le Piémont et son rayonnement moderne. La maison a aussi joué un rôle décisif dans la reconnaissance de chaque grand cru et dans la valorisation du vignoble piémontais, imposant une rigueur viticole et une ambition commerciale alors inédites en Italie. Les crus, produits en quantités limitées, allient une densité de fruit remarquable à une trame tannique racée et à une longueur saline qui appellent une longue garde, souvent au-delà de vingt ans. Le retour assumé vers la fraîcheur et la transparence opéré par la nouvelle génération réconcilie le style maison avec les attentes contemporaines, sans rien perdre de sa profondeur. Servis sur les plus belles tables ou conservés patiemment en cave, les Gaja demeurent des vins de prestige autant que des jalons de l'histoire du vin italien moderne, et restent une référence absolue pour qui veut comprendre comment le Piémont a conquis le monde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "barbaresco",
+        "mondial"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winescholarguild"
+    },
+    {
+      "id": "it-piemonte-prod-roagna",
+      "nom": "Roagna",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Pajè",
+        "Barbaresco Crichët Pajé",
+        "Barolo Pira"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, l'un des domaines traditionalistes les plus radicaux et les plus admirés du Piémont, mené aujourd'hui par Luca Roagna avec son père Alfredo. La philosophie y est poussée à l'extrême : très vieilles vignes en sélection massale, enherbement, refus de la vendange en vert, macérations très longues (parfois jusqu'à trois mois), élevages interminables en grands foudres, ni collage ni filtration, soufre minimal. Le domaine possède des parcelles d'âge vénérable dans les grands crus de Barbaresco — Pajè, Asili, Montefico — d'où sort notamment le Crichët Pajé, cuvée de très vieilles vignes parmi les Nebbiolo les plus profonds qui soient. Roagna est aussi propriétaire à Castiglione Falletto du cru La Pira, source de Barolo d'une grande race, et propose des bouteilles « Vecchie Viti » issues des ceps les plus âgés. Les vins se distinguent par une couleur souvent claire, un parfum complexe et envoûtant, une texture éthérée mais d'une densité de saveur impressionnante, et une trame minérale qui leur donne une longueur remarquable. Austères et fermés dans leur prime jeunesse, ils demandent de la patience et récompensent par une longévité exceptionnelle. Production limitée, élevages très longs avant commercialisation, demande internationale forte : Roagna est devenu une référence pour qui cherche le Nebbiolo le plus authentique et le plus émouvant. Un sommet du classicisme piémontais, à la fois ancré dans la tradition et d'une singularité absolue. Cette approche, qui peut sembler intransigeante, vise une seule chose : capter le terroir dans toute sa nudité, sans artifice ni maquillage du bois. Les Barbaresco et Barolo de Roagna se reconnaissent à leur couleur claire trompeuse, à leur parfum complexe de fleurs séchées, de fruits rouges, d'herbes et d'épices, et à une bouche d'une finesse presque éthérée qui cache une densité de saveur et une persistance peu communes. Le domaine produit également un Nebbiolo Langhe « Montemarino » et un Dolcetto, dans le même esprit. Les élevages très longs retardent la commercialisation, ce qui renforce la rareté des bouteilles. Pour les amateurs en quête du Nebbiolo le plus authentique, le plus émouvant et le plus singulier, Roagna est devenu une sorte de référence absolue — un domaine que l'on attend, que l'on cellare, et qui récompense la patience par des vins d'une rare profondeur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barbaresco"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-bartolo-mascarello",
+      "nom": "Bartolo Mascarello",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo (Cannubi",
+        "San Lorenzo",
+        "Rué",
+        "Rocche)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Au cœur du village de Barolo, l'icône traditionaliste par excellence. Le domaine est fondé en 1919 par Giulio Mascarello, qui quitte la cave coopérative et achète, au prix de grands sacrifices, de petites parcelles dans les meilleurs lieux-dits. Son fils Bartolo (entré en 1945, ancien partisan) en fait l'une des maisons les plus respectées d'Italie et le gardien farouche du Barolo classique, au point d'être surnommé, avec Teobaldo Cappellano et Giuseppe Rinaldi, l'un des « derniers des Mohicans ». Depuis 2005, sa fille Maria Teresa perpétue la philosophie sans la moindre concession : un seul grand Barolo, assemblage des quatre crus historiques du domaine — Cannubi, San Lorenzo et Rué à Barolo, Rocche dell'Annunziata à La Morra —, vinifié traditionnellement et élevé en grands foudres de chêne de Slavonie, dans un refus total de la barrique. La célèbre étiquette peinte à la main « No barrique, no Berlusconi » résume un rapport au vin pensé comme objet culturel et politique autant que commercial. Le résultat est un Barolo d'une élégance austère, tout en parfum floral, en acidité vibrante et en tanins fins, qui se referme dans sa jeunesse pour s'épanouir magnifiquement après une à deux décennies de garde. Le critique Antonio Galloni a salué la renaissance du domaine sous Maria Teresa comme l'une des grandes réussites du Piémont moderne. À côté du Barolo, la maison produit en petites quantités de jolis Dolcetto, Barbera, Freisa et Langhe Nebbiolo, dans le même esprit de fidélité au terroir. Production confidentielle, demande mondiale : c'est l'un des Barolo les plus convoités et les plus difficiles à trouver, emblème absolu du Piémont qui résiste au temps et aux modes. Les quatre crus apportent chacun leur pierre à l'édifice : Cannubi la complexité veloutée, San Lorenzo la structure, Rué la finesse, Rocche dell'Annunziata la fraîcheur et le parfum ; leur assemblage donne, selon la conviction de la maison, un Barolo plus complet et harmonieux qu'aucune parcelle isolée. La cave, exiguë et tapissée de vieux foudres, n'a guère changé en un siècle, et chaque étiquette peinte à la main fait aujourd'hui l'objet d'une véritable collection. Ce qui frappe surtout à la dégustation, c'est l'extraordinaire digestibilité de ces vins, leur manière de conjuguer austérité et gourmandise, et leur évolution gracieuse sur trois ou quatre décennies — un Barolo qui semble gagner en transparence et en parfum à mesure qu'il vieillit.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winereviewonline|oreate"
+    },
+    {
+      "id": "it-piemonte-prod-cappellano",
+      "nom": "Cappellano",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Serralunga d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Otin Fiorin Pie Rupestris",
+        "Barolo Pie Franco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, un micro-domaine traditionaliste culte, à l'aura immense malgré une production minuscule. Longtemps incarné par Teobaldo « Baldo » Cappellano (disparu en 2009), l'un des fameux « derniers des Mohicans » du Barolo classique, il est aujourd'hui mené par son fils Augusto dans la même fidélité absolue à la tradition et au terroir. La maison refuse depuis toujours la logique des notes de dégustation et de la spéculation, ce qui n'a fait qu'accroître son statut. Son vin emblématique, le Barolo Otin Fiorin, se décline en deux versions issues du cru Gabutti : « Piè Rupestris », sur porte-greffe, et surtout « Piè Franco », issu de vignes franches de pied (non greffées), d'une rareté extrême et d'une profondeur qui en font l'une des bouteilles les plus mythiques d'Italie. Cappellano est aussi le gardien d'une institution piémontaise : le Barolo Chinato, vin aromatisé à base de Nebbiolo, dont la recette familiale fait référence. Le style est intransigeant — longues macérations, élevage patient en grands foudres, recherche du parfum et de l'authenticité plutôt que de l'effet. Les vins, austères et serrés dans leur jeunesse, déploient avec l'âge une complexité et une finesse remarquables, sur deux à trois décennies. Quasi introuvable et entouré d'un véritable mythe, Cappellano est l'une des adresses les plus respectées et les plus désirées de Serralunga et du Barolo tout entier. Le cru Gabutti, à Serralunga, donne des Barolo d'une grande noblesse tannique et d'une belle assise minérale, que le style maison sublime par la patience et la retenue. La distinction entre Piè Rupestris (sur porte-greffe américain) et Piè Franco (sur racines propres) offre une leçon de viticulture rare et fascinante, les vins franc-de-pied montrant une profondeur et une complexité supplémentaires. Au-delà du Barolo, le domaine perpétue avec un soin particulier l'art du Barolo Chinato, élixir aromatisé d'écorces et d'herbes que l'on sert au dessert ou en digestif. La philosophie anticommerciale de la maison — refus des notes, des classements et de toute spéculation — n'a fait qu'épaissir sa légende. Quasi introuvables, les Cappellano sont parmi les bouteilles les plus mythiques et les plus émouvantes de Serralunga, réservées à quelques heureux initiés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winereviewonline|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-g-b-burlotto",
+      "nom": "G.B. Burlotto",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Verduno",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Pelaverga",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Monvigliero",
+        "Barolo Acclivi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Verduno, à l'extrémité nord du Barolo, un domaine historique devenu l'une des adresses les plus convoitées du moment. La maison Commendatore G.B. Burlotto, fondée au XIXe siècle, fournissait jadis la cour de Savoie ; elle est aujourd'hui menée par Fabio Alessandria, qui en a fait une star tout en respectant un style profondément traditionnel. Son joyau est le Barolo Monvigliero, issu du plus grand cru de Verduno : vinifié en grappes entières foulées au pied dans des cuves ouvertes, à l'ancienne, il en résulte un Barolo d'un parfum floral et épicé envoûtant, d'une finesse et d'une transparence rares, qui figure parmi les Barolo les plus recherchés et les plus discutés des amateurs. Le domaine produit aussi un Barolo Acclivi (assemblage de plusieurs parcelles de Verduno), un Cannubi, ainsi que le rare et délicieux Verduno Pelaverga, cépage local épicé et léger dont Burlotto est l'un des champions. Le style général privilégie la fraîcheur, le parfum et la digestibilité plutôt que la puissance, avec des tanins fins et une grande capacité de garde. La production reste limitée et la demande a explosé : les bouteilles, en particulier le Monvigliero, s'arrachent et atteignent des prix élevés. Burlotto incarne le renouveau du Barolo de finesse et compte désormais parmi les références majeures de l'appellation. Verduno, longtemps sous-estimé, s'affirme aujourd'hui comme l'un des secteurs les plus excitants du Barolo, et Burlotto en est le porte-drapeau. La vinification en grappes entières et le foulage au pied du Monvigliero, techniques héritées du passé, donnent un Barolo d'une couleur claire, d'un parfum floral et épicé envoûtant et d'une texture soyeuse, qui privilégie l'élégance et la digestibilité à la puissance. L'Acclivi, assemblage de plusieurs parcelles de Verduno, en offre une version plus accessible mais tout aussi parfumée. Quant au Pelaverga, léger, épicé et poivré, c'est l'une des curiosités les plus délicieuses du Piémont. Servis assez jeunes pour leur parfum ou attendus dix à vingt ans, les vins de Burlotto séduisent autant les amateurs de finesse que les collectionneurs ; le Monvigliero, en particulier, est devenu l'un des Barolo les plus désirés du moment.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "barolo",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winereviewonline"
+    },
+    {
+      "id": "it-piemonte-prod-giacomo-conterno",
+      "nom": "Giacomo Conterno",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Monfortino",
+        "Barolo Cascina Francia",
+        "Barolo Cerretta"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, au sommet absolu du Barolo traditionnel et, pour beaucoup, de tout le vin italien. La maison naît en 1908 avec l'osteria de Giovanni Conterno ; elle prend son envol en 1974 quand son fils Giovanni achète le monopole de Cascina Francia, vaste coteau d'argile et de calcaire au sud de Serralunga qui restera pendant trois décennies l'unique source des vins. Roberto Conterno, troisième génération aux commandes depuis 2004, perpétue une tradition intransigeante : fermentations longues à températures non maîtrisées, macérations de plusieurs semaines, élevages interminables en grands foudres autrichiens. Le Barolo « Francia » est la référence contre laquelle se mesurent les autres ; le Monfortino Riserva, sélectionné dans les meilleures parcelles uniquement les grands millésimes et élevé six à huit ans en bois, est régulièrement cité comme le plus grand vin de Nebbiolo qui soit. Roberto a élargi le domaine avec Cerretta (2008), cru plus argileux et en altitude au nord de Serralunga, puis Arione (2015), parcelle voisine de Francia exposée plein sud ; chacun donne désormais un Barolo de cru distinct, Francia et Arione restant les viviers du Monfortino les très grandes années. La maison signe aussi l'une des plus belles Barbera d'Alba de la région, issue des rangs de Cascina Francia. En 2018, Roberto a poussé l'aventure hors du Barolo en rachetant le domaine historique Nervi à Gattinara, dont il a fait une nouvelle locomotive de l'Alto Piemonte. Des vins d'une pureté, d'une profondeur et d'une longévité qui défient le temps — souvent à leur apogée après vingt ou trente ans, parfois davantage —, austères et droits dans leur jeunesse puis d'une complexité bouleversante. Parmi les bouteilles les plus recherchées et les plus chères d'Italie, véritable étalon du classicisme piémontais. Concrètement, le caractère de Serralunga — argiles calcaires, exposition et altitude — donne ici des Nebbiolo d'une assise tannique majestueuse et d'une tension minérale considérable, qui supportent sans broncher les très longs élevages. Le Monfortino n'est d'ailleurs pas un lieu-dit mais un nom de cuvée, créé au début du XXe siècle pour désigner la sélection la plus aboutie ; il n'est produit que lorsque le millésime le mérite, parfois pas du tout.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winereviewonline"
+    },
+    {
+      "id": "it-piemonte-prod-giuseppe-mascarello",
+      "nom": "Giuseppe Mascarello",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Castiglione Falletto",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Monprivato",
+        "Barolo Villero"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Falletto (avec une cave à Monchiero), gardien d'un des plus grands crus de tout le Barolo : Monprivato. La famille y est attachée depuis 1904, quand Maurizio Mascarello achète la vigne et sa maison ; le lien est aujourd'hui réuni en quasi-monopole entre les mains de Mauro Mascarello et de ses enfants. Reprenant le domaine en 1967, Mauro fait le pari, contre l'avis de son père Gepin (fidèle aux assemblages), de vinifier Monprivato en cru à partir de 1970 : ce sera l'un des grands Barolo de l'après-guerre. Fidèle au sous-cépage Michét — plus concentré mais capricieux, que la famille a préservé par sélection massale —, Mauro replante en 1983 une partie de la vigne pour en tirer une super-riserva, le Barolo Riserva Cà d'Morissio, dont les premiers millésimes (1993, 1995) puis surtout les 1996 et 1997 placent la cuvée aux côtés du Monfortino de Conterno et des Riserva étiquette rouge de Giacosa, parmi les Barolo les plus mythiques et les plus rares. Le style est d'une fidélité totale à la tradition : longues macérations, élevage patient en grands foudres, recherche de la finesse plutôt que de la puissance. Au-delà de Monprivato et de Cà d'Morissio, Mauro produit en petites quantités des Barolo de très haut niveau dans le Villero (Castiglione) et dans le Santo Stefano di Perno (Monforte), ainsi que de classiques Barbera et Dolcetto. Les vins sont d'une pureté cristalline, austères et serrés jeunes, puis d'une longévité et d'une complexité exceptionnelles après quinze à trente ans de cave. Référence intemporelle du Barolo de cru et du classicisme piémontais, recherchée par tous les amateurs sérieux de Nebbiolo de garde. Monprivato, coteau marno-calcaire exposé au sud-ouest à Castiglione Falletto, donne des Barolo d'une grâce et d'une précision aromatique singulières, plus tournés vers la finesse que vers la puissance — une signature reconnaissable entre toutes. La fidélité de la famille au sous-cépage Michét, plus rare et plus capricieux, explique en partie cette profondeur de saveur et cette aptitude exceptionnelle au vieillissement. Servis sur des plats raffinés de viande ou de gibier, ou médités après vingt ans, ces vins illustrent l'idée même du grand Barolo de cru : un dialogue patient entre un terroir, un cépage et le temps. Le domaine reste à taille humaine, la production confidentielle, et les bouteilles de Monprivato comme de Cà d'Morissio comptent parmi les plus recherchées de toute la Langhe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-giuseppe-rinaldi",
+      "nom": "Giuseppe Rinaldi",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Brunate",
+        "Barolo Tre Tine"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barolo, l'un des domaines traditionalistes les plus cultes de toute l'appellation. Longtemps mené par Giuseppe « Beppe » Rinaldi (disparu en 2018), figure morale du Barolo classique et l'un des fameux « derniers des Mohicans » avec Bartolo Mascarello et Teobaldo Cappellano, il est aujourd'hui entre les mains de ses filles Marta et Carlotta, qui en perpétuent l'esprit avec un soin remarquable. La philosophie est d'une grande pureté : levures indigènes, pas de technologie superflue, longues macérations, élevage en grands foudres de Slavonie, recherche du parfum et de la transparence plutôt que de la concentration. Le domaine produit deux Barolo : le Brunate, issu de ce grand cru de La Morra, et le Tre Tine, assemblage (depuis le millésime 2010 et l'application de la loi sur les crus) de Ravera, Cannubi San Lorenzo et Le Coste di Rose — perpétuant la tradition rinaldienne de l'assemblage de plusieurs lieux-dits. Beppe s'était d'ailleurs battu, aux côtés de Maria Teresa Mascarello, pour défendre les limites historiques du cru Cannubi face aux appétits commerciaux. Les vins sont d'une finesse aérienne, tout en fleurs, fruits rouges et notes balsamiques, avec une trame tannique fine et une fraîcheur qui appellent une longue garde. La production est minuscule et la demande mondiale : les bouteilles s'arrachent et atteignent des prix élevés. C'est l'un des sommets du Barolo traditionnel et l'une des adresses les plus respectées des amateurs exigeants de Nebbiolo. Le Brunate, grand cru de La Morra, apporte structure et profondeur, tandis que le Tre Tine joue la complexité et le parfum d'un assemblage de plusieurs expositions. Dans les deux cas, l'empreinte du domaine est immédiatement reconnaissable : couleur souvent claire, bouquet floral et épicé d'une grande complexité, bouche tendue et saline, tanins fins, fraîcheur qui porte une finale interminable. Ce sont des Barolo de méditation, austères et fermés dans leur jeunesse, qui demandent dix à quinze ans pour s'épanouir et tiennent ensuite admirablement. La cave familiale, où voisinent foudres anciens et collection de vieilles Lambretta, dit assez l'esprit des lieux : artisanal, intransigeant, profondément attaché à son terroir. Bouteilles rares et très convoitées, les Rinaldi figurent parmi les sommets émotionnels du Barolo traditionnel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "tradition",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winereviewonline|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-poderi-aldo-conterno",
+      "nom": "Poderi Aldo Conterno",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Granbussia",
+        "Barolo Cicala",
+        "Barolo Colonnello"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, au cœur du grand cru Bussia, l'autre grand domaine Conterno. Aldo Conterno, frère de Giovanni (de Giacomo Conterno), se sépare de l'affaire familiale en 1969 pour fonder sa propre maison, qui deviendra l'un des sommets du Barolo. Son vin mythique est le Barolo Granbussia Riserva, assemblage des meilleures parcelles de Romirasco, Cicala et Colonnello produit uniquement les grandes années et élevé longuement : une bouteille rare et légendaire. À côté, le domaine vinifie ces lieux-dits en crus distincts — Romirasco (le plus puissant et structuré), Cicala et Colonnello (plus parfumés et élégants) — qui figurent parmi les plus beaux Barolo de Monforte. La maison illustre un classicisme raffiné, équilibre entre fidélité à la tradition et précision moderne, privilégiant la finesse et la pureté du fruit à la seule puissance. La gamme comprend aussi une Barbera d'Alba de référence (Conca Tre Pile) et l'un des Chardonnay pionniers du Piémont, le Bussiador. Aujourd'hui menée par les fils d'Aldo, la propriété conserve un niveau d'une grande régularité. Les vins, racés et profonds, demandent quelques années pour s'ouvrir et tiennent admirablement la garde sur deux à trois décennies. Adresse incontournable de la Bussia et l'un des noms les plus sûrs et les plus respectés de toute l'appellation Barolo. Le cru Bussia, à Monforte, offre un terroir de coteau marno-calcaire qui donne des Barolo à la fois structurés et parfumés, dans un registre où l'élégance prime toujours. Romirasco apporte la puissance et la profondeur, Cicala la générosité et le velouté, Colonnello la finesse et le parfum ; la Granbussia, qui les réunit dans les meilleures années, est l'une des bouteilles les plus rares et les plus convoitées de toute l'appellation. Le domaine a aussi été pionnier des blancs de qualité dans la Langhe avec son Chardonnay Bussiador. Servis sur des viandes braisées, du gibier ou des fromages affinés, ou attendus quinze à vingt-cinq ans, ces Barolo conjuguent classicisme et précision avec une régularité exemplaire. Adresse de tout premier plan, Poderi Aldo Conterno incarne le visage le plus raffiné et le plus sûr de la Bussia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "barolo",
+        "bussia"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-roberto-voerzio",
+      "nom": "Roberto Voerzio",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Brunate",
+        "Barolo Cerequio",
+        "Barolo Rocche dell'Annunziata"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, l'une des figures les plus spectaculaires du Barolo moderne. Roberto Voerzio a poussé à l'extrême la logique de la qualité par la quantité minuscule : tailles sévères, vendanges en vert drastiques (élimination d'une grande partie des grappes en cours de saison), grappes réduites à quelques baies, rendements parmi les plus faibles de toute l'appellation. Il en tire des Barolo d'une concentration et d'une densité hors normes, issus des plus grands crus — Brunate, Cerequio, La Serra, Rocche dell'Annunziata Torriglione, Sarmassa, Capalot, Fossati — vinifiés avec une grande précision et un usage maîtrisé du bois. Le style est opulent, riche, profondément fruité et doté de tanins mûrs, sans tomber dans la lourdeur grâce à l'altitude et au savoir-faire ; ce sont des vins de garde qui demandent du temps pour fondre leur puissance et révéler leur complexité, sur quinze à vingt-cinq ans. La production de chaque cru est confidentielle, ce qui, combiné au statut culte du domaine, en fait des bouteilles très recherchées et coûteuses, prisées des collectionneurs du monde entier. Voerzio illustre une autre voie que celle des traditionalistes — celle d'une modernité exigeante et perfectionniste — et reste, plus de trente ans après ses débuts, l'une des signatures les plus reconnaissables et les plus admirées du Barolo de La Morra. Chaque cru exprime une facette du Barolo de La Morra : Brunate la complétude, Cerequio la profondeur, La Serra la finesse, Rocche dell'Annunziata Torriglione le parfum, Sarmassa la structure. La méthode Voerzio — récolte tardive de grappes minuscules, tri impitoyable — vise une concentration maximale tout en préservant l'équilibre, grâce à l'altitude et à la fraîcheur des terroirs. Les vins, denses et profondément fruités dans leur jeunesse, demandent du temps pour fondre leur matière et révéler leur complexité, sur quinze à vingt-cinq ans. Servis sur des plats riches de gibier ou de viande, ou attendus longuement, ils offrent une expérience spectaculaire. Production minuscule, statut culte, prix élevés : Voerzio reste l'une des signatures les plus reconnaissables et les plus discutées du Barolo, et le grand nom de l'école moderne perfectionniste de La Morra.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "icone",
+        "moderne",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-le-piane",
+      "nom": "Le Piane",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Boca)",
+      "commune": "Boca",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Vespolina",
+        "Croatina"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Boca",
+        "Colline Novaresi Maggiorina"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Boca, dans le Haut-Piémont volcanique, un domaine devenu mythique pour avoir ressuscité une appellation au bord de l'extinction. Le Suisse Christoph Künzli s'installe à la fin des années 1980, rachète les vignes et la cave d'un vigneron âgé, Antonio Cerri, et entreprend de sauver le Boca et ses vieux cépages. Sur les sols de porphyre rose et de roches volcaniques, il produit un Boca d'assemblage de Nebbiolo (Spanna) et de Vespolina d'une grande complexité : nez de fruits noirs et de fleurs sombres, bouche minérale, saline et profonde, d'une longueur remarquable et d'une belle aptitude à la garde. La cuvée Maggiorina, issue d'un mode de conduite traditionnel en éventail, offre une entrée en matière plus accessible et gourmande. Künzli cultive ses vignes avec un grand respect de l'environnement. Salués par la critique internationale comme des vins de référence, les Boca de Le Piane comptent parmi les plus beaux Nebbiolo de montagne d'Italie et ont joué un rôle clé dans le réveil de tout l'Alto Piemonte. Une adresse incontournable de la région. Les sols volcaniques de Boca, riches en porphyre, confèrent aux vins une minéralité saline et une énergie singulières, loin du profil de la Langhe. La critique internationale les tient pour des vins de référence de l'artisanat de l'Alto Piemonte. Servis sur des plats de caractère ou attendus dix à vingt ans, les Boca de Le Piane séduisent par leur profondeur et leur originalité, et restent l'un des symboles du réveil de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "spanna",
+        "boca",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "unicornauctions|flatiron"
+    },
+    {
+      "id": "it-piemonte-prod-ferrando",
+      "nom": "Ferrando",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Carema)",
+      "commune": "Ivrea",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Erbaluce"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Carema Etichetta Nera",
+        "Carema Etichetta Bianca",
+        "Erbaluce di Caluso"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À la lisière des Alpes, le domaine de référence de Carema, minuscule appellation de Nebbiolo de montagne administrativement rattachée à l'Alto Piemonte mais géographiquement proche du Val d'Aoste. La famille Ferrando, basée à Ivrea, y cultive des vignes héroïques accrochées à des terrasses et conduites sur de typiques pergolas (les « topie ») qui protègent les ceps du froid et maximisent l'ensoleillement. Le Carema se décline en deux versions : l'Etichetta Bianca (étiquette blanche) et la légendaire Etichetta Nera (étiquette noire), produite uniquement les grandes années — un Nebbiolo d'une finesse et d'une fraîcheur rares, minéral, parfumé et d'une longévité étonnante. Le domaine signe aussi un Erbaluce di Caluso, blanc vif et de garde issu d'un cépage local. Les vins, fins et tendus plutôt que puissants, demandent un peu de patience et vieillissent admirablement. Gardien d'un patrimoine viticole fragile, Ferrando est une adresse culte pour les amateurs de Nebbiolo alpin et l'une des plus belles singularités du Piémont du Nord. La viticulture de Carema, héroïque et menée à flanc de montagne, est l'une des plus spectaculaires d'Italie ; l'Etichetta Nera, rare et confidentielle, en est le sommet. Servis après quelques années pour assouplir leurs tanins, ou attendus quinze à vingt ans, les Carema de Ferrando offrent une finesse alpine unique et restent une bouteille culte pour les amateurs de Nebbiolo de montagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "carema",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "flatiron|grapecollective"
+    },
+    {
+      "id": "it-piemonte-prod-antoniolo",
+      "nom": "Antoniolo",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Gattinara)",
+      "commune": "Gattinara",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Vespolina"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gattinara Osso San Grato",
+        "Gattinara San Francesco",
+        "Gattinara Castelle"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gattinara, dans le Haut-Piémont volcanique, l'une des références historiques du Nebbiolo de montagne (ici appelé Spanna). Le domaine, mené par la famille Antoniolo (Lorella et Alberto), cultive ses vignes sur les sols de porphyre et de roches volcaniques qui font la singularité de l'appellation, à une altitude et sous un climat plus frais que dans la Langhe. Antoniolo vinifie plusieurs crus de Gattinara en bouteilles distinctes — Osso San Grato (le plus célèbre et le plus structuré), San Francesco et Castelle — qui comptent parmi les plus beaux vins de tout l'Alto Piemonte. Le style donne des Nebbiolo d'une grande finesse, minéraux, tendus, au parfum floral et épicé, avec des tanins fins et une fraîcheur qui leur assurent une longévité remarquable, souvent supérieure à dix ou quinze ans. À côté des Gattinara, la maison propose un Nebbiolo Coste della Sesia plus accessible et des cuvées de Vespolina et d'Erbaluce, témoins de la diversité du Haut-Piémont. Alors que la région connaît un fort regain d'intérêt, Antoniolo fait figure de pilier ancien et fiable, dont les crus servent de point de repère pour comprendre le potentiel de Gattinara. Une adresse incontournable pour qui veut découvrir le visage le plus fin et le plus minéral du Nebbiolo piémontais, loin de Barolo et Barbaresco. Les sols volcaniques et de porphyre du Haut-Piémont, plus acides et plus frais que les marnes de la Langhe, donnent des Nebbiolo d'un profil singulier : couleur claire, parfum de petits fruits rouges, de violette et d'épices, bouche tendue, saline et minérale, d'une grande fraîcheur. L'Osso San Grato, le plus célèbre des crus du domaine, allie puissance et finesse et compte parmi les plus grands vins de tout l'Alto Piemonte ; San Francesco et Castelle offrent des lectures complémentaires du terroir. Servis sur la cuisine de montagne ou attendus dix à vingt ans, ces Gattinara démentent l'idée que les grands Nebbiolo se feraient seulement à Barolo et Barbaresco. À l'heure où la région connaît un véritable regain d'intérêt, Antoniolo en demeure le pilier historique et l'une des références incontournables pour qui veut explorer le visage le plus fin et minéral du Nebbiolo piémontais. Sur les sols de porphyre et de roches volcaniques du Haut-Piémont, le domaine vinifie ses crus — San Francesco, Osso San Grato, Castelle — en parcellaires distincts, révélant la diversité d'un terroir de montagne longtemps oublié. Cette approche de cru, rare à Gattinara, a fait d'Antoniolo le porte-drapeau du renouveau de l'Alto Piemonte et une référence pour les amateurs de Nebbiolo d'altitude.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "gattinara",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-nervi-conterno",
+      "nom": "Nervi-Conterno",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Gattinara)",
+      "commune": "Gattinara",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Vespolina"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gattinara",
+        "Gattinara Vigna Molsino",
+        "Gattinara Vigna Valferana"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gattinara, le plus ancien domaine de l'appellation (fondé en 1906), entré dans une nouvelle ère en 2018 quand Roberto Conterno — l'homme de Giacomo Conterno, sommet du Barolo — l'a racheté. Sous sa direction méticuleuse, Nervi-Conterno est devenu l'une des locomotives du renouveau de l'Alto Piemonte. Sur les sols volcaniques et de porphyre de Gattinara, le domaine produit un Gattinara d'assemblage et des crus parcellaires — Vigna Molsino, Vigna Valferana — d'une ambition nouvelle : Nebbiolo (Spanna) tendus, minéraux et parfumés, alliant la finesse du Haut-Piémont à une précision et une profondeur héritées du savoir-faire de Serralunga. Les vins, racés et de belle garde, s'épanouissent sur dix à vingt ans. L'arrivée de Conterno, comme celle de De Marchi à Lessona, a définitivement attiré l'attention du monde du vin sur la région. Entre patrimoine historique et exigence au sommet, Nervi-Conterno s'impose comme l'une des références majeures de Gattinara et l'un des symboles de l'essor de l'Alto Piemonte. La méthode héritée de Serralunga — viticulture méticuleuse, vinification patiente — a élevé le niveau du domaine d'un cran et redéfini les attentes pour toute l'appellation. Servis après quelques années ou attendus une quinzaine d'années, les Gattinara de Nervi-Conterno conjuguent finesse de montagne et profondeur, et confirment le statut de Gattinara comme l'un des plus grands terroirs de Nebbiolo hors de la Langhe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "spanna",
+        "gattinara",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "flatiron|winescholarguild"
+    },
+    {
+      "id": "it-piemonte-prod-proprieta-sperino",
+      "nom": "Proprietà Sperino",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Lessona)",
+      "commune": "Lessona",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Vespolina",
+        "Croatina"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Lessona",
+        "Coste della Sesia Uvaggio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lessona, dans le Haut-Piémont, le domaine créé en 1999 par Paolo De Marchi, déjà célèbre pour le grand Chianti Classico Isole e Olena. Revenant sur les terres de ses ancêtres, il a fait de Lessona — minuscule appellation aux sols sableux et ferrugineux — l'une des révélations de l'Alto Piemonte. Le Lessona, à base de Nebbiolo avec une pointe de Vespolina et de Croatina, séduit par son élégance presque bourguignonne : couleur claire, parfum floral et épicé, bouche tendue, saline et d'une grande finesse, taillée pour la garde. La cuvée Uvaggio (Coste della Sesia) offre une version plus accessible du style maison. L'arrivée de De Marchi, aux côtés du travail de Künzli à Boca, a été l'un des signaux qui ont remis le Haut-Piémont sur la carte du vin fin italien, avant même l'ère Conterno à Gattinara. Mené aujourd'hui avec son fils Luca, le domaine conjugue savoir-faire bourguignon et terroir piémontais. Référence de Lessona, Proprietà Sperino est l'une des plus belles expressions de l'élégance du Nebbiolo de montagne. Les sols sableux et ferrugineux de Lessona, parmi les plus pauvres du Piémont, donnent des Nebbiolo d'une élégance et d'une finesse remarquables, à mille lieues de la puissance du Barolo. L'apport de De Marchi, formé au plus haut niveau en Toscane, se ressent dans la précision des vins. Servis sur une cuisine raffinée ou attendus une quinzaine d'années, ils comptent parmi les plus belles expressions de l'Alto Piemonte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "spanna",
+        "lessona",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "flatiron|decowines"
+    },
+    {
+      "id": "it-piemonte-prod-bruno-rocca",
+      "nom": "Bruno Rocca",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Rabajà",
+        "Barbaresco Currà"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, l'une des références du grand cru Rabajà, mené par la famille Rocca. Le domaine s'est fait un nom avec son Barbaresco Rabajà, complété par le cru Currà et par la cuvée Maria Adelaide ; ce sont des Barbaresco modernes mais équilibrés, riches et soignés, où la concentration et un élevage maîtrisé s'allient à des tanins polis et à une belle pureté de fruit. Le style, plus charnu et accessible que les versions très traditionnelles, conserve une bonne capacité de garde sur douze à dix-huit ans. La gamme comprend aussi de jolis Langhe Nebbiolo, Dolcetto et Barbera. Reconnu pour sa régularité et la générosité de ses vins, Bruno Rocca compte parmi les valeurs sûres du Barbaresco contemporain, appréciées des amateurs qui recherchent une expression aboutie et plaisante du cru Rabajà. Une adresse fiable et bien diffusée de l'appellation. Le Rabajà, l'un des plus grands crus de Barbaresco, apporte structure et profondeur, tandis que le Currà joue la finesse et le parfum ; la cuvée Maria Adelaide réunit le meilleur des parcelles les grandes années. Le style, plus charnu et démonstratif que les versions très traditionnelles, conserve équilibre et fraîcheur grâce à un travail soigné de la vigne et un élevage maîtrisé. Servis assez jeunes ou attendus une douzaine d'années, les vins séduisent par leur générosité. Reconnu pour sa régularité, Bruno Rocca compte parmi les valeurs sûres du Barbaresco contemporain et offre une lecture aboutie et gourmande du cru Rabajà.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "rabaja"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-la-spinetta",
+      "nom": "La Spinetta",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Castagnole delle Lanze",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Moscato"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Gallina",
+        "Barbaresco Starderi",
+        "Barbaresco Valeirano",
+        "Barolo Campè",
+        "Moscato d'Asti Bricco Quaglia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castagnole delle Lanze, dans l'Astigiano, l'une des maisons les plus spectaculaires et les plus discutées du Piémont, reconnaissable à son rhinocéros. Fondée en 1977 par la famille Rivetti et menée par Giorgio Rivetti, elle s'est d'abord fait connaître par de grands Moscato d'Asti avant de devenir une référence moderniste du Nebbiolo. En Barbaresco, elle vinifie trois crus — Gallina et Starderi à Neive, Valeirano à Treiso —, tous élevés en barriques, denses, puissants et taillés pour la garde, déclinés en versions « Vursù » et en rares Riserva en magnum. Côté Barolo, elle a acquis des parcelles à Grinzane Cavour (cuvée Campè). La gamme comprend aussi de superbes Barbera (Bionzo, Gallina) et les Moscato fondateurs. Le style, ouvertement moderne — fruit mûr, boisé marqué, concentration —, séduit autant qu'il divise les puristes, mais la qualité et la régularité sont indéniables et les meilleurs millésimes vieillissent fort bien sur quinze ans et plus. Maison de tout premier plan à cheval sur le Barbaresco, le Barolo et le Monferrato, La Spinetta illustre une voie résolument contemporaine du grand Nebbiolo piémontais. Le rhinocéros emprunté à une gravure de Dürer est devenu l'un des emblèmes les plus reconnaissables du vin italien. Servis assez jeunes pour leur exubérance ou attendus une décennie pour les meilleurs crus, les vins de La Spinetta ne laissent personne indifférent et incarnent une certaine idée du Piémont moderne, ambitieux et tourné vers l'international.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "decanter|la-spinetta"
+    },
+    {
+      "id": "it-piemonte-prod-marchesi-di-gresy",
+      "nom": "Marchesi di Grésy",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Chardonnay",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Martinenga",
+        "Barbaresco Camp Gros",
+        "Barbaresco Gaiun"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, le domaine gardien du grand cru Martinenga, l'un des plus beaux amphithéâtres de l'appellation, exploité en monopole. La famille di Grésy y produit un Barbaresco Martinenga d'assemblage, ainsi que deux crus issus de parcelles distinctes du même coteau : Camp Gros et Gaiun, plus structurés et profonds. Le style recherche l'élégance et la finesse, avec des tanins fins, un parfum floral et fruité et des élevages soignés ; les vins, raffinés et équilibrés, s'ouvrent après quelques années et tiennent bien la garde sur quinze ans. La gamme comprend aussi des Langhe Nebbiolo, Dolcetto, Barbera et quelques blancs (Chardonnay, Sauvignon). Bénéficiant de l'un des terroirs les plus réputés de Barbaresco, Marchesi di Grésy offre une expression aérienne et élégante du Nebbiolo et constitue une valeur sûre et appréciée de l'appellation, à la fois noble par son histoire et fiable par sa qualité. Le Martinenga, amphithéâtre exposé plein sud au cœur de Barbaresco, est réputé pour la finesse et le parfum de ses Nebbiolo, que les crus Camp Gros et Gaiun déclinent avec davantage de structure et de profondeur. Le style maison recherche l'élégance et la transparence du terroir plutôt que la puissance. Servis après quelques années ou attendus une quinzaine d'années, les vins séduisent par leur raffinement.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "martinenga"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-produttori-del-barbaresco",
+      "nom": "Produttori del Barbaresco",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Rabajà",
+        "Barbaresco Asili",
+        "Barbaresco Montestefano"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, la coopérative modèle, considérée comme l'une des meilleures du monde. Réunissant de nombreux vignerons propriétaires de parcelles dans les plus grands crus de l'appellation, elle ne produit que du Nebbiolo de Barbaresco, dans un style résolument traditionnel : longues macérations, élevage en grands foudres, recherche de la pureté du terroir. Sa force tient à ses Barbaresco Riserva de cru — Rabajà, Asili, Montestefano, Ovello, Pora, Pajè, Montefico, Muncagota, Rio Sordo — produits uniquement les bons millésimes : un éventail unique qui permet de comparer côte à côte les grands lieux-dits de Barbaresco, avec une régularité et un rapport qualité-prix exceptionnels. Les vins, classiques et droits, aux tanins fermes et au parfum typé, demandent quelques années et vieillissent très bien sur quinze à vingt ans. Le Barbaresco « normale », assemblage de plusieurs parcelles, constitue par ailleurs l'une des meilleures introductions possibles au Nebbiolo de garde. Institution de l'appellation, la Produttori del Barbaresco est une adresse incontournable, à la fois accessible et d'un sérieux irréprochable. La possibilité de comparer côte à côte neuf grands crus, vinifiés à l'identique et dans un esprit traditionnel, fait de cette cave un véritable atlas vivant du Barbaresco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "cooperative"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-sottimano",
+      "nom": "Sottimano",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Neive",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Cottà",
+        "Barbaresco Pajoré",
+        "Barbaresco Currà"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Neive, l'un des domaines montants les plus séduisants du Barbaresco. Mené par Andrea Sottimano, il s'est imposé en deux décennies comme une référence du Nebbiolo parcellaire, dans un esprit à la fois moderne et respectueux du lieu. La viticulture est conduite en bio, avec un grand soin de la vigne et des rendements maîtrisés. Le domaine vinifie plusieurs crus de Barbaresco en bouteilles séparées — Cottà, Pajoré, Currà, Fausoni, Basarin — chacun révélant une nuance de terroir, avec un fil conducteur : un fruit pur et parfumé, des tanins soyeux, un élevage soigné (bois plus discret qu'autrefois) et des doses de soufre réduites. Le style privilégie la finesse, la fraîcheur et la transparence aromatique, ce qui rend les vins accessibles assez jeunes tout en leur assurant une belle garde sur dix à quinze ans. La maison produit aussi de jolis Dolcetto et Barbera dans le même esprit. Production limitée et qualité très régulière ont valu à Sottimano une réputation grandissante auprès des amateurs et des sommeliers, qui apprécient des Barbaresco parcellaires lisibles, élégants et d'un excellent rapport qualité-plaisir. Une adresse de référence du Barbaresco contemporain et l'un des plus beaux ambassadeurs de Neive. Neive, l'un des trois villages historiques du Barbaresco, offre des terroirs variés que la famille met remarquablement en lumière. Le Cottà séduit par son parfum et sa générosité, le Pajoré (situé à Treiso) par sa finesse et sa profondeur, le Currà par sa structure, le Fausoni et le Basarin par leur éclat fruité ; chaque cuvée raconte une nuance de sol et d'exposition. L'évolution du domaine vers des boisés plus discrets et des doses de soufre réduites a encore gagné en précision et en pureté. Servis dès cinq à huit ans pour leur fruit éclatant, ou attendus une douzaine d'années, ces Barbaresco parcellaires séduisent autant les amateurs que les sommeliers par leur lisibilité et leur élégance. Production limitée et qualité constante ont fait de Sottimano l'un des plus beaux ambassadeurs du Barbaresco contemporain et l'une des adresses montantes les plus sûres de la Langhe. Le domaine, mené par la famille Sottimano sur les communes de Neive et Treiso, vinifie chaque cru séparément en vendanges entières partielles et élevage en barriques de plusieurs vins, cherchant la transparence du lieu plutôt que la puissance. Cette lecture parcellaire fine et la régularité d'un millésime à l'autre placent désormais Sottimano au premier rang des grands noms du Barbaresco, aux côtés des références les plus établies de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "bio",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-brovia",
+      "nom": "Brovia",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Castiglione Falletto",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Rocche di Castiglione",
+        "Barolo Villero",
+        "Barolo Brea"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Falletto, un domaine traditionnel, discret et très apprécié des connaisseurs. La famille Brovia cultive des parcelles dans plusieurs des plus beaux crus de l'appellation et les vinifie séparément : Rocche di Castiglione, Villero, Garblèt Sué et le Ca' Mia (dans le cru Brea, à Serralunga). Le style est résolument classique — longues macérations, élevage en grands foudres, refus des effets de mode — au service de Barolo fins, droits et précis, qui expriment fidèlement les nuances de chaque terroir. Les vins, élégants et tendus plutôt que puissants, possèdent des tanins nobles et une fraîcheur qui leur assurent une belle longévité sur quinze à vingt ans. La gamme comprend aussi de jolis Dolcetto, Barbera et Roero Arneis, témoins du même soin. Resté à l'écart des projecteurs, Brovia jouit d'une solide réputation auprès des amateurs avertis de Nebbiolo classique et constitue l'une des adresses les plus fiables et authentiques de Castiglione Falletto. Chaque cru exprime sa personnalité : le Rocche di Castiglione la finesse et le parfum, le Villero la profondeur, le Ca' Mia (cru Brea, à Serralunga) la structure et la puissance, le Garblèt Sué l'élégance. La fidélité de la famille à la tradition — sans recherche d'effet ni de concentration excessive — donne des Barolo lisibles, tendus et d'une grande pureté.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-cavallotto",
+      "nom": "Cavallotto",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Castiglione Falletto",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bricco Boschis",
+        "Barolo Vignolo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Falletto, un domaine familial traditionaliste d'une grande intégrité, mené par la famille Cavallotto. Son cœur est le Bricco Boschis, vaste cru exploité en quasi-monopole, dont sont issus le Barolo Bricco Boschis et la superbe Riserva Vigna San Giuseppe, complétés par le Barolo Vignolo. La maison cultive en bio depuis longtemps et pratique un style fidèle à la tradition : longues macérations, élevages patients en grands foudres, vins mis sur le marché après une garde prolongée à la propriété. Le résultat est un Barolo d'une grande pureté, droit et minéral, aux tanins fermes mais nobles, qui demande de la patience et déploie avec l'âge une complexité remarquable sur vingt ans et plus. La gamme comprend aussi d'excellents Dolcetto, Barbera, Freisa et un Nebbiolo, dans le même esprit d'authenticité et de bon rapport qualité-prix. Discret mais très apprécié des connaisseurs, Cavallotto incarne le classicisme de Castiglione Falletto et compte parmi les valeurs les plus sûres et les plus régulières de l'appellation. Le Bricco Boschis, coteau exposé au sud à Castiglione Falletto, donne des Barolo droits, profonds et minéraux que l'élevage patient sublime sans jamais les durcir. La Riserva Vigna San Giuseppe, issue du cœur du cru, n'est produite que les grandes années et compte parmi les plus belles expressions traditionnelles de la commune.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-ceretto",
+      "nom": "Ceretto",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Arneis"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bricco Rocche",
+        "Barbaresco Bricco Asili",
+        "Roero Arneis Blangé"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Alba, l'une des grandes maisons de la Langue, à cheval sur le Barolo et le Barbaresco. À partir des années 1960-70, les frères Bruno et Marcello Ceretto transforment l'affaire familiale en une référence en acquérant les meilleurs sites et en construisant des chais emblématiques ; la nouvelle génération a depuis converti l'ensemble du domaine à l'agriculture biologique et biodynamique. Le fleuron est le Barolo Bricco Rocche, monopole au sommet de Castiglione Falletto, complété par de superbes crus comme Brunate, Prapò et Cannubi San Lorenzo ; en Barbaresco, la maison signe le Bricco Asili et le Bernardot. Côté blancs, le Roero Arneis « Blangé », légèrement perlant, est l'un des vins les plus diffusés et reconnaissables d'Italie. Le style Ceretto allie une élégance moderne, une grande pureté de fruit et des tanins fins, avec une recherche affirmée de finesse et de buvabilité, loin de toute lourdeur. Les Barolo de cru, racés et précis, vieillissent très bien sur quinze à vingt ans, tandis que la gamme plus large offre une porte d'entrée fiable et qualitative. Engagée aussi dans l'art et l'architecture (la célèbre « bulle » de l'Acino, les installations contemporaines), la famille a fait du domaine un lieu autant qu'une marque. Maison à la fois prestigieuse, complète et largement distribuée, Ceretto compte parmi les noms majeurs et les plus accessibles du grand Piémont. La conversion à la biodynamie a affiné le style ces dernières années, vers davantage de fraîcheur, de salinité et de transparence du terroir. Le Bricco Rocche, monopole au sommet de Castiglione Falletto, donne un Barolo racé et parfumé, tandis que les crus de Serralunga (Prapò) et de Barolo (Cannubi San Lorenzo, Brunate) déclinent la palette des grands terroirs ; en Barbaresco, le Bricco Asili est d'une grande élégance. Le Blangé, lui, a fait connaître l'Arneis dans le monde entier. Servis sur la gastronomie ou attendus quinze à vingt ans pour les crus, les vins conjuguent finesse, pureté et buvabilité. Devenue aussi un lieu d'art contemporain et d'architecture, la maison Ceretto allie ambition esthétique et exigence vigneronne ; c'est l'un des noms les plus complets, les plus visibles et les plus fiables du grand Piémont, à cheval sur toutes ses grandes appellations.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "barbaresco"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-conterno-fantino",
+      "nom": "Conterno Fantino",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Sorì Ginestra",
+        "Barolo Vigna del Gris",
+        "Barolo Mosconi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, l'un des domaines modernistes les plus aboutis et les plus réguliers de l'appellation, né de l'association des familles Conterno et Fantino. Les vignes se concentrent dans les grands secteurs de Ginestra et Mosconi, sur les coteaux marno-calcaires de Monforte. Le domaine s'est fait connaître par son Barolo Sorì Ginestra, complété par la Vigna del Gris et le Mosconi : des Nebbiolo concentrés, au fruit mûr et aux tanins soyeux, élevés avec un usage maîtrisé de la barrique, dans un style moderne mais élégant qui a gagné en finesse au fil des années. La viticulture est conduite en bio. Les vins, séduisants assez jeunes, conservent une belle capacité de garde sur quinze à vingt ans. La gamme comprend aussi de jolis Barbera, Dolcetto, Langhe Nebbiolo et un Chardonnay. Niché au sommet d'une colline dominant Monforte, le domaine offre l'un des plus beaux panoramas de la Langhe et un accueil soigné. Régulier et précis, Conterno Fantino est une valeur sûre de l'école moderne de Monforte, appréciée des amateurs comme des sommeliers. Ginestra et Mosconi, exposés au sud sur des marnes calcaires, donnent des Nebbiolo mûrs et profonds que le domaine vinifie avec une grande propreté. Servis sur des viandes braisées ou attendus une quinzaine d'années, les Barolo séduisent par leur équilibre entre concentration et finesse, et le domaine confirme année après année son rang parmi les valeurs sûres de Monforte.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "wikipedia|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-cordero-di-montezemolo",
+      "nom": "Cordero di Montezemolo",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Monfalletto",
+        "Barolo Enrico VI (Villero)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, un domaine familial historique au cadre célèbre — le grand cèdre du Liban qui domine le coteau du Monfalletto. La propriété tire de cette colline le Barolo Monfalletto, élégant et parfumé, et signe le Barolo Enrico VI, issu du grand cru Villero à Castiglione Falletto, plus structuré et profond, ainsi qu'une cuvée du cru Gattera. Le style privilégie l'élégance, la finesse aromatique et la pureté du fruit, avec des tanins fins et un boisé discret ; les vins s'ouvrent après quelques années et vieillissent bien sur quinze ans. La gamme comprend aussi des Langhe Nebbiolo, Barbera, Dolcetto et un Chardonnay. Domaine soigné et régulier, fort d'une longue histoire familiale, Cordero di Montezemolo offre une lecture élégante du Barolo de La Morra et du Villero, et constitue une valeur sûre et accessible de l'appellation. Le Monfalletto, vaste coteau de La Morra couronné par son cèdre centenaire, donne des Barolo souples et parfumés, tandis que l'Enrico VI, issu du grand cru Villero, ajoute structure et profondeur. Le style recherche l'élégance, la finesse aromatique et la buvabilité, avec des élevages soignés et un boisé discret. Servis après quelques années ou attendus une quinzaine d'années, les vins séduisent par leur harmonie. Fort d'une longue histoire familiale et d'un cadre devenu emblématique, Cordero di Montezemolo offre une lecture élégante et accessible du Barolo de La Morra et du Villero, et reste une valeur sûre de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-domenico-clerico",
+      "nom": "Domenico Clerico",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Ciabot Mentin",
+        "Barolo Pajana",
+        "Barolo Percristina"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, l'une des figures emblématiques de la révolution moderne du Barolo, les fameux « Barolo Boys ». Disparu en 2017, Domenico Clerico avait fait de son domaine un laboratoire d'une modernité assumée : macérations maîtrisées, élevage en barriques, recherche d'une concentration et d'un velouté qui tranchaient avec la tradition. Ses cuvées, issues des grands secteurs de Ginestra et Mosconi, portent des noms souvent inspirés de la culture classique : Ciabot Mentin (sa parcelle phare dans Ginestra), Pajana, et la rare Percristina dédiée à sa fille. Le style donne des Barolo riches, profonds et boisés dans leur jeunesse, aux tanins mûrs, qui demandent quelques années pour fondre leur matière et s'épanouissent sur quinze à vingt ans. Le domaine, poursuivi par son épouse Giuliana et son équipe dans la fidélité à son esprit, possède un chai résolument contemporain qui résume sa philosophie. Au-delà du Barolo, il signe de beaux Dolcetto, Barbera et Langhe Nebbiolo. Influent et reconnaissable entre tous, Clerico reste l'une des signatures majeures de l'école moderne de Monforte et un témoin essentiel de l'histoire récente du Barolo. Servis sur des plats riches de viande ou de gibier, ou attendus une quinzaine d'années, ces Barolo conjuguent puissance et raffinement, et confirment, millésime après millésime, le statut de référence de la maison au sein de l'école moderne piémontaise.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "jamessuckling|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-e-pira-chiara-boschis",
+      "nom": "E. Pira – Chiara Boschis",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Cannubi",
+        "Barolo Via Nuova",
+        "Barolo Mosconi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barolo, un domaine historique relancé par Chiara Boschis, l'une des rares femmes pionnières de la modernité du Barolo, proche des « Barolo Boys ». Reprenant l'ancienne maison E. Pira, elle en a fait une référence en alliant une viticulture passée en bio à une vinification précise. Sa cuvée phare est le Barolo Cannubi, issu du plus célèbre cru de l'appellation, complété par le Via Nuova (assemblage de plusieurs parcelles) et le Mosconi à Monforte. Le style, moderne mais de plus en plus tourné vers la finesse, donne des Barolo au fruit pur, aux tanins mûrs et soyeux, séduisants assez jeunes mais capables de vieillir sur quinze à vingt ans. Figure respectée et engagée de l'appellation, Chiara Boschis s'est aussi battue pour la défense des terroirs et la viticulture durable. La gamme comprend également un Barbera et un Dolcetto soignés. À taille humaine, le domaine conjugue exigence, élégance et conviction, et compte parmi les belles adresses modernes du village de Barolo. Cannubi, le plus célèbre cru du village, donne des Barolo d'une complexité et d'un velouté singuliers, que le style maison met en valeur avec finesse. Figure pionnière en tant que femme dans un univers longtemps masculin, Chiara Boschis jouit d'un grand respect dans toute la Langhe. Servis assez jeunes ou attendus une quinzaine d'années, ses Barolo séduisent par leur pureté et leur élégance croissante.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "cannubi"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "winewatch|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-elio-altare",
+      "nom": "Elio Altare",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Arborina",
+        "Barolo Cerretta",
+        "Barolo Brunate"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, l'un des pionniers de la révolution moderne du Barolo. Dans les années 1980, Elio Altare bouscule la tradition — il aurait même tronçonné les vieux foudres familiaux — en introduisant macérations courtes, fermentations maîtrisées et élevage en barriques, afin d'obtenir des Nebbiolo au fruit pur, aux tanins fondus et plus accessibles jeunes. Sa cuvée emblématique est le Barolo Arborina, complétée par des crus comme Cerretta et Brunate, et par des vins de cépage devenus cultes tels que Larigi (Barbera) et Arborina (Langhe Nebbiolo). Le style, charnu, soyeux et séduisant, conserve néanmoins une belle capacité de garde sur quinze ans et plus. Figure de proue des « Barolo Boys », Altare a profondément influencé toute une génération de vignerons de La Morra et au-delà. Le domaine, aujourd'hui mené avec sa fille Silvia, reste fidèle à cette philosophie tout en gagnant en finesse au fil des millésimes. Une référence incontournable pour comprendre la modernité du Barolo et l'une des signatures les plus reconnaissables de La Morra. La parcelle d'Arborina, à La Morra, donne des Nebbiolo au fruit pur et aux tanins soyeux, emblématiques du style maison. Les cuvées de cépage Larigi (Barbera) et La Villa (assemblage) ont, elles aussi, marqué l'histoire récente de la Langhe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|winescholarguild"
+    },
+    {
+      "id": "it-piemonte-prod-elio-grasso",
+      "nom": "Elio Grasso",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Gavarini Chiniera",
+        "Barolo Ginestra Casa Maté",
+        "Barolo Rüncot"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, l'un des domaines les plus respectés et les mieux équilibrés de l'appellation. La famille Grasso cultive ses vignes sur les coteaux de Ginestra et Gavarini, parmi les meilleurs secteurs de Monforte. Le domaine vinifie deux grands Barolo de cru — Gavarini Chiniera et Ginestra Casa Maté —, ainsi qu'une cuvée Rüncot, plus ambitieuse et élevée en barriques, produite uniquement les grandes années. Le style incarne un juste milieu très abouti entre tradition et modernité : élevages soignés, tanins mûrs mais fins, grande pureté de fruit et fraîcheur, sans excès de bois ni de concentration. Il en résulte des Barolo d'un équilibre exemplaire, racés et harmonieux, accessibles après quelques années et capables de vieillir magnifiquement sur quinze à vingt-cinq ans. La gamme comprend aussi de remarquables Barbera et Dolcetto d'Alba, dans la même recherche de précision. Domaine familial d'une grande constance, salué de longue date par la critique, Elio Grasso est une valeur sûre et l'un des meilleurs ambassadeurs du style équilibré de Monforte. Les coteaux de Ginestra et Gavarini, parmi les plus réputés de Monforte, donnent des Nebbiolo à la fois structurés et parfumés que le domaine vinifie avec une retenue exemplaire. Le Casa Maté (Ginestra) joue la profondeur, la Chiniera (Gavarini) la finesse, le Rüncot l'ambition des grandes années.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-elvio-cogno",
+      "nom": "Elvio Cogno",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Novello",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Nascetta"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Ravera",
+        "Barolo Bricco Pernice"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Novello, au cœur du grand cru Ravera, un domaine devenu une référence sous la conduite de Nadia Cogno et de son mari, l'œnologue Valter Fissore. La propriété tire de Ravera des Barolo d'une grande finesse — la cuvée Ravera, le Bricco Pernice (vieilles vignes) et la rare Vigna Elena, vinifiée à partir du sous-cépage Nebbiolo Rosé — qui conjuguent parfum, fraîcheur et race tannique. Le style, élégant et précis, cherche la pureté du fruit et la transparence du terroir plutôt que la puissance, avec des élevages soignés en grands bois ; les vins s'épanouissent sur quinze à vingt ans. Le domaine est aussi l'un des champions du rare cépage blanc Nascetta (sous le nom Anas-Cëtta), qu'il a contribué à sauver de l'oubli, ainsi que de jolis Barbera, Dolcetto et Langhe Nebbiolo. Régulier et très apprécié de la critique, Elvio Cogno illustre la montée en puissance de Novello et du cru Ravera, et constitue l'une des valeurs sûres et les plus attachantes du Barolo contemporain. Le cru Ravera, à Novello, s'est imposé en deux décennies comme l'un des grands terroirs du Barolo, et Cogno en est l'un des principaux artisans. La Vigna Elena, issue du rare Nebbiolo Rosé, offre un profil particulièrement parfumé et délicat, tandis que le Bricco Pernice, sur vieilles vignes, joue la profondeur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "ravera"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winereviewonline"
+    },
+    {
+      "id": "it-piemonte-prod-ettore-germano",
+      "nom": "Ettore Germano",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Serralunga d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Riesling",
+        "Nascetta"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Cerretta",
+        "Barolo Lazzarito",
+        "Barolo Prapò",
+        "Barolo Vigna Rionda"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, un domaine devenu une référence de la commune sous la conduite de Sergio Germano, œnologue de formation. Sur les coteaux calcaires de Serralunga, il vinifie plusieurs crus en bouteilles distinctes — Cerretta, Prapò, Lazzarito et, depuis 2010, une parcelle du mythique Vigna Rionda héritée de la famille Canale —, dans un style fidèle à la tradition (grands foudres) mais d'une grande précision. Les Barolo, structurés, droits et minéraux, au fruit pur et à l'élégance austère, vieillissent admirablement sur quinze à vingt-cinq ans. La viticulture est certifiée bio. Le domaine s'est aussi lancé un défi rare dans la Langhe : produire de grands blancs en altitude à Cigliè, dans l'Alta Langa, avec un Riesling remarquable et des effervescents Alta Langa en méthode traditionnelle. La gamme comprend par ailleurs de beaux Barbera et Dolcetto. Complet, régulier et engagé, Ettore Germano illustre le meilleur du Serralunga contemporain et compte parmi les domaines les plus respectés de la commune. Serralunga, dont la haute tour médiévale annonce des vins structurés et profonds, trouve ici l'un de ses interprètes les plus précis. Le défi des grands blancs d'altitude à Cigliè a fait du domaine un pionnier de l'Alta Langa. Servis sur la grande cuisine ou attendus quinze à vingt-cinq ans pour les crus, les Barolo récompensent la patience, tandis que les blancs surprennent par leur fraîcheur et leur tension.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "serralunga",
+        "alta-langa"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "ettoregermano|flatiron"
+    },
+    {
+      "id": "it-piemonte-prod-fratelli-alessandria",
+      "nom": "Fratelli Alessandria",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Verduno",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Pelaverga",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Monvigliero",
+        "Barolo Gramolere",
+        "Verduno Pelaverga"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Verduno, à l'extrémité nord du Barolo, un domaine familial historique qui s'affirme comme l'un des grands de la commune, aux côtés de Burlotto. Mené par Vittore Alessandria, il tire du grand cru Monvigliero un Barolo d'une finesse et d'un parfum remarquables, dans un style traditionnel et précis, complété par le Gramolere (Monforte) et d'autres parcelles. Verduno, longtemps sous-estimé, donne des Nebbiolo élégants, parfumés et digestes, et Alessandria en est l'un des meilleurs interprètes. Le domaine est aussi l'un des champions du rare Verduno Pelaverga, cépage local épicé et poivré dont il propose une version délicieuse et désaltérante. Les Barolo, fins et équilibrés, s'ouvrent après quelques années et tiennent bien la garde sur quinze ans. La gamme comprend par ailleurs de jolis Dolcetto, Barbera et Langhe Nebbiolo. Discret mais d'une grande régularité, Fratelli Alessandria accompagne le renouveau de Verduno et compte parmi les valeurs sûres et encore raisonnablement abordables du Barolo de finesse. Le Monvigliero, exposé plein sud sur des marnes claires, est réputé pour la finesse et le parfum exceptionnels de ses Nebbiolo, dont Alessandria tire une version d'une grande délicatesse. Servis après quelques années pour leur bouquet, ou attendus quinze ans, les vins illustrent le renouveau de Verduno comme terroir de finesse, et le domaine s'affirme comme l'un de ses ambassadeurs les plus sûrs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "verduno",
+        "monvigliero"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-g-d-vajra",
+      "nom": "G.D. Vajra",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bricco delle Viole",
+        "Barolo Ravera",
+        "Barolo Coste di Rose"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barolo, un domaine d'une rare complétude et d'une grande régularité, mené par la famille Vaira. Sur les hauteurs de Vergne, le Barolo Bricco delle Viole, issu de l'un des vignobles les plus élevés de l'appellation, est emblématique du style maison : un Nebbiolo d'un parfum floral éclatant, frais et élégant, taillé pour une longue garde. Le domaine signe aussi de beaux Barolo Ravera et Coste di Rose, ainsi qu'un Barolo Albe d'assemblage qui figure parmi les meilleures portes d'entrée de toute la Langhe. La gamme, exceptionnellement large, comprend en outre un Dolcetto et une Barbera de référence, une Freisa, un Langhe Nebbiolo et même un étonnant Riesling — preuve d'une curiosité et d'une exigence constantes. La viticulture est conduite en bio. Le style privilégie la pureté, la fraîcheur et le parfum, avec des tanins fins et une grande buvabilité, sans renoncer à la profondeur. Apprécié pour sa fiabilité millésime après millésime et pour son excellent rapport qualité-prix, G.D. Vajra est une valeur sûre et l'un des domaines les plus aimés du Barolo moderne et lumineux. L'altitude de Vergne, parmi les plus élevées de l'appellation, confère au Bricco delle Viole une fraîcheur et un parfum floral singuliers, gages d'une longue garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-giovanni-rosso",
+      "nom": "Giovanni Rosso",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Serralunga d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Serra",
+        "Barolo Cerretta",
+        "Barolo Vigna Rionda Ester Canale Rosso"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, un domaine familial en pleine ascension, propriétaire depuis le XIXe siècle de belles parcelles dans la commune et mené par Davide Rosso. Il vinifie plusieurs crus de Serralunga — Serra, Cerretta, Broglio, Sorano — dans un style qui allie la puissance caractéristique du village à une recherche de finesse et de pureté du fruit, avec des élevages soignés. Son joyau est le Barolo Vigna Rionda Ester Canale Rosso, issu de vieilles vignes du plus prestigieux cru de Serralunga, héritées de la famille Canale : un vin profond, racé et de très longue garde, devenu l'un des plus recherchés de la commune. Les Barolo de Giovanni Rosso, structurés et minéraux, demandent quelques années pour s'ouvrir et tiennent admirablement sur quinze à vingt-cinq ans. La gamme comprend aussi de jolis Langhe Nebbiolo et Barbera. Régulier et ambitieux, le domaine s'est imposé comme l'une des valeurs montantes les plus sûres de Serralunga. Vigna Rionda, souvent comparé à un grand cru bourguignon pour son prestige, donne les Barolo les plus profonds et les plus recherchés de Serralunga, et la cuvée Ester Canale Rosso en est une expression remarquable. Le domaine a aussi développé un projet original sur l'Etna, en Sicile. Servis sur des plats riches ou attendus deux décennies, ses Barolo confirment une ascension qui en fait l'une des adresses les plus suivies de la commune.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "serralunga",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "stradadelbarolo|flatiron"
+    },
+    {
+      "id": "it-piemonte-prod-luciano-sandrone",
+      "nom": "Luciano Sandrone",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Aleste (Cannubi Boschis)",
+        "Barolo Le Vigne"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barolo, l'une des plus belles expressions d'une modernité élégante. Luciano Sandrone s'est fait connaître dans les années 1980 avec un Barolo issu de Cannubi Boschis, devenu sa cuvée phare aujourd'hui rebaptisée Aleste (contraction des prénoms de ses petits-enfants), aux côtés du Barolo Le Vigne, assemblage de plusieurs grands lieux-dits. Le style recherche la pureté et la précision du fruit, des tanins mûrs et soyeux et un usage maîtrisé du bois, sans excès, ce qui donne des Nebbiolo charnus mais raffinés, accessibles plus tôt que les vins très traditionnels tout en gardant une belle capacité de vieillissement sur quinze à vingt ans. Le domaine, mené en famille, soigne aussi une gamme complète et régulière : Dolcetto, Barbera, Langhe Nebbiolo, et un séduisant Nebbiolo Valmaggiore issu des sols sableux du Roero. Réputé pour sa rigueur et sa constance millésime après millésime, Sandrone est devenu une valeur sûre et respectée de l'appellation, appréciée autant des amateurs que des sommeliers. Une référence de l'école moderne du Barolo, où l'élégance prime sur la puissance. Sa rigueur de vinification — tri sévère, fermentations soignées, élevage dans des bois de taille moyenne plutôt que dans la barrique neuve agressive — explique l'équilibre et la digestibilité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-massolino",
+      "nom": "Massolino",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Serralunga d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Vigna Rionda",
+        "Barolo Margheria",
+        "Barolo Parafada"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, l'une des références du grand cru Vigna Rionda, sommet de la commune. Le domaine familial Massolino vinifie plusieurs crus de Serralunga en bouteilles distinctes — Vigna Rionda, Margheria, Parafada — et signe, les grandes années, une Barolo Riserva Vigna Rionda élevée dix ans, l'une des plus belles expressions du cru. Le style est fidèle au caractère de Serralunga : des Barolo structurés, puissants et profonds, dotés d'une trame tannique solide et d'une grande aptitude à la garde, dans un registre classique mais d'une grande netteté. Les vins demandent quelques années pour s'ouvrir et tiennent admirablement sur quinze à vingt-cinq ans, voire davantage pour la Riserva. La gamme comprend aussi un Barolo d'assemblage, des Langhe Nebbiolo, Barbera et Dolcetto réguliers, ainsi qu'un effervescent. Maison solide, constante et de bon rapport qualité-prix au regard de la qualité, Massolino est une valeur sûre du Barolo de Serralunga et une excellente porte d'entrée vers les grands crus puissants de la commune. Vigna Rionda, l'un des plus grands crus de tout le Barolo, donne des vins d'une puissance noble et d'une longévité exceptionnelle, que la Riserva, élevée dix ans, porte à son sommet. Margheria et Parafada offrent des lectures complémentaires du caractère de Serralunga, entre structure et profondeur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|bordeauxwineenthusiasts"
+    },
+    {
+      "id": "it-piemonte-prod-oddero",
+      "nom": "Oddero",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Vigna Rionda",
+        "Barolo Rocche di Castiglione",
+        "Barolo Brunate"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, un vieux domaine familial traditionnel, remarquable par l'étendue et la qualité de ses parcelles : il possède des vignes dans plusieurs des plus grands crus du Barolo, répartis sur les meilleures communes — Vigna Rionda et Brunate, Rocche di Castiglione, Bussia, Villero. Il les vinifie en bouteilles distinctes, dans un style classique et fidèle à la tradition : élevages en grands foudres, recherche de l'équilibre et de la finesse plutôt que de la concentration. Il en résulte des Barolo droits, élégants et de longue garde, qui expriment fidèlement la diversité des terroirs et tiennent admirablement sur quinze à vingt-cinq ans. La gamme comprend aussi des Langhe Nebbiolo, Barbera et Dolcetto réguliers, ainsi que le rare Moscato. Apprécié des amateurs de Barolo classique pour sa constance et son accès privilégié à de grands crus, Oddero est une adresse sûre et attachante, témoin vivant de la tradition de La Morra et du Barolo de garde. Détenir des parcelles dans Vigna Rionda, Brunate, Rocche di Castiglione, Bussia et Villero est un privilège rare, qui permet au domaine d'offrir un véritable panorama des grands terroirs du Barolo. La fidélité à la tradition — grands foudres, recherche de l'équilibre et de la finesse — donne des vins droits et élégants plutôt que démonstratifs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-paolo-scavino",
+      "nom": "Paolo Scavino",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Castiglione Falletto",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bric del Fiasc",
+        "Barolo Rocche dell'Annunziata",
+        "Barolo Carobric"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Falletto, un domaine moderne, précis et d'une grande régularité, mené par Enrico Scavino et ses filles. La maison s'est forgé une réputation grâce à une large palette de Barolo de cru vinifiés avec une grande netteté : Bric del Fiasc (sa parcelle historique à Castiglione), Rocche dell'Annunziata, Cannubi, Monvigliero, Bricco Ambrogio, ainsi que le Carobric, assemblage emblématique. Le style privilégie la pureté du fruit, des tanins polis et un boisé intégré, dans un registre raffiné qui rend les vins lisibles assez jeunes tout en leur assurant une bonne garde sur quinze à vingt ans. La gamme comprend aussi de beaux Langhe Nebbiolo, Dolcetto et Barbera, ainsi qu'un Barolo d'assemblage qui constitue une excellente porte d'entrée. Reconnu pour sa constance et la lisibilité de ses terroirs, Scavino offre un panorama presque complet des grands crus de la rive de Castiglione et de La Morra. Une adresse moderne fiable et appréciée, qui figure parmi les valeurs sûres du Barolo contemporain. Castiglione Falletto et La Morra, où se situent l'essentiel de ses parcelles, apportent finesse et parfum ; Serralunga et Verduno (Monvigliero) ajoutent structure et complexité. Le Carobric, assemblage de Cannubi, Rocche di Castiglione et Bric del Fiasc, résume l'art maison de la précision.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "moderne"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-parusso",
+      "nom": "Parusso",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bussia",
+        "Barolo Mariondino",
+        "Barolo Mosconi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, au cœur du grand cru Bussia, un domaine moderne et précis mené par Marco et Tiziana Parusso. La maison se distingue par une approche technique très soignée — notamment une oxydation ménagée du moût et un travail minutieux en cave — au service de Barolo au fruit pur, aux tanins fondus et d'une grande netteté. Le Barolo Bussia, sa cuvée de référence, est complété par le Mariondino et le Mosconi et, les grandes années, par des sélections plus ambitieuses. Le style, moderne mais équilibré, donne des vins séduisants assez jeunes qui gardent une bonne aptitude au vieillissement sur quinze ans. La gamme, large et régulière, comprend de remarquables Barbera, un Langhe Nebbiolo, un Dolcetto et un Sauvignon blanc surprenant. Engagé dans une viticulture respectueuse, le domaine soigne autant la vigne que l'accueil. Reconnu pour sa constance et la lisibilité de ses terroirs, Parusso est l'une des valeurs sûres modernes de la Bussia et de Monforte. La Bussia, l'un des plus vastes et des plus réputés crus de Monforte, offre un terroir de coteau marno-calcaire propice à des Barolo à la fois structurés et parfumés. La maison, attentive autant à la vigne qu'à l'accueil, a bâti une réputation de constance et de modernité maîtrisée. Servis assez jeunes pour leur fruit ou attendus une quinzaine d'années, les vins séduisent par leur netteté et leur équilibre, et comptent parmi les belles signatures contemporaines de la Bussia.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "bussia"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "veronelli|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-pio-cesare",
+      "nom": "Pio Cesare",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Arneis"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Ornato",
+        "Barbaresco Il Bricco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Alba, l'une des grandes maisons historiques de la Langhe, fondée en 1881 et menée par la même famille depuis cinq générations. À cheval sur le Barolo et le Barbaresco, elle perpétue un style classique avec un Barolo et un Barbaresco d'assemblage issus de plusieurs communes — emblèmes de la tradition de l'assemblage — tout en proposant de remarquables crus : le Barolo Ornato (à Serralunga) et le Barbaresco Il Bricco (à Treiso). Les vins conjuguent structure, profondeur et élégance, dans un registre fidèle au terroir, et possèdent une belle aptitude à la garde sur quinze à vingt ans. La gamme, complète, comprend aussi un Langhe Nebbiolo, une Barbera, un Dolcetto et un Arneis. Aujourd'hui conduite par Federica Rosy Boffa, la maison a su moderniser ses installations sans renier son identité. Forte de son histoire et de sa régularité, Pio Cesare offre une lecture classique et fiable du grand Nebbiolo d'Alba et constitue une référence respectée, à la fois prestigieuse et largement diffusée. L'art de l'assemblage de plusieurs communes, longtemps la norme avant la mode des crus, donne ici des Barolo et Barbaresco équilibrés et représentatifs, tandis que l'Ornato (Serralunga) et l'Il Bricco (Treiso) offrent des expressions parcellaires plus précises. La maison a modernisé ses installations tout en restant fidèle à son style.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "barbaresco",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-vietti",
+      "nom": "Vietti",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Castiglione Falletto",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Arneis"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Rocche di Castiglione",
+        "Barolo Brunate",
+        "Barolo Lazzarito"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Falletto, perché en haut du village, l'un des grands domaines historiques de la Langhe. Fondée à la fin du XIXe siècle par Carlo Vietti, la maison connaît son tournant décisif avec Alfredo Currado, qui épouse Luciana Vietti : visionnaire, il vinifie l'un des tout premiers crus de Barolo (Rocche di Castiglione, 1961), redécouvre et embouteille l'Arneis en monocépage (1967) — au point d'être surnommé le « père de l'Arneis » — et lance en 1974 les fameuses étiquettes d'artistes qui ont fait la renommée visuelle du domaine. Vietti dispose d'un éventail exceptionnel de crus de Barolo — Rocche di Castiglione, Brunate, Lazzarito, Villero, Ravera — vinifiés avec une précision remarquable, ainsi que d'un Barolo Castiglione d'assemblage et d'un Langhe Nebbiolo Perbacco qui comptent parmi les meilleurs rapports qualité-prix de l'appellation, sans oublier la Barbera Scarrone, de référence. Le style conjugue finesse aromatique, pureté de fruit et tanins ciselés, entre tradition et modernité maîtrisée. En 2016, le domaine a été racheté par la famille américaine Krause, qui a permis d'acquérir de nouvelles parcelles de premier plan tout en maintenant le niveau et l'identité de la maison. Les Barolo de cru, racés et de longue garde, s'épanouissent sur quinze à vingt-cinq ans ; les bouteilles d'artistes ajoutent une dimension de collection. Domaine complet, régulier et prestigieux, Vietti est une valeur de tout premier ordre du Piémont. Castiglione Falletto, terroir central du Barolo, conjugue la structure de Serralunga et la finesse de La Morra, ce qui se ressent dans la race et l'équilibre des vins. Le Rocche di Castiglione mise sur la finesse et le parfum, le Villero sur la profondeur, le Brunate et le Lazzarito sur l'éclat et la puissance, le Ravera sur la fraîcheur ; ensemble, ils offrent un panorama unique des grands crus. La Barbera Scarrone, issue de très vieilles vignes, est considérée comme l'une des plus grandes du Piémont. Servis sur la cuisine piémontaise ou attendus quinze à vingt-cinq ans, les Barolo de Vietti séduisent par leur précision et leur lisibilité. Entre patrimoine historique, étiquettes d'artistes devenues objets de collection et excellence régulière, Vietti demeure une maison de tout premier ordre, à la fois prestigieuse, complète et accessible — une porte d'entrée idéale vers les grands crus de la Langhe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "barbera"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-vigneti-massa",
+      "nom": "Vigneti Massa",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Colli Tortonesi",
+      "commune": "Monleale",
+      "pays": "Italie",
+      "cepages": [
+        "Timorasso",
+        "Barbera",
+        "Croatina"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli Tortonesi Timorasso Derthona",
+        "Costa del Vento",
+        "Sterpi",
+        "Montecitorio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monleale, dans les Colli Tortonesi à l'est du Piémont, le domaine de Walter Massa, l'homme qui a sauvé le Timorasso de l'oubli. Dans les années 1980, alors que ce cépage blanc autochtone avait presque disparu, Massa décide de le réhabiliter : il en fait aujourd'hui l'un des grands blancs italiens, commercialisé sous le nom de Derthona. Ses cuvées de Timorasso — Costa del Vento, Sterpi, Montecitorio — offrent des blancs puissants, structurés et minéraux, au parfum d'agrumes, de fruits jaunes et de notes pétrolées, dotés d'une acidité et d'une aptitude à la garde qui les rapprochent des plus grands. Le domaine produit aussi de beaux rouges de Barbera et de Croatina, reflets de la tradition des Colli Tortonesi. Personnage truculent et visionnaire, Walter Massa a inspiré toute une génération de vignerons qui font aujourd'hui du Derthona l'une des appellations blanches montantes d'Italie. Référence absolue du Timorasso, Vigneti Massa est une adresse incontournable pour qui veut découvrir un grand blanc piémontais méconnu et de longue garde. Le mouvement « Derthona » qu'il a initié rassemble aujourd'hui de nombreux vignerons des Colli Tortonesi, faisant du Timorasso l'un des blancs italiens les plus en vue. Servis sur des poissons, des viandes blanches ou des fromages, jeunes pour leur tension ou attendus dix ans pour gagner en complexité, les Timorasso de Vigneti Massa illustrent le potentiel insoupçonné des grands blancs piémontais de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "timorasso",
+        "derthona",
+        "colli-tortonesi",
+        "blanc"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "italysfinestwines|trovaprezzi"
+    },
+    {
+      "id": "it-piemonte-prod-braida",
+      "nom": "Braida",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Monferrato (Asti)",
+      "commune": "Rocchetta Tanaro",
+      "pays": "Italie",
+      "cepages": [
+        "Barbera",
+        "Moscato"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barbera d'Asti Bricco dell'Uccellone",
+        "Barbera d'Asti Ai Suma"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rocchetta Tanaro, dans le Monferrato, le domaine qui a anobli la Barbera. Dans les années 1980, Giacomo Bologna révolutionne l'image de ce cépage longtemps tenu pour modeste en élevant sa Barbera en barriques : le Bricco dell'Uccellone devient le symbole d'une Barbera d'Asti ambitieuse, dense et de garde, et entraîne dans son sillage tout un cépage. Le domaine, aujourd'hui mené par ses enfants Raffaella et Giuseppe, signe aussi le Bricco della Bigotta et l'Ai Suma, autres grandes Barbera, ainsi que des cuvées plus accessibles. La gamme comprend par ailleurs de jolis Moscato d'Asti (Vigna Senza Nome) et un Brachetto d'Acqui, témoins de la diversité du Monferrato. Le style des grandes Barbera allie fruit mûr, profondeur et structure, avec un boisé désormais bien intégré et une fraîcheur qui assure une garde de dix ans et plus. Référence absolue de la Barbera et ambassadeur du Monferrato, Braida est un nom incontournable pour comprendre l'autre grand cépage rouge du Piémont. Le Bricco dell'Uccellone, issu de vieilles vignes et élevé en barrique, a démontré qu'une Barbera pouvait rivaliser de profondeur et de garde avec les plus grands rouges, ouvrant la voie à toute une génération. L'Ai Suma, issu de raisins surmûris, et le Bricco della Bigotta complètent la gamme des grandes Barbera, tandis que les Moscato d'Asti et le Brachetto rappellent la vocation aromatique du Monferrato.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "barbera",
+        "asti",
+        "icone-barbera",
+        "monferrato"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-travaglini",
+      "nom": "Travaglini",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Alto Piemonte (Gattinara)",
+      "commune": "Gattinara",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gattinara Riserva",
+        "Gattinara Tre Vigne"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gattinara, le domaine emblématique du Haut-Piémont, reconnaissable entre tous à sa bouteille cintrée caractéristique. La famille Travaglini, aujourd'hui menée par Cinzia Travaglini et son mari Massimo Collauto, est le principal ambassadeur de l'appellation et y cultive le Nebbiolo (Spanna) sur les sols volcaniques et de porphyre qui font la singularité du Haut-Piémont. La gamme s'étend du Gattinara classique aux cuvées Tre Vigne et Riserva, jusqu'au prestigieux Il Sogno, sélection des meilleures parcelles. Le style donne des Nebbiolo de montagne fins, droits et minéraux, au fruit pur et aux tanins fermes mais nobles, dotés d'une fraîcheur qui leur assure une belle longévité sur dix à vingt ans. Fiables, réguliers et largement diffusés, les vins de Travaglini constituent une excellente porte d'entrée vers le visage le plus fin et le plus minéral du Nebbiolo piémontais, loin de Barolo et Barbaresco. Pilier historique de Gattinara, le domaine accompagne aujourd'hui le fort regain d'intérêt pour l'Alto Piemonte. Le vignoble, planté sur les pentes de porphyre rose qui font la singularité de Gattinara, donne des Nebbiolo tendus, minéraux et parfumés, à la fraîcheur affirmée. Du Gattinara classique au prestigieux Il Sogno, en passant par le Tre Vigne et la Riserva, la gamme décline la même signature de finesse et de droiture.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "gattinara",
+        "alto-piemonte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-albino-rocca",
+      "nom": "Albino Rocca",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Barbaresco",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Ovello Vigna Loreto",
+        "Barbaresco Ronchi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barbaresco, un domaine moderne et régulier mené par la famille Rocca. Il s'est fait un nom avec ses Barbaresco de cru — Ovello Vigna Loreto, Ronchi — au fruit net, aux tanins soyeux et au boisé bien intégré, dans un style plus accessible que les versions très traditionnelles tout en gardant de l'équilibre. Les vins séduisent assez jeunes et tiennent une douzaine d'années. La gamme comprend aussi de jolis Langhe Nebbiolo, Dolcetto et Barbera. Reconnu pour sa constance, Albino Rocca compte parmi les valeurs sûres et bien diffusées du Barbaresco contemporain, et offre une lecture soignée et plaisante des grands crus du village. Servis assez jeunes pour leur fruit ou attendus une dizaine d'années, ces Barbaresco offrent une lecture moderne et gourmande des crus du village, et le domaine demeure une valeur bien diffusée et fiable de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-ca-del-baio",
+      "nom": "Ca' del Baio",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Treiso",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Asili",
+        "Barbaresco Valgrande",
+        "Barbaresco Pora"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Treiso, un charmant domaine familial mené par Giulio Grasso et ses trois filles, devenu une valeur sûre du Barbaresco. Il vinifie plusieurs crus en bouteilles distinctes — Asili, Valgrande, Pora — qui offrent des Barbaresco fins, parfumés et accessibles, au fruit pur et aux tanins élégants, d'un excellent rapport qualité-prix. La gamme comprend aussi un beau Riesling, signe de la curiosité de la maison, ainsi que des Dolcetto et Barbera soignés. Les vins séduisent assez jeunes et vieillissent bien sur une dizaine d'années. Régulier, accueillant et abordable, Ca' del Baio est l'une des adresses les plus attachantes de Treiso et une excellente porte d'entrée vers les grands crus de Barbaresco. Servis dès leurs premières années ou attendus une dizaine d'années, ces Barbaresco de cru séduisent par leur finesse et leur lisibilité, faisant du domaine l'une des belles découvertes accessibles de Treiso.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "treiso"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-piemonte-prod-paitin",
+      "nom": "Paitin",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barbaresco",
+      "commune": "Neive",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barbaresco Sorì Paitin",
+        "Barbaresco Serraboella"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Neive, un domaine historique de la famille Pasquero-Elia, qui exploite depuis le XIXe siècle les vieilles vignes du Sorì Paitin, l'un des plus anciens crus identifiés de Barbaresco. Il en tire un Barbaresco droit, parfumé et de belle garde, dans un style traditionnel et précis, complété par le cru Serraboella. Les vins, fins et typés, demandent quelques années et tiennent bien sur une quinzaine d'années. La gamme comprend aussi de jolis Langhe Nebbiolo, Dolcetto et Barbera. Discret mais sérieux, Paitin compte parmi les valeurs sûres et authentiques de Neive et offre un beau rapport qualité-prix sur des terroirs historiques du Barbaresco. Servis après quelques années pour leur bouquet, les vins illustrent la noblesse de terroirs historiques de Neive, et Paitin reste une adresse sûre pour les amateurs de Barbaresco traditionnel et abordable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barbaresco",
+        "neive"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "flatiron"
+    },
+    {
+      "id": "it-piemonte-prod-damilano",
+      "nom": "Damilano",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Cannubi",
+        "Barolo Liste"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barolo, un domaine familial réputé avant tout pour son Barolo Cannubi, dont il détient l'une des plus belles et des plus vastes parcelles de ce cru emblématique. La maison vinifie aussi les crus Liste, Cerequio et Brunate, dans un style moderne et soigné : fruit pur, tanins polis, boisé bien intégré, donnant des Barolo élégants et accessibles qui se gardent une dizaine d'années. La gamme comprend par ailleurs des Langhe Nebbiolo, Barbera et Dolcetto réguliers. Bien distribuée et d'une présentation soignée, la maison Damilano offre une lecture moderne et lisible du Barolo, le Cannubi en figure de proue, et constitue une valeur accessible et fiable de l'appellation. La maison soigne par ailleurs une présentation élégante et une distribution large qui en font une porte d'entrée appréciée vers le Barolo de cru, le Cannubi servant de vitrine à un style accessible et soigné.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "cannubi"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-fontanafredda",
+      "nom": "Fontanafredda",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Serralunga d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Moscato"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Vigna La Rosa",
+        "Barolo Lazzarito"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Serralunga d'Alba, l'un des plus vastes domaines historiques du Barolo, né au XIXe siècle sur une ancienne propriété royale (celle du roi Vittorio Emanuele II et de « La Bela Rosin »). Converti à l'agriculture biologique, il propose une très large gamme allant des Barolo de cru — Vigna La Rosa, Lazzarito — aux Langhe et au reste de la Langhe, sans oublier de beaux effervescents Alta Langa en méthode traditionnelle. Le style, classique et soigné, offre des Barolo accessibles et fiables, qui ont nettement gagné en qualité ces dernières années. Domaine de volume mais d'ambition renouvelée, Fontanafredda conjugue patrimoine, savoir-faire et lieu de visite incontournable, et constitue une porte d'entrée sûre et de bon rapport qualité-prix vers les grands terroirs de Serralunga.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-giacomo-fenocchio",
+      "nom": "Giacomo Fenocchio",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Monforte d'Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bussia",
+        "Barolo Villero",
+        "Barolo Cannubi",
+        "Barolo Bussia 90 dì"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Monforte d'Alba, un domaine familial traditionaliste discret et apprécié des connaisseurs, installé au cœur du grand cru Bussia. Il vinifie plusieurs crus en bouteilles distinctes — Bussia, Villero, Cannubi — dans un style classique fait de longues macérations et d'élevages en grands foudres, sans recherche d'effet. Sa cuvée la plus emblématique est le Barolo Bussia « 90 dì », issu d'une macération exceptionnellement longue de quatre-vingt-dix jours, d'une profondeur et d'une intensité remarquables. Les vins, droits, purs et de belle garde, s'épanouissent sur quinze à vingt ans. Fidèle à la tradition et d'un bon rapport qualité-prix, Giacomo Fenocchio est une valeur sûre de Monforte pour les amateurs de Barolo classique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "tradition",
+        "bussia"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "decanter"
+    },
+    {
+      "id": "it-piemonte-prod-marchesi-di-barolo",
+      "nom": "Marchesi di Barolo",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Barolo",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Cannubi",
+        "Barolo Sarmassa"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Au cœur du village de Barolo, une maison historique intimement liée à la naissance même du vin : c'est sur ces terres, autour de la marquise Falletti, que le Barolo moderne a pris forme au XIXe siècle. La propriété possède des parcelles dans des crus prestigieux — Cannubi, Sarmassa, Coste di Rose — qu'elle vinifie dans un style classique, avec des élevages soignés et une recherche d'équilibre. Les vins, fiables et représentatifs de l'appellation, offrent des Barolo accessibles et de bonne garde, le Cannubi en tête. La gamme, large, comprend aussi des Langhe Nebbiolo, Barbera, Dolcetto et divers vins du Piémont. Forte de son histoire et de sa diffusion, Marchesi di Barolo constitue une référence patrimoniale et une porte d'entrée sûre vers les grands crus de Barolo.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "decanter|wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-prunotto",
+      "nom": "Prunotto",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "Alba",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Bussia",
+        "Barbaresco Bric Turot"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Alba, une maison historique aujourd'hui propriété du groupe Antinori, qui en a relevé le niveau et la régularité. À cheval sur le Barolo et le Barbaresco, elle produit des crus fiables — le Barolo Bussia et le Barbaresco Bric Turot en tête — ainsi que de remarquables Barbera d'Asti (Costamiòle) et Barbera d'Alba (Pian Romualdo). Le style, classique et soigné, privilégie la pureté du fruit et l'équilibre, dans des vins lisibles et accessibles qui vieillissent bien sur une dizaine d'années. La gamme, complète, couvre l'essentiel des appellations piémontaises. Bénéficiant des moyens et de l'exigence d'Antinori, Prunotto offre une excellente porte d'entrée vers le Barolo et le Barbaresco de cru, et constitue une valeur sûre et bien diffusée du Piémont.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-renato-ratti",
+      "nom": "Renato Ratti",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Rocche dell'Annunziata Marcenasco",
+        "Barolo Conca"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, un domaine influent dont le fondateur, Renato Ratti, a profondément marqué le Barolo : c'est lui qui, dans les années 1970, a dressé la première grande cartographie des crus de l'appellation, référence encore utilisée aujourd'hui. Pionnier d'un style plus moderne et accessible, il a privilégié des macérations plus courtes et des vins au fruit pur, élégants et fondus. La propriété tire ses plus beaux Barolo du Marcenasco (dans le cru Rocche dell'Annunziata) et de la Conca, dans un registre raffiné, aux tanins soyeux, qui s'ouvre assez jeune tout en gardant une bonne capacité de vieillissement sur douze à dix-huit ans. La gamme comprend aussi des Langhe Nebbiolo, Barbera, Dolcetto et un Roero Arneis réguliers. Menée aujourd'hui par son fils Pietro Ratti, la maison conjugue héritage historique et constance qualitative. Valeur sûre et accessible du Barolo de La Morra, Renato Ratti offre une introduction élégante et lisible aux grands crus de l'appellation. Sa célèbre carte des crus, dressée à une époque où ces distinctions n'étaient pas codifiées, a contribué à faire reconnaître la diversité des terroirs du Barolo et reste une référence historique. Le Marcenasco, issu du grand cru Rocche dell'Annunziata, et la Conca donnent des Barolo élégants, au fruit pur et aux tanins soyeux. Servis assez jeunes ou attendus une douzaine d'années, ils séduisent par leur accessibilité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus|decanter"
+    },
+    {
+      "id": "it-piemonte-prod-trediberri",
+      "nom": "Trediberri",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Barolo",
+      "commune": "La Morra",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Barbera",
+        "Dolcetto"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Barolo Rocche dell'Annunziata",
+        "Barolo Berri"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À La Morra, un jeune domaine fondé en 2007 par Nicola Oberto et son père Federico, devenu en quelques années l'un des plus jolis espoirs du Barolo. Le domaine possède notamment une parcelle dans le grand cru Rocche dell'Annunziata, d'où il tire un Barolo parfumé et racé, à côté d'un Barolo Berri plus immédiat. Le style privilégie la fraîcheur, la pureté du fruit et la digestibilité, dans des vins élégants et accessibles, à prix encore très raisonnable. Conduit avec une viticulture soignée, Trediberri séduit amateurs et sommeliers en quête de Barolo authentiques et abordables, et s'impose comme l'une des plus belles adresses montantes de La Morra. Le domaine, encore jeune, a déjà conquis la critique et les amateurs par sa sincérité et son excellent rapport qualité-prix, devenant une référence du Barolo accessible et de finesse à La Morra.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "barolo",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-piemonte-prod-la-scolca",
+      "nom": "La Scolca",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Gavi",
+      "commune": "Gavi",
+      "pays": "Italie",
+      "cepages": [
+        "Cortese"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Gavi dei Gavi Etichetta Nera",
+        "Gavi Spumante"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gavi, la maison qui a fait la renommée du Gavi de qualité. Fondée par la famille Soldati, elle est célèbre pour son « Gavi dei Gavi » Etichetta Nera (étiquette noire), un Cortese issu de vieilles vignes et élevé sur lies, devenu une véritable icône : blanc sec, vif et minéral, doté d'une structure et d'une fraîcheur qui lui permettent de vieillir remarquablement, ce qui est rare pour le cépage. Le domaine produit aussi des effervescents en méthode traditionnelle. Symbole d'un Gavi ambitieux et de garde, La Scolca est une référence du grand blanc piémontais et l'un des noms les plus reconnaissables de l'appellation, prisé sur les belles tables. Servi sur des poissons, des fruits de mer ou de jeunes fromages, le Gavi dei Gavi confirme qu'un grand Cortese peut vieillir et gagner en complexité, ce qui fait de La Scolca une référence durable de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cortese",
+        "gavi",
+        "blanc"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "winereviewonline"
+    },
+    {
+      "id": "it-piemonte-prod-paolo-saracco",
+      "nom": "Paolo Saracco",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Moscato d'Asti",
+      "commune": "Castiglione Tinella",
+      "pays": "Italie",
+      "cepages": [
+        "Moscato",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Moscato d'Asti",
+        "Langhe Riesling",
+        "Pinot Nero"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castiglione Tinella, dans le Monferrato, la référence du Moscato d'Asti. Paolo Saracco y produit un Moscato d'une pureté aromatique exemplaire : nez éclatant de fleurs, de pêche et de muscat, bouche légère, fraîche et délicatement sucrée, d'une finesse rare, à boire jeune. Sa cuvée « Moscato d'Autunno », vendangée plus tard, en offre une version plus concentrée. Le domaine soigne aussi des blancs secs et de séduisants Pinot Nero et Chardonnay. Maître incontesté du genre, Saracco a fait du Moscato d'Asti un vin de plaisir raffiné, parfait à l'apéritif comme au dessert. Une adresse incontournable pour découvrir le plus charmant des vins doux légers du Piémont. Servi bien frais, à l'apéritif comme au dessert ou sur les fruits, ce Moscato d'une grande finesse confirme le statut de Saracco comme maître incontesté du genre dans tout le Piémont.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "moscato",
+        "asti",
+        "doux",
+        "monferrato"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "winereviewonline"
+    },
+    {
+      "id": "it-piemonte-prod-cascina-chicco",
+      "nom": "Cascina Chicco",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Roero",
+      "commune": "Canale",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Arneis",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Roero Valmaggiore",
+        "Roero Arneis Anterisio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Canale, dans le Roero, une valeur sûre menée par la famille Faccenda. Sur les sols sableux du Roero, elle produit des Nebbiolo souples et parfumés, dont le Roero Valmaggiore issu d'une côte réputée, ainsi que de frais Roero Arneis (Anterisio) et de jolis Barbera. Le style privilégie la pureté du fruit et la finesse, dans des vins accessibles, soignés et d'un bon rapport qualité-prix, qui se gardent quelques années. Régulière et bien diffusée, Cascina Chicco est une bonne porte d'entrée vers le visage tendre et parfumé du Nebbiolo de sable et vers les blancs d'Arneis, dans une appellation roéraine en pleine ascension. Servis sur la cuisine piémontaise du quotidien, ces vins offrent un excellent rapport qualité-prix et une belle introduction aux deux visages du Roero, le Nebbiolo de sable et l'Arneis, dans une appellation en pleine ascension.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "roero",
+        "arneis"
+      ],
+      "a_verifier": "statut_production à confirmer; ranking_pat à renseigner",
+      "source": "italianwinelover"
+    },
+    {
+      "id": "it-piemonte-prod-malvira",
+      "nom": "Malvirà",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Roero",
+      "commune": "Canale",
+      "pays": "Italie",
+      "cepages": [
+        "Arneis",
+        "Nebbiolo"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Roero Arneis Trinità",
+        "Roero Arneis Renesio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Canale, dans le Roero, l'un des grands spécialistes de l'Arneis, mené par les frères Roberto et Massimo Damonte. Le domaine signe parmi les meilleurs blancs du cépage, vinifiés par cru — Trinità, Renesio, Saglietto — qui montrent que l'Arneis peut donner des vins de gastronomie, structurés, complexes et capables de vieillir, loin du cliché du blanc léger à boire jeune. Il produit aussi de jolis Roero rouges, parfumés et soyeux, issus de Nebbiolo sur sols sableux. Le style recherche la précision, la fraîcheur et la profondeur, avec des élevages soignés. Référence de l'Arneis et acteur clé de la montée en gamme du Roero, Malvirà est une adresse de choix pour découvrir les blancs de caractère du Piémont, ainsi que la finesse de ses Nebbiolo de sable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "arneis",
+        "roero",
+        "blanc"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wein.plus"
+    },
+    {
+      "id": "it-piemonte-prod-matteo-correggia",
+      "nom": "Matteo Correggia",
+      "type": "domaine",
+      "region": "Piemonte",
+      "sous_region": "Roero",
+      "commune": "Canale",
+      "pays": "Italie",
+      "cepages": [
+        "Nebbiolo",
+        "Arneis",
+        "Barbera"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Roero Ròche d'Ampsej",
+        "Roero Arneis"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Canale, l'un des pionniers de la qualité dans le Roero, région de l'autre rive du Tanaro. Matteo Correggia, disparu prématurément en 2001, fut l'un des premiers à révéler le potentiel du Nebbiolo sur les sols sableux du Roero ; le domaine, poursuivi par sa femme Ornella et son fils Giovanni, en reste une référence. Son vin phare, le Roero Ròche d'Ampsej, est un Nebbiolo souple, parfumé et élégant, complété par de beaux Roero Arneis frais et aromatiques, ainsi que par des Barbera de caractère. Le style privilégie la pureté et la finesse, dans des vins accessibles qui gardent une bonne tenue sur une dizaine d'années. Ambassadeur historique du Roero, Matteo Correggia est une adresse incontournable pour découvrir le visage tendre et parfumé du Nebbiolo de cette appellation montante.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "nebbiolo",
+        "roero",
+        "arneis"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winescholarguild"
+    }
+  ]
+}

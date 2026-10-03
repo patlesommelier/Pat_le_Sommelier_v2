@@ -1,0 +1,417 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "mittelrhein",
+  "region_label": "Mittelrhein (Allemagne)",
+  "source_file": "terroirs_mittelrhein_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 16,
+  "items": [
+    {
+      "id": "de-mittelrhein-terr-bacharacher-hahn",
+      "nom": "Bacharacher Hahn",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-250 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Le plus grand terroir du sud du Mittelrhein, à l'entrée d'une vallée latérale de Bacharach ; pente d'ardoise plein sud exploitée presque en monopole par Toni Jost.",
+      "notes_objectives": "Le Bacharacher Hahn est le plus grand terroir du sud du Mittelrhein, à l'entrée d'une vallée latérale juste en aval de Bacharach. Pente d'ardoise dévonienne raide et exposée au sud, il bénéficie d'un microclimat chaud et abrité au cœur de la gorge du Rhin, classée au patrimoine mondial. L'ardoise altérée donne aux Riesling une minéralité saline et une grande finesse, ainsi qu'une belle aptitude à la garde. Le terroir est exploité presque en monopole par le domaine Toni Jost, le plus renommé de la région. Classé au sommet de la hiérarchie du Mittelrhein, le Hahn illustre la grandeur des Riesling d'ardoise du secteur de Bacharach. Le Hahn doit son excellence à sa configuration : niché à l'entrée d'une vallée latérale qui s'ouvre sur le Rhin, il bénéficie à la fois de l'exposition sud, de la chaleur réfléchie par le fleuve et d'un abri contre les vents froids du Hunsrück. La pente, raide, est aménagée en terrasses d'ardoise dévonienne dont la roche altérée donne aux Riesling leur salinité caractéristique. Le quasi-monopole qu'en détient le domaine Toni Jost permet une lecture d'une rare cohérence : ses Riesling du Hahn, secs comme moelleux, sont d'une grande race et vieillissent admirablement. Dans une région longtemps connue pour le négoce plus que pour la qualité, le Hahn a porté très haut le nom du Mittelrhein, et figure parmi les plus grands terroirs de Riesling d'ardoise du sud de la région, à l'égal des meilleurs coteaux du Rhin et de la Moselle. Le maintien en culture de ce grand coteau, sur des terrasses d'ardoise que beaucoup ont abandonnées ailleurs dans la région, a aussi valeur de sauvegarde : le paysage viticole de la gorge du Rhin, classé au patrimoine mondial, doit sa survie à des terroirs d'élite comme le Hahn. Les Riesling du Hahn, d'une salinité fine et d'une grande pureté, sont aujourd'hui considérés comme l'une des références du Mittelrhein, et leur capacité à vieillir sur une ou deux décennies leur vaut une reconnaissance croissante. Pour l'amateur, le Bacharacher Hahn est le terroir par lequel découvrir l'âme du Riesling d'ardoise du sud de la région.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "meininger|falstaff"
+    },
+    {
+      "id": "de-mittelrhein-terr-bopparder-hamm-feuerlay",
+      "nom": "Bopparder Hamm Feuerlay",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Bopparder Hamm)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "75-230 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Le cœur du Bopparder Hamm, grand amphithéâtre d'ardoise plein sud dans la plus grande boucle du Rhin ; Riesling profonds (Weingart, Matthias Müller, Perll).",
+      "notes_objectives": "Le Bopparder Hamm Feuerlay est le cœur du grand coteau du Bopparder Hamm, dans le nord du Mittelrhein. Le Hamm forme un vaste amphithéâtre d'ardoise lové dans la plus grande boucle du Rhin, exposé plein sud — l'une des plus belles et des plus chaudes pentes de tout le fleuve. Le Feuerlay, situé au centre de cet amphithéâtre, est sa parcelle la plus réputée : l'ardoise et l'exposition idéale y donnent des Riesling profonds, à la fois mûrs et minéraux. Le terroir est magnifié par les meilleurs domaines de Boppard et de Spay, dont Weingart, Matthias Müller et August Perll. Classé au sommet de la hiérarchie du Mittelrhein, le Feuerlay illustre la grandeur des Riesling du Bopparder Hamm. Le Bopparder Hamm épouse la plus grande boucle du Rhin, entre Boppard et Spay : un immense croissant de vignes en terrasses, exposé plein sud, qui capte le soleil jusque tard dans la soirée. C'est l'une des pentes d'ardoise les plus spectaculaires et les plus chaudes de tout le fleuve. Au centre de cet amphithéâtre, le Feuerlay est considéré comme la parcelle d'élite : l'ardoise et l'ensoleillement maximal y donnent des Riesling d'une grande profondeur, à la fois mûrs et tendus, d'une minéralité saline marquée. Florian Weingart, Matthias Müller et August Perll en signent des Grosses Gewächs réputés. Le Feuerlay illustre le style du nord du Mittelrhein : des Riesling plus ronds et solaires que ceux de Bacharach, sans rien perdre de la salinité de l'ardoise. Le panorama du Bopparder Hamm, avec ses terrasses d'ardoise épousant la grande boucle du Rhin face à Boppard, compte parmi les plus beaux paysages viticoles d'Allemagne, et le Feuerlay en occupe le centre, là où l'ensoleillement est maximal. La roche d'ardoise tendre, parfois percée des « Lochsteine » caractéristiques du sud du Mittelrhein, y emmagasine la chaleur. Les Riesling du Feuerlay, mûrs et profonds mais toujours salins, séduisent par leur équilibre entre richesse et fraîcheur, et vieillissent remarquablement. Pour l'amateur, le Feuerlay est le grand terroir qui résume la générosité minérale du Bopparder Hamm, fleuron du nord du Mittelrhein.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "nord"
+      ],
+      "source": "meininger|wanderlog"
+    },
+    {
+      "id": "de-mittelrhein-terr-bacharacher-wolfshoehle",
+      "nom": "Bacharacher Wolfshöhle",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-260 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Grand coteau d'ardoise plein sud du val de Steeg, un peu éloigné du Rhin ; Riesling tendus et minéraux (Ratzenberger, Bastian).",
+      "notes_objectives": "La Bacharacher Wolfshöhle est un grand coteau d'ardoise du val de Steeg, près de Bacharach. Pente plein sud un peu éloignée du Rhin, elle donne des Riesling tendus et minéraux. Le terroir est exploité par des domaines comme Ratzenberger et Bastian. Classé en grand cru, la Wolfshöhle illustre le style ferme et minéral des Riesling des vallées latérales de Bacharach. Située dans le val de Steeg, un peu à l'écart du Rhin, la Wolfshöhle est la seule des grandes lagen de Bacharach à ne pas border directement le fleuve. Sa pente plein sud et son ardoise donnent des Riesling tendus, fermes et minéraux, dans le style plus sévère des vallées latérales. Ratzenberger et Bastian en sont les interprètes. Avec le réchauffement climatique, sa relative fraîcheur, longtemps considérée comme un handicap, devient un atout. Le cru illustre la finesse minérale des Riesling du secteur de Bacharach. Sa singularité — être la seule grande lage de Bacharach éloignée du fleuve — en fait un terroir à part, dont les Riesling, plus stricts et plus tendus, expriment la fraîcheur des vallées latérales. Ratzenberger et Bastian y signent des vins d'une grande pureté minérale, qui comptent parmi les plus racés du sud du Mittelrhein. Le cru illustre la finesse austère des Riesling d'ardoise de Bacharach.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "meininger|weinkaiser"
+    },
+    {
+      "id": "de-mittelrhein-terr-steeger-st-jost",
+      "nom": "Steeger St. Jost",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "120-260 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise du val de Steeg (Bacharach) ; Riesling salins et de garde, fief du domaine Ratzenberger.",
+      "notes_objectives": "Le Steeger St. Jost est un grand coteau d'ardoise du val de Steeg, à Bacharach. Bien exposé, il donne des Riesling salins et de garde. Le terroir est le fief du domaine Ratzenberger, qui en tire certains de ses meilleurs Riesling. Classé en grand cru, le St. Jost illustre la qualité des terroirs d'ardoise des vallées latérales de Bacharach. Grand coteau d'ardoise du val de Steeg, le St. Jost est le fief du domaine Ratzenberger, qui en tire certains de ses plus grands Riesling, secs comme moelleux. Sa pente bien exposée et son ardoise dévonienne donnent des vins salins, droits et de longue garde. Le cru illustre la qualité des terroirs d'ardoise des vallées latérales de Bacharach, où le Riesling gagne en tension et en minéralité. Indissociable du domaine Ratzenberger, le St. Jost est l'un des terroirs phares du val de Steeg. Ses Riesling, salins et de longue garde, illustrent l'excellence de la viticulture biologique de Bacharach. Le cru confirme la qualité des vallées latérales du sud du Mittelrhein, où l'ardoise et la fraîcheur façonnent des Riesling d'une grande tension minérale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "meininger|schiller-wine"
+    },
+    {
+      "id": "de-mittelrhein-terr-bacharacher-posten",
+      "nom": "Bacharacher Posten",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "110-240 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise raide en bord de Rhin, à Bacharach ; Riesling minéraux (Ratzenberger, Baer).",
+      "notes_objectives": "Le Bacharacher Posten est un coteau d'ardoise raide en bord de Rhin, à Bacharach. Bien exposé, il donne des Riesling minéraux et tendus. Le terroir est exploité par des domaines comme Ratzenberger et Baer. Classé en grand cru, le Posten illustre la qualité des coteaux d'ardoise de Bacharach, au bord du fleuve. Coteau d'ardoise particulièrement raide en bord de Rhin, le Posten bénéficie de la chaleur réfléchie par le fleuve. Il donne des Riesling minéraux et tendus, exploités par Ratzenberger et Baer. Le cru illustre la viticulture héroïque des pentes d'ardoise de Bacharach, où la vigne s'accroche au-dessus du Rhin, dans l'un des plus beaux paysages de la gorge classée à l'UNESCO. Sa pente vertigineuse en bord de Rhin, qui impose un travail entièrement manuel, en fait l'un des coteaux les plus héroïques de Bacharach. Ses Riesling, minéraux et droits, profitent de la chaleur réfléchie par le fleuve. Le cru illustre la viticulture spectaculaire de la gorge du Rhin, où la vigne s'accroche aux terrasses d'ardoise au-dessus de l'eau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "meininger"
+    },
+    {
+      "id": "de-mittelrhein-terr-oberweseler-oelsberg",
+      "nom": "Oberweseler Oelsberg",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-220 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Grand coteau d'ardoise dans une boucle du Rhin à Oberwesel, exposé au sud ; Riesling racés (Lanius-Knab).",
+      "notes_objectives": "L'Oberweseler Oelsberg est un grand coteau d'ardoise dans une boucle du Rhin à Oberwesel, exposé au sud. Il donne des Riesling racés et de garde. Le terroir est magnifié par le domaine Lanius-Knab. Classé en grand cru, l'Oelsberg illustre la qualité des terroirs d'ardoise du secteur d'Oberwesel, dans le sud du Mittelrhein. Lové dans une boucle du Rhin à Oberwesel, l'Oelsberg est un grand coteau d'ardoise exposé au sud, qui bénéficie de la chaleur du fleuve. Le domaine Lanius-Knab en tire des Riesling racés et de garde, parmi les meilleurs du sud du Mittelrhein. Le cru illustre la qualité des terroirs d'ardoise d'Oberwesel, ville médiévale réputée pour ses remparts, au cœur de la gorge du Rhin. Inscrit dans une boucle du Rhin, l'Oelsberg bénéficie d'une belle exposition sud et de la chaleur du fleuve, qui donnent à ses Riesling profondeur et race. Magnifié par Lanius-Knab, il compte parmi les meilleurs terroirs du sud du Mittelrhein. Le cru illustre la qualité des grands coteaux d'ardoise d'Oberwesel, au cœur de la gorge classée à l'UNESCO.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "meininger|burg-reichenstein"
+    },
+    {
+      "id": "de-mittelrhein-terr-engehoeller-bernstein",
+      "nom": "Engehöller Bernstein",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-300 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise de la vallée latérale d'Engehöll (Oberwesel) ; Riesling droits et minéraux, Grosse Lage de Lanius-Knab.",
+      "notes_objectives": "L'Engehöller Bernstein est un grand coteau d'ardoise de la vallée latérale d'Engehöll, près d'Oberwesel. Bien exposé, il donne des Riesling droits et minéraux. Le terroir est une Grosse Lage du domaine Lanius-Knab. Classé en grand cru, le Bernstein illustre la qualité des terroirs d'ardoise des vallées latérales d'Oberwesel. Niché dans la vallée latérale d'Engehöll, à l'écart du Rhin, le Bernstein est une Grosse Lage du domaine Lanius-Knab. Sa pente d'ardoise et sa relative fraîcheur donnent des Riesling droits, tendus et minéraux, dans le style ferme des vallées latérales. Le cru illustre le potentiel des terroirs d'ardoise des vallons d'Oberwesel, longtemps méconnus et aujourd'hui reconnus pour la finesse de leurs Riesling. La fraîcheur de la vallée d'Engehöll, longtemps considérée comme un handicap, devient un atout à l'heure du réchauffement climatique : le Bernstein y donne des Riesling d'une grande tension, droits et de longue garde. Grosse Lage de Lanius-Knab, il illustre le potentiel des terroirs d'ardoise des vallons d'Oberwesel, dans le sud du Mittelrhein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "weinkaiser|rieslingco"
+    },
+    {
+      "id": "de-mittelrhein-terr-bopparder-hamm-ohlenberg",
+      "nom": "Bopparder Hamm Ohlenberg",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Bopparder Hamm)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "75-230 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Einzellage du Bopparder Hamm, ardoise plein sud ; Riesling minéraux (Weingart, Matthias Müller).",
+      "notes_objectives": "Le Bopparder Hamm Ohlenberg est une Einzellage du grand amphithéâtre du Bopparder Hamm, sur l'ardoise plein sud. Il donne des Riesling minéraux et de belle facture. Le terroir est exploité par des domaines comme Weingart et Matthias Müller. Classé en grand cru, l'Ohlenberg illustre la qualité des parcelles du Bopparder Hamm, dans le nord du Mittelrhein. Einzellage du grand amphithéâtre du Bopparder Hamm, l'Ohlenberg bénéficie de l'ardoise et de l'exposition plein sud qui font la réputation du Hamm. Il donne des Riesling minéraux et de belle facture, exploités par Weingart et Matthias Müller. Le cru illustre la qualité des parcelles du Bopparder Hamm, l'une des plus grandes pentes d'ardoise du Rhin, dans le nord du Mittelrhein. Au sein du grand amphithéâtre du Bopparder Hamm, l'Ohlenberg se distingue par la finesse minérale de ses Riesling, magnifiés par Weingart et Matthias Müller. Le cru participe à la mosaïque des Einzellagen du Hamm, dont les meilleures sont aujourd'hui vinifiées séparément. Il illustre la qualité du grand coteau d'ardoise de Boppard, fleuron du nord du Mittelrhein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "nord"
+      ],
+      "source": "wanderlog"
+    },
+    {
+      "id": "de-mittelrhein-terr-bopparder-hamm-mandelstein",
+      "nom": "Bopparder Hamm Mandelstein",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Bopparder Hamm)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "75-230 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Einzellage du Bopparder Hamm, ardoise plein sud ; Riesling fruités et minéraux (Weingart, Müller, Perll).",
+      "notes_objectives": "Le Bopparder Hamm Mandelstein est une Einzellage du Bopparder Hamm, sur l'ardoise plein sud. Il donne des Riesling fruités et minéraux. Le terroir est exploité par Weingart, Matthias Müller et August Perll. Classé en grand cru, le Mandelstein illustre la qualité des parcelles du grand amphithéâtre du Bopparder Hamm. Einzellage du Bopparder Hamm, le Mandelstein bénéficie de la même ardoise plein sud que ses voisines. Il donne des Riesling fruités et minéraux, exploités par Weingart, Matthias Müller et August Perll. Le cru illustre la qualité homogène des parcelles du grand amphithéâtre du Bopparder Hamm, où chaque Einzellage exprime une nuance du grand terroir d'ardoise. Apprécié pour le fruité et la minéralité de ses Riesling, le Mandelstein bénéficie de l'exposition plein sud et de l'ardoise du Bopparder Hamm. Magnifié par Weingart, Müller et Perll, il complète la série des grandes parcelles du Hamm. Le cru illustre la qualité homogène de ce vaste amphithéâtre d'ardoise, l'une des plus belles pentes du Rhin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "nord"
+      ],
+      "source": "wanderlog"
+    },
+    {
+      "id": "de-mittelrhein-terr-bopparder-hamm-engelstein",
+      "nom": "Bopparder Hamm Engelstein",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Bopparder Hamm)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "75-230 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Einzellage du Bopparder Hamm, ardoise plein sud ; Riesling Grosses Gewächs (Matthias Müller).",
+      "notes_objectives": "Le Bopparder Hamm Engelstein est une Einzellage du Bopparder Hamm, sur l'ardoise plein sud. Il donne des Riesling Grosses Gewächs racés. Le terroir est notamment exploité par le domaine Matthias Müller. Classé en grand cru, l'Engelstein illustre la qualité des parcelles du Bopparder Hamm, l'un des plus grands coteaux d'ardoise du Rhin. Einzellage du Bopparder Hamm, l'Engelstein donne, sur son ardoise plein sud, des Riesling Grosses Gewächs racés, notamment chez Matthias Müller. Le cru illustre la qualité des parcelles du grand amphithéâtre, dont les meilleures sont aujourd'hui vinifiées séparément pour révéler les nuances de ce vaste coteau d'ardoise, l'un des plus réputés du Rhin. Vinifié en Grosses Gewächs par Matthias Müller, l'Engelstein illustre le potentiel des meilleures parcelles du Bopparder Hamm. Sa pente d'ardoise plein sud donne des Riesling racés et profonds. Le cru participe à la reconnaissance croissante des Einzellagen du Hamm, désormais comparées entre elles comme autant de nuances d'un même grand terroir d'ardoise du nord du Mittelrhein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "vdp-grosse-lage",
+        "nord"
+      ],
+      "source": "wanderlog|burg-reichenstein"
+    },
+    {
+      "id": "de-mittelrhein-terr-bacharacher-insel-heyles-en-werth",
+      "nom": "Bacharacher Insel Heyles'en Werth",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "75-80 m",
+      "sols": "alluvions (île au milieu du Rhin)",
+      "caracteristiques_rapides": "Terroir unique : une île classée au milieu du Rhin, en aval de Bacharach ; Riesling singuliers sur alluvions (Bastian).",
+      "notes_objectives": "La Bacharacher Insel Heyles'en Werth est un terroir unique : une île classée au milieu du Rhin, en aval de Bacharach, où la vigne pousse sur des alluvions, et non sur l'ardoise des coteaux. Cette situation insolite donne des Riesling singuliers, marqués par la proximité immédiate du fleuve. Le terroir est exploité par le domaine Bastian. Classé en grand cru, l'île de Heyles'en Werth illustre la diversité et la singularité des terroirs de Bacharach. Cas unique dans le vignoble allemand, l'île de Heyles'en Werth, classée pour son intérêt naturel, se dresse au milieu du Rhin en aval de Bacharach. La vigne y pousse non sur l'ardoise des coteaux, mais sur des alluvions, dans un microclimat singulier au ras de l'eau. Le domaine Bastian en tire des Riesling à la personnalité particulière. Le cru illustre l'extraordinaire diversité des terroirs de Bacharach, des terrasses escarpées jusqu'à l'île fluviale. Cultiver la vigne sur une île au milieu du Rhin est une singularité que l'on ne retrouve quasiment nulle part ailleurs en Allemagne. Le microclimat très particulier de Heyles'en Werth, entièrement entourée d'eau, et son sol d'alluvions donnent des Riesling atypiques, plus souples que ceux des coteaux d'ardoise. Exploité par Bastian, le cru illustre l'incroyable diversité des terroirs de Bacharach.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "ile",
+        "riesling",
+        "rarete",
+        "vdp-grosse-lage",
+        "sud"
+      ],
+      "source": "weinkaiser"
+    },
+    {
+      "id": "de-mittelrhein-terr-oberweseler-st-martinsberg",
+      "nom": "Oberweseler St. Martinsberg",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "90-230 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise d'Oberwesel ; Riesling minéraux (Lanius-Knab).",
+      "notes_objectives": "L'Oberweseler St. Martinsberg est un coteau d'ardoise d'Oberwesel, dans le sud du Mittelrhein. Bien exposé, il donne des Riesling minéraux. Le terroir est notamment exploité par le domaine Lanius-Knab. Il illustre la qualité des coteaux d'ardoise d'Oberwesel. Coteau d'ardoise d'Oberwesel, le St. Martinsberg donne des Riesling minéraux, exploités notamment par Lanius-Knab. Bien exposé au-dessus du Rhin, il complète la série des bons terroirs d'ardoise d'Oberwesel, dans le sud du Mittelrhein, ville médiévale réputée au cœur de la gorge classée à l'UNESCO. Il complète, aux côtés de l'Oelsberg, la série des bons terroirs d'ardoise d'Oberwesel. Bien exposé au-dessus du Rhin, il offre des Riesling minéraux d'un bon rapport qualité-prix, dans la cité médiévale d'Oberwesel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "grand-coteau",
+        "sud"
+      ],
+      "source": "rieslingco"
+    },
+    {
+      "id": "de-mittelrhein-terr-oberdiebacher-fuerstenberg",
+      "nom": "Oberdiebacher Fürstenberg",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Sud (Bacharach-Oberwesel)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "150-300 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise d'une vallée latérale à Oberdiebach ; Riesling tendus du sud du Mittelrhein.",
+      "notes_objectives": "L'Oberdiebacher Fürstenberg est un coteau d'ardoise d'une vallée latérale à Oberdiebach, dans le sud du Mittelrhein. Bien exposé, il donne des Riesling tendus. Le terroir illustre le style ferme et minéral des Riesling des vallées latérales du secteur de Bacharach. Niché dans une vallée latérale à Oberdiebach, le Fürstenberg, sur l'ardoise, donne des Riesling tendus et minéraux, dans le style ferme des vallons du secteur de Bacharach. Le cru illustre la qualité, parfois méconnue, des coteaux d'ardoise des vallées latérales du sud du Mittelrhein. Il illustre la qualité méconnue des coteaux d'ardoise des vallées latérales du sud du Mittelrhein. Sa fraîcheur de vallon, atout à l'heure du réchauffement, en fait un terroir à suivre dans le sud de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "grand-coteau",
+        "sud"
+      ],
+      "source": "rieslingco"
+    },
+    {
+      "id": "de-mittelrhein-terr-leutesdorfer-gartenlay",
+      "nom": "Leutesdorfer Gartenlay",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Coblence-Bonn)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "70-200 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise au bord du Rhin à Leutesdorf, au nord ; Riesling minéraux (Sturm).",
+      "notes_objectives": "Le Leutesdorfer Gartenlay est un coteau d'ardoise au bord du Rhin à Leutesdorf, dans le nord du Mittelrhein. Bien exposé, il donne des Riesling minéraux. Le terroir est notamment exploité par le domaine Sturm. Il illustre la qualité des coteaux d'ardoise du secteur septentrional de la région. Au bord du Rhin à Leutesdorf, dans le nord du Mittelrhein, le Gartenlay est un coteau d'ardoise exposé au sud. Il donne des Riesling minéraux, exploités notamment par le domaine Sturm. Le cru illustre la persistance d'une viticulture de coteaux d'ardoise dans le secteur septentrional de la région, où la vigne se fait plus rare. Il demeure l'un des bons coteaux d'ardoise du secteur septentrional, à Leutesdorf. Exposé au sud au bord du fleuve, il témoigne de la persistance de la vigne dans le nord du Mittelrhein.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "riesling",
+        "grand-coteau",
+        "nord"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-terr-koenigswinterer-drachenfels",
+      "nom": "Königswinterer Drachenfels",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Coblence-Bonn)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "80-250 m",
+      "sols": "trachyte volcanique (Drachenfels)",
+      "caracteristiques_rapides": "Coteau volcanique au pied du Drachenfels, près de Bonn, à l'extrême nord ; Spätburgunder et Riesling sur roche rare (Pieper).",
+      "notes_objectives": "Le Königswinterer Drachenfels est un coteau singulier au pied du Drachenfels, butte volcanique célèbre dominant le Rhin près de Bonn, à l'extrême nord du Mittelrhein. Son sol de trachyte volcanique, rare, le distingue des ardoises de la région. Le terroir donne des Spätburgunder et des Riesling, exploités notamment par le domaine Pieper. Il illustre la singularité géologique de l'extrémité nord du Mittelrhein. Dominé par les ruines du château du Drachenfels — butte volcanique célèbre des contes du Rhin —, ce coteau de l'extrême nord du Mittelrhein repose sur un sol de trachyte volcanique, rare dans la région. Il donne des Spätburgunder et des Riesling, exploités par le domaine Pieper. Le cru illustre la singularité géologique de la limite septentrionale du vignoble, aux portes de Bonn. Sa géologie volcanique en fait une curiosité unique à l'extrême nord du vignoble du Mittelrhein. Site touristique célèbre des bords du Rhin, il marie patrimoine, légende et viticulture aux portes de Bonn.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "spaetburgunder",
+        "grand-coteau",
+        "nord"
+      ],
+      "source": "falstaff"
+    },
+    {
+      "id": "de-mittelrhein-terr-hammersteiner-schlossberg",
+      "nom": "Hammersteiner Schlossberg",
+      "type": "lieu-dit",
+      "region": "Mittelrhein",
+      "sous_region": "Nord (Coblence-Bonn)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "70-220 m",
+      "sols": "ardoise dévonienne (Schiefer), en terrasses",
+      "caracteristiques_rapides": "Coteau d'ardoise du nord du Mittelrhein, à Hammerstein/Bad Hönningen ; Spätburgunder, près de l'Ahr (Jakob Sebastian).",
+      "notes_objectives": "Le Hammersteiner Schlossberg est un coteau d'ardoise du nord du Mittelrhein, à Hammerstein, près de Bad Hönningen. Bien exposé, il donne surtout des Spätburgunder. Le terroir est notamment exploité par le domaine Jakob Sebastian. Il illustre la vocation rouge du nord de la région, proche de l'Ahr. Coteau d'ardoise du nord du Mittelrhein, à Hammerstein près de Bad Hönningen, le Schlossberg est voué surtout au Spätburgunder, profitant de la proximité de l'Ahr. Le domaine Jakob Sebastian en tire de beaux rouges. Le cru illustre la vocation rouge du nord de la région, à la frontière de la grande région des Pinots de l'Ahr. Il illustre la vocation rouge du nord de la région, à la frontière de l'Ahr. Voisin de l'Ahr, il bénéficie d'un savoir-faire rouge affirmé pour ses Spätburgunder.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "ardoise",
+        "spaetburgunder",
+        "grand-coteau",
+        "nord"
+      ],
+      "source": "falstaff"
+    }
+  ]
+}

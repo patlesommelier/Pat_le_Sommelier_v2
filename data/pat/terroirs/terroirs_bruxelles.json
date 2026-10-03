@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "bruxelles",
+  "region_label": "Bruxelles-Capitale",
+  "source_file": "terroirs_bruxelles_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 3,
+  "items": [
+    {
+      "id": "be-bruxelles-terr-coteaux-du-kauwberg-et-vallee-du-geleytsbeek",
+      "nom": "Coteaux du Kauwberg et vallée du Geleytsbeek",
+      "type": "coteau",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Uccle et vallées du sud",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 60-110 m",
+      "sols": "Limons de versant sur sables bruxelliens, vallons humides en fond",
+      "caracteristiques_rapides": "Le seul relief viticole de la Région : les coteaux qui dominent le Geleytsbeek et l'Ukkelbeek, où la vigne est attestée avant les hivers rigoureux du XVIIe siècle et replantée depuis 1986.",
+      "notes_objectives": "Le seul relief viticole de la Région bruxelloise. Les coteaux qui dominent le Geleytsbeek et l'Ukkelbeek, dans le sud d'Uccle, offrent des versants exposés que les historiens s'accordent à reconnaître comme le cœur de la viticulture bruxelloise ancienne — la tradition veut que Charles Quint appréciait le vin ucclois après ses parties de chasse en forêt de Soignes.\n\nCette viticulture est attestée bien au-delà d'Uccle : le wijngaardveld de Forest s'étendait sur cinq hectares à l'emplacement de l'actuel parc Duden. Elle disparaît sous le double effet des hivers rigoureux du XVIIe siècle et du traité des Pyrénées de 1659, qui interdit la vigne dans les Pays-Bas.\n\nLe retour date de 1986, avec un vignoble replanté en 2006 sur le Kauwberg, espace vert classé, après avoir failli disparaître sous la pression immobilière.",
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bruxelles",
+        "clos-historique"
+      ],
+      "source": "brusselslife.be ; bx1.be ; vignes.be"
+    },
+    {
+      "id": "be-bruxelles-terr-plateau-danderlecht-et-vallee-de-la-senne",
+      "nom": "Plateau d'Anderlecht et vallée de la Senne",
+      "type": "secteur",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Anderlecht et vallée de la Senne",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 20-60 m",
+      "sols": "Limons de plateau sur sables tertiaires, alluvions en fond de vallée",
+      "caracteristiques_rapides": "Ouest de la Région, dans le prolongement du Pajottenland. Un clos y a été planté en 2024 sur le site d'une école hôtelière, enserré par les bâtiments et fermé au sud par un talus.",
+      "notes_objectives": "L'ouest de la Région, dans le prolongement direct du plateau limoneux du Pajottenland : limons sur sables tertiaires, alluvions en fond de vallée, altitudes de vingt à soixante mètres. Anderlecht figure parmi les communes où la vigne est historiquement attestée avant sa disparition au XVIIe siècle.\n\nLe retour y date de 2024, avec un clos planté sur le site d'une école hôtelière. Sa configuration mérite d'être notée : la parcelle est enserrée sur trois côtés par les bâtiments du centre de formation et fermée au sud par un talus artificiel. C'est un clos au sens strict, mais dont l'enceinte est faite de bâti et de terre plutôt que de pierre — une variante urbaine de ce qu'on trouve à Opleeuw ou à Duras, avec les mêmes effets d'abri et d'accumulation thermique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bruxelles",
+        "clos-historique",
+        "jeune-domaine"
+      ],
+      "source": "vino.be"
+    },
+    {
+      "id": "be-bruxelles-terr-coteaux-de-schaerbeek-et-josaphat",
+      "nom": "Coteaux de Schaerbeek et Josaphat",
+      "type": "secteur",
+      "region": "Bruxelles-Capitale",
+      "sous_region": "Nord et est de la Région",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "à documenter"
+      ],
+      "altitude": "env. 30-80 m",
+      "sols": "Limons sur sables bruxelliens, versants de la vallée du Maelbeek",
+      "caracteristiques_rapides": "Site du Clos Josaphat, planté en 1974, première vendange en 1983, fermé par la commune en 2010 : le seul vignoble bruxellois disparu dont on puisse dater précisément le début et la fin.",
+      "notes_objectives": "Le seul terroir disparu du corpus belge, et le seul dont on puisse dater précisément le début et la fin. Armand Ell plante quelques pieds à Schaerbeek en 1974, sur les versants de la vallée du Maelbeek ; la première vendange a lieu neuf ans plus tard, en 1983, et le vin est mis en bouteille sous le nom de Clos Josaphat. Le vignoble produit ensuite deux à trois cents bouteilles de rouge par an jusqu'à la dernière grappe, cueillie en octobre 2010, avant que la commune ne procède à sa fermeture.\n\nL'épisode a une valeur documentaire : il rappelle que la viticulture urbaine belge dépend entièrement de la volonté d'une personne et de la tolérance d'une commune, sans protection foncière ni statut. Le vignoble du Kauwberg a failli connaître le même sort en 2006, avant d'être sauvé par une replantation.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "bruxelles",
+        "clos-historique"
+      ],
+      "source": "brusselslife.be"
+    }
+  ]
+}

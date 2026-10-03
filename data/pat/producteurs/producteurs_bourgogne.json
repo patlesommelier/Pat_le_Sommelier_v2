@@ -25,7 +25,7 @@
       "localisation": "Gevrey-Chambertin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -97,7 +97,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -132,7 +132,7 @@
       "localisation": "Meursault",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -167,7 +167,7 @@
       "localisation": "Chambolle-Musigny",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -241,7 +241,7 @@
       "localisation": "Saint-Romain",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -285,7 +285,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -350,7 +350,7 @@
       "localisation": "Meursault",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -385,7 +385,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -423,7 +423,7 @@
       "localisation": "Chambolle-Musigny",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -458,7 +458,7 @@
       "localisation": "Chambolle-Musigny",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -500,7 +500,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -543,7 +543,7 @@
       "localisation": "Chablis (89800), Yonne",
       "statut_production": "culture raisonnée (sans pesticides ni engrais de synthèse, sans certification bio par choix)",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -608,7 +608,7 @@
       "localisation": "Meursault",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -653,7 +653,7 @@
       "localisation": "Chablis (89800), Yonne",
       "statut_production": "biodynamie (adoptée en 2002, non certifiée par choix — 'priorité à la santé des vignes et à l'expression pure du terroir')",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": "50-100",
       "couleurs_principales": [
@@ -761,7 +761,7 @@
       "localisation": "Vinzelles",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -834,7 +834,7 @@
       "localisation": "Volnay",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": ">100",
       "couleurs_principales": [
@@ -954,7 +954,7 @@
       "localisation": "Au cœur du village de Chablis (89800), Yonne",
       "statut_production": "biologique (certifié depuis le millésime 2023, HVE3 avant)",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 5,
       "gamme_prix": "30-50",
       "couleurs_principales": [
@@ -1158,7 +1158,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1189,7 +1189,7 @@
       "localisation": "Pernand-Vergelesses",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1224,7 +1224,7 @@
       "localisation": "Gevrey-Chambertin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1256,7 +1256,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1288,7 +1288,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1325,7 +1325,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1359,7 +1359,7 @@
       "localisation": "Vergisson",
       "statut_production": "biodynamie",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1395,7 +1395,7 @@
       "localisation": "Puligny-Montrachet",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1430,7 +1430,7 @@
       "localisation": "Volnay",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1467,7 +1467,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1504,7 +1504,7 @@
       "localisation": "Chassagne-Montrachet",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 5,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1542,7 +1542,7 @@
       "localisation": "Beaune",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1577,7 +1577,7 @@
       "localisation": "Fuissé",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1612,7 +1612,7 @@
       "localisation": "Bouzeron",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1683,7 +1683,7 @@
       "localisation": "Marsannay-la-Côte",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1718,7 +1718,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1825,7 +1825,7 @@
       "localisation": "Savigny-lès-Beaune",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -1973,7 +1973,7 @@
       "localisation": "Premeaux-Prissey",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2006,7 +2006,7 @@
       "localisation": "Gevrey-Chambertin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2041,7 +2041,7 @@
       "localisation": "Rully",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2111,7 +2111,7 @@
       "localisation": "Nuits-Saint-Georges",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2147,7 +2147,7 @@
       "localisation": "Givry",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2182,7 +2182,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2217,7 +2217,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2250,7 +2250,7 @@
       "localisation": "Milly-Lamartine",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2284,7 +2284,7 @@
       "localisation": "Puligny-Montrachet",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2318,7 +2318,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2353,7 +2353,7 @@
       "localisation": "Saint-Aubin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2387,7 +2387,7 @@
       "localisation": "La Roche-Vineuse",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2421,7 +2421,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2455,7 +2455,7 @@
       "localisation": "Chassagne-Montrachet",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2491,7 +2491,7 @@
       "localisation": "Gevrey-Chambertin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2560,7 +2560,7 @@
       "localisation": "Meursault",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2595,7 +2595,7 @@
       "localisation": "Saint-Aubin",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2630,7 +2630,7 @@
       "localisation": "Pernand-Vergelesses",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2663,7 +2663,7 @@
       "localisation": "Nuits-Saint-Georges",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2731,7 +2731,7 @@
       "localisation": "Fuissé",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2765,7 +2765,7 @@
       "localisation": "Vergisson",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2799,7 +2799,7 @@
       "localisation": "Chorey-lès-Beaune",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2833,7 +2833,7 @@
       "localisation": "Gevrey-Chambertin",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2867,7 +2867,7 @@
       "localisation": "Chassagne-Montrachet",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2903,7 +2903,7 @@
       "localisation": "Puligny-Montrachet",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -2938,7 +2938,7 @@
       "localisation": "Beaune",
       "statut_production": "biodynamie-certifiee",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 4,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3047,7 +3047,7 @@
       "localisation": "Chambolle-Musigny",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3081,7 +3081,7 @@
       "localisation": "Vosne-Romanée",
       "statut_production": "biodynamie",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3114,7 +3114,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3147,7 +3147,7 @@
       "localisation": "Givry",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3181,7 +3181,7 @@
       "localisation": "Morey-Saint-Denis",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3215,7 +3215,7 @@
       "localisation": "Chablis",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3250,7 +3250,7 @@
       "localisation": "Beaune",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 4,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3284,7 +3284,7 @@
       "localisation": "Marsannay-la-Côte",
       "statut_production": "conventionnel-raisonne",
       "niveau_reference": 3,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [
@@ -3354,7 +3354,7 @@
       "localisation": "Beaune",
       "statut_production": "biodynamie",
       "niveau_reference": 3,
-      "connu_de_pat": null,
+      "connu_de_pat": true,
       "ranking_pat": 3,
       "gamme_prix": null,
       "couleurs_principales": [

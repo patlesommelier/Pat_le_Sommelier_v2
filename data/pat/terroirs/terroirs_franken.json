@@ -1,0 +1,670 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "franken",
+  "region_label": "Franken (Allemagne)",
+  "source_file": "terroirs_franken_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 25,
+  "items": [
+    {
+      "id": "de-franken-terr-wuerzburger-stein",
+      "nom": "Würzburger Stein",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "170-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Le plus célèbre coteau de Franconie, au-dessus de Würzburg ; calcaire coquillier au « Steinwein » fumé qu'appréciait Goethe (Juliusspital, Bürgerspital, Hofkeller, am Stein).",
+      "notes_objectives": "Le Würzburger Stein est le plus célèbre terroir de Franconie et l'un des plus historiques d'Allemagne. Vaste coteau de calcaire coquillier (Muschelkalk) dominant la ville de Würzburg, exposé plein sud, il donne le fameux « Steinwein », dont Goethe était si friand qu'il en commandait par caisses entières. Le calcaire confère aux Silvaner et aux Riesling une minéralité fumée et saline très caractéristique, ainsi qu'une belle aptitude à la garde. Le Stein est partagé entre les trois grandes institutions historiques de Würzburg — Juliusspital, Bürgerspital et Staatlicher Hofkeller — ainsi que le Weingut am Stein. Classé en VDP Grosse Lage, le Würzburger Stein est le symbole même du grand Silvaner de Franconie. Avec plus de quatre-vingts hectares, le Stein est un vaste coteau qui domine Würzburg face à la forteresse de Marienberg, dans la zone la plus sèche et la plus chaude de la région. Le calcaire coquillier, pauvre et bien drainé, oblige la vigne à plonger ses racines et donne aux vins leur signature fumée et saline. Le « Steinwein » est l'un des plus anciens vins célèbres d'Allemagne : Goethe s'en faisait expédier des caisses entières, et la plus vieille bouteille de vin encore bue au monde était, dit-on, un Stein de 1540. Aujourd'hui, Juliusspital, Bürgerspital, Hofkeller et le Weingut am Stein y signent des Silvaner et des Riesling racés, dont les Grosses Gewächs comptent parmi les références de la Franconie. Symbole de Würzburg autant que de la région, le Stein est le grand cru qui résume, à lui seul, l'histoire et la grandeur du Silvaner franconien. La singularité du Stein tient aussi à la continuité unique de ses propriétaires : depuis des siècles, les grandes fondations caritatives de Würzburg — un hôpital, un hospice — tirent de ce coteau les revenus de leurs œuvres, ce qui en fait un terroir au service du bien commun. Le « Stein-Harfe », parcelle d'élite du Bürgerspital, et les meilleures cuvées du Juliusspital comptent parmi les plus grands Silvaner secs d'Allemagne, capables de se patiner sur une ou deux décennies. Pour l'amateur, gravir le Stein face à la forteresse de Marienberg, puis goûter le Steinwein, c'est toucher du doigt près de mille ans d'histoire viticole — l'une des plus belles introductions au génie du Silvaner franconien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-escherndorfer-lump",
+      "nom": "Escherndorfer Lump",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-290 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Amphithéâtre vertigineux de calcaire dans une boucle du Main ; l'un des plus grands terroirs de Silvaner (Horst Sauer, Rainer Sauer).",
+      "notes_objectives": "L'Escherndorfer Lump est l'un des plus grands terroirs de Silvaner d'Allemagne, sur les bords du Main à Escherndorf. Ce coteau de calcaire coquillier, lové en amphithéâtre vertigineux dans une boucle de la rivière, exposé plein sud, est l'un des sites les plus chauds et les plus précoces de la région. Le terroir donne des Silvaner d'une grande pureté et d'une finesse remarquable, mais aussi de splendides vins doux botrytisés. Il est indissociable du domaine Horst Sauer, son interprète le plus célèbre, aux côtés de Rainer Sauer. Classé en VDP Grosse Lage, l'Escherndorfer Lump illustre la grandeur du Silvaner sur le calcaire de Franconie. La pente du Lump est si raide qu'on la dit propice au saut à ski : c'est l'un des coteaux les plus vertigineux de Franconie, exposé plein sud dans une boucle du Main qui réfléchit la lumière. La parcelle d'élite « Am Lumpen », mentionnée dès 1655, en est le cœur. Horst Sauer y a bâti une réputation mondiale, avec des Silvaner secs d'une pureté cristalline et des liquoreux botrytisés d'anthologie, plusieurs fois primés ; Rainer Sauer, pionnier du renouveau du cépage, en est l'autre grand interprète. Le calcaire et la chaleur du site donnent des vins à la fois mûrs et tendus, d'une grande finesse. Classé parmi les tout meilleurs terroirs de Franconie, l'Escherndorfer Lump est, avec le Würzburger Stein, l'un des deux noms qui incarnent le grand Silvaner. Le Lump est l'archétype du grand terroir franconien : une pente extrême, une roche calcaire pauvre, une exposition parfaite, et des vignerons d'exception pour le révéler. La diversité de ce qu'il produit — du Silvaner sec ciselé aux nobles liquoreux — témoigne de son équilibre rare entre maturité et fraîcheur. Les vins doux d'Horst Sauer, salués comme parmi les plus grands d'Allemagne, ont fait connaître le Lump bien au-delà des frontières, tandis que ses Grosses Gewächs secs s'imposent comme des références. Pour qui découvre la Franconie, l'Escherndorfer Lump est, avec le Würzburger Stein, le terroir qu'il faut avoir goûté pour comprendre la grandeur du Silvaner.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|apwineimports"
+    },
+    {
+      "id": "de-franken-terr-iphoefer-julius-echter-berg",
+      "nom": "Iphöfer Julius-Echter-Berg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "250-350 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Grand cru de keuper du Steigerwald, nommé d'après le prince-évêque qui promut le Silvaner ; vins structurés et de garde (Wirsching, Ruck, Juliusspital).",
+      "notes_objectives": "L'Iphöfer Julius-Echter-Berg est le grand cru phare du Steigerwald, sur les hauteurs d'Iphofen. Il porte le nom du prince-évêque Julius Echter, qui promut la culture du Silvaner en Franconie. À la différence du calcaire de Würzburg, il repose sur les marnes de keuper (gypse) qui font la singularité du Steigerwald. Le keuper noir, qui emmagasine la chaleur, donne des Silvaner structurés, fumés et d'une grande capacité de garde. Le terroir est exploité par les meilleurs domaines d'Iphofen, dont Hans Wirsching et Johann Ruck, ainsi que par le Juliusspital. Classé en VDP Grosse Lage, le Julius-Echter-Berg illustre la grandeur du Silvaner sur le keuper du Steigerwald. Le prince-évêque Julius Echter, figure majeure de la Franconie au tournant du XVIIe siècle, a tant fait pour le Silvaner que le plus grand cru d'Iphofen porte son nom. Le keuper noir, marne riche en gypse, emmagasine la chaleur et permet une belle maturité malgré l'altitude et le climat plus frais du Steigerwald. À la différence des calcaires de Würzburg, ce sol donne des Silvaner plus fermes, plus fumés et plus structurés, qui peuvent vieillir magnifiquement pendant des décennies. Hans Wirsching et Johann Ruck y signent des Grosses Gewächs de référence, aux côtés du Juliusspital. Dominé par la jolie ville fortifiée d'Iphofen, le Julius-Echter-Berg est le grand cru emblématique du Steigerwald et l'un des sommets du Silvaner de keuper. Le keuper donne aux Silvaner du Julius-Echter-Berg une identité immédiatement reconnaissable : une trame plus serrée, des notes fumées et épicées, et une capacité de garde qui rivalise avec celle des plus grands Riesling. C'est l'un des rares grands terroirs allemands où le Silvaner atteint une telle profondeur. Hans Wirsching, domaine familial pluriséculaire, en est le gardien le plus constant, avec des Grosses Gewächs qui ont prouvé que ce cépage longtemps mésestimé pouvait jouer dans la cour des grands. Dominé par les remparts d'Iphofen, le Julius-Echter-Berg est le symbole du Silvaner de keuper et l'un des plus beaux terroirs du Steigerwald.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "keuper",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-buergstadter-centgrafenberg",
+      "nom": "Bürgstadter Centgrafenberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Mainviereck (Churfranken)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "altitude": "150-260 m",
+      "sols": "grès coloré (Buntsandstein)",
+      "caracteristiques_rapides": "Grand cru de grès coloré du Churfranken ; l'un des plus grands terroirs de Spätburgunder d'Allemagne (Rudolf Fürst).",
+      "notes_objectives": "Le Bürgstadter Centgrafenberg est le plus grand terroir de Spätburgunder (Pinot Noir) de Franconie, dans le Churfranken, à l'ouest de la région. Loin du calcaire et du keuper, il repose sur des sols de grès coloré (Buntsandstein) qui réchauffent le sol et conviennent idéalement au Pinot. Le terroir donne des Spätburgunder d'une finesse et d'une profondeur remarquables, parmi les plus grands d'Allemagne, dont sa parcelle d'élite, le Hundsrück. Il est indissociable du domaine Rudolf Fürst, qui en est le maître absolu. Classé en VDP Grosse Lage, le Centgrafenberg illustre la vocation rouge et méconnue de la Franconie, sur le grès coloré du Churfranken. Le Churfranken, à l'ouest de la région le long du Main, est un monde à part : on y cultive le Pinot Noir sur des grès rouges qui évoquent la Bourgogne plus que la Franconie du Silvaner. Le Centgrafenberg, exposé au sud, en est le joyau, et sa parcelle d'élite du Hundsrück l'un des plus grands terroirs rouges d'Allemagne. Paul puis Sebastian Fürst, formés à la bourguignonne, y signent des Spätburgunder d'une finesse et d'une profondeur saluées dans le monde entier, dont les prix rivalisent avec ceux de grands bourgognes. Souvent décrit comme le plus grand terroir de Pinot Noir d'Allemagne hors de Baden et de l'Ahr, le Centgrafenberg illustre la facette rouge, méconnue et fascinante, de la Franconie. L'ascension du Centgrafenberg illustre la révolution qualitative de la Franconie : en une génération, Paul Fürst a hissé ce coteau de grès, longtemps confidentiel, au rang des plus grands terroirs de Pinot Noir du pays. Le sol rouge, chaud et bien drainé, conjugué à une vinification d'inspiration bourguignonne, donne des vins d'une élégance et d'une longueur remarquables. Aujourd'hui, Sebastian Fürst perpétue et affine ce style, et les Grosses Gewächs du Centgrafenberg — au premier rang desquels le Hundsrück — s'arrachent auprès des amateurs du monde entier. Pour qui s'intéresse au Pinot Noir allemand, le Centgrafenberg est, avec les grands crus de Baden et de l'Ahr, une étape incontournable.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "buntsandstein",
+        "spaetburgunder",
+        "vdp-grosse-lage",
+        "silvaner",
+        "mainviereck"
+      ],
+      "source": "vdp.de|grapeguru"
+    },
+    {
+      "id": "de-franken-terr-wuerzburger-innere-leiste",
+      "nom": "Würzburger Innere Leiste",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau escarpé de Würzburg, sous la forteresse de Marienberg ; Silvaner et Riesling racés sur calcaire (Hofkeller, Bürgerspital).",
+      "notes_objectives": "La Würzburger Innere Leiste est un grand cru de Würzburg, sur un coteau escarpé de calcaire coquillier au pied de la forteresse de Marienberg. Bien exposé, il donne des Silvaner et des Riesling racés et minéraux. Le terroir est notamment exploité par le Staatlicher Hofkeller et le Bürgerspital. Classé en VDP Grosse Lage, l'Innere Leiste complète, aux côtés du Stein, le patrimoine de grands terroirs calcaires de la capitale franconienne. Voisine immédiate du Stein, l'Innere Leiste s'accroche à une pente raide juste sous la forteresse de Marienberg, emblème de Würzburg. Son calcaire bien exposé donne des Silvaner et des Riesling racés et tendus. Le Staatlicher Hofkeller et le Bürgerspital en sont les principaux interprètes. Le cru illustre, aux côtés du Stein, la richesse des grands terroirs calcaires qui ceinturent la capitale franconienne. Historiquement réputée, l'Innere Leiste partage avec le Stein la minéralité fumée du calcaire de Würzburg, dans un registre parfois plus tendu encore en raison de sa forte pente. Ses Silvaner et Riesling, racés et de garde, confirment que Würzburg, autour de sa forteresse, concentre quelques-uns des plus beaux terroirs de toute la Franconie. Elle demeure l'un des grands terroirs calcaires de Würzburg, dans l'ombre prestigieuse du Stein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-escherndorfer-fuerstenberg",
+      "nom": "Escherndorfer Fürstenberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "190-290 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire voisin du Lump, à Escherndorf ; Silvaner fins et salins (Horst Sauer).",
+      "notes_objectives": "L'Escherndorfer Fürstenberg est un grand cru de calcaire coquillier voisin du célèbre Lump, à Escherndorf. Bien exposé, il donne des Silvaner et des Riesling fins et salins. Le terroir est notamment exploité par le domaine Horst Sauer. Classé en VDP Grosse Lage, le Fürstenberg illustre, aux côtés du Lump, la qualité des terroirs calcaires d'Escherndorf. Situé à côté du célèbre Lump, le Fürstenberg partage le même calcaire coquillier et la même belle exposition, pour des Silvaner et Riesling fins et salins, souvent un peu plus accessibles. Le domaine Horst Sauer en est l'un des interprètes. Le cru illustre la qualité d'ensemble des coteaux d'Escherndorf, l'un des hauts lieux du Silvaner du Maindreieck. Dans l'ombre du prestigieux Lump, le Fürstenberg n'en demeure pas moins un beau terroir calcaire, dont les Silvaner allient fraîcheur et salinité. Il participe pleinement à la réputation d'Escherndorf, village qui doit beaucoup au talent de la famille Sauer et compte parmi les hauts lieux du Silvaner du Maindreieck. Il complète idéalement le Lump dans la palette des grands coteaux d'Escherndorf.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|apwineimports"
+    },
+    {
+      "id": "de-franken-terr-randersackerer-pfuelben",
+      "nom": "Randersackerer Pfülben",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-270 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "L'un des grands crus de Randersacker, exposé plein sud sur calcaire ; Silvaner et Riesling profonds (Schmitt's Kinder, Juliusspital).",
+      "notes_objectives": "Le Randersackerer Pfülben est l'un des grands crus de Randersacker, au sud de Würzburg, sur un coteau de calcaire coquillier exposé plein sud. Cette situation idéale donne des Silvaner et des Riesling profonds et de garde. Le terroir est exploité par des domaines comme Schmitt's Kinder et le Juliusspital. Classé en VDP Grosse Lage, le Pfülben compte parmi les meilleurs terroirs calcaires du Maindreieck. Souvent cité parmi les meilleurs terroirs calcaires de Franconie, le Pfülben bénéficie d'une exposition plein sud idéale, qui donne des Silvaner et des Riesling profonds, mûrs et de longue garde. Schmitt's Kinder et le Juliusspital en sont de grands interprètes. Le cru fait de Randersacker, au sud de Würzburg, l'un des villages phares du Silvaner du Maindreieck. La réputation du Pfülben remonte à des siècles, et le cru figure régulièrement parmi les meilleurs terroirs calcaires d'Allemagne pour le Silvaner. Sa belle exposition et son sol bien drainé donnent des vins mûrs mais d'une grande fraîcheur, taillés pour la garde. Le Pfülben demeure le fleuron de Randersacker et l'un des sommets calcaires de la région. Il reste, pour beaucoup d'amateurs, le plus grand cru calcaire de la région après le Würzburger Stein.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-randersackerer-teufelskeller",
+      "nom": "Randersackerer Teufelskeller",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Grand coteau de calcaire à Randersacker ; Silvaner racés et de garde (Schmitt's Kinder, Störrlein).",
+      "notes_objectives": "Le Randersackerer Teufelskeller est un grand cru de Randersacker, sur un coteau de calcaire coquillier bien exposé. Il donne des Silvaner racés et de garde. Le terroir est notamment exploité par Schmitt's Kinder et Störrlein. Classé en VDP Grosse Lage, le Teufelskeller illustre, aux côtés du Pfülben, la qualité des terroirs de Randersacker. Sur son calcaire bien exposé, le Teufelskeller donne des Silvaner racés et de garde, dans le style salin et fumé propre à Randersacker. Schmitt's Kinder et Störrlein en sont des interprètes réputés. Aux côtés du Pfülben et du Marsberg, le Teufelskeller confirme le statut de Randersacker parmi les grands villages calcaires de la région. Au nom évocateur, le Teufelskeller offre des Silvaner et Riesling racés, fidèles au style salin et fumé de Randersacker. Voisin du Pfülben, il bénéficie du même grand environnement calcaire et confirme la place de ce village, au sud de Würzburg, parmi les références du Silvaner du Maindreieck. Il confirme la richesse des grands coteaux calcaires de Randersacker, au sud de Würzburg.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-iphoefer-kronsberg",
+      "nom": "Iphöfer Kronsberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling",
+        "Scheurebe"
+      ],
+      "altitude": "250-350 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Grand cru de keuper d'Iphofen ; Silvaner structurés et cépages aromatiques (Wirsching, Ruck).",
+      "notes_objectives": "L'Iphöfer Kronsberg est un grand cru de keuper du Steigerwald, à Iphofen. Bien exposé, il donne des Silvaner structurés ainsi que de beaux cépages aromatiques comme la Scheurebe. Le terroir est exploité par Hans Wirsching et Johann Ruck. Classé en VDP Grosse Lage, le Kronsberg illustre, aux côtés du Julius-Echter-Berg, l'excellence des terroirs de keuper d'Iphofen. Grand coteau de keuper voisin du Julius-Echter-Berg, le Kronsberg donne des Silvaner structurés ainsi que de remarquables cépages aromatiques, notamment la Scheurebe. Hans Wirsching et Johann Ruck en sont les grands interprètes. Le cru illustre la richesse des terroirs de keuper d'Iphofen, dont les vins se distinguent par leur fermeté et leur minéralité fumée. Le Kronsberg est réputé non seulement pour ses Silvaner de keuper, mais aussi pour ses cépages aromatiques, dont la Scheurebe atteint ici une finesse remarquable. Wirsching et Ruck en font des cuvées de référence. Avec le Julius-Echter-Berg et le Kalb, le Kronsberg fait d'Iphofen le cœur battant du Steigerwald viticole. Il demeure l'un des terroirs de keuper les plus complets du Steigerwald.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-iphoefer-kalb",
+      "nom": "Iphöfer Kalb",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "250-340 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Coteau de keuper d'Iphofen ; Silvaner fins et minéraux (Wirsching).",
+      "notes_objectives": "L'Iphöfer Kalb est un grand cru de keuper d'Iphofen, dans le Steigerwald. Bien exposé, il donne des Silvaner fins et minéraux. Le terroir est notamment exploité par le domaine Hans Wirsching. Classé en VDP Grosse Lage, le Kalb complète la remarquable série des grands crus de keuper d'Iphofen. Sur le keuper d'Iphofen, le Kalb donne des Silvaner fins et minéraux, fidèles au style ferme et fumé du Steigerwald. Le domaine Hans Wirsching en est l'interprète attitré. Avec le Julius-Echter-Berg et le Kronsberg, le Kalb complète la remarquable constellation de grands crus de keuper qui font d'Iphofen la capitale du Steigerwald viticole. Sur le keuper d'Iphofen, le Kalb donne des Silvaner d'une grande finesse minérale, parfois un peu plus délicats que ceux du Julius-Echter-Berg. Magnifié par Hans Wirsching, il complète la remarquable série des grands crus d'Iphofen et illustre la diversité, sur quelques coteaux, des terroirs de keuper du Steigerwald. Il participe pleinement au prestige d'Iphofen, capitale du Silvaner de keuper.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|apwineimports"
+    },
+    {
+      "id": "de-franken-terr-roedelseer-kuechenmeister",
+      "nom": "Rödelseer Küchenmeister",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "250-340 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Grand cru de keuper de Rödelsee ; Silvaner droits et salins (Weltner, Juliusspital).",
+      "notes_objectives": "Le Rödelseer Küchenmeister est un grand cru de keuper du Steigerwald, à Rödelsee. Bien exposé, il donne des Silvaner droits et salins. Le terroir est exploité par des domaines comme Weltner et le Juliusspital. Classé en VDP Grosse Lage, le Küchenmeister illustre la qualité des terroirs de keuper de Rödelsee, voisins de ceux d'Iphofen. Sur le keuper de Rödelsee, voisin d'Iphofen, le Küchenmeister donne des Silvaner droits, salins et structurés. Weltner, spécialiste du Silvaner, et le Juliusspital en sont les interprètes. Le cru illustre la qualité des terroirs de keuper de Rödelsee, qui prolongent ceux d'Iphofen au cœur du Steigerwald. Voisin immédiat des grands crus d'Iphofen, le Küchenmeister partage le même keuper et donne des Silvaner droits et salins, magnifiés par le domaine Weltner. Le cru illustre la continuité des grands terroirs de keuper entre Iphofen et Rödelsee, qui forment ensemble l'épicentre du Silvaner du Steigerwald. Il prolonge, à Rödelsee, l'excellence des grands terroirs de keuper d'Iphofen.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-casteller-schlossberg",
+      "nom": "Casteller Schlossberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "260-350 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Grand cru de keuper de Castell, dans un domaine où le Silvaner aurait été planté pour la première fois en Franconie (Fürstlich Castell).",
+      "notes_objectives": "Le Casteller Schlossberg est le grand cru du village de Castell, dans le Steigerwald, sur les marnes de keuper. Le village a la particularité d'appartenir entièrement à la famille princière de Castell, là où le Silvaner aurait été planté pour la première fois en Franconie. Le terroir donne des Silvaner racés et de garde, exploités par le domaine Fürstlich Castell. Classé en VDP Grosse Lage, le Schlossberg illustre les racines historiques du Silvaner de Franconie. Le village de Castell appartient depuis des siècles à la famille princière éponyme, qui en possède l'intégralité des vignes — un cas rare évoquant les monopoles bourguignons. C'est ici, dit-on, que le premier Silvaner de Franconie fut planté en 1659. Sur le keuper du Schlossberg, le domaine Fürstlich Castell signe des Silvaner racés et de garde, chargés d'histoire. Berceau revendiqué du Silvaner en Franconie, le Schlossberg de Castell est chargé d'une histoire unique. Le keuper y donne des Silvaner structurés et de garde, vinifiés par le domaine princier qui possède tout le vignoble du village. Le cru illustre, mieux qu'aucun autre, les racines historiques du cépage roi de la région. Berceau du Silvaner franconien, il demeure un terroir chargé d'histoire.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "historique",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-casteller-kugelspiel",
+      "nom": "Casteller Kugelspiel",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "260-350 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Grand cru de keuper de Castell ; Silvaner structurés et de garde (Fürstlich Castell).",
+      "notes_objectives": "Le Casteller Kugelspiel est un grand cru de keuper de Castell, dans le Steigerwald. Bien exposé, il donne des Silvaner structurés et de garde. Le terroir est exploité par le domaine Fürstlich Castell, qui possède l'ensemble des vignes du village. Classé en VDP Grosse Lage, le Kugelspiel complète, aux côtés du Schlossberg, le patrimoine de terroirs de Castell. Sur le keuper de Castell, le Kugelspiel donne des Silvaner structurés et de garde, dans le style fumé du Steigerwald. Comme tout le vignoble du village, il est exploité par le domaine Fürstlich Castell. Aux côtés du Schlossberg, le Kugelspiel illustre le patrimoine de terroirs unique de Castell, berceau historique du Silvaner franconien. Sur le keuper de Castell, le Kugelspiel donne des Silvaner fermes et de garde, dans le style fumé du Steigerwald. Comme le Schlossberg, il appartient en totalité au domaine Fürstlich Castell, ce qui en garantit une exploitation cohérente et soignée. Le cru complète le patrimoine de terroirs exceptionnel de ce village princier. Il complète, aux côtés du Schlossberg, le patrimoine de terroirs unique de Castell.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "vdp-grosse-lage",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-klingenberger-schlossberg",
+      "nom": "Klingenberger Schlossberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Mainviereck (Churfranken)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "150-250 m",
+      "sols": "grès coloré (Buntsandstein)",
+      "caracteristiques_rapides": "Coteau de grès coloré en terrasses du Churfranken ; grand terroir de Spätburgunder (Rudolf Fürst, Stadt Klingenberg).",
+      "notes_objectives": "Le Klingenberger Schlossberg est un grand cru du Churfranken, sur des terrasses de grès coloré (Buntsandstein) au-dessus de Klingenberg. Cette géologie rouge, rare en Franconie, est idéale pour le Spätburgunder. Le terroir donne des Pinots Noirs profonds et racés, exploités par Rudolf Fürst et la ville de Klingenberg. Classé en VDP Grosse Lage, le Schlossberg illustre, aux côtés du Centgrafenberg, la vocation rouge du Churfranken. Accroché à des terrasses de grès coloré au-dessus de Klingenberg, dans le Churfranken, le Schlossberg est, avec le Centgrafenberg voisin, l'un des grands terroirs rouges de Franconie. Le grès, qui réchauffe le sol, donne des Spätburgunder profonds et racés. Rudolf Fürst et la ville de Klingenberg en sont les interprètes, confirmant la vocation bourguignonne du Churfranken. Les terrasses de grès rouge de Klingenberg comptent parmi les plus belles du Churfranken. Le sol chaud y donne des Spätburgunder profonds et racés, magnifiés par Rudolf Fürst. Avec le Centgrafenberg, le Schlossberg de Klingenberg confirme que l'ouest de la Franconie est l'une des grandes terres de Pinot Noir d'Allemagne, à la géologie unique dans la région. Il confirme, avec le Centgrafenberg, la grandeur rouge du Churfranken.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "buntsandstein",
+        "spaetburgunder",
+        "vdp-grosse-lage",
+        "silvaner",
+        "mainviereck"
+      ],
+      "source": "vdp.de|jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-homburger-kallmuth",
+      "nom": "Homburger Kallmuth",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Mainviereck (Churfranken)",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "170-300 m",
+      "sols": "grès coloré et calcaire (coteau en terrasses)",
+      "caracteristiques_rapides": "Coteau en terrasses spectaculaire au bord du Main, à la flore rare ; Silvaner singuliers (Fürst zu Löwenstein).",
+      "notes_objectives": "Le Homburger Kallmuth est l'un des terroirs les plus spectaculaires d'Allemagne : un coteau en terrasses vertigineuses au bord du Main, à la flore rare et protégée, sur des sols mêlant grès coloré et calcaire. Le terroir donne des Silvaner d'une grande personnalité, exploités par le domaine Fürst zu Löwenstein. Classé en VDP Grosse Lage, le Kallmuth illustre la diversité des terroirs de l'ouest de la Franconie, entre Maindreieck et Churfranken. Le Kallmuth est l'un des paysages viticoles les plus spectaculaires d'Allemagne : un immense coteau en terrasses au-dessus du Main, classé pour sa flore et sa faune rares, sur un sol singulier mêlant grès et calcaire. Le domaine Fürst zu Löwenstein, conduit en bio, y signe des Silvaner d'une grande personnalité. Le cru illustre la diversité des terroirs de l'ouest de la Franconie. Coteau-monument aux terrasses de pierre sèche, le Kallmuth est autant un site naturel protégé qu'un grand terroir. Son sol singulier et son microclimat donnent des Silvaner d'une grande personnalité, vinifiés en bio par le domaine Fürst zu Löwenstein. Le cru illustre la diversité géologique de l'ouest de la Franconie, à la transition entre Maindreieck et Churfranken. Coteau-monument, il est l'un des sites les plus spectaculaires du vignoble allemand.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "terrasses",
+        "buntsandstein",
+        "vdp-grosse-lage",
+        "silvaner",
+        "mainviereck"
+      ],
+      "source": "apwineimports|starwinelist"
+    },
+    {
+      "id": "de-franken-terr-sulzfelder-maustal",
+      "nom": "Sulzfelder Maustal",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Grand cru de calcaire de Sulzfeld ; Silvaner profonds et salins en bio (Zehnthof Luckert).",
+      "notes_objectives": "Le Sulzfelder Maustal est un grand cru de calcaire coquillier à Sulzfeld, sur les bords du Main. Bien exposé, il donne des Silvaner profonds et salins. Le terroir est magnifié par le domaine bio Zehnthof Luckert, l'une des références du Silvaner de Franconie. Classé en VDP Grosse Lage, le Maustal illustre la qualité des terroirs calcaires du Maindreieck. Sur le calcaire coquillier de Sulzfeld, le Maustal donne des Silvaner profonds et salins, magnifiés par le domaine bio Zehnthof Luckert, l'une des références qualitatives de la région. Vinifiés avec patience, ces vins comptent parmi les plus aboutis de la Franconie. Le cru illustre l'essor d'une viticulture exigeante et respectueuse au cœur du Maindreieck. Le Maustal doit une grande part de sa réputation au domaine bio Zehnthof Luckert, qui en a révélé toute la profondeur. Ses Silvaner, longuement élevés et d'une grande salinité, comptent parmi les plus aboutis de la région. Le cru illustre la qualité des terroirs calcaires de Sulzfeld et l'essor d'une viticulture exigeante dans le Maindreieck. Il s'impose comme l'un des grands terroirs bio du Silvaner de Franconie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "bio",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "jessebeckerms|vdp.de"
+    },
+    {
+      "id": "de-franken-terr-retzstadter-langenberg",
+      "nom": "Retzstadter Langenberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "200-300 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Retzstadt ; Silvaner et Riesling précis (Rudolf May).",
+      "notes_objectives": "Le Retzstadter Langenberg est un grand coteau de calcaire coquillier à Retzstadt, au nord-ouest de Würzburg. Bien exposé, il donne des Silvaner et des Riesling précis et minéraux. Le terroir est magnifié par Rudolf May, l'une des étoiles montantes de la région. Classé en VDP Grosse Lage, le Langenberg illustre le renouveau des terroirs calcaires du Maindreieck. Sur le calcaire de Retzstadt, au nord-ouest de Würzburg, le Langenberg donne des Silvaner et des Riesling précis et minéraux. Il est magnifié par Rudolf May, l'une des étoiles montantes de la Franconie. Le cru illustre le renouveau des terroirs calcaires du Maindreieck, porté par une nouvelle génération de vignerons ambitieux. Le Langenberg illustre le renouveau des terroirs calcaires du nord-ouest de Würzburg, porté par le talent de Rudolf May, l'une des révélations de la Franconie. Ses Silvaner et Riesling, d'une grande précision, confirment que la région recèle encore de beaux terroirs à révéler, entre les mains d'une nouvelle génération ambitieuse. Il symbolise le renouveau des terroirs calcaires du Maindreieck.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-franken-terr-volkacher-karthaeuser",
+      "nom": "Volkacher Karthäuser",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Volkach ; Silvaner racés (Juliusspital).",
+      "notes_objectives": "Le Volkacher Karthäuser est un grand cru de calcaire coquillier à Volkach, dans le cœur du Maindreieck. Bien exposé, il donne des Silvaner racés et de belle facture. Le terroir est notamment exploité par le Juliusspital. Classé en VDP Grosse Lage, le Karthäuser illustre la qualité des terroirs calcaires du secteur de Volkach. Sur le calcaire de Volkach, le Karthäuser donne des Silvaner racés et de belle facture. Le Juliusspital en est l'un des principaux interprètes. Le cru illustre la qualité des terroirs calcaires du secteur de Volkach, jolie ville viticole au cœur du Maindreieck, dans une boucle du Main. Sur le calcaire de Volkach, le Karthäuser donne des Silvaner racés, exploités notamment par le Juliusspital. Le cru illustre la qualité des terroirs du secteur de Volkach, niché dans une boucle du Main, l'un des paysages viticoles les plus charmants de la Franconie. Il illustre le charme des terroirs calcaires du secteur de Volkach.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "vdp-grosse-lage",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-franken-terr-randersackerer-marsberg",
+      "nom": "Randersackerer Marsberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Randersacker, exposé au sud-ouest ; Silvaner et Riesling de belle facture.",
+      "notes_objectives": "Le Randersackerer Marsberg est un coteau de calcaire coquillier à Randersacker, exposé au sud-ouest. Il donne des Silvaner et des Riesling de belle facture. Voisin des grands crus du Pfülben et du Teufelskeller, il illustre la qualité d'ensemble des terroirs de Randersacker, l'un des hauts lieux du Silvaner du Maindreieck. Bien exposé au sud-ouest, le Marsberg complète, aux côtés du Pfülben et du Teufelskeller, la belle série des coteaux calcaires de Randersacker. Ses Silvaner et Riesling, fins et salins, confirment la place de ce village parmi les hauts lieux du Silvaner du Maindreieck, au sud de Würzburg. Apprécié pour la finesse de ses vins, il participe à la réputation d'ensemble de Randersacker, l'un des grands villages calcaires du Maindreieck. Bien exposé, il offre des Silvaner d'un excellent rapport qualité-prix au sein d'un grand village calcaire.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-roedelseer-schwanleite",
+      "nom": "Rödelseer Schwanleite",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Steigerwald",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "250-340 m",
+      "sols": "marnes de keuper (gypse)",
+      "caracteristiques_rapides": "Coteau de keuper de Rödelsee ; Silvaner minéraux du Steigerwald (Weltner).",
+      "notes_objectives": "Le Rödelseer Schwanleite est un coteau de keuper du Steigerwald, à Rödelsee. Il donne des Silvaner minéraux et droits, dans le style fumé caractéristique du keuper. Le terroir est notamment exploité par le domaine Weltner. Il complète, aux côtés du Küchenmeister, la palette des terroirs de Rödelsee. Sur le keuper de Rödelsee, la Schwanleite donne des Silvaner minéraux et droits, dans le style fumé caractéristique du Steigerwald. Exploitée notamment par le domaine Weltner, elle complète, aux côtés du Küchenmeister, la palette des bons terroirs de Rödelsee. Elle confirme la qualité des terroirs de keuper de Rödelsee, dans le sillage des grands crus d'Iphofen voisins. Elle compte parmi les bons terroirs de keuper du Steigerwald, prisés des amateurs de Silvaner minéral.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "keuper",
+        "grand-coteau",
+        "silvaner",
+        "steigerwald"
+      ],
+      "source": "vdp.de"
+    },
+    {
+      "id": "de-franken-terr-sulzfelder-cyriakusberg",
+      "nom": "Sulzfelder Cyriakusberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Sulzfeld ; Silvaner salins (Zehnthof Luckert).",
+      "notes_objectives": "Le Sulzfelder Cyriakusberg est un coteau de calcaire coquillier à Sulzfeld, voisin du grand Maustal. Il donne des Silvaner salins et fins. Le terroir est exploité par le domaine Zehnthof Luckert. Il illustre la qualité des coteaux calcaires de Sulzfeld, dans le Maindreieck. Voisin du grand Maustal, le Cyriakusberg partage le calcaire coquillier de Sulzfeld et donne des Silvaner salins et fins. Exploité par le domaine Zehnthof Luckert, il illustre la qualité des coteaux calcaires de Sulzfeld, dans le Maindreieck. Dans le sillage du grand Maustal, il illustre la qualité des coteaux calcaires de Sulzfeld, travaillés en bio par le Zehnthof Luckert. Il bénéficie du savoir-faire bio du Zehnthof Luckert, l'une des références de la région.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "jessebeckerms"
+    },
+    {
+      "id": "de-franken-terr-frickenhaeuser-kapellenberg",
+      "nom": "Frickenhäuser Kapellenberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-270 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Frickenhausen, classé, exposé au sud ; Silvaner et Riesling fins (Bickel-Stumpf).",
+      "notes_objectives": "Le Frickenhäuser Kapellenberg est un coteau classé de calcaire coquillier à Frickenhausen, exposé plein sud. Il donne des Silvaner et des Riesling fins et salins. Le terroir est notamment exploité par le domaine Bickel-Stumpf. Il illustre la qualité des terroirs calcaires du Maindreieck, au sud de Würzburg. Coteau classé exposé plein sud, le Kapellenberg de Frickenhausen donne des Silvaner et des Riesling fins et salins. Exploité notamment par Bickel-Stumpf, il illustre la qualité des terroirs calcaires du Maindreieck, au sud de Würzburg, dans le secteur de Frickenhausen. Coteau classé bien exposé, il confirme le potentiel des terroirs calcaires du secteur de Frickenhausen, au sud de Würzburg. Coteau classé, il offre des Silvaner fins à des prix encore mesurés.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "jessebeckerms|winedexer"
+    },
+    {
+      "id": "de-franken-terr-sommeracher-katzenkopf",
+      "nom": "Sommeracher Katzenkopf",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Müller-Thurgau"
+      ],
+      "altitude": "190-260 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Sommerach, exposé au sud ; Silvaner juteux et fruités.",
+      "notes_objectives": "Le Sommeracher Katzenkopf est un grand coteau de calcaire coquillier à Sommerach, exposé au sud. Il donne des Silvaner juteux et fruités, à la minéralité saline. Réputé de longue date, le terroir illustre la qualité des coteaux ensoleillés du Maindreieck, dans le secteur de Volkach et Sommerach. Grand coteau ensoleillé exposé au sud, le Katzenkopf de Sommerach est réputé de longue date pour ses Silvaner juteux et fruités, à la minéralité saline. Il illustre la qualité des terroirs calcaires du secteur de Volkach et Sommerach, dans le cœur du Maindreieck. Réputé depuis longtemps, il demeure l'un des terroirs emblématiques du secteur ensoleillé de Sommerach, dans le Maindreieck. Il demeure l'un des coteaux les plus réputés du secteur de Sommerach.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "apwineimports"
+    },
+    {
+      "id": "de-franken-terr-volkacher-ratsherr",
+      "nom": "Volkacher Ratsherr",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "190-280 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau de calcaire de Volkach ; Silvaner accessibles et de belle facture (Max Müller I).",
+      "notes_objectives": "Le Volkacher Ratsherr est un coteau de calcaire coquillier à Volkach. Il donne des Silvaner accessibles et de belle facture. Le terroir est notamment exploité par le domaine Max Müller I. Il illustre la qualité des terroirs calcaires du cœur du Maindreieck, autour de la jolie ville viticole de Volkach. Sur le calcaire de Volkach, le Ratsherr donne des Silvaner accessibles et de belle facture, exploités notamment par Max Müller I. Il illustre la qualité des coteaux calcaires autour de Volkach, l'une des plus jolies villes viticoles de la Franconie. Il illustre la qualité accessible des coteaux calcaires de Volkach, autour de l'une des plus jolies villes viticoles de la région. Il offre une belle porte d'entrée vers les Silvaner du secteur de Volkach.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "de-franken-terr-thuengersheimer-scharlachberg",
+      "nom": "Thüngersheimer Scharlachberg",
+      "type": "lieu-dit",
+      "region": "Franken",
+      "sous_region": "Maindreieck",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "altitude": "180-270 m",
+      "sols": "calcaire coquillier et grès coloré",
+      "caracteristiques_rapides": "Coteau de Thüngersheim mêlant calcaire et grès ; Silvaner et Riesling fins (Bickel-Stumpf).",
+      "notes_objectives": "Le Thüngersheimer Scharlachberg est un coteau de Thüngersheim mêlant calcaire coquillier et grès coloré. Bien exposé, il donne des Silvaner et des Riesling fins. Le terroir est notamment exploité par le domaine Bickel-Stumpf. Il illustre la diversité géologique des terroirs du nord du Maindreieck. Mêlant calcaire coquillier et grès coloré, le Scharlachberg de Thüngersheim donne des Silvaner et des Riesling fins, à la minéralité particulière. Exploité notamment par Bickel-Stumpf, il illustre la diversité géologique des terroirs du nord du Maindreieck. Son mélange de calcaire et de grès en fait un terroir singulier du nord du Maindreieck, à la minéralité particulière. Sa double nature géologique en fait une curiosité du nord du Maindreieck.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "muschelkalk",
+        "grand-coteau",
+        "silvaner",
+        "maindreieck"
+      ],
+      "source": "winedexer"
+    }
+  ]
+}

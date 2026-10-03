@@ -1,0 +1,683 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "baden",
+  "region_label": "Baden (Allemagne)",
+  "source_file": "terroirs_baden_To_Import.xlsx",
+  "built_at": "2026-06-13",
+  "count": 26,
+  "items": [
+    {
+      "id": "de-baden-terr-ihringer-winklerberg",
+      "nom": "Ihringer Winklerberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "200-330 m",
+      "sols": "roche volcanique altérée (Vulkangestein) et lœss",
+      "caracteristiques_rapides": "Coteau volcanique en terrasses d'Ihringen, réputé site le plus chaud d'Allemagne ; grand cru du Spätburgunder et du Grauburgunder (Dr. Heger, Stigler).",
+      "notes_objectives": "L'Ihringer Winklerberg, au-dessus d'Ihringen sur le Kaiserstuhl, est l'un des plus grands terroirs d'Allemagne et passe pour le site le plus chaud du pays. Ses coteaux en terrasses, façonnés dans la roche volcanique altérée et coiffés de lœss, dévalent en pentes vertigineuses exposées au sud et au sud-ouest. Ce microclimat quasi méditerranéen — où prospèrent lézards verts et orchidées sauvages — et la capacité des roches volcaniques sombres à emmagasiner la chaleur offrent au raisin une maturité exceptionnelle, même dans les millésimes frais. Le Winklerberg est le berceau de grands Spätburgunder, profonds, épicés et de longue garde, mais aussi de Grauburgunder et de Weissburgunder d'une rare densité. Le domaine Dr. Heger en est l'interprète le plus célèbre, avec des parcelles mythiques comme le « Häusleboden », aux côtés de Stigler et de Franz Keller. Réaménagé en larges terrasses lors du remembrement des années 1960, le coteau conjugue aujourd'hui patrimoine viticole et excellence. Classé en VDP Grosse Lage, l'Ihringer Winklerberg demeure l'un des sommets absolus de Baden et l'un des terroirs volcaniques les plus prestigieux du vignoble allemand. La géologie du coteau est complexe : aux roches volcaniques du cœur du Kaiserstuhl s'ajoutent d'épais dépôts de lœss éolien, qui apportent réserve hydrique et finesse. Les parties les plus raides, comme la « Wanne », exigent un travail entièrement manuel sur des terrasses étroites où chaque pied de vigne compte. Le domaine Dr. Heger y produit des Grosses Gewächs de Spätburgunder, de Weissburgunder et de Grauburgunder qui figurent parmi les plus grands d'Allemagne, vinifiés parcelle par parcelle ; Stigler et Franz Keller en livrent d'autres lectures, toujours marquées par cette signature volcanique épicée et saline. Au-delà du vin, le Winklerberg est un sanctuaire de biodiversité, où la chaleur permet à une flore et une faune méditerranéennes de prospérer. Site d'exception à tous égards, il incarne l'âme volcanique et solaire du Kaiserstuhl. Connu et exploité depuis l'époque romaine, le Winklerberg a été l'un des premiers sites allemands à révéler le potentiel du Spätburgunder dès les années 1980, grâce notamment à Joachim Heger. Sa réputation a largement contribué à faire reconnaître le Kaiserstuhl, et plus largement Baden, comme une grande région de Pinot Noir. Aujourd'hui, les meilleures parcelles, classées au sommet de la hiérarchie du VDP, donnent des vins recherchés dans le monde entier, dont la garde se compte en décennies pour les plus grands millésimes.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-malterdinger-bienenberg",
+      "nom": "Malterdinger Bienenberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Chardonnay"
+      ],
+      "altitude": "220-300 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Grand cru calcaire de Malterdingen, terroir de prédilection de Bernhard Huber ; références mondiales du Spätburgunder et du Chardonnay badois.",
+      "notes_objectives": "Le Malterdinger Bienenberg, dans le Breisgau, est le terroir qui a révélé la vocation bourguignonne de Baden. À la différence des sols volcaniques du Kaiserstuhl voisin, il repose sur le calcaire coquillier (Muschelkalk), si proche des sols de la Côte d'Or — un héritage que des moines cisterciens venus de Bourgogne auraient mis en valeur dès le Moyen Âge, le Pinot y étant alors appelé « Malterer ». Sur ces pentes calcaires bien exposées, le Spätburgunder et le Chardonnay atteignent une finesse et une tension minérale remarquables. Le Bienenberg est indissociable du domaine Bernhard Huber, qui en a fait l'un des plus grands crus de Pinot Noir et de Chardonnay d'Allemagne, à la garde impressionnante. Classé en VDP Grosse Lage, le Malterdinger Bienenberg illustre l'idée d'une « Bourgogne badoise » : un terroir de calcaire où les cépages bourguignons donnent des vins d'une élégance et d'une profondeur de rang international. Là où le Kaiserstuhl mise sur la puissance volcanique, le Bienenberg joue la fraîcheur et la tension du calcaire : ses vins se distinguent par une trame minérale ciselée et une remarquable capacité de vieillissement. Bernhard Huber, puis son fils Julian, y ont élevé le Spätburgunder au rang des plus grands Pinots du pays, tandis que leur Chardonnay du Bienenberg compte parmi les meilleurs d'Allemagne, rivalisant avec de beaux bourgognes blancs. Les meilleures cuvées atteignent aujourd'hui, aux enchères, des prix dignes de grands crus internationaux. Symbole de la « Bourgogne badoise », le Bienenberg a prouvé que le calcaire du Breisgau, conjugué à un travail d'orfèvre, pouvait produire des vins d'une élégance et d'une profondeur de premier plan mondial. L'histoire du Bienenberg est intimement liée à celle de la famille Huber : c'est en quittant la coopérative en 1987 que Bernhard Huber entreprit de révéler ce terroir calcaire, alors planté de cépages communs. Le pari, longtemps solitaire, a fait école et inspiré toute une génération de vignerons badois convertis au Pinot de calcaire. Le Bienenberg est ainsi devenu un symbole : celui d'une Allemagne capable de produire, sur ses sols calcaires, des Pinots et des Chardonnay dignes des plus grands.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "iconique",
+        "calcaire",
+        "vdp-grosse-lage",
+        "breisgau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-achkarrer-schlossberg",
+      "nom": "Achkarrer Schlossberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "220-340 m",
+      "sols": "roche volcanique altérée et lœss",
+      "caracteristiques_rapides": "Grand amphithéâtre volcanique d'Achkarren, l'un des sommets du Kaiserstuhl pour le Spätburgunder et le Grauburgunder (Dr. Heger, Franz Keller).",
+      "notes_objectives": "L'Achkarrer Schlossberg, au-dessus du village d'Achkarren sur le Kaiserstuhl, est l'un des plus beaux amphithéâtres viticoles d'Allemagne. Ses terrasses de roche volcanique altérée, coiffées de lœss, forment un cirque exposé au sud qui concentre la chaleur et la lumière. Ce terroir solaire donne des Spätburgunder profonds et structurés ainsi que des Grauburgunder d'une grande densité, à la minéralité volcanique marquée et à la belle aptitude à la garde. Le Schlossberg est exploité par quelques-uns des meilleurs domaines du Kaiserstuhl, au premier rang desquels Dr. Heger et Franz Keller. Classé en VDP Grosse Lage, l'Achkarrer Schlossberg compte parmi les sommets du Kaiserstuhl et confirme l'exceptionnelle vocation de ses sols volcaniques pour les grands cépages bourguignons. La forme en cirque du coteau crée un piège à chaleur et à lumière, tout en protégeant les vignes des vents froids, ce qui explique la richesse et la maturité des raisins. Les sols, issus de l'altération de la roche volcanique et enrichis de lœss, confèrent aux vins leur profondeur et leur salinité caractéristiques. Dr. Heger et Franz Keller y signent des Grosses Gewächs de Spätburgunder et de Grauburgunder d'une grande densité, qui comptent parmi les références du Kaiserstuhl et vieillissent remarquablement. Site historique et spectaculaire, l'Achkarrer Schlossberg est l'un des grands amphithéâtres volcaniques d'Europe dédiés au vin, et l'un des fleurons de Baden. Le village d'Achkarren, blotti au pied du coteau, abrite d'ailleurs un musée du vin consacré au Kaiserstuhl, signe de l'ancrage viticole du lieu. Les terrasses du Schlossberg, remodelées au XXe siècle, comptent parmi les plus photographiées de la région. Réputé de longue date pour ses Grauburgunder, le cru a su, à l'image de tout le Kaiserstuhl, monter en puissance sur le Spätburgunder, au point de figurer aujourd'hui parmi les grands terroirs rouges d'Allemagne.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-oberrotweiler-eichberg",
+      "nom": "Oberrotweiler Eichberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "220-330 m",
+      "sols": "roche volcanique altérée et lœss",
+      "caracteristiques_rapides": "Grand cru d'Oberrotweil sur le volcan du Kaiserstuhl ; Spätburgunder et Grauburgunder racés et de garde (Salwey, Huber).",
+      "notes_objectives": "L'Oberrotweiler Eichberg, au cœur du Kaiserstuhl, est l'un des grands crus volcaniques de la région, sur les coteaux d'Oberrotweil. Ses sols de roche volcanique altérée et de lœss, sur des pentes bien exposées, offrent au Spätburgunder et au Grauburgunder des conditions de maturité idéales. Le terroir donne des vins racés et profonds : des Pinots Noirs structurés et épicés, des Grauburgunder amples et minéraux, dotés d'une réelle capacité de garde. L'Eichberg est exploité par d'excellents domaines, notamment Salwey, qui en est l'un des grands interprètes, ainsi que Bernhard Huber. Classé en VDP Grosse Lage, l'Oberrotweiler Eichberg illustre la puissance maîtrisée et l'élégance des grands terroirs volcaniques du Kaiserstuhl. Le cœur volcanique du Kaiserstuhl affleure ici sous un manteau de lœss, offrant à la fois la chaleur de la roche sombre et la finesse apportée par les sols éoliens. Cette combinaison donne aux vins une rare alliance de puissance et d'élégance. Konrad Salwey en est l'interprète le plus accompli, avec des Grosses Gewächs de Spätburgunder et de Grauburgunder d'une grande pureté, toujours secs et entièrement fermentés ; Bernhard Huber y possède aussi de belles parcelles. Classé parmi les meilleurs sites d'Oberrotweil, l'Eichberg illustre la capacité du Kaiserstuhl à produire des Burgundern de garde qui comptent parmi les plus aboutis d'Allemagne. Oberrotweil est l'un des cœurs battants du Kaiserstuhl viticole, et l'Eichberg en est l'un des plus beaux fleurons. Konrad Salwey, élu vigneron de l'année par la critique, y a hissé ses Grosses Gewächs au sommet de la hiérarchie badoise. Le cru illustre la philosophie du domaine : des Burgundern toujours secs, entièrement fermentés et élevés avec patience, où la puissance volcanique se met au service de l'élégance et de la précision.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-oberrotweiler-kirchberg",
+      "nom": "Oberrotweiler Kirchberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "220-320 m",
+      "sols": "roche volcanique altérée et lœss",
+      "caracteristiques_rapides": "Coteau volcanique d'Oberrotweil, grand cru du Spätburgunder du Kaiserstuhl (Salwey, Huber).",
+      "notes_objectives": "L'Oberrotweiler Kirchberg est un grand cru volcanique du Kaiserstuhl, sur les coteaux d'Oberrotweil. Ses sols de roche volcanique altérée et de lœss, sur de fortes pentes exposées au sud, assurent une excellente maturité aux cépages bourguignons. Le terroir donne des Spätburgunder structurés et de garde ainsi que de beaux Grauburgunder, à la minéralité volcanique caractéristique. Il est exploité par d'excellents domaines comme Salwey et Bernhard Huber. Classé en VDP Grosse Lage, le Kirchberg confirme la vocation d'Oberrotweil pour les grands Pinots et Burgundern du Kaiserstuhl. La proximité de l'Eichberg voisin et la qualité de ses sols volcaniques en font l'un des coteaux les plus fiables d'Oberrotweil. Salwey et Huber y produisent des Spätburgunder et des Grauburgunder d'une belle densité, marqués par la salinité du volcan, qui confirment la place d'Oberrotweil parmi les villages phares du Kaiserstuhl. Historiquement réputé, le Kirchberg fait partie de cette constellation de grands coteaux qui entourent Oberrotweil et font du village l'un des sommets du Kaiserstuhl. Ses vins, à la fois charnus et salins, illustrent l'équilibre recherché par les meilleurs vignerons entre maturité solaire et fraîcheur minérale.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-oberrotweiler-henkenberg",
+      "nom": "Oberrotweiler Henkenberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "220-320 m",
+      "sols": "roche volcanique altérée et lœss",
+      "caracteristiques_rapides": "Grand cru volcanique d'Oberrotweil, réputé pour ses Spätburgunder et Grauburgunder (Salwey).",
+      "notes_objectives": "L'Oberrotweiler Henkenberg est l'un des grands crus d'Oberrotweil, sur le volcan du Kaiserstuhl. Ses sols de roche volcanique altérée et de lœss, bien exposés, donnent des Spätburgunder et des Grauburgunder profonds et racés. Le terroir, réputé pour la densité de ses vins, est notamment exploité par le domaine Salwey, l'un des maîtres des cépages bourguignons de la région. Classé en VDP Grosse Lage, le Henkenberg compte parmi les coteaux de référence d'Oberrotweil et illustre la richesse des terroirs volcaniques du Kaiserstuhl. Réputé pour la profondeur de ses vins, le Henkenberg bénéficie d'une exposition idéale et d'un sol volcanique généreux. Le domaine Salwey y signe certaines de ses plus belles cuvées, à la fois puissantes et précises, qui illustrent le savoir-faire d'Oberrotweil pour les grands Burgundern de garde. Sur ce terroir exigeant, les rendements maîtrisés et le travail soigné de la vigne sont la clé de la qualité. Le Henkenberg, aux côtés de l'Eichberg et du Kirchberg, complète la trilogie des grands crus d'Oberrotweil, et confirme la densité particulière que le volcan confère ici aux Pinots et aux Grauburgunder.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-oberbergener-bassgeige",
+      "nom": "Oberbergener Bassgeige",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "230-360 m",
+      "sols": "roche volcanique altérée et lœss",
+      "caracteristiques_rapides": "Grand cru d'Oberbergen, en forme de violon ; terroir phare du domaine Franz Keller (Schwarzer Adler).",
+      "notes_objectives": "L'Oberbergener Bassgeige, dont le nom évoque la forme de violon de son vallon, est un grand cru volcanique du Kaiserstuhl, sur les coteaux d'Oberbergen. Ses sols de roche volcanique altérée et de lœss, en pente bien exposée, offrent une maturité optimale. Le terroir donne des Spätburgunder élégants et de garde ainsi que de beaux Burgundern blancs. Il est le terroir de prédilection du domaine Franz Keller (Schwarzer Adler), qui en est le grand interprète. Classé en VDP Grosse Lage, la Bassgeige illustre la finesse que les sols volcaniques d'Oberbergen savent conférer aux cépages bourguignons. Le vallon en forme d'instrument de musique qui donne son nom au cru crée un microclimat protégé et ensoleillé. Franz Keller, dont le célèbre Schwarzer Adler domine Oberbergen, en tire des Spätburgunder et des Grauburgunder d'une grande finesse, résolument secs, qui comptent parmi les références du Kaiserstuhl. Le terroir a gagné en réputation à mesure que Franz Keller affinait son style vers plus de fraîcheur et de précision. La Bassgeige illustre aujourd'hui la capacité du Kaiserstuhl à produire des vins solaires mais élégants, à l'image d'un domaine qui a longtemps défendu la sécheresse et le classicisme bourguignon.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-bischoffinger-steinbuck",
+      "nom": "Bischoffinger Steinbuck",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Grauburgunder"
+      ],
+      "altitude": "220-320 m",
+      "sols": "lœss profond sur soubassement volcanique",
+      "caracteristiques_rapides": "Grand coteau de lœss de Bischoffingen ; site de prédilection de Karl H. Johner pour ses Pinots et Chardonnay.",
+      "notes_objectives": "Le Bischoffinger Steinbuck est un grand coteau du Kaiserstuhl, sur les hauteurs de Bischoffingen. Il se distingue par d'épaisses couches de lœss reposant sur le soubassement volcanique, qui retiennent l'eau et confèrent aux vins rondeur et profondeur. Le terroir donne des Spätburgunder amples et des Chardonnay et Grauburgunder racés. Il est le site de prédilection du domaine Karl H. Johner, pionnier de l'élevage en barrique en Allemagne. Classé en VDP Grosse Lage, le Steinbuck illustre le rôle du lœss, aux côtés du volcan, dans la palette des grands terroirs du Kaiserstuhl. L'épaisseur du lœss, qui peut atteindre plusieurs mètres, joue ici un rôle clé : il assure une alimentation hydrique régulière et donne aux vins ampleur et générosité. Karl H. Johner y a forgé sa réputation avec des Spätburgunder et des Chardonnay riches et boisés, de style international, qui ont marqué l'histoire récente du vin allemand. Le Steinbuck illustre une autre facette du Kaiserstuhl, plus marquée par le lœss que par le volcan : des vins amples, généreux et accessibles dans leur jeunesse. Il rappelle que la grandeur de la région tient aussi à la diversité de ses sols, du basalte sombre aux profonds dépôts éoliens.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "loess",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-endinger-engelsberg",
+      "nom": "Endinger Engelsberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder"
+      ],
+      "altitude": "220-320 m",
+      "sols": "lœss et roche volcanique altérée",
+      "caracteristiques_rapides": "Coteau d'Endingen au nord du Kaiserstuhl ; Spätburgunder profonds (Reinhold & Cornelia Schneider).",
+      "notes_objectives": "L'Endinger Engelsberg est un grand cru du nord du Kaiserstuhl, sur les coteaux d'Endingen. Ses sols de lœss et de roche volcanique altérée, bien exposés, donnent des Spätburgunder profonds et de garde. Le terroir, réputé pour la finesse de ses Pinots, est notamment exploité par le domaine Reinhold & Cornelia Schneider, l'un des secrets bien gardés de la région. Classé en VDP Grosse Lage, l'Engelsberg illustre le potentiel souvent sous-estimé du secteur d'Endingen pour le grand Pinot Noir du Kaiserstuhl. Situé dans un secteur plus septentrional et parfois sous-estimé du Kaiserstuhl, l'Engelsberg n'en donne pas moins de grands Pinots. Reinhold & Cornelia Schneider y produisent des Spätburgunder profonds et de garde, d'un rapport qualité-prix remarquable, qui comptent parmi les meilleurs secrets de la région. Endingen, au nord du Kaiserstuhl, bénéficie d'un climat légèrement plus frais qui apporte de la finesse aux vins. L'Engelsberg, longtemps dans l'ombre des crus plus célèbres du sud du massif, est aujourd'hui reconnu comme un beau terroir de Pinot, à la faveur du travail de vignerons exigeants comme les Schneider.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "loess",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-sasbacher-limburg",
+      "nom": "Sasbacher Limburg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "220-300 m",
+      "sols": "roche volcanique (Limburgite) et lœss",
+      "caracteristiques_rapides": "Butte volcanique de Sasbach, à l'ouest du Kaiserstuhl ; terroir réputé pour les Burgundern (Bercher).",
+      "notes_objectives": "Le Sasbacher Limburg est une butte volcanique spectaculaire à l'ouest du Kaiserstuhl, au-dessus de Sasbach, près du Rhin. Sa roche volcanique sombre (la limburgite, qui a donné son nom) et son exposition en font un terroir chaud et précoce. Il donne des Spätburgunder structurés ainsi que de beaux Grauburgunder et Weissburgunder, à la minéralité volcanique marquée. Il est notamment exploité par le domaine Bercher. Classé en VDP Grosse Lage, le Limburg compte parmi les terroirs volcaniques emblématiques du Kaiserstuhl et confirme la vocation de Sasbach pour les Burgundern de caractère. La butte du Limburg, ancien volcan isolé dominant la plaine du Rhin, bénéficie d'une chaleur et d'une précocité remarquables. Le domaine Bercher y produit des Spätburgunder et des Burgundern blancs de belle facture, à la minéralité volcanique affirmée, qui font la réputation de Sasbach. Le Limburg, qui a donné son nom à une roche volcanique (la limburgite), est un repère géologique autant qu'un terroir. Son isolement au-dessus de la plaine et sa roche sombre en font l'un des sites les plus chauds et les plus précoces du Kaiserstuhl, propice à des Burgundern mûrs et expressifs.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-bickensohler-herrenstueck",
+      "nom": "Bickensohler Herrenstück",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "altitude": "220-320 m",
+      "sols": "lœss profond sur roche volcanique",
+      "caracteristiques_rapides": "Grand coteau de lœss de Bickensohl ; Spätburgunder et Weissburgunder fins et salins (Holger Koch).",
+      "notes_objectives": "Le Bickensohler Herrenstück est un grand coteau du Kaiserstuhl, sur les hauteurs de Bickensohl. Ses sols de lœss profond reposant sur la roche volcanique donnent des vins alliant rondeur et minéralité. Le terroir donne des Spätburgunder fins et des Weissburgunder ciselés et salins. Il est notamment exploité par le domaine Holger Koch, l'une des belles adresses montantes de la région. Classé en VDP Grosse Lage, le Herrenstück illustre la finesse que peuvent atteindre les vins du Kaiserstuhl sur les grands sites de lœss et de volcan. Le manteau de lœss qui coiffe la roche volcanique apporte rondeur et fraîcheur aux vins. Holger Koch, l'une des belles adresses montantes du Kaiserstuhl, y signe des Spätburgunder fins et des Weissburgunder salins d'un excellent rapport qualité-prix, illustrant un style plus aérien des terroirs volcaniques. Le Herrenstück illustre le style plus aérien d'une nouvelle génération du Kaiserstuhl, soucieuse de fraîcheur et de buvabilité. Sous l'impulsion de Holger Koch, il s'est imposé comme l'un des terroirs à suivre du secteur de Bickensohl, à des prix encore très accessibles au regard de la qualité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "loess",
+        "vdp-grosse-lage",
+        "kaiserstuhl"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-hecklinger-schlossberg",
+      "nom": "Hecklinger Schlossberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "230-320 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Coteau calcaire du Breisgau, l'un des grands crus de Bernhard Huber pour le Spätburgunder.",
+      "notes_objectives": "Le Hecklinger Schlossberg est un grand cru du Breisgau, sur des sols de calcaire coquillier (Muschelkalk) près de Hecklingen. Comme à Malterdingen voisin, ce socle calcaire rapproche le terroir des grands sols bourguignons. Il donne des Spätburgunder élégants et de garde, à la minéralité fine. Il fait partie des grands crus exploités par le domaine Bernhard Huber. Classé en VDP Grosse Lage, le Hecklinger Schlossberg illustre la vocation des sols calcaires du Breisgau pour des Pinots Noirs racés et profonds. Comme à Malterdingen, le calcaire coquillier confère ici aux vins une tension et une minéralité bien distinctes des sols volcaniques du Kaiserstuhl. Bernhard Huber y produit des Spätburgunder élégants et de garde, qui prolongent la famille des grands terroirs calcaires du Breisgau. Avec le Bienenberg et l'Alte Burg, le Hecklinger Schlossberg fait partie du chapelet de grands crus calcaires que Bernhard Huber a contribué à révéler dans le Breisgau. Ses Spätburgunder, fins et droits, confirment que ce secteur, longtemps méconnu, recèle des terroirs de tout premier ordre pour le Pinot Noir.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "breisgau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-bombacher-sommerhalde",
+      "nom": "Bombacher Sommerhalde",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder"
+      ],
+      "altitude": "230-330 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Grand cru calcaire de Bombach (Breisgau) ; Spätburgunder élégants (Bernhard Huber, Henrik Möbitz).",
+      "notes_objectives": "La Bombacher Sommerhalde est un grand cru calcaire du Breisgau, sur les coteaux de Bombach. Son socle de calcaire coquillier (Muschelkalk), bien exposé, donne des Spätburgunder élégants et minéraux. Le terroir est exploité par de grands noms, dont Bernhard Huber et le micro-domaine culte Henrik Möbitz, qui en tirent des Pinots d'une grande finesse. Classé en VDP Grosse Lage, la Sommerhalde confirme la qualité des terroirs calcaires du Breisgau pour le Pinot Noir d'élégance. Le calcaire coquillier, bien exposé, donne ici des Pinots d'une grande finesse. Outre Bernhard Huber, le coteau abrite le micro-domaine culte Henrik Möbitz, dont les rares Spätburgunder de la Sommerhalde sont parmi les plus recherchés d'Allemagne, confirmant le statut de grand terroir de ce cru. La présence simultanée de Bernhard Huber et d'Henrik Möbitz sur ce coteau en dit long sur sa qualité : deux visions du Pinot, l'une magistrale et reconnue, l'autre confidentielle et culte, s'y côtoient. La Sommerhalde s'est ainsi imposée comme l'un des terroirs calcaires les plus excitants du Breisgau.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "breisgau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-koendringer-alte-burg",
+      "nom": "Köndringer Alte Burg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Chardonnay"
+      ],
+      "altitude": "220-300 m",
+      "sols": "calcaire coquillier (Muschelkalk)",
+      "caracteristiques_rapides": "Grand cru calcaire de Köndringen (Breisgau), classé en VDP Grosse Lage par Bernhard Huber.",
+      "notes_objectives": "Le Köndringer Alte Burg est un grand cru calcaire du Breisgau, sur les coteaux de Köndringen. Son socle de calcaire coquillier, dans le sillage de Malterdingen, donne des Spätburgunder et des Chardonnay fins et de garde. Le terroir a été classé en VDP Grosse Lage par le domaine Bernhard Huber, qui y voit l'un de ses grands sites calcaires. L'Alte Burg illustre, aux côtés du Bienenberg et du Hecklinger Schlossberg, la remarquable famille de terroirs calcaires du Breisgau, propices aux cépages bourguignons. Classé en Grosse Lage par le domaine Huber, l'Alte Burg complète la remarquable série de terroirs calcaires du Breisgau. Ses Spätburgunder et Chardonnay, fins et tendus, illustrent une fois encore la parenté de ces sols avec ceux de la Bourgogne et leur aptitude à donner de grands vins de garde. Le travail de classification mené par le domaine Huber a permis de redonner ses lettres de noblesse à ce coteau. L'Alte Burg confirme que la grande affaire du Breisgau, ce sont ses sols calcaires, capables de donner des Pinots et des Chardonnay d'une finesse que l'on n'attendait pas hors du Kaiserstuhl.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "vdp-grosse-lage",
+        "breisgau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-ehrenstetter-oehlberg",
+      "nom": "Ehrenstetter Öhlberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Weissburgunder"
+      ],
+      "altitude": "260-380 m",
+      "sols": "calcaire et marnes",
+      "caracteristiques_rapides": "Grand coteau calcaire d'Ehrenstetten, près de Staufen ; source des grands crus de Wasenhaus.",
+      "notes_objectives": "L'Ehrenstetter Öhlberg est un grand coteau calcaire du Markgräflerland, près de Staufen et d'Ehrenstetten. Ses sols de calcaire et de marnes, bien exposés, en font l'un des terroirs les plus prometteurs du sud de Baden. Le site est devenu célèbre comme source des grands crus du domaine culte Wasenhaus, qui en tire des Spätburgunder et des Chardonnay d'une finesse remarquable, d'inspiration bourguignonne. L'Öhlberg illustre le potentiel longtemps sous-estimé des terroirs calcaires du Markgräflerland pour des vins d'une grande élégance, désormais reconnus bien au-delà de la région. La consécration de l'Öhlberg doit beaucoup au domaine Wasenhaus, fondé par deux vignerons formés en Côte d'Or, qui en a fait l'un des terroirs les plus commentés d'Allemagne. Ses Spätburgunder d'une légèreté presque immatérielle et ses Chardonnay ciselés ont révélé au monde le potentiel du calcaire du Markgräflerland. Le succès fulgurant de Wasenhaus a braqué les projecteurs sur l'Öhlberg et, au-delà, sur tout le potentiel calcaire du Markgräflerland septentrional. Le cru illustre comment de jeunes vignceurs formés en Bourgogne peuvent, en quelques millésimes, faire émerger un grand terroir resté discret.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "culte",
+        "vdp-grosse-lage",
+        "markgraeflerland"
+      ],
+      "source": "vomboden|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-isteiner-klotz",
+      "nom": "Isteiner Klotz",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Chardonnay",
+        "Gutedel"
+      ],
+      "altitude": "250-380 m",
+      "sols": "calcaire jurassique",
+      "caracteristiques_rapides": "Promontoire de calcaire jurassique près d'Efringen-Kirchen, à la frontière suisse ; terroir des grands vins de Ziereisen.",
+      "notes_objectives": "L'Isteiner Klotz est un promontoire de calcaire jurassique spectaculaire, à l'extrême sud du Markgräflerland, près d'Efringen-Kirchen et de la frontière suisse. Ce socle calcaire ancien, rare en Allemagne, rappelle les grands terroirs du Jura et de Bourgogne. Il donne des Spätburgunder, des Chardonnay et même un Gutedel d'une profondeur inattendue, à la minéralité calcaire marquée. Le secteur est notamment associé au domaine culte Ziereisen. L'Isteiner Klotz illustre la singularité géologique du sud de Baden et sa capacité, sur le calcaire, à produire de très grands vins de garde. Ce promontoire calcaire, vestige d'anciens récifs jurassiques, bénéficie d'un climat chaud et sec à l'abri des Vosges et de la Forêt-Noire. Hanspeter Ziereisen, figure culte de Baden, y puise une part de ses grands vins, démontrant que le calcaire du sud peut rivaliser, en finesse et en garde, avec les meilleurs terroirs bourguignons. Longtemps surtout connu pour son intérêt géologique et naturaliste, l'Isteiner Klotz est devenu, grâce à des vignerons comme Ziereisen, un terroir reconnu pour la profondeur et la longévité de ses vins. Il incarne l'extrémité méridionale de Baden, où le vignoble flirte avec la Suisse et l'Alsace.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "culte",
+        "vdp-grosse-lage",
+        "markgraeflerland"
+      ],
+      "source": "jancisrobinson|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-durbacher-plauelrain",
+      "nom": "Durbacher Plauelrain",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "230-350 m",
+      "sols": "granite décomposé (Verwitterungsgranit)",
+      "caracteristiques_rapides": "Grand cru granitique de Durbach ; Riesling (Klingelberger) aromatiques et Spätburgunder (Andreas Laible).",
+      "notes_objectives": "Le Durbacher Plauelrain est un grand cru de l'Ortenau, sur les coteaux de granite décomposé qui font la singularité de Durbach. Ce sol granitique, bien exposé, est particulièrement propice aux cépages aromatiques. Le terroir donne de grands Riesling — appelés ici Klingelberger — d'une pureté et d'une finesse remarquables, ainsi que de beaux Spätburgunder. Il est le site phare du domaine Andreas Laible. Classé en VDP Grosse Lage, le Plauelrain illustre la vocation des granites de l'Ortenau pour des blancs aromatiques d'une grande précision, une facette plus septentrionale et fraîche de Baden. Le granite décomposé, qui se réchauffe vite et draine bien, confère aux Riesling de Durbach une minéralité et une vivacité particulières. Andreas Laible y produit des Klingelberger d'une pureté aromatique remarquable, du sec au liquoreux noble, qui comptent parmi les plus grands blancs de l'Ortenau. Durbach est l'un des villages les plus réputés de l'Ortenau, et le Plauelrain en est le joyau. Le granite y donne aux Klingelberger une signature aromatique et saline immédiatement reconnaissable, qui distingue ce secteur plus frais et plus septentrional du reste de Baden, davantage tourné vers les Pinots.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "ortenau"
+      ],
+      "source": "vdp.de|grosse-lage.de"
+    },
+    {
+      "id": "de-baden-terr-durbacher-schlossberg",
+      "nom": "Durbacher Schlossberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "altitude": "250-380 m",
+      "sols": "granite décomposé (Verwitterungsgranit)",
+      "caracteristiques_rapides": "Coteau de granite de Durbach autour du château ; Riesling et Pinot Noir de l'Ortenau (Wolff Metternich).",
+      "notes_objectives": "Le Durbacher Schlossberg est un grand cru de l'Ortenau, sur les coteaux de granite autour du château de Durbach. Ce sol de granite décomposé, bien exposé, donne des vins d'une belle minéralité. Le terroir produit des Riesling (Klingelberger) tendus et racés ainsi que de beaux Spätburgunder. Il est notamment exploité par le domaine comtal Gräflich Wolff Metternich. Classé en VDP Grosse Lage, le Schlossberg compte parmi les grands coteaux granitiques de Durbach et illustre la tradition du Riesling et du Pinot dans l'Ortenau. Dominé par le château de Durbach, ce coteau de granite donne des vins d'une belle tension. Le domaine comtal Wolff Metternich y perpétue une longue tradition, avec des Klingelberger (Riesling) et des Spätburgunder racés, fidèles à l'identité granitique et aromatique de l'Ortenau. Le terroir illustre la double vocation de l'Ortenau, à la fois terre de grand Riesling et de Pinot Noir. Le domaine Wolff Metternich, l'un des plus anciens et prestigieux du secteur, y perpétue un style classique qui fait honneur à la tradition viticole de Durbach.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "ortenau"
+      ],
+      "source": "vdp.de|faessle"
+    },
+    {
+      "id": "de-baden-terr-neuweierer-mauerberg",
+      "nom": "Neuweierer Mauerberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-280 m",
+      "sols": "granite et grès",
+      "caracteristiques_rapides": "Coteau emblématique de Neuweier, près de Baden-Baden ; l'un des grands terroirs du Riesling sec de Baden (Schloss Neuweier).",
+      "notes_objectives": "Le Neuweierer Mauerberg, près de Baden-Baden dans le nord de l'Ortenau, est l'un des grands terroirs du Riesling de Baden, sur des sols de granite et de grès. Ses pentes bien exposées en font un site de référence pour ce cépage rare dans la région. Le terroir donne des Riesling secs minéraux et de garde, embouteillés traditionnellement dans le Bocksbeutel. Il est le site emblématique du domaine Schloss Neuweier. Classé en VDP Grosse Lage, le Mauerberg illustre la vocation singulière de Neuweier pour le grand Riesling sec, à part dans une région vouée aux Pinots. Dans une région presque entièrement vouée aux Pinots, le Mauerberg fait figure d'exception en consacrant le Riesling. Ses sols de granite et de grès donnent des vins secs, tendus et de garde, que le domaine Schloss Neuweier embouteille dans le traditionnel Bocksbeutel, perpétuant une singularité historique de ce coin de Baden. Le recours au Bocksbeutel, partagé avec la Franconie, souligne l'identité singulière de Neuweier au sein de Baden. Le Mauerberg, avec ses Riesling secs et minéraux, constitue une véritable enclave du grand Riesling dans le nord de la région, à deux pas de la station thermale de Baden-Baden.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "vdp-grosse-lage",
+        "ortenau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-sulzfelder-burg-ravensburg",
+      "nom": "Sulzfelder Burg Ravensburg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kraichgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling",
+        "Spätburgunder",
+        "Lemberger"
+      ],
+      "altitude": "200-300 m",
+      "sols": "calcaire coquillier (Muschelkalk) et keuper",
+      "caracteristiques_rapides": "Grand coteau calcaire du Kraichgau autour de la Burg Ravensburg ; Riesling et Spätburgunder en biodynamie (Heitlinger).",
+      "notes_objectives": "Autour de la Burg Ravensburg, à Sulzfeld dans le Kraichgau, s'étend l'un des grands terroirs calcaires du nord de Baden. Ses sols de calcaire coquillier et de keuper, bien exposés, conviennent à plusieurs cépages. Le terroir donne des Riesling tendus, des Spätburgunder et des Lemberger, conduits en biodynamie par l'ensemble Heitlinger / Burg Ravensburg. Classé en VDP Grosse Lage, le site de la Burg Ravensburg illustre le potentiel longtemps méconnu du Kraichgau, secteur calcaire vallonné entre Bade et Wurtemberg. Le château médiéval de la Burg Ravensburg domine ce grand coteau calcaire, l'un des plus réputés du Kraichgau. L'ensemble Heitlinger / Burg Ravensburg y conduit, en biodynamie, des Riesling, des Spätburgunder et des Lemberger qui ont placé ce secteur vallonné du nord de Baden sur la carte des terroirs à suivre. Le Kraichgau, secteur de collines calcaires entre Heidelberg et le Wurtemberg, gagne en reconnaissance grâce à des domaines ambitieux. Conduit en biodynamie, le grand coteau de la Burg Ravensburg en est le fer de lance, avec des Riesling et des Pinots qui révèlent tout le potentiel de ces sols calcaires.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "calcaire",
+        "kraichgau",
+        "vdp-grosse-lage",
+        "kraichgau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-hohentwiel",
+      "nom": "Hohentwiel",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Bodensee",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Müller-Thurgau",
+        "Spätburgunder"
+      ],
+      "altitude": "530-600 m",
+      "sols": "roche volcanique (phonolite)",
+      "caracteristiques_rapides": "Vignoble le plus haut d'Allemagne, sur un ancien volcan près de Singen ; site rare et spectaculaire du Bodensee.",
+      "notes_objectives": "Le Hohentwiel, près de Singen au bord du lac de Constance, est le vignoble le plus haut d'Allemagne, planté sur les pentes d'un ancien volcan dont la roche (phonolite) affleure de façon spectaculaire. À cette altitude et sous ce climat frais tempéré par le lac, le terroir donne des Spätburgunder fins et des Müller-Thurgau vifs, marqués par une grande fraîcheur. Site rare et spectaculaire, le Hohentwiel est autant une curiosité géologique et paysagère qu'un terroir, et illustre l'extraordinaire diversité du vignoble de Baden, du Kaiserstuhl brûlant aux hauteurs fraîches du Bodensee. Cultiver la vigne à plus de cinq cents mètres d'altitude, sur les flancs d'un volcan éteint, relève de l'exploit : les rendements sont faibles et le travail héroïque. Le résultat est un vin rare, marqué par une fraîcheur extrême, qui fait du Hohentwiel un cas unique et une fierté du vignoble du Bodensee. Au-delà de la prouesse viticole, le Hohentwiel, couronné par les ruines de l'une des plus grandes forteresses d'Allemagne, est un site naturel et historique majeur. Son vignoble d'altitude, minuscule, est un symbole de la diversité extrême du vignoble badois, qui s'étend du Kaiserstuhl brûlant aux rives fraîches du lac de Constance.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "altitude",
+        "iconique",
+        "vdp-grosse-lage",
+        "bodensee"
+      ],
+      "source": "wine-searcher|faessle"
+    },
+    {
+      "id": "de-baden-terr-bischoffinger-enselberg",
+      "nom": "Bischoffinger Enselberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Kaiserstuhl",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Grauburgunder",
+        "Chardonnay"
+      ],
+      "altitude": "220-320 m",
+      "sols": "lœss et roche volcanique altérée",
+      "caracteristiques_rapides": "Coteau de lœss et de volcan à Bischoffingen ; Burgundern de belle facture (Johner, Abril).",
+      "notes_objectives": "L'Enselberg est un coteau du Kaiserstuhl, sur les hauteurs de Bischoffingen, mêlant lœss et roche volcanique altérée. Bien exposé, il donne des Spätburgunder et de beaux Burgundern blancs de belle facture. Le terroir est notamment exploité par les domaines Karl H. Johner et Abril. Il illustre la richesse des sols de lœss et de volcan du secteur de Bischoffingen, propices aux cépages bourguignons. La diversité de ses sols et sa bonne exposition en font un terroir polyvalent et fiable. Outre Johner et Abril, plusieurs bons vignerons y travaillent, confirmant la place de Bischoffingen parmi les villages de référence du Kaiserstuhl pour les cépages bourguignons. Il complète la riche palette des coteaux de Bischoffingen, l'un des villages les plus dynamiques du Kaiserstuhl.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "volcanique",
+        "loess",
+        "grand-coteau",
+        "kaiserstuhl"
+      ],
+      "source": "wine-searcher|vdp.de"
+    },
+    {
+      "id": "de-baden-terr-lahrer-herrentisch",
+      "nom": "Lahrer Herrentisch",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Breisgau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Weissburgunder",
+        "Spätburgunder",
+        "Chardonnay"
+      ],
+      "altitude": "180-260 m",
+      "sols": "argilo-calcaire et lœss",
+      "caracteristiques_rapides": "Coteau de Lahr (Breisgau) réputé pour les Burgundern blancs ; site phare du Weingut Stadt Lahr (Wöhrle).",
+      "notes_objectives": "Le Lahrer Herrentisch est un coteau du Breisgau, au-dessus de Lahr, sur des sols argilo-calcaires et de lœss. Bien exposé, il est surtout réputé pour ses Burgundern blancs. Le terroir est le site phare du Weingut Stadt Lahr (Wöhrle), conduit en bio, qui en tire des Weissburgunder et des Chardonnay précis et salins. Il illustre la montée en gamme du Breisgau pour les grands blancs bourguignons. Sous l'impulsion de Markus Wöhrle, le Herrentisch est devenu une vitrine du renouveau du Breisgau, où les Burgundern blancs atteignent un beau niveau de précision et de salinité. Le coteau illustre la montée en gamme d'un secteur longtemps discret de Baden. Le coteau est aujourd'hui l'un des symboles de la qualité retrouvée des Burgundern blancs du Breisgau.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "breisgau",
+        "weissburgunder",
+        "grand-coteau",
+        "breisgau"
+      ],
+      "source": "vdp.de|wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-mauchener-sonnenstueck",
+      "nom": "Mauchener Sonnenstück",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Gutedel",
+        "Chardonnay"
+      ],
+      "altitude": "230-330 m",
+      "sols": "calcaire et lœss",
+      "caracteristiques_rapides": "Coteau ensoleillé de Mauchen (Markgräflerland) ; Spätburgunder, Chardonnay et Gutedel (Martin Wassmer).",
+      "notes_objectives": "Le Mauchener Sonnenstück est un coteau ensoleillé du Markgräflerland, sur des sols de calcaire et de lœss. Bien exposé, il donne des Spätburgunder, des Chardonnay et du Gutedel de belle facture. Le terroir est notamment exploité par le domaine Martin Wassmer. Il illustre la diversité du Markgräflerland, à la fois terre de Gutedel et de cépages bourguignons. Bien exposé et réputé pour son ensoleillement, le Sonnenstück de Mauchen permet au domaine Martin Wassmer de signer des Spätburgunder et des Chardonnay de belle facture, ainsi qu'un Gutedel de terroir, illustrant la double vocation du Markgräflerland. Il confirme la place de Mauchen parmi les bons terroirs du Markgräflerland pour les Pinots et le Gutedel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "markgraeflerland",
+        "gutedel",
+        "grand-coteau",
+        "markgraeflerland"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-schliengener-sonnenstueck",
+      "nom": "Schliengener Sonnenstück",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Markgräflerland",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Spätburgunder",
+        "Gutedel"
+      ],
+      "altitude": "230-330 m",
+      "sols": "calcaire et lœss",
+      "caracteristiques_rapides": "Coteau du sud du Markgräflerland ; Gutedel de terroir et Spätburgunder dans le secteur de Schliengen.",
+      "notes_objectives": "Le Schliengener Sonnenstück est un coteau du sud du Markgräflerland, sur des sols de calcaire et de lœss, dans le secteur de Schliengen. Bien exposé, il donne du Gutedel de terroir et des Spätburgunder. Le terroir illustre la vocation du Markgräflerland méridional pour le Gutedel (Chasselas) et les Pinots, dans un secteur frontalier proche de la Suisse. Dans ce secteur méridional proche de la Suisse, le Gutedel (Chasselas) trouve l'un de ses terroirs de prédilection, aux côtés des Pinots. Le Sonnenstück de Schliengen témoigne de l'identité particulière du Markgräflerland, seule région d'Allemagne où le Gutedel règne en maître. Ce coteau méridional illustre l'identité du Markgräflerland, terre de prédilection du Gutedel en Allemagne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "markgraeflerland",
+        "gutedel",
+        "grand-coteau",
+        "markgraeflerland"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "de-baden-terr-neuweierer-schlossberg",
+      "nom": "Neuweierer Schlossberg",
+      "type": "lieu-dit",
+      "region": "Baden",
+      "sous_region": "Ortenau",
+      "pays": "Allemagne",
+      "cepages_rois": [
+        "Riesling"
+      ],
+      "altitude": "180-280 m",
+      "sols": "granite et grès",
+      "caracteristiques_rapides": "Coteau de Neuweier voisin du Mauerberg ; Riesling sec de granite, embouteillé en Bocksbeutel (Schloss Neuweier).",
+      "notes_objectives": "Le Neuweierer Schlossberg est un coteau de granite et de grès près de Baden-Baden, voisin du grand Mauerberg. Bien exposé, il est dédié au Riesling sec, rare dans la région. Le terroir est notamment exploité par le domaine Schloss Neuweier, qui y embouteille ses vins en Bocksbeutel. Il confirme la vocation singulière de Neuweier pour le grand Riesling de granite de Baden. Voisin du grand Mauerberg, le Schlossberg partage sa vocation pour le Riesling sec de granite, embouteillé en Bocksbeutel par Schloss Neuweier. Il confirme l'identité singulière de Neuweier, enclave du Riesling dans une région de Pinots. Avec le Mauerberg, il fait de Neuweier la principale enclave du Riesling de granite de tout Baden.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "granite",
+        "riesling",
+        "grand-coteau",
+        "ortenau"
+      ],
+      "source": "wine-searcher|vdp.de"
+    }
+  ]
+}

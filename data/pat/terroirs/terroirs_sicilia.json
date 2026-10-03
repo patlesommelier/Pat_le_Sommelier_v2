@@ -1,0 +1,714 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "sicilia",
+  "region_label": "Sicilia (Italie)",
+  "source_file": "terroirs_sicilia.json",
+  "built_at": "2026-07-06",
+  "count": 25,
+  "items": [
+    {
+      "id": "it-sicilia-terr-calderara-sottana",
+      "nom": "Calderara Sottana",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~600-750 m",
+      "sols": "laves et sables volcaniques, versant nord (Randazzo)",
+      "caracteristiques_rapides": "L'une des contrade les plus prestigieuses du versant nord : Nerello Mascalese d'une grande finesse minérale, terroir de référence (Terre Nere, Nicosia).",
+      "notes_objectives": "Calderara Sottana, sur le versant nord de l'Etna, dans la commune de Randazzo, est l'une des contrade les plus prestigieuses du volcan. Sur l'Etna, la logique des contrade — ces lieux-dits nés des coulées de lave successives — fonctionne comme un système de crus à la bourguignonne, chaque parcelle exprimant un âge de lave, une altitude et une exposition propres.\n\nSur des sols de laves et de sables volcaniques noirs, à 600-750 mètres d'altitude, le Nerello Mascalese (complété du Nerello Cappuccio) y donne des rouges d'une grande finesse minérale : robe claire, arômes de petits fruits rouges, d'herbes méditerranéennes, d'épices et de pierre volcanique, bouche tendue et saline aux tanins fins, souvent comparée aux grands pinots de Bourgogne. La fraîcheur de l'altitude et l'amplitude thermique préservent l'acidité et la définition aromatique. C'est ici que la Tenuta delle Terre Nere signe certains de ses crus les plus réputés, aux côtés d'autres grands noms du versant nord. Le terroir, prisé, illustre le potentiel de garde des Nerello de contrada.\n\nContrada de référence de l'Etna, Calderara Sottana donne des Nerello d'une élégance et d'une minéralité rares, au grand potentiel de vieillissement. C'est l'un des crus les plus recherchés du volcan et un symbole de la reconnaissance des terroirs de l'Etna.\n\nLa reconnaissance des contrade de l'Etna, formalisée depuis les années 2000, a transformé le volcan en l'un des terroirs les plus passionnants d'Italie, comparé à la Bourgogne pour sa mosaïque parcellaire. Calderara Sottana figure au sommet de cette hiérarchie officieuse. Les coulées de lave, d'âges différents, y ont créé des sols d'une grande complexité minérale, que la vigne traduit en vins d'une profondeur singulière. Servis sur des viandes blanches, des volailles, du gibier à plume ou des champignons, les Nerello de Calderara révèlent leur finesse et se patinent sur dix à quinze ans, gagnant des notes de sous-bois, de truffe et d'épices. L'altitude, la fraîcheur nocturne et la pauvreté des sols volcaniques signent des vins d'une tension et d'une élégance qui ont séduit la critique mondiale et fait de cette contrada l'un des noms les plus convoités du renouveau de l'Etna.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "nerello",
+        "versant-nord",
+        "cru"
+      ],
+      "source": "decanter|jancisrobinson"
+    },
+    {
+      "id": "it-sicilia-terr-contrada-rampante",
+      "nom": "Contrada Rampante",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Carricante"
+      ],
+      "altitude": "~750-900 m",
+      "sols": "sables volcaniques clairs, haute altitude (Castiglione)",
+      "caracteristiques_rapides": "Contrada d'altitude du versant nord : Nerello d'une élégance et d'une fraîcheur remarquables (Pietradolce Barbagalli, Passopisciaro Rampante).",
+      "notes_objectives": "Contrada Rampante, sur le versant nord de l'Etna à Castiglione di Sicilia, est l'une des contrade d'altitude les plus recherchées du volcan. Son nom, évoquant la pente, dit la position élevée de ce terroir, parmi les plus hauts de l'Etna cultivés en Nerello.\n\nSur des sables volcaniques clairs, à 750-900 mètres d'altitude, le Nerello Mascalese y gagne une élégance et une fraîcheur remarquables : arômes floraux et de petits fruits, minéralité tranchante, tanins fins, dans un style tout en tension. L'altitude extrême retarde la maturation et préserve l'acidité, signant des vins d'une grande précision, capables de vieillir. C'est ici que Pietradolce produit son Barbagalli, issu de vieilles vignes franches de pied, l'un des plus grands rouges de l'Etna, et que Passopisciaro signe sa contrada Rampante. Le Carricante, planté en altitude, y donne aussi de beaux blancs.\n\nContrada d'altitude emblématique, Rampante offre des Nerello d'une finesse et d'une fraîcheur exceptionnelles, parmi les plus grands crus du versant nord. C'est l'un des terroirs les plus prestigieux de l'Etna.\n\nL'altitude est la clé de Rampante : à ces hauteurs, la vigne mûrit lentement, préservant une acidité et une fraîcheur qui font la signature des grands Nerello de l'Etna. Les sables volcaniques clairs, très drainants et pauvres, contraignent le rendement et concentrent la finesse plutôt que la puissance. C'est dans cette contrada que se trouvent certaines des plus vieilles vignes franches de pied du volcan, qui donnent des vins d'une rare complexité. Servis sur des viandes blanches, des volailles ou des champignons, les Nerello de Rampante séduisent par leur parfum et leur allonge, et vieillissent magnifiquement. Le Barbagalli de Pietradolce, issu de ces vieilles vignes, est régulièrement cité parmi les plus grands rouges de Sicile, confirmant le statut d'exception de cette contrada d'altitude, l'une des plus recherchées du versant nord.\n\nLa reconnaissance des contrade a fait de Rampante l'un des noms les plus prisés de l'Etna, recherché aussi bien par les collectionneurs que par les sommeliers du monde entier. La conjonction de vieilles vignes, d'altitude et de sols volcaniques pauvres y produit des vins qui conjuguent puissance contenue et finesse aérienne, dans un équilibre rare. C'est l'un des terroirs qui incarnent le mieux la révolution qualitative du volcan et son entrée dans le cercle des grands terroirs de l'Italie viticole.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "rampante",
+        "altitude",
+        "nerello",
+        "cru"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-terr-milo",
+      "nom": "Milo",
+      "type": "zone",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Carricante"
+      ],
+      "altitude": "~450-900 m",
+      "sols": "laves anciennes et cendres, versant est humide",
+      "caracteristiques_rapides": "Unique zone habilitée à l'Etna Bianco Superiore (Carricante ≥ 80 %) : sur le versant est plus pluvieux, les plus grands blancs volcaniques (Benanti Pietramarina).",
+      "notes_objectives": "Milo, sur le versant est de l'Etna, occupe une place unique : c'est la seule commune habilitée à produire l'Etna Bianco Superiore, la mention réservée aux blancs contenant au moins 80 % de Carricante. Ce statut particulier en fait le grand terroir du vin blanc volcanique de l'île.\n\nExposé à l'est, face à la mer Ionienne, Milo est le versant le plus pluvieux de l'Etna, ce qui, conjugué aux sols de laves anciennes et de cendres et à l'altitude (450-900 m), donne au Carricante une expression suprême : un blanc d'une minéralité tranchante, d'une acidité vive et d'une longévité exceptionnelle, aux arômes d'agrumes, de pomme verte, d'anis et de pierre à fusil, qui évolue magnifiquement vers des notes de miel et d'hydrocarbures avec l'âge. C'est ici que Benanti produit le Pietramarina, référence absolue du Carricante, capable de vieillir quinze ans et plus, aux côtés de Barone di Villagrande. Le terroir, frais et humide, préserve la tension et la fraîcheur du cépage.\n\nGrand cru blanc de l'Etna, Milo donne, avec le Carricante, l'un des plus grands vins blancs volcaniques d'Italie, d'une minéralité et d'une garde remarquables. C'est le terroir de référence de l'Etna Bianco Superiore.\n\nLa singularité de Milo tient à son exposition est : ouvert sur la mer Ionienne, ce versant reçoit des précipitations nettement supérieures au reste de l'Etna, ce qui, joint aux brumes marines, crée un microclimat idéal pour le Carricante, cépage blanc tardif et acide. Cette conjonction unique explique pourquoi Milo est la seule commune habilitée à l'Etna Bianco Superiore. Le Carricante y révèle une capacité de garde exceptionnelle pour un blanc du sud, développant avec l'âge une complexité minérale et pétrolée qui rappelle les grands Riesling. Servi sur des poissons, des fruits de mer, des crustacés ou une cuisine méditerranéenne, il séduit par sa tension saline. Le Pietramarina de Benanti, issu de vieilles vignes de Milo et commercialisé après plusieurs années, en est l'expression la plus aboutie, régulièrement cité parmi les plus grands blancs d'Italie. Milo incarne, à lui seul, la vocation de l'Etna pour les grands vins blancs de garde.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "milo",
+        "carricante",
+        "blanc-superiore",
+        "cru"
+      ],
+      "source": "decanter|foodandwinegazette"
+    },
+    {
+      "id": "it-sicilia-terr-guardiola",
+      "nom": "Guardiola",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese"
+      ],
+      "altitude": "~800-1000 m",
+      "sols": "sables volcaniques, très haute altitude (Castiglione)",
+      "caracteristiques_rapides": "Contrade parmi les plus hautes du versant nord : Nerello tendu, fin et d'une grande fraîcheur d'altitude (Passopisciaro, Terre Nere).",
+      "notes_objectives": "Guardiola, sur le versant nord de l'Etna à cheval sur Castiglione di Sicilia, est l'une des contrade les plus élevées et les plus recherchées du volcan. Perchée entre 800 et 1000 mètres d'altitude, elle pousse la viticulture de l'Etna à ses limites supérieures, là où seuls les plus téméraires plantent la vigne.\n\nSur des sables volcaniques clairs, à cette altitude extrême, le Nerello Mascalese donne des vins d'une tension et d'une fraîcheur saisissantes : robe claire, nez délicat de petits fruits rouges, de fleurs, d'herbes et d'épices, bouche fine, saline et vibrante, aux tanins ciselés. La maturation tardive, parfois jusqu'en novembre, et l'amplitude thermique préservent une acidité éclatante et une grande définition aromatique. C'est ici que Passopisciaro signe sa contrada Guardiola et que la Tenuta delle Terre Nere possède des parcelles réputées ; le Chardonnay d'altitude de Passopisciaro y est aussi planté, parmi les plus hauts d'Europe. Le terroir, d'accès difficile, produit des vins rares et convoités.\n\nContrada d'altitude extrême, Guardiola donne des Nerello d'une finesse et d'une fraîcheur remarquables, parmi les plus tendus de l'Etna. C'est l'un des crus les plus prestigieux et les plus recherchés du versant nord du volcan.\n\nÀ ces altitudes, la viticulture devient un défi : les gelées printanières menacent, la maturation est tardive, les rendements faibles, mais les vins qui en résultent comptent parmi les plus purs de l'Etna. Les sables volcaniques clairs de Guardiola, très drainants, et l'amplitude thermique entre le jour et la nuit sculptent des Nerello d'une tension et d'une définition aromatique remarquables. C'est aussi ici, sur ces hauteurs, qu'Andrea Franchetti (Passopisciaro) a osé planter du Chardonnay, parmi les vignobles les plus élevés d'Europe, prouvant l'audace viticole du volcan. Servis sur des viandes blanches, des volailles ou des champignons, les Nerello de Guardiola séduisent par leur finesse et leur fraîcheur, et vieillissent avec grâce sur dix à quinze ans. La rareté de ces vins, issus de parcelles d'accès difficile et de rendements confidentiels, en fait des bouteilles très recherchées. Guardiola incarne, mieux qu'aucune autre contrada, la quête d'altitude et de fraîcheur qui caractérise le renouveau de l'Etna.",
+      "niveau_reference": 4,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "guardiola",
+        "altitude",
+        "nerello"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-terr-barbabecchi",
+      "nom": "Barbabecchi",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese"
+      ],
+      "altitude": "~900-1000 m",
+      "sols": "sables volcaniques, vignes prephylloxera d'altitude (Solicchiata)",
+      "caracteristiques_rapides": "L'une des contrade les plus élevées de l'Etna : vieilles vignes franches de pied de Nerello (Graci Quota 1000, Cornelissen), fraîcheur extrême.",
+      "notes_objectives": "Barbabecchi, sur les hauteurs de Solicchiata (Castiglione di Sicilia), est l'une des contrade les plus élevées de l'Etna, culminant vers 900-1000 mètres. C'est un terroir mythique pour ses vieilles vignes de Nerello Mascalese franches de pied, souvent centenaires, conduites en alberello.\n\nSur des sables volcaniques, à cette altitude extrême, le Nerello donne des vins d'une fraîcheur et d'une finesse rares : arômes floraux et de fruits rouges, minéralité tranchante, grande vivacité. C'est ici que Frank Cornelissen élabore son Magma et que Graci signe sa cuvée d'altitude, à partir de ceps prephylloxera d'un âge vénérable. L'altitude et les vieilles vignes signent des vins d'une profondeur et d'une tension exceptionnelles.\n\nContrada d'altitude et de vieilles vignes, Barbabecchi donne des Nerello d'une fraîcheur extrême, parmi les plus purs de l'Etna. C'est l'un des terroirs les plus prisés du versant nord.\n\nÀ près de 1000 mètres, Barbabecchi est un terroir de l'extrême, où la vigne côtoie la limite supérieure de la culture sur l'Etna. Ses vieilles vignes franches de pied, qui ont échappé au phylloxéra grâce aux sols sableux, constituent un patrimoine génétique précieux. Servis sur des viandes blanches ou des champignons, les Nerello de Barbabecchi séduisent par leur fraîcheur cristalline et leur profondeur. Le Magma de Cornelissen, issu de ces parcelles, est l'un des vins nature les plus recherchés au monde, confirmant le statut mythique de cette contrada d'altitude.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "barbabecchi",
+        "prephylloxera",
+        "altitude"
+      ],
+      "source": "grapeguru|decanter"
+    },
+    {
+      "id": "it-sicilia-terr-sciaranuova",
+      "nom": "Sciaranuova",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese"
+      ],
+      "altitude": "~750-850 m",
+      "sols": "sables et laves, versant nord (Passopisciaro)",
+      "caracteristiques_rapides": "Contrada réputée du versant nord : Nerello Mascalese structuré et parfumé (Passopisciaro Sciaranuova, Tenuta di Fessina).",
+      "notes_objectives": "Sciaranuova, sur le versant nord de l'Etna (Passopisciaro, Castiglione di Sicilia), est une contrada réputée pour ses Nerello Mascalese structurés et parfumés. Son nom évoque la « sciara », la coulée de lave qui façonne le terroir.\n\nSur des sables et des laves volcaniques, à 750-850 mètres d'altitude, le Nerello y donne des rouges équilibrés, alliant fruit, minéralité et fraîcheur, dans un style élégant et de belle tenue. C'est ici que Passopisciaro signe sa contrada Sciaranuova (et une parcelle plantée en Chardonnay) et que Tenuta di Fessina possède des vignes réputées. L'altitude préserve la fraîcheur et la définition aromatique des vins.\n\nContrada de référence du versant nord, Sciaranuova donne des Nerello structurés et fins, représentatifs de l'élégance de l'Etna. C'est l'un des crus prisés du volcan.\n\nLa diversité des parcelles de Sciaranuova, entre coulées de lave d'âges différents, en fait un terroir nuancé, capable de donner des Nerello à la fois structurés et fins. L'altitude préserve la fraîcheur, tandis que l'exposition assure une maturité complète. Servis sur des viandes, du gibier à plume ou des champignons, les rouges de Sciaranuova séduisent par leur équilibre et leur parfum. Vinifiée en cru par Passopisciaro et d'autres, cette contrada confirme son rang parmi les terroirs de référence du versant nord de l'Etna.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "sciaranuova",
+        "nerello"
+      ],
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-terr-feudo-di-mezzo",
+      "nom": "Feudo di Mezzo",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~600-700 m",
+      "sols": "laves et sables, versant nord (Castiglione)",
+      "caracteristiques_rapides": "Contrada classique du versant nord : Nerello équilibré, terroir historique de l'Etna (Terre Nere, Cottanera).",
+      "notes_objectives": "Feudo di Mezzo, sur le versant nord de l'Etna (Castiglione di Sicilia), est l'une des contrade historiques et les plus classiques du volcan. Sa position centrale, sur le versant nord, en fait un terroir de référence.\n\nSur des laves et des sables volcaniques, autour de 600-700 mètres d'altitude, le Nerello Mascalese et le Nerello Cappuccio y donnent des rouges équilibrés, aux arômes de fruits rouges, d'épices et de minéral volcanique, à la bouche fine et fraîche. C'est ici que la Tenuta delle Terre Nere et Cottanera, entre autres, vinifient des crus réputés. Le terroir, bien exposé, illustre le style classique du Nerello de l'Etna.\n\nContrada historique du versant nord, Feudo di Mezzo donne des Nerello équilibrés et fins, fidèles à l'identité de l'Etna. C'est l'un des crus de référence du volcan.\n\nContrada centrale et historique, Feudo di Mezzo a été l'une des premières à être vinifiée en cru lors du renouveau de l'Etna, contribuant à établir la logique parcellaire du volcan. Ses sols de lave et de sable donnent des Nerello au style classique, alliant fruit, minéralité et fraîcheur. Servis sur des viandes blanches ou des champignons, ces rouges séduisent par leur équilibre et leur digestibilité. Exploitée par plusieurs grands domaines, la contrada demeure une référence du versant nord, représentative de l'identité du Nerello de l'Etna.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "feudo-di-mezzo",
+        "nerello"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-terr-santo-spirito",
+      "nom": "Santo Spirito",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~700-800 m",
+      "sols": "sables volcaniques, versant nord (Passopisciaro)",
+      "caracteristiques_rapides": "Contrada prisée du versant nord : Nerello fin et minéral (Palmento Costanzo, Passopisciaro).",
+      "notes_objectives": "Santo Spirito, sur le versant nord de l'Etna (Passopisciaro, Castiglione di Sicilia), est une contrada prisée pour ses Nerello fins et minéraux. Elle fait partie des lieux-dits les plus recherchés du versant nord.\n\nSur des sables volcaniques, à 700-800 mètres d'altitude, le Nerello Mascalese y donne des rouges élégants, tendus et parfumés, à la minéralité marquée. C'est ici que Palmento Costanzo a établi son domaine et signe sa contrada Santo Spirito, et que Passopisciaro possède des parcelles. L'altitude et les sols volcaniques signent des vins d'une belle fraîcheur et d'une grande précision.\n\nContrada réputée du versant nord, Santo Spirito donne des Nerello fins et minéraux, dans le style élégant de l'Etna. C'est l'un des crus appréciés du volcan.\n\nSanto Spirito a gagné en notoriété avec l'installation de Palmento Costanzo, qui a restauré un palmento traditionnel et fait de cette contrada sa signature. Les sables volcaniques et l'altitude y donnent des Nerello fins, tendus et minéraux. Servis sur des viandes blanches, des volailles ou des champignons, ces rouges séduisent par leur élégance et leur fraîcheur. Prisée par plusieurs domaines du versant nord, la contrada confirme son rang parmi les crus recherchés de l'Etna.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "santo-spirito",
+        "nerello"
+      ],
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-terr-san-lorenzo",
+      "nom": "San Lorenzo",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~650-780 m",
+      "sols": "laves et sables, versant nord (Randazzo)",
+      "caracteristiques_rapides": "Contrada de référence : Nerello parfumé et profond, vinifié en cru par plusieurs domaines (Girolamo Russo, Terre Nere).",
+      "notes_objectives": "San Lorenzo, sur le versant nord de l'Etna (Randazzo), est l'une des contrade de référence du volcan, vinifiée en cru par plusieurs grands domaines. Elle jouit d'une solide réputation pour la finesse de ses Nerello.\n\nSur des laves et des sables volcaniques, à 650-780 mètres d'altitude, le Nerello Mascalese et le Nerello Cappuccio y donnent des rouges parfumés et profonds, aux arômes de fruits rouges, de fleurs et d'épices, à la trame fine et minérale. C'est ici que Girolamo Russo signe l'un de ses crus phares, aux côtés de la Tenuta delle Terre Nere et de Tenuta di Fessina. L'altitude préserve la fraîcheur et l'élégance des vins.\n\nContrada de référence du versant nord, San Lorenzo donne des Nerello parfumés et fins, parmi les plus appréciés de l'Etna. C'est l'un des crus recherchés du volcan.\n\nSan Lorenzo est l'une des contrade les plus vinifiées en cru sur l'Etna, signe de sa réputation. La diversité de ses parcelles et de ses altitudes donne des Nerello aux profils variés, unis par une finesse et un parfum caractéristiques. Servis sur des viandes blanches, du gibier à plume ou des champignons, ces rouges séduisent par leur élégance et se patinent avec le temps. Girolamo Russo en a fait l'un de ses crus phares, aux côtés de la Tenuta delle Terre Nere, confirmant le statut de cette contrada parmi les références du versant nord.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "san-lorenzo",
+        "nerello"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-terr-arcuria",
+      "nom": "Arcurìa",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~600-700 m",
+      "sols": "laves et sables volcaniques, versant nord (Randazzo)",
+      "caracteristiques_rapides": "Contrada emblématique d'Alberto Graci : Nerello Mascalese d'une grande élégance, l'un des beaux crus du versant nord.",
+      "notes_objectives": "Arcurìa, sur le versant nord de l'Etna (Randazzo), est la contrada emblématique du domaine Graci, qui en a fait l'une des expressions les plus élégantes du Nerello Mascalese. C'est un cru montant du versant nord.\n\nSur des laves et des sables volcaniques, autour de 600-700 mètres d'altitude, le Nerello y donne des rouges d'une grande finesse : arômes floraux et de petits fruits, minéralité, tanins soyeux, dans un style tout en transparence et en fraîcheur. Alberto Graci en a révélé le potentiel avec ses cuvées Arcurìa, saluées par la critique internationale. Le terroir illustre la capacité de l'Etna à donner des Nerello d'élégance bourguignonne.\n\nContrada de référence, révélée par Graci, Arcurìa donne des Nerello d'une grande élégance, parmi les beaux crus du versant nord de l'Etna. C'est l'un des terroirs les plus prometteurs du volcan.\n\nLe travail d'Alberto Graci a été déterminant pour révéler le potentiel d'Arcurìa, dont il a fait le cœur de son domaine. Les sols de lave et de sable, l'altitude modérée et l'exposition y donnent des Nerello d'une élégance remarquable, tout en transparence. Servis sur des viandes blanches, des volailles ou des champignons, ces rouges séduisent par leur finesse et leur fraîcheur. Salués par la critique internationale, les crus d'Arcurìa figurent parmi les plus beaux du versant nord et illustrent la capacité de l'Etna à donner des vins d'élégance bourguignonne.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "arcuria",
+        "graci",
+        "nerello"
+      ],
+      "source": "grapeguru"
+    },
+    {
+      "id": "it-sicilia-terr-zottorinoto",
+      "nom": "Zottorinoto",
+      "type": "contrada",
+      "region": "Sicilia",
+      "sous_region": "Etna",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio"
+      ],
+      "altitude": "~700-800 m",
+      "sols": "sables volcaniques, versant nord-est (Castiglione)",
+      "caracteristiques_rapides": "Contrada du versant nord-est exploitée par Cottanera : Nerello fin et frais, expression soignée de l'Etna.",
+      "notes_objectives": "Zottorinoto est une contrada du versant nord-est de l'Etna (Castiglione di Sicilia), principalement exploitée par le domaine Cottanera. Sur des sables volcaniques, à 700-800 mètres d'altitude, le Nerello Mascalese et le Nerello Cappuccio y donnent des rouges fins et frais, à la minéralité marquée, dans le style élégant de l'Etna. La contrada illustre le potentiel du versant nord-est, un peu moins couru que le nord mais de belle qualité. Cottanera en signe une cuvée parcellaire réputée. C'est l'un des crus soignés du volcan, représentatif de la finesse des Nerello d'altitude. Le versant nord-est, où se situe Zottorinoto, bénéficie d'une exposition et de sols volcaniques propices à des Nerello d'une belle fraîcheur, un peu plus accessibles que ceux des contrade les plus courues. Servis sur des viandes blanches ou des champignons, ils séduisent par leur élégance et leur digestibilité.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "etna",
+        "contrada",
+        "zottorinoto",
+        "cottanera"
+      ],
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-terr-cerasuolo-di-vittoria",
+      "nom": "Cerasuolo di Vittoria",
+      "type": "appellation (DOCG)",
+      "region": "Sicilia",
+      "sous_region": "Vittoria",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Frappato"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "sables rouges et calcaires du sud-est",
+      "caracteristiques_rapides": "L'unique DOCG de Sicile : assemblage Nero d'Avola-Frappato sur sables et calcaires, rouge frais, fruité et digeste (COS, Occhipinti, Valle dell'Acate).",
+      "notes_objectives": "Le Cerasuolo di Vittoria, dans le sud-est de la Sicile, est l'unique DOCG de l'île, hissée à ce rang en 2005. Ce rouge d'assemblage, né sur les terroirs de sables et de calcaires autour de Vittoria et Ragusa, est l'un des plus originaux et des plus fins de Sicile.\n\nIl marie deux cépages autochtones : le Nero d'Avola, qui apporte structure, couleur et fruit noir, et le Frappato, qui donne finesse, parfum floral et fraîcheur. Le résultat est un rouge d'un rouge cerise (« cerasuolo ») lumineux, aux arômes de fruits rouges, de fleurs et d'épices, à la bouche fraîche, digeste et souple, à mille lieues des rouges siciliens lourds d'autrefois. Les sols sableux et calcaires, sous un climat chaud tempéré par les brises, signent des vins d'une grande buvabilité, que les meilleurs domaines déclinent aussi en versions de garde (la mention Classico). C'est le terroir de COS, Arianna Occhipinti et Valle dell'Acate, qui en ont fait une référence mondiale, notamment dans la mouvance du vin nature.\n\nSeule DOCG de Sicile, le Cerasuolo di Vittoria incarne l'élégance retrouvée du vin sicilien : un rouge frais, parfumé et digeste, symbole du renouveau de l'île. C'est l'un des terroirs les plus emblématiques et les plus admirés de Sicile.\n\nLe Cerasuolo di Vittoria a une longue histoire — c'est l'un des vins les plus anciens de Sicile —, mais c'est son renouveau récent qui l'a hissé au rang de référence. Des vignerons comme Giusto Occhipinti (COS) et Arianna Occhipinti en ont fait un étendard du vin nature et de l'élégance retrouvée, à rebours des rouges siciliens lourds et boisés des années 1990. Le terroir de Vittoria, avec ses sables rouges profonds et ses sous-sols calcaires, apporte au Nero d'Avola et au Frappato une fraîcheur et une buvabilité remarquables. Servi légèrement rafraîchi sur des charcuteries, des poissons, des pâtes ou la cuisine sicilienne, ce rouge séduit par sa digestibilité. La vinification en amphore, remise à l'honneur par COS, y a aussi trouvé un terrain d'expression unique. Seule DOCG de l'île, le Cerasuolo di Vittoria est devenu un symbole du vin sicilien moderne, frais, précis et profondément lié à son terroir.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "vittoria",
+        "cerasuolo",
+        "frappato",
+        "nero-davola",
+        "docg"
+      ],
+      "source": "timatkin|decanter"
+    },
+    {
+      "id": "it-sicilia-terr-pachino",
+      "nom": "Pachino",
+      "type": "zone",
+      "region": "Sicilia",
+      "sous_region": "Pachino (SE)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola"
+      ],
+      "altitude": "~0-150 m",
+      "sols": "sables et calcaires de la pointe sud-est (Siracusa)",
+      "caracteristiques_rapides": "Berceau historique du Nero d'Avola, à l'extrême sud-est : sur sables, des rouges profonds et structurés, terroir de crus (Gulfi NeroBufaleffj).",
+      "notes_objectives": "Pachino, à l'extrême pointe sud-est de la Sicile (province de Syracuse), est le berceau historique du Nero d'Avola, le grand cépage rouge de l'île. Ce terroir méridional, baigné de soleil et de mer, en donne les expressions les plus profondes.\n\nSur des sols sableux et calcaires, dans un climat chaud tempéré par les brises marines, le Nero d'Avola de Pachino donne des rouges structurés, riches et concentrés, aux arômes de fruits noirs mûrs, d'épices et de garrigue, tout en conservant une belle fraîcheur grâce à la proximité de la mer. C'est ici que Gulfi vinifie ses crus parcellaires (NeroBufaleffj, NeroMàccarj), révélant que le Nero d'Avola peut être un grand vin de terroir, à mille lieues des versions industrielles. Les vieilles vignes en alberello y sont un patrimoine précieux.\n\nBerceau du Nero d'Avola, Pachino en donne les expressions les plus profondes et les plus authentiques. C'est l'un des terroirs de rouge les plus réputés du sud-est sicilien.\n\nLe Nero d'Avola de Pachino a longtemps été utilisé, en vrac, pour renforcer les vins du continent, avant que des vignerons ne révèlent son potentiel de grand vin de terroir. Les sables et calcaires de la pointe sud-est, la chaleur et les brises marines y donnent des rouges d'une richesse remarquable, mais frais grâce à la proximité de la mer. Servis sur des viandes rouges, du gibier ou des fromages, ces Nero d'Avola séduisent par leur profondeur. Le travail parcellaire de Gulfi, sur de vieilles vignes en alberello, a démontré que Pachino pouvait donner des crus de grande garde, confirmant son statut de berceau du plus grand cépage rouge de Sicile.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "pachino",
+        "nero-davola",
+        "sable",
+        "cru"
+      ],
+      "source": "jamessuckling"
+    },
+    {
+      "id": "it-sicilia-terr-noto",
+      "nom": "Noto",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Noto (SE)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Moscato Bianco"
+      ],
+      "altitude": "~50-300 m",
+      "sols": "calcaires blancs et sols sableux du sud-est",
+      "caracteristiques_rapides": "Terroir du sud-est réputé pour le Nero d'Avola (Santa Cecilia, Saia) et le Moscato di Noto, doux et aromatique ; sols calcaires lumineux.",
+      "notes_objectives": "Noto, dans le sud-est de la Sicile, est un terroir réputé à la fois pour le Nero d'Avola et pour le Moscato di Noto, sur les sols calcaires blancs qui font la lumière de cette région baroque. C'est l'un des terroirs les plus qualitatifs du sud-est.\n\nSur des calcaires et des sols sableux, le Nero d'Avola y donne des rouges élégants et profonds — le Santa Cecilia de Planeta, le Saia de Feudo Maccari en sont des exemples réputés —, souvent plus fins que dans d'autres zones de l'île. Le Moscato di Noto, doux et aromatique, est l'autre spécialité, dans une tradition de vins de dessert. Le climat chaud, tempéré par la mer, et les sols calcaires signent des vins équilibrés. Des domaines comme Marabino ou Riofavara y explorent une expression plus fraîche et parcellaire du Nero d'Avola.\n\nTerroir de référence du sud-est, Noto donne de grands Nero d'Avola et le rare Moscato di Noto, sur ses sols calcaires lumineux. C'est l'un des terroirs les plus qualitatifs de la Sicile méridionale.\n\nLa lumière de Noto, ville baroque classée à l'UNESCO, se retrouve dans ses vins, portés par des sols calcaires blancs qui apportent finesse et fraîcheur. Le Nero d'Avola y trouve l'une de ses plus belles expressions, plus élégante que dans les zones plus chaudes de l'île, tandis que le Moscato di Noto perpétue une tradition de vins doux aromatiques. Servis sur des viandes pour les rouges, sur des desserts pour le Moscato, les vins de Noto séduisent par leur équilibre. Des domaines comme Planeta, Marabino ou Riofavara y explorent une expression fraîche et parcellaire du terroir, confirmant Noto comme l'un des secteurs les plus qualitatifs du sud-est sicilien.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "noto",
+        "nero-davola",
+        "moscato",
+        "calcaire",
+        "doc"
+      ],
+      "source": "jamessuckling|grapeguru"
+    },
+    {
+      "id": "it-sicilia-terr-faro",
+      "nom": "Faro",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Faro (Messina)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nerello Mascalese",
+        "Nerello Cappuccio",
+        "Nocera"
+      ],
+      "altitude": "~200-500 m",
+      "sols": "sols meubles et argilo-sableux des collines de Messine",
+      "caracteristiques_rapides": "Petite appellation ressuscitée par Palari : Nerello et Nocera sur des pentes escarpées face au détroit, rouges fins et parfumés d'une grande élégance.",
+      "notes_objectives": "Le Faro est une petite appellation de la pointe nord-est de la Sicile, sur les collines dominant Messine et le détroit. Longtemps moribonde, elle a été ressuscitée par le domaine Palari, qui en a fait l'un des plus beaux rouges de l'île.\n\nSur des sols meubles, argilo-sableux, sur des pentes escarpées face à la mer, l'assemblage de Nerello Mascalese, Nerello Cappuccio et Nocera (et de cépages locaux plus rares) donne un rouge d'une finesse et d'un parfum remarquables : arômes de fruits rouges, de fleurs, d'épices et de garrigue, bouche élégante et minérale, souvent comparée aux grands vins de Bourgogne. L'influence maritime et l'altitude signent des vins frais et de belle garde. Palari et, plus récemment, Bonavita et Le Casematte en portent le renouveau. Le terroir, confidentiel, produit des vins rares et recherchés.\n\nAppellation ressuscitée de Messine, le Faro donne des rouges d'une grande élégance, parmi les plus fins de Sicile. C'est l'un des terroirs les plus attachants de la pointe nord-est de l'île.\n\nLa résurrection du Faro, menée par Salvatore Geraci (Palari) à partir des années 1980 avec les encouragements du critique Luigi Veronelli, est l'une des belles histoires du vin sicilien. Les pentes escarpées face au détroit de Messine, aux sols meubles, offrent un terroir singulier, où l'influence maritime et l'altitude apportent fraîcheur et finesse. Servis sur des viandes blanches, du gibier à plume ou des fromages, les rouges du Faro séduisent par leur parfum et leur élégance, et vieillissent avec grâce. Portée aujourd'hui par Palari, Bonavita et Le Casematte, l'appellation, à la production confidentielle, produit des vins rares et recherchés, parmi les plus fins de Sicile.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "faro",
+        "messina",
+        "nerello",
+        "nocera",
+        "doc"
+      ],
+      "source": "timatkin|utejunker"
+    },
+    {
+      "id": "it-sicilia-terr-mamertino",
+      "nom": "Mamertino",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Messina",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Nocera"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "collines argilo-calcaires du nord-est messinois",
+      "caracteristiques_rapides": "Appellation historique (le vin préféré de Jules César) : assemblage Nero d'Avola-Nocera, rouges chaleureux et souples du nord-est de l'île.",
+      "notes_objectives": "Le Mamertino est une appellation historique du nord-est de la Sicile, dans la province de Messine. Réputé dès l'Antiquité — c'était, dit-on, le vin préféré de Jules César —, il assemble le Nero d'Avola et le Nocera (cépage local) pour donner des rouges chaleureux et souples, aux arômes de fruits mûrs et d'épices. Sur les collines argilo-calcaires du Messinois, le terroir bénéficie d'un climat méditerranéen tempéré. Longtemps oublié, le Mamertino connaît un modeste renouveau. C'est l'un des terroirs les plus anciens et les plus chargés d'histoire de la Sicile, témoin de sa tradition viticole millénaire. Servi sur des viandes ou des fromages, le Mamertino séduit par sa souplesse et sa générosité. Son renouveau, porté par quelques domaines, s'appuie sur la richesse de son histoire et sur des cépages autochtones comme le Nocera, qui lui confèrent une identité singulière dans le paysage viticole sicilien.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "mamertino",
+        "messina",
+        "nero-davola",
+        "nocera",
+        "historique",
+        "doc"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-sicilia-terr-pantelleria",
+      "nom": "Pantelleria",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Pantelleria",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Zibibbo"
+      ],
+      "altitude": "~0-400 m",
+      "sols": "sols volcaniques noirs, île battue par les vents",
+      "caracteristiques_rapides": "Île volcanique du Zibibbo (Muscat d'Alexandrie) : passito et Moscato d'exception (Ben Ryé, Bukkuram, Martingana) ; alberello pantesco classé à l'UNESCO.",
+      "notes_objectives": "Pantelleria, île volcanique perdue entre la Sicile et la Tunisie, est l'un des terroirs les plus spectaculaires d'Italie. Balayée par les vents, couverte de laves noires, elle est le royaume du Zibibbo (le Muscat d'Alexandrie), dont elle tire des vins doux d'exception.\n\nLa viticulture y relève de l'héroïsme : pour protéger les ceps du vent violent, les vignerons les plantent dans des cuvettes creusées à même le sol (l'alberello pantesco, classé au patrimoine immatériel de l'UNESCO). Le Zibibbo, séché au soleil sur des claies, donne le Passito di Pantelleria, vin doux d'une concentration et d'une complexité rares — abricot, figue, miel, écorce d'orange, épices —, équilibré par une fraîcheur saline. Le Ben Ryé de Donnafugata, le Bukkuram de Marco De Bartoli et le Martingana de Salvatore Murana en sont les expressions les plus célèbres, parmi les plus grands vins doux du monde. L'île produit aussi des Moscato plus légers et quelques secs. Les sols volcaniques et le climat extrême signent des vins d'une puissance aromatique inimitable.\n\nTerroir volcanique du Zibibbo, Pantelleria donne certains des plus grands vins doux d'Italie, fruits d'une viticulture héroïque classée à l'UNESCO. C'est l'un des terroirs les plus fascinants et les plus emblématiques de la Sicile.\n\nL'histoire de Pantelleria est celle d'une viticulture extrême, façonnée par le vent et le soleil. Le nom arabe de nombreuses contrade (Khamma, Bukkuram, Mueggen) rappelle l'héritage méditerranéen de l'île, plus proche de l'Afrique que de la Sicile. Le Zibibbo, cépage à gros grains parfumés, y est cultivé depuis des siècles dans des conditions héroïques, chaque cep protégé dans sa cuvette. Le séchage des raisins au soleil, sur des claies, concentre les sucres et les arômes avant une vinification patiente. Le résultat, le passito, est un vin d'une richesse et d'une complexité rares, mais équilibré par la salinité et la fraîcheur apportées par la mer et le vent. Servi sur des pâtisseries, des fromages bleus, du foie gras ou en méditation, il est d'une longévité remarquable. Le Ben Ryé de Donnafugata a porté sa renommée sur toutes les grandes tables du monde. Terroir volcanique unique et classé à l'UNESCO pour sa vigne en alberello, Pantelleria est l'un des joyaux du patrimoine viticole italien.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "pantelleria",
+        "zibibbo",
+        "passito",
+        "doux",
+        "volcanique",
+        "icone"
+      ],
+      "source": "jamessuckling|decanter"
+    },
+    {
+      "id": "it-sicilia-terr-malvasia-delle-lipari",
+      "nom": "Malvasia delle Lipari",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Isole Eolie",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Malvasia di Lipari",
+        "Corinto Nero"
+      ],
+      "altitude": "~50-400 m",
+      "sols": "sols volcaniques des îles Éoliennes (Salina)",
+      "caracteristiques_rapides": "Doux volcanique des îles Éoliennes (surtout Salina) : Malvasia passerillée aux arômes d'abricot et de miel, joyau insulaire (Hauner, Capofaro).",
+      "notes_objectives": "La Malvasia delle Lipari est un doux volcanique produit dans l'archipel des îles Éoliennes, au nord de la Sicile, surtout sur l'île de Salina. Ce terroir insulaire, spectaculaire et isolé, donne l'un des vins doux les plus raffinés d'Italie.\n\nSur des sols volcaniques, face à la mer, la Malvasia di Lipari (complétée d'un peu de Corinto Nero) est passerillée au soleil, puis vinifiée en doux : un vin aux arômes d'abricot, de miel, d'agrumes confits et de fleurs, d'une grande finesse et d'une fraîcheur saline. Failli disparaître, il a été sauvé notamment par Carlo Hauner dans les années 1970 ; Capofaro (Tasca d'Almerita) et d'autres en perpétuent la tradition. La production, confidentielle, et le cadre insulaire en font un vin de niche recherché. On le sert sur des pâtisseries, des fromages ou en méditation.\n\nDoux volcanique des îles Éoliennes, la Malvasia delle Lipari est l'un des vins de dessert les plus fins d'Italie. C'est un joyau insulaire et confidentiel de la Sicile.\n\nLes îles Éoliennes, archipel volcanique classé à l'UNESCO, offrent à la Malvasia un cadre spectaculaire et un terroir unique, entre laves noires et mer d'un bleu profond. La viticulture y est héroïque, sur des terrasses escarpées balayées par le vent. Le sauvetage de la Malvasia delle Lipari, menée par Carlo Hauner dans les années 1970 alors que le vin menaçait de disparaître, est l'une des belles histoires du vin insulaire italien. Servi sur des pâtisseries aux amandes, des fromages ou en méditation, ce doux d'une grande finesse séduit par son équilibre entre richesse et fraîcheur saline. Capofaro (Tasca d'Almerita), sur Salina, en perpétue aujourd'hui la tradition. Confidentiel et raffiné, ce vin est l'un des joyaux insulaires de la Sicile.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "eolie",
+        "salina",
+        "malvasia",
+        "passito",
+        "doux",
+        "volcanique"
+      ],
+      "source": "decanter|grapeguru"
+    },
+    {
+      "id": "it-sicilia-terr-marsala",
+      "nom": "Marsala",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grillo",
+        "Inzolia",
+        "Catarratto"
+      ],
+      "altitude": "~0-150 m",
+      "sols": "sols sableux et calcaires de la côte ouest",
+      "caracteristiques_rapides": "Berceau du grand vin fortifié sicilien : Grillo, Inzolia et Catarratto élevés en oxydatif (Vergine, Superiore), gloire historique de l'île (De Bartoli, Florio).",
+      "notes_objectives": "Marsala, sur la côte ouest de la Sicile, est le berceau du plus célèbre vin fortifié de l'île, créé à la fin du XVIIIe siècle par des négociants anglais. Ce terroir de plaine côtière, balayé par le soleil et les vents, est aujourd'hui aussi une grande terre de blancs secs.\n\nSur des sols sableux et calcaires, les cépages blancs autochtones — Grillo en tête, complété d'Inzolia et de Catarratto — donnent les bases du Marsala, vin fortifié élevé en oxydatif (systèmes de soleras) et décliné en styles (Fine, Superiore, Vergine) et en couleurs (oro, ambra, rubino). Longtemps galvaudé par la production industrielle, le Marsala a retrouvé ses lettres de noblesse grâce à des maisons comme Marco De Bartoli (Vecchio Samperi) et Florio. Le Grillo est aussi de plus en plus vinifié en blanc sec, minéral et salin. On sert le Marsala sur des fromages, des desserts ou en méditation.\n\nBerceau du grand vin fortifié sicilien et terre du Grillo, Marsala conjugue tradition oxydative et renouveau des blancs secs. C'est l'un des terroirs les plus historiques et emblématiques de l'île.\n\nL'histoire du Marsala, née de la rencontre entre les négociants anglais et le terroir sicilien à la fin du XVIIIe siècle, en a fait l'un des grands vins fortifiés du monde, aux côtés du Xérès, du Porto et de Madère. Après un long déclin dû à la production industrielle, le renouveau est venu d'irréductibles comme Marco De Bartoli, qui a prouvé que le Marsala pouvait être un grand vin de méditation. Parallèlement, le Grillo, cépage roi du Marsala, connaît une seconde vie en blanc sec, minéral et salin, porté par toute une génération de vignerons du Trapanais. Servis sur des fromages affinés, des desserts ou en méditation pour les fortifiés, sur des poissons pour les blancs secs, les vins de Marsala illustrent la richesse de ce terroir côtier. C'est l'un des grands noms historiques du vin italien, entre tradition oxydative et modernité.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "marsala",
+        "grillo",
+        "fortifie",
+        "oxydatif",
+        "doc",
+        "historique"
+      ],
+      "source": "timatkin"
+    },
+    {
+      "id": "it-sicilia-terr-menfi",
+      "nom": "Menfi",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Menfi-Agrigento",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Grillo",
+        "Chardonnay",
+        "Fiano"
+      ],
+      "altitude": "~50-250 m",
+      "sols": "collines argilo-calcaires du sud-ouest, influence maritime",
+      "caracteristiques_rapides": "Terroir phare du sud-ouest (base de Planeta) : Chardonnay, Fiano, Grillo et Nero d'Avola de belle tenue, sous l'influence rafraîchissante de la mer.",
+      "notes_objectives": "Menfi, dans le sud-ouest de la Sicile (province d'Agrigente), est un terroir phare de la viticulture moderne de l'île, base historique du domaine Planeta. Sur des collines argilo-calcaires descendant vers la mer, sous l'influence rafraîchissante des brises, il réussit une large palette de cépages : Chardonnay, Fiano (Cometa), Grillo en blanc, Nero d'Avola et cépages internationaux en rouge. Le climat maritime et les sols variés donnent des vins équilibrés et de bonne tenue. Menfi abrite aussi la grande coopérative Settesoli (Mandrarossa). C'est l'un des terroirs les plus dynamiques et les plus qualitatifs du sud-ouest sicilien. Le rôle de Planeta et de Settesoli a été déterminant pour hisser Menfi au rang de terroir de référence du sud-ouest. Servis sur des poissons pour les blancs, sur des viandes pour les rouges, les vins de Menfi séduisent par leur fraîcheur et leur régularité, fruit de l'influence maritime et d'un travail exigeant.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "menfi",
+        "chardonnay",
+        "nero-davola",
+        "planeta",
+        "doc"
+      ],
+      "source": "grapeguru"
+    },
+    {
+      "id": "it-sicilia-terr-contessa-entellina",
+      "nom": "Contessa Entellina",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Palermo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Chardonnay",
+        "Grillo",
+        "Catarratto"
+      ],
+      "altitude": "~200-600 m",
+      "sols": "collines argilo-calcaires de l'intérieur de Palerme",
+      "caracteristiques_rapides": "Terroir d'altitude de la province de Palerme, fief de Donnafugata : rouges (Mille e una Notte) et blancs frais grâce à l'élévation.",
+      "notes_objectives": "Contessa Entellina est une appellation de l'intérieur de la province de Palerme, sur des collines d'altitude argilo-calcaires. C'est le fief historique du domaine Donnafugata, qui y produit certains de ses vins les plus réputés, dont le Mille e una Notte (Nero d'Avola). L'altitude (200-600 m) apporte une fraîcheur bienvenue sous le climat sicilien, donnant des rouges structurés et des blancs vifs (Chardonnay, Grillo, Catarratto). Le terroir, frais et venté, illustre le potentiel des zones d'altitude de l'ouest de l'île. C'est l'un des terroirs de référence de l'intérieur palermitain. L'engagement de Donnafugata a fait la renommée de ce terroir d'altitude, où la fraîcheur des collines équilibre la générosité méridionale. Servis sur des viandes pour les rouges, sur des poissons pour les blancs, les vins de Contessa Entellina séduisent par leur structure et leur équilibre, à l'image du Mille e una Notte.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "contessa-entellina",
+        "donnafugata",
+        "nero-davola",
+        "altitude",
+        "doc"
+      ],
+      "source": "grapeguru"
+    },
+    {
+      "id": "it-sicilia-terr-monreale",
+      "nom": "Monreale",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Palermo",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Syrah",
+        "Catarratto",
+        "Nero d'Avola"
+      ],
+      "altitude": "~250-600 m",
+      "sols": "collines calcaires de Camporeale, à l'ouest de Palerme",
+      "caracteristiques_rapides": "Terroir des collines de Camporeale : haut lieu du Syrah sicilien (Kaid) et de bons Catarratto et Nero d'Avola, sous un climat frais d'altitude.",
+      "notes_objectives": "L'appellation Monreale s'étend sur les collines à l'ouest de Palerme, autour de Camporeale. Sur des sols calcaires d'altitude, sous un climat frais, elle s'est imposée comme un haut lieu du Syrah sicilien : le Kaid d'Alessandro di Camporeale en est la référence. Le terroir réussit aussi le Catarratto en blanc et le Nero d'Avola en rouge. L'altitude et la fraîcheur des collines signent des vins équilibrés, alliant la générosité méridionale à une belle tension. C'est l'un des terroirs les plus intéressants de l'ouest de l'île pour les rouges de caractère. La réussite du Syrah à Monreale, portée par Alessandro di Camporeale, a révélé le potentiel des collines fraîches de l'ouest palermitain pour les rouges de caractère. Servis sur des viandes grillées ou des fromages, ces vins séduisent par leur profil épicé et leur équilibre entre puissance et fraîcheur.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "monreale",
+        "camporeale",
+        "syrah",
+        "catarratto",
+        "doc"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-sicilia-terr-alcamo",
+      "nom": "Alcamo",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Catarratto",
+        "Grillo",
+        "Nero d'Avola"
+      ],
+      "altitude": "~100-400 m",
+      "sols": "collines calcaires et argileuses du Trapanais",
+      "caracteristiques_rapides": "Vaste appellation historique du nord-ouest : le Bianco d'Alcamo (Catarratto) en fer de lance, blancs frais et rouges accessibles.",
+      "notes_objectives": "Alcamo est une vaste appellation historique du nord-ouest de la Sicile, à cheval sur les provinces de Trapani et Palerme. Sur des collines calcaires et argileuses, elle est surtout réputée pour le Bianco d'Alcamo, blanc frais et léger à base de Catarratto, longtemps l'un des blancs les plus produits de l'île. Le terroir donne aussi de bons Grillo et des rouges de Nero d'Avola accessibles. Le climat chaud, tempéré par l'altitude et les brises, signe des vins désaltérants. Appellation étendue et populaire, Alcamo illustre la tradition des blancs de soif du nord-ouest sicilien. Longtemps synonyme de blanc de soif produit en grand volume, Alcamo connaît une montée en qualité grâce à des vignerons qui valorisent mieux le Catarratto et le Grillo. Servis sur des poissons ou une cuisine légère, ces blancs désaltérants illustrent la tradition des vins frais du nord-ouest sicilien.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "alcamo",
+        "catarratto",
+        "bianco",
+        "trapani",
+        "doc"
+      ],
+      "source": "italysfinestwines"
+    },
+    {
+      "id": "it-sicilia-terr-erice",
+      "nom": "Erice",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Marsala-Trapani",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grillo",
+        "Catarratto",
+        "Nero d'Avola"
+      ],
+      "altitude": "~250-500 m",
+      "sols": "collines calcaires d'altitude sous le mont Erice",
+      "caracteristiques_rapides": "Terroir frais d'altitude au pied du mont Erice (Trapani) : blancs vifs et tendus (Grillo) et rouges, appellation récente et prometteuse.",
+      "notes_objectives": "Erice est une appellation récente du nord-ouest de la Sicile, sur les collines d'altitude au pied du mont Erice (province de Trapani). La fraîcheur de l'altitude, rare dans l'île, y donne des blancs particulièrement vifs et tendus — Grillo, Catarratto, cépages internationaux — ainsi que des rouges de belle facture. Le terroir calcaire d'altitude, sous l'influence maritime, préserve l'acidité et la finesse des vins. Encore méconnue, l'appellation Erice illustre le potentiel des zones fraîches d'altitude du Trapanais et attire des domaines en quête de fraîcheur. La fraîcheur exceptionnelle de ce terroir d'altitude, rare en Sicile, attire des domaines en quête de tension et d'élégance. Servis sur des poissons ou des fruits de mer, les blancs d'Erice séduisent par leur vivacité, et l'appellation, récente, figure parmi les plus prometteuses du Trapanais.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "erice",
+        "grillo",
+        "altitude",
+        "trapani",
+        "doc"
+      ],
+      "source": "winedexer"
+    },
+    {
+      "id": "it-sicilia-terr-sicilia-doc",
+      "nom": "Sicilia DOC",
+      "type": "appellation (DOC)",
+      "region": "Sicilia",
+      "sous_region": "Sicilia",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Nero d'Avola",
+        "Grillo",
+        "Nerello Mascalese",
+        "Catarratto"
+      ],
+      "altitude": "~0-1000 m",
+      "sols": "sols variés sur toute l'île (volcaniques, calcaires, sableux)",
+      "caracteristiques_rapides": "Appellation-cadre à l'échelle de l'île, promue DOC en 2011 : elle structure et valorise la production sicilienne, du Nero d'Avola au Grillo.",
+      "notes_objectives": "La Sicilia DOC est l'appellation-cadre à l'échelle de toute l'île, promue du rang d'IGT à celui de DOC en 2011 pour mieux structurer et valoriser la production sicilienne. Elle couvre une immense diversité de sols — volcaniques, calcaires, sableux — et de cépages, du Nero d'Avola au Grillo, du Nerello Mascalese au Catarratto. Portée par le consortium Assovini et la démarche qualité de l'île, elle a accompagné la spectaculaire montée en gamme du vin sicilien. Si elle englobe des vins très divers, elle garantit une origine et un cahier des charges. C'est le cadre général qui fédère et promeut l'identité viticole de la Sicile dans le monde. En fédérant sous une même bannière la production de l'île, la Sicilia DOC a joué un rôle clé dans la reconnaissance internationale du vin sicilien. Elle garantit une origine tout en laissant s'exprimer la formidable diversité des terroirs et des cépages de la plus grande île de la Méditerranée.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "sicilia",
+        "sicilia-doc",
+        "nero-davola",
+        "grillo",
+        "ile"
+      ],
+      "source": "assovini|grapeguru"
+    }
+  ]
+}

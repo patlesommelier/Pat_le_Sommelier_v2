@@ -1,0 +1,2170 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "toscana",
+  "region_label": "Toscana (Italie)",
+  "source_file": "producteurs_toscana.json",
+  "built_at": "2026-06-16",
+  "count": 61,
+  "items": [
+    {
+      "id": "it-toscana-prod-fontodi",
+      "nom": "Fontodi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Panzano)",
+      "commune": "Panzano in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Vigna del Sorbo",
+        "Flaccianello della Pieve"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans la Conca d'Oro de Panzano, vaste amphithéâtre naturel au cœur du Chianti Classico, Fontodi est l'un des plus grands domaines de toute la Toscane. La famille Manetti, céramiste depuis 1780, a racheté le domaine en 1968 et l'a hissé au sommet : Giovanni Manetti en a fait une référence mondiale du Sangiovese. Le vignoble, à plus de 400-500 m d'altitude sur des sols de galestro et d'albarese idéaux pour le cépage, est cultivé en bio depuis longtemps. Le vin emblématique est le Flaccianello della Pieve, né en 1981 : l'un des tout premiers Super-Toscans 100% Sangiovese, désormais étalon du genre, issu d'une sélection des meilleures parcelles et élevé en barriques. À côté, le Chianti Classico Gran Selezione Vigna del Sorbo (anciennement Riserva) compte parmi les plus beaux crus de l'appellation. Le style Fontodi allie une grande profondeur de fruit — cerise noire, prune, violette séchée — à une structure tannique ferme et à une remarquable fraîcheur, dans des vins taillés pour la garde. Le domaine élève aussi un peu de Syrah et de Pinot Noir (rareté locale), un blanc et une huile d'olive réputée, et a récemment acquis des vignes en altitude à Lamole pour anticiper le réchauffement. Les vins demandent quelques années pour s'ouvrir et tiennent admirablement quinze à vingt ans, le Flaccianello traversant les décennies. Modèle de viticulture durable et de fidélité au Sangiovese, Fontodi est unanimement considéré comme l'un des sommets du Chianti Classico et l'un des plus beaux domaines d'Italie. Le galestro, schiste friable typique des meilleurs sites du Chianti, et l'altitude de la Conca d'Oro confèrent aux vins leur tension et leur fraîcheur, tandis que l'exposition en amphithéâtre garantit une maturité optimale. À table, les Sangiovese de Fontodi accompagnent admirablement les viandes rouges grillées ou braisées, le gibier, les pâtes aux ragoûts de viande et les fromages affinés ; le Flaccianello, plus solennel, mérite un grand plat ou la méditation. La conversion précoce à l'agriculture biologique, conjuguée au travail en amphores de terre cuite (clin d'œil au métier de céramiste de la famille), illustre une démarche à la fois patrimoniale et avant-gardiste.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-classico",
+        "panzano",
+        "icone"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineenthusiast|decanter"
+    },
+    {
+      "id": "it-toscana-prod-isole-e-olena",
+      "nom": "Isole e Olena",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Barberino Tavarnelle)",
+      "commune": "Barberino Tavarnelle",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Canaiolo"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico",
+        "Cepparello"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Donato in Poggio, dans la partie occidentale du Chianti Classico, Isole e Olena est l'une des références absolues de la Toscane, née de la réunion de deux hameaux voisins. Le domaine doit sa gloire à Paolo De Marchi, vigneron visionnaire arrivé dans les années 1970, qui en a fait un modèle de précision et de fidélité au Sangiovese (il a depuis cédé la propriété au groupe EPI, tout en accompagnant la transition). Son vin culte est le Cepparello, créé en 1980 : un Sangiovese pur en IGT, élégant, profond et d'une grande longévité, considéré comme l'un des plus grands de Toscane. Le Chianti Classico du domaine est un modèle d'équilibre et de buvabilité, d'une régularité remarquable millésime après millésime. De Marchi fut aussi un pionnier : il planta de la Syrah et du Cabernet, et signe un Chardonnay et un Vin Santo réputés. Le style maison privilégie la finesse, la pureté du fruit — cerise, herbes, épices — et une trame tannique fine, dans des vins racés et digestes. Les Chianti séduisent assez jeunes mais vieillissent bien sur dix à quinze ans, le Cepparello tenant bien au-delà de vingt ans. Domaine d'une constance exemplaire et d'une grande élégance, Isole e Olena est l'un des piliers du Chianti Classico moderne et l'un des plus sûrs ambassadeurs du grand Sangiovese toscan. La position occidentale du domaine, sur des sols variés de galestro, de calcaire et de sable, conjuguée au talent de De Marchi, explique cette signature de précision et d'équilibre qui a fait sa réputation. À table, les vins d'Isole e Olena se prêtent à merveille aux pâtes aux ragoûts, aux viandes rôties, aux volailles et aux fromages de Toscane ; le Cepparello, plus profond, accompagne les pièces plus nobles ou se savoure seul. Le domaine fut aussi un laboratoire d'idées : De Marchi y a planté très tôt de la Syrah et du Cabernet, signé un Chardonnay réputé et perpétué un Vin Santo d'anthologie, dans une démarche d'expérimentation toujours au service de la finesse. Sa cession au groupe EPI, avec un accompagnement de la transition, n'a pas altéré le niveau du domaine. Modèle de constance et d'élégance depuis des décennies, Isole e Olena reste l'un des piliers du Chianti Classico et l'un des plus sûrs ambassadeurs du grand Sangiovese de Toscane, apprécié des connaisseurs pour la pureté et la régularité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-classico",
+        "icone"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|winewithseth"
+    },
+    {
+      "id": "it-toscana-prod-castello-di-ama",
+      "nom": "Castello di Ama",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Merlot"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione San Lorenzo",
+        "L'Apparita"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, perché en altitude autour du hameau d'Ama, ce domaine est à la fois l'un des sommets du Chianti Classico et un lieu d'art contemporain réputé. Mené par Lorenza Sebasti et l'œnologue Marco Pallanti, il a porté très haut la notion de cru en Toscane : ses Chianti Classico Gran Selezione de lieux-dits — San Lorenzo, Bellavista, Casuccia — comptent parmi les plus raffinés de l'appellation. Le domaine est aussi célèbre pour l'Apparita, l'un des tout premiers et des plus grands Merlot d'Italie, issu d'une parcelle d'exception. Le style Ama recherche l'élégance, la finesse aromatique et la fraîcheur que confère l'altitude : des Sangiovese parfumés — cerise, violette, épices —, aux tanins fins et à la belle tension, plutôt que la puissance. Le domaine a aussi fait de l'art contemporain une signature, avec des installations d'artistes majeurs disséminées dans les chais et le hameau, devenues une destination. Les vins demandent quelques années pour s'ouvrir et vieillissent bien sur quinze ans et plus, l'Apparita traversant les décennies. Conjuguant excellence vigneronne, sens du terroir et dimension culturelle, Castello di Ama est l'un des domaines les plus complets et les plus admirés de toute la Toscane, et une référence incontournable du Chianti Classico de finesse. L'altitude élevée du hameau d'Ama, parmi les plus hautes de Gaiole, sur des sols de galestro et d'alberese, est la clé de cette signature de fraîcheur et de finesse qui distingue les vins du domaine. À table, les Chianti de cru d'Ama accompagnent les viandes rouges, le gibier à plume, les pâtes aux truffes et les fromages affinés, tandis que l'Apparita, plus opulent, appelle des mets plus riches. La démarche artistique — un parcours d'œuvres d'artistes internationaux installées au fil des chais et du village — fait du domaine une destination culturelle autant qu'un grand cru, et traduit une vision où le vin dialogue avec l'art. Cultivé dans le respect de l'environnement et d'une grande régularité, salué de longue date par la critique, Castello di Ama a porté très haut l'idée de cru en Toscane. C'est, pour beaucoup, l'un des sommets du Chianti Classico de finesse et l'un des domaines les plus complets et les plus inspirants de toute la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-classico",
+        "gaiole",
+        "icone"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|winescurated"
+    },
+    {
+      "id": "it-toscana-prod-montevertine",
+      "nom": "Montevertine",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Radda)",
+      "commune": "Radda in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Le Pergole Torte",
+        "Montevertine"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radda in Chianti, sur les hauteurs fraîches de l'appellation, Montevertine est un domaine culte, paradoxalement situé en plein Chianti Classico mais resté délibérément hors de l'appellation. Sergio Manetti, industriel passionné, le fonde en 1967 et crée en 1977 le Pergole Torte : l'un des tout premiers vins 100% Sangiovese de Toscane, à une époque où la réglementation imposait des cépages blancs dans le Chianti. Plutôt que de se plier aux règles, Manetti choisit l'IGT (Toscana), faisant du domaine un symbole de la fronde des grands Sangiovese. Aujourd'hui mené par son fils Martino, Montevertine perpétue ce style avec une fidélité absolue : Le Pergole Torte en tête, mais aussi le Montevertine et le Pian del Ciampolo, dans une approche traditionnelle (grands foudres, pas de barrique tape-à-l'œil) au service de la pureté du Sangiovese. Le style privilégie la finesse, le parfum — cerise, rose, herbes, épices — et une fraîcheur vibrante propre à l'altitude de Radda, dans des vins d'une élégance aérienne mais de grande garde. Les vins, racés et tendus, s'ouvrent après quelques années et vieillissent superbement sur quinze à vingt-cinq ans. Icône de la Toscane et étendard du Sangiovese pur, Montevertine est l'un des domaines les plus admirés et les plus émouvants de toute la région. L'altitude et la fraîcheur de Radda, sur des sols de galestro, sont la clé de cette signature de finesse, de parfum et de tension qui distingue les vins du domaine. À table, Le Pergole Torte et ses frères accompagnent les viandes rouges, le gibier, les pâtes aux ragoûts et les fromages affinés, mais leur élégance les rend aussi délicieux sur des plats plus délicats. Le refus assumé de l'appellation, le recours aux grands foudres plutôt qu'à la barrique tape-à-l'œil, et la fidélité au Sangiovese pur font de Montevertine un symbole d'indépendance et d'authenticité, qui a inspiré toute une génération de vignerons. La régularité au sommet, millésime après millésime, et la production limitée en font des bouteilles très recherchées, dont les prix ont fortement grimpé. Icône absolue du Sangiovese de Radda et de toute la Toscane, Montevertine demeure l'un des domaines les plus admirés, les plus émouvants et les plus collectionnés du pays, étendard d'une certaine idée de la pureté et de la fidélité au terroir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "radda",
+        "icone",
+        "igt"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winewithseth|jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-felsina",
+      "nom": "Fèlsina",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Castelnuovo Berardenga)",
+      "commune": "Castelnuovo Berardenga",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Rancia",
+        "Fontalloro"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelnuovo Berardenga, à l'extrémité sud-est du Chianti Classico, Fèlsina est l'une des références du Sangiovese de garde, menée par la famille Poggiali. Le domaine s'est forgé une réputation grâce à sa Gran Selezione Rancia, issue d'un cru de vieilles vignes sur galestro et premier grand Chianti de cru de la maison, et au Fontalloro, Sangiovese pur en IGT issu de parcelles à cheval sur la limite de l'appellation. Le style Fèlsina est classique et structuré : des vins denses, au fruit profond, à la trame tannique ferme et à une belle fraîcheur, taillés pour la garde. La position méridionale du domaine donne des Sangiovese parmi les plus charpentés du Chianti Classico, qui demandent quelques années pour s'ouvrir et tiennent admirablement quinze à vingt ans. La gamme comprend aussi un Chianti Classico de référence et un Vin Santo réputé. Domaine d'une grande régularité, salué de longue date par la critique, Fèlsina est l'un des piliers du Chianti Classico et l'un des meilleurs ambassadeurs du Sangiovese de garde de la zone de Castelnuovo Berardenga. À table, les Sangiovese charpentés de Fèlsina appellent les viandes rouges grillées ou braisées, le gibier et les fromages affinés, et gagnent à être attendus quelques années. Salué de longue date par la critique pour sa régularité et la qualité de la Rancia, le domaine illustre le potentiel de garde du Sangiovese de Castelnuovo Berardenga.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-classico",
+        "rancia"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winewithseth|foodandwine"
+    },
+    {
+      "id": "it-toscana-prod-castello-di-monsanto",
+      "nom": "Castello di Monsanto",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Barberino Tavarnelle)",
+      "commune": "Barberino Tavarnelle",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Il Poggio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Barberino Tavarnelle, Castello di Monsanto est un domaine historique majeur du Chianti Classico, mené par la famille Bianchi. Sa renommée tient à une bouteille pionnière : le Chianti Classico Il Poggio, première Riserva de cru de l'histoire de l'appellation, créée avec le millésime 1962, et premier Chianti vinifié sans cépages blancs. Le style Monsanto est classique et taillé pour la garde : des Sangiovese structurés, au fruit profond, aux tanins fermes et à la belle fraîcheur, qui demandent du temps et vieillissent remarquablement sur quinze à vingt ans, l'Il Poggio traversant les décennies. La gamme comprend aussi un Chianti Classico Riserva et le Super-Toscan Nemo (Cabernet). Gardien d'un patrimoine et d'un style classique, doté d'un impressionnant chai souterrain, Castello di Monsanto est une référence historique du Chianti Classico et l'un des domaines les plus respectés de l'appellation pour ses vins de longue garde. À table, les Sangiovese de Monsanto, structurés et de garde, accompagnent les viandes rouges, le gibier et les fromages affinés, l'Il Poggio méritant la patience. Gardien d'un style classique et d'un patrimoine (sa cave souterraine est impressionnante), le domaine illustre la longévité du Chianti de cru. C'est une référence historique de l'appellation, appréciée des connaisseurs pour ses vins de longue garde, le légendaire Il Poggio en tête.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-classico",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-toscana-prod-castello-di-volpaia",
+      "nom": "Castello di Volpaia",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Radda)",
+      "commune": "Radda in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Coltassala"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radda in Chianti, Castello di Volpaia est un domaine d'altitude installé dans un village médiéval idyllique, dont les maisons et les églises abritent discrètement les chais. Mené par la famille Stianti Mascheroni et cultivé en bio, il produit des Chianti Classico parmi les plus élégants et parfumés de l'appellation, marqués par la fraîcheur et la finesse propres aux hauteurs de Radda. Sa cuvée phare est la Gran Selezione Coltassala (à dominante Sangiovese), aux côtés d'un Chianti Classico et d'une Riserva de référence. Le style privilégie l'élégance aromatique — cerise, rose, herbes, épices —, des tanins fins et une grande digestibilité, dans des vins racés qui vieillissent bien sur une quinzaine d'années. Le domaine produit aussi une huile d'olive et un vinaigre réputés. Entre patrimoine, beauté du lieu et qualité constante, Castello di Volpaia est l'un des plus charmants et des plus fiables domaines du Chianti Classico, et une belle expression du style frais et parfumé de Radda. À table, les Chianti élégants de Volpaia accompagnent les pâtes aux ragoûts, les volailles, les viandes blanches et les fromages, dans un registre fin et parfumé. Entre la beauté du village médiéval, la viticulture bio et la régularité des vins, le domaine est l'un des plus charmants et des plus fiables de Radda. Il offre une belle expression du style frais et aromatique des hauteurs du Chianti Classico, apprécié pour l'élégance et la digestibilité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "radda",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "foodandwine"
+    },
+    {
+      "id": "it-toscana-prod-querciabella",
+      "nom": "Querciabella",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Greve)",
+      "commune": "Greve in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico",
+        "Camartina"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Greve in Chianti, Querciabella est l'un des domaines les plus en pointe de la Toscane, pionnier de la biodynamie dans la région (et même d'une viticulture sans intrants d'origine animale). Mené avec une exigence rare, il produit un Chianti Classico d'une grande précision, devenu une référence, ainsi que le Camartina, Super-Toscan d'assemblage Sangiovese-Cabernet qui fut l'un des grands de sa catégorie, et un blanc remarquable (Batàr). Le style Querciabella allie pureté du fruit, finesse et fraîcheur, dans des vins racés et d'une grande netteté, taillés pour une bonne garde. La conversion à la biodynamie, très tôt et de façon radicale, a affiné encore la transparence et l'énergie des vins. Les Chianti séduisent assez jeunes mais vieillissent bien sur une quinzaine d'années. Domaine engagé, rigoureux et régulier, Querciabella est l'une des références modernes du Chianti Classico et un modèle de viticulture durable en Toscane, apprécié autant pour ses Sangiovese que pour ses cuvées d'assemblage. À table, les Chianti précis de Querciabella accompagnent les viandes rouges, le gibier et les fromages affinés, le Camartina, plus structuré, appelant des plats plus nobles. Pionnier d'une biodynamie radicale et d'une viticulture sans intrants animaux, le domaine est un modèle de durabilité en Toscane. C'est l'une des références modernes du Chianti Classico, appréciée pour la pureté, la finesse et la régularité de ses vins comme pour son engagement environnemental.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "greve",
+        "biodynamie"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-san-giusto-a-rentennano",
+      "nom": "San Giusto a Rentennano",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Riserva Le Baròncole",
+        "Percarlo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, San Giusto a Rentennano est un domaine familial (famille Martini di Cigala) d'une grande régularité, considéré comme l'une des valeurs les plus sûres de l'appellation. Cultivé en bio, il produit des Chianti Classico d'une grande pureté, dont une Riserva Le Baròncole de référence, ainsi que le Percarlo, Sangiovese pur en IGT qui compte parmi les plus beaux de Toscane, et le La Ricolma (Merlot). Le style privilégie la finesse, la profondeur du fruit et la fraîcheur, dans des vins élégants et racés qui vieillissent admirablement sur quinze ans et plus. Le domaine signe aussi un Vin Santo très réputé. Discret mais d'une qualité constante au plus haut niveau, San Giusto a Rentennano est l'un des piliers du Chianti Classico de Gaiole et l'un des meilleurs ambassadeurs du grand Sangiovese, apprécié des connaisseurs pour sa pureté et sa régularité. À table, les Sangiovese purs de San Giusto accompagnent les viandes rouges, le gibier, les pâtes aux ragoûts et les fromages affinés, le Percarlo méritant la patience. Cultivé en bio et d'une régularité exemplaire, le domaine est l'une des valeurs les plus sûres de Gaiole. C'est l'un des piliers discrets du Chianti Classico et l'un des meilleurs ambassadeurs du grand Sangiovese de garde, apprécié des connaisseurs pour la pureté et la profondeur de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "gaiole"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-castello-dei-rampolla",
+      "nom": "Castello dei Rampolla",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Panzano)",
+      "commune": "Panzano in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sammarco",
+        "Vigna d'Alceo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Panzano in Chianti, dans la Conca d'Oro, Castello dei Rampolla est un domaine familial culte, mené par la famille Di Napoli et cultivé en biodynamie. Pionnier des Super-Toscans, il a créé dès les années 1980 le Sammarco (à dominante Cabernet Sauvignon), l'un des grands assemblages de la région, puis le Vigna d'Alceo (Cabernet et Petit Verdot), devenu une bouteille rare et recherchée. Le domaine signe aussi un Chianti Classico de référence, à dominante Sangiovese. Le style allie puissance, profondeur et fraîcheur, dans des vins denses et racés, taillés pour la garde, marqués par le terroir chaud mais lumineux de Panzano. Les cuvées de pointe, produites en quantités limitées, sont très recherchées et atteignent des prix élevés ; elles demandent quelques années pour s'ouvrir et vieillissent sur quinze à vingt ans. Domaine discret mais d'une grande aura, fidèle à la biodynamie et à une vision personnelle, Castello dei Rampolla est l'un des noms les plus respectés de Panzano et l'un des grands producteurs de Super-Toscans du Chianti Classico. À table, les vins denses de Rampolla accompagnent les grandes viandes rouges, le gibier et les fromages affinés, le Vigna d'Alceo méritant la cave. Fidèle à la biodynamie et à une vision personnelle, le domaine est l'un des grands producteurs de Super-Toscans du Chianti Classico. Discret mais d'une grande aura, il compte parmi les noms les plus respectés de Panzano, apprécié pour la puissance et la profondeur de ses assemblages à base de Cabernet.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "panzano",
+        "biodynamie",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winespectator"
+    },
+    {
+      "id": "it-toscana-prod-barone-ricasoli-castello-di-brolio",
+      "nom": "Barone Ricasoli – Castello di Brolio",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Colledilà",
+        "Castello di Brolio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, le Castello di Brolio est le berceau historique du Chianti : c'est ici que le baron Bettino Ricasoli formula, au XIXe siècle, la fameuse recette du Chianti à base de Sangiovese. Plus ancien domaine de l'appellation (la famille y produit du vin depuis le Moyen Âge) et l'un des plus vastes, Barone Ricasoli a été spectaculairement relancé par Francesco Ricasoli. Le domaine, qui a beaucoup investi dans l'étude de ses sols, produit une gamme de Chianti Classico de cru, dont les Gran Selezione Colledilà et Castello di Brolio, qui figurent parmi les plus soignées de l'appellation. Le style allie profondeur du fruit, structure et précision, dans des vins racés qui vieillissent bien sur quinze ans. La taille et l'histoire du domaine en font une vitrine du Chianti Classico, mais la qualité y est désormais au rendez-vous au plus haut niveau. Entre patrimoine exceptionnel, cadre spectaculaire et renouveau qualitatif, Barone Ricasoli est à la fois un monument de l'histoire du Chianti et l'une des références actuelles de Gaiole. À table, les Chianti de cru de Brolio accompagnent les viandes rouges, le gibier et les fromages affinés, dans un registre profond et soigné. Entre patrimoine exceptionnel, cadre spectaculaire et renouveau qualitatif sous Francesco Ricasoli, le domaine conjugue histoire et modernité. Berceau de la recette du Chianti et plus ancien domaine de l'appellation, c'est à la fois un monument de l'histoire toscane et une référence actuelle de Gaiole.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "gaiole",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winewithseth|winescurated"
+    },
+    {
+      "id": "it-toscana-prod-castellin-villa",
+      "nom": "Castell'in Villa",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Castelnuovo Berardenga)",
+      "commune": "Castelnuovo Berardenga",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelnuovo Berardenga, Castell'in Villa est un domaine traditionaliste discret et culte, mené de longue date par la comtesse Coralia Pignatelli. Fidèle à un style classique et intransigeant, il produit des Chianti Classico d'une grande austérité dans leur jeunesse, mais d'une longévité remarquable, qui font le bonheur des connaisseurs : des vins tendus, structurés, au fruit pur et à la fraîcheur préservée, élevés patiemment et souvent commercialisés après une longue garde. Le style privilégie la droiture, la minéralité et la capacité de vieillissement plutôt que la séduction immédiate ; les meilleurs millésimes peuvent tenir vingt ans et plus, gagnant en complexité tertiaire. La position méridionale du domaine, à Castelnuovo Berardenga, donne des Sangiovese charpentés. Resté à l'écart des modes et des projecteurs, Castell'in Villa jouit d'une réputation solide auprès des amateurs avertis de Chianti classique et de garde, et compte parmi les domaines les plus authentiques et les plus fidèles à la tradition de toute l'appellation. À table, les Chianti austères et droits de Castell'in Villa accompagnent les viandes rouges, le gibier et les fromages affinés, mais gagnent surtout à être attendus de longues années. Resté à l'écart des modes, le domaine cultive un style classique et intransigeant, fait de fraîcheur et de longévité.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineberserkers"
+    },
+    {
+      "id": "it-toscana-prod-riecine",
+      "nom": "Riecine",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico",
+        "La Gioia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, Riecine est un petit domaine de référence, fondé dans les années 1970 par l'Anglais John Dunkley et aujourd'hui mené avec une grande exigence. Sur des vignes d'altitude, cultivées en bio, il produit des Chianti Classico d'une grande pureté et finesse, ainsi que le La Gioia, Sangiovese pur en IGT qui en est la cuvée de prestige. Le style privilégie l'élégance aromatique, la fraîcheur et la précision, dans des vins racés et tendus, à mille lieues des Chianti rustiques, qui vieillissent bien sur une quinzaine d'années. La taille modeste du domaine permet un soin extrême de la vigne et de l'élevage. Régulier et très apprécié de la critique, Riecine illustre le visage le plus fin et le plus précis du Chianti Classico de Gaiole, et compte parmi les belles adresses de l'appellation pour les amateurs de Sangiovese élégant et de garde. À table, les Sangiovese élégants de Riecine accompagnent les viandes rouges, les volailles, les pâtes aux truffes et les fromages, dans un registre fin et tendu. Cultivé en bio et d'une grande précision, le domaine illustre le visage le plus raffiné du Chianti de Gaiole. C'est l'une des belles adresses de l'appellation pour les amateurs de Sangiovese élégant et de garde, le La Gioia en figure de proue.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "gaiole"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-badia-a-coltibuono",
+      "nom": "Badia a Coltibuono",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Riserva",
+        "Sangioveto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, Badia a Coltibuono est un domaine historique installé dans une ancienne abbaye bénédictine du XIe siècle, où l'on produit du vin depuis près d'un millénaire. Mené par la famille Stucchi Prinetti et cultivé en bio, il produit des Chianti Classico classiques et de garde, dont une Riserva de référence, ainsi que le Sangioveto, Sangiovese pur issu des plus vieilles vignes. Le style privilégie l'équilibre, la pureté du fruit et la fraîcheur, dans des vins racés qui vieillissent bien sur une quinzaine d'années. Le domaine est aussi réputé pour son cadre exceptionnel, sa cave historique, son école de cuisine et son hospitalité. Entre patrimoine millénaire, viticulture bio et qualité constante, Badia a Coltibuono est l'un des domaines les plus emblématiques et les plus attachants du Chianti Classico, et une référence du Sangiovese de Gaiole dans un style fidèle à la tradition. À table, les Chianti classiques de Badia a Coltibuono accompagnent les viandes rouges, le gibier et les fromages affinés, dans un registre équilibré et de garde. Entre patrimoine millénaire, viticulture bio, école de cuisine et hospitalité, le domaine est l'un des plus emblématiques du Chianti Classico. Installé dans une abbaye du XIe siècle, c'est une référence du Sangiovese de Gaiole, appréciée pour la pureté et l'équilibre de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "gaiole",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-monteraponi",
+      "nom": "Monteraponi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Radda)",
+      "commune": "Radda in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Il Baron'Ugo",
+        "Chianti Classico Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radda in Chianti, Monteraponi est un domaine montant très apprécié, mené par Michele Braganti dans un hameau médiéval d'altitude. Cultivé en bio, il produit des Chianti Classico purs, frais et parfumés, qui comptent parmi les plus belles expressions du style élégant de Radda, dont les crus Il Baron'Ugo et Campitello. Le style privilégie la finesse aromatique — cerise, rose, herbes, épices —, la tension et la digestibilité, dans des vins racés et lumineux, élevés dans une approche traditionnelle, qui vieillissent bien sur une quinzaine d'années. La position en altitude apporte fraîcheur et longueur. Devenu en quelques années l'un des chouchous des amateurs et des sommeliers en quête de Chianti authentiques et fins, Monteraponi illustre la montée en gamme de Radda et compte parmi les adresses les plus en vue du Chianti Classico contemporain, à un prix encore raisonnable au regard de sa qualité. À table, les Chianti purs et frais de Monteraponi accompagnent les volailles, les viandes blanches, les pâtes aux ragoûts et les fromages, dans un registre fin et lumineux. Cultivé en bio et devenu l'un des chouchous des amateurs et des sommeliers, le domaine illustre la montée en gamme de Radda. C'est l'une des adresses les plus en vue du Chianti Classico contemporain, appréciée pour la finesse, la fraîcheur et l'authenticité de ses vins d'altitude.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "radda",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineberserkers"
+    },
+    {
+      "id": "it-toscana-prod-castellare-di-castellina",
+      "nom": "Castellare di Castellina",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Castellina)",
+      "commune": "Castellina in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "I Sodi di San Niccolò"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castellina in Chianti, Castellare di Castellina est un domaine soigné et reconnaissable, dont chaque étiquette représente un oiseau sauvage du Chianti, symbole de l'engagement écologique de la maison. Mené avec exigence, il produit des Chianti Classico élégants et précis, ainsi que sa cuvée de prestige, le I Sodi di San Niccolò, assemblage de Sangiovese et de Malvasia Nera en IGT, devenu un classique de la Toscane. Le style privilégie la finesse, la pureté du fruit et la fraîcheur, dans des vins racés qui vieillissent bien sur une quinzaine d'années, le I Sodi traversant davantage. La gamme comprend aussi de jolis Chianti Classico et Riserva. Régulier, bien diffusé et fidèle à une certaine idée de l'élégance toscane, Castellare di Castellina est une valeur sûre du Chianti Classico et l'un des bons ambassadeurs du style raffiné de Castellina, apprécié pour la constance de ses vins et la beauté de ses étiquettes. À table, les Chianti élégants de Castellare accompagnent les viandes rouges, le gibier et les fromages, le I Sodi di San Niccolò méritant quelques années de cave. Reconnaissable à ses étiquettes d'oiseaux, symbole de son engagement écologique, le domaine est une valeur sûre de Castellina. Il offre une belle expression du style raffiné de la zone, apprécié pour la constance de ses vins et la qualité de son célèbre I Sodi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "castellina"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineberserkers"
+    },
+    {
+      "id": "it-toscana-prod-castello-di-fonterutoli-mazzei",
+      "nom": "Castello di Fonterutoli – Mazzei",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Castellina)",
+      "commune": "Castellina in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione Castello Fonterutoli",
+        "Siepi"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castellina in Chianti, le Castello di Fonterutoli appartient à la famille Mazzei depuis le XVe siècle (vingt-quatre générations), ce qui en fait l'un des domaines les plus historiques et les plus respectés de toute la Toscane. Vaste et ambitieux, il a été modernisé sans rien perdre de son héritage : il produit une gamme de Chianti Classico de cru, dont la Gran Selezione Castello Fonterutoli et des sélections de hameaux, ainsi que le Super-Toscan Siepi (Sangiovese-Merlot), l'une des cuvées emblématiques de la maison. Le style allie profondeur du fruit, structure et précision moderne, dans des vins racés qui vieillissent bien sur quinze ans. Le chai contemporain, creusé dans la colline, est l'un des plus spectaculaires de la région. Entre patrimoine séculaire, taille importante et qualité soignée, Castello di Fonterutoli est à la fois un monument de l'histoire du Chianti et une référence actuelle de Castellina, apprécié pour la régularité de ses crus et l'ambition de ses cuvées de prestige. À table, les Chianti de cru de Fonterutoli accompagnent les viandes rouges, le gibier et les fromages affinés, le Siepi méritant la cave. Entre patrimoine séculaire (vingt-quatre générations de Mazzei), chai contemporain spectaculaire et qualité soignée, le domaine conjugue histoire et ambition. C'est à la fois un monument de l'histoire du Chianti et une référence actuelle de Castellina, apprécié pour la régularité de ses crus et l'ambition de ses cuvées de prestige.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "castellina",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "patch"
+    },
+    {
+      "id": "it-toscana-prod-rocca-di-montegrossi",
+      "nom": "Rocca di Montegrossi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Gaiole)",
+      "commune": "Gaiole in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Gran Selezione San Marcellino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gaiole in Chianti, Rocca di Montegrossi est un domaine familial soigné mené par Marco Ricasoli-Firidolfi, héritier de l'une des plus anciennes lignées du Chianti. Cultivé en bio, il produit des Chianti Classico élégants et précis, dont la Gran Selezione San Marcellino, issue d'un cru de galestro, qui en est la plus belle expression. Le style privilégie la finesse, la pureté du fruit et la fraîcheur, dans des vins racés qui vieillissent bien sur une dizaine d'années. Le domaine signe aussi un Vin Santo réputé. Valeur sûre et montante de Gaiole, Rocca di Montegrossi offre un excellent rapport qualité-prix et compte parmi les belles adresses du Chianti Classico contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "gaiole",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-le-boncie",
+      "nom": "Le Boncie",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Castelnuovo Berardenga)",
+      "commune": "Castelnuovo Berardenga",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Le Trame"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Felice, dans la commune de Castelnuovo Berardenga, Le Boncie est un micro-domaine culte mené par Giovanna Morganti, figure du Chianti naturel et artisanal. Sur quelques hectares cultivés avec un soin extrême, elle produit le Le Trame, un Sangiovese (avec une touche de cépages locaux) d'une grande pureté, longtemps en Chianti Classico puis passé en IGT par choix d'indépendance. Le style privilégie la finesse, le parfum et l'authenticité — fruit pur, fleurs, épices —, dans des vins tendus, digestes et vibrants, vinifiés avec un minimum d'interventions. La production confidentielle et l'approche artisanale en font une bouteille très recherchée des amateurs en quête de Sangiovese sincères et de terroir. Les vins séduisent assez jeunes mais gagnent en complexité sur une dizaine d'années. Référence du Chianti naturel et personnel, Le Boncie illustre une voie artisanale et exigeante, et compte parmi les adresses les plus attachantes et les plus convoitées de la zone de Castelnuovo Berardenga. À table, le Le Trame de Giovanna Morganti accompagne les viandes rouges, les pâtes aux ragoûts et les fromages, dans un registre pur et digeste. Figure du Chianti naturel et artisanal, le domaine cultive la finesse, le parfum et l'authenticité, avec un minimum d'interventions. La production confidentielle en fait une bouteille très recherchée des amateurs de Sangiovese sincères et de terroir, et l'une des adresses les plus attachantes de la zone de Castelnuovo Berardenga.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "nature",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineberserkers"
+    },
+    {
+      "id": "it-toscana-prod-poggerino",
+      "nom": "Poggerino",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Radda)",
+      "commune": "Radda in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico Riserva Bugialla"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radda in Chianti, Poggerino est un domaine familial en bio mené par Piero Lanza, situé sur les hauteurs fraîches de l'appellation. Il produit des Chianti Classico d'altitude purs et parfumés, dont la Riserva Bugialla, dans un style élégant et tendu marqué par la fraîcheur de Radda. Le style privilégie la finesse aromatique — cerise, herbes, épices — et la digestibilité, dans des vins racés qui vieillissent bien sur une dizaine d'années. Régulier et bien noté par la critique, Poggerino illustre la montée en gamme de Radda et compte parmi les jolies adresses du Chianti Classico de finesse, à prix raisonnable. À table, ces Chianti d'altitude accompagnent les volailles, les viandes blanches et les fromages, dans un registre fin et parfumé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "radda",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-biondi-santi",
+      "nom": "Biondi-Santi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Riserva Tenuta Greppo",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, le domaine fondateur du Brunello, berceau de l'une des plus grandes histoires du vin italien. C'est ici, à la Tenuta Greppo, que Clemente Santi puis son petit-fils Ferruccio Biondi-Santi inventèrent, à la fin du XIXe siècle, le Brunello : un vin issu exclusivement d'un clone de Sangiovese (le fameux BBS11), vinifié séparément des autres cépages, à une époque où l'assemblage était la règle. Pendant des décennies, Biondi-Santi fut quasiment le seul producteur de Brunello, et ses Riserva légendaires — dont certaines remontant aux années 1880 et 1920 — comptent parmi les vins les plus longévifs jamais produits. Franco Biondi Santi, disparu en 2013, en fut le gardien intransigeant ; le domaine appartient aujourd'hui au groupe EPI, qui en perpétue le style. Sur les sols de galestro du secteur frais et élevé du Greppo, le Brunello Biondi-Santi se distingue par son austérité, sa finesse et sa fraîcheur : un vin tendu, peu démonstratif dans sa jeunesse, qui demande de longues années de cave et révèle après deux ou trois décennies une complexité bouleversante. Loin des Brunello modernes et opulents, il incarne une vision classique, presque ascétique, de la grandeur du Sangiovese. Étalon absolu de l'appellation et monument vivant de l'histoire du vin, Biondi-Santi reste la référence à laquelle se mesurent tous les autres Brunello. Le clone BBS11, sélectionné par la famille, et les sols de galestro du secteur frais du Greppo sont au cœur de cette signature unique d'austérité et de longévité. À table, le Brunello Biondi-Santi, peu démonstratif jeune, s'épanouit sur les grands plats de viande, le gibier et les fromages affinés, mais c'est surtout après deux ou trois décennies, sur des mets nobles ou en méditation, qu'il révèle sa pleine mesure. La maison a longtemps incarné, à elle seule, la résistance à la tentation du Brunello moderne et opulent, défendant une vision classique faite de fraîcheur, de finesse et de patience. Ses Riserva les plus anciennes, régulièrement servies lors de verticales légendaires, comptent parmi les vins les plus émouvants jamais bus. Monument vivant de l'histoire du vin italien, étalon absolu auquel se mesurent tous les Brunello, Biondi-Santi reste, par-delà les changements de propriété, le gardien d'un idéal de grandeur fondé sur le temps long, et l'un des noms les plus vénérés de toute l'Italie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "icone",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winesearcher|jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-case-basse-gianfranco-soldera",
+      "nom": "Case Basse – Gianfranco Soldera",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Toscana IGT (ex-Brunello)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, dans le secteur de Tavernelle, Case Basse est l'un des domaines les plus mythiques et les plus singuliers de toute l'Italie, indissociable de la figure de Gianfranco Soldera, disparu en 2019. Cet ancien courtier en assurances milanais, perfectionniste absolu et personnage intransigeant, acquit le domaine en 1972 et en fit, à force d'exigence, un sommet du Sangiovese. Sa philosophie : un respect quasi religieux de la vigne et de la nature (le domaine est entouré de jardins botaniques destinés à la biodiversité), des rendements minuscules, de longues macérations et des élevages prolongés en grands foudres, sans aucune concession à la mode. Brouillé avec le consortium, Soldera commercialise désormais ses vins en simple Toscana IGT, ce qui n'a rien retiré à leur statut ni à leur prix. Le style est inimitable : une couleur souvent claire, un parfum d'une complexité et d'une pureté envoûtantes — cerise, rose, herbes, épices, sous-bois —, une bouche éthérée mais d'une persistance infinie, et une longévité exceptionnelle. Ce sont des vins de méditation, qui demandent du temps et récompensent la patience sur plusieurs décennies. Produits en quantités infimes et farouchement recherchés, les Soldera comptent parmi les Sangiovese les plus rares, les plus chers et les plus émouvants qui soient, et incarnent une vision absolue et sans compromis du grand vin. Le souci maniaque de la vigne et de la biodiversité — les jardins de Case Basse sont aussi célèbres que les vins —, conjugué à des rendements infimes et à des élevages très longs, est au cœur de cette signature inimitable. À table, les Soldera, d'une finesse aérienne mais d'une persistance infinie, accompagnent les mets les plus nobles ou se méditent seuls, leur complexité se déployant lentement sur des heures. L'épisode dramatique de 2012, où un employé vida plusieurs millésimes en cave, a renforcé l'aura quasi mythique du domaine. Le passage en Toscana IGT, par refus des contraintes du consortium, n'a rien retiré au statut ni au prix de ces bouteilles, parmi les plus recherchées d'Italie. Vision absolue et sans compromis du grand vin, indissociable de la personnalité hors norme de Gianfranco Soldera, Case Basse demeure un sommet du Sangiovese et l'un des domaines les plus singuliers, les plus émouvants et les plus convoités de toute la Toscane, voire de tout le vignoble italien.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "montalcino",
+        "icone",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-poggio-di-sotto",
+      "nom": "Poggio di Sotto",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello di Montalcino Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, dans le secteur frais et élevé du sud-est de l'appellation, Poggio di Sotto est l'une des références traditionalistes absolues du Brunello. Fondé par Piero Palmucci, qui en fit un domaine culte, il appartient désormais au groupe ColleMassari (famille Tipa Bertarelli), qui en a préservé la philosophie au plus haut niveau. La marque de fabrique : une recherche d'élégance et de finesse rare pour le Brunello, fondée sur des vendanges tardives à parfaite maturité, de longues macérations et des élevages prolongés en grands foudres, qui donnent des vins d'une grande pureté plutôt que de puissance. Le Brunello et la Riserva de Poggio di Sotto se distinguent par leur robe souvent claire, leur parfum complexe — cerise, orange sanguine, herbes, épices, sous-bois —, leur texture soyeuse et leur fraîcheur, qui les rapprochent de l'idéal d'un grand Sangiovese ciselé. Ce sont des vins d'une longévité remarquable, qui demandent quelques années pour s'ouvrir et s'épanouissent magnifiquement sur quinze à vingt-cinq ans. Le Rosso di Montalcino du domaine est lui-même l'un des plus aboutis de l'appellation. Régulièrement classé parmi les tout meilleurs Brunello par la critique, Poggio di Sotto incarne, aux côtés de Biondi-Santi et de Soldera, la voie de la finesse et de la tradition, et compte parmi les domaines les plus admirés et les plus recherchés de Montalcino. Les vendanges tardives à parfaite maturité, les longues macérations et les élevages prolongés en grands foudres sont au cœur de cette quête d'élégance qui distingue le domaine. À table, les Brunello de Poggio di Sotto, d'une finesse rare, accompagnent les viandes rouges, le gibier, les pâtes aux truffes et les fromages affinés, mais leur raffinement appelle des préparations délicates plutôt que des sauces trop puissantes. Le maintien de la philosophie de Piero Palmucci sous l'égide de ColleMassari a rassuré les amateurs, qui craignaient une dérive après le rachat : la finesse et la pureté sont restées intactes. Régulièrement classé par la critique parmi les tout meilleurs Brunello, aux côtés de Biondi-Santi et de Soldera, Poggio di Sotto incarne la voie de l'élégance et de la tradition à Montalcino. C'est l'un des domaines les plus admirés et les plus recherchés de l'appellation, et une référence absolue pour qui cherche un Brunello ciselé, parfumé et profondément racé, à l'opposé des versions opulentes et boisées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "icone"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "consorziobrunello|vinous"
+    },
+    {
+      "id": "it-toscana-prod-salvioni-la-cerbaiola",
+      "nom": "Salvioni – La Cerbaiola",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, au cœur même du village, Salvioni (domaine de La Cerbaiola) est un micro-domaine culte, l'un des plus recherchés de toute l'appellation. La famille Salvioni, menée par Giulio puis sa fille Alessia, ne produit qu'en quantités minuscules à partir d'une poignée d'hectares situés sur les coteaux d'altitude proches de la ville, sur des sols de galestro et de marnes caillouteuses qui donnent finesse et tension. La philosophie est artisanale et traditionnelle : rendements faibles, vinifications soignées, élevage en grands foudres, sans recherche d'effet. Le Brunello Salvioni se distingue par sa profondeur, sa race et son équilibre : un vin à la fois structuré et raffiné, au parfum complexe de cerise, de fleurs, d'herbes et d'épices, doté d'une trame tannique noble et d'une grande fraîcheur. Ce sont des vins de longue garde, qui demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt-cinq ans. La production confidentielle et la régularité au sommet en font des bouteilles très convoitées, qui atteignent des prix élevés. Régulièrement cité parmi les tout meilleurs Brunello, Salvioni illustre l'excellence du Brunello d'altitude et artisanal, et compte parmi les domaines les plus désirés et les plus respectés de Montalcino. L'altitude des coteaux proches de la ville, sur des sols de galestro et de marnes caillouteuses, confère aux vins finesse et tension, tandis que la petite taille du domaine permet un soin extrême à chaque étape. À table, le Brunello Salvioni accompagne les grandes viandes rouges, le gibier, les pâtes aux ragoûts nobles et les fromages affinés, et gagne à être attendu une bonne décennie. La régularité au sommet et la production minuscule en font l'un des Brunello les plus convoités, dont chaque millésime est guetté par les amateurs du monde entier. Le Rosso di Montalcino du domaine est lui-même considéré comme l'un des meilleurs de l'appellation, véritable « petit Brunello ». Figure de l'excellence artisanale à Montalcino, Salvioni illustre la grandeur d'un Brunello à la fois structuré et raffiné, et compte parmi les domaines les plus désirés et les plus respectés de l'appellation, recherché des connaisseurs pour la profondeur et la race de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "consorziobrunello|vinfolio"
+    },
+    {
+      "id": "it-toscana-prod-il-marroneto",
+      "nom": "Il Marroneto",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Madonna delle Grazie",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "Au nord de Montalcino, sur les hauteurs proches du village, Il Marroneto est devenu en deux décennies l'un des domaines les plus cultes et les plus recherchés du Brunello. Mené par Alessandro Mori, ancien avocat devenu vigneron passionné, le domaine tire son nom d'une tour médiévale du XIIIe siècle où séchaient autrefois les châtaignes. Sa cuvée phare, le Brunello Madonna delle Grazie, issue d'une parcelle d'exception, est aujourd'hui l'un des Brunello les plus désirés et les mieux notés du moment. La philosophie est traditionnelle et d'une grande pureté : faibles rendements, vinifications douces, longs élevages en grands foudres, recherche de la finesse plutôt que de la puissance. Le style Il Marroneto se distingue par son élégance, sa fraîcheur et sa définition aromatique — cerise, fleurs, herbes, épices —, dans des vins tendus, racés et d'une grande transparence du terroir, à mille lieues des Brunello opulents. Ce sont des vins de longue garde, qui demandent quelques années et s'épanouissent sur quinze à vingt-cinq ans. La position septentrionale et l'altitude des vignes apportent fraîcheur et finesse, gages de longévité. Production limitée et qualité au sommet ont fait d'Il Marroneto une référence de la nouvelle génération traditionaliste, et l'un des domaines les plus admirés et les plus convoités de tout Montalcino. La position septentrionale et l'altitude des vignes, sur des sols frais, sont au cœur de cette signature d'élégance et de fraîcheur qui distingue le domaine. À table, les Brunello d'Il Marroneto, d'une grande finesse, accompagnent les viandes rouges, le gibier et les fromages affinés, mais leur raffinement appelle des préparations délicates ; le Madonna delle Grazie, plus profond, mérite la méditation. Alessandro Mori défend une vision artisanale et puriste, attentive à la transparence du terroir et à la fraîcheur, à rebours des Brunello opulents et boisés. La production limitée et la régularité au sommet ont fait du domaine l'un des plus recherchés et des mieux notés de la dernière décennie, le Madonna delle Grazie atteignant des prix élevés. Référence de la nouvelle génération traditionaliste, Il Marroneto incarne le renouveau du Brunello de finesse, et compte parmi les domaines les plus admirés et les plus convoités de Montalcino, salué par la critique pour l'élégance et la pureté de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "culte",
+        "montosoli"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinfolio|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-cerbaiona",
+      "nom": "Cerbaiona",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Près du centre de Montalcino, dans le secteur de Croce, Cerbaiona est un domaine culte au terroir singulier, longtemps incarné par l'ancien pilote de ligne Diego Molinari, qui en fit l'un des Brunello les plus recherchés. Repris depuis par une nouvelle équipe qui en a préservé l'esprit, le domaine, planté sur des sols de calcaire, de schiste et de sable, produit un Brunello d'une élégance et d'une singularité rares. Le style privilégie la finesse et le parfum plutôt que la puissance : un vin à la robe souvent claire, au bouquet complexe de cerise, de fleurs, d'herbes et d'épices, à la texture soyeuse et à la grande fraîcheur, dans la lignée des Brunello traditionnels et raffinés. Ce sont des vins de longue garde, qui demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt-cinq ans. La production limitée et le statut culte du domaine en font des bouteilles très convoitées. Régulièrement cité parmi les meilleurs Brunello, Cerbaiona incarne, aux côtés des grands traditionalistes, la voie de l'élégance à Montalcino, et reste l'un des domaines les plus désirés de l'appellation. À table, les Brunello élégants de Cerbaiona accompagnent les viandes rouges, le gibier, les pâtes aux truffes et les fromages affinés, dans un registre fin et parfumé. La reprise du domaine par une nouvelle équipe a préservé son style raffiné et son aura.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinfolio|vinous"
+    },
+    {
+      "id": "it-toscana-prod-conti-costanti",
+      "nom": "Conti Costanti",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello di Montalcino Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Près du centre de Montalcino, Conti Costanti est un domaine historique et traditionnel, l'un des noms les plus respectés de l'appellation, mené par la famille Costanti depuis des générations. Sur des coteaux d'altitude proches de la ville, sur des sols proches du galestro, il produit des Brunello classiques d'une grande race : structurés, profonds et de longue garde, au fruit pur et à la belle fraîcheur, fidèles à un style traditionnel et exigeant. Les vins demandent du temps pour s'ouvrir et tiennent admirablement quinze à vingt-cinq ans, gagnant en complexité tertiaire. La gamme comprend aussi un Rosso di Montalcino et un Super-Toscan. Discret mais d'une qualité constante au plus haut niveau, considéré comme l'un des piliers historiques de Montalcino aux côtés de Biondi-Santi, Conti Costanti est une référence du Brunello classique et de garde, apprécié des connaisseurs pour sa droiture et sa fidélité à la tradition de l'appellation. À table, les Brunello racés de Costanti accompagnent les grandes viandes rouges, le gibier et les fromages affinés, et gagnent à être attendus de longues années. Pilier historique de Montalcino aux côtés de Biondi-Santi, le domaine cultive un style classique et exigeant. C'est une référence du Brunello de garde, apprécié des connaisseurs pour la droiture, la profondeur et la fidélité à la tradition de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinous|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-valdicava",
+      "nom": "Valdicava",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Madonna del Piano Riserva",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au nord de Montalcino, Valdicava est l'un des domaines les plus réputés de l'appellation, mené par Vincenzo Abbruzzese. Sur ses coteaux, il produit des Brunello puissants, profonds et concentrés, dans un style ambitieux et soigné, dont la grande Riserva Madonna del Piano, issue d'un cru d'exception, compte parmi les sommets de Montalcino. Le style allie richesse du fruit, structure et profondeur, avec des tanins amples, dans des vins de garde qui demandent du temps pour s'ouvrir et tiennent admirablement quinze à vingt-cinq ans. Le Brunello et le Rosso du domaine sont eux-mêmes d'une grande régularité. Souvent salué par la critique et très recherché, en particulier pour sa Riserva, Valdicava illustre un Brunello opulent mais équilibré, et compte parmi les valeurs les plus sûres et les plus prestigieuses du nord de Montalcino, apprécié des amateurs de Brunello puissant et de longue garde. À table, les Brunello puissants de Valdicava accompagnent les grandes viandes rouges, le gibier, les daubes et les fromages très affinés, la Riserva Madonna del Piano méritant la cave. Souvent salué par la critique et très recherché, le domaine illustre un Brunello opulent mais équilibré. Il compte parmi les valeurs les plus sûres et les plus prestigieuses du nord de Montalcino, apprécié des amateurs de Brunello structuré et de longue garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "consorziobrunello|vinous"
+    },
+    {
+      "id": "it-toscana-prod-lisini",
+      "nom": "Lisini",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello Ugolaia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au sud de Montalcino, près de Sant'Angelo in Colle, Lisini est un domaine traditionnel et historique, l'un des plus anciens de l'appellation, mené par la même famille depuis des générations. Sur ses coteaux du sud de la zone, il produit des Brunello classiques d'une grande authenticité : structurés, profonds et de longue garde, au fruit pur et à la belle fraîcheur, fidèles à un style traditionnel. Sa cuvée de prestige, l'Ugolaia, issue d'un cru de vieilles vignes, en est la plus belle expression. Les vins demandent quelques années pour s'ouvrir et tiennent admirablement quinze à vingt-cinq ans. La gamme comprend aussi un Rosso di Montalcino réputé. Discret mais d'une grande fidélité à la tradition, Lisini est l'un des domaines historiques les plus respectés de Montalcino, et une référence du Brunello classique et de garde, apprécié des connaisseurs pour sa droiture et sa régularité, dans le style des grands traditionalistes de l'appellation. À table, les Brunello classiques de Lisini accompagnent les viandes rouges, le gibier et les fromages affinés, l'Ugolaia méritant la patience. Domaine historique fidèle à la tradition, il cultive un style droit et authentique. C'est l'un des noms les plus respectés du sud de Montalcino, apprécié des connaisseurs pour la régularité et la garde de ses vins, dans la lignée des grands traditionalistes de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-fuligni",
+      "nom": "Fuligni",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À l'est de Montalcino, sur des vignes d'altitude proches de la ville, Fuligni est un domaine traditionnel très respecté, l'une des valeurs sûres de l'appellation. Sur des sols de galestro et de marnes caillouteuses, il produit des Brunello fins, racés et de longue garde, dans un style classique qui privilégie l'élégance et la fraîcheur plutôt que la puissance. Le style se distingue par sa définition aromatique — cerise, fleurs, herbes, épices —, sa trame tannique noble et sa tension, dans des vins qui demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt-cinq ans. La cuvée Riserva, issue des meilleures parcelles, en est le sommet. Le Rosso di Montalcino du domaine est lui-même d'une grande finesse. Discret mais d'une qualité constante et d'une grande régularité, Fuligni illustre le style fin et classique du Brunello d'altitude, et compte parmi les domaines les plus respectés et les plus fiables de Montalcino, apprécié des amateurs de Brunello élégant et de garde. À table, les Brunello fins de Fuligni accompagnent les viandes rouges, le gibier, les pâtes aux truffes et les fromages affinés, la Riserva méritant la cave. Domaine d'altitude traditionnel et discret, il cultive l'élégance et la fraîcheur. C'est l'une des valeurs sûres de Montalcino, apprécié des amateurs de Brunello fin et de garde pour la définition aromatique et la tension de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "consorziobrunello|vinfolio"
+    },
+    {
+      "id": "it-toscana-prod-stella-di-campalto",
+      "nom": "Stella di Campalto",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Angelo in Colle, au sud de Montalcino, Stella di Campalto (domaine San Giuseppe) est devenu en deux décennies l'un des domaines les plus cultes de l'appellation. Stella di Campalto y mène une viticulture en biodynamie d'une exigence rare, sur un terroir qu'elle a patiemment restauré, et produit des Brunello en quantités minuscules, d'une pureté et d'une énergie singulières. Le style privilégie la finesse, le parfum et la transparence du terroir — fruit pur, fleurs, herbes, épices —, dans des vins tendus, vibrants et d'une grande fraîcheur, à mille lieues des Brunello opulents. Ce sont des vins de longue garde, qui demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt-cinq ans. La production confidentielle et l'approche biodynamique en font des bouteilles très recherchées, qui atteignent des prix élevés. Figure de la nouvelle génération et de la biodynamie à Montalcino, Stella di Campalto illustre une voie artisanale et exigeante du Brunello, et compte parmi les domaines les plus admirés et les plus convoités de l'appellation. À table, les Brunello vibrants de Stella di Campalto accompagnent les viandes rouges, le gibier et les fromages affinés, mais leur finesse appelle des préparations délicates. Figure de la biodynamie à Montalcino, le domaine cultive la pureté et l'énergie en quantités minuscules.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "biodynamie",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "consorziobrunello|jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-le-ragnaie",
+      "nom": "Le Ragnaie",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello Fornace"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, Le Ragnaie est l'un des domaines montants les plus en vue de l'appellation, mené par Riccardo Campinoti. Sa singularité tient à l'altitude : il possède certaines des vignes les plus élevées de Montalcino, qui donnent des Brunello d'une fraîcheur et d'une finesse remarquables. Cultivé dans une approche respectueuse, le domaine produit un Brunello, des crus parcellaires (dont le Fornace et des sélections d'altitude) et un Rosso très réputé, dans un style qui privilégie la tension, la pureté du fruit et l'élégance plutôt que la puissance. Les vins, racés et parfumés, demandent quelques années pour s'ouvrir et vieillissent bien sur quinze à vingt ans. La position en altitude, gage de fraîcheur, est devenue un atout majeur à l'heure du réchauffement climatique. Devenu l'un des chouchous des amateurs et de la critique en quête de Brunello fins et frais, Le Ragnaie illustre la montée en puissance d'une nouvelle génération à Montalcino, et compte parmi les adresses les plus recherchées de l'appellation pour son style élégant et tendu. À table, les Brunello frais et tendus de Le Ragnaie accompagnent les viandes rouges, le gibier et les fromages affinés, dans un registre fin et parfumé. Domaine d'altitude devenu l'un des chouchous de la critique et des amateurs, il illustre la montée en puissance d'une nouvelle génération. C'est l'une des adresses les plus recherchées de Montalcino pour son style élégant, frais et précis, à l'opposé des Brunello opulents.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "altitude",
+        "montant"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinfolio|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-siro-pacenti",
+      "nom": "Siro Pacenti",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Vecchie Vigne",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au nord de Montalcino, Siro Pacenti est un domaine réputé, mené par Giancarlo Pacenti, qui en a fait l'une des références modernes de l'appellation. Sur des vignes réparties entre le nord (frais) et le sud (plus chaud) de la zone, il produit des Brunello soignés et réguliers, dont la cuvée Vecchie Vigne (vieilles vignes) en est le sommet. Le style allie richesse du fruit, structure et précision, avec un usage maîtrisé du bois, dans des vins modernes mais équilibrés qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur quinze ans. Le Rosso di Montalcino du domaine est lui-même très apprécié. D'une grande régularité et souvent bien noté par la critique, Siro Pacenti illustre un Brunello moderne mais soigné, et compte parmi les valeurs sûres du nord de Montalcino, apprécié des amateurs qui recherchent un style abouti, riche et précis, sans excès, dans la tradition renouvelée de l'appellation. À table, les Brunello riches de Siro Pacenti accompagnent les grandes viandes rouges, le gibier et les fromages affinés, la cuvée Vecchie Vigne méritant la cave. D'une grande régularité et souvent bien noté, le domaine illustre un Brunello moderne mais soigné. Il compte parmi les valeurs sûres du nord de Montalcino, apprécié des amateurs d'un style abouti, riche et précis, sans excès.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinous|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-casanova-di-neri",
+      "nom": "Casanova di Neri",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Tenuta Nuova",
+        "Brunello Cerretalto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, Casanova di Neri est l'un des domaines les plus réputés et les plus médiatisés de l'appellation, mené par Giacomo Neri. Il s'est fait connaître par des Brunello modernes et puissants, au sommet desquels figurent la Tenuta Nuova et surtout le Cerretalto, cru d'exception qui compte parmi les Brunello les plus recherchés et les mieux notés (le Tenuta Nuova 2001 fut élu vin de l'année par Wine Spectator). Le style allie richesse du fruit, concentration et précision, avec des tanins mûrs et un élevage soigné, dans des vins opulents mais équilibrés qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur quinze à vingt ans. La gamme comprend aussi un Brunello classique et un Rosso réputés. Très bien diffusé et régulièrement salué par la critique internationale, Casanova di Neri illustre la réussite du Brunello moderne, et compte parmi les noms les plus connus et les plus prisés de Montalcino, apprécié des amateurs de Brunello riche, abouti et de garde. À table, les Brunello opulents de Casanova di Neri accompagnent les grandes viandes rouges, le gibier, les daubes et les fromages très affinés, le Cerretalto méritant la cave. Très bien diffusé et régulièrement salué par la critique internationale, le domaine illustre la réussite du Brunello moderne. Il compte parmi les noms les plus connus et les plus prisés de Montalcino, apprécié des amateurs de Brunello riche, abouti et de garde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winesearcher|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-il-poggione",
+      "nom": "Il Poggione",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino",
+        "Brunello Riserva Vigna Paganelli"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Angelo in Colle, au sud de Montalcino, Il Poggione est l'un des grands domaines traditionnels de l'appellation, vaste et d'une fiabilité exemplaire, mené de longue date par la famille Franceschi et le régisseur Fabrizio Bindocci. Sur ses coteaux du sud de la zone, il produit des Brunello classiques d'un excellent rapport qualité-prix, fidèles à la tradition : structurés, profonds et de garde, au fruit pur et à la belle fraîcheur. Sa Riserva Vigna Paganelli, issue de vieilles vignes, en est le sommet. Les vins demandent quelques années pour s'ouvrir et tiennent admirablement quinze à vingt ans. Le Rosso di Montalcino du domaine est régulièrement cité comme l'un des meilleurs de l'appellation. Alliant volume de production, tradition et régularité au plus haut niveau, Il Poggione est une valeur sûre du Brunello classique et l'une des meilleures portes d'entrée vers l'appellation, apprécié des amateurs pour sa fidélité au style traditionnel et son rapport qualité-prix remarquable. À table, les Brunello classiques d'Il Poggione accompagnent les viandes rouges, le gibier et les fromages affinés, la Riserva Vigna Paganelli méritant la cave. Vaste domaine traditionnel d'une fiabilité exemplaire, il offre un excellent rapport qualité-prix. C'est une valeur sûre du Brunello classique et l'une des meilleures portes d'entrée vers l'appellation, apprécié pour sa fidélité au style traditionnel et la régularité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|vinous"
+    },
+    {
+      "id": "it-toscana-prod-altesino",
+      "nom": "Altesino",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Montosoli",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Au nord de Montalcino, Altesino est un domaine réputé, célèbre avant tout pour le cru Montosoli, l'un des plus grands lieux-dits de l'appellation, qu'il fut parmi les premiers à vinifier séparément. Sur ce coteau d'exception et ses autres parcelles, il produit des Brunello racés et parfumés, dans un style soigné qui allie le fruit et la finesse à une belle structure. Le Brunello Montosoli se distingue par son élégance, sa profondeur et sa fraîcheur, dans des vins de garde qui demandent quelques années pour s'ouvrir et s'épanouissent sur quinze à vingt ans. Altesino fut aussi un pionnier de l'innovation à Montalcino (barriques, sélections parcellaires). La gamme comprend un Brunello classique et un Rosso réputés. D'une grande régularité et bien diffusé, Altesino illustre la qualité du Brunello du nord de la zone, et compte parmi les valeurs sûres de l'appellation, apprécié en particulier pour son cru Montosoli, l'un des plus beaux terroirs de tout Montalcino. À table, les Brunello racés d'Altesino accompagnent les viandes rouges, le gibier et les fromages affinés, le cru Montosoli méritant la patience. Pionnier de l'innovation à Montalcino et célèbre pour son grand lieu-dit Montosoli, le domaine est d'une grande régularité. C'est une valeur sûre de l'appellation, apprécié en particulier pour son Montosoli, l'un des plus beaux terroirs de tout Montalcino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "montosoli"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "saveur|vinfolio"
+    },
+    {
+      "id": "it-toscana-prod-col-dorcia",
+      "nom": "Col d'Orcia",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino Poggio al Vento Riserva",
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sant'Angelo in Colle, au sud de Montalcino, Col d'Orcia est l'un des plus vastes domaines de l'appellation, propriété de la famille Cinzano et entièrement converti à l'agriculture biologique — l'un des plus grands domaines bio d'Italie. Il produit des Brunello classiques et réguliers, dont la grande Riserva Poggio al Vento, issue d'un cru d'exception, qui compte parmi les Brunello de garde les plus réputés. Le style privilégie l'équilibre, la profondeur du fruit et la fraîcheur, dans des vins fidèles à la tradition qui demandent quelques années pour s'ouvrir et vieillissent bien sur quinze ans et plus, la Riserva traversant les décennies. La gamme comprend aussi un Rosso di Montalcino et divers vins du domaine. Alliant volume, engagement bio et qualité constante, Col d'Orcia est une valeur sûre du Brunello classique et l'un des grands noms historiques de Montalcino, apprécié pour la régularité de ses vins et l'excellence de sa Riserva Poggio al Vento. À table, les Brunello équilibrés de Col d'Orcia accompagnent les viandes rouges, le gibier et les fromages affinés, la Riserva Poggio al Vento méritant la cave. Vaste domaine entièrement bio, il allie volume et qualité constante. C'est une valeur sûre du Brunello classique et l'un des grands noms historiques de Montalcino, apprécié pour la régularité de ses vins et l'excellence de sa Riserva Poggio al Vento.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-argiano",
+      "nom": "Argiano",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Au sud-ouest de Montalcino, Argiano est un domaine historique magnifiquement relancé ces dernières années, au point de signer l'un des Brunello les plus salués de la décennie. Sur ses coteaux d'altitude modérée, il produit des Brunello soignés et réguliers, modernes mais équilibrés, au fruit mûr et aux tanins polis. Le style allie générosité et précision, dans des vins qui séduisent assez jeunes tout en gardant une belle aptitude à la garde sur quinze ans. Le domaine signe aussi un Super-Toscan (Solengo). Porté par un renouveau spectaculaire et d'excellentes notes, Argiano est redevenu l'un des noms qui comptent à Montalcino, et offre une lecture aboutie et accessible du Brunello.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-fattoria-dei-barbi",
+      "nom": "Fattoria dei Barbi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Brunello di Montalcino",
+      "commune": "Montalcino",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Brunello di Montalcino"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalcino, la Fattoria dei Barbi est l'un des domaines les plus historiques de l'appellation, propriété de la famille Cinelli Colombini depuis des générations. Pionnière de la diffusion du Brunello dans le monde, elle produit des Brunello classiques et accessibles, fidèles à la tradition, ainsi qu'une gamme large (Rosso, Vin Santo, fromages). Le style privilégie l'équilibre et la buvabilité, dans des vins représentatifs de l'appellation qui vieillissent bien sur une dizaine d'années. Témoin vivant de l'histoire de Montalcino, dotée d'un musée du vin et d'une belle hospitalité, la Fattoria dei Barbi reste une valeur sûre et une excellente porte d'entrée vers le Brunello.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "brunello",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson|consorziobrunello"
+    },
+    {
+      "id": "it-toscana-prod-avignonesi",
+      "nom": "Avignonesi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Vino Nobile di Montepulciano",
+      "commune": "Montepulciano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Vino Nobile di Montepulciano",
+        "Vin Santo"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montepulciano, Avignonesi est l'un des grands domaines de l'appellation, mené en biodynamie depuis sa reprise par Virginie Saverys. Il produit des Vino Nobile (à base de Prugnolo Gentile, le clone local de Sangiovese) purs et équilibrés, ainsi qu'un Vin Santo et un Vin Santo Occhio di Pernice d'anthologie, parmi les plus grands liquoreux d'Italie. Le style privilégie la finesse et la pureté, dans des vins qui vieillissent bien sur une dizaine d'années. Engagé dans une viticulture respectueuse et d'une grande régularité, Avignonesi offre une alternative crédible et personnelle au Brunello, et reste l'une des références majeures de Montepulciano. À table, les Vino Nobile d'Avignonesi accompagnent les viandes rouges et les fromages, tandis que le Vin Santo couronne les desserts.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "vino-nobile",
+        "biodynamie"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineinternational"
+    },
+    {
+      "id": "it-toscana-prod-poderi-boscarelli",
+      "nom": "Poderi Boscarelli",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Vino Nobile di Montepulciano",
+      "commune": "Montepulciano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vino Nobile di Montepulciano Nocio dei Boscarelli"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montepulciano, les Poderi Boscarelli sont l'un des domaines de référence du Vino Nobile, mené par la famille De Ferrari Corradi. Sur ses coteaux, il produit des Vino Nobile (à base de Prugnolo Gentile, le clone local de Sangiovese) racés et de garde, dont le cru Nocio dei Boscarelli, issu de vieilles vignes, qui compte parmi les plus belles expressions de l'appellation. Le style privilégie la profondeur du fruit, la structure et l'élégance, dans des vins soignés qui demandent quelques années pour s'ouvrir et vieillissent bien sur une quinzaine d'années. La gamme comprend aussi un Vino Nobile classique et une Riserva réputés. D'une grande régularité et salué de longue date par la critique, Poderi Boscarelli est l'un des piliers du Vino Nobile di Montepulciano, et l'un des meilleurs ambassadeurs du Sangiovese de cette appellation parfois sous-estimée, apprécié des connaisseurs pour la finesse et la garde de ses vins, en particulier le Nocio. À table, les Vino Nobile racés de Boscarelli accompagnent les viandes rouges, le gibier et les fromages affinés, le Nocio méritant quelques années de cave. D'une grande régularité et salué de longue date par la critique, le domaine est l'un des piliers du Vino Nobile. C'est l'un des meilleurs ambassadeurs du Sangiovese de Montepulciano, apprécié des connaisseurs pour la finesse et la garde de ses vins, le Nocio en tête.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "vino-nobile"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineinternational"
+    },
+    {
+      "id": "it-toscana-prod-poliziano",
+      "nom": "Poliziano",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Vino Nobile di Montepulciano",
+      "commune": "Montepulciano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vino Nobile di Montepulciano Asinone"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montepulciano, Poliziano est l'un des domaines les plus réputés et les plus réguliers du Vino Nobile, mené par Federico Carletti. Il s'est fait connaître par le cru Asinone, issu d'un coteau d'exception, qui est aujourd'hui l'une des références de l'appellation. Le style Poliziano est moderne mais équilibré : des Vino Nobile (à base de Prugnolo Gentile) au fruit mûr, à la structure soignée et aux tanins polis, qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur une dizaine d'années. La gamme comprend aussi un Vino Nobile classique et des vins de Maremme. Bien diffusé et régulièrement salué par la critique, Poliziano illustre la réussite du Vino Nobile moderne, et compte parmi les valeurs sûres de Montepulciano, apprécié des amateurs pour la régularité de ses vins et la qualité de son cru Asinone, qui figure parmi les plus belles expressions du Sangiovese de l'appellation. À table, les Vino Nobile de Poliziano accompagnent les viandes rouges, les pâtes aux ragoûts et les fromages, le cru Asinone méritant quelques années. Bien diffusé et régulièrement salué par la critique, le domaine illustre la réussite du Vino Nobile moderne. Il compte parmi les valeurs sûres de Montepulciano, apprécié pour la régularité de ses vins et la qualité de son Asinone, l'une des plus belles expressions de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "vino-nobile"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineinternational"
+    },
+    {
+      "id": "it-toscana-prod-dei",
+      "nom": "Dei",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Vino Nobile di Montepulciano",
+      "commune": "Montepulciano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vino Nobile di Montepulciano Bossona Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montepulciano, le domaine Dei est une maison familiale soignée, menée par Caterina Dei, qui s'est imposée parmi les belles adresses du Vino Nobile. Sur ses coteaux, il produit des Vino Nobile (à base de Prugnolo Gentile) élégants et bien faits, dont la Riserva Bossona, issue de vieilles vignes, qui en est la cuvée de prestige. Le style privilégie la finesse, la pureté du fruit et l'équilibre, dans des vins racés qui vieillissent bien sur une dizaine d'années. La gamme comprend aussi un Vino Nobile classique et un rosé. D'une qualité constante et bien diffusé, Dei illustre une lecture élégante du Vino Nobile, et compte parmi les valeurs sûres de Montepulciano, apprécié pour la finesse de ses vins et la qualité de sa Riserva Bossona, dans une appellation qui retrouve peu à peu ses lettres de noblesse. À table, les Vino Nobile élégants de Dei accompagnent les viandes rouges, les pâtes aux ragoûts et les fromages, la Riserva Bossona méritant quelques années. La position sur de beaux coteaux et le soin apporté en cave donnent des vins racés et équilibrés, qui vieillissent bien sur une dizaine d'années. D'une qualité constante et bien diffusé, le domaine illustre une lecture élégante du Vino Nobile, et compte parmi les valeurs sûres de Montepulciano, apprécié pour la finesse de ses vins et la qualité de sa Riserva Bossona, dans une appellation qui retrouve peu à peu ses lettres de noblesse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "vino-nobile"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineinternational"
+    },
+    {
+      "id": "it-toscana-prod-tenuta-san-guido-sassicaia",
+      "nom": "Tenuta San Guido – Sassicaia",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Bolgheri",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Cabernet Franc"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bolgheri Sassicaia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolgheri, sur la côte toscane, la Tenuta San Guido a donné naissance au Sassicaia, le Super-Toscan originel et l'un des vins les plus célèbres du monde. Tout commence dans les années 1940, quand le marquis Mario Incisa della Rocchetta, fasciné par les grands Bordeaux, plante du Cabernet Sauvignon sur les sols caillouteux (sassi) de sa propriété, pour son seul plaisir. Le vin reste privé jusqu'à ce que, sur les conseils de son neveu Piero Antinori et de l'œnologue Giacomo Tachis, le premier millésime commercial sorte avec le 1968. Le succès est mondial : en 1978, une dégustation du Decanter le classe premier d'un panel international de Cabernet, consacrant la côte toscane. Le Sassicaia, assemblage de Cabernet Sauvignon et de Cabernet Franc, deviendra en 1994 le seul vin d'Italie à posséder sa propre DOC (Bolgheri Sassicaia). Le style allie la structure et la profondeur d'un grand Bordeaux à une touche méditerranéenne — cassis, cèdre, herbes, graphite —, avec des tanins racés et une grande aptitude à la garde. Les vins demandent quelques années pour s'ouvrir et vieillissent magnifiquement sur vingt ans et plus. Le domaine produit aussi le Guidalberto et le Le Difese, plus accessibles. Pionnier qui a changé à jamais le visage du vin italien et ouvert la voie aux Super-Toscans, le Sassicaia est une légende absolue et l'un des grands vins du monde. Les sols caillouteux et le climat maritime de Bolgheri, conjugués au savoir-faire hérité de Tachis, donnent au Sassicaia cette signature reconnaissable entre toutes : la structure et la noblesse d'un grand Bordeaux, rehaussées d'une touche méditerranéenne de garrigue et d'épices. À table, il accompagne les grandes pièces de viande rouge, l'agneau, le gibier et les fromages affinés, et mérite quelques années de cave pour révéler toute sa complexité. La régularité au sommet, millésime après millésime, et le statut de légende en font l'un des vins les plus collectionnés et les plus contrefaits au monde. Au-delà de la bouteille, le Sassicaia a une portée historique immense : il a prouvé que la Toscane pouvait produire des vins de classe mondiale hors des sentiers du Sangiovese, déclenchant le phénomène des Super-Toscans. Vin mythique et pionnier, indissociable de la famille Incisa della Rocchetta, le Sassicaia demeure l'un des plus grands vins d'Italie et l'un des noms les plus prestigieux du vin mondial.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cabernet",
+        "bolgheri",
+        "icone",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "theluxuryplaybook|vinous"
+    },
+    {
+      "id": "it-toscana-prod-tenuta-dellornellaia",
+      "nom": "Tenuta dell'Ornellaia",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Bolgheri",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc",
+        "Petit Verdot"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bolgheri Superiore Ornellaia",
+        "Masseto"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolgheri, voisine de la Tenuta San Guido, l'Ornellaia est l'un des domaines au sommet de la côte toscane et de toute l'Italie. Le domaine est créé en 1981 par Lodovico Antinori, qui répond ainsi au Sassicaia de son cousin Incisa et au Solaia de son frère Piero ; le premier millésime sort en 1985 et le succès est fulgurant. Aujourd'hui propriété de la famille Frescobaldi, l'Ornellaia est mené avec une exigence constante. Le vin éponyme, Bolgheri Superiore, est un assemblage bordelais (Cabernet Sauvignon, Merlot, Cabernet Franc, Petit Verdot) d'une grande richesse, alliant la puissance de fruit méditerranéenne à une structure et une complexité dignes des plus grands : cassis, prune, épices, notes balsamiques de la garrigue toscane, tanins amples et veloutés. Mais le joyau du domaine est le Masseto, Merlot pur issu d'une parcelle d'argile bleue unique, vinifié à part : l'un des Merlot les plus admirés et les plus chers du monde, qui rivalise avec les sommets du Pomerol et bénéficie désormais de sa propre cave. Les vins, opulents mais équilibrés, séduisent assez jeunes mais gagnent en complexité sur quinze à vingt-cinq ans. Entre l'Ornellaia et le Masseto, le domaine signe deux des vins italiens les plus collectionnés au monde, et incarne, aux côtés du Sassicaia, l'apogée du grand vin de Bolgheri. Les sols variés de Bolgheri — graviers, argiles, sables — et le climat maritime confèrent aux vins leur générosité de fruit, tandis que l'assemblage soigné et l'élevage en barriques leur donnent structure et complexité. À table, l'Ornellaia accompagne les grandes viandes rouges, l'agneau, le gibier et les fromages affinés ; le Masseto, plus opulent et velouté, appelle des mets nobles ou la méditation. Le domaine a poussé loin le souci du détail, jusqu'à confier chaque année l'étiquette d'un millésime à un artiste contemporain (« Vendemmia d'Artista »). La séparation du Masseto, doté de sa propre cave et de sa propre identité, a consacré ce Merlot comme l'un des plus grands du monde, sur le tier de prix des sommets du Pomerol. Entre l'Ornellaia et le Masseto, le domaine signe deux des vins italiens les plus collectionnés et les plus admirés au monde, et incarne, aux côtés du Sassicaia, l'apogée du grand vin de Bolgheri et la réussite éclatante des cépages bordelais sur la côte toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "merlot",
+        "cabernet",
+        "icone",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "theluxuryplaybook|winespectator"
+    },
+    {
+      "id": "it-toscana-prod-le-macchiole",
+      "nom": "Le Macchiole",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Castagneto Carducci",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Franc",
+        "Merlot",
+        "Syrah"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Paleo Rosso",
+        "Messorio",
+        "Scrio"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolgheri, Le Macchiole est l'un des domaines les plus inventifs et les plus admirés de la côte toscane, pionnier des grands mono-cépages. Fondé par Eugenio Campolmi, disparu prématurément en 2002, et porté depuis par son épouse Cinzia Merli, le domaine a fait le choix audacieux, dans une zone vouée aux assemblages bordelais, de vinifier des cépages en pureté. Trois cuvées en ont fait la légende : le Paleo Rosso, devenu 100% Cabernet Franc, l'un des plus grands de ce cépage en Italie ; le Messorio, Merlot pur d'une profondeur rare, rangé parmi les sommets italiens du cépage ; et le Scrio, Syrah dense et épicée. Le style Le Macchiole recherche l'intensité du fruit et la pureté variétale, mais avec une fraîcheur et une élégance qui évitent toute lourdeur, dans des vins profonds, racés et de grande garde. Le Bolgheri Rosso du domaine est lui-même l'un des plus séduisants de l'appellation. Les cuvées de pointe, produites en quantités limitées, sont très recherchées et atteignent des prix élevés ; elles demandent quelques années pour s'ouvrir et vieillissent sur quinze à vingt ans. Par son audace et sa réussite, Le Macchiole a élargi le champ des possibles à Bolgheri et compte aujourd'hui parmi les domaines les plus créatifs et les plus respectés de toute la côte toscane. Les sols de Bolgheri et le climat maritime, conjugués à une recherche constante de pureté variétale, donnent aux vins du domaine leur intensité de fruit et leur fraîcheur. À table, le Paleo (Cabernet Franc) et le Messorio (Merlot) accompagnent les grandes viandes rouges, l'agneau et le gibier, tandis que le Scrio (Syrah), plus épicé, appelle des plats relevés ; tous méritent quelques années de cave. Le courage d'avoir misé sur les mono-cépages, là où tout le monde assemblait, a fait la singularité et la réussite du domaine, porté par Cinzia Merli après la disparition d'Eugenio Campolmi. Les cuvées de pointe, produites en quantités limitées, sont très recherchées et atteignent des prix élevés. Domaine inventif et profondément attachant, Le Macchiole a élargi le champ des possibles à Bolgheri et démontré l'excellence du Cabernet Franc et du Merlot sur la côte toscane ; il compte aujourd'hui parmi les producteurs les plus créatifs, les plus respectés et les plus admirés de toute la zone.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "cabernet-franc",
+        "merlot",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "theluxuryplaybook|winespectator"
+    },
+    {
+      "id": "it-toscana-prod-grattamacco",
+      "nom": "Grattamacco",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Castagneto Carducci",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bolgheri Superiore Grattamacco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castagneto Carducci, Grattamacco est l'un des deux plus anciens domaines de Bolgheri (avec le Sassicaia), fondé dès les années 1970 et aujourd'hui propriété du groupe ColleMassari. Sur un coteau bien exposé, il produit un Bolgheri Superiore (assemblage de Cabernet Sauvignon, Merlot et Sangiovese) profond et de garde, qui compte parmi les références de l'appellation, ainsi qu'un Vermentino réputé. Le style allie la richesse du fruit méditerranéen à une structure et une fraîcheur qui évitent toute lourdeur, dans des vins racés marqués par les notes balsamiques de la garrigue toscane, qui demandent quelques années pour s'ouvrir et vieillissent bien sur quinze ans. Pionnier de la côte et témoin de l'histoire de Bolgheri, Grattamacco a conservé sous la houlette de ColleMassari un niveau élevé et une identité propre, plus sobre et moins ostentatoire que certains voisins. Domaine historique et fiable, Grattamacco est l'une des valeurs sûres de Bolgheri et l'un des meilleurs rapports prestige-qualité de l'appellation, apprécié pour l'équilibre et la profondeur de ses vins. À table, les Bolgheri de Grattamacco accompagnent les grandes viandes rouges, l'agneau, le gibier et les fromages affinés, et méritent quelques années de cave. Pionnier de la côte et conservé à haut niveau sous ColleMassari, le domaine cultive une identité plus sobre que certains voisins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "cabernet",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winespectator|montalcinowinetours"
+    },
+    {
+      "id": "it-toscana-prod-guado-al-tasso-antinori",
+      "nom": "Guado al Tasso – Antinori",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Bolgheri",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Sauvignon",
+        "Merlot",
+        "Cabernet Franc"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bolgheri Superiore Guado al Tasso"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bolgheri, Guado al Tasso est le grand domaine côtier de la famille Antinori, l'un des poids lourds de l'appellation. Sur de vastes vignes dans la plaine et les coteaux de Bolgheri, il produit le Bolgheri Superiore Guado al Tasso, assemblage bordelais (Cabernet Sauvignon, Merlot, Cabernet Franc) riche et racé, qui figure parmi les références de la zone, ainsi qu'une gamme plus large (Il Bruciato, Vermentino). Le style allie la générosité du fruit méditerranéen à une structure ample et à des tanins veloutés, dans des vins opulents mais équilibrés qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur quinze ans. La puissance commerciale et le savoir-faire d'Antinori assurent une grande régularité. Domaine de prestige et de volume, Guado al Tasso illustre l'ambition d'Antinori sur la côte toscane, et compte parmi les grands noms de Bolgheri, apprécié pour la richesse et la fiabilité de ses vins, qui complètent à merveille l'offre de la maison entre Chianti Classico (Tignanello) et Bolgheri. À table, le Guado al Tasso accompagne les grandes viandes rouges, l'agneau et le gibier, et mérite quelques années de cave. La puissance commerciale et le savoir-faire d'Antinori assurent une grande régularité. Domaine de prestige et de volume, il illustre l'ambition de la maison sur la côte toscane, et compte parmi les grands noms de Bolgheri, apprécié pour la richesse et la fiabilité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "cabernet",
+        "antinori"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winespectator"
+    },
+    {
+      "id": "it-toscana-prod-michele-satta",
+      "nom": "Michele Satta",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Castagneto Carducci",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon",
+        "Syrah"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bolgheri Superiore I Castagni",
+        "Cavaliere"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castagneto Carducci, Michele Satta est l'un des pionniers de Bolgheri et l'une de ses figures les plus attachantes, l'un des rares à avoir cru au Sangiovese sur une côte vouée aux cépages bordelais. Sur ses vignes, il produit une gamme personnelle et équilibrée : des Bolgheri Superiore (dont le I Castagni, à base de Cabernet et Merlot), mais aussi le Cavaliere, Sangiovese pur qui exprime une autre facette du terroir, et de jolis blancs. Le style privilégie l'équilibre, la fraîcheur et la buvabilité, plutôt que la seule puissance, dans des vins racés et personnels qui vieillissent bien sur une dizaine d'années. Vigneron indépendant et sincère dans un univers de grandes maisons, Michele Satta a su se forger une identité propre et une fidèle clientèle. Domaine de référence et d'une grande régularité, Michele Satta illustre une voie plus personnelle et plus toscane à Bolgheri, et compte parmi les belles adresses de l'appellation, apprécié pour l'équilibre de ses vins et son attachement au Sangiovese. À table, les Bolgheri de Michele Satta accompagnent les viandes rouges, les volailles et les fromages, le Cavaliere (Sangiovese) offrant une autre facette plus toscane. Vigneron indépendant et sincère, attaché au Sangiovese sur une côte vouée aux cépages bordelais, il a su se forger une identité propre. C'est l'une des belles adresses de Bolgheri, appréciée pour l'équilibre, la fraîcheur et la personnalité de ses vins.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "sangiovese",
+        "pionnier"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winespectator"
+    },
+    {
+      "id": "it-toscana-prod-ca-marcanda-gaja",
+      "nom": "Ca' Marcanda – Gaja",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Bolgheri",
+      "commune": "Castagneto Carducci",
+      "pays": "Italie",
+      "cepages": [
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Cabernet Franc"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Camarcanda",
+        "Magari"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castagneto Carducci, Ca' Marcanda est le domaine côtier d'Angelo Gaja, le grand nom du Piémont, qui s'est implanté à Bolgheri à la fin des années 1990. Sur ses vignes, il produit des assemblages bordelais soignés : le Camarcanda (Merlot, Cabernet Sauvignon, Cabernet Franc), cuvée de prestige du domaine, et le Magari, plus accessible, ainsi qu'un blanc (Vistamare). Le style, fidèle à la patte Gaja, allie richesse du fruit, structure et polish, avec des tanins veloutés et un grand soin de l'élevage, dans des vins opulents mais équilibrés qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur quinze ans. La rigueur viticole et le savoir-faire de la maison assurent une grande régularité. Implantation côtière d'une dynastie piémontaise, Ca' Marcanda illustre l'ambition de Gaja au-delà des Langhe, et compte parmi les domaines réputés de Bolgheri, apprécié pour la qualité constante de ses assemblages et la signature reconnaissable de la maison sur la côte toscane. À table, les assemblages de Ca' Marcanda accompagnent les grandes viandes rouges, l'agneau et le gibier, et méritent quelques années de cave. Implantation côtière de la dynastie piémontaise Gaja, le domaine illustre l'ambition de la maison au-delà des Langhe. Il compte parmi les domaines réputés de Bolgheri, apprécié pour la qualité constante de ses assemblages et la signature reconnaissable de la maison sur la côte toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "bolgheri",
+        "merlot",
+        "cabernet",
+        "gaja"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "montalcinowinetours"
+    },
+    {
+      "id": "it-toscana-prod-tua-rita",
+      "nom": "Tua Rita",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Maremma (Suvereto)",
+      "commune": "Suvereto",
+      "pays": "Italie",
+      "cepages": [
+        "Merlot",
+        "Syrah",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Redigaffi",
+        "Giusto di Notri"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Suvereto, dans la Maremme au sud de Bolgheri, Tua Rita est un domaine devenu célèbre dans le monde entier grâce au Redigaffi, Merlot pur qui fut le premier vin italien noté 100/100 par Robert Parker (millésime 2000). Sur ses vignes, le domaine produit des rouges opulents et précis : le Redigaffi en tête, mais aussi le Giusto di Notri (assemblage bordelais) et de la Syrah, dans un style généreux et soigné. Le style allie richesse du fruit, concentration et velouté, avec des tanins mûrs et un élevage soigné, dans des vins qui séduisent assez tôt tout en gardant une belle aptitude à la garde sur quinze ans. La réussite du Redigaffi a propulsé Suvereto et la Maremme sur la carte du vin fin. Domaine de prestige et très recherché, en particulier pour son Merlot, Tua Rita illustre le potentiel de la Maremme pour les cépages internationaux, et compte parmi les noms les plus connus de la côte toscane, apprécié des amateurs de rouges riches et aboutis. À table, les rouges opulents de Tua Rita accompagnent les grandes viandes rouges, l'agneau et les fromages affinés, le Redigaffi méritant quelques années de cave. La réussite mondiale du Redigaffi a propulsé Suvereto sur la carte du vin fin. Domaine de prestige et très recherché, en particulier pour son Merlot, il illustre le potentiel de la Maremme pour les cépages internationaux, et compte parmi les noms les plus connus de la côte toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "merlot",
+        "syrah",
+        "maremma",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "theluxuryplaybook|intowine"
+    },
+    {
+      "id": "it-toscana-prod-marchesi-antinori",
+      "nom": "Marchesi Antinori",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (San Casciano)",
+      "commune": "San Casciano in Val di Pesa",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Tignanello",
+        "Solaia"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "L'une des plus grandes et des plus anciennes maisons de vin d'Italie : la famille Antinori produit du vin en Toscane depuis 1385, soit vingt-six générations. Au-delà de son envergure et de ses nombreux domaines (en Toscane et bien au-delà), Antinori a marqué l'histoire récente du vin italien en inventant, dans les années 1970, la catégorie des Super-Toscans. Le Tignanello, créé par Piero Antinori et l'œnologue Giacomo Tachis, fut l'un des premiers grands vins toscans à assembler le Sangiovese avec du Cabernet et à s'affranchir des règles du Chianti (en IGT) ; le Solaia, à dominante Cabernet, en est le pendant encore plus prestigieux, classé deux fois vin de l'année par Wine Spectator. Ces vins, issus du domaine de Tignanello en plein Chianti Classico, allient la profondeur du fruit à une structure et une élégance dignes des plus grands, et vieillissent magnifiquement sur deux décennies. Au-delà, la maison possède un patrimoine considérable (Guado al Tasso à Bolgheri, des domaines à Montalcino, en Ombrie, et l'impressionnante cave Antinori nel Chianti Classico). Géant historique au rayonnement mondial, Antinori a profondément changé l'image du vin italien, et reste l'une des références incontournables de la Toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "cabernet",
+        "super-toscan",
+        "icone",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "winespectator|foodandwine"
+    },
+    {
+      "id": "it-toscana-prod-marchesi-frescobaldi",
+      "nom": "Marchesi Frescobaldi",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Toscana (Frescobaldi)",
+      "commune": "Firenze",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Mormoreto",
+        "Nipozzano Riserva",
+        "Castelgiocondo (Brunello)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Autre grande dynastie historique de la Toscane, la famille Frescobaldi produit du vin depuis sept siècles et possède un vaste ensemble de domaines à travers la région. Au cœur de son patrimoine figurent le Castello di Nipozzano dans le Chianti Rufina (dont la Riserva et le Super-Toscan Mormoreto, à base de Cabernet, sont les fleurons), le domaine de Castelgiocondo à Montalcino (l'un des plus vastes producteurs de Brunello) et plusieurs autres propriétés, dont la prestigieuse Ornellaia à Bolgheri, qu'elle contrôle. Le style Frescobaldi allie tradition et savoir-faire moderne, dans des vins soignés et réguliers qui couvrent un large spectre, du Chianti Rufina de garde au Brunello en passant par les assemblages. La taille et l'histoire de la maison en font une vitrine du vin toscan, avec une qualité fiable à tous les niveaux. Entre patrimoine séculaire, diversité des terroirs et envergure internationale, Marchesi Frescobaldi est l'un des piliers historiques du vin de Toscane, et une référence patrimoniale dont les meilleurs vins, notamment le Mormoreto et les crus de Nipozzano, atteignent un très bon niveau. À table, la gamme couvre un large spectre, du Chianti Rufina de garde au Brunello en passant par le Mormoreto (Cabernet), pour accompagner viandes rouges, gibier et fromages. La taille et l'histoire de la maison en font une vitrine du vin toscan, avec une qualité fiable à tous les niveaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "cabernet",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-petrolo",
+      "nom": "Petrolo",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Valdarno di Sopra",
+      "commune": "Mercatale Valdarno",
+      "pays": "Italie",
+      "cepages": [
+        "Merlot",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Galatrona",
+        "Torrione"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Valdarno di Sopra, à l'est du Chianti Classico, Petrolo est un domaine réputé mené par la famille Sanjust (Luca Sanjust). Il s'est fait connaître par le Galatrona, Merlot pur qui figure au sommet du cépage en Italie, souvent comparé aux grands Pomerol, ainsi que par le Torrione, beau Sangiovese, et le Bòggina, cru de Sangiovese. Le style allie richesse et profondeur du fruit à une structure et une fraîcheur qui assurent l'équilibre, dans des vins racés qui demandent quelques années pour s'ouvrir et vieillissent bien sur quinze ans. Le domaine, attentif à ses terroirs, cultive en bio. La réussite du Galatrona a fait connaître le Valdarno comme terroir de qualité. Domaine ambitieux et régulier, Petrolo illustre le potentiel d'une zone moins connue de la Toscane, et compte parmi les belles adresses pour les amateurs de grands Merlot italiens et de Sangiovese de caractère, à un niveau de prestige qui le rapproche des meilleurs Super-Toscans. À table, le Galatrona (Merlot) et le Torrione (Sangiovese) accompagnent les grandes viandes rouges, le gibier et les fromages affinés, et méritent quelques années de cave. La réussite du Galatrona a fait connaître le Valdarno comme terroir de qualité. Domaine ambitieux et régulier, cultivé en bio, Petrolo compte parmi les belles adresses pour les amateurs de grands Merlot italiens et de Sangiovese de caractère, à un niveau qui le rapproche des meilleurs Super-Toscans.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "merlot",
+        "sangiovese",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "theluxuryplaybook"
+    },
+    {
+      "id": "it-toscana-prod-tenuta-di-trinoro",
+      "nom": "Tenuta di Trinoro",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Val d'Orcia (Sarteano)",
+      "commune": "Sarteano",
+      "pays": "Italie",
+      "cepages": [
+        "Cabernet Franc",
+        "Merlot",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Tenuta di Trinoro",
+        "Le Cupole"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Val d'Orcia, près de Sarteano, au sud-est de la Toscane, la Tenuta di Trinoro est un domaine visionnaire et culte, fondé par le regretté Andrea Franchetti dans les années 1990 sur un terroir d'altitude isolé. Inspiré par les grands vins du Médoc et de Saint-Émilion, il y a planté des cépages bordelais — Cabernet Franc en tête, puis Merlot, Cabernet Sauvignon, Petit Verdot — pour produire des vins d'une intensité et d'une profondeur rares. Le Tenuta di Trinoro, cuvée éponyme, est un assemblage dense et racé, devenu une bouteille recherchée ; le Le Cupole en est la version plus accessible. Le style allie puissance, richesse du fruit et fraîcheur d'altitude, dans des vins ambitieux qui demandent quelques années pour s'ouvrir et vieillissent bien sur quinze ans. Franchetti fut aussi le pionnier de l'Etna en Sicile (Passopisciaro). Domaine singulier né d'une vision personnelle forte, la Tenuta di Trinoro illustre le potentiel des cépages bordelais en altitude dans le sud de la Toscane, et compte parmi les Super-Toscans les plus originaux et les plus cultes. À table, les vins denses de Trinoro accompagnent les grandes viandes rouges, l'agneau et le gibier, et méritent quelques années de cave. Né d'une vision personnelle forte (celle d'Andrea Franchetti, pionnier aussi de l'Etna), le domaine illustre le potentiel des cépages bordelais en altitude dans le sud de la Toscane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cabernet-franc",
+        "merlot",
+        "super-toscan",
+        "culte"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "vinous"
+    },
+    {
+      "id": "it-toscana-prod-tenuta-di-capezzana",
+      "nom": "Tenuta di Capezzana",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Carmignano",
+      "commune": "Carmignano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Carmignano Villa di Capezzana",
+        "Vin Santo di Carmignano"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Carmignano, à l'ouest de Florence, la Tenuta di Capezzana est le domaine historique de cette petite et ancienne appellation, propriété de la famille Contini Bonacossi. Carmignano a la particularité d'associer le Sangiovese au Cabernet depuis des siècles — bien avant la mode des Super-Toscans —, une tradition que Capezzana incarne au plus haut niveau. Le domaine produit le Carmignano Villa di Capezzana et la cuvée de prestige Trefiano, dans un style équilibré et racé, ainsi qu'un Vin Santo di Carmignano qui compte parmi les plus grands liquoreux d'Italie. Le style allie la finesse du Sangiovese à l'apport structurant du Cabernet, dans des vins élégants qui vieillissent bien sur une quinzaine d'années. Cultivé en bio, le domaine soigne aussi une huile d'olive réputée. Gardien d'une appellation rare et d'une tradition séculaire, doté d'un cadre magnifique, la Tenuta di Capezzana est la référence de Carmignano et l'un des domaines les plus historiques et attachants de Toscane, apprécié pour l'équilibre de ses rouges et l'excellence de son Vin Santo. À table, le Carmignano de Capezzana accompagne les viandes rouges, le gibier et les fromages, le Vin Santo couronnant les desserts et les fromages persillés. Gardien d'une appellation rare où Sangiovese et Cabernet cohabitent depuis des siècles, doté d'un cadre magnifique et cultivé en bio, le domaine est la référence de Carmignano.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "cabernet",
+        "carmignano",
+        "historique"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-fattoria-le-pupille",
+      "nom": "Fattoria Le Pupille",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Maremma (Morellino di Scansano)",
+      "commune": "Magliano in Toscana",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Saffredi",
+        "Morellino di Scansano Riserva"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "En Maremme, à Magliano in Toscana, la Fattoria Le Pupille est la référence du Morellino di Scansano, menée par l'énergique Elisabetta Geppetti, surnommée la « dame de la Maremme ». Le domaine produit des Morellino di Scansano (à base de Sangiovese) souples, fruités et solaires, qui comptent parmi les meilleurs de l'appellation, ainsi que le Saffredi, Super-Toscan d'assemblage bordelais qui fut l'un des pionniers de la Maremme et reste sa cuvée de prestige. Le style allie la générosité du fruit méditerranéen à une structure soignée, dans des vins qui séduisent assez tôt ; le Saffredi, plus ambitieux, vieillit bien sur quinze ans. Pionnière qui a fait connaître la Maremme et le Morellino, Elisabetta Geppetti a porté le domaine au premier plan. Référence de son appellation et l'un des grands noms de la Maremme, la Fattoria Le Pupille illustre le potentiel de cette zone côtière du sud de la Toscane, et compte parmi les belles adresses pour les amateurs de Sangiovese généreux et de Super-Toscans accessibles. À table, les Morellino souples de Le Pupille accompagnent les pâtes, les grillades et les charcuteries, le Saffredi, plus ambitieux, appelant des viandes nobles. Pionnière qui a fait connaître la Maremme, Elisabetta Geppetti a porté le domaine au premier plan. Référence du Morellino di Scansano et l'un des grands noms de la Maremme, Le Pupille illustre le potentiel de cette zone côtière, apprécié pour la générosité de ses Sangiovese et la qualité de son Saffredi.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "maremma",
+        "morellino",
+        "super-toscan"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "intowine"
+    },
+    {
+      "id": "it-toscana-prod-selvapiana",
+      "nom": "Selvapiana",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Rufina",
+      "commune": "Rufina",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Rufina Riserva Bucerchiale"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Chianti Rufina, à l'est de Florence, Selvapiana est le domaine de référence de cette petite appellation, longtemps menée par Francesco Giuntini puis par Federico Giuntini Masseti. La Rufina, plus fraîche et plus en altitude que le Chianti Classico, donne des Sangiovese d'une grande fraîcheur et d'une belle aptitude à la garde, et Selvapiana en est le meilleur ambassadeur. Sa cuvée phare est la Riserva Bucerchiale, issue d'un cru, qui compte parmi les plus beaux Chianti Rufina et peut vieillir des décennies. Le style privilégie la finesse, la pureté du fruit et la tension, dans des vins racés et droits, élevés dans une approche traditionnelle. Cultivé en bio, le domaine signe aussi de jolis Chianti Rufina et une huile d'olive réputée. Référence absolue de la Rufina et témoin de la qualité de cette appellation méconnue, Selvapiana est l'un des domaines les plus respectés de la Toscane orientale, et une belle découverte pour les amateurs de Sangiovese frais, droit et de garde, à un prix souvent très raisonnable. À table, les Chianti Rufina de Selvapiana accompagnent les viandes rouges, le gibier et les fromages affinés, la Riserva Bucerchiale pouvant vieillir des décennies. Cultivé en bio, le domaine est la référence absolue de la Rufina, appellation fraîche et méconnue. C'est l'un des domaines les plus respectés de la Toscane orientale, et une belle découverte pour les amateurs de Sangiovese frais, droit et de garde, à un prix souvent très raisonnable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "chianti-rufina",
+        "tradition"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-montenidoli",
+      "nom": "Montenidoli",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Vernaccia di San Gimignano",
+      "commune": "San Gimignano",
+      "pays": "Italie",
+      "cepages": [
+        "Vernaccia",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vernaccia di San Gimignano Carato",
+        "Vernaccia Fiore"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Gimignano, Montenidoli est l'un des grands spécialistes de la Vernaccia, mené par la figure attachante d'Elisabetta Fagiuoli. Cultivé en bio, le domaine produit parmi les meilleurs blancs du cépage — dont les cuvées Fiore, Tradizionale et Carato (élevée en bois) — qui montrent que la Vernaccia di San Gimignano peut donner des vins de gastronomie, structurés, complexes et de garde, loin du cliché du blanc léger. Le domaine signe aussi de jolis rouges de Sangiovese. Référence de la Vernaccia et gardienne d'un patrimoine, Montenidoli est une adresse de choix pour découvrir les blancs de caractère de la Toscane. À table, les Vernaccia de Montenidoli accompagnent poissons, volailles et fromages frais, les cuvées de garde gagnant à être attendues. Cultivé en bio et gardien d'un patrimoine, le domaine est une référence du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "vernaccia",
+        "blanc",
+        "san-gimignano",
+        "bio"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-toscana-prod-brancaia",
+      "nom": "Brancaia",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Chianti Classico (Radda)",
+      "commune": "Radda in Chianti",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Merlot"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Chianti Classico",
+        "Il Blu"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Entre Radda in Chianti et la Maremme, Brancaia est un domaine soigné fondé par la famille Widmer, d'origine suisse. Il produit des Chianti Classico modernes et bien faits, ainsi que le Super-Toscan Il Blu (Sangiovese-Merlot-Cabernet), sa cuvée la plus connue, et des vins de Maremme. Le style privilégie le fruit mûr, le velouté et l'accessibilité, dans des vins séduisants qui se gardent une dizaine d'années. Bien diffusé et régulier, Brancaia offre une lecture moderne et lisible du Chianti et des assemblages toscans, et constitue une valeur sûre et appréciée à l'international. À table, les vins de Brancaia accompagnent les viandes rouges, les pâtes aux ragoûts et les fromages, le Super-Toscan Il Blu offrant une version plus ambitieuse.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sangiovese",
+        "merlot",
+        "chianti-classico"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "wineenthusiast"
+    },
+    {
+      "id": "it-toscana-prod-tenimenti-luigi-dalessandro",
+      "nom": "Tenimenti Luigi d'Alessandro",
+      "type": "domaine",
+      "region": "Toscana",
+      "sous_region": "Cortona",
+      "commune": "Cortona",
+      "pays": "Italie",
+      "cepages": [
+        "Syrah"
+      ],
+      "couleurs": [
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Cortona Syrah Il Bosco"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cortona, dans l'est de la Toscane, le domaine Luigi d'Alessandro s'est imposé comme le spécialiste de la Syrah en Italie centrale. Sur des sols sableux et un climat propice, il produit des Cortona Syrah — dont le cru Il Bosco — qui comptent parmi les références italiennes du cépage : des vins profonds, épicés et poivrés, alliant fruit mûr et fraîcheur. Le style recherche l'élégance et la précision, dans des vins qui se gardent une dizaine d'années. Pionnier d'une Syrah toscane de qualité, le domaine d'Alessandro offre une expression originale et aboutie du cépage, et constitue une belle découverte hors des sentiers battus du Sangiovese. À table, les Cortona Syrah d'Alessandro accompagnent les viandes rouges grillées, le gibier et les plats épicés, dans un registre profond et poivré.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "syrah",
+        "cortona"
+      ],
+      "a_verifier": "statut_production à confirmer",
+      "source": "jancisrobinson"
+    }
+  ]
+}

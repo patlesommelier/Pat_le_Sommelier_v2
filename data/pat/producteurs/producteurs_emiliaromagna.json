@@ -1,0 +1,1603 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "emiliaromagna",
+  "region_label": "Emilia-Romagna (Italie)",
+  "source_file": "producteurs_emiliaromagna.json",
+  "built_at": "2026-07-09",
+  "count": 37,
+  "items": [
+    {
+      "id": "it-emiliaromagna-prod-fattoria-zerbina",
+      "nom": "Fattoria Zerbina",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Faenza",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Faenza, dans les collines de la Romagne, la Fattoria Zerbina est le domaine de référence de la région et l'un des grands noms du vin d'Émilie-Romagne. Fondé dans les années 1960 par Vincenzo Geminiani, il a été porté au sommet par sa petite-fille Cristina Geminiani, œnologue de talent, qui en a fait un modèle de qualité dans une région longtemps synonyme de vin de masse.\n\nZerbina excelle sur les deux grands cépages de la Romagne. En rouge, ses Sangiovese — le Pietramora (Riserva) et le Marzeno (assemblage) — figurent parmi les plus grands de la région : profonds, structurés et de garde, ils ont prouvé que le Sangiovese de Romagne pouvait rivaliser avec les meilleurs de Toscane. Mais c'est surtout en blanc doux que Zerbina a marqué l'histoire : le Scaccomatto, un Albana di Romagna passito issu de raisins botrytisés, est considéré comme l'un des plus grands vins doux d'Italie, un liquoreux d'une richesse et d'une complexité remarquables (abricot confit, miel, agrumes), jamais écœurant grâce à sa fraîcheur. Le domaine signe aussi de l'Albana sèche (AR). Cristina Geminiani, par son travail sur les clones, la vigne et la cave, a joué un rôle pionnier dans la reconnaissance qualitative de la Romagne. Zerbina est ainsi devenu la référence incontournable de la région, tant pour le Sangiovese que pour l'Albana.\n\nDomaine de référence de la Romagne, la Fattoria Zerbina signe de grands Sangiovese de garde (Pietramora) et l'un des plus beaux Albana passito d'Italie (Scaccomatto). C'est la pierre de touche du vin d'Émilie-Romagne.\n\nLe rôle de Cristina Geminiani dépasse celui d'une simple vigneronne : formée auprès des plus grands, elle a mené un travail de recherche déterminant sur les clones de Sangiovese et sur la maîtrise du botrytis pour l'Albana, faisant de Zerbina un laboratoire de la qualité en Romagne. À une époque où la région ne produisait qu'un Sangiovese di Romagna réputé « morne » et un Albana promu DOCG pour des raisons plus politiques que qualitatives, elle a prouvé le contraire. Servis sur des viandes rouges, du gibier ou des fromages affinés, les Sangiovese Pietramora et Marzeno se patinent sur une décennie et plus ; le Scaccomatto, lui, accompagne magnifiquement une tarte aux fruits, des fromages bleus ou se déguste en méditation. La reconnaissance internationale de Zerbina a contribué à changer le regard sur toute la Romagne, ouvrant la voie à la nouvelle génération de Predappio et d'ailleurs. Le domaine demeure la boussole qualitative de la région, à la fois pour son rouge de garde et pour son liquoreux d'exception, deux facettes qui illustrent la richesse méconnue du vignoble romagnol.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Scaccomatto (Albana passito)",
+        "Pietramora (Sangiovese Ris.)",
+        "Marzeno",
+        "AR (Albana)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "sangiovese",
+        "albana",
+        "passito",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|lacucinaitaliana|firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-la-stoppa",
+      "nom": "La Stoppa",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Piacentini",
+      "commune": "Rivergaro",
+      "pays": "Italie",
+      "cepages": [
+        "Malvasia di Candia",
+        "Barbera",
+        "Bonarda",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli Piacentini DOC",
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Rivergaro, dans les Colli Piacentini à l'ouest de l'Émilie, La Stoppa est l'un des domaines les plus admirés d'Italie et une figure mondiale du vin naturel. Autour d'une tour médiévale et d'un vignoble planté à la fin du XIXe siècle, Elena Pantaleoni mène, avec l'œnologue Giulio Armani, une viticulture bio et une vinification artisanale d'une grande cohérence.\n\nLe domaine s'est fait connaître mondialement pour l'Ageno, un vin blanc de macération (« orange ») issu de Malvasia di Candia aromatica et d'autres cépages, longuement macéré sur les peaux : un blanc texturé, complexe et vibrant, devenu une référence absolue du genre. En rouge, la Macchiona (assemblage de Barbera et Bonarda) et le Stoppa (à base de cépages bordelais) sont des vins profonds, authentiques et de garde. Le style, bio et peu interventionniste (levures indigènes, peu ou pas de soufre, ni filtration), privilégie l'expression du terroir et la sincérité. Recherchés dans le monde entier et présents sur les plus grandes tables, les vins de La Stoppa ont fait de ce domaine un symbole du vin naturel de qualité et un ambassadeur du potentiel méconnu des Colli Piacentini. Elena Pantaleoni est devenue une figure respectée et influente du mouvement nature italien.\n\nDomaine culte du vin naturel, La Stoppa signe avec l'Ageno (Malvasia macérée) et la Macchiona des références mondiales, sur les Colli Piacentini. C'est un symbole du vin nature de qualité et un domaine admiré partout.\n\nL'histoire de La Stoppa est celle d'une conversion radicale : à la tête d'un domaine hérité de son père, Elena Pantaleoni a peu à peu abandonné les cépages internationaux et les recettes œnologiques pour revenir aux cépages autochtones et à une vinification sans artifice, dans le respect du vivant. Ce choix, longtemps marginal, a fait d'elle une pionnière et une référence morale du mouvement nature. L'Ageno, baptisé du nom de l'ancien propriétaire, a révélé au monde le potentiel de la Malvasia di Candia aromatica en macération, ouvrant la voie à tout un genre. Servi sur des plats riches, des viandes blanches épicées ou des fromages, ce blanc de macération déroute puis séduit par sa complexité ; la Macchiona, sur des viandes rouges et du gibier, se patine sur des années. Le domaine, niché dans la vallée sauvage de Trebbiolo, cultive une biodiversité rare et une cohérence totale entre la vigne et la cave. Recherchés par les sommeliers du monde entier, les vins de La Stoppa ont fait des Colli Piacentini, terroir longtemps anonyme, un nom qui compte, et d'Elena Pantaleoni l'une des figures les plus respectées et influentes du vin italien contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ageno (Malvasia macérée)",
+        "Macchiona",
+        "Trebbiolo",
+        "Stoppa (Bordeaux)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "colli-piacentini",
+        "nature",
+        "bio",
+        "orange",
+        "culte",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-chiara-condello",
+      "nom": "Chiara Condello",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Predappio",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Predappio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Predappio, au cœur des collines de la Romagne, Chiara Condello est l'étoile montante du Sangiovese régional et l'une des vigneronnes les plus talentueuses de sa génération. Fille d'une famille de vignerons (elle collabore aussi au domaine familial Condé), elle a lancé son propre projet, entièrement dédié au Sangiovese de Predappio, avec une exigence remarquable.\n\nEn agriculture biologique, sur les meilleurs terroirs de Predappio — considéré comme le grand cru du Sangiovese de Romagne, aux sols de « spungone » calcaire —, elle signe des rouges d'une pureté, d'une élégance et d'une finesse rares. Sa cuvée Predappio, et surtout la sélection Le Lucciole (issue de très vieilles vignes), sont des Sangiovese profonds, précis et de garde, qui expriment le terroir avec une définition remarquable, loin des rouges rustiques ou surextraits d'autrefois. Le style, respectueux du raisin et du lieu, privilégie la fraîcheur et la digestibilité. En quelques millésimes, Chiara Condello s'est imposée comme la figure de proue de la nouvelle Romagne, saluée par la critique internationale et recherchée par les amateurs. Son travail incarne le renouveau qualitatif du Sangiovese de Romagne et la reconnaissance de Predappio comme l'un des grands terroirs à Sangiovese d'Italie, aux côtés de la Toscane.\n\nÉtoile montante du Sangiovese de Romagne, Chiara Condello signe à Predappio des rouges bio d'une pureté et d'une élégance remarquables (Le Lucciole). C'est la figure de proue de la nouvelle Romagne.\n\nLe terroir de Predappio, longtemps associé au seul nom de Mussolini (qui y est né et enterré), connaît aujourd'hui une tout autre notoriété grâce à une poignée de vignerons qui ont révélé la noblesse de son Sangiovese, et Chiara Condello en est la figure de proue. Les sols de spungone, un calcaire coquillier particulier, y donnent au cépage une finesse et une minéralité rares. En choisissant de se concentrer sur les vieilles vignes et sur un travail bio et minutieux, elle a hissé ses vins au niveau des plus grands Sangiovese d'Italie. Servis sur des viandes rouges, du gibier, des pâtes au ragù ou des fromages affinés, ses Sangiovese séduisent par leur pureté, leur fraîcheur et leur profondeur, et se patinent sur une décennie. Le mouvement qu'elle incarne, avec d'autres vignerons de Predappio, a conduit à la reconnaissance officielle des sous-zones de Romagne (Predappio, Bertinoro, Modigliana…), consacrant l'idée d'un terroir. Saluée par la critique du monde entier et recherchée par les amateurs, Chiara Condello est devenue en quelques années l'un des noms les plus admirés du Sangiovese italien et le symbole de la renaissance qualitative de la Romagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Predappio (Sangiovese)",
+        "Le Lucciole",
+        "Rubicone"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "predappio",
+        "sangiovese",
+        "bio",
+        "revelation"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-drei-dona-tenuta-la-palazza",
+      "nom": "Drei Donà (Tenuta La Palazza)",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Forlì",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC",
+        "Emilia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Forlì, dans les collines de la Romagne, la Tenuta La Palazza de la famille Drei Donà est un domaine réputé, pionnier du Sangiovese de qualité en Romagne. Dès les années 1980-90, avec le conseil d'œnologues renommés, la famille a démontré le potentiel de garde du cépage.\n\nSa cuvée phare, le Pruno (un Sangiovese di Romagna Riserva), est l'un des grands rouges de la région : profond, structuré et de longue garde, il a contribué à faire reconnaître le Sangiovese de Romagne. Le domaine signe aussi le Magnificat, un Cabernet Sauvignon ambitieux, ainsi que le Notturno (Sangiovese plus accessible) et des blancs. Le style, soigné et ambitieux, met en valeur le Sangiovese dans des vins amples et de garde. La régularité et le rôle pionnier de la famille en font une référence de la Romagne. Drei Donà est une belle adresse pour découvrir le Sangiovese de garde de Romagne, chez l'un des domaines qui ont ouvert la voie à la reconnaissance de la région.\n\nDomaine pionnier de Forlì, Drei Donà signe avec le Pruno l'un des grands Sangiovese de Romagne, ainsi que le Cabernet Magnificat. C'est une référence du Sangiovese de garde de la région.\n\n Le rôle pionnier de la famille Drei Donà, dès les années 1980, a compté dans la reconnaissance du Sangiovese de Romagne comme un vrai vin de garde. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Pruno se patine sur une décennie ; le Magnificat séduit les amateurs de Cabernet. La régularité du domaine en fait une référence établie de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pruno (Sangiovese Ris.)",
+        "Magnificat (Cabernet)",
+        "Notturno (Sangiovese)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "forli",
+        "sangiovese",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-emiliaromagna-prod-tre-monti",
+      "nom": "Tre Monti",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Imola",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC",
+        "Romagna Albana DOCG",
+        "Colli d'Imola DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Imola, dans les collines de la Romagne, Tre Monti est un domaine bio historique, l'une des références de la région (cité par Jancis Robinson). La famille Navacchia y cultive le Sangiovese et l'Albana en agriculture biologique, avec une recherche de qualité et de fidélité au terroir.\n\nLe domaine signe de beaux Sangiovese — le Thea (Riserva) et le Vigna del Rio —, structurés et de garde, ainsi que des Albana de qualité (Vigna della Rocca) et le Salcerella. Le style, bio et soigné, met en valeur les deux grands cépages de la Romagne dans des vins équilibrés et fidèles à leur origine. La longévité du domaine, son engagement biologique et la qualité constante de sa gamme en font une valeur sûre de la région. Tre Monti est une belle adresse pour découvrir à la fois le Sangiovese et l'Albana de Romagne, en bio, chez un domaine historique et respecté des collines d'Imola.\n\nDomaine bio historique d'Imola, Tre Monti signe de beaux Sangiovese (Thea) et Albana. C'est une référence de la Romagne, saluée par Jancis Robinson.\n\n L'engagement bio de longue date de Tre Monti et son travail sur les deux grands cépages de Romagne donnent des vins cohérents et fidèles au terroir. Servis sur des viandes pour le Sangiovese, sur des poissons ou une cuisine légère pour l'Albana, ils séduisent par leur équilibre ; le Thea se patine sur plusieurs années. Le domaine reste une valeur sûre des collines d'Imola.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Thea (Sangiovese Ris.)",
+        "Vigna della Rocca (Albana)",
+        "Salcerella"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "imola",
+        "sangiovese",
+        "albana",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-villa-papiano",
+      "nom": "Villa Papiano",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Modigliana",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Modigliana DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Modigliana, dans les Apennins de la Romagne, Villa Papiano est un domaine bio d'altitude, fer de lance du renouveau de cette sous-zone montagneuse. La famille Bordini cultive le Sangiovese en agriculture biologique sur des terroirs élevés et frais, à la recherche d'élégance.\n\nModigliana, dans les hauteurs proches de la Toscane, donne des Sangiovese plus frais, tendus et fins que dans les collines basses. Le domaine signe des rouges purs et de terroir — le Le Papesse, le I Probi di Papiano, le Il Sentiero —, dans un style qui privilégie la fraîcheur, la minéralité et l'expression de l'altitude. Le travail biologique et la recherche d'élégance ont fait de Villa Papiano l'une des références de Modigliana, sous-zone reconnue pour ses grands Sangiovese d'altitude. C'est une belle adresse pour découvrir un Sangiovese de Romagne frais et racé, chez un domaine bio qui incarne le renouveau des terroirs de montagne de la région.\n\nDomaine bio d'altitude à Modigliana, Villa Papiano signe des Sangiovese frais et racés des Apennins (Le Papesse). C'est le fer de lance de cette sous-zone montagneuse de Romagne.\n\n L'altitude de Modigliana, proche de la Toscane, donne aux Sangiovese de Villa Papiano une fraîcheur et une tension rares en Romagne. Servis sur des viandes blanches, du gibier à plumes ou des fromages, ils séduisent par leur finesse et se patinent avec grâce. Le domaine incarne le renouveau des terroirs d'altitude, où le Sangiovese gagne en élégance ce qu'il perd en puissance.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Le Papesse (Sangiovese)",
+        "I Probi di Papiano",
+        "Il Sentiero"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "modigliana",
+        "sangiovese",
+        "bio",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-nicolucci",
+      "nom": "Nicolucci",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Predappio",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Predappio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Predappio Alta, au cœur de la Romagne, Nicolucci est un domaine historique, gardien du terroir de Predappio depuis plusieurs générations. Sur ce terroir considéré comme le grand cru du Sangiovese de Romagne, la famille perpétue une tradition de rouges de garde.\n\nSa cuvée phare, le Vigna del Generale (un Sangiovese de vieilles vignes, en Riserva), est un classique de la région : structuré, profond et de longue garde, il exprime le terroir de spungone calcaire de Predappio avec authenticité. Le domaine signe aussi le Predappio di Predappio et le Nero di Predappio. Le style, traditionnel et fidèle au lieu, met en valeur le Sangiovese dans des vins de caractère et de garde. La longévité du domaine et son attachement à Predappio en font une référence historique de la Romagne, aux côtés de la nouvelle génération (Chiara Condello, Noelia Ricci). Nicolucci est une belle adresse pour découvrir le Sangiovese de Predappio dans un style traditionnel et de garde.\n\nDomaine historique de Predappio Alta, Nicolucci signe avec le Vigna del Generale un classique du Sangiovese de garde. C'est un gardien du grand terroir de Predappio.\n\n L'attachement de Nicolucci à Predappio Alta, sur plusieurs générations, fait du domaine un gardien de ce grand terroir. Servi sur des viandes rouges, du gibier ou des fromages affinés, le Vigna del Generale se patine sur une décennie et plus, développant des notes tertiaires complexes. Le domaine illustre la continuité entre la tradition de Predappio et sa reconnaissance actuelle comme grand cru du Sangiovese de Romagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna del Generale (Sangiovese Ris.)",
+        "Predappio di Predappio",
+        "Nero di Predappio"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "predappio",
+        "sangiovese",
+        "historique",
+        "garde"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-conde",
+      "nom": "Condé",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Predappio",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Predappio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Predappio, dans les collines de la Romagne, Condé est le domaine de Francesco Bordini, agronome et vigneron réputé, également conseiller de nombreux domaines de la région. Sur les terroirs de Predappio, il cultive le Sangiovese avec une recherche de précision et de fidélité au lieu.\n\nLe domaine signe des Sangiovese de terroir précis et élégants — le Raggio Brusa, l'Ombroso —, qui expriment les différents sols de Predappio avec définition. Le style, soigné et respectueux du terroir, met en valeur le Sangiovese dans des vins équilibrés et de garde. L'expertise agronomique de Francesco Bordini, son travail sur les parcelles et la qualité constante de la gamme en font une belle adresse de la nouvelle Romagne (sa fille Chiara Condello mène aussi son propre projet). Condé est une adresse à découvrir pour un Sangiovese de Predappio précis et fidèle au terroir, chez un vigneron-agronome reconnu de la région.\n\nDomaine de Francesco Bordini (agronome réputé) à Predappio, Condé signe des Sangiovese de terroir précis et élégants (Raggio Brusa). C'est une belle adresse de la nouvelle Romagne.\n\n L'expertise agronomique de Francesco Bordini, sollicité par de nombreux domaines, se lit dans la précision de ses propres vins. Servis sur des viandes rouges, du gibier ou des fromages, ses Sangiovese de Predappio se patinent sur plusieurs années. Le lien familial avec Chiara Condello, qui mène son propre projet, ancre Condé au cœur du renouveau qualitatif de la Romagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Raggio Brusa (Sangiovese)",
+        "Ombroso",
+        "Tuscanella"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "predappio",
+        "sangiovese",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-noelia-ricci",
+      "nom": "Noelia Ricci",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Predappio",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Predappio DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Predappio, dans les collines de la Romagne, Noelia Ricci est le domaine de la Tenuta Pandolfa mené par Marco Cirese, l'une des belles réussites de la nouvelle génération. En agriculture biologique, il cultive le Sangiovese sur les terroirs de Predappio avec une recherche de pureté et de gourmandise.\n\nLe domaine signe des Sangiovese purs et gourmands — le Il Sangiovese (accessible et fruité) et le Godenza (cuvée plus ambitieuse, de terroir) —, dans un style qui privilégie la fraîcheur, le fruit et la buvabilité, loin des rouges lourds. Il produit aussi un blanc (Bianco di Ciela). Le style, bio et précis, met en valeur le Sangiovese de Predappio dans des vins équilibrés et digestes. La qualité, le bon rapport qualité-prix et la belle progression du domaine en font une valeur montante de la Romagne. Noelia Ricci est une belle adresse pour découvrir un Sangiovese de Predappio gourmand et pur, chez un domaine bio de la nouvelle génération.\n\nDomaine bio de Predappio (Tenuta Pandolfa), Noelia Ricci signe des Sangiovese purs et gourmands (Godenza). C'est une belle réussite de la nouvelle génération de Romagne.\n\n Le choix de la pureté et de la buvabilité, plutôt que de la puissance, inscrit Noelia Ricci dans la nouvelle vague du Sangiovese de Romagne. Servis sur des charcuteries, des viandes ou des pâtes au ragù, ses rouges séduisent par leur fruit et leur fraîcheur ; le Godenza gagne à être attendu quelques années. Le bon rapport qualité-prix du domaine en fait une belle porte d'entrée dans les Sangiovese de Predappio.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Godenza (Sangiovese)",
+        "Il Sangiovese",
+        "Bianco di Ciela"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "predappio",
+        "sangiovese",
+        "bio",
+        "revelation"
+      ],
+      "a_verifier": null,
+      "source": "winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-stefano-berti",
+      "nom": "Stefano Berti",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Forlì",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Forlì, dans les collines de la Romagne, Stefano Berti est un petit domaine réputé, cité par Jancis Robinson parmi ses favoris de la région. Le vigneron y cultive le Sangiovese avec un esprit artisanal et une recherche d'authenticité.\n\nLe domaine signe des Sangiovese soignés et fidèles au terroir — le Calisto (Riserva), le Ravaldo et le Bartimeo —, dans un style qui met en valeur le fruit et la fraîcheur du cépage. Le travail artisanal, à taille humaine, et la qualité constante de la gamme en font une belle adresse de la Romagne. Stefano Berti illustre le savoir-faire des petits domaines de qualité de la région, capables de produire des Sangiovese authentiques et de belle facture. C'est une adresse à découvrir pour un Sangiovese de Romagne sincère et bien fait, à bon rapport qualité-prix, chez un vigneron reconnu par la critique internationale.\n\nPetit domaine réputé de Forlì (cité par Jancis Robinson), Stefano Berti signe des Sangiovese soignés et authentiques (Calisto). C'est une belle adresse artisanale de la Romagne.\n\n La taille humaine du domaine permet à Stefano Berti un soin artisanal à chaque cuvée. Servis sur des viandes rouges, du gibier ou des fromages, ses Sangiovese séduisent par leur franchise et leur fruit ; le Calisto se patine sur plusieurs années. La reconnaissance de la critique internationale confirme la qualité de ce petit domaine sincère, à bon rapport qualité-prix, représentatif du meilleur de la Romagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Calisto (Sangiovese Ris.)",
+        "Ravaldo (Sangiovese)",
+        "Bartimeo"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "forli",
+        "sangiovese"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-san-patrignano",
+      "nom": "San Patrignano",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Coriano",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Cabernet",
+        "Chardonnay"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Rimini, en Romagne, San Patrignano est un domaine singulier, lié à la célèbre communauté de réinsertion du même nom, l'une des plus importantes d'Europe. Le vignoble fait partie du projet social et professionnel de la communauté, où les résidents apprennent le métier de la vigne et du vin.\n\nAu-delà de sa dimension sociale, le domaine produit des vins de réelle qualité : le Avi, un Sangiovese Riserva ambitieux et de garde, le Montepirolo (assemblage bordelais) et le Noi (Sangiovese plus accessible), ainsi que des blancs. Le style, soigné et moderne, met en valeur le Sangiovese de Romagne dans des vins structurés. La qualité de la gamme, la belle cave et la dimension humaine du projet en font une adresse reconnue de la région. San Patrignano est une belle adresse pour découvrir un Sangiovese de Romagne de qualité, chez un domaine dont l'histoire sociale ajoute une valeur particulière, sur les collines proches de Rimini.\n\nDomaine de la célèbre communauté de réinsertion près de Rimini, San Patrignano signe des Sangiovese ambitieux (Avi) et le bordelais Montepirolo. C'est un projet social et vinicole de qualité reconnu.\n\n La dimension sociale de San Patrignano, où le vin est un outil de réinsertion, donne au domaine une valeur particulière, sans rien céder sur la qualité. Servi sur des viandes rouges, du gibier ou des fromages affinés, l'Avi se patine sur une décennie. Le projet illustre comment un grand vin peut aussi porter un message humain, ce qui a valu au domaine une reconnaissance dépassant le seul cadre viticole.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Avi (Sangiovese Ris.)",
+        "Montepirolo (Bordeaux)",
+        "Noi (Sangiovese)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "rimini",
+        "sangiovese",
+        "social"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-emiliaromagna-prod-celli",
+      "nom": "Celli",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Bertinoro",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Bertinoro DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bertinoro, dans les collines de la Romagne, Celli est un domaine historique, référence du terroir calcaire de Bertinoro. La famille y cultive le Sangiovese et l'Albana, les deux grands cépages de la région, sur les sols de spungone qui font la réputation de Bertinoro.\n\nLe domaine signe de beaux Sangiovese — le Bron & Rusèval (Riserva) et le Le Grillaie —, structurés et fidèles au terroir, ainsi que des Albana de qualité (I Croppi). Le style, soigné et classique, met en valeur les cépages de la Romagne dans des vins équilibrés et de belle facture. La longévité du domaine et son ancrage à Bertinoro, terroir réputé pour la finesse de ses Sangiovese, en font une valeur sûre de la région. Celli est une belle adresse pour découvrir le Sangiovese et l'Albana de Bertinoro, chez un domaine historique et fidèle à son terroir calcaire, l'un des plus réputés de la Romagne.\n\nDomaine historique de Bertinoro, Celli signe de beaux Sangiovese (Bron & Rusèval) et Albana sur le terroir calcaire de spungone. C'est une référence de ce secteur réputé de Romagne.\n\n L'ancrage de Celli à Bertinoro, terroir de spungone réputé pour la finesse de ses Sangiovese, donne des vins équilibrés et racés. Servis sur des viandes pour le Sangiovese, sur des poissons pour l'Albana, ils séduisent par leur classicisme ; le Bron & Rusèval se patine sur plusieurs années. La longévité du domaine en fait une valeur sûre de ce secteur historique de la Romagne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Bron & Rusèval (Sangiovese)",
+        "Le Grillaie",
+        "I Croppi (Albana)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "bertinoro",
+        "sangiovese",
+        "albana"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-fattoria-paradiso",
+      "nom": "Fattoria Paradiso",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Bertinoro",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana",
+        "Barbarossa"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Bertinoro DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bertinoro, dans les collines de la Romagne, la Fattoria Paradiso est un domaine historique de la famille Pezzi, célèbre pour être le gardien d'un cépage rare : le Barbarossa. C'est ici que Mario Pezzi a identifié et sauvé cette variété autochtone, dont le domaine détient l'exclusivité.\n\nLe Barbarossa Vigna del Dosso, issu de ce cépage unique, est un rouge original et de caractère, emblème du domaine. La Fattoria Paradiso signe aussi de beaux Sangiovese (Vigna delle Lepri), de l'Albana et le Pagadebit (un blanc autochtone). Le style, traditionnel et attaché au patrimoine, met en valeur les cépages de la Romagne, y compris les plus rares. La longévité du domaine, son rôle dans la préservation du Barbarossa et la diversité de sa gamme en font une adresse à part de la région. Fattoria Paradiso est une belle adresse pour découvrir le rare Barbarossa et les cépages autochtones de Romagne, chez un domaine historique et patrimonial de Bertinoro.\n\nDomaine historique de Bertinoro, la Fattoria Paradiso est le gardien du rare cépage Barbarossa (Vigna del Dosso), aux côtés de beaux Sangiovese et Albana. C'est une adresse patrimoniale de la Romagne.\n\n Le rôle de la famille Pezzi dans la préservation du Barbarossa, cépage dont elle détient l'exclusivité, confère au domaine une place à part dans le patrimoine ampélographique italien. Servis sur des viandes, du gibier ou des fromages, le Barbarossa et les Sangiovese se patinent sur plusieurs années. La diversité de la gamme, du rare Barbarossa au Pagadebit, fait de Fattoria Paradiso une adresse unique de Bertinoro.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Barbarossa Vigna del Dosso",
+        "Vigna delle Lepri (Sangiovese)",
+        "Pagadebit"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "bertinoro",
+        "sangiovese",
+        "barbarossa",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-ancarani",
+      "nom": "Ancarani",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Faenza",
+      "pays": "Italie",
+      "cepages": [
+        "Albana",
+        "Sangiovese",
+        "Centesimino"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Albana DOCG",
+        "Romagna Sangiovese DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Oriolo dei Fichi, près de Faenza en Romagne, Ancarani est un domaine bio réputé pour ses cépages autochtones. Sur ce terroir singulier dominé par une tour médiévale, la famille cultive l'Albana et des variétés rares en agriculture biologique.\n\nLe domaine signe de belles Albana de terroir (Santa Lusa) et met à l'honneur le Centesimino, un cépage rouge autochtone rarissime, quasi exclusif d'Oriolo, qui donne des rouges parfumés et originaux (Oriolo). Il produit aussi du Sangiovese (Bacaïa). Le style, bio et attaché au patrimoine, met en valeur les cépages autochtones de la Romagne, y compris les plus confidentiels. La qualité, l'engagement biologique et le travail sur le rare Centesimino en font une belle adresse originale de la région. Ancarani est une adresse à découvrir pour l'Albana et le rare Centesimino, chez un domaine bio attaché au patrimoine ampélographique de la Romagne.\n\nDomaine bio d'Oriolo (Faenza), Ancarani signe de belles Albana (Santa Lusa) et le rare Centesimino, cépage rouge autochtone. C'est une belle adresse pour les autochtones de Romagne.\n\n Le travail d'Ancarani sur le rarissime Centesimino, cépage quasi exclusif d'Oriolo, et sur l'Albana en fait un gardien du patrimoine autochtone de Romagne. Servis sur une cuisine régionale, poissons pour l'Albana, charcuteries et viandes pour le Centesimino et le Sangiovese, ses vins séduisent par leur originalité. L'engagement bio et la curiosité ampélographique du domaine en font une belle découverte pour les amateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Santa Lusa (Albana)",
+        "Oriolo (Centesimino)",
+        "Bacaïa"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "faenza",
+        "albana",
+        "centesimino",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-leone-conti",
+      "nom": "Leone Conti",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Faenza",
+      "pays": "Italie",
+      "cepages": [
+        "Albana",
+        "Sangiovese"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Albana DOCG",
+        "Romagna Sangiovese DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Faenza, dans les collines de la Romagne, Leone Conti est un domaine bio-nature spécialiste de l'Albana, cité par Jancis Robinson. Ce vigneron passionné s'est fait le champion du grand cépage blanc de la Romagne, qu'il décline dans toutes ses expressions.\n\nLe domaine signe des Albana de terroir, souvent macérées (« orange »), qui révèlent le potentiel et la richesse de ce cépage longtemps sous-estimé : des blancs texturés, complexes et authentiques (Progetto 1). Il produit aussi du Sangiovese. Le style, bio et peu interventionniste, privilégie l'expression du terroir et la sincérité, dans l'esprit du vin nature. L'engagement pour l'Albana et la qualité des vins en font une référence pour ce cépage. Leone Conti est une belle adresse pour découvrir l'Albana de Romagne dans ses expressions les plus abouties, y compris macérées, chez un vigneron nature qui a fait de ce blanc autochtone sa spécialité.\n\nDomaine bio-nature de Faenza spécialiste de l'Albana (cité par Jancis Robinson), Leone Conti signe des Albana de terroir et macérées. C'est un ambassadeur du grand cépage blanc de Romagne.\n\n Le pari de Leone Conti sur l'Albana, y compris en macération, a contribué à réhabiliter ce cépage longtemps réduit à un blanc anonyme. Servies sur une cuisine de caractère, des poissons riches, des fromages ou une cuisine épicée, ses Albana séduisent par leur texture et leur complexité. Le domaine illustre le potentiel méconnu du grand blanc de Romagne, dans une démarche nature sincère et engagée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Albana (macérée)",
+        "Progetto 1 (Albana)",
+        "Sangiovese"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "faenza",
+        "albana",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-emiliaromagna-prod-cleto-chiarli",
+      "nom": "Cleto Chiarli",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Modène",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara",
+        "Lambrusco Grasparossa"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC",
+        "Lambrusco Grasparossa di Castelvetro DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Modène, Cleto Chiarli est la plus ancienne maison de Lambrusco, fondée en 1860, et une référence historique du Lambrusco de qualité. Face à l'image galvaudée du Lambrusco industriel sucré, la maison défend un Lambrusco artisanal, sec et authentique.\n\nElle produit des Lambrusco des deux grands types de Modène : le Grasparossa di Castelvetro (puissant, foncé et tannique) avec le Vigneto Cialdini, et le Sorbara (délicat, pâle et vif). Ses cuvées haut de gamme — le Lambrusco del Fondatore et les versions Premium en metodo ancestrale ou classico — montrent le potentiel qualitatif du cépage. Le style, artisanal et sec, met en valeur le fruit, la fraîcheur et la digestibilité du Lambrusco, parfait sur la charcuterie et la cuisine grasse de l'Émilie. La longévité de la maison, son rôle patrimonial et la qualité de sa gamme en font une référence incontournable. Cleto Chiarli est une belle adresse pour découvrir le vrai Lambrusco de Modène, sec et authentique, chez la plus ancienne maison de la région.\n\nLa plus ancienne maison de Lambrusco (1860), Cleto Chiarli signe des Lambrusco artisanaux et secs (Vigneto Cialdini, del Fondatore). C'est une référence historique du Lambrusco de qualité de Modène.\n\n La légitimité historique de Cleto Chiarli, plus ancienne maison de Lambrusco, lui donne une autorité particulière dans la défense d'un Lambrusco sec et authentique. Servis sur la charcuterie de Modène, le cotechino, le parmesan ou une cuisine grasse, ses Lambrusco séduisent par leur fraîcheur désaltérante. Le contraste entre le Grasparossa puissant et le Sorbara délicat illustre la richesse méconnue du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigneto Cialdini (Grasparossa)",
+        "Lambrusco del Fondatore",
+        "Premium (Sorbara)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "lambrusco",
+        "effervescent",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf|filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-medici-ermete",
+      "nom": "Medici Ermete",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Reggio Emilia",
+      "commune": "Reggio Emilia",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Salamino",
+        "Lambrusco Marani"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Reggiano Lambrusco DOC",
+        "Lambrusco Salamino DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Reggio Emilia, Medici Ermete est un pionnier du Lambrusco de qualité, l'un des domaines qui ont prouvé que ce vin pouvait être sérieux. La famille cultive le Lambrusco reggiano avec une exigence rare pour cette appellation.\n\nSa cuvée phare, le Concerto (un Lambrusco Salamino issu d'un seul vignoble), est une référence : un Lambrusco sec, structuré et profond, régulièrement salué par la critique comme l'un des meilleurs de la région. Le domaine signe aussi l'Assolo et le Phermento (refermenté en bouteille). Le style, sérieux et fruité, met en valeur le Lambrusco reggiano dans des vins secs et de caractère, loin des versions sucrées. La qualité constante et le rôle pionnier de la famille en font une référence du Lambrusco. Medici Ermete est une belle adresse pour découvrir le Lambrusco de Reggio dans sa version la plus qualitative, avec le Concerto, l'un des Lambrusco les plus réputés d'Italie.\n\nPionnier du Lambrusco de qualité à Reggio, Medici Ermete signe avec le Concerto (Salamino) une référence sèche et sérieuse. C'est l'un des grands noms du Lambrusco reggiano.\n\n Le rôle pionnier de Medici Ermete dans la qualité du Lambrusco reggiano, incarné par le Concerto, a compté dans la réhabilitation du cépage. Servi sur la charcuterie, le parmesan ou une cuisine régionale, le Concerto séduit par sa structure et sa fraîcheur, à rebours des Lambrusco sucrés. La régularité de la maison en fait l'une des références du Lambrusco de qualité, saluée par la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Concerto (Lambrusco Reggiano)",
+        "Assolo",
+        "Phermento"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "reggio-emilia",
+        "lambrusco",
+        "effervescent",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf|filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-paltrinieri",
+      "nom": "Paltrinieri",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Sorbara",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sorbara, au cœur de la zone du Lambrusco le plus délicat, Paltrinieri est un domaine de référence, star de la renaissance du Lambrusco di Sorbara. La famille cultive ce cépage particulier, à la robe pâle et à l'acidité vive, avec une recherche de finesse.\n\nLe domaine signe des Lambrusco di Sorbara secs, vibrants et élégants — le Radice (refermenté en bouteille, sur lies) et le Leclisse —, d'une pureté et d'une fraîcheur remarquables, qui ont fait de Paltrinieri une référence branchée du Sorbara. Le style, sec et précis, met en valeur la délicatesse, la couleur rose pâle et l'acidité vive de ce Lambrusco, le plus fin de tous. La qualité constante et le rôle du domaine dans la reconnaissance du Sorbara en font une valeur sûre. Paltrinieri est une belle adresse pour découvrir le Lambrusco di Sorbara, le plus délicat et le plus vibrant des Lambrusco, chez l'un de ses meilleurs interprètes.\n\nDomaine de référence du Lambrusco di Sorbara, Paltrinieri signe des bulles sèches, vibrantes et élégantes (Radice, Leclisse). C'est une star de la renaissance du Sorbara.\n\n La spécialisation de Paltrinieri sur le Sorbara, le plus délicat des Lambrusco, en fait un interprète de référence de ce terroir. Servis à l'apéritif, sur la charcuterie, les fritures ou une cuisine légère, le Radice et le Leclisse séduisent par leur robe rose pâle, leur acidité vive et leur finesse. Le succès du domaine a contribué à faire du Sorbara l'un des Lambrusco les plus prisés des amateurs et des sommeliers.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Radice (Sorbara)",
+        "Leclisse (Sorbara)",
+        "Piria"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "sorbara",
+        "lambrusco",
+        "effervescent",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf|winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-cantina-della-volta",
+      "nom": "Cantina della Volta",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Bomporto",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara",
+        "Chardonnay",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC",
+        "Emilia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bomporto, près de Modène, la Cantina della Volta est un domaine spécialisé dans le metodo classico, mené par Christian Bellei, héritier d'une famille pionnière des bulles de Modène. Il applique au Lambrusco les méthodes des grands vins effervescents.\n\nLe domaine élabore des Lambrusco di Sorbara en méthode traditionnelle (seconde fermentation en bouteille, long élevage sur lies), d'une finesse et d'une complexité rares pour ce cépage, ainsi que des spumante de Chardonnay et Pinot Nero. Le style, raffiné et précis, hisse le Lambrusco au niveau des grandes bulles, avec des vins tendus, élégants et gastronomiques. Le savoir-faire de Christian Bellei et la qualité de la gamme en font une référence du Lambrusco de méthode traditionnelle. La Cantina della Volta est une belle adresse pour découvrir le Lambrusco dans sa version la plus raffinée, en metodo classico, chez un spécialiste des bulles de Modène.\n\nDomaine de metodo classico à Bomporto (Christian Bellei), la Cantina della Volta signe des Lambrusco di Sorbara d'une grande finesse. C'est une référence du Lambrusco de méthode traditionnelle.\n\n L'application des méthodes du grand vin effervescent au Lambrusco, par Christian Bellei, hisse la Cantina della Volta au sommet qualitatif du cépage. Servis à l'apéritif, sur des fruits de mer, une cuisine fine ou la charcuterie, ses Lambrusco metodo classico séduisent par leur finesse et leur complexité. Le domaine prouve que le Lambrusco peut être un vin de bulles gastronomique et raffiné, digne des grandes tables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lambrusco di Sorbara (Metodo Classico)",
+        "Il Mattaglio",
+        "Rimosso"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "sorbara",
+        "lambrusco",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-lini-910",
+      "nom": "Lini 910",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Reggio Emilia",
+      "commune": "Correggio",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Salamino",
+        "Lambrusco Ancellotta",
+        "Pinot Nero"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Reggiano Lambrusco DOC",
+        "Emilia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Correggio, dans la province de Reggio Emilia, Lini 910 est une maison historique (depuis 1910), pionnière du Lambrusco en metodo classico. Sur quatre générations, la famille Lini s'est spécialisée dans les bulles de Lambrusco de qualité.\n\nLe domaine élabore des Lambrusco raffinés, dont des versions en méthode traditionnelle (In Correggio) d'une grande finesse, ainsi que le Labrusca (refermenté) et un rosé. Le style, élégant et sec, met en valeur le Lambrusco reggiano (Salamino, Ancellotta) dans des vins vibrants et gastronomiques, loin des versions industrielles. Le savoir-faire historique de la famille et la qualité de la gamme en font une référence du Lambrusco de qualité. Lini 910 est une belle adresse pour découvrir le Lambrusco de Reggio, notamment en metodo classico, chez une maison pionnière et raffinée, ambassadrice des bulles rouges de l'Émilie.\n\nMaison historique de Reggio (depuis 1910), Lini 910 signe des Lambrusco raffinés, notamment en metodo classico (In Correggio). C'est un pionnier des bulles de Lambrusco de qualité.\n\n Le savoir-faire de quatre générations et l'ancienneté de Lini 910 dans le metodo classico donnent des Lambrusco d'une finesse rare. Servis à l'apéritif, sur des fruits de mer ou la charcuterie, ils séduisent par leur élégance et leur fraîcheur. La maison illustre la vocation historique de Reggio pour les bulles de qualité, et compte parmi les pionniers du Lambrusco raffiné, loin de son image industrielle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "In Correggio (Metodo Classico)",
+        "Labrusca Rosso",
+        "Lini Rosé"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "reggio-emilia",
+        "lambrusco",
+        "metodo-classico"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-cavicchioli",
+      "nom": "Cavicchioli",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "San Prospero",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara",
+        "Lambrusco Grasparossa"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC",
+        "Lambrusco Grasparossa di Castelvetro DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Prospero, près de Modène, Cavicchioli est une grande maison de Lambrusco, à la fois productrice de volume et de belles cuvées de terroir. Fondée en 1928, elle est l'un des noms les plus connus du Lambrusco.\n\nSa cuvée phare, le Vigna del Cristo (un Lambrusco di Sorbara issu d'un seul vignoble), est une référence : un Lambrusco sec, délicat et vibrant, régulièrement cité parmi les meilleurs. Le domaine signe aussi le Col Sassoso (Grasparossa) et une gamme large et fiable. Le style, du vin accessible à la belle cuvée de terroir, met en valeur les différents Lambrusco de Modène. Si Cavicchioli produit de gros volumes, ses cuvées de sélection montrent le potentiel qualitatif du cépage. C'est une belle adresse pour découvrir le Lambrusco, du Sorbara délicat (Vigna del Cristo) au Grasparossa puissant, chez une maison qui conjugue diffusion et qualité.\n\nGrande maison de Modène, Cavicchioli signe avec le Vigna del Cristo (Sorbara) une référence, aux côtés d'une gamme large et fiable. C'est un pilier du Lambrusco moderne, du volume à la cuvée de terroir.\n\n La force de Cavicchioli est de conjuguer volume et qualité, ses cuvées de sélection montrant le vrai potentiel du Lambrusco. Servi sur la charcuterie de Modène, le parmesan ou une cuisine grasse, le Vigna del Cristo séduit par sa délicatesse et sa fraîcheur. Le domaine reste un pilier accessible du Lambrusco, une bonne porte d'entrée qui prouve qu'une grande maison peut viser la qualité sur ses meilleures cuvées.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna del Cristo (Sorbara)",
+        "Col Sassoso (Grasparossa)",
+        "1928"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "lambrusco",
+        "effervescent"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-camillo-donati",
+      "nom": "Camillo Donati",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Parma",
+      "commune": "Parme",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco",
+        "Malvasia",
+        "Barbera",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Parme, Camillo Donati est un vigneron nature culte, l'une des figures de la scène naturelle émilienne. Sur les collines de Parme, il cultive les cépages locaux en agriculture biologique et vinifie sans artifice.\n\nLe domaine signe des Lambrusco, Malvasia, Barbera et Trebbiano tous refermentés en bouteille (frizzante ancestral), souvent macérés, sans soufre ajouté : des vins vivants, authentiques et vibrants, très prisés des amateurs de vin nature. Le style, radical et sincère, privilégie l'expression du terroir et la buvabilité, à rebours des vins technologiques. La cohérence de la démarche et la personnalité des vins ont fait de Camillo Donati une référence de la scène naturelle d'Émilie. C'est une belle adresse pour découvrir les vins nature de Parme — Lambrusco, Malvasia et Barbera pétillants et authentiques —, chez un vigneron engagé et sans compromis, figure du mouvement naturel italien.\n\nVigneron nature culte de Parme, Camillo Donati signe des Lambrusco, Malvasia et Barbera refermentés en bouteille, sans soufre. C'est une figure de la scène naturelle émilienne.\n\n La radicalité de Camillo Donati — tout refermenté en bouteille, souvent macéré, sans soufre — en fait une figure entière du vin nature émilien. Servis sur la charcuterie de Parme, une cuisine grasse ou des plats de caractère, ses vins pétillants séduisent par leur vivacité et leur franchise. Le domaine incarne une autre voie pour les cépages de Parme, à rebours de l'industrie, prisée des amateurs de vin vivant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lambrusco (rifermentato)",
+        "Malvasia (macérée)",
+        "Barbera"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "parma",
+        "lambrusco",
+        "malvasia",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winepages"
+    },
+    {
+      "id": "it-emiliaromagna-prod-orsi-vigneto-san-vito",
+      "nom": "Orsi - Vigneto San Vito",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Bolognesi",
+      "commune": "Valsamoggia",
+      "pays": "Italie",
+      "cepages": [
+        "Pignoletto (Grechetto Gentile)",
+        "Barbera"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Colli Bolognesi Pignoletto DOCG",
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Valsamoggia, dans les Colli Bolognesi au sud de Bologne, Orsi - Vigneto San Vito est un domaine bio-nature, référence du Pignoletto et de la scène naturelle de la région. Federico Orsi y cultive ce cépage blanc local (rebaptisé Grechetto Gentile) en agriculture biologique.\n\nLe domaine signe des Pignoletto en versions variées — frizzante (Posca Bianca, refermenté en bouteille), tranquille et macéré (Sant'Andrea) —, des blancs authentiques et vibrants qui révèlent le potentiel de ce cépage des collines de Bologne, ainsi que des rouges (Barbera). Le style, bio et peu interventionniste, privilégie l'expression du terroir et la sincérité. La qualité et l'engagement nature du domaine en font une référence des Colli Bolognesi. Orsi est une belle adresse pour découvrir le Pignoletto, notamment en version pétillante ou macérée, chez un vigneron nature qui a hissé ce cépage local au rang de vin de caractère.\n\nDomaine bio-nature des Colli Bolognesi, Orsi signe des Pignoletto (Grechetto Gentile) frizzante et macérés authentiques (Posca). C'est une référence nature de la région de Bologne.\n\n Le travail d'Orsi sur le Pignoletto, y compris en frizzante et en macération, a révélé le potentiel de ce cépage des Colli Bolognesi. Servis à l'apéritif, sur la charcuterie ou une cuisine légère, ses Pignoletto séduisent par leur fraîcheur et leur authenticité. Le domaine, référence nature de la région de Bologne, illustre le renouveau qualitatif d'un cépage longtemps cantonné au rôle de vin de soif local.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Posca Bianca (Pignoletto)",
+        "Sant'Andrea (Pignoletto)",
+        "Rosso"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "colli-bolognesi",
+        "pignoletto",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-prod-umberto-cesari",
+      "nom": "Umberto Cesari",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Castel San Pietro Terme",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castel San Pietro Terme, dans les collines de la Romagne, Umberto Cesari est une grande maison très diffusée, l'un des noms les plus connus du Sangiovese de Romagne à l'international. Fondée en 1964, elle produit une gamme large et fiable à partir des cépages de la région. Sa cuvée phare, le Liano (un assemblage de Sangiovese et de Cabernet Sauvignon), est un classique international : un rouge ample, mûr et boisé, qui a fait la réputation de la maison. Elle signe aussi le Tauleto (Sangiovese) et une large gamme de vins accessibles (dont de l'Albana). Le style, moderne et flatteur, met en valeur le Sangiovese dans des vins généreux et bien diffusés. La régularité et la bonne distribution en font une valeur sûre pour découvrir la Romagne. Umberto Cesari est une belle adresse pour un Sangiovese de Romagne accessible et généreux, à bon rapport qualité-prix, sur des viandes et des pâtes au ragù.\n\nGrande maison très diffusée de Romagne, Umberto Cesari signe le Liano (Sangiovese-Cabernet), un classique international, aux côtés d'une gamme large et fiable. C'est une valeur sûre à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Liano (Sangiovese-Cabernet)",
+        "Tauleto (Sangiovese)",
+        "Colle del Re"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "sangiovese",
+        "volume"
+      ],
+      "a_verifier": null,
+      "source": "cellartours"
+    },
+    {
+      "id": "it-emiliaromagna-prod-villa-venti",
+      "nom": "Villa Venti",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Roncofreddo",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Centesimino"
+      ],
+      "couleurs": [
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Roncofreddo, dans les collines de la Romagne du sud (près de Cesena), Villa Venti est un petit domaine bio, belle adresse artisanale de la région. La famille y cultive le Sangiovese en agriculture biologique, avec une recherche d'authenticité et de fraîcheur. Le domaine signe des Sangiovese soignés et de terroir — le Primo Segno et le Seréno —, dans un style qui privilégie le fruit et la buvabilité, ainsi que le Metina. Le style, bio et précis, met en valeur le Sangiovese de la Romagne du sud dans des vins équilibrés et digestes. Le travail biologique, la taille humaine et la qualité de la gamme en font une belle adresse de la région. Villa Venti est une adresse à découvrir pour un Sangiovese de Romagne authentique et frais, chez un petit domaine bio de Roncofreddo, à bon rapport qualité-prix, sur des viandes et la cuisine régionale.\n\nPetit domaine bio de Roncofreddo, Villa Venti signe des Sangiovese authentiques et frais (Primo Segno). C'est une belle adresse artisanale de la Romagne du sud.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Primo Segno (Sangiovese)",
+        "Seréno",
+        "Metina"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "cesena",
+        "sangiovese",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-tenuta-la-viola",
+      "nom": "Tenuta La Viola",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Bertinoro",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Bertinoro DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bertinoro, dans les collines de la Romagne, la Tenuta La Viola est un domaine bio, belle adresse du terroir calcaire de Bertinoro. La famille cultive le Sangiovese et l'Albana en agriculture biologique sur les sols de spungone réputés pour la finesse de leurs rouges. Le domaine signe des Sangiovese de terroir soignés — le Il Colombarone et le Petra Honorii —, structurés et fidèles au lieu, ainsi que de l'Albana (Madonna dei Fiori). Le style, bio et précis, met en valeur le Sangiovese de Bertinoro dans des vins équilibrés et de belle facture. Le travail biologique et la qualité de la gamme en font une valeur sûre du secteur. Tenuta La Viola est une belle adresse pour découvrir le Sangiovese de Bertinoro, en bio, chez un domaine soigné et fidèle à son terroir calcaire, l'un des plus réputés de la Romagne, sur des viandes et des fromages.\n\nDomaine bio de Bertinoro, la Tenuta La Viola signe des Sangiovese de terroir soignés (Il Colombarone). C'est une belle adresse du secteur calcaire de Bertinoro.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Il Colombarone (Sangiovese)",
+        "Petra Honorii",
+        "Madonna dei Fiori"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "bertinoro",
+        "sangiovese",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-vigne-dei-boschi",
+      "nom": "Vigne dei Boschi",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Brisighella",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana",
+        "Centesimino"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Brisighella DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Brisighella, dans les Apennins de la Romagne, Vigne dei Boschi est le domaine bio-nature de Paolo Babini, belle adresse d'altitude de la région. Sur des terroirs élevés et frais, il cultive le Sangiovese et l'Albana en agriculture biologique, avec des vinifications peu interventionnistes. Le domaine signe des Sangiovese d'altitude authentiques (Poggarello), frais et de terroir, ainsi que de l'Albana sèche et le rare Centesimino. Le style, bio-nature et sincère, privilégie l'expression du terroir de montagne et la buvabilité. Le travail artisanal et la qualité des vins en font une belle adresse nature de la Romagne. Vigne dei Boschi est une adresse à découvrir pour un Sangiovese et une Albana d'altitude authentiques, chez un vigneron nature des Apennins romagnols, dans la belle zone de Brisighella, réputée aussi pour son huile d'olive.\n\nDomaine bio-nature de Paolo Babini à Brisighella, Vigne dei Boschi signe des Sangiovese et Albana d'altitude authentiques (Poggarello). C'est une belle adresse nature des Apennins romagnols.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Poggarello (Sangiovese)",
+        "Albana secca",
+        "Centesimino"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "brisighella",
+        "sangiovese",
+        "albana",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-prod-vittorio-graziano",
+      "nom": "Vittorio Graziano",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Castelvetro",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Grasparossa",
+        "Lambrusco"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelvetro, dans la zone du Lambrusco Grasparossa, Vittorio Graziano est un vigneron nature pionnier, figure historique de la scène naturelle du Lambrusco. Depuis des décennies, il cultive le Lambrusco en agriculture biologique et vinifie sans artifice. Le domaine signe des Lambrusco refermentés en bouteille, authentiques et vivants — le Fontana dei Boschi, le Smorzavelàg, le Bàrabas —, à rebours des versions industrielles. Le style, nature et sincère, privilégie l'expression du terroir et la buvabilité, avec des vins vibrants et de caractère. L'ancienneté de sa démarche et la personnalité de ses vins ont fait de Vittorio Graziano une référence et une inspiration pour toute une génération de vignerons nature. C'est une belle adresse pour découvrir le Lambrusco nature dans sa version la plus authentique, chez un pionnier respecté de Castelvetro, sur la charcuterie et la cuisine émilienne.\n\nVigneron nature pionnier de Castelvetro, Vittorio Graziano signe des Lambrusco refermentés en bouteille, authentiques et vivants (Fontana dei Boschi). C'est une figure historique de la scène naturelle du Lambrusco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Fontana dei Boschi (Lambrusco)",
+        "Smorzavelàg",
+        "Bàrabas"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "castelvetro",
+        "lambrusco",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-ca-de-noci",
+      "nom": "Cà de Noci",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Reggio Emilia",
+      "commune": "Quattro Castella",
+      "pays": "Italie",
+      "cepages": [
+        "Spergola",
+        "Malbo Gentile",
+        "Lambrusco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Quattro Castella, dans les collines de Reggio Emilia, Cà de Noci est le domaine bio-nature des frères Masini, référence de la scène naturelle reggiane. Sur un terroir soigné, ils cultivent des cépages autochtones rares en agriculture biologique et vinifient sans artifice. Le domaine signe des blancs de Spergola (le Querciole), un cépage local peu connu, ainsi que des pétillants ancestraux (Notte di Luna) et des rouges (Sottobosco, à base de Malbo Gentile et Lambrusco). Le style, nature et authentique, privilégie l'expression du terroir et la sincérité, avec des vins vivants et originaux. L'engagement pionnier et la qualité des vins ont fait de Cà de Noci une référence de la scène naturelle d'Émilie. C'est une belle adresse pour découvrir des cépages autochtones rares de Reggio, comme la Spergola, dans une démarche nature exigeante, chez un domaine respecté des amateurs de vin vivant.\n\nDomaine bio-nature de Reggio (frères Masini), Cà de Noci signe des blancs de Spergola (Querciole) et des pétillants ancestraux. C'est une référence de la scène naturelle reggiane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Querciole (Spergola)",
+        "Notte di Luna",
+        "Sottobosco"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "reggio-emilia",
+        "spergola",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-emiliaromagna-prod-fattoria-moretto",
+      "nom": "Fattoria Moretto",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Castelvetro",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Grasparossa"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco Grasparossa di Castelvetro DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelvetro, dans la zone du Lambrusco Grasparossa, la Fattoria Moretto est un domaine réputé pour ses Lambrusco Grasparossa de qualité. La famille Altariva y cultive ce cépage puissant, emblème de Castelvetro. Le domaine signe des Lambrusco Grasparossa di Castelvetro structurés et fruités — le Monovitigno, le Semplicemente Vino, le Canova —, des bulles rouges foncées, tanniques et gourmandes, typiques du Grasparossa. Le style, soigné et fidèle au cépage, met en valeur la puissance et le fruit du Grasparossa dans des vins secs et de caractère. La qualité constante et la spécialisation sur ce type de Lambrusco en font une belle adresse. Fattoria Moretto est une adresse à découvrir pour le Lambrusco Grasparossa, le plus puissant des Lambrusco, sur la charcuterie grasse et la cuisine de Modène, chez un domaine réputé de Castelvetro, à bon rapport qualité-prix.\n\nDomaine réputé de Castelvetro, la Fattoria Moretto signe des Lambrusco Grasparossa structurés et fruités (Monovitigno). C'est une belle adresse du plus puissant des Lambrusco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Monovitigno (Grasparossa)",
+        "Semplicemente Vino",
+        "Canova"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "castelvetro",
+        "grasparossa",
+        "lambrusco"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-zucchi",
+      "nom": "Zucchi",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Sorbara",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara",
+        "Lambrusco Salamino"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sorbara, au cœur de la zone du Lambrusco le plus délicat, Zucchi est un domaine fiable, belle adresse du Lambrusco di Sorbara. La famille cultive ce cépage à la robe pâle et à l'acidité vive, emblème de finesse. Le domaine signe des Lambrusco di Sorbara frais et vibrants — le Rimosso (refermenté en bouteille) et le Le Sorti —, dans un style qui met en valeur la délicatesse et la vivacité du Sorbara, ainsi que le Ora. Le style, sec et précis, privilégie la fraîcheur et le fruit de ce Lambrusco, le plus fin de tous. La qualité constante et l'ancrage au cœur du Sorbara en font une valeur sûre. Zucchi est une belle adresse pour découvrir le Lambrusco di Sorbara, délicat et désaltérant, à l'apéritif ou sur la charcuterie, chez un domaine fiable du berceau de ce Lambrusco, à bon rapport qualité-prix.\n\nDomaine du cœur du Sorbara, Zucchi signe des Lambrusco di Sorbara frais et vibrants (Rimosso). C'est une belle adresse fiable du plus délicat des Lambrusco.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rimosso (Sorbara)",
+        "Le Sorti (Sorbara)",
+        "Ora"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "sorbara",
+        "lambrusco"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta"
+    },
+    {
+      "id": "it-emiliaromagna-prod-la-tosa",
+      "nom": "La Tosa",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Colli Piacentini",
+      "commune": "Vigolzone",
+      "pays": "Italie",
+      "cepages": [
+        "Barbera",
+        "Bonarda",
+        "Malvasia",
+        "Sauvignon"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Colli Piacentini DOC",
+        "Gutturnio DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vigolzone, dans les Colli Piacentini à l'ouest de l'Émilie, La Tosa est un domaine réputé, belle adresse des collines de Plaisance. La famille Pizzamiglio cultive les cépages locaux avec une recherche de qualité et de fidélité au terroir. Le domaine signe des Gutturnio (assemblage de Barbera et Bonarda, le rouge emblématique des Colli Piacentini) soignés — le Vignamorello —, ainsi que de la Malvasia (Sorriso di Cielo) et du Sauvignon (Luna Selvatica). Le style, précis et fidèle au terroir, met en valeur les cépages des Colli Piacentini dans des vins équilibrés et de belle facture. La qualité constante et le beau travail sur le Gutturnio et la Malvasia en font une valeur sûre de l'ouest de l'Émilie. La Tosa est une belle adresse pour découvrir le Gutturnio et la Malvasia des Colli Piacentini, sur la charcuterie de Plaisance et la cuisine régionale, à bon rapport qualité-prix.\n\nDomaine réputé des Colli Piacentini, La Tosa signe des Gutturnio (Barbera-Bonarda) et de la Malvasia soignés (Vignamorello). C'est une valeur sûre de l'ouest de l'Émilie.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gutturnio Vignamorello",
+        "Sorriso di Cielo (Malvasia)",
+        "Luna Selvatica"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "colli-piacentini",
+        "gutturnio",
+        "barbera"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-prod-gallegati",
+      "nom": "Gallegati",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Faenza",
+      "pays": "Italie",
+      "cepages": [
+        "Sangiovese",
+        "Albana"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Sangiovese Brisighella DOC",
+        "Romagna Albana DOCG"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Faenza, dans la zone de Brisighella en Romagne, Gallegati est un petit domaine bio, belle adresse de la nouvelle génération de la région. La famille cultive le Sangiovese et l'Albana en agriculture biologique, avec une recherche de fraîcheur et d'authenticité.\n\nLe domaine signe des Sangiovese agiles et juteux — salués par la critique (La Cucina Italiana) comme un témoignage du renouveau de l'appellation —, aux arômes de fruits rouges et de fleurs, dans un style frais et digeste, ainsi que de l'Albana (le Corallo Nero). Le style, bio et précis, privilégie la buvabilité et l'expression du terroir de Brisighella, à rebours des rouges lourds et boisés. La qualité, la fraîcheur des vins et l'engagement biologique en font une belle adresse montante de la Romagne. Gallegati est une adresse à découvrir pour un Sangiovese de Romagne frais et gourmand, parfait sur les tagliatelle al ragù, chez un domaine bio de la nouvelle génération, à bon rapport qualité-prix.\n\nPetit domaine bio de Faenza/Brisighella, Gallegati signe des Sangiovese agiles et juteux (cité par La Cucina Italiana) et de l'Albana. C'est une belle adresse montante de la nouvelle Romagne.\n\n Le choix de la fraîcheur et de la buvabilité inscrit Gallegati dans la nouvelle vague du Sangiovese de Romagne. Servis sur des charcuteries, des viandes blanches ou des pâtes au ragù, ses rouges séduisent par leur fruit et leur digestibilité. L'engagement bio et le bon rapport qualité-prix du domaine en font une belle porte d'entrée dans le renouveau de la Romagne, chez un jeune domaine prometteur de Brisighella.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Brisighella (Sangiovese)",
+        "Corallo Nero",
+        "Albana"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "brisighella",
+        "sangiovese",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-prod-bergianti-terrevive",
+      "nom": "Bergianti (Terrevive)",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Gargallo",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco di Sorbara",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco di Sorbara DOC",
+        "Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gargallo, près de Modène, Bergianti (domaine Terrevive) est un domaine bio-nature, belle adresse de la scène naturelle du Sorbara. Le vigneron cultive le Lambrusco di Sorbara en agriculture biologique et vinifie de façon artisanale et peu interventionniste. Le domaine signe des Lambrusco di Sorbara manuels et vibrants — le St. Vincent, le Rosanna, l'Amabile —, refermentés en bouteille, aux arômes de framboise et à l'acidité tendue, dans un style nature qui met en valeur la finesse du Sorbara. Le style, bio et sincère, privilégie l'expression du terroir et la buvabilité, avec des vins vivants et digestes. L'engagement nature et la qualité des vins en font une belle adresse de la région. Bergianti est une adresse à découvrir pour un Lambrusco di Sorbara nature et vibrant, parfait sur la charcuterie et le gnocco fritto, chez un vigneron bio de la scène naturelle de Modène.\n\nDomaine bio-nature de Modène (Terrevive), Bergianti signe des Lambrusco di Sorbara manuels et vibrants (St. Vincent). C'est une belle adresse de la scène naturelle du Sorbara.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "St. Vincent (Sorbara)",
+        "Rosanna",
+        "Amabile"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "sorbara",
+        "lambrusco",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "lacucinaitaliana"
+    },
+    {
+      "id": "it-emiliaromagna-prod-ceci",
+      "nom": "Ceci",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Parma",
+      "commune": "Torrile",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Maestri",
+        "Lambrusco Salamino",
+        "Malvasia",
+        "Fortana"
+      ],
+      "couleurs": [
+        "Effervescent",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco dell'Emilia IGT",
+        "Emilia IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Torrile, dans la plaine au nord de Parme, Ceci (Cantine Ceci) est une maison de Lambrusco réputée, fondée en 1938 par Otello Ceci. À l'origine tenancier d'une trattoria célèbre pour ses tripes et son Lambrusco, Otello abandonna la restauration pour se consacrer au vin ; aujourd'hui, ses petits-enfants dirigent le domaine.\n\nLa maison a bâti sa notoriété sur la ligne Otello, dont l'Otello Nero di Lambrusco, un Lambrusco rouge foncé, fruité et gourmand, présenté dans une bouteille carrée reconnaissable, devenu une marque phare. Ceci signe aussi le Terre Verdiane (hommage à Verdi, natif de la région), de la Malvasia (blanc aromatique) et le rare Fortana, un cépage autochtone de la plaine de Parme, idéal sur la charcuterie locale. Le style, moderne et soigné, met en valeur le Lambrusco et les cépages de Parme dans des vins accessibles et bien faits, à l'esthétique travaillée. La longévité de la maison, sa belle diffusion et la qualité de sa gamme en font une valeur sûre du Lambrusco. Ceci est une belle adresse pour découvrir le Lambrusco de Parme, du gourmand Otello à la Malvasia et au rare Fortana.\n\nMaison de Lambrusco réputée près de Parme (depuis 1938), Ceci a fait sa notoriété avec la ligne Otello (Nero di Lambrusco), aux côtés de la Malvasia et du rare Fortana. C'est une valeur sûre du Lambrusco de Parme.\n\n La force de Ceci a été de moderniser l'image du Lambrusco, avec ses bouteilles design et ses cuvées gourmandes, tout en restant ancrée dans la tradition de Parme. Servis sur la charcuterie (prosciutto di Parma, culatello), une cuisine grasse ou à l'apéritif, ses Lambrusco et sa Malvasia séduisent par leur fruité et leur accessibilité. Le rare Fortana, lui, accompagne idéalement les salaisons locales, spécialité identitaire de la plaine parmesane.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Otello Nero di Lambrusco",
+        "Terre Verdiane",
+        "Otello Malvasia",
+        "Fortana"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "parma",
+        "lambrusco",
+        "malvasia",
+        "effervescent",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "lambrusco.it|grapecollective"
+    },
+    {
+      "id": "it-emiliaromagna-prod-fattoria-monticino-rosso",
+      "nom": "Fattoria Monticino Rosso",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Romagna",
+      "commune": "Imola",
+      "pays": "Italie",
+      "cepages": [
+        "Albana",
+        "Sangiovese",
+        "Pignoletto",
+        "Cabernet Sauvignon"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Romagna Albana DOCG",
+        "Romagna Sangiovese DOC",
+        "Colli d'Imola DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les collines d'Imola, à la frontière entre l'Émilie et la Romagne (près de Dozza), la Fattoria Monticino Rosso est un domaine familial réputé, considéré comme l'un des maîtres de l'Albana. Fondé en 1965 par Antonio Zeoli et mené aujourd'hui par ses fils Luciano et Gianni, il s'est spécialisé dans les cépages autochtones de la région.\n\nSa cuvée phare, le Codronchio, est un Albana di Romagna sec issu d'une vendange tardive avec une pointe de botrytis : un blanc riche, complexe et de garde (abricot, agrumes, fleurs), qui a consacré les frères Zeoli comme des maîtres de ce cépage longtemps sous-estimé. Le domaine signe aussi un remarquable Albana passito (liquoreux botrytisé), du Sangiovese (Le Morine, Riserva) et du Pignoletto. Le style, artisanal et attaché au terroir, met en valeur l'Albana dans des versions ambitieuses qui en révèlent le potentiel. La qualité constante et le travail pionnier sur l'Albana en font une référence de la Romagne. Fattoria Monticino Rosso est une belle adresse pour découvrir l'Albana dans ses plus belles expressions, sèche comme passito, chez l'un de ses maîtres.\n\nDomaine familial d'Imola (famille Zeoli), maître de l'Albana : le Codronchio (Albana sèche) et l'Albana passito sont des références, aux côtés du Sangiovese Le Morine. C'est une belle adresse des autochtones de Romagne.\n\n Le pari des frères Zeoli sur l'Albana, cépage longtemps réduit à un blanc anonyme, a payé : le Codronchio en a révélé le potentiel de grand blanc. Servi sur des poissons, une volaille, des fromages ou, pour le passito, des desserts et fromages bleus, l'Albana de Monticino Rosso séduit par sa richesse et sa fraîcheur. Le domaine illustre la renaissance qualitative de l'Albana, premier blanc DOCG d'Italie, dans les collines d'Imola.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Codronchio (Albana secca)",
+        "Albana Passito",
+        "Le Morine (Sangiovese Ris.)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "romagna",
+        "imola",
+        "albana",
+        "sangiovese",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "callmewine|winedering"
+    },
+    {
+      "id": "it-emiliaromagna-prod-tenuta-la-fiaminga-sebastian-van-de-sype",
+      "nom": "Tenuta La Fiaminga (Sebastian Van de Sype)",
+      "type": "domaine",
+      "region": "Emilia-Romagna",
+      "sous_region": "Modena",
+      "commune": "Castelvetro di Modena",
+      "pays": "Italie",
+      "cepages": [
+        "Lambrusco Grasparossa",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Lambrusco Grasparossa di Castelvetro DOC",
+        "Lambrusco dell'Emilia IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castelvetro di Modena, dans la zone du Lambrusco Grasparossa, la Tenuta La Fiaminga est un jeune domaine nature à l'histoire singulière. Fondé en 2020 par Sebastian Van de Sype, un ingénieur belge qui a passé une décennie dans l'aérodynamique de la Formule 1 (chez Ferrari) avant de tout quitter pour le vin, il s'est lancé dans un projet ambitieux et sans compromis.\n\nSur une dizaine d'hectares plantés majoritairement en Grasparossa (avec un peu de Trebbiano), conduits en agriculture biologique, Sebastian Van de Sype élabore un Lambrusco Grasparossa di Castelvetro selon les méthodes ancestrale et traditionnelle, avec seconde fermentation en bouteille : un Lambrusco rouge, sec, authentique et vibrant, aux antipodes des versions industrielles. Conseillé par son ami et compatriote Frank Cornelissen, le maestro nature de l'Etna, il vise un vin naturel de grande qualité, sans techniques correctives. Le style, nature et sincère, met en valeur le caractère du Grasparossa. La démarche exigeante et la qualité des premiers millésimes en font une belle révélation de la scène naturelle de Modène. La Tenuta La Fiaminga est une adresse à découvrir pour un Lambrusco Grasparossa nature et authentique, chez un vigneron atypique et passionné.\n\nDomaine nature de Castelvetro fondé en 2020 par Sebastian Van de Sype (ex-ingénieur F1 belge, conseillé par Frank Cornelissen), il signe un Lambrusco Grasparossa ancestral et authentique. C'est une belle révélation nature de Modène.\n\n Le parcours de Sebastian Van de Sype, de l'aérodynamique de la F1 à la vigne, illustre la vitalité et l'attractivité de la scène nature italienne. Servi sur la charcuterie de Modène, une cuisine grasse ou des plats de caractère, son Lambrusco Grasparossa séduit par sa sécheresse, son fruit et sa vivacité. Le parrainage de Frank Cornelissen et la démarche exigeante du domaine en font l'une des révélations récentes du Lambrusco nature de Castelvetro.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ancestrale (Grasparossa)",
+        "Tradizionale (Grasparossa)"
+      ],
+      "tags": [
+        "emilia-romagna",
+        "modena",
+        "castelvetro",
+        "grasparossa",
+        "lambrusco",
+        "nature",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "zrswines|callmewine|rawwine"
+    }
+  ]
+}

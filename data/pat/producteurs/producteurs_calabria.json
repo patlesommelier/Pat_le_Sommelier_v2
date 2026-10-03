@@ -1,0 +1,1263 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "calabria",
+  "region_label": "Calabria (Italie)",
+  "source_file": "producteurs_calabria.json",
+  "built_at": "2026-07-11",
+  "count": 28,
+  "items": [
+    {
+      "id": "it-calabria-prod-librandi",
+      "nom": "Librandi",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco",
+        "Magliocco",
+        "Mantonico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Melissa DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Librandi est le domaine de référence de la région et l'artisan de sa reconnaissance internationale. Fondée par les frères Antonio et Nicodemo Librandi, cette maison familiale a fait, en quelques décennies, du Cirò et du cépage Gaglioppo des noms qui comptent, au point que Nicodemo (disparu en 2023) est surnommé « le père du Cirò ».\n\nAncien professeur de mathématiques devenu vigneron visionnaire, Nicodemo Librandi s'est consacré à la promotion des cépages autochtones calabrais, longtemps négligés. En collaboration avec des universités, l'œnologue Donato Lanati et l'ampélographe Anna Schneider, il a étudié et sauvé des variétés en voie de disparition, à commencer par le Magliocco Dolce. Le domaine, le plus grand producteur de qualité de Cirò, signe une gamme complète et régulière : du Cirò Rosso Classico accessible au Duca Sanfelice (Cirò Riserva, cuir et fruits mûrs), en passant par le Gravello (assemblage Gaglioppo-Cabernet lancé en 1988 qui a ouvert la voie à la reconnaissance internationale), le Magno Megonio (Magliocco pur, 1998) et l'Efeso (Mantonico blanc). Doté d'un vignoble expérimental dédié à la préservation des cépages rares, Librandi conjugue volume, qualité et mission patrimoniale, et demeure l'ambassadeur incontesté du vin de Calabria dans le monde.\n\nLE domaine de référence de la Calabria : le « père du Cirò » (Nicodemo Librandi) a fait connaître le Gaglioppo (Gravello, Duca Sanfelice) et sauvé les cépages autochtones (Magno Megonio, Efeso). C'est l'ambassadeur de la région.\n\nL'histoire de Librandi épouse celle du renouveau de la Calabria. Longtemps, cette région restée à l'écart, la pointe sauvage de la botte italienne, avait la réputation de produire beaucoup mais peu de qualité, et son vin franchissait rarement ses frontières. C'est le travail acharné de la famille Librandi, à partir des années 1980, qui a inversé la tendance, en prouvant que le Gaglioppo et le Greco Bianco pouvaient donner de grands vins et en les faisant découvrir aux États-Unis et à l'international. Au-delà du succès commercial, la démarche de Nicodemo Librandi fut aussi patrimoniale et scientifique : en rescapant des cépages au bord de l'extinction, il a préservé un pan entier de la diversité viticole italienne, et son vignoble expérimental a même permis d'identifier de nombreuses variétés locales inconnues. Servis sur la cuisine calabraise généreuse et épicée — la 'nduja, les viandes grillées, les fromages —, ou sur des plats méditerranéens, les vins de Librandi séduisent par leur équilibre entre puissance méridionale et fraîcheur ; les cuvées de garde comme le Gravello ou le Magno Megonio se patinent sur une décennie. Depuis la disparition de Nicodemo en 2023, la nouvelle génération perpétue son œuvre. Domaine à la fois populaire et exigeant, ambassadeur et gardien, Librandi demeure la porte d'entrée idéale dans le vin de Calabria et la preuve vivante de son immense potentiel.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gravello (Gaglioppo-Cabernet)",
+        "Duca Sanfelice (Cirò Ris.)",
+        "Magno Megonio (Magliocco)",
+        "Efeso (Mantonico)"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "reference",
+        "autochtone",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "cellartours|decanter|winescholarguild"
+    },
+    {
+      "id": "it-calabria-prod-a-vita",
+      "nom": "'A Vita",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, 'A Vita est le domaine de Francesco De Franco et de sa femme Laura, le fer de lance de ce que la critique a baptisé la « Cirò Revolution ». Ce petit domaine bio a joué un rôle décisif dans le changement de regard sur le Gaglioppo et le vin de Calabria.\n\nFrancesco De Franco fait partie de cette poignée de jeunes vignerons qui, en adoptant l'agriculture biologique et une vinification peu interventionniste, ont révélé le vrai potentiel du Gaglioppo, longtemps affublé d'une réputation injuste de vin rustique et tannique — réputation qui avait même conduit à un changement controversé des règles de l'appellation pour autoriser l'ajout de cépages internationaux. De Franco a prouvé le contraire : ses Cirò, complexes, frais et de longue garde, dont une Riserva macérée quarante jours sur les peaux, démontrent l'élégance dont le Gaglioppo est capable. Le domaine signe un Cirò Rosso Classico, une Riserva profonde, un rosato et le Leuko (un assemblage novateur de Greco Bianco et de Gaglioppo vinifié en blanc, un « orange wine » avant-gardiste). Le style, sincère et respectueux du terroir, exprime « l'esprit du Cirò » : arômes de châtaigne grillée, de terre rouge, d'orange sanguine et d'herbes sauvages. 'A Vita est devenu la référence artisanale du Cirò et un symbole du renouveau qualitatif de la Calabria.\n\nLe fer de lance de la « Cirò Revolution » (Francesco De Franco) : Gaglioppo bio, complexes et de garde, benchmark artisanal du Cirò, qui a effacé l'image rustique du cépage. C'est un symbole du renouveau de la Calabria.\n\nLe nom même du domaine, « 'A Vita » (la vie, en dialecte, mais aussi un clin d'œil à la vigne), résume la philosophie de Francesco De Franco : un vin qui exprime le lien intime entre l'homme et sa terre. Ancien architecte revenu au pays, De Franco a rejoint le petit cercle de vignerons qui, autour de Cirò, ont décidé de faire confiance au Gaglioppo et au terroir plutôt qu'aux recettes œnologiques et aux cépages internationaux. Cette « révolution » tranquille a redonné ses lettres de noblesse à un cépage que beaucoup avaient enterré. Les vins de 'A Vita, servis sur la cuisine calabraise — poissons de l'Ionienne, viandes, 'nduja, fromages — ou une cuisine méditerranéenne, séduisent par leur fraîcheur, leur salinité et leur digestibilité, loin des rouges lourds ; la Riserva se patine sur une décennie et plus. Le domaine, bio et à taille humaine, cultive de vieilles vignes sur les marnes calcaires balayées par les brises marines, un terroir idéal pour la finesse. Régulièrement cités parmi les meilleurs vins de Calabria et recherchés par les sommeliers du monde entier, les vins de Francesco et Laura De Franco ont fait de 'A Vita l'un des noms les plus admirés du Sud de l'Italie, et le symbole d'une Calabria qui a retrouvé confiance en ses cépages et en ses terroirs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirò Rosso Classico",
+        "Cirò Riserva",
+        "Leuko (Greco-Gaglioppo)"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "bio",
+        "nature",
+        "reference",
+        "revolution"
+      ],
+      "a_verifier": null,
+      "source": "decanter|italianamericanherald"
+    },
+    {
+      "id": "it-calabria-prod-ceraudo",
+      "nom": "Ceraudo",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Val di Neto (KR)",
+      "commune": "Strongoli",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco",
+        "Mantonico",
+        "Petit Verdot"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Val di Neto IGT",
+        "Calabria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Strongoli, sur la côte ionienne au sud de Cirò, Ceraudo est l'un des domaines les plus admirés de Calabria et un pionnier de l'agriculture biologique dans la région. Roberto Ceraudo a converti son domaine au bio dès les années 1990, une audace à une époque où très peu croyaient au potentiel de ce coin sauvage du Sud.\n\nSur ses terres de la Val di Neto, il cultive des cépages autochtones (Gaglioppo, Greco Bianco, Mantonico, Pecorello) et quelques variétés internationales, tous en bio, avec un soin remarquable. Ses vins sont régulièrement salués parmi les meilleurs de Calabria : le Petraro (un rouge de garde), le Grisara (un Pecorello blanc), le Grayasusi (un rosato réputé, décliné en étiquette argent et cuivre) et le Nanà (Gaglioppo). Le domaine, mené aujourd'hui avec ses enfants (dont sa fille Caterina, œnologue, et son fils Giuseppe, chef), abrite aussi le restaurant Dattilo, étoilé au Michelin, qui met en valeur la cuisine et les vins calabrais dans un cadre d'exception. Le style, bio et précis, exprime le terroir de la Val di Neto avec fraîcheur et authenticité. Par son engagement biologique précurseur, la qualité de ses vins et son offre œnogastronomique, Ceraudo est l'un des phares de la Calabria viticole et une adresse incontournable de la région.\n\nPionnier du bio en Calabria (Roberto Ceraudo, Strongoli) : cépages autochtones et internationaux acclamés (Petraro, Grisara, Grayasusi), avec le restaurant étoilé Dattilo sur place. C'est l'un des phares de la région.\n\nLe pari de Roberto Ceraudo fut doublement visionnaire : croire au bio quand la Calabria l'ignorait, et croire au potentiel qualitatif d'une région que le monde du vin regardait de haut. Sur les terres de la Val di Neto, à quelques kilomètres de Cirò, il a bâti un domaine exemplaire, où la vigne cohabite avec l'olivier et où le respect du vivant guide chaque décision. Cette cohérence se retrouve dans le verre comme dans l'assiette : le restaurant Dattilo, tenu par la famille et distingué par le Michelin, prolonge la philosophie du domaine en célébrant la cuisine calabraise avec des produits de la propriété. Servis sur cette cuisine du terroir — poissons, viandes, légumes du potager, fromages —, les vins de Ceraudo séduisent par leur fraîcheur et leur pureté ; les cuvées de garde comme le Petraro se patinent sur plusieurs années, tandis que les blancs (Grisara) et les rosés (Grayasusi) comptent parmi les plus élégants de la région. Le domaine illustre l'une des plus belles réussites du renouveau calabrais : celle d'un vigneron pionnier qui, par la conviction et le travail, a hissé un coin méconnu du Sud au rang de destination œnogastronomique de premier plan, et fait de Ceraudo l'un des ambassadeurs les plus complets et les plus admirés de la Calabria contemporaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Petraro (rouge)",
+        "Grisara (Pecorello)",
+        "Grayasusi (rosato)",
+        "Nanà"
+      ],
+      "tags": [
+        "calabria",
+        "val-di-neto",
+        "strongoli",
+        "bio",
+        "pionnier",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf|decanter|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-sergio-arcuri",
+      "nom": "Sergio Arcuri",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Sergio Arcuri est un petit domaine culte, l'un des grands noms de la « Cirò Revolution ». Vigneron passionné et minutieux, il produit des Gaglioppo qui incarnent la quintessence du cépage et du terroir.\n\nLe domaine cultive de vieilles vignes en alberello (gobelet), sur les sols de marnes calcaires, et vinifie à l'ancienne, parfois dans les palmenti (les anciens pressoirs de pierre traditionnels). En agriculture biologique, Arcuri signe des Cirò d'une grande pureté, classiques et racés, quintessentiellement Gaglioppo : le Più Vite (une Riserva de vieilles vignes), l'Aris et un rosato réputé. Le style, artisanal et sincère, révèle l'élégance et la finesse dont le Gaglioppo est capable, à rebours de son image rustique. La qualité, la fidélité aux méthodes ancestrales et la personnalité des vins ont fait de Sergio Arcuri une référence recherchée du Cirò. C'est une belle adresse pour découvrir le Gaglioppo dans son expression la plus pure et la plus traditionnelle, chez un petit vigneron culte de Cirò, sur la cuisine calabraise et les viandes.\n\nPetit domaine culte de la « Cirò Revolution », Sergio Arcuri signe des Gaglioppo de vieilles vignes en alberello, vinifiés à l'ancienne (Più Vite, Aris), purs et racés. C'est la quintessence du cépage.\n\n La fidélité de Sergio Arcuri aux vieilles vignes en gobelet et aux palmenti de pierre fait de son domaine un conservatoire vivant du Cirò traditionnel. Servis sur la cuisine calabraise, les viandes grillées, la 'nduja ou des fromages, ses Gaglioppo séduisent par leur pureté et leur finesse, et se patinent sur plusieurs années. Le domaine incarne la conviction que le Gaglioppo, bien travaillé, est un cépage noble et racé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Più Vite (Cirò Ris.)",
+        "Aris",
+        "Cirò Rosato"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "nature",
+        "bio",
+        "vieilles-vignes",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "decanter|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-cataldo-calabretta",
+      "nom": "Cataldo Calabretta",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico",
+        "Calabria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Cataldo Calabretta est un vigneron nature de la « Cirò Revolution », réputé pour ses vins bruts et sincères. Attaché à l'héritage de ses aïeux, il produit un Gaglioppo « calabrais jusqu'à la moelle ».\n\nEn agriculture biologique et avec une vinification sans artifice (hands-off), Calabretta signe des Cirò authentiques et de terroir, dont un Cirò Classico Superiore salué comme l'un des plus beaux Gaglioppo de la région, ainsi que du Greco Bianco. Le style, brut, franc et respectueux de la nature, exprime le terroir de Cirò avec caractère, dans des vins qui parlent d'histoire et de savoir-faire ancestral. La sincérité de la démarche et la qualité des vins en font une référence de la scène naturelle calabraise. Cataldo Calabretta est une belle adresse pour découvrir le Gaglioppo dans une version nature, authentique et de terroir, chez un vigneron engagé de Cirò, sur la cuisine calabraise, pour les amateurs de vin vivant et sincère.\n\nVigneron nature de la « Cirò Revolution », Cataldo Calabretta signe des Gaglioppo bruts, sincères et de terroir, « calabrais jusqu'à la moelle ». C'est une référence de la scène naturelle de Cirò.\n\n L'approche sans compromis de Cataldo Calabretta, respectueuse des méthodes de ses aïeux, donne des Cirò d'une grande authenticité. Servis sur la cuisine calabraise, les viandes ou des fromages, ses Gaglioppo séduisent par leur franchise et leur énergie. Le domaine illustre la vitalité de la scène naturelle de Cirò, où de jeunes vignerons redonnent au Gaglioppo sa dignité et son ancrage territorial.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirò Classico Superiore",
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "nature",
+        "bio",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald|decanter"
+    },
+    {
+      "id": "it-calabria-prod-ippolito-1845",
+      "nom": "Ippolito 1845",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Ippolito 1845 est le plus ancien domaine de la région, un pionnier historique du Cirò. La famille Ippolito travaille les basses collines au bord de la mer Ionienne depuis 1845, ce qui en fait la première cave de la zone.\n\nLe domaine est associé à de nombreuses premières : la construction d'une cave « moderne » dans les années 1920, la mise en bouteille de ses propres vins, le vieillissement du Gaglioppo pendant dix ans, la production d'un vin de vignoble unique. Aujourd'hui en biodynamie, avec un fort attachement aux cépages autochtones, il signe des Cirò de référence, dont le Colli del Mancuso (Cirò Riserva), le Res Dei (Cirò Bianco) et le Liber Pater. Le style, à la fois historique et renouvelé, met en valeur le Gaglioppo et le Greco Bianco dans des vins fidèles au terroir. Le rôle fondateur du domaine et sa conversion à la biodynamie en font une adresse à part. Ippolito 1845 est une belle adresse pour découvrir le Cirò chez le plus ancien domaine de Calabria, gardien de la tradition et acteur du renouveau, sur la cuisine calabraise et les viandes.\n\nLe plus ancien domaine de Calabria (1845), Ippolito est un pionnier historique du Cirò (premier embouteillage, premier mono-cru), aujourd'hui en biodynamie (Res Dei, Colli del Mancuso). C'est une adresse fondatrice.\n\n Le statut de plus ancien domaine de Calabria confère à Ippolito 1845 une autorité patrimoniale unique, prolongée par sa conversion à la biodynamie. Servis sur la cuisine calabraise, les viandes rouges ou des fromages, ses Cirò se patinent sur une décennie. Le domaine incarne la continuité entre la naissance du Cirò moderne, qu'il a en partie inventé, et le renouveau qualitatif actuel de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Colli del Mancuso (Cirò Ris.)",
+        "Res Dei (Cirò Bianco)",
+        "Liber Pater"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "historique",
+        "biodynamie"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald|firstleaf"
+    },
+    {
+      "id": "it-calabria-prod-santa-venere",
+      "nom": "Santa Venere",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Santa Venere est un domaine bio réputé, l'une des belles adresses qualitatives de l'appellation (favori de Jancis Robinson). Sur un beau terroir de marnes calcaires, la famille cultive le Gaglioppo et le Greco Bianco en agriculture biologique.\n\nLe domaine signe des Cirò soignés et de terroir, dont le Federico Scala (un Cirò Riserva de Gaglioppo), le Vurdija et le Cirò Rosso Classico, ainsi que des blancs et rosés. Le style, bio et précis, met en valeur l'élégance et la fraîcheur du Gaglioppo dans des vins équilibrés et fidèles au terroir. L'engagement biologique, la qualité constante et la reconnaissance critique en font une référence de l'appellation. Santa Venere est une belle adresse pour découvrir le Cirò dans une version bio et soignée, chez un domaine réputé de l'appellation, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte du Gaglioppo de qualité.\n\nDomaine bio réputé de Cirò (favori de Jancis Robinson), Santa Venere signe des Gaglioppo soignés et de terroir (Federico Scala, Vurdija). C'est une belle adresse qualitative de l'appellation.\n\n L'engagement bio de Santa Venere et sa régularité en font une valeur sûre de l'appellation, saluée par la critique internationale. Servis sur la cuisine calabraise, les viandes et les fromages, ses Gaglioppo séduisent par leur fraîcheur et leur équilibre ; le Federico Scala se patine sur plusieurs années. Le domaine illustre le versant qualitatif et durable du Cirò contemporain.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Federico Scala (Cirò Ris.)",
+        "Vurdija",
+        "Cirò Rosso Classico"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-du-cropio",
+      "nom": "Du Cropio",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Melissa DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Du Cropio est le domaine de Giuseppe Ippolito (issu de la branche de la célèbre famille), réputé pour produire parmi les plus beaux Gaglioppo de la région. Sur un beau terroir, il élabore des Cirò denses et profonds.\n\nLe domaine signe des Gaglioppo mûrs, riches et de garde, dont le Dom Giuvà (Cirò Superiore), le Serre Sanguigne et une Cirò Riserva, des rouges profondément fruités, sombres et de belle tenue, considérés par certains connaisseurs comme les meilleurs Gaglioppo de Calabria. Le style, soigné et concentré, met en valeur la structure et la maturité du cépage dans des vins ambitieux. La qualité constante et la réputation du vigneron en font une référence de l'appellation. Du Cropio est une belle adresse pour découvrir le Gaglioppo dans une version riche, mûre et de garde, chez un vigneron réputé de Cirò, sur la cuisine calabraise, les viandes rouges et le gibier, pour les amateurs de Cirò structurés.\n\nDomaine de Giuseppe Ippolito, Du Cropio signe parmi les plus beaux Gaglioppo de Calabria, denses et mûrs (Dom Giuvà, Serre Sanguigne). C'est une référence de l'appellation Cirò.\n\n Le savoir-faire de Giuseppe Ippolito, héritier d'une grande lignée du Cirò, se lit dans la densité et la profondeur de ses Gaglioppo. Servis sur les viandes rouges, le gibier ou des fromages affinés, ses Cirò de garde se patinent sur une décennie. Le domaine séduit les amateurs de Gaglioppo riches et mûrs, dans un style plus concentré que les vins frais de la nouvelle vague.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Dom Giuvà (Cirò Sup.)",
+        "Serre Sanguigne",
+        "Cirò Riserva"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-tenuta-iuzzolini",
+      "nom": "Tenuta Iuzzolini",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Melissa DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Tenuta Iuzzolini est un domaine dynamique, belle valeur sûre de l'appellation Cirò. Sur un beau vignoble, la famille cultive le Gaglioppo et le Greco Bianco avec une recherche de qualité et de régularité.\n\nLe domaine signe une gamme complète et fiable de Cirò et de Melissa, dont le Cirò Rosso Classico, le Cirò Rosato (réputé) et des blancs, dans un style soigné et bien diffusé. Le style, moderne et accessible, met en valeur le Gaglioppo dans des vins équilibrés et à bon rapport qualité-prix. La qualité constante, la bonne distribution et le beau domaine œnotouristique en font une valeur sûre de l'appellation. Tenuta Iuzzolini est une belle adresse pour découvrir le Cirò dans une version fiable et accessible, du rouge au rosato en passant par le blanc, chez un domaine dynamique de Cirò Marina, sur la cuisine calabraise, à bon rapport qualité-prix.\n\nDomaine dynamique de Cirò, Tenuta Iuzzolini signe des Gaglioppo et Greco soignés et bien diffusés. C'est une valeur sûre de l'appellation à bon rapport qualité-prix.\n\n La régularité et la bonne diffusion de Tenuta Iuzzolini en font une porte d'entrée fiable dans le Cirò. Servis sur la cuisine calabraise, les viandes pour le rouge, les poissons pour le blanc, à l'apéritif pour le rosato, ses vins séduisent par leur franchise. Le beau domaine œnotouristique et le bon rapport qualité-prix en font une adresse appréciée pour découvrir l'appellation sans se ruiner.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirò Rosso Classico",
+        "Cirò Rosato",
+        "Melissa"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-tenuta-del-conte",
+      "nom": "Tenuta del Conte",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Tenuta del Conte est un domaine familial, belle adresse artisanale de l'appellation Cirò. Sur un beau terroir de marnes calcaires, la famille cultive le Gaglioppo et le Greco Bianco avec soin.\n\nLe domaine signe des Cirò authentiques et fidèles au terroir, dont le Cirò Rosso Classico, une Cirò Riserva et un Cirò Bianco, dans un style artisanal qui met en valeur le Gaglioppo avec sincérité. Le style, authentique et soigné, exprime le terroir de Cirò dans des vins équilibrés et de belle facture. La taille humaine du domaine, la qualité de la gamme et le bon rapport qualité-prix en font une belle adresse de l'appellation. Tenuta del Conte est une belle adresse pour découvrir le Cirò dans une version artisanale et fidèle au terroir, chez un domaine familial de Cirò Marina, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte du Gaglioppo.\n\nDomaine familial de Cirò, Tenuta del Conte signe des Gaglioppo authentiques et fidèles au terroir. C'est une belle adresse artisanale de l'appellation à bon rapport qualité-prix.\n\n La taille humaine de Tenuta del Conte permet un soin artisanal à chaque cuvée. Servis sur la cuisine calabraise, les viandes et les fromages, ses Cirò séduisent par leur authenticité et leur fidélité au terroir. Le domaine illustre la richesse des petits producteurs familiaux de Cirò, capables d'offrir de beaux Gaglioppo sincères à des prix accessibles, pour une belle découverte de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirò Rosso Classico",
+        "Cirò Riserva",
+        "Cirò Bianco"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "famille"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-fattoria-san-francesco",
+      "nom": "Fattoria San Francesco",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, la Fattoria San Francesco est un domaine réputé de l'appellation (favori de Jancis Robinson). Sur un beau terroir, la famille cultive le Gaglioppo et le Greco Bianco avec une recherche de qualité.\n\nLe domaine signe des Cirò soignés et de terroir, dont le Ronco dei Quattroventi (une Cirò Riserva), le Donna Madda et un rosato réputé, dans un style qui met en valeur l'élégance du Gaglioppo. Le style, soigné et fidèle au terroir, exprime le Cirò dans des vins équilibrés et de belle facture. La qualité constante et la reconnaissance critique en font une valeur sûre de l'appellation. La Fattoria San Francesco est une belle adresse pour découvrir le Cirò dans une version soignée et qualitative, du rouge de garde au rosato, chez un domaine réputé de Cirò, sur la cuisine calabraise, les viandes et les fromages, pour une belle découverte du Gaglioppo de qualité.\n\nDomaine réputé de Cirò (favori de Jancis Robinson), la Fattoria San Francesco signe des Gaglioppo soignés (Ronco dei Quattroventi, Donna Madda). C'est une valeur sûre de l'appellation.\n\n La régularité de la Fattoria San Francesco et la reconnaissance de la critique en font une valeur sûre du Cirò. Servis sur la cuisine calabraise, les viandes et les fromages, ses Gaglioppo séduisent par leur élégance ; le Ronco dei Quattroventi se patine sur plusieurs années. Le domaine illustre le beau niveau qualitatif atteint aujourd'hui par de nombreux producteurs de l'appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Ronco dei Quattroventi (Cirò Ris.)",
+        "Donna Madda",
+        "Cirò Rosato"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson"
+    },
+    {
+      "id": "it-calabria-prod-cote-di-franze",
+      "nom": "Cote di Franze",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Cote di Franze est un domaine cité parmi les meilleurs de l'appellation Cirò, belle adresse à découvrir du renouveau du Gaglioppo. Sur un beau terroir, la famille cultive le cépage roi de la région avec soin. Le domaine signe des Cirò de terroir soignés, dont un Cirò Rosso Classico Superiore et une Riserva, des rouges authentiques et fidèles au terroir. Le style, soigné et sincère, met en valeur le Gaglioppo dans des vins équilibrés et de belle facture, dans l'esprit du renouveau qualitatif du Cirò. La qualité de la gamme et le bon rapport qualité-prix en font une belle adresse à découvrir. Cote di Franze est une belle adresse pour découvrir le Cirò dans une version soignée et de terroir, chez un domaine réputé de l'appellation, sur la cuisine calabraise, les viandes et les fromages, pour une belle découverte du Gaglioppo.\n\nDomaine de Cirò cité parmi les meilleurs de l'appellation, Cote di Franze signe des Gaglioppo de terroir soignés. C'est une belle adresse à découvrir du renouveau du Cirò.\n\n Le soin apporté par Cote di Franze à ses Gaglioppo l'inscrit parmi les belles adresses du renouveau du Cirò. Servis sur la cuisine calabraise, les viandes et les fromages, ses vins séduisent par leur authenticité et leur fidélité au terroir. Le domaine illustre le dynamisme qualitatif de l'appellation, où de nombreux producteurs révèlent aujourd'hui le potentiel du grand cépage rouge de Calabria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cirò Rosso Classico Superiore",
+        "Cirò Riserva"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald"
+    },
+    {
+      "id": "it-calabria-prod-odoardi",
+      "nom": "Odoardi",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "commune": "Nocera Terinese",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Magliocco",
+        "Greco Nero",
+        "Nerello Cappuccio"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Savuto DOC",
+        "Scavigna DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Sur les collines de Nocera Terinese, sur la côte tyrrhénienne de Calabria, Odoardi est un domaine historique, référence du Savuto et de l'ouest de la région. La famille Odoardi, installée en Calabria depuis 1480 (après avoir quitté l'Allemagne), y perpétue une longue tradition viticole.\n\nLe domaine, sur 55 hectares dans la vallée du Savuto, est réputé pour ses assemblages calabrais complexes, mêlant Gaglioppo, Magliocco Canino, Greco Nero et Nerello Cappuccio — un véritable « stew » de cépages autochtones. Sa cuvée phare, le Vigna Garrone, et le Savuto Classico Rosso sont des rouges de caractère, structurés et de garde, qui expriment la richesse ampélographique de la région. Le style, traditionnel et fidèle au terroir, met en valeur les cépages autochtones dans des vins profonds. La longévité du domaine, la complexité de ses assemblages et la qualité de sa gamme en font une référence de l'ouest de la Calabria. Odoardi est une belle adresse pour découvrir le Savuto et les assemblages autochtones calabrais, chez un domaine historique de la côte tyrrhénienne, sur la cuisine calabraise, les viandes et le gibier.\n\nDomaine historique de la côte tyrrhénienne (famille depuis 1480), Odoardi signe des assemblages calabrais complexes (Vigna Garrone, Savuto). C'est une référence du Savuto et de l'ouest de la région.\n\n La richesse des assemblages d'Odoardi, mêlant plusieurs cépages autochtones, illustre la diversité ampélographique méconnue de la Calabria. Servis sur la cuisine calabraise, les viandes rouges et le gibier, ses rouges du Savuto se patinent sur plusieurs années. Le domaine, ancré dans la région depuis le XVe siècle, est un gardien précieux du patrimoine viticole de la côte tyrrhénienne.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Vigna Garrone",
+        "Savuto Classico Rosso",
+        "Scavigna"
+      ],
+      "tags": [
+        "calabria",
+        "savuto",
+        "scavigna",
+        "gaglioppo",
+        "magliocco",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald|jancisrobinson|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-statti",
+      "nom": "Statti",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "commune": "Lamezia Terme",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Nero",
+        "Chardonnay",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lamezia DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lamezia Terme, sur la côte tyrrhénienne de Calabria, Statti est un grand domaine moderne, belle adresse dynamique de l'ouest de la région. Les frères Alberto et Antonio Statti y conjuguent tradition, modernité et agriculture durable, sur un vaste domaine polyculture.\n\nLe domaine signe une gamme complète, mêlant cépages autochtones (Gaglioppo, Greco Nero) et internationaux (Chardonnay, Cabernet), dont le Cauro, le Batasarro (Gaglioppo) et le Nosside (un rosato réputé). Le style, moderne et soigné, met en valeur une large palette dans des vins équilibrés et bien faits, avec une belle maîtrise technique. La qualité constante, l'engagement durable et la bonne diffusion en font une valeur sûre de l'appellation Lamezia et de la Calabria. Statti est une belle adresse pour découvrir les vins de l'ouest calabrais, des cépages autochtones aux internationaux, chez un grand domaine moderne et durable de Lamezia, sur la cuisine calabraise, à bon rapport qualité-prix, pour une belle découverte de la diversité régionale.\n\nGrand domaine moderne de Lamezia (frères Statti), Statti signe des cépages autochtones et internationaux soignés, en agriculture durable. C'est une belle adresse dynamique de l'ouest de la Calabria.\n\n La maîtrise technique et l'engagement durable des frères Statti font de leur domaine une vitrine moderne de l'ouest calabrais. Servis sur la cuisine calabraise, les viandes pour les rouges, les poissons pour les blancs, à l'apéritif pour le rosato Nosside, leurs vins séduisent par leur netteté. Le domaine illustre la capacité de la Calabria à conjuguer cépages autochtones, variétés internationales et viticulture responsable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cauro",
+        "Nosside (rosato)",
+        "Batasarro (Gaglioppo)"
+      ],
+      "tags": [
+        "calabria",
+        "lamezia",
+        "gaglioppo",
+        "moderne",
+        "durable"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf|winescholarguild"
+    },
+    {
+      "id": "it-calabria-prod-serracavallo",
+      "nom": "Serracavallo",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Terre di Cosenza (CS)",
+      "commune": "Bisignano",
+      "pays": "Italie",
+      "cepages": [
+        "Magliocco",
+        "Aglianico",
+        "Cabernet",
+        "Merlot"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre di Cosenza DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bisignano, dans les collines venteuses de la Sila, Serracavallo est un domaine bio réputé, référence des Terre di Cosenza. Demetrio Stancati y a planté ses premières vignes en 1995, sur ce terroir d'altitude balayé par les vents, aux fortes amplitudes thermiques idéales pour la fraîcheur.\n\nLe domaine cultive en bio le Magliocco autochtone et des cépages internationaux (Aglianico, Cabernet, Merlot), dont il tire des rouges structurés et frais (Besidiae) et des blancs (Terra di Chiaro). Le style, bio et précis, tire parti de l'altitude et des amplitudes thermiques de la Sila pour donner des vins équilibrés, à la fois mûrs et frais. L'engagement biologique, le terroir d'altitude et la qualité de la gamme en font une référence des Terre di Cosenza. Serracavallo est une belle adresse pour découvrir les vins d'altitude de la Sila, du Magliocco autochtone aux cépages internationaux, chez un domaine bio réputé de Bisignano, sur la cuisine calabraise, les viandes et les fromages, pour une belle découverte du nord de la Calabria.\n\nDomaine bio des collines de la Sila (Demetrio Stancati), Serracavallo signe des Magliocco et cépages internationaux d'altitude, aux fortes amplitudes thermiques. C'est une référence des Terre di Cosenza.\n\n Le pari de l'altitude et du bio, sur les hauteurs venteuses de la Sila, donne aux vins de Serracavallo une fraîcheur rare pour le Sud. Servis sur la cuisine calabraise, les viandes et les fromages, ses rouges séduisent par leur équilibre entre maturité et tension, et se patinent sur plusieurs années. Le domaine illustre le potentiel des terroirs d'altitude méconnus des Terre di Cosenza.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Besidiae (rouge)",
+        "Terra di Chiaro (blanc)",
+        "Magliocco"
+      ],
+      "tags": [
+        "calabria",
+        "cosenza",
+        "sila",
+        "magliocco",
+        "rouge",
+        "bio",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "it-calabria-prod-lacino",
+      "nom": "L'Acino",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Terre di Cosenza (CS)",
+      "commune": "San Marco Argentano",
+      "pays": "Italie",
+      "cepages": [
+        "Magliocco",
+        "Guarnaccia",
+        "Greco Nero",
+        "Mantonico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre di Cosenza DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Marco Argentano, dans les Terre di Cosenza, L'Acino est un domaine nature culte, révélation de la scène naturelle calabraise. Dino Broglio et ses associés y cultivent des cépages autochtones rares en agriculture biologique, avec des vinifications sans artifice.\n\nLe domaine signe des vins authentiques et vivants, dont le Chora (un assemblage de Magliocco, Guarnaccia et Greco Nero qui révèle ces cépages sous leur meilleur jour), le Toccomagliocco et le Ponte Vecchio, des rouges de terroir vinifiés avec peu d'intervention. Le style, nature et sincère, privilégie l'expression du terroir et des cépages autochtones rares, dans des vins savoureux et digestes. La démarche, la préservation des variétés locales et la qualité des vins en font une référence du vin nature calabrais. L'Acino est une belle adresse pour découvrir les cépages autochtones rares de Calabria (Magliocco, Guarnaccia, Greco Nero) dans une démarche nature, chez un domaine culte des Terre di Cosenza, sur la cuisine calabraise, pour les amateurs de vin vivant.\n\nDomaine nature culte des Terre di Cosenza (Dino Broglio), L'Acino signe des cépages autochtones rares vinifiés sans artifice (Chora, Toccomagliocco). C'est une révélation de la scène naturelle calabraise.\n\n Le travail de L'Acino sur les cépages autochtones rares, dans une démarche nature, en fait un gardien du patrimoine ampélographique calabrais. Servis sur la cuisine calabraise, les viandes ou une cuisine de caractère, ses vins séduisent par leur vivacité et leur authenticité. Le domaine, aux côtés de la Cirò Revolution, illustre l'émergence d'une scène naturelle calabraise recherchée par les amateurs de vin vivant du monde entier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Chora (Magliocco-Greco Nero)",
+        "Toccomagliocco",
+        "Ponte Vecchio"
+      ],
+      "tags": [
+        "calabria",
+        "cosenza",
+        "magliocco",
+        "rouge",
+        "nature",
+        "bio",
+        "autochtone"
+      ],
+      "a_verifier": null,
+      "source": "italianamericanherald"
+    },
+    {
+      "id": "it-calabria-prod-ferrocinto",
+      "nom": "Ferrocinto",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Pollino/Saracena (CS)",
+      "commune": "Castrovillari",
+      "pays": "Italie",
+      "cepages": [
+        "Magliocco",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre di Cosenza DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Castrovillari, au pied du massif du Pollino, Ferrocinto est un domaine à la longue histoire, belle adresse des Terre di Cosenza. Fondé en 1658, il a vu son potentiel révélé depuis 2000, avec la replantation de ses vignobles à 600 mètres d'altitude et un fort accent sur les cépages autochtones.\n\nLe domaine met à l'honneur le Magliocco Dolce, cépage autochtone dont il révèle le potentiel, aux côtés du Greco Bianco. Son vignoble expérimental a même permis d'identifier une vingtaine de variétés locales inconnues et potentiellement intéressantes. Le style, soigné et tourné vers le patrimoine, met en valeur le Magliocco d'altitude dans des rouges équilibrés et de belle facture. L'altitude du Pollino, le travail sur les cépages autochtones et la qualité de la gamme en font une belle adresse des Terre di Cosenza. Ferrocinto est une belle adresse pour découvrir le Magliocco Dolce d'altitude, cépage rescapé du Pollino, chez un domaine à la longue histoire de Castrovillari, sur la cuisine calabraise et les viandes, pour une belle découverte du nord de la région.\n\nDomaine du Pollino (fondé en 1658, replanté en 2000), Ferrocinto signe du Magliocco Dolce à 600 m d'altitude et des cépages autochtones. C'est une belle adresse des Terre di Cosenza.\n\n Le travail de Ferrocinto sur le Magliocco Dolce et sur les cépages oubliés du Pollino en fait un acteur de la préservation du patrimoine viticole calabrais. Servis sur la cuisine calabraise, les viandes et les fromages, ses rouges d'altitude séduisent par leur équilibre. Le domaine illustre le potentiel des terroirs élevés du nord de la Calabria et la richesse ampélographique encore largement inexplorée de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Magliocco Terre di Cosenza Pollino",
+        "Ferrocinto Rosso",
+        "Greco"
+      ],
+      "tags": [
+        "calabria",
+        "pollino",
+        "cosenza",
+        "magliocco",
+        "rouge",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "decanter|winedexer"
+    },
+    {
+      "id": "it-calabria-prod-cantine-viola",
+      "nom": "Cantine Viola",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Pollino/Saracena (CS)",
+      "commune": "Saracena",
+      "pays": "Italie",
+      "cepages": [
+        "Guarnaccia",
+        "Malvasia",
+        "Moscatello",
+        "Odoacra"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Saracena, au pied du massif du Pollino, Cantine Viola est le gardien d'un vin doux unique au monde : le Moscato al governo di Saracena. Sur ce terroir de montagne, la famille Viola perpétue une tradition ancestrale et confidentielle.\n\nLe Moscato al governo di Saracena est un vin doux ancestral d'une grande originalité : il est élaboré en assemblant plusieurs cépages autochtones passerillés (Guarnaccia, Malvasia, Moscatello, Odoacra) et un moût cuit de Moscatello, selon une méthode unique héritée de la Renaissance, sans ajout d'alcool. Il en résulte un vin liquoreux d'une grande complexité, aux arômes d'agrumes confits, d'abricot, de miel et d'épices, à la fois riche et frais. Ce vin culte, longtemps au bord de l'oubli, a été sauvé et fait connaître par des vignerons comme Luigi Viola. Le style, artisanal et patrimonial, perpétue une tradition rarissime. Cantine Viola est une belle adresse pour découvrir le Moscato al governo di Saracena, l'un des vins doux les plus originaux et méconnus d'Italie, une curiosité du Pollino, sur les desserts, les fromages ou en méditation.\n\nGardien du rare Moscato al governo di Saracena, Cantine Viola signe un vin doux ancestral unique au monde (cépages passerillés et moût cuit). C'est une curiosité culte du Pollino.\n\n La sauvegarde du Moscato al governo di Saracena, méthode héritée de la Renaissance, fait de Cantine Viola un gardien d'un patrimoine œnologique inestimable. Servi sur les desserts, la pâtisserie aux amandes, les fromages bleus ou en méditation, ce vin doux séduit par sa complexité et sa fraîcheur. Le domaine illustre la richesse des traditions viticoles insolites de la Calabria, longtemps menacées d'oubli et aujourd'hui célébrées par les amateurs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Moscato al governo di Saracena"
+      ],
+      "tags": [
+        "calabria",
+        "saracena",
+        "pollino",
+        "moscato",
+        "doux",
+        "rare",
+        "curiosite"
+      ],
+      "a_verifier": null,
+      "source": "decanter|cellartours"
+    },
+    {
+      "id": "it-calabria-prod-caparra-e-siciliani",
+      "nom": "Caparra & Siciliani",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò Marina",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò Marina, sur la côte ionienne de Calabria, Caparra & Siciliani est une grande coopérative historique, l'un des piliers de la production du Cirò. Rassemblant de nombreux vignerons de l'appellation, elle valorise le Gaglioppo à grande échelle. La coopérative signe des Cirò fiables et bien diffusés, dont le Volvito (Cirò Superiore) et une Cirò Riserva, ainsi que le Mabilia, à des prix accessibles. Le style, fiable et représentatif, met en valeur le Gaglioppo dans des vins équilibrés. La taille de la coopérative, sa régularité et son rôle économique en font une valeur sûre de l'appellation. Caparra & Siciliani est une belle porte d'entrée dans le Cirò, du vin accessible au Volvito plus ambitieux, chez une coopérative historique de Cirò Marina, sur la cuisine calabraise et les viandes, à bon rapport qualité-prix, pour une première découverte du Gaglioppo.\n\nGrande coopérative historique de Cirò, Caparra & Siciliani signe des Gaglioppo fiables et bien diffusés (Volvito, Riserva). C'est une belle porte d'entrée dans l'appellation à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Volvito (Cirò Sup.)",
+        "Cirò Riserva",
+        "Mabilia"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "cooperative"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-scala",
+      "nom": "Scala",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Scala est un domaine réputé de l'appellation, belle adresse fiable du Cirò. Sur un beau terroir, la famille cultive le Gaglioppo et le Greco Bianco avec soin. Le domaine signe des Cirò soignés, dont le Durì (Cirò Superiore Riserva), un Cirò Bianco et un rosato, dans un style qui met en valeur le Gaglioppo et le Greco. Le style, soigné et régulier, exprime le terroir de Cirò dans des vins équilibrés et de belle facture. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de l'appellation. Scala est une belle adresse pour découvrir le Cirò dans une version soignée et fiable, du rouge de garde au blanc et au rosato, chez un domaine réputé de Cirò, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte de l'appellation.\n\nDomaine réputé de Cirò, Scala signe des Gaglioppo soignés (Durì) et de beaux blancs. C'est une belle adresse fiable de l'appellation à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Durì (Cirò Sup. Ris.)",
+        "Cirò Bianco",
+        "Cirò Rosato"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-brigante",
+      "nom": "Brigante",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Cirò Classico"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Brigante est un domaine de l'appellation, belle adresse artisanale à découvrir. Sur un beau terroir, la famille cultive le Gaglioppo avec soin. Le domaine signe des Cirò authentiques et fidèles au terroir, dont le 0727 (Cirò Superiore), des rouges de caractère dans un style sincère. Le style, artisanal et authentique, met en valeur le Gaglioppo dans des vins équilibrés et fidèles au terroir. La qualité de la gamme et le bon rapport qualité-prix en font une belle adresse à découvrir. Brigante est une belle adresse pour découvrir le Cirò dans une version artisanale et authentique, chez un domaine de l'appellation, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte du Gaglioppo de Cirò, chez un petit producteur à suivre du renouveau de l'appellation.\n\nDomaine de Cirò, Brigante signe des Gaglioppo authentiques et fidèles au terroir (0727). C'est une belle adresse artisanale de l'appellation à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "0727 (Cirò Sup.)",
+        "Cirò Rosso Classico"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-spadafora",
+      "nom": "Spadafora",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Cirò/Melissa (KR)",
+      "commune": "Cirò",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Bianco"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Cirò DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Cirò, sur la côte ionienne de Calabria, Spadafora est un domaine de l'appellation, belle adresse fiable du Cirò. Sur un beau terroir, la famille cultive le Gaglioppo et le Greco Bianco avec soin. Le domaine signe des Cirò et des blancs soignés, dont le LunapienA, dans un style qui met en valeur les cépages autochtones. Le style, soigné et régulier, exprime le terroir de Cirò dans des vins équilibrés et de belle facture. La qualité de la gamme et le bon rapport qualité-prix en font une valeur sûre de l'appellation. Spadafora est une belle adresse pour découvrir le Cirò dans une version soignée et fiable, du rouge au blanc, chez un domaine de l'appellation, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte du Gaglioppo et du Greco Bianco de Cirò.\n\nDomaine de Cirò, Spadafora signe des Gaglioppo et blancs soignés (LunapienA). C'est une belle adresse fiable de l'appellation à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "LunapienA",
+        "Cirò Rosso Classico"
+      ],
+      "tags": [
+        "calabria",
+        "ciro",
+        "gaglioppo",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-feudo-dei-sanseverino",
+      "nom": "Feudo dei Sanseverino",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Pollino/Saracena (CS)",
+      "commune": "Saracena",
+      "pays": "Italie",
+      "cepages": [
+        "Guarnaccia",
+        "Malvasia",
+        "Moscatello",
+        "Magliocco"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Saracena, au pied du massif du Pollino, Feudo dei Sanseverino est un domaine belle adresse du patrimoine viticole du nord de la Calabria. Sur ce terroir de montagne, la famille cultive des cépages autochtones. Le domaine est notamment un producteur du rare Moscato al governo di Saracena, ce vin doux ancestral unique élaboré à partir de cépages passerillés et de moût cuit, aux côtés de rouges de Magliocco. Le style, artisanal et patrimonial, met en valeur la tradition viticole de Saracena. Le rôle du domaine dans la préservation du Moscato de Saracena et la qualité de sa gamme en font une belle adresse. Feudo dei Sanseverino est une belle adresse pour découvrir le Moscato al governo di Saracena, l'un des vins doux les plus originaux d'Italie, aux côtés du Magliocco, chez un domaine du Pollino, sur les desserts et les fromages pour le doux, les viandes pour les rouges, pour les amateurs de curiosités et de patrimoine.\n\nDomaine de Saracena, Feudo dei Sanseverino signe le Moscato al governo di Saracena (le rare doux ancestral) et du Magliocco. C'est une belle adresse du patrimoine viticole du Pollino.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Moscato al governo di Saracena",
+        "Magliocco"
+      ],
+      "tags": [
+        "calabria",
+        "saracena",
+        "pollino",
+        "moscato",
+        "doux",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-cantine-lento",
+      "nom": "Cantine Lento",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Savuto/Lamezia (CZ)",
+      "commune": "Lamezia Terme",
+      "pays": "Italie",
+      "cepages": [
+        "Gaglioppo",
+        "Greco Nero",
+        "Cabernet"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Lamezia DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lamezia Terme, sur la côte tyrrhénienne de Calabria, Cantine Lento est un domaine historique, belle adresse fiable de l'ouest de la région. Sur un beau vignoble, la famille cultive des cépages autochtones et internationaux. Le domaine signe des vins soignés de l'appellation Lamezia, dont le Federico II, le Lamezia Rosso et le Dragone, mêlant Gaglioppo, Greco Nero et cépages internationaux. Le style, soigné et fiable, met en valeur les cépages de l'ouest calabrais dans des vins équilibrés. La longévité du domaine et la qualité de sa gamme en font une valeur sûre de la région. Cantine Lento est une belle adresse pour découvrir les vins de Lamezia et de l'ouest de la Calabria, des cépages autochtones aux internationaux, chez un domaine historique, sur la cuisine calabraise, les viandes et les fromages, à bon rapport qualité-prix, pour une belle découverte de la région.\n\nDomaine historique de Lamezia, Cantine Lento signe des cépages autochtones et internationaux soignés (Federico II). C'est une belle adresse fiable de l'ouest de la Calabria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Federico II",
+        "Lamezia Rosso",
+        "Dragone"
+      ],
+      "tags": [
+        "calabria",
+        "lamezia",
+        "gaglioppo",
+        "rouge",
+        "historique"
+      ],
+      "a_verifier": null,
+      "source": "firstleaf"
+    },
+    {
+      "id": "it-calabria-prod-chimento",
+      "nom": "Chimento",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Terre di Cosenza (CS)",
+      "commune": "Lattarico",
+      "pays": "Italie",
+      "cepages": [
+        "Magliocco",
+        "Greco Nero",
+        "Guarnaccia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre di Cosenza DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Lattarico, dans la Valle del Crati (Terre di Cosenza), Chimento est un domaine bio, belle adresse à découvrir du nord de la Calabria. Sur ce terroir, la famille cultive des cépages autochtones en agriculture biologique. Le domaine signe des vins de Magliocco, Greco Nero et Guarnaccia, des rouges et blancs authentiques et fidèles au terroir, dans un style bio. Le style, bio et sincère, met en valeur les cépages autochtones des Terre di Cosenza dans des vins de caractère. L'engagement biologique et la qualité de la gamme en font une belle adresse à découvrir. Chimento est une belle adresse pour découvrir les cépages autochtones du nord de la Calabria (Magliocco, Greco Nero, Guarnaccia) dans une version bio, chez un domaine de la Valle del Crati, sur la cuisine calabraise, les viandes et les fromages, pour une belle découverte des Terre di Cosenza et de leurs variétés locales.\n\nDomaine bio de la Valle del Crati, Chimento signe des Magliocco et cépages autochtones authentiques. C'est une belle adresse à découvrir des Terre di Cosenza.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Terre di Cosenza Rosso",
+        "Magliocco",
+        "Guarnaccia"
+      ],
+      "tags": [
+        "calabria",
+        "cosenza",
+        "crati",
+        "magliocco",
+        "rouge",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-tenuta-terre-nobili",
+      "nom": "Tenuta Terre Nobili",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Terre di Cosenza (CS)",
+      "commune": "Montalto Uffugo",
+      "pays": "Italie",
+      "cepages": [
+        "Magliocco",
+        "Greco Nero",
+        "Pecorello"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Terre di Cosenza DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montalto Uffugo, dans les Terre di Cosenza, Tenuta Terre Nobili est un domaine belle adresse fidèle aux cépages autochtones du nord de la Calabria. Sur un beau terroir, la famille cultive le Magliocco et le Pecorello. Le domaine signe des vins soignés, dont le Cariglio (Magliocco), le Donpietro et un Pecorello blanc, des rouges et blancs qui mettent en valeur les cépages locaux. Le style, soigné et fidèle au terroir, exprime les Terre di Cosenza dans des vins équilibrés et de belle facture. La qualité de la gamme et le travail sur les autochtones en font une belle adresse. Tenuta Terre Nobili est une belle adresse pour découvrir le Magliocco et le rare Pecorello, cépages autochtones du nord de la Calabria, chez un domaine des Terre di Cosenza, sur la cuisine calabraise, les viandes pour les rouges, les poissons pour le blanc, pour une belle découverte des variétés locales de la région.\n\nDomaine des Terre di Cosenza, Tenuta Terre Nobili signe des Magliocco et Pecorello soignés (Cariglio). C'est une belle adresse fidèle aux cépages autochtones à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Cariglio (Magliocco)",
+        "Donpietro",
+        "Pecorello"
+      ],
+      "tags": [
+        "calabria",
+        "cosenza",
+        "magliocco",
+        "pecorello",
+        "rouge",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-calabria-prod-ceratti",
+      "nom": "Ceratti",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Reggio/Sud (RC)",
+      "commune": "Caraffa del Bianco",
+      "pays": "Italie",
+      "cepages": [
+        "Greco Bianco",
+        "Mantonico"
+      ],
+      "couleurs": [
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Bianco DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Caraffa del Bianco, à la pointe sud de la Calabria (province de Reggio), Ceratti est le gardien de l'un des vins doux les plus rares et les plus fascinants d'Italie : le Greco di Bianco. Favori de Jancis Robinson, ce petit domaine perpétue une tradition ancestrale. Le Greco di Bianco est un passito doux au goût classique et ancien, élaboré à partir du Greco Bianco séché sur des nattes de paille, à l'extrême pointe de la botte italienne, près de la ville de Bianco. Le domaine signe ce liquoreux rare, ainsi que du Mantonico, un autre cépage autochtone. Le style, artisanal et patrimonial, perpétue une tradition viticole millénaire d'origine grecque. La rareté du Greco di Bianco et la qualité du domaine en font une adresse à part. Ceratti est une belle adresse pour découvrir le Greco di Bianco, ce vin doux ancestral au goût antique, l'un des grands vins doux méconnus d'Italie, chez un domaine gardien de la tradition à la pointe sud de la Calabria, sur les desserts et les fromages.\n\nGardien du rare Greco di Bianco (favori de Jancis Robinson), Ceratti signe un passito doux ancestral séché sur nattes à la pointe de l'Italie. C'est l'un des grands vins doux méconnus.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Bianco (passito)",
+        "Mantonico"
+      ],
+      "tags": [
+        "calabria",
+        "reggio",
+        "greco-di-bianco",
+        "doux",
+        "passito",
+        "rare"
+      ],
+      "a_verifier": null,
+      "source": "jancisrobinson|decanter"
+    },
+    {
+      "id": "it-calabria-prod-mariolina-baccellieri",
+      "nom": "Mariolina Baccellieri",
+      "type": "domaine",
+      "region": "Calabria",
+      "sous_region": "Reggio/Sud (RC)",
+      "commune": "Bianco",
+      "pays": "Italie",
+      "cepages": [
+        "Greco Bianco",
+        "Mantonico",
+        "Nerello"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Greco di Bianco DOC",
+        "Calabria IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bianco, à la pointe sud de la Calabria (province de Reggio), Mariolina Baccellieri est un petit domaine gardien du patrimoine viticole méridional de la région. Sur ce terroir de la Locride, la famille cultive des cépages autochtones. Le domaine signe le rare Greco di Bianco (le passito doux séché sur nattes, spécialité de la zone), ainsi que du Mantonico et des vins de la Locride (Bivongi). Le style, artisanal et patrimonial, met en valeur les cépages autochtones du sud calabrais. Le rôle du domaine dans la préservation du Greco di Bianco et la qualité de sa gamme en font une belle adresse. Mariolina Baccellieri est une belle adresse pour découvrir le Greco di Bianco et les cépages autochtones de la pointe sud de la Calabria, chez un petit domaine du Locride, sur les desserts et les fromages pour le doux, pour les amateurs de curiosités et de patrimoine viticole méridional méconnu.\n\nPetit domaine de la pointe sud, Mariolina Baccellieri signe du Greco di Bianco passito et des cépages autochtones du Locride. C'est une belle adresse du patrimoine viticole méridional de la Calabria.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Greco di Bianco (passito)",
+        "Mantonico",
+        "Bivongi"
+      ],
+      "tags": [
+        "calabria",
+        "reggio",
+        "greco-di-bianco",
+        "doux",
+        "sud"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    }
+  ]
+}

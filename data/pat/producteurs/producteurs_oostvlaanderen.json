@@ -1,0 +1,766 @@
+{
+  "schema_version": "1.0",
+  "kind": "producteurs",
+  "region_key": "oostvlaanderen",
+  "region_label": "Oost-Vlaanderen",
+  "source_file": "producteurs_oostvlaanderen_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 24,
+  "items": [
+    {
+      "id": "be-oostvlaanderen-prod-cruysem",
+      "nom": "Cruysem",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Kruisem",
+      "pays": "Belgique",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Pinot Meunier",
+        "Pinot Blanc"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Le plus grand vignoble de la province, et l'un des plus rapides à s'être constitué. Tout part en mai 2017 d'une plantation modeste : 2 500 pieds de Chardonnay, 350 de Pinot Noir et 350 de Pinot Meunier à Kruisem, dans les Ardennes flamandes. Une première vendange très réduite en septembre 2018, dont le vin est conservé en réserve pour être assemblé à la récolte suivante. Extension à 2,3 hectares en avril 2019, puis, en avril 2020, un bond considérable : 38 000 pieds supplémentaires portent le domaine à dix hectares d'un seul coup, avec l'entrée du Pinot Blanc dans l'encépagement.\n\nLe parti pris est strictement champenois — Chardonnay dominant, les trois Pinots en complément — et voué à l'effervescent en méthode traditionnelle. La discipline est notable : premier tirage en juillet 2020 pour les millésimes 2018 et 2019, deux ans d'élevage sur lattes, et premières bouteilles commercialisées seulement en décembre 2022. Cinq ans entre la première vigne et la première vente, c'est le prix de la bulle, et peu de domaines belges de cette génération ont eu la patience de l'assumer.\n\nLe domaine tire son nom de la commune fusionnée de Kruisem, née en 2019 de la fusion de Kruishoutem et Zingem, et pratique largement l'accueil, avec des visites toute l'année. Il a rejoint en 2025 le label BelBul, démarche qualité pour l'effervescent belge portée conjointement par des vignerons flamands et wallons — l'une des rares initiatives à traverser la frontière linguistique dans ce secteur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "methode-traditionnelle",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Surface : 9,6 ha selon la fédération, 10 ha selon le domaine. Reconnaissance déclarée en BOB, libellé exact à confirmer. Le domaine revendique le label BelBul depuis 2025.",
+      "source": "cruysem.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-pres-de-gand",
+      "nom": "Wijndomein Près de Gand",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Borsbeke (Herzele)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares à Borsbeke, dans la commune de Herzele, conduits par Rudy De Vos : l'un des plus grands vignobles des Ardennes flamandes après Cruysem, et l'un des rares de la province à être reconnu en IGP Vlaamse landwijn.\n\nLe domaine s'est fait connaître par ses effervescents, qu'il positionne explicitement comme l'alternative belge au cava, sous le label BelBul. Ce positionnement est révélateur d'un problème que toute la province partage : les Ardennes flamandes n'ont **aucune appellation d'origine territoriale**, contrairement au Hageland ou à la Hesbaye flamande, et le seul recours des vignerons est l'indication géographique régionale ou un label de filière. Faute de nom de lieu à faire valoir, ils construisent leur identité sur le type de vin. Encépagement détaillé et année de plantation restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Encépagement détaillé, année de plantation et volumes à documenter.",
+      "source": "wijndomein-pres-de-gand.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-les-hauts-de-corbie",
+      "nom": "Les Hauts de Corbie",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Huise (Kruisem)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares et six ares à Huise, ancienne commune aujourd'hui rattachée à Kruisem, conduits par Anne De Paepe et Jean-Jacques Gernay, et reconnus en IGP Vlaamse landwijn.\n\nLe nom français détonne dans une province où la nomenclature est presque entièrement néerlandophone, et il renvoie au relief : on est ici sur la ligne de collines qui court d'Audenarde à Brakel, avec des sols de sables et d'argiles tertiaires sous couverture limoneuse. Ces buttes culminent à peine à cent cinquante mètres, mais dans une Flandre par ailleurs plate, elles suffisent à dégager des versants sud exploitables — c'est toute la raison d'être du vignoble des Ardennes flamandes. La commune de Kruisem concentre ainsi deux vignobles pour près de quatorze hectares, ce qui en fait de loin le premier foyer viticole de la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et gamme à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-voosbeke",
+      "nom": "Wijndomein Voosbeke",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Wortegem-Petegem",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares et demi à Wortegem-Petegem, dans la vallée de l'Escaut au pied des Ardennes flamandes, conduits par Isabelle Depière. Le domaine se présente comme la concrétisation d'un rêve d'enfance et reste hors appellation.\n\nLa position est intéressante : on est à la charnière entre la plaine alluviale de l'Escaut et les premières collines, à quelques kilomètres du Kluisberg et de la frontière du Hainaut. C'est le même relief que le Mont-de-l'Enclus, côté wallon — une seule ligne de buttes coupée par la frontière linguistique, et qui porte des vignes des deux côtés. Encépagement, année de plantation et premier millésime restent à documenter. Wortegem-Petegem est aussi connue pour son circuit automobile et ses hameaux dispersés, dans un secteur agricole qui n'avait plus vu de vigne depuis des siècles.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et premier millésime à documenter.",
+      "source": "voosbeke.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-van-eyck",
+      "nom": "Wijndomein Van Eyck",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Gavere",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et demi planté depuis 2017 à Gavere, au pied des Ardennes flamandes, par Alexander Schmidt et Lien Devinck.\n\nGavere se situe sur l'Escaut, à mi-chemin entre Gand et Audenarde, dans un secteur où la plaine alluviale rencontre les premières pentes. Le domaine appartient à la vague de plantations de la fin des années 2010, qui a vu la province passer d'une poignée de vignobles à une trentaine en moins d'une décennie. Comme la majorité d'entre eux, il reste hors appellation — la Flandre orientale n'ayant aucune AOP territoriale à offrir. Encépagement et couleurs produites restent à documenter. Le nom du domaine renvoie au peintre gantois, référence identitaire forte dans une province qui cherche à se doter d'une image viticole. Gavere compte par ailleurs un château fort et une abbaye disparue, dans une commune restée strictement agricole.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, couleurs produites et premier millésime à documenter.",
+      "source": "wijndomein-vaneyck.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijnlandgoed-dorrebeek",
+      "nom": "Wijnlandgoed Dorrebeek",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Elst (Brakel)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine des Ardennes flamandes situé à Elst, dans la commune de Brakel, entre Zottegem et Renaix — au cœur du secteur le plus vallonné de la province, celui des bois de jacinthes du Brakelbos et du Muziekbos.\n\nLa production associe des effervescents et trois vins tranquilles, et le domaine mise sur l'accueil : visites guidées commentées par le vigneron, du vignoble aux cépages jusqu'au processus complet, suivies d'une dégustation, avec des groupes à partir de douze personnes. Ce modèle œnotouristique est le principal débouché des domaines de cette taille, dans une région déjà très fréquentée par les cyclistes et les randonneurs. Surface, encépagement et année de plantation ne sont pas publiés. Le secteur, entre Zottegem et Brakel, est l'un des plus vallonnés de Flandre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Surface, encépagement et année de plantation non publiés — domaine absent du recensement de la fédération.",
+      "source": "landgoeddorrebeek.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-vijflinden",
+      "nom": "Wijndomein Vijflinden",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Zwalm",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Le plus ancien vignoble de Zwalm, planté sur un versant exposé au sud qui domine la Zwalmbeek, au cœur des Ardennes flamandes.\n\nLe domaine revendique un microclimat propre à ce vallon, argument crédible dans un paysage où les ruisseaux — la Zwalm et ses affluents — ont entaillé le plateau et dégagé des flancs bien orientés. C'est exactement la logique de tout le vignoble régional : le climat général est médiocre pour la vigne, mais les versants sud de ces petites vallées offrent des microsites viables. Le domaine annonce une conduite respectueuse de la nature et une recherche d'expression du lieu. Surface, encépagement et antériorité exacte restent à documenter. Zwalm est l'une des communes emblématiques des Ardennes flamandes, connue pour ses moulins et ses routes pavées, et son réseau de vallons offre une densité de versants exposés rare en Flandre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Surface, encépagement et année de plantation non publiés ; antériorité revendiquée à préciser.",
+      "source": "wijndomein-vijflinden.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-bocclo",
+      "nom": "Bocclo",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Zwalm",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente-cinq ares au Rekelberg, à Zwalm, exploités par Peter Baele, hors appellation.\n\nZwalm compte au moins deux vignobles sur son territoire, tous deux sur les versants des vallons de la Zwalmbeek. La commune est aussi connue pour ses moulins à eau, qui disent bien la densité du réseau hydrographique local et donc la fréquence des pentes exploitables. À cette échelle, la production part intégralement en vente directe et lors des journées portes ouvertes, formule dominante chez les petits vignerons de la province. Encépagement et année de plantation restent à documenter. Le nom, formé sur une racine latine, est un exemple de la nomenclature savante que se choisissent volontiers les micro-domaines flamands récents, là où leurs aînés reprenaient un patronyme ou un toponyme. Le domaine reste hors appellation.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "bocclo.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijngoed-t-varent",
+      "nom": "Wijngoed 't Varent",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Horebeke",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trente ares à Horebeke, la plus petite commune fusionnée de Flandre, plantés par Jo Dewulf. La situation est décrite avec une précision rare : le vignoble occupe la mi-pente des flancs exposés au sud du Varentberg et du Schampenberg, sur la ligne de crête qui court d'Audenarde à Brakel.\n\nC'est la formulation la plus explicite qu'on trouve dans la province sur ce qui fait un site viticole aux Ardennes flamandes : une crête, un flanc sud, une position à mi-pente. Le domaine revendique par ailleurs d'être situé dans l'une des zones viticoles les plus septentrionales d'Europe — argument commun en Belgique, mais qui prend ici tout son sens dans un paysage de bocage, de bois et de routes pavées cyclistes. Encépagement et volumes restent à documenter.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "wijngoedtvarent.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-carrijn",
+      "nom": "Wijndomein Carrijn",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Zottegem",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares à Zottegem, exploités par Willy Carijn et reconnus en IGP Vlaamse landwijn : l'un des plus petits domaines de tout le corpus belge à revendiquer une indication géographique.\n\nLe fait mérite d'être noté, car la démarche a un coût — déclaration de récolte, contrôle analytique et organoleptique — que peu d'exploitations de cette taille consentent. Zottegem est par ailleurs le foyer historique de la viticulture amateur dans la province : la guilde de vignerons et de maîtres du vin locale existe depuis plus de trente ans et a formé une bonne partie de la génération actuelle. Encépagement et année de plantation restent à documenter. Le domaine fait partie du petit groupe de vignobles zottegemois nés dans le sillage de cette guilde, sur les collines qui dominent la vallée de la Zwalm.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-de-3-fonteinen",
+      "nom": "Wijndomein de 3 Fonteinen",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Vlaamse Ardennen",
+      "commune": "Zottegem",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Domaine de Zottegem qui associe production, visites du vignoble, dégustations et, plus rare, formations en viticulture.\n\nCette dimension pédagogique compte dans une province où l'essentiel des vignerons s'est installé sans antériorité familiale ni formation initiale. Zottegem occupe d'ailleurs une place particulière : la guilde de vignerons et de maîtres du vin y est active depuis plus de trente ans, bien avant la vague de plantations commerciales, et une bonne partie des micro-domaines des Ardennes flamandes en sont issus. Surface, encépagement et année de plantation ne sont pas publiés — le domaine ne figure pas au recensement de la fédération. Le nom renvoie aux sources qui parsèment ce relief, où l'eau affleure au contact des sables et des argiles tertiaires — un trait géologique constant des Ardennes flamandes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "vlaamse-ardennen"
+      ],
+      "a_verifier": "Surface, encépagement et année de plantation non publiés — domaine absent du recensement de la fédération.",
+      "source": "wijndomeinde3fonteinen.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-nobel",
+      "nom": "Wijndomein Nobel",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Lochristi",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares et demi à Lochristi, au nord-est de Gand, conduits par Joris Van Duffel : l'un des plus étendus de la province, et le plus grand hors Ardennes flamandes.\n\nLochristi est le cœur de l'horticulture ornementale belge — bégonias, azalées, plantes en pot — dans un secteur de sols sableux à sablo-limoneux hérités de la Flandre sablonneuse. Le contexte n'a rien de viticole, et la vigne y arrive comme diversification d'une agriculture spécialisée à forte valeur ajoutée, exactement comme elle a suivi les vergers en Hesbaye. Encépagement, année de plantation et appellation éventuelle restent à documenter. La commune est aussi l'une des plus densément peuplées de la couronne gantoise, ce qui assure au domaine un bassin de clientèle immédiat pour une production de cette taille.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et appellation éventuelle à documenter.",
+      "source": "wijndomeinnobel.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-waes",
+      "nom": "Wijndomein Waes",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Zwijnaarde (Gent)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Quatre hectares fondés en 2005 par Lodewijk Waes à Zwijnaarde, aux portes de Gand, et reconnus en IGP Vlaamse landwijn : l'un des rares domaines de la province antérieurs à 2010.\n\nCette antériorité a du sens historiquement. L'abbaye Saint-Pierre de Gand possédait des vignes — ainsi que des vignobles en France et en Allemagne — et le vignoble gantois est mentionné pour la dernière fois au XVe siècle, avant que le refroidissement climatique ne l'efface. Replanter aux portes de la ville en 2005 revenait donc à renouer un fil interrompu depuis cinq siècles, à une époque où presque personne en Flandre orientale ne s'y risquait. Encépagement détaillé et volumes restent à documenter. Le domaine, l'un des rares de la province à dépasser quinze ans d'existence, dispose donc d'un recul sur les millésimes que la génération 2018-2022 n'aura pas avant longtemps.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent"
+      ],
+      "a_verifier": "Encépagement détaillé, gamme et volumes à documenter.",
+      "source": "wijndomeinwaes.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-vandersteene",
+      "nom": "Wijndomein Vandersteene",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Zwijnaarde (Gent)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et six ares à Zwijnaarde, aux portes de Gand, conduits par Diederik Vandersteene.\n\nLa famille est connue dans l'horticulture sous le nom de Gemaflor, et le vignoble constitue une diversification — formule très fréquente dans la couronne gantoise, où les exploitations horticoles et maraîchères disposent du foncier, du matériel et des circuits de vente. Zwijnaarde compte ainsi deux vignobles sur son seul territoire, ce qui en fait l'un des points de concentration de la province. Encépagement, année de plantation et appellation éventuelle restent à documenter. Zwijnaarde se situe au sud immédiat de Gand, sur la rive de l'Escaut, dans un secteur de sols sablo-limoneux hérités de la Flandre sablonneuse. La proximité de l'agglomération y rend la vente directe particulièrement efficace, ce qui explique en partie la concentration de vignobles autour de la ville.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent"
+      ],
+      "a_verifier": "Encépagement, année de plantation et appellation éventuelle à documenter.",
+      "source": "gemaflor.eu ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-eekhoek",
+      "nom": "Wijndomein Eekhoek",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Laarne",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse landwijn (IGP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et quatre ares à Laarne, dans la vallée de l'Escaut à l'est de Gand, conduits par Luc Pieters et Caroline De Meyer, et reconnus en IGP Vlaamse landwijn.\n\nLaarne est surtout connue pour son château médiéval à douves, l'un des mieux conservés de Flandre. Les sols y sont sablo-limoneux, dans un paysage de plaine alluviale sans relief, ce qui place ce domaine à l'opposé exact du modèle des Ardennes flamandes : ici, aucun versant à exploiter, seulement une conduite soignée sur terrain plat. La comparaison entre les deux moitiés de la province sera instructive dans dix ans. Encépagement et année de plantation restent à documenter. Le nom du domaine renvoie à un lieu-dit local, usage majoritaire dans la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent"
+      ],
+      "a_verifier": "Encépagement, année de plantation et gamme à documenter.",
+      "source": "wijndomeineekhoek.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-chat-o-bavo",
+      "nom": "Chat-ô-bavo",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Destelbergen",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et trois ares à Destelbergen, immédiatement à l'est de Gand, conduits par Eline De Ruyck, hors appellation.\n\nLe nom joue sur celui de saint Bavon, patron de la ville et fondateur de l'abbaye qui porte son nom — clin d'œil qui rappelle que les grandes abbayes gantoises, Saint-Pierre comme Saint-Bavon, possédaient des vignes jusqu'à la fin du Moyen Âge. Le domaine appartient à la génération récente des vignobles périurbains, sur des sols sablo-limoneux de vallée, avec une clientèle de proximité immédiate. Encépagement, année de plantation et couleurs produites restent à documenter. Destelbergen fait partie de la première couronne gantoise, sur la rive droite de l'Escaut, dans un paysage de plaine alluviale et de parcs résidentiels où le foncier agricole est rare et cher.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijngaard-het-verhaal-lz",
+      "nom": "Wijngaard Het Verhaal LZ",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Lemberge (Merelbeke)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Effervescent"
+      ],
+      "appellations_lieux_dits": [
+        "Vlaamse mousserende kwaliteitswijn (AOP)"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Huit mille cinq cents mètres carrés et 1 600 pieds à Lemberge, dans la commune de Merelbeke, conduits par Wouter Bogaert.\n\nLe domaine a la particularité d'être reconnu en AOP Vlaamse mousserende kwaliteitswijn, l'une des seules reconnaissances en mousseux de qualité de toute la province. C'est un choix logique dans une région dépourvue d'appellation territoriale : les appellations flamandes transversales, mousseux de qualité et vin de pays, sont les seules accessibles, et la première suppose au moins un cahier des charges exigeant sur la méthode. Encépagement, année de plantation et volumes restent à documenter. Le nom du domaine — l'histoire — dit assez le rapport que ces vignerons entretiennent avec un territoire dépourvu de mémoire viticole récente : elle est à écrire plutôt qu'à retrouver.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent",
+        "methode-traditionnelle"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "wijngaardhetverhaal.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-wetterberghe",
+      "nom": "Wijndomein Wetterberghe",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Wetteren",
+      "pays": "Belgique",
+      "cepages": [
+        "Johanniter",
+        "Regent",
+        "Souvignier Gris"
+      ],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare planté en 2014 au lieu-dit Hasseltkouter, avec près de quatre mille pieds, mille piquets et trente kilomètres de fil : quinze rangs sur deux cent cinquante mètres, dont neuf de Johanniter, cinq de Regent et un de Souvignier Gris.\n\nC'est l'un des encépagements les mieux documentés de la province, et la justification l'est tout autant : le choix des résistants découle d'une volonté explicite de ne pas perturber l'équilibre écologique. Ni herbicides ni insecticides, et uniquement des produits antifongiques admis en bio. Le vigneron souligne que le Johanniter, croisement issu notamment du Riesling, en garde l'essentiel des caractères, et que le Regent, par sa maturation rapide, est peut-être le meilleur rouge disponible sous ce climat. La certification bio effective reste à vérifier.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent",
+        "piwi"
+      ],
+      "a_verifier": "Commune exacte à confirmer (Wetteren, d'après le nom du domaine). Certification bio éventuelle à vérifier : le domaine décrit une conduite proche du bio sans se déclarer certifié.",
+      "source": "wijndomeinwetterberghe.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-domein-de-roscam",
+      "nom": "Domein De Roscam",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Scheldevallei en Gent",
+      "commune": "Merelbeke",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Vingt-cinq ares au centre de Merelbeke, conduits par Jean-Pierre De Coninck : un vignoble franchement urbain, hors appellation.\n\nMerelbeke est une commune de la banlieue sud de Gand, et compte deux vignobles sur son territoire — celui-ci et un autre à Lemberge, reconnu en mousseux de qualité. Ce type d'implantation, sur des parcelles résiduelles au contact immédiat de l'habitat, se retrouve dans toutes les couronnes urbaines du corpus, de Liège à Ottignies. La production ne quitte pas le circuit local. Encépagement, année de plantation et volumes restent à documenter. Merelbeke accueille par ailleurs plusieurs institutions de recherche agronomique liées à l'université de Gand, dont la présence a contribué à diffuser les connaissances viticoles dans la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "gent"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-molendyck",
+      "nom": "Wijndomein Molendyck",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Waasland",
+      "commune": "Moerbeke (Lokeren)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Trois hectares et deux ares lancés en 2021 par Paul Van den Kieboom à Moerbeke, dans le pays de Waes : l'un des projets les plus récents et les plus étendus du nord de la province.\n\nLe Waasland est une région de sols sableux à sablo-limoneux, plate, entre Gand et Anvers, sans tradition viticole ni relief. Trois hectares plantés d'emblée y traduisent une confiance nouvelle : en 2021, les références belges existent, les cépages sont connus, et le porteur de projet n'a plus besoin de la phase d'essai que s'imposaient les pionniers des années 2000. Encépagement, premier millésime et appellation éventuelle restent à documenter. Le nom renvoie à la Molendijkstraat, où se trouve le domaine, et rappelle la présence ancienne des moulins dans ce paysage de digues et de canaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "waasland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, premier millésime et appellation éventuelle à documenter.",
+      "source": "molendyck.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-mira",
+      "nom": "Wijndomein Mira",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Waasland",
+      "commune": "Hamme",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare à Hamme, dans le pays de Waes, conduit par Matthias Temmermans, hors appellation.\n\nHamme se situe au confluent de la Durme et de l'Escaut, dans un paysage de prairies humides et de polders intérieurs — un contexte pédologique parmi les moins favorables du corpus, avec des sols sableux et une nappe haute. Le vignoble s'inscrit dans le petit réseau waaslandais, qui compte aujourd'hui deux à trois exploitations, toutes postérieures à 2015. Encépagement, année de plantation et volumes restent à documenter. La commune est surtout connue pour ses ateliers de corderie historiques et ses réserves naturelles de bord d'Escaut. À un hectare et sans appellation, le domaine relève du modèle dominant en Flandre orientale : une exploitation de petite taille, portée par un projet individuel, dont toute la production s'écoule en vente directe et lors des journées portes ouvertes.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "waasland"
+      ],
+      "a_verifier": "Encépagement, année de plantation et volumes à documenter.",
+      "source": "wijndomeinmira.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-wijndomein-woest",
+      "nom": "Wijndomein Woest",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Dender en Meetjesland",
+      "commune": "Assenede",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Cinq hectares à Assenede, dans le Meetjesland, à quelques kilomètres de la frontière néerlandaise, conduits par Tim Van De Woestyne.\n\nLe domaine est adossé à une structure de boissons artisanales plus large et communique sous la marque Woest, qui couvre un ensemble de produits — approche entrepreneuriale plutôt que strictement viticole, encore peu répandue en Belgique. Le Meetjesland est une région de sols sableux et de polders, au nord de Gand, sans aucune antériorité viticole : cinq hectares y constituent de loin la plus grosse implantation. L'articulation entre le vignoble et le reste de l'activité reste à documenter. Assenede est l'une des communes les plus septentrionales de Flandre orientale, dans un paysage de polders et de canaux hérité des grands travaux d'assèchement médiévaux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "meetjesland",
+        "jeune-domaine"
+      ],
+      "a_verifier": "Encépagement, année de plantation et articulation entre le vignoble et l'activité de boissons à documenter.",
+      "source": "woest.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-domein-de-kluizen",
+      "nom": "Domein De Kluizen",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Dender en Meetjesland",
+      "commune": "Herdersem (Aalst)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Deux hectares et huit ares à Herdersem, dans la vallée de la Dendre au nord d'Alost, conduits par Herman Troch.\n\nLa Dendre entaille le plateau limoneux entre Grammont et Alost et dégage quelques versants, ce qui distingue ce secteur des plaines sableuses du nord de la province. Attention à l'homonymie : ce domaine n'a aucun rapport avec le Wijndomein Kluisberg d'Assent, en Brabant flamand, ni avec le Kluisberg des Ardennes flamandes — trois lieux distincts pour une même racine toponymique, qui renvoie partout à un ermitage. Encépagement et année de plantation restent à documenter. Herdersem se situe dans un secteur maraîcher et betteravier, à la lisière nord de la vallée, dans une commune absorbée par Alost. Le domaine reste hors appellation, comme la majorité de ceux de la vallée de la Dendre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "dender"
+      ],
+      "a_verifier": "Encépagement, année de plantation et appellation éventuelle à documenter. À ne pas confondre avec le Kluisberg d'Assent, en Brabant flamand.",
+      "source": "domein-de-kluizen.be ; belgischewijnbouwers.be"
+    },
+    {
+      "id": "be-oostvlaanderen-prod-christal-pure",
+      "nom": "Christal Pure",
+      "type": "domaine",
+      "region": "Oost-Vlaanderen",
+      "sous_region": "Dender en Meetjesland",
+      "commune": "Denderbelle (Lebbeke)",
+      "pays": "Belgique",
+      "cepages": [],
+      "couleurs": [
+        "Blanc",
+        "Rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Un hectare et quatre ares à Denderbelle, dans la commune de Lebbeke, conduits par Dirk Poppe et Christel Nys, hors appellation.\n\nOn est dans la basse vallée de la Dendre, entre Alost et Termonde, sur des sols alluviaux et sablo-limoneux. Le nom du domaine associe le prénom de l'exploitante et l'idée de pureté, formule de dénomination fréquente chez les micro-domaines flamands, où le patronyme et le toponyme cèdent souvent la place au jeu de mots. Encépagement, année de plantation et couleurs produites restent à documenter. Le secteur, sujet aux inondations de la Dendre, impose de rester sur les positions les plus hautes des parcelles. Le domaine reste hors appellation et écoule sa production en vente directe, formule quasi universelle à cette échelle dans la province.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "flandre",
+        "dender"
+      ],
+      "a_verifier": "Encépagement, année de plantation et couleurs produites à documenter.",
+      "source": "belgischewijnbouwers.be"
+    }
+  ]
+}

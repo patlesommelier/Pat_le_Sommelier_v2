@@ -1,0 +1,372 @@
+{
+  "schema_version": "1.0",
+  "kind": "terroirs",
+  "region_key": "liege",
+  "region_label": "Liège",
+  "source_file": "terroirs_liege_To_Import.xlsx",
+  "built_at": "2026-07-31",
+  "count": 14,
+  "items": [
+    {
+      "id": "be-liege-terr-coteaux-hutois",
+      "nom": "Coteaux hutois",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Hutois et vallée de la Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 70-200 m",
+      "sols": "Calcaires carbonifères en pentes raides, sols superficiels au-dessus de la Meuse",
+      "caracteristiques_rapides": "La référence historique du vignoble wallon : Huy cultive la vigne depuis le Moyen Âge et conserve une demi-douzaine de clos de quelques ares sur ses coteaux calcaires, dont le plus ancien vignoble belge en activité, planté en 1963.",
+      "notes_objectives": "La référence historique du vignoble wallon. Huy occupe un resserrement de la vallée de la Meuse, au débouché du Hoyoux, dominé par des coteaux calcaires abrupts où la vigne est documentée depuis le Moyen Âge et s'est maintenue jusqu'au XIXe siècle. Le substrat est le calcaire carbonifère, en pentes raides, avec des sols superficiels et un ensoleillement que la configuration du site concentre.\n\nCe qui rend le lieu unique dans le corpus belge, c'est la persistance. Là où presque tout le vignoble national a été replanté après 2000, Huy conserve une demi-douzaine de clos de quelques ares dont plusieurs remontent aux années 1960 et 1970 : le Clos Bois Marie, planté en 1963 et donc le plus ancien vignoble belge en activité, le Clos de la Buissière en 1975, le Clos Saint-Hilaire en 1976, le Clos du Beau-Rosier en 1979, la Closerie des Prébendiers en 1990. Aucun ne dépasse cinquante ares, plusieurs font moins de cinq ares.\n\nCette échelle explique qu'ils n'apparaissent pas dans le fichier producteurs : ce ne sont pas des domaines mais des clos urbains et périurbains, souvent adossés à des maisons ou à des institutions, entretenus par des confréries et des passionnés. Leur intérêt est ailleurs — ils constituent le seul fil continu entre la viticulture médiévale wallonne et celle d'aujourd'hui, et ils déplacent la chronologie habituelle du redémarrage belge, qu'on attribue au Hageland des années 1970 alors qu'un clos hutois le précédait de sept ans.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "meuse",
+        "clos-historique"
+      ],
+      "source": "marcvanel.be ; leclosboismarie.be ; dossiers.lalibre.be"
+    },
+    {
+      "id": "be-liege-terr-terrasses-de-la-basse-meuse-heure-le-romain",
+      "nom": "Terrasses de la Basse-Meuse (Heure-le-Romain)",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Basse-Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Johanniter",
+        "Solaris",
+        "Muscaris",
+        "Souvignier Gris"
+      ],
+      "altitude": "env. 60-110 m",
+      "sols": "Sablo-limoneux à forte charge caillouteuse, bon drainage et bonne ventilation",
+      "caracteristiques_rapides": "Plateau fruitier entre Liège et Maastricht, où le plus grand vignoble de cépages résistants de Wallonie occupe sept parcelles nommées, dont Grand Aaz et Séminaire, exposées sud à sud-est.",
+      "notes_objectives": "Le plateau fruitier entre Liège et Maastricht, voué aux pommes, aux poires et aux cerises, où s'est installé le plus grand vignoble de cépages résistants de Wallonie. Les sols sont sablo-limoneux avec une forte charge caillouteuse, ce qui assure un drainage rapide, et le relief ouvert garantit une bonne ventilation — deux conditions décisives sous climat humide.\n\nLe site présente une particularité rare en Belgique : une documentation parcellaire fine. Le vignoble de la coopérative Vin de Liège est réparti sur sept parcelles nommées, dont trois sont détaillées publiquement. Grand Aaz, deux hectares à Heure-le-Romain, porte Muscaris, Souvignier Gris et Johanniter sur un sol caillouteux exposé au sud-est. Séminaire, deux hectares à Oupeye, est plantée de Cabernet Cortis et de Pinotin en exposition plein sud, avec un drainage et une ventilation particulièrement favorables aux rouges. Couvent, trois hectares à Bassenge, associe Johanniter et Souvignier Gris. La densité retenue est de cinq mille pieds l'hectare, choix qui combine concurrence entre les ceps et possibilité de mécanisation.\n\nL'ensemble est certifié bio depuis l'origine et revendiqué en AOP Côtes de Sambre et Meuse. Le chai, enterré pour permettre un travail par gravité et couvert d'une toiture végétale, a été inauguré en 2015. C'est le seul terroir belge où l'on dispose d'une lecture parcellaire aussi explicite sur des cépages interspécifiques.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "basse-meuse",
+        "piwi",
+        "bio",
+        "cotes-de-sambre-et-meuse"
+      ],
+      "source": "fr.wikipedia.org ; vindeliege.be ; wawmagazine.be"
+    },
+    {
+      "id": "be-liege-terr-craie-du-sint-pietersberg-eben-emael",
+      "nom": "Craie du Sint-Pietersberg (Eben-Emael)",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Basse-Meuse",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Cabernet Cortis",
+        "Pinotin",
+        "Johanniter",
+        "Souvignier Gris"
+      ],
+      "altitude": "env. 60-150 m",
+      "sols": "Craie maastrichtienne (tuffeau) chargée de silex, sous couverture limoneuse mince",
+      "caracteristiques_rapides": "Le versant belge du Sint-Pietersberg, prolongement direct des carrières de Riemst et de Maastricht : trois hectares de rouges y sont plantés, plus le vignoble d'un domaine limbourgeois voisin.",
+      "notes_objectives": "Le versant belge du Sint-Pietersberg, cette colline crayeuse qui court de Maastricht à Riemst et dont les carrières souterraines ont fourni pendant des siècles la pierre de taille de toute la région. Le substrat est la craie maastrichtienne, tendre et chargée de silex, sous une couverture limoneuse mince.\n\nC'est l'un des trois grands ensembles crayeux du corpus belge, avec les craies du bassin de Mons et celles des Fourons, et le seul à être partagé entre les deux régions linguistiques : la même colline porte les coteaux de Genoelselderen côté limbourgeois et ce versant côté liégeois. Trois hectares de cépages rouges résistants y sont plantés, et un domaine dont le siège est à Hasselt y cultive également ses vignes — cas de figure qui oblige à traiter le site dans deux fichiers provinciaux à la fois. Le village est surtout connu pour son fort, tombé en 1940.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "basse-meuse",
+        "craie",
+        "piwi",
+        "transfrontalier"
+      ],
+      "source": "fr.wikipedia.org ; vindeliege.be ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-bocage-hervien-warsage-dalhem-aubel",
+      "nom": "Bocage hervien (Warsage, Dalhem, Aubel)",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Pays de Herve",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 150-300 m",
+      "sols": "Limons de couverture sur craie et silex du Crétacé",
+      "caracteristiques_rapides": "Plateau de haies vives, de prairies et de vergers hautes-tiges, parmi les secteurs les plus arrosés de Belgique hors Ardenne. La vigne y est arrivée en 1995 et s'y est densifiée après 2015.",
+      "notes_objectives": "Le plateau de Herve est un paysage de haies vives, de prairies grasses et de vergers hautes-tiges, entre cent cinquante et trois cents mètres d'altitude, sur des limons de couverture reposant sur la craie et le silex du Crétacé. C'est l'un des secteurs les plus arrosés de Belgique hors Ardenne, et une région d'élevage et de fromage plutôt que de culture.\n\nRien n'y prédisposait la vigne, et c'est pourtant le second foyer viticole de la province. Le mouvement part d'un domaine unique planté en 1995 à Warsage, puis s'accélère après 2015 : la commune de Dalhem compte aujourd'hui quatre vignobles, celle de Plombières deux, sans compter la coopérative d'Herve et ses huit hectares. La pression du mildiou impose ici les cépages résistants presque systématiquement — les rares domaines à avoir choisi les classiques font figure d'exception, et leurs résultats seront instructifs.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "herve",
+        "piwi",
+        "craie"
+      ],
+      "source": "marcvanel.be ; vindupaysdeherve.be"
+    },
+    {
+      "id": "be-liege-terr-vallee-de-la-berwinne",
+      "nom": "Vallée de la Berwinne",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Pays de Herve",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 130-250 m",
+      "sols": "Limons sur craie et silex, versants courts bien exposés",
+      "caracteristiques_rapides": "Vallée affluente de la Meuse qui entaille le plateau hervien, offrant les expositions les plus favorables de la région, dans un paysage bocager classé.",
+      "notes_objectives": "La Berwinne entaille le plateau hervien avant de rejoindre la Meuse à Visé, dégageant des versants courts et bien exposés qui offrent les meilleures conditions de toute la région — un abri relatif au vent, un drainage naturel et un réchauffement plus rapide que sur le plateau environnant.\n\nLa vallée traverse Clermont-sur-Berwinne, classé parmi les plus beaux villages de Wallonie, dans un paysage bocager lui-même protégé. Les sols restent ceux du Pays de Herve : limons sur craie et silex, à une altitude de cent trente à deux cent cinquante mètres. Les vignobles y sont récents et de très petite taille, un hectare tout au plus, plantés en cépages résistants, et vendus dans un circuit local de produits du terroir déjà bien structuré autour du fromage, du sirop et des cidres.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "herve",
+        "piwi"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-coteaux-de-la-vesdre",
+      "nom": "Coteaux de la Vesdre",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Pays de Herve",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 100-250 m",
+      "sols": "Schistes et grès dévoniens, versants courts et pentus",
+      "caracteristiques_rapides": "Versants de la Vesdre entre Verviers et sa confluence avec l'Ourthe : pentes rapides à se réchauffer, dans un secteur périurbain et très arrosé. Deux domaines de réputation nationale y sont installés.",
+      "notes_objectives": "Les versants de la Vesdre, entre Verviers et la confluence avec l'Ourthe, sur des schistes et grès dévoniens. Les pentes sont courtes et raides, la roche se réchauffe vite, et les expositions sud compensent en partie une pluviométrie parmi les plus élevées du pays hors Ardenne.\n\nLe secteur est périurbain et industriel — c'est l'ancienne vallée lainière — et il a été durement touché par les inondations de juillet 2021, qui ont frappé le fond de vallée sans atteindre les coteaux. Deux domaines de réputation nationale y sont pourtant installés : l'un de quatre hectares et demi en cépages classiques, choix exigeant dans un tel contexte, l'autre de trente-cinq ares seulement mais dont les vins figurent parmi les références liégeoises. La démonstration que le microsite compte davantage que le climat régional.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "herve",
+        "piwi"
+      ],
+      "source": "vinadis.be ; septemtriones.be ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-plateau-hesbignon-liegeois",
+      "nom": "Plateau hesbignon liégeois",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Hesbaye liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 100-200 m",
+      "sols": "Loess profonds et fertiles sur substrat crayeux",
+      "caracteristiques_rapides": "Grand plateau limoneux de Waremme à Grâce-Hollogne, voué aux betteraves et aux céréales : foncier disponible en blocs, d'où des plantations récentes atteignant d'emblée six à huit hectares.",
+      "notes_objectives": "Le grand plateau limoneux qui court de Waremme à Grâce-Hollogne, prolongement wallon de la Hesbaye flamande : des loess profonds et fertiles sur substrat crayeux, un relief quasi nul, et une agriculture de betteraves et de céréales parmi les plus productives d'Europe.\n\nPour la vigne, ce contexte pose un problème et offre un avantage. Le problème est la vigueur : un limon profond et riche en azote produit facilement des raisins dilués et des grappes compactes, sensibles à la pourriture, et la maîtrise du rendement y est l'enjeu technique central. L'avantage est le foncier — des terres disponibles en blocs d'un seul tenant, ce qui explique que les plantations récentes atteignent ici six à huit hectares d'emblée, là où le vignoble wallon se construit ailleurs par parcelles éclatées. C'est le secteur liégeois où la viticulture ressemble le plus à une activité agricole classique.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "loess",
+        "piwi"
+      ],
+      "source": "domainedeshetres.com ; tourdetilice.be ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-vallee-de-la-mehaigne-braives-fumal",
+      "nom": "Vallée de la Mehaigne (Braives, Fumal)",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Hesbaye liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 80-160 m",
+      "sols": "Limons sur craie et calcaire, versants entaillés dans le plateau",
+      "caracteristiques_rapides": "La Mehaigne entaille le plateau hesbignon entre Hannut et Huy et dégage des versants exposés, rares dans une région par ailleurs plate. Deux vignobles y sont installés, dont un orienté vers l'effervescent.",
+      "notes_objectives": "La Mehaigne entaille le plateau hesbignon entre Hannut et Huy et dégage des versants exposés, rares dans une région par ailleurs plate. Les sols sont des limons reposant sur la craie et le calcaire, à une altitude de quatre-vingts à cent soixante mètres.\n\nLa commune de Braives concentre à elle seule deux vignobles — cinq hectares autour du château de Fumal, deux à Latinne — ce qui en fait l'un des points de densification de la Hesbaye liégeoise. L'orientation vers l'effervescent y est marquée, et elle est cohérente avec le contexte : sous climat frais, la méthode traditionnelle valorise des raisins récoltés à maturité modérée et permet de lisser les millésimes irréguliers. Le délai est en revanche plus long — cinq ans entre la plantation et la première bouteille.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "methode-traditionnelle"
+      ],
+      "source": "chateaudefumal.com ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-hauteurs-de-liege-et-coteaux-de-la-legia",
+      "nom": "Hauteurs de Liège et coteaux de la Légia",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Hesbaye liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "Pinot Noir"
+      ],
+      "altitude": "env. 130-200 m",
+      "sols": "Limons sur craie, versants dominant la ville",
+      "caracteristiques_rapides": "Les coteaux qui dominent Liège au nord, où la vigne était documentée jusqu'au XIXe siècle et où la coopérative Vin de Liège a planté ses toutes premières vignes avant de s'installer en Basse-Meuse.",
+      "notes_objectives": "Les coteaux qui dominent Liège au nord, du côté d'Ans et de la citadelle, portaient de la vigne jusqu'au XIXe siècle : la viticulture liégeoise est documentée depuis le haut Moyen Âge et a longtemps fourni la ville en vin de consommation courante, avant que le chemin de fer et les vins français ne la rendent sans objet.\n\nLe nom du secteur renvoie à la Légia, ruisseau qui a donné son nom à la ville et qui coule aujourd'hui entièrement voûté sous le centre. C'est ici que la coopérative Vin de Liège a planté ses toutes premières vignes, six cents pieds rue Naimette, avant de constater que le foncier urbain ne permettait pas de changer d'échelle et de s'installer en Basse-Meuse. Il subsiste un vignoble d'un demi-hectare planté en 2006 à Ans, sur des limons reposant sur la craie, à environ deux cents mètres d'altitude.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "hesbaye",
+        "clos-historique"
+      ],
+      "source": "lescoteauxdelalegia.eatbu.com ; wawmagazine.be"
+    },
+    {
+      "id": "be-liege-terr-tiennes-du-condroz-liegeois-ocquier-nandrin-tinlot",
+      "nom": "Tiennes du Condroz liégeois (Ocquier, Nandrin, Tinlot)",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Condroz, Ourthe et Ardenne liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 200-300 m",
+      "sols": "Crêtes calcaires (tiennes) alternant avec dépressions schisteuses et gréseuses",
+      "caracteristiques_rapides": "Même structure en vagues parallèles que le Condroz namurois : tout se joue sur les crêtes calcaires, drainantes et rapides à se réchauffer. Six vignobles plantés entre 2017 et 2022.",
+      "notes_objectives": "Le Condroz liégeois reproduit la structure du Condroz namurois : des crêtes calcaires orientées sud-ouest/nord-est — les tiennes — alternant avec des dépressions creusées dans les schistes et les grès, à deux cents ou trois cents mètres d'altitude.\n\nTout se joue sur le choix de la crête. Les tiennes offrent des sols superficiels, drainants, qui se réchauffent vite ; les dépressions sont froides, lourdes et sujettes aux gelées d'accumulation. À cette altitude et sous cette latitude, ce n'est pas un raffinement mais une condition de maturité. Six vignobles ont été plantés entre 2017 et 2022 sur les communes d'Ocquier, Clavier, Nandrin et Tinlot, presque tous en cépages résistants, et deux d'entre eux se font face à quelques centaines de mètres — la contagion locale à l'œuvre.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "condroz",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "levignobledoccarius.be ; vignobledestempliers.be ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-calcaire-de-sprimont-noidre-lince",
+      "nom": "Calcaire de Sprimont (Noidré, Lincé)",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Condroz, Ourthe et Ardenne liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 150-250 m",
+      "sols": "Calcaire carbonifère (petit granit) sous couverture limoneuse",
+      "caracteristiques_rapides": "Commune de carrières de pierre bleue, sur le même calcaire carbonifère qu'Écaussinnes en Hainaut. Substrat franchement calcaire, rare en Belgique, avec un vignoble de 2011 et une plantation de six hectares en 2022.",
+      "notes_objectives": "Sprimont est une commune de carrières : on y extrait le petit granit, ce calcaire à crinoïdes d'âge tournaisien qui est la pierre de construction emblématique de la Belgique, la même qu'à Écaussinnes et à Soignies dans le Hainaut.\n\nLe sous-sol y est donc franchement calcaire sous une couverture limoneuse, configuration rare en Belgique et généralement favorable à la vigne. Le secteur combine par ailleurs une antériorité — un hectare planté dès 2011 à Lincé, à une époque où le Condroz liégeois n'avait aucune référence viticole — et une plantation récente de six hectares à Noidré en 2022. Cet écart de onze ans entre deux vignobles voisins donne un point de comparaison utile sur l'évolution des choix variétaux et des conduites en une décennie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "condroz",
+        "piwi"
+      ],
+      "source": "vivardent.be ; marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-vallee-de-lourthe-hamoir-esneux",
+      "nom": "Vallée de l'Ourthe (Hamoir, Esneux)",
+      "type": "coteau",
+      "region": "Liège",
+      "sous_region": "Condroz, Ourthe et Ardenne liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 90-250 m",
+      "sols": "Grès et schistes famenniens, versants encaissés",
+      "caracteristiques_rapides": "Vallée encaissée entre Liège et Durbuy, où seules les expositions sud sont exploitables : abri thermique réel au fond de la vallée, versants boisés montant à plus de trois cents mètres.",
+      "notes_objectives": "L'Ourthe s'encaisse profondément entre Liège et Durbuy, dans les grès et les schistes du Famennien, avec des versants boisés qui montent à plus de trois cents mètres et des méandres serrés — celui d'Esneux est l'un des plus spectaculaires du pays.\n\nLe fond de vallée bénéficie d'un abri thermique réel, mais seules les expositions sud sont exploitables : partout ailleurs, l'ombre portée des versants raccourcit encore une saison déjà brève. C'est la logique de toute la viticulture ardennaise et condrusienne — un climat régional défavorable, des microsites qui rachètent tout. Les vignobles y restent minuscules, un demi-hectare au plus, plantés après 2016 et souvent en encépagement mixte, classiques sur les meilleures expositions et résistants ailleurs.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ourthe",
+        "piwi"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-abords-des-hautes-fagnes-jalhay-baelen",
+      "nom": "Abords des Hautes Fagnes (Jalhay, Baelen)",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Condroz, Ourthe et Ardenne liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 250-450 m",
+      "sols": "Schistes acides et froids, drainage médiocre, tourbières à proximité",
+      "caracteristiques_rapides": "Le contexte le plus extrême du vignoble belge : altitude, pluviométrie supérieure à 1 200 mm, neige plusieurs semaines par an. Deux plantations seulement, toutes deux postérieures à 2009.",
+      "notes_objectives": "Le contexte le plus extrême du vignoble belge. Le plateau fagnard culmine à près de sept cents mètres, reçoit plus de mille deux cents millimètres de pluie par an et conserve la neige plusieurs semaines d'affilée ; les sols y sont schisteux, acides, froids, avec des tourbières à proximité immédiate.\n\nDeux plantations seulement s'y sont risquées, sur les positions les plus basses et les mieux exposées de communes par ailleurs hostiles à la vigne — un hectare et demi à Jalhay en 2021, un quart d'hectare à Membach dès 2009. Les cépages résistants n'y sont pas un choix de confort mais la seule option praticable, et encore faut-il qu'ils soient précoces. L'intérêt du site est entièrement prospectif : ce qu'on y observera dans quinze ans dira jusqu'où le réchauffement a réellement déplacé la limite de culture en Europe du Nord-Ouest.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    },
+    {
+      "id": "be-liege-terr-ardenne-liegeoise-et-vallee-de-lambleve",
+      "nom": "Ardenne liégeoise et vallée de l'Amblève",
+      "type": "secteur",
+      "region": "Liège",
+      "sous_region": "Condroz, Ourthe et Ardenne liégeoise",
+      "pays": "Belgique",
+      "cepages_rois": [
+        "Chardonnay",
+        "cépages résistants (PIWI)"
+      ],
+      "altitude": "env. 250-400 m",
+      "sols": "Schistes et quartzites ardennais, sols acides et superficiels",
+      "caracteristiques_rapides": "Hauteurs de l'Amblève entre Stoumont et Malmedy : quelques micro-vignobles postérieurs à 2018, sur les positions les plus basses et les mieux exposées de communes par ailleurs très froides.",
+      "notes_objectives": "Les hauteurs de l'Amblève, entre Stoumont et Malmedy, sur des schistes et des quartzites ardennais aux sols acides et superficiels, à trois cents ou quatre cents mètres d'altitude.\n\nQuelques micro-vignobles y ont été plantés après 2018, tous sur des positions basses et bien exposées, et tous de dimension symbolique — un demi-hectare au plus. L'un d'eux illustre une configuration nouvelle en Belgique : le vignoble est à Chevron, mais la vinification se fait dans une structure qui traite également des raisins tongrois, à cent kilomètres de là. La dissociation entre le lieu de récolte et le lieu d'élaboration pose une question que le vignoble belge n'a pas encore tranchée, et qui deviendra sensible si ces montages se multiplient.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "wallonie",
+        "ardenne",
+        "piwi",
+        "jeune-domaine"
+      ],
+      "source": "marcvanel.be"
+    }
+  ]
+}

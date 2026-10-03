@@ -1,0 +1,290 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "corse",
+  "region_label": "Corse",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_corse_vPat.xlsx",
+  "built_at": "2026-05-15T08:55:12+00:00",
+  "count": 10,
+  "items": [
+    {
+      "id": "corse-vin-de-corse",
+      "nom": "Vin de Corse / Corse",
+      "type": "appellation_regionale",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Sciaccarellu",
+        "Vermentinu",
+        "Grenache",
+        "Carcaghjolu Neru",
+        "Bianco Gentile",
+        "Codivarta",
+        "Genovese",
+        "Riminese"
+      ],
+      "altitude": "0-700 m",
+      "sols": "Variés : granitiques (sud), schistes (Cap Corse), calcaires (Patrimonio)",
+      "caracteristiques_rapides": "AOC régionale ~1 700 ha. Rouges, rosés, blancs. Cinq dénominations géographiques (Calvi, Coteaux du Cap Corse, Figari, Porto-Vecchio, Sartène).",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "cepages-locaux"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-calvi",
+      "nom": "Vin de Corse Calvi",
+      "type": "appellation_denomination",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Sciaccarellu",
+        "Vermentinu",
+        "Grenache"
+      ],
+      "altitude": "0-300 m",
+      "sols": "Granitiques (arènes)",
+      "caracteristiques_rapides": "Dénomination du nord-ouest (Balagne) ~250 ha. Sols granitiques, climat lumineux et ventilé. Maestracci (E Prove), Renucci, Culombu, Alzipratu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "balagne",
+        "granit"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-coteaux-cap-corse",
+      "nom": "Vin de Corse Coteaux du Cap Corse",
+      "type": "appellation_denomination",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Vermentinu",
+        "Niellucciu",
+        "Sciaccarellu",
+        "Muscat petits grains"
+      ],
+      "altitude": "0-500 m",
+      "sols": "Schistes (verticalité spectaculaire)",
+      "caracteristiques_rapides": "Dénomination la plus septentrionale (Cap Corse) ~30 ha confidentiels. Schistes, viticulture héroïque en terrasses. Vermentinu salin remarquable. Antoine Arena, Pieretti, Clos Nicrosi, Sant Armettu.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "cap-corse",
+        "schistes",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-figari",
+      "nom": "Vin de Corse Figari",
+      "type": "appellation_denomination",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Sciaccarellu",
+        "Vermentinu"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Granitiques (arènes)",
+      "caracteristiques_rapides": "Dénomination de l'extrême sud ~120 ha. Climat très chaud, vents marins. Ancien terroir (vignes parmi les plus anciennes de Méditerranée). Clos Canereccia, Tanella, U Stiliccionu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "sud",
+        "granit"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-porto-vecchio",
+      "nom": "Vin de Corse Porto-Vecchio",
+      "type": "appellation_denomination",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Sciaccarellu",
+        "Vermentinu"
+      ],
+      "altitude": "50-200 m",
+      "sols": "Granitiques",
+      "caracteristiques_rapides": "Petite dénomination ~50 ha sur la côte sud-est. Domaine de Torraccia est la principale référence.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "sud-est",
+        "granit"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-sartene",
+      "nom": "Vin de Corse Sartène",
+      "type": "appellation_denomination",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Sciaccarellu",
+        "Niellucciu",
+        "Vermentinu",
+        "Grenache"
+      ],
+      "altitude": "100-400 m",
+      "sols": "Granitiques",
+      "caracteristiques_rapides": "Dénomination du sud-ouest ~150 ha. Sciaccarellu en pointe, vins épicés, fins et frais malgré le climat. Comte Abbatucci (icône en biodynamie), San Quilico, Saparale, Sant Armettu.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "sud-ouest",
+        "sciaccarello",
+        "abbatucci"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-patrimonio",
+      "nom": "Patrimonio",
+      "type": "appellation_village",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Vermentinu",
+        "Grenache",
+        "Sciaccarellu",
+        "Muscat petits grains"
+      ],
+      "altitude": "50-450 m",
+      "sols": "Argilo-calcaires (singularité corse)",
+      "caracteristiques_rapides": "AOC iconique ~415 ha au nord de l'île. Seul terroir corse à dominante calcaire — d'où la singularité du Niellucciu de Patrimonio (parent du Sangiovese). Antoine Arena, Yves Leccia (E Croce), Giudicelli, Gentile, Orenga de Gaffory.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "niellucciu",
+        "calcaires"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-ajaccio",
+      "nom": "Ajaccio",
+      "type": "appellation_village",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Sciaccarellu",
+        "Niellucciu",
+        "Vermentinu",
+        "Barbarossa",
+        "Carcaghjolu Neru"
+      ],
+      "altitude": "100-500 m",
+      "sols": "Granitiques (arènes)",
+      "caracteristiques_rapides": "AOC ~250 ha autour d'Ajaccio. Sciaccarellu roi (40 % min en rouge), vins rouges fins, épicés et frais sur granit. Comte Abbatucci, Clos d'Alzeto, Peraldi, Vaccelli.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "village",
+        "iconique",
+        "sciaccarello",
+        "granit",
+        "abbatucci"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-muscat-cap-corse",
+      "nom": "Muscat du Cap Corse",
+      "type": "appellation_vdn",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Muscat petits grains"
+      ],
+      "altitude": "0-400 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "AOC Vin Doux Naturel ~75 ha sur le Cap Corse et Patrimonio. Mutage à l'alcool. Notes florales, agrumes confits, écorces. Style très différent du Muscat de Beaumes-de-Venise. Clos Nicrosi, Pieretti, Arena.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "vdn",
+        "muscat",
+        "cap-corse"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "corse-igp-ile-beaute",
+      "nom": "IGP Île de Beauté",
+      "type": "igp",
+      "region": "Corse",
+      "sous_region": "Corse",
+      "pays": "France",
+      "cepages_rois": [
+        "Niellucciu",
+        "Sciaccarellu",
+        "Vermentinu",
+        "Grenache",
+        "Syrah",
+        "Merlot",
+        "Cabernet Sauvignon",
+        "Chardonnay"
+      ],
+      "altitude": "Variable",
+      "sols": "Variés (toute la Corse)",
+      "caracteristiques_rapides": "IGP couvrant l'intégralité de l'île ~1 000 ha. Permet les cépages internationaux. Production importante en volume, qualité hétérogène.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "generaliste",
+        "cepages-libres"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

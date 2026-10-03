@@ -1,0 +1,983 @@
+{
+  "schema_version": 1,
+  "kind": "producteurs",
+  "region_key": "molise",
+  "region_label": "Molise (Italie)",
+  "source_file": "producteurs_molise.json",
+  "built_at": "2026-07-12",
+  "count": 22,
+  "items": [
+    {
+      "id": "it-molise-prod-di-majo-norante",
+      "nom": "Di Majo Norante",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Tintilia",
+        "Falanghina",
+        "Fiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC",
+        "Tintilia del Molise DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Campomarino, sur les collines dominant l'Adriatique, Di Majo Norante est le domaine culte du Molise et son ambassadeur incontesté. Avec 125 hectares de vignes en agriculture biologique — un géant dans une région où la plupart des exploitations n'atteignent pas l'hectare —, la maison a porté à elle seule la réputation d'une région longtemps invisible sur la carte du vin.\n\nSa cuvée phare, le Don Luigi Riserva, est une icône : un Montepulciano qui pousse le cépage à son sommet expressif, dense et complexe, au nez de framboise sauvage, de datte, de groseille et de figue séchée, à la bouche volumineuse aux tanins puissants tenus par une acidité remarquable. Le domaine signe aussi le Ramitello Rosso, le Contado (une Riserva d'Aglianico) et une gamme complète (Sangiovese, Moli, Falanghina, Fiano). Fait historique : c'est Di Majo Norante qui a mis en bouteille le tout premier Tintilia 100 %, à partir de raisins achetés à Claudio Cipressi, lançant ainsi la renaissance du cépage autochtone. Régulièrement cité parmi les meilleurs producteurs d'Italie, engagé en bio depuis longtemps, le domaine incarne à lui seul le potentiel qualitatif du Molise et reste la porte d'entrée obligée dans les vins de cette région méconnue.\n\nLE domaine culte du Molise (125 ha, bio) : le Don Luigi Riserva (Montepulciano) est une icône régionale, et la maison fut la première à embouteiller un Tintilia 100 %. C'est l'ambassadeur de la région.\n\nLe rôle de Di Majo Norante dans l'histoire viticole du Molise est difficile à surestimer. Dans une région qui ne fut politiquement séparée des Abruzzes qu'en 1963, et dont les vins restèrent quasi inconnus jusqu'aux années 2000, la famille a fait figure de pionnière solitaire, misant sur la qualité, l'agriculture biologique et les cépages du terroir quand tout le monde bradait son raisin en vrac. Le Molise, deuxième plus petite région viticole d'Italie après le Val d'Aoste, compte à peine trente-cinq caves, sur un territoire montagneux et vallonné sans la moindre plaine, entre les Apennins et trente-cinq kilomètres de côte adriatique. C'est ce paysage rude et resté sauvage qui donne aux vins leur caractère : amplitudes thermiques marquées, sols de marnes argilo-calcaires, brises marines. Servis sur l'agneau rôti, le mouton, les viandes grillées, les pâtes au ragù ou le gibier — la table molisane est généreuse —, les vins de Di Majo Norante séduisent par leur équilibre entre puissance méridionale et fraîcheur ; le Don Luigi se patine sur une décennie et plus, développant une complexité tertiaire remarquable. En sortant le premier Tintilia pur et en portant le nom du Molise à l'international, la maison a ouvert la voie à toute une génération. Elle demeure la locomotive et la vitrine d'une région qui, lentement, sort de l'ombre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Don Luigi Riserva (Montepulciano)",
+        "Ramitello Rosso",
+        "Contado (Aglianico Ris.)",
+        "Moli Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "tintilia",
+        "bio",
+        "culte",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "filippobartolotta|italysfinestwines|callmewine"
+    },
+    {
+      "id": "it-molise-prod-claudio-cipressi",
+      "nom": "Claudio Cipressi",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "San Felice del Molise",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina",
+        "Montepulciano",
+        "Trebbiano Molisano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Felice del Molise, dans l'arrière-pays vallonné, Claudio Cipressi est l'homme qui a sauvé le Tintilia. Son histoire est celle d'une obsession heureuse : ayant entendu de vieux paysans évoquer un cépage local presque disparu, il partit à sa recherche parmi les cultures oubliées, sélectionna les meilleures souches et planta son premier vignoble en 1998.\n\nIl soumit ensuite le cépage à l'Université du Molise, qui l'analysa génétiquement et confirma qu'il s'agissait bien d'une variété autochtone unique : le Tintilia fut inscrit au registre national en 2001, et devint DOC en 2011. Avant d'avoir sa propre cave, Cipressi vendait ses raisins à Di Majo Norante, qui en tira la première bouteille de Tintilia pur. Depuis 2003, il vinifie lui-même, sur quinze hectares conduits en bio à San Felice, dont douze et demi plantés en Tintilia. Ses cuvées sont devenues des icônes : le Macchiarossa (garrigue méditerranéenne, mûre, poivre noir, tanins solides) et le Tintilia 66 (plus sombre et profond, graphite, goudron, myrtille, avec une traînée saline juteuse), ainsi que le Settevigne et le rosé Collequinto. Plus de vingt ans après, sa mission est accomplie : le Tintilia est devenu l'identité viticole du Molise.\n\nLe sauveur du Tintilia : ayant retrouvé ce cépage quasi éteint et fait reconnaître son ADN (2001), il en a fait sa mission. Le Macchiarossa et le Tintilia 66 (bio) sont des icônes régionales.\n\nL'histoire du Tintilia raconte, en creux, celle de l'Italie viticole du XXe siècle. Introduit dans le Molise probablement au XVIIIe siècle, sous la domination espagnole des Bourbons — son nom viendrait du castillan « tinto », rouge —, il devint au XIXe le cépage le plus planté de la région, particulièrement dans les zones intérieures. Puis vint l'après-guerre : la course aux rendements, le déplacement des cultures vers les plaines, la recherche de variétés plus productives. Le Tintilia, rustique, peu vigoureux et à faible rendement, fut abandonné, jusqu'à ne plus subsister que dans les récits des vieux paysans. C'est cette mémoire orale que Claudio Cipressi est allé chercher, avant de tout quitter en 2000 pour fonder sa cave et lui consacrer sa vie. Servi sur l'agneau rôti, le mouton, les viandes grillées, le gibier ou les fromages affinés, le Tintilia séduit par sa couleur intense, son fruit noir, sa touche poivrée caractéristique — une signature stylistique qui lui appartient en propre — et ses tanins fermes ; il possède une réelle aptitude à la garde. De poignée de souches oubliées à DOC reconnue et fierté régionale, le parcours est spectaculaire, et Claudio Cipressi en est le héros discret.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Macchiarossa (Tintilia)",
+        "Tintilia 66",
+        "Settevigne",
+        "Collequinto Rosato"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "san-felice",
+        "rouge",
+        "bio",
+        "sauveur",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|skurnik|italysfinestwines"
+    },
+    {
+      "id": "it-molise-prod-cianfagna",
+      "nom": "Cianfagna",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Acquaviva Collecroce",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Acquaviva Collecroce, dans l'arrière-pays du Molise, Cianfagna est l'un des domaines de référence du Tintilia. Cette exploitation familiale, réputée pour son accueil chaleureux, s'est imposée comme l'un des acteurs majeurs du renouveau viticole de la région.\n\nSa cuvée phare, le Sator, est régulièrement classée au premier rang des vins du Molise : un Tintilia d'une grande expressivité, au nez de fruits des bois (fraise des bois, framboise), de pot-pourri de fleurs séchées et de baies de genièvre, avec des nuances de résine et de goudron, à la bouche puissante aux tanins mûrs et sculpturaux, soutenus par une belle acidité qui favorise la buvabilité. Le domaine signe aussi le Sator Gran Maestro (une sélection encore plus ambitieuse) et le Pietrafitta, ainsi que des blancs (Falanghina, Trebbiano). Le style, soigné et fidèle au terroir, exprime la quintessence du potentiel du Tintilia. Aux côtés de Claudio Cipressi, Cianfagna est l'un des vignerons qui ont fait du cépage autochtone la fierté du Molise, et son domaine compte aujourd'hui parmi les incontournables de la région.\n\nDomaine de référence du Tintilia : le Sator est régulièrement classé n°1 des vins du Molise, aux côtés du Sator Gran Maestro et du Pietrafitta, dans un accueil familial chaleureux.\n\nLe succès de Cianfagna illustre la vitalité retrouvée d'une viticulture molisane longtemps résignée. Dans une région où l'essentiel de la production partait autrefois en vrac vers les caves du Nord, quelques familles ont choisi de croire au terroir et au Tintilia. Le résultat est là : les vins d'Acquaviva Collecroce, sur les collines intérieures où les amplitudes thermiques entre le jour et la nuit sont marquées, séduisent aujourd'hui les critiques nationaux et figurent régulièrement en tête des classements régionaux. Le style de la maison a évolué avec son époque : on est loin des vins hyper-concentrés et boisés d'il y a quinze ans, et le bois, aujourd'hui mieux calibré, laisse s'exprimer la personnalité poivrée et fruitée du cépage. Servis sur l'agneau rôti, le mouton, les viandes grillées, le gibier ou une cuisine rustique de montagne, les Tintilia de Cianfagna séduisent par leur profondeur et leur persistance ; ils se patinent sur plusieurs années. Le domaine, apprécié aussi pour son accueil familial et son cadre reposant, illustre le beau visage d'un Molise qui a compris que sa chance résidait dans son authenticité et dans ce cépage unique que nul autre au monde ne possède.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Sator (Tintilia)",
+        "Sator Gran Maestro",
+        "Pietrafitta (Tintilia)"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "acquaviva",
+        "rouge",
+        "reference",
+        "icone"
+      ],
+      "a_verifier": null,
+      "source": "winedexer|filippobartolotta|callmewine"
+    },
+    {
+      "id": "it-molise-prod-borgo-di-colloredo",
+      "nom": "Borgo di Colloredo",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Tintilia",
+        "Falanghina",
+        "Malvasia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC",
+        "Tintilia del Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Campomarino, sur les collines de la vallée du Biferno face à l'Adriatique, Borgo di Colloredo est un domaine réputé, l'une des références de l'appellation Biferno. La famille Di Giulio y cultive les cépages de la région avec une constance reconnue.\n\nSa cuvée phare, le Gironia Biferno Rosso Riserva (assemblage de Montepulciano et d'Aglianico), est régulièrement classée parmi les tout meilleurs vins du Molise : un rouge structuré, ample et de garde, expression aboutie de l'appellation phare de la région. Le domaine signe aussi le Gironia Biferno Bianco, un rosé, une belle Malvasia et du Tintilia. Le style, soigné et fidèle au terroir, met en valeur les cépages du Basso Molise dans des vins équilibrés, où la chaleur méridionale est tenue par la fraîcheur des brises adriatiques. La qualité constante et la belle réputation du domaine en font une valeur sûre de la région. Borgo di Colloredo est une belle adresse pour découvrir le Biferno dans sa version la plus aboutie, sur l'agneau, les viandes grillées et les fromages.\n\nDomaine réputé du Biferno (famille Di Giulio) : le Gironia Biferno Rosso Riserva est un classique très bien classé, aux côtés du Gironia Bianco et de la Malvasia. C'est une référence de l'appellation.\n\n L'appellation Biferno, du nom du fleuve qui descend de Campobasso vers la mer, abrite les producteurs les plus connus du Molise, et Borgo di Colloredo en est l'un des piliers. Servis sur l'agneau rôti, le mouton, les viandes grillées ou les fromages affinés, ses rouges se patinent sur plusieurs années ; les blancs et le rosé accompagnent poissons et fruits de mer de la côte adriatique toute proche. Le domaine illustre la double identité du Molise, entre montagne et mer.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Gironia Biferno Rosso Ris.",
+        "Gironia Biferno Bianco",
+        "Gironia Rosato",
+        "Malvasia"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge",
+        "blanc",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-tenimenti-grieco",
+      "nom": "Tenimenti Grieco",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Molise, Tenimenti Grieco est un domaine bio dynamique, l'une des belles références du Tintilia. Sur des parcelles conduites en agriculture biologique, il met en valeur le cépage autochtone de la région avec précision.\n\nSa cuvée phare, le 200 Metri (un Tintilia dont le nom évoque l'altitude du vignoble), est régulièrement classée parmi les meilleurs vins de la région : un rouge précis et expressif, aux arômes de fruits noirs, d'épices et de cette touche poivrée caractéristique du cépage. Le domaine signe aussi le Triassi et le Le Cesine. Le style, bio et soigné, privilégie l'expression du terroir et la fidélité au Tintilia, dans des vins équilibrés où le bois est bien calibré. La qualité constante, l'engagement biologique et la belle progression du domaine en font une référence montante. Tenimenti Grieco est une belle adresse pour découvrir le Tintilia dans une version bio et précise, sur l'agneau, les viandes grillées et le gibier.\n\nDomaine bio dynamique : le 200 Metri (Tintilia) et le Triassi sont des références régionales, dans un style précis qui met en valeur le cépage autochtone.\n\n Le nom de la cuvée phare, 200 Metri, dit l'importance de l'altitude pour le Tintilia : la DOC couvre l'ensemble des terres situées au-dessus de 200 mètres, car c'est là que le cépage, rustique et résistant au froid, donne le meilleur de lui-même. Servis sur l'agneau rôti, le gibier, les viandes grillées ou les fromages, les Tintilia du domaine séduisent par leur intensité et leur fraîcheur, et se patinent sur plusieurs années.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "200 Metri (Tintilia)",
+        "Triassi",
+        "Le Cesine"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-angelo-duva",
+      "nom": "Angelo d'Uva",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Larino",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Larino, dans l'arrière-pays du Molise, Angelo d'Uva est un domaine bio, l'un des acteurs du renouveau viticole de la région. Cité par les guides comme l'une des maisons qui, avec Cianfagna, ont joué un rôle de premier plan dans la renaissance des vins molisans, il cultive les cépages autochtones avec conviction.\n\nSa cuvée phare, le Lagena (un Tintilia), est une référence régulièrement citée : un rouge authentique et fidèle au terroir, aux arômes de fruits noirs, d'épices et de garrigue, doté de tanins présents et d'une belle fraîcheur. Le domaine signe aussi le Kantharos et de la Falanghina en blanc. Le style, bio et sincère, privilégie l'expression du terroir et l'authenticité, dans des vins de caractère. L'engagement biologique et la qualité constante en font une valeur sûre de la région. Angelo d'Uva est une belle adresse pour découvrir le Tintilia dans une version bio et authentique, sur l'agneau, les viandes grillées et les fromages affinés.\n\nDomaine bio de Larino, acteur du renouveau du Molise : le Lagena (Tintilia) est une référence, dans un style authentique et fidèle au terroir.\n\n Le rôle d'Angelo d'Uva dans le renouveau molisan, aux côtés de Cianfagna et de Cipressi, illustre l'émulation qui a saisi la région depuis vingt ans. Servis sur l'agneau, le mouton, les viandes grillées ou le gibier, ses Tintilia séduisent par leur authenticité et leur caractère ; le Lagena se patine sur plusieurs années. Le domaine incarne le versant bio et sincère d'une viticulture qui a retrouvé confiance en son patrimoine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lagena (Tintilia)",
+        "Kantharos",
+        "Falanghina"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "larino",
+        "rouge",
+        "bio",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "callmewine|winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantine-salvatore",
+      "nom": "Cantine Salvatore",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Ururi",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc",
+        "Rosé"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ururi, dans l'arrière-pays molisan, les Cantine Salvatore sont un domaine réputé, belle référence du Tintilia. Sur les collines de la région, la famille cultive le cépage autochtone avec soin.\n\nSa cuvée phare, le Rutilia (un Tintilia), est régulièrement très bien classée parmi les vins de la région : un rouge soigné et expressif, aux arômes de fruits noirs, d'épices et de notes poivrées, avec des tanins fermes et une belle structure. Le domaine signe aussi le Contrada Colle Bianco et une gamme complète (Montepulciano, Falanghina, rosé). Le style, précis et fidèle au cépage, met en valeur le Tintilia dans des vins équilibrés et de belle facture. La qualité constante et la réputation du domaine en font une valeur sûre. Les Cantine Salvatore sont une belle adresse pour découvrir le Tintilia dans une version soignée, sur l'agneau, les viandes grillées et les fromages.\n\nDomaine réputé d'Ururi : le Rutilia (Tintilia) est très bien classé parmi les vins du Molise, dans un style soigné qui exprime le cépage autochtone.\n\n La régularité des Cantine Salvatore, dont le Rutilia figure année après année dans les classements régionaux, en fait une valeur sûre du Tintilia. Servis sur l'agneau rôti, le mouton, les viandes grillées ou les fromages affinés, leurs rouges séduisent par leur structure et leur note poivrée caractéristique. Le domaine illustre le beau niveau qualitatif atteint aujourd'hui par les meilleurs producteurs de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Rutilia (Tintilia)",
+        "Contrada Colle Bianco",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "ururi",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-campi-valerio",
+      "nom": "Campi Valerio",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Ripalimosani",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ripalimosani, dans le Molise intérieur, Campi Valerio est un domaine bio, belle référence du Tintilia d'altitude. Sur des parcelles élevées conduites en agriculture biologique, il met en valeur le cépage autochtone de la région.\n\nSa cuvée phare, l'Opalia (un Tintilia), est régulièrement citée parmi les meilleurs vins du Molise : un rouge précis et frais, où l'altitude apporte tension et finesse, aux arômes de fruits noirs, d'épices et de notes poivrées. Le domaine signe aussi le Fonte del Prete et une gamme de Montepulciano et Falanghina. Le style, bio et précis, privilégie la fraîcheur et l'expression du terroir d'altitude, dans des vins équilibrés. L'engagement biologique et la qualité de la gamme en font une belle adresse de la région. Campi Valerio est une belle adresse pour découvrir le Tintilia d'altitude dans une version bio et fraîche, sur l'agneau, les viandes et les fromages.\n\nDomaine bio de Ripalimosani : l'Opalia (Tintilia) est une belle référence régionale, dans un style précis qui met en valeur l'altitude et la fraîcheur du cépage.\n\n Le pari de l'altitude et du bio, sur les collines intérieures de Ripalimosani, donne aux Tintilia de Campi Valerio une fraîcheur et une tension précieuses. Servis sur l'agneau, le gibier, les viandes grillées ou les fromages, ils séduisent par leur précision et leur équilibre, et se patinent sur plusieurs années. Le domaine illustre le potentiel des terroirs élevés du Molise intérieur, où le Tintilia trouve son expression la plus racée.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Opalia (Tintilia)",
+        "Fonte del Prete",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "ripalimosani",
+        "rouge",
+        "bio",
+        "altitude"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-catabbo",
+      "nom": "Catabbo",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "San Martino in Pensilis",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina",
+        "Aglianico"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À San Martino in Pensilis, dans le Basso Molise, Catabbo est un domaine bien noté, belle adresse moderne de la région. Sur les collines proches de l'Adriatique, la famille cultive les cépages molisans avec soin. Le domaine signe un Tintilia del Molise figurant parmi les meilleurs de la région, aux côtés de Biferno Rosso et de blancs (Falanghina). Le style, moderne et soigné, met en valeur le Tintilia et le Montepulciano dans des vins structurés et bien faits. La qualité constante et le bon rapport qualité-prix en font une valeur sûre. Catabbo est une belle adresse pour découvrir le Tintilia et le Biferno dans des versions modernes et abouties, sur l'agneau, les viandes grillées et les fromages, à bon rapport qualité-prix, pour une belle découverte des vins du Molise.\n\nDomaine bien noté de San Martino : son Tintilia del Molise figure parmi les meilleurs de la région, aux côtés de Biferno et de blancs, dans un style moderne et soigné.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise",
+        "Biferno Rosso",
+        "Falanghina"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "biferno",
+        "rouge",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-camillo-de-lellis",
+      "nom": "Camillo de Lellis",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Guglionesi",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Guglionesi, dans la vallée du Biferno, Camillo de Lellis est un domaine historique, l'une des références classiques de l'appellation phare du Molise. Sur les collines descendant vers l'Adriatique, il cultive les cépages de la région.\n\nSa cuvée phare, le Palladino Biferno Rosso, est régulièrement classée parmi les tout meilleurs vins de la région, aux côtés du Biferno Rosso Riserva : des rouges à base de Montepulciano et d'Aglianico, structurés, amples et de garde, expressions abouties du terroir de la vallée du Biferno. Le domaine signe aussi des blancs et une gamme complète. Le style, classique et fidèle à la tradition, met en valeur les cépages du Basso Molise dans des vins équilibrés. La longévité du domaine et la qualité constante de sa gamme en font une valeur sûre. Camillo de Lellis est une belle adresse pour découvrir le Biferno dans un style classique et abouti, sur l'agneau, les viandes grillées et les fromages affinés.\n\nDomaine historique du Biferno : le Palladino Biferno Rosso et la Riserva sont très bien classés. C'est une référence classique de l'appellation phare de la vallée du Biferno.\n\n La vallée du Biferno, qui descend de Campobasso vers l'Adriatique, est le cœur historique de la viticulture molisane, et Camillo de Lellis en est l'une des mémoires. Servis sur l'agneau rôti, le mouton, les viandes en sauce ou les fromages affinés, ses Biferno se patinent sur une décennie, développant une complexité tertiaire. Le domaine perpétue le classicisme du Montepulciano et de l'Aglianico dans un style généreux et fidèle.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Palladino (Biferno Rosso)",
+        "Biferno Rosso Riserva",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge",
+        "historique",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantina-san-zenone",
+      "nom": "Cantina San Zenone",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Molise, la Cantina San Zenone est un domaine salué par le Gambero Rosso, belle adresse du Tintilia. Sur les collines de la région, elle cultive le cépage autochtone avec sincérité.\n\nSon Tintilia del Molise, cité par le Gambero Rosso, séduit par ses arômes de cerise et de fraise, sa bouche juteuse et sa finale aux tonalités chocolatées : un rouge gouleyant et expressif, à la fois structuré et facile à boire. Le domaine signe aussi le Clivia (un Molise Rosso aux arômes de framboise et de myrtille, au fruit doux et au tanin marqué, d'une buvabilité joyeuse et insouciante). Le style, sincère et fidèle au cépage, privilégie le fruit et la fraîcheur, dans des vins accessibles et de caractère. La qualité et la reconnaissance critique en font une belle adresse. La Cantina San Zenone est une belle adresse pour découvrir le Tintilia dans une version gouleyante et fruitée, sur les viandes grillées, l'agneau et la cuisine molisane.\n\nDomaine salué par le Gambero Rosso : son Tintilia (cerise et fraise, finale chocolatée) et le Molise Rosso Clivia sont de belles expressions du cépage, gouleyantes et sincères.\n\n Le style gouleyant et fruité de San Zenone illustre une autre facette du Tintilia, moins tannique et plus immédiate, qui séduit par sa buvabilité. Servis sur les viandes grillées, l'agneau, les pâtes au ragù ou la cuisine molisane généreuse, ses vins séduisent par leur fraîcheur et leur joie. Le domaine prouve que le Tintilia, souvent vinifié dans un registre puissant, peut aussi donner des rouges de plaisir immédiat.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise",
+        "Clivia (Molise Rosso)"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge",
+        "reference"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso|winedexer"
+    },
+    {
+      "id": "it-molise-prod-terresacre",
+      "nom": "Terresacre",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Montenero di Bisaccia",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Biferno DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Montenero di Bisaccia, dans le Basso Molise, Terresacre est un domaine fondé en 2006, salué par le Gambero Rosso, belle adresse montante de la région. Sur les collines proches de la côte, il cultive les cépages molisans. Le domaine signe un Tintilia del Molise remarqué, à la robe presque sanguine, dont le profil aromatique laisse place à des notes de café et de chocolat, ainsi que du Biferno et de la Falanghina. Le style, soigné et moderne, met en valeur la profondeur du Tintilia. La belle progression du domaine et la reconnaissance critique en font une adresse à suivre. Terresacre est une belle adresse pour découvrir le Tintilia dans une version profonde et moderne, sur l'agneau, les viandes grillées et les fromages affinés, chez un jeune domaine prometteur du Molise.\n\nDomaine fondé en 2006 à Montenero di Bisaccia, salué par le Gambero Rosso : Tintilia profonds (café, chocolat) et Biferno. C'est une belle adresse montante de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise",
+        "Biferno Rosso",
+        "Falanghina"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "biferno",
+        "rouge",
+        "montant"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-molise-prod-vinica",
+      "nom": "Vinica",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Ripalimosani",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Montepulciano",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Ripalimosani, dans le Molise intérieur, Vinica est un domaine belle adresse à découvrir du renouveau molisan. Sur les collines de la région, il cultive le cépage autochtone avec soin. Le domaine signe le Lame del Sorbo, un Tintilia del Molise cité parmi les belles expressions du cépage : un rouge fidèle au terroir, aux arômes de fruits noirs, d'épices et de notes poivrées. Il produit aussi du Montepulciano et de la Falanghina. Le style, soigné et authentique, met en valeur le Tintilia dans des vins équilibrés. La qualité de la gamme et le bon rapport qualité-prix en font une belle adresse. Vinica est une adresse à découvrir pour le Tintilia dans une version authentique, sur l'agneau, les viandes grillées et les fromages, pour une belle découverte du cépage emblématique du Molise.\n\nDomaine de Ripalimosani : le Lame del Sorbo (Tintilia) est une belle expression du cépage autochtone. C'est une adresse à découvrir du renouveau molisan.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Lame del Sorbo (Tintilia)",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-colle-cervino",
+      "nom": "Colle Cervino",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Campobasso",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans la région de Campobasso, Colle Cervino est un domaine salué par le Gambero Rosso, belle adresse originale du Molise. Sur les collines intérieures, il cultive le Tintilia avec créativité. Son Tintilia del Molise séduit par ses arômes de prune déshydratée et de cerise noire, et par une bouche à l'attaque fruitée qui se prolonge en une gorgée juteuse et souple. Le domaine propose aussi une version originale en amphore, aux arômes de fruits rouges et noirs, dont une pointe de rusticité n'entame ni la fraîcheur ni la vivacité, veinée d'une agréable note saline. Le style, soigné et créatif, explore les différentes facettes du cépage. L'originalité et la qualité en font une belle adresse. Colle Cervino est une adresse à découvrir pour le Tintilia, y compris en amphore, sur l'agneau, les viandes grillées et la cuisine molisane.\n\nDomaine salué par le Gambero Rosso : Tintilia aux notes de prune et de cerise noire, et une version originale en amphore, fraîche et saline. C'est une belle adresse à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise",
+        "Tintilia in Anfora"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "amphore",
+        "rouge",
+        "original"
+      ],
+      "a_verifier": null,
+      "source": "gamberorosso"
+    },
+    {
+      "id": "it-molise-prod-tenute-di-giulio",
+      "nom": "Tenute di Giulio",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Pinot Grigio",
+        "Montepulciano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Terre degli Osci IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Campomarino, dans le Basso Molise, Tenute di Giulio est un domaine belle adresse fiable de la région. Sur les collines proches de l'Adriatique, il cultive les cépages molisans avec soin. Le domaine signe un Tintilia del Molise soigné, aux arômes de fruits noirs et d'épices, ainsi que des blancs, dont l'Osco Pinot Grigio (sous l'IGT Terre degli Osci, du nom du peuple antique des Osques qui habitait la région). Le style, fiable et accessible, met en valeur les cépages du Molise dans des vins équilibrés. La qualité constante et le bon rapport qualité-prix en font une valeur sûre. Tenute di Giulio est une belle adresse pour découvrir le Tintilia et les blancs du Molise à prix raisonnable, sur l'agneau, les viandes grillées pour le rouge, les poissons et les antipasti pour le blanc.\n\nDomaine de Campomarino : Tintilia del Molise soigné et blancs (Osco Pinot Grigio). C'est une belle adresse fiable de la région à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise",
+        "Osco Pinot Grigio"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge",
+        "blanc"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantina-valtappino",
+      "nom": "Cantina Valtappino",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Campobasso",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans la région de Campobasso, la Cantina Valtappino est un domaine du Molise intérieur, belle adresse à découvrir. Sur les collines de la région, elle cultive le cépage autochtone avec soin. Le domaine signe l'Embratur, un Tintilia del Molise cité parmi les belles expressions du cépage : un rouge fidèle au terroir, aux arômes de fruits noirs, d'épices et de cette touche poivrée caractéristique. Il produit aussi de la Falanghina en blanc. Le style, soigné et authentique, met en valeur le Tintilia dans des vins équilibrés. La qualité de la gamme et le bon rapport qualité-prix en font une belle adresse. La Cantina Valtappino est une adresse à découvrir pour le Tintilia du Molise intérieur, sur l'agneau, les viandes grillées et les fromages, pour une belle découverte du cépage emblématique de la région.\n\nDomaine de la région de Campobasso : l'Embratur (Tintilia) est une belle expression du cépage. C'est une adresse à découvrir du Molise intérieur.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Embratur (Tintilia)",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "campobasso",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantina-manzini",
+      "nom": "Cantina Manzini",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Guglionesi",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Guglionesi, dans la vallée du Biferno, la Cantina Manzini est un domaine belle adresse fiable de l'appellation phare du Molise. Sur les collines descendant vers l'Adriatique, elle cultive les cépages de la région. Le domaine signe la Collezione Privata Biferno Rosso Riserva, très bien classée parmi les vins du Molise : un rouge à base de Montepulciano et d'Aglianico, structuré, ample et de garde. Il produit aussi du Biferno Rosso et des blancs. Le style, classique et soigné, met en valeur les cépages du Basso Molise dans des vins équilibrés. La qualité constante et le bon rapport qualité-prix en font une valeur sûre. La Cantina Manzini est une belle adresse pour découvrir le Biferno dans une version soignée, sur l'agneau, les viandes grillées et les fromages affinés, à bon rapport qualité-prix.\n\nDomaine du Biferno : la Collezione Privata Biferno Rosso Riserva est très bien classée. C'est une belle adresse fiable de l'appellation phare de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Collezione Privata (Biferno Ris.)",
+        "Biferno Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-casa-contini",
+      "nom": "Casa Contini",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Campomarino",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Campomarino, dans la vallée du Biferno, Casa Contini est un domaine belle adresse fiable de la région. Sur les collines proches de la mer, il cultive les cépages molisans avec soin. Le domaine signe un Biferno Riserva bien classé parmi les vins du Molise : un rouge à base de Montepulciano et d'Aglianico, structuré et de garde, expression classique de l'appellation. Il produit aussi des blancs (Falanghina). Le style, soigné et fidèle à la tradition, met en valeur les cépages du Basso Molise dans des vins équilibrés. La qualité constante et le bon rapport qualité-prix en font une valeur sûre de la vallée. Casa Contini est une belle adresse pour découvrir le Biferno dans une version fiable et soignée, sur l'agneau, les viandes grillées et les fromages, à bon rapport qualité-prix.\n\nDomaine du Biferno : Biferno Riserva bien classé. C'est une belle adresse fiable de la vallée, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Biferno Riserva",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-giagnacovo",
+      "nom": "Giagnacovo",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Alto Molise (CB)",
+      "commune": "Campobasso",
+      "pays": "Italie",
+      "cepages": [
+        "Tintilia",
+        "Falanghina"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Tintilia del Molise DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Dans le Molise intérieur, Giagnacovo est un petit domaine, belle adresse artisanale à découvrir du renouveau du Tintilia. Sur les collines de la région, il cultive le cépage autochtone avec soin. Le domaine signe un Tintilia del Molise authentique, cité parmi les vins de la région : un rouge fidèle au terroir, aux arômes de fruits noirs, d'épices et de notes poivrées, doté de tanins présents. Il produit aussi de la Falanghina en blanc. Le style, artisanal et sincère, met en valeur le Tintilia dans des vins de caractère. La taille humaine du domaine et le bon rapport qualité-prix en font une belle adresse à découvrir. Giagnacovo est une adresse à découvrir pour le Tintilia dans une version artisanale, sur l'agneau, les viandes grillées et les fromages, chez un petit vigneron du Molise.\n\nPetit domaine du Molise intérieur : Tintilia del Molise authentique. C'est une belle adresse artisanale à découvrir du renouveau du cépage.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Tintilia del Molise"
+      ],
+      "tags": [
+        "molise",
+        "tintilia",
+        "rouge",
+        "artisan"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantine-maravigna",
+      "nom": "Cantine Maravigna",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Guglionesi",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Guglionesi, dans la vallée du Biferno, les Cantine Maravigna sont un domaine belle adresse traditionnelle de l'appellation. Sur les collines de la vallée, elles cultivent les cépages de la région. Le domaine signe un Biferno Riserva bien noté parmi les vins du Molise : un rouge à base de Montepulciano et d'Aglianico, structuré et fidèle à la tradition, ainsi qu'un Biferno Rosso plus accessible. Le style, classique et authentique, met en valeur les cépages du Basso Molise dans des vins équilibrés. La qualité constante et le bon rapport qualité-prix en font une valeur sûre. Les Cantine Maravigna sont une belle adresse pour découvrir le Biferno dans un style traditionnel, sur l'agneau, les viandes grillées et les fromages affinés, à bon rapport qualité-prix, pour une belle découverte des vins de la vallée du Biferno.\n\nDomaine du Biferno : Biferno Riserva bien noté. C'est une belle adresse traditionnelle de l'appellation, à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Biferno Riserva",
+        "Biferno Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-cantine-leoncelli",
+      "nom": "Cantine Leoncelli",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Guglionesi",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Aglianico",
+        "Trebbiano"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Biferno DOC",
+        "Molise DOC"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Guglionesi, dans la vallée du Biferno, les Cantine Leoncelli sont un domaine belle adresse fiable de l'appellation. Sur les collines descendant vers l'Adriatique, elles cultivent les cépages molisans. Le domaine signe un Biferno Rosso Riserva soigné, bien classé parmi les vins du Molise : un rouge à base de Montepulciano et d'Aglianico, structuré et de belle facture, ainsi qu'un Molise Rosso. Le style, soigné et fidèle à la tradition, met en valeur les cépages du Basso Molise dans des vins équilibrés. La qualité et le bon rapport qualité-prix en font une belle adresse à découvrir. Les Cantine Leoncelli sont une belle adresse pour découvrir le Biferno dans une version fiable, sur l'agneau, les viandes grillées et les fromages, à bon rapport qualité-prix, pour une belle découverte de la vallée du Biferno.\n\nDomaine du Biferno : Biferno Rosso Riserva soigné. C'est une belle adresse fiable de la vallée du Biferno, à découvrir.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Biferno Rosso Riserva",
+        "Molise Rosso"
+      ],
+      "tags": [
+        "molise",
+        "biferno",
+        "montepulciano",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    },
+    {
+      "id": "it-molise-prod-caldora",
+      "nom": "Caldora",
+      "type": "domaine",
+      "region": "Molise",
+      "sous_region": "Basso Molise / Biferno (CB)",
+      "commune": "Termoli",
+      "pays": "Italie",
+      "cepages": [
+        "Montepulciano",
+        "Trebbiano",
+        "Pinot Grigio",
+        "Tintilia"
+      ],
+      "couleurs": [
+        "Rouge",
+        "Blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Molise DOC",
+        "Terre degli Osci IGT"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Termoli, sur la côte adriatique du Molise, Caldora est une grande maison bien diffusée, belle porte d'entrée dans les vins de la région. Elle produit une gamme large et accessible, largement exportée. La maison signe des blancs (Pinot Grigio, Trebbiano) frais et faciles, ainsi que des rouges (Montepulciano, Tintilia), dans un style fiable et flatteur. Elle travaille aussi sous l'IGT Terre degli Osci. Le style, accessible et régulier, met en valeur les cépages du Molise dans des vins équilibrés et abordables, à destination d'un large public. La bonne diffusion et l'excellent rapport qualité-prix en font une valeur sûre pour une première approche. Caldora est une belle adresse pour découvrir les vins du Molise à prix accessible, du Pinot Grigio au Montepulciano en passant par le Tintilia, sur la cuisine de tous les jours.\n\nGrande maison bien diffusée du Molise : gamme large et accessible (Pinot Grigio, Montepulciano). C'est une belle porte d'entrée dans les vins de la région à bon rapport qualité-prix.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [
+        "Pinot Grigio",
+        "Montepulciano",
+        "Tintilia"
+      ],
+      "tags": [
+        "molise",
+        "montepulciano",
+        "blanc",
+        "rouge",
+        "rapport-qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "winedexer"
+    }
+  ]
+}

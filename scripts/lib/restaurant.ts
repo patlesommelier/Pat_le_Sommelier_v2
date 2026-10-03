@@ -53,6 +53,22 @@ function couleursDepuisProfil(profil: string): string[] {
   return [...out];
 }
 
+/** « 4 », « 3 (fiche Meursault…) » → 4, 3 ; « n.d. », « Hors périmètre » → 0. */
+function rankingCarte(v: unknown): number {
+  const m = String(v ?? '').match(/^\s*([0-5])\b/);
+  return m ? Number(m[1]) : 0;
+}
+
+/** Pays du vin : celui du producteur relié, sinon déduit de l'appellation écrite sur la carte. */
+export function paysDuVin(vin: string, paysProducteur?: string): string {
+  if (paysProducteur) return paysProducteur;
+  if (/\b(DOCG?|IGT|DOC\/DOCG)\b|Terre Siciliane|Toscana|Alto Adige|Valdobbiadene|Sardegna|Etna|Bolgheri/i.test(vin)) return 'Italie';
+  if (/\b(DOCa|DO)\b|Rioja|Ribera del Duero|Montsant|Bierzo|Priorat/i.test(vin)) return 'Espagne';
+  if (/Alentej|Douro|Dão|Vinho Regional/i.test(vin)) return 'Portugal';
+  if (/Uruguay/i.test(vin)) return 'Uruguay';
+  return 'France';
+}
+
 export async function importerRestaurant(dossier: string, principes: Ligne[], producteurs: Ligne[], terroirs: Ligne[], uniqueProd: (s: string) => string) {
   const meta = JSON.parse(fs.readFileSync(path.join(dossier, 'restaurant.json'), 'utf8'));
   const rid: string = meta.id;
@@ -126,7 +142,7 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
     }
   }
   const tousProducteurs = [...producteurs, ...nouveauxProducteurs];
-  const appellations = terroirs.filter((t) => String(t.type).startsWith('appellation'));
+  const appellations = terroirs.filter((t) => t.niveau === 'appellation');
   let couleur = 'blanc';
   let ordre = 0;
   for (const f of meta.fichiers.carte as string[]) {
@@ -153,11 +169,20 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
         cepages: texte(v['Cépages']), profil_degustation: profilDegustation(v['Profil de dégustation (objectif)']),
         descriptif: texte(v['Descriptif du vin']), presentation: texte(v['Présentation commerciale']), resume_court: texte(v['Résumé court']),
         etiquette_url: fs.existsSync(etiquette) ? `/restaurants/${rid}/etiquettes/${code}.jpg` : null,
+        // Rankings tels que la carte les donne (règles de sélection V7) ; « n.d. », « Hors périmètre » → 0.
+        ranking_producteur: rankingCarte(v['Ranking Pat producteur']),
+        ranking_terroir: rankingCarte(v['Ranking Pat terroir']),
+        pays: paysDuVin(String(v['Vin'] ?? ''), tousProducteurs.find((p) => p.id === prodId)?.pays as string | undefined),
         coup_de_coeur: coupsDeCoeur.has(code), disponible: true,
         a_verifier: /non précisée|à confirmer|non indiqué|non identifié/i.test(String(v['Vin']) + String(prodTexte)) ? `${prodTexte ?? ''} — ${v['Vin'] ?? ''}` : null,
         ordre: ordre++,
       });
     }
+  }
+
+  // Une contenance sans étiquette reprend celle du même vin dans l'autre contenance (R de Ruinart 37,5 cl → 75 cl).
+  for (const v of vins.filter((x) => !x.etiquette_url)) {
+    v.etiquette_url = vins.find((x) => x.etiquette_url && x.libelle === v.libelle)?.etiquette_url ?? null;
   }
 
   // ── Accords mets/vins de Pat (onglet « Détail (filtrable) » : une ligne par plat × vin, note 1 à 5) ──
@@ -195,10 +220,31 @@ export async function importerRestaurant(dossier: string, principes: Ligne[], pr
     }
   }
   plats.forEach((p) => delete p._nom_brut);
+
+  // ── Règles du sommelier ──
+  // regles_selection.xlsx : règles de classement et de sélection (V7). Elles sont appliquées par src/lib/selection.ts ;
+  // la base en garde le texte pour référence. regles.json (facultatif) : consignes ponctuelles (exclure un vin…).
+  const reglesSelection: Ligne[] = [];
+  const fs7 = path.join(dossier, meta.fichiers.regles_selection ?? 'regles_selection.xlsx');
+  if (fs.existsSync(fs7)) {
+    const version = enObjets(await lireFeuille(fs7, 'Lisez-moi')).find((l) => Object.values(l).includes('Version'));
+    const versionTexte = version ? String(Object.values(version)[1] ?? '') : null;
+    for (const onglet of ['Plat seul', 'Plat + sauce', 'Plusieurs plats', 'Hors menu', 'Tour 2 et verre']) {
+      enObjets(await lireFeuille(fs7, onglet)).forEach((r, i) => {
+        if (!texte(r['Énoncé'])) return;
+        const ordre = String(r['Ordre']);
+        reglesSelection.push({
+          id: `${rid}-${slug(onglet)}-${slug(ordre)}`, restaurant_id: rid, onglet, ordre, rang: i + 1,
+          nom: texte(r['Règle']), type: texte(r['Type']), enonce: texte(r['Énoncé']), statut: texte(r['Statut']),
+          version: versionTexte?.split(' (')[0] ?? null,
+        });
+      });
+    }
+  }
   const fr = path.join(dossier, 'regles.json');
   const regles: Ligne[] = fs.existsSync(fr)
     ? JSON.parse(fs.readFileSync(fr, 'utf8')).regles.map((r: Ligne) => ({ ...r, restaurant_id: rid, priorite: r.priorite ?? 1 }))
     : [];
 
-  return { restaurant, plats, profils, vins, nouveauxProducteurs, liens, accords, regles };
+  return { restaurant, plats, profils, vins, nouveauxProducteurs, liens, accords, regles, reglesSelection };
 }

@@ -1,0 +1,542 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "sachsen",
+  "region_label": "Sachsen (Allemagne)",
+  "source_file": "producteurs_sachsen_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 14,
+  "items": [
+    {
+      "id": "de-sachsen-prod-schloss-proschwitz",
+      "nom": "Schloss Proschwitz",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Meissen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Grauburgunder",
+        "Weissburgunder",
+        "Spätburgunder",
+        "Goldriesling",
+        "Elbling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Proschwitzer Katzensprung"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Proschwitz, près de Meissen, le Weingut Schloss Proschwitz – Prinz zur Lippe est le plus ancien et le plus grand domaine privé de Saxe. Georg Prinz zur Lippe, dont la famille fut spoliée puis exilée par le régime communiste, a commencé comme « vigneron de garage » en 1991 avant de racheter le domaine et le château familial en 1996. Premier domaine de la région entré au VDP, il s'étend sur quelque quatre-vingt-dix hectares et signe de grands Burgunder — Grauburgunder en tête, mais aussi Weissburgunder, Spätburgunder et Frühburgunder —, ainsi que de l'Elbling et le Goldriesling propre à la Saxe. Le style de la maison met en avant l'ampleur, la pureté et l'élégance. Pionnier de la renaissance viticole saxonne après la réunification, Schloss Proschwitz est la grande référence historique de la région. L'histoire de Proschwitz épouse celle de l'Allemagne du XXe siècle : spoliée par le régime communiste, exilée, la famille zur Lippe a tout reconstruit après 1990. Aujourd'hui, avec ses vignobles en Saxe et en Thuringe, le domaine produit quelque 600 000 bouteilles et a porté très haut le nom de la région. Le Grauburgunder en est la grande spécialité, mais le domaine cultive aussi le Goldriesling propre à la Saxe et de beaux Pinots. Pionnier et locomotive de la viticulture saxonne, Schloss Proschwitz reste la référence historique et la porte d'entrée vers les vins de l'Elbe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "grauburgunder",
+        "icone",
+        "vdp",
+        "historique",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "decanter|simply-saxony|falstaff"
+    },
+    {
+      "id": "de-sachsen-prod-klaus-zimmerling",
+      "nom": "Klaus Zimmerling",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Dresden",
+      "commune": "Dresden-Pillnitz",
+      "pays": "Allemagne",
+      "cepages": [
+        "Grauburgunder",
+        "Weissburgunder",
+        "Riesling",
+        "Traminer",
+        "Kerner"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Pillnitzer Königlicher Weinberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pillnitz, sur les hauteurs de Dresde, le Weingut Klaus Zimmerling est l'un des domaines les plus singuliers et les plus recherchés d'Allemagne. Ancien ingénieur en mécanique, Klaus Zimmerling a acquis en 1992 quatre hectares sur le coteau escarpé du Königlicher Weinberg (la Rysselkuppe), au-dessus du château de Pillnitz, doté d'une exposition plein sud idéale. Il y cultive, sans désherbants ni pesticides de synthèse, des cépages comme le Grauburgunder, le Weissburgunder, le Riesling, le Kerner et le Traminer. Ses rendements volontairement très faibles donnent des vins d'une densité et d'une concentration rares, secs et profonds. Le domaine est aussi une œuvre d'art à part entière : les sculptures de femmes en bois de son épouse, l'artiste Malgorzata Chodakowska, ornent les vignes, les chais et les étiquettes. Membre du VDP, Klaus Zimmerling produit en très petites quantités des vins cultes, qui figurent parmi les plus admirés de Saxe et incarnent une vision artisanale et artistique du vin allemand. L'histoire de Zimmerling est celle d'une vocation tardive et d'une exigence absolue : ingénieur sous la RDA, il s'est consacré au vin après la réunification, sur un coteau de granite et de syénite exposé plein sud, au-dessus du château baroque de Pillnitz. Là, il a fait le choix radical de la qualité contre la quantité, avec des rendements minuscules qui donnent des vins d'une concentration et d'une profondeur peu communes en Allemagne du Nord. Chaque millésime est aussi une rencontre entre le vin et l'art : l'étiquette change à chaque récolte, ornée d'une sculpture différente de Malgorzata Chodakowska, dont les figures de femmes en bois peuplent aussi les vignes et le chai. Produits en quelques milliers de bouteilles seulement, les vins de Zimmerling — Grauburgunder, Riesling, Traminer — sont parmi les plus recherchés et les plus admirés d'Allemagne de l'Est, et incarnent une vision profondément personnelle et artisanale du grand vin. Pour l'amateur, c'est l'âme de la Saxe en bouteille. Dans une région minuscule, longtemps connue pour des blancs légers et discrets, Zimmerling a prouvé que la Saxe pouvait donner des vins d'une intensité et d'une personnalité dignes des plus grands : une référence absolue pour qui veut découvrir l'excellence du vignoble de l'Elbe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "grauburgunder",
+        "icone",
+        "vdp",
+        "art",
+        "dresden"
+      ],
+      "a_verifier": null,
+      "source": "dresden-magazin|thewinebuzz"
+    },
+    {
+      "id": "de-sachsen-prod-martin-schwarz",
+      "nom": "Martin Schwarz",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Meissen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder",
+        "Blaufränkisch"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Meißner Kapitelberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Meissen, le Weingut Martin Schwarz est l'un des domaines les plus salués de Saxe. Ancien maître de chai de Schloss Proschwitz, formé à Geisenheim, Martin Schwarz a fondé sa propre « manufacture de vin ». Il signe des blancs secs, aromatiques et minéraux (Riesling, Weissburgunder), ainsi que des rouges ambitieux qui osent des cépages rares pour la région, du Blaufränkisch jusqu'au Nebbiolo. Le style Schwarz recherche la précision, la profondeur et l'expression du terroir granitique. Le domaine illustre l'audace de la nouvelle génération saxonne, qui explore le potentiel insoupçonné de cette petite région de l'Elbe. En quittant Schloss Proschwitz pour voler de ses propres ailes, Martin Schwarz a apporté à la Saxe une ambition nouvelle. Sa « manufacture » mise sur le terroir granitique et l'expression la plus pure des cépages, avec des blancs minéraux et des rouges qui osent l'inattendu — Blaufränkisch, voire Nebbiolo, rareté absolue sous cette latitude. Salué par la critique, le domaine illustre la montée en gamme spectaculaire de la région et le potentiel insoupçonné de ses sols et de son climat, que réchauffe peu à peu le changement climatique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "montant",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|decanter|winewitandwisdom"
+    },
+    {
+      "id": "de-sachsen-prod-schloss-wackerbarth",
+      "nom": "Schloss Wackerbarth",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder",
+        "Goldriesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler Goldener Wagen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le Schloss Wackerbarth est le domaine de l'État de Saxe et la plus ancienne maison de Sekt de la région. Installé dans un magnifique ensemble baroque, ce « domaine-expérience » (Erlebnisweingut) produit aussi bien des effervescents — sa grande spécialité — que des vins tranquilles, Riesling, Burgunder et Goldriesling, sur les coteaux de l'Elbe. Le style de la maison met en avant la tradition et l'accessibilité. Haut lieu touristique et viticole, Schloss Wackerbarth illustre la longue tradition du Sekt en Saxe et le rôle du domaine d'État dans la région. Ancienne résidence baroque d'un ministre d'Auguste le Fort, Schloss Wackerbarth conjugue patrimoine, tourisme et viticulture. Domaine de l'État de Saxe, il perpétue une tradition d'effervescent vieille de plusieurs siècles — le Sekt y était déjà produit à l'époque saxonne, et exporté dans tout le bloc de l'Est sous la RDA. Aujourd'hui, ses Sekt et ses vins tranquilles, accessibles et soignés, en font l'une des adresses les plus visitées d'Allemagne. Le domaine illustre la place singulière du Sekt dans l'identité viticole de la Saxe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sekt",
+        "historique",
+        "etat",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|thewinebuzz|winetourism"
+    },
+    {
+      "id": "de-sachsen-prod-karl-friedrich-aust",
+      "nom": "Karl Friedrich Aust",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder",
+        "Traminer"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler Goldener Wagen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le Weingut Karl Friedrich Aust est l'une des belles adresses de Saxe. Sur le grand coteau du Goldener Wagen, il signe des Riesling et des Burgunder droits et minéraux, ainsi que du Traminer, dans le style classique et désaltérant de la région. Le style Aust met en avant la finesse, la fraîcheur et la pureté. Le domaine illustre la qualité des producteurs de Radebeul, l'un des cœurs viticoles de la Saxe, sur les coteaux qui dominent l'Elbe. Tailleur de pierre de formation, Karl Friedrich Aust a repris un domaine familial à Radebeul et l'a hissé parmi les meilleurs de Saxe. Sur le coteau du Goldener Wagen, il signe des Riesling et des Burgunder droits, précis et désaltérants, dans le style classique de la région, qui conserve la fraîcheur et la délicatesse des grands blancs de l'Elbe. Le domaine illustre la qualité des producteurs de Radebeul et la fidélité au style traditionnel saxon, tout en finesse. Travaillant des coteaux escarpés que soutiennent d'anciens murs de pierre sèche, héritage de la viticulture historique de Radebeul, Aust perpétue un savoir-faire patrimonial autant qu'il signe des vins d'une grande netteté. Il compte aujourd'hui parmi les valeurs sûres de la Saxe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "weissburgunder",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|decanter"
+    },
+    {
+      "id": "de-sachsen-prod-hofloessnitz",
+      "nom": "Hoflössnitz",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Goldriesling",
+        "Traminer",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler Goldener Wagen"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le Weingut Hoflössnitz est un domaine bio historique appartenant à la ville. Sa maison d'été, construite en 1650 pour le prince-électeur, abrite aujourd'hui un musée du vin. Le domaine, conduit en agriculture biologique, signe du Goldriesling — spécialité saxonne —, du Traminer et du Riesling, sur les coteaux de l'Elbe. Le style Hoflössnitz met en avant l'authenticité et le respect du terroir. Gardien du patrimoine viticole saxon, le domaine illustre l'histoire et la tradition de la région. Joyau du patrimoine saxon, la Hoflössnitz fut un domaine de plaisance des princes-électeurs, et sa maison d'été de 1650, magnifiquement décorée, abrite aujourd'hui un musée du vin. Propriété de la ville de Radebeul et conduit en bio, le domaine perpétue des cépages traditionnels comme le Goldriesling et le Traminer. Le cru illustre l'histoire profonde de la viticulture saxonne et l'attachement de la région à son patrimoine, dans l'un des plus beaux ensembles viticoles d'Allemagne de l'Est. Pour le visiteur, c'est aussi un lieu de mémoire incontournable, où l'on découvre l'histoire millénaire du vin saxon avant de déguster, au bar du domaine, les cépages traditionnels de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "goldriesling",
+        "bio",
+        "historique",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "intowine|wein.plus"
+    },
+    {
+      "id": "de-sachsen-prod-vincenz-richter",
+      "nom": "Vincenz Richter",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Meissen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Traminer"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Meißner Kapitelberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Meissen, le Weingut Vincenz Richter est un domaine et restaurant historique de la cité de la porcelaine. Il signe des Riesling, des Weissburgunder et des Traminer soignés, sur les coteaux de l'Elbe autour de Meissen. Le style de la maison met en avant la tradition et la typicité régionale. Le domaine illustre la qualité des adresses historiques de Meissen, berceau de la viticulture saxonne. Domaine et restaurant réputé de Meissen, Vincenz Richter perpétue une longue tradition dans la cité de la porcelaine. Ses Riesling, Weissburgunder et Traminer, soignés et typés, accompagnent une table appréciée. Le domaine illustre la qualité des adresses historiques de Meissen, berceau de la viticulture saxonne, où la vigne, la gastronomie et le patrimoine sont étroitement liés. Sur les coteaux de granite qui dominent l'Elbe, le domaine signe des blancs secs et typés, à l'acidité fraîche caractéristique de la région. Institution de Meissen, il marie depuis longtemps la tradition viticole et la table, dans un cadre historique au pied de l'Albrechtsburg. Vincenz Richter illustre la continuité du patrimoine viticole de la cité de la porcelaine.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "historique",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wein.plus"
+    },
+    {
+      "id": "de-sachsen-prod-tim-strasser",
+      "nom": "Tim Strasser",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Meissen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Hibernal",
+        "Helios"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Meißner"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Meissen, Tim Strasser est le « jeune sauvage » de la viticulture saxonne. Cinquième génération d'une famille de vignerons, il a été cité par la critique parmi les talents montants d'Allemagne. Il signe des Riesling et des Weissburgunder, mais s'est aussi fait connaître comme pionnier des cépages résistants (Hibernal, Helios) en Saxe. Le style Strasser, audacieux et moderne, mêle tradition familiale et expérimentation. Le domaine illustre l'esprit d'innovation de la jeune génération qui renouvelle l'image de la région. Issu d'une famille de vignerons installée à Meissen depuis cinq générations, Tim Strasser s'est imposé comme une figure de la jeune scène saxonne. Formé à Schloss Wackerbarth, il cultive aussi bien le Riesling classique que des cépages résistants (Hibernal, Helios) dont il fut un pionnier dans la région, dans une démarche tournée vers l'avenir. Le domaine illustre l'esprit d'expérimentation et le renouveau qui animent la nouvelle génération de vignerons saxons. Pour l'amateur, c'est l'une des adresses les plus stimulantes de la Saxe, où la tradition familiale rencontre une vraie curiosité pour l'avenir de la vigne face au changement climatique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "montant",
+        "piwi",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "dresden-magazin"
+    },
+    {
+      "id": "de-sachsen-prod-frederic-fourre",
+      "nom": "Frédéric Fourré",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Goldriesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le domaine de Frédéric Fourré est salué pour ses vins classiques de Saxe. Il signe des Riesling, des Weissburgunder et du Goldriesling vifs et délicats, fidèles au style traditionnel et désaltérant de la région. Le domaine illustre la persistance du style classique saxon, tout en finesse et en fraîcheur. Salué par la critique pour la justesse de ses vins, Frédéric Fourré perpétue à Radebeul le style classique de la Saxe : des Riesling, Weissburgunder et Goldriesling vifs, délicats et désaltérants, à l'acidité fine. Le domaine illustre la pérennité de ce style traditionnel, encore vivant chez les meilleurs producteurs, dans une région où la nouvelle génération explore par ailleurs des expressions plus amples. Il demeure l'un des bons gardiens du style classique saxon, à Radebeul.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "goldriesling",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "de-sachsen-prod-jan-ulrich",
+      "nom": "Jan Ulrich",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Diesbar-Seußlitz",
+      "commune": "Diesbar-Seußlitz",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Seußlitzer Heinrichsburg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Diesbar-Seußlitz, à l'extrémité nord du vignoble saxon, le Weingut Jan Ulrich est un domaine familial. Sur les coteaux de la Heinrichsburg, au bord de l'Elbe, il signe des Weissburgunder, des Riesling et des Spätburgunder. Le domaine illustre la viticulture du secteur de Seußlitz, l'un des plus septentrionaux de la région. À Diesbar-Seußlitz, à la pointe nord du vignoble saxon, le domaine Jan Ulrich travaille les coteaux de la Heinrichsburg, au bord de l'Elbe. Ses Weissburgunder, Riesling et Spätburgunder reflètent le caractère du secteur de Seußlitz, l'un des plus septentrionaux et des plus pittoresques de la région. Le domaine illustre la viticulture du nord de la Saxe, où la vigne longe le fleuve. Il porte les couleurs du secteur pittoresque de Seußlitz, au nord de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "riesling",
+        "diesbar-seusslitz"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-sachsen-prod-weingut-drei-herren",
+      "nom": "Weingut Drei Herren",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le Weingut Drei Herren est un domaine soigné de Saxe. Il signe des Riesling, des Weissburgunder et des Spätburgunder sur les coteaux de l'Elbe, dans la tradition de la région. Le domaine illustre la qualité des producteurs de Radebeul, cœur viticole de la Saxe. À Radebeul, le Weingut Drei Herren signe des Riesling, Weissburgunder et Spätburgunder soignés, sur les coteaux de l'Elbe. Fidèle à la tradition de la région, il illustre la qualité des nombreux producteurs de Radebeul, l'un des cœurs viticoles de la Saxe, où la vigne s'étage au-dessus du fleuve, face à Dresde. Il compte parmi les bons producteurs des coteaux de Radebeul, face à Dresde.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    },
+    {
+      "id": "de-sachsen-prod-weingut-schuh",
+      "nom": "Weingut Schuh",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Coswig-Sörnewitz",
+      "pays": "Allemagne",
+      "cepages": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Goldriesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Sörnewitzer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Sörnewitz, près de Meissen, le Weingut Schuh est un domaine familial de Saxe. Il signe du Müller-Thurgau, du Weissburgunder et du Goldriesling, dans le style sec et frais de la région. Le domaine illustre la qualité des producteurs familiaux des coteaux de l'Elbe autour de Meissen. À Sörnewitz, près de Meissen, le Weingut Schuh est un domaine familial qui signe du Müller-Thurgau, du Weissburgunder et du Goldriesling — spécialité saxonne —, dans le style sec et frais de la région. Le domaine illustre la qualité des producteurs familiaux des coteaux de l'Elbe, qui font, à côté des grands noms, la vie viticole de la Saxe. Il met en valeur le Goldriesling, cépage emblématique et exclusif de la Saxe.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "goldriesling",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "falstaff|wein.plus"
+    },
+    {
+      "id": "de-sachsen-prod-winzergenossenschaft-meissen",
+      "nom": "Winzergenossenschaft Meissen",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Meissen",
+      "commune": "Meissen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Goldriesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Meißner"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Meissen, la Winzergenossenschaft est la coopérative régionale de Saxe (environ 360 hectares et plus de 1 500 vignerons, souvent à temps partiel). Elle propose une large gamme de blancs (Müller-Thurgau, Weissburgunder, Goldriesling) et de rouges. Pilier de l'économie viticole locale, elle illustre le poids du modèle coopératif dans cette petite région. Rassemblant plus de 1 500 vignerons, le plus souvent propriétaires de minuscules parcelles cultivées à temps partiel, la coopérative de Meissen vinifie une large part de la récolte régionale. Sa gamme va du vin quotidien à de bonnes cuvées, et inclut le Goldriesling et l'Elbtal-Sekt. Elle illustre le rôle économique et social déterminant du modèle coopératif dans la préservation du vignoble de Saxe. Sans elle, une région aussi morcelée ne pourrait maintenir son vignoble.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cooperative",
+        "meissen"
+      ],
+      "a_verifier": null,
+      "source": "winewitandwisdom"
+    },
+    {
+      "id": "de-sachsen-prod-kastler-friedland",
+      "nom": "Kastler Friedland",
+      "type": "domaine",
+      "region": "Sachsen",
+      "sous_region": "Radebeul",
+      "commune": "Radebeul",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Traminer"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Radebeuler"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Radebeul, le Weingut Kastler Friedland est un petit domaine familial de Saxe. Il signe des Riesling, des Weissburgunder et du Traminer sur les coteaux de l'Elbe. Le domaine illustre la qualité des petits producteurs de Radebeul, dans la tradition viticole saxonne. À Radebeul, le petit domaine Kastler Friedland signe des Riesling, Weissburgunder et Traminer sur les coteaux de l'Elbe, dans la tradition saxonne. Il illustre la vitalité du tissu de petits producteurs de Radebeul, qui contribuent, par leur travail discret, à la diversité et à la réputation de cette petite région viticole. Il illustre la vitalité du tissu de petits domaines de Radebeul.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "radebeul"
+      ],
+      "a_verifier": null,
+      "source": "falstaff"
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "schema_version": 1,
+  "kind": "terroirs",
+  "region_key": "umbria",
+  "region_label": "Umbria (Italie)",
+  "source_file": "terroirs_umbria.json",
+  "built_at": "2026-07-08",
+  "count": 15,
+  "items": [
+    {
+      "id": "it-umbria-terr-montefalco-sagrantino",
+      "nom": "Montefalco Sagrantino",
+      "type": "appellation (DOCG)",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sagrantino"
+      ],
+      "altitude": "~220-470 m",
+      "sols": "argilo-calcaires des collines de Montefalco",
+      "caracteristiques_rapides": "Le grand rouge de l'Umbrie : Sagrantino, l'un des cépages les plus tanniques du monde, en vin puissant, profond et de très longue garde, rival du Barolo et du Brunello.",
+      "notes_objectives": "Le Montefalco Sagrantino est le grand rouge de l'Umbrie et l'un des vins les plus singuliers d'Italie. Produit sur les collines autour du village médiéval de Montefalco, au cœur de la région, à partir du seul cépage Sagrantino, il est réputé pour être l'un des vins les plus tanniques du monde — le Sagrantino contient une teneur en polyphénols exceptionnelle, supérieure à presque tous les autres cépages.\n\nLongtemps produit uniquement en version douce (passito), le Sagrantino a été révélé en vin sec à partir des années 1970-80, notamment grâce à Arnaldo Caprai et Paolo Bea, avant d'obtenir la DOCG en 1992. Sur les sols argilo-calcaires des collines de Montefalco, à 220-470 mètres, le cépage donne des rouges d'une couleur profonde, puissants, denses et d'une structure tannique impressionnante, aux arômes de mûre, de prune, de réglisse, d'épices et de notes sauvages, avec une réelle aptitude à la très longue garde. Le cahier des charges impose un long élevage (au moins 37 mois, dont 12 en bois). Dans sa jeunesse, le Sagrantino est austère et fermé ; il demande des années pour se fondre et révéler toute sa complexité. Les meilleurs producteurs (Caprai, Bea, Tabarrini, Antonelli, Còlpetrone) ont appris à en dompter les tanins tout en préservant sa personnalité. La version passito (douce), traditionnelle, subsiste comme un joyau rare. Par son ambition, ses prix et sa qualité, le Sagrantino rivalise aujourd'hui avec le Barolo et le Brunello di Montalcino.\n\nGrand rouge de l'Umbrie et l'un des vins les plus tanniques du monde, le Montefalco Sagrantino est puissant, profond et de très longue garde. DOCG rivale du Barolo et du Brunello, c'est le fleuron du vin ombrien.\n\nL'histoire du Sagrantino est celle d'une résurrection. Cépage ancien, longtemps réservé au vin de messe et aux passiti familiaux, il avait presque disparu quand quelques vignerons visionnaires décidèrent, dans les années 1970-80, de le vinifier en sec et d'en révéler le potentiel. Le pari était risqué : dompter l'un des cépages les plus tanniques au monde sans en trahir la puissance. Le succès fut tel que Montefalco, petit village perché des collines ombriennes, est devenu en quelques décennies une appellation de renommée internationale. Servi sur du sanglier (roi de la cuisine ombrienne), des viandes rouges en sauce, du gibier ou des fromages très affinés, le Sagrantino déploie une puissance et une profondeur impressionnantes, et se patine sur quinze à vingt ans, développant des arômes tertiaires de cuir, de tabac, de sous-bois et d'épices. Sa richesse en polyphénols en fait aussi l'un des vins les plus riches en antioxydants. Longtemps, le débat a opposé les tenants d'un style moderne et velouté à ceux d'un Sagrantino plus austère et traditionnel ; les deux écoles coexistent aujourd'hui, unies par la conviction que ce cépage confidentiel compte parmi les plus grands d'Italie. Le Sagrantino est ainsi devenu le symbole de tout le renouveau viticole de l'Umbrie.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sagrantino",
+        "rouge",
+        "docg",
+        "garde",
+        "tannique"
+      ],
+      "source": "wine-searcher|winetravelguides"
+    },
+    {
+      "id": "it-umbria-terr-torgiano-rosso-riserva",
+      "nom": "Torgiano Rosso Riserva",
+      "type": "appellation (DOCG)",
+      "region": "Umbria",
+      "sous_region": "Torgiano (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Canaiolo"
+      ],
+      "altitude": "~200-300 m",
+      "sols": "argilo-calcaires et alluviaux de Torgiano",
+      "caracteristiques_rapides": "La DOCG créée par Lungarotti : Sangiovese de garde, complexe et racé (Rubesco Vigna Monticchio), qui a le premier hissé l'Umbrie parmi les grands vins d'Italie.",
+      "notes_objectives": "Le Torgiano Rosso Riserva est l'une des deux DOCG de l'Umbrie et le vin qui, le premier, a hissé la région parmi les grands d'Italie. Produit sur les collines de Torgiano, entre Pérouse et Assise, à base de Sangiovese (complété de Canaiolo), il est indissociable du domaine Lungarotti, qui a littéralement créé cette appellation.\n\nC'est en effet Giorgio Lungarotti qui, dans les années 1960-70, démontra que le Sangiovese de Torgiano pouvait donner un grand vin de garde, digne des meilleurs rouges toscans. Son Rubesco Vigna Monticchio, un Torgiano Rosso Riserva issu d'un cru unique et longuement élevé, est devenu un classique : un rouge complexe, racé et d'une longévité exceptionnelle, aux arômes de cerise, de tabac, de cuir, de sous-bois et d'épices, qui vieillit des décennies. La distinction du Torgiano Rosso Riserva en DOCG (1990) consacra ce niveau d'excellence. Sur les sols argilo-calcaires et alluviaux de Torgiano, le Sangiovese exprime ici une élégance et une profondeur remarquables, portées par un cahier des charges exigeant (élevage prolongé, rendements limités). Bien que l'appellation soit quasi exclusivement le fait de Lungarotti, elle occupe une place à part dans l'histoire du vin italien comme l'un des berceaux de la renaissance qualitative du Sangiovese hors de Toscane.\n\nL'une des deux DOCG d'Umbrie, le Torgiano Rosso Riserva est un grand Sangiovese de garde, complexe et racé (Rubesco Vigna Monticchio de Lungarotti). C'est le vin qui, le premier, a placé l'Umbrie parmi les grands d'Italie.\n\nLe cas du Torgiano Rosso Riserva est presque unique en Italie : celui d'une DOCG largement façonnée par une seule famille, dont la vision a valeur d'exemple pour toute une région. En prouvant, dès les années 1960, que le Sangiovese ombrien pouvait rivaliser avec les meilleurs crus toscans et vieillir des décennies, Giorgio Lungarotti a ouvert la voie à la renaissance qualitative de l'Umbrie tout entière. Le Rubesco Vigna Monticchio, dont les vieux millésimes continuent d'impressionner par leur jeunesse préservée, est la démonstration éclatante de cette longévité. Servi sur des viandes rouges, du gibier, des truffes (spécialité ombrienne) ou des fromages affinés, il séduit par son élégance, sa complexité et son fruité persistant, et se patine sur vingt ans et plus. L'exigence du cahier des charges — rendements limités, long élevage en bois et en bouteille avant la sortie — garantit ce niveau d'excellence. Si l'appellation reste confidentielle et quasi monopolistique, elle occupe une place à part dans l'histoire du vin italien comme l'un des tout premiers terroirs à avoir hissé le Sangiovese hors de Toscane au rang de grand vin de garde, faisant de Torgiano un nom qui compte bien au-delà des frontières de l'Umbrie.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "torgiano",
+        "sangiovese",
+        "rouge",
+        "docg",
+        "garde",
+        "lungarotti"
+      ],
+      "source": "jancisrobinson|decanter"
+    },
+    {
+      "id": "it-umbria-terr-orvieto",
+      "nom": "Orvieto",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grechetto",
+        "Procanico",
+        "Verdello",
+        "Drupeggio"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "tuf volcanique, argiles et sables fossilifères d'Orvieto",
+      "caracteristiques_rapides": "Le grand blanc historique de l'Umbrie, sur le tuf volcanique : Grechetto et Procanico en vin frais, du sec au moelleux botrytisé, le plus célèbre et le plus vaste vin ombrien.",
+      "notes_objectives": "L'Orvieto est le vin le plus célèbre et le plus ancien de l'Umbrie, un grand blanc historique dont la réputation remonte à l'Antiquité étrusque et romaine. Produit autour de la spectaculaire cité d'Orvieto, perchée sur un promontoire de tuf volcanique dans le sud-ouest de la région, il représente à lui seul une large part du vignoble ombrien.\n\nL'Orvieto est un blanc d'assemblage, à base de Grechetto et de Procanico (le nom local du Trebbiano Toscano), complétés de Verdello, Drupeggio et Malvasia. Sa singularité tient à son terroir : la cité et ses environs reposent sur un socle de tuf volcanique creusé d'un réseau de grottes, où les Étrusques puis les Romains vinifiaient déjà, la fraîcheur constante des caves arrêtant parfois la fermentation et donnant un vin légèrement doux. Aujourd'hui, l'Orvieto est le plus souvent sec (secco), frais, léger et minéral, aux arômes floraux et d'agrumes ; la zone Classico, au cœur historique, donne les meilleures expressions. Mais Orvieto est aussi réputée pour ses grands moelleux : le brouillard matinal venu du lac de Corbara favorise la pourriture noble, permettant de superbes liquoreux botrytisés (Barberani, Decugnano, Palazzone). Si la production courante reste simple, les meilleurs producteurs ont prouvé que l'Orvieto pouvait être un blanc de terroir profond et apte à la garde.\n\nGrand blanc historique de l'Umbrie sur son tuf volcanique, l'Orvieto est un assemblage de Grechetto et Procanico, du sec frais au moelleux botrytisé. C'est le vin le plus célèbre et le plus vaste de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "orvieto",
+        "grechetto",
+        "blanc",
+        "tuf",
+        "doc",
+        "historique"
+      ],
+      "source": "wine-searcher|italymagazine"
+    },
+    {
+      "id": "it-umbria-terr-montefalco-rosso",
+      "nom": "Montefalco Rosso",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Montefalco (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Sagrantino",
+        "Merlot"
+      ],
+      "altitude": "~220-470 m",
+      "sols": "argilo-calcaires des collines de Montefalco",
+      "caracteristiques_rapides": "Le rouge de Montefalco à base de Sangiovese (avec une pointe de Sagrantino) : plus souple et accessible que le Sagrantino, mais capable d'être un grand rouge austère.",
+      "notes_objectives": "Le Montefalco Rosso est le second rouge de Montefalco, à l'ombre du puissant Sagrantino mais loin d'être un simple petit frère. Produit sur le même terroir argilo-calcaire des collines de Montefalco, il repose principalement sur le Sangiovese (60-80 %), complété d'une pointe de Sagrantino (10-25 %) et parfois d'autres cépages.\n\nCette recette lui donne une double personnalité : la souplesse, le fruité et la fraîcheur du Sangiovese, relevés par la structure tannique et la couleur du Sagrantino. Le résultat est un rouge plus accessible et plus polyvalent que le Sagrantino, à boire plus jeune, aux arômes de cerise, de prune et d'épices, avec une belle buvabilité. Mais entre les mains des meilleurs (Bea, Caprai, Bellafonte, Antonelli), le Montefalco Rosso, notamment en version Riserva, peut être un rouge sérieux, austère et de garde, qui approche le Sagrantino en concentration tout en restant plus digeste. C'est le vin de tous les jours de Montefalco, mais aussi un rouge de caractère qui monte en qualité et gagne en reconnaissance. Il accompagne à merveille la cuisine ombrienne, des viandes aux pâtes.\n\nSecond rouge de Montefalco, le Montefalco Rosso marie Sangiovese et une pointe de Sagrantino : plus souple et accessible, mais capable, en Riserva, d'être un grand rouge austère. C'est le rouge polyvalent de l'appellation.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "montefalco",
+        "sangiovese",
+        "sagrantino",
+        "rouge",
+        "doc"
+      ],
+      "source": "wine-searcher|gamberorosso"
+    },
+    {
+      "id": "it-umbria-terr-grechetto-di-todi",
+      "nom": "Grechetto di Todi",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Todi (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grechetto (di Todi)"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "argilo-calcaires et grès des collines de Todi",
+      "caracteristiques_rapides": "Le fief du Grechetto en pureté : blanc frais, minéral et structuré, plus corsé que dans l'Orvieto, en plein renouveau qualitatif (Roccafiore), l'un des grands blancs autochtones du centre.",
+      "notes_objectives": "Le Grechetto di Todi est le fief du Grechetto, cépage blanc autochtone emblématique de l'Umbrie, dans sa version la plus qualitative. Produit autour de la belle cité médiévale de Todi, au centre de la région, il met en valeur un clone particulier du Grechetto (le Grechetto di Todi, ou Pignoletto), distinct de celui d'Orvieto.\n\nContrairement à l'Orvieto, où le Grechetto est assemblé et joue souvent un rôle de soutien, il est ici vinifié en pureté, révélant tout son potentiel. Sur les sols argilo-calcaires et gréseux des collines de Todi, le Grechetto donne un blanc plus corsé et structuré que dans l'Orvieto : frais et minéral, aux arômes de fleurs blanches, de poire, d'amande et d'agrumes, avec une belle matière et une réelle aptitude à un certain vieillissement. Longtemps sous-estimé, le Grechetto di Todi connaît un beau renouveau qualitatif, porté par des domaines comme Roccafiore, Cantina Peppucci ou Tudernum, qui en ont fait l'un des blancs autochtones les plus intéressants d'Italie centrale. C'est un accord idéal avec les poissons, les fritures et la cuisine ombrienne à base de truffe.\n\nFief du Grechetto en pureté autour de Todi, le Grechetto di Todi donne un blanc plus corsé et minéral que l'Orvieto, en plein renouveau qualitatif. C'est l'un des grands blancs autochtones du centre de l'Italie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "todi",
+        "grechetto",
+        "blanc",
+        "doc",
+        "autochtone"
+      ],
+      "source": "gamberorosso|decanter"
+    },
+    {
+      "id": "it-umbria-terr-spoleto-trebbiano-spoletino",
+      "nom": "Spoleto (Trebbiano Spoletino)",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Spoleto (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Trebbiano Spoletino"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "argilo-calcaires des collines de Spolète",
+      "caracteristiques_rapides": "Le terroir du Trebbiano Spoletino, cépage blanc autochtone redécouvert : blanc vif, structuré et de garde (souvent sur vieilles vignes en arbre), la révélation blanche de l'Umbrie.",
+      "notes_objectives": "L'appellation Spoleto est le terroir du Trebbiano Spoletino, cépage blanc autochtone redécouvert qui est l'une des grandes révélations du vin ombrien. Produit autour de la ville d'art de Spolète, au sud de Montefalco, ce Trebbiano n'a rien à voir avec les Trebbiano banals et productifs : c'est une variété distincte, à la forte personnalité.\n\nLongtemps cultivé de façon marginale, souvent sur de très vieilles vignes conduites en hauteur « à l'arbre » (mariées à des érables ou des peupliers, à la manière antique), le Trebbiano Spoletino a été remis à l'honneur par une nouvelle génération de vignerons. Sur les sols argilo-calcaires des collines de Spolète, il donne un blanc d'une belle intensité : vif et tendu, à l'acidité marquée, aux arômes d'agrumes, de fleurs, de fruits jaunes et d'herbes, avec une matière et une salinité qui lui confèrent structure et aptitude à la garde. Vinifié en sec, parfois en macération ou en spumante, il séduit par sa fraîcheur et son caractère. Des producteurs comme Tabarrini (Adarmando), Fratelli Pardi, Antonelli ou Perticaia en ont fait un grand blanc de terroir, symbole du renouveau des cépages autochtones ombriens. C'est un accord idéal avec les poissons, les fritures et la cuisine locale.\n\nTerroir du Trebbiano Spoletino autour de Spolète, l'appellation Spoleto donne un blanc vif, structuré et de garde, souvent sur vieilles vignes « à l'arbre ». C'est l'une des grandes révélations blanches de l'Umbrie.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "spoleto",
+        "trebbiano-spoletino",
+        "blanc",
+        "doc",
+        "autochtone",
+        "revelation"
+      ],
+      "source": "wine-searcher|gamberorosso"
+    },
+    {
+      "id": "it-umbria-terr-colli-martani",
+      "nom": "Colli Martani",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Todi (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Grechetto",
+        "Sangiovese",
+        "Trebbiano"
+      ],
+      "altitude": "~200-450 m",
+      "sols": "argilo-calcaires des Monts Martani",
+      "caracteristiques_rapides": "Vaste DOC des collines centrales (Monts Martani) : réputée pour son Grechetto varietal et ses Sangiovese, entre Montefalco et Todi, cœur historique du Grechetto d'Umbrie.",
+      "notes_objectives": "La DOC Colli Martani couvre les collines centrales de l'Umbrie, autour du massif des Monts Martani, entre Montefalco, Todi et Bevagna. Vaste appellation de cœur de région, elle est surtout réputée pour le Grechetto, dont elle est l'un des berceaux historiques.\n\nSur les sols argilo-calcaires de ces collines, la DOC produit un Grechetto varietal frais, floral et minéral, souvent cité parmi les meilleures expressions du cépage (le Grecante de Caprai ou le Grechetto de Rocca di Fabbri en sont de bons exemples), ainsi que des rouges de Sangiovese et d'autres cépages. Moins connue que Montefalco ou Orvieto, l'appellation Colli Martani n'en est pas moins un terroir de qualité, qui chevauche d'ailleurs en partie la zone de Montefalco. Elle illustre le rôle central du Grechetto dans l'identité blanche de l'Umbrie, aux côtés du Grechetto di Todi voisin. Les vins, souvent d'un excellent rapport qualité-prix, accompagnent la cuisine ombrienne, des poissons aux viandes selon la couleur.\n\nVaste DOC des Monts Martani au cœur de l'Umbrie, les Colli Martani sont réputés pour le Grechetto varietal et les Sangiovese. C'est l'un des berceaux historiques du Grechetto d'Umbrie. Le Grechetto trouve ici, sur les pentes bien exposées des Monts Martani, un terroir de prédilection qui en révèle la fraîcheur et la minéralité. Servi sur des poissons, des fritures, des fromages frais ou une cuisine à base de truffe, le Grechetto des Colli Martani séduit par sa vivacité et son caractère. Souvent proposée à des prix très abordables, l'appellation offre un excellent rapport qualité-prix et constitue une belle porte d'entrée dans les blancs autochtones de l'Umbrie, aux côtés du Grechetto di Todi voisin.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "colli-martani",
+        "grechetto",
+        "sangiovese",
+        "doc"
+      ],
+      "source": "wine-searcher|italymagazine"
+    },
+    {
+      "id": "it-umbria-terr-torgiano",
+      "nom": "Torgiano",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Torgiano (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Grechetto",
+        "Trebbiano",
+        "Vermentino"
+      ],
+      "altitude": "~200-300 m",
+      "sols": "argilo-calcaires et alluviaux de Torgiano",
+      "caracteristiques_rapides": "L'appellation-cadre de Torgiano (hors Riserva) : Sangiovese (Rubesco) et blancs d'assemblage (Torre di Giano), le berceau de l'Umbrie viticole moderne façonné par Lungarotti.",
+      "notes_objectives": "L'appellation Torgiano (DOC), distincte de sa prestigieuse Riserva, est le berceau de l'Umbrie viticole moderne, façonné par la famille Lungarotti. Sur les collines de Torgiano, entre Pérouse et Assise, au confluent du Tibre et du Chiascio, elle couvre une gamme complète de vins tranquilles.\n\nEn rouge, elle repose sur le Sangiovese, notamment avec le célèbre Rubesco « classique » de Lungarotti, rouge fruité et équilibré, plus accessible que la Riserva. En blanc, elle donne des assemblages frais et parfumés, comme le Torre di Giano (Trebbiano, Grechetto, Vermentino) de Lungarotti. Sur les sols argilo-calcaires et alluviaux de la zone, les cépages ombriens s'expriment dans des vins soignés et réguliers. Bien que l'appellation soit très largement dominée par Lungarotti (rejoint par quelques domaines comme Terre Margaritelli), elle a une importance historique majeure : c'est ici que Giorgio Lungarotti a démontré, dès les années 1960, que l'Umbrie pouvait produire des vins de qualité, ouvrant la voie à toute la région. Torgiano demeure un terroir de référence, associé à un riche patrimoine œnotouristique et culturel.\n\nAppellation-cadre de Torgiano, berceau de l'Umbrie viticole moderne, elle donne des Sangiovese (Rubesco) et des blancs d'assemblage (Torre di Giano), largement façonnés par Lungarotti. C'est un terroir historique de référence.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "torgiano",
+        "sangiovese",
+        "grechetto",
+        "doc",
+        "lungarotti"
+      ],
+      "source": "decanter"
+    },
+    {
+      "id": "it-umbria-terr-amelia-ciliegiolo",
+      "nom": "Amelia (Ciliegiolo)",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Narni/Amelia (TR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Ciliegiolo",
+        "Grechetto",
+        "Malvasia"
+      ],
+      "altitude": "~150-400 m",
+      "sols": "argilo-calcaires du sud de l'Umbrie (Ternano)",
+      "caracteristiques_rapides": "Le terroir du Ciliegiolo, cépage rouge autochtone du sud de l'Umbrie relancé par Bussoletti : rouge frais, fruité (cerise) et parfumé, révélation du Ternano.",
+      "notes_objectives": "L'appellation Amelia, dans le sud de l'Umbrie (le Ternano), est devenue le terroir de référence du Ciliegiolo, cépage rouge autochtone redécouvert qui est l'une des belles révélations récentes de la région. Autour des villes d'Amelia et de Narni, sur les collines argilo-calcaires du sud, ce cépage trouve une expression remarquable.\n\nLe Ciliegiolo — dont le nom évoque la cerise (« ciliegia »), en référence à ses arômes — donne un rouge frais, fruité et parfumé, aux notes de cerise, de fruits rouges et d'épices, à la trame souple et digeste, à mille lieues des rouges lourds et solaires. Longtemps utilisé comme cépage d'assemblage ou d'appoint, il a été relancé en vin varietal par le vigneron Leonardo Bussoletti à Narni, qui a mené un travail de sélection déterminant et en a fait un rouge de caractère, salué par la critique. Servi parfois légèrement rafraîchi, le Ciliegiolo séduit par sa fraîcheur et son fruité éclatant. L'appellation produit aussi des blancs (Grechetto, Malvasia). Amelia illustre le dynamisme du sud de l'Umbrie et le renouveau des cépages autochtones, aux côtés du Trebbiano Spoletino et du Grechetto di Todi.\n\nTerroir de référence du Ciliegiolo dans le sud de l'Umbrie, l'appellation Amelia donne un rouge frais et parfumé (cerise), relancé par Bussoletti. C'est l'une des belles révélations autochtones de la région.",
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "amelia",
+        "narni",
+        "ciliegiolo",
+        "rouge",
+        "doc",
+        "autochtone"
+      ],
+      "source": "gamberorosso|decanter"
+    },
+    {
+      "id": "it-umbria-terr-trasimeno-gamay-del-trasimeno",
+      "nom": "Trasimeno (Gamay del Trasimeno)",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Trasimeno (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Gamay del Trasimeno",
+        "Sangiovese",
+        "Grechetto"
+      ],
+      "altitude": "~250-400 m",
+      "sols": "sols lacustres sableux et argileux autour du lac Trasimène",
+      "caracteristiques_rapides": "Autour du lac Trasimène : curieux « Gamay del Trasimeno » (en réalité du Grenache/Cannonau), rouge fruité, et blancs, terroir lacustre original de l'ouest de l'Umbrie.",
+      "notes_objectives": "L'appellation Trasimeno (ou Colli del Trasimeno) entoure le lac Trasimène, le plus grand lac d'Italie centrale, à l'ouest de Pérouse. Son originalité tient à un cépage à l'histoire cocasse : le « Gamay del Trasimeno », qui n'est en réalité ni du Gamay ni un cépage local, mais bien du Grenache (le Cannonau sarde), importé jadis et rebaptisé par erreur. Ce Grenache donne autour du lac un rouge fruité, généreux et parfumé, aux arômes de fruits rouges et d'épices, spécialité identitaire du Trasimène. L'appellation produit aussi des Sangiovese, des blancs (Grechetto, Trebbiano) et des rosés. Le microclimat lacustre, tempéré par la masse d'eau, et les sols sableux et argileux façonnent des vins agréables et accessibles. Terroir de l'ouest de l'Umbrie, encore confidentiel, le Trasimène séduit par sa curiosité ampélographique et son cadre. C'est un vin de plaisir, à découvrir sur la cuisine locale, notamment les poissons du lac.\n\nAutour du lac Trasimène, l'appellation Trasimeno cultive le curieux « Gamay del Trasimeno » (en réalité du Grenache), rouge fruité et généreux. C'est un terroir lacustre original et une belle curiosité de l'Umbrie.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "trasimeno",
+        "gamay",
+        "grenache",
+        "lac",
+        "doc"
+      ],
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-terr-assisi",
+      "nom": "Assisi",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Assisi (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Merlot",
+        "Grechetto",
+        "Trebbiano"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "argilo-calcaires des pentes du Mont Subasio",
+      "caracteristiques_rapides": "DOC des collines d'Assise et Spello, au pied du Mont Subasio : Sangiovese, assemblages bordelais (Villa Fidelia) et blancs de Grechetto, terroir de la cité de saint François.",
+      "notes_objectives": "L'appellation Assisi couvre les collines autour de la célèbre cité de saint François, entre Assise et Spello, au pied du Mont Subasio. Ce terroir de l'Assisano, chargé d'histoire et de spiritualité, produit une gamme complète de vins de qualité. Sur les sols argilo-calcaires des pentes du Subasio, la DOC repose sur le Sangiovese en rouge, souvent complété de Merlot et de cépages internationaux, ainsi que sur le Grechetto et le Trebbiano en blanc. Le domaine Sportoletti, à Spello, en est le fer de lance, avec son Villa Fidelia (assemblage bordelais-Sangiovese) primé. Les vins, soignés et réguliers, allient tradition ombrienne et modernité. Moins connue que Montefalco ou Orvieto, l'appellation Assisi n'en est pas moins un terroir de qualité, dans un cadre exceptionnel. C'est une belle adresse pour découvrir les rouges d'assemblage et les blancs de l'Umbrie centrale, sur la cuisine locale.\n\nDOC des collines d'Assise et Spello, au pied du Mont Subasio, l'appellation Assisi donne des Sangiovese, des assemblages bordelais (Villa Fidelia) et des blancs de Grechetto. C'est un terroir de qualité dans un cadre exceptionnel.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "assisi",
+        "spello",
+        "sangiovese",
+        "grechetto",
+        "doc"
+      ],
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-terr-colli-perugini",
+      "nom": "Colli Perugini",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Perugia (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Grechetto",
+        "Trebbiano",
+        "Merlot"
+      ],
+      "altitude": "~200-400 m",
+      "sols": "argilo-calcaires des collines de Pérouse",
+      "caracteristiques_rapides": "DOC des collines entre Pérouse et le Tibre : Sangiovese et Grechetto de tradition, en rouge, blanc et rosé, terroir de proximité de la capitale ombrienne.",
+      "notes_objectives": "L'appellation Colli Perugini couvre les collines situées entre Pérouse et le Tibre, au sud-ouest de la capitale ombrienne. Terroir de proximité de la grande ville, elle produit une gamme complète de vins de tradition. Sur les sols argilo-calcaires de ces collines, la DOC repose sur le Sangiovese en rouge, complété de Merlot et d'autres cépages, ainsi que sur le Grechetto et le Trebbiano en blanc, avec aussi des rosés. Les vins, souvent d'un bon rapport qualité-prix, sont produits par des domaines comme Goretti. Moins réputée que les grandes appellations ombriennes, elle illustre la richesse des terroirs de collines de l'Umbrie centrale, à la fois en rouge et en blanc. C'est un terroir de proximité et de tradition, à découvrir sur la cuisine régionale de Pérouse, des viandes aux plats de légumes et de truffe.\n\nDOC des collines entre Pérouse et le Tibre, les Colli Perugini donnent des Sangiovese et des Grechetto de tradition, en rouge, blanc et rosé. C'est un terroir de proximité de la capitale ombrienne.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "perugia",
+        "colli-perugini",
+        "sangiovese",
+        "grechetto",
+        "doc"
+      ],
+      "source": "katyinumbria"
+    },
+    {
+      "id": "it-umbria-terr-colli-altotiberini",
+      "nom": "Colli Altotiberini",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Alto Tevere (PG)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Merlot",
+        "Grechetto",
+        "Trebbiano"
+      ],
+      "altitude": "~250-450 m",
+      "sols": "argilo-calcaires de la haute vallée du Tibre",
+      "caracteristiques_rapides": "DOC de la haute vallée du Tibre, au nord de Pérouse : Sangiovese, Merlot et blancs, terroir frais et vallonné du nord de l'Umbrie, en quête de reconnaissance.",
+      "notes_objectives": "L'appellation Colli Altotiberini couvre la haute vallée du Tibre (l'Alto Tevere), au nord de Pérouse, dans la partie septentrionale de l'Umbrie proche de la Toscane. Ce terroir frais et vallonné, encore en quête de reconnaissance, produit des vins de collines. Sur les sols argilo-calcaires de la vallée du Tibre, la DOC repose sur le Sangiovese en rouge, complété de Merlot et d'autres cépages, ainsi que sur le Grechetto et le Trebbiano en blanc. L'altitude et la fraîcheur de cette zone donnent des vins souvent tendus et équilibrés. Moins connue que les grandes appellations du centre et du sud, les Colli Altotiberini illustrent le potentiel du nord de l'Umbrie, à la frontière toscane. C'est un terroir à découvrir, où quelques domaines misent sur la fraîcheur et l'authenticité, sur la cuisine locale de l'Alto Tevere.\n\nDOC de la haute vallée du Tibre au nord de l'Umbrie, les Colli Altotiberini donnent des Sangiovese, Merlot et blancs sur un terroir frais et vallonné. C'est un secteur en quête de reconnaissance, proche de la Toscane.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "alto-tevere",
+        "colli-altotiberini",
+        "sangiovese",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    },
+    {
+      "id": "it-umbria-terr-umbria",
+      "nom": "Umbria",
+      "type": "appellation (IGT)",
+      "region": "Umbria",
+      "sous_region": "Régionale",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Sagrantino",
+        "Grechetto",
+        "Ciliegiolo",
+        "Chardonnay"
+      ],
+      "altitude": "~100-500 m",
+      "sols": "sols variés des collines ombriennes",
+      "caracteristiques_rapides": "La grande IGT régionale : cadre souple pour tous cépages, autochtones et internationaux, dont beaucoup de cuvées d'auteur (assemblages, Chardonnay, moelleux) hors DOC.",
+      "notes_objectives": "L'IGT Umbria est l'indication géographique régionale, qui couvre l'ensemble du territoire ombrien. Cadre souple et transversal, elle offre aux producteurs une grande liberté, hors des cahiers des charges plus stricts des DOC et DOCG. Elle rassemble tous les cépages de la région — Sagrantino, Sangiovese, Grechetto, Ciliegiolo, Trebbiano Spoletino — ainsi que des cépages internationaux (Chardonnay, Merlot, Cabernet), en rouge, blanc, rosé et moelleux. C'est notamment sous cette IGT que sont commercialisées de nombreuses cuvées d'auteur : assemblages originaux, cépages internationaux, vins expérimentaux ou moelleux, qui sortent du cadre des appellations. Souple et créative, l'IGT Umbria est un espace de liberté précieux pour les vignerons, du vin de tous les jours aux cuvées les plus ambitieuses. Elle illustre la diversité et le dynamisme du vin ombrien, capable de conjuguer cépages autochtones et internationaux sur des terroirs très variés.\n\nIGT régionale, l'Umbria offre un cadre souple pour tous cépages, autochtones et internationaux, dont beaucoup de cuvées d'auteur hors DOC. C'est l'espace de liberté et de créativité des vignerons ombriens.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "igt",
+        "souple",
+        "auteur",
+        "multi-cepages"
+      ],
+      "source": "wine-searcher|italymagazine"
+    },
+    {
+      "id": "it-umbria-terr-lago-di-corbara",
+      "nom": "Lago di Corbara",
+      "type": "appellation (DOC)",
+      "region": "Umbria",
+      "sous_region": "Orvieto (TR)",
+      "pays": "Italie",
+      "cepages_rois": [
+        "Sangiovese",
+        "Merlot",
+        "Cabernet",
+        "Ciliegiolo"
+      ],
+      "altitude": "~100-300 m",
+      "sols": "argilo-calcaires et volcaniques au bord du lac de Corbara",
+      "caracteristiques_rapides": "DOC de rouge près d'Orvieto, au bord du lac de Corbara : Sangiovese et cépages internationaux, complément rouge du terroir orviétan, souvent en IGT.",
+      "notes_objectives": "L'appellation Lago di Corbara couvre les collines qui bordent le lac de Corbara, un plan d'eau artificiel sur le Tibre près d'Orvieto. Elle est le complément rouge du terroir orviétan, réputé surtout pour ses blancs. Sur les sols argilo-calcaires et volcaniques des rives du lac, la DOC repose sur le Sangiovese, souvent complété de cépages internationaux (Merlot, Cabernet) et parfois de Ciliegiolo, pour des rouges de belle facture. L'influence du lac (brouillards, fraîcheur) tempère le climat. Créée pour valoriser les rouges de la zone d'Orvieto, l'appellation reste confidentielle, une partie des vins étant commercialisée en IGT. Des domaines comme Barberani y produisent aussi de grands moelleux botrytisés grâce au microclimat lacustre. C'est un terroir à découvrir pour ses rouges, complément des célèbres blancs d'Orvieto, sur la cuisine locale.\n\nDOC de rouge au bord du lac de Corbara près d'Orvieto, le Lago di Corbara donne des Sangiovese et assemblages internationaux. C'est le complément rouge, confidentiel, du célèbre terroir blanc orviétan.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "umbria",
+        "orvieto",
+        "lago-di-corbara",
+        "rouge",
+        "sangiovese",
+        "doc"
+      ],
+      "source": "wine-searcher"
+    }
+  ]
+}

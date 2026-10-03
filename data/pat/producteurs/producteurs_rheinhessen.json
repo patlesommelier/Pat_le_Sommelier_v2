@@ -1,0 +1,1046 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "rheinhessen",
+  "region_label": "Rheinhessen (Allemagne)",
+  "source_file": "build_rheinhessen (recherche web 2026-06)",
+  "built_at": "2026-06-12",
+  "count": 26,
+  "items": [
+    {
+      "id": "de-rheinhessen-prod-keller",
+      "nom": "Keller",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Flörsheim-Dalsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Dalsheimer Hubacker",
+        "Westhofener Morstein",
+        "Westhofener Kirchspiel",
+        "Westhofener Brunnenhäuschen"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Flörsheim-Dalsheim, dans le Wonnegau, le domaine Keller n'est pas seulement le plus grand nom du Rheinhessen : c'est l'un des sommets absolus du vin allemand et l'une des références mondiales du Riesling sec. La famille y cultive la vigne depuis 1789, lorsque Johann Leonhard Keller acquit des parcelles sur le Hubacker ; Klaus-Peter Keller en est la neuvième génération et dirige le domaine avec son épouse Julia depuis 2001, rejoints aujourd'hui par leur fils Felix, qui commence à y imprimer sa propre marque. Sur à peine plus de dix-huit hectares, Keller exploite un parcellaire d'orfèvre : les grands crus calcaires de Westhofen — Morstein, Kirchspiel et la parcelle légendaire « Abtserde » dans le Brunnenhäuschen, apportés dans la corbeille de mariage par Julia, elle-même formée par Hans-Günther Schwarz — ainsi que les sites de Dalsheim (Hubacker, Bürgel, Frauenberg) et, plus récemment, les coteaux d'ardoise rouge du Roter Hang à Nierstein (Hipping, Pettenthal). Le joyau de la maison est le « G-Max », Riesling sec issu de vignes anciennes à très bas rendement, dont Keller garde jalousement secrète l'origine parcellaire : détenteur du record du monde de prix pour un Riesling sec, il est considéré par beaucoup comme l'un des plus grands vins blancs de la planète. Mais la grandeur de Keller tient autant à sa régularité : du modeste « von der Fels » au G-Max, chaque cuvée est d'un niveau remarquable. Nourri d'une fascination pour la Bourgogne — Klaus-Peter y a fait des stages, notamment au Domaine Rousseau —, le domaine produit aussi des Spätburgunder (Bürgel, Frauenberg, Morstein) qui rivalisent avec de grands bourgognes, ainsi que de splendides liquoreux : Keller joue au plus haut niveau mondial dans les trois registres, blanc sec, rouge et noble. Le style maison, d'une précision et d'une profondeur extraordinaires, allie minéralité calcaire, tension saline et capacité de garde quasi infinie. Les vins, recherchés dans le monde entier, s'écoulent en allocations parmi les plus convoitées qui soient et figurent jusqu'à la table de la Couronne britannique. Comme l'a résumé un grand critique allemand, Keller est la preuve éclatante que ce sont les vignerons qui rendent les terroirs célèbres, et non l'inverse : un domaine qui a, à lui seul, redéfini ce que le Rheinhessen et le Riesling sec allemand pouvaient atteindre.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "calcaire",
+        "dalsheim",
+        "hubacker",
+        "g-max",
+        "keller",
+        "culte"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-wittmann",
+      "nom": "Wittmann",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Westhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Westhofener Morstein",
+        "Westhofener Kirchspiel",
+        "Westhofener Aulerde",
+        "Westhofener Brunnenhäuschen"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Westhofen, au cœur du Wonnegau, Wittmann est, aux côtés de Keller, l'un des deux phares du Rheinhessen et l'une des références mondiales du Riesling sec. Dirigé par Philipp Wittmann, le domaine familial est l'un des plus grands domaines d'Allemagne conduits en biodynamie certifiée — une conversion engagée tôt et avec conviction. Le cœur de son vignoble repose sur les grands terroirs calcaires de Westhofen : le Morstein, longue pente d'argilo-calcaire considérée comme l'un des plus grands crus du pays, qui donne des Rieslings d'une profondeur et d'une garde immenses ; le Kirchspiel, plus salin et cristallin ; l'Aulerde, plus charnu ; et le Brunnenhäuschen, dont la cuvée « La Borne » figure au sommet de la gamme. Le style Wittmann recherche la pureté absolue : des Grosses Gewächs secs d'une transparence cristalline, salins, tendus, sans la moindre lourdeur, et d'une aptitude au vieillissement remarquable. Fermentations spontanées, élevages soignés et travail biodynamique au vignoble servent une expression limpide du calcaire. Au-delà du Riesling, le domaine soigne aussi le Silvaner — cépage emblématique du Rheinhessen — et les Pinots, témoignant d'une vision complète du terroir. Régulièrement classé parmi les tout meilleurs producteurs de Riesling sec au monde par la critique internationale, Wittmann a contribué de façon décisive à faire passer le Rheinhessen du statut de région de vins de masse à celui de terre de très grands vins. Entre rigueur biodynamique, élégance cristalline et grandeur du Morstein, le domaine incarne, à Westhofen, le sommet du renouveau rhénan. Le domaine, longtemps préparé par Günter Wittmann avant que son fils Philipp ne le porte au sommet, fait partie du cercle restreint de vignerons (avec Keller, Battenfeld-Spanier, Wagner-Stempel ou Thörle) qui ont, en une génération, réécrit l'image du Rheinhessen. Ses Grosses Gewächs du Morstein s'arrachent aux enchères et figurent sur les plus grandes cartes du monde. Attaché au Silvaner comme à son Riesling, soucieux d'une viticulture vivante, Wittmann conjugue ambition internationale et fidélité au terroir calcaire de Westhofen — une réussite qui force l'admiration de toute la profession.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "biodynamie",
+        "calcaire",
+        "westhofen",
+        "morstein",
+        "wittmann"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-battenfeld-spanier",
+      "nom": "Battenfeld-Spanier",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Hohen-Sülzen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Hohen-Sülzener Kirchenstück",
+        "Am Schwarzen Herrgott (Zellertal)",
+        "Frauenberg"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Hohen-Sülzen, dans le sud du Wonnegau, Battenfeld-Spanier est l'un des domaines les plus admirés du Rheinhessen, dirigé par Hans-Oliver Spanier, souvent qualifié de « grand seigneur » de la région tant son influence sur le vignoble allemand des dernières décennies a été profonde. Pionnier du bio dès 1992 puis de la biodynamie dès 1995, il fut aussi l'une des chevilles ouvrières du mouvement qui a réhabilité les grands terroirs rhénans. La marque de fabrique du domaine, c'est le calcaire : les sols pierreux et arides du Wonnegau et, surtout, du Zellertal — cette poche fraîche à la charnière du Pfalz, dont Spanier a perçu très tôt l'immense potentiel et où il possède aujourd'hui un encépagement que ses pairs lui envient. De ces sols (Frauenberg, Kirchenstück, et le fameux Zellerweg am Schwarzen Herrgott) naissent des Rieslings froids, ciselés, droits et d'une salinité tranchante. Le style Spanier privilégie la tension et la finesse à la puissance : fermentations spontanées en grands foudres et cuves, soufre minimal, aucun collage — la cave est un lieu d'accompagnement, jamais de correction. Le domaine produit aussi de beaux Silvaner et Spätburgunder. Battenfeld-Spanier forme avec le domaine de son épouse, Kühling-Gillot, un tandem unique : deux propriétés, deux terroirs opposés (calcaire ici, ardoise rouge là-bas), une même philosophie biodynamique. Honoré des plus hautes distinctions par les guides allemands, présent sur les plus grandes cartes du monde, Battenfeld-Spanier se tient, aux côtés de Keller et Wittmann, en première ligne du Rheinhessen, et incarne une certaine idée — froide, précise, intellectuelle — du grand Riesling sec de calcaire. Le domaine a décroché les plus hautes distinctions des guides allemands (dont les cinq grappes de Gault-Millau) et Hans-Oliver Spanier fut l'un des fondateurs du collectif « Message in a Bottle », dont la liste des membres se lit aujourd'hui comme un who's who du vin allemand. On a pu écrire que si J.J. Prüm faisait du vin en Rheinhessen, il ressemblerait à cela : d'une pureté retenue, d'une finesse extrême, avec la promesse d'une très longue vie. Même les vins « villages », comme le Riesling Mölsheim, offrent à prix doux un avant-goût saisissant de ce style froid et ciselé.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "biodynamie",
+        "calcaire",
+        "hohen-suelzen",
+        "zellertal",
+        "battenfeld-spanier"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-kuehling-gillot",
+      "nom": "Kühling-Gillot",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Bodenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Nackenheimer Rothenberg",
+        "Niersteiner Pettenthal",
+        "Niersteiner Hipping",
+        "Niersteiner Ölberg"
+      ],
+      "statut_production": "biodynamie-certifiee",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bodenheim, sur la « Rheinfront », Kühling-Gillot est l'un des grands noms du Roter Hang, ce spectaculaire coteau d'ardoise rouge qui borde le Rhin entre Nierstein et Nackenheim. Le domaine est dirigé par Carolin Spanier-Gillot, qui forme avec son mari Hans-Oliver Spanier (Battenfeld-Spanier) le couple le plus influent du Rheinhessen ; les deux propriétés, conduites séparément, partagent une même philosophie biodynamique. Là où Battenfeld-Spanier travaille le calcaire du Wonnegau, Kühling-Gillot règne sur l'ardoise rouge (Rotliegendes) du Roten Hang, qui imprime aux vins une minéralité fumée et épicée inimitable. Le domaine possède les plus beaux fleurons de ces grands crus : Pettenthal, Hipping, Ölberg et Rothenberg. Son trésor est une parcelle du Nackenheimer Rothenberg plantée en 1934 de vignes franches de pied, non greffées — un rescapé du phylloxéra que Spanier surnomme « l'ADN du Riesling allemand ». Le Rothenberg « wurzelecht » qui en est issu a été élu meilleur Riesling sec d'Allemagne et noté 100/100. Le style Kühling-Gillot conjugue la générosité du fruit, la profondeur et cette salinité fumée propre à l'ardoise rouge, dans des Grosses Gewächs secs d'une grande race et d'une belle garde. Le domaine produit aussi de fins Spätburgunder. Figure de proue d'une nouvelle génération qui a redonné au Roter Hang son lustre d'antan, Carolin Spanier-Gillot signe certains des plus beaux Riesling d'ardoise rouge du pays, et compte parmi les vigneronnes les plus admirées d'Allemagne. Réunis, les deux domaines du couple Spanier-Gillot rassemblent une douzaine de Grosses Lagen parmi les plus prestigieuses de la région, des sols de calcaire à ceux d'ardoise rouge — une diversité que peu d'autres maisons peuvent revendiquer. Sur le Roter Hang, Carolin partage le voisinage de quelques esprits proches, comme Kai Schätzel, dans une même quête de pureté. Reconnue comme l'une des meilleures vigneronnes d'Allemagne, elle a fait de Kühling-Gillot la signature de référence pour qui veut goûter, dans toute sa profondeur fumée, le grand Riesling d'ardoise rouge du Rhin.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "biodynamie",
+        "ardoise-rouge",
+        "roter-hang",
+        "nackenheim",
+        "rothenberg",
+        "kuehling-gillot"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-gunderloch",
+      "nom": "Gunderloch",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Nackenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Nackenheimer Rothenberg",
+        "Niersteiner Pettenthal",
+        "Niersteiner Hipping"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Nackenheim, sur le Roter Hang, Gunderloch est l'un des domaines historiques de la « Rheinfront » et l'un des grands artisans de la renaissance des terroirs d'ardoise rouge du Rheinhessen. Longtemps mené par Fritz et Agnes Hasselbach, qui en firent une référence, il est aujourd'hui dirigé par leur fils Johannes Hasselbach, qui a insufflé un style plus pur et plus naturel — fermentations spontanées, soufre réduit, recherche d'une transparence accrue. Le joyau du domaine est le Nackenheimer Rothenberg, l'un des plus grands crus du Roter Hang, dont l'ardoise rouge dévono-permienne (Rotliegendes) donne des Rieslings d'une minéralité fumée et épicée caractéristique. À ses côtés, le Niersteiner Pettenthal et le Hipping complètent un parcellaire d'exception sur ces pentes abruptes plongeant vers le Rhin. Le style Gunderloch couvre tout le spectre, du sec (Grosses Gewächs) tendu et salin jusqu'aux liquoreux nobles d'une grande pureté, le domaine excellant traditionnellement aussi dans les vendanges tardives et les sélections botrytisées. Sous l'impulsion de Johannes Hasselbach, le domaine a su conjuguer respect d'un héritage prestigieux et modernité d'approche, gagnant une nouvelle aura auprès des amateurs et de la critique. Gardien de l'un des plus beaux terroirs d'ardoise rouge d'Allemagne, Gunderloch demeure une référence incontournable de la Rheinfront et l'un des plus beaux ambassadeurs du Riesling épicé et salin du Roter Hang. Fondé à la fin du XIXe siècle par le banquier Carl Gunderloch, le domaine perpétue son nom jusque dans sa cuvée d'entrée de gamme, le populaire Riesling « Jean-Baptiste ». L'arrivée de Johannes Hasselbach a marqué un tournant stylistique : moins de bois, davantage de fermentations indigènes, un soufre allégé et une recherche de buvabilité et de transparence qui ont rajeuni l'image de la maison sans rien renier de la profondeur du Rothenberg. Ce coteau, l'un des plus raides et des plus rouges du Roter Hang, reste le cœur battant d'un domaine redevenu l'une des valeurs les plus sûres de la Rheinfront.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "ardoise-rouge",
+        "roter-hang",
+        "nackenheim",
+        "rothenberg",
+        "gunderloch"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-wagner-stempel",
+      "nom": "Wagner-Stempel",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Siefersheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Siefersheimer Heerkretz",
+        "Siefersheimer Höllberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Siefersheim, dans la partie ouest et vallonnée du Rheinhessen — la « Suisse rhénane » —, à l'écart des grands axes du Wonnegau et du Roter Hang, Daniel Wagner mène l'un des domaines les plus singuliers et les plus respectés de la région. Sa particularité tient à sa géologie : là où le Rheinhessen est dominé par le calcaire et l'ardoise rouge, Siefersheim repose sur des sols volcaniques de porphyre (rhyolite) et de quartzite, que Wagner a révélés au plus haut niveau. Ses deux grands crus, la Heerkretz et le Höllberg, coteaux d'altitude sur roche volcanique, donnent des Rieslings d'une minéralité saline et fumée remarquable, tendus, profonds et taillés pour une longue garde. Wagner-Stempel a, à lui seul, placé ces terroirs jusque-là méconnus sur la carte des grands sites allemands. Le style maison recherche la précision, la fraîcheur et l'expression du minéral : des Grosses Gewächs secs d'une grande droiture, mais aussi de beaux Silvaner, Weissburgunder et Spätburgunder, témoins d'une vision complète du terroir volcanique. Membre du cercle des vignerons qui ont réinventé le Rheinhessen, Daniel Wagner partage avec Keller, Wittmann ou les Spanier-Gillot la conviction que la région recèle des terroirs de classe mondiale longtemps oubliés. Discret mais constant au sommet, Wagner-Stempel prouve qu'à l'écart des terroirs vedettes, sur la roche volcanique de Siefersheim, le Rheinhessen sait produire des Riesling secs parmi les plus grands et les plus originaux d'Allemagne. Sa situation à l'écart, longtemps perçue comme un handicap commercial, est devenue un atout : climat un peu plus frais, terroirs préservés, identité forte. Les Grosses Gewächs de la Heerkretz, salués par les meilleurs guides et la presse internationale, comptent parmi les Riesling secs les plus distinctifs d'Allemagne, et la cuvée « Porphyr » illustre joliment cette signature volcanique. Membre du cercle des vignerons qui font rayonner le Rheinhessen, Daniel Wagner a transformé un coin oublié de la région en l'un de ses pôles d'excellence les plus singuliers.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "iconique",
+        "riesling",
+        "porphyre",
+        "volcanique",
+        "siefersheim",
+        "heerkretz",
+        "wagner-stempel"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-thoerle",
+      "nom": "Thörle",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Saulheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Saulheimer Hölle",
+        "Saulheimer Probstey",
+        "Saulheimer Schlossberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Saulheim, dans le nord de la Rheinhessen, le domaine Thörle est mené par les frères Christoph et Johannes Thörle, qui l'ont hissé en quelques années parmi les références de la région. Sur des coteaux calcaires comme la Saulheimer Hölle et le Probstey, ils produisent des Riesling secs précis et salins, mais se sont surtout imposés comme l'un des meilleurs domaines de Rheinhessen pour le Spätburgunder (Pinot Noir). La gamme, du vin de soif accessible aux Grosses Gewächs de garde, témoigne d'une exigence et d'une régularité remarquables, en blanc comme en rouge. Le style Thörle recherche l'élégance, la fraîcheur et la précision, dans des vins d'une grande pureté. Travaillant avec un soin extrême la vigne et la cave, les deux frères ont fait de leur domaine familial l'un des plus admirés du nord de la Rheinhessen. En pleine ascension, Thörle compte parmi les noms qui ont porté le renouveau qualitatif de la région, et une valeur sûre tant pour le Riesling que pour le Pinot Noir. Partis d'un domaine familial modeste, Christoph et Johannes Thörle se sont hissés en une dizaine d'années parmi les producteurs les plus admirés de Rheinhessen, salués par toute la critique. Leur maîtrise simultanée du grand Riesling de calcaire et du Spätburgunder en fait l'une des adresses les plus complètes du nord de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "saulheim",
+        "thoerle",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-dreissigacker",
+      "nom": "Dreissigacker",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Bechtheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Bechtheimer Geyersberg",
+        "Westhofener Morstein",
+        "Westhofener Kirchspiel"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bechtheim, dans le sud de la Rheinhessen, Jochen Dreissigacker a transformé le domaine familial en l'un des plus dynamiques de la région, conduit en agriculture biologique. Tourné vers le Riesling sec, il exploite de grands coteaux calcaires de Bechtheim et de Westhofen — Geyersberg, Kirchspiel, Morstein, Aulerde. Le domaine produit des Riesling secs précis, tendus et minéraux, du vin de village d'un excellent rapport qualité-prix aux Grosses Gewächs de garde, dans un style net et moderne. Le travail bio et des vinifications soignées visent une grande pureté et une expression fidèle du terroir. Le style Dreissigacker privilégie la fraîcheur, la salinité et la précision, dans des vins secs d'une belle régularité. En pleine ascension critique, le domaine illustre le renouveau du Wonnegau et compte parmi les valeurs sûres de la Rheinhessen pour le Riesling sec de calcaire. Devenu un symbole du Wonnegau moderne, Jochen Dreissigacker a multiplié les distinctions et bâti une gamme d'une grande cohérence, entièrement tournée vers le Riesling sec de terroir. Son travail en bio et sa lecture fine des grands crus de Westhofen lui valent une reconnaissance nationale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "bio",
+        "bechtheim",
+        "geyersberg",
+        "dreissigacker",
+        "moderne"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-kai-schaetzel",
+      "nom": "Kai Schätzel",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Nierstein",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Niersteiner Pettenthal",
+        "Niersteiner Hipping",
+        "Niersteiner Ölberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Nierstein, sur le célèbre Roter Hang — ces coteaux escarpés de schiste rouge ferrugineux dominant le Rhin —, le domaine Schätzel est l'un des projets les plus passionnants et les plus avant-gardistes de la Rheinhessen, mené par Kai Schätzel et Juliane Eichblatt. La famille y cultive la vigne depuis plus de 650 ans. Sur une quinzaine d'hectares dans les grands lieux-dits du Roter Hang — Hipping, Pettenthal, Ölberg, Heiligenbaum —, le domaine, en biodynamie certifiée (Demeter), produit des Riesling et des Silvaner d'une grande pureté. Kai Schätzel s'est notamment fait le champion d'un retour au Kabinett léger et tendu, vinifié par fermentation spontanée. Le style maison recherche la finesse, la salinité et la vibration, dans des vins d'une rare énergie minérale. Salué par la critique comme l'un des domaines les plus visionnaires d'Allemagne, Schätzel incarne l'excellence et l'audace du nouveau Riesling du Roter Hang. Kai Schätzel cultive aussi un clone de Silvaner maison, et son approche — fermentations spontanées, longs élevages, quête d'une viticulture vivante — fait l'objet d'une attention critique soutenue. Peu de domaines incarnent aussi bien le renouveau audacieux du Riesling de Nierstein.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "ardoise-rouge",
+        "roter-hang",
+        "nierstein",
+        "schaetzel",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-st-antony",
+      "nom": "St. Antony",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Nierstein",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Niersteiner Pettenthal",
+        "Niersteiner Orbel",
+        "Niersteiner Ölberg",
+        "Niersteiner Hipping"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Nierstein, le domaine St. Antony possède le plus vaste patrimoine de vignes du Roter Hang, ce grand coteau de schiste rouge qui fait la gloire de la Rheinhessen. Propriété de l'investisseur Detlev Meyer, il est dirigé depuis 2018 par Dirk Würtz, figure connue de la scène viticole allemande, qui lui a fait franchir un net palier qualitatif. Conduit en agriculture biologique, le domaine exploite les plus grands sites de Nierstein — Pettenthal, Orbel, Hipping, Ölberg — ainsi que deux monopoles, le Brudersberg et le Zehnmorgen. De ces terroirs de schiste rouge et de calcaire naissent des Riesling secs profonds et minéraux, complétés par de beaux Pinots et Chardonnay. Le style St. Antony recherche la précision, la salinité et l'expression du sol rouge, dans des Grosses Gewächs de garde. Avec son portefeuille de crus exceptionnel, St. Antony est l'un des fers de lance du Roter Hang et une référence du grand Riesling de Nierstein. Sous l'impulsion de Dirk Würtz, communicant et vigneron passionné, le domaine a retrouvé son rang parmi les meilleurs de Nierstein, conjuguant patrimoine de vignes hors normes et exigence retrouvée. Ses Grosses Gewächs du Roter Hang comptent de nouveau parmi les références du grand Riesling sec de Rheinhessen.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "ardoise-rouge",
+        "roter-hang",
+        "nierstein",
+        "st-antony",
+        "bio"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-k-f-groebe",
+      "nom": "K.F. Groebe",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Westhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Westhofener Kirchspiel",
+        "Westhofener Aulerde",
+        "Westhofener Morstein"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Westhofen, dans le Wonnegau (sud de la Rheinhessen), le domaine K.F. Groebe, mené par Friedrich Groebe, est une maison de tradition attachée aux plus grands terroirs calcaires du secteur. Le domaine exploite des parcelles dans les lieux-dits les plus prestigieux de Westhofen — Kirchspiel, Aulerde, Morstein —, souvent plantées de vieilles vignes, dont il tire des Riesling secs d'une grande profondeur et d'une belle aptitude à la garde. Le travail patient et un style sans concession aux modes confèrent à ces vins une réelle authenticité. Le style Groebe privilégie la structure, la minéralité calcaire et la finesse, dans des Riesling secs racés qui s'épanouissent avec le temps. Discret mais respecté, K.F. Groebe compte parmi les gardiens des grands crus de Westhofen et une référence pour le Riesling sec de garde de la Rheinhessen. Fidèle à un classicisme exigeant et à de très vieilles vignes, Friedrich Groebe signe des Riesling secs profonds qui révèlent toute leur dimension avec le temps. Le domaine demeure l'un des interprètes les plus respectés des grands crus calcaires de Westhofen.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "calcaire",
+        "westhofen",
+        "kirchspiel",
+        "groebe",
+        "vieilles-vignes"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-weingut-winter",
+      "nom": "Weingut Winter",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Dittelsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Scheurebe"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dittelsheimer Leckerberg",
+        "Dittelsheimer Geiersberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Dittelsheim, dans le Wonnegau, le domaine Winter, mené par Stefan Winter, s'est imposé comme l'une des bonnes adresses montantes de la Rheinhessen, spécialiste du Riesling sec. Sur des coteaux calcaires de Dittelsheim (Leckerberg, Geiersberg) et de Westhofen, le domaine produit des Riesling secs précis, salins et tendus, dans un style net et moderne. Le rapport qualité-prix, souvent remarquable, et la régularité ont attiré l'attention de la critique. Le style Winter recherche la fraîcheur, la pureté et l'expression du calcaire, dans des vins secs droits et bien faits. En progression constante, le domaine illustre le dynamisme du Wonnegau et compte parmi les valeurs sûres et abordables de la Rheinhessen pour le Riesling sec. Salué pour son excellent rapport qualité-prix et sa régularité, Stefan Winter s'est imposé comme l'un des bons artisans du Riesling sec du Wonnegau. Ses vins, droits et salins, séduisent autant les amateurs que les sommeliers en quête de belles découvertes abordables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "scheurebe",
+        "dittelsheim",
+        "winter"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-seehof-fauth",
+      "nom": "Seehof (Fauth)",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Westhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Westhofener Morstein",
+        "Westhofener Kirchspiel",
+        "Westhofener Steingrube"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Westhofen, dans le Wonnegau, le domaine Seehof, mené par Florian Fauth, est l'une des adresses montantes du sud de la Rheinhessen, dédiée avant tout au Riesling sec. Sur de grands coteaux calcaires de Westhofen — Kirchspiel, Morstein, Steingrube —, le domaine produit des Riesling secs précis et minéraux, ainsi que de beaux Pinots, dans un style net et soigné. Le travail respectueux au vignoble et des vinifications maîtrisées visent une grande pureté et un excellent rapport qualité-prix. Le style Seehof privilégie la salinité, la fraîcheur et la tension, dans des vins secs droits et réguliers. En pleine ascension, le domaine illustre la vitalité du Wonnegau et compte parmi les bonnes découvertes de la Rheinhessen pour le Riesling sec de calcaire. Salué pour la pureté de ses Riesling et son rapport qualité-prix, Florian Fauth s'est fait un nom parmi les vignerons montants du Wonnegau. Ses vins secs, issus des grands crus de Westhofen, confirment le potentiel d'un secteur devenu l'un des plus passionnants de Rheinhessen.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "bio",
+        "westhofen",
+        "morstein",
+        "seehof",
+        "fauth"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-wechsler",
+      "nom": "Wechsler",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Westhofen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Westhofener Kirchspiel",
+        "Westhofener Morstein",
+        "Westhofener Benn"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Westhofen, dans le Wonnegau, le domaine Wechsler, mené par Katharina Wechsler, s'est imposé comme l'une des belles signatures de la nouvelle génération de la Rheinhessen. Sur de grands coteaux calcaires de Westhofen — Kirchspiel, Morstein, Benn —, le domaine produit des Riesling secs d'une grande élégance, précis, salins et tendus. Le travail soigné et une recherche constante de finesse confèrent à ces vins une signature reconnaissable, saluée par la critique. Le style Wechsler privilégie l'élégance, la fraîcheur et la minéralité, dans des Riesling secs racés et de belle garde. En pleine ascension, Katharina Wechsler compte parmi les vigneronnes les plus en vue de la Rheinhessen, et son domaine parmi les valeurs montantes du Wonnegau pour le Riesling sec. Figure montante de la région, Katharina Wechsler a su imposer une signature d'une grande finesse, saluée par la critique. Ses Riesling secs des grands crus de Westhofen comptent parmi les plus élégants de Rheinhessen et confirment l'essor d'une nouvelle génération de vigneronnes talentueuses.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "calcaire",
+        "westhofen",
+        "kirchspiel",
+        "wechsler",
+        "nouvelle-generation"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-knewitz",
+      "nom": "Knewitz",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Appenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Appenheimer Hundertgulden",
+        "Appenheimer Eselspfad"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Appenheim, dans le nord de la Rheinhessen, les frères Tobias et Björn Knewitz ont fait de leur domaine familial l'une des étoiles montantes de la région, spécialiste du Riesling sec de calcaire. Sur les coteaux calcaires du secteur, dont le grand Appenheimer Hundertgulden, ils produisent des Riesling secs d'une grande précision, salins et tendus, ainsi que de beaux Burgundern. La rigueur du travail au vignoble et en cave assure une qualité et une régularité remarquables, saluées par toute la critique. Le style Knewitz recherche la fraîcheur, la salinité et la finesse, dans des vins secs droits et de garde. En pleine ascension, le domaine compte désormais parmi les meilleures adresses du nord de la Rheinhessen et une référence pour le Riesling sec de calcaire. En quelques millésimes, Tobias et Björn Knewitz ont fait passer leur domaine au premier plan, salués par toute la critique allemande. Leurs Riesling secs du Hundertgulden comptent désormais parmi les références du Riesling de calcaire du nord de la Rheinhessen.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "weissburgunder",
+        "calcaire",
+        "appenheim",
+        "hundertgulden",
+        "knewitz"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-bischel",
+      "nom": "Bischel",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Appenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Appenheimer Hundertgulden",
+        "Binger Scharlachberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Appenheim, dans le nord de la Rheinhessen, le domaine Bischel, mené par les frères Christian et Matthias Runkel, s'est imposé en quelques années parmi les étoiles montantes de la région. Sur les coteaux calcaires du secteur — Appenheimer Hundertgulden, Gau-Algesheimer Goldberg —, le domaine produit des Riesling secs précis, salins et minéraux, ainsi que de beaux Burgundern. Le travail méticuleux et une lecture fine des terroirs calcaires confèrent aux vins une grande pureté, saluée par la critique. Le style Bischel privilégie la fraîcheur, la tension et l'expression du calcaire, dans des Riesling secs racés et de garde. En pleine ascension, le domaine illustre le dynamisme du nord de la Rheinhessen et compte parmi les valeurs sûres et prometteuses de la région pour le Riesling sec. Christian et Matthias Runkel ont propulsé le domaine parmi les plus prometteurs de la région, multipliant les distinctions. Leurs Riesling secs de calcaire, précis et de garde, illustrent la montée en puissance spectaculaire du secteur d'Appenheim.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "etoile-montante",
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "appenheim",
+        "hundertgulden",
+        "bischel"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-gutzler",
+      "nom": "Gutzler",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Gundheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Westhofener Morstein",
+        "Gundheimer Sonnenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Gundheim, dans le Wonnegau, le domaine Gutzler, mené par la famille du même nom, s'est fait une réputation notamment pour ses vins rouges, dans une région avant tout vouée aux blancs. Le domaine produit de beaux Spätburgunder (Pinot Noir) structurés et de garde, issus de coteaux calcaires dont le grand Westhofener Morstein, ainsi que des Riesling secs de belle facture. Le travail soigné et des élevages maîtrisés confèrent aux rouges finesse et profondeur. Le style Gutzler conjugue puissance et élégance, dans des vins de garde d'une belle constance. Discret mais respecté, le domaine compte parmi les bonnes adresses du Wonnegau, en particulier pour le Spätburgunder, et illustre le potentiel rouge de la Rheinhessen. Dans une région où le rouge reste minoritaire, Gutzler a su démontrer le potentiel du Spätburgunder du Wonnegau, avec des vins salués par la critique. Le domaine conjugue cette vocation rouge à de beaux Riesling secs, dans un style à la fois ambitieux et constant.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "riesling",
+        "gundheim",
+        "gutzler",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-riffel",
+      "nom": "Riffel",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Bingen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Binger Scharlachberg"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bingen, à la limite nord-ouest de la Rheinhessen, le domaine Riffel, mené par Erik et Carolin Riffel, est attaché au grand coteau de quartzite du Binger Scharlachberg, l'un des terroirs les plus singuliers de la région. Conduit en biodynamie, le domaine produit des Riesling secs tendus et minéraux, marqués par le caractère du quartzite, ainsi que d'excellents Sekt élaborés en méthode traditionnelle. Le travail respectueux du sol et des vinifications soignées visent une grande pureté et une expression fidèle du terroir. Le style Riffel privilégie la salinité, la fraîcheur et l'énergie, dans des vins secs droits et de belle garde. Engagé et constant, le domaine illustre la diversité géologique de la Rheinhessen et compte parmi les meilleures adresses pour le Riesling du Scharlachberg et le Sekt de terroir. Engagés en biodynamie, Erik et Carolin Riffel ont fait du Scharlachberg leur signature et se sont aussi imposés comme d'excellents producteurs de Sekt. Leur domaine illustre la singularité géologique et le dynamisme d'un secteur — Bingen — un peu à part dans la Rheinhessen.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "bio",
+        "bingen",
+        "scharlachberg",
+        "riffel"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-raumland",
+      "nom": "Raumland",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Flörsheim-Dalsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Chardonnay",
+        "Pinot Noir",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Flörsheim-Dalsheim, dans le sud de la Rheinhessen, le domaine Raumland occupe une place unique en Allemagne : c'est le plus grand spécialiste du Sekt de qualité du pays, une véritable « manufacture » dédiée à l'effervescent de méthode traditionnelle. Volker Raumland y consacre tout son art depuis des décennies. À partir de Pinots (Noir, Blanc, Meunier), de Chardonnay et de Riesling, le domaine élabore des Sekt d'une finesse et d'une complexité rares, longuement élevés sur lattes, qui rivalisent avec les meilleurs champagnes. La gamme couvre des cuvées parcellaires et des millésimes de très longue garde. Le style Raumland recherche la précision, la tension et la profondeur, dans des bulles d'une grande élégance. Référence absolue du Sekt allemand, Volker Raumland a fait la preuve que l'Allemagne pouvait produire de très grands effervescents, et son domaine est une institution incontournable. Récompensé à de multiples reprises comme meilleur producteur de Sekt d'Allemagne, Volker Raumland a fait de son domaine une institution. Ses cuvées, longuement élevées et d'une grande complexité, ont définitivement prouvé que le pays pouvait produire des effervescents de classe mondiale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "sekt",
+        "cremant",
+        "chardonnay",
+        "pinot-noir",
+        "dalsheim",
+        "raumland",
+        "specialiste"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-manz",
+      "nom": "Manz",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Weinolsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Weinolsheimer Kehr"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Weinolsheim, dans le secteur de la Rheinterrasse, le domaine Manz s'est imposé comme l'une des bonnes adresses montantes de la Rheinhessen. Sur des coteaux calcaires du secteur, le domaine produit des Riesling secs précis et salins, ainsi que de beaux Burgundern, dans un style net et moderne, avec un bon rapport qualité-prix. La nouvelle génération a nettement élevé le niveau ces dernières années. Dynamique et en progression, Manz compte parmi les domaines à suivre de la Rheinhessen, appréciés pour la pureté et l'accessibilité de leurs vins secs. Le domaine illustre bien le renouveau de la Rheinterrasse et compte parmi les bonnes affaires de la région pour le Riesling et les Burgundern secs.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "weinolsheim",
+        "manz",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-brueder-dr-becker",
+      "nom": "Brüder Dr. Becker",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Nierstein",
+      "commune": "Ludwigshöhe",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Silvaner"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Dienheimer Tafelstein"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ludwigshöhe, sur la Rheinterrasse, le domaine Brüder Dr. Becker est l'un des pionniers de la viticulture biologique en Rheinhessen, engagé de longue date dans le bio. Le domaine produit des Riesling secs et des Scheurebe expressifs, ainsi que d'autres cépages, dans un style net et soigné, avec un excellent rapport qualité-prix. Le travail respectueux du sol confère aux vins fraîcheur et pureté. Fidèle à ses convictions écologiques depuis des décennies, Brüder Dr. Becker compte parmi les bonnes adresses bio de la Rheinhessen, appréciées pour la sincérité et l'accessibilité de leurs vins. Pionnier respecté du bio en Rheinhessen, le domaine reste une référence pour les amateurs de vins secs sincères, francs et abordables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "silvaner",
+        "bio",
+        "ludwigshoehe",
+        "brueder-dr-becker"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-hofmann",
+      "nom": "Hofmann",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Appenheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Appenheimer Hundertgulden"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Appenheim, dans le nord de la Rheinhessen, le domaine Hofmann, mené par Jürgen Hofmann, s'est fait une réputation pour ses Riesling secs de calcaire, dans un secteur en pleine effervescence. Sur les coteaux calcaires d'Appenheim et des environs, le domaine produit des Riesling secs précis, salins et tendus, ainsi que de beaux Burgundern, dans un style moderne et d'un bon rapport qualité-prix. En progression, Hofmann illustre le dynamisme du nord de la Rheinhessen et compte parmi les bonnes découvertes de la région pour le Riesling sec de calcaire. Avec ses Riesling secs de calcaire précis et abordables, Jürgen Hofmann compte parmi les bons artisans du secteur d'Appenheim, en pleine effervescence.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "appenheim",
+        "hofmann",
+        "qualite-prix"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-teschke",
+      "nom": "Teschke",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Gau-Bickelheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Gau-Algesheim, dans le nord de la Rheinhessen, Michael Teschke s'est fait le champion d'un cépage longtemps négligé : le Silvaner, dont il révèle tout le potentiel sur les terroirs calcaires de la région. Travaillant souvent de vieilles vignes dans une approche proche du naturel, le domaine produit des Silvaner secs d'une grande personnalité, profonds et minéraux, ainsi que des Riesling. Le style, authentique et sans artifice, redonne ses lettres de noblesse à ce cépage emblématique de la Rheinhessen. Original et engagé, Teschke compte parmi les adresses les plus singulières de la région, et une référence pour qui veut redécouvrir le grand Silvaner de Rheinhessen. En réhabilitant le Silvaner avec passion, Michael Teschke a redonné de l'éclat à un cépage typiquement rhénan-hessois, et son domaine est devenu une adresse culte pour les curieux.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "riesling",
+        "gau-bickelheim",
+        "teschke",
+        "specialiste"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-bianka-daniel-schmitt",
+      "nom": "Bianka & Daniel Schmitt",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Flörsheim-Dalsheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [],
+      "statut_production": "biodynamie",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Flörsheim-Dalsheim, dans le sud de la Rheinhessen, Bianka et Daniel Schmitt conduisent l'un des domaines de vin nature les plus réputés d'Allemagne, en biodynamie. Vinifiant sans intrants, par fermentation spontanée et avec de longues macérations, ils produisent des vins vivants et singuliers — blancs de macération (orange), rouges et cuvées non filtrées — au caractère affirmé. Le domaine s'est constitué une clientèle internationale d'amateurs et de cavistes nature. Libres et engagés, Bianka et Daniel Schmitt incarnent une autre voie pour la Rheinhessen, naturelle et radicale, et comptent parmi les références allemandes du genre. Exportés dans le monde entier, leurs vins nature comptent parmi les plus recherchés d'Allemagne dans ce registre et incarnent une Rheinhessen libre et radicale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "nature",
+        "biodynamie",
+        "dalsheim",
+        "schmitt",
+        "orange"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-spiess",
+      "nom": "Spiess",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Wonnegau",
+      "commune": "Bechtheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Bechtheimer Geyersberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Bechtheim, dans le Wonnegau, le domaine familial Spiess exploite de beaux coteaux calcaires du secteur, dans une région réputée pour ses grands Riesling. Le domaine produit des Riesling secs et des Burgundern de belle facture, dans un style net et accessible, avec un bon rapport qualité-prix. Le travail soigné confère aux vins fraîcheur et pureté. Fiable et bien ancré, Spiess compte parmi les bonnes adresses familiales du Wonnegau, appréciées pour la régularité et l'accessibilité de leurs vins secs. Le domaine offre une porte d'entrée accessible et sincère vers les terroirs calcaires de Bechtheim et le Riesling sec du Wonnegau.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "spaetburgunder",
+        "bechtheim",
+        "spiess"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    },
+    {
+      "id": "de-rheinhessen-prod-wasem",
+      "nom": "Wasem",
+      "type": "domaine",
+      "region": "Rheinhessen",
+      "sous_region": "Bingen",
+      "commune": "Ingelheim",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Ingelheimer Pares"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": "oui",
+      "notes_objectives": "À Ingelheim, la « ville du vin rouge » de la Rheinhessen, le domaine Wasem perpétue la vocation du secteur pour le Spätburgunder (Pinot Noir), tout en produisant de beaux blancs. Conduit dans une démarche respectueuse de l'environnement, le domaine produit des Pinots Noirs de belle facture ainsi que des Riesling et des Burgundern, dans un style soigné et d'un bon rapport qualité-prix. Fidèle à la tradition rouge d'Ingelheim, Wasem compte parmi les bonnes adresses du nord de la Rheinhessen et illustre le potentiel de la région pour le Pinot Noir. Le domaine perpétue avec sérieux la tradition du Pinot Noir d'Ingelheim, tout en élargissant sa gamme à de beaux blancs secs, à des prix mesurés.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pinot-noir",
+        "riesling",
+        "bio",
+        "ingelheim",
+        "wasem",
+        "rouge"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|grosse-lage.de|jamessuckling|wine-searcher"
+    }
+  ]
+}

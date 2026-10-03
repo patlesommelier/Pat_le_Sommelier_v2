@@ -1,0 +1,301 @@
+{
+  "schema_version": "1",
+  "kind": "terroirs",
+  "region_key": "autres_regions",
+  "region_label": "Autres régions",
+  "source_file": "France/Fichiers Terroirs Finaux/terroirs_autres_regions_vPat.xlsx",
+  "built_at": "2026-05-15T08:57:24+00:00",
+  "count": 10,
+  "items": [
+    {
+      "id": "aut-fiefs-vendeens",
+      "nom": "Fiefs Vendéens",
+      "type": "appellation_regionale",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Négrette",
+        "Chenin",
+        "Chardonnay",
+        "Sauvignon",
+        "Grolleau Gris",
+        "Melon de Bourgogne"
+      ],
+      "altitude": "0-100 m",
+      "sols": "Schistes, sables, argiles, alluvions",
+      "caracteristiques_rapides": "AOC ~440 ha (depuis 2011, ex-VDQS) au sud de la Loire-Atlantique. Climat océanique. Cinq dénominations géographiques : Brem, Mareuil, Pissotte, Vix, Chantonnay. Saint-Nicolas (Brem) en figure de proue.",
+      "niveau_reference": 3,
+      "ranking_pat": 4,
+      "mes_notes": "Appellation en pleine mutation",
+      "tags": [
+        "aoc",
+        "regionale",
+        "vendee",
+        "maritime"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-fv-brem",
+      "nom": "Fiefs Vendéens Brem",
+      "type": "appellation_denomination",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Chenin",
+        "Chardonnay",
+        "Grolleau Gris"
+      ],
+      "altitude": "0-50 m",
+      "sols": "Schistes, sables littoraux",
+      "caracteristiques_rapides": "Dénomination géographique sur le littoral (Brem-sur-Mer, Saint-Hilaire-de-Riez). Influence maritime forte. Domaine Saint-Nicolas (Thierry Michon) en référence absolue.",
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "brem",
+        "maritime",
+        "saint-nicolas"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-fv-mareuil",
+      "nom": "Fiefs Vendéens Mareuil",
+      "type": "appellation_denomination",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Négrette",
+        "Chenin",
+        "Chardonnay",
+        "Sauvignon"
+      ],
+      "altitude": "20-80 m",
+      "sols": "Schistes, sables",
+      "caracteristiques_rapides": "Dénomination centrale, autour de Mareuil-sur-Lay. Plus grande des dénominations en surface. Vignoble Mourat.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "mareuil",
+        "mourat"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-fv-pissotte",
+      "nom": "Fiefs Vendéens Pissotte",
+      "type": "appellation_denomination",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Chenin",
+        "Chardonnay"
+      ],
+      "altitude": "40-100 m",
+      "sols": "Sables, argiles",
+      "caracteristiques_rapides": "Dénomination au nord-est, autour de Pissotte. Domaine Coirier en référence.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "pissotte",
+        "coirier"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-fv-vix",
+      "nom": "Fiefs Vendéens Vix",
+      "type": "appellation_denomination",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Chenin",
+        "Chardonnay"
+      ],
+      "altitude": "0-30 m",
+      "sols": "Argilo-calcaires, sables (zone du Marais Poitevin)",
+      "caracteristiques_rapides": "Petite dénomination au sud-ouest, près du Marais Poitevin. Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "vix",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-fv-chantonnay",
+      "nom": "Fiefs Vendéens Chantonnay",
+      "type": "appellation_denomination",
+      "region": "Autres régions",
+      "sous_region": "Vendée",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Gamay",
+        "Cabernet Franc",
+        "Négrette",
+        "Chenin",
+        "Chardonnay"
+      ],
+      "altitude": "40-100 m",
+      "sols": "Schistes",
+      "caracteristiques_rapides": "Dénomination intérieure, autour de Chantonnay. Sols schisteux, climat plus continental. Confidentielle.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "denomination",
+        "chantonnay",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-cotes-de-toul",
+      "nom": "Côtes de Toul",
+      "type": "appellation_regionale",
+      "region": "Autres régions",
+      "sous_region": "Lorraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Auxerrois",
+        "Pinot Noir",
+        "Pinot Gris",
+        "Gamay",
+        "Aubin Blanc"
+      ],
+      "altitude": "230-380 m",
+      "sols": "Marno-calcaires (Bajocien)",
+      "caracteristiques_rapides": "AOC ~110 ha (depuis 1998, ex-VDQS) à l'ouest de Nancy. Particularité : le Gris de Toul (rosé issu de Gamay/Pinot Noir, vinifié en saignée). Climat continental. Domaine Lelièvre, Vignoble Laroppe.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "lorraine",
+        "gris-de-toul",
+        "continental"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-moselle",
+      "nom": "Moselle",
+      "type": "appellation_regionale",
+      "region": "Autres régions",
+      "sous_region": "Lorraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Auxerrois",
+        "Pinot Noir",
+        "Pinot Gris",
+        "Müller-Thurgau",
+        "Gewurztraminer",
+        "Riesling"
+      ],
+      "altitude": "180-310 m",
+      "sols": "Marno-calcaires, grès",
+      "caracteristiques_rapides": "AOC ~70 ha (depuis 2010, ex-VDQS) le long de la Moselle française (à ne pas confondre avec la Mosel allemande). Cépages partagés avec l'Allemagne et le Luxembourg. Château de Vaux.",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "lorraine",
+        "moselle",
+        "cepages-germaniques"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-igp-meuse",
+      "nom": "IGP Côtes de Meuse",
+      "type": "igp",
+      "region": "Autres régions",
+      "sous_region": "Lorraine",
+      "pays": "France",
+      "cepages_rois": [
+        "Pinot Noir",
+        "Auxerrois",
+        "Chardonnay",
+        "Gewurztraminer",
+        "Pinot Gris"
+      ],
+      "altitude": "230-400 m",
+      "sols": "Calcaires, marnes",
+      "caracteristiques_rapides": "IGP confidentielle dans la Meuse (~30 ha). Dans le sillage du retour qualitatif de la Lorraine viticole.",
+      "niveau_reference": 2,
+      "ranking_pat": 2,
+      "mes_notes": null,
+      "tags": [
+        "igp",
+        "meuse",
+        "confidentielle"
+      ],
+      "source": "inao|lpv"
+    },
+    {
+      "id": "aut-coteaux-lyonnais",
+      "nom": "Coteaux du Lyonnais",
+      "type": "appellation_regionale",
+      "region": "Autres régions",
+      "sous_region": "Lyonnais",
+      "pays": "France",
+      "cepages_rois": [
+        "Gamay",
+        "Chardonnay",
+        "Aligoté"
+      ],
+      "altitude": "200-450 m",
+      "sols": "Granites, argilo-calcaires (entre Beaujolais et Rhône)",
+      "caracteristiques_rapides": "AOC ~280 ha à l'ouest de Lyon. Gamay roi (rouges/rosés), Chardonnay/Aligoté en blanc. Style frais, accessible. Souvent considérée comme un \"petit Beaujolais\".",
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "mes_notes": null,
+      "tags": [
+        "aoc",
+        "regionale",
+        "lyonnais",
+        "gamay",
+        "petit-beaujolais"
+      ],
+      "source": "inao|lpv"
+    }
+  ]
+}

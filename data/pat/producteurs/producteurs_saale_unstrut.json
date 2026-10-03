@@ -1,0 +1,579 @@
+{
+  "schema_version": "1",
+  "kind": "producteurs",
+  "region_key": "saale-unstrut",
+  "region_label": "Saale-Unstrut (Allemagne)",
+  "source_file": "producteurs_saale_unstrut_To_Import.xlsx",
+  "built_at": "2026-06-14",
+  "count": 15,
+  "items": [
+    {
+      "id": "de-saale-unstrut-prod-pawis",
+      "nom": "Pawis",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Freyburg)",
+      "commune": "Freyburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Silvaner",
+        "Spätburgunder",
+        "Gutedel"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Freyburger Edelacker",
+        "Zscheiplitzer"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Freyburg, dans le domaine historique de Zscheiplitz, le Weingut Pawis est l'un des deux meilleurs domaines de Saale-Unstrut. Bernard Pawis a repris l'affaire familiale en 1998 — partie en 1990 d'un demi-hectare, ce qui en fit longtemps le plus petit domaine d'Allemagne — pour la hisser parmi les références de cette région septentrionale et l'inscrire au VDP en 2001. Le domaine, installé dans une ancienne dépendance monastique magnifiquement restaurée, travaille les coteaux de calcaire coquillier, dont le grand Freyburger Edelacker. Il en tire des Weissburgunder, des Riesling et des Silvaner précis, secs et marqués par le terroir, ainsi que des cépages plus rares comme le Gutedel et le Kerner. Le style Pawis recherche la pureté, la salinité et la fraîcheur, dans des vins d'une grande netteté. Membre du VDP, le domaine illustre le potentiel qualitatif de Saale-Unstrut et la capacité de ce vignoble du nord à produire de grands blancs secs et minéraux. L'histoire de Pawis est emblématique du renouveau de l'Allemagne de l'Est après la réunification : parti d'un demi-hectare en 1990, dans une région exsangue après des décennies de collectivisation, Bernard Pawis a patiemment reconstitué un grand domaine et restauré le superbe site monastique de Zscheiplitz, qui domine l'Unstrut. Le Freyburger Edelacker, son grand coteau de calcaire coquillier, donne des Weissburgunder et des Silvaner d'une grande précision, tendus et salins, qui comptent parmi les meilleurs blancs secs de l'est de l'Allemagne. Le domaine cultive aussi le Gutedel, spécialité locale, et de petits volumes de rouges. Pour l'amateur, Pawis est la démonstration que Saale-Unstrut, malgré son climat marginal et septentrional, peut produire de grands vins de terroir, et la plus belle porte d'entrée vers cette région encore largement méconnue. Dans une région où la grande majorité du raisin part en coopérative, Pawis fait figure de phare : un domaine indépendant qui a prouvé, cuvée après cuvée, que le nord de l'Allemagne pouvait jouer dans la cour des grands. Bernard Pawis a aussi remis à l'honneur des cépages et des terroirs oubliés, et son travail a contribué à faire reconnaître Saale-Unstrut au-delà de ses frontières régionales. Pour qui veut découvrir les grands blancs secs de l'est de l'Allemagne, Freyburg et le domaine Pawis sont une étape incontournable.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "silvaner",
+        "icone",
+        "vdp",
+        "muschelkalk",
+        "unstrut"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|vinello|maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-prod-luetzkendorf",
+      "nom": "Lützkendorf",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Bad Kösen)",
+      "commune": "Bad Kösen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Riesling",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Karsdorfer Hohe Gräte",
+        "Saalhäuser"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 5,
+      "ranking_pat": 5,
+      "connu_de_pat": null,
+      "notes_objectives": "À Bad Kösen, dans la vallée de la Saale, le Weingut Lützkendorf est l'autre grande référence de la région. Uwe Lützkendorf a rétabli le domaine familial après la réunification et l'a inscrit, dès 1996, comme le tout premier de Saale-Unstrut au VDP. Le domaine est réputé pour ses Silvaner et ses Riesling issus du grand coteau de la Karsdorfer Hohe Gräte, sur un sol de calcaire coquillier qui leur confère une salinité et une minéralité crayeuses très caractéristiques. Il signe aussi de beaux Weissburgunder et Spätburgunder. Le style Lützkendorf, précis et droit, met en avant la tension saline et l'expression du terroir calcaire. Pilier historique du renouveau qualitatif de la région, le domaine illustre la grandeur des Silvaner et Riesling secs de Saale-Unstrut, salués par la critique internationale. Comme Pawis, Lützkendorf incarne la renaissance viticole de l'Allemagne de l'Est : Uwe Lützkendorf a relevé le domaine familial après 1990 et bâti une nouvelle cave à Bad Kösen, misant d'emblée sur la qualité et le terroir. Son entrée au VDP dès 1996, première de la région, a marqué un tournant. La Karsdorfer Hohe Gräte, coteau escarpé de calcaire coquillier (Muschelkalk), est sa signature : ses Silvaner et Riesling y gagnent une salinité crayeuse et une tension remarquables, saline et minérale, qui ont attiré l'attention de la critique internationale, jusqu'à Decanter. Pour l'amateur, Lützkendorf est, avec Pawis, la référence absolue de Saale-Unstrut, et la preuve que le Silvaner et le Riesling secs y atteignent un niveau insoupçonné. Le caractère salin et crayeux des Silvaner et Riesling de la Karsdorfer Hohe Gräte est devenu une signature reconnaissable, qui illustre à merveille le lien entre le calcaire coquillier et le vin. Uwe Lützkendorf, rejoint par la nouvelle génération, a su préserver cette identité tout en affinant son style. Pour l'amateur français, Lützkendorf est l'une des plus belles découvertes de Saale-Unstrut : la preuve qu'un grand terroir de calcaire, même sous un climat marginal, peut donner des vins d'une tension et d'une minéralité remarquables.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "riesling",
+        "icone",
+        "vdp",
+        "muschelkalk",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "vdp.de|schiller-wine|decanter"
+    },
+    {
+      "id": "de-saale-unstrut-prod-gussek",
+      "nom": "Gussek",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Spätburgunder",
+        "Weissburgunder",
+        "Silvaner",
+        "Riesling"
+      ],
+      "couleurs": [
+        "rouge",
+        "blanc"
+      ],
+      "appellations_lieux_dits": [
+        "Naumburger Sonneck",
+        "Großjenaer Blütengrund"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naumburg, le Winzerhof Gussek est l'un des domaines les plus respectés de Saale-Unstrut. André Gussek, dernier maître de chai de l'ancienne coopérative d'État, est une figure pionnière et le mentor de toute une génération de jeunes vignerons de la région. Le domaine se distingue par ses rouges — Spätburgunder en tête —, rares et soignés dans une région vouée au blanc, ainsi que par ses Weissburgunder, Silvaner et Riesling amples. Le style Gussek recherche la maturité, la profondeur et la générosité, dans des vins de caractère. Le domaine illustre le rôle décisif d'André Gussek dans l'essor qualitatif de Saale-Unstrut et le potentiel, encore méconnu, de ses vins rouges. Figure tutélaire de la région, André Gussek a formé et inspiré nombre des jeunes vignerons qui font aujourd'hui la réputation de Saale-Unstrut. Son domaine, à Naumburg, mise sur la maturité et la profondeur, avec des Spätburgunder ambitieux — rares dans ce vignoble septentrional — et des blancs amples et structurés. Pour l'amateur, Gussek illustre à la fois la mémoire et l'avenir de la région : l'héritage de l'ancienne coopérative d'État et l'audace d'un pionnier qui a cru, le premier, au potentiel des grands vins de Saale-Unstrut. Pour l'amateur, c'est l'une des rares adresses où découvrir de beaux rouges de Saale-Unstrut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "spaetburgunder",
+        "pionnier",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine|decanter"
+    },
+    {
+      "id": "de-saale-unstrut-prod-matthias-hey",
+      "nom": "Matthias Hey",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Silvaner"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Naumburger Steinmeister"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naumburg, le Weingut Matthias Hey est l'une des étoiles montantes de Saale-Unstrut. Formé à la prestigieuse université de Geisenheim, Matthias Hey a développé le domaine familial fondé par ses parents au début des années 2000. Il signe des Riesling et des Weissburgunder précis et minéraux, ainsi que des Silvaner, sur les coteaux de calcaire de la Saale. Le style Hey met en avant la pureté, la fraîcheur et l'expression du terroir. Le domaine illustre la nouvelle génération de vignerons formés et ambitieux qui hissent Saale-Unstrut vers de nouveaux sommets, et compte parmi les adresses à suivre de près dans la région. Formé à Geisenheim puis passé par l'Italie, Matthias Hey a donné une dimension nouvelle au domaine fondé par ses parents au début des années 2000. Ses Riesling et Weissburgunder, précis et minéraux, tirés des coteaux de calcaire de Naumburg, comptent parmi les plus prometteurs de la région. Le domaine illustre la nouvelle génération de vignerons formés et voyageurs qui hissent Saale-Unstrut vers de nouveaux sommets, et figure parmi les adresses les plus en vue de ce renouveau. Il demeure l'une des étoiles montantes les plus suivies de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "montant",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-prod-klaus-boehme",
+      "nom": "Klaus Böhme",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Kirchscheidungen)",
+      "commune": "Kirchscheidungen",
+      "pays": "Allemagne",
+      "cepages": [
+        "Riesling",
+        "Weissburgunder",
+        "Traminer",
+        "Silvaner"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Kirchscheidunger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Kirchscheidungen, dans la vallée de l'Unstrut, le Weingut Klaus Böhme est l'une des bonnes adresses qualitatives de la région. Le domaine est salué pour ses Riesling, ses Weissburgunder et ses Traminer, ainsi que ses Silvaner, sur les coteaux de calcaire de l'Unstrut. Le style Böhme met en avant la fraîcheur, la finesse aromatique et la typicité régionale. Le domaine illustre la qualité des producteurs familiaux de la vallée de l'Unstrut, dans une région longtemps dominée par les coopératives. Salué de longue date par la critique allemande pour ses Riesling, Weissburgunder et Traminer, Klaus Böhme a fait de son domaine de Kirchscheidungen l'une des bonnes adresses de la vallée de l'Unstrut. Ses vins, frais et aromatiques, expriment fidèlement le caractère sec et minéral de la région. Le domaine illustre la qualité des producteurs familiaux indépendants qui, à côté des grandes coopératives, portent la réputation qualitative de Saale-Unstrut. Il compte parmi les valeurs sûres de la vallée de l'Unstrut, salué de longue date par la critique.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "riesling",
+        "weissburgunder",
+        "unstrut"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine|intowine"
+    },
+    {
+      "id": "de-saale-unstrut-prod-landesweingut-kloster-pforta",
+      "nom": "Landesweingut Kloster Pforta",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Bad Kösen)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Silvaner",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Köppelberg",
+        "Saalhäuser"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Pforta, près de Bad Kösen, le Landesweingut Kloster Pforta est le domaine de l'État de Saxe-Anhalt et le plus grand de la région. Il est installé dans l'ancienne abbaye cistercienne Sainte-Marie-de-la-Porte, fondée en 1137, dont les moines plantèrent les premiers grands coteaux. Le domaine exploite des terroirs historiques de calcaire, dont le Köppelberg (créé en 1154), et en tire une large gamme de Weissburgunder, Riesling, Silvaner et Spätburgunder. Le style de la maison met en avant la tradition et l'expression du terroir calcaire. Chargé d'une histoire millénaire, le Landesweingut Kloster Pforta illustre les racines monastiques de la viticulture de Saale-Unstrut. L'abbaye de Pforta, fondée par les cisterciens en 1137, est l'un des berceaux de la viticulture de la région : c'est là que furent plantés certains des plus anciens coteaux, comme le Köppelberg, créé en 1154 et toujours en activité. Domaine de l'État de Saxe-Anhalt et plus grand de la région, le Landesweingut conjugue production, conservation du patrimoine et recherche. Sa large gamme de Weissburgunder, Riesling, Silvaner et Spätburgunder illustre la profondeur historique de Saale-Unstrut. Pour l'amateur, c'est un lieu chargé d'histoire autant qu'un domaine de référence.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "historique",
+        "weissburgunder",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus|maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-prod-konni-evi",
+      "nom": "Konni & Evi",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Roßbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Roßbacher"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Naumburg, Konni & Evi est un micro-domaine culte de Saale-Unstrut, mené par Konrad Buddrus. En vinification nature et avec un grand respect du terroir, le domaine signe des Silvaner salins et terriens, devenus une véritable carte de visite du renouveau de la région auprès des amateurs et de la critique. Le style Konni & Evi, authentique et sans concession, met en avant la minéralité saline du calcaire et la pureté du fruit. Confidentiel et recherché, le domaine illustre l'émergence d'une nouvelle vague de vignerons créatifs qui réinventent l'image de Saale-Unstrut. Konrad Buddrus, vigneron du renouveau, a fait de son micro-domaine l'un des noms les plus en vue de la scène nature allemande. Ses Silvaner, salins et terriens, tirés du calcaire de la région, ont séduit la critique — Decanter en a fait une référence — et incarnent une nouvelle façon, libre et créative, de raconter Saale-Unstrut. Le domaine illustre l'émergence d'une jeune génération qui, par le bio et les vinifications nature, renouvelle profondément l'image de cette région de l'Est. Il est devenu l'emblème de la scène nature et du renouveau de la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "nature",
+        "montant",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "decanter"
+    },
+    {
+      "id": "de-saale-unstrut-prod-froelich-hake",
+      "nom": "Frölich-Hake",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Silvaner",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Naumburger Paradies"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 4,
+      "ranking_pat": 4,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naumburg, le Weingut Frölich-Hake est un domaine familial soigné de Saale-Unstrut. Il signe des Weissburgunder, des Silvaner et des Riesling de belle facture, sur les coteaux de calcaire de la vallée de la Saale. Le style du domaine met en avant la fraîcheur et la typicité régionale, dans des vins secs et précis. Le domaine illustre la qualité des producteurs familiaux de Naumburg, l'un des centres viticoles de la région. Domaine familial de Naumburg, Frölich-Hake signe des Weissburgunder, des Silvaner et des Riesling soignés, fidèles au style sec et frais de la région. Travaillant les coteaux de calcaire de la vallée de la Saale, le domaine illustre la qualité régulière des producteurs familiaux de Naumburg, l'un des cœurs viticoles de Saale-Unstrut, et la vitalité d'un tissu de petits domaines indépendants. Il demeure une belle adresse familiale de Naumburg. Travaillant des coteaux de calcaire coquillier bien exposés, le domaine privilégie des vinifications nettes qui laissent parler le terroir, avec des blancs secs, droits et désaltérants. Dans une région où les grands noms se comptent sur les doigts d une main, Frölich-Hake fait partie de ces maisons familiales solides qui assurent, au quotidien, la réputation qualitative de Naumburg et de Saale-Unstrut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "silvaner",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-prod-winzervereinigung-freyburg",
+      "nom": "Winzervereinigung Freyburg",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Freyburg)",
+      "commune": "Freyburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Müller-Thurgau",
+        "Weissburgunder",
+        "Silvaner",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Freyburger Schweigenberg"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Freyburg, la Winzervereinigung Freyburg-Unstrut est la grande coopérative de la région, qui rassemble la majorité des vignerons. Elle propose une large gamme de Müller-Thurgau, de Burgunder, de Silvaner et de rouges, du vin quotidien à de bonnes cuvées de lieux-dits. Pilier de l'économie viticole locale, la coopérative illustre le poids déterminant du modèle coopératif dans une région de petits vignerons souvent à temps partiel. Rassemblant la majorité des vignerons de la région, souvent propriétaires de petites parcelles cultivées à temps partiel, la coopérative de Freyburg façonne le visage de Saale-Unstrut : c'est elle qui vinifie la plus grande part de la récolte. Sa gamme va du vin quotidien à de bonnes cuvées de lieux-dits. Elle illustre le rôle économique et social déterminant du modèle coopératif dans une région morcelée et confidentielle. Sans elle, une région aussi morcelée ne pourrait maintenir son vignoble.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cooperative",
+        "unstrut"
+      ],
+      "a_verifier": null,
+      "source": "intowine"
+    },
+    {
+      "id": "de-saale-unstrut-prod-thuerkind",
+      "nom": "Thürkind",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Gröst)",
+      "commune": "Gröst",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder",
+        "Spätburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Gröster"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Gröst, dans la vallée de l'Unstrut, le Weingut Thürkind est un domaine familial de Saale-Unstrut. Il signe des Silvaner, des Burgunder et des rouges de belle facture, dans le style sec et frais de la région. Le domaine illustre la qualité des producteurs familiaux de la vallée de l'Unstrut. Domaine familial de Gröst, dans la vallée de l'Unstrut, Thürkind signe des Silvaner, des Burgunder et des rouges fidèles au style sec et frais de la région. Il illustre la qualité discrète des nombreux producteurs familiaux qui, à côté des coopératives, font vivre la viticulture de la vallée de l'Unstrut et préservent ses coteaux de calcaire. Il compte parmi les bons producteurs familiaux de la vallée de l'Unstrut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "unstrut"
+      ],
+      "a_verifier": null,
+      "source": "schiller-wine"
+    },
+    {
+      "id": "de-saale-unstrut-prod-born",
+      "nom": "Born",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Mansfelder Seen",
+      "commune": "Höhnstedt",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Silvaner",
+        "Portugieser"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Höhnstedter"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Höhnstedt, dans le secteur des lacs de Mansfeld, le Weingut Born est un domaine familial. Il signe des blancs secs (Weissburgunder, Silvaner) et des rouges légers, ambassadeur d'un secteur excentré et confidentiel de Saale-Unstrut. Le domaine illustre la diversité géographique de la région, dont certains terroirs s'étendent loin des vallées de la Saale et de l'Unstrut. Installé à Höhnstedt, dans le secteur excentré des lacs de Mansfeld, le domaine Born témoigne de l'étendue géographique de Saale-Unstrut, dont certains terroirs se trouvent loin des vallées principales. Ses blancs secs et ses rouges légers reflètent un caractère régional authentique. Le domaine illustre la diversité, méconnue, des secteurs viticoles de cette région du nord-est de l'Allemagne. Il porte les couleurs du secteur excentré des lacs de Mansfeld.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "mansfeld",
+        "mansfelder-seen"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-prod-stephan-herzer",
+      "nom": "Stephan Herzer",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Weissburgunder",
+        "Riesling",
+        "Silvaner"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Naumburger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naumburg, le Weingut Stephan Herzer est un domaine familial de Saale-Unstrut. Il signe des Weissburgunder, des Riesling et des Silvaner soignés, sur les coteaux de calcaire de la Saale. Le domaine illustre la qualité des producteurs familiaux de Naumburg, cœur viticole de la région. Domaine familial de Naumburg, Stephan Herzer signe des Weissburgunder, Riesling et Silvaner soignés, sur les coteaux de calcaire de la Saale. Fiable et régulier, il illustre la qualité des petits producteurs de Naumburg, cœur viticole et historique de la région, où la tradition viticole millénaire se perpétue dans une multitude de domaines familiaux. Il illustre la vitalité du tissu de petits domaines de Naumburg.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "weissburgunder",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-prod-luettmer",
+      "nom": "Lüttmer",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Unstrut (Querfurt)",
+      "commune": "Querfurt-Vitzenburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder",
+        "Müller-Thurgau"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Vitzenburger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Vitzenburg, près de Querfurt, le Weingut Lüttmer est un domaine familial de la haute vallée de l'Unstrut. Il signe des Silvaner, des Burgunder et du Müller-Thurgau secs, dans un secteur préservé de la région. Le domaine illustre la viticulture de la haute Unstrut, partie plus confidentielle de Saale-Unstrut. Domaine familial de Vitzenburg, dans la haute vallée de l'Unstrut, Lüttmer signe des Silvaner, des Burgunder et du Müller-Thurgau secs, dans un secteur préservé et confidentiel. Il illustre la viticulture de la haute Unstrut, partie plus rurale et excentrée de Saale-Unstrut, où la vigne s'accroche à des coteaux isolés au caractère sauvage. Il fait vivre la viticulture de la haute vallée de l'Unstrut.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "unstrut"
+      ],
+      "a_verifier": null,
+      "source": "wein.plus"
+    },
+    {
+      "id": "de-saale-unstrut-prod-weingut-schulze",
+      "nom": "Weingut Schulze",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Roßbach",
+      "pays": "Allemagne",
+      "cepages": [
+        "Silvaner",
+        "Weissburgunder",
+        "Riesling"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Roßbacher"
+      ],
+      "statut_production": "biologique",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "Près de Naumburg, le Weingut Schulze est un pionnier de la viticulture biologique dans la région. Il signe des Silvaner et des Burgunder minéraux, issus de coteaux calcaires travaillés en interventions minimales. Le domaine illustre l'essor d'une viticulture plus respectueuse de l'environnement à Saale-Unstrut. Pionnier du bio dans une région où cette approche reste rare, le Weingut Schulze, près de Naumburg, signe des Silvaner et des Burgunder minéraux, issus de coteaux calcaires travaillés en interventions minimales. Le domaine illustre l'essor d'une viticulture plus respectueuse de l'environnement à Saale-Unstrut, dans le sillage de la nouvelle génération qui renouvelle l'image de la région. Il ouvre la voie d'une viticulture bio encore rare dans la région.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "silvaner",
+        "bio",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "maxiwines"
+    },
+    {
+      "id": "de-saale-unstrut-prod-naumburger-wein",
+      "nom": "Naumburger Wein",
+      "type": "domaine",
+      "region": "Saale-Unstrut",
+      "sous_region": "Saale (Naumburg)",
+      "commune": "Naumburg",
+      "pays": "Allemagne",
+      "cepages": [
+        "Müller-Thurgau",
+        "Silvaner",
+        "Weissburgunder"
+      ],
+      "couleurs": [
+        "blanc",
+        "rouge"
+      ],
+      "appellations_lieux_dits": [
+        "Naumburger"
+      ],
+      "statut_production": "conventionnel-raisonne",
+      "gamme_prix": null,
+      "niveau_reference": 3,
+      "ranking_pat": 3,
+      "connu_de_pat": null,
+      "notes_objectives": "À Naumburg, la Naumburger Wein est une coopérative regroupant de nombreux petits vignerons, souvent à temps partiel. Sous l'étiquette « Naumburger », elle propose un Müller-Thurgau et un Silvaner authentiques et abordables, expressions du caractère régional. Elle illustre la tradition des petits propriétaires et le rôle des coopératives dans la préservation du vignoble de Saale-Unstrut. Regroupant de nombreux petits vignerons, souvent à temps partiel, la coopérative Naumburger Wein préserve la tradition de la petite propriété qui caractérise la région. Sous l'étiquette « Naumburger », ses Müller-Thurgau et Silvaner offrent des expressions authentiques et abordables du terroir local. Elle illustre, comme sa grande sœur de Freyburg, le rôle central des coopératives dans la survie du vignoble de Saale-Unstrut. Elle préserve la tradition de la petite propriété viticole locale.",
+      "mes_notes": null,
+      "notes_pat": null,
+      "cuvees_phares": [],
+      "tags": [
+        "cooperative",
+        "saale"
+      ],
+      "a_verifier": null,
+      "source": "maxiwines"
+    }
+  ]
+}
