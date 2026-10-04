@@ -157,18 +157,22 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     defauts = defautsDe();
   }
 
-  // Vins encore bloqués : repris un par un (une réponse courte et ciblée réussit mieux qu'une longue liste).
+  // Vins encore bloqués : repris un par un (une réponse courte et ciblée réussit mieux qu'une longue liste),
+  // quatre à la fois, deux essais chacun.
   const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit)/.test(d);
   const bloques = () => carte.filter((v) => defauts.get(v.id)?.some(bloquant));
-  for (const v of bloques().slice(0, 12)) {
-    for (let essai = 1; essai <= 2 && defauts.get(v.id)?.some(bloquant); essai++) {
-      const deja = carte.filter((x) => x.id !== v.id && reponses.has(x.id)).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
-      for (const r of await appeler(`${textePlat(plat)}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n` +
-        `UN SEUL VIN À REPRENDRE : réponds avec un tableau d'un seul élément.\n${ligneVin(v, defauts.get(v.id))}`)) {
-        if (r.vin === v.id) reponses.set(r.vin, r);
-      }
-      defauts = defautsDe();
+  for (let essai = 1; essai <= 2 && bloques().length; essai++) {
+    const aReprendre = bloques();
+    for (let i = 0; i < aReprendre.length; i += 4) {
+      await Promise.all(aReprendre.slice(i, i + 4).map(async (v) => {
+        const deja = carte.filter((x) => x.id !== v.id && reponses.has(x.id) && !defauts.has(x.id)).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
+        for (const r of await appeler(`${textePlat(plat)}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n` +
+          `UN SEUL VIN À REPRENDRE : réponds avec un tableau d'un seul élément.\n${ligneVin(v, defauts.get(v.id))}`)) {
+          if (r.vin === v.id) reponses.set(r.vin, r);
+        }
+      }));
     }
+    defauts = defautsDe();
   }
   // Note hors règle mais commentaire valable : la note est ramenée à la note imposée, ou dans les bornes du plat.
   for (const v of bloques()) {
@@ -181,8 +185,28 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
 
   // Après les corrections, un défaut de style (proche d'un autre commentaire, longueur, vin peu cité) n'empêche plus
   // l'écriture : un texte neuf vaut mieux que l'ancien commentaire importé, souvent identique pour tous les vins du plat.
-  // Restent bloquants : vin absent, note invalide ou non respectée, mot interdit.
-  for (const [vin, d] of defauts) if (!d.some(bloquant)) defauts.delete(vin);
+  // Restent bloquants : vin absent, note invalide ou non respectée, mot interdit, texte identique à un autre.
+  const normal = (t: string) => t.toLowerCase().replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+  const ecrits = new Set<string>();
+  for (const v of carte) {
+    const d = defauts.get(v.id);
+    const r = reponses.get(v.id);
+    if (d?.some(bloquant) || !r) continue;
+    if (ecrits.has(normal(r.commentaire))) { defauts.set(v.id, ['texte identique à un autre']); continue; }
+    ecrits.add(normal(r.commentaire));
+    defauts.delete(v.id);
+  }
+  // Dernier recours pour un vin faible (2/5 ou moins, jamais proposé au client) : une phrase positive qui renvoie
+  // au plat où il s'exprime mieux, plutôt que l'ancien commentaire importé (souvent négatif et identique d'un vin à l'autre).
+  for (const v of carte) {
+    const r = reponses.get(v.id);
+    if (!defauts.has(v.id) || !r || defauts.get(v.id)!.some((d) => /^(vin absent|la note imposée|note invalide)/.test(d)) || r.note > 2) continue;
+    const ailleurs = meilleurPlat(v.id);
+    r.commentaire = ailleurs ? `${v.libelle} : à découvrir plutôt avec ${ailleurs}, où son style s'exprime pleinement.`
+      : `${v.libelle} : à découvrir sur un autre plat de la carte, où son style s'exprime pleinement.`;
+    r.limite = null;
+    defauts.delete(v.id);
+  }
 
   // Écriture : rang = ordre des notes, puis ordre de la carte ; seuls les vins sans défaut bloquant sont écrits.
   const valides = carte.filter((v) => !defauts.has(v.id)).map((v) => reponses.get(v.id)!)
