@@ -132,9 +132,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
               </div>
               <div className="champ"><label htmlFor="resume_court">Résumé court (vu par le client)</label><textarea id="resume_court" name="resume_court" rows={3} defaultValue={choisi.resume_court ?? ''} /></div>
               <div className="champ">
-                <label htmlFor="mot_pat_perso">Mot de Pat (carte imprimée)</label>
-                <textarea id="mot_pat_perso" name="mot_pat_perso" rows={2} defaultValue={choisi.mot_pat_perso ?? ''} placeholder={choisi.mot_pat ?? 'Une phrase sur le vin, pour la carte imprimée'} />
-                <span className="aide">{choisi.mot_pat ? 'Laissez vide pour garder la phrase de Pat (en grisé) ; écrivez pour la remplacer.' : 'Une phrase, environ 90 caractères au plus.'}</span>
+                <label htmlFor="presentation_carte_perso">Présentation (carte imprimée)</label>
+                <textarea id="presentation_carte_perso" name="presentation_carte_perso" rows={5} defaultValue={choisi.presentation_carte_perso ?? ''} placeholder={choisi.presentation_carte ?? 'Trois phrases : le lieu ou le vigneron, le style du vin, ce avec quoi il brille à table.'} />
+                <span className="aide">{choisi.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : 'Trois phrases, 3 à 4 lignes sur la carte (230 à 380 caractères).'}</span>
               </div>
               {BARRES.some(([k]) => typeof profil[k] === 'number') && (
                 <div className="pile" style={{ gap: 8 }}>

@@ -67,9 +67,12 @@ npm run regenerer -- --restaurant lola --plat lola-solettes-meuniere # un seul p
 
 ### 4 quater. Carte des vins imprimable
 
-Back-office › Carte des vins › **Imprimer la carte** (`/admin/<resto>/carte/imprimer`) : couverture, vins par couleur et par région, prix, mot de Pat. La barre en haut (visible à l'écran seulement) règle le format (A4/A5), le noir et blanc, l'ordre, et ouvre le menu d'impression du navigateur (« Enregistrer en PDF » pour un fichier). Seuls les champs publics des vins sont lus.
+Back-office › Carte des vins › **Imprimer la carte** (`/admin/<resto>/carte/imprimer`) : une couverture (logo ou nom, QR code), puis les vins par couleur et par région, chacun présenté par Pat en trois à quatre lignes. La barre en haut (visible à l'écran seulement) règle le format (A4/A5), le noir et blanc, l'ordre (région ou prix), l'affichage des présentations, des producteurs, de la couverture et du rappel « Demandez à Pat », et ouvre le menu d'impression du navigateur (« Enregistrer en PDF » pour un fichier). Mise en page : `src/lib/carte-imprimable.ts`.
 
-« Le mot de Pat » (une phrase par vin) : `npm run mots -- --restaurant lola` (ou `--apercu` pour seulement l'afficher). Le restaurant peut le corriger dans la fiche du vin ; sa version est prioritaire. Sans mot de Pat, la carte prend le début du résumé court.
+- **Présentations** : `npm run presentations -- --restaurant lola` (ou `--apercu` pour seulement les afficher). Trois phrases par vin (le lieu ou le vigneron, le style expliqué par sa cause, ce avec quoi il brille à table), 230 à 380 caractères, tirées uniquement du descriptif, de la présentation du domaine, de l'avis de Pat et des cépages ; contrôle des mots interdits, de la longueur et des doublons, puis régénération. Le restaurant peut corriger le texte dans la fiche du vin : sa version est prioritaire et n'est jamais régénérée. Sans présentation, la carte prend le résumé court.
+- **Cuisine interne** : seuls les champs publics des vins sont lus, jamais de ranking, de note ni de score.
+- **Mise en page** : un vin n'est jamais coupé entre deux pages et un titre de région reste avec son premier vin ; compter une dizaine de pages A4 pour 70 vins. Un vin indisponible n'apparaît pas ; un producteur déjà dans le nom du vin n'est pas répété.
+- **Navigateurs** : les en-têtes et numéros de page utilisent les marges de page CSS (Chrome 131 et plus). Dans Safari ou Firefox, l'impression fonctionne, sans en-tête ni numéro. Pour garder la couverture en couleur, cocher « Graphiques d'arrière-plan » dans la fenêtre d'impression.
 
 ### 5. Lancer et déployer
 

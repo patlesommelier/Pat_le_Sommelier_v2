@@ -94,10 +94,10 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
             etiquette_url = coalesce($9, etiquette_url),
             etiquette_source = case when $9::text is not null then 'restaurant' else etiquette_source end,
             etiquette_statut = case when $9::text is not null then 'trouvee' else etiquette_statut end,
-            mot_pat_perso = $10, modifie_bo = now()
+            presentation_carte_perso = $10, modifie_bo = now()
       where id = $1 and restaurant_id = $2`,
     [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'), txt(f, 'resume_court'),
-      f.get('disponible') === 'on', f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'mot_pat_perso')],
+      f.get('disponible') === 'on', f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

@@ -1,5 +1,5 @@
 /**
- * Carte des vins imprimable : document HTML complet (couverture, couleurs, régions, mot de Pat), prêt à imprimer
+ * Carte des vins imprimable : document HTML complet (couverture, couleurs, régions, présentation de chaque vin par Pat), prêt à imprimer
  * depuis le navigateur ou à enregistrer en PDF. Fonctions pures, sans dépendance.
  *
  * IMPORTANT : ne jamais transmettre ici les rankings, notes ou scores. Ce module ne lit que les champs de VinImprimable.
@@ -17,8 +17,8 @@ export interface VinImprimable {
   region: string | null;         // « Bourgogne », ou null (bulles, rosés…)
   prix: number | null;           // bouteille
   prixVerre: number | null;      // au verre
-  motPat: string | null;         // phrase de Pat
-  motPatPerso: string | null;    // phrase corrigée par le restaurant (prioritaire)
+  presentation: string | null;       // présentation de 3 à 4 lignes générée par Pat
+  presentationPerso: string | null;  // présentation corrigée par le restaurant (prioritaire)
   visible: boolean;              // false = indisponible : absent de la carte
 }
 
@@ -34,7 +34,7 @@ export interface OptionsCarte {
   couleurAccent: string;
   noirEtBlanc: boolean;
   ordre: 'app' | 'prix';        // 'app' : couleur puis région, ordre de la carte | 'prix' : couleur puis prix croissant
-  afficherMot: boolean;
+  afficherPresentation: boolean;
   afficherProducteur: boolean;
   couverture: boolean;
   rappelPat: boolean;
@@ -45,7 +45,7 @@ export const OPTIONS_PAR_DEFAUT: OptionsCarte = {
   couleurAccent: '#BA4037',
   noirEtBlanc: false,
   ordre: 'app',
-  afficherMot: true,
+  afficherPresentation: true,
   afficherProducteur: true,
   couverture: true,
   rappelPat: true,
@@ -119,9 +119,15 @@ export function organiser(vins: VinImprimable[], options: OptionsCarte): Groupe[
   }).filter((c) => c.regions.some((r) => r.vins.length));
 }
 
+/** Présentation affichée sous le vin : celle corrigée par le restaurant, sinon celle de Pat. */
+export function texteVin(vin: VinImprimable, options: OptionsCarte): string {
+  if (!options.afficherPresentation) return '';
+  return (vin.presentationPerso || vin.presentation || '').trim();
+}
+
 function htmlVin(vin: VinImprimable, options: OptionsCarte) {
   const detail = ligneDetail(vin, options);
-  const mot = options.afficherMot ? (vin.motPatPerso || vin.motPat || '').trim() : '';
+  const mot = texteVin(vin, options);
   return `<div class="vin">
   <div class="vin-ligne">
     <span class="vin-nom">${echapper(vin.nom)}</span>
@@ -144,7 +150,6 @@ function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte,
   <div class="couv-corps">
     <h1>Carte des vins</h1>
     <span class="couv-filet" aria-hidden="true"></span>
-    ${options.afficherMot ? '<p class="couv-sous-titre">Chaque vin présenté en une phrase par Pat, votre sommelier</p>' : ''}
     <p class="couv-couleurs">${echapper(couleursPresentes.join(' · '))}</p>
     ${options.rappelPat ? `<div class="couv-pat">${qr}<p>Un conseil pour votre plat ? Scannez ce code : Pat vous propose trois vins de la carte.</p></div>` : ''}
   </div>
@@ -176,7 +181,6 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .couv-corps { flex: 1; padding: 18mm 24mm 16mm; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; }
 .couv-filet { width: 15mm; height: 2px; background: ${accent}; }
-.couv-sous-titre { margin: 0; max-width: 125mm; font: italic 500 ${a5 ? '14pt' : '18pt'}/1.35 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: balance; }
 .couv-couleurs { margin: 0; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #5E5357; }
 .couv-pat { margin-top: auto; display: flex; align-items: center; gap: 5mm; text-align: left; }
 .couv-pat p { margin: 0; max-width: 80mm; font: 500 ${a5 ? '11pt' : '13.5pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
@@ -189,13 +193,13 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .couleur > h2::before { content: ""; width: 7mm; height: 2px; background: ${accent}; }
 .region > h3 { display: flex; align-items: center; gap: 3mm; margin: 3.5mm 0 2.5mm; font-size: 8.5pt; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: ${accent}; break-after: avoid; }
 .region > h3::after { content: ""; flex: 1; height: 1px; background: #E2D8DB; }
-.vin { break-inside: avoid; margin-bottom: 3.2mm; }
+.vin { break-inside: avoid; margin-bottom: 4.5mm; }
 .vin-ligne { display: flex; align-items: baseline; gap: 2.6mm; }
 .vin-nom { font: 600 ${a5 ? '12pt' : '14pt'}/1.2 'Cormorant Garamond', Garamond, serif; }
 .vin-detail { font-size: 9pt; color: #5E5357; white-space: nowrap; }
 .vin-points { flex: 1 1 6mm; min-width: 6mm; border-bottom: 1px dotted #A99DA1; transform: translateY(-1mm); }
 .vin-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.vin-mot { margin: 0.6mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.25 'Cormorant Garamond', Garamond, serif; color: #3F3739; }
+.vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: pretty; }
 .fin { break-inside: avoid; margin-top: 8mm; padding-top: 5mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0 0 2mm; }
 .fin .fin-pat { font: italic 500 13.5pt 'Cormorant Garamond', Garamond, serif; }
