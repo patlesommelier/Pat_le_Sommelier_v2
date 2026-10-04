@@ -8,7 +8,7 @@ import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
-import { REGLAGES_PAT, type Reglages } from '@/lib/selection';
+import { REGLAGES_INTERNES, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => {
   const v = f.get(k);
@@ -198,6 +198,7 @@ export async function enregistrerReglages(resto: string, f: FormData) {
   await exigerAcces(resto);
   const diff: Partial<Reglages> = {};
   for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
+    if (REGLAGES_INTERNES.includes(k)) continue;
     const pat = REGLAGES_PAT[k];
     if (typeof pat === 'boolean') {
       const v = f.get(k) === 'on';

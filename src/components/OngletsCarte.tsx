@@ -3,11 +3,11 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { euros, sousTitreVin } from '@/lib/format';
-import { COULEURS, type Vin } from '@/lib/types';
+import { COULEURS, type VinOnglet } from '@/lib/types';
 import { Etiquette } from './Etiquette';
 
 /** Carte des vins par onglets : on ne voit que les vins de la couleur choisie, groupés par région. */
-export function OngletsCarte({ restaurant, vins }: { restaurant: string; vins: Vin[] }) {
+export function OngletsCarte({ restaurant, vins }: { restaurant: string; vins: VinOnglet[] }) {
   // Quatre onglets principaux ; « Orange » et « Doux » n'apparaissent que si la carte en contient.
   const onglets = COULEURS.filter((c) => ['bulles', 'blanc', 'rose', 'rouge'].includes(c.id) || vins.some((v) => v.couleur === c.id));
   const [actif, setActif] = useState(onglets.find((o) => vins.some((v) => v.couleur === o.id))?.id ?? 'blanc');

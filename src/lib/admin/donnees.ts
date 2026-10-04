@@ -75,21 +75,35 @@ export async function getProfil(platId: string) {
 // ───────── Carte ─────────
 export interface VinBO {
   id: string; couleur: string; section: string | null; libelle: string; producteur_id: string | null; producteur_texte: string | null;
-  producteur_nom: string | null; producteur_statut: string | null; producteur_ranking: number | null;
+  producteur_nom: string | null; producteur_statut: string | null;
+  /** Ce que le restaurant voit du producteur : déjà dans la base de Pat, ou nouveau (proposé). */
+  statut_producteur: 'reference' | 'nouveau' | null;
   millesime: string | null; format: string; prix: number | null; prix_verre: number | null; cepages: string | null;
   resume_court: string | null; presentation: string | null; etiquette_url: string | null; etiquette_source: string | null;
   etiquette_statut: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
-  ranking_producteur: number | null; ranking_terroir: number | null; pays: string | null; vin_texte: string | null;
+  pays: string | null; vin_texte: string | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
 }
 export async function getVinsBO(restaurantId: string) {
   return requete<VinBO>(
     `select v.id, v.couleur::text, v.section, v.libelle, v.producteur_id, v.producteur_texte, p.nom as producteur_nom,
-            p.statut::text as producteur_statut, p.ranking_pat as producteur_ranking, v.millesime, v.format, v.prix, v.prix_verre,
+            p.statut::text as producteur_statut,
+            case when p.statut = 'propose' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
+            v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.coup_de_coeur,
-            v.disponible, v.a_verifier, v.ranking_producteur, v.ranking_terroir, v.pays, v.vin_texte, v.profil_degustation, v.ordre
+            v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
+}
+
+/**
+ * Rankings de Pat (producteur, terroir) des vins d'un restaurant : cuisine interne.
+ * À n'appeler que pour un administrateur (Pat) ; jamais pour un compte restaurant.
+ */
+export async function getRankingsInternes(restaurantId: string) {
+  const r = await requete<{ id: string; ranking_producteur: number | null; ranking_terroir: number | null }>(
+    'select id, ranking_producteur, ranking_terroir from vin_carte where restaurant_id = $1', [restaurantId]);
+  return new Map(r.map((x) => [x.id, x]));
 }
 
 // ───────── Accords ─────────
@@ -136,14 +150,14 @@ const MOTS_VIDES = new Set(['domaine', 'chateau', 'maison', 'cave', 'caves', 'ca
   'des', 'du', 'de', 'la', 'le', 'les', 'et', 'fils', 'freres', 'pere', 'vignerons', 'vignobles', 'non', 'indique', 'carte', 'confirmer', 'probable']);
 const norm = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/œ/g, 'oe');
 
-export interface ProducteurSuggere { id: string; nom: string; region: string | null; pays: string | null; ranking_pat: number | null; statut: string }
+export interface ProducteurSuggere { id: string; nom: string; region: string | null; pays: string | null; statut: string }
 
 /** Producteurs de la base de Pat dont le nom ressemble au texte saisi (les plus proches d'abord). */
 export async function suggestionsProducteurs(texte: string | null, limite = 5): Promise<ProducteurSuggere[]> {
   const mots = [...new Set(norm(texte ?? '').split(/[^a-z0-9]+/).filter((m) => m.length > 2 && !MOTS_VIDES.has(m)))];
   if (!mots.length) return [];
   const lignes = await requete<ProducteurSuggere>(
-    `select id, nom, region, pays, ranking_pat, statut::text from producteur
+    `select id, nom, region, pays, statut::text from producteur
       where statut <> 'retire' and ${SANS_ACCENTS} like any($1) limit 200`,
     [mots.map((m) => `%${m}%`)],
   );

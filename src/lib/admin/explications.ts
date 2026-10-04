@@ -1,16 +1,19 @@
 import type { Motif, Reglages, Retenu, Candidat } from '../selection';
 
-/** Phrase courte pour le restaurant : pourquoi ce vin est retenu (ou non). */
-export function pourquoiRetenu(r: Retenu, rang: number, liste: Retenu[]): string {
+/**
+ * Phrase courte : pourquoi ce vin est retenu (ou non).
+ * interne = vue de Pat (administrateur), qui peut parler de score ; sinon vue du restaurant, sans score ni ranking.
+ */
+export function pourquoiRetenu(r: Retenu, rang: number, liste: Retenu[], interne = false): string {
   const m: Record<Motif, string> = {
-    classement: rang === 1 ? 'Meilleur score' : 'Parmi les meilleurs scores',
-    quatrieme_cinquieme: `${rang}e vin : bien noté et proche du 3e`,
+    classement: interne ? (rang === 1 ? 'Meilleur score' : 'Parmi les meilleurs scores') : (rang === 1 ? 'En tête du classement de Pat' : 'Parmi les premiers du classement de Pat'),
+    quatrieme_cinquieme: interne ? `${rang}e vin : bien noté et proche du 3e` : `${rang}e vin : bien noté, il complète la liste`,
     plus_cher: 'Vin d’exception : nettement plus cher que la liste',
     moins_cher: 'Vin plus accessible : nettement moins cher',
     tour_suivant: 'Proposé si le client demande autre chose',
   };
   const precedent = liste[rang - 2];
-  if (r.motif === 'classement' && precedent && precedent.score === r.score) {
+  if (interne && r.motif === 'classement' && precedent && precedent.score === r.score) {
     return precedent.note > r.note ? 'Même score, note un peu plus basse' : 'Même score : départagé (diversité, rankings, ordre de la carte)';
   }
   return m[r.motif];

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Points, Vignette, euros } from '@/components/admin/Ui';
+import { utilisateurCourant } from '@/lib/admin/auth';
 import { getPlatsBO } from '@/lib/admin/donnees';
 import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
 import { accordsVisibles, getCandidats, getReglages } from '@/lib/donnees';
@@ -11,7 +12,9 @@ const CAT: Record<string, string> = { entree: 'Entrées', plat: 'Plats', dessert
 export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
-  const [plats, R] = await Promise.all([getPlatsBO(resto), getReglages(resto)]);
+  const [plats, R, u] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant()]);
+  // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.
+  const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
   const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [actifs[0]?.id]).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
@@ -82,7 +85,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
           <div className="carte-bo pile">
             <div>
               <h2>Pourquoi ces vins ?</h2>
-              <p className="sous">{plusieurs ? `Un vin pour toute la table (${choisis.map(nomPlat).join(' + ')}) : la note la plus basse compte.` : `${nomPlat(choisis[0] ?? '')}${tour > 1 ? ` · tour ${tour}` : ''}`} · note · ranking producteur · score</p>
+              <p className="sous">{plusieurs ? `Un vin pour toute la table (${choisis.map(nomPlat).join(' + ')}) : la note la plus basse compte.` : `${nomPlat(choisis[0] ?? '')}${tour > 1 ? ` · tour ${tour}` : ''}`}{interne ? ' · note · ranking producteur · score' : ' · rang · note /5 · prix'}</p>
             </div>
             {!liste.length && <p className="discret">{tour > 1 ? 'Plus aucun vin assez bien noté : Pat propose de revenir aux premières propositions.' : 'Aucun vin ne s’accorde assez bien.'}</p>}
             <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -92,8 +95,8 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                   <Vignette url={r.vin.etiquette_url} taille={44} />
                   <span style={{ display: 'flex', flexDirection: 'column', gap: 3, minWidth: 0 }}>
                     <b>{r.vin.libelle}</b>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--encre)', fontWeight: 700 }}><Points note={r.note} />{r.note} · {r.vin.ranking_producteur ?? 0} · {r.score} · {euros(r.vin.prix ?? r.vin.prix_verre)}</span>
-                    <span className="discret" style={{ fontSize: 13.5 }}>{pourquoiRetenu(r, i + 1, liste)}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--encre)', fontWeight: 700 }}><Points note={r.note} />{interne ? `${r.note} · ${r.vin.ranking_producteur ?? 0} · ${r.score}` : `${r.note}/5`} · {euros(r.vin.prix ?? r.vin.prix_verre)}</span>
+                    <span className="discret" style={{ fontSize: 13.5 }}>{pourquoiRetenu(r, i + 1, liste, interne)}</span>
                     {plusieurs && <span className="discret" style={{ fontSize: 12.5 }}>{choisis.map((p) => `${nomPlat(p)} ${r.vin.notes[p]}`).join(' · ')}</span>}
                   </span>
                 </li>
@@ -104,7 +107,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                 <span className="surtitre" style={{ color: 'var(--discret)' }}>Juste après</span>
                 {ecartes.map((c) => {
                   const [t, k] = pourquoiPas(c, R, liste, tour2);
-                  return <span key={c.vin.id} style={{ fontSize: 13.5, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}><span>{c.vin.libelle} <span className="discret">({c.note} · {c.score})</span></span><Etat type={k}>{t}</Etat></span>;
+                  return <span key={c.vin.id} style={{ fontSize: 13.5, display: 'flex', flexDirection: 'column', alignItems: 'flex-start', gap: 4 }}><span>{c.vin.libelle} <span className="discret">({interne ? `${c.note} · ${c.score}` : `${c.note}/5`})</span></span><Etat type={k}>{t}</Etat></span>;
                 })}
               </div>
             )}

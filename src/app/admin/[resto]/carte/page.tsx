@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { enregistrerVin } from '../../actions';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
-import { getVinsBO, suggestionsProducteurs, type VinBO } from '@/lib/admin/donnees';
+import { utilisateurCourant } from '@/lib/admin/auth';
+import { getRankingsInternes, getVinsBO, suggestionsProducteurs, type VinBO } from '@/lib/admin/donnees';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -16,8 +17,8 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 
 function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
   // Les rankings de Pat restent internes : le restaurant voit seulement si le producteur est déjà référencé ou nouveau.
-  if (v.producteur_statut === 'propose') return ['Nouveau producteur', 'propose'];
-  if (v.producteur_id) return ['Déjà référencé', 'ok'];
+  if (v.statut_producteur === 'nouveau') return ['Nouveau producteur', 'propose'];
+  if (v.statut_producteur === 'reference') return ['Déjà référencé', 'ok'];
   if (v.producteur_texte && !/^non /i.test(v.producteur_texte)) return ['À relier : choisir le producteur', 'attention'];
   return ['Producteur à préciser', 'attention'];
 }
@@ -25,7 +26,10 @@ function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
-  const vins = await getVinsBO(resto);
+  const [vins, u] = await Promise.all([getVinsBO(resto), utilisateurCourant()]);
+  // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
+  const rankings = u?.admin ? await getRankingsInternes(resto) : null;
+  const etoiles = (id: string) => { const r = rankings?.get(id); return r ? ` · ★ ${r.ranking_producteur ?? 0} / terroir ${r.ranking_terroir ?? 0}` : ''; };
   const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
   const choisiParam = vins.find((v) => v.id === sp.vin);
   const c = sp.c ?? choisiParam?.couleur ?? presentes[0]?.[0] ?? 'rouge';
@@ -37,7 +41,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
   const sansLien = Boolean(choisi && !choisi.producteur_id && choisi.producteur_texte && !/^non /i.test(choisi.producteur_texte));
   // Suggestions : pour un nom pas encore relié, ou pour corriger un producteur proposé.
-  const suggestions = choisi && (sansLien || choisi.producteur_statut === 'propose')
+  const suggestions = choisi && (sansLien || choisi.statut_producteur === 'nouveau')
     ? (await suggestionsProducteurs(choisi.producteur_texte ?? choisi.producteur_nom)).filter((p) => p.id !== choisi.producteur_id && p.statut !== 'propose')
     : [];
   return (
@@ -45,7 +49,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite." />
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.producteur_id && v.producteur_statut !== 'propose').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span></div>
       </div>
@@ -69,7 +73,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                       <td>{v.millesime ?? '—'}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : v.prix_verre ? `${euros(v.prix_verre)} le verre` : '—'}</td>
                       <td><Etat type={ek}>{el}</Etat></td>
-                      <td>{!v.disponible ? <Etat type="defaut">Indisponible</Etat> : <Etat type={bk}>{bl}</Etat>}</td>
+                      <td>{!v.disponible ? <Etat type="defaut">Indisponible</Etat> : <Etat type={bk}>{bl}</Etat>}{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
                       <td className="droite"><Link className="lien-ligne" href={lien({ vin: v.id })} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
                     </tr>
                   );
@@ -103,7 +107,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 </div>
                 {choisi.producteur_id && (
                   <label className="case"><input type="radio" name="producteur_choix" value={choisi.producteur_id} defaultChecked />
-                    <span><b>{choisi.producteur_nom}</b><small>{pl}</small></span></label>
+                    <span><b>{choisi.producteur_nom}</b><small>{pl}{etoiles(choisi.id)}</small></span></label>
                 )}
                 {!choisi.producteur_id && sansLien && suggestions.length > 0 && (
                   <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Pat a trouvé des noms proches dans sa base : choisissez le bon producteur, ou proposez-le comme nouveau.</p>

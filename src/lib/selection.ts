@@ -65,11 +65,15 @@ export const REGLAGES_PAT: Reglages = {
   plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3,
 };
 
+/** Réglages internes à Pat (ils reposent sur le score, donc sur ses rankings) : jamais modifiables par le restaurant. */
+export const REGLAGES_INTERNES: readonly (keyof Reglages)[] = ['scoreMinAjout'];
+
 /** Réglages enregistrés (partiels, éventuellement invalides) → réglages complets. */
 export function reglagesComplets(r: unknown): Reglages {
   const o = (r && typeof r === 'object' ? r : {}) as Record<string, unknown>;
   const out = { ...REGLAGES_PAT };
   for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
+    if (REGLAGES_INTERNES.includes(k)) continue;
     const v = o[k];
     if (typeof REGLAGES_PAT[k] === 'boolean' && typeof v === 'boolean') (out[k] as boolean) = v;
     if (typeof REGLAGES_PAT[k] === 'number' && typeof v === 'number' && Number.isFinite(v)) (out[k] as number) = v;
