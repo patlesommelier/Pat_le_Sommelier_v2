@@ -5,8 +5,8 @@ import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant } from '@/lib/admin/auth';
-import { getLimitesInternes, getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
-import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
+import { getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
+import { pourquoiPas } from '@/lib/admin/explications';
 import { requete } from '@/lib/db';
 import { getCandidats, getReglages } from '@/lib/donnees';
 import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
@@ -62,7 +62,6 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const tri = sp.tous ? triComplet : triComplet.slice(0, 12);
   const s = plat ? parPlat.get(plat.id) : undefined;
   // « Limite » des commentaires générés : chargée pour Pat seulement.
-  const limites = interne && plat ? await getLimitesInternes(resto, plat.id) : null;
   const prix = sel.liste.map((r) => r.vin.prix).filter((p): p is number => p !== null);
 
   return (
@@ -120,7 +119,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}><Points note={r.note} />{interne
                       ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b></span>
                       : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</div>
-                    <span className="discret" style={{ fontSize: 13 }}>{pourquoiRetenu(r, i + 1, sel.liste, interne)}</span>
+                    <span style={{ fontSize: 13.5, lineHeight: 1.4, fontStyle: 'italic' }}>{lignesParVin.get(r.vin.id)?.[0]?.explication ?? '—'}</span>
                   </div>
                 ))}
               </div>
@@ -146,7 +145,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                             {l?.statut === 'propose' && <span className="petit">à relire</span>}
                           </td>
                           {interne && <td className="droite"><b>{t.score}</b></td>}
-                          <td className="petit" style={{ minWidth: 220, maxWidth: 340, lineHeight: 1.4 }}>{l?.explication ?? '—'}{limites?.get(t.vin.id) && <><br /><i>Limite (interne) : {limites.get(t.vin.id)}</i></>}</td>
+                          <td className="petit" style={{ minWidth: 220, maxWidth: 340, lineHeight: 1.4 }}>{l?.explication ?? '—'}</td>
                           <td><Etat type={rk}>{res}</Etat></td>
                         </tr>
                       );
