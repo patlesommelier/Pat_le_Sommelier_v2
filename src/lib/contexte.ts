@@ -29,7 +29,7 @@ export async function chargerContexte(restaurantId: string) {
       [restaurantId],
     ),
     requete<PlatCtx>(
-      `select pl.id, pl.nom, pl.categorie, coalesce(pa.ancrages, '{}') as ancrages, pa.profil, coalesce(pa.couleurs_ok::text[], '{}') as couleurs_ok,
+      `select pl.id, pl.nom, pl.categorie, pl.description_cuisine, coalesce(pa.ancrages, '{}') as ancrages, pa.profil, coalesce(pa.couleurs_ok::text[], '{}') as couleurs_ok,
               coalesce(pa.cepages_conseilles, '{}') as cepages_conseilles,
               pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond
          from plat pl left join profil_accord pa on pa.plat_id = pl.id

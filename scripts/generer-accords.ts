@@ -34,7 +34,7 @@ async function main() {
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 and v.disponible order by v.ordre`, [restaurant]);
   const plats = await q<PlatCtx>(
-    `select pl.id, pl.nom, pl.categorie, coalesce(pa.ancrages,'{}') as ancrages, pa.profil, coalesce(pa.couleurs_ok::text[],'{}') as couleurs_ok,
+    `select pl.id, pl.nom, pl.categorie, pl.description_cuisine, coalesce(pa.ancrages,'{}') as ancrages, pa.profil, coalesce(pa.couleurs_ok::text[],'{}') as couleurs_ok,
             coalesce(pa.cepages_conseilles,'{}') as cepages_conseilles, pa.a_eviter, pa.temperature_service, coalesce(pa.principes,'{}') as principes, pa.plafond
        from plat pl join profil_accord pa on pa.plat_id = pl.id
       where pl.restaurant_id = $1 and pl.actif ${seulPlat ? 'and pl.id = $2' : ''} order by pl.ordre`,

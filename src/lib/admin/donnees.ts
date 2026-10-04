@@ -58,11 +58,13 @@ export function reglagesModifies(r: RestaurantBO | null): (keyof Reglages)[] {
 export interface PlatBO {
   id: string; nom: string; nom_court: string | null; categorie: string; prix: number | null; prix_variantes: string | null;
   actif: boolean; ordre: number; modifie_bo: string | null;
+  description_cuisine: string | null; description_apres_accords: boolean;
 }
 export async function getPlatsBO(restaurantId: string) {
   return requete<PlatBO>(
-    `select id, nom, nom_court, categorie::text, prix, prix_variantes, actif, ordre, modifie_bo
-       from plat where restaurant_id = $1 order by ordre`, [restaurantId]);
+    `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.prix, pl.prix_variantes, pl.actif, pl.ordre, pl.modifie_bo, pl.description_cuisine,
+            coalesce(pl.description_modifiee_le > (select max(a.calcule_le) from accord a where a.plat_id = pl.id and a.origine = 'pat'), false) as description_apres_accords
+       from plat pl where pl.restaurant_id = $1 order by pl.ordre`, [restaurantId]);
 }
 export async function getProfil(platId: string) {
   const [p] = await requete<{ ancrages: string[]; profil: string | null; a_eviter: string | null; temperature_service: string | null }>(

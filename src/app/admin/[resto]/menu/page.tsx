@@ -29,7 +29,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               <tbody>
                 {affiches.map((p) => (
                   <tr key={p.id} className={p.id === choisi?.id ? 'choisi' : ''}>
-                    <td><div className="nom">{p.nom}</div><div className="petit">Accueil : {p.nom_court ?? p.nom}</div></td>
+                    <td><div className="nom">{p.nom}</div><div className="petit">Accueil : {p.nom_court ?? p.nom}{p.description_cuisine ? ' · description détaillée' : ''}</div></td>
                     <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{p.prix_variantes ?? euros(p.prix)}</td>
                     <td>{!p.actif ? <Etat type="defaut">Masqué</Etat> : p.modifie_bo ? <Etat type="ok">Modifié</Etat> : <Etat type="ok">En ligne</Etat>}</td>
                     <td className="droite"><Link className="lien-ligne" href={lien({ plat: p.id })} aria-label={`Modifier ${p.nom}`}>Modifier</Link></td>
@@ -55,6 +55,15 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               </div>
               <div className="champ"><label htmlFor="prix_variantes">Prix détaillé (facultatif)</label><input id="prix_variantes" name="prix_variantes" defaultValue={choisi.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
               <label className="case"><input type="checkbox" name="actif" defaultChecked={choisi.actif} /><span>Proposé aux clients</span></label>
+              <div className="champ">
+                <label htmlFor="description_cuisine">Description pour Pat</label>
+                <textarea id="description_cuisine" name="description_cuisine" rows={7} defaultValue={choisi.description_cuisine ?? ''}
+                  placeholder={'Cuisson (rôti, poché, frit, grillé, mijoté…), degré de cuisson, tous les ingrédients, épices et herbes, sauce et sa base (beurre, crème, vin, jus…), garniture, assaisonnement, piquant, acidité, sucre, textures, origine des produits…'} />
+                <span className="aide">Tout ce qui aide Pat à faire un accord plus précis. Non montré aux clients.</span>
+              </div>
+              {choisi.description_apres_accords && (
+                <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Description modifiée après le calcul des accords de ce plat : Pat en tiendra compte au prochain calcul.</p>
+              )}
               {profil && (
                 <div className="encadre-rose" style={{ flexDirection: 'column', gap: 8 }}>
                   <span className="surtitre" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

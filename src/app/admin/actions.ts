@@ -63,10 +63,12 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
   const cat = txt(f, 'categorie');
   await requete(
     `update plat set nom = coalesce($3, nom), nom_court = $4, categorie = coalesce($5::categorie_plat, categorie), prix = $6,
-            prix_variantes = $7, actif = $8, modifie_bo = now()
+            prix_variantes = $7, actif = $8, modifie_bo = now(),
+            description_modifiee_le = case when coalesce(description_cuisine, '') <> coalesce($9, '') then now() else description_modifiee_le end,
+            description_cuisine = $9
       where id = $1 and restaurant_id = $2`,
     [platId, resto, txt(f, 'nom'), txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : null,
-      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on'],
+      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on', txt(f, 'description_cuisine')],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

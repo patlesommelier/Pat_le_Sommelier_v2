@@ -12,7 +12,7 @@ export interface VinCtx {
   ranking_producteur: number | null; avis_pat: string | null; coup_de_coeur: boolean;
 }
 export interface PlatCtx {
-  id: string; nom: string; categorie: string;
+  id: string; nom: string; categorie: string; description_cuisine?: string | null;
   ancrages: string[]; profil: string | null; couleurs_ok: string[]; cepages_conseilles: string[];
   a_eviter: string | null; temperature_service: string | null; principes: string[]; plafond: number | null;
 }
@@ -49,6 +49,7 @@ export function texteCarte(vins: VinCtx[]): string {
 export function textePlat(p: PlatCtx): string {
   return [
     `Plat : ${p.nom} (${p.categorie})`,
+    p.description_cuisine ? `Description du chef (cuissons, ingrédients, épices, sauce) : ${p.description_cuisine}` : null,
     `Points d'ancrage : ${p.ancrages.join(', ') || '—'}`,
     `Profil de vin recherché : ${p.profil ?? '—'}`,
     `Couleurs possibles : ${p.couleurs_ok.join(', ') || 'toutes'}`,
