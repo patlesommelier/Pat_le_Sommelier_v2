@@ -82,6 +82,8 @@ export interface VinBO {
   resume_court: string | null; presentation: string | null; etiquette_url: string | null; etiquette_source: string | null;
   etiquette_statut: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
   pays: string | null; vin_texte: string | null;
+  /** Mot de Pat pour la carte imprimée : généré, et corrigé par le restaurant (prioritaire). */
+  mot_pat: string | null; mot_pat_perso: string | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
 }
 export async function getVinsBO(restaurantId: string) {
@@ -91,7 +93,7 @@ export async function getVinsBO(restaurantId: string) {
             case when p.statut = 'propose' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
             v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.coup_de_coeur,
-            v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre
+            v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.mot_pat, v.mot_pat_perso
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
 }

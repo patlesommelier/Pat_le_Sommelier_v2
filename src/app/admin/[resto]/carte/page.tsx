@@ -46,7 +46,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     : [];
   return (
     <>
-      <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite." />
+      <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
+        <a href={`/admin/${resto}/carte/imprimer`} target="_blank" rel="noopener" className="btn sec">Imprimer la carte</a>
+      </Entete>
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
@@ -129,6 +131,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={choisi.prix_verre ?? ''} /></div>
               </div>
               <div className="champ"><label htmlFor="resume_court">Résumé court (vu par le client)</label><textarea id="resume_court" name="resume_court" rows={3} defaultValue={choisi.resume_court ?? ''} /></div>
+              <div className="champ">
+                <label htmlFor="mot_pat_perso">Mot de Pat (carte imprimée)</label>
+                <textarea id="mot_pat_perso" name="mot_pat_perso" rows={2} defaultValue={choisi.mot_pat_perso ?? ''} placeholder={choisi.mot_pat ?? 'Une phrase sur le vin, pour la carte imprimée'} />
+                <span className="aide">{choisi.mot_pat ? 'Laissez vide pour garder la phrase de Pat (en grisé) ; écrivez pour la remplacer.' : 'Une phrase, environ 90 caractères au plus.'}</span>
+              </div>
               {BARRES.some(([k]) => typeof profil[k] === 'number') && (
                 <div className="pile" style={{ gap: 8 }}>
                   <span className="libelle" style={{ fontSize: 13, fontWeight: 700 }}>Profil de dégustation</span>

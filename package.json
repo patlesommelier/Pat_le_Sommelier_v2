@@ -13,6 +13,7 @@
     "accords": "tsx scripts/generer-accords.ts",
     "commentaires": "tsx scripts/generer-commentaires.ts",
     "regenerer": "tsx scripts/regenerer-accords.ts",
+    "mots": "tsx scripts/generer-mots.ts",
     "cas-test": "tsx scripts/cas-test.ts"
   },
   "dependencies": {

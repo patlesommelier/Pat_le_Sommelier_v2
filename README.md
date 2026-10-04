@@ -65,6 +65,12 @@ npm run regenerer -- --restaurant lola                              # tous les p
 npm run regenerer -- --restaurant lola --plat lola-solettes-meuniere # un seul plat
 ```
 
+### 4 quater. Carte des vins imprimable
+
+Back-office › Carte des vins › **Imprimer la carte** (`/admin/<resto>/carte/imprimer`) : couverture, vins par couleur et par région, prix, mot de Pat. La barre en haut (visible à l'écran seulement) règle le format (A4/A5), le noir et blanc, l'ordre, et ouvre le menu d'impression du navigateur (« Enregistrer en PDF » pour un fichier). Seuls les champs publics des vins sont lus.
+
+« Le mot de Pat » (une phrase par vin) : `npm run mots -- --restaurant lola` (ou `--apercu` pour seulement l'afficher). Le restaurant peut le corriger dans la fiche du vin ; sa version est prioritaire. Sans mot de Pat, la carte prend le début du résumé court.
+
 ### 5. Lancer et déployer
 
 ```bash
