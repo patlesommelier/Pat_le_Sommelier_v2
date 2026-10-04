@@ -131,8 +131,8 @@ function htmlVin(vin: VinImprimable, options: OptionsCarte) {
   const mot = texteVin(vin, options);
   return `<div class="vin">
   <div class="vin-ligne">
-    <span class="vin-nom">${echapper(vin.nom)}</span>
-    ${detail ? `<span class="vin-detail">${echapper(detail)}</span>` : ''}
+    <span class="vin-titre"><span class="vin-nom">${echapper(vin.nom)}</span>${detail
+      ? ` <span class="vin-detail">${detail.split(' · ').map((d) => `<span>${echapper(d)}</span>`).join(' · ')}</span>` : ''}</span>
     <span class="vin-points" aria-hidden="true"></span>
     <span class="vin-prix">${echapper(prixAffiche(vin))}</span>
   </div>
@@ -201,7 +201,10 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .vin { break-inside: avoid; margin-bottom: 4.5mm; }
 .vin-ligne { display: flex; align-items: baseline; gap: 2.6mm; }
 .vin-nom { font: 600 ${a5 ? '12pt' : '14pt'}/1.2 'Cormorant Garamond', Garamond, serif; }
-.vin-detail { font-size: 9pt; color: #5E5357; white-space: nowrap; }
+/* Nom et détail dans le même flux de texte : un long domaine passe à la ligne juste après le nom, sans trou. */
+.vin-titre { flex: 0 1 auto; min-width: 0; }
+.vin-detail { font-size: 9pt; color: #5E5357; margin-left: 1.6mm; }
+.vin-detail > span { white-space: nowrap; }
 .vin-points { flex: 1 1 6mm; min-width: 6mm; border-bottom: 1px dotted #A99DA1; transform: translateY(-1mm); }
 .vin-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: pretty; }
