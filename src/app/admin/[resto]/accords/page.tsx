@@ -37,7 +37,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
           <p className="sous">Pat peut noter chaque vin de votre carte sur chaque plat et écrire le commentaire d’accord. Comptez quelques minutes pour toute la carte.</p>
           <form action={regenererTout.bind(null, resto)}><button className="btn"><Icone nom="reset" taille={18} />Générer tous les accords</button></form>
         </div>
-        <SuiviRegeneration etat={etat} plats={plats} demande={sp.regeneration} erreur={sp.erreur} />
+        <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
       </>
     );
   }
@@ -73,7 +73,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
           {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
         </span>
       </div>
-      <SuiviRegeneration etat={etat} plats={plats} demande={sp.regeneration} erreur={sp.erreur} />
+      <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
       <div className="rangee">
         <nav aria-label="Plats" className="etroit" style={{ flex: '1 1 240px', gap: 6 }}>
           {actifs.map((p) => {
@@ -155,24 +155,21 @@ export default async function Accords({ params, searchParams }: { params: Promis
   );
 }
 
-/** Suivi de la dernière régénération : progression (rafraîchie toute seule), puis bilan et erreurs éventuelles. */
-function SuiviRegeneration({ etat, plats, demande, erreur }: { etat: EtatLot | null; plats: { id: string; nom: string; nom_court: string | null }[]; demande?: string; erreur?: string }) {
+/** Suivi d'une régénération en cours : progression, rafraîchie toute seule. */
+function SuiviRegeneration({ etat, demande, erreur }: { etat: EtatLot | null; demande?: string; erreur?: string }) {
   if (erreur) return <Message erreur={erreur} />;
   if (!etat) return null;
-  const recent = Date.now() - new Date(etat.demande_le).getTime() < 2 * 60 * 60 * 1000;
-  if (etat.termine && !recent) return null;
-  const nom = (id: string) => { const p = plats.find((x) => x.id === id); return p?.nom_court ?? p?.nom ?? id; };
+  // Une fois terminée, plus de bilan : la date de la dernière génération (sous le bouton) suffit.
+  if (etat.termine) return null;
   const finis = etat.faits + etat.erreurs.length;
   return (
     <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px' }} aria-live="polite">
-      {!etat.termine && <ActualisationAuto />}
-      <strong>{etat.termine ? 'Régénération terminée' : 'Pat régénère les accords…'}</strong>
+      <ActualisationAuto />
+      <strong>Pat régénère les accords…</strong>
       <span className="discret">
-        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total}${etat.termine ? '' : ' · comptez une à deux minutes par plat, trois plats à la fois'}`}
-        {etat.termine && etat.faits ? ` ${etat.faits} plat${etat.faits > 1 ? 's' : ''} mis à jour : notes et commentaires sont en ligne.` : ''}
+        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, trois plats à la fois`}
         {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
       </span>
-      {etat.erreurs.map((e) => <span key={e.plat_id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>{nom(e.plat_id)} : {e.message ?? 'échec'} — relancez « Régénérer tous les accords ».</span>)}
     </div>
   );
 }
