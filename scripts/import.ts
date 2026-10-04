@@ -162,7 +162,11 @@ async function main() {
         await client.query(
           `insert into accord (restaurant_id, plat_id, vin_id, note, rang, explication, principes, service, origine, statut)
            values ${tuples.join(', ')}
-           on conflict (plat_id, vin_id) do update set note = excluded.note, rang = excluded.rang, explication = excluded.explication,
+           on conflict (plat_id, vin_id) do update set note = excluded.note, rang = excluded.rang,
+             -- Commentaire généré (npm run commentaires) gardé tant que la note ne change pas ; sinon il est à régénérer.
+             explication = case when accord.explication_generee_le is not null and accord.note = excluded.note then accord.explication else excluded.explication end,
+             limite = case when accord.note = excluded.note then accord.limite end,
+             explication_generee_le = case when accord.note = excluded.note then accord.explication_generee_le end,
              principes = excluded.principes, service = excluded.service, statut = excluded.statut, calcule_le = now()
            where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null`,
           valeurs,

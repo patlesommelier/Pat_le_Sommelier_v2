@@ -42,6 +42,18 @@ npm run accords -- --restaurant lola --plat lola-solettes-meuniere # un seul pla
 
 Les accords sont enregistrés avec le statut **proposé**. Le sommelier les passe à **validé** (ou **refusé**) ; seuls les validés sont montrés aux clients, sauf si `AFFICHER_ACCORDS_PROPOSES=true`. Un accord validé ou refusé n'est jamais écrasé par un nouveau calcul. En attendant un écran d'administration, la validation se fait dans Supabase (Table editor › `accord` › colonne `statut`).
 
+### 4 bis. Commentaires d'accord (client)
+
+Les commentaires que voit le client sont réécrits plat par plat, tous les vins d'un plat en une passe, sans toucher aux notes :
+
+```bash
+npm run commentaires -- --restaurant lola                                  # aperçu : data/commentaires-lola.json, rien en base
+npm run commentaires -- --restaurant lola --plat lola-solettes-meuniere    # un seul plat
+npm run commentaires -- --restaurant lola --ecrire                         # écrit les commentaires valides en base
+```
+
+Chaque commentaire : une phrase de 12 à 22 mots, positive, avec un élément propre au vin ; un vin noté 2/5 ou moins nomme le plat où il s'exprimera mieux. Le champ interne `limite` (ce qui empêche une note plus haute) n'est affiché qu'aux administrateurs. Après génération, les mots interdits, la longueur et les quasi-doublons d'un même plat sont contrôlés ; les fautifs sont régénérés deux fois au plus, puis signalés sans être écrits. L'import des fichiers garde ces commentaires tant que la note ne change pas.
+
 ### 5. Lancer et déployer
 
 ```bash

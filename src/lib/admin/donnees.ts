@@ -97,6 +97,16 @@ export async function getVinsBO(restaurantId: string) {
 }
 
 /**
+ * Ce qui empêche une note plus haute, par vin, pour un plat (champ « limite » des commentaires générés) : cuisine interne.
+ * À n'appeler que pour un administrateur (Pat) ; jamais pour un compte restaurant.
+ */
+export async function getLimitesInternes(restaurantId: string, platId: string) {
+  const r = await requete<{ vin_id: string; limite: string }>(
+    'select vin_id, limite from accord where restaurant_id = $1 and plat_id = $2 and limite is not null', [restaurantId, platId]);
+  return new Map(r.map((x) => [x.vin_id, x.limite]));
+}
+
+/**
  * Rankings de Pat (producteur, terroir) des vins d'un restaurant : cuisine interne.
  * À n'appeler que pour un administrateur (Pat) ; jamais pour un compte restaurant.
  */

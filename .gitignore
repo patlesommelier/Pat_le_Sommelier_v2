@@ -8,3 +8,4 @@ next-env.d.ts
 data/import-apercu.json
 .netlify/
 public/uploads/
+data/commentaires-*.json
