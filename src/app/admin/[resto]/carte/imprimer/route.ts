@@ -2,6 +2,7 @@ import { exigerAcces } from '@/lib/admin/auth';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
+import { etatPresentations, type EtatPresentations } from '@/lib/generation/file-presentations';
 
 export const dynamic = 'force-dynamic';
 
@@ -54,13 +55,30 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
 
   const html = genererCarteHTML({
     restaurant: { nom: r.nom, logoUrl: r.logo_url, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat.png', req.url).href },
-    vins, options, barre: barreOutils(resto, options, sansPresentation),
+    vins, options, barre: barreOutils(resto, options, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
 
+const COULEURS: Record<string, string> = { bulles: 'bulles', blanc: 'blancs', rose: 'rosés', rouge: 'rouges', orange: 'orange', doux: 'doux' };
+const echapper = (t: string) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+
+/** Pourquoi des vins n'ont pas encore leur présentation : de quoi comprendre sans ouvrir les journaux Netlify. */
+function pourquoi(etat: EtatPresentations | null) {
+  if (!process.env.ANTHROPIC_API_KEY) return 'La clé Claude (ANTHROPIC_API_KEY) n’est pas configurée sur Netlify : Pat ne peut pas écrire les présentations.';
+  if (!etat) return 'Pat n’a encore rien écrit : passez par le bouton « Imprimer la carte » du back-office.';
+  const minutes = Math.round((Date.now() - new Date(etat.demande_le).getTime()) / 60000);
+  const enCours = etat.couleurs.filter((c) => c.statut === 'en_cours' || c.statut === 'en_attente');
+  if (enCours.some((c) => c.statut === 'en_cours')) return `Pat écrit encore (demandé il y a ${minutes} min) : rechargez la page dans une minute.`;
+  if (enCours.length) return minutes >= 3
+    ? `La demande d’il y a ${minutes} min n’a pas démarré : la fonction d’arrière-plan Netlify (generer-presentations-background) ne s’est pas lancée.`
+    : 'Pat va commencer : rechargez la page dans une minute.';
+  return `Dernière demande (il y a ${minutes} min) : ` + etat.couleurs.map((c) => `${COULEURS[c.couleur] ?? c.couleur} ${
+    c.statut === 'fait' ? `${(c.message ?? '').replace('/', ' écrits sur ')}` : `échec (${c.message ?? 'inconnu'})`}`).join(' · ') + '.';
+}
+
 /** Barre d'outils, à l'écran seulement : options (rechargent la page) et bouton du menu d'impression du navigateur. */
-function barreOutils(resto: string, o: Partial<OptionsCarte>, sansPresentation: number) {
+function barreOutils(resto: string, o: Partial<OptionsCarte>, sansPresentation: number, raison: string) {
   const coche = (nom: string, libelle: string, actif: boolean | undefined) =>
     `<label><input type="checkbox" name="${nom}" value="1" ${actif ? 'checked' : ''} onchange="envoyer(this.form)"> ${libelle}</label>`;
   return `<form class="barre-impression" method="get" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center;
@@ -74,7 +92,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, sansPresentation: 
   ${coche('couverture', 'Couverture', o.couverture)}
   ${coche('rappel', 'Rappel « Demandez à Pat »', o.rappelPat)}
   <button type="button" onclick="window.print()" style="padding:8px 16px;border:0;border-radius:999px;background:#FFF;color:#24151A;font-weight:700;cursor:pointer">Imprimer / Enregistrer en PDF</button>
-  ${sansPresentation ? `<span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">${sansPresentation} vin${sansPresentation > 1 ? 's' : ''} sans présentation de Pat : le résumé court est utilisé.</span>` : ''}
+  ${sansPresentation ? `<span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">${sansPresentation} vin${sansPresentation > 1 ? 's' : ''} sans présentation de Pat : le résumé court est utilisé. ${echapper(raison)}</span>` : ''}
   <span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">Dans la fenêtre d’impression, activez « Graphiques d’arrière-plan » pour garder les couleurs.</span>
 </form>
 <script>

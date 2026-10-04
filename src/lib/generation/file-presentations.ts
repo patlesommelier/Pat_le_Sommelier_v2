@@ -22,6 +22,8 @@ export async function presentationsManquantes(q: Requete, restaurantId: string) 
 export async function creerLotPresentations(q: Requete, restaurantId: string, couleurs: string[], demandePar: string) {
   await q(`update generation_presentations set statut = 'erreur', message = 'interrompu (délai dépassé)', fin_le = now()
             where statut = 'en_cours' and debut_le < now() - interval '${BLOQUE_APRES}'`);
+  await q(`update generation_presentations set statut = 'erreur', message = 'jamais démarrée : la fonction d’arrière-plan Netlify ne s’est pas lancée', fin_le = now()
+            where statut = 'en_attente' and cree_le < now() - interval '${BLOQUE_APRES}'`);
   const r = await q<{ id: number }>(
     `insert into generation_presentations (lot, restaurant_id, couleur, demande_par)
      select $1, $2, c, $3 from unnest($4::text[]) as c
@@ -75,7 +77,7 @@ export async function travaillerPresentations(q: Requete, { finAvant, modele = p
 }
 
 export interface EtatPresentations {
-  couleurs: { couleur: string; statut: string; message: string | null }[];
+  couleurs: { couleur: string; statut: string; message: string | null; cree_le: string }[];
   termine: boolean; demande_le: string;
 }
 
@@ -87,7 +89,7 @@ export async function etatPresentations(q: Requete, restaurantId: string): Promi
       order by id`, [restaurantId]);
   if (!lignes.length) return null;
   return {
-    couleurs: lignes.map(({ couleur, statut, message }) => ({ couleur, statut, message })),
+    couleurs: lignes.map(({ couleur, statut, message, cree_le }) => ({ couleur, statut, message, cree_le })),
     termine: lignes.every((l) => l.statut === 'fait' || l.statut === 'erreur'),
     demande_le: lignes[0].cree_le,
   };
