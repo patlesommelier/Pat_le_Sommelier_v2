@@ -15,8 +15,9 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 }
 
 function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
-  if (v.producteur_statut === 'propose') return [`Nouveau producteur · ★ ${v.ranking_producteur ?? 3}`, 'propose'];
-  if (v.producteur_id) return [`Base de Pat${v.ranking_producteur ? ` · ★ ${v.ranking_producteur}` : ''}`, 'ok'];
+  // Les rankings de Pat restent internes : le restaurant voit seulement si le producteur est déjà référencé ou nouveau.
+  if (v.producteur_statut === 'propose') return ['Nouveau producteur', 'propose'];
+  if (v.producteur_id) return ['Déjà référencé', 'ok'];
   if (v.producteur_texte && !/^non /i.test(v.producteur_texte)) return ['À relier : choisir le producteur', 'attention'];
   return ['Producteur à préciser', 'attention'];
 }
@@ -57,7 +58,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           </nav>
           <div className="tableau">
             <table style={{ minWidth: 820 }}>
-              <thead><tr><th>Vin</th><th>Millésime</th><th className="droite">Prix</th><th>Étiquette</th><th>Base de Pat</th><th /></tr></thead>
+              <thead><tr><th>Vin</th><th>Millésime</th><th className="droite">Prix</th><th>Étiquette</th><th>Producteur</th><th /></tr></thead>
               <tbody>
                 {affiches.map((v) => {
                   const [el, ek] = etiquette(v);
@@ -109,13 +110,13 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 )}
                 {suggestions.map((p) => (
                   <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
-                    <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{p.statut === 'propose' ? ' · proposé' : ''} · ranking {p.ranking_pat ?? '—'}</small></span></label>
+                    <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{p.statut === 'propose' ? ' · nouveau producteur' : ' · déjà référencé'}</small></span></label>
                 ))}
                 {sansLien && (
                   <label className="case"><input type="radio" name="producteur_choix" value="nouveau" />
-                    <span>Nouveau producteur : « {choisi.producteur_texte} »<small>Proposé à Pat pour sa base, avec un ranking de 3</small></span></label>
+                    <span>Nouveau producteur : « {choisi.producteur_texte} »<small>Proposé à Pat pour sa base</small></span></label>
                 )}
-                <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : Pat le cherche dans sa base. S’il ne le connaît pas, il est proposé comme nouveau producteur (ranking 3).</span>
+                <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : Pat le cherche dans sa base. S’il ne le connaît pas, il lui est proposé comme nouveau producteur.</span>
               </fieldset>
               {pk === 'attention' && choisi.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {choisi.a_verifier}</p>}
               <div className="champs">
