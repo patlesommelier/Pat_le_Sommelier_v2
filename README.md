@@ -11,7 +11,7 @@ Webapp qui conseille le vin de la carte d'un restaurant pour le plat choisi, en 
 ### 1. Base de données (Supabase)
 
 1. Créer un projet sur [supabase.com](https://supabase.com) (région Europe).
-2. Dans **SQL Editor**, coller et exécuter `supabase/migrations/0001_schema.sql`. Les migrations suivantes (`0002_…`) sont appliquées automatiquement par `npm run import`.
+2. Dans **SQL Editor**, coller et exécuter `supabase/migrations/0001_schema.sql`. Les migrations suivantes (`0002_…`) sont appliquées automatiquement : par Netlify avant chaque déploiement de production (`npm run migrer`, voir `netlify.toml`), et par `npm run import`. Une nouvelle migration s'ajoute simplement dans `supabase/migrations/` ; elle ne doit jamais être modifiée une fois appliquée.
 3. Récupérer la chaîne de connexion : **Project Settings › Database › Connection string › Transaction pooler** (port 6543).
 
 ### 2. Variables d'environnement
@@ -20,7 +20,7 @@ Copier `.env.example` en `.env` et remplir :
 
 | Variable | Rôle |
 | --- | --- |
-| `DATABASE_URL` | Connexion Postgres (app et scripts) |
+| `DATABASE_URL` | Connexion Postgres (app et scripts). Dans Netlify, portée « Builds » et « Functions » : le build applique les migrations |
 | `ANTHROPIC_API_KEY` | Clé de l'API Claude (console.anthropic.com) |
 | `ANTHROPIC_MODEL` | Modèle utilisé par Pat |
 | `AFFICHER_ACCORDS_PROPOSES` | `true` pour montrer aussi les accords pas encore validés (démo) |

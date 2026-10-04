@@ -1,6 +1,7 @@
 # Netlify détecte Next.js et installe automatiquement son runtime.
 [build]
-  command = "npm run build"
+  # Migrations de la base (Supabase) avant le build de production : voir scripts/migrer.ts.
+  command = "npm run migrer && npm run build"
   publish = ".next"
 
 [build.environment]

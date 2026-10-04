@@ -9,6 +9,7 @@
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
     "import": "tsx scripts/import.ts",
+    "migrer": "tsx scripts/migrer.ts",
     "accords": "tsx scripts/generer-accords.ts",
     "cas-test": "tsx scripts/cas-test.ts"
   },
