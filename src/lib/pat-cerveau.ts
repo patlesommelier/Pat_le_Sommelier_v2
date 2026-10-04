@@ -54,7 +54,10 @@ export function texteCarte(vins: VinCtx[], { descriptif = false } = {}): string 
 export function textePlat(p: PlatCtx): string {
   return [
     `Plat : ${p.nom} (${p.categorie})`,
-    p.description_cuisine ? `Description du chef (cuissons, ingrédients, épices, sauce) : ${p.description_cuisine}` : null,
+    // La description saisie par le restaurant est plus récente que la fiche d'origine : elle la corrige.
+    p.description_cuisine ? `DESCRIPTION DU RESTAURANT (PRIORITAIRE) : ${p.description_cuisine}\n` +
+      'Elle prime sur la fiche d’origine ci-dessous et sur le nom du plat : quand elle les contredit (par exemple une sauce servie à part, ' +
+      'dont il ne faut pas tenir compte), suis-la et ignore les ancrages, profil, couleurs, cépages, éléments à éviter et principes qui ne s’appliquent plus.\nFiche d’origine :' : null,
     `Points d'ancrage : ${p.ancrages.join(', ') || '—'}`,
     `Profil de vin recherché : ${p.profil ?? '—'}`,
     `Couleurs possibles : ${p.couleurs_ok.join(', ') || 'toutes'}`,
