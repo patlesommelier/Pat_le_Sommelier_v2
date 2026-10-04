@@ -27,6 +27,7 @@ export interface RestaurantImprimable {
   logoUrl?: string | null;       // logo clair, posé sur la couleur du restaurant
   logoSombreUrl?: string | null; // logo foncé, pour le noir et blanc
   qrCodeUrl?: string | null;     // image du QR code (URL ou data:)
+  patLogoUrl?: string | null;    // petit logo de Pat le sommelier, en bas à gauche de la couverture
 }
 
 export interface OptionsCarte {
@@ -153,6 +154,7 @@ function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte,
     <p class="couv-couleurs">${echapper(couleursPresentes.join(' · '))}</p>
     ${options.rappelPat ? `<div class="couv-pat">${qr}<p>Un conseil pour votre plat ? Scannez ce code : Pat vous propose trois vins de la carte.</p></div>` : ''}
   </div>
+  ${restaurant.patLogoUrl ? `<div class="couv-signature"><img src="${echapper(restaurant.patLogoUrl)}" alt=""><span>Pat le sommelier</span></div>` : ''}
 </section>`;
 }
 
@@ -173,18 +175,21 @@ function css(options: OptionsCarte, restaurant: RestaurantImprimable) {
 html, body { margin: 0; background: #FFFFFF; }
 body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
-.couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; }
+.couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; position: relative; }
 .couv-bandeau { height: 44%; background: ${options.noirEtBlanc ? '#FFFFFF' : accent}; display: flex; align-items: center; justify-content: center;
   ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : ''} }
 .couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : '#FFFFFF'}; }
-.couv-corps { flex: 1; padding: 18mm 24mm 16mm; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
+.couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; }
 .couv-filet { width: 15mm; height: 2px; background: ${accent}; }
 .couv-couleurs { margin: 0; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #5E5357; }
 .couv-pat { margin-top: auto; display: flex; align-items: center; gap: 5mm; text-align: left; }
 .couv-pat p { margin: 0; max-width: 80mm; font: 500 ${a5 ? '11pt' : '13.5pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
 .couv-qr { width: 25mm; height: 25mm; }
+.couv-signature { position: absolute; left: ${a5 ? '10mm' : '14mm'}; bottom: ${a5 ? '9mm' : '12mm'}; display: flex; align-items: center; gap: 2.5mm; }
+.couv-signature img { height: ${a5 ? '10mm' : '13mm'}; width: auto; ${options.noirEtBlanc ? 'filter: grayscale(1) brightness(0.45);' : ''} }
+.couv-signature span { font: italic 500 ${a5 ? '9.5pt' : '11pt'} 'Cormorant Garamond', Garamond, serif; color: #5E5357; }
 .entete { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 2.5mm; margin-bottom: 5mm; border-bottom: 1px solid #E2D8DB; }
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
 .entete-titre { font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: #5E5357; }
