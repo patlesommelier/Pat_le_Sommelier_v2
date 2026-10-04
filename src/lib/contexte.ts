@@ -23,7 +23,7 @@ export async function chargerContexte(restaurantId: string) {
     requete<VinCtx>(
       `select v.id, v.couleur, v.libelle, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur, v.millesime, v.format,
               v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation as profil,
-              coalesce(v.ranking_producteur, p.ranking_pat) as ranking_producteur, p.avis_pat, v.coup_de_coeur
+              coalesce(v.ranking_producteur, p.ranking_pat) as ranking_producteur, p.avis_pat, v.coup_de_coeur, v.descriptif
          from vin_carte v left join producteur p on p.id = v.producteur_id
         where v.restaurant_id = $1 and v.disponible order by v.ordre`,
       [restaurantId],

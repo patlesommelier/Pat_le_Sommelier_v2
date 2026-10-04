@@ -4,12 +4,16 @@
  */
 
 export interface PrincipeCtx { id: string; numero: number; titre: string; regle: string; role: string | null; statut: string }
-export interface RegleCtx { type: string; portee: string; cible: string | null; valeur: string | null; texte: string }
+export interface RegleCtx { type: string; portee: string; cible: string | null; valeur: string | null; texte: string;
+  /** 1 = règle de sélection (regles_selection.xlsx), 2 = consigne ponctuelle du sommelier. */
+  bloc?: number }
 export interface VinCtx {
   id: string; couleur: string; libelle: string; producteur: string | null; millesime: string | null; format: string;
   prix: number | null; prix_verre: number | null; cepages: string | null;
   profil: { douceur: number | null; acidite: number | null; corps: number | null; intensite: number | null; tanins: number | null; boise: number | null; aromes?: string[]; stade?: string | null } | null;
   ranking_producteur: number | null; avis_pat: string | null; coup_de_coeur: boolean;
+  /** Descriptif du vin (terroir, vigneron, style) : chat de Pat, Tour 2. */
+  descriptif?: string | null;
 }
 export interface PlatCtx {
   id: string; nom: string; categorie: string; description_cuisine?: string | null;
@@ -26,7 +30,7 @@ export function textePrincipes(principes: PrincipeCtx[]): string {
     .join('\n');
 }
 
-export function texteCarte(vins: VinCtx[]): string {
+export function texteCarte(vins: VinCtx[], { descriptif = false } = {}): string {
   return vins
     .map((v) => {
       const p = v.profil;
@@ -41,6 +45,7 @@ export function texteCarte(vins: VinCtx[]): string {
         v.ranking_producteur ? `producteur classé ${v.ranking_producteur}/5 par Pat` : null,
         v.avis_pat ? `avis de Pat : ${v.avis_pat}` : null,
         v.coup_de_coeur ? 'coup de cœur de la carte' : null,
+        descriptif && v.descriptif ? `descriptif : ${v.descriptif.replace(/\s*\n\s*/g, ' ')}` : null,
       ].filter(Boolean).join(' | ');
     })
     .join('\n');

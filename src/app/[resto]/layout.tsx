@@ -23,7 +23,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   return (
     <div className="ecran" style={theme}>
       {children}
-      <BarrePat restaurant={restaurant.id} />
+      <BarrePat restaurant={restaurant.id} nom={restaurant.nom} />
     </div>
   );
 }

@@ -13,8 +13,13 @@ interface Message {
   erreur?: boolean;
 }
 
+/** Texte de Pat : seuls les passages **en gras** (lignes de vins) sont mis en forme ; le reste reste du texte brut. */
+function TextePat({ texte }: { texte: string }) {
+  return <>{texte.split(/(\*\*[^*\n]+\*\*)/g).map((m, i) => (/^\*\*[^*\n]+\*\*$/.test(m) ? <strong key={i}>{m.slice(2, -2)}</strong> : m))}</>;
+}
+
 /** Barre « Demandez à Pat », toujours visible en bas ; ouvre la conversation au premier message. */
-export function BarrePat({ restaurant }: { restaurant: string }) {
+export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string }) {
   const chemin = usePathname();
   const plat = chemin.match(/\/plat\/([^/]+)/)?.[1] ?? null;
   const [texte, setTexte] = useState('');
@@ -76,12 +81,12 @@ export function BarrePat({ restaurant }: { restaurant: string }) {
           <div className="fil" ref={fil} aria-live="polite">
             {messages.length === 0 && (
               <div className="message pat">
-                Bonjour, je suis Pat. Dites-moi ce que vous mangez, vos goûts ou votre budget : je vous propose un vin de la carte.
+                Bienvenue chez {nom}. Je vous aide à choisir un vin qui accompagnera parfaitement votre plat. Qu’allez-vous manger ?
               </div>
             )}
             {messages.map((m, i) => (
               <div key={i} className={`message ${m.erreur ? 'erreur' : m.role === 'user' ? 'client' : 'pat'}`}>
-                {m.content}
+                {m.role === 'assistant' && !m.erreur ? <TextePat texte={m.content} /> : m.content}
                 {m.vins && m.vins.length > 0 && (
                   <div className="vins-cites">
                     {m.vins.map((v) => (
