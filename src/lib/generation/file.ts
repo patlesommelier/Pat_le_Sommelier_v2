@@ -39,7 +39,7 @@ async function prendre(q: Requete) {
  * Traite les tâches en attente jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
-export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic() }: { finAvant: number; modele?: string; client?: Anthropic }) {
+export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
   for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
     try {
       const b = await regenererAccordsPlat(q, client, t.restaurant_id, t.plat_id, modele);

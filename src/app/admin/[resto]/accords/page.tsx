@@ -21,12 +21,19 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const sp = await searchParams;
   const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
     requete<{ le: string | null }>('select max(coalesce(regenere_le, explication_generee_le, calcule_le)) as le from accord where restaurant_id = $1', [resto])]);
+  // Commentaires d'origine (import) pas encore réécrits par une régénération : souvent identiques d'un vin à l'autre.
+  const anciens = new Map((await requete<{ plat_id: string; n: number }>(
+    `select a.plat_id, count(*)::int as n from accord a join vin_carte v on v.id = a.vin_id and v.disponible
+      where a.restaurant_id = $1 and a.regenere_le is null and a.statut <> 'refuse' group by a.plat_id`, [resto])).map((a) => [a.plat_id, a.n]));
   // Score et rankings : cuisine interne de Pat. Le classement est calculé ici, côté serveur ;
   // un compte restaurant ne reçoit que le rang et la note d’accord /5.
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
   const parPlat = new Map(stats.map((s) => [s.plat_id, s]));
   const plat = actifs.find((p) => p.id === sp.plat) ?? actifs[0];
+  const platsAnciens = actifs.filter((p) => anciens.get(p.id)).length;
+  // Motif d'échec le plus fréquent de la dernière régénération (pour comprendre sans ouvrir les journaux).
+  const raison = etat?.erreurs.map((e) => e.message ?? 'échec').sort((a, b) => etat.erreurs.filter((e) => e.message === b).length - etat.erreurs.filter((e) => e.message === a).length)[0]?.slice(0, 120);
 
   if (!resume.accords) {
     return (
@@ -71,6 +78,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
         <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}>
           <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
           {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
+          {etat?.termine && platsAnciens > 0 && <span style={{ fontSize: 12.5, color: 'var(--ocre)', maxWidth: 360 }}>
+            {platsAnciens} plat{platsAnciens > 1 ? 's gardent' : ' garde'} des commentaires d’origine{raison ? ` (${raison})` : ''} : relancez la régénération.</span>}
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
@@ -84,7 +93,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
                 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, minHeight: 48, padding: '8px 14px', borderRadius: 12, textDecoration: 'none',
                   background: on ? 'var(--encre)' : '#FFF', color: on ? '#FFF' : 'var(--texte)', border: `1px solid ${on ? 'var(--encre)' : 'var(--ligne)'}` }}>
                 <span style={{ display: 'flex', flexDirection: 'column' }}><b style={{ fontSize: 14.5 }}>{p.nom_court ?? p.nom}</b><span style={{ fontSize: 12.5, opacity: 0.8 }}>{CAT[p.categorie]}</span></span>
-                <span style={{ fontSize: 12.5, fontWeight: 700, whiteSpace: 'nowrap' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}</span>
+                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: 12.5, fontWeight: 700, whiteSpace: 'nowrap' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}
+                  {anciens.get(p.id) ? <span style={{ fontWeight: 400, opacity: 0.85 }}>textes d’origine</span> : null}</span>
               </Link>
             );
           })}

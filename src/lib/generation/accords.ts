@@ -17,7 +17,7 @@ import { controlerPlat, MOTS_INTERDITS, MOTS_MAX, MOTS_MIN, type VinAControler }
 
 export type Requete = <T>(sql: string, params?: unknown[]) => Promise<T[]>;
 
-const CORRECTIONS = 2;
+const CORRECTIONS = 3;
 
 interface VinGen extends VinCtx { appellation: string | null; ordre: number }
 interface AccordActuel { plat_id: string; vin_id: string; note: number | null; origine: string; statut: string }
@@ -157,7 +157,13 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     defauts = defautsDe();
   }
 
-  // Écriture : rang = ordre des notes, puis ordre de la carte ; seuls les vins sans défaut sont écrits.
+  // Après les corrections, un défaut de style (proche d'un autre commentaire, longueur, vin peu cité) n'empêche plus
+  // l'écriture : un texte neuf vaut mieux que l'ancien commentaire importé, souvent identique pour tous les vins du plat.
+  // Restent bloquants : vin absent, note invalide ou non respectée, mot interdit.
+  const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit)/.test(d);
+  for (const [vin, d] of defauts) if (!d.some(bloquant)) defauts.delete(vin);
+
+  // Écriture : rang = ordre des notes, puis ordre de la carte ; seuls les vins sans défaut bloquant sont écrits.
   const valides = carte.filter((v) => !defauts.has(v.id)).map((v) => reponses.get(v.id)!)
     .sort((a, b) => b.note - a.note || vinsParCode.get(a.vin)!.ordre - vinsParCode.get(b.vin)!.ordre);
   // Une seule requête : l'écriture du plat est atomique (tout ou rien).
