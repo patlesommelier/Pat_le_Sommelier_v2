@@ -62,6 +62,9 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const tri = sp.tous ? triComplet : triComplet.slice(0, 12);
   const s = plat ? parPlat.get(plat.id) : undefined;
   // « Limite » des commentaires générés : chargée pour Pat seulement.
+  // Dernier passage de la régénération sur ce plat : bilan ou motif d'échec (pour comprendre un commentaire d'origine resté).
+  const [bilanPlat] = plat && anciens.get(plat.id) ? await requete<{ statut: string; message: string | null; le: string }>(
+    `select statut, message, coalesce(fin_le, cree_le) as le from generation_accords where plat_id = $1 and statut in ('fait', 'erreur') order by id desc limit 1`, [plat.id]) : [];
   const prix = sel.liste.map((r) => r.vin.prix).filter((p): p is number => p !== null);
 
   return (
@@ -77,7 +80,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
         <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}>
           <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
           {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
-          {etat?.termine && platsAnciens > 0 && <span style={{ fontSize: 12.5, color: 'var(--ocre)', maxWidth: 360 }}>
+          {(!etat || etat.termine) && platsAnciens > 0 && <span style={{ fontSize: 12.5, color: 'var(--ocre)', maxWidth: 360 }}>
             {platsAnciens} plat{platsAnciens > 1 ? 's gardent' : ' garde'} des commentaires d’origine{raison ? ` (${raison})` : ''} : relancez la régénération.</span>}
         </span>
       </div>
@@ -108,6 +111,9 @@ export default async function Accords({ params, searchParams }: { params: Promis
               </span>
             </div>
             <Message ok={sp.ok ? 'Accords de ce plat validés.' : undefined} />
+            {anciens.get(plat.id) ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
+              {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
+              {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec, ' : ''}${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
             <div className="pile">
               <div><h3 style={{ fontSize: 20 }}>Ce que verra le client</h3>
                 <p className="discret" style={{ margin: '6px 0 0' }}>{sel.liste.length ? `${sel.liste.length} vin${sel.liste.length > 1 ? 's' : ''}${prix.length ? `, de ${euros(Math.min(...prix))} à ${euros(Math.max(...prix))}` : ''}.` : 'Aucun vin ne s’accorde assez bien : Pat le dira au client et proposera d’en parler.'}</p></div>
