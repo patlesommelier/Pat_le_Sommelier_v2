@@ -108,7 +108,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><Vignette url={r.vin.etiquette_url} taille={56} />
                       <div className="pile" style={{ gap: 3 }}><span className="surtitre" style={{ fontSize: 12, letterSpacing: 0 }}>N° {i + 1} · {r.vin.id}</span><b style={{ fontSize: 14.5, lineHeight: 1.25 }}>{r.vin.libelle}</b><b style={{ fontSize: 13.5 }}>{euros(r.vin.prix ?? r.vin.prix_verre)}</b></div></div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}><Points note={r.note} />{interne
-                      ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b> = {r.note} + {r.vin.ranking_producteur ?? 0}</span>
+                      ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b></span>
                       : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</div>
                     <span className="discret" style={{ fontSize: 13 }}>{pourquoiRetenu(r, i + 1, sel.liste, interne)}</span>
                   </div>
@@ -116,10 +116,10 @@ export default async function Accords({ params, searchParams }: { params: Promis
               </div>
             </div>
             <div className="pile">
-              <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Score = note d’accord + ranking producteur de Pat.' : 'Classement établi par Pat à partir de la note d’accord et de sa connaissance des vignerons.'}</p></div>
+              <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Classement établi par Pat à partir de la note d’accord et de sa connaissance des vignerons.'}</p></div>
               <div className="tableau">
                 <table style={{ minWidth: 900 }}>
-                  <thead><tr><th className="droite">Rang</th><th>Vin</th><th>Note</th>{interne && <><th className="droite">Rk prod.</th><th className="droite">Score</th></>}<th>Pourquoi (Pat)</th><th>Résultat</th></tr></thead>
+                  <thead><tr><th className="droite">Rang</th><th>Vin</th><th>Note</th>{interne && <th className="droite">Score</th>}<th>Pourquoi (Pat)</th><th>Résultat</th></tr></thead>
                   <tbody>
                     {tri.map((t, rang) => {
                       const l = lignesParVin.get(t.vin.id)?.[0];
@@ -135,7 +135,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                             </form>
                             {l?.statut === 'propose' && <span className="petit">à relire</span>}
                           </td>
-                          {interne && <><td className="droite">{t.vin.ranking_producteur ?? 0}</td><td className="droite"><b>{t.score}</b></td></>}
+                          {interne && <td className="droite"><b>{t.score}</b></td>}
                           <td className="petit" style={{ minWidth: 220, maxWidth: 340, lineHeight: 1.4 }}>{l?.explication ?? '—'}{limites?.get(t.vin.id) && <><br /><i>Limite (interne) : {limites.get(t.vin.id)}</i></>}</td>
                           <td><Etat type={rk}>{res}</Etat></td>
                         </tr>

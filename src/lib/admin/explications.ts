@@ -14,7 +14,7 @@ export function pourquoiRetenu(r: Retenu, rang: number, liste: Retenu[], interne
   };
   const precedent = liste[rang - 2];
   if (interne && r.motif === 'classement' && precedent && precedent.score === r.score) {
-    return precedent.note > r.note ? 'Même score, note un peu plus basse' : 'Même score : départagé (diversité, rankings, ordre de la carte)';
+    return precedent.note > r.note ? 'Même score, note un peu plus basse' : 'Même score : départagé (diversité, ordre de la carte)';
   }
   return m[r.motif];
 }
