@@ -145,7 +145,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
                           <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={t.vin.etiquette_url} taille={40} /><div><div className="nom">{t.vin.libelle}</div><div className="petit">{t.vin.id} · {euros(t.vin.prix ?? t.vin.prix_verre)}</div></div></div></td>
                           <td>
                             <form action={changerNote.bind(null, resto, plat.id, t.vin.id)} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                              <Points note={t.note} /><ChoixNote note={t.note} libelle={t.vin.libelle} />
+                              <Points note={t.note} />{/* Clé = plat + note : la liste reprend la note à jour après une régénération ou un changement de plat. */}
+                              <ChoixNote key={`${plat.id}-${t.note}`} note={t.note} libelle={t.vin.libelle} />
                               <noscript><button className="btn petit">OK</button></noscript>
                             </form>
                             {l?.statut === 'propose' && <span className="petit">à relire</span>}
