@@ -221,10 +221,6 @@ async function regenerer(resto: string, platIds: string[], retour: Record<string
   redirect(avec(`/admin/${resto}/accords`, { ...retour, regeneration: crees ? '1' : 'deja' }));
 }
 
-export async function regenererPlat(resto: string, platId: string) {
-  await regenerer(resto, [platId], { plat: platId });
-}
-
 export async function regenererTout(resto: string) {
   await exigerAcces(resto);
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);

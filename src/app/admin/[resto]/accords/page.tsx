@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerNote, regenererPlat, regenererTout, validerPlat, validerTout } from '../../actions';
+import { changerNote, regenererTout, validerPlat, validerTout } from '../../actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
@@ -12,12 +12,15 @@ import { getCandidats, getReglages } from '@/lib/donnees';
 import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
 import { selectionner, tourSuivant } from '@/lib/selection';
 
+const dateHeure = (d: string) => new Date(d).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+
 const CAT: Record<string, string> = { entree: 'Entrée', plat: 'Plat', dessert: 'Dessert', fromage: 'Fromage' };
 
 export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
-  const [plats, stats, resume, R, u, etat] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto)]);
+  const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
+    requete<{ le: string | null }>('select max(coalesce(regenere_le, explication_generee_le, calcule_le)) as le from accord where restaurant_id = $1', [resto])]);
   // Score et rankings : cuisine interne de Pat. Le classement est calculé ici, côté serveur ;
   // un compte restaurant ne reçoit que le rang et la note d’accord /5.
   const interne = Boolean(u?.admin);
@@ -65,7 +68,10 @@ export default async function Accords({ params, searchParams }: { params: Promis
         </span>
         <span className="ligne-actions"><Etat type="propose">{resume.accords_proposes.toLocaleString('fr-BE')} à relire</Etat><Etat type="ok">{resume.accords_valides.toLocaleString('fr-BE')} validés</Etat></span>
         {resume.accords_proposes > 0 && <form action={validerTout.bind(null, resto)}><button className="btn petit"><Icone nom="check" taille={18} />Tout valider</button></form>}
-        <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
+        <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}>
+          <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
+          {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
+        </span>
       </div>
       <SuiviRegeneration etat={etat} plats={plats} demande={sp.regeneration} erreur={sp.erreur} />
       <div className="rangee">
@@ -89,7 +95,6 @@ export default async function Accords({ params, searchParams }: { params: Promis
               <div className="pile" style={{ gap: 6 }}><span className="surtitre">{CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 800 }}>{plat.nom}</h2></div>
               <span className="ligne-actions">
                 <Link href={`/admin/${resto}/simulateur?plat=${plat.id}`} className="btn sec petit"><Icone nom="phone" taille={18} />Simulateur</Link>
-                <form action={regenererPlat.bind(null, resto, plat.id)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de ce plat ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer ce plat</button></form>
                 {s && s.valides < s.total && <form action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></form>}
               </span>
             </div>
@@ -163,11 +168,11 @@ function SuiviRegeneration({ etat, plats, demande, erreur }: { etat: EtatLot | n
       {!etat.termine && <ActualisationAuto />}
       <strong>{etat.termine ? 'Régénération terminée' : 'Pat régénère les accords…'}</strong>
       <span className="discret">
-        {etat.total === 1 ? (etat.termine ? '' : 'Comptez une à deux minutes.') : `${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total}${etat.termine ? '' : ' · comptez une à deux minutes par plat, trois plats à la fois'}`}
+        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total}${etat.termine ? '' : ' · comptez une à deux minutes par plat, trois plats à la fois'}`}
         {etat.termine && etat.faits ? ` ${etat.faits} plat${etat.faits > 1 ? 's' : ''} mis à jour : notes et commentaires sont en ligne.` : ''}
-        {demande === 'deja' ? ' Une régénération de ces plats est déjà en cours.' : ''}
+        {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
       </span>
-      {etat.erreurs.map((e) => <span key={e.plat_id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>{nom(e.plat_id)} : {e.message ?? 'échec'} — relancez ce plat.</span>)}
+      {etat.erreurs.map((e) => <span key={e.plat_id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>{nom(e.plat_id)} : {e.message ?? 'échec'} — relancez « Régénérer tous les accords ».</span>)}
     </div>
   );
 }
