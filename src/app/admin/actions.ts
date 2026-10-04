@@ -175,6 +175,23 @@ export async function changerNote(resto: string, platId: string, vinId: string, 
   redirect(avec(`/admin/${resto}/accords`, { plat: platId }));
 }
 
+/**
+ * Commentaire d'accord réécrit par le restaurant : remplace celui de Pat chez le client et n'est plus régénéré.
+ * Texte vide : le commentaire redevient celui de Pat (réécrit à la prochaine régénération).
+ */
+export async function modifierCommentaire(resto: string, platId: string, vinId: string, f: FormData) {
+  const u = await exigerAcces(resto);
+  const texte = (txt(f, 'commentaire') ?? '').replace(/\s+/g, ' ').slice(0, 400) || null;
+  await requete(
+    `update accord set commentaire_sommelier = $4, explication = coalesce($4, explication), modifie_par = $5
+      where restaurant_id = $1 and plat_id = $2 and vin_id = $3`,
+    [resto, platId, vinId, texte, u.email],
+  );
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/accords`, { plat: platId, ...(f.get('tous') ? { tous: '1' } : {}), commentaire: '1' }));
+}
+
 export async function validerPlat(resto: string, platId: string) {
   const u = await exigerAcces(resto);
   await requete(

@@ -220,7 +220,9 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
          from unnest($4::text[], $5::int[], $6::int[], $7::text[], $8::text[]) as x(vin, note, rang, explication, limite)
        on conflict (plat_id, vin_id) do update set
          note = case when accord.origine = 'sommelier' then accord.note else excluded.note end,
-         rang = excluded.rang, explication = excluded.explication, limite = excluded.limite,
+         rang = excluded.rang,
+         -- Commentaire réécrit par le restaurant : gardé tel quel.
+         explication = coalesce(accord.commentaire_sommelier, excluded.explication), limite = excluded.limite,
          service = coalesce(accord.service, excluded.service),
          statut = case when accord.statut = 'refuse' then accord.statut else 'valide' end,
          valide_le = case when accord.statut = 'refuse' then accord.valide_le else coalesce(accord.valide_le, now()) end,

@@ -163,7 +163,7 @@ async function main() {
     if (ECRIRE) {
       for (const v of resultats.at(-1)!.vins.filter((x) => !x.defauts.length && x.commentaire)) {
         await q(`update accord set explication = $4, limite = $5, explication_generee_le = now()
-                  where restaurant_id = $1 and plat_id = $2 and vin_id = $3 and origine = 'pat'`, [RESTAURANT, p.id, v.vin, v.commentaire, v.limite]);
+                  where restaurant_id = $1 and plat_id = $2 and vin_id = $3 and origine = 'pat' and commentaire_sommelier is null`, [RESTAURANT, p.id, v.vin, v.commentaire, v.limite]);
       }
     }
   }

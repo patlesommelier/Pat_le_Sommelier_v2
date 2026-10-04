@@ -82,7 +82,7 @@ export type CandidatVin = LigneAccord & Candidat;
 export async function getCandidats(restaurantId: string, platIds: string[], statuts = accordsVisibles()) {
   const [lignes, exclus] = await Promise.all([
     requete<LigneAccord>(
-      `select a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.explication_longue, a.service, a.statut, v.*
+      `select a.plat_id, a.vin_id, a.note, a.rang, a.explication, a.explication_longue, a.service, a.statut, a.commentaire_sommelier, v.*
          from accord a
          join (${SELECT_VIN} where v.disponible) v on v.id = a.vin_id
         where a.plat_id = any($1) and a.restaurant_id = $2 and a.statut = any($3) and a.note is not null`,

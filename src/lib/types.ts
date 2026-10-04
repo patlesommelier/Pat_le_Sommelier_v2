@@ -68,6 +68,8 @@ export interface Accord {
   explication_longue: string | null;
   service: string | null;
   statut: 'propose' | 'valide' | 'refuse';
+  /** Commentaire réécrit par le restaurant : il remplace celui de Pat et n'est jamais régénéré. */
+  commentaire_sommelier?: string | null;
 }
 
 export const COULEURS: { id: Couleur; libelle: string }[] = [

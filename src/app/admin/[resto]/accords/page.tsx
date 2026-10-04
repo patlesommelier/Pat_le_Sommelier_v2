@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerNote, regenererTout, validerPlat, validerTout } from '../../actions';
+import { changerNote, modifierCommentaire, regenererTout, validerPlat, validerTout } from '../../actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
@@ -16,7 +16,7 @@ const dateHeure = (d: string) => new Date(d).toLocaleString('fr-BE', { timeZone:
 
 const CAT: Record<string, string> = { entree: 'Entrée', plat: 'Plat', dessert: 'Dessert', fromage: 'Fromage' };
 
-export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string }> }) {
+export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string; commentaire?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
   const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
@@ -24,7 +24,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   // Commentaires d'origine (import) pas encore réécrits par une régénération : souvent identiques d'un vin à l'autre.
   const anciens = new Map((await requete<{ plat_id: string; n: number }>(
     `select a.plat_id, count(*)::int as n from accord a join vin_carte v on v.id = a.vin_id and v.disponible
-      where a.restaurant_id = $1 and a.regenere_le is null and a.statut <> 'refuse' group by a.plat_id`, [resto])).map((a) => [a.plat_id, a.n]));
+      where a.restaurant_id = $1 and a.regenere_le is null and a.statut <> 'refuse' and a.commentaire_sommelier is null group by a.plat_id`, [resto])).map((a) => [a.plat_id, a.n]));
   // Score et rankings : cuisine interne de Pat. Le classement est calculé ici, côté serveur ;
   // un compte restaurant ne reçoit que le rang et la note d’accord /5.
   const interne = Boolean(u?.admin);
@@ -110,7 +110,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                 {s && s.valides < s.total && <form action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></form>}
               </span>
             </div>
-            <Message ok={sp.ok ? 'Accords de ce plat validés.' : undefined} />
+            <Message ok={sp.ok ? 'Accords de ce plat validés.' : sp.commentaire ? 'Commentaire enregistré : c’est lui que le client lit.' : undefined} />
             {anciens.get(plat.id) ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
               {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
               {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec, ' : ''}${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
@@ -125,7 +125,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}><Points note={r.note} />{interne
                       ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b></span>
                       : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</div>
-                    <span style={{ fontSize: 13.5, lineHeight: 1.4, fontStyle: 'italic' }}>{lignesParVin.get(r.vin.id)?.[0]?.explication ?? '—'}</span>
+                    <Commentaire resto={resto} platId={plat.id} vinId={r.vin.id} ligne={lignesParVin.get(r.vin.id)?.[0]} tous={Boolean(sp.tous)} grand />
                   </div>
                 ))}
               </div>
@@ -152,7 +152,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                             {l?.statut === 'propose' && <span className="petit">à relire</span>}
                           </td>
                           {interne && <td className="droite"><b>{t.score}</b></td>}
-                          <td className="petit" style={{ minWidth: 220, maxWidth: 340, lineHeight: 1.4 }}>{l?.explication ?? '—'}</td>
+                          <td className="petit" style={{ minWidth: 220, maxWidth: 340, lineHeight: 1.4 }}><Commentaire resto={resto} platId={plat.id} vinId={t.vin.id} ligne={l} tous={Boolean(sp.tous)} /></td>
                           <td><Etat type={rk}>{res}</Etat></td>
                         </tr>
                       );
@@ -168,6 +168,26 @@ export default async function Accords({ params, searchParams }: { params: Promis
         )}
       </div>
     </>
+  );
+}
+
+/** Commentaire d'accord lu par le client, modifiable : le texte du restaurant remplace celui de Pat et n'est plus régénéré. */
+function Commentaire({ resto, platId, vinId, ligne, tous, grand }: { resto: string; platId: string; vinId: string; ligne?: { explication: string | null; commentaire_sommelier?: string | null }; tous: boolean; grand?: boolean }) {
+  const texte = ligne?.explication ?? null;
+  return (
+    <div className="pile" style={{ gap: 4 }}>
+      <span style={grand ? { fontSize: 13.5, lineHeight: 1.4, fontStyle: 'italic' } : undefined}>{texte ?? '—'}</span>
+      <details>
+        <summary style={{ cursor: 'pointer', color: 'var(--encre)', fontWeight: 700, fontSize: 13 }}>{ligne?.commentaire_sommelier ? 'Votre commentaire · modifier' : 'Modifier'}</summary>
+        <form action={modifierCommentaire.bind(null, resto, platId, vinId)} className="pile" style={{ gap: 6, marginTop: 6 }}>
+          <textarea name="commentaire" rows={3} maxLength={400} defaultValue={texte ?? ''} aria-label="Commentaire d’accord"
+            style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Lato, sans-serif' }} />
+          {tous && <input type="hidden" name="tous" value="1" />}
+          <span><button className="btn petit">Enregistrer</button></span>
+          <span className="petit" style={{ opacity: 0.8 }}>Votre texte remplace celui de Pat chez le client ; la régénération ne le touche plus. Videz le champ pour rendre la main à Pat.</span>
+        </form>
+      </details>
+    </div>
   );
 }
 
