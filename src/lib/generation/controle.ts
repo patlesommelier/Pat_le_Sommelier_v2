@@ -1,5 +1,5 @@
 /**
- * Contrôles des commentaires d'accord générés (npm run commentaires) : fonctions pures.
+ * Contrôles des commentaires d'accord générés (npm run commentaires, régénération des accords) : fonctions pures.
  * Un commentaire fautif est régénéré ; ceux qui restent fautifs ne sont pas enregistrés.
  */
 

@@ -7,6 +7,7 @@ import { requete } from '@/lib/db';
 import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
+import { creerLot, travailler } from '@/lib/generation/file';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { REGLAGES_INTERNES, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
@@ -191,6 +192,40 @@ export async function validerTout(resto: string) {
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   redirect(`/admin/${resto}/accords`);
+}
+
+// ───────── Régénération des accords par Pat ─────────
+/**
+ * Lance le traitement de la file : fonctions Netlify d'arrière-plan (3 en parallèle au plus) ;
+ * hors Netlify (développement local), le serveur traite la file lui-même, sans faire attendre la page.
+ */
+async function lancerTravailleurs(nombre: number) {
+  const h = await headers();
+  const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
+  const appels = await Promise.all(Array.from({ length: Math.min(3, nombre) }, () =>
+    fetch(`${origine}/.netlify/functions/generer-accords-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0)));
+  if (!appels.some((s) => s === 202 || s === 200)) {
+    void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[accords]', e));
+  }
+}
+
+async function regenerer(resto: string, platIds: string[], retour: Record<string, string>) {
+  const u = await exigerAcces(resto);
+  if (!process.env.ANTHROPIC_API_KEY) redirect(avec(`/admin/${resto}/accords`, { ...retour, erreur: 'Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.' }));
+  const { crees } = await creerLot(requete, resto, platIds, u.email);
+  if (crees) await lancerTravailleurs(crees);
+  revalidatePath(`/admin/${resto}/accords`);
+  redirect(avec(`/admin/${resto}/accords`, { ...retour, regeneration: crees ? '1' : 'deja' }));
+}
+
+export async function regenererPlat(resto: string, platId: string) {
+  await regenerer(resto, [platId], { plat: platId });
+}
+
+export async function regenererTout(resto: string) {
+  await exigerAcces(resto);
+  const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
+  await regenerer(resto, plats.map((p) => p.id), {});
 }
 
 // ───────── Règles ─────────

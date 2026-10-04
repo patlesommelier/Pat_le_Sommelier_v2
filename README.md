@@ -54,6 +54,17 @@ npm run commentaires -- --restaurant lola --ecrire                         # éc
 
 Chaque commentaire : une phrase de 12 à 22 mots, positive, avec un élément propre au vin ; un vin noté 2/5 ou moins nomme le plat où il s'exprimera mieux. Le champ interne `limite` (ce qui empêche une note plus haute) n'est affiché qu'aux administrateurs. Après génération, les mots interdits, la longueur et les quasi-doublons d'un même plat sont contrôlés ; les fautifs sont régénérés deux fois au plus, puis signalés sans être écrits. L'import des fichiers garde ces commentaires tant que la note ne change pas.
 
+### 4 ter. Régénérer les accords (bouton du back-office)
+
+Dans **Accords**, « Régénérer ce plat » ou « Régénérer tous les accords » : Pat recalcule la note et le commentaire de chaque vin disponible sur chaque plat (un appel à Claude par plat, trois plats à la fois), puis les contrôle comme ci-dessus. Les accords sont écrits **validés** et sont en ligne tout de suite ; une note changée à la main dans le back-office est gardée, un accord refusé reste refusé, un vin dont la réponse reste fautive garde son accord actuel. L'import des fichiers ne remplace plus un accord régénéré.
+
+Le travail tourne dans une fonction Netlify d'arrière-plan (`netlify/functions/generer-accords-background.mts`, file `generation_accords`) ; la page affiche la progression. Il faut `ANTHROPIC_API_KEY` dans les variables Netlify (portée Functions). Même chose depuis un ordinateur :
+
+```bash
+npm run regenerer -- --restaurant lola                              # tous les plats
+npm run regenerer -- --restaurant lola --plat lola-solettes-meuniere # un seul plat
+```
+
 ### 5. Lancer et déployer
 
 ```bash

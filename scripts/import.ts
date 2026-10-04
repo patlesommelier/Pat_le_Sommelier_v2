@@ -168,7 +168,7 @@ async function main() {
              limite = case when accord.note = excluded.note then accord.limite end,
              explication_generee_le = case when accord.note = excluded.note then accord.explication_generee_le end,
              principes = excluded.principes, service = excluded.service, statut = excluded.statut, calcule_le = now()
-           where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null`,
+           where accord.origine = 'pat' and accord.statut <> 'refuse' and accord.commentaire_sommelier is null and accord.regenere_le is null`,
           valeurs,
         );
       }

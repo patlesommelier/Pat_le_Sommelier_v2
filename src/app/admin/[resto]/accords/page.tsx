@@ -1,20 +1,23 @@
 import Link from 'next/link';
-import { changerNote, validerPlat, validerTout } from '../../actions';
+import { changerNote, regenererPlat, regenererTout, validerPlat, validerTout } from '../../actions';
+import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant } from '@/lib/admin/auth';
 import { getLimitesInternes, getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
 import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
+import { requete } from '@/lib/db';
 import { getCandidats, getReglages } from '@/lib/donnees';
+import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
 import { selectionner, tourSuivant } from '@/lib/selection';
 
 const CAT: Record<string, string> = { entree: 'Entrée', plat: 'Plat', dessert: 'Dessert', fromage: 'Fromage' };
 
-export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string }> }) {
+export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
-  const [plats, stats, resume, R, u] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant()]);
+  const [plats, stats, resume, R, u, etat] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto)]);
   // Score et rankings : cuisine interne de Pat. Le classement est calculé ici, côté serveur ;
   // un compte restaurant ne reçoit que le rang et la note d’accord /5.
   const interne = Boolean(u?.admin);
@@ -28,8 +31,10 @@ export default async function Accords({ params, searchParams }: { params: Promis
         <Entete titre="Accords mets & vins" texte="Pat note chaque vin de votre carte sur chaque plat, de 1 à 5, avec sa méthode d’accord. Vos règles du sommelier choisissent ensuite les vins proposés au client." />
         <div className="carte-bo sticker pile">
           <h2>Les accords ne sont pas encore générés</h2>
-          <p className="sous">La génération des accords depuis le back-office arrive à l’étape suivante du développement. En attendant, Pat les prépare et les importe.</p>
+          <p className="sous">Pat peut noter chaque vin de votre carte sur chaque plat et écrire le commentaire d’accord. Comptez quelques minutes pour toute la carte.</p>
+          <form action={regenererTout.bind(null, resto)}><button className="btn"><Icone nom="reset" taille={18} />Générer tous les accords</button></form>
         </div>
+        <SuiviRegeneration etat={etat} plats={plats} demande={sp.regeneration} erreur={sp.erreur} />
       </>
     );
   }
@@ -60,7 +65,9 @@ export default async function Accords({ params, searchParams }: { params: Promis
         </span>
         <span className="ligne-actions"><Etat type="propose">{resume.accords_proposes.toLocaleString('fr-BE')} à relire</Etat><Etat type="ok">{resume.accords_valides.toLocaleString('fr-BE')} validés</Etat></span>
         {resume.accords_proposes > 0 && <form action={validerTout.bind(null, resto)}><button className="btn petit"><Icone nom="check" taille={18} />Tout valider</button></form>}
+        <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
       </div>
+      <SuiviRegeneration etat={etat} plats={plats} demande={sp.regeneration} erreur={sp.erreur} />
       <div className="rangee">
         <nav aria-label="Plats" className="etroit" style={{ flex: '1 1 240px', gap: 6 }}>
           {actifs.map((p) => {
@@ -82,6 +89,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               <div className="pile" style={{ gap: 6 }}><span className="surtitre">{CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 800 }}>{plat.nom}</h2></div>
               <span className="ligne-actions">
                 <Link href={`/admin/${resto}/simulateur?plat=${plat.id}`} className="btn sec petit"><Icone nom="phone" taille={18} />Simulateur</Link>
+                <form action={regenererPlat.bind(null, resto, plat.id)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de ce plat ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer ce plat</button></form>
                 {s && s.valides < s.total && <form action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></form>}
               </span>
             </div>
@@ -139,5 +147,27 @@ export default async function Accords({ params, searchParams }: { params: Promis
         )}
       </div>
     </>
+  );
+}
+
+/** Suivi de la dernière régénération : progression (rafraîchie toute seule), puis bilan et erreurs éventuelles. */
+function SuiviRegeneration({ etat, plats, demande, erreur }: { etat: EtatLot | null; plats: { id: string; nom: string; nom_court: string | null }[]; demande?: string; erreur?: string }) {
+  if (erreur) return <Message erreur={erreur} />;
+  if (!etat) return null;
+  const recent = Date.now() - new Date(etat.demande_le).getTime() < 2 * 60 * 60 * 1000;
+  if (etat.termine && !recent) return null;
+  const nom = (id: string) => { const p = plats.find((x) => x.id === id); return p?.nom_court ?? p?.nom ?? id; };
+  const finis = etat.faits + etat.erreurs.length;
+  return (
+    <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px' }} aria-live="polite">
+      {!etat.termine && <ActualisationAuto />}
+      <strong>{etat.termine ? 'Régénération terminée' : 'Pat régénère les accords…'}</strong>
+      <span className="discret">
+        {etat.total === 1 ? (etat.termine ? '' : 'Comptez une à deux minutes.') : `${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total}${etat.termine ? '' : ' · comptez une à deux minutes par plat, trois plats à la fois'}`}
+        {etat.termine && etat.faits ? ` ${etat.faits} plat${etat.faits > 1 ? 's' : ''} mis à jour : notes et commentaires sont en ligne.` : ''}
+        {demande === 'deja' ? ' Une régénération de ces plats est déjà en cours.' : ''}
+      </span>
+      {etat.erreurs.map((e) => <span key={e.plat_id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>{nom(e.plat_id)} : {e.message ?? 'échec'} — relancez ce plat.</span>)}
+    </div>
   );
 }
