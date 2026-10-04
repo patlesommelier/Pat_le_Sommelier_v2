@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { enregistrerVin, preparerImpression } from '../../actions';
+import { enregistrerVin } from '../../actions';
+import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs, type VinBO } from '@/lib/admin/donnees';
@@ -47,7 +48,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   return (
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
-        <form action={preparerImpression.bind(null, resto)}><button className="btn sec">Imprimer la carte</button></form>
+        <BoutonCarteImprimee resto={resto} />
       </Entete>
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>

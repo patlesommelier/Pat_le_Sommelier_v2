@@ -235,16 +235,17 @@ export async function regenererTout(resto: string) {
 /**
  * Bouton « Imprimer la carte » : Pat écrit d'abord les présentations qui manquent (en arrière-plan, une tâche par couleur),
  * la page d'attente ouvre ensuite le menu d'impression. S'il ne manque rien, on y va directement.
+ * Renvoie l'adresse à ouvrir (dans un nouvel onglet, par le bouton BoutonCarteImprimee).
  */
-export async function preparerImpression(resto: string) {
+export async function preparerImpression(resto: string): Promise<string> {
   const u = await exigerAcces(resto);
   const imprimer = `/admin/${resto}/carte/imprimer`;
-  if (!process.env.ANTHROPIC_API_KEY) redirect(imprimer);
+  if (!process.env.ANTHROPIC_API_KEY) return imprimer;
   const manquantes = await presentationsManquantes(requete, resto);
   const crees = manquantes.length ? await creerLotPresentations(requete, resto, manquantes.map((m) => m.couleur), u.email) : 0;
   if (crees) await lancerFonctions('generer-presentations-background', crees, () => travaillerPresentations(requete, { finAvant: Date.now() + 60 * 60 * 1000 }));
-  if (!crees && !(await preparationEnCours(requete, resto))) redirect(imprimer);
-  redirect(`/admin/${resto}/carte/preparer`);
+  if (!crees && !(await preparationEnCours(requete, resto))) return imprimer;
+  return `/admin/${resto}/carte/preparer`;
 }
 
 // ───────── Règles ─────────
