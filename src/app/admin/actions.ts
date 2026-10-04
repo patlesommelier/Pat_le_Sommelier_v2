@@ -8,6 +8,7 @@ import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { creerLot, travailler } from '@/lib/generation/file';
+import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { REGLAGES_INTERNES, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
@@ -199,14 +200,16 @@ export async function validerTout(resto: string) {
  * Lance le traitement de la file : fonctions Netlify d'arrière-plan (3 en parallèle au plus) ;
  * hors Netlify (développement local), le serveur traite la file lui-même, sans faire attendre la page.
  */
-async function lancerTravailleurs(nombre: number) {
+async function lancerFonctions(fonction: string, nombre: number, surPlace: () => Promise<unknown>) {
   const h = await headers();
   const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
   const appels = await Promise.all(Array.from({ length: Math.min(3, nombre) }, () =>
-    fetch(`${origine}/.netlify/functions/generer-accords-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0)));
-  if (!appels.some((s) => s === 202 || s === 200)) {
-    void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[accords]', e));
-  }
+    fetch(`${origine}/.netlify/functions/${fonction}`, { method: 'POST' }).then((r) => r.status).catch(() => 0)));
+  if (!appels.some((s) => s === 202 || s === 200)) void surPlace().catch((e) => console.error(`[${fonction}]`, e));
+}
+
+async function lancerTravailleurs(nombre: number) {
+  await lancerFonctions('generer-accords-background', nombre, () => travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }));
 }
 
 async function regenerer(resto: string, platIds: string[], retour: Record<string, string>) {
@@ -226,6 +229,22 @@ export async function regenererTout(resto: string) {
   await exigerAcces(resto);
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
   await regenerer(resto, plats.map((p) => p.id), {});
+}
+
+// ───────── Carte imprimée ─────────
+/**
+ * Bouton « Imprimer la carte » : Pat écrit d'abord les présentations qui manquent (en arrière-plan, une tâche par couleur),
+ * la page d'attente ouvre ensuite le menu d'impression. S'il ne manque rien, on y va directement.
+ */
+export async function preparerImpression(resto: string) {
+  const u = await exigerAcces(resto);
+  const imprimer = `/admin/${resto}/carte/imprimer`;
+  if (!process.env.ANTHROPIC_API_KEY) redirect(imprimer);
+  const manquantes = await presentationsManquantes(requete, resto);
+  const crees = manquantes.length ? await creerLotPresentations(requete, resto, manquantes.map((m) => m.couleur), u.email) : 0;
+  if (crees) await lancerFonctions('generer-presentations-background', crees, () => travaillerPresentations(requete, { finAvant: Date.now() + 60 * 60 * 1000 }));
+  if (!crees && !(await preparationEnCours(requete, resto))) redirect(imprimer);
+  redirect(`/admin/${resto}/carte/preparer`);
 }
 
 // ───────── Règles ─────────

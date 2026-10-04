@@ -91,14 +91,17 @@ function lireJson(texte: string): { id: string; texte: string }[] {
  * Génère les présentations couleur par couleur ; renvoie { idVin: présentation } pour les textes valides.
  * Les vins absents du résultat restent à relire (ou à écrire) par le restaurant.
  * Les vins déjà corrigés par le restaurant ne doivent pas être passés ici.
+ * existants : présentations déjà sur la carte, montrées au modèle pour qu'il ne les répète pas.
  */
-export async function genererPresentations(vins: VinPresentation[], nomRestaurant: string, client: Anthropic, modele: string, essaisMax = 2) {
+export async function genererPresentations(vins: VinPresentation[], nomRestaurant: string, client: Anthropic, modele: string,
+  { essaisMax = 2, existants = [] }: { essaisMax?: number; existants?: { couleur: string; texte: string }[] } = {}) {
   const resultat: Record<string, string> = {};
   for (const couleur of [...new Set(vins.map((v) => v.couleur))]) {
     const deCetteCouleur = vins.filter((v) => v.couleur === couleur);
     let aFaire = deCetteCouleur;
     for (let essai = 0; essai <= essaisMax && aFaire.length; essai++) {
-      const dejaEcrits = deCetteCouleur.filter((v) => resultat[v.id]).map((v) => resultat[v.id]);
+      // Déjà écrits : ceux de ce passage et ceux déjà sur la carte (pour ne pas les répéter).
+      const dejaEcrits = [...existants.filter((e) => e.couleur === couleur).map((e) => e.texte), ...deCetteCouleur.filter((v) => resultat[v.id]).map((v) => resultat[v.id])];
       const m = await client.messages.stream({ model: modele, max_tokens: 32000, messages: [{ role: 'user', content: construirePrompt(aFaire, nomRestaurant, dejaEcrits) }] }).finalMessage();
       const ids = new Set(aFaire.map((v) => v.id));
       for (const x of lireJson(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''))) {
@@ -112,3 +115,10 @@ export async function genererPresentations(vins: VinPresentation[], nomRestauran
   }
   return resultat;
 }
+
+/** Vins à présenter (champs descriptifs seulement, jamais de ranking). Filtre SQL ajouté après les conditions de base. */
+export const SQL_VINS_A_PRESENTER = `select v.id, v.libelle as nom, coalesce(p.nom, v.producteur_texte) as producteur, nullif(v.millesime, 'NM') as millesime,
+          v.couleur::text as couleur, v.section as region, v.cepages, v.descriptif,
+          nullif(concat_ws(' ', v.presentation, p.avis_pat), '') as commentaires
+     from vin_carte v left join producteur p on p.id = v.producteur_id
+    where v.restaurant_id = $1 and v.disponible and v.presentation_carte_perso is null`;

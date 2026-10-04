@@ -10,7 +10,7 @@
  */
 import 'dotenv/config';
 import Anthropic from '@anthropic-ai/sdk';
-import { genererPresentations, type VinPresentation } from '../src/lib/generation/presentations';
+import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '../src/lib/generation/presentations';
 import { ouvrirPool } from './lib/migrations';
 
 const arg = (nom: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : undefined; };
@@ -24,12 +24,7 @@ async function main() {
     const [r] = await q<{ nom: string }>('select nom from restaurant where id = $1', [restaurant]);
     if (!r) throw new Error(`Restaurant « ${restaurant} » introuvable.`);
     // Pas de ranking : seulement ce qui décrit le vin et son domaine.
-    const vins = await q<VinPresentation>(
-      `select v.id, v.libelle as nom, coalesce(p.nom, v.producteur_texte) as producteur, nullif(v.millesime, 'NM') as millesime,
-              v.couleur::text as couleur, v.section as region, v.cepages, v.descriptif,
-              nullif(concat_ws(' ', v.presentation, p.avis_pat), '') as commentaires
-         from vin_carte v left join producteur p on p.id = v.producteur_id
-        where v.restaurant_id = $1 and v.disponible and v.presentation_carte_perso is null order by v.ordre`, [restaurant]);
+    const vins = await q<VinPresentation>(`${SQL_VINS_A_PRESENTER} order by v.ordre`, [restaurant]);
     const textes = await genererPresentations(vins, r.nom, new Anthropic(), process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5');
     for (const v of vins) console.log(`${v.id} · ${textes[v.id] ?? '(à relire : pas de présentation valide)'}\n`);
     if (!apercu) {
