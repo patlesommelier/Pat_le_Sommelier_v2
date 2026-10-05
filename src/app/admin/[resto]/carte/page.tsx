@@ -11,6 +11,7 @@ const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tan
 function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
   if (v.etiquette_source === 'restaurant') return ['Votre photo', 'propose'];
   if (v.etiquette_source === 'wine_labs') return ['Wine Labs', 'ok'];
+  if (v.etiquette_source === 'cuvee') return ['Base de Pat', 'ok'];
   if (v.etiquette_url) return ['Fournie', 'ok'];
   if (v.etiquette_statut === 'demandee') return ['Recherche…', ''];
   return ['À photographier', 'attention'];
@@ -99,7 +100,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <div className="champ" style={{ flex: 1, minWidth: 0 }}>
                   <span className="libelle">Étiquette</span>
                   <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
-                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (JPG, PNG, WebP · 5 Mo max). Elle ne sera jamais écrasée par Wine Labs.</label>
+                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (JPG, PNG, WebP · 5 Mo max). Elle ne sera jamais écrasée par Wine Labs.
+                    {choisi.producteur_id ? ' Elle rejoint la base de Pat : les autres cartes qui ont cette cuvée sans étiquette la reprendront.' : ' Indiquez le producteur pour qu’elle serve aussi à la base de Pat.'}</label>
                   <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
                 </div>
               </div>

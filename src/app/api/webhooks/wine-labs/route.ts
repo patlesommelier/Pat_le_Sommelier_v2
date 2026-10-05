@@ -1,5 +1,6 @@
 import { requete } from '@/lib/db';
 import { lireDemande, verifierSignature } from '@/lib/wine-labs';
+import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 
 export const dynamic = 'force-dynamic';
 
@@ -57,6 +58,8 @@ export async function POST(req: Request) {
             where id = $1 and coalesce(etiquette_source, '') <> 'restaurant'`,
           [d.vin_id, image],
         );
+        // L'étiquette trouvée rejoint aussi la cuvée dans la base de Pat (si elle n'en a pas de plus sûre).
+        await partagerEtiquettes(requete, { vins: [d.vin_id] }).catch((e) => console.error('[wine-labs] partage', e));
       } else if (statut === 'unavailable' || statut === 'failed') {
         await requete(
           `update vin_carte set etiquette_statut = $2 where id = $1 and etiquette_url is null`,

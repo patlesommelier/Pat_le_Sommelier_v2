@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { decisionProducteur } from '../../actions';
-import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
+import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { ficheProducteur } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 
@@ -75,8 +75,9 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
                 ))}
                 {p.cuvees.map((c) => (
                   <tr key={c.id}>
-                    <td><b>{c.nom}</b></td><td>{c.couleur ? COULEURS[c.couleur] ?? c.couleur : '—'}</td><td>{c.appellation ?? '—'}</td>
-                    <td>—</td><td /><td><Etat type="ok">Proposé par Pat</Etat></td><td />
+                    <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><b>{c.nom}</b></div></td>
+                    <td>{c.couleur ? COULEURS[c.couleur] ?? c.couleur : '—'}</td><td>{c.appellation ?? '—'}</td>
+                    <td>—</td><td /><td><Etat type="ok">{c.source === 'carte' ? 'Cuvée reprise d’une carte' : 'Proposé par Pat'}</Etat></td><td />
                   </tr>
                 ))}
               </tbody>

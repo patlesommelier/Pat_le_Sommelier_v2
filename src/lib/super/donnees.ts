@@ -73,8 +73,8 @@ export async function ficheProducteur(id: string) {
          from vin_carte v join restaurant r on r.id = v.restaurant_id left join terroir t on t.id = v.appellation_id
         where v.producteur_id = $1 order by r.nom, v.ordre`, [id]),
     // Cuvées connues de la base de Pat.
-    requete<{ id: string; nom: string; couleur: string | null; appellation: string | null; cepages: string | null }>(
-      `select c.id, c.nom, c.couleur::text, t.nom as appellation, c.cepages from cuvee c left join terroir t on t.id = c.appellation_id
+    requete<{ id: string; nom: string; couleur: string | null; appellation: string | null; cepages: string | null; etiquette_url: string | null; source: string | null }>(
+      `select c.id, c.nom, c.couleur::text, t.nom as appellation, c.cepages, c.etiquette_url, c.source from cuvee c left join terroir t on t.id = c.appellation_id
         where c.producteur_id = $1 order by c.nom`, [id]),
     requete<{ id: string; nom: string; region: string | null; ranking_pat: number | null; statut: string }>(
       `select distinct t.id, t.nom, t.region, t.ranking_pat, t.statut::text from vin_carte v join terroir t on t.id = v.appellation_id

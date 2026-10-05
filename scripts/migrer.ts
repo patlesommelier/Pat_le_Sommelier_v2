@@ -12,6 +12,7 @@
 import 'dotenv/config';
 import { migrer, ouvrirPool } from './lib/migrations';
 import { initialiserVersionsSiAbsentes } from './lib/versions-initiales';
+import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -32,6 +33,9 @@ async function main() {
     // Premières versions des principes et des règles (une seule fois).
     const faites = await initialiserVersionsSiAbsentes(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (faites.length) console.log(`Versions installées : ${faites.join(', ')}.`);
+    // Étiquettes rattachées aux cuvées de la base de Pat (idempotent : ne fait rien quand tout est à jour).
+    const recues = await partagerEtiquettes(async (sql, params = []) => (await client.query(sql, params)).rows);
+    if (recues) console.log(`Étiquettes partagées par cuvée : ${recues} vin(s).`);
   } catch (e) {
     await client.query('rollback');
     throw e;

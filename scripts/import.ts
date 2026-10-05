@@ -15,6 +15,7 @@ import pg from 'pg';
 import { importerPrincipes, importerProducteurs, importerTerroirs, type Ligne } from './lib/pat';
 import { migrer, ouvrirPool } from './lib/migrations';
 import { importerRestaurant } from './lib/restaurant';
+import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
 
 const DRY = process.argv.includes('--dry-run');
 // --sql <fichier> : n'écrit pas dans la base, produit un fichier SQL (migration de données Netlify Database).
@@ -135,7 +136,7 @@ async function main() {
     await upsert(client, 'cuvee', cuvees);
     // Ménage : terroirs, producteurs et cuvées qui ne sont plus dans les fichiers (ids changés, doublons retirés).
     const tousProd = [...producteurs, ...restos.flatMap((r) => r.nouveauxProducteurs)];
-    await nettoyer(client, 'cuvee', cuvees.map((c) => c.id));
+    await nettoyer(client, 'cuvee', cuvees.map((c) => c.id), "coalesce(source, '') <> 'carte'"); // cuvées créées depuis les cartes (étiquettes) : gardées
     await client.query('delete from producteur_terroir where not ((producteur_id, terroir_id) in (select * from unnest($1::text[], $2::text[])))',
       [tousLiens.map((l) => l.producteur_id), tousLiens.map((l) => l.terroir_id)]);
     await nettoyer(client, 'producteur', tousProd.map((p) => p.id), `id not like 'bo-%'`); // producteurs proposés depuis le back-office : gardés
@@ -195,8 +196,10 @@ async function main() {
     await client.query('begin');
     await migrer(client);
     await ecrire(client);
+    // Étiquettes par cuvée (base de Pat) : rattachement des vins importés.
+    const recues = await partagerEtiquettes(async (sql, params = []) => (await client.query(sql, params)).rows);
     await client.query('commit');
-    console.log('Import terminé.');
+    console.log(`Import terminé.${recues ? ` Étiquettes reprises de la base : ${recues} vin(s).` : ''}`);
   } catch (e) {
     await client.query('rollback');
     throw e;

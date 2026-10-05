@@ -14,6 +14,7 @@ import { creerLotPresentations, preparationEnCours, presentationsManquantes, tra
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { parametresEnService } from '@/lib/regles/versions';
 import { repriseALaConnexion } from '@/lib/inscription/reprise';
+import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => {
@@ -117,7 +118,10 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
     [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'), txt(f, 'resume_court'),
       f.get('disponible') === 'on', f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
-  revalidatePath(`/admin/${resto}`, 'layout');
+  // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
+  const partagees = await partagerEtiquettes(requete, { vins: [vinId], nouvellePhoto: etiquette ? vinId : undefined })
+    .catch((e) => { console.error('[etiquettes] partage', e); return 0; });
+  revalidatePath(partagees ? '/' : `/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   redirect(avec(`/admin/${resto}/carte`, { vin: vinId, ok: '1' }));
 }

@@ -2,6 +2,7 @@
 // Idempotente : peut être rappelée sans créer de doublon (lien de confirmation ouvert deux fois).
 import 'server-only';
 import { requete } from '../db';
+import { partagerEtiquettes } from '../etiquettes/partage';
 import { deposerImage } from '../admin/fichiers';
 import { creerVinsEnAttente, preparerAccords } from './adaptateurs';
 import { lireInscription, majInscription } from './etat';
@@ -108,6 +109,10 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
       [id, restaurantId, v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
         v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1]);
   }
+
+  // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).
+  await partagerEtiquettes(requete, { vins: (await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1', [restaurantId])).map((v) => v.id) })
+    .catch((e) => console.error('[inscription] étiquettes', e));
 
   await majInscription(inscriptionId, { statut: 'finalisee' });
 
