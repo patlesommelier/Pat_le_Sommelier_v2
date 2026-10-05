@@ -38,6 +38,10 @@ export default async function WineLabs({ searchParams }: { searchParams: Promise
             count(*) filter (where etiquette_source = 'wine_labs')::int as trouvees,
             count(*) filter (where etiquette_statut = 'introuvable')::int as introuvables,
             count(*) filter (where etiquette_statut = 'echec')::int as echecs from vin_carte`);
+  const echecs = await requete<{ id: string; libelle: string; restaurant: string; restaurant_id: string; motif: string | null; le: string | null }>(
+    `select v.id, v.libelle, r.nom as restaurant, r.id as restaurant_id, v.etiquette_erreur as motif, v.etiquette_erreur_le as le
+       from vin_carte v join restaurant r on r.id = v.restaurant_id
+      where v.etiquette_statut = 'echec' and v.etiquette_url is null order by v.etiquette_erreur_le desc nulls last, r.nom, v.ordre limit 50`);
   const demandes = await requete<{ request_id: string; statut: string; libelle: string | null; restaurant: string | null; demandee_le: string }>(
     `select d.request_id, d.statut, v.libelle, r.nom as restaurant, d.demandee_le from demande_etiquette d
        left join vin_carte v on v.id = d.vin_id left join restaurant r on r.id = d.restaurant_id order by d.demandee_le desc limit 15`);
@@ -70,6 +74,21 @@ export default async function WineLabs({ searchParams }: { searchParams: Promise
           </div>
         )}
       </div>
+
+      {echecs.length > 0 && (
+        <div className="carte-bo pile">
+          <h2>Vins en échec</h2>
+          <p className="discret" style={{ margin: 0 }}>Ils seront redemandés au prochain clic sur « Chercher sur Wine Labs » dans la carte du restaurant.</p>
+          <div className="tableau">
+            <table>
+              <thead><tr><th>Vin</th><th>Restaurant</th><th>Motif</th><th>Le</th></tr></thead>
+              <tbody>{echecs.map((e) => (
+                <tr key={e.id}><td><a href={`/admin/${e.restaurant_id}/carte?vin=${encodeURIComponent(e.id)}`}>{e.libelle}</a></td><td>{e.restaurant}</td>
+                  <td style={{ whiteSpace: 'normal', maxWidth: 420 }}>{e.motif ?? 'Motif non enregistré (échec antérieur à cette version) : relancez la recherche.'}</td><td>{date(e.le)}</td></tr>))}</tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {demandes.length > 0 && (
         <div className="tableau">

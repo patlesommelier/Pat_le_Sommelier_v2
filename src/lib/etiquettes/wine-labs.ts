@@ -61,7 +61,7 @@ export async function appelerWineLabs<T = Record<string, unknown>>(methode: 'GET
 const JUMEAUX = `(v.id = $1 or exists (select 1 from vin_carte x where x.id = $1
   and ((x.cuvee_id is not null and v.cuvee_id = x.cuvee_id) or (v.restaurant_id = x.restaurant_id and lower(v.libelle) = lower(x.libelle)))))`;
 
-export type DemandeWineLabs = { id: string; statut: string; image: string | null; vinId: string | null };
+export type DemandeWineLabs = { id: string; statut: string; image: string | null; vinId: string | null; erreur?: string | null };
 
 /** Objet « request » de Wine Labs (réponse de POST /wine_labels, ou data.request du webhook). */
 export function lireRequete(o: unknown): DemandeWineLabs {
@@ -75,6 +75,7 @@ export function lireRequete(o: unknown): DemandeWineLabs {
     statut: String(r.status ?? '').toLowerCase(),
     image,
     vinId: typeof r.client_request_id === 'string' && r.client_request_id ? r.client_request_id : null,
+    erreur: r.error_details == null ? null : typeof r.error_details === 'string' ? r.error_details : JSON.stringify(r.error_details),
   };
 }
 
@@ -106,6 +107,12 @@ async function copierImage(source: string, requestId: string): Promise<string> {
  * Applique une réponse de Wine Labs (immédiate ou par webhook). Idempotent : une même réponse peut arriver
  * plusieurs fois, ou plus tard avec une image remplacée. Une photo du restaurant n'est jamais remplacée.
  */
+/** Motif lisible d'un échec, gardé sur le vin (affiché au super-admin). Jamais de secret : seulement le message. */
+export async function noterEchec(q: Requete, vinId: string, motif: string) {
+  await q(`update vin_carte set etiquette_statut = 'echec', etiquette_erreur = $2, etiquette_erreur_le = now()
+            where id = $1 and etiquette_url is null`, [vinId, motif.slice(0, 500)]);
+}
+
 export async function appliquerReponse(q: Requete, d: DemandeWineLabs, payload: unknown = null) {
   if (!d.id) return { applique: false, raison: 'sans identifiant' };
   const [dem] = await q<{ vin_id: string | null }>(
@@ -120,10 +127,17 @@ export async function appliquerReponse(q: Requete, d: DemandeWineLabs, payload: 
   if (!vinId) return { applique: false, raison: 'reliée à aucun vin' };
 
   if (d.statut === 'fulfilled' && d.image) {
-    const image = await copierImage(d.image, d.id);
+    let image: string;
+    try {
+      image = await copierImage(d.image, d.id);
+    } catch (e) {
+      const motif = `Étiquette trouvée par Wine Labs, mais copie impossible : ${(e as Error).message}`;
+      await noterEchec(q, vinId, motif);
+      throw new Error(motif);
+    }
     await q('update demande_etiquette set image_url = $2 where request_id = $1', [d.id, image]);
     await q(
-      `update vin_carte set etiquette_url = $2, etiquette_source = 'wine_labs', etiquette_statut = 'trouvee'
+      `update vin_carte set etiquette_url = $2, etiquette_source = 'wine_labs', etiquette_statut = 'trouvee', etiquette_erreur = null
         where id = $1 and coalesce(etiquette_source, '') not in ('restaurant', 'fichier')`, [vinId, image]);
     await partagerEtiquettes(q, { vins: [vinId] }); // la cuvée et les autres cartes qui l'ont
     // Même vin sur la même carte, sans cuvée (producteur inconnu) : autres millésimes ou formats.
@@ -133,7 +147,7 @@ export async function appliquerReponse(q: Requete, d: DemandeWineLabs, payload: 
     return { applique: true };
   }
   if (d.statut === 'processing') {
-    await q(`update vin_carte set etiquette_statut = 'demandee' where id = $1 and etiquette_url is null`, [vinId]);
+    await q(`update vin_carte set etiquette_statut = 'demandee', etiquette_erreur = null where id = $1 and etiquette_url is null`, [vinId]);
     return { applique: true };
   }
   if (d.statut === 'unavailable' || d.statut === 'failed') {
@@ -142,6 +156,7 @@ export async function appliquerReponse(q: Requete, d: DemandeWineLabs, payload: 
     await q(
       `update vin_carte v set etiquette_statut = $2 where v.etiquette_url is null
           and (v.id = $1 or v.etiquette_statut is null or v.etiquette_statut in ('a_demander', 'demandee')) and ${JUMEAUX}`, [vinId, statut]);
+    if (statut === 'echec') await noterEchec(q, vinId, `Wine Labs n’a pas pu préparer l’étiquette${d.erreur ? ` : ${d.erreur}` : '.'}`);
     return { applique: true };
   }
   return { applique: false, raison: `statut ${d.statut}` };
@@ -168,7 +183,7 @@ export async function mettreEnFile(q: Requete, restaurantId: string, { vins, max
                                  or (o.restaurant_id = v.restaurant_id and lower(o.libelle) = lower(v.libelle))))
         order by coalesce(v.cuvee_id, lower(v.libelle)), v.ordre
         limit $4)
-     update vin_carte v set etiquette_statut = 'a_demander' from candidats c where v.id = c.id returning v.id`,
+     update vin_carte v set etiquette_statut = 'a_demander', etiquette_erreur = null from candidats c where v.id = c.id returning v.id`,
     [restaurantId, vins ?? null, relancer, max]);
   return r.length;
 }
@@ -201,7 +216,9 @@ export async function traiterFile(q: Requete, { finAvant }: { finAvant: number }
         client_request_id: v.id,
       });
       const d = lireRequete(rep);
-      await appliquerReponse(q, { ...d, vinId: d.vinId ?? v.id }, rep);
+      if (!d.id) throw new Error(`réponse de Wine Labs sans demande : ${JSON.stringify(rep).slice(0, 200)}`);
+      const r = await appliquerReponse(q, { ...d, vinId: d.vinId ?? v.id }, rep);
+      if (!r.applique) await noterEchec(q, v.id, `Réponse de Wine Labs inattendue (${r.raison}) : ${JSON.stringify(rep).slice(0, 200)}`);
     } catch (e) {
       console.error('[wine-labs] demande', v.id, e);
       if (/\b(401|402|403|429)\b/.test(String(e))) {
@@ -209,7 +226,8 @@ export async function traiterFile(q: Requete, { finAvant }: { finAvant: number }
         await q(`update vin_carte set etiquette_statut = 'a_demander' where id = $1 and etiquette_url is null`, [v.id]);
         return 0;
       }
-      await q(`update vin_carte set etiquette_statut = 'echec' where id = $1 and etiquette_url is null`, [v.id]);
+      const message = (e as Error).message ?? String(e);
+      if (!/copie impossible/.test(message)) await noterEchec(q, v.id, /timeout|aborted/i.test(message) ? 'Wine Labs n’a pas répondu à temps (30 s).' : message);
     }
   }
   const [{ n }] = await q<{ n: number }>(`select count(*)::int as n from vin_carte where etiquette_statut = 'a_demander'`);

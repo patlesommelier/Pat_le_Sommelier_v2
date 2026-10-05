@@ -15,6 +15,7 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
   if (v.etiquette_source === 'cuvee') return ['Base de Pat', 'ok'];
   if (v.etiquette_url) return ['Fournie', 'ok'];
   if (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander') return ['Recherche Wine Labs…', ''];
+  if (v.etiquette_statut === 'echec') return ['Échec Wine Labs : à photographier', 'attention'];
   if (v.etiquette_statut === 'introuvable') return ['Introuvable chez Wine Labs : à photographier', 'attention'];
   return ['À photographier', 'attention'];
 }
@@ -119,6 +120,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <div className="champ" style={{ flex: 1, minWidth: 0 }}>
                   <span className="libelle">Étiquette</span>
                   <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
+                  {u?.admin && choisi.etiquette_statut === 'echec' && choisi.etiquette_erreur && <span className="petit discret">Motif : {choisi.etiquette_erreur}</span>}
                   <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (JPG, PNG, WebP · 5 Mo max). Elle ne sera jamais écrasée par Wine Labs.
                     {choisi.producteur_id ? ' Elle rejoint la base de Pat : les autres cartes qui ont cette cuvée sans étiquette la reprendront.' : ' Indiquez le producteur pour qu’elle serve aussi à la base de Pat.'}</label>
                   <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />

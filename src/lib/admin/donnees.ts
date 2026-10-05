@@ -80,7 +80,7 @@ export interface VinBO {
   statut_producteur: 'reference' | 'nouveau' | null;
   millesime: string | null; format: string; prix: number | null; prix_verre: number | null; cepages: string | null;
   resume_court: string | null; presentation: string | null; etiquette_url: string | null; etiquette_source: string | null;
-  etiquette_statut: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
+  etiquette_statut: string | null; etiquette_erreur: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
   pays: string | null; vin_texte: string | null;
   /** Présentation pour la carte imprimée : générée par Pat, et corrigée par le restaurant (prioritaire). */
   presentation_carte: string | null; presentation_carte_perso: string | null;
@@ -92,7 +92,7 @@ export async function getVinsBO(restaurantId: string) {
             p.statut::text as producteur_statut,
             case when p.statut <> 'valide' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
             v.millesime, v.format, v.prix, v.prix_verre,
-            v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.coup_de_coeur,
+            v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
