@@ -17,10 +17,37 @@ function couleurClaire(hex: string) {
 const LETTRE: Record<string, string> = { bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D' };
 const slugPlat = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
 
-export async function finaliserInscription(inscriptionId: string, userId: string, email: string): Promise<{ restaurantId: string }> {
-  const i = await lireInscription(inscriptionId);
-  if (!i) throw new Error('Inscription introuvable.');
-  if (i.user_id !== userId) throw new Error('Cette inscription appartient à un autre compte.');
+/** Finalisation déjà en cours ailleurs (lien de l'e-mail, écran d'attente d'un autre appareil, connexion). */
+export class FinalisationEnCours extends Error {}
+
+export async function finaliserInscription(inscriptionId: string, userId: string, email: string,
+  { attendre = true }: { attendre?: boolean } = {}): Promise<{ restaurantId: string }> {
+  const i0 = await lireInscription(inscriptionId);
+  if (!i0) throw new Error('Inscription introuvable.');
+  if (i0.user_id !== userId) throw new Error('Cette inscription appartient à un autre compte.');
+  if (i0.statut === 'finalisee' && i0.restaurant_id) return { restaurantId: i0.restaurant_id };
+
+  // Un seul appel à la fois : les autres attendent qu'il ait fini (ou abandonnent, pour l'écran d'attente).
+  const [verrou] = await requete(
+    `update inscription set finalisation_le = now() where id = $1 and statut <> 'finalisee'
+        and (finalisation_le is null or finalisation_le < now() - interval '3 minutes') returning id`, [inscriptionId]);
+  if (!verrou) {
+    for (let n = 0; attendre && n < 25; n++) {
+      await new Promise((r) => setTimeout(r, 1000));
+      const j = await lireInscription(inscriptionId);
+      if (j?.statut === 'finalisee' && j.restaurant_id) return { restaurantId: j.restaurant_id };
+    }
+    throw new FinalisationEnCours('Finalisation déjà en cours.');
+  }
+  try {
+    return await finaliser(inscriptionId, userId, email);
+  } finally {
+    await requete('update inscription set finalisation_le = null where id = $1', [inscriptionId]);
+  }
+}
+
+async function finaliser(inscriptionId: string, userId: string, email: string): Promise<{ restaurantId: string }> {
+  const i = (await lireInscription(inscriptionId))!;
   if (i.statut === 'finalisee' && i.restaurant_id) return { restaurantId: i.restaurant_id };
 
   // 1. Restaurant — créé une seule fois ; son id est noté tout de suite pour qu'une reprise le réutilise.

@@ -29,13 +29,21 @@ const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_propo
 export async function inscriptionCourante(): Promise<Inscription | null> {
   const jeton = (await cookies()).get(COOKIE)?.value;
   if (!jeton) return null;
-  const [i] = await requete<Inscription>(`select ${COLONNES} from inscription where jeton_empreinte = $1 and expire_le > now() and statut <> 'expiree'`, [empreinte(jeton)]);
+  const [i] = await requete<Inscription>(`select ${COLONNES} from inscription where (jeton_empreinte = $1 or $1 = any(jetons_autres)) and expire_le > now() and statut <> 'expiree'`, [empreinte(jeton)]);
   return i ?? null;
 }
 
 export async function lireInscription(id: string): Promise<Inscription | null> {
   const [i] = await requete<Inscription>(`select ${COLONNES} from inscription where id = $1`, [id]);
   return i ?? null;
+}
+
+/** Ouvre l'inscription dans ce navigateur aussi (lien de confirmation ouvert sur un autre appareil), sans couper les autres. */
+export async function ouvrirSurCeNavigateur(inscriptionId: string, userId: string) {
+  const { jeton, empreinte: emp } = nouveauJeton();
+  await requete(`update inscription set jetons_autres = (jetons_autres || $2::text)[greatest(1, cardinality(jetons_autres) - 3):],
+                   expire_le = greatest(expire_le, now() + interval '2 days') where id = $1 and user_id = $3`, [inscriptionId, emp, userId]);
+  (await cookies()).set(COOKIE, jeton, optionsCookie);
 }
 
 /** Démarre une inscription (bouton « Commencer ») et pose le cookie. */
