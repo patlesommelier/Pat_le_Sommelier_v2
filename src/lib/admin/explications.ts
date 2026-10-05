@@ -26,3 +26,42 @@ export function pourquoiPas(c: { note: number; score: number; vin: Candidat }, R
   if (dernier && c.note < R.noteMinAjout && c.score >= (dernier?.score ?? 0) - 1) return [`Note ${c.note} : il faut ${R.noteMinAjout} pour compléter la liste`, ''];
   return ['Plus loin dans le classement', ''];
 }
+
+/**
+ * Raison exacte, règle par règle, pour laquelle un vin noté n'est pas dans la liste (vue super-admin : parle de score).
+ * Reprend l'ordre de selectionner() : règles 10, 1, puis 3 à 5 (trois premiers), 11 (bulles), 9 (maximum), 6 (4e et 5e).
+ */
+export function raisonEcart(c: { note: number; score: number; vin: Candidat }, R: Reglages, sel: { liste: Retenu[]; classement: Retenu[] }, tour2: Set<string>): string {
+  if (!sel.classement.some((r) => r.vin.id === c.vin.id)) {
+    if (c.note <= R.noteEliminatoire) return `Règle 1 : note ${c.note}, les notes ≤ ${R.noteEliminatoire} sont écartées`;
+    return 'Règle 10 : demi-bouteille d’un vin aussi proposé en 75 cl';
+  }
+  const suite = tour2.has(c.vin.id) ? ' — proposé au tour 2' : '';
+  const liste = sel.liste;
+  const bulles = liste.filter((r) => r.vin.couleur === 'bulles').length;
+  if (c.vin.couleur === 'bulles' && bulles >= R.plafondBulles) return `Règle 11 : déjà ${bulles} bulles dans la liste (plafond ${R.plafondBulles})${suite}`;
+  if (liste.length < R.premiers) return `Non retenu alors que la liste n’a que ${liste.length} vin(s) sur ${R.premiers} : départage${suite}`;
+  if (liste.length >= R.maximum) return `Règle 9 : la liste est complète (${R.maximum} vins au plus)${suite}`;
+  const troisieme = liste[R.premiers - 1];
+  if (c.note < R.noteMinAjout) return `Règle 6 : un 4e ou 5e vin doit avoir une note ≥ ${R.noteMinAjout} (note ${c.note})${suite}`;
+  if (troisieme && c.score < troisieme.score - 1) return `Règle 6 : score ${c.score}, trop loin du 3e vin (score ${troisieme.score}, il faut ≥ ${troisieme.score - 1})${suite}`;
+  if (c.score < R.scoreMinAjout) return `Règle 6 : score ${c.score}, il faut ≥ ${R.scoreMinAjout} pour un 4e ou 5e vin${suite}`;
+  return `Départage à score égal : diversité (couleur, pays, cépage, appellation) puis ranking et ordre de la carte${suite}`;
+}
+
+/** Libellés des réglages, pour afficher ceux en vigueur sur un restaurant. */
+export const LIBELLES_REGLAGES: Record<keyof Reglages, string> = {
+  contenance: 'Demi-bouteille écartée si le vin existe en 75 cl (règle 10)',
+  noteEliminatoire: 'Notes écartées : jusqu’à (règle 1)',
+  diversite: 'Diversité entre ex aequo (règle 3)',
+  premiers: 'Nombre de premiers vins (règles 3 à 5)',
+  maximum: 'Nombre maximal de vins (règle 9)',
+  noteMinAjout: 'Note minimale d’un 4e ou 5e vin (règle 6)',
+  scoreMinAjout: 'Score minimal d’un 4e ou 5e vin (règle 6)',
+  plusCher: 'Vin plus cher (règle 7)',
+  facteurPlusCher: 'Vin plus cher : au moins × le plus cher de la liste',
+  moinsCher: 'Vin moins cher (règle 8)',
+  ecartMoinsCher: 'Vin moins cher si l’écart de prix de la liste est sous ×',
+  plafondBulles: 'Bulles au plus (règle 11)',
+  tourSuivant: 'Vins proposés au tour 2',
+};

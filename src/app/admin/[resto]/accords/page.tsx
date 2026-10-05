@@ -6,11 +6,12 @@ import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
-import { pourquoiPas } from '@/lib/admin/explications';
+import { LIBELLES_REGLAGES, pourquoiPas, raisonEcart } from '@/lib/admin/explications';
 import { requete } from '@/lib/db';
-import { getCandidats, getReglages } from '@/lib/donnees';
+import { getCandidats, getCarte, getReglages } from '@/lib/donnees';
+import { parametresEnService } from '@/lib/regles/versions';
 import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
-import { selectionner, tourSuivant } from '@/lib/selection';
+import { selectionner, tourSuivant, type Reglages } from '@/lib/selection';
 
 const dateHeure = (d: string) => new Date(d).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
@@ -52,7 +53,22 @@ export default async function Accords({ params, searchParams }: { params: Promis
   }
 
   // Ce que verra le client une fois les accords validés : sélection sur les accords proposés et validés.
-  const { candidats, lignesParVin } = plat ? await getCandidats(resto, [plat.id], ['valide', 'propose']) : { candidats: [], lignesParVin: new Map() };
+  const { candidats, lignesParVin, exclus } = plat ? await getCandidats(resto, [plat.id], ['valide', 'propose']) : { candidats: [], lignesParVin: new Map(), exclus: new Set<string>() };
+  // Logique de sélection (super-admin) : réglages en vigueur, vins hors classement et pourquoi.
+  const logique = interne && plat ? await (async () => {
+    const [base, carte, [brut], refuses] = await Promise.all([parametresEnService(requete), getCarte(resto),
+      requete<{ reglages_selection: Record<string, unknown> | null }>('select reglages_selection from restaurant where id = $1', [resto]),
+      requete<{ vin_id: string }>(`select vin_id from accord where plat_id = $1 and statut = 'refuse'`, [plat.id])]);
+    const notes = new Set(candidats.map((c) => c.id));
+    const refus = new Set(refuses.map((r) => r.vin_id));
+    return {
+      base, ajustes: Object.keys(brut?.reglages_selection ?? {}) as (keyof Reglages)[],
+      carte: carte.length,
+      exclus: carte.filter((v) => exclus.has(v.id)),
+      refuses: carte.filter((v) => !exclus.has(v.id) && refus.has(v.id)),
+      sansNote: carte.filter((v) => !notes.has(v.id) && !exclus.has(v.id) && !refus.has(v.id)),
+    };
+  })() : null;
   const sel = plat ? selectionner(candidats, [plat.id], { reglages: R }) : { liste: [], classement: [] };
   const retenus = new Set(sel.liste.map((r) => r.vin.id));
   const tour2 = new Set(tourSuivant(sel, [...retenus], R.tourSuivant, R.diversite, R.plafondBulles).map((r) => r.vin.id));
@@ -142,6 +158,49 @@ export default async function Accords({ params, searchParams }: { params: Promis
                 ))}
               </div>
             </div>
+            {logique && (
+              <details className="carte-bo pile" style={{ padding: '14px 18px' }} open={!sel.liste.length}>
+                <summary style={{ cursor: 'pointer', fontWeight: 800 }}>Logique de sélection (super-admin)</summary>
+                <div className="pile" style={{ gap: 10, marginTop: 10 }}>
+                  <p style={{ margin: 0 }}>
+                    {logique.carte} vins disponibles sur la carte · <b>{candidats.length}</b> notés sur ce plat
+                    · {sel.classement.length} gardés après les règles 10 et 1 · <b>{sel.liste.length}</b> proposés
+                    {logique.exclus.length ? ` · ${logique.exclus.length} exclu(s) par une règle ponctuelle` : ''}
+                    {logique.refuses.length ? ` · ${logique.refuses.length} refusé(s)` : ''}
+                    {logique.sansNote.length ? ` · ${logique.sansNote.length} sans note sur ce plat` : ''}.
+                  </p>
+                  {!sel.liste.length && (
+                    <p style={{ margin: 0, color: 'var(--ocre)' }}>
+                      {!candidats.length ? 'Aucun vin n’a de note sur ce plat : la génération n’a rien écrit (voir « Relancer les plats sans accord »).'
+                        : !sel.classement.length ? `Tous les vins notés ont une note ≤ ${R.noteEliminatoire} (règle 1)${R.noteEliminatoire !== logique.base.noteEliminatoire ? ` — réglage du restaurant : ${R.noteEliminatoire} au lieu de ${logique.base.noteEliminatoire}` : ''}.`
+                        : `Des vins passent les règles 1 et 10, mais aucun n’est retenu : vérifiez « ${LIBELLES_REGLAGES.premiers} » (${R.premiers}) et « ${LIBELLES_REGLAGES.plafondBulles} » (${R.plafondBulles}).`}
+                    </p>
+                  )}
+                  <div className="tableau">
+                    <table>
+                      <thead><tr><th>Réglage</th><th className="droite">En vigueur</th><th className="droite">Pat</th><th /></tr></thead>
+                      <tbody>{(Object.keys(LIBELLES_REGLAGES) as (keyof Reglages)[]).map((k) => {
+                        const v = (x: unknown) => (typeof x === 'boolean' ? (x ? 'oui' : 'non') : String(x));
+                        const different = R[k] !== logique.base[k];
+                        return (
+                          <tr key={k}><td>{LIBELLES_REGLAGES[k]}</td><td className="droite"><b>{v(R[k])}</b></td><td className="droite">{v(logique.base[k])}</td>
+                            <td>{different ? <Etat type="propose">{logique.ajustes.includes(k) ? 'ajusté par le restaurant' : 'différent'}</Etat> : null}</td></tr>
+                        );
+                      })}</tbody>
+                    </table>
+                  </div>
+                  {(logique.sansNote.length > 0 || logique.exclus.length > 0 || logique.refuses.length > 0) && (
+                    <div className="pile" style={{ gap: 4 }}>
+                      <b>Vins hors classement</b>
+                      {logique.exclus.map((v) => <span key={v.id} className="petit">{v.libelle} — exclu par une règle ponctuelle (Règles du sommelier)</span>)}
+                      {logique.refuses.map((v) => <span key={v.id} className="petit">{v.libelle} — accord refusé sur ce plat</span>)}
+                      {logique.sansNote.slice(0, 15).map((v) => <span key={v.id} className="petit">{v.libelle} — pas de note sur ce plat (à régénérer)</span>)}
+                      {logique.sansNote.length > 15 && <span className="petit discret">… et {logique.sansNote.length - 15} autre(s)</span>}
+                    </div>
+                  )}
+                </div>
+              </details>
+            )}
             <div className="pile">
               <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Pat classe les vins à partir de la note d’accord et de sa propre sélection.'}</p></div>
               <div className="tableau">
@@ -150,7 +209,9 @@ export default async function Accords({ params, searchParams }: { params: Promis
                   <tbody>
                     {tri.map((t, rang) => {
                       const l = lignesParVin.get(t.vin.id)?.[0];
-                      const [res, rk] = retenus.has(t.vin.id) ? [`Proposé · n° ${sel.liste.findIndex((r) => r.vin.id === t.vin.id) + 1}`, 'ok' as const] : pourquoiPas(t, R, sel.liste, tour2);
+                      const [res, rk] = retenus.has(t.vin.id) ? [`Proposé · n° ${sel.liste.findIndex((r) => r.vin.id === t.vin.id) + 1}`, 'ok' as const]
+                        : interne ? [raisonEcart(t, R, sel, tour2), (t.note <= R.noteEliminatoire ? 'defaut' : tour2.has(t.vin.id) ? 'propose' : '') as 'defaut' | 'propose' | '']
+                        : pourquoiPas(t, R, sel.liste, tour2);
                       return (
                         <tr key={t.vin.id}>
                           <td className="droite"><b>{rang + 1}</b></td>
