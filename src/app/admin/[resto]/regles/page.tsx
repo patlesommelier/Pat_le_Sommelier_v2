@@ -2,14 +2,12 @@ import Link from 'next/link';
 import { enregistrerReglages, remettreVin, retablirReglage, retablirTout, retirerVin } from '../../actions';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
-import { utilisateurCourant } from '@/lib/admin/auth';
 import { getExclusions, getVinsBO } from '@/lib/admin/donnees';
 import { getReglages } from '@/lib/donnees';
 import { REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
 type Cle = keyof Reglages;
-// « interne » : cuisine interne de Pat (rankings, score), affichée seulement aux administrateurs, jamais au restaurant.
-interface Def { n: string; titre: string; texte: string; champs: { cle: Cle; libelle: string; suffixe?: string }[]; client?: string; interne?: string }
+interface Def { n: string; titre: string; texte: string; champs: { cle: Cle; libelle: string; suffixe?: string }[]; client?: string }
 
 const GROUPES: [string, Def[]][] = [
   ['Avant le classement', [
@@ -17,11 +15,11 @@ const GROUPES: [string, Def[]][] = [
     { n: '1', titre: 'Élimination', texte: 'Un vin trop faible sur le plat n’est jamais proposé, même pour compléter la liste.', champs: [{ cle: 'noteEliminatoire', libelle: 'Écarter les notes ≤' }] },
   ]],
   ['Classement', [
-    { n: '2', titre: 'Classement', texte: 'Pat classe les vins à partir de la note d’accord et de sa connaissance des vignerons. Les mieux classés sont proposés en premier.', champs: [], interne: 'Score = note d’accord + ranking producteur de Pat.' },
-    { n: '3', titre: 'Diversité', texte: 'À égalité, le vin le plus différent de ceux déjà retenus (couleur, pays, cépage, appellation) passe devant, puis l’ordre de votre carte.', champs: [{ cle: 'diversite', libelle: 'Active' }], interne: 'À score et note égaux : diversité, puis rankings producteur et terroir, puis ordre de la carte.' },
+    { n: '2', titre: 'Classement', texte: 'Pat classe les vins à partir de la note d’accord et de sa connaissance des vignerons. Les mieux classés sont proposés en premier.', champs: [] },
+    { n: '3', titre: 'Diversité', texte: 'À égalité, le vin le plus différent de ceux déjà retenus (couleur, pays, cépage, appellation) passe devant, puis l’ordre de votre carte.', champs: [{ cle: 'diversite', libelle: 'Active' }] },
   ]],
   ['Composer la liste', [
-    { n: '3–6', titre: 'Nombre de vins', texte: 'Les premiers vins du classement, puis jusqu’au maximum s’ils sont bien notés et proches du dernier retenu.', champs: [{ cle: 'premiers', libelle: 'Premiers' }, { cle: 'maximum', libelle: 'Maximum' }, { cle: 'noteMinAjout', libelle: 'Note ≥' }], interne: `Règle 6 : score ≥ score du 3e − 1 et score ≥ ${REGLAGES_PAT.scoreMinAjout} (réglage de Pat, non modifiable par le restaurant).` },
+    { n: '3–6', titre: 'Nombre de vins', texte: 'Les premiers vins du classement, puis jusqu’au maximum s’ils sont bien notés et proches du dernier retenu.', champs: [{ cle: 'premiers', libelle: 'Premiers' }, { cle: 'maximum', libelle: 'Maximum' }, { cle: 'noteMinAjout', libelle: 'Note ≥' }] },
     { n: '7', titre: 'Un vin plus cher', texte: 'Un vin bien noté nettement plus cher que la liste, pour les grandes occasions.', champs: [{ cle: 'plusCher', libelle: 'Actif' }, { cle: 'facteurPlusCher', libelle: 'Prix ≥', suffixe: '× le plus cher' }], client: 'Pour une belle occasion' },
     { n: '8', titre: 'Un vin moins cher', texte: 'Quand tous les vins ont un prix proche, un vin bien noté deux fois moins cher.', champs: [{ cle: 'moinsCher', libelle: 'Actif' }, { cle: 'ecartMoinsCher', libelle: 'Si écart <', suffixe: '×' }], client: 'Plus accessible' },
     { n: '11', titre: 'Plafond bulles', texte: 'Pas plus d’effervescents dans une liste que ce nombre (un de plus si les seuls vins notés 5 sont des bulles).', champs: [{ cle: 'plafondBulles', libelle: 'Au plus' }] },
@@ -34,7 +32,7 @@ const affiche = (v: number | boolean) => typeof v === 'boolean' ? (v ? 'active' 
 export default async function Regles({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { resto } = await params;
   const { ok } = await searchParams;
-  const [R, exclusions, vins, u] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), utilisateurCourant()]);
+  const [R, exclusions, vins] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto)]);
   const modifies = (Object.keys(REGLAGES_PAT) as Cle[]).filter((k) => R[k] !== REGLAGES_PAT[k]);
   const exclus = new Set(exclusions.map((x) => x.cible));
   return (
@@ -58,7 +56,6 @@ export default async function Regles({ params, searchParams }: { params: Promise
                       <span className="discret">{d.texte}</span>
                       {mod.length > 0 && <span className="discret" style={{ fontSize: 13 }}>Valeur de Pat : {mod.map((c) => `${c.libelle.toLowerCase()} ${affiche(REGLAGES_PAT[c.cle])}`).join(', ')}</span>}
                       {d.client && <span className="discret" style={{ fontSize: 13 }}>Côté client : <b style={{ color: 'var(--texte)' }}>{d.client}</b></span>}
-                      {u?.admin && d.interne && <span className="discret" style={{ fontSize: 13 }}>Interne (visible par Pat seulement) : {d.interne}</span>}
                     </div>
                     <div style={{ flex: '0 1 340px', display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'flex-end' }}>
                       {d.champs.map((c) => typeof REGLAGES_PAT[c.cle] === 'boolean' ? (
