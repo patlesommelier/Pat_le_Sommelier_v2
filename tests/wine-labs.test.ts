@@ -43,3 +43,18 @@ test('signature X-WineLabs-Signature (HMAC-SHA256 hex de « t.corps ») accepté
   const vieux = new Headers({ 'X-WineLabs-Signature': `t=${t - 600},v1=${createHmac('sha256', secret).update(`${t - 600}.${corps}`).digest('hex')}` });
   assert.equal(verifierSignature(corps, vieux, secret).ok, false);
 });
+
+test('une « clé » au format UUID est envoyée comme user_id', async () => {
+  const { identifiantsWineLabs } = await import('../src/lib/etiquettes/wine-labs');
+  const avant = { ...process.env };
+  try {
+    process.env.WINE_LABS_API_KEY = '00000000-1111-2222-3333-444444444444'; delete process.env.WINE_LABS_USER_ID;
+    assert.deepEqual(identifiantsWineLabs(), { cle: null, userId: '00000000-1111-2222-3333-444444444444' });
+    process.env.WINE_LABS_API_KEY = 'wl_live_abc';
+    assert.deepEqual(identifiantsWineLabs(), { cle: 'wl_live_abc', userId: null });
+    process.env.WINE_LABS_USER_ID = '00000000-1111-2222-3333-444444444444';
+    assert.deepEqual(identifiantsWineLabs(), { cle: 'wl_live_abc', userId: '00000000-1111-2222-3333-444444444444' });
+  } finally {
+    process.env = avant;
+  }
+});

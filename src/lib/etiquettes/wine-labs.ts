@@ -20,10 +20,17 @@ import { partagerEtiquettes } from './partage';
 
 export const API_WINE_LABS = process.env.WINE_LABS_API_URL ?? 'https://external-api.wine-labs.com'; // surchargé seulement pour les tests
 
-/** Clé d'API (en-tête Authorization) ou, à défaut, user_id du compte. Lues dans les variables d'environnement. */
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+/**
+ * Identifiants lus dans les variables d'environnement : clé d'API (en-tête Authorization: Bearer) et/ou user_id du compte.
+ * Une « clé » au format UUID est en fait le user_id du compte (c'est ce que Wine Labs remet à l'inscription) :
+ * elle est alors envoyée comme user_id, pas comme jeton.
+ */
 export function identifiantsWineLabs() {
-  const cle = process.env.WINE_LABS_API_KEY ?? process.env.WINELABS_API_KEY ?? process.env.WINE_LABS_KEY ?? null;
-  const userId = process.env.WINE_LABS_USER_ID ?? process.env.WINELABS_USER_ID ?? null;
+  const brute = (process.env.WINE_LABS_API_KEY ?? process.env.WINELABS_API_KEY ?? process.env.WINE_LABS_KEY ?? '').trim() || null;
+  const userId = (process.env.WINE_LABS_USER_ID ?? process.env.WINELABS_USER_ID ?? '').trim() || (brute && UUID.test(brute) ? brute : null);
+  const cle = brute && !UUID.test(brute) ? brute : null;
   return cle || userId ? { cle, userId } : null;
 }
 
@@ -32,11 +39,12 @@ export async function appelerWineLabs<T = Record<string, unknown>>(methode: 'GET
   const id = identifiantsWineLabs();
   if (!id) throw new Error('Wine Labs non configuré : WINE_LABS_API_KEY (ou WINE_LABS_USER_ID) manquante dans Netlify.');
   const url = new URL(chemin, API_WINE_LABS);
-  if (!id.cle && id.userId && methode !== 'POST') url.searchParams.set('user_id', id.userId);
+  // user_id dans la requête dès qu'on le connaît (dans le corps pour un POST, dans l'adresse sinon).
+  if (id.userId && methode !== 'POST') url.searchParams.set('user_id', id.userId);
   const r = await fetch(url, {
     method: methode,
     headers: { 'content-type': 'application/json', ...(id.cle ? { authorization: `Bearer ${id.cle}` } : {}) },
-    body: methode === 'POST' ? JSON.stringify({ ...(!id.cle && id.userId ? { user_id: id.userId } : {}), ...corps }) : undefined,
+    body: methode === 'POST' ? JSON.stringify({ ...(id.userId ? { user_id: id.userId } : {}), ...corps }) : undefined,
     signal: AbortSignal.timeout(30_000),
   });
   const texte = await r.text();
