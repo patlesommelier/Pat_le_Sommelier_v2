@@ -6,10 +6,12 @@
  * Lancé par Netlify avant chaque build de production (netlify.toml) : la base est à jour avant le nouveau code.
  * Si une migration échoue, rien n'est appliqué, le build s'arrête et le site en ligne ne change pas.
  * Les aperçus de déploiement (deploy previews, branches) ne migrent jamais la base de production.
+ * Ensuite, une seule fois : principes V5 en service, V6 en brouillon, règles V7 en service (scripts/lib/versions-initiales.ts).
  * Variable requise : DATABASE_URL (dans Netlify, portée « Builds » incluse).
  */
 import 'dotenv/config';
 import { migrer, ouvrirPool } from './lib/migrations';
+import { initialiserVersionsSiAbsentes } from './lib/versions-initiales';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -27,6 +29,9 @@ async function main() {
     const appliquees = await migrer(client);
     await client.query('commit');
     console.log(appliquees.length ? `Migrations appliquées : ${appliquees.join(', ')}` : 'Base à jour : aucune migration à appliquer.');
+    // Premières versions des principes et des règles (une seule fois).
+    const faites = await initialiserVersionsSiAbsentes(async (sql, params = []) => (await client.query(sql, params)).rows);
+    if (faites.length) console.log(`Versions installées : ${faites.join(', ')}.`);
   } catch (e) {
     await client.query('rollback');
     throw e;

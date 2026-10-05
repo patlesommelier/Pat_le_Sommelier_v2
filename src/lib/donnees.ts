@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
+import { parametresEnService } from './regles/versions';
 import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
 import type { Accord, Plat, Restaurant, Vin } from './types';
 
@@ -68,8 +69,12 @@ export interface Proposition { accord: Accord; vin: Vin; motif: Motif }
 
 /** Réglages des règles de sélection du restaurant (back-office), complétés par les valeurs de Pat. */
 export async function getReglages(restaurantId: string): Promise<Reglages> {
-  const [r] = await requete<{ reglages_selection: unknown }>('select reglages_selection from restaurant where id = $1', [restaurantId]);
-  return reglagesComplets(r?.reglages_selection);
+  const [[r], base] = await Promise.all([
+    requete<{ reglages_selection: unknown }>('select reglages_selection from restaurant where id = $1', [restaurantId]),
+    parametresEnService(requete),
+  ]);
+  // Ajustements du restaurant par-dessus les règles de Pat en service.
+  return reglagesComplets(r?.reglages_selection, base);
 }
 
 export type LigneAccord = Accord & Vin;

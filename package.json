@@ -14,7 +14,10 @@
     "commentaires": "tsx scripts/generer-commentaires.ts",
     "regenerer": "tsx scripts/regenerer-accords.ts",
     "presentations": "tsx scripts/generer-presentations.ts",
-    "cas-test": "tsx scripts/cas-test.ts"
+    "cas-test": "tsx scripts/cas-test.ts",
+    "versions": "tsx scripts/initialiser-versions.ts",
+    "verifier-confidentialite": "tsx scripts/verifier-confidentialite.ts",
+    "test": "node --import tsx --test tests/*.test.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",

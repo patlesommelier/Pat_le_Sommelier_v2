@@ -13,13 +13,15 @@ const emailsAdmin = () =>
 export const adminsConfigures = () => emailsAdmin().length;
 
 /**
- * Mode développement sans Supabase : AUTH_DEV_EMAIL simule un administrateur connecté.
+ * Mode développement sans Supabase : AUTH_DEV_EMAIL simule un administrateur connecté ;
+ * avec AUTH_DEV_RESTAURANT=lola, un compte restaurant (pour vérifier ce qu'il voit).
  * Il n'est jamais actif sur Netlify ni dès que Supabase est configuré.
  */
 function utilisateurDev(): Utilisateur | null {
   const email = process.env.AUTH_DEV_EMAIL;
   if (!email || supabaseConfigure() || process.env.NETLIFY) return null;
-  return { id: '00000000-0000-0000-0000-000000000000', email, admin: true, restaurants: [] };
+  const resto = process.env.AUTH_DEV_RESTAURANT;
+  return { id: '00000000-0000-0000-0000-000000000000', email, admin: !resto, restaurants: resto ? [resto] : [] };
 }
 
 export const utilisateurCourant = cache(async (): Promise<Utilisateur | null> => {

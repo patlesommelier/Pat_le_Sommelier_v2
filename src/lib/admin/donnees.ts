@@ -48,10 +48,10 @@ export async function getResume(id: string): Promise<Resume> {
   return r;
 }
 
-/** Réglages modifiés par rapport aux règles de Pat. */
-export function reglagesModifies(r: RestaurantBO | null): (keyof Reglages)[] {
-  const R = reglagesComplets(r?.reglages_selection);
-  return (Object.keys(REGLAGES_PAT) as (keyof Reglages)[]).filter((k) => R[k] !== REGLAGES_PAT[k]);
+/** Réglages modifiés par rapport aux règles de Pat en service (`base`). */
+export function reglagesModifies(r: RestaurantBO | null, base: Reglages = REGLAGES_PAT): (keyof Reglages)[] {
+  const R = reglagesComplets(r?.reglages_selection, base);
+  return (Object.keys(base) as (keyof Reglages)[]).filter((k) => R[k] !== base[k]);
 }
 
 // ───────── Menu ─────────
@@ -90,7 +90,7 @@ export async function getVinsBO(restaurantId: string) {
   return requete<VinBO>(
     `select v.id, v.couleur::text, v.section, v.libelle, v.producteur_id, v.producteur_texte, p.nom as producteur_nom,
             p.statut::text as producteur_statut,
-            case when p.statut = 'propose' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
+            case when p.statut <> 'valide' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
             v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso

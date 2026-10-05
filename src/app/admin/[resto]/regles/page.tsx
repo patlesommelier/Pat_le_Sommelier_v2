@@ -4,7 +4,9 @@ import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getExclusions, getVinsBO } from '@/lib/admin/donnees';
 import { getReglages } from '@/lib/donnees';
-import { REGLAGES_PAT, type Reglages } from '@/lib/selection';
+import { requete } from '@/lib/db';
+import { parametresEnService } from '@/lib/regles/versions';
+import { type Reglages } from '@/lib/selection';
 
 type Cle = keyof Reglages;
 interface Def { n: string; titre: string; texte: string; champs: { cle: Cle; libelle: string; suffixe?: string }[]; client?: string }
@@ -32,8 +34,8 @@ const affiche = (v: number | boolean) => typeof v === 'boolean' ? (v ? 'active' 
 export default async function Regles({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { resto } = await params;
   const { ok } = await searchParams;
-  const [R, exclusions, vins] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto)]);
-  const modifies = (Object.keys(REGLAGES_PAT) as Cle[]).filter((k) => R[k] !== REGLAGES_PAT[k]);
+  const [R, exclusions, vins, PAT] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), parametresEnService(requete)]);
+  const modifies = (Object.keys(PAT) as Cle[]).filter((k) => R[k] !== PAT[k]);
   const exclus = new Set(exclusions.map((x) => x.cible));
   return (
     <>
@@ -47,18 +49,18 @@ export default async function Regles({ params, searchParams }: { params: Promise
             <section key={g} className="pile" style={{ gap: 12 }}>
               <h2 className="surtitre" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: 1.6 }}>{g}</h2>
               {defs.map((d) => {
-                const mod = d.champs.filter((c) => R[c.cle] !== REGLAGES_PAT[c.cle]);
+                const mod = d.champs.filter((c) => R[c.cle] !== PAT[c.cle]);
                 return (
                   <div key={d.n} className="carte-bo" style={{ padding: '18px 20px', display: 'flex', flexWrap: 'wrap', gap: '16px 24px', alignItems: 'center' }}>
                     <span style={{ width: 40, height: 40, borderRadius: 20, border: '1.5px solid var(--encre)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--titre)', fontWeight: 800, fontSize: 13, flexShrink: 0 }}>{d.n}</span>
                     <div style={{ flex: '1 1 300px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
                       <span style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}><b style={{ fontFamily: 'var(--titre)', fontSize: 17 }}>{d.titre}</b>{mod.length ? <Etat type="modifie">Modifié</Etat> : <Etat type="defaut">Par défaut</Etat>}</span>
                       <span className="discret">{d.texte}</span>
-                      {mod.length > 0 && <span className="discret" style={{ fontSize: 13 }}>Valeur de Pat : {mod.map((c) => `${c.libelle.toLowerCase()} ${affiche(REGLAGES_PAT[c.cle])}`).join(', ')}</span>}
+                      {mod.length > 0 && <span className="discret" style={{ fontSize: 13 }}>Valeur de Pat : {mod.map((c) => `${c.libelle.toLowerCase()} ${affiche(PAT[c.cle])}`).join(', ')}</span>}
                       {d.client && <span className="discret" style={{ fontSize: 13 }}>Côté client : <b style={{ color: 'var(--texte)' }}>{d.client}</b></span>}
                     </div>
                     <div style={{ flex: '0 1 340px', display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'center', justifyContent: 'flex-end' }}>
-                      {d.champs.map((c) => typeof REGLAGES_PAT[c.cle] === 'boolean' ? (
+                      {d.champs.map((c) => typeof PAT[c.cle] === 'boolean' ? (
                         <label key={c.cle} className="case"><input type="checkbox" name={c.cle} defaultChecked={R[c.cle] as boolean} />{c.libelle}</label>
                       ) : (
                         <span key={c.cle} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>

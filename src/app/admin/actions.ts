@@ -10,7 +10,8 @@ import { deposerImage } from '@/lib/admin/fichiers';
 import { creerLot, travailler } from '@/lib/generation/file';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
-import { REGLAGES_INTERNES, REGLAGES_PAT, type Reglages } from '@/lib/selection';
+import { parametresEnService } from '@/lib/regles/versions';
+import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => {
   const v = f.get(k);
@@ -264,10 +265,12 @@ export async function preparerImpression(resto: string): Promise<string> {
 // ───────── Règles ─────────
 export async function enregistrerReglages(resto: string, f: FormData) {
   await exigerAcces(resto);
+  // Ajustements = écarts avec les règles de Pat en service (une valeur égale suit les futures versions de Pat).
+  const base = await parametresEnService(requete);
   const diff: Partial<Reglages> = {};
-  for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
+  for (const k of Object.keys(base) as (keyof Reglages)[]) {
     if (REGLAGES_INTERNES.includes(k)) continue;
-    const pat = REGLAGES_PAT[k];
+    const pat = base[k];
     if (typeof pat === 'boolean') {
       const v = f.get(k) === 'on';
       if (v !== pat) (diff[k] as boolean) = v;
@@ -276,7 +279,7 @@ export async function enregistrerReglages(resto: string, f: FormData) {
       if (v !== null && v !== pat) (diff[k] as number) = v;
     }
   }
-  if ((diff.premiers ?? REGLAGES_PAT.premiers) > (diff.maximum ?? REGLAGES_PAT.maximum)) diff.maximum = diff.premiers;
+  if ((diff.premiers ?? base.premiers) > (diff.maximum ?? base.maximum)) diff.maximum = diff.premiers;
   await requete('update restaurant set reglages_selection = $2 where id = $1', [resto, JSON.stringify(diff)]);
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

@@ -75,6 +75,20 @@ Back-office › Carte des vins › **Imprimer la carte** (`/admin/<resto>/carte/
 - **Mise en page** : un vin n'est jamais coupé entre deux pages et un titre de région reste avec son premier vin ; compter une dizaine de pages A4 pour 70 vins. Un vin indisponible n'apparaît pas ; un producteur déjà dans le nom du vin n'est pas répété.
 - **Navigateurs** : les en-têtes et numéros de page utilisent les marges de page CSS (Chrome 131 et plus). Dans Safari ou Firefox, l'impression fonctionne, sans en-tête ni numéro. Pour garder la couverture en couleur, cocher « Graphiques d'arrière-plan » dans la fenêtre d'impression.
 
+### 4 quinquies. Versions des principes et des règles, publication
+
+Les principes de Pat et ses règles de sélection par défaut fonctionnent par **versions** (tables `principes_version`, `regles_version`) : une version en service, au plus un brouillon, l'historique. Au premier déploiement, `npm run migrer` installe la V5 des principes en service, la V6 en brouillon et les règles V7 en service (`scripts/lib/versions-initiales.ts`) ; `npm run versions` fait la même chose à la main (simulation par défaut, `--ecrire` pour écrire).
+
+- **Format des principes** (`src/lib/principes/format.ts`) : lecture du fichier Excel de Pat ou d'un JSON, validation (numéros, identifiants, renvois « n°X »), différences entre versions, export au même format. Un principe fusionné garde son numéro (archivé) ; seuls les principes actifs sont transmis au modèle.
+- **Principe n°44** (sauce servie à part comme condiment) : transmis seulement pour un plat dont `sauce_servie_a_part` vaut oui.
+- **Publication en deux temps** (`src/lib/publication/publication.ts`) : *préparer* recalcule tout avec le brouillon sans rien changer chez les clients (principes : Pat note à nouveau chaque plat, en arrière-plan via la fonction `preparer-publication-background` ; règles : calcul immédiat) et liste, plat par plat, les vins qui entrent, qui sortent et les notes qui changent ; *confirmer* met en service, refusé si le brouillon a été modifié depuis la préparation. Les notes changées à la main et les commentaires réécrits par un restaurant sont toujours conservés. Les plats en échec se relancent sans tout refaire.
+- **Producteurs proposés** (`src/lib/producteurs/validation.ts`) : valider fixe le ranking du producteur (et de ses terroirs) ; ses vins passent « Déjà référencé » sur toutes les cartes et sont reclassés aussitôt.
+
+### 4 sexies. Tests et confidentialité
+
+- `npm test` : tests du format des principes (vrais fichiers V5 et V6 : 0 erreur, 0 avertissement, n°17 et 31 archivés, n°4, 6, 9, 10, 11 et 41 modifiés). Avec `TEST_DATABASE_URL` (une **copie locale** de la base, jamais la production), aussi les tests de publication et de validation d'un producteur, avec un faux Claude.
+- `npm run verifier-confidentialite -- --url http://localhost:3000 --restaurant lola` : parcourt l'espace restaurant et l'app client comme le navigateur (pages et données React) et échoue si un ranking, un score ou une limite d'accord y apparaît. En local, lancer le serveur avec `AUTH_DEV_EMAIL=… AUTH_DEV_RESTAURANT=lola` pour être connecté comme le restaurant.
+
 ### 5. Lancer et déployer
 
 ```bash

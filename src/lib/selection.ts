@@ -69,9 +69,21 @@ export const REGLAGES_PAT: Reglages = {
 export const REGLAGES_INTERNES: readonly (keyof Reglages)[] = ['scoreMinAjout'];
 
 /** Réglages enregistrés (partiels, éventuellement invalides) → réglages complets. */
-export function reglagesComplets(r: unknown): Reglages {
-  const o = (r && typeof r === 'object' ? r : {}) as Record<string, unknown>;
+/** Paramètres d'une version de règles : valeurs reconnues seulement, le reste pris dans REGLAGES_PAT. */
+export function parametresRegles(p: unknown): Reglages {
+  const o = (p && typeof p === 'object' ? p : {}) as Record<string, unknown>;
   const out = { ...REGLAGES_PAT };
+  for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
+    if (typeof REGLAGES_PAT[k] === 'boolean' && typeof o[k] === 'boolean') (out[k] as boolean) = o[k] as boolean;
+    if (typeof REGLAGES_PAT[k] === 'number' && typeof o[k] === 'number' && Number.isFinite(o[k])) (out[k] as number) = o[k] as number;
+  }
+  return out;
+}
+
+/** Réglages d'un restaurant : ses ajustements (hors réglages internes) sur la version de Pat en service (`base`). */
+export function reglagesComplets(r: unknown, base: Reglages = REGLAGES_PAT): Reglages {
+  const o = (r && typeof r === 'object' ? r : {}) as Record<string, unknown>;
+  const out = { ...base };
   for (const k of Object.keys(REGLAGES_PAT) as (keyof Reglages)[]) {
     if (REGLAGES_INTERNES.includes(k)) continue;
     const v = o[k];
