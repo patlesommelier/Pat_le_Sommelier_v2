@@ -5,7 +5,7 @@ import 'server-only';
 import Anthropic from '@anthropic-ai/sdk';
 import sharp from 'sharp';
 import { requete } from '../db';
-import { creerLot, travailler } from '../generation/file';
+import { creerLot, PLATS_EN_PARALLELE, travailler } from '../generation/file';
 import { creerLotPresentations, presentationsManquantes, travaillerPresentations } from '../generation/file-presentations';
 import type { Plat, Vin, VinRapproche } from './donnees';
 
@@ -157,7 +157,7 @@ export async function preparerAccords(restaurantId: string, demandePar = 'inscri
   const manquantes = await presentationsManquantes(requete, restaurantId);
   const presentations = manquantes.length ? await creerLotPresentations(requete, restaurantId, manquantes.map((m) => m.couleur), demandePar) : 0;
   const base = origineSite();
-  const appeler = (fonction: string, n: number) => Promise.all(Array.from({ length: Math.min(3, n) }, () =>
+  const appeler = (fonction: string, n: number) => Promise.all(Array.from({ length: Math.min(PLATS_EN_PARALLELE, n) }, () =>
     base ? fetch(`${base}/.netlify/functions/${fonction}`, { method: 'POST' }).then((r) => r.status).catch(() => 0) : Promise.resolve(0)));
   const [accords, pres] = await Promise.all([appeler('generer-accords-background', crees), appeler('generer-presentations-background', presentations)]);
   const lance = (s: number[]) => s.some((x) => x === 202 || x === 200);

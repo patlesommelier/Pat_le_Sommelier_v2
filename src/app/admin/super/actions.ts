@@ -14,6 +14,7 @@ import { validerProducteur, rejeterProducteur } from '@/lib/producteurs/validati
 import { annulerPublication, confirmerPublication, preparerPublication, relancerEchecs, travaillerPublications, type TypePublication } from '@/lib/publication/publication';
 import { enregistrerBrouillonRegles } from '@/lib/regles/versions';
 import { appelerWineLabs } from '@/lib/etiquettes/wine-labs';
+import { PLATS_EN_PARALLELE } from '@/lib/generation/file';
 import { parametresRegles, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -240,7 +241,7 @@ export async function enregistrerReglesDefaut(f: FormData) {
 
 // ───────── Publication ─────────
 async function lancerPreparation() {
-  const appels = await Promise.all(Array.from({ length: 3 }, async () =>
+  const appels = await Promise.all(Array.from({ length: PLATS_EN_PARALLELE }, async () =>
     fetch(`${await origine()}/.netlify/functions/preparer-publication-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0)));
   if (!appels.some((s) => s === 202 || s === 200)) {
     // Hors Netlify (développement local) : le serveur traite la file lui-même, sans faire attendre la page.

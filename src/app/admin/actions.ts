@@ -7,7 +7,7 @@ import { requete } from '@/lib/db';
 import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
-import { creerLot, travailler } from '@/lib/generation/file';
+import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
@@ -249,13 +249,13 @@ export async function validerTout(resto: string) {
 
 // ───────── Régénération des accords par Pat ─────────
 /**
- * Lance le traitement de la file : fonctions Netlify d'arrière-plan (3 en parallèle au plus) ;
+ * Lance le traitement de la file : fonctions Netlify d'arrière-plan (PLATS_EN_PARALLELE au plus) ;
  * hors Netlify (développement local), le serveur traite la file lui-même, sans faire attendre la page.
  */
 async function lancerFonctions(fonction: string, nombre: number, surPlace: () => Promise<unknown>) {
   const h = await headers();
   const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
-  const appels = await Promise.all(Array.from({ length: Math.min(3, nombre) }, () =>
+  const appels = await Promise.all(Array.from({ length: Math.min(PLATS_EN_PARALLELE, nombre) }, () =>
     fetch(`${origine}/.netlify/functions/${fonction}`, { method: 'POST' }).then((r) => r.status).catch(() => 0)));
   if (!appels.some((s) => s === 202 || s === 200)) void surPlace().catch((e) => console.error(`[${fonction}]`, e));
 }

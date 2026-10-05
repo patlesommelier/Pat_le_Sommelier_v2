@@ -36,6 +36,13 @@ async function prendre(q: Requete) {
 }
 
 /**
+ * Nombre de plats préparés en même temps (une fonction Netlify d'arrière-plan par plat en cours).
+ * Plus haut, la génération va plus vite sans coûter plus ; la limite est le débit du compte Claude
+ * (au-delà, le SDK attend et réessaie tout seul).
+ */
+export const PLATS_EN_PARALLELE = 6;
+
+/**
  * Refus passager de l'API sans explication (« 403 status code (no body) ») : il ne vient pas d'un vrai refus
  * d'accès (qui porte un message), mais d'une couche intermédiaire. Le SDK ne le réessaie pas : on le fait ici,
  * deux fois, après 30 puis 90 secondes, si le temps de la fonction le permet.

@@ -276,7 +276,7 @@ function SuiviRegeneration({ etat, demande, erreur }: { etat: EtatLot | null; de
       <ActualisationAuto />
       <strong>Pat régénère les accords…</strong>
       <span className="discret">
-        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, trois plats à la fois`}
+        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, six plats à la fois`}
         {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
       </span>
     </div>
