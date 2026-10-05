@@ -22,7 +22,8 @@ Copier `.env.example` en `.env` et remplir :
 | --- | --- |
 | `DATABASE_URL` | Connexion Postgres (app et scripts). Dans Netlify, portée « Builds » et « Functions » : le build applique les migrations |
 | `ANTHROPIC_API_KEY` | Clé de l'API Claude (console.anthropic.com) |
-| `ANTHROPIC_MODEL` | Modèle utilisé par Pat |
+| `ANTHROPIC_MODEL` | Modèle utilisé par Pat (par défaut `claude-opus-5-5`) |
+| `ANTHROPIC_MODEL_RAPIDE` | Passe rapide de l'inscription : premiers accords d'un nouveau restaurant (par défaut `claude-sonnet-5-5`), régénérés ensuite avec le modèle principal depuis l'admin |
 | `AFFICHER_ACCORDS_PROPOSES` | `true` pour montrer aussi les accords pas encore validés (démo) |
 
 ### 3. Importer les données

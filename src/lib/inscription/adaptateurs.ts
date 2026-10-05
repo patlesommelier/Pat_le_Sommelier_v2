@@ -5,7 +5,7 @@ import 'server-only';
 import Anthropic from '@anthropic-ai/sdk';
 import sharp from 'sharp';
 import { requete } from '../db';
-import { creerLot, PLATS_EN_PARALLELE, travailler } from '../generation/file';
+import { creerLot, modeleRapide, PLATS_EN_PARALLELE, travailler } from '../generation/file';
 import { creerLotPresentations, presentationsManquantes, travaillerPresentations } from '../generation/file-presentations';
 import type { Plat, Vin, VinRapproche } from './donnees';
 
@@ -153,7 +153,8 @@ export async function preparerAccords(restaurantId: string, demandePar = 'inscri
              or exists (select 1 from generation_accords g where g.plat_id = pl.id and g.statut = 'erreur'
                           and g.lot = (select lot from generation_accords where restaurant_id = $1 order by cree_le desc, id desc limit 1)))
       order by pl.ordre`, [restaurantId, seulementManquants]);
-  const { crees } = await creerLot(requete, restaurantId, plats.map((p) => p.id), demandePar);
+  // Passe rapide (Sonnet) : le restaurant a ses accords en quelques minutes ; Pat les régénère ensuite avec Opus depuis l'admin.
+  const { crees } = await creerLot(requete, restaurantId, plats.map((p) => p.id), demandePar, { modele: modeleRapide() });
   const manquantes = await presentationsManquantes(requete, restaurantId);
   const presentations = manquantes.length ? await creerLotPresentations(requete, restaurantId, manquantes.map((m) => m.couleur), demandePar) : 0;
   const base = origineSite();

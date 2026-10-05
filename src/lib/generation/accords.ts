@@ -135,6 +135,8 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     jetonsEntree += m.usage.input_tokens + (m.usage.cache_read_input_tokens ?? 0) + (m.usage.cache_creation_input_tokens ?? 0);
     jetonsSortie += m.usage.output_tokens;
     if (m.stop_reason === 'max_tokens') throw new Error('réponse de Pat coupée (trop longue)');
+    // Refus des filtres de sécurité (rare sur des accords mets-vins) : le plat est signalé en échec et pourra être relancé.
+    if ((m.stop_reason as string) === 'refusal') throw new Error(`réponse refusée par ${modele} (filtre de sécurité) : relancez le plat`);
     return lireJson(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
   }
 

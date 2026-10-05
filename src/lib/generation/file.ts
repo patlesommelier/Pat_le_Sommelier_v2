@@ -9,29 +9,32 @@ import { regenererAccordsPlat, type Requete } from './accords';
 /** Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu. */
 const BLOQUE_APRES = "20 minutes";
 
-export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string) {
+/** Passe rapide de l'inscription : premiers accords publiés vite, régénérés ensuite avec Opus depuis l'admin. */
+export const modeleRapide = () => process.env.ANTHROPIC_MODEL_RAPIDE ?? 'claude-sonnet-5-5';
+
+export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string, { modele }: { modele?: string } = {}) {
   await q(`update generation_accords set statut = 'erreur', message = 'interrompu (délai dépassé)', fin_le = now()
             where statut = 'en_cours' and debut_le < now() - interval '${BLOQUE_APRES}'`);
   const lot = randomUUID();
   // Un plat déjà en attente ou en cours n'est pas demandé deux fois.
   const r = await q<{ id: number }>(
-    `insert into generation_accords (lot, restaurant_id, plat_id, demande_par)
-     select $1, $2, p, $3 from unnest($4::text[]) as p
+    `insert into generation_accords (lot, restaurant_id, plat_id, demande_par, modele)
+     select $1, $2, p, $3, $5 from unnest($4::text[]) as p
       where not exists (select 1 from generation_accords g where g.plat_id = p and g.statut in ('en_attente', 'en_cours'))
      returning id`,
-    [lot, restaurantId, demandePar, platIds],
+    [lot, restaurantId, demandePar, platIds, modele ?? null],
   );
   return { lot, crees: r.length };
 }
 
-interface Tache { id: number; restaurant_id: string; plat_id: string }
+interface Tache { id: number; restaurant_id: string; plat_id: string; modele: string | null }
 
 /** Prend la prochaine tâche en attente (deux travailleurs ne prennent jamais la même). */
 async function prendre(q: Requete) {
   const [t] = await q<Tache>(
     `update generation_accords set statut = 'en_cours', debut_le = now()
       where id = (select id from generation_accords where statut = 'en_attente' order by id for update skip locked limit 1)
-      returning id, restaurant_id, plat_id`);
+      returning id, restaurant_id, plat_id, modele`);
   return t ?? null;
 }
 
@@ -72,7 +75,7 @@ async function avecReprises<T>(f: () => Promise<T>, finAvant: number, quoi: stri
 export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
   for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
     try {
-      const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, modele), finAvant, t.plat_id);
+      const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele), finAvant, t.plat_id);
       const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
         + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
         + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');

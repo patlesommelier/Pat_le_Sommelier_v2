@@ -20,7 +20,7 @@ export async function indicateurs() {
 export interface RestaurantSuper {
   id: string; nom: string; couleur: string; statut: string; ville: string | null; langues: string[];
   plats: number; vins: number; accords: number; a_relire: number; producteurs: number; acces: number; ajustements: number;
-  origine: string; prep_total: number; prep_faits: number; prep_erreurs: number; prep_attente: number;
+  origine: string; passe_rapide: number; prep_total: number; prep_faits: number; prep_erreurs: number; prep_attente: number;
 }
 export async function restaurantsSuper() {
   return requete<RestaurantSuper>(
@@ -33,6 +33,9 @@ export async function restaurantsSuper() {
               where v.restaurant_id = r.id and p.statut = 'propose') as producteurs,
             (select count(*)::int from acces_restaurant x where x.restaurant_id = r.id) as acces,
             (select count(*)::int from jsonb_object_keys(r.reglages_selection)) as ajustements, r.origine,
+            -- Plats dont les accords viennent encore de la passe rapide de l'inscription (modèle noté sur la tâche).
+            (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif
+                and (select g.modele from generation_accords g where g.plat_id = pl.id and g.statut = 'fait' order by g.id desc limit 1) is not null) as passe_rapide,
             -- Dernière préparation (ou régénération) des accords : avancement.
             coalesce(g.total, 0) as prep_total, coalesce(g.faits, 0) as prep_faits, coalesce(g.erreurs, 0) as prep_erreurs, coalesce(g.attente, 0) as prep_attente
        from restaurant r

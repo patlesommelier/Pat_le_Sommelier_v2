@@ -60,6 +60,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                 <td><b>{avancement.get(r.id)}</b> <span className="petit discret">étapes</span>{r.ajustements ? <div className="petit discret">{r.ajustements} règle(s) ajustée(s)</div> : null}</td>
                 <td>{r.plats} plats · {r.vins} vins</td>
                 <td>{r.accords.toLocaleString('fr-BE')}{r.a_relire ? <div className="petit discret">{r.a_relire} à relire</div> : null}
+                  {r.passe_rapide > 0 && <div className="petit" style={{ color: 'var(--ocre)' }} title="Accords de l’inscription, écrits avec Sonnet pour aller vite">Passe rapide : {r.passe_rapide} plat(s) — régénérer avec Opus</div>}
                   {r.prep_attente > 0 && <div className="petit">Préparation : {r.prep_faits + r.prep_erreurs}/{r.prep_total} plats</div>}
                   {r.prep_erreurs > 0 && r.prep_attente === 0 && (
                     <form action={relancerPreparation.bind(null, r.id)} className="pile" style={{ gap: 4 }}>

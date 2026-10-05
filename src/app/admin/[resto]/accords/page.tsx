@@ -33,6 +33,11 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const actifs = plats.filter((p) => p.actif);
   const parPlat = new Map(stats.map((s) => [s.plat_id, s]));
   const sansAccord = plats.filter((p) => p.actif && !parPlat.has(p.id));
+  // Plats dont les accords viennent encore de la passe rapide de l'inscription (Sonnet) : signalé au super-admin.
+  const [{ rapides }] = interne ? await requete<{ rapides: number }>(
+    `select count(*)::int as rapides from plat pl where pl.restaurant_id = $1 and pl.actif
+        and (select g.modele from generation_accords g where g.plat_id = pl.id and g.statut = 'fait' order by g.id desc limit 1) is not null`, [resto])
+    : [{ rapides: 0 }];
   const plat = actifs.find((p) => p.id === sp.plat) ?? actifs[0];
   const platsAnciens = actifs.filter((p) => anciens.get(p.id)).length;
   // Motif d'échec le plus fréquent de la dernière régénération (pour comprendre sans ouvrir les journaux).
@@ -103,6 +108,12 @@ export default async function Accords({ params, searchParams }: { params: Promis
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
+      {interne && rapides > 0 && (!etat || etat.termine) && (
+        <div className="carte-bo pile" style={{ gap: 6, padding: '14px 20px', borderColor: 'var(--ocre)' }}>
+          <strong>Accords de la passe rapide sur {rapides} plat{rapides > 1 ? 's' : ''}</strong>
+          <span className="discret">À l’inscription, Pat écrit les premiers accords avec Sonnet pour que le restaurant les ait vite. « Régénérer tous les accords » les refait avec Opus.</span>
+        </div>
+      )}
       {(!etat || etat.termine) && sansAccord.length > 0 && (
         <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px', borderColor: 'var(--ocre)' }}>
           <strong>{sansAccord.length} plat{sansAccord.length > 1 ? 's n’ont' : ' n’a'} encore aucun accord</strong>
