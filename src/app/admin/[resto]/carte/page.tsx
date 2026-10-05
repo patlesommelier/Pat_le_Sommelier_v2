@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { enregistrerVin } from '../../actions';
+import { chercherEtiquettes, enregistrerVin } from '../../actions';
+import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
@@ -13,7 +14,8 @@ function etiquette(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
   if (v.etiquette_source === 'wine_labs') return ['Wine Labs', 'ok'];
   if (v.etiquette_source === 'cuvee') return ['Base de Pat', 'ok'];
   if (v.etiquette_url) return ['Fournie', 'ok'];
-  if (v.etiquette_statut === 'demandee') return ['Recherche…', ''];
+  if (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander') return ['Recherche Wine Labs…', ''];
+  if (v.etiquette_statut === 'introuvable') return ['Introuvable chez Wine Labs : à photographier', 'attention'];
   return ['À photographier', 'attention'];
 }
 
@@ -40,6 +42,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const choisi = choisiParam ?? affiches[0];
   const lien = (q: Record<string, string>) => `/admin/${resto}/carte?${new URLSearchParams({ c, ...(choisi ? { vin: choisi.id } : {}), ...q })}`;
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
+  const enRecherche = vins.filter((v) => !v.etiquette_url && (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander')).length;
+  // Chaque étiquette trouvée coûte un crédit Wine Labs à Pat : la recherche manuelle est réservée au super-admin.
+  const rechercheWineLabs = Boolean(u?.admin && identifiantsWineLabs() && vins.some((v) => !v.etiquette_url && !['a_demander', 'demandee', 'introuvable'].includes(v.etiquette_statut ?? '')));
   const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
   const sansLien = Boolean(choisi && !choisi.producteur_id && choisi.producteur_texte && !/^non /i.test(choisi.producteur_texte));
@@ -56,7 +61,13 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span></div>
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span>
+          {enRecherche > 0 && <div className="petit">{enRecherche} en recherche chez Wine Labs</div>}
+          {rechercheWineLabs && (
+            <form action={chercherEtiquettes.bind(null, resto)} style={{ marginTop: 8 }}>
+              <button className="btn sec petit" title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">Chercher sur Wine Labs</button>
+            </form>
+          )}</div>
       </div>
       <div className="rangee">
         <section className="large">
@@ -94,7 +105,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <span className="surtitre">{choisi.id} · {choisi.section ?? choisi.couleur}</span>
                 <h2>{choisi.libelle} {choisi.millesime ?? ''}</h2>
               </div>
-              <Message ok={sp.ok ? 'Enregistré.' : undefined} erreur={sp.erreur} />
+              <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />
               <div style={{ display: 'flex', gap: 16, alignItems: 'center', padding: 14, borderRadius: 14, border: '1px solid var(--ligne)', background: 'var(--fond)' }}>
                 <Vignette url={choisi.etiquette_url} taille={104} />
                 <div className="champ" style={{ flex: 1, minWidth: 0 }}>

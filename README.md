@@ -157,13 +157,22 @@ Une ligne modifiée dans le back-office (plat, vin, apparence) n'est plus écras
 
 En local sans Supabase : `AUTH_DEV_EMAIL=vous@exemple.be` dans `.env` ouvre le back-office en administrateur (ignoré sur Netlify).
 
-## Étiquettes Wine Labs (webhook)
+## Étiquettes : base de Pat et Wine Labs
 
-Wine Labs envoie un POST signé quand une demande d'étiquette est `fulfilled`, `unavailable` ou `failed`.
+Les étiquettes sont rattachées à la **cuvée** (tous millésimes) : une photo déposée pour un vin d'une carte devient
+l'étiquette de sa cuvée, et les autres cartes qui ont cette cuvée sans photo la reprennent (`src/lib/etiquettes/partage.ts`).
 
-- Adresse à déclarer chez Wine Labs : `https://<votre-site>.netlify.app/api/webhooks/wine-labs`
-- Netlify > Site configuration > Environment variables : `WINE_LABS_WEBHOOK_SECRET` = le secret `whsec_…` (jamais dans le code), puis redéployer.
-- La route vérifie la signature (sinon 401), ignore un message déjà traité, enregistre la réponse dans `demande_etiquette` et met à jour l'étiquette du vin relié. Une photo ajoutée par le restaurant n'est jamais remplacée, et l'import ne remplace pas une étiquette venue de Wine Labs.
+Les étiquettes encore manquantes sont demandées à Wine Labs (API Imagery, `POST /wine_labels`, label `front_label`) :
+automatiquement à l'inscription d'un restaurant, ou par le bouton « Chercher sur Wine Labs » de la carte (super-admin).
+Une seule demande par cuvée ; seules les étiquettes trouvées coûtent un crédit. Les demandes sont envoyées par la fonction
+d'arrière-plan `etiquettes-wine-labs-background` ; l'image (lien signé valable 7 jours) est copiée dans le stockage Supabase.
+
+- Netlify > Environment variables : `WINE_LABS_API_KEY` (clé d'API, en-tête `Authorization: Bearer`), jamais dans le code.
+- Webhook : super-admin > Wine Labs > « Brancher le webhook » enregistre `https://<site>/api/webhooks/wine-labs`
+  chez Wine Labs et garde le secret de signature côté serveur (table `reglage_serveur`). « Envoyer un test » vérifie la liaison.
+  (Variante : `WINE_LABS_WEBHOOK_SECRET` dans Netlify, si le webhook a été enregistré depuis le tableau de bord Wine Labs.)
+- La route vérifie `X-WineLabs-Signature` (sinon 401), n'applique qu'une fois chaque livraison, et met à jour le vin, sa cuvée
+  et les cartes qui la partagent. Une photo ajoutée par le restaurant n'est jamais remplacée.
 
 ## Organisation du code
 

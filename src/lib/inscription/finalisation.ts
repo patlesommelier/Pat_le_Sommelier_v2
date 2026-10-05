@@ -3,6 +3,7 @@
 import 'server-only';
 import { requete } from '../db';
 import { partagerEtiquettes } from '../etiquettes/partage';
+import { chercherEtiquettesManquantes } from '../etiquettes/lancer';
 import { deposerImage } from '../admin/fichiers';
 import { creerVinsEnAttente, preparerAccords } from './adaptateurs';
 import { lireInscription, majInscription } from './etat';
@@ -113,6 +114,8 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
   // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).
   await partagerEtiquettes(requete, { vins: (await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1', [restaurantId])).map((v) => v.id) })
     .catch((e) => console.error('[inscription] étiquettes', e));
+  // Étiquettes encore manquantes : demandées à Wine Labs (une par cuvée), en arrière-plan.
+  await chercherEtiquettesManquantes(restaurantId).catch((e) => console.error('[inscription] Wine Labs', e));
 
   await majInscription(inscriptionId, { statut: 'finalisee' });
 

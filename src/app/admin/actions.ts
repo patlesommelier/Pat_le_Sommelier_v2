@@ -15,6 +15,7 @@ import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin
 import { parametresEnService } from '@/lib/regles/versions';
 import { repriseALaConnexion } from '@/lib/inscription/reprise';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
+import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => {
@@ -124,6 +125,19 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
   revalidatePath(partagees ? '/' : `/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   redirect(avec(`/admin/${resto}/carte`, { vin: vinId, ok: '1' }));
+}
+
+/** Étiquettes manquantes de la carte : demandées à Wine Labs (une par cuvée), réservé au super-admin (crédits). */
+export async function chercherEtiquettes(resto: string) {
+  await exigerAdmin();
+  let n = 0;
+  try {
+    n = await chercherEtiquettesManquantes(resto, { relancer: true });
+  } catch (e) {
+    redirect(avec(`/admin/${resto}/carte`, { erreur: (e as Error).message }));
+  }
+  revalidatePath(`/admin/${resto}/carte`);
+  redirect(avec(`/admin/${resto}/carte`, n ? { ok: `${n} étiquette(s) demandée(s) à Wine Labs.` } : { erreur: 'Aucune étiquette à demander (déjà en recherche, introuvables ou partagées par la base).' }));
 }
 
 /**

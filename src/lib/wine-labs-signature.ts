@@ -1,4 +1,3 @@
-import 'server-only';
 import { createHmac, timingSafeEqual } from 'node:crypto';
 
 /**
@@ -62,15 +61,4 @@ export function verifierSignature(corps: string, entetes: Headers, secret: strin
     return { ok: false, raison: 'signature invalide' };
   }
   return { ok: false, raison: 'en-têtes de signature absents' };
-}
-
-/** Lit l'objet « request » sans présumer de noms de champs qu'on ne connaît pas encore avec certitude. */
-export function lireDemande(o: Record<string, unknown>) {
-  const r = (o.request ?? o.data ?? o) as Record<string, unknown>;
-  const id = String(r.request_id ?? r.id ?? '');
-  const statut = String(r.status ?? r.state ?? '').toLowerCase();
-  const res = (r.result ?? r.label ?? r.wine_label ?? {}) as Record<string, unknown>;
-  const image = [r.image_url, r.label_url, r.url, res.image_url, res.url, res.label_url]
-    .find((x): x is string => typeof x === 'string' && /^https:\/\//.test(x)) ?? null;
-  return { id, statut, image };
 }

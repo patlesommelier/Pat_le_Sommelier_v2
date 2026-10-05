@@ -13,6 +13,7 @@ import { importerVersion, modifierPrincipeBrouillon } from '@/lib/principes/vers
 import { validerProducteur, rejeterProducteur } from '@/lib/producteurs/validation';
 import { annulerPublication, confirmerPublication, preparerPublication, relancerEchecs, travaillerPublications, type TypePublication } from '@/lib/publication/publication';
 import { enregistrerBrouillonRegles } from '@/lib/regles/versions';
+import { appelerWineLabs } from '@/lib/etiquettes/wine-labs';
 import { parametresRegles, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -274,4 +275,38 @@ export async function relancer(id: string) {
   await exigerAdmin();
   if (await relancerEchecs(requete, id)) await lancerPreparation();
   redirect(`/admin/super/publications/${id}`);
+}
+
+// ───────── Wine Labs (étiquettes) ─────────
+type Endpoint = { id: string; url: string; active?: boolean };
+const adresseWebhook = async () => `${await origine()}/api/webhooks/wine-labs`;
+
+/** Enregistre notre adresse de webhook chez Wine Labs ; le secret (montré une seule fois) est gardé côté serveur. */
+export async function brancherWebhookWineLabs() {
+  await exigerAdmin();
+  const url = await adresseWebhook();
+  try {
+    // Déjà enregistrée (409) : on la retire puis on la réenregistre, pour obtenir un secret que nous connaissons.
+    const { endpoints = [] } = await appelerWineLabs<{ endpoints?: Endpoint[] }>('GET', '/wine_labels/webhooks');
+    for (const e of endpoints.filter((x) => x.url === url)) await appelerWineLabs('DELETE', `/wine_labels/webhooks/${e.id}`);
+    const r = await appelerWineLabs<{ secret?: string }>('POST', '/wine_labels/webhooks', { url, description: 'Pat le sommelier' });
+    if (!r.secret) throw new Error('Wine Labs n’a pas renvoyé de secret.');
+    await requete(`insert into reglage_serveur (cle, valeur) values ('wine_labs_webhook_secret', $1)
+                   on conflict (cle) do update set valeur = excluded.valeur, maj_le = now()`, [r.secret]);
+  } catch (e) {
+    redirect(avec('/admin/super/wine-labs', { erreur: (e as Error).message }));
+  }
+  redirect(avec('/admin/super/wine-labs', { ok: 'Webhook branché. Envoyez un test pour vérifier.' }));
+}
+
+export async function testerWebhookWineLabs(endpointId: string) {
+  await exigerAdmin();
+  let message: Record<string, string>;
+  try {
+    const r = await appelerWineLabs<{ ok?: boolean; status_code?: number; error?: string }>('POST', `/wine_labels/webhooks/${encodeURIComponent(endpointId)}/test`, {});
+    message = r.ok ? { ok: 'Test reçu par le site : le webhook fonctionne.' } : { erreur: `Test refusé (${r.status_code ?? '?'}) ${r.error ?? ''}`.trim() };
+  } catch (e) {
+    message = { erreur: (e as Error).message };
+  }
+  redirect(avec('/admin/super/wine-labs', message));
 }
