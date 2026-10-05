@@ -9,7 +9,7 @@ import { selectionner, tourSuivant } from '@/lib/selection';
 
 const CAT: Record<string, string> = { entree: 'Entrées', plat: 'Plats', dessert: 'Desserts', fromage: 'Fromages' };
 
-export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string }> }) {
+export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string; table?: string }> }) {
   const { resto } = await params;
   const sp = await searchParams;
   const [plats, R, u] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant()]);
@@ -18,6 +18,8 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   const actifs = plats.filter((p) => p.actif);
   const choisis = (Array.isArray(sp.plat) ? sp.plat : sp.plat ? [sp.plat] : [actifs[0]?.id]).filter((id) => actifs.some((p) => p.id === id)) as string[];
   const arelire = sp.arelire === '1';
+  // Par défaut un plat à la fois (avec l'aperçu de l'app) ; « table » : plusieurs plats pour un vin à partager.
+  const table = sp.table === '1' || choisis.length > 1;
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
   const { candidats, lignesParVin, exclus } = choisis.length ? await getCandidats(resto, choisis, statuts) : { candidats: [], lignesParVin: new Map(), exclus: new Set<string>() };
@@ -40,6 +42,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
     const u = new URLSearchParams();
     choisis.forEach((c) => u.append('plat', c));
     if (arelire) u.set('arelire', '1');
+    if (table) u.set('table', '1');
     Object.entries(extra).forEach(([k, v]) => u.set(k, v));
     return `${base}?${u}`;
   };
@@ -60,19 +63,37 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                 <fieldset key={k} style={{ border: 0, padding: 0, margin: 0 }}>
                   <legend style={{ fontSize: 13, fontWeight: 700, marginBottom: 8 }}>{l}</legend>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
-                    {ps.map((p) => (
-                      <label key={p.id} style={{ display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1.5px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : '#FFF', fontSize: 13.5, cursor: 'pointer' }}>
-                        <input type="checkbox" name="plat" value={p.id} defaultChecked={choisis.includes(p.id)} style={{ accentColor: 'var(--encre)' }} />{p.nom_court ?? p.nom}
-                      </label>
-                    ))}
+                    {ps.map((p) => {
+                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1.5px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : '#FFF', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
+                      // Un seul plat : un clic l'affiche directement (avec le téléphone). Plusieurs plats : cases à cocher.
+                      return table ? (
+                        <label key={p.id} style={style}>
+                          <input type="checkbox" name="plat" value={p.id} defaultChecked={choisis.includes(p.id)} style={{ accentColor: 'var(--encre)' }} />{p.nom_court ?? p.nom}
+                        </label>
+                      ) : (
+                        <Link key={p.id} href={`${base}?${new URLSearchParams({ plat: p.id, ...(arelire ? { arelire: '1' } : {}) })}`} style={style} aria-current={choisis.includes(p.id) ? 'true' : undefined}>{p.nom_court ?? p.nom}</Link>
+                      );
+                    })}
                   </div>
                 </fieldset>
               );
             })}
+            {table && <input type="hidden" name="table" value="1" />}
+            {!table && choisis[0] && <input type="hidden" name="plat" value={choisis[0]} />}
             <label className="case"><input type="checkbox" name="arelire" value="1" defaultChecked={arelire} /><span>Compter aussi les accords à relire<small>Pour voir le résultat avant de les valider</small></span></label>
-            <button type="submit" className="btn">Simuler</button>
+            <span className="ligne-actions">
+              {table && <button type="submit" className="btn">Simuler</button>}
+              {table
+                ? <Link href={`${base}?${new URLSearchParams({ plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Un seul plat (avec l’app)</Link>
+                : <><button type="submit" className="btn sec petit">Mettre à jour</button><Link href={`${base}?${new URLSearchParams({ table: '1', plat: choisis[0] ?? '', ...(arelire ? { arelire: '1' } : {}) })}`} className="btn fantome petit">Plusieurs plats (vin pour la table)</Link></>}
+            </span>
           </div>
         </form>
+        {plusieurs && (
+          <div className="carte-bo" style={{ flex: '0 1 300px', alignSelf: 'flex-start', fontSize: 13.5 }}>
+            <span className="discret">L’aperçu de l’app montre un plat à la fois : revenez à « Un seul plat » pour voir le téléphone.</span>
+          </div>
+        )}
         {!plusieurs && choisis[0] && (
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
             <span className="surtitre">L’app de vos clients</span>
@@ -85,7 +106,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
           <div className="carte-bo pile">
             <div>
               <h2>Pourquoi ces vins ?</h2>
-              <p className="sous">{plusieurs ? `Un vin pour toute la table (${choisis.map(nomPlat).join(' + ')}) : la note la plus basse compte.` : `${nomPlat(choisis[0] ?? '')}${tour > 1 ? ` · tour ${tour}` : ''}`}{interne ? ' · note · ranking producteur · score' : ' · rang · note /5 · prix'}</p>
+              <p className="sous">{plusieurs ? `Un vin pour toute la table (${choisis.map(nomPlat).join(' + ')}) : la note la plus basse compte.` : `${nomPlat(choisis[0] ?? '')}${tour > 1 ? ` · tour ${tour}` : ''}`}{interne ? ' · note · score' : ' · rang · note /5 · prix'}</p>
             </div>
             {!liste.length && <p className="discret">{tour > 1 ? 'Plus aucun vin assez bien noté : Pat propose de revenir aux premières propositions.' : 'Aucun vin ne s’accorde assez bien.'}</p>}
             <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
@@ -95,7 +116,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                   <Vignette url={r.vin.etiquette_url} taille={44} />
                   <span style={{ display: 'flex', flexDirection: 'column', gap: 3, minWidth: 0 }}>
                     <b>{r.vin.libelle}</b>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--encre)', fontWeight: 700 }}><Points note={r.note} />{interne ? `${r.note} · ${r.vin.ranking_producteur ?? 0} · ${r.score}` : `${r.note}/5`} · {euros(r.vin.prix ?? r.vin.prix_verre)}</span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: 13, color: 'var(--encre)', fontWeight: 700 }}><Points note={r.note} />{interne ? `${r.note}/5 · score ${r.score}` : `${r.note}/5`} · {euros(r.vin.prix ?? r.vin.prix_verre)}</span>
                     <span className="discret" style={{ fontSize: 13.5 }}>{pourquoiRetenu(r, i + 1, liste, interne)}</span>
                     {plusieurs && <span className="discret" style={{ fontSize: 12.5 }}>{choisis.map((p) => `${nomPlat(p)} ${r.vin.notes[p]}`).join(' · ')}</span>}
                   </span>
