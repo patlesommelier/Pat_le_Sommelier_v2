@@ -73,6 +73,7 @@
 .btn.fantome { background: transparent; color: var(--encre) !important; border-color: transparent; }
 .btn.fantome:hover { background: var(--rose); }
 .btn.petit { min-height: 40px; padding: 8px 16px; font-size: 14px; }
+.btn.mini { min-height: 30px; padding: 4px 12px; font-size: 13px; gap: 6px; }
 .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
 
 /* ── Pastilles d'état ── */

@@ -37,13 +37,17 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
 
       <div className="tableau">
         <table style={{ minWidth: 980 }} className="tableau-super">
-          <thead><tr><th>Restaurant</th><th>Statut</th><th>Mise en place</th><th>Menu et carte</th><th>Accords</th><th>Producteurs à valider</th><th /></tr></thead>
+          <thead><tr><th>Restaurant</th><th>Statut</th><th>Mise en place</th><th>Menu et carte</th><th>Accords</th><th>Producteurs à valider</th></tr></thead>
           <tbody>
             {restos.map((r) => (
               <tr key={r.id}>
                 <td><div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                   <span style={{ width: 30, height: 30, borderRadius: 8, background: r.couleur, color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700 }}>{r.nom.slice(0, 1)}</span>
-                  <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div></div></div></td>
+                  <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div>
+                    <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 6 }}>
+                  <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
+                  <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
+</div></div></div></td>
                 <td>
                   <form action={changerStatutRestaurant.bind(null, r.id)} style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
                     <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
@@ -64,10 +68,6 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                     </form>
                   )}</td>
                 <td>{r.producteurs ? <Link href="/admin/super/producteurs">{r.producteurs}</Link> : '—'}</td>
-                <td><div className="pile" style={{ gap: 6 }}>
-                  <Link href={`/admin/${r.id}`} className="btn petit" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Gérer en super-admin</Link>
-                  <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec petit" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Aperçu côté restaurant</button></form>
-                </div></td>
               </tr>
             ))}
           </tbody>
