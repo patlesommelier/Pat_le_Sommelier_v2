@@ -109,6 +109,16 @@ function lireRankings(f: FormData) {
   return { terroirs, vins };
 }
 
+/** « Valider » depuis la file, sans ouvrir la fiche : ranking saisi (suggestion de Pat par défaut), rankings des cuvées gardés. */
+export async function validerDepuisListe(producteurId: string, f: FormData) {
+  const u = await exigerAdmin();
+  const r = await validerProducteur(requete, { producteurId, rankingProducteur: entier(f, 'ranking') ?? NaN, par: u.email });
+  revalidatePath('/admin', 'layout');
+  redirect(avec('/admin/super/producteurs', r.erreurs.length
+    ? { erreur: r.erreurs.join(' ') }
+    : { ok: `Producteur validé : ${r.vins} vin(s) de carte passent « Déjà référencé »${r.restaurants.length ? ` (${r.restaurants.join(', ')})` : ''}.` }));
+}
+
 export async function decisionProducteur(producteurId: string, f: FormData) {
   const u = await exigerAdmin();
   const page = `/admin/super/producteurs/${encodeURIComponent(producteurId)}`;
