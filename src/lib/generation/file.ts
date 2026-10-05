@@ -36,13 +36,36 @@ async function prendre(q: Requete) {
 }
 
 /**
+ * Refus passager de l'API sans explication (« 403 status code (no body) ») : il ne vient pas d'un vrai refus
+ * d'accès (qui porte un message), mais d'une couche intermédiaire. Le SDK ne le réessaie pas : on le fait ici,
+ * deux fois, après 30 puis 90 secondes, si le temps de la fonction le permet.
+ */
+export function refusPassager(e: unknown) {
+  const err = e as { status?: number; error?: unknown; message?: string } | null;
+  return err?.status === 403 && (!err.error || /no body/i.test(err.message ?? ''));
+}
+
+async function avecReprises<T>(f: () => Promise<T>, finAvant: number, quoi: string): Promise<T> {
+  for (const attente of [30_000, 90_000]) {
+    try {
+      return await f();
+    } catch (e) {
+      if (!refusPassager(e) || Date.now() + attente + 120_000 > finAvant) throw e;
+      console.warn(`[accords] ${quoi} : refus passager (403 sans message), nouvel essai dans ${attente / 1000} s`);
+      await new Promise((r) => setTimeout(r, attente));
+    }
+  }
+  return f();
+}
+
+/**
  * Traite les tâches en attente jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
 export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
   for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
     try {
-      const b = await regenererAccordsPlat(q, client, t.restaurant_id, t.plat_id, modele);
+      const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, modele), finAvant, t.plat_id);
       const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
         + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
         + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');
