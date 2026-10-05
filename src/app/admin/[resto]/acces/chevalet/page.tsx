@@ -4,10 +4,12 @@ import { BoutonImprimer } from '@/components/admin/BoutonImprimer';
 import { getRestaurantBO } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { couleurClaire } from '@/lib/couleurs';
+import { exigerAcces } from '@/lib/admin/auth';
 
 /** Chevalet de table A6 (105 × 148 mm), quatre par feuille A4. */
 export default async function Chevalet({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const r = await getRestaurantBO(resto);
   if (!r) notFound();
   const svg = await qrSvg(await adresseApp(resto));

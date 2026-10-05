@@ -6,9 +6,11 @@ import { Entete, Message } from '@/components/admin/Ui';
 import { getAcces } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { supabaseConfigure } from '@/lib/admin/supabase';
+import { exigerAcces } from '@/lib/admin/auth';
 
 export default async function Acces({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [acces, url] = await Promise.all([getAcces(resto), adresseApp(resto)]);
   const svg = await qrSvg(url);

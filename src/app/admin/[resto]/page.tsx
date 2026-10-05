@@ -4,9 +4,11 @@ import { etapesRestaurant } from './etapes';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
+import { exigerAcces } from '@/lib/admin/auth';
 
 export default async function TableauDeBord({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const [r, s] = await Promise.all([getRestaurantBO(resto), getResume(resto)]);
   if (!r) notFound();
   const etapes = etapesRestaurant(r, s);

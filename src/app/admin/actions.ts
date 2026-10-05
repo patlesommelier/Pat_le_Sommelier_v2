@@ -1,10 +1,10 @@
 'use server';
 
 import { revalidatePath } from 'next/cache';
-import { headers } from 'next/headers';
+import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
-import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
+import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { creerLot, travailler } from '@/lib/generation/file';
@@ -42,6 +42,7 @@ export async function seConnecter(f: FormData) {
 
 export async function seDeconnecter() {
   if (supabaseConfigure()) await (await supabaseSession()).auth.signOut();
+  (await cookies()).delete(COOKIE_VUE); // fin du mode « Ouvrir en tant que… »
   redirect('/admin/connexion');
 }
 
@@ -450,9 +451,3 @@ export async function retirerAcces(resto: string, userId: string) {
 }
 
 // ───────── Base de Pat (administrateur) ─────────
-export async function deciderProducteur(id: string, decision: 'valide' | 'retire') {
-  await exigerAdmin();
-  await requete(`update producteur set statut = $2::statut_validation where id = $1 and statut = 'propose'`, [id, decision]);
-  revalidatePath('/admin/producteurs');
-  redirect('/admin/producteurs');
-}

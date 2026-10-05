@@ -136,3 +136,19 @@
   .bo-nav, .pas-imprime { display: none !important; }
   .bo-main { padding: 0; }
 }
+
+/* ── Espace super-admin : barre latérale foncée ── */
+.bo-nav.sombre { background: #24151A; border-right-color: #24151A; }
+.bo-nav.sombre .bo-marque strong { color: #FFF; }
+.bo-nav.sombre .bo-marque span { color: #CDBFC3; }
+.bo-nav.sombre .bo-liens .section { color: #B9A9AE; }
+.bo-nav.sombre .bo-lien { color: #F3E9EB !important; }
+.bo-nav.sombre .bo-lien:hover { background: rgba(255, 255, 255, 0.08); }
+.bo-nav.sombre .bo-lien[aria-current='page'] { background: #FFF; color: var(--encre) !important; }
+.bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #CDBFC3 !important; }
+.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #24151A; color: #FFF; font-size: 14px; }
+.bandeau-vue button { background: #FFF; color: #24151A; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
+.tableau-super td, .tableau-super th { vertical-align: top; }
+.rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 8px; border: 1.5px solid var(--ligne); font: 700 14px Lato, sans-serif; }
+.interne { border: 1.5px dashed var(--encre); background: var(--rose); }
+.bo-nav.sombre .bo-marque img { background: #FFF; border-radius: 12px; padding: 3px; box-sizing: border-box; }

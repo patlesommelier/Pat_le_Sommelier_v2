@@ -3,9 +3,11 @@ import { enregistrerApparence } from '../../actions';
 import { EditeurApparence } from '@/components/admin/EditeurApparence';
 import { Entete, Message } from '@/components/admin/Ui';
 import { getPlatsBO, getRestaurantBO } from '@/lib/admin/donnees';
+import { exigerAcces } from '@/lib/admin/auth';
 
 export default async function Apparence({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [r, plats] = await Promise.all([getRestaurantBO(resto), getPlatsBO(resto)]);
   if (!r) notFound();

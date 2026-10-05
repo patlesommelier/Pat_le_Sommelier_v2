@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { seDeconnecter } from './actions';
+import { quitterVueRestaurant } from './super/actions';
 import { NavLiens, type Etape } from '@/components/admin/Nav';
 import type { Utilisateur } from '@/lib/admin/auth';
 
@@ -11,9 +12,15 @@ export function Coque({ utilisateur, resto, etapes, children }: {
   children: React.ReactNode;
 }) {
   const accueil = resto ? `/admin/${resto.id}` : '/admin';
-  const admin = utilisateur.admin ? [{ href: '/admin/producteurs', libelle: 'Producteurs proposés' }] : [];
+  const admin = utilisateur.admin ? [{ href: '/admin/super', libelle: 'Super-admin' }] : [];
   return (
     <div className="bo">
+      {utilisateur.vueRestaurant && (
+        <form action={quitterVueRestaurant} className="bandeau-vue">
+          <span>Vous voyez l’espace exactement comme le restaurant (sans la cuisine interne de Pat).</span>
+          <button type="submit">Revenir au super-admin</button>
+        </form>
+      )}
       <aside className="bo-nav">
         <Link href="/admin" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}

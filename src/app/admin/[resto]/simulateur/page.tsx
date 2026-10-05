@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Points, Vignette, euros } from '@/components/admin/Ui';
-import { utilisateurCourant } from '@/lib/admin/auth';
+import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO } from '@/lib/admin/donnees';
 import { pourquoiPas, pourquoiRetenu } from '@/lib/admin/explications';
 import { accordsVisibles, getCandidats, getReglages } from '@/lib/donnees';
@@ -11,6 +11,7 @@ const CAT: Record<string, string> = { entree: 'Entrées', plat: 'Plats', dessert
 
 export default async function Simulateur({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string | string[]; arelire?: string; tour?: string; table?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [plats, R, u] = await Promise.all([getPlatsBO(resto), getReglages(resto), utilisateurCourant()]);
   // Score et rankings : cuisine interne, montrés à Pat seulement. Le restaurant voit le rang et la note /5.

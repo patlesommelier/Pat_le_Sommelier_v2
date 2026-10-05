@@ -4,7 +4,7 @@ import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
-import { utilisateurCourant } from '@/lib/admin/auth';
+import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
 import { pourquoiPas } from '@/lib/admin/explications';
 import { requete } from '@/lib/db';
@@ -18,6 +18,7 @@ const CAT: Record<string, string> = { entree: 'Entrée', plat: 'Plat', dessert: 
 
 export default async function Accords({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ plat?: string; ok?: string; tous?: string; regeneration?: string; erreur?: string; commentaire?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
     requete<{ le: string | null }>('select max(coalesce(regenere_le, explication_generee_le, calcule_le)) as le from accord where restaurant_id = $1', [resto])]);

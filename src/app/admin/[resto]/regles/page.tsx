@@ -7,6 +7,7 @@ import { getReglages } from '@/lib/donnees';
 import { requete } from '@/lib/db';
 import { parametresEnService, reglesEnService } from '@/lib/regles/versions';
 import { type Reglages } from '@/lib/selection';
+import { exigerAcces } from '@/lib/admin/auth';
 
 type Cle = keyof Reglages;
 interface Def { n: string; titre: string; texte: string; champs: { cle: Cle; libelle: string; suffixe?: string }[]; client?: string }
@@ -33,6 +34,7 @@ const affiche = (v: number | boolean) => typeof v === 'boolean' ? (v ? 'active' 
 
 export default async function Regles({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { ok } = await searchParams;
   const [R, exclusions, vins, PAT, version] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), parametresEnService(requete),
     reglesEnService(requete).catch(() => null)]);

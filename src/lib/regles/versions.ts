@@ -65,3 +65,9 @@ export async function enregistrerBrouillonRegles(q: Requete, parametres: Reglage
     [code, JSON.stringify(parametres), notes]);
   return { code, erreurs: [] };
 }
+
+export async function listeVersionsRegles(q: Requete) {
+  return q<Pick<LigneRegles, 'code' | 'statut' | 'notes' | 'publie_le' | 'publie_par' | 'maj_le'>>(
+    `select code, statut, notes, publie_le, publie_par, maj_le from regles_version
+      order by nullif(regexp_replace(code, '\\D', '', 'g'), '')::int desc nulls last, code desc`);
+}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { enregistrerVin } from '../../actions';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
-import { utilisateurCourant } from '@/lib/admin/auth';
+import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs, type VinBO } from '@/lib/admin/donnees';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
@@ -26,6 +26,7 @@ function producteur(v: VinBO): [string, 'ok' | 'propose' | 'attention' | ''] {
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [vins, u] = await Promise.all([getVinsBO(resto), utilisateurCourant()]);
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.

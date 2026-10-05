@@ -2,11 +2,13 @@ import Link from 'next/link';
 import { enregistrerPlat } from '../../actions';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfil } from '@/lib/admin/donnees';
+import { exigerAcces } from '@/lib/admin/auth';
 
 const CATS = [['tous', 'Tous'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
 export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string }> }) {
   const { resto } = await params;
+  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { cat = 'tous', plat: platId, ok } = await searchParams;
   const plats = await getPlatsBO(resto);
   const affiches = plats.filter((p) => cat === 'tous' || p.categorie === cat);

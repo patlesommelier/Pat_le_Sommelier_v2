@@ -89,6 +89,18 @@ Les principes de Pat et ses règles de sélection par défaut fonctionnent par *
 - `npm test` : tests du format des principes (vrais fichiers V5 et V6 : 0 erreur, 0 avertissement, n°17 et 31 archivés, n°4, 6, 9, 10, 11 et 41 modifiés). Avec `TEST_DATABASE_URL` (une **copie locale** de la base, jamais la production), aussi les tests de publication et de validation d'un producteur, avec un faux Claude.
 - `npm run verifier-confidentialite -- --url http://localhost:3000 --restaurant lola` : parcourt l'espace restaurant et l'app client comme le navigateur (pages et données React) et échoue si un ranking, un score ou une limite d'accord y apparaît. En local, lancer le serveur avec `AUTH_DEV_EMAIL=… AUTH_DEV_RESTAURANT=lola` pour être connecté comme le restaurant.
 
+### 4 septies. Espace super-admin (`/admin/super`)
+
+Réservé aux adresses de `PAT_ADMIN_EMAILS`, barre latérale foncée :
+- **Restaurants** : indicateurs, tableau (statut, avancement sur les 7 étapes, menu et carte, accords, producteurs à valider), « Ouvrir en tant que… » (l'espace exactement comme le restaurant le voit, sans la cuisine interne ; bandeau « Revenir au super-admin »), « Créer un restaurant » avec invitation par e-mail (clé `SUPABASE_SERVICE_ROLE_KEY`).
+- **Producteurs à valider** : fiche, cuisine interne (ranking du producteur, suggestion de Pat), ses vins (ranking par cuvée gardé), terroirs ; Rejeter / Enregistrer / Valider.
+- **Base et rankings** : producteurs et leurs vins, terroirs ; recherche et filtres ; rankings modifiables ; « Ajouter un vin ».
+- **Principes de Pat** : brouillon modifiable, filtres, texte en service, questions ouvertes, import vérifié avant création du brouillon, export Excel/JSON, historique, « Publier les principes ».
+- **Règles par défaut** : brouillon, versions, ajustements des restaurants, « Publier les règles ».
+- **Publication** : avancement, ce qui change pour les clients plat par plat, « Mettre en service », « Annuler », relance des plats en échec.
+
+Sécurité : chaque page vérifie elle-même l'accès (`exigerAcces`, `exigerAdmin`) ; un layout ne protège pas les pages qu'il contient, rendues en parallèle. `npm run verifier-confidentialite -- … --autre <restaurant>` vérifie aussi qu'aucune page d'un autre restaurant n'est servie.
+
 ### 5. Lancer et déployer
 
 ```bash

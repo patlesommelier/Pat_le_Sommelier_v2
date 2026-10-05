@@ -147,15 +147,6 @@ export async function getAcces(restaurantId: string) {
     [restaurantId]);
 }
 
-// ───────── Producteurs proposés (administrateur) ─────────
-export async function getProducteursProposes() {
-  return requete<{ id: string; nom: string; region: string | null; pays: string | null; notes_objectives: string | null; a_verifier: string | null; vins: string | null }>(
-    `select p.id, p.nom, p.region, p.pays, p.notes_objectives, p.a_verifier,
-            string_agg(v.restaurant_id || ' ' || v.id || ' · ' || v.libelle, ' ; ' order by v.id) as vins
-       from producteur p left join vin_carte v on v.producteur_id = p.id
-      where p.statut = 'propose' group by p.id order by p.region nulls last, p.nom`);
-}
-
 // ───────── Producteurs de la base de Pat : suggestions pour relier un vin ─────────
 const SANS_ACCENTS = `translate(lower(nom), 'àâäáãéèêëíìîïóòôöõúùûüçñœ', 'aaaaaeeeeiiiiooooouuuucno')`;
 const MOTS_VIDES = new Set(['domaine', 'chateau', 'maison', 'cave', 'caves', 'cantina', 'bodegas', 'bodega', 'tenuta', 'weingut', 'clos',

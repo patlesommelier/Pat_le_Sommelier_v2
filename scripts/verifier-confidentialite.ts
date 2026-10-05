@@ -4,7 +4,8 @@
  * (en-tête RSC, ce que montre l'onglet Réseau), puis cherche les mots interdits dans chaque réponse.
  *
  *   AUTH_DEV_EMAIL=resto@lola.be AUTH_DEV_RESTAURANT=lola npx next start -p 3499   (serveur local, compte restaurant)
- *   npm run verifier-confidentialite -- --url http://localhost:3499 --restaurant lola
+ *   npm run verifier-confidentialite -- --url http://localhost:3499 --restaurant lola [--autre bistro]
+ *   --autre : un autre restaurant, dont aucune page du back-office ne doit être servie au compte de --restaurant.
  *
  * Code de sortie 1 si un mot interdit est trouvé.
  */
@@ -14,6 +15,7 @@ import pg from 'pg';
 const arg = (nom: string, defaut: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : defaut; };
 const base = arg('url', 'http://localhost:3499');
 const resto = arg('restaurant', 'lola');
+const autre = arg('autre', '');
 
 // Champs et mots de la cuisine interne. « limite » seul est un mot courant : on cherche le champ et les tournures internes.
 const INTERDITS: [string, RegExp][] = [
@@ -35,6 +37,9 @@ async function adresses(): Promise<string[]> {
       ...admin,
       ...plats.flatMap((p) => [`/admin/${resto}/accords?plat=${p}&tous=1`, `/admin/${resto}/simulateur?plat=${p}`, `/admin/${resto}/menu?plat=${p}`]),
       ...vins.map((v) => `/admin/${resto}/carte?vin=${v}`),
+      // Espace super-admin : un compte restaurant doit être renvoyé ailleurs sans rien recevoir.
+      '/admin/super', '/admin/super/producteurs', '/admin/super/base', '/admin/super/base?onglet=terroirs', '/admin/super/principes',
+      '/admin/super/regles', '/admin/super/principes/export?code=V5&format=json',
       `/${resto}`, `/${resto}/carte`,
       ...plats.map((p) => `/${resto}/plat/${p}`),
       ...vins.map((v) => `/${resto}/vin/${v}`),
@@ -60,6 +65,23 @@ async function main() {
           const i = m.index ?? 0;
           trouves.push(`${chemin}${entetes.RSC ? ' (données React)' : ''} : « ${nom} » … ${corps.slice(Math.max(0, i - 60), i + 60).replace(/\s+/g, ' ')} …`);
         }
+      }
+    }
+  }
+  // Pages d'un autre restaurant : jamais servies (redirection, sans contenu).
+  if (autre) {
+    // Contenu propre à l'autre restaurant : son nom et ceux de ses plats.
+    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL });
+    const secrets = (await pool.query(`select nom from restaurant where id = $1 union all select nom from plat where restaurant_id = $1`, [autre])).rows.map((r) => r.nom as string);
+    await pool.end();
+    for (const s of ['', '/menu', '/carte', '/accords', '/regles', '/apparence', '/acces', '/acces/chevalet', '/simulateur', '/supports', '/carte/preparer', '/carte/imprimer', '/acces/qr']) {
+      for (const entetes of [{}, { RSC: '1', 'Next-Router-State-Tree': '%5B%22%22%2C%7B%7D%5D' }] as Record<string, string>[]) {
+        const r = await fetch(`${base}/admin/${autre}${s}`, { headers: entetes, redirect: 'manual' });
+        reponses++;
+        const corps = await r.text();
+        // Une réponse React peut valoir 200 en ne contenant que la redirection (NEXT_REDIRECT) : c'est le contenu qui compte.
+        const fuite = secrets.find((x) => corps.includes(x)) ?? (r.status === 200 && !corps.includes('NEXT_REDIRECT') ? `page servie (HTTP 200)` : null);
+        if (fuite) trouves.push(`/admin/${autre}${s}${entetes.RSC ? ' (données React)' : ''} : servie au compte de ${resto} — « ${fuite} »`);
       }
     }
   }
