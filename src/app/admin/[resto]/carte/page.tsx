@@ -44,7 +44,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
   const enRecherche = vins.filter((v) => !v.etiquette_url && (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander')).length;
   // Chaque étiquette trouvée coûte un crédit Wine Labs à Pat : la recherche manuelle est réservée au super-admin.
-  const rechercheWineLabs = Boolean(u?.admin && identifiantsWineLabs() && vins.some((v) => !v.etiquette_url && !['a_demander', 'demandee', 'introuvable'].includes(v.etiquette_statut ?? '')));
+  const aChercher = vins.filter((v) => !v.etiquette_url && !['a_demander', 'demandee', 'introuvable'].includes(v.etiquette_statut ?? '')).length;
+  const introuvables = vins.filter((v) => !v.etiquette_url && v.etiquette_statut === 'introuvable').length;
+  const wineLabs = Boolean(u?.admin && identifiantsWineLabs());
+  const pourquoiPas = !aChercher && (sansEtiquette === 0 ? 'toutes les étiquettes sont là'
+    : enRecherche ? `${enRecherche} déjà en recherche${introuvables ? `, ${introuvables} introuvable(s)` : ''}` : `${introuvables} introuvable(s) chez Wine Labs : à photographier`);
   const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
   const sansLien = Boolean(choisi && !choisi.producteur_id && choisi.producteur_texte && !/^non /i.test(choisi.producteur_texte));
@@ -56,6 +60,13 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
         <BoutonCarteImprimee resto={resto} />
+        {wineLabs && (
+          <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
+            <button className="btn sec" disabled={!aChercher} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">
+              Chercher sur Wine Labs{aChercher ? ` (${aChercher})` : ''}</button>
+            {pourquoiPas && <span className="petit discret">Rien à chercher : {pourquoiPas}.</span>}
+          </form>
+        )}
       </Entete>
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
@@ -63,11 +74,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span>
           {enRecherche > 0 && <div className="petit">{enRecherche} en recherche chez Wine Labs</div>}
-          {rechercheWineLabs && (
-            <form action={chercherEtiquettes.bind(null, resto)} style={{ marginTop: 8 }}>
-              <button className="btn sec petit" title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">Chercher sur Wine Labs</button>
-            </form>
-          )}</div>
+</div>
       </div>
       <div className="rangee">
         <section className="large">
