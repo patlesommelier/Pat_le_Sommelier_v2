@@ -4,11 +4,13 @@ import { appliquerReponse, lireRequete } from '@/lib/etiquettes/wine-labs';
 
 export const dynamic = 'force-dynamic';
 
-/** Secret de signature : variable Netlify, sinon celui enregistré en branchant le webhook depuis le super-admin. */
-async function secretWebhook() {
-  if (process.env.WINE_LABS_WEBHOOK_SECRET) return process.env.WINE_LABS_WEBHOOK_SECRET;
+/**
+ * Secrets de signature possibles : celui enregistré en branchant le webhook depuis le super-admin (le plus récent),
+ * puis la variable Netlify WINE_LABS_WEBHOOK_SECRET (webhook enregistré depuis le tableau de bord Wine Labs).
+ */
+async function secretsWebhook() {
   const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'wine_labs_webhook_secret'`);
-  return r?.valeur ?? null;
+  return [r?.valeur, process.env.WINE_LABS_WEBHOOK_SECRET?.trim()].filter((x): x is string => Boolean(x));
 }
 
 /**
@@ -18,16 +20,17 @@ async function secretWebhook() {
  * Réponse 2xx = bien reçu ; 401 = signature refusée ; 500 = erreur de notre côté (Wine Labs réessaie 8 fois en 2 jours).
  */
 export async function POST(req: Request) {
-  const secret = await secretWebhook();
-  if (!secret) {
+  const secrets = await secretsWebhook();
+  if (!secrets.length) {
     console.error('[wine-labs] secret du webhook absent (WINE_LABS_WEBHOOK_SECRET ou branchement depuis le super-admin)');
     return Response.json({ erreur: 'webhook non configuré' }, { status: 500 });
   }
   const corps = await req.text();
-  const v = verifierSignature(corps, req.headers, secret);
+  const essais = secrets.map((secret) => verifierSignature(corps, req.headers, secret));
+  const v = essais.find((e) => e.ok) ?? essais[0];
   if (!v.ok) {
     // On journalise les noms d'en-têtes (jamais leurs valeurs) pour ajuster la vérification si besoin.
-    console.warn(`[wine-labs] refusé : ${v.raison} ; en-têtes : ${[...req.headers.keys()].join(', ')}`);
+    console.warn(`[wine-labs] refusé : ${essais.map((e) => (e.ok ? 'ok' : e.raison)).join(' / ')} (${secrets.length} secret(s)) ; en-têtes : ${[...req.headers.keys()].join(', ')}`);
     return Response.json({ erreur: 'signature' }, { status: 401 });
   }
 

@@ -58,3 +58,11 @@ test('une « clé » au format UUID est envoyée comme user_id', async () => {
     process.env = avant;
   }
 });
+
+test('signature Wine Labs avec espaces après la virgule et hex en majuscules', async () => {
+  const { verifierSignature } = await import('../src/lib/wine-labs-signature');
+  const secret = 'whsec_abc', corps = '{"event":"wine_label.test"}', t = Math.floor(Date.now() / 1000);
+  const v1 = createHmac('sha256', secret).update(`${t}.${corps}`).digest('hex').toUpperCase();
+  assert.equal(verifierSignature(corps, new Headers({ 'X-WineLabs-Signature': `t=${t}, v1=${v1}` }), secret).ok, true);
+  assert.equal(verifierSignature(corps, new Headers({ 'X-WineLabs-Signature': `t=${t}, v1=${v1}` }), 'whsec_autre').ok, false);
+});

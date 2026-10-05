@@ -31,6 +31,25 @@ function egal(a: string, b: string) {
 export type Verification = { ok: true; id: string } | { ok: false; raison: string };
 
 export function verifierSignature(corps: string, entetes: Headers, secret: string, maintenant = Date.now()): Verification {
+  // Wine Labs (doc Imagery) : X-WineLabs-Signature: t=<unix>,v1=<hex HMAC-SHA256 de « t.corps brut »>, secret tel quel.
+  const wl = entetes.get('x-winelabs-signature');
+  if (wl) {
+    const parts = new Map<string, string[]>();
+    for (const p of wl.split(',')) {
+      const [k, ...v] = p.trim().split('=');
+      if (k && v.length) parts.set(k.trim(), [...(parts.get(k.trim()) ?? []), v.join('=').trim().toLowerCase()]);
+    }
+    const t = parts.get('t')?.[0] ?? entetes.get('x-winelabs-timestamp') ?? '';
+    const v1 = parts.get('v1') ?? [];
+    if (!/^\d+$/.test(t) || !v1.length) return { ok: false, raison: 'en-tête X-WineLabs-Signature illisible' };
+    if (Math.abs(maintenant / 1000 - Number(t)) > TOLERANCE_S) return { ok: false, raison: 'horodatage trop ancien' };
+    for (const k of cles(secret)) {
+      const attendu = createHmac('sha256', k).update(`${t}.`).update(corps).digest('hex');
+      if (v1.some((x) => egal(x, attendu))) return { ok: true, id: entetes.get('x-winelabs-delivery-id') ?? `${t}.${v1[0].slice(0, 16)}` };
+    }
+    return { ok: false, raison: 'signature X-WineLabs invalide' };
+  }
+
   const h = (n: string) => entetes.get(n) ?? entetes.get(`svix-${n.replace('webhook-', '')}`);
   const id = h('webhook-id');
   const ts = h('webhook-timestamp');
