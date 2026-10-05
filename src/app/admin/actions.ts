@@ -279,6 +279,15 @@ export async function regenererTout(resto: string) {
   await regenerer(resto, plats.map((p) => p.id), {});
 }
 
+/** Seulement les plats actifs qui n'ont encore aucun accord (génération en échec ou jamais faite). */
+export async function relancerPlatsSansAccord(resto: string) {
+  await exigerAcces(resto);
+  const plats = await requete<{ id: string }>(
+    `select pl.id from plat pl where pl.restaurant_id = $1 and pl.actif
+        and not exists (select 1 from accord a where a.plat_id = pl.id) order by pl.ordre`, [resto]);
+  await regenerer(resto, plats.map((p) => p.id), {});
+}
+
 // ───────── Carte imprimée ─────────
 /**
  * Bouton « Imprimer la carte » : Pat écrit d'abord les présentations qui manquent (en arrière-plan, une tâche par couleur),

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerNote, modifierCommentaire, regenererTout, validerPlat, validerTout } from '../../actions';
+import { changerNote, modifierCommentaire, regenererTout, relancerPlatsSansAccord, validerPlat, validerTout } from '../../actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
@@ -31,6 +31,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const interne = Boolean(u?.admin);
   const actifs = plats.filter((p) => p.actif);
   const parPlat = new Map(stats.map((s) => [s.plat_id, s]));
+  const sansAccord = plats.filter((p) => p.actif && !parPlat.has(p.id));
   const plat = actifs.find((p) => p.id === sp.plat) ?? actifs[0];
   const platsAnciens = actifs.filter((p) => anciens.get(p.id)).length;
   // Motif d'échec le plus fréquent de la dernière régénération (pour comprendre sans ouvrir les journaux).
@@ -64,7 +65,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const s = plat ? parPlat.get(plat.id) : undefined;
   // « Limite » des commentaires générés : chargée pour Pat seulement.
   // Dernier passage de la régénération sur ce plat : bilan ou motif d'échec (pour comprendre un commentaire d'origine resté).
-  const [bilanPlat] = plat && anciens.get(plat.id) ? await requete<{ statut: string; message: string | null; le: string }>(
+  const [bilanPlat] = plat && (anciens.get(plat.id) || !s) ? await requete<{ statut: string; message: string | null; le: string }>(
     `select statut, message, coalesce(fin_le, cree_le) as le from generation_accords where plat_id = $1 and statut in ('fait', 'erreur') order by id desc limit 1`, [plat.id]) : [];
   const prix = sel.liste.map((r) => r.vin.prix).filter((p): p is number => p !== null);
 
@@ -86,6 +87,14 @@ export default async function Accords({ params, searchParams }: { params: Promis
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
+      {(!etat || etat.termine) && sansAccord.length > 0 && (
+        <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px', borderColor: 'var(--ocre)' }}>
+          <strong>{sansAccord.length} plat{sansAccord.length > 1 ? 's n’ont' : ' n’a'} encore aucun accord</strong>
+          <span className="discret">{etat?.erreurs.length ? 'La dernière génération n’a pas abouti pour ces plats.' : 'Ces plats n’ont pas encore été générés.'}
+            {interne && etat?.erreurs.length ? ` Motif : ${[...new Set(etat.erreurs.map((e) => (e.message ?? 'inconnu').slice(0, 160)))].slice(0, 3).join(' · ')}` : ''}</span>
+          <form action={relancerPlatsSansAccord.bind(null, resto)}><button className="btn sec petit"><Icone nom="reset" taille={18} />Relancer les plats sans accord</button></form>
+        </div>
+      )}
       <div className="rangee">
         <nav aria-label="Plats" className="etroit" style={{ flex: '1 1 240px', gap: 6 }}>
           {actifs.map((p) => {
@@ -112,6 +121,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
               </span>
             </div>
             <Message ok={sp.ok ? 'Accords de ce plat validés.' : sp.commentaire ? 'Commentaire enregistré : c’est lui que le client lit.' : undefined} />
+            {!s ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
+              Aucun accord pour ce plat{bilanPlat ? ` — dernière génération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec' : 'terminée sans accord'}${interne && bilanPlat.message ? `, ${bilanPlat.message.slice(0, 200)}` : ''}` : ' — pas encore généré'}.</span> : null}
             {anciens.get(plat.id) ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
               {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
               {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec, ' : ''}${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
