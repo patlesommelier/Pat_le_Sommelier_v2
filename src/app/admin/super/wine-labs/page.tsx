@@ -18,18 +18,18 @@ export default async function WineLabs({ searchParams }: { searchParams: Promise
   const adresse = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}/api/webhooks/wine-labs`;
   const id = identifiantsWineLabs();
 
-  let endpoints: Endpoint[] = [], credits: Credits | null = null, erreurApi: string | null = null;
+  // Chaque appel séparément : une erreur sur l'un n'empêche ni l'autre ni le bouton de branchement.
+  let endpoints: Endpoint[] = [], credits: Credits | null = null;
+  const erreurs: string[] = [];
   if (id) {
-    try {
-      const [w, l] = await Promise.all([
-        appelerWineLabs<{ endpoints?: Endpoint[] }>('GET', '/wine_labels/webhooks'),
-        appelerWineLabs<{ credits?: Credits }>('GET', '/wine_labels?limit=1'),
-      ]);
-      endpoints = w.endpoints ?? [];
-      credits = l.credits ?? null;
-    } catch (e) {
-      erreurApi = (e as Error).message;
-    }
+    const [w, l] = await Promise.allSettled([
+      appelerWineLabs<{ endpoints?: Endpoint[] }>('GET', '/wine_labels/webhooks'),
+      appelerWineLabs<{ credits?: Credits }>('GET', '/wine_labels?limit=1'),
+    ]);
+    if (w.status === 'fulfilled') endpoints = w.value.endpoints ?? [];
+    else erreurs.push(`Liste des webhooks : ${(w.reason as Error).message}`);
+    if (l.status === 'fulfilled') credits = l.value.credits ?? null;
+    else erreurs.push(`Crédits : ${(l.reason as Error).message}`);
   }
   const notre = endpoints.find((e) => e.url === adresse);
   const [secret] = await requete<{ maj_le: string }>(`select maj_le from reglage_serveur where cle = 'wine_labs_webhook_secret'`);
@@ -45,7 +45,8 @@ export default async function WineLabs({ searchParams }: { searchParams: Promise
   return (
     <>
       <Entete titre="Wine Labs" texte="Étiquettes demandées automatiquement à Wine Labs quand une carte est chargée : une demande par cuvée, seules les étiquettes trouvées coûtent un crédit." />
-      <Message ok={sp.ok} erreur={sp.erreur ?? erreurApi ?? undefined} />
+      <Message ok={sp.ok} erreur={sp.erreur} />
+      {erreurs.map((e) => <Message key={e} erreur={e} />)}
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(180px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{stats.trouvees}</div><span className="discret">étiquettes Wine Labs</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{stats.attente}</div><span className="discret">en recherche</span></div>
@@ -62,7 +63,7 @@ export default async function WineLabs({ searchParams }: { searchParams: Promise
           <span className="petit discret"> {adresse}</span></p>
         {notre && <p className="petit discret" style={{ margin: 0 }}>Dernière livraison réussie : {date(notre.last_success_at)}{notre.consecutive_failures ? ` · ${notre.consecutive_failures} échec(s) de suite` : ''}{notre.last_error ? ` · ${notre.last_error}` : ''}</p>}
         {!process.env.WINE_LABS_WEBHOOK_SECRET && <p className="petit discret" style={{ margin: 0 }}>Secret de signature : {secret ? `enregistré le ${date(secret.maj_le)}` : 'aucun (branchez le webhook)'}</p>}
-        {id && !erreurApi && (
+        {id && (
           <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
             <form action={brancherWebhookWineLabs}><button className="btn sec">{notre ? 'Rebrancher le webhook' : 'Brancher le webhook'}</button></form>
             {notre && <form action={testerWebhookWineLabs.bind(null, notre.id)}><button className="btn fantome">Envoyer un test</button></form>}

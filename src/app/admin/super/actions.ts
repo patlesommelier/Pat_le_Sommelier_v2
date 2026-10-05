@@ -287,7 +287,8 @@ export async function brancherWebhookWineLabs() {
   const url = await adresseWebhook();
   try {
     // Déjà enregistrée (409) : on la retire puis on la réenregistre, pour obtenir un secret que nous connaissons.
-    const { endpoints = [] } = await appelerWineLabs<{ endpoints?: Endpoint[] }>('GET', '/wine_labels/webhooks');
+    const { endpoints = [] } = await appelerWineLabs<{ endpoints?: Endpoint[] }>('GET', '/wine_labels/webhooks')
+      .catch(() => ({ endpoints: [] as Endpoint[] })); // liste illisible : on tente quand même l'enregistrement
     for (const e of endpoints.filter((x) => x.url === url)) await appelerWineLabs('DELETE', `/wine_labels/webhooks/${e.id}`);
     const r = await appelerWineLabs<{ secret?: string }>('POST', '/wine_labels/webhooks', { url, description: 'Pat le sommelier' });
     if (!r.secret) throw new Error('Wine Labs n’a pas renvoyé de secret.');
