@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { appOuverte } from '@/lib/ouverture';
 import { notFound } from 'next/navigation';
 import { DemanderAPat } from '@/components/DemanderAPat';
 import { Entete } from '@/components/Entete';
@@ -16,6 +17,7 @@ export default async function Propositions({
   params, searchParams,
 }: { params: Promise<{ resto: string; plat: string }>; searchParams: Promise<{ tour?: string }> }) {
   const { resto, plat: platId } = await params;
+  if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const tour = Math.max(1, Math.min(10, Number((await searchParams).tour) || 1));
   const [restaurant, plat] = await Promise.all([getRestaurant(resto), getPlat(platId)]);
   if (!restaurant || !plat) notFound();

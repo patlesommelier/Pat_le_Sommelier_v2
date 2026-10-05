@@ -7,18 +7,28 @@ import { getAcces } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { supabaseConfigure } from '@/lib/admin/supabase';
 import { exigerAcces } from '@/lib/admin/auth';
+import { requete } from '@/lib/db';
 
 export default async function Acces({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [acces, url] = await Promise.all([getAcces(resto), adresseApp(resto)]);
+  const [acces, url, [etat]] = await Promise.all([getAcces(resto), adresseApp(resto),
+    requete<{ statut: string; manquants: number }>(`select statut, (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif
+       and not exists (select 1 from accord a where a.plat_id = pl.id)) as manquants from restaurant r where id = $1`, [resto])]);
   const svg = await qrSvg(url);
   const comptesPossibles = supabaseConfigure() && Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
   return (
     <>
       <Entete titre="Accès & QR code" texte="Les accès permettent de retrouver vos accords, vos règles et votre QR code depuis n’importe quel appareil. Le QR code ouvre Pat sur les tables de vos clients." />
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {etat && etat.statut !== 'en_service' && (
+        <p className="carte-bo" style={{ margin: 0, padding: '14px 20px', borderColor: 'var(--ocre)' }}>
+          {etat.statut === 'suspendu'
+            ? 'Votre app est suspendue : vos clients qui scannent le QR code voient « momentanément indisponible ».'
+            : `Votre app n’est pas encore ouverte à vos clients : ils voient « La carte des vins de Pat arrive très bientôt ». Elle s’ouvre dès que tous vos plats ont leurs accords${etat.manquants ? ` (encore ${etat.manquants} plat${etat.manquants > 1 ? 's' : ''})` : ''}. Vous pouvez déjà imprimer le QR code.`}
+        </p>
+      )}
       <div className="rangee">
         <div className="etroit" style={{ flex: '1 1 380px' }}>
           <form action={creerAcces.bind(null, resto)} className="carte-bo pile">

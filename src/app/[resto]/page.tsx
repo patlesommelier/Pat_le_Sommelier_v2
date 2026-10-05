@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { appOuverte } from '@/lib/ouverture';
 import { notFound } from 'next/navigation';
 import { Entete } from '@/components/Entete';
 import { Silhouettes } from '@/components/Icones';
@@ -13,6 +14,7 @@ const GROUPES: { titre: string; categories: Plat['categorie'][] }[] = [
 
 export default async function Accueil({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
+  if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
   const plats = await getPlats(resto);

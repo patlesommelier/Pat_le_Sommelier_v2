@@ -73,26 +73,58 @@ async function avecReprises<T>(f: () => Promise<T>, finAvant: number, quoi: stri
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
 export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
-  for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
-    try {
-      const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele), finAvant, t.plat_id);
-      const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
-        + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
-        + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');
-      await q(`update generation_accords set statut = 'fait', message = $2, fin_le = now() where id = $1`, [t.id, message]);
-      console.log(`[accords] ${t.plat_id} : ${message} (jetons ${b.jetonsEntree} + ${b.jetonsSortie})`);
-    } catch (e) {
-      await q(`update generation_accords set statut = 'erreur', message = $2, fin_le = now() where id = $1`, [t.id, String((e as Error).message ?? e).slice(0, 500)]);
-      console.error(`[accords] ${t.plat_id} : échec`, e);
+  for (;;) {
+    for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
+      try {
+        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele), finAvant, t.plat_id);
+        const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
+          + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
+          + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');
+        await q(`update generation_accords set statut = 'fait', message = $2, fin_le = now() where id = $1`, [t.id, message]);
+        console.log(`[accords] ${t.plat_id} : ${message} (jetons ${b.jetonsEntree} + ${b.jetonsSortie})`);
+      } catch (e) {
+        await q(`update generation_accords set statut = 'erreur', message = $2, fin_le = now() where id = $1`, [t.id, String((e as Error).message ?? e).slice(0, 500)]);
+        console.error(`[accords] ${t.plat_id} : échec`, e);
+      }
     }
+    // Restaurants en mise en place : en service quand tout est prêt ; sinon les plats manquants repartent dans la file.
+    if (!(await finirMisesEnPlace(q)) || Date.now() >= finAvant) break;
   }
-  // Restaurant inscrit seul : en service dès que ses accords sont prêts (plus aucune tâche en attente ou en cours).
-  await q(`update restaurant r set statut = 'en_service'
-            where r.origine = 'inscription' and r.statut = 'mise_en_place'
-              and exists (select 1 from accord a where a.restaurant_id = r.id)
-              and not exists (select 1 from generation_accords g where g.restaurant_id = r.id and g.statut in ('en_attente', 'en_cours'))`);
   const [r] = await q<{ n: number }>(`select count(*)::int as n from generation_accords where statut = 'en_attente'`);
   return r.n;
+}
+
+/** Relances automatiques des plats sans accord d'un restaurant inscrit, avant de laisser la main au super-admin. */
+export const RELANCES_AUTO = 2;
+
+/**
+ * Règle « prêt à publier » des restaurants en mise en place (plus aucune génération en cours) :
+ * - tous les plats actifs ont au moins un accord → le restaurant passe en service (QR code et app ouverts) ;
+ * - sinon, pour un restaurant inscrit seul, les plats sans accord sont relancés (RELANCES_AUTO fois au plus) ; ensuite il reste en mise en place
+ *   et le super-admin voit les plats en échec (« Relancer la préparation »).
+ * Renvoie le nombre de plats remis dans la file.
+ */
+export async function finirMisesEnPlace(q: Requete): Promise<number> {
+  const restos = await q<{ id: string; origine: string; manquants: string[]; relances: number }>(
+    `select r.id, r.origine,
+            array(select pl.id from plat pl where pl.restaurant_id = r.id and pl.actif
+                    and not exists (select 1 from accord a where a.plat_id = pl.id) order by pl.ordre) as manquants,
+            (select count(distinct g.lot)::int from generation_accords g where g.restaurant_id = r.id and g.demande_par = 'relance-auto') as relances
+       from restaurant r
+      where r.statut = 'mise_en_place'
+        and exists (select 1 from plat pl where pl.restaurant_id = r.id and pl.actif)
+        and exists (select 1 from generation_accords g where g.restaurant_id = r.id)
+        and not exists (select 1 from generation_accords g where g.restaurant_id = r.id and g.statut in ('en_attente', 'en_cours'))`);
+  let remis = 0;
+  for (const r of restos) {
+    if (!r.manquants.length) {
+      await q(`update restaurant set statut = 'en_service' where id = $1 and statut = 'mise_en_place'`, [r.id]);
+    } else if (r.origine === 'inscription' && r.relances < RELANCES_AUTO) {
+      remis += (await creerLot(q, r.id, r.manquants, 'relance-auto', { modele: modeleRapide() })).crees;
+      console.log(`[accords] ${r.id} : ${r.manquants.length} plat(s) sans accord, relance automatique ${r.relances + 1}/${RELANCES_AUTO}`);
+    }
+  }
+  return remis;
 }
 
 export interface EtatLot { lot: string; total: number; attente: number; enCours: number; faits: number; erreurs: { plat_id: string; message: string | null }[]; demande_le: string; termine: boolean }

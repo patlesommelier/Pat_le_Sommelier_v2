@@ -33,7 +33,7 @@ export async function chargerContexte(restaurantId: string) {
               coalesce(pa.cepages_conseilles, '{}') as cepages_conseilles,
               pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond
          from plat pl left join profil_accord pa on pa.plat_id = pl.id
-        where pl.restaurant_id = $1 and pl.actif order by pl.ordre`,
+        where pl.restaurant_id = $1 and pl.actif and exists (select 1 from accord a where a.plat_id = pl.id) order by pl.ordre`,
       [restaurantId],
     ),
   ]);

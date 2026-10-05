@@ -10,7 +10,7 @@ export const accordsVisibles = () =>
 
 export const getRestaurant = cache(async (id: string) => {
   const [r] = await requete<Restaurant>(
-    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche from restaurant where id = $1',
+    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, statut from restaurant where id = $1',
     [id],
   );
   return r ?? null;
@@ -18,15 +18,18 @@ export const getRestaurant = cache(async (id: string) => {
 
 export async function getPlats(restaurantId: string) {
   return requete<Plat>(
+    // Un plat sans aucun accord (pas encore généré, ou en échec) n'est pas montré au client.
     `select id, nom, nom_court, categorie, prix::float as prix, prix_variantes
-       from plat where restaurant_id = $1 and actif order by ordre`,
+       from plat where restaurant_id = $1 and actif and exists (select 1 from accord a where a.plat_id = plat.id)
+      order by ordre`,
     [restaurantId],
   );
 }
 
 export async function getPlat(id: string) {
   const [p] = await requete<Plat>(
-    'select id, nom, nom_court, categorie, prix::float as prix, prix_variantes from plat where id = $1 and actif',
+    `select id, nom, nom_court, categorie, prix::float as prix, prix_variantes from plat
+      where id = $1 and actif and exists (select 1 from accord a where a.plat_id = plat.id)`,
     [id],
   );
   return p ?? null;

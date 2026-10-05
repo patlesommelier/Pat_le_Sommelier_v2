@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getAccord, getPlat, getRestaurant, getVin } from '@/lib/donnees';
@@ -16,6 +17,7 @@ const JAUGES = [
 
 export default async function FicheVin({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ plat?: string }> }) {
   const { resto, vin: vinId } = await params;
+  if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const { plat: platId } = await searchParams;
   const [restaurant, vin, plat] = await Promise.all([getRestaurant(resto), getVin(resto, vinId), platId ? getPlat(platId) : null]);
   if (!restaurant || !vin) notFound();

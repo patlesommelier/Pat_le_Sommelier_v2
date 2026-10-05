@@ -4,6 +4,7 @@ import { texteClassements } from '@/lib/classement-chat';
 import { chargerContexte } from '@/lib/contexte';
 import { getRestaurant } from '@/lib/donnees';
 import { instructionsPat } from '@/lib/instructions-pat';
+import { appOuverte } from '@/lib/ouverture';
 import { extraireVins, textePrincipes, texteCarte, texteRegles } from '@/lib/pat-cerveau';
 
 export const runtime = 'nodejs';
@@ -23,6 +24,8 @@ export async function POST(req: Request) {
   if (!corps?.restaurant || !Array.isArray(corps.messages) || !corps.messages.length) {
     return NextResponse.json({ erreur: 'Requête invalide' }, { status: 400 });
   }
+  // Restaurant pas encore en service (ou suspendu) : Pat ne répond pas aux clients.
+  if (!(await appOuverte(corps.restaurant))) return NextResponse.json({ erreur: 'La carte des vins de Pat arrive très bientôt.' }, { status: 403 });
   if (!process.env.ANTHROPIC_API_KEY) {
     return NextResponse.json({ erreur: "Pat n'est pas encore branché : ANTHROPIC_API_KEY manquante." }, { status: 503 });
   }

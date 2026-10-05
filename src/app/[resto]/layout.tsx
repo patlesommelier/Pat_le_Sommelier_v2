@@ -3,6 +3,7 @@ import type { CSSProperties } from 'react';
 import { BarrePat } from '@/components/BarrePat';
 import { couleurClaire } from '@/lib/couleurs';
 import { getRestaurant } from '@/lib/donnees';
+import { appOuverte } from '@/lib/ouverture';
 
 export const dynamic = 'force-dynamic';
 
@@ -20,6 +21,21 @@ export default async function LayoutRestaurant({ children, params }: { children:
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
     '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
   } as CSSProperties;
+  // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
+  if (!(await appOuverte(restaurant.id))) {
+    return (
+      <div className="ecran" style={theme}>
+        <main style={{ minHeight: '70dvh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: 28, textAlign: 'center' }}>
+          {restaurant.logo_url
+            // eslint-disable-next-line @next/next/no-img-element
+            ? <img src={restaurant.logo_url} alt={restaurant.nom} style={{ maxWidth: 180, maxHeight: 110, objectFit: 'contain' }} />
+            : <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--marque-texte)' }}>{restaurant.nom}</h1>}
+          <p style={{ fontSize: 19, fontWeight: 700, margin: 0 }}>{restaurant.statut === 'suspendu' ? 'La carte des vins de Pat est momentanément indisponible.' : 'La carte des vins de Pat arrive très bientôt.'}</p>
+          <p style={{ fontSize: 15, margin: 0, opacity: 0.75 }}>En attendant, demandez conseil à l’équipe : elle se fera un plaisir de vous guider.</p>
+        </main>
+      </div>
+    );
+  }
   return (
     <div className="ecran" style={theme}>
       {children}

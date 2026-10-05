@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { OngletsCarte } from '@/components/OngletsCarte';
 import { versOnglet } from '@/lib/types';
@@ -6,6 +7,7 @@ import { getCarte, getRestaurant } from '@/lib/donnees';
 
 export default async function Carte({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
+  if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
   const vins = await getCarte(resto);

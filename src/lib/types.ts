@@ -8,6 +8,8 @@ export interface Restaurant {
   logo_url: string | null;
   logo_fonce_url?: string | null;
   accroche: string | null;
+  /** mise_en_place | en_service | suspendu : l'app n'est ouverte aux clients qu'« en service ». */
+  statut?: string;
 }
 
 export interface Plat {

@@ -4,6 +4,7 @@ import s from '../inscription.module.css';
 import { Progression } from './progression';
 import { renvoyerEmail } from '../actions';
 import { supabaseConfigure } from '@/lib/admin/supabase';
+import { requete } from '@/lib/db';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { finaliserSiConfirme } from '@/lib/inscription/reprise';
 import { Attente } from './attente';
@@ -38,19 +39,31 @@ export default async function Qr({ searchParams }: { searchParams: Promise<{ err
   }
 
   const id = i.restaurant_id!;
+  // Le QR code n'est montré qu'une fois tous les plats prêts (restaurant en service) : avant, l'avancement.
+  const [r] = await requete<{ statut: string }>('select statut from restaurant where id = $1', [id]);
+  const pret = r?.statut === 'en_service';
   return (
     <>
       <main className={s.contenu}>
         <p className={s.succes}>E-mail confirmé · bienvenue, {i.nom_restaurant}</p>
-        <h1 className={s.titre}>Votre QR code</h1>
-        <p className={s.texte}>Posez-le sur vos tables : vos clients scannent, choisissent leur plat, et Pat leur propose trois vins de votre carte.</p>
-        <div className={s.qr}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/inscription/qr/image" alt={`QR code de ${i.nom_restaurant}`} width={200} height={200} />
-          <span className={s.texte} style={{ fontSize: 13.5, fontWeight: 700 }}>Scannez pour choisir votre vin</span>
-        </div>
-        <a href="/inscription/qr/image?format=png" className={s.boutonSecondaire} download>Télécharger le QR code</a>
-        <Progression />
+        <h1 className={s.titre}>{pret ? 'Votre QR code' : 'Pat prépare vos accords'}</h1>
+        {pret ? (
+          <>
+            <p className={s.texte}>Posez-le sur vos tables : vos clients scannent, choisissent leur plat, et Pat leur propose trois vins de votre carte.</p>
+            <div className={s.qr}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/inscription/qr/image" alt={`QR code de ${i.nom_restaurant}`} width={200} height={200} />
+              <span className={s.texte} style={{ fontSize: 13.5, fontWeight: 700 }}>Scannez pour choisir votre vin</span>
+            </div>
+            <a href="/inscription/qr/image?format=png" className={s.boutonSecondaire} download>Télécharger le QR code</a>
+            <p className={s.succes} role="status">Vos accords sont prêts : le QR code fonctionne.</p>
+          </>
+        ) : (
+          <>
+            <p className={s.texte}>Pat note chaque vin de votre carte sur chaque plat de votre menu. Votre QR code apparaîtra ici dès que tous vos plats auront leurs accords.</p>
+            <Progression />
+          </>
+        )}
       </main>
       <div className={s.barreAction}><div><Link href={`/admin/${id}`} className={s.bouton}>Accéder à mon espace</Link></div></div>
     </>
