@@ -53,6 +53,11 @@ export async function travailler(q: Requete, { finAvant, modele = process.env.AN
       console.error(`[accords] ${t.plat_id} : échec`, e);
     }
   }
+  // Restaurant inscrit seul : en service dès que ses accords sont prêts (plus aucune tâche en attente ou en cours).
+  await q(`update restaurant r set statut = 'en_service'
+            where r.origine = 'inscription' and r.statut = 'mise_en_place'
+              and exists (select 1 from accord a where a.restaurant_id = r.id)
+              and not exists (select 1 from generation_accords g where g.restaurant_id = r.id and g.statut in ('en_attente', 'en_cours'))`);
   const [r] = await q<{ n: number }>(`select count(*)::int as n from generation_accords where statut = 'en_attente'`);
   return r.n;
 }

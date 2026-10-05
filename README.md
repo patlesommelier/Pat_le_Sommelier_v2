@@ -101,6 +101,17 @@ Réservé aux adresses de `PAT_ADMIN_EMAILS`, barre latérale foncée :
 
 Sécurité : chaque page vérifie elle-même l'accès (`exigerAcces`, `exigerAdmin`) ; un layout ne protège pas les pages qu'il contient, rendues en parallèle. `npm run verifier-confidentialite -- … --autre <restaurant>` vérifie aussi qu'aucune page d'un autre restaurant n'est servie.
 
+### 4 octies. Inscription d'un restaurant (`/inscription`)
+
+Le restaurateur s'inscrit seul, sur son téléphone : menu (photos ou PDF), carte des vins, logo, couleur, compte. Claude lit le menu et la carte (`src/lib/inscription/adaptateurs.ts`) ; chaque vin est rapproché de la base de Pat (« Déjà référencé » / « Nouveau producteur », jamais de ranking). Avant le compte, l'inscription vit dans la table `inscription`, retrouvée par un cookie dont seule l'empreinte est stockée ; les fichiers sont gardés dans `inscription_fichier` et effacés avec elle. Limites : 5 inscriptions par IP et par jour, 6 lectures par inscription, vrai format de fichier vérifié, photos réduites dans le navigateur (Netlify : 6 Mo par requête). L'e-mail confirmé (`/auth/inscription-confirmee`), le restaurant est créé (origine « inscription »), l'accès donné, les producteurs inconnus arrivent dans « Producteurs à valider », et la préparation des accords démarre (file des régénérations) ; le restaurant passe en service quand elle est finie. Super-admin : avancement et « Relancer la préparation ».
+
+À configurer une fois dans Supabase (Authentication) :
+- **Email Templates › Confirm signup** : `<a href="{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email">Confirmer mon adresse</a>` ;
+- **URL Configuration › Redirect URLs** : ajouter `https://<votre site>/auth/inscription-confirmee**` ;
+- Netlify : variable `INSCRIPTION_SEL` (texte aléatoire, sel des empreintes d'adresses IP).
+
+En local sans Supabase, l'e-mail est remplacé par un lien « Confirmer (développement local) » sur l'écran d'attente.
+
 ### 5. Lancer et déployer
 
 ```bash

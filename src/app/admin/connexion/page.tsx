@@ -31,6 +31,7 @@ export default async function Connexion({ searchParams }: { searchParams: Promis
             <a href="/admin/connexion?oubli=1" className="discret">Mot de passe oublié ?</a>
           </form>
         )}
+        <p className="discret" style={{ margin: 0, fontSize: 14 }}>Pas encore de compte ? <a href="/inscription">Inscrire mon restaurant</a></p>
       </div>
     </div>
   );

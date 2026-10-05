@@ -20,6 +20,7 @@ export async function indicateurs() {
 export interface RestaurantSuper {
   id: string; nom: string; couleur: string; statut: string; ville: string | null; langues: string[];
   plats: number; vins: number; accords: number; a_relire: number; producteurs: number; acces: number; ajustements: number;
+  origine: string; prep_total: number; prep_faits: number; prep_erreurs: number; prep_attente: number;
 }
 export async function restaurantsSuper() {
   return requete<RestaurantSuper>(
@@ -31,8 +32,15 @@ export async function restaurantsSuper() {
             (select count(distinct v.producteur_id)::int from vin_carte v join producteur p on p.id = v.producteur_id
               where v.restaurant_id = r.id and p.statut = 'propose') as producteurs,
             (select count(*)::int from acces_restaurant x where x.restaurant_id = r.id) as acces,
-            (select count(*)::int from jsonb_object_keys(r.reglages_selection)) as ajustements
-       from restaurant r order by r.nom`);
+            (select count(*)::int from jsonb_object_keys(r.reglages_selection)) as ajustements, r.origine,
+            -- Dernière préparation (ou régénération) des accords : avancement.
+            coalesce(g.total, 0) as prep_total, coalesce(g.faits, 0) as prep_faits, coalesce(g.erreurs, 0) as prep_erreurs, coalesce(g.attente, 0) as prep_attente
+       from restaurant r
+       left join lateral (select count(*)::int as total, count(*) filter (where statut = 'fait')::int as faits,
+                                 count(*) filter (where statut = 'erreur')::int as erreurs,
+                                 count(*) filter (where statut in ('en_attente', 'en_cours'))::int as attente
+                            from generation_accords where lot = (select lot from generation_accords where restaurant_id = r.id order by cree_le desc, id desc limit 1)) g on true
+      order by r.nom`);
 }
 
 // ───────── Producteurs à valider ─────────

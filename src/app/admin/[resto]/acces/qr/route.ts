@@ -11,7 +11,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   return new Response(corps, {
     headers: {
       'content-type': png ? 'image/png' : 'image/svg+xml',
-      'content-disposition': `attachment; filename="qr-${resto}.${png ? 'png' : 'svg'}"`,
+      // ?affichage=1 : affiché dans la page (écran de fin d'inscription) ; sinon téléchargé.
+      ...(new URL(req.url).searchParams.get('affichage') ? {} : { 'content-disposition': `attachment; filename="qr-${resto}.${png ? 'png' : 'svg'}"` }),
     },
   });
 }

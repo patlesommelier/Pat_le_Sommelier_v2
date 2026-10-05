@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerStatutRestaurant, creerRestaurant, voirCommeRestaurant } from './actions';
+import { changerStatutRestaurant, creerRestaurant, relancerPreparation, voirCommeRestaurant } from './actions';
 import { etapesRestaurant } from '../[resto]/etapes';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
@@ -43,7 +43,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
               <tr key={r.id}>
                 <td><div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                   <span style={{ width: 30, height: 30, borderRadius: 8, background: r.couleur, color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700 }}>{r.nom.slice(0, 1)}</span>
-                  <div><b>{r.nom}</b><div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div></div></div></td>
+                  <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div></div></div></td>
                 <td>
                   <form action={changerStatutRestaurant.bind(null, r.id)} style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
                     <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
@@ -55,7 +55,14 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                 </td>
                 <td><b>{avancement.get(r.id)}</b> <span className="petit discret">étapes</span>{r.ajustements ? <div className="petit discret">{r.ajustements} règle(s) ajustée(s)</div> : null}</td>
                 <td>{r.plats} plats · {r.vins} vins</td>
-                <td>{r.accords.toLocaleString('fr-BE')}{r.a_relire ? <div className="petit discret">{r.a_relire} à relire</div> : null}</td>
+                <td>{r.accords.toLocaleString('fr-BE')}{r.a_relire ? <div className="petit discret">{r.a_relire} à relire</div> : null}
+                  {r.prep_attente > 0 && <div className="petit">Préparation : {r.prep_faits + r.prep_erreurs}/{r.prep_total} plats</div>}
+                  {r.prep_erreurs > 0 && r.prep_attente === 0 && (
+                    <form action={relancerPreparation.bind(null, r.id)} className="pile" style={{ gap: 4 }}>
+                      <span className="petit" style={{ color: 'var(--ocre)' }}>{r.prep_erreurs} plat(s) en échec</span>
+                      <button className="btn sec petit">Relancer la préparation</button>
+                    </form>
+                  )}</td>
                 <td>{r.producteurs ? <Link href="/admin/super/producteurs">{r.producteurs}</Link> : '—'}</td>
                 <td><div className="pile" style={{ gap: 6 }}>
                   <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec petit" title={`Voir l’espace exactement comme ${r.nom}, sans la cuisine interne`}>Ouvrir en tant que…</button></form>

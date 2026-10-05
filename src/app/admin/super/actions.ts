@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation';
 import { COOKIE_VUE, exigerAdmin, exigerSuperAdminReel } from '@/lib/admin/auth';
 import { supabaseService } from '@/lib/admin/supabase';
 import { requete } from '@/lib/db';
+import { preparerAccords } from '@/lib/inscription/adaptateurs';
 import { importerVersion, modifierPrincipeBrouillon } from '@/lib/principes/versions';
 import { validerProducteur, rejeterProducteur } from '@/lib/producteurs/validation';
 import { annulerPublication, confirmerPublication, preparerPublication, relancerEchecs, travaillerPublications, type TypePublication } from '@/lib/publication/publication';
@@ -94,6 +95,14 @@ export async function changerStatutRestaurant(restaurantId: string, f: FormData)
   }
   revalidatePath('/admin/super');
   redirect('/admin/super');
+}
+
+/** « Relancer la préparation » : les plats sans accord ou en échec repartent dans la file. */
+export async function relancerPreparation(restaurantId: string) {
+  const u = await exigerAdmin();
+  await preparerAccords(restaurantId, u.email, { seulementManquants: true });
+  revalidatePath('/admin/super');
+  redirect(avec('/admin/super', { ok: 'Préparation relancée.' }));
 }
 
 // ───────── Producteurs à valider ─────────
