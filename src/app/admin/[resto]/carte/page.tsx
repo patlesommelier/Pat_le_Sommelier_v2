@@ -46,8 +46,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   // Chaque étiquette trouvée coûte un crédit Wine Labs à Pat : la recherche manuelle est réservée au super-admin.
   const aChercher = vins.filter((v) => !v.etiquette_url && !['a_demander', 'demandee', 'introuvable'].includes(v.etiquette_statut ?? '')).length;
   const introuvables = vins.filter((v) => !v.etiquette_url && v.etiquette_statut === 'introuvable').length;
-  const wineLabs = Boolean(u?.admin && identifiantsWineLabs());
-  const pourquoiPas = !aChercher && (sansEtiquette === 0 ? 'toutes les étiquettes sont là'
+  const wineLabs = Boolean(u?.admin); // super-admin seulement : les crédits sont ceux de Pat
+  const pourquoiPas = !identifiantsWineLabs() ? 'Wine Labs n’est pas configuré sur le serveur (WINE_LABS_API_KEY)'
+    : !aChercher && (sansEtiquette === 0 ? 'toutes les étiquettes sont là'
     : enRecherche ? `${enRecherche} déjà en recherche${introuvables ? `, ${introuvables} introuvable(s)` : ''}` : `${introuvables} introuvable(s) chez Wine Labs : à photographier`);
   const profil = (choisi?.profil_degustation ?? {}) as Record<string, number | null>;
   const [pl, pk] = choisi ? producteur(choisi) : ['', ''];
@@ -62,9 +63,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <BoutonCarteImprimee resto={resto} />
         {wineLabs && (
           <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
-            <button className="btn sec" disabled={!aChercher} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">
+            <button className="btn sec" disabled={!aChercher || !identifiantsWineLabs()} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">
               Chercher sur Wine Labs{aChercher ? ` (${aChercher})` : ''}</button>
-            {pourquoiPas && <span className="petit discret">Rien à chercher : {pourquoiPas}.</span>}
+            {pourquoiPas && <span className="petit discret">{identifiantsWineLabs() ? 'Rien à chercher : ' : ''}{pourquoiPas}.</span>}
           </form>
         )}
       </Entete>
