@@ -131,7 +131,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               </div>
             </div>
             <div className="pile">
-              <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Classement établi par Pat à partir de la note d’accord et de sa connaissance des vignerons.'}</p></div>
+              <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Pat classe les vins à partir de la note d’accord et de sa propre sélection.'}</p></div>
               <div className="tableau">
                 <table style={{ minWidth: 900 }}>
                   <thead><tr><th className="droite">Rang</th><th>Vin</th><th>Note</th>{interne && <th className="droite">Score</th>}<th>Pourquoi (Pat)</th><th>Résultat</th></tr></thead>

@@ -130,13 +130,25 @@ test('publication des règles : immédiate, puis en service', { skip: ignorer },
   await installerReglesEnService(q, 'V7', REGLAGES_PAT, 'test'); // remise en état
 });
 
-test('valider un producteur : ses vins passent « Déjà référencé » avec son ranking', { skip: ignorer }, async () => {
-  const [p] = await q<{ id: string }>(`select p.id from producteur p where p.statut = 'propose' and exists (select 1 from vin_carte v where v.producteur_id = p.id) limit 1`);
+test('valider un producteur : ses vins passent « Déjà référencé », le ranking par cuvée est gardé', { skip: ignorer }, async () => {
+  const [p] = await q<{ id: string }>(`select p.id from producteur p where p.statut = 'propose'
+    and (select count(*) from vin_carte v where v.producteur_id = p.id) >= 1 limit 1`);
   if (!p) return;
+  // Deux cas : un vin avec son ranking de cuvée, un autre sans ranking.
+  const vins = await q<{ id: string }>(`select id from vin_carte where producteur_id = $1 order by id`, [p.id]);
+  await q(`update vin_carte set ranking_producteur = 2 where id = $1`, [vins[0].id]);
+  const autre = (await q<{ id: string }>(`select id from vin_carte where producteur_id is null limit 1`))[0];
+  await q(`update vin_carte set producteur_id = $2, ranking_producteur = null where id = $1`, [autre.id, p.id]);
+
   const r = await validerProducteur(q, { producteurId: p.id, rankingProducteur: 4, par: 'test' });
   assert.deepEqual(r.erreurs, []);
-  assert.ok(r.vins > 0);
-  const vins = await q<{ ranking_producteur: number; statut: string }>(
-    `select v.ranking_producteur, p.statut::text from vin_carte v join producteur p on p.id = v.producteur_id where p.id = $1`, [p.id]);
-  assert.ok(vins.every((v) => v.ranking_producteur === 4 && v.statut === 'valide'));
+  const rk = new Map((await q<{ id: string; ranking_producteur: number; statut: string }>(
+    `select v.id, v.ranking_producteur, p.statut::text from vin_carte v join producteur p on p.id = v.producteur_id where p.id = $1`, [p.id]))
+    .map((v) => [v.id, v]));
+  assert.equal(rk.get(vins[0].id)!.ranking_producteur, 2, 'ranking de la cuvée gardé');
+  assert.equal(rk.get(autre.id)!.ranking_producteur, 4, 'vin sans ranking : celui du producteur');
+  assert.ok([...rk.values()].every((v) => v.statut === 'valide'));
+  // Correction explicite d'une cuvée.
+  await validerProducteur(q, { producteurId: p.id, rankingProducteur: 4, vins: [{ vinId: vins[0].id, ranking: 3 }], par: 'test' });
+  assert.equal((await q<{ r: number }>(`select ranking_producteur as r from vin_carte where id = $1`, [vins[0].id]))[0].r, 3);
 });

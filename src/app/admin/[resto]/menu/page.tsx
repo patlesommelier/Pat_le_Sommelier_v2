@@ -61,6 +61,17 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
                   placeholder={'Cuisson (rôti, poché, frit, grillé, mijoté…), degré de cuisson, tous les ingrédients, épices et herbes, sauce et sa base (beurre, crème, vin, jus…), garniture, assaisonnement, piquant, acidité, sucre, textures, origine des produits…'} />
                 <span className="aide">Tout ce qui aide Pat à faire un accord plus précis. Non montré aux clients.</span>
               </div>
+              <fieldset className="champ" style={{ border: 0, padding: 0, margin: 0 }}>
+                <legend style={{ fontWeight: 700, marginBottom: 6 }}>Sauce servie à part</legend>
+                {([['oui', 'Oui', 'servie à côté, comme un condiment : elle ne dicte pas l’accord'], ['non', 'Non', 'nappée ou composante du plat : elle compte dans l’accord'],
+                  ['', 'Je ne sais pas', '']] as const).map(([v, l, aide]) => (
+                  <label key={v || 'nsp'} className="case">
+                    <input type="radio" name="sauce" value={v}
+                      defaultChecked={(choisi.sauce_servie_a_part === true && v === 'oui') || (choisi.sauce_servie_a_part === false && v === 'non') || (choisi.sauce_servie_a_part === null && v === '')} />
+                    <span>{l}{aide && <small>{aide}</small>}</span>
+                  </label>
+                ))}
+              </fieldset>
               {choisi.description_apres_accords && (
                 <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Description modifiée après le calcul des accords de ce plat : Pat en tiendra compte au prochain calcul.</p>
               )}

@@ -5,7 +5,7 @@ import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getExclusions, getVinsBO } from '@/lib/admin/donnees';
 import { getReglages } from '@/lib/donnees';
 import { requete } from '@/lib/db';
-import { parametresEnService } from '@/lib/regles/versions';
+import { parametresEnService, reglesEnService } from '@/lib/regles/versions';
 import { type Reglages } from '@/lib/selection';
 
 type Cle = keyof Reglages;
@@ -17,8 +17,8 @@ const GROUPES: [string, Def[]][] = [
     { n: '1', titre: 'Élimination', texte: 'Un vin trop faible sur le plat n’est jamais proposé, même pour compléter la liste.', champs: [{ cle: 'noteEliminatoire', libelle: 'Écarter les notes ≤' }] },
   ]],
   ['Classement', [
-    { n: '2', titre: 'Classement', texte: 'Pat classe les vins à partir de la note d’accord et de sa connaissance des vignerons. Les mieux classés sont proposés en premier.', champs: [] },
-    { n: '3', titre: 'Diversité', texte: 'À égalité, le vin le plus différent de ceux déjà retenus (couleur, pays, cépage, appellation) passe devant, puis l’ordre de votre carte.', champs: [{ cle: 'diversite', libelle: 'Active' }] },
+    { n: '2', titre: 'Classement de Pat', texte: 'Pat classe les vins à partir de la note d’accord et de sa propre sélection. Les mieux classés sont proposés en premier.', champs: [] },
+    { n: '3', titre: 'Diversité', texte: 'À égalité, le vin le plus différent de ceux déjà retenus (couleur, pays, cépage, appellation) passe devant, puis la sélection de Pat, puis l’ordre de votre carte.', champs: [{ cle: 'diversite', libelle: 'Active' }] },
   ]],
   ['Composer la liste', [
     { n: '3–6', titre: 'Nombre de vins', texte: 'Les premiers vins du classement, puis jusqu’au maximum s’ils sont bien notés et proches du dernier retenu.', champs: [{ cle: 'premiers', libelle: 'Premiers' }, { cle: 'maximum', libelle: 'Maximum' }, { cle: 'noteMinAjout', libelle: 'Note ≥' }] },
@@ -34,12 +34,13 @@ const affiche = (v: number | boolean) => typeof v === 'boolean' ? (v ? 'active' 
 export default async function Regles({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { resto } = await params;
   const { ok } = await searchParams;
-  const [R, exclusions, vins, PAT] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), parametresEnService(requete)]);
+  const [R, exclusions, vins, PAT, version] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), parametresEnService(requete),
+    reglesEnService(requete).catch(() => null)]);
   const modifies = (Object.keys(PAT) as Cle[]).filter((k) => R[k] !== PAT[k]);
   const exclus = new Set(exclusions.map((x) => x.cible));
   return (
     <>
-      <Entete titre="Règles du sommelier" texte="Pat applique par défaut ses règles de sélection (V7). Ajustez-les à votre service : la valeur de Pat reste visible et se rétablit d’un clic.">
+      <Entete titre="Règles du sommelier" texte={`Pat applique par défaut ses règles de sélection (${version?.code ?? 'V7'}). Ajustez-les à votre service : la valeur de Pat reste visible et se rétablit d’un clic.`}>
         {modifies.length > 0 && <form action={retablirTout.bind(null, resto)}><button className="btn sec"><Icone nom="reset" taille={18} />Rétablir les règles de Pat</button></form>}
       </Entete>
       <Message ok={ok ? 'Réglages enregistrés : le simulateur et l’app les appliquent déjà.' : undefined} />

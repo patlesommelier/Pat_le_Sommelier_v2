@@ -7,7 +7,8 @@ export type EtatEtape = 'fait' | 'encours' | 'afaire';
 export interface Etape { href: string; libelle: string; etat: EtatEtape }
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
-export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
+export function NavLiens({ accueil, etapes, admin, supports }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[];
+  supports?: { href: string; libelle: string }[] }) {
   const chemin = usePathname();
   const courant = (href: string) => (href === accueil ? chemin === href : chemin.startsWith(href)) ? 'page' : undefined;
   return (
@@ -22,6 +23,8 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
           {e.libelle}
         </Link>
       ))}
+      {supports?.length ? <div className="section">Supports</div> : null}
+      {supports?.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}><span className="bo-num" style={{ border: 0 }}><Icone nom="print" /></span>{l.libelle}</Link>)}
       {admin?.length ? <div className="section">Pat</div> : null}
       {admin?.map((l) => <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}><span className="bo-num" style={{ border: 0 }}><Icone nom="users" /></span>{l.libelle}</Link>)}
     </nav>

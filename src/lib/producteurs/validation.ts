@@ -2,8 +2,10 @@
  * Validation des producteurs proposés (écran super-admin « Producteurs à valider »).
  * Un producteur repéré sur une carte arrive « proposé » : le restaurant voit « Nouveau producteur ».
  * À la validation, Pat fixe son ranking (et celui des terroirs de ses vins) : les vins des cartes qui le citent
- * passent en « Déjà référencé » et reprennent ces rankings, ce qui les reclasse aussitôt (le classement est
- * calculé à chaque affichage ; les notes d'accord ne changent pas).
+ * passent en « Déjà référencé » et sont reclassés aussitôt (le classement est calculé à chaque affichage ;
+ * les notes d'accord ne changent pas).
+ * Ranking par cuvée (décision de Pat) : un vin de carte peut avoir son propre ranking (second vin plus bas que
+ * le grand vin). Il est gardé ; seuls les vins sans ranking prennent celui du producteur, sauf correction explicite.
  * Côté serveur uniquement ; pas d'import « server-only » : testable seul.
  */
 import type { Requete } from '../generation/accords';
@@ -12,11 +14,14 @@ const ranking = (v: unknown): v is number => Number.isInteger(v) && (v as number
 
 export interface Fiche { nom?: string; pays?: string | null; region?: string | null; notes_objectives?: string | null }
 
-export async function validerProducteur(q: Requete, { producteurId, rankingProducteur, terroirs = [], fiche = {}, par }:
-  { producteurId: string; rankingProducteur: number; terroirs?: { terroirId: string; rankingTerroir: number }[]; fiche?: Fiche; par: string }) {
+export async function validerProducteur(q: Requete, { producteurId, rankingProducteur, terroirs = [], vins: rankingsVins = [], fiche = {}, par }:
+  { producteurId: string; rankingProducteur: number; terroirs?: { terroirId: string; rankingTerroir: number }[];
+    /** Ranking propre à une cuvée de carte (null : reprend celui du producteur). */
+    vins?: { vinId: string; ranking: number | null }[]; fiche?: Fiche; par: string }) {
   const erreurs: string[] = [];
   if (!ranking(rankingProducteur)) erreurs.push('Ranking du producteur : entier de 0 à 5.');
   for (const t of terroirs) if (!ranking(t.rankingTerroir)) erreurs.push(`Ranking du terroir ${t.terroirId} : entier de 0 à 5.`);
+  for (const v of rankingsVins) if (v.ranking !== null && !ranking(v.ranking)) erreurs.push(`Ranking du vin ${v.vinId} : entier de 0 à 5.`);
   if (erreurs.length) return { erreurs, restaurants: [] as string[], vins: 0 };
 
   const [p] = await q<{ id: string }>(
@@ -28,12 +33,17 @@ export async function validerProducteur(q: Requete, { producteurId, rankingProdu
   for (const t of terroirs) {
     await q(`update terroir set ranking_pat = $2, statut = 'valide', maj_le = now() where id = $1`, [t.terroirId, t.rankingTerroir]);
   }
-  // Vins des cartes : ranking du producteur, et celui du terroir quand Pat vient de le fixer.
+  // Vins des cartes : ranking corrigé pour la cuvée, sinon le sien s'il en a un, sinon celui du producteur ;
+  // ranking du terroir quand Pat vient de le fixer.
   const vins = await q<{ restaurant_id: string }>(
-    `update vin_carte v set ranking_producteur = $2,
+    `update vin_carte v set
+            ranking_producteur = case when exists (select 1 from unnest($5::text[]) as c(id) where c.id = v.id)
+                                      then coalesce((select x.rank from unnest($5::text[], $6::int[]) as x(id, rank) where x.id = v.id), $2)
+                                      else coalesce(v.ranking_producteur, $2) end,
             ranking_terroir = coalesce((select t.rank from unnest($3::text[], $4::int[]) as t(id, rank) where t.id = v.appellation_id), v.ranking_terroir)
       where v.producteur_id = $1 returning v.restaurant_id`,
-    [producteurId, rankingProducteur, terroirs.map((t) => t.terroirId), terroirs.map((t) => t.rankingTerroir)]);
+    [producteurId, rankingProducteur, terroirs.map((t) => t.terroirId), terroirs.map((t) => t.rankingTerroir),
+      rankingsVins.map((v) => v.vinId), rankingsVins.map((v) => v.ranking)]);
   return { erreurs: [], restaurants: [...new Set(vins.map((v) => v.restaurant_id))], vins: vins.length };
 }
 

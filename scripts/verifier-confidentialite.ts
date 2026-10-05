@@ -29,7 +29,7 @@ async function adresses(): Promise<string[]> {
   try {
     const plats = (await pool.query('select id from plat where restaurant_id = $1 and actif order by ordre', [resto])).rows.map((r) => r.id as string);
     const vins = (await pool.query('select id from vin_carte where restaurant_id = $1 and disponible order by ordre limit 15', [resto])).rows.map((r) => r.id as string);
-    const admin = ['', '/menu', '/carte', '/accords', '/accords?tous=1', '/regles', '/apparence', '/acces', '/simulateur', '/carte/imprimer', '/carte/preparer']
+    const admin = ['', '/menu', '/carte', '/accords', '/accords?tous=1', '/regles', '/apparence', '/acces', '/simulateur', '/carte/imprimer', '/carte/preparer', '/supports']
       .map((s) => `/admin/${resto}${s}`);
     return [
       ...admin,

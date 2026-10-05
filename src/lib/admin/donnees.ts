@@ -58,11 +58,11 @@ export function reglagesModifies(r: RestaurantBO | null, base: Reglages = REGLAG
 export interface PlatBO {
   id: string; nom: string; nom_court: string | null; categorie: string; prix: number | null; prix_variantes: string | null;
   actif: boolean; ordre: number; modifie_bo: string | null;
-  description_cuisine: string | null; description_apres_accords: boolean;
+  description_cuisine: string | null; description_apres_accords: boolean; sauce_servie_a_part: boolean | null;
 }
 export async function getPlatsBO(restaurantId: string) {
   return requete<PlatBO>(
-    `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.prix, pl.prix_variantes, pl.actif, pl.ordre, pl.modifie_bo, pl.description_cuisine,
+    `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.prix, pl.prix_variantes, pl.actif, pl.ordre, pl.modifie_bo, pl.description_cuisine, pl.sauce_servie_a_part,
             coalesce(pl.description_modifiee_le > (select max(a.calcule_le) from accord a where a.plat_id = pl.id and a.origine = 'pat'), false) as description_apres_accords
        from plat pl where pl.restaurant_id = $1 order by pl.ordre`, [restaurantId]);
 }

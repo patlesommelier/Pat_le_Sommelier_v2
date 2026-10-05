@@ -26,7 +26,7 @@ export function Coque({ utilisateur, resto, etapes, children }: {
             <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span>
           </Link>
         )}
-        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
+        {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} supports={[{ href: `/admin/${resto.id}/supports`, libelle: 'Carte imprimable' }]} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}
         <div className="bo-bas">
           <span>{utilisateur.email}</span>
           <form action={seDeconnecter}><button type="submit" className="btn fantome petit" style={{ paddingLeft: 0 }}>Se déconnecter</button></form>

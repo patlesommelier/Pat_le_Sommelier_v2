@@ -8,6 +8,8 @@ import { exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { creerLot, travailler } from '@/lib/generation/file';
+import Anthropic from '@anthropic-ai/sdk';
+import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { parametresEnService } from '@/lib/regles/versions';
@@ -67,11 +69,16 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
   await requete(
     `update plat set nom = coalesce($3, nom), nom_court = $4, categorie = coalesce($5::categorie_plat, categorie), prix = $6,
             prix_variantes = $7, actif = $8, modifie_bo = now(),
-            description_modifiee_le = case when coalesce(description_cuisine, '') <> coalesce($9, '') then now() else description_modifiee_le end,
-            description_cuisine = $9
+            -- Description ou sauce changée après le calcul des accords : le back-office le signale.
+            description_modifiee_le = case when coalesce(description_cuisine, '') <> coalesce($9, '') or sauce_servie_a_part is distinct from $10::boolean
+                                           then now() else description_modifiee_le end,
+            description_cuisine = $9,
+            -- Sauce servie à part : oui (condiment, principe n°44), non (composante du plat), vide (je ne sais pas).
+            sauce_servie_a_part = $10::boolean
       where id = $1 and restaurant_id = $2`,
     [platId, resto, txt(f, 'nom'), txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : null,
-      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on', txt(f, 'description_cuisine')],
+      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on', txt(f, 'description_cuisine'),
+      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
@@ -260,6 +267,45 @@ export async function preparerImpression(resto: string): Promise<string> {
   if (crees) await lancerFonctions('generer-presentations-background', crees, () => travaillerPresentations(requete, { finAvant: Date.now() + 60 * 60 * 1000 }));
   if (!crees && !(await preparationEnCours(requete, resto))) return imprimer;
   return `/admin/${resto}/carte/preparer`;
+}
+
+/** Relecture d'une présentation (rubrique Supports) : le texte du restaurant prime et n'est jamais régénéré ; vide = celle de Pat. */
+export async function enregistrerPresentation(resto: string, vinId: string, f: FormData) {
+  await exigerAcces(resto);
+  const texte = (txt(f, 'presentation') ?? '').replace(/\s+/g, ' ').slice(0, 600) || null;
+  await requete(`update vin_carte set presentation_carte_perso = $3 where restaurant_id = $1 and id = $2`, [resto, vinId, texte]);
+  revalidatePath(`/admin/${resto}/supports`);
+  redirect(`/admin/${resto}/supports?ok=${encodeURIComponent(vinId)}#${vinId}`);
+}
+
+/** « Autre proposition » : Pat réécrit la présentation de ce vin (en voyant celles des autres vins de la même couleur). */
+export async function autrePresentation(resto: string, vinId: string) {
+  await exigerAcces(resto);
+  const retour = `/admin/${resto}/supports`;
+  if (!process.env.ANTHROPIC_API_KEY) redirect(`${retour}?erreur=${encodeURIComponent('Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.')}#${vinId}`);
+  // Le vin est repris même si le restaurant avait corrigé son texte : il demande explicitement une nouvelle proposition.
+  const [vin] = await requete<VinPresentation>(SQL_VINS_A_PRESENTER.replace('and v.presentation_carte_perso is null', '') + ' and v.id = $2', [resto, vinId]);
+  const [r] = await requete<{ nom: string }>('select nom from restaurant where id = $1', [resto]);
+  if (!vin || !r) redirect(retour);
+  const existants = await requete<{ couleur: string; texte: string }>(
+    `select couleur::text as couleur, coalesce(presentation_carte_perso, presentation_carte) as texte from vin_carte
+      where restaurant_id = $1 and couleur::text = $2 and disponible and id <> $3 and coalesce(presentation_carte_perso, presentation_carte) is not null`,
+    [resto, vin.couleur, vinId]);
+  const [actuel] = await requete<{ texte: string | null }>(`select coalesce(presentation_carte_perso, presentation_carte) as texte from vin_carte where id = $1`, [vinId]);
+  let erreur: string | null = null;
+  try {
+    // L'ancien texte est montré au modèle comme « déjà écrit » : la proposition sera différente.
+    const textes = await genererPresentations([vin], r.nom, new Anthropic({ maxRetries: 3 }), process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5',
+      { existants: [...existants, ...(actuel?.texte ? [{ couleur: vin.couleur, texte: actuel.texte }] : [])] });
+    if (textes[vinId]) {
+      await requete(`update vin_carte set presentation_carte = $3, presentation_carte_perso = null where restaurant_id = $1 and id = $2`, [resto, vinId, textes[vinId]]);
+    } else erreur = 'Pat n’a pas trouvé de proposition valide : réessayez, ou écrivez le texte vous-même.';
+  } catch (e) {
+    console.error('[presentation]', e);
+    erreur = 'Pat n’a pas pu écrire de proposition pour le moment : réessayez dans un instant.';
+  }
+  revalidatePath(retour);
+  redirect(erreur ? `${retour}?erreur=${encodeURIComponent(erreur)}#${vinId}` : `${retour}?nouvelle=${encodeURIComponent(vinId)}#${vinId}`);
 }
 
 // ───────── Règles ─────────
