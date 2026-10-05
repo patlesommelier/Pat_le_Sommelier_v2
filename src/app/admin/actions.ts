@@ -52,7 +52,7 @@ export async function seConnecter(f: FormData) {
 
 export async function seDeconnecter() {
   if (supabaseConfigure()) await (await supabaseSession()).auth.signOut();
-  (await cookies()).delete(COOKIE_VUE); // fin du mode « Ouvrir en tant que… »
+  (await cookies()).delete(COOKIE_VUE); // fin de l'« Aperçu côté restaurant »
   redirect('/admin/connexion');
 }
 

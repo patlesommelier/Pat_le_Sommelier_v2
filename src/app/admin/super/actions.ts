@@ -25,7 +25,7 @@ async function origine() {
   return `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
 }
 
-// ───────── « Ouvrir en tant que… » ─────────
+// ───────── « Aperçu côté restaurant » ─────────
 export async function voirCommeRestaurant(restaurantId: string) {
   await exigerAdmin();
   (await cookies()).set(COOKIE_VUE, restaurantId, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 8 * 3600 });

@@ -17,8 +17,8 @@ export function Coque({ utilisateur, resto, etapes, children }: {
     <div className="bo">
       {utilisateur.vueRestaurant && (
         <form action={quitterVueRestaurant} className="bandeau-vue">
-          <span>Vous voyez l’espace exactement comme le restaurant (sans la cuisine interne de Pat).</span>
-          <button type="submit">Revenir au super-admin</button>
+          <span>Aperçu côté restaurant : vous voyez l’espace exactement comme le restaurant, sans vos outils de super-admin.</span>
+          <button type="submit">Quitter l’aperçu</button>
         </form>
       )}
       <aside className="bo-nav">

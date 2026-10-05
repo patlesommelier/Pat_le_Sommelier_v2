@@ -92,7 +92,7 @@ Les principes de Pat et ses règles de sélection par défaut fonctionnent par *
 ### 4 septies. Espace super-admin (`/admin/super`)
 
 Réservé aux adresses de `PAT_ADMIN_EMAILS`, barre latérale foncée :
-- **Restaurants** : indicateurs, tableau (statut, avancement sur les 7 étapes, menu et carte, accords, producteurs à valider), « Ouvrir en tant que… » (l'espace exactement comme le restaurant le voit, sans la cuisine interne ; bandeau « Revenir au super-admin »), « Créer un restaurant » avec invitation par e-mail (clé `SUPABASE_SERVICE_ROLE_KEY`).
+- **Restaurants** : indicateurs, tableau (statut, avancement sur les 7 étapes, menu et carte, accords, producteurs à valider), « Gérer en super-admin » (l'espace du restaurant avec les outils de Pat) et « Aperçu côté restaurant » (l'espace exactement comme le restaurant le voit, sans la cuisine interne ; bandeau « Quitter l'aperçu »), « Créer un restaurant » avec invitation par e-mail (clé `SUPABASE_SERVICE_ROLE_KEY`).
 - **Producteurs à valider** : fiche, cuisine interne (ranking du producteur, suggestion de Pat), ses vins (ranking par cuvée gardé), terroirs ; Rejeter / Enregistrer / Valider.
 - **Base et rankings** : producteurs et leurs vins, terroirs ; recherche et filtres ; rankings modifiables ; « Ajouter un vin ».
 - **Principes de Pat** : brouillon modifiable, filtres, texte en service, questions ouvertes, import vérifié avant création du brouillon, export Excel/JSON, historique, « Publier les principes ».

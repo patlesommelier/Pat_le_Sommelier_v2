@@ -65,8 +65,8 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                   )}</td>
                 <td>{r.producteurs ? <Link href="/admin/super/producteurs">{r.producteurs}</Link> : '—'}</td>
                 <td><div className="pile" style={{ gap: 6 }}>
-                  <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec petit" title={`Voir l’espace exactement comme ${r.nom}, sans la cuisine interne`}>Ouvrir en tant que…</button></form>
-                  <Link href={`/admin/${r.id}`} className="petit">Ouvrir (vue de Pat)</Link>
+                  <Link href={`/admin/${r.id}`} className="btn petit" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Gérer en super-admin</Link>
+                  <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec petit" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Aperçu côté restaurant</button></form>
                 </div></td>
               </tr>
             ))}
