@@ -15,13 +15,14 @@ const livraison = {
 test('le webhook de Wine Labs est lu (data.request)', () => {
   assert.deepEqual(lireRequete(livraison), {
     id: 'e40a2be1-07c4-4cc6-98ad-44a44a841d48', statut: 'fulfilled',
-    image: 'https://cdn.wine-labs.example/winelabs/cleaned-labels/hash/bf3f78c66e58.png', vinId: 'sku-12345',
+    image: 'https://cdn.wine-labs.example/winelabs/cleaned-labels/hash/bf3f78c66e58.png', vinId: 'sku-12345', erreur: null,
   });
 });
 
 test('la réponse de POST /wine_labels est lue (request)', () => {
   assert.deepEqual(lireRequete({ request: { id: 'abc', status: 'processing', client_request_id: 'L-B12' }, credits: {} }),
-    { id: 'abc', statut: 'processing', image: null, vinId: 'L-B12' });
+    { id: 'abc', statut: 'processing', image: null, vinId: 'L-B12', erreur: null });
+  assert.equal(lireRequete({ request: { id: 'f', status: 'failed', error_details: 'source image unreadable' } }).erreur, 'source image unreadable');
 });
 
 test('texte envoyé : producteur ajouté seulement s’il manque', () => {
