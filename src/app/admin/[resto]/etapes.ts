@@ -24,9 +24,10 @@ export function etapesRestaurant(r: RestaurantBO, s: Resume): EtapeDetail[] {
         : s.accords ? `${pl(s.accords_valides, 'validé', 'validés')} · ${pl(s.accords_proposes, 'à relire', 'à relire')}` : 'Pat note chaque vin sur chaque plat, de 1 à 5',
       statut: s.preparation_en_cours ? ['En cours', 'propose'] : accordsFaits ? ['Validés', 'ok'] : s.accords ? ['À relire', 'propose'] : ['Étape suivante', 'propose'],
       action: s.accords ? 'Relire les accords' : 'Voir les accords' },
-    { href: `${base}/regles`, libelle: 'Règles du sommelier', icone: 'sliders', etat: modifs ? 'fait' : 'afaire',
+    // Les règles de Pat par défaut suffisent pour servir : l'étape est faite même sans réglage modifié.
+    { href: `${base}/regles`, libelle: 'Règles du sommelier', icone: 'sliders', etat: 'fait',
       ligne1: modifs ? pl(modifs, 'réglage modifié', 'réglages modifiés') : 'Règles de Pat par défaut (V7)', ligne2: 'À ajuster selon votre service',
-      statut: modifs ? ['Ajustées', 'ok'] : ['Par défaut', 'defaut'], action: 'Voir les règles' },
+      statut: modifs ? ['Ajustées', 'ok'] : ['Par défaut', 'ok'], action: 'Voir les règles' },
     { href: `${base}/apparence`, libelle: 'Apparence', icone: 'palette', etat: r.modifie_bo ? 'fait' : 'afaire',
       ligne1: `Logo et couleur de ${r.nom}`, ligne2: 'La couleur peut venir d’une photo de votre salle',
       statut: r.modifie_bo ? ['Fait', 'ok'] : ['À faire', ''], action: 'Choisir l’apparence' },
