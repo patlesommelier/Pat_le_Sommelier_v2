@@ -63,6 +63,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
         <BoutonCarteImprimee resto={resto} />
+        <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         {wineLabs && (
           <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
             <button className="btn sec" disabled={!aChercher || !identifiantsWineLabs()} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">

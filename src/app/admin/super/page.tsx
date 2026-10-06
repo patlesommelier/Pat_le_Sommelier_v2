@@ -15,10 +15,10 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [ind, restos] = await Promise.all([indicateurs(), restaurantsSuper()]);
-  // Avancement sur les 7 étapes de la mise en place, calculé comme dans l'espace du restaurant.
+  // Avancement sur les 6 étapes de la mise en place, calculé comme dans l'espace du restaurant.
   const avancement = new Map(await Promise.all(restos.map(async (r) => {
     const [bo, resume] = await Promise.all([getRestaurantBO(r.id), getResume(r.id)]);
-    const etapes = bo ? etapesRestaurant(bo, resume) : [];
+    const etapes = bo ? etapesRestaurant(bo, resume).filter((e) => e.libelle !== 'Simulateur') : []; // le simulateur est un outil, pas une étape
     return [r.id, `${etapes.filter((e) => e.etat === 'fait').length}/${etapes.length}`] as const;
   })));
 

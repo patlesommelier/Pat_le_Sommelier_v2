@@ -22,7 +22,7 @@ export default async function Supports({ params, searchParams }: { params: Promi
 
   return (
     <>
-      <Entete titre="Carte imprimable" texte="La carte des vins à imprimer ou à enregistrer en PDF : couverture avec votre logo et le QR code, puis chaque vin présenté par Pat en trois à quatre lignes.">
+      <Entete titre="Imprimer la carte des vins" texte="La carte des vins à imprimer ou à enregistrer en PDF : couverture avec votre logo et le QR code, puis chaque vin présenté par Pat en trois à quatre lignes.">
         <BoutonCarteImprimee resto={resto} />
       </Entete>
       <div className="carte-bo pile" style={{ gap: 6, padding: '16px 20px' }}>
