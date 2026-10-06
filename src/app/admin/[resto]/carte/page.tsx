@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { chercherEtiquettes, enregistrerVin } from '../../actions';
+import { chercherEtiquettes, enregistrerVin, supprimerVin } from '../../actions';
+import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
@@ -178,6 +179,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <Link href={`/${resto}/vin/${choisi.id}`} target="_blank" className="btn sec petit">Voir la fiche client</Link>
               </div>
             </form>
+            <div className="carte-bo pile" style={{ gap: 8 }}>
+              <span className="discret" style={{ fontSize: 14 }}>Vin retiré définitivement de votre carte ? (Pour une rupture, décochez plutôt « Disponible ».)</span>
+              <BoutonConfirmation action={supprimerVin.bind(null, resto, choisi.id)} libelle="Supprimer ce vin"
+                question={`Supprimer « ${choisi.libelle} » de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
+            </div>
           </aside>
         )}
       </div>

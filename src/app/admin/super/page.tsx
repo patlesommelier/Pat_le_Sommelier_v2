@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { changerStatutRestaurant, creerRestaurant, relancerPreparation, voirCommeRestaurant } from './actions';
+import { changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, voirCommeRestaurant } from './actions';
+import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { etapesRestaurant } from '../[resto]/etapes';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
@@ -47,6 +48,8 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                     <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 6 }}>
                       <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
                       <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
+                      <BoutonConfirmation action={supprimerRestaurant.bind(null, r.id)} libelle="Supprimer" className="btn fantome mini" saisie={r.nom}
+                        question={`Supprimer définitivement « ${r.nom} » ? Menu, carte des vins, accords, règles et accès seront effacés. Cette action est irréversible.`} />
                     </div></div></div></td>
                 <td>
                   <form action={changerStatutRestaurant.bind(null, r.id)} style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
