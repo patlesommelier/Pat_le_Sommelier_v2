@@ -30,6 +30,9 @@ type VinPartage = {
 };
 type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null };
 
+/** Clé d'une étiquette gardée par nom (vin sans producteur) : nom normalisé et couleur. Exporté pour les tests. */
+export const cleLibelle = (libelle: string, couleur: string) => `${slug(libelle)}|${couleur}`;
+
 /** Couleurs incompatibles : un rosé n'est pas un blanc, un rouge n'est pas un blanc. Les bulles peuvent être blanches ou rosées. */
 function couleursCompatibles(a: string | null, b: string | null) {
   return !a || !b || a === b || a === 'bulles' || b === 'bulles';
@@ -76,6 +79,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
   };
 
   const touchees = new Set<string>();
+  const clesTouchees = new Set<string>(); // étiquettes par nom (vins sans producteur)
   for (const v of lignes) {
     let cuvee = v.cuvee_id && v.cuvee_producteur === v.producteur_id ? v.cuvee_id : null;
     const aSaPhoto = Boolean(v.etiquette_url && v.etiquette_source && v.etiquette_source !== 'cuvee');
@@ -90,6 +94,19 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
            values ($1, $2, $3, $4, $5::couleur_vin, 'propose', 'carte') on conflict (id) do nothing`,
           [cuvee, v.producteur_id, v.libelle, v.appellation_id, v.couleur]);
         liste.push({ id: cuvee, nom: v.libelle, couleur: v.couleur });
+      }
+    }
+    // Vin sans producteur (donc sans cuvée) : sa photo est gardée sous son nom exact et sa couleur.
+    if (!v.producteur_id) {
+      const cle = cleLibelle(v.libelle, v.couleur);
+      clesTouchees.add(cle);
+      if (aSaPhoto) {
+        await requete(
+          `insert into etiquette_libelle (cle, libelle, couleur, etiquette_url, etiquette_source, vin_id) values ($1, $2, $3, $4, $5, $6)
+           on conflict (cle) do update set etiquette_url = excluded.etiquette_url, etiquette_source = excluded.etiquette_source,
+             vin_id = excluded.vin_id, maj_le = now()
+            where $7 or coalesce(array_position(array['fichier', 'wine_labs', 'restaurant'], etiquette_libelle.etiquette_source), 0) < $8`,
+          [cle, v.libelle, v.couleur, v.etiquette_url, v.etiquette_source, v.id, v.id === nouvellePhoto, ORDRE_SOURCE[v.etiquette_source!] ?? 0]);
       }
     }
     if (cuvee !== v.cuvee_id) await requete('update vin_carte set cuvee_id = $2 where id = $1', [v.id, cuvee]);
@@ -107,7 +124,22 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
         [cuvee, v.etiquette_url, v.etiquette_source, v.id, v.id === nouvellePhoto, ORDRE_SOURCE[v.etiquette_source!] ?? 0]);
     }
   }
-  if (!touchees.size) return 0;
+  // Étiquette gardée par nom → vins sans producteur et sans photo propre portant ce nom (toutes les cartes).
+  let recuesParNom = 0;
+  if (clesTouchees.size) {
+    const etiquettes = new Map((await requete<{ cle: string; etiquette_url: string }>(
+      'select cle, etiquette_url from etiquette_libelle where cle = any($1)', [[...clesTouchees]])).map((e) => [e.cle, e.etiquette_url]));
+    const candidats = await requete<{ id: string; libelle: string; couleur: string; etiquette_url: string | null }>(
+      `select id, libelle, couleur::text, etiquette_url from vin_carte
+        where producteur_id is null and (etiquette_url is null or etiquette_source = 'cuvee')`);
+    for (const c of candidats) {
+      const url = etiquettes.get(cleLibelle(c.libelle, c.couleur));
+      if (!url || url === c.etiquette_url) continue;
+      await requete(`update vin_carte set etiquette_url = $2, etiquette_source = 'cuvee', etiquette_statut = 'trouvee' where id = $1`, [c.id, url]);
+      recuesParNom++;
+    }
+  }
+  if (!touchees.size) return recuesParNom;
 
   // Étiquette de la cuvée → vins sans photo propre (toutes les cartes).
   const recues = await requete<{ id: string }>(
@@ -120,7 +152,8 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
   await requete(
     `update vin_carte v set etiquette_url = null, etiquette_source = null, etiquette_statut = null
       where v.etiquette_source = 'cuvee' and ($1::text[] is null or v.id = any($1) or v.cuvee_id = any($2))
-        and not exists (select 1 from cuvee c where c.id = v.cuvee_id and c.etiquette_url = v.etiquette_url)`,
+        and not exists (select 1 from cuvee c where c.id = v.cuvee_id and c.etiquette_url = v.etiquette_url)
+        and not (v.producteur_id is null and exists (select 1 from etiquette_libelle e where e.etiquette_url = v.etiquette_url))`,
     [vins ?? null, [...touchees]]);
-  return recues.length;
+  return recues.length + recuesParNom;
 }

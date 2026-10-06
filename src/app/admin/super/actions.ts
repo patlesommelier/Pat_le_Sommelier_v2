@@ -92,7 +92,8 @@ export async function creerRestaurant(f: FormData) {
 /**
  * Supprime définitivement un restaurant (restaurants de test, inscriptions abandonnées) : menu, carte, accords, règles,
  * accès et file de génération partent avec lui. Le nom doit être retapé (vérifié ici). Les comptes ne sont pas supprimés
- * (un compte peut avoir d'autres restaurants) ; les producteurs proposés par cette seule carte sont retirés de la file à valider.
+ * (un compte peut avoir d'autres restaurants) ; les producteurs proposés par cette seule carte sont retirés de la file à valider,
+ * sauf ceux dont les cuvées portent une étiquette (base de Pat).
  */
 export async function supprimerRestaurant(restaurantId: string, f: FormData) {
   await exigerSuperAdminReel();
@@ -103,8 +104,11 @@ export async function supprimerRestaurant(restaurantId: string, f: FormData) {
     'select distinct producteur_id from vin_carte where restaurant_id = $1 and producteur_id is not null', [restaurantId])).map((p) => p.producteur_id);
   await requete('delete from inscription where restaurant_id = $1', [restaurantId]); // et ses fichiers
   await requete('delete from restaurant where id = $1', [restaurantId]); // plats, vins, accords, règles, accès : en cascade
+  // Producteurs proposés par cette seule carte : retirés de la file, sauf s'ils portent des étiquettes
+  // (cuvées avec photo) — elles servent aux autres cartes, et à ce restaurant s'il est recréé.
   await requete(`delete from producteur p where p.id = any($1) and p.statut = 'propose' and p.source = 'inscription'
-                   and not exists (select 1 from vin_carte v where v.producteur_id = p.id)`, [producteurs]);
+                   and not exists (select 1 from vin_carte v where v.producteur_id = p.id)
+                   and not exists (select 1 from cuvee c where c.producteur_id = p.id and c.etiquette_url is not null)`, [producteurs]);
   if ((await cookies()).get(COOKIE_VUE)?.value === restaurantId) (await cookies()).delete(COOKIE_VUE);
   revalidatePath('/admin', 'layout');
   redirect(avec('/admin/super', { ok: `« ${r.nom} » a été supprimé.` }));

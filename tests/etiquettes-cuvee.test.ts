@@ -34,3 +34,9 @@ test("l'appellation du vin n'empêche pas de retrouver une cuvée nommée sans e
   assert.equal(cuveeCorrespondante({ ...vin('Champagne Dom Pérignon Vintage', 'bulles', null, 'Dom Pérignon'), appellation_nom: 'Champagne' },
     [{ id: 'dp', nom: 'Dom Pérignon Vintage', couleur: null }])?.id, 'dp');
 });
+
+test('étiquette d’un vin sans producteur : même clé pour le même vin, aux accents et majuscules près', async () => {
+  const { cleLibelle } = await import('../src/lib/etiquettes/partage');
+  assert.equal(cleLibelle('Champagne Brut Réserve', 'bulles'), cleLibelle('champagne  brut reserve', 'bulles'));
+  assert.notEqual(cleLibelle('Champagne Brut Réserve', 'bulles'), cleLibelle('Champagne Brut Réserve', 'blanc'));
+});
