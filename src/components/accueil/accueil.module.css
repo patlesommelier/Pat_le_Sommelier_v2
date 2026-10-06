@@ -28,9 +28,6 @@
 .depot:focus-within { outline: 3px solid #E9B949; outline-offset: 2px; }
 .icone { width: 42px; height: 42px; border-radius: 12px; background: #FFF; border: 1px solid #E8DDDF; color: #610420; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .attente { display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 12px 18px; box-sizing: border-box; border-radius: 14px; background: #F7EEF0; font-weight: 700; }
-.roue { width: 26px; height: 26px; border-radius: 50%; border: 3px solid #E8C9D0; border-top-color: #610420; animation: tourne 0.9s linear infinite; }
-@keyframes tourne { to { transform: rotate(360deg); } }
-@media (prefers-reduced-motion: reduce) { .roue { animation-duration: 3s; } }
 .trouve { display: flex; align-items: center; gap: 14px; min-height: 72px; padding: 12px 18px; box-sizing: border-box; border: 1.5px solid #B9D8C3; border-radius: 14px; background: #F2F9F4; }
 .coche { width: 42px; height: 42px; border-radius: 21px; background: #1E5B34; color: #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .nombre { flex: 1; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif; font-size: 26px; font-weight: 800; letter-spacing: -0.4px; color: #1E5B34; }

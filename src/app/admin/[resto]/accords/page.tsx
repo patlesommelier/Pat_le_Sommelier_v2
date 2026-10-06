@@ -3,6 +3,7 @@ import { changerNote, modifierCommentaire, regenererTout, relancerPlatsSansAccor
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
+import { PatAttente } from '@/components/PatAttente';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
@@ -283,13 +284,16 @@ function SuiviRegeneration({ etat, demande, erreur }: { etat: EtatLot | null; de
   if (etat.termine) return null;
   const finis = etat.faits + etat.erreurs.length;
   return (
-    <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px' }} aria-live="polite">
+    <div className="carte-bo" style={{ display: 'flex', gap: 18, alignItems: 'center', padding: '16px 20px' }} aria-live="polite">
       <ActualisationAuto />
-      <strong>Pat régénère les accords…</strong>
-      <span className="discret">
-        {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, six plats à la fois`}
-        {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
-      </span>
+      <PatAttente taille={56} />
+      <div className="pile" style={{ gap: 6 }}>
+        <strong>Pat régénère les accords…</strong>
+        <span className="discret">
+          {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, six plats à la fois`}
+          {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
+        </span>
+      </div>
     </div>
   );
 }

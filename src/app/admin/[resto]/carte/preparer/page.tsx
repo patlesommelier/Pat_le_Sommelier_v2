@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PatAttente } from '@/components/PatAttente';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { RedirectionAuto } from '@/components/admin/RedirectionAuto';
 import { Entete } from '@/components/admin/Ui';
@@ -32,7 +33,10 @@ export default async function Preparer({ params }: { params: Promise<{ resto: st
       <div className="carte-bo pile" style={{ gap: 8, padding: '16px 20px' }} aria-live="polite">
         {!termine && <ActualisationAuto />}
         {ouvrir && <RedirectionAuto href={imprimer} />}
-        <strong>{termine ? (ouvrir ? 'Présentations prêtes : ouverture de la carte…' : 'Préparation terminée') : 'Pat écrit les présentations…'}</strong>
+        <div style={{ display: 'flex', gap: 16, alignItems: 'center' }}>
+          {!termine && <PatAttente taille={52} />}
+          <strong>{termine ? (ouvrir ? 'Présentations prêtes : ouverture de la carte…' : 'Préparation terminée') : 'Pat écrit les présentations…'}</strong>
+        </div>
         {!termine && <span className="discret">Comptez une à trois minutes ; les couleurs sont traitées en parallèle. La carte s’ouvrira toute seule.</span>}
         {etat?.couleurs.map((c) => (
           <span key={c.couleur}>

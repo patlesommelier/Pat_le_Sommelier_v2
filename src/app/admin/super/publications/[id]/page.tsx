@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { PatAttente } from '@/components/PatAttente';
 import { notFound } from 'next/navigation';
 import { annuler, confirmer, relancer } from '../../actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
@@ -41,6 +42,7 @@ export default async function Publication({ params, searchParams }: { params: Pr
           <Etat type={statut[e.statut]?.[1] ?? ''}>{statut[e.statut]?.[0] ?? e.statut}</Etat>
           <span>{e.faits + e.erreurs} plat(s) sur {e.total} recalculé(s){e.erreurs ? ` · ${e.erreurs} en échec` : ''} · {e.platsModifies} plat(s) où le client verra une différence</span>
         </div>
+        {e.statut === 'en_preparation' && <PatAttente taille={52} />}
         {e.statut === 'en_preparation' && <span className="discret">Pat note à nouveau chaque plat avec le brouillon : comptez une à deux minutes par plat, six plats à la fois. La page se met à jour toute seule.</span>}
         {e.versionModifiee && e.statut !== 'confirmee' && e.statut !== 'annulee' && (
           <span className="message" style={{ margin: 0 }}>Le brouillon a été modifié depuis la préparation : la mise en service sera refusée. Relancez la publication depuis {e.type === 'principes' ? 'les principes' : 'les règles'}.</span>)}

@@ -4,6 +4,7 @@
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import s from './accueil.module.css';
+import { PatAttente } from '@/components/PatAttente';
 import { deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 
@@ -69,7 +70,7 @@ function Depot({ type, etat, onReponse }: {
 
   const t = TEXTES[type];
   if (prepare || enCours || etat?.statut === 'en_cours') {
-    return <div className={s.attente} role="status" aria-live="polite"><span className={s.roue} aria-hidden="true" />{prepare ? 'Préparation des fichiers…' : t.lecture}</div>;
+    return <div className={s.attente} role="status" aria-live="polite"><PatAttente taille={52} />{prepare ? 'Préparation des fichiers…' : t.lecture}</div>;
   }
   const remplacer = etat?.statut === 'ok';
   const champ = (

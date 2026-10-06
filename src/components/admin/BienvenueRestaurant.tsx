@@ -3,6 +3,7 @@
 // Affiché en haut du tableau de bord avec ?bienvenue=1, ou tant que le restaurant inscrit n'est pas en service.
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
+import { PatAttente } from '@/components/PatAttente';
 
 type Etat = { restaurant?: string; preparation: { statut: string; total: number; faits: number } };
 
@@ -36,8 +37,10 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24 }}>
         <section aria-labelledby="h-prep" role="status" aria-live="polite" className="carte-bo sticker"
           style={{ flex: '999 1 460px', display: 'flex', gap: 28, alignItems: 'center', flexWrap: 'wrap' }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/pat/pat.png" alt="" width={120} height={132} />
+          {fini
+            // eslint-disable-next-line @next/next/no-img-element
+            ? <img src="/pat/pat.png" alt="" width={120} height={132} />
+            : <PatAttente taille={120} />}
           <div className="pile" style={{ flex: '1 1 300px', gap: 12 }}>
             <span className="surtitre">{fini ? 'Terminé' : 'En cours'}</span>
             <h2 id="h-prep" style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', fontWeight: 800 }}>{fini ? 'Vos accords sont prêts' : 'Pat prépare vos accords'}</h2>
