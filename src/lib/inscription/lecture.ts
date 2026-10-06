@@ -37,20 +37,35 @@ function lireTableau(texte: string): unknown[] {
   }
 }
 
-async function lire(fichiers: FichierEnvoye[], consigne: string): Promise<unknown[]> {
+/** Document déposé à la mauvaise étape (un menu de plats à la place de la carte des vins, ou l'inverse). */
+export class MauvaisDocument extends Error {
+  constructor(message: string) { super(message); this.name = 'MauvaisDocument'; }
+}
+
+// Réponse convenue quand le document n'est pas celui attendu (voir les consignes ci-dessous).
+const SIGNAL = { carte: 'MENU_DE_PLATS', menu: 'CARTE_DES_VINS' } as const;
+const MAUVAIS: Record<keyof typeof SIGNAL, string> = {
+  carte: 'Ce document ressemble à un menu de plats, pas à une carte des vins. Déposez ici votre carte des vins : le menu viendra à l’étape suivante.',
+  menu: 'Ce document ressemble à une carte des vins, pas à un menu. Déposez ici votre menu, avec vos plats.',
+};
+
+async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof typeof SIGNAL): Promise<unknown[]> {
   const client = new Anthropic({ maxRetries: 3 });
   const m = await client.messages.stream({
     model: modele(), max_tokens: 32000,
     messages: [{ role: 'user', content: [...await blocs(fichiers), { type: 'text', text: consigne }] }],
   }).finalMessage();
-  return lireTableau(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
+  const texte = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
+  if (texte.includes(SIGNAL[attendu]) && !texte.includes('[{')) throw new MauvaisDocument(MAUVAIS[attendu]);
+  return lireTableau(texte);
 }
 
 const CONSIGNE_MENU = `Ces documents sont les pages du menu d'un restaurant (photos ou PDF). Relève chaque plat proposé.
 Pour chaque plat : « nom » tel qu'écrit sur le menu (sans le prix), « categorie » parmi entree, plat, dessert, fromage
 (une planche ou un en-cas : entree), et « description » : les ingrédients, la cuisson ou la sauce indiqués sur le menu (null s'il n'y en a pas).
 Ignore les boissons, les vins, les suppléments isolés et les formules sans plat précis. N'invente rien.
-Réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "..."}]`;
+Si ces documents ne contiennent aucun plat mais une carte des vins ou des boissons, réponds exactement CARTE_DES_VINS, sans rien d'autre.
+Sinon, réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "..."}]`;
 
 const CONSIGNE_CARTE = `Ces documents sont les pages de la carte des vins d'un restaurant (photos ou PDF). Relève chaque vin.
 Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, sans millésime ni prix), « producteur »
@@ -60,17 +75,18 @@ Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, 
 « auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux
 (tout effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null).
 Un même vin en deux contenances donne deux lignes. N'invente rien.
-Réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",
+Si ces documents ne contiennent aucun vin mais un menu de plats (entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
+Sinon, réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",
 "contenance": null, "prix": 58, "prixVerre": null, "auVerre": false, "couleur": "blanc", "region": "Loire"}]`;
 
 /** Lit le menu (photos ou PDF) et renvoie les plats. Données brutes : elles seront validées par `Plat`. */
 export async function analyserMenu(fichiers: FichierEnvoye[]): Promise<unknown[]> {
-  return lire(fichiers, CONSIGNE_MENU);
+  return lire(fichiers, CONSIGNE_MENU, 'menu');
 }
 
 /** Lit la carte des vins (photos ou PDF) et renvoie les vins. Données brutes : validées par `Vin`. */
 export async function analyserCarte(fichiers: FichierEnvoye[]): Promise<unknown[]> {
-  return lire(fichiers, CONSIGNE_CARTE);
+  return lire(fichiers, CONSIGNE_CARTE, 'carte');
 }
 
 // ─── Rapprochement avec la base de Pat ───

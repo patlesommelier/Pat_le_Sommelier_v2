@@ -49,7 +49,8 @@ export async function executerAnalyse(q: Requete, inscriptionId: string, type: T
     }
   } catch (e) {
     console.error('[inscription] lecture', inscriptionId, type, e);
-    const message = e instanceof Error && /illisible/.test(e.message) ? e.message : ECHEC[type];
+    // Mauvais document (menu à la place de la carte, ou l'inverse) ou image illisible : le message exact ; sinon, le message général.
+    const message = e instanceof Error && (e.name === 'MauvaisDocument' || /illisible/.test(e.message)) ? e.message : ECHEC[type];
     await q(`update inscription set lecture = jsonb_set(lecture, $2, $3), maj_le = now() where id = $1`,
       [inscriptionId, `{${type}}`, JSON.stringify({ statut: 'erreur', message })]);
   }
