@@ -75,6 +75,16 @@ const Compte = z.object({
   cgu: z.literal('on', { errorMap: () => ({ message: 'Acceptez les conditions d’utilisation.' }) }),
 });
 
+/** Un compte Supabase existe-t-il déjà pour cette adresse ? (table auth.users, lue avec la connexion du serveur) */
+async function compteExiste(email: string) {
+  try {
+    const [r] = await requete<{ ok: boolean }>('select exists (select 1 from auth.users where lower(email) = $1) as ok', [email]);
+    return Boolean(r?.ok);
+  } catch {
+    return false; // base sans schéma auth (développement local)
+  }
+}
+
 /** Mode de développement sans Supabase (jamais sur Netlify) : pas de compte réel, le back-office local est ouvert. */
 const modeDev = () => !supabaseConfigure() && !process.env.NETLIFY;
 
@@ -101,22 +111,22 @@ export async function creerSommelier(_: Reponse, form: FormData): Promise<Repons
     } else if (modeDev()) {
       userId = randomUUID();
     } else {
-      const { data: existant } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
+      const MAUVAIS_MDP = `Un compte existe déjà pour ${email}, mais ce mot de passe ne correspond pas. Saisissez le mot de passe que vous utilisez pour vous connecter à votre espace (mot de passe oublié : bouton « Se connecter » en haut de la page), ou utilisez une autre adresse.`;
+      const { data: existant, error: eConnexion } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
+      if (eConnexion && !/invalid login credentials/i.test(eConnexion.message)) console.warn('[inscription] connexion au compte existant :', eConnexion.message);
+      const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé le compte
       if (existant?.user) {
         userId = existant.user.id;
         sessionOuverte = true;
+      } else if (deja?.user_id && deja.email === email) {
+        userId = deja.user_id;
+      } else if (await compteExiste(email)) {
+        return { erreurs: [MAUVAIS_MDP] };
       } else {
-        if (motDePasse.length < 12) return { erreurs: ['Mot de passe : 12 caractères minimum.'] };
+        if (motDePasse.length < 12) return { erreurs: ['Nouveau compte : le mot de passe doit faire au moins 12 caractères.'] };
         const { data, error } = await supabaseService().auth.admin.createUser({ email, password: motDePasse, email_confirm: true });
-        if (error || !data.user) {
-          const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé ce compte
-          if (deja?.user_id && deja.email === email) userId = deja.user_id;
-          else if (/registered|exists/i.test(error?.message ?? '')) {
-            return { erreurs: [`Un compte existe déjà pour ${email}, mais ce mot de passe ne correspond pas. Saisissez le mot de passe que vous utilisez pour vous connecter à votre espace (mot de passe oublié : bouton « Se connecter » en haut de la page), ou utilisez une autre adresse.`] };
-          } else return { erreurs: ['Création du compte impossible. Réessayez.'] };
-        } else {
-          userId = data.user.id;
-        }
+        if (error || !data.user) return { erreurs: [/registered|exists/i.test(error?.message ?? '') ? MAUVAIS_MDP : 'Création du compte impossible. Réessayez.'] };
+        userId = data.user.id;
       }
     }
     await majInscription(i.id, { user_id: userId, email, nom_restaurant: r.data.nom });
