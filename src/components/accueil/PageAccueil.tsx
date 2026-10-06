@@ -7,7 +7,7 @@ import { inscriptionCourante } from '@/lib/inscription/etat';
 import { resumePublic } from '@/lib/inscription/etapes';
 
 export async function PageAccueil() {
-  const resume = resumePublic(await inscriptionCourante());
+  const resume = resumePublic(await inscriptionCourante().then((i) => (i?.statut === 'en_cours' ? i : null)));
   return (
     <div className={s.page}>
       {/* eslint-disable-next-line @next/next/no-page-custom-font */}

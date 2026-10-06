@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { z } from 'zod';
+import { utilisateurReel } from '@/lib/admin/auth';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { requete } from '@/lib/db';
 import { traiterAnalyses } from './analyse';
@@ -39,12 +40,14 @@ async function lancerLecture() {
 /** Dépôt de la carte des vins ou du menu : fichiers vérifiés et gardés dans la base, puis lecture en arrière-plan. */
 export async function deposer(type: TypeAnalyse, _: Reponse, form: FormData): Promise<Reponse> {
   let i = await inscriptionCourante();
-  if (!i) {
+  // Inscription déjà terminée dans ce navigateur : une nouvelle commence (autre restaurant, ou test de Pat).
+  if (!i || i.statut !== 'en_cours') {
     await nettoyerInscriptions();
-    if (!(await inscriptionAutorisee(await ip()))) return { erreurs: ['Trop d’inscriptions depuis cette connexion aujourd’hui. Réessayez demain ou contactez-nous.'] };
+    // Pat (super-admin connecté) teste sans limite ; tout autre visiteur est limité par connexion et par jour.
+    const admin = (await utilisateurReel().catch(() => null))?.admin;
+    if (!admin && !(await inscriptionAutorisee(await ip()))) return { erreurs: ['Trop d’inscriptions depuis cette connexion aujourd’hui. Réessayez demain ou contactez-nous.'] };
     i = await demarrerInscription();
   }
-  if (i.statut !== 'en_cours') redirect(espace(i.restaurant_id));
   if (i.analyses >= MAX_ANALYSES_PAR_INSCRIPTION) return { erreurs: ['Nombre maximal d’envois atteint. Contactez-nous pour continuer.'], resume: resumePublic(i) };
 
   const brut = form.getAll('fichiers').filter((f): f is File => f instanceof File && f.size > 0);
@@ -94,7 +97,12 @@ export async function creerSommelier(_: Reponse, form: FormData): Promise<Repons
       if (error || !data.user) {
         const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé ce compte
         if (deja?.user_id && deja.email === r.data.email) userId = deja.user_id;
-        else return { erreurs: [/registered|exists/i.test(error?.message ?? '') ? 'Un compte existe déjà avec cette adresse : connectez-vous.' : 'Création du compte impossible. Réessayez.'] };
+        else if (/registered|exists/i.test(error?.message ?? '')) {
+          // Compte existant (deuxième restaurant, ou test de Pat) : avec le bon mot de passe, le restaurant y est ajouté.
+          const { data: session, error: eLogin } = await (await supabaseSession()).auth.signInWithPassword({ email: r.data.email, password: r.data.motDePasse });
+          if (eLogin || !session.user) return { erreurs: ['Un compte existe déjà avec cette adresse. Saisissez son mot de passe pour y ajouter ce restaurant, ou utilisez une autre adresse.'] };
+          userId = session.user.id;
+        } else return { erreurs: ['Création du compte impossible. Réessayez.'] };
       } else {
         userId = data.user.id;
       }
@@ -120,5 +128,11 @@ export async function creerSommelier(_: Reponse, form: FormData): Promise<Repons
 
 /** Avancement des lectures, interrogé par le formulaire pendant une lecture : seulement des compteurs. */
 export async function etatInscription(): Promise<ResumePublic> {
-  return resumePublic(await inscriptionCourante());
+  return resumePublic(await inscriptionEnCours());
+}
+
+/** Inscription en cours dans ce navigateur (une inscription terminée laisse place à un formulaire vierge). */
+async function inscriptionEnCours() {
+  const i = await inscriptionCourante();
+  return i?.statut === 'en_cours' ? i : null;
 }

@@ -7,5 +7,5 @@ import { inscriptionCourante } from '@/lib/inscription/etat';
 export const dynamic = 'force-dynamic';
 
 export async function GET() {
-  return NextResponse.json(resumePublic(await inscriptionCourante()), { headers: { 'cache-control': 'no-store' } });
+  return NextResponse.json(resumePublic(await inscriptionCourante().then((i) => (i?.statut === 'en_cours' ? i : null))), { headers: { 'cache-control': 'no-store' } });
 }
