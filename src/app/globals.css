@@ -179,3 +179,14 @@ a.bouton-plein { text-decoration: none; }
 }
 @keyframes pat-ombre { 0%, 50%, 100% { transform: scaleX(1); opacity: 1; } 25%, 75% { transform: scaleX(0.75); opacity: 0.6; } }
 @media (prefers-reduced-motion: reduce) { .pat-attente img, .pat-attente::after { animation: none; } }
+
+/* Logo de Pat en attendant celui du restaurant (ajouté dans « Apparence ») : pastille crème + nom. */
+.logo-pat { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
+.logo-pat-pastille { width: 50px; height: 50px; border-radius: 50%; background: #FBF1E6; display: inline-flex; align-items: flex-end;
+  justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35); }
+.logo-pat-pastille img { width: 82%; height: auto; display: block; }
+.bandeau-haut .logo .logo-pat-pastille img, .bandeau.grand .bandeau-haut .logo .logo-pat-pastille img { width: 82%; height: auto; }
+.bandeau-haut .logo:has(.logo-pat) { text-decoration: none; }
+.bandeau.grand .logo-pat-pastille { width: 64px; height: 64px; }
+.logo-pat-nom { font-size: 19px; font-weight: 700; line-height: 1.15; color: var(--sur-marque, #FFFFFF); overflow-wrap: anywhere; }
+.bandeau.grand .logo-pat-nom { font-size: 22px; }

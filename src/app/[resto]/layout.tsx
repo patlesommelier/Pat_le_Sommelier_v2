@@ -29,7 +29,9 @@ export default async function LayoutRestaurant({ children, params }: { children:
           {restaurant.logo_url
             // eslint-disable-next-line @next/next/no-img-element
             ? <img src={restaurant.logo_url} alt={restaurant.nom} style={{ maxWidth: 180, maxHeight: 110, objectFit: 'contain' }} />
-            : <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--marque-texte)' }}>{restaurant.nom}</h1>}
+            : <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--marque-texte)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <span className="logo-pat-pastille" style={{ width: 88, height: 88 }}><img src="/pat/pat.png" alt="" /></span>{restaurant.nom}</h1>}
           <p style={{ fontSize: 19, fontWeight: 700, margin: 0 }}>{restaurant.statut === 'suspendu' ? 'La carte des vins de Pat est momentanément indisponible.' : 'La carte des vins de Pat arrive très bientôt.'}</p>
           <p style={{ fontSize: 15, margin: 0, opacity: 0.75 }}>En attendant, demandez conseil à l’équipe : elle se fera un plaisir de vous guider.</p>
         </main>

@@ -18,7 +18,11 @@ export default async function Accueil({ params }: { params: Promise<{ resto: str
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
   const plats = await getPlats(resto);
-  const [titre, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|nous vous aidons à choisir votre vin`).split('|');
+  const [brut, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|nous vous aidons à choisir votre vin`).split('|');
+  // Typographie française : espace insécable avant « ! ? : ; » (jamais seuls en début de ligne).
+  const titre = brut.trim().replace(/\s+([!?:;])/g, '\u202F$1');
+  // Titre sur une seule ligne : la taille diminue un peu pour un nom long (27 px au plus).
+  const tailleTitre = `min(27px, calc((100vw - 40px) / ${(titre.length * 0.56).toFixed(2)}))`;
 
   return (
     <>
@@ -26,7 +30,7 @@ export default async function Accueil({ params }: { params: Promise<{ resto: str
         <div className="accueil-hero">
           <div className="accueil-texte">
             <div className="accueil-titre">
-              {titre}
+              <div style={{ fontSize: tailleTitre, whiteSpace: 'nowrap' }}>{titre}</div>
               <span>{sousTitre}</span>
             </div>
             <div className="filet-blanc" />

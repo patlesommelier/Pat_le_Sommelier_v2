@@ -12,7 +12,7 @@ import { slugRestaurant } from './slug';
 /** Fond clair de la barre Pat : la couleur du restaurant mêlée de blanc. */
 function couleurClaire(hex: string) {
   const n = parseInt(hex.slice(1), 16);
-  const m = (c: number) => Math.round(c + (255 - c) * 0.88).toString(16).padStart(2, '0');
+  const m = (c: number) => Math.round(c + (255 - c) * 0.94).toString(16).padStart(2, '0');
   return `#${m((n >> 16) & 255)}${m((n >> 8) & 255)}${m(n & 255)}`.toUpperCase();
 }
 
@@ -61,7 +61,7 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     await requete(
       `insert into restaurant (id, nom, couleur, couleur_claire, accroche, statut, ville, origine, cree_par)
        values ($1, $2, $3, $4, $5, 'mise_en_place', $6, 'inscription', $7)`,
-      [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant} !`, i.ville, email]);
+      [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant},|nous vous aidons à choisir votre vin`, i.ville, email]);
     await majInscription(inscriptionId, { restaurant_id: restaurantId });
   } else {
     // Reprise après une erreur : on repart d'une carte et d'un menu vides pour ne rien dupliquer.
