@@ -92,8 +92,9 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     for (let n = 2; ids.has(id); n++) id = `${restaurantId}-${slugPlat(p.nom) || 'plat'}-${n}`;
     ids.add(id);
     await requete(
-      `insert into plat (id, restaurant_id, nom, categorie, description_cuisine, ordre, actif) values ($1, $2, $3, $4::categorie_plat, $5, $6, true)`,
-      [id, restaurantId, p.nom, p.categorie, p.description, k + 1]);
+      `insert into plat (id, restaurant_id, nom, categorie, description_cuisine, prix, prix_variantes, ordre, actif)
+       values ($1, $2, $3, $4::categorie_plat, $5, $6, $7, $8, true)`,
+      [id, restaurantId, p.nom, p.categorie, p.description, p.prix ?? null, p.prixVariantes ?? null, k + 1]);
   }
 
   // 5. Vins : producteurs inconnus proposés à Pat, puis la carte (ranking 0 tant que Pat n'a pas validé).

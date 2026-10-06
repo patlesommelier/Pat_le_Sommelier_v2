@@ -77,3 +77,13 @@ test('jeton de session : seule l’empreinte est stockée', () => {
   assert.equal(empreinte(jeton), e);
   assert.notEqual(jeton, e);
 });
+
+test('le prix des plats est gardé ; un prix illisible ne fait pas perdre le plat', () => {
+  const r = validerListe(Plat, [
+    { nom: 'Croquettes de crevettes', prix: 15, prixVariantes: '1 pièce 15 € / 2 pièces 27 €' },
+    { nom: 'Burger', prix: '18 €' },
+    { nom: 'Salade' },
+  ]);
+  assert.equal(r.rejetes, 0);
+  assert.deepEqual(r.ok.map((p) => [p.prix, p.prixVariantes]), [[15, '1 pièce 15 € / 2 pièces 27 €'], [null, undefined], [undefined, undefined]]);
+});

@@ -8,6 +8,8 @@ export const Plat = z.object({
   nom: z.string().trim().min(1).max(160),
   categorie: z.enum(CATEGORIES).catch('plat'),
   description: z.string().trim().max(500).nullable().default(null),
+  prix: z.number().nonnegative().max(10000).nullish().catch(null), // absent des inscriptions antérieures
+  prixVariantes: z.string().trim().max(120).nullish().catch(null),
 });
 export type Plat = z.infer<typeof Plat>;
 

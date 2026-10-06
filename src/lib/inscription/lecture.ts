@@ -62,10 +62,12 @@ async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof 
 
 const CONSIGNE_MENU = `Ces documents sont les pages du menu d'un restaurant (photos ou PDF). Relève chaque plat proposé.
 Pour chaque plat : « nom » tel qu'écrit sur le menu (sans le prix), « categorie » parmi entree, plat, dessert, fromage
-(une planche ou un en-cas : entree), et « description » : les ingrédients, la cuisson ou la sauce indiqués sur le menu (null s'il n'y en a pas).
+(une planche ou un en-cas : entree), « description » : les ingrédients, la cuisson ou la sauce indiqués sur le menu (null s'il n'y en a pas),
+« prix » : le prix du plat en euros, nombre (le plus petit s'il y en a plusieurs ; null si absent), et « prixVariantes » : le détail
+quand le menu donne plusieurs prix pour ce plat, ex. « 1 pièce 12 € / 2 pièces 22 € » (null sinon).
 Ignore les boissons, les vins, les suppléments isolés et les formules sans plat précis. N'invente rien.
 Si ces documents ne contiennent aucun plat mais une carte des vins ou des boissons, réponds exactement CARTE_DES_VINS, sans rien d'autre.
-Sinon, réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "..."}]`;
+Sinon, réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "...", "prix": 24, "prixVariantes": null}]`;
 
 const CONSIGNE_CARTE = `Ces documents sont les pages de la carte des vins d'un restaurant (photos ou PDF). Relève chaque vin.
 Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, sans millésime ni prix), « producteur »
