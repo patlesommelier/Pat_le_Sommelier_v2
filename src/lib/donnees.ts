@@ -38,7 +38,9 @@ export async function getPlat(id: string) {
 const SELECT_VIN = `
   select v.id, v.couleur, v.section, v.libelle, v.producteur_texte, v.millesime, v.format,
          v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation,
-         v.descriptif, v.presentation, v.vin_texte, v.resume_court, v.etiquette_url, v.coup_de_coeur,
+         v.descriptif, v.vin_texte,
+         -- Texte montré au client : celui du restaurant, sinon la présentation de la base, sinon celle écrite par Pat
+         coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte) as presentation, v.resume_court, v.etiquette_url, v.coup_de_coeur,
          v.ordre, v.ranking_producteur, v.ranking_terroir, v.pays,
          -- Nom saisi dans le back-office prioritaire sur celui de la base de Pat
          case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else p.nom end as producteur_nom,

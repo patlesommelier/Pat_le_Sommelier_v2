@@ -123,8 +123,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   <span className="libelle">Étiquette</span>
                   <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
                   {u?.admin && choisi.etiquette_statut === 'echec' && choisi.etiquette_erreur && <span className="petit discret">Motif : {choisi.etiquette_erreur}</span>}
-                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (JPG, PNG, WebP · 5 Mo max). Elle ne sera jamais écrasée par Wine Labs.
-                    {choisi.producteur_id ? ' Elle rejoint la base de Pat : les autres cartes qui ont cette cuvée sans étiquette la reprendront.' : ' Indiquez le producteur pour qu’elle serve aussi à la base de Pat.'}</label>
+                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (5 Mo max).</label>
                   <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
                 </div>
               </div>
@@ -157,9 +156,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <div className="champ"><label htmlFor="prix">Prix bouteille (€)</label><input id="prix" name="prix" inputMode="decimal" defaultValue={choisi.prix ?? ''} /></div>
                 <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={choisi.prix_verre ?? ''} /></div>
               </div>
-              <div className="champ"><label htmlFor="resume_court">Résumé court (vu par le client)</label><textarea id="resume_court" name="resume_court" rows={3} defaultValue={choisi.resume_court ?? ''} /></div>
               <div className="champ">
-                <label htmlFor="presentation_carte_perso">Présentation (carte imprimée)</label>
+                <label htmlFor="presentation_carte_perso">Présentation (app et carte imprimée)</label>
                 <textarea id="presentation_carte_perso" name="presentation_carte_perso" rows={5} defaultValue={choisi.presentation_carte_perso ?? ''} placeholder={choisi.presentation_carte ?? 'Trois phrases : le lieu ou le vigneron, le style du vin, ce avec quoi il brille à table.'} />
                 <span className="aide">{choisi.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : 'Trois phrases, 3 à 4 lignes sur la carte (230 à 380 caractères).'}</span>
               </div>

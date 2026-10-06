@@ -103,13 +103,13 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
   }
   await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
   await requete(
-    `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, resume_court = $6, disponible = $7, coup_de_coeur = $8,
-            etiquette_url = coalesce($9, etiquette_url),
-            etiquette_source = case when $9::text is not null then 'restaurant' else etiquette_source end,
-            etiquette_statut = case when $9::text is not null then 'trouvee' else etiquette_statut end,
-            presentation_carte_perso = $10, modifie_bo = now()
+    `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6, coup_de_coeur = $7,
+            etiquette_url = coalesce($8, etiquette_url),
+            etiquette_source = case when $8::text is not null then 'restaurant' else etiquette_source end,
+            etiquette_statut = case when $8::text is not null then 'trouvee' else etiquette_statut end,
+            presentation_carte_perso = $9, modifie_bo = now()
       where id = $1 and restaurant_id = $2`,
-    [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'), txt(f, 'resume_court'),
+    [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'),
       f.get('disponible') === 'on', f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
   // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
