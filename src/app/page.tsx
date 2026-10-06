@@ -1,12 +1,15 @@
-import { redirect } from 'next/navigation';
-import { Aiguillage } from './auth/confirmation/aiguillage';
-import { inscriptionCourante } from '@/lib/inscription/etat';
+// Page d'accueil du site : présentation de Pat et inscription d'un restaurant (maquette « Page d'accueil · inscription »).
+// Les apps des restaurants restent à leur adresse (/lola…), celle de leurs QR codes.
+import type { Metadata } from 'next';
+import { PageAccueil } from '@/components/accueil/PageAccueil';
 
 export const dynamic = 'force-dynamic';
 
-// Pour l'instant la racine mène à Lola. Exception : le lien de confirmation d'inscription quand Supabase
-// y renvoie (adresse de retour non autorisée) — la session est dans le fragment, lu par le navigateur.
-export default async function Accueil() {
-  if ((await inscriptionCourante())?.statut === 'compte_cree') redirect('/inscription/qr');
-  return <Aiguillage inscription={null} repli="/lola" />;
+export const metadata: Metadata = {
+  title: 'Pat le sommelier — Développez l’offre vin de votre restaurant',
+  description: 'Votre sommelier virtuel : vos clients choisissent leur plat, Pat leur propose des vins de votre carte. Activez-le en quelques minutes.',
+};
+
+export default function Page() {
+  return <PageAccueil />;
 }

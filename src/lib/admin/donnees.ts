@@ -5,11 +5,12 @@ import { REGLAGES_PAT, reglagesComplets, type Reglages } from '../selection';
 export interface RestaurantBO {
   id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null;
   accroche: string | null; reglages_selection: Record<string, unknown>; modifie_bo: string | null;
+  statut: string; origine: string;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, reglages_selection, modifie_bo
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, reglages_selection, modifie_bo, statut, origine
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }
@@ -26,6 +27,8 @@ export interface Resume {
   plats: number; plats_inactifs: number; vins: number; vins_etiquette: number; vins_producteur: number;
   vins_indisponibles: number; nouveaux_producteurs: number; accords: number; accords_valides: number;
   accords_proposes: number; plats_avec_accords: number; acces: number;
+  /** Pat prépare ou régénère des accords (tâches en attente ou en cours). */
+  preparation_en_cours: boolean;
 }
 
 export async function getResume(id: string): Promise<Resume> {
@@ -43,7 +46,8 @@ export async function getResume(id: string): Promise<Resume> {
        (select count(*)::int from accord where restaurant_id = $1 and statut = 'valide') as accords_valides,
        (select count(*)::int from accord where restaurant_id = $1 and statut = 'propose') as accords_proposes,
        (select count(distinct plat_id)::int from accord where restaurant_id = $1) as plats_avec_accords,
-       (select count(*)::int from acces_restaurant where restaurant_id = $1) as acces`,
+       (select count(*)::int from acces_restaurant where restaurant_id = $1) as acces,
+       exists (select 1 from generation_accords where restaurant_id = $1 and statut in ('en_attente', 'en_cours')) as preparation_en_cours`,
     [id]);
   return r;
 }

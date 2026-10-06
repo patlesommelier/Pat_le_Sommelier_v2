@@ -6,3 +6,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+
+[functions]
+  # Fonctions d'arrière-plan : sharp (lecture des photos de la carte et du menu) est un module natif,
+  # livré tel quel plutôt que regroupé.
+  external_node_modules = ["sharp"]

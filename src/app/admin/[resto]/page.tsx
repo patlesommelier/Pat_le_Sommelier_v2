@@ -2,20 +2,25 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { etapesRestaurant } from './etapes';
 import { Icone } from '@/components/admin/Icone';
+import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete, Etat } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { exigerAcces } from '@/lib/admin/auth';
 
-export default async function TableauDeBord({ params }: { params: Promise<{ resto: string }> }) {
+export default async function TableauDeBord({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ bienvenue?: string }> }) {
   const { resto } = await params;
+  const { bienvenue } = await searchParams;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const [r, s] = await Promise.all([getRestaurantBO(resto), getResume(resto)]);
   if (!r) notFound();
   const etapes = etapesRestaurant(r, s);
   const suivante = etapes.find((e) => e.etat !== 'fait' && e.libelle !== 'Simulateur') ?? etapes[etapes.length - 1];
   const restantes = etapes.filter((e) => e.etat !== 'fait' && e.libelle !== 'Simulateur').length;
+  // Après l'inscription : « Bienvenue », préparation des accords et QR code, à la place de « Prochaine étape ».
+  const accueil = Boolean(bienvenue) || (r.origine === 'inscription' && r.statut === 'mise_en_place');
   return (
     <>
+      {accueil ? <BienvenueRestaurant restaurantId={r.id} /> : <>
       <Entete titre="Bonjour"
         texte={restantes ? `${restantes > 1 ? `Encore ${restantes} étapes` : 'Encore une étape'} avant de proposer Pat à vos clients.` : 'Tout est en place : Pat conseille vos clients.'} />
       <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
@@ -28,6 +33,7 @@ export default async function TableauDeBord({ params }: { params: Promise<{ rest
           <div className="ligne-actions"><Link href={suivante.href} className="btn"><Icone nom={suivante.icone} taille={18} />{suivante.action}</Link></div>
         </div>
       </div>
+      </>}
       <section className="pile">
         <div><h2 style={{ fontSize: 22 }}>Mise en place</h2><p className="discret" style={{ margin: '6px 0 0' }}>Sept étapes, dans l’ordre. Vous pouvez revenir sur chacune à tout moment.</p></div>
         <div className="grille">

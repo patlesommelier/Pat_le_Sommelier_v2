@@ -102,16 +102,25 @@ Réservé aux adresses de `PAT_ADMIN_EMAILS`, barre latérale foncée :
 
 Sécurité : chaque page vérifie elle-même l'accès (`exigerAcces`, `exigerAdmin`) ; un layout ne protège pas les pages qu'il contient, rendues en parallèle. `npm run verifier-confidentialite -- … --autre <restaurant>` vérifie aussi qu'aucune page d'un autre restaurant n'est servie.
 
-### 4 octies. Inscription d'un restaurant (`/inscription`)
+### 4 octies. Page d'accueil et inscription d'un restaurant (`/`)
 
-Le restaurateur s'inscrit seul, sur son téléphone : menu (photos ou PDF), carte des vins, logo, couleur, compte. Claude lit le menu et la carte (`src/lib/inscription/adaptateurs.ts`) ; chaque vin est rapproché de la base de Pat (« Déjà référencé » / « Nouveau producteur », jamais de ranking). Avant le compte, l'inscription vit dans la table `inscription`, retrouvée par un cookie dont seule l'empreinte est stockée ; les fichiers sont gardés dans `inscription_fichier` et effacés avec elle. Limites : 5 inscriptions par IP et par jour, 6 lectures par inscription, vrai format de fichier vérifié, photos réduites dans le navigateur (Netlify : 6 Mo par requête). L'e-mail confirmé (`/auth/inscription-confirmee`), le restaurant est créé (origine « inscription »), l'accès donné, les producteurs inconnus arrivent dans « Producteurs à valider », et la préparation des accords démarre (file des régénérations) ; le restaurant passe en service quand elle est finie. Super-admin : avancement et « Relancer la préparation ».
+La page d'accueil présente Pat (QR « Scannez pour essayer » vers l'app de Lola, ou `NEXT_PUBLIC_DEMO_URL`) et porte le formulaire
+d'inscription, une étape à la fois, sur ordinateur : 1. carte des vins, 2. menu (images ou PDF, déposés ou glissés),
+3. nom du restaurant, e-mail, mot de passe, conditions → « Créer mon sommelier ».
 
-À configurer une fois dans Supabase (Authentication) :
-- **Email Templates › Confirm signup** : `<a href="{{ .RedirectTo }}&token_hash={{ .TokenHash }}&type=email">Confirmer mon adresse</a>` ;
-- **URL Configuration › Redirect URLs** : ajouter `https://<votre site>/auth/inscription-confirmee**` ;
-- Netlify : variable `INSCRIPTION_SEL` (texte aléatoire, sel des empreintes d'adresses IP).
+- **Lecture en arrière-plan** : chaque dépôt est gardé dans `inscription_fichier`, puis lu par Claude dans la fonction
+  `analyser-inscription-background` (file `inscription.lecture`) ; le formulaire interroge `/api/inscription/statut` toutes les
+  3 secondes et n'affiche que des compteurs (« 71 vins trouvés ») — jamais les listes, jamais de ranking. « Remplacer » repart de zéro.
+- **Accès immédiat** : le compte est créé déjà confirmé, la session ouverte, et le restaurateur arrive sur son tableau de bord
+  (`/admin/<restaurant>?bienvenue=1`) : « Bienvenue », préparation des accords (passe rapide) et QR code à télécharger.
+  Pas de logo ni de couleur à l'inscription : l'app est aux couleurs de Pat, le logo s'ajoute dans « Apparence ».
+- **Publication** : l'app ne s'ouvre aux clients qu'une fois tous les plats pourvus d'accords (voir `finirMisesEnPlace`).
+- **Protections** : 5 inscriptions par connexion et par jour, 6 lectures par inscription, vrai format de fichier vérifié,
+  images réduites dans le navigateur (Netlify : 6 Mo par requête), création idempotente (double clic).
+- Netlify : variable `INSCRIPTION_SEL` (texte aléatoire, sel des empreintes d'adresses IP). Conditions d'utilisation : `/conditions`
+  (texte à fournir).
 
-En local sans Supabase, l'e-mail est remplacé par un lien « Confirmer (développement local) » sur l'écran d'attente.
+En local sans Supabase, le compte n'est pas créé (le back-office local est ouvert par `AUTH_DEV_EMAIL`).
 
 ### 5. Lancer et déployer
 

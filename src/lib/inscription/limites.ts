@@ -1,5 +1,5 @@
 // Limite les inscriptions par adresse IP : la lecture du menu et de la carte coûte des appels au modèle,
-// avant même que l'e-mail soit confirmé.
+// avant même que le compte soit créé.
 import 'server-only';
 import { createHash } from 'node:crypto';
 import { requete } from '../db';

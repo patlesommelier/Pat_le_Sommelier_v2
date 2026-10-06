@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import { requete } from '../db';
 import { COOKIE, empreinte, expireLe, nouveauJeton, optionsCookie } from './session';
 import type { Plat, VinRapproche } from './donnees';
+import type { Analyses } from './etapes';
 
 export type Inscription = {
   id: string;
@@ -15,6 +16,8 @@ export type Inscription = {
   couleurs_proposees: Array<{ hex: string; nom: string; duLogo: boolean }>;
   logo_clair: boolean | null;
   analyses: number;
+  /** État des lectures en arrière-plan (carte, menu) : compteurs seulement. */
+  lecture: Analyses;
   nom_restaurant: string | null;
   ville: string | null;
   email: string | null;
@@ -23,7 +26,7 @@ export type Inscription = {
   expire_le: string;
 };
 
-const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_proposees, logo_clair, analyses, nom_restaurant, ville, email,
+const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_proposees, logo_clair, analyses, lecture, nom_restaurant, ville, email,
   user_id, restaurant_id, expire_le`;
 
 export async function inscriptionCourante(): Promise<Inscription | null> {
@@ -38,23 +41,17 @@ export async function lireInscription(id: string): Promise<Inscription | null> {
   return i ?? null;
 }
 
-/** Ouvre l'inscription dans ce navigateur aussi (lien de confirmation ouvert sur un autre appareil), sans couper les autres. */
-export async function ouvrirSurCeNavigateur(inscriptionId: string, userId: string) {
+/** Démarre une inscription (premier dépôt de fichiers sur la page d'accueil) et pose le cookie. */
+export async function demarrerInscription(): Promise<Inscription> {
   const { jeton, empreinte: emp } = nouveauJeton();
-  await requete(`update inscription set jetons_autres = (jetons_autres || $2::text)[greatest(1, cardinality(jetons_autres) - 3):],
-                   expire_le = greatest(expire_le, now() + interval '2 days') where id = $1 and user_id = $3`, [inscriptionId, emp, userId]);
+  const [i] = await requete<Inscription>(`insert into inscription (jeton_empreinte, expire_le) values ($1, $2) returning ${COLONNES}`,
+    [emp, expireLe().toISOString()]);
   (await cookies()).set(COOKIE, jeton, optionsCookie);
+  return i;
 }
 
-/** Démarre une inscription (bouton « Commencer ») et pose le cookie. */
-export async function demarrerInscription() {
-  const { jeton, empreinte: emp } = nouveauJeton();
-  await requete(`insert into inscription (jeton_empreinte, expire_le) values ($1, $2)`, [emp, expireLe().toISOString()]);
-  (await cookies()).set(COOKIE, jeton, optionsCookie);
-}
-
-const JSONB = new Set(['plats', 'vins', 'couleurs_proposees']);
-const MODIFIABLES = new Set(['statut', 'plats', 'vins', 'logo_fichier', 'couleur', 'couleurs_proposees', 'logo_clair', 'analyses',
+const JSONB = new Set(['plats', 'vins', 'couleurs_proposees', 'lecture']);
+const MODIFIABLES = new Set(['statut', 'plats', 'vins', 'logo_fichier', 'couleur', 'couleurs_proposees', 'logo_clair', 'analyses', 'lecture',
   'nom_restaurant', 'ville', 'email', 'user_id', 'restaurant_id']);
 
 export async function majInscription(id: string, champs: Partial<Inscription>) {

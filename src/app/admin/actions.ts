@@ -13,7 +13,6 @@ import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
 import { parametresEnService } from '@/lib/regles/versions';
-import { repriseALaConnexion } from '@/lib/inscription/reprise';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
@@ -40,14 +39,7 @@ export async function seConnecter(f: FormData) {
   const supabase = await supabaseSession();
   const { error } = await supabase.auth.signInWithPassword({ email: txt(f, 'email') ?? '', password: String(f.get('mdp') ?? '') });
   if (error) redirect(avec('/admin/connexion', { erreur: 'E-mail ou mot de passe incorrect.' }));
-  // Inscription dont le lien de confirmation n'a pas abouti : le restaurant est créé maintenant.
-  const { data } = await supabase.auth.getUser();
-  let resto: string | null = null;
-  if (data.user) {
-    const [a] = await requete('select 1 from acces_restaurant where user_id = $1 limit 1', [data.user.id]);
-    if (!a) resto = await repriseALaConnexion(data.user.id).catch((e) => { console.error('[inscription] reprise', e); return null; });
-  }
-  redirect(resto ? `/admin/${resto}` : '/admin');
+  redirect('/admin');
 }
 
 export async function seDeconnecter() {
