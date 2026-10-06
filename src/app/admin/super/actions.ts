@@ -16,6 +16,8 @@ import { enregistrerBrouillonRegles } from '@/lib/regles/versions';
 import { appelerWineLabs } from '@/lib/etiquettes/wine-labs';
 import { PLATS_EN_PARALLELE } from '@/lib/generation/file';
 import { parametresRegles, REGLAGES_PAT, type Reglages } from '@/lib/selection';
+import { traiterRelecturesPrix } from '@/lib/inscription/prix';
+import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}?${new URLSearchParams(params)}`;
@@ -336,4 +338,25 @@ export async function testerWebhookWineLabs(endpointId: string) {
     message = { erreur: (e as Error).message };
   }
   redirect(avec('/admin/super/wine-labs', message));
+}
+
+// ───────── Prix des plats relus sur le menu ─────────
+/** Le super-admin envoie le menu d'un restaurant : Pat en relit les prix en arrière-plan (plats et accords inchangés). */
+export async function relirePrixMenu(resto: string, form: FormData): Promise<{ erreurs: string[] }> {
+  const u = await exigerAdmin();
+  const brut = form.getAll('fichiers').filter((f): f is File => f instanceof File && f.size > 0);
+  const lus = await Promise.all(brut.map(async (f) => ({ nom: f.name.slice(0, 120), octets: new Uint8Array(await f.arrayBuffer()) })));
+  const erreurs = verifierFichiers('menu', lus);
+  if (erreurs.length) return { erreurs };
+  const [en] = await requete<{ n: number }>(`select count(*)::int as n from relecture_prix where restaurant_id = $1 and statut in ('en_attente', 'en_cours')`, [resto]);
+  if (en.n) return { erreurs: ['Une relecture est déjà en cours pour ce restaurant.'] };
+  const [r] = await requete<{ id: string }>('insert into relecture_prix (restaurant_id, demande_par) values ($1, $2) returning id', [resto, u.email]);
+  for (const f of lus) {
+    await requete('insert into relecture_prix_fichier (relecture_id, nom, media_type, octets) values ($1, $2, $3, $4)',
+      [r.id, f.nom, typeReel(f.octets), Buffer.from(f.octets)]);
+  }
+  const statut = await fetch(`${await origine()}/.netlify/functions/relire-prix-background`, { method: 'POST' }).then((x) => x.status).catch(() => 0);
+  if (statut !== 202 && statut !== 200) void traiterRelecturesPrix(requete, { finAvant: Date.now() + 15 * 60 * 1000 }).catch((e) => console.error('[prix]', e));
+  revalidatePath(`/admin/${resto}/menu`);
+  return { erreurs: [] };
 }

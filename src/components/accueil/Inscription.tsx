@@ -7,6 +7,7 @@ import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
 import { deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
+import { reduire } from '@/lib/reduire-image';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
@@ -26,25 +27,6 @@ const Coche = () => (
 function Erreurs({ liste }: { liste: string[] }) {
   if (!liste.length) return null;
   return <ul className={s.erreurs} role="alert">{liste.map((e) => <li key={e}>{e}</li>)}</ul>;
-}
-
-/**
- * Image réduite dans le navigateur avant l'envoi (1800 px, JPEG) : sous la limite de 6 Mo par requête de Netlify,
- * et assez nette pour que Pat lise la carte. Un PDF, ou un format que le navigateur ne sait pas décoder (HEIC), part tel quel.
- */
-async function reduire(f: File): Promise<File> {
-  if (!f.type.startsWith('image/')) return f;
-  try {
-    const img = await createImageBitmap(f);
-    const k = Math.min(1, 1800 / Math.max(img.width, img.height));
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.round(img.width * k); canvas.height = Math.round(img.height * k);
-    canvas.getContext('2d')!.drawImage(img, 0, 0, canvas.width, canvas.height);
-    const blob = await new Promise<Blob | null>((ok) => canvas.toBlob(ok, 'image/jpeg', 0.85));
-    return blob && blob.size < f.size ? new File([blob], f.name.replace(/\.\w+$/, '') + '.jpg', { type: 'image/jpeg' }) : f;
-  } catch {
-    return f;
-  }
 }
 
 /** Dépôt d'un ou plusieurs fichiers ; l'envoi part dès la sélection ou le glisser-déposer. */

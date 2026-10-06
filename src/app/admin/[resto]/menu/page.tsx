@@ -2,7 +2,9 @@ import Link from 'next/link';
 import { enregistrerPlat } from '../../actions';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfil } from '@/lib/admin/donnees';
-import { exigerAcces } from '@/lib/admin/auth';
+import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
+import { RelirePrix } from '@/components/admin/RelirePrix';
+import { requete } from '@/lib/db';
 
 const CATS = [['tous', 'Tous'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
@@ -10,7 +12,10 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { cat = 'tous', plat: platId, ok } = await searchParams;
-  const plats = await getPlatsBO(resto);
+  const [plats, u] = await Promise.all([getPlatsBO(resto), utilisateurCourant()]);
+  // Relecture des prix sur le menu : super-admin seulement (chaque lecture est un appel à Claude payé par Pat).
+  const [derniere] = u?.admin ? await requete<{ statut: string; message: string | null; le: string }>(
+    `select statut, message, maj_le::text as le from relecture_prix where restaurant_id = $1 order by cree_le desc limit 1`, [resto]) : [];
   const affiches = plats.filter((p) => cat === 'tous' || p.categorie === cat);
   const choisi = plats.find((p) => p.id === platId) ?? affiches[0];
   const profil = choisi ? await getProfil(choisi.id) : null;
@@ -18,6 +23,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   return (
     <>
       <Entete titre="Menu" texte="Les plats proposés à vos clients : nom, nom court affiché sur l’accueil, catégorie et prix. Un plat masqué n’apparaît plus dans l’app." />
+      {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
       <div className="rangee">
         <section className="large">
           <nav className="onglets" aria-label="Catégories">
