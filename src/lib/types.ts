@@ -13,6 +13,9 @@ export interface Restaurant {
   origine?: string;
   /** Largeur / hauteur du logo (marges retirées) ; null = pas encore mesuré. */
   logo_ratio?: number | null;
+  logo_fonce_ratio?: number | null;
+  /** Logo choisi pour l'app : 'clair' ou 'fonce' ; null = automatique. */
+  logo_choix?: string | null;
 }
 
 export interface Plat {

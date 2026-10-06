@@ -42,17 +42,22 @@ async function couleursDePhoto(f: File): Promise<string[]> {
 
 interface Props {
   action: (f: FormData) => void;
-  nom: string; couleur: string; logo: string | null; logoFonce: string | null; accroche: string | null;
+  nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, accroche, plats }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, plats }: Props) {
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
   const [palette, setPalette] = useState<string[]>([]);
   const [lecture, setLecture] = useState(false);
   const [apercuLogo, setApercuLogo] = useState<string | null>(logo);
   const [apercuLogoFonce, setApercuLogoFonce] = useState<string | null>(logoFonce);
+  // Logo affiché dans l'app : choisi ici ; sans choix enregistré, celui que l'app prenait automatiquement.
+  const [choix, setChoix] = useState<'clair' | 'fonce'>(() => {
+    const prefereFonce = logoChoix ? logoChoix === 'fonce' : 1.05 / (lum(initiale) + 0.05) < 3;
+    return prefereFonce ? (logoFonce || !logo ? 'fonce' : 'clair') : (logo || !logoFonce ? 'clair' : 'fonce');
+  });
   const [l1, l2] = (accroche ?? `Bienvenue chez ${nom},|nous vous aidons à choisir votre vin`).split('|');
   const [a1, setA1] = useState(l1 ?? '');
   const [a2, setA2] = useState(l2 ?? '');
@@ -60,13 +65,14 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   const contraste = useMemo(() => 1.05 / (lum(couleur) + 0.05), [couleur]);
   const fondClair = contraste < 3;
   const texte = fondClair ? '#1A1A1A' : '#FFFFFF';
-  const logoAffiche = fondClair ? apercuLogoFonce ?? apercuLogo : apercuLogo;
+  const logoAffiche = choix === 'fonce' ? apercuLogoFonce ?? apercuLogo : apercuLogo ?? apercuLogoFonce;
 
   const choisir = (h: string) => { setCouleur(h); setSaisie(h); };
 
   return (
     <form action={action} className="rangee">
       <input type="hidden" name="couleur" value={couleur} />
+      <input type="hidden" name="logo_choix" value={choix} />
       <div className="large" style={{ gap: 24 }}>
         <section className="carte-bo pile">
           <div><h2>Couleur de l’app</h2><p className="sous">Déposez une photo de votre salle ou de votre devanture : Pat en tire les couleurs dominantes. Vous pouvez aussi saisir votre couleur.</p></div>
@@ -108,23 +114,32 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           </div>
           {contraste >= 4.5 && <span style={{ color: 'var(--vert)', fontSize: 14 }}>Texte blanc bien lisible sur cette couleur (contraste {contraste.toFixed(1).replace('.', ',')} : 1).</span>}
           {contraste >= 3 && contraste < 4.5 && <span style={{ color: 'var(--ocre)', fontSize: 14 }}><b>Lisibilité limitée</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : les petits textes blancs fatiguent. Une teinte un peu plus foncée serait plus confortable.</span>}
-          {fondClair && <span style={{ color: '#8A1C1C', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé et utilise la version foncée de votre logo.</span>}
+          {fondClair && <span style={{ color: '#8A1C1C', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; choisissez plutôt votre logo foncé.</span>}
         </section>
         <section className="carte-bo pile">
-          <div><h2>Logo</h2><p className="sous">PNG ou SVG à fond transparent. Il s’affiche en haut de l’app, sur la couleur choisie.</p></div>
-          <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))' }}>
-            <div className="champ"><label htmlFor="logo">Logo clair (pour une couleur foncée)</label>
-              <span style={{ height: 96, borderRadius: 12, background: fondClair ? '#610420' : couleur, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                {apercuLogo ? <img src={apercuLogo} alt="Logo actuel" style={{ maxWidth: 160, maxHeight: 72 }} /> : <span style={{ color: '#FFF' }}>Aucun logo</span>}
-              </span>
-              <input id="logo" name="logo" type="file" accept="image/png,image/svg+xml,image/webp" style={{ padding: 8 }} onChange={(e) => { const f = e.currentTarget.files?.[0]; if (f) setApercuLogo(URL.createObjectURL(f)); }} /></div>
-            <div className="champ"><label htmlFor="logo_fonce">Logo foncé (pour une couleur claire)</label>
-              <span style={{ height: 96, borderRadius: 12, background: '#F5F1EC', border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                {apercuLogoFonce ? <img src={apercuLogoFonce} alt="Logo foncé actuel" style={{ maxWidth: 160, maxHeight: 72 }} /> : <span className="discret">Facultatif</span>}
-              </span>
-              <input id="logo_fonce" name="logo_fonce" type="file" accept="image/png,image/svg+xml,image/webp" style={{ padding: 8 }} onChange={(e) => { const f = e.currentTarget.files?.[0]; if (f) setApercuLogoFonce(URL.createObjectURL(f)); }} /></div>
+          <div><h2>Logo</h2><p className="sous">Vous pouvez déposer deux versions de votre logo (PNG ou SVG à fond transparent), puis choisir celle qui s’affiche en haut de l’app. Elles sont montrées ici sur la couleur de votre app.</p></div>
+          <div role="radiogroup" aria-label="Logo affiché dans l’app" className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))' }}>
+            {([
+              ['clair', 'Logo clair', 'Blanc ou de couleur claire : pour une couleur d’app foncée.', apercuLogo, setApercuLogo, 'logo'],
+              ['fonce', 'Logo foncé', 'Noir ou de couleur foncée : pour une couleur d’app claire.', apercuLogoFonce, setApercuLogoFonce, 'logo_fonce'],
+            ] as const).map(([cle, titre, aide, apercu, setApercu, champ]) => {
+              const choisi = choix === cle;
+              return (
+                <div key={cle} className="pile" style={{ gap: 10, padding: 14, borderRadius: 14, border: choisi ? '2.5px solid var(--encre)' : '1.5px solid var(--ligne)' }}>
+                  <label style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: apercu ? 'pointer' : 'default' }}>
+                    <input type="radio" name="choix_logo" checked={choisi} disabled={!apercu} onChange={() => setChoix(cle)} style={{ width: 20, height: 20, marginTop: 2 }} />
+                    <span><b>{titre}</b>{choisi && apercu ? <span style={{ color: 'var(--vert)', fontWeight: 700 }}> · affiché dans l’app</span> : null}<br /><span className="aide">{aide}</span></span>
+                  </label>
+                  <span style={{ height: 96, borderRadius: 12, background: couleur, border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {apercu ? <img src={apercu} alt={`${titre} actuel`} style={{ maxWidth: 160, maxHeight: 72 }} /> : <span style={{ color: texte, opacity: 0.8 }}>Aucun logo</span>}
+                  </span>
+                  <label htmlFor={champ} className="aide" style={{ fontWeight: 700 }}>{apercu ? 'Remplacer' : 'Déposer'} le {titre.toLowerCase()}</label>
+                  <input id={champ} name={champ} type="file" accept="image/png,image/svg+xml,image/webp" style={{ padding: 8 }}
+                    onChange={(e) => { const f = e.currentTarget.files?.[0]; if (f) { setApercu(URL.createObjectURL(f)); setChoix(cle); } }} />
+                </div>
+              );
+            })}
           </div>
         </section>
         <section className="carte-bo pile">

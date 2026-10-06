@@ -29,9 +29,10 @@ export default async function LayoutRestaurant({ children, params }: { children:
     return (
       <div className="ecran" style={theme}>
         <main style={{ minHeight: '70dvh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: 28, textAlign: 'center' }}>
-          {restaurant.logo_url
+          {/* Page blanche : le logo foncé s'y lit mieux, s'il existe. */}
+          {restaurant.logo_fonce_url || restaurant.logo_url
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={restaurant.logo_url} alt={restaurant.nom} style={{ maxWidth: 180, maxHeight: 110, objectFit: 'contain' }} />
+            ? <img src={(restaurant.logo_fonce_url || restaurant.logo_url)!} alt={restaurant.nom} style={{ maxWidth: 180, maxHeight: 110, objectFit: 'contain' }} />
             : <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--marque-texte)', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <span className="logo-pat-pastille" style={{ width: 88, height: 88 }}><img src="/pat/pat.png" alt="" /></span>{restaurant.nom}</h1>}

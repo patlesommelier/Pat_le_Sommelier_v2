@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { BoutonImprimer } from '@/components/admin/BoutonImprimer';
 import { getRestaurantBO } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
-import { couleurClaire } from '@/lib/couleurs';
+import { couleurClaire, logoAffiche } from '@/lib/couleurs';
 import { exigerAcces } from '@/lib/admin/auth';
 
 /** Chevalet de table A6 (105 × 148 mm), quatre par feuille A4. */
@@ -14,7 +14,7 @@ export default async function Chevalet({ params }: { params: Promise<{ resto: st
   if (!r) notFound();
   const svg = await qrSvg(await adresseApp(resto));
   const clair = couleurClaire(r.couleur);
-  const logo = (clair && r.logo_fonce_url) || r.logo_url;
+  const logo = logoAffiche(r)?.url;
   const carte = (
     <div style={{ width: '105mm', height: '148mm', boxSizing: 'border-box', border: '0.2mm dashed #CCC', display: 'flex', flexDirection: 'column', background: '#FFF', breakInside: 'avoid' }}>
       <div style={{ background: r.couleur, padding: '6mm', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '24mm', color: clair ? '#1A1A1A' : '#FFF' }}>

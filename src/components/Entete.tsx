@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Restaurant } from '@/lib/types';
-import { couleurClaire } from '@/lib/couleurs';
+import { logoAffiche } from '@/lib/couleurs';
 import { Chevron, Livre } from './Icones';
 
 /** Hauteur du logo dans le bandeau : plus grande pour un logo carré ou rond que pour un logo en largeur. */
@@ -13,6 +13,7 @@ function hauteurLogo(ratio: number | null | undefined, grand: boolean) {
 
 /** Bandeau du haut : retour discret, logo, bouton « Carte des vins ». Reste visible quand on fait défiler. */
 export function Entete({ restaurant, retour, grand = false, children }: { restaurant: Restaurant; retour?: string; grand?: boolean; children?: ReactNode }) {
+  const logo = logoAffiche(restaurant);
   return (
     <header className={`bandeau${grand ? ' grand' : ''}`}>
       <div className="bandeau-haut">
@@ -22,10 +23,10 @@ export function Entete({ restaurant, retour, grand = false, children }: { restau
           </Link>
         )}
         <Link href={`/${restaurant.id}`} className="logo" aria-label={`${restaurant.nom}, accueil`}>
-          {restaurant.logo_url
+          {logo
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src={(couleurClaire(restaurant.couleur) && restaurant.logo_fonce_url) || restaurant.logo_url} alt={restaurant.nom}
-                style={{ height: hauteurLogo(restaurant.logo_ratio, grand), maxWidth: '62vw', objectFit: 'contain' }} />
+            ? <img src={logo.url} alt={restaurant.nom}
+                style={{ height: hauteurLogo(logo.ratio, grand), maxWidth: '100%', objectFit: 'contain', objectPosition: 'left center' }} />
             : <LogoPat nom={restaurant.nom} />}
         </Link>
         <Link href={`/${restaurant.id}/carte`} className="bouton-carte">

@@ -432,20 +432,23 @@ export async function enregistrerApparence(resto: string, f: FormData) {
   let logo: string | null = null;
   let logoFonce: string | null = null;
   let ratio: number | null = null;
+  let ratioFonce: number | null = null;
   try {
     const l = fichier(f, 'logo');
     if (l) ({ url: logo, ratio } = await deposerLogo(l, `${resto}/logo`)); // marges vides retirées, proportions mesurées
     const lf = fichier(f, 'logo_fonce');
-    if (lf) logoFonce = (await deposerLogo(lf, `${resto}/logo`)).url;
+    if (lf) ({ url: logoFonce, ratio: ratioFonce } = await deposerLogo(lf, `${resto}/logo`));
   } catch (e) {
     redirect(avec(`/admin/${resto}/apparence`, { erreur: (e as Error).message }));
   }
   const accroche = [txt(f, 'accroche1'), txt(f, 'accroche2')].filter(Boolean).join('|') || null;
   await requete(
     `update restaurant set couleur = $2, couleur_claire = $3, accroche = $4, logo_url = coalesce($5, logo_url),
-            logo_fonce_url = coalesce($6, logo_fonce_url), logo_ratio = case when $5::text is not null then $7 else logo_ratio end, modifie_bo = now()
+            logo_fonce_url = coalesce($6, logo_fonce_url), logo_ratio = case when $5::text is not null then $7 else logo_ratio end,
+            logo_fonce_ratio = case when $6::text is not null then $8 else logo_fonce_ratio end, logo_choix = $9, modifie_bo = now()
       where id = $1`,
-    [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio],
+    [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio, ratioFonce,
+      ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

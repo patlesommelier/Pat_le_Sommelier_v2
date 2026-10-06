@@ -3,14 +3,14 @@ import { requete } from '../db';
 import { REGLAGES_PAT, reglagesComplets, type Reglages } from '../selection';
 
 export interface RestaurantBO {
-  id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null;
+  id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null;
   accroche: string | null; reglages_selection: Record<string, unknown>; modifie_bo: string | null;
   statut: string; origine: string;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, reglages_selection, modifie_bo, statut, origine
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }

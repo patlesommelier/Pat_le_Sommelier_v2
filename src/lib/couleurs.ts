@@ -10,3 +10,17 @@ export function contrasteBlanc(hex: string) {
 
 /** Couleur claire : sous 3:1, le blanc n'est plus lisible dessus (l'app écrit alors en foncé). */
 export const couleurClaire = (hex: string) => contrasteBlanc(hex) < 3;
+
+type AvecLogos = { couleur: string; logo_url: string | null; logo_fonce_url?: string | null; logo_choix?: string | null;
+  logo_ratio?: number | null; logo_fonce_ratio?: number | null };
+
+/**
+ * Logo affiché dans l'app (et sur les supports) : celui choisi dans « Apparence » ; sans choix, le foncé sur une couleur
+ * claire et le clair sinon. S'il n'y a qu'un logo, c'est lui. null : aucun logo (Pat le remplace).
+ */
+export function logoAffiche(r: AvecLogos): { url: string; ratio: number | null } | null {
+  const clair = r.logo_url ? { url: r.logo_url, ratio: r.logo_ratio ?? null } : null;
+  const fonce = r.logo_fonce_url ? { url: r.logo_fonce_url, ratio: r.logo_fonce_ratio ?? null } : null;
+  const prefereFonce = r.logo_choix ? r.logo_choix === 'fonce' : couleurClaire(r.couleur);
+  return prefereFonce ? fonce ?? clair : clair ?? fonce;
+}
