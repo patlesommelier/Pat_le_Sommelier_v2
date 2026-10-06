@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { validerDepuisListe } from '../actions';
-import { Entete, Message } from '@/components/admin/Ui';
+import { Entete, Message, Vignette } from '@/components/admin/Ui';
 import { producteursAValider } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 
@@ -20,7 +20,8 @@ export default async function ProducteursAValider({ searchParams }: { searchPara
           <tbody>
             {prods.map((p) => (
               <tr key={p.id}>
-                <td><Link href={`/admin/super/producteurs/${encodeURIComponent(p.id)}`}><b>{p.nom}</b></Link></td>
+                <td><Link href={`/admin/super/producteurs/${encodeURIComponent(p.id)}`}><b>{p.nom}</b></Link>
+                  {p.photos.length > 0 && <div style={{ display: 'flex', gap: 6, marginTop: 6 }}>{p.photos.map((u) => <Vignette key={u} url={u} taille={36} />)}</div>}</td>
                 <td>{[p.region, p.pays].filter(Boolean).join(' · ') || '—'}</td>
                 <td className="droite">{p.vins}</td>
                 <td>{p.restaurants ?? '—'}</td>

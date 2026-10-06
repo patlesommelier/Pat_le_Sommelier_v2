@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ajouterCuvee, changerRanking } from '../actions';
-import { Entete, Etat, euros } from '@/components/admin/Ui';
+import { Entete, Etat, euros, Vignette } from '@/components/admin/Ui';
 import { detailsProducteurs, paysProducteurs, rechercherProducteurs, rechercherTerroirs, restaurantsListe } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 
@@ -77,13 +77,20 @@ export default async function Base({ searchParams }: { searchParams: Promise<Sp>
                   {(details.vins.get(p.id) ?? []).length > 0 && (
                     <div className="tableau"><table style={{ minWidth: 640 }}>
                       <thead><tr><th>Vin de carte</th><th>Couleur</th><th>Terroir</th><th className="droite">Rk terroir</th><th className="droite">Rk cuvée</th><th>Carte</th><th className="droite">Prix</th></tr></thead>
-                      <tbody>{(details.vins.get(p.id) ?? []).map((v: { id: string; libelle: string; millesime: string | null; couleur: string; terroir: string | null; ranking_terroir: number | null; ranking_producteur: number | null; restaurant: string; prix: number | null }) => (
-                        <tr key={v.id}><td>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}</td><td>{COULEURS[v.couleur] ?? v.couleur}</td><td>{v.terroir ?? '—'}</td>
+                      <tbody>{(details.vins.get(p.id) ?? []).map((v: { id: string; libelle: string; millesime: string | null; couleur: string; terroir: string | null; ranking_terroir: number | null; ranking_producteur: number | null; restaurant: string; prix: number | null; etiquette_url: string | null }) => (
+                        <tr key={v.id}><td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><span>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}</span></div></td><td>{COULEURS[v.couleur] ?? v.couleur}</td><td>{v.terroir ?? '—'}</td>
                           <td className="droite">{v.ranking_terroir ?? '—'}</td><td className="droite">{v.ranking_producteur ?? '—'}</td><td>{v.restaurant}</td><td className="droite">{euros(v.prix)}</td></tr>))}
                       </tbody></table></div>
                   )}
                   {(details.cuvees.get(p.id) ?? []).length > 0 && (
-                    <span className="petit">Cuvées de la base : {(details.cuvees.get(p.id) ?? []).map((c: { nom: string; appellation: string | null }) => `${c.nom}${c.appellation ? ` (${c.appellation})` : ''}`).join(' · ')}</span>
+                    <div className="pile" style={{ gap: 6 }}>
+                      <span className="petit">Cuvées de la base :</span>
+                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
+                        {(details.cuvees.get(p.id) ?? []).map((c: { id: string; nom: string; appellation: string | null; etiquette_url: string | null }) => (
+                          <span key={c.id} className="petit" style={{ display: 'inline-flex', alignItems: 'center', gap: 6 }}>
+                            {c.etiquette_url && <Vignette url={c.etiquette_url} taille={32} />}{c.nom}{c.appellation ? ` (${c.appellation})` : ''}</span>))}
+                      </div>
+                    </div>
                   )}
                   <form action={ajouterCuvee.bind(null, p.id)} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, alignItems: 'flex-end' }}>
                     <input type="hidden" name="retour" value={retour} />

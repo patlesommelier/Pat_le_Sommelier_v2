@@ -63,7 +63,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
               <tbody>
                 {p.vins.map((v) => (
                   <tr key={v.id}>
-                    <td><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit discret">{v.id}</div></td>
+                    <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} /><div><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit discret">{v.id}</div></div></div></td>
                     <td>{COULEURS[v.couleur] ?? v.couleur}</td>
                     <td>{v.terroir ?? '—'}</td>
                     <td>{v.restaurant}</td>
