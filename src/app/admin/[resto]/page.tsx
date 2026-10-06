@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation';
 import { etapesRestaurant } from './etapes';
 import { Icone } from '@/components/admin/Icone';
 import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
-import { Entete, Etat } from '@/components/admin/Ui';
+import { Entete } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { exigerAcces } from '@/lib/admin/auth';
 
@@ -35,17 +35,10 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
       </div>
       </>}
       <section className="pile">
-        <div><h2 style={{ fontSize: 22 }}>Mise en place</h2><p className="discret" style={{ margin: '6px 0 0' }}>Sept étapes, dans l’ordre. Vous pouvez revenir sur chacune à tout moment.</p></div>
         <div className="grille">
-          {etapes.map((e, i) => (
+          {etapes.map((e) => (
             <div key={e.href} className={`carte-bo ${e === suivante ? 'sticker' : ''}`} style={{ padding: 20, display: 'flex', flexDirection: 'column', gap: 14 }}>
-              <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
-                <span style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-                  <span style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--rose)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icone nom={e.icone} /></span>
-                  <span className="discret" style={{ fontFamily: 'var(--titre)', fontWeight: 700, fontSize: 13 }}>Étape {i + 1}</span>
-                </span>
-                <Etat type={e.statut[1]}>{e.statut[0]}</Etat>
-              </div>
+              <span style={{ width: 36, height: 36, borderRadius: 10, background: 'var(--rose)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}><Icone nom={e.icone} /></span>
               <div className="pile" style={{ gap: 4 }}>
                 <h3 style={{ fontSize: 21 }}>{e.libelle}</h3>
                 <strong style={{ fontSize: 15 }}>{e.ligne1}</strong>
