@@ -123,8 +123,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   <span className="libelle">Étiquette</span>
                   <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
                   {u?.admin && choisi.etiquette_statut === 'echec' && choisi.etiquette_erreur && <span className="petit discret">Motif : {choisi.etiquette_erreur}</span>}
-                  <label htmlFor="etiquette" className="aide" style={{ fontWeight: 400 }}>Remplacer par votre photo (5 Mo max).</label>
-                  <input id="etiquette" name="etiquette" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
+                  <input id="etiquette" name="etiquette" aria-label="Remplacer par votre photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
                 </div>
               </div>
               <fieldset className="pile" style={{ gap: 10, border: '1px solid var(--ligne)', borderRadius: 14, padding: 14, margin: 0 }}>
