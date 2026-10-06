@@ -10,6 +10,9 @@ export interface Restaurant {
   accroche: string | null;
   /** mise_en_place | en_service | suspendu : l'app n'est ouverte aux clients qu'« en service ». */
   statut?: string;
+  origine?: string;
+  /** Largeur / hauteur du logo (marges retirées) ; null = pas encore mesuré. */
+  logo_ratio?: number | null;
 }
 
 export interface Plat {

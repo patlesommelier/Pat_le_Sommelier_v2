@@ -4,6 +4,7 @@ import { BarrePat } from '@/components/BarrePat';
 import { couleurClaire } from '@/lib/couleurs';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
+import { reparerLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,6 +16,8 @@ export async function generateMetadata({ params }: { params: Promise<{ resto: st
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {
   const restaurant = await getRestaurant((await params).resto);
   if (!restaurant) notFound();
+  // Logo d'un restaurant inscrit déposé avant le recadrage automatique : rogné et mesuré une fois.
+  if (restaurant.logo_url && restaurant.logo_ratio == null && restaurant.origine === 'inscription') await reparerLogo(restaurant.id, restaurant.logo_url);
   const clair = couleurClaire(restaurant.couleur);
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {

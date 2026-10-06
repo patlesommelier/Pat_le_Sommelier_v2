@@ -7,6 +7,7 @@ import { requete } from '@/lib/db';
 import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
+import { deposerLogo } from '@/lib/logo';
 import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
@@ -430,20 +431,21 @@ export async function enregistrerApparence(resto: string, f: FormData) {
   if (!couleur || !/^#[0-9a-f]{6}$/i.test(couleur)) redirect(avec(`/admin/${resto}/apparence`, { erreur: 'Couleur invalide : utilisez un code comme #BA4037.' }));
   let logo: string | null = null;
   let logoFonce: string | null = null;
+  let ratio: number | null = null;
   try {
     const l = fichier(f, 'logo');
-    if (l) logo = await deposerImage(l, `${resto}/logo`);
+    if (l) ({ url: logo, ratio } = await deposerLogo(l, `${resto}/logo`)); // marges vides retirées, proportions mesurées
     const lf = fichier(f, 'logo_fonce');
-    if (lf) logoFonce = await deposerImage(lf, `${resto}/logo`);
+    if (lf) logoFonce = (await deposerLogo(lf, `${resto}/logo`)).url;
   } catch (e) {
     redirect(avec(`/admin/${resto}/apparence`, { erreur: (e as Error).message }));
   }
   const accroche = [txt(f, 'accroche1'), txt(f, 'accroche2')].filter(Boolean).join('|') || null;
   await requete(
     `update restaurant set couleur = $2, couleur_claire = $3, accroche = $4, logo_url = coalesce($5, logo_url),
-            logo_fonce_url = coalesce($6, logo_fonce_url), modifie_bo = now()
+            logo_fonce_url = coalesce($6, logo_fonce_url), logo_ratio = case when $5::text is not null then $7 else logo_ratio end, modifie_bo = now()
       where id = $1`,
-    [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce],
+    [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
