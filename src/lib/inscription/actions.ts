@@ -70,7 +70,8 @@ export async function deposer(type: TypeAnalyse, _: Reponse, form: FormData): Pr
 const Compte = z.object({
   nom: z.string().trim().min(2, 'Indiquez le nom du restaurant.').max(80),
   email: z.string().trim().toLowerCase().email('Adresse e-mail invalide.'),
-  motDePasse: z.string().min(12, 'Mot de passe : 12 caractères minimum.').max(128),
+  // 12 caractères minimum pour un nouveau compte (vérifié plus bas) ; un compte existant garde son mot de passe.
+  motDePasse: z.string().min(1, 'Indiquez un mot de passe.').max(128),
   cgu: z.literal('on', { errorMap: () => ({ message: 'Acceptez les conditions d’utilisation.' }) }),
 });
 
@@ -88,39 +89,50 @@ export async function creerSommelier(_: Reponse, form: FormData): Promise<Repons
 
   // Accès immédiat (décision de Pat) : le compte est créé déjà confirmé. Les limites par connexion et par
   // inscription restent la protection contre les abus. Un double clic réutilise le compte déjà créé.
+  // Compte existant (deuxième restaurant, ou test de Pat) : le restaurant y est ajouté, si l'on est déjà connecté
+  // avec cette adresse dans ce navigateur, ou avec son mot de passe actuel.
+  const email = r.data.email, motDePasse = r.data.motDePasse;
+  const connecte = await utilisateurReel().catch(() => null);
+  let sessionOuverte = Boolean(connecte && connecte.email === email);
   let userId = i.user_id;
   if (!userId) {
-    if (modeDev()) {
+    if (sessionOuverte) {
+      userId = connecte!.id;
+    } else if (modeDev()) {
       userId = randomUUID();
     } else {
-      const { data, error } = await supabaseService().auth.admin.createUser({ email: r.data.email, password: r.data.motDePasse, email_confirm: true });
-      if (error || !data.user) {
-        const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé ce compte
-        if (deja?.user_id && deja.email === r.data.email) userId = deja.user_id;
-        else if (/registered|exists/i.test(error?.message ?? '')) {
-          // Compte existant (deuxième restaurant, ou test de Pat) : avec le bon mot de passe, le restaurant y est ajouté.
-          const { data: session, error: eLogin } = await (await supabaseSession()).auth.signInWithPassword({ email: r.data.email, password: r.data.motDePasse });
-          if (eLogin || !session.user) return { erreurs: ['Un compte existe déjà avec cette adresse. Saisissez son mot de passe pour y ajouter ce restaurant, ou utilisez une autre adresse.'] };
-          userId = session.user.id;
-        } else return { erreurs: ['Création du compte impossible. Réessayez.'] };
+      const { data: existant } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
+      if (existant?.user) {
+        userId = existant.user.id;
+        sessionOuverte = true;
       } else {
-        userId = data.user.id;
+        if (motDePasse.length < 12) return { erreurs: ['Mot de passe : 12 caractères minimum.'] };
+        const { data, error } = await supabaseService().auth.admin.createUser({ email, password: motDePasse, email_confirm: true });
+        if (error || !data.user) {
+          const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé ce compte
+          if (deja?.user_id && deja.email === email) userId = deja.user_id;
+          else if (/registered|exists/i.test(error?.message ?? '')) {
+            return { erreurs: [`Un compte existe déjà pour ${email}, mais ce mot de passe ne correspond pas. Saisissez le mot de passe que vous utilisez pour vous connecter à votre espace (mot de passe oublié : bouton « Se connecter » en haut de la page), ou utilisez une autre adresse.`] };
+          } else return { erreurs: ['Création du compte impossible. Réessayez.'] };
+        } else {
+          userId = data.user.id;
+        }
       }
     }
-    await majInscription(i.id, { user_id: userId, email: r.data.email, nom_restaurant: r.data.nom });
+    await majInscription(i.id, { user_id: userId, email, nom_restaurant: r.data.nom });
   } else {
     await majInscription(i.id, { nom_restaurant: r.data.nom });
   }
 
   let restaurantId: string;
   try {
-    ({ restaurantId } = await finaliserInscription(i.id, userId!, r.data.email));
+    ({ restaurantId } = await finaliserInscription(i.id, userId!, email));
   } catch (e) {
     console.error('[inscription] création', i.id, e);
     return { erreurs: ['La création de votre espace n’a pas abouti. Réessayez dans un instant.'] };
   }
-  if (!modeDev()) {
-    const { error } = await (await supabaseSession()).auth.signInWithPassword({ email: r.data.email, password: r.data.motDePasse });
+  if (!modeDev() && !sessionOuverte) {
+    const { error } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
     if (error) redirect(`/admin/connexion?info=${encodeURIComponent('Votre espace est créé : connectez-vous avec votre e-mail.')}`);
   }
   redirect(`${espace(restaurantId)}?bienvenue=1`);
