@@ -40,11 +40,13 @@
 .medaillon { position: absolute; top: 0; left: -16px; z-index: 2; width: 124px; height: 124px; border-radius: 50%;
   background: radial-gradient(circle at 40% 35%, #FFF 0%, #FBF1E6 70%); box-shadow: 0 16px 32px -14px rgba(0,0,0,0.55), 0 0 0 5px #610420;
   display: flex; align-items: center; justify-content: center; }
-.carte { position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
+.carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
   background: linear-gradient(135deg, #F6D57A 0%, #E9B949 55%, #D9A23A 100%);
   box-shadow: 0 30px 60px -28px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.35); display: flex; flex-direction: column; gap: 22px; }
 .carteTitre { margin: 0; padding-left: 110px; min-height: 52px; display: flex; align-items: center; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif;
-  font-size: 28px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; }
+  font-size: min(26px, calc((100cqw - 110px) / 25.5)); font-weight: 800; letter-spacing: -0.6px; line-height: 1.1; white-space: nowrap; }
+/* Titre sur une ligne : sa taille suit la largeur du cadre doré (environ 25 em pour le texte, quelle que soit la police). */
+@media (max-width: 900px) { .carteTitre { white-space: normal; } }
 .depot { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 92px; padding: 14px 20px; box-sizing: border-box;
   border: 2px dashed #A8771C; border-radius: 16px; background: #FFF8E6; cursor: pointer; font-size: 17px; font-weight: 700; }
 .depot[data-survol='true'] { border-color: #610420; background: #FFF1CC; }
