@@ -29,9 +29,17 @@ export type Inscription = {
 const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_proposees, logo_clair, analyses, lecture, nom_restaurant, ville, email,
   user_id, restaurant_id, expire_le`;
 
+/** Premier onglet rempli, mais menu pas déposé dans ce délai : l'inscription est réinitialisée. */
+export const DELAI_MENU_SECONDES = 60;
+
 export async function inscriptionCourante(): Promise<Inscription | null> {
   const jeton = (await cookies()).get(COOKIE)?.value;
   if (!jeton) return null;
+  await requete(
+    `update inscription set statut = 'expiree', maj_le = now()
+      where (jeton_empreinte = $1 or $1 = any(jetons_autres)) and statut = 'en_cours' and user_id is not null
+        and lecture->'menu' is null and jsonb_array_length(plats) = 0 and maj_le < now() - make_interval(secs => $2)`,
+    [empreinte(jeton), DELAI_MENU_SECONDES]);
   const [i] = await requete<Inscription>(`select ${COLONNES} from inscription where (jeton_empreinte = $1 or $1 = any(jetons_autres)) and expire_le > now() and statut <> 'expiree'`, [empreinte(jeton)]);
   return i ?? null;
 }

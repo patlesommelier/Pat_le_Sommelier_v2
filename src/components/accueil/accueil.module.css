@@ -96,5 +96,3 @@
   .entete { padding: 0 24px; }
 }
 @media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } }
-.restaurantEnCours { margin: 0 0 12px; display: flex; align-items: center; flex-wrap: wrap; gap: 4px 10px; font-size: 15px; color: #2A0412; }
-.restaurantEnCours .lien { min-height: 32px; font-size: 14px; }
