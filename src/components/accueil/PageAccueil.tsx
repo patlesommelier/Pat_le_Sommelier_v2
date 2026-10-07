@@ -12,7 +12,8 @@ import { inscriptionCourante } from '@/lib/inscription/etat';
 import { resumePublic } from '@/lib/inscription/etapes';
 
 export async function PageAccueil() {
-  const resume = resumePublic(await inscriptionCourante());
+  // Inscription terminée dans ce navigateur : formulaire vierge pour un nouveau restaurant.
+  const resume = resumePublic(await inscriptionCourante().then((i) => (i?.statut === 'en_cours' ? i : null)));
   return (
     <div className={s.page}>
       <section aria-labelledby="h-intro" className={s.bordeaux}>

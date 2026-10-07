@@ -1,5 +1,5 @@
 // Étapes du formulaire de la page d'accueil (fonctions pures, testables).
-// Ordre décidé avec Pat : 1. carte des vins, 2. menu, 3. restaurant. Une seule étape visible à la fois.
+// Ordre décidé avec Pat : 1. restaurant (compte), 2. menu, 3. carte des vins. Une seule étape visible à la fois.
 import type { Plat, VinRapproche } from './donnees';
 
 export type TypeAnalyse = 'carte' | 'menu';
@@ -7,13 +7,13 @@ export type EtatAnalyse = { statut: 'en_attente' | 'en_cours' | 'ok' | 'erreur';
 export type Analyses = Partial<Record<TypeAnalyse, EtatAnalyse>>;
 export type Etape = 'carte' | 'menu' | 'restaurant';
 
-type Base = { vins: VinRapproche[]; plats: Plat[]; lecture?: Analyses };
+type Base = { vins: VinRapproche[]; plats: Plat[]; lecture?: Analyses; user_id?: string | null };
 
 /** Étape à afficher en revenant sur la page : la première qui n'est pas terminée. */
-export function etapeCourante(i: Pick<Base, 'vins' | 'plats'> | null): Etape {
-  if (!i || i.vins.length === 0) return 'carte';
+export function etapeCourante(i: Pick<Base, 'vins' | 'plats' | 'user_id'> | null): Etape {
+  if (!i?.user_id) return 'restaurant';
   if (i.plats.length === 0) return 'menu';
-  return 'restaurant';
+  return 'carte';
 }
 
 /** Une lecture sans nouvelles depuis 15 minutes a été interrompue (fonction d'arrière-plan coupée). */

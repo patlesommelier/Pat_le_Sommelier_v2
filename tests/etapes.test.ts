@@ -6,13 +6,14 @@ import type { Plat, VinRapproche } from '../src/lib/inscription/donnees';
 const vin: VinRapproche = { libelleCarte: 'Sancerre', producteur: 'Henri Bourgeois', appellation: null, millesime: '2025', contenance: null,
   prix: 58, prixVerre: null, auVerre: false, couleur: 'blanc', region: null, vinId: 'v1', producteurStatut: 'reference' };
 const plat: Plat = { nom: 'Filet pur, sauce morilles', categorie: 'plat', description: null };
-const base = (p: { vins?: VinRapproche[]; plats?: Plat[]; lecture?: Analyses } = {}) => ({ vins: [], plats: [], lecture: {}, ...p });
+const base = (p: { vins?: VinRapproche[]; plats?: Plat[]; lecture?: Analyses; user_id?: string } = {}) => ({ vins: [], plats: [], lecture: {}, ...p });
 
-test('ordre des étapes : carte des vins, puis menu, puis restaurant', () => {
-  assert.equal(etapeCourante(null), 'carte');
-  assert.equal(etapeCourante(base()), 'carte');
-  assert.equal(etapeCourante(base({ vins: [vin] })), 'menu');
-  assert.equal(etapeCourante(base({ vins: [vin], plats: [plat] })), 'restaurant');
+test('ordre des étapes : restaurant (compte), puis menu, puis carte des vins', () => {
+  assert.equal(etapeCourante(null), 'restaurant');
+  assert.equal(etapeCourante(base()), 'restaurant');
+  assert.equal(etapeCourante(base({ user_id: 'u1' })), 'menu');
+  assert.equal(etapeCourante(base({ user_id: 'u1', plats: [plat] })), 'carte');
+  assert.equal(etapeCourante(base({ user_id: 'u1', plats: [plat], vins: [vin] })), 'carte');
 });
 
 test('le navigateur ne reçoit que des compteurs, jamais les listes', () => {

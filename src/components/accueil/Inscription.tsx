@@ -1,17 +1,18 @@
 'use client';
 // Formulaire doré « Activez votre sommelier en quelques minutes » (niveau 3 de la page) : une étape à la fois.
-// 1. carte des vins → 2. menu → 3. restaurant. Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
+// 1. restaurant (compte) → 2. menu → 3. carte des vins → « Créer mon sommelier » (accords et QR code).
+// Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
-import { deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
+import { commencer, deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
-  carte: { depot: 'Déposez votre carte des vins et commencez maintenant', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
+  carte: { depot: 'Déposez votre carte des vins', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
   menu: { depot: 'Déposez votre menu', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
@@ -83,15 +84,18 @@ function Depot({ type, etat, onReponse }: {
   );
 }
 
-function BoutonCreer() {
+function BoutonEnvoi({ libelle, enCours, desactive = false }: { libelle: string; enCours: string; desactive?: boolean }) {
   const { pending } = useFormStatus();
-  return <button type="submit" className={s.bouton} disabled={pending} aria-busy={pending}>{pending ? 'Création en cours…' : 'Créer mon sommelier'}</button>;
+  return <button type="submit" className={s.bouton} disabled={pending || desactive} aria-busy={pending}>{pending ? enCours : libelle}</button>;
 }
 
 export function Inscription({ initial }: { initial: ResumePublic }) {
   const [resume, setResume] = useState(initial);
   const [etape, setEtape] = useState<Etape>(initial.etape);
-  const [compte, envoyerCompte] = useActionState(creerSommelier, { erreurs: [] });
+  const [compte, envoyerCompte] = useActionState(commencer, { erreurs: [] } as Reponse);
+  const [creation, creer] = useActionState(creerSommelier, { erreurs: [] } as Reponse);
+  // Compte créé : on passe au menu.
+  useEffect(() => { if (compte.resume) { setResume(compte.resume); setEtape(compte.resume.etape); } }, [compte]);
 
   // Tant qu'une lecture est en cours, on interroge le serveur toutes les 3 secondes.
   const lecture = resume.carte?.statut === 'en_cours' || resume.menu?.statut === 'en_cours';
@@ -115,21 +119,6 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
       <section className={s.carte} aria-labelledby="h-insc">
         <h2 id="h-insc" className={s.carteTitre}>Activez votre sommelier en quelques minutes</h2>
 
-        {etape === 'carte' && <>
-          <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
-          <div className={s.pied}>
-            <button type="button" className={s.bouton} disabled={resume.carte?.statut !== 'ok'} onClick={() => setEtape('menu')}>Continuer</button>
-          </div>
-        </>}
-
-        {etape === 'menu' && <>
-          <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
-          <div className={s.pied}>
-            <button type="button" className={s.retour} onClick={() => setEtape('carte')}>Retour</button>
-            <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('restaurant')}>Continuer</button>
-          </div>
-        </>}
-
         {etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
             <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
@@ -139,11 +128,26 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
             </div>
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
-            <div className={s.pied}>
-              <button type="button" className={s.retour} onClick={() => setEtape('menu')}>Retour</button>
-              <BoutonCreer />
-            </div>
+            <div className={s.pied}><BoutonEnvoi libelle="Commencer" enCours="Un instant…" /></div>
           </form>
+        )}
+
+        {etape === 'menu' && <>
+          <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
+          <div className={s.pied}>
+            <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('carte')}>Continuer</button>
+          </div>
+        </>}
+
+        {etape === 'carte' && (
+          <>
+            <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
+            <Erreurs liste={creation.erreurs} />
+            <form action={creer} className={s.pied}>
+              <button type="button" className={s.retour} onClick={() => setEtape('menu')}>Retour</button>
+              <BoutonEnvoi libelle="Créer mon sommelier" enCours="Création en cours…" desactive={resume.carte?.statut !== 'ok'} />
+            </form>
+          </>
         )}
       </section>
     </div>
