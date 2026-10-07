@@ -14,11 +14,17 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
 
   useEffect(() => {
     let actif = true;
+    // On ne bascule vers l'espace que si l'app est ouverte pour la première fois après l'affichage du QR code ici.
+    let dejaOuverte: boolean | null = null;
     const lire = async () => {
-      const r = await fetch(`/api/restaurants/${restaurantId}/preparation`, { cache: 'no-store' }).catch(() => null);
+      const r = await fetch(`/api/restaurants/${restaurantId}/preparation`, { cache: 'no-store', redirect: 'manual' }).catch(() => null);
       if (!r?.ok || !actif) return;
-      const e: Etat = await r.json();
-      if (e.restaurant === 'en_service' && e.scanne) { window.location.href = espace; return; } // QR code scanné
+      const e: Etat | null = await r.json().catch(() => null);
+      if (!e?.preparation) return;
+      if (e.restaurant === 'en_service') {
+        if (dejaOuverte === null) dejaOuverte = Boolean(e.scanne);
+        else if (!dejaOuverte && e.scanne) { window.location.href = espace; return; } // QR code scanné
+      }
       setEtat(e);
     };
     lire();
