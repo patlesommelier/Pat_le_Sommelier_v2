@@ -4,12 +4,15 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { euros } from '@/lib/format';
+import { Etiquette } from './Etiquette';
 import { Envoyer, Micro } from './Icones';
 
 interface Message {
   role: 'user' | 'assistant';
   content: string;
-  vins?: { id: string; libelle: string; prix: number | null }[];
+  /** Vins proposés : étiquette et texte complet de l'accord (ou présentation du vin), affichés sous la réponse. */
+  vins?: { id: string; plat: string | null; libelle: string; producteur: string | null; millesime: string | null; prix: number | null;
+    prix_verre: number | null; etiquette_url: string | null; texte: string | null }[];
   erreur?: boolean;
 }
 
@@ -90,8 +93,16 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                 {m.vins && m.vins.length > 0 && (
                   <div className="vins-cites">
                     {m.vins.map((v) => (
-                      <Link key={v.id} href={`/${restaurant}/vin/${v.id}${plat ? `?plat=${plat}` : ''}`} onClick={() => setOuvert(false)}>
-                        {v.libelle} {v.prix ? `· ${euros(v.prix)}` : ''}
+                      <Link key={v.id} className="fiche-chat" href={`/${restaurant}/vin/${v.id}${v.plat ?? plat ? `?plat=${v.plat ?? plat}` : ''}`} onClick={() => setOuvert(false)}>
+                        <span className="fiche-chat-haut">
+                          <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={72} hauteur={96} />
+                          <span className="fiche-chat-nom">
+                            <strong>{v.libelle}</strong>
+                            {(v.producteur || v.millesime) && <span>{[v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, v.millesime].filter(Boolean).join(' · ')}</span>}
+                            {(v.prix ?? v.prix_verre) !== null && <b>{euros(v.prix ?? v.prix_verre)}{v.prix && v.prix_verre ? <small> · verre {euros(v.prix_verre)}</small> : null}</b>}
+                          </span>
+                        </span>
+                        {v.texte && <span className="fiche-chat-texte">{v.texte}</span>}
                       </Link>
                     ))}
                   </div>

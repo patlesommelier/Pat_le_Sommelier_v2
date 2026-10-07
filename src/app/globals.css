@@ -162,8 +162,16 @@ a.bouton-plein { text-decoration: none; }
 .message { max-width: 86%; padding: 10px 14px; line-height: 1.45; font-size: 15px; white-space: pre-line; }
 .message.client { align-self: flex-end; background: var(--marque); color: #FFFFFF; border-radius: 16px 16px 4px 16px; }
 .message.pat { align-self: flex-start; background: var(--marque-claire); border-radius: 16px 16px 16px 4px; }
-.message .vins-cites { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-.message .vins-cites a { font-size: 12px; padding: 5px 8px; border: 1px solid var(--marque); color: var(--marque-texte, var(--marque)); text-decoration: none; background: #FFFFFF; }
+.message .vins-cites { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; white-space: normal; }
+/* Vin proposé dans la conversation : étiquette, nom et prix, puis le texte complet de l'accord. */
+.fiche-chat { display: flex; flex-direction: column; gap: 10px; padding: 12px; background: #FFFFFF; border: 1px solid var(--filet); color: inherit; text-decoration: none; }
+.fiche-chat-haut { display: flex; gap: 12px; align-items: center; }
+.fiche-chat-nom { display: flex; flex-direction: column; gap: 3px; min-width: 0; font-size: 14px; }
+.fiche-chat-nom strong { font-size: 15px; line-height: 1.3; }
+.fiche-chat-nom span { color: var(--discret); font-size: 13px; }
+.fiche-chat-nom b { color: var(--marque-texte, var(--marque)); font-size: 15px; }
+.fiche-chat-nom b small { font-weight: 400; color: var(--discret); font-size: 12px; }
+.fiche-chat-texte { font-size: 14px; line-height: 1.5; }
 .message.erreur { align-self: center; background: #FFF4E5; color: #6B4A00; border-radius: 8px; font-size: 14px; }
 
 /* Pat qui attend avec vous : petits pas dandinés, ombre qui respire (composant PatAttente). */

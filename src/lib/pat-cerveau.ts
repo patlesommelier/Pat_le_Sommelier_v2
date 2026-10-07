@@ -107,9 +107,19 @@ Réponds uniquement avec ce JSON, sans texte autour :
 }
 
 /** Extrait les codes de vins cités à la fin d'une réponse de Pat (ligne « VINS : … »). */
-export function extraireVins(texte: string, codesValides: string[]): { reponse: string; vins: string[] } {
+export function extraireVins(texte: string, codesValides: string[], platsValides: string[] = []): { reponse: string; vins: { id: string; plat: string | null }[] } {
   const m = texte.match(/\n?\s*VINS\s*:\s*([^\n]*)\s*$/i);
   const reponse = m ? texte.slice(0, m.index).trim() : texte.trim();
-  const cites = (m?.[1] ?? reponse).match(/[A-Z]-[A-Z]\d{2}/g) ?? [];
-  return { reponse, vins: [...new Set(cites)].filter((c) => codesValides.includes(c)) };
+  // « VINS : L-B02 (lola-bar-roti), L-R14 (lola-bar-roti) » : code du vin, et le plat pour lequel il est proposé.
+  const echapper = (t: string) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const trouve = (morceau: string, liste: string[]) => [...liste].sort((x, y) => y.length - x.length)
+    .find((c) => new RegExp(`(^|[^A-Za-z0-9-])${echapper(c)}($|[^A-Za-z0-9-])`).test(morceau)) ?? null;
+  const vins: { id: string; plat: string | null }[] = [];
+  for (const morceau of (m?.[1] ?? '').split(/[,;]/)) {
+    const id = trouve(morceau, codesValides);
+    if (!id || vins.some((v) => v.id === id)) continue;
+    const parentheses = morceau.match(/\(([^)]*)\)/)?.[1] ?? '';
+    vins.push({ id, plat: trouve(parentheses, platsValides) });
+  }
+  return { reponse, vins };
 }

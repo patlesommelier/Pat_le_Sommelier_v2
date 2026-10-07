@@ -5,7 +5,8 @@ import { chargerContexte } from '@/lib/contexte';
 import { getRestaurant } from '@/lib/donnees';
 import { instructionsPat } from '@/lib/instructions-pat';
 import { appOuverte } from '@/lib/ouverture';
-import { extraireVins, textePrincipes, texteCarte, texteRegles } from '@/lib/pat-cerveau';
+import { requete } from '@/lib/db';
+import { extraireVins, texteCarte, texteRegles } from '@/lib/pat-cerveau';
 
 export const runtime = 'nodejs';
 
@@ -34,6 +35,15 @@ export async function POST(req: Request) {
   if (!restaurant || !ctx.carte.length) return NextResponse.json({ erreur: 'Restaurant inconnu' }, { status: 404 });
   const plat = corps.plat ? ctx.plats.find((p) => p.id === corps.plat) : undefined;
 
+  // Pat ne cherche que dans la table d'accords : seuls les vins qui ont un accord validé (au-dessus du seuil)
+  // sur au moins un plat lui sont donnés, et chaque vin qu'il cite est vérifié ci-dessous.
+  const accords = await requete<{ plat_id: string; vin_id: string; texte: string | null }>(
+    `select plat_id, vin_id, coalesce(explication_longue, explication) as texte
+       from accord where restaurant_id = $1 and statut = 'valide' and note >= 3`, [corps.restaurant]);
+  const accord = new Map(accords.map((a) => [`${a.plat_id}|${a.vin_id}`, a]));
+  const avecAccord = new Set(accords.map((a) => a.vin_id));
+  const carte = ctx.carte.filter((v) => avecAccord.has(v.id));
+
   const categories = [...new Set(ctx.plats.map((p) => p.categorie))];
   const menu = categories
     .map((c) => `${CATEGORIES[c] ?? c}\n${ctx.plats.filter((p) => p.categorie === c).map((p) => `- ${nomAllege(p.nom)} [${p.id}]`).join('\n')}`)
@@ -46,8 +56,7 @@ export async function POST(req: Request) {
   const donnees = [
     `MENU DE ${restaurant.nom.toUpperCase()}\n${menu}`,
     `CLASSEMENT DES VINS PAR PLAT (code du vin, note /5 de la table d'accords ; cuisine interne, jamais citée au client)\n${classements}`,
-    `CARTE DES VINS DISPONIBLES (code | couleur | vin — producteur | millésime | format | prix | cépages | profil | ranking | avis de Pat | descriptif)\n${texteCarte(ctx.carte, { descriptif: true })}`,
-    `PRINCIPES D'ACCORD DE PAT (pour un plat absent du menu ; confidentiels)\n${textePrincipes(ctx.principes)}`,
+    `CARTE DES VINS DISPONIBLES (code | couleur | vin — producteur | millésime | format | prix | cépages | profil | ranking | avis de Pat | descriptif)\n${texteCarte(carte, { descriptif: true })}`,
     `CONSIGNES DU SOMMELIER DE ${restaurant.nom.toUpperCase()}\n${consignes.length ? texteRegles(consignes) : 'Aucune.'}`,
   ].join('\n\n');
 
@@ -74,12 +83,28 @@ export async function POST(req: Request) {
   });
   const texte = r.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
   if (!texte.trim()) return NextResponse.json({ erreur: 'Pat ne répond pas pour le moment.' }, { status: 502 });
-  const { reponse, vins } = extraireVins(texte, ctx.carte.map((v) => v.id));
+  const { reponse, vins: cites } = extraireVins(texte, carte.map((v) => v.id), ctx.plats.map((p) => p.id));
+  // Chaque vin cité doit venir de la table d'accords : celui du plat indiqué par Pat (ou de la page consultée) ;
+  // à défaut, le vin a au moins un accord et on montre sa présentation.
+  const retenus = cites.flatMap(({ id, plat: p }) => {
+    const pour = [p, corps.plat].find((x) => x && accord.has(`${x}|${id}`)) ?? null;
+    return pour || avecAccord.has(id) ? [{ id, plat: pour }] : [];
+  });
+  const fiches = retenus.length ? await requete<{ id: string; libelle: string; producteur: string | null; millesime: string | null;
+    prix: number | null; prix_verre: number | null; etiquette_url: string | null; presentation: string | null }>(
+    `select v.id, v.libelle, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
+            nullif(v.millesime, 'NM') as millesime, v.prix::float as prix, v.prix_verre::float as prix_verre, v.etiquette_url,
+            coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation
+       from vin_carte v left join producteur p on p.id = v.producteur_id
+      where v.restaurant_id = $1 and v.id = any($2)`, [corps.restaurant, retenus.map((r) => r.id)]) : [];
   return NextResponse.json({
     reponse,
-    vins: vins.map((id) => {
-      const v = ctx.carte.find((x) => x.id === id)!;
-      return { id, libelle: v.libelle, prix: v.prix };
+    // Vin proposé : étiquette, puis le texte complet de l'accord avec ce plat (ou sa présentation). Jamais de note ni de ranking.
+    vins: retenus.flatMap(({ id, plat: p }) => {
+      const v = fiches.find((f) => f.id === id);
+      if (!v) return [];
+      return [{ id, plat: p, libelle: v.libelle, producteur: v.producteur, millesime: v.millesime, prix: v.prix, prix_verre: v.prix_verre,
+        etiquette_url: v.etiquette_url, texte: (p ? accord.get(`${p}|${id}`)?.texte : null) ?? v.presentation }];
     }),
   });
 }
