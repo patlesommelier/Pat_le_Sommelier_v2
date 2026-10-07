@@ -19,7 +19,7 @@ test('ordre des étapes : restaurant (compte), puis menu, puis carte des vins', 
 test('le navigateur ne reçoit que des compteurs, jamais les listes', () => {
   const r = resumePublic(base({ vins: Array(71).fill(vin), plats: Array(39).fill(plat),
     lecture: { carte: { statut: 'ok', nombre: 71 }, menu: { statut: 'ok', nombre: 39 } } }));
-  assert.deepEqual(r, { etape: 'restaurant', carte: { statut: 'ok', nombre: 71, message: undefined }, menu: { statut: 'ok', nombre: 39, message: undefined } });
+  assert.deepEqual(r, { etape: 'restaurant', restaurant: null, carte: { statut: 'ok', nombre: 71, message: undefined }, menu: { statut: 'ok', nombre: 39, message: undefined } });
   const json = JSON.stringify(r);
   for (const mot of ['Sancerre', 'Bourgeois', 'vinId', 'ranking', 'score', 'limite']) assert.ok(!json.includes(mot), mot);
 });

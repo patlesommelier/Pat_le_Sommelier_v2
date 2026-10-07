@@ -7,7 +7,7 @@ export type EtatAnalyse = { statut: 'en_attente' | 'en_cours' | 'ok' | 'erreur';
 export type Analyses = Partial<Record<TypeAnalyse, EtatAnalyse>>;
 export type Etape = 'carte' | 'menu' | 'restaurant';
 
-type Base = { vins: VinRapproche[]; plats: Plat[]; lecture?: Analyses; user_id?: string | null };
+type Base = { vins: VinRapproche[]; plats: Plat[]; lecture?: Analyses; user_id?: string | null; nom_restaurant?: string | null };
 
 /** Étape à afficher en revenant sur la page : la première qui n'est pas terminée. */
 export function etapeCourante(i: Pick<Base, 'vins' | 'plats' | 'user_id'> | null): Etape {
@@ -33,6 +33,7 @@ export function resumePublic(i: Base | null, maintenant = Date.now()) {
   };
   return {
     etape: etapeCourante(i),
+    restaurant: i?.user_id ? i.nom_restaurant ?? null : null, // nom saisi par le restaurateur lui-même
     carte: etat('carte') ?? (i?.vins.length ? { statut: 'ok' as const, nombre: i.vins.length } : null),
     menu: etat('menu') ?? (i?.plats.length ? { statut: 'ok' as const, nombre: i.plats.length } : null),
   };

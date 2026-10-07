@@ -154,6 +154,16 @@ export async function creerSommelier(_: Reponse): Promise<Reponse> {
   redirect(`${espace(restaurantId)}?bienvenue=1`);
 }
 
+/** « Changer de restaurant » : l'inscription en cours est abandonnée (fichiers effacés) ; le formulaire repart de zéro. */
+export async function abandonnerInscription(): Promise<Reponse> {
+  const i = await inscriptionCourante();
+  if (i?.statut === 'en_cours') {
+    await requete('delete from inscription_fichier where inscription_id = $1', [i.id]);
+    await majInscription(i.id, { statut: 'expiree' });
+  }
+  return { erreurs: [], resume: resumePublic(null) };
+}
+
 /** Avancement des lectures, interrogé par le formulaire pendant une lecture : seulement des compteurs. */
 export async function etatInscription(): Promise<ResumePublic> {
   return resumePublic(await inscriptionEnCours());

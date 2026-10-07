@@ -6,7 +6,7 @@ import { startTransition, useActionState, useCallback, useEffect, useRef, useSta
 import { useFormStatus } from 'react-dom';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
-import { commencer, deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
+import { abandonnerInscription, commencer, deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 
@@ -109,6 +109,16 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
   }, [lecture]);
 
   const surReponse = useCallback((r: Reponse) => { if (r.resume) setResume(r.resume); }, []);
+  // Bandeau des étapes 2 et 3 : le restaurant en cours, et la possibilité d'en changer (inscription abandonnée).
+  const changer = async () => {
+    const r = await abandonnerInscription();
+    if (r.resume) setResume(r.resume);
+    setEtape('restaurant');
+  };
+  const enTete = resume.restaurant && (
+    <p className={s.restaurantEnCours}>Restaurant : <b>{resume.restaurant}</b>
+      <button type="button" className={s.lien} onClick={changer}>Changer de restaurant</button></p>
+  );
 
   return (
     <div className={s.cadre}>
@@ -133,6 +143,7 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
         )}
 
         {etape === 'menu' && <>
+          {enTete}
           <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
           <div className={s.pied}>
             <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('carte')}>Continuer</button>
@@ -141,6 +152,7 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
 
         {etape === 'carte' && (
           <>
+            {enTete}
             <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
             <Erreurs liste={creation.erreurs} />
             <form action={creer} className={s.pied}>
