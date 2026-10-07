@@ -9,6 +9,7 @@ import { PatAttente } from '@/components/PatAttente';
 import { commencer, deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
+import { Preparation } from './Preparation';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
@@ -89,7 +90,7 @@ function BoutonEnvoi({ libelle, enCours, desactive = false }: { libelle: string;
   return <button type="submit" className={s.bouton} disabled={pending || desactive} aria-busy={pending}>{pending ? enCours : libelle}</button>;
 }
 
-export function Inscription({ initial }: { initial: ResumePublic }) {
+export function Inscription({ initial, restaurantCree }: { initial: ResumePublic; restaurantCree: string | null }) {
   const [resume, setResume] = useState(initial);
   const [etape, setEtape] = useState<Etape>(initial.etape);
   const [compte, envoyerCompte] = useActionState(commencer, { erreurs: [] } as Reponse);
@@ -124,7 +125,10 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
       <section className={s.carte} aria-labelledby="h-insc">
         <h2 id="h-insc" className={s.carteTitre}>Activez votre sommelier en quelques minutes</h2>
 
-        {etape === 'restaurant' && (
+        {/* Restaurant créé : Pat prépare les accords, puis le QR code s'affiche ici. */}
+        {(creation.restaurantId ?? restaurantCree) && <Preparation restaurantId={(creation.restaurantId ?? restaurantCree)!} />}
+
+        {!(creation.restaurantId ?? restaurantCree) && etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
             <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
             <div className={s.ligne}>
@@ -137,14 +141,14 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
           </form>
         )}
 
-        {etape === 'menu' && <>
+        {!(creation.restaurantId ?? restaurantCree) && etape === 'menu' && <>
           <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
           <div className={s.pied}>
             <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('carte')}>Continuer</button>
           </div>
         </>}
 
-        {etape === 'carte' && (
+        {!(creation.restaurantId ?? restaurantCree) && etape === 'carte' && (
           <>
               <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
             <Erreurs liste={creation.erreurs} />

@@ -9,11 +9,16 @@ import { Inscription } from './Inscription';
 import { TelephoneDemo } from './TelephoneDemo';
 import { Avantages, Fonctionnalites } from './Sections';
 import { inscriptionCourante } from '@/lib/inscription/etat';
+import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
 
 export async function PageAccueil() {
   // Inscription terminée dans ce navigateur : formulaire vierge pour un nouveau restaurant.
-  const resume = resumePublic(await inscriptionCourante().then((i) => (i?.statut === 'en_cours' ? i : null)));
+  const i = await inscriptionCourante();
+  const resume = resumePublic(i?.statut === 'en_cours' ? i : null);
+  // Restaurant créé depuis ce navigateur dont le QR code n'a pas encore été scanné : la page suit la préparation.
+  const [suivi] = i?.statut === 'finalisee' && i.restaurant_id
+    ? await requete<{ id: string }>('select id from restaurant where id = $1 and premier_scan_le is null', [i.restaurant_id]) : [];
   return (
     <div className={s.page}>
       <section aria-labelledby="h-intro" className={s.bordeaux}>
@@ -46,7 +51,7 @@ export async function PageAccueil() {
       <Avantages />
 
       <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.bordeaux} ${s.activation}`}>
-        <Inscription initial={resume} />
+        <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
       </section>
 
       <Fonctionnalites />

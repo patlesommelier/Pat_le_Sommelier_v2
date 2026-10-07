@@ -3,7 +3,6 @@
 // Chaque action relit l'inscription depuis le cookie : rien n'est confié au navigateur, qui ne reçoit que des compteurs.
 import { randomUUID } from 'node:crypto';
 import { headers } from 'next/headers';
-import { redirect } from 'next/navigation';
 import { z } from 'zod';
 import { utilisateurReel } from '@/lib/admin/auth';
 import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
@@ -15,10 +14,7 @@ import { typeReel, verifierFichiers } from './fichiers';
 import { finaliserInscription } from './finalisation';
 import { inscriptionAutorisee, MAX_ANALYSES_PAR_INSCRIPTION } from './limites';
 
-export type Reponse = { erreurs: string[]; resume?: ResumePublic };
-
-/** Espace du restaurant (tableau de bord), où le restaurateur arrive connecté à la fin du formulaire. */
-const espace = (restaurantId: string | null) => (restaurantId ? `/admin/${restaurantId}` : '/admin');
+export type Reponse = { erreurs: string[]; resume?: ResumePublic; /** restaurant créé : la page suit la préparation des accords */ restaurantId?: string };
 
 async function ip() {
   const h = await headers();
@@ -137,11 +133,14 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   return { erreurs: [], resume: resumePublic(await lireInscription(i.id)) };
 }
 
-/** « Créer mon sommelier » (après la carte des vins) : restaurant créé, préparation des accords lancée, arrivée sur le QR code. */
+/**
+ * « Créer mon sommelier » (après la carte des vins) : restaurant créé et préparation des accords lancée.
+ * La page d'inscription suit ensuite la préparation, puis affiche le QR code (voir Preparation.tsx).
+ */
 export async function creerSommelier(_: Reponse): Promise<Reponse> {
   const i = await inscriptionCourante();
   if (!i) return { erreurs: ['Votre session a expiré : recommencez l’inscription.'] };
-  if (i.statut === 'finalisee') redirect(`${espace(i.restaurant_id)}?bienvenue=1`);
+  if (i.statut === 'finalisee' && i.restaurant_id) return { erreurs: [], restaurantId: i.restaurant_id };
   if (!i.user_id || !i.email) return { erreurs: ['Indiquez d’abord votre restaurant et votre e-mail.'] };
   if (!i.vins.length || !i.plats.length) return { erreurs: ['Déposez d’abord votre menu et votre carte des vins.'] };
   let restaurantId: string;
@@ -151,7 +150,7 @@ export async function creerSommelier(_: Reponse): Promise<Reponse> {
     console.error('[inscription] création', i.id, e);
     return { erreurs: ['La création de votre espace n’a pas abouti. Réessayez dans un instant.'] };
   }
-  redirect(`${espace(restaurantId)}?bienvenue=1`);
+  return { erreurs: [], restaurantId };
 }
 
 /** Avancement des lectures, interrogé par le formulaire pendant une lecture : seulement des compteurs. */

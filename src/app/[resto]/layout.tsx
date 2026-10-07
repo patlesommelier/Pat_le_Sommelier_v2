@@ -4,6 +4,7 @@ import { BarrePat } from '@/components/BarrePat';
 import { couleurClaire } from '@/lib/couleurs';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
+import { requete } from '@/lib/db';
 import { reparerLogo } from '@/lib/logo';
 
 export const dynamic = 'force-dynamic';
@@ -42,6 +43,8 @@ export default async function LayoutRestaurant({ children, params }: { children:
       </div>
     );
   }
+  // Première ouverture de l'app (le QR code vient d'être scanné) : notée une seule fois.
+  await requete('update restaurant set premier_scan_le = now() where id = $1 and premier_scan_le is null', [restaurant.id]);
   return (
     <div className="ecran" style={theme}>
       {children}

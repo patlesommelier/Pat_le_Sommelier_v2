@@ -9,8 +9,8 @@ export const dynamic = 'force-dynamic';
 export async function GET(_: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   await exigerAcces(id);
-  const [r] = await requete<{ statut: string; total: number; prets: number; en_cours: boolean }>(
-    `select r.statut,
+  const [r] = await requete<{ statut: string; total: number; prets: number; en_cours: boolean; scanne: boolean }>(
+    `select r.statut, r.premier_scan_le is not null as scanne,
             (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif) as total,
             (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif
                 and exists (select 1 from accord a where a.plat_id = pl.id)) as prets,
@@ -19,6 +19,7 @@ export async function GET(_: Request, { params }: { params: Promise<{ id: string
   if (!r) return NextResponse.json({ erreur: 'introuvable' }, { status: 404 });
   return NextResponse.json({
     restaurant: r.statut,
+    scanne: r.scanne, // l'app des clients a été ouverte (QR code scanné)
     // « bloque » : génération terminée (relances automatiques comprises) mais des plats sans accord : Pat s'en occupe.
     preparation: { statut: r.statut === 'en_service' ? 'fait' : r.en_cours ? 'en_cours' : r.prets < r.total ? 'bloque' : 'en_cours', total: r.total, faits: r.prets },
   }, { headers: { 'cache-control': 'no-store' } });

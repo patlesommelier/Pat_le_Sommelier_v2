@@ -98,3 +98,14 @@
   .entete { padding: 0 24px; }
 }
 @media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } }
+/* Fin de l'inscription : préparation des accords, puis QR code */
+.barre { display: block; height: 10px; border-radius: 5px; background: #F1DFAE; overflow: hidden; }
+.barre span { display: block; height: 100%; background: #610420; transition: width .4s; }
+.detail { font-size: 15px; font-weight: 400; color: #4A2A33; }
+.pret { display: flex; align-items: center; gap: 28px; padding: 22px; border-radius: 16px; background: #FFF8E6; }
+.pretQr { flex-shrink: 0; padding: 10px; border-radius: 14px; background: #FFF; border: 1.5px solid #2A0412; }
+.pretTexte { display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; }
+.pretTexte strong { font-size: 26px; font-weight: 800; color: #610420; }
+.pretLiens { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 700; }
+.pretLiens a { color: #610420; }
+@media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
