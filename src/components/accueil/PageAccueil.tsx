@@ -30,7 +30,7 @@ export async function PageAccueil() {
         <div className={s.droite}>
           <div className={s.qr}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app de Lola sur votre téléphone" width={124} height={124} />
+            <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app de démonstration sur votre téléphone" width={124} height={124} />
             <span>Scannez pour essayer</span>
           </div>
           <TelephoneDemo />
