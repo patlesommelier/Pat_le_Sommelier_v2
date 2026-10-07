@@ -1,5 +1,5 @@
 'use client';
-// Formulaire « Activez votre sommelier en quelques minutes » : une étape à la fois.
+// Formulaire doré « Activez votre sommelier en quelques minutes » (niveau 3 de la page) : une étape à la fois.
 // 1. carte des vins → 2. menu → 3. restaurant. Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
@@ -110,7 +110,7 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
     <div className={s.cadre}>
       <span className={s.medaillon}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat-logo.png" alt="Pat, le sommelier" width={78} height={86} />
+        <img src="/pat-logo.png" alt="Pat, le sommelier" width={86} height={95} style={{ transform: 'translateY(3px)' }} />
       </span>
       <section className={s.carte} aria-labelledby="h-insc">
         <h2 id="h-insc" className={s.carteTitre}>Activez votre sommelier en quelques minutes</h2>
@@ -125,7 +125,7 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
         {etape === 'menu' && <>
           <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
           <div className={s.pied}>
-            <button type="button" className={s.lien} style={{ textDecoration: 'none' }} onClick={() => setEtape('carte')}>Retour</button>
+            <button type="button" className={s.retour} onClick={() => setEtape('carte')}>Retour</button>
             <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('restaurant')}>Continuer</button>
           </div>
         </>}
@@ -140,7 +140,7 @@ export function Inscription({ initial }: { initial: ResumePublic }) {
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
             <div className={s.pied}>
-              <button type="button" className={s.lien} style={{ textDecoration: 'none' }} onClick={() => setEtape('menu')}>Retour</button>
+              <button type="button" className={s.retour} onClick={() => setEtape('menu')}>Retour</button>
               <BoutonCreer />
             </div>
           </form>

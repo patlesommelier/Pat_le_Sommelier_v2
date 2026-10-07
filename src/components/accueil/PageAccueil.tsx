@@ -1,41 +1,59 @@
-// Page d'accueil de Pat le sommelier, avec le formulaire d'inscription (maquette « Page d'accueil · inscription »).
+// Page d'accueil de Pat le sommelier — maquette « Page d'accueil · inscription (3 niveaux) » :
+//   1. présentation (bordeaux) : titre, texte, QR « Scannez pour essayer » et app de démo Chez Pat ;
+//   2. « Qu'est-ce que Pat vous apporte ? » (crème) ;
+//   3. activation (bordeaux) : formulaire doré, une étape à la fois ;
+//   4. « Fonctionnalités » (crème) ; puis le pied de page.
 import Link from 'next/link';
 import s from './accueil.module.css';
 import { Inscription } from './Inscription';
 import { TelephoneDemo } from './TelephoneDemo';
+import { Avantages, Fonctionnalites } from './Sections';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { resumePublic } from '@/lib/inscription/etapes';
 
 export async function PageAccueil() {
-  const resume = resumePublic(await inscriptionCourante().then((i) => (i?.statut === 'en_cours' ? i : null)));
+  const resume = resumePublic(await inscriptionCourante());
   return (
     <div className={s.page}>
-      {/* eslint-disable-next-line @next/next/no-page-custom-font */}
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&display=swap" />
-      <span className={s.halo} aria-hidden="true" />
-      <header className={s.entete}>
-        <Link href="/" className={s.marque}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <span className={s.pastille}><img src="/pat-logo.png" alt="" width={38} height={42} /></span>
-          <span>Pat le sommelier</span>
-        </Link>
-        <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
-      </header>
-      <main className={s.contenu}>
-        <div className={s.gauche}>
-          <h1 className={s.titre}>Développez l’offre vin de votre restaurant grâce à Pat, votre sommelier virtuel</h1>
-          <p className={s.texte}>À chaque table, vos clients choisissent leur plat et Pat leur propose plusieurs vins en accord avec quelques mots. Envoyez votre menu et votre carte des vins en image, et accédez directement au service.</p>
-          <Inscription initial={resume} />
-        </div>
-        <div className={s.droite}>
-          <div className={s.qr}>
+      <section aria-labelledby="h-intro" className={s.bordeaux}>
+        <span className={s.halo} aria-hidden="true" />
+        <header className={s.entete}>
+          <Link href="/" className={s.marque}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app de démonstration sur votre téléphone" width={124} height={124} />
-            <span>Scannez pour essayer</span>
+            <span className={s.pastille}><img src="/pat-logo.png" alt="" width={38} height={42} /></span>
+            <span>Pat le sommelier</span>
+          </Link>
+          <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
+        </header>
+        <div className={s.intro}>
+          <div className={s.introTexte}>
+            <h1 id="h-intro" className={s.titre}>Développez l’offre vin de votre restaurant grâce à Pat, votre sommelier virtuel</h1>
+            <p className={s.texte}>À chaque table, vos clients choisissent leur plat et Pat leur propose plusieurs vins en accord avec quelques mots. Envoyez votre menu et votre carte des vins en image, et accédez directement au service.</p>
           </div>
-          <TelephoneDemo />
+          <div className={s.demo}>
+            <div className={s.qr}>
+              {/* QR de l'app de démo Chez Pat (NEXT_PUBLIC_DEMO_URL, sinon /chez-pat) */}
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={130} height={130} />
+              <span>Scannez pour essayer</span>
+            </div>
+            <TelephoneDemo />
+          </div>
         </div>
-      </main>
+      </section>
+
+      <Avantages />
+
+      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.bordeaux} ${s.activation}`}>
+        <Inscription initial={resume} />
+      </section>
+
+      <Fonctionnalites />
+
+      <footer className={s.piedPage}>
+        <span>Pat le sommelier · Belgique</span>
+        <nav aria-label="Informations"><Link href="/conditions">Conditions d’utilisation</Link></nav>
+      </footer>
     </div>
   );
 }
