@@ -10,13 +10,10 @@
 import 'dotenv/config';
 import { writeFileSync } from 'node:fs';
 import pg from 'pg';
-import { regenererAccordsPlat } from '../src/lib/generation/accords';
-import { clientClaude } from '../src/lib/claude';
+import { comparerModeles } from '../src/lib/generation/comparaison';
 
 const arg = (nom: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : undefined; };
 const html = (t: unknown) => String(t ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
-
-type Ligne = { vin_id: string; libelle: string; note: number; commentaire: string | null };
 
 async function main() {
   const restaurant = arg('restaurant') ?? 'chez-pat';
@@ -26,36 +23,10 @@ async function main() {
   if (!process.env.DATABASE_URL || !process.env.ANTHROPIC_API_KEY) throw new Error('DATABASE_URL et ANTHROPIC_API_KEY sont nécessaires');
   if (!plats.length) throw new Error('--plats id1,id2,id3');
   const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|host=\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
-  const client = clientClaude({ maxRetries: 4 });
-  const resultats: Record<string, Record<string, { lignes: Ligne[]; jetons: string; duree: number; erreur?: string }>> = {};
-  const noms: Record<string, string> = {};
-
-  for (const plat of plats) {
-    resultats[plat] = {};
-    for (const modele of modeles) {
-      const c = await pool.connect();
-      const q = async <T,>(sql: string, p: unknown[] = []) => (await c.query(sql, p)).rows as T[];
-      const debut = Date.now();
-      try {
-        await c.query('begin');
-        const b = await regenererAccordsPlat(q, client, restaurant, plat, modele);
-        const lignes = await q<Ligne>(
-          `select a.vin_id, v.libelle, a.note, coalesce(a.explication_longue, a.explication) as commentaire
-             from accord a join vin_carte v on v.id = a.vin_id where a.plat_id = $1 order by a.note desc, v.ordre`, [plat]);
-        const [p] = await q<{ nom: string }>('select nom from plat where id = $1', [plat]);
-        noms[plat] = p?.nom ?? plat;
-        resultats[plat][modele] = { lignes, jetons: `${b.jetonsEntree} entrée · ${b.jetonsSortie} sortie`, duree: Math.round((Date.now() - debut) / 1000) };
-      } catch (e) {
-        resultats[plat][modele] = { lignes: [], jetons: '', duree: Math.round((Date.now() - debut) / 1000), erreur: String((e as Error).message ?? e) };
-      } finally {
-        await c.query('rollback').catch(() => {}); // rien n'est gardé
-        c.release();
-      }
-      console.log(`${plat} · ${modele} : ${resultats[plat][modele].erreur ?? `${resultats[plat][modele].lignes.length} accords, ${resultats[plat][modele].duree} s`}`);
-    }
-  }
+  const r = await comparerModeles(pool, restaurant, plats, modeles);
   await pool.end();
-
+  const resultats = Object.fromEntries(r.plats.map((p) => [p.id, Object.fromEntries(modeles.map((m) => [m, { ...p.modeles[m], jetons: `${p.modeles[m].jetonsEntree} entrée · ${p.modeles[m].jetonsSortie} sortie` }]))]));
+  const noms = Object.fromEntries(r.plats.map((p) => [p.id, p.nom]));
   const page = `<!doctype html><meta charset="utf-8"><title>Comparaison des modèles</title>
 <style>body{font:15px/1.45 system-ui,sans-serif;margin:24px;color:#24151A}table{border-collapse:collapse;width:100%;margin:12px 0 32px}
 td,th{border:1px solid #e5d9dc;padding:8px;vertical-align:top;text-align:left}th{background:#f8f1f3}.n{font-weight:700;text-align:center;width:52px}

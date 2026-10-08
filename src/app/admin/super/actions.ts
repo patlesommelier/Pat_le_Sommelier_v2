@@ -18,6 +18,7 @@ import { PLATS_EN_PARALLELE } from '@/lib/generation/file';
 import { parametresRegles, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 import { traiterRelecturesPrix } from '@/lib/inscription/prix';
 import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
+import { traiterComparaisons } from '@/lib/generation/comparaison';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}?${new URLSearchParams(params)}`;
@@ -359,4 +360,24 @@ export async function relirePrixMenu(resto: string, form: FormData): Promise<{ e
   if (statut !== 202 && statut !== 200) void traiterRelecturesPrix(requete, { finAvant: Date.now() + 15 * 60 * 1000 }).catch((e) => console.error('[prix]', e));
   revalidatePath(`/admin/${resto}/menu`);
   return { erreurs: [] };
+}
+
+// ───────── Comparaison de modèles Claude ─────────
+/** Lance la comparaison de deux modèles sur 1 à 3 plats d'un restaurant (en arrière-plan ; rien n'est enregistré dans les accords). */
+export async function lancerComparaison(f: FormData) {
+  const u = await exigerAdmin();
+  const resto = txt(f, 'restaurant');
+  const plats = f.getAll('plats').map(String).filter(Boolean).slice(0, 3);
+  const modeles = [txt(f, 'modele_a') ?? 'claude-sonnet-5-5', txt(f, 'modele_b') ?? 'claude-opus-5-5'];
+  if (!resto || !plats.length) redirect(avec('/admin/super/comparaison', { ...(resto ? { resto } : {}), erreur: 'Choisissez au moins un plat.' }));
+  const [c] = await requete<{ id: string }>(
+    'insert into comparaison_modeles (restaurant_id, plats, modeles, demande_par) values ($1, $2, $3, $4) returning id', [resto, plats, modeles, u.email]);
+  const statut = await fetch(`${await origine()}/.netlify/functions/comparer-modeles-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0);
+  if (statut !== 202 && statut !== 200) {
+    // Hors Netlify (développement local) : le serveur fait la comparaison lui-même, sans faire attendre la page.
+    const pg = (await import('pg')).default;
+    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 3, ssl: /localhost|127\.0\.0\.1|host=\/tmp/.test(process.env.DATABASE_URL ?? '') ? false : { rejectUnauthorized: false } });
+    void traiterComparaisons(pool, { finAvant: Date.now() + 15 * 60 * 1000 }).catch((e) => console.error('[comparaison]', e)).finally(() => pool.end());
+  }
+  redirect(avec('/admin/super/comparaison', { resto: resto!, id: c.id }));
 }

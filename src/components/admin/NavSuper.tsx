@@ -10,6 +10,7 @@ const LIENS = [
   { href: '/admin/super/principes', libelle: 'Principes de Pat', icone: 'menu' },
   { href: '/admin/super/regles', libelle: 'Règles par défaut', icone: 'sliders' },
   { href: '/admin/super/wine-labs', libelle: 'Wine Labs', icone: 'bottle' },
+  { href: '/admin/super/comparaison', libelle: 'Comparer les modèles', icone: 'sliders' },
 ];
 
 /** Menu de l'espace super-admin (barre foncée). */
