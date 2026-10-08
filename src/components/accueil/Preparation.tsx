@@ -60,6 +60,7 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
       <span className={s.detail}>
         {statut === 'bloque' ? `${faits} plats sur ${total} · quelques plats demandent une vérification de Pat ; votre QR code s’affichera ici dès qu’ils auront tous leurs accords.`
           : `${total ? `${faits} plats sur ${total}` : 'Démarrage…'} · quelques minutes.`}
+        {' '}Pat va aussi chercher les étiquettes de vos vins : il faudra peut-être quelques heures pour toutes les trouver.
       </span>
     </div>
   );
