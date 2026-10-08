@@ -5,13 +5,13 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { randomUUID } from 'node:crypto';
 import { regenererAccordsPlat, type Requete } from './accords';
-import { clientClaude } from '../claude';
+import { clientClaude, modeleAccords } from '../claude';
 
 /** Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu. */
 const BLOQUE_APRES = "20 minutes";
 
-/** Passe rapide de l'inscription : premiers accords publiés vite, régénérés ensuite avec Opus depuis l'admin. */
-export const modeleRapide = () => process.env.ANTHROPIC_MODEL_RAPIDE ?? 'claude-sonnet-5-5';
+/** Passe rapide de l'inscription et relances automatiques : même modèle que les accords (Sonnet). */
+export const modeleRapide = () => process.env.ANTHROPIC_MODEL_RAPIDE || modeleAccords();
 
 export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string, { modele }: { modele?: string } = {}) {
   await q(`update generation_accords set statut = 'erreur', message = 'interrompu (délai dépassé)', fin_le = now()
@@ -73,7 +73,7 @@ async function avecReprises<T>(f: () => Promise<T>, finAvant: number, quoi: stri
  * Traite les tâches en attente jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
-export async function travailler(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = clientClaude({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
+export async function travailler(q: Requete, { finAvant, modele = modeleAccords(), client = clientClaude({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
   for (;;) {
     for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
       try {

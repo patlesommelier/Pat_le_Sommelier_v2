@@ -6,7 +6,7 @@ import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { indicateurs, restaurantsSuper } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
-import { etatClaude } from '@/lib/claude';
+import { etatClaude, modeleAccords, modeleLecture } from '@/lib/claude';
 
 const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
@@ -35,6 +35,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
           <p className="petit" style={{ margin: 0, color: ok ? 'var(--vert)' : 'var(--ocre)' }}>
             Claude : {ok ? 'appels directs à Anthropic, avec la clé du compte Anthropic.' : `${c.cle} : les appels à Claude vont échouer tant que ANTHROPIC_API_KEY n’est pas une clé sk-ant- du compte Anthropic.`}
             {c.passerelleNetlify && ' La passerelle IA de Netlify est active sur le site, mais l’app ne l’utilise plus.'}
+            {` Modèles : ${modeleAccords()} pour les accords, commentaires, présentations et la discussion ; ${modeleLecture()} pour lire les cartes et menus.`}
           </p>
         );
       })()}

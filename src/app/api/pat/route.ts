@@ -7,7 +7,7 @@ import { instructionsPat } from '@/lib/instructions-pat';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
 import { extraireVins, texteCarte, texteRegles } from '@/lib/pat-cerveau';
-import { clientClaude } from '@/lib/claude';
+import { clientClaude, modeleAccords } from '@/lib/claude';
 
 export const runtime = 'nodejs';
 
@@ -74,7 +74,7 @@ export async function POST(req: Request) {
 
   const client = clientClaude();
   const r = await client.messages.create({
-    model: process.env.ANTHROPIC_MODEL ?? 'claude-sonnet-4-5',
+    model: modeleAccords(),
     max_tokens: 1200,
     system: [
       { type: 'text', text: instructionsPat({ nomRestaurant: restaurant.nom, categoriesMenu: categories.map((c) => CATEGORIES[c] ?? c).join(', ') }) },

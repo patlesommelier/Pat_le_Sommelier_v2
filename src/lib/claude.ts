@@ -20,3 +20,12 @@ export function etatClaude() {
     passerelleNetlify: Boolean(process.env.ANTHROPIC_BASE_URL && !/api\.anthropic\.com/.test(process.env.ANTHROPIC_BASE_URL)),
   };
 }
+
+/**
+ * Modèle des accords, commentaires, présentations et de la discussion avec Pat : Sonnet (deux fois moins cher qu'Opus),
+ * décision de Pat. PAT_MODELE_ACCORDS permet de revenir à Opus sans modifier le code.
+ * On ne lit plus ANTHROPIC_MODEL, souvent réglé sur Opus dans Netlify.
+ */
+export const modeleAccords = () => process.env.PAT_MODELE_ACCORDS || 'claude-sonnet-5-5';
+/** Lecture des cartes et des menus à l'inscription : Opus, plus sûr pour lire des photos (PAT_MODELE_LECTURE pour changer). */
+export const modeleLecture = () => process.env.PAT_MODELE_LECTURE || 'claude-opus-5-5';

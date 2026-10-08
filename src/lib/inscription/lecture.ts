@@ -4,11 +4,11 @@ import Anthropic from '@anthropic-ai/sdk';
 import sharp from 'sharp';
 import type { Requete } from '../generation/accords';
 import type { Vin, VinRapproche } from './donnees';
-import { clientClaude } from '../claude';
+import { clientClaude, modeleLecture } from '../claude';
 
 export type FichierEnvoye = { nom: string; type: string; octets: Uint8Array };
 
-const modele = () => process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5';
+const modele = modeleLecture;
 const IMAGE_MAX = 1800; // px, côté le plus long : assez pour lire une carte, sans alourdir la requête
 
 /** Contenu envoyé à Claude : PDF tel quel, photos remises en JPEG (HEIC de l'iPhone compris) et réduites. */

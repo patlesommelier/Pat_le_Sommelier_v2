@@ -14,7 +14,7 @@ import { valider as validerPrincipes } from '../principes/format';
 import { brouillon as brouillonPrincipes, principesPourGeneration, synchroniserPrincipes } from '../principes/versions';
 import { brouillonRegles, parametresEnService, validerParametres } from '../regles/versions';
 import { reglagesComplets, selectionner, type Candidat, type Reglages } from '../selection';
-import { clientClaude } from '../claude';
+import { clientClaude, modeleAccords } from '../claude';
 
 export type TypePublication = 'principes' | 'regles';
 export interface Changements { entrent: string[]; sortent: string[]; notes: { vin: string; avant: number; apres: number }[] }
@@ -145,7 +145,7 @@ async function cloturer(q: Requete, publicationId: string) {
  * Traite les plats en attente des préparations de principes jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de plats encore en attente (à reprendre par un autre passage).
  */
-export async function travaillerPublications(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = clientClaude({ maxRetries: 6 }) }:
+export async function travaillerPublications(q: Requete, { finAvant, modele = modeleAccords(), client = clientClaude({ maxRetries: 6 }) }:
   { finAvant: number; modele?: string; client?: Anthropic }) {
   const principesParCode = new Map<string, Awaited<ReturnType<typeof principesPourGeneration>>>();
   const baseRegles = await parametresEnService(q);

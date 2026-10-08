@@ -17,7 +17,7 @@ import { parametresEnService } from '@/lib/regles/versions';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
-import { clientClaude } from '@/lib/claude';
+import { clientClaude, modeleAccords } from '@/lib/claude';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -328,7 +328,7 @@ export async function autrePresentation(resto: string, vinId: string) {
   let erreur: string | null = null;
   try {
     // L'ancien texte est montré au modèle comme « déjà écrit » : la proposition sera différente.
-    const textes = await genererPresentations([vin], r.nom, clientClaude({ maxRetries: 3 }), process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5',
+    const textes = await genererPresentations([vin], r.nom, clientClaude({ maxRetries: 3 }), modeleAccords(),
       { existants: [...existants, ...(actuel?.texte ? [{ couleur: vin.couleur, texte: actuel.texte }] : [])] });
     if (textes[vinId]) {
       await requete(`update vin_carte set presentation_carte = $3, presentation_carte_perso = null where restaurant_id = $1 and id = $2`, [resto, vinId, textes[vinId]]);
