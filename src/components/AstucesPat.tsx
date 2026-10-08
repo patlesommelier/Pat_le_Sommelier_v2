@@ -1,6 +1,6 @@
 'use client';
 // Pendant la préparation des accords, à la place de « Pat prépare vos accords » : les possibilités de la plateforme
-// et l'attente des étiquettes, l'une après l'autre (fondu toutes les 7 secondes).
+// et l'attente des étiquettes, l'une après l'autre (fondu toutes les 11 secondes).
 import { useEffect, useState } from 'react';
 
 const ASTUCES = [
