@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
+import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { chercherEtiquettes, enregistrerVin, supprimerVin } from '../../actions';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
@@ -118,15 +119,12 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <h2>{choisi.libelle} {choisi.millesime ?? ''}</h2>
               </div>
               <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />
-              <div style={{ display: 'flex', gap: 16, alignItems: 'center', padding: 14, borderRadius: 14, border: '1px solid var(--ligne)', background: 'var(--fond)' }}>
-                <Vignette url={choisi.etiquette_url} taille={104} />
-                <div className="champ" style={{ flex: 1, minWidth: 0 }}>
-                  <span className="libelle">Étiquette</span>
-                  <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
-                  {u?.admin && choisi.etiquette_statut === 'echec' && choisi.etiquette_erreur && <span className="petit discret">Motif : {choisi.etiquette_erreur}</span>}
-                  <input id="etiquette" name="etiquette" aria-label="Remplacer par votre photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment" style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }} />
-                </div>
-              </div>
+              {/* Clé = adresse de l'étiquette : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
+              <PhotoEtiquette key={choisi.etiquette_url ?? 'sans'} url={choisi.etiquette_url}>
+                <span className="libelle">Étiquette</span>
+                <Etat type={etiquette(choisi)[1]}>{etiquette(choisi)[0]}</Etat>
+                {u?.admin && choisi.etiquette_statut === 'echec' && choisi.etiquette_erreur && <span className="petit discret">Motif : {choisi.etiquette_erreur}</span>}
+              </PhotoEtiquette>
               <fieldset className="pile" style={{ gap: 10, border: '1px solid var(--ligne)', borderRadius: 14, padding: 14, margin: 0 }}>
                 <legend style={{ fontSize: 13, fontWeight: 700, padding: '0 6px' }}>Producteur</legend>
                 <div className="champ">
