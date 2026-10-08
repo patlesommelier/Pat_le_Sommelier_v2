@@ -3,6 +3,7 @@ import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getAccord, getPlat, getRestaurant, getVin } from '@/lib/donnees';
+import { avecAppreciation } from '@/lib/appreciation';
 import { euros } from '@/lib/format';
 import { COULEURS } from '@/lib/types';
 
@@ -53,7 +54,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
             <div className="encadre">
               <span className="titre">Avec : {plat.nom_court ?? plat.nom}</span>
               <div className="filet court" />
-              <p>{accord.explication_longue ?? accord.explication}</p>
+              <p>{avecAppreciation(accord.explication_longue ?? accord.explication, accord.note, { cle: accord.plat_id, ecritParLeRestaurant: Boolean(accord.commentaire_sommelier) })}</p>
             </div>
           )}
 

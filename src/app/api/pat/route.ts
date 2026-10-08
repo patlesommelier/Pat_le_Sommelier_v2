@@ -6,6 +6,7 @@ import { getRestaurant } from '@/lib/donnees';
 import { instructionsPat } from '@/lib/instructions-pat';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
+import { avecAppreciation } from '@/lib/appreciation';
 import { extraireVins, texteCarte, texteRegles } from '@/lib/pat-cerveau';
 import { clientClaude, modeleAccords } from '@/lib/claude';
 
@@ -38,8 +39,8 @@ export async function POST(req: Request) {
 
   // Pat ne cherche que dans la table d'accords : seuls les vins qui ont un accord validé (au-dessus du seuil)
   // sur au moins un plat lui sont donnés, et chaque vin qu'il cite est vérifié ci-dessous.
-  const accords = await requete<{ plat_id: string; vin_id: string; texte: string | null }>(
-    `select plat_id, vin_id, coalesce(explication_longue, explication) as texte
+  const accords = await requete<{ plat_id: string; vin_id: string; texte: string | null; note: number; ecrit: boolean }>(
+    `select plat_id, vin_id, coalesce(explication_longue, explication) as texte, note, commentaire_sommelier is not null as ecrit
        from accord where restaurant_id = $1 and statut = 'valide' and note >= 3`, [corps.restaurant]);
   const accord = new Map(accords.map((a) => [`${a.plat_id}|${a.vin_id}`, a]));
   const avecAccord = new Set(accords.map((a) => a.vin_id));
@@ -98,14 +99,19 @@ export async function POST(req: Request) {
             coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 and v.id = any($2)`, [corps.restaurant, retenus.map((r) => r.id)]) : [];
+  // Texte de l'accord avec son appréciation selon la note (« c’est un très joli accord »), variée d'un vin à l'autre.
+  const appreciation = (p: string | null, id: string, i: number) => {
+    const a = p ? accord.get(`${p}|${id}`) : undefined;
+    return a?.texte ? avecAppreciation(a.texte, a.note, { cle: p!, position: i, ecritParLeRestaurant: a.ecrit }) : null;
+  };
   return NextResponse.json({
     reponse,
     // Vin proposé : étiquette, puis le texte complet de l'accord avec ce plat (ou sa présentation). Jamais de note ni de ranking.
-    vins: retenus.flatMap(({ id, plat: p }) => {
+    vins: retenus.flatMap(({ id, plat: p }, i) => {
       const v = fiches.find((f) => f.id === id);
       if (!v) return [];
       return [{ id, plat: p, libelle: v.libelle, producteur: v.producteur, millesime: v.millesime, prix: v.prix, prix_verre: v.prix_verre,
-        etiquette_url: v.etiquette_url, texte: (p ? accord.get(`${p}|${id}`)?.texte : null) ?? v.presentation }];
+        etiquette_url: v.etiquette_url, texte: appreciation(p, id, i) ?? v.presentation }];
     }),
   });
 }

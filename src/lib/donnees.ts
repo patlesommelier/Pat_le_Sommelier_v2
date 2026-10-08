@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
+import { avecAppreciation } from './appreciation';
 import { parametresEnService } from './regles/versions';
 import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
 import type { Accord, Plat, Restaurant, Vin } from './types';
@@ -132,10 +133,13 @@ export async function getPropositions(restaurantId: string, platId: string, tour
     proposes.push(...liste.map((r) => r.vin.id));
   }
   const encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
-  const propositions = liste.map((r) => {
+  const propositions = liste.map((r, i) => {
     const l = lignesParVin.get(r.vin.id)![0];
+    // Appréciation selon la note (« c’est un très joli accord »), variée d'un vin à l'autre ; jamais sur un texte du restaurant.
+    const app = { cle: `${l.plat_id}|${tour}`, position: i, ecritParLeRestaurant: Boolean(l.commentaire_sommelier) };
     return {
-      accord: { plat_id: l.plat_id, vin_id: l.vin_id, note: l.note, rang: l.rang, explication: l.explication, explication_longue: l.explication_longue, service: l.service, statut: l.statut } as Accord,
+      accord: { plat_id: l.plat_id, vin_id: l.vin_id, note: l.note, rang: l.rang, explication: avecAppreciation(l.explication, l.note, app),
+        explication_longue: avecAppreciation(l.explication_longue, l.note, app), service: l.service, statut: l.statut } as Accord,
       vin: l as Vin,
       motif: r.motif,
     };
@@ -145,7 +149,7 @@ export async function getPropositions(restaurantId: string, platId: string, tour
 
 export async function getAccord(platId: string, vinId: string) {
   const [a] = await requete<Accord>(
-    `select plat_id, vin_id, note, rang, explication, explication_longue, service, statut
+    `select plat_id, vin_id, note, rang, explication, explication_longue, service, statut, commentaire_sommelier
        from accord where plat_id = $1 and vin_id = $2 and statut = any($3)`,
     [platId, vinId, accordsVisibles()],
   );
