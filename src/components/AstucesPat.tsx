@@ -19,7 +19,7 @@ const ASTUCES = [
 export function AstucesPat({ className }: { className?: string }) {
   const [n, setN] = useState(0);
   useEffect(() => {
-    const t = setInterval(() => setN((x) => (x + 1) % ASTUCES.length), 7000);
+    const t = setInterval(() => setN((x) => (x + 1) % ASTUCES.length), 11000); // 11 secondes par message
     return () => clearInterval(t);
   }, []);
   return (
