@@ -17,8 +17,7 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
   const etapes = etapesRestaurant(r, s);
   const suivante = etapes.find((e) => e.etat !== 'fait' && e.libelle !== 'Simulateur') ?? etapes[etapes.length - 1];
   const restantes = etapes.filter((e) => e.etat !== 'fait' && e.libelle !== 'Simulateur').length;
-  // Tout est en place : l'encart du simulateur montre aussi le QR code de l'app, à droite.
-  const qr = suivante.libelle === 'Simulateur' ? await qrSvg(await adresseApp(resto)) : null;
+  const qr = await qrSvg(await adresseApp(resto)); // QR code de l'app, toujours à droite de l'encart du haut
   // Après l'inscription : « Bienvenue », préparation des accords et QR code, à la place de « Prochaine étape ».
   const accueil = Boolean(bienvenue) || (r.origine === 'inscription' && r.statut === 'mise_en_place');
   return (
