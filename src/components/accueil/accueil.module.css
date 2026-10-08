@@ -110,3 +110,4 @@
 .pretLiens { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 700; }
 .pretLiens a { color: #610420; }
 @media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
+.astuces { flex: 1; font-size: 16px; font-weight: 700; color: #2A0412; }

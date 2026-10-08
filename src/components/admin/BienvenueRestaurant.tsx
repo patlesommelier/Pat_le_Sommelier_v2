@@ -44,7 +44,8 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
             : <PatAttente taille={120} />}
           <div className="pile" style={{ flex: '1 1 300px', gap: 12 }}>
             <span className="surtitre">{fini ? 'Terminé' : 'En cours'}</span>
-            <h2 id="h-prep" style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', fontWeight: 800 }}>{fini ? 'Vos accords sont prêts' : 'Pat prépare vos accords'}</h2>
+            {fini ? <h2 id="h-prep" style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', fontWeight: 800 }}>Vos accords sont prêts</h2>
+              : <h2 id="h-prep" style={{ fontSize: 'clamp(17px, 1.6vw, 20px)', fontWeight: 700, lineHeight: 1.4 }}><AstucesPat /></h2>}
             <div role="progressbar" aria-label="Préparation des accords" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}
               style={{ height: 10, borderRadius: 5, background: 'var(--rose)', overflow: 'hidden' }}>
               <span style={{ display: 'block', width: `${pct}%`, height: '100%', background: 'var(--encre)', transition: 'width .4s' }} />
@@ -54,7 +55,6 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
                 : statut === 'bloque' ? `${faits} plats sur ${total} · quelques plats demandent une vérification de Pat ; votre app s’ouvrira à vos clients dès qu’ils auront tous leurs accords.`
                 : `${total ? `${faits} plats sur ${total}` : 'Démarrage…'} · quelques minutes. Vous pouvez fermer cette page : la préparation continue.`}
             </span>
-            {!fini && <AstucesPat className="discret" />}
           </div>
         </section>
         <section aria-labelledby="h-qr" className="carte-bo" style={{ flex: '1 1 300px', display: 'flex', alignItems: 'center', gap: 20 }}>

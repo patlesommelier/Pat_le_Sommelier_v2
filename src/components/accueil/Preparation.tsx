@@ -54,7 +54,7 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
   }
   return (
     <div className={s.attente} role="status" aria-live="polite" style={{ flexDirection: 'column', alignItems: 'stretch', gap: 14 }}>
-      <span style={{ display: 'flex', alignItems: 'center', gap: 14 }}><PatAttente taille={52} /><b>Pat prépare vos accords…</b></span>
+      <span style={{ display: 'flex', alignItems: 'center', gap: 14 }}><PatAttente taille={52} /><AstucesPat className={s.astuces} /></span>
       <span role="progressbar" aria-label="Préparation des accords" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} className={s.barre}>
         <span style={{ width: `${pct}%` }} />
       </span>
@@ -62,7 +62,6 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
         {statut === 'bloque' ? `${faits} plats sur ${total} · quelques plats demandent une vérification de Pat ; votre QR code s’affichera ici dès qu’ils auront tous leurs accords.`
           : `${total ? `${faits} plats sur ${total}` : 'Démarrage…'} · quelques minutes.`}
       </span>
-      <AstucesPat className={s.detail} />
     </div>
   );
 }

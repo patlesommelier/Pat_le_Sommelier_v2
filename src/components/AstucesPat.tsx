@@ -1,8 +1,10 @@
 'use client';
-// Pendant la préparation des accords : les possibilités de la plateforme, l'une après l'autre (fondu toutes les 7 secondes).
+// Pendant la préparation des accords, à la place de « Pat prépare vos accords » : les possibilités de la plateforme
+// et l'attente des étiquettes, l'une après l'autre (fondu toutes les 7 secondes).
 import { useEffect, useState } from 'react';
 
 const ASTUCES = [
+  'Pat prépare vos accords : il étudie chaque vin de votre carte avec chacun de vos plats.',
   'Pat va aussi chercher les étiquettes de vos vins : il faudra peut-être quelques heures pour toutes les trouver.',
   'À table, vos clients scannent le QR code, choisissent leur plat, et Pat leur propose les vins de votre carte qui s’y accordent le mieux.',
   'Vos clients peuvent aussi écrire à Pat : il leur répond avec les vins de vos accords, étiquette et explication à l’appui.',
