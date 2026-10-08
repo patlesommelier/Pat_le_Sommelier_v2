@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { enregistrerReglages, remettreVin, retablirReglage, retablirTout, retirerVin } from '../../actions';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
@@ -47,7 +48,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
       </Entete>
       <Message ok={ok ? 'Réglages enregistrés : le simulateur et l’app les appliquent déjà.' : undefined} />
       <div className="rangee">
-        <form action={enregistrerReglages.bind(null, resto)} className="large" style={{ gap: 28 }}>
+        <FormulaireAdmin action={enregistrerReglages.bind(null, resto)} className="large" style={{ gap: 28 }}>
           {GROUPES.map(([g, defs]) => (
             <section key={g} className="pile" style={{ gap: 12 }}>
               <h2 className="surtitre" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: 1.6 }}>{g}</h2>
@@ -83,7 +84,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
             </section>
           ))}
           <div className="ligne-actions"><button type="submit" className="btn"><Icone nom="check" taille={18} />Enregistrer les réglages</button></div>
-        </form>
+        </FormulaireAdmin>
         <aside className="etroit">
           <div className="carte-bo sticker" style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}

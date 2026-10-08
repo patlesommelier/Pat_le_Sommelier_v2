@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { enregistrerPlat } from '../../actions';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfil } from '@/lib/admin/donnees';
@@ -49,7 +50,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
         </section>
         {choisi && (
           <aside className="etroit">
-            <form key={choisi.id} action={enregistrerPlat.bind(null, resto, choisi.id)} className="carte-bo pile" id="detail">
+            <FormulaireAdmin key={choisi.id} action={enregistrerPlat.bind(null, resto, choisi.id)} className="carte-bo pile" id="detail">
               <h2>{choisi.nom_court ?? choisi.nom}</h2>
               <Message ok={ok ? 'Enregistré.' : undefined} />
               <div className="champ"><label htmlFor="nom">Nom sur le menu</label><textarea id="nom" name="nom" rows={2} defaultValue={choisi.nom} /></div>
@@ -100,7 +101,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
                 <button type="submit" className="btn petit">Enregistrer</button>
                 <Link href={`/admin/${resto}/accords?plat=${choisi.id}`} className="btn sec petit">Voir ses accords</Link>
               </div>
-            </form>
+            </FormulaireAdmin>
           </aside>
         )}
       </div>

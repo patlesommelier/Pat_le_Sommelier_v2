@@ -1,4 +1,5 @@
 import { autrePresentation, enregistrerPresentation } from '../../actions';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Message } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
@@ -54,7 +55,7 @@ export default async function Supports({ params, searchParams }: { params: Promi
                       <b>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}{v.format && v.format !== '75 cl' ? <span className="discret" style={{ fontWeight: 400 }}> · {v.format}</span> : null}</b>
                       <span className="petit discret">{v.presentation_carte_perso ? 'Votre texte' : v.presentation_carte ? 'Texte de Pat' : 'Pas encore écrite'}</span>
                     </div>
-                    <form action={enregistrerPresentation.bind(null, resto, v.id)} className="pile" style={{ gap: 8 }}>
+                    <FormulaireAdmin action={enregistrerPresentation.bind(null, resto, v.id)} className="pile" style={{ gap: 8 }}>
                       <textarea name="presentation" rows={3} maxLength={600} defaultValue={texte ?? ''} aria-label={`Présentation de ${v.libelle}`}
                         placeholder="Pat écrira cette présentation à l’impression, ou écrivez-la ici."
                         style={{ width: '100%', padding: 10, borderRadius: 10, border: '1.5px solid var(--ligne)', font: '15px/1.45 Lato, sans-serif' }} />
@@ -62,7 +63,7 @@ export default async function Supports({ params, searchParams }: { params: Promi
                         <button className="btn petit">Enregistrer</button>
                         <button className="btn sec petit" formAction={autrePresentation.bind(null, resto, v.id)}>Autre proposition</button>
                       </span>
-                    </form>
+                    </FormulaireAdmin>
                   </article>
                 );
               })}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { changerNote, modifierCommentaire, regenererTout, relancerPlatsSansAccord, validerPlat, validerTout } from '../../actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { ChoixNote } from '@/components/admin/ChoixNote';
@@ -145,7 +146,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               <div className="pile" style={{ gap: 6 }}><span className="surtitre">{CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 800 }}>{plat.nom}</h2></div>
               <span className="ligne-actions">
                 <Link href={`/admin/${resto}/simulateur?plat=${plat.id}`} className="btn sec petit"><Icone nom="phone" taille={18} />Simulateur</Link>
-                {s && s.valides < s.total && <form action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></form>}
+                {s && s.valides < s.total && <FormulaireAdmin action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></FormulaireAdmin>}
               </span>
             </div>
             <Message ok={sp.ok ? 'Accords de ce plat validés.' : sp.commentaire ? 'Commentaire enregistré : c’est lui que le client lit.' : undefined} />
@@ -229,11 +230,11 @@ export default async function Accords({ params, searchParams }: { params: Promis
                           <td className="droite"><b>{rang + 1}</b></td>
                           <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={t.vin.etiquette_url} taille={40} /><div><div className="nom">{t.vin.libelle}</div><div className="petit">{t.vin.id} · {euros(t.vin.prix ?? t.vin.prix_verre)}</div></div></div></td>
                           <td>
-                            <form action={changerNote.bind(null, resto, plat.id, t.vin.id)} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                            <FormulaireAdmin action={changerNote.bind(null, resto, plat.id, t.vin.id)} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                               <Points note={t.note} />{/* Clé = plat + note : la liste reprend la note à jour après une régénération ou un changement de plat. */}
                               <ChoixNote key={`${plat.id}-${t.note}`} note={t.note} libelle={t.vin.libelle} />
                               <noscript><button className="btn petit">OK</button></noscript>
-                            </form>
+                            </FormulaireAdmin>
                             {l?.statut === 'propose' && <span className="petit">à relire</span>}
                           </td>
                           {interne && <td className="droite"><b>{t.score}</b></td>}
@@ -264,13 +265,13 @@ function Commentaire({ resto, platId, vinId, ligne, tous, grand }: { resto: stri
       <span style={grand ? { fontSize: 13.5, lineHeight: 1.4, fontStyle: 'italic' } : undefined}>{texte ?? '—'}</span>
       <details>
         <summary style={{ cursor: 'pointer', color: 'var(--encre)', fontWeight: 700, fontSize: 13 }}>{ligne?.commentaire_sommelier ? 'Votre commentaire · modifier' : 'Modifier'}</summary>
-        <form action={modifierCommentaire.bind(null, resto, platId, vinId)} className="pile" style={{ gap: 6, marginTop: 6 }}>
+        <FormulaireAdmin action={modifierCommentaire.bind(null, resto, platId, vinId)} className="pile" style={{ gap: 6, marginTop: 6 }}>
           <textarea name="commentaire" rows={3} maxLength={400} defaultValue={texte ?? ''} aria-label="Commentaire d’accord"
             style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Lato, sans-serif' }} />
           {tous && <input type="hidden" name="tous" value="1" />}
           <span><button className="btn petit">Enregistrer</button></span>
           <span className="petit" style={{ opacity: 0.8 }}>Votre texte remplace celui de Pat chez le client ; la régénération ne le touche plus. Videz le champ pour rendre la main à Pat.</span>
-        </form>
+        </FormulaireAdmin>
       </details>
     </div>
   );

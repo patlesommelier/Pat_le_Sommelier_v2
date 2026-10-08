@@ -1,5 +1,6 @@
 'use client';
 import { useMemo, useState } from 'react';
+import { FormulaireAdmin, type Retour } from './FormulaireAdmin';
 
 const lin = (v: number) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
 const rgb = (h: string) => { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
@@ -41,7 +42,7 @@ async function couleursDePhoto(f: File): Promise<string[]> {
 }
 
 interface Props {
-  action: (f: FormData) => void;
+  action: (f: FormData) => Promise<Retour>;
   nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
   plats: string[];
 }
@@ -70,7 +71,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   const choisir = (h: string) => { setCouleur(h); setSaisie(h); };
 
   return (
-    <form action={action} className="rangee">
+    <FormulaireAdmin action={action} className="rangee">
       <input type="hidden" name="couleur" value={couleur} />
       <input type="hidden" name="logo_choix" value={choix} />
       <div className="large" style={{ gap: 24 }}>
@@ -182,6 +183,6 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           </div>
         </div>
       </aside>
-    </form>
+    </FormulaireAdmin>
   );
 }

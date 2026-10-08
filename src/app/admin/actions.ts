@@ -18,6 +18,9 @@ import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 
+/** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
+type Retour = { ok?: string; erreur?: string };
+
 const txt = (f: FormData, k: string) => {
   const v = f.get(k);
   return typeof v === 'string' && v.trim() ? v.trim() : null;
@@ -67,7 +70,7 @@ export async function changerMotDePasse(f: FormData) {
 }
 
 // ───────── Menu ─────────
-export async function enregistrerPlat(resto: string, platId: string, f: FormData) {
+export async function enregistrerPlat(resto: string, platId: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const cat = txt(f, 'categorie');
   await requete(
@@ -86,11 +89,11 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/menu`, { plat: platId, ok: '1' }));
+  return { ok: 'Plat enregistré.' };
 }
 
 // ───────── Carte des vins ─────────
-export async function enregistrerVin(resto: string, vinId: string, f: FormData) {
+export async function enregistrerVin(resto: string, vinId: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   let etiquette: string | null = null;
   const image = fichier(f, 'etiquette');
@@ -98,7 +101,7 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
     try {
       etiquette = await deposerImage(image, `${resto}/etiquettes`);
     } catch (e) {
-      redirect(avec(`/admin/${resto}/carte`, { vin: vinId, erreur: (e as Error).message }));
+      return { erreur: (e as Error).message };
     }
   }
   await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
@@ -117,7 +120,7 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData) 
     .catch((e) => { console.error('[etiquettes] partage', e); return 0; });
   revalidatePath(partagees ? '/' : `/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte`, { vin: vinId, ok: '1' }));
+  return { ok: 'Vin enregistré.' };
 }
 
 /** Étiquettes manquantes de la carte : demandées à Wine Labs (une par cuvée), réservé au super-admin (crédits). */
@@ -188,7 +191,7 @@ async function enregistrerProducteurDuVin(resto: string, vinId: string, nom: str
 }
 
 // ───────── Accords ─────────
-export async function changerNote(resto: string, platId: string, vinId: string, f: FormData) {
+export async function changerNote(resto: string, platId: string, vinId: string, f: FormData): Promise<Retour> {
   const u = await exigerAcces(resto);
   const note = Number(f.get('note'));
   if (note >= 1 && note <= 5) {
@@ -200,14 +203,14 @@ export async function changerNote(resto: string, platId: string, vinId: string, 
   }
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/accords`, { plat: platId }));
+  return { ok: 'Note enregistrée.' };
 }
 
 /**
  * Commentaire d'accord réécrit par le restaurant : remplace celui de Pat chez le client et n'est plus régénéré.
  * Texte vide : le commentaire redevient celui de Pat (réécrit à la prochaine régénération).
  */
-export async function modifierCommentaire(resto: string, platId: string, vinId: string, f: FormData) {
+export async function modifierCommentaire(resto: string, platId: string, vinId: string, f: FormData): Promise<Retour> {
   const u = await exigerAcces(resto);
   const texte = (txt(f, 'commentaire') ?? '').replace(/\s+/g, ' ').slice(0, 400) || null;
   await requete(
@@ -217,17 +220,17 @@ export async function modifierCommentaire(resto: string, platId: string, vinId: 
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/accords`, { plat: platId, ...(f.get('tous') ? { tous: '1' } : {}), commentaire: '1' }));
+  return { ok: texte ? 'Commentaire enregistré.' : 'Commentaire de Pat rétabli.' };
 }
 
-export async function validerPlat(resto: string, platId: string) {
+export async function validerPlat(resto: string, platId: string): Promise<Retour> {
   const u = await exigerAcces(resto);
   await requete(
     `update accord set statut = 'valide', valide_le = now(), modifie_par = coalesce(modifie_par, $3)
       where restaurant_id = $1 and plat_id = $2 and statut = 'propose'`, [resto, platId, u.email]);
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/accords`, { plat: platId, ok: '1' }));
+  return { ok: 'Accords du plat validés.' };
 }
 
 export async function validerTout(resto: string) {
@@ -299,12 +302,12 @@ export async function preparerImpression(resto: string): Promise<string> {
 }
 
 /** Relecture d'une présentation (rubrique Supports) : le texte du restaurant prime et n'est jamais régénéré ; vide = celle de Pat. */
-export async function enregistrerPresentation(resto: string, vinId: string, f: FormData) {
+export async function enregistrerPresentation(resto: string, vinId: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const texte = (txt(f, 'presentation') ?? '').replace(/\s+/g, ' ').slice(0, 600) || null;
   await requete(`update vin_carte set presentation_carte_perso = $3 where restaurant_id = $1 and id = $2`, [resto, vinId, texte]);
   revalidatePath(`/admin/${resto}/supports`);
-  redirect(`/admin/${resto}/supports?ok=${encodeURIComponent(vinId)}#${vinId}`);
+  return { ok: texte ? 'Présentation enregistrée.' : 'Présentation de Pat rétablie.' };
 }
 
 /** « Autre proposition » : Pat réécrit la présentation de ce vin (en voyant celles des autres vins de la même couleur). */
@@ -338,7 +341,7 @@ export async function autrePresentation(resto: string, vinId: string) {
 }
 
 // ───────── Règles ─────────
-export async function enregistrerReglages(resto: string, f: FormData) {
+export async function enregistrerReglages(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   // Ajustements = écarts avec les règles de Pat en service (une valeur égale suit les futures versions de Pat).
   const base = await parametresEnService(requete);
@@ -358,7 +361,7 @@ export async function enregistrerReglages(resto: string, f: FormData) {
   await requete('update restaurant set reglages_selection = $2 where id = $1', [resto, JSON.stringify(diff)]);
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/regles`, { ok: '1' }));
+  return { ok: 'Réglages enregistrés.' };
 }
 
 export async function retablirReglage(resto: string, cle: string) {
@@ -425,10 +428,10 @@ function claire(hex: string) {
   return `#${m((n >> 16) & 255)}${m((n >> 8) & 255)}${m(n & 255)}`.toUpperCase();
 }
 
-export async function enregistrerApparence(resto: string, f: FormData) {
+export async function enregistrerApparence(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const couleur = txt(f, 'couleur');
-  if (!couleur || !/^#[0-9a-f]{6}$/i.test(couleur)) redirect(avec(`/admin/${resto}/apparence`, { erreur: 'Couleur invalide : utilisez un code comme #BA4037.' }));
+  if (!couleur || !/^#[0-9a-f]{6}$/i.test(couleur)) return { erreur: 'Couleur invalide : utilisez un code comme #BA4037.' };
   let logo: string | null = null;
   let logoFonce: string | null = null;
   let ratio: number | null = null;
@@ -439,7 +442,7 @@ export async function enregistrerApparence(resto: string, f: FormData) {
     const lf = fichier(f, 'logo_fonce');
     if (lf) ({ url: logoFonce, ratio: ratioFonce } = await deposerLogo(lf, `${resto}/logo`));
   } catch (e) {
-    redirect(avec(`/admin/${resto}/apparence`, { erreur: (e as Error).message }));
+    return { erreur: (e as Error).message };
   }
   const accroche = [txt(f, 'accroche1'), txt(f, 'accroche2')].filter(Boolean).join('|') || null;
   await requete(
@@ -452,7 +455,7 @@ export async function enregistrerApparence(resto: string, f: FormData) {
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/apparence`, { ok: '1' }));
+  return { ok: 'Apparence enregistrée : l’app de vos clients est à jour.' };
 }
 
 // ───────── Accès ─────────

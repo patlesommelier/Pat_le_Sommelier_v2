@@ -198,3 +198,10 @@ a.bouton-plein { text-decoration: none; }
 .bandeau.grand .logo-pat-pastille { width: 64px; height: 64px; }
 .logo-pat-nom { font-size: 19px; font-weight: 700; line-height: 1.15; color: var(--sur-marque, #FFFFFF); overflow-wrap: anywhere; }
 .bandeau.grand .logo-pat-nom { font-size: 22px; }
+
+/* Confirmation d'enregistrement du back-office (FormulaireAdmin) : la page ne se recharge pas. */
+.toast-admin { position: fixed; z-index: 50; left: 50%; bottom: 24px; transform: translateX(-50%); max-width: min(520px, calc(100vw - 32px));
+  padding: 12px 20px; border-radius: 12px; background: #1E5B34; color: #FFF; font-size: 15px; font-weight: 700; box-shadow: 0 12px 30px -10px rgba(0,0,0,0.45);
+  cursor: pointer; animation: toast-entree .2s ease-out; }
+.toast-admin.erreur { background: #8A1C1C; }
+@keyframes toast-entree { from { opacity: 0; transform: translate(-50%, 8px); } }

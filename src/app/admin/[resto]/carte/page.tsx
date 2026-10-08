@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { chercherEtiquettes, enregistrerVin, supprimerVin } from '../../actions';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
@@ -111,7 +112,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         </section>
         {choisi && (
           <aside className="etroit">
-            <form key={choisi.id} action={enregistrerVin.bind(null, resto, choisi.id)} className="carte-bo pile">
+            <FormulaireAdmin key={choisi.id} action={enregistrerVin.bind(null, resto, choisi.id)} className="carte-bo pile">
               <div className="pile" style={{ gap: 6 }}>
                 <span className="surtitre">{choisi.id} · {choisi.section ?? choisi.couleur}</span>
                 <h2>{choisi.libelle} {choisi.millesime ?? ''}</h2>
@@ -176,7 +177,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 <button type="submit" className="btn petit">Enregistrer</button>
                 <Link href={`/${resto}/vin/${choisi.id}`} target="_blank" className="btn sec petit">Voir la fiche client</Link>
               </div>
-            </form>
+            </FormulaireAdmin>
             <div className="carte-bo pile" style={{ gap: 8 }}>
               <span className="discret" style={{ fontSize: 14 }}>Vin retiré définitivement de votre carte ? (Pour une rupture, décochez plutôt « Disponible ».)</span>
               <BoutonConfirmation action={supprimerVin.bind(null, resto, choisi.id)} libelle="Supprimer ce vin"
