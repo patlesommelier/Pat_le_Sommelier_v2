@@ -4,6 +4,7 @@
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { PatAttente } from '@/components/PatAttente';
+import { AstucesPat } from '@/components/AstucesPat';
 
 type Etat = { restaurant?: string; preparation: { statut: string; total: number; faits: number } };
 
@@ -52,8 +53,8 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
               {fini ? 'Le QR code fonctionne : vos clients peuvent déjà demander conseil à Pat.'
                 : statut === 'bloque' ? `${faits} plats sur ${total} · quelques plats demandent une vérification de Pat ; votre app s’ouvrira à vos clients dès qu’ils auront tous leurs accords.`
                 : `${total ? `${faits} plats sur ${total}` : 'Démarrage…'} · quelques minutes. Vous pouvez fermer cette page : la préparation continue.`}
-              {!fini && ' Pat va aussi chercher les étiquettes de vos vins : il faudra peut-être quelques heures pour toutes les trouver.'}
             </span>
+            {!fini && <AstucesPat className="discret" />}
           </div>
         </section>
         <section aria-labelledby="h-qr" className="carte-bo" style={{ flex: '1 1 300px', display: 'flex', alignItems: 'center', gap: 20 }}>

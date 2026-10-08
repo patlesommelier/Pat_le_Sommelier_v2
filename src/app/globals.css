@@ -205,3 +205,12 @@ a.bouton-plein { text-decoration: none; }
   cursor: pointer; animation: toast-entree .2s ease-out; }
 .toast-admin.erreur { background: #8A1C1C; }
 @keyframes toast-entree { from { opacity: 0; transform: translate(-50%, 8px); } }
+
+/* Possibilités de Pat qui défilent pendant la préparation des accords (AstucesPat) */
+.astuces-pat { display: flex; flex-direction: column; gap: 8px; min-height: 4.6em; }
+.astuces-pat .astuce { animation: astuce-fondu 7s ease-in-out both; line-height: 1.5; }
+.astuces-pat .points { display: flex; gap: 5px; }
+.astuces-pat .points i { width: 6px; height: 6px; border-radius: 3px; background: currentColor; opacity: 0.2; transition: opacity .3s, width .3s; }
+.astuces-pat .points i.actif { opacity: 0.7; width: 16px; }
+@keyframes astuce-fondu { 0% { opacity: 0; transform: translateY(4px); } 8%, 92% { opacity: 1; transform: none; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .astuces-pat .astuce { animation: none; } }
