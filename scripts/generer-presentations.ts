@@ -12,6 +12,7 @@ import 'dotenv/config';
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '../src/lib/generation/presentations';
 import { ouvrirPool } from './lib/migrations';
+import { clientClaude } from '../src/lib/claude';
 
 const arg = (nom: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : undefined; };
 
@@ -25,7 +26,7 @@ async function main() {
     if (!r) throw new Error(`Restaurant « ${restaurant} » introuvable.`);
     // Pas de ranking : seulement ce qui décrit le vin et son domaine.
     const vins = await q<VinPresentation>(`${SQL_VINS_A_PRESENTER} order by v.ordre`, [restaurant]);
-    const textes = await genererPresentations(vins, r.nom, new Anthropic(), process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5');
+    const textes = await genererPresentations(vins, r.nom, clientClaude(), process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5');
     for (const v of vins) console.log(`${v.id} · ${textes[v.id] ?? '(à relire : pas de présentation valide)'}\n`);
     if (!apercu) {
       for (const [id, texte] of Object.entries(textes)) await q('update vin_carte set presentation_carte = $3 where restaurant_id = $1 and id = $2', [restaurant, id, texte]);

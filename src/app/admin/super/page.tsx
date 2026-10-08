@@ -6,6 +6,7 @@ import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { indicateurs, restaurantsSuper } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
+import { etatClaude } from '@/lib/claude';
 
 const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
@@ -26,6 +27,17 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
     <>
       <Entete titre="Restaurants" texte="Tous les restaurants de Pat, leur mise en place et ce qui attend votre validation." />
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {(() => {
+        // Branchement de Claude : appels directs chez Anthropic (facturés sur le compte Anthropic), jamais par la passerelle Netlify.
+        const c = etatClaude();
+        const ok = c.cle === 'clé du compte Anthropic';
+        return (
+          <p className="petit" style={{ margin: 0, color: ok ? 'var(--vert)' : 'var(--ocre)' }}>
+            Claude : {ok ? 'appels directs à Anthropic, avec la clé du compte Anthropic.' : `${c.cle} : les appels à Claude vont échouer tant que ANTHROPIC_API_KEY n’est pas une clé sk-ant- du compte Anthropic.`}
+            {c.passerelleNetlify && ' La passerelle IA de Netlify est active sur le site, mais l’app ne l’utilise plus.'}
+          </p>
+        );
+      })()}
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{ind.restaurants}</div><span className="discret">restaurants</span></div>
         <Link href="/admin/super/producteurs" className="carte-bo" style={{ padding: '16px 20px', textDecoration: 'none', color: 'inherit' }}>

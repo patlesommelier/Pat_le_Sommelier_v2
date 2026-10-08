@@ -12,6 +12,7 @@ import 'dotenv/config';
 import Anthropic from '@anthropic-ai/sdk';
 import pg from 'pg';
 import { consigneAccords, systemePat, type PlatCtx, type PrincipeCtx, type RegleCtx, type VinCtx } from '../src/lib/pat-cerveau';
+import { clientClaude } from '../src/lib/claude';
 
 const arg = (nom: string) => {
   const i = process.argv.indexOf(`--${nom}`);
@@ -41,7 +42,7 @@ async function main() {
     seulPlat ? [restaurant, seulPlat] : [restaurant]);
 
   const nombre = Number(regles.find((r) => r.type === 'nombre_propositions')?.valeur ?? 5);
-  const client = new Anthropic();
+  const client = clientClaude();
   const systeme = systemePat(restaurant, principes, regles);
   const codes = new Set(carte.map((v) => v.id));
 

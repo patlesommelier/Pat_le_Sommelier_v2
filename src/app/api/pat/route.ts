@@ -7,6 +7,7 @@ import { instructionsPat } from '@/lib/instructions-pat';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
 import { extraireVins, texteCarte, texteRegles } from '@/lib/pat-cerveau';
+import { clientClaude } from '@/lib/claude';
 
 export const runtime = 'nodejs';
 
@@ -71,7 +72,7 @@ export async function POST(req: Request) {
     historique[historique.length - 1] = { ...dernier, content: `[Le client consulte la page du plat « ${nomAllege(plat.nom)} » (${plat.id}).]\n\n${dernier.content}` };
   }
 
-  const client = new Anthropic();
+  const client = clientClaude();
   const r = await client.messages.create({
     model: process.env.ANTHROPIC_MODEL ?? 'claude-sonnet-4-5',
     max_tokens: 1200,

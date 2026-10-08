@@ -4,6 +4,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import sharp from 'sharp';
 import type { Requete } from '../generation/accords';
 import type { Vin, VinRapproche } from './donnees';
+import { clientClaude } from '../claude';
 
 export type FichierEnvoye = { nom: string; type: string; octets: Uint8Array };
 
@@ -50,7 +51,7 @@ const MAUVAIS: Record<keyof typeof SIGNAL, string> = {
 };
 
 async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof typeof SIGNAL): Promise<unknown[]> {
-  const client = new Anthropic({ maxRetries: 3 });
+  const client = clientClaude({ maxRetries: 3 });
   const m = await client.messages.stream({
     model: modele(), max_tokens: 32000,
     messages: [{ role: 'user', content: [...await blocs(fichiers), { type: 'text', text: consigne }] }],

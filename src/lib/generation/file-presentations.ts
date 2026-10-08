@@ -8,6 +8,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { randomUUID } from 'node:crypto';
 import type { Requete } from './accords';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from './presentations';
+import { clientClaude } from '../claude';
 
 /** Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu. */
 const BLOQUE_APRES = '20 minutes';
@@ -50,7 +51,7 @@ async function prendre(q: Requete) {
  * Traite les tâches en attente jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
-export async function travaillerPresentations(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = new Anthropic() }: { finAvant: number; modele?: string; client?: Anthropic }) {
+export async function travaillerPresentations(q: Requete, { finAvant, modele = process.env.ANTHROPIC_MODEL ?? 'claude-opus-5-5', client = clientClaude() }: { finAvant: number; modele?: string; client?: Anthropic }) {
   for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
     try {
       const [r] = await q<{ nom: string }>('select nom from restaurant where id = $1', [t.restaurant_id]);

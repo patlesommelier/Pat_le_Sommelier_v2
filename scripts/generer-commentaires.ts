@@ -17,6 +17,7 @@ import path from 'node:path';
 import Anthropic from '@anthropic-ai/sdk';
 import { controlerPlat, MOTS_INTERDITS, MOTS_MAX, MOTS_MIN, type VinAControler } from '../src/lib/generation/controle';
 import { ouvrirPool } from './lib/migrations';
+import { clientClaude } from '../src/lib/claude';
 
 const arg = (nom: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : undefined; };
 const RESTAURANT = arg('restaurant') ?? 'lola';
@@ -90,7 +91,7 @@ function lireJson(texte: string): Genere[] {
 async function main() {
   const pool = ouvrirPool();
   const q = async <T>(sql: string, params: unknown[] = []) => (await pool.query(sql, params)).rows as T[];
-  const client = new Anthropic();
+  const client = clientClaude();
 
   const plats = await q<Plat>(
     `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.description_cuisine, pa.ancrages, pa.profil, pa.a_eviter, pa.temperature_service
