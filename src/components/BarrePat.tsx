@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
-import { euros } from '@/lib/format';
+import { euros, lignePrix } from '@/lib/format';
 import { Etiquette } from './Etiquette';
 import { Envoyer, Micro } from './Icones';
 
@@ -12,7 +12,7 @@ interface Message {
   content: string;
   /** Vins proposés : étiquette et texte complet de l'accord (ou présentation du vin), affichés sous la réponse. */
   vins?: { id: string; plat: string | null; libelle: string; producteur: string | null; millesime: string | null; prix: number | null;
-    prix_verre: number | null; etiquette_url: string | null; texte: string | null }[];
+    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[] }[];
   erreur?: boolean;
 }
 
@@ -99,7 +99,9 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                           <span className="fiche-chat-nom">
                             <strong>{v.libelle}</strong>
                             {(v.producteur || v.millesime) && <span>{[v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, v.millesime].filter(Boolean).join(' · ')}</span>}
-                            {(v.prix ?? v.prix_verre) !== null && <b>{euros(v.prix ?? v.prix_verre)}{v.prix && v.prix_verre ? <small> · verre {euros(v.prix_verre)}</small> : null}</b>}
+                            {v.tarifs?.length
+                              ? <b>{lignePrix(v.tarifs.slice(0, 1))}{v.tarifs.length > 1 ? <small> · {lignePrix(v.tarifs.slice(1))}</small> : null}</b>
+                              : (v.prix ?? v.prix_verre) !== null && <b>{euros(v.prix ?? v.prix_verre)}{v.prix && v.prix_verre ? <small> · verre {euros(v.prix_verre)}</small> : null}</b>}
                           </span>
                         </span>
                         {v.texte && <span className="fiche-chat-texte">{v.texte}</span>}

@@ -1,4 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
+import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { cleMemeVin } from '@/lib/contenances';
 import { NextResponse } from 'next/server';
 import { texteClassements } from '@/lib/classement-chat';
 import { chargerContexte } from '@/lib/contexte';
@@ -92,9 +94,10 @@ export async function POST(req: Request) {
     const pour = [p, corps.plat].find((x) => x && accord.has(`${x}|${id}`)) ?? null;
     return pour || avecAccord.has(id) ? [{ id, plat: pour }] : [];
   });
-  const fiches = retenus.length ? await requete<{ id: string; libelle: string; producteur: string | null; millesime: string | null;
+  const tarifs = retenus.length ? await tarifsDuRestaurant(corps.restaurant) : new Map();
+  const fiches = retenus.length ? await requete<{ id: string; libelle: string; couleur: string; millesime_brut: string | null; producteur: string | null; millesime: string | null;
     prix: number | null; prix_verre: number | null; etiquette_url: string | null; presentation: string | null }>(
-    `select v.id, v.libelle, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
+    `select v.id, v.libelle, v.couleur::text as couleur, v.millesime as millesime_brut, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
             nullif(v.millesime, 'NM') as millesime, v.prix::float as prix, v.prix_verre::float as prix_verre, v.etiquette_url,
             coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation
        from vin_carte v left join producteur p on p.id = v.producteur_id
@@ -111,6 +114,7 @@ export async function POST(req: Request) {
       const v = fiches.find((f) => f.id === id);
       if (!v) return [];
       return [{ id, plat: p, libelle: v.libelle, producteur: v.producteur, millesime: v.millesime, prix: v.prix, prix_verre: v.prix_verre,
+        tarifs: (tarifs.get(cleMemeVin({ couleur: v.couleur, libelle: v.libelle, millesime: v.millesime_brut })) ?? []).map(({ code, prix }: { code: string; prix: number }) => ({ code, prix })),
         etiquette_url: v.etiquette_url, texte: appreciation(p, id, i) ?? v.presentation }];
     }),
   });

@@ -5,7 +5,9 @@ import { DemanderAPat } from '@/components/DemanderAPat';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getPlat, getPropositions, getRestaurant } from '@/lib/donnees';
-import { euros, sousTitreVin } from '@/lib/format';
+import { euros, lignePrix, sousTitreVin } from '@/lib/format';
+import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { cleMemeVin } from '@/lib/contenances';
 
 /** Mention discrète des vins ajoutés par les règles 7 et 8 (vin plus cher, vin moins cher). */
 const MENTIONS: Partial<Record<string, string>> = {
@@ -21,7 +23,7 @@ export default async function Propositions({
   const tour = Math.max(1, Math.min(10, Number((await searchParams).tour) || 1));
   const [restaurant, plat] = await Promise.all([getRestaurant(resto), getPlat(platId)]);
   if (!restaurant || !plat) notFound();
-  const { propositions, encore } = await getPropositions(resto, platId, tour);
+  const [{ propositions, encore }, tarifs] = await Promise.all([getPropositions(resto, platId, tour), tarifsDuRestaurant(resto)]);
   const service = propositions.find((p) => p.accord.service)?.accord.service;
   const ici = `/${resto}/plat/${plat.id}`;
 
@@ -47,8 +49,13 @@ export default async function Propositions({
                     <div className="sous">{sousTitreVin(vin, true)}</div>
                     {accord.explication && <div className="pourquoi">{accord.explication}</div>}
                     <div className="prix" style={{ fontSize: 16 }}>
+                      {tarifs.get(cleMemeVin(vin))?.length ? <>
+                        {lignePrix(tarifs.get(cleMemeVin(vin))!.slice(0, 1))}
+                        {tarifs.get(cleMemeVin(vin))!.length > 1 && <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · {lignePrix(tarifs.get(cleMemeVin(vin))!.slice(1))}</span>}
+                      </> : <>
                       {vin.prix ? euros(vin.prix) : vin.prix_verre ? `${euros(vin.prix_verre)} le verre` : ''}
                       {vin.prix && vin.prix_verre ? <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · verre {euros(vin.prix_verre)}</span> : null}
+                      </>}
                     </div>
                   </div>
                 </Link>

@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
-import { euros, sousTitreVin } from '@/lib/format';
+import { euros, lignePrix, sousTitreVin } from '@/lib/format';
 import { COULEURS, type VinOnglet } from '@/lib/types';
 import { Etiquette } from './Etiquette';
 
@@ -37,9 +37,14 @@ export function OngletsCarte({ restaurant, vins }: { restaurant: string; vins: V
                 <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={52} hauteur={52} />
                 <div className="infos">
                   <span className="nom">{v.libelle}</span>
-                  <span className="sous">{sousTitreVin(v)}</span>
+                  <span className="sous">{sousTitreVin({ ...v, format: v.tarifs?.length ? undefined : v.format })}</span>
                 </div>
-                {(v.prix ?? v.prix_verre) !== null && (
+                {v.tarifs?.length ? (
+                  <span className="prix">
+                    {lignePrix(v.tarifs.slice(0, 1))}
+                    {v.tarifs.slice(1).map((t) => <small key={t.code}>{lignePrix([t])}</small>)}
+                  </span>
+                ) : (v.prix ?? v.prix_verre) !== null && (
                   <span className="prix">
                     {euros(v.prix ?? v.prix_verre)}
                     {v.prix_verre && v.prix ? <small>verre {euros(v.prix_verre)}</small> : null}

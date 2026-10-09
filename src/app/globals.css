@@ -214,3 +214,4 @@ a.bouton-plein { text-decoration: none; }
 .astuces-pat .points i.actif { opacity: 0.7; width: 16px; }
 @keyframes astuce-fondu { from { opacity: 0; transform: translateY(4px); } } /* chaque nouveau message apparaît en fondu */
 @media (prefers-reduced-motion: reduce) { .astuces-pat .astuce { animation: none; } }
+.pile-prix .ligne-prix + .ligne-prix { border-top: 0; }

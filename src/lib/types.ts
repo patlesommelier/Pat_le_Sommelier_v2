@@ -93,7 +93,9 @@ export const COULEURS: { id: Couleur; libelle: string }[] = [
 ];
 
 /** Champs envoyés au navigateur : rien de la cuisine interne de Pat (rankings, avis). */
-export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'producteur_nom' | 'producteur_texte' | 'cepages' | 'millesime' | 'format' | 'prix' | 'prix_verre' | 'etiquette_url'>;
+export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'producteur_nom' | 'producteur_texte' | 'cepages' | 'millesime' | 'format' | 'prix' | 'prix_verre' | 'etiquette_url'>
+  /** Prix de chaque contenance du vin (bouteille, ½, ¼, magnum, verre). */
+  & { tarifs?: Array<{ code: string; prix: number }> };
 export const versOnglet = (v: Vin): VinOnglet => ({
   id: v.id, couleur: v.couleur, section: v.section, libelle: v.libelle, producteur_nom: v.producteur_nom, producteur_texte: v.producteur_texte,
   cepages: v.cepages, millesime: v.millesime, format: v.format, prix: v.prix, prix_verre: v.prix_verre, etiquette_url: v.etiquette_url,

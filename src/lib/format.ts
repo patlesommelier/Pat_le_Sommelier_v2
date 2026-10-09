@@ -7,3 +7,9 @@ export function sousTitreVin(v: { producteur_nom?: string | null; producteur_tex
   const morceaux = [/^non /i.test(prod) ? '' : prod, avecCepages ? v.cepages ?? '' : '', v.millesime && v.millesime !== 'NM' ? v.millesime : '', v.format && v.format !== '75 cl' ? v.format : ''];
   return morceaux.filter(Boolean).join(' · ');
 }
+
+/** Prix des contenances en une ligne courte : « 175 € · ½ 91 € · verre 25 € ». */
+export function lignePrix(tarifs: Array<{ code: string; prix: number }>) {
+  const court: Record<string, string> = { bouteille: '', demi: '½ ', quart: '¼ ', magnum: 'magnum ', verre: 'verre ' };
+  return tarifs.map((t) => `${court[t.code] ?? ''}${euros(t.prix)}`).join(' · ');
+}

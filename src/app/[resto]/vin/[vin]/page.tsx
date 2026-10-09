@@ -3,6 +3,7 @@ import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getAccord, getPlat, getRestaurant, getVin } from '@/lib/donnees';
+import { tarifsDuVin } from '@/lib/tarifs';
 import { avecAppreciation } from '@/lib/appreciation';
 import { euros } from '@/lib/format';
 import { COULEURS } from '@/lib/types';
@@ -22,7 +23,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
   const { plat: platId } = await searchParams;
   const [restaurant, vin, plat] = await Promise.all([getRestaurant(resto), getVin(resto, vinId), platId ? getPlat(platId) : null]);
   if (!restaurant || !vin) notFound();
-  const accord = plat ? await getAccord(plat.id, vin.id) : null;
+  const [accord, tarifs] = await Promise.all([plat ? getAccord(plat.id, vin.id) : null, tarifsDuVin(resto, vin)]);
   const p = vin.profil_degustation;
   const producteur = (vin.producteur_nom ?? vin.producteur_texte ?? '').replace(/\s*\(.*\)/, '');
   const couleur = COULEURS.find((c) => c.id === vin.couleur)?.libelle.replace(/s$/, '');
@@ -58,13 +59,28 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
             </div>
           )}
 
-          <div className="ligne-prix">
-            <div className="gauche">
-              <span>{vin.format === '37,5 cl' ? 'Demi-bouteille' : vin.format === 'au verre' ? 'Au verre' : 'Bouteille'}</span>
-              {vin.prix_verre && vin.format !== 'au verre' ? <span>Au verre : {euros(vin.prix_verre)}</span> : accord?.service ? <span>Servir à {accord.service}</span> : null}
+          {tarifs.length ? (
+            // Une ligne par contenance : bouteille, demi-bouteille, quart, magnum, au verre.
+            <div className="pile-prix">
+              {tarifs.map((t, i) => (
+                <div key={t.code} className="ligne-prix">
+                  <div className="gauche">
+                    <span>{t.libelle}</span>
+                    {i === tarifs.length - 1 && accord?.service ? <span>Servir à {accord.service}</span> : null}
+                  </div>
+                  <span className="prix">{euros(t.prix)}</span>
+                </div>
+              ))}
             </div>
-            <span className="prix">{euros(vin.prix ?? vin.prix_verre)}</span>
-          </div>
+          ) : (
+            <div className="ligne-prix">
+              <div className="gauche">
+                <span>{vin.format === '37,5 cl' ? 'Demi-bouteille' : vin.format === 'au verre' ? 'Au verre' : 'Bouteille'}</span>
+                {vin.prix_verre && vin.format !== 'au verre' ? <span>Au verre : {euros(vin.prix_verre)}</span> : accord?.service ? <span>Servir à {accord.service}</span> : null}
+              </div>
+              <span className="prix">{euros(vin.prix ?? vin.prix_verre)}</span>
+            </div>
+          )}
 
           {p && (
             <div className="profil">
