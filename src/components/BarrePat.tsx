@@ -109,7 +109,7 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                 )}
               </div>
             ))}
-            {attente && <div className="message pat">Pat réfléchit…</div>}
+            {attente && <div className="message pat">Je cherche pour vous…</div>}
           </div>
         </section>
       )}
