@@ -158,3 +158,6 @@
 /* Fiche d'un vin : champs à gauche, étiquette et profil à droite (l'un sous l'autre sur un écran étroit). */
 .fiche-vin { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); gap: 24px; align-items: start; }
 @media (max-width: 1000px) { .fiche-vin { grid-template-columns: minmax(0, 1fr); } }
+.tableau td.col-etiquette { max-width: 140px; } .tableau td.col-etiquette .etat { white-space: normal; }
+.tableau td.col-producteur { min-width: 165px; max-width: 200px; } .tableau td.col-producteur .etat { white-space: normal; }
+.tableau .table-vins th, .tableau .table-vins td { padding-left: 10px; padding-right: 10px; }

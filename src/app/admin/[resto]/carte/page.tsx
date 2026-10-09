@@ -5,7 +5,7 @@ import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO } from '@/lib/admin/donnees';
-import { etatProducteur, regrouperVins } from './etats';
+import { etatEtiquette, etatProducteur, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
@@ -63,23 +63,25 @@ export default async function Carte({ params, searchParams }: { params: Promise<
             ))}
           </nav>
           <div className="tableau">
-            <table style={{ minWidth: 900 }}>
-              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th /></tr></thead>
+            <table className="table-vins" style={{ minWidth: 880 }}>
+              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
               <tbody>
                 {affiches.map(({ principal: v, tous, contenances, prix }) => {
                   const [bl, bk] = etatProducteur(v);
+                  const [el, ek] = etatEtiquette(v);
                   const fiche = `/admin/${resto}/carte/${encodeURIComponent(v.id)}`;
                   const choisie = tous.some((x) => x.id === choisi?.id);
                   return (
                     <tr key={v.id} id={`vin-${v.id}`} className={choisie ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
-                      <td style={{ minWidth: 220 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{v.libelle}</Link><div className="petit">{tous.map((x) => x.id).join(' · ')}</div></div></div></td>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{v.libelle}</Link><div className="petit">{tous.map((x) => x.id).join(' · ')}</div></div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td style={{ minWidth: 160 }}><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
-                      <td className="petit" style={{ minWidth: 110 }}>{v.cepages ?? '—'}</td>
+                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
+                      <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
                       <td>{contenances.length
-                        ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
+                        ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
                         : <Etat type="attention">Indisponible</Etat>}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
+                      <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>
                       <td className="droite"><Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
                     </tr>
                   );
