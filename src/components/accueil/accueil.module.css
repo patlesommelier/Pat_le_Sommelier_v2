@@ -22,12 +22,14 @@
 .texte { margin: 0; max-width: 600px; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.86); }
 .demo { flex: 1; display: flex; justify-content: center; align-items: flex-end; gap: 32px; } /* bas du QR = bas du téléphone */
 .qr { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 13px 13px 11px; border-radius: 17px; background: #FFF;
-  box-shadow: 0 22px 40px -22px rgba(0,0,0,0.7); color: #24151A; font-size: 13.5px; font-weight: 700; white-space: nowrap;
+  box-shadow: 0 22px 40px -22px rgba(0,0,0,0.7); color: #24151A; font-size: 13.5px; font-weight: 700;
   margin-bottom: 8px; } /* bas du QR = bas de l'écran blanc (cadre noir du téléphone : 11 px × 0,75) */
+.qr span { max-width: 130px; text-align: center; line-height: 1.35; }
 
 /* Niveau 2 : ce que Pat vous apporte */
-.avantages { padding: 72px 80px 84px; display: flex; flex-direction: column; gap: 36px; }
-.cartes { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+.avantages { padding: 72px 80px 84px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
+.chapeau { margin: 0 0 20px; max-width: 760px; text-align: center; font-size: 18px; line-height: 1.55; color: #66565B; }
+.cartes { margin: 0; padding: 0; width: 100%; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 .cartes li { box-sizing: border-box; padding: 28px 26px; border-radius: 18px; background: #FFF; border: 1px solid #E8DDDF; display: flex; flex-direction: column; gap: 12px; }
 .cartes .icone { width: 52px; height: 52px; border-radius: 14px; background: #F7EEF0; color: #610420; display: flex; align-items: center; justify-content: center; }
 .cartes h3, .fonctions h3 { margin: 0; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif; font-size: 20px; font-weight: 800; letter-spacing: -0.3px; }
@@ -44,10 +46,9 @@
 .carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
   background: linear-gradient(135deg, #F6D57A 0%, #E9B949 55%, #D9A23A 100%);
   box-shadow: 0 30px 60px -28px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.35); display: flex; flex-direction: column; gap: 22px; }
-.carteTitre { margin: 0; padding-left: 110px; min-height: 52px; display: flex; align-items: center; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif;
-  font-size: min(26px, calc((100cqw - 110px) / 25.5)); font-weight: 800; letter-spacing: -0.6px; line-height: 1.1; white-space: nowrap; }
-/* Titre sur une ligne : sa taille suit la largeur du cadre doré (environ 25 em pour le texte, quelle que soit la police). */
-@media (max-width: 900px) { .carteTitre { white-space: normal; } }
+.carteTitre { padding-left: 110px; min-height: 58px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
+.carteTitre h2 { margin: 0; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif; font-size: 30px; font-weight: 800; letter-spacing: -0.5px; line-height: 1.1; }
+.carteTitre p { margin: 0; font-size: 16px; color: #5A3A1A; }
 .depot { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 92px; padding: 14px 20px; box-sizing: border-box;
   border: 2px dashed #A8771C; border-radius: 16px; background: #FFF8E6; cursor: pointer; font-size: 17px; font-weight: 700; }
 .depot[data-survol='true'] { border-color: #610420; background: #FFF1CC; }
@@ -87,6 +88,14 @@
 .fonctions .rond { width: 56px; height: 56px; border-radius: 28px; background: #610420; color: #E9B949; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .fonctions .corps { display: flex; flex-direction: column; gap: 8px; }
 
+.qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
+.quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 50%; background: radial-gradient(circle at 40% 35%, #FFF 0%, #FBF1E6 70%);
+  box-shadow: 0 0 0 6px rgba(233,185,73,0.55), 0 30px 60px -30px rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; }
+.quiMedaillon img { transform: translateY(6px); }
+.quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
+.quiTexte h2 { margin: 0; font-family: 'Bricolage Grotesque', 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px); font-weight: 800; letter-spacing: -0.8px; }
+.quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: rgba(255,255,255,0.88); }
+
 .piedPage { padding: 26px 64px; background: #1E0009; color: rgba(255,255,255,0.7); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .piedPage nav { display: flex; gap: 18px; }
 .piedPage a { color: #F4E3B5; }
@@ -97,8 +106,9 @@
   .cartes { grid-template-columns: 1fr 1fr; }
   .fonctionnalites, .avantages, .activation { padding-left: 24px; padding-right: 24px; }
   .entete { padding: 0 24px; }
+  .qui { flex-direction: column; align-items: flex-start; padding: 56px 24px; }
 }
-@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } }
+@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { width: 118px; height: 130px; } }
 /* Fin de l'inscription : préparation des accords, puis QR code */
 .barre { display: block; height: 10px; border-radius: 5px; background: #F1DFAE; overflow: hidden; }
 .barre span { display: block; height: 100%; background: #610420; transition: width .4s; }

@@ -1,6 +1,6 @@
 'use client';
 // Formulaire doré « Activez votre sommelier en quelques minutes » (niveau 3 de la page) : une étape à la fois.
-// 1. restaurant (compte) → 2. menu → 3. carte des vins → « Créer mon sommelier » (accords et QR code).
+// 1. restaurant (compte) → 2. menu → 3. carte des vins → « J’engage Pat » (accords et QR code).
 // Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
@@ -123,7 +123,7 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
         <img src="/pat-logo.png" alt="Pat, le sommelier" width={86} height={95} style={{ transform: 'translateY(3px)' }} />
       </span>
       <section className={s.carte} aria-labelledby="h-insc">
-        <h2 id="h-insc" className={s.carteTitre}>Activez votre sommelier en quelques minutes</h2>
+        <div className={s.carteTitre}><h2 id="h-insc">Faisons connaissance</h2><p>Quelques minutes suffisent pour me mettre au travail.</p></div>
 
         {/* Restaurant créé : Pat prépare les accords, puis le QR code s'affiche ici. */}
         {(creation.restaurantId ?? restaurantCree) && <Preparation restaurantId={(creation.restaurantId ?? restaurantCree)!} />}
@@ -154,7 +154,7 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
             <Erreurs liste={creation.erreurs} />
             <form action={creer} className={s.pied}>
               <button type="button" className={s.retour} onClick={() => setEtape('menu')}>Retour</button>
-              <BoutonEnvoi libelle="Créer mon sommelier" enCours="Création en cours…" desactive={resume.carte?.statut !== 'ok'} />
+              <BoutonEnvoi libelle="J’engage Pat" enCours="Un instant…" desactive={resume.carte?.statut !== 'ok'} />
             </form>
           </>
         )}
