@@ -1,16 +1,23 @@
 // Petite appréciation de Pat, à la première personne, ajoutée au commentaire d'accord montré au client :
 // plus la note est haute, plus elle est enthousiaste. Elle varie d'un accord à l'autre (choisie selon le plat et la position du vin dans la liste),
 // et n'est jamais ajoutée à un commentaire écrit par le restaurant.
+// Voix de Pat : vouvoiement, chaleureux, humour pince-sans-rire glissé dans une incise, jamais appuyé
+// (une formule sur deux environ ; les autres restent simples, pour que l'humour garde son effet).
 const APPRECIATIONS: Record<number, string[]> = {
   5: [
-    'c’est l’un de mes accords préférés', 'je le trouve remarquable', 'je vous le recommande les yeux fermés',
-    'j’adore cet accord', 'pour moi, c’est un mariage parfait', 'je ne m’en lasse pas',
+    'c’est l’un de mes accords préférés, et je ne le dis pas à tout le monde', 'je le trouve remarquable',
+    'je vous le recommande les yeux fermés, mais gardez-les ouverts pour le goûter', 'j’adore cet accord',
+    'pour moi, c’est un mariage parfait, sans même passer par la mairie', 'je ne m’en lasse pas, et pourtant j’ai essayé',
   ],
   4: [
-    'je trouve l’accord très réussi', 'j’aime beaucoup cet accord', 'je le trouve très juste',
-    'c’est un accord que j’apprécie beaucoup', 'je vous le conseille volontiers', 'je trouve qu’ils vont très bien ensemble',
+    'je trouve l’accord très réussi', 'j’aime beaucoup cet accord, et mon verre aussi', 'je le trouve très juste',
+    'je vous le conseille volontiers, sans toucher la moindre commission', 'c’est un accord que j’apprécie beaucoup',
+    'je trouve qu’ils vont très bien ensemble, comme un vieux couple qui ne se dispute presque jamais',
   ],
-  3: ['je le trouve agréable', 'c’est un choix que j’aime bien', 'je le trouve harmonieux', 'un accord que je trouve plaisant', 'je le trouve bien équilibré'],
+  3: [
+    'je le trouve agréable', 'c’est un choix que j’aime bien, sans faire de vagues', 'je le trouve harmonieux',
+    'un accord que je trouve plaisant, sans esbroufe', 'je le trouve bien équilibré, ce qui est déjà plus que moi un lundi matin',
+  ],
 };
 
 const hash = (t: string) => [...t].reduce((h, c) => (h * 31 + c.charCodeAt(0)) >>> 0, 7);
