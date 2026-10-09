@@ -16,7 +16,7 @@ const APPRECIATIONS: Record<number, string[]> = {
   ],
   3: [
     'je le trouve agréable', 'c’est un choix que j’aime bien, sans faire de vagues', 'je le trouve harmonieux',
-    'un accord que je trouve plaisant, sans esbroufe', 'je le trouve bien équilibré, ce qui est déjà plus que moi un lundi matin',
+    'un accord que je trouve plaisant, sans esbroufe',
   ],
 };
 
