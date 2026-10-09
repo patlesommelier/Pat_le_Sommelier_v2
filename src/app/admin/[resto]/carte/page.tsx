@@ -34,6 +34,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   return (
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
+        <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
         <BoutonCarteImprimee resto={resto} />
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         {wineLabs && (

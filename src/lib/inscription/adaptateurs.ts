@@ -60,8 +60,16 @@ export async function preparerAccords(restaurantId: string, demandePar = 'inscri
              or exists (select 1 from generation_accords g where g.plat_id = pl.id and g.statut = 'erreur'
                           and g.lot = (select lot from generation_accords where restaurant_id = $1 order by cree_le desc, id desc limit 1)))
       order by pl.ordre`, [restaurantId, seulementManquants]);
+  await lancerPreparation(restaurantId, plats.map((p) => p.id), demandePar);
+}
+
+/**
+ * Accords (passe rapide) des plats donnés, puis présentations des vins qui n'en ont pas, en arrière-plan.
+ * `vins` : seulement ces vins (vin ajouté par le restaurant) ; les accords des autres vins ne changent pas.
+ */
+export async function lancerPreparation(restaurantId: string, platIds: string[], demandePar: string, { vins }: { vins?: string[] } = {}) {
   // Passe rapide (Sonnet) : le restaurant a ses accords en quelques minutes ; Pat les régénère ensuite avec Opus depuis l'admin.
-  const { crees } = await creerLot(requete, restaurantId, plats.map((p) => p.id), demandePar, { modele: modeleRapide() });
+  const { crees } = await creerLot(requete, restaurantId, platIds, demandePar, { modele: modeleRapide(), vins });
   const manquantes = await presentationsManquantes(requete, restaurantId);
   const presentations = manquantes.length ? await creerLotPresentations(requete, restaurantId, manquantes.map((m) => m.couleur), demandePar) : 0;
   const base = origineSite();

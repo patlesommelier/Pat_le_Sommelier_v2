@@ -13,29 +13,34 @@ const BLOQUE_APRES = "20 minutes";
 /** Passe rapide de l'inscription et relances automatiques : même modèle que les accords (Sonnet). */
 export const modeleRapide = () => process.env.ANTHROPIC_MODEL_RAPIDE || modeleAccords();
 
-export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string, { modele }: { modele?: string } = {}) {
+export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string,
+  { modele, vins }: { modele?: string; vins?: string[] } = {}) {
   await q(`update generation_accords set statut = 'erreur', message = 'interrompu (délai dépassé)', fin_le = now()
             where statut = 'en_cours' and debut_le < now() - interval '${BLOQUE_APRES}'`);
   const lot = randomUUID();
-  // Un plat déjà en attente ou en cours n'est pas demandé deux fois.
+  // `vins` : seulement ces vins (vin ajouté) ; sinon toute la carte. Un plat n'est pas demandé deux fois :
+  // - toute la carte : s'il est déjà en attente ou en cours pour toute la carte ;
+  // - des vins ajoutés : s'il est en attente pour toute la carte ou pour ces vins (pas « en cours » : sa carte est déjà lue).
   const r = await q<{ id: number }>(
-    `insert into generation_accords (lot, restaurant_id, plat_id, demande_par, modele)
-     select $1, $2, p, $3, $5 from unnest($4::text[]) as p
-      where not exists (select 1 from generation_accords g where g.plat_id = p and g.statut in ('en_attente', 'en_cours'))
+    `insert into generation_accords (lot, restaurant_id, plat_id, demande_par, modele, vins)
+     select $1, $2, p, $3, $5, $6 from unnest($4::text[]) as p
+      where not exists (select 1 from generation_accords g where g.plat_id = p and (
+              ($6::text[] is null and g.vins is null and g.statut in ('en_attente', 'en_cours'))
+              or ($6::text[] is not null and g.statut = 'en_attente' and (g.vins is null or g.vins @> $6::text[]))))
      returning id`,
-    [lot, restaurantId, demandePar, platIds, modele ?? null],
+    [lot, restaurantId, demandePar, platIds, modele ?? null, vins ?? null],
   );
   return { lot, crees: r.length };
 }
 
-interface Tache { id: number; restaurant_id: string; plat_id: string; modele: string | null }
+interface Tache { id: number; restaurant_id: string; plat_id: string; modele: string | null; vins: string[] | null }
 
 /** Prend la prochaine tâche en attente (deux travailleurs ne prennent jamais la même). */
 async function prendre(q: Requete) {
   const [t] = await q<Tache>(
     `update generation_accords set statut = 'en_cours', debut_le = now()
       where id = (select id from generation_accords where statut = 'en_attente' order by id for update skip locked limit 1)
-      returning id, restaurant_id, plat_id, modele`);
+      returning id, restaurant_id, plat_id, modele, vins`);
   return t ?? null;
 }
 
@@ -77,7 +82,7 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
   for (;;) {
     for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
       try {
-        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele), finAvant, t.plat_id);
+        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele, t!.vins ? { vins: t!.vins } : {}), finAvant, t.plat_id);
         const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
           + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
           + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');

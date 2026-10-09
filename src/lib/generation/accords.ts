@@ -75,6 +75,8 @@ export interface OptionsGeneration {
   principes?: PrincipeCtx[];
   /** Préparation d'une publication : résultats écrits dans publication_accord, rien ne change chez le client. */
   publicationId?: string;
+  /** Vins ajoutés : seuls ces vins sont notés pour ce plat ; les accords des autres ne changent pas. */
+  vins?: string[];
 }
 
 export async function regenererAccordsPlat(q: Requete, client: Anthropic, restaurantId: string, platId: string, modele: string,
@@ -85,7 +87,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
             pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond, pl.sauce_servie_a_part
        from plat pl left join profil_accord pa on pa.plat_id = pl.id where pl.id = $1 and pl.restaurant_id = $2`, [platId, restaurantId]);
   if (!plat) throw new Error('plat introuvable');
-  const [tousPrincipes, regles, carte, actuels, autres] = await Promise.all([
+  const [tousPrincipes, regles, carteComplete, actuels, autres] = await Promise.all([
     options.principes ?? q<PrincipeCtx>(`select id, numero, titre, regle, role, statut::text from principe where statut <> 'retire'`),
     q<RegleCtx>(`select type::text, portee::text, cible, valeur, texte from regle_sommelier where restaurant_id = $1 and actif
                   and (date_debut is null or date_debut <= current_date) and (date_fin is null or date_fin >= current_date) order by priorite`, [restaurantId]),
@@ -103,7 +105,10 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
         where a.restaurant_id = $1 and a.plat_id <> $2 and pl.actif and a.note >= 3 and a.statut <> 'refuse'
         order by a.note desc, pl.ordre`, [restaurantId, platId]),
   ]);
-  if (!carte.length) throw new Error('aucun vin disponible sur la carte');
+  if (!carteComplete.length) throw new Error('aucun vin disponible sur la carte');
+  // Vins à noter : toute la carte, ou seulement les vins ajoutés (la consigne garde toute la carte : elle reste en cache).
+  const carte = options.vins ? carteComplete.filter((v) => options.vins!.includes(v.id)) : carteComplete;
+  if (!carte.length) return { ecrits: 0, imposes: 0, aRevoir: [], jetonsEntree: 0, jetonsSortie: 0 };
 
   const parVin = new Map(actuels.map((a) => [a.vin_id, a]));
   const imposee = (vin: string) => { const a = parVin.get(vin); return a?.origine === 'sommelier' && a.note ? a.note : null; };
@@ -123,7 +128,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   const fichePlat = textePlat(plat) + (plat.sauce_servie_a_part === true && sauce
     ? `\nSauce servie à part, comme condiment : applique le principe n°${sauce.numero} — ${sauce.titre} : ${sauce.regle}`
     : plat.sauce_servie_a_part === false ? '\nLa sauce fait partie du plat (nappée ou composante) : elle compte pleinement dans l’accord.' : '');
-  const systeme = consigneSysteme(principes, regles, carte);
+  const systeme = consigneSysteme(principes, regles, carteComplete);
   let jetonsEntree = 0, jetonsSortie = 0;
   async function appeler(contenu: string) {
     const m = await client.messages.stream({

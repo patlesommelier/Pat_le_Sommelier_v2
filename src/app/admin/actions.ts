@@ -20,6 +20,7 @@ import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
 import { cleMemeVin, contenanceDuFormat, ordonner } from '@/lib/contenances';
+import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -95,6 +96,30 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
   revalidatePath(`/${resto}`, 'layout');
   return { ok: 'Plat enregistré.' };
 }
+
+/** Nouveau plat ajouté par le restaurant : Pat prépare aussitôt ses accords avec toute la carte (en arrière-plan). */
+export async function ajouterPlat(resto: string, f: FormData): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const nom = txt(f, 'nom');
+  if (!nom) return { erreur: 'Indiquez le nom du plat.' };
+  const cat = txt(f, 'categorie');
+  const base = `${resto}-${slug(nom) || 'plat'}`;
+  let id = base;
+  for (let n = 2; (await requete('select 1 from plat where id = $1', [id])).length; n++) id = `${base}-${n}`;
+  await requete(
+    `insert into plat (id, restaurant_id, nom, nom_court, categorie, prix, prix_variantes, description_cuisine, sauce_servie_a_part, ordre, actif, modifie_bo)
+     values ($1, $2, $3, $4, $5::categorie_plat, $6, $7, $8, $9::boolean,
+             (select coalesce(max(ordre), 0) + 1 from plat where restaurant_id = $2), true, now())`,
+    [id, resto, nom, txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : 'plat',
+      nombre(f, 'prix'), txt(f, 'prix_variantes'), txt(f, 'description_cuisine'),
+      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null]);
+  await lancerPreparation(resto, [id], u.email).catch((e) => console.error('[ajout] plat', id, e));
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/menu`, { plat: id, ajout: '1' }));
+}
+
+const slug = (s: string) => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
 
 // ───────── Carte des vins ─────────
 export async function enregistrerVin(resto: string, vinId: string, f: FormData): Promise<Retour> {
@@ -238,6 +263,50 @@ async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
   await requete(
     `update vin_carte set appellation_id = $3, ranking_terroir = coalesce($4, ranking_terroir) where id = any($1) and restaurant_id = $2`,
     [ids, resto, t?.id ?? null, t?.ranking_pat ?? null]);
+}
+
+/**
+ * Nouveau vin ajouté par le restaurant : une ligne par contenance cochée (comme à la lecture de la carte),
+ * producteur cherché dans la base de Pat, puis ses accords avec chaque plat (seulement ce vin) et sa présentation,
+ * en arrière-plan. On revient sur la liste, le vin mis en évidence.
+ */
+export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const couleur = txt(f, 'couleur');
+  if (!couleur || !['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'].includes(couleur)) return { erreur: 'Choisissez la couleur du vin.' };
+  const champs = { appellation: txt(f, 'appellation_texte'), nom: txt(f, 'nom_vin'), cepage: txt(f, 'cepages'), producteur: txt(f, 'producteur_texte') };
+  const libelle = txt(f, 'libelle') ?? (composerIntitule(champs) || null);
+  if (!libelle) return { erreur: 'Indiquez au moins l’appellation ou le nom du vin.' };
+  let etiquette: string | null = null;
+  const image = fichier(f, 'etiquette');
+  if (image) {
+    try { etiquette = await deposerImage(image, `${resto}/etiquettes`); } catch (e) { return { erreur: (e as Error).message }; }
+  }
+  // Première ligne : la première contenance cochée (le verre seul : une ligne « au verre »).
+  const cochees = ordonner(f.getAll('contenances').filter((x): x is string => typeof x === 'string'));
+  const premiere = cochees.find((c) => c !== 'verre');
+  const format = premiere ? FORMATS[premiere as keyof typeof FORMATS] : 'au verre';
+  const lettre = ({ bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D' } as Record<string, string>)[couleur];
+  const [{ n }] = await requete<{ n: number }>('select count(*)::int as n from vin_carte where restaurant_id = $1 and couleur = $2::couleur_vin', [resto, couleur]);
+  const id = await nouvelId(`${resto}-${lettre}${String(n + 1).padStart(2, '0')}`);
+  await requete(
+    `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_texte, millesime, format, prix, contenances, ordre, disponible,
+                            etiquette_url, etiquette_source, etiquette_statut, modifie_bo)
+     values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10,
+             (select coalesce(max(ordre), 0) + 1 from vin_carte where restaurant_id = $2), true,
+             $11, case when $11::text is not null then 'restaurant' end, case when $11::text is not null then 'trouvee' end, now())`,
+    [id, resto, couleur, txt(f, 'section'), libelle, champs.producteur, txt(f, 'millesime'), format,
+      premiere ? nombre(f, `prix_${premiere}`) : null, cochees, etiquette]);
+  await enregistrerProducteurDuVin(resto, id, champs.producteur, null);
+  await enregistrerContenances(resto, id, f);
+  await enregistrerIntitule(resto, id, f);
+  const ids = await memeVin(resto, id);
+  await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
+  const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
+  if (plats.length) await lancerPreparation(resto, plats.map((p) => p.id), u.email, { vins: ids }).catch((e) => console.error('[ajout] vin', id, e));
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/carte`, { c: couleur, vin: id, ok: `« ${libelle} » ajouté : Pat prépare ses accords avec vos plats (quelques minutes).` }));
 }
 
 /** Étiquettes manquantes de la carte : demandées à Wine Labs (une par cuvée), réservé au super-admin (crédits). */

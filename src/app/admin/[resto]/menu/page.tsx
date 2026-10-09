@@ -9,10 +9,10 @@ import { requete } from '@/lib/db';
 
 const CATS = [['tous', 'Tous'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
-export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string }> }) {
+export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
-  const { cat = 'tous', plat: platId, ok } = await searchParams;
+  const { cat = 'tous', plat: platId, ok, ajout } = await searchParams;
   const [plats, u] = await Promise.all([getPlatsBO(resto), utilisateurCourant()]);
   // Relecture des prix sur le menu : super-admin seulement (chaque lecture est un appel à Claude payé par Pat).
   const [derniere] = u?.admin ? await requete<{ statut: string; message: string | null; le: string }>(
@@ -23,7 +23,10 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   const lien = (q: Record<string, string>) => `/admin/${resto}/menu?${new URLSearchParams({ cat, ...(choisi ? { plat: choisi.id } : {}), ...q })}`;
   return (
     <>
-      <Entete titre="Menu" texte="Les plats proposés à vos clients : nom, nom court affiché sur l’accueil, catégorie et prix. Un plat masqué n’apparaît plus dans l’app." />
+      <Entete titre="Menu" texte="Les plats proposés à vos clients : nom, nom court affiché sur l’accueil, catégorie et prix. Un plat masqué n’apparaît plus dans l’app.">
+        <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">Ajouter un plat</Link>
+      </Entete>
+      {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
       {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
       <div className="rangee">
         <section className="large">
