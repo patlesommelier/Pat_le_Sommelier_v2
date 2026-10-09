@@ -5,13 +5,13 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
-import { Etat, euros } from '@/components/admin/Ui';
+import { Etat } from '@/components/admin/Ui';
 import { enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit } from '@/lib/admin/intitule';
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
-import { CONTENANCES, contenanceDuFormat, libelleCourt, ordonner } from '@/lib/contenances';
+import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -39,7 +39,11 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
   const cochees = ordonner(v.contenances);
   // Magnum : proposé seulement quand la carte en a un (les cases demandées sont bouteille, ½, ¼ et verre).
   const cases = CONTENANCES.filter((c) => c.code !== 'magnum' || cochees.includes('magnum') || contenanceDuFormat(v.format) === 'magnum');
-  const contenanceLigne = contenanceDuFormat(v.format);
+  // Prix de chaque contenance : la ligne du vin dans cette contenance (le verre : prix au verre).
+  const groupe = [v, ...autres];
+  const prixDe = (code: string) => code === 'verre'
+    ? groupe.find((x) => x.prix_verre != null)?.prix_verre ?? null
+    : groupe.find((x) => contenanceDuFormat(x.format) === code)?.prix ?? null;
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
   const retour = `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
@@ -99,27 +103,24 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
 
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Contenances, millésime et prix</legend>
-            <div className="pile" style={{ gap: 6 }}>
-              <span style={{ fontSize: 13, fontWeight: 700 }}>Contenances disponibles</span>
-              <input type="hidden" name="contenances_envoyees" value="1" />
-              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 22px' }}>
-                {cases.map((c) => (
-                  <label key={c.code} className="case" style={{ margin: 0 }}><input type="checkbox" name="contenances" value={c.code} defaultChecked={cochees.includes(c.code)} /><span>{c.libelle}</span></label>
-                ))}
-              </div>
-              {autres.length > 0 && (
-                <span className="petit discret">Prix des autres contenances de ce vin : {autres.map((x, i) => (
-                  <span key={x.id}>{i ? ', ' : ''}<Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}`}>{libelleCourt(contenanceDuFormat(x.format))}{x.prix ? ` (${euros(x.prix)})` : ''}</Link></span>
-                ))}</span>
-              )}
+            <input type="hidden" name="contenances_envoyees" value="1" />
+            <div className="pile" style={{ gap: 8 }}>
+              <span style={{ fontSize: 13, fontWeight: 700 }}>Contenances disponibles et prix</span>
+              {cases.map((c) => (
+                <div key={c.code} style={{ display: 'flex', alignItems: 'center', gap: 12, flexWrap: 'wrap' }}>
+                  <label className="case" style={{ margin: 0, width: 150 }}><input type="checkbox" name="contenances" value={c.code} defaultChecked={cochees.includes(c.code)} /><span>{c.libelle}</span></label>
+                  <div className="champ" style={{ margin: 0, width: 120 }}>
+                    <input name={`prix_${c.code}`} inputMode="decimal" aria-label={`Prix ${c.libelle.toLowerCase()} (€)`} placeholder="Prix"
+                      defaultValue={prixDe(c.code) ?? ''} />
+                  </div>
+                  <span className="discret">€{c.code === 'verre' ? ' le verre' : ''}</span>
+                </div>
+              ))}
+              <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Cochez les contenances servies et indiquez leur prix : chacune apparaît sur la carte de l’app.</span>
             </div>
-            <div className="champs">
-              <div className="champ"><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
-              <div className="champ"><label htmlFor="prix">{contenanceLigne === 'bouteille' ? 'Prix bouteille (€)' : contenanceLigne === 'verre' ? 'Prix (€)' : `Prix ${libelleCourt(contenanceLigne).toLowerCase()} (${v.format}) (€)`}</label><input id="prix" name="prix" inputMode="decimal" defaultValue={v.prix ?? ''} /></div>
-              <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={v.prix_verre ?? ''} /></div>
-            </div>
+            <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
             <div>
-              <label className="case"><input type="checkbox" name="disponible" defaultChecked={v.disponible} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
+              <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
               <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison</span></label>
             </div>
           </fieldset>

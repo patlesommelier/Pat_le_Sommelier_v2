@@ -19,7 +19,7 @@ import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
-import { cleMemeVin, ordonner } from '@/lib/contenances';
+import { cleMemeVin, contenanceDuFormat, ordonner } from '@/lib/contenances';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -109,18 +109,24 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
     }
   }
   await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
-  if (f.has('contenances_envoyees')) await enregistrerContenances(resto, vinId, f);
+  // Fiche par contenances : prix, disponibilité et millésime valent pour toutes les lignes du même vin.
+  const parContenances = f.has('contenances_envoyees');
+  if (parContenances) await enregistrerContenances(resto, vinId, f);
   if (f.has('libelle')) await enregistrerIntitule(resto, vinId, f);
   await requete(
-    `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6, coup_de_coeur = $7,
-            etiquette_url = coalesce($8, etiquette_url),
-            etiquette_source = case when $8::text is not null then 'restaurant' else etiquette_source end,
-            etiquette_statut = case when $8::text is not null then 'trouvee' else etiquette_statut end,
-            presentation_carte_perso = $9, modifie_bo = now()
+    `update vin_carte set coup_de_coeur = $3,
+            etiquette_url = coalesce($4, etiquette_url),
+            etiquette_source = case when $4::text is not null then 'restaurant' else etiquette_source end,
+            etiquette_statut = case when $4::text is not null then 'trouvee' else etiquette_statut end,
+            presentation_carte_perso = $5, modifie_bo = now()
       where id = $1 and restaurant_id = $2`,
-    [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'),
-      f.get('disponible') === 'on', f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
+    [vinId, resto, f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
+  if (!parContenances) {
+    await requete(
+      `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6 where id = $1 and restaurant_id = $2`,
+      [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'), f.get('disponible') === 'on']);
+  }
   // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
   const partagees = await partagerEtiquettes(requete, { vins: [vinId], nouvellePhoto: etiquette ? vinId : undefined })
     .catch((e) => { console.error('[etiquettes] partage', e); return 0; });
@@ -139,11 +145,69 @@ async function memeVin(resto: string, vinId: string) {
   return v ? lignes.filter((l) => cleMemeVin(l) === cleMemeVin(v)).map((l) => l.id) : [];
 }
 
-/** Contenances cochées (aucune : une bouteille), pour toutes les lignes du même vin. */
+/**
+ * Contenances cochées et leur prix, pour toutes les lignes du même vin (une par contenance, comme à la lecture de la carte).
+ * - Bouteille, ½, ¼, magnum : la ligne de cette contenance reçoit le prix ; cochée sans ligne, elle est créée à partir
+ *   de la bouteille (ou du vin ouvert), avec les mêmes accords ; décochée, sa ligne n'est plus proposée (rien n'est supprimé).
+ * - Verre : prix au verre porté par la bouteille (ou la ligne « au verre ») ; décoché, plus de prix au verre.
+ * Le millésime et « Disponible » (rupture) valent pour tout le vin.
+ */
 async function enregistrerContenances(resto: string, vinId: string, f: FormData) {
-  const ids = await memeVin(resto, vinId);
+  const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string }>(
+    'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1', [resto]);
+  const v = lignes.find((l) => l.id === vinId);
+  if (!v) return;
+  const groupe = lignes.filter((l) => cleMemeVin(l) === cleMemeVin(v));
   const cochees = ordonner(f.getAll('contenances').filter((x): x is string => typeof x === 'string'));
-  await requete('update vin_carte set contenances = $3 where restaurant_id = $1 and id = any($2)', [resto, ids, cochees]);
+  const dispo = f.get('disponible') === 'on';
+  const parCode = new Map<string, (typeof groupe)[number]>();
+  for (const l of groupe) if (!parCode.has(contenanceDuFormat(l.format))) parCode.set(contenanceDuFormat(l.format), l);
+  const modele = parCode.get('bouteille') ?? v;
+  const ids = groupe.map((l) => l.id);
+  for (const c of ['bouteille', 'demi', 'quart', 'magnum'] as const) {
+    const ligne = parCode.get(c);
+    const coche = cochees.includes(c);
+    if (ligne) {
+      await requete('update vin_carte set prix = $2, disponible = $3 where id = $1', [ligne.id, nombre(f, `prix_${c}`), dispo && coche]);
+    } else if (coche) {
+      const id = await nouvelId(`${modele.id}-${c === 'bouteille' ? 'B' : c === 'demi' ? 'D' : c === 'quart' ? 'Q' : 'M'}`);
+      // Copie de la ligne modèle (présentation, étiquette, producteur…) avec sa contenance et son prix.
+      await requete(
+        `insert into vin_carte select (jsonb_populate_record(null::vin_carte, to_jsonb(v) || jsonb_build_object(
+            'id', $2::text, 'format', $3::text, 'prix', $4::numeric, 'prix_verre', null, 'disponible', $5::boolean))).*
+           from vin_carte v where v.id = $1`, [modele.id, id, FORMATS[c], nombre(f, `prix_${c}`), dispo]);
+      await copierAccords(modele.id, id);
+      ids.push(id);
+    }
+  }
+  const verre = parCode.get('verre');
+  const prixVerre = cochees.includes('verre') ? nombre(f, 'prix_verre') : null;
+  if (verre) {
+    await requete('update vin_carte set prix_verre = $2, disponible = $3 where id = $1', [verre.id, prixVerre, dispo && cochees.includes('verre')]);
+  } else {
+    const porteur = parCode.get('bouteille')?.id ?? (parCode.size ? [...parCode.values()][0].id : vinId);
+    await requete('update vin_carte set prix_verre = case when id = $2 then $3::numeric end where id = any($1)', [ids, porteur, prixVerre]);
+  }
+  await requete('update vin_carte set contenances = $3, millesime = $4 where restaurant_id = $1 and id = any($2)',
+    [resto, ids, cochees, txt(f, 'millesime')]);
+}
+
+const FORMATS = { bouteille: '75 cl', demi: '37,5 cl', quart: '18,7 cl', magnum: '150 cl' } as const;
+
+async function nouvelId(base: string) {
+  for (let n = 1; ; n++) {
+    const id = n === 1 ? base : `${base}${n}`;
+    const [x] = await requete('select 1 from vin_carte where id = $1', [id]);
+    if (!x) return id;
+  }
+}
+
+/** Les accords d'un vin valent pour ses autres contenances : recopiés sur la nouvelle ligne. */
+async function copierAccords(depuis: string, vers: string) {
+  const colonnes = (await requete<{ c: string }>(
+    `select column_name as c from information_schema.columns
+      where table_schema = 'public' and table_name = 'accord' and column_name not in ('id', 'vin_id') order by ordinal_position`)).map((x) => `"${x.c}"`);
+  await requete(`insert into accord (vin_id, ${colonnes.join(', ')}) select $2, ${colonnes.join(', ')} from accord where vin_id = $1`, [depuis, vers]);
 }
 
 /**
