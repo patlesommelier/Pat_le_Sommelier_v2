@@ -124,7 +124,9 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
     .catch((e) => { console.error('[etiquettes] partage', e); return 0; });
   revalidatePath(partagees ? '/' : `/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  return { ok: 'Vin enregistré.' };
+  // Retour à la liste des vins, sur la couleur du vin, avec la ligne du vin mise en évidence.
+  const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  redirect(avec(`/admin/${resto}/carte`, { c: v?.couleur ?? '', vin: vinId, ok: `« ${v?.libelle ?? vinId} » enregistré.` }));
 }
 
 /**

@@ -112,7 +112,6 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
 
           <div className="ligne-actions">
             <button type="submit" className="btn">Enregistrer</button>
-            <Link href={retour} className="btn sec">Retour à la carte</Link>
           </div>
         </section>
 

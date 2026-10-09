@@ -6,6 +6,7 @@ import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO } from '@/lib/admin/donnees';
 import { etatEtiquette, etatProducteur } from './etats';
+import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
 
@@ -43,7 +44,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           </form>
         )}
       </Entete>
-      <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />
+      {choisi && sp.ok
+        ? <RetourVin vinId={choisi.id} message={sp.ok} />
+        : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
@@ -68,7 +71,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   const [bl, bk] = etatProducteur(v);
                   const fiche = `/admin/${resto}/carte/${encodeURIComponent(v.id)}`;
                   return (
-                    <tr key={v.id} className={v.id === choisi?.id ? 'choisi' : ''}>
+                    <tr key={v.id} id={`vin-${v.id}`} className={v.id === choisi?.id ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
                       <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{v.libelle}{v.format !== '75 cl' ? ` · ${v.format}` : ''}</Link><div className="petit">{v.id} · {v.producteur_nom ?? v.producteur_texte ?? '—'}</div></div></div></td>
                       <td>{v.millesime ?? '—'}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : v.prix_verre ? `${euros(v.prix_verre)} le verre` : '—'}</td>
