@@ -35,7 +35,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
           <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={350} hauteur={210} />
 
           <div className="fiche-entete">
-            <div className="surtitre">{[(vin.appellation_nom ?? vin.vin_texte?.split(' – ')[0])?.replace(/ AOC$/, ''), vin.millesime !== 'NM' ? vin.millesime : null].filter(Boolean).join(' · ') || couleur}</div>
+            <div className="surtitre">{[(vin.appellation_texte || (vin.appellation_nom ?? vin.vin_texte?.split(' – ')[0]))?.replace(/ AOC$/, ''), vin.millesime !== 'NM' ? vin.millesime : null].filter(Boolean).join(' · ') || couleur}</div>
             <h1>{vin.libelle}</h1>
             <div className="filet" />
             {producteur && !/^non /i.test(producteur) && <div className="lieu">{producteur}</div>}

@@ -57,6 +57,9 @@ export interface Vin {
   profil_degustation: ProfilDegustation | null;
   descriptif: string | null;
   vin_texte: string | null;
+  /** Appellation et nom du vin saisis dans le back-office (vides : déduits de vin_texte). */
+  appellation_texte: string | null;
+  nom_vin: string | null;
   presentation: string | null;
   resume_court: string | null;
   etiquette_url: string | null;

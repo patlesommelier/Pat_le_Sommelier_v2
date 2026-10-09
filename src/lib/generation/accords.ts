@@ -93,7 +93,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     q<VinGen>(`select v.id, v.couleur::text, v.libelle, coalesce(p.nom, v.producteur_texte) as producteur, v.millesime, v.format,
                       v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation as profil,
                       null::int as ranking_producteur, p.avis_pat, v.coup_de_coeur,
-                      split_part(coalesce(v.vin_texte, ''), ' – ', 1) as appellation, v.ordre
+                      coalesce(nullif(v.appellation_texte, ''), split_part(coalesce(v.vin_texte, ''), ' – ', 1)) as appellation, v.ordre
                  from vin_carte v left join producteur p on p.id = v.producteur_id
                 where v.restaurant_id = $1 and v.disponible order by v.ordre`, [restaurantId]),
     q<AccordActuel>(`select plat_id, vin_id, note, origine::text, statut::text from accord where plat_id = $1`, [platId]),

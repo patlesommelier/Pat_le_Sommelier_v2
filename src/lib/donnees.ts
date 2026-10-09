@@ -39,7 +39,7 @@ export async function getPlat(id: string) {
 const SELECT_VIN = `
   select v.id, v.couleur, v.section, v.libelle, v.producteur_texte, v.millesime, v.format,
          v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation,
-         v.descriptif, v.vin_texte,
+         v.descriptif, v.vin_texte, v.appellation_texte, v.nom_vin,
          -- Texte montré au client : celui du restaurant, sinon la présentation de la base, sinon celle écrite par Pat
          coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte) as presentation, v.resume_court, v.etiquette_url, v.coup_de_coeur,
          v.ordre, v.ranking_producteur, v.ranking_terroir, v.pays,
@@ -110,7 +110,7 @@ export async function getCandidats(restaurantId: string, platIds: string[], stat
       ...l,
       id: l.vin_id,
       prix: l.prix ?? null,
-      appellation: String(l.vin_texte ?? '').split(' – ')[0].replace(/\(.*?\)/g, '').trim(),
+      appellation: l.appellation_texte || String(l.vin_texte ?? '').split(' – ')[0].replace(/\(.*?\)/g, '').trim(),
       notes: {},
     };
     c.notes[l.plat_id] = Number(l.note);
