@@ -5,7 +5,7 @@ import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO } from '@/lib/admin/donnees';
-import { etatEtiquette, etatProducteur } from './etats';
+import { etatProducteur, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
@@ -21,7 +21,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
   const choisi = vins.find((v) => v.id === sp.vin); // vin dont on revient : mis en évidence
   const c = sp.c ?? choisi?.couleur ?? presentes[0]?.[0] ?? 'rouge';
-  const affiches = vins.filter((v) => v.couleur === c);
+  const affiches = regrouperVins(vins.filter((v) => v.couleur === c));
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
   const enRecherche = vins.filter((v) => !v.etiquette_url && (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander')).length;
   // Chaque étiquette trouvée coûte un crédit Wine Labs à Pat : la recherche manuelle est réservée au super-admin.
@@ -45,7 +45,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         )}
       </Entete>
       {choisi && sp.ok
-        ? <RetourVin vinId={choisi.id} message={sp.ok} />
+        ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
         : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
@@ -59,24 +59,27 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <section className="large">
           <nav className="onglets" aria-label="Couleurs">
             {presentes.map(([k, l]) => (
-              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{vins.filter((v) => v.couleur === k).length}</span></Link>
+              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{regrouperVins(vins.filter((v) => v.couleur === k)).length}</span></Link>
             ))}
           </nav>
           <div className="tableau">
-            <table style={{ minWidth: 820 }}>
-              <thead><tr><th>Vin</th><th>Millésime</th><th className="droite">Prix</th><th>Étiquette</th><th>Producteur</th><th /></tr></thead>
+            <table style={{ minWidth: 900 }}>
+              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th /></tr></thead>
               <tbody>
-                {affiches.map((v) => {
-                  const [el, ek] = etatEtiquette(v);
+                {affiches.map(({ principal: v, tous, contenances, prix }) => {
                   const [bl, bk] = etatProducteur(v);
                   const fiche = `/admin/${resto}/carte/${encodeURIComponent(v.id)}`;
+                  const choisie = tous.some((x) => x.id === choisi?.id);
                   return (
-                    <tr key={v.id} id={`vin-${v.id}`} className={v.id === choisi?.id ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
-                      <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{v.libelle}{v.format !== '75 cl' ? ` · ${v.format}` : ''}</Link><div className="petit">{v.id} · {v.producteur_nom ?? v.producteur_texte ?? '—'}</div></div></div></td>
+                    <tr key={v.id} id={`vin-${v.id}`} className={choisie ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
+                      <td style={{ minWidth: 220 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{v.libelle}</Link><div className="petit">{tous.map((x) => x.id).join(' · ')}</div></div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : v.prix_verre ? `${euros(v.prix_verre)} le verre` : '—'}</td>
-                      <td><Etat type={ek}>{el}</Etat></td>
-                      <td>{!v.disponible ? <Etat type="defaut">Indisponible</Etat> : <Etat type={bk}>{bl}</Etat>}{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
+                      <td style={{ minWidth: 160 }}><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
+                      <td className="petit" style={{ minWidth: 110 }}>{v.cepages ?? '—'}</td>
+                      <td>{contenances.length
+                        ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
+                        : <Etat type="attention">Indisponible</Etat>}</td>
+                      <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
                       <td className="droite"><Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
                     </tr>
                   );

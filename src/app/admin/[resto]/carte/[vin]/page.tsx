@@ -5,12 +5,12 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
-import { Etat } from '@/components/admin/Ui';
+import { Etat, euros } from '@/components/admin/Ui';
 import { enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit } from '@/lib/admin/intitule';
-import { etatEtiquette, etatProducteur } from '../etats';
+import { autresContenances, contenance, etatEtiquette, etatProducteur } from '../etats';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -34,6 +34,7 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
   const suggestions = sansLien || v.statut_producteur === 'nouveau'
     ? (await suggestionsProducteurs(v.producteur_texte ?? v.producteur_nom)).filter((p) => p.id !== v.producteur_id && p.statut !== 'propose')
     : [];
+  const autres = autresContenances(vins, v);
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
   const retour = `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
@@ -93,9 +94,15 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
 
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Millésime et prix</legend>
+            <p style={{ margin: 0, fontSize: 14 }}>
+              Contenance : <b>{contenance(v.format)}{contenance(v.format) !== v.format ? ` (${v.format})` : ''}</b>
+              {autres.length > 0 && <> · autres contenances de ce vin : {autres.map((x, i) => (
+                <span key={x.id}>{i ? ', ' : ''}<Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}`}>{contenance(x.format)}{x.prix ? ` (${euros(x.prix)})` : ''}</Link></span>
+              ))}</>}
+            </p>
             <div className="champs">
               <div className="champ"><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
-              <div className="champ"><label htmlFor="prix">Prix bouteille (€)</label><input id="prix" name="prix" inputMode="decimal" defaultValue={v.prix ?? ''} /></div>
+              <div className="champ"><label htmlFor="prix">{contenance(v.format) === 'Bouteille' ? 'Prix bouteille (€)' : `Prix ${v.format} (€)`}</label><input id="prix" name="prix" inputMode="decimal" defaultValue={v.prix ?? ''} /></div>
               <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={v.prix_verre ?? ''} /></div>
             </div>
             <div>
