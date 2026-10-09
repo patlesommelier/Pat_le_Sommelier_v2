@@ -19,6 +19,7 @@ import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
+import { cleMemeVin, ordonner } from '@/lib/contenances';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -108,6 +109,7 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
     }
   }
   await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
+  if (f.has('contenances_envoyees')) await enregistrerContenances(resto, vinId, f);
   if (f.has('libelle')) await enregistrerIntitule(resto, vinId, f);
   await requete(
     `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6, coup_de_coeur = $7,
@@ -129,12 +131,29 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   redirect(avec(`/admin/${resto}/carte`, { c: v?.couleur ?? '', vin: vinId, ok: `« ${v?.libelle ?? vinId} » enregistré.` }));
 }
 
+/** Lignes du même vin (une par contenance qui a son propre prix), le vin compris. */
+async function memeVin(resto: string, vinId: string) {
+  const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null }>(
+    'select id, couleur::text, libelle, millesime from vin_carte where restaurant_id = $1', [resto]);
+  const v = lignes.find((l) => l.id === vinId);
+  return v ? lignes.filter((l) => cleMemeVin(l) === cleMemeVin(v)).map((l) => l.id) : [];
+}
+
+/** Contenances cochées (aucune : une bouteille), pour toutes les lignes du même vin. */
+async function enregistrerContenances(resto: string, vinId: string, f: FormData) {
+  const ids = await memeVin(resto, vinId);
+  const cochees = ordonner(f.getAll('contenances').filter((x): x is string => typeof x === 'string'));
+  await requete('update vin_carte set contenances = $3 where restaurant_id = $1 and id = any($2)', [resto, ids, cochees]);
+}
+
 /**
  * Intitulé, appellation, nom du vin et cépage(s). L'intitulé vide est recomposé à partir des autres champs.
  * L'appellation est reliée au terroir de la base de Pat du même nom (accents, casse et « AOC » à part), sinon elle n'est plus reliée.
+ * Les autres contenances du même vin suivent : elles restent sur la même ligne de la liste.
  */
 async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
   const appellation = txt(f, 'appellation_texte');
+  const ids = await memeVin(resto, vinId);
   const [v] = await requete<{ producteur: string | null; appellation_nom: string | null }>(
     `select coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur, t.nom as appellation_nom
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
@@ -145,16 +164,16 @@ async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
   const memeQueAvant = appellation && v.appellation_nom && cleAppellation(appellation) === cleAppellation(v.appellation_nom);
   await requete(
     `update vin_carte set libelle = coalesce($3, libelle), appellation_texte = $4, nom_vin = $5, cepages = $6, modifie_bo = now()
-      where id = $1 and restaurant_id = $2`,
-    [vinId, resto, libelle || null, appellation, txt(f, 'nom_vin'), txt(f, 'cepages')]);
+      where id = any($1) and restaurant_id = $2`,
+    [ids, resto, libelle || null, appellation, txt(f, 'nom_vin'), txt(f, 'cepages')]);
   if (memeQueAvant) return;
   const terroirs = appellation
     ? await requete<{ id: string; nom: string; ranking_pat: number | null }>(`select id, nom, ranking_pat from terroir where statut <> 'retire'`)
     : [];
   const t = terroirs.find((x) => cleAppellation(x.nom) === cleAppellation(appellation!));
   await requete(
-    `update vin_carte set appellation_id = $3, ranking_terroir = coalesce($4, ranking_terroir) where id = $1 and restaurant_id = $2`,
-    [vinId, resto, t?.id ?? null, t?.ranking_pat ?? null]);
+    `update vin_carte set appellation_id = $3, ranking_terroir = coalesce($4, ranking_terroir) where id = any($1) and restaurant_id = $2`,
+    [ids, resto, t?.id ?? null, t?.ranking_pat ?? null]);
 }
 
 /** Étiquettes manquantes de la carte : demandées à Wine Labs (une par cuvée), réservé au super-admin (crédits). */

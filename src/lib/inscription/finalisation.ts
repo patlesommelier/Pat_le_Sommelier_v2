@@ -1,6 +1,7 @@
 // Finalisation : l'e-mail est confirmé, le restaurant est créé et Pat commence à préparer les accords.
 // Idempotente : peut être rappelée sans créer de doublon (lien de confirmation ouvert deux fois).
 import 'server-only';
+import { cleMemeVin, contenancesDesLignes } from '../contenances';
 import { requete } from '../db';
 import { partagerEtiquettes } from '../etiquettes/partage';
 import { chercherEtiquettesManquantes } from '../etiquettes/lancer';
@@ -100,16 +101,21 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
   // 5. Vins : producteurs inconnus proposés à Pat, puis la carte (ranking 0 tant que Pat n'a pas validé).
   const producteurs = await creerVinsEnAttente(restaurantId, i.vins);
   const compteurs: Record<string, number> = {};
+  // Contenances détectées sur la carte : un même vin en plusieurs contenances y est lu en plusieurs lignes.
+  const cle = (v: (typeof i.vins)[number]) => cleMemeVin({ couleur: v.couleur, libelle: v.libelleCarte, millesime: v.millesime });
+  const lignes = (v: (typeof i.vins)[number]) => i.vins.filter((x) => cle(x) === cle(v))
+    .map((x) => ({ format: x.auVerre ? 'au verre' : x.contenance, prixVerre: x.auVerre ? null : x.prixVerre }));
   for (const [k, v] of i.vins.entries()) {
     const l = LETTRE[v.couleur] ?? 'X';
     compteurs[l] = (compteurs[l] ?? 0) + 1;
     const id = `${restaurantId}-${l}${String(compteurs[l]).padStart(2, '0')}`;
     await requete(
       `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_id, producteur_texte, vin_texte, millesime, format,
-                              prix, prix_verre, ordre, disponible)
-       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true)`,
+                              prix, prix_verre, ordre, disponible, contenances)
+       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14)`,
       [id, restaurantId, v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
-        v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1]);
+        v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1,
+        contenancesDesLignes(lignes(v))]);
   }
 
   // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).

@@ -88,6 +88,8 @@ export interface VinBO {
   pays: string | null; vin_texte: string | null;
   /** Appellation et nom du vin enregistrés dans la fiche (vides : à déduire de la carte importée), terroir de Pat relié. */
   appellation_texte: string | null; nom_vin: string | null; appellation_nom: string | null;
+  /** Contenances cochées dans la fiche (bouteille, demi, quart, verre, magnum). */
+  contenances: string[];
   /** Présentation pour la carte imprimée : générée par Pat, et corrigée par le restaurant (prioritaire). */
   presentation_carte: string | null; presentation_carte_perso: string | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
@@ -100,7 +102,7 @@ export async function getVinsBO(restaurantId: string) {
             v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
-            v.appellation_texte, v.nom_vin, t.nom as appellation_nom
+            v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
 }

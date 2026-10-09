@@ -4,13 +4,14 @@ import { notFound } from 'next/navigation';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
-import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
+import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { Etat, euros } from '@/components/admin/Ui';
 import { enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit } from '@/lib/admin/intitule';
-import { autresContenances, contenance, etatEtiquette, etatProducteur } from '../etats';
+import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
+import { CONTENANCES, contenanceDuFormat, libelleCourt, ordonner } from '@/lib/contenances';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -35,6 +36,10 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
     ? (await suggestionsProducteurs(v.producteur_texte ?? v.producteur_nom)).filter((p) => p.id !== v.producteur_id && p.statut !== 'propose')
     : [];
   const autres = autresContenances(vins, v);
+  const cochees = ordonner(v.contenances);
+  // Magnum : proposé seulement quand la carte en a un (les cases demandées sont bouteille, ½, ¼ et verre).
+  const cases = CONTENANCES.filter((c) => c.code !== 'magnum' || cochees.includes('magnum') || contenanceDuFormat(v.format) === 'magnum');
+  const contenanceLigne = contenanceDuFormat(v.format);
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
   const retour = `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
@@ -93,16 +98,24 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
           </fieldset>
 
           <fieldset className="carte-bo pile" style={cadre}>
-            <legend style={legende}>Millésime et prix</legend>
-            <p style={{ margin: 0, fontSize: 14 }}>
-              Contenance : <b>{contenance(v.format)}{contenance(v.format) !== v.format ? ` (${v.format})` : ''}</b>
-              {autres.length > 0 && <> · autres contenances de ce vin : {autres.map((x, i) => (
-                <span key={x.id}>{i ? ', ' : ''}<Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}`}>{contenance(x.format)}{x.prix ? ` (${euros(x.prix)})` : ''}</Link></span>
-              ))}</>}
-            </p>
+            <legend style={legende}>Contenances, millésime et prix</legend>
+            <div className="pile" style={{ gap: 6 }}>
+              <span style={{ fontSize: 13, fontWeight: 700 }}>Contenances disponibles</span>
+              <input type="hidden" name="contenances_envoyees" value="1" />
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px 22px' }}>
+                {cases.map((c) => (
+                  <label key={c.code} className="case" style={{ margin: 0 }}><input type="checkbox" name="contenances" value={c.code} defaultChecked={cochees.includes(c.code)} /><span>{c.libelle}</span></label>
+                ))}
+              </div>
+              {autres.length > 0 && (
+                <span className="petit discret">Prix des autres contenances de ce vin : {autres.map((x, i) => (
+                  <span key={x.id}>{i ? ', ' : ''}<Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}`}>{libelleCourt(contenanceDuFormat(x.format))}{x.prix ? ` (${euros(x.prix)})` : ''}</Link></span>
+                ))}</span>
+              )}
+            </div>
             <div className="champs">
               <div className="champ"><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
-              <div className="champ"><label htmlFor="prix">{contenance(v.format) === 'Bouteille' ? 'Prix bouteille (€)' : `Prix ${v.format} (€)`}</label><input id="prix" name="prix" inputMode="decimal" defaultValue={v.prix ?? ''} /></div>
+              <div className="champ"><label htmlFor="prix">{contenanceLigne === 'bouteille' ? 'Prix bouteille (€)' : contenanceLigne === 'verre' ? 'Prix (€)' : `Prix ${libelleCourt(contenanceLigne).toLowerCase()} (${v.format}) (€)`}</label><input id="prix" name="prix" inputMode="decimal" defaultValue={v.prix ?? ''} /></div>
               <div className="champ"><label htmlFor="prix_verre">Prix au verre (€)</label><input id="prix_verre" name="prix_verre" inputMode="decimal" defaultValue={v.prix_verre ?? ''} /></div>
             </div>
             <div>
@@ -119,6 +132,8 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
 
           <div className="ligne-actions">
             <button type="submit" className="btn">Enregistrer</button>
+            <BoutonSupprimer action={supprimerVin.bind(null, resto, v.id)} libelle="Supprimer ce vin"
+              question={`Supprimer « ${v.libelle} » de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
           </div>
         </section>
 
@@ -139,12 +154,6 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
           )}
         </aside>
       </FormulaireAdmin>
-
-      <div className="carte-bo pile" style={{ gap: 8, maxWidth: 560 }}>
-        <span className="discret" style={{ fontSize: 14 }}>Vin retiré définitivement de votre carte ? (Pour une rupture, décochez plutôt « Disponible ».)</span>
-        <BoutonConfirmation action={supprimerVin.bind(null, resto, v.id)} libelle="Supprimer ce vin"
-          question={`Supprimer « ${v.libelle} » de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
-      </div>
     </>
   );
 }
