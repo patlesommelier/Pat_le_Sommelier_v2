@@ -16,6 +16,11 @@ test('intitulé : le cépage pour une appellation générique', () => {
   assert.equal(composerIntitule({ appellation: 'Vin de France', nom: 'X', cepage: 'Merlot, Syrah' }), 'Vin de France X');
 });
 
+test('intitulé : la maison pour un champagne, le producteur quand le nom n’est que le cépage', () => {
+  assert.equal(composerIntitule({ appellation: 'Champagne', nom: 'Blanc de Blancs', producteur: 'Ruinart' }), 'Champagne Ruinart Blanc de Blancs');
+  assert.equal(composerIntitule({ appellation: 'Bourgogne', nom: 'Chardonnay', cepage: 'Chardonnay', producteur: 'Nuiton-Beaunoy (Cave des Hautes-Côtes)' }), 'Bourgogne Chardonnay Nuiton-Beaunoy');
+});
+
 test('intitulé : rien n’est répété', () => {
   assert.equal(composerIntitule({ appellation: 'Pomerol', nom: 'Pomerol Clos René' }), 'Pomerol Clos René');
   assert.equal(composerIntitule({ appellation: '', nom: '', producteur: '' }), '');
@@ -26,5 +31,7 @@ test('champs lus sur la carte à l’import', () => {
   assert.equal(appellationDeduite(t), 'Etna Bianco');
   assert.equal(nomDeduit(t), 'Vendemia');
   assert.equal(nomDeduit('Sancerre rouge – cuvée non précisée'), '');
-  assert.equal(appellationDeduite('x', 'Crozes-Hermitage AOC'), 'Crozes-Hermitage');
+  assert.equal(appellationDeduite('', 'Crozes-Hermitage AOC'), 'Crozes-Hermitage');
+  assert.equal(appellationDeduite('Sancerre rouge – cuvée non précisée', 'Sancerre'), 'Sancerre rouge');
+  assert.equal(appellationDeduite('Terre Siciliane IGT / Etna – Passorosso'), 'Terre Siciliane');
 });

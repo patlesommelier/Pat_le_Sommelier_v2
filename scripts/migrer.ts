@@ -13,6 +13,7 @@ import 'dotenv/config';
 import { migrer, ouvrirPool } from './lib/migrations';
 import { initialiserVersionsSiAbsentes } from './lib/versions-initiales';
 import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
+import { recomposerIntitules } from './lib/intitules';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -28,6 +29,10 @@ async function main() {
   try {
     await client.query('begin');
     const appliquees = await migrer(client);
+    if (appliquees.includes('0032_intitules_composes.sql')) {
+      const changes = await recomposerIntitules(async (sql, params = []) => (await client.query(sql, params)).rows, { appliquer: true });
+      console.log(`Intitulés recomposés : ${changes.length} vin(s).`);
+    }
     await client.query('commit');
     console.log(appliquees.length ? `Migrations appliquées : ${appliquees.join(', ')}` : 'Base à jour : aucune migration à appliquer.');
     // Premières versions des principes et des règles (une seule fois).
