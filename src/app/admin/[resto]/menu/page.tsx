@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { enregistrerPlat } from '../../actions';
+import { enregistrerPlat, supprimerPlat } from '../../actions';
+import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfil } from '@/lib/admin/donnees';
 import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
@@ -9,10 +10,10 @@ import { requete } from '@/lib/db';
 
 const CATS = [['tous', 'Tous'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
-export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string }> }) {
+export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string; supprime?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
-  const { cat = 'tous', plat: platId, ok, ajout } = await searchParams;
+  const { cat = 'tous', plat: platId, ok, ajout, supprime } = await searchParams;
   const [plats, u] = await Promise.all([getPlatsBO(resto), utilisateurCourant()]);
   // Relecture des prix sur le menu : super-admin seulement (chaque lecture est un appel à Claude payé par Pat).
   const [derniere] = u?.admin ? await requete<{ statut: string; message: string | null; le: string }>(
@@ -26,6 +27,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
       <Entete titre="Menu" texte="Les plats proposés à vos clients : nom, nom court affiché sur l’accueil, catégorie et prix. Un plat masqué n’apparaît plus dans l’app.">
         <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">Ajouter un plat</Link>
       </Entete>
+      {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
       {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
       {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
       <div className="rangee">
@@ -103,6 +105,8 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               <div className="ligne-actions">
                 <button type="submit" className="btn petit">Enregistrer</button>
                 <Link href={`/admin/${resto}/accords?plat=${choisi.id}`} className="btn sec petit">Voir ses accords</Link>
+                <BoutonSupprimer action={supprimerPlat.bind(null, resto, choisi.id)} libelle="Supprimer ce plat" className="btn sec petit"
+                  question={`Supprimer « ${choisi.nom} » du menu ? Ses accords seront supprimés aussi. Cette action est définitive. (Pour le retirer temporairement, décochez plutôt « Proposé aux clients ».)`} />
               </div>
             </FormulaireAdmin>
           </aside>

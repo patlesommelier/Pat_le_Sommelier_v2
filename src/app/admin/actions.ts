@@ -588,6 +588,18 @@ export async function retirerVin(resto: string, f: FormData) {
  * Supprime un vin de la carte (et ses accords). Pour une simple rupture, « Disponible » suffit : le vin revient
  * quand on recoche. La suppression est définitive ; la cuvée et son étiquette restent dans la base de Pat.
  */
+/** Plat retiré définitivement du menu : ses accords, son profil et ses règles partent avec lui. */
+export async function supprimerPlat(resto: string, platId: string) {
+  await exigerAcces(resto);
+  const [p] = await requete<{ nom: string; categorie: string }>('select nom, categorie::text from plat where id = $1 and restaurant_id = $2', [platId, resto]);
+  if (!p) redirect(`/admin/${resto}/menu`);
+  await requete(`delete from regle_sommelier where restaurant_id = $1 and portee = 'plat' and cible = $2`, [resto, platId]);
+  await requete('delete from plat where id = $1 and restaurant_id = $2', [platId, resto]); // accords supprimés avec lui
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/menu`, { supprime: p.nom }));
+}
+
 export async function supprimerVin(resto: string, vinId: string) {
   await exigerAcces(resto);
   const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
