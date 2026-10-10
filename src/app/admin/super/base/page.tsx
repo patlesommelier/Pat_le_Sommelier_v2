@@ -72,7 +72,7 @@ export default async function Base({ searchParams }: { searchParams: Promise<Sp>
                 <div className="pile" style={{ gap: 10, marginTop: 10 }}>
                   <div style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap' }}>
                     <span>Ranking du producteur</span>{ranking('producteur', p.id, p.ranking_pat, p.nom)}
-                    {p.statut === 'propose' && <Link href={`/admin/super/producteurs/${encodeURIComponent(p.id)}`}>Ouvrir la fiche à valider</Link>}
+                    <Link href={`/admin/super/producteurs/${encodeURIComponent(p.id)}`}>{p.statut === 'propose' ? 'Ouvrir la fiche à valider' : 'Fiche complète'}</Link>
                   </div>
                   {(details.vins.get(p.id) ?? []).length > 0 && (
                     <div className="tableau"><table style={{ minWidth: 640 }}>

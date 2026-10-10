@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 import type { Restaurant } from '@/lib/types';
 import { logoAffiche } from '@/lib/couleurs';
-import { Chevron, Livre } from './Icones';
+import { Chevron, Couverts, Livre } from './Icones';
 
 /** Hauteur du logo dans le bandeau : plus grande pour un logo carré ou rond que pour un logo en largeur. */
 function hauteurLogo(ratio: number | null | undefined, grand: boolean) {
@@ -11,8 +11,13 @@ function hauteurLogo(ratio: number | null | undefined, grand: boolean) {
 }
 
 
-/** Bandeau du haut : retour discret, logo, bouton « Carte des vins ». Reste visible quand on fait défiler. */
-export function Entete({ restaurant, retour, grand = false, children }: { restaurant: Restaurant; retour?: string; grand?: boolean; children?: ReactNode }) {
+/**
+ * Bandeau du haut : retour discret, logo, bouton « Carte des vins » (sur la carte des vins : bouton « Menu », qui ramène
+ * au choix des plats). Reste visible quand on fait défiler.
+ */
+export function Entete({ restaurant, retour, grand = false, surLaCarte = false, children }: {
+  restaurant: Restaurant; retour?: string; grand?: boolean; surLaCarte?: boolean; children?: ReactNode;
+}) {
   const logo = logoAffiche(restaurant);
   return (
     <header className={`bandeau${grand ? ' grand' : ''}`}>
@@ -29,10 +34,17 @@ export function Entete({ restaurant, retour, grand = false, children }: { restau
                 style={{ height: hauteurLogo(logo.ratio, grand), maxWidth: '100%', objectFit: 'contain', objectPosition: 'left center' }} />
             : <LogoPat nom={restaurant.nom} />}
         </Link>
-        <Link href={`/${restaurant.id}/carte`} className="bouton-carte">
-          <Livre />
-          <span>Carte des vins</span>
-        </Link>
+        {surLaCarte ? (
+          <Link href={`/${restaurant.id}`} className="bouton-carte">
+            <Couverts />
+            <span>Menu</span>
+          </Link>
+        ) : (
+          <Link href={`/${restaurant.id}/carte`} className="bouton-carte">
+            <Livre />
+            <span>Carte des vins</span>
+          </Link>
+        )}
       </div>
       {children}
     </header>

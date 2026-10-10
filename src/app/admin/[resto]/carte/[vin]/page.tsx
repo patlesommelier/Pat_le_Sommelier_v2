@@ -86,6 +86,10 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
               <label className="case"><input type="radio" name="producteur_choix" value={v.producteur_id} defaultChecked />
                 <span><b>{v.producteur_nom}</b><small>{pl}{etoiles}</small></span></label>
             )}
+            {/* Super-admin seulement : la fiche complète du producteur dans la base de Pat. */}
+            {u?.admin && v.producteur_id && (
+              <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`} target="_blank" className="petit">Fiche complète du producteur (super-admin) →</Link>
+            )}
             {!v.producteur_id && sansLien && suggestions.length > 0 && (
               <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Pat a trouvé des noms proches dans sa base : choisissez le bon producteur, ou proposez-le comme nouveau.</p>
             )}

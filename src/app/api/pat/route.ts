@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { sansContenance } from '@/lib/format';
 import { cleMemeVin } from '@/lib/contenances';
 import { NextResponse } from 'next/server';
 import { texteClassements } from '@/lib/classement-chat';
@@ -115,7 +116,7 @@ export async function POST(req: Request) {
       if (!v) return [];
       return [{ id, plat: p, libelle: v.libelle, producteur: v.producteur, millesime: v.millesime, prix: v.prix, prix_verre: v.prix_verre,
         tarifs: (tarifs.get(cleMemeVin({ couleur: v.couleur, libelle: v.libelle, millesime: v.millesime_brut })) ?? []).map(({ code, prix }: { code: string; prix: number }) => ({ code, prix })),
-        etiquette_url: v.etiquette_url, texte: appreciation(p, id, i) ?? v.presentation }];
+        etiquette_url: v.etiquette_url, texte: appreciation(p, id, i) ?? sansContenance(v.presentation) }];
     }),
   });
 }

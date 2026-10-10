@@ -11,6 +11,13 @@ export const Livre = () => (
   </svg>
 );
 
+/** Fourchette et couteau : retour au menu des plats. */
+export const Couverts = () => (
+  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    <path d="M7 2v20" /><path d="M4 2v6a3 3 0 0 0 6 0V2" /><path d="M17 22V2c-2.2 1.2-3.5 3.6-3.5 7v4H17" />
+  </svg>
+);
+
 export const Micro = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
     <rect x="9" y="3" width="6" height="11" rx="3" />

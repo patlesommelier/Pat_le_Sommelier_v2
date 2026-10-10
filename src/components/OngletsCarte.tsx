@@ -7,10 +7,16 @@ import { COULEURS, type VinOnglet } from '@/lib/types';
 import { Etiquette } from './Etiquette';
 
 /** Carte des vins par onglets : on ne voit que les vins de la couleur choisie, groupés par région. */
-export function OngletsCarte({ restaurant, vins }: { restaurant: string; vins: VinOnglet[] }) {
+export function OngletsCarte({ restaurant, vins, couleur }: { restaurant: string; vins: VinOnglet[]; couleur?: string }) {
   // Quatre onglets principaux ; « Orange » et « Doux » n'apparaissent que si la carte en contient.
   const onglets = COULEURS.filter((c) => ['bulles', 'blanc', 'rose', 'rouge'].includes(c.id) || vins.some((v) => v.couleur === c.id));
-  const [actif, setActif] = useState(onglets.find((o) => vins.some((v) => v.couleur === o.id))?.id ?? 'blanc');
+  // Couleur ouverte : celle de l'adresse (?c=, retour depuis la fiche d'un vin), sinon la première qui a des vins.
+  const [actif, setActif] = useState(onglets.find((o) => o.id === couleur)?.id ?? onglets.find((o) => vins.some((v) => v.couleur === o.id))?.id ?? 'blanc');
+  const choisir = (id: typeof actif) => {
+    setActif(id);
+    // Gardée dans l'adresse : le bouton « retour » du téléphone ramène sur la même couleur.
+    window.history.replaceState(null, '', `?c=${id}`);
+  };
   const liste = vins.filter((v) => v.couleur === actif);
   const sections = [...new Set(liste.map((v) => v.section ?? ''))];
 
@@ -20,7 +26,7 @@ export function OngletsCarte({ restaurant, vins }: { restaurant: string; vins: V
         {onglets.map((o) => {
           const n = vins.filter((v) => v.couleur === o.id).length;
           return (
-            <button key={o.id} role="tab" type="button" className="onglet" aria-selected={actif === o.id} onClick={() => setActif(o.id)} style={n ? undefined : { color: '#B8B8B8' }}>
+            <button key={o.id} role="tab" type="button" className="onglet" aria-selected={actif === o.id} onClick={() => choisir(o.id)} style={n ? undefined : { color: '#B8B8B8' }}>
               {o.libelle}
               <small>{n} vin{n > 1 ? 's' : ''}</small>
             </button>

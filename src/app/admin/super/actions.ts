@@ -162,7 +162,8 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   const u = await exigerAdmin();
   const page = `/admin/super/producteurs/${encodeURIComponent(producteurId)}`;
   const decision = txt(f, 'decision');
-  if (decision === 'rejeter') {
+  const [{ statut } = { statut: '' }] = await requete<{ statut: string }>('select statut::text from producteur where id = $1', [producteurId]);
+  if (decision === 'rejeter' && statut !== 'valide') {
     await rejeterProducteur(requete, { producteurId, motif: txt(f, 'motif') ?? '', par: u.email });
     revalidatePath('/admin', 'layout');
     redirect(avec('/admin/super/producteurs', { ok: 'Producteur rejeté : ses vins restent « Nouveau producteur ».' }));
@@ -170,7 +171,7 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   const fiche = { nom: txt(f, 'nom') ?? undefined, pays: txt(f, 'pays'), region: txt(f, 'region'), notes_objectives: txt(f, 'notes_objectives') };
   const { terroirs, vins } = lireRankings(f);
   const rk = entier(f, 'ranking');
-  if (decision === 'valider') {
+  if (decision === 'valider' && statut !== 'valide') {
     const r = await validerProducteur(requete, { producteurId, rankingProducteur: rk ?? NaN, terroirs, vins, fiche, par: u.email });
     if (r.erreurs.length) redirect(avec(page, { erreur: r.erreurs.join(' ') }));
     revalidatePath('/admin', 'layout');
@@ -179,12 +180,15 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   // Enregistrer sans valider : fiche et rankings (le producteur reste à valider).
   if (rk !== null && !(rk >= 0 && rk <= 5)) redirect(avec(page, { erreur: 'Ranking du producteur : entier de 0 à 5.' }));
   await requete(
-    `update producteur set nom = coalesce($2, nom), pays = $3, region = $4, notes_objectives = $5, ranking_suggere = coalesce($6, ranking_suggere), maj_le = now() where id = $1`,
+    `update producteur set nom = coalesce($2, nom), pays = $3, region = $4, notes_objectives = $5,
+            -- Producteur validé : le ranking saisi est son ranking ; sinon une suggestion en attendant la validation.
+            ranking_pat = case when statut = 'valide' then coalesce($6, ranking_pat) else ranking_pat end,
+            ranking_suggere = case when statut = 'valide' then ranking_suggere else coalesce($6, ranking_suggere) end, maj_le = now() where id = $1`,
     [producteurId, fiche.nom ?? null, fiche.pays, fiche.region, fiche.notes_objectives, rk]);
   for (const t of terroirs) if (t.rankingTerroir >= 0 && t.rankingTerroir <= 5) await requete('update terroir set ranking_pat = $2, maj_le = now() where id = $1', [t.terroirId, t.rankingTerroir]);
   for (const v of vins) if (v.ranking === null || (v.ranking >= 0 && v.ranking <= 5)) await requete('update vin_carte set ranking_producteur = $2 where id = $1 and producteur_id = $3', [v.vinId, v.ranking, producteurId]);
   revalidatePath(page);
-  redirect(avec(page, { ok: 'Fiche enregistrée (producteur toujours à valider).' }));
+  redirect(avec(page, { ok: statut === 'valide' ? 'Fiche enregistrée.' : 'Fiche enregistrée (producteur toujours à valider).' }));
 }
 
 /** Ranking d'un producteur ou d'un terroir déjà validé (écran « Base et rankings »). */

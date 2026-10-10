@@ -42,7 +42,19 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
             <dt style={{ fontWeight: 700 }}>Production</dt><dd style={{ margin: 0 }}>{p.statut_production === 'inconnu' ? 'À vérifier' : p.statut_production}</dd>
             {p.source && <><dt style={{ fontWeight: 700 }}>Sources</dt><dd style={{ margin: 0 }}>{p.source}</dd></>}
           </dl>
-          <div className="champ"><label htmlFor="notes_objectives">Notes</label><textarea id="notes_objectives" name="notes_objectives" rows={4} defaultValue={p.notes_objectives ?? ''} /></div>
+          {p.notes_objectives && (
+            // Texte complet de la fiche (super-admin seulement) ; l'app n'en montre que le début, sans la cuisine interne.
+            <details className="interne" open style={{ borderRadius: 12, padding: '12px 16px' }}>
+              <summary style={{ fontWeight: 700, cursor: 'pointer' }}>Texte complet de la fiche</summary>
+              <div className="pile" style={{ gap: 10, marginTop: 10, fontSize: 15, lineHeight: 1.6 }}>
+                {p.notes_objectives.split(/\n{2,}/).map((para, i) => (
+                  <p key={i} style={{ margin: 0 }}>{para.split('**').map((morceau, j) => (j % 2 ? <strong key={j}>{morceau}</strong> : morceau))}</p>
+                ))}
+              </div>
+            </details>
+          )}
+          <div className="champ"><label htmlFor="notes_objectives">Texte de la fiche (modifiable)</label><textarea id="notes_objectives" name="notes_objectives" rows={10} defaultValue={p.notes_objectives ?? ''} />
+            <span className="aide">Pour un producteur placé à 4 ou plus, l’app montre aux clients le début de ce texte (« Le domaine »), jamais le « Profil Pat », les prix ni les notes.</span></div>
           {p.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {p.a_verifier}</p>}
         </div>
 
@@ -99,14 +111,21 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
           </div>
         )}
 
-        <div className="carte-bo pile">
-          <div className="champ"><label htmlFor="motif">Motif du rejet (si vous rejetez)</label><input id="motif" name="motif" /></div>
+        {p.statut === 'valide' ? (
+          // Producteur déjà validé (ouvert depuis la base ou une carte) : on corrige la fiche, sans le rejeter ni le revalider.
           <div className="ligne-actions">
-            <button className="btn sec" name="decision" value="rejeter" formNoValidate>Rejeter</button>
-            <button className="btn sec" name="decision" value="enregistrer">Enregistrer</button>
-            <button className="btn" name="decision" value="valider">Valider la fiche</button>
+            <button className="btn" name="decision" value="enregistrer">Enregistrer la fiche</button>
           </div>
-        </div>
+        ) : (
+          <div className="carte-bo pile">
+            <div className="champ"><label htmlFor="motif">Motif du rejet (si vous rejetez)</label><input id="motif" name="motif" /></div>
+            <div className="ligne-actions">
+              <button className="btn sec" name="decision" value="rejeter" formNoValidate>Rejeter</button>
+              <button className="btn sec" name="decision" value="enregistrer">Enregistrer</button>
+              <button className="btn" name="decision" value="valider">Valider la fiche</button>
+            </div>
+          </div>
+        )}
       </form>
     </>
   );

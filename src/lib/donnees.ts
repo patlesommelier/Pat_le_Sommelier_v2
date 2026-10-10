@@ -2,6 +2,7 @@ import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
 import { avecAppreciation } from './appreciation';
+import { extraitFiche } from './fiche-producteur';
 import { parametresEnService } from './regles/versions';
 import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
 import type { Accord, Plat, Restaurant, Vin } from './types';
@@ -154,4 +155,15 @@ export async function getAccord(platId: string, vinId: string) {
     [platId, vinId, accordsVisibles()],
   );
   return a ?? null;
+}
+
+/**
+ * Texte « Le domaine » d'un vin : extrait de la fiche de son producteur dans la base de Pat, seulement pour un producteur
+ * validé qu'il place à 4 ou plus. Le ranking sert de filtre côté serveur et n'est jamais envoyé au navigateur.
+ */
+export async function getTexteDomaine(restaurantId: string, vinId: string) {
+  const [r] = await requete<{ fiche: string | null }>(
+    `select p.notes_objectives as fiche from vin_carte v join producteur p on p.id = v.producteur_id
+      where v.restaurant_id = $1 and v.id = $2 and p.statut = 'valide' and coalesce(p.ranking_pat, 0) >= 4`, [restaurantId, vinId]);
+  return extraitFiche(r?.fiche);
 }

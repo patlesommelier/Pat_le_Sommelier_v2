@@ -13,3 +13,17 @@ export function lignePrix(tarifs: Array<{ code: string; prix: number }>) {
   const court: Record<string, string> = { bouteille: '', demi: '½ ', quart: '¼ ', magnum: 'magnum ', verre: 'verre ' };
   return tarifs.map((t) => `${court[t.code] ?? ''}${euros(t.prix)}`).join(' · ');
 }
+
+/** Mention d'un contenant (bouteille, demi, quart, magnum, verre, centilitres) : les contenances sont affichées à part. */
+export const CONTENANT = /\b(demi-bouteilles?|demi bouteilles?|bouteilles?|magnums?|quarts? de bouteille|au verre|\d+(,\d+)?\s?cl)\b|½|¼/i;
+
+/**
+ * Présentation d'un vin sans les phrases qui parlent du contenant (« La demi-bouteille garde tout l'élan… ») :
+ * la contenance et son prix sont indiqués en dessous. Si presque rien ne reste, le texte est gardé tel quel.
+ */
+export function sansContenance<T extends string | null | undefined>(texte: T): T {
+  if (!texte || !CONTENANT.test(texte)) return texte;
+  const phrases = texte.match(/[^.!?…]+[.!?…]+[»”"]?\s*|[^.!?…]+$/g) ?? [texte];
+  const reste = phrases.filter((p) => !CONTENANT.test(p)).join('').trim();
+  return (reste.length >= 60 ? reste : texte) as T;
+}

@@ -2,10 +2,10 @@ import { notFound } from 'next/navigation';
 import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
-import { getAccord, getPlat, getRestaurant, getVin } from '@/lib/donnees';
+import { getAccord, getPlat, getRestaurant, getTexteDomaine, getVin } from '@/lib/donnees';
 import { tarifsDuVin } from '@/lib/tarifs';
 import { avecAppreciation } from '@/lib/appreciation';
-import { euros } from '@/lib/format';
+import { euros, sansContenance } from '@/lib/format';
 import { COULEURS } from '@/lib/types';
 
 const JAUGES = [
@@ -23,14 +23,14 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
   const { plat: platId } = await searchParams;
   const [restaurant, vin, plat] = await Promise.all([getRestaurant(resto), getVin(resto, vinId), platId ? getPlat(platId) : null]);
   if (!restaurant || !vin) notFound();
-  const [accord, tarifs] = await Promise.all([plat ? getAccord(plat.id, vin.id) : null, tarifsDuVin(resto, vin)]);
+  const [accord, tarifs, domaine] = await Promise.all([plat ? getAccord(plat.id, vin.id) : null, tarifsDuVin(resto, vin), getTexteDomaine(resto, vin.id)]);
   const p = vin.profil_degustation;
   const producteur = (vin.producteur_nom ?? vin.producteur_texte ?? '').replace(/\s*\(.*\)/, '');
   const couleur = COULEURS.find((c) => c.id === vin.couleur)?.libelle.replace(/s$/, '');
 
   return (
     <>
-      <Entete restaurant={restaurant} retour={plat ? `/${resto}/plat/${plat.id}` : `/${resto}/carte`} />
+      <Entete restaurant={restaurant} retour={plat ? `/${resto}/plat/${plat.id}` : `/${resto}/carte?c=${vin.couleur}`} />
       <main className="defile">
         <div className="contenu">
           <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={350} hauteur={210} />
@@ -49,7 +49,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
             {vin.coup_de_coeur && <span className="pastille">Coup de cœur</span>}
           </div>
 
-          {(vin.presentation ?? vin.descriptif) && <p className="texte">{vin.presentation ?? vin.descriptif}</p>}
+          {(vin.presentation ?? vin.descriptif) && <p className="texte">{sansContenance(vin.presentation ?? vin.descriptif)}</p>}
 
           {plat && accord && (
             <div className="encadre">
@@ -106,6 +106,17 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
                   {p.aromes.map((a) => <span key={a} className="pastille">{a.replace(/\s*\(.*\)/, '').replace(/^./, (c) => c.toUpperCase())}</span>)}
                 </div>
               )}
+            </div>
+          )}
+
+          {domaine && (
+            // Producteur que Pat connaît bien : le début de sa fiche, plus long que la présentation.
+            <div className="domaine">
+              <div className="titre-section">
+                <span>Le domaine</span>
+                <div className="filet court" />
+              </div>
+              <p className="texte">{domaine}</p>
             </div>
           )}
         </div>

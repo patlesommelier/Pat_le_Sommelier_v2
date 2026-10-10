@@ -13,7 +13,9 @@ export const LONGUEUR_MAX = 380; // caractères : 4 lignes en A4
 const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/['’]/g, ' ');
 
 /** Mots interdits des commentaires d'accord (avec leurs variantes), plus ce qui trahirait la cuisine interne. */
-export const MOTS_INTERDITS: [string, RegExp][] = [...INTERDITS_ACCORDS, ['ranking', /\branking\w*/], ['score', /\bscores?\b/], ['note', /\bnote \d|\d\s*\/\s*5\b/]];
+export const MOTS_INTERDITS: [string, RegExp][] = [...INTERDITS_ACCORDS, ['ranking', /\branking\w*/], ['score', /\bscores?\b/], ['note', /\bnote \d|\d\s*\/\s*5\b/],
+  // Contenant : les contenances et leurs prix sont affichés à part.
+  ['bouteille, demi-bouteille, magnum, au verre, centilitres', /\b(demi.bouteilles?|bouteilles?|magnums?|au verre|\d+(,\d+)? ?cl)\b/]];
 
 export interface VinPresentation {
   id: string; nom: string; producteur: string | null; millesime: string | null; couleur: string; region: string | null;
@@ -40,6 +42,7 @@ Règles :
 - reformule le descriptif dans la voix de Pat, ne le recopie jamais mot pour mot ;
 - toujours positif : dis ce que le vin a de beau, jamais ce qui lui manque ;
 - aucune note, aucun classement de Pat, aucun score, aucune comparaison de prix ;
+- ne parle jamais du contenant (bouteille, demi-bouteille, magnum, verre) : les contenances sont indiquées à part ;
 - pas de clichés de dégustation (« bouche ample », « belle longueur », « nez complexe ») ;
 - deux vins de la même couleur ne commencent pas par les mêmes mots.
 Mots interdits, sous toutes leurs formes : ${MOTS_INTERDITS.map(([m]) => m).join(', ')}.

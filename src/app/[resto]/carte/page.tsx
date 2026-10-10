@@ -7,8 +7,9 @@ import { getCarte, getRestaurant } from '@/lib/donnees';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
 import { cleMemeVin, contenanceDuFormat } from '@/lib/contenances';
 
-export default async function Carte({ params }: { params: Promise<{ resto: string }> }) {
+export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string }> }) {
   const { resto } = await params;
+  const { c } = await searchParams; // couleur ouverte (retour depuis la fiche d'un vin)
   if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
@@ -22,13 +23,13 @@ export default async function Carte({ params }: { params: Promise<{ resto: strin
 
   return (
     <>
-      <Entete restaurant={restaurant} retour={`/${resto}`} />
+      <Entete restaurant={restaurant} retour={`/${resto}`} surLaCarte />
       <main className="defile">
         <div className="titre-page" style={{ padding: '24px 20px 12px' }}>
           <h1>Carte des vins</h1>
           <div className="filet" />
         </div>
-        <OngletsCarte restaurant={resto} vins={lignes} />
+        <OngletsCarte restaurant={resto} vins={lignes} couleur={c} />
       </main>
     </>
   );

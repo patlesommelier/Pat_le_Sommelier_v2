@@ -1,4 +1,5 @@
 import { exigerAcces } from '@/lib/admin/auth';
+import { sansContenance } from '@/lib/format';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
@@ -38,7 +39,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     millesime: v.millesime && v.millesime !== 'NM' ? v.millesime.replace('/', '-') : null,
     contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
     couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre,
-    presentation: v.presentation_carte ?? resume(v.resume_court), presentationPerso: v.presentation_carte_perso, visible: v.disponible,
+    presentation: sansContenance(v.presentation_carte ?? resume(v.resume_court)), presentationPerso: sansContenance(v.presentation_carte_perso), visible: v.disponible,
   }));
 
   const options: Partial<OptionsCarte> = {
