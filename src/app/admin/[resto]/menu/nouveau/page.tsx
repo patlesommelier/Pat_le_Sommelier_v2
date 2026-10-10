@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { ajouterPlat } from '../../../actions';
 import { exigerAcces } from '@/lib/admin/auth';
+import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 
 export default async function NouveauPlat({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string }> }) {
   const { resto } = await params;
@@ -23,6 +24,10 @@ export default async function NouveauPlat({ params, searchParams }: { params: Pr
             </select></div>
           <div className="champ"><label htmlFor="prix">Prix (€)</label><input id="prix" name="prix" inputMode="decimal" /></div>
         </div>
+        <PhotoEtiquette url={null} champ="photo" alt="Photo du plat" hauteur={220}>
+          <span className="libelle">Photo du plat (facultative)</span>
+          <span className="petit discret">Montrée à vos clients avec les propositions de Pat.</span>
+        </PhotoEtiquette>
         <div className="champ"><label htmlFor="prix_variantes">Prix détaillé (facultatif)</label><input id="prix_variantes" name="prix_variantes" placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
         <div className="champ">
           <label htmlFor="description_cuisine">Description pour Pat</label>

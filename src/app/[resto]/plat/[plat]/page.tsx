@@ -37,6 +37,10 @@ export default async function Propositions({
             <div className="filet" />
             <p>Pour : {plat.nom_court ?? plat.nom}</p>
           </div>
+          {plat.photo_url && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={plat.photo_url} alt={plat.nom} className="photo-plat" />
+          )}
 
           {propositions.length ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>

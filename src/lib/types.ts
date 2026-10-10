@@ -25,6 +25,8 @@ export interface Plat {
   categorie: 'entree' | 'plat' | 'dessert' | 'fromage';
   prix: number | null;
   prix_variantes: string | null;
+  /** Photo du plat déposée par le restaurant (facultative). */
+  photo_url?: string | null;
 }
 
 export interface ProfilDegustation {

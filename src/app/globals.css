@@ -215,3 +215,5 @@ a.bouton-plein { text-decoration: none; }
 @keyframes astuce-fondu { from { opacity: 0; transform: translateY(4px); } } /* chaque nouveau message apparaît en fondu */
 @media (prefers-reduced-motion: reduce) { .astuces-pat .astuce { animation: none; } }
 .pile-prix .ligne-prix + .ligne-prix { border-top: 0; }
+/* Photo du plat (déposée par le restaurant) en tête des propositions. */
+.photo-plat { display: block; width: 100%; max-height: 240px; object-fit: cover; border-radius: 12px; margin: 4px 0 18px; }

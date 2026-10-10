@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { enregistrerPlat, supprimerPlat } from '../../actions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
+import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfil } from '@/lib/admin/donnees';
 import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
@@ -69,6 +70,12 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               </div>
               <div className="champ"><label htmlFor="prix_variantes">Prix détaillé (facultatif)</label><input id="prix_variantes" name="prix_variantes" defaultValue={choisi.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
               <label className="case"><input type="checkbox" name="actif" defaultChecked={choisi.actif} /><span>Proposé aux clients</span></label>
+              {/* Clé = adresse de la photo : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
+              <PhotoEtiquette key={choisi.photo_url ?? 'sans'} url={choisi.photo_url} champ="photo" alt="Photo du plat" hauteur={220}>
+                <span className="libelle">Photo du plat (facultative)</span>
+                <span className="petit discret">Montrée à vos clients avec les propositions de Pat.</span>
+                {choisi.photo_url && <label className="case" style={{ margin: 0 }}><input type="checkbox" name="retirer_photo" /><span>Retirer la photo</span></label>}
+              </PhotoEtiquette>
               <div className="champ">
                 <label htmlFor="description_cuisine">Description pour Pat</label>
                 <textarea id="description_cuisine" name="description_cuisine" rows={7} defaultValue={choisi.description_cuisine ?? ''}

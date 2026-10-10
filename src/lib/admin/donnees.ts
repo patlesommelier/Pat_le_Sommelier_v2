@@ -63,10 +63,11 @@ export interface PlatBO {
   id: string; nom: string; nom_court: string | null; categorie: string; prix: number | null; prix_variantes: string | null;
   actif: boolean; ordre: number; modifie_bo: string | null;
   description_cuisine: string | null; description_apres_accords: boolean; sauce_servie_a_part: boolean | null;
+  photo_url: string | null;
 }
 export async function getPlatsBO(restaurantId: string) {
   return requete<PlatBO>(
-    `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.prix, pl.prix_variantes, pl.actif, pl.ordre, pl.modifie_bo, pl.description_cuisine, pl.sauce_servie_a_part,
+    `select pl.id, pl.nom, pl.nom_court, pl.categorie::text, pl.prix, pl.prix_variantes, pl.actif, pl.ordre, pl.modifie_bo, pl.description_cuisine, pl.sauce_servie_a_part, pl.photo_url,
             coalesce(pl.description_modifiee_le > (select max(a.calcule_le) from accord a where a.plat_id = pl.id and a.origine = 'pat'), false) as description_apres_accords
        from plat pl where pl.restaurant_id = $1 order by pl.ordre`, [restaurantId]);
 }

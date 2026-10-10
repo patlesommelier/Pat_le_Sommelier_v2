@@ -29,7 +29,7 @@ export async function getPlats(restaurantId: string) {
 
 export async function getPlat(id: string) {
   const [p] = await requete<Plat>(
-    `select id, nom, nom_court, categorie, prix::float as prix, prix_variantes from plat
+    `select id, nom, nom_court, categorie, prix::float as prix, prix_variantes, photo_url from plat
       where id = $1 and actif and exists (select 1 from accord a where a.plat_id = plat.id)`,
     [id],
   );

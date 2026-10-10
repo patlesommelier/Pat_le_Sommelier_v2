@@ -78,6 +78,16 @@ export async function changerMotDePasse(f: FormData) {
 export async function enregistrerPlat(resto: string, platId: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const cat = txt(f, 'categorie');
+  // Photo du plat : nouvelle photo déposée, ou retirée.
+  const image = fichier(f, 'photo');
+  if (image) {
+    try {
+      const url = await deposerImage(image, `${resto}/plats`);
+      await requete('update plat set photo_url = $3 where id = $1 and restaurant_id = $2', [platId, resto, url]);
+    } catch (e) { return { erreur: (e as Error).message }; }
+  } else if (f.get('retirer_photo') === 'on') {
+    await requete('update plat set photo_url = null where id = $1 and restaurant_id = $2', [platId, resto]);
+  }
   await requete(
     `update plat set nom = coalesce($3, nom), nom_court = $4, categorie = coalesce($5::categorie_plat, categorie), prix = $6,
             prix_variantes = $7, actif = $8, modifie_bo = now(),
@@ -102,17 +112,22 @@ export async function ajouterPlat(resto: string, f: FormData): Promise<Retour> {
   const u = await exigerAcces(resto);
   const nom = txt(f, 'nom');
   if (!nom) return { erreur: 'Indiquez le nom du plat.' };
+  let photo: string | null = null;
+  const image = fichier(f, 'photo');
+  if (image) {
+    try { photo = await deposerImage(image, `${resto}/plats`); } catch (e) { return { erreur: (e as Error).message }; }
+  }
   const cat = txt(f, 'categorie');
   const base = `${resto}-${slug(nom) || 'plat'}`;
   let id = base;
   for (let n = 2; (await requete('select 1 from plat where id = $1', [id])).length; n++) id = `${base}-${n}`;
   await requete(
-    `insert into plat (id, restaurant_id, nom, nom_court, categorie, prix, prix_variantes, description_cuisine, sauce_servie_a_part, ordre, actif, modifie_bo)
-     values ($1, $2, $3, $4, $5::categorie_plat, $6, $7, $8, $9::boolean,
+    `insert into plat (id, restaurant_id, nom, nom_court, categorie, prix, prix_variantes, description_cuisine, sauce_servie_a_part, photo_url, ordre, actif, modifie_bo)
+     values ($1, $2, $3, $4, $5::categorie_plat, $6, $7, $8, $9::boolean, $10,
              (select coalesce(max(ordre), 0) + 1 from plat where restaurant_id = $2), true, now())`,
     [id, resto, nom, txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : 'plat',
       nombre(f, 'prix'), txt(f, 'prix_variantes'), txt(f, 'description_cuisine'),
-      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null]);
+      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null, photo]);
   await lancerPreparation(resto, [id], u.email).catch((e) => console.error('[ajout] plat', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
