@@ -298,6 +298,20 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${fait}${lien}.` })}`);
 }
 
+/** Plusieurs vins à valider cochés dans la liste « Vins de la base » : validés ensemble, retour sur la même liste. */
+export async function validerCuvees(f: FormData) {
+  await exigerAdmin();
+  const ids = f.getAll('ids').map(String).filter(Boolean);
+  const valides = ids.length
+    ? await requete<{ id: string }>(`update cuvee set statut = 'valide' where id = any($1) and statut = 'propose' returning id`, [ids])
+    : [];
+  revalidatePath('/', 'layout');
+  const liste = txt(f, 'retour');
+  const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
+  const ok = valides.length ? `${valides.length} vin${valides.length > 1 ? 's' : ''} validé${valides.length > 1 ? 's' : ''}.` : 'Aucun vin à valider dans la sélection.';
+  redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: valides[0]?.id ?? ids[0] ?? '', ok })}`);
+}
+
 /**
  * Vin d'une carte pas encore dans la base : ajouté à la base de Pat (à valider), à partir de la carte
  * (nom du vin, couleur, appellation, cépages, étiquette), et relié au vin de la carte. On ouvre sa fiche.

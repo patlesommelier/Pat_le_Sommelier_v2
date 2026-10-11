@@ -1,13 +1,17 @@
 import Link from 'next/link';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
 import { rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
-import { ajouterCuveeDepuisCarte } from '../actions';
+import { ajouterCuveeDepuisCarte, validerCuvees } from '../actions';
+import { BarreValidation, CocherTout } from '@/components/admin/ValidationGroupee';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
+/** Case à cocher d'un vin à valider (formulaire « valider-lot » de BarreValidation). */
+const Case = ({ id, statut }: { id: string | null; statut: string | null }) =>
+  <td style={{ width: 28 }}>{id && statut === 'propose' && <input type="checkbox" name="ids" value={id} form="valider-lot" aria-label="Sélectionner ce vin à valider" />}</td>;
 type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
@@ -43,14 +47,16 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
         <button className="btn petit">Filtrer</button>
       </form>
 
-      {sp.vin && sp.ok && <RetourVin vinId={sp.vin} message={sp.ok} />}
+      {sp.ok && <RetourVin vinId={sp.vin ?? ''} message={sp.ok} />}
+      <BarreValidation action={validerCuvees} retour={ici} />
       {carte ? (
         <div className="tableau">
           <table className="table-vins" style={{ minWidth: 820 }}>
-            <thead><tr><th>Vin de la carte</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th>Étiquette</th><th>Base de Pat</th><th /></tr></thead>
+            <thead><tr><th><CocherTout /></th><th>Vin de la carte</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th>Étiquette</th><th>Base de Pat</th><th /></tr></thead>
             <tbody>
               {carte.lignes.map((v) => (
                 <tr key={v.id} id={`vin-${v.cuvee_id ?? v.id}`} className={(v.cuvee_id ?? v.id) === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
+                  <Case id={v.cuvee_id} statut={v.cuvee_statut} />
                   <td style={{ minWidth: 180 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.cuvee_nom ?? v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}{v.cuvee_nom && v.cuvee_nom !== v.libelle ? ` · sur la carte : ${v.libelle}` : ''}</div></div></div></td>
                   <td>{v.producteur_id ? <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`}>{v.producteur}</Link> : (v.producteur ?? '—')}</td>
                   <td>{v.appellation ?? '—'}</td>
@@ -65,19 +71,20 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                   </td>
                 </tr>
               ))}
-              {!carte.lignes.length && <tr><td colSpan={7} className="discret">Aucun vin ne correspond.</td></tr>}
+              {!carte.lignes.length && <tr><td colSpan={8} className="discret">Aucun vin ne correspond.</td></tr>}
             </tbody>
           </table>
         </div>
       ) : (
       <div className="tableau">
         <table className="table-vins" style={{ minWidth: 820 }}>
-          <thead><tr><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Étiquette</th><th>Statut</th><th /></tr></thead>
+          <thead><tr><th><CocherTout /></th><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Étiquette</th><th>Statut</th><th /></tr></thead>
           <tbody>
             {lignes.map((c) => {
               const fiche = `/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: ici })}`;
               return (
                 <tr key={c.id} id={`vin-${c.id}`} className={c.id === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
+                  <Case id={c.id} statut={c.statut} />
                   <td style={{ minWidth: 200 }}><div className="vin-cell"><Vignette url={c.etiquette_url} /><div><Link href={fiche} className="nom">{c.nom}</Link><div className="petit">{c.couleur ? COULEURS[c.couleur] : 'Couleur à préciser'}</div></div></div></td>
                   <td><Link href={`/admin/super/producteurs/${encodeURIComponent(c.producteur_id)}`}>{c.producteur}</Link></td>
                   <td>{c.appellation ?? '—'}</td>
@@ -89,7 +96,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                 </tr>
               );
             })}
-            {!lignes.length && <tr><td colSpan={8} className="discret">Aucun vin ne correspond.</td></tr>}
+            {!lignes.length && <tr><td colSpan={9} className="discret">Aucun vin ne correspond.</td></tr>}
           </tbody>
         </table>
       </div>
