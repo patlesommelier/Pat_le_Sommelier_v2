@@ -265,6 +265,13 @@ export async function enregistrerCuvee(id: string, f: FormData) {
       where id = $1`,
     [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, terroir,
       txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette, appellation]);
+  // Appellation de la base : reportée sur les vins des cartes reliés que le restaurant n'a jamais modifiés dans son espace
+  // (l'appellation y vient alors de la lecture de la carte) ou qui n'en ont pas.
+  if (appellation) {
+    await requete(`update vin_carte set appellation_texte = $2, appellation_id = coalesce($3, appellation_id)
+                    where cuvee_id = $1 and (appellation_texte is null or modifie_bo is null)`,
+      [id, appellation, terroir]);
+  }
   // Cépages de la base : reportés sur les vins des cartes reliés qui n'en ont pas (jamais sur ceux saisis par un restaurant).
   if (txt(f, 'cepages')) {
     await requete(`update vin_carte set cepages = $2 where cuvee_id = $1 and coalesce(cepages, '') = ''`, [id, txt(f, 'cepages')]);

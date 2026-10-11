@@ -216,10 +216,12 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<VinCarteBase>(
     `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur,
-            coalesce(v.appellation_texte, t.nom) as appellation, v.cepages, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut,
+            -- vin relié à la base : son appellation et ses cépages de la base d'abord (ce que la fiche enregistre)
+            coalesce(c.appellation_texte, tc.nom, v.appellation_texte, t.nom) as appellation, coalesce(nullif(c.cepages, ''), v.cepages) as cepages,
+            v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut,
             count(*) over ()::int as total
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
-            left join cuvee c on c.id = v.cuvee_id
+            left join cuvee c on c.id = v.cuvee_id left join terroir tc on tc.id = c.appellation_id
       where v.restaurant_id = $1
         and ($2 = '' or ${sansAccent('v.libelle')} like '%' || ${sansAccent('$2')} || '%'
              or ${sansAccent("coalesce(v.producteur_texte, p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
