@@ -74,7 +74,9 @@ const CONSIGNE_CARTE = `Ces documents sont les pages de la carte des vins d'un r
 Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, sans millésime ni prix ; quand la carte groupe
 plusieurs vins sous un titre — une maison, un domaine —, garde ce titre et ajoute ce qui distingue chaque vin : rosé, blanc de blancs,
 brut nature, nom de cuvée… Deux vins différents n'ont jamais le même libelleCarte), « producteur »
-(domaine, château ou maison ; null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou null),
+(domaine, château ou maison ; quand il figure dans le nom du vin — « Sancerre Picard », « Ostal Cazes »,
+« Saint-Amour – Dom. de l'Oiseau de Passage » —, recopie-le aussi ici, abréviations développées (Domaine, Château) ;
+null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou null),
 « millesime » (4 chiffres, « 2019-2020 » si deux ; null si non millésimé), « contenance » (« 37,5 cl », « 150 cl »… ; null pour 75 cl),
 « prix » (prix de la bouteille en euros, nombre ; null si absent), « prixVerre » (prix au verre, nombre, ou null),
 « auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux, sans_alcool
@@ -89,9 +91,21 @@ export async function analyserMenu(fichiers: FichierEnvoye[]): Promise<unknown[]
   return lire(fichiers, CONSIGNE_MENU, 'menu');
 }
 
-/** Lit la carte des vins (photos ou PDF) et renvoie les vins. Données brutes : validées par `Vin`. */
+/**
+ * Lit la carte des vins (photos ou PDF) et renvoie les vins. Données brutes : validées par `Vin`.
+ * Plusieurs fichiers : lus un par un (quatre à la fois), Claude est plus précis sur une seule page ;
+ * une page qui n'est pas une carte des vins est ignorée, sauf si aucune ne l'est.
+ */
 export async function analyserCarte(fichiers: FichierEnvoye[]): Promise<unknown[]> {
-  return lire(fichiers, CONSIGNE_CARTE, 'carte');
+  if (fichiers.length < 2) return lire(fichiers, CONSIGNE_CARTE, 'carte');
+  const resultats: Array<unknown[] | MauvaisDocument> = [];
+  for (let i = 0; i < fichiers.length; i += 4) {
+    resultats.push(...await Promise.all(fichiers.slice(i, i + 4).map((f) =>
+      lire([f], CONSIGNE_CARTE, 'carte').catch((e) => { if (e instanceof MauvaisDocument) return e; throw e; }))));
+  }
+  const pages = resultats.filter((r): r is unknown[] => Array.isArray(r));
+  if (!pages.length) throw resultats.find((r) => r instanceof MauvaisDocument) ?? new MauvaisDocument(MAUVAIS.carte);
+  return pages.flat();
 }
 
 // ─── Rapprochement avec la base de Pat ───
@@ -118,9 +132,51 @@ export async function producteurConnu(requete: Requete, nom: string): Promise<{ 
  * AUCUN ranking ne sort d'ici, le résultat est affiché au restaurateur. Ne crée rien en base.
  */
 export async function rapprocherVins(requete: Requete, vins: Vin[]): Promise<VinRapproche[]> {
+  vins = await producteursDansLeNom(requete, vins);
   return Promise.all(vins.map(async (v) => {
     const p = v.producteur ? await producteurConnu(requete, v.producteur) : null;
     return { ...v, vinId: p?.id ?? null, producteurStatut: p?.statut === 'valide' ? 'reference' as const : 'nouveau' as const };
   }));
 }
 
+
+// Mots trop communs pour désigner un producteur à eux seuls (cépages et mentions de la carte).
+const NON_PRODUCTEURS = new Set(['chardonnay', 'sauvignon', 'pinot', 'noir', 'blanc', 'rouge', 'rose', 'merlot', 'syrah', 'grenache', 'gamay',
+  'riesling', 'chenin', 'cabernet', 'malbec', 'viognier', 'cuvee', 'reserve', 'brut', 'grand', 'premier', 'cru', 'vieilles', 'vignes', 'prestige']);
+
+/**
+ * Producteur resté vide mais présent dans le nom du vin (« Sancerre Picard », « Ostal Cazes ») : retrouvé parmi
+ * les producteurs de la base de Pat. Tous les mots significatifs du producteur doivent figurer dans le nom ; ce ne doit
+ * être ni une appellation (« Margaux » n'est pas Château Margaux) ni un cépage ; et le producteur doit produire dans
+ * l'appellation du vin (« Chablis Saint-Pierre » n'est pas le Domaine de Saint-Pierre du Jura). En cas de doute, rien.
+ */
+export async function producteursDansLeNom(requete: Requete, vins: Vin[]): Promise<Vin[]> {
+  if (!vins.some((v) => !v.producteur)) return vins;
+  const [producteurs, terroirs] = await Promise.all([
+    requete<{ nom: string; appellations: string[] | null; region: string | null }>(
+      `select nom, appellations_texte as appellations, region from producteur where statut <> 'retire'`),
+    requete<{ nom: string }>(`select nom from terroir where statut <> 'retire'`),
+  ]);
+  const sansMention = (s: string) => s.replace(/\s+(AOC|AOP|DOC|DOCG|DO|IGP|IGT)$/i, '');
+  const appellations = new Set(terroirs.map((t) => mots(sansMention(t.nom)).join(' ')).filter(Boolean));
+  const candidats = producteurs.map((p) => ({ nom: p.nom, m: mots(p.nom),
+    zones: [...(p.appellations ?? []), p.region ?? ''].map((a) => mots(sansMention(a)).join(' ')).filter(Boolean) }))
+    .filter((p) => p.m.length && p.m.join('').length >= 4 && !appellations.has(p.m.join(' ')) && !p.m.every((x) => NON_PRODUCTEURS.has(x)));
+  return vins.map((v) => {
+    if (v.producteur) return v;
+    const libelle = mots(v.libelleCarte.replace(/\bDom\./g, 'Domaine').replace(/\bCh\./g, 'Château'));
+    // Appellation du vin : celle lue sur la carte, sinon la plus longue appellation de la base au début du nom.
+    const lue = v.appellation ? mots(sansMention(v.appellation)).join(' ') : '';
+    const debut = [...appellations].filter((a) => ` ${libelle.join(' ')} `.startsWith(` ${a} `)).sort((a, b) => b.length - a.length)[0] ?? '';
+    const appellation = lue || debut;
+    if (!appellation) return v; // sans appellation, impossible de vérifier : on ne devine pas
+    const trouves = candidats.filter((p) => p.m.every((x) => libelle.includes(x)) && (p.m.length < libelle.length || p.m.length >= 2)
+      && p.zones.some((z) => z === appellation || ` ${z} `.includes(` ${appellation} `) || ` ${appellation} `.includes(` ${z} `)));
+    if (!trouves.length) return v;
+    const max = Math.max(...trouves.map((p) => p.m.length));
+    const meilleurs = [...new Set(trouves.filter((p) => p.m.length === max).map((p) => p.m.join(' ')))];
+    if (meilleurs.length !== 1) return v; // plusieurs producteurs possibles : on ne choisit pas
+    const choisi = trouves.filter((p) => p.m.join(' ') === meilleurs[0]).sort((a, b) => a.nom.length - b.nom.length)[0];
+    return { ...v, producteur: choisi.nom };
+  });
+}
