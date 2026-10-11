@@ -234,16 +234,20 @@ export async function ajouterCuvee(producteurId: string, f: FormData) {
 export async function enregistrerCuvee(id: string, f: FormData) {
   await exigerAdmin();
   const page = `/admin/super/vins/${encodeURIComponent(id)}`;
-  const [c] = await requete<{ etiquette_url: string | null }>('select etiquette_url from cuvee where id = $1', [id]);
+  const [c] = await requete<{ etiquette_url: string | null; appellation_id: string | null; appellation: string | null }>(
+    `select c.etiquette_url, c.appellation_id, coalesce(c.appellation_texte, t.nom) as appellation
+       from cuvee c left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
   if (!c) redirect('/admin/super/vins');
   const decision = txt(f, 'decision');
   const couleur = txt(f, 'couleur');
-  // Appellation : reliée au terroir de la base du même nom (accents, casse et « AOC » à part), sinon non reliée.
+  // Appellation : toujours gardée telle que saisie ; reliée à l'appellation de la base du même nom
+  // (accents, tirets, casse et « AOC » à part). Inchangée : le lien existant est gardé.
   const appellation = txt(f, 'appellation');
+  const cleT = (s: string) => appellationCourte(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
   let terroir: string | null = null;
-  if (appellation) {
-    const cleT = (s: string) => appellationCourte(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
-    const candidats = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire' and nom ilike $1`, [`%${appellationCourte(appellation).split(/[\s-]/)[0]}%`]);
+  if (appellation && c.appellation && cleT(appellation) === cleT(c.appellation)) terroir = c.appellation_id;
+  else if (appellation) {
+    const candidats = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
     terroir = candidats.find((x) => cleT(x.nom) === cleT(appellation))?.id ?? null;
   }
   let etiquette: string | null = null;
@@ -253,14 +257,14 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   }
   const retirerEtiquette = !etiquette && f.get('retirer_etiquette') === 'on';
   await requete(
-    `update cuvee set nom = coalesce($2, nom), couleur = $3::couleur_vin, appellation_id = $4, cepages = $5, garde = $6, description = $7,
+    `update cuvee set nom = coalesce($2, nom), couleur = $3::couleur_vin, appellation_id = $4, appellation_texte = $11, cepages = $5, garde = $6, description = $7,
             statut = case $8 when 'valider' then 'valide'::statut_validation when 'retirer' then 'retire'::statut_validation else statut end,
             etiquette_url = case when $9::text is not null then $9 when $10 then null else etiquette_url end,
             etiquette_source = case when $9::text is not null then 'fichier' when $10 then null else etiquette_source end,
             etiquette_maj_le = case when $9::text is not null or $10 then now() else etiquette_maj_le end
       where id = $1`,
     [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'].includes(couleur) ? couleur : null, terroir,
-      txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette]);
+      txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette, appellation]);
   // Étiquette de la cuvée : reprise par les vins des cartes reliés qui n'ont pas leur propre photo ; retirée de ceux qui l'avaient reprise.
   if (etiquette) {
     await requete(
@@ -270,14 +274,37 @@ export async function enregistrerCuvee(id: string, f: FormData) {
     await requete(`update vin_carte set etiquette_url = null, etiquette_source = null where cuvee_id = $1 and etiquette_source = 'cuvee'`, [id]);
   }
   revalidatePath('/', 'layout');
-  if (decision === 'valider' || decision === 'retirer') {
-    // Retour sur la liste d'où l'on venait (mêmes filtres, même page), la ligne du vin centrée et mise en évidence.
-    const liste = txt(f, 'retour');
-    const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
-    const [{ nom } = { nom: 'Vin' }] = await requete<{ nom: string }>('select nom from cuvee where id = $1', [id]);
-    redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${decision === 'valider' ? 'validé' : 'retiré de la base'}.` })}`);
+  // Retour sur la liste d'où l'on venait (mêmes filtres, même page), la ligne du vin centrée et mise en évidence.
+  const liste = txt(f, 'retour');
+  const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
+  const [{ nom } = { nom: 'Vin' }] = await requete<{ nom: string }>('select nom from cuvee where id = $1', [id]);
+  const fait = decision === 'valider' ? 'validé' : decision === 'retirer' ? 'retiré de la base' : 'enregistré';
+  const lien = appellation && !terroir ? ' (appellation absente de la base : gardée sans lien)' : '';
+  redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${fait}${lien}.` })}`);
+}
+
+/**
+ * Vin d'une carte pas encore dans la base : ajouté à la base de Pat (à valider), à partir de la carte
+ * (nom du vin, couleur, appellation, cépages, étiquette), et relié au vin de la carte. On ouvre sa fiche.
+ */
+export async function ajouterCuveeDepuisCarte(vinId: string, f: FormData) {
+  await exigerAdmin();
+  const retour = txt(f, 'retour') ?? '/admin/super/vins';
+  const [v] = await requete<{ producteur_id: string | null; libelle: string; nom_vin: string | null; couleur: string; cepages: string | null;
+    appellation_id: string | null; appellation_texte: string | null; etiquette_url: string | null; cuvee_id: string | null }>(
+    `select producteur_id, libelle, nom_vin, couleur::text, cepages, appellation_id, appellation_texte, etiquette_url, cuvee_id from vin_carte where id = $1`, [vinId]);
+  if (!v || !v.producteur_id) redirect(retour);
+  let id = v.cuvee_id;
+  if (!id) {
+    id = `carte-${v.producteur_id}-${v.libelle.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`.slice(0, 120);
+    await requete(
+      `insert into cuvee (id, producteur_id, nom, couleur, cepages, appellation_id, appellation_texte, etiquette_url, etiquette_source, statut, source)
+       values ($1, $2, $3, $4::couleur_vin, $5, $6, $7, $8, case when $8::text is not null then 'restaurant' end, 'propose', 'carte')
+       on conflict (id) do nothing`,
+      [id, v.producteur_id, v.nom_vin || v.libelle, v.couleur, v.cepages, v.appellation_id, v.appellation_texte, v.etiquette_url]);
+    await requete('update vin_carte set cuvee_id = $2 where id = $1', [vinId, id]);
   }
-  redirect(avec(page, { ok: 'Fiche enregistrée.', ...(txt(f, 'retour') ? { retour: txt(f, 'retour')! } : {}) }));
+  redirect(`/admin/super/vins/${encodeURIComponent(id)}?${new URLSearchParams({ retour })}`);
 }
 
 // ───────── Principes ─────────

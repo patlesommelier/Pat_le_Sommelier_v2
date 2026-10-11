@@ -155,12 +155,13 @@ export async function rechercherCuvees({ texte = '', couleur = '', statut = '', 
   { texte?: string; couleur?: string; statut?: string; restaurant?: string; surCartes?: boolean; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<CuveeListe>(
-    `select c.id, c.nom, c.couleur::text, c.producteur_id, p.nom as producteur, t.nom as appellation, c.cepages, c.statut::text, c.etiquette_url,
+    `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur, c.producteur_id, p.nom as producteur, coalesce(c.appellation_texte, t.nom) as appellation, c.cepages, c.statut::text, c.etiquette_url,
             (select count(*)::int from vin_carte v where v.cuvee_id = c.id) as sur_cartes, count(*) over ()::int as total
        from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id
       where ($1 = '' or ${sansAccent('c.nom')} like '%' || ${sansAccent('$1')} || '%' or ${sansAccent('p.nom')} like '%' || ${sansAccent('$1')} || '%'
-             or ${sansAccent("coalesce(t.nom, '')")} like '%' || ${sansAccent('$1')} || '%')
-        and ($2 = '' or c.couleur::text = $2)
+             or ${sansAccent("coalesce(c.appellation_texte, t.nom, '')")} like '%' || ${sansAccent('$1')} || '%')
+        -- couleur de la base, sinon celle du vin sur une carte (beaucoup de vins de la base n'ont pas encore de couleur)
+        and ($2 = '' or coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) = $2)
         and ($3 = '' or c.statut::text = $3)
         and ($4 = '' or exists (select 1 from vin_carte v where v.cuvee_id = c.id and v.restaurant_id = $4))
         and (not $5 or exists (select 1 from vin_carte v where v.cuvee_id = c.id))
@@ -171,7 +172,7 @@ export async function rechercherCuvees({ texte = '', couleur = '', statut = '', 
 
 export interface FicheCuvee {
   id: string; nom: string; couleur: string | null; producteur_id: string; producteur: string; producteur_statut: string;
-  appellation_id: string | null; appellation: string | null; cepages: string | null; garde: string | null; description: string | null;
+  appellation_id: string | null; appellation: string | null; appellation_base: string | null; cepages: string | null; garde: string | null; description: string | null;
   texte_origine: string | null; statut: string; etiquette_url: string | null; etiquette_source: string | null; source: string | null;
 }
 
@@ -179,7 +180,8 @@ export interface FicheCuvee {
 export async function ficheCuvee(id: string) {
   const [c] = await requete<FicheCuvee>(
     `select c.id, c.nom, c.couleur::text, c.producteur_id, p.nom as producteur, p.statut::text as producteur_statut, c.appellation_id,
-            t.nom as appellation, c.cepages, c.garde, c.description, c.texte_origine, c.statut::text, c.etiquette_url, c.etiquette_source, c.source
+            coalesce(c.appellation_texte, t.nom) as appellation, t.nom as appellation_base, c.cepages, c.garde, c.description, c.texte_origine,
+            c.statut::text, c.etiquette_url, c.etiquette_source, c.source
        from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
   if (!c) return null;
   const vins = await requete<{ id: string; restaurant_id: string; restaurant: string; libelle: string; millesime: string | null; format: string;
@@ -189,3 +191,31 @@ export async function ficheCuvee(id: string) {
   return { ...c, vins };
 }
 
+
+export interface VinCarteBase {
+  id: string; libelle: string; millesime: string | null; couleur: string; producteur_id: string | null; producteur: string | null;
+  appellation: string | null; cepages: string | null; etiquette_url: string | null; cuvee_id: string | null; cuvee_statut: string | null; total: number;
+}
+
+/**
+ * Tous les vins de la carte d'un restaurant, reliés ou non à un vin de la base de Pat (filtre « Restaurant » de « Vins de la base »).
+ * Statut : celui du vin de la base ; « absent » : vins pas encore dans la base.
+ */
+export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', statut = '', page = 0 }:
+  { restaurant: string; texte?: string; couleur?: string; statut?: string; page?: number }) {
+  const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
+  const lignes = await requete<VinCarteBase>(
+    `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur,
+            coalesce(v.appellation_texte, t.nom) as appellation, v.cepages, v.etiquette_url, c.id as cuvee_id, c.statut::text as cuvee_statut,
+            count(*) over ()::int as total
+       from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
+            left join cuvee c on c.id = v.cuvee_id
+      where v.restaurant_id = $1
+        and ($2 = '' or ${sansAccent('v.libelle')} like '%' || ${sansAccent('$2')} || '%'
+             or ${sansAccent("coalesce(v.producteur_texte, p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
+        and ($3 = '' or v.couleur::text = $3)
+        and ($4 = '' or ($4 = 'absent' and c.id is null) or c.statut::text = $4)
+      order by v.couleur, v.ordre
+      limit 50 offset $5`, [restaurant, texte.trim(), couleur, statut, page * 50]);
+  return { lignes, total: lignes[0]?.total ?? 0 };
+}

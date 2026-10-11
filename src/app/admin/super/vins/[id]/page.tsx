@@ -4,6 +4,7 @@ import { enregistrerCuvee } from '../../actions';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { ficheCuvee } from '@/lib/super/donnees';
+import { requete } from '@/lib/db';
 import { exigerAdmin } from '@/lib/admin/auth';
 
 const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux']];
@@ -14,7 +15,8 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { id } = await params;
   const sp = await searchParams;
-  const c = await ficheCuvee(decodeURIComponent(id));
+  const [c, appellations] = await Promise.all([ficheCuvee(decodeURIComponent(id)),
+    requete<{ nom: string }>(`select distinct nom from terroir where statut <> 'retire' order by nom`)]);
   if (!c) notFound();
   // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
   const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
@@ -37,8 +39,10 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
               <div className="champ"><label htmlFor="nom">Nom du vin</label><input id="nom" name="nom" defaultValue={c.nom} required /></div>
               <div className="champ"><label htmlFor="couleur">Couleur</label>
                 <select id="couleur" name="couleur" defaultValue={c.couleur ?? ''}><option value="">À préciser</option>{COULEURS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
-              <div className="champ"><label htmlFor="appellation">Appellation</label><input id="appellation" name="appellation" defaultValue={c.appellation ?? ''} placeholder="Ex. Chablis" />
-                <span className="aide">Reliée à l’appellation du même nom dans la base de Pat.</span></div>
+              <div className="champ"><label htmlFor="appellation">Appellation</label>
+                <input id="appellation" name="appellation" list="appellations-base" defaultValue={c.appellation ?? ''} placeholder="Ex. Chablis" autoComplete="off" />
+                <datalist id="appellations-base">{appellations.map((a) => <option key={a.nom} value={a.nom} />)}</datalist>
+                <span className="aide">{c.appellation_base ? `Reliée à « ${c.appellation_base} » dans la base de Pat.` : c.appellation ? 'Pas reliée : aucune appellation de ce nom dans la base de Pat (choisissez-en une dans la liste pour la relier).' : 'Choisissez dans la liste pour la relier à la base de Pat.'}</span></div>
               <div className="champ"><label htmlFor="cepages">Cépages</label><input id="cepages" name="cepages" defaultValue={c.cepages ?? ''} /></div>
               <div className="champ"><label htmlFor="garde">Garde</label><input id="garde" name="garde" defaultValue={c.garde ?? ''} placeholder="Ex. 5 à 10 ans" /></div>
             </div>

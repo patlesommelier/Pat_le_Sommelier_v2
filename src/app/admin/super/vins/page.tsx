@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
-import { rechercherCuvees, restaurantsListe } from '@/lib/super/donnees';
+import { rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
+import { ajouterCuveeDepuisCarte } from '../actions';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
 
@@ -14,10 +15,13 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   const sp = await searchParams;
   const page = Math.max(0, Number(sp.page) || 0);
   const surCartes = sp.cartes !== '0';
-  const [{ lignes, total }, restos] = await Promise.all([
-    rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', restaurant: sp.resto ?? '', surCartes, page }),
+  // Un restaurant choisi : tous les vins de sa carte, reliés ou non à un vin de la base.
+  const [{ lignes, total }, carte, restos] = await Promise.all([
+    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', surCartes, page }),
+    sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', page }) : null,
     restaurantsListe(),
   ]);
+  const nombre = carte ? carte.total : total;
   // Adresse de la liste telle qu'affichée (filtres et page) : la fiche y ramène après une validation.
   const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
   const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, ...extra }).filter(([, v]) => v) as [string, string][])}`;
@@ -30,15 +34,40 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
         <div className="champ"><label htmlFor="couleur">Couleur</label>
           <select id="couleur" name="couleur" defaultValue={sp.couleur ?? ''}><option value="">Toutes</option>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
         <div className="champ"><label htmlFor="statut">Statut</label>
-          <select id="statut" name="statut" defaultValue={sp.statut ?? ''}><option value="">Tous</option><option value="propose">À valider</option><option value="valide">Validés</option><option value="retire">Retirés</option></select></div>
+          <select id="statut" name="statut" defaultValue={sp.statut ?? ''}><option value="">Tous</option><option value="propose">À valider</option><option value="valide">Validés</option><option value="retire">Retirés</option>{sp.resto && <option value="absent">Pas encore dans la base</option>}</select></div>
         <div className="champ"><label htmlFor="resto">Restaurant</label>
           <select id="resto" name="resto" defaultValue={sp.resto ?? ''}><option value="">Tous</option>{restos.map((r) => <option key={r.id} value={r.id}>{r.nom}</option>)}</select></div>
-        <div className="champ"><label htmlFor="cartes">Vins</label>
-          <select id="cartes" name="cartes" defaultValue={surCartes ? '' : '0'}><option value="">Sur une carte de restaurant</option><option value="0">Toute la base</option></select></div>
+        {!sp.resto && <div className="champ"><label htmlFor="cartes">Vins</label>
+          <select id="cartes" name="cartes" defaultValue={surCartes ? '' : '0'}><option value="">Sur une carte de restaurant</option><option value="0">Toute la base</option></select></div>}
         <button className="btn petit">Filtrer</button>
       </form>
 
       {sp.vin && sp.ok && <RetourVin vinId={sp.vin} message={sp.ok} />}
+      {carte ? (
+        <div className="tableau">
+          <table style={{ minWidth: 860 }}>
+            <thead><tr><th>Vin de la carte</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th>Base de Pat</th><th /></tr></thead>
+            <tbody>
+              {carte.lignes.map((v) => (
+                <tr key={v.id} id={`vin-${v.cuvee_id ?? v.id}`} className={(v.cuvee_id ?? v.id) === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
+                  <td style={{ minWidth: 200 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}</div></div></div></td>
+                  <td>{v.producteur_id ? <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`}>{v.producteur}</Link> : (v.producteur ?? '—')}</td>
+                  <td>{v.appellation ?? '—'}</td>
+                  <td className="petit" style={{ maxWidth: 160 }}>{v.cepages ?? '—'}</td>
+                  <td>{v.cuvee_statut ? <Etat type={STATUT[v.cuvee_statut]?.[1] ?? ''}>{STATUT[v.cuvee_statut]?.[0] ?? v.cuvee_statut}</Etat> : <Etat type="">Pas dans la base</Etat>}</td>
+                  <td className="droite">
+                    {v.cuvee_id ? <Link className="lien-ligne" href={`/admin/super/vins/${encodeURIComponent(v.cuvee_id)}?${new URLSearchParams({ retour: ici })}`}>Ouvrir</Link>
+                      : v.producteur_id ? (
+                        <form action={ajouterCuveeDepuisCarte.bind(null, v.id)}><input type="hidden" name="retour" value={ici} /><button className="btn sec petit">Ajouter à la base</button></form>
+                      ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}`} title="Le vin doit d'abord être relié à un producteur">Relier le producteur</Link>}
+                  </td>
+                </tr>
+              ))}
+              {!carte.lignes.length && <tr><td colSpan={6} className="discret">Aucun vin ne correspond.</td></tr>}
+            </tbody>
+          </table>
+        </div>
+      ) : (
       <div className="tableau">
         <table style={{ minWidth: 860 }}>
           <thead><tr><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Statut</th><th /></tr></thead>
@@ -61,11 +90,12 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
           </tbody>
         </table>
       </div>
-      {total > 50 && (
+      )}
+      {nombre > 50 && (
         <div className="ligne-actions">
           {page > 0 && <Link href={lien({ page: String(page - 1) })} className="btn fantome petit">← Précédents</Link>}
-          <span className="discret">{page * 50 + 1}–{Math.min(total, (page + 1) * 50)} sur {total.toLocaleString('fr-BE')}</span>
-          {(page + 1) * 50 < total && <Link href={lien({ page: String(page + 1) })} className="btn fantome petit">Suivants →</Link>}
+          <span className="discret">{page * 50 + 1}–{Math.min(nombre, (page + 1) * 50)} sur {nombre.toLocaleString('fr-BE')}</span>
+          {(page + 1) * 50 < nombre && <Link href={lien({ page: String(page + 1) })} className="btn fantome petit">Suivants →</Link>}
         </div>
       )}
     </>
