@@ -1,7 +1,7 @@
 // États affichés pour un vin de la carte (liste et fiche du back-office).
 import type { VinBO } from '@/lib/admin/donnees';
 import { contenanceDuFormat, grouperMemeVin, libelleCourt, ordonner } from '@/lib/contenances';
-import { appellationDeduite, cle, nomDeduit } from '@/lib/admin/intitule';
+import { titreCarte } from '@/lib/admin/intitule';
 
 type Etat = [string, 'ok' | 'propose' | 'attention' | ''];
 
@@ -55,16 +55,11 @@ export function autresContenances(vins: VinBO[], v: VinBO) {
 }
 
 /**
- * Nom du vin tel que la liste du back-office l'affiche : vin, appellation, producteur (le cépage et le millésime ont
- * leur colonne). Un élément déjà contenu dans le précédent n'est pas répété ; sans nom de vin, l'appellation vient en tête.
+ * Nom du vin dans la liste du back-office : le même que dans l'app (nom du vin en gras, puis producteur et appellation),
+ * sans le millésime ni les cépages, qui ont leur colonne.
  */
 export function nomPourListe(v: VinBO): string[] {
-  const producteur = (v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom ?? '').replace(/\s*\(.*?\)/g, '').trim();
-  const nom = (v.nom_vin ?? nomDeduit(v.vin_texte)).trim();
-  const cepage = (v.cepages ?? '').split(/[,/&+]| et /)[0];
-  // Un « nom » qui n'est que le cépage (« Bourgogne – Pinot noir ») : le vin n'a pas de nom (le cépage a sa colonne).
-  const parties = [nom && cle(nom) !== cle(cepage) ? nom : '', v.appellation_texte ?? appellationDeduite(v.vin_texte, v.appellation_nom), producteur]
-    .map((x) => (x ?? '').trim()).filter(Boolean);
-  const gardees = parties.filter((p, i) => !parties.slice(0, i).some((q) => ` ${cle(q)} `.includes(` ${cle(p)} `)));
-  return gardees.length ? gardees : [v.libelle];
+  const producteur = v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom;
+  const { titre, sousTitre } = titreCarte({ ...v, producteur }, { millesime: false, cepages: false });
+  return [titre, ...(sousTitre ? [sousTitre] : [])];
 }

@@ -9,7 +9,7 @@ import { Etat } from '@/components/admin/Ui';
 import { enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
-import { appellationDeduite, nomDeduit } from '@/lib/admin/intitule';
+import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule';
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 
@@ -46,6 +46,7 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
     : groupe.find((x) => contenanceDuFormat(x.format) === code)?.prix ?? null;
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
   const retour = `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
+  const affiche = titreCarte({ ...v, producteur: v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom });
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
 
   return (
@@ -54,7 +55,9 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
       <header className="bo-entete">
         <div>
           <span className="surtitre">{v.id}{v.section ? ` · ${v.section}` : ''}</span>
-          <h1>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}</h1>
+          {/* Comme dans l'app : nom du vin et millésime, puis producteur, appellation et cépages. */}
+          <h1>{affiche.titre}</h1>
+          {affiche.sousTitre && <p style={{ margin: '4px 0 0', color: 'var(--discret)' }}>{affiche.sousTitre}</p>}
         </div>
         <div className="ligne-actions">
           <Link href={`/${resto}/vin/${encodeURIComponent(v.id)}`} target="_blank" className="btn sec">Voir la fiche client</Link>

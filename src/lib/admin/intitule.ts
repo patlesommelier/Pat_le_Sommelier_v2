@@ -59,15 +59,15 @@ export function nomDeduit(vinTexte: string | null | undefined) {
 export function titreCarte(v: {
   libelle: string; nom_vin?: string | null; vin_texte?: string | null; appellation_texte?: string | null; appellation_nom?: string | null;
   producteur?: string | null; cepages?: string | null; millesime?: string | null;
-}) {
+}, { millesime: avecMillesime = true, cepages: avecCepages = true } = {}) {
   const cepages = propre(v.cepages).replace(/\s*\(.*?\)/g, '');
   const nomBrut = propre(v.nom_vin ?? nomDeduit(v.vin_texte));
   const nom = nomBrut && cle(nomBrut) !== cle(cepages.split(/[,/&+]| et /)[0]) ? nomBrut : '';
   const appellation = appellationCourte(v.appellation_texte ?? appellationDeduite(v.vin_texte, v.appellation_nom));
   const producteur = propre(v.producteur && !/^non /i.test(v.producteur) ? v.producteur : '').replace(/\s*\(.*?\)/g, '');
   const tete = nom || appellation || v.libelle;
-  const millesime = v.millesime && v.millesime !== 'NM' ? v.millesime : '';
-  const dessous = [producteur, tete === appellation ? '' : appellation, cepages]
+  const millesime = avecMillesime && v.millesime && v.millesime !== 'NM' ? v.millesime : '';
+  const dessous = [producteur, tete === appellation ? '' : appellation, avecCepages ? cepages : '']
     .filter((x, i, t) => x && !t.slice(0, i).some((y) => y && ` ${cle(y)} `.includes(` ${cle(x)} `)) && !` ${cle(tete)} `.includes(` ${cle(x)} `));
   return { titre: [tete, millesime].filter(Boolean).join(' '), sousTitre: dessous.join(' · ') };
 }
