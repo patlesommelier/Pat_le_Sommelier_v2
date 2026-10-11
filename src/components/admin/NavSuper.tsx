@@ -6,6 +6,7 @@ import { Icone } from './Icone';
 const LIENS = [
   { href: '/admin/super', libelle: 'Restaurants', icone: 'home' },
   { href: '/admin/super/producteurs', libelle: 'Producteurs à valider', icone: 'users' },
+  { href: '/admin/super/vins', libelle: 'Vins de la base', icone: 'bottle' },
   { href: '/admin/super/base', libelle: 'Base et rankings', icone: 'bottle' },
   { href: '/admin/super/principes', libelle: 'Principes de Pat', icone: 'menu' },
   { href: '/admin/super/regles', libelle: 'Règles par défaut', icone: 'sliders' },

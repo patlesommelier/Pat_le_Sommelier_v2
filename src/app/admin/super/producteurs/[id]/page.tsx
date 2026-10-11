@@ -87,7 +87,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
                 ))}
                 {p.cuvees.map((c) => (
                   <tr key={c.id}>
-                    <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><b>{c.nom}</b></div></td>
+                    <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><Link href={`/admin/super/vins/${encodeURIComponent(c.id)}`}><b>{c.nom}</b></Link></div></td>
                     <td>{c.couleur ? COULEURS[c.couleur] ?? c.couleur : '—'}</td><td>{c.appellation ?? '—'}</td>
                     <td>—</td><td /><td><Etat type="ok">{c.source === 'carte' ? 'Cuvée reprise d’une carte' : 'Proposé par Pat'}</Etat></td><td />
                   </tr>

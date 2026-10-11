@@ -19,6 +19,8 @@ import { parametresRegles, REGLAGES_PAT, type Reglages } from '@/lib/selection';
 import { traiterRelecturesPrix } from '@/lib/inscription/prix';
 import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
 import { traiterComparaisons } from '@/lib/generation/comparaison';
+import { deposerImage } from '@/lib/admin/fichiers';
+import { appellationCourte } from '@/lib/admin/intitule';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}?${new URLSearchParams(params)}`;
@@ -222,6 +224,53 @@ export async function ajouterCuvee(producteurId: string, f: FormData) {
       [id, producteurId, nom, couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'].includes(couleur) ? couleur : null, txt(f, 'cepages')]);
   }
   redirect(retour);
+}
+
+// ───────── Vins de la base (cuvées) ─────────
+/**
+ * Fiche d'un vin de la base : nom, couleur, appellation (reliée au terroir du même nom), cépages, garde, description,
+ * étiquette (reprise par les vins des cartes qui n'ont pas leur propre photo) ; Enregistrer, Valider ou Retirer.
+ */
+export async function enregistrerCuvee(id: string, f: FormData) {
+  await exigerAdmin();
+  const page = `/admin/super/vins/${encodeURIComponent(id)}`;
+  const [c] = await requete<{ etiquette_url: string | null }>('select etiquette_url from cuvee where id = $1', [id]);
+  if (!c) redirect('/admin/super/vins');
+  const decision = txt(f, 'decision');
+  const couleur = txt(f, 'couleur');
+  // Appellation : reliée au terroir de la base du même nom (accents, casse et « AOC » à part), sinon non reliée.
+  const appellation = txt(f, 'appellation');
+  let terroir: string | null = null;
+  if (appellation) {
+    const cleT = (s: string) => appellationCourte(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+    const candidats = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire' and nom ilike $1`, [`%${appellationCourte(appellation).split(/[\s-]/)[0]}%`]);
+    terroir = candidats.find((x) => cleT(x.nom) === cleT(appellation))?.id ?? null;
+  }
+  let etiquette: string | null = null;
+  const image = f.get('etiquette');
+  if (image instanceof File && image.size > 0) {
+    try { etiquette = await deposerImage(image, 'base/etiquettes'); } catch (e) { redirect(avec(page, { erreur: (e as Error).message })); }
+  }
+  const retirerEtiquette = !etiquette && f.get('retirer_etiquette') === 'on';
+  await requete(
+    `update cuvee set nom = coalesce($2, nom), couleur = $3::couleur_vin, appellation_id = $4, cepages = $5, garde = $6, description = $7,
+            statut = case $8 when 'valider' then 'valide'::statut_validation when 'retirer' then 'retire'::statut_validation else statut end,
+            etiquette_url = case when $9::text is not null then $9 when $10 then null else etiquette_url end,
+            etiquette_source = case when $9::text is not null then 'fichier' when $10 then null else etiquette_source end,
+            etiquette_maj_le = case when $9::text is not null or $10 then now() else etiquette_maj_le end
+      where id = $1`,
+    [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'].includes(couleur) ? couleur : null, terroir,
+      txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette]);
+  // Étiquette de la cuvée : reprise par les vins des cartes reliés qui n'ont pas leur propre photo ; retirée de ceux qui l'avaient reprise.
+  if (etiquette) {
+    await requete(
+      `update vin_carte set etiquette_url = $2, etiquette_source = 'cuvee', etiquette_statut = 'trouvee'
+        where cuvee_id = $1 and (etiquette_url is null or etiquette_source = 'cuvee')`, [id, etiquette]);
+  } else if (retirerEtiquette) {
+    await requete(`update vin_carte set etiquette_url = null, etiquette_source = null where cuvee_id = $1 and etiquette_source = 'cuvee'`, [id]);
+  }
+  revalidatePath('/', 'layout');
+  redirect(avec(page, { ok: decision === 'valider' ? 'Vin validé.' : decision === 'retirer' ? 'Vin retiré de la base.' : 'Fiche enregistrée.' }));
 }
 
 // ───────── Principes ─────────
