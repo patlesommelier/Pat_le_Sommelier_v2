@@ -54,7 +54,8 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
       <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</Link>
       <header className="bo-entete">
         <div>
-          <span className="surtitre">{v.id}{v.section ? ` · ${v.section}` : ''}</span>
+          {/* Code interne du vin : super-admin seulement. */}
+          <span className="surtitre">{[u?.admin ? v.id : null, v.section].filter(Boolean).join(' · ')}</span>
           {/* Comme dans l'app : nom du vin et millésime, puis producteur, appellation et cépages. */}
           <h1>{affiche.titre}</h1>
           {affiche.sousTitre && <p style={{ margin: '4px 0 0', color: 'var(--discret)' }}>{affiche.sousTitre}</p>}

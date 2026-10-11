@@ -105,7 +105,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
               <div className="champ"><label htmlFor="vin">Retirer un vin</label>
                 <select id="vin" name="vin" required defaultValue="">
                   <option value="" disabled>Choisir un vin…</option>
-                  {vins.filter((v) => !exclus.has(v.id)).map((v) => <option key={v.id} value={v.id}>{v.id} · {v.libelle}{v.format !== '75 cl' ? ` (${v.format})` : ''}</option>)}
+                  {vins.filter((v) => !exclus.has(v.id)).map((v) => <option key={v.id} value={v.id}>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}{v.format !== '75 cl' ? ` (${v.format})` : ''}</option>)}
                 </select></div>
               <div className="champ"><label htmlFor="jusqua">Jusqu’au (facultatif)</label><input id="jusqua" name="jusqua" type="date" /></div>
               <button className="btn sec petit">Retirer</button>

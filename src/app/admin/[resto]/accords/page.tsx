@@ -155,7 +155,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               Aucun accord pour ce plat{bilanPlat ? ` — dernière génération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec' : 'terminée sans accord'}${interne && bilanPlat.message ? `, ${bilanPlat.message.slice(0, 200)}` : ''}` : ' — pas encore généré'}.</span> : null}
             {anciens.get(plat.id) ? <span style={{ fontSize: 13.5, color: 'var(--ocre)' }}>
               {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
-              {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)}) : ${bilanPlat.statut === 'erreur' ? 'échec, ' : ''}${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
+              {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)})${bilanPlat.statut === 'erreur' ? ' : échec' : ''}${interne ? ` : ${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ''}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
             <div className="pile">
               <div><h3 style={{ fontSize: 20 }}>Ce que verra le client</h3>
                 <p className="discret" style={{ margin: '6px 0 0' }}>{sel.liste.length ? `${sel.liste.length} vin${sel.liste.length > 1 ? 's' : ''}${prix.length ? `, de ${euros(Math.min(...prix))} à ${euros(Math.max(...prix))}` : ''}.` : 'Aucun vin ne s’accorde assez bien : Pat le dira au client et proposera d’en parler.'}</p></div>
@@ -163,7 +163,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                 {sel.liste.map((r, i) => (
                   <div key={r.vin.id} className="carte-bo pile" style={{ padding: 16, gap: 10 }}>
                     <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><Vignette url={r.vin.etiquette_url} taille={56} />
-                      <div className="pile" style={{ gap: 3 }}><span className="surtitre" style={{ fontSize: 12, letterSpacing: 0 }}>N° {i + 1} · {r.vin.id}</span><b style={{ fontSize: 14.5, lineHeight: 1.25 }}>{r.vin.libelle}</b><b style={{ fontSize: 13.5 }}>{euros(r.vin.prix ?? r.vin.prix_verre)}</b></div></div>
+                      <div className="pile" style={{ gap: 3 }}><span className="surtitre" style={{ fontSize: 12, letterSpacing: 0 }}>N° {i + 1}{interne ? ` · ${r.vin.id}` : ''}</span><b style={{ fontSize: 14.5, lineHeight: 1.25 }}>{r.vin.libelle}</b><b style={{ fontSize: 13.5 }}>{euros(r.vin.prix ?? r.vin.prix_verre)}</b></div></div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}><Points note={r.note} />{interne
                       ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b></span>
                       : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</div>
@@ -229,7 +229,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
                       return (
                         <tr key={t.vin.id}>
                           <td className="droite"><b>{rang + 1}</b></td>
-                          <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={t.vin.etiquette_url} taille={40} /><div><div className="nom">{t.vin.libelle}</div><div className="petit">{t.vin.id} · {euros(t.vin.prix ?? t.vin.prix_verre)}</div></div></div></td>
+                          <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={t.vin.etiquette_url} taille={40} /><div><div className="nom">{t.vin.libelle}</div><div className="petit">{interne ? `${t.vin.id} · ` : ''}{euros(t.vin.prix ?? t.vin.prix_verre)}</div></div></div></td>
                           <td>
                             <FormulaireAdmin action={changerNote.bind(null, resto, plat.id, t.vin.id)} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                               <Points note={t.note} />{/* Clé = plat + note : la liste reprend la note à jour après une régénération ou un changement de plat. */}
