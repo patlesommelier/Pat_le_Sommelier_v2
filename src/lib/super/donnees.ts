@@ -215,7 +215,8 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
   { restaurant: string; texte?: string; couleur?: string; statut?: string; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<VinCarteBase>(
-    `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur,
+    `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, -- producteur de la base d'abord (nom corrigé par Pat), sinon celui lu sur la carte
+            coalesce(p.nom, nullif(v.producteur_texte, '')) as producteur,
             -- vin relié à la base : son appellation et ses cépages de la base d'abord (ce que la fiche enregistre)
             coalesce(c.appellation_texte, tc.nom, v.appellation_texte, t.nom) as appellation, coalesce(nullif(c.cepages, ''), v.cepages) as cepages,
             v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut, c.nom as cuvee_nom,
@@ -225,7 +226,7 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
       where v.restaurant_id = $1
         and ($2 = '' or ${sansAccent('v.libelle')} like '%' || ${sansAccent('$2')} || '%'
              or ${sansAccent("coalesce(c.nom, '')")} like '%' || ${sansAccent('$2')} || '%'
-             or ${sansAccent("coalesce(v.producteur_texte, p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
+             or ${sansAccent("coalesce(v.producteur_texte, '') || ' ' || coalesce(p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
         and ($3 = '' or v.couleur::text = $3)
         and ($4 = '' or ($4 = 'absent' and c.id is null) or c.statut::text = $4)
       order by v.couleur, v.ordre
