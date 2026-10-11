@@ -78,6 +78,8 @@ export interface OptionsGeneration {
   publicationId?: string;
   /** Vins ajoutés : seuls ces vins sont notés pour ce plat ; les accords des autres ne changent pas. */
   vins?: string[];
+  /** Heure limite (ms) : passé ce moment, plus de nouvelle correction ; ce qui est valable est écrit. */
+  jusqua?: number;
 }
 
 export async function regenererAccordsPlat(q: Requete, client: Anthropic, restaurantId: string, platId: string, modele: string,
@@ -174,7 +176,9 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
   }
   let defauts = defautsDe();
-  for (let essai = 1; essai <= CORRECTIONS && defauts.size; essai++) {
+  // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.
+  const presse = () => options.jusqua !== undefined && Date.now() > options.jusqua;
+  for (let essai = 1; essai <= CORRECTIONS && defauts.size && !presse(); essai++) {
     const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id) && reponses.get(v.id)!.commentaire).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
     const fautifs = carte.filter((v) => defauts.has(v.id));
     for (const r of await appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n` +
@@ -188,7 +192,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   // quatre à la fois, deux essais chacun.
   const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit|commentaire manquant)/.test(d);
   const bloques = () => carte.filter((v) => defauts.get(v.id)?.some(bloquant));
-  for (let essai = 1; essai <= 2 && bloques().length; essai++) {
+  for (let essai = 1; essai <= 2 && bloques().length && !presse(); essai++) {
     const aReprendre = bloques();
     for (let i = 0; i < aReprendre.length; i += 4) {
       await Promise.all(aReprendre.slice(i, i + 4).map(async (v) => {

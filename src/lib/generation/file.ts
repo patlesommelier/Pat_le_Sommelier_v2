@@ -101,12 +101,16 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
   for (;;) {
     for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
       try {
-        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele, t!.vins ? { vins: t!.vins } : {}), finAvant, t.plat_id);
+        // Corrections arrêtées 4 minutes après l'heure limite du travailleur : il finit son plat avant d'être coupé.
+        const jusqua = finAvant + 4 * 60 * 1000;
+        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele,
+          { jusqua, ...(t!.vins ? { vins: t!.vins } : {}) }), finAvant, t.plat_id);
         const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
           + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
           + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');
         await q(`update generation_accords set statut = 'fait', message = $2, fin_le = now() where id = $1`, [t.id, message]);
         console.log(`[accords] ${t.plat_id} : ${message} (jetons ${b.jetonsEntree} + ${b.jetonsSortie})`);
+        await ouvrirSiAssez(q, t.restaurant_id);
       } catch (e) {
         await q(`update generation_accords set statut = 'erreur', message = $2, fin_le = now() where id = $1`, [t.id, String((e as Error).message ?? e).slice(0, 500)]);
         console.error(`[accords] ${t.plat_id} : échec`, e);
@@ -117,6 +121,19 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
   }
   const [r] = await q<{ n: number }>(`select count(*)::int as n from generation_accords where statut = 'en_attente'`);
   return r.n;
+}
+
+/**
+ * QR code sans attendre tous les plats : un restaurant en mise en place passe en service dès que la moitié de ses plats
+ * ont leurs accords ; les autres continuent en arrière-plan et apparaissent dans l'app dès qu'ils sont prêts
+ * (un plat sans accord n'y est pas montré).
+ */
+export async function ouvrirSiAssez(q: Requete, restaurantId: string) {
+  await q(
+    `update restaurant r set statut = 'en_service'
+      where r.id = $1 and r.statut = 'mise_en_place'
+        and (select count(*) from plat pl where pl.restaurant_id = r.id and pl.actif and exists (select 1 from accord a where a.plat_id = pl.id)) * 2
+            >= (select count(*) from plat pl where pl.restaurant_id = r.id and pl.actif)`, [restaurantId]);
 }
 
 /** Relances automatiques des plats sans accord d'un restaurant inscrit, avant de laisser la main au super-admin. */
@@ -130,13 +147,14 @@ export const RELANCES_AUTO = 2;
  * Renvoie le nombre de plats remis dans la file.
  */
 export async function finirMisesEnPlace(q: Requete): Promise<number> {
-  const restos = await q<{ id: string; origine: string; manquants: string[]; relances: number }>(
-    `select r.id, r.origine,
+  const restos = await q<{ id: string; origine: string; statut: string; total: number; manquants: string[]; relances: number }>(
+    `select r.id, r.origine, r.statut::text as statut,
+            (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif) as total,
             array(select pl.id from plat pl where pl.restaurant_id = r.id and pl.actif
                     and not exists (select 1 from accord a where a.plat_id = pl.id) order by pl.ordre) as manquants,
             (select count(distinct g.lot)::int from generation_accords g where g.restaurant_id = r.id and g.demande_par = 'relance-auto') as relances
        from restaurant r
-      where r.statut = 'mise_en_place'
+      where (r.statut = 'mise_en_place' or (r.statut = 'en_service' and r.origine = 'inscription'))
         and exists (select 1 from plat pl where pl.restaurant_id = r.id and pl.actif)
         and exists (select 1 from generation_accords g where g.restaurant_id = r.id)
         and not exists (select 1 from generation_accords g where g.restaurant_id = r.id and g.statut in ('en_attente', 'en_cours'))`);
@@ -147,6 +165,10 @@ export async function finirMisesEnPlace(q: Requete): Promise<number> {
     } else if (r.origine === 'inscription' && r.relances < RELANCES_AUTO) {
       remis += (await creerLot(q, r.id, r.manquants, 'relance-auto', { modele: modeleRapide() })).crees;
       console.log(`[accords] ${r.id} : ${r.manquants.length} plat(s) sans accord, relance automatique ${r.relances + 1}/${RELANCES_AUTO}`);
+    } else if (r.statut === 'mise_en_place' && r.manquants.length < r.total) {
+      // Relances épuisées : le restaurant ouvre avec les plats prêts ; le super-admin voit les plats en échec.
+      await q(`update restaurant set statut = 'en_service' where id = $1 and statut = 'mise_en_place'`, [r.id]);
+      console.log(`[accords] ${r.id} : en service avec ${r.total - r.manquants.length}/${r.total} plats (${r.manquants.length} en échec)`);
     }
   }
   return remis;

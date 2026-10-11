@@ -3,7 +3,7 @@
 // création des producteurs proposés et lancement de la préparation des accords (file existante).
 import 'server-only';
 import { requete } from '../db';
-import { creerLot, finirMisesEnPlace, libererTachesBloquees, modeleRapide, PLATS_EN_PARALLELE, travailler } from '../generation/file';
+import { creerLot, finirMisesEnPlace, libererTachesBloquees, modeleRapide, ouvrirSiAssez, PLATS_EN_PARALLELE, travailler } from '../generation/file';
 import { creerLotPresentations, presentationsManquantes, travaillerPresentations } from '../generation/file-presentations';
 import type { Plat, Vin, VinRapproche } from './donnees';
 import { mots, norm, producteurConnu, rapprocherVins as rapprocher } from './lecture';
@@ -88,6 +88,7 @@ export async function lancerPreparation(restaurantId: string, platIds: string[],
  * relancés ; s'il ne reste rien à faire, la fin de la mise en place est vérifiée (en service, ou relance des plats sans accord).
  */
 export async function surveillerPreparation(restaurantId: string) {
+  await ouvrirSiAssez(requete, restaurantId); // la moitié des plats prête : QR code tout de suite
   const [e] = await requete<{ attente: number; en_cours: number; immobile: boolean }>(
     `select count(*) filter (where statut = 'en_attente')::int as attente, count(*) filter (where statut = 'en_cours')::int as en_cours,
             coalesce(max(greatest(cree_le, debut_le, fin_le)) < now() - interval '3 minutes', true) as immobile
