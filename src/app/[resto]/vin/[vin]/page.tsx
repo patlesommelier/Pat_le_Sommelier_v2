@@ -4,6 +4,7 @@ import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getAccord, getPlat, getRestaurant, getTexteDomaine, getVin } from '@/lib/donnees';
 import { tarifsDuVin } from '@/lib/tarifs';
+import { titreCarte } from '@/lib/admin/intitule';
 import { avecAppreciation } from '@/lib/appreciation';
 import { euros, sansContenance } from '@/lib/format';
 import { COULEURS } from '@/lib/types';
@@ -27,6 +28,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
   const p = vin.profil_degustation;
   const producteur = (vin.producteur_nom ?? vin.producteur_texte ?? '').replace(/\s*\(.*\)/, '');
   const couleur = COULEURS.find((c) => c.id === vin.couleur)?.libelle.replace(/s$/, '');
+  const titre = titreCarte({ ...vin, producteur });
 
   return (
     <>
@@ -36,10 +38,10 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
           <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={350} hauteur={210} />
 
           <div className="fiche-entete">
-            <div className="surtitre">{[(vin.appellation_texte || (vin.appellation_nom ?? vin.vin_texte?.split(' – ')[0]))?.replace(/ AOC$/, ''), vin.millesime !== 'NM' ? vin.millesime : null].filter(Boolean).join(' · ') || couleur}</div>
-            <h1>{vin.libelle}</h1>
+            {/* Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages. */}
+            <h1>{titre.titre}</h1>
             <div className="filet" />
-            {producteur && !/^non /i.test(producteur) && <div className="lieu">{producteur}</div>}
+            {titre.sousTitre && <div className="lieu">{titre.sousTitre}</div>}
           </div>
 
           <div className="pastilles">

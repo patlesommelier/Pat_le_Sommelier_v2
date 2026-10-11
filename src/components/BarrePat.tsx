@@ -12,7 +12,7 @@ interface Message {
   content: string;
   /** Vins proposés : étiquette et texte complet de l'accord (ou présentation du vin), affichés sous la réponse. */
   vins?: { id: string; plat: string | null; libelle: string; producteur: string | null; millesime: string | null; prix: number | null;
-    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[] }[];
+    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[]; titre?: string; sousTitre?: string }[];
   erreur?: boolean;
 }
 
@@ -97,8 +97,9 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                         <span className="fiche-chat-haut">
                           <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={72} hauteur={96} />
                           <span className="fiche-chat-nom">
-                            <strong>{v.libelle}</strong>
-                            {(v.producteur || v.millesime) && <span>{[v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, v.millesime].filter(Boolean).join(' · ')}</span>}
+                            <strong>{v.titre ?? v.libelle}</strong>
+                            {v.titre !== undefined ? v.sousTitre && <span>{v.sousTitre}</span>
+                              : (v.producteur || v.millesime) && <span>{[v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, v.millesime].filter(Boolean).join(' · ')}</span>}
                             {v.tarifs?.length
                               ? <b>{lignePrix(v.tarifs.slice(0, 1))}{v.tarifs.length > 1 ? <small> · {lignePrix(v.tarifs.slice(1))}</small> : null}</b>
                               : (v.prix ?? v.prix_verre) !== null && <b>{euros(v.prix ?? v.prix_verre)}{v.prix && v.prix_verre ? <small> · verre {euros(v.prix_verre)}</small> : null}</b>}

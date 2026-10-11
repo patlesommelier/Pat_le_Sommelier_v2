@@ -1,5 +1,6 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { titreCarte } from '@/lib/admin/intitule';
 import { sansContenance } from '@/lib/format';
 import { NextResponse } from 'next/server';
 import { texteClassements } from '@/lib/classement-chat';
@@ -96,11 +97,13 @@ export async function POST(req: Request) {
   });
   const tarifs = retenus.length ? await tarifsDuRestaurant(corps.restaurant) : new Map();
   const fiches = retenus.length ? await requete<{ id: string; libelle: string; couleur: string; millesime_brut: string | null; producteur: string | null; millesime: string | null;
-    prix: number | null; prix_verre: number | null; etiquette_url: string | null; presentation: string | null }>(
+    prix: number | null; prix_verre: number | null; etiquette_url: string | null; presentation: string | null;
+    nom_vin: string | null; vin_texte: string | null; appellation_texte: string | null; appellation_nom: string | null; cepages: string | null }>(
     `select v.id, v.libelle, v.couleur::text as couleur, v.millesime as millesime_brut, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
             nullif(v.millesime, 'NM') as millesime, v.prix::float as prix, v.prix_verre::float as prix_verre, v.etiquette_url,
-            coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation
-       from vin_carte v left join producteur p on p.id = v.producteur_id
+            coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation,
+            v.nom_vin, v.vin_texte, v.appellation_texte, t.nom as appellation_nom, v.cepages
+       from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
       where v.restaurant_id = $1 and v.id = any($2)`, [corps.restaurant, retenus.map((r) => r.id)]) : [];
   // Texte de l'accord avec son appréciation selon la note (« c’est un très joli accord »), variée d'un vin à l'autre.
   const appreciation = (p: string | null, id: string, i: number) => {
@@ -114,6 +117,8 @@ export async function POST(req: Request) {
       const v = fiches.find((f) => f.id === id);
       if (!v) return [];
       return [{ id, plat: p, libelle: v.libelle, producteur: v.producteur, millesime: v.millesime, prix: v.prix, prix_verre: v.prix_verre,
+        // Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages.
+        ...titreCarte(v),
         tarifs: (tarifs.get(id) ?? []).map(({ code, prix }: { code: string; prix: number }) => ({ code, prix })),
         etiquette_url: v.etiquette_url, texte: appreciation(p, id, i) ?? sansContenance(v.presentation) }];
     }),

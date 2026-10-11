@@ -5,8 +5,9 @@ import { DemanderAPat } from '@/components/DemanderAPat';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getPlat, getPropositions, getRestaurant } from '@/lib/donnees';
-import { euros, lignePrix, sousTitreVin } from '@/lib/format';
+import { euros, lignePrix } from '@/lib/format';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { titreCarte } from '@/lib/admin/intitule';
 
 /** Mention discrète des vins ajoutés par les règles 7 et 8 (vin plus cher, vin moins cher). */
 const MENTIONS: Partial<Record<string, string>> = {
@@ -48,8 +49,11 @@ export default async function Propositions({
                   <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={100} hauteur={100} />
                   <div className="infos">
                     {MENTIONS[motif] && <div className="mention">{MENTIONS[motif]}</div>}
-                    <div className="nom">{vin.libelle}</div>
-                    <div className="sous">{sousTitreVin(vin, true)}</div>
+                    {(() => {
+                      // Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages.
+                      const t = titreCarte({ ...vin, producteur: vin.producteur_nom ?? vin.producteur_texte });
+                      return <><div className="nom">{t.titre}</div>{t.sousTitre && <div className="sous">{t.sousTitre}</div>}</>;
+                    })()}
                     {accord.explication && <div className="pourquoi">{accord.explication}</div>}
                     <div className="prix" style={{ fontSize: 16 }}>
                       {tarifs.get(vin.id)?.length ? <>
