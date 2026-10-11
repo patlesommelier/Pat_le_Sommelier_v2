@@ -44,7 +44,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               <tbody>
                 {affiches.map((p) => (
                   <tr key={p.id} className={p.id === choisi?.id ? 'choisi' : ''}>
-                    <td><div className="nom">{p.nom}</div><div className="petit">Accueil : {p.nom_court ?? p.nom}{p.description_cuisine ? ' · description détaillée' : ''}</div></td>
+                    <td><div className="nom">{p.nom}</div>{p.nom_court && p.nom_court !== p.nom && <div className="petit">Nom affiché dans l’app : {p.nom_court}</div>}</td>
                     <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{p.prix_variantes ?? euros(p.prix)}</td>
                     <td>{!p.actif ? <Etat type="defaut">Masqué</Etat> : p.modifie_bo ? <Etat type="ok">Modifié</Etat> : <Etat type="ok">En ligne</Etat>}</td>
                     <td className="droite"><Link className="lien-ligne" href={lien({ plat: p.id })} aria-label={`Modifier ${p.nom}`}>Modifier</Link></td>
