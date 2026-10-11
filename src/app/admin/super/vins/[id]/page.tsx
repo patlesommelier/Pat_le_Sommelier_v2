@@ -5,6 +5,7 @@ import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { ficheCuvee } from '@/lib/super/donnees';
 import { requete } from '@/lib/db';
+import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
 
 const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux']];
@@ -59,13 +60,15 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
             <h2>Sur les cartes des restaurants</h2>
             {c.vins.length ? (
               <div className="tableau"><table style={{ minWidth: 520 }}>
-                <thead><tr><th>Restaurant</th><th>Vin sur la carte</th><th>Millésime</th><th className="droite">Prix</th><th /></tr></thead>
+                <thead><tr><th>Restaurant</th><th>Vin sur la carte</th><th>Millésime</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
                 <tbody>{c.vins.map((v) => (
                   <tr key={v.id}>
                     <td>{v.restaurant}</td>
                     <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} /><div><b>{v.libelle}</b><div className="petit discret">{v.id}{v.format !== '75 cl' ? ` · ${v.format}` : ''}</div></div></div></td>
                     <td>{v.millesime ?? '—'}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : '—'}</td>
+                    <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteVin(v, true); return <Etat type={k}>{l}</Etat>; })()}
+                      {v.etiquette_statut === 'echec' && v.etiquette_erreur && <div className="petit discret">{v.etiquette_erreur.slice(0, 120)}</div>}</td>
                     <td className="droite"><Link className="lien-ligne" href={`/admin/${v.restaurant_id}/carte/${encodeURIComponent(v.id)}`}>Ouvrir</Link></td>
                   </tr>
                 ))}</tbody>
@@ -82,6 +85,7 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
         <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
           <PhotoEtiquette key={c.etiquette_url ?? 'sans'} url={c.etiquette_url}>
             <span className="libelle">Étiquette de la base</span>
+            {(() => { const [l, k] = etatEtiquetteBase({ ...c, statuts_cartes: c.vins.map((v) => v.etiquette_statut).filter((s): s is string => Boolean(s)) }); return <Etat type={k}>{l}</Etat>; })()}
             <span className="petit discret">Reprise par les vins des cartes qui n’ont pas leur propre photo.</span>
             {c.etiquette_url && <label className="case" style={{ margin: 0 }}><input type="checkbox" name="retirer_etiquette" /><span>Retirer l’étiquette</span></label>}
           </PhotoEtiquette>

@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
 import { rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
 import { ajouterCuveeDepuisCarte } from '../actions';
+import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
 
@@ -45,32 +46,33 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
       {sp.vin && sp.ok && <RetourVin vinId={sp.vin} message={sp.ok} />}
       {carte ? (
         <div className="tableau">
-          <table style={{ minWidth: 860 }}>
-            <thead><tr><th>Vin de la carte</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th>Base de Pat</th><th /></tr></thead>
+          <table className="table-vins" style={{ minWidth: 820 }}>
+            <thead><tr><th>Vin de la carte</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th>Étiquette</th><th>Base de Pat</th><th /></tr></thead>
             <tbody>
               {carte.lignes.map((v) => (
                 <tr key={v.id} id={`vin-${v.cuvee_id ?? v.id}`} className={(v.cuvee_id ?? v.id) === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
-                  <td style={{ minWidth: 200 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}</div></div></div></td>
+                  <td style={{ minWidth: 180 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}</div></div></div></td>
                   <td>{v.producteur_id ? <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`}>{v.producteur}</Link> : (v.producteur ?? '—')}</td>
                   <td>{v.appellation ?? '—'}</td>
                   <td className="petit" style={{ maxWidth: 160 }}>{v.cepages ?? '—'}</td>
+                  <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteVin(v, true); return <Etat type={k}>{l}</Etat>; })()}</td>
                   <td>{v.cuvee_statut ? <Etat type={STATUT[v.cuvee_statut]?.[1] ?? ''}>{STATUT[v.cuvee_statut]?.[0] ?? v.cuvee_statut}</Etat> : <Etat type="">Pas dans la base</Etat>}</td>
                   <td className="droite">
                     {v.cuvee_id ? <Link className="lien-ligne" href={`/admin/super/vins/${encodeURIComponent(v.cuvee_id)}?${new URLSearchParams({ retour: ici })}`}>Ouvrir</Link>
                       : v.producteur_id ? (
-                        <form action={ajouterCuveeDepuisCarte.bind(null, v.id)}><input type="hidden" name="retour" value={ici} /><button className="btn sec petit">Ajouter à la base</button></form>
-                      ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}`} title="Le vin doit d'abord être relié à un producteur">Relier le producteur</Link>}
+                        <form action={ajouterCuveeDepuisCarte.bind(null, v.id)}><input type="hidden" name="retour" value={ici} /><button className="btn sec petit" title="Ajouter ce vin à la base de Pat">Ajouter</button></form>
+                      ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}`} title="Le vin doit d'abord être relié à un producteur">Relier</Link>}
                   </td>
                 </tr>
               ))}
-              {!carte.lignes.length && <tr><td colSpan={6} className="discret">Aucun vin ne correspond.</td></tr>}
+              {!carte.lignes.length && <tr><td colSpan={7} className="discret">Aucun vin ne correspond.</td></tr>}
             </tbody>
           </table>
         </div>
       ) : (
       <div className="tableau">
-        <table style={{ minWidth: 860 }}>
-          <thead><tr><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Statut</th><th /></tr></thead>
+        <table className="table-vins" style={{ minWidth: 820 }}>
+          <thead><tr><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Étiquette</th><th>Statut</th><th /></tr></thead>
           <tbody>
             {lignes.map((c) => {
               const fiche = `/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: ici })}`;
@@ -81,12 +83,13 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                   <td>{c.appellation ?? '—'}</td>
                   <td className="petit" style={{ maxWidth: 160 }}>{c.cepages ?? '—'}</td>
                   <td className="droite">{c.sur_cartes || '—'}</td>
+                  <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteBase(c); return <Etat type={k}>{l}</Etat>; })()}</td>
                   <td><Etat type={STATUT[c.statut]?.[1] ?? ''}>{STATUT[c.statut]?.[0] ?? c.statut}</Etat></td>
                   <td className="droite"><Link className="lien-ligne" href={fiche}>Ouvrir</Link></td>
                 </tr>
               );
             })}
-            {!lignes.length && <tr><td colSpan={7} className="discret">Aucun vin ne correspond.</td></tr>}
+            {!lignes.length && <tr><td colSpan={8} className="discret">Aucun vin ne correspond.</td></tr>}
           </tbody>
         </table>
       </div>
