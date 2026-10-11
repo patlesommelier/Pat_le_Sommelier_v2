@@ -3,12 +3,15 @@
 import { NextResponse } from 'next/server';
 import { exigerAcces } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
+import { surveillerPreparation } from '@/lib/inscription/adaptateurs';
 
 export const dynamic = 'force-dynamic';
 
 export async function GET(_: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   await exigerAcces(id);
+  // Préparation qui n'avance plus (travailleur coupé, plat abandonné) : relancée d'ici, sans attendre personne.
+  await surveillerPreparation(id).catch((e) => console.error('[preparation] surveillance', e));
   const [r] = await requete<{ statut: string; total: number; prets: number; en_cours: boolean; scanne: boolean }>(
     `select r.statut, r.premier_scan_le is not null as scanne,
             (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif) as total,

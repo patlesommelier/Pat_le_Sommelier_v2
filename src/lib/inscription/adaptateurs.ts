@@ -3,7 +3,7 @@
 // création des producteurs proposés et lancement de la préparation des accords (file existante).
 import 'server-only';
 import { requete } from '../db';
-import { creerLot, modeleRapide, PLATS_EN_PARALLELE, travailler } from '../generation/file';
+import { creerLot, finirMisesEnPlace, libererTachesBloquees, modeleRapide, PLATS_EN_PARALLELE, travailler } from '../generation/file';
 import { creerLotPresentations, presentationsManquantes, travaillerPresentations } from '../generation/file-presentations';
 import type { Plat, Vin, VinRapproche } from './donnees';
 import { mots, norm, producteurConnu, rapprocherVins as rapprocher } from './lecture';
@@ -80,6 +80,31 @@ export async function lancerPreparation(restaurantId: string, platIds: string[],
   // Hors Netlify : le serveur traite les files lui-même, sans faire attendre la page.
   if (crees && !lance(accords)) void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[inscription]', e));
   if (presentations && !lance(pres)) void travaillerPresentations(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[inscription]', e));
+}
+
+/**
+ * Surveillance de la préparation d'un restaurant (appelée par la page d'attente du QR code, à chaque rafraîchissement) :
+ * si plus rien n'a bougé depuis 3 minutes alors qu'il reste des plats, les plats abandonnés sont repris et des travailleurs
+ * relancés ; s'il ne reste rien à faire, la fin de la mise en place est vérifiée (en service, ou relance des plats sans accord).
+ */
+export async function surveillerPreparation(restaurantId: string) {
+  const [e] = await requete<{ attente: number; en_cours: number; immobile: boolean }>(
+    `select count(*) filter (where statut = 'en_attente')::int as attente, count(*) filter (where statut = 'en_cours')::int as en_cours,
+            coalesce(max(greatest(cree_le, debut_le, fin_le)) < now() - interval '3 minutes', true) as immobile
+       from generation_accords
+      where restaurant_id = $1 and exists (select 1 from restaurant r where r.id = $1 and r.statut = 'mise_en_place')
+     having count(*) > 0`, [restaurantId]);
+  if (!e?.immobile) return;
+  await libererTachesBloquees(requete);
+  const [{ attente }] = await requete<{ attente: number }>(
+    `select count(*)::int as attente from generation_accords where restaurant_id = $1 and statut = 'en_attente'`, [restaurantId]);
+  const aFaire = attente || (e.en_cours ? 0 : await finirMisesEnPlace(requete));
+  if (!aFaire) return;
+  console.log(`[preparation] ${restaurantId} : rien n'avançait, ${aFaire} plat(s) relancé(s)`);
+  const base = origineSite();
+  const statuts = await Promise.all(Array.from({ length: Math.min(PLATS_EN_PARALLELE, aFaire) }, () =>
+    base ? fetch(`${base}/.netlify/functions/generer-accords-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0) : Promise.resolve(0)));
+  if (!statuts.some((s) => s === 202 || s === 200)) void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((err) => console.error('[preparation]', err));
 }
 
 export type { Plat };

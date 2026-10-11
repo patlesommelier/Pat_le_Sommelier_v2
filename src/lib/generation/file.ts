@@ -7,16 +7,34 @@ import { randomUUID } from 'node:crypto';
 import { regenererAccordsPlat, type Requete } from './accords';
 import { clientClaude, modeleAccords } from '../claude';
 
-/** Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu. */
-const BLOQUE_APRES = "20 minutes";
+/**
+ * Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu : une fonction Netlify
+ * d'arrière-plan est coupée net à 15 minutes, même au milieu d'un plat.
+ */
+const BLOQUE_APRES = "16 minutes";
+
+/**
+ * Plats abandonnés par un travailleur coupé : remis en attente une fois (un autre travailleur les reprend),
+ * en erreur la deuxième fois (les relances automatiques ou le super-admin prennent le relais).
+ * Sans cela, un plat resté « en cours » empêche pour toujours la fin de la préparation (et le QR code).
+ */
+export async function libererTachesBloquees(q: Requete) {
+  const r = await q<{ id: number }>(
+    `update generation_accords set
+            statut = case when coalesce(message, '') like 'repris%' then 'erreur' else 'en_attente' end,
+            message = case when coalesce(message, '') like 'repris%' then 'interrompu deux fois (délai dépassé)' else 'repris après une interruption' end,
+            fin_le = case when coalesce(message, '') like 'repris%' then now() end
+      where statut = 'en_cours' and debut_le < now() - interval '${BLOQUE_APRES}'
+      returning id`);
+  return r.length;
+}
 
 /** Passe rapide de l'inscription et relances automatiques : même modèle que les accords (Sonnet). */
 export const modeleRapide = () => process.env.ANTHROPIC_MODEL_RAPIDE || modeleAccords();
 
 export async function creerLot(q: Requete, restaurantId: string, platIds: string[], demandePar: string,
   { modele, vins }: { modele?: string; vins?: string[] } = {}) {
-  await q(`update generation_accords set statut = 'erreur', message = 'interrompu (délai dépassé)', fin_le = now()
-            where statut = 'en_cours' and debut_le < now() - interval '${BLOQUE_APRES}'`);
+  await libererTachesBloquees(q);
   const lot = randomUUID();
   // `vins` : seulement ces vins (vin ajouté) ; sinon toute la carte. Un plat n'est pas demandé deux fois :
   // - toute la carte : s'il est déjà en attente ou en cours pour toute la carte ;
@@ -79,6 +97,7 @@ async function avecReprises<T>(f: () => Promise<T>, finAvant: number, quoi: stri
  * Renvoie le nombre de tâches encore en attente (à reprendre par un autre passage).
  */
 export async function travailler(q: Requete, { finAvant, modele = modeleAccords(), client = clientClaude({ maxRetries: 6 }) }: { finAvant: number; modele?: string; client?: Anthropic }) {
+  await libererTachesBloquees(q);
   for (;;) {
     for (let t: Tache | null = await prendre(q); t; t = Date.now() < finAvant ? await prendre(q) : null) {
       try {

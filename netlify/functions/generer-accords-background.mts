@@ -2,12 +2,13 @@
  * Fonction Netlify d'arrière-plan (suffixe « -background » : réponse 202 immédiate, jusqu'à 15 minutes de travail).
  * Appelée par le back-office après un clic « Régénérer » : elle traite la file generation_accords, plat par plat.
  * Elle ne fait que des tâches déjà demandées par un utilisateur connecté : l'appeler sans tâche en attente ne fait rien.
- * Après 12 minutes, elle se relance elle-même s'il reste des plats.
+ * Après 9 minutes, elle ne prend plus de nouveau plat (un plat peut demander plusieurs minutes, et la fonction est
+ * coupée net à 15 minutes) et se relance elle-même s'il reste des plats.
  */
 import pg from 'pg';
 import { travailler } from '../../src/lib/generation/file';
 
-const DUREE_MAX_MS = 12 * 60 * 1000;
+const DUREE_MAX_MS = 9 * 60 * 1000;
 
 export default async (req: Request) => {
   const url = process.env.DATABASE_URL;
