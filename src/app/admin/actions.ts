@@ -470,6 +470,19 @@ async function regenerer(resto: string, platIds: string[], retour: Record<string
   redirect(avec(`/admin/${resto}/accords`, { ...retour, regeneration: crees ? '1' : 'deja' }));
 }
 
+/**
+ * « Régénérer tous les accords » sans recharger la page : la file est créée et les travailleurs lancés ;
+ * le bloc d'avancement (RegenerationAccords) suit la régénération et rafraîchit la page une fois à la fin.
+ */
+export async function lancerRegenerationTout(resto: string): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  if (!process.env.ANTHROPIC_API_KEY) return { erreur: 'Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.' };
+  const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
+  const { crees } = await creerLot(requete, resto, plats.map((p) => p.id), u.email);
+  if (crees) await lancerTravailleurs(crees);
+  return crees ? { ok: 'Régénération lancée.' } : { ok: 'Une régénération est déjà en cours.' };
+}
+
 export async function regenererTout(resto: string) {
   await exigerAcces(resto);
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);

@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { changerNote, modifierCommentaire, regenererTout, relancerPlatsSansAccord, validerPlat, validerTout } from '../../actions';
-import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
+import { changerNote, lancerRegenerationTout, modifierCommentaire, relancerPlatsSansAccord, validerPlat, validerTout } from '../../actions';
+import { BoutonRegenerer, SuiviRegeneration as SuiviEnDirect } from '@/components/admin/RegenerationAccords';
 import { ChoixNote } from '@/components/admin/ChoixNote';
 import { Icone } from '@/components/admin/Icone';
-import { PatAttente } from '@/components/PatAttente';
 import { Entete, Etat, Message, Points, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getPlatsBO, getResume, getStatsAccordsParPlat } from '@/lib/admin/donnees';
@@ -52,9 +51,10 @@ export default async function Accords({ params, searchParams }: { params: Promis
         <div className="carte-bo sticker pile">
           <h2>Les accords ne sont pas encore générés</h2>
           <p className="sous">Pat peut noter chaque vin de votre carte sur chaque plat et écrire le commentaire d’accord. Comptez quelques minutes pour toute la carte.</p>
-          <form action={regenererTout.bind(null, resto)}><button className="btn"><Icone nom="reset" taille={18} />Générer tous les accords</button></form>
+          <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}><BoutonRegenerer action={lancerRegenerationTout.bind(null, resto)} className="btn"><Icone nom="reset" taille={18} />Générer tous les accords</BoutonRegenerer></span>
         </div>
         <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
+        <SuiviEnDirect resto={resto} initial={etat ? { total: etat.total, finis: etat.faits + etat.erreurs.length, termine: etat.termine } : null} />
       </>
     );
   }
@@ -103,13 +103,14 @@ export default async function Accords({ params, searchParams }: { params: Promis
         <span className="ligne-actions"><Etat type="propose">{resume.accords_proposes.toLocaleString('fr-BE')} à relire</Etat><Etat type="ok">{resume.accords_valides.toLocaleString('fr-BE')} validés</Etat></span>
         {resume.accords_proposes > 0 && <form action={validerTout.bind(null, resto)}><button className="btn petit"><Icone nom="check" taille={18} />Tout valider</button></form>}
         <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}>
-          <form action={regenererTout.bind(null, resto)}><button className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</button></form>
+          <BoutonRegenerer action={lancerRegenerationTout.bind(null, resto)} className="btn sec petit" title="Pat recalcule les notes et les commentaires de tous les plats ; vos notes changées à la main sont gardées."><Icone nom="reset" taille={18} />Régénérer tous les accords</BoutonRegenerer>
           {derniere?.le && <span className="discret" style={{ fontSize: 12.5 }}>Dernière génération : {dateHeure(derniere.le)}</span>}
           {(!etat || etat.termine) && platsAnciens > 0 && <span style={{ fontSize: 12.5, color: 'var(--ocre)', maxWidth: 360 }}>
             {platsAnciens} plat{platsAnciens > 1 ? 's gardent' : ' garde'} des commentaires d’origine{raison ? ` (${raison})` : ''} : relancez la régénération.</span>}
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
+        <SuiviEnDirect resto={resto} initial={etat ? { total: etat.total, finis: etat.faits + etat.erreurs.length, termine: etat.termine } : null} />
       {interne && rapides > 0 && (!etat || etat.termine) && (
         <div className="carte-bo pile" style={{ gap: 6, padding: '14px 20px', borderColor: 'var(--ocre)' }}>
           <strong>Accords de la passe rapide sur {rapides} plat{rapides > 1 ? 's' : ''}</strong>
@@ -279,22 +280,8 @@ function Commentaire({ resto, platId, vinId, ligne, tous, grand }: { resto: stri
 
 /** Suivi d'une régénération en cours : progression, rafraîchie toute seule. */
 function SuiviRegeneration({ etat, demande, erreur }: { etat: EtatLot | null; demande?: string; erreur?: string }) {
+  // L'avancement est suivi en direct par SuiviEnDirect (sans recharger la page) ; ici, seulement les messages.
   if (erreur) return <Message erreur={erreur} />;
-  if (!etat) return null;
-  // Une fois terminée, plus de bilan : la date de la dernière génération (sous le bouton) suffit.
-  if (etat.termine) return null;
-  const finis = etat.faits + etat.erreurs.length;
-  return (
-    <div className="carte-bo" style={{ display: 'flex', gap: 18, alignItems: 'center', padding: '16px 20px' }} aria-live="polite">
-      <ActualisationAuto />
-      <PatAttente taille={56} />
-      <div className="pile" style={{ gap: 6 }}>
-        <strong>Pat régénère les accords…</strong>
-        <span className="discret">
-          {`${finis} plat${finis > 1 ? 's' : ''} sur ${etat.total} · comptez une à deux minutes par plat, six plats à la fois`}
-          {demande === 'deja' ? ' Une régénération est déjà en cours.' : ''}
-        </span>
-      </div>
-    </div>
-  );
+  if (demande === 'deja' && etat && !etat.termine) return <Message ok="Une régénération est déjà en cours." />;
+  return null;
 }
