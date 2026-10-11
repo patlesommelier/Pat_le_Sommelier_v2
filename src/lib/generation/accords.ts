@@ -19,6 +19,17 @@ import { controlerPlat, MOTS_INTERDITS, MOTS_MAX, MOTS_MIN, type VinAControler }
 export type Requete = <T>(sql: string, params?: unknown[]) => Promise<T[]>;
 
 const CORRECTIONS = 3;
+/**
+ * Vins par appel : une longue carte est notée par paquets, en parallèle (chaque plat va 3 à 4 fois plus vite ;
+ * la consigne commune, en cache, n'est pas renvoyée en entier).
+ */
+export const VINS_PAR_PAQUET = 25;
+const paquets = <T,>(liste: T[], n = VINS_PAR_PAQUET) => {
+  const k = Math.max(1, Math.ceil(liste.length / n)), taille = Math.ceil(liste.length / k); // paquets de taille égale
+  return Array.from({ length: k }, (_, i) => liste.slice(i * taille, (i + 1) * taille)).filter((p) => p.length);
+};
+// Angles proposés à chaque paquet : des paquets écrits en parallèle ne commencent pas leurs commentaires de la même façon.
+const ANGLES = ['la texture', 'un écho aromatique', 'la structure (acidité, tanins, bulle)', 'l’origine (terroir, vigneron)', 'le moment du repas', 'le contraste'];
 
 interface VinGen extends VinCtx { appellation: string | null; ordre: number }
 interface AccordActuel { plat_id: string; vin_id: string; note: number | null; origine: string; statut: string }
@@ -172,19 +183,21 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     return d;
   };
 
-  for (const r of await appeler(`${fichePlat}\n\nVINS À NOTER ET COMMENTER (${carte.length})\n${carte.map((v) => ligneVin(v)).join('\n')}`)) {
-    if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
-  }
+  const premiers = paquets(carte);
+  const lus = await Promise.all(premiers.map((p, i) => appeler(`${fichePlat}\n\n`
+    + (premiers.length > 1 ? `Paquet ${i + 1} sur ${premiers.length} de la carte : privilégie d'abord ${ANGLES[i % ANGLES.length]} pour ouvrir tes commentaires.\n\n` : '')
+    + `VINS À NOTER ET COMMENTER (${p.length})\n${p.map((v) => ligneVin(v)).join('\n')}`)));
+  for (const r of lus.flat()) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
   let defauts = defautsDe();
   // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.
   const presse = () => options.jusqua !== undefined && Date.now() > options.jusqua;
   for (let essai = 1; essai <= CORRECTIONS && defauts.size && !presse(); essai++) {
     const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id) && reponses.get(v.id)!.commentaire).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
-    const fautifs = carte.filter((v) => defauts.has(v.id));
-    for (const r of await appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n` +
-      `VINS À REPRENDRE (${fautifs.length})\n${fautifs.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`)) {
-      if (defauts.has(r.vin)) reponses.set(r.vin, r);
-    }
+    const fautifs = paquets(carte.filter((v) => defauts.has(v.id)));
+    const repris = await Promise.all(fautifs.map((p, i) => appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n`
+      + (fautifs.length > 1 ? `Ouvre tes commentaires d'abord par ${ANGLES[(i + essai) % ANGLES.length]}.\n\n` : '')
+      + `VINS À REPRENDRE (${p.length})\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`)));
+    for (const r of repris.flat()) if (defauts.has(r.vin)) reponses.set(r.vin, r);
     defauts = defautsDe();
   }
 
