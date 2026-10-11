@@ -265,6 +265,10 @@ export async function enregistrerCuvee(id: string, f: FormData) {
       where id = $1`,
     [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, terroir,
       txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette, appellation]);
+  // Couleur changée dans la base : les vins des cartes reliés changent de catégorie aussi (la carte de l'app suit).
+  if (couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur)) {
+    await requete('update vin_carte set couleur = $2::couleur_vin where cuvee_id = $1 and couleur::text <> $2', [id, couleur]);
+  }
   // Étiquette de la cuvée : reprise par les vins des cartes reliés qui n'ont pas leur propre photo ; retirée de ceux qui l'avaient reprise.
   if (etiquette) {
     await requete(

@@ -69,6 +69,8 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
         <section className="pile" style={{ gap: 16, minWidth: 0 }}>
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Le vin</legend>
+            <div className="champ" style={{ maxWidth: 260 }}><label htmlFor="couleur">Catégorie</label>
+              <select id="couleur" name="couleur" defaultValue={v.couleur}>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
             <IntituleVin initial={v.libelle} />
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
               <div className="champ"><label htmlFor="appellation_texte">Appellation</label>

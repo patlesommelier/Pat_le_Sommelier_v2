@@ -134,6 +134,7 @@ export async function ajouterPlat(resto: string, f: FormData): Promise<Retour> {
   redirect(avec(`/admin/${resto}/menu`, { plat: id, ajout: '1' }));
 }
 
+const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];
 const slug = (s: string) => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
 
 // ───────── Carte des vins ─────────
@@ -166,6 +167,11 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
     await requete(
       `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6 where id = $1 and restaurant_id = $2`,
       [vinId, resto, txt(f, 'millesime'), nombre(f, 'prix'), nombre(f, 'prix_verre'), f.get('disponible') === 'on']);
+  }
+  // Couleur (catégorie de la carte : bulles, blancs… sans alcool) : pour toutes les contenances du vin.
+  const couleur = txt(f, 'couleur');
+  if (couleur && COULEURS_VIN.includes(couleur)) {
+    await requete('update vin_carte set couleur = $3::couleur_vin where restaurant_id = $1 and id = any($2)', [resto, await memeVin(resto, vinId), couleur]);
   }
   // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
   const partagees = await partagerEtiquettes(requete, { vins: [vinId], nouvellePhoto: etiquette ? vinId : undefined })
