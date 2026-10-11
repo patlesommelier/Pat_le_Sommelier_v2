@@ -196,7 +196,7 @@ export async function ficheCuvee(id: string) {
 
 export interface VinCarteBase {
   id: string; libelle: string; millesime: string | null; couleur: string; producteur_id: string | null; producteur: string | null;
-  appellation: string | null; cepages: string | null; etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null;
+  appellation: string | null; cepages: string | null; etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur: string | null;
   cuvee_id: string | null; cuvee_statut: string | null; total: number;
 }
 
@@ -209,7 +209,7 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<VinCarteBase>(
     `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur,
-            coalesce(v.appellation_texte, t.nom) as appellation, v.cepages, v.etiquette_url, v.etiquette_source, v.etiquette_statut, c.id as cuvee_id, c.statut::text as cuvee_statut,
+            coalesce(v.appellation_texte, t.nom) as appellation, v.cepages, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut,
             count(*) over ()::int as total
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee c on c.id = v.cuvee_id

@@ -176,25 +176,53 @@ export async function mettreEnFile(q: Requete, restaurantId: string, { vins, max
          from vin_carte v left join cuvee c on c.id = v.cuvee_id
         where v.restaurant_id = $1 and v.disponible and v.etiquette_url is null
           and ($2::text[] is null or v.id = any($2))
-          and (v.etiquette_statut is null or ($3 and v.etiquette_statut = 'echec'))
+          and (v.etiquette_statut is null or ($3 and v.etiquette_statut = 'echec')
+               or (v.etiquette_statut = 'introuvable' and v.etiquette_erreur = $5
+                   and (v.producteur_id is not null or coalesce(v.producteur_texte, '') !~* '^(non\\M|$)')))
           and c.etiquette_url is null
-          and not exists (select 1 from vin_carte o where o.etiquette_statut in ('a_demander', 'demandee', 'introuvable')
+          and not exists (select 1 from vin_carte o where o.id <> v.id and o.etiquette_statut in ('a_demander', 'demandee', 'introuvable')
+                            and coalesce(o.etiquette_erreur, '') <> $5
                             and ((v.cuvee_id is not null and o.cuvee_id = v.cuvee_id)
                                  or (o.restaurant_id = v.restaurant_id and lower(o.libelle) = lower(v.libelle))))
         order by coalesce(v.cuvee_id, lower(v.libelle)), v.ordre
         limit $4)
      update vin_carte v set etiquette_statut = 'a_demander', etiquette_erreur = null from candidats c where v.id = c.id returning v.id`,
-    [restaurantId, vins ?? null, relancer, max]);
+    [restaurantId, vins ?? null, relancer, max, SANS_PRODUCTEUR]);
   return r.length;
 }
 
-/** Texte envoyé à Wine Labs : producteur et nom du vin tel qu'il figure sur la carte (appellation et cuvée). */
-export function requeteTexte(v: { libelle: string; producteur: string | null }) {
-  const libelle = v.libelle.trim();
-  if (!v.producteur) return libelle;
-  const norm = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
-  return norm(libelle).includes(norm(v.producteur)) ? libelle : `${v.producteur} ${libelle}`;
+const sansAccent = (s: string) => s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+
+/** Producteur tel qu'on le donne à Wine Labs : sans notes (« (Maison Piron) », « probable, à confirmer »), ni guillemets. */
+export function producteurPropre(p: string | null | undefined) {
+  const t = (p ?? '').replace(/\(.*?\)/g, '').replace(/[«»"“”]/g, '').replace(/\s+/g, ' ').trim();
+  return !t || /^non\b|inconnu|à préciser|a preciser|non indiqu/i.test(t) ? null : t;
 }
+
+/** Nom tel qu'écrit sur la carte, nettoyé : tirets de séparation, guillemets, abréviations (« Dom. », « Ch. »). */
+const libellePropre = (s: string) => s.replace(/[«»"“”]/g, '').replace(/\s+[-–—]\s+/g, ' ')
+  .replace(/\bDom\.\s*/g, 'Domaine ').replace(/\bCh\.\s*/g, 'Château ').replace(/\s+/g, ' ').trim();
+
+/**
+ * Texte envoyé à Wine Labs : producteur, nom du vin tel qu'il figure sur la carte (appellation et cuvée),
+ * et l'appellation quand le nom ne la dit pas.
+ */
+export function requeteTexte(v: { libelle: string; producteur: string | null; appellation?: string | null }) {
+  const libelle = libellePropre(v.libelle);
+  const producteur = producteurPropre(v.producteur);
+  const parties = [producteur && !sansAccent(libelle).includes(sansAccent(producteur)) ? producteur : '', libelle,
+    v.appellation && !sansAccent(libelle).includes(sansAccent(v.appellation)) ? v.appellation.replace(/\s+(AOC|AOP|DOC|DOCG|IGP|IGT)$/i, '') : ''];
+  return parties.filter(Boolean).join(' ');
+}
+
+/**
+ * Un vin que Wine Labs peut identifier : il faut connaître son producteur (sans lui, « Rully », « Pinot noir »
+ * ou le vin de la maison ne désignent aucun vin précis, et Wine Labs répond « No canonical wine match »).
+ */
+export const identifiable = (v: { producteur: string | null }) => Boolean(producteurPropre(v.producteur));
+
+/** Motif gardé sur un vin non envoyé faute de producteur : il repart en file dès que son producteur est connu. */
+export const SANS_PRODUCTEUR = 'Producteur inconnu : précisez-le dans la fiche du vin pour lancer la recherche, ou photographiez l’étiquette.';
 
 /**
  * Envoie les demandes en file, une à une, jusqu'à `finAvant`. Renvoie le nombre de vins encore en file
@@ -202,19 +230,35 @@ export function requeteTexte(v: { libelle: string; producteur: string | null }) 
  */
 export async function traiterFile(q: Requete, { finAvant }: { finAvant: number }) {
   while (Date.now() < finAvant) {
-    const [v] = await q<{ id: string; libelle: string; producteur: string | null; millesime: string | null }>(
+    const [v] = await q<{ id: string; libelle: string; producteur: string | null; millesime: string | null; appellation: string | null; nom_vin: string | null }>(
       `update vin_carte set etiquette_statut = 'demandee'
         where id = (select id from vin_carte where etiquette_statut = 'a_demander' order by restaurant_id, ordre limit 1 for update skip locked)
-        returning id, libelle, coalesce((select nom from producteur p where p.id = producteur_id), producteur_texte) as producteur, millesime`);
+        returning id, libelle, coalesce((select nom from producteur p where p.id = producteur_id), producteur_texte) as producteur, millesime,
+                  coalesce(appellation_texte, (select nom from terroir t where t.id = appellation_id)) as appellation, nom_vin`);
     if (!v) break;
+    if (!identifiable(v)) {
+      // Sans producteur, Wine Labs ne peut pas reconnaître le vin : pas de demande, le restaurant le photographie.
+      await q(`update vin_carte set etiquette_statut = 'introuvable', etiquette_erreur = $2, etiquette_erreur_le = now() where id = $1 and etiquette_url is null`, [v.id, SANS_PRODUCTEUR]);
+      continue;
+    }
     try {
       const millesime = v.millesime?.match(/\b(19|20)\d{2}\b/)?.[0];
-      const rep = await appelerWineLabs('POST', '/wine_labels', {
-        query: requeteTexte(v), label_type: 'front_label',
+      const demander = (query: string) => appelerWineLabs('POST', '/wine_labels', {
+        query, label_type: 'front_label',
         // Étiquette de la cuvée, partagée entre millésimes : la meilleure image validée, millésime visible ou non.
         vintage_treatment: 'any', ...(millesime ? { vintage: millesime } : {}),
         client_request_id: v.id,
       });
+      // Requête complète, puis, si Wine Labs ne trouve pas, une plus simple : producteur et nom du vin (ou appellation).
+      const complete = requeteTexte(v);
+      const simple = [producteurPropre(v.producteur), v.nom_vin || v.appellation].filter(Boolean).join(' ');
+      let rep: unknown;
+      try {
+        rep = await demander(complete);
+      } catch (e) {
+        if (!/\b404\b/.test(String(e)) || !simple || sansAccent(simple) === sansAccent(complete)) throw e;
+        rep = await demander(simple);
+      }
       const d = lireRequete(rep);
       if (!d.id) throw new Error(`réponse de Wine Labs sans demande : ${JSON.stringify(rep).slice(0, 200)}`);
       const r = await appliquerReponse(q, { ...d, vinId: d.vinId ?? v.id }, rep);
@@ -227,7 +271,11 @@ export async function traiterFile(q: Requete, { finAvant }: { finAvant: number }
         return 0;
       }
       const message = (e as Error).message ?? String(e);
-      if (!/copie impossible/.test(message)) await noterEchec(q, v.id, /timeout|aborted/i.test(message) ? 'Wine Labs n’a pas répondu à temps (30 s).' : message);
+      if (/\b404\b/.test(message)) {
+        // Vin inconnu de Wine Labs : ce n'est pas une panne, le vin est « introuvable » (à photographier).
+        await q(`update vin_carte set etiquette_statut = 'introuvable', etiquette_erreur = $2, etiquette_erreur_le = now() where id = $1 and etiquette_url is null`,
+          [v.id, 'Wine Labs ne connaît pas ce vin : à photographier.']);
+      } else if (!/copie impossible/.test(message)) await noterEchec(q, v.id, /timeout|aborted/i.test(message) ? 'Wine Labs n’a pas répondu à temps (30 s).' : message);
     }
   }
   const [{ n }] = await q<{ n: number }>(`select count(*)::int as n from vin_carte where etiquette_statut = 'a_demander'`);

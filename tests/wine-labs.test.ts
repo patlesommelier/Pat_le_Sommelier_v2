@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { createHmac } from 'node:crypto';
-import { lireRequete, requeteTexte } from '../src/lib/etiquettes/wine-labs';
+import { identifiable, lireRequete, requeteTexte } from '../src/lib/etiquettes/wine-labs';
 
 // Exemple de la documentation Wine Labs (webhook « wine_label.fulfilled »).
 const livraison = {
@@ -66,4 +66,13 @@ test('signature Wine Labs avec espaces après la virgule et hex en majuscules', 
   const v1 = createHmac('sha256', secret).update(`${t}.${corps}`).digest('hex').toUpperCase();
   assert.equal(verifierSignature(corps, new Headers({ 'X-WineLabs-Signature': `t=${t}, v1=${v1}` }), secret).ok, true);
   assert.equal(verifierSignature(corps, new Headers({ 'X-WineLabs-Signature': `t=${t}, v1=${v1}` }), 'whsec_autre').ok, false);
+});
+
+test('requête Wine Labs : producteur nettoyé, abréviations, appellation ajoutée ; sans producteur, pas de demande', () => {
+  assert.equal(requeteTexte({ libelle: 'Saint Amour - Dom. de l’Oiseau de Passage', producteur: null }), 'Saint Amour Domaine de l’Oiseau de Passage');
+  assert.equal(requeteTexte({ libelle: 'Les Valettes', producteur: 'Domaine Pierre Morey (Maison Morey, probable)', appellation: 'Saint-Nicolas-de-Bourgueil AOC' }),
+    'Domaine Pierre Morey Les Valettes Saint-Nicolas-de-Bourgueil');
+  assert.equal(identifiable({ producteur: null }), false);
+  assert.equal(identifiable({ producteur: 'Non indiqué sur la carte (à confirmer)' }), false);
+  assert.equal(identifiable({ producteur: 'Henri Bourgeois' }), true);
 });

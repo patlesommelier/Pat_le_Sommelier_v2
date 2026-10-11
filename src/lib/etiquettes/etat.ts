@@ -4,13 +4,15 @@
 export type EtatEtiquette = [string, 'ok' | 'propose' | 'attention' | ''];
 
 /** Étiquette d'un vin d'une carte de restaurant (« Votre photo » dans l'espace du restaurant, « Photo du restaurant » pour Pat). */
-export function etatEtiquetteVin(v: { etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null }, pourPat = false): EtatEtiquette {
+export function etatEtiquetteVin(v: { etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur?: string | null }, pourPat = false): EtatEtiquette {
   if (v.etiquette_source === 'restaurant') return [pourPat ? 'Photo du restaurant' : 'Votre photo', 'propose'];
   if (v.etiquette_source === 'wine_labs') return ['Wine Labs', 'ok'];
   if (v.etiquette_source === 'cuvee') return ['Base de Pat', 'ok'];
   if (v.etiquette_url) return ['Fournie', 'ok'];
   if (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander') return ['Recherche Wine Labs…', ''];
   if (v.etiquette_statut === 'echec') return ['Échec Wine Labs : à photographier', 'attention'];
+  // Pas demandé à Wine Labs faute de producteur (il ne pourrait pas reconnaître le vin).
+  if (v.etiquette_statut === 'introuvable' && v.etiquette_erreur?.startsWith('Producteur inconnu')) return ['Producteur à préciser, ou à photographier', 'attention'];
   if (v.etiquette_statut === 'introuvable') return ['Introuvable chez Wine Labs : à photographier', 'attention'];
   return ['À photographier', 'attention'];
 }
