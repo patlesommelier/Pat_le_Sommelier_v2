@@ -270,7 +270,14 @@ export async function enregistrerCuvee(id: string, f: FormData) {
     await requete(`update vin_carte set etiquette_url = null, etiquette_source = null where cuvee_id = $1 and etiquette_source = 'cuvee'`, [id]);
   }
   revalidatePath('/', 'layout');
-  redirect(avec(page, { ok: decision === 'valider' ? 'Vin validé.' : decision === 'retirer' ? 'Vin retiré de la base.' : 'Fiche enregistrée.' }));
+  if (decision === 'valider' || decision === 'retirer') {
+    // Retour sur la liste d'où l'on venait (mêmes filtres, même page), la ligne du vin centrée et mise en évidence.
+    const liste = txt(f, 'retour');
+    const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
+    const [{ nom } = { nom: 'Vin' }] = await requete<{ nom: string }>('select nom from cuvee where id = $1', [id]);
+    redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${decision === 'valider' ? 'validé' : 'retiré de la base'}.` })}`);
+  }
+  redirect(avec(page, { ok: 'Fiche enregistrée.', ...(txt(f, 'retour') ? { retour: txt(f, 'retour')! } : {}) }));
 }
 
 // ───────── Principes ─────────

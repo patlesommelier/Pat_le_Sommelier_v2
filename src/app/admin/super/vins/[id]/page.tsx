@@ -10,20 +10,23 @@ const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blanc'], 
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
 
 /** Fiche d'un vin de la base de Pat : informations, étiquette, vins des cartes reliés ; Enregistrer / Valider / Retirer. */
-export default async function FicheVinBase({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
+export default async function FicheVinBase({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string; retour?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { id } = await params;
   const sp = await searchParams;
   const c = await ficheCuvee(decodeURIComponent(id));
   if (!c) notFound();
+  // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
+  const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
 
   return (
     <>
       <Entete titre={c.nom} texte={[c.producteur, c.appellation].filter(Boolean).join(' · ')}>
-        <Link href="/admin/super/vins" className="btn sec">← Vins de la base</Link>
+        <Link href={retour} className="btn sec">← Vins de la base</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
       <form action={enregistrerCuvee.bind(null, c.id)} className="fiche-vin">
+        <input type="hidden" name="retour" value={retour} />
         <section className="pile" style={{ gap: 16, minWidth: 0 }}>
           <div className="carte-bo pile">
             <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap' }}>

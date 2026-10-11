@@ -2,10 +2,11 @@ import Link from 'next/link';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
 import { rechercherCuvees, restaurantsListe } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
+import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
-type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string };
+type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
 export default async function VinsBase({ searchParams }: { searchParams: Promise<Sp> }) {
@@ -17,6 +18,8 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
     rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', restaurant: sp.resto ?? '', surCartes, page }),
     restaurantsListe(),
   ]);
+  // Adresse de la liste telle qu'affichée (filtres et page) : la fiche y ramène après une validation.
+  const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
   const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, ...extra }).filter(([, v]) => v) as [string, string][])}`;
 
   return (
@@ -35,14 +38,15 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
         <button className="btn petit">Filtrer</button>
       </form>
 
+      {sp.vin && sp.ok && <RetourVin vinId={sp.vin} message={sp.ok} />}
       <div className="tableau">
         <table style={{ minWidth: 860 }}>
           <thead><tr><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Statut</th><th /></tr></thead>
           <tbody>
             {lignes.map((c) => {
-              const fiche = `/admin/super/vins/${encodeURIComponent(c.id)}`;
+              const fiche = `/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: ici })}`;
               return (
-                <tr key={c.id}>
+                <tr key={c.id} id={`vin-${c.id}`} className={c.id === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
                   <td style={{ minWidth: 200 }}><div className="vin-cell"><Vignette url={c.etiquette_url} /><div><Link href={fiche} className="nom">{c.nom}</Link><div className="petit">{c.couleur ? COULEURS[c.couleur] : 'Couleur à préciser'}</div></div></div></td>
                   <td><Link href={`/admin/super/producteurs/${encodeURIComponent(c.producteur_id)}`}>{c.producteur}</Link></td>
                   <td>{c.appellation ?? '—'}</td>
