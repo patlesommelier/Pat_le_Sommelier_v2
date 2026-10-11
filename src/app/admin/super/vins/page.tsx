@@ -51,7 +51,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
             <tbody>
               {carte.lignes.map((v) => (
                 <tr key={v.id} id={`vin-${v.cuvee_id ?? v.id}`} className={(v.cuvee_id ?? v.id) === sp.vin ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
-                  <td style={{ minWidth: 180 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}</div></div></div></td>
+                  <td style={{ minWidth: 180 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><b>{v.cuvee_nom ?? v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}<div className="petit">{COULEURS[v.couleur] ?? v.couleur}{v.cuvee_nom && v.cuvee_nom !== v.libelle ? ` · sur la carte : ${v.libelle}` : ''}</div></div></div></td>
                   <td>{v.producteur_id ? <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`}>{v.producteur}</Link> : (v.producteur ?? '—')}</td>
                   <td>{v.appellation ?? '—'}</td>
                   <td className="petit" style={{ maxWidth: 160 }}>{v.cepages ?? '—'}</td>

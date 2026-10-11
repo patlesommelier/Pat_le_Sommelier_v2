@@ -80,7 +80,7 @@ export async function ficheProducteur(id: string) {
         where v.producteur_id = $1 order by r.nom, v.ordre`, [id]),
     // Cuvées connues de la base de Pat.
     requete<{ id: string; nom: string; couleur: string | null; appellation: string | null; cepages: string | null; etiquette_url: string | null; source: string | null }>(
-      `select c.id, c.nom, c.couleur::text, t.nom as appellation, c.cepages, c.etiquette_url, c.source from cuvee c left join terroir t on t.id = c.appellation_id
+      `select c.id, c.nom, c.couleur::text, coalesce(c.appellation_texte, t.nom) as appellation, c.cepages, c.etiquette_url, c.source from cuvee c left join terroir t on t.id = c.appellation_id
         where c.producteur_id = $1 order by c.nom`, [id]),
     requete<{ id: string; nom: string; region: string | null; ranking_pat: number | null; statut: string }>(
       `select distinct t.id, t.nom, t.region, t.ranking_pat, t.statut::text from vin_carte v join terroir t on t.id = v.appellation_id
@@ -133,7 +133,7 @@ export async function detailsProducteurs(ids: string[]) {
          from vin_carte v join restaurant r on r.id = v.restaurant_id left join terroir t on t.id = v.appellation_id
         where v.producteur_id = any($1) order by r.nom, v.ordre`, [ids]),
     requete<{ producteur_id: string; id: string; nom: string; couleur: string | null; appellation: string | null; ranking_terroir: number | null; etiquette_url: string | null }>(
-      `select c.producteur_id, c.id, c.nom, c.couleur::text, t.nom as appellation, t.ranking_pat as ranking_terroir, c.etiquette_url
+      `select c.producteur_id, c.id, c.nom, c.couleur::text, coalesce(c.appellation_texte, t.nom) as appellation, t.ranking_pat as ranking_terroir, c.etiquette_url
          from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = any($1) order by c.nom`, [ids]),
   ]);
   const grouper = <T extends { producteur_id: string }>(l: T[]) => l.reduce((m, x) => m.set(x.producteur_id, [...(m.get(x.producteur_id) ?? []), x]), new Map<string, T[]>());
@@ -204,7 +204,7 @@ export async function ficheCuvee(id: string) {
 export interface VinCarteBase {
   id: string; libelle: string; millesime: string | null; couleur: string; producteur_id: string | null; producteur: string | null;
   appellation: string | null; cepages: string | null; etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur: string | null;
-  cuvee_id: string | null; cuvee_statut: string | null; total: number;
+  cuvee_id: string | null; cuvee_statut: string | null; cuvee_nom: string | null; total: number;
 }
 
 /**
@@ -218,12 +218,13 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
     `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur,
             -- vin relié à la base : son appellation et ses cépages de la base d'abord (ce que la fiche enregistre)
             coalesce(c.appellation_texte, tc.nom, v.appellation_texte, t.nom) as appellation, coalesce(nullif(c.cepages, ''), v.cepages) as cepages,
-            v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut,
+            v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut, c.nom as cuvee_nom,
             count(*) over ()::int as total
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee c on c.id = v.cuvee_id left join terroir tc on tc.id = c.appellation_id
       where v.restaurant_id = $1
         and ($2 = '' or ${sansAccent('v.libelle')} like '%' || ${sansAccent('$2')} || '%'
+             or ${sansAccent("coalesce(c.nom, '')")} like '%' || ${sansAccent('$2')} || '%'
              or ${sansAccent("coalesce(v.producteur_texte, p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
         and ($3 = '' or v.couleur::text = $3)
         and ($4 = '' or ($4 = 'absent' and c.id is null) or c.statut::text = $4)
