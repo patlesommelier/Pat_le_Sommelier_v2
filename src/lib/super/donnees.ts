@@ -155,7 +155,9 @@ export async function rechercherCuvees({ texte = '', couleur = '', statut = '', 
   { texte?: string; couleur?: string; statut?: string; restaurant?: string; surCartes?: boolean; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<CuveeListe>(
-    `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur, c.producteur_id, p.nom as producteur, coalesce(c.appellation_texte, t.nom) as appellation, c.cepages, c.statut::text, c.etiquette_url, c.etiquette_source,
+    `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur, c.producteur_id, p.nom as producteur, coalesce(c.appellation_texte, t.nom) as appellation,
+            coalesce(c.cepages, (select v.cepages from vin_carte v where v.cuvee_id = c.id and v.cepages is not null limit 1)) as cepages,
+            c.statut::text, c.etiquette_url, c.etiquette_source,
             array(select distinct v.etiquette_statut from vin_carte v where v.cuvee_id = c.id and v.etiquette_statut is not null) as statuts_cartes,
             (select count(*)::int from vin_carte v where v.cuvee_id = c.id) as sur_cartes, count(*) over ()::int as total
        from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id
@@ -180,8 +182,13 @@ export interface FicheCuvee {
 /** Fiche d'un vin de la base, avec les vins des cartes de restaurant qui y sont reliés. */
 export async function ficheCuvee(id: string) {
   const [c] = await requete<FicheCuvee>(
-    `select c.id, c.nom, c.couleur::text, c.producteur_id, p.nom as producteur, p.statut::text as producteur_statut, c.appellation_id,
-            coalesce(c.appellation_texte, t.nom) as appellation, t.nom as appellation_base, c.cepages, c.garde, c.description, c.texte_origine,
+    `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur,
+            c.producteur_id, p.nom as producteur, p.statut::text as producteur_statut, c.appellation_id,
+            coalesce(c.appellation_texte, t.nom, (select coalesce(v.appellation_texte, tv.nom) from vin_carte v left join terroir tv on tv.id = v.appellation_id
+                                                    where v.cuvee_id = c.id and coalesce(v.appellation_texte, tv.nom) is not null limit 1)) as appellation,
+            t.nom as appellation_base,
+            coalesce(c.cepages, (select v.cepages from vin_carte v where v.cuvee_id = c.id and v.cepages is not null limit 1)) as cepages,
+            c.garde, c.description, c.texte_origine,
             c.statut::text, c.etiquette_url, c.etiquette_source, c.source
        from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
   if (!c) return null;
