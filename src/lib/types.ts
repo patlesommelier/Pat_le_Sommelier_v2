@@ -1,4 +1,4 @@
-export type Couleur = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux';
+export type Couleur = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux' | 'sans_alcool';
 
 export interface Restaurant {
   id: string;
@@ -92,6 +92,7 @@ export const COULEURS: { id: Couleur; libelle: string }[] = [
   { id: 'rouge', libelle: 'Rouges' },
   { id: 'orange', libelle: 'Orange' },
   { id: 'doux', libelle: 'Doux' },
+  { id: 'sans_alcool', libelle: 'Sans alcool' },
 ];
 
 /** Champs envoyés au navigateur : rien de la cuisine interne de Pat (rankings, avis). */

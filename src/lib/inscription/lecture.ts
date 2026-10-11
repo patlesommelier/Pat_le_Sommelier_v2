@@ -77,8 +77,8 @@ brut nature, nom de cuvée… Deux vins différents n'ont jamais le même libell
 (domaine, château ou maison ; null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou null),
 « millesime » (4 chiffres, « 2019-2020 » si deux ; null si non millésimé), « contenance » (« 37,5 cl », « 150 cl »… ; null pour 75 cl),
 « prix » (prix de la bouteille en euros, nombre ; null si absent), « prixVerre » (prix au verre, nombre, ou null),
-« auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux
-(tout effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null).
+« auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux, sans_alcool
+(vin sans alcool ou désalcoolisé, même pétillant : sans_alcool ; tout autre effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null).
 Un même vin en deux contenances donne deux lignes. N'invente rien.
 Si ces documents ne contiennent aucun vin mais un menu de plats (entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
 Sinon, réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",

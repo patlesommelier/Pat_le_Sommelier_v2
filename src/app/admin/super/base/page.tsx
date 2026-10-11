@@ -4,7 +4,7 @@ import { Entete, Etat, euros, Vignette } from '@/components/admin/Ui';
 import { detailsProducteurs, paysProducteurs, rechercherProducteurs, rechercherTerroirs, restaurantsListe } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 
-const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux' };
+const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 type Sp = { onglet?: string; q?: string; pays?: string; resto?: string; page?: string };
 
 /** Base de Pat : producteurs et leurs vins, terroirs ; rankings modifiables (cuisine interne). */

@@ -9,7 +9,7 @@ import { etatPresentations, preparationEnCours, presentationsManquantes } from '
 
 export const dynamic = 'force-dynamic';
 
-const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux' };
+const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUTS: Record<string, string> = { en_attente: 'en attente', en_cours: 'Pat écrit…', fait: 'prêt', erreur: 'échec' };
 
 /** Page d'attente du bouton « Imprimer la carte » : Pat écrit les présentations manquantes, puis la carte s'ouvre toute seule. */

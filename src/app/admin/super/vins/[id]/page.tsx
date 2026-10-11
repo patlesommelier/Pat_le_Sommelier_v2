@@ -8,7 +8,7 @@ import { requete } from '@/lib/db';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
 
-const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux']];
+const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']];
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
 
 /** Fiche d'un vin de la base de Pat : informations, étiquette, vins des cartes reliés ; Enregistrer / Valider / Retirer. */

@@ -7,7 +7,7 @@ import { requete } from '@/lib/db';
 
 export const dynamic = 'force-dynamic';
 
-const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux']];
+const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']];
 
 /** Rubrique « Supports » : la carte des vins imprimable et la relecture des présentations de Pat (3 à 4 lignes par vin). */
 export default async function Supports({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; nouvelle?: string; erreur?: string }> }) {

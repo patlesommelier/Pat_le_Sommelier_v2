@@ -6,7 +6,7 @@ import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
 
-const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux' };
+const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
 type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string };
 

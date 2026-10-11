@@ -5,7 +5,7 @@ import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { ficheProducteur } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 
-const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux' };
+const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Rejeté', 'defaut'] };
 
 /** Fiche d'un producteur proposé : informations, cuisine interne (rankings), vins des cartes, terroirs ; Rejeter / Enregistrer / Valider. */

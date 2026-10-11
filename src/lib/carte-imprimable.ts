@@ -5,7 +5,7 @@
  * IMPORTANT : ne jamais transmettre ici les rankings, notes ou scores. Ce module ne lit que les champs de VinImprimable.
  */
 
-export type CouleurCarte = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux';
+export type CouleurCarte = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux' | 'sans_alcool';
 
 export interface VinImprimable {
   id: string;
@@ -59,6 +59,7 @@ const COULEURS: { cle: CouleurCarte; titre: string; titrePluriel?: string; court
   { cle: 'rouge', titre: 'Les rouges', court: 'Rouges' },
   { cle: 'orange', titre: 'Le vin orange', titrePluriel: 'Les vins orange', court: 'Vin orange' },
   { cle: 'doux', titre: 'Le vin doux', titrePluriel: 'Les vins doux', court: 'Vin doux' },
+  { cle: 'sans_alcool', titre: 'Le vin sans alcool', titrePluriel: 'Les vins sans alcool', court: 'Sans alcool' },
 ];
 
 const echapper = (s: unknown) =>

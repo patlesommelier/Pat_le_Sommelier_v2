@@ -287,7 +287,7 @@ async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
 export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   const u = await exigerAcces(resto);
   const couleur = txt(f, 'couleur');
-  if (!couleur || !['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'].includes(couleur)) return { erreur: 'Choisissez la couleur du vin.' };
+  if (!couleur || !['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'].includes(couleur)) return { erreur: 'Choisissez la couleur du vin.' };
   const champs = { appellation: txt(f, 'appellation_texte'), nom: txt(f, 'nom_vin'), cepage: txt(f, 'cepages'), producteur: txt(f, 'producteur_texte') };
   const libelle = txt(f, 'libelle') ?? (composerIntitule(champs) || null);
   if (!libelle) return { erreur: 'Indiquez au moins l’appellation ou le nom du vin.' };
@@ -300,7 +300,7 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   const cochees = ordonner(f.getAll('contenances').filter((x): x is string => typeof x === 'string'));
   const premiere = cochees.find((c) => c !== 'verre');
   const format = premiere ? FORMATS[premiere as keyof typeof FORMATS] : 'au verre';
-  const lettre = ({ bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D' } as Record<string, string>)[couleur];
+  const lettre = ({ bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D', sans_alcool: 'S' } as Record<string, string>)[couleur];
   const [{ n }] = await requete<{ n: number }>('select count(*)::int as n from vin_carte where restaurant_id = $1 and couleur = $2::couleur_vin', [resto, couleur]);
   const id = await nouvelId(`${resto}-${lettre}${String(n + 1).padStart(2, '0')}`);
   await requete(

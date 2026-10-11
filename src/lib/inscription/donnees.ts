@@ -13,7 +13,7 @@ export const Plat = z.object({
 });
 export type Plat = z.infer<typeof Plat>;
 
-export const COULEURS = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'] as const;
+export const COULEURS = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'] as const;
 
 export const Vin = z.object({
   libelleCarte: z.string().trim().min(1).max(200),

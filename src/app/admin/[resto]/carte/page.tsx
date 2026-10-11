@@ -8,7 +8,7 @@ import { getRankingsInternes, getVinsBO } from '@/lib/admin/donnees';
 import { etatEtiquette, etatProducteur, nomPourListe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
-const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
+const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string; vin?: string; ok?: string; erreur?: string }> }) {
   const { resto } = await params;

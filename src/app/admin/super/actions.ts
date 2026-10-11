@@ -221,7 +221,7 @@ export async function ajouterCuvee(producteurId: string, f: FormData) {
     await requete(
       `insert into cuvee (id, producteur_id, nom, couleur, cepages, statut) values ($1, $2, $3, $4::couleur_vin, $5, 'valide')
        on conflict (id) do update set nom = excluded.nom, couleur = excluded.couleur, cepages = excluded.cepages`,
-      [id, producteurId, nom, couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'].includes(couleur) ? couleur : null, txt(f, 'cepages')]);
+      [id, producteurId, nom, couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, txt(f, 'cepages')]);
   }
   redirect(retour);
 }
@@ -263,7 +263,7 @@ export async function enregistrerCuvee(id: string, f: FormData) {
             etiquette_source = case when $9::text is not null then 'fichier' when $10 then null else etiquette_source end,
             etiquette_maj_le = case when $9::text is not null or $10 then now() else etiquette_maj_le end
       where id = $1`,
-    [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'].includes(couleur) ? couleur : null, terroir,
+    [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, terroir,
       txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette, appellation]);
   // Étiquette de la cuvée : reprise par les vins des cartes reliés qui n'ont pas leur propre photo ; retirée de ceux qui l'avaient reprise.
   if (etiquette) {

@@ -62,7 +62,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
 
-const COULEURS: Record<string, string> = { bulles: 'bulles', blanc: 'blancs', rose: 'rosés', rouge: 'rouges', orange: 'orange', doux: 'doux' };
+const COULEURS: Record<string, string> = { bulles: 'bulles', blanc: 'blancs', rose: 'rosés', rouge: 'rouges', orange: 'orange', doux: 'doux', sans_alcool: 'sans alcool' };
 const echapper = (t: string) => t.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
 
 /** Pourquoi des vins n'ont pas encore leur présentation : de quoi comprendre sans ouvrir les journaux Netlify. */

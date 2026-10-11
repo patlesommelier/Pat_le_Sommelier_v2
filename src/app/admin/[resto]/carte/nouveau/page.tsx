@@ -7,7 +7,7 @@ import { ajouterVin } from '../../../actions';
 import { exigerAcces } from '@/lib/admin/auth';
 import { CONTENANCES } from '@/lib/contenances';
 
-const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux']] as const;
+const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], ['rouge', 'Rouge'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 const cadre = { gap: 12, border: '1px solid var(--ligne)', borderRadius: 14, padding: 16, margin: 0 } as const;
 const legende = { fontSize: 13, fontWeight: 700, padding: '0 6px' } as const;
 

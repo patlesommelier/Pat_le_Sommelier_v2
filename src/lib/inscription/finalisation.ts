@@ -17,7 +17,7 @@ function couleurClaire(hex: string) {
   return `#${m((n >> 16) & 255)}${m((n >> 8) & 255)}${m(n & 255)}`.toUpperCase();
 }
 
-const LETTRE: Record<string, string> = { bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D' };
+const LETTRE: Record<string, string> = { bulles: 'E', blanc: 'B', rose: 'P', orange: 'O', rouge: 'R', doux: 'D', sans_alcool: 'S' };
 const slugPlat = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
 
 /** Finalisation déjà en cours ailleurs (lien de l'e-mail, écran d'attente d'un autre appareil, connexion). */

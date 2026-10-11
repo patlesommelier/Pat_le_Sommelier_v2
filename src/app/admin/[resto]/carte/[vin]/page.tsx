@@ -13,7 +13,7 @@ import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule'
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 
-const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux' };
+const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
 const cadre = { gap: 12, border: '1px solid var(--ligne)', borderRadius: 14, padding: 16, margin: 0 } as const;
 const legende = { fontSize: 13, fontWeight: 700, padding: '0 6px' } as const;
