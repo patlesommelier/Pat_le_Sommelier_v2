@@ -1,7 +1,7 @@
 // Finalisation : l'e-mail est confirmé, le restaurant est créé et Pat commence à préparer les accords.
 // Idempotente : peut être rappelée sans créer de doublon (lien de confirmation ouvert deux fois).
 import 'server-only';
-import { cleMemeVin, contenancesDesLignes } from '../contenances';
+import { contenancesDesLignes, grouperMemeVin } from '../contenances';
 import { requete } from '../db';
 import { partagerEtiquettes } from '../etiquettes/partage';
 import { chercherEtiquettesManquantes } from '../etiquettes/lancer';
@@ -102,9 +102,11 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
   const producteurs = await creerVinsEnAttente(restaurantId, i.vins);
   const compteurs: Record<string, number> = {};
   // Contenances détectées sur la carte : un même vin en plusieurs contenances y est lu en plusieurs lignes.
-  const cle = (v: (typeof i.vins)[number]) => cleMemeVin({ couleur: v.couleur, libelle: v.libelleCarte, millesime: v.millesime });
-  const lignes = (v: (typeof i.vins)[number]) => i.vins.filter((x) => cle(x) === cle(v))
-    .map((x) => ({ format: x.auVerre ? 'au verre' : x.contenance, prixVerre: x.auVerre ? null : x.prixVerre }));
+  // (deux lignes de même contenance sous le même nom sont deux vins distincts, jamais fusionnés)
+  const lues = i.vins.map((x) => ({ x, couleur: x.couleur as string, libelle: x.libelleCarte, millesime: x.millesime, format: x.auVerre ? 'au verre' : x.contenance }));
+  const groupes = grouperMemeVin(lues, (l) => l.format);
+  const lignes = (v: (typeof i.vins)[number]) => (groupes.find((g) => g.some((l) => l.x === v)) ?? [])
+    .map((l) => ({ format: l.format, prixVerre: l.x.auVerre ? null : l.x.prixVerre }));
   for (const [k, v] of i.vins.entries()) {
     const l = LETTRE[v.couleur] ?? 'X';
     compteurs[l] = (compteurs[l] ?? 0) + 1;

@@ -23,7 +23,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
   const { plat: platId } = await searchParams;
   const [restaurant, vin, plat] = await Promise.all([getRestaurant(resto), getVin(resto, vinId), platId ? getPlat(platId) : null]);
   if (!restaurant || !vin) notFound();
-  const [accord, tarifs, domaine] = await Promise.all([plat ? getAccord(plat.id, vin.id) : null, tarifsDuVin(resto, vin), getTexteDomaine(resto, vin.id)]);
+  const [accord, tarifs, domaine] = await Promise.all([plat ? getAccord(plat.id, vin.id) : null, tarifsDuVin(resto, vin.id), getTexteDomaine(resto, vin.id)]);
   const p = vin.profil_degustation;
   const producteur = (vin.producteur_nom ?? vin.producteur_texte ?? '').replace(/\s*\(.*\)/, '');
   const couleur = COULEURS.find((c) => c.id === vin.couleur)?.libelle.replace(/s$/, '');

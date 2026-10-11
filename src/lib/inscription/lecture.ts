@@ -71,7 +71,9 @@ Si ces documents ne contiennent aucun plat mais une carte des vins ou des boisso
 Sinon, réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "...", "prix": 24, "prixVariantes": null}]`;
 
 const CONSIGNE_CARTE = `Ces documents sont les pages de la carte des vins d'un restaurant (photos ou PDF). Relève chaque vin.
-Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, sans millésime ni prix), « producteur »
+Pour chaque vin : « libelleCarte » (nom tel qu'écrit, appellation et cuvée, sans millésime ni prix ; quand la carte groupe
+plusieurs vins sous un titre — une maison, un domaine —, garde ce titre et ajoute ce qui distingue chaque vin : rosé, blanc de blancs,
+brut nature, nom de cuvée… Deux vins différents n'ont jamais le même libelleCarte), « producteur »
 (domaine, château ou maison ; null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou null),
 « millesime » (4 chiffres, « 2019-2020 » si deux ; null si non millésimé), « contenance » (« 37,5 cl », « 150 cl »… ; null pour 75 cl),
 « prix » (prix de la bouteille en euros, nombre ; null si absent), « prixVerre » (prix au verre, nombre, ou null),

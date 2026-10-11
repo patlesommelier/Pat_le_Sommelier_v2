@@ -19,7 +19,7 @@ import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
 import { REGLAGES_INTERNES, type Reglages } from '@/lib/selection';
 import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
-import { cleMemeVin, contenanceDuFormat, ordonner } from '@/lib/contenances';
+import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
@@ -179,10 +179,9 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
 
 /** Lignes du même vin (une par contenance qui a son propre prix), le vin compris. */
 async function memeVin(resto: string, vinId: string) {
-  const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null }>(
-    'select id, couleur::text, libelle, millesime from vin_carte where restaurant_id = $1', [resto]);
-  const v = lignes.find((l) => l.id === vinId);
-  return v ? lignes.filter((l) => cleMemeVin(l) === cleMemeVin(v)).map((l) => l.id) : [];
+  const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string }>(
+    'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1 order by ordre, id', [resto]);
+  return (grouperMemeVin(lignes, (l) => l.format).find((g) => g.some((l) => l.id === vinId)) ?? []).map((l) => l.id);
 }
 
 /**
@@ -194,10 +193,10 @@ async function memeVin(resto: string, vinId: string) {
  */
 async function enregistrerContenances(resto: string, vinId: string, f: FormData) {
   const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string }>(
-    'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1', [resto]);
+    'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1 order by ordre, id', [resto]);
   const v = lignes.find((l) => l.id === vinId);
   if (!v) return;
-  const groupe = lignes.filter((l) => cleMemeVin(l) === cleMemeVin(v));
+  const groupe = grouperMemeVin(lignes, (l) => l.format).find((g) => g.includes(v)) ?? [v];
   const cochees = ordonner(f.getAll('contenances').filter((x): x is string => typeof x === 'string'));
   const dispo = f.get('disponible') === 'on';
   const parCode = new Map<string, (typeof groupe)[number]>();

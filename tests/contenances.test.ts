@@ -17,3 +17,10 @@ test('contenances d’un vin : union de ses lignes, bouteille par défaut', () =
   assert.deepEqual(ordonner([]), ['bouteille']);
   assert.deepEqual(ordonner(['verre', 'inconnu']), ['verre']);
 });
+
+test('deux vins lus sous le même nom, même contenance : jamais fusionnés', async () => {
+  const { grouperMemeVin } = await import('../src/lib/contenances');
+  const l = (id: string, format: string) => ({ id, couleur: 'bulles', libelle: 'Taittinger', millesime: null, format });
+  const g = grouperMemeVin([l('E01', '75 cl'), l('E02', '75 cl'), l('E03', '37,5 cl')], (x) => x.format);
+  assert.deepEqual(g.map((x) => x.map((y) => y.id)), [['E01', 'E03'], ['E02']]);
+});

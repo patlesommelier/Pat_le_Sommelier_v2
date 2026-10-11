@@ -1,6 +1,6 @@
 // États affichés pour un vin de la carte (liste et fiche du back-office).
 import type { VinBO } from '@/lib/admin/donnees';
-import { cleMemeVin, contenanceDuFormat, libelleCourt, ordonner } from '@/lib/contenances';
+import { contenanceDuFormat, grouperMemeVin, libelleCourt, ordonner } from '@/lib/contenances';
 import { appellationDeduite, cle, nomDeduit } from '@/lib/admin/intitule';
 
 type Etat = [string, 'ok' | 'propose' | 'attention' | ''];
@@ -39,9 +39,7 @@ export interface GroupeVin {
 }
 
 export function regrouperVins(vins: VinBO[]): GroupeVin[] {
-  const groupes = new Map<string, VinBO[]>();
-  for (const v of vins) groupes.set(cleMemeVin(v), [...(groupes.get(cleMemeVin(v)) ?? []), v]);
-  return [...groupes.values()].map((tous) => {
+  return grouperMemeVin(vins, (v) => v.format).map((tous) => {
     const principal = tous.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? tous[0];
     const dispo = tous.filter((v) => v.disponible);
     const contenances = dispo.length ? ordonner(dispo.flatMap((v) => v.contenances ?? [])).map(libelleCourt) : [];
@@ -53,7 +51,7 @@ export function regrouperVins(vins: VinBO[]): GroupeVin[] {
 
 /** Autres lignes du même vin (fiche du vin) : une par contenance qui a son propre prix. */
 export function autresContenances(vins: VinBO[], v: VinBO) {
-  return vins.filter((x) => x.id !== v.id && cleMemeVin(x) === cleMemeVin(v));
+  return (grouperMemeVin(vins, (x) => x.format).find((g) => g.includes(v)) ?? []).filter((x) => x.id !== v.id);
 }
 
 /**

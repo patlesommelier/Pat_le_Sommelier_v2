@@ -46,3 +46,23 @@ export const libelleCourt = (code: string) => CONTENANCES.find((c) => c.code ===
 /** Clé d'un même vin sur la carte (ses contenances sont enregistrées en lignes séparées). */
 export const cleMemeVin = (v: { couleur: string; libelle: string; millesime: string | null }) =>
   [v.couleur, v.libelle.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), v.millesime ?? ''].join('|');
+
+/**
+ * Lignes de la carte regroupées par vin : même couleur, intitulé et millésime, et des contenances différentes.
+ * Deux lignes de même contenance sont deux vins distincts, même si la carte les a lus sous le même nom
+ * (« Taittinger » brut et rosé, l'un sous l'autre) : elles ne sont jamais fusionnées.
+ */
+export function grouperMemeVin<T extends { couleur: string; libelle: string; millesime: string | null }>(lignes: T[], format: (l: T) => string | null | undefined): T[][] {
+  const groupes: T[][] = [];
+  const parCle = new Map<string, T[][]>();
+  for (const l of lignes) {
+    const c = contenanceDuFormat(format(l));
+    const candidats = parCle.get(cleMemeVin(l)) ?? [];
+    const g = candidats.find((x) => !x.some((y) => contenanceDuFormat(format(y)) === c));
+    if (g) { g.push(l); continue; }
+    const nouveau = [l];
+    groupes.push(nouveau);
+    parCle.set(cleMemeVin(l), [...candidats, nouveau]);
+  }
+  return groupes;
+}

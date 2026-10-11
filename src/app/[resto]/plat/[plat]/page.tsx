@@ -7,7 +7,6 @@ import { Etiquette } from '@/components/Etiquette';
 import { getPlat, getPropositions, getRestaurant } from '@/lib/donnees';
 import { euros, lignePrix, sousTitreVin } from '@/lib/format';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
-import { cleMemeVin } from '@/lib/contenances';
 
 /** Mention discrète des vins ajoutés par les règles 7 et 8 (vin plus cher, vin moins cher). */
 const MENTIONS: Partial<Record<string, string>> = {
@@ -53,9 +52,9 @@ export default async function Propositions({
                     <div className="sous">{sousTitreVin(vin, true)}</div>
                     {accord.explication && <div className="pourquoi">{accord.explication}</div>}
                     <div className="prix" style={{ fontSize: 16 }}>
-                      {tarifs.get(cleMemeVin(vin))?.length ? <>
-                        {lignePrix(tarifs.get(cleMemeVin(vin))!.slice(0, 1))}
-                        {tarifs.get(cleMemeVin(vin))!.length > 1 && <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · {lignePrix(tarifs.get(cleMemeVin(vin))!.slice(1))}</span>}
+                      {tarifs.get(vin.id)?.length ? <>
+                        {lignePrix(tarifs.get(vin.id)!.slice(0, 1))}
+                        {tarifs.get(vin.id)!.length > 1 && <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · {lignePrix(tarifs.get(vin.id)!.slice(1))}</span>}
                       </> : <>
                       {vin.prix ? euros(vin.prix) : vin.prix_verre ? `${euros(vin.prix_verre)} le verre` : ''}
                       {vin.prix && vin.prix_verre ? <span style={{ fontWeight: 400, color: 'var(--discret)', fontSize: 13 }}> · verre {euros(vin.prix_verre)}</span> : null}

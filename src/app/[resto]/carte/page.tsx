@@ -5,7 +5,7 @@ import { OngletsCarte } from '@/components/OngletsCarte';
 import { versOnglet } from '@/lib/types';
 import { getCarte, getRestaurant } from '@/lib/donnees';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
-import { cleMemeVin, contenanceDuFormat } from '@/lib/contenances';
+import { contenanceDuFormat, grouperMemeVin } from '@/lib/contenances';
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string }> }) {
   const { resto } = await params;
@@ -15,11 +15,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   if (!restaurant) notFound();
   const [vins, tarifs] = await Promise.all([getCarte(resto), tarifsDuRestaurant(resto)]);
   // Un vin en plusieurs contenances : une seule ligne (la bouteille, sinon la première), avec le prix de chacune.
-  const vus = new Set<string>();
-  const parVin = [...vins].sort((a, b) => Number(contenanceDuFormat(b.format) === 'bouteille') - Number(contenanceDuFormat(a.format) === 'bouteille'))
-    .filter((v) => !vus.has(cleMemeVin(v)) && vus.add(cleMemeVin(v)));
+  const parVin = grouperMemeVin(vins, (v) => v.format).map((g) => g.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? g[0]);
   const lignes = vins.filter((v) => parVin.includes(v))
-    .map((v) => ({ ...versOnglet(v), tarifs: (tarifs.get(cleMemeVin(v)) ?? []).map(({ code, prix }) => ({ code, prix })) }));
+    .map((v) => ({ ...versOnglet(v), tarifs: (tarifs.get(v.id) ?? []).map(({ code, prix }) => ({ code, prix })) }));
 
   return (
     <>
