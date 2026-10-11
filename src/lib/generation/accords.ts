@@ -39,7 +39,7 @@ NOTE (de 1 à 5, entière)
 5 : accord remarquable ; 4 : très bel accord ; 3 : bon accord ; 2 : accord faible ; 1 : à éviter.
 Jamais au-dessus de la note maximale (plafond) du plat quand il y en a une. Une « note imposée » se recopie telle quelle.
 
-COMMENTAIRE (montré au client)
+COMMENTAIRE (montré au client), seulement pour un vin noté 3 ou plus
 - une seule phrase de ${MOTS_MIN} à ${MOTS_MAX} mots (vise 15 à 20), en français, sans guillemets ;
 - dit pourquoi l'accord fonctionne, par la cause (acidité, gras, sel, texture, arômes…), jamais par un adjectif creux ;
 - cite au moins un élément propre au vin : son cépage, son terroir, son élevage, son dosage ou son producteur ;
@@ -47,7 +47,7 @@ COMMENTAIRE (montré au client)
 - ne cite ni note, ni classement, ni principe.
 Varie les angles d'un vin à l'autre : texture, écho aromatique, structure, origine, moment du repas. Deux commentaires d'un même plat ne commencent jamais de la même façon et ne se ressemblent pas.
 Mots et tournures interdits, sous toutes leurs formes : ${MOTS_INTERDITS.map(([m]) => `« ${m} »`).join(', ')}.
-Vin noté 2/5 ou moins : le commentaire dit ce que le vin a de beau et nomme le plat de la carte (indiqué) sur lequel il s'exprimera mieux.
+Vin noté 2 ou moins : jamais proposé au client, pas de commentaire : "commentaire": null.
 
 LIMITE (interne, jamais montrée au client)
 En quelques mots, ce qui empêche une note plus haute sur ce plat ; null si la note est 5. C'est là, et seulement là, que tu peux être critique.
@@ -56,7 +56,7 @@ CARTE DES VINS DU RESTAURANT (code | couleur | vin — producteur | millésime |
 ${texteCarte(carte)}
 
 Réponds uniquement avec un tableau JSON, sans texte autour, un objet par vin demandé, dans l'ordre :
-[{"vin": "L-B02", "note": 4, "commentaire": "…", "limite": "…"}]`;
+[{"vin": "L-B02", "note": 4, "commentaire": "…", "limite": "…"}, {"vin": "L-R07", "note": 2, "commentaire": null, "limite": "…"}]`;
 }
 
 function lireJson(texte: string): Reponse[] {
@@ -64,8 +64,9 @@ function lireJson(texte: string): Reponse[] {
   if (debut < 0 || fin < debut) throw new Error('réponse de Pat sans tableau JSON');
   return (JSON.parse(texte.slice(debut, fin + 1)) as unknown[]).flatMap((x) => {
     const o = x as Record<string, unknown>;
-    return typeof o?.vin === 'string' && typeof o?.commentaire === 'string'
-      ? [{ vin: o.vin, note: Number(o.note), commentaire: o.commentaire.trim(), limite: typeof o.limite === 'string' && o.limite.trim() ? o.limite.trim() : null }]
+    // Commentaire null : vin noté 2 ou moins (sa phrase est écrite plus bas, sans appel au modèle).
+    return typeof o?.vin === 'string' && (typeof o?.commentaire === 'string' || o?.commentaire === null || o?.commentaire === undefined)
+      ? [{ vin: o.vin, note: Number(o.note), commentaire: typeof o.commentaire === 'string' ? o.commentaire.trim() : '', limite: typeof o.limite === 'string' && o.limite.trim() ? o.limite.trim() : null }]
       : [];
   });
 }
@@ -117,7 +118,6 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   const ligneVin = (v: VinGen, defauts?: string[]) => [
     `${v.id} | ${v.libelle}${v.millesime ? ` ${v.millesime}` : ''}`,
     imposee(v.id) ? `note imposée : ${imposee(v.id)}` : null,
-    meilleurPlat(v.id) ? `si sa note est 2 ou moins, plat où il s'exprimera mieux : ${meilleurPlat(v.id)}` : null,
     defauts?.length ? `À CORRIGER : ${defauts.join(' ; ')}` : null,
   ].filter(Boolean).join(' | ');
 
@@ -148,6 +148,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   // Défauts d'une réponse : note invalide, puis contrôles du commentaire (mots, longueur, vin, plat conseillé, doublons)
   const plafond = plat.plafond ? Number(plat.plafond) : 5;
   const reponses = new Map<string, Reponse>();
+  const faible = (r: Reponse) => Number.isFinite(r.note) && r.note <= 2;
   const defautsDe = () => {
     const d = new Map<string, string[]>();
     const aControler: VinAControler[] = [];
@@ -158,6 +159,9 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
       if (n !== null ? r.note !== n : !(Number.isInteger(r.note) && r.note >= 1 && r.note <= plafond)) {
         d.set(v.id, [n !== null ? `la note imposée est ${n}` : `note invalide (entière, de 1 à ${plafond})`]);
       }
+      // Vin faible (2 ou moins) : pas de commentaire à contrôler, une phrase automatique le remplace.
+      if (faible(r)) continue;
+      if (!r.commentaire) { d.set(v.id, [...(d.get(v.id) ?? []), 'commentaire manquant (note 3 ou plus)']); continue; }
       aControler.push({ vin: v.id, note: r.note, commentaire: r.commentaire,
         reperes: [v.cepages ?? '', v.producteur ?? '', v.appellation ?? '', v.libelle].filter(Boolean),
         meilleurPlat: r.note <= 2 ? meilleurPlat(v.id) : null });
@@ -171,7 +175,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   }
   let defauts = defautsDe();
   for (let essai = 1; essai <= CORRECTIONS && defauts.size; essai++) {
-    const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id)).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
+    const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id) && reponses.get(v.id)!.commentaire).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
     const fautifs = carte.filter((v) => defauts.has(v.id));
     for (const r of await appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n` +
       `VINS À REPRENDRE (${fautifs.length})\n${fautifs.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`)) {
@@ -182,13 +186,13 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
 
   // Vins encore bloqués : repris un par un (une réponse courte et ciblée réussit mieux qu'une longue liste),
   // quatre à la fois, deux essais chacun.
-  const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit)/.test(d);
+  const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit|commentaire manquant)/.test(d);
   const bloques = () => carte.filter((v) => defauts.get(v.id)?.some(bloquant));
   for (let essai = 1; essai <= 2 && bloques().length; essai++) {
     const aReprendre = bloques();
     for (let i = 0; i < aReprendre.length; i += 4) {
       await Promise.all(aReprendre.slice(i, i + 4).map(async (v) => {
-        const deja = carte.filter((x) => x.id !== v.id && reponses.has(x.id) && !defauts.has(x.id)).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
+        const deja = carte.filter((x) => x.id !== v.id && reponses.has(x.id) && !defauts.has(x.id) && reponses.get(x.id)!.commentaire).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
         for (const r of await appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n` +
           `UN SEUL VIN À REPRENDRE : réponds avec un tableau d'un seul élément.\n${ligneVin(v, defauts.get(v.id))}`)) {
           if (r.vin === v.id) reponses.set(r.vin, r);
@@ -215,19 +219,17 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     const d = defauts.get(v.id);
     const r = reponses.get(v.id);
     if (d?.some(bloquant) || !r) continue;
+    if (faible(r)) {
+      // Vin faible (2 ou moins, jamais proposé au client) : pas de commentaire demandé au modèle (plus rapide et moins cher),
+      // une phrase positive qui renvoie au plat où il s'exprime mieux.
+      const ailleurs = meilleurPlat(v.id);
+      r.commentaire = ailleurs ? `${v.libelle} : à découvrir plutôt avec ${ailleurs}, où son style s'exprime pleinement.`
+        : `${v.libelle} : à découvrir sur un autre plat de la carte, où son style s'exprime pleinement.`;
+      defauts.delete(v.id);
+      continue;
+    }
     if (ecrits.has(normal(r.commentaire))) { defauts.set(v.id, ['texte identique à un autre']); continue; }
     ecrits.add(normal(r.commentaire));
-    defauts.delete(v.id);
-  }
-  // Dernier recours pour un vin faible (2/5 ou moins, jamais proposé au client) : une phrase positive qui renvoie
-  // au plat où il s'exprime mieux, plutôt que l'ancien commentaire importé (souvent négatif et identique d'un vin à l'autre).
-  for (const v of carte) {
-    const r = reponses.get(v.id);
-    if (!defauts.has(v.id) || !r || defauts.get(v.id)!.some((d) => /^(vin absent|la note imposée|note invalide)/.test(d)) || r.note > 2) continue;
-    const ailleurs = meilleurPlat(v.id);
-    r.commentaire = ailleurs ? `${v.libelle} : à découvrir plutôt avec ${ailleurs}, où son style s'exprime pleinement.`
-      : `${v.libelle} : à découvrir sur un autre plat de la carte, où son style s'exprime pleinement.`;
-    r.limite = null;
     defauts.delete(v.id);
   }
 

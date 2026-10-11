@@ -49,7 +49,7 @@ async function prendre(q: Requete) {
  * Plus haut, la génération va plus vite sans coûter plus ; la limite est le débit du compte Claude
  * (au-delà, le SDK attend et réessaie tout seul).
  */
-export const PLATS_EN_PARALLELE = 6;
+export const PLATS_EN_PARALLELE = 15;
 
 /**
  * Refus passager de l'API sans explication (« 403 status code (no body) ») : il ne vient pas d'un vrai refus
