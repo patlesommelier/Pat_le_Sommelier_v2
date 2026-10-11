@@ -33,8 +33,8 @@ export async function PageAccueil() {
         </header>
         <div className={s.intro}>
           <div className={s.introTexte}>
-            <h1 id="h-intro" className={s.titre}>Faites de votre carte des vins un atout, plat par plat</h1>
-            <p className={s.texte}>Un sommelier à chaque table : votre client choisit son plat, je lui propose quelques vins de votre carte et je lui explique en une phrase pourquoi ils vont ensemble. Pour démarrer, une photo de votre menu et une de votre carte des vins suffisent. Le reste, c’est mon affaire !</p>
+            <h1 id="h-intro" className={s.titre}>Un sommelier virtuel à chaque table</h1>
+            <p className={s.texte}>Votre client choisit son plat, je lui propose quelques vins et je lui explique pourquoi ils vont ensemble.</p>
           </div>
           <div className={s.demo}>
             <div className={s.qr}>
