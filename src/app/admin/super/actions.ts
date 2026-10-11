@@ -234,10 +234,22 @@ export async function ajouterCuvee(producteurId: string, f: FormData) {
 export async function enregistrerCuvee(id: string, f: FormData) {
   await exigerAdmin();
   const page = `/admin/super/vins/${encodeURIComponent(id)}`;
-  const [c] = await requete<{ etiquette_url: string | null; appellation_id: string | null; appellation: string | null }>(
-    `select c.etiquette_url, c.appellation_id, coalesce(c.appellation_texte, t.nom) as appellation
-       from cuvee c left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
+  const [c] = await requete<{ etiquette_url: string | null; appellation_id: string | null; appellation: string | null; producteur_id: string; producteur: string }>(
+    `select c.etiquette_url, c.appellation_id, coalesce(c.appellation_texte, t.nom) as appellation, c.producteur_id, p.nom as producteur
+       from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
   if (!c) redirect('/admin/super/vins');
+  // Producteur changé : le vin est rattaché au producteur de la base de ce nom (choisi dans la liste), sinon rien n'est enregistré.
+  const cleP = (s: string) => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const nomProducteur = txt(f, 'producteur');
+  let nouveauProducteur: { id: string; nom: string; ranking_pat: number | null } | null = null;
+  if (nomProducteur && cleP(nomProducteur) !== cleP(c.producteur)) {
+    const candidats = await requete<{ id: string; nom: string; ranking_pat: number | null }>(
+      `select id, nom, ranking_pat from producteur where statut <> 'retire' order by statut = 'valide' desc, nom`);
+    nouveauProducteur = candidats.find((p) => cleP(p.nom) === cleP(nomProducteur)) ?? null;
+    if (!nouveauProducteur) {
+      redirect(avec(page, { erreur: `Producteur « ${nomProducteur} » introuvable dans la base : choisissez un nom dans la liste (rien n'a été enregistré).` }));
+    }
+  }
   const decision = txt(f, 'decision');
   const couleur = txt(f, 'couleur');
   // Appellation : toujours gardée telle que saisie ; reliée à l'appellation de la base du même nom
@@ -265,6 +277,13 @@ export async function enregistrerCuvee(id: string, f: FormData) {
       where id = $1`,
     [id, txt(f, 'nom'), couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, terroir,
       txt(f, 'cepages'), txt(f, 'garde'), txt(f, 'description'), decision, etiquette, retirerEtiquette, appellation]);
+  // Nouveau producteur : la cuvée et ses vins sur les cartes y sont rattachés (avec le ranking de ce producteur).
+  if (nouveauProducteur) {
+    await requete('update cuvee set producteur_id = $2 where id = $1', [id, nouveauProducteur.id]);
+    await requete(
+      `update vin_carte set producteur_id = $2, producteur_texte = $3, ranking_producteur = coalesce($4, ranking_producteur) where cuvee_id = $1`,
+      [id, nouveauProducteur.id, nouveauProducteur.nom, nouveauProducteur.ranking_pat]);
+  }
   // Appellation de la base : reportée sur les vins des cartes reliés que le restaurant n'a jamais modifiés dans son espace
   // (l'appellation y vient alors de la lecture de la carte) ou qui n'en ont pas.
   if (appellation) {

@@ -16,8 +16,9 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { id } = await params;
   const sp = await searchParams;
-  const [c, appellations] = await Promise.all([ficheCuvee(decodeURIComponent(id)),
-    requete<{ nom: string }>(`select distinct nom from terroir where statut <> 'retire' order by nom`)]);
+  const [c, appellations, producteurs] = await Promise.all([ficheCuvee(decodeURIComponent(id)),
+    requete<{ nom: string }>(`select distinct nom from terroir where statut <> 'retire' order by nom`),
+    requete<{ nom: string; lieu: string | null }>(`select distinct on (nom) nom, nullif(concat_ws(', ', region, pays), '') as lieu from producteur where statut <> 'retire' order by nom`)]);
   if (!c) notFound();
   // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
   const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
@@ -38,6 +39,10 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
             </div>
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
               <div className="champ"><label htmlFor="nom">Nom du vin</label><input id="nom" name="nom" defaultValue={c.nom} required /></div>
+              <div className="champ"><label htmlFor="producteur">Producteur</label>
+                <input id="producteur" name="producteur" list="producteurs-base" defaultValue={c.producteur} required autoComplete="off" />
+                <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom}>{p.lieu ?? ''}</option>)}</datalist>
+                <span className="aide">Choisissez un autre producteur de la liste pour y rattacher ce vin (et ses vins sur les cartes). <Link href={`/admin/super/producteurs/${encodeURIComponent(c.producteur_id)}`}>Fiche du producteur</Link>{c.producteur_statut !== 'valide' && ' (à valider)'}</span></div>
               <div className="champ"><label htmlFor="couleur">Couleur</label>
                 <select id="couleur" name="couleur" defaultValue={c.couleur ?? ''}><option value="">À préciser</option>{COULEURS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
               <div className="champ"><label htmlFor="appellation">Appellation</label>
@@ -49,8 +54,6 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
             </div>
             <div className="champ"><label htmlFor="description">Description</label><textarea id="description" name="description" rows={5} defaultValue={c.description ?? ''} /></div>
             <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '6px 14px', fontSize: 14 }}>
-              <dt style={{ fontWeight: 700 }}>Producteur</dt>
-              <dd style={{ margin: 0 }}><Link href={`/admin/super/producteurs/${encodeURIComponent(c.producteur_id)}`}>{c.producteur}</Link>{c.producteur_statut !== 'valide' && ' (à valider)'}</dd>
               {c.texte_origine && <><dt style={{ fontWeight: 700 }}>Texte d’origine</dt><dd style={{ margin: 0 }}>{c.texte_origine}</dd></>}
               {c.source && <><dt style={{ fontWeight: 700 }}>Source</dt><dd style={{ margin: 0 }}>{c.source}</dd></>}
             </dl>
