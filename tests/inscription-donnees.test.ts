@@ -87,3 +87,20 @@ test('le prix des plats est gardé ; un prix illisible ne fait pas perdre le pla
   assert.equal(r.rejetes, 0);
   assert.deepEqual(r.ok.map((p) => [p.prix, p.prixVariantes]), [[15, '1 pièce 15 € / 2 pièces 27 €'], [null, undefined], [undefined, undefined]]);
 });
+
+test('unSeulVerre : au verre en plusieurs contenants, seul le prix du plus petit reste', async () => {
+  const { unSeulVerre, Vin } = await import('../src/lib/inscription/donnees');
+  const v = (x: Record<string, unknown>) => Vin.parse({ libelleCarte: 'Côtes du Rhône Guigal', couleur: 'rouge', ...x });
+  const seul = unSeulVerre([
+    v({ contenance: '12 cl', prix: 7 }), v({ contenance: '25 cl', prix: 13 }), v({ contenance: '50 cl', prix: 24 }),
+    v({ libelleCarte: 'Sancerre', couleur: 'blanc', prix: 40 }),
+  ]);
+  assert.equal(seul.length, 2);
+  assert.deepEqual([seul[0].auVerre, seul[0].prix, seul[0].contenance], [true, 7, null]);
+  // Avec une bouteille : la bouteille reste, avec le plus petit prix au verre.
+  const avecBouteille = unSeulVerre([v({ auVerre: true, prix: 9 }), v({ auVerre: true, contenance: '15 cl', prix: 11 }), v({ prix: 45 })]);
+  assert.equal(avecBouteille.length, 1);
+  assert.deepEqual([avecBouteille[0].prix, avecBouteille[0].prixVerre], [45, 9]);
+  // Un seul verre et une demi-bouteille : rien ne change.
+  assert.equal(unSeulVerre([v({ auVerre: true, prix: 9 }), v({ contenance: '37,5 cl', prix: 25 })]).length, 2);
+});

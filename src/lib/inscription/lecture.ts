@@ -82,7 +82,8 @@ null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou n
 « auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux, sans_alcool
 (vin sans alcool ou désalcoolisé, même pétillant : sans_alcool ; tout autre effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null),
 « cepages » (cépages indiqués sur la carte, séparés par des virgules ; null s'ils n'y figurent pas — ne les devine pas).
-Un même vin en deux contenances donne deux lignes. N'invente rien.
+Un même vin en deux contenances donne deux lignes. Un vin servi au verre dans plusieurs contenants (verre de 12 et 15 cl,
+pichet, pot, carafe) : une seule ligne au verre, avec le prix du plus petit contenant ; ne relève pas les autres. N'invente rien.
 Si ces documents ne contiennent aucun vin mais un menu de plats (entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
 Sinon, réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",
 "contenance": null, "prix": 58, "prixVerre": null, "auVerre": false, "couleur": "blanc", "region": "Loire", "cepages": "Sauvignon blanc"}]`;

@@ -19,11 +19,28 @@ export function contenanceDuFormat(format: string | null | undefined): Contenanc
   if (/verre/.test(f)) return 'verre';
   const cl = Number(f.replace(',', '.').replace(/cl$/, ''));
   if (!Number.isFinite(cl) || !cl) return 'bouteille';
+  if (cl < 17) return 'verre';
   if (cl >= 140) return 'magnum';
   if (cl >= 70) return 'bouteille';
   if (cl >= 35) return 'demi';
   return 'quart';
 }
+
+/** Centilitres d'un format (« 12 cl », « 37,5 cl ») ; null s'il n'en indique pas. */
+export function centilitres(format: string | null | undefined): number | null {
+  const m = (format ?? '').replace(/\s+/g, '').toLowerCase().match(/^(\d+(?:[.,]\d+)?)cl$/);
+  return m ? Number(m[1].replace(',', '.')) : null;
+}
+
+/** Un verre (moins de 17 cl) : « 12 cl », « 15 cl ». */
+export const estTailleVerre = (format: string | null | undefined) => { const cl = centilitres(format); return cl != null && cl < 17; };
+
+/** Bouteilles usuelles (quart de champagne, demi, clavelin, bouteille, magnum et plus) : tout le reste est un pichet, une carafe ou un pot. */
+const BOUTEILLES = [18.7, 20, 37.5, 62, 70, 75];
+export const estPichet = (format: string | null | undefined) => {
+  const cl = centilitres(format);
+  return cl != null && cl >= 17 && cl < 100 && !BOUTEILLES.includes(cl);
+};
 
 /** Contenances d'un vin à partir de ses lignes de carte (une par contenance), dans l'ordre des cases. */
 export function contenancesDesLignes(lignes: Array<{ format?: string | null; prixVerre?: number | null }>): Contenance[] {

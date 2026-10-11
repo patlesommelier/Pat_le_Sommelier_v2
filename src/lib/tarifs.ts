@@ -2,7 +2,7 @@
 // Une contenance est une ligne de la carte (disponible) ; le verre est le prix au verre d'une de ces lignes.
 import 'server-only';
 import { requete } from './db';
-import { contenanceDuFormat, grouperMemeVin } from './contenances';
+import { contenanceDuFormat, estPichet, grouperMemeVin } from './contenances';
 
 export interface Tarif { code: string; libelle: string; prix: number }
 
@@ -17,10 +17,16 @@ export async function tarifsDuRestaurant(restaurantId: string) {
   const parLigne = new Map<string, Tarif[]>();
   for (const groupe of grouperMemeVin(lignes, (l) => l.format)) {
     const t: Tarif[] = [];
+    // Au verre en plusieurs contenants (verres, pichet, carafe) : seul le prix le plus petit est affiché.
     const ajouter = (c: string, prix: number | null) => {
-      if (prix != null && !t.some((x) => x.code === c)) t.push({ code: c, libelle: LIBELLES[c] ?? c, prix });
+      if (prix == null) return;
+      const deja = t.find((x) => x.code === c);
+      if (!deja) t.push({ code: c, libelle: LIBELLES[c] ?? c, prix });
+      else if (c === 'verre' && prix < deja.prix) deja.prix = prix;
     };
+    const auVerre = groupe.some((l) => contenanceDuFormat(l.format) === 'verre' || l.prix_verre != null);
     for (const l of groupe) {
+      if (auVerre && estPichet(l.format)) continue;
       const code = contenanceDuFormat(l.format);
       ajouter(code, code === 'verre' ? l.prix_verre ?? l.prix : l.prix);
       ajouter('verre', l.prix_verre);

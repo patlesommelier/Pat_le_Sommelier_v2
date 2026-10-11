@@ -1,5 +1,6 @@
 // Données reconnues par Pat sur le menu et la carte, validées avant d'être enregistrées.
 import { z } from 'zod';
+import { estPichet, estTailleVerre } from '../contenances';
 
 /** Catégories des plats de l'app (enum categorie_plat). */
 export const CATEGORIES = ['entree', 'plat', 'dessert', 'fromage'] as const;
@@ -60,3 +61,29 @@ const cle = (s: string) => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').t
 export const dedoublonnerPlats = (p: Plat[]) => [...new Map(p.map((x) => [cle(x.nom), x])).values()];
 export const dedoublonnerVins = (v: Vin[]) =>
   [...new Map(v.map((x) => [`${cle(x.libelleCarte)}|${x.millesime ?? ''}|${x.contenance ?? ''}`, x])).values()];
+
+/**
+ * Vin servi au verre en plusieurs contenants (verre 12 cl et 15 cl, pichet, carafe, pot) : seul le prix du plus petit est gardé,
+ * les autres lignes sont retirées. Les bouteilles (75 cl, demi, magnum…) restent, avec ce prix au verre.
+ */
+export function unSeulVerre(vins: Vin[]): Vin[] {
+  const auVerre = (v: Vin) => v.auVerre || estTailleVerre(v.contenance) || estPichet(v.contenance);
+  const groupes = new Map<string, Vin[]>();
+  for (const v of vins) {
+    const k = `${v.couleur}|${cle(v.libelleCarte)}|${v.millesime ?? ''}`;
+    groupes.set(k, [...groupes.get(k) ?? [], v]);
+  }
+  const remplaces = new Map<Vin, Vin | null>();
+  for (const g of groupes.values()) {
+    const verres = g.filter(auVerre);
+    const offres = verres.length + g.filter((v) => !auVerre(v) && v.prixVerre != null).length;
+    if (offres < 2) continue;
+    const prix = g.flatMap((v) => [auVerre(v) ? v.prix ?? v.prixVerre : null, v.prixVerre]).filter((p): p is number => p != null);
+    const plusPetit = prix.length ? Math.min(...prix) : null;
+    const bouteilles = g.filter((v) => !auVerre(v));
+    for (const v of verres) remplaces.set(v, null);
+    if (bouteilles.length) for (const b of bouteilles) remplaces.set(b, { ...b, prixVerre: plusPetit });
+    else remplaces.set(verres[0], { ...verres[0], auVerre: true, contenance: null, prix: plusPetit, prixVerre: null });
+  }
+  return vins.flatMap((v) => { const r = remplaces.has(v) ? remplaces.get(v) : v; return r ? [r] : []; });
+}

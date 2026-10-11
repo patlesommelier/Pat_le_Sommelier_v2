@@ -3,7 +3,7 @@
 // File : inscription.lecture.<type>.statut = 'en_attente', posé au dépôt des fichiers.
 // Sans 'server-only' : exécuté par netlify/functions/analyser-inscription-background.mts (et par le serveur en local).
 import type { Requete } from '../generation/accords';
-import { dedoublonnerPlats, dedoublonnerVins, Plat, validerListe, Vin } from './donnees';
+import { dedoublonnerPlats, dedoublonnerVins, Plat, unSeulVerre, validerListe, Vin } from './donnees';
 import type { TypeAnalyse } from './etapes';
 import { analyserCarte, analyserMenu, rapprocherVins, type FichierEnvoye } from './lecture';
 
@@ -38,7 +38,7 @@ export async function executerAnalyse(q: Requete, inscriptionId: string, type: T
     const lus = fichiers.map((f) => ({ ...f, octets: new Uint8Array(f.octets as unknown as Buffer) }));
     if (type === 'carte') {
       const { ok } = validerListe(Vin, await analyserCarte(lus));
-      const vins = await rapprocherVins(q, dedoublonnerVins(ok));
+      const vins = await rapprocherVins(q, dedoublonnerVins(unSeulVerre(ok)));
       if (!vins.length) throw new Error('aucun vin reconnu');
       await ecrire('vins', vins, { statut: 'ok', nombre: vins.length });
     } else {
