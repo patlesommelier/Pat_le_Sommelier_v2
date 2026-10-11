@@ -51,3 +51,23 @@ export function nomDeduit(vinTexte: string | null | undefined) {
   const n = propre(propre(vinTexte).split(' – ').slice(1).join(' – ').replace(/\(.*?\)/g, '').replace(/[«»"]/g, '')).replace(/\s+Brut$/i, '');
   return /non précisée|à préciser/i.test(n) ? '' : n;
 }
+
+/**
+ * Présentation d'un vin dans la carte des vins de l'app : en gras le nom du vin et son millésime ; en dessous le producteur,
+ * l'appellation et les cépages. Sans nom de vin (ou un « nom » qui n'est que le cépage), l'appellation passe en gras.
+ */
+export function titreCarte(v: {
+  libelle: string; nom_vin?: string | null; vin_texte?: string | null; appellation_texte?: string | null; appellation_nom?: string | null;
+  producteur?: string | null; cepages?: string | null; millesime?: string | null;
+}) {
+  const cepages = propre(v.cepages).replace(/\s*\(.*?\)/g, '');
+  const nomBrut = propre(v.nom_vin ?? nomDeduit(v.vin_texte));
+  const nom = nomBrut && cle(nomBrut) !== cle(cepages.split(/[,/&+]| et /)[0]) ? nomBrut : '';
+  const appellation = appellationCourte(v.appellation_texte ?? appellationDeduite(v.vin_texte, v.appellation_nom));
+  const producteur = propre(v.producteur && !/^non /i.test(v.producteur) ? v.producteur : '').replace(/\s*\(.*?\)/g, '');
+  const tete = nom || appellation || v.libelle;
+  const millesime = v.millesime && v.millesime !== 'NM' ? v.millesime : '';
+  const dessous = [producteur, tete === appellation ? '' : appellation, cepages]
+    .filter((x, i, t) => x && !t.slice(0, i).some((y) => y && ` ${cle(y)} `.includes(` ${cle(x)} `)) && !` ${cle(tete)} `.includes(` ${cle(x)} `));
+  return { titre: [tete, millesime].filter(Boolean).join(' '), sousTitre: dessous.join(' · ') };
+}

@@ -42,8 +42,8 @@ export function OngletsCarte({ restaurant, vins, couleur }: { restaurant: string
               <Link key={v.id} href={`/${restaurant}/vin/${v.id}`} className="ligne-vin">
                 <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={52} hauteur={52} />
                 <div className="infos">
-                  <span className="nom">{v.libelle}</span>
-                  <span className="sous">{sousTitreVin({ ...v, format: v.tarifs?.length ? undefined : v.format })}</span>
+                  <span className="nom">{v.titre ?? v.libelle}</span>
+                  <span className="sous">{v.titre !== undefined ? v.sousTitre : sousTitreVin({ ...v, format: v.tarifs?.length ? undefined : v.format })}</span>
                 </div>
                 {v.tarifs?.length ? (
                   <span className="prix">

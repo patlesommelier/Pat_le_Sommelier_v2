@@ -35,3 +35,11 @@ test('champs lus sur la carte à l’import', () => {
   assert.equal(appellationDeduite('Sancerre rouge – cuvée non précisée', 'Sancerre'), 'Sancerre rouge');
   assert.equal(appellationDeduite('Terre Siciliane IGT / Etna – Passorosso'), 'Terre Siciliane');
 });
+
+test('carte de l’app : nom du vin et millésime, puis producteur, appellation, cépages', async () => {
+  const { titreCarte } = await import('../src/lib/admin/intitule');
+  assert.deepEqual(titreCarte({ libelle: 'Chablis Saint-Pierre', nom_vin: 'Saint-Pierre', appellation_texte: 'Chablis', producteur: 'Régnard', cepages: 'Chardonnay', millesime: '2022' }),
+    { titre: 'Saint-Pierre 2022', sousTitre: 'Régnard · Chablis · Chardonnay' });
+  assert.deepEqual(titreCarte({ libelle: 'Chiroubles Domaine Piron', nom_vin: '', appellation_texte: 'Chiroubles', producteur: 'Domaine Dominique Piron (Maison Piron)', cepages: 'Gamay', millesime: 'NM' }),
+    { titre: 'Chiroubles', sousTitre: 'Domaine Dominique Piron · Gamay' });
+});

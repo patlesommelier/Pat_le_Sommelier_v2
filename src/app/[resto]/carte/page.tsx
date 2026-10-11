@@ -6,6 +6,7 @@ import { versOnglet } from '@/lib/types';
 import { getCarte, getRestaurant } from '@/lib/donnees';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
 import { contenanceDuFormat, grouperMemeVin } from '@/lib/contenances';
+import { titreCarte } from '@/lib/admin/intitule';
 
 export default async function Carte({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ c?: string }> }) {
   const { resto } = await params;
@@ -17,7 +18,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   // Un vin en plusieurs contenances : une seule ligne (la bouteille, sinon la première), avec le prix de chacune.
   const parVin = grouperMemeVin(vins, (v) => v.format).map((g) => g.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? g[0]);
   const lignes = vins.filter((v) => parVin.includes(v))
-    .map((v) => ({ ...versOnglet(v), tarifs: (tarifs.get(v.id) ?? []).map(({ code, prix }) => ({ code, prix })) }));
+    .map((v) => ({ ...versOnglet(v), ...titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }),
+      tarifs: (tarifs.get(v.id) ?? []).map(({ code, prix }) => ({ code, prix })) }));
 
   return (
     <>
