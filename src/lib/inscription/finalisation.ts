@@ -113,16 +113,20 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     const id = `${restaurantId}-${l}${String(compteurs[l]).padStart(2, '0')}`;
     await requete(
       `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_id, producteur_texte, vin_texte, millesime, format,
-                              prix, prix_verre, ordre, disponible, contenances)
-       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14)`,
+                              prix, prix_verre, ordre, disponible, contenances, cepages)
+       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15)`,
       [id, restaurantId, v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
         v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1,
-        contenancesDesLignes(lignes(v))]);
+        contenancesDesLignes(lignes(v)), v.cepages ?? null]);
   }
 
   // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).
   await partagerEtiquettes(requete, { vins: (await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1', [restaurantId])).map((v) => v.id) })
     .catch((e) => console.error('[inscription] étiquettes', e));
+  // Cépages absents de la carte : repris du vin de la base de Pat reconnu (avant le calcul des accords, qui s'en sert).
+  await requete(
+    `update vin_carte v set cepages = c.cepages from cuvee c
+      where v.cuvee_id = c.id and v.restaurant_id = $1 and coalesce(v.cepages, '') = '' and coalesce(c.cepages, '') <> ''`, [restaurantId]);
   // Étiquettes encore manquantes : demandées à Wine Labs (une par cuvée), en arrière-plan.
   await chercherEtiquettesManquantes(restaurantId).catch((e) => console.error('[inscription] Wine Labs', e));
 

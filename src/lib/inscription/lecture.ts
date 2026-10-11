@@ -80,11 +80,12 @@ null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou n
 « millesime » (4 chiffres, « 2019-2020 » si deux ; null si non millésimé), « contenance » (« 37,5 cl », « 150 cl »… ; null pour 75 cl),
 « prix » (prix de la bouteille en euros, nombre ; null si absent), « prixVerre » (prix au verre, nombre, ou null),
 « auVerre » (true si le vin n'est servi qu'au verre), « couleur » parmi bulles, blanc, rose, orange, rouge, doux, sans_alcool
-(vin sans alcool ou désalcoolisé, même pétillant : sans_alcool ; tout autre effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null).
+(vin sans alcool ou désalcoolisé, même pétillant : sans_alcool ; tout autre effervescent : bulles ; vin doux, liquoreux ou muté : doux), « region » (titre de section de la carte, ou null),
+« cepages » (cépages indiqués sur la carte, séparés par des virgules ; null s'ils n'y figurent pas — ne les devine pas).
 Un même vin en deux contenances donne deux lignes. N'invente rien.
 Si ces documents ne contiennent aucun vin mais un menu de plats (entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
 Sinon, réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",
-"contenance": null, "prix": 58, "prixVerre": null, "auVerre": false, "couleur": "blanc", "region": "Loire"}]`;
+"contenance": null, "prix": 58, "prixVerre": null, "auVerre": false, "couleur": "blanc", "region": "Loire", "cepages": "Sauvignon blanc"}]`;
 
 /** Lit le menu (photos ou PDF) et renvoie les plats. Données brutes : elles seront validées par `Plat`. */
 export async function analyserMenu(fichiers: FichierEnvoye[]): Promise<unknown[]> {

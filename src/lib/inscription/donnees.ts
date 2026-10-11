@@ -26,6 +26,8 @@ export const Vin = z.object({
   auVerre: z.boolean().default(false),
   couleur: z.enum(COULEURS),
   region: z.string().trim().max(80).nullable().default(null),
+  // Cépages indiqués sur la carte (absents des inscriptions antérieures).
+  cepages: z.string().trim().max(200).nullish().catch(null),
 });
 export type Vin = z.infer<typeof Vin>;
 
