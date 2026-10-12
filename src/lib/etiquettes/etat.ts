@@ -25,8 +25,6 @@ export function etatEtiquetteVin(v: { etiquette_url: string | null; etiquette_so
 export function etatEtiquetteRestaurant(v: { etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur?: string | null }, fiche = false): EtatEtiquette {
   if (v.etiquette_source === 'restaurant') return ['Votre photo', 'propose'];
   if (v.etiquette_url) return ['Base de Pat', 'ok'];
-  // Pas de recherche possible sans producteur : le restaurant peut le préciser.
-  if (v.etiquette_statut === 'introuvable' && v.etiquette_erreur?.startsWith('Producteur inconnu')) return ['Producteur à préciser, ou à photographier', 'attention'];
   return fiche ? ['Pat la cherche, uploadez votre photo si vous préférez', ''] : ['Pat est en train de la chercher', ''];
 }
 
