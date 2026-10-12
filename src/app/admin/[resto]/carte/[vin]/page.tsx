@@ -145,7 +145,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
             <div>
               <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
-              <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison</span></label>
+              <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison<small>Il apparaît alors dans « Coups de cœur » de l’app, avec un petit cœur, et plus dans sa couleur.</small></span></label>
             </div>
           </fieldset>
 

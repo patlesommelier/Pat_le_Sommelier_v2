@@ -3,9 +3,10 @@ import { organiserCarte } from '../../../actions';
 import { Entete, Message } from '@/components/admin/Ui';
 import { OrganisationCarte, type RubriqueOrga } from '@/components/admin/OrganisationCarte';
 import { exigerAcces } from '@/lib/admin/auth';
-import { getVinsBO } from '@/lib/admin/donnees';
+import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
+import { categoriesActives } from '@/lib/categories';
 import { titreCarte } from '@/lib/admin/intitule';
-import { regrouperVins } from '../etats';
+import { placeGroupe, regrouperVins } from '../etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
@@ -14,11 +15,13 @@ export default async function OrganiserCarte({ params, searchParams }: { params:
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const vins = await getVinsBO(resto);
+  const [vins, restaurant] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto)]);
+  // Comme dans l'app : les vins d'une catégorie spéciale (coup de cœur, nature, bio) ne sont pas dans leur couleur.
+  const actives = categoriesActives(restaurant?.categories_carte);
   const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
   const c = presentes.find(([k]) => k === sp.c)?.[0] ?? presentes[0]?.[0] ?? 'rouge';
   // Comme dans l'app : un vin par ligne (ses contenances ensemble), rubriques dans l'ordre de leur premier vin.
-  const groupes = regrouperVins(vins.filter((v) => v.couleur === c));
+  const groupes = regrouperVins(vins.filter((v) => v.couleur === c)).filter((g) => placeGroupe(g, actives) === c);
   const rubriques: RubriqueOrga[] = [];
   for (const g of groupes) {
     const nom = g.principal.section ?? '';

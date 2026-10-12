@@ -16,9 +16,12 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   if (!restaurant) notFound();
   const [vins, tarifs] = await Promise.all([getCarte(resto), tarifsDuRestaurant(resto)]);
   // Un vin en plusieurs contenances : une seule ligne (la bouteille, sinon la première), avec le prix de chacune.
-  const parVin = grouperMemeVin(vins, (v) => v.format).map((g) => g.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? g[0]);
+  const groupes = grouperMemeVin(vins, (v) => v.format);
+  const parVin = groupes.map((g) => g.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? g[0]);
+  // Coup de cœur : coché sur une des contenances, il vaut pour le vin.
+  const coeur = new Set(groupes.filter((g) => g.some((v) => v.coup_de_coeur)).flat().map((v) => v.id));
   const lignes = vins.filter((v) => parVin.includes(v))
-    .map((v) => ({ ...versOnglet(v), ...titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }),
+    .map((v) => ({ ...versOnglet(v), coup_de_coeur: coeur.has(v.id), ...titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }),
       tarifs: (tarifs.get(v.id) ?? []).map(({ code, prix }) => ({ code, prix })) }));
 
   return (

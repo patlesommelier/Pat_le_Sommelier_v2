@@ -5,22 +5,18 @@ import { useState } from 'react';
 import { euros, lignePrix, sousTitreVin } from '@/lib/format';
 import { COULEURS, type VinOnglet } from '@/lib/types';
 import { Etiquette } from './Etiquette';
-
-/** Catégories en plus des couleurs, choisies par le restaurant : un vin y figure aussi dans sa couleur. */
-const EXTRAS: { id: string; libelle: string; garde: (v: VinOnglet) => boolean }[] = [
-  { id: 'coups_de_coeur', libelle: 'Coups de cœur', garde: (v) => Boolean(v.coup_de_coeur) },
-  { id: 'nature', libelle: 'Nature', garde: (v) => Boolean(v.nature) },
-  { id: 'bio', libelle: 'Bio', garde: (v) => Boolean(v.bio) },
-];
+import { categoriesActives, placeDansCarte } from '@/lib/categories';
 
 /** Carte des vins par onglets : on ne voit que les vins de la couleur choisie, groupés par région. */
 export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { restaurant: string; vins: VinOnglet[]; couleur?: string; categories?: string[] }) {
   // Quatre onglets principaux ; « Orange » et « Doux » n'apparaissent que si la carte en contient.
   const couleurs = COULEURS.filter((c) => ['bulles', 'blanc', 'rose', 'rouge'].includes(c.id) || vins.some((v) => v.couleur === c.id));
-  // Puis les catégories choisies par le restaurant, si elles ont des vins.
-  const extras = EXTRAS.filter((e) => categories.includes(e.id) && vins.some(e.garde));
+  // Puis les catégories spéciales (coups de cœur toujours ; nature, bio si choisies) : un vin n'apparaît que dans l'une d'elles.
+  const actives = categoriesActives(categories);
+  const place = (v: VinOnglet) => placeDansCarte(v, actives);
+  const extras = actives.filter((e) => vins.some((v) => place(v) === e.id));
   const onglets: { id: string; libelle: string }[] = [...couleurs, ...extras];
-  const dans = (id: string) => { const e = extras.find((x) => x.id === id); return (v: VinOnglet) => (e ? e.garde(v) : v.couleur === id); };
+  const dans = (id: string) => (v: VinOnglet) => place(v) === id;
   // Couleur ouverte : celle de l'adresse (?c=, retour depuis la fiche d'un vin), sinon la première qui a des vins.
   const [actif, setActif] = useState<string>(onglets.find((o) => o.id === couleur)?.id ?? couleurs.find((o) => vins.some((v) => v.couleur === o.id))?.id ?? 'blanc');
   const choisir = (id: typeof actif, el?: HTMLElement) => {

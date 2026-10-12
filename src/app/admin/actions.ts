@@ -6,7 +6,8 @@ import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
-import { parRubrique, regrouperVins } from './[resto]/carte/etats';
+import { parRubrique, placeGroupe, regrouperVins } from './[resto]/carte/etats';
+import { categoriesActives } from '@/lib/categories';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { deposerLogo } from '@/lib/logo';
 import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
@@ -164,6 +165,9 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
       where id = $1 and restaurant_id = $2`,
     [vinId, resto, f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
+  // Coup de cœur : pour le vin entier (toutes ses contenances).
+  await requete('update vin_carte set coup_de_coeur = $3 where restaurant_id = $2 and id = any($1)',
+    [await memeVin(resto, vinId), resto, f.get('coup_de_coeur') === 'on']);
   if (!parContenances) {
     await requete(
       `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6 where id = $1 and restaurant_id = $2`,
@@ -679,8 +683,11 @@ async function appliquerPlan(resto: string, couleur: string, plan: PlanCarte) {
 
 /** Plan actuel d'une couleur, tel que l'app l'affiche (sous-catégories, puis vins). */
 async function planActuel(resto: string, couleur: string): Promise<PlanCarte> {
-  const vins = (await getVinsBO(resto)).filter((v) => v.couleur === couleur);
-  return parRubrique(regrouperVins(vins)).map((r) => ({ rubrique: r.nom, vins: r.groupes.map((g) => g.tous.map((x) => x.id)) }));
+  // Comme dans l'app : les vins d'une catégorie spéciale (coup de cœur, nature, bio) ne sont pas dans leur couleur.
+  const [[r], vins] = await Promise.all([requete<{ categories_carte: string[] }>('select categories_carte from restaurant where id = $1', [resto]), getVinsBO(resto)]);
+  const actives = categoriesActives(r?.categories_carte);
+  const groupes = regrouperVins(vins.filter((v) => v.couleur === couleur)).filter((g) => placeGroupe(g, actives) === couleur);
+  return parRubrique(groupes).map((r) => ({ rubrique: r.nom, vins: r.groupes.map((g) => g.tous.map((x) => x.id)) }));
 }
 
 /** Page « Organiser » (glisser-déposer) : enregistre tout le plan d'une couleur. */
@@ -790,7 +797,7 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
     [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio, ratioFonce,
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
       ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null,
-      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['coups_de_coeur', 'nature', 'bio'].includes(c)) : null],
+      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['nature', 'bio'].includes(c)) : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

@@ -1,5 +1,6 @@
 // États affichés pour un vin de la carte (liste et fiche du back-office).
 import type { VinBO } from '@/lib/admin/donnees';
+import { categoriesActives, placeDansCarte } from '@/lib/categories';
 import { etatEtiquetteRestaurant } from '@/lib/etiquettes/etat';
 import { contenanceDuFormat, grouperMemeVin, libelleCourt, ordonner } from '@/lib/contenances';
 import { titreCarte } from '@/lib/admin/intitule';
@@ -39,6 +40,11 @@ export function regrouperVins(vins: VinBO[]): GroupeVin[] {
       : principal.prix_verre ? { montant: principal.prix_verre, verre: true } : null;
     return { principal, tous, contenances, prix };
   });
+}
+
+/** Onglet d'un vin (toutes contenances) : sa catégorie spéciale (coup de cœur, nature, bio), sinon sa couleur — comme dans l'app. */
+export function placeGroupe(g: GroupeVin, actives: ReturnType<typeof categoriesActives>) {
+  return placeDansCarte({ couleur: g.principal.couleur, coup_de_coeur: g.tous.some((x) => x.coup_de_coeur), nature: g.principal.nature, bio: g.principal.bio }, actives);
 }
 
 /**

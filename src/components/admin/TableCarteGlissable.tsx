@@ -9,7 +9,7 @@ export type LigneGlissable = { cle: string; ids: string[]; cellules: ReactNode; 
 export type RubriqueGlissable = { cle: string; nom: string; entete: ReactNode; vins: LigneGlissable[] };
 type Plan = { rubrique: string; vins: string[][] }[];
 
-export function TableCarteGlissable({ rubriques: initiales, enregistrer }: { rubriques: RubriqueGlissable[]; enregistrer: (plan: Plan) => Promise<{ ok: boolean }> }) {
+export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = false }: { rubriques: RubriqueGlissable[]; enregistrer?: (plan: Plan) => Promise<{ ok: boolean }>; fixe?: boolean }) {
   const router = useRouter();
   const [rubriques, setRubriques] = useState(initiales);
   const [glisse, setGlisse] = useState<string | null>(null);
@@ -19,7 +19,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer }: { rub
   useEffect(() => setRubriques(initiales), [initiales]); // nouvelle version du serveur (après enregistrement)
 
   const deposer = (cle: string, rubrique: number, avant: string | null) => {
-    if (cle === avant) return;
+    if (cle === avant || fixe || !enregistrer) return;
     const r = rubriques.map((x) => ({ ...x, vins: [...x.vins] }));
     let vin: LigneGlissable | undefined;
     for (const x of r) { const j = x.vins.findIndex((v) => v.cle === cle); if (j >= 0) [vin] = x.vins.splice(j, 1); }
@@ -48,11 +48,11 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer }: { rub
             {r.entete}
           </tr>
           {r.vins.map((v) => (
-            <tr key={v.cle} id={v.ancre} className={v.classe} draggable
+            <tr key={v.cle} id={v.ancre} className={v.classe} draggable={!fixe}
               onDragStart={(e) => { setGlisse(v.cle); e.dataTransfer.effectAllowed = 'move'; }} onDragEnd={fin}
               onDragOver={survol(v.cle)} onDrop={(e) => { e.preventDefault(); if (glisse) deposer(glisse, ri, v.cle); fin(); }}
-              style={{ scrollMarginTop: 80, cursor: 'grab', opacity: glisse === v.cle ? 0.4 : enCours ? 0.8 : 1, ...trait(v.cle) }}
-              title="Glissez la ligne pour déplacer ce vin">
+              style={{ scrollMarginTop: 80, cursor: fixe ? undefined : 'grab', opacity: glisse === v.cle ? 0.4 : enCours ? 0.8 : 1, ...trait(v.cle) }}
+              title={fixe ? undefined : 'Glissez la ligne pour déplacer ce vin'}>
               {v.cellules}
             </tr>
           ))}

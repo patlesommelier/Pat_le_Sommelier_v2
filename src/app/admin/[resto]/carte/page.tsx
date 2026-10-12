@@ -5,8 +5,9 @@ import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getRankingsInternes, getVinsBO, ligneNotesPat } from '@/lib/admin/donnees';
-import { etatEtiquette, etatProducteur, nomPourListe, parRubrique, regrouperVins } from './etats';
+import { getRankingsInternes, getRestaurantBO, getVinsBO, ligneNotesPat } from '@/lib/admin/donnees';
+import { categoriesActives } from '@/lib/categories';
+import { etatEtiquette, etatProducteur, nomPourListe, parRubrique, placeGroupe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
@@ -15,15 +16,25 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [vins, u] = await Promise.all([getVinsBO(resto), utilisateurCourant()]);
+  const [vins, u, restaurant] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getRestaurantBO(resto)]);
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const rankings = u?.admin ? await getRankingsInternes(resto) : null;
   // Notes de Pat (base) : visibles par le super-admin seulement, jamais par le restaurant.
   const etoiles = (id: string) => ligneNotesPat(rankings?.get(id));
-  const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
+  // Onglets comme dans l'app : les couleurs, puis les catégories spéciales (coups de cœur, nature, bio) ;
+  // un vin d'une catégorie spéciale n'est que là.
+  const actives = categoriesActives(restaurant?.categories_carte);
+  const tousGroupes = regrouperVins(vins);
+  const placeDe = new Map(tousGroupes.map((g) => [g, placeGroupe(g, actives)]));
+  const presentes: [string, string][] = [
+    ...COULEURS.filter(([k]) => tousGroupes.some((g) => placeDe.get(g) === k)).map(([k, l]) => [k, l] as [string, string]),
+    ...actives.filter((e) => tousGroupes.some((g) => placeDe.get(g) === e.id)).map((e) => [e.id, e.libelle] as [string, string]),
+  ];
   const choisi = vins.find((v) => v.id === sp.vin); // vin dont on revient : mis en évidence
-  const c = sp.c ?? choisi?.couleur ?? presentes[0]?.[0] ?? 'rouge';
-  const affiches = regrouperVins(vins.filter((v) => v.couleur === c));
+  const groupeChoisi = choisi && tousGroupes.find((g) => g.tous.includes(choisi));
+  const c = sp.c ?? (groupeChoisi && placeDe.get(groupeChoisi)) ?? presentes[0]?.[0] ?? 'rouge';
+  const special = actives.some((e) => e.id === c);
+  const affiches = tousGroupes.filter((g) => placeDe.get(g) === c);
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
   const enRecherche = vins.filter((v) => !v.etiquette_url && (v.etiquette_statut === 'demandee' || v.etiquette_statut === 'a_demander')).length;
   // Chaque étiquette trouvée coûte un crédit Wine Labs à Pat : la recherche manuelle est réservée au super-admin.
@@ -37,7 +48,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
         <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
-        <Link href={`/admin/${resto}/carte/organiser?c=${c}`} className="btn sec">Glisser-déposer · nouvelle sous-catégorie</Link>
+        {!special && <Link href={`/admin/${resto}/carte/organiser?c=${c}`} className="btn sec">Glisser-déposer · nouvelle sous-catégorie</Link>}
         <BoutonCarteImprimee resto={resto} />
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         {wineLabs && (
@@ -63,17 +74,23 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <section className="large">
           <nav className="onglets" aria-label="Couleurs">
             {presentes.map(([k, l]) => (
-              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{regrouperVins(vins.filter((v) => v.couleur === k)).length}</span></Link>
+              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{tousGroupes.filter((g) => placeDe.get(g) === k).length}</span></Link>
             ))}
           </nav>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>
               <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
               {/* Comme dans l'app : les sous-catégories de la carte (renommables), puis leurs vins (flèches pour les déplacer). */}
-              <TableCarteGlissable key={c} enregistrer={enregistrerOrdreCarte.bind(null, resto, c)} rubriques={parRubrique(affiches).map((r, ri, toutes) => ({
+              {/* Catégorie spéciale : les vins groupés par couleur, comme dans l'app ; pas de sous-catégories à renommer ni d'ordre à régler ici. */}
+              <TableCarteGlissable key={c} fixe={special} enregistrer={special ? undefined : enregistrerOrdreCarte.bind(null, resto, c)}
+                rubriques={(special
+                  ? COULEURS.map(([k, l]) => ({ nom: l as string, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((r) => r.groupes.length)
+                  : parRubrique(affiches)).map((r, ri, toutes) => ({
                 cle: `${ri}:${r.nom}`,
                 nom: r.nom,
-                entete: (
+                entete: special ? (
+                  <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
+                ) : (
                   <td colSpan={8}>
                     <form action={renommerRubrique.bind(null, resto, c, r.nom)} style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                       <input name="rubrique" defaultValue={r.nom} placeholder="Sans titre (aucune sous-catégorie affichée)" aria-label="Nom de la sous-catégorie" maxLength={80}
@@ -104,10 +121,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
                       <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>
                       <td className="droite" style={{ whiteSpace: 'nowrap' }}>
-                        <div style={{ display: 'inline-flex', gap: 2, verticalAlign: 'middle', marginRight: 8 }}>
+                        {!special && <div style={{ display: 'inline-flex', gap: 2, verticalAlign: 'middle', marginRight: 8 }}>
                           <form action={deplacerVinCarte.bind(null, resto, c, v.id, -1)}><button className="btn fantome petit" disabled={premier} aria-label={`Monter ${v.libelle}`} title={gi === 0 ? 'Passer dans la sous-catégorie du dessus' : 'Monter'}>↑</button></form>
                           <form action={deplacerVinCarte.bind(null, resto, c, v.id, 1)}><button className="btn fantome petit" disabled={dernier} aria-label={`Descendre ${v.libelle}`} title={gi === r.groupes.length - 1 ? 'Passer dans la sous-catégorie du dessous' : 'Descendre'}>↓</button></form>
-                        </div>
+                        </div>}
                         <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link></td>
                     </>),
                   };
