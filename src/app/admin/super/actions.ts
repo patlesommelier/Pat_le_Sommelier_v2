@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation';
 import { COOKIE_VUE, exigerAdmin, exigerSuperAdminReel } from '@/lib/admin/auth';
 import { supabaseService } from '@/lib/admin/supabase';
 import { requete } from '@/lib/db';
+import { grouperMemeVin } from '@/lib/contenances';
 import { preparerAccords } from '@/lib/inscription/adaptateurs';
 import { importerVersion, modifierPrincipeBrouillon } from '@/lib/principes/versions';
 import { validerProducteur, rejeterProducteur } from '@/lib/producteurs/validation';
@@ -350,7 +351,11 @@ export async function ajouterCuveeDepuisCarte(vinId: string, f: FormData) {
        values ($1, $2, $3, $4::couleur_vin, $5, $6, $7, $8, case when $8::text is not null then 'restaurant' end, 'propose', 'carte')
        on conflict (id) do nothing`,
       [id, v.producteur_id, v.nom_vin || v.libelle, v.couleur, v.cepages, v.appellation_id, v.appellation_texte, v.etiquette_url]);
-    await requete('update vin_carte set cuvee_id = $2 where id = $1', [vinId, id]);
+    // Toutes les contenances de ce vin sur la carte (verre, bouteille, magnum…) sont reliées au même vin de la base.
+    const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string; cuvee_id: string | null }>(
+      'select id, couleur::text, libelle, millesime, format, cuvee_id from vin_carte where restaurant_id = (select restaurant_id from vin_carte where id = $1) order by ordre, id', [vinId]);
+    const memes = (grouperMemeVin(lignes, (l) => l.format).find((g) => g.some((l) => l.id === vinId)) ?? []).filter((l) => l.id === vinId || !l.cuvee_id).map((l) => l.id);
+    await requete('update vin_carte set cuvee_id = $2 where id = any($1)', [memes.length ? memes : [vinId], id]);
   }
   redirect(`/admin/super/vins/${encodeURIComponent(id)}?${new URLSearchParams({ retour })}`);
 }

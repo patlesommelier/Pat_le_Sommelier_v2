@@ -4,6 +4,7 @@ import 'server-only';
  * Réservé aux pages de /admin/super, toutes protégées par exigerAdmin() : jamais appelé pour un compte restaurant.
  */
 import { requete } from '../db';
+import { contenanceDuFormat, grouperMemeVin, libelleCourt, ordonner } from '../contenances';
 
 // ───────── Restaurants ─────────
 export async function indicateurs() {
@@ -205,6 +206,8 @@ export interface VinCarteBase {
   id: string; libelle: string; millesime: string | null; couleur: string; producteur_id: string | null; producteur: string | null;
   appellation: string | null; cepages: string | null; etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur: string | null;
   cuvee_id: string | null; cuvee_statut: string | null; cuvee_nom: string | null; total: number;
+  /** Contenances de ce vin sur la carte (« Verre · Bouteille · Magnum »), une ligne par vin. */
+  contenances?: string;
 }
 
 /**
@@ -214,13 +217,13 @@ export interface VinCarteBase {
 export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', statut = '', page = 0 }:
   { restaurant: string; texte?: string; couleur?: string; statut?: string; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
-  const lignes = await requete<VinCarteBase>(
+  const toutes = await requete<VinCarteBase & { format: string }>(
     `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, -- producteur de la base d'abord (nom corrigé par Pat), sinon celui lu sur la carte
             coalesce(p.nom, nullif(v.producteur_texte, '')) as producteur,
             -- vin relié à la base : son appellation et ses cépages de la base d'abord (ce que la fiche enregistre)
             coalesce(c.appellation_texte, tc.nom, v.appellation_texte, t.nom) as appellation, coalesce(nullif(c.cepages, ''), v.cepages) as cepages,
-            v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut, c.nom as cuvee_nom,
-            count(*) over ()::int as total
+            v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, c.id as cuvee_id, c.statut::text as cuvee_statut, c.nom as cuvee_nom, v.format,
+            0 as total
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee c on c.id = v.cuvee_id left join terroir tc on tc.id = c.appellation_id
       where v.restaurant_id = $1
@@ -228,8 +231,23 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
              or ${sansAccent("coalesce(c.nom, '')")} like '%' || ${sansAccent('$2')} || '%'
              or ${sansAccent("coalesce(v.producteur_texte, '') || ' ' || coalesce(p.nom, '')")} like '%' || ${sansAccent('$2')} || '%')
         and ($3 = '' or v.couleur::text = $3)
-        and ($4 = '' or ($4 = 'absent' and c.id is null) or c.statut::text = $4)
-      order by v.couleur, v.ordre
-      limit 50 offset $5`, [restaurant, texte.trim(), couleur, statut, page * 50]);
-  return { lignes, total: lignes[0]?.total ?? 0 };
+      order by v.couleur, v.ordre`, [restaurant, texte.trim(), couleur]);
+  // Une ligne par vin : ses contenances (verre, bouteille, magnum…) sont des lignes séparées de la carte.
+  // Les lignes reliées au même vin de la base vont ensemble aussi, même sous des intitulés différents.
+  const groupes: (typeof toutes)[] = [];
+  const parCuvee = new Map<string, (typeof toutes)>();
+  for (const g of grouperMemeVin(toutes, (l) => l.format)) {
+    const cuvee = g.find((x) => x.cuvee_id)?.cuvee_id;
+    const deja = cuvee ? parCuvee.get(cuvee) : undefined;
+    if (deja) { deja.push(...g); continue; }
+    groupes.push(g);
+    if (cuvee) parCuvee.set(cuvee, g);
+  }
+  // Statut (filtre) : celui du vin de la base relié, après regroupement.
+  const vins = groupes.map((g) => {
+    const v = g.find((x) => x.cuvee_id) ?? g.find((x) => contenanceDuFormat(x.format) === 'bouteille') ?? g[0];
+    const codes = ordonner(g.map((x) => contenanceDuFormat(x.format)));
+    return { ...v, contenances: g.length > 1 ? codes.map(libelleCourt).join(' · ') : undefined };
+  }).filter((v) => !statut || (statut === 'absent' ? !v.cuvee_id : v.cuvee_statut === statut));
+  return { lignes: vins.slice(page * 50, page * 50 + 50), total: vins.length };
 }
