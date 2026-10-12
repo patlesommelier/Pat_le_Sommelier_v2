@@ -60,6 +60,9 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
                 <datalist id="appellations-base">{appellations.map((a) => <option key={a.nom} value={a.nom} />)}</datalist>
                 <span className="aide">{c.appellation_base ? `Reliée à « ${c.appellation_base} » dans la base de Pat.` : c.appellation ? 'Pas reliée : aucune appellation de ce nom dans la base de Pat (choisissez-en une dans la liste pour la relier).' : 'Choisissez dans la liste pour la relier à la base de Pat.'}</span></div>
               <div className="champ"><label htmlFor="cepages">Cépages</label><input id="cepages" name="cepages" defaultValue={c.cepages ?? ''} /></div>
+              <div className="champ interne"><label htmlFor="ranking_vin">Note du vin (cuisine interne, 0 à 5)</label>
+                <input id="ranking_vin" name="ranking_vin" type="number" min={0} max={5} step={1} defaultValue={c.ranking_pat ?? ''} placeholder={c.ranking_producteur !== null ? String(c.ranking_producteur) : ''} />
+                <span className="aide">Vide : la note du producteur ({c.ranking_producteur ?? 'pas encore notée'}) s’applique. Reprise automatiquement par les restaurants.</span></div>
               <div className="champ"><label htmlFor="garde">Garde</label><input id="garde" name="garde" defaultValue={c.garde ?? ''} placeholder="Ex. 5 à 10 ans" /></div>
             </div>
             <div className="champ"><label htmlFor="description">Description</label><textarea id="description" name="description" rows={5} defaultValue={c.description ?? ''} /></div>

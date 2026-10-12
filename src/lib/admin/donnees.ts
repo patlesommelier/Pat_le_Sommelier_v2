@@ -123,10 +123,19 @@ export async function getLimitesInternes(restaurantId: string, platId: string) {
  * À n'appeler que pour un administrateur (Pat) ; jamais pour un compte restaurant.
  */
 export async function getRankingsInternes(restaurantId: string) {
-  const r = await requete<{ id: string; ranking_producteur: number | null; ranking_terroir: number | null }>(
-    `select v.id, coalesce(v.ranking_producteur, p.ranking_pat) as ranking_producteur, v.ranking_terroir
-       from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [restaurantId]);
+  const r = await requete<{ id: string; ranking_producteur: number | null; ranking_terroir: number | null; note_producteur: number | null; note_vin: number | null;
+    producteur_id: string | null; cuvee_id: string | null }>(
+    `select v.id, coalesce(c.ranking_pat, p.ranking_pat) as ranking_producteur,
+            coalesce((select t.ranking_pat from terroir t where t.id = v.appellation_id), v.ranking_terroir) as ranking_terroir,
+            p.ranking_pat as note_producteur, c.ranking_pat as note_vin, p.id as producteur_id, c.id as cuvee_id
+       from vin_carte v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id where v.restaurant_id = $1`, [restaurantId]);
   return new Map(r.map((x) => [x.id, x]));
+}
+
+/** Notes de Pat d'un vin en une ligne courte (super-admin seulement) : « Pat : producteur 3 · vin 4 · terroir 2 ». */
+export function ligneNotesPat(r: { note_producteur: number | null; note_vin: number | null; ranking_terroir: number | null } | null | undefined) {
+  if (!r) return '';
+  return ['Pat : producteur ' + (r.note_producteur ?? '—'), r.note_vin !== null ? `vin ${r.note_vin}` : '', `terroir ${r.ranking_terroir ?? '—'}`].filter(Boolean).join(' · ');
 }
 
 // ───────── Accords ─────────

@@ -71,7 +71,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
           <h2>Ses vins</h2>
           <div className="tableau">
             <table style={{ minWidth: 760 }}>
-              <thead><tr><th>Vin</th><th>Couleur</th><th>Terroir</th><th>Carte</th><th className="droite">Prix</th><th>Origine</th><th className="droite">Ranking de la cuvée</th></tr></thead>
+              <thead><tr><th>Vin</th><th>Couleur</th><th>Terroir</th><th>Carte</th><th className="droite">Prix</th><th>Origine</th><th className="droite">Note du vin</th></tr></thead>
               <tbody>
                 {p.vins.map((v) => (
                   <tr key={v.id}>
@@ -81,21 +81,25 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
                     <td>{v.restaurant}</td>
                     <td className="droite">{euros(v.prix)}</td>
                     <td><Etat type="propose">Repéré sur une carte</Etat></td>
-                    <td className="droite"><input className="rk" name={`rkv_${v.id}`} type="number" min={0} max={5} step={1} defaultValue={v.ranking_producteur ?? ''}
-                      placeholder={rk !== null ? String(rk) : ''} aria-label={`Ranking de ${v.libelle}`} /></td>
+                    <td className="droite">{v.cuvee_id
+                      ? <input className="rk" name={`rkc_${v.cuvee_id}`} type="number" min={0} max={5} step={1} defaultValue={v.ranking_producteur ?? ''}
+                          placeholder={rk !== null ? String(rk) : ''} aria-label={`Note de ${v.cuvee_nom ?? v.libelle}`} />
+                      : <span className="petit discret" title="Ajoutez ce vin à la base (Vins de la base) pour lui donner sa propre note">{rk ?? '—'}</span>}</td>
                   </tr>
                 ))}
                 {p.cuvees.map((c) => (
                   <tr key={c.id}>
                     <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><Link href={`/admin/super/vins/${encodeURIComponent(c.id)}`}><b>{c.nom}</b></Link></div></td>
                     <td>{c.couleur ? COULEURS[c.couleur] ?? c.couleur : '—'}</td><td>{c.appellation ?? '—'}</td>
-                    <td>—</td><td /><td><Etat type="ok">{c.source === 'carte' ? 'Cuvée reprise d’une carte' : 'Proposé par Pat'}</Etat></td><td />
+                    <td>—</td><td /><td><Etat type="ok">{c.source === 'carte' ? 'Cuvée reprise d’une carte' : 'Proposé par Pat'}</Etat></td>
+                    <td className="droite"><input className="rk" name={`rkc_${c.id}`} type="number" min={0} max={5} step={1} defaultValue={c.ranking_pat ?? ''}
+                      placeholder={rk !== null ? String(rk) : ''} aria-label={`Note de ${c.nom}`} /></td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <span className="petit discret">Ranking de la cuvée vide : celui du producteur s’applique.</span>
+          <span className="petit discret">Note du vin vide : celle du producteur s’applique. Les restaurants prennent ces notes automatiquement ; un vin de carte pas encore dans la base prend celle du producteur.</span>
         </div>
 
         {p.terroirs.length > 0 && (

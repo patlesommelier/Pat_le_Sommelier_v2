@@ -8,7 +8,7 @@ import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { Etat } from '@/components/admin/Ui';
 import { enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getRankingsInternes, getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
+import { getRankingsInternes, getVinsBO, ligneNotesPat, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule';
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
@@ -27,7 +27,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   if (!v) notFound();
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const r = u?.admin ? (await getRankingsInternes(resto)).get(v.id) : null;
-  const etoiles = r ? ` · ★ ${r.ranking_producteur ?? 0} / terroir ${r.ranking_terroir ?? 0}` : '';
+  const etoiles = r ? ` · ${ligneNotesPat(r)}` : '';
   const [pl, pk] = etatProducteur(v);
   const [el, ek] = etatEtiquette(v, true);
   const sansLien = Boolean(!v.producteur_id && v.producteur_texte && !/^non /i.test(v.producteur_texte));
@@ -99,6 +99,16 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             {/* Super-admin seulement : la fiche complète du producteur dans la base de Pat. */}
             {u?.admin && v.producteur_id && (
               <Link href={`/admin/super/producteurs/${encodeURIComponent(v.producteur_id)}`} target="_blank" className="petit">Fiche complète du producteur (super-admin) →</Link>
+            )}
+            {/* Super-admin seulement : notes de la base de Pat utilisées pour ce vin (jamais montrées au restaurant). */}
+            {r && (
+              <div className="petit" style={{ border: '1px dashed var(--ligne, #ccc)', borderRadius: 8, padding: '8px 10px' }}>
+                <b>Notes de Pat (super-admin)</b> : producteur {r.note_producteur ?? '—'}{r.note_vin !== null ? ` · vin ${r.note_vin} (remplace celle du producteur)` : ''} · terroir {r.ranking_terroir ?? '—'}
+                {' '}→ compte pour <b>{r.ranking_producteur ?? 0}</b> dans le score.
+                {r.cuvee_id
+                  ? <> <Link href={`/admin/super/vins/${encodeURIComponent(r.cuvee_id)}`} target="_blank">Note du vin →</Link></>
+                  : ' Vin pas encore dans la base : la note du producteur s’applique.'}
+              </div>
             )}
             {!v.producteur_id && sansLien && suggestions.length > 0 && (
               <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Pat a trouvé des noms proches dans sa base : choisissez le bon producteur, ou proposez-le comme nouveau.</p>

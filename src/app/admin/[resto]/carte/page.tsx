@@ -4,7 +4,7 @@ import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getRankingsInternes, getVinsBO } from '@/lib/admin/donnees';
+import { getRankingsInternes, getVinsBO, ligneNotesPat } from '@/lib/admin/donnees';
 import { etatEtiquette, etatProducteur, nomPourListe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
@@ -17,7 +17,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const [vins, u] = await Promise.all([getVinsBO(resto), utilisateurCourant()]);
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const rankings = u?.admin ? await getRankingsInternes(resto) : null;
-  const etoiles = (id: string) => { const r = rankings?.get(id); return r ? ` · ★ ${r.ranking_producteur ?? 0} / terroir ${r.ranking_terroir ?? 0}` : ''; };
+  // Notes de Pat (base) : visibles par le super-admin seulement, jamais par le restaurant.
+  const etoiles = (id: string) => ligneNotesPat(rankings?.get(id));
   const presentes = COULEURS.filter(([k]) => vins.some((v) => v.couleur === k));
   const choisi = vins.find((v) => v.id === sp.vin); // vin dont on revient : mis en évidence
   const c = sp.c ?? choisi?.couleur ?? presentes[0]?.[0] ?? 'rouge';
@@ -77,7 +78,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                     <tr key={v.id} id={`vin-${v.id}`} className={choisie ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
                       <td style={{ minWidth: 170 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{nom[0]}</Link>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit">{etoiles(v.id).slice(3)}</div>}</td>
+                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--bordeaux, #6b0f24)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
                       <td>{contenances.length
                         ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>

@@ -146,7 +146,8 @@ function lireRankings(f: FormData) {
   for (const [k, v] of f.entries()) {
     if (typeof v !== 'string') continue;
     if (k.startsWith('rkt_') && v.trim() !== '') terroirs.push({ terroirId: k.slice(4), rankingTerroir: Number(v) });
-    if (k.startsWith('rkv_')) vins.push({ vinId: k.slice(4), ranking: v.trim() === '' ? null : Number(v) });
+    // Note d'un vin de la base (cuvée) : un même vin peut figurer sur plusieurs lignes (plusieurs cartes).
+    if (k.startsWith('rkc_')) vins.push({ vinId: k.slice(4), ranking: v.trim() === '' ? null : Number(v) });
   }
   return { terroirs, vins };
 }
@@ -165,8 +166,7 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   const u = await exigerAdmin();
   const page = `/admin/super/producteurs/${encodeURIComponent(producteurId)}`;
   const decision = txt(f, 'decision');
-  const [{ statut, ranking_pat: ancien } = { statut: '', ranking_pat: null }] = await requete<{ statut: string; ranking_pat: number | null }>(
-    'select statut::text, ranking_pat from producteur where id = $1', [producteurId]);
+  const [{ statut } = { statut: '' }] = await requete<{ statut: string }>('select statut::text from producteur where id = $1', [producteurId]);
   if (decision === 'rejeter' && statut !== 'valide') {
     await rejeterProducteur(requete, { producteurId, motif: txt(f, 'motif') ?? '', par: u.email });
     revalidatePath('/admin', 'layout');
@@ -176,8 +176,9 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   const { terroirs, vins } = lireRankings(f);
   const rk = entier(f, 'ranking');
   if (decision === 'valider' && statut !== 'valide') {
-    const r = await validerProducteur(requete, { producteurId, rankingProducteur: rk ?? NaN, terroirs, vins, fiche, par: u.email });
+    const r = await validerProducteur(requete, { producteurId, rankingProducteur: rk ?? NaN, terroirs, fiche, par: u.email });
     if (r.erreurs.length) redirect(avec(page, { erreur: r.erreurs.join(' ') }));
+    await enregistrerNotesCuvees(producteurId, vins);
     revalidatePath('/admin', 'layout');
     redirect(avec('/admin/super/producteurs', { ok: `Producteur validé : ${r.vins} vin(s) de carte passent « Déjà référencé »${r.restaurants.length ? ` (${r.restaurants.join(', ')})` : ''}.` }));
   }
@@ -190,26 +191,25 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
             ranking_suggere = case when statut = 'valide' then ranking_suggere else coalesce($6, ranking_suggere) end, maj_le = now() where id = $1`,
     [producteurId, fiche.nom ?? null, fiche.pays, fiche.region, fiche.notes_objectives, rk]);
   for (const t of terroirs) if (t.rankingTerroir >= 0 && t.rankingTerroir <= 5) await requete('update terroir set ranking_pat = $2, maj_le = now() where id = $1', [t.terroirId, t.rankingTerroir]);
-  // Rankings des vins : seuls ceux modifiés dans la fiche sont enregistrés (les autres suivent le producteur, ci-dessous).
-  const avant = new Map((await requete<{ id: string; r: number | null }>('select id, ranking_producteur as r from vin_carte where producteur_id = $1', [producteurId])).map((x) => [x.id, x.r]));
-  if (statut === 'valide' && rk !== null) await suivreRankingProducteur(producteurId, ancien, rk);
-  for (const v of vins) {
-    if (!(v.ranking === null || (v.ranking >= 0 && v.ranking <= 5)) || v.ranking === (avant.get(v.vinId) ?? null)) continue;
-    await requete('update vin_carte set ranking_producteur = $2 where id = $1 and producteur_id = $3', [v.vinId, v.ranking, producteurId]);
-  }
-  revalidatePath(page);
+  await enregistrerNotesCuvees(producteurId, vins);
+  revalidatePath('/admin', 'layout');
   redirect(avec(page, { ok: statut === 'valide' ? 'Fiche enregistrée.' : 'Fiche enregistrée (producteur toujours à valider).' }));
 }
 
 /**
- * Ranking du producteur changé : les vins des cartes qui avaient son ancien ranking (recopié à la validation) prennent le nouveau.
- * Un ranking propre à un vin (corrigé par Pat pour cette cuvée) est gardé.
+ * Notes des vins de la base d'un producteur (fiche du producteur) : vide = celle du producteur s'applique.
+ * Un même vin peut apparaître sur plusieurs lignes (plusieurs cartes) : la valeur modifiée l'emporte.
  */
-async function suivreRankingProducteur(producteurId: string, ancien: number | null, nouveau: number) {
-  if (ancien === nouveau) return;
-  await requete(
-    `update vin_carte set ranking_producteur = $2 where producteur_id = $1 and (ranking_producteur is null or ranking_producteur = $3)`,
-    [producteurId, nouveau, ancien]);
+async function enregistrerNotesCuvees(producteurId: string, saisies: { vinId: string; ranking: number | null }[]) {
+  if (!saisies.length) return;
+  const actuelles = new Map((await requete<{ id: string; r: number | null }>('select id, ranking_pat as r from cuvee where producteur_id = $1', [producteurId]))
+    .map((c) => [c.id, c.r]));
+  const nouvelles = new Map<string, number | null>();
+  for (const { vinId: id, ranking } of saisies) {
+    if (!actuelles.has(id) || !(ranking === null || (Number.isInteger(ranking) && ranking >= 0 && ranking <= 5))) continue;
+    if (ranking !== (actuelles.get(id) ?? null)) nouvelles.set(id, ranking);
+  }
+  for (const [id, r] of nouvelles) await requete('update cuvee set ranking_pat = $2 where id = $1 and producteur_id = $3', [id, r, producteurId]);
 }
 
 /** Ranking d'un producteur ou d'un terroir déjà validé (écran « Base et rankings »). */
@@ -219,9 +219,7 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
   const retour = txt(f, 'retour') ?? '/admin/super/base';
   if (rk === null || !(rk >= 0 && rk <= 5)) redirect(retour);
   if (type === 'producteur') {
-    const [p] = await requete<{ ancien: number | null }>('select ranking_pat as ancien from producteur where id = $1', [id]);
     await requete('update producteur set ranking_pat = $2, maj_le = now() where id = $1', [id, rk]);
-    if (p) await suivreRankingProducteur(id, p.ancien, rk);
   } else {
     // Le ranking d'un terroir vaut pour tous les vins de ce terroir, dans tous les restaurants.
     await requete('update terroir set ranking_pat = $2, maj_le = now() where id = $1', [id, rk]);
@@ -289,6 +287,10 @@ export async function enregistrerCuvee(id: string, f: FormData) {
     try { etiquette = await deposerImage(image, 'base/etiquettes'); } catch (e) { redirect(avec(page, { erreur: (e as Error).message })); }
   }
   const retirerEtiquette = !etiquette && f.get('retirer_etiquette') === 'on';
+  // Note du vin (cuisine interne) : vide = celle du producteur ; une valeur hors 0 à 5 est ignorée.
+  const rv = entier(f, 'ranking_vin');
+  const noteVin = rv !== null && Number.isInteger(rv) && rv >= 0 && rv <= 5 ? rv : null;
+  if (f.has('ranking_vin')) await requete('update cuvee set ranking_pat = $2 where id = $1', [id, noteVin]);
   await requete(
     `update cuvee set nom = coalesce($2, nom), couleur = $3::couleur_vin, appellation_id = $4, appellation_texte = $11, cepages = $5, garde = $6, description = $7,
             statut = case $8 when 'valider' then 'valide'::statut_validation when 'retirer' then 'retire'::statut_validation else statut end,

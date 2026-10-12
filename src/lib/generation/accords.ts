@@ -101,6 +101,17 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
             pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond, pl.sauce_servie_a_part
        from plat pl left join profil_accord pa on pa.plat_id = pl.id where pl.id = $1 and pl.restaurant_id = $2`, [platId, restaurantId]);
   if (!plat) throw new Error('plat introuvable');
+  // À chaque (ré)accord, les notes de la carte sont remises à jour depuis la base de Pat : vin, sinon producteur ; terroir.
+  // (le classement les lit déjà dans la base ; ces copies servent aux écrans et exports qui les affichent)
+  // Seules les lignes qui changent sont écrites (plusieurs plats sont préparés en parallèle) ; un échec ne bloque pas les accords.
+  await q(
+    `update vin_carte v set ranking_producteur = n.rp, ranking_terroir = n.rt
+       from (select x.id, coalesce((select c.ranking_pat from cuvee c where c.id = x.cuvee_id),
+                                   (select p.ranking_pat from producteur p where p.id = x.producteur_id), x.ranking_producteur) as rp,
+                          coalesce((select t.ranking_pat from terroir t where t.id = x.appellation_id), x.ranking_terroir) as rt
+               from vin_carte x where x.restaurant_id = $1) n
+      where v.id = n.id and (v.ranking_producteur is distinct from n.rp or v.ranking_terroir is distinct from n.rt)`, [restaurantId])
+    .catch((e) => console.error('[accords] notes de la base', restaurantId, e));
   const [tousPrincipes, regles, carteComplete, actuels, autres] = await Promise.all([
     options.principes ?? q<PrincipeCtx>(`select id, numero, titre, regle, role, statut::text from principe where statut <> 'retire'`),
     q<RegleCtx>(`select type::text, portee::text, cible, valeur, texte from regle_sommelier where restaurant_id = $1 and actif
