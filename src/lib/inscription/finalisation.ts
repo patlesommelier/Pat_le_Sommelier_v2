@@ -24,6 +24,9 @@ const slugPlat = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLo
 export class FinalisationEnCours extends Error {}
 
 /** Vin d'une rubrique « Sans alcool » de la carte (ou dont le nom le dit) : catégorie « sans alcool », quelle que soit sa couleur. */
+/** Rubrique « Coup(s) de cœur (du sommelier) » de la carte : pas une région, le vin devient un coup de cœur de la maison. */
+const rubriqueCoupDeCoeur = (region: string | null) => /coups? de c(œ|oe?)ur/i.test(region ?? '');
+
 const sansAlcool = (v: { region: string | null; libelleCarte: string }) =>
   /sans alcool|d[ée]salcool|alcohol[- ]free|non[- ]alcoholic|0[,.]0 ?%/i.test(`${v.region ?? ''} ${v.libelleCarte}`);
 
@@ -117,11 +120,11 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     const id = `${restaurantId}-${l}${String(compteurs[l]).padStart(2, '0')}`;
     await requete(
       `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_id, producteur_texte, vin_texte, millesime, format,
-                              prix, prix_verre, ordre, disponible, contenances, cepages)
-       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15)`,
-      [id, restaurantId, sansAlcool(v) ? 'sans_alcool' : v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
+                              prix, prix_verre, ordre, disponible, contenances, cepages, coup_de_coeur)
+       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15, $16)`,
+      [id, restaurantId, sansAlcool(v) ? 'sans_alcool' : v.couleur, rubriqueCoupDeCoeur(v.region) ? null : v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
         v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1,
-        contenancesDesLignes(lignes(v)), v.cepages ?? null]);
+        contenancesDesLignes(lignes(v)), v.cepages ?? null, rubriqueCoupDeCoeur(v.region)]);
   }
 
   // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).

@@ -32,7 +32,9 @@ export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { r
   const extra = extras.some((e) => e.id === actif);
   const liste = vins.filter(dans(actif));
   // Catégorie en plus : les vins groupés par couleur ; sinon par rubrique de la carte.
-  const rubrique = (v: VinOnglet) => (extra ? COULEURS.find((c) => c.id === v.couleur)?.libelle ?? '' : v.section ?? '');
+  // (une rubrique « Coup de cœur » de la carte n'en est pas une : le petit cœur le dit déjà)
+  const rubrique = (v: VinOnglet) => (extra ? COULEURS.find((c) => c.id === v.couleur)?.libelle ?? ''
+    : /coups? de c(œ|oe?)ur/i.test(v.section ?? '') ? '' : v.section ?? '');
   const sections = [...new Set(liste.map(rubrique))];
 
   return (
