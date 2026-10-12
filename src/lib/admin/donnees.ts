@@ -124,7 +124,8 @@ export async function getLimitesInternes(restaurantId: string, platId: string) {
  */
 export async function getRankingsInternes(restaurantId: string) {
   const r = await requete<{ id: string; ranking_producteur: number | null; ranking_terroir: number | null }>(
-    'select id, ranking_producteur, ranking_terroir from vin_carte where restaurant_id = $1', [restaurantId]);
+    `select v.id, coalesce(v.ranking_producteur, p.ranking_pat) as ranking_producteur, v.ranking_terroir
+       from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [restaurantId]);
   return new Map(r.map((x) => [x.id, x]));
 }
 

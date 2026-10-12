@@ -27,7 +27,8 @@ interface LigneCandidat extends Omit<Candidat, 'notes'> { note: number; origine:
 
 async function candidatsPlat(q: Requete, restaurantId: string, platId: string) {
   return q<LigneCandidat>(
-    `select v.id, v.libelle, v.couleur::text as couleur, v.format, v.prix::float as prix, v.ordre, v.ranking_producteur, v.ranking_terroir,
+    `select v.id, v.libelle, v.couleur::text as couleur, v.format, v.prix::float as prix, v.ordre,
+            coalesce(v.ranking_producteur, (select p.ranking_pat from producteur p where p.id = v.producteur_id)) as ranking_producteur, v.ranking_terroir,
             v.pays, v.cepages, coalesce(nullif(v.appellation_texte, ''), nullif(regexp_replace(split_part(coalesce(v.vin_texte, ''), ' – ', 1), '\\(.*?\\)', '', 'g'), '')) as appellation,
             a.note, a.origine::text as origine, a.statut::text as statut
        from accord a join vin_carte v on v.id = a.vin_id and v.disponible

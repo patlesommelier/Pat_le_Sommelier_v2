@@ -165,7 +165,8 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
   const u = await exigerAdmin();
   const page = `/admin/super/producteurs/${encodeURIComponent(producteurId)}`;
   const decision = txt(f, 'decision');
-  const [{ statut } = { statut: '' }] = await requete<{ statut: string }>('select statut::text from producteur where id = $1', [producteurId]);
+  const [{ statut, ranking_pat: ancien } = { statut: '', ranking_pat: null }] = await requete<{ statut: string; ranking_pat: number | null }>(
+    'select statut::text, ranking_pat from producteur where id = $1', [producteurId]);
   if (decision === 'rejeter' && statut !== 'valide') {
     await rejeterProducteur(requete, { producteurId, motif: txt(f, 'motif') ?? '', par: u.email });
     revalidatePath('/admin', 'layout');
@@ -189,9 +190,26 @@ export async function decisionProducteur(producteurId: string, f: FormData) {
             ranking_suggere = case when statut = 'valide' then ranking_suggere else coalesce($6, ranking_suggere) end, maj_le = now() where id = $1`,
     [producteurId, fiche.nom ?? null, fiche.pays, fiche.region, fiche.notes_objectives, rk]);
   for (const t of terroirs) if (t.rankingTerroir >= 0 && t.rankingTerroir <= 5) await requete('update terroir set ranking_pat = $2, maj_le = now() where id = $1', [t.terroirId, t.rankingTerroir]);
-  for (const v of vins) if (v.ranking === null || (v.ranking >= 0 && v.ranking <= 5)) await requete('update vin_carte set ranking_producteur = $2 where id = $1 and producteur_id = $3', [v.vinId, v.ranking, producteurId]);
+  // Rankings des vins : seuls ceux modifiés dans la fiche sont enregistrés (les autres suivent le producteur, ci-dessous).
+  const avant = new Map((await requete<{ id: string; r: number | null }>('select id, ranking_producteur as r from vin_carte where producteur_id = $1', [producteurId])).map((x) => [x.id, x.r]));
+  if (statut === 'valide' && rk !== null) await suivreRankingProducteur(producteurId, ancien, rk);
+  for (const v of vins) {
+    if (!(v.ranking === null || (v.ranking >= 0 && v.ranking <= 5)) || v.ranking === (avant.get(v.vinId) ?? null)) continue;
+    await requete('update vin_carte set ranking_producteur = $2 where id = $1 and producteur_id = $3', [v.vinId, v.ranking, producteurId]);
+  }
   revalidatePath(page);
   redirect(avec(page, { ok: statut === 'valide' ? 'Fiche enregistrée.' : 'Fiche enregistrée (producteur toujours à valider).' }));
+}
+
+/**
+ * Ranking du producteur changé : les vins des cartes qui avaient son ancien ranking (recopié à la validation) prennent le nouveau.
+ * Un ranking propre à un vin (corrigé par Pat pour cette cuvée) est gardé.
+ */
+async function suivreRankingProducteur(producteurId: string, ancien: number | null, nouveau: number) {
+  if (ancien === nouveau) return;
+  await requete(
+    `update vin_carte set ranking_producteur = $2 where producteur_id = $1 and (ranking_producteur is null or ranking_producteur = $3)`,
+    [producteurId, nouveau, ancien]);
 }
 
 /** Ranking d'un producteur ou d'un terroir déjà validé (écran « Base et rankings »). */
@@ -201,7 +219,9 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
   const retour = txt(f, 'retour') ?? '/admin/super/base';
   if (rk === null || !(rk >= 0 && rk <= 5)) redirect(retour);
   if (type === 'producteur') {
+    const [p] = await requete<{ ancien: number | null }>('select ranking_pat as ancien from producteur where id = $1', [id]);
     await requete('update producteur set ranking_pat = $2, maj_le = now() where id = $1', [id, rk]);
+    if (p) await suivreRankingProducteur(id, p.ancien, rk);
   } else {
     // Le ranking d'un terroir vaut pour tous les vins de ce terroir, dans tous les restaurants.
     await requete('update terroir set ranking_pat = $2, maj_le = now() where id = $1', [id, rk]);
