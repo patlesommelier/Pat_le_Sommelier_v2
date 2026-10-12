@@ -5,9 +5,7 @@ import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
-import { getVinsBO, suggestionsProducteurs } from '@/lib/admin/donnees';
-import { parRubrique, placeGroupe, regrouperVins } from './[resto]/carte/etats';
-import { categoriesActives } from '@/lib/categories';
+import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { deposerLogo } from '@/lib/logo';
 import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
@@ -681,42 +679,12 @@ async function appliquerPlan(resto: string, couleur: string, plan: PlanCarte) {
   revalidatePath(`/${resto}`, 'layout');
 }
 
-/** Plan actuel d'une couleur, tel que l'app l'affiche (sous-catégories, puis vins). */
-async function planActuel(resto: string, couleur: string): Promise<PlanCarte> {
-  // Comme dans l'app : les vins d'une catégorie spéciale (coup de cœur, nature, bio) ne sont pas dans leur couleur.
-  const [[r], vins] = await Promise.all([requete<{ categories_carte: string[] }>('select categories_carte from restaurant where id = $1', [resto]), getVinsBO(resto)]);
-  const actives = categoriesActives(r?.categories_carte);
-  const groupes = regrouperVins(vins.filter((v) => v.couleur === couleur)).filter((g) => placeGroupe(g, actives) === couleur);
-  return parRubrique(groupes).map((r) => ({ rubrique: r.nom, vins: r.groupes.map((g) => g.tous.map((x) => x.id)) }));
-}
-
 /** Carte des vins (glisser-déposer d'une ligne) : enregistre l'ordre d'une couleur sans changer de page. */
 export async function enregistrerOrdreCarte(resto: string, couleur: string, plan: PlanCarte): Promise<{ ok: boolean }> {
   await exigerAcces(resto);
   if (!Array.isArray(plan)) return { ok: false };
   await appliquerPlan(resto, couleur, plan);
   return { ok: true };
-}
-
-/**
- * Carte des vins : un vin d'un cran vers le haut ou le bas, comme dans l'app ; en haut ou en bas de sa sous-catégorie,
- * il passe dans la sous-catégorie voisine.
- */
-export async function deplacerVinCarte(resto: string, couleur: string, vinId: string, sens: -1 | 1) {
-  await exigerAcces(resto);
-  const plan = await planActuel(resto, couleur);
-  const i = plan.findIndex((r) => r.vins.some((v) => v.includes(vinId)));
-  if (i >= 0) {
-    const vins = plan[i].vins;
-    const j = vins.findIndex((v) => v.includes(vinId));
-    if (sens === -1) {
-      if (j > 0) [vins[j - 1], vins[j]] = [vins[j], vins[j - 1]];
-      else if (i > 0) plan[i - 1].vins.push(...vins.splice(j, 1));
-    } else if (j < vins.length - 1) [vins[j + 1], vins[j]] = [vins[j], vins[j + 1]];
-    else if (i < plan.length - 1) plan[i + 1].vins.unshift(...vins.splice(j, 1));
-    await appliquerPlan(resto, couleur, plan);
-  }
-  redirect(avec(`/admin/${resto}/carte`, { c: couleur, vin: vinId, ok: 'Vin déplacé.' })); // la ligne reste à l'écran
 }
 
 export async function supprimerVin(resto: string, vinId: string) {

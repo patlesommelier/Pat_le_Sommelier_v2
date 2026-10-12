@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { chercherEtiquettes, deplacerVinCarte, enregistrerOrdreCarte } from '../../actions';
+import { chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
@@ -84,16 +84,14 @@ export default async function Carte({ params, searchParams }: { params: Promise<
               <TableCarteGlissable key={c} fixe={special} enregistrer={special ? undefined : enregistrerOrdreCarte.bind(null, resto, c)}
                 rubriques={(special
                   ? COULEURS.map(([k, l]) => ({ nom: l as string, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((r) => r.groupes.length)
-                  : parRubrique(affiches)).map((r, ri, toutes) => ({
+                  : parRubrique(affiches)).map((r, ri) => ({
                 cle: `${ri}:${r.nom}`,
                 nom: r.nom,
                 // Catégorie spéciale : titre fixe (la couleur) ; sinon titre modifiable par le composant.
                 entete: special ? (
                   <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
                 ) : undefined,
-                vins: r.groupes.map(({ principal: v, tous, contenances, prix }, gi) => {
-                  const premier = ri === 0 && gi === 0;
-                  const dernier = ri === toutes.length - 1 && gi === r.groupes.length - 1;
+                vins: r.groupes.map(({ principal: v, tous, contenances, prix }) => {
                   const [bl, bk] = etatProducteur(v);
                   const [el, ek] = etatEtiquette(v);
                   const nom = nomPourListe(v);
@@ -111,13 +109,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                         : <Etat type="attention">Indisponible</Etat>}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
                       <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>
-                      <td className="droite" style={{ whiteSpace: 'nowrap' }}>
-                        {!special && <div style={{ display: 'inline-flex', gap: 2, verticalAlign: 'middle', marginRight: 8 }}>
-                          <form action={deplacerVinCarte.bind(null, resto, c, v.id, -1)}><button className="btn fantome petit" disabled={premier} aria-label={`Monter ${v.libelle}`} title={gi === 0 ? 'Passer dans la sous-catégorie du dessus' : 'Monter'}>↑</button></form>
-                          <form action={deplacerVinCarte.bind(null, resto, c, v.id, 1)}><button className="btn fantome petit" disabled={dernier} aria-label={`Descendre ${v.libelle}`} title={gi === r.groupes.length - 1 ? 'Passer dans la sous-catégorie du dessous' : 'Descendre'}>↓</button></form>
-                        </div>}
-                        <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link></td>
                     </>),
+                    libelle: v.libelle,
+                    fin: <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link>,
                   };
                 }),
               }))} />
