@@ -358,13 +358,16 @@ async function enregistrerProducteurDuVin(resto: string, vinId: string, nom: str
   const [v] = await requete<{ producteur_id: string | null; producteur_texte: string | null; pays: string | null; section: string | null; couleur: string }>(
     'select producteur_id, producteur_texte, pays, section, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
   if (!v) return;
+  // Le producteur vaut pour toutes les contenances du vin (verre, bouteille, magnum… : lignes séparées de la carte).
+  const ids = await memeVin(resto, vinId);
+  const lignes = ids.length ? ids : [vinId];
   const relier = async (id: string, texte: string | null) => {
     const [p] = await requete<{ nom: string; ranking_pat: number | null }>(`select nom, ranking_pat from producteur where id = $1 and statut <> 'retire'`, [id]);
     if (!p) return;
     await requete(
       `update vin_carte set producteur_id = $3, producteur_texte = $4, ranking_producteur = coalesce($5, ranking_producteur)
-        where id = $1 and restaurant_id = $2`,
-      [vinId, resto, id, texte ?? p.nom, p.ranking_pat],
+        where id = any($1) and restaurant_id = $2`,
+      [lignes, resto, id, texte ?? p.nom, p.ranking_pat],
     );
   };
   const proposer = async (texte: string) => {
@@ -379,25 +382,26 @@ async function enregistrerProducteurDuVin(resto: string, vinId: string, nom: str
       );
     }
     await requete(
-      `update vin_carte set producteur_id = $3, producteur_texte = $4, ranking_producteur = 3 where id = $1 and restaurant_id = $2`,
-      [vinId, resto, id, texte],
+      `update vin_carte set producteur_id = $3, producteur_texte = $4, ranking_producteur = 3 where id = any($1) and restaurant_id = $2`,
+      [lignes, resto, id, texte],
     );
   };
 
   if (choix === 'nouveau' && nom) return proposer(nom);
   if (choix && choix !== 'nouveau' && choix !== v.producteur_id) return relier(choix, nom);
   if (!nom) {
-    await requete('update vin_carte set producteur_id = null, producteur_texte = null where id = $1 and restaurant_id = $2', [vinId, resto]);
+    await requete('update vin_carte set producteur_id = null, producteur_texte = null where id = any($1) and restaurant_id = $2', [lignes, resto]);
     return;
   }
-  if (nom === v.producteur_texte && v.producteur_id) return;
+  // Inchangé : les autres contenances qui n'avaient pas encore ce producteur le reçoivent aussi.
+  if (nom === v.producteur_texte && v.producteur_id) return relier(v.producteur_id, nom);
   // Nom saisi ou changé : recherche dans la base de Pat.
   const suggestions = await suggestionsProducteurs(nom, 5);
   const exact = suggestions.filter((p) => p.nom.toLowerCase() === nom.toLowerCase());
   if (exact.length === 1) return relier(exact[0].id, nom);
   if (!suggestions.length) return proposer(nom);
   // Des noms proches existent : le restaurant choisit (le vin n'est relié qu'après son choix).
-  await requete('update vin_carte set producteur_id = null, producteur_texte = $3 where id = $1 and restaurant_id = $2', [vinId, resto, nom]);
+  await requete('update vin_carte set producteur_id = null, producteur_texte = $3 where id = any($1) and restaurant_id = $2', [lignes, resto, nom]);
 }
 
 // ───────── Accords ─────────

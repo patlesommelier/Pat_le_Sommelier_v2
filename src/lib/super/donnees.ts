@@ -245,9 +245,13 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
   }
   // Statut (filtre) : celui du vin de la base relié, après regroupement.
   const vins = groupes.map((g) => {
-    const v = g.find((x) => x.cuvee_id) ?? g.find((x) => contenanceDuFormat(x.format) === 'bouteille') ?? g[0];
+    // Ligne affichée (et ajoutée à la base) : celle reliée à la base, sinon une ligne qui a un producteur, la bouteille d'abord.
+    const v = g.find((x) => x.cuvee_id) ?? g.find((x) => x.producteur_id && contenanceDuFormat(x.format) === 'bouteille') ?? g.find((x) => x.producteur_id)
+      ?? g.find((x) => contenanceDuFormat(x.format) === 'bouteille') ?? g[0];
     const codes = ordonner(g.map((x) => contenanceDuFormat(x.format)));
-    return { ...v, contenances: g.length > 1 ? codes.map(libelleCourt).join(' · ') : undefined };
+    // Producteur : celui d'une des contenances s'il manque sur la ligne affichée (relié à la base d'abord).
+    const p = v.producteur_id ? v : g.find((x) => x.producteur_id) ?? (v.producteur ? v : g.find((x) => x.producteur)) ?? v;
+    return { ...v, producteur_id: p.producteur_id, producteur: p.producteur, contenances: g.length > 1 ? codes.map(libelleCourt).join(' · ') : undefined };
   }).filter((v) => !statut || (statut === 'absent' ? !v.cuvee_id : v.cuvee_statut === statut));
   return { lignes: vins.slice(page * 50, page * 50 + 50), total: vins.length };
 }
