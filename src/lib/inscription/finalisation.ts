@@ -23,6 +23,10 @@ const slugPlat = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLo
 /** Finalisation déjà en cours ailleurs (lien de l'e-mail, écran d'attente d'un autre appareil, connexion). */
 export class FinalisationEnCours extends Error {}
 
+/** Vin d'une rubrique « Sans alcool » de la carte (ou dont le nom le dit) : catégorie « sans alcool », quelle que soit sa couleur. */
+const sansAlcool = (v: { region: string | null; libelleCarte: string }) =>
+  /sans alcool|d[ée]salcool|alcohol[- ]free|non[- ]alcoholic|0[,.]0 ?%/i.test(`${v.region ?? ''} ${v.libelleCarte}`);
+
 export async function finaliserInscription(inscriptionId: string, userId: string, email: string,
   { attendre = true }: { attendre?: boolean } = {}): Promise<{ restaurantId: string }> {
   const i0 = await lireInscription(inscriptionId);
@@ -103,7 +107,7 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
   const compteurs: Record<string, number> = {};
   // Contenances détectées sur la carte : un même vin en plusieurs contenances y est lu en plusieurs lignes.
   // (deux lignes de même contenance sous le même nom sont deux vins distincts, jamais fusionnés)
-  const lues = i.vins.map((x) => ({ x, couleur: x.couleur as string, libelle: x.libelleCarte, millesime: x.millesime, format: x.auVerre ? 'au verre' : x.contenance }));
+  const lues = i.vins.map((x) => ({ x, couleur: sansAlcool(x) ? 'sans_alcool' : x.couleur as string, libelle: x.libelleCarte, millesime: x.millesime, format: x.auVerre ? 'au verre' : x.contenance }));
   const groupes = grouperMemeVin(lues, (l) => l.format);
   const lignes = (v: (typeof i.vins)[number]) => (groupes.find((g) => g.some((l) => l.x === v)) ?? [])
     .map((l) => ({ format: l.format, prixVerre: l.x.auVerre ? null : l.x.prixVerre }));
@@ -115,7 +119,7 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
       `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_id, producteur_texte, vin_texte, millesime, format,
                               prix, prix_verre, ordre, disponible, contenances, cepages)
        values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15)`,
-      [id, restaurantId, v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
+      [id, restaurantId, sansAlcool(v) ? 'sans_alcool' : v.couleur, v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
         v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1,
         contenancesDesLignes(lignes(v)), v.cepages ?? null]);
   }
