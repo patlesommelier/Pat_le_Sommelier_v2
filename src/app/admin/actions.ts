@@ -641,6 +641,50 @@ export async function supprimerPlat(resto: string, platId: string) {
   redirect(avec(`/admin/${resto}/menu`, { supprime: p.nom }));
 }
 
+/**
+ * Organisation de la carte d'une couleur (page « Organiser la carte ») : rubriques (nom, ordre) et ordre des vins,
+ * exactement comme dans l'app. `plan` : [{ rubrique, vins: [[ids des lignes d'un vin], …] }, …] dans l'ordre affiché.
+ * Les numéros d'ordre déjà utilisés par ces vins sont redistribués : les autres couleurs ne bougent pas.
+ */
+export async function organiserCarte(resto: string, couleur: string, f: FormData) {
+  await exigerAcces(resto);
+  const page = `/admin/${resto}/carte/organiser`;
+  let plan: { rubrique: string; vins: string[][] }[];
+  try {
+    plan = JSON.parse(String(f.get('plan') ?? '[]'));
+    if (!Array.isArray(plan)) throw new Error();
+  } catch {
+    redirect(avec(page, { c: couleur, erreur: 'Organisation illisible : rien n’a été enregistré.' }));
+  }
+  const lignes = await requete<{ id: string; ordre: number }>(
+    'select id, ordre from vin_carte where restaurant_id = $1 and couleur::text = $2 order by ordre, id', [resto, couleur]);
+  const connus = new Set(lignes.map((l) => l.id));
+  const ids: string[] = [];
+  const rubriques: (string | null)[] = [];
+  for (const r of plan) {
+    const nom = typeof r.rubrique === 'string' ? r.rubrique.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
+    for (const vin of Array.isArray(r.vins) ? r.vins : []) {
+      for (const id of Array.isArray(vin) ? vin : []) {
+        if (typeof id !== 'string' || !connus.has(id) || ids.includes(id)) continue;
+        ids.push(id);
+        rubriques.push(nom || null);
+      }
+    }
+  }
+  // Vins oubliés par le plan (ajoutés entre-temps) : gardés à la fin, sans changer leur rubrique.
+  const reste = lignes.filter((l) => !ids.includes(l.id)).map((l) => l.id);
+  const ordres = lignes.map((l) => l.ordre).sort((a, b) => a - b);
+  await requete(
+    `update vin_carte v set ordre = n.ordre, section = case when n.garder then v.section else n.section end
+       from unnest($2::text[], $3::int[], $4::text[], $5::boolean[]) as n(id, ordre, section, garder)
+      where v.id = n.id and v.restaurant_id = $1`,
+    [resto, [...ids, ...reste], ordres.slice(0, ids.length + reste.length), [...rubriques, ...reste.map(() => null)],
+      [...ids.map(() => false), ...reste.map(() => true)]]);
+  revalidatePath(`/admin/${resto}/carte`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(page, { c: couleur, ok: 'Organisation enregistrée : l’app de vos clients est à jour.' }));
+}
+
 export async function supprimerVin(resto: string, vinId: string) {
   await exigerAcces(resto);
   const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
