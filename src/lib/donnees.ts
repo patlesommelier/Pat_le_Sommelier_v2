@@ -2,6 +2,7 @@ import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
 import { avecAppreciation } from './appreciation';
+import { choisirPourPlusieursPlats } from './plusieurs-plats';
 import { extraitFiche } from './fiche-producteur';
 import { parametresEnService } from './regles/versions';
 import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
@@ -77,6 +78,8 @@ export interface Proposition {
   accord: Accord; vin: Vin; motif: Motif;
   /** Plusieurs plats : l'accord avec chacun (du moins bien noté au mieux noté). */
   parPlat?: { plat_id: string; note: number; explication: string | null }[];
+  /** Plusieurs plats : pourquoi ce vin tient toute la table (choix de Pat selon ses principes « plusieurs plats »). */
+  ensemble?: string;
 }
 
 /** Réglages des règles de sélection du restaurant (back-office), complétés par les valeurs de Pat. */
@@ -136,12 +139,29 @@ export async function getPropositions(restaurantId: string, platId: string | str
   const R = platIds.length > 1 ? { ...R0, diversite: false } : R0;
   const sel = selectionner(candidats, platIds, { reglages: R });
   let liste: Retenu<CandidatVin>[] = sel.liste;
-  const proposes = sel.liste.map((r) => r.vin.id);
-  for (let t = 2; t <= tour; t++) {
-    liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles);
-    proposes.push(...liste.map((r) => r.vin.id));
+  let encore: boolean;
+  // Plusieurs plats : Pat choisit et explique selon ses principes « plusieurs plats », parmi les vins au-dessus du seuil sur tous
+  // (3 vins par tour) ; sans principe ou en cas d'échec, les règles de sélection seules.
+  const plats = platIds.length > 1
+    ? await requete<{ id: string; nom: string; description: string | null }>(
+      'select id, nom, description_cuisine as description from plat where restaurant_id = $1 and id = any($2)', [restaurantId, platIds])
+    : [];
+  const lignesTable = [...lignesParVin.values()].flat().map((l) => ({ plat_id: l.plat_id, vin_id: l.vin_id, explication: l.explication }));
+  const choixPat = plats.length > 1 ? await choisirPourPlusieursPlats(restaurantId, plats, sel.classement.map((r) => r.vin), lignesTable) : null;
+  const ensemble = new Map((choixPat ?? []).map((c) => [c.vin_id, c.explication]));
+  if (choixPat) {
+    const parId = new Map(sel.classement.map((r) => [r.vin.id, r]));
+    const ordre = choixPat.map((c) => parId.get(c.vin_id)).filter((r): r is Retenu<CandidatVin> => Boolean(r));
+    liste = ordre.slice((tour - 1) * 3, tour * 3).map((r) => ({ ...r, motif: tour > 1 ? 'tour_suivant' : 'classement' }));
+    encore = ordre.length > tour * 3;
+  } else {
+    const proposes = sel.liste.map((r) => r.vin.id);
+    for (let t = 2; t <= tour; t++) {
+      liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles);
+      proposes.push(...liste.map((r) => r.vin.id));
+    }
+    encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
   }
-  const encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
   const propositions = liste.map((r, i) => {
     // Plusieurs plats : l'accord du plat le moins bien noté (c'est lui qui compte), les autres en complément.
     const toutes = [...lignesParVin.get(r.vin.id)!].sort((a, b) => Number(a.note) - Number(b.note));
@@ -153,6 +173,7 @@ export async function getPropositions(restaurantId: string, platId: string | str
         explication_longue: avecAppreciation(l.explication_longue, l.note, app), service: l.service, statut: l.statut } as Accord,
       vin: l as Vin,
       motif: r.motif,
+      ensemble: ensemble.get(r.vin.id) || undefined,
       parPlat: platIds.length > 1 ? toutes.map((x) => ({ plat_id: x.plat_id, note: Number(x.note), explication: avecAppreciation(x.explication, x.note, { ...app, cle: `${x.plat_id}|${tour}` }) })) : undefined,
     };
   });

@@ -53,7 +53,7 @@ export default async function Propositions({
 
           {propositions.length ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
-              {propositions.map(({ accord, vin, motif, parPlat }) => (
+              {propositions.map(({ accord, vin, motif, parPlat, ensemble }) => (
                 <Link key={vin.id} href={`/${resto}/vin/${vin.id}?plat=${plat.id}`} className="carte-vin">
                   <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={100} hauteur={100} />
                   <div className="infos">
@@ -63,7 +63,8 @@ export default async function Propositions({
                       const t = titreCarte({ ...vin, producteur: vin.producteur_nom ?? vin.producteur_texte });
                       return <><div className="nom">{t.titre}</div>{t.sousTitre && <div className="sous">{t.sousTitre}</div>}</>;
                     })()}
-                    {parPlat
+                    {ensemble ? <div className="pourquoi">{ensemble}</div>
+                      : parPlat
                       ? parPlat.filter((x) => x.explication).map((x) => <div key={x.plat_id} className="pourquoi"><b>{nomPlat(x.plat_id)} :</b> {x.explication}</div>)
                       : accord.explication && <div className="pourquoi">{accord.explication}</div>}
                     <div className="prix" style={{ fontSize: 16 }}>
