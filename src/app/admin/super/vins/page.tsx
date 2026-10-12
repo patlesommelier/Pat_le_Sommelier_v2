@@ -67,7 +67,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                     {v.cuvee_id ? <Link className="lien-ligne" href={`/admin/super/vins/${encodeURIComponent(v.cuvee_id)}?${new URLSearchParams({ retour: ici })}`}>Ouvrir</Link>
                       : v.producteur_id ? (
                         <form action={ajouterCuveeDepuisCarte.bind(null, v.id)}><input type="hidden" name="retour" value={ici} /><button className="btn sec petit" title="Ajouter ce vin à la base de Pat">Ajouter</button></form>
-                      ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}`} title="Le vin doit d'abord être relié à un producteur">Relier</Link>}
+                      ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: ici })}`} title="Le vin doit d'abord être relié à un producteur">Relier</Link>}
                   </td>
                 </tr>
               ))}

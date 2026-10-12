@@ -180,7 +180,11 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   revalidatePath(`/${resto}`, 'layout');
   // Retour à la liste des vins, sur la couleur du vin, avec la ligne du vin mise en évidence.
   const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
-  redirect(avec(`/admin/${resto}/carte`, { c: v?.couleur ?? '', vin: vinId, ok: `« ${v?.libelle ?? vinId} » enregistré.` }));
+  const ok = `« ${v?.libelle ?? vinId} » enregistré.`;
+  // Ouvert depuis « Vins de la base » (super-admin) : retour sur cette liste ou cette fiche.
+  const base = txt(f, 'retour');
+  if (base?.startsWith('/admin/super/vins')) redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: vinId, ok })}`);
+  redirect(avec(`/admin/${resto}/carte`, { c: v?.couleur ?? '', vin: vinId, ok }));
 }
 
 /** Lignes du même vin (une par contenance qui a son propre prix), le vin compris. */

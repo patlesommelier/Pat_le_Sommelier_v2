@@ -72,7 +72,7 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{v.prix ? euros(v.prix) : '—'}</td>
                     <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteVin(v, true); return <Etat type={k}>{l}</Etat>; })()}
                       {v.etiquette_statut === 'echec' && v.etiquette_erreur && <div className="petit discret">{v.etiquette_erreur.slice(0, 120)}</div>}</td>
-                    <td className="droite"><Link className="lien-ligne" href={`/admin/${v.restaurant_id}/carte/${encodeURIComponent(v.id)}`}>Ouvrir</Link></td>
+                    <td className="droite"><Link className="lien-ligne" href={`/admin/${v.restaurant_id}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour })}` })}`}>Ouvrir</Link></td>
                   </tr>
                 ))}</tbody>
               </table></div>

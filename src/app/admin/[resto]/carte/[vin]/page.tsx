@@ -18,7 +18,7 @@ const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tan
 const cadre = { gap: 12, border: '1px solid var(--ligne)', borderRadius: 14, padding: 16, margin: 0 } as const;
 const legende = { fontSize: 13, fontWeight: 700, padding: '0 6px' } as const;
 
-export default async function FicheVinBO({ params }: { params: Promise<{ resto: string; vin: string }> }) {
+export default async function FicheVinBO({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ retour?: string }> }) {
   const { resto, vin } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const id = decodeURIComponent(vin);
@@ -45,13 +45,16 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
     ? groupe.find((x) => x.prix_verre != null)?.prix_verre ?? null
     : groupe.find((x) => contenanceDuFormat(x.format) === code)?.prix ?? null;
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
-  const retour = `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
+  // Ouvert depuis « Vins de la base » (super-admin) : on y revient après l'enregistrement, pas sur la carte du restaurant.
+  const depuisBase = (await searchParams).retour;
+  const versBase = depuisBase?.startsWith('/admin/super/vins') ? depuisBase : null;
+  const retour = versBase ?? `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
   const affiche = titreCarte({ ...v, producteur: v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom });
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
 
   return (
     <>
-      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</Link>
+      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
       <header className="bo-entete">
         <div>
           {/* Code interne du vin : super-admin seulement. */}
@@ -66,6 +69,7 @@ export default async function FicheVinBO({ params }: { params: Promise<{ resto: 
       </header>
 
       <FormulaireAdmin key={v.id} action={enregistrerVin.bind(null, resto, v.id)} className="fiche-vin">
+        {versBase && <input type="hidden" name="retour" value={versBase} />}
         <section className="pile" style={{ gap: 16, minWidth: 0 }}>
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Le vin</legend>
