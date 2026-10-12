@@ -161,3 +161,7 @@
 .tableau td.col-etiquette { max-width: 140px; } .tableau td.col-etiquette .etat { white-space: normal; }
 .tableau td.col-producteur { min-width: 165px; max-width: 200px; } .tableau td.col-producteur .etat { white-space: normal; }
 .tableau .table-vins th, .tableau .table-vins td { padding-left: 10px; padding-right: 10px; }
+
+/* Carte des vins : la ligne entière se glisse (pas l'image ni le lien seuls). */
+.table-vins tr[draggable='true'] img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
+.table-vins tr[draggable='true']:hover { background: var(--fond-doux, #FAF6F4); }

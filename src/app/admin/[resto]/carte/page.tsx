@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { chercherEtiquettes, deplacerVinCarte, renommerRubrique } from '../../actions';
+import { chercherEtiquettes, deplacerVinCarte, enregistrerOrdreCarte, renommerRubrique } from '../../actions';
+import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
@@ -69,9 +70,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
             <table className="table-vins" style={{ minWidth: 880 }}>
               <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
               {/* Comme dans l'app : les sous-catégories de la carte (renommables), puis leurs vins (flèches pour les déplacer). */}
-              {parRubrique(affiches).map((r, ri, toutes) => (
-              <tbody key={r.nom || '-'}>
-                <tr className="rubrique-carte">
+              <TableCarteGlissable key={c} enregistrer={enregistrerOrdreCarte.bind(null, resto, c)} rubriques={parRubrique(affiches).map((r, ri, toutes) => ({
+                cle: `${ri}:${r.nom}`,
+                nom: r.nom,
+                entete: (
                   <td colSpan={8}>
                     <form action={renommerRubrique.bind(null, resto, c, r.nom)} style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                       <input name="rubrique" defaultValue={r.nom} placeholder="Sans titre (aucune sous-catégorie affichée)" aria-label="Nom de la sous-catégorie" maxLength={80}
@@ -80,8 +82,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                       <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span>
                     </form>
                   </td>
-                </tr>
-                {r.groupes.map(({ principal: v, tous, contenances, prix }, gi) => {
+                ),
+                vins: r.groupes.map(({ principal: v, tous, contenances, prix }, gi) => {
                   const premier = ri === 0 && gi === 0;
                   const dernier = ri === toutes.length - 1 && gi === r.groupes.length - 1;
                   const [bl, bk] = etatProducteur(v);
@@ -89,9 +91,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   const nom = nomPourListe(v);
                   const fiche = `/admin/${resto}/carte/${encodeURIComponent(v.id)}`;
                   const choisie = tous.some((x) => x.id === choisi?.id);
-                  return (
-                    <tr key={v.id} id={`vin-${v.id}`} className={choisie ? 'choisi' : ''} style={{ scrollMarginTop: 80 }}>
-                      <td style={{ minWidth: 170 }}><div className="vin-cell"><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom">{nom[0]}</Link>{tous.some((x) => x.coup_de_coeur) && <span role="img" aria-label="Coup de cœur" title="Coup de cœur de la maison" style={{ marginLeft: 6, color: '#D7263D' }}>♥</span>}{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
+                  return {
+                    cle: v.id, ids: tous.map((x) => x.id), ancre: `vin-${v.id}`, classe: choisie ? 'choisi' : undefined,
+                    cellules: (<>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#B5ADA8', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.coup_de_coeur) && <span role="img" aria-label="Coup de cœur" title="Coup de cœur de la maison" style={{ marginLeft: 6, color: '#D7263D' }}>♥</span>}{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
                       <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--bordeaux, #6b0f24)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
@@ -105,12 +108,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                           <form action={deplacerVinCarte.bind(null, resto, c, v.id, -1)}><button className="btn fantome petit" disabled={premier} aria-label={`Monter ${v.libelle}`} title={gi === 0 ? 'Passer dans la sous-catégorie du dessus' : 'Monter'}>↑</button></form>
                           <form action={deplacerVinCarte.bind(null, resto, c, v.id, 1)}><button className="btn fantome petit" disabled={dernier} aria-label={`Descendre ${v.libelle}`} title={gi === r.groupes.length - 1 ? 'Passer dans la sous-catégorie du dessous' : 'Descendre'}>↓</button></form>
                         </div>
-                        <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-              ))}
+                        <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link></td>
+                    </>),
+                  };
+                }),
+              }))} />
             </table>
           </div>
         </section>

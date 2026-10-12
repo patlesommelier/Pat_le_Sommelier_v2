@@ -698,6 +698,14 @@ export async function organiserCarte(resto: string, couleur: string, f: FormData
   redirect(avec(page, { c: couleur, ok: 'Organisation enregistrée : l’app de vos clients est à jour.' }));
 }
 
+/** Carte des vins (glisser-déposer d'une ligne) : enregistre l'ordre d'une couleur sans changer de page. */
+export async function enregistrerOrdreCarte(resto: string, couleur: string, plan: PlanCarte): Promise<{ ok: boolean }> {
+  await exigerAcces(resto);
+  if (!Array.isArray(plan)) return { ok: false };
+  await appliquerPlan(resto, couleur, plan);
+  return { ok: true };
+}
+
 /**
  * Carte des vins : un vin d'un cran vers le haut ou le bas, comme dans l'app ; en haut ou en bas de sa sous-catégorie,
  * il passe dans la sous-catégorie voisine.
