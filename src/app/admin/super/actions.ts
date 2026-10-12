@@ -318,6 +318,41 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${fait}${lien}.` })}`);
 }
 
+/**
+ * Doublon dans la base : ce vin est fusionné dans un autre (le vin gardé). Les vins des cartes et les demandes d'étiquette
+ * passent sur le vin gardé, qui reprend ce qui lui manque (couleur, appellation, cépages, garde, description, étiquette) ;
+ * le doublon est retiré de la base (rien n'est supprimé). On ouvre la fiche du vin gardé.
+ */
+export async function fusionnerCuvee(id: string, f: FormData) {
+  await exigerAdmin();
+  const cible = txt(f, 'cible');
+  const retour = txt(f, 'retour');
+  const liste = retour?.startsWith('/admin/super/vins') ? retour : '/admin/super/vins';
+  const page = `/admin/super/vins/${encodeURIComponent(id)}`;
+  if (!cible || cible === id) redirect(avec(page, { retour: liste, erreur: 'Choisissez le vin à garder.' }));
+  const [a, b] = await Promise.all([
+    requete<{ nom: string }>('select nom from cuvee where id = $1', [id]),
+    requete<{ nom: string }>(`select nom from cuvee where id = $1 and statut <> 'retire'`, [cible])]);
+  if (!a[0] || !b[0]) redirect(avec(page, { retour: liste, erreur: 'Vin introuvable dans la base.' }));
+  await requete(
+    `update cuvee k set couleur = coalesce(k.couleur, d.couleur), appellation_id = coalesce(k.appellation_id, d.appellation_id),
+            appellation_texte = coalesce(k.appellation_texte, case when k.appellation_id is null then d.appellation_texte end),
+            cepages = coalesce(nullif(k.cepages, ''), d.cepages), garde = coalesce(nullif(k.garde, ''), d.garde),
+            description = coalesce(nullif(k.description, ''), d.description),
+            etiquette_url = coalesce(k.etiquette_url, d.etiquette_url), etiquette_source = case when k.etiquette_url is null then d.etiquette_source else k.etiquette_source end,
+            etiquette_maj_le = case when k.etiquette_url is null and d.etiquette_url is not null then now() else k.etiquette_maj_le end
+       from cuvee d where k.id = $1 and d.id = $2`, [cible, id]);
+  await requete('update vin_carte set cuvee_id = $2 where cuvee_id = $1', [id, cible]);
+  await requete('update demande_etiquette set cuvee_id = $2 where cuvee_id = $1', [id, cible]);
+  // Étiquette reprise de la base par les vins des cartes : désormais celle du vin gardé.
+  await requete(
+    `update vin_carte v set etiquette_url = k.etiquette_url from cuvee k
+      where k.id = $1 and v.cuvee_id = $1 and v.etiquette_source = 'cuvee' and k.etiquette_url is not null`, [cible]);
+  await requete(`update cuvee set statut = 'retire' where id = $1`, [id]);
+  revalidatePath('/', 'layout');
+  redirect(`/admin/super/vins/${encodeURIComponent(cible)}?${new URLSearchParams({ retour: liste, ok: `« ${a[0].nom} » fusionné dans ce vin : ses vins sur les cartes y sont maintenant reliés.` })}`);
+}
+
 /** Plusieurs vins à valider cochés dans la liste « Vins de la base » : validés ensemble, retour sur la même liste. */
 export async function validerCuvees(f: FormData) {
   await exigerAdmin();

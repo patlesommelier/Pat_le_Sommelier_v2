@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { enregistrerCuvee } from '../../actions';
+import { enregistrerCuvee, fusionnerCuvee } from '../../actions';
+import { FormulaireFusion } from '@/components/admin/FormulaireFusion';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { ficheCuvee } from '@/lib/super/donnees';
@@ -20,6 +21,15 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
     requete<{ nom: string }>(`select distinct nom from terroir where statut <> 'retire' order by nom`),
     requete<{ nom: string; lieu: string | null }>(`select distinct on (nom) nom, nullif(concat_ws(', ', region, pays), '') as lieu from producteur where statut <> 'retire' order by nom`)]);
   if (!c) notFound();
+  // Doublons possibles : les autres vins du même producteur, et ceux du même nom chez un autre producteur.
+  const sans = (x: string) => `translate(lower(${x}), 'àâäáéèêëíîïóôöúùûüç-''', 'aaaaeeeeiiiooouuuuc  ')`;
+  const doublons = await requete<{ id: string; nom: string; producteur: string; couleur: string | null; statut: string; cartes: number }>(
+    `select k.id, k.nom, p.nom as producteur, k.couleur::text, k.statut::text,
+            (select count(distinct v.restaurant_id) from vin_carte v where v.cuvee_id = k.id)::int as cartes
+       from cuvee k join producteur p on p.id = k.producteur_id
+      where k.id <> $1 and k.statut <> 'retire'
+        and (k.producteur_id = $2 or ${sans('k.nom')} = ${sans('$3')})
+      order by ${sans('k.nom')} = ${sans('$3')} desc, k.nom limit 200`, [c.id, c.producteur_id, c.nom]);
   // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
   const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
 
@@ -79,6 +89,22 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
             ) : <p className="discret" style={{ margin: 0 }}>Ce vin n’est sur aucune carte pour l’instant.</p>}
           </div>
 
+          {doublons.length > 0 && c.statut !== 'retire' && (
+            <div className="carte-bo pile" style={{ gap: 10 }}>
+              <h2>Doublon ?</h2>
+              <p className="discret" style={{ margin: 0 }}>Si ce vin existe déjà dans la base, fusionnez-le dans celui à garder : ses vins sur les cartes y seront reliés,
+                le vin gardé reprend ce qui lui manque (étiquette, appellation, cépages…), et celui-ci est retiré de la base.</p>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end' }}>
+                <div className="champ" style={{ flex: '1 1 320px' }}><label htmlFor="cible">Vin à garder</label>
+                  <select id="cible" name="cible" form="fusion" defaultValue="" required>
+                    <option value="" disabled>Choisir…</option>
+                    {doublons.map((d) => <option key={d.id} value={d.id}>{d.nom} — {d.producteur}{d.couleur ? ` · ${COULEURS.find(([k]) => k === d.couleur)?.[1] ?? d.couleur}` : ''} · {STATUT[d.statut]?.[0] ?? d.statut} · {d.cartes} carte{d.cartes > 1 ? 's' : ''}</option>)}
+                  </select></div>
+                <button className="btn sec" form="fusion">Fusionner</button>
+              </div>
+            </div>
+          )}
+
           <div className="ligne-actions">
             {c.statut !== 'retire' && <button className="btn sec" name="decision" value="retirer" formNoValidate>Retirer de la base</button>}
             <button className="btn sec" name="decision" value="enregistrer">Enregistrer</button>
@@ -94,6 +120,7 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
           </PhotoEtiquette>
         </aside>
       </form>
+      <FormulaireFusion action={fusionnerCuvee.bind(null, c.id)} retour={retour} />
     </>
   );
 }
