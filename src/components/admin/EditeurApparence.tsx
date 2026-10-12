@@ -162,9 +162,10 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
         </section>
         <section className="carte-bo pile">
           <h2>Catégories de la carte des vins</h2>
-          <span className="discret">Les couleurs (bulles, blancs, rosés, rouges, orange, doux, sans alcool) sont toujours là, ainsi que « Coups de cœur » dès qu’un vin est coché coup de cœur dans sa fiche. Vous pouvez ajouter :</span>
+          <span className="discret">Les couleurs (bulles, blancs, rosés, rouges, orange, doux, sans alcool) sont toujours là. Vous pouvez ajouter :</span>
           <input type="hidden" name="categories_envoyees" value="1" />
-          {[['nature', 'Nature', 'Les vins nature, d’après la base de Pat.'],
+          {[['coups_de_coeur', 'Coups de cœur', 'Les vins cochés « Coup de cœur » dans leur fiche. Sans cette catégorie, ils restent dans leur couleur avec un petit cœur ♥.'],
+            ['nature', 'Nature', 'Les vins nature, d’après la base de Pat.'],
             ['bio', 'Bio', 'Les vins bio, d’après la base de Pat.']].map(([id, titre, aide]) => (
             <label key={id} className="case"><input type="checkbox" name="categories" value={id} defaultChecked={categories.includes(id)} />
               <span><b>{titre}</b><small>{aide}</small></span></label>

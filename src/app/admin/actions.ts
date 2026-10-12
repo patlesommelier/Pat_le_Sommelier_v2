@@ -797,7 +797,7 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
     [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio, ratioFonce,
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
       ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null,
-      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['nature', 'bio'].includes(c)) : null],
+      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['coups_de_coeur', 'nature', 'bio'].includes(c)) : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
