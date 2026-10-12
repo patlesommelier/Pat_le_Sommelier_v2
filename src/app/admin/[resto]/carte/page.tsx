@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
+import { changerCategoriesCarte, chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
+import { CasesCategories } from '@/components/admin/CasesCategories';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
@@ -32,7 +33,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   ];
   const choisi = vins.find((v) => v.id === sp.vin); // vin dont on revient : mis en évidence
   const groupeChoisi = choisi && tousGroupes.find((g) => g.tous.includes(choisi));
-  const c = sp.c ?? (groupeChoisi && placeDe.get(groupeChoisi)) ?? presentes[0]?.[0] ?? 'rouge';
+  // Onglet demandé, s'il existe encore (une catégorie décochée disparaît) ; sinon celui du vin dont on revient, sinon le premier.
+  const c = presentes.find(([k]) => k === sp.c)?.[0] ?? (groupeChoisi && placeDe.get(groupeChoisi)) ?? presentes[0]?.[0] ?? 'rouge';
   const special = actives.some((e) => e.id === c);
   const affiches = tousGroupes.filter((g) => placeDe.get(g) === c);
   const sansEtiquette = vins.filter((v) => !v.etiquette_url).length;
@@ -71,10 +73,11 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       </div>
       <div className="rangee">
         <section className="large">
-          <nav className="onglets" aria-label="Couleurs">
+          <nav className="onglets" aria-label="Couleurs" style={{ alignItems: 'center' }}>
             {presentes.map(([k, l]) => (
               <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{tousGroupes.filter((g) => placeDe.get(g) === k).length}</span></Link>
             ))}
+            <CasesCategories choisies={restaurant?.categories_carte ?? []} enregistrer={changerCategoriesCarte.bind(null, resto)} />
           </nav>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>

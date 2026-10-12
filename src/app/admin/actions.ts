@@ -687,6 +687,16 @@ export async function enregistrerOrdreCarte(resto: string, couleur: string, plan
   return { ok: true };
 }
 
+/** Carte des vins : catégories spéciales de l'app cochées par le restaurant (coups de cœur, nature, bio, au verre). */
+export async function changerCategoriesCarte(resto: string, categories: string[]): Promise<{ ok: boolean }> {
+  await exigerAcces(resto);
+  const ok = (Array.isArray(categories) ? categories : []).map(String).filter((c) => ['coups_de_coeur', 'nature', 'bio', 'au_verre'].includes(c));
+  await requete('update restaurant set categories_carte = $2, modifie_bo = now() where id = $1', [resto, [...new Set(ok)]]);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  return { ok: true };
+}
+
 export async function supprimerVin(resto: string, vinId: string) {
   await exigerAcces(resto);
   const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
@@ -734,12 +744,11 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
     `update restaurant set couleur = $2, couleur_claire = $3, accroche = $4, logo_url = coalesce($5, logo_url),
             logo_fonce_url = coalesce($6, logo_fonce_url), logo_ratio = case when $5::text is not null then $7 else logo_ratio end,
             logo_fonce_ratio = case when $6::text is not null then $8 else logo_fonce_ratio end, logo_choix = $9,
-            page_accueil = coalesce($10, page_accueil), categories_carte = coalesce($11, categories_carte), modifie_bo = now()
+            page_accueil = coalesce($10, page_accueil), modifie_bo = now()
       where id = $1`,
     [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio, ratioFonce,
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
-      ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null,
-      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['coups_de_coeur', 'nature', 'bio', 'au_verre'].includes(c)) : null],
+      ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

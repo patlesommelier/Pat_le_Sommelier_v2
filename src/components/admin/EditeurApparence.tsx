@@ -46,12 +46,10 @@ interface Props {
   nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
   /** Page d'arrivée de l'app : 'menu' ou 'carte'. */
   pageAccueil?: string;
-  /** Catégories en plus des couleurs dans la carte de l'app. */
-  categories?: string[];
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', categories = [], plats }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', plats }: Props) {
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
   const [palette, setPalette] = useState<string[]>([]);
@@ -159,19 +157,6 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
             <span><b>Le menu, avec le sommelier</b><small>Le client choisit son plat, Pat lui propose des vins.</small></span></label>
           <label className="case"><input type="radio" name="page_accueil" value="carte" defaultChecked={pageAccueil === 'carte'} />
             <span><b>La carte des vins</b><small>Le menu et le sommelier restent accessibles par le bouton « Menu ».</small></span></label>
-        </section>
-        <section className="carte-bo pile">
-          <h2>Catégories de la carte des vins</h2>
-          <span className="discret">Les couleurs (bulles, blancs, rosés, rouges, orange, doux, sans alcool) sont toujours là. Vous pouvez ajouter :</span>
-          <input type="hidden" name="categories_envoyees" value="1" />
-          {[['coups_de_coeur', 'Coups de cœur', 'Les vins cochés « Coup de cœur » dans leur fiche. Sans cette catégorie, ils restent dans leur couleur avec un petit cœur ♥.'],
-            ['nature', 'Nature', 'Les vins nature, d’après la base de Pat.'],
-            ['bio', 'Bio', 'Les vins bio, d’après la base de Pat.'],
-            ['au_verre', 'Au verre', 'Les vins servis au verre (prix au verre dans leur fiche).']].map(([id, titre, aide]) => (
-            <label key={id} className="case"><input type="checkbox" name="categories" value={id} defaultChecked={categories.includes(id)} />
-              <span><b>{titre}</b><small>{aide}</small></span></label>
-          ))}
-          <span className="petit discret">Un vin d’une de ces catégories n’apparaît que là, plus dans sa couleur ; s’il est dans plusieurs, c’est la première de cette liste qui compte.</span>
         </section>
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>
