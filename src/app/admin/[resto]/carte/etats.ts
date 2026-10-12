@@ -41,6 +41,20 @@ export function regrouperVins(vins: VinBO[]): GroupeVin[] {
   });
 }
 
+/**
+ * Vins d'une couleur rangés par sous-catégorie (rubrique de la carte), comme dans l'app :
+ * les rubriques dans l'ordre de leur premier vin, et les vins dans l'ordre de la carte.
+ */
+export function parRubrique(groupes: GroupeVin[]): { nom: string; groupes: GroupeVin[] }[] {
+  const rubriques: { nom: string; groupes: GroupeVin[] }[] = [];
+  for (const g of groupes) {
+    const nom = g.principal.section ?? '';
+    const r = rubriques.find((x) => x.nom === nom);
+    if (r) r.groupes.push(g); else rubriques.push({ nom, groupes: [g] });
+  }
+  return rubriques;
+}
+
 /** Autres lignes du même vin (fiche du vin) : une par contenance qui a son propre prix. */
 export function autresContenances(vins: VinBO[], v: VinBO) {
   return (grouperMemeVin(vins, (x) => x.format).find((g) => g.includes(v)) ?? []).filter((x) => x.id !== v.id);

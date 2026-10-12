@@ -1,11 +1,11 @@
 import Link from 'next/link';
-import { chercherEtiquettes } from '../../actions';
+import { chercherEtiquettes, deplacerVinCarte, renommerRubrique } from '../../actions';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, ligneNotesPat } from '@/lib/admin/donnees';
-import { etatEtiquette, etatProducteur, nomPourListe, regrouperVins } from './etats';
+import { etatEtiquette, etatProducteur, nomPourListe, parRubrique, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
@@ -36,7 +36,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
         <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
-        <Link href={`/admin/${resto}/carte/organiser?c=${c}`} className="btn sec">Organiser les rubriques</Link>
+        <Link href={`/admin/${resto}/carte/organiser?c=${c}`} className="btn sec">Glisser-déposer · nouvelle sous-catégorie</Link>
         <BoutonCarteImprimee resto={resto} />
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         {wineLabs && (
@@ -68,8 +68,22 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>
               <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
-              <tbody>
-                {affiches.map(({ principal: v, tous, contenances, prix }) => {
+              {/* Comme dans l'app : les sous-catégories de la carte (renommables), puis leurs vins (flèches pour les déplacer). */}
+              {parRubrique(affiches).map((r, ri, toutes) => (
+              <tbody key={r.nom || '-'}>
+                <tr className="rubrique-carte">
+                  <td colSpan={8}>
+                    <form action={renommerRubrique.bind(null, resto, c, r.nom)} style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                      <input name="rubrique" defaultValue={r.nom} placeholder="Sans titre (aucune sous-catégorie affichée)" aria-label="Nom de la sous-catégorie" maxLength={80}
+                        style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }} />
+                      <button className="btn fantome petit">Renommer</button>
+                      <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span>
+                    </form>
+                  </td>
+                </tr>
+                {r.groupes.map(({ principal: v, tous, contenances, prix }, gi) => {
+                  const premier = ri === 0 && gi === 0;
+                  const dernier = ri === toutes.length - 1 && gi === r.groupes.length - 1;
                   const [bl, bk] = etatProducteur(v);
                   const [el, ek] = etatEtiquette(v);
                   const nom = nomPourListe(v);
@@ -86,11 +100,17 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                         : <Etat type="attention">Indisponible</Etat>}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
                       <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>
-                      <td className="droite"><Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
+                      <td className="droite" style={{ whiteSpace: 'nowrap' }}>
+                        <div style={{ display: 'inline-flex', gap: 2, verticalAlign: 'middle', marginRight: 8 }}>
+                          <form action={deplacerVinCarte.bind(null, resto, c, v.id, -1)}><button className="btn fantome petit" disabled={premier} aria-label={`Monter ${v.libelle}`} title={gi === 0 ? 'Passer dans la sous-catégorie du dessus' : 'Monter'}>↑</button></form>
+                          <form action={deplacerVinCarte.bind(null, resto, c, v.id, 1)}><button className="btn fantome petit" disabled={dernier} aria-label={`Descendre ${v.libelle}`} title={gi === r.groupes.length - 1 ? 'Passer dans la sous-catégorie du dessous' : 'Descendre'}>↓</button></form>
+                        </div>
+                        <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`}>Modifier</Link></td>
                     </tr>
                   );
                 })}
               </tbody>
+              ))}
             </table>
           </div>
         </section>
