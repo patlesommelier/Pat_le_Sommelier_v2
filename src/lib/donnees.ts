@@ -73,7 +73,11 @@ export async function vinsExclus(restaurantId: string) {
   return new Set(r.map((x) => x.cible));
 }
 
-export interface Proposition { accord: Accord; vin: Vin; motif: Motif }
+export interface Proposition {
+  accord: Accord; vin: Vin; motif: Motif;
+  /** Plusieurs plats : l'accord avec chacun (du moins bien noté au mieux noté). */
+  parPlat?: { plat_id: string; note: number; explication: string | null }[];
+}
 
 /** Réglages des règles de sélection du restaurant (back-office), complétés par les valeurs de Pat. */
 export async function getReglages(restaurantId: string): Promise<Reglages> {
@@ -125,9 +129,12 @@ export async function getCandidats(restaurantId: string, platIds: string[], stat
  * Propositions pour un plat, selon les règles de sélection du restaurant (regles_selection.xlsx, V7 — voir selection.ts),
  * ajustées par ses réglages. tour = 1 : la liste de 1 à 5 vins ; tour = 2, 3… : les vins suivants du classement.
  */
-export async function getPropositions(restaurantId: string, platId: string, tour = 1): Promise<{ propositions: Proposition[]; encore: boolean }> {
-  const [{ candidats, lignesParVin }, R] = await Promise.all([getCandidats(restaurantId, [platId]), getReglages(restaurantId)]);
-  const sel = selectionner(candidats, [platId], { reglages: R });
+export async function getPropositions(restaurantId: string, platId: string | string[], tour = 1): Promise<{ propositions: Proposition[]; encore: boolean }> {
+  // Plusieurs plats choisis ensemble : vins notés sur tous, la note la plus basse compte, sans règle de diversité.
+  const platIds = Array.isArray(platId) ? platId : [platId];
+  const [{ candidats, lignesParVin }, R0] = await Promise.all([getCandidats(restaurantId, platIds), getReglages(restaurantId)]);
+  const R = platIds.length > 1 ? { ...R0, diversite: false } : R0;
+  const sel = selectionner(candidats, platIds, { reglages: R });
   let liste: Retenu<CandidatVin>[] = sel.liste;
   const proposes = sel.liste.map((r) => r.vin.id);
   for (let t = 2; t <= tour; t++) {
@@ -136,7 +143,9 @@ export async function getPropositions(restaurantId: string, platId: string, tour
   }
   const encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
   const propositions = liste.map((r, i) => {
-    const l = lignesParVin.get(r.vin.id)![0];
+    // Plusieurs plats : l'accord du plat le moins bien noté (c'est lui qui compte), les autres en complément.
+    const toutes = [...lignesParVin.get(r.vin.id)!].sort((a, b) => Number(a.note) - Number(b.note));
+    const l = toutes[0];
     // Appréciation selon la note (« c’est un très joli accord »), variée d'un vin à l'autre ; jamais sur un texte du restaurant.
     const app = { cle: `${l.plat_id}|${tour}`, position: i, ecritParLeRestaurant: Boolean(l.commentaire_sommelier) };
     return {
@@ -144,6 +153,7 @@ export async function getPropositions(restaurantId: string, platId: string, tour
         explication_longue: avecAppreciation(l.explication_longue, l.note, app), service: l.service, statut: l.statut } as Accord,
       vin: l as Vin,
       motif: r.motif,
+      parPlat: platIds.length > 1 ? toutes.map((x) => ({ plat_id: x.plat_id, note: Number(x.note), explication: avecAppreciation(x.explication, x.note, { ...app, cle: `${x.plat_id}|${tour}` }) })) : undefined,
     };
   });
   return { propositions, encore };

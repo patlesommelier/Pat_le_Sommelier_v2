@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { ChoixPlats } from '@/components/ChoixPlats';
 import { appOuverte } from '@/lib/ouverture';
 import { notFound, redirect } from 'next/navigation';
 import { Entete } from '@/components/Entete';
@@ -43,25 +43,10 @@ export default async function Accueil({ params, searchParams }: { params: Promis
       </Entete>
       <main className="defile">
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
-          {GROUPES.map((g) => {
-            const liste = plats.filter((p) => g.categories.includes(p.categorie));
-            if (!liste.length) return null;
-            return (
-              <section key={g.titre} className="boite" aria-label={g.titre}>
-                <div className="titre-section">
-                  <span>{g.titre}</span>
-                  <div className="filet court" />
-                </div>
-                <div className="bulles">
-                  {liste.map((p) => (
-                    <Link key={p.id} href={`/${resto}/plat/${p.id}`} className="bulle" title={p.nom}>
-                      {p.nom_court ?? p.nom}
-                    </Link>
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+          <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({
+            titre: g.titre,
+            plats: plats.filter((p) => g.categories.includes(p.categorie)).map((p) => ({ id: p.id, nom: p.nom, court: p.nom_court ?? p.nom })),
+          })).filter((g) => g.plats.length)} />
         </div>
       </main>
     </>

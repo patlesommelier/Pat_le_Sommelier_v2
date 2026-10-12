@@ -218,3 +218,11 @@ a.bouton-plein { text-decoration: none; }
 /* Photo du plat (déposée par le restaurant) en tête des propositions. */
 .photo-plat { display: block; width: 100%; max-height: 240px; object-fit: cover; border-radius: 12px; margin: 4px 0 18px; }
 .domaine { display: flex; flex-direction: column; gap: 12px; margin-top: 28px; }
+
+/* ── Choix de plusieurs plats (menu) ── */
+button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
+.bulle.choisie { border-color: var(--marque); background: var(--marque); color: #FFFFFF; }
+.bulle.choisie:hover, .bulle.choisie:focus-visible { color: #FFFFFF; }
+.envoi-plats { position: sticky; bottom: 0; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to bottom, transparent, var(--fond, #FFFFFF) 30%); display: flex; justify-content: center; }
+.envoi-plats .bouton-plein { width: 100%; max-width: 420px; min-height: 46px; font-size: 15px; }
+.envoi-plats .bouton-plein:disabled { opacity: .45; cursor: default; }
