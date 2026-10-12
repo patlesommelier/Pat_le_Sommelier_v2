@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { euros, lignePrix, sousTitreVin } from '@/lib/format';
 import { COULEURS, type VinOnglet } from '@/lib/types';
 import { Etiquette } from './Etiquette';
+import { PictosVin } from './Pictos';
 import { categoriesActives, placeDansCarte } from '@/lib/categories';
 
 /** Carte des vins par onglets : on ne voit que les vins de la couleur choisie, groupés par région. */
@@ -55,7 +56,7 @@ export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { r
               <Link key={v.id} href={`/${restaurant}/vin/${v.id}`} className="ligne-vin">
                 <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={52} hauteur={52} />
                 <div className="infos">
-                  <span className="nom">{v.titre ?? v.libelle}{v.coup_de_coeur && <Coeur />}</span>
+                  <span className="nom">{v.titre ?? v.libelle}<PictosVin coeur={v.coup_de_coeur} bio={v.bio} nature={v.nature} /></span>
                   <span className="sous">{v.titre !== undefined ? v.sousTitre : sousTitreVin({ ...v, format: v.tarifs?.length ? undefined : v.format })}</span>
                 </div>
                 {v.tarifs?.length ? (
@@ -76,9 +77,4 @@ export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { r
       </div>
     </>
   );
-}
-
-/** Petit cœur des coups de cœur de la maison. */
-export function Coeur() {
-  return <span className="coeur" role="img" aria-label="Coup de cœur" title="Coup de cœur de la maison">♥</span>;
 }

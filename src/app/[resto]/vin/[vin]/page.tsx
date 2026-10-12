@@ -1,4 +1,5 @@
 import { notFound } from 'next/navigation';
+import { Feuille, Grappe } from '@/components/Pictos';
 import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
@@ -48,9 +49,9 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
             {couleur && <span className="pastille">{couleur}</span>}
             {vin.cepages?.split(/,\s*/).slice(0, 2).map((c) => <span key={c} className="pastille">{c.replace(/\s*\(.*\)/, '')}</span>)}
             {p?.stade && <span className="pastille">{p.stade.charAt(0).toUpperCase() + p.stade.slice(1)}</span>}
-            {vin.coup_de_coeur && <span className="pastille">♥ Coup de cœur</span>}
-            {vin.nature && <span className="pastille">Nature</span>}
-            {vin.bio && <span className="pastille">Bio</span>}
+            {vin.coup_de_coeur && <span className="pastille"><span className="coeur" style={{ margin: '0 5px 0 0' }} aria-hidden="true">♥</span>Coup de cœur</span>}
+            {vin.nature && <span className="pastille" style={{ display: 'inline-flex', gap: 5, alignItems: 'center' }}><Grappe /> Nature</span>}
+            {vin.bio && <span className="pastille" style={{ display: 'inline-flex', gap: 5, alignItems: 'center' }}><Feuille /> Bio</span>}
           </div>
 
           {(vin.presentation ?? vin.descriptif) && <p className="texte">{sansContenance(vin.presentation ?? vin.descriptif)}</p>}

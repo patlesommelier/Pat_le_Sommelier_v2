@@ -233,3 +233,8 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 
 /* ── Coup de cœur de la maison ── */
 .coeur { margin-left: 6px; color: #D7263D; font-size: .95em; font-weight: 400; }
+
+/* ── Pictogrammes après le nom d'un vin (♥, bio, nature) ── */
+.pictos-vin { display: inline-flex; align-items: center; gap: 5px; margin-left: 6px; vertical-align: -1px; }
+.pictos-vin .coeur { margin-left: 0; }
+.picto { display: block; }

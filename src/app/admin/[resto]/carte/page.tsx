@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { changerCategoriesCarte, chercherEtiquettes, enregistrerOrdreCarte } from '../../actions';
 import { CasesCategories } from '@/components/admin/CasesCategories';
+import { PictosVin } from '@/components/Pictos';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
@@ -103,7 +104,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   return {
                     cle: v.id, ids: tous.map((x) => x.id), ancre: `vin-${v.id}`, classe: choisie ? 'choisi' : undefined,
                     cellules: (<>
-                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#B5ADA8', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.coup_de_coeur) && <span role="img" aria-label="Coup de cœur" title="Coup de cœur de la maison" style={{ marginLeft: 6, color: '#D7263D' }}>♥</span>}{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#B5ADA8', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link><PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
                       <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--bordeaux, #6b0f24)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
