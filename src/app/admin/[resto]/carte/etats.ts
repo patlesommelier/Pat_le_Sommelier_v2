@@ -1,12 +1,12 @@
 // États affichés pour un vin de la carte (liste et fiche du back-office).
 import type { VinBO } from '@/lib/admin/donnees';
-import { etatEtiquetteVin } from '@/lib/etiquettes/etat';
+import { etatEtiquetteRestaurant } from '@/lib/etiquettes/etat';
 import { contenanceDuFormat, grouperMemeVin, libelleCourt, ordonner } from '@/lib/contenances';
 import { titreCarte } from '@/lib/admin/intitule';
 
 type Etat = [string, 'ok' | 'propose' | 'attention' | ''];
 
-export const etatEtiquette = (v: VinBO): Etat => etatEtiquetteVin(v);
+export const etatEtiquette = (v: VinBO, fiche = false): Etat => etatEtiquetteRestaurant(v, fiche);
 
 export function etatProducteur(v: VinBO): Etat {
   // Les rankings de Pat restent internes : le restaurant voit seulement si le producteur est déjà référencé ou nouveau.

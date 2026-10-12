@@ -29,7 +29,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const r = u?.admin ? (await getRankingsInternes(resto)).get(v.id) : null;
   const etoiles = r ? ` · ★ ${r.ranking_producteur ?? 0} / terroir ${r.ranking_terroir ?? 0}` : '';
   const [pl, pk] = etatProducteur(v);
-  const [el, ek] = etatEtiquette(v);
+  const [el, ek] = etatEtiquette(v, true);
   const sansLien = Boolean(!v.producteur_id && v.producteur_texte && !/^non /i.test(v.producteur_texte));
   // Suggestions : pour un nom pas encore relié, ou pour corriger un producteur proposé.
   const suggestions = sansLien || v.statut_producteur === 'nouveau'

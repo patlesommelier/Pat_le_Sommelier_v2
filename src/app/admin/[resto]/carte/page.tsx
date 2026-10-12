@@ -52,8 +52,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes à photographier</span>
-          {enRecherche > 0 && <div className="petit">{enRecherche} en recherche chez Wine Labs</div>}
+        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes manquantes</span>
+          {sansEtiquette > 0 && <div className="petit">Pat les cherche ; vous pouvez aussi envoyer vos photos</div>}
 </div>
       </div>
       <div className="rangee">

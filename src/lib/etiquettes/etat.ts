@@ -18,6 +18,19 @@ export function etatEtiquetteVin(v: { etiquette_url: string | null; etiquette_so
 }
 
 /**
+ * Étiquette d'un vin vue par le restaurant : sans rien de la cuisine interne (Wine Labs, échecs, crédits).
+ * Photo de Wine Labs, de la base ou fournie par Pat : « Base de Pat » ; sans photo : Pat la cherche.
+ * Dans la fiche du vin (`fiche`), on l'invite à envoyer sa propre photo.
+ */
+export function etatEtiquetteRestaurant(v: { etiquette_url: string | null; etiquette_source: string | null; etiquette_statut: string | null; etiquette_erreur?: string | null }, fiche = false): EtatEtiquette {
+  if (v.etiquette_source === 'restaurant') return ['Votre photo', 'propose'];
+  if (v.etiquette_url) return ['Base de Pat', 'ok'];
+  // Pas de recherche possible sans producteur : le restaurant peut le préciser.
+  if (v.etiquette_statut === 'introuvable' && v.etiquette_erreur?.startsWith('Producteur inconnu')) return ['Producteur à préciser, ou à photographier', 'attention'];
+  return fiche ? ['Pat la cherche, uploadez votre photo si vous préférez', ''] : ['Pat est en train de la chercher', ''];
+}
+
+/**
  * Étiquette d'un vin de la base : sa photo et d'où elle vient ; sans photo, l'état des recherches Wine Labs
  * de ses vins sur les cartes (en cours d'abord, puis échec, introuvable).
  */
