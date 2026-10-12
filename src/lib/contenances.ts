@@ -60,26 +60,38 @@ export function ordonner(codes: readonly string[] | null | undefined): Contenanc
 
 export const libelleCourt = (code: string) => CONTENANCES.find((c) => c.code === code)?.court ?? code;
 
-/** Clé d'un même vin sur la carte (ses contenances sont enregistrées en lignes séparées). */
-export const cleMemeVin = (v: { couleur: string; libelle: string; millesime: string | null }) =>
-  [v.couleur, v.libelle.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim(), v.millesime ?? ''].join('|');
+/** Mentions de contenant dans un intitulé (« M de Minuty – au verre », « Ostal Cazes (magnum) ») : ignorées pour reconnaître un même vin. */
+const MENTION_CONTENANT = /\b(au verre|verres?|bouteilles?|demi[- ]bouteilles?|magnums?|pichets?|carafes?|pots?|\d+(?:[.,]\d+)?\s?cl)\b|½|¼/g;
+
+/** Clé d'un même vin sur la carte (ses contenances sont enregistrées en lignes séparées) : couleur et intitulé, sans contenant. */
+export const cleMemeVin = (v: { couleur: string; libelle: string }) =>
+  [v.couleur, v.libelle.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(MENTION_CONTENANT, ' ').replace(/[^a-z0-9]+/g, ' ').trim()].join('|');
 
 /**
- * Lignes de la carte regroupées par vin : même couleur, intitulé et millésime, et des contenances différentes.
+ * Lignes de la carte regroupées par vin : même couleur et intitulé (mentions de contenant à part), des contenances différentes,
+ * et le même millésime — une ligne sans millésime (souvent le verre) va avec celle qui en a un.
  * Deux lignes de même contenance sont deux vins distincts, même si la carte les a lus sous le même nom
  * (« Taittinger » brut et rosé, l'un sous l'autre) : elles ne sont jamais fusionnées.
  */
 export function grouperMemeVin<T extends { couleur: string; libelle: string; millesime: string | null }>(lignes: T[], format: (l: T) => string | null | undefined): T[][] {
   const groupes: T[][] = [];
   const parCle = new Map<string, T[][]>();
-  for (const l of lignes) {
+  const millesime = (g: T[]) => g.find((x) => x.millesime)?.millesime ?? null;
+  // Les lignes millésimées d'abord : une ligne sans millésime rejoint ensuite le vin de même nom qui n'a pas encore sa contenance.
+  const ordre = [...lignes].sort((a, b) => Number(!a.millesime) - Number(!b.millesime));
+  for (const l of ordre) {
     const c = contenanceDuFormat(format(l));
-    const candidats = parCle.get(cleMemeVin(l)) ?? [];
-    const g = candidats.find((x) => !x.some((y) => contenanceDuFormat(format(y)) === c));
+    const cle = cleMemeVin(l);
+    const candidats = parCle.get(cle) ?? [];
+    const g = candidats.find((x) => !x.some((y) => contenanceDuFormat(format(y)) === c)
+      && (!l.millesime || !millesime(x) || millesime(x) === l.millesime));
     if (g) { g.push(l); continue; }
     const nouveau = [l];
     groupes.push(nouveau);
-    parCle.set(cleMemeVin(l), [...candidats, nouveau]);
+    parCle.set(cle, [...candidats, nouveau]);
   }
-  return groupes;
+  // Ordre de la carte : celui de la première ligne de chaque vin, et ses lignes dans l'ordre d'origine.
+  const rang = new Map(lignes.map((l, i) => [l, i]));
+  for (const g of groupes) g.sort((a, b) => rang.get(a)! - rang.get(b)!);
+  return groupes.sort((a, b) => rang.get(a[0])! - rang.get(b[0])!);
 }
