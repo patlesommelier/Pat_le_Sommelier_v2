@@ -13,7 +13,7 @@ export const accordsVisibles = () =>
 
 export const getRestaurant = cache(async (id: string) => {
   const [r] = await requete<Restaurant>(
-    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, statut, origine, logo_ratio, logo_fonce_ratio, logo_choix, page_accueil from restaurant where id = $1',
+    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, statut, origine, logo_ratio, logo_fonce_ratio, logo_choix, page_accueil, categories_carte from restaurant where id = $1',
     [id],
   );
   return r ?? null;
@@ -49,8 +49,11 @@ const SELECT_VIN = `
          -- Nom saisi dans le back-office prioritaire sur celui de la base de Pat
          case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else p.nom end as producteur_nom,
          p.avis_pat as producteur_avis_pat, p.ranking_pat as producteur_ranking,
-         t.nom as appellation_nom
+         t.nom as appellation_nom,
+         -- nature, bio : base de Pat
+         coalesce(cu.nature, false) as nature, coalesce(cu.bio, false) as bio
     from vin_carte v
+    left join cuvee cu on cu.id = v.cuvee_id
     left join producteur p on p.id = v.producteur_id
     left join terroir t on t.id = v.appellation_id`;
 

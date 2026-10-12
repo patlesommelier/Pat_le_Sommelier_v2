@@ -180,7 +180,7 @@ export interface FicheCuvee {
   appellation_id: string | null; appellation: string | null; appellation_base: string | null; cepages: string | null; garde: string | null; description: string | null;
   texte_origine: string | null; statut: string; etiquette_url: string | null; etiquette_source: string | null; source: string | null;
   /** Note du vin dans la base (vide : celle du producteur) et note du producteur. */
-  ranking_pat: number | null; ranking_producteur: number | null;
+  ranking_pat: number | null; ranking_producteur: number | null; nature: boolean; bio: boolean;
 }
 
 /** Fiche d'un vin de la base, avec les vins des cartes de restaurant qui y sont reliés. */
@@ -193,7 +193,7 @@ export async function ficheCuvee(id: string) {
             t.nom as appellation_base,
             coalesce(c.cepages, (select v.cepages from vin_carte v where v.cuvee_id = c.id and v.cepages is not null limit 1)) as cepages,
             c.garde, c.description, c.texte_origine,
-            c.statut::text, c.etiquette_url, c.etiquette_source, c.source, c.ranking_pat, p.ranking_pat as ranking_producteur
+            c.statut::text, c.etiquette_url, c.etiquette_source, c.source, c.ranking_pat, p.ranking_pat as ranking_producteur, c.nature, c.bio
        from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id where c.id = $1`, [id]);
   if (!c) return null;
   const vins = await requete<{ id: string; restaurant_id: string; restaurant: string; libelle: string; millesime: string | null; format: string;

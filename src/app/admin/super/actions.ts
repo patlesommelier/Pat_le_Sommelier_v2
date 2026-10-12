@@ -291,6 +291,8 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   const rv = entier(f, 'ranking_vin');
   const noteVin = rv !== null && Number.isInteger(rv) && rv >= 0 && rv <= 5 ? rv : null;
   if (f.has('ranking_vin')) await requete('update cuvee set ranking_pat = $2 where id = $1', [id, noteVin]);
+  // Nature, bio (cases de la fiche ; « Retirer de la base » envoie aussi le formulaire, sans changer le sens des cases).
+  await requete('update cuvee set nature = $2, bio = $3 where id = $1', [id, f.get('nature') === 'on', f.get('bio') === 'on']);
   await requete(
     `update cuvee set nom = coalesce($2, nom), couleur = $3::couleur_vin, appellation_id = $4, appellation_texte = $11, cepages = $5, garde = $6, description = $7,
             statut = case $8 when 'valider' then 'valide'::statut_validation when 'retirer' then 'retire'::statut_validation else statut end,

@@ -109,11 +109,13 @@ a.bouton-plein { text-decoration: none; }
 .jauge .valeur { width: 28px; text-align: right; font-size: 13px; color: var(--discret); }
 
 /* ── Carte des vins : onglets ── */
-.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; }
+.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; overflow-x: auto; scrollbar-width: none; }
+.onglets::-webkit-scrollbar { display: none; }
 .onglet {
-  flex: 1 1 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 52px;
+  /* Onglets nombreux (catégories en plus) : la barre défile, chaque onglet garde sa largeur. */
+  flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 52px; white-space: nowrap;
   cursor: pointer; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--discret);
-  border: 0; border-bottom: 2px solid transparent; background: none; padding: 0;
+  border: 0; border-bottom: 2px solid transparent; background: none; padding: 0 9px;
 }
 .onglet small { font-size: 11px; font-weight: 400; letter-spacing: 0; text-transform: none; }
 .onglet[aria-selected='true'] { color: var(--marque-texte, var(--marque)); border-bottom-color: var(--marque); }
@@ -226,3 +228,6 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .envoi-plats { position: sticky; bottom: 0; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to bottom, transparent, var(--fond, #FFFFFF) 30%); display: flex; justify-content: center; }
 .envoi-plats .bouton-plein { width: 100%; max-width: 420px; min-height: 46px; font-size: 15px; }
 .envoi-plats .bouton-plein:disabled { opacity: .45; cursor: default; }
+
+/* ── Coup de cœur de la maison ── */
+.coeur { margin-left: 6px; color: var(--marque-texte, var(--marque)); font-size: .95em; font-weight: 400; }

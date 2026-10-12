@@ -688,11 +688,12 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
     `update restaurant set couleur = $2, couleur_claire = $3, accroche = $4, logo_url = coalesce($5, logo_url),
             logo_fonce_url = coalesce($6, logo_fonce_url), logo_ratio = case when $5::text is not null then $7 else logo_ratio end,
             logo_fonce_ratio = case when $6::text is not null then $8 else logo_fonce_ratio end, logo_choix = $9,
-            page_accueil = coalesce($10, page_accueil), modifie_bo = now()
+            page_accueil = coalesce($10, page_accueil), categories_carte = coalesce($11, categories_carte), modifie_bo = now()
       where id = $1`,
     [resto, couleur.toUpperCase(), claire(couleur), accroche, logo, logoFonce, ratio, ratioFonce,
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
-      ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null],
+      ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null,
+      f.has('categories_envoyees') ? f.getAll('categories').map(String).filter((c) => ['coups_de_coeur', 'nature', 'bio'].includes(c)) : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');

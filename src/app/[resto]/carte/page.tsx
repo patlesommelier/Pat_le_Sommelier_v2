@@ -30,7 +30,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           <h1>Carte des vins</h1>
           <div className="filet" />
         </div>
-        <OngletsCarte restaurant={resto} vins={lignes} couleur={c} />
+        <OngletsCarte restaurant={resto} vins={lignes} couleur={c} categories={restaurant.categories_carte ?? []} />
       </main>
     </>
   );

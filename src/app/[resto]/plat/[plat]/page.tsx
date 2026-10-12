@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import { DemanderAPat } from '@/components/DemanderAPat';
 import { Entete, menuDe } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
+import { Coeur } from '@/components/OngletsCarte';
 import { getPlat, getPlats, getPropositions, getRestaurant } from '@/lib/donnees';
 import { euros, lignePrix } from '@/lib/format';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
@@ -61,7 +62,7 @@ export default async function Propositions({
                     {(() => {
                       // Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages.
                       const t = titreCarte({ ...vin, producteur: vin.producteur_nom ?? vin.producteur_texte });
-                      return <><div className="nom">{t.titre}</div>{t.sousTitre && <div className="sous">{t.sousTitre}</div>}</>;
+                      return <><div className="nom">{t.titre}{vin.coup_de_coeur && <Coeur />}</div>{t.sousTitre && <div className="sous">{t.sousTitre}</div>}</>;
                     })()}
                     {ensemble ? <div className="pourquoi">{ensemble}</div>
                       : parPlat

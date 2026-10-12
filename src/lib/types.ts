@@ -18,6 +18,8 @@ export interface Restaurant {
   logo_choix?: string | null;
   /** Page d'arrivée de l'app : 'menu' (avec le sommelier) ou 'carte' (carte des vins). */
   page_accueil?: string;
+  /** Catégories en plus des couleurs dans la carte de l'app : 'nature', 'bio', 'coups_de_coeur'. */
+  categories_carte?: string[];
 }
 
 export interface Plat {
@@ -68,6 +70,9 @@ export interface Vin {
   resume_court: string | null;
   etiquette_url: string | null;
   coup_de_coeur: boolean;
+  /** Vin nature, vin bio : renseignés dans la base de Pat. */
+  nature?: boolean;
+  bio?: boolean;
   ordre: number;
   ranking_producteur: number | null;
   ranking_terroir: number | null;
@@ -98,7 +103,7 @@ export const COULEURS: { id: Couleur; libelle: string }[] = [
 ];
 
 /** Champs envoyés au navigateur : rien de la cuisine interne de Pat (rankings, avis). */
-export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'producteur_nom' | 'producteur_texte' | 'cepages' | 'millesime' | 'format' | 'prix' | 'prix_verre' | 'etiquette_url'>
+export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'producteur_nom' | 'producteur_texte' | 'cepages' | 'millesime' | 'format' | 'prix' | 'prix_verre' | 'etiquette_url' | 'coup_de_coeur' | 'nature' | 'bio'>
   /** Prix de chaque contenance du vin (bouteille, ½, ¼, magnum, verre). */
   & { tarifs?: Array<{ code: string; prix: number }>;
     /** Présentation dans la carte : nom du vin et millésime (gras), puis producteur, appellation, cépages. */
@@ -106,4 +111,5 @@ export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'pr
 export const versOnglet = (v: Vin): VinOnglet => ({
   id: v.id, couleur: v.couleur, section: v.section, libelle: v.libelle, producteur_nom: v.producteur_nom, producteur_texte: v.producteur_texte,
   cepages: v.cepages, millesime: v.millesime, format: v.format, prix: v.prix, prix_verre: v.prix_verre, etiquette_url: v.etiquette_url,
+  coup_de_coeur: v.coup_de_coeur, nature: v.nature ?? false, bio: v.bio ?? false,
 });

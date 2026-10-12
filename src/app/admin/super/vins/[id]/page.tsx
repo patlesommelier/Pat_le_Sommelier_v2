@@ -65,6 +65,11 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
                 <span className="aide">Vide : la note du producteur ({c.ranking_producteur ?? 'pas encore notée'}) s’applique. Reprise automatiquement par les restaurants.</span></div>
               <div className="champ"><label htmlFor="garde">Garde</label><input id="garde" name="garde" defaultValue={c.garde ?? ''} placeholder="Ex. 5 à 10 ans" /></div>
             </div>
+            <div style={{ display: 'flex', gap: 18, flexWrap: 'wrap' }}>
+              <label className="case" style={{ margin: 0 }}><input type="checkbox" name="nature" defaultChecked={c.nature} /><span>Vin nature</span></label>
+              <label className="case" style={{ margin: 0 }}><input type="checkbox" name="bio" defaultChecked={c.bio} /><span>Vin bio</span></label>
+              <span className="aide" style={{ alignSelf: 'center' }}>Repris par toutes les cartes (catégories « Nature » et « Bio » de l’app, si le restaurant les affiche).</span>
+            </div>
             <div className="champ"><label htmlFor="description">Description</label><textarea id="description" name="description" rows={5} defaultValue={c.description ?? ''} /></div>
             <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: 'minmax(120px, auto) 1fr', gap: '6px 14px', fontSize: 14 }}>
               {c.texte_origine && <><dt style={{ fontWeight: 700 }}>Texte d’origine</dt><dd style={{ margin: 0 }}>{c.texte_origine}</dd></>}

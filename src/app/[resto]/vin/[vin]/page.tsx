@@ -48,7 +48,9 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
             {couleur && <span className="pastille">{couleur}</span>}
             {vin.cepages?.split(/,\s*/).slice(0, 2).map((c) => <span key={c} className="pastille">{c.replace(/\s*\(.*\)/, '')}</span>)}
             {p?.stade && <span className="pastille">{p.stade.charAt(0).toUpperCase() + p.stade.slice(1)}</span>}
-            {vin.coup_de_coeur && <span className="pastille">Coup de cœur</span>}
+            {vin.coup_de_coeur && <span className="pastille">♥ Coup de cœur</span>}
+            {vin.nature && <span className="pastille">Nature</span>}
+            {vin.bio && <span className="pastille">Bio</span>}
           </div>
 
           {(vin.presentation ?? vin.descriptif) && <p className="texte">{sansContenance(vin.presentation ?? vin.descriptif)}</p>}
