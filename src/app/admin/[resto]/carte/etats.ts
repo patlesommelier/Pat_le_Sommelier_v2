@@ -44,7 +44,9 @@ export function regrouperVins(vins: VinBO[]): GroupeVin[] {
 
 /** Onglet d'un vin (toutes contenances) : sa catégorie spéciale (coup de cœur, nature, bio), sinon sa couleur — comme dans l'app. */
 export function placeGroupe(g: GroupeVin, actives: ReturnType<typeof categoriesActives>) {
-  return placeDansCarte({ couleur: g.principal.couleur, coup_de_coeur: g.tous.some((x) => x.coup_de_coeur), nature: g.principal.nature, bio: g.principal.bio }, actives);
+  const dispo = g.tous.filter((x) => x.disponible);
+  const auVerre = dispo.some((x) => contenanceDuFormat(x.format) === 'verre' || x.prix_verre != null);
+  return placeDansCarte({ couleur: g.principal.couleur, coup_de_coeur: g.tous.some((x) => x.coup_de_coeur), nature: g.principal.nature, bio: g.principal.bio, au_verre: auVerre }, actives);
 }
 
 /**

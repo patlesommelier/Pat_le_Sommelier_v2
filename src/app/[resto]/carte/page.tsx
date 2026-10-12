@@ -20,8 +20,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const parVin = groupes.map((g) => g.find((v) => contenanceDuFormat(v.format) === 'bouteille') ?? g[0]);
   // Coup de cœur : coché sur une des contenances, il vaut pour le vin.
   const coeur = new Set(groupes.filter((g) => g.some((v) => v.coup_de_coeur)).flat().map((v) => v.id));
+  // Servi au verre : une contenance « verre », ou un prix au verre.
+  const verre = new Set(groupes.filter((g) => g.some((v) => contenanceDuFormat(v.format) === 'verre' || v.prix_verre != null)).flat().map((v) => v.id));
   const lignes = vins.filter((v) => parVin.includes(v))
-    .map((v) => ({ ...versOnglet(v), coup_de_coeur: coeur.has(v.id), ...titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }),
+    .map((v) => ({ ...versOnglet(v), coup_de_coeur: coeur.has(v.id), au_verre: verre.has(v.id), ...titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }),
       tarifs: (tarifs.get(v.id) ?? []).map(({ code, prix }) => ({ code, prix })) }));
 
   return (

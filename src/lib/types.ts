@@ -107,7 +107,9 @@ export type VinOnglet = Pick<Vin, 'id' | 'couleur' | 'section' | 'libelle' | 'pr
   /** Prix de chaque contenance du vin (bouteille, ½, ¼, magnum, verre). */
   & { tarifs?: Array<{ code: string; prix: number }>;
     /** Présentation dans la carte : nom du vin et millésime (gras), puis producteur, appellation, cépages. */
-    titre?: string; sousTitre?: string };
+    titre?: string; sousTitre?: string;
+    /** Servi au verre (une de ses contenances). */
+    au_verre?: boolean };
 export const versOnglet = (v: Vin): VinOnglet => ({
   id: v.id, couleur: v.couleur, section: v.section, libelle: v.libelle, producteur_nom: v.producteur_nom, producteur_texte: v.producteur_texte,
   cepages: v.cepages, millesime: v.millesime, format: v.format, prix: v.prix, prix_verre: v.prix_verre, etiquette_url: v.etiquette_url,

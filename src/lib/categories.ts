@@ -3,12 +3,13 @@
 // Un vin d'une catégorie spéciale n'apparaît que là (plus dans sa couleur) ; s'il est dans plusieurs, la première l'emporte.
 // Sans dépendance serveur : utilisé par l'app (navigateur) et par le back-office.
 
-export type VinCategorie = { couleur: string; coup_de_coeur?: boolean | null; nature?: boolean | null; bio?: boolean | null };
+export type VinCategorie = { couleur: string; coup_de_coeur?: boolean | null; nature?: boolean | null; bio?: boolean | null; au_verre?: boolean | null };
 
 export const CATEGORIES_SPECIALES = [
   { id: 'coups_de_coeur', libelle: 'Coups de cœur', garde: (v: VinCategorie) => Boolean(v.coup_de_coeur) },
   { id: 'nature', libelle: 'Nature', garde: (v: VinCategorie) => Boolean(v.nature) },
   { id: 'bio', libelle: 'Bio', garde: (v: VinCategorie) => Boolean(v.bio) },
+  { id: 'au_verre', libelle: 'Au verre', garde: (v: VinCategorie) => Boolean(v.au_verre) },
 ] as const;
 
 /** Catégories spéciales choisies par ce restaurant. */

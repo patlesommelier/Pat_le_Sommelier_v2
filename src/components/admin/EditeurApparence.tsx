@@ -166,11 +166,12 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <input type="hidden" name="categories_envoyees" value="1" />
           {[['coups_de_coeur', 'Coups de cœur', 'Les vins cochés « Coup de cœur » dans leur fiche. Sans cette catégorie, ils restent dans leur couleur avec un petit cœur ♥.'],
             ['nature', 'Nature', 'Les vins nature, d’après la base de Pat.'],
-            ['bio', 'Bio', 'Les vins bio, d’après la base de Pat.']].map(([id, titre, aide]) => (
+            ['bio', 'Bio', 'Les vins bio, d’après la base de Pat.'],
+            ['au_verre', 'Au verre', 'Les vins servis au verre (prix au verre dans leur fiche).']].map(([id, titre, aide]) => (
             <label key={id} className="case"><input type="checkbox" name="categories" value={id} defaultChecked={categories.includes(id)} />
               <span><b>{titre}</b><small>{aide}</small></span></label>
           ))}
-          <span className="petit discret">Un vin d’une de ces catégories (coup de cœur, nature, bio) n’apparaît que là, plus dans sa couleur.</span>
+          <span className="petit discret">Un vin d’une de ces catégories n’apparaît que là, plus dans sa couleur ; s’il est dans plusieurs, c’est la première de cette liste qui compte.</span>
         </section>
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>

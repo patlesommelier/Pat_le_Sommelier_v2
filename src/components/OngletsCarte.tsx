@@ -10,10 +10,10 @@ import { categoriesActives, placeDansCarte } from '@/lib/categories';
 /** Carte des vins par onglets : on ne voit que les vins de la couleur choisie, groupés par région. */
 export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { restaurant: string; vins: VinOnglet[]; couleur?: string; categories?: string[] }) {
   // Quatre onglets principaux ; « Orange » et « Doux » n'apparaissent que si la carte en contient.
-  const couleurs = COULEURS.filter((c) => ['bulles', 'blanc', 'rose', 'rouge'].includes(c.id) || vins.some((v) => v.couleur === c.id));
-  // Puis les catégories spéciales (coups de cœur toujours ; nature, bio si choisies) : un vin n'apparaît que dans l'une d'elles.
+  // Puis les catégories spéciales choisies par le restaurant : un vin n'apparaît que dans l'une d'elles.
   const actives = categoriesActives(categories);
   const place = (v: VinOnglet) => placeDansCarte(v, actives);
+  const couleurs = COULEURS.filter((c) => ['bulles', 'blanc', 'rose', 'rouge'].includes(c.id) || vins.some((v) => place(v) === c.id));
   const extras = actives.filter((e) => vins.some((v) => place(v) === e.id));
   const onglets: { id: string; libelle: string }[] = [...couleurs, ...extras];
   const dans = (id: string) => (v: VinOnglet) => place(v) === id;
