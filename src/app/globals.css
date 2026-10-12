@@ -109,11 +109,13 @@ a.bouton-plein { text-decoration: none; }
 .jauge .valeur { width: 28px; text-align: right; font-size: 13px; color: var(--discret); }
 
 /* ── Carte des vins : onglets ── */
-.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; overflow-x: auto; scrollbar-width: none; flex-shrink: 0; /* jamais écrasée par une longue liste */ }
+/* Barre des couleurs : hauteur fixe, jamais réduite par une longue liste (Safari compris) ; elle défile en largeur. */
+.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px;
+  flex: none; min-height: 53px; overflow-x: auto; overflow-y: hidden; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .onglets::-webkit-scrollbar { display: none; }
 .onglet {
   /* Onglets nombreux (catégories en plus) : la barre défile, chaque onglet garde sa largeur. */
-  flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 52px; white-space: nowrap;
+  flex: 1 0 auto; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 52px; min-height: 52px; flex-shrink: 0; white-space: nowrap;
   cursor: pointer; font-size: 13px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--discret);
   border: 0; border-bottom: 2px solid transparent; background: none; padding: 0 9px;
 }
