@@ -109,7 +109,7 @@ a.bouton-plein { text-decoration: none; }
 .jauge .valeur { width: 28px; text-align: right; font-size: 13px; color: var(--discret); }
 
 /* ── Carte des vins : onglets ── */
-.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; overflow-x: auto; scrollbar-width: none; }
+.onglets { position: sticky; top: 0; z-index: 1; background: #FFFFFF; display: flex; border-bottom: 1px solid var(--bord); padding: 0 12px; overflow-x: auto; scrollbar-width: none; flex-shrink: 0; /* jamais écrasée par une longue liste */ }
 .onglets::-webkit-scrollbar { display: none; }
 .onglet {
   /* Onglets nombreux (catégories en plus) : la barre défile, chaque onglet garde sa largeur. */
@@ -230,4 +230,4 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .envoi-plats .bouton-plein:disabled { opacity: .45; cursor: default; }
 
 /* ── Coup de cœur de la maison ── */
-.coeur { margin-left: 6px; color: var(--marque-texte, var(--marque)); font-size: .95em; font-weight: 400; }
+.coeur { margin-left: 6px; color: #D7263D; font-size: .95em; font-weight: 400; }
