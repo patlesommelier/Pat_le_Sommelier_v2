@@ -35,7 +35,7 @@ export function Entete({ restaurant, retour, grand = false, surLaCarte = false, 
             : <LogoPat nom={restaurant.nom} />}
         </Link>
         {surLaCarte ? (
-          <Link href={`/${restaurant.id}`} className="bouton-carte">
+          <Link href={menuDe(restaurant)} className="bouton-carte">
             <Couverts />
             <span>Menu</span>
           </Link>
@@ -61,3 +61,6 @@ export function LogoPat({ nom }: { nom: string }) {
     </span>
   );
 }
+
+/** Adresse du menu de l'app : la page d'accueil, sauf si le restaurant arrive sur la carte des vins. */
+export const menuDe = (r: { id: string; page_accueil?: string }) => (r.page_accueil === 'carte' ? `/${r.id}?menu=1` : `/${r.id}`);

@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { appOuverte } from '@/lib/ouverture';
-import { Entete } from '@/components/Entete';
+import { Entete, menuDe } from '@/components/Entete';
 import { OngletsCarte } from '@/components/OngletsCarte';
 import { versOnglet } from '@/lib/types';
 import { getCarte, getRestaurant } from '@/lib/donnees';
@@ -23,7 +23,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
 
   return (
     <>
-      <Entete restaurant={restaurant} retour={`/${resto}`} surLaCarte />
+      {/* Carte choisie comme page d'arrivée : pas de flèche retour (le bouton « Menu » mène au menu). */}
+      <Entete restaurant={restaurant} retour={restaurant.page_accueil === 'carte' ? undefined : menuDe(restaurant)} surLaCarte />
       <main className="defile">
         <div className="titre-page" style={{ padding: '24px 20px 12px' }}>
           <h1>Carte des vins</h1>

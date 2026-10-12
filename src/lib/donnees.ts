@@ -12,7 +12,7 @@ export const accordsVisibles = () =>
 
 export const getRestaurant = cache(async (id: string) => {
   const [r] = await requete<Restaurant>(
-    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, statut, origine, logo_ratio, logo_fonce_ratio, logo_choix from restaurant where id = $1',
+    'select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, accroche, statut, origine, logo_ratio, logo_fonce_ratio, logo_choix, page_accueil from restaurant where id = $1',
     [id],
   );
   return r ?? null;

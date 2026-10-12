@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { appOuverte } from '@/lib/ouverture';
-import { notFound } from 'next/navigation';
+import { notFound, redirect } from 'next/navigation';
 import { Entete } from '@/components/Entete';
 import { Silhouettes } from '@/components/Icones';
 import { getPlats, getRestaurant } from '@/lib/donnees';
@@ -12,11 +12,13 @@ const GROUPES: { titre: string; categories: Plat['categorie'][] }[] = [
   { titre: 'Desserts et fromages', categories: ['dessert', 'fromage'] },
 ];
 
-export default async function Accueil({ params }: { params: Promise<{ resto: string }> }) {
+export default async function Accueil({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ menu?: string }> }) {
   const { resto } = await params;
   if (!(await appOuverte(resto))) return null; // fermé au public : le layout affiche la page d'attente
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
+  // Page d'arrivée choisie par le restaurant : la carte des vins (le bouton « Menu » ramène ici avec ?menu=1).
+  if (restaurant.page_accueil === 'carte' && !(await searchParams).menu) redirect(`/${resto}/carte`);
   const plats = await getPlats(resto);
   const [brut, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|nous vous aidons à choisir votre vin`).split('|');
   // Typographie française : espace insécable avant « ! ? : ; » (jamais seuls en début de ligne).

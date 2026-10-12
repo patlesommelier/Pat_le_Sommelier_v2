@@ -16,6 +16,8 @@ export interface Restaurant {
   logo_fonce_ratio?: number | null;
   /** Logo choisi pour l'app : 'clair' ou 'fonce' ; null = automatique. */
   logo_choix?: string | null;
+  /** Page d'arrivée de l'app : 'menu' (avec le sommelier) ou 'carte' (carte des vins). */
+  page_accueil?: string;
 }
 
 export interface Plat {

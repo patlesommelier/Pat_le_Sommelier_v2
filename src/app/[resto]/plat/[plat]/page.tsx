@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { appOuverte } from '@/lib/ouverture';
 import { notFound } from 'next/navigation';
 import { DemanderAPat } from '@/components/DemanderAPat';
-import { Entete } from '@/components/Entete';
+import { Entete, menuDe } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { getPlat, getPropositions, getRestaurant } from '@/lib/donnees';
 import { euros, lignePrix } from '@/lib/format';
@@ -29,7 +29,7 @@ export default async function Propositions({
 
   return (
     <>
-      <Entete restaurant={restaurant} retour={`/${resto}`} />
+      <Entete restaurant={restaurant} retour={menuDe(restaurant)} />
       <main className="defile">
         <div className="contenu">
           <div className="titre-page">

@@ -44,10 +44,12 @@ async function couleursDePhoto(f: File): Promise<string[]> {
 interface Props {
   action: (f: FormData) => Promise<Retour>;
   nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
+  /** Page d'arrivée de l'app : 'menu' ou 'carte'. */
+  pageAccueil?: string;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, plats }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', plats }: Props) {
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
   const [palette, setPalette] = useState<string[]>([]);
@@ -147,6 +149,14 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <h2>Message d’accueil</h2>
           <div className="champ"><label htmlFor="accroche1">Première ligne</label><input id="accroche1" name="accroche1" value={a1} onChange={(e) => setA1(e.target.value)} maxLength={40} /></div>
           <div className="champ"><label htmlFor="accroche2">Deuxième ligne</label><input id="accroche2" name="accroche2" value={a2} onChange={(e) => setA2(e.target.value)} maxLength={60} /></div>
+        </section>
+        <section className="carte-bo pile">
+          <h2>Page d’arrivée</h2>
+          <span className="discret">Ce que vos clients voient en scannant le QR code.</span>
+          <label className="case"><input type="radio" name="page_accueil" value="menu" defaultChecked={pageAccueil !== 'carte'} />
+            <span><b>Le menu, avec le sommelier</b><small>Le client choisit son plat, Pat lui propose des vins.</small></span></label>
+          <label className="case"><input type="radio" name="page_accueil" value="carte" defaultChecked={pageAccueil === 'carte'} />
+            <span><b>La carte des vins</b><small>Le menu et le sommelier restent accessibles par le bouton « Menu ».</small></span></label>
         </section>
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>
