@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { chercherEtiquettes, deplacerVinCarte, enregistrerOrdreCarte, renommerRubrique } from '../../actions';
+import { chercherEtiquettes, deplacerVinCarte, enregistrerOrdreCarte } from '../../actions';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
@@ -48,7 +48,6 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     <>
       <Entete titre="Carte des vins" texte="Chaque vin est relié à la base de producteurs et de terroirs de Pat. Corrigez un prix, une rupture ou une étiquette : l’app est à jour tout de suite.">
         <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
-        {!special && <Link href={`/admin/${resto}/carte/organiser?c=${c}`} className="btn sec">Glisser-déposer · nouvelle sous-catégorie</Link>}
         <BoutonCarteImprimee resto={resto} />
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         {wineLabs && (
@@ -88,18 +87,10 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   : parRubrique(affiches)).map((r, ri, toutes) => ({
                 cle: `${ri}:${r.nom}`,
                 nom: r.nom,
+                // Catégorie spéciale : titre fixe (la couleur) ; sinon titre modifiable par le composant.
                 entete: special ? (
                   <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
-                ) : (
-                  <td colSpan={8}>
-                    <form action={renommerRubrique.bind(null, resto, c, r.nom)} style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
-                      <input name="rubrique" defaultValue={r.nom} placeholder="Sans titre (aucune sous-catégorie affichée)" aria-label="Nom de la sous-catégorie" maxLength={80}
-                        style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }} />
-                      <button className="btn fantome petit">Renommer</button>
-                      <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span>
-                    </form>
-                  </td>
-                ),
+                ) : undefined,
                 vins: r.groupes.map(({ principal: v, tous, contenances, prix }, gi) => {
                   const premier = ri === 0 && gi === 0;
                   const dernier = ri === toutes.length - 1 && gi === r.groupes.length - 1;

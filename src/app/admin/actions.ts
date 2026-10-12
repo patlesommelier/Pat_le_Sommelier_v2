@@ -690,21 +690,6 @@ async function planActuel(resto: string, couleur: string): Promise<PlanCarte> {
   return parRubrique(groupes).map((r) => ({ rubrique: r.nom, vins: r.groupes.map((g) => g.tous.map((x) => x.id)) }));
 }
 
-/** Page « Organiser » (glisser-déposer) : enregistre tout le plan d'une couleur. */
-export async function organiserCarte(resto: string, couleur: string, f: FormData) {
-  await exigerAcces(resto);
-  const page = `/admin/${resto}/carte/organiser`;
-  let plan: PlanCarte;
-  try {
-    plan = JSON.parse(String(f.get('plan') ?? '[]'));
-    if (!Array.isArray(plan)) throw new Error();
-  } catch {
-    redirect(avec(page, { c: couleur, erreur: 'Organisation illisible : rien n’a été enregistré.' }));
-  }
-  await appliquerPlan(resto, couleur, plan);
-  redirect(avec(page, { c: couleur, ok: 'Organisation enregistrée : l’app de vos clients est à jour.' }));
-}
-
 /** Carte des vins (glisser-déposer d'une ligne) : enregistre l'ordre d'une couleur sans changer de page. */
 export async function enregistrerOrdreCarte(resto: string, couleur: string, plan: PlanCarte): Promise<{ ok: boolean }> {
   await exigerAcces(resto);
@@ -732,17 +717,6 @@ export async function deplacerVinCarte(resto: string, couleur: string, vinId: st
     await appliquerPlan(resto, couleur, plan);
   }
   redirect(avec(`/admin/${resto}/carte`, { c: couleur, vin: vinId, ok: 'Vin déplacé.' })); // la ligne reste à l'écran
-}
-
-/** Carte des vins : renommer une sous-catégorie (vide : les vins s'affichent sans titre au-dessus). */
-export async function renommerRubrique(resto: string, couleur: string, ancien: string, f: FormData) {
-  await exigerAcces(resto);
-  const nom = (txt(f, 'rubrique') ?? '').replace(/\s+/g, ' ').trim().slice(0, 80);
-  await requete(`update vin_carte set section = $4 where restaurant_id = $1 and couleur::text = $2 and coalesce(section, '') = $3`,
-    [resto, couleur, ancien, nom || null]);
-  revalidatePath(`/admin/${resto}/carte`, 'layout');
-  revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte`, { c: couleur, ok: nom ? `Sous-catégorie renommée « ${nom} ».` : 'Titre de sous-catégorie retiré.' }));
 }
 
 export async function supprimerVin(resto: string, vinId: string) {
