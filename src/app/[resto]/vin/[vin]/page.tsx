@@ -1,5 +1,5 @@
 import { notFound } from 'next/navigation';
-import { Feuille, Grappe } from '@/components/Pictos';
+import { Feuille, Grappe, PictosVin } from '@/components/Pictos';
 import { appOuverte } from '@/lib/ouverture';
 import { Entete } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
@@ -40,7 +40,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
 
           <div className="fiche-entete">
             {/* Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages. */}
-            <h1>{titre.titre}</h1>
+            <h1>{titre.titre}<PictosVin coeur={vin.coup_de_coeur} bio={vin.bio} nature={vin.nature} /></h1>
             <div className="filet" />
             {titre.sousTitre && <div className="lieu">{titre.sousTitre}</div>}
           </div>

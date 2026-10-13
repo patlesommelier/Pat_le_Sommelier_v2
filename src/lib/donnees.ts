@@ -1,6 +1,7 @@
 import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
+import { SQL_PICTOS } from './pictos-sql';
 import { avecAppreciation } from './appreciation';
 import { calculerChoixTable, choixPourPlusieursPlats, type DemandeTable } from './plusieurs-plats';
 import { extraitFiche } from './fiche-producteur';
@@ -43,17 +44,16 @@ const SELECT_VIN = `
          v.prix::float as prix, v.prix_verre::float as prix_verre, v.cepages, v.profil_degustation,
          v.descriptif, v.vin_texte, v.appellation_texte, v.nom_vin,
          -- Texte montré au client : celui du restaurant, sinon la présentation de la base, sinon celle écrite par Pat
-         coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte) as presentation, v.resume_court, v.etiquette_url, v.coup_de_coeur,
+         coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte) as presentation, v.resume_court, v.etiquette_url,
          -- notes de la base de Pat : celle du vin, sinon celle du producteur ; celle du terroir
          v.ordre, coalesce((select c.ranking_pat from cuvee c where c.id = v.cuvee_id), p.ranking_pat) as ranking_producteur, coalesce(t.ranking_pat, v.ranking_terroir) as ranking_terroir, v.pays,
          -- Nom saisi dans le back-office prioritaire sur celui de la base de Pat
          case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else p.nom end as producteur_nom,
          p.avis_pat as producteur_avis_pat, p.ranking_pat as producteur_ranking,
          t.nom as appellation_nom,
-         -- nature, bio : base de Pat
-         coalesce(cu.nature, false) as nature, coalesce(cu.bio, false) as bio
+         -- coup de cœur, nature, bio : pour le vin entier (toutes contenances)
+         ${SQL_PICTOS('v')}
     from vin_carte v
-    left join cuvee cu on cu.id = v.cuvee_id
     left join producteur p on p.id = v.producteur_id
     left join terroir t on t.id = v.appellation_id`;
 

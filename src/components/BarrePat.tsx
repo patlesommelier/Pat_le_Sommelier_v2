@@ -1,5 +1,6 @@
 'use client';
 
+import { PictosVin } from './Pictos';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
@@ -12,7 +13,7 @@ interface Message {
   content: string;
   /** Vins proposés : étiquette et texte complet de l'accord (ou présentation du vin), affichés sous la réponse. */
   vins?: { id: string; plat: string | null; libelle: string; producteur: string | null; millesime: string | null; prix: number | null;
-    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[]; titre?: string; sousTitre?: string }[];
+    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[]; titre?: string; sousTitre?: string; coup_de_coeur?: boolean; nature?: boolean; bio?: boolean }[];
   erreur?: boolean;
 }
 
@@ -97,7 +98,7 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                         <span className="fiche-chat-haut">
                           <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={72} hauteur={96} />
                           <span className="fiche-chat-nom">
-                            <strong>{v.titre ?? v.libelle}</strong>
+                            <strong>{v.titre ?? v.libelle}<PictosVin coeur={v.coup_de_coeur} bio={v.bio} nature={v.nature} /></strong>
                             {v.titre !== undefined ? v.sousTitre && <span>{v.sousTitre}</span>
                               : (v.producteur || v.millesime) && <span>{[v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, v.millesime].filter(Boolean).join(' · ')}</span>}
                             {v.tarifs?.length
