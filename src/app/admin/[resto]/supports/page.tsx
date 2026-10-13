@@ -52,7 +52,7 @@ export default async function Supports({ params, searchParams }: { params: Promi
                   <article key={v.id} id={v.id} className="carte-bo pile" style={{ gap: 8, padding: '14px 18px', scrollMarginTop: 16,
                     outline: sp.ok === v.id || sp.nouvelle === v.id ? '2px solid var(--encre)' : undefined }}>
                     <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', gap: 8, alignItems: 'baseline' }}>
-                      <b>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}{v.format && v.format !== '75 cl' ? <span className="discret" style={{ fontWeight: 400 }}> · {v.format}</span> : null}</b>
+                      <b>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}{v.format && v.format !== '75 cl' ? <span className="discret" style={{ fontWeight: 700 }}> · {v.format}</span> : null}</b>
                       <span className="petit discret">{v.presentation_carte_perso ? 'Votre texte' : v.presentation_carte ? 'Texte de Pat' : 'Pas encore écrite'}</span>
                     </div>
                     <FormulaireAdmin action={enregistrerPresentation.bind(null, resto, v.id)} className="pile" style={{ gap: 8 }}>

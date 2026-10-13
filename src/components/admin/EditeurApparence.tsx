@@ -139,7 +139,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
                   <div role="group" aria-label="Couleurs proposées" style={{ display: 'flex', flexWrap: 'wrap', gap: 10 }}>
                     {palette.map((p) => (
                       <button key={p} type="button" aria-label={`Couleur ${p}`} aria-pressed={p === couleur} onClick={() => choisir(p)}
-                        style={{ width: 56, height: 56, borderRadius: 14, background: p, cursor: 'pointer', border: p === couleur ? '3px solid #24151A' : '1px solid #D9CFD1', boxShadow: p === couleur ? 'inset 0 0 0 3px #FFF' : 'none' }} />
+                        style={{ width: 56, height: 56, borderRadius: 14, background: p, cursor: 'pointer', border: p === couleur ? '3px solid #241F20' : '1px solid #AFB0AE', boxShadow: p === couleur ? 'inset 0 0 0 3px #EFEBE9' : 'none' }} />
                     ))}
                   </div>
                 </div>
@@ -147,7 +147,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
               <div className="champ"><label htmlFor="hex">Ou votre couleur (code)</label>
                 <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
                   <input id="hex" value={saisie} onChange={(e) => { const v = e.target.value.toUpperCase(); setSaisie(v); if (valide(v)) setCouleur(v); }} style={{ width: 130, fontFamily: 'monospace' }} />
-                  <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#FFF' }} />
+                  <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#EFEBE9' }} />
                 </span>
               </div>
               {(apercuLogo || apercuLogoFonce) && (
@@ -159,12 +159,12 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
             </div>
           </div>
           <div style={{ borderTop: '1px solid var(--ligne)', paddingTop: 14, display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center' }}>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: couleur, border: '1px solid #D9CFD1' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur principale</span><br /><b style={{ fontFamily: 'monospace' }}>{couleur}</b></span></span>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: claire(couleur), border: '1px solid #D9CFD1' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur claire (barre de Pat), calculée</span><br /><b style={{ fontFamily: 'monospace' }}>{claire(couleur)}</b></span></span>
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: couleur, border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur principale</span><br /><b style={{ fontFamily: 'monospace' }}>{couleur}</b></span></span>
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: claire(couleur), border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur claire (barre de Pat), calculée</span><br /><b style={{ fontFamily: 'monospace' }}>{claire(couleur)}</b></span></span>
           </div>
           {contraste >= 4.5 && <span style={{ color: 'var(--vert)', fontSize: 14 }}>Texte blanc bien lisible sur cette couleur (contraste {contraste.toFixed(1).replace('.', ',')} : 1).</span>}
           {contraste >= 3 && contraste < 4.5 && <span style={{ color: 'var(--ocre)', fontSize: 14 }}><b>Lisibilité limitée</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : les petits textes blancs fatiguent. Une teinte un peu plus foncée serait plus confortable.</span>}
-          {fondClair && <span style={{ color: '#8A1C1C', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; choisissez plutôt votre logo foncé.</span>}
+          {fondClair && <span style={{ color: '#680021', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; choisissez plutôt votre logo foncé.</span>}
         </section>
         <section className="carte-bo pile">
           <div><h2>Logo</h2><p className="sous">Vous pouvez déposer deux versions de votre logo (PNG ou SVG à fond transparent), puis choisir celle qui s’affiche en haut de l’app. Elles sont montrées ici sur la couleur de votre app.</p></div>
@@ -209,7 +209,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
       </div>
       <aside className="etroit" style={{ alignItems: 'center' }}>
         <span className="surtitre">Aperçu de votre app</span>
-        <div style={{ width: 340, maxWidth: '100%', height: 640, boxSizing: 'border-box', border: '10px solid #24151A', borderRadius: 42, overflow: 'hidden', background: '#FFF', display: 'flex', flexDirection: 'column', fontFamily: 'Lato, sans-serif', color: '#1A1A1A' }}>
+        <div className="apercu-app" style={{ width: 340, maxWidth: '100%', height: 640, boxSizing: 'border-box', border: '10px solid #241F20', borderRadius: 42, overflow: 'hidden', background: '#FFF', display: 'flex', flexDirection: 'column', fontFamily: 'Lato, sans-serif', color: '#1A1A1A' }}>
           <div style={{ background: couleur, color: texte, padding: '14px 16px 22px', display: 'flex', flexDirection: 'column', gap: 10 }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}

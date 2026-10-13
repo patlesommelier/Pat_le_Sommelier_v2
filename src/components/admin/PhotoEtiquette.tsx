@@ -25,16 +25,16 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
         ? <button type="button" onClick={() => setGrand(true)} aria-label={`Voir en grand : ${alt.toLowerCase()}`} title="Voir en grand"
             style={{ padding: 0, border: 0, background: 'none', cursor: 'zoom-in' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt={alt} style={{ display: 'block', width: '100%', height: hauteur, objectFit: 'contain', background: '#FFF', borderRadius: 10, border: '1px solid #EEE6E8' }} />
+            <img src={image} alt={alt} style={{ display: 'block', width: '100%', height: hauteur, objectFit: 'contain', background: '#EFEBE9', borderRadius: 10, border: '1px solid #AFB0AE' }} />
           </button>
         : <span className="vignette vide" style={{ width: '100%', height: Math.min(200, hauteur) }} aria-hidden="true"><Icone nom="bottle" taille={36} /></span>}
       {grand && image && (
         <div role="dialog" aria-modal="true" aria-label={alt} onClick={() => setGrand(false)}
-          style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(20, 8, 12, 0.82)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24, cursor: 'zoom-out' }}>
+          style={{ position: 'fixed', inset: 0, zIndex: 60, background: 'rgba(36, 31, 32, 0.9)', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 24, cursor: 'zoom-out' }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={image} alt={alt} style={{ maxWidth: 'min(900px, 100%)', maxHeight: '100%', objectFit: 'contain', background: '#FFF', borderRadius: 8, boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
+          <img src={image} alt={alt} style={{ maxWidth: 'min(900px, 100%)', maxHeight: '100%', objectFit: 'contain', background: '#EFEBE9', borderRadius: 8, boxShadow: '0 20px 60px rgba(0,0,0,0.5)' }} />
           <button type="button" onClick={() => setGrand(false)} aria-label="Fermer"
-            style={{ position: 'absolute', top: 16, right: 20, border: 0, background: 'none', color: '#FFF', fontSize: 34, lineHeight: 1, cursor: 'pointer' }}>×</button>
+            style={{ position: 'absolute', top: 16, right: 20, border: 0, background: 'none', color: '#EFEBE9', fontSize: 34, lineHeight: 1, cursor: 'pointer' }}>×</button>
         </div>
       )}
       <div className="champ" style={{ minWidth: 0, alignItems: 'flex-start' }}>

@@ -30,7 +30,7 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
     <div className="pile" style={{ gap: 24 }}>
       <header className="pile" style={{ gap: 8, maxWidth: 760 }}>
         <span className="etat ok" style={{ alignSelf: 'flex-start' }}>Compte créé</span>
-        <h1 style={{ fontSize: 'clamp(30px, 3.2vw, 40px)', fontWeight: 800, letterSpacing: -0.8 }}>Bienvenue</h1>
+        <h1 style={{ fontSize: 'clamp(30px, 3.2vw, 40px)', fontWeight: 700, letterSpacing: -0.8 }}>Bienvenue</h1>
         <p className="discret" style={{ margin: 0, fontSize: 16, lineHeight: 1.55 }}>
           Votre sommelier est en route. Votre QR code est déjà prêt : posez-le sur vos tables, il fonctionnera dès que Pat aura fini de préparer vos accords.
         </p>
@@ -44,7 +44,7 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
             : <PatAttente taille={120} />}
           <div className="pile" style={{ flex: '1 1 300px', gap: 12 }}>
             <span className="surtitre">{fini ? 'Terminé' : 'En cours'}</span>
-            {fini ? <h2 id="h-prep" style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', fontWeight: 800 }}>Vos accords sont prêts</h2>
+            {fini ? <h2 id="h-prep" style={{ fontSize: 'clamp(24px, 2.4vw, 30px)', fontWeight: 700 }}>Vos accords sont prêts</h2>
               : <h2 id="h-prep" style={{ fontSize: 'clamp(17px, 1.6vw, 20px)', fontWeight: 700, lineHeight: 1.4 }}><AstucesPat /></h2>}
             <div role="progressbar" aria-label="Préparation des accords" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct}
               style={{ height: 10, borderRadius: 5, background: 'var(--rose)', overflow: 'hidden' }}>

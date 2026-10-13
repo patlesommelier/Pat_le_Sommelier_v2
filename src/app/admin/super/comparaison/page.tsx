@@ -124,7 +124,7 @@ function Resultat({ r, modeles }: { r: ResultatComparaison; modeles: string[] })
                 const ls = modeles.map((m) => ligne(m, v));
                 const diff = new Set(ls.map((l) => l?.note)).size > 1;
                 return (
-                  <tr key={v} style={diff ? { background: '#FFF4D6' } : undefined}>
+                  <tr key={v} style={diff ? { background: '#EB9D92' } : undefined}>
                     <td><b>{ls.find(Boolean)?.libelle}</b></td>
                     {ls.map((l, i) => <td key={i} className="petit" style={{ lineHeight: 1.45 }}>{l ? <><b style={{ fontSize: 15 }}>{l.note}/5</b> · {l.commentaire}</> : '—'}</td>)}
                   </tr>

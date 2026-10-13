@@ -56,7 +56,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
             {restos.map((r) => (
               <tr key={r.id}>
                 <td><div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                  <span style={{ width: 30, height: 30, borderRadius: 8, background: r.couleur, color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700 }}>{r.nom.slice(0, 1)}</span>
+                  <span style={{ width: 30, height: 30, borderRadius: 8, background: r.couleur, color: '#EFEBE9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700 }}>{r.nom.slice(0, 1)}</span>
                   <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div>
                     <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 6 }}>
                       <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>

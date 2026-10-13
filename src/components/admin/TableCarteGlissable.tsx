@@ -79,7 +79,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
 
   const survol = (id: string) => (e: React.DragEvent) => { if (!glisse) return; e.preventDefault(); if (cible !== id) setCible(id); };
   const fin = () => { setGlisse(null); setCible(null); };
-  const trait = (id: string) => (cible === id && glisse ? { boxShadow: 'inset 0 3px 0 var(--bordeaux, #6b0f24)' } : undefined);
+  const trait = (id: string) => (cible === id && glisse ? { boxShadow: 'inset 0 3px 0 var(--encre)' } : undefined);
 
   return (
     <>
@@ -96,11 +96,11 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
               <td colSpan={8}>
                 <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                   <span draggable={!fixe} onDragStart={(e) => { setGlisse({ type: 'rubrique', cle: r.cle }); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', ''); }} onDragEnd={fin}
-                    title="Glissez pour déplacer la sous-catégorie avec ses vins" aria-hidden="true" style={{ cursor: 'grab', color: '#B5ADA8', fontSize: 18, padding: '0 4px' }}>⋮⋮</span>
+                    title="Glissez pour déplacer la sous-catégorie avec ses vins" aria-hidden="true" style={{ cursor: 'grab', color: '#AFB0AE', fontSize: 18, padding: '0 4px' }}>⋮⋮</span>
                   <input key={r.nom} defaultValue={r.nom} autoFocus={nouvelle === r.cle} aria-label="Nom de la sous-catégorie" maxLength={80}
                     placeholder={r.vins.length ? 'Sans titre (aucune sous-catégorie affichée)' : 'Nom de la nouvelle sous-catégorie'}
                     onBlur={(e) => renommer(ri, e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); e.currentTarget.blur(); } }}
-                    style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }} />
+                    style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }} />
                   <button type="button" className="btn fantome petit" disabled={ri === 0 || enCours} onClick={() => deplacerRubrique(ri, ri - 1)} aria-label="Monter la sous-catégorie">↑</button>
                   <button type="button" className="btn fantome petit" disabled={ri === rubriques.length - 1 || enCours} onClick={() => deplacerRubrique(ri, ri + 1)} aria-label="Descendre la sous-catégorie">↓</button>
                   <span className="petit discret">{r.vins.length ? `${r.vins.length} vin${r.vins.length > 1 ? 's' : ''}` : 'Vide : déposez-y un vin pour la créer'}</span>
@@ -111,7 +111,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
           </tr>
           {!r.vins.length && !fixe && (
             <tr onDragOver={survol(`r:${r.cle}`)} onDrop={(e) => { e.preventDefault(); if (glisse?.type === 'vin') deposerVin(glisse.cle, ri, null); fin(); }}>
-              <td colSpan={8} style={{ padding: 18, textAlign: 'center', border: '2px dashed var(--ligne, #E0D8D3)', color: '#9A8F8A', ...trait(`r:${r.cle}`) }}>
+              <td colSpan={8} style={{ padding: 18, textAlign: 'center', border: '2px dashed var(--ligne, #AFB0AE)', color: '#241F20', ...trait(`r:${r.cle}`) }}>
                 Déposez un vin ici, ou utilisez les flèches ↓ d’un vin de la sous-catégorie du dessus.
               </td>
             </tr>

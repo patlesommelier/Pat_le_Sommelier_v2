@@ -30,13 +30,13 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
         <img src="/pat/pat-illustration-bordeaux.svg" alt="" width={128} height={132} />
         <div className="pile" style={{ flex: '1 1 380px', gap: 12 }}>
           <span className="surtitre">{restantes ? 'Prochaine étape' : 'Et maintenant'}</span>
-          <h2 style={{ fontSize: 28, fontWeight: 800 }}>{suivante.libelle}</h2>
+          <h2 style={{ fontSize: 28, fontWeight: 700 }}>{suivante.libelle}</h2>
           <span className="discret" style={{ fontSize: 15.5 }}>{suivante.ligne1} · {suivante.ligne2}</span>
           <div className="ligne-actions"><Link href={suivante.href} className="btn"><Icone nom={suivante.icone} taille={18} />{suivante.action}</Link></div>
         </div>
         {qr && (
           <Link href={`/admin/${resto}/acces`} aria-label="QR code de l’app : voir les accès" style={{ marginLeft: 'auto' }}>
-            <div role="img" aria-label="QR code de l’app" style={{ width: 160, height: 160, padding: 8, border: '1.5px solid var(--encre)', borderRadius: 14, background: '#FFF' }}
+            <div role="img" aria-label="QR code de l’app" style={{ width: 160, height: 160, padding: 8, border: '1.5px solid var(--encre)', borderRadius: 14, background: '#EFEBE9' }}
               dangerouslySetInnerHTML={{ __html: qr }} />
           </Link>
         )}

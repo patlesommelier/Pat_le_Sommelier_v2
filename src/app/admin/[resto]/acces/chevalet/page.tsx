@@ -29,12 +29,12 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
   const svg = await qrSvg(await adresseApp(resto));
 
   const qr = (taille: string) => (
-    <div style={{ background: '#FFF', borderRadius: '3mm', padding: '2mm', border: `0.5mm solid ${BORDEAUX}`, lineHeight: 0 }}>
+    <div style={{ background: '#EFEBE9', borderRadius: '3mm', padding: '2mm', border: `0.5mm solid ${BORDEAUX}`, lineHeight: 0 }}>
       <div style={{ width: taille, height: taille }} dangerouslySetInnerHTML={{ __html: svg }} />
     </div>
   );
-  const scanner = <span style={{ fontSize: '3.2mm', color: BORDEAUX, fontWeight: 600, textAlign: 'center' }}>Scannez : je vous conseille un vin de la carte.</span>;
-  const chez = <span style={{ fontSize: '2.8mm', color: '#6B6062' }}>chez {r.nom}</span>;
+  const scanner = <span style={{ fontSize: '3.2mm', color: BORDEAUX, fontWeight: 700, textAlign: 'center' }}>Scannez : je vous conseille un vin de la carte.</span>;
+  const chez = <span style={{ fontSize: '2.8mm', color: '#241F20' }}>chez {r.nom}</span>;
   // eslint-disable-next-line @next/next/no-img-element
   const pat = (h: string) => <img src="/pat/pat-illustration-bordeaux.svg" alt="" style={{ height: h }} />;
 
@@ -76,27 +76,27 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     </>),
   };
   const carte = (
-    <div style={{ width: '105mm', height: '148mm', boxSizing: 'border-box', border: '0.2mm dashed #CCC', padding: '6mm', display: 'flex', flexDirection: 'column', gap: '3mm',
-      background: '#FFF', breakInside: 'avoid', fontFamily: 'Outfit, sans-serif' }}>
+    <div style={{ width: '105mm', height: '148mm', boxSizing: 'border-box', border: '0.2mm dashed #AFB0AE', padding: '6mm', display: 'flex', flexDirection: 'column', gap: '3mm',
+      background: '#EFEBE9', breakInside: 'avoid', fontFamily: 'Outfit, sans-serif' }}>
       {contenus[modele]}
     </div>
   );
   return (
-    <div style={{ padding: 24, background: '#F7F4F2', minHeight: '100vh', fontFamily: 'Outfit, sans-serif' }}>
+    <div style={{ padding: 24, background: '#EFEBE9', minHeight: '100vh', fontFamily: 'Outfit, sans-serif' }}>
       <div className="pas-imprime" style={{ display: 'flex', gap: 12, alignItems: 'center', flexWrap: 'wrap', marginBottom: 20 }}>
         <Link href={`/admin/${resto}/acces`}>← Retour</Link>
         <nav aria-label="Modèle de chevalet" style={{ display: 'flex', gap: 8 }}>
           {MODELES.map((m) => (
             <Link key={m.n} href={`/admin/${resto}/acces/chevalet?modele=${m.n}`} title={m.aide} aria-current={modele === m.n ? 'true' : undefined}
               style={{ padding: '8px 14px', borderRadius: 999, fontWeight: 700, textDecoration: 'none', border: `1.5px solid ${BORDEAUX}`,
-                background: modele === m.n ? BORDEAUX : '#FFF', color: modele === m.n ? '#FFF' : BORDEAUX }}>{m.titre}</Link>
+                background: modele === m.n ? BORDEAUX : '#EFEBE9', color: modele === m.n ? '#EFEBE9' : BORDEAUX }}>{m.titre}</Link>
           ))}
         </nav>
         <BoutonImprimer />
-        <span style={{ color: '#6B6062', fontSize: 14 }}>Quatre chevalets A6 par feuille A4 : découpez le long des pointillés.</span>
+        <span style={{ color: '#241F20', fontSize: 14 }}>Quatre chevalets A6 par feuille A4 : découpez le long des pointillés.</span>
       </div>
       <style>{`@page { size: A4; margin: 0 } @media print { body { margin: 0 } .pas-imprime { display: none !important } }`}</style>
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 105mm)', gap: 0, width: '210mm', background: '#FFF' }}>
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 105mm)', gap: 0, width: '210mm', background: '#EFEBE9' }}>
         {carte}{carte}{carte}{carte}
       </div>
     </div>

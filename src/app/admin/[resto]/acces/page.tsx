@@ -54,7 +54,7 @@ export default async function Acces({ params, searchParams }: { params: Promise<
           <section className="carte-bo sticker pile">
             <div><h2>QR code de votre carte</h2><p className="sous">Il ouvre Pat le sommelier à vos couleurs, sans application à installer. Il ne change pas quand vous modifiez votre menu ou votre carte.</p></div>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 24, alignItems: 'center' }}>
-              <div role="img" aria-label="QR code de la carte" style={{ width: 200, height: 200, padding: 10, border: '1.5px solid var(--encre)', borderRadius: 14, background: '#FFF' }} dangerouslySetInnerHTML={{ __html: svg }} />
+              <div role="img" aria-label="QR code de la carte" style={{ width: 200, height: 200, padding: 10, border: '1.5px solid var(--encre)', borderRadius: 14, background: '#EFEBE9' }} dangerouslySetInnerHTML={{ __html: svg }} />
               <div className="pile" style={{ flex: '1 1 240px', gap: 12 }}>
                 <CopierLien url={url} />
                 <div className="ligne-actions">

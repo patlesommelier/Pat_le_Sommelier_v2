@@ -57,7 +57,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
                 const mod = d.champs.filter((c) => R[c.cle] !== PAT[c.cle]);
                 return (
                   <div key={d.n} className="carte-bo" style={{ padding: '18px 20px', display: 'flex', flexWrap: 'wrap', gap: '16px 24px', alignItems: 'center' }}>
-                    <span style={{ width: 40, height: 40, borderRadius: 20, border: '1.5px solid var(--encre)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--titre)', fontWeight: 800, fontSize: 13, flexShrink: 0 }}>{d.n}</span>
+                    <span style={{ width: 40, height: 40, borderRadius: 20, border: '1.5px solid var(--encre)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--titre)', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{d.n}</span>
                     <div style={{ flex: '1 1 300px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
                       <span style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}><b style={{ fontFamily: 'var(--titre)', fontSize: 17 }}>{d.titre}</b>{mod.length ? <Etat type="modifie">Modifié</Etat> : <Etat type="defaut">Par défaut</Etat>}</span>
                       <span className="discret">{d.texte}</span>

@@ -1,79 +1,79 @@
 /* Pat le sommelier — page d'accueil en trois niveaux (+ fonctionnalités).
    Identité 2026 : bordeaux #680021, rouge #FF0D05, rose #EB9D92, kaki #BDB074, crème #EFEBE9, noir #241F20 ; police Outfit. */
-.page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; color: #241F20; }
-.bordeaux { position: relative; overflow: hidden; color: #FFF;
+.page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; }
+.page * { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700 !important; } /* identité : Outfit Bold uniquement */
+.bordeaux { position: relative; overflow: hidden; color: #EFEBE9;
   background: #680021; }
-.halo { position: absolute; right: -80px; top: 60px; width: 760px; height: 760px; border-radius: 50%; pointer-events: none;
-  background: radial-gradient(circle, rgba(255,13,5,0.16) 0%, rgba(255,13,5,0) 64%); }
+.halo { display: none; }
 .creme { background: #EFEBE9; }
 .titreSection { margin: 0; text-align: center; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px);
   font-weight: 700; letter-spacing: -0.8px; color: #680021; }
 
 /* Niveau 1 : présentation */
 .entete { position: relative; z-index: 3; height: 76px; display: flex; align-items: center; justify-content: space-between; padding: 0 64px; }
-.marque { display: flex; align-items: center; gap: 12px; color: #FFF; text-decoration: none; }
+.marque { display: flex; align-items: center; gap: 12px; color: #EFEBE9; text-decoration: none; }
 .marque img { height: 44px; width: auto; display: block; }
 .connexion { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; font-weight: 700; color: #EB9D92; }
 .intro { position: relative; display: flex; align-items: center; gap: 56px; padding: 40px 80px 80px; }
 .introTexte { flex: 1; max-width: 640px; display: flex; flex-direction: column; gap: 22px; }
 .titre { margin: 0; color: #FF0D05; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(36px, 3.6vw, 52px); font-weight: 700;
   letter-spacing: -1px; line-height: 1.07; text-wrap: balance; }
-.texte { margin: 0; max-width: 600px; font-size: 18px; line-height: 1.55; color: rgba(255,255,255,0.86); }
+.texte { margin: 0; max-width: 600px; font-size: 18px; line-height: 1.55; color: #EFEBE9; }
 .demo { flex: 1; display: flex; justify-content: center; align-items: flex-end; gap: 32px; } /* bas du QR = bas du téléphone */
-.qr { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 13px 13px 11px; border-radius: 17px; background: #FFF;
-  box-shadow: 0 22px 40px -22px rgba(0,0,0,0.7); color: #241F20; font-size: 13.5px; font-weight: 700;
+.qr { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 13px 13px 11px; border-radius: 17px; background: #EFEBE9;
+  box-shadow: 0 22px 40px -22px rgba(36,31,32,0.7); color: #241F20; font-size: 13.5px; font-weight: 700;
   margin-bottom: 8px; } /* bas du QR = bas de l'écran blanc (cadre noir du téléphone : 11 px × 0,75) */
 .qr span { max-width: 130px; text-align: center; line-height: 1.35; }
 
 /* Niveau 2 : ce que Pat vous apporte */
 .avantages { padding: 72px 80px 84px; display: flex; flex-direction: column; align-items: center; gap: 16px; }
-.chapeau { margin: 0 0 20px; max-width: 760px; text-align: center; font-size: 18px; line-height: 1.55; color: #66565B; }
+.chapeau { margin: 0 0 20px; max-width: 760px; text-align: center; font-size: 18px; line-height: 1.55; color: #241F20; }
 .cartes { margin: 0; padding: 0; width: 100%; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-.cartes li { box-sizing: border-box; padding: 28px 26px; border-radius: 18px; background: #FFF; border: 1px solid #E2DAD6; display: flex; flex-direction: column; gap: 12px; }
-.cartes .icone { width: 52px; height: 52px; border-radius: 14px; background: #FBEAE7; color: #680021; display: flex; align-items: center; justify-content: center; }
+.cartes li { box-sizing: border-box; padding: 28px 26px; border-radius: 18px; background: #EFEBE9; border: 1px solid #AFB0AE; display: flex; flex-direction: column; gap: 12px; }
+.cartes .icone { width: 52px; height: 52px; border-radius: 14px; background: #EB9D92; color: #680021; display: flex; align-items: center; justify-content: center; }
 .cartes h3, .fonctions h3 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 20px; font-weight: 700; letter-spacing: -0.3px; }
-.cartes p, .fonctions p { margin: 0; font-size: 16px; line-height: 1.55; color: #66565B; }
+.cartes p, .fonctions p { margin: 0; font-size: 16px; line-height: 1.55; color: #241F20; }
 
 /* Niveau 3 : activation */
 .activation { position: relative; padding: 64px 80px 84px; display: flex; justify-content: center; }
 .activation::before { content: ''; position: absolute; left: 50%; top: 40%; width: 900px; height: 600px; transform: translate(-50%, -50%); border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,13,5,0.14) 0%, rgba(255,13,5,0) 65%); pointer-events: none; }
+  display: none; }
 .cadre { position: relative; width: min(820px, 100%); padding-top: 66px; color: #241F20; }
 .medaillon { position: absolute; top: 0; left: -16px; z-index: 2; width: 124px; height: 124px; border-radius: 50%;
-  background: #FF0D05; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(0,0,0,0.55);
+  background: #FF0D05; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
   display: flex; align-items: center; justify-content: center; }
 .carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
   background: #BDB074;
-  box-shadow: 0 30px 60px -28px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.35); display: flex; flex-direction: column; gap: 22px; }
+  box-shadow: 0 30px 60px -28px rgba(36,31,32,0.6); display: flex; flex-direction: column; gap: 22px; }
 .carteTitre { padding-left: 110px; min-height: 58px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
 .carteTitre h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
-.carteTitre p { margin: 0; font-size: 16px; color: #3D3518; }
+.carteTitre p { margin: 0; font-size: 16px; color: #241F20; }
 .depot { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 92px; padding: 14px 20px; box-sizing: border-box;
-  border: 2px dashed #680021; border-radius: 16px; background: #F5F1E2; cursor: pointer; font-size: 17px; font-weight: 700; }
-.depot[data-survol='true'] { border-color: #FF0D05; background: #FFF; }
+  border: 2px dashed #680021; border-radius: 16px; background: #EFEBE9; cursor: pointer; font-size: 17px; font-weight: 700; }
+.depot[data-survol='true'] { border-color: #FF0D05; background: #EFEBE9; }
 .depot:focus-within { outline: 3px solid #680021; outline-offset: 2px; }
-.icone { width: 48px; height: 48px; border-radius: 13px; background: #FFF; border: 1px solid #D9CF9C; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #F5F1E2; font-size: 17px; font-weight: 700; }
-.roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #D9CF9C; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
+.icone { width: 48px; height: 48px; border-radius: 13px; background: #EFEBE9; border: 1px solid #BDB074; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; font-size: 17px; font-weight: 700; }
+.roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #BDB074; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
 @keyframes tourne { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .roue { animation-duration: 3s; } }
-.trouve { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #FFF; border: 1.5px solid #B9D8C3; }
-.coche { width: 48px; height: 48px; border-radius: 24px; background: #1E5B34; color: #FFF; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.nombre { flex: 1; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; color: #1E5B34; }
+.trouve { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; border: 1.5px solid #BDB074; }
+.coche { width: 48px; height: 48px; border-radius: 24px; background: #680021; color: #EFEBE9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.nombre { flex: 1; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; color: #680021; }
 .lien { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; border: 0; background: none; font: 700 15.5px Outfit, sans-serif; color: #680021; text-decoration: underline; cursor: pointer; }
 .retour { composes: lien; color: #241F20; text-decoration: none; }
 .pied { display: flex; align-items: center; gap: 12px; }
 .bouton { margin-left: auto; display: inline-flex; align-items: center; justify-content: center; min-height: 52px; padding: 12px 32px; border-radius: 999px; border: 0;
-  background: #680021; color: #FFF; font: 700 16px Outfit, sans-serif; cursor: pointer; }
+  background: #680021; color: #EFEBE9; font: 700 16px Outfit, sans-serif; cursor: pointer; }
 .bouton:disabled { opacity: 0.6; cursor: not-allowed; }
-.bouton:focus-visible, .lien:focus-visible { outline: 3px solid #FFF; outline-offset: 2px; box-shadow: 0 0 0 6px #680021; }
-.erreurs { margin: 0; padding: 12px 14px 12px 32px; border-radius: 12px; background: #FDECEC; color: #8A1C1C; font-size: 15px; }
+.bouton:focus-visible, .lien:focus-visible { outline: 3px solid #EFEBE9; outline-offset: 2px; box-shadow: 0 0 0 6px #680021; }
+.erreurs { margin: 0; padding: 12px 14px 12px 32px; border-radius: 12px; background: #EB9D92; color: #680021; font-size: 15px; }
 .champs { display: flex; flex-direction: column; gap: 14px; }
 .ligne { display: flex; gap: 16px; flex-wrap: wrap; }
 .ligne > * { flex: 1 1 240px; }
 .champ { display: flex; flex-direction: column; gap: 6px; }
 .champ label { font-size: 14.5px; font-weight: 700; }
-.champ input { box-sizing: border-box; width: 100%; min-height: 50px; padding: 12px 14px; border: 1.5px solid #D9CF9C; border-radius: 12px; background: #FFF; font: 16px Outfit, sans-serif; color: #241F20; }
+.champ input { box-sizing: border-box; width: 100%; min-height: 50px; padding: 12px 14px; border: 1.5px solid #BDB074; border-radius: 12px; background: #EFEBE9; font: 16px Outfit, sans-serif; color: #241F20; }
 .champ input:focus-visible { outline: 3px solid #680021; outline-offset: 1px; }
 .cgu { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; font-size: 15px; line-height: 1.5; cursor: pointer; }
 .cgu input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: #680021; flex-shrink: 0; }
@@ -83,19 +83,19 @@
 /* Niveau 4 : fonctionnalités */
 .fonctionnalites { padding: 72px 120px 84px; display: flex; flex-direction: column; gap: 28px; }
 .fonctions { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: 1fr 1fr; column-gap: 72px; }
-.fonctions li { display: flex; gap: 20px; padding: 28px 0; border-top: 1px solid #D8D0CC; }
+.fonctions li { display: flex; gap: 20px; padding: 28px 0; border-top: 1px solid #AFB0AE; }
 .fonctions .rond { width: 56px; height: 56px; border-radius: 16px; background: #680021; color: #EB9D92; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .fonctions .corps { display: flex; flex-direction: column; gap: 8px; }
 
 .qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
 .quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FF0D05;
-  box-shadow: 0 30px 60px -30px rgba(0,0,0,0.6); display: flex; align-items: center; justify-content: center; }
+  box-shadow: 0 30px 60px -30px rgba(36,31,32,0.6); display: flex; align-items: center; justify-content: center; }
 .quiMedaillon img { width: 78%; height: auto; }
 .quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
 .quiTexte h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px); font-weight: 700; letter-spacing: -0.8px; }
-.quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: rgba(255,255,255,0.88); }
+.quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: #EFEBE9; }
 
-.piedPage { padding: 26px 64px; background: #241F20; color: rgba(255,255,255,0.7); font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.piedPage { padding: 26px 64px; background: #241F20; color: #EFEBE9; font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .piedPage nav { display: flex; gap: 18px; }
 .piedPage a { color: #EB9D92; }
 
@@ -109,11 +109,11 @@
 }
 @media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { width: 78%; height: auto; } }
 /* Fin de l'inscription : préparation des accords, puis QR code */
-.barre { display: block; height: 10px; border-radius: 5px; background: #E3DCB4; overflow: hidden; }
+.barre { display: block; height: 10px; border-radius: 5px; background: #EFEBE9; overflow: hidden; }
 .barre span { display: block; height: 100%; background: #680021; transition: width .4s; }
-.detail { font-size: 15px; font-weight: 400; color: #4A2A33; }
-.pret { display: flex; align-items: center; gap: 28px; padding: 22px; border-radius: 16px; background: #F5F1E2; }
-.pretQr { flex-shrink: 0; padding: 10px; border-radius: 14px; background: #FFF; border: 1.5px solid #241F20; }
+.detail { font-size: 15px; font-weight: 700; color: #241F20; }
+.pret { display: flex; align-items: center; gap: 28px; padding: 22px; border-radius: 16px; background: #EFEBE9; }
+.pretQr { flex-shrink: 0; padding: 10px; border-radius: 14px; background: #EFEBE9; border: 1.5px solid #241F20; }
 .pretTexte { display: flex; flex-direction: column; gap: 10px; font-size: 16px; line-height: 1.5; }
 .pretTexte strong { font-size: 26px; font-weight: 700; color: #680021; }
 .pretLiens { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 700; }

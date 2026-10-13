@@ -20,7 +20,7 @@ export default async function LayoutSuper({ children }: { children: React.ReactN
         </Link>
         <NavSuper aValider={n} />
         <div className="bo-bas">
-          <Link href="/admin" style={{ color: '#FFF' }}>Espace des restaurants →</Link>
+          <Link href="/admin" style={{ color: '#EFEBE9' }}>Espace des restaurants →</Link>
           <span>{u.email}</span>
           <form action={seDeconnecter}><button type="submit" className="btn fantome petit" style={{ paddingLeft: 0 }}>Se déconnecter</button></form>
         </div>

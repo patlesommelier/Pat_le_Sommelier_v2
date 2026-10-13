@@ -65,7 +65,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                   <legend style={{ fontSize: 13, fontWeight: 700, marginBottom: 8 }}>{l}</legend>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {ps.map((p) => {
-                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1.5px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : '#FFF', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
+                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1.5px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : '#EFEBE9', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
                       // Un seul plat : un clic l'affiche directement (avec le téléphone). Plusieurs plats : cases à cocher.
                       return table ? (
                         <label key={p.id} style={style}>
@@ -99,7 +99,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
           <div style={{ flex: '0 1 380px', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10 }}>
             <span className="surtitre">L’app de vos clients</span>
             <iframe title="Aperçu de l’app client" src={`/${resto}/plat/${choisis[0]}${tour > 1 ? `?tour=${tour}` : ''}`}
-              style={{ width: 360, maxWidth: '100%', height: 740, border: '10px solid #24151A', borderRadius: 44, background: '#FFF' }} />
+              style={{ width: 360, maxWidth: '100%', height: 740, border: '10px solid #241F20', borderRadius: 44, background: '#EFEBE9' }} />
             {arelire && <span className="discret" style={{ fontSize: 13, textAlign: 'center' }}>L’app ne montre que les accords validés{process.env.AFFICHER_ACCORDS_PROPOSES === 'true' ? ' (et, en démonstration, ceux à relire)' : ''}.</span>}
           </div>
         )}
@@ -113,7 +113,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
             <ol style={{ margin: 0, padding: 0, listStyle: 'none', display: 'flex', flexDirection: 'column', gap: 12 }}>
               {liste.map((r, i) => (
                 <li key={r.vin.id} style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
-                  <span style={{ width: 28, height: 28, borderRadius: 14, background: 'var(--encre)', color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{i + 1}</span>
+                  <span style={{ width: 28, height: 28, borderRadius: 14, background: 'var(--encre)', color: '#EFEBE9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{i + 1}</span>
                   <Vignette url={r.vin.etiquette_url} taille={44} />
                   <span style={{ display: 'flex', flexDirection: 'column', gap: 3, minWidth: 0 }}>
                     <b>{r.vin.libelle}</b>

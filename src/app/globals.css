@@ -140,7 +140,7 @@ a.bouton-plein { text-decoration: none; }
   width: 54px; height: 54px; border-radius: 27px; border: 2px solid var(--marque); padding: 0; background: #FFFFFF;
   display: flex; align-items: flex-end; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer;
 }
-.avatar-pat { background: #F9E6E3; }
+.avatar-pat { background: #EB9D92; }
 .avatar-pat img { width: 100%; height: 100%; display: block; } /* buste de Pat (nouvelle identité) */
 .barre-pat textarea {
   flex-grow: 1; min-width: 0; min-height: 24px; max-height: 120px; field-sizing: content; resize: none; overflow-y: auto;
@@ -195,7 +195,7 @@ a.bouton-plein { text-decoration: none; }
 
 /* Logo de Pat en attendant celui du restaurant (ajouté dans « Apparence ») : pastille crème + nom. */
 .logo-pat { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
-.logo-pat-pastille { width: 50px; height: 50px; border-radius: 50%; background: #F9E6E3; display: inline-flex; align-items: flex-end;
+.logo-pat-pastille { width: 50px; height: 50px; border-radius: 50%; background: #EB9D92; display: inline-flex; align-items: flex-end;
   justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35); }
 .logo-pat-pastille img { width: 100%; height: 100%; display: block; }
 .bandeau-haut .logo .logo-pat-pastille img, .bandeau.grand .bandeau-haut .logo .logo-pat-pastille img { width: 100%; height: 100%; }
@@ -254,7 +254,7 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .accueil-compact span { display: block; font-size: 15px; font-style: normal; color: var(--discret); margin-top: 4px; }
 
 /* ── Écran d'ouverture (identité de Pat : rouge #FF0D05, bordeaux #680021, police Outfit) ── */
-.ouverture-pat { position: fixed; inset: 0; z-index: 50; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+.ouverture-pat { position: fixed; inset: 0; z-index: 50; background: #EFEBE9; font-family: Outfit, sans-serif; font-weight: 700; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
   font-family: Outfit, 'Helvetica Neue', sans-serif; transition: opacity .4s ease; cursor: pointer; }
 .ouverture-pat.sortie { opacity: 0; }
 .ouverture-carre { width: min(78vw, 340px); height: min(78vw, 340px); box-sizing: border-box; padding: 22px 18px 16px; overflow: hidden; border-radius: 28px; background: #FF0D05; color: #680021;
@@ -262,6 +262,6 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .ouverture-carre b { font-size: clamp(30px, 9vw, 40px); font-weight: 700; line-height: 1.02; }
 .ouverture-carre img { height: 48%; width: auto; min-height: 0; }
 .ouverture-carre span { font-size: 18px; font-weight: 700; }
-.ouverture-pat small { font-size: 14px; color: #6B6062; }
+.ouverture-pat small { font-size: 14px; font-weight: 700; color: #241F20; }
 @keyframes ouverture-entree { from { transform: scale(.92); opacity: 0; } to { transform: none; opacity: 1; } }
 @media (prefers-reduced-motion: reduce) { .ouverture-carre { animation: none; } .ouverture-pat { transition: none; } }

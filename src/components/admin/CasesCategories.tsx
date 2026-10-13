@@ -25,7 +25,7 @@ export function CasesCategories({ choisies: initiales, enregistrer }: { choisies
       title="Catégories en plus des couleurs dans l’app : un vin d’une catégorie cochée n’apparaît que là (s’il est dans plusieurs, la première compte)">
       <span className="petit discret">Catégories en plus :</span>
       {CASES.map(([id, libelle, aide]) => (
-        <label key={id} title={aide} style={{ display: 'inline-flex', gap: 6, alignItems: 'center', fontSize: 14, fontWeight: 600, cursor: 'pointer' }}>
+        <label key={id} title={aide} style={{ display: 'inline-flex', gap: 6, alignItems: 'center', fontSize: 14, fontWeight: 700, cursor: 'pointer' }}>
           <input type="checkbox" checked={choisies.includes(id)} disabled={enCours} onChange={(e) => basculer(id, e.target.checked)} />
           {libelle}
         </label>

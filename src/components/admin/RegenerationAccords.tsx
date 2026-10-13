@@ -23,7 +23,7 @@ export function BoutonRegenerer({ action, className, title, children }: {
           setErreur(r?.erreur ?? null);
           if (!r?.erreur) window.dispatchEvent(new Event(EVENEMENT));
         })}>{children}</button>
-      {erreur && <span className="petit" role="alert" style={{ color: 'var(--rouge, #B3261E)' }}>{erreur}</span>}
+      {erreur && <span className="petit" role="alert" style={{ color: 'var(--encre)' }}>{erreur}</span>}
     </>
   );
 }

@@ -8,7 +8,7 @@ export default async function MotDePasse({ searchParams }: { searchParams: Promi
   return (
     <div className="bo bo-connexion">
       <form action={changerMotDePasse} className="carte-bo sticker">
-        <h1 style={{ fontSize: 26, fontWeight: 800 }}>Nouveau mot de passe</h1>
+        <h1 style={{ fontSize: 26, fontWeight: 700 }}>Nouveau mot de passe</h1>
         <span className="discret">{u.email}</span>
         <Message erreur={erreur} />
         <div className="champ"><label htmlFor="mdp">Mot de passe</label><input id="mdp" name="mdp" type="password" required minLength={10} autoComplete="new-password" /><span className="aide">10 caractères minimum</span></div>

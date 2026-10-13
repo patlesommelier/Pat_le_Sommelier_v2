@@ -76,7 +76,7 @@ function Depot({ type, etat, onReponse }: {
           onDragLeave={() => setSurvol(false)}
           onDrop={(e) => { e.preventDefault(); setSurvol(false); envoyerFichiers(e.dataTransfer.files); }}>
           <span className={s.icone}><IconeEnvoi /></span>
-          <span>{t.depot}<br /><span style={{ fontWeight: 400, fontSize: 13, color: '#66565B' }}>Photos ou PDF, une image par page · glissez-les ici ou cliquez</span></span>
+          <span>{t.depot}<br /><span style={{ fontWeight: 700, fontSize: 13, color: '#241F20' }}>Photos ou PDF, une image par page · glissez-les ici ou cliquez</span></span>
           {champ}
         </label>
       )}

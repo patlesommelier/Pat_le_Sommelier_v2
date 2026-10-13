@@ -102,7 +102,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             )}
             {/* Super-admin seulement : notes de la base de Pat utilisées pour ce vin (jamais montrées au restaurant). */}
             {r && (
-              <div className="petit" style={{ border: '1px dashed var(--ligne, #ccc)', borderRadius: 8, padding: '8px 10px' }}>
+              <div className="petit" style={{ border: '1px dashed var(--ligne, #AFB0AE)', borderRadius: 8, padding: '8px 10px' }}>
                 <b>Notes de Pat (super-admin)</b> : producteur {r.note_producteur ?? '—'}{r.note_vin !== null ? ` · vin ${r.note_vin} (remplace celle du producteur)` : ''} · terroir {r.ranking_terroir ?? '—'}
                 {' '}→ compte pour <b>{r.ranking_producteur ?? 0}</b> dans le score.
                 {r.cuvee_id

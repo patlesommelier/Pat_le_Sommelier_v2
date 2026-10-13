@@ -63,7 +63,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
           <p className="discret" style={{ margin: 0 }}>Jamais visible par les restaurants. Le ranking du producteur vaut pour ses vins sans ranking propre ; une cuvée peut garder le sien (second vin plus bas que le grand vin).</p>
           <label style={{ display: 'flex', alignItems: 'center', gap: 10, fontWeight: 700 }}>Ranking du producteur (0 à 5)
             <input className="rk" name="ranking" type="number" min={0} max={5} step={1} defaultValue={rk ?? ''} required />
-            {p.ranking_suggere !== null && <span className="petit discret" style={{ fontWeight: 400 }}>suggestion de Pat : {p.ranking_suggere}</span>}
+            {p.ranking_suggere !== null && <span className="petit discret" style={{ fontWeight: 700 }}>suggestion de Pat : {p.ranking_suggere}</span>}
           </label>
         </div>
 

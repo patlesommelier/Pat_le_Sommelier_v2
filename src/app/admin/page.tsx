@@ -23,7 +23,7 @@ export default async function AccueilAdmin() {
       <div className="grille">
         {restos.map((r) => (
           <Link key={r.id} href={`/admin/${r.id}`} className="carte-bo" style={{ textDecoration: 'none', color: 'inherit', display: 'flex', gap: 14, alignItems: 'center' }}>
-            <span style={{ width: 44, height: 44, borderRadius: 12, background: r.couleur, color: '#FFF', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 20 }}>{r.nom.slice(0, 1)}</span>
+            <span style={{ width: 44, height: 44, borderRadius: 12, background: r.couleur, color: '#EFEBE9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 20 }}>{r.nom.slice(0, 1)}</span>
             <span><h2 style={{ fontSize: 20 }}>{r.nom}</h2><span className="discret">{r.plats} plats · {r.vins} vins</span></span>
           </Link>
         ))}

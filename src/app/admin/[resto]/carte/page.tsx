@@ -93,7 +93,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                 nom: r.nom,
                 // Catégorie spéciale : titre fixe (la couleur) ; sinon titre modifiable par le composant.
                 entete: special ? (
-                  <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--bordeaux, #6b0f24)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
+                  <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
                 ) : undefined,
                 vins: r.groupes.map(({ principal: v, tous, contenances, prix }) => {
                   const [bl, bk] = etatProducteur(v);
@@ -104,9 +104,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   return {
                     cle: v.id, ids: tous.map((x) => x.id), ancre: `vin-${v.id}`, classe: choisie ? 'choisi' : undefined,
                     cellules: (<>
-                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#B5ADA8', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link><PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link><PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--bordeaux, #6b0f24)' }}>{etoiles(v.id)}</div>}</td>
+                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--encre)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
                       <td>{contenances.length
                         ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
