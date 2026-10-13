@@ -64,4 +64,5 @@ export const LIBELLES_REGLAGES: Record<keyof Reglages, string> = {
   ecartMoinsCher: 'Vin moins cher si l’écart de prix de la liste est sous ×',
   plafondBulles: 'Bulles au plus (règle 11)',
   tourSuivant: 'Vins proposés au tour 2',
+  bonusCoupDeCoeur: 'Coup de cœur de la maison : + 1 au score (règle 2c)',
 };

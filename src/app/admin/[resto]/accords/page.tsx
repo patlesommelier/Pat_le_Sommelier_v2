@@ -12,7 +12,7 @@ import { requete } from '@/lib/db';
 import { getCandidats, getCarte, getReglages } from '@/lib/donnees';
 import { parametresEnService } from '@/lib/regles/versions';
 import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
-import { selectionner, tourSuivant, type Reglages } from '@/lib/selection';
+import { selectionner, tourSuivant, type Reglages, scoreVin } from '@/lib/selection';
 
 const dateHeure = (d: string) => new Date(d).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
@@ -80,7 +80,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const retenus = new Set(sel.liste.map((r) => r.vin.id));
   const tour2 = new Set(tourSuivant(sel, [...retenus], R.tourSuivant, R.diversite, R.plafondBulles).map((r) => r.vin.id));
   const tous = [...candidats]
-    .map((c) => ({ vin: c, note: c.notes[plat!.id], score: c.notes[plat!.id] + (c.ranking_producteur ?? 0) }))
+    .map((c) => ({ vin: c, note: c.notes[plat!.id], score: scoreVin(c.notes[plat!.id], c, R) }))
     .sort((a, b) => b.score - a.score || b.note - a.note || a.vin.ordre - b.vin.ordre);
   const ordre = [...sel.liste.map((r) => r.vin.id), ...tous.map((t) => t.vin.id).filter((id) => !retenus.has(id))];
   const triComplet = tous.sort((a, b) => ordre.indexOf(a.vin.id) - ordre.indexOf(b.vin.id));

@@ -13,6 +13,7 @@ export const dynamic = 'force-dynamic';
 const PARAMETRES: { cle: keyof Reglages; libelle: string; aide: string; pas?: number }[] = [
   { cle: 'contenance', libelle: 'Une seule contenance (règle 10)', aide: 'un vin en 75 cl et en 37,5 cl ne compte qu’en 75 cl' },
   { cle: 'noteEliminatoire', libelle: 'Écarter les notes ≤ (règle 1)', aide: 'note minimale pour être proposé : cette valeur + 1' },
+  { cle: 'bonusCoupDeCoeur', libelle: 'Coups de cœur (règle 2c)', aide: '+ 1 au score d’un vin coup de cœur de la maison' },
   { cle: 'diversite', libelle: 'Diversité (règle 3)', aide: 'à égalité, le vin le plus différent des vins déjà retenus' },
   { cle: 'premiers', libelle: 'Premiers vins (règles 3 à 5)', aide: 'nombre de vins proposés d’office' },
   { cle: 'maximum', libelle: 'Maximum (règle 9)', aide: 'nombre de vins au plus' },

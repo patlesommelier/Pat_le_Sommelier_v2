@@ -5,7 +5,7 @@
  * Onglet « Plat seul » :
  *   10. contenance : un vin présent en 75 cl et en 37,5 cl ne compte qu'en 75 cl
  *    1. élimination : note ≤ 2 écartée
- *    2. score = note + ranking producteur ; 2 bis : à score égal, la note la plus haute
+ *    2. score = note + ranking producteur (+ 1 pour un coup de cœur de la maison, si la règle est active) ; 2 bis : à score égal, la note la plus haute
  *    3. diversité (catégorie, pays, cépage, appellation) ; 4. ranking producteur puis terroir ; 5. ordre de la carte
  *    6. 4e et 5e vins ; 7. vin plus cher ; 8. vin moins cher ; 9. 1 à 5 vins ; 11. plafond bulles
  * Onglet « Plusieurs plats » : note = la plus basse sur les plats, pas de règle de diversité.
@@ -21,6 +21,8 @@ export interface Candidat {
   ordre: number;              // ordre de la carte (fichier 1 puis fichier 2)
   ranking_producteur: number | null;
   ranking_terroir: number | null;
+  /** Coup de cœur de la maison (règle « Coups de cœur » : + 1 au score). */
+  coup_de_coeur?: boolean | null;
   pays: string | null;
   cepages: string | null;
   appellation: string | null;
@@ -57,12 +59,13 @@ export interface Reglages {
   moinsCher: boolean;         // règle 8
   ecartMoinsCher: number;     // règle 8 (déclenchement)
   plafondBulles: number;      // règle 11
+  bonusCoupDeCoeur: boolean;  // règle 2c : + 1 au score d'un coup de cœur de la maison
   tourSuivant: number;        // Tour 2 : nombre de vins
 }
 
 export const REGLAGES_PAT: Reglages = {
   contenance: true, noteEliminatoire: 2, diversite: true, premiers: 3, maximum: 5, noteMinAjout: 4, scoreMinAjout: 7,
-  plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3,
+  plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3, bonusCoupDeCoeur: true,
 };
 
 /** Réglages internes à Pat (ils reposent sur le score, donc sur ses rankings) : jamais modifiables par le restaurant. */
@@ -182,6 +185,11 @@ export interface Options {
 }
 
 /** Sélection « Plat seul » (un plat) ou « Plusieurs plats » (plusieurs). */
+/** Règle 2 : score = note + ranking du producteur, + 1 pour un coup de cœur de la maison (règle 2c, si active). */
+export function scoreVin(note: number, vin: Pick<Candidat, 'ranking_producteur' | 'coup_de_coeur'>, R: Pick<Reglages, 'bonusCoupDeCoeur'>) {
+  return note + (vin.ranking_producteur ?? 0) + (R.bonusCoupDeCoeur && vin.coup_de_coeur ? 1 : 0);
+}
+
 export function selectionner<C extends Candidat>(vins: C[], plats: string[], options: Options = {}): Selection<C> {
   const R = { ...REGLAGES_PAT, ...options.reglages };
   const avecDiversite = options.diversite ?? (plats.length === 1 && R.diversite);
@@ -191,7 +199,7 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   const classement: Retenu<C>[] = contenance(vins, R.contenance)
     .map((vin) => {
       const note = noteSur(vin, plats);
-      return note === null ? null : { vin, note, score: note + (vin.ranking_producteur ?? 0), motif: 'classement' as Motif };
+      return note === null ? null : { vin, note, score: scoreVin(note, vin, R), motif: 'classement' as Motif };
     })
     .filter((r): r is Retenu<C> => r !== null && r.note > R.noteEliminatoire)
     .sort(compare);
