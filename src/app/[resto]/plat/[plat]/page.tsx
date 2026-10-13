@@ -5,6 +5,7 @@ import { DemanderAPat } from '@/components/DemanderAPat';
 import { Entete, menuDe } from '@/components/Entete';
 import { Etiquette } from '@/components/Etiquette';
 import { PictosVin } from '@/components/Pictos';
+import { AttentePat } from '@/components/AttentePat';
 import { getPlat, getPlats, getPropositions, getRestaurant } from '@/lib/donnees';
 import { euros, lignePrix } from '@/lib/format';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
@@ -29,7 +30,7 @@ export default async function Propositions({
   const autres = (sp.et ?? '').split(',').map((x) => x.trim()).filter((x) => x && x !== plat.id && carte.some((p) => p.id === x)).slice(0, 8);
   const tous = [plat.id, ...new Set(autres)];
   const nomPlat = (id: string) => { const p = id === plat.id ? plat : carte.find((x) => x.id === id); return p ? p.nom_court ?? p.nom : ''; };
-  const [{ propositions, encore }, tarifs] = await Promise.all([getPropositions(resto, tous, tour), tarifsDuRestaurant(resto)]);
+  const [{ propositions, encore, patReflechit }, tarifs] = await Promise.all([getPropositions(resto, tous, tour), tarifsDuRestaurant(resto)]);
   const service = tous.length === 1 ? propositions.find((p) => p.accord.service)?.accord.service : undefined;
   const avecEt = (q: string) => { const u = new URLSearchParams(q); if (tous.length > 1) u.set('et', tous.slice(1).join(',')); const s = u.toString(); return s ? `?${s}` : ''; };
   const ici = `/${resto}/plat/${plat.id}`;
@@ -52,6 +53,7 @@ export default async function Propositions({
             <img src={plat.photo_url} alt={plat.nom} className="photo-plat" />
           )}
 
+          {patReflechit && <AttentePat />}
           {propositions.length ? (
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {propositions.map(({ accord, vin, motif, parPlat, ensemble }) => (

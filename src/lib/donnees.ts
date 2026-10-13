@@ -2,7 +2,7 @@ import 'server-only';
 import { cache } from 'react';
 import { requete } from './db';
 import { avecAppreciation } from './appreciation';
-import { choisirPourPlusieursPlats } from './plusieurs-plats';
+import { calculerChoixTable, choixPourPlusieursPlats, type DemandeTable } from './plusieurs-plats';
 import { extraitFiche } from './fiche-producteur';
 import { parametresEnService } from './regles/versions';
 import { reglagesComplets, selectionner, tourSuivant, type Candidat, type Motif, type Reglages, type Retenu } from './selection';
@@ -135,7 +135,17 @@ export async function getCandidats(restaurantId: string, platIds: string[], stat
  * Propositions pour un plat, selon les règles de sélection du restaurant (regles_selection.xlsx, V7 — voir selection.ts),
  * ajustées par ses réglages. tour = 1 : la liste de 1 à 5 vins ; tour = 2, 3… : les vins suivants du classement.
  */
-export async function getPropositions(restaurantId: string, platId: string | string[], tour = 1): Promise<{ propositions: Proposition[]; encore: boolean }> {
+/** Choix de Pat pour plusieurs plats : demandé à la fonction d'arrière-plan (hors Netlify : calculé ici, sans faire attendre la page). */
+async function lancerChoixTable(d: DemandeTable) {
+  const base = (process.env.URL ?? process.env.URL_PUBLIQUE ?? process.env.NEXT_PUBLIC_SITE_URL ?? '').replace(/\/$/, '');
+  const statut = base
+    ? await fetch(`${base}/.netlify/functions/choisir-table-background`, { method: 'POST', body: JSON.stringify(d), headers: { 'content-type': 'application/json' } })
+      .then((r) => r.status).catch(() => 0)
+    : 0;
+  if (statut !== 202 && statut !== 200) void calculerChoixTable(requete, d).catch((e) => console.error('[plusieurs plats]', e));
+}
+
+export async function getPropositions(restaurantId: string, platId: string | string[], tour = 1): Promise<{ propositions: Proposition[]; encore: boolean; patReflechit?: boolean }> {
   // Plusieurs plats choisis ensemble : vins notés sur tous, la note la plus basse compte, sans règle de diversité.
   const platIds = Array.isArray(platId) ? platId : [platId];
   const [{ candidats, lignesParVin }, R0] = await Promise.all([getCandidats(restaurantId, platIds), getReglages(restaurantId)]);
@@ -150,7 +160,10 @@ export async function getPropositions(restaurantId: string, platId: string | str
       'select id, nom, description_cuisine as description from plat where restaurant_id = $1 and id = any($2)', [restaurantId, platIds])
     : [];
   const lignesTable = [...lignesParVin.values()].flat().map((l) => ({ plat_id: l.plat_id, vin_id: l.vin_id, explication: l.explication }));
-  const choixPat = plats.length > 1 ? await choisirPourPlusieursPlats(restaurantId, plats, sel.classement.map((r) => r.vin), lignesTable) : null;
+  const reponse = plats.length > 1 ? await choixPourPlusieursPlats(requete, restaurantId, plats, sel.classement.map((r) => r.vin), lignesTable, lancerChoixTable) : null;
+  // Pat réfléchit encore : en attendant, les règles de sélection seules (la page se met à jour quand son choix est prêt).
+  const patReflechit = reponse === 'en_cours';
+  const choixPat = Array.isArray(reponse) ? reponse : null;
   const ensemble = new Map((choixPat ?? []).map((c) => [c.vin_id, c.explication]));
   if (choixPat) {
     const parId = new Map(sel.classement.map((r) => [r.vin.id, r]));
@@ -180,7 +193,7 @@ export async function getPropositions(restaurantId: string, platId: string | str
       parPlat: platIds.length > 1 ? toutes.map((x) => ({ plat_id: x.plat_id, note: Number(x.note), explication: avecAppreciation(x.explication, x.note, { ...app, cle: `${x.plat_id}|${tour}` }) })) : undefined,
     };
   });
-  return { propositions, encore };
+  return { propositions, encore, patReflechit };
 }
 
 export async function getAccord(platId: string, vinId: string) {
