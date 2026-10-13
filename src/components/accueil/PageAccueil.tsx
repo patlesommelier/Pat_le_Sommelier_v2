@@ -21,12 +21,12 @@ export async function PageAccueil() {
     ? await requete<{ id: string }>('select id from restaurant where id = $1 and premier_scan_le is null', [i.restaurant_id]) : [];
   return (
     <div className={s.page}>
-      <section aria-labelledby="h-intro" className={s.bordeaux}>
+      <section aria-labelledby="h-intro" className={s.haut}>
         <span className={s.halo} aria-hidden="true" />
         <header className={s.entete}>
           <Link href="/" className={s.marque}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-logo-rouge.svg" alt="Pat le sommelier" />
+            <img src="/pat/pat-illustration-rouge.svg" alt="Pat le sommelier" width={51} height={108} />
           </Link>
           <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
         </header>

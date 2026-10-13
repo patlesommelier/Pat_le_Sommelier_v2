@@ -6,6 +6,13 @@
   background: #680021; }
 .halo { display: none; }
 .creme { background: #EFEBE9; }
+/* Bloc du haut : fond crème de l'illustration de Pat, textes foncés */
+.haut { position: relative; overflow: hidden; background: #FEFAF1; color: #241F20; }
+.haut .texte { color: #241F20; }
+.haut .connexion { color: #680021; }
+.haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
+.haut .marque img { height: 108px; }
+.haut .qr { border: 1.5px solid #241F20; }
 .titreSection { margin: 0; text-align: center; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px);
   font-weight: 700; letter-spacing: -0.8px; color: #680021; }
 
