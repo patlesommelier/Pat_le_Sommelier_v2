@@ -19,8 +19,8 @@ export default async function NouveauPlat({ params, searchParams }: { params: Pr
         <div className="champ"><label htmlFor="nom_court">Nom court (bouton de l’accueil client, facultatif)</label><input id="nom_court" name="nom_court" maxLength={28} /></div>
         <div className="champs">
           <div className="champ"><label htmlFor="categorie">Catégorie</label>
-            <select id="categorie" name="categorie" defaultValue={['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : 'plat'}>
-              <option value="entree">Entrée</option><option value="plat">Plat</option><option value="dessert">Dessert</option><option value="fromage">Fromage</option>
+            <select id="categorie" name="categorie" defaultValue={['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat : 'plat'}>
+              <option value="entree">Entrée</option><option value="plat">Plat</option><option value="dessert">Dessert</option><option value="fromage">Fromage</option><option value="suggestion">Suggestion</option>
             </select></div>
           <div className="champ"><label htmlFor="prix">Prix (€)</label><input id="prix" name="prix" inputMode="decimal" /></div>
         </div>

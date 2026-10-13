@@ -21,7 +21,7 @@ interface Corps {
   messages: { role: 'user' | 'assistant'; content: string }[];
 }
 
-const CATEGORIES: Record<string, string> = { entree: 'Entrées', plat: 'Plats', dessert: 'Desserts', fromage: 'Fromages' };
+const CATEGORIES: Record<string, string> = { suggestion: 'Suggestions du moment', entree: 'Entrées', plat: 'Plats', dessert: 'Desserts', fromage: 'Fromages' };
 /** Nom du plat sans les mentions de portion (« prix à la pièce », « 2 pcs »). */
 const nomAllege = (nom: string) => nom.replace(/\s*\((?:[^)]*pi[eè]ce[^)]*|\d+\s*pcs?)\)/gi, '').replace(/\s*[-–·,]?\s*\d+\s*pcs?\b/gi, '').trim();
 

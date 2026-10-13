@@ -6,6 +6,9 @@ import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
+import { traiterSuggestions } from '@/lib/suggestions';
+import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
+import { randomUUID } from 'node:crypto';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { deposerLogo } from '@/lib/logo';
 import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
@@ -98,7 +101,7 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
             -- Sauce servie à part : oui (condiment, principe n°44), non (composante du plat), vide (je ne sais pas).
             sauce_servie_a_part = $10::boolean
       where id = $1 and restaurant_id = $2`,
-    [platId, resto, txt(f, 'nom'), txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : null,
+    [platId, resto, txt(f, 'nom'), txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat : null,
       nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on', txt(f, 'description_cuisine'),
       f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null],
   );
@@ -125,13 +128,37 @@ export async function ajouterPlat(resto: string, f: FormData): Promise<Retour> {
     `insert into plat (id, restaurant_id, nom, nom_court, categorie, prix, prix_variantes, description_cuisine, sauce_servie_a_part, photo_url, ordre, actif, modifie_bo)
      values ($1, $2, $3, $4, $5::categorie_plat, $6, $7, $8, $9::boolean, $10,
              (select coalesce(max(ordre), 0) + 1 from plat where restaurant_id = $2), true, now())`,
-    [id, resto, nom, txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage'].includes(cat ?? '') ? cat : 'plat',
+    [id, resto, nom, txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat : 'plat',
       nombre(f, 'prix'), txt(f, 'prix_variantes'), txt(f, 'description_cuisine'),
       f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null, photo]);
   await lancerPreparation(resto, [id], u.email).catch((e) => console.error('[ajout] plat', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   redirect(avec(`/admin/${resto}/menu`, { plat: id, ajout: '1' }));
+}
+
+/**
+ * Suggestions du moment : photo(s) ou PDF envoyés par le restaurant. Pat les lit en arrière-plan
+ * (fonction lire-suggestions-background), ajoute les plats dans « Suggestions » et prépare leurs accords.
+ */
+export async function envoyerSuggestions(resto: string, f: FormData): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const fichiers = await Promise.all(f.getAll('suggestions').filter((x): x is File => x instanceof File && x.size > 0)
+    .map(async (x) => ({ nom: x.name || 'suggestions', octets: new Uint8Array(await x.arrayBuffer()) })));
+  const erreurs = verifierFichiers('menu', fichiers);
+  if (erreurs.length) return { erreur: erreurs.join(' ') };
+  const id = randomUUID();
+  await requete(`insert into lecture_suggestions (id, restaurant_id, remplacer, demande_par) values ($1, $2, $3, $4)`,
+    [id, resto, f.get('remplacer') === 'on', u.email]);
+  for (const [i, x] of fichiers.entries()) {
+    await requete('insert into lecture_suggestions_fichier (lecture_id, nom, media_type, octets, ordre) values ($1, $2, $3, $4, $5)',
+      [id, x.nom, typeReel(x.octets), Buffer.from(x.octets), i]);
+  }
+  await lancerFonctions('lire-suggestions-background', 1, () => traiterSuggestions(requete, {
+    finAvant: Date.now() + 15 * 60 * 1000, lancer: (n) => lancerTravailleurs(n),
+  }));
+  revalidatePath(`/admin/${resto}/menu`);
+  return { ok: 'Photo reçue : Pat lit vos suggestions (une minute environ), puis prépare leurs accords.' };
 }
 
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];

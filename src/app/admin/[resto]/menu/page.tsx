@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { enregistrerPlat, supprimerPlat } from '../../actions';
+import { enregistrerPlat, envoyerSuggestions, supprimerPlat } from '../../actions';
+import { EnvoiSuggestions, type EtatLecture } from '@/components/admin/EnvoiSuggestions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
@@ -9,7 +10,7 @@ import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
 import { RelirePrix } from '@/components/admin/RelirePrix';
 import { requete } from '@/lib/db';
 
-const CATS = [['tous', 'Tous'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
+const CATS = [['tous', 'Tous'], ['suggestion', 'Suggestions'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
 export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string; supprime?: string }> }) {
   const { resto } = await params;
@@ -19,6 +20,9 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   // Relecture des prix sur le menu : super-admin seulement (chaque lecture est un appel à Claude payé par Pat).
   const [derniere] = u?.admin ? await requete<{ statut: string; message: string | null; le: string }>(
     `select statut, message, maj_le::text as le from relecture_prix where restaurant_id = $1 order by cree_le desc limit 1`, [resto]) : [];
+  // Dernière lecture de suggestions (photo envoyée par le restaurant), récente seulement (moins d'un jour).
+  const [lecture] = await requete<NonNullable<EtatLecture>>(
+    `select statut, message, maj_le::text as le from lecture_suggestions where restaurant_id = $1 and cree_le > now() - interval '1 day' order by cree_le desc limit 1`, [resto]);
   const affiches = plats.filter((p) => cat === 'tous' || p.categorie === cat);
   const choisi = plats.find((p) => p.id === platId) ?? affiches[0];
   const profil = choisi ? await getProfil(choisi.id) : null;
@@ -31,6 +35,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
       {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
       {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
+      <EnvoiSuggestions envoyer={envoyerSuggestions.bind(null, resto)} derniere={lecture ?? null} nombre={plats.filter((p) => p.categorie === 'suggestion' && p.actif).length} />
       <div className="rangee">
         <section className="large">
           <nav className="onglets" aria-label="Catégories">
@@ -64,7 +69,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
               <div className="champs">
                 <div className="champ"><label htmlFor="categorie">Catégorie</label>
                   <select id="categorie" name="categorie" defaultValue={choisi.categorie}>
-                    <option value="entree">Entrée</option><option value="plat">Plat</option><option value="dessert">Dessert</option><option value="fromage">Fromage</option>
+                    <option value="entree">Entrée</option><option value="plat">Plat</option><option value="dessert">Dessert</option><option value="fromage">Fromage</option><option value="suggestion">Suggestion</option>
                   </select></div>
                 <div className="champ"><label htmlFor="prix">Prix (€)</label><input id="prix" name="prix" inputMode="decimal" defaultValue={choisi.prix ?? ''} /></div>
               </div>

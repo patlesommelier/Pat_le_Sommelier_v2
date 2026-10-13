@@ -26,7 +26,7 @@ export interface Plat {
   id: string;
   nom: string;
   nom_court: string | null;
-  categorie: 'entree' | 'plat' | 'dessert' | 'fromage';
+  categorie: 'entree' | 'plat' | 'dessert' | 'fromage' | 'suggestion';
   prix: number | null;
   prix_variantes: string | null;
   /** Photo du plat déposée par le restaurant (facultative). */

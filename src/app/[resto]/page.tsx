@@ -7,6 +7,7 @@ import { getPlats, getRestaurant } from '@/lib/donnees';
 import type { Plat } from '@/lib/types';
 
 const GROUPES: { titre: string; categories: Plat['categorie'][] }[] = [
+  { titre: 'Suggestions', categories: ['suggestion'] },
   { titre: 'Entrées', categories: ['entree'] },
   { titre: 'Plats', categories: ['plat'] },
   { titre: 'Desserts et fromages', categories: ['dessert', 'fromage'] },
