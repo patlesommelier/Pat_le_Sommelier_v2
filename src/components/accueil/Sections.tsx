@@ -72,7 +72,7 @@ export function QuiEstPat() {
     <section aria-labelledby="h-qui" className={`${s.bordeaux} ${s.qui}`}>
       <span className={s.quiMedaillon}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat-logo.png" alt="Pat, le sommelier, porte une grande bouteille" width={172} height={190} />
+        <img src="/pat/pat-illustration-bordeaux.svg" alt="Pat, le sommelier, sert un verre de vin" width={203} height={210} />
       </span>
       <div className={s.quiTexte}>
         <h2 id="h-qui">Qui est vraiment Pat ?</h2>

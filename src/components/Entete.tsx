@@ -58,7 +58,7 @@ export function LogoPat({ nom }: { nom: string }) {
   return (
     <span className="logo-pat">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <span className="logo-pat-pastille"><img src="/pat/pat.png" alt="" /></span>
+      <span className="logo-pat-pastille"><img src="/pat/pat-buste-bordeaux.svg" alt="" /></span>
       <span className="logo-pat-nom">{nom}</span>
     </span>
   );

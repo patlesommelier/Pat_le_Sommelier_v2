@@ -58,7 +58,7 @@ export default async function Supports({ params, searchParams }: { params: Promi
                     <FormulaireAdmin action={enregistrerPresentation.bind(null, resto, v.id)} className="pile" style={{ gap: 8 }}>
                       <textarea name="presentation" rows={3} maxLength={600} defaultValue={texte ?? ''} aria-label={`Présentation de ${v.libelle}`}
                         placeholder="Pat écrira cette présentation à l’impression, ou écrivez-la ici."
-                        style={{ width: '100%', padding: 10, borderRadius: 10, border: '1.5px solid var(--ligne)', font: '15px/1.45 Lato, sans-serif' }} />
+                        style={{ width: '100%', padding: 10, borderRadius: 10, border: '1.5px solid var(--ligne)', font: '15px/1.45 Outfit, sans-serif' }} />
                       <span className="ligne-actions">
                         <button className="btn petit">Enregistrer</button>
                         <button className="btn sec petit" formAction={autrePresentation.bind(null, resto, v.id)}>Autre proposition</button>

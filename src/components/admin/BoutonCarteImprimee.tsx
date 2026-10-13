@@ -12,7 +12,7 @@ export function BoutonCarteImprimee({ resto }: { resto: string }) {
   async function ouvrir() {
     setEnCours(true);
     const onglet = window.open('', '_blank');
-    if (onglet) onglet.document.write('<p style="font:16px Lato,sans-serif;padding:24px">Préparation de la carte…</p>');
+    if (onglet) onglet.document.write('<p style="font:16px Outfit,sans-serif;padding:24px">Préparation de la carte…</p>');
     try {
       const adresse = await preparerImpression(resto);
       if (onglet) onglet.location.href = adresse;

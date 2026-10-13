@@ -24,7 +24,7 @@ export function Coque({ utilisateur, resto, etapes, children }: {
       <aside className="bo-nav">
         <Link href="/admin" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/pat/pat.png" alt="" />
+          <img src="/pat/pat-icone-logo.svg" alt="" />
           <span><strong>Pat le sommelier</strong><span>Espace restaurant</span></span>
         </Link>
         {resto && (

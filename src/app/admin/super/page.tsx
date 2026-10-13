@@ -104,7 +104,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
               <label key={k} className="case"><input type="checkbox" name={`langue_${k}`} defaultChecked={k === 'fr'} /><span>{l}</span></label>))}
           </div>
         </fieldset>
-        <div className="champ"><label htmlFor="couleur">Couleur</label><input id="couleur" name="couleur" type="color" defaultValue="#610420" style={{ width: 80, height: 40 }} /></div>
+        <div className="champ"><label htmlFor="couleur">Couleur</label><input id="couleur" name="couleur" type="color" defaultValue="#680021" style={{ width: 80, height: 40 }} /></div>
         <p className="discret" style={{ margin: 0 }}>Règles de départ : celles de Pat en service ({ind.regles ?? 'V7'}) ; le restaurant pourra les ajuster.</p>
         <span><button className="btn">Créer et inviter</button></span>
       </form>

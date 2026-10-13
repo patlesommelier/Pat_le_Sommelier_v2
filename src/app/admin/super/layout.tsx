@@ -15,7 +15,7 @@ export default async function LayoutSuper({ children }: { children: React.ReactN
       <aside className="bo-nav sombre">
         <Link href="/admin/super" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/pat/pat.png" alt="" />
+          <img src="/pat/pat-icone-logo.svg" alt="" />
           <span><strong>Pat le sommelier</strong><span>Super-admin</span></span>
         </Link>
         <NavSuper aValider={n} />

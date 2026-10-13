@@ -59,7 +59,7 @@ export async function creerRestaurant(f: FormData) {
   const retour = (m: Record<string, string>) => redirect(avec('/admin/super', m));
   const nom = txt(f, 'nom');
   const email = (txt(f, 'email') ?? '').toLowerCase();
-  const couleur = /^#[0-9a-f]{6}$/i.test(txt(f, 'couleur') ?? '') ? txt(f, 'couleur')! : '#610420';
+  const couleur = /^#[0-9a-f]{6}$/i.test(txt(f, 'couleur') ?? '') ? txt(f, 'couleur')! : '#680021';
   const langues = ['fr', 'nl', 'en'].filter((l) => f.get(`langue_${l}`) === 'on');
   if (!nom) retour({ erreur: 'Nom du restaurant manquant.' });
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) retour({ erreur: 'Adresse e-mail du responsable invalide.' });

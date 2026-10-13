@@ -140,7 +140,8 @@ a.bouton-plein { text-decoration: none; }
   width: 54px; height: 54px; border-radius: 27px; border: 2px solid var(--marque); padding: 0; background: #FFFFFF;
   display: flex; align-items: flex-end; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer;
 }
-.avatar-pat img { width: 42px; height: auto; display: block; }
+.avatar-pat { background: #F9E6E3; }
+.avatar-pat img { width: 100%; height: 100%; display: block; } /* buste de Pat (nouvelle identité) */
 .barre-pat textarea {
   flex-grow: 1; min-width: 0; min-height: 24px; max-height: 120px; field-sizing: content; resize: none; overflow-y: auto;
   padding: 15px 0; box-sizing: content-box; background: transparent; border: 0; outline: none; color: var(--encre);
@@ -194,10 +195,10 @@ a.bouton-plein { text-decoration: none; }
 
 /* Logo de Pat en attendant celui du restaurant (ajouté dans « Apparence ») : pastille crème + nom. */
 .logo-pat { display: inline-flex; align-items: center; gap: 12px; min-width: 0; }
-.logo-pat-pastille { width: 50px; height: 50px; border-radius: 50%; background: #FBF1E6; display: inline-flex; align-items: flex-end;
+.logo-pat-pastille { width: 50px; height: 50px; border-radius: 50%; background: #F9E6E3; display: inline-flex; align-items: flex-end;
   justify-content: center; overflow: hidden; flex-shrink: 0; box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35); }
-.logo-pat-pastille img { width: 82%; height: auto; display: block; }
-.bandeau-haut .logo .logo-pat-pastille img, .bandeau.grand .bandeau-haut .logo .logo-pat-pastille img { width: 82%; height: auto; }
+.logo-pat-pastille img { width: 100%; height: 100%; display: block; }
+.bandeau-haut .logo .logo-pat-pastille img, .bandeau.grand .bandeau-haut .logo .logo-pat-pastille img { width: 100%; height: 100%; }
 .bandeau-haut .logo:has(.logo-pat) { text-decoration: none; }
 .bandeau.grand .logo-pat-pastille { width: 64px; height: 64px; }
 .logo-pat-nom { font-size: 19px; font-weight: 700; line-height: 1.15; color: var(--sur-marque, #FFFFFF); overflow-wrap: anywhere; }

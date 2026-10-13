@@ -21,9 +21,9 @@ export default async function Chevalet({ params }: { params: Promise<{ resto: st
         {/* eslint-disable-next-line @next/next/no-img-element */}
         {logo ? <img src={logo} alt={r.nom} style={{ maxHeight: '16mm', maxWidth: '60mm' }} /> : <b style={{ fontSize: '8mm' }}>{r.nom}</b>}
       </div>
-      <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '3mm', padding: '5mm', textAlign: 'center', fontFamily: 'Lato, sans-serif', color: '#1A1A1A' }}>
+      <div style={{ flexGrow: 1, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '3mm', padding: '5mm', textAlign: 'center', fontFamily: 'Outfit, sans-serif', color: '#1A1A1A' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat/pat.png" alt="" style={{ height: '17mm' }} />
+        <img src="/pat/pat-illustration-bordeaux.svg" alt="" style={{ height: '17mm' }} />
         <b style={{ fontSize: '5.2mm', lineHeight: 1.2 }}>Un vin pour votre plat ?</b>
         <span style={{ fontSize: '3.4mm', lineHeight: 1.35, color: '#444' }}>Scannez : Pat, notre sommelier, vous conseille un vin de la carte.</span>
         <div style={{ width: '42mm', height: '42mm' }} dangerouslySetInnerHTML={{ __html: svg }} />
@@ -32,7 +32,7 @@ export default async function Chevalet({ params }: { params: Promise<{ resto: st
   );
   return (
     <div style={{ padding: 24, background: '#FBF8F7', minHeight: '100vh' }}>
-      <div className="pas-imprime" style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 20, fontFamily: 'Lato, sans-serif' }}>
+      <div className="pas-imprime" style={{ display: 'flex', gap: 12, alignItems: 'center', marginBottom: 20, fontFamily: 'Outfit, sans-serif' }}>
         <Link href={`/admin/${resto}/acces`}>← Retour</Link>
         <BoutonImprimer />
         <span style={{ color: '#66565B', fontSize: 14 }}>Quatre chevalets A6 par feuille A4 : découpez le long des pointillés.</span>

@@ -1,18 +1,22 @@
-/* Back-office de Pat le sommelier — encre bordeaux du bonhomme, Bricolage Grotesque + Lato. */
+/* Back-office de Pat le sommelier — identité 2026 : bordeaux #680021, rouge #FF0D05, rose #EB9D92, kaki #BDB074,
+   crème #EFEBE9, noir #241F20 ; police Outfit (titres en gras, textes en normal). */
 .bo {
-  --encre: #610420;
-  --encre-fonce: #3E0214;
-  --texte: #24151A;
-  --discret: #66565B;
-  --ligne: #E8DDDF;
-  --fond: #FBF8F7;
-  --rose: #F6ECEE;
+  --encre: #680021;
+  --encre-fonce: #4A0017;
+  --rouge: #FF0D05;
+  --rose-pat: #EB9D92;
+  --kaki: #BDB074;
+  --texte: #241F20;
+  --discret: #6B6062;
+  --ligne: #E7DFDC;
+  --fond: #F7F4F2;
+  --rose: #FBEAE7;
   --vert: #1D5C38; --vert-fond: #E3F1E7;
   --ocre: #6E4600; --ocre-fond: #FBEED2;
   --gris-fond: #EFEAEB; --gris: #4F4246;
-  --titre: 'Bricolage Grotesque', 'Avenir Next', 'Helvetica Neue', sans-serif;
+  --titre: Outfit, 'Avenir Next', 'Helvetica Neue', sans-serif;
   min-height: 100vh; background: var(--fond); color: var(--texte);
-  font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif;
   display: flex; flex-wrap: wrap; align-items: stretch;
 }
 .bo a { color: var(--encre); }
@@ -23,7 +27,7 @@
 /* ── Navigation ── */
 .bo-nav { flex: 1 1 260px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: #FFF; border-right: 1px solid var(--ligne); display: flex; flex-direction: column; gap: 22px; }
 .bo-marque { display: flex; align-items: center; gap: 10px; text-decoration: none; padding: 0 8px; }
-.bo-marque img { width: 44px; height: 48px; display: block; }
+.bo-marque img { width: 48px; height: 48px; border-radius: 12px; display: block; }
 .bo-marque strong { display: block; font-family: var(--titre); font-size: 20px; font-weight: 800; color: var(--encre); line-height: 1.05; }
 .bo-marque span { font-size: 12px; color: var(--discret); }
 .bo-resto { display: flex; align-items: center; gap: 10px; min-height: 48px; padding: 8px 12px; border: 1px solid var(--ligne); border-radius: 12px; background: var(--fond); text-decoration: none; color: var(--texte) !important; }
@@ -66,7 +70,7 @@
 .chiffre { font-family: var(--titre); font-size: 28px; font-weight: 800; color: var(--encre); }
 
 /* ── Boutons ── */
-.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 700 15px Lato, sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #FFF !important; border: 1.5px solid var(--encre); }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 700 15px Outfit, sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #FFF !important; border: 1.5px solid var(--encre); }
 .btn:hover { background: var(--encre-fonce); }
 .btn.sec { background: #FFF; color: var(--encre) !important; }
 .btn.sec:hover { background: var(--rose); }
@@ -108,7 +112,7 @@
 /* ── Formulaires ── */
 .champ { display: flex; flex-direction: column; gap: 6px; }
 .champ label, .champ .libelle { font-size: 13px; font-weight: 700; }
-.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid var(--ligne); border-radius: 10px; background: #FFF; font: 15px Lato, sans-serif; color: var(--texte); }
+.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid var(--ligne); border-radius: 10px; background: #FFF; font: 15px Outfit, sans-serif; color: var(--texte); }
 .champ textarea { line-height: 1.5; resize: vertical; }
 .champ input:focus, .champ select:focus, .champ textarea:focus { border-color: var(--encre); outline: none; }
 .champ .aide { font-size: 12.5px; color: var(--discret); }
@@ -139,7 +143,7 @@
 }
 
 /* ── Espace super-admin : barre latérale foncée ── */
-.bo-nav.sombre { background: #24151A; border-right-color: #24151A; }
+.bo-nav.sombre { background: #241F20; border-right-color: #241F20; }
 .bo-nav.sombre .bo-marque strong { color: #FFF; }
 .bo-nav.sombre .bo-marque span { color: #CDBFC3; }
 .bo-nav.sombre .bo-liens .section { color: #B9A9AE; }
@@ -147,12 +151,11 @@
 .bo-nav.sombre .bo-lien:hover { background: rgba(255, 255, 255, 0.08); }
 .bo-nav.sombre .bo-lien[aria-current='page'] { background: #FFF; color: var(--encre) !important; }
 .bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #CDBFC3 !important; }
-.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #24151A; color: #FFF; font-size: 14px; }
-.bandeau-vue button { background: #FFF; color: #24151A; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
+.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #241F20; color: #FFF; font-size: 14px; }
+.bandeau-vue button { background: #FFF; color: #241F20; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
 .tableau-super td, .tableau-super th { vertical-align: top; }
-.rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 8px; border: 1.5px solid var(--ligne); font: 700 14px Lato, sans-serif; }
+.rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 8px; border: 1.5px solid var(--ligne); font: 700 14px Outfit, sans-serif; }
 .interne { border: 1.5px dashed var(--encre); background: var(--rose); }
-.bo-nav.sombre .bo-marque img { background: #FFF; border-radius: 12px; padding: 3px; box-sizing: border-box; }
 .bouton-lien { padding: 0; border: 0; background: none; color: var(--encre); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
 .vin-cell a.nom { display: block; color: inherit; text-decoration: none; font-weight: 700; } .vin-cell a.nom:hover { text-decoration: underline; }
 /* Fiche d'un vin : champs à gauche, étiquette et profil à droite (l'un sous l'autre sur un écran étroit). */

@@ -52,7 +52,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
         <FormulaireAdmin action={enregistrerReglages.bind(null, resto)} className="large" style={{ gap: 28 }}>
           {GROUPES.map(([g, defs]) => (
             <section key={g} className="pile" style={{ gap: 12 }}>
-              <h2 className="surtitre" style={{ fontFamily: 'Lato, sans-serif', letterSpacing: 1.6 }}>{g}</h2>
+              <h2 className="surtitre" style={{ fontFamily: 'Outfit, sans-serif', letterSpacing: 1.6 }}>{g}</h2>
               {defs.map((d) => {
                 const mod = d.champs.filter((c) => R[c.cle] !== PAT[c.cle]);
                 return (
@@ -71,7 +71,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
                         <span key={c.cle} style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                           <label htmlFor={c.cle} style={{ fontSize: 13.5 }}>{c.libelle}</label>
                           <input id={c.cle} name={c.cle} inputMode="decimal" defaultValue={affiche(R[c.cle])}
-                            style={{ width: 64, minHeight: 44, boxSizing: 'border-box', padding: '8px 10px', textAlign: 'center', border: '1.5px solid var(--ligne)', borderRadius: 10, font: '700 15px Lato, sans-serif' }} />
+                            style={{ width: 64, minHeight: 44, boxSizing: 'border-box', padding: '8px 10px', textAlign: 'center', border: '1.5px solid var(--ligne)', borderRadius: 10, font: '700 15px Outfit, sans-serif' }} />
                           {c.suffixe && <span className="discret">{c.suffixe}</span>}
                         </span>
                       ))}
@@ -89,7 +89,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
         <aside className="etroit">
           <div className="carte-bo sticker" style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat.png" alt="" width={54} height={59} />
+            <img src="/pat/pat-illustration-bordeaux.svg" alt="" width={57} height={59} />
             <div className="pile" style={{ gap: 8 }}><b>Chaque réglage se teste</b><span className="discret">Le simulateur montre tout de suite les vins proposés pour chaque plat avec vos réglages.</span>
               <Link href={`/admin/${resto}/simulateur`} className="btn sec petit"><Icone nom="phone" taille={18} />Ouvrir le simulateur</Link></div>
           </div>

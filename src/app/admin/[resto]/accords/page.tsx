@@ -268,7 +268,7 @@ function Commentaire({ resto, platId, vinId, ligne, tous, grand }: { resto: stri
         <summary style={{ cursor: 'pointer', color: 'var(--encre)', fontWeight: 700, fontSize: 13 }}>{ligne?.commentaire_sommelier ? 'Votre commentaire · modifier' : 'Modifier'}</summary>
         <FormulaireAdmin action={modifierCommentaire.bind(null, resto, platId, vinId)} className="pile" style={{ gap: 6, marginTop: 6 }}>
           <textarea name="commentaire" rows={3} maxLength={400} defaultValue={texte ?? ''} aria-label="Commentaire d’accord"
-            style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Lato, sans-serif' }} />
+            style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Outfit, sans-serif' }} />
           {tous && <input type="hidden" name="tous" value="1" />}
           <span><button className="btn petit">Enregistrer</button></span>
           <span className="petit" style={{ opacity: 0.8 }}>Votre texte remplace celui de Pat chez le client ; la régénération ne le touche plus. Videz le champ pour rendre la main à Pat.</span>

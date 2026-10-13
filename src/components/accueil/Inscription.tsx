@@ -120,7 +120,7 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
     <div className={s.cadre}>
       <span className={s.medaillon}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat-logo.png" alt="Pat, le sommelier" width={86} height={95} style={{ transform: 'translateY(3px)' }} />
+        <img src="/pat/pat-illustration-bordeaux.svg" alt="Pat, le sommelier" width={96} height={99} />
       </span>
       <section className={s.carte} aria-labelledby="h-insc">
         <div className={s.carteTitre}><h2 id="h-insc">Faisons connaissance</h2><p>Quelques minutes suffisent pour me mettre au travail.</p></div>

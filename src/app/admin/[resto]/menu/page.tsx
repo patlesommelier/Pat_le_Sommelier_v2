@@ -105,7 +105,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
                 <div className="encadre-rose" style={{ flexDirection: 'column', gap: 8 }}>
                   <span className="surtitre" style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/pat/pat.png" alt="" width={22} height={24} />Profil d’accord préparé par Pat</span>
+                    <img src="/pat/pat-buste-bordeaux.svg" alt="" width={22} height={22} />Profil d’accord préparé par Pat</span>
                   <dl style={{ margin: 0, display: 'grid', gridTemplateColumns: '84px 1fr', gap: '6px 12px' }}>
                     {profil.ancrages?.length ? <><dt style={{ fontWeight: 700 }}>Ancrages</dt><dd style={{ margin: 0 }}>{profil.ancrages.join(', ')}</dd></> : null}
                     {profil.profil && <><dt style={{ fontWeight: 700 }}>Profil</dt><dd style={{ margin: 0 }}>{profil.profil}</dd></>}

@@ -26,8 +26,7 @@ export async function PageAccueil() {
         <header className={s.entete}>
           <Link href="/" className={s.marque}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <span className={s.pastille}><img src="/pat-logo.png" alt="" width={38} height={42} /></span>
-            <span>Pat le sommelier</span>
+            <img src="/pat/pat-logo-rouge.svg" alt="Pat le sommelier" />
           </Link>
           <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
         </header>
