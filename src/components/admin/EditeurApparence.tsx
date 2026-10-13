@@ -91,7 +91,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
     const prefereFonce = logoChoix ? logoChoix === 'fonce' : 1.05 / (lum(initiale) + 0.05) < 3;
     return prefereFonce ? (logoFonce || !logo ? 'fonce' : 'clair') : (logo || !logoFonce ? 'clair' : 'fonce');
   });
-  const [l1, l2] = (accroche ?? `Bienvenue chez ${nom},|nous vous aidons à choisir votre vin`).split('|');
+  const [l1, l2] = (accroche ?? `Bienvenue chez ${nom},|je vous aide à choisir le vin`).split('|');
   const [a1, setA1] = useState(l1 ?? '');
   const [a2, setA2] = useState(l2 ?? '');
 

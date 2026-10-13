@@ -24,7 +24,7 @@ export default async function Accueil({ params, searchParams }: { params: Promis
   const compact = Boolean((await searchParams).menu);
   if (restaurant.page_accueil === 'carte' && !compact) redirect(`/${resto}/carte`);
   const plats = await getPlats(resto);
-  const [brut, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|nous vous aidons à choisir votre vin`).split('|');
+  const [brut, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|je vous aide à choisir le vin`).split('|');
   // Typographie française : espace insécable avant « ! ? : ; » (jamais seuls en début de ligne).
   const titre = brut.trim().replace(/\s+([!?:;])/g, '\u202F$1');
   // Titre sur une seule ligne : la taille diminue un peu pour un nom long (27 px au plus).

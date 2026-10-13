@@ -69,7 +69,7 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     await requete(
       `insert into restaurant (id, nom, couleur, couleur_claire, accroche, statut, ville, origine, cree_par)
        values ($1, $2, $3, $4, $5, 'mise_en_place', $6, 'inscription', $7)`,
-      [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant},|nous vous aidons à choisir votre vin`, i.ville, email]);
+      [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant},|je vous aide à choisir le vin`, i.ville, email]);
     await majInscription(inscriptionId, { restaurant_id: restaurantId });
   } else {
     // Reprise après une erreur : on repart d'une carte et d'un menu vides pour ne rien dupliquer.
