@@ -244,3 +244,10 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .bandeau.grand .bandeau-haut { padding-bottom: calc(12px + 6px * var(--repli, 0)); }
 .bandeau.grand .bandeau-haut .logo img { height: calc(var(--logo-grand, 73px) - (var(--logo-grand, 73px) - var(--logo-replie, 50px)) * var(--repli, 0)) !important; }
 .bandeau.grand .logo-pat-pastille { width: calc(64px - 14px * var(--repli, 0)); height: calc(64px - 14px * var(--repli, 0)); }
+
+/* Tirer la page vers le bas : le fond qui apparaît en haut est la couleur du bandeau (blanc en bas) ; les plats gardent leur fond. */
+.accueil-defile { background: linear-gradient(to bottom, var(--marque) 0, var(--marque) 50%, var(--fond, #FFFFFF) 50%); }
+.accueil-defile > .contenu { background: var(--fond, #FFFFFF); flex-grow: 1; }
+/* Choix des plats depuis la carte des vins : une ligne au lieu du grand bandeau. */
+.accueil-compact { margin: 0; padding: 20px 20px 0; text-align: center; font-size: 18px; font-style: italic; color: var(--marque-texte, var(--marque)); }
+.accueil-compact span { display: block; font-size: 15px; font-style: normal; color: var(--discret); margin-top: 4px; }

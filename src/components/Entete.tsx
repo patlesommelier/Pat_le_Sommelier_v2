@@ -37,7 +37,7 @@ export function Entete({ restaurant, retour, grand = false, surLaCarte = false, 
             : <LogoPat nom={restaurant.nom} />}
         </Link>
         {surLaCarte ? (
-          <Link href={menuDe(restaurant)} className="bouton-carte">
+          <Link href={`/${restaurant.id}?menu=1` /* choix des plats sans le grand bandeau d'accueil */} className="bouton-carte">
             <Couverts />
             <span>Sommelier</span>
           </Link>

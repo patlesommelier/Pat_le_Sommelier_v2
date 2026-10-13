@@ -20,7 +20,9 @@ export default async function Accueil({ params, searchParams }: { params: Promis
   const restaurant = await getRestaurant(resto);
   if (!restaurant) notFound();
   // Page d'arrivée choisie par le restaurant : la carte des vins (le bouton « Sommelier » ramène ici avec ?menu=1).
-  if (restaurant.page_accueil === 'carte' && !(await searchParams).menu) redirect(`/${resto}/carte`);
+  // ?menu=1 : on vient de la carte des vins (bouton « Sommelier ») : le choix des plats, sans le grand bandeau d'accueil.
+  const compact = Boolean((await searchParams).menu);
+  if (restaurant.page_accueil === 'carte' && !compact) redirect(`/${resto}/carte`);
   const plats = await getPlats(resto);
   const [brut, sousTitre] = (restaurant.accroche ?? `Bienvenue chez ${restaurant.nom},|nous vous aidons à choisir votre vin`).split('|');
   // Typographie française : espace insécable avant « ! ? : ; » (jamais seuls en début de ligne).
@@ -30,10 +32,13 @@ export default async function Accueil({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Entete restaurant={restaurant} grand />
-      <RepliBandeau />
-      <main className="defile">
+      <Entete restaurant={restaurant} grand={!compact} />
+      {!compact && <RepliBandeau />}
+      <main className={`defile${compact ? '' : ' accueil-defile'}`}>
         {/* Le haut de l'accueil fait partie de la page : il défile avec les plats, à la vitesse du doigt. */}
+        {compact ? (
+          <p className="accueil-compact">Qu’allez-vous manger&#8239;? <span>Je choisis le vin pour vous.</span></p>
+        ) : (
         <div className="accueil-hero bandeau-suite">
           <div className="accueil-texte">
             <div className="accueil-titre">
@@ -45,6 +50,7 @@ export default async function Accueil({ params, searchParams }: { params: Promis
           </div>
           <Silhouettes />
         </div>
+        )}
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
           <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({
             titre: g.titre,
