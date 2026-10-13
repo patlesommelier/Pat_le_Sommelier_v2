@@ -238,3 +238,13 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .pictos-vin { display: inline-flex; align-items: center; gap: 5px; margin-left: 6px; vertical-align: -1px; }
 .pictos-vin .coeur { margin-left: 0; }
 .picto { display: block; }
+
+/* ── Accueil : bandeau replié quand on fait défiler vers les plats ── */
+.bandeau.grand .accueil-hero { max-height: 420px; overflow: hidden; transition: max-height .28s ease, opacity .2s ease, padding .28s ease; }
+.bandeau.grand.replie .accueil-hero { max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0; }
+.bandeau.grand .bandeau-haut { transition: padding .28s ease; }
+.bandeau.grand.replie .bandeau-haut { padding-top: 10px; padding-bottom: 10px; }
+.bandeau.grand .bandeau-haut .logo img { transition: height .28s ease; }
+.bandeau.grand.replie .bandeau-haut .logo img { height: 40px !important; }
+.bandeau.grand.replie .logo-pat-pastille { width: 42px; height: 42px; }
+@media (prefers-reduced-motion: reduce) { .bandeau.grand .accueil-hero, .bandeau.grand .bandeau-haut, .bandeau.grand .bandeau-haut .logo img { transition: none; } }

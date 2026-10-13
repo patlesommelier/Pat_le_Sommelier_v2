@@ -1,4 +1,5 @@
 import { ChoixPlats } from '@/components/ChoixPlats';
+import { RepliBandeau } from '@/components/RepliBandeau';
 import { appOuverte } from '@/lib/ouverture';
 import { notFound, redirect } from 'next/navigation';
 import { Entete } from '@/components/Entete';
@@ -42,6 +43,7 @@ export default async function Accueil({ params, searchParams }: { params: Promis
           <Silhouettes />
         </div>
       </Entete>
+      <RepliBandeau />
       <main className="defile">
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
           <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({

@@ -37,12 +37,14 @@ export function ChoixPlats({ resto, groupes }: { resto: string; groupes: { titre
           </div>
         </section>
       ))}
-      <div className="envoi-plats">
-        <button type="button" className="bouton-plein" disabled={!choisis.length || envoi} onClick={envoyer}>
-          {envoi ? 'Je cherche…' : !choisis.length ? 'Choisissez un ou plusieurs plats'
-            : choisis.length === 1 ? 'Trouver mon vin' : `Trouver un vin pour ces ${choisis.length} plats`}
-        </button>
-      </div>
+      {/* Le bouton n'apparaît qu'une fois un plat choisi : avant, toute la place va aux plats. */}
+      {choisis.length > 0 && (
+        <div className="envoi-plats">
+          <button type="button" className="bouton-plein" disabled={envoi} onClick={envoyer}>
+            {envoi ? 'Je cherche…' : choisis.length === 1 ? 'Trouver mon vin' : `Trouver un vin pour ces ${choisis.length} plats`}
+          </button>
+        </div>
+      )}
     </>
   );
 }
