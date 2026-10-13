@@ -33,7 +33,7 @@ export function Entete({ restaurant, retour, grand = false, surLaCarte = false, 
             ? <img src={logo.url} alt={restaurant.nom}
                 style={{ height: hauteurLogo(logo.ratio, grand), maxWidth: '100%', objectFit: 'contain', objectPosition: 'left center',
                   // bandeau d'accueil replié : la taille du logo des autres pages (carte des vins)
-                  ['--logo-replie' as string]: `${hauteurLogo(logo.ratio, false)}px` }} />
+                  ['--logo-grand' as string]: `${hauteurLogo(logo.ratio, true)}px`, ['--logo-replie' as string]: `${hauteurLogo(logo.ratio, false)}px` }} />
             : <LogoPat nom={restaurant.nom} />}
         </Link>
         {surLaCarte ? (

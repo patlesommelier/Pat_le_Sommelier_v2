@@ -239,13 +239,8 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .pictos-vin .coeur { margin-left: 0; }
 .picto { display: block; }
 
-/* ── Accueil : bandeau replié quand on fait défiler vers les plats ── */
-.bandeau.grand .accueil-hero { max-height: 420px; overflow: hidden; transition: max-height .28s ease, opacity .2s ease, padding .28s ease; }
-.bandeau.grand.replie .accueil-hero { max-height: 0; opacity: 0; padding-top: 0; padding-bottom: 0; }
-.bandeau.grand .bandeau-haut { transition: padding .28s ease; }
-.bandeau.grand.replie .bandeau-haut { padding-top: 18px; padding-bottom: 18px; } /* comme le bandeau de la carte des vins */
-.bandeau.grand .bandeau-haut .logo img { transition: height .28s ease; }
-.bandeau.grand.replie .bandeau-haut .logo img { height: var(--logo-replie, 50px) !important; }
-.bandeau.grand.replie .logo-pat-pastille { width: 50px; height: 50px; }
-.bandeau.grand.replie .logo-pat-nom { font-size: 19px; }
-@media (prefers-reduced-motion: reduce) { .bandeau.grand .accueil-hero, .bandeau.grand .bandeau-haut, .bandeau.grand .bandeau-haut .logo img { transition: none; } }
+/* ── Accueil : le haut défile avec les plats ; le logo du bandeau rétrécit au même rythme (--repli de 0 à 1) ── */
+.bandeau-suite { background: var(--marque); color: var(--sur-marque, #FFFFFF); flex-shrink: 0; }
+.bandeau.grand .bandeau-haut { padding-bottom: calc(12px + 6px * var(--repli, 0)); }
+.bandeau.grand .bandeau-haut .logo img { height: calc(var(--logo-grand, 73px) - (var(--logo-grand, 73px) - var(--logo-replie, 50px)) * var(--repli, 0)) !important; }
+.bandeau.grand .logo-pat-pastille { width: calc(64px - 14px * var(--repli, 0)); height: calc(64px - 14px * var(--repli, 0)); }

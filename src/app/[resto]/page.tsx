@@ -30,8 +30,11 @@ export default async function Accueil({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Entete restaurant={restaurant} grand>
-        <div className="accueil-hero">
+      <Entete restaurant={restaurant} grand />
+      <RepliBandeau />
+      <main className="defile">
+        {/* Le haut de l'accueil fait partie de la page : il défile avec les plats, à la vitesse du doigt. */}
+        <div className="accueil-hero bandeau-suite">
           <div className="accueil-texte">
             <div className="accueil-titre">
               <div style={{ fontSize: tailleTitre, whiteSpace: 'nowrap' }}>{titre}</div>
@@ -42,9 +45,6 @@ export default async function Accueil({ params, searchParams }: { params: Promis
           </div>
           <Silhouettes />
         </div>
-      </Entete>
-      <RepliBandeau />
-      <main className="defile">
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
           <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({
             titre: g.titre,
