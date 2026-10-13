@@ -10,6 +10,36 @@ const claire = (h: string) => { const [r, g, b] = rgb(h); return hex(r + (255 - 
 const valide = (h: string) => /^#[0-9a-f]{6}$/i.test(h);
 
 /** Couleurs dominantes d'une photo (calculées dans le navigateur, la photo n'est pas envoyée). */
+/**
+ * Couleur du fond d'un logo : la couleur la plus fréquente sur son pourtour (pixels opaques), lue dans le fichier lui-même.
+ * Plus juste que la pipette de l'ordinateur, qui mesure l'écran (sur Mac, dans un autre espace de couleurs : teinte décalée).
+ * null : fond transparent (pas de couleur de fond à reprendre).
+ */
+async function couleurDuFond(source: string): Promise<string | null> {
+  const img = new Image();
+  img.crossOrigin = 'anonymous';
+  img.src = source;
+  await img.decode();
+  const l = Math.min(img.naturalWidth, 600), h = Math.round(img.naturalHeight * (l / img.naturalWidth));
+  const toile = document.createElement('canvas');
+  toile.width = l; toile.height = h;
+  const ctx = toile.getContext('2d', { colorSpace: 'srgb' } as CanvasRenderingContext2DSettings)!;
+  ctx.drawImage(img, 0, 0, l, h);
+  const { data } = ctx.getImageData(0, 0, l, h);
+  const compte = new Map<string, number>();
+  const prendre = (x: number, y: number) => {
+    const i = (y * l + x) * 4;
+    if (data[i + 3] < 250) return;
+    const hex = '#' + [data[i], data[i + 1], data[i + 2]].map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase();
+    compte.set(hex, (compte.get(hex) ?? 0) + 1);
+  };
+  for (let x = 0; x < l; x++) { prendre(x, 0); prendre(x, 1); prendre(x, h - 1); prendre(x, h - 2); }
+  for (let y = 0; y < h; y++) { prendre(0, y); prendre(1, y); prendre(l - 1, y); prendre(l - 2, y); }
+  const [meilleure] = [...compte.entries()].sort((a, b) => b[1] - a[1]);
+  // Un fond : au moins un quart du pourtour de la même couleur.
+  return meilleure && meilleure[1] >= (2 * (l + h)) / 4 ? meilleure[0] : null;
+}
+
 async function couleursDePhoto(f: File): Promise<string[]> {
   const url = URL.createObjectURL(f);
   try {
@@ -71,6 +101,17 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   const logoAffiche = choix === 'fonce' ? apercuLogoFonce ?? apercuLogo : apercuLogo ?? apercuLogoFonce;
 
   const choisir = (h: string) => { setCouleur(h); setSaisie(h); };
+  const [messageFond, setMessageFond] = useState<string | null>(null);
+  const reprendreFond = async () => {
+    setMessageFond(null);
+    for (const source of [logoAffiche, apercuLogo, apercuLogoFonce].filter((x): x is string => Boolean(x))) {
+      try {
+        const c = await couleurDuFond(source);
+        if (c) { choisir(c); setMessageFond(`Couleur du fond du logo reprise : ${c}.`); return; }
+      } catch { /* image illisible ici : on essaie l'autre logo */ }
+    }
+    setMessageFond('Pas de couleur de fond à reprendre : le logo a un fond transparent.');
+  };
 
   return (
     <FormulaireAdmin action={action} className="rangee">
@@ -109,6 +150,12 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
                   <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#FFF' }} />
                 </span>
               </div>
+              {(apercuLogo || apercuLogoFonce) && (
+                <div className="champ">
+                  <button type="button" className="btn sec petit" onClick={reprendreFond}>Reprendre la couleur du fond du logo</button>
+                  <span className="aide">{messageFond ?? 'La couleur exacte du fond de votre logo, lue dans le fichier (plus juste que la pipette de l’ordinateur).'}</span>
+                </div>
+              )}
             </div>
           </div>
           <div style={{ borderTop: '1px solid var(--ligne)', paddingTop: 14, display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center' }}>
