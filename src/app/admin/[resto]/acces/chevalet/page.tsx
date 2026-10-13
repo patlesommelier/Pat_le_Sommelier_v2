@@ -43,7 +43,7 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
       <div style={bande(BORDEAUX, ROUGE, '5.6mm')}>Pat le sommelier</div>
       <div style={{ ...carreRouge, flexGrow: 1 }}>
         <b style={{ color: BORDEAUX, fontSize: '5mm' }}>Que boire avec ça ?</b>
-        {pat('40mm')}
+        {pat('54mm')}
       </div>
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>
         {qr('24mm')}
@@ -56,7 +56,7 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     2: (<>
       <b style={{ color: BORDEAUX, fontSize: '6.4mm', textAlign: 'center' }}>Pat le sommelier</b>
       <div style={bande(ROSE, ROUGE, '5mm')}>Que boire avec ça ?</div>
-      <div style={{ ...carreRouge, flexGrow: 1 }}>{pat('38mm')}</div>
+      <div style={{ ...carreRouge, flexGrow: 1 }}>{pat('50mm')}</div>
       <div style={bande(KAKI, BORDEAUX, '5mm')}>L’accord parfait</div>
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>
         {qr('22mm')}
@@ -66,7 +66,7 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     3: (<>
       <div style={{ ...carreRouge, flexGrow: 1 }}>
         <b style={{ color: BORDEAUX, fontSize: '8.5mm', lineHeight: 1.05, textAlign: 'center' }}>Que boire<br />avec ça ?</b>
-        {pat('42mm')}
+        {pat('52mm')}
         <b style={{ color: BORDEAUX, fontSize: '4.6mm' }}>Pat le sommelier</b>
       </div>
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>

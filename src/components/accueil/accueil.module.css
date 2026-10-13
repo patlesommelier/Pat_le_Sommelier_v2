@@ -90,7 +90,7 @@
 .qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
 .quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FF0D05;
   box-shadow: 0 30px 60px -30px rgba(36,31,32,0.6); display: flex; align-items: center; justify-content: center; }
-.quiMedaillon img { width: 78%; height: auto; }
+.quiMedaillon img { height: 86%; width: auto; }
 .quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
 .quiTexte h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px); font-weight: 700; letter-spacing: -0.8px; }
 .quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: #EFEBE9; }
@@ -107,7 +107,7 @@
   .entete { padding: 0 24px; }
   .qui { flex-direction: column; align-items: flex-start; padding: 56px 24px; }
 }
-@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { width: 78%; height: auto; } }
+@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { height: 86%; width: auto; } }
 /* Fin de l'inscription : préparation des accords, puis QR code */
 .barre { display: block; height: 10px; border-radius: 5px; background: #EFEBE9; overflow: hidden; }
 .barre span { display: block; height: 100%; background: #680021; transition: width .4s; }

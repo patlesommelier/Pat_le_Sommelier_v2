@@ -181,7 +181,7 @@ a.bouton-plein { text-decoration: none; }
 
 /* Pat qui attend avec vous : petits pas dandinés, ombre qui respire (composant PatAttente). */
 .pat-attente { position: relative; display: inline-flex; align-items: flex-end; justify-content: center; flex-shrink: 0; }
-.pat-attente img { position: relative; z-index: 1; width: 100%; height: auto; transform-origin: 50% 92%; animation: pat-pas 1.2s ease-in-out infinite; }
+.pat-attente img { position: relative; z-index: 1; height: 100%; width: auto; transform-origin: 50% 92%; animation: pat-pas 1.2s ease-in-out infinite; }
 .pat-attente::after { content: ''; position: absolute; bottom: 0; left: 18%; width: 64%; height: 9%; border-radius: 50%;
   background: rgba(36, 21, 26, 0.18); animation: pat-ombre 1.2s ease-in-out infinite; }
 @keyframes pat-pas {
@@ -260,7 +260,7 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .ouverture-carre { width: min(78vw, 340px); height: min(78vw, 340px); box-sizing: border-box; padding: 22px 18px 16px; overflow: hidden; border-radius: 28px; background: #FF0D05; color: #680021;
   display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; animation: ouverture-entree .45s ease-out; }
 .ouverture-carre b { font-size: clamp(30px, 9vw, 40px); font-weight: 700; line-height: 1.02; }
-.ouverture-carre img { height: 48%; width: auto; min-height: 0; }
+.ouverture-carre img { height: 56%; width: auto; min-height: 0; }
 .ouverture-carre span { font-size: 18px; font-weight: 700; }
 .ouverture-pat small { font-size: 14px; font-weight: 700; color: #241F20; }
 @keyframes ouverture-entree { from { transform: scale(.92); opacity: 0; } to { transform: none; opacity: 1; } }

@@ -4,7 +4,7 @@ export function PatAttente({ taille = 56 }: { taille?: number }) {
   return (
     <span className="pat-attente" style={{ width: taille, height: Math.round(taille * 1.14) }} aria-hidden="true">
       {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src="/pat/pat-illustration-bordeaux.svg" alt="" width={taille} height={Math.round(taille * 1.03)} />
+      <img src="/pat/pat-illustration-rouge.svg" alt="" width={Math.round(taille * 1.14 * 0.472)} height={Math.round(taille * 1.14)} />
     </span>
   );
 }
