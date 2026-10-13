@@ -28,7 +28,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
 
   return (
     <>
-      {/* Carte choisie comme page d'arrivée : pas de flèche retour (le bouton « Menu » mène au menu). */}
+      {/* Carte choisie comme page d'arrivée : pas de flèche retour (le bouton « Sommelier » mène au menu). */}
       <Entete restaurant={restaurant} retour={restaurant.page_accueil === 'carte' ? undefined : menuDe(restaurant)} surLaCarte />
       <main className="defile">
         <div className="titre-page" style={{ padding: '24px 20px 12px' }}>

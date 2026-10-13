@@ -203,7 +203,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <label className="case"><input type="radio" name="page_accueil" value="menu" defaultChecked={pageAccueil !== 'carte'} />
             <span><b>Le menu, avec le sommelier</b><small>Le client choisit son plat, Pat lui propose des vins.</small></span></label>
           <label className="case"><input type="radio" name="page_accueil" value="carte" defaultChecked={pageAccueil === 'carte'} />
-            <span><b>La carte des vins</b><small>Le menu et le sommelier restent accessibles par le bouton « Menu ».</small></span></label>
+            <span><b>La carte des vins</b><small>Le menu et le sommelier restent accessibles par le bouton « Sommelier ».</small></span></label>
         </section>
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>

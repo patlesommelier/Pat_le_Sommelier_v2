@@ -12,7 +12,7 @@ function hauteurLogo(ratio: number | null | undefined, grand: boolean) {
 
 
 /**
- * Bandeau du haut : retour discret, logo, bouton « Carte des vins » (sur la carte des vins : bouton « Menu », qui ramène
+ * Bandeau du haut : retour discret, logo, bouton « Carte des vins » (sur la carte des vins : bouton « Sommelier », qui ramène
  * au choix des plats). Reste visible quand on fait défiler.
  */
 export function Entete({ restaurant, retour, grand = false, surLaCarte = false, children }: {
@@ -37,7 +37,7 @@ export function Entete({ restaurant, retour, grand = false, surLaCarte = false, 
         {surLaCarte ? (
           <Link href={menuDe(restaurant)} className="bouton-carte">
             <Couverts />
-            <span>Menu</span>
+            <span>Sommelier</span>
           </Link>
         ) : (
           <Link href={`/${restaurant.id}/carte`} className="bouton-carte">
