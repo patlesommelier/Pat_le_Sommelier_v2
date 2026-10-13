@@ -1,6 +1,7 @@
 import { notFound } from 'next/navigation';
 import type { CSSProperties } from 'react';
 import { BarrePat } from '@/components/BarrePat';
+import { OuverturePat } from '@/components/OuverturePat';
 import { couleurClaire } from '@/lib/couleurs';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
@@ -47,6 +48,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   await requete('update restaurant set premier_scan_le = now() where id = $1 and premier_scan_le is null', [restaurant.id]);
   return (
     <div className="ecran" style={theme}>
+      <OuverturePat restaurant={restaurant.id} nom={restaurant.nom} />
       {children}
       <BarrePat restaurant={restaurant.id} nom={restaurant.nom} />
     </div>

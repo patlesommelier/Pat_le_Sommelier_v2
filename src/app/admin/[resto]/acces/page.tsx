@@ -60,7 +60,7 @@ export default async function Acces({ params, searchParams }: { params: Promise<
                 <div className="ligne-actions">
                   <a href={`/admin/${resto}/acces/qr?format=png`} className="btn sec petit"><Icone nom="download" taille={18} />PNG</a>
                   <a href={`/admin/${resto}/acces/qr?format=svg`} className="btn sec petit"><Icone nom="download" taille={18} />SVG</a>
-                  <Link href={`/admin/${resto}/acces/chevalet`} className="btn petit"><Icone nom="print" taille={18} />Chevalet de table</Link>
+                  <Link href={`/admin/${resto}/acces/chevalet`} className="btn petit"><Icone nom="print" taille={18} />Chevalet de table (3 modèles)</Link>
                 </div>
               </div>
             </div>

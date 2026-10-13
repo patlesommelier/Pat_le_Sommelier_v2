@@ -252,3 +252,16 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 /* Choix des plats depuis la carte des vins : une ligne au lieu du grand bandeau. */
 .accueil-compact { margin: 0; padding: 20px 20px 0; text-align: center; font-size: 18px; font-style: italic; color: var(--marque-texte, var(--marque)); }
 .accueil-compact span { display: block; font-size: 15px; font-style: normal; color: var(--discret); margin-top: 4px; }
+
+/* ── Écran d'ouverture (identité de Pat : rouge #FF0D05, bordeaux #680021, police Outfit) ── */
+.ouverture-pat { position: fixed; inset: 0; z-index: 50; background: #FFFFFF; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+  font-family: Outfit, 'Helvetica Neue', sans-serif; transition: opacity .4s ease; cursor: pointer; }
+.ouverture-pat.sortie { opacity: 0; }
+.ouverture-carre { width: min(78vw, 340px); height: min(78vw, 340px); box-sizing: border-box; padding: 22px 18px 16px; overflow: hidden; border-radius: 28px; background: #FF0D05; color: #680021;
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between; text-align: center; animation: ouverture-entree .45s ease-out; }
+.ouverture-carre b { font-size: clamp(30px, 9vw, 40px); font-weight: 700; line-height: 1.02; }
+.ouverture-carre img { height: 48%; width: auto; min-height: 0; }
+.ouverture-carre span { font-size: 18px; font-weight: 700; }
+.ouverture-pat small { font-size: 14px; color: #6B6062; }
+@keyframes ouverture-entree { from { transform: scale(.92); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .ouverture-carre { animation: none; } .ouverture-pat { transition: none; } }
