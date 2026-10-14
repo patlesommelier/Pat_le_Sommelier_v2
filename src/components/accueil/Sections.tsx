@@ -1,5 +1,6 @@
 // Sections de la page d'accueil : « Ce que je change dans votre restaurant », « Sous le capot »
 // et « Qui est vraiment Pat ? ». Textes validés par Pat.
+// Avantages et Fonctionnalites ne sont plus affichées sur la page d'accueil (gardées pour plus tard) ; seule QuiEstPat y est.
 import s from './accueil.module.css';
 
 const Ic = ({ d }: { d: string }) => (

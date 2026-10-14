@@ -1,13 +1,14 @@
-// Page d'accueil de Pat le sommelier — maquette « Page d'accueil · inscription (3 niveaux) » :
-//   1. présentation (bordeaux) : titre, texte, QR et app de démo Chez Pat ;
-//   2. « Qu'est-ce que Pat vous apporte ? » (crème) ;
-//   3. activation (bordeaux) : formulaire doré, une étape à la fois ;
-//   4. « Fonctionnalités » (crème) ; puis le pied de page.
+// Page d'accueil de Pat le sommelier, en trois parties :
+//   1. présentation (bordeaux) : titre, texte, QR et grand téléphone avec l'app de démo Chez Pat ;
+//   2. activation (crème #FEFAF1) : dépôt du menu et de la carte, une étape à la fois ;
+//   3. « Qui est vraiment Pat ? » (bordeaux) ; puis le pied de page.
+// « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) sont retirées de la page
+// mais gardées dans Sections.tsx pour plus tard.
 import Link from 'next/link';
 import s from './accueil.module.css';
 import { Inscription } from './Inscription';
 import { TelephoneDemo } from './TelephoneDemo';
-import { Avantages, Fonctionnalites, QuiEstPat } from './Sections';
+import { QuiEstPat } from './Sections';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
@@ -42,18 +43,14 @@ export async function PageAccueil() {
               <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={130} height={130} />
               <span>Scannez, choisissez un plat, et voyez ce que je raconte à vos clients.</span>
             </div>
-            <TelephoneDemo />
+            <TelephoneDemo echelle={0.95} />
           </div>
         </div>
       </section>
 
-      <Avantages />
-
-      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.bordeaux} ${s.activation}`}>
+      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.creme} ${s.activation}`}>
         <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
       </section>
-
-      <Fonctionnalites />
 
       <QuiEstPat />
 
