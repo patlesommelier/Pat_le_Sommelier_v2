@@ -5,7 +5,13 @@
 .bordeaux { position: relative; overflow: hidden; color: #EFEBE9;
   background: #680021; }
 .halo { display: none; }
-.creme { background: #EFEBE9; }
+.creme { background: #FEFAF1; }
+/* Bandeaux clairs (#FEFAF1, fond de l'illustration de Pat) : titres en rouge comme l'illustration, intertitres en bordeaux, textes en noir */
+.creme .titreSection { color: #FF0D05; }
+.creme .chapeau, .creme .cartes p, .creme .fonctions p { color: #241F20; }
+.creme .cartes h3, .creme .fonctions h3 { color: #680021; }
+.creme .cartes li { background: #FEFAF1; border: 1.5px solid #EB9D92; }
+.creme .fonctions li { border-top-color: #EB9D92; }
 /* Bloc du haut : bordeaux de la palette, logo carré (bordeaux, « Pat le sommelier » en rouge) en haut à gauche */
 .haut { position: relative; overflow: hidden; background: #680021; color: #EFEBE9; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
