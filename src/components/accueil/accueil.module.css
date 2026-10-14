@@ -6,13 +6,10 @@
   background: #680021; }
 .halo { display: none; }
 .creme { background: #EFEBE9; }
-/* Bloc du haut : fond crème de l'illustration de Pat, textes foncés */
-.haut { position: relative; overflow: hidden; background: #FEFAF1; color: #241F20; }
-.haut .texte { color: #241F20; }
-.haut .connexion { color: #680021; }
+/* Bloc du haut : bordeaux de la palette, logo carré (bordeaux, « Pat le sommelier » en rouge) en haut à gauche */
+.haut { position: relative; overflow: hidden; background: #680021; color: #EFEBE9; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
-.haut .marque img { height: 108px; }
-.haut .qr { border: 1.5px solid #241F20; }
+.haut .marque img { height: 88px; width: 88px; border-radius: 12px; }
 .titreSection { margin: 0; text-align: center; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px);
   font-weight: 700; letter-spacing: -0.8px; color: #680021; }
 
