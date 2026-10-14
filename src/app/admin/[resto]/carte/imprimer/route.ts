@@ -56,7 +56,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const sansPresentation = vins.filter((v) => v.visible && !v.presentationPerso && !lignes.find((l) => l.id === v.id)?.presentation_carte).length;
 
   const html = genererCarteHTML({
-    restaurant: { nom: r.nom, logoUrl: logoAffiche(r)?.url ?? null, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-buste-bordeaux.svg', req.url).href },
+    restaurant: { nom: r.nom, logoUrl: logoAffiche(r)?.url ?? null, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
     vins, options, barre: barreOutils(resto, options, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });

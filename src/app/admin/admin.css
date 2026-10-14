@@ -1,17 +1,17 @@
 /* Back-office de Pat le sommelier — identité 2026 : uniquement les 7 couleurs de la palette (crème #EFEBE9, gris #AFB0AE,
-   kaki #BDB074, rose #EB9D92, rouge #FF0D05, bordeaux #680021, noir #241F20) et uniquement la police Outfit Bold. */
+   fuchsia #DE0454, rose #EB9D92, rouge #FF0D05, bordeaux #680021, noir #241F20) et uniquement la police Outfit Bold. */
 .bo {
   --encre: #680021;
   --encre-fonce: #680021;
   --rouge: #FF0D05;
   --rose-pat: #EB9D92;
-  --kaki: #BDB074;
+  --fuchsia: #DE0454;
   --texte: #241F20;
   --discret: #241F20;
   --ligne: #AFB0AE;
   --fond: #EFEBE9;
   --rose: #EB9D92;
-  --vert: #241F20; --vert-fond: #BDB074;
+  --vert: #241F20; --vert-fond: #DE0454;
   --ocre: #241F20; --ocre-fond: #EB9D92;
   --gris-fond: #EFEBE9; --gris: #241F20;
   --titre: Outfit, 'Avenir Next', 'Helvetica Neue', sans-serif;
@@ -84,7 +84,7 @@
 
 /* ── Pastilles d'état ── */
 .etat { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; white-space: nowrap; background: #EFEBE9; color: var(--discret); border: 1px solid var(--ligne); }
-.etat.ok { background: var(--vert-fond); color: var(--vert); border-color: var(--vert-fond); }
+.etat.ok { background: var(--vert-fond); color: #EFEBE9; border-color: var(--vert-fond); }
 .etat.propose { background: var(--rose); color: var(--encre); border-color: var(--rose); }
 .etat.attention { background: var(--ocre-fond); color: var(--ocre); border-color: var(--ocre-fond); }
 .etat.defaut { background: var(--gris-fond); color: var(--gris); border-color: var(--gris-fond); }
@@ -123,7 +123,7 @@
 .case input { width: 20px; height: 20px; accent-color: var(--encre); margin: 0; flex-shrink: 0; }
 .case small { display: block; color: var(--discret); font-size: 13px; }
 .message { margin: 0; padding: 12px 14px; border-radius: 12px; font-size: 14px; line-height: 1.45; }
-.message.ok { background: var(--vert-fond); color: var(--vert); }
+.message.ok { background: var(--vert-fond); color: #EFEBE9; }
 .message.erreur { background: #EB9D92; color: #680021; }
 
 .points { display: inline-flex; gap: 4px; }

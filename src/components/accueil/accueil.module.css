@@ -1,5 +1,5 @@
 /* Pat le sommelier — page d'accueil en trois niveaux (+ fonctionnalités).
-   Identité 2026 : bordeaux #680021, rouge #FF0D05, rose #EB9D92, kaki #BDB074, crème #EFEBE9, noir #241F20 ; police Outfit. */
+   Identité 2026 : bordeaux #680021, rouge #FF0D05, rose #EB9D92, fuchsia #DE0454, crème #EFEBE9, noir #241F20 ; police Outfit. */
 .page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; }
 .page * { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700 !important; } /* identité : Outfit Bold uniquement */
 .bordeaux { position: relative; overflow: hidden; color: #EFEBE9;
@@ -53,7 +53,7 @@
   background: #FEFAF1; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
   display: flex; align-items: center; justify-content: center; }
 .carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
-  background: #BDB074;
+  background: #EB9D92;
   box-shadow: 0 30px 60px -28px rgba(36,31,32,0.6); display: flex; flex-direction: column; gap: 22px; }
 .carteTitre { padding-left: 110px; min-height: 58px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
 .carteTitre h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
@@ -62,12 +62,12 @@
   border: 2px dashed #680021; border-radius: 16px; background: #EFEBE9; cursor: pointer; font-size: 17px; font-weight: 700; }
 .depot[data-survol='true'] { border-color: #FF0D05; background: #EFEBE9; }
 .depot:focus-within { outline: 3px solid #680021; outline-offset: 2px; }
-.icone { width: 48px; height: 48px; border-radius: 13px; background: #EFEBE9; border: 1px solid #BDB074; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.icone { width: 48px; height: 48px; border-radius: 13px; background: #EFEBE9; border: 1px solid #EB9D92; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; font-size: 17px; font-weight: 700; }
-.roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #BDB074; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
+.roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #EB9D92; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
 @keyframes tourne { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .roue { animation-duration: 3s; } }
-.trouve { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; border: 1.5px solid #BDB074; }
+.trouve { display: flex; align-items: center; gap: 16px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; border: 1.5px solid #DE0454; }
 .coche { width: 48px; height: 48px; border-radius: 24px; background: #680021; color: #EFEBE9; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .nombre { flex: 1; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; color: #680021; }
 .lien { display: inline-flex; align-items: center; min-height: 44px; padding: 0 8px; border: 0; background: none; font: 700 15.5px Outfit, sans-serif; color: #680021; text-decoration: underline; cursor: pointer; }
@@ -83,7 +83,7 @@
 .ligne > * { flex: 1 1 240px; }
 .champ { display: flex; flex-direction: column; gap: 6px; }
 .champ label { font-size: 14.5px; font-weight: 700; }
-.champ input { box-sizing: border-box; width: 100%; min-height: 50px; padding: 12px 14px; border: 1.5px solid #BDB074; border-radius: 12px; background: #EFEBE9; font: 16px Outfit, sans-serif; color: #241F20; }
+.champ input { box-sizing: border-box; width: 100%; min-height: 50px; padding: 12px 14px; border: 1.5px solid #680021; border-radius: 12px; background: #EFEBE9; font: 16px Outfit, sans-serif; color: #241F20; }
 .champ input:focus-visible { outline: 3px solid #680021; outline-offset: 1px; }
 .cgu { display: flex; align-items: flex-start; gap: 12px; min-height: 44px; font-size: 15px; line-height: 1.5; cursor: pointer; }
 .cgu input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: #680021; flex-shrink: 0; }
@@ -100,7 +100,7 @@
 .qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
 .quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FEFAF1;
   box-shadow: 0 30px 60px -30px rgba(36,31,32,0.6); display: flex; align-items: center; justify-content: center; }
-.quiMedaillon img { height: 86%; width: auto; }
+.quiMedaillon img { width: 84%; height: auto; }
 .quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
 .quiTexte h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px); font-weight: 700; letter-spacing: -0.8px; }
 .quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: #EFEBE9; }
@@ -117,7 +117,7 @@
   .entete { padding: 0 24px; }
   .qui { flex-direction: column; align-items: flex-start; padding: 56px 24px; }
 }
-@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { height: 86%; width: auto; } }
+@media (max-width: 640px) { .cartes, .fonctions { grid-template-columns: 1fr; } .demo { display: none; } .carteTitre { padding-left: 0; padding-top: 70px; } .quiMedaillon { width: 180px; height: 180px; } .quiMedaillon img { width: 84%; height: auto; } }
 /* Fin de l'inscription : préparation des accords, puis QR code */
 .barre { display: block; height: 10px; border-radius: 5px; background: #EFEBE9; overflow: hidden; }
 .barre span { display: block; height: 100%; background: #680021; transition: width .4s; }

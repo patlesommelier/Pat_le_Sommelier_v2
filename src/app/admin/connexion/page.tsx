@@ -12,7 +12,7 @@ export default async function Connexion({ searchParams }: { searchParams: Promis
       <div className="carte-bo sticker">
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/pat/pat-illustration-rouge.svg" alt="" width={34} height={72} />
+          <img src="/pat/pat-attable-rouge.svg" alt="" width={79} height={62} />
           <div><h1 style={{ margin: 0 }}><img src="/pat/pat-logo-bordeaux.svg" alt="Pat le sommelier" style={{ height: 46, display: 'block' }} /></h1><span className="discret">Espace restaurant</span></div>
         </div>
         {!supabaseConfigure() && <Message erreur="Connexion indisponible : Supabase n’est pas configuré (NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY)." />}

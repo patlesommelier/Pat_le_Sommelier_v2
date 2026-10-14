@@ -6,18 +6,17 @@ import { getRestaurantBO } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { exigerAcces } from '@/lib/admin/auth';
 
-// Identité de Pat (planche 2026) : bordeaux, rouge, rose, kaki ; police Outfit.
-const BORDEAUX = '#680021', ROUGE = '#FF0D05', ROSE = '#EB9D92', KAKI = '#BDB074';
+// Identité de Pat (planche 2026) : bordeaux, rouge, rose, fuchsia, crème ; police Outfit Bold.
+const BORDEAUX = '#680021', ROUGE = '#FF0D05', ROSE = '#EB9D92', FUCHSIA = '#DE0454', CREME = '#EFEBE9';
 const MODELES = [
-  { n: 1, titre: 'Modèle 1', aide: 'Bandeau « Pat le sommelier », la question dans le carré rouge' },
-  { n: 2, titre: 'Modèle 2', aide: '« Que boire avec ça ? » en bandeau rose, « L’accord parfait » en kaki' },
-  { n: 3, titre: 'Modèle 3', aide: 'Un grand carré rouge : la question, Pat et sa signature' },
+  { n: 1, titre: 'Modèle 1', aide: '« Que boire avec ça ? » en bandeau rose, Pat qui sert le vin dans le carré rouge' },
+  { n: 2, titre: 'Modèle 2', aide: 'Pat qui goûte le vin dans son cercle, « L’accord parfait » en fuchsia' },
+  { n: 3, titre: 'Modèle 3', aide: 'Le carré « Que boire avec ça ? » avec Pat qui goûte le vin' },
 ] as const;
 
 const bande = (fond: string, couleur: string, taille: string): CSSProperties => ({
   background: fond, color: couleur, borderRadius: '3mm', padding: '2.2mm 3mm', textAlign: 'center', fontWeight: 700, fontSize: taille, lineHeight: 1.1,
 });
-const carreRouge: CSSProperties = { background: ROUGE, borderRadius: '5mm', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '2.5mm', padding: '4mm' };
 
 /** Chevalet de table A6 (105 × 148 mm) aux couleurs de Pat, en trois modèles ; quatre par feuille A4. */
 export default async function Chevalet({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ modele?: string }> }) {
@@ -36,19 +35,16 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
   const scanner = <span style={{ fontSize: '3.2mm', color: BORDEAUX, fontWeight: 700, textAlign: 'center' }}>Scannez : je vous conseille un vin de la carte.</span>;
   const chez = <span style={{ fontSize: '2.8mm', color: '#241F20' }}>chez {r.nom}</span>;
   // eslint-disable-next-line @next/next/no-img-element
-  const pat = (h: string) => <img src="/pat/pat-illustration-bordeaux.svg" alt="" style={{ height: h }} />;
+  const image = (src: string, largeur: string, alt = '') => <img src={src} alt={alt} style={{ width: largeur, height: 'auto', display: 'block', alignSelf: 'center', borderRadius: '5mm' }} />;
 
   const contenus: Record<number, ReactNode> = {
     1: (<>
-      <div style={bande(BORDEAUX, ROUGE, '5.6mm')}>Pat le sommelier</div>
-      <div style={{ ...carreRouge, flexGrow: 1 }}>
-        <b style={{ color: BORDEAUX, fontSize: '5mm' }}>Que boire avec ça ?</b>
-        {pat('54mm')}
-      </div>
+      <div style={bande(ROSE, ROUGE, '5.6mm')}>Que boire avec ça ?</div>
+      {image('/pat/pat-carre-service.svg', '84mm', 'Pat le sommelier')}
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>
         {qr('24mm')}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '2mm', flexGrow: 1 }}>
-          <div style={bande(ROSE, ROUGE, '4mm')}>Scannez-moi</div>
+          <div style={bande(BORDEAUX, ROUGE, '4mm')}>Scannez-moi</div>
           {scanner}{chez}
         </div>
       </div>
@@ -56,19 +52,15 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
     2: (<>
       <b style={{ color: BORDEAUX, fontSize: '6.4mm', textAlign: 'center' }}>Pat le sommelier</b>
       <div style={bande(ROSE, ROUGE, '5mm')}>Que boire avec ça ?</div>
-      <div style={{ ...carreRouge, flexGrow: 1 }}>{pat('50mm')}</div>
-      <div style={bande(KAKI, BORDEAUX, '5mm')}>L’accord parfait</div>
+      {image('/pat/pat-avatar.svg', '64mm')}
+      <div style={bande(FUCHSIA, CREME, '5mm')}>L’accord parfait</div>
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>
         {qr('22mm')}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5mm' }}>{scanner}{chez}</div>
       </div>
     </>),
     3: (<>
-      <div style={{ ...carreRouge, flexGrow: 1 }}>
-        <b style={{ color: BORDEAUX, fontSize: '8.5mm', lineHeight: 1.05, textAlign: 'center' }}>Que boire<br />avec ça ?</b>
-        {pat('52mm')}
-        <b style={{ color: BORDEAUX, fontSize: '4.6mm' }}>Pat le sommelier</b>
-      </div>
+      {image('/pat/pat-carre-que-boire.svg', '93mm', 'Que boire avec ça ? Pat le sommelier')}
       <div style={{ display: 'flex', gap: '3mm', alignItems: 'center' }}>
         {qr('24mm')}
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5mm' }}>{scanner}{chez}</div>
@@ -77,7 +69,7 @@ export default async function Chevalet({ params, searchParams }: { params: Promi
   };
   const carte = (
     <div style={{ width: '105mm', height: '148mm', boxSizing: 'border-box', border: '0.2mm dashed #AFB0AE', padding: '6mm', display: 'flex', flexDirection: 'column', gap: '3mm',
-      background: '#EFEBE9', breakInside: 'avoid', fontFamily: 'Outfit, sans-serif' }}>
+      background: modele === 3 ? '#FEFAF1' : CREME, breakInside: 'avoid', fontFamily: 'Outfit, sans-serif' }}>
       {contenus[modele]}
     </div>
   );

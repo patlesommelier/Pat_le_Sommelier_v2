@@ -27,7 +27,7 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
         texte={restantes ? `${restantes > 1 ? `Encore ${restantes} étapes` : 'Encore une étape'} avant de proposer Pat à vos clients.` : 'Tout est en place : Pat conseille vos clients.'} />
       <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat/pat-illustration-rouge.svg" alt="" width={71} height={150} />
+        <img src="/pat/pat-attable-rouge.svg" alt="" width={166} height={130} />
         <div className="pile" style={{ flex: '1 1 380px', gap: 12 }}>
           <span className="surtitre">{restantes ? 'Prochaine étape' : 'Et maintenant'}</span>
           <h2 style={{ fontSize: 28, fontWeight: 700 }}>{suivante.libelle}</h2>

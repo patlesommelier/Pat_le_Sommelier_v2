@@ -89,7 +89,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
         <aside className="etroit">
           <div className="carte-bo sticker" style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-illustration-rouge.svg" alt="" width={34} height={72} />
+            <img src="/pat/pat-attable-rouge.svg" alt="" width={79} height={62} />
             <div className="pile" style={{ gap: 8 }}><b>Chaque réglage se teste</b><span className="discret">Le simulateur montre tout de suite les vins proposés pour chaque plat avec vos réglages.</span>
               <Link href={`/admin/${resto}/simulateur`} className="btn sec petit"><Icone nom="phone" taille={18} />Ouvrir le simulateur</Link></div>
           </div>

@@ -40,7 +40,7 @@ export function BienvenueRestaurant({ restaurantId }: { restaurantId: string }) 
           style={{ flex: '999 1 460px', display: 'flex', gap: 28, alignItems: 'center', flexWrap: 'wrap' }}>
           {fini
             // eslint-disable-next-line @next/next/no-img-element
-            ? <img src="/pat/pat-illustration-rouge.svg" alt="" width={71} height={150} />
+            ? <img src="/pat/pat-attable-rouge.svg" alt="" width={166} height={130} />
             : <PatAttente taille={120} />}
           <div className="pile" style={{ flex: '1 1 300px', gap: 12 }}>
             <span className="surtitre">{fini ? 'Terminé' : 'En cours'}</span>

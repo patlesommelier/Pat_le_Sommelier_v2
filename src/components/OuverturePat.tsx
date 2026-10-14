@@ -1,6 +1,6 @@
 'use client';
-// Écran d'ouverture de l'app (identité de Pat) : à l'arrivée par le QR code, le carré rouge « Que boire avec ça ? »
-// avec Pat qui sert le vin, une seconde et demie, puis l'app du restaurant. Une fois par visite (onglet) ; un toucher le passe.
+// Écran d'ouverture de l'app (identité de Pat) : à l'arrivée par le QR code, le carré crème « Que boire avec ça ? »
+// avec Pat qui goûte le vin, sur fond rouge, une seconde et demie, puis l'app du restaurant. Une fois par visite (onglet) ; un toucher le passe.
 import { useEffect, useState } from 'react';
 
 export function OuverturePat({ restaurant, nom }: { restaurant: string; nom: string }) {
@@ -18,12 +18,8 @@ export function OuverturePat({ restaurant, nom }: { restaurant: string; nom: str
   if (etat === 'cache') return null;
   return (
     <div className={`ouverture-pat${etat === 'sortie' ? ' sortie' : ''}`} role="presentation" onClick={() => setEtat('cache')}>
-      <div className="ouverture-carre">
-        <b>Que boire<br />avec ça&#8239;?</b>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat/pat-illustration-bordeaux.svg" alt="" />
-        <span>Pat le sommelier</span>
-      </div>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src="/pat/pat-carre-que-boire.svg" alt="Que boire avec ça ? Pat le sommelier" />
       <small>chez {nom}</small>
     </div>
   );
