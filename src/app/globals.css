@@ -57,7 +57,7 @@ button { font: inherit; }
 /* ── Bulles de plats ── */
 .bulles { display: flex; flex-wrap: wrap; justify-content: center; gap: 5px; }
 .bulle {
-  display: flex; align-items: center; height: 30px; padding: 0 7px; border: 1px solid #BDBDBD;
+  display: flex; align-items: center; height: 30px; padding: 0 7px; border: 1px solid #8F8F8F;
   color: var(--encre); text-decoration: none; font-size: 11px; white-space: nowrap;
 }
 .bulle:hover, .bulle:focus-visible { border-color: var(--marque); color: var(--marque-texte, var(--marque)); }
@@ -83,7 +83,7 @@ button { font: inherit; }
 .note-discrete { font-size: 14px; color: var(--discret); text-align: center; font-style: italic; margin: 0; }
 .etat-vide { padding: 22px 16px; border: 1px dashed var(--bord); text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
 a.bouton-plein { text-decoration: none; }
-.bouton-plein { border: 0; background: var(--marque); color: #FFFFFF; padding: 10px 16px; font-weight: 700; cursor: pointer; }
+.bouton-plein { border: 0; background: var(--marque); color: var(--sur-marque, #FFFFFF); padding: 10px 16px; font-weight: 700; cursor: pointer; }
 
 /* ── Fiche vin ── */
 .fiche-entete { display: flex; flex-direction: column; align-items: center; gap: 10px; text-align: center; }
@@ -152,7 +152,7 @@ a.bouton-plein { text-decoration: none; }
   width: 44px; height: 44px; border-radius: 22px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; cursor: pointer;
 }
 .rond.secondaire { border: 1px solid #D9D2D0; background: #FFFFFF; color: var(--encre); }
-.rond.principal { border: 0; background: var(--marque); color: #FFFFFF; }
+.rond.principal { border: 0; background: var(--marque); color: var(--sur-marque, #FFFFFF); }
 .rond:disabled { opacity: 0.5; cursor: default; }
 
 /* ── Conversation avec Pat ── */
@@ -165,7 +165,7 @@ a.bouton-plein { text-decoration: none; }
 .conversation-haut button { border: 0; background: none; font-size: 15px; color: var(--discret); cursor: pointer; padding: 8px; }
 .fil { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
 .message { max-width: 86%; padding: 10px 14px; line-height: 1.45; font-size: 15px; white-space: pre-line; }
-.message.client { align-self: flex-end; background: var(--marque); color: #FFFFFF; border-radius: 16px 16px 4px 16px; }
+.message.client { align-self: flex-end; background: var(--marque); color: var(--sur-marque, #FFFFFF); border-radius: 16px 16px 4px 16px; }
 .message.pat { align-self: flex-start; background: var(--marque-claire); border-radius: 16px 16px 16px 4px; }
 .message .vins-cites { display: flex; flex-direction: column; gap: 10px; margin-top: 12px; white-space: normal; }
 /* Vin proposé dans la conversation : étiquette, nom et prix, puis le texte complet de l'accord. */
@@ -226,8 +226,8 @@ a.bouton-plein { text-decoration: none; }
 
 /* ── Choix de plusieurs plats (menu) ── */
 button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
-.bulle.choisie { border-color: var(--marque); background: var(--marque); color: #FFFFFF; }
-.bulle.choisie:hover, .bulle.choisie:focus-visible { color: #FFFFFF; }
+.bulle.choisie { border-color: var(--marque); background: var(--marque); color: var(--sur-marque, #FFFFFF); }
+.bulle.choisie:hover, .bulle.choisie:focus-visible { color: var(--sur-marque, #FFFFFF); }
 .envoi-plats { position: sticky; bottom: 0; padding: 12px 0 calc(12px + env(safe-area-inset-bottom)); background: linear-gradient(to bottom, transparent, var(--fond, #FFFFFF) 30%); display: flex; justify-content: center; }
 .envoi-plats .bouton-plein { width: 100%; max-width: 420px; min-height: 46px; font-size: 15px; }
 .envoi-plats .bouton-plein:disabled { opacity: .45; cursor: default; }
