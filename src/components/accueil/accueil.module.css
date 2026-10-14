@@ -50,7 +50,7 @@
   display: none; }
 .cadre { position: relative; width: min(820px, 100%); padding-top: 66px; color: #241F20; }
 .medaillon { position: absolute; top: 0; left: -16px; z-index: 2; width: 124px; height: 124px; border-radius: 50%;
-  background: #FF0D05; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
+  background: #FEFAF1; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
   display: flex; align-items: center; justify-content: center; }
 .carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
   background: #BDB074;
@@ -98,7 +98,7 @@
 .fonctions .corps { display: flex; flex-direction: column; gap: 8px; }
 
 .qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
-.quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FF0D05;
+.quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FEFAF1;
   box-shadow: 0 30px 60px -30px rgba(36,31,32,0.6); display: flex; align-items: center; justify-content: center; }
 .quiMedaillon img { height: 86%; width: auto; }
 .quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
