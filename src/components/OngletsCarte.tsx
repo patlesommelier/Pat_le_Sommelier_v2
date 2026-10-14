@@ -22,7 +22,10 @@ export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { r
   const [actif, setActif] = useState<string>(onglets.find((o) => o.id === couleur)?.id ?? couleurs.find((o) => vins.some((v) => v.couleur === o.id))?.id ?? 'blanc');
   const choisir = (id: typeof actif, el?: HTMLElement) => {
     setActif(id);
-    el?.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+    // Centre l'onglet dans sa barre uniquement : scrollIntoView ferait aussi défiler les cadres parents
+    // (dans le téléphone de démo de la page d'accueil, toute l'image se décalait).
+    const barre = el?.parentElement;
+    if (el && barre) barre.scrollTo({ left: el.offsetLeft - (barre.clientWidth - el.offsetWidth) / 2, behavior: 'smooth' });
     // Gardée dans l'adresse : le bouton « retour » du téléphone ramène sur la même couleur.
     window.history.replaceState(null, '', `?c=${id}`);
   };
