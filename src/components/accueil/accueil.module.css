@@ -15,7 +15,7 @@
 /* Bloc du haut : bordeaux de la palette, logo carré (bordeaux, « Pat le sommelier » en rouge) en haut à gauche */
 .haut { position: relative; overflow: hidden; background: #680021; color: #EFEBE9; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
-.haut .marque img { height: 88px; width: 88px; border-radius: 12px; }
+.haut .marque img { height: 104px; width: 104px; border-radius: 0; }
 .titreSection { margin: 0; text-align: center; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px);
   font-weight: 700; letter-spacing: -0.8px; color: #680021; }
 
@@ -24,7 +24,7 @@
 .marque { display: flex; align-items: center; gap: 12px; color: #EFEBE9; text-decoration: none; }
 .marque img { height: 44px; width: auto; display: block; }
 .connexion { display: inline-flex; align-items: center; min-height: 44px; padding: 0 16px; font-weight: 700; color: #EB9D92; }
-.intro { position: relative; display: flex; align-items: center; gap: 56px; padding: 56px 80px 104px; min-height: 620px; box-sizing: border-box; }
+.intro { position: relative; display: flex; align-items: center; gap: 56px; padding: 40px 80px 96px; min-height: 720px; box-sizing: border-box; }
 .introTexte { flex: 1; max-width: 640px; display: flex; flex-direction: column; gap: 22px; }
 .titre { margin: 0; color: #FF0D05; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(36px, 3.6vw, 52px); font-weight: 700;
   letter-spacing: -1px; line-height: 1.07; text-wrap: balance; }
@@ -32,7 +32,7 @@
 .demo { flex: 1; display: flex; justify-content: center; align-items: flex-end; gap: 32px; } /* bas du QR = bas du téléphone */
 .qr { display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 13px 13px 11px; border-radius: 17px; background: #EFEBE9;
   box-shadow: 0 22px 40px -22px rgba(36,31,32,0.7); color: #241F20; font-size: 13.5px; font-weight: 700;
-  margin-bottom: 10px; } /* bas du QR = bas de l'écran blanc (cadre noir du téléphone : 11 px × 0,95) */
+  margin-bottom: 12px; } /* bas du QR = bas de l'écran blanc (cadre noir du téléphone : 11 px × 1,1) */
 .qr span { max-width: 130px; text-align: center; line-height: 1.35; }
 
 /* Niveau 2 : ce que Pat vous apporte */
@@ -130,3 +130,4 @@
 .pretLiens a { color: #680021; }
 @media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
 .astuces { flex: 1; font-size: 16px; font-weight: 700; color: #241F20; }
+@media (max-width: 640px) { .haut .marque img { width: 80px; height: 80px; } }

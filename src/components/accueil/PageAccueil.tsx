@@ -27,7 +27,7 @@ export async function PageAccueil() {
         <header className={s.entete}>
           <Link href="/" className={s.marque}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-icone-logo.svg" alt="Pat le sommelier" width={88} height={88} />
+            <img src="/pat/pat-carre-service.svg" alt="Pat le sommelier" width={104} height={104} />
           </Link>
           <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
         </header>
@@ -43,7 +43,7 @@ export async function PageAccueil() {
               <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={130} height={130} />
               <span>Scannez, choisissez un plat, et voyez ce que je raconte à vos clients.</span>
             </div>
-            <TelephoneDemo echelle={0.95} />
+            <TelephoneDemo echelle={1.1} />
           </div>
         </div>
       </section>
