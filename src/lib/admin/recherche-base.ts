@@ -19,9 +19,16 @@ const SQL_NORM = (x: string) => `translate(lower(${x}), 'àâäáãéèêëíì�
 
 type Ligne = Omit<VinTrouve, 'cle' | 'complet'> & { source: string; id: string };
 
-/** Vins de la base les plus proches de l'intitulé (5 au plus), le plus sûr en premier. */
+// Mots de couleur : ils ne servent pas à trouver le vin, mais départagent les cuvées d'un même nom.
+const COULEURS: Record<string, string> = { rouge: 'rouge', blanc: 'blanc', rose: 'rose', bulles: 'bulles', effervescent: 'bulles',
+  cremant: 'bulles', petillant: 'bulles', orange: 'orange', doux: 'doux', moelleux: 'doux', liquoreux: 'doux' };
+
+/** Vins de la base les plus proches du texte tapé (« M de Minuty rosé 2025 »), 8 au plus, le plus sûr en premier. */
 export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
-  const cherches = [...new Set(mots(texte).filter((m) => m.length >= 3 && !GENERIQUES.has(m)))].slice(0, 8);
+  const tous = mots(texte);
+  const couleur = tous.map((m) => COULEURS[m]).find(Boolean) ?? null;
+  // Le millésime et la couleur ne font pas partie du nom du vin.
+  const cherches = [...new Set(tous.filter((m) => m.length >= 3 && !GENERIQUES.has(m) && !COULEURS[m] && !/^(19|20)\d\d$/.test(m)))].slice(0, 8);
   if (!cherches.length) return [];
   const motifs = cherches.map((m) => `%${m}%`);
   const lignes = await requete<Ligne>(
@@ -45,9 +52,12 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
     const leurs = new Set([...mots(l.libelle), ...mots(l.producteur), ...mots(l.appellation), ...mots(l.nom_vin)]);
     const trouves = cherches.filter((m) => leurs.has(m) || [...leurs].some((x) => x.length >= 5 && m.length >= 5 && (x.startsWith(m) || m.startsWith(x)))).length;
     const remplis = [l.couleur, l.section, l.appellation, l.nom_vin, l.cepages, l.producteur].filter(Boolean).length;
-    return { l, part: trouves / cherches.length, remplis, surplus: leurs.size - trouves };
+    const bonneCouleur = couleur && l.couleur ? (l.couleur === couleur ? 1 : -1) : 0;
+    return { l, part: trouves / cherches.length, remplis, surplus: leurs.size - trouves, bonneCouleur };
   }).filter((n) => n.part >= 0.6);
-  notes.sort((a, b) => b.part - a.part || b.remplis - a.remplis || a.surplus - b.surplus);
+  // Des vins ont tous les mots tapés : les vins à moitié ressemblants ne sont pas proposés.
+  if (notes.some((n) => n.part === 1)) notes.splice(0, notes.length, ...notes.filter((n) => n.part === 1));
+  notes.sort((a, b) => b.part - a.part || b.bonneCouleur - a.bonneCouleur || b.remplis - a.remplis || a.surplus - b.surplus);
 
   const vus = new Set<string>();
   const sortie: VinTrouve[] = [];
@@ -56,8 +66,8 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
     if (vus.has(cle)) continue;
     vus.add(cle);
     sortie.push({ cle: `${l.source}:${l.id}`, libelle: l.libelle, couleur: l.couleur, section: l.section, appellation: l.appellation,
-      nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur, complet: part === 1 });
-    if (sortie.length >= 5) break;
+      nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur ?? null, complet: part === 1 });
+    if (sortie.length >= 8) break;
   }
   return sortie;
 }

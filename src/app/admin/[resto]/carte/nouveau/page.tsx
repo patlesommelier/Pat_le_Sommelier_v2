@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
+import { RechercheVinBase } from '@/components/admin/RechercheVinBase';
 import { ajouterVin, chercherDansBase } from '../../../actions';
 import { exigerAcces } from '@/lib/admin/auth';
 import { CONTENANCES } from '@/lib/contenances';
@@ -20,10 +21,11 @@ export default async function NouveauVin({ params, searchParams }: { params: Pro
     <>
       <Link href={`/admin/${resto}/carte${c ? `?c=${c}` : ''}`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Carte des vins</Link>
       <header className="bo-entete"><div><h1>Ajouter un vin</h1>
-        <p>Une fois le vin ajouté, Pat prépare ses accords avec chacun de vos plats et sa présentation : comptez quelques minutes.</p></div></header>
+        <p>Tapez ce que vous savez du vin et cliquez sur « Chercher » : s’il est dans la base de Pat, choisissez-le et la fiche se remplit. Une fois le vin ajouté, Pat prépare ses accords avec chacun de vos plats et sa présentation : comptez quelques minutes.</p></div></header>
 
       <FormulaireAdmin action={ajouterVin.bind(null, resto)} className="fiche-vin">
         <section className="pile" style={{ gap: 16, minWidth: 0 }}>
+          <RechercheVinBase chercher={chercherDansBase.bind(null, resto)} />
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Le vin</legend>
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
@@ -31,7 +33,7 @@ export default async function NouveauVin({ params, searchParams }: { params: Pro
                 <select id="couleur" name="couleur" defaultValue={couleur}>{COULEURS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
               <div className="champ"><label htmlFor="section">Région (titre de la carte)</label><input id="section" name="section" placeholder="Ex. Bourgogne" /></div>
             </div>
-            <IntituleVin initial="" chercher={chercherDansBase.bind(null, resto)} />
+            <IntituleVin initial="" />
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
               <div className="champ"><label htmlFor="appellation_texte">Appellation</label><input id="appellation_texte" name="appellation_texte" placeholder="Ex. Chablis" /></div>
               <div className="champ"><label htmlFor="nom_vin">Nom du vin</label><input id="nom_vin" name="nom_vin" placeholder="Ex. Saint-Pierre (laisser vide s’il n’en a pas)" /></div>
@@ -59,7 +61,7 @@ export default async function NouveauVin({ params, searchParams }: { params: Pro
           </fieldset>
 
           <div className="ligne-actions">
-            <button type="submit" className="btn">Ajouter ce vin</button>
+            <button type="submit" className="btn">Ajouter ce vin à la carte</button>
           </div>
         </section>
         <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
