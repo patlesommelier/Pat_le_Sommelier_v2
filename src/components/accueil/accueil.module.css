@@ -15,6 +15,15 @@
 /* Bloc du haut : fond crème #FEFAF1 (celui du logo), Pat attablé en rouge en haut à gauche, textes foncés */
 .haut { position: relative; overflow: hidden; background: #FEFAF1; color: #241F20; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
+/* Grand écran : le logo flotte en haut à gauche, le téléphone remonte à sa hauteur et le bloc tient dans l'écran
+   (on voit le début de la partie suivante) ; « Se connecter » est à côté du téléphone. */
+@media (min-width: 1101px) {
+  .haut .entete { position: absolute; top: 0; left: 0; right: 0; }
+  .haut .intro { min-height: 0; padding-top: 28px; padding-bottom: 44px; }
+}
+.connexionDemo { align-self: flex-start; white-space: nowrap; }
+@media (max-width: 640px) { .demo .connexionDemo { display: none; } }
+@media (min-width: 641px) { .entete .connexionMobile { display: none; } }
 .haut .marque img { height: 102px; width: 130px; border-radius: 0; }
 .haut .texte { color: #241F20; }
 .haut .connexion { color: #680021; }
