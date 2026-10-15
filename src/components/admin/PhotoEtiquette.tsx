@@ -4,14 +4,23 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import { Icone } from './Icone';
 
-export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Étiquette du vin', hauteur = 320 }: {
+export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Étiquette du vin', hauteur = 320, base = false }: {
   url: string | null; children: ReactNode;
+  /** Ajout d'un vin : affiche l'étiquette du vin choisi dans la base de Pat (évènement « pat:etiquette-base »). */
+  base?: boolean;
   /** Nom du champ du fichier (« etiquette » ; « photo » pour la photo d'un plat), texte de l'image, hauteur de l'aperçu. */
   champ?: string; alt?: string; hauteur?: number;
 }) {
   const [apercu, setApercu] = useState<string | null>(null);
   const [grand, setGrand] = useState(false);
-  const image = apercu ?? url;
+  const [deLaBase, setDeLaBase] = useState<string | null>(null);
+  const image = apercu ?? url ?? deLaBase;
+  useEffect(() => {
+    if (!base) return;
+    const recevoir = (e: Event) => setDeLaBase((e as CustomEvent<string | null>).detail ?? null);
+    window.addEventListener('pat:etiquette-base', recevoir);
+    return () => window.removeEventListener('pat:etiquette-base', recevoir);
+  }, [base]);
   useEffect(() => {
     if (!grand) return;
     const fermer = (e: KeyboardEvent) => { if (e.key === 'Escape') setGrand(false); };
@@ -40,6 +49,7 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
       <div className="champ" style={{ minWidth: 0, alignItems: 'flex-start' }}>
         {children}
         {apercu && <span className="petit discret">Nouvelle photo : elle sera gardée à l’enregistrement.</span>}
+        {!apercu && !url && deLaBase && <span className="petit discret">Étiquette trouvée dans la base de Pat : elle sera ajoutée avec le vin. Vous pouvez aussi déposer votre photo.</span>}
         <input id={champ} name={champ} aria-label="Choisir une photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment"
           style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }}
           onChange={async (e) => {

@@ -344,6 +344,33 @@ async function relierAuVinDeLaBase(resto: string, vinIds: string[], cle: string 
       where restaurant_id = $1 and id = any($2) and coalesce(producteur_id, $3) = $3`, [resto, vinIds, c.producteur_id, c.id]);
 }
 
+/**
+ * Vin choisi dans la base de Pat, sans photo déposée : il reprend l'étiquette connue de la base (celle de la cuvée,
+ * sinon la photo d'un vin de la même cuvée ou du vin de carte choisi), avant le partage des étiquettes.
+ */
+async function reprendreEtiquetteDeLaBase(resto: string, vinIds: string[], cle: string | null) {
+  const [type, ref] = (cle ?? '').split(/:(.*)/s);
+  if (!ref || !['cuvee', 'carte'].includes(type)) return;
+  const PROPRES = ['fichier', 'wine_labs', 'restaurant'];
+  let e: { url: string; source: string } | undefined;
+  if (type === 'cuvee') {
+    const [c] = await requete<{ etiquette_url: string | null }>('select etiquette_url from cuvee where id = $1', [ref]);
+    if (c?.etiquette_url) e = { url: c.etiquette_url, source: 'cuvee' };
+    else {
+      const [v] = await requete<{ etiquette_url: string; etiquette_source: string }>(
+        'select etiquette_url, etiquette_source from vin_carte where cuvee_id = $1 and etiquette_url is not null and etiquette_source = any($2) limit 1', [ref, PROPRES]);
+      if (v) e = { url: v.etiquette_url, source: v.etiquette_source };
+    }
+  } else {
+    const [v] = await requete<{ etiquette_url: string | null; etiquette_source: string | null }>('select etiquette_url, etiquette_source from vin_carte where id = $1', [ref]);
+    if (v?.etiquette_url) e = { url: v.etiquette_url, source: PROPRES.includes(v.etiquette_source ?? '') ? v.etiquette_source! : 'fichier' };
+  }
+  if (!e) return;
+  await requete(
+    `update vin_carte set etiquette_url = $3, etiquette_source = $4, etiquette_statut = 'trouvee'
+      where restaurant_id = $1 and id = any($2) and etiquette_url is null`, [resto, vinIds, e.url, e.source]);
+}
+
 /** Ajout d'un vin : vins de la base de Pat proches de l'intitulé tapé, pour préremplir la fiche (sans prix ni classement). */
 export async function chercherDansBase(resto: string, texte: string): Promise<VinTrouve[]> {
   await exigerAcces(resto);
@@ -382,6 +409,7 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   await enregistrerIntitule(resto, id, f);
   const ids = await memeVin(resto, id);
   await relierAuVinDeLaBase(resto, ids, txt(f, 'base_cle'));
+  if (!etiquette) await reprendreEtiquetteDeLaBase(resto, ids, txt(f, 'base_cle'));
   await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
   await completerBase(ids).catch((e) => console.error('[base] compléter', id, e));
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);

@@ -6,7 +6,7 @@ import { requete } from '@/lib/db';
 
 export type VinTrouve = {
   cle: string; libelle: string; couleur: string | null; section: string | null; appellation: string | null;
-  nom_vin: string | null; cepages: string | null; producteur: string | null; complet: boolean;
+  nom_vin: string | null; cepages: string | null; producteur: string | null; etiquette: string | null; complet: boolean;
 };
 
 const MOTS_VIDES = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'the', 'di', 'del', 'della', 'y']);
@@ -36,14 +36,15 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
        select 'cuvee' as source, c.id, c.nom as libelle, coalesce(c.couleur::text, v.couleur) as couleur,
               coalesce(v.section, t.sous_region, t.region) as section,
               coalesce(c.appellation_texte, t.nom, v.appellation_texte) as appellation,
-              v.nom_vin, coalesce(c.cepages, v.cepages) as cepages, p.nom as producteur
+              v.nom_vin, coalesce(c.cepages, v.cepages) as cepages, p.nom as producteur,
+              coalesce(c.etiquette_url, (select e.etiquette_url from vin_carte e where e.cuvee_id = c.id and e.etiquette_url is not null limit 1)) as etiquette
          from cuvee c join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id
          left join lateral (select x.couleur::text as couleur, x.section, x.appellation_texte, x.nom_vin, x.cepages from vin_carte x where x.cuvee_id = c.id
                              order by (x.nom_vin is not null)::int + (x.cepages is not null)::int + (x.appellation_texte is not null)::int desc limit 1) v on true
         where ${SQL_NORM("c.nom || ' ' || p.nom || ' ' || coalesce(c.appellation_texte, t.nom, '')")} like any($1)
        union all
        select distinct on (lower(x.libelle), x.couleur) 'carte' as source, x.id, x.libelle, x.couleur::text, x.section,
-              coalesce(x.appellation_texte, t.nom), x.nom_vin, x.cepages, coalesce(p.nom, x.producteur_texte)
+              coalesce(x.appellation_texte, t.nom), x.nom_vin, x.cepages, coalesce(p.nom, x.producteur_texte), x.etiquette_url
          from vin_carte x left join producteur p on p.id = x.producteur_id left join terroir t on t.id = x.appellation_id
         where x.cuvee_id is null and ${SQL_NORM("x.libelle || ' ' || coalesce(p.nom, x.producteur_texte, '')")} like any($1)
      ) r limit 400`, [motifs]);
@@ -66,7 +67,7 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
     if (vus.has(cle)) continue;
     vus.add(cle);
     sortie.push({ cle: `${l.source}:${l.id}`, libelle: l.libelle, couleur: l.couleur, section: l.section, appellation: l.appellation,
-      nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur ?? null, complet: part === 1 });
+      nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur ?? null, etiquette: l.etiquette ?? null, complet: part === 1 });
     if (sortie.length >= 8) break;
   }
   return sortie;

@@ -52,6 +52,8 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
     poser(form, 'producteur_texte', v.producteur ?? '');
     poser(form, 'libelle', v.libelle);
     if (millesime) poser(form, 'millesime', millesime);
+    // L'étiquette de la base s'affiche dans le cadre « Photo de l'étiquette » ; elle sera reprise à l'ajout.
+    window.dispatchEvent(new CustomEvent('pat:etiquette-base', { detail: v.etiquette }));
     setChoisi(v.cle);
   };
 
@@ -82,7 +84,11 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
                   style={{ textAlign: 'left', padding: '10px 14px', borderRadius: 10, cursor: 'pointer', font: 'inherit',
                     border: `1.5px solid ${choisi === v.cle ? 'var(--encre)' : 'var(--ligne)'}`,
                     background: choisi === v.cle ? 'var(--encre)' : 'transparent', color: choisi === v.cle ? '#EFEBE9' : 'var(--texte)' }}>
-                  {choisi === v.cle ? '✓ ' : ''}<b>{v.libelle}</b>{resume(v) && <span style={{ display: 'block', fontSize: 13 }}>{resume(v)}</span>}
+                  <span style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {v.etiquette ? <img src={v.etiquette} alt="" style={{ width: 40, height: 52, objectFit: 'contain', background: '#EFEBE9', borderRadius: 6, flexShrink: 0 }} /> : null}
+                    <span>{choisi === v.cle ? '✓ ' : ''}<b>{v.libelle}</b>{resume(v) && <span style={{ display: 'block', fontSize: 13 }}>{resume(v)}</span>}</span>
+                  </span>
                 </button>
               ))}
             </div>

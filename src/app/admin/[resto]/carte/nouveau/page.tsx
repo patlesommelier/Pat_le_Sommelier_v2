@@ -65,7 +65,7 @@ export default async function NouveauVin({ params, searchParams }: { params: Pro
           </div>
         </section>
         <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
-          <PhotoEtiquette url={null}>
+          <PhotoEtiquette url={null} base>
             <span className="libelle">Photo de l’étiquette (facultatif)</span>
             <span className="petit discret">Sans photo, Pat la cherche dans sa base.</span>
           </PhotoEtiquette>
