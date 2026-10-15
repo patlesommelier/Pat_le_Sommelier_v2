@@ -40,7 +40,7 @@ export async function PageAccueil() {
             <div className={s.qr}>
               {/* QR de l'app de démo Chez Pat (NEXT_PUBLIC_DEMO_URL, sinon /chez-pat) */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={130} height={130} />
+              <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={100} height={100} />
               <span>Scannez, choisissez un plat, et voyez ce que je raconte à vos clients.</span>
             </div>
             <TelephoneDemo echelle={1.1} />
