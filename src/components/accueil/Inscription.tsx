@@ -1,12 +1,12 @@
 'use client';
 // Formulaire doré « Activez votre sommelier en quelques minutes » (niveau 3 de la page) : une étape à la fois.
-// 1. restaurant (compte) → 2. menu → 3. carte des vins → « J’engage Pat » (accords et QR code).
+// 1/3 carte des vins → 2/3 menu → 3/3 restaurant (compte) et « J’engage Pat » (accords et QR code).
 // Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
-import { commencer, deposer, creerSommelier, type Reponse } from '@/lib/inscription/actions';
+import { commencer, deposer, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 import { Preparation } from './Preparation';
@@ -16,6 +16,11 @@ const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: strin
   carte: { depot: 'Déposez votre carte des vins', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
   menu: { depot: 'Déposez votre menu', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
+
+/** Titre de l'étape, avec son numéro (« 1/3 »). */
+const TitreEtape = ({ n, children }: { n: number; children: React.ReactNode }) => (
+  <h3 className={s.etapeTitre}><span className={s.etapeNum}>{n}/3</span>{children}</h3>
+);
 
 const IconeEnvoi = () => (
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -94,9 +99,8 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
   const [resume, setResume] = useState(initial);
   const [etape, setEtape] = useState<Etape>(initial.etape);
   const [compte, envoyerCompte] = useActionState(commencer, { erreurs: [] } as Reponse);
-  const [creation, creer] = useActionState(creerSommelier, { erreurs: [] } as Reponse);
-  // Compte créé : on passe au menu.
-  useEffect(() => { if (compte.resume) { setResume(compte.resume); setEtape(compte.resume.etape); } }, [compte]);
+  // Session expirée pendant l'inscription : retour à la carte des vins.
+  useEffect(() => { if (compte.resume) { setResume(compte.resume); if (!compte.resume.carte) setEtape('carte'); } }, [compte]);
 
   // Tant qu'une lecture est en cours, on interroge le serveur toutes les 3 secondes.
   const lecture = resume.carte?.statut === 'en_cours' || resume.menu?.statut === 'en_cours';
@@ -109,12 +113,13 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
     return () => clearInterval(t);
   }, [lecture]);
 
-  // Inscription réinitialisée entre-temps (menu non déposé dans la minute) : retour au premier onglet.
+  // Inscription expirée entre-temps : retour à la première étape (carte des vins).
   const surReponse = useCallback((r: Reponse) => {
     if (!r.resume) return;
     setResume(r.resume);
-    if (r.resume.etape === 'restaurant') setEtape('restaurant');
+    if (!r.resume.carte) setEtape('carte');
   }, []);
+  const cree = compte.restaurantId ?? restaurantCree;
 
   return (
     <div className={s.cadre}>
@@ -126,10 +131,28 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
         <div className={s.carteTitre}><h2 id="h-insc">Faisons connaissance</h2><p>Quelques minutes suffisent pour me mettre au travail.</p></div>
 
         {/* Restaurant créé : Pat prépare les accords, puis le QR code s'affiche ici. */}
-        {(creation.restaurantId ?? restaurantCree) && <Preparation restaurantId={(creation.restaurantId ?? restaurantCree)!} />}
+        {cree && <Preparation restaurantId={cree} />}
 
-        {!(creation.restaurantId ?? restaurantCree) && etape === 'restaurant' && (
+        {!cree && etape === 'carte' && <>
+          <TitreEtape n={1}>Envoyez-nous votre carte des vins</TitreEtape>
+          <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
+          <div className={s.pied}>
+            <button type="button" className={s.bouton} disabled={resume.carte?.statut !== 'ok'} onClick={() => setEtape('menu')}>Continuer</button>
+          </div>
+        </>}
+
+        {!cree && etape === 'menu' && <>
+          <TitreEtape n={2}>Envoyez-nous votre menu</TitreEtape>
+          <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
+          <div className={s.pied}>
+            <button type="button" className={s.retour} onClick={() => setEtape('carte')}>Retour</button>
+            <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('restaurant')}>Continuer</button>
+          </div>
+        </>}
+
+        {!cree && etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
+            <TitreEtape n={3}>Votre restaurant</TitreEtape>
             <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
             <div className={s.ligne}>
               <div className={s.champ}><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
@@ -137,26 +160,11 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
             </div>
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
-            <div className={s.pied}><BoutonEnvoi libelle="Commencer" enCours="Un instant…" /></div>
-          </form>
-        )}
-
-        {!(creation.restaurantId ?? restaurantCree) && etape === 'menu' && <>
-          <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
-          <div className={s.pied}>
-            <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('carte')}>Continuer</button>
-          </div>
-        </>}
-
-        {!(creation.restaurantId ?? restaurantCree) && etape === 'carte' && (
-          <>
-              <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
-            <Erreurs liste={creation.erreurs} />
-            <form action={creer} className={s.pied}>
+            <div className={s.pied}>
               <button type="button" className={s.retour} onClick={() => setEtape('menu')}>Retour</button>
-              <BoutonEnvoi libelle="J’engage Pat" enCours="Un instant…" desactive={resume.carte?.statut !== 'ok'} />
-            </form>
-          </>
+              <BoutonEnvoi libelle="J’engage Pat" enCours="Un instant…" desactive={resume.carte?.statut !== 'ok' || resume.menu?.statut !== 'ok'} />
+            </div>
+          </form>
         )}
       </section>
     </div>

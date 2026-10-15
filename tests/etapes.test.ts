@@ -8,12 +8,13 @@ const vin: VinRapproche = { libelleCarte: 'Sancerre', producteur: 'Henri Bourgeo
 const plat: Plat = { nom: 'Filet pur, sauce morilles', categorie: 'plat', description: null };
 const base = (p: { vins?: VinRapproche[]; plats?: Plat[]; lecture?: Analyses; user_id?: string } = {}) => ({ vins: [], plats: [], lecture: {}, ...p });
 
-test('ordre des étapes : restaurant (compte), puis menu, puis carte des vins', () => {
-  assert.equal(etapeCourante(null), 'restaurant');
-  assert.equal(etapeCourante(base()), 'restaurant');
-  assert.equal(etapeCourante(base({ user_id: 'u1' })), 'menu');
-  assert.equal(etapeCourante(base({ user_id: 'u1', plats: [plat] })), 'carte');
-  assert.equal(etapeCourante(base({ user_id: 'u1', plats: [plat], vins: [vin] })), 'carte');
+test('ordre des étapes : carte des vins, puis menu, puis restaurant (compte)', () => {
+  assert.equal(etapeCourante(null), 'carte');
+  assert.equal(etapeCourante(base()), 'carte');
+  assert.equal(etapeCourante(base({ plats: [plat] })), 'carte');
+  assert.equal(etapeCourante(base({ vins: [vin] })), 'menu');
+  assert.equal(etapeCourante(base({ vins: [vin], plats: [plat] })), 'restaurant');
+  assert.equal(etapeCourante(base({ user_id: 'u1', vins: [vin], plats: [plat] })), 'restaurant');
 });
 
 test('le navigateur ne reçoit que des compteurs, jamais les listes', () => {

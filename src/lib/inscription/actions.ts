@@ -1,5 +1,5 @@
 'use server';
-// Pat le sommelier — actions du formulaire de la page d'accueil : 1. restaurant (compte), 2. menu, 3. carte des vins, puis création.
+// Pat le sommelier — actions du formulaire de la page d'accueil : 1. carte des vins, 2. menu, 3. restaurant (compte) et création.
 // Chaque action relit l'inscription depuis le cookie : rien n'est confié au navigateur, qui ne reçoit que des compteurs.
 import { randomUUID } from 'node:crypto';
 import { headers } from 'next/headers';
@@ -35,8 +35,14 @@ async function lancerLecture() {
 
 /** Dépôt de la carte des vins ou du menu : fichiers vérifiés et gardés dans la base, puis lecture en arrière-plan. */
 export async function deposer(type: TypeAnalyse, _: Reponse, form: FormData): Promise<Reponse> {
-  const i = await inscriptionCourante();
-  if (!i || i.statut !== 'en_cours' || !i.user_id) return { erreurs: ['Votre session a expiré : indiquez à nouveau votre restaurant.'], resume: resumePublic(null) };
+  let i = await inscriptionCourante();
+  // Premier dépôt (la carte des vins ouvre l'inscription) : une inscription commence, dans les limites par connexion.
+  if (!i || i.statut !== 'en_cours') {
+    await nettoyerInscriptions();
+    const admin = (await utilisateurReel().catch(() => null))?.admin;
+    if (!admin && !(await inscriptionAutorisee(await ip()))) return { erreurs: ['Trop d’inscriptions depuis cette connexion aujourd’hui. Réessayez demain ou contactez-nous.'], resume: resumePublic(null) };
+    i = await demarrerInscription();
+  }
   if (i.analyses >= MAX_ANALYSES_PAR_INSCRIPTION) return { erreurs: ['Nombre maximal d’envois atteint. Contactez-nous pour continuer.'], resume: resumePublic(i) };
 
   const brut = form.getAll('fichiers').filter((f): f is File => f instanceof File && f.size > 0);
@@ -78,21 +84,17 @@ async function compteExiste(email: string) {
 const modeDev = () => !supabaseConfigure() && !process.env.NETLIFY;
 
 /**
- * Étape 1 : nom du restaurant, e-mail et mot de passe. Le compte est créé (déjà confirmé) et la session ouverte ;
- * le menu et la carte des vins viennent ensuite.
+ * Étape 3 (après la carte des vins et le menu) : nom du restaurant, e-mail et mot de passe. Le compte est créé
+ * (déjà confirmé), la session ouverte, puis le restaurant est créé et la préparation des accords lancée (« J’engage Pat »).
  */
 export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   const r = Compte.safeParse(Object.fromEntries(form));
   if (!r.success) return { erreurs: r.error.issues.map((x) => x.message) };
-  let i = await inscriptionCourante();
-  // Pas d'inscription en cours dans ce navigateur (ou la précédente est terminée) : une nouvelle commence.
-  if (!i || i.statut !== 'en_cours') {
-    await nettoyerInscriptions();
-    // Pat (super-admin connecté) teste sans limite ; tout autre visiteur est limité par connexion et par jour.
-    const admin = (await utilisateurReel().catch(() => null))?.admin;
-    if (!admin && !(await inscriptionAutorisee(await ip()))) return { erreurs: ['Trop d’inscriptions depuis cette connexion aujourd’hui. Réessayez demain ou contactez-nous.'] };
-    i = await demarrerInscription();
-  }
+  const i = await inscriptionCourante();
+  // Double clic après la création : on suit la préparation déjà lancée.
+  if (i?.statut === 'finalisee' && i.restaurant_id) return { erreurs: [], restaurantId: i.restaurant_id };
+  // L'inscription commence au dépôt de la carte des vins : sans elle (session expirée), on repart du début.
+  if (!i || i.statut !== 'en_cours') return { erreurs: ['Votre session a expiré : déposez à nouveau votre carte des vins.'], resume: resumePublic(null) };
 
   // Accès immédiat (décision de Pat) : le compte est créé déjà confirmé. Les limites par connexion et par
   // inscription restent la protection contre les abus. Un double clic réutilise le compte déjà créé.
@@ -130,7 +132,15 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
     const { error } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
     if (error) console.warn('[inscription] ouverture de session :', error.message); // l'espace demandera de se connecter
   }
-  return { erreurs: [], resume: resumePublic(await lireInscription(i.id)) };
+  const apres = await lireInscription(i.id);
+  if (!apres?.vins.length || !apres.plats.length) return { erreurs: ['Déposez d’abord votre carte des vins et votre menu.'], resume: resumePublic(apres) };
+  try {
+    const { restaurantId } = await finaliserInscription(i.id, userId, email);
+    return { erreurs: [], resume: resumePublic(await lireInscription(i.id)), restaurantId };
+  } catch (e) {
+    console.error('[inscription] création', i.id, e);
+    return { erreurs: ['La création de votre espace n’a pas abouti. Réessayez dans un instant.'], resume: resumePublic(apres) };
+  }
 }
 
 /**
