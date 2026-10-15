@@ -13,13 +13,16 @@ import { Preparation } from './Preparation';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
-  carte: { depot: 'Déposez votre carte des vins', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
-  menu: { depot: 'Déposez votre menu', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
+  carte: { depot: 'Déposez votre carte des vins pour que je l’analyse', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
+  menu: { depot: 'Déposez votre menu pour que je l’analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
-/** Numéro de l'étape (« 1/3 »), seul à l'écran ; l'intitulé reste lu par les lecteurs d'écran. */
-const TitreEtape = ({ n, children }: { n: number; children: React.ReactNode }) => (
-  <h3 className={s.etapeTitre}><span className={s.etapeNum}>{n}/3</span><span className={s.cacher}>{children}</span></h3>
+/** Une étape : son numéro (« 1/3 ») à côté de son contenu ; l'intitulé reste lu par les lecteurs d'écran. */
+const EtapeNumerotee = ({ n, titre, children }: { n: number; titre: string; children: React.ReactNode }) => (
+  <div className={s.etapeLigne}>
+    <h3 className={s.etapeNum}>{n}/3<span className={s.cacher}> : {titre}</span></h3>
+    <div className={s.etapeContenu}>{children}</div>
+  </div>
 );
 
 const IconeEnvoi = () => (
@@ -123,27 +126,21 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
   return (
     <div className={s.cadre}>
-      <span className={s.medaillon}>
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img src="/pat/pat-attable-rouge.svg" alt="Pat, le sommelier" width={104} height={82} />
-      </span>
       <section className={s.carte} aria-labelledby="h-insc">
         <h2 id="h-insc" className={s.cacher}>Inscription</h2>
 
         {/* Restaurant créé : Pat prépare les accords, puis le QR code s'affiche ici. */}
-        {cree && <><div className={s.etapeTitre} aria-hidden="true" /><Preparation restaurantId={cree} /></>}
+        {cree && <Preparation restaurantId={cree} />}
 
         {!cree && etape === 'carte' && <>
-          <TitreEtape n={1}>Envoyez-nous votre carte des vins</TitreEtape>
-          <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
+          <EtapeNumerotee n={1} titre="Envoyez-nous votre carte des vins"><Depot type="carte" etat={resume.carte} onReponse={surReponse} /></EtapeNumerotee>
           <div className={s.pied}>
             <button type="button" className={s.bouton} disabled={resume.carte?.statut !== 'ok'} onClick={() => setEtape('menu')}>Continuer</button>
           </div>
         </>}
 
         {!cree && etape === 'menu' && <>
-          <TitreEtape n={2}>Envoyez-nous votre menu</TitreEtape>
-          <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
+          <EtapeNumerotee n={2} titre="Envoyez-nous votre menu"><Depot type="menu" etat={resume.menu} onReponse={surReponse} /></EtapeNumerotee>
           <div className={s.pied}>
             <button type="button" className={s.retour} onClick={() => setEtape('carte')}>Retour</button>
             <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('restaurant')}>Continuer</button>
@@ -152,8 +149,9 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
         {!cree && etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
-            <TitreEtape n={3}>Votre restaurant</TitreEtape>
-            <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
+            <EtapeNumerotee n={3} titre="Votre restaurant">
+              <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
+            </EtapeNumerotee>
             <div className={s.ligne}>
               <div className={s.champ}><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
               <div className={s.champ}><label htmlFor="motDePasse">Mot de passe</label><input id="motDePasse" name="motDePasse" type="password" required autoComplete="new-password" placeholder="12 caractères minimum" /></div>
