@@ -21,9 +21,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const [vins, u, restaurant] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getRestaurantBO(resto)]);
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const rankings = u?.admin ? await getRankingsInternes(resto) : null;
-  // Le restaurant ne voit pas si le producteur ou l'étiquette viennent de la base de Pat : seulement ce qui lui demande d'agir.
+  // Le restaurant ne voit pas si le producteur vient de la base de Pat (seulement ce qui lui demande d'agir), ni la colonne Étiquette.
   const pourPat = Boolean(u?.admin);
-  const montrer = ([libelle, type]: [string, string]) => pourPat || (type === 'attention' && libelle !== 'Base de Pat');
+  const montrer = ([, type]: [string, string]) => pourPat || type === 'attention';
   // Notes de Pat (base) : visibles par le super-admin seulement, jamais par le restaurant.
   const etoiles = (id: string) => ligneNotesPat(rankings?.get(id));
   // Onglets comme dans l'app : les couleurs, puis les catégories spéciales (coups de cœur, nature, bio) ;
@@ -85,7 +85,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
           </nav>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>
-              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th><th>Étiquette</th><th /></tr></thead>
+              <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th>{pourPat && <th>Étiquette</th>}<th /></tr></thead>
               {/* Comme dans l'app : les sous-catégories de la carte (renommables), puis leurs vins (flèches pour les déplacer). */}
               {/* Catégorie spéciale : les vins groupés par couleur, comme dans l'app ; pas de sous-catégories à renommer ni d'ordre à régler ici. */}
               <TableCarteGlissable key={c} fixe={special} enregistrer={special ? undefined : enregistrerOrdreCarte.bind(null, resto, c)}
@@ -115,7 +115,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                         ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
                         : <Etat type="attention">Indisponible</Etat>}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
-                      <td className="col-etiquette">{(pourPat || el !== 'Base de Pat') && <Etat type={ek}>{el}</Etat>}</td>
+                      {pourPat && <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>}
                     </>),
                     libelle: v.libelle,
                     fin: <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link>,
