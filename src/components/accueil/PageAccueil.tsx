@@ -43,7 +43,7 @@ export async function PageAccueil() {
               <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={100} height={100} />
               <span>Scannez, choisissez un plat, et voyez ce que je raconte à vos clients.</span>
             </div>
-            <TelephoneDemo echelle={1.1} />
+            <TelephoneDemo echelle={0.95} />
           </div>
         </div>
       </section>
