@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
-import { ajouterVin } from '../../../actions';
+import { ajouterVin, chercherDansBase } from '../../../actions';
 import { exigerAcces } from '@/lib/admin/auth';
 import { CONTENANCES } from '@/lib/contenances';
 
@@ -31,7 +31,7 @@ export default async function NouveauVin({ params, searchParams }: { params: Pro
                 <select id="couleur" name="couleur" defaultValue={couleur}>{COULEURS.map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
               <div className="champ"><label htmlFor="section">Région (titre de la carte)</label><input id="section" name="section" placeholder="Ex. Bourgogne" /></div>
             </div>
-            <IntituleVin initial="" />
+            <IntituleVin initial="" chercher={chercherDansBase.bind(null, resto)} />
             <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
               <div className="champ"><label htmlFor="appellation_texte">Appellation</label><input id="appellation_texte" name="appellation_texte" placeholder="Ex. Chablis" /></div>
               <div className="champ"><label htmlFor="nom_vin">Nom du vin</label><input id="nom_vin" name="nom_vin" placeholder="Ex. Saint-Pierre (laisser vide s’il n’en a pas)" /></div>

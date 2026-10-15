@@ -24,6 +24,7 @@ import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
 import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
+import { chercherVinsBase, type VinTrouve } from '@/lib/admin/recherche-base';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -324,6 +325,12 @@ async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
  * producteur cherché dans la base de Pat, puis ses accords avec chaque plat (seulement ce vin) et sa présentation,
  * en arrière-plan. On revient sur la liste, le vin mis en évidence.
  */
+/** Ajout d'un vin : vins de la base de Pat proches de l'intitulé tapé, pour préremplir la fiche (sans prix ni classement). */
+export async function chercherDansBase(resto: string, texte: string): Promise<VinTrouve[]> {
+  await exigerAcces(resto);
+  return chercherVinsBase(String(texte ?? '').slice(0, 200));
+}
+
 export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   const u = await exigerAcces(resto);
   const couleur = txt(f, 'couleur');
