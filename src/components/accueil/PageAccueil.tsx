@@ -34,7 +34,7 @@ export async function PageAccueil() {
         <div className={s.intro}>
           <div className={s.introTexte}>
             <h1 id="h-intro" className={s.titre}>Offrez à chaque client l’expérience d’un sommelier</h1>
-            <p className={s.texte}>Votre client choisit son plat, je lui propose quelques vins et je lui explique pourquoi ils vont ensemble.</p>
+            <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
           </div>
           <div className={s.demo}>
             <div className={s.qr}>
