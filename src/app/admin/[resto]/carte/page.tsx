@@ -21,6 +21,9 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   const [vins, u, restaurant] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getRestaurantBO(resto)]);
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const rankings = u?.admin ? await getRankingsInternes(resto) : null;
+  // Le restaurant ne voit pas si le producteur ou l'étiquette viennent de la base de Pat : seulement ce qui lui demande d'agir.
+  const pourPat = Boolean(u?.admin);
+  const montrer = ([libelle, type]: [string, string]) => pourPat || (type === 'attention' && libelle !== 'Base de Pat');
   // Notes de Pat (base) : visibles par le super-admin seulement, jamais par le restaurant.
   const etoiles = (id: string) => ligneNotesPat(rankings?.get(id));
   // Onglets comme dans l'app : les couleurs, puis les catégories spéciales (coups de cœur, nature, bio) ;
@@ -49,26 +52,29 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     : enRecherche ? `${enRecherche} déjà en recherche${introuvables ? `, ${introuvables} introuvable(s)` : ''}` : `${introuvables} introuvable(s) chez Wine Labs : à photographier`);
   return (
     <>
-      <Entete titre="Carte des vins">
-        <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
-        <BoutonCarteImprimee resto={resto} />
-        <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
-        {wineLabs && (
-          <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
-            <button className="btn sec" disabled={!aChercher || !identifiantsWineLabs()} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">
-              Chercher sur Wine Labs{aChercher ? ` (${aChercher})` : ''}</button>
-            {pourquoiPas && <span className="petit discret">{identifiantsWineLabs() ? 'Rien à chercher : ' : ''}{pourquoiPas}.</span>}
-          </form>
-        )}
-      </Entete>
+      <Entete titre="Carte des vins" />
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
         : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
-      <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 320px))' }}>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes manquantes</span>
+      {/* Étiquettes manquantes et boutons sur une même ligne */}
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 18 }}>
+        <div className="carte-bo" style={{ padding: '14px 20px', flex: '0 1 250px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes manquantes</span>
           {sansEtiquette > 0 && <div className="petit">Pat les cherche ; vous pouvez aussi envoyer vos photos</div>}
-</div>
+        </div>
+        <div className="ligne-actions">
+          <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
+          <BoutonCarteImprimee resto={resto} />
+          <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
+        </div>
       </div>
+      {/* Super-admin : recherche Wine Labs (crédits), sur sa propre ligne */}
+      {wineLabs && (
+        <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
+          <button className="btn sec" disabled={!aChercher || !identifiantsWineLabs()} title="Une demande par cuvée ; seules les étiquettes trouvées coûtent un crédit">
+            Chercher sur Wine Labs{aChercher ? ` (${aChercher})` : ''}</button>
+          {pourquoiPas && <span className="petit discret">{identifiantsWineLabs() ? 'Rien à chercher : ' : ''}{pourquoiPas}.</span>}
+        </form>
+      )}
       <div className="rangee">
         <section className="large">
           <nav className="onglets" aria-label="Couleurs" style={{ alignItems: 'center' }}>
@@ -103,13 +109,13 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                     cellules: (<>
                       <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link><PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div><Etat type={bk}>{bl}</Etat>{rankings && <div className="petit" style={{ color: 'var(--encre)' }}>{etoiles(v.id)}</div>}</td>
+                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div>{montrer([bl, bk]) && <Etat type={bk}>{bl}</Etat>}{rankings && <div className="petit" style={{ color: 'var(--encre)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
                       <td>{contenances.length
                         ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>
                         : <Etat type="attention">Indisponible</Etat>}</td>
                       <td className="droite" style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{prix ? `${euros(prix.montant)}${prix.verre ? ' le verre' : ''}` : '—'}</td>
-                      <td className="col-etiquette"><Etat type={ek}>{el}</Etat></td>
+                      <td className="col-etiquette">{(pourPat || el !== 'Base de Pat') && <Etat type={ek}>{el}</Etat>}</td>
                     </>),
                     libelle: v.libelle,
                     fin: <Link className="lien-ligne" href={fiche} aria-label={`Modifier ${v.libelle}`} draggable={false}>Modifier</Link>,

@@ -94,7 +94,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             </div>
             {v.producteur_id && (
               <label className="case"><input type="radio" name="producteur_choix" value={v.producteur_id} defaultChecked />
-                <span><b>{v.producteur_nom}</b><small>{pl}{etoiles}</small></span></label>
+                <span><b>{v.producteur_nom}</b><small>{u?.admin || pk === 'attention' ? pl : null}{etoiles}</small></span></label>
             )}
             {/* Super-admin seulement : la fiche complète du producteur dans la base de Pat. */}
             {u?.admin && v.producteur_id && (
@@ -166,7 +166,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
           {/* Clé = adresse de l'étiquette : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
           <PhotoEtiquette key={v.etiquette_url ?? 'sans'} url={v.etiquette_url}>
             <span className="libelle">Étiquette</span>
-            <Etat type={ek}>{el}</Etat>
+            {(u?.admin || el !== 'Base de Pat') && <Etat type={ek}>{el}</Etat>}
             {u?.admin && v.etiquette_statut === 'echec' && v.etiquette_erreur && <span className="petit discret">Motif : {v.etiquette_erreur}</span>}
           </PhotoEtiquette>
           {BARRES.some(([k]) => typeof profil[k] === 'number') && (
