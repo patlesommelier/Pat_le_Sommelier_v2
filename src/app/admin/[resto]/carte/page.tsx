@@ -64,10 +64,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
         : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
-      <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length}</div><span className="discret">références</span></div>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.filter((v) => v.statut_producteur === 'reference').length}</div><span className="discret">vins reliés à un producteur de Pat</span></div>
-        <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{vins.length - sansEtiquette}</div><span className="discret">étiquettes</span></div>
+      <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 320px))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes manquantes</span>
           {sansEtiquette > 0 && <div className="petit">Pat les cherche ; vous pouvez aussi envoyer vos photos</div>}
 </div>
