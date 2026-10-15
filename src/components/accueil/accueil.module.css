@@ -15,15 +15,14 @@
 /* Bloc du haut : fond crème #FEFAF1 (celui du logo), Pat attablé en rouge en haut à gauche, textes foncés */
 .haut { position: relative; overflow: hidden; background: #FEFAF1; color: #241F20; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
-/* Grand écran : le logo flotte en haut à gauche, le téléphone remonte à sa hauteur et le bloc tient dans l'écran
-   (on voit le début de la partie suivante) ; « Se connecter » est à côté du téléphone. */
+/* « Se connecter » juste à droite du logo, en haut à gauche. */
+.haut .entete { justify-content: flex-start; gap: 28px; }
+/* Grand écran : le logo (un peu plus bas, aligné sur le texte) flotte en haut à gauche ; le texte, le QR et le téléphone
+   tiennent dans l'écran, et l'on voit le début de la partie suivante. */
 @media (min-width: 1101px) {
-  .haut .entete { position: absolute; top: 0; left: 0; right: 0; }
-  .haut .intro { min-height: 0; padding-top: 20px; padding-bottom: 32px; }
+  .haut .entete { position: absolute; top: 0; left: 0; right: 0; padding: 34px 80px 0 80px; }
+  .haut .intro { min-height: 0; padding-top: 52px; padding-bottom: 36px; }
 }
-.connexionDemo { align-self: flex-start; white-space: nowrap; }
-@media (max-width: 640px) { .demo .connexionDemo { display: none; } }
-@media (min-width: 641px) { .entete .connexionMobile { display: none; } }
 .haut .marque img { height: 102px; width: 130px; border-radius: 0; }
 .haut .texte { color: #241F20; }
 .haut .connexion { color: #680021; }
@@ -64,13 +63,13 @@
 .medaillon { position: absolute; top: 0; left: -16px; z-index: 2; width: 124px; height: 124px; border-radius: 50%;
   background: #FEFAF1; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
   display: flex; align-items: center; justify-content: center; }
-.carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
+.carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 22px 34px 24px; border-radius: 24px;
   background: #EB9D92;
-  box-shadow: 0 30px 60px -28px rgba(36,31,32,0.6); display: flex; flex-direction: column; gap: 22px; }
+  box-shadow: 0 30px 60px -28px rgba(36,31,32,0.6); display: flex; flex-direction: column; gap: 16px; }
 .carteTitre { padding-left: 110px; min-height: 58px; display: flex; flex-direction: column; justify-content: center; gap: 4px; }
 .carteTitre h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: 30px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.1; }
 .carteTitre p { margin: 0; font-size: 16px; color: #241F20; }
-.depot { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 92px; padding: 14px 20px; box-sizing: border-box;
+.depot { display: flex; align-items: center; justify-content: center; gap: 14px; min-height: 74px; padding: 12px 20px; box-sizing: border-box;
   border: 2px dashed #680021; border-radius: 16px; background: #EFEBE9; cursor: pointer; font-size: 17px; font-weight: 700; }
 .depot[data-survol='true'] { border-color: #FF0D05; background: #EFEBE9; }
 .depot:focus-within { outline: 3px solid #680021; outline-offset: 2px; }
@@ -145,6 +144,7 @@
 .astuces { flex: 1; font-size: 16px; font-weight: 700; color: #241F20; }
 @media (max-width: 640px) { .haut .marque img { width: 92px; height: 72px; } }
 /* Inscription : titre de l'étape avec son numéro (1/3, 2/3, 3/3) */
-.etapeTitre { margin: 0; display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #241F20; }
+.etapeTitre { margin: 0; padding-left: 104px; min-height: 40px; display: flex; align-items: center; gap: 12px; font-size: 20px; font-weight: 700; color: #241F20; }
+@media (max-width: 640px) { .etapeTitre { padding-left: 0; padding-top: 64px; } }
 .etapeNum { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; height: 30px; padding: 0 10px; box-sizing: border-box;
   border-radius: 999px; background: #680021; color: #EFEBE9; font-size: 15px; }

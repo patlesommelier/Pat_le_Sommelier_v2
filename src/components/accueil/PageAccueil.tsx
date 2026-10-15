@@ -29,7 +29,7 @@ export async function PageAccueil() {
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/pat/pat-attable-rouge.svg" alt="Pat le sommelier" width={130} height={102} />
           </Link>
-          <Link href="/admin/connexion" className={`${s.connexion} ${s.connexionMobile}`}>Se connecter</Link>
+          <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
         </header>
         <div className={s.intro}>
           <div className={s.introTexte}>
@@ -44,8 +44,6 @@ export async function PageAccueil() {
               <span>Scannez ici</span>
             </div>
             <TelephoneDemo echelle={0.8} />
-            {/* À côté du téléphone (sur mobile, le lien reste dans l'en-tête) */}
-            <Link href="/admin/connexion" className={`${s.connexion} ${s.connexionDemo}`}>Se connecter</Link>
           </div>
         </div>
       </section>

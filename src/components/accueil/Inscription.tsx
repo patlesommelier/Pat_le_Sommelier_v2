@@ -17,9 +17,9 @@ const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: strin
   menu: { depot: 'Déposez votre menu', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
-/** Titre de l'étape, avec son numéro (« 1/3 »). */
+/** Numéro de l'étape (« 1/3 »), seul à l'écran ; l'intitulé reste lu par les lecteurs d'écran. */
 const TitreEtape = ({ n, children }: { n: number; children: React.ReactNode }) => (
-  <h3 className={s.etapeTitre}><span className={s.etapeNum}>{n}/3</span>{children}</h3>
+  <h3 className={s.etapeTitre}><span className={s.etapeNum}>{n}/3</span><span className={s.cacher}>{children}</span></h3>
 );
 
 const IconeEnvoi = () => (
@@ -128,10 +128,10 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
         <img src="/pat/pat-attable-rouge.svg" alt="Pat, le sommelier" width={104} height={82} />
       </span>
       <section className={s.carte} aria-labelledby="h-insc">
-        <div className={s.carteTitre}><h2 id="h-insc">Faisons connaissance</h2><p>Quelques minutes suffisent pour me mettre au travail.</p></div>
+        <h2 id="h-insc" className={s.cacher}>Inscription</h2>
 
         {/* Restaurant créé : Pat prépare les accords, puis le QR code s'affiche ici. */}
-        {cree && <Preparation restaurantId={cree} />}
+        {cree && <><div className={s.etapeTitre} aria-hidden="true" /><Preparation restaurantId={cree} /></>}
 
         {!cree && etape === 'carte' && <>
           <TitreEtape n={1}>Envoyez-nous votre carte des vins</TitreEtape>
