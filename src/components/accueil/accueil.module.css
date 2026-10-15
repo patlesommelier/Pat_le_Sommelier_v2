@@ -12,10 +12,13 @@
 .creme .cartes h3, .creme .fonctions h3 { color: #680021; }
 .creme .cartes li { background: #FEFAF1; border: 1.5px solid #EB9D92; }
 .creme .fonctions li { border-top-color: #EB9D92; }
-/* Bloc du haut : bordeaux de la palette, logo carré (bordeaux, « Pat le sommelier » en rouge) en haut à gauche */
-.haut { position: relative; overflow: hidden; background: #680021; color: #EFEBE9; }
+/* Bloc du haut : fond crème #FEFAF1 (celui du logo), Pat attablé en rouge en haut à gauche, textes foncés */
+.haut { position: relative; overflow: hidden; background: #FEFAF1; color: #241F20; }
 .haut .entete { height: auto; padding-top: 18px; padding-bottom: 6px; }
-.haut .marque img { height: 104px; width: 104px; border-radius: 0; }
+.haut .marque img { height: 102px; width: 130px; border-radius: 0; }
+.haut .texte { color: #241F20; }
+.haut .connexion { color: #680021; }
+.haut .qr { border: 1.5px solid #241F20; }
 .titreSection { margin: 0; text-align: center; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px);
   font-weight: 700; letter-spacing: -0.8px; color: #680021; }
 
@@ -50,7 +53,7 @@
   display: none; }
 .cadre { position: relative; width: min(820px, 100%); padding-top: 66px; color: #241F20; }
 .medaillon { position: absolute; top: 0; left: -16px; z-index: 2; width: 124px; height: 124px; border-radius: 50%;
-  background: #680021; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
+  background: #FEFAF1; border-radius: 22px; box-shadow: 0 16px 32px -14px rgba(36,31,32,0.55);
   display: flex; align-items: center; justify-content: center; }
 .carte { container-type: inline-size; position: relative; z-index: 1; box-sizing: border-box; padding: 30px 40px 32px; border-radius: 24px;
   background: #EB9D92;
@@ -98,12 +101,13 @@
 .fonctions .corps { display: flex; flex-direction: column; gap: 8px; }
 
 .qui { padding: 76px 120px 84px; display: flex; align-items: center; gap: 64px; }
-.quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #FEFAF1;
+.quiMedaillon { flex-shrink: 0; width: 260px; height: 260px; border-radius: 36px; background: #680021;
   box-shadow: 0 30px 60px -30px rgba(36,31,32,0.6); display: flex; align-items: center; justify-content: center; }
 .quiMedaillon img { width: 84%; height: auto; }
 .quiTexte { max-width: 780px; display: flex; flex-direction: column; gap: 18px; }
 .quiTexte h2 { margin: 0; font-family: Outfit, 'Avenir Next', sans-serif; font-size: clamp(30px, 2.7vw, 38px); font-weight: 700; letter-spacing: -0.8px; }
-.quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: #EFEBE9; }
+.quiTexte p { margin: 0; font-size: 18px; line-height: 1.65; color: #241F20; }
+.quiTexte h2 { color: #FF0D05; }
 
 .piedPage { padding: 26px 64px; background: #241F20; color: #EFEBE9; font-size: 14px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .piedPage nav { display: flex; gap: 18px; }
@@ -130,4 +134,4 @@
 .pretLiens a { color: #680021; }
 @media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
 .astuces { flex: 1; font-size: 16px; font-weight: 700; color: #241F20; }
-@media (max-width: 640px) { .haut .marque img { width: 80px; height: 80px; } }
+@media (max-width: 640px) { .haut .marque img { width: 92px; height: 72px; } }

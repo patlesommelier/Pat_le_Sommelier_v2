@@ -1,7 +1,7 @@
 // Page d'accueil de Pat le sommelier, en trois parties :
-//   1. présentation (bordeaux) : titre, texte, QR et grand téléphone avec l'app de démo Chez Pat ;
-//   2. activation (crème #FEFAF1) : dépôt du menu et de la carte, une étape à la fois ;
-//   3. « Qui est vraiment Pat ? » (bordeaux) ; puis le pied de page.
+//   1. présentation (crème #FEFAF1, logo Pat attablé) : titre, texte, QR et grand téléphone avec l'app de démo Chez Pat ;
+//   2. activation (bordeaux) : dépôt du menu et de la carte, une étape à la fois ;
+//   3. « Qui est vraiment Pat ? » (crème #FEFAF1) ; puis le pied de page.
 // « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) sont retirées de la page
 // mais gardées dans Sections.tsx pour plus tard.
 import Link from 'next/link';
@@ -27,7 +27,7 @@ export async function PageAccueil() {
         <header className={s.entete}>
           <Link href="/" className={s.marque}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-carre-service.svg" alt="Pat le sommelier" width={104} height={104} />
+            <img src="/pat/pat-attable-rouge.svg" alt="Pat le sommelier" width={130} height={102} />
           </Link>
           <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
         </header>
@@ -48,7 +48,7 @@ export async function PageAccueil() {
         </div>
       </section>
 
-      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.creme} ${s.activation}`}>
+      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.bordeaux} ${s.activation}`}>
         <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
       </section>
 
