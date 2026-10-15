@@ -25,6 +25,7 @@ import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
 import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { chercherVinsBase, type VinTrouve } from '@/lib/admin/recherche-base';
+import { completerBase } from '@/lib/admin/completer-base';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -207,6 +208,8 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
   const partagees = await partagerEtiquettes(requete, { vins: [vinId], nouvellePhoto: etiquette ? vinId : undefined })
     .catch((e) => { console.error('[etiquettes] partage', e); return 0; });
+  // Ce que le restaurant a écrit complète la base de Pat (champs manquants seulement).
+  await completerBase(await memeVin(resto, vinId)).catch((e) => console.error('[base] compléter', vinId, e));
   revalidatePath(partagees ? '/' : `/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   // Retour à la liste des vins, sur la couleur du vin, avec la ligne du vin mise en évidence.
@@ -325,6 +328,22 @@ async function enregistrerIntitule(resto: string, vinId: string, f: FormData) {
  * producteur cherché dans la base de Pat, puis ses accords avec chaque plat (seulement ce vin) et sa présentation,
  * en arrière-plan. On revient sur la liste, le vin mis en évidence.
  */
+/**
+ * Vin choisi dans la base de Pat à l'ajout (« cuvee:<id> » ou « carte:<id d'un vin> ») : le nouveau vin est relié à
+ * cette cuvée (et à son producteur s'il n'en a pas), plutôt que d'en créer une seconde sous un intitulé un peu différent.
+ */
+async function relierAuVinDeLaBase(resto: string, vinIds: string[], cle: string | null) {
+  const [type, ref] = (cle ?? '').split(/:(.*)/s);
+  if (!ref || !['cuvee', 'carte'].includes(type)) return;
+  const [c] = await requete<{ id: string; producteur_id: string }>(
+    type === 'cuvee' ? 'select id, producteur_id from cuvee where id = $1'
+      : 'select c.id, c.producteur_id from vin_carte v join cuvee c on c.id = v.cuvee_id where v.id = $1', [ref]);
+  if (!c) return;
+  await requete(
+    `update vin_carte set producteur_id = coalesce(producteur_id, $3), cuvee_id = $4
+      where restaurant_id = $1 and id = any($2) and coalesce(producteur_id, $3) = $3`, [resto, vinIds, c.producteur_id, c.id]);
+}
+
 /** Ajout d'un vin : vins de la base de Pat proches de l'intitulé tapé, pour préremplir la fiche (sans prix ni classement). */
 export async function chercherDansBase(resto: string, texte: string): Promise<VinTrouve[]> {
   await exigerAcces(resto);
@@ -362,7 +381,9 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   await enregistrerContenances(resto, id, f);
   await enregistrerIntitule(resto, id, f);
   const ids = await memeVin(resto, id);
+  await relierAuVinDeLaBase(resto, ids, txt(f, 'base_cle'));
   await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
+  await completerBase(ids).catch((e) => console.error('[base] compléter', id, e));
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
   if (plats.length) await lancerPreparation(resto, plats.map((p) => p.id), u.email, { vins: ids }).catch((e) => console.error('[ajout] vin', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');

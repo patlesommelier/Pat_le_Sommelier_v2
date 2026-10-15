@@ -85,6 +85,7 @@ export function IntituleVin({ initial, chercher }: { initial: string; chercher?:
           if (chercher) { const t = e.target.value; if (minuteur.current) clearTimeout(minuteur.current); minuteur.current = setTimeout(() => lancer(t), 700); }
         }}
         onBlur={(e) => { if (minuteur.current) clearTimeout(minuteur.current); lancer(e.target.value); }} />
+      {chercher && <input type="hidden" name="base_cle" value={choisi ?? ''} />}
       {chercher && (cherche || trouves) && (
         <div className="pile" role="status" aria-live="polite" style={{ gap: 6, marginTop: 4, padding: '10px 12px', borderRadius: 10, border: '1.5px solid var(--ligne)' }}>
           {cherche ? <span className="petit">Pat cherche ce vin dans sa base…</span>
