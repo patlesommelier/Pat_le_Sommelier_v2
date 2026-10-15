@@ -17,11 +17,21 @@ const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: strin
   menu: { depot: 'Déposez votre menu pour que je l’analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
-/** Une étape : son numéro (« 1/3 ») à côté de son contenu ; l'intitulé reste lu par les lecteurs d'écran. */
-const EtapeNumerotee = ({ n, titre, children }: { n: number; titre: string; children: React.ReactNode }) => (
+/**
+ * Une étape : son numéro (« 1/3 ») à côté de son contenu ; l'intitulé reste lu par les lecteurs d'écran.
+ * `suite` : petit bouton rond à flèche vers le haut, à droite, pour passer à l'étape suivante une fois le fichier lu.
+ */
+const EtapeNumerotee = ({ n, titre, children, suite }: {
+  n: number; titre: string; children: React.ReactNode; suite?: { pret: boolean; aller: () => void };
+}) => (
   <div className={s.etapeLigne}>
     <h3 className={s.etapeNum}>{n}/3<span className={s.cacher}> : {titre}</span></h3>
     <div className={s.etapeContenu}>{children}</div>
+    {suite && (
+      <button type="button" className={s.suivant} disabled={!suite.pret} onClick={suite.aller} aria-label="Continuer" title="Continuer">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+      </button>
+    )}
   </div>
 );
 
@@ -133,17 +143,17 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
         {cree && <Preparation restaurantId={cree} />}
 
         {!cree && etape === 'carte' && <>
-          <EtapeNumerotee n={1} titre="Envoyez-nous votre carte des vins"><Depot type="carte" etat={resume.carte} onReponse={surReponse} /></EtapeNumerotee>
-          <div className={s.pied}>
-            <button type="button" className={s.bouton} disabled={resume.carte?.statut !== 'ok'} onClick={() => setEtape('menu')}>Continuer</button>
-          </div>
+          <EtapeNumerotee n={1} titre="Envoyez-nous votre carte des vins" suite={{ pret: resume.carte?.statut === 'ok', aller: () => setEtape('menu') }}>
+            <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
+          </EtapeNumerotee>
         </>}
 
         {!cree && etape === 'menu' && <>
-          <EtapeNumerotee n={2} titre="Envoyez-nous votre menu"><Depot type="menu" etat={resume.menu} onReponse={surReponse} /></EtapeNumerotee>
+          <EtapeNumerotee n={2} titre="Envoyez-nous votre menu" suite={{ pret: resume.menu?.statut === 'ok', aller: () => setEtape('restaurant') }}>
+            <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
+          </EtapeNumerotee>
           <div className={s.pied}>
             <button type="button" className={s.retour} onClick={() => setEtape('carte')}>Retour</button>
-            <button type="button" className={s.bouton} disabled={resume.menu?.statut !== 'ok'} onClick={() => setEtape('restaurant')}>Continuer</button>
           </div>
         </>}
 

@@ -148,3 +148,7 @@
 .etapeContenu { flex: 1; min-width: 0; }
 .etapeNum { flex-shrink: 0; margin: 0; display: inline-flex; align-items: center; justify-content: center; min-width: 48px; height: 32px; padding: 0 10px;
   box-sizing: border-box; border-radius: 999px; background: #680021; color: #EFEBE9; font-size: 15px; font-weight: 700; }
+.suivant { flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%; border: 0; background: #680021; color: #EFEBE9; cursor: pointer;
+  display: inline-flex; align-items: center; justify-content: center; }
+.suivant:disabled { opacity: 0.35; cursor: not-allowed; }
+.suivant:focus-visible { outline: 3px solid #680021; outline-offset: 2px; }
