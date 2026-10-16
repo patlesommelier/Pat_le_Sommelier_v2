@@ -1,15 +1,15 @@
 // Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
 //   1. présentation (crème du logo) : logo écrit, titre, texte, Pat attablé avec deux bulles de conversation et le petit
-//      QR code rouge de l'app de démo ;
-//   2. inscription en frise sur fond rose (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
+//      QR code rouge et le téléphone de l'app de démo ;
+//   2. inscription en frise sur fond rose (1/3 carte des vins, 2/3 menu, 3/3 restaurant), avec les bulles de Pat pendant l'attente ;
 //   3. « Qui est Pat ? » ; puis le pied de page.
 // « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) restent dans Sections.tsx
-// pour plus tard ; le téléphone de démo (TelephoneDemo.tsx) aussi.
+// pour plus tard .
 import Link from 'next/link';
 import s from './carnet.module.css';
 import { Inscription } from './Inscription';
 import { BullesPat } from './BullesPat';
-import { BandeauQui } from './BandeauQui';
+import { TelephoneDemo } from './TelephoneDemo';
 import { TexteRepliable } from './TexteRepliable';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
@@ -38,7 +38,7 @@ export async function PageAccueil() {
               <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre restaurant l’expérience d’un sommelier</h1>
               <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
             </TexteRepliable>
-            {/* Pat attablé et, à sa droite, un peu plus bas, le QR code ; l'ensemble est centré. */}
+            {/* Pat attablé, à sa droite le QR code puis le téléphone de démo ; l'ensemble est centré. */}
             <div className={s.sceneLigne}>
               <div className={s.scene}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -51,6 +51,8 @@ export async function PageAccueil() {
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src="/api/demo-qr?couleur=pat" alt="QR code à scanner pour essayer l’app de démonstration Chez Pat" width={84} height={84} />
               </a>
+              {/* L'app de démo Chez Pat dans un téléphone (ordinateur seulement) */}
+              <div className={s.telephone}><TelephoneDemo echelle={0.62} /></div>
             </div>
           </div>
         </div>
@@ -67,13 +69,10 @@ export async function PageAccueil() {
         <div className={`${s.large} ${s.qui}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <span className={s.quiImage}><img src="/pat/pat-trinquer-fuchsia.svg" alt="" width={380} height={294} /></span>
-          {/* Pendant l'inscription, les avantages puis les fonctionnalités de Pat défilent ici. */}
-          <BandeauQui>
-            <div>
+          <div>
               <h2 id="h-qui">Qui est Pat ?</h2>
               <p>Derrière cette app, il y a un vrai sommelier diplômé du WSET, avec des dizaines d’années d’expérience et de connaissance. Il a appris que le vin, c’est simple, mais qu’un bon accord se construit et ne se devine pas. Chaque accord entre un plat de votre menu et un vin de votre carte est évalué sur la base de principes bien définis, construits au fil des années. Pat donne un vin qui répond au plat, avec des explications simples ; il choisit un vigneron et un terroir bien plus qu’une étiquette.</p>
-            </div>
-          </BandeauQui>
+          </div>
         </div>
       </section>
 

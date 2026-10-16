@@ -1,16 +1,16 @@
 'use client';
-// Bandeau « Qui est Pat ? » de la page d'accueil. Pendant l'inscription, il occupe l'attente :
-// - dès le premier dépôt (lecture de la carte des vins et du menu) : les avantages de Pat défilent (un toutes les 10 secondes) ;
-// - préparation des accords : les fonctionnalités défilent.
-// Chaque changement se fait en douceur : l'ancien texte s'efface lentement, puis le nouveau apparaît.
+// Pendant l'inscription, Pat parle au restaurateur dans une bulle, juste sous le dépôt des fichiers :
+// - dès le premier dépôt (lecture de la carte des vins et du menu) : ses avantages, un toutes les 10 secondes ;
+// - préparation des accords : ses fonctionnalités.
+// Chaque changement se fait en douceur : l'ancienne bulle s'efface lentement, puis la nouvelle apparaît.
 // La phase arrive de l'inscription par l'évènement « pat:phase-inscription » (voir annoncerPhase).
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useState } from 'react';
 import s from './carnet.module.css';
 import { AVANTAGES, FONCTIONNALITES, Ic } from './Sections';
 
 export type PhaseInscription = 'lecture' | 'accords' | null;
 const EVENEMENT = 'pat:phase-inscription';
-// Dernière phase annoncée, gardée pour le bandeau s'il s'abonne après l'annonce (premier affichage de la page).
+// Dernière phase annoncée, gardée pour les bulles si elles s'abonnent après l'annonce (premier affichage de la page).
 let derniere: PhaseInscription = null;
 export const annoncerPhase = (phase: PhaseInscription) => {
   derniere = phase;
@@ -25,7 +25,7 @@ const FONDU = 900; // ms, durée de l'effacement (et de l'apparition)
 
 type Vue = { phase: PhaseInscription; n: number };
 
-export function BandeauQui({ children }: { children: ReactNode }) {
+export function BullesAttente() {
   const [voulu, setVoulu] = useState<Vue>({ phase: null, n: 0 });
   const [vue, setVue] = useState<Vue>(voulu);
   const [visible, setVisible] = useState(true);
@@ -43,28 +43,29 @@ export function BandeauQui({ children }: { children: ReactNode }) {
     return () => clearInterval(t);
   }, [voulu.phase]);
 
-  // Nouveau contenu demandé : effacement lent de l'actuel, puis apparition du nouveau.
+  // Nouvelle bulle demandée : effacement lent de l'actuelle, puis apparition de la nouvelle.
   useEffect(() => {
     if (voulu.phase === vue.phase && voulu.n === vue.n) return;
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setVue(voulu); return; }
     setVisible(false);
-    const t = setTimeout(() => { setVue(voulu); setVisible(true); }, FONDU);
+    const t = setTimeout(() => { setVue(voulu); setVisible(true); }, vue.phase ? FONDU : 0);
     return () => clearTimeout(t);
   }, [voulu, vue]);
 
-  let contenu: ReactNode = children;
-  if (vue.phase) {
-    const { surtitre, items } = LISTES[vue.phase];
-    const item = items[vue.n % items.length];
-    contenu = (
-      <div className={s.quiDefile}>
-        <span className={s.quiSurtitre}>{surtitre} · {(vue.n % items.length) + 1}/{items.length}</span>
-        <div className={s.quiItem}>
-          <span className={s.quiIcone}><Ic d={item.d} /></span>
-          <div><h2>{item.titre}</h2><p>{item.texte}</p></div>
+  if (!vue.phase) return null;
+  const { surtitre, items } = LISTES[vue.phase];
+  const item = items[vue.n % items.length];
+  return (
+    <div className={s.attente} data-visible={visible} aria-live="polite">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <span className={s.attenteAvatar}><img src="/pat/pat-avatar.svg" alt="Pat" /></span>
+      <div className={s.attenteBulle}>
+        <span className={s.attenteSurtitre}>{surtitre} · {(vue.n % items.length) + 1}/{items.length}</span>
+        <div className={s.attenteItem}>
+          <span className={s.attenteIcone}><Ic d={item.d} /></span>
+          <div><strong>{item.titre}</strong><p>{item.texte}</p></div>
         </div>
       </div>
-    );
-  }
-  return <div className={s.quiFondu} data-visible={visible} aria-live="polite">{contenu}</div>;
+    </div>
+  );
 }

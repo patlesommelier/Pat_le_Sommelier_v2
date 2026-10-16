@@ -10,7 +10,7 @@ import { commencer, deposer, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 import { Preparation } from './Preparation';
-import { annoncerPhase } from './BandeauQui';
+import { annoncerPhase, BullesAttente } from './BullesAttente';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
@@ -199,6 +199,8 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
           </form>
         )}
       </div>
+      {/* Pendant la lecture puis les accords, Pat parle dans une bulle sous le dépôt. */}
+      <BullesAttente />
     </div>
   );
 }

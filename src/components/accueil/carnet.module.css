@@ -14,7 +14,7 @@
 .intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-block: 12px 48px; }
 .titre { margin: 0; max-width: 22ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
 .texte { margin: 0; max-width: 58ch; font-size: 18px; line-height: 1.55; }
-.sceneLigne { display: flex; align-items: flex-end; justify-content: center; gap: 72px; width: 100%; margin-top: 10px; }
+.sceneLigne { display: flex; align-items: flex-end; justify-content: center; gap: 56px; width: 100%; margin-top: 10px; }
 .scene { position: relative; width: min(560px, 100%); }
 .scene > img { display: block; width: 100%; height: auto; }
 .bulle { position: absolute; margin: 0; max-width: 260px; padding: 10px 14px; border-radius: 18px; font-size: 15px; line-height: 1.35; text-align: left;
@@ -27,6 +27,22 @@
 /* Petit QR code rouge de la démo, à côté de Pat */
 .qr { flex: none; margin-bottom: 23px; /* bas du QR = ligne de la table de Pat (5 % au-dessus du bas de l’image) */ display: flex; flex-direction: column; align-items: center; gap: 6px; color: #FF0D05; font-size: 14px; text-decoration: none; }
 .qr img { width: 84px; height: 84px; display: block; border: 2px solid #FF0D05; border-radius: 12px; padding: 4px; background: #FEFAF1; box-sizing: content-box; }
+
+/* Téléphone de démo, à droite du QR ; son bas est aussi sur la ligne de la table */
+.telephone { flex: none; margin-bottom: 23px; }
+
+/* Inscription en frise ; pendant l'attente, Pat parle dans une bulle sous le dépôt (BullesAttente) */
+.attente { align-self: center; width: min(760px, 100%); display: flex; align-items: flex-end; gap: 14px; transition: opacity .9s ease, transform .9s ease; }
+.attente[data-visible="false"] { opacity: 0; transform: translateY(8px); }
+.attenteAvatar { flex: none; width: 56px; height: 56px; border-radius: 50%; overflow: hidden; background: #FF0D05; border: 2px solid #FEFAF1; }
+.attenteAvatar img { width: 100%; height: 100%; display: block; transform: scale(1.12); }
+.attenteBulle { flex: 1; min-width: 0; padding: 16px 20px; border-radius: 22px 22px 22px 4px; background: #680021; color: #FEFAF1;
+  box-shadow: 0 16px 28px -18px rgba(36,31,32,0.7); display: flex; flex-direction: column; gap: 10px; }
+.attenteSurtitre { font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #EB9D92; }
+.attenteItem { display: flex; gap: 14px; align-items: flex-start; }
+.attenteIcone { flex: none; width: 44px; height: 44px; border-radius: 12px; background: #DE0454; color: #FEFAF1; display: flex; align-items: center; justify-content: center; }
+.attenteItem strong { display: block; font-size: 20px; line-height: 1.25; color: #FEFAF1; }
+.attenteItem p { margin: 6px 0 0; font-size: 16px; line-height: 1.45; color: #EFEBE9; }
 
 /* Inscription en frise */
 .inscription { background: #EB9D92; }
@@ -42,15 +58,6 @@
 .qui h2 { margin: 0; color: #FF0D05; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
 .qui p { margin: 14px 0 0; max-width: 66ch; font-size: 18px; line-height: 1.6; }
 
-/* Pendant l'inscription : avantages puis fonctionnalités qui défilent à la place du texte */
-.quiDefile { display: flex; flex-direction: column; justify-content: center; gap: 14px; min-height: 230px; }
-.quiSurtitre { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #DE0454; }
-.quiItem { display: flex; gap: 18px; align-items: flex-start; }
-.quiFondu { flex: 1; min-width: 0; display: flex; flex-direction: column; justify-content: center; transition: opacity .9s ease, transform .9s ease; }
-.quiFondu[data-visible="false"] { opacity: 0; transform: translateY(8px); }
-.quiIcone { flex: none; width: 56px; height: 56px; border-radius: 16px; background: #680021; color: #EB9D92; display: flex; align-items: center; justify-content: center; }
-.quiItem h2 { margin: 0; color: #FF0D05; font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -0.5px; }
-.quiItem p { margin: 10px 0 0; }
 
 .pied { background: #241F20; color: #EFEBE9; font-size: 14px; }
 .pied .large { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; }
@@ -62,6 +69,11 @@
   .sceneLigne { flex-direction: column; align-items: center; gap: 18px; }
   .scene { display: flex; flex-direction: column; }
   .qr { margin-bottom: 0; }
+  .telephone { display: none; }
+  .attente { gap: 10px; }
+  .attenteAvatar { width: 40px; height: 40px; }
+  .attenteIcone { display: none; }
+  .attenteBulle { padding: 14px 16px; }
   .qui { flex-direction: column; gap: 24px; padding-block: 48px; }
   .quiImage { flex: none; align-self: flex-start; width: 220px; height: 170px; }
 }

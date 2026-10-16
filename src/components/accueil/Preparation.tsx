@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
 import { AstucesPat } from '@/components/AstucesPat';
-import { annoncerPhase } from './BandeauQui';
+import { annoncerPhase } from './BullesAttente';
 
 type Etat = { restaurant?: string; scanne?: boolean; preparation: { statut: string; total: number; faits: number } };
 
