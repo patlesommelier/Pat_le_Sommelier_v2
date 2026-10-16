@@ -50,14 +50,28 @@ const MAUVAIS: Record<keyof typeof SIGNAL, string> = {
   menu: 'Ce document ressemble à une carte des vins, pas à un menu. Déposez ici votre menu, avec vos plats.',
 };
 
+// Second essai quand Claude croit que le document n'est pas le bon : le restaurateur l'a déposé à cette étape,
+// on relève tout ce qui s'y trouve (une carte des vins avec quelques plats, un menu avec ses vins…) avant de le refuser.
+const INSISTANCE = {
+  carte: `Le restaurateur confirme que ce document est sa carte des vins. Relève chaque vin qui y figure, même si le document contient aussi des plats ou d'autres boissons. Ne réponds MENU_DE_PLATS que s'il n'y a vraiment aucun vin ; sinon, uniquement le JSON.`,
+  menu: `Le restaurateur confirme que ce document est son menu. Relève chaque plat qui y figure, même si le document contient aussi des vins ou des boissons. Ne réponds CARTE_DES_VINS que s'il n'y a vraiment aucun plat ; sinon, uniquement le JSON.`,
+};
+
 async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof typeof SIGNAL): Promise<unknown[]> {
   const client = clientClaude({ maxRetries: 3 });
-  const m = await client.messages.stream({
-    model: modele(), max_tokens: 32000,
-    messages: [{ role: 'user', content: [...await blocs(fichiers), { type: 'text', text: consigne }] }],
-  }).finalMessage();
-  const texte = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
-  if (texte.includes(SIGNAL[attendu]) && !texte.includes('[{')) throw new MauvaisDocument(MAUVAIS[attendu]);
+  const contenu = await blocs(fichiers);
+  const demander = async (texte: string) => {
+    const m = await client.messages.stream({
+      model: modele(), max_tokens: 32000,
+      messages: [{ role: 'user', content: [...contenu, { type: 'text', text: texte }] }],
+    }).finalMessage();
+    return m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
+  };
+  // « Mauvais document » seulement si la réponse donne le signal convenu et aucune liste.
+  const refuse = (texte: string) => texte.includes(SIGNAL[attendu]) && !/\[\s*\{/.test(texte);
+  let texte = await demander(consigne);
+  if (refuse(texte)) texte = await demander(`${consigne}\n\n${INSISTANCE[attendu]}`);
+  if (refuse(texte)) throw new MauvaisDocument(MAUVAIS[attendu]);
   return lireTableau(texte);
 }
 
@@ -67,7 +81,7 @@ Pour chaque plat : « nom » tel qu'écrit sur le menu (sans le prix), « catego
 « prix » : le prix du plat en euros, nombre (le plus petit s'il y en a plusieurs ; null si absent), et « prixVariantes » : le détail
 quand le menu donne plusieurs prix pour ce plat, ex. « 1 pièce 12 € / 2 pièces 22 € » (null sinon).
 Ignore les boissons, les vins, les suppléments isolés et les formules sans plat précis. N'invente rien.
-Si ces documents ne contiennent aucun plat mais une carte des vins ou des boissons, réponds exactement CARTE_DES_VINS, sans rien d'autre.
+Si ces documents ne contiennent aucun plat (seulement une carte des vins ou des boissons), réponds exactement CARTE_DES_VINS, sans rien d'autre.
 Sinon, réponds uniquement en JSON, sans texte autour : [{"nom": "...", "categorie": "plat", "description": "...", "prix": 24, "prixVariantes": null}]`;
 
 const CONSIGNE_CARTE = `Ces documents sont les pages de la carte des vins d'un restaurant (photos ou PDF). Relève chaque vin.
@@ -84,7 +98,8 @@ null si la carte ne l'indique pas — ne le devine pas), « appellation » (ou n
 « cepages » (cépages indiqués sur la carte, séparés par des virgules ; null s'ils n'y figurent pas — ne les devine pas).
 Un même vin en deux contenances donne deux lignes. Un vin servi au verre dans plusieurs contenants (verre de 12 et 15 cl,
 pichet, pot, carafe) : une seule ligne au verre, avec le prix du plus petit contenant ; ne relève pas les autres. N'invente rien.
-Si ces documents ne contiennent aucun vin mais un menu de plats (entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
+Une carte des vins qui présente aussi quelques plats ou d'autres boissons reste une carte des vins : relève ses vins.
+Si ces documents ne contiennent aucun vin (seulement un menu de plats : entrées, plats, desserts), réponds exactement MENU_DE_PLATS, sans rien d'autre.
 Sinon, réponds uniquement en JSON, sans texte autour : [{"libelleCarte": "...", "producteur": null, "appellation": null, "millesime": "2022",
 "contenance": null, "prix": 58, "prixVerre": null, "auVerre": false, "couleur": "blanc", "region": "Loire", "cepages": "Sauvignon blanc"}]`;
 
