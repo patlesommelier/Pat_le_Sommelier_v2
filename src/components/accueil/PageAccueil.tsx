@@ -1,14 +1,14 @@
-// Page d'accueil de Pat le sommelier, en trois parties :
-//   1. présentation (crème #FEFAF1, logo Pat attablé) : titre, texte, QR et grand téléphone avec l'app de démo Chez Pat ;
-//   2. activation (bordeaux) : dépôt du menu et de la carte, une étape à la fois ;
-//   3. « Qui est vraiment Pat ? » (crème #FEFAF1) ; puis le pied de page.
-// « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) sont retirées de la page
-// mais gardées dans Sections.tsx pour plus tard.
+// Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
+//   1. présentation (crème du logo) : logo écrit, titre, texte, Pat attablé avec deux bulles de conversation et le petit
+//      QR code rouge de l'app de démo ;
+//   2. inscription en frise sur fond rose (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
+//   3. « Qui est Pat ? » ; puis le pied de page.
+// « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) restent dans Sections.tsx
+// pour plus tard ; le téléphone de démo (TelephoneDemo.tsx) aussi.
 import Link from 'next/link';
-import s from './accueil.module.css';
+import s from './carnet.module.css';
 import { Inscription } from './Inscription';
-import { TelephoneDemo } from './TelephoneDemo';
-import { QuiEstPat } from './Sections';
+import { BullesPat } from './BullesPat';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
@@ -22,41 +22,56 @@ export async function PageAccueil() {
     ? await requete<{ id: string }>('select id from restaurant where id = $1 and premier_scan_le is null', [i.restaurant_id]) : [];
   return (
     <div className={s.page}>
-      <section aria-labelledby="h-intro" className={s.haut}>
-        <span className={s.halo} aria-hidden="true" />
-        <header className={s.entete}>
-          <Link href="/" className={s.marque}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-attable-rouge.svg" alt="Pat le sommelier" width={130} height={102} />
-          </Link>
-          <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
-        </header>
-        <div className={s.intro}>
-          <div className={s.introTexte}>
+      <section aria-labelledby="h-intro">
+        <div className={s.large}>
+          <header className={s.entete}>
+            <Link href="/" aria-label="Pat le sommelier, accueil">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/pat/pat-logo-rouge.svg" alt="Pat le sommelier" width={90} height={58} />
+            </Link>
+            <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
+          </header>
+          <div className={s.intro}>
             <h1 id="h-intro" className={s.titre}>Offrez à chaque client l’expérience d’un sommelier</h1>
             <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
-          </div>
-          <div className={s.demo}>
-            <div className={s.qr}>
-              {/* QR de l'app de démo Chez Pat (NEXT_PUBLIC_DEMO_URL, sinon /chez-pat) */}
+            <div className={s.scene}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src="/api/demo-qr" alt="QR code à scanner pour ouvrir l’app du restaurant de démonstration Chez Pat" width={100} height={100} />
-              <span>Scannez ici</span>
+              <img src="/pat/pat-attable-rouge.svg" alt="Pat, le sommelier, attablé avec sa bouteille et son verre" width={560} height={440} />
+              <BullesPat />
+              {/* QR de l'app de démo Chez Pat (NEXT_PUBLIC_DEMO_URL, sinon /chez-pat), rouge comme Pat */}
+              <a className={s.qr} href="/chez-pat" target="_blank" rel="noopener">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/api/demo-qr?couleur=pat" alt="QR code à scanner pour essayer l’app de démonstration Chez Pat" width={84} height={84} />
+                Essayez l’app
+              </a>
             </div>
-            <TelephoneDemo echelle={0.8} />
           </div>
         </div>
       </section>
 
-      <section aria-label="Activer votre sommelier" id="demarrer" className={`${s.bordeaux} ${s.activation}`}>
-        <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
+      <section aria-labelledby="h-insc" id="demarrer" className={s.inscription}>
+        <div className={s.large}>
+          <h2 id="h-insc">Votre sommelier est prêt en quelques minutes</h2>
+          <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
+        </div>
       </section>
 
-      <QuiEstPat />
+      <section aria-labelledby="h-qui">
+        <div className={`${s.large} ${s.qui}`}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/pat/pat-trinquer-fuchsia.svg" alt="" width={220} height={170} />
+          <div>
+            <h2 id="h-qui">Qui est Pat ?</h2>
+            <p>Derrière ce sommelier virtuel, il y a un vrai sommelier, diplômé du WSET, qui a des dizaines d’années de métier. Il a appris que le vin, c’est simple, mais qu’un bon accord se construit et ne se devine pas. Chaque plat de votre menu est donc confronté à chaque vin de votre carte, selon des principes bien définis : un vin qui répond au plat, des explications simples, et le vigneron beaucoup plus que l’étiquette. Il a l’enthousiasme facile pour les Alpilles, il l’avoue, mais ses accords, eux, sont mûrement réfléchis.</p>
+          </div>
+        </div>
+      </section>
 
-      <footer className={s.piedPage}>
-        <span>Pat le sommelier · Belgique</span>
-        <nav aria-label="Informations"><Link href="/conditions">Conditions d’utilisation</Link></nav>
+      <footer className={s.pied}>
+        <div className={s.large}>
+          <span>Pat le sommelier · Belgique</span>
+          <nav aria-label="Informations"><Link href="/conditions">Conditions d’utilisation</Link></nav>
+        </div>
       </footer>
     </div>
   );

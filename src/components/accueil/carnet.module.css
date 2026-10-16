@@ -1,0 +1,52 @@
+/* Page d'accueil « Le carnet » : page aérée, centrée sur Pat attablé ; inscription en frise sur fond rose.
+   Charte de Pat : Outfit Bold, rouge #FF0D05, bordeaux #680021, rose #EB9D92, fuchsia #DE0454, noir #241F20, crème du logo #FEFAF1. */
+.page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; background: #FEFAF1; }
+.page * { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700 !important; }
+.large { max-width: 1180px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); box-sizing: border-box; }
+
+/* En-tête : logo écrit à gauche, « Se connecter » à droite */
+.entete { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 24px 8px; }
+.entete img { height: 58px; width: auto; display: block; }
+.connexion { display: inline-flex; align-items: center; min-height: 44px; color: #680021; text-decoration: underline; text-underline-offset: 4px; }
+
+/* Présentation */
+.intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-block: 12px 48px; }
+.titre { margin: 0; max-width: 17ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
+.texte { margin: 0; max-width: 58ch; font-size: 18px; line-height: 1.55; }
+.scene { position: relative; width: min(560px, 100%); margin-top: 10px; }
+.scene > img { display: block; width: 100%; height: auto; }
+.bulle { position: absolute; margin: 0; max-width: 230px; padding: 10px 14px; border-radius: 18px; font-size: 15px; line-height: 1.35; text-align: left;
+  color: #FEFAF1; box-shadow: 0 14px 24px -14px rgba(36,31,32,0.6); animation: entre .5s ease-out both, flotte 5s ease-in-out .5s infinite; }
+.bulleClient { left: -6%; top: 4%; background: #DE0454; border-bottom-left-radius: 4px; }
+.bullePat { right: -8%; top: 30%; background: #680021; border-bottom-right-radius: 4px; animation-delay: .25s, 2.5s; }
+@keyframes entre { from { opacity: 0; transform: translateY(10px); } }
+@keyframes flotte { 50% { transform: translateY(-8px); } }
+
+/* Petit QR code rouge de la démo, à côté de Pat */
+.qr { position: absolute; right: calc(100% + 28px); bottom: 10%; display: flex; flex-direction: column; align-items: center; gap: 4px; color: #FF0D05; font-size: 13px; text-decoration: none; }
+.qr img { width: 84px; height: 84px; display: block; border: 2px solid #FF0D05; border-radius: 12px; padding: 4px; background: #FEFAF1; box-sizing: content-box; }
+
+/* Inscription en frise */
+.inscription { background: #EB9D92; }
+.inscription .large { padding-block: 52px 56px; display: flex; flex-direction: column; gap: 28px; }
+.inscription h2 { margin: 0; color: #680021; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
+
+/* Qui est Pat ? */
+.qui { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: center; padding-block: 64px; }
+.qui img { width: 100%; height: auto; display: block; border-radius: 28px; }
+.qui h2 { margin: 0; color: #FF0D05; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
+.qui p { margin: 14px 0 0; max-width: 66ch; font-size: 18px; line-height: 1.6; }
+
+.pied { background: #241F20; color: #EFEBE9; font-size: 14px; }
+.pied .large { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; }
+.pied a { color: #EB9D92; }
+
+@media (max-width: 760px) {
+  .entete img { height: 46px; }
+  .bulle { position: static; max-width: none; margin-top: 10px; animation: entre .5s ease-out both; }
+  .scene { display: flex; flex-direction: column; }
+  .qr { position: static; align-self: center; margin-top: 14px; }
+  .qui { grid-template-columns: 1fr; gap: 24px; padding-block: 48px; }
+  .qui img { width: 180px; }
+}
+@media (prefers-reduced-motion: reduce) { .bulle { animation: none; } }
