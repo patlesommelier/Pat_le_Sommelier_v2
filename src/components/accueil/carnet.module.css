@@ -41,11 +41,11 @@
 /* Qui est Pat ? */
 /* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
 .quiBandeau { background: #FEFAF1; color: #241F20; }
-.qui { display: flex; align-items: center; justify-content: center; gap: 48px; padding-block: 44px; }
-.quiImage { flex: none; width: 260px; height: auto; display: block; }
-.qui > div { max-width: 760px; }
-.qui h2 { margin: 0; color: #FF0D05; font-size: clamp(26px, 2.6vw, 34px); letter-spacing: -0.5px; }
-.qui p { margin: 10px 0 0; font-size: 16px; line-height: 1.6; color: #241F20; }
+.qui { display: flex; align-items: center; justify-content: center; gap: 40px; padding-block: 44px; }
+.quiImage { flex: none; width: 190px; height: auto; display: block; }
+.qui > div { max-width: 700px; }
+.qui h2 { margin: 0; color: #FF0D05; font-size: clamp(22px, 2vw, 27px); letter-spacing: -0.5px; }
+.qui p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.55; color: #241F20; }
 
 
 .pied { background: #241F20; color: #EFEBE9; font-size: 14px; }
@@ -61,7 +61,7 @@
   .telephone { display: none; }
   .boite { padding: 48px 18px 56px; border-radius: 26px; }
   .qui { flex-direction: column; text-align: center; gap: 20px; padding-block: 36px; }
-  .quiImage { width: 200px; }
+  .quiImage { width: 160px; }
   .sceneLigne > .scene { margin-right: 0; }
   }
 @media (prefers-reduced-motion: reduce) { .bulle { animation: none; } }
