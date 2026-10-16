@@ -11,12 +11,12 @@
 
 /* Présentation */
 .intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-block: 12px 48px; }
-.titre { margin: 0; max-width: 17ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
+.titre { margin: 0; max-width: 22ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
 .texte { margin: 0; max-width: 58ch; font-size: 18px; line-height: 1.55; }
 .sceneLigne { display: flex; align-items: flex-end; justify-content: center; gap: 72px; width: 100%; margin-top: 10px; }
 .scene { position: relative; width: min(560px, 100%); }
 .scene > img { display: block; width: 100%; height: auto; }
-.bulle { position: absolute; margin: 0; max-width: 230px; padding: 10px 14px; border-radius: 18px; font-size: 15px; line-height: 1.35; text-align: left;
+.bulle { position: absolute; margin: 0; max-width: 260px; padding: 10px 14px; border-radius: 18px; font-size: 15px; line-height: 1.35; text-align: left;
   color: #FEFAF1; box-shadow: 0 14px 24px -14px rgba(36,31,32,0.6); animation: entre 1s ease-out both, flotte 10s ease-in-out 1s infinite; }
 .bulleClient { left: -6%; top: 4%; background: #DE0454; border-bottom-left-radius: 4px; }
 .bullePat { right: -8%; top: 30%; background: #680021; border-bottom-right-radius: 4px; animation-delay: .5s, 5s; }
