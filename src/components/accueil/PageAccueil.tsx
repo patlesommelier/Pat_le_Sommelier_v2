@@ -10,6 +10,7 @@ import s from './carnet.module.css';
 import { Inscription } from './Inscription';
 import { BullesPat } from './BullesPat';
 import { BandeauQui } from './BandeauQui';
+import { TexteRepliable } from './TexteRepliable';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
@@ -33,8 +34,10 @@ export async function PageAccueil() {
             <Link href="/admin/connexion" className={s.connexion}>Se connecter</Link>
           </header>
           <div className={s.intro}>
-            <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre restaurant l’expérience d’un sommelier</h1>
-            <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
+            <TexteRepliable className={s.repliable}>
+              <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre restaurant l’expérience d’un sommelier</h1>
+              <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
+            </TexteRepliable>
             {/* Pat attablé et, à sa droite, un peu plus bas, le QR code ; l'ensemble est centré. */}
             <div className={s.sceneLigne}>
               <div className={s.scene}>

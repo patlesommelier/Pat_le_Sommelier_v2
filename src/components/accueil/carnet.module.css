@@ -1,6 +1,6 @@
 /* Page d'accueil « Le carnet » : page aérée, centrée sur Pat attablé ; inscription en frise sur fond rose.
    Charte de Pat : Outfit Bold, rouge #FF0D05, bordeaux #680021, rose #EB9D92, fuchsia #DE0454, noir #241F20, crème du logo #FEFAF1. */
-.page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; background: #FEFAF1; }
+.page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; background: #FEFAF1; overflow-anchor: none; }
 .page * { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700 !important; }
 .large { max-width: 1180px; margin: 0 auto; padding-left: max(24px, env(safe-area-inset-left, 0px)); padding-right: max(24px, env(safe-area-inset-right, 0px)); box-sizing: border-box; }
 
@@ -9,7 +9,8 @@
 .entete img { height: 58px; width: auto; display: block; }
 .connexion { display: inline-flex; align-items: center; min-height: 44px; color: #680021; text-decoration: underline; text-underline-offset: 4px; }
 
-/* Présentation */
+/* Présentation ; le titre et le texte s'écrasent au défilement sur ordinateur (TexteRepliable) */
+.repliable { display: flex; flex-direction: column; align-items: center; gap: 18px; overflow: hidden; transform-origin: 50% 0; will-change: height, transform; }
 .intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-block: 12px 48px; }
 .titre { margin: 0; max-width: 22ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
 .texte { margin: 0; max-width: 58ch; font-size: 18px; line-height: 1.55; }
