@@ -1,4 +1,4 @@
-/* Page d'accueil « Le carnet » : page aérée, centrée sur Pat attablé ; inscription en frise sur fond rose.
+/* Page d'accueil « Le carnet » : page aérée, centrée sur Pat attablé ; inscription en frise sur fond bordeaux ; « Qui est Pat ? » sur fond rose.
    Charte de Pat : Outfit Bold, rouge #FF0D05, bordeaux #680021, rose #EB9D92, fuchsia #DE0454, noir #241F20, crème du logo #FEFAF1. */
 .page { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; color: #241F20; background: #FEFAF1; overflow-anchor: none; }
 .page * { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700 !important; }
@@ -33,7 +33,7 @@
 
 /* Inscription en frise */
 .inscription { background: #680021; }
-.inscription .large { padding-block: 52px 56px; display: flex; flex-direction: column; gap: 28px; }
+.inscription .large { padding-block: 104px 112px; display: flex; flex-direction: column; gap: 28px; }
 .inscription h2 { margin: 0; text-align: center; color: #EB9D92; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */
@@ -56,6 +56,7 @@
   .scene { display: flex; flex-direction: column; }
   .qr { margin-bottom: 0; }
   .telephone { display: none; }
+  .inscription .large { padding-block: 64px 72px; }
   .qui { padding-block: 36px; }
   }
 @media (prefers-reduced-motion: reduce) { .bulle { animation: none; } }
