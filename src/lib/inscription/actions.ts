@@ -36,14 +36,15 @@ async function lancerLecture() {
 /** Dépôt de la carte des vins ou du menu : fichiers vérifiés et gardés dans la base, puis lecture en arrière-plan. */
 export async function deposer(type: TypeAnalyse, _: Reponse, form: FormData): Promise<Reponse> {
   let i = await inscriptionCourante();
+  // Pat (administrateur) n'est jamais bloqué par les limites d'essai.
+  const admin = (await utilisateurReel().catch(() => null))?.admin;
   // Premier dépôt (la carte des vins ouvre l'inscription) : une inscription commence, dans les limites par connexion.
   if (!i || i.statut !== 'en_cours') {
     await nettoyerInscriptions();
-    const admin = (await utilisateurReel().catch(() => null))?.admin;
     if (!admin && !(await inscriptionAutorisee(await ip()))) return { erreurs: ['Trop d’inscriptions depuis cette connexion aujourd’hui. Réessayez demain ou contactez-nous.'], resume: resumePublic(null) };
     i = await demarrerInscription();
   }
-  if (i.analyses >= MAX_ANALYSES_PAR_INSCRIPTION) return { erreurs: ['Nombre maximal d’envois atteint. Contactez-nous pour continuer.'], resume: resumePublic(i) };
+  if (!admin && i.analyses >= MAX_ANALYSES_PAR_INSCRIPTION) return { erreurs: ['Nombre maximal d’envois atteint. Contactez-nous pour continuer.'], resume: resumePublic(i) };
 
   const brut = form.getAll('fichiers').filter((f): f is File => f instanceof File && f.size > 0);
   const lus = await Promise.all(brut.map(async (f) => ({ nom: f.name.slice(0, 120), octets: new Uint8Array(await f.arrayBuffer()) })));

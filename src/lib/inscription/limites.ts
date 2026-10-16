@@ -5,7 +5,8 @@ import { createHash } from 'node:crypto';
 import { requete } from '../db';
 
 export const MAX_PAR_IP_ET_JOUR = 5;
-export const MAX_ANALYSES_PAR_INSCRIPTION = 6; // menu + carte, renvois compris
+// Menu + carte, renvois et essais refusés compris : assez pour recommencer plusieurs fois une lecture ratée.
+export const MAX_ANALYSES_PAR_INSCRIPTION = 15;
 
 export const empreinteIp = (ip: string) =>
   createHash('sha256').update(`${process.env.INSCRIPTION_SEL ?? ''}:${ip}`).digest('hex');
