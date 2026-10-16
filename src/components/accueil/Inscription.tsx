@@ -10,7 +10,6 @@ import { commencer, deposer, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 import { Preparation } from './Preparation';
-import { annoncerPhase, BullesAttente } from './BullesAttente';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
@@ -49,8 +48,8 @@ function Erreurs({ liste }: { liste: string[] }) {
 }
 
 /** Dépôt d'un ou plusieurs fichiers ; l'envoi part dès la sélection ou le glisser-déposer. */
-function Depot({ type, etat, onReponse, onDebut }: {
-  type: TypeAnalyse; etat: ResumePublic['carte']; onReponse: (r: Reponse) => void; onDebut: () => void;
+function Depot({ type, etat, onReponse }: {
+  type: TypeAnalyse; etat: ResumePublic['carte']; onReponse: (r: Reponse) => void;
 }) {
   const [reponse, envoyer, enCours] = useActionState(deposer.bind(null, type), { erreurs: [] } as Reponse);
   const [survol, setSurvol] = useState(false);
@@ -60,7 +59,6 @@ function Depot({ type, etat, onReponse, onDebut }: {
 
   const envoyerFichiers = async (liste: FileList | null) => {
     if (!liste?.length) return;
-    onDebut();
     setPrepare(true);
     const fichiers = await Promise.all([...liste].map(reduire));
     setPrepare(false);
@@ -142,11 +140,6 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
   }, [resume.carte?.statut, resume.menu?.statut]);
 
   const cree = compte.restaurantId ?? restaurantCree;
-  // Le bandeau « Qui est Pat ? » occupe l'attente : les avantages dès le premier dépôt et jusqu'à la création du
-  // restaurant (sans revenir au texte de Pat entre deux dépôts), puis les fonctionnalités pendant les accords.
-  const [commence, setCommence] = useState(Boolean(initial.carte || initial.menu));
-  const debut = useCallback(() => setCommence(true), []);
-  useEffect(() => { annoncerPhase(cree ? 'accords' : lecture || commence ? 'lecture' : null); }, [cree, lecture, commence]);
 
   // Frise : une étape faite (fuchsia) se rouvre d'un clic ; l'étape en cours est en bordeaux ; les suivantes attendent.
   const faite = (e: Etape) => (e === 'carte' && resume.carte?.statut === 'ok') || (e === 'menu' && resume.menu?.statut === 'ok');
@@ -174,13 +167,13 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
         {!cree && etape === 'carte' && (
           <AvecSuite pret={resume.carte?.statut === 'ok'} aller={() => setEtape('menu')}>
-            <Depot type="carte" etat={resume.carte} onReponse={surReponse} onDebut={debut} />
+            <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
           </AvecSuite>
         )}
 
         {!cree && etape === 'menu' && (
           <AvecSuite pret={resume.menu?.statut === 'ok'} aller={() => setEtape('restaurant')}>
-            <Depot type="menu" etat={resume.menu} onReponse={surReponse} onDebut={debut} />
+            <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
           </AvecSuite>
         )}
 
@@ -199,8 +192,6 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
           </form>
         )}
       </div>
-      {/* Pendant la lecture puis les accords, Pat parle dans une bulle sous le dépôt. */}
-      <BullesAttente />
     </div>
   );
 }

@@ -5,7 +5,6 @@ import { useEffect, useState } from 'react';
 import s from './accueil.module.css';
 import { PatAttente } from '@/components/PatAttente';
 import { AstucesPat } from '@/components/AstucesPat';
-import { annoncerPhase } from './BullesAttente';
 
 type Etat = { restaurant?: string; scanne?: boolean; preparation: { statut: string; total: number; faits: number } };
 
@@ -13,8 +12,6 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
   const pret = etat.restaurant === 'en_service';
   const espace = `/admin/${restaurantId}`;
-  // Accords prêts : le bandeau « Qui est Pat ? » reprend son texte.
-  useEffect(() => { if (pret) annoncerPhase(null); }, [pret]);
 
   useEffect(() => {
     let actif = true;

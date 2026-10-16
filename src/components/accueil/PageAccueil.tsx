@@ -1,7 +1,7 @@
 // Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
 //   1. présentation (crème du logo) : logo écrit, titre, texte, Pat attablé avec deux bulles de conversation et le petit
 //      QR code rouge et le téléphone de l'app de démo ;
-//   2. inscription en frise sur fond rose (1/3 carte des vins, 2/3 menu, 3/3 restaurant), avec les bulles de Pat pendant l'attente ;
+//   2. inscription en frise sur fond rose (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
 //   3. « Qui est Pat ? » ; puis le pied de page.
 // « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) restent dans Sections.tsx
 // pour plus tard .
@@ -65,7 +65,7 @@ export async function PageAccueil() {
         </div>
       </section>
 
-      <section aria-labelledby="h-qui">
+      <section aria-labelledby="h-qui" className={s.quiBandeau}>
         <div className={`${s.large} ${s.qui}`}>
           <div>
               <h2 id="h-qui">Qui est Pat ?</h2>
