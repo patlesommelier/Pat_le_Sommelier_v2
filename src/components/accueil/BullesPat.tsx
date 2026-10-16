@@ -1,6 +1,6 @@
 'use client';
 // Page d'accueil : deux bulles de conversation qui flottent autour de Pat attablé. Un client demande quoi boire
-// avec un plat, Pat répond ; la question et la réponse changent toutes les quelques secondes.
+// avec un plat, Pat répond ; la question et la réponse changent toutes les 9 secondes (le temps de les lire).
 import { useEffect, useState } from 'react';
 import s from './carnet.module.css';
 
@@ -16,7 +16,7 @@ export function BullesPat() {
   const [n, setN] = useState(0);
   useEffect(() => {
     if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    const t = setInterval(() => setN((x) => (x + 1) % ECHANGES.length), 4500);
+    const t = setInterval(() => setN((x) => (x + 1) % ECHANGES.length), 9000);
     return () => clearInterval(t);
   }, []);
   const [plat, reponse] = ECHANGES[n];
