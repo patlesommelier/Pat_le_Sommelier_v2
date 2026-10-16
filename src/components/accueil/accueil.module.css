@@ -144,8 +144,11 @@
 .astuces { flex: 1; font-size: 16px; font-weight: 700; color: #241F20; }
 @media (max-width: 640px) { .haut .marque img { width: 92px; height: 72px; } }
 /* Inscription : numéro de l'étape (1/3, 2/3, 3/3) à côté de son contenu */
-.etapeLigne { display: flex; align-items: center; gap: 16px; }
-.etapeContenu { flex: 1; min-width: 0; }
+/* Zone de dépôt centrée sur la page ; la flèche « Continuer » juste à sa droite. */
+.etapeLigne { display: grid; grid-template-columns: 1fr minmax(0, 760px) 1fr; align-items: center; column-gap: 16px; }
+.etapeContenu { grid-column: 2; min-width: 0; }
+.etapeLigne .suivant { grid-column: 3; justify-self: start; }
+@media (max-width: 900px) { .etapeLigne { grid-template-columns: minmax(0, 1fr) auto; } .etapeContenu { grid-column: 1; } .etapeLigne .suivant { grid-column: 2; } }
 .etapeNum { flex-shrink: 0; margin: 0; display: inline-flex; align-items: center; justify-content: center; min-width: 48px; height: 32px; padding: 0 10px;
   box-sizing: border-box; border-radius: 999px; background: #680021; color: #EFEBE9; font-size: 15px; font-weight: 700; }
 .suivant { flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%; border: 0; background: #680021; color: #EFEBE9; cursor: pointer;
