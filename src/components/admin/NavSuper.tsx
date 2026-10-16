@@ -5,7 +5,7 @@ import { Icone } from './Icone';
 
 const LIENS = [
   { href: '/admin/super', libelle: 'Restaurants', icone: 'home' },
-  { href: '/admin/super/producteurs', libelle: 'Producteurs à valider', icone: 'users' },
+  { href: '/admin/super/producteurs', libelle: 'Producteurs', icone: 'users' },
   { href: '/admin/super/vins', libelle: 'Vins de la base', icone: 'bottle' },
   { href: '/admin/super/base', libelle: 'Base et rankings', icone: 'bottle' },
   { href: '/admin/super/principes', libelle: 'Principes de Pat', icone: 'menu' },
@@ -25,7 +25,7 @@ export function NavSuper({ aValider }: { aValider: number }) {
         <Link key={l.href} href={l.href} className="bo-lien" aria-current={courant(l.href)}>
           <span className="bo-num" style={{ border: 0 }}><Icone nom={l.icone} /></span>
           <span style={{ flexGrow: 1 }}>{l.libelle}</span>
-          {l.href.endsWith('producteurs') && aValider > 0 && <b style={{ fontSize: 12.5 }}>{aValider}</b>}
+          {l.href.endsWith('producteurs') && aValider > 0 && <b style={{ fontSize: 12.5 }} title={`${aValider} à valider`}>{aValider}</b>}
         </Link>
       ))}
     </nav>

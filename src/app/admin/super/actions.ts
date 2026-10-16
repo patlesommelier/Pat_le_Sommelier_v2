@@ -24,7 +24,7 @@ import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
-const avec = (url: string, params: Record<string, string>) => `${url}?${new URLSearchParams(params)}`;
+const avec = (url: string, params: Record<string, string>) => `${url}${url.includes('?') ? '&' : '?'}${new URLSearchParams(params)}`;
 const entier = (f: FormData, k: string) => { const v = txt(f, k); return v === null ? null : Number.isInteger(Number(v)) ? Number(v) : NaN; };
 
 async function origine() {
@@ -152,12 +152,18 @@ function lireRankings(f: FormData) {
   return { terroirs, vins };
 }
 
-/** « Valider » depuis la file, sans ouvrir la fiche : ranking saisi (suggestion de Pat par défaut), rankings des cuvées gardés. */
+/** Retour à la liste des producteurs avec ses filtres (seulement une adresse de cette liste). */
+const retourProducteurs = (f: FormData) => {
+  const r = txt(f, 'retour');
+  return r && /^\/admin\/super\/producteurs(\?[^\s]*)?$/.test(r) ? r : '/admin/super/producteurs';
+};
+
+/** « Valider » depuis la liste, sans ouvrir la fiche : ranking saisi (suggestion de Pat par défaut), rankings des cuvées gardés. */
 export async function validerDepuisListe(producteurId: string, f: FormData) {
   const u = await exigerAdmin();
   const r = await validerProducteur(requete, { producteurId, rankingProducteur: entier(f, 'ranking') ?? NaN, par: u.email });
   revalidatePath('/admin', 'layout');
-  redirect(avec('/admin/super/producteurs', r.erreurs.length
+  redirect(avec(retourProducteurs(f), r.erreurs.length
     ? { erreur: r.erreurs.join(' ') }
     : { ok: `Producteur validé : ${r.vins} vin(s) de carte passent « Déjà référencé »${r.restaurants.length ? ` (${r.restaurants.join(', ')})` : ''}.` }));
 }
@@ -226,7 +232,7 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
     await requete('update vin_carte set ranking_terroir = $2 where appellation_id = $1', [id, rk]);
   }
   revalidatePath('/admin', 'layout');
-  redirect(retour);
+  redirect(retour.startsWith('/admin/super/producteurs') ? avec(retour, { ok: 'Ranking enregistré.' }) : retour);
 }
 
 /** « Ajouter un vin » à un producteur de la base (cuvée sans millésime). */

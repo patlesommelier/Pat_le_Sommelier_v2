@@ -108,6 +108,31 @@ export async function rechercherProducteurs({ texte = '', pays = '', restaurant 
   return { lignes, total: lignes[0]?.total ?? 0 };
 }
 
+/** Tous les producteurs (menu « Producteurs ») : filtres pays, région, statut et recherche ; les « à valider » d'abord. */
+export async function listerProducteurs({ texte = '', pays = '', region = '', statut = '', page = 0 }:
+  { texte?: string; pays?: string; region?: string; statut?: string; page?: number }) {
+  const lignes = await requete<{ id: string; nom: string; pays: string | null; region: string | null; statut: string; ranking_pat: number | null;
+    ranking_suggere: number | null; vins: number; restaurants: string | null; total: number }>(
+    `select p.id, p.nom, p.pays, p.region, p.statut::text, p.ranking_pat, p.ranking_suggere,
+            (select count(*)::int from vin_carte v where v.producteur_id = p.id) as vins,
+            (select string_agg(distinct r.nom, ', ') from vin_carte v join restaurant r on r.id = v.restaurant_id where v.producteur_id = p.id) as restaurants,
+            count(*) over ()::int as total
+       from producteur p
+      where ($1 = '' or translate(lower(p.nom), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc') like '%' || translate(lower($1), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc') || '%')
+        and ($2 = '' or p.pays = $2)
+        and ($3 = '' or p.region = $3)
+        and ($4 = '' or p.statut::text = $4)
+      order by (p.statut = 'propose') desc, (select count(*) from vin_carte v where v.producteur_id = p.id) desc, p.nom
+      limit 50 offset $5`, [texte.trim(), pays, region, statut, page * 50]);
+  return { lignes, total: lignes[0]?.total ?? 0 };
+}
+
+/** Régions des producteurs (du pays choisi, s'il y en a un), pour le filtre. */
+export async function regionsProducteurs(pays = '') {
+  return (await requete<{ region: string }>(
+    `select distinct region from producteur where region is not null and ($1 = '' or pays = $1) order by region`, [pays])).map((r) => r.region);
+}
+
 export async function paysProducteurs() {
   return (await requete<{ pays: string }>(`select distinct pays from producteur where pays is not null order by pays`)).map((p) => p.pays);
 }

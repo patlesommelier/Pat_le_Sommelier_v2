@@ -8,7 +8,7 @@ import { exigerAdmin } from '@/lib/admin/auth';
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Rejeté', 'defaut'] };
 
-/** Fiche d'un producteur proposé : informations, cuisine interne (rankings), vins des cartes, terroirs ; Rejeter / Enregistrer / Valider. */
+/** Fiche d'un producteur (à valider, validé ou rejeté) : informations, cuisine interne (rankings), vins des cartes, terroirs ; Rejeter / Enregistrer / Valider. */
 export default async function FicheProducteurPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { id } = await params;
@@ -20,7 +20,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
   return (
     <>
       <Entete titre={p.nom} texte={[p.region, p.sous_region, p.pays].filter(Boolean).join(' · ') || 'Région à préciser'}>
-        <Link href="/admin/super/producteurs" className="btn sec">← File d’attente</Link>
+        <Link href="/admin/super/producteurs" className="btn sec">← Producteurs</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
       <form action={decisionProducteur.bind(null, p.id)} className="pile" style={{ gap: 20 }}>
