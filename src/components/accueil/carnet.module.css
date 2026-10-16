@@ -32,8 +32,11 @@
 .inscription h2 { margin: 0; color: #680021; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */
-.qui { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: center; padding-block: 64px; }
-.qui img { width: 100%; height: auto; display: block; border-radius: 28px; }
+/* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
+.qui { display: flex; gap: 48px; align-items: stretch; padding-block: 64px; }
+.quiImage { flex: 0 0 300px; align-self: stretch; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 28px; background: #DE0454; }
+.quiImage img { width: 100%; height: 100%; object-fit: contain; display: block; }
+.qui > div { flex: 1; min-width: 0; }
 .qui h2 { margin: 0; color: #FF0D05; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
 .qui p { margin: 14px 0 0; max-width: 66ch; font-size: 18px; line-height: 1.6; }
 
@@ -46,7 +49,7 @@
   .bulle { position: static; max-width: none; margin-top: 10px; animation: entre .5s ease-out both; }
   .scene { display: flex; flex-direction: column; }
   .qr { position: static; align-self: center; margin-top: 14px; }
-  .qui { grid-template-columns: 1fr; gap: 24px; padding-block: 48px; }
-  .qui img { width: 180px; }
+  .qui { flex-direction: column; gap: 24px; padding-block: 48px; }
+  .quiImage { flex: none; align-self: flex-start; width: 220px; height: 170px; }
 }
 @media (prefers-reduced-motion: reduce) { .bulle { animation: none; } }
