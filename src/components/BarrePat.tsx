@@ -78,7 +78,7 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
         <section className="conversation" aria-label="Conversation avec Pat">
           <div className="conversation-haut">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-avatar.svg" alt="" width={28} height={28} />
+            <span className="avatar-pat-petit"><img src="/pat/pat-avatar.svg" alt="" width={28} height={28} /></span>
             <strong>Pat, votre sommelier</strong>
             <button type="button" onClick={() => setOuvert(false)}>Fermer</button>
           </div>
