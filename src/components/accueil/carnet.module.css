@@ -31,7 +31,11 @@
 .qr img { width: 84px; height: 84px; display: block; border: 2px solid #FF0D05; border-radius: 12px; padding: 4px; background: #FEFAF1; box-sizing: content-box; }
 
 /* Téléphone de démo, à droite du QR ; son bas est aussi sur la ligne de la table */
-.telephone { flex: none; margin-bottom: 23px; display: block; width: 186px; height: 380px; box-sizing: border-box; padding: 7px; border-radius: 30px;
+.telephoneBloc { position: relative; flex: none; margin-bottom: 23px; }
+/* Réponse de Pat à gauche du téléphone, en haut, sa pointe vers l'écran */
+.bulleTelephone { right: calc(100% + 18px); top: 34px; width: 230px; background: #680021; border-bottom-right-radius: 4px; animation-delay: -5s; }
+.bulleMobile { display: none; }
+.telephone { display: block; width: 186px; height: 380px; box-sizing: border-box; padding: 7px; border-radius: 30px;
   background: #241F20; box-shadow: 0 40px 70px -30px rgba(36,31,32,0.75); }
 .telephone video { display: block; width: 172px; height: 366px; object-fit: cover; object-position: top; border-radius: 24px; background: #EFEBE9; }
 
@@ -62,7 +66,8 @@
   .sceneLigne { flex-direction: column; align-items: center; gap: 18px; }
   .scene { display: flex; flex-direction: column; }
   .qr { margin-bottom: 0; }
-  .telephone { display: none; }
+  .telephoneBloc { display: none; }
+  .bulleMobile { display: block; }
   .boite { padding: 48px 18px 56px; border-radius: 26px; }
   .qui { flex-direction: column; text-align: center; gap: 20px; padding-block: 36px; }
   .quiImage { width: 180px; align-self: center; }
