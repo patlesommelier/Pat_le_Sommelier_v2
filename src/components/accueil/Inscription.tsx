@@ -30,7 +30,7 @@ const AvecSuite = ({ children, pret, aller }: { children: React.ReactNode; pret:
 const ETAPES: { id: Etape; titre: string }[] = [
   { id: 'carte', titre: 'Votre carte des vins' },
   { id: 'menu', titre: 'Votre menu' },
-  { id: 'restaurant', titre: 'Votre restaurant' },
+  { id: 'restaurant', titre: 'J’établis les accords mets-vins de votre carte' },
 ];
 
 const IconeEnvoi = () => (
