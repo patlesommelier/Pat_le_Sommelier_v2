@@ -42,8 +42,8 @@
 /* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
 .quiBandeau { background: #FEFAF1; color: #241F20; }
 .qui { display: flex; align-items: stretch; justify-content: center; gap: 40px; padding-block: 84px 56px; }
-.quiImage { flex: none; width: 210px; display: flex; align-items: center; justify-content: center; padding: 14px; box-sizing: border-box; border-radius: 24px; background: #DE0454; }
-.quiImage img { width: 100%; height: auto; display: block; }
+.quiImage { flex: none; width: 160px; align-self: stretch; display: flex; align-items: center; justify-content: center; padding: 12px; box-sizing: border-box; border-radius: 20px; background: #DE0454; }
+.quiImage img { width: 100%; height: auto; max-height: 100%; object-fit: contain; display: block; }
 .qui > div { max-width: 700px; align-self: center; }
 .qui h2 { margin: 0; color: #FF0D05; font-size: clamp(22px, 2vw, 27px); letter-spacing: -0.5px; }
 .qui p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.55; color: #241F20; }
