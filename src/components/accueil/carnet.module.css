@@ -32,17 +32,17 @@
 .telephone { flex: none; margin-bottom: 23px; }
 
 /* Inscription en frise */
-.inscription { background: #EB9D92; }
+.inscription { background: #680021; }
 .inscription .large { padding-block: 52px 56px; display: flex; flex-direction: column; gap: 28px; }
-.inscription h2 { margin: 0; text-align: center; color: #680021; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
+.inscription h2 { margin: 0; text-align: center; color: #EB9D92; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */
 /* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
-.quiBandeau { background: #680021; color: #FEFAF1; }
+.quiBandeau { background: #EB9D92; color: #241F20; }
 .qui { display: flex; justify-content: center; text-align: center; padding-block: 44px; }
 .qui > div { max-width: 1040px; }
-.qui h2 { margin: 0; color: #EB9D92; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
-.qui p { margin: 12px 0 0; font-size: 18px; line-height: 1.6; color: #FEFAF1; }
+.qui h2 { margin: 0; color: #680021; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
+.qui p { margin: 12px 0 0; font-size: 18px; line-height: 1.6; color: #241F20; }
 
 
 .pied { background: #241F20; color: #EFEBE9; font-size: 14px; }

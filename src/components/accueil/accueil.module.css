@@ -171,4 +171,16 @@
 .pasAttend { opacity: .5; }
 .friseContenu .depot { background: #FEFAF1; }
 .friseContenu .champ input { background: #FEFAF1; }
+/* Frise posée sur le bandeau bordeaux de la page d'accueil : textes clairs, boutons fuchsia */
+.frise .pasTitre { color: #FEFAF1; }
+.frise .pastille { background: #EB9D92; color: #680021; }
+.frise .pasEnCours .pastille { background: #FEFAF1; color: #680021; }
+.frise .pasFait .pastille { background: #DE0454; color: #FEFAF1; }
+.frise .pas::before { background: #FEFAF1; opacity: .3; }
+.frise .pasFait::before { background: #DE0454; opacity: 1; }
+.frise .suivant, .frise .bouton { background: #DE0454; color: #FEFAF1; }
+.frise .champ label, .frise .cgu { color: #FEFAF1; }
+.frise .cgu a { color: #EB9D92; }
+.frise .cgu input { accent-color: #DE0454; }
+.frise .suivant:focus-visible, .frise .pastille:focus-visible { outline: 3px solid #FEFAF1; outline-offset: 2px; }
 @media (max-width: 640px) { .friseEtapes { grid-template-columns: 1fr; gap: 10px; } .pas { flex-direction: row; align-items: center; text-align: left; } .pas::before { display: none; } }
