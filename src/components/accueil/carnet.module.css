@@ -19,10 +19,11 @@
 .scene { position: relative; width: min(560px, 100%); }
 .scene > img { display: block; width: 100%; height: auto; }
 .bulle { position: absolute; margin: 0; max-width: 260px; padding: 10px 14px; border-radius: 18px; font-size: 15px; line-height: 1.35; text-align: left;
-  color: #FEFAF1; box-shadow: 0 14px 24px -14px rgba(36,31,32,0.6); animation: entre 1s ease-out both, flotte 10s ease-in-out 1s infinite; }
+  color: #FEFAF1; box-shadow: 0 14px 24px -14px rgba(36,31,32,0.6); animation: flotte 10s ease-in-out infinite; transition: opacity .8s ease, translate .8s ease; }
+/* Bulles de la scène animée (DemoPat) : elles apparaissent et s'effacent en douceur. */
+.bulle[data-visible="false"] { opacity: 0; translate: 0 12px; }
 .bulleClient { left: -6%; top: 4%; background: #DE0454; border-bottom-left-radius: 4px; }
-.bullePat { right: -8%; top: 30%; background: #680021; border-bottom-right-radius: 4px; animation-delay: .5s, 5s; }
-@keyframes entre { from { opacity: 0; transform: translateY(10px); } }
+.bullePat { right: -8%; top: 30%; background: #680021; border-bottom-right-radius: 4px; animation-delay: -5s; }
 @keyframes flotte { 50% { transform: translateY(-8px); } }
 
 /* Petit QR code rouge de la démo, à côté de Pat */
@@ -30,7 +31,9 @@
 .qr img { width: 84px; height: 84px; display: block; border: 2px solid #FF0D05; border-radius: 12px; padding: 4px; background: #FEFAF1; box-sizing: content-box; }
 
 /* Téléphone de démo, à droite du QR ; son bas est aussi sur la ligne de la table */
-.telephone { flex: none; margin-bottom: 23px; }
+.telephone { flex: none; margin-bottom: 23px; display: block; width: 186px; height: 380px; box-sizing: border-box; padding: 7px; border-radius: 30px;
+  background: #241F20; box-shadow: 0 40px 70px -30px rgba(36,31,32,0.75); }
+.telephone video { display: block; width: 172px; height: 366px; object-fit: cover; object-position: top; border-radius: 24px; background: #EFEBE9; }
 
 /* Inscription en frise */
 .inscription { background: #FEFAF1; }

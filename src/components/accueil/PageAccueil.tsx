@@ -1,15 +1,14 @@
 // Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
-//   1. présentation (crème du logo) : logo écrit, titre, texte, Pat attablé avec deux bulles de conversation et le petit
-//      QR code rouge et le téléphone de l'app de démo ;
+//   1. présentation (crème du logo) : logo écrit, titre, texte, puis la scène animée (DemoPat) : Pat attablé avec
+//      les bulles d'un client et de Pat, le petit QR code rouge et le téléphone qui montre l'app de démo en vidéo ;
 //   2. inscription en frise dans une boîte bordeaux (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
 //   3. « Qui est Pat ? » ; puis le pied de page.
 // « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) restent dans Sections.tsx
-// pour plus tard .
+// pour plus tard.
 import Link from 'next/link';
 import s from './carnet.module.css';
 import { Inscription } from './Inscription';
-import { BullesPat } from './BullesPat';
-import { TelephoneDemo } from './TelephoneDemo';
+import { DemoPat } from './DemoPat';
 import { TexteRepliable } from './TexteRepliable';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
@@ -38,22 +37,8 @@ export async function PageAccueil() {
               <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre restaurant l’expérience d’un sommelier</h1>
               <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
             </TexteRepliable>
-            {/* Pat attablé, à sa droite le QR code puis le téléphone de démo ; l'ensemble est centré. */}
-            <div className={s.sceneLigne}>
-              <div className={s.scene}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/pat/pat-attable-rouge.svg" alt="Pat, le sommelier, attablé avec sa bouteille et son verre" width={560} height={440} />
-                <BullesPat />
-              </div>
-              {/* QR de l'app de démo Chez Pat (NEXT_PUBLIC_DEMO_URL, sinon /chez-pat), rouge comme Pat */}
-              <a className={s.qr} href="/chez-pat" target="_blank" rel="noopener">
-                Scannez ici
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/api/demo-qr?couleur=pat" alt="QR code à scanner pour essayer l’app de démonstration Chez Pat" width={84} height={84} />
-              </a>
-              {/* L'app de démo Chez Pat dans un téléphone (ordinateur seulement) */}
-              <div className={s.telephone}><TelephoneDemo echelle={0.62} /></div>
-            </div>
+            {/* Pat attablé, le QR code et le téléphone, animés ensemble : question, l'app en vidéo, réponse de Pat. */}
+            <DemoPat />
           </div>
         </div>
       </section>
