@@ -34,16 +34,17 @@
 
 /* Inscription en frise */
 .inscription { background: #FEFAF1; }
-.inscription .large { padding-block: 8px 24px; }
+.inscription .large { padding-block: 56px 24px; }
 .boite { background: #680021; border-radius: 36px; padding: 88px 40px 96px; display: flex; flex-direction: column; gap: 28px; }
 .inscription h2 { margin: 0; text-align: center; color: #EB9D92; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */
 /* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
 .quiBandeau { background: #FEFAF1; color: #241F20; }
-.qui { display: flex; align-items: center; justify-content: center; gap: 40px; padding-block: 44px; }
-.quiImage { flex: none; width: 190px; height: auto; display: block; }
-.qui > div { max-width: 700px; }
+.qui { display: flex; align-items: stretch; justify-content: center; gap: 40px; padding-block: 84px 56px; }
+.quiImage { flex: none; width: 210px; display: flex; align-items: center; justify-content: center; padding: 14px; box-sizing: border-box; border-radius: 24px; background: #DE0454; }
+.quiImage img { width: 100%; height: auto; display: block; }
+.qui > div { max-width: 700px; align-self: center; }
 .qui h2 { margin: 0; color: #FF0D05; font-size: clamp(22px, 2vw, 27px); letter-spacing: -0.5px; }
 .qui p { margin: 8px 0 0; font-size: 14.5px; line-height: 1.55; color: #241F20; }
 
@@ -61,7 +62,7 @@
   .telephone { display: none; }
   .boite { padding: 48px 18px 56px; border-radius: 26px; }
   .qui { flex-direction: column; text-align: center; gap: 20px; padding-block: 36px; }
-  .quiImage { width: 160px; }
+  .quiImage { width: 180px; align-self: center; }
   .sceneLigne > .scene { margin-right: 0; }
   }
 @media (prefers-reduced-motion: reduce) { .bulle { animation: none; } }
