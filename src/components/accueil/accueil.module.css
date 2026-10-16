@@ -155,10 +155,11 @@
 /* Inscription en frise (page « Le carnet ») */
 .frise { display: flex; flex-direction: column; gap: 26px; color: #241F20; }
 .friseEtapes { margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, 1fr); }
-.pas { position: relative; display: flex; flex-direction: column; gap: 10px; padding-right: 16px; }
-.pas::before { content: ''; position: absolute; left: 50px; right: 0; top: 17px; height: 3px; border-radius: 2px; background: #680021; opacity: .22; }
+/* Étapes centrées dans leur colonne ; le trait relie le centre d'une pastille au centre de la suivante. */
+.pas { position: relative; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.pas::before { content: ''; position: absolute; left: calc(50% + 34px); right: calc(-50% + 34px); top: 17px; height: 3px; border-radius: 2px; background: #680021; opacity: .22; }
 .pas:last-child::before { display: none; }
-.pastille { position: relative; z-index: 1; align-self: flex-start; min-width: 52px; height: 36px; padding: 0 12px; border: 0; border-radius: 999px;
+.pastille { position: relative; z-index: 1; min-width: 52px; height: 36px; padding: 0 12px; border: 0; border-radius: 999px;
   background: #680021; color: #FEFAF1; font: 700 16px Outfit, sans-serif; cursor: pointer; }
 .pastille:disabled { cursor: default; }
 .pasTitre { font-size: 19px; color: #680021; }
@@ -167,4 +168,4 @@
 .pasAttend { opacity: .5; }
 .friseContenu .depot { background: #FEFAF1; }
 .friseContenu .champ input { background: #FEFAF1; }
-@media (max-width: 640px) { .friseEtapes { grid-template-columns: 1fr; gap: 10px; } .pas { flex-direction: row; align-items: center; } .pas::before { display: none; } }
+@media (max-width: 640px) { .friseEtapes { grid-template-columns: 1fr; gap: 10px; } .pas { flex-direction: row; align-items: center; text-align: left; } .pas::before { display: none; } }

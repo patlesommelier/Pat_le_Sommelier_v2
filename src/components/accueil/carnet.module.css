@@ -29,7 +29,7 @@
 /* Inscription en frise */
 .inscription { background: #EB9D92; }
 .inscription .large { padding-block: 52px 56px; display: flex; flex-direction: column; gap: 28px; }
-.inscription h2 { margin: 0; color: #680021; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
+.inscription h2 { margin: 0; text-align: center; color: #680021; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */
 /* L'image des deux verres a la hauteur du bloc de texte : même haut, même bas. */
