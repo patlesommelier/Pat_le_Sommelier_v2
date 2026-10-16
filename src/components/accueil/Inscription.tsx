@@ -49,8 +49,8 @@ function Erreurs({ liste }: { liste: string[] }) {
 }
 
 /** Dépôt d'un ou plusieurs fichiers ; l'envoi part dès la sélection ou le glisser-déposer. */
-function Depot({ type, etat, onReponse }: {
-  type: TypeAnalyse; etat: ResumePublic['carte']; onReponse: (r: Reponse) => void;
+function Depot({ type, etat, onReponse, onDebut }: {
+  type: TypeAnalyse; etat: ResumePublic['carte']; onReponse: (r: Reponse) => void; onDebut: () => void;
 }) {
   const [reponse, envoyer, enCours] = useActionState(deposer.bind(null, type), { erreurs: [] } as Reponse);
   const [survol, setSurvol] = useState(false);
@@ -60,6 +60,7 @@ function Depot({ type, etat, onReponse }: {
 
   const envoyerFichiers = async (liste: FileList | null) => {
     if (!liste?.length) return;
+    onDebut();
     setPrepare(true);
     const fichiers = await Promise.all([...liste].map(reduire));
     setPrepare(false);
@@ -131,9 +132,21 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
     setResume(r.resume);
     if (!r.resume.carte) setEtape('carte');
   }, []);
+  // Lecture terminée : on passe tout seul à l'étape suivante (carte des vins lue → menu ; menu lu → restaurant).
+  const avant = useRef({ carte: resume.carte?.statut, menu: resume.menu?.statut });
+  useEffect(() => {
+    const { carte, menu } = avant.current;
+    if (carte !== 'ok' && resume.carte?.statut === 'ok') setEtape(resume.menu?.statut === 'ok' ? 'restaurant' : 'menu');
+    else if (menu !== 'ok' && resume.menu?.statut === 'ok') setEtape(resume.carte?.statut === 'ok' ? 'restaurant' : 'carte');
+    avant.current = { carte: resume.carte?.statut, menu: resume.menu?.statut };
+  }, [resume.carte?.statut, resume.menu?.statut]);
+
   const cree = compte.restaurantId ?? restaurantCree;
-  // Le bandeau « Qui est Pat ? » occupe l'attente : avantages pendant la lecture, fonctionnalités pendant les accords.
-  useEffect(() => { annoncerPhase(cree ? 'accords' : lecture ? 'lecture' : null); }, [cree, lecture]);
+  // Le bandeau « Qui est Pat ? » occupe l'attente : les avantages dès le premier dépôt et jusqu'à la création du
+  // restaurant (sans revenir au texte de Pat entre deux dépôts), puis les fonctionnalités pendant les accords.
+  const [commence, setCommence] = useState(Boolean(initial.carte || initial.menu));
+  const debut = useCallback(() => setCommence(true), []);
+  useEffect(() => { annoncerPhase(cree ? 'accords' : lecture || commence ? 'lecture' : null); }, [cree, lecture, commence]);
 
   // Frise : une étape faite (fuchsia) se rouvre d'un clic ; l'étape en cours est en bordeaux ; les suivantes attendent.
   const faite = (e: Etape) => (e === 'carte' && resume.carte?.statut === 'ok') || (e === 'menu' && resume.menu?.statut === 'ok');
@@ -161,13 +174,13 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
         {!cree && etape === 'carte' && (
           <AvecSuite pret={resume.carte?.statut === 'ok'} aller={() => setEtape('menu')}>
-            <Depot type="carte" etat={resume.carte} onReponse={surReponse} />
+            <Depot type="carte" etat={resume.carte} onReponse={surReponse} onDebut={debut} />
           </AvecSuite>
         )}
 
         {!cree && etape === 'menu' && (
           <AvecSuite pret={resume.menu?.statut === 'ok'} aller={() => setEtape('restaurant')}>
-            <Depot type="menu" etat={resume.menu} onReponse={surReponse} />
+            <Depot type="menu" etat={resume.menu} onReponse={surReponse} onDebut={debut} />
           </AvecSuite>
         )}
 
