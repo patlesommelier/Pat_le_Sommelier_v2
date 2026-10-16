@@ -24,7 +24,7 @@
 @keyframes flotte { 50% { transform: translateY(-8px); } }
 
 /* Petit QR code rouge de la démo, à côté de Pat */
-.qr { flex: none; margin-bottom: -18px; display: flex; flex-direction: column; align-items: center; gap: 6px; color: #FF0D05; font-size: 14px; text-decoration: none; }
+.qr { flex: none; margin-bottom: 23px; /* bas du QR = ligne de la table de Pat (5 % au-dessus du bas de l’image) */ display: flex; flex-direction: column; align-items: center; gap: 6px; color: #FF0D05; font-size: 14px; text-decoration: none; }
 .qr img { width: 84px; height: 84px; display: block; border: 2px solid #FF0D05; border-radius: 12px; padding: 4px; background: #FEFAF1; box-sizing: content-box; }
 
 /* Inscription en frise */
