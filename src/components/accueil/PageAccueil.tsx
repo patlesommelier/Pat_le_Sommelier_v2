@@ -67,8 +67,6 @@ export async function PageAccueil() {
 
       <section aria-labelledby="h-qui">
         <div className={`${s.large} ${s.qui}`}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <span className={s.quiImage}><img src="/pat/pat-trinquer-fuchsia.svg" alt="" width={380} height={294} /></span>
           <div>
               <h2 id="h-qui">Qui est Pat ?</h2>
               <p>Derrière cette app, il y a un vrai sommelier diplômé du WSET, avec des dizaines d’années d’expérience et de connaissance. Il a appris que le vin, c’est simple, mais qu’un bon accord se construit et ne se devine pas. Chaque accord entre un plat de votre menu et un vin de votre carte est évalué sur la base de principes bien définis, construits au fil des années. Pat donne un vin qui répond au plat, avec des explications simples ; il choisit un vigneron et un terroir bien plus qu’une étiquette.</p>
