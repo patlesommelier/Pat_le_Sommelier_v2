@@ -10,6 +10,7 @@ import { commencer, deposer, type Reponse } from '@/lib/inscription/actions';
 import type { Etape, ResumePublic, TypeAnalyse } from '@/lib/inscription/etapes';
 import { reduire } from '@/lib/reduire-image';
 import { Preparation } from './Preparation';
+import { annoncerPhase } from './BandeauQui';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
@@ -131,6 +132,8 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
     if (!r.resume.carte) setEtape('carte');
   }, []);
   const cree = compte.restaurantId ?? restaurantCree;
+  // Le bandeau « Qui est Pat ? » occupe l'attente : avantages pendant la lecture, fonctionnalités pendant les accords.
+  useEffect(() => { annoncerPhase(cree ? 'accords' : lecture ? 'lecture' : null); }, [cree, lecture]);
 
   // Frise : une étape faite (fuchsia) se rouvre d'un clic ; l'étape en cours est en bordeaux ; les suivantes attendent.
   const faite = (e: Etape) => (e === 'carte' && resume.carte?.statut === 'ok') || (e === 'menu' && resume.menu?.statut === 'ok');

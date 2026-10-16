@@ -9,6 +9,7 @@ import Link from 'next/link';
 import s from './carnet.module.css';
 import { Inscription } from './Inscription';
 import { BullesPat } from './BullesPat';
+import { BandeauQui } from './BandeauQui';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
@@ -60,10 +61,13 @@ export async function PageAccueil() {
         <div className={`${s.large} ${s.qui}`}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <span className={s.quiImage}><img src="/pat/pat-trinquer-fuchsia.svg" alt="" width={380} height={294} /></span>
-          <div>
-            <h2 id="h-qui">Qui est Pat ?</h2>
-            <p>Derrière cette app, il y a un vrai sommelier diplômé du WSET, avec des dizaines d’années d’expérience et de connaissance. Il a appris que le vin, c’est simple, mais qu’un bon accord se construit et ne se devine pas. Chaque accord entre un plat de votre menu et un vin de votre carte est évalué sur la base de principes bien définis, construits au fil des années. Pat donne un vin qui répond au plat, avec des explications simples ; il choisit un vigneron et un terroir bien plus qu’une étiquette.</p>
-          </div>
+          {/* Pendant l'inscription, les avantages puis les fonctionnalités de Pat défilent ici. */}
+          <BandeauQui>
+            <div>
+              <h2 id="h-qui">Qui est Pat ?</h2>
+              <p>Derrière cette app, il y a un vrai sommelier diplômé du WSET, avec des dizaines d’années d’expérience et de connaissance. Il a appris que le vin, c’est simple, mais qu’un bon accord se construit et ne se devine pas. Chaque accord entre un plat de votre menu et un vin de votre carte est évalué sur la base de principes bien définis, construits au fil des années. Pat donne un vin qui répond au plat, avec des explications simples ; il choisit un vigneron et un terroir bien plus qu’une étiquette.</p>
+            </div>
+          </BandeauQui>
         </div>
       </section>
 

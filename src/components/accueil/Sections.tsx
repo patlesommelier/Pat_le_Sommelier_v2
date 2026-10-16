@@ -3,12 +3,12 @@
 // Avantages et Fonctionnalites ne sont plus affichées sur la page d'accueil (gardées pour plus tard) ; seule QuiEstPat y est.
 import s from './accueil.module.css';
 
-const Ic = ({ d }: { d: string }) => (
+export const Ic = ({ d }: { d: string }) => (
   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"
     dangerouslySetInnerHTML={{ __html: d }} />
 );
 
-const AVANTAGES = [
+export const AVANTAGES = [
   { d: '<path d="M12 3v3M12 18v3M3 12h3M18 12h3"/><circle cx="12" cy="12" r="5"/>', titre: 'Le même niveau de conseil, tous les soirs',
     texte: 'Que votre meilleur serveur soit en congé ou que la salle soit pleine, chaque client reçoit des vins choisis pour son plat, expliqués simplement.' },
   { d: '<path d="M7 3h10l-1 7a4 4 0 0 1-8 0z"/><path d="M12 14v6M8 21h8"/>', titre: 'Des clients qui osent, et qui reviennent',
@@ -25,7 +25,7 @@ const AVANTAGES = [
     texte: 'Un meilleur conseil fait vendre plus de vin, et mieux. C’est la marge la plus confortable de votre carte, autant qu’elle travaille.' },
 ];
 
-const FONCTIONNALITES = [
+export const FONCTIONNALITES = [
   { d: '<rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M10 18.5h4"/>', titre: 'Aucune installation',
     texte: 'Vos clients scannent un QR code et me retrouvent dans leur navigateur. Pas d’application à télécharger, pas de compte à créer.' },
   { d: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 4v16M15 4v16"/>', titre: 'Une table d’accords construite pour votre menu',

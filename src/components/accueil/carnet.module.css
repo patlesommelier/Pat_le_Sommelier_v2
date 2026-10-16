@@ -40,6 +40,14 @@
 .qui h2 { margin: 0; color: #FF0D05; font-size: clamp(28px, 3.2vw, 40px); letter-spacing: -0.5px; }
 .qui p { margin: 14px 0 0; max-width: 66ch; font-size: 18px; line-height: 1.6; }
 
+/* Pendant l'inscription : avantages puis fonctionnalités qui défilent à la place du texte */
+.quiDefile { display: flex; flex-direction: column; justify-content: center; gap: 14px; min-height: 230px; }
+.quiSurtitre { font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; color: #DE0454; }
+.quiItem { display: flex; gap: 18px; align-items: flex-start; animation: entre .8s ease-out both; }
+.quiIcone { flex: none; width: 56px; height: 56px; border-radius: 16px; background: #680021; color: #EB9D92; display: flex; align-items: center; justify-content: center; }
+.quiItem h2 { margin: 0; color: #FF0D05; font-size: clamp(24px, 2.6vw, 32px); letter-spacing: -0.5px; }
+.quiItem p { margin: 10px 0 0; }
+
 .pied { background: #241F20; color: #EFEBE9; font-size: 14px; }
 .pied .large { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-block: 24px; }
 .pied a { color: #EB9D92; }
