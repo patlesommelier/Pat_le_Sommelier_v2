@@ -95,7 +95,7 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
   }
   await requete(
     `update plat set nom = coalesce($3, nom), nom_court = $4, categorie = coalesce($5::categorie_plat, categorie), prix = $6,
-            prix_variantes = $7, actif = $8, modifie_bo = now(),
+            prix_variantes = $7, actif = coalesce($8::boolean, actif), modifie_bo = now(),
             -- Description ou sauce changée après le calcul des accords : le back-office le signale.
             description_modifiee_le = case when coalesce(description_cuisine, '') <> coalesce($9, '') or sauce_servie_a_part is distinct from $10::boolean
                                            then now() else description_modifiee_le end,
@@ -104,12 +104,21 @@ export async function enregistrerPlat(resto: string, platId: string, f: FormData
             sauce_servie_a_part = $10::boolean
       where id = $1 and restaurant_id = $2`,
     [platId, resto, txt(f, 'nom'), txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat : null,
-      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.get('actif') === 'on', txt(f, 'description_cuisine'),
+      nombre(f, 'prix'), txt(f, 'prix_variantes'), f.has('avec_actif') ? f.get('actif') === 'on' : null, txt(f, 'description_cuisine'),
       f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   return { ok: 'Plat enregistré.' };
+}
+
+/** Plat proposé ou non aux clients : la case de la liste du menu, enregistrée dès qu'on la coche ou la décoche. */
+export async function proposerPlat(resto: string, platId: string, actif: boolean): Promise<Retour> {
+  await exigerAcces(resto);
+  await requete('update plat set actif = $3, modifie_bo = now() where id = $1 and restaurant_id = $2', [platId, resto, actif]);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  return { ok: actif ? 'Plat proposé à vos clients.' : 'Plat retiré de l’app.' };
 }
 
 /** Nouveau plat ajouté par le restaurant : Pat prépare aussitôt ses accords avec toute la carte (en arrière-plan). */

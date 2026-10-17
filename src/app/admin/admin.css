@@ -189,3 +189,7 @@
 .deroulant-corps { display: flex; flex-direction: column; gap: 16px; max-width: 760px; padding: 18px 18px 20px; }
 .deroulant[open] > summary { border-bottom: 1px solid var(--ligne); }
 .deroulant-nom .petit { font-size: 13px; color: var(--discret); }
+.entete-deroulante { display: flex; justify-content: flex-end; padding: 0 66px 0 18px; font-size: 12.5px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--texte); }
+.case-proposee { flex-shrink: 0; width: 76px; display: flex; justify-content: center; }
+.case-proposee input { width: 22px; height: 22px; accent-color: var(--encre); cursor: pointer; margin: 0; }
+.deroulant.non-propose .deroulant-nom, .deroulant.non-propose summary > span:nth-child(2) { opacity: 0.5; }

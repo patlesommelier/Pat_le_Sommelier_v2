@@ -1,10 +1,11 @@
 import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { enregistrerPlat, envoyerSuggestions, supprimerPlat } from '../../actions';
+import { enregistrerPlat, envoyerSuggestions, proposerPlat, supprimerPlat } from '../../actions';
+import { CaseProposee } from '@/components/admin/CaseProposee';
 import { EnvoiSuggestions, type EtatLecture } from '@/components/admin/EnvoiSuggestions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
-import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
+import { Entete, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfils, type PlatBO } from '@/lib/admin/donnees';
 
 type Profil = NonNullable<ReturnType<Awaited<ReturnType<typeof getProfils>>['get']>>;
@@ -29,7 +30,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   const lien = (q: Record<string, string>) => `/admin/${resto}/menu?${new URLSearchParams({ cat, ...q })}`;
   return (
     <>
-      <Entete titre="Menu" texte="Les plats proposés à vos clients : nom, nom court affiché sur l’accueil, catégorie et prix. Un plat masqué n’apparaît plus dans l’app.">
+      <Entete titre="Menu" texte="Liste des plats proposés à vos clients et accordés par Pat.">
         <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">Ajouter un plat</Link>
       </Entete>
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
@@ -44,12 +45,13 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
         </nav>
         {/* Chaque plat se déroule (flèche vers le bas) pour afficher et modifier son détail. */}
         <div className="liste-deroulante">
+          <div className="entete-deroulante" aria-hidden="true"><span className="case-proposee">Proposé</span></div>
           {affiches.map((p) => (
-            <details key={p.id} className="deroulant" open={p.id === platId}>
+            <details key={p.id} className={`deroulant ${p.actif ? '' : 'non-propose'}`} open={p.id === platId}>
               <summary>
                 <span className="deroulant-nom"><span className="nom">{p.nom}</span>{p.nom_court && p.nom_court !== p.nom && <span className="petit">Nom affiché dans l’app : {p.nom_court}</span>}</span>
                 <span style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{p.prix_variantes ?? euros(p.prix)}</span>
-                {!p.actif ? <Etat type="defaut">Masqué</Etat> : p.modifie_bo ? <Etat type="ok">Modifié</Etat> : <Etat type="ok">En ligne</Etat>}
+                <CaseProposee key={String(p.actif)} actif={p.actif} nom={p.nom} basculer={proposerPlat.bind(null, resto, p.id)} />
                 <svg className="fleche" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6" /></svg>
               </summary>
               <DetailPlat resto={resto} plat={p} profil={profils.get(p.id) ?? null} ok={Boolean(ok) && p.id === platId} />
@@ -76,8 +78,7 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
         <div className="champ"><label htmlFor={`prix-${plat.id}`}>Prix (€)</label><input id={`prix-${plat.id}`} name="prix" inputMode="decimal" defaultValue={plat.prix ?? ''} /></div>
       </div>
       <div className="champ"><label htmlFor={`prix_variantes-${plat.id}`}>Prix détaillé (facultatif)</label><input id={`prix_variantes-${plat.id}`} name="prix_variantes" defaultValue={plat.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
-      <label className="case"><input type="checkbox" name="actif" defaultChecked={plat.actif} /><span>Proposé aux clients</span></label>
-      {/* Clé = adresse de la photo : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
+            {/* Clé = adresse de la photo : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
       <PhotoEtiquette key={plat.photo_url ?? 'sans'} url={plat.photo_url} champ="photo" alt="Photo du plat" hauteur={220}>
         <span className="libelle">Photo du plat (facultative)</span>
         <span className="petit discret">Montrée à vos clients avec les propositions de Pat.</span>
@@ -120,7 +121,7 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
         <button type="submit" className="btn petit">Enregistrer</button>
         <Link href={`/admin/${resto}/accords?plat=${plat.id}`} className="btn sec petit">Voir ses accords</Link>
         <BoutonSupprimer action={supprimerPlat.bind(null, resto, plat.id)} libelle="Supprimer ce plat" className="btn sec petit"
-          question={`Supprimer « ${plat.nom} » du menu ? Ses accords seront supprimés aussi. Cette action est définitive. (Pour le retirer temporairement, décochez plutôt « Proposé aux clients ».)`} />
+          question={`Supprimer « ${plat.nom} » du menu ? Ses accords seront supprimés aussi. Cette action est définitive. (Pour le retirer temporairement, décochez plutôt sa case « Proposé » dans la liste.)`} />
       </div>
     </FormulaireAdmin>
   );
