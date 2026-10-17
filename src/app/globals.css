@@ -35,7 +35,7 @@ button { font: inherit; }
   color: var(--sur-marque, #FFFFFF); text-decoration: none; font-size: 10.5px; font-weight: 700; letter-spacing: 1.5px;
   text-transform: uppercase; flex-shrink: 0; white-space: nowrap;
 }
-.accueil-hero { padding: 10px 20px 28px; display: flex; flex-direction: column; gap: 22px; }
+.accueil-hero { padding: 10px 20px 14px; display: flex; flex-direction: column; gap: 22px; }
 .accueil-texte { display: flex; flex-direction: column; align-items: center; gap: 12px; text-align: center; }
 .accueil-titre { font-size: 27px; font-weight: 700; line-height: 1.25; margin-top: 18px; letter-spacing: 0.3px; }
 .accueil-titre span { display: block; font-weight: 400; font-size: 21px; }
@@ -259,7 +259,8 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 .accueil-defile { background: linear-gradient(to bottom, var(--marque) 0, var(--marque) 50%, var(--fond, #FFFFFF) 50%); }
 .accueil-defile > .contenu { background: var(--fond, #FFFFFF); flex-grow: 1; }
 /* Choix des plats depuis la carte des vins : une ligne au lieu du grand bandeau. */
-/* « Qu'allez-vous manger ? » reste en haut de la liste des plats pendant qu'on la fait défiler. */
-.accueil-compact { position: sticky; top: 0; z-index: 1; background: var(--fond, #FFFFFF); margin: 0; padding: 18px 20px 10px; text-align: center; font-size: 18px; font-style: italic; color: var(--marque-texte, var(--marque)); }
-.accueil-compact span { display: block; font-size: 15px; font-style: normal; color: var(--discret); margin-top: 4px; }
+/* Question en italique dans la couleur du bandeau : sous le logo de la carte des vins (« Que voulez-vous boire ? ») ; à l'accueil,
+   « Qu'allez-vous manger ? » remonte avec la page jusque sous le logo, puis y reste. */
+.question-bandeau { margin: 0; padding: 0 20px 16px; text-align: center; font-size: 18px; font-style: italic; background: var(--marque); color: var(--sur-marque, #FFFFFF); }
+main .question-bandeau { position: sticky; top: 0; z-index: 1; }
 
