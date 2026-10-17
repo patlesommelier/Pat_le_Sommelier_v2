@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerRanking, validerDepuisListe } from '../actions';
+import { ajouterProducteur, changerRanking, validerDepuisListe } from '../actions';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { listerProducteurs, paysProducteurs, regionsProducteurs } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -16,8 +16,8 @@ export default async function Producteurs({ searchParams }: { searchParams: Prom
   const sp = await searchParams;
   const page = Math.max(0, Number(sp.page) || 0);
   const statut = sp.statut && STATUTS[sp.statut] ? sp.statut : '';
-  const [pays, regions, { lignes, total }] = await Promise.all([
-    paysProducteurs(), regionsProducteurs(sp.pays ?? ''),
+  const [pays, regions, toutesRegions, { lignes, total }] = await Promise.all([
+    paysProducteurs(), regionsProducteurs(sp.pays ?? ''), regionsProducteurs(),
     listerProducteurs({ texte: sp.q ?? '', pays: sp.pays ?? '', region: sp.region ?? '', statut, page }),
   ]);
   const lien = (extra: Partial<Sp>) => {
@@ -29,8 +29,22 @@ export default async function Producteurs({ searchParams }: { searchParams: Prom
 
   return (
     <>
-      <Entete titre="Producteurs" texte="Tous les producteurs de la base de Pat. Ceux trouvés sur les cartes et pas encore validés sont en tête : tant qu’ils ne le sont pas, le restaurant voit « Nouveau producteur ». Le ranking se change ici ou dans la fiche ; il n’est jamais montré aux restaurants." />
+      <Entete titre="Producteurs" texte="Tous les producteurs de la base de Pat. Ceux trouvés sur les cartes et pas encore validés sont en tête : tant qu’ils ne le sont pas, le restaurant voit « Nouveau producteur ». Le ranking se change ici ou dans la fiche ; il n’est jamais montré aux restaurants. Un producteur absent de la base s’ajoute ci-dessous." />
       <Message ok={sp.ok} erreur={sp.erreur} />
+
+      {/* Nouveau producteur : il entre dans la base validé, avec son ranking ; sa fiche s'ouvre ensuite pour la compléter. */}
+      <details className="carte-bo" style={{ padding: '14px 18px' }}>
+        <summary style={{ cursor: 'pointer', fontWeight: 700 }}>+ Ajouter un producteur</summary>
+        <form action={ajouterProducteur} style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', marginTop: 12 }}>
+          <div className="champ" style={{ flex: '2 1 220px' }}><label htmlFor="n-nom">Nom</label><input id="n-nom" name="nom" required placeholder="Ex. Domaine Jules Desjourneys" /></div>
+          <div className="champ" style={{ flex: '1 1 140px' }}><label htmlFor="n-pays">Pays</label><input id="n-pays" name="pays" list="liste-pays" placeholder="France" /></div>
+          <div className="champ" style={{ flex: '1 1 160px' }}><label htmlFor="n-region">Région</label><input id="n-region" name="region" list="liste-regions" placeholder="Bourgogne" /></div>
+          <div className="champ"><label htmlFor="n-rk">Ranking (0 à 5)</label><input id="n-rk" className="rk" name="ranking" type="number" min={0} max={5} step={1} required /></div>
+          <button className="btn petit">Ajouter</button>
+          <datalist id="liste-pays">{pays.map((p) => <option key={p} value={p} />)}</datalist>
+          <datalist id="liste-regions">{toutesRegions.map((r) => <option key={r} value={r} />)}</datalist>
+        </form>
+      </details>
 
       <form method="get" className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', padding: '14px 18px' }}>
         <div className="champ" style={{ flex: '1 1 220px' }}><label htmlFor="q">Recherche</label><input id="q" name="q" defaultValue={sp.q ?? ''} placeholder="Nom du producteur…" /></div>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { Entete, Etat, Vignette } from '@/components/admin/Ui';
-import { rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
-import { ajouterCuveeDepuisCarte, validerCuvees } from '../actions';
+import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
+import { nomsProducteurs, rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
+import { ajouterCuveeDepuisCarte, ajouterVinBase, validerCuvees } from '../actions';
 import { BarreValidation, CocherTout } from '@/components/admin/ValidationGroupee';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -12,7 +12,7 @@ const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: 
 /** Case à cocher d'un vin à valider (formulaire « valider-lot » de BarreValidation). */
 const Case = ({ id, statut }: { id: string | null; statut: string | null }) =>
   <td style={{ width: 28 }}>{id && statut === 'propose' && <input type="checkbox" name="ids" value={id} form="valider-lot" aria-label="Sélectionner ce vin à valider" />}</td>;
-type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string };
+type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string; erreur?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
 export default async function VinsBase({ searchParams }: { searchParams: Promise<Sp> }) {
@@ -21,10 +21,10 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   const page = Math.max(0, Number(sp.page) || 0);
   const surCartes = sp.cartes !== '0';
   // Un restaurant choisi : tous les vins de sa carte, reliés ou non à un vin de la base.
-  const [{ lignes, total }, carte, restos] = await Promise.all([
+  const [{ lignes, total }, carte, restos, producteurs] = await Promise.all([
     sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', surCartes, page }),
     sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', page }) : null,
-    restaurantsListe(),
+    restaurantsListe(), nomsProducteurs(),
   ]);
   const nombre = carte ? carte.total : total;
   // Adresse de la liste telle qu'affichée (filtres et page) : la fiche y ramène après une validation.
@@ -34,6 +34,25 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   return (
     <>
       <Entete titre="Vins de la base" texte="Les vins (cuvées) de la base de Pat : nom, appellation, cépages, étiquette. Une étiquette ajoutée ici est reprise par les cartes des restaurants qui n’ont pas leur propre photo." />
+      <Message erreur={sp.erreur} />
+      {/* Nouveau vin de la base : validé, rattaché à un producteur de la base ; sa fiche s'ouvre ensuite (étiquette, garde…). */}
+      <details className="carte-bo" style={{ padding: '14px 18px' }} open={Boolean(sp.erreur)}>
+        <summary style={{ cursor: 'pointer', fontWeight: 700 }}>+ Ajouter un vin</summary>
+        <form action={ajouterVinBase} style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', marginTop: 12 }}>
+          <div className="champ" style={{ flex: '2 1 240px' }}><label htmlFor="n-prod">Producteur</label>
+            <input id="n-prod" name="producteur" list="liste-producteurs" required placeholder="Tapez pour chercher…" autoComplete="off" /></div>
+          <div className="champ" style={{ flex: '2 1 220px' }}><label htmlFor="n-nom">Nom du vin</label><input id="n-nom" name="nom" required placeholder="Ex. Moulin-à-Vent Michelon" /></div>
+          <div className="champ"><label htmlFor="n-couleur">Couleur</label>
+            <select id="n-couleur" name="couleur" required defaultValue=""><option value="" disabled>Choisir…</option>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
+          <div className="champ" style={{ flex: '1 1 180px' }}><label htmlFor="n-app">Appellation</label><input id="n-app" name="appellation" placeholder="Moulin-à-Vent" /></div>
+          <div className="champ" style={{ flex: '1 1 180px' }}><label htmlFor="n-cep">Cépages</label><input id="n-cep" name="cepages" placeholder="Gamay" /></div>
+          <div className="champ"><label htmlFor="n-rk">Note du vin (0 à 5)</label><input id="n-rk" className="rk" name="ranking" type="number" min={0} max={5} step={1} placeholder="—" title="Vide : celle du producteur s’applique" /></div>
+          <button className="btn petit">Ajouter</button>
+          <datalist id="liste-producteurs">{producteurs.map((p, i) => <option key={i} value={p.region ? `${p.nom} · ${p.region}` : p.nom} />)}</datalist>
+        </form>
+        <p className="petit discret" style={{ margin: '8px 0 0' }}>Producteur absent de la liste : ajoutez-le d’abord dans le menu Producteurs. Note du vin vide : celle du producteur s’applique.</p>
+      </details>
+
       <form method="get" className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 10, alignItems: 'flex-end', padding: '14px 18px' }}>
         <div className="champ" style={{ flex: '1 1 220px' }}><label htmlFor="q">Recherche</label><input id="q" name="q" defaultValue={sp.q ?? ''} placeholder="Vin, producteur ou appellation…" /></div>
         <div className="champ"><label htmlFor="couleur">Couleur</label>

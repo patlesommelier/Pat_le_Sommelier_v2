@@ -91,23 +91,6 @@ export async function ficheProducteur(id: string) {
   return { ...p, vins, cuvees, terroirs };
 }
 
-// ───────── Base et rankings ─────────
-export async function rechercherProducteurs({ texte = '', pays = '', restaurant = '', page = 0 }: { texte?: string; pays?: string; restaurant?: string; page?: number }) {
-  const lignes = await requete<{ id: string; nom: string; pays: string | null; region: string | null; ranking_pat: number | null; statut: string; cuvees: number; vins_carte: number; total: number }>(
-    `select p.id, p.nom, p.pays, p.region, p.ranking_pat, p.statut::text,
-            (select count(*)::int from cuvee c where c.producteur_id = p.id) as cuvees,
-            (select count(*)::int from vin_carte v where v.producteur_id = p.id) as vins_carte,
-            count(*) over ()::int as total
-       from producteur p
-      where ($1 = '' or translate(lower(p.nom), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc') like '%' || translate(lower($1), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc') || '%'
-             or lower(coalesce(p.region, '')) like '%' || lower($1) || '%')
-        and ($2 = '' or p.pays = $2)
-        and ($3 = '' or exists (select 1 from vin_carte v where v.producteur_id = p.id and v.restaurant_id = $3))
-      order by (select count(*) from vin_carte v where v.producteur_id = p.id) desc, p.nom
-      limit 50 offset $4`, [texte.trim(), pays, restaurant, page * 50]);
-  return { lignes, total: lignes[0]?.total ?? 0 };
-}
-
 /** Tous les producteurs (menu « Producteurs ») : filtres pays, région, statut et recherche ; les « à valider » d'abord. */
 export async function listerProducteurs({ texte = '', pays = '', region = '', statut = '', page = 0 }:
   { texte?: string; pays?: string; region?: string; statut?: string; page?: number }) {
@@ -133,38 +116,13 @@ export async function regionsProducteurs(pays = '') {
     `select distinct region from producteur where region is not null and ($1 = '' or pays = $1) order by region`, [pays])).map((r) => r.region);
 }
 
+/** Noms des producteurs de la base (avec leur région), pour choisir le producteur d'un vin ajouté. */
+export async function nomsProducteurs() {
+  return requete<{ nom: string; region: string | null }>(`select nom, region from producteur where statut <> 'retire' order by nom`);
+}
+
 export async function paysProducteurs() {
   return (await requete<{ pays: string }>(`select distinct pays from producteur where pays is not null order by pays`)).map((p) => p.pays);
-}
-
-export async function rechercherTerroirs({ texte = '', pays = '', page = 0 }: { texte?: string; pays?: string; page?: number }) {
-  const lignes = await requete<{ id: string; nom: string; pays: string | null; region: string | null; niveau: string; ranking_pat: number | null; vins_carte: number; total: number }>(
-    `select t.id, t.nom, t.pays, t.region, t.niveau, t.ranking_pat,
-            (select count(*)::int from vin_carte v where v.appellation_id = t.id) as vins_carte, count(*) over ()::int as total
-       from terroir t
-      where ($1 = '' or lower(t.nom) like '%' || lower($1) || '%' or lower(coalesce(t.region, '')) like '%' || lower($1) || '%')
-        and ($2 = '' or t.pays = $2)
-      order by (select count(*) from vin_carte v where v.appellation_id = t.id) desc, t.nom
-      limit 50 offset $3`, [texte.trim(), pays, page * 50]);
-  return { lignes, total: lignes[0]?.total ?? 0 };
-}
-
-/** Détail des producteurs affichés : vins des cartes (avec terroir et ranking du terroir) et cuvées de la base. */
-export async function detailsProducteurs(ids: string[]) {
-  if (!ids.length) return { vins: new Map(), cuvees: new Map() };
-  const [vins, cuvees] = await Promise.all([
-    requete<{ producteur_id: string; id: string; libelle: string; millesime: string | null; couleur: string; restaurant: string; terroir: string | null;
-      ranking_terroir: number | null; ranking_producteur: number | null; prix: number | null; etiquette_url: string | null }>(
-      `select v.producteur_id, v.id, v.libelle, v.millesime, v.couleur::text, r.nom as restaurant, t.nom as terroir, coalesce(t.ranking_pat, v.ranking_terroir) as ranking_terroir,
-              (select c.ranking_pat from cuvee c where c.id = v.cuvee_id) as ranking_producteur, v.prix::float as prix, v.etiquette_url
-         from vin_carte v join restaurant r on r.id = v.restaurant_id left join terroir t on t.id = v.appellation_id
-        where v.producteur_id = any($1) order by r.nom, v.ordre`, [ids]),
-    requete<{ producteur_id: string; id: string; nom: string; couleur: string | null; appellation: string | null; ranking_terroir: number | null; etiquette_url: string | null }>(
-      `select c.producteur_id, c.id, c.nom, c.couleur::text, coalesce(c.appellation_texte, t.nom) as appellation, t.ranking_pat as ranking_terroir, c.etiquette_url
-         from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = any($1) order by c.nom`, [ids]),
-  ]);
-  const grouper = <T extends { producteur_id: string }>(l: T[]) => l.reduce((m, x) => m.set(x.producteur_id, [...(m.get(x.producteur_id) ?? []), x]), new Map<string, T[]>());
-  return { vins: grouper(vins), cuvees: grouper(cuvees) };
 }
 
 export async function restaurantsListe() {

@@ -218,11 +218,11 @@ async function enregistrerNotesCuvees(producteurId: string, saisies: { vinId: st
   for (const [id, r] of nouvelles) await requete('update cuvee set ranking_pat = $2 where id = $1 and producteur_id = $3', [id, r, producteurId]);
 }
 
-/** Ranking d'un producteur ou d'un terroir déjà validé (écran « Base et rankings »). */
+/** Ranking d'un producteur (liste des producteurs) ou d'un terroir. */
 export async function changerRanking(type: 'producteur' | 'terroir', id: string, f: FormData) {
   await exigerAdmin();
   const rk = entier(f, 'ranking');
-  const retour = txt(f, 'retour') ?? '/admin/super/base';
+  const retour = txt(f, 'retour') ?? '/admin/super/producteurs';
   if (rk === null || !(rk >= 0 && rk <= 5)) redirect(retour);
   if (type === 'producteur') {
     await requete('update producteur set ranking_pat = $2, maj_le = now() where id = $1', [id, rk]);
@@ -235,20 +235,60 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
   redirect(retour.startsWith('/admin/super/producteurs') ? avec(retour, { ok: 'Ranking enregistré.' }) : retour);
 }
 
-/** « Ajouter un vin » à un producteur de la base (cuvée sans millésime). */
-export async function ajouterCuvee(producteurId: string, f: FormData) {
-  await exigerAdmin();
+const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'];
+
+/** « Ajouter un producteur » (menu Producteurs) : créé validé, avec son ranking ; on ouvre ensuite sa fiche pour la compléter. */
+export async function ajouterProducteur(f: FormData) {
+  const u = await exigerAdmin();
+  const liste = '/admin/super/producteurs';
   const nom = txt(f, 'nom');
-  const retour = txt(f, 'retour') ?? '/admin/super/base';
+  const rk = entier(f, 'ranking');
+  if (!nom) redirect(avec(liste, { erreur: 'Indiquez le nom du producteur.' }));
+  if (rk === null || !(rk >= 0 && rk <= 5)) redirect(avec(liste, { erreur: 'Ranking du producteur : entier de 0 à 5.' }));
+  const [deja] = await requete<{ id: string }>(`select id from producteur where lower(nom) = lower($1) and statut <> 'retire' limit 1`, [nom]);
+  if (deja) redirect(avec(`/admin/super/producteurs/${encodeURIComponent(deja.id)}`, { erreur: 'Ce producteur est déjà dans la base : voici sa fiche.' }));
+  const base = `pat-prod-${slug(nom).slice(0, 60)}`;
+  const [{ n }] = await requete<{ n: number }>(`select count(*)::int as n from producteur where id = $1 or id like $1 || '-%'`, [base]);
+  const id = n ? `${base}-${n + 1}` : base;
+  await requete(
+    `insert into producteur (id, nom, pays, region, ranking_pat, statut, source, valide_par, valide_le)
+     values ($1, $2, $3, $4, $5, 'valide', 'super-admin', $6, now())`,
+    [id, nom, txt(f, 'pays'), txt(f, 'region'), rk, u.email]);
+  revalidatePath('/admin', 'layout');
+  redirect(avec(`/admin/super/producteurs/${encodeURIComponent(id)}`, { ok: 'Producteur ajouté à la base. Complétez sa fiche si besoin.' }));
+}
+
+/** « Ajouter un vin » (menu Vins de la base) : un vin validé d'un producteur de la base ; on ouvre ensuite sa fiche (étiquette, garde…). */
+export async function ajouterVinBase(f: FormData) {
+  await exigerAdmin();
+  const liste = '/admin/super/vins';
+  const nomProducteur = txt(f, 'producteur');
+  const nom = txt(f, 'nom');
   const couleur = txt(f, 'couleur');
-  if (nom) {
-    const id = `${producteurId}-cuv-${nom.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')}`;
-    await requete(
-      `insert into cuvee (id, producteur_id, nom, couleur, cepages, statut) values ($1, $2, $3, $4::couleur_vin, $5, 'valide')
-       on conflict (id) do update set nom = excluded.nom, couleur = excluded.couleur, cepages = excluded.cepages`,
-      [id, producteurId, nom, couleur && ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'].includes(couleur) ? couleur : null, txt(f, 'cepages')]);
-  }
-  redirect(retour);
+  const rk = entier(f, 'ranking');
+  if (!nom || !nomProducteur) redirect(avec(liste, { erreur: 'Indiquez le producteur et le nom du vin.' }));
+  if (!couleur || !COULEURS_VIN.includes(couleur)) redirect(avec(liste, { erreur: 'Choisissez la couleur du vin.' }));
+  if (rk !== null && !(rk >= 0 && rk <= 5)) redirect(avec(liste, { erreur: 'Note du vin : entier de 0 à 5 (ou vide : celle du producteur).' }));
+  // Le producteur choisi dans la liste (« Nom · Région ») ou tapé à l'identique.
+  const [p] = await requete<{ id: string }>(
+    `select id from producteur where statut <> 'retire' and (lower(nom) = lower($1) or lower(nom || ' · ' || coalesce(region, '')) = lower($1))
+      order by statut = 'valide' desc limit 1`, [nomProducteur]);
+  if (!p) redirect(avec(liste, { erreur: `Producteur « ${nomProducteur} » introuvable : ajoutez-le d’abord dans le menu Producteurs.` }));
+  const id = `${p.id}-cuv-${slug(nom)}`.slice(0, 160);
+  const [deja] = await requete<{ id: string }>('select id from cuvee where id = $1', [id]);
+  if (deja) redirect(avec(`/admin/super/vins/${encodeURIComponent(id)}`, { erreur: 'Ce vin est déjà dans la base : voici sa fiche.' }));
+  // Appellation gardée telle que saisie, reliée à l'appellation de la base du même nom quand elle existe.
+  const appellation = txt(f, 'appellation');
+  const cleT = (s: string) => appellationCourte(s).normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const terroir = appellation
+    ? (await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`)).find((x) => cleT(x.nom) === cleT(appellation))?.id ?? null
+    : null;
+  await requete(
+    `insert into cuvee (id, producteur_id, nom, couleur, cepages, appellation_texte, appellation_id, ranking_pat, statut, source)
+     values ($1, $2, $3, $4::couleur_vin, $5, $6, $7, $8, 'valide', 'super-admin')`,
+    [id, p.id, nom, couleur, txt(f, 'cepages'), appellation, terroir, rk]);
+  revalidatePath('/admin', 'layout');
+  redirect(avec(`/admin/super/vins/${encodeURIComponent(id)}`, { ok: 'Vin ajouté à la base. Ajoutez son étiquette et complétez sa fiche si besoin.' }));
 }
 
 // ───────── Vins de la base (cuvées) ─────────
