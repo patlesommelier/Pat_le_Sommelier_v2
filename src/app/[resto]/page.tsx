@@ -47,11 +47,11 @@ export default async function Accueil({ params, searchParams }: { params: Promis
             </div>
             <div className="filet-blanc" />
           </div>
-          {/* « Pat » écrit, tout petit, en bas à droite du bandeau ; il s'efface avec la bienvenue. */}
-          <PatEcrit />
         </div>
         )}
-        <p className="question-bandeau">Qu’allez-vous manger&#8239;?</p>
+        <p className="question-bandeau">Qu’allez-vous manger&#8239;?
+          {/* « Pat » écrit, tout petit, posé au bord de la partie blanche (dans sa couleur) : le bandeau semble découpé à sa forme. */}
+          {!compact && <PatEcrit />}</p>
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
           <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({
             titre: g.titre,
