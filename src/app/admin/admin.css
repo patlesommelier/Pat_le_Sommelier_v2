@@ -1,4 +1,4 @@
-/* Back-office de Pat le sommelier — identité 2026 : uniquement les 7 couleurs de la palette (crème #EFEBE9, gris #AFB0AE,
+/* Back-office de Pat le sommelier — identité 2026 : uniquement les 7 couleurs de la palette (crème #EFEBE9, gris #AFB0AE, rose très clair #FFEEED,
    fuchsia #DE0454, rose #EB9D92, rouge #FF0D05, bordeaux #680021, noir #241F20) et uniquement la police Outfit Bold. */
 .bo {
   --encre: #680021;
@@ -13,7 +13,8 @@
   --rose: #EB9D92;
   --vert: #241F20; --vert-fond: #DE0454;
   --ocre: #241F20; --ocre-fond: #EB9D92;
-  --gris-fond: #EFEBE9; --gris: #241F20;
+  --gris-fond: #FFEEED; --gris: #241F20;
+  --rose-pale: #FFEEED; /* encadrés : le rose très clair de la palette */
   --titre: Outfit, 'Avenir Next', 'Helvetica Neue', sans-serif;
   min-height: 100vh; background: var(--fond); color: var(--texte);
   font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif;
@@ -61,7 +62,7 @@
 .pile { display: flex; flex-direction: column; gap: 16px; }
 .ligne-actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
 
-.carte-bo { background: #EFEBE9; border: 1px solid var(--ligne); border-radius: 16px; padding: 24px; }
+.carte-bo { background: var(--rose-pale); border: 1px solid var(--ligne); border-radius: 16px; padding: 24px; }
 .carte-bo.sticker { border: 1.5px solid var(--encre); box-shadow: 5px 5px 0 var(--encre); }
 .carte-bo h2 { font-size: 22px; font-weight: 700; }
 .carte-bo .sous { margin: 6px 0 0; font-size: 14.5px; line-height: 1.5; color: var(--discret); }
@@ -74,7 +75,7 @@
 /* ── Boutons ── */
 .btn { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 700 15px Outfit, sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #EFEBE9 !important; border: 1.5px solid var(--encre); }
 .btn:hover { background: var(--encre-fonce); }
-.btn.sec { background: #EFEBE9; color: var(--encre) !important; }
+.btn.sec { background: var(--rose-pale); color: var(--encre) !important; }
 .btn.sec:hover { background: var(--rose); }
 .btn.fantome { background: transparent; color: var(--encre) !important; border-color: transparent; }
 .btn.fantome:hover { background: var(--rose); }
@@ -83,7 +84,7 @@
 .btn[disabled] { opacity: 0.45; cursor: not-allowed; }
 
 /* ── Pastilles d'état ── */
-.etat { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; white-space: nowrap; background: #EFEBE9; color: var(--discret); border: 1px solid var(--ligne); }
+.etat { display: inline-flex; align-items: center; gap: 6px; padding: 3px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 700; white-space: nowrap; background: var(--rose-pale); color: var(--discret); border: 1px solid var(--ligne); }
 .etat.ok { background: var(--vert-fond); color: #EFEBE9; border-color: var(--vert-fond); }
 .etat.propose { background: var(--rose); color: var(--encre); border-color: var(--rose); }
 .etat.attention { background: var(--ocre-fond); color: var(--ocre); border-color: var(--ocre-fond); }
@@ -92,12 +93,12 @@
 
 /* ── Onglets ── */
 .onglets { display: flex; flex-wrap: wrap; gap: 8px; }
-.onglets a { min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; background: #EFEBE9; color: var(--texte) !important; border: 1.5px solid var(--ligne); }
+.onglets a { min-height: 40px; box-sizing: border-box; display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 999px; font-size: 14px; font-weight: 700; text-decoration: none; background: var(--rose-pale); color: var(--texte) !important; border: 1.5px solid var(--ligne); }
 .onglets a[aria-current='true'] { background: var(--encre); color: #EFEBE9 !important; border-color: var(--encre); }
 .onglets a span { font-weight: 700; opacity: 0.8; }
 
 /* ── Tableaux ── */
-.tableau { overflow-x: auto; border: 1px solid var(--ligne); border-radius: 16px; background: #EFEBE9; }
+.tableau { overflow-x: auto; border: 1px solid var(--ligne); border-radius: 16px; background: var(--rose-pale); }
 .tableau table { width: 100%; border-collapse: collapse; font-size: 14.5px; }
 .tableau th { text-align: left; padding: 12px 14px; font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase; color: var(--discret); font-weight: 700; border-bottom: 1px solid var(--ligne); white-space: nowrap; }
 .tableau td { padding: 10px 14px; border-bottom: 1px solid var(--ligne); vertical-align: middle; }
@@ -114,7 +115,7 @@
 /* ── Formulaires ── */
 .champ { display: flex; flex-direction: column; gap: 6px; }
 .champ label, .champ .libelle { font-size: 13px; font-weight: 700; }
-.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid var(--ligne); border-radius: 10px; background: #EFEBE9; font: 15px Outfit, sans-serif; color: var(--texte); }
+.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1.5px solid var(--ligne); border-radius: 10px; background: var(--fond); font: 15px Outfit, sans-serif; color: var(--texte); }
 .champ textarea { line-height: 1.5; resize: vertical; }
 .champ input:focus, .champ select:focus, .champ textarea:focus { border-color: var(--encre); outline: none; }
 .champ .aide { font-size: 12.5px; color: var(--discret); }
@@ -145,16 +146,19 @@
 }
 
 /* ── Espace super-admin : barre latérale foncée ── */
-.bo-nav.sombre { background: #241F20; border-right-color: #241F20; }
+.bo-nav.sombre { background: #680021; border-right-color: #680021; }
 .bo-nav.sombre .bo-marque strong { color: #EFEBE9; }
-.bo-nav.sombre .bo-marque span { color: #AFB0AE; }
-.bo-nav.sombre .bo-liens .section { color: #AFB0AE; }
+.bo-nav.sombre .bo-marque img { box-shadow: 0 0 0 1.5px #EB9D92; }
+.bo-nav.sombre .bo-num { color: #EFEBE9; }
+.bo-nav.sombre .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
+.bo-nav.sombre .bo-marque span { color: #EB9D92; }
+.bo-nav.sombre .bo-liens .section { color: #EB9D92; }
 .bo-nav.sombre .bo-lien { color: #EFEBE9 !important; }
-.bo-nav.sombre .bo-lien:hover { background: #680021; }
+.bo-nav.sombre .bo-lien:hover { background: #DE0454; }
 .bo-nav.sombre .bo-lien[aria-current='page'] { background: #EFEBE9; color: var(--encre) !important; }
-.bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #AFB0AE !important; }
-.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #241F20; color: #EFEBE9; font-size: 14px; }
-.bandeau-vue button { background: #EFEBE9; color: #241F20; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
+.bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #EB9D92 !important; }
+.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #680021; color: #EFEBE9; font-size: 14px; }
+.bandeau-vue button { background: #EFEBE9; color: #680021; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 700; cursor: pointer; }
 .tableau-super td, .tableau-super th { vertical-align: top; }
 .rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 8px; border: 1.5px solid var(--ligne); font: 700 14px Outfit, sans-serif; }
 .interne { border: 1.5px dashed var(--encre); background: var(--rose); }
