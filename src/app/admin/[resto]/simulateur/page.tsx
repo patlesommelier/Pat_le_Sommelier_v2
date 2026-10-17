@@ -29,10 +29,10 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   const proposes = sel.liste.map((r) => r.vin.id);
   let liste = sel.liste;
   for (let t = 2; t <= tour; t++) {
-    liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite && choisis.length === 1, R.plafondBulles);
+    liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite && choisis.length === 1, R.plafondBulles, R.bullesApres);
     proposes.push(...liste.map((r) => r.vin.id));
   }
-  const tour2 = new Set(tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles).map((r) => r.vin.id));
+  const tour2 = new Set(tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres).map((r) => r.vin.id));
   const deja = new Set(proposes);
   const ecartes = sel.classement.filter((c) => !deja.has(c.vin.id)).slice(0, 6);
   const elimines = candidats.filter((c) => choisis.every((p) => typeof c.notes[p] === 'number') && Math.min(...choisis.map((p) => c.notes[p])) <= R.noteEliminatoire).length;

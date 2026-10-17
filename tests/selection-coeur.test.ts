@@ -16,3 +16,18 @@ test('coup de cœur : + 1 au score quand la règle est active', () => {
   const inactif = selectionner(vins, ['p'], { reglages: { ...REGLAGES_PAT, bonusCoupDeCoeur: false } });
   assert.equal(inactif.classement.find((r) => r.vin.id === 'b')!.score, 7);
 });
+
+// Règle 2b : à score égal, un autre vin passe avant une bulle (active par défaut, désactivable).
+test('bulles après : à score égal, l’autre vin passe devant la bulle', () => {
+  const b: Candidat = { ...vin('bulle', 4), couleur: 'bulles', ordre: 1 };
+  const r: Candidat = { ...vin('rouge', 4), ordre: 2 };
+  const actif = selectionner([b, r], ['p'], { reglages: { ...REGLAGES_PAT } });
+  assert.equal(REGLAGES_PAT.bullesApres, true);
+  assert.deepEqual(actif.liste.map((x) => x.vin.id), ['rouge', 'bulle']);
+  // Désactivée : l'ordre de la carte départage, la bulle (1re sur la carte) passe devant.
+  const inactif = selectionner([b, r], ['p'], { reglages: { ...REGLAGES_PAT, bullesApres: false } });
+  assert.equal(inactif.liste[0].vin.id, 'bulle');
+  // Une bulle mieux classée reste devant.
+  const meilleure = selectionner([{ ...b, notes: { p: 5 } }, r], ['p'], { reglages: { ...REGLAGES_PAT } });
+  assert.equal(meilleure.liste[0].vin.id, 'bulle');
+});

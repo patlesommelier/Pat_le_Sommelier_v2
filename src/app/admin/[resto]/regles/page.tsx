@@ -20,6 +20,7 @@ const GROUPES: [string, Def[]][] = [
   ]],
   ['Classement', [
     { n: '2', titre: 'Classement de Pat', texte: 'Pat classe les vins à partir de la note d’accord et de sa propre sélection. Les mieux classés sont proposés en premier.', champs: [] },
+    { n: '2b', titre: 'Les bulles après', texte: 'À égalité de classement entre un vin effervescent et un autre vin, Pat propose l’autre vin avant les bulles.', champs: [{ cle: 'bullesApres', libelle: 'Active' }] },
     { n: '2c', titre: 'Coups de cœur', texte: 'Un vin coché « Coup de cœur de la maison » gagne un point au classement : il remonte devant des vins proches.', champs: [{ cle: 'bonusCoupDeCoeur', libelle: 'Active' }] },
     { n: '3', titre: 'Diversité', texte: 'À égalité, le vin le plus différent de ceux déjà retenus (couleur, pays, cépage, appellation) passe devant, puis la sélection de Pat, puis l’ordre de votre carte.', champs: [{ cle: 'diversite', libelle: 'Active' }] },
   ]],

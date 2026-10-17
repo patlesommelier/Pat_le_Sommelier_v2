@@ -5,7 +5,8 @@
  * Onglet « Plat seul » :
  *   10. contenance : un vin présent en 75 cl et en 37,5 cl ne compte qu'en 75 cl
  *    1. élimination : note ≤ 2 écartée
- *    2. score = note + ranking producteur (+ 1 pour un coup de cœur de la maison, si la règle est active) ; 2 bis : à score égal, la note la plus haute
+ *    2. score = note + ranking producteur (+ 1 pour un coup de cœur de la maison, si la règle est active) ;
+ *       2b : à score égal, un autre vin passe avant une bulle (si la règle est active) ; 2 bis : à score égal, la note la plus haute
  *    3. diversité (catégorie, pays, cépage, appellation) ; 4. ranking producteur puis terroir ; 5. ordre de la carte
  *    6. 4e et 5e vins ; 7. vin plus cher ; 8. vin moins cher ; 9. 1 à 5 vins ; 11. plafond bulles
  * Onglet « Plusieurs plats » : note = la plus basse sur les plats, pas de règle de diversité.
@@ -60,12 +61,13 @@ export interface Reglages {
   ecartMoinsCher: number;     // règle 8 (déclenchement)
   plafondBulles: number;      // règle 11
   bonusCoupDeCoeur: boolean;  // règle 2c : + 1 au score d'un coup de cœur de la maison
+  bullesApres: boolean;       // règle 2b : à score égal, un autre vin passe avant une bulle
   tourSuivant: number;        // Tour 2 : nombre de vins
 }
 
 export const REGLAGES_PAT: Reglages = {
   contenance: true, noteEliminatoire: 2, diversite: true, premiers: 3, maximum: 5, noteMinAjout: 4, scoreMinAjout: 7,
-  plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3, bonusCoupDeCoeur: true,
+  plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3, bonusCoupDeCoeur: true, bullesApres: true,
 };
 
 /** Réglages internes à Pat (ils reposent sur le score, donc sur ses rankings) : jamais modifiables par le restaurant. */
@@ -128,10 +130,11 @@ function noteSur(v: Candidat, plats: string[]): number | null {
   return n.every((x) => typeof x === 'number') ? Math.min(...n) : null;
 }
 
-/** Départages qui ne dépendent pas de la liste : règles 2, 2 bis, 4 et 5. */
-function compare(a: Retenu, b: Retenu) {
+/** Départages qui ne dépendent pas de la liste : règles 2, 2b (si `bullesApres`), 2 bis, 4 et 5. */
+function compare(a: Retenu, b: Retenu, bullesApres = false) {
   return (
     b.score - a.score ||
+    (bullesApres ? Number(estBulle(a.vin)) - Number(estBulle(b.vin)) : 0) ||
     b.note - a.note ||
     (b.vin.ranking_producteur ?? 0) - (a.vin.ranking_producteur ?? 0) ||
     (b.vin.ranking_terroir ?? 0) - (a.vin.ranking_terroir ?? 0) ||
@@ -160,13 +163,14 @@ function plafondBulles(classement: Retenu[], plafond: number) {
  * Prend le prochain vin parmi `restants` (déjà triés), en appliquant la diversité aux ex aequo (score et note)
  * si `avecDiversite`, et en sautant les bulles quand le plafond est atteint.
  */
-function suivant<C extends Candidat>(restants: Retenu<C>[], liste: Retenu<C>[], plafond: number, avecDiversite: boolean, accepte: (r: Retenu<C>) => boolean = () => true) {
+function suivant<C extends Candidat>(restants: Retenu<C>[], liste: Retenu<C>[], plafond: number, avecDiversite: boolean, accepte: (r: Retenu<C>) => boolean = () => true, bullesApres = false) {
   const bullesPleines = liste.filter((r) => estBulle(r.vin)).length >= plafond;
   const possibles = restants.filter((r) => !(bullesPleines && estBulle(r.vin)) && accepte(r));
   if (!possibles.length) return null;
   const tete = possibles[0];
   if (!avecDiversite || !liste.length) return tete;
-  const exAequo = possibles.filter((r) => r.score === tete.score && r.note === tete.note);
+  // Règle 2b : à score égal, la bulle reste derrière, même quand la diversité la favoriserait.
+  const exAequo = possibles.filter((r) => r.score === tete.score && r.note === tete.note && !(bullesApres && estBulle(r.vin) && !estBulle(tete.vin)));
   if (exAequo.length < 2) return tete;
   const deja = liste.map((r) => r.vin);
   // Le premier critère qui diffère tranche ; à égalité complète, l'ordre du classement (règles 4 et 5) reste.
@@ -174,7 +178,7 @@ function suivant<C extends Candidat>(restants: Retenu<C>[], liste: Retenu<C>[], 
     .map((r) => ({ r, d: diversite(r.vin, deja) }))
     .sort((x, y) => {
       for (let i = 0; i < x.d.length; i++) if (x.d[i] !== y.d[i]) return y.d[i] - x.d[i];
-      return compare(x.r, y.r);
+      return compare(x.r, y.r, bullesApres);
     })[0].r;
 }
 
@@ -202,14 +206,14 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
       return note === null ? null : { vin, note, score: scoreVin(note, vin, R), motif: 'classement' as Motif };
     })
     .filter((r): r is Retenu<C> => r !== null && r.note > R.noteEliminatoire)
-    .sort(compare);
+    .sort((a, b) => compare(a, b, R.bullesApres));
   const plafond = plafondBulles(classement, R.plafondBulles);
 
   // Règles 3 à 5 : les trois premiers vins
   const liste: Retenu<C>[] = [];
   const restants = () => classement.filter((r) => !liste.some((l) => l.vin.id === r.vin.id));
   while (liste.length < PREMIERS) {
-    const r = suivant(restants(), liste, plafond, avecDiversite);
+    const r = suivant(restants(), liste, plafond, avecDiversite, undefined, R.bullesApres);
     if (!r) break;
     liste.push(r);
   }
@@ -219,7 +223,7 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   const scoreTroisieme = liste[PREMIERS - 1].score;
   while (liste.length < MAXIMUM) {
     const r = suivant(restants(), liste, plafond, avecDiversite,
-      (c) => c.note >= R.noteMinAjout && c.score >= scoreTroisieme - 1 && c.score >= R.scoreMinAjout);
+      (c) => c.note >= R.noteMinAjout && c.score >= scoreTroisieme - 1 && c.score >= R.scoreMinAjout, R.bullesApres);
     if (!r) break;
     liste.push({ ...r, motif: liste.length >= PREMIERS ? 'quatrieme_cinquieme' : 'classement' });
   }
@@ -273,13 +277,13 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
  * « Tour 2 et verre », règle 1 : les trois vins suivants du classement, en reprenant après la liste précédente.
  * Les règles 6 à 8 ne s'appliquent pas ; le plafond de bulles s'applique à la nouvelle liste.
  */
-export function tourSuivant<C extends Candidat>(sel: Selection<C>, dejaProposes: string[], nombre = REGLAGES_PAT.tourSuivant, avecDiversite = true, plafondReglage = REGLAGES_PAT.plafondBulles): Retenu<C>[] {
+export function tourSuivant<C extends Candidat>(sel: Selection<C>, dejaProposes: string[], nombre = REGLAGES_PAT.tourSuivant, avecDiversite = true, plafondReglage = REGLAGES_PAT.plafondBulles, bullesApres = REGLAGES_PAT.bullesApres): Retenu<C>[] {
   const plafond = plafondBulles(sel.classement, plafondReglage);
   const exclus = new Set(dejaProposes);
   const liste: Retenu<C>[] = [];
   while (liste.length < nombre) {
     const restants = sel.classement.filter((r) => !exclus.has(r.vin.id) && !liste.some((l) => l.vin.id === r.vin.id));
-    const r = suivant(restants, liste, plafond, avecDiversite);
+    const r = suivant(restants, liste, plafond, avecDiversite, undefined, bullesApres);
     if (!r) break;
     liste.push({ ...r, motif: 'tour_suivant' });
   }

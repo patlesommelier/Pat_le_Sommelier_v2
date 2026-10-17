@@ -173,10 +173,10 @@ export async function getPropositions(restaurantId: string, platId: string | str
   } else {
     const proposes = sel.liste.map((r) => r.vin.id);
     for (let t = 2; t <= tour; t++) {
-      liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles);
+      liste = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres);
       proposes.push(...liste.map((r) => r.vin.id));
     }
-    encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles).length > 0;
+    encore = tourSuivant(sel, proposes, 1, R.diversite, R.plafondBulles, R.bullesApres).length > 0;
   }
   const propositions = liste.map((r, i) => {
     // Plusieurs plats : l'accord du plat le moins bien noté (c'est lui qui compte), les autres en complément.

@@ -78,7 +78,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   })() : null;
   const sel = plat ? selectionner(candidats, [plat.id], { reglages: R }) : { liste: [], classement: [] };
   const retenus = new Set(sel.liste.map((r) => r.vin.id));
-  const tour2 = new Set(tourSuivant(sel, [...retenus], R.tourSuivant, R.diversite, R.plafondBulles).map((r) => r.vin.id));
+  const tour2 = new Set(tourSuivant(sel, [...retenus], R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres).map((r) => r.vin.id));
   const tous = [...candidats]
     .map((c) => ({ vin: c, note: c.notes[plat!.id], score: scoreVin(c.notes[plat!.id], c, R) }))
     .sort((a, b) => b.score - a.score || b.note - a.note || a.vin.ordre - b.vin.ordre);

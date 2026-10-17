@@ -14,6 +14,7 @@ export function pourquoiRetenu(r: Retenu, rang: number, liste: Retenu[], interne
   };
   const precedent = liste[rang - 2];
   if (interne && r.motif === 'classement' && precedent && precedent.score === r.score) {
+    if (r.vin.couleur === 'bulles' && precedent.vin.couleur !== 'bulles') return 'Même score : les bulles passent après (règle 2b)';
     return precedent.note > r.note ? 'Même score, note un peu plus basse' : 'Même score : départagé (diversité, ordre de la carte)';
   }
   return m[r.motif];
@@ -65,4 +66,5 @@ export const LIBELLES_REGLAGES: Record<keyof Reglages, string> = {
   plafondBulles: 'Bulles au plus (règle 11)',
   tourSuivant: 'Vins proposés au tour 2',
   bonusCoupDeCoeur: 'Coup de cœur de la maison : + 1 au score (règle 2c)',
+  bullesApres: 'À score égal, un autre vin avant les bulles (règle 2b)',
 };

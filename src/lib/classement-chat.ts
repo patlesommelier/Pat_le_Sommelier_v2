@@ -18,7 +18,7 @@ export async function texteClassements(restaurantId: string, plats: { id: string
       const lignes = [`${p.nom} [${p.id}]`, `  Tour 1 : ${sel.liste.length ? ligne(sel.liste) : 'aucun vin'}`];
       const proposes = sel.liste.map((r) => r.vin.id);
       for (let tour = 2; tour <= 12; tour++) {
-        const suite = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles);
+        const suite = tourSuivant(sel, proposes, R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres);
         if (!suite.length) break;
         lignes.push(`  Tour ${tour} : ${ligne(suite)}`);
         proposes.push(...suite.map((r) => r.vin.id));
