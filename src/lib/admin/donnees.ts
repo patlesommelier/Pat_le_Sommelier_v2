@@ -77,6 +77,14 @@ export async function getProfil(platId: string) {
   return p ?? null;
 }
 
+/** Profils d'accord de tous les plats du restaurant, par plat (menu : chaque plat se déroule avec le sien). */
+export async function getProfils(restaurantId: string) {
+  const lignes = await requete<{ plat_id: string; ancrages: string[]; profil: string | null; a_eviter: string | null; temperature_service: string | null }>(
+    `select pa.plat_id, pa.ancrages, pa.profil, pa.a_eviter, pa.temperature_service
+       from profil_accord pa join plat p on p.id = pa.plat_id where p.restaurant_id = $1`, [restaurantId]);
+  return new Map(lignes.map((l) => [l.plat_id, l]));
+}
+
 // ───────── Carte ─────────
 export interface VinBO {
   id: string; couleur: string; section: string | null; libelle: string; producteur_id: string | null; producteur_texte: string | null;

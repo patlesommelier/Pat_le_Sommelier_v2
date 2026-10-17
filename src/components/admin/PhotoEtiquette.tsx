@@ -1,7 +1,7 @@
 'use client';
 // Étiquette d'un vin dans la fiche du back-office, en grand : la photo choisie s'affiche tout de suite, avant l'enregistrement,
 // et un clic sur la vignette l'ouvre en grand pour vérifier que c'est la bonne.
-import { useEffect, useState, type ReactNode } from 'react';
+import { useEffect, useId, useState, type ReactNode } from 'react';
 import { Icone } from './Icone';
 
 export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Étiquette du vin', hauteur = 320, base = false }: {
@@ -11,6 +11,7 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
   /** Nom du champ du fichier (« etiquette » ; « photo » pour la photo d'un plat), texte de l'image, hauteur de l'aperçu. */
   champ?: string; alt?: string; hauteur?: number;
 }) {
+  const ident = useId(); // plusieurs formulaires sur la page (menu) : un identifiant par champ
   const [apercu, setApercu] = useState<string | null>(null);
   const [grand, setGrand] = useState(false);
   const [deLaBase, setDeLaBase] = useState<string | null>(null);
@@ -50,7 +51,7 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
         {children}
         {apercu && <span className="petit discret">Nouvelle photo : elle sera gardée à l’enregistrement.</span>}
         {!apercu && !url && deLaBase && <span className="petit discret">Étiquette trouvée dans la base de Pat : elle sera ajoutée avec le vin. Vous pouvez aussi déposer votre photo.</span>}
-        <input id={champ} name={champ} aria-label="Choisir une photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment"
+        <input id={`${champ}-${ident}`} name={champ} aria-label="Choisir une photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment"
           style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }}
           onChange={async (e) => {
             const champFichier = e.currentTarget;

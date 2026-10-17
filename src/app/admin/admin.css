@@ -174,3 +174,18 @@
 /* Carte des vins : la ligne entière se glisse (pas l'image ni le lien seuls). */
 .table-vins tr[draggable='true'] img { -webkit-user-drag: none; user-select: none; pointer-events: none; }
 .table-vins tr[draggable='true']:hover { background: var(--fond); }
+
+/* ── Listes qui se déroulent (menu) : une ligne par élément, son détail s'ouvre dessous avec la flèche ── */
+.liste-deroulante { display: flex; flex-direction: column; gap: 10px; }
+.deroulant { background: var(--rose-pale); border: 1px solid var(--ligne); border-radius: 16px; }
+.deroulant[open] { border-color: var(--encre); }
+.deroulant > summary { list-style: none; display: flex; align-items: center; gap: 16px; min-height: 56px; padding: 12px 18px; cursor: pointer; }
+.deroulant > summary::-webkit-details-marker { display: none; }
+.deroulant > summary:hover .fleche { background: var(--rose); }
+.deroulant-nom { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.deroulant-nom .nom { font-size: 16px; }
+.deroulant .fleche { flex-shrink: 0; width: 32px; height: 32px; padding: 6px; box-sizing: border-box; border-radius: 50%; color: var(--encre); transition: transform .2s; }
+.deroulant[open] .fleche { transform: rotate(180deg); }
+.deroulant-corps { display: flex; flex-direction: column; gap: 16px; max-width: 760px; padding: 18px 18px 20px; }
+.deroulant[open] > summary { border-bottom: 1px solid var(--ligne); }
+.deroulant-nom .petit { font-size: 13px; color: var(--discret); }
