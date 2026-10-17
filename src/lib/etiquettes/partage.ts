@@ -50,20 +50,31 @@ const CEPAGES = new Set(['viognier', 'chardonnay', 'sauvignon', 'pinot', 'gamay'
   'melon', 'folle', 'negrette', 'fer', 'duras', 'mauzac', 'auxerrois', 'sylvaner', 'nerello', 'carricante', 'aglianico', 'barbera', 'dolcetto',
   'montepulciano', 'trebbiano', 'garganega', 'glera', 'corvina', 'verdejo', 'godello', 'mencia', 'touriga', 'furmint', 'assyrtiko', 'pinotage']);
 
+const COULEUR_ECRITE: Record<string, string[]> = { blanc: ['blanc', 'blanche'], rose: ['rose'], rouge: ['rouge'] };
+
 /** Couleurs incompatibles : un rosé n'est pas un blanc, un rouge n'est pas un blanc. Les bulles peuvent être blanches ou rosées. */
 function couleursCompatibles(a: string | null, b: string | null) {
   return !a || !b || a === b || a === 'bulles' || b === 'bulles';
 }
 
 /** Cuvée du producteur qui correspond au vin de la carte, ou null. Exporté pour les tests. */
-export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { producteur_texte?: string | null; appellation_nom?: string | null; cepages?: string | null }, cuvees: CuveeBase[]) {
+export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { producteur_texte?: string | null; appellation_nom?: string | null; cepages?: string | null },
+  cuvees: CuveeBase[], appellationsConnues: string[] = []) {
   // Mots du producteur : nom de la base et nom lu sur la carte (« Château Mourgues du Grès - François Collard » : le propriétaire aussi).
   const producteur = new Set([...mots(vin.producteur_nom), ...mots(nomLu(vin.producteur_texte))]);
   const utiles = (t: string | null) => mots(t).filter((m) => !producteur.has(m) && !GENERIQUES.has(m));
-  const duVin = new Set([...utiles(vin.libelle), ...utiles(vin.vin_texte)]);
+  // La couleur du vin vaut pour la cuvée qui la porte dans son nom (« Galets Dorés Blanc »).
+  const duVin = new Set([...utiles(vin.libelle), ...utiles(vin.vin_texte), ...(COULEUR_ECRITE[vin.couleur] ?? [])]);
   // Ce que la carte dit du vin, hors appellation : tout doit se retrouver dans la cuvée.
   const appellation = new Set(utiles(vin.appellation_nom ?? null));
   const propres = new Set(utiles(vin.libelle).filter((m) => !appellation.has(m)));
+  // Appellation écrite sur la carte (lue à l'import, ou une appellation de la base en toutes lettres dans le nom du vin) :
+  // elle peut manquer à une cuvée de la base dont l'appellation n'est pas renseignée.
+  const appellationCarte = new Set(utiles(vin.vin_texte?.split(' – ')[0] ?? null));
+  for (const a of appellationsConnues) {
+    const m = utiles(a);
+    if (m.length && m.every((x) => duVin.has(x))) m.forEach((x) => appellationCarte.add(x));
+  }
   let meilleure: CuveeBase | null = null, score = -1;
   for (const c of cuvees) {
     if (!couleursCompatibles(vin.couleur, c.couleur)) continue;
@@ -76,7 +87,9 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
     if (!m.size) continue;
     // L'appellation écrite dans le nom de la cuvée (« Rheinhessen Riesling Eisquell ») peut manquer sur la carte.
     const requis = [...m].some((x) => !appellationCuvee.has(x)) ? [...m].filter((x) => !appellationCuvee.has(x)) : [...m];
-    if (!requis.every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x) || (cepages.has(x) && !nom.every((y) => cepages.has(y))))) continue;
+    const sansAppellation = !appellationCuvee.size;
+    if (!requis.every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x) || (sansAppellation && appellationCarte.has(x))
+      || (cepages.has(x) && !nom.every((y) => cepages.has(y))))) continue;
     // La plus précise d'abord ; à égalité, celle dont les cépages nommés se retrouvent sur la carte, puis celle qui a une étiquette.
     const s = requis.length * 10 + nom.filter((x) => duVin.has(x)).length + (c.etiquette_url ? 0.5 : 0);
     if (s > score) [meilleure, score] = [c, s];
@@ -112,6 +125,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
             left join terroir t on t.id = v.appellation_id
       where $1::text[] is null or v.id = any($1)`, [vins ?? null]);
 
+  const appellations = (await requete<{ nom: string }>(`select nom from terroir where statut <> 'retire'`)).map((t) => t.nom);
   const cuveesDe = new Map<string, CuveeBase[]>();
   const cuveesDuProducteur = async (id: string) => {
     if (!cuveesDe.has(id)) cuveesDe.set(id, await requete<CuveeBase>(
@@ -142,9 +156,9 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
     const aSaPhoto = Boolean(v.etiquette_url && v.etiquette_source && v.etiquette_source !== 'cuvee');
     if (!cuvee && v.producteur_id) {
       const liste = await cuveesDuProducteur(v.producteur_id);
-      cuvee = cuveeCorrespondante(v, liste)?.id ?? null;
+      cuvee = cuveeCorrespondante(v, liste, appellations)?.id ?? null;
       const autre = cuvee ? null : await homonyme(v);
-      if (autre) cuvee = cuveeCorrespondante({ ...v, producteur_texte: [nomLu(v.producteur_texte), autre.nom].filter(Boolean).join(' ') }, await cuveesDuProducteur(autre.id))?.id ?? null;
+      if (autre) cuvee = cuveeCorrespondante({ ...v, producteur_texte: [nomLu(v.producteur_texte), autre.nom].filter(Boolean).join(' ') }, await cuveesDuProducteur(autre.id), appellations)?.id ?? null;
       if (!cuvee && aSaPhoto) {
         // Cuvée créée depuis la carte, proposée à Pat comme les cuvées converties automatiquement.
         cuvee = `carte-${v.producteur_id}-${slug(v.libelle)}`.slice(0, 120);

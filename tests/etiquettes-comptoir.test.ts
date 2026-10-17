@@ -129,3 +129,20 @@ test('B15 : vin sans producteur, nom lu avec le propriétaire, cuvée de la base
   await partagerEtiquettes(q);
   assert.equal(vins[0].etiquette_url, 'https://x/galets.jpg');
 });
+
+test('B15 tel qu’en ligne : « Costières de Nîmes "Galets Dorés" - … », cuvée « Galets Dorés » sans appellation dans la base', async () => {
+  const libelle = 'Costières de Nîmes "Galets Dorés" - Château Mourgues du Grès - François Collard';
+  for (const [nomCuvee, vin_texte, chezHomonyme] of [['Galets Dorés', null, false], ['Galets Dorés Blanc', 'Costières de Nîmes', false], ['Galets Dorés', null, true]] as const) {
+    const producteurs = [prod('mdg-fc', 'Château Mourgues du Grès - François Collard'), prod('mdg', 'Château Mourgues du Grès')];
+    const cuvees = [
+      cuv({ id: 'gd', producteur_id: chezHomonyme ? 'mdg' : 'mdg-fc', nom: nomCuvee, etiquette_url: 'https://x/galets.jpg' }),
+      cuv({ id: 'ta', producteur_id: chezHomonyme ? 'mdg' : 'mdg-fc', nom: 'Terre d’Argence', etiquette_url: 'https://x/ta.jpg' }),
+    ];
+    const vins = [vinCarte({ id: 'le-comptoir-B15', libelle, vin_texte, couleur: 'blanc', producteur_id: 'mdg-fc', producteur_texte: 'Château Mourgues du Grès' })];
+    await partagerEtiquettes(base(producteurs, cuvees, vins));
+    assert.equal(vins[0].etiquette_url, 'https://x/galets.jpg', `${nomCuvee} / ${vin_texte} / ${chezHomonyme}`);
+  }
+  // Une cuvée d'une autre appellation ne convient pas.
+  assert.equal(cuveeCorrespondante({ libelle, vin_texte: null, couleur: 'blanc', producteur_nom: 'Château Mourgues du Grès' },
+    [{ id: 'gd', nom: 'Galets Dorés', couleur: 'blanc', appellation: 'IGP Pays d’Oc' }], ['Costières de Nîmes AOC']), null);
+});
