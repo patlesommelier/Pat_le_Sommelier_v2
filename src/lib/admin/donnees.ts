@@ -194,3 +194,42 @@ export async function suggestionsProducteurs(texte: string | null, limite = 5): 
   };
   return lignes.sort((a, b) => score(b) - score(a)).slice(0, limite);
 }
+
+// ───────── Tableau de bord : la règle de Pat du jour ─────────
+export interface RegleDuJour {
+  titre: string; regle: string;
+  plat: string; plat_description: string | null;
+  vin: { libelle: string; nom_vin: string | null; vin_texte: string | null; appellation_texte: string | null; appellation_nom: string | null;
+    producteur: string | null; cepages: string | null; millesime: string | null; etiquette_url: string | null; presentation: string | null };
+  explication: string | null; note: number | null; plat_id: string; ecrit_par_le_restaurant: boolean;
+}
+
+/**
+ * Un accord de la carte du restaurant, le meilleur choix d'un plat (rang 1), avec une règle de Pat qu'il illustre.
+ * Il change chaque jour (tirage fixé par la date) ; les accords validés passent avant ceux à relire.
+ */
+export async function getRegleDuJour(id: string): Promise<RegleDuJour | null> {
+  const [r] = await requete<Omit<RegleDuJour, 'vin'> & RegleDuJour['vin'] & { vin_libelle: string }>(
+    `select pr.titre, pr.regle, coalesce(p.nom_court, p.nom) as plat, p.description_cuisine as plat_description, p.id as plat_id,
+            v.libelle as vin_libelle, v.nom_vin, v.vin_texte, v.appellation_texte, t.nom as appellation_nom,
+            coalesce(pd.nom, v.producteur_texte) as producteur, v.cepages, v.millesime, v.etiquette_url,
+            coalesce(v.presentation, v.descriptif) as presentation,
+            coalesce(a.explication_longue, a.explication) as explication, a.note, a.commentaire_sommelier is not null as ecrit_par_le_restaurant
+       from accord a
+       join plat p on p.id = a.plat_id and p.actif
+       join vin_carte v on v.id = a.vin_id and v.disponible
+       left join producteur pd on pd.id = v.producteur_id
+       left join terroir t on t.id = v.appellation_id
+       join lateral (select x.titre, x.regle from unnest(a.principes) with ordinality u(pid, n)
+                       join principe x on x.id = u.pid and x.statut = 'valide' order by u.n limit 1) pr on true
+      where a.restaurant_id = $1 and a.rang = 1 and a.statut <> 'refuse' and coalesce(a.explication_longue, a.explication) is not null
+      order by (a.statut = 'valide') desc, md5(a.id::text || current_date::text)
+      limit 1`, [id]).catch((e) => { console.error('[tableau de bord] règle du jour', e); return []; });
+  if (!r) return null;
+  return {
+    titre: r.titre, regle: r.regle, plat: r.plat, plat_description: r.plat_description, plat_id: r.plat_id,
+    explication: r.explication, note: r.note, ecrit_par_le_restaurant: r.ecrit_par_le_restaurant,
+    vin: { libelle: r.vin_libelle, nom_vin: r.nom_vin, vin_texte: r.vin_texte, appellation_texte: r.appellation_texte, appellation_nom: r.appellation_nom,
+      producteur: r.producteur, cepages: r.cepages, millesime: r.millesime, etiquette_url: r.etiquette_url, presentation: r.presentation },
+  };
+}
