@@ -37,7 +37,7 @@ function base(producteurs: Producteur[], cuvees: Cuvee[], vins: VinCarte[]): Req
       return vins.filter((v) => !p[0] || (p[0] as string[]).includes(v.id)).map((v) => {
         const c = cuvees.find((x) => x.id === v.cuvee_id);
         return { ...v, producteur_nom: producteurs.find((x) => x.id === v.producteur_id)?.nom ?? null, appellation_id: null, appellation_nom: null,
-          cuvee_producteur: c?.producteur_id ?? null, cuvee_retiree: c?.statut === 'retire' };
+          cuvee_producteur: c?.producteur_id ?? null, cuvee_retiree: c?.statut === 'retire', cuvee_etiquette: c?.etiquette_url ?? null };
       });
     }
     if (s.startsWith('select c.id, c.nom, c.couleur::text')) return cuvees.filter((c) => c.producteur_id === p[0] && c.statut !== 'retire').map((c) => ({ ...c }));
@@ -145,4 +145,26 @@ test('B15 tel qu’en ligne : « Costières de Nîmes "Galets Dorés" - … », 
   // Une cuvée d'une autre appellation ne convient pas.
   assert.equal(cuveeCorrespondante({ libelle, vin_texte: null, couleur: 'blanc', producteur_nom: 'Château Mourgues du Grès' },
     [{ id: 'gd', nom: 'Galets Dorés', couleur: 'blanc', appellation: 'IGP Pays d’Oc' }], ['Costières de Nîmes AOC']), null);
+});
+
+test('B15 déjà relié à une cuvée sans étiquette (créée depuis la carte) : la cuvée « Galets Dorés » qui a une étiquette la remplace', async () => {
+  const libelle = 'Costières de Nîmes "Galets Dorés" - Château Mourgues du Grès - François Collard';
+  for (const chezHomonyme of [false, true]) {
+    const producteurs = [prod('mdg-fc', 'Château Mourgues du Grès - François Collard'), prod('mdg', 'Château Mourgues du Grès')];
+    const cuvees = [
+      cuv({ id: 'carte-mdg-fc', producteur_id: 'mdg-fc', nom: libelle, statut: 'propose' }),
+      cuv({ id: 'gd', producteur_id: chezHomonyme ? 'mdg' : 'mdg-fc', nom: 'Galets Dorés', appellation: 'Costières de Nîmes', etiquette_url: 'https://x/galets.jpg' }),
+    ];
+    const vins = [vinCarte({ id: 'le-comptoir-B15', libelle, couleur: 'blanc', producteur_id: 'mdg-fc', producteur_texte: 'Château Mourgues du Grès', cuvee_id: 'carte-mdg-fc' })];
+    const q = base(producteurs, cuvees, vins);
+    await partagerEtiquettes(q);
+    assert.equal(vins[0].cuvee_id, 'gd');
+    assert.equal(vins[0].etiquette_url, 'https://x/galets.jpg');
+    await partagerEtiquettes(q);
+    assert.equal(vins[0].etiquette_url, 'https://x/galets.jpg');
+  }
+  // Rien de mieux dans la base : le lien existant est gardé.
+  const vins = [vinCarte({ id: 'v', libelle, couleur: 'blanc', producteur_id: 'mdg-fc', cuvee_id: 'carte-mdg-fc' })];
+  await partagerEtiquettes(base([prod('mdg-fc', 'Château Mourgues du Grès - François Collard')], [cuv({ id: 'carte-mdg-fc', producteur_id: 'mdg-fc', nom: libelle })], vins));
+  assert.equal(vins[0].cuvee_id, 'carte-mdg-fc');
 });

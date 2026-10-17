@@ -31,7 +31,7 @@ const slug = (t: string) => norm(t).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g
 type VinPartage = {
   id: string; libelle: string; vin_texte: string | null; couleur: string; cepages?: string | null; producteur_id: string | null; producteur_nom: string | null;
   producteur_texte?: string | null; appellation_id: string | null; appellation_nom: string | null; cuvee_id: string | null; cuvee_producteur: string | null;
-  cuvee_retiree?: boolean; etiquette_url: string | null; etiquette_source: string | null;
+  cuvee_retiree?: boolean; cuvee_etiquette?: string | null; etiquette_url: string | null; etiquette_source: string | null;
 };
 type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null; cepages?: string | null; etiquette_url?: string | null };
 
@@ -119,7 +119,7 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
 export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto }: { vins?: string[]; nouvellePhoto?: string } = {}) {
   const lignes = await requete<VinPartage>(
     `select v.id, v.libelle, v.vin_texte, v.couleur::text, v.cepages, v.producteur_id, p.nom as producteur_nom, v.producteur_texte,
-            v.appellation_id, t.nom as appellation_nom, v.cuvee_id, c.producteur_id as cuvee_producteur, c.statut = 'retire' as cuvee_retiree,
+            v.appellation_id, t.nom as appellation_nom, v.cuvee_id, c.producteur_id as cuvee_producteur, c.statut = 'retire' as cuvee_retiree, c.etiquette_url as cuvee_etiquette,
             v.etiquette_url, v.etiquette_source
        from vin_carte v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
             left join terroir t on t.id = v.appellation_id
@@ -152,13 +152,22 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
   const touchees = new Set<string>();
   const clesTouchees = new Set<string>(); // étiquettes par nom (vins sans producteur)
   for (const v of lignes) {
-    let cuvee = v.cuvee_id && v.cuvee_producteur === v.producteur_id && !v.cuvee_retiree ? v.cuvee_id : null;
+    const relie = v.cuvee_id && v.cuvee_producteur === v.producteur_id && !v.cuvee_retiree ? v.cuvee_id : null;
+    let cuvee = relie;
     const aSaPhoto = Boolean(v.etiquette_url && v.etiquette_source && v.etiquette_source !== 'cuvee');
-    if (!cuvee && v.producteur_id) {
+    // Relié à une cuvée sans étiquette (ancien rapprochement, vin ajouté à la base depuis la carte…) et sans photo à lui :
+    // une cuvée de la base qui correspond et qui a une étiquette prend sa place.
+    const aRevoir = Boolean(relie && !v.cuvee_etiquette && !aSaPhoto);
+    if ((!cuvee || aRevoir) && v.producteur_id) {
       const liste = await cuveesDuProducteur(v.producteur_id);
-      cuvee = cuveeCorrespondante(v, liste, appellations)?.id ?? null;
-      const autre = cuvee ? null : await homonyme(v);
-      if (autre) cuvee = cuveeCorrespondante({ ...v, producteur_texte: [nomLu(v.producteur_texte), autre.nom].filter(Boolean).join(' ') }, await cuveesDuProducteur(autre.id), appellations)?.id ?? null;
+      const parmi = (l: CuveeBase[]) => (aRevoir ? l.filter((c) => c.etiquette_url) : l);
+      let trouvee = cuveeCorrespondante(v, parmi(liste), appellations);
+      const autre = trouvee?.etiquette_url ? null : await homonyme(v);
+      if (autre) {
+        const t = cuveeCorrespondante({ ...v, producteur_texte: [nomLu(v.producteur_texte), autre.nom].filter(Boolean).join(' ') }, parmi(await cuveesDuProducteur(autre.id)), appellations);
+        if (t && (!trouvee || t.etiquette_url)) trouvee = t;
+      }
+      cuvee = aRevoir ? (trouvee?.etiquette_url ? trouvee.id : relie) : trouvee?.id ?? null;
       if (!cuvee && aSaPhoto) {
         // Cuvée créée depuis la carte, proposée à Pat comme les cuvées converties automatiquement.
         cuvee = `carte-${v.producteur_id}-${slug(v.libelle)}`.slice(0, 120);
