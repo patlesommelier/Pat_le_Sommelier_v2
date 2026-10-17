@@ -3,7 +3,8 @@
  *
  * 1. Chaque vin d'une carte relié à un producteur est rattaché à une cuvée de ce producteur (même nom,
  *    aux mentions génériques près : « brut », « 1er cru »…). Une cuvée est créée, proposée à Pat,
- *    seulement quand le vin a une photo à lui donner.
+ *    seulement quand le vin a une photo à lui donner. Si le producteur est en double dans la base (même nom, avec ou sans
+ *    le propriétaire : « Château Mourgues du Grès - François Collard »), les cuvées de son homonyme sont cherchées aussi.
  * 2. La photo d'un vin (déposée par le restaurant, trouvée par Wine Labs ou fournie à l'import) devient
  *    l'étiquette de sa cuvée si celle-ci n'en a pas (une nouvelle photo du restaurant la remplace).
  * 3. Les vins des autres cartes qui ont cette cuvée sans étiquette la reprennent (etiquette_source = 'cuvee').
@@ -12,11 +13,12 @@
  * Sans 'server-only' : aussi appelé par scripts/migrer.ts (rattrapage au déploiement).
  */
 import type { Requete } from '../generation/accords';
+import { producteurConnu } from '../inscription/lecture';
 
 const MOTS_VIDES = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'the', 'di', 'del', 'della', 'y']);
 // Mentions qui ne distinguent pas une cuvée d'une autre (la couleur, elle, distingue : « blanc », « rosé » restent).
 const GENERIQUES = new Set(['brut', 'extra', 'nature', 'cru', 'er', '1er', 'premier', 'grand', 'igp', 'aop', 'aoc', 'doc', 'docg', 'do',
-  'vdf', 'vin', 'cuvee', 'domaine', 'chateau', 'maison', 'superiore', 'classico', 'weingut', 'bodega', 'bodegas', 'tenuta', 'cantina',
+  'vdf', 'vin', 'cuvee', 'domaine', 'chateau', 'maison', 'superiore', 'classico', 'weingut', 'bodega', 'bodegas', 'tenuta', 'cantina', 'trocken',
   // Pays (souvent en tête de ligne sur les cartes : « Allemagne - Riesling Eisquell »).
   'france', 'allemagne', 'autriche', 'italie', 'espagne', 'portugal', 'suisse', 'grece', 'hongrie', 'slovenie', 'croatie', 'georgie', 'liban',
   'israel', 'chili', 'argentine', 'australie', 'usa', 'belgique', 'luxembourg', 'roumanie', 'bulgarie', 'moldavie', 'uruguay', 'bresil']);
@@ -28,10 +30,13 @@ const slug = (t: string) => norm(t).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g
 
 type VinPartage = {
   id: string; libelle: string; vin_texte: string | null; couleur: string; cepages?: string | null; producteur_id: string | null; producteur_nom: string | null;
-  appellation_id: string | null; appellation_nom: string | null; cuvee_id: string | null; cuvee_producteur: string | null;
-  etiquette_url: string | null; etiquette_source: string | null;
+  producteur_texte?: string | null; appellation_id: string | null; appellation_nom: string | null; cuvee_id: string | null; cuvee_producteur: string | null;
+  cuvee_retiree?: boolean; etiquette_url: string | null; etiquette_source: string | null;
 };
-type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null; cepages?: string | null };
+type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null; cepages?: string | null; etiquette_url?: string | null };
+
+/** Nom du producteur lu sur la carte, sauf « Non précisé », « inconnu »… */
+const nomLu = (t: string | null | undefined) => (t && !/^non\b|inconnu|à préciser|a preciser/i.test(t.trim()) ? t : null);
 
 /** Clé d'une étiquette gardée par nom (vin sans producteur) : nom normalisé et couleur. Exporté pour les tests. */
 export const cleLibelle = (libelle: string, couleur: string) => `${slug(libelle)}|${couleur}`;
@@ -51,8 +56,9 @@ function couleursCompatibles(a: string | null, b: string | null) {
 }
 
 /** Cuvée du producteur qui correspond au vin de la carte, ou null. Exporté pour les tests. */
-export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { appellation_nom?: string | null; cepages?: string | null }, cuvees: CuveeBase[]) {
-  const producteur = new Set(mots(vin.producteur_nom));
+export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { producteur_texte?: string | null; appellation_nom?: string | null; cepages?: string | null }, cuvees: CuveeBase[]) {
+  // Mots du producteur : nom de la base et nom lu sur la carte (« Château Mourgues du Grès - François Collard » : le propriétaire aussi).
+  const producteur = new Set([...mots(vin.producteur_nom), ...mots(nomLu(vin.producteur_texte))]);
   const utiles = (t: string | null) => mots(t).filter((m) => !producteur.has(m) && !GENERIQUES.has(m));
   const duVin = new Set([...utiles(vin.libelle), ...utiles(vin.vin_texte)]);
   // Ce que la carte dit du vin, hors appellation : tout doit se retrouver dans la cuvée.
@@ -65,11 +71,14 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
     const cepages = new Set([...CEPAGES, ...mots(vin.cepages ?? null), ...mots(c.cepages ?? null)]);
     const nom = utiles(c.nom);
     const m = new Set(nom.some((x) => !cepages.has(x)) ? nom.filter((x) => !cepages.has(x)) : nom); // une cuvée nommée par son seul cépage le garde
-    const avecAppellation = new Set([...m, ...utiles(c.appellation ?? null)]); // « Les Tessons » (Meursault) = « Meursault Les Tessons »
+    const appellationCuvee = new Set(utiles(c.appellation ?? null));
+    const avecAppellation = new Set([...m, ...appellationCuvee]); // « Les Tessons » (Meursault) = « Meursault Les Tessons »
     if (!m.size) continue;
-    if (![...m].every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x) || (cepages.has(x) && !nom.every((y) => cepages.has(y))))) continue;
-    // La plus précise d'abord ; à égalité, celle dont les cépages nommés se retrouvent sur la carte.
-    const s = m.size * 10 + nom.filter((x) => duVin.has(x)).length;
+    // L'appellation écrite dans le nom de la cuvée (« Rheinhessen Riesling Eisquell ») peut manquer sur la carte.
+    const requis = [...m].some((x) => !appellationCuvee.has(x)) ? [...m].filter((x) => !appellationCuvee.has(x)) : [...m];
+    if (!requis.every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x) || (cepages.has(x) && !nom.every((y) => cepages.has(y))))) continue;
+    // La plus précise d'abord ; à égalité, celle dont les cépages nommés se retrouvent sur la carte, puis celle qui a une étiquette.
+    const s = requis.length * 10 + nom.filter((x) => duVin.has(x)).length + (c.etiquette_url ? 0.5 : 0);
     if (s > score) [meilleure, score] = [c, s];
   }
   if (meilleure) return meilleure;
@@ -78,8 +87,14 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
   const restent = [...propres].filter((x) => !CEPAGES.has(x) && !mots(vin.cepages ?? null).includes(x));
   const zone = restent.length ? restent : [...appellation];
   if (!zone.length) return null;
-  const seuls = cuvees.filter((c) => c.couleur === vin.couleur && zone.every((x) => utiles(c.appellation ?? null).includes(x)));
-  return seuls.length === 1 ? seuls[0] : null;
+  const memeCouleur = cuvees.filter((c) => c.couleur === vin.couleur);
+  const seuls = memeCouleur.filter((c) => zone.every((x) => utiles(c.appellation ?? null).includes(x)));
+  if (seuls.length) return seuls.length === 1 ? seuls[0] : null;
+  // Aucune cuvée de la base n'a cette appellation, mais le producteur n'a qu'un vin de cette couleur, sans appellation renseignée,
+  // et la carte ne dit rien d'autre que l'appellation (lue à l'import : vin_texte « Costières de Nîmes », ou celle de la base).
+  const appellationLue = new Set([...appellation, ...utiles(vin.vin_texte?.split(' – ')[0] ?? null)]);
+  const seul = memeCouleur.length === 1 && !utiles(memeCouleur[0].appellation ?? null).length;
+  return seul && zone.every((x) => appellationLue.has(x)) ? memeCouleur[0] : null;
 }
 
 /**
@@ -90,8 +105,9 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
  */
 export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto }: { vins?: string[]; nouvellePhoto?: string } = {}) {
   const lignes = await requete<VinPartage>(
-    `select v.id, v.libelle, v.vin_texte, v.couleur::text, v.cepages, v.producteur_id, p.nom as producteur_nom, v.appellation_id, t.nom as appellation_nom,
-            v.cuvee_id, c.producteur_id as cuvee_producteur, v.etiquette_url, v.etiquette_source
+    `select v.id, v.libelle, v.vin_texte, v.couleur::text, v.cepages, v.producteur_id, p.nom as producteur_nom, v.producteur_texte,
+            v.appellation_id, t.nom as appellation_nom, v.cuvee_id, c.producteur_id as cuvee_producteur, c.statut = 'retire' as cuvee_retiree,
+            v.etiquette_url, v.etiquette_source
        from vin_carte v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
             left join terroir t on t.id = v.appellation_id
       where $1::text[] is null or v.id = any($1)`, [vins ?? null]);
@@ -99,18 +115,36 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
   const cuveesDe = new Map<string, CuveeBase[]>();
   const cuveesDuProducteur = async (id: string) => {
     if (!cuveesDe.has(id)) cuveesDe.set(id, await requete<CuveeBase>(
-      'select c.id, c.nom, c.couleur::text, c.cepages, coalesce(t.nom, c.appellation_texte) as appellation from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = $1', [id]));
+      `select c.id, c.nom, c.couleur::text, c.cepages, coalesce(t.nom, c.appellation_texte) as appellation, c.etiquette_url
+         from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = $1 and c.statut <> 'retire'`, [id]));
     return cuveesDe.get(id)!;
+  };
+  // Le même producteur en double dans la base (« Château Mourgues du Grès - François Collard » validé à côté de
+  // « Château Mourgues du Grès », « Weingut Battenfeld Spanier » à côté de « Battenfeld-Spanier ») : ses cuvées sont chez l'autre.
+  const homonymes = new Map<string, { id: string; nom: string } | null>();
+  const homonyme = async (v: VinPartage) => {
+    const cle = v.producteur_id!;
+    if (!homonymes.has(cle)) {
+      let trouve: { id: string; nom: string } | null = null;
+      for (const nom of new Set([v.producteur_nom, nomLu(v.producteur_texte)].filter((x): x is string => Boolean(x)))) {
+        const p = await producteurConnu(requete, nom, { exclure: cle, memesMots: true });
+        if (p) { trouve = { id: p.id, nom: p.nom }; break; }
+      }
+      homonymes.set(cle, trouve);
+    }
+    return homonymes.get(cle)!;
   };
 
   const touchees = new Set<string>();
   const clesTouchees = new Set<string>(); // étiquettes par nom (vins sans producteur)
   for (const v of lignes) {
-    let cuvee = v.cuvee_id && v.cuvee_producteur === v.producteur_id ? v.cuvee_id : null;
+    let cuvee = v.cuvee_id && v.cuvee_producteur === v.producteur_id && !v.cuvee_retiree ? v.cuvee_id : null;
     const aSaPhoto = Boolean(v.etiquette_url && v.etiquette_source && v.etiquette_source !== 'cuvee');
     if (!cuvee && v.producteur_id) {
       const liste = await cuveesDuProducteur(v.producteur_id);
       cuvee = cuveeCorrespondante(v, liste)?.id ?? null;
+      const autre = cuvee ? null : await homonyme(v);
+      if (autre) cuvee = cuveeCorrespondante({ ...v, producteur_texte: [nomLu(v.producteur_texte), autre.nom].filter(Boolean).join(' ') }, await cuveesDuProducteur(autre.id))?.id ?? null;
       if (!cuvee && aSaPhoto) {
         // Cuvée créée depuis la carte, proposée à Pat comme les cuvées converties automatiquement.
         cuvee = `carte-${v.producteur_id}-${slug(v.libelle)}`.slice(0, 120);
@@ -171,7 +205,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
     `update vin_carte v set etiquette_url = c.etiquette_url, etiquette_source = 'cuvee', etiquette_statut = 'trouvee'
        from cuvee c
       where v.cuvee_id = c.id and c.id = any($1) and c.etiquette_url is not null
-        and (v.etiquette_url is null or v.etiquette_source = 'cuvee') and v.etiquette_url is distinct from c.etiquette_url
+        and (coalesce(v.etiquette_url, '') = '' or v.etiquette_source = 'cuvee') and v.etiquette_url is distinct from c.etiquette_url
       returning v.id`, [[...touchees]]);
   // Vin qui avait hérité d'une étiquette et n'est plus rattaché à cette cuvée (producteur changé) : il la perd.
   await requete(
