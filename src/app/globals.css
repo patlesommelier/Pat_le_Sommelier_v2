@@ -214,7 +214,7 @@ a.bouton-plein { text-decoration: none; }
 @keyframes toast-entree { from { opacity: 0; transform: translate(-50%, 8px); } }
 
 /* Possibilités de Pat qui défilent pendant la préparation des accords (AstucesPat) */
-.astuces-pat { display: flex; flex-direction: column; gap: 8px; min-height: 4.6em; }
+.astuces-pat { display: flex; flex-direction: column; justify-content: center; gap: 8px; min-height: 4.6em; } /* texte au milieu de sa place, même court */
 .astuces-pat .astuce { animation: astuce-fondu .7s ease-out both; line-height: 1.5; }
 .astuces-pat .points { display: flex; gap: 5px; }
 .astuces-pat .points i { width: 6px; height: 6px; border-radius: 3px; background: currentColor; opacity: 0.2; transition: opacity .3s, width .3s; }

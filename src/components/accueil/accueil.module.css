@@ -141,7 +141,8 @@
 .pretLiens { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 700; }
 .pretLiens a { color: #680021; }
 @media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
-.astuces { flex: 1; font-size: 19px; font-weight: 700; color: #680021; } /* textes qui défilent pendant l'attente : plus grands, en bordeaux */
+.astuces { flex: 0 1 auto; max-width: 760px; font-size: 19px; font-weight: 700; color: #680021; } /* textes qui défilent pendant l'attente : plus grands, en bordeaux */
+.astuces :global(.points) { justify-content: flex-start; }
 @media (max-width: 640px) { .haut .marque img { width: 92px; height: 72px; } }
 /* Inscription : numéro de l'étape (1/3, 2/3, 3/3) à côté de son contenu */
 /* Zone de dépôt centrée sur la page ; la flèche « Continuer » juste à sa droite. */
