@@ -77,8 +77,7 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
       {ouvert && (
         <section className="conversation" aria-label="Conversation avec Pat">
           <div className="conversation-haut">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <span className="avatar-pat-petit"><img src="/pat/pat-avatar.svg" alt="" width={28} height={28} /></span>
+            <span className="avatar-pat-petit"><span className="buste-pat" /></span>
             <strong>Pat, votre sommelier</strong>
             <button type="button" onClick={() => setOuvert(false)}>Fermer</button>
           </div>
@@ -120,8 +119,8 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
       <div className="barre-pat">
         <form onSubmit={envoyer}>
           <button type="button" className="avatar-pat" aria-label="Ouvrir la conversation avec Pat" onClick={() => setOuvert((o) => !o)}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-avatar.svg" alt="" />
+            {/* Buste de Pat (tête et col), rouge sur le crème */}
+            <span className="buste-pat" />
           </button>
           <label htmlFor="question-pat" className="sr-only" style={{ position: 'absolute', width: 1, height: 1, overflow: 'hidden', clip: 'rect(0 0 0 0)' }}>
             Votre question à Pat

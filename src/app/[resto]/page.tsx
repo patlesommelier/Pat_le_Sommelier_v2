@@ -3,7 +3,6 @@ import { RepliBandeau } from '@/components/RepliBandeau';
 import { appOuverte } from '@/lib/ouverture';
 import { notFound, redirect } from 'next/navigation';
 import { Entete } from '@/components/Entete';
-import { Silhouettes } from '@/components/Icones';
 import { getPlats, getRestaurant } from '@/lib/donnees';
 import type { Plat } from '@/lib/types';
 
@@ -48,7 +47,6 @@ export default async function Accueil({ params, searchParams }: { params: Promis
             <div className="filet-blanc" />
             <div className="accueil-question">Qu’allez-vous manger ?</div>
           </div>
-          <Silhouettes />
         </div>
         )}
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
