@@ -24,14 +24,23 @@ const mots = (t: string | null | undefined) => (t ? norm(t).split(/[^a-z0-9]+/).
 const slug = (t: string) => norm(t).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 
 type VinPartage = {
-  id: string; libelle: string; vin_texte: string | null; couleur: string; producteur_id: string | null; producteur_nom: string | null;
+  id: string; libelle: string; vin_texte: string | null; couleur: string; cepages?: string | null; producteur_id: string | null; producteur_nom: string | null;
   appellation_id: string | null; appellation_nom: string | null; cuvee_id: string | null; cuvee_producteur: string | null;
   etiquette_url: string | null; etiquette_source: string | null;
 };
-type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null };
+type CuveeBase = { id: string; nom: string; couleur: string | null; appellation?: string | null; cepages?: string | null };
 
 /** Clé d'une étiquette gardée par nom (vin sans producteur) : nom normalisé et couleur. Exporté pour les tests. */
 export const cleLibelle = (libelle: string, couleur: string) => `${slug(libelle)}|${couleur}`;
+
+// Cépages courants : écrits sur la carte (« Viognier Secret de Famille ») mais pas toujours dans le nom de la cuvée
+// (« Secret de Famille »), ou l'inverse. Ils ne suffisent pas à distinguer deux cuvées ; ils départagent seulement.
+const CEPAGES = new Set(['viognier', 'chardonnay', 'sauvignon', 'pinot', 'gamay', 'syrah', 'shiraz', 'grenache', 'garnacha', 'merlot', 'cabernet',
+  'malbec', 'mourvedre', 'carignan', 'cinsault', 'cinsaut', 'marsanne', 'roussanne', 'chenin', 'riesling', 'gewurztraminer', 'muscat', 'semillon',
+  'aligote', 'nebbiolo', 'sangiovese', 'tempranillo', 'vermentino', 'rolle', 'picpoul', 'albarino', 'gruner', 'veltliner', 'zinfandel', 'primitivo',
+  'tannat', 'verdot', 'savagnin', 'trousseau', 'poulsard', 'mondeuse', 'jacquere', 'altesse', 'clairette', 'bourboulenc', 'ugni', 'colombard',
+  'melon', 'folle', 'negrette', 'fer', 'duras', 'mauzac', 'auxerrois', 'sylvaner', 'nerello', 'carricante', 'aglianico', 'barbera', 'dolcetto',
+  'montepulciano', 'trebbiano', 'garganega', 'glera', 'corvina', 'verdejo', 'godello', 'mencia', 'touriga', 'furmint', 'assyrtiko', 'pinotage']);
 
 /** Couleurs incompatibles : un rosé n'est pas un blanc, un rouge n'est pas un blanc. Les bulles peuvent être blanches ou rosées. */
 function couleursCompatibles(a: string | null, b: string | null) {
@@ -39,7 +48,7 @@ function couleursCompatibles(a: string | null, b: string | null) {
 }
 
 /** Cuvée du producteur qui correspond au vin de la carte, ou null. Exporté pour les tests. */
-export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { appellation_nom?: string | null }, cuvees: CuveeBase[]) {
+export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte' | 'couleur' | 'producteur_nom'> & { appellation_nom?: string | null; cepages?: string | null }, cuvees: CuveeBase[]) {
   const producteur = new Set(mots(vin.producteur_nom));
   const utiles = (t: string | null) => mots(t).filter((m) => !producteur.has(m) && !GENERIQUES.has(m));
   const duVin = new Set([...utiles(vin.libelle), ...utiles(vin.vin_texte)]);
@@ -48,11 +57,17 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
   const propres = new Set(utiles(vin.libelle).filter((m) => !appellation.has(m)));
   let meilleure: CuveeBase | null = null, score = -1;
   for (const c of cuvees) {
-    const m = new Set(utiles(c.nom));
+    if (!couleursCompatibles(vin.couleur, c.couleur)) continue;
+    // Cépages du vin et de la cuvée : on peut les omettre d'un côté comme de l'autre.
+    const cepages = new Set([...CEPAGES, ...mots(vin.cepages ?? null), ...mots(c.cepages ?? null)]);
+    const nom = utiles(c.nom);
+    const m = new Set(nom.some((x) => !cepages.has(x)) ? nom.filter((x) => !cepages.has(x)) : nom); // une cuvée nommée par son seul cépage le garde
     const avecAppellation = new Set([...m, ...utiles(c.appellation ?? null)]); // « Les Tessons » (Meursault) = « Meursault Les Tessons »
-    if (!m.size || !couleursCompatibles(vin.couleur, c.couleur)) continue;
-    if (![...m].every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x))) continue;
-    if (m.size > score) [meilleure, score] = [c, m.size];
+    if (!m.size) continue;
+    if (![...m].every((x) => duVin.has(x)) || ![...propres].every((x) => avecAppellation.has(x) || (cepages.has(x) && !nom.every((y) => cepages.has(y))))) continue;
+    // La plus précise d'abord ; à égalité, celle dont les cépages nommés se retrouvent sur la carte.
+    const s = m.size * 10 + nom.filter((x) => duVin.has(x)).length;
+    if (s > score) [meilleure, score] = [c, s];
   }
   return meilleure;
 }
@@ -65,7 +80,7 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
  */
 export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto }: { vins?: string[]; nouvellePhoto?: string } = {}) {
   const lignes = await requete<VinPartage>(
-    `select v.id, v.libelle, v.vin_texte, v.couleur::text, v.producteur_id, p.nom as producteur_nom, v.appellation_id, t.nom as appellation_nom,
+    `select v.id, v.libelle, v.vin_texte, v.couleur::text, v.cepages, v.producteur_id, p.nom as producteur_nom, v.appellation_id, t.nom as appellation_nom,
             v.cuvee_id, c.producteur_id as cuvee_producteur, v.etiquette_url, v.etiquette_source
        from vin_carte v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
             left join terroir t on t.id = v.appellation_id
@@ -74,7 +89,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
   const cuveesDe = new Map<string, CuveeBase[]>();
   const cuveesDuProducteur = async (id: string) => {
     if (!cuveesDe.has(id)) cuveesDe.set(id, await requete<CuveeBase>(
-      'select c.id, c.nom, c.couleur::text, t.nom as appellation from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = $1', [id]));
+      'select c.id, c.nom, c.couleur::text, c.cepages, coalesce(t.nom, c.appellation_texte) as appellation from cuvee c left join terroir t on t.id = c.appellation_id where c.producteur_id = $1', [id]));
     return cuveesDe.get(id)!;
   };
 

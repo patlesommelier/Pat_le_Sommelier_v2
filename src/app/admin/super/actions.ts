@@ -22,6 +22,7 @@ import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
 import { traiterComparaisons } from '@/lib/generation/comparaison';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
+import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}${url.includes('?') ? '&' : '?'}${new URLSearchParams(params)}`;
@@ -237,6 +238,13 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
 
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'];
 
+/** Vins des cartes de ce producteur pas encore reliés à un vin de la base : on les relie (s'ils correspondent) et ils reprennent son étiquette. */
+async function relierVinsDesCartes(cuveeId: string) {
+  const vins = (await requete<{ id: string }>(
+    `select v.id from vin_carte v join cuvee c on c.producteur_id = v.producteur_id where c.id = $1 and v.cuvee_id is null`, [cuveeId])).map((v) => v.id);
+  if (vins.length) await partagerEtiquettes(requete, { vins }).catch((e) => console.error('[etiquettes] partage', e));
+}
+
 /** « Ajouter un producteur » (menu Producteurs) : créé validé, avec son ranking ; on ouvre ensuite sa fiche pour la compléter. */
 export async function ajouterProducteur(f: FormData) {
   const u = await exigerAdmin();
@@ -287,6 +295,7 @@ export async function ajouterVinBase(f: FormData) {
     `insert into cuvee (id, producteur_id, nom, couleur, cepages, appellation_texte, appellation_id, ranking_pat, statut, source)
      values ($1, $2, $3, $4::couleur_vin, $5, $6, $7, $8, 'valide', 'super-admin')`,
     [id, p.id, nom, couleur, txt(f, 'cepages'), appellation, terroir, rk]);
+  await relierVinsDesCartes(id);
   revalidatePath('/admin', 'layout');
   redirect(avec(`/admin/super/vins/${encodeURIComponent(id)}`, { ok: 'Vin ajouté à la base. Ajoutez son étiquette et complétez sa fiche si besoin.' }));
 }
@@ -378,6 +387,7 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   } else if (retirerEtiquette) {
     await requete(`update vin_carte set etiquette_url = null, etiquette_source = null where cuvee_id = $1 and etiquette_source = 'cuvee'`, [id]);
   }
+  await relierVinsDesCartes(id);
   revalidatePath('/', 'layout');
   // Retour sur la liste d'où l'on venait (mêmes filtres, même page), la ligne du vin centrée et mise en évidence.
   const liste = txt(f, 'retour');

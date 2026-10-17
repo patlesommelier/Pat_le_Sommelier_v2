@@ -25,6 +25,19 @@ test('pas de rattachement approximatif', () => {
     [{ id: 'm', nom: 'Beaune 1er Cru Clos des Mouches', couleur: 'blanc' }]), null);
 });
 
+test('un cépage écrit d’un seul côté (carte ou base) n’empêche pas de retrouver la cuvée', () => {
+  const jaboulet = [
+    { id: 'sdf', nom: 'Secret de Famille', couleur: 'blanc', appellation: 'IGP Collines Rhodaniennes' },
+    { id: 'ch', nom: 'Hermitage La Chapelle Blanc', couleur: 'blanc', appellation: 'Hermitage' },
+  ];
+  const j = (libelle: string) => vin(libelle, 'blanc', null, 'Paul Jaboulet Aîné');
+  assert.equal(cuveeCorrespondante(j('Viognier Secret de Famille Jaboulet'), jaboulet)?.id, 'sdf');
+  assert.equal(cuveeCorrespondante(j('Secret de Famille'), [{ id: 'v', nom: 'Viognier Secret de Famille', couleur: 'blanc' }])?.id, 'v');
+  // Une cuvée nommée par son seul cépage n'attrape pas une autre cuvée du même cépage.
+  assert.equal(cuveeCorrespondante(j('Viognier Secret de Famille'), [{ id: 'v', nom: 'Viognier', couleur: 'blanc' }]), null);
+  assert.equal(cuveeCorrespondante(j('Viognier'), [{ id: 'v', nom: 'Viognier', couleur: 'blanc' }])?.id, 'v');
+});
+
 test("l'appellation de la cuvée complète son nom", () => {
   assert.equal(cuveeCorrespondante(vin('Meursault Les Tessons', 'blanc', null, 'Domaine Pierre Morey'),
     [{ id: 't', nom: 'Les Tessons', couleur: 'blanc', appellation: 'Meursault' }])?.id, 't');
