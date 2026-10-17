@@ -77,8 +77,14 @@ button { font: inherit; }
   object-fit: contain; padding: 3px; background: #FFFFFF; border: 1px solid var(--filet); flex-shrink: 0; display: block;
 }
 .etiquette-vide {
-  flex-shrink: 0; border: 1px solid var(--filet); background: var(--marque-claire); display: flex; flex-direction: column;
-  align-items: center; justify-content: center; gap: 8px; color: var(--discret); font-size: 12px;
+  flex-shrink: 0; box-sizing: border-box; padding: 4px; border: 1px solid var(--filet); background: #FFFFFF; display: flex;
+  align-items: center; justify-content: center; overflow: hidden;
+}
+/* Pas d'étiquette : le nom du vin dans un cadre fin, comme une étiquette */
+.etiquette-cadre { width: 100%; height: 100%; box-sizing: border-box; padding: 3px; border: 1px solid var(--bord); display: flex; align-items: center; justify-content: center; }
+.etiquette-nom {
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden; text-align: center; line-height: 1.2;
+  font-weight: 700; color: var(--encre); overflow-wrap: break-word; hyphens: auto;
 }
 .note-discrete { font-size: 14px; color: var(--discret); text-align: center; font-style: italic; margin: 0; }
 .etat-vide { padding: 22px 16px; border: 1px dashed var(--bord); text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; }
