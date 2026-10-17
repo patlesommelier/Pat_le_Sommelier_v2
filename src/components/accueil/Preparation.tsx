@@ -54,8 +54,8 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
   }
   return (
     <div className={s.attente} role="status" aria-live="polite" style={{ flexDirection: 'column', alignItems: 'stretch', gap: 14 }}>
-      {/* Pat et le texte qui défile, au milieu de la boîte */}
-      <span style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 16 }}><PatAttente taille={52} /><AstucesPat className={s.astuces} /></span>
+      {/* Pat puis le texte qui défile, l'un sous l'autre, au milieu de la boîte */}
+      <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}><PatAttente taille={64} /><AstucesPat className={s.astuces} /></span>
       <span role="progressbar" aria-label="Préparation des accords" aria-valuemin={0} aria-valuemax={100} aria-valuenow={pct} className={s.barre}>
         <span style={{ width: `${pct}%` }} />
       </span>
