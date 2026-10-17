@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 const ASTUCES = [
   'Pat prépare vos accords : il étudie chaque vin de votre carte avec chacun de vos plats.',
   'Pat va aussi chercher les étiquettes de vos vins : il faudra peut-être quelques heures pour toutes les trouver.',
+  'Dans votre App, certaines étiquettes manqueront peut-être. Nous allons les chercher pour vous et vous recevrez une notification quand nous les avons toutes.',
   'À table, vos clients scannent le QR code, choisissent leur plat, et Pat leur propose les vins de votre carte qui s’y accordent le mieux.',
   'Vos clients peuvent aussi écrire à Pat : il leur répond avec les vins de vos accords, étiquette et explication à l’appui.',
   'Dans votre espace, vous relisez chaque accord : changez une note ou réécrivez un commentaire, Pat suit vos choix.',
