@@ -23,7 +23,9 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
-    '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
+    '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF',
+    // Buste de Pat dans le bandeau d'accueil : blanc sur un bandeau foncé, rouge (couleur de Pat) sur un bandeau clair.
+    '--tete-pat': clair ? '#FF0D05' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
   } as CSSProperties;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
   if (!(await appOuverte(restaurant.id))) {

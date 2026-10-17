@@ -46,6 +46,8 @@ export default async function Accueil({ params, searchParams }: { params: Promis
             </div>
             <div className="filet-blanc" />
           </div>
+          {/* Le buste de Pat, tout petit, en bas à droite du bandeau ; il s'efface avec la bienvenue. */}
+          <span className="tete-pat" role="img" aria-label="Pat, le sommelier" />
         </div>
         )}
         <p className="question-bandeau">Qu’allez-vous manger&#8239;?</p>

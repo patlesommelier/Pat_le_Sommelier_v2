@@ -41,6 +41,8 @@ button { font: inherit; }
 .accueil-titre span { display: block; font-weight: 400; font-size: 21px; }
 .filet-blanc { width: 48px; height: 1px; background: var(--sur-marque, #FFFFFF); }
 .accueil-question { font-size: 18px; font-style: italic; }
+.tete-pat { align-self: flex-end; width: 24px; height: 27px; margin: -16px -4px -6px 0; /* buste de Pat, tout entier dans la couleur du bandeau */
+  background: var(--tete-pat, #FFFFFF); -webkit-mask: url(/pat/pat-tete-decoupe.svg) center bottom / contain no-repeat; mask: url(/pat/pat-tete-decoupe.svg) center bottom / contain no-repeat; }
 
 /* ── Titres et sections ── */
 .contenu { padding: 28px 20px 24px; display: flex; flex-direction: column; gap: 26px; }
@@ -252,6 +254,7 @@ button.bulle { background: transparent; font-family: inherit; cursor: pointer; }
 
 /* ── Accueil : le haut défile avec les plats ; le logo du bandeau rétrécit au même rythme (--repli de 0 à 1) ── */
 .bandeau-suite { background: var(--marque); color: var(--sur-marque, #FFFFFF); flex-shrink: 0; }
+.bandeau-suite .tete-pat { opacity: calc(1 - 2 * var(--repli, 0)); }
 .bandeau-suite .accueil-texte { opacity: calc(1 - 1.4 * var(--repli, 0)); transform: scale(calc(1 - 0.15 * var(--repli, 0))); transform-origin: 50% 0; }
 .bandeau.grand .bandeau-haut { padding-bottom: calc(12px + 6px * var(--repli, 0)); }
 .bandeau.grand .bandeau-haut .logo img { height: calc(var(--logo-grand, 73px) - (var(--logo-grand, 73px) - var(--logo-replie, 50px)) * var(--repli, 0)) !important; }
