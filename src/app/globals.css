@@ -137,10 +137,12 @@ a.bouton-plein { text-decoration: none; }
 
 /* ── Barre « Demandez à Pat » ── */
 .barre-pat { flex-shrink: 0; padding: 12px 14px 16px; background: #FFFFFF; box-shadow: 0 -6px 18px rgba(0,0,0,0.10); position: relative; z-index: 4; }
+/* « Demandez à Pat » : toujours aux couleurs de Pat (rouge et rose pâle), quelle que soit l'apparence du restaurant. */
 .barre-pat form {
   display: flex; align-items: flex-end; gap: 10px; padding: 5px 6px 5px 5px; border-radius: 32px;
-  background: var(--marque-claire); border: 1.5px solid var(--marque);
+  background: #FFEEED; border: 1.5px solid #FF0D05;
 }
+.barre-pat .rond.principal { background: #FF0D05; color: #FFFFFF; }
 .avatar-pat {
   width: 54px; height: 54px; border-radius: 27px; border: 0; padding: 0; background: #FFFFFF;
   display: flex; align-items: flex-end; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer;
