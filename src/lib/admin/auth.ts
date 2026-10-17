@@ -83,3 +83,11 @@ export async function exigerAdmin() {
   if (!u.admin) redirect('/admin');
   return u;
 }
+
+/** Prénom du restaurateur connecté, donné à l'inscription (« Bonjour <prénom> ») ; null s'il n'est pas connu. */
+export async function prenomUtilisateur(u: Utilisateur, restaurantId: string): Promise<string | null> {
+  const [a] = await requete<{ prenom: string }>(
+    `select prenom from acces_restaurant where (user_id = $1 or lower(email) = $2) and prenom is not null
+      order by (restaurant_id = $3) desc, cree_le limit 1`, [u.id, u.email, restaurantId]);
+  return a?.prenom ?? null;
+}

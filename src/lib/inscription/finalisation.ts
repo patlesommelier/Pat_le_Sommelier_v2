@@ -78,7 +78,8 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
   }
 
   // 2. Accès du compte à son restaurant (lu par exigerAcces).
-  await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [userId, email, restaurantId]);
+  await requete(`insert into acces_restaurant (user_id, email, restaurant_id, prenom) values ($1, $2, $3, $4)
+     on conflict (user_id, restaurant_id) do update set prenom = coalesce(excluded.prenom, acces_restaurant.prenom)`, [userId, email, restaurantId, i.prenom]);
 
   // 3. Logo : déposé dans le stockage public des médias, comme depuis l'écran Apparence.
   if (i.logo_fichier) {

@@ -179,7 +179,10 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
         {!cree && etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
-            <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
+            <div className={s.ligne}>
+              <div className={s.champ}><label htmlFor="prenom">Votre prénom</label><input id="prenom" name="prenom" required autoComplete="given-name" placeholder="Ex. Marie" /></div>
+              <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
+            </div>
             <div className={s.ligne}>
               <div className={s.champ}><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
               <div className={s.champ}><label htmlFor="motDePasse">Mot de passe</label><input id="motDePasse" name="motDePasse" type="password" required autoComplete="new-password" placeholder="12 caractères minimum" /></div>

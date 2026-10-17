@@ -64,6 +64,7 @@ export async function deposer(type: TypeAnalyse, _: Reponse, form: FormData): Pr
 }
 
 const Compte = z.object({
+  prenom: z.string().trim().min(1, 'Indiquez votre prénom.').max(60),
   nom: z.string().trim().min(2, 'Indiquez le nom du restaurant.').max(80),
   email: z.string().trim().toLowerCase().email('Adresse e-mail invalide.'),
   // 12 caractères minimum pour un nouveau compte (vérifié plus bas) ; un compte existant garde son mot de passe.
@@ -128,7 +129,7 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
       userId = data.user.id;
     }
   }
-  await majInscription(i.id, { user_id: userId, email, nom_restaurant: r.data.nom });
+  await majInscription(i.id, { user_id: userId, email, prenom: r.data.prenom, nom_restaurant: r.data.nom });
   if (!modeDev() && !sessionOuverte) {
     const { error } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
     if (error) console.warn('[inscription] ouverture de session :', error.message); // l'espace demandera de se connecter

@@ -19,6 +19,8 @@ export type Inscription = {
   /** État des lectures en arrière-plan (carte, menu) : compteurs seulement. */
   lecture: Analyses;
   nom_restaurant: string | null;
+  /** Prénom du restaurateur : « Bonjour <prénom> » dans son espace. */
+  prenom: string | null;
   ville: string | null;
   email: string | null;
   user_id: string | null;
@@ -26,7 +28,7 @@ export type Inscription = {
   expire_le: string;
 };
 
-const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_proposees, logo_clair, analyses, lecture, nom_restaurant, ville, email,
+const COLONNES = `id, statut, plats, vins, logo_fichier, couleur, couleurs_proposees, logo_clair, analyses, lecture, nom_restaurant, prenom, ville, email,
   user_id, restaurant_id, expire_le`;
 
 /** Premier onglet rempli, mais menu pas déposé dans ce délai : l'inscription est réinitialisée. */
@@ -60,7 +62,7 @@ export async function demarrerInscription(): Promise<Inscription> {
 
 const JSONB = new Set(['plats', 'vins', 'couleurs_proposees', 'lecture']);
 const MODIFIABLES = new Set(['statut', 'plats', 'vins', 'logo_fichier', 'couleur', 'couleurs_proposees', 'logo_clair', 'analyses', 'lecture',
-  'nom_restaurant', 'ville', 'email', 'user_id', 'restaurant_id']);
+  'nom_restaurant', 'prenom', 'ville', 'email', 'user_id', 'restaurant_id']);
 
 export async function majInscription(id: string, champs: Partial<Inscription>) {
   const cles = Object.keys(champs).filter((k) => MODIFIABLES.has(k));
