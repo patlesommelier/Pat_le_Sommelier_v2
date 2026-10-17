@@ -13,6 +13,7 @@
 /* Présentation ; le titre et le texte s'écrasent au défilement sur ordinateur (TexteRepliable) */
 .repliable { display: flex; flex-direction: column; align-items: center; gap: 18px; overflow: hidden; transform-origin: 50% 0; will-change: height, transform; }
 .intro { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 18px; padding-block: 12px 96px; }
+.motCle { color: #680021; } /* « restaurant » dans le titre */
 .titre { margin: 0; max-width: 22ch; color: #FF0D05; font-size: clamp(36px, 5vw, 64px); line-height: 1.04; letter-spacing: -1px; text-wrap: balance; }
 .texte { margin: 0; max-width: 58ch; font-size: 18px; line-height: 1.55; }
 .sceneLigne { display: flex; align-items: flex-end; justify-content: flex-end; gap: 56px; width: 100%; max-width: 1060px; margin-top: 80px; }
@@ -48,7 +49,7 @@
 /* Inscription en frise */
 .inscription { background: #680021; }
 .inscription .large { padding-block: 80px 88px; }
-.boite { max-width: 1000px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+.boite { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
 .inscription h2 { margin: 0; text-align: center; color: #EB9D92; font-size: clamp(28px, 3.4vw, 40px); letter-spacing: -0.5px; text-wrap: balance; }
 
 /* Qui est Pat ? */

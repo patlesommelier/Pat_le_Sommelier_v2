@@ -16,7 +16,7 @@ const ACTES = [
     // Espaces insécables autour des guillemets : ils ne restent jamais seuls sur une ligne.
     question: '«\u00A0Que boire avec l’émincé de bar\u202F?\u00A0»',
     reponse: 'Je te conseille le Sancerre Terre de Maimbray 2022 de Reverdy. Les caillottes de Maimbray donnent à ce sauvignon une tension vive qui répond au citron vert et respecte le bar, c’est un accord que j’apprécie beaucoup.',
-    liste: 6400, // dans la vidéo : la liste des vins est à l'écran (ms)
+    liste: 6400, // dans la vidéo, à vitesse normale : la liste des vins est à l'écran (ms)
   },
   {
     video: '/demo/demo-2-filet',
@@ -25,6 +25,8 @@ const ACTES = [
     liste: 6100,
   },
 ];
+// La vidéo passe 30 % moins vite que l'enregistrement (on suit mieux le doigt) ; les temps de la vidéo sont ajustés d'autant.
+const VITESSE = 0.7;
 // En millisecondes.
 const QUESTION_SEULE = 1800; // la question, avant que le téléphone s'anime
 const LECTURE = 8500; // la réponse reste à l'écran
@@ -43,19 +45,19 @@ export function DemoPat() {
     const minuteurs: ReturnType<typeof setTimeout>[] = [];
     let t = 0;
     const a = (ms: number, f: () => void) => { t += ms; minuteurs.push(setTimeout(f, t)); };
-    const jouer = (n: number) => videos[n].current?.play().catch(() => { /* lecture refusée : la scène continue sans la vidéo */ });
+    const jouer = (n: number) => { const v = videos[n].current; if (v) v.playbackRate = VITESSE; return v?.play().catch(() => { /* lecture refusée : la scène continue sans la vidéo */ }); };
     const tour = () => {
       t = 0;
       videos.forEach((v) => { if (v.current) { v.current.pause(); v.current.currentTime = 0; } });
       setActe(0); setQuestion(true); setReponse(false);
       // Acte 1 : l'émincé de bar.
       a(QUESTION_SEULE, () => jouer(0));
-      a(ACTES[0].liste, () => setReponse(true));
+      a(ACTES[0].liste / VITESSE, () => setReponse(true));
       a(LECTURE, () => { setQuestion(false); setReponse(false); });
       // Acte 2 : le filet au poivre vert (la vidéo part de la liste des vins du bar, là où la première s'arrête).
       a(FONDU, () => { setActe(1); setQuestion(true); });
       a(QUESTION_SEULE, () => jouer(1));
-      a(ACTES[1].liste, () => setReponse(true));
+      a(ACTES[1].liste / VITESSE, () => setReponse(true));
       a(LECTURE, () => { setQuestion(false); setReponse(false); });
       // Fin de la scène : le simulateur remplace les vidéos.
       a(FONDU, () => setSimulateur(true));

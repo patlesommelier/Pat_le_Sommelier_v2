@@ -74,7 +74,7 @@
 .depot[data-survol='true'] { border-color: #FF0D05; background: #EFEBE9; }
 .depot:focus-within { outline: 3px solid #680021; outline-offset: 2px; }
 .icone { width: 48px; height: 48px; border-radius: 13px; background: #EFEBE9; border: 1px solid #EB9D92; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; font-size: 17px; font-weight: 700; }
+.attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; font-size: 19px; font-weight: 700; color: #680021; }
 .roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #EB9D92; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
 @keyframes tourne { to { transform: rotate(360deg); } }
 @media (prefers-reduced-motion: reduce) { .roue { animation-duration: 3s; } }
@@ -141,11 +141,11 @@
 .pretLiens { display: flex; flex-wrap: wrap; gap: 6px 18px; font-weight: 700; }
 .pretLiens a { color: #680021; }
 @media (max-width: 640px) { .pret { flex-direction: column; text-align: center; } }
-.astuces { flex: 1; font-size: 16px; font-weight: 700; color: #241F20; }
+.astuces { flex: 1; font-size: 19px; font-weight: 700; color: #680021; } /* textes qui défilent pendant l'attente : plus grands, en bordeaux */
 @media (max-width: 640px) { .haut .marque img { width: 92px; height: 72px; } }
 /* Inscription : numéro de l'étape (1/3, 2/3, 3/3) à côté de son contenu */
 /* Zone de dépôt centrée sur la page ; la flèche « Continuer » juste à sa droite. */
-.etapeLigne { display: grid; grid-template-columns: 1fr minmax(0, 760px) 1fr; align-items: center; column-gap: 16px; }
+.etapeLigne { display: grid; grid-template-columns: 1fr minmax(0, 900px) 1fr; align-items: center; column-gap: 16px; }
 .etapeContenu { grid-column: 2; min-width: 0; }
 .etapeLigne .suivant { grid-column: 3; justify-self: start; }
 @media (max-width: 900px) { .etapeLigne { grid-template-columns: minmax(0, 1fr) auto; } .etapeContenu { grid-column: 1; } .etapeLigne .suivant { grid-column: 2; } }

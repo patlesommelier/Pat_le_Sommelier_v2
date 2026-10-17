@@ -34,7 +34,7 @@ export async function PageAccueil() {
           </header>
           <div className={s.intro}>
             <TexteRepliable className={s.repliable}>
-              <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre restaurant l’expérience d’un sommelier</h1>
+              <h1 id="h-intro" className={s.titre}>Offrez à chaque client de votre <span className={s.motCle}>restaurant</span> l’expérience d’un sommelier</h1>
               <p className={s.texte}>Votre client choisit son plat, je lui suggère les vins qui l’accompagnent et je lui explique pourquoi. Vos clients sont mieux conseillés, ils commandent plus volontiers une bouteille, et votre chiffre d’affaires moyen augmente. C’est mis en place en 3 clics, et c’est gratuit.</p>
             </TexteRepliable>
             {/* Pat attablé, le QR code et le téléphone, animés ensemble : question, l'app en vidéo, réponse de Pat. */}
@@ -47,7 +47,7 @@ export async function PageAccueil() {
         <div className={s.large}>
           {/* Le téléchargement, dans la section bordeaux sur toute la largeur */}
           <div className={s.boite}>
-            <h2 id="h-insc">Votre sommelier est prêt en quelques minutes</h2>
+            <h2 id="h-insc">Démarrez dès aujourd’hui dans votre restaurant, c’est gratuit</h2>
             <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
           </div>
         </div>
