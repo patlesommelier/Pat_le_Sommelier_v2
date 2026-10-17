@@ -41,8 +41,8 @@ button { font: inherit; }
 .accueil-titre span { display: block; font-weight: 400; font-size: 21px; }
 .filet-blanc { width: 48px; height: 1px; background: var(--sur-marque, #FFFFFF); }
 .accueil-question { font-size: 18px; font-style: italic; }
-.silhouettes { display: flex; justify-content: flex-end; align-items: flex-end; margin: 4px -20px -28px; padding-right: 20px; height: 84px; }
-.tete-pat { width: 70px; height: 83px; background: var(--tete-pat, #FFFFFF);
+.silhouettes { display: flex; justify-content: flex-end; align-items: flex-end; margin: 4px -20px -28px; padding-right: 20px; height: 66px; }
+.tete-pat { width: 74px; height: 65px; background: var(--tete-pat, #FFFFFF);
   -webkit-mask: url(/pat/pat-tete-decoupe.svg) center bottom / contain no-repeat; mask: url(/pat/pat-tete-decoupe.svg) center bottom / contain no-repeat; }
 
 /* ── Titres et sections ── */
