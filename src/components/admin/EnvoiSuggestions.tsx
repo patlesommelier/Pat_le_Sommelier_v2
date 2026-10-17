@@ -31,10 +31,10 @@ export function EnvoiSuggestions({ envoyer, derniere, nombre }: { envoyer: (f: F
   return (
     <section className="carte-bo pile" style={{ gap: 10 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'baseline' }}>
-        <h2 style={{ margin: 0 }}>Suggestions du moment</h2>
-        <span className="petit discret">{nombre ? `${nombre} suggestion${nombre > 1 ? 's' : ''} en ce moment` : 'Aucune suggestion en ce moment'}</span>
+        <h2 style={{ margin: 0 }}>Suggestions</h2>
+        <span className="petit discret">{nombre ? `${nombre} suggestion${nombre > 1 ? 's' : ''} en ce moment` : ''}</span>
       </div>
-      <p className="discret" style={{ margin: 0 }}>Envoyez une photo de votre ardoise ou de vos suggestions : Pat lit les plats, les ajoute dans « Suggestions » (en tête du menu de l’app) et prépare leurs accords.</p>
+      <p className="discret" style={{ margin: 0 }}>Envoyez une photo de votre ardoise</p>
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
         <label className="btn sec" style={{ cursor: 'pointer' }}>
           {fichiers.length ? `${fichiers.length} fichier${fichiers.length > 1 ? 's' : ''} choisi${fichiers.length > 1 ? 's' : ''}` : 'Choisir une photo ou un PDF'}
@@ -42,7 +42,7 @@ export function EnvoiSuggestions({ envoyer, derniere, nombre }: { envoyer: (f: F
         </label>
         <label className="case" style={{ margin: 0 }}>
           <input type="checkbox" checked={remplacer} onChange={(e) => setRemplacer(e.target.checked)} />
-          <span>Remplacer les suggestions actuelles<small>Décochez pour les ajouter à celles déjà en ligne.</small></span>
+          <span>Remplacer les suggestions actuelles</span>
         </label>
         <button type="button" className="btn" disabled={!fichiers.length || enCours || Boolean(lecture)} onClick={valider}>{enCours ? 'Envoi…' : 'Envoyer à Pat'}</button>
       </div>
