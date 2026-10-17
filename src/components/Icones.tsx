@@ -39,7 +39,7 @@ export const Bouteille = ({ taille = 22 }: { taille?: number }) => (
 );
 
 /**
- * Tête de Pat découpée, en bas à droite du bandeau d'accueil : blanche sur un bandeau foncé, rouge sur un bandeau clair
+ * Buste de Pat découpé (tête et col, coupé en arrondi), en bas à droite du bandeau d'accueil : blanche sur un bandeau foncé, rouge sur un bandeau clair
  * (--tete-pat, posé par le layout du restaurant). Le dessin (public/pat/pat-tete-decoupe.svg) sert de masque : le visage,
  * ajouré, laisse voir la couleur du bandeau.
  */
