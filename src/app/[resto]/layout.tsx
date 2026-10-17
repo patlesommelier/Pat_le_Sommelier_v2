@@ -24,6 +24,8 @@ export default async function LayoutRestaurant({ children, params }: { children:
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
     '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
+    // Tête de Pat découpée dans le bandeau : blanche sur un bandeau foncé, rouge (couleur de Pat) sur un bandeau clair.
+    '--tete-pat': clair ? '#FF0D05' : '#FFFFFF',
   } as CSSProperties;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
   if (!(await appOuverte(restaurant.id))) {
