@@ -31,20 +31,24 @@ export function EnvoiSuggestions({ envoyer, derniere, nombre }: { envoyer: (f: F
   return (
     <section className="carte-bo pile" style={{ gap: 10 }}>
       <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, flexWrap: 'wrap', alignItems: 'baseline' }}>
-        <h2 style={{ margin: 0 }}>Suggestions</h2>
+        <h2 style={{ margin: 0 }}>Envoyez vos suggestions</h2>
         <span className="petit discret">{nombre ? `${nombre} suggestion${nombre > 1 ? 's' : ''} en ce moment` : ''}</span>
       </div>
-      <p className="discret" style={{ margin: 0 }}>Envoyez une photo de votre ardoise</p>
       <div style={{ display: 'flex', gap: 12, flexWrap: 'wrap', alignItems: 'center' }}>
         <label className="btn sec" style={{ cursor: 'pointer' }}>
           {fichiers.length ? `${fichiers.length} fichier${fichiers.length > 1 ? 's' : ''} choisi${fichiers.length > 1 ? 's' : ''}` : 'Choisir une photo ou un PDF'}
           <input type="file" accept="image/*,application/pdf" multiple hidden onChange={(e) => setFichiers([...(e.target.files ?? [])])} />
         </label>
+        {/* Envoi à Pat : bouton rond à côté du choix de la photo. */}
+        <button type="button" className="btn" aria-label={enCours ? 'Envoi en cours' : 'Envoyer à Pat'} title="Envoyer à Pat"
+          disabled={!fichiers.length || enCours || Boolean(lecture)} onClick={valider}
+          style={{ width: 44, height: 44, padding: 0, justifyContent: 'center', borderRadius: '50%', marginLeft: -4 }}>
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+        </button>
         <label className="case" style={{ margin: 0 }}>
           <input type="checkbox" checked={remplacer} onChange={(e) => setRemplacer(e.target.checked)} />
           <span>Remplacer les suggestions actuelles</span>
         </label>
-        <button type="button" className="btn" disabled={!fichiers.length || enCours || Boolean(lecture)} onClick={valider}>{enCours ? 'Envoi…' : 'Envoyer à Pat'}</button>
       </div>
       {retour?.erreur && <p className="message erreur" style={{ margin: 0 }}>{retour.erreur}</p>}
       {lecture && <p className="message" style={{ margin: 0 }}>Pat lit vos suggestions… (la page se met à jour toute seule)</p>}
