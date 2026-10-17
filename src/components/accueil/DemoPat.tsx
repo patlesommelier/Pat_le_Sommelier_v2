@@ -4,7 +4,7 @@
 //      « Trouver mon vin », la liste des vins s'affiche ; à côté du téléphone, Pat conseille le premier vin (un blanc) et explique l'accord ;
 //   2. le client : « Après, je prends le filet pur au poivre vert… » ; dans l'app, retour au menu, le filet, « Trouver mon vin » ;
 //      Pat conseille le premier vin (un rouge) et explique l'accord ;
-//   puis tout s'efface doucement, et la scène recommence.
+//   puis les bulles s'effacent et le téléphone devient le simulateur : la vraie app, que le visiteur peut essayer.
 // Les vidéos (public/demo/demo-1-bar et demo-2-filet, en .webm et .mp4) sont des enregistrements de la vraie app de démo
 // en ligne (restaurant L'Improbable) ; les explications sont celles que l'app affiche. Les temps ci-dessous suivent les vidéos.
 import { useEffect, useRef, useState } from 'react';
@@ -35,10 +35,11 @@ export function DemoPat() {
   const [acte, setActe] = useState(0);
   const [question, setQuestion] = useState(true);
   const [reponse, setReponse] = useState(false);
-  const [calme, setCalme] = useState(false); // « réduire les animations » : la fin du premier acte, immobile
+  const [simulateur, setSimulateur] = useState(false); // la scène jouée une fois : le téléphone montre la vraie app
 
   useEffect(() => {
-    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setCalme(true); setReponse(true); return; }
+    // « Réduire les animations » : pas de scène, le simulateur tout de suite.
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) { setQuestion(false); setSimulateur(true); return; }
     const minuteurs: ReturnType<typeof setTimeout>[] = [];
     let t = 0;
     const a = (ms: number, f: () => void) => { t += ms; minuteurs.push(setTimeout(f, t)); };
@@ -56,7 +57,8 @@ export function DemoPat() {
       a(QUESTION_SEULE, () => jouer(1));
       a(ACTES[1].liste, () => setReponse(true));
       a(LECTURE, () => { setQuestion(false); setReponse(false); });
-      a(FONDU + 400, tour);
+      // Fin de la scène : le simulateur remplace les vidéos.
+      a(FONDU, () => setSimulateur(true));
     };
     tour();
     return () => minuteurs.forEach(clearTimeout);
@@ -79,19 +81,21 @@ export function DemoPat() {
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img src="/api/demo-qr?couleur=pat" alt="QR code à scanner pour essayer l’app de démonstration" width={84} height={84} />
       </a>
-      {/* Le téléphone : les vidéos de l'app (ordinateur seulement) ; un clic ouvre la vraie démo. */}
+      {/* Le téléphone (ordinateur seulement) : les vidéos de la scène, puis le simulateur de l'app. */}
       <div className={s.telephoneBloc}>
         {/* La réponse de Pat, à côté du téléphone qui vient d'afficher les vins. */}
         <p className={`${s.bulle} ${s.bulleTelephone}`} data-visible={reponse} aria-hidden={!reponse}>{r}</p>
-        <a className={s.telephone} href="/chez-pat" target="_blank" rel="noopener" aria-label="Ouvrir l’app de démonstration">
-          {ACTES.map((x, n) => (
-            <video key={x.video} ref={videos[n]} data-visible={n === acte} muted playsInline preload="auto" aria-hidden="true"
-              poster={calme ? `${x.video}-fin.jpg` : `${x.video}-debut.jpg`}>
-              <source src={`${x.video}.webm`} type="video/webm" />
-              <source src={`${x.video}.mp4`} type="video/mp4" />
-            </video>
-          ))}
-        </a>
+        <div className={s.telephone}>
+          {simulateur
+            // Le simulateur : la vraie app du restaurant de démo, rendue à la taille d'un téléphone puis réduite.
+            ? <iframe src="/chez-pat" title="L’app de démonstration : essayez-la" className={s.simulateur} />
+            : ACTES.map((x, n) => (
+              <video key={x.video} ref={videos[n]} data-visible={n === acte} muted playsInline preload="auto" aria-hidden="true" poster={`${x.video}-debut.jpg`}>
+                <source src={`${x.video}.webm`} type="video/webm" />
+                <source src={`${x.video}.mp4`} type="video/mp4" />
+              </video>
+            ))}
+        </div>
       </div>
     </div>
   );

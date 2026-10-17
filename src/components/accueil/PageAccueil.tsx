@@ -1,8 +1,8 @@
 // Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
 //   1. présentation (crème du logo) : logo écrit, titre, texte, puis la scène animée (DemoPat) : Pat attablé avec
 //      les bulles d'un client et de Pat, le petit QR code rouge et le téléphone qui montre l'app de démo en vidéo ;
-//   2. inscription en frise dans une boîte bordeaux (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
-//   3. « Qui est Pat ? » ; puis le pied de page.
+//   2. inscription en frise dans une section bordeaux (1/3 carte des vins, 2/3 menu, 3/3 restaurant) ;
+//   3. « Qui est Pat ? » dans la section noire du bas, au-dessus du pied de page.
 // « Ce que je change dans votre restaurant » (Avantages) et « Sous le capot » (Fonctionnalites) restent dans Sections.tsx
 // pour plus tard.
 import Link from 'next/link';
@@ -45,7 +45,7 @@ export async function PageAccueil() {
 
       <section aria-labelledby="h-insc" id="demarrer" className={s.inscription}>
         <div className={s.large}>
-          {/* Le téléchargement dans une boîte bordeaux aux angles arrondis, sur le crème de la page */}
+          {/* Le téléchargement, dans la section bordeaux sur toute la largeur */}
           <div className={s.boite}>
             <h2 id="h-insc">Votre sommelier est prêt en quelques minutes</h2>
             <Inscription initial={resume} restaurantCree={suivi?.id ?? null} />
