@@ -31,7 +31,8 @@ export default async function Accueil({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Entete restaurant={restaurant} grand={!compact} />
+      {/* Venu de la carte des vins (bouton « Sommelier ») : la flèche de retour y ramène, comme sur la carte. */}
+      <Entete restaurant={restaurant} grand={!compact} retour={compact ? `/${resto}/carte` : undefined} />
       {!compact && <RepliBandeau />}
       <main className={`defile${compact ? '' : ' accueil-defile'}`}>
         {/* Le haut de l'accueil (bienvenue) défile avec les plats et s'efface en remontant ; « Qu'allez-vous manger ? », dans la
