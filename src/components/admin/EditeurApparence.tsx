@@ -232,7 +232,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           </div>
           <div style={{ padding: '10px 12px 12px', boxShadow: '0 -6px 18px rgba(0,0,0,0.1)' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 4px 4px', borderRadius: 30, background: claire(couleur), border: `1.5px solid ${couleur}` }}>
-              <span style={{ width: 42, height: 42, borderRadius: 21, border: `2px solid ${couleur}`, boxSizing: 'border-box', background: '#FEFAF1', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}>
+              <span style={{ width: 42, height: 42, borderRadius: 21, border: `2px solid ${couleur}`, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}>
                 <span className="buste-pat" /></span>
               <span style={{ flexGrow: 1, fontSize: 14, fontWeight: 700, color: '#4A4A4A' }}>Demandez à Pat…</span>
             </div>

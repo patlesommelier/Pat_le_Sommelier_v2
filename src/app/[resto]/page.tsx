@@ -34,10 +34,9 @@ export default async function Accueil({ params, searchParams }: { params: Promis
       <Entete restaurant={restaurant} grand={!compact} />
       {!compact && <RepliBandeau />}
       <main className={`defile${compact ? '' : ' accueil-defile'}`}>
-        {/* Le haut de l'accueil fait partie de la page : il défile avec les plats, à la vitesse du doigt. */}
-        {compact ? (
-          <p className="accueil-compact">Qu’allez-vous manger&#8239;? <span>Je choisis le vin pour vous.</span></p>
-        ) : (
+        {/* Le haut de l'accueil (bienvenue) défile avec les plats et s'efface en remontant ; le bandeau prend alors la hauteur de
+            celui de la carte des vins. « Qu'allez-vous manger ? » reste en haut de la liste des plats, comme au retour de la carte. */}
+        {!compact && (
         <div className="accueil-hero bandeau-suite">
           <div className="accueil-texte">
             <div className="accueil-titre">
@@ -45,10 +44,10 @@ export default async function Accueil({ params, searchParams }: { params: Promis
               <span>{sousTitre}</span>
             </div>
             <div className="filet-blanc" />
-            <div className="accueil-question">Qu’allez-vous manger ?</div>
           </div>
         </div>
         )}
+        <p className="accueil-compact">Qu’allez-vous manger&#8239;? <span>Je choisis le vin pour vous.</span></p>
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
           <ChoixPlats resto={resto} groupes={GROUPES.map((g) => ({
             titre: g.titre,
