@@ -1,6 +1,6 @@
 'use client';
 // Formulaire doré « Activez votre sommelier en quelques minutes » (niveau 3 de la page) : une étape à la fois.
-// Frise en 3 étapes : 1/3 carte des vins → 2/3 menu → 3/3 restaurant (compte) et « J’engage Pat » (accords et QR code).
+// Frise en 3 étapes : 1/3 carte des vins → 2/3 menu → 3/3 restaurant (compte) et « C’est parti ! » (accords et QR code).
 // Après chaque dépôt, seul le nombre d'éléments trouvés s'affiche.
 import { startTransition, useActionState, useCallback, useEffect, useRef, useState } from 'react';
 import { useFormStatus } from 'react-dom';
@@ -187,7 +187,7 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
             <div className={s.pied}>
-              <BoutonEnvoi libelle="J’engage Pat" enCours="Un instant…" desactive={resume.carte?.statut !== 'ok' || resume.menu?.statut !== 'ok'} />
+              <BoutonEnvoi libelle={'C’est parti\u202F!'} enCours="Un instant…" desactive={resume.carte?.statut !== 'ok' || resume.menu?.statut !== 'ok'} />
             </div>
           </form>
         )}

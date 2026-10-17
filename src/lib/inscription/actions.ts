@@ -86,7 +86,7 @@ const modeDev = () => !supabaseConfigure() && !process.env.NETLIFY;
 
 /**
  * Étape 3 (après la carte des vins et le menu) : nom du restaurant, e-mail et mot de passe. Le compte est créé
- * (déjà confirmé), la session ouverte, puis le restaurant est créé et la préparation des accords lancée (« J’engage Pat »).
+ * (déjà confirmé), la session ouverte, puis le restaurant est créé et la préparation des accords lancée (« C’est parti ! »).
  */
 export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   const r = Compte.safeParse(Object.fromEntries(form));

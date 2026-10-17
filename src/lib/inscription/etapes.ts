@@ -1,5 +1,5 @@
 // Étapes du formulaire de la page d'accueil (fonctions pures, testables).
-// Ordre décidé avec Pat : 1. carte des vins, 2. menu, 3. restaurant (compte), puis « J’engage Pat ». Une seule étape visible à la fois.
+// Ordre décidé avec Pat : 1. carte des vins, 2. menu, 3. restaurant (compte), puis « C’est parti ! ». Une seule étape visible à la fois.
 import type { Plat, VinRapproche } from './donnees';
 
 export type TypeAnalyse = 'carte' | 'menu';
