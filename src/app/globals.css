@@ -142,7 +142,7 @@ a.bouton-plein { text-decoration: none; }
   background: var(--marque-claire); border: 1.5px solid var(--marque);
 }
 .avatar-pat {
-  width: 54px; height: 54px; border-radius: 27px; border: 2px solid var(--marque); padding: 0; background: #FFFFFF;
+  width: 54px; height: 54px; border-radius: 27px; border: 0; padding: 0; background: #FFFFFF;
   display: flex; align-items: flex-end; justify-content: center; overflow: hidden; flex-shrink: 0; cursor: pointer;
 }
 .avatar-pat { background: #FF0D05; overflow: hidden; align-items: flex-end; }
