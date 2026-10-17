@@ -135,7 +135,7 @@ export const mots = (t: string) => [...new Set(norm(t).split(/[^a-z0-9]+/).filte
 
 /** Producteur de la base dont le nom contient tous les mots significatifs du nom lu sur la carte (le plus court d'abord). */
 type Options = { exclure?: string; valideSeulement?: boolean; memesMots?: boolean };
-async function producteurAuNom(requete: Requete, nom: string, { exclure = '', valideSeulement = false, memesMots = false }: Options = {}): Promise<{ id: string; statut: string } | null> {
+async function producteurAuNom(requete: Requete, nom: string, { exclure = '', valideSeulement = false, memesMots = false }: Options = {}): Promise<{ id: string; nom: string; statut: string } | null> {
   const m = mots(nom);
   if (!m.length) return null;
   const lignes = await requete<{ id: string; nom: string; statut: string }>(
@@ -144,14 +144,14 @@ async function producteurAuNom(requete: Requete, nom: string, { exclure = '', va
     [m.map((x) => `%${x}%`), exclure, valideSeulement]);
   // Mots entiers (« Pala » n'est pas « Palari ») ; `memesMots` : le nom de la base n'a pas d'autre mot (doublons).
   const p = lignes.find((l) => { const leurs = mots(l.nom); return m.every((x) => leurs.includes(x)) && (!memesMots || leurs.every((x) => m.includes(x))); });
-  return p ? { id: p.id, statut: p.statut } : null;
+  return p ? { id: p.id, nom: p.nom, statut: p.statut } : null;
 }
 
 /**
  * Producteur de la base pour le nom lu sur la carte. Le nom entier d'abord ; sinon chacun de ses morceaux
  * (« Château Mourgues du Grès - François Collard » : le château, puis le propriétaire), le plus long d'abord.
  */
-export async function producteurConnu(requete: Requete, nom: string, options: Options = {}): Promise<{ id: string; statut: string } | null> {
+export async function producteurConnu(requete: Requete, nom: string, options: Options = {}): Promise<{ id: string; nom: string; statut: string } | null> {
   const entier = await producteurAuNom(requete, nom, options);
   if (entier) return entier;
   const morceaux = nom.split(/\s+[-–—|\/]\s+|\s*[,;(]\s*|\)/).map((x) => x.trim()).filter((x) => mots(x).join('').length >= 4);

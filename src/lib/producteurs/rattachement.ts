@@ -1,7 +1,7 @@
 /**
  * Rattrapage des producteurs des vins de carte (au déploiement, avant le partage des étiquettes) :
- * 1. un vin sans producteur retrouve celui de la base : par le nom lu sur la carte, ou par le nom du vin
- *    (« Riesling Eisquell - Weingut Battenfeld Spanier ») ;
+ * 1. un vin sans producteur retrouve celui de la base : par le nom lu sur la carte, sinon (nom introuvable, ou « Non précisé »)
+ *    par le nom du vin (« Riesling Eisquell - Weingut Battenfeld Spanier ») ;
  * 2. un vin rattaché à un producteur « à valider » créé à la lecture d'une carte, doublon d'un producteur validé
  *    (« Château Mourgues du Grès - François Collard »), passe sur le producteur validé ; le doublon, sans plus aucun vin,
  *    quitte la liste des producteurs à valider.
@@ -26,15 +26,16 @@ export async function rattacherProducteurs(requete: Requete) {
   const sans = await requete<{ id: string; libelle: string; producteur_texte: string | null; appellation: string | null; couleur: string }>(
     `select v.id, v.libelle, v.producteur_texte, coalesce(t.nom, v.appellation_texte) as appellation, v.couleur::text
        from vin_carte v left join terroir t on t.id = v.appellation_id where v.producteur_id is null`);
-  const parNom = sans.filter((v) => !v.producteur_texte);
-  const trouves = parNom.length
-    ? await producteursDansLeNom(requete, parNom.map((v) => ({ libelleCarte: v.libelle, producteur: null, appellation: v.appellation, couleur: v.couleur } as Vin)))
+  // Le nom lu sur la carte d'abord (sauf « Non précisé »…), sinon celui écrit dans le nom du vin.
+  const lu = (t: string | null) => (t && !/^non\b|inconnu|à préciser|a preciser/i.test(t.trim()) ? t : null);
+  const trouves = sans.length
+    ? await producteursDansLeNom(requete, sans.map((v) => ({ libelleCarte: v.libelle, producteur: null, appellation: v.appellation, couleur: v.couleur } as Vin)))
     : [];
-  for (const v of sans) {
-    const nom = v.producteur_texte ?? trouves[parNom.indexOf(v)]?.producteur ?? null;
-    if (!nom) continue;
-    const p = await producteurConnu(requete, nom, { valideSeulement: true });
-    if (p) await relier([v.id], p.id);
+  for (const [i, v] of sans.entries()) {
+    for (const nom of new Set([lu(v.producteur_texte), trouves[i]?.producteur ?? null])) {
+      const p = nom ? await producteurConnu(requete, nom, { valideSeulement: true }) : null;
+      if (p) { await relier([v.id], p.id); break; }
+    }
   }
 
   // 2. Producteurs « à valider » qui doublonnent un producteur validé.
