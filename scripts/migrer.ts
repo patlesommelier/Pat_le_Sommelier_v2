@@ -13,6 +13,7 @@ import 'dotenv/config';
 import { migrer, ouvrirPool } from './lib/migrations';
 import { initialiserVersionsSiAbsentes } from './lib/versions-initiales';
 import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
+import { rattacherProducteurs } from '../src/lib/producteurs/rattachement';
 import { recomposerIntitules } from './lib/intitules';
 
 async function main() {
@@ -38,6 +39,9 @@ async function main() {
     // Premières versions des principes et des règles (une seule fois).
     const faites = await initialiserVersionsSiAbsentes(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (faites.length) console.log(`Versions installées : ${faites.join(', ')}.`);
+    // Vins des cartes rattachés aux producteurs de la base qu'ils n'avaient pas trouvés (idempotent).
+    const rattaches = await rattacherProducteurs(async (sql, params = []) => (await client.query(sql, params)).rows);
+    if (rattaches) console.log(`Producteurs retrouvés : ${rattaches} vin(s) de carte rattaché(s).`);
     // Étiquettes rattachées aux cuvées de la base de Pat (idempotent : ne fait rien quand tout est à jour).
     const recues = await partagerEtiquettes(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (recues) console.log(`Étiquettes partagées par cuvée : ${recues} vin(s).`);

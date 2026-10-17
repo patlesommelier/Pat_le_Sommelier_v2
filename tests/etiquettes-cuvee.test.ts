@@ -38,6 +38,25 @@ test('un cépage écrit d’un seul côté (carte ou base) n’empêche pas de r
   assert.equal(cuveeCorrespondante(j('Viognier'), [{ id: 'v', nom: 'Viognier', couleur: 'blanc' }])?.id, 'v');
 });
 
+test('le pays en tête de ligne ne gêne pas', () => {
+  assert.equal(cuveeCorrespondante(vin('Allemagne - Riesling "Eisquell" - Weingut Battenfeld Spanier', 'blanc', null, 'Battenfeld-Spanier'),
+    [{ id: 'e', nom: 'Eisquell Riesling', couleur: 'blanc' }, { id: 'k', nom: 'Kirchspiel Riesling GG', couleur: 'blanc' }])?.id, 'e');
+});
+
+test('carte sans nom de cuvée : le seul vin du producteur dans cette couleur et cette appellation', () => {
+  const mourgues = [
+    { id: 'tab', nom: 'Terre d’Argence', couleur: 'blanc', appellation: 'Costières de Nîmes' },
+    { id: 'gal', nom: 'Les Galets Rouges', couleur: 'rouge', appellation: 'Costières de Nîmes' },
+    { id: 'gro', nom: 'Les Galets Rosés', couleur: 'rose', appellation: 'Costières de Nîmes' },
+  ];
+  const m = (couleur: string) => vin('Costières de Nîmes', couleur, null, 'Château Mourgues du Grès');
+  assert.equal(cuveeCorrespondante(m('blanc'), mourgues)?.id, 'tab');
+  // Deux rouges dans la même appellation : on ne choisit pas.
+  assert.equal(cuveeCorrespondante(m('rouge'), [...mourgues, { id: 'cap', nom: 'Capitelles', couleur: 'rouge', appellation: 'Costières de Nîmes' }]), null);
+  // Rien sur la carte que le nom du producteur : on ne devine pas.
+  assert.equal(cuveeCorrespondante(vin('Château Mourgues du Grès', 'blanc', null, 'Château Mourgues du Grès'), mourgues), null);
+});
+
 test("l'appellation de la cuvée complète son nom", () => {
   assert.equal(cuveeCorrespondante(vin('Meursault Les Tessons', 'blanc', null, 'Domaine Pierre Morey'),
     [{ id: 't', nom: 'Les Tessons', couleur: 'blanc', appellation: 'Meursault' }])?.id, 't');

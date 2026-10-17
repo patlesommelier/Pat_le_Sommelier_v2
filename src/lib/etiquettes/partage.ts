@@ -16,7 +16,10 @@ import type { Requete } from '../generation/accords';
 const MOTS_VIDES = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'the', 'di', 'del', 'della', 'y']);
 // Mentions qui ne distinguent pas une cuvée d'une autre (la couleur, elle, distingue : « blanc », « rosé » restent).
 const GENERIQUES = new Set(['brut', 'extra', 'nature', 'cru', 'er', '1er', 'premier', 'grand', 'igp', 'aop', 'aoc', 'doc', 'docg', 'do',
-  'vdf', 'vin', 'cuvee', 'domaine', 'chateau', 'maison', 'superiore', 'classico']);
+  'vdf', 'vin', 'cuvee', 'domaine', 'chateau', 'maison', 'superiore', 'classico', 'weingut', 'bodega', 'bodegas', 'tenuta', 'cantina',
+  // Pays (souvent en tête de ligne sur les cartes : « Allemagne - Riesling Eisquell »).
+  'france', 'allemagne', 'autriche', 'italie', 'espagne', 'portugal', 'suisse', 'grece', 'hongrie', 'slovenie', 'croatie', 'georgie', 'liban',
+  'israel', 'chili', 'argentine', 'australie', 'usa', 'belgique', 'luxembourg', 'roumanie', 'bulgarie', 'moldavie', 'uruguay', 'bresil']);
 const ORDRE_SOURCE: Record<string, number> = { fichier: 1, wine_labs: 2, restaurant: 3 };
 
 const norm = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe');
@@ -69,7 +72,14 @@ export function cuveeCorrespondante(vin: Pick<VinPartage, 'libelle' | 'vin_texte
     const s = m.size * 10 + nom.filter((x) => duVin.has(x)).length;
     if (s > score) [meilleure, score] = [c, s];
   }
-  return meilleure;
+  if (meilleure) return meilleure;
+  // La carte ne nomme pas la cuvée, seulement l'appellation (« Costières de Nîmes ») : si le producteur n'a qu'un vin
+  // de cette couleur dans cette appellation, c'est celui-là. Sans appellation, on ne devine pas.
+  const restent = [...propres].filter((x) => !CEPAGES.has(x) && !mots(vin.cepages ?? null).includes(x));
+  const zone = restent.length ? restent : [...appellation];
+  if (!zone.length) return null;
+  const seuls = cuvees.filter((c) => c.couleur === vin.couleur && zone.every((x) => utiles(c.appellation ?? null).includes(x)));
+  return seuls.length === 1 ? seuls[0] : null;
 }
 
 /**

@@ -134,14 +134,33 @@ export const norm = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').to
 export const mots = (t: string) => [...new Set(norm(t).split(/[^a-z0-9]+/).filter((m) => m.length > 2 && !MOTS_VIDES.has(m)))];
 
 /** Producteur de la base dont le nom contient tous les mots significatifs du nom lu sur la carte (le plus court d'abord). */
-export async function producteurConnu(requete: Requete, nom: string): Promise<{ id: string; statut: string } | null> {
+type Options = { exclure?: string; valideSeulement?: boolean; memesMots?: boolean };
+async function producteurAuNom(requete: Requete, nom: string, { exclure = '', valideSeulement = false, memesMots = false }: Options = {}): Promise<{ id: string; statut: string } | null> {
   const m = mots(nom);
   if (!m.length) return null;
   const lignes = await requete<{ id: string; nom: string; statut: string }>(
-    `select id, nom, statut::text from producteur where statut <> 'retire' and ${SANS_ACCENTS} like all($1) order by length(nom) limit 5`,
-    [m.map((x) => `%${x}%`)]);
-  const p = lignes.find((l) => m.every((x) => norm(l.nom).includes(x)));
+    `select id, nom, statut::text from producteur where statut <> 'retire' and ${SANS_ACCENTS} like all($1) and id <> $2 and (not $3 or statut = 'valide')
+      order by statut = 'valide' desc, length(nom) limit 5`,
+    [m.map((x) => `%${x}%`), exclure, valideSeulement]);
+  // Mots entiers (« Pala » n'est pas « Palari ») ; `memesMots` : le nom de la base n'a pas d'autre mot (doublons).
+  const p = lignes.find((l) => { const leurs = mots(l.nom); return m.every((x) => leurs.includes(x)) && (!memesMots || leurs.every((x) => m.includes(x))); });
   return p ? { id: p.id, statut: p.statut } : null;
+}
+
+/**
+ * Producteur de la base pour le nom lu sur la carte. Le nom entier d'abord ; sinon chacun de ses morceaux
+ * (« Château Mourgues du Grès - François Collard » : le château, puis le propriétaire), le plus long d'abord.
+ */
+export async function producteurConnu(requete: Requete, nom: string, options: Options = {}): Promise<{ id: string; statut: string } | null> {
+  const entier = await producteurAuNom(requete, nom, options);
+  if (entier) return entier;
+  const morceaux = nom.split(/\s+[-–—|\/]\s+|\s*[,;(]\s*|\)/).map((x) => x.trim()).filter((x) => mots(x).join('').length >= 4);
+  if (morceaux.length < 2) return null;
+  for (const x of morceaux.sort((a, b) => b.length - a.length)) {
+    const p = await producteurAuNom(requete, x, options);
+    if (p) return p;
+  }
+  return null;
 }
 
 /**
@@ -165,7 +184,8 @@ const NON_PRODUCTEURS = new Set(['chardonnay', 'sauvignon', 'pinot', 'noir', 'bl
  * Producteur resté vide mais présent dans le nom du vin (« Sancerre Picard », « Ostal Cazes ») : retrouvé parmi
  * les producteurs de la base de Pat. Tous les mots significatifs du producteur doivent figurer dans le nom ; ce ne doit
  * être ni une appellation (« Margaux » n'est pas Château Margaux) ni un cépage ; et le producteur doit produire dans
- * l'appellation du vin (« Chablis Saint-Pierre » n'est pas le Domaine de Saint-Pierre du Jura). En cas de doute, rien.
+ * l'appellation du vin (« Chablis Saint-Pierre » n'est pas le Domaine de Saint-Pierre du Jura). Sans appellation lue, seul un nom
+ * de producteur d'au moins deux mots, sans autre candidat, est retenu. En cas de doute, rien.
  */
 export async function producteursDansLeNom(requete: Requete, vins: Vin[]): Promise<Vin[]> {
   if (!vins.some((v) => !v.producteur)) return vins;
@@ -186,10 +206,14 @@ export async function producteursDansLeNom(requete: Requete, vins: Vin[]): Promi
     const lue = v.appellation ? mots(sansMention(v.appellation)).join(' ') : '';
     const debut = [...appellations].filter((a) => ` ${libelle.join(' ')} `.startsWith(` ${a} `)).sort((a, b) => b.length - a.length)[0] ?? '';
     const appellation = lue || debut;
-    if (!appellation) return v; // sans appellation, impossible de vérifier : on ne devine pas
+    // Sans appellation, impossible de vérifier la zone : seul un nom d'au moins deux mots, écrit en entier dans le nom du vin
+    // (« Riesling Eisquell - Weingut Battenfeld Spanier »), et qui ne laisse aucun doute, est retenu.
     const trouves = candidats.filter((p) => p.m.every((x) => libelle.includes(x)) && (p.m.length < libelle.length || p.m.length >= 2)
-      && p.zones.some((z) => z === appellation || ` ${z} `.includes(` ${appellation} `) || ` ${appellation} `.includes(` ${z} `)));
+      && (appellation
+        ? p.zones.some((z) => z === appellation || ` ${z} `.includes(` ${appellation} `) || ` ${appellation} `.includes(` ${z} `))
+        : p.m.length >= 2 && p.m.join('').length >= 10));
     if (!trouves.length) return v;
+    if (!appellation && new Set(trouves.map((p) => p.m.join(' '))).size > 1) return v;
     const max = Math.max(...trouves.map((p) => p.m.length));
     const meilleurs = [...new Set(trouves.filter((p) => p.m.length === max).map((p) => p.m.join(' ')))];
     if (meilleurs.length !== 1) return v; // plusieurs producteurs possibles : on ne choisit pas
