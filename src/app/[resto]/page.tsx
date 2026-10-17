@@ -3,6 +3,7 @@ import { RepliBandeau } from '@/components/RepliBandeau';
 import { appOuverte } from '@/lib/ouverture';
 import { notFound, redirect } from 'next/navigation';
 import { Entete } from '@/components/Entete';
+import { PatEcrit } from '@/components/Icones';
 import { getPlats, getRestaurant } from '@/lib/donnees';
 import type { Plat } from '@/lib/types';
 
@@ -46,8 +47,8 @@ export default async function Accueil({ params, searchParams }: { params: Promis
             </div>
             <div className="filet-blanc" />
           </div>
-          {/* Le buste de Pat, tout petit, en bas à droite du bandeau ; il s'efface avec la bienvenue. */}
-          <span className="tete-pat" role="img" aria-label="Pat, le sommelier" />
+          {/* « Pat » écrit, tout petit, en bas à droite du bandeau ; il s'efface avec la bienvenue. */}
+          <PatEcrit />
         </div>
         )}
         <p className="question-bandeau">Qu’allez-vous manger&#8239;?</p>
