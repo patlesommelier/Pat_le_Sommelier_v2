@@ -9,7 +9,7 @@
   --texte: #241F20;
   --discret: #241F20;
   --ligne: #AFB0AE;
-  --fond: #EFEBE9;
+  --fond: #FEFAF1; /* fond des pages : le crème du logo, comme la page d’inscription */
   --rose: #EB9D92;
   --vert: #241F20; --vert-fond: #DE0454;
   --ocre: #241F20; --ocre-fond: #EB9D92;
@@ -27,7 +27,7 @@
 .bo :focus-visible { outline: 2px solid var(--encre); outline-offset: 2px; }
 
 /* ── Navigation ── */
-.bo-nav { flex: 1 1 260px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: #EFEBE9; border-right: 1px solid var(--ligne); display: flex; flex-direction: column; gap: 22px; }
+.bo-nav { flex: 1 1 260px; max-width: 100%; box-sizing: border-box; padding: 24px 16px; background: var(--fond); border-right: 1px solid var(--ligne); display: flex; flex-direction: column; gap: 22px; }
 .bo-marque { display: flex; align-items: center; gap: 10px; text-decoration: none; padding: 0 8px; }
 .bo-marque img { width: 48px; height: 48px; border-radius: 12px; display: block; }
 .bo-marque strong { display: block; font-family: var(--titre); font-size: 20px; font-weight: 700; color: var(--encre); line-height: 1.05; }
