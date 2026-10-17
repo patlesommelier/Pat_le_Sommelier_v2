@@ -22,7 +22,7 @@
   color: #FEFAF1; box-shadow: 0 14px 24px -14px rgba(36,31,32,0.6); animation: flotte 10s ease-in-out infinite; transition: opacity .8s ease, translate .8s ease; }
 /* Bulles de la scène animée (DemoPat) : elles apparaissent et s'effacent en douceur. */
 .bulle[data-visible="false"] { opacity: 0; translate: 0 12px; }
-.bulleClient { left: -6%; top: 4%; background: #DE0454; border-bottom-left-radius: 4px; }
+.bulleClient { left: -6%; top: 4%; max-width: 340px; text-wrap: balance; background: #DE0454; border-bottom-left-radius: 4px; }
 .bullePat { right: -8%; top: 30%; background: #680021; border-bottom-right-radius: 4px; animation-delay: -5s; }
 @keyframes flotte { 50% { transform: translateY(-8px); } }
 
@@ -33,11 +33,14 @@
 /* Téléphone de démo, à droite du QR ; son bas est aussi sur la ligne de la table */
 .telephoneBloc { position: relative; flex: none; margin-bottom: 23px; }
 /* Réponse de Pat à gauche du téléphone, en haut, sa pointe vers l'écran */
-.bulleTelephone { right: calc(100% + 18px); top: 34px; width: 230px; background: #680021; border-bottom-right-radius: 4px; animation-delay: -5s; }
+.bulleTelephone { right: calc(100% + 18px); top: 24px; width: 300px; max-width: none; font-size: 14.5px; background: #680021; border-bottom-right-radius: 4px; animation-delay: -5s; }
 .bulleMobile { display: none; }
 .telephone { display: block; width: 186px; height: 380px; box-sizing: border-box; padding: 7px; border-radius: 30px;
   background: #241F20; box-shadow: 0 40px 70px -30px rgba(36,31,32,0.75); }
-.telephone video { display: block; width: 172px; height: 366px; object-fit: cover; object-position: top; border-radius: 24px; background: #EFEBE9; }
+.telephone { position: relative; }
+/* Les deux vidéos (un acte chacune) sont superposées ; seule celle de l'acte en cours se voit. */
+.telephone video[data-visible="false"] { visibility: hidden; }
+.telephone video { position: absolute; left: 7px; top: 7px; display: block; width: 172px; height: 366px; object-fit: cover; object-position: top; border-radius: 24px; background: #EFEBE9; }
 
 /* Inscription en frise */
 .inscription { background: #FEFAF1; }
