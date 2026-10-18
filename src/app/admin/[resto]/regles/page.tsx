@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { enregistrerReglages, remettreVin, retablirReglage, retablirTout, retirerVin } from '../../actions';
+import { enregistrerReglages, retablirReglage, retablirTout } from '../../actions';
 import { Icone } from '@/components/admin/Icone';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
-import { getExclusions, getVinsBO } from '@/lib/admin/donnees';
 import { getReglages } from '@/lib/donnees';
 import { requete } from '@/lib/db';
 import { parametresEnService, reglesEnService } from '@/lib/regles/versions';
@@ -37,12 +35,11 @@ const affiche = (v: number | boolean) => typeof v === 'boolean' ? (v ? 'active' 
 
 export default async function Regles({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
+  const u = await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { ok } = await searchParams;
-  const [R, exclusions, vins, PAT, version] = await Promise.all([getReglages(resto), getExclusions(resto), getVinsBO(resto), parametresEnService(requete),
+  const [R, PAT, version] = await Promise.all([getReglages(resto), parametresEnService(requete),
     reglesEnService(requete).catch(() => null)]);
   const modifies = (Object.keys(PAT) as Cle[]).filter((k) => R[k] !== PAT[k]);
-  const exclus = new Set(exclusions.map((x) => x.cible));
   return (
     <>
       <Entete titre="Règles du sommelier" texte={`Pat applique par défaut ses règles de sélection (${version?.code ?? 'V7'}). Ajustez-les à votre service : la valeur de Pat reste visible et se rétablit d’un clic.`}>
@@ -58,7 +55,7 @@ export default async function Regles({ params, searchParams }: { params: Promise
                 const mod = d.champs.filter((c) => R[c.cle] !== PAT[c.cle]);
                 return (
                   <div key={d.n} className="carte-bo" style={{ padding: '18px 20px', display: 'flex', flexWrap: 'wrap', gap: '16px 24px', alignItems: 'center' }}>
-                    <span style={{ width: 40, height: 40, borderRadius: 20, border: '1.5px solid var(--encre)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--titre)', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{d.n}</span>
+                    {u.admin && <span style={{ width: 40, height: 40, borderRadius: 20, border: '1.5px solid var(--encre)', color: 'var(--encre)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontFamily: 'var(--titre)', fontWeight: 700, fontSize: 13, flexShrink: 0 }}>{d.n}</span>}
                     <div style={{ flex: '1 1 300px', minWidth: 0, display: 'flex', flexDirection: 'column', gap: 4 }}>
                       <span style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 8 }}><b style={{ fontFamily: 'var(--titre)', fontSize: 17 }}>{d.titre}</b>{mod.length ? <Etat type="modifie">Modifié</Etat> : <Etat type="defaut">Par défaut</Etat>}</span>
                       <span className="discret">{d.texte}</span>
@@ -85,35 +82,8 @@ export default async function Regles({ params, searchParams }: { params: Promise
               })}
             </section>
           ))}
-          <div className="ligne-actions"><button type="submit" className="btn"><Icone nom="check" taille={18} />Enregistrer les réglages</button></div>
+          <div className="ligne-actions"><button type="submit" className="btn"><Icone nom="check" taille={18} />Enregistrez vos règles</button></div>
         </FormulaireAdmin>
-        <aside className="etroit">
-          <div className="carte-bo sticker" style={{ display: 'flex', gap: 14, alignItems: 'flex-start' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/pat/pat-attable-rouge.svg" alt="" width={79} height={62} />
-            <div className="pile" style={{ gap: 8 }}><b>Chaque réglage se teste</b><span className="discret">Le simulateur montre tout de suite les vins proposés pour chaque plat avec vos réglages.</span>
-              <Link href={`/admin/${resto}/simulateur`} className="btn sec petit"><Icone nom="phone" taille={18} />Ouvrir le simulateur</Link></div>
-          </div>
-          <div className="carte-bo pile">
-            <div><h2>Vins retirés</h2><p className="sous">Rupture, bouteille réservée… Pat ne les propose plus, sans toucher à votre carte.</p></div>
-            {exclusions.length === 0 && <span className="discret">Aucun vin retiré.</span>}
-            {exclusions.map((x) => (
-              <div key={x.id} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, borderTop: '1px solid var(--ligne)', paddingTop: 10 }}>
-                <span><b>{vins.find((v) => v.id === x.cible)?.libelle ?? x.cible}</b><br /><span className="discret">{x.cible}{x.date_fin ? ` · jusqu’au ${x.date_fin.split('-').reverse().join('/')}` : ''}</span></span>
-                <form action={remettreVin.bind(null, resto, x.id)}><button className="btn fantome petit">Remettre</button></form>
-              </div>
-            ))}
-            <form action={retirerVin.bind(null, resto)} className="pile" style={{ gap: 10, borderTop: '1px solid var(--ligne)', paddingTop: 12 }}>
-              <div className="champ"><label htmlFor="vin">Retirer un vin</label>
-                <select id="vin" name="vin" required defaultValue="">
-                  <option value="" disabled>Choisir un vin…</option>
-                  {vins.filter((v) => !exclus.has(v.id)).map((v) => <option key={v.id} value={v.id}>{v.libelle}{v.millesime ? ` ${v.millesime}` : ''}{v.format !== '75 cl' ? ` (${v.format})` : ''}</option>)}
-                </select></div>
-              <div className="champ"><label htmlFor="jusqua">Jusqu’au (facultatif)</label><input id="jusqua" name="jusqua" type="date" /></div>
-              <button className="btn sec petit">Retirer</button>
-            </form>
-          </div>
-        </aside>
       </div>
     </>
   );
