@@ -4,7 +4,6 @@ import { enregistrerPlat, envoyerSuggestions, proposerPlat, supprimerPlat } from
 import { CaseProposee } from '@/components/admin/CaseProposee';
 import { EnvoiSuggestions, type EtatLecture } from '@/components/admin/EnvoiSuggestions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
-import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { Entete, Message, euros } from '@/components/admin/Ui';
 import { getPlatsBO, getProfils, type PlatBO } from '@/lib/admin/donnees';
 
@@ -78,14 +77,8 @@ function DetailPlat({ resto, plat, profil, ok }: { resto: string; plat: PlatBO; 
         <div className="champ"><label htmlFor={`prix-${plat.id}`}>Prix (€)</label><input id={`prix-${plat.id}`} name="prix" inputMode="decimal" defaultValue={plat.prix ?? ''} /></div>
       </div>
       <div className="champ"><label htmlFor={`prix_variantes-${plat.id}`}>Prix détaillé (facultatif)</label><input id={`prix_variantes-${plat.id}`} name="prix_variantes" defaultValue={plat.prix_variantes ?? ''} placeholder="1 pièce 12 € / 2 pièces 22 €" /></div>
-            {/* Clé = adresse de la photo : après l'enregistrement, l'aperçu laisse place à la photo enregistrée. */}
-      <PhotoEtiquette key={plat.photo_url ?? 'sans'} url={plat.photo_url} champ="photo" alt="Photo du plat" hauteur={220}>
-        <span className="libelle">Photo du plat (facultative)</span>
-        <span className="petit discret">Montrée à vos clients avec les propositions de Pat.</span>
-        {plat.photo_url && <label className="case" style={{ margin: 0 }}><input type="checkbox" name="retirer_photo" /><span>Retirer la photo</span></label>}
-      </PhotoEtiquette>
       <div className="champ">
-        <label htmlFor={`description_cuisine-${plat.id}`}>Description pour Pat</label>
+        <label htmlFor={`description_cuisine-${plat.id}`}>Description détaillée du plat</label>
         <textarea id={`description_cuisine-${plat.id}`} name="description_cuisine" rows={7} defaultValue={plat.description_cuisine ?? ''}
           placeholder={'Cuisson (rôti, poché, frit, grillé, mijoté…), degré de cuisson, tous les ingrédients, épices et herbes, sauce et sa base (beurre, crème, vin, jus…), garniture, assaisonnement, piquant, acidité, sucre, textures, origine des produits…'} />
         <span className="aide">Tout ce qui aide Pat à faire un accord plus précis. Non montré aux clients.</span>
