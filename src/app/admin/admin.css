@@ -193,3 +193,9 @@
 .case-proposee { flex-shrink: 0; width: 76px; display: flex; justify-content: center; }
 .case-proposee input { width: 22px; height: 22px; accent-color: var(--encre); cursor: pointer; margin: 0; }
 .deroulant.non-propose .deroulant-nom, .deroulant.non-propose summary > span:nth-child(2) { opacity: 0.5; }
+
+/* ── Descriptions (textes d'explication, présentations, accords, descriptions des plats) : la typo de l'app, Lato normal ── */
+.bo :is(p:not(.message), .discret, .sous, .champ .aide, textarea:not([name='nom']), .description) {
+  font-family: Lato, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important;
+}
+.bo p b, .bo p strong, .bo .discret b, .bo .discret strong { font-family: Lato, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; }
