@@ -263,12 +263,12 @@ function Commentaire({ resto, platId, vinId, ligne, tous, grand }: { resto: stri
   const texte = ligne?.explication ?? null;
   return (
     <div className="pile" style={{ gap: 4 }}>
-      <span style={grand ? { fontSize: 13.5, lineHeight: 1.4, fontStyle: 'italic' } : undefined}>{texte ?? '—'}</span>
+      <span className="description" style={grand ? { fontSize: 13.5, lineHeight: 1.4 } : undefined}>{texte ?? '—'}</span>
       <details>
         <summary style={{ cursor: 'pointer', color: 'var(--encre)', fontWeight: 700, fontSize: 13 }}>{ligne?.commentaire_sommelier ? 'Votre commentaire · modifier' : 'Modifier'}</summary>
         <FormulaireAdmin action={modifierCommentaire.bind(null, resto, platId, vinId)} className="pile" style={{ gap: 6, marginTop: 6 }}>
           <textarea name="commentaire" rows={3} maxLength={400} defaultValue={texte ?? ''} aria-label="Commentaire d’accord"
-            style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Outfit, sans-serif' }} />
+            style={{ width: '100%', padding: 8, borderRadius: 8, border: '1.5px solid var(--ligne)', font: '14px/1.4 Lato, sans-serif' }} />
           {tous && <input type="hidden" name="tous" value="1" />}
           <span><button className="btn petit">Enregistrer</button></span>
           <span className="petit" style={{ opacity: 0.8 }}>Votre texte remplace celui de Pat chez le client ; la régénération ne le touche plus. Videz le champ pour rendre la main à Pat.</span>
