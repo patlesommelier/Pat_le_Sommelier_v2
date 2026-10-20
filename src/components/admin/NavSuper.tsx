@@ -8,6 +8,8 @@ const LIENS = [
   { href: '/admin/super/producteurs', libelle: 'Producteurs', icone: 'users' },
   { href: '/admin/super/vins', libelle: 'Vins de la base', icone: 'bottle' },
   { href: '/admin/super/principes', libelle: 'Principes de Pat', icone: 'menu' },
+  { href: '/admin/super/accords-reference', libelle: 'Accords de référence', icone: 'link' },
+  { href: '/admin/super/utilisateurs', libelle: 'Utilisateurs de l’App', icone: 'users' },
   { href: '/admin/super/regles', libelle: 'Règles par défaut', icone: 'sliders' },
   { href: '/admin/super/wine-labs', libelle: 'Wine Labs', icone: 'bottle' },
   { href: '/admin/super/comparaison', libelle: 'Comparer les modèles', icone: 'sliders' },

@@ -1,7 +1,7 @@
 import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
-/** Rafraîchit la session Supabase du back-office à chaque requête /admin. */
+/** Rafraîchit la session Supabase à chaque requête du back-office (/admin) et de l'App (/pat). */
 export async function middleware(req: NextRequest) {
   let res = NextResponse.next({ request: req });
   const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
@@ -21,4 +21,4 @@ export async function middleware(req: NextRequest) {
   return res;
 }
 
-export const config = { matcher: ['/admin/:path*'] };
+export const config = { matcher: ['/admin/:path*', '/pat/:path*'] };

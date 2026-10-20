@@ -15,6 +15,7 @@ import { initialiserVersionsSiAbsentes } from './lib/versions-initiales';
 import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
 import { rattacherProducteurs } from '../src/lib/producteurs/rattachement';
 import { recomposerIntitules } from './lib/intitules';
+import { importerAccordsReference } from '../src/lib/app/import';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -39,6 +40,9 @@ async function main() {
     // Premières versions des principes et des règles (une seule fois).
     const faites = await initialiserVersionsSiAbsentes(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (faites.length) console.log(`Versions installées : ${faites.join(', ')}.`);
+    // Accords de référence de l'App consommateur (seulement ceux qui manquent).
+    const accords = await importerAccordsReference(async (sql, params = []) => (await client.query(sql, params)).rows);
+    if (accords) console.log(`Accords de référence ajoutés : ${accords}.`);
     // Vins des cartes rattachés aux producteurs de la base qu'ils n'avaient pas trouvés (idempotent).
     const rattaches = await rattacherProducteurs(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (rattaches) console.log(`Producteurs retrouvés : ${rattaches} vin(s) de carte rattaché(s).`);

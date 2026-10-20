@@ -1,0 +1,61 @@
+/* App consommateur de Pat le sommelier (/pat) : la charte de la page d'inscription — crème du logo, Outfit Bold, rouge #FF0D05,
+   bordeaux #680021, rose #EB9D92, fuchsia #DE0454, noir #241F20 ; les réponses de Pat en Lato, comme dans l'app des restaurants. */
+.page { min-height: 100dvh; display: flex; flex-direction: column; background: #FEFAF1; color: #241F20;
+  font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; font-weight: 700; }
+.large { width: 100%; max-width: 760px; margin: 0 auto; padding-inline: max(20px, env(safe-area-inset-left, 0px)); box-sizing: border-box; }
+.entete { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-block: 20px 8px; }
+.entete img { height: 48px; width: auto; display: block; }
+.lien { display: inline-flex; align-items: center; min-height: 44px; color: #680021; text-decoration: underline; text-underline-offset: 4px;
+  background: none; border: 0; padding: 0; font: inherit; cursor: pointer; }
+.contenu { flex: 1; display: flex; flex-direction: column; gap: 22px; padding-block: 16px 40px; }
+
+/* Connexion et inscription : Pat, puis la boîte bordeaux, comme la section d'inscription des restaurants */
+.accueil { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; }
+.accueil img { width: min(300px, 70vw); height: auto; }
+.titre { margin: 0; color: #FF0D05; font-size: clamp(30px, 6vw, 44px); line-height: 1.05; letter-spacing: -0.8px; text-wrap: balance; }
+.sousTitre { margin: 0; max-width: 46ch; font: 400 17px/1.5 Lato, 'Helvetica Neue', Arial, sans-serif; }
+.boite { background: #680021; color: #FEFAF1; border-radius: 28px; padding: 26px clamp(18px, 4vw, 34px) 30px; display: flex; flex-direction: column; gap: 16px; }
+.boite h2 { margin: 0; text-align: center; color: #EB9D92; font-size: 26px; letter-spacing: -0.3px; }
+.fournisseurs { display: grid; gap: 10px; }
+.fournisseur { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; border-radius: 999px; border: 0;
+  background: #FEFAF1; color: #241F20; font: 700 16px Outfit, sans-serif; cursor: pointer; width: 100%; }
+.fournisseur:hover { background: #FFEEED; }
+.ou { display: flex; align-items: center; gap: 12px; color: #EB9D92; font-size: 14px; }
+.ou::before, .ou::after { content: ''; flex: 1; height: 1px; background: #EB9D92; opacity: .5; }
+.formulaire { display: flex; flex-direction: column; gap: 12px; }
+.champ { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
+.champ input { min-height: 50px; box-sizing: border-box; padding: 12px 16px; border-radius: 14px; border: 2px solid transparent; background: #FEFAF1;
+  color: #241F20; font: 700 16px Outfit, sans-serif; }
+.champ input:focus { outline: none; border-color: #EB9D92; }
+.principal { min-height: 52px; border-radius: 999px; border: 0; background: #FF0D05; color: #FEFAF1; font: 700 17px Outfit, sans-serif; cursor: pointer; }
+.principal:hover { background: #DE0454; }
+.petitLien { color: #EB9D92; font-size: 14px; text-align: center; }
+.erreur { margin: 0; padding: 10px 14px; border-radius: 12px; background: #FFEEED; color: #680021; font-size: 15px; }
+.info { margin: 0; padding: 10px 14px; border-radius: 12px; background: #EB9D92; color: #241F20; font-size: 15px; }
+
+/* Chez Pat : la question de Pat, la conversation, puis la barre pour lui écrire */
+.patQuestion { display: flex; align-items: flex-end; gap: 14px; }
+.patQuestion img { width: 150px; height: auto; flex: none; }
+.fil { display: flex; flex-direction: column; gap: 14px; }
+.bulle { margin: 0; max-width: 92%; padding: 12px 16px; border-radius: 20px; line-height: 1.45; box-shadow: 0 14px 24px -16px rgba(36,31,32,0.6); }
+.bullePat { align-self: flex-start; background: #680021; color: #FEFAF1; border-bottom-left-radius: 4px; font-size: 19px; }
+.bulleClient { align-self: flex-end; background: #DE0454; color: #FEFAF1; border-bottom-right-radius: 4px; font-size: 16px; }
+.reponse { align-self: stretch; background: #FFFFFF; border: 1.5px solid #EB9D92; border-radius: 20px; border-top-left-radius: 4px; padding: 18px 20px;
+  display: flex; flex-direction: column; gap: 12px; }
+.reponse h3 { margin: 0; color: #680021; font-size: 21px; }
+.reponse .vins { margin: 0; color: #FF0D05; font-size: 18px; line-height: 1.35; }
+.reponse p, .reponse li { margin: 0; font: 400 15.5px/1.55 Lato, 'Helvetica Neue', Arial, sans-serif; }
+.reponse b { font-family: Outfit, sans-serif; font-weight: 700; }
+.etiquette { font-size: 12.5px; letter-spacing: 1.4px; text-transform: uppercase; color: #680021; }
+.autres { display: flex; flex-direction: column; gap: 10px; padding-top: 6px; border-top: 1px solid #EB9D92; }
+.puces { display: flex; flex-wrap: wrap; gap: 8px; }
+.puce { min-height: 40px; padding: 8px 14px; border-radius: 999px; border: 1.5px solid #680021; background: #FEFAF1; color: #680021;
+  font: 700 14.5px Outfit, sans-serif; cursor: pointer; }
+.puce:hover { background: #FFEEED; }
+.barre { position: sticky; bottom: 0; padding-block: 12px max(16px, env(safe-area-inset-bottom, 0px)); background: linear-gradient(to top, #FEFAF1 75%, transparent); }
+.barre form { display: flex; align-items: center; gap: 10px; padding: 6px 6px 6px 18px; border-radius: 999px; background: #FFEEED; border: 1.5px solid #FF0D05; }
+.barre input { flex: 1; min-width: 0; min-height: 44px; border: 0; background: transparent; outline: none; color: #241F20; font: 700 16px Outfit, sans-serif; }
+.envoyer { flex: none; width: 46px; height: 46px; border-radius: 50%; border: 0; background: #FF0D05; color: #FEFAF1; display: flex;
+  align-items: center; justify-content: center; cursor: pointer; }
+.envoyer:disabled { opacity: .4; cursor: default; }
+@media (max-width: 560px) { .patQuestion img { width: 104px; } .bullePat { font-size: 17px; } }
