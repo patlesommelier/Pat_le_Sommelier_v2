@@ -42,12 +42,13 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   // ses prix côte à côte. Seules les lignes disponibles comptent.
   const vins: VinImprimable[] = grouperMemeVin(lignes.filter((l) => l.disponible), (l) => l.format).map((groupe) => {
     const v = groupe.find((l) => contenanceDuFormat(l.format) === 'bouteille') ?? groupe[0];
-    const tarifs = tarifsDuGroupe(groupe).map((t) => ({ libelle: libelleCourt(t.code), prix: t.prix }));
+    const tous = tarifsDuGroupe(groupe);
+    const tarifs = tous.map((t) => ({ libelle: libelleCourt(t.code), prix: t.prix }));
     return {
       id: v.id, nom: v.libelle, producteur: v.producteur,
       millesime: (groupe.find((l) => l.millesime)?.millesime ?? null)?.replace(/^NM$/, '').replace('/', '-') || null,
       contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
-      couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre, tarifs,
+      couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre, tarifs, auVerre: tous.some((t) => t.code === 'verre'),
       presentation: sansContenance(v.presentation_carte ?? resume(v.resume_court)), presentationPerso: sansContenance(v.presentation_carte_perso), visible: true,
       coupDeCoeur: groupe.some((l) => l.coup_de_coeur), bio: groupe.some((l) => l.bio), nature: groupe.some((l) => l.nature),
     };

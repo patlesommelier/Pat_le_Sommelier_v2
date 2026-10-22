@@ -21,6 +21,7 @@ export interface VinImprimable {
   presentation: string | null;       // présentation de 3 à 4 lignes générée par Pat
   presentationPerso: string | null;  // présentation corrigée par le restaurant (prioritaire)
   visible: boolean;              // false = indisponible : absent de la carte
+  auVerre?: boolean;             // proposé au verre : en tête de sa couleur
   coupDeCoeur?: boolean;         // ♥ après le nom, comme dans l'app
   bio?: boolean;                 // feuille
   nature?: boolean;              // grappe
@@ -115,25 +116,36 @@ export function prixAffiche(vin: VinImprimable): string {
 
 interface Groupe { cle: CouleurCarte; titre: string; court: string; regions: { nom: string | null; vins: VinImprimable[] }[] }
 
-/** Regroupe par couleur puis par région, dans l'ordre choisi. */
+const servieAuVerre = (v: VinImprimable) => Boolean(v.auVerre || v.prixVerre != null);
+
+/**
+ * Regroupe par couleur puis par région, dans l'ordre choisi. Dans chaque couleur, les vins proposés au verre viennent en tête
+ * (« Au verre »), puis les autres, par région ou par prix.
+ */
 export function organiser(vins: VinImprimable[], options: OptionsCarte): Groupe[] {
   const visibles = vins.filter((v) => v.visible !== false);
+  const prix = (v: VinImprimable) => v.prix ?? v.tarifs?.[0]?.prix ?? v.prixVerre ?? Infinity;
   return COULEURS.map(({ cle, titre, titrePluriel, court }) => {
     let liste = visibles.filter((v) => v.couleur === cle);
     const t = liste.length > 1 && titrePluriel ? titrePluriel : titre;
+    if (options.ordre === 'prix') liste = [...liste].sort((a, b) => prix(a) - prix(b));
+    const auVerre = liste.filter(servieAuVerre);
+    const reste = liste.filter((v) => !servieAuVerre(v));
+    const regions: Groupe['regions'] = auVerre.length ? [{ nom: 'Au verre', vins: auVerre }] : [];
     if (options.ordre === 'prix') {
-      const prix = (v: VinImprimable) => v.prix ?? v.tarifs?.[0]?.prix ?? v.prixVerre ?? Infinity;
-      liste = [...liste].sort((a, b) => prix(a) - prix(b));
-      return { cle, titre: t, court, regions: [{ nom: null, vins: liste }] };
+      if (reste.length) regions.push({ nom: auVerre.length ? 'À la bouteille' : null, vins: reste });
+      return { cle, titre: t, court, regions };
     }
-    const regions: Groupe['regions'] = [];
-    for (const v of liste) {
+    const parRegion: Groupe['regions'] = [];
+    for (const v of reste) {
       const nom = v.region ?? null;
-      let r = regions.find((x) => x.nom === nom);
-      if (!r) regions.push((r = { nom, vins: [] }));
+      let r = parRegion.find((x) => x.nom === nom);
+      if (!r) parRegion.push((r = { nom, vins: [] }));
       r.vins.push(v);
     }
-    return { cle, titre: t, court, regions };
+    // Sans région (bulles, rosés…), la suite des vins a besoin d'un titre pour ne pas sembler servie au verre.
+    if (auVerre.length) for (const r of parRegion) if (!r.nom) r.nom = 'À la bouteille';
+    return { cle, titre: t, court, regions: [...regions, ...parRegion] };
   }).filter((c) => c.regions.some((r) => r.vins.length));
 }
 
