@@ -21,6 +21,9 @@ export interface VinImprimable {
   presentation: string | null;       // présentation de 3 à 4 lignes générée par Pat
   presentationPerso: string | null;  // présentation corrigée par le restaurant (prioritaire)
   visible: boolean;              // false = indisponible : absent de la carte
+  coupDeCoeur?: boolean;         // ♥ après le nom, comme dans l'app
+  bio?: boolean;                 // feuille
+  nature?: boolean;              // grappe
 }
 
 export interface RestaurantImprimable {
@@ -140,12 +143,33 @@ export function texteVin(vin: VinImprimable, options: OptionsCarte): string {
   return (vin.presentationPerso || vin.presentation || '').trim();
 }
 
+// Pictogrammes de l'app (components/Pictos.tsx) : ♥ coup de cœur, feuille bio, grappe nature ; en noir pour le noir et blanc.
+const FEUILLE = (c: string) => `<svg class="picto" viewBox="0 0 16 16" role="img" aria-label="Bio"><path d="M13.8 2.2C8.6 1.9 3.4 3.6 2.6 8.6c-.3 1.9.2 3.6 1 4.8C5.2 9.8 8 7.6 11 6.4 8.4 8 6 10.4 4.6 14c1.2.4 2.8.4 4.4-.3 4.6-2 5.3-7.2 4.8-11.5z" fill="${c}"/></svg>`;
+const GRAPPE = (c: string) => `<svg class="picto" viewBox="0 0 16 16" role="img" aria-label="Nature"><path d="M8 3.2c.2-1.1.9-2 2-2.4" stroke="${c}" stroke-width="1.2" fill="none" stroke-linecap="round"/><path d="M9.6 2.6c1.6-.5 3 .1 3.6 1.2-1.4.5-2.8.2-3.6-1.2z" fill="${c}"/><g fill="${c}"><circle cx="5.2" cy="5.4" r="1.7"/><circle cx="8.6" cy="5.4" r="1.7"/><circle cx="11.8" cy="5.6" r="1.5"/><circle cx="6.8" cy="8.4" r="1.7"/><circle cx="10.2" cy="8.4" r="1.7"/><circle cx="8.5" cy="11.3" r="1.7"/><circle cx="8.6" cy="14.2" r="1.3"/></g></svg>`;
+const VERT = '#3E8E41';
+const COEUR = '<span class="coeur" role="img" aria-label="Coup de cœur">♥</span>';
+
+function htmlPictos(vin: VinImprimable, options: OptionsCarte) {
+  const vert = options.noirEtBlanc ? '#1F1A1C' : VERT;
+  const p = [vin.coupDeCoeur ? COEUR : '', vin.bio ? FEUILLE(vert) : '', vin.nature ? GRAPPE(vert) : ''].filter(Boolean);
+  return p.length ? `<span class="pictos">${p.join('')}</span>` : '';
+}
+
+/** Légende des pictogrammes présents sur la carte. */
+function htmlLegende(vins: VinImprimable[], options: OptionsCarte) {
+  const vert = options.noirEtBlanc ? '#1F1A1C' : VERT;
+  const v = vins.filter((x) => x.visible !== false);
+  const l = [v.some((x) => x.coupDeCoeur) ? `${COEUR} Coup de cœur de la maison` : '', v.some((x) => x.bio) ? `${FEUILLE(vert)} Bio` : '',
+    v.some((x) => x.nature) ? `${GRAPPE(vert)} Nature` : ''].filter(Boolean);
+  return l.length ? `<p class="legende">${l.map((x) => `<span>${x}</span>`).join('')}</p>` : '';
+}
+
 function htmlVin(vin: VinImprimable, options: OptionsCarte) {
   const detail = ligneDetail(vin, options);
   const mot = texteVin(vin, options);
   return `<div class="vin">
   <div class="vin-ligne">
-    <span class="vin-titre"><span class="vin-nom">${echapper(vin.nom)}</span>${detail
+    <span class="vin-titre"><span class="vin-nom">${echapper(vin.nom)}</span>${htmlPictos(vin, options)}${detail
       ? ` <span class="vin-detail">${detail.split(' · ').map((d) => `<span>${echapper(d)}</span>`).join(' · ')}</span>` : ''}</span>
     <span class="vin-points" aria-hidden="true"></span>
     <span class="vin-prix">${plusieursTarifs(vin)
@@ -228,6 +252,11 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .vin-points { flex: 1 1 6mm; min-width: 6mm; border-bottom: 1px dotted #A99DA1; transform: translateY(-1mm); }
 .vin-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
 .vin-tarif { white-space: nowrap; }
+.pictos { display: inline-flex; align-items: center; gap: 1.3mm; margin-left: 1.6mm; vertical-align: -0.3mm; }
+.picto { width: 0.95em; height: 0.95em; display: block; }
+.coeur { color: ${options.noirEtBlanc ? '#1F1A1C' : '#D7263D'}; font-weight: 400; line-height: 1; }
+.legende { display: flex; flex-wrap: wrap; justify-content: center; gap: 2mm 6mm; margin: 0 0 3mm; font-size: 8.5pt; }
+.legende > span { display: inline-flex; align-items: center; gap: 1.5mm; }
 .vin-sep { font-weight: 400; opacity: .6; }
 .vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: pretty; }
 .fin { break-inside: avoid; margin-top: 8mm; padding-top: 5mm; border-top: 1px solid #E2D8DB; text-align: center; }
@@ -264,6 +293,7 @@ export function genererCarteHTML({ restaurant, vins, options: opts = {}, barre =
     .join('\n');
 
   const fin = `<div class="fin">
+  ${htmlLegende(vins, options)}
   ${options.rappelPat ? '<p class="fin-pat">Une hésitation ? Scannez le QR code de votre table : Pat vous conseille un vin pour votre plat.</p>' : ''}
   <p class="fin-mention">Tous nos millésimes sont donnés sous réserve de disponibilité.</p>
 </div>`;

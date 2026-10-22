@@ -4,6 +4,7 @@ import { contenanceDuFormat, grouperMemeVin, libelleCourt, tarifsDuGroupe } from
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
+import { SQL_PICTOS } from '@/lib/pictos-sql';
 import { logoAffiche } from '@/lib/couleurs';
 import { etatPresentations, type EtatPresentations } from '@/lib/generation/file-presentations';
 
@@ -28,11 +29,13 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   if (!r) return new Response('Restaurant introuvable', { status: 404 });
 
   const lignes = await requete<{ id: string; libelle: string; producteur: string | null; millesime: string | null; format: string; couleur: CouleurCarte;
-    section: string | null; prix: number | null; prix_verre: number | null; presentation_carte: string | null; presentation_carte_perso: string | null; resume_court: string | null; disponible: boolean }>(
+    section: string | null; prix: number | null; prix_verre: number | null; presentation_carte: string | null; presentation_carte_perso: string | null; resume_court: string | null; disponible: boolean;
+    coup_de_coeur: boolean; bio: boolean; nature: boolean }>(
     `select v.id, v.libelle,
             case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
             v.millesime, v.format, v.couleur::text as couleur, v.section, v.prix::float as prix, v.prix_verre::float as prix_verre,
-            v.presentation_carte, v.presentation_carte_perso, v.resume_court, v.disponible
+            v.presentation_carte, v.presentation_carte_perso, v.resume_court, v.disponible,
+            ${SQL_PICTOS('v')}
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [resto]);
   // Un même vin en plusieurs contenances (bouteille, demi, magnum, verre : une ligne chacune) est imprimé une seule fois,
@@ -46,6 +49,7 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
       contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
       couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre, tarifs,
       presentation: sansContenance(v.presentation_carte ?? resume(v.resume_court)), presentationPerso: sansContenance(v.presentation_carte_perso), visible: true,
+      coupDeCoeur: groupe.some((l) => l.coup_de_coeur), bio: groupe.some((l) => l.bio), nature: groupe.some((l) => l.nature),
     };
   });
 
