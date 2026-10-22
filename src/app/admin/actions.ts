@@ -204,6 +204,15 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   // Coup de cœur : pour le vin entier (toutes ses contenances).
   await requete('update vin_carte set coup_de_coeur = $3 where restaurant_id = $2 and id = any($1)',
     [await memeVin(resto, vinId), resto, f.get('coup_de_coeur') === 'on']);
+  // Bio et nature : pour le vin entier ; identiques à la base de Pat, ils la suivent (null), sinon le choix du restaurant prime.
+  if (f.has('bio_nature_envoyes')) {
+    await requete(
+      `update vin_carte v set bio = case when $3 = coalesce(c.bio, false) then null else $3 end,
+              nature = case when $4 = coalesce(c.nature, false) then null else $4 end
+         from vin_carte w left join cuvee c on c.id = w.cuvee_id
+        where w.id = v.id and v.restaurant_id = $2 and v.id = any($1)`,
+      [await memeVin(resto, vinId), resto, f.get('bio') === 'on', f.get('nature') === 'on']);
+  }
   if (!parContenances) {
     await requete(
       `update vin_carte set millesime = $3, prix = $4, prix_verre = $5, disponible = $6 where id = $1 and restaurant_id = $2`,

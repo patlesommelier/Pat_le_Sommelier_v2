@@ -146,6 +146,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             <div>
               <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
               <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison<small>Petit cœur ♥ dans l’app ; si la catégorie « Coups de cœur » est choisie dans Apparence, il n’apparaît que là.</small></span></label>
+              <input type="hidden" name="bio_nature_envoyes" value="1" />
+              <label className="case"><input type="checkbox" name="bio" defaultChecked={groupe.some((x) => x.bio)} /><span>Vin bio<small>Petite feuille verte dans l’app et sur la carte imprimée.</small></span></label>
+              <label className="case"><input type="checkbox" name="nature" defaultChecked={groupe.some((x) => x.nature)} /><span>Vin nature<small>Petite grappe verte dans l’app et sur la carte imprimée.</small></span></label>
             </div>
           </fieldset>
 

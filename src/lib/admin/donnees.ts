@@ -114,7 +114,7 @@ export async function getVinsBO(restaurantId: string) {
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
-            coalesce(cu.nature, false) as nature, coalesce(cu.bio, false) as bio
+            coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee cu on cu.id = v.cuvee_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
