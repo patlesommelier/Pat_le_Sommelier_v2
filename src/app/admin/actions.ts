@@ -623,6 +623,17 @@ export async function preparerImpression(resto: string): Promise<string> {
   return `/admin/${resto}/carte/preparer`;
 }
 
+/**
+ * « Pat réécrit ses présentations » : toutes celles de Pat (pas celles corrigées par le restaurant) sont refaites, avec les plats
+ * du menu ; la page d'attente ouvre ensuite la carte à imprimer.
+ */
+export async function reecrirePresentations(resto: string) {
+  await exigerAcces(resto);
+  if (!process.env.ANTHROPIC_API_KEY) redirect(`/admin/${resto}/supports?erreur=${encodeURIComponent('Clé Claude absente : ANTHROPIC_API_KEY n’est pas configurée.')}`);
+  await requete(`update vin_carte set presentation_carte = null where restaurant_id = $1 and disponible and presentation_carte_perso is null`, [resto]);
+  redirect(await preparerImpression(resto));
+}
+
 /** Relecture d'une présentation (rubrique Supports) : le texte du restaurant prime et n'est jamais régénéré ; vide = celle de Pat. */
 export async function enregistrerPresentation(resto: string, vinId: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);

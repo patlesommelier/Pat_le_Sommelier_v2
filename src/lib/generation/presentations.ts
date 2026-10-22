@@ -20,6 +20,7 @@ export const MOTS_INTERDITS: [string, RegExp][] = [...INTERDITS_ACCORDS, ['ranki
 export interface VinPresentation {
   id: string; nom: string; producteur: string | null; millesime: string | null; couleur: string; region: string | null;
   cepages: string | null; descriptif: string | null; commentaires: string | null;
+  plats?: string[] | null; // plats du menu du restaurant avec lesquels ce vin s'accorde le mieux (noms seulement)
 }
 
 // Champs transmis au modèle : jamais de ranking, de note ni de score.
@@ -27,6 +28,7 @@ const ficheVin = (v: VinPresentation) => ({
   id: v.id, nom: v.nom, producteur: v.producteur, millesime: v.millesime, couleur: v.couleur, region: v.region, cepages: v.cepages,
   descriptif: v.descriptif?.replace(/\s+/g, ' ').slice(0, 1200) ?? null,
   commentaires: v.commentaires?.replace(/\s+/g, ' ').slice(0, 800) ?? null,
+  plats_du_restaurant: v.plats?.length ? v.plats : null,
 });
 
 export function construirePrompt(vins: VinPresentation[], nomRestaurant: string, dejaEcrits: string[] = []) {
@@ -35,8 +37,12 @@ export function construirePrompt(vins: VinPresentation[], nomRestaurant: string,
 Pour chaque vin, 3 phrases en français, de 40 à 60 mots, entre ${LONGUEUR_MIN} et ${LONGUEUR_MAX} caractères :
 1. le lieu ou le vigneron (terroir, sol, altitude, histoire du domaine) ;
 2. le style du vin, expliqué par sa cause (pourquoi il est frais, souple, tendu), avec ses arômes ;
-3. ce avec quoi il brille à table, en termes généraux (poissons, viandes rouges, fromages…).
+3. ce avec quoi il brille à table : cite un ou deux plats du restaurant pris dans « plats_du_restaurant » (sous un nom simple,
+   « le bar rôti », « les ris de veau ») ; si ce champ est vide, une association précise et propre à ce vin.
 Règles :
+- la phrase de table ne se répète jamais d'un vin à l'autre : jamais la même liste générique (« poissons, crustacés et fromages
+  de chèvre », « poissons, fruits de mer et fromages de chèvre »…), jamais les mêmes plats pour deux vins quand d'autres sont possibles ;
+- varie aussi la construction des phrases : pas toujours « signe ce… », « À table, il… », « Il s'invite… » ;
 - appuie-toi uniquement sur les champs fournis (descriptif, commentaires, cépages) ; n'invente aucun fait,
   aucune date, aucun classement officiel absent des données ; si un champ manque, reste général ;
 - reformule le descriptif dans la voix de Pat, ne le recopie jamais mot pour mot ;
@@ -65,17 +71,27 @@ export function verifierPresentation(texte: string | null | undefined): string[]
   return problemes;
 }
 
-/** Paires de présentations trop proches (même début ou vocabulaire très semblable). */
+const TOURNURES = new Set(['table', 'avec', 'brille', 'accompagne', 'accorde', 'invite', 'volontiers', 'valeur', 'bonheur', 'aussi', 'plats', 'plat', 'tous', 'toutes']);
+
+/** Dernière phrase d'une présentation : celle des accords à table. */
+const phraseTable = (t: string) => t.trim().replace(/[.!…]+$/, '').split(/[.!?…]\s+/).pop() ?? '';
+
+/** Paires de présentations trop proches (même début, vocabulaire très semblable, ou même phrase de table). */
 export function trouverDoublons(textes: { id: string; texte: string }[]) {
   const norm = (s: string) => sansAccents(s).replace(/[^a-z ]/g, ' ').split(/\s+/).filter((w) => w.length > 3);
+  const proches = (a: string[], b: string[], seuil: number) => a.filter((w) => b.includes(w)).length / (new Set([...a, ...b]).size || 1) > seuil;
   const doublons: [string, string][] = [];
   for (let i = 0; i < textes.length; i++) {
     for (let j = i + 1; j < textes.length; j++) {
       const a = norm(textes[i].texte), b = norm(textes[j].texte);
       const memeDebut = a.slice(0, 4).join(' ') === b.slice(0, 4).join(' ');
-      const communs = a.filter((w) => b.includes(w)).length;
-      const jaccard = communs / (new Set([...a, ...b]).size || 1);
-      if (memeDebut || jaccard > 0.5) doublons.push([textes[i].id, textes[j].id]);
+      // Phrase de table : les mêmes associations (« poissons, crustacés et fromages de chèvre ») d'un vin à l'autre.
+      // Mots de la phrase de table hors tournures (« à table, il met en valeur… ») : trois mêmes mets ou plus, c'est une redite.
+      const mets = (t: string) => [...new Set(norm(phraseTable(t)).filter((w) => !TOURNURES.has(w)))];
+      const ma = mets(textes[i].texte), mb = mets(textes[j].texte);
+      const memes = ma.filter((w) => mb.includes(w)).length;
+      const table = memes >= 3 && memes / (Math.min(ma.length, mb.length) || 1) >= 0.5;
+      if (memeDebut || proches(a, b, 0.5) || table) doublons.push([textes[i].id, textes[j].id]);
     }
   }
   return doublons;
@@ -122,6 +138,9 @@ export async function genererPresentations(vins: VinPresentation[], nomRestauran
 /** Vins à présenter (champs descriptifs seulement, jamais de ranking). Filtre SQL ajouté après les conditions de base. */
 export const SQL_VINS_A_PRESENTER = `select v.id, v.libelle as nom, coalesce(p.nom, v.producteur_texte) as producteur, nullif(v.millesime, 'NM') as millesime,
           v.couleur::text as couleur, v.section as region, v.cepages, v.descriptif,
-          nullif(concat_ws(' ', v.presentation, p.avis_pat), '') as commentaires
+          nullif(concat_ws(' ', v.presentation, p.avis_pat), '') as commentaires,
+          -- Plats du menu avec lesquels ce vin s'accorde le mieux : leurs noms seulement (jamais les notes).
+          (select array_agg(x.nom) from (select coalesce(pl.nom_court, pl.nom) as nom from accord a join plat pl on pl.id = a.plat_id and pl.actif
+             where a.vin_id = v.id and a.note >= 4 and a.statut <> 'refuse' order by a.note desc, a.rang nulls last limit 3) x) as plats
      from vin_carte v left join producteur p on p.id = v.producteur_id
     where v.restaurant_id = $1 and v.disponible and v.presentation_carte_perso is null`;

@@ -1,4 +1,5 @@
-import { autrePresentation, enregistrerPresentation } from '../../actions';
+import { autrePresentation, enregistrerPresentation, reecrirePresentations } from '../../actions';
+import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Message } from '@/components/admin/Ui';
@@ -38,6 +39,11 @@ export default async function Supports({ params, searchParams }: { params: Promi
             {vins.length} vins · {vins.length - sans} présentés{perso ? ` · ${perso} corrigés par vous` : ''}{sans ? ` · ${sans} encore sans texte (Pat les écrira à l’impression)` : ''}.
             Votre texte prime sur celui de Pat et n’est jamais réécrit ; « Autre proposition » demande un nouveau texte à Pat.
           </p>
+        </div>
+        {/* Toutes les présentations de Pat refaites d'un coup : elles citent les plats de votre menu, sans redites d'un vin à l'autre. */}
+        <div className="ligne-actions">
+          <BoutonConfirmation action={reecrirePresentations.bind(null, resto)} libelle="Pat réécrit toutes ses présentations" className="btn sec"
+            question="Pat va réécrire toutes ses présentations (vos textes corrigés ne changent pas) : elles citeront les plats de votre menu qui vont avec chaque vin. Cela prend quelques minutes. Continuer ?" />
         </div>
         <Message erreur={sp.erreur} ok={sp.nouvelle ? 'Nouvelle proposition de Pat enregistrée.' : sp.ok ? 'Présentation enregistrée.' : undefined} />
         {COULEURS.map(([c, titre]) => {
