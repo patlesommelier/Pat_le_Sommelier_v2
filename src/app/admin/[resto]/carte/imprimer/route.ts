@@ -1,5 +1,6 @@
 import { exigerAcces } from '@/lib/admin/auth';
 import { sansContenance } from '@/lib/format';
+import { contenanceDuFormat, grouperMemeVin, libelleCourt, tarifsDuGroupe } from '@/lib/contenances';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
@@ -34,13 +35,19 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
             v.presentation_carte, v.presentation_carte_perso, v.resume_court, v.disponible
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [resto]);
-  const vins: VinImprimable[] = lignes.map((v) => ({
-    id: v.id, nom: v.libelle, producteur: v.producteur,
-    millesime: v.millesime && v.millesime !== 'NM' ? v.millesime.replace('/', '-') : null,
-    contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
-    couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre,
-    presentation: sansContenance(v.presentation_carte ?? resume(v.resume_court)), presentationPerso: sansContenance(v.presentation_carte_perso), visible: v.disponible,
-  }));
+  // Un même vin en plusieurs contenances (bouteille, demi, magnum, verre : une ligne chacune) est imprimé une seule fois,
+  // ses prix côte à côte. Seules les lignes disponibles comptent.
+  const vins: VinImprimable[] = grouperMemeVin(lignes.filter((l) => l.disponible), (l) => l.format).map((groupe) => {
+    const v = groupe.find((l) => contenanceDuFormat(l.format) === 'bouteille') ?? groupe[0];
+    const tarifs = tarifsDuGroupe(groupe).map((t) => ({ libelle: libelleCourt(t.code), prix: t.prix }));
+    return {
+      id: v.id, nom: v.libelle, producteur: v.producteur,
+      millesime: (groupe.find((l) => l.millesime)?.millesime ?? null)?.replace(/^NM$/, '').replace('/', '-') || null,
+      contenance: v.format && !['75 cl', 'au verre'].includes(v.format) ? v.format : null,
+      couleur: v.couleur, region: regionDe(v.section), prix: v.prix, prixVerre: v.prix_verre, tarifs,
+      presentation: sansContenance(v.presentation_carte ?? resume(v.resume_court)), presentationPerso: sansContenance(v.presentation_carte_perso), visible: true,
+    };
+  });
 
   const options: Partial<OptionsCarte> = {
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',

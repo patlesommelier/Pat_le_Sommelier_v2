@@ -17,6 +17,7 @@ export interface VinImprimable {
   region: string | null;         // « Bourgogne », ou null (bulles, rosés…)
   prix: number | null;           // bouteille
   prixVerre: number | null;      // au verre
+  tarifs?: { libelle: string; prix: number }[]; // le même vin en plusieurs contenances (« Bouteille », « ½ », « Verre ») : prix côte à côte
   presentation: string | null;       // présentation de 3 à 4 lignes générée par Pat
   presentationPerso: string | null;  // présentation corrigée par le restaurant (prioritaire)
   visible: boolean;              // false = indisponible : absent de la carte
@@ -87,12 +88,23 @@ export function ligneDetail(vin: VinImprimable, options: OptionsCarte): string {
     if (p) parts.push(p);
   }
   if (vin.millesime) parts.push(vin.millesime);
+  if (plusieursTarifs(vin)) return parts.join(' · '); // contenances et verre : avec leurs prix, à droite
   if (vin.contenance) parts.push(vin.contenance);
   if (vin.prix != null && vin.prixVerre != null) parts.push(`verre ${formatPrix.format(vin.prixVerre)}`);
   return parts.join(' · ');
 }
 
+const plusieursTarifs = (vin: VinImprimable) => (vin.tarifs?.length ?? 0) > 1;
+
+/** Prix de chaque contenance, côte à côte (« Bouteille 58 € · ½ 32 € · Verre 9 € »), quand le vin en a plusieurs. */
+export function tarifsAffiches(vin: VinImprimable): string[] {
+  return plusieursTarifs(vin) ? vin.tarifs!.map((t) => `${t.libelle} ${formatPrix.format(t.prix)}`) : [];
+}
+
 export function prixAffiche(vin: VinImprimable): string {
+  if (plusieursTarifs(vin)) return tarifsAffiches(vin).join(' · ');
+  // Seule une autre contenance a un prix (bouteille sans prix, demi à 58 €) : elle est nommée.
+  if (vin.prix == null && vin.tarifs?.length === 1) return `${vin.tarifs[0].libelle} ${formatPrix.format(vin.tarifs[0].prix)}`;
   if (vin.prix != null) return formatPrix.format(vin.prix);
   if (vin.prixVerre != null) return `${formatPrix.format(vin.prixVerre)} le verre`;
   return '';
@@ -107,7 +119,8 @@ export function organiser(vins: VinImprimable[], options: OptionsCarte): Groupe[
     let liste = visibles.filter((v) => v.couleur === cle);
     const t = liste.length > 1 && titrePluriel ? titrePluriel : titre;
     if (options.ordre === 'prix') {
-      liste = [...liste].sort((a, b) => (a.prix ?? a.prixVerre ?? Infinity) - (b.prix ?? b.prixVerre ?? Infinity));
+      const prix = (v: VinImprimable) => v.prix ?? v.tarifs?.[0]?.prix ?? v.prixVerre ?? Infinity;
+      liste = [...liste].sort((a, b) => prix(a) - prix(b));
       return { cle, titre: t, court, regions: [{ nom: null, vins: liste }] };
     }
     const regions: Groupe['regions'] = [];
@@ -135,7 +148,9 @@ function htmlVin(vin: VinImprimable, options: OptionsCarte) {
     <span class="vin-titre"><span class="vin-nom">${echapper(vin.nom)}</span>${detail
       ? ` <span class="vin-detail">${detail.split(' · ').map((d) => `<span>${echapper(d)}</span>`).join(' · ')}</span>` : ''}</span>
     <span class="vin-points" aria-hidden="true"></span>
-    <span class="vin-prix">${echapper(prixAffiche(vin))}</span>
+    <span class="vin-prix">${plusieursTarifs(vin)
+      ? tarifsAffiches(vin).map((t) => `<span class="vin-tarif">${echapper(t)}</span>`).join('<span class="vin-sep"> · </span>')
+      : echapper(prixAffiche(vin))}</span>
   </div>
   ${mot ? `<p class="vin-mot">${echapper(mot)}</p>` : ''}
 </div>`;
@@ -212,6 +227,8 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .vin-detail > span { white-space: nowrap; }
 .vin-points { flex: 1 1 6mm; min-width: 6mm; border-bottom: 1px dotted #A99DA1; transform: translateY(-1mm); }
 .vin-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.vin-tarif { white-space: nowrap; }
+.vin-sep { font-weight: 400; opacity: .6; }
 .vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: pretty; }
 .fin { break-inside: avoid; margin-top: 8mm; padding-top: 5mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0 0 2mm; }

@@ -95,3 +95,29 @@ export function grouperMemeVin<T extends { couleur: string; libelle: string; mil
   for (const g of groupes) g.sort((a, b) => rang.get(a)! - rang.get(b)!);
   return groupes.sort((a, b) => rang.get(a[0])! - rang.get(b[0])!);
 }
+
+export interface Tarif { code: string; libelle: string; prix: number }
+const ORDRE_TARIFS = ['bouteille', 'demi', 'quart', 'magnum', 'verre'];
+const LIBELLES_TARIFS: Record<string, string> = { bouteille: 'Bouteille', demi: 'Demi-bouteille', quart: 'Quart de bouteille', magnum: 'Magnum', verre: 'Au verre' };
+
+/**
+ * Prix d'un vin dans chacune de ses contenances, à partir de ses lignes de carte (un groupe de grouperMemeVin), dans l'ordre
+ * bouteille, demi, quart, magnum, verre. Au verre en plusieurs contenants (verres, pichet, carafe) : seul le prix le plus petit compte.
+ */
+export function tarifsDuGroupe(groupe: Array<{ format: string | null; prix: number | null; prix_verre: number | null }>): Tarif[] {
+  const t: Tarif[] = [];
+  const ajouter = (c: string, prix: number | null) => {
+    if (prix == null) return;
+    const deja = t.find((x) => x.code === c);
+    if (!deja) t.push({ code: c, libelle: LIBELLES_TARIFS[c] ?? c, prix });
+    else if (c === 'verre' && prix < deja.prix) deja.prix = prix;
+  };
+  const auVerre = groupe.some((l) => contenanceDuFormat(l.format) === 'verre' || l.prix_verre != null);
+  for (const l of groupe) {
+    if (auVerre && estPichet(l.format)) continue;
+    const code = contenanceDuFormat(l.format);
+    ajouter(code, code === 'verre' ? l.prix_verre ?? l.prix : l.prix);
+    ajouter('verre', l.prix_verre);
+  }
+  return t.sort((a, b) => ORDRE_TARIFS.indexOf(a.code) - ORDRE_TARIFS.indexOf(b.code));
+}
