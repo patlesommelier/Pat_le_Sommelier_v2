@@ -30,6 +30,9 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   return (
     <>
       <Entete titre="Menu" texte="Liste des plats proposés à vos clients et accordés par Pat.">
+        {/* Menu et suggestions à imprimer, chaque plat avec le vin suggéré par Pat ; les suggestions à part, pour les changer chaque semaine. */}
+        <a href={`/admin/${resto}/menu/imprimer`} target="_blank" rel="noopener" className="btn sec">Imprimer le menu</a>
+        <a href={`/admin/${resto}/menu/imprimer?type=suggestions`} target="_blank" rel="noopener" className="btn sec">Imprimer les suggestions</a>
         <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">Ajouter un plat</Link>
       </Entete>
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
