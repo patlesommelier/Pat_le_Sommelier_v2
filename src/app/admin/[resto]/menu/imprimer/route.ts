@@ -21,11 +21,12 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
   const suggestions = sp.get('type') === 'suggestions';
-  const [r] = await requete<{ nom: string; couleur: string }>('select nom, couleur from restaurant where id = $1', [resto]);
+  const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null }>(
+    'select nom, couleur, logo_url, logo_fonce_url from restaurant where id = $1', [resto]);
   if (!r) return new Response('Restaurant introuvable', { status: 404 });
 
-  const plats = await requete<{ id: string; nom: string; categorie: string; prix: number | null; prix_variantes: string | null }>(
-    `select id, nom, categorie::text as categorie, prix::float as prix, prix_variantes from plat
+  const plats = await requete<{ id: string; nom: string; description: string | null; categorie: string; prix: number | null; prix_variantes: string | null }>(
+    `select id, nom, nullif(trim(description_cuisine), '') as description, categorie::text as categorie, prix::float as prix, prix_variantes from plat
       where restaurant_id = $1 and actif and ${suggestions ? "categorie = 'suggestion'" : "categorie <> 'suggestion'"} order by ordre`, [resto]);
   const tarifs = await tarifsDuRestaurant(resto);
   const avecVin = await Promise.all(plats.map(async (p) => {
@@ -37,9 +38,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     return { ...p, vin: v && t ? { titre: t.titre, detail: t.sousTitre || null, prix: prix || null } : null };
   }));
   const sections: SectionMenu[] = suggestions
-    ? [{ titre: 'Suggestions du moment', plats: avecVin.map((p) => ({ nom: p.nom, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }]
+    ? [{ titre: 'Suggestions du moment', plats: avecVin.map((p) => ({ nom: p.nom, description: p.description, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }]
     : SECTIONS.map(([c, titre]) => ({ titre, plats: avecVin.filter((p) => p.categorie === c)
-      .map((p) => ({ nom: p.nom, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }));
+      .map((p) => ({ nom: p.nom, description: p.description, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }));
 
   const options: OptionsMenu = {
     titre: suggestions ? 'Suggestions du moment' : 'Menu',
@@ -49,7 +50,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     prixVin: sp.get('prix') !== '0',
     rappelPat: sp.get('rappel') !== '0',
   };
-  const html = genererMenuHTML({ restaurant: r.nom, sections, options, barre: barreOutils(resto, suggestions, options) });
+  // Sur le blanc du menu : le logo foncé ; sinon le logo clair, posé sur la couleur du restaurant.
+  const logo = r.logo_fonce_url ? { url: r.logo_fonce_url, clair: false } : r.logo_url ? { url: r.logo_url, clair: true } : null;
+  const html = genererMenuHTML({ restaurant: r.nom, logo, sections, options, barre: barreOutils(resto, suggestions, options) });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
 

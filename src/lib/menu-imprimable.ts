@@ -7,7 +7,7 @@
  */
 
 export interface VinSuggere { titre: string; detail: string | null; prix: string | null }
-export interface PlatImprimable { nom: string; prix: string | null; vin: VinSuggere | null }
+export interface PlatImprimable { nom: string; description?: string | null; prix: string | null; vin: VinSuggere | null }
 export interface SectionMenu { titre: string; plats: PlatImprimable[] }
 export interface OptionsMenu {
   titre: string;              // « Menu » ou « Suggestions du moment »
@@ -25,6 +25,7 @@ function htmlPlat(p: PlatImprimable, o: OptionsMenu) {
   const v = p.vin;
   return `<div class="plat">
   <div class="plat-ligne"><span class="plat-nom">${echapper(p.nom)}</span><span class="points" aria-hidden="true"></span>${p.prix ? `<span class="plat-prix">${echapper(p.prix)}</span>` : ''}</div>
+  ${p.description ? `<p class="plat-description">${echapper(p.description)}</p>` : ''}
   ${v ? `<p class="vin"><span class="vin-mot">Pat suggère</span> <span class="vin-titre">${echapper(v.titre)}</span>${v.detail ? ` <span class="vin-detail">${echapper(v.detail)}</span>` : ''}${o.prixVin && v.prix ? ` <span class="vin-prix">${echapper(v.prix)}</span>` : ''}</p>` : ''}
 </div>`;
 }
@@ -38,6 +39,9 @@ function css(o: OptionsMenu) {
 html, body { margin: 0; background: #FFFFFF; }
 body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .entete { text-align: center; margin-bottom: ${a5 ? '6mm' : '9mm'}; }
+.logo { display: block; margin: 0 auto 3mm; max-height: ${a5 ? '9mm' : '12mm'}; max-width: ${a5 ? '35mm' : '45mm'}; width: auto; height: auto; object-fit: contain; }
+.logo-fond { display: inline-block; margin: 0 auto 3mm; padding: 2.5mm 4mm; border-radius: 3mm; background: ${accent}; }
+.logo-fond .logo { margin: 0; }
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
 .entete h1 { margin: 2mm 0 0; font: 600 ${a5 ? '30pt' : '40pt'}/1.05 'Cormorant Garamond', Garamond, serif; }
 .filet { width: 15mm; height: 2px; background: ${accent}; margin: 4mm auto 0; }
@@ -46,14 +50,15 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .section > h2::after { content: ""; flex: 1; height: 1px; background: #E2D8DB; }
 .plat { break-inside: avoid; margin-bottom: ${a5 ? '3.5mm' : '4.5mm'}; }
 .plat-ligne { display: flex; align-items: baseline; gap: 2.6mm; }
-.plat-nom { font: 600 ${a5 ? '12.5pt' : '14.5pt'}/1.2 'Cormorant Garamond', Garamond, serif; flex: 0 1 auto; }
+.plat-nom { font: 600 ${a5 ? '14.5pt' : '17pt'}/1.2 'Cormorant Garamond', Garamond, serif; flex: 0 1 auto; }
+.plat-description { margin: 0.8mm 0 0; font-size: ${a5 ? '8.5pt' : '9.5pt'}; line-height: 1.4; color: #5E5357; }
 .points { flex: 1; min-width: 6mm; border-bottom: 1px dotted #B9AEB2; transform: translateY(-1mm); }
-.plat-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; }
-.vin { margin: 1mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.35 'Cormorant Garamond', Garamond, serif; color: #3A3235; }
-.vin-mot { font: 700 7.5pt Lato, sans-serif; font-style: normal; letter-spacing: 1.6px; text-transform: uppercase; color: ${accent}; margin-right: 1mm; }
+.plat-prix { font-size: ${a5 ? '10.5pt' : '11.5pt'}; font-weight: 700; white-space: nowrap; }
+.vin { margin: 1.2mm 0 0; font: italic 500 ${a5 ? '9pt' : '10pt'}/1.35 'Cormorant Garamond', Garamond, serif; color: #3A3235; }
+.vin-mot { font: 700 6.5pt Lato, sans-serif; font-style: normal; letter-spacing: 1.6px; text-transform: uppercase; color: ${accent}; margin-right: 1mm; }
 .vin-titre { font-weight: 600; }
 .vin-detail { color: #5E5357; }
-.vin-prix { font: 700 9pt Lato, sans-serif; font-style: normal; white-space: nowrap; margin-left: 1mm; }
+.vin-prix { font: 700 7.5pt Lato, sans-serif; font-style: normal; white-space: nowrap; margin-left: 1mm; }
 .fin { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0; font: italic 500 ${a5 ? '11pt' : '13pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
 .vide { text-align: center; color: #5E5357; font-style: italic; }
@@ -66,8 +71,14 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 `;
 }
 
-/** Document HTML complet. `barre` : barre d'outils affichée à l'écran seulement, jamais imprimée. */
-export function genererMenuHTML({ restaurant, sections, options: o, barre = '' }: { restaurant: string; sections: SectionMenu[]; options: OptionsMenu; barre?: string }) {
+/**
+ * Document HTML complet. `barre` : barre d'outils affichée à l'écran seulement, jamais imprimée.
+ * `logo` : logo foncé (posé sur le blanc), ou logo clair (posé sur la couleur du restaurant).
+ */
+export function genererMenuHTML({ restaurant, logo, sections, options: o, barre = '' }:
+  { restaurant: string; logo?: { url: string; clair: boolean } | null; sections: SectionMenu[]; options: OptionsMenu; barre?: string }) {
+  const img = logo ? `<img class="logo" src="${echapper(logo.url)}" alt="${echapper(restaurant)}"${o.noirEtBlanc ? ' style="filter: grayscale(1)"' : ''}>` : '';
+  const htmlLogo = logo ? (logo.clair ? `<span class="logo-fond">${img}</span>` : img) : '';
   const remplies = sections.filter((s) => s.plats.length);
   const corps = remplies.length
     ? remplies.map((s) => `<section class="section">${remplies.length > 1 || s.titre !== o.titre ? `<h2>${echapper(s.titre)}</h2>` : ''}
@@ -87,7 +98,7 @@ ${s.plats.map((p) => htmlPlat(p, o)).join('\n')}
 <body>
 ${barre}
 <main class="pages">
-  <header class="entete"><span class="entete-nom">${echapper(restaurant)}</span><h1>${echapper(o.titre)}</h1><div class="filet"></div></header>
+  <header class="entete">${htmlLogo}<span class="entete-nom">${echapper(restaurant)}</span><h1>${echapper(o.titre)}</h1><div class="filet"></div></header>
   ${corps}
   ${o.rappelPat ? '<div class="fin"><p>Envie d’un autre vin ? Scannez le QR code de votre table : Pat vous conseille selon votre plat.</p></div>' : ''}
 </main>
