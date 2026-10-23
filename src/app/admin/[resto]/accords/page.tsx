@@ -94,7 +94,10 @@ export default async function Accords({ params, searchParams }: { params: Promis
 
   return (
     <>
-      <Entete titre="Accords mets & vins" texte="Pat note chaque vin de votre carte sur chaque plat, de 1 à 5. Vos règles du sommelier choisissent ensuite les vins proposés au client. Changez une note : la sélection se recalcule." />
+      <Entete titre="Accords mets & vins" texte="Pat note chaque vin de votre carte sur chaque plat, de 1 à 5. Vos règles du sommelier choisissent ensuite les vins proposés au client. Changez une note : la sélection se recalcule.">
+        {/* Pense-bête des serveurs : une page, chaque plat avec les trois premiers vins de Pat. */}
+        <a href={`/admin/${resto}/accords/pense-bete`} target="_blank" rel="noopener" className="btn sec">Imprimer le pense-bête</a>
+      </Entete>
       <div className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px 20px', padding: '16px 20px' }}>
         <span style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: 2 }}>
           <strong>{resume.accords.toLocaleString('fr-BE')} accords · {resume.plats_avec_accords} plats × {resume.vins} vins</strong>
