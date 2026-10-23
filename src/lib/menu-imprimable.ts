@@ -47,8 +47,11 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .entete h1 { margin: 2mm 0 0; font: 600 ${a5 ? '30pt' : '40pt'}/1.05 'Cormorant Garamond', Garamond, serif; }
 .filet { width: 15mm; height: 2px; background: ${accent}; margin: 4mm auto 0; }
 .section { margin-bottom: 5mm; }
-.section > h2 { display: flex; align-items: center; gap: 3mm; margin: 4mm 0 3mm; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: ${accent}; break-after: avoid; }
-.section > h2::after { content: ""; flex: 1; height: 1px; background: #E2D8DB; }
+/* Entrées, Plats, Desserts : un grand titre centré entre deux filets, les plats en dessous. */
+.section { break-before: auto; }
+.section > h2 { display: flex; align-items: center; gap: 5mm; margin: ${a5 ? '6mm 0 4mm' : '9mm 0 6mm'}; font: 600 ${a5 ? '20pt' : '26pt'}/1.1 'Cormorant Garamond', Garamond, serif; color: #1F1A1C; break-after: avoid; }
+.section > h2::before, .section > h2::after { content: ""; flex: 1; height: 1px; background: ${accent}; opacity: .6; }
+.section:first-of-type > h2 { margin-top: 2mm; }
 .plat { break-inside: avoid; margin-bottom: ${a5 ? '3.5mm' : '4.5mm'}; }
 .plat-ligne { display: flex; align-items: baseline; gap: 2.6mm; }
 .plat-nom { font: 600 ${a5 ? '14.5pt' : '17pt'}/1.2 'Cormorant Garamond', Garamond, serif; flex: 0 1 auto; }
