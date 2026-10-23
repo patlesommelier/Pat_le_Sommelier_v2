@@ -1,5 +1,6 @@
 /**
- * Menu imprimable : chaque plat avec le vin que Pat suggère (le premier de ses propositions dans l'app), dans le style de la
+ * Menu imprimable : chaque plat avec un vin suggéré par Pat (l'une de ses premières propositions dans l'app, varié d'un plat à
+ * l'autre), dans le style de la
  * carte des vins imprimée. Deux documents : le menu (entrées, plats, desserts, fromages) et, à part, les suggestions du moment,
  * qui changent de semaine en semaine. Fonctions pures, sans dépendance.
  *

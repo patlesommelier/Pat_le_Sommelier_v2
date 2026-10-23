@@ -13,7 +13,7 @@ const SECTIONS: [string, string][] = [['entree', 'Entrées'], ['plat', 'Plats'],
 
 /**
  * Menu imprimable du restaurant : /admin/<resto>/menu/imprimer (le menu) ou ?type=suggestions (les suggestions du moment, à part).
- * Pour chaque plat, le vin que Pat propose en premier dans l'app (mêmes règles de sélection) ; jamais de note ni de ranking.
+ * Pour chaque plat, un vin parmi les premières propositions de Pat dans l'app (mêmes règles), varié d'un plat à l'autre ; jamais de note ni de ranking.
  * Options : format=A5, nb=1 (noir et blanc), prix=0 (sans prix du vin), rappel=0.
  */
 export async function GET(req: Request, { params }: { params: Promise<{ resto: string }> }) {
@@ -29,14 +29,24 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     `select id, nom, nullif(trim(description_cuisine), '') as description, categorie::text as categorie, prix::float as prix, prix_variantes from plat
       where restaurant_id = $1 and actif and ${suggestions ? "categorie = 'suggestion'" : "categorie <> 'suggestion'"} order by ordre`, [resto]);
   const tarifs = await tarifsDuRestaurant(resto);
-  const avecVin = await Promise.all(plats.map(async (p) => {
-    const premier = (await getPropositions(resto, p.id)).propositions[0];
-    const v = premier?.vin;
+  // Un vin par plat, qui varie d'un plat à l'autre : parmi les premières propositions de Pat pour ce plat (mêmes règles que l'app),
+  // celle qui a le moins servi jusque-là, dans l'ordre du menu ; à égalité, la mieux placée par Pat.
+  // Le vin « pour une belle occasion » (bien plus cher) et le « plus accessible » restent à part : seulement s'il n'y a qu'eux.
+  const propositions = await Promise.all(plats.map(async (p) => {
+    const l = (await getPropositions(resto, p.id)).propositions;
+    const principaux = l.filter((x) => x.motif !== 'plus_cher' && x.motif !== 'moins_cher');
+    return (principaux.length ? principaux : l).map((x) => x.vin);
+  }));
+  const servis = new Map<string, number>();
+  const avecVin = plats.map((p, i) => {
+    const liste = propositions[i];
+    const v = liste.length ? liste.reduce((m, x) => ((servis.get(x.id) ?? 0) < (servis.get(m.id) ?? 0) ? x : m), liste[0]) : null;
+    if (v) servis.set(v.id, (servis.get(v.id) ?? 0) + 1);
     const t = v ? titreCarte({ ...v, producteur: v.producteur_nom ?? v.producteur_texte }, { cepages: false }) : null;
     const prix = v ? (tarifs.get(v.id) ?? []).filter((x) => x.code === 'verre' || x.code === 'bouteille')
       .map((x) => `${libelleCourt(x.code)} ${euros(x.prix)}`).join(' · ') : '';
     return { ...p, vin: v && t ? { titre: t.titre, detail: t.sousTitre || null, prix: prix || null } : null };
-  }));
+  });
   const sections: SectionMenu[] = suggestions
     ? [{ titre: 'Suggestions du moment', plats: avecVin.map((p) => ({ nom: p.nom, description: p.description, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }]
     : SECTIONS.map(([c, titre]) => ({ titre, plats: avecVin.filter((p) => p.categorie === c)
@@ -69,7 +79,7 @@ function barreOutils(resto: string, suggestions: boolean, o: OptionsMenu) {
   ${coche('prix', 'Prix du vin', o.prixVin)}
   ${coche('rappel', 'Rappel « Demandez à Pat »', o.rappelPat)}
   <button type="button" onclick="window.print()" style="padding:8px 16px;border:0;border-radius:999px;background:#FFF;color:#24151A;font-weight:700;cursor:pointer">Imprimer / Enregistrer en PDF</button>
-  <span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">Le vin de chaque plat est celui que Pat propose en premier dans l’app. Dans la fenêtre d’impression, activez « Graphiques d’arrière-plan » pour garder les couleurs.</span>
+  <span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">Le vin de chaque plat est l’un des premiers que Pat propose dans l’app, varié d’un plat à l’autre. Dans la fenêtre d’impression, activez « Graphiques d’arrière-plan » pour garder les couleurs.</span>
 </form>
 <script>
 // Cases décochées : envoyer 0 (une case cochée par défaut doit pouvoir être retirée).

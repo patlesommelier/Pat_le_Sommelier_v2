@@ -121,3 +121,38 @@ export function tarifsDuGroupe(groupe: Array<{ format: string | null; prix: numb
   }
   return t.sort((a, b) => ORDRE_TARIFS.indexOf(a.code) - ORDRE_TARIFS.indexOf(b.code));
 }
+
+const MOTS_LIENS = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'a']);
+
+/**
+ * Clé d'un vin tel qu'il est écrit, quel que soit l'ordre des mots : « IGP Pays d'Oc Le Pré Blanc » de La Petite Source et
+ * « La Petite Source, IGP Pays d'Oc Le Pré Blanc » sont le même vin. Couleur, millésime, puis les mots du nom et du producteur.
+ */
+export function cleVinEcrit(v: { couleur: string; libelle: string; producteur?: string | null; millesime?: string | null }) {
+  const mots = `${v.libelle} ${v.producteur ?? ''}`.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(MENTION_CONTENANT, ' ')
+    .split(/[^a-z0-9]+/).filter((m) => m && !MOTS_LIENS.has(m));
+  return [v.couleur, (v.millesime ?? '').replace(/^NM$/i, ''), [...new Set(mots)].sort().join(' ')].join('|');
+}
+
+/**
+ * Vins écrits deux fois sur la carte (mêmes mots dans un autre ordre, même couleur et même millésime) réunis en un seul groupe,
+ * à condition que leurs prix ne se contredisent pas (même prix pour une même contenance) : deux vins différents lus sous le même
+ * nom (brut et rosé) gardent chacun leur ligne.
+ */
+export function reunirDoublons<T extends { couleur: string; libelle: string; millesime: string | null; format: string | null; prix: number | null; prix_verre: number | null; producteur?: string | null }>(groupes: T[][]): T[][] {
+  const resultat: T[][] = [];
+  const parCle = new Map<string, T[][]>();
+  const prixPar = (g: T[]) => new Map(tarifsDuGroupe(g).map((t) => [t.code, t.prix]));
+  for (const g of groupes) {
+    const cle = cleVinEcrit({ ...g[0], millesime: g.find((l) => l.millesime)?.millesime ?? null });
+    const pg = prixPar(g);
+    const meme = (parCle.get(cle) ?? []).find((autre) => {
+      const pa = prixPar(autre);
+      return [...pg].every(([code, prix]) => !pa.has(code) || pa.get(code) === prix);
+    });
+    if (meme) { meme.push(...g); continue; }
+    resultat.push(g);
+    parCle.set(cle, [...(parCle.get(cle) ?? []), g]);
+  }
+  return resultat;
+}

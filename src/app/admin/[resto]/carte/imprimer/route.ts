@@ -1,6 +1,6 @@
 import { exigerAcces } from '@/lib/admin/auth';
 import { sansContenance } from '@/lib/format';
-import { contenanceDuFormat, grouperMemeVin, libelleCourt, tarifsDuGroupe } from '@/lib/contenances';
+import { contenanceDuFormat, grouperMemeVin, libelleCourt, reunirDoublons, tarifsDuGroupe } from '@/lib/contenances';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
@@ -39,8 +39,9 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
        from vin_carte v left join producteur p on p.id = v.producteur_id
       where v.restaurant_id = $1 order by v.ordre`, [resto]);
   // Un même vin en plusieurs contenances (bouteille, demi, magnum, verre : une ligne chacune) est imprimé une seule fois,
-  // ses prix côte à côte. Seules les lignes disponibles comptent.
-  const vins: VinImprimable[] = grouperMemeVin(lignes.filter((l) => l.disponible), (l) => l.format).map((groupe) => {
+  // ses prix côte à côte. Seules les lignes disponibles comptent. Un vin écrit deux fois sur la carte (mots dans un autre ordre)
+  // n'est imprimé qu'une fois.
+  const vins: VinImprimable[] = reunirDoublons(grouperMemeVin(lignes.filter((l) => l.disponible), (l) => l.format)).map((groupe) => {
     const v = groupe.find((l) => contenanceDuFormat(l.format) === 'bouteille') ?? groupe[0];
     const tous = tarifsDuGroupe(groupe);
     const tarifs = tous.map((t) => ({ libelle: libelleCourt(t.code), prix: t.prix }));
