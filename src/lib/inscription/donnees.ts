@@ -1,6 +1,6 @@
 // Données reconnues par Pat sur le menu et la carte, validées avant d'être enregistrées.
 import { z } from 'zod';
-import { estPichet, estTailleVerre } from '../contenances';
+import { estTailleVerre } from '../contenances';
 
 /** Catégories des plats de l'app (enum categorie_plat). */
 export const CATEGORIES = ['entree', 'plat', 'dessert', 'fromage'] as const;
@@ -63,11 +63,11 @@ export const dedoublonnerVins = (v: Vin[]) =>
   [...new Map(v.map((x) => [`${cle(x.libelleCarte)}|${x.millesime ?? ''}|${x.contenance ?? ''}`, x])).values()];
 
 /**
- * Vin servi au verre en plusieurs contenants (verre 12 cl et 15 cl, pichet, carafe, pot) : seul le prix du plus petit est gardé,
- * les autres lignes sont retirées. Les bouteilles (75 cl, demi, magnum…) restent, avec ce prix au verre.
+ * Vin servi au verre en plusieurs tailles de verre (12 cl et 15 cl) : seul le prix du plus petit est gardé, les autres lignes
+ * sont retirées. Les bouteilles (75 cl, demi, magnum…) et les pichets ou carafes (¼, ½) restent, avec ce prix au verre.
  */
 export function unSeulVerre(vins: Vin[]): Vin[] {
-  const auVerre = (v: Vin) => v.auVerre || estTailleVerre(v.contenance) || estPichet(v.contenance);
+  const auVerre = (v: Vin) => v.auVerre || estTailleVerre(v.contenance);
   const groupes = new Map<string, Vin[]>();
   for (const v of vins) {
     const k = `${v.couleur}|${cle(v.libelleCarte)}|${v.millesime ?? ''}`;

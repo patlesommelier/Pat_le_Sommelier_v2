@@ -102,7 +102,8 @@ const LIBELLES_TARIFS: Record<string, string> = { bouteille: 'Bouteille', demi: 
 
 /**
  * Prix d'un vin dans chacune de ses contenances, à partir de ses lignes de carte (un groupe de grouperMemeVin), dans l'ordre
- * bouteille, demi, quart, magnum, verre. Au verre en plusieurs contenants (verres, pichet, carafe) : seul le prix le plus petit compte.
+ * bouteille, demi, quart, magnum, verre. Plusieurs verres (12 cl, 15 cl) : seul le prix le plus petit compte. Un pichet ou une
+ * carafe (25 cl, 50 cl) garde son prix sous ¼ ou ½, sauf si une vraie demi-bouteille ou un quart a déjà ce rang.
  */
 export function tarifsDuGroupe(groupe: Array<{ format: string | null; prix: number | null; prix_verre: number | null }>): Tarif[] {
   const t: Tarif[] = [];
@@ -112,9 +113,9 @@ export function tarifsDuGroupe(groupe: Array<{ format: string | null; prix: numb
     if (!deja) t.push({ code: c, libelle: LIBELLES_TARIFS[c] ?? c, prix });
     else if (c === 'verre' && prix < deja.prix) deja.prix = prix;
   };
-  const auVerre = groupe.some((l) => contenanceDuFormat(l.format) === 'verre' || l.prix_verre != null);
-  for (const l of groupe) {
-    if (auVerre && estPichet(l.format)) continue;
+  // Les bouteilles d'abord, les pichets ensuite : un pichet ne prend pas la place d'une demi-bouteille.
+  const ordre = [...groupe.filter((l) => !estPichet(l.format)), ...groupe.filter((l) => estPichet(l.format))];
+  for (const l of ordre) {
     const code = contenanceDuFormat(l.format);
     ajouter(code, code === 'verre' ? l.prix_verre ?? l.prix : l.prix);
     ajouter('verre', l.prix_verre);
