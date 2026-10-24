@@ -32,11 +32,16 @@ export default async function Acces({ params, searchParams }: { params: Promise<
       <div className="rangee">
         <div className="etroit" style={{ flex: '1 1 380px' }}>
           <form action={creerAcces.bind(null, resto)} className="carte-bo pile">
-            <div><h2>Créer un accès</h2><p className="sous">Pour vous ou un membre de l’équipe. La personne se connecte avec cette adresse et ce mot de passe, et peut le changer ensuite.</p></div>
+            <div><h2>Créer un accès</h2><p className="sous">Pour vous ou un membre de l’équipe : la personne reçoit un e-mail d’invitation et choisit son mot de passe.</p></div>
             {!comptesPossibles && <Message erreur="Création de comptes indisponible : Supabase (clé de service) n’est pas configuré." />}
             <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="off" /></div>
-            <div className="champ"><label htmlFor="mdp">Mot de passe</label><input id="mdp" name="mdp" type="password" required minLength={10} autoComplete="new-password" /><span className="aide">10 caractères minimum</span></div>
-            <div className="champ"><label htmlFor="mdp2">Confirmer le mot de passe</label><input id="mdp2" name="mdp2" type="password" required autoComplete="new-password" /></div>
+            <details>
+              <summary style={{ cursor: 'pointer', fontSize: 14 }}>Ou choisir le mot de passe moi-même (sans e-mail)</summary>
+              <div className="pile" style={{ gap: 12, marginTop: 10 }}>
+                <div className="champ"><label htmlFor="mdp">Mot de passe</label><input id="mdp" name="mdp" type="password" minLength={10} autoComplete="new-password" /><span className="aide">10 caractères minimum ; à communiquer vous-même à la personne</span></div>
+                <div className="champ"><label htmlFor="mdp2">Confirmer le mot de passe</label><input id="mdp2" name="mdp2" type="password" autoComplete="new-password" /></div>
+              </div>
+            </details>
             <button type="submit" className="btn" disabled={!comptesPossibles}>Créer l’accès</button>
           </form>
           <div className="carte-bo pile">

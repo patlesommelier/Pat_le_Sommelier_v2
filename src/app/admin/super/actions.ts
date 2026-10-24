@@ -77,7 +77,7 @@ export async function creerRestaurant(f: FormData) {
   let message = `Restaurant ${nom} créé.`;
   try {
     const sb = supabaseService();
-    const { data, error } = await sb.auth.admin.inviteUserByEmail(email, { redirectTo: `${await origine()}/admin/mot-de-passe` });
+    const { data, error } = await sb.auth.admin.inviteUserByEmail(email, { redirectTo: `${await origine()}/admin/auth/retour?suite=/admin/mot-de-passe` });
     let userId = data?.user?.id ?? null;
     if (!userId && error && /already|registered|exists/i.test(error.message)) {
       for (let page = 1; page <= 20 && !userId; page++) {

@@ -868,30 +868,44 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
 }
 
 // ───────── Accès ─────────
+/**
+ * Nouvel accès à l'espace du restaurant. Sans mot de passe : une invitation part par e-mail (la personne choisit le sien en
+ * cliquant sur le lien). Avec un mot de passe : le compte est prêt tout de suite, à communiquer soi-même (aucun e-mail).
+ * Un compte qui existe déjà (autre restaurant) est simplement relié à celui-ci.
+ */
 export async function creerAcces(resto: string, f: FormData) {
   await exigerAcces(resto);
   const email = (txt(f, 'email') ?? '').toLowerCase();
   const mdp = String(f.get('mdp') ?? '');
   const retour = (m: Record<string, string>) => redirect(avec(`/admin/${resto}/acces`, m));
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) retour({ erreur: 'Adresse e-mail invalide.' });
-  if (mdp.length < 10) retour({ erreur: 'Mot de passe : 10 caractères minimum.' });
-  if (mdp !== f.get('mdp2')) retour({ erreur: 'Les deux mots de passe sont différents.' });
+  if (mdp && mdp.length < 10) retour({ erreur: 'Mot de passe : 10 caractères minimum.' });
+  if (mdp && mdp !== f.get('mdp2')) retour({ erreur: 'Les deux mots de passe sont différents.' });
 
   let userId: string | null = null;
+  let message = `Accès créé pour ${email}.`;
   try {
     const sb = supabaseService();
-    const { data, error } = await sb.auth.admin.createUser({ email, password: mdp, email_confirm: true });
-    if (data.user) userId = data.user.id;
-    else if (error && /already|registered|exists/i.test(error.message)) {
+    const h = await headers();
+    const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('host')}`;
+    const { data, error } = mdp
+      ? await sb.auth.admin.createUser({ email, password: mdp, email_confirm: true })
+      : await sb.auth.admin.inviteUserByEmail(email, { redirectTo: `${origine}/admin/auth/retour?suite=/admin/mot-de-passe` });
+    if (data.user) {
+      userId = data.user.id;
+      message = mdp ? `Accès créé pour ${email} : communiquez-lui son mot de passe.` : `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.`;
+    } else if (error && /already|registered|exists/i.test(error.message)) {
       // Compte existant (autre restaurant) : on le relie simplement à celui-ci, sans toucher à son mot de passe.
       for (let page = 1; page <= 20 && !userId; page++) {
         const { data: l } = await sb.auth.admin.listUsers({ page, perPage: 200 });
         userId = l.users.find((x) => x.email?.toLowerCase() === email)?.id ?? null;
         if (l.users.length < 200) break;
       }
+      message = `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.`;
     } else if (error) throw error;
   } catch (e) {
-    retour({ erreur: `Création du compte impossible : ${(e as Error).message}` });
+    retour({ erreur: mdp ? `Création du compte impossible : ${(e as Error).message}`
+      : `L’e-mail d’invitation n’a pas pu partir (${(e as Error).message}). Choisissez plutôt un mot de passe pour cette personne et communiquez-le-lui.` });
   }
   if (!userId) retour({ erreur: 'Compte introuvable.' });
   await requete(
@@ -899,7 +913,7 @@ export async function creerAcces(resto: string, f: FormData) {
     [userId, email, resto],
   );
   revalidatePath(`/admin/${resto}`, 'layout');
-  retour({ ok: `Accès créé pour ${email}.` });
+  retour({ ok: message });
 }
 
 export async function retirerAcces(resto: string, userId: string) {
