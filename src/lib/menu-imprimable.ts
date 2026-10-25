@@ -66,6 +66,9 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .fin { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0; font: italic 500 ${a5 ? '11pt' : '13pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
 .vide { text-align: center; color: #5E5357; font-style: italic; }
+.centre { display: flex; flex-direction: column; }
+.centre .corps { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+@media print { .centre { min-height: ${a5 ? '184mm' : '265mm'}; } }
 @media screen {
   html { background: #EEE6E8; }
   body { padding: 24px 12px; background: #EEE6E8; }
@@ -84,6 +87,8 @@ export function genererMenuHTML({ restaurant, logo, sections, options: o, barre 
   const img = logo ? `<img class="logo" src="${echapper(logo.url)}" alt="${echapper(restaurant)}"${o.noirEtBlanc ? ' style="filter: grayscale(1)"' : ''}>` : '';
   const htmlLogo = logo ? (logo.clair ? `<span class="logo-fond">${img}</span>` : img) : '';
   const remplies = sections.filter((s) => s.plats.length);
+  // Peu de plats (les suggestions de la semaine, souvent) : ils sont centrés dans la hauteur de la page, entre le titre et le bas.
+  const centre = remplies.length === 1 && remplies[0].plats.length <= 8;
   const corps = remplies.length
     ? remplies.map((s) => `<section class="section">${remplies.length > 1 || s.titre !== o.titre ? `<h2>${echapper(s.titre)}</h2>` : ''}
 ${s.plats.map((p) => htmlPlat(p, o)).join('\n')}
@@ -101,9 +106,9 @@ ${s.plats.map((p) => htmlPlat(p, o)).join('\n')}
 </head>
 <body>
 ${barre}
-<main class="pages">
+<main class="pages${centre ? ' centre' : ''}">
   <header class="entete">${htmlLogo}<span class="entete-nom">${echapper(restaurant)}</span><h1>${echapper(o.titre)}</h1><div class="filet"></div></header>
-  ${corps}
+  <div class="corps">${corps}</div>
   ${o.rappelPat ? '<div class="fin"><p>Envie d’un autre vin ? Scannez le QR code de votre table : Pat vous conseille selon votre plat.</p></div>' : ''}
 </main>
 </body>
