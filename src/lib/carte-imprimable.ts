@@ -30,6 +30,7 @@ export interface VinImprimable {
 export interface RestaurantImprimable {
   nom: string;
   logoUrl?: string | null;       // logo clair, posé sur la couleur du restaurant
+  logoEnBlanc?: boolean;         // seul un logo foncé existe : il passe en blanc sur la couleur
   logoSombreUrl?: string | null; // logo foncé, pour le noir et blanc
   qrCodeUrl?: string | null;     // image du QR code (URL ou data:)
   patLogoUrl?: string | null;    // petit logo de Pat le sommelier, en bas à gauche de chaque page
@@ -195,7 +196,7 @@ function htmlVin(vin: VinImprimable, options: OptionsCarte) {
 function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte, couleursPresentes: string[]) {
   const logo = options.noirEtBlanc ? restaurant.logoSombreUrl : restaurant.logoUrl;
   const marque = logo
-    ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}">`
+    ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !options.noirEtBlanc ? ' style="filter: brightness(0) invert(1)"' : ''}>`
     : `<span class="couv-nom">${echapper(restaurant.nom)}</span>`;
   const qr = restaurant.qrCodeUrl ? `<img class="couv-qr" src="${echapper(restaurant.qrCodeUrl)}" alt="QR code de ${echapper(restaurant.nom)}">` : '';
   return `<section class="couverture">

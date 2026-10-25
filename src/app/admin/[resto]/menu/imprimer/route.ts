@@ -4,6 +4,7 @@ import { requete } from '@/lib/db';
 import { titreCarte } from '@/lib/admin/intitule';
 import { libelleCourt } from '@/lib/contenances';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { genererMenuHTML, type OptionsMenu, type SectionMenu } from '@/lib/menu-imprimable';
 
 export const dynamic = 'force-dynamic';
@@ -52,22 +53,23 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     : SECTIONS.map(([c, titre]) => ({ titre, plats: avecVin.filter((p) => p.categorie === c)
       .map((p) => ({ nom: p.nom, description: p.description, prix: p.prix_variantes ?? (p.prix != null ? euros(p.prix) : null), vin: p.vin })) }));
 
+  const teinte = await couleurDesSupports(r, sp);
   const options: OptionsMenu = {
     titre: suggestions ? 'Suggestions du moment' : 'Menu',
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',
-    couleurAccent: r.couleur,
+    couleurAccent: teinte.couleur,
     noirEtBlanc: sp.get('nb') === '1',
     prixVin: sp.get('prix') !== '0',
     rappelPat: sp.get('rappel') !== '0',
   };
   // Sur le blanc du menu : le logo foncé ; sinon le logo clair, posé sur la couleur du restaurant.
   const logo = r.logo_fonce_url ? { url: r.logo_fonce_url, clair: false } : r.logo_url ? { url: r.logo_url, clair: true } : null;
-  const html = genererMenuHTML({ restaurant: r.nom, logo, sections, options, barre: barreOutils(resto, suggestions, options) });
+  const html = genererMenuHTML({ restaurant: r.nom, logo, sections, options, barre: barreOutils(resto, suggestions, options, teinte) });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
 
 /** Barre d'outils, à l'écran seulement : options (rechargent la page), passage menu / suggestions, bouton Imprimer. */
-function barreOutils(resto: string, suggestions: boolean, o: OptionsMenu) {
+function barreOutils(resto: string, suggestions: boolean, o: OptionsMenu, teinte: CouleurSupports) {
   const coche = (nom: string, libelle: string, actif: boolean) =>
     `<label><input type="checkbox" name="${nom}" value="1" ${actif ? 'checked' : ''} onchange="envoyer(this.form)"> ${libelle}</label>`;
   return `<form class="barre-impression" method="get" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center;
@@ -75,6 +77,7 @@ function barreOutils(resto: string, suggestions: boolean, o: OptionsMenu) {
   <a href="/admin/${resto}/menu" style="color:#FFF">← Back-office</a>
   <label>Imprimer <select name="type" onchange="envoyer(this.form)"><option value="menu" ${!suggestions ? 'selected' : ''}>le menu</option><option value="suggestions" ${suggestions ? 'selected' : ''}>les suggestions</option></select></label>
   <label>Format <select name="format" onchange="envoyer(this.form)"><option ${o.format === 'A4' ? 'selected' : ''}>A4</option><option ${o.format === 'A5' ? 'selected' : ''}>A5</option></select></label>
+  ${controleCouleur(teinte)}
   ${coche('nb', 'Noir et blanc', o.noirEtBlanc)}
   ${coche('prix', 'Prix du vin', o.prixVin)}
   ${coche('rappel', 'Rappel « Demandez à Pat »', o.rappelPat)}
@@ -88,6 +91,7 @@ function envoyer(f) {
   ['type', 'format'].forEach(function (n) { p.set(n, f.elements[n].value); });
   ['nb'].forEach(function (n) { if (f.elements[n].checked) p.set(n, '1'); });
   ['prix', 'rappel'].forEach(function (n) { if (!f.elements[n].checked) p.set(n, '0'); });
+  ${SCRIPT_COULEUR}
   location.search = p.toString();
 }
 </script>`;

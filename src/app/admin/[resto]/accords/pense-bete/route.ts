@@ -4,6 +4,7 @@ import { requete } from '@/lib/db';
 import { titreCarte } from '@/lib/admin/intitule';
 import { libelleCourt } from '@/lib/contenances';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
+import { controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { genererPenseBeteHTML, type OptionsPenseBete, type SectionPenseBete } from '@/lib/pense-bete';
 
 export const dynamic = 'force-dynamic';
@@ -19,7 +20,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
-  const [r] = await requete<{ nom: string; couleur: string }>('select nom, couleur from restaurant where id = $1', [resto]);
+  const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null }>(
+    'select nom, couleur, logo_url, logo_fonce_url from restaurant where id = $1', [resto]);
   if (!r) return new Response('Restaurant introuvable', { status: 404 });
   const plats = await requete<{ id: string; nom: string; nom_court: string | null; categorie: string }>(
     `select id, nom, nom_court, categorie::text as categorie from plat where restaurant_id = $1 and actif order by ordre`, [resto]);
@@ -34,19 +36,21 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     return { categorie: p.categorie, plat: p.nom_court ?? p.nom, vins };
   }));
   const sections: SectionPenseBete[] = SECTIONS.map(([c, titre]) => ({ titre, lignes: lignes.filter((l) => l.categorie === c && l.vins.length) }));
-  const options: OptionsPenseBete = { paysage: sp.get('orientation') !== 'portrait', couleurAccent: r.couleur, noirEtBlanc: sp.get('nb') === '1', prix: sp.get('prix') !== '0' };
-  const html = genererPenseBeteHTML({ restaurant: r.nom, sections, options, barre: barre(resto, options) });
+  const teinte = await couleurDesSupports(r, sp);
+  const options: OptionsPenseBete = { paysage: sp.get('orientation') !== 'portrait', couleurAccent: teinte.couleur, noirEtBlanc: sp.get('nb') === '1', prix: sp.get('prix') !== '0' };
+  const html = genererPenseBeteHTML({ restaurant: r.nom, sections, options, barre: barre(resto, options, teinte) });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
 
 /** Barre d'outils, à l'écran seulement. */
-function barre(resto: string, o: OptionsPenseBete) {
+function barre(resto: string, o: OptionsPenseBete, teinte: CouleurSupports) {
   const coche = (nom: string, libelle: string, actif: boolean) =>
     `<label><input type="checkbox" name="${nom}" value="1" ${actif ? 'checked' : ''} onchange="envoyer(this.form)"> ${libelle}</label>`;
   return `<form class="barre-impression" method="get" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center;
     margin:-24px -12px 24px;padding:12px 16px;background:#24151A;color:#FFF;font:14px Lato,'Helvetica Neue',sans-serif">
   <a href="/admin/${resto}/accords" style="color:#FFF">← Back-office</a>
   <label>Page <select name="orientation" onchange="envoyer(this.form)"><option value="paysage" ${o.paysage ? 'selected' : ''}>A4 à l’italienne</option><option value="portrait" ${!o.paysage ? 'selected' : ''}>A4 en hauteur</option></select></label>
+  ${controleCouleur(teinte)}
   ${coche('nb', 'Noir et blanc', o.noirEtBlanc)}
   ${coche('prix', 'Prix', o.prix)}
   <button type="button" onclick="window.print()" style="padding:8px 16px;border:0;border-radius:999px;background:#FFF;color:#24151A;font-weight:700;cursor:pointer">Imprimer / Enregistrer en PDF</button>
@@ -57,6 +61,7 @@ function envoyer(f) {
   p.set('orientation', f.elements.orientation.value);
   if (f.elements.nb.checked) p.set('nb', '1');
   if (!f.elements.prix.checked) p.set('prix', '0');
+  ${SCRIPT_COULEUR}
   location.search = p.toString();
 }
 </script>`;

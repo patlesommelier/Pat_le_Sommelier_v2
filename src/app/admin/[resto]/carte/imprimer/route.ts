@@ -5,7 +5,8 @@ import { adresseApp, qrSvg } from '@/lib/admin/qr';
 import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprimable } from '@/lib/carte-imprimable';
 import { requete } from '@/lib/db';
 import { SQL_PICTOS } from '@/lib/pictos-sql';
-import { logoAffiche } from '@/lib/couleurs';
+import { couleurClaire, logoAffiche } from '@/lib/couleurs';
+import { controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { etatPresentations, type EtatPresentations } from '@/lib/generation/file-presentations';
 
 export const dynamic = 'force-dynamic';
@@ -55,9 +56,10 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     };
   });
 
+  const teinte = await couleurDesSupports(r, sp);
   const options: Partial<OptionsCarte> = {
     format: sp.get('format') === 'A5' ? 'A5' : 'A4',
-    couleurAccent: r.couleur,
+    couleurAccent: teinte.couleur,
     noirEtBlanc: sp.get('nb') === '1',
     ordre: sp.get('ordre') === 'prix' ? 'prix' : 'app',
     afficherPresentation: sp.get('presentation') !== '0',
@@ -69,8 +71,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const sansPresentation = vins.filter((v) => v.visible && !v.presentationPerso && !lignes.find((l) => l.id === v.id)?.presentation_carte).length;
 
   const html = genererCarteHTML({
-    restaurant: { nom: r.nom, logoUrl: logoAffiche(r)?.url ?? null, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
-    vins, options, barre: barreOutils(resto, options, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
+    restaurant: { nom: r.nom, ...logoCouverture(r, teinte.couleur), logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
+    vins, options, barre: barreOutils(resto, options, teinte, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }
@@ -93,7 +95,7 @@ function pourquoi(etat: EtatPresentations | null) {
 }
 
 /** Barre d'outils, à l'écran seulement : options (rechargent la page) et bouton du menu d'impression du navigateur. */
-function barreOutils(resto: string, o: Partial<OptionsCarte>, sansPresentation: number, raison: string) {
+function barreOutils(resto: string, o: Partial<OptionsCarte>, teinte: CouleurSupports, sansPresentation: number, raison: string) {
   const coche = (nom: string, libelle: string, actif: boolean | undefined) =>
     `<label><input type="checkbox" name="${nom}" value="1" ${actif ? 'checked' : ''} onchange="envoyer(this.form)"> ${libelle}</label>`;
   return `<form class="barre-impression" method="get" style="position:sticky;top:0;z-index:10;display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;justify-content:center;
@@ -101,6 +103,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, sansPresentation: 
   <a href="/admin/${resto}/carte" style="color:#FFF">← Back-office</a>
   <label>Format <select name="format" onchange="envoyer(this.form)"><option ${o.format === 'A4' ? 'selected' : ''}>A4</option><option ${o.format === 'A5' ? 'selected' : ''}>A5</option></select></label>
   <label>Ordre <select name="ordre" onchange="envoyer(this.form)"><option value="app" ${o.ordre !== 'prix' ? 'selected' : ''}>par région</option><option value="prix" ${o.ordre === 'prix' ? 'selected' : ''}>par prix</option></select></label>
+  ${controleCouleur(teinte)}
   ${coche('nb', 'Noir et blanc', o.noirEtBlanc)}
   ${coche('presentation', 'Présentations', o.afficherPresentation)}
   ${coche('producteur', 'Producteurs', o.afficherProducteur)}
@@ -116,7 +119,18 @@ function envoyer(f) {
   var p = new URLSearchParams();
   ['format', 'ordre'].forEach(function (n) { p.set(n, f.elements[n].value); });
   ['nb', 'presentation', 'producteur', 'couverture', 'rappel'].forEach(function (n) { p.set(n, f.elements[n].checked ? '1' : '0'); });
+  ${SCRIPT_COULEUR}
   location.search = p.toString();
 }
 </script>`;
+}
+
+/**
+ * Logo de la couverture, posé sur la couleur imprimée : sur une couleur foncée, le logo clair (ou le foncé passé en blanc) ;
+ * sur une couleur claire, celui de l'app.
+ */
+function logoCouverture(r: { couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null }, couleur: string) {
+  if (couleurClaire(couleur)) return { logoUrl: r.logo_fonce_url ?? logoAffiche({ ...r, couleur })?.url ?? null };
+  if (r.logo_url) return { logoUrl: r.logo_url };
+  return { logoUrl: r.logo_fonce_url, logoEnBlanc: Boolean(r.logo_fonce_url) };
 }
