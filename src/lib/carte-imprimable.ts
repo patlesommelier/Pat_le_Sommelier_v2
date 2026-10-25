@@ -239,7 +239,7 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
   -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; position: relative; }
 .couv-bandeau { height: 44%; background: ${options.noirEtBlanc ? '#FFFFFF' : options.fondBandeau ?? accent}; display: flex; align-items: center; justify-content: center;
-  ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : options.fondBandeau ? `border-bottom: 2px solid ${accent};` : ''} }
+  ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : ''} }
 .couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.fondBandeau ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
@@ -349,8 +349,7 @@ ${options.couverture ? htmlCouverture(restaurant, options, couleurs.map((c) => (
       var clair = coins.every(function (d) { return d[3] >= 240 && (0.2126 * d[0] + 0.7152 * d[1] + 0.0722 * d[2]) > 215; });
       if (!clair) return;
       var m = [0, 1, 2].map(function (k) { return Math.round(coins.reduce(function (t, d) { return t + d[k]; }, 0) / 4); });
-      var trait = getComputedStyle(document.querySelector('.couv-filet')).backgroundColor;
-      b.style.background = 'rgb(' + m.join(',') + ')'; b.style.borderBottom = '2px solid ' + trait;
+      b.style.background = 'rgb(' + m.join(',') + ')';
       var logo = b.querySelector('.couv-logo');
       if (logo) { logo.src = b.dataset.logoFond; logo.style.filter = 'none'; logo.style.mixBlendMode = 'multiply'; }
     } catch (e) { /* image d'un autre site sans autorisation de lecture : on laisse la couverture telle quelle */ }
