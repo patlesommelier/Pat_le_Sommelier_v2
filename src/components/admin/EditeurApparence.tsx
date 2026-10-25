@@ -74,12 +74,14 @@ async function couleursDePhoto(f: File): Promise<string[]> {
 interface Props {
   action: (f: FormData) => Promise<Retour>;
   nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
+  /** Section « Couleur des impressions », rendue par la page (avec la couleur trouvée dans le logo). */
+  impression?: React.ReactNode;
   /** Page d'arrivée de l'app : 'menu' ou 'carte'. */
   pageAccueil?: string;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', plats }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', plats, impression }: Props) {
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
   const [palette, setPalette] = useState<string[]>([]);
@@ -205,6 +207,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
           <label className="case"><input type="radio" name="page_accueil" value="carte" defaultChecked={pageAccueil === 'carte'} />
             <span><b>La carte des vins</b><small>Le menu et le sommelier restent accessibles par le bouton « Sommelier ».</small></span></label>
         </section>
+        {impression}
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>
       <aside className="etroit" style={{ alignItems: 'center' }}>

@@ -862,6 +862,11 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
       ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null],
   );
+  // Couleur des impressions : vide = automatique.
+  if (f.has('couleur_impression_envoyee')) {
+    const ci = txt(f, 'couleur_impression');
+    await requete('update restaurant set couleur_impression = $2 where id = $1', [resto, ci && /^#[0-9a-f]{6}$/i.test(ci) ? ci.toUpperCase() : null]);
+  }
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   return { ok: 'Apparence enregistrée : l’app de vos clients est à jour.' };

@@ -25,8 +25,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = new URL(req.url).searchParams;
-  const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null }>(
-    'select nom, couleur, logo_url, logo_fonce_url, logo_choix from restaurant where id = $1', [resto]);
+  const [r] = await requete<{ nom: string; couleur: string; logo_url: string | null; logo_fonce_url: string | null; couleur_impression: string | null; logo_choix: string | null }>(
+    'select nom, couleur, logo_url, logo_fonce_url, logo_choix, couleur_impression from restaurant where id = $1', [resto]);
   if (!r) return new Response('Restaurant introuvable', { status: 404 });
 
   const lignes = await requete<{ id: string; libelle: string; producteur: string | null; millesime: string | null; format: string; couleur: CouleurCarte;

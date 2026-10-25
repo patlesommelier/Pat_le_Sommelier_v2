@@ -18,26 +18,30 @@ export async function couleurDuLogo(url: string | null | undefined): Promise<str
   }
 }
 
-export interface CouleurSupports { couleur: string; app: string; logo: string | null; choix: 'auto' | 'app' | 'logo' | 'autre' }
+export interface CouleurSupports { couleur: string; app: string; logo: string | null; choix: 'auto' | 'app' | 'logo' | 'autre' | 'apparence'; apparence: string | null }
 
 /**
- * Couleur d'un support imprimé, d'après l'adresse (?teinte=app|logo, ou ?couleur=#RRGGBB) ; par défaut, automatique :
- * celle de l'app si elle se lit sur le blanc (bleu foncé…), sinon celle du logo (voir couleurImpression).
+ * Couleur d'un support imprimé, d'après l'adresse (?teinte=auto|app|logo, ou ?couleur=#RRGGBB) ; par défaut, celle choisie dans
+ * « Apparence », sinon automatique : celle de l'app si elle se lit sur le blanc (bleu foncé…), sinon celle du logo (couleurImpression).
  */
-export async function couleurDesSupports(r: { couleur: string; logo_url: string | null; logo_fonce_url?: string | null }, sp: URLSearchParams): Promise<CouleurSupports> {
+export async function couleurDesSupports(r: { couleur: string; logo_url: string | null; logo_fonce_url?: string | null; couleur_impression?: string | null },
+  sp: URLSearchParams): Promise<CouleurSupports> {
   const logo = (await couleurDuLogo(r.logo_fonce_url)) ?? (await couleurDuLogo(r.logo_url));
+  const apparence = r.couleur_impression && /^#[0-9a-f]{6}$/i.test(r.couleur_impression) ? r.couleur_impression.toUpperCase() : null;
+  const base = { app: r.couleur, logo, apparence };
   const autre = sp.get('couleur');
-  if (autre && /^#[0-9a-f]{6}$/i.test(autre)) return { couleur: autre.toUpperCase(), app: r.couleur, logo, choix: 'autre' };
-  if (sp.get('teinte') === 'app') return { couleur: r.couleur, app: r.couleur, logo, choix: 'app' };
-  if (sp.get('teinte') === 'logo' && logo) return { couleur: logo, app: r.couleur, logo, choix: 'logo' };
-  return { couleur: couleurImpression(r.couleur, logo), app: r.couleur, logo, choix: 'auto' };
+  if (autre && /^#[0-9a-f]{6}$/i.test(autre)) return { ...base, couleur: autre.toUpperCase(), choix: 'autre' };
+  if (sp.get('teinte') === 'app') return { ...base, couleur: r.couleur, choix: 'app' };
+  if (sp.get('teinte') === 'logo' && logo) return { ...base, couleur: logo, choix: 'logo' };
+  if (sp.get('teinte') === 'auto' || !apparence) return { ...base, couleur: couleurImpression(r.couleur, logo), choix: 'auto' };
+  return { ...base, couleur: apparence, choix: 'apparence' }; // couleur choisie dans « Apparence »
 }
 
 /** Choix de la couleur dans la barre d'outils d'impression (écran seulement). Le script de la page lit « teinte » et « couleur ». */
 export function controleCouleur(c: CouleurSupports) {
   const opt = (v: string, libelle: string) => `<option value="${v}" ${c.choix === v ? 'selected' : ''}>${libelle}</option>`;
   return `<label>Couleur <select name="teinte" onchange="this.form.elements.couleur.dataset.choisie = ''; envoyer(this.form)">
-    ${opt('auto', 'automatique')}${opt('app', `de l’app (${c.app})`)}${c.logo ? opt('logo', `du logo (${c.logo})`) : ''}${c.choix === 'autre' ? opt('autre', 'choisie') : ''}
+    ${c.apparence ? opt('apparence', `d’Apparence (${c.apparence})`) : ''}${opt('auto', 'automatique')}${opt('app', `de l’app (${c.app})`)}${c.logo ? opt('logo', `du logo (${c.logo})`) : ''}${c.choix === 'autre' ? opt('autre', 'choisie') : ''}
   </select></label>
   <label title="Choisir une autre couleur"><input type="color" name="couleur" value="${c.couleur.toLowerCase()}" data-choisie="${c.choix === 'autre' ? '1' : ''}" style="width:34px;height:26px;padding:0;border:0;background:none;vertical-align:middle"
     onchange="this.dataset.choisie = '1'; envoyer(this.form)"></label>`;
@@ -45,4 +49,4 @@ export function controleCouleur(c: CouleurSupports) {
 
 /** Ligne du script `envoyer` des barres d'impression : ajoute la couleur choisie aux paramètres `p`. */
 export const SCRIPT_COULEUR = `if (f.elements.couleur && f.elements.couleur.dataset.choisie) p.set('couleur', f.elements.couleur.value);
-  else if (f.elements.teinte && f.elements.teinte.value !== 'auto' && f.elements.teinte.value !== 'autre') p.set('teinte', f.elements.teinte.value);`;
+  else if (f.elements.teinte && ['auto', 'app', 'logo'].indexOf(f.elements.teinte.value) >= 0) p.set('teinte', f.elements.teinte.value);`;
