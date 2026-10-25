@@ -6,7 +6,7 @@ import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprima
 import { requete } from '@/lib/db';
 import { SQL_PICTOS } from '@/lib/pictos-sql';
 import { couleurClaire, logoAffiche } from '@/lib/couleurs';
-import { contrasteLogo, controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
+import { contrasteLogo, logoAFondClair, controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { etatPresentations, type EtatPresentations } from '@/lib/generation/file-presentations';
 
 export const dynamic = 'force-dynamic';
@@ -66,7 +66,8 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     afficherPresentation: sp.get('presentation') !== '0',
     afficherProducteur: sp.get('producteur') !== '0',
     couverture: sp.get('couverture') !== '0',
-    bandeauBlanc: sp.get('bandeau') === 'blanc',
+    // Bandeau blanc : choisi, ou d'office quand le logo est une image à fond clair (il ne se pose pas sur une couleur).
+    bandeauBlanc: sp.get('bandeau') === 'blanc' || (sp.get('bandeau') !== 'couleur' && Boolean(await logoAFondClair(r.logo_fonce_url ?? r.logo_url))),
     rappelPat: sp.get('rappel') !== '0',
   };
   const qr = `data:image/svg+xml;base64,${Buffer.from(await qrSvg(await adresseApp(resto), options.noirEtBlanc ? '#1F1A1C' : '#24151A')).toString('base64')}`;
@@ -134,6 +135,7 @@ function envoyer(f) {
  */
 async function logoCouverture(r: { couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null }, couleur: string) {
   const logoUrl = couleurClaire(couleur) ? r.logo_fonce_url ?? logoAffiche({ ...r, couleur })?.url ?? null : r.logo_url ?? r.logo_fonce_url;
-  const contraste = await contrasteLogo(logoUrl, couleur);
-  return { logoUrl, logoEnBlanc: !couleurClaire(couleur) && contraste != null && contraste < 2.2 };
+  // Un logo à fond clair n'est jamais passé en blanc (tout le carré deviendrait blanc).
+  const [contraste, fondClair] = await Promise.all([contrasteLogo(logoUrl, couleur), logoAFondClair(logoUrl)]);
+  return { logoUrl, logoEnBlanc: !fondClair && !couleurClaire(couleur) && contraste != null && contraste < 2.2 };
 }

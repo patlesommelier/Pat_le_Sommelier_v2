@@ -32,6 +32,25 @@ export async function contrasteLogo(url: string | null | undefined, fond: string
   }
 }
 
+/**
+ * Logo sur fond opaque et clair (une image carrée avec son fond blanc ou crème, pas un dessin détouré) : ses quatre coins sont
+ * opaques et clairs. Un tel logo ne se pose pas sur un bandeau de couleur. null : logo illisible par le serveur.
+ */
+export async function logoAFondClair(url: string | null | undefined): Promise<boolean | null> {
+  if (!url) return null;
+  try {
+    const octets = url.startsWith('/')
+      ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
+      : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(5000) })).arrayBuffer());
+    const { data, info } = await sharp(octets).resize(60, 60, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const px = (x: number, y: number) => { const i = (y * info.width + x) * 4; return [data[i], data[i + 1], data[i + 2], data[i + 3]]; };
+    const coins = [px(1, 1), px(info.width - 2, 1), px(1, info.height - 2), px(info.width - 2, info.height - 2)];
+    return coins.every(([r, g, b, a]) => a >= 240 && luminance(r, g, b) > 0.7);
+  } catch {
+    return null;
+  }
+}
+
 export async function couleurDuLogo(url: string | null | undefined): Promise<string | null> {
   if (!url) return null;
   try {

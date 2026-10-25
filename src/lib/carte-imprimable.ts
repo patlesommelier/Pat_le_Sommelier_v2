@@ -238,7 +238,7 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; position: relative; }
 .couv-bandeau { height: 44%; background: ${options.noirEtBlanc || options.bandeauBlanc ? '#FFFFFF' : accent}; display: flex; align-items: center; justify-content: center;
   ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : options.bandeauBlanc ? `border-bottom: 2px solid ${accent};` : ''} }
-.couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; }
+.couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.bandeauBlanc ? 'mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.08); /* le fond blanc ou crème d’un logo carré se fond dans le papier */' : ''} }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.bandeauBlanc ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; }

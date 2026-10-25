@@ -40,7 +40,7 @@ function css(o: OptionsMenu) {
 html, body { margin: 0; background: #FFFFFF; }
 body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .entete { text-align: center; margin-bottom: ${a5 ? '6mm' : '9mm'}; }
-.logo { display: block; margin: 0 auto 3mm; max-height: ${a5 ? '9mm' : '12mm'}; max-width: ${a5 ? '35mm' : '45mm'}; width: auto; height: auto; object-fit: contain; }
+.logo { display: block; margin: 0 auto 3mm; max-height: ${a5 ? '9mm' : '12mm'}; max-width: ${a5 ? '35mm' : '45mm'}; width: auto; height: auto; object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.08); /* fond blanc ou crème d’un logo carré fondu dans le papier */ }
 .logo-fond { display: inline-block; margin: 0 auto 3mm; padding: 2.5mm 4mm; border-radius: 3mm; background: ${accent}; }
 .logo-fond .logo { margin: 0; }
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
