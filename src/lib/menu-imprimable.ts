@@ -27,7 +27,7 @@ function htmlPlat(p: PlatImprimable, o: OptionsMenu) {
   return `<div class="plat">
   <div class="plat-ligne"><span class="plat-nom">${echapper(p.nom)}</span><span class="points" aria-hidden="true"></span>${p.prix ? `<span class="plat-prix">${echapper(p.prix)}</span>` : ''}</div>
   ${p.description ? `<p class="plat-description">${echapper(p.description)}</p>` : ''}
-  ${v ? `<p class="vin"><span class="vin-mot">Pat suggère</span> <span class="vin-titre">${echapper(v.titre)}</span>${v.detail ? ` <span class="vin-detail">${echapper(v.detail)}</span>` : ''}${o.prixVin && v.prix ? ` <span class="vin-prix">${echapper(v.prix)}</span>` : ''}</p>` : ''}
+  ${v ? `<p class="vin"><span class="vin-mot">Vin proposé</span> <span class="vin-titre">${echapper(v.titre)}</span>${v.detail ? ` <span class="vin-detail">${echapper(v.detail)}</span>` : ''}${o.prixVin && v.prix ? ` <span class="vin-prix">${echapper(v.prix)}</span>` : ''}</p>` : ''}
 </div>`;
 }
 
