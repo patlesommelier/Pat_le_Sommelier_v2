@@ -6,7 +6,7 @@ import { genererCarteHTML, type CouleurCarte, type OptionsCarte, type VinImprima
 import { requete } from '@/lib/db';
 import { SQL_PICTOS } from '@/lib/pictos-sql';
 import { couleurClaire, logoAffiche } from '@/lib/couleurs';
-import { controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
+import { contrasteLogo, controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { etatPresentations, type EtatPresentations } from '@/lib/generation/file-presentations';
 
 export const dynamic = 'force-dynamic';
@@ -18,7 +18,8 @@ const resume = (r: string | null) => (r ? r.replace(/\s*;\s*/g, ' ; ').trim().re
 
 /**
  * Carte des vins imprimable du restaurant : /admin/<resto>/carte/imprimer
- * Options dans l'adresse : format=A5, nb=1 (noir et blanc), ordre=prix, presentation=0, producteur=0, couverture=0, rappel=0.
+ * Options dans l'adresse : format=A5, nb=1 (noir et blanc), ordre=prix, presentation=0, producteur=0, couverture=0, rappel=0,
+ * bandeau=blanc (couverture avec bandeau blanc), teinte / couleur (couleur des titres).
  * Seuls les champs publics des vins sont lus : jamais de ranking, de note ni de score.
  */
 export async function GET(req: Request, { params }: { params: Promise<{ resto: string }> }) {
@@ -65,13 +66,14 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     afficherPresentation: sp.get('presentation') !== '0',
     afficherProducteur: sp.get('producteur') !== '0',
     couverture: sp.get('couverture') !== '0',
+    bandeauBlanc: sp.get('bandeau') === 'blanc',
     rappelPat: sp.get('rappel') !== '0',
   };
   const qr = `data:image/svg+xml;base64,${Buffer.from(await qrSvg(await adresseApp(resto), options.noirEtBlanc ? '#1F1A1C' : '#24151A')).toString('base64')}`;
   const sansPresentation = vins.filter((v) => v.visible && !v.presentationPerso && !lignes.find((l) => l.id === v.id)?.presentation_carte).length;
 
   const html = genererCarteHTML({
-    restaurant: { nom: r.nom, ...logoCouverture(r, teinte.couleur), logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
+    restaurant: { nom: r.nom, ...(await logoCouverture(r, teinte.couleur)), logoSurBlanc: r.logo_fonce_url ?? r.logo_url, logoSombreUrl: r.logo_fonce_url, qrCodeUrl: qr, patLogoUrl: new URL('/pat/pat-avatar.svg', req.url).href },
     vins, options, barre: barreOutils(resto, options, teinte, sansPresentation, sansPresentation ? pourquoi(await etatPresentations(requete, resto)) : ''),
   });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
@@ -108,6 +110,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, teinte: CouleurSup
   ${coche('presentation', 'Présentations', o.afficherPresentation)}
   ${coche('producteur', 'Producteurs', o.afficherProducteur)}
   ${coche('couverture', 'Couverture', o.couverture)}
+  <label>Bandeau <select name="bandeau" onchange="envoyer(this.form)"><option value="couleur" ${!o.bandeauBlanc ? 'selected' : ''}>de couleur</option><option value="blanc" ${o.bandeauBlanc ? 'selected' : ''}>blanc</option></select></label>
   ${coche('rappel', 'Rappel « Demandez à Pat »', o.rappelPat)}
   <button type="button" onclick="window.print()" style="padding:8px 16px;border:0;border-radius:999px;background:#FFF;color:#24151A;font-weight:700;cursor:pointer">Imprimer / Enregistrer en PDF</button>
   ${sansPresentation ? `<span style="flex-basis:100%;text-align:center;font-size:12.5px;opacity:.85">${sansPresentation} vin${sansPresentation > 1 ? 's' : ''} sans présentation de Pat : le résumé court est utilisé. ${echapper(raison)}</span>` : ''}
@@ -117,7 +120,7 @@ function barreOutils(resto: string, o: Partial<OptionsCarte>, teinte: CouleurSup
 // Cases décochées : envoyer 0 (une case cochée par défaut doit pouvoir être retirée).
 function envoyer(f) {
   var p = new URLSearchParams();
-  ['format', 'ordre'].forEach(function (n) { p.set(n, f.elements[n].value); });
+  ['format', 'ordre', 'bandeau'].forEach(function (n) { p.set(n, f.elements[n].value); });
   ['nb', 'presentation', 'producteur', 'couverture', 'rappel'].forEach(function (n) { p.set(n, f.elements[n].checked ? '1' : '0'); });
   ${SCRIPT_COULEUR}
   location.search = p.toString();
@@ -126,11 +129,11 @@ function envoyer(f) {
 }
 
 /**
- * Logo de la couverture, posé sur la couleur imprimée : sur une couleur foncée, le logo clair (ou le foncé passé en blanc) ;
- * sur une couleur claire, celui de l'app.
+ * Logo de la couverture, posé sur la couleur imprimée : sur une couleur foncée, le logo clair, sinon le foncé ; s'il ne se voit
+ * pas sur cette couleur (logo bleu sur un bandeau bleu), il passe en blanc.
  */
-function logoCouverture(r: { couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null }, couleur: string) {
-  if (couleurClaire(couleur)) return { logoUrl: r.logo_fonce_url ?? logoAffiche({ ...r, couleur })?.url ?? null };
-  if (r.logo_url) return { logoUrl: r.logo_url };
-  return { logoUrl: r.logo_fonce_url, logoEnBlanc: Boolean(r.logo_fonce_url) };
+async function logoCouverture(r: { couleur: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null }, couleur: string) {
+  const logoUrl = couleurClaire(couleur) ? r.logo_fonce_url ?? logoAffiche({ ...r, couleur })?.url ?? null : r.logo_url ?? r.logo_fonce_url;
+  const contraste = await contrasteLogo(logoUrl, couleur);
+  return { logoUrl, logoEnBlanc: !couleurClaire(couleur) && contraste != null && contraste < 2.2 };
 }

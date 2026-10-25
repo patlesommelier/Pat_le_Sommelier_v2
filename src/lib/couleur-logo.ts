@@ -5,6 +5,33 @@ import sharp from 'sharp';
 import { couleurDominante, couleurImpression } from './couleurs';
 
 /** Couleur dominante du logo d'un restaurant (adresse publique ou fichier de public/), ou null. Jamais d'erreur. */
+const luminance = (r: number, g: number, b: number) => {
+  const lin = (v: number) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
+  return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b);
+};
+
+/**
+ * Le logo se voit-il sur ce fond ? Contraste entre la luminance moyenne de ses pixels visibles et celle du fond (#RRGGBB).
+ * null : logo illisible par le serveur (on le laisse tel quel).
+ */
+export async function contrasteLogo(url: string | null | undefined, fond: string): Promise<number | null> {
+  if (!url) return null;
+  try {
+    const octets = url.startsWith('/')
+      ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
+      : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(5000) })).arrayBuffer());
+    const { data } = await sharp(octets).resize(80, 80, { fit: 'inside' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    let somme = 0, n = 0;
+    for (let i = 0; i + 3 < data.length; i += 4) if (data[i + 3] >= 128) { somme += luminance(data[i], data[i + 1], data[i + 2]); n++; }
+    if (!n) return null;
+    const f = parseInt(fond.slice(1), 16);
+    const [l1, l2] = [somme / n, luminance((f >> 16) & 255, (f >> 8) & 255, f & 255)];
+    return (Math.max(l1, l2) + 0.05) / (Math.min(l1, l2) + 0.05);
+  } catch {
+    return null;
+  }
+}
+
 export async function couleurDuLogo(url: string | null | undefined): Promise<string | null> {
   if (!url) return null;
   try {
