@@ -24,7 +24,8 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
   const tour = Math.max(1, Math.min(5, Number(sp.tour) || 1));
   const statuts = arelire ? ['valide', 'propose'] : accordsVisibles();
   const { candidats, lignesParVin, exclus } = choisis.length ? await getCandidats(resto, choisis, statuts) : { candidats: [], lignesParVin: new Map(), exclus: new Set<string>() };
-  const sel = selectionner(candidats, choisis, { reglages: R });
+  const suggestion = actifs.some((p) => choisis.includes(p.id) && p.categorie === 'suggestion');
+  const sel = selectionner(candidats, choisis, { reglages: R, suggestion });
   // Tours suivants : chaque tour reprend là où le précédent s'est arrêté.
   const proposes = sel.liste.map((r) => r.vin.id);
   let liste = sel.liste;

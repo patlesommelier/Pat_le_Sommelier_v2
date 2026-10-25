@@ -145,12 +145,19 @@ async function lancerChoixTable(d: DemandeTable) {
   if (statut !== 202 && statut !== 200) void calculerChoixTable(requete, d).catch((e) => console.error('[plusieurs plats]', e));
 }
 
+/** Un des plats est une suggestion du moment (règle 12 : prix maximum du vin). */
+export async function avecSuggestion(platIds: string[]) {
+  if (!platIds.length) return false;
+  const [r] = await requete<{ oui: boolean }>(`select exists (select 1 from plat where id = any($1) and categorie = 'suggestion') as oui`, [platIds]);
+  return Boolean(r?.oui);
+}
+
 export async function getPropositions(restaurantId: string, platId: string | string[], tour = 1): Promise<{ propositions: Proposition[]; encore: boolean; patReflechit?: boolean }> {
   // Plusieurs plats choisis ensemble : vins notés sur tous, la note la plus basse compte, sans règle de diversité.
   const platIds = Array.isArray(platId) ? platId : [platId];
-  const [{ candidats, lignesParVin }, R0] = await Promise.all([getCandidats(restaurantId, platIds), getReglages(restaurantId)]);
+  const [{ candidats, lignesParVin }, R0, suggestion] = await Promise.all([getCandidats(restaurantId, platIds), getReglages(restaurantId), avecSuggestion(platIds)]);
   const R = platIds.length > 1 ? { ...R0, diversite: false } : R0;
-  const sel = selectionner(candidats, platIds, { reglages: R });
+  const sel = selectionner(candidats, platIds, { reglages: R, suggestion });
   let liste: Retenu<CandidatVin>[] = sel.liste;
   let encore: boolean;
   // Plusieurs plats : Pat choisit et explique selon ses principes « plusieurs plats », parmi les vins au-dessus du seuil sur tous

@@ -31,3 +31,15 @@ test('bulles après : à score égal, l’autre vin passe devant la bulle', () =
   const meilleure = selectionner([{ ...b, notes: { p: 5 } }, r], ['p'], { reglages: { ...REGLAGES_PAT } });
   assert.equal(meilleure.liste[0].vin.id, 'bulle');
 });
+
+test('règle 12 : avec une suggestion du moment, pas de bouteille au-dessus du prix maximum', async () => {
+  const { selectionner } = await import('../src/lib/selection');
+  const v = (id: string, prix: number | null, note: number) => ({ id, libelle: id, couleur: 'rouge', format: '75 cl', prix, ordre: 0, notes: { p: note },
+    ranking_producteur: 0, ranking_terroir: null, pays: null, cepages: null, appellation: null, coup_de_coeur: false });
+  const vins = [v('cher', 80, 5), v('moyen', 45, 4), v('verre', null, 4)];
+  const avec = selectionner(vins, ['p'], { suggestion: true }).liste.map((r) => r.vin.id);
+  assert.ok(!avec.includes('cher'));
+  assert.ok(avec.includes('moyen') && avec.includes('verre'));
+  assert.ok(selectionner(vins, ['p']).liste.map((r) => r.vin.id).includes('cher'));
+  assert.ok(selectionner(vins, ['p'], { suggestion: true, reglages: { prixMaxSuggestion: 0 } }).liste.map((r) => r.vin.id).includes('cher'));
+});

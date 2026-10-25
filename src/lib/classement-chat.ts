@@ -7,13 +7,13 @@ import { selectionner, tourSuivant } from './selection';
  * (les mêmes que la page « Mes propositions ») : Tour 1, puis les tours suivants jusqu'à épuisement.
  * Les vins notés sous le seuil n'y figurent pas. Texte réservé au prompt (cuisine interne : notes /5).
  */
-export async function texteClassements(restaurantId: string, plats: { id: string; nom: string }[]): Promise<string> {
+export async function texteClassements(restaurantId: string, plats: { id: string; nom: string; categorie?: string }[]): Promise<string> {
   if (!plats.length) return 'Aucun plat au menu.';
   const [{ candidats }, R] = await Promise.all([getCandidats(restaurantId, plats.map((p) => p.id)), getReglages(restaurantId)]);
   return plats
     .map((p) => {
       const surCePlat = candidats.filter((c) => typeof c.notes[p.id] === 'number');
-      const sel = selectionner(surCePlat, [p.id], { reglages: R });
+      const sel = selectionner(surCePlat, [p.id], { reglages: R, suggestion: p.categorie === 'suggestion' });
       const ligne = (vins: { vin: { id: string }; note: number }[]) => vins.map((r) => `${r.vin.id} (${r.note})`).join(', ');
       const lignes = [`${p.nom} [${p.id}]`, `  Tour 1 : ${sel.liste.length ? ligne(sel.liste) : 'aucun vin'}`];
       const proposes = sel.liste.map((r) => r.vin.id);

@@ -62,12 +62,14 @@ export interface Reglages {
   plafondBulles: number;      // règle 11
   bonusCoupDeCoeur: boolean;  // règle 2c : + 1 au score d'un coup de cœur de la maison
   bullesApres: boolean;       // règle 2b : à score égal, un autre vin passe avant une bulle
+  prixMaxSuggestion: number;  // règle 12 : prix maximum (bouteille) d'un vin proposé avec une suggestion du moment ; 0 = sans limite
   tourSuivant: number;        // Tour 2 : nombre de vins
 }
 
 export const REGLAGES_PAT: Reglages = {
   contenance: true, noteEliminatoire: 2, diversite: true, premiers: 3, maximum: 5, noteMinAjout: 4, scoreMinAjout: 7,
   plusCher: true, facteurPlusCher: 1.5, moinsCher: true, ecartMoinsCher: 1.3, plafondBulles: 2, tourSuivant: 3, bonusCoupDeCoeur: true, bullesApres: true,
+  prixMaxSuggestion: 50,
 };
 
 /** Réglages internes à Pat (ils reposent sur le score, donc sur ses rankings) : jamais modifiables par le restaurant. */
@@ -186,6 +188,8 @@ export interface Options {
   /** Règle 3 (diversité). Vraie pour « Plat seul » (si le réglage l'autorise), fausse pour « Plusieurs plats ». */
   diversite?: boolean;
   reglages?: Partial<Reglages>;
+  /** Un des plats est une suggestion du moment : règle 12, les vins plus chers que prixMaxSuggestion sont écartés. */
+  suggestion?: boolean;
 }
 
 /** Sélection « Plat seul » (un plat) ou « Plusieurs plats » (plusieurs). */
@@ -200,7 +204,10 @@ export function selectionner<C extends Candidat>(vins: C[], plats: string[], opt
   const PREMIERS = R.premiers, MAXIMUM = R.maximum;
 
   // Règles 10, 1 et 2 → classement
+  // Règle 12 : avec une suggestion du moment, pas de bouteille au-dessus du prix maximum (un vin sans prix bouteille reste).
+  const plafondPrix = options.suggestion && R.prixMaxSuggestion > 0 ? R.prixMaxSuggestion : Infinity;
   const classement: Retenu<C>[] = contenance(vins, R.contenance)
+    .filter((vin) => vin.prix == null || vin.prix <= plafondPrix)
     .map((vin) => {
       const note = noteSur(vin, plats);
       return note === null ? null : { vin, note, score: scoreVin(note, vin, R), motif: 'classement' as Motif };

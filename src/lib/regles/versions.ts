@@ -37,6 +37,7 @@ export function validerParametres(p: Reglages): string[] {
   if (!(p.ecartMoinsCher >= 1 && p.ecartMoinsCher <= 5)) e.push('Vin moins cher : écart de 1 à 5.');
   if (!entier(p.plafondBulles, 0, 8)) e.push('Bulles au plus : entier de 0 à 8.');
   if (!entier(p.tourSuivant, 1, 6)) e.push('Tour suivant : entier de 1 à 6.');
+  if (!(p.prixMaxSuggestion >= 0 && p.prixMaxSuggestion <= 10000)) e.push('Prix maximum avec une suggestion : de 0 (sans limite) à 10 000 €.');
   return e;
 }
 

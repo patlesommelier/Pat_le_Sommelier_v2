@@ -76,7 +76,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
       sansNote: carte.filter((v) => !notes.has(v.id) && !exclus.has(v.id) && !refus.has(v.id)),
     };
   })() : null;
-  const sel = plat ? selectionner(candidats, [plat.id], { reglages: R }) : { liste: [], classement: [] };
+  const sel = plat ? selectionner(candidats, [plat.id], { reglages: R, suggestion: plat.categorie === 'suggestion' }) : { liste: [], classement: [] };
   const retenus = new Set(sel.liste.map((r) => r.vin.id));
   const tour2 = new Set(tourSuivant(sel, [...retenus], R.tourSuivant, R.diversite, R.plafondBulles, R.bullesApres).map((r) => r.vin.id));
   const tous = [...candidats]

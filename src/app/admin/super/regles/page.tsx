@@ -25,6 +25,7 @@ const PARAMETRES: { cle: keyof Reglages; libelle: string; aide: string; pas?: nu
   { cle: 'moinsCher', libelle: 'Vin moins cher (règle 8)', aide: 'ajouter un vin plus accessible' },
   { cle: 'ecartMoinsCher', libelle: 'Écart « moins cher » (8)', aide: 'déclenché si le moins cher de la liste dépasse cet écart', pas: 0.1 },
   { cle: 'plafondBulles', libelle: 'Bulles au plus (règle 11)', aide: 'nombre de vins effervescents au plus' },
+  { cle: 'prixMaxSuggestion', libelle: 'Prix maximum avec une suggestion (règle 12)', aide: 'prix bouteille au plus d’un vin proposé avec une suggestion du moment (0 : sans limite)' },
   { cle: 'tourSuivant', libelle: 'Tour suivant', aide: 'vins proposés quand le client veut autre chose' },
 ];
 const date = (d: string | null) => (d ? new Date(d).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'short', year: 'numeric' }) : '—');

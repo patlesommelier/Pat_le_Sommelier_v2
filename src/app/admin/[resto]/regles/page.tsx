@@ -27,6 +27,7 @@ const GROUPES: [string, Def[]][] = [
     { n: '7', titre: 'Un vin plus cher', texte: 'Un vin bien noté nettement plus cher que la liste, pour les grandes occasions.', champs: [{ cle: 'plusCher', libelle: 'Actif' }, { cle: 'facteurPlusCher', libelle: 'Prix ≥', suffixe: '× le plus cher' }], client: 'Pour une belle occasion' },
     { n: '8', titre: 'Un vin moins cher', texte: 'Quand tous les vins ont un prix proche, un vin bien noté deux fois moins cher.', champs: [{ cle: 'moinsCher', libelle: 'Actif' }, { cle: 'ecartMoinsCher', libelle: 'Si écart <', suffixe: '×' }], client: 'Plus accessible' },
     { n: '11', titre: 'Plafond bulles', texte: 'Pas plus d’effervescents dans une liste que ce nombre (un de plus si les seuls vins notés 5 sont des bulles).', champs: [{ cle: 'plafondBulles', libelle: 'Au plus' }] },
+    { n: '12', titre: 'Vin des suggestions du moment', texte: 'Avec un plat de vos suggestions, Pat ne propose pas de bouteille au-dessus de ce prix (0 : sans limite).', champs: [{ cle: 'prixMaxSuggestion', libelle: 'Au plus', suffixe: '€' }] },
     { n: 'T2', titre: 'Tour suivant', texte: 'Si le client veut autre chose, Pat propose les vins suivants du classement.', champs: [{ cle: 'tourSuivant', libelle: 'Vins' }] },
   ]],
 ];

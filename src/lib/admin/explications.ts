@@ -67,4 +67,5 @@ export const LIBELLES_REGLAGES: Record<keyof Reglages, string> = {
   tourSuivant: 'Vins proposés au tour 2',
   bonusCoupDeCoeur: 'Coup de cœur de la maison : + 1 au score (règle 2c)',
   bullesApres: 'À score égal, un autre vin avant les bulles (règle 2b)',
+  prixMaxSuggestion: 'Prix maximum d’un vin avec une suggestion du moment (règle 12)',
 };
