@@ -136,7 +136,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
             return (
               <Link key={p.id} href={`/admin/${resto}/accords?plat=${p.id}`} aria-current={on ? 'true' : undefined}
                 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, minHeight: 48, padding: '8px 14px', borderRadius: 12, textDecoration: 'none',
-                  background: on ? 'var(--encre)' : '#EFEBE9', color: on ? '#EFEBE9' : 'var(--texte)', border: `1px solid ${on ? 'var(--encre)' : 'var(--ligne)'}` }}>
+                  background: on ? 'var(--encre)' : 'var(--carte)', color: on ? '#FEFAF1' : 'var(--texte)', border: `1px solid ${on ? 'var(--encre)' : 'var(--ligne)'}` }}>
                 <span style={{ display: 'flex', flexDirection: 'column' }}><b style={{ fontSize: 14.5 }}>{p.nom_court ?? p.nom}</b><span style={{ fontSize: 12.5, opacity: 0.8 }}>{CAT[p.categorie]}</span></span>
                 <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: 12.5, fontWeight: 700, whiteSpace: 'nowrap' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}
                   {anciens.get(p.id) ? <span style={{ fontWeight: 700, opacity: 0.85 }}>textes d’origine</span> : null}</span>

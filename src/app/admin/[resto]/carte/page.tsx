@@ -52,21 +52,21 @@ export default async function Carte({ params, searchParams }: { params: Promise<
     : enRecherche ? `${enRecherche} déjà en recherche${introuvables ? `, ${introuvables} introuvable(s)` : ''}` : `${introuvables} introuvable(s) chez Wine Labs : à photographier`);
   return (
     <>
-      <Entete titre="Carte des vins" />
+      <Entete titre="Carte des vins" texte="Vos vins, leurs contenances et leurs prix, dans l’ordre de votre carte. Pat les présente à vos clients et les accorde à vos plats.">
+        <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
+        <BoutonCarteImprimee resto={resto} />
+        <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">+ Ajouter un vin</Link>
+      </Entete>
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
         : <Message ok={sp.ok === '1' ? 'Enregistré.' : sp.ok} erreur={sp.erreur} />}
-      {/* Étiquettes manquantes et boutons sur une même ligne */}
-      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 18 }}>
-        <div className="carte-bo" style={{ padding: '14px 20px', flex: '0 1 250px' }}><div className="chiffre" style={{ color: 'var(--ocre)' }}>{sansEtiquette}</div><span className="discret">étiquettes manquantes</span>
-          {sansEtiquette > 0 && <div className="petit">Pat les cherche ; vous pouvez aussi envoyer vos photos</div>}
-        </div>
-        <div className="ligne-actions">
-          <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">Ajouter un vin</Link>
-          <BoutonCarteImprimee resto={resto} />
-          <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
-        </div>
-      </div>
+      {/* Chiffres clés de la carte */}
+      <section className="stats" aria-label="Résumé de la carte">
+        <div className="stat"><span className="chiffre">{tousGroupes.length}</span><span>vins sur la carte</span></div>
+        <div className="stat"><span className="chiffre">{tousGroupes.filter((g) => g.contenances.some((x) => /verre/i.test(x)) || g.tous.some((x) => x.prix_verre != null)).length}</span><span>servis au verre</span></div>
+        <div className="stat"><span className="chiffre">{tousGroupes.filter((g) => g.tous.some((x) => x.coup_de_coeur)).length}</span><span>coups de cœur</span></div>
+        <div className="stat"><span className="chiffre" style={{ color: sansEtiquette ? 'var(--fuchsia)' : undefined }}>{sansEtiquette}</span><span>{sansEtiquette ? 'étiquettes à ajouter : Pat les cherche, vous pouvez envoyer vos photos' : 'étiquette à ajouter'}</span></div>
+      </section>
       {/* Super-admin : recherche Wine Labs (crédits), sur sa propre ligne */}
       {wineLabs && (
         <form action={chercherEtiquettes.bind(null, resto)} style={{ display: 'flex', flexDirection: 'column', gap: 4, alignItems: 'flex-start' }}>
@@ -77,12 +77,14 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       )}
       <div className="rangee">
         <section className="large">
-          <nav className="onglets" aria-label="Couleurs" style={{ alignItems: 'center' }}>
-            {presentes.map(([k, l]) => (
-              <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{tousGroupes.filter((g) => placeDe.get(g) === k).length}</span></Link>
-            ))}
+          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: '12px 20px' }}>
+            <nav className="onglets" aria-label="Couleurs">
+              {presentes.map(([k, l]) => (
+                <Link key={k} href={`/admin/${resto}/carte?c=${k}`} aria-current={c === k ? 'true' : undefined}>{l} <span>{tousGroupes.filter((g) => placeDe.get(g) === k).length}</span></Link>
+              ))}
+            </nav>
             <CasesCategories choisies={restaurant?.categories_carte ?? []} enregistrer={changerCategoriesCarte.bind(null, resto)} />
-          </nav>
+          </div>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>
               <thead><tr><th>Vin</th><th>Millésime</th><th>Producteur</th><th>Cépage</th><th>Contenances</th><th className="droite">Prix</th>{pourPat && <th>Étiquette</th>}<th /></tr></thead>

@@ -35,7 +35,7 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
         ? <button type="button" onClick={() => setGrand(true)} aria-label={`Voir en grand : ${alt.toLowerCase()}`} title="Voir en grand"
             style={{ padding: 0, border: 0, background: 'none', cursor: 'zoom-in' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={image} alt={alt} style={{ display: 'block', width: '100%', height: hauteur, objectFit: 'contain', background: '#EFEBE9', borderRadius: 10, border: '1px solid #AFB0AE' }} />
+            <img src={image} alt={alt} style={{ display: 'block', width: '100%', height: hauteur, objectFit: 'contain', background: '#FAF5EC', borderRadius: 14, border: '1px solid var(--ligne)' }} />
           </button>
         : <span className="vignette vide" style={{ width: '100%', height: Math.min(200, hauteur) }} aria-hidden="true"><Icone nom="bottle" taille={36} /></span>}
       {grand && image && (

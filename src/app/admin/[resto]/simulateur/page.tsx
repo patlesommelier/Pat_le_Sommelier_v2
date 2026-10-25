@@ -66,7 +66,7 @@ export default async function Simulateur({ params, searchParams }: { params: Pro
                   <legend style={{ fontSize: 13, fontWeight: 700, marginBottom: 8 }}>{l}</legend>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: 6 }}>
                     {ps.map((p) => {
-                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1.5px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : '#EFEBE9', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
+                      const style = { display: 'inline-flex', alignItems: 'center', gap: 6, minHeight: 36, padding: '4px 10px', borderRadius: 999, border: `1px solid ${choisis.includes(p.id) ? 'var(--encre)' : 'var(--ligne-forte)'}`, background: choisis.includes(p.id) ? 'var(--rose)' : 'var(--carte)', fontSize: 13.5, cursor: 'pointer', color: 'var(--texte)', textDecoration: 'none' };
                       // Un seul plat : un clic l'affiche directement (avec le téléphone). Plusieurs plats : cases à cocher.
                       return table ? (
                         <label key={p.id} style={style}>

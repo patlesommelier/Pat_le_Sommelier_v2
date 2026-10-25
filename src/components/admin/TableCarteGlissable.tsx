@@ -96,11 +96,11 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
               <td colSpan={8}>
                 <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                   <span draggable={!fixe} onDragStart={(e) => { setGlisse({ type: 'rubrique', cle: r.cle }); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', ''); }} onDragEnd={fin}
-                    title="Glissez pour déplacer la sous-catégorie avec ses vins" aria-hidden="true" style={{ cursor: 'grab', color: '#AFB0AE', fontSize: 18, padding: '0 4px' }}>⋮⋮</span>
+                    title="Glissez pour déplacer la sous-catégorie avec ses vins" aria-hidden="true" style={{ cursor: 'grab', color: '#C9BCB8', fontSize: 18, padding: '0 4px' }}>⋮⋮</span>
                   <input key={r.nom} defaultValue={r.nom} autoFocus={nouvelle === r.cle} aria-label="Nom de la sous-catégorie" maxLength={80}
                     placeholder={r.vins.length ? 'Sans titre (aucune sous-catégorie affichée)' : 'Nom de la nouvelle sous-catégorie'}
                     onBlur={(e) => renommer(ri, e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); e.currentTarget.blur(); } }}
-                    style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }} />
+                    style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 700, textTransform: 'uppercase', letterSpacing: 1.8, color: 'var(--fuchsia)' }} />
                   <button type="button" className="btn fantome petit" disabled={ri === 0 || enCours} onClick={() => deplacerRubrique(ri, ri - 1)} aria-label="Monter la sous-catégorie">↑</button>
                   <button type="button" className="btn fantome petit" disabled={ri === rubriques.length - 1 || enCours} onClick={() => deplacerRubrique(ri, ri + 1)} aria-label="Descendre la sous-catégorie">↓</button>
                   <span className="petit discret">{r.vins.length ? `${r.vins.length} vin${r.vins.length > 1 ? 's' : ''}` : 'Vide : déposez-y un vin pour la créer'}</span>
