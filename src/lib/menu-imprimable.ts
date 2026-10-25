@@ -87,8 +87,10 @@ export function genererMenuHTML({ restaurant, logo, sections, options: o, barre 
   const img = logo ? `<img class="logo" src="${echapper(logo.url)}" alt="${echapper(restaurant)}"${o.noirEtBlanc ? ' style="filter: grayscale(1)"' : ''}>` : '';
   const htmlLogo = logo ? (logo.clair ? `<span class="logo-fond">${img}</span>` : img) : '';
   const remplies = sections.filter((s) => s.plats.length);
-  // Peu de plats (les suggestions de la semaine, souvent) : ils sont centrés dans la hauteur de la page, entre le titre et le bas.
+  // Peu de plats (les suggestions de la semaine, souvent) : ils sont centrés dans la hauteur de la page, avec leur titre.
   const centre = remplies.length === 1 && remplies[0].plats.length <= 8;
+  // Le titre suit les plats au milieu de la page quand ils sont centrés.
+  const entete = `<header class="entete">${htmlLogo}<span class="entete-nom">${echapper(restaurant)}</span><h1>${echapper(o.titre)}</h1><div class="filet"></div></header>`;
   const corps = remplies.length
     ? remplies.map((s) => `<section class="section">${remplies.length > 1 || s.titre !== o.titre ? `<h2>${echapper(s.titre)}</h2>` : ''}
 ${s.plats.map((p) => htmlPlat(p, o)).join('\n')}
@@ -107,8 +109,7 @@ ${s.plats.map((p) => htmlPlat(p, o)).join('\n')}
 <body>
 ${barre}
 <main class="pages${centre ? ' centre' : ''}">
-  <header class="entete">${htmlLogo}<span class="entete-nom">${echapper(restaurant)}</span><h1>${echapper(o.titre)}</h1><div class="filet"></div></header>
-  <div class="corps">${corps}</div>
+  ${centre ? `<div class="corps">${entete}${corps}</div>` : `${entete}<div class="corps">${corps}</div>`}
   ${o.rappelPat ? '<div class="fin"><p>Envie d’un autre vin ? Scannez le QR code de votre table : Pat vous conseille selon votre plat.</p></div>' : ''}
 </main>
 </body>
