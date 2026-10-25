@@ -45,7 +45,9 @@ export interface OptionsCarte {
   afficherPresentation: boolean;
   afficherProducteur: boolean;
   couverture: boolean;
-  bandeauBlanc?: boolean;       // couverture : bandeau blanc (logo dans ses couleurs, filet de couleur) plutôt que de couleur
+  bandeauAuto?: boolean;        // bandeau automatique : le navigateur peut encore prendre le fond clair du logo (filet de sécurité)
+  fondBandeau?: string | null;  // couverture : bandeau de cette couleur (blanc, ou le fond crème du logo), logo dans ses couleurs ;
+                                // sinon bandeau de la couleur des titres
   rappelPat: boolean;
 }
 
@@ -196,14 +198,14 @@ function htmlVin(vin: VinImprimable, options: OptionsCarte) {
 }
 
 function htmlCouverture(restaurant: RestaurantImprimable, options: OptionsCarte, couleursPresentes: string[]) {
-  const blanc = options.noirEtBlanc || options.bandeauBlanc;
-  const logo = options.noirEtBlanc ? restaurant.logoSombreUrl ?? restaurant.logoSurBlanc : options.bandeauBlanc ? restaurant.logoSurBlanc : restaurant.logoUrl;
+  const blanc = options.noirEtBlanc || Boolean(options.fondBandeau);
+  const logo = options.noirEtBlanc ? restaurant.logoSombreUrl ?? restaurant.logoSurBlanc : options.fondBandeau ? restaurant.logoSurBlanc : restaurant.logoUrl;
   const marque = logo
     ? `<img class="couv-logo" src="${echapper(logo)}" alt="${echapper(restaurant.nom)}"${restaurant.logoEnBlanc && !blanc ? ' style="filter: brightness(0) invert(1)"' : ''}>`
     : `<span class="couv-nom">${echapper(restaurant.nom)}</span>`;
   const qr = restaurant.qrCodeUrl ? `<img class="couv-qr" src="${echapper(restaurant.qrCodeUrl)}" alt="QR code de ${echapper(restaurant.nom)}">` : '';
   return `<section class="couverture">
-  <div class="couv-bandeau">${marque}</div>
+  <div class="couv-bandeau"${!blanc && options.bandeauAuto && restaurant.logoSurBlanc ? ` data-logo-fond="${echapper(restaurant.logoSurBlanc)}"` : ''}>${marque}</div>
   <div class="couv-corps">
     <h1>Carte des vins</h1>
     <span class="couv-filet" aria-hidden="true"></span>
@@ -236,10 +238,10 @@ html, body { margin: 0; background: #FFFFFF; }
 body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C;
   -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; position: relative; }
-.couv-bandeau { height: 44%; background: ${options.noirEtBlanc || options.bandeauBlanc ? '#FFFFFF' : accent}; display: flex; align-items: center; justify-content: center;
-  ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : options.bandeauBlanc ? `border-bottom: 2px solid ${accent};` : ''} }
-.couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.bandeauBlanc ? 'mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.08); /* le fond blanc ou crème d’un logo carré se fond dans le papier */' : ''} }
-.couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.bandeauBlanc ? accent : '#FFFFFF'}; }
+.couv-bandeau { height: 44%; background: ${options.noirEtBlanc ? '#FFFFFF' : options.fondBandeau ?? accent}; display: flex; align-items: center; justify-content: center;
+  ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : options.fondBandeau ? `border-bottom: 2px solid ${accent};` : ''} }
+.couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
+.couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.fondBandeau ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; }
 .couv-filet { width: 15mm; height: 2px; background: ${accent}; }
@@ -332,6 +334,30 @@ ${options.couverture ? htmlCouverture(restaurant, options, couleurs.map((c) => (
   ${corps}
   ${fin}
 </main>
+<script>
+// Filet de sécurité : si le serveur n'a pas pu lire le logo, le navigateur regarde ses coins ; un logo carré à fond clair
+// (blanc, crème) donne alors sa couleur de fond au bandeau, et y est posé dans ses couleurs.
+(function () {
+  var b = document.querySelector('.couv-bandeau[data-logo-fond]');
+  if (!b) return;
+  var img = new Image(); img.crossOrigin = 'anonymous';
+  img.onload = function () {
+    try {
+      var c = document.createElement('canvas'); c.width = 60; c.height = 60;
+      var x = c.getContext('2d'); x.drawImage(img, 0, 0, 60, 60);
+      var coins = [[3, 3], [56, 3], [3, 56], [56, 56]].map(function (p) { return x.getImageData(p[0], p[1], 1, 1).data; });
+      var clair = coins.every(function (d) { return d[3] >= 240 && (0.2126 * d[0] + 0.7152 * d[1] + 0.0722 * d[2]) > 215; });
+      if (!clair) return;
+      var m = [0, 1, 2].map(function (k) { return Math.round(coins.reduce(function (t, d) { return t + d[k]; }, 0) / 4); });
+      var trait = getComputedStyle(document.querySelector('.couv-filet')).backgroundColor;
+      b.style.background = 'rgb(' + m.join(',') + ')'; b.style.borderBottom = '2px solid ' + trait;
+      var logo = b.querySelector('.couv-logo');
+      if (logo) { logo.src = b.dataset.logoFond; logo.style.filter = 'none'; logo.style.mixBlendMode = 'multiply'; }
+    } catch (e) { /* image d'un autre site sans autorisation de lecture : on laisse la couverture telle quelle */ }
+  };
+  img.src = b.dataset.logoFond;
+})();
+</script>
 </body>
 </html>`;
 }
