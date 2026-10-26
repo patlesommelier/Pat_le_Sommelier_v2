@@ -96,7 +96,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
     <>
       <Entete titre="Accords mets & vins" texte="Pat note chaque vin de votre carte sur chaque plat, de 1 à 5. Vos règles du sommelier choisissent ensuite les vins proposés au client. Changez une note : la sélection se recalcule.">
         {/* Pense-bête des serveurs : une page, chaque plat avec les trois premiers vins de Pat. */}
-        <a href={`/admin/${resto}/accords/pense-bete`} target="_blank" rel="noopener" className="btn sec">Imprimer le pense-bête</a>
+        <a href={`/admin/${resto}/accords/pense-bete`} target="_blank" rel="noopener" className="btn rouge">Imprimer le pense-bête</a>
       </Entete>
       <div className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '14px 20px', padding: '16px 20px' }}>
         <span style={{ flex: '1 1 340px', display: 'flex', flexDirection: 'column', gap: 2 }}>
@@ -149,7 +149,6 @@ export default async function Accords({ params, searchParams }: { params: Promis
             <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: 12 }}>
               <div className="pile" style={{ gap: 6 }}><span className="surtitre">{CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 700 }}>{plat.nom}</h2></div>
               <span className="ligne-actions">
-                <Link href={`/admin/${resto}/simulateur?plat=${plat.id}`} className="btn sec petit"><Icone nom="phone" taille={18} />Simulateur</Link>
                 {s && s.valides < s.total && <FormulaireAdmin action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></FormulaireAdmin>}
               </span>
             </div>
