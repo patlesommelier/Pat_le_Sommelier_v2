@@ -243,7 +243,7 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.fondBandeau ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
-.couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; }
+.couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; color: ${accent}; }
 .couv-filet { width: 15mm; height: 2px; background: ${accent}; }
 .couv-couleurs { margin: 0; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #5E5357; }
 .couv-pat { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: ${a5 ? '3mm' : '4mm'}; text-align: center; }
@@ -256,7 +256,7 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
 .entete-titre { font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: #5E5357; }
 .couleur { margin-bottom: 4mm; }
-.couleur > h2 { display: flex; align-items: center; gap: 4mm; margin: 4mm 0 3mm; font: 600 ${a5 ? '20pt' : '27pt'}/1.1 'Cormorant Garamond', Garamond, serif; break-after: avoid; }
+.couleur > h2 { display: flex; align-items: center; gap: 4mm; margin: 4mm 0 3mm; font: 600 ${a5 ? '20pt' : '27pt'}/1.1 'Cormorant Garamond', Garamond, serif; color: ${accent}; break-after: avoid; }
 .couleur > h2::before { content: ""; width: 7mm; height: 2px; background: ${accent}; }
 .region > h3 { display: flex; align-items: center; gap: 3mm; margin: 3.5mm 0 2.5mm; font-size: 8.5pt; font-weight: 700; letter-spacing: 2.2px; text-transform: uppercase; color: ${accent}; break-after: avoid; }
 .region > h3::after { content: ""; flex: 1; height: 1px; background: #E2D8DB; }

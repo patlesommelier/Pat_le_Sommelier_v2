@@ -50,11 +50,20 @@ export function couleurDominante(rgba: Uint8Array | Buffer): string | null {
   return `#${hex2(meilleur.r / meilleur.n)}${hex2(meilleur.g / meilleur.n)}${hex2(meilleur.b / meilleur.n)}`.toUpperCase();
 }
 
+/** Couleur sans teinte : noir, gris ou blanc (saturation faible, ou presque noire). */
+export function couleurNeutre(hex: string) {
+  const n = parseInt(hex.replace('#', ''), 16);
+  if (!Number.isFinite(n)) return true;
+  const [r, g, b] = [(n >> 16) & 255, (n >> 8) & 255, n & 255];
+  const max = Math.max(r, g, b), min = Math.min(r, g, b);
+  return max < 40 || max - min < 30;
+}
+
 /**
- * Couleur des supports imprimés (carte des vins, menu) : celle de l'app si elle se lit sur le papier blanc (bleu foncé, bordeaux…) ;
- * sinon (jaune, beige…) la couleur du logo si elle s'y lit ; sinon celle de l'app quand même.
+ * Couleur des supports imprimés (carte des vins, menu) : celle de l'app si elle se lit sur le papier blanc (bleu foncé, bordeaux…)
+ * et n'est pas un noir ou un gris ; sinon (jaune, beige, noir…) la couleur du logo si elle s'y lit ; sinon celle de l'app quand même.
  */
 export function couleurImpression(app: string, logo: string | null) {
-  if (!couleurClaire(app)) return app;
+  if (!couleurClaire(app) && !couleurNeutre(app)) return app;
   return logo && !couleurClaire(logo) ? logo : app;
 }

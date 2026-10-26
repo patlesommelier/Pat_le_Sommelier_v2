@@ -46,14 +46,14 @@ export function genererPenseBeteHTML({ restaurant, sections, options: o, barre =
 html, body { margin: 0; background: #FFFFFF; }
 body { font: ${pt.toFixed(1)}pt/1.25 Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 .entete { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 0.6em; border-bottom: 2px solid ${accent}; padding-bottom: 0.3em; }
-.entete h1 { margin: 0; font: 600 1.8em 'Cormorant Garamond', Garamond, serif; }
+.entete h1 { margin: 0; font: 600 1.8em 'Cormorant Garamond', Garamond, serif; color: ${accent}; }
 .entete span { font-size: 0.85em; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: ${accent}; }
 table { width: 100%; border-collapse: collapse; table-layout: fixed; }
 col.c-plat { width: 25%; }
 thead th { text-align: left; font-size: 0.8em; letter-spacing: 1.6px; text-transform: uppercase; color: ${accent}; padding: 0 0.6em 0.3em; }
 td, th.plat { vertical-align: top; padding: 0.3em 0.6em; border-bottom: 1px solid #E2D8DB; }
 th.plat { text-align: left; font-weight: 700; }
-tr.section th { text-align: left; padding: 0.5em 0.4em 0.15em; font: 600 1.3em 'Cormorant Garamond', Garamond, serif; border-bottom: 1px solid ${accent}; break-after: avoid; }
+tr.section th { text-align: left; padding: 0.5em 0.4em 0.15em; font: 600 1.3em 'Cormorant Garamond', Garamond, serif; color: ${accent}; border-bottom: 1px solid ${accent}; break-after: avoid; }
 tr { break-inside: avoid; }
 .vin { font-weight: 700; }
 .detail { color: #5E5357; }

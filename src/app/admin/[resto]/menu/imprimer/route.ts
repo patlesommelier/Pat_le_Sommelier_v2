@@ -4,7 +4,7 @@ import { requete } from '@/lib/db';
 import { titreCarte } from '@/lib/admin/intitule';
 import { libelleCourt } from '@/lib/contenances';
 import { tarifsDuRestaurant } from '@/lib/tarifs';
-import { controleCouleur, couleurDesSupports, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
+import { controleCouleur, couleurDesSupports, fondDuLogo, SCRIPT_COULEUR, type CouleurSupports } from '@/lib/couleur-logo';
 import { genererMenuHTML, type OptionsMenu, type SectionMenu } from '@/lib/menu-imprimable';
 
 export const dynamic = 'force-dynamic';
@@ -62,8 +62,10 @@ export async function GET(req: Request, { params }: { params: Promise<{ resto: s
     prixVin: sp.get('prix') !== '0',
     rappelPat: sp.get('rappel') !== '0',
   };
-  // Sur le blanc du menu : le logo foncé ; sinon le logo clair, posé sur la couleur du restaurant.
-  const logo = r.logo_fonce_url ? { url: r.logo_fonce_url, clair: false } : r.logo_url ? { url: r.logo_url, clair: true } : null;
+  // Sur le blanc du menu : le logo foncé, ou un logo carré à fond clair (crème…), fondu dans le papier ;
+  // sinon le logo clair, posé sur la couleur du restaurant.
+  const logo = r.logo_fonce_url ? { url: r.logo_fonce_url, clair: false }
+    : r.logo_url ? { url: r.logo_url, clair: !(await fondDuLogo(r.logo_url)) } : null;
   const html = genererMenuHTML({ restaurant: r.nom, logo, sections, options, barre: barreOutils(resto, suggestions, options, teinte) });
   return new Response(html, { headers: { 'content-type': 'text/html; charset=utf-8', 'cache-control': 'no-store' } });
 }

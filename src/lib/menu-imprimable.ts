@@ -44,12 +44,12 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .logo-fond { display: inline-block; margin: 0 auto 3mm; padding: 2.5mm 4mm; border-radius: 3mm; background: ${accent}; }
 .logo-fond .logo { margin: 0; }
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
-.entete h1 { margin: 2mm 0 0; font: 600 ${a5 ? '30pt' : '40pt'}/1.05 'Cormorant Garamond', Garamond, serif; }
+.entete h1 { margin: 2mm 0 0; font: 600 ${a5 ? '30pt' : '40pt'}/1.05 'Cormorant Garamond', Garamond, serif; color: ${accent}; }
 .filet { width: 15mm; height: 2px; background: ${accent}; margin: 4mm auto 0; }
 .section { margin-bottom: 5mm; }
 /* Entrées, Plats, Desserts : un grand titre centré entre deux filets, les plats en dessous. */
 .section { break-before: auto; }
-.section > h2 { display: flex; align-items: center; gap: 5mm; margin: ${a5 ? '6mm 0 4mm' : '9mm 0 6mm'}; font: 600 ${a5 ? '20pt' : '26pt'}/1.1 'Cormorant Garamond', Garamond, serif; color: #1F1A1C; break-after: avoid; }
+.section > h2 { display: flex; align-items: center; gap: 5mm; margin: ${a5 ? '6mm 0 4mm' : '9mm 0 6mm'}; font: 600 ${a5 ? '20pt' : '26pt'}/1.1 'Cormorant Garamond', Garamond, serif; color: ${accent}; break-after: avoid; }
 .section > h2::before, .section > h2::after { content: ""; flex: 1; height: 1px; background: ${accent}; opacity: .6; }
 .section:first-of-type > h2 { margin-top: 2mm; }
 .plat { break-inside: avoid; margin-bottom: ${a5 ? '3.5mm' : '4.5mm'}; }

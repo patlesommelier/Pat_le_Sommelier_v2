@@ -15,3 +15,9 @@ test('la couleur imprimée : celle de l’app si elle se lit, sinon celle du log
   assert.equal(couleurImpression('#F2D16B', '#14286E'), '#14286E'); // fond jaune, logo bleu foncé : le bleu
   assert.equal(couleurImpression('#F2D16B', '#FFE08A'), '#F2D16B'); // rien de foncé : la couleur de l'app
 });
+
+test('la couleur imprimée : une app noire ou grise laisse la place à la couleur du logo', () => {
+  assert.equal(couleurImpression('#1A1A1A', '#181970'), '#181970'); // Bistro Bercuit : app noire, logo bleu marine
+  assert.equal(couleurImpression('#555555', '#C8102E'), '#C8102E');
+  assert.equal(couleurImpression('#1A1A1A', null), '#1A1A1A'); // logo sans couleur : le noir reste
+});
