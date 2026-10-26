@@ -5,6 +5,7 @@ import type { Requete } from './generation/accords';
 import { creerLot, modeleRapide } from './generation/file';
 import { dedoublonnerPlats, Plat, validerListe } from './inscription/donnees';
 import { analyserMenu, type FichierEnvoye } from './inscription/lecture';
+import { associerNoms } from './inscription/prix';
 
 const slug = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 50);
 
@@ -12,10 +13,10 @@ const slug = (s: string) => s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerC
 async function lireUne(q: Requete): Promise<{ restaurantId: string; platIds: string[]; demandePar: string } | null> {
   // Une lecture abandonnée (fonction arrêtée) depuis plus de 15 minutes est reprise.
   await q(`update lecture_suggestions set statut = 'a_lire' where statut = 'en_cours' and maj_le < now() - interval '15 minutes'`);
-  const [l] = await q<{ id: string; restaurant_id: string; remplacer: boolean; demande_par: string | null }>(
+  const [l] = await q<{ id: string; restaurant_id: string; remplacer: boolean; menu: boolean; demande_par: string | null }>(
     `update lecture_suggestions set statut = 'en_cours', maj_le = now()
       where id = (select id from lecture_suggestions where statut = 'a_lire' order by cree_le limit 1 for update skip locked)
-      returning id, restaurant_id, remplacer, demande_par`);
+      returning id, restaurant_id, remplacer, menu, demande_par`);
   if (!l) return null;
   try {
     const fichiers = await q<{ nom: string; type: string; octets: Buffer }>(
@@ -24,6 +25,7 @@ async function lireUne(q: Requete): Promise<{ restaurantId: string; platIds: str
     const { ok } = validerListe(Plat, await analyserMenu(lus));
     const plats = dedoublonnerPlats(ok);
     if (!plats.length) throw new Error('Aucun plat reconnu sur cette image.');
+    if (l.menu) return await renvoiMenu(q, l, plats);
     if (l.remplacer) {
       // Anciennes suggestions retirées (avec leurs accords et leurs consignes).
       await q(`delete from regle_sommelier where restaurant_id = $1 and portee = 'plat'
@@ -52,6 +54,49 @@ async function lireUne(q: Requete): Promise<{ restaurantId: string; platIds: str
     await q(`update lecture_suggestions set statut = 'erreur', maj_le = now(), message = $2 where id = $1`, [l.id, message]);
     return { restaurantId: l.restaurant_id, platIds: [], demandePar: '' };
   }
+}
+
+/**
+ * Menu complet renvoyé par le restaurant (hors suggestions). « Tout effacer » : les plats actuels sont retirés
+ * (avec leurs accords et leurs consignes) et remplacés par ceux du menu. Sinon, les plats déjà connus (même nom)
+ * reprennent le prix lu, sans toucher à leur description ni à leurs accords ; les nouveaux sont ajoutés.
+ */
+async function renvoiMenu(q: Requete, l: { id: string; restaurant_id: string; remplacer: boolean; demande_par: string | null }, lus: Plat[]) {
+  const resto = l.restaurant_id;
+  if (l.remplacer) {
+    await q(`delete from regle_sommelier where restaurant_id = $1 and portee = 'plat'
+               and cible in (select id from plat where restaurant_id = $1 and categorie <> 'suggestion')`, [resto]);
+    await q(`delete from plat where restaurant_id = $1 and categorie <> 'suggestion'`, [resto]);
+  }
+  const existants = await q<{ id: string; nom: string }>(`select id, nom from plat where restaurant_id = $1 and categorie <> 'suggestion'`, [resto]);
+  const connus = associerNoms(existants, lus);
+  const retrouves = new Set(connus.values());
+  let prixChanges = 0;
+  for (const [platId, lu] of connus) {
+    const r = await q(`update plat set prix = coalesce($2, prix), prix_variantes = coalesce($3, prix_variantes), modifie_bo = now()
+                        where id = $1 and (prix is distinct from coalesce($2, prix) or prix_variantes is distinct from coalesce($3, prix_variantes))
+                        returning id`, [platId, lu.prix ?? null, lu.prixVariantes ?? null]);
+    prixChanges += r.length;
+  }
+  const ids: string[] = [];
+  for (const p of lus.filter((x) => !retrouves.has(x))) {
+    const base = `${resto}-${slug(p.nom) || 'plat'}`;
+    let id = base;
+    for (let n = 2; (await q('select 1 from plat where id = $1', [id])).length; n++) id = `${base}-${n}`;
+    await q(
+      `insert into plat (id, restaurant_id, nom, categorie, description_cuisine, prix, prix_variantes, ordre, actif, modifie_bo)
+       values ($1, $2, $3, $4::categorie_plat, $5, $6, $7, (select coalesce(max(ordre), 0) + 1 from plat where restaurant_id = $2), true, now())`,
+      [id, resto, p.nom, p.categorie, p.description, p.prix ?? null, p.prixVariantes ?? null]);
+    ids.push(id);
+  }
+  const pl = (n: number, mot: string) => `${n} ${mot}${n > 1 ? 's' : ''}`;
+  const message = l.remplacer
+    ? `Menu remplacé : ${pl(ids.length, 'plat')} lu${ids.length > 1 ? 's' : ''}.`
+    : `${pl(lus.length, 'plat')} lu${lus.length > 1 ? 's' : ''} : ${pl(ids.length, 'nouveau plat')} ajouté${ids.length > 1 ? 's' : ''}`
+      + `, ${pl(connus.size, 'plat')} déjà connu${connus.size > 1 ? 's' : ''}${prixChanges ? ` (${pl(prixChanges, 'prix')} mis à jour)` : ''}.`;
+  await q(`update lecture_suggestions set statut = 'ok', maj_le = now(), message = $2 where id = $1`, [l.id, message]);
+  await q('delete from lecture_suggestions_fichier where lecture_id = $1', [l.id]);
+  return { restaurantId: resto, platIds: ids, demandePar: l.demande_par ?? 'menu' };
 }
 
 /**

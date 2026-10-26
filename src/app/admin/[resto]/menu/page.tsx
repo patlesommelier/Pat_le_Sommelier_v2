@@ -9,7 +9,6 @@ import { getPlatsBO, getProfils, type PlatBO } from '@/lib/admin/donnees';
 
 type Profil = NonNullable<ReturnType<Awaited<ReturnType<typeof getProfils>>['get']>>;
 import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
-import { RelirePrix } from '@/components/admin/RelirePrix';
 import { requete } from '@/lib/db';
 
 const CATS = [['tous', 'Tous'], ['suggestion', 'Suggestions'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
@@ -19,9 +18,6 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const { cat = 'tous', plat: platId, ok, ajout, supprime } = await searchParams;
   const [plats, u, profils] = await Promise.all([getPlatsBO(resto), utilisateurCourant(), getProfils(resto)]);
-  // Relecture des prix sur le menu : super-admin seulement (chaque lecture est un appel à Claude payé par Pat).
-  const [derniere] = u?.admin ? await requete<{ statut: string; message: string | null; le: string }>(
-    `select statut, message, maj_le::text as le from relecture_prix where restaurant_id = $1 order by cree_le desc limit 1`, [resto]) : [];
   // Dernière lecture de suggestions (photo envoyée par le restaurant), récente seulement (moins d'un jour).
   const [lecture] = await requete<NonNullable<EtatLecture>>(
     `select statut, message, maj_le::text as le from lecture_suggestions where restaurant_id = $1 and cree_le > now() - interval '1 day' order by cree_le desc limit 1`, [resto]);
@@ -36,7 +32,6 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
       </Entete>
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
       {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
-      {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
       <EnvoiSuggestions envoyer={envoyerSuggestions.bind(null, resto)} derniere={lecture ?? null} nombre={plats.filter((p) => p.categorie === 'suggestion' && p.actif).length} />
       <section className="pile">
         {/* Catégories et « Ajouter un plat », juste au-dessus de la liste des plats. */}

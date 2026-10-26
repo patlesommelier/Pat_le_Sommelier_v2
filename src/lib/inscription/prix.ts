@@ -20,8 +20,12 @@ type PrixLu = { nom: string; prix?: number | null; prixVariantes?: string | null
  * Exporté pour les tests.
  */
 export function associerPrix(plats: PlatBase[], lus: PrixLu[]) {
-  const avecPrix = lus.filter((l) => l.prix != null || l.prixVariantes);
-  const paires: Array<{ plat: PlatBase; lu: PrixLu; score: number }> = [];
+  return associerNoms(plats, lus.filter((l) => l.prix != null || l.prixVariantes));
+}
+
+/** Même association par le nom, sans exiger de prix (renvoi du menu : plats déjà connus ou nouveaux). */
+export function associerNoms<T extends { nom: string }>(plats: PlatBase[], avecPrix: T[]) {
+  const paires: Array<{ plat: PlatBase; lu: T; score: number }> = [];
   for (const plat of plats) {
     const a = mots(plat.nom);
     for (const lu of avecPrix) {
@@ -32,8 +36,8 @@ export function associerPrix(plats: PlatBase[], lus: PrixLu[]) {
     }
   }
   paires.sort((x, y) => y.score - x.score);
-  const pris = new Set<string>(), utilises = new Set<PrixLu>();
-  const resultat = new Map<string, PrixLu>();
+  const pris = new Set<string>(), utilises = new Set<T>();
+  const resultat = new Map<string, T>();
   for (const p of paires) {
     if (pris.has(p.plat.id) || utilises.has(p.lu)) continue;
     pris.add(p.plat.id); utilises.add(p.lu);

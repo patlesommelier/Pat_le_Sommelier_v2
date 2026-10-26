@@ -159,8 +159,9 @@ export async function envoyerSuggestions(resto: string, f: FormData): Promise<Re
   const erreurs = verifierFichiers('menu', fichiers);
   if (erreurs.length) return { erreur: erreurs.join(' ') };
   const id = randomUUID();
-  await requete(`insert into lecture_suggestions (id, restaurant_id, remplacer, demande_par) values ($1, $2, $3, $4)`,
-    [id, resto, f.get('remplacer') === 'on', u.email]);
+  // « Renvoyer le menu » passe par la même file : menu = true (et remplacer = « Tout effacer »).
+  await requete(`insert into lecture_suggestions (id, restaurant_id, remplacer, menu, demande_par) values ($1, $2, $3, $4, $5)`,
+    [id, resto, f.get('remplacer') === 'on', f.get('menu') === 'on', u.email]);
   for (const [i, x] of fichiers.entries()) {
     await requete('insert into lecture_suggestions_fichier (lecture_id, nom, media_type, octets, ordre) values ($1, $2, $3, $4, $5)',
       [id, x.nom, typeReel(x.octets), Buffer.from(x.octets), i]);
@@ -169,7 +170,8 @@ export async function envoyerSuggestions(resto: string, f: FormData): Promise<Re
     finAvant: Date.now() + 15 * 60 * 1000, lancer: (n) => lancerTravailleurs(n),
   }));
   revalidatePath(`/admin/${resto}/menu`);
-  return { ok: 'Photo reçue : Pat lit vos suggestions (une minute environ), puis prépare leurs accords.' };
+  return { ok: f.get('menu') === 'on' ? 'Menu reçu : Pat le lit (une minute environ), puis prépare les accords des nouveaux plats.'
+    : 'Photo reçue : Pat lit vos suggestions (une minute environ), puis prépare leurs accords.' };
 }
 
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];
