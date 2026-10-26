@@ -55,7 +55,6 @@ export default async function Carte({ params, searchParams }: { params: Promise<
       <Entete titre="Carte des vins" texte="Vos vins, leurs contenances et leurs prix, dans l’ordre de votre carte. Pat les présente à vos clients et les accorde à vos plats.">
         <Link href={`/admin/${resto}/supports`} className="btn sec">Relire les présentations</Link>
         <BoutonCarteImprimee resto={resto} />
-        <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn">+ Ajouter un vin</Link>
       </Entete>
       {choisi && sp.ok
         ? <RetourVin vinId={affiches.find((g) => g.tous.some((x) => x.id === choisi.id))?.principal.id ?? choisi.id} message={sp.ok} />
@@ -84,6 +83,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
               ))}
             </nav>
             <CasesCategories choisies={restaurant?.categories_carte ?? []} enregistrer={changerCategoriesCarte.bind(null, resto)} />
+            {/* « Ajouter un vin » juste au-dessus de la liste, comme « Ajouter un plat » dans le menu. */}
+            <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn" style={{ marginLeft: 'auto' }}>+ Ajouter un vin</Link>
           </div>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>

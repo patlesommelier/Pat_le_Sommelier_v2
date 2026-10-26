@@ -7,7 +7,7 @@ import { preparerImpression } from '@/app/admin/actions';
  * « Imprimer la carte » dans un nouvel onglet. L'onglet est ouvert tout de suite (au clic, sinon le navigateur
  * le bloque), puis reçoit l'adresse : la page d'attente si Pat doit écrire des présentations, sinon la carte.
  */
-export function BoutonCarteImprimee({ resto }: { resto: string }) {
+export function BoutonCarteImprimee({ resto, className = 'btn rouge' }: { resto: string; className?: string }) {
   const [enCours, setEnCours] = useState(false);
   async function ouvrir() {
     setEnCours(true);
@@ -24,5 +24,5 @@ export function BoutonCarteImprimee({ resto }: { resto: string }) {
       setEnCours(false);
     }
   }
-  return <button type="button" className="btn sec" onClick={ouvrir} disabled={enCours}>{enCours ? 'Préparation…' : 'Imprimer la carte'}</button>;
+  return <button type="button" className={className} onClick={ouvrir} disabled={enCours}>{enCours ? 'Préparation…' : 'Imprimer la carte'}</button>;
 }
