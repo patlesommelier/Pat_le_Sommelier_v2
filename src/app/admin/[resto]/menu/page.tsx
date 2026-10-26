@@ -31,20 +31,23 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
     <>
       <Entete titre="Menu" texte="Liste des plats proposés à vos clients et accordés par Pat : plus la description de vos plats est précise, plus les accords seront précis !">
         {/* Menu et suggestions à imprimer, chaque plat avec le vin suggéré par Pat ; les suggestions à part, pour les changer chaque semaine. */}
-        <a href={`/admin/${resto}/menu/imprimer`} target="_blank" rel="noopener" className="btn sec">Imprimer le menu</a>
-        <a href={`/admin/${resto}/menu/imprimer?type=suggestions`} target="_blank" rel="noopener" className="btn sec">Imprimer les suggestions</a>
-        <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">Ajouter un plat</Link>
+        <a href={`/admin/${resto}/menu/imprimer`} target="_blank" rel="noopener" className="btn rouge">Imprimer le menu</a>
+        <a href={`/admin/${resto}/menu/imprimer?type=suggestions`} target="_blank" rel="noopener" className="btn rouge">Imprimer les suggestions</a>
       </Entete>
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
       {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
       {u?.admin && <RelirePrix resto={resto} derniere={derniere ?? null} />}
       <EnvoiSuggestions envoyer={envoyerSuggestions.bind(null, resto)} derniere={lecture ?? null} nombre={plats.filter((p) => p.categorie === 'suggestion' && p.actif).length} />
       <section className="pile">
-        <nav className="onglets" aria-label="Catégories">
-          {CATS.map(([k, l]) => (
-            <Link key={k} href={lien({ cat: k })} aria-current={cat === k ? 'true' : undefined}>{l} <span>{k === 'tous' ? plats.length : plats.filter((p) => p.categorie === k).length}</span></Link>
-          ))}
-        </nav>
+        {/* Catégories et « Ajouter un plat », juste au-dessus de la liste des plats. */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+          <nav className="onglets" aria-label="Catégories">
+            {CATS.map(([k, l]) => (
+              <Link key={k} href={lien({ cat: k })} aria-current={cat === k ? 'true' : undefined}>{l} <span>{k === 'tous' ? plats.length : plats.filter((p) => p.categorie === k).length}</span></Link>
+            ))}
+          </nav>
+          <Link href={`/admin/${resto}/menu/nouveau${cat !== 'tous' ? `?cat=${cat}` : ''}`} className="btn">+ Ajouter un plat</Link>
+        </div>
         {/* Chaque plat se déroule (flèche vers le bas) pour afficher et modifier son détail. */}
         <div className="liste-deroulante">
           <div className="entete-deroulante" aria-hidden="true"><span className="case-proposee">Proposé</span></div>
