@@ -67,3 +67,20 @@ export function couleurImpression(app: string, logo: string | null) {
   if (!couleurClaire(app) && !couleurNeutre(app)) return app;
   return logo && !couleurClaire(logo) ? logo : app;
 }
+
+/** Mélange une couleur (#RRGGBB) avec du blanc : part = part de la couleur gardée (0 à 1). */
+export function eclaircir(hex: string, part: number) {
+  const n = parseInt(hex.replace('#', ''), 16);
+  if (!Number.isFinite(n)) return hex;
+  const c = (v: number) => hex2(v * part + 255 * (1 - part));
+  return `#${c((n >> 16) & 255)}${c((n >> 8) & 255)}${c(n & 255)}`.toUpperCase();
+}
+
+/**
+ * Encre des textes imprimés : la couleur des titres si elle est assez foncée pour se lire comme une encre (bleu marine,
+ * bordeaux… : contraste au moins 7:1 sur le blanc), sinon le noir. Avec ses deux nuances pour les détails et les textes en italique.
+ */
+export function encresImpression(accent: string, noirEtBlanc: boolean) {
+  const encre = !noirEtBlanc && /^#[0-9a-f]{6}$/i.test(accent) && contrasteBlanc(accent) >= 7 ? accent.toUpperCase() : '#1F1A1C';
+  return encre === '#1F1A1C' ? { encre, douce: '#3F3739', discrete: '#5E5357' } : { encre, douce: eclaircir(encre, 0.85), discrete: eclaircir(encre, 0.72) };
+}

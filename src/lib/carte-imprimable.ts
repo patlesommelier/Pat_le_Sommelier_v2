@@ -4,6 +4,7 @@
  *
  * IMPORTANT : ne jamais transmettre ici les rankings, notes ou scores. Ce module ne lit que les champs de VinImprimable.
  */
+import { encresImpression } from './couleurs';
 
 export type CouleurCarte = 'bulles' | 'blanc' | 'rose' | 'rouge' | 'orange' | 'doux' | 'sans_alcool';
 
@@ -221,40 +222,42 @@ const couleurSure = (c: string) => (/^#[0-9a-f]{3,8}$/i.test(c) ? c : OPTIONS_PA
 
 function css(options: OptionsCarte, restaurant: RestaurantImprimable) {
   const accent = options.noirEtBlanc ? '#1F1A1C' : couleurSure(options.couleurAccent);
+  // Texte dans la couleur des titres quand elle est foncée (bleu marine…), sinon en noir.
+  const { encre, douce, discrete } = encresImpression(accent, options.noirEtBlanc);
   const a5 = options.format === 'A5';
   return `
 @page { size: ${a5 ? 'A5' : 'A4'}; margin: ${a5 ? '12mm 13mm 12mm' : '16mm 19mm 14mm'};
   @top-left { content: ${chaineCss(restaurant.nom.toUpperCase())}; font: 700 8.5pt Lato, 'Helvetica Neue', sans-serif; letter-spacing: 3px; color: ${accent}; vertical-align: bottom; padding-bottom: 3mm; }
-  @top-right { content: "Carte des vins"; font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: #5E5357; vertical-align: bottom; padding-bottom: 3mm; }
-  @bottom-center { content: counter(page); font: 500 11pt 'Cormorant Garamond', Garamond, serif; color: #5E5357; }${restaurant.patLogoUrl ? `
+  @top-right { content: "Carte des vins"; font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: ${discrete}; vertical-align: bottom; padding-bottom: 3mm; }
+  @bottom-center { content: counter(page); font: 500 11pt 'Cormorant Garamond', Garamond, serif; color: ${discrete}; }${restaurant.patLogoUrl ? `
   /* Petit logo de Pat en bas à gauche de chaque page (image en fond de la marge, texte à côté). */
-  @bottom-left { content: "Pat le sommelier"; font: italic 500 ${a5 ? '8pt' : '8.5pt'} 'Cormorant Garamond', Garamond, serif; color: #5E5357;
+  @bottom-left { content: "Pat le sommelier"; font: italic 500 ${a5 ? '8pt' : '8.5pt'} 'Cormorant Garamond', Garamond, serif; color: ${discrete};
     vertical-align: middle; padding-left: ${a5 ? '6.5mm' : '7.5mm'};
     background: url(${chaineCss(restaurant.patLogoUrl)}) no-repeat left center / auto ${a5 ? '5.5mm' : '6.5mm'}; }` : ''}
 }
 @page couverture { margin: 0; @top-left { content: none; } @top-right { content: none; } @bottom-center { content: none; } @bottom-left { content: none; background: none; } }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: #FFFFFF; }
-body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C;
+body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: ${encre};
   -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .couverture { page: couverture; break-after: page; height: ${a5 ? '210mm' : '297mm'}; display: flex; flex-direction: column; position: relative; }
 .couv-bandeau { height: 44%; background: ${options.noirEtBlanc ? '#FFFFFF' : options.fondBandeau ?? accent}; display: flex; align-items: center; justify-content: center;
   ${options.noirEtBlanc ? 'border-bottom: 1px solid #E2D8DB;' : ''} }
-.couv-logo { width: 42%; height: auto; max-height: 60%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
+.couv-logo { width: 30%; height: auto; max-height: 44%; object-fit: contain; ${options.noirEtBlanc || options.fondBandeau ? 'mix-blend-mode: multiply; /* le fond d’un logo carré se fond dans le bandeau */' : ''} }
 .couv-nom { font: 600 ${a5 ? '40pt' : '54pt'} 'Cormorant Garamond', Garamond, serif; color: ${options.noirEtBlanc ? '#1F1A1C' : options.fondBandeau ? accent : '#FFFFFF'}; }
 .couv-corps { flex: 1; padding: 18mm 24mm ${a5 ? '24mm' : '32mm'}; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 6mm; }
 .couv-corps h1 { margin: 0; font: 600 ${a5 ? '40pt' : '54pt'}/1 'Cormorant Garamond', Garamond, serif; letter-spacing: -0.5px; color: ${accent}; }
 .couv-filet { width: 15mm; height: 2px; background: ${accent}; }
-.couv-couleurs { margin: 0; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: #5E5357; }
+.couv-couleurs { margin: 0; font-size: 9pt; font-weight: 700; letter-spacing: 2.4px; text-transform: uppercase; color: ${discrete}; }
 .couv-pat { margin-top: auto; display: flex; flex-direction: column; align-items: center; gap: ${a5 ? '3mm' : '4mm'}; text-align: center; }
 .couv-pat p { margin: 0; max-width: ${a5 ? '75mm' : '90mm'}; font: 500 ${a5 ? '11pt' : '13.5pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
 .couv-qr { width: 25mm; height: 25mm; }
 .couv-signature { position: absolute; left: ${a5 ? '13mm' : '19mm'}; bottom: ${a5 ? '4mm' : '5mm'}; display: flex; align-items: center; gap: 1.5mm; }
 .couv-signature img { height: ${a5 ? '5.5mm' : '6.5mm'}; width: auto; ${options.noirEtBlanc ? 'filter: grayscale(1) brightness(0.45);' : ''} }
-.couv-signature span { font: italic 500 ${a5 ? '8pt' : '8.5pt'} 'Cormorant Garamond', Garamond, serif; color: #5E5357; }
+.couv-signature span { font: italic 500 ${a5 ? '8pt' : '8.5pt'} 'Cormorant Garamond', Garamond, serif; color: ${discrete}; }
 .entete { display: flex; justify-content: space-between; align-items: baseline; padding-bottom: 2.5mm; margin-bottom: 5mm; border-bottom: 1px solid #E2D8DB; }
 .entete-nom { font-size: 8.5pt; font-weight: 700; letter-spacing: 3.4px; text-transform: uppercase; color: ${accent}; }
-.entete-titre { font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: #5E5357; }
+.entete-titre { font: italic 500 12pt 'Cormorant Garamond', Garamond, serif; color: ${discrete}; }
 .couleur { margin-bottom: 4mm; }
 .couleur > h2 { display: flex; align-items: center; gap: 4mm; margin: 4mm 0 3mm; font: 600 ${a5 ? '20pt' : '27pt'}/1.1 'Cormorant Garamond', Garamond, serif; color: ${accent}; break-after: avoid; }
 .couleur > h2::before { content: ""; width: 7mm; height: 2px; background: ${accent}; }
@@ -265,7 +268,7 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .vin-nom { font: 600 ${a5 ? '12pt' : '14pt'}/1.2 'Cormorant Garamond', Garamond, serif; }
 /* Nom et détail dans le même flux de texte : un long domaine passe à la ligne juste après le nom, sans trou. */
 .vin-titre { flex: 0 1 auto; min-width: 0; }
-.vin-detail { font-size: 9pt; color: #5E5357; margin-left: 1.6mm; }
+.vin-detail { font-size: 9pt; color: ${discrete}; margin-left: 1.6mm; }
 .vin-detail > span { white-space: nowrap; }
 .vin-points { flex: 1 1 6mm; min-width: 6mm; border-bottom: 1px dotted #A99DA1; transform: translateY(-1mm); }
 .vin-prix { font-size: 10.5pt; font-weight: 700; white-space: nowrap; font-variant-numeric: tabular-nums; }
@@ -276,11 +279,11 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .legende { display: flex; flex-wrap: wrap; justify-content: center; gap: 2mm 6mm; margin: 0 0 3mm; font-size: 8.5pt; }
 .legende > span { display: inline-flex; align-items: center; gap: 1.5mm; }
 .vin-sep { font-weight: 400; opacity: .6; }
-.vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: #3F3739; text-wrap: pretty; }
+.vin-mot { margin: 0.8mm 0 0; font: italic 500 ${a5 ? '10.5pt' : '12pt'}/1.38 'Cormorant Garamond', Garamond, serif; color: ${douce}; text-wrap: pretty; }
 .fin { break-inside: avoid; margin-top: 8mm; padding-top: 5mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0 0 2mm; }
 .fin .fin-pat { font: italic 500 13.5pt 'Cormorant Garamond', Garamond, serif; }
-.fin .fin-mention { font-size: 9pt; color: #5E5357; }
+.fin .fin-mention { font-size: 9pt; color: ${discrete}; }
 @media screen {
   body { background: #EDE6E8; padding: 24px 0; }
   .couverture, .pages { width: ${a5 ? '148mm' : '210mm'}; margin: 0 auto 24px; background: #FFFFFF; box-shadow: 0 1px 4px rgba(0,0,0,0.15); }

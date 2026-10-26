@@ -6,6 +6,7 @@
  *
  * IMPORTANT : jamais de ranking, de note ni de score ici — seulement les noms et les prix.
  */
+import { encresImpression } from './couleurs';
 
 export interface VinSuggere { titre: string; detail: string | null; prix: string | null }
 export interface PlatImprimable { nom: string; description?: string | null; prix: string | null; vin: VinSuggere | null }
@@ -33,12 +34,14 @@ function htmlPlat(p: PlatImprimable, o: OptionsMenu) {
 
 function css(o: OptionsMenu) {
   const accent = o.noirEtBlanc ? '#1F1A1C' : couleurSure(o.couleurAccent);
+  // Texte dans la couleur des titres quand elle est foncée (bleu marine…), sinon en noir.
+  const { encre, douce, discrete } = encresImpression(accent, o.noirEtBlanc);
   const a5 = o.format === 'A5';
   return `
 @page { size: ${a5 ? 'A5' : 'A4'}; margin: ${a5 ? '12mm 13mm' : '16mm 19mm 14mm'}; }
 * { box-sizing: border-box; }
 html, body { margin: 0; background: #FFFFFF; }
-body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1C; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
+body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: ${encre}; -webkit-print-color-adjust: exact; print-color-adjust: exact; font-size: ${a5 ? '10pt' : '11pt'}; }
 .entete { text-align: center; margin-bottom: ${a5 ? '6mm' : '9mm'}; }
 .logo { display: block; margin: 0 auto 3mm; max-height: ${a5 ? '9mm' : '12mm'}; max-width: ${a5 ? '35mm' : '45mm'}; width: auto; height: auto; object-fit: contain; mix-blend-mode: multiply; filter: brightness(1.06) contrast(1.08); /* fond blanc ou crème d’un logo carré fondu dans le papier */ }
 .logo-fond { display: inline-block; margin: 0 auto 3mm; padding: 2.5mm 4mm; border-radius: 3mm; background: ${accent}; }
@@ -55,17 +58,17 @@ body { font-family: Lato, 'Helvetica Neue', Helvetica, sans-serif; color: #1F1A1
 .plat { break-inside: avoid; margin-bottom: ${a5 ? '3.5mm' : '4.5mm'}; }
 .plat-ligne { display: flex; align-items: baseline; gap: 2.6mm; }
 .plat-nom { font: 600 ${a5 ? '14.5pt' : '17pt'}/1.2 'Cormorant Garamond', Garamond, serif; flex: 0 1 auto; }
-.plat-description { margin: 0.8mm 0 0; font-size: ${a5 ? '8.5pt' : '9.5pt'}; line-height: 1.4; color: #5E5357; }
+.plat-description { margin: 0.8mm 0 0; font-size: ${a5 ? '8.5pt' : '9.5pt'}; line-height: 1.4; color: ${discrete}; }
 .points { flex: 1; min-width: 6mm; border-bottom: 1px dotted #B9AEB2; transform: translateY(-1mm); }
 .plat-prix { font-size: ${a5 ? '10.5pt' : '11.5pt'}; font-weight: 700; white-space: nowrap; }
-.vin { margin: 1.2mm 0 0; font: italic 500 ${a5 ? '9pt' : '10pt'}/1.35 'Cormorant Garamond', Garamond, serif; color: #3A3235; }
+.vin { margin: 1.2mm 0 0; font: italic 500 ${a5 ? '9pt' : '10pt'}/1.35 'Cormorant Garamond', Garamond, serif; color: ${douce}; }
 .vin-mot { font: 700 6.5pt Lato, sans-serif; font-style: normal; letter-spacing: 1.6px; text-transform: uppercase; color: ${accent}; margin-right: 1mm; }
 .vin-titre { font-weight: 600; }
-.vin-detail { color: #5E5357; }
+.vin-detail { color: ${discrete}; }
 .vin-prix { font: 700 7.5pt Lato, sans-serif; font-style: normal; white-space: nowrap; margin-left: 1mm; }
 .fin { margin-top: 8mm; padding-top: 4mm; border-top: 1px solid #E2D8DB; text-align: center; }
 .fin p { margin: 0; font: italic 500 ${a5 ? '11pt' : '13pt'}/1.35 'Cormorant Garamond', Garamond, serif; }
-.vide { text-align: center; color: #5E5357; font-style: italic; }
+.vide { text-align: center; color: ${discrete}; font-style: italic; }
 .centre { display: flex; flex-direction: column; }
 .centre .corps { flex: 1; display: flex; flex-direction: column; justify-content: center; }
 @media print { .centre { min-height: ${a5 ? '184mm' : '265mm'}; } }
