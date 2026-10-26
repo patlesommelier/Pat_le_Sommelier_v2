@@ -90,6 +90,8 @@ export default async function Accords({ params, searchParams }: { params: Promis
   // Dernier passage de la régénération sur ce plat : bilan ou motif d'échec (pour comprendre un commentaire d'origine resté).
   const [bilanPlat] = plat && (anciens.get(plat.id) || !s) ? await requete<{ statut: string; message: string | null; le: string }>(
     `select statut, message, coalesce(fin_le, cree_le) as le from generation_accords where plat_id = $1 and statut in ('fait', 'erreur') order by id desc limit 1`, [plat.id]) : [];
+  // Nom court du plat, repris dans les titres pour relier les vins au plat choisi.
+  const nomCourt = plat ? `« ${plat.nom_court ?? plat.nom} »` : '';
   const prix = sel.liste.map((r) => r.vin.prix).filter((p): p is number => p !== null);
 
   return (
@@ -128,26 +130,27 @@ export default async function Accords({ params, searchParams }: { params: Promis
           <form action={relancerPlatsSansAccord.bind(null, resto)}><button className="btn sec petit"><Icone nom="reset" taille={18} />Relancer les plats sans accord</button></form>
         </div>
       )}
-      <div className="rangee">
-        <nav aria-label="Plats" className="etroit" style={{ flex: '1 1 240px', gap: 6 }}>
+      <p className="discret" style={{ margin: '4px 0 -8px', fontSize: 15 }}>① Choisissez un plat à gauche — ② ses vins s’affichent à droite.</p>
+      <div className="accords-relies">
+        <nav aria-label="Plats" className="onglets-plats">
+          <span className="surtitre" style={{ padding: '0 14px 6px' }}>① Vos plats</span>
           {actifs.map((p) => {
             const st = parPlat.get(p.id);
             const on = p.id === plat?.id;
             return (
-              <Link key={p.id} href={`/admin/${resto}/accords?plat=${p.id}`} aria-current={on ? 'true' : undefined}
-                style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10, minHeight: 48, padding: '8px 14px', borderRadius: 12, textDecoration: 'none',
-                  background: on ? 'var(--encre)' : 'var(--carte)', color: on ? '#FEFAF1' : 'var(--texte)', border: `1px solid ${on ? 'var(--encre)' : 'var(--ligne)'}` }}>
-                <span style={{ display: 'flex', flexDirection: 'column' }}><b style={{ fontSize: 14.5 }}>{p.nom_court ?? p.nom}</b><span style={{ fontSize: 12.5, opacity: 0.8 }}>{CAT[p.categorie]}</span></span>
-                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: 12.5, fontWeight: 700, whiteSpace: 'nowrap' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}
-                  {anciens.get(p.id) ? <span style={{ fontWeight: 700, opacity: 0.85 }}>textes d’origine</span> : null}</span>
+              <Link key={p.id} href={`/admin/${resto}/accords?plat=${p.id}`} aria-current={on ? 'true' : undefined} className={`onglet-plat${on ? ' on' : ''}`}>
+                <span style={{ display: 'flex', flexDirection: 'column', gap: 2, flex: 1 }}><b style={{ fontSize: 15, fontWeight: on ? 700 : 500 }}>{p.nom_court ?? p.nom}</b><span className="cat">{CAT[p.categorie]}</span></span>
+                <span style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', fontSize: 12.5, fontWeight: 600, whiteSpace: 'nowrap', color: 'var(--discret)' }}>{!st ? 'aucun' : st.valides === st.total ? 'validé' : `${st.total - st.valides} à relire`}
+                  {anciens.get(p.id) ? <span>textes d’origine</span> : null}</span>
+                {on && <span aria-hidden="true" style={{ color: 'var(--encre)', fontSize: 16 }}>→</span>}
               </Link>
             );
           })}
         </nav>
         {plat && (
-          <section className="large" style={{ gap: 24 }}>
-            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-end', gap: 12 }}>
-              <div className="pile" style={{ gap: 6 }}><span className="surtitre">{CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 700 }}>{plat.nom}</h2></div>
+          <section className="fiche-accords">
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, paddingBottom: 18, borderBottom: '1px solid var(--ligne)' }}>
+              <div className="pile" style={{ gap: 4 }}><span className="surtitre" style={{ color: 'var(--fuchsia)' }}>② Accords pour · {CAT[plat.categorie]} · {plat.prix_variantes ?? euros(plat.prix)}</span><h2 style={{ fontSize: 26, fontWeight: 700 }}>{plat.nom}</h2></div>
               <span className="ligne-actions">
                 {s && s.valides < s.total && <FormulaireAdmin action={validerPlat.bind(null, resto, plat.id)}><button className="btn petit"><Icone nom="check" taille={18} />Valider ce plat</button></FormulaireAdmin>}
               </span>
@@ -159,18 +162,22 @@ export default async function Accords({ params, searchParams }: { params: Promis
               {anciens.get(plat.id)} vin{anciens.get(plat.id)! > 1 ? 's gardent leur' : ' garde son'} commentaire d’origine sur ce plat
               {bilanPlat?.message ? ` — dernière régénération (${dateHeure(bilanPlat.le)})${bilanPlat.statut === 'erreur' ? ' : échec' : ''}${interne ? ` : ${bilanPlat.message.length > 160 ? `${bilanPlat.message.slice(0, 160)}…` : bilanPlat.message}` : ''}` : ' — ce plat n’a pas encore été régénéré'}.</span> : null}
             <div className="pile">
-              <div><h3 style={{ fontSize: 20 }}>Ce que verra le client</h3>
-                <p className="discret" style={{ margin: '6px 0 0' }}>{sel.liste.length ? `${sel.liste.length} vin${sel.liste.length > 1 ? 's' : ''}${prix.length ? `, de ${euros(Math.min(...prix))} à ${euros(Math.max(...prix))}` : ''}.` : 'Aucun vin ne s’accorde assez bien : Pat le dira au client et proposera d’en parler.'}</p></div>
-              <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))', gap: 14 }}>
+              <div><h3 style={{ fontSize: 20, color: 'var(--encre)' }}>Avec {nomCourt}, Pat proposera :</h3>
+                <p className="discret" style={{ margin: '6px 0 0' }}>{sel.liste.length ? `${sel.liste.length} vin${sel.liste.length > 1 ? 's' : ''}${prix.length ? `, de ${euros(Math.min(...prix))} à ${euros(Math.max(...prix))}` : ''} — c’est ce que verra le client.` : 'Aucun vin ne s’accorde assez bien : Pat le dira au client et proposera d’en parler.'}</p></div>
+              <div className="pile" style={{ gap: 10 }}>
                 {sel.liste.map((r, i) => (
-                  <div key={r.vin.id} className="carte-bo pile" style={{ padding: 16, gap: 10 }}>
-                    <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}><Vignette url={r.vin.etiquette_url} taille={56} />
-                      <div className="pile" style={{ gap: 3 }}><span className="surtitre" style={{ fontSize: 12, letterSpacing: 0 }}>N° {i + 1}{interne ? ` · ${r.vin.id}` : ''}</span><b style={{ fontSize: 14.5, lineHeight: 1.25 }}>{r.vin.libelle}</b><b style={{ fontSize: 13.5 }}>{euros(r.vin.prix ?? r.vin.prix_verre)}</b></div></div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 8 }}><Points note={r.note} />{interne
+                  <article key={r.vin.id} className="vin-propose">
+                    <span className="rang">{i + 1}</span>
+                    <Vignette url={r.vin.etiquette_url} taille={72} />
+                    <div className="pile" style={{ gap: 4, minWidth: 0 }}>
+                      <b style={{ fontSize: 16, lineHeight: 1.25 }}>{r.vin.libelle}{(r.vin.prix ?? r.vin.prix_verre) !== null && <span style={{ fontWeight: 500, color: 'var(--encre)' }}> · {euros(r.vin.prix ?? r.vin.prix_verre)}</span>}</b>
+                      {interne && <span className="petit discret">{r.vin.id}</span>}
+                      <Commentaire resto={resto} platId={plat.id} vinId={r.vin.id} ligne={lignesParVin.get(r.vin.id)?.[0]} tous={Boolean(sp.tous)} grand />
+                    </div>
+                    <span className="pile" style={{ gap: 4, alignItems: 'flex-end' }}><Points note={r.note} />{interne
                       ? <span className="discret" style={{ fontSize: 13 }}>score <b style={{ color: 'var(--texte)' }}>{r.score}</b></span>
-                      : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</div>
-                    <Commentaire resto={resto} platId={plat.id} vinId={r.vin.id} ligne={lignesParVin.get(r.vin.id)?.[0]} tous={Boolean(sp.tous)} grand />
-                  </div>
+                      : <span className="discret" style={{ fontSize: 13 }}>note <b style={{ color: 'var(--texte)' }}>{r.note}/5</b></span>}</span>
+                  </article>
                 ))}
               </div>
             </div>
@@ -218,7 +225,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
               </details>
             )}
             <div className="pile">
-              <div><h3 style={{ fontSize: 20 }}>Classement complet</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Pat classe les vins à partir de la note d’accord et de sa propre sélection.'}</p></div>
+              <div><h3 style={{ fontSize: 20 }}>Tous les vins classés pour {nomCourt}</h3><p className="discret" style={{ margin: '6px 0 0' }}>{interne ? 'Classé par score de Pat.' : 'Pat classe les vins à partir de la note d’accord et de sa propre sélection.'}</p></div>
               <div className="tableau">
                 <table style={{ minWidth: 900 }}>
                   <thead><tr><th className="droite">Rang</th><th>Vin</th><th>Note</th>{interne && <th className="droite">Score</th>}<th>Pourquoi (Pat)</th><th>Résultat</th></tr></thead>
