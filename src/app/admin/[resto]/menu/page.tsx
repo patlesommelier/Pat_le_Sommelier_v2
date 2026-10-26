@@ -29,7 +29,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
   const lien = (q: Record<string, string>) => `/admin/${resto}/menu?${new URLSearchParams({ cat, ...q })}`;
   return (
     <>
-      <Entete titre="Menu" texte="Liste des plats proposés à vos clients et accordés par Pat.">
+      <Entete titre="Menu" texte="Liste des plats proposés à vos clients et accordés par Pat : plus la description de vos plats est précise, plus les accords seront précis !">
         {/* Menu et suggestions à imprimer, chaque plat avec le vin suggéré par Pat ; les suggestions à part, pour les changer chaque semaine. */}
         <a href={`/admin/${resto}/menu/imprimer`} target="_blank" rel="noopener" className="btn sec">Imprimer le menu</a>
         <a href={`/admin/${resto}/menu/imprimer?type=suggestions`} target="_blank" rel="noopener" className="btn sec">Imprimer les suggestions</a>
