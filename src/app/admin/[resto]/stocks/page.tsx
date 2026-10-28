@@ -31,6 +31,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   return (
     <>
       <Entete titre="Stocks" texte={`Le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+        {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
+        <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
       <section className="stats" aria-label="Résumé des stocks">
