@@ -30,7 +30,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const sansPrix = groupes.filter((g) => !achats.has(g.principal.id)).length;
   return (
     <>
-      <Entete titre="Stocks" texte={`Le nombre de bouteilles de chaque vin, en stock et en commande, et son prix d’achat HTVA chez votre fournisseur. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+      <Entete titre="Stocks" texte={`Le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
       <section className="stats" aria-label="Résumé des stocks">
@@ -46,16 +46,16 @@ export default async function Stocks({ params, searchParams }: { params: Promise
             <Link href={`/admin/${resto}/stocks`} aria-current={filtre !== 'bas' ? 'true' : undefined}>Tous les vins <span>{groupes.length}</span></Link>
             <Link href={`/admin/${resto}/stocks?filtre=bas`} aria-current={filtre === 'bas' ? 'true' : undefined}>Stock bas <span>{bas.length}</span></Link>
           </nav>
-          <button className="btn">Enregistrer les stocks</button>
+          <button className="btn">Enregistrer</button>
         </div>
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
         {parCouleur.length > 0 && (
           <div className="tableau">
             <table className="table-stocks" style={{ minWidth: 860 }}>
-              <thead><tr><th>Vin</th><th>Fournisseur</th><th className="droite">Prix d’achat HTVA</th><th className="droite">En stock</th><th className="droite">En commande</th><th /></tr></thead>
+              <thead><tr><th>Vin</th><th>Fournisseur</th><th className="droite">Prix d’achat HTVA</th><th className="droite">Prix de vente</th><th className="droite">En stock</th><th className="droite">En commande</th><th /></tr></thead>
               {parCouleur.map((c) => (
                 <tbody key={c.titre}>
-                  <tr className="rubrique"><td colSpan={6}><b className="rubrique-carte">{c.titre}</b></td></tr>
+                  <tr className="rubrique"><td colSpan={7}><b className="rubrique-carte">{c.titre}</b></td></tr>
                   {c.groupes.map(({ principal: v, disponible, bas: alerte }) => {
                     const nom = nomPourListe(v);
                     return (
@@ -64,6 +64,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           <div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}</div></div></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
                         <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
+                        {/* Prix de vente : celui de la bouteille sur la carte (app et carte imprimée), modifiable ici. */}
+                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`vente_${v.id}`} defaultValue={v.prix != null ? Number(v.prix).toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix de vente : ${v.libelle}`} /> €</span>
+                          {v.prix == null && v.prix_verre != null && <div className="petit discret">verre {Number(v.prix_verre).toFixed(2).replace('.', ',')} €</div>}</td>
                         <td className="droite"><span className="champ-stock">
                           {alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>}
                           <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
@@ -78,7 +81,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
             </table>
           </div>
         )}
-        <div className="barre-enregistrer"><span className="discret">Changez les chiffres puis enregistrez. À la réception d’une commande, les bouteilles passent toutes seules en stock.</span><button className="btn">Enregistrer les stocks</button></div>
+        <div className="barre-enregistrer"><span className="discret">Changez les chiffres puis enregistrez. Le prix de vente est celui de la bouteille sur votre carte (app et carte imprimée).</span><button className="btn">Enregistrer</button></div>
       </FormulaireAdmin>
     </>
   );

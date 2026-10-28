@@ -34,6 +34,7 @@ const prix = (f: FormData, k: string): number | null | undefined => {
 
 const rafraichir = (resto: string) => {
   for (const p of ['stocks', 'commandes', 'fournisseurs', 'parametres', 'carte']) revalidatePath(`/admin/${resto}/${p}`);
+  revalidatePath(`/${resto}`, 'layout'); // l'app des clients (prix de vente)
 };
 
 /** Toutes les lignes (contenances) des vins dont on donne la ligne principale. */
@@ -52,14 +53,16 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
   if (!ids.length) return { ok: 'Rien à enregistrer.' };
   // Une seule requête pour tous les vins (une par vin dépassait le temps d'une action sur le serveur en ligne).
   const achats = ids.map((id) => prix(f, `achat_${id}`));
-  const illisibles = ids.filter((id, i) => achats[i] === undefined && txt(f, `achat_${id}`) !== null);
+  // Prix de vente (bouteille, sur la carte) : un champ vidé ne retire pas le prix de la carte.
+  const ventes = ids.map((id) => prix(f, `vente_${id}`) ?? undefined);
+  const illisibles = ids.filter((id, i) => (achats[i] === undefined && txt(f, `achat_${id}`) !== null) || (ventes[i] === undefined && txt(f, `vente_${id}`) !== null));
   const r = await requete<{ id: string }>(
     `update vin_carte v set stock = coalesce(x.stock, v.stock), en_commande = coalesce(x.commande, v.en_commande),
-            prix_achat = case when x.achat_envoye then x.achat else v.prix_achat end
-       from unnest($2::text[], $3::int[], $4::int[], $5::numeric[], $6::bool[]) as x(id, stock, commande, achat, achat_envoye)
+            prix_achat = case when x.achat_envoye then x.achat else v.prix_achat end, prix = coalesce(x.vente, v.prix)
+       from unnest($2::text[], $3::int[], $4::int[], $5::numeric[], $6::bool[], $7::numeric[]) as x(id, stock, commande, achat, achat_envoye, vente)
       where v.restaurant_id = $1 and v.id = x.id returning v.id`,
     [resto, ids, ids.map((id) => entier(f, `stock_${id}`)), ids.map((id) => entier(f, `en_commande_${id}`)),
-      achats.map((a) => a ?? null), achats.map((a) => a !== undefined)]);
+      achats.map((a) => a ?? null), achats.map((a) => a !== undefined), ventes.map((v) => v ?? null)]);
   // Fournisseurs : seulement ceux qui ont changé (ou un nouveau fournisseur à créer).
   const actuels = new Map((await requete<{ id: string; fournisseur_id: string | null }>(
     'select id, fournisseur_id from vin_carte where restaurant_id = $1 and id = any($2)', [resto, ids])).map((v) => [v.id, v.fournisseur_id ?? '']));
@@ -70,7 +73,7 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
   }
   rafraichir(resto);
   const n = r.length;
-  if (illisibles.length) return { erreur: `Stocks enregistrés, sauf ${illisibles.length} prix d’achat illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
+  if (illisibles.length) return { erreur: `Stocks enregistrés, sauf ${illisibles.length} prix illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
   return { ok: `Stocks enregistrés (${n} vin${n > 1 ? 's' : ''}).` };
 }
 
