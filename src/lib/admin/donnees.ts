@@ -6,11 +6,13 @@ export interface RestaurantBO {
   id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null;
   accroche: string | null; reglages_selection: Record<string, unknown>; modifie_bo: string | null;
   statut: string; origine: string; page_accueil: string; categories_carte: string[]; couleur_impression: string | null;
+  /** Gestion des stocks : alerte « stock bas » à ce nombre de bouteilles (ou moins). */
+  stock_limite_basse: number;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, stock_limite_basse
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }
@@ -101,6 +103,8 @@ export interface VinBO {
   contenances: string[];
   /** Présentation pour la carte imprimée : générée par Pat, et corrigée par le restaurant (prioritaire). */
   presentation_carte: string | null; presentation_carte_perso: string | null;
+  /** Gestion des stocks : bouteilles en stock et en commande (sur la ligne principale du vin), fournisseur. */
+  stock: number; en_commande: number; fournisseur_id: string | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
   /** Nature, bio : base de Pat. */
   nature: boolean; bio: boolean;
@@ -114,7 +118,8 @@ export async function getVinsBO(restaurantId: string) {
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
-            coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio
+            coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,
+            v.stock, v.en_commande, v.fournisseur_id
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee cu on cu.id = v.cuvee_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);

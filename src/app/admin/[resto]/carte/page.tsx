@@ -11,6 +11,7 @@ import { getRankingsInternes, getRestaurantBO, getVinsBO, ligneNotesPat } from '
 import { categoriesActives } from '@/lib/categories';
 import { etatEtiquette, etatProducteur, nomPourListe, parRubrique, placeGroupe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
+import { stockBas } from '@/lib/admin/stocks';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
@@ -29,6 +30,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   // Onglets comme dans l'app : les couleurs, puis les catégories spéciales (coups de cœur, nature, bio) ;
   // un vin d'une catégorie spéciale n'est que là.
   const actives = categoriesActives(restaurant?.categories_carte);
+  const limite = restaurant?.stock_limite_basse ?? 2; // stock bas : point d'exclamation rouge (écran seulement, jamais imprimé)
   const tousGroupes = regrouperVins(vins);
   const placeDe = new Map(tousGroupes.map((g) => [g, placeGroupe(g, actives)]));
   const presentes: [string, string][] = [
@@ -110,7 +112,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   return {
                     cle: v.id, ids: tous.map((x) => x.id), ancre: `vin-${v.id}`, classe: choisie ? 'choisi' : undefined,
                     cellules: (<>
-                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link><PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.disponible) && stockBas(v.stock, limite) && <Link href={`/admin/${resto}/stocks?filtre=bas`} className="alerte-stock" title={`Stock bas : ${v.stock} bouteille${v.stock > 1 ? 's' : ''}`} aria-label="Stock bas" draggable={false}>!</Link>}<PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
                       <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div>{montrer([bl, bk]) && <Etat type={bk}>{bl}</Etat>}{rankings && <div className="petit" style={{ color: 'var(--encre)' }}>{etoiles(v.id)}</div>}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>

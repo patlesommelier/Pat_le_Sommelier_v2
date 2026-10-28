@@ -3,12 +3,12 @@
 // il n'envoie rien par lui-même. L'action n'est appelée qu'après confirmation, une fois la page prête.
 import { useTransition } from 'react';
 
-export function BoutonSupprimer({ action, libelle, question, className = 'btn sec' }: { action: () => void | Promise<void>; libelle: string; question: string; className?: string }) {
+export function BoutonSupprimer({ action, libelle, question, className = 'btn sec', enCoursLibelle = 'Suppression…' }: { action: () => unknown; libelle: string; question: string; className?: string; enCoursLibelle?: string }) {
   const [enCours, demarrer] = useTransition();
   return (
     <button type="button" className={className} disabled={enCours} aria-busy={enCours}
       onClick={() => { if (window.confirm(question)) demarrer(async () => { await action(); }); }}>
-      {enCours ? 'Suppression…' : libelle}
+      {enCours ? enCoursLibelle : libelle}
     </button>
   );
 }

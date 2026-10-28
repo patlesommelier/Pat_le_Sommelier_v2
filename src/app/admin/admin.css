@@ -245,3 +245,24 @@ a.stat:hover { border-color: var(--ligne-forte); }
 .rubrique-carte input { min-height: 34px; padding: 4px 8px; border: 1px solid transparent; border-radius: 10px; background: transparent; font-size: 12.5px; }
 .rubrique-carte input:hover { border-color: var(--ligne); }
 .rubrique-carte input:focus { border-color: var(--ligne-forte); background: var(--carte); outline: none; box-shadow: 0 0 0 3px var(--rose); }
+
+/* ── Gestion des stocks ── */
+.alerte-stock { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; flex-shrink: 0; margin: 0 6px; border-radius: 50%;
+  background: var(--rouge); color: #FFF !important; font: 800 13px/1 Outfit, sans-serif; text-decoration: none !important; vertical-align: 1px; }
+.alerte-texte { display: inline-flex; align-items: center; color: var(--rouge); font-weight: 600; font-size: 14px; }
+.champ-stock { display: inline-flex; align-items: center; justify-content: flex-end; }
+.table-stocks input[type=number], .champ-commande { width: 84px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }
+.table-stocks tr.indisponible td { opacity: 0.55; }
+.table-stocks tr.rubrique td { background: var(--survol); padding-top: 10px; padding-bottom: 10px; }
+tr.choisi td { background: var(--rose); }
+.barre-enregistrer { position: sticky; bottom: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 12px 18px; background: var(--carte); border: 1px solid var(--ligne); border-radius: 16px; box-shadow: var(--ombre); }
+.commande.choisie { border-color: var(--encre); box-shadow: 0 0 0 2px var(--rose); }
+.lignes-commande { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 6px; }
+.lignes-commande li { display: grid; grid-template-columns: 44px 1fr; gap: 10px; align-items: baseline; padding-bottom: 6px; border-bottom: 1px solid var(--separation); }
+.lignes-commande li b { text-align: right; color: var(--encre); font-variant-numeric: tabular-nums; }
+.lignes-commande small { color: var(--discret); }
+.bloc-fournisseur > summary, .deroulant-simple > summary { cursor: pointer; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px; list-style: none; }
+.bloc-fournisseur > summary::-webkit-details-marker, .deroulant-simple > summary::-webkit-details-marker { display: none; }
+.bloc-fournisseur > summary::after, .deroulant-simple > summary::after { content: '⌄'; font-size: 20px; color: var(--encre); margin-left: auto; }
+.bloc-fournisseur[open] > summary::after, .deroulant-simple[open] > summary::after { content: '⌃'; }

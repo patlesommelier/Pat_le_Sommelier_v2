@@ -26,6 +26,7 @@ import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances'
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { chercherVinsBase, type VinTrouve } from '@/lib/admin/recherche-base';
 import { completerBase } from '@/lib/admin/completer-base';
+import { choisirFournisseur } from '@/lib/admin/stocks';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -203,6 +204,8 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
       where id = $1 and restaurant_id = $2`,
     [vinId, resto, f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
+  // Fournisseur (gestion des stocks) : pour le vin entier ; « nouveau » le crée avec le nom donné.
+  if (f.has('fournisseur_envoye')) await choisirFournisseur(resto, await memeVin(resto, vinId), txt(f, 'fournisseur'), txt(f, 'fournisseur_nouveau'));
   // Coup de cœur : pour le vin entier (toutes ses contenances).
   await requete('update vin_carte set coup_de_coeur = $3 where restaurant_id = $2 and id = any($1)',
     [await memeVin(resto, vinId), resto, f.get('coup_de_coeur') === 'on']);

@@ -12,6 +12,8 @@ import { getRankingsInternes, getVinsBO, ligneNotesPat, suggestionsProducteurs }
 import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule';
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
+import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
+import { getFournisseurs } from '@/lib/admin/stocks';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -22,7 +24,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const { resto, vin } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const id = decodeURIComponent(vin);
-  const [vins, u] = await Promise.all([getVinsBO(resto), utilisateurCourant()]);
+  const [vins, u, fournisseurs] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getFournisseurs(resto)]);
   const v = vins.find((x) => x.id === id);
   if (!v) notFound();
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
@@ -151,6 +153,14 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               <label className="case"><input type="checkbox" name="nature" defaultChecked={groupe.some((x) => x.nature)} /><span>Vin nature<small>Petite grappe verte dans l’app et sur la carte imprimée.</small></span></label>
             </div>
           </fieldset>
+
+          {/* Fournisseur du vin (gestion des stocks) : on peut en ajouter un en le nommant. */}
+          <div className="champ carte-bo">
+            <label>Fournisseur</label>
+            <input type="hidden" name="fournisseur_envoye" value="1" />
+            <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
+            <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Stocks</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
+          </div>
 
           <div className="champ carte-bo">
             <label htmlFor="presentation_carte_perso">Présentation (app et carte imprimée)</label>

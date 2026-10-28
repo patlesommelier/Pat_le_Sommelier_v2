@@ -1,0 +1,133 @@
+// Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
+// puis une nouvelle commande, les vins groupés par fournisseur avec leur stock actuel.
+import Link from 'next/link';
+import { annulerCommande, creerCommande, envoyerCommande, receptionnerCommande } from '../../stocks-actions';
+import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
+import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
+import { Entete, Etat, Vignette } from '@/components/admin/Ui';
+import { exigerAcces } from '@/lib/admin/auth';
+import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
+import { getCommandes, getCoordonnees, getFournisseurs, stockBas, type Commande } from '@/lib/admin/stocks';
+import { referenceCommande } from '@/lib/bon-commande';
+import { envoiEmailConfigure } from '@/lib/email';
+import { nomPourListe, regrouperVins } from '../carte/etats';
+
+const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
+const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
+
+export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string }> }) {
+  const { resto } = await params;
+  await exigerAcces(resto);
+  const sp = await searchParams;
+  const [vins, r, fournisseurs, ouvertes, recues, coord] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
+    getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue', 'annulee'], 20), getCoordonnees(resto)]);
+  const limite = r?.stock_limite_basse ?? 2;
+  const emailPret = envoiEmailConfigure();
+  const groupes = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible));
+  // Nouvelle commande : un bloc par fournisseur qui a des vins, puis les vins sans fournisseur.
+  const blocs = [
+    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id) })).filter((b) => b.groupes.length),
+    { id: '', nom: 'Vins sans fournisseur', email: null, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
+  ].filter((b) => b.groupes.length);
+  const cible = sp.f === 'aucun' ? '' : sp.f;
+  const sansCoordonnees = !coord?.commande_email || !coord.commande_adresse;
+
+  const carte = (c: Commande) => {
+    const mail = c.fournisseur_email ? `mailto:${c.fournisseur_email}?${new URLSearchParams({
+      subject: `Bon de commande ${referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} — ${coord?.commande_societe || coord?.nom || ''}`,
+      body: `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande (${total(c)} bouteilles) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${coord?.commande_societe || coord?.nom || ''}`,
+    }).toString().replace(/\+/g, '%20')}` : null;
+    return (
+      <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
+          <span className="pile" style={{ gap: 2 }}>
+            <span className="surtitre">Commande n° {referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} · {date(c.cree_le)}</span>
+            <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
+          </span>
+          {c.statut === 'ouverte'
+            ? (c.envoyee_le ? <Etat type="ok">Envoyée le {date(c.envoyee_le)}</Etat> : <Etat type="propose">Pas encore envoyée</Etat>)
+            : c.statut === 'recue' ? <Etat type="ok">Réceptionnée le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
+        </div>
+        <ul className="lignes-commande">
+          {c.lignes.map((l, i) => <li key={i}><b>{l.quantite}</b><span>{l.libelle}{l.detail && <small> · {l.detail}</small>}</span></li>)}
+        </ul>
+        <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}</span>
+        {c.statut === 'ouverte' && (
+          <div className="ligne-actions">
+            <FormulaireAdmin action={receptionnerCommande.bind(null, resto, c.id)}><button className="btn">Commande réceptionnée</button></FormulaireAdmin>
+            <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec">Bon de commande (PDF)</a>
+            {emailPret && c.fournisseur_email
+              ? <FormulaireAdmin action={envoyerCommande.bind(null, resto, c.id)}><button className="btn rouge">{c.envoyee_le ? 'Renvoyer par e-mail' : `Envoyer à ${c.fournisseur_email}`}</button></FormulaireAdmin>
+              : mail ? <a href={mail} className="btn rouge">Écrire au fournisseur</a> : null}
+            <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
+              question={`Annuler la commande à ${c.fournisseur_nom} ? Ses bouteilles ne seront plus comptées « en commande ».`} />
+          </div>
+        )}
+        {c.statut === 'ouverte' && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon par e-mail, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
+        {c.statut === 'ouverte' && c.fournisseur_email && !emailPret && <span className="petit discret">« Écrire au fournisseur » ouvre votre messagerie avec la commande : joignez-y le bon de commande (PDF) téléchargé.</span>}
+      </article>
+    );
+  };
+
+  return (
+    <>
+      <Entete titre="Commandes de vin" texte="Commandez à vos fournisseurs : Pat prépare le bon de commande et compte les bouteilles « en commande ». À la livraison, « Commande réceptionnée » les met en stock." />
+      {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
+
+      <section className="pile">
+        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>
+        {ouvertes.length ? <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))' }}>{ouvertes.map(carte)}</div>
+          : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
+      </section>
+
+      <section className="pile" id="nouvelle">
+        <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
+        {!blocs.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
+        {blocs.map((b) => {
+          const basN = b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
+          return (
+            <details key={b.id || 'aucun'} className="carte-bo bloc-fournisseur" open={cible !== undefined ? cible === b.id : basN > 0}>
+              <summary>
+                <span><b style={{ fontSize: 17 }}>{b.nom}</b> <span className="discret">· {b.groupes.length} vin{b.groupes.length > 1 ? 's' : ''}</span></span>
+                {basN > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basN} en stock bas</span>}
+              </summary>
+              <FormulaireAdmin action={creerCommande.bind(null, resto, b.id)} className="pile" style={{ gap: 12, marginTop: 12 }}>
+                {!b.id && (fournisseurs.length
+                  ? <label className="champ" style={{ maxWidth: 360 }}><span>Fournisseur de cette commande</span>
+                      <select name="fournisseur" defaultValue="" required><option value="" disabled>Choisir…</option>{fournisseurs.map((f) => <option key={f.id} value={f.id}>{f.nom}</option>)}</select></label>
+                  : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>, puis choisissez celui de chaque vin dans Stocks.</p>)}
+                <div className="tableau">
+                  <table style={{ minWidth: 640 }}>
+                    <thead><tr><th>Vin</th><th className="droite">En stock</th><th className="droite">En commande</th><th className="droite">À commander</th></tr></thead>
+                    <tbody>
+                      {b.groupes.map(({ principal: v }) => {
+                        const alerte = stockBas(v.stock, limite);
+                        const nom = nomPourListe(v);
+                        return (
+                          <tr key={v.id} className={sp.vin === v.id ? 'choisi' : undefined}>
+                            <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
+                            <td className="droite" style={{ whiteSpace: 'nowrap' }}>{alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} <b>{v.stock}</b></td>
+                            <td className="droite">{v.en_commande || '—'}</td>
+                            <td className="droite"><input type="number" name={`qte_${v.id}`} min={0} max={10000} defaultValue={sp.vin === v.id ? 6 : undefined} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${v.libelle}`} /></td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+                <span><button className="btn rouge" disabled={!b.id && !fournisseurs.length}>Valider la commande{b.id ? ` à ${b.nom}` : ''}</button></span>
+              </FormulaireAdmin>
+            </details>
+          );
+        })}
+      </section>
+
+      {recues.length > 0 && (
+        <details className="pile">
+          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ou annulées ({recues.length})</summary>
+          <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))', marginTop: 12 }}>{recues.map(carte)}</div>
+        </details>
+      )}
+    </>
+  );
+}
