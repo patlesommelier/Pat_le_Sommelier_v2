@@ -7,9 +7,9 @@ import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
-import { getRankingsInternes, getRestaurantBO, getVinsBO, ligneNotesPat } from '@/lib/admin/donnees';
+import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { categoriesActives } from '@/lib/categories';
-import { etatEtiquette, etatProducteur, nomPourListe, parRubrique, placeGroupe, regrouperVins } from './etats';
+import { etatEtiquette, nomPourListe, parRubrique, placeGroupe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 import { stockBas } from '@/lib/admin/stocks';
 
@@ -20,13 +20,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [vins, u, restaurant] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getRestaurantBO(resto)]);
-  // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
-  const rankings = u?.admin ? await getRankingsInternes(resto) : null;
-  // Le restaurant ne voit pas si le producteur vient de la base de Pat (seulement ce qui lui demande d'agir), ni la colonne Étiquette.
+  // Colonne Étiquette : pour Pat seulement. Le producteur n'est montré que par son nom (ni « déjà référencé », ni notes de Pat).
   const pourPat = Boolean(u?.admin);
-  const montrer = ([, type]: [string, string]) => pourPat || type === 'attention';
-  // Notes de Pat (base) : visibles par le super-admin seulement, jamais par le restaurant.
-  const etoiles = (id: string) => ligneNotesPat(rankings?.get(id));
   // Onglets comme dans l'app : les couleurs, puis les catégories spéciales (coups de cœur, nature, bio) ;
   // un vin d'une catégorie spéciale n'est que là.
   const actives = categoriesActives(restaurant?.categories_carte);
@@ -104,7 +99,6 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   <td colSpan={8}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b> <span className="petit discret">{r.groupes.length} vin{r.groupes.length > 1 ? 's' : ''}</span></td>
                 ) : undefined,
                 vins: r.groupes.map(({ principal: v, tous, contenances, prix }) => {
-                  const [bl, bk] = etatProducteur(v);
                   const [el, ek] = etatEtiquette(v);
                   const nom = nomPourListe(v);
                   const fiche = `/admin/${resto}/carte/${encodeURIComponent(v.id)}`;
@@ -114,7 +108,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                     cellules: (<>
                       <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.disponible) && stockBas(v.stock, limite) && <Link href={`/admin/${resto}/stocks?filtre=bas`} className="alerte-stock" title={`Stock bas : ${v.stock} bouteille${v.stock > 1 ? 's' : ''}`} aria-label="Stock bas" draggable={false}>!</Link>}<PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
-                      <td className="col-producteur"><div>{v.producteur_nom ?? v.producteur_texte ?? '—'}</div>{montrer([bl, bk]) && <Etat type={bk}>{bl}</Etat>}{rankings && <div className="petit" style={{ color: 'var(--encre)' }}>{etoiles(v.id)}</div>}</td>
+                      <td className="col-producteur">{v.producteur_nom ?? v.producteur_texte ?? '—'}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>
                       <td>{contenances.length
                         ? <div style={{ display: 'flex', flexWrap: 'wrap', gap: 4, maxWidth: 110 }}>{contenances.map((x) => <Etat key={x} type="defaut">{x}</Etat>)}</div>

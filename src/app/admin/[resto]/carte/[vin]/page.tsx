@@ -96,7 +96,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             </div>
             {v.producteur_id && (
               <label className="case"><input type="radio" name="producteur_choix" value={v.producteur_id} defaultChecked />
-                <span><b>{v.producteur_nom}</b><small>{u?.admin || pk === 'attention' ? pl : null}{etoiles}</small></span></label>
+                <span><b>{v.producteur_nom}</b>{u?.admin && <small>{pl}{etoiles}</small>}</span></label>
             )}
             {/* Super-admin seulement : la fiche complète du producteur dans la base de Pat. */}
             {u?.admin && v.producteur_id && (
@@ -117,7 +117,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             )}
             {suggestions.map((p) => (
               <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
-                <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{p.statut === 'propose' ? ' · nouveau producteur' : ' · déjà référencé'}</small></span></label>
+                <span>{p.nom}<small>{[p.region, p.pays].filter(Boolean).join(' · ')}{u?.admin ? (p.statut === 'propose' ? ' · nouveau producteur' : ' · déjà référencé') : ''}</small></span></label>
             ))}
             {sansLien && (
               <label className="case"><input type="radio" name="producteur_choix" value="nouveau" />
