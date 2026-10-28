@@ -9,7 +9,7 @@ import { Entete, Etat, Vignette } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getCoordonnees, getFournisseurs, stockBas, type Commande } from '@/lib/admin/stocks';
-import { referenceCommande } from '@/lib/bon-commande';
+import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 
@@ -37,7 +37,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     const ref = referenceCommande({ numero: c.numero, date: new Date(c.cree_le) });
     const nomResto = coord?.commande_societe || coord?.nom || '';
     const sujet = `Bon de commande ${ref} — ${nomResto}`;
-    const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total(c)} bouteille${total(c) > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
+    const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total(c)} bouteille${total(c) > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
     const envoyee = Boolean(c.envoyee_le);
     return (
       <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
@@ -52,9 +52,9 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
         </div>
         <ul className="lignes-commande">
-          {c.lignes.map((l, i) => <li key={i}><b>{l.quantite}</b><span>{l.libelle}{l.detail && <small> · {l.detail}</small>}</span></li>)}
+          {c.lignes.map((l, i) => <li key={i}><b>{l.quantite}</b><span>{l.libelle}{l.detail && <small> · {l.detail}</small>}</span>{l.prix_achat != null && <span className="prix-ligne">{euros(l.prix_achat)} <small>× {l.quantite} =</small> <b>{euros(l.prix_achat * l.quantite)}</b></span>}</li>)}
         </ul>
-        <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}</span>
+        <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}{c.lignes.some((l) => l.prix_achat != null) && <> · <b style={{ color: 'var(--encre)' }}>Total {euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA</b></>}</span>
         {c.statut === 'ouverte' && (
           <div className="ligne-actions" style={{ alignItems: 'flex-start' }}>
             {c.fournisseur_email && (
@@ -89,7 +89,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
       </section>
 
       <section className="pile" id="nouvelle">
-        <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
+        <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Le prix d’achat HTVA se corrige ici si le fournisseur l’a changé. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
         {!blocs.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
         {blocs.map((b) => {
           const basN = b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
@@ -106,7 +106,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                   : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>, puis choisissez celui de chaque vin dans Stocks.</p>)}
                 <div className="tableau">
                   <table style={{ minWidth: 640 }}>
-                    <thead><tr><th>Vin</th><th className="droite">En stock</th><th className="droite">En commande</th><th className="droite">À commander</th></tr></thead>
+                    <thead><tr><th>Vin</th><th className="droite">En stock</th><th className="droite">En commande</th><th className="droite">Prix d’achat HTVA</th><th className="droite">À commander</th></tr></thead>
                     <tbody>
                       {b.groupes.map(({ principal: v }) => {
                         const alerte = stockBas(v.stock, limite);
@@ -116,6 +116,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                             <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
                             <td className="droite" style={{ whiteSpace: 'nowrap' }}>{alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} <b>{v.stock}</b></td>
                             <td className="droite">{v.en_commande || '—'}</td>
+                            <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={v.prix_achat != null ? v.prix_achat.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
                             <td className="droite"><input type="number" name={`qte_${v.id}`} min={0} max={10000} defaultValue={sp.vin === v.id ? 6 : undefined} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${v.libelle}`} /></td>
                           </tr>
                         );

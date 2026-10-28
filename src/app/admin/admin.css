@@ -266,3 +266,8 @@ tr.choisi td { background: var(--rose); }
 .bloc-fournisseur > summary::-webkit-details-marker, .deroulant-simple > summary::-webkit-details-marker { display: none; }
 .bloc-fournisseur > summary::after, .deroulant-simple > summary::after { content: '⌄'; font-size: 20px; color: var(--encre); margin-left: auto; }
 .bloc-fournisseur[open] > summary::after, .deroulant-simple[open] > summary::after { content: '⌃'; }
+.champ-prix { display: inline-flex; align-items: center; gap: 4px; white-space: nowrap; color: var(--discret); }
+.champ-prix input { width: 84px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }
+.lignes-commande li { grid-template-columns: 44px 1fr auto; }
+.prix-ligne { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 14px; }
+.prix-ligne b { text-align: right; color: var(--texte); }

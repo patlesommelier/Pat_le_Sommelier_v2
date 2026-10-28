@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon } from '@/lib/admin/stocks';
-import { genererBonCommande, referenceCommande } from '@/lib/bon-commande';
+import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
 import { contenanceDuFormat, grouperMemeVin } from '@/lib/contenances';
 
@@ -23,6 +23,15 @@ const entier = (f: FormData, k: string) => {
   return Number.isFinite(n) && n >= 0 && n <= 100000 ? n : null;
 };
 
+/** Prix en euros (virgule ou point) ; vide : null ; illisible : undefined (on ne change rien). */
+const prix = (f: FormData, k: string): number | null | undefined => {
+  if (!f.has(k)) return undefined;
+  const v = txt(f, k);
+  if (v === null) return null;
+  const n = Number(v.replace(/\s|€/g, '').replace(',', '.'));
+  return Number.isFinite(n) && n >= 0 && n < 100000 ? Math.round(n * 100) / 100 : undefined;
+};
+
 const rafraichir = (resto: string) => {
   for (const p of ['stocks', 'commandes', 'fournisseurs', 'parametres', 'carte']) revalidatePath(`/admin/${resto}/${p}`);
 };
@@ -36,7 +45,7 @@ async function lignesDesVins(resto: string, principaux: string[]) {
 }
 
 // ───────── Stocks ─────────
-/** Page Stocks : stock, bouteilles en commande et fournisseur de chaque vin (champs stock_<id>, en_commande_<id>, fournisseur_<id>). */
+/** Page Stocks : stock, bouteilles en commande, prix d'achat HTVA et fournisseur de chaque vin (champs stock_<id>, en_commande_<id>, achat_<id>, fournisseur_<id>). */
 export async function enregistrerStocks(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const ids = [...f.keys()].filter((k) => k.startsWith('stock_')).map((k) => k.slice(6));
@@ -48,6 +57,8 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
       [resto, id, stock, commande]);
     if (!r.length) continue;
     n++;
+    const achat = prix(f, `achat_${id}`);
+    if (achat !== undefined) await requete('update vin_carte set prix_achat = $3 where restaurant_id = $1 and id = $2', [resto, id, achat]);
     if (f.has(`fournisseur_${id}`)) await choisirFournisseur(resto, groupes.get(id) ?? [id], txt(f, `fournisseur_${id}`), txt(f, `fournisseur_nouveau_${id}`));
   }
   rafraichir(resto);
@@ -131,7 +142,11 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
     if (!v) continue;
     const millesime = v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : '';
     const detail = [v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, contenanceDuFormat(v.format) === 'verre' ? null : v.format].filter(Boolean).join(' · ');
-    await requete('insert into commande_ligne (commande_id, vin_id, libelle, detail, quantite, ordre) values ($1, $2, $3, $4, $5, $6)',
+    // Prix d'achat HTVA : celui indiqué au moment de commander (il devient le prix d'achat du vin), sinon celui du vin.
+    const achat = prix(f, `achat_${vinId}`);
+    if (achat !== undefined) await requete('update vin_carte set prix_achat = $3 where restaurant_id = $1 and id = $2', [resto, vinId, achat]);
+    await requete(`insert into commande_ligne (commande_id, vin_id, libelle, detail, quantite, ordre, prix_achat)
+                   values ($1, $2, $3, $4, $5, $6, (select prix_achat from vin_carte where id = $2))`,
       [id, vinId, `${v.libelle}${millesime}`, detail || null, q, ordre++]);
     await requete('update vin_carte set en_commande = en_commande + $3 where restaurant_id = $1 and id = $2', [resto, vinId, q]);
   }
@@ -151,7 +166,7 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
     a: bon.fournisseur.email, copie: bon.restaurant.email, repondreA: bon.restaurant.email,
     sujet: `Bon de commande ${ref} — ${bon.restaurant.nom}`,
     texte: `Bonjour${bon.fournisseur.contact ? ` ${bon.fournisseur.contact}` : ''},\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total} bouteille${total > 1 ? 's' : ''}) :\n\n`
-      + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}`).join('\n')
+      + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')
       + `\n\nMerci de nous confirmer la commande et la date de livraison${bon.restaurant.email ? ` en répondant à cet e-mail` : ''}.\n\n${bon.restaurant.nom}${bon.restaurant.telephone ? `\n${bon.restaurant.telephone}` : ''}`,
     pieceJointe: { nom: `bon-de-commande-${ref}.pdf`, octets: genererBonCommande(bon) },
   });

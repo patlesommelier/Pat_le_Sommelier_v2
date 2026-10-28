@@ -105,6 +105,8 @@ export interface VinBO {
   presentation_carte: string | null; presentation_carte_perso: string | null;
   /** Gestion des stocks : bouteilles en stock et en commande (sur la ligne principale du vin), fournisseur. */
   stock: number; en_commande: number; fournisseur_id: string | null;
+  /** Prix d'achat HTVA d'une bouteille chez le fournisseur. */
+  prix_achat: number | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
   /** Nature, bio : base de Pat. */
   nature: boolean; bio: boolean;
@@ -119,7 +121,7 @@ export async function getVinsBO(restaurantId: string) {
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,
-            v.stock, v.en_commande, v.fournisseur_id
+            v.stock, v.en_commande, v.fournisseur_id, v.prix_achat
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee cu on cu.id = v.cuvee_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);

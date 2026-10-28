@@ -3,7 +3,7 @@ import 'server-only';
 import { requete } from '../db';
 
 export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number }
-export interface LigneCommande { vin_id: string | null; libelle: string; detail: string | null; quantite: number }
+export interface LigneCommande { vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null }
 export interface Commande {
   id: string; numero: number; fournisseur_id: string | null; fournisseur_nom: string; fournisseur_email: string | null; statut: 'ouverte' | 'recue' | 'annulee';
   cree_le: string; envoyee_le: string | null; envoyee_a: string | null; recue_le: string | null; lignes: LigneCommande[];
@@ -35,7 +35,7 @@ export async function getCommandes(resto: string, statuts: Commande['statut'][],
        from commande c left join fournisseur f on f.id = c.fournisseur_id
       where c.restaurant_id = $1 and c.statut = any($2) order by c.cree_le desc limit $3`, [resto, statuts, limite]);
   const lignes = commandes.length ? await requete<LigneCommande & { commande_id: string }>(
-    'select commande_id, vin_id, libelle, detail, quantite from commande_ligne where commande_id = any($1) order by ordre', [commandes.map((c) => c.id)]) : [];
+    'select commande_id, vin_id, libelle, detail, quantite, prix_achat from commande_ligne where commande_id = any($1) order by ordre', [commandes.map((c) => c.id)]) : [];
   return commandes.map((c) => ({ ...c, lignes: lignes.filter((l) => l.commande_id === c.id) })) as Commande[];
 }
 
@@ -67,8 +67,8 @@ export async function donneesBon(resto: string, commandeId: string) {
     getCoordonnees(resto),
   ]);
   if (!c || !r) return null;
-  const lignes = await requete<{ libelle: string; detail: string | null; quantite: number }>(
-    'select libelle, detail, quantite from commande_ligne where commande_id = $1 order by ordre', [commandeId]);
+  const lignes = await requete<{ libelle: string; detail: string | null; quantite: number; prix_achat: number | null }>(
+    'select libelle, detail, quantite, prix_achat from commande_ligne where commande_id = $1 order by ordre', [commandeId]);
   return {
     numero: c.numero, date: new Date(c.cree_le),
     restaurant: { nom: r.commande_societe || r.nom, adresse: r.commande_adresse, tva: r.commande_tva, contact: r.commande_contact, telephone: r.commande_telephone, email: r.commande_email },

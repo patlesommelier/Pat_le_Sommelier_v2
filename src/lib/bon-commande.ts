@@ -3,10 +3,13 @@
 import { couper, DocumentPdf } from './pdf-simple';
 
 export interface Coordonnees { nom: string; adresse?: string | null; tva?: string | null; contact?: string | null; telephone?: string | null; email?: string | null }
-export interface LigneBon { libelle: string; detail?: string | null; quantite: number }
+export interface LigneBon { libelle: string; detail?: string | null; quantite: number; prix_achat?: number | null }
 export interface BonCommande { numero: number; date: Date; restaurant: Coordonnees; fournisseur: Coordonnees; lignes: LigneBon[] }
 
 const BORDEAUX = '#680021', DISCRET = '#6F6366', LIGNE = '#E2D5D1';
+
+/** Montant en euros, à la belge : 1 234,50 €. */
+export const euros = (n: number) => `${n.toLocaleString('fr-BE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
 
 export const referenceCommande = (b: { numero: number; date: Date }) => `${b.date.getFullYear()}-${String(b.numero).padStart(3, '0')}`;
 
@@ -38,30 +41,42 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
   };
   y = Math.max(bloc(marge, 'COMMANDÉ PAR', b.restaurant), bloc(marge + largeurUtile / 2 + 10, 'FOURNISSEUR', b.fournisseur)) + 22;
 
-  // Tableau des vins.
-  const colQuantite = droite;
+  // Tableau des vins ; avec les prix d'achat HTVA quand il y en a (prix unitaire et total de la ligne).
+  const avecPrix = b.lignes.some((l) => l.prix_achat != null);
+  const colTotal = droite - 8, colPrix = droite - 95, colQuantite = avecPrix ? droite - 185 : droite - 8;
+  const largeurNom = colQuantite - 70 - marge;
   const entete = () => {
     d.rectangle(marge, y - 12, largeurUtile, 20, '#FBF5F2');
     d.texte(marge + 8, y + 1, 'VIN', { corps: 8, gras: true, couleur: DISCRET });
-    d.texte(colQuantite - 8, y + 1, 'BOUTEILLES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+    d.texte(colQuantite, y + 1, 'BOUTEILLES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+    if (avecPrix) {
+      d.texte(colPrix, y + 1, 'PRIX HTVA', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+      d.texte(colTotal, y + 1, 'TOTAL HTVA', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+    }
     y += 22;
   };
   entete();
-  let total = 0;
+  let total = 0, montant = 0;
   for (const l of b.lignes) {
-    const titre = couper(l.libelle, largeurUtile - 110, 10.5, true);
-    const detail = l.detail ? couper(l.detail, largeurUtile - 110, 9) : [];
+    const titre = couper(l.libelle, largeurNom, 10.5, true);
+    const detail = l.detail ? couper(l.detail, largeurNom, 9) : [];
     const hauteur = titre.length * 13 + detail.length * 12 + 10;
     if (y + hauteur > d.hauteurPage - 90) { d.nouvellePage(); y = 64; entete(); }
     titre.forEach((t, i) => d.texte(marge + 8, y + i * 13, t, { corps: 10.5, gras: true }));
     detail.forEach((t, i) => d.texte(marge + 8, y + titre.length * 13 + i * 12, t, { corps: 9, couleur: DISCRET }));
-    d.texte(colQuantite - 8, y, String(l.quantite), { corps: 11, gras: true, aligne: 'droite' });
+    d.texte(colQuantite, y, String(l.quantite), { corps: 11, gras: true, aligne: 'droite' });
+    if (avecPrix && l.prix_achat != null) {
+      d.texte(colPrix, y, euros(l.prix_achat), { corps: 10, aligne: 'droite' });
+      d.texte(colTotal, y, euros(l.prix_achat * l.quantite), { corps: 10, gras: true, aligne: 'droite' });
+      montant += l.prix_achat * l.quantite;
+    }
     y += hauteur;
     d.trait(marge, y - 6, droite, y - 6, LIGNE);
     total += l.quantite;
     y += 6;
   }
-  d.texte(colQuantite - 8, y + 6, `Total : ${total} bouteille${total > 1 ? 's' : ''}`, { corps: 11, gras: true, couleur: BORDEAUX, aligne: 'droite' });
+  d.texte(avecPrix ? colQuantite : colTotal, y + 6, `${total} bouteille${total > 1 ? 's' : ''}`, { corps: 11, gras: true, couleur: BORDEAUX, aligne: 'droite' });
+  if (avecPrix) d.texte(colTotal, y + 6, `Total HTVA : ${euros(montant)}`, { corps: 11, gras: true, couleur: BORDEAUX, aligne: 'droite' });
   y += 40;
 
   // Pied : demande de confirmation.
