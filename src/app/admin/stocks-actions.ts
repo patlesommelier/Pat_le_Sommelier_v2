@@ -49,19 +49,28 @@ async function lignesDesVins(resto: string, principaux: string[]) {
 export async function enregistrerStocks(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const ids = [...f.keys()].filter((k) => k.startsWith('stock_')).map((k) => k.slice(6));
-  const groupes = await lignesDesVins(resto, ids);
-  let n = 0;
-  for (const id of ids) {
-    const stock = entier(f, `stock_${id}`), commande = entier(f, `en_commande_${id}`);
-    const r = await requete('update vin_carte set stock = coalesce($3, stock), en_commande = coalesce($4, en_commande) where restaurant_id = $1 and id = $2 returning id',
-      [resto, id, stock, commande]);
-    if (!r.length) continue;
-    n++;
-    const achat = prix(f, `achat_${id}`);
-    if (achat !== undefined) await requete('update vin_carte set prix_achat = $3 where restaurant_id = $1 and id = $2', [resto, id, achat]);
-    if (f.has(`fournisseur_${id}`)) await choisirFournisseur(resto, groupes.get(id) ?? [id], txt(f, `fournisseur_${id}`), txt(f, `fournisseur_nouveau_${id}`));
+  if (!ids.length) return { ok: 'Rien à enregistrer.' };
+  // Une seule requête pour tous les vins (une par vin dépassait le temps d'une action sur le serveur en ligne).
+  const achats = ids.map((id) => prix(f, `achat_${id}`));
+  const illisibles = ids.filter((id, i) => achats[i] === undefined && txt(f, `achat_${id}`) !== null);
+  const r = await requete<{ id: string }>(
+    `update vin_carte v set stock = coalesce(x.stock, v.stock), en_commande = coalesce(x.commande, v.en_commande),
+            prix_achat = case when x.achat_envoye then x.achat else v.prix_achat end
+       from unnest($2::text[], $3::int[], $4::int[], $5::numeric[], $6::bool[]) as x(id, stock, commande, achat, achat_envoye)
+      where v.restaurant_id = $1 and v.id = x.id returning v.id`,
+    [resto, ids, ids.map((id) => entier(f, `stock_${id}`)), ids.map((id) => entier(f, `en_commande_${id}`)),
+      achats.map((a) => a ?? null), achats.map((a) => a !== undefined)]);
+  // Fournisseurs : seulement ceux qui ont changé (ou un nouveau fournisseur à créer).
+  const actuels = new Map((await requete<{ id: string; fournisseur_id: string | null }>(
+    'select id, fournisseur_id from vin_carte where restaurant_id = $1 and id = any($2)', [resto, ids])).map((v) => [v.id, v.fournisseur_id ?? '']));
+  const changes = ids.filter((id) => f.has(`fournisseur_${id}`) && (txt(f, `fournisseur_${id}`) ?? '') !== actuels.get(id));
+  if (changes.length) {
+    const groupes = await lignesDesVins(resto, changes);
+    for (const id of changes) await choisirFournisseur(resto, groupes.get(id) ?? [id], txt(f, `fournisseur_${id}`), txt(f, `fournisseur_nouveau_${id}`));
   }
   rafraichir(resto);
+  const n = r.length;
+  if (illisibles.length) return { erreur: `Stocks enregistrés, sauf ${illisibles.length} prix d’achat illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
   return { ok: `Stocks enregistrés (${n} vin${n > 1 ? 's' : ''}).` };
 }
 
