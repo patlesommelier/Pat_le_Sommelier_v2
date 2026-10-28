@@ -1,7 +1,8 @@
 // Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
 // puis une nouvelle commande, les vins groupés par fournisseur avec leur stock actuel.
 import Link from 'next/link';
-import { annulerCommande, creerCommande, envoyerCommande, receptionnerCommande } from '../../stocks-actions';
+import { annulerCommande, creerCommande, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
+import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
@@ -33,45 +34,52 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const sansCoordonnees = !coord?.commande_email || !coord.commande_adresse;
 
   const carte = (c: Commande) => {
-    const mail = c.fournisseur_email ? `mailto:${c.fournisseur_email}?${new URLSearchParams({
-      subject: `Bon de commande ${referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} — ${coord?.commande_societe || coord?.nom || ''}`,
-      body: `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande (${total(c)} bouteilles) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${coord?.commande_societe || coord?.nom || ''}`,
-    }).toString().replace(/\+/g, '%20')}` : null;
+    const ref = referenceCommande({ numero: c.numero, date: new Date(c.cree_le) });
+    const nomResto = coord?.commande_societe || coord?.nom || '';
+    const sujet = `Bon de commande ${ref} — ${nomResto}`;
+    const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total(c)} bouteille${total(c) > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
+    const envoyee = Boolean(c.envoyee_le);
     return (
       <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
           <span className="pile" style={{ gap: 2 }}>
-            <span className="surtitre">Commande n° {referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} · {date(c.cree_le)}</span>
+            <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}</span>
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
+          {/* Statut : à envoyer → commande envoyée → bouteilles réceptionnées (ou annulée). */}
           {c.statut === 'ouverte'
-            ? (c.envoyee_le ? <Etat type="ok">Envoyée le {date(c.envoyee_le)}</Etat> : <Etat type="propose">Pas encore envoyée</Etat>)
-            : c.statut === 'recue' ? <Etat type="ok">Réceptionnée le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
+            ? (envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
+            : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
         </div>
         <ul className="lignes-commande">
           {c.lignes.map((l, i) => <li key={i}><b>{l.quantite}</b><span>{l.libelle}{l.detail && <small> · {l.detail}</small>}</span></li>)}
         </ul>
         <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}</span>
         {c.statut === 'ouverte' && (
-          <div className="ligne-actions">
-            <FormulaireAdmin action={receptionnerCommande.bind(null, resto, c.id)}><button className="btn">Commande réceptionnée</button></FormulaireAdmin>
-            <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec">Bon de commande (PDF)</a>
-            {emailPret && c.fournisseur_email
-              ? <FormulaireAdmin action={envoyerCommande.bind(null, resto, c.id)}><button className="btn rouge">{c.envoyee_le ? 'Renvoyer par e-mail' : `Envoyer à ${c.fournisseur_email}`}</button></FormulaireAdmin>
-              : mail ? <a href={mail} className="btn rouge">Écrire au fournisseur</a> : null}
+          <div className="ligne-actions" style={{ alignItems: 'flex-start' }}>
+            {c.fournisseur_email && (
+              <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
+                serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} />
+            )}
+            <FormulaireAdmin action={receptionnerCommande.bind(null, resto, c.id)}>
+              <button className={envoyee ? 'btn' : 'btn sec'} title="Les bouteilles de cette commande sont ajoutées au stock">Bouteilles réceptionnées</button>
+            </FormulaireAdmin>
+            <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec">Voir le PDF</a>
+            {!envoyee && <FormulaireAdmin action={marquerEnvoyee.bind(null, resto, c.id)}><button className="btn fantome petit" title="Si vous l’avez envoyée autrement (téléphone, autre messagerie)">Déjà envoyée</button></FormulaireAdmin>}
             <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
               question={`Annuler la commande à ${c.fournisseur_nom} ? Ses bouteilles ne seront plus comptées « en commande ».`} />
           </div>
         )}
-        {c.statut === 'ouverte' && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon par e-mail, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
-        {c.statut === 'ouverte' && c.fournisseur_email && !emailPret && <span className="petit discret">« Écrire au fournisseur » ouvre votre messagerie avec la commande : joignez-y le bon de commande (PDF) téléchargé.</span>}
+        {c.statut === 'ouverte' && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon de commande, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
       </article>
     );
   };
 
   return (
     <>
-      <Entete titre="Commandes de vin" texte="Commandez à vos fournisseurs : Pat prépare le bon de commande et compte les bouteilles « en commande ». À la livraison, « Commande réceptionnée » les met en stock." />
+      <Entete titre="Commandes de vin" texte="Commandez à vos fournisseurs : Pat prépare le bon de commande, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
+        <a href="#nouvelle" className="btn rouge">+ Faire une commande</a>
+      </Entete>
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">

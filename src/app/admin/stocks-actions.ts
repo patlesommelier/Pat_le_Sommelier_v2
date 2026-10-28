@@ -161,7 +161,16 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
   return { ok: `Bon de commande envoyé à ${bon.fournisseur.email}.` };
 }
 
-/** Commande réceptionnée : ses bouteilles passent du « en commande » au stock. */
+/** Commande envoyée par le restaurant lui-même (partage du PDF ou messagerie) : statut « Commande envoyée ». */
+export async function marquerEnvoyee(resto: string, id: string): Promise<Retour> {
+  await exigerAcces(resto);
+  await requete(`update commande c set envoyee_le = now(), envoyee_a = (select email from fournisseur f where f.id = c.fournisseur_id)
+                  where c.id = $1 and c.restaurant_id = $2 and c.statut = 'ouverte'`, [id, resto]);
+  rafraichir(resto);
+  return { ok: 'Commande envoyée.' };
+}
+
+/** Bouteilles réceptionnées : celles de la commande passent du « en commande » au stock. */
 export async function receptionnerCommande(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
   const r = await requete(`update commande set statut = 'recue', recue_le = now() where id = $1 and restaurant_id = $2 and statut = 'ouverte' returning id`, [id, resto]);
@@ -171,7 +180,7 @@ export async function receptionnerCommande(resto: string, id: string): Promise<R
        from (select vin_id, sum(quantite)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
       where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
   rafraichir(resto);
-  return { ok: 'Commande réceptionnée : les bouteilles sont en stock.' };
+  return { ok: 'Bouteilles réceptionnées : elles sont ajoutées au stock.' };
 }
 
 /** Commande annulée : ses bouteilles ne sont plus « en commande ». */
