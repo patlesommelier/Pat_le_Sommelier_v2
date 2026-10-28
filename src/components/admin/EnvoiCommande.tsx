@@ -1,8 +1,9 @@
 'use client';
 // « Envoyer au fournisseur » : le bon de commande (PDF) part depuis la page.
 // - Envoi par Pat configuré (serveur) : l'e-mail part avec le PDF en pièce jointe.
-// - Sinon : le PDF est partagé vers la messagerie de l'appareil (pièce jointe, sur téléphone, tablette et Mac) ;
-//   à défaut, il est téléchargé et la messagerie s'ouvre avec la commande rédigée. La commande passe alors « envoyée ».
+// - Sinon : la messagerie s'ouvre avec la commande rédigée, à l'adresse du fournisseur, et le PDF est téléchargé
+//   pour être joint. Tout se fait dans le clic (sans attente), sinon le navigateur bloque l'ouverture de la messagerie.
+// La commande passe alors « envoyée ».
 import { useState, useTransition } from 'react';
 
 type Retour = { ok?: string; erreur?: string } | void;
@@ -14,34 +15,24 @@ export function EnvoiCommande({ pdf, fichier, email, sujet, corps, serveur, envo
   const [enCours, demarrer] = useTransition();
   const [message, setMessage] = useState<{ ok?: string; erreur?: string } | null>(null);
 
-  const cliquer = () => demarrer(async () => {
+  const cliquer = () => {
     setMessage(null);
-    if (serveur) { setMessage((await envoyer()) ?? null); return; }
-    const blob = await (await fetch(pdf)).blob();
-    const piece = new File([blob], fichier, { type: 'application/pdf' });
-    const nav = navigator as Navigator & { canShare?: (d: ShareData) => boolean };
-    if (nav.canShare?.({ files: [piece] })) {
-      try {
-        await navigator.share({ files: [piece], title: sujet, text: corps });
-        setMessage((await marquer()) ?? null);
-      } catch { /* partage annulé */ }
-      return;
-    }
-    // Ordinateur sans partage : le PDF est téléchargé, la messagerie s'ouvre avec la commande ; il reste à joindre le PDF.
+    if (serveur) { demarrer(async () => setMessage((await envoyer()) ?? null)); return; }
     const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob); a.download = fichier; a.click();
+    a.href = pdf; a.download = fichier;
+    document.body.appendChild(a); a.click(); a.remove();
     window.location.href = `mailto:${email}?subject=${encodeURIComponent(sujet)}&body=${encodeURIComponent(corps)}`;
-    setMessage({ ok: `Le PDF « ${fichier} » est téléchargé : joignez-le à l’e-mail ouvert dans votre messagerie.` });
-    await marquer();
-  });
+    setMessage({ ok: `Votre messagerie s’ouvre : joignez-y le PDF « ${fichier} », qui vient d’être téléchargé.` });
+    demarrer(async () => { await marquer(); });
+  };
 
   return (
     <span className="pile" style={{ gap: 6 }}>
       <button type="button" className="btn rouge" onClick={cliquer} disabled={enCours} aria-busy={enCours}>
-        {enCours ? 'Envoi…' : deja ? 'Renvoyer au fournisseur' : 'Envoyer au fournisseur'}
+        {enCours && serveur ? 'Envoi…' : deja ? 'Renvoyer au fournisseur' : 'Envoyer au fournisseur'}
       </button>
-      {message?.ok && <span className="petit" style={{ color: 'var(--encre)' }}>{message.ok}</span>}
-      {message?.erreur && <span className="petit" style={{ color: 'var(--ocre)' }}>{message.erreur}</span>}
+      {message?.ok && <span className="petit" style={{ color: 'var(--encre)', maxWidth: 320 }}>{message.ok}</span>}
+      {message?.erreur && <span className="petit" style={{ color: 'var(--ocre)', maxWidth: 320 }}>{message.erreur}</span>}
     </span>
   );
 }

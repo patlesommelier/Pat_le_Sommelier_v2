@@ -65,7 +65,6 @@ export default async function Commandes({ params, searchParams }: { params: Prom
               <button className={envoyee ? 'btn' : 'btn sec'} title="Les bouteilles de cette commande sont ajoutées au stock">Bouteilles réceptionnées</button>
             </FormulaireAdmin>
             <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec">Voir le PDF</a>
-            {!envoyee && <FormulaireAdmin action={marquerEnvoyee.bind(null, resto, c.id)}><button className="btn fantome petit" title="Si vous l’avez envoyée autrement (téléphone, autre messagerie)">Déjà envoyée</button></FormulaireAdmin>}
             <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
               question={`Annuler la commande à ${c.fournisseur_nom} ? Ses bouteilles ne seront plus comptées « en commande ».`} />
           </div>
