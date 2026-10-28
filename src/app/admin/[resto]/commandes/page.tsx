@@ -8,7 +8,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
-import { getCommandes, getCoordonnees, getFournisseurs, stockBas, type Commande } from '@/lib/admin/stocks';
+import { getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, stockBas, type Commande } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
 import { nomPourListe, regrouperVins } from '../carte/etats';
@@ -20,8 +20,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = await searchParams;
-  const [vins, r, fournisseurs, ouvertes, recues, coord] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
-    getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue', 'annulee'], 20), getCoordonnees(resto)]);
+  const [vins, r, fournisseurs, ouvertes, recues, coord, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
+    getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue', 'annulee'], 20), getCoordonnees(resto), getPrixAchat(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
   const emailPret = envoiEmailConfigure();
   const groupes = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible));
@@ -116,7 +116,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                             <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
                             <td className="droite" style={{ whiteSpace: 'nowrap' }}>{alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} <b>{v.stock}</b></td>
                             <td className="droite">{v.en_commande || '—'}</td>
-                            <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={v.prix_achat != null ? v.prix_achat.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
+                            <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
                             <td className="droite"><input type="number" name={`qte_${v.id}`} min={0} max={10000} defaultValue={sp.vin === v.id ? 6 : undefined} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${v.libelle}`} /></td>
                           </tr>
                         );

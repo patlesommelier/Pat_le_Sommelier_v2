@@ -11,6 +11,15 @@ export interface Commande {
 export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
   commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null }
 
+/**
+ * Prix d'achat HTVA de chaque vin (id de la ligne → prix) : lu seulement par les pages Stocks et Commandes de vin,
+ * jamais avec la carte des vins (ni l'app des clients, ni la carte imprimée).
+ */
+export async function getPrixAchat(resto: string) {
+  const lignes = await requete<{ id: string; prix_achat: number }>('select id, prix_achat from vin_carte where restaurant_id = $1 and prix_achat is not null', [resto]);
+  return new Map(lignes.map((l) => [l.id, Number(l.prix_achat)]));
+}
+
 /** Stock bas : à la limite d'alerte ou en dessous. */
 export const stockBas = (stock: number, limite: number) => stock <= limite;
 

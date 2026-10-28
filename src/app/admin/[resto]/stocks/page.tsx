@@ -8,7 +8,7 @@ import { Entete, Vignette } from '@/components/admin/Ui';
 import { euros } from '@/lib/bon-commande';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
-import { getCommandes, getFournisseurs, stockBas } from '@/lib/admin/stocks';
+import { getCommandes, getFournisseurs, getPrixAchat, stockBas } from '@/lib/admin/stocks';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
@@ -17,7 +17,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const { resto } = await params;
   await exigerAcces(resto);
   const { filtre } = await searchParams;
-  const [vins, r, fournisseurs, ouvertes] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte'])]);
+  const [vins, r, fournisseurs, ouvertes, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }))
     .map((g) => ({ ...g, bas: g.disponible && stockBas(g.principal.stock, limite) }));
@@ -26,8 +26,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const parCouleur = COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((c) => c.groupes.length);
   const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
   // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
-  const valeur = groupes.reduce((n, g) => n + (g.principal.prix_achat ?? 0) * g.principal.stock, 0);
-  const sansPrix = groupes.filter((g) => g.principal.prix_achat == null).length;
+  const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
+  const sansPrix = groupes.filter((g) => !achats.has(g.principal.id)).length;
   return (
     <>
       <Entete titre="Stocks" texte={`Le nombre de bouteilles de chaque vin, en stock et en commande, et son prix d’achat HTVA chez votre fournisseur. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
@@ -63,7 +63,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
                           <div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}</div></div></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
-                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={v.prix_achat != null ? v.prix_achat.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
+                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
                         <td className="droite"><span className="champ-stock">
                           {alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>}
                           <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
