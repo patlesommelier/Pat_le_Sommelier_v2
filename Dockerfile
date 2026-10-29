@@ -22,6 +22,7 @@ FROM base AS service
 ENV NODE_ENV=production PORT=3000
 COPY --from=construction /app ./
 EXPOSE 3000
-HEALTHCHECK --interval=30s --timeout=5s --start-period=60s --retries=3 \
+# Contrôle de santé sans curl (absent de l'image) : Coolify l'utilise tel quel ; le premier démarrage crée les tables.
+HEALTHCHECK --interval=30s --timeout=5s --start-period=120s --retries=3 \
   CMD node -e "fetch('http://127.0.0.1:3000/api/sante').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"
 CMD ["sh", "-c", "npm run migrer && exec node_modules/.bin/next start"]

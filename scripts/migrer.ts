@@ -24,7 +24,7 @@ async function main() {
     return;
   }
   if (!process.env.DATABASE_URL) {
-    throw new Error('DATABASE_URL manquante : dans Netlify, ajoutez-la aux variables d’environnement avec la portée « Builds ».');
+    throw new Error('DATABASE_URL manquante : ajoutez-la aux variables d’environnement du site (Coolify : Environment Variables, disponible à l’exécution ; Netlify : portée « Builds »).');
   }
   const pool = ouvrirPool();
   const client = await pool.connect();
