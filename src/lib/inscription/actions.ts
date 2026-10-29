@@ -13,6 +13,7 @@ import { demarrerInscription, inscriptionCourante, lireInscription, majInscripti
 import { typeReel, verifierFichiers } from './fichiers';
 import { finaliserInscription } from './finalisation';
 import { inscriptionAutorisee, MAX_ANALYSES_PAR_INSCRIPTION } from './limites';
+import { enProduction } from '../production';
 
 export type Reponse = { erreurs: string[]; resume?: ResumePublic; /** restaurant créé : la page suit la préparation des accords */ restaurantId?: string };
 
@@ -83,7 +84,7 @@ async function compteExiste(email: string) {
 }
 
 /** Mode de développement sans Supabase (jamais sur Netlify) : pas de compte réel, le back-office local est ouvert. */
-const modeDev = () => !supabaseConfigure() && !process.env.NETLIFY;
+const modeDev = () => !supabaseConfigure() && !enProduction();
 
 /**
  * Étape 3 (après la carte des vins et le menu) : nom du restaurant, e-mail et mot de passe. Le compte est créé

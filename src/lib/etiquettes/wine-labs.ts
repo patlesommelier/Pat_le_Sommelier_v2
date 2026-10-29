@@ -17,6 +17,7 @@ import path from 'node:path';
 import { createClient } from '@supabase/supabase-js';
 import type { Requete } from '../generation/accords';
 import { partagerEtiquettes } from './partage';
+import { enProduction } from '../production';
 
 export const API_WINE_LABS = process.env.WINE_LABS_API_URL ?? 'https://external-api.wine-labs.com'; // surchargé seulement pour les tests
 
@@ -96,7 +97,7 @@ async function copierImage(source: string, requestId: string): Promise<string> {
     if (error) throw new Error(`dépôt de l'étiquette impossible : ${error.message}`);
     return sb.storage.from('medias').getPublicUrl(nom).data.publicUrl;
   }
-  if (process.env.NETLIFY) throw new Error('Stockage non configuré : SUPABASE_SERVICE_ROLE_KEY manquante.');
+  if (enProduction()) throw new Error('Stockage non configuré : SUPABASE_SERVICE_ROLE_KEY manquante.');
   const cible = path.join(process.cwd(), 'public', 'uploads', nom);
   await fs.mkdir(path.dirname(cible), { recursive: true });
   await fs.writeFile(cible, octets);

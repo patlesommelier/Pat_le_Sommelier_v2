@@ -23,6 +23,7 @@ import { traiterComparaisons } from '@/lib/generation/comparaison';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
+import { sslBase } from '@/lib/ssl-base';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}${url.includes('?') ? '&' : '?'}${new URLSearchParams(params)}`;
@@ -631,7 +632,7 @@ export async function lancerComparaison(f: FormData) {
   if (statut !== 202 && statut !== 200) {
     // Hors Netlify (développement local) : le serveur fait la comparaison lui-même, sans faire attendre la page.
     const pg = (await import('pg')).default;
-    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 3, ssl: /localhost|127\.0\.0\.1|host=\/tmp/.test(process.env.DATABASE_URL ?? '') ? false : { rejectUnauthorized: false } });
+    const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, max: 3, ssl: sslBase(process.env.DATABASE_URL) });
     void traiterComparaisons(pool, { finAvant: Date.now() + 15 * 60 * 1000 }).catch((e) => console.error('[comparaison]', e)).finally(() => pool.end());
   }
   redirect(avec('/admin/super/comparaison', { resto: resto!, id: c.id }));

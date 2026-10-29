@@ -5,13 +5,14 @@
  */
 import pg from 'pg';
 import { calculerChoixTable, type DemandeTable } from '../../src/lib/plusieurs-plats';
+import { sslBase } from '../../src/lib/ssl-base';
 
 export default async (req: Request) => {
   const url = process.env.DATABASE_URL;
   if (!url) return;
   let d: DemandeTable;
   try { d = await req.json(); } catch { return; }
-  const pool = new pg.Pool({ connectionString: url, max: 2, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
+  const pool = new pg.Pool({ connectionString: url, max: 2, ssl: sslBase(url) });
   const q = async <T,>(sql: string, params: unknown[] = []) => (await pool.query(sql, params)).rows as T[];
   try {
     // Seulement une demande réellement en attente pour ce restaurant (rien d'autre n'est accepté).

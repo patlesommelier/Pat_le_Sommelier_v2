@@ -6,6 +6,7 @@
 import pg from 'pg';
 import { traiterSuggestions } from '../../src/lib/suggestions';
 import { PLATS_EN_PARALLELE, travailler } from '../../src/lib/generation/file';
+import { sslBase } from '../../src/lib/ssl-base';
 
 const DUREE_MAX_MS = 12 * 60 * 1000;
 
@@ -15,7 +16,7 @@ export default async (req: Request) => {
     console.error('[suggestions] DATABASE_URL manquante');
     return;
   }
-  const pool = new pg.Pool({ connectionString: url, max: 3, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
+  const pool = new pg.Pool({ connectionString: url, max: 3, ssl: sslBase(url) });
   const q = async <T,>(sql: string, params: unknown[] = []) => (await pool.query(sql, params)).rows as T[];
   const finAvant = Date.now() + DUREE_MAX_MS;
   // Accords des nouvelles suggestions : les travailleurs habituels, sinon ici même (il reste du temps).

@@ -11,6 +11,7 @@ import 'dotenv/config';
 import { writeFileSync } from 'node:fs';
 import pg from 'pg';
 import { comparerModeles } from '../src/lib/generation/comparaison';
+import { sslBase } from '../src/lib/ssl-base';
 
 const arg = (nom: string) => { const i = process.argv.indexOf(`--${nom}`); return i > -1 ? process.argv[i + 1] : undefined; };
 const html = (t: unknown) => String(t ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]!));
@@ -22,7 +23,7 @@ async function main() {
   const sortie = arg('sortie') ?? 'comparaison-modeles.html';
   if (!process.env.DATABASE_URL || !process.env.ANTHROPIC_API_KEY) throw new Error('DATABASE_URL et ANTHROPIC_API_KEY sont nécessaires');
   if (!plats.length) throw new Error('--plats id1,id2,id3');
-  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|host=\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
+  const pool = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: sslBase(process.env.DATABASE_URL) });
   const r = await comparerModeles(pool, restaurant, plats, modeles);
   await pool.end();
   const resultats = Object.fromEntries(r.plats.map((p) => [p.id, Object.fromEntries(modeles.map((m) => [m, { ...p.modeles[m], jetons: `${p.modeles[m].jetonsEntree} entrée · ${p.modeles[m].jetonsSortie} sortie` }]))]));

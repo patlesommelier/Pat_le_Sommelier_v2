@@ -1,5 +1,6 @@
 import 'server-only';
 import pg from 'pg';
+import { sslBase } from './ssl-base';
 
 // Les colonnes numeric reviennent en nombre (prix), pas en texte.
 pg.types.setTypeParser(1700, (v) => (v === null ? null : Number(v)));
@@ -13,7 +14,7 @@ function pool(): pg.Pool {
     globalPourPool.__patPool = new pg.Pool({
       connectionString: url,
       max: 3,
-      ssl: /localhost|127\.0\.0\.1|host=\/tmp/.test(url) ? false : { rejectUnauthorized: false },
+      ssl: sslBase(url),
     });
   }
   return globalPourPool.__patPool;

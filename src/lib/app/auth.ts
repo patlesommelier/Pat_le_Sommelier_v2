@@ -3,6 +3,7 @@ import { cache } from 'react';
 import { redirect } from 'next/navigation';
 import { requete } from '../db';
 import { supabaseConfigure, supabaseSession } from '../admin/supabase';
+import { enProduction } from '../production';
 
 /** Utilisateur de l'App consommateur (/pat) : un compte Supabase Auth, comme ceux des restaurants, et son profil. */
 export interface UtilisateurApp { id: string; email: string; prenom: string | null; fournisseur: string }
@@ -20,7 +21,7 @@ function prenomFournisseur(meta: Record<string, unknown> | undefined) {
 export const utilisateurApp = cache(async (): Promise<UtilisateurApp | null> => {
   let id: string, email: string, fournisseur = 'email', prenom: string | null = null;
   if (!supabaseConfigure()) {
-    const dev = process.env.NETLIFY ? null : process.env.AUTH_DEV_EMAIL;
+    const dev = enProduction() ? null : process.env.AUTH_DEV_EMAIL;
     if (!dev) return null;
     [id, email] = ['00000000-0000-0000-0000-000000000000', dev];
   } else {

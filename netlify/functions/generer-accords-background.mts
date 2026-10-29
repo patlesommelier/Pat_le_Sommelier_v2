@@ -7,6 +7,7 @@
  */
 import pg from 'pg';
 import { travailler } from '../../src/lib/generation/file';
+import { sslBase } from '../../src/lib/ssl-base';
 
 const DUREE_MAX_MS = 9 * 60 * 1000;
 
@@ -16,7 +17,7 @@ export default async (req: Request) => {
     console.error('[accords] DATABASE_URL manquante');
     return;
   }
-  const pool = new pg.Pool({ connectionString: url, max: 2, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
+  const pool = new pg.Pool({ connectionString: url, max: 2, ssl: sslBase(url) });
   const q = async <T,>(sql: string, params: unknown[] = []) => (await pool.query(sql, params)).rows as T[];
   try {
     const restants = await travailler(q, { finAvant: Date.now() + DUREE_MAX_MS });

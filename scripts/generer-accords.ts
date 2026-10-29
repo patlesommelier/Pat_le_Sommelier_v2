@@ -13,6 +13,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import pg from 'pg';
 import { consigneAccords, systemePat, type PlatCtx, type PrincipeCtx, type RegleCtx, type VinCtx } from '../src/lib/pat-cerveau';
 import { clientClaude } from '../src/lib/claude';
+import { sslBase } from '../src/lib/ssl-base';
 
 const arg = (nom: string) => {
   const i = process.argv.indexOf(`--${nom}`);
@@ -23,7 +24,7 @@ async function main() {
   const restaurant = arg('restaurant') ?? 'lola';
   const seulPlat = arg('plat');
   if (!process.env.DATABASE_URL || !process.env.ANTHROPIC_API_KEY) throw new Error('DATABASE_URL et ANTHROPIC_API_KEY sont nécessaires');
-  const db = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: /localhost|host=\/tmp/.test(process.env.DATABASE_URL) ? false : { rejectUnauthorized: false } });
+  const db = new pg.Pool({ connectionString: process.env.DATABASE_URL, ssl: sslBase(process.env.DATABASE_URL) });
   const q = async <T>(sql: string, p: unknown[] = []) => (await db.query(sql, p)).rows as T[];
 
   const principes = await q<PrincipeCtx>(`select id, numero, titre, regle, role, statut from principe where statut <> 'retire'`);

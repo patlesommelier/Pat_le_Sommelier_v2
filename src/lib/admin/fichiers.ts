@@ -3,6 +3,7 @@ import { randomUUID } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { supabaseConfigure, supabaseService } from './supabase';
+import { enProduction } from '../production';
 
 const BUCKET = 'medias';
 const TYPES: Record<string, string> = { 'image/png': 'png', 'image/jpeg': 'jpg', 'image/webp': 'webp', 'image/svg+xml': 'svg' };
@@ -28,7 +29,7 @@ export async function deposerImage(fichier: File, dossier: string): Promise<stri
     if (error) throw new Error(`Dépôt impossible : ${error.message}`);
     return sb.storage.from(BUCKET).getPublicUrl(nom).data.publicUrl;
   }
-  if (process.env.NETLIFY) throw new Error('Stockage non configuré : SUPABASE_SERVICE_ROLE_KEY manquante.');
+  if (enProduction()) throw new Error('Stockage non configuré : SUPABASE_SERVICE_ROLE_KEY manquante.');
   const cible = path.join(process.cwd(), 'public', 'uploads', nom);
   await fs.mkdir(path.dirname(cible), { recursive: true });
   await fs.writeFile(cible, octets);

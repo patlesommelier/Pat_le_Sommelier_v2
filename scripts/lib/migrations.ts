@@ -1,12 +1,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import pg from 'pg';
+import { sslBase } from '../../src/lib/ssl-base';
 
 /** Connexion à la base (Supabase) indiquée par DATABASE_URL. */
 export function ouvrirPool() {
   const url = process.env.DATABASE_URL;
   if (!url) throw new Error('DATABASE_URL manquante (voir .env.example)');
-  return new pg.Pool({ connectionString: url, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
+  return new pg.Pool({ connectionString: url, ssl: sslBase(url) });
 }
 
 /**

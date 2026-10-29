@@ -4,6 +4,7 @@ import { cookies } from 'next/headers';
 import { cache } from 'react';
 import { requete } from '../db';
 import { supabaseConfigure, supabaseSession } from './supabase';
+import { enProduction } from '../production';
 
 export interface Utilisateur {
   id: string; email: string; admin: boolean; restaurants: string[];
@@ -27,7 +28,7 @@ export const adminsConfigures = () => emailsAdmin().length;
  */
 function utilisateurDev(): Utilisateur | null {
   const email = process.env.AUTH_DEV_EMAIL;
-  if (!email || supabaseConfigure() || process.env.NETLIFY) return null;
+  if (!email || supabaseConfigure() || enProduction()) return null;
   const resto = process.env.AUTH_DEV_RESTAURANT;
   return { id: '00000000-0000-0000-0000-000000000000', email, admin: !resto, restaurants: resto ? [resto] : [] };
 }

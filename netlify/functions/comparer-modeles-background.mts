@@ -5,6 +5,7 @@
  */
 import pg from 'pg';
 import { traiterComparaisons } from '../../src/lib/generation/comparaison';
+import { sslBase } from '../../src/lib/ssl-base';
 
 export default async () => {
   const url = process.env.DATABASE_URL;
@@ -12,7 +13,7 @@ export default async () => {
     console.error('[comparaison] DATABASE_URL manquante');
     return;
   }
-  const pool = new pg.Pool({ connectionString: url, max: 3, ssl: /localhost|127\.0\.0\.1|\/tmp/.test(url) ? false : { rejectUnauthorized: false } });
+  const pool = new pg.Pool({ connectionString: url, max: 3, ssl: sslBase(url) });
   try {
     await traiterComparaisons(pool, { finAvant: Date.now() + 12 * 60 * 1000 });
   } finally {
