@@ -11,6 +11,7 @@
     "import": "tsx scripts/import.ts",
     "migrer": "tsx scripts/migrer.ts",
     "copier-base": "tsx scripts/copier-base.ts",
+    "migrer-photos": "tsx scripts/migrer-photos.ts",
     "accords": "tsx scripts/generer-accords.ts",
     "commentaires": "tsx scripts/generer-commentaires.ts",
     "regenerer": "tsx scripts/regenerer-accords.ts",
