@@ -1,4 +1,5 @@
 import { NextResponse, type NextRequest } from 'next/server';
+import { redirectionDomaine } from './lib/domaines';
 
 // Page de maintenance (bascule vers Hetzner) : le site n'écrit plus rien pendant la copie de la base.
 const MAINTENANCE = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +11,8 @@ const MAINTENANCE = `<!doctype html><html lang="fr"><head><meta charset="utf-8">
 /**
  * À chaque requête :
  * - REDIRIGER_VERS (l'ancien site, après la bascule) : tout renvoie à la même page sur la nouvelle adresse (anciens QR codes) ;
- * - MAINTENANCE=1 : page de maintenance, rien d'autre ne passe.
+ * - MAINTENANCE=1 : page de maintenance, rien d'autre ne passe ;
+ * - URL_ADMIN : chaque page sur sa bonne adresse (restaurateurs sur quidvinum.com, apps des clients sur patlesommelier.com).
  */
 export async function middleware(req: NextRequest) {
   const redirection = process.env.REDIRIGER_VERS;
@@ -19,6 +21,11 @@ export async function middleware(req: NextRequest) {
   }
   if (process.env.MAINTENANCE === '1') {
     return new NextResponse(MAINTENANCE, { status: 503, headers: { 'content-type': 'text/html; charset=utf-8', 'retry-after': '900', 'cache-control': 'no-store' } });
+  }
+  const cible = redirectionDomaine(req.headers.get('host') ?? req.nextUrl.host, req.nextUrl.pathname);
+  // Une app affichée dans l'espace restaurant (simulateur, démonstration) reste dans son cadre.
+  if (cible && req.method === 'GET' && req.headers.get('sec-fetch-dest') !== 'iframe') {
+    return NextResponse.redirect(`${cible}${req.nextUrl.pathname}${req.nextUrl.search}`, 308);
   }
   return NextResponse.next();
 }

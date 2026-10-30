@@ -4,6 +4,7 @@ import 'server-only';
 import { cookies, headers } from 'next/headers';
 import { cache } from 'react';
 import { requete } from '../db';
+import { adressePour } from '../domaines';
 import { envoiEmailConfigure, envoyerEmail } from '../email';
 import { enProduction } from '../production';
 import { empreinteJeton, hacherMotDePasse, nouveauJeton, verifierMotDePasse } from './secret';
@@ -16,9 +17,12 @@ export interface Compte { id: string; email: string; aMotDePasse: boolean }
 
 const normaliser = (email: string) => email.trim().toLowerCase();
 
-/** Adresse du site pour les liens envoyés par e-mail : URL_PUBLIQUE (jamais l'en-tête Host, qu'un tiers peut choisir). */
-export async function adresseSite() {
-  const fixe = process.env.URL_PUBLIQUE?.trim().replace(/\/$/, '');
+/**
+ * Adresse du site pour les liens envoyés par e-mail : URL_ADMIN pour l'espace restaurant, URL_PUBLIQUE pour l'App
+ * (jamais l'en-tête Host, qu'un tiers peut choisir).
+ */
+export async function adresseSite(chemin = '/admin') {
+  const fixe = adressePour(chemin);
   if (fixe) return fixe;
   const h = await headers();
   return `${h.get('x-forwarded-proto') ?? 'http'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
@@ -112,7 +116,7 @@ export async function creerLien(compteId: string, suite: string, jours: number) 
   await requete(`insert into lien_compte (jeton, compte_id, expire_le) values ($1, $2, now() + make_interval(days => $3))`,
     [empreinteJeton(jeton), compteId, jours]);
   await requete('delete from lien_compte where expire_le < now()');
-  return `${await adresseSite()}/connexion/lien?${new URLSearchParams({ jeton, suite })}`;
+  return `${await adresseSite(suite)}/connexion/lien?${new URLSearchParams({ jeton, suite })}`;
 }
 
 /** Compte du lien s'il est encore valable, sinon null. */

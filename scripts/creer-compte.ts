@@ -9,13 +9,14 @@
 import pg from 'pg';
 import { sslBase } from '../src/lib/ssl-base';
 import { empreinteJeton, nouveauJeton } from '../src/lib/comptes/secret';
+import { adressePour } from '../src/lib/domaines';
 
 async function main() {
   const email = (process.argv[2] ?? '').trim().toLowerCase();
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) throw new Error('Indiquez l’adresse e-mail : npm run creer-compte -- pat@exemple.com');
   const url = process.env.DATABASE_URL;
   if (!url) throw new Error('DATABASE_URL manquante.');
-  const site = (process.env.URL_PUBLIQUE ?? process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000').replace(/\/$/, '');
+  const site = adressePour('/admin') ?? 'http://localhost:3000';
   const db = new pg.Client({ connectionString: url, ssl: sslBase(url) });
   await db.connect();
   try {
