@@ -16,12 +16,6 @@
 .sousTitre { margin: 0; max-width: 46ch; font: 400 17px/1.5 Lato, 'Helvetica Neue', Arial, sans-serif; }
 .boite { background: #680021; color: #FEFAF1; border-radius: 28px; padding: 26px clamp(18px, 4vw, 34px) 30px; display: flex; flex-direction: column; gap: 16px; }
 .boite h2 { margin: 0; text-align: center; color: #EB9D92; font-size: 26px; letter-spacing: -0.3px; }
-.fournisseurs { display: grid; gap: 10px; }
-.fournisseur { display: flex; align-items: center; justify-content: center; gap: 10px; min-height: 50px; border-radius: 999px; border: 0;
-  background: #FEFAF1; color: #241F20; font: 700 16px Outfit, sans-serif; cursor: pointer; width: 100%; }
-.fournisseur:hover { background: #FFEEED; }
-.ou { display: flex; align-items: center; gap: 12px; color: #EB9D92; font-size: 14px; }
-.ou::before, .ou::after { content: ''; flex: 1; height: 1px; background: #EB9D92; opacity: .5; }
 .formulaire { display: flex; flex-direction: column; gap: 12px; }
 .champ { display: flex; flex-direction: column; gap: 6px; font-size: 14px; }
 .champ input { min-height: 50px; box-sizing: border-box; padding: 12px 16px; border-radius: 14px; border: 2px solid transparent; background: #FEFAF1;

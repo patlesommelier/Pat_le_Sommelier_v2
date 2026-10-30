@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, voirCommeRestaurant } from './actions';
+import { CopierLien } from '@/components/admin/CopierLien';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { etapesRestaurant } from '../[resto]/etapes';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
@@ -12,7 +13,7 @@ const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
 };
 
-export default async function Restaurants({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string }> }) {
+export default async function Restaurants({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [ind, restos] = await Promise.all([indicateurs(), restaurantsSuper()]);
@@ -27,6 +28,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
     <>
       <Entete titre="Restaurants" texte="Tous les restaurants de Pat, leur mise en place et ce qui attend votre validation." />
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {sp.lien && <div className="carte-bo" style={{ padding: '14px 20px' }}><CopierLien url={sp.lien} titre="Lien pour choisir son mot de passe" /></div>}
       {(() => {
         // Branchement de Claude : appels directs chez Anthropic (facturés sur le compte Anthropic), jamais par la passerelle Netlify.
         const c = etatClaude();

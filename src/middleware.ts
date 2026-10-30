@@ -1,4 +1,3 @@
-import { createServerClient } from '@supabase/ssr';
 import { NextResponse, type NextRequest } from 'next/server';
 
 // Page de maintenance (bascule vers Hetzner) : le site n'écrit plus rien pendant la copie de la base.
@@ -11,8 +10,7 @@ const MAINTENANCE = `<!doctype html><html lang="fr"><head><meta charset="utf-8">
 /**
  * À chaque requête :
  * - REDIRIGER_VERS (l'ancien site, après la bascule) : tout renvoie à la même page sur la nouvelle adresse (anciens QR codes) ;
- * - MAINTENANCE=1 : page de maintenance, rien d'autre ne passe ;
- * - back-office (/admin) et App (/pat) : la session Supabase est rafraîchie.
+ * - MAINTENANCE=1 : page de maintenance, rien d'autre ne passe.
  */
 export async function middleware(req: NextRequest) {
   const redirection = process.env.REDIRIGER_VERS;
@@ -22,23 +20,7 @@ export async function middleware(req: NextRequest) {
   if (process.env.MAINTENANCE === '1') {
     return new NextResponse(MAINTENANCE, { status: 503, headers: { 'content-type': 'text/html; charset=utf-8', 'retry-after': '900', 'cache-control': 'no-store' } });
   }
-  let res = NextResponse.next({ request: req });
-  if (!/^\/(admin|pat)(\/|$)/.test(req.nextUrl.pathname)) return res;
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
-  const cle = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-  if (!url || !cle) return res;
-  const supabase = createServerClient(url, cle, {
-    cookies: {
-      getAll: () => req.cookies.getAll(),
-      setAll: (aPoser) => {
-        aPoser.forEach(({ name, value }) => req.cookies.set(name, value));
-        res = NextResponse.next({ request: req });
-        aPoser.forEach(({ name, value, options }) => res.cookies.set(name, value, options));
-      },
-    },
-  });
-  await supabase.auth.getUser();
-  return res;
+  return NextResponse.next();
 }
 
 // Toutes les pages (maintenance et redirection), sauf les fichiers du site (scripts, images, polices).

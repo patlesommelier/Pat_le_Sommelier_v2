@@ -4,7 +4,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
-import { COOKIE_VUE, exigerAcces, exigerAdmin } from '@/lib/admin/auth';
+import { COOKIE_VUE, emailsAdmin, exigerAcces, exigerAdmin, exigerConnexion } from '@/lib/admin/auth';
 import { suggestionsProducteurs } from '@/lib/admin/donnees';
 import { traiterSuggestions } from '@/lib/suggestions';
 import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
@@ -15,7 +15,7 @@ import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file'
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
-import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
+import { creerCompte, definirMotDePasse, fermerSession, inviter, MDP_MINIMUM, motDePasseOublie as envoyerLienOubli, ouvrirSession, verifierIdentifiants } from '@/lib/comptes/comptes';
 import { parametresEnService } from '@/lib/regles/versions';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
@@ -50,33 +50,36 @@ const avec = (url: string, params: Record<string, string>) => `${url}?${new URLS
 
 // ───────── Connexion ─────────
 export async function seConnecter(f: FormData) {
-  if (!supabaseConfigure()) redirect('/admin');
-  const supabase = await supabaseSession();
-  const { error } = await supabase.auth.signInWithPassword({ email: txt(f, 'email') ?? '', password: String(f.get('mdp') ?? '') });
-  if (error) redirect(avec('/admin/connexion', { erreur: 'E-mail ou mot de passe incorrect.' }));
+  const email = txt(f, 'email') ?? '';
+  const id = await verifierIdentifiants(email, String(f.get('mdp') ?? ''));
+  if (!id) redirect(avec('/admin/connexion', { erreur: 'E-mail ou mot de passe incorrect.', email }));
+  await ouvrirSession(id!);
   redirect('/admin');
 }
 
 export async function seDeconnecter() {
-  if (supabaseConfigure()) await (await supabaseSession()).auth.signOut();
+  await fermerSession();
   (await cookies()).delete(COOKIE_VUE); // fin de l'« Aperçu côté restaurant »
   redirect('/admin/connexion');
 }
 
+/** Une adresse qui a déjà un accès (restaurant, ou Pat) reçoit un lien même sans compte : anciens comptes Supabase. */
+const adresseConnue = async (email: string) => emailsAdmin().includes(email)
+  || (await requete('select 1 from acces_restaurant where lower(email) = $1 limit 1', [email])).length > 0;
+
 export async function motDePasseOublie(f: FormData) {
-  if (!supabaseConfigure()) redirect('/admin/connexion');
-  const h = await headers();
-  const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('host')}`;
-  await (await supabaseSession()).auth.resetPasswordForEmail(txt(f, 'email') ?? '', { redirectTo: `${origine}/admin/auth/retour?suite=/admin/mot-de-passe` });
-  redirect(avec('/admin/connexion', { info: 'Si ce compte existe, un e-mail vient de partir avec un lien pour choisir un nouveau mot de passe.' }));
+  const actif = await envoyerLienOubli(txt(f, 'email') ?? '', '/admin/mot-de-passe', adresseConnue);
+  redirect(avec('/admin/connexion', actif
+    ? { info: 'Si ce compte existe, un e-mail vient de partir avec un lien pour choisir un nouveau mot de passe.' }
+    : { erreur: 'L’envoi d’e-mails n’est pas encore activé : demandez à Pat un nouvel accès.', oubli: '1' }));
 }
 
 export async function changerMotDePasse(f: FormData) {
+  const u = await exigerConnexion();
   const mdp = String(f.get('mdp') ?? '');
-  if (mdp.length < 10) redirect(avec('/admin/mot-de-passe', { erreur: '10 caractères minimum.' }));
+  if (mdp.length < MDP_MINIMUM) redirect(avec('/admin/mot-de-passe', { erreur: `${MDP_MINIMUM} caractères minimum.` }));
   if (mdp !== f.get('mdp2')) redirect(avec('/admin/mot-de-passe', { erreur: 'Les deux mots de passe sont différents.' }));
-  const { error } = await (await supabaseSession()).auth.updateUser({ password: mdp });
-  if (error) redirect(avec('/admin/mot-de-passe', { erreur: error.message }));
+  await definirMotDePasse(u.id, mdp);
   redirect('/admin');
 }
 
@@ -889,41 +892,18 @@ export async function creerAcces(resto: string, f: FormData) {
   const mdp = String(f.get('mdp') ?? '');
   const retour = (m: Record<string, string>) => redirect(avec(`/admin/${resto}/acces`, m));
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) retour({ erreur: 'Adresse e-mail invalide.' });
-  if (mdp && mdp.length < 10) retour({ erreur: 'Mot de passe : 10 caractères minimum.' });
+  if (mdp && mdp.length < MDP_MINIMUM) retour({ erreur: `Mot de passe : ${MDP_MINIMUM} caractères minimum.` });
   if (mdp && mdp !== f.get('mdp2')) retour({ erreur: 'Les deux mots de passe sont différents.' });
 
-  let userId: string | null = null;
-  let message = `Accès créé pour ${email}.`;
-  try {
-    const sb = supabaseService();
-    const h = await headers();
-    const origine = `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('host')}`;
-    const { data, error } = mdp
-      ? await sb.auth.admin.createUser({ email, password: mdp, email_confirm: true })
-      : await sb.auth.admin.inviteUserByEmail(email, { redirectTo: `${origine}/admin/auth/retour?suite=/admin/mot-de-passe` });
-    if (data.user) {
-      userId = data.user.id;
-      message = mdp ? `Accès créé pour ${email} : communiquez-lui son mot de passe.` : `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.`;
-    } else if (error && /already|registered|exists/i.test(error.message)) {
-      // Compte existant (autre restaurant) : on le relie simplement à celui-ci, sans toucher à son mot de passe.
-      for (let page = 1; page <= 20 && !userId; page++) {
-        const { data: l } = await sb.auth.admin.listUsers({ page, perPage: 200 });
-        userId = l.users.find((x) => x.email?.toLowerCase() === email)?.id ?? null;
-        if (l.users.length < 200) break;
-      }
-      message = `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.`;
-    } else if (error) throw error;
-  } catch (e) {
-    retour({ erreur: mdp ? `Création du compte impossible : ${(e as Error).message}`
-      : `L’e-mail d’invitation n’a pas pu partir (${(e as Error).message}). Choisissez plutôt un mot de passe pour cette personne et communiquez-le-lui.` });
-  }
-  if (!userId) retour({ erreur: 'Compte introuvable.' });
-  await requete(
-    `insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`,
-    [userId, email, resto],
-  );
+  const { id, existait } = await creerCompte(email, mdp || null);
+  await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [id, email, resto]);
   revalidatePath(`/admin/${resto}`, 'layout');
-  retour({ ok: message });
+  // Compte existant (autre restaurant) : simplement relié à celui-ci, sans toucher à son mot de passe.
+  if (existait) retour({ ok: `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.` });
+  if (mdp) retour({ ok: `Accès créé pour ${email} : communiquez-lui son mot de passe.` });
+  const r = await inviter(id, email);
+  retour(r.envoye ? { ok: `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.` }
+    : { ok: `Accès créé pour ${email}. ${r.erreur ? `L’e-mail n’a pas pu partir (${r.erreur})` : 'L’envoi d’e-mails n’est pas encore activé'} : transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
 }
 
 export async function retirerAcces(resto: string, userId: string) {

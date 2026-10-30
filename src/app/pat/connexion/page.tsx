@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
-import { connexionFournisseur, motDePasseOublieApp, seConnecterApp } from '../actions';
-import { EnteteApp, Fournisseurs } from '../Entete';
+import { motDePasseOublieApp, seConnecterApp } from '../actions';
+import { EnteteApp } from '../Entete';
 import { utilisateurApp } from '@/lib/app/auth';
 import s from '../app.module.css';
 
-/** Connexion à l'App : Google, Apple, ou e-mail et mot de passe. */
+/** Connexion à l'App : e-mail et mot de passe. */
 export default async function ConnexionApp({ searchParams }: { searchParams: Promise<{ erreur?: string; info?: string; email?: string; oubli?: string }> }) {
   if (await utilisateurApp()) redirect('/pat');
   const { erreur, info, email, oubli } = await searchParams;
@@ -30,8 +30,6 @@ export default async function ConnexionApp({ searchParams }: { searchParams: Pro
               <Link href="/pat/connexion" className={s.petitLien}>Revenir à la connexion</Link>
             </form>
           ) : <>
-            <Fournisseurs google={connexionFournisseur.bind(null, 'google')} apple={connexionFournisseur.bind(null, 'apple')} />
-            <div className={s.ou}>ou</div>
             <form action={seConnecterApp} className={s.formulaire}>
               <label className={s.champ}>Adresse e-mail<input name="email" type="email" required autoComplete="email" defaultValue={email} /></label>
               <label className={s.champ}>Mot de passe<input name="mdp" type="password" required autoComplete="current-password" /></label>

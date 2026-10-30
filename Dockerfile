@@ -12,8 +12,6 @@ FROM base AS construction
 COPY --from=dependances /app/node_modules ./node_modules
 COPY . .
 # Variables lues par le navigateur : fournies au moment de la construction (« Build Variable » dans Coolify).
-ARG NEXT_PUBLIC_SUPABASE_URL
-ARG NEXT_PUBLIC_SUPABASE_ANON_KEY
 ARG NEXT_PUBLIC_SITE_URL
 ARG NEXT_PUBLIC_DEMO_URL
 RUN npm run build

@@ -2,17 +2,15 @@ import 'server-only';
 import { randomUUID } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { supabaseConfigure, supabaseService } from './supabase';
 import { enProduction } from '../production';
 import { configStockage, deposerObjet } from '../stockage';
 
-const BUCKET = 'medias';
 const TYPES: Record<string, string> = { 'image/png': 'png', 'image/jpeg': 'jpg', 'image/webp': 'webp', 'image/svg+xml': 'svg' };
 const MAX = 5 * 1024 * 1024;
 
 /**
  * Dépose une image (logo, étiquette, photo de plat) et renvoie son adresse publique.
- * En ligne : le stockage Hetzner (STOCKAGE_S3_…), sinon Supabase Storage (compartiment public « medias »).
+ * En ligne : le stockage Hetzner (STOCKAGE_S3_…).
  * En local sans stockage configuré : public/uploads (jamais en production, où le disque n'est pas conservé).
  */
 export async function deposerImage(fichier: File, dossier: string): Promise<string> {
@@ -23,14 +21,6 @@ export async function deposerImage(fichier: File, dossier: string): Promise<stri
   const octets = Buffer.from(await fichier.arrayBuffer());
 
   if (configStockage()) return deposerObjet(nom, octets, fichier.type);
-  if (supabaseConfigure() && process.env.SUPABASE_SERVICE_ROLE_KEY) {
-    const sb = supabaseService();
-    const { data: seaux } = await sb.storage.listBuckets();
-    if (!seaux?.some((b) => b.name === BUCKET)) await sb.storage.createBucket(BUCKET, { public: true });
-    const { error } = await sb.storage.from(BUCKET).upload(nom, octets, { contentType: fichier.type, upsert: false });
-    if (error) throw new Error(`Dépôt impossible : ${error.message}`);
-    return sb.storage.from(BUCKET).getPublicUrl(nom).data.publicUrl;
-  }
   if (enProduction()) throw new Error('Stockage des images non configuré (variables STOCKAGE_S3_…).');
   const cible = path.join(process.cwd(), 'public', 'uploads', nom);
   await fs.mkdir(path.dirname(cible), { recursive: true });

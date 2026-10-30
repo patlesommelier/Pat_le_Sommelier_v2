@@ -6,7 +6,7 @@
  *   Une étiquette déjà connue arrive tout de suite ; sinon « processing », et le webhook apporte la réponse.
  * - Seules les demandes abouties coûtent (1 crédit). On n'en fait qu'une par cuvée : la réponse rejoint la cuvée
  *   et toutes les cartes qui l'ont (voir partage.ts).
- * - asset_url est un lien signé valable 7 jours : l'image est copiée dans notre stockage (Hetzner, sinon Supabase « medias »).
+ * - asset_url est un lien signé valable 7 jours : l'image est copiée dans notre stockage (Hetzner).
  *
  * File : vin_carte.etiquette_statut = 'a_demander', traitée par netlify/functions/etiquettes-wine-labs-background.mts.
  * Sans 'server-only' : utilisé par cette fonction Netlify comme par le serveur Next.
@@ -14,7 +14,6 @@
 import { createHash } from 'node:crypto';
 import fs from 'node:fs/promises';
 import path from 'node:path';
-import { createClient } from '@supabase/supabase-js';
 import type { Requete } from '../generation/accords';
 import { partagerEtiquettes } from './partage';
 import { enProduction } from '../production';
@@ -90,15 +89,6 @@ async function copierImage(source: string, requestId: string): Promise<string> {
   const octets = Buffer.from(await r.arrayBuffer());
   const nom = `wine-labs/${requestId.replace(/[^a-z0-9-]/gi, '')}-${createHash('sha1').update(octets).digest('hex').slice(0, 10)}.${ext}`;
   if (configStockage()) return deposerObjet(nom, octets, type);
-  const url = process.env.NEXT_PUBLIC_SUPABASE_URL, cle = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  if (url && cle) {
-    const sb = createClient(url, cle, { auth: { persistSession: false, autoRefreshToken: false } });
-    const { data: seaux } = await sb.storage.listBuckets();
-    if (!seaux?.some((b) => b.name === 'medias')) await sb.storage.createBucket('medias', { public: true });
-    const { error } = await sb.storage.from('medias').upload(nom, octets, { contentType: type, upsert: true });
-    if (error) throw new Error(`dépôt de l'étiquette impossible : ${error.message}`);
-    return sb.storage.from('medias').getPublicUrl(nom).data.publicUrl;
-  }
   if (enProduction()) throw new Error('Stockage des images non configuré (variables STOCKAGE_S3_…).');
   const cible = path.join(process.cwd(), 'public', 'uploads', nom);
   await fs.mkdir(path.dirname(cible), { recursive: true });

@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { cookies } from 'next/headers';
 import { cache } from 'react';
 import { requete } from '../db';
-import { supabaseConfigure, supabaseSession } from './supabase';
+import { compteConnecte } from '../comptes/comptes';
 import { enProduction } from '../production';
 
 export interface Utilisateur {
@@ -15,20 +15,20 @@ export interface Utilisateur {
 /** Cookie « Aperçu côté restaurant » : ne peut que réduire les droits d'un super-admin, jamais en donner. */
 export const COOKIE_VUE = 'pat_vue_restaurant';
 
-const emailsAdmin = () =>
+export const emailsAdmin = () =>
   (process.env.PAT_ADMIN_EMAILS ?? '').split(/[,;\s]+/).map((e) => e.replace(/["'<>]/g, '').trim().toLowerCase()).filter(Boolean);
 
 /** Pour l'écran d'accueil : la variable des administrateurs est-elle lue par le serveur ? */
 export const adminsConfigures = () => emailsAdmin().length;
 
 /**
- * Mode développement sans Supabase : AUTH_DEV_EMAIL simule un administrateur connecté ;
+ * Mode développement : AUTH_DEV_EMAIL simule un administrateur connecté ;
  * avec AUTH_DEV_RESTAURANT=lola, un compte restaurant (pour vérifier ce qu'il voit).
- * Il n'est jamais actif sur Netlify ni dès que Supabase est configuré.
+ * Il n'est jamais actif en production.
  */
 function utilisateurDev(): Utilisateur | null {
   const email = process.env.AUTH_DEV_EMAIL;
-  if (!email || supabaseConfigure() || enProduction()) return null;
+  if (!email || enProduction()) return null;
   const resto = process.env.AUTH_DEV_RESTAURANT;
   return { id: '00000000-0000-0000-0000-000000000000', email, admin: !resto, restaurants: resto ? [resto] : [] };
 }
@@ -37,11 +37,8 @@ function utilisateurDev(): Utilisateur | null {
 export const utilisateurReel = cache(async (): Promise<Utilisateur | null> => {
   const dev = utilisateurDev();
   if (dev) return dev;
-  if (!supabaseConfigure()) return null;
-  const supabase = await supabaseSession();
-  const { data } = await supabase.auth.getUser();
-  const u = data.user;
-  if (!u?.email) return null;
+  const u = await compteConnecte();
+  if (!u) return null;
   const email = u.email.toLowerCase();
   const acces = await requete<{ restaurant_id: string }>(
     'select restaurant_id from acces_restaurant where user_id = $1 or lower(email) = $2',

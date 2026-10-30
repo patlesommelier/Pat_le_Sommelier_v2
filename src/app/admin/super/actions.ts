@@ -6,7 +6,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { COOKIE_VUE, exigerAdmin, exigerSuperAdminReel } from '@/lib/admin/auth';
-import { supabaseService } from '@/lib/admin/supabase';
+import { creerCompte, inviter } from '@/lib/comptes/comptes';
 import { requete } from '@/lib/db';
 import { grouperMemeVin } from '@/lib/contenances';
 import { preparerAccords } from '@/lib/inscription/adaptateurs';
@@ -74,27 +74,19 @@ export async function creerRestaurant(f: FormData) {
      values ($1, $2, $3, $4, $5, 'mise_en_place', $6, $7, $8)`,
     [id, nom, couleur, couleurClaire(couleur), `Bienvenue chez ${nom} !`, txt(f, 'ville'), langues.length ? langues : ['fr'], u.email]);
 
-  // Invitation par e-mail : le responsable choisit son mot de passe en cliquant sur le lien.
+  // Invitation : le responsable choisit son mot de passe en cliquant sur le lien (reçu par e-mail, ou transmis par Pat).
   let message = `Restaurant ${nom} créé.`;
-  try {
-    const sb = supabaseService();
-    const { data, error } = await sb.auth.admin.inviteUserByEmail(email, { redirectTo: `${await origine()}/admin/auth/retour?suite=/admin/mot-de-passe` });
-    let userId = data?.user?.id ?? null;
-    if (!userId && error && /already|registered|exists/i.test(error.message)) {
-      for (let page = 1; page <= 20 && !userId; page++) {
-        const { data: l } = await sb.auth.admin.listUsers({ page, perPage: 200 });
-        userId = l.users.find((x) => x.email?.toLowerCase() === email)?.id ?? null;
-        if (l.users.length < 200) break;
-      }
-      message += ` ${email} avait déjà un compte : il est relié à ce restaurant.`;
-    } else if (error) throw error;
-    else message += ` Invitation envoyée à ${email}.`;
-    if (userId) await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [userId, email, id]);
-  } catch (e) {
-    message += ` Invitation non envoyée (${(e as Error).message}) : créez l’accès depuis « Accès & QR code ».`;
+  let lien: string | null = null;
+  const { id: userId, existait } = await creerCompte(email);
+  await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [userId, email, id]);
+  if (existait) message += ` ${email} avait déjà un compte : il est relié à ce restaurant.`;
+  else {
+    const r = await inviter(userId, email);
+    if (r.envoye) message += ` Invitation envoyée à ${email}.`;
+    else { lien = r.lien; message += ` Transmettez à ${email} ce lien (valable 7 jours) pour choisir son mot de passe.`; }
   }
   revalidatePath('/admin', 'layout');
-  retour({ ok: message });
+  retour(lien ? { ok: message, lien } : { ok: message });
 }
 
 /**

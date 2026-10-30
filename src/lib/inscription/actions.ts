@@ -1,11 +1,10 @@
 'use server';
 // Pat le sommelier — actions du formulaire de la page d'accueil : 1. carte des vins, 2. menu, 3. restaurant (compte) et création.
 // Chaque action relit l'inscription depuis le cookie : rien n'est confié au navigateur, qui ne reçoit que des compteurs.
-import { randomUUID } from 'node:crypto';
 import { headers } from 'next/headers';
 import { z } from 'zod';
 import { utilisateurReel } from '@/lib/admin/auth';
-import { supabaseConfigure, supabaseService, supabaseSession } from '@/lib/admin/supabase';
+import { creerCompte, MDP_MINIMUM, ouvrirSession, trouverCompte, verifierIdentifiants } from '@/lib/comptes/comptes';
 import { requete } from '@/lib/db';
 import { traiterAnalyses } from './analyse';
 import { resumePublic, type ResumePublic, type TypeAnalyse } from './etapes';
@@ -13,7 +12,6 @@ import { demarrerInscription, inscriptionCourante, lireInscription, majInscripti
 import { typeReel, verifierFichiers } from './fichiers';
 import { finaliserInscription } from './finalisation';
 import { inscriptionAutorisee, MAX_ANALYSES_PAR_INSCRIPTION } from './limites';
-import { enProduction } from '../production';
 
 export type Reponse = { erreurs: string[]; resume?: ResumePublic; /** restaurant créé : la page suit la préparation des accords */ restaurantId?: string };
 
@@ -73,19 +71,6 @@ const Compte = z.object({
   cgu: z.literal('on', { errorMap: () => ({ message: 'Acceptez les conditions d’utilisation.' }) }),
 });
 
-/** Un compte Supabase existe-t-il déjà pour cette adresse ? (table auth.users, lue avec la connexion du serveur) */
-async function compteExiste(email: string) {
-  try {
-    const [r] = await requete<{ ok: boolean }>('select exists (select 1 from auth.users where lower(email) = $1) as ok', [email]);
-    return Boolean(r?.ok);
-  } catch {
-    return false; // base sans schéma auth (développement local)
-  }
-}
-
-/** Mode de développement sans Supabase (jamais sur Netlify) : pas de compte réel, le back-office local est ouvert. */
-const modeDev = () => !supabaseConfigure() && !enProduction();
-
 /**
  * Étape 3 (après la carte des vins et le menu) : nom du restaurant, e-mail et mot de passe. Le compte est créé
  * (déjà confirmé), la session ouverte, puis le restaurant est créé et la préparation des accords lancée (« C’est parti ! »).
@@ -105,36 +90,28 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   // avec cette adresse dans ce navigateur, ou avec son mot de passe actuel.
   const email = r.data.email, motDePasse = r.data.motDePasse;
   const connecte = await utilisateurReel().catch(() => null);
-  let sessionOuverte = Boolean(connecte && connecte.email === email);
   let userId: string;
-  if (sessionOuverte) {
-    userId = connecte!.id;
-  } else if (modeDev()) {
-    userId = i.user_id ?? randomUUID();
+  if (connecte && connecte.email === email) {
+    userId = connecte.id;
   } else {
     const MAUVAIS_MDP = `Un compte existe déjà pour ${email}, mais ce mot de passe ne correspond pas. Saisissez le mot de passe que vous utilisez pour vous connecter à votre espace (mot de passe oublié : bouton « Se connecter » en haut de la page), ou utilisez une autre adresse.`;
-    const { data: existant, error: eConnexion } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
-    if (eConnexion && !/invalid login credentials/i.test(eConnexion.message)) console.warn('[inscription] connexion au compte existant :', eConnexion.message);
+    const existant = await verifierIdentifiants(email, motDePasse);
     const deja = await lireInscription(i.id); // double clic : l'autre requête a peut-être déjà créé le compte
-    if (existant?.user) {
-      userId = existant.user.id;
-      sessionOuverte = true;
+    if (existant) {
+      userId = existant;
     } else if (deja?.user_id && deja.email === email) {
       userId = deja.user_id;
-    } else if (await compteExiste(email)) {
+    } else if (await trouverCompte(email)) {
       return { erreurs: [MAUVAIS_MDP] };
     } else {
-      if (motDePasse.length < 12) return { erreurs: ['Nouveau compte : le mot de passe doit faire au moins 12 caractères.'] };
-      const { data, error } = await supabaseService().auth.admin.createUser({ email, password: motDePasse, email_confirm: true });
-      if (error || !data.user) return { erreurs: [/registered|exists/i.test(error?.message ?? '') ? MAUVAIS_MDP : 'Création du compte impossible. Réessayez.'] };
-      userId = data.user.id;
+      if (motDePasse.length < Math.max(12, MDP_MINIMUM)) return { erreurs: ['Nouveau compte : le mot de passe doit faire au moins 12 caractères.'] };
+      const nouveau = await creerCompte(email, motDePasse);
+      if (nouveau.existait) return { erreurs: [MAUVAIS_MDP] };
+      userId = nouveau.id;
     }
+    await ouvrirSession(userId);
   }
   await majInscription(i.id, { user_id: userId, email, prenom: r.data.prenom, nom_restaurant: r.data.nom });
-  if (!modeDev() && !sessionOuverte) {
-    const { error } = await (await supabaseSession()).auth.signInWithPassword({ email, password: motDePasse });
-    if (error) console.warn('[inscription] ouverture de session :', error.message); // l'espace demandera de se connecter
-  }
   const apres = await lireInscription(i.id);
   if (!apres?.vins.length || !apres.plats.length) return { erreurs: ['Déposez d’abord votre carte des vins et votre menu.'], resume: resumePublic(apres) };
   try {

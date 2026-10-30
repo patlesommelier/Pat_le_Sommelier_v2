@@ -5,11 +5,10 @@ import { Icone } from '@/components/admin/Icone';
 import { Entete, Message } from '@/components/admin/Ui';
 import { getAcces } from '@/lib/admin/donnees';
 import { adresseApp, qrSvg } from '@/lib/admin/qr';
-import { supabaseConfigure } from '@/lib/admin/supabase';
 import { exigerAcces } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 
-export default async function Acces({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
+export default async function Acces({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
@@ -17,11 +16,11 @@ export default async function Acces({ params, searchParams }: { params: Promise<
     requete<{ statut: string; manquants: number }>(`select statut, (select count(*)::int from plat pl where pl.restaurant_id = r.id and pl.actif
        and not exists (select 1 from accord a where a.plat_id = pl.id)) as manquants from restaurant r where id = $1`, [resto])]);
   const svg = await qrSvg(url);
-  const comptesPossibles = supabaseConfigure() && Boolean(process.env.SUPABASE_SERVICE_ROLE_KEY);
   return (
     <>
       <Entete titre="Accès & QR code" texte="Les accès permettent de retrouver vos accords, vos règles et votre QR code depuis n’importe quel appareil. Le QR code ouvre Pat sur les tables de vos clients." />
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {sp.lien && <div className="carte-bo" style={{ padding: '14px 20px' }}><CopierLien url={sp.lien} titre="Lien pour choisir son mot de passe" /></div>}
       {etat && etat.statut !== 'en_service' && (
         <p className="carte-bo" style={{ margin: 0, padding: '14px 20px', borderColor: 'var(--ocre)' }}>
           {etat.statut === 'suspendu'
@@ -33,7 +32,6 @@ export default async function Acces({ params, searchParams }: { params: Promise<
         <div className="etroit" style={{ flex: '1 1 380px' }}>
           <form action={creerAcces.bind(null, resto)} className="carte-bo pile">
             <div><h2>Créer un accès</h2><p className="sous">Pour vous ou un membre de l’équipe : la personne reçoit un e-mail d’invitation et choisit son mot de passe.</p></div>
-            {!comptesPossibles && <Message erreur="Création de comptes indisponible : Supabase (clé de service) n’est pas configuré." />}
             <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="off" /></div>
             <details>
               <summary style={{ cursor: 'pointer', fontSize: 14 }}>Ou choisir le mot de passe moi-même (sans e-mail)</summary>
@@ -42,7 +40,7 @@ export default async function Acces({ params, searchParams }: { params: Promise<
                 <div className="champ"><label htmlFor="mdp2">Confirmer le mot de passe</label><input id="mdp2" name="mdp2" type="password" autoComplete="new-password" /></div>
               </div>
             </details>
-            <button type="submit" className="btn" disabled={!comptesPossibles}>Créer l’accès</button>
+            <button type="submit" className="btn">Créer l’accès</button>
           </form>
           <div className="carte-bo pile">
             <h2>Accès existants</h2>

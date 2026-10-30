@@ -1,9 +1,10 @@
 import 'server-only';
-// Envoi d'e-mails avec pièce jointe (bons de commande aux fournisseurs), par l'API de Resend.
-// Configuration (variables d'environnement de Netlify) : RESEND_API_KEY, et COMMANDES_EXPEDITEUR,
-// l'adresse d'envoi d'un domaine vérifié chez Resend (ex. « Pat le sommelier <commandes@exemple.be> »).
+// Envoi d'e-mails par l'API de Resend : bons de commande aux fournisseurs (avec pièce jointe), invitations et liens
+// « mot de passe oublié ». Configuration (variables d'environnement de Coolify) : RESEND_API_KEY, et EMAIL_EXPEDITEUR
+// (ou COMMANDES_EXPEDITEUR), l'adresse d'envoi d'un domaine vérifié chez Resend (ex. « Pat le sommelier <bonjour@patlesommelier.com> »).
 
-export const envoiEmailConfigure = () => Boolean(process.env.RESEND_API_KEY && process.env.COMMANDES_EXPEDITEUR);
+const expediteur = () => process.env.EMAIL_EXPEDITEUR || process.env.COMMANDES_EXPEDITEUR;
+export const envoiEmailConfigure = () => Boolean(process.env.RESEND_API_KEY && expediteur());
 
 export interface Email {
   a: string; copie?: string | null; repondreA?: string | null; sujet: string; texte: string;
@@ -18,7 +19,7 @@ export async function envoyerEmail(e: Email): Promise<string | null> {
       method: 'POST',
       headers: { authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'content-type': 'application/json' },
       body: JSON.stringify({
-        from: process.env.COMMANDES_EXPEDITEUR, to: [e.a], cc: e.copie ? [e.copie] : undefined, reply_to: e.repondreA ?? undefined,
+        from: expediteur(), to: [e.a], cc: e.copie ? [e.copie] : undefined, reply_to: e.repondreA ?? undefined,
         subject: e.sujet, text: e.texte,
         attachments: e.pieceJointe ? [{ filename: e.pieceJointe.nom, content: Buffer.from(e.pieceJointe.octets).toString('base64') }] : undefined,
       }),

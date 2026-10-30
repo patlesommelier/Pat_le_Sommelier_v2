@@ -2,11 +2,10 @@ import { redirect } from 'next/navigation';
 import { motDePasseOublie, seConnecter } from '../actions';
 import { Message } from '@/components/admin/Ui';
 import { utilisateurCourant } from '@/lib/admin/auth';
-import { supabaseConfigure } from '@/lib/admin/supabase';
 
-export default async function Connexion({ searchParams }: { searchParams: Promise<{ erreur?: string; info?: string; oubli?: string }> }) {
+export default async function Connexion({ searchParams }: { searchParams: Promise<{ erreur?: string; info?: string; oubli?: string; email?: string }> }) {
   if (await utilisateurCourant()) redirect('/admin');
-  const { erreur, info, oubli } = await searchParams;
+  const { erreur, info, oubli, email } = await searchParams;
   return (
     <div className="bo bo-connexion">
       <div className="carte-bo sticker">
@@ -15,17 +14,16 @@ export default async function Connexion({ searchParams }: { searchParams: Promis
           <img src="/pat/pat-attable-rouge.svg" alt="" width={79} height={62} />
           <div><h1 style={{ margin: 0 }}><img src="/pat/pat-logo-bordeaux.svg" alt="Pat le sommelier" style={{ height: 46, display: 'block' }} /></h1><span className="discret">Espace restaurant</span></div>
         </div>
-        {!supabaseConfigure() && <Message erreur="Connexion indisponible : Supabase n’est pas configuré (NEXT_PUBLIC_SUPABASE_URL et NEXT_PUBLIC_SUPABASE_ANON_KEY)." />}
         <Message erreur={erreur} ok={info} />
         {oubli ? (
           <form action={motDePasseOublie} className="pile">
-            <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="email" /></div>
+            <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="email" defaultValue={email} /></div>
             <button type="submit" className="btn">Recevoir un lien</button>
             <a href="/admin/connexion" className="discret">Revenir à la connexion</a>
           </form>
         ) : (
           <form action={seConnecter} className="pile">
-            <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="email" /></div>
+            <div className="champ"><label htmlFor="email">Adresse e-mail</label><input id="email" name="email" type="email" required autoComplete="email" defaultValue={email} /></div>
             <div className="champ"><label htmlFor="mdp">Mot de passe</label><input id="mdp" name="mdp" type="password" required autoComplete="current-password" /></div>
             <button type="submit" className="btn">Se connecter</button>
             <a href="/admin/connexion?oubli=1" className="discret">Mot de passe oublié ?</a>
