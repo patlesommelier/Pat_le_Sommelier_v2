@@ -12,6 +12,8 @@ export async function GET(req: Request) {
   const domaines = {
     restaurateurs: hote(process.env.URL_ADMIN), clients: hote(process.env.URL_PUBLIQUE), cetteAdresse: ici,
     renvoiDeChezPat: redirectionDomaine(ici, '/chez-pat'), renvoiDeAdmin: redirectionDomaine(ici, '/admin'),
+    // Noms (jamais les valeurs) des variables d'adresse reçues : repère une faute de frappe ou un espace dans le nom.
+    variablesRecues: Object.keys(process.env).filter((k) => /URL|ADMIN/i.test(k)).sort().map((k) => `[${k}]`),
   };
   try {
     await requete('select 1');
