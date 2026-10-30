@@ -7,7 +7,7 @@ import { createHash, createHmac } from 'node:crypto';
 export interface ConfigStockage { endpoint: string; region: string; bucket: string; cle: string; secret: string; urlPublique: string }
 
 /** Réglages du stockage (variables STOCKAGE_S3_…) ; null s'il n'est pas configuré. */
-export function configStockage(env: NodeJS.ProcessEnv = process.env): ConfigStockage | null {
+export function configStockage(env: Record<string, string | undefined> = process.env): ConfigStockage | null {
   const endpoint = env.STOCKAGE_S3_ENDPOINT?.trim().replace(/\/$/, '');
   const bucket = env.STOCKAGE_S3_BUCKET?.trim();
   const cle = env.STOCKAGE_S3_ACCESS_KEY?.trim(), secret = env.STOCKAGE_S3_SECRET_KEY?.trim();
