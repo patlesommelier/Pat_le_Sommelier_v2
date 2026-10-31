@@ -212,7 +212,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 {sansPhoto.n > 0 && !rechercheEnCours && (
                   <FormulaireAdmin action={chercherPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                     <span className="petit">{sansPhoto.n} vin{sansPhoto.n > 1 ? 's' : ''} sans photo{sansPhoto.deja > 0 && <> (dont {sansPhoto.deja} déjà cherché{sansPhoto.deja > 1 ? 's' : ''} sur le web)</>} :</span>
-                    <button className="btn sec petit">{sansPhoto.n > sansPhoto.deja ? `Chercher les ${sansPhoto.n - sansPhoto.deja} photos sur le web` : 'Chercher les photos sur le web'}</button>
+                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Combien de vins ?
+                      <input type="number" name="limite" min={1} max={sansPhoto.n} placeholder="tous" style={{ width: 90, minWidth: 0 }} className="champ-liste" aria-label="Nombre de vins à chercher (vide : tous)" /></label>
+                    <button className="btn sec petit">Chercher les photos sur le web</button>
                     {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" defaultChecked={sansPhoto.n === sansPhoto.deja} /> aussi les {sansPhoto.deja} déjà cherchés</label>}
                     <span className="petit discret">(sites des producteurs d’abord, puis cavistes ; quelques centimes par vin)</span>
                   </FormulaireAdmin>

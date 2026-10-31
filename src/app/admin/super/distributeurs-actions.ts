@@ -263,7 +263,8 @@ export async function completerVins(id: string, f: FormData): Promise<Retour> {
 export async function chercherPhotos(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
   await requete(`update distributeur set completion_statut = 'en_cours', completion_message = 'Recherche des photos sur le web…', completion_le = now() where id = $1`, [id]);
-  void chercherPhotosWeb(requete, id, { aussiDejaCherches: f.get('aussi_deja') === 'on' });
+  const n = Number(txt(f, 'limite'));
+  void chercherPhotosWeb(requete, id, { aussiDejaCherches: f.get('aussi_deja') === 'on', limite: Number.isInteger(n) && n > 0 ? n : null });
   rafraichir(id);
   return { ok: 'Recherche des photos lancée : la page se met à jour pendant la recherche.' };
 }

@@ -157,7 +157,7 @@ Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "image"
  * puis donnée au vin de la base. Chaque vin cherché est marqué (une relance passe aux suivants, sauf `aussiDejaCherches`).
  * L'avancement est gardé sur le distributeur (mêmes champs que la recherche sur son site).
  */
-export async function chercherPhotosWeb(requete: Requete, distributeurId: string, { aussiDejaCherches = false } = {}) {
+export async function chercherPhotosWeb(requete: Requete, distributeurId: string, { aussiDejaCherches = false, limite = null as number | null } = {}) {
   const etat = (statut: string, message: string) =>
     requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [distributeurId, statut, message]);
   try {
@@ -168,7 +168,7 @@ export async function chercherPhotosWeb(requete: Requete, distributeurId: string
          from cuvee c join producteur p on p.id = c.producteur_id join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
         where c.statut <> 'retire' and c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)
           and ($2 or not exists (select 1 from distributeur_vin x where x.cuvee_id = c.id and x.distributeur_id = $1 and x.photo_cherche_le is not null))
-        order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]);
+        order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]).then((l) => (limite ? l.slice(0, limite) : l)); // essai : les N premiers
     if (!vins.length) { await etat('terminee', 'Aucune photo à chercher : les vins sans photo ont déjà été cherchés (cochez « aussi les déjà cherchés » pour recommencer).'); return; }
     const client = clientClaude({ maxRetries: 1 });
     const modele = modeleTarif(d.modele_lecture);
