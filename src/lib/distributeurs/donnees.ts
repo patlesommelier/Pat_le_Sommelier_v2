@@ -3,6 +3,7 @@ import 'server-only';
 // - super-admin : tout (prix QV, marge, remise) ;
 // - restaurants : le catalogue au prix proposé seulement, jamais le prix QV ni la marge.
 import { requete } from '../db';
+import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rattachement';
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
@@ -22,6 +23,13 @@ export interface VinDistributeur {
   id: string; section: string | null; producteur_texte: string | null; libelle: string; millesime: string | null; contenance: string | null;
   couleur: string | null; certification: string | null; prix_qv: number | null; prix_restaurant: number | null; epuise: boolean; maximum: number | null;
   producteur_id: string | null; producteur_nom: string | null; producteur_manuel: boolean; actif: boolean;
+  cuvee_id: string | null; cuvee_nom: string | null; cuvee_statut: string | null;
+}
+
+/** Un producteur tel qu'écrit sur le tarif, et son lien avec la base de Pat (ranking compris : réservé au super-admin). */
+export interface ProducteurDuTarif {
+  nom: string; vins: number; producteur_id: string | null; base_nom: string | null; ranking_pat: number | null; base_statut: string | null;
+  manuel: boolean; suggestions: Suggestion[];
 }
 
 /** Prix proposé aux restaurants, en SQL (v : distributeur_vin, d : distributeur) — même calcul que prixPropose(). */
@@ -50,9 +58,36 @@ export async function getDistributeur(id: string) {
 export async function getVinsDistributeur(id: string) {
   return requete<VinDistributeur>(
     `select v.id, v.section, v.producteur_texte, v.libelle, v.millesime, v.contenance, v.couleur, v.certification, v.prix_qv, v.prix_restaurant,
-            v.epuise, v.maximum, v.producteur_id, p.nom as producteur_nom, v.producteur_manuel, v.actif
-       from distributeur_vin v left join producteur p on p.id = v.producteur_id
+            v.epuise, v.maximum, v.producteur_id, p.nom as producteur_nom, v.producteur_manuel, v.actif,
+            v.cuvee_id, c.nom as cuvee_nom, c.statut::text as cuvee_statut
+       from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
       where v.distributeur_id = $1 order by v.actif desc, v.ordre, v.libelle`, [id]);
+}
+
+/**
+ * Producteurs du tarif (un par nom écrit), avec le producteur de la base relié et son ranking ;
+ * pour ceux qui ne sont pas reliés, les producteurs proches de la base, proposés à Pat.
+ */
+export async function getProducteursDistributeur(id: string): Promise<ProducteurDuTarif[]> {
+  const lignes = await requete<Omit<ProducteurDuTarif, 'suggestions'>>(
+    `select coalesce(v.producteur_texte, '') as nom, count(*)::int as vins, (array_agg(v.producteur_id order by v.producteur_id nulls last))[1] as producteur_id,
+            bool_or(v.producteur_manuel) as manuel
+       from distributeur_vin v where v.distributeur_id = $1 and v.actif group by coalesce(v.producteur_texte, '') order by min(v.ordre)`, [id]);
+  const base = await requete<ProducteurBase>(`select id, nom, region, ranking_pat, statut::text from producteur where statut <> 'retire'`);
+  const parId = new Map(base.map((p) => [p.id, p]));
+  return lignes.map((l) => {
+    const p = l.producteur_id ? parId.get(l.producteur_id) : undefined;
+    return { ...l, base_nom: p?.nom ?? null, ranking_pat: p?.ranking_pat ?? null, base_statut: p?.statut ?? null,
+      suggestions: p || !l.nom ? [] : suggererProducteurs(l.nom, base) };
+  });
+}
+
+/** Cuvées de la base des producteurs reliés à ce distributeur (pour choisir le vin de la base à la main). */
+export async function getCuveesDistributeur(id: string) {
+  return requete<{ id: string; producteur_id: string; nom: string; statut: string }>(
+    `select c.id, c.producteur_id, c.nom, c.statut::text from cuvee c
+      where c.statut <> 'retire' and c.producteur_id in (select producteur_id from distributeur_vin where distributeur_id = $1 and producteur_id is not null)
+      order by c.nom`, [id]);
 }
 
 // ───────── Coordonnées de Quid Vinum (bons de commande des restaurants) ─────────

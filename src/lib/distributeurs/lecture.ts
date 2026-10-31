@@ -11,6 +11,7 @@ import { clientClaude, modeleLecture } from '../claude';
 import { pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
 import { cleVin, dedoublonner, vinTarif, type VinTarif } from './tarif';
+import { rattacherCuvees } from './rattachement';
 
 const PAGES_PAR_LECTURE = 4;
 const LECTURES_EN_PARALLELE = 3;
@@ -151,30 +152,36 @@ export async function lireApiTarif(url: string, entete: string | null, cle: stri
  * sauf s'il a été choisi à la main. Renvoie les compteurs.
  */
 export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: string, vins: VinTarif[]) {
+  // Producteurs choisis à la main par Pat pour ce distributeur (par le nom écrit sur le tarif) : repris pour les nouveaux vins.
+  const choisis = new Map((await requete<{ nom: string; producteur_id: string | null; manuel: boolean }>(
+    `select distinct on (producteur_texte) producteur_texte as nom, producteur_id, producteur_manuel as manuel from distributeur_vin
+      where distributeur_id = $1 and producteur_texte is not null and producteur_manuel order by producteur_texte, maj_le desc`, [distributeurId])).map((c) => [c.nom, c.producteur_id]));
   const producteurs = new Map<string, string | null>();
   for (const nom of new Set(vins.map((v) => v.producteur).filter((p): p is string => Boolean(p)))) {
-    producteurs.set(nom, (await producteurConnu(requete, nom))?.id ?? null);
+    producteurs.set(nom, choisis.has(nom) ? choisis.get(nom)! : (await producteurConnu(requete, nom))?.id ?? null);
   }
-  const lignes = vins.map((v, i) => ({ ...v, cle: cleVin(v), ordre: i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null }));
+  const lignes = vins.map((v, i) => ({ ...v, cle: cleVin(v), ordre: i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
+    manuel: Boolean(v.producteur && choisis.has(v.producteur)) }));
   const uniques = [...new Map(lignes.map((l) => [l.cle, l])).values()];
   const avant = new Set((await requete<{ cle: string }>('select cle from distributeur_vin where distributeur_id = $1 and actif', [distributeurId])).map((r) => r.cle));
   const col = <K extends keyof (typeof uniques)[number]>(k: K) => uniques.map((l) => l[k]);
   await requete(
     `insert into distributeur_vin (id, distributeur_id, cle, section, producteur_texte, libelle, millesime, contenance, couleur, certification,
-                                   prix_qv, epuise, maximum, producteur_id, ordre)
-     select x.id, $1, x.cle, x.section, x.producteur, x.libelle, x.millesime, x.contenance, x.couleur, x.certification, x.prix, x.epuise, x.maximum, x.producteur_id, x.ordre
-       from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::text[], $7::text[], $8::text[], $9::text[], $10::text[], $11::numeric[], $12::bool[], $13::int[], $14::text[], $15::int[])
-            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre)
+                                   prix_qv, epuise, maximum, producteur_id, ordre, producteur_manuel)
+     select x.id, $1, x.cle, x.section, x.producteur, x.libelle, x.millesime, x.contenance, x.couleur, x.certification, x.prix, x.epuise, x.maximum, x.producteur_id, x.ordre, x.manuel
+       from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::text[], $7::text[], $8::text[], $9::text[], $10::text[], $11::numeric[], $12::bool[], $13::int[], $14::text[], $15::int[], $16::bool[])
+            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre, manuel)
      on conflict (distributeur_id, cle) do update set section = excluded.section, producteur_texte = excluded.producteur_texte, libelle = excluded.libelle,
        millesime = excluded.millesime, contenance = excluded.contenance, couleur = coalesce(excluded.couleur, distributeur_vin.couleur),
        certification = excluded.certification, prix_qv = excluded.prix_qv, epuise = excluded.epuise, maximum = excluded.maximum, ordre = excluded.ordre,
        producteur_id = case when distributeur_vin.producteur_manuel then distributeur_vin.producteur_id else excluded.producteur_id end,
        actif = true, maj_le = now()`,
     [distributeurId, uniques.map(() => randomUUID()), col('cle'), col('section'), col('producteur'), col('libelle'), col('millesime'), col('contenance'),
-      col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre')]);
+      col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre'), col('manuel')]);
   const retires = await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,
     [distributeurId, col('cle')]);
+  await rattacherCuvees(requete, distributeurId);
   return { lus: uniques.length, nouveaux: uniques.filter((l) => !avant.has(l.cle)).length, retires: retires.length,
     rattaches: uniques.filter((l) => l.producteur_id).length };
 }

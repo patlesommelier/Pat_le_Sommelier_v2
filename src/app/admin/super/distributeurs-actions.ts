@@ -7,6 +7,8 @@ import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif } from '@/lib/distributeurs/lecture';
+import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
+import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
 import { deposerImage } from '@/lib/admin/fichiers';
@@ -142,7 +144,7 @@ export async function synchroniserApi(id: string): Promise<Retour> {
 
 /**
  * Tableau des vins : prix QV (prix_<id>), prix imposé aux restaurants (impose_<id>, vide : prix QV + marge),
- * producteur de la base (prod_<id> : nom exact d'un producteur, vide : aucun), proposé ou non (actif_<id>).
+ * vin de la base de Pat (cuvee_<id> : une cuvée du producteur, vide : aucune), proposé ou non (actif_<id>).
  */
 export async function enregistrerVins(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
@@ -150,15 +152,6 @@ export async function enregistrerVins(id: string, f: FormData): Promise<Retour> 
   if (!ids.length) return { ok: 'Rien à enregistrer.' };
   const prix = ids.map((v) => nombre(f, `prix_${v}`)), imposes = ids.map((v) => nombre(f, `impose_${v}`));
   const illisibles = ids.filter((_, i) => prix[i] === undefined || imposes[i] === undefined).length;
-  // Producteurs : seulement ceux qui ont changé, retrouvés par leur nom exact dans la base de Pat.
-  const actuels = new Map((await requete<{ id: string; nom: string | null }>(
-    `select v.id, p.nom from distributeur_vin v left join producteur p on p.id = v.producteur_id where v.distributeur_id = $1`, [id])).map((r) => [r.id, r.nom ?? '']));
-  const noms = [...new Set(ids.map((v) => txt(f, `prod_${v}`)).filter((n): n is string => Boolean(n)))];
-  const parNom = new Map((noms.length ? await requete<{ id: string; nom: string }>(
-    `select distinct on (lower(nom)) id, nom from producteur where lower(nom) = any($1) and statut <> 'retire' order by lower(nom), statut = 'valide' desc`,
-    [noms.map((n) => n.toLowerCase())]) : []).map((p) => [p.nom.toLowerCase(), p.id]));
-  const changes = ids.filter((v) => f.has(`prod_${v}`) && (txt(f, `prod_${v}`) ?? '') !== actuels.get(v));
-  const inconnus = changes.filter((v) => txt(f, `prod_${v}`) && !parNom.has(txt(f, `prod_${v}`)!.toLowerCase())).length;
   const lisibles = (i: number) => prix[i] !== undefined && imposes[i] !== undefined;
   await requete(
     `update distributeur_vin v set prix_qv = x.prix, prix_restaurant = x.impose, actif = x.actif, maj_le = now()
@@ -166,16 +159,69 @@ export async function enregistrerVins(id: string, f: FormData): Promise<Retour> 
       where v.distributeur_id = $1 and v.id = x.id`,
     [id, ids.filter((_, i) => lisibles(i)), prix.filter((_, i) => lisibles(i)), imposes.filter((_, i) => lisibles(i)),
       ids.filter((_, i) => lisibles(i)).map((v) => f.get(`actif_${v}`) === 'on')]);
+  // Vin de la base choisi à la main : seulement ceux qui ont changé, et seulement une cuvée du producteur relié.
+  const actuels = new Map((await requete<{ id: string; cuvee_id: string | null }>(
+    'select id, cuvee_id from distributeur_vin where distributeur_id = $1 and id = any($2)', [id, ids])).map((r) => [r.id, r.cuvee_id ?? '']));
+  const changes = ids.filter((v) => f.has(`cuvee_${v}`) && (txt(f, `cuvee_${v}`) ?? '') !== actuels.get(v));
   for (const v of changes) {
-    const nom = txt(f, `prod_${v}`);
-    const producteur = nom ? parNom.get(nom.toLowerCase()) : null;
-    if (producteur === undefined) continue;
-    await requete('update distributeur_vin set producteur_id = $3, producteur_manuel = true where distributeur_id = $1 and id = $2', [id, v, producteur]);
+    await requete(`update distributeur_vin d set cuvee_id = $3, cuvee_manuel = true
+                    where d.distributeur_id = $1 and d.id = $2 and ($3::text is null or exists (select 1 from cuvee c where c.id = $3 and c.producteur_id = d.producteur_id))`,
+      [id, v, txt(f, `cuvee_${v}`)]);
   }
   rafraichir(id);
-  const avertissements = [illisibles ? `${illisibles} prix illisible${illisibles > 1 ? 's' : ''} (écrivez par exemple 12,50)` : '',
-    inconnus ? `${inconnus} producteur${inconnus > 1 ? 's' : ''} introuvable${inconnus > 1 ? 's' : ''} dans la base (choisissez un nom de la liste)` : ''].filter(Boolean);
-  return avertissements.length ? { erreur: `Enregistré, sauf : ${avertissements.join(' ; ')}.` } : { ok: 'Vins enregistrés.' };
+  return illisibles ? { erreur: `Enregistré, sauf ${illisibles} prix illisible${illisibles > 1 ? 's' : ''} (écrivez par exemple 12,50).` } : { ok: 'Vins enregistrés.' };
+}
+
+// ───────── Lien avec la base de Pat ─────────
+/** Producteur du tarif (nom écrit) relié à un producteur de la base : par son identifiant (proposition), ou son nom exact (liste). */
+export async function associerProducteur(id: string, nomTarif: string, producteurId: string | null, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  let cible = producteurId;
+  if (!cible) {
+    const nom = txt(f, 'nom_base');
+    if (!nom) return { erreur: 'Choisissez un producteur de la liste.' };
+    const [p] = await requete<{ id: string }>(`select id from producteur where lower(nom) = lower($1) and statut <> 'retire' order by statut = 'valide' desc limit 1`, [nom]);
+    if (!p) return { erreur: `« ${nom} » n’est pas dans la base : choisissez un nom de la liste, ou ajoutez le producteur.` };
+    cible = p.id;
+  }
+  await relierProducteur(requete, id, nomTarif, cible);
+  rafraichir(id);
+  return { ok: 'Producteur relié : ses vins sont rattachés à la base.' };
+}
+
+export async function retirerLienProducteur(id: string, nomTarif: string): Promise<Retour> {
+  await exigerAdmin();
+  await relierProducteur(requete, id, nomTarif, null);
+  rafraichir(id);
+  return { ok: 'Lien retiré.' };
+}
+
+export async function ajouterProducteur(id: string, nomTarif: string): Promise<Retour> {
+  await exigerAdmin();
+  if (!nomTarif) return { erreur: 'Ce vin n’indique pas de producteur.' };
+  await ajouterProducteurBase(requete, id, nomTarif);
+  rafraichir(id);
+  revalidatePath('/admin/super/producteurs');
+  return { ok: `« ${nomTarif} » est ajouté à la base, à valider dans Producteurs.` };
+}
+
+/** Producteurs sans lien et sans proposition : tous ajoutés à la base, à valider. */
+export async function ajouterProducteursSansProposition(id: string): Promise<Retour> {
+  await exigerAdmin();
+  const aAjouter = (await getProducteursDistributeur(id)).filter((p) => p.nom && !p.producteur_id && !p.suggestions.length);
+  for (const p of aAjouter) await ajouterProducteurBase(requete, id, p.nom);
+  rafraichir(id);
+  revalidatePath('/admin/super/producteurs');
+  return { ok: aAjouter.length ? `${aAjouter.length} producteur${aAjouter.length > 1 ? 's' : ''} ajouté${aAjouter.length > 1 ? 's' : ''} à la base, à valider dans Producteurs.` : 'Aucun producteur à ajouter.' };
+}
+
+/** Vins des producteurs reliés, absents de la base : ajoutés comme vins à valider (Vins de la base). */
+export async function ajouterVinsBase(id: string): Promise<Retour> {
+  await exigerAdmin();
+  const n = await ajouterCuveesManquantes(requete, id);
+  rafraichir(id);
+  revalidatePath('/admin/super/vins');
+  return { ok: n ? `${n} vin${n > 1 ? 's' : ''} ajouté${n > 1 ? 's' : ''} à la base, à valider dans Vins de la base.` : 'Tous les vins des producteurs reliés sont déjà dans la base.' };
 }
 
 export async function ajouterVinDistributeur(id: string, f: FormData): Promise<Retour> {

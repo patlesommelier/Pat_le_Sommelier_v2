@@ -1,34 +1,41 @@
 // Super-admin — fiche d'un distributeur : coordonnées et marge, tarif (PDF lu par Claude), vins au prix QV et prix proposé aux restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterVinDistributeur, deposerTarif, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getDistributeur, getVinsDistributeur } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur } from '@/lib/distributeurs/donnees';
 import { prixPropose, sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
 
 export const dynamic = 'force-dynamic';
 
 const date = (d: string) => new Date(d).toLocaleString('fr-BE', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'Europe/Brussels' });
+/** Ranking de Pat (0 à 5), réservé au super-admin. */
+const ranking = (n: number | null) => (n == null ? 'sans ranking' : `${'★'.repeat(n)}${'☆'.repeat(5 - n)}`);
 const virgule = (n: number | null) => (n == null ? '' : n.toFixed(2).replace('.', ','));
 
-export default async function FicheDistributeur({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string; q?: string; tous?: string }> }) {
+export default async function FicheDistributeur({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string; q?: string; tous?: string; prod?: string }> }) {
   await exigerAdmin();
   const { id } = await params;
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`)]);
+  const [tous, producteurs, duTarif, cuvees] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id)]);
+  const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
+  const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
+  const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
+  const vinsHorsBase = tous.filter((v) => v.actif && v.producteur_id && !v.cuvee_id).length;
   const q = sansAccents(sp.q?.trim() ?? '');
   const vins = tous.filter((v) => (sp.tous || v.actif) && (!q || sansAccents(`${v.producteur_texte ?? ''} ${v.libelle} ${v.millesime ?? ''} ${v.producteur_nom ?? ''} ${v.section ?? ''}`).includes(q)));
   const actifs = tous.filter((v) => v.actif);
   const rattaches = actifs.filter((v) => v.producteur_id).length;
+  const dansLaBase = actifs.filter((v) => v.cuvee_id).length;
   // Lecture interrompue (serveur redémarré) : au-delà de 30 minutes, on propose de la relancer.
   const enCours = d.lecture_statut === 'en_cours' && d.lecture_le && Date.now() - new Date(d.lecture_le).getTime() < 30 * 60_000;
   const marge = Number(d.marge);
@@ -122,9 +129,54 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             })()}
           </section>
 
+          <section className="carte-bo pile" id="base">
+            <div><h2>Producteurs et base de Pat</h2><p className="sous">Chaque producteur du tarif est relié à la base de Pat : celui que Pat a reconnu (avec son ranking), un producteur proche à choisir, ou ajouté à la base, à valider dans Producteurs. Le choix vaut pour tous ses vins, et pour les prochains tarifs.</p></div>
+            <div className="ligne-actions" style={{ alignItems: 'center' }}>
+              <span><b>{duTarif.filter((p) => p.producteur_id).length}</b> reliés · <b>{aRelier.length}</b> à relier</span>
+              <Link href={`?prod=${sp.prod === 'tous' ? '' : 'tous'}#base`} className="btn fantome petit">{sp.prod === 'tous' ? 'Seulement ceux à relier ou à valider' : `Voir les ${duTarif.length} producteurs`}</Link>
+              {sansProposition > 0 && <FormulaireAdmin action={ajouterProducteursSansProposition.bind(null, id)}><button className="btn sec petit">Ajouter à la base les {sansProposition} producteurs sans proposition</button></FormulaireAdmin>}
+            </div>
+            {!listeProducteurs.length && <p className="discret" style={{ margin: 0 }}>{duTarif.length ? 'Tous les producteurs sont reliés à la base de Pat.' : 'Aucun producteur pour l’instant.'}</p>}
+            <div className="pile" style={{ gap: 0 }}>
+              {listeProducteurs.map((p) => (
+                <div key={p.nom || '-'} className="ligne-producteur">
+                  <div style={{ flex: '1 1 260px' }}>
+                    <b>{p.nom || 'Producteur non indiqué'}</b> <span className="discret petit">· {p.vins} vin{p.vins > 1 ? 's' : ''}</span>
+                    {p.producteur_id && (
+                      <div className="petit">Base de Pat : <Link href={`/admin/super/producteurs/${p.producteur_id}`}><b>{p.base_nom}</b></Link>{' '}
+                        <span title="Ranking de Pat" style={{ color: 'var(--encre)' }}>{ranking(p.ranking_pat)}</span>
+                        {p.base_statut === 'propose' && <> · <Etat type="attention">à valider</Etat></>}{!p.manuel && <span className="discret"> · trouvé par Pat</span>}</div>
+                    )}
+                  </div>
+                  {p.nom && (
+                    <div className="pile" style={{ gap: 6, flex: '2 1 380px' }}>
+                      {!p.producteur_id && p.suggestions.map((s) => (
+                        <FormulaireAdmin key={s.id} action={associerProducteur.bind(null, id, p.nom, s.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                          <button className="btn sec petit">Associer</button>
+                          <span className="petit"><b>{s.nom}</b> <span style={{ color: 'var(--encre)' }}>{ranking(s.ranking_pat)}</span>{s.region && <span className="discret"> · {s.region}</span>}{s.statut === 'propose' && <span className="discret"> · à valider</span>}</span>
+                        </FormulaireAdmin>
+                      ))}
+                      <div className="ligne-actions" style={{ alignItems: 'center' }}>
+                        {!p.producteur_id && <FormulaireAdmin action={ajouterProducteur.bind(null, id, p.nom)}><button className="btn fantome petit" style={{ paddingLeft: 0 }}>+ Ajouter « {p.nom} » à la base</button></FormulaireAdmin>}
+                        <details>
+                          <summary className="petit" style={{ cursor: 'pointer' }}>{p.producteur_id ? 'Changer' : 'Autre producteur de la base…'}</summary>
+                          <FormulaireAdmin action={associerProducteur.bind(null, id, p.nom, null)} className="ligne-actions" style={{ alignItems: 'center', marginTop: 6 }}>
+                            <input name="nom_base" list="producteurs-base" className="champ-liste" placeholder="Nom dans la base de Pat" aria-label={`Producteur de la base pour ${p.nom}`} style={{ minWidth: 240, width: 'auto' }} />
+                            <button className="btn sec petit">Associer</button>
+                          </FormulaireAdmin>
+                          {p.producteur_id && <FormulaireAdmin action={retirerLienProducteur.bind(null, id, p.nom)}><button className="btn fantome petit" style={{ paddingLeft: 0 }}>Retirer le lien</button></FormulaireAdmin>}
+                        </details>
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </section>
+
           <section className="pile">
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <h2 style={{ margin: 0 }}>Vins <span className="discret" style={{ fontWeight: 500 }}>{actifs.length} proposés · {rattaches} rattachés à la base de Pat</span></h2>
+              <h2 style={{ margin: 0 }}>Vins <span className="discret" style={{ fontWeight: 500 }}>{actifs.length} proposés · {rattaches} d’un producteur de la base · {dansLaBase} vins de la base</span></h2>
               <form className="ligne-actions" style={{ alignItems: 'center' }}>
                 <input name="q" defaultValue={sp.q ?? ''} type="search" className="recherche" placeholder="Chercher un vin, un domaine…" aria-label="Chercher" />
                 <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="tous" value="1" defaultChecked={Boolean(sp.tous)} /> Avec les vins retirés</label>
@@ -132,11 +184,17 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
+            {vinsHorsBase > 0 && (
+              <FormulaireAdmin action={ajouterVinsBase.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                <span className="petit">{vinsHorsBase} vin{vinsHorsBase > 1 ? 's' : ''} de producteurs reliés ne {vinsHorsBase > 1 ? 'sont' : 'est'} pas encore dans la base de Pat.</span>
+                <button className="btn sec petit">Les ajouter à la base (à valider)</button>
+              </FormulaireAdmin>
+            )}
             <FormulaireAdmin action={enregistrerVins.bind(null, id)} className="pile" style={{ gap: 12 }}>
               <div className="carte-bo" style={{ padding: 0 }}>
                 <div className="tableau">
                   <table style={{ minWidth: 980 }}>
-                    <thead><tr><th>Vin</th><th>Producteur de la base de Pat</th><th className="droite">Prix QV</th><th className="droite">Prix proposé</th><th className="droite">Prix imposé</th><th className="droite">Proposé</th></tr></thead>
+                    <thead><tr><th>Vin</th><th>Base de Pat</th><th className="droite">Prix QV</th><th className="droite">Prix proposé</th><th className="droite">Prix imposé</th><th className="droite">Proposé</th></tr></thead>
                     <tbody>
                       {!vins.length && <tr><td colSpan={6} className="discret">{tous.length ? 'Aucun vin ne correspond.' : 'Aucun vin : déposez le tarif ci-dessus, ou ajoutez les vins à la main.'}</td></tr>}
                       {vins.map((v) => (
@@ -146,8 +204,13 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                             <div className="petit">{v.producteur_texte ?? <span className="discret">producteur non indiqué</span>}{v.certification ? ` · ${v.certification}` : ''}{v.section ? <span className="discret"> · {v.section}</span> : null}
                               {v.epuise && <> · <b style={{ color: 'var(--rouge, #FF0D05)' }}>Épuisé</b></>}{v.maximum != null && <> · Max. {v.maximum}</>}</div>
                           </td>
-                          <td><input name={`prod_${v.id}`} list="producteurs-base" defaultValue={v.producteur_nom ?? ''} placeholder="Non rattaché" aria-label={`Producteur de la base : ${v.libelle}`} className="champ-liste" />
-                            {v.producteur_id && !v.producteur_manuel && <span className="discret petit">trouvé par Pat</span>}</td>
+                          <td>{v.producteur_id ? <>
+                            <div className="petit"><b>{v.producteur_nom}</b></div>
+                            <select name={`cuvee_${v.id}`} defaultValue={v.cuvee_id ?? ''} className="champ-liste" aria-label={`Vin de la base : ${v.libelle}`}>
+                              <option value="">— pas encore dans la base —</option>
+                              {cuvees.filter((c) => c.producteur_id === v.producteur_id).map((c) => <option key={c.id} value={c.id}>{c.nom}{c.statut === 'propose' ? ' (à valider)' : ''}</option>)}
+                            </select>
+                          </> : <a href="#base" className="petit discret">producteur à relier</a>}</td>
                           <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`prix_${v.id}`} defaultValue={virgule(v.prix_qv)} aria-label={`Prix QV : ${v.libelle}`} /> €</span></td>
                           <td className="droite" style={{ whiteSpace: 'nowrap' }}>{(() => { const p = prixPropose(v.prix_qv, marge, v.prix_restaurant); return p == null ? '—' : euros(p); })()}</td>
                           <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`impose_${v.id}`} defaultValue={virgule(v.prix_restaurant)} placeholder="—" aria-label={`Prix imposé aux restaurants : ${v.libelle}`} /> €</span></td>
