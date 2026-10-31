@@ -50,6 +50,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
           <form action={testerEmail} className="ligne-actions" style={{ alignItems: 'center' }}>
             <span className="petit" style={{ color: pret ? 'var(--vert)' : 'var(--ocre)' }}>
               E-mails : {pret ? `envoyés par Resend, depuis ${e.expediteur}.` : `non configurés (${!e.cle ? 'RESEND_API_KEY manque' : 'EMAIL_EXPEDITEUR manque'}).`}
+              {e.cle && !e.cleForme && ' Attention : RESEND_API_KEY n’a pas la forme d’une clé Resend (elle commence par re_) : recopiez-la depuis Resend.'}
             </span>
             <button className="btn fantome petit">Tester l’envoi d’e-mails</button>
           </form>

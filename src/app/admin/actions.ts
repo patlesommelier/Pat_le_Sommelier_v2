@@ -903,7 +903,7 @@ export async function creerAcces(resto: string, f: FormData) {
   if (mdp) retour({ ok: `Accès créé pour ${email} : communiquez-lui son mot de passe.` });
   const r = await inviter(id, email);
   retour(r.envoye ? { ok: `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.` }
-    : { ok: `Accès créé pour ${email}. ${r.erreur ? `L’e-mail n’a pas pu partir (${r.erreur})` : 'L’envoi d’e-mails n’est pas encore activé'} : transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
+    : { ok: `Accès créé pour ${email}. ${r.erreur ? r.erreur.replace(/\.$/, '') : 'L’envoi d’e-mails n’est pas encore activé'} ; transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
 }
 
 export async function retirerAcces(resto: string, userId: string) {

@@ -4,10 +4,12 @@ import 'server-only';
 // (ou COMMANDES_EXPEDITEUR), l'adresse d'envoi d'un domaine vérifié chez Resend (ex. « Pat le sommelier <bonjour@patlesommelier.com> »).
 
 const expediteur = () => process.env.EMAIL_EXPEDITEUR || process.env.COMMANDES_EXPEDITEUR;
-export const envoiEmailConfigure = () => Boolean(process.env.RESEND_API_KEY && expediteur());
+/** Clé de Resend, sans espace ni retour à la ligne glissés au collage dans Coolify. */
+const cleResend = () => process.env.RESEND_API_KEY?.replace(/\s+/g, '') || '';
+export const envoiEmailConfigure = () => Boolean(cleResend() && expediteur()?.trim());
 
 /** Pour le super-admin : la clé est-elle présente (jamais sa valeur), et quelle adresse d'envoi est réglée. */
-export const etatEmail = () => ({ cle: Boolean(process.env.RESEND_API_KEY?.trim()), expediteur: expediteur()?.trim() || null });
+export const etatEmail = () => ({ cle: Boolean(cleResend()), cleForme: /^re_[A-Za-z0-9_]{20,}$/.test(cleResend()), expediteur: expediteur()?.trim() || null });
 
 /** Réponse d'erreur de Resend, en clair : la cause la plus fréquente d'abord, puis le message exact de Resend. */
 function causeResend(statut: number, corps: string) {
@@ -32,9 +34,9 @@ export async function envoyerEmail(e: Email): Promise<string | null> {
   try {
     const r = await fetch('https://api.resend.com/emails', {
       method: 'POST',
-      headers: { authorization: `Bearer ${process.env.RESEND_API_KEY}`, 'content-type': 'application/json' },
+      headers: { authorization: `Bearer ${cleResend()}`, 'content-type': 'application/json' },
       body: JSON.stringify({
-        from: expediteur(), to: [e.a], cc: e.copie ? [e.copie] : undefined, reply_to: e.repondreA ?? undefined,
+        from: expediteur()?.trim().replace(/^["']|["']$/g, ''), to: [e.a], cc: e.copie ? [e.copie] : undefined, reply_to: e.repondreA ?? undefined,
         subject: e.sujet, text: e.texte,
         attachments: e.pieceJointe ? [{ filename: e.pieceJointe.nom, content: Buffer.from(e.pieceJointe.octets).toString('base64') }] : undefined,
       }),
