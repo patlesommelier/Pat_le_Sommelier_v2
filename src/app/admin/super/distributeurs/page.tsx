@@ -47,7 +47,7 @@ export default async function Distributeurs({ searchParams }: { searchParams: Pr
         <div className="etroit" style={{ flex: '1 1 320px' }}>
           <form action={creerDistributeur} className="carte-bo pile">
             <h2>Nouveau distributeur</h2>
-            <div className="champ"><label htmlFor="nom">Nom</label><input id="nom" name="nom" required placeholder="Les Vents d’Anges" /></div>
+            <div className="champ"><label htmlFor="nom">Nom du distributeur</label><input id="nom" name="nom" required placeholder="Tapez le nom ici" /></div>
             <button className="btn">Créer</button>
           </form>
           <FormulaireAdmin action={enregistrerQv} className="carte-bo pile">
