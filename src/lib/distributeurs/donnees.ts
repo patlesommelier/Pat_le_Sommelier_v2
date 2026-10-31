@@ -116,6 +116,13 @@ export async function vinsSansPhoto(id: string) {
   return r;
 }
 
+/** Photos des vins de ce distributeur pas encore recadrées sur l'étiquette (photos différentes). */
+export async function photosARecadrer(id: string) {
+  const [{ n }] = await requete<{ n: number }>(
+    `select count(distinct etiquette_url)::int as n from distributeur_vin where distributeur_id = $1 and actif and etiquette_url is not null and not etiquette_recadree`, [id]);
+  return n;
+}
+
 /** Derniers vins dont la photo a été cherchée sur le web (les plus récents d'abord), avec la photo trouvée ou non. */
 export async function photosCherchees(id: string, limite = 60) {
   return requete<{ id: string; nom: string; producteur: string; etiquette_url: string | null; cherche_le: string }>(

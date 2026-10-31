@@ -8,7 +8,8 @@ import { clientClaude } from '../claude';
 import { creerAppellationProposeeAvec } from '../appellations/creation';
 import { cleAppellation } from '../appellations/regroupement';
 import { extraireVins, modeleTarif, type ModeleTarif } from './lecture';
-import { copierImageDuSite, partagerEtiquettesDistributeur } from './etiquettes';
+import { garder, partagerEtiquettesDistributeur, telecharger } from './etiquettes';
+import { recadrerSurEtiquette } from './recadrage';
 
 /** Cépages remis en forme : sans pourcentages, en minuscules, séparés par des virgules (« Chardonnay 80 %, Pinot Noir 20% » → « chardonnay, pinot noir »). */
 export function normaliserCepages(texte: string | null | undefined): string | null {
@@ -27,6 +28,19 @@ export function domaineDuSite(site: string | null | undefined): string | null {
   try { return new URL(/^https?:\/\//i.test(site.trim()) ? site.trim() : `https://${site.trim()}`).hostname.replace(/^www\./, ''); } catch { return null; }
 }
 
+/**
+ * Photo trouvée sur le web : téléchargée, vérifiée (une vraie image, pas une icône), recadrée sur l'étiquette si c'est une photo
+ * de bouteille, puis gardée chez nous. null si elle n'est pas accessible ou n'en est pas une.
+ */
+async function etiquetteDepuisPhoto(client: Anthropic, modele: string, url: string, nom: string): Promise<string | null> {
+  if (!/^https?:\/\//i.test(url)) return null;
+  const contenu = await telecharger(url);
+  if (!contenu || contenu.octets.length < 3000) return null; // trop petite : icône, logo ou pixel
+  const r = await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type);
+  if (r.resultat === 'aucune') return null; // pas d'étiquette lisible sur cette photo
+  return garder(r.octets, r.type, nom).catch(() => null);
+}
+
 const LOT = 6;
 const EN_PARALLELE = 3;
 
@@ -38,8 +52,9 @@ ${vins.map((v) => `- id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` 
 
 Pour chaque vin : « appellation » (le nom officiel, sans « AOC », « DOC »… à la fin, ex. « Trento », « Barolo », « Franciacorta » ; null si introuvable)
 , « cepages » (les cépages tels qu'indiqués, ex. « Chardonnay 80%, Pinot Noir 20% » ; null si introuvable)
-et « image » (seulement pour un vin marqué « photo à trouver » : l'adresse complète, telle qu'elle figure sur la page du vin, de la photo
-de cette bouteille ou de son étiquette — pas un logo, une bannière ni la photo d'un autre vin ; null sinon). N'invente rien : en cas de doute, null.
+et « image » (seulement pour un vin marqué « photo à trouver » : l'adresse complète, telle qu'elle figure sur la page du vin, de l'image
+de son étiquette — de préférence l'étiquette seule, sinon la photo de la bouteille de face, étiquette lisible ; pas un logo, une bannière
+ni la photo d'un autre vin ; null sinon). N'invente rien : en cas de doute, null.
 Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "appellation": "...", "cepages": "...", "image": null}]}`;
 
 /** Recherche pour un lot de vins (outils de recherche web côté serveur, avec reprise des tours mis en pause). */
@@ -115,9 +130,9 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
         }
         // Photo : copiée chez nous, sur les vins du distributeur sans étiquette, puis donnée à la cuvée (si elle n'en a toujours pas).
         if (v.sans_photo && r.image?.trim()) {
-          const url = await copierImageDuSite(r.image.trim(), `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
+          const url = await etiquetteDepuisPhoto(client, modele, r.image.trim(), `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
           if (url) {
-            await requete('update distributeur_vin set etiquette_url = $3, image_source = $4 where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
+            await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
               [distributeurId, v.id, url, r.image.trim()]);
             photos++;
           }
@@ -142,12 +157,13 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
 
 // ───────── Photos manquantes, cherchées sur le web (site du producteur d'abord) ─────────
 const consignePhotos = (vins: Array<{ id: string; producteur: string; nom: string; millesime: string | null }>) =>
-  `Tu complètes la base de vins d'un sommelier. Pour chacun de ces vins, trouve sur le web une photo de la bouteille (ou de son étiquette) :
-de préférence sur le site du producteur, sinon chez un caviste ou un importateur. Cherche avec web_search, ouvre les pages avec web_fetch.
+  `Tu complètes la base de vins d'un sommelier. Pour chacun de ces vins, trouve sur le web l'image de son étiquette : de préférence l'étiquette
+seule (souvent dans la fiche technique ou la page « étiquette » du producteur), sinon une photo de la bouteille de face où l'étiquette est
+bien lisible ; d'abord sur le site du producteur, sinon chez un caviste ou un importateur. Cherche avec web_search, ouvre les pages avec web_fetch.
 
 ${vins.map((v) => `- id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` ${v.millesime}` : ''}`).join('\n')}
 
-Pour chaque vin : « image » = l'adresse complète de la photo telle qu'elle figure sur la page (un fichier .jpg, .png ou .webp), de ce vin-là
+Pour chaque vin : « image » = l'adresse complète de l'image telle qu'elle figure sur la page (un fichier .jpg, .png ou .webp), de ce vin-là
 (même producteur, même cuvée ; un autre millésime convient) — jamais un logo, une bannière, une photo de vignoble ni la bouteille d'un autre vin ;
 null si tu ne la trouves pas. N'invente pas d'adresse.
 Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "image": "https://..."}]}`;
@@ -185,9 +201,9 @@ export async function chercherPhotosWeb(requete: Requete, distributeurId: string
       for (const r of (extraireVins(texte) ?? []) as Array<{ id?: string; image?: string | null }>) {
         const v = lot.find((x) => x.id === r.id);
         if (!v || !r.image?.trim()) continue;
-        const url = await copierImageDuSite(r.image.trim(), `${distributeurId.slice(0, 8)}-web-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
+        const url = await etiquetteDepuisPhoto(client, modele, r.image.trim(), `${distributeurId.slice(0, 8)}-web-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
         if (!url) continue;
-        await requete('update distributeur_vin set etiquette_url = $3, image_source = $4 where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
+        await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
           [distributeurId, v.id, url, r.image.trim()]);
         photos++;
       }
@@ -204,5 +220,50 @@ export async function chercherPhotosWeb(requete: Requete, distributeurId: string
   } catch (e) {
     console.error('[photos web]', distributeurId, e);
     await etat('echec', `La recherche n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
+  }
+}
+
+// ───────── Photos déjà gardées : recadrées sur l'étiquette ─────────
+/**
+ * Photos des vins de ce distributeur pas encore recadrées (collage, document Word, recherches précédentes) : chaque photo de bouteille
+ * est remplacée par son étiquette, chez le distributeur et dans la base de Pat (si la photo du vin de la base venait de là).
+ */
+export async function recadrerPhotosDistributeur(requete: Requete, distributeurId: string) {
+  const etat = (statut: string, message: string) =>
+    requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [distributeurId, statut, message]);
+  try {
+    const [d] = await requete<{ modele_lecture: ModeleTarif }>('select modele_lecture from distributeur where id = $1', [distributeurId]);
+    if (!d) return;
+    const photos = (await requete<{ url: string }>(
+      `select distinct etiquette_url as url from distributeur_vin where distributeur_id = $1 and actif and etiquette_url is not null and not etiquette_recadree`, [distributeurId])).map((p) => p.url);
+    if (!photos.length) { await etat('terminee', 'Toutes les photos de ce distributeur sont déjà recadrées sur l’étiquette.'); return; }
+    const client = clientClaude({ maxRetries: 1 });
+    const modele = modeleTarif(d.modele_lecture);
+    let recadrees = 0, deja = 0, faites = 0;
+    const traiter = async (ancienne: string, i: number) => {
+      const contenu = await telecharger(ancienne);
+      const r = contenu ? await recadrerSurEtiquette(client, modele, contenu.octets, contenu.type) : null;
+      if (r?.resultat === 'recadree') {
+        const nouvelle = await garder(r.octets, r.type, `${distributeurId.slice(0, 8)}-etiquette-${i}`);
+        if (nouvelle) {
+          await requete('update distributeur_vin set etiquette_url = $3, etiquette_recadree = true where distributeur_id = $1 and etiquette_url = $2', [distributeurId, ancienne, nouvelle]);
+          await requete(`update cuvee set etiquette_url = $2, etiquette_maj_le = now() where etiquette_url = $1 and etiquette_source = 'distributeur'`, [ancienne, nouvelle]);
+          recadrees++;
+        }
+      } else if (r && r.resultat !== 'echec') {
+        // Déjà l'étiquette, ou pas d'étiquette lisible : gardée telle quelle, pas recadrée deux fois.
+        await requete('update distributeur_vin set etiquette_recadree = true where distributeur_id = $1 and etiquette_url = $2', [distributeurId, ancienne]);
+        deja++;
+      }
+      faites++;
+      if (faites % 8 === 0) await etat('en_cours', `Recadrage des photos : ${faites} sur ${photos.length}, ${recadrees} recadrées…`);
+    };
+    await etat('en_cours', `Recadrage des photos : 0 sur ${photos.length}…`);
+    for (let i = 0; i < photos.length; i += 4) await Promise.all(photos.slice(i, i + 4).map((u, j) => traiter(u, i + j)));
+    await etat('terminee', `${photos.length} photos examinées : ${recadrees} recadrées sur l’étiquette, ${deja} déjà à plat ou sans étiquette lisible`
+      + (photos.length - recadrees - deja ? `, ${photos.length - recadrees - deja} à réessayer (relancez le recadrage)` : '') + '.');
+  } catch (e) {
+    console.error('[recadrage]', distributeurId, e);
+    await etat('echec', `Le recadrage n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
   }
 }

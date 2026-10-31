@@ -12,7 +12,7 @@ import { adresseDuCollage, imagesParReference, type ImageArticle } from './sourc
 const EXTENSIONS: Record<string, string> = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif' };
 
 /** Image gardée chez nous (stockage Hetzner ; en développement sans stockage, public/uploads). */
-async function garder(octets: Buffer, type: string, nom: string): Promise<string | null> {
+export async function garder(octets: Buffer, type: string, nom: string): Promise<string | null> {
   const ext = EXTENSIONS[type];
   if (!ext || !octets.length || octets.length > 5 * 1024 * 1024) return null;
   const fichier = `distributeurs/${nom}-${createHash('sha1').update(octets).digest('hex').slice(0, 10)}.${ext}`;
@@ -26,25 +26,20 @@ async function garder(octets: Buffer, type: string, nom: string): Promise<string
 }
 
 /** Image du site du distributeur ; null si elle n'est pas accessible (site réservé aux clients connectés…). */
-async function telecharger(url: string): Promise<{ octets: Buffer; type: string } | null> {
+export async function telecharger(url: string): Promise<{ octets: Buffer; type: string } | null> {
   try {
+    // Image gardée sur le disque en développement (sans stockage) : lue directement.
+    if (url.startsWith('/uploads/')) {
+      const ext = url.split('.').pop()!.toLowerCase();
+      const type = Object.entries(EXTENSIONS).find(([, e]) => e === ext)?.[0];
+      return type ? { octets: await fs.readFile(path.join(process.cwd(), 'public', url)), type } : null;
+    }
     const r = await fetch(url, { signal: AbortSignal.timeout(20_000), headers: { accept: 'image/*' } });
     const type = (r.headers.get('content-type') ?? '').split(';')[0].trim();
     return r.ok && EXTENSIONS[type] ? { octets: Buffer.from(await r.arrayBuffer()), type } : null;
   } catch {
     return null;
   }
-}
-
-/**
- * Photo trouvée sur le site du distributeur (adresse) : téléchargée, vérifiée (une vraie image, pas une icône) et gardée chez nous ;
- * null si elle n'est pas accessible ou n'en est pas une.
- */
-export async function copierImageDuSite(url: string, nom: string): Promise<string | null> {
-  if (!/^https?:\/\//i.test(url)) return null;
-  const contenu = await telecharger(url);
-  if (!contenu || contenu.octets.length < 3000) return null; // trop petite : icône, logo ou pixel
-  return garder(contenu.octets, contenu.type, nom).catch(() => null);
 }
 
 /** Vins du distributeur qui ont une étiquette, donnée aux cuvées reliées qui n'en ont pas encore. */

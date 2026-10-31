@@ -8,7 +8,7 @@ import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
-import { chercherPhotosWeb, completerVinsDistributeur } from '@/lib/distributeurs/completer';
+import { chercherPhotosWeb, completerVinsDistributeur, recadrerPhotosDistributeur } from '@/lib/distributeurs/completer';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
@@ -267,6 +267,15 @@ export async function chercherPhotos(id: string, f: FormData): Promise<Retour> {
   void chercherPhotosWeb(requete, id, { aussiDejaCherches: f.get('aussi_deja') === 'on', limite: Number.isInteger(n) && n > 0 ? n : null });
   rafraichir(id);
   return { ok: 'Recherche des photos lancée : la page se met à jour pendant la recherche.' };
+}
+
+/** Photos des vins de ce distributeur recadrées sur l'étiquette (en arrière-plan). */
+export async function recadrerPhotos(id: string): Promise<Retour> {
+  await exigerAdmin();
+  await requete(`update distributeur set completion_statut = 'en_cours', completion_message = 'Recadrage des photos sur l’étiquette…', completion_le = now() where id = $1`, [id]);
+  void recadrerPhotosDistributeur(requete, id);
+  rafraichir(id);
+  return { ok: 'Recadrage lancé : la page se met à jour pendant le travail.' };
 }
 
 /** Vins des producteurs reliés, absents de la base : ajoutés comme vins à valider (Vins de la base). */
