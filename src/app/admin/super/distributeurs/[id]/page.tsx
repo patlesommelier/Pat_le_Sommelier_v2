@@ -41,7 +41,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   // Lecture interrompue (serveur redémarré) : au-delà de 30 minutes, on propose de la relancer.
   const enCours = d.lecture_statut === 'en_cours' && d.lecture_le && Date.now() - new Date(d.lecture_le).getTime() < 30 * 60_000;
   const marge = Number(d.marge);
-  const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 60 * 60_000;
+  // L'avancement est noté à chaque lot : sans nouvelle depuis 15 minutes, la recherche a été interrompue (serveur redémarré).
+  const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 15 * 60_000;
   const domaine = domaineDuSite(d.site);
 
   return (
@@ -194,21 +195,26 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
-            {(aCompleter > 0 || d.completion_statut) && (
+            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || d.completion_statut) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
                   <b>Cépages, appellations et photos</b>
-                  {aCompleter > 0 && <span className="petit">{aCompleter} vin{aCompleter > 1 ? 's' : ''} à valider sans cépages, sans appellation ou sans photo.</span>}
-                  {aCompleter > 0 && !rechercheEnCours && (
-                    <FormulaireAdmin action={completerVins.bind(null, id)}>
-                      <button className="btn sec petit">Les chercher sur {domaine ?? 'le web'}</button>
+                  {aCompleter.n > 0 && <span className="petit">{aCompleter.n} vin{aCompleter.n > 1 ? 's' : ''} de la base sans cépages, sans appellation ou sans photo
+                    {aCompleter.deja > 0 && <> (dont {aCompleter.deja} déjà cherché{aCompleter.deja > 1 ? 's' : ''} sans tout trouver)</>}.</span>}
+                  {aCompleter.n > 0 && !rechercheEnCours && (
+                    <FormulaireAdmin action={completerVins.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                      <button className="btn sec petit">
+                        {d.completion_statut === 'en_cours' ? 'Reprendre la recherche' : aCompleter.n > aCompleter.deja ? `Chercher les ${aCompleter.n - aCompleter.deja} sur ${domaine ?? 'le web'}` : `Chercher sur ${domaine ?? 'le web'}`}</button>
+                      {aCompleter.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" defaultChecked={aCompleter.n === aCompleter.deja} /> aussi les {aCompleter.deja} déjà cherchés</label>}
                     </FormulaireAdmin>
                   )}
                 </div>
+                {aCompleter.hors_base > 0 && <span className="petit discret">Et {aCompleter.hors_base} ligne{aCompleter.hors_base > 1 ? 's' : ''} du tarif pas encore dans la base (producteur à relier, plus haut) : elles seront cherchées une fois leur producteur relié. Plusieurs millésimes ou formats d’un même vin ne font qu’une fiche dans la base.</span>}
                 {!domaine && <span className="petit" style={{ color: 'var(--ocre)' }}>Renseignez le site du distributeur (Coordonnées) : la recherche s’y limitera.</span>}
                 {d.completion_statut && (
                   <span className="petit">{rechercheEnCours ? <Etat type="propose">Recherche en cours…</Etat> : d.completion_statut === 'terminee' ? <Etat type="ok">Terminée</Etat> : d.completion_statut === 'echec' ? <Etat type="attention">Échec</Etat> : <Etat type="attention">Interrompue</Etat>}
-                    {' '}{d.completion_message}{d.completion_le && <span className="discret"> · {date(d.completion_le)}</span>}</span>
+                    {' '}{d.completion_message}{d.completion_le && <span className="discret"> · {date(d.completion_le)}</span>}
+                    {d.completion_statut === 'en_cours' && !rechercheEnCours && <span> — interrompue (le site a sans doute redémarré) : « Reprendre la recherche » continue avec les vins encore incomplets.</span>}</span>
                 )}
               </div>
             )}

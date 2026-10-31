@@ -92,15 +92,19 @@ export async function getCuveesDistributeur(id: string) {
       order by c.nom`, [id]);
 }
 
-/** Vins à valider de ce distributeur (dans la base de Pat) auxquels il manque les cépages, l'appellation ou la photo. */
+/**
+ * Vins de ce distributeur dans la base de Pat (à valider ou validés) auxquels il manque les cépages, l'appellation ou la photo
+ * (dont ceux déjà cherchés sans tout trouver) ; et ceux qui ne sont pas encore dans la base (producteur à relier).
+ */
 export async function vinsACompleter(id: string) {
-  const [{ n }] = await requete<{ n: number }>(
-    `select count(distinct c.id)::int as n from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
-      where c.statut = 'propose' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
-            or (c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)))`, [id]);
-  return n;
+  const [r] = await requete<{ n: number; deja: number; hors_base: number }>(
+    `select count(*)::int as n, count(*) filter (where deja)::int as deja, (select count(*)::int from distributeur_vin v where v.distributeur_id = $1 and v.actif and v.cuvee_id is null) as hors_base
+       from (select c.id, bool_or(v.cherche_le is not null) as deja from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+              where c.statut <> 'retire' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
+                    or (c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)))
+              group by c.id) x`, [id]);
+  return r;
 }
-
 // ───────── Coordonnées de Quid Vinum (bons de commande des restaurants) ─────────
 export interface CoordonneesQv { nom: string; email: string | null; adresse: string | null; tva: string | null; telephone: string | null }
 const CLES_QV = ['qv_nom', 'qv_email', 'qv_adresse', 'qv_tva', 'qv_telephone'] as const;

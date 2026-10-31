@@ -250,10 +250,11 @@ export async function ajouterProducteursSansProposition(id: string): Promise<Ret
 }
 
 /** Cépages et appellations des vins à valider de ce distributeur, cherchés sur son site public (en arrière-plan). */
-export async function completerVins(id: string): Promise<Retour> {
+export async function completerVins(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
+  const aussiDejaCherches = f.get('aussi_deja') === 'on';
   await requete(`update distributeur set completion_statut = 'en_cours', completion_message = 'Recherche des cépages et appellations…', completion_le = now() where id = $1`, [id]);
-  void completerVinsDistributeur(requete, id);
+  void completerVinsDistributeur(requete, id, { aussiDejaCherches });
   rafraichir(id);
   return { ok: 'Recherche lancée : la page se met à jour pendant la recherche.' };
 }

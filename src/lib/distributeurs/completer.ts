@@ -50,7 +50,9 @@ async function chercherLot(client: Anthropic, modele: string, texte: string, dom
   ];
   const messages: Anthropic.MessageParam[] = [{ role: 'user', content: texte }];
   for (let tour = 0; tour < 4; tour++) {
-    const m = await client.messages.stream({ model: modele, max_tokens: 16000, messages, tools: outils } as unknown as Anthropic.MessageStreamParams).finalMessage();
+    // Quatre minutes au plus par appel : un appel qui ne répond plus ne bloque pas toute la recherche.
+    const m = await client.messages.stream({ model: modele, max_tokens: 16000, messages, tools: outils } as unknown as Anthropic.MessageStreamParams,
+      { timeout: 4 * 60_000 }).finalMessage();
     if ((m.stop_reason as string) !== 'pause_turn') return m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
     messages.push({ role: 'assistant', content: m.content as unknown as Anthropic.ContentBlockParam[] }); // reprise du tour en pause
   }
@@ -58,11 +60,12 @@ async function chercherLot(client: Anthropic, modele: string, texte: string, dom
 }
 
 /**
- * Cuvées à valider des vins de ce distributeur, sans cépages, sans appellation ou sans photo : cherchées sur le site du distributeur, par lots.
+ * Vins de la base (à valider ou validés) de ce distributeur, sans cépages, sans appellation ou sans photo : cherchés sur le site du distributeur,
+ * par lots. Relancée, la recherche reprend là où elle s'était arrêtée (seuls les vins encore incomplets sont cherchés).
  * Les cépages et l'appellation trouvés complètent la cuvée (jamais à la place de ce qui est déjà écrit) ; l'appellation est
  * reliée à celle de la base de même nom, sinon ajoutée à valider. L'avancement est gardé sur le distributeur.
  */
-export async function completerVinsDistributeur(requete: Requete, distributeurId: string) {
+export async function completerVinsDistributeur(requete: Requete, distributeurId: string, { aussiDejaCherches = false } = {}) {
   const etat = (statut: string, message: string) =>
     requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [distributeurId, statut, message]);
   try {
@@ -74,18 +77,27 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
       `select distinct on (c.id) c.id, p.nom as producteur, c.nom, v.millesime,
               c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null) as sans_photo
          from cuvee c join producteur p on p.id = c.producteur_id join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
-        where c.statut = 'propose' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
+        where c.statut <> 'retire' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
               or (c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)))
-        order by c.id, v.ordre`, [distributeurId]);
-    if (!vins.length) { await etat('terminee', 'Tous les vins à valider ont déjà leurs cépages, leur appellation et leur photo.'); return; }
-    const client = clientClaude({ maxRetries: 3 });
+          and ($2 or not exists (select 1 from distributeur_vin x where x.cuvee_id = c.id and x.distributeur_id = $1 and x.cherche_le is not null))
+        order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]);
+    if (!vins.length) { await etat('terminee', 'Aucun vin à chercher : les vins incomplets ont déjà été cherchés (cochez « aussi ceux déjà cherchés » pour recommencer).'); return; }
+    const client = clientClaude({ maxRetries: 1 });
     const modele = modeleTarif(d.modele_lecture);
     const terroirs = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
-    let cepages = 0, appellations = 0, photos = 0, faits = 0;
+    let cepages = 0, appellations = 0, photos = 0, faits = 0, erreurs = 0, derniereErreur = '';
     const lots: typeof vins[] = [];
     for (let i = 0; i < vins.length; i += LOT) lots.push(vins.slice(i, i + LOT));
     const traiter = async (lot: typeof vins) => {
-      const reponse = extraireVins(await chercherLot(client, modele, consigne(d.nom, domaine, lot), domaine).catch((e) => { console.error('[completer]', e); return ''; })) ?? [];
+      // Appel en erreur (Claude injoignable…) : le lot n'est pas marqué « cherché », une reprise le refera.
+      let texte: string;
+      try { texte = await chercherLot(client, modele, consigne(d.nom, domaine, lot), domaine); } catch (e) {
+        console.error('[completer]', e);
+        erreurs += lot.length; faits += lot.length;
+        derniereErreur = (e as Error).message;
+        return;
+      }
+      const reponse = extraireVins(texte) ?? [];
       for (const r of reponse as Array<{ id?: string; appellation?: string | null; cepages?: string | null; image?: string | null }>) {
         const v = lot.find((x) => x.id === r.id);
         if (!v) continue;
@@ -111,13 +123,17 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
           }
         }
       }
+      // Vins du lot marqués « cherchés » (trouvés ou non) : une reprise passe aux suivants.
+      await requete('update distributeur_vin set cherche_le = now() where distributeur_id = $1 and cuvee_id = any($2)', [distributeurId, lot.map((v) => v.id)]);
       faits += lot.length;
       await etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : ${faits} vins sur ${vins.length}…`);
     };
     await etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : 0 vin sur ${vins.length}…`);
     for (let i = 0; i < lots.length; i += EN_PARALLELE) await Promise.all(lots.slice(i, i + EN_PARALLELE).map(traiter));
     await partagerEtiquettesDistributeur(requete, distributeurId);
-    await etat('terminee', `${vins.length} vins cherchés sur ${domaine ?? 'le web'} : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`);
+    if (erreurs === vins.length) { await etat('echec', `La recherche n’a pas abouti (${derniereErreur}) : relancez-la plus tard.`.slice(0, 500)); return; }
+    await etat('terminee', `${vins.length - erreurs} vins cherchés sur ${domaine ?? 'le web'} : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`
+      + (erreurs ? ` ${erreurs} n’ont pas pu être cherchés (erreur de connexion) : relancez la recherche pour eux.` : ''));
   } catch (e) {
     console.error('[completer]', distributeurId, e);
     await etat('echec', `La recherche n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
