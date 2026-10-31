@@ -234,12 +234,13 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 )}
                 {cherchees.length > 0 && (
                   <details>
-                    <summary className="petit" style={{ cursor: 'pointer' }}>Vins dont la photo a été cherchée sur le web ({cherchees.length}{cherchees.length === 60 ? ' derniers' : ''}) : {cherchees.filter((c) => c.etiquette_url).length} trouvées</summary>
+                    <summary className="petit" style={{ cursor: 'pointer' }}>Vins dont la photo a été cherchée sur le web ({cherchees.length}{cherchees.length === 60 ? ' derniers' : ''}) : {cherchees.filter((c) => c.trouvee).length} étiquette{cherchees.filter((c) => c.trouvee).length > 1 ? 's' : ''} trouvée{cherchees.filter((c) => c.trouvee).length > 1 ? 's' : ''}, {cherchees.filter((c) => !c.trouvee).length} sans résultat</summary>
+                    <p className="petit discret" style={{ margin: '6px 0 0' }}>« Sans résultat » : rien de mieux sur le web, la photo affichée est restée celle du distributeur.</p>
                     <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px, 100%), 1fr))', gap: 8, marginTop: 8 }}>
-                      {cherchees.map((c) => (
+                      {[...cherchees].sort((a, b) => Number(b.trouvee) - Number(a.trouvee)).map((c) => (
                         <Link key={c.id} href={`/admin/super/vins/${encodeURIComponent(c.id)}`} className="vin-cell" style={{ textDecoration: 'none', color: 'inherit' }}>
                           <Vignette url={c.etiquette_url} taille={44} />
-                          <span className="petit"><b>{c.nom}</b><br /><span className="discret">{c.producteur} · {c.etiquette_url ? 'photo trouvée' : 'pas trouvée'} · {date(c.cherche_le)}</span></span>
+                          <span className="petit"><b>{c.nom}</b><br /><span className="discret">{c.producteur} · {c.trouvee ? <Etat type="ok">étiquette trouvée</Etat> : c.etiquette_url ? 'sans résultat (photo du distributeur)' : 'sans résultat'} · {date(c.cherche_le)}</span></span>
                         </Link>
                       ))}
                     </div>

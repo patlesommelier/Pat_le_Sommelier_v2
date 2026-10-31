@@ -130,8 +130,10 @@ export async function photosARecadrer(id: string) {
 
 /** Derniers vins dont la photo a été cherchée sur le web (les plus récents d'abord), avec la photo trouvée ou non. */
 export async function photosCherchees(id: string, limite = 60) {
-  return requete<{ id: string; nom: string; producteur: string; etiquette_url: string | null; cherche_le: string }>(
-    `select c.id, c.nom, p.nom as producteur, coalesce(c.etiquette_url, max(v.etiquette_url)) as etiquette_url, max(v.photo_cherche_le)::text as cherche_le
+  return requete<{ id: string; nom: string; producteur: string; etiquette_url: string | null; cherche_le: string; trouvee: boolean }>(
+    // trouvee : une étiquette a été trouvée sur le web (fichier « -web- ») ; sinon la photo affichée est restée celle du distributeur
+    `select c.id, c.nom, p.nom as producteur, coalesce(c.etiquette_url, max(v.etiquette_url)) as etiquette_url, max(v.photo_cherche_le)::text as cherche_le,
+            coalesce(bool_or(v.etiquette_url like '%-web-%'), false) as trouvee
        from distributeur_vin v join cuvee c on c.id = v.cuvee_id join producteur p on p.id = c.producteur_id
       where v.distributeur_id = $1 and v.photo_cherche_le is not null
       group by c.id, p.nom order by max(v.photo_cherche_le) desc, c.nom limit $2`, [id, limite]);
