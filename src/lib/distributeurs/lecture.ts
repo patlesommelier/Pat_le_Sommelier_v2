@@ -12,6 +12,7 @@ import { pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuT
 import { producteurConnu } from '../inscription/lecture';
 import { cleVin, dedoublonner, vinTarif, type VinTarif } from './tarif';
 import { rattacherCuvees } from './rattachement';
+import { etiquettesDuCollage } from './etiquettes';
 
 const PAGES_PAR_LECTURE = 4;
 const LECTURES_EN_PARALLELE = 3;
@@ -38,15 +39,19 @@ ${texte}
 Relève chaque vin de cet extrait. ${CHAMPS}`;
 
 const CHAMPS = `Pour chaque ligne de vin : « producteur » (domaine, château ou maison : le titre du domaine au-dessus des vins, ou le nom après le tiret
-dans une liste ; sans le village ni la mention entre parenthèses — « Domaine Clotilde Davenne à Préhy (RAI) » donne « Domaine Clotilde Davenne » ;
-null s'il n'est pas indiqué), « vin » (appellation et cuvée telles qu'écrites, sans millésime, sans contenance, sans le producteur),
-« millesime » (4 chiffres, ou null), « contenance » (en cl, ex. « 37,5 cl », « 150 cl » ; null pour 75 cl),
-« prix » (nombre, le prix de la ligne), « epuise » (true si la ligne dit épuisé), « max » (le nombre de « Max. N », ou null),
+dans une liste, ou le nom écrit dans l'intitulé — « PROSECCO CREDE 2023 BISOL » donne « Bisol », « FERRARI PERLE 2018 » donne « Ferrari » ;
+sans le village ni la mention entre parenthèses — « Domaine Clotilde Davenne à Préhy (RAI) » donne « Domaine Clotilde Davenne » ;
+null s'il n'est pas indiqué), « vin » (appellation et cuvée, sans millésime, sans contenance, sans le producteur, sans date de dégorgement
+comme « - 03/26 » ; un intitulé tout en majuscules est remis en minuscules avec les majuscules d'usage : « Prosecco Crede »),
+« millesime » (4 chiffres, ou null), « contenance » (en cl, ex. « 37,5 cl », « 150 cl » ; « 0,75 » ou « 75 cl » : null ; « 1,5 » ou « 1.5L » : « 150 cl » ; « 3L » : « 300 cl »),
+« prix » (nombre : le prix de la ligne ; quand une ligne donne deux prix, un prix barré puis un prix remisé, c'est le plus bas),
+« prix_catalogue » (le plus haut des deux prix quand il y en a deux, sinon null), « reference » (le code de l'article s'il est indiqué,
+ex. « SPFER200 », sinon null), « epuise » (true si la ligne dit épuisé), « max » (le nombre de « Max. N », ou null),
 « couleur » parmi bulles, blanc, rose, rouge, doux, orange (selon le nom ou l'appellation ; null si impossible à savoir),
 « certification » (BIO, BIODY, RAI… indiqué pour le domaine, ou null), « section » (le titre de région ou de liste au-dessus, ou null).
-Les lignes qui ne sont pas des vins (conditions de vente, légende, coordonnées) sont ignorées. N'invente rien.
-Réponds uniquement en JSON, sans texte autour : [{"producteur": "...", "vin": "...", "millesime": "2023", "contenance": null, "prix": 12.5,
-"epuise": false, "max": null, "couleur": "blanc", "certification": "BIO", "section": "Bourgogne"}] ([] s'il n'y a aucun vin).`;
+Les lignes qui ne sont pas des vins (conditions de vente, légende, coordonnées, boutons du site) et les articles à 0,00 € sont ignorés.
+N'invente rien. Réponds uniquement en JSON, sans texte autour : [{"producteur": "...", "vin": "...", "millesime": "2023", "contenance": null, "prix": 12.5,
+"prix_catalogue": null, "reference": null, "epuise": false, "max": null, "couleur": "blanc", "certification": "BIO", "section": "Bourgogne"}] ([] s'il n'y a aucun vin).`;
 
 function tableau(t: string): unknown[] | null {
   const debut = t.indexOf('['), fin = t.lastIndexOf(']');
@@ -122,6 +127,15 @@ export async function lireFichierTarif(octets: Uint8Array, type: string, nom: st
     if (pdfSansTexte(pages)) return { vins: await lireVinsDuPdfImage(Buffer.from(octets), modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (PDF scanné, lu comme une image)` };
     return { vins: await lireVinsDuTexte(pages.map((p, i) => `--- page ${i + 1} ---\n${p}`), modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (texte du PDF)` };
   }
+  // Texte collé depuis le site du distributeur : lu par morceaux de 120 lignes environ (une ligne vide ne coupe jamais un article en deux).
+  if (type === 'text/plain') {
+    const blocs = Buffer.from(octets).toString('utf8').split(/\n\s*\n/);
+    const morceaux: string[] = [];
+    for (const b of blocs) {
+      if (morceaux.length && morceaux[morceaux.length - 1].split('\n').length < 120) morceaux[morceaux.length - 1] += `\n\n${b}`; else morceaux.push(b);
+    }
+    return { vins: await lireVinsDuTexte(morceaux, modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (texte collé)` };
+  }
   if (/\.csv$/i.test(nom) || type === 'text/csv') return lireTableau(tableauCsv(Buffer.from(octets).toString('utf8').replace(/^\uFEFF/, '')), modele);
   return lireTableau(await tableauExcel(octets), modele);
 }
@@ -167,17 +181,20 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   const col = <K extends keyof (typeof uniques)[number]>(k: K) => uniques.map((l) => l[k]);
   await requete(
     `insert into distributeur_vin (id, distributeur_id, cle, section, producteur_texte, libelle, millesime, contenance, couleur, certification,
-                                   prix_qv, epuise, maximum, producteur_id, ordre, producteur_manuel)
-     select x.id, $1, x.cle, x.section, x.producteur, x.libelle, x.millesime, x.contenance, x.couleur, x.certification, x.prix, x.epuise, x.maximum, x.producteur_id, x.ordre, x.manuel
-       from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::text[], $7::text[], $8::text[], $9::text[], $10::text[], $11::numeric[], $12::bool[], $13::int[], $14::text[], $15::int[], $16::bool[])
-            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre, manuel)
+                                   prix_qv, epuise, maximum, producteur_id, ordre, producteur_manuel, reference, prix_catalogue)
+     select x.id, $1, x.cle, x.section, x.producteur, x.libelle, x.millesime, x.contenance, x.couleur, x.certification, x.prix, x.epuise, x.maximum, x.producteur_id, x.ordre, x.manuel,
+            x.reference, x.prix_catalogue
+       from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::text[], $7::text[], $8::text[], $9::text[], $10::text[], $11::numeric[], $12::bool[], $13::int[], $14::text[], $15::int[], $16::bool[],
+                   $17::text[], $18::numeric[])
+            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre, manuel, reference, prix_catalogue)
      on conflict (distributeur_id, cle) do update set section = excluded.section, producteur_texte = excluded.producteur_texte, libelle = excluded.libelle,
        millesime = excluded.millesime, contenance = excluded.contenance, couleur = coalesce(excluded.couleur, distributeur_vin.couleur),
-       certification = excluded.certification, prix_qv = excluded.prix_qv, epuise = excluded.epuise, maximum = excluded.maximum, ordre = excluded.ordre,
+       certification = excluded.certification, prix_qv = excluded.prix_qv, reference = excluded.reference, prix_catalogue = excluded.prix_catalogue, epuise = excluded.epuise, maximum = excluded.maximum, ordre = excluded.ordre,
        producteur_id = case when distributeur_vin.producteur_manuel then distributeur_vin.producteur_id else excluded.producteur_id end,
        actif = true, maj_le = now()`,
     [distributeurId, uniques.map(() => randomUUID()), col('cle'), col('section'), col('producteur'), col('libelle'), col('millesime'), col('contenance'),
-      col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre'), col('manuel')]);
+      col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre'), col('manuel'),
+      uniques.map((l) => l.reference ?? null), uniques.map((l) => l.prixCatalogue ?? null)]);
   const retires = await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,
     [distributeurId, col('cle')]);
@@ -194,7 +211,7 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
     const [d] = await requete<{ modele_lecture: ModeleTarif; api_url: string | null; api_entete: string | null; api_cle: string | null }>(
       'select modele_lecture, api_url, api_entete, api_cle from distributeur where id = $1', [distributeurId]);
     if (!d) return;
-    let lu: { vins: VinTarif[]; methode: string }, source: string;
+    let lu: { vins: VinTarif[]; methode: string }, source: string, html: string | null = null;
     if (depuis === 'api') {
       if (!d.api_url) { await etat('echec', 'Aucune adresse d’API enregistrée.'); return; }
       await etat('en_cours', 'Lecture du tarif depuis l’API du distributeur…');
@@ -202,16 +219,22 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
       source = 'l’API du distributeur';
       await requete('update distributeur set api_synchro_le = now() where id = $1', [distributeurId]);
     } else {
-      const [t] = await requete<{ octets: Buffer; nom: string; media_type: string }>(
-        'select octets, nom, media_type from distributeur_tarif where distributeur_id = $1 order by cree_le desc limit 1', [distributeurId]);
+      const [t] = await requete<{ octets: Buffer; nom: string; media_type: string; html: string | null }>(
+        'select octets, nom, media_type, html from distributeur_tarif where distributeur_id = $1 order by cree_le desc limit 1', [distributeurId]);
       if (!t) { await etat('echec', 'Aucun tarif déposé.'); return; }
       await etat('en_cours', `Lecture de « ${t.nom} »…`);
       lu = await lireFichierTarif(new Uint8Array(t.octets), t.media_type, t.nom, d.modele_lecture);
       source = `« ${t.nom} »`;
+      html = t.html;
     }
     if (!lu.vins.length) { await etat('echec', `Aucun vin trouvé dans ${source}.`); return; }
     const n = await enregistrerVinsDuTarif(requete, distributeurId, lu.vins);
-    await etat('terminee', `${n.lus} vins lus dans ${source} (${lu.methode}) : ${n.nouveaux} nouveaux, ${n.retires} retirés, ${n.rattaches} rattachés à un producteur de la base.`);
+    const fin = `${n.lus} vins lus dans ${source} (${lu.methode}) : ${n.nouveaux} nouveaux, ${n.retires} retirés, ${n.rattaches} rattachés à un producteur de la base.`;
+    if (html) {
+      await etat('en_cours', `${fin} Copie des étiquettes…`);
+      const e = await etiquettesDuCollage(requete, distributeurId, html);
+      await etat('terminee', `${fin} ${e.trouvees ? `${e.copiees} étiquette${e.copiees > 1 ? 's' : ''} copiée${e.copiees > 1 ? 's' : ''} sur ${e.trouvees} trouvée${e.trouvees > 1 ? 's' : ''}${e.copiees < e.trouvees ? ' (les autres ne sont pas accessibles sans être connecté au site)' : ''}.` : 'Aucune étiquette trouvée dans le collage.'}`);
+    } else await etat('terminee', fin);
   } catch (e) {
     console.error('[tarif]', distributeurId, e);
     await etat('echec', `La lecture n’a pas abouti : ${(e as Error).message}`.slice(0, 500));

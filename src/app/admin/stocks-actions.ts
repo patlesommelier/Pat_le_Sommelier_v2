@@ -192,7 +192,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
     const carte = vins.find((v) => v.distributeur_vin_id === c.id)
       ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
         vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
-    const detail = [c.producteur, c.contenance].filter(Boolean).join(' · ');
+    const detail = [c.producteur, c.contenance, c.reference ? `réf. ${c.reference}` : null].filter(Boolean).join(' · ');
     await requete(`insert into commande_ligne (commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, ordre, prix_achat) values ($1, $2, $3, $4, $5, $6, $7, $8)`,
       [id, carte?.id ?? null, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail || null, q, ordre++, c.prix]);
     if (carte) {

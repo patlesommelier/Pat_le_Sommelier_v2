@@ -4,6 +4,7 @@
 // Sans « server-only » : appelé aussi à la lecture du tarif, en arrière-plan.
 import type { Requete } from '../generation/accords';
 import { motsDe } from './tarif';
+import { partagerEtiquettesDistributeur } from './etiquettes';
 
 export interface ProducteurBase { id: string; nom: string; region: string | null; ranking_pat: number | null; statut: string }
 export interface Suggestion extends ProducteurBase { score: number }
@@ -72,6 +73,7 @@ export async function rattacherCuvees(requete: Requete, distributeurId: string) 
     await requete(`update distributeur_vin v set cuvee_id = x.cuvee from unnest($1::text[], $2::text[]) as x(id, cuvee) where v.id = x.id`,
       [changes.map((l) => l.id), changes.map((l) => l.cuvee)]);
   }
+  await partagerEtiquettesDistributeur(requete, distributeurId);
   return liens.filter((l) => l.cuvee).length;
 }
 
@@ -114,5 +116,6 @@ export async function ajouterCuveesManquantes(requete: Requete, distributeurId: 
       [id, v.producteur_id, v.libelle, v.couleur && COULEURS.includes(v.couleur) ? v.couleur : null]);
     await requete('update distributeur_vin set cuvee_id = $2 where id = $1', [v.id, id]);
   }
+  await partagerEtiquettesDistributeur(requete, distributeurId);
   return vins.length;
 }

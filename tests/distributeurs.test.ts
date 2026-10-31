@@ -9,13 +9,22 @@ test('tarifs : vin lu par Claude remis en forme', () => {
   assert.deepEqual(vinTarif({ producteur: 'Domaine Clotilde Davenne', vin: 'Chablis', millesime: '2023', contenance: '37,5cl', prix: '11.28',
     couleur: 'Blanc', certification: 'rai', epuise: false, max: 5, section: 'Bourgogne' }),
   { section: 'Bourgogne', producteur: 'Domaine Clotilde Davenne', libelle: 'Chablis', millesime: '2023', contenance: '37,5 cl', couleur: 'blanc',
-    certification: 'RAI', prix: 11.28, epuise: false, maximum: 5 });
+    certification: 'RAI', prix: 11.28, epuise: false, maximum: 5, reference: null, prixCatalogue: null });
   assert.equal(vinTarif({ vin: '' }), null);
   assert.equal(vinTarif({ vin: 'Champagne Rosé', millesime: 'NV', couleur: 'rosé' })!.millesime, null);
   assert.equal(vinTarif({ vin: 'Champagne Rosé', couleur: 'rosé' })!.couleur, 'rose');
   assert.equal(contenanceTarif('75 cl'), null);
   assert.equal(contenanceTarif('150'), '150 cl');
   assert.equal(contenanceTarif('300 CL'), '300 cl');
+  // Formats du site Licata : litres
+  assert.equal(contenanceTarif('0,75'), null);
+  assert.equal(contenanceTarif('1,5'), '150 cl');
+  assert.equal(contenanceTarif('3L'), '300 cl');
+  assert.equal(contenanceTarif('1.5L'), '150 cl');
+  assert.equal(contenanceTarif('0,375'), '37,5 cl');
+  const ferrari = vinTarif({ reference: 'SPFER 200', producteur: 'Ferrari', vin: 'Maximum Brut', prix: 26.01, prix_catalogue: 28.9 })!;
+  assert.deepEqual([ferrari.reference, ferrari.prix, ferrari.prixCatalogue], ['SPFER200', 26.01, 28.9]);
+  assert.equal(cleVin(ferrari), 'ref:SPFER200');
 });
 
 test('tarifs : un vin cité dans plusieurs listes du tarif ne compte qu’une fois', () => {

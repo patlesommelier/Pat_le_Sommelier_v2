@@ -6,6 +6,7 @@ import { useState } from 'react';
 export interface LigneCatalogue {
   id: string; section: string | null; producteur: string | null; libelle: string; millesime: string | null; contenance: string | null;
   prix: number | null; epuise: boolean; maximum: number | null; surCarte: { stock: number; enCommande: number; bas: boolean } | null;
+  etiquette: string | null;
 }
 
 const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
@@ -37,8 +38,12 @@ export function CatalogueCommande({ lignes, choisi }: { lignes: LigneCatalogue[]
                 s && montrer ? <tr key={`s-${s}`} className="catalogue-section"><td colSpan={4}>{s}</td></tr> : null,
                 ...deLaSection.map((l) => (
                   <tr key={l.id} hidden={!visible(l)} className={choisi === l.id ? 'choisi' : undefined}>
-                    <td><div className="nom">{l.libelle}{l.millesime ? ` ${l.millesime}` : ''}{l.contenance && <span className="discret"> · {l.contenance}</span>}</div>
-                      <div className="petit">{l.producteur ?? ''}{l.epuise && <b style={{ color: '#FF0D05' }}> · Épuisé</b>}{l.maximum != null && !l.epuise && <> · {l.maximum} au plus</>}</div></td>
+                    <td><div className="vin-cell">
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      {l.etiquette ? <img src={l.etiquette} alt="" loading="lazy" className="vignette-catalogue" /> : <span className="vignette-catalogue vide" aria-hidden="true" />}
+                      <div><div className="nom">{l.libelle}{l.millesime ? ` ${l.millesime}` : ''}{l.contenance && <span className="discret"> · {l.contenance}</span>}</div>
+                      <div className="petit">{l.producteur ?? ''}{l.epuise && <b style={{ color: '#FF0D05' }}> · Épuisé</b>}{l.maximum != null && !l.epuise && <> · {l.maximum} au plus</>}</div></div>
+                    </div></td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.surCarte ? <>{l.surCarte.bas && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} {l.surCarte.stock} en stock{l.surCarte.enCommande ? ` · ${l.surCarte.enCommande} en commande` : ''}</> : <span className="discret">—</span>}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.prix != null ? euros(l.prix) : '—'}</td>
                     <td className="droite"><input type="number" name={`cat_${l.id}`} min={0} max={l.maximum ?? 10000} disabled={l.epuise || l.prix == null} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${l.libelle}`} /></td>

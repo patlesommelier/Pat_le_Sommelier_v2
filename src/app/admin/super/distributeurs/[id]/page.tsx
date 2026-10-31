@@ -1,11 +1,12 @@
 // Super-admin — fiche d'un distributeur : coordonnées et marge, tarif (PDF lu par Claude), vins au prix QV et prix proposé aux restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
+import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { Entete, Etat, Message } from '@/components/admin/Ui';
+import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur } from '@/lib/distributeurs/donnees';
@@ -104,6 +105,10 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                     <button className="btn" disabled={Boolean(enCours)}>Déposer et lire le tarif</button>
                   </form>
                   {d.tarif_nom && !enCours && <FormulaireAdmin action={relireTarif.bind(null, id)}><button className="btn fantome petit" style={{ paddingLeft: 0 }}>Relire le dernier fichier</button></FormulaireAdmin>}
+                  <details>
+                    <summary className="petit" style={{ cursor: 'pointer' }}>Ou coller la liste copiée depuis le site du distributeur (avec les étiquettes)</summary>
+                    <div style={{ marginTop: 10 }}><CollageTarif action={collerTarif.bind(null, id)} desactive={Boolean(enCours)} /></div>
+                  </details>
                 </div>
               );
               const api = (
@@ -200,9 +205,12 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                       {vins.map((v) => (
                         <tr key={v.id} style={v.actif ? undefined : { opacity: 0.55 }}>
                           <td>
+                            <div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div>
                             <div className="nom"><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}{v.contenance ? <span className="discret"> · {v.contenance}</span> : null}</div>
                             <div className="petit">{v.producteur_texte ?? <span className="discret">producteur non indiqué</span>}{v.certification ? ` · ${v.certification}` : ''}{v.section ? <span className="discret"> · {v.section}</span> : null}
-                              {v.epuise && <> · <b style={{ color: 'var(--rouge, #FF0D05)' }}>Épuisé</b></>}{v.maximum != null && <> · Max. {v.maximum}</>}</div>
+                              {v.epuise && <> · <b style={{ color: 'var(--rouge, #FF0D05)' }}>Épuisé</b></>}{v.maximum != null && <> · Max. {v.maximum}</>}
+                              {v.reference && <span className="discret"> · réf. {v.reference}</span>}{v.prix_catalogue != null && <span className="discret"> · tarif {euros(Number(v.prix_catalogue))}</span>}</div>
+                            </div></div>
                           </td>
                           <td>{v.producteur_id ? <>
                             <div className="petit"><b>{v.producteur_nom}</b></div>

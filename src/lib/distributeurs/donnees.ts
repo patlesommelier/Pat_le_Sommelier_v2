@@ -24,6 +24,7 @@ export interface VinDistributeur {
   couleur: string | null; certification: string | null; prix_qv: number | null; prix_restaurant: number | null; epuise: boolean; maximum: number | null;
   producteur_id: string | null; producteur_nom: string | null; producteur_manuel: boolean; actif: boolean;
   cuvee_id: string | null; cuvee_nom: string | null; cuvee_statut: string | null;
+  reference: string | null; prix_catalogue: number | null; etiquette_url: string | null;
 }
 
 /** Un producteur tel qu'écrit sur le tarif, et son lien avec la base de Pat (ranking compris : réservé au super-admin). */
@@ -59,7 +60,7 @@ export async function getVinsDistributeur(id: string) {
   return requete<VinDistributeur>(
     `select v.id, v.section, v.producteur_texte, v.libelle, v.millesime, v.contenance, v.couleur, v.certification, v.prix_qv, v.prix_restaurant,
             v.epuise, v.maximum, v.producteur_id, p.nom as producteur_nom, v.producteur_manuel, v.actif,
-            v.cuvee_id, c.nom as cuvee_nom, c.statut::text as cuvee_statut
+            v.cuvee_id, c.nom as cuvee_nom, c.statut::text as cuvee_statut, v.reference, v.prix_catalogue, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
        from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
       where v.distributeur_id = $1 order by v.actif desc, v.ordre, v.libelle`, [id]);
 }
@@ -112,6 +113,7 @@ export interface DistributeurPropose { id: string; nom: string; site: string | n
 export interface VinCatalogueResto {
   id: string; section: string | null; producteur: string | null; producteur_id: string | null; libelle: string; millesime: string | null;
   contenance: string | null; couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
+  reference: string | null; etiquette_url: string | null;
 }
 
 /** Distributeurs proposés aux restaurants (actifs, avec des vins) ; `deja` : déjà parmi les fournisseurs de ce restaurant. */
@@ -127,7 +129,8 @@ export async function distributeursProposes(resto: string) {
 export async function catalogueDistributeur(distributeurId: string) {
   return requete<VinCatalogueResto>(
     `select v.id, v.section, coalesce(p.nom, v.producteur_texte) as producteur, v.producteur_id, v.libelle, v.millesime, v.contenance, v.couleur,
-            v.certification, ${SQL_PRIX_PROPOSE}::float8 as prix, v.epuise, v.maximum
+            v.certification, ${SQL_PRIX_PROPOSE}::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id left join producteur p on p.id = v.producteur_id
+       left join cuvee c on c.id = v.cuvee_id
       where v.distributeur_id = $1 and v.actif and d.actif order by v.ordre, v.libelle`, [distributeurId]);
 }

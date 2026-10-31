@@ -37,7 +37,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
       const surCarte = groupes.find((g) => g.principal.distributeur_vin_id === c.id)?.principal
         ?? groupes.find((g) => g.principal.id === vinDeLaCarte(c, carteSimple)?.id)?.principal;
       return { id: c.id, section: c.section, producteur: c.producteur, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, prix: c.prix,
-        epuise: c.epuise, maximum: c.maximum, surCarte: surCarte ? { stock: surCarte.stock, enCommande: surCarte.en_commande, bas: stockBas(surCarte.stock, limite) } : null };
+        epuise: c.epuise, maximum: c.maximum, etiquette: c.etiquette_url, surCarte: surCarte ? { stock: surCarte.stock, enCommande: surCarte.en_commande, bas: stockBas(surCarte.stock, limite) } : null };
     });
     return [f.id, lignes] as const;
   })));

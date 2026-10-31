@@ -286,3 +286,5 @@ tr.choisi td { background: var(--rose); }
 .recherche:focus, .catalogue-filtre input[type=search]:focus, .champ-liste:focus { border-color: var(--encre); outline: none; box-shadow: 0 0 0 3px var(--rose); }
 .logo-distributeur { height: 36px; max-width: 120px; object-fit: contain; border-radius: 6px; background: #fff; }
 .ligne-producteur { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: flex-start; border-top: 1px solid var(--ligne); padding: 12px 0; }
+.vignette-catalogue { width: 36px; height: 48px; object-fit: contain; border-radius: 6px; background: #fff; flex: none; }
+.vignette-catalogue.vide { display: inline-block; background: var(--fond); }

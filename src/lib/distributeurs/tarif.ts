@@ -6,6 +6,8 @@ import { centilitres } from '../contenances';
 export interface VinTarif {
   section: string | null; producteur: string | null; libelle: string; millesime: string | null; contenance: string | null;
   couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
+  /** Code article du distributeur (« SPFER200 ») et prix avant remise, quand le tarif les donne. */
+  reference?: string | null; prixCatalogue?: number | null;
 }
 
 const COULEURS = new Set(['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux']);
@@ -15,12 +17,15 @@ const nombre = (v: unknown) => {
   return Number.isFinite(n) && n > 0 && n < 100000 ? Math.round(n * 100) / 100 : null;
 };
 
-/** Contenance lisible (« 37,5 cl », « 150 cl ») ; null pour la bouteille de 75 cl. */
+/** Contenance lisible (« 37,5 cl », « 150 cl ») ; null pour la bouteille de 75 cl. Accepte « 0,75 », « 1,5 L », « 3L », « 150cl ». */
 export function contenanceTarif(v: unknown): string | null {
   const t = texte(v, 30);
   if (!t) return null;
-  const cl = centilitres(/\d\s*$/.test(t) ? `${t} cl` : t);
-  if (cl == null || cl === 75) return null;
+  const m = t.replace(/\s+/g, '').toLowerCase().match(/^(\d+(?:[.,]\d+)?)(l|cl)?$/);
+  if (!m) return null;
+  const n = Number(m[1].replace(',', '.'));
+  const cl = Math.round((m[2] === 'l' || (!m[2] && n <= 6) ? n * 100 : n) * 10) / 10; // un nombre seul jusqu'à 6 : des litres
+  if (!cl || cl === 75) return null;
   return `${String(cl).replace('.', ',')} cl`;
 }
 
@@ -39,6 +44,7 @@ export function vinTarif(brut: unknown): VinTarif | null {
     contenance: contenanceTarif(b.contenance), couleur: couleur && COULEURS.has(couleur) ? couleur : null,
     certification: texte(b.certification, 20)?.toUpperCase() ?? null, prix: nombre(b.prix),
     epuise: b.epuise === true || /epuis|épuis/i.test(String(b.dispo ?? '')), maximum: max && Number.isInteger(max) ? max : null,
+    reference: texte(b.reference, 40)?.replace(/\s+/g, '') ?? null, prixCatalogue: nombre(b.prix_catalogue ?? b.prixCatalogue),
   };
 }
 
@@ -49,9 +55,10 @@ export const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g,
 export const motsDe = (t: string | null | undefined) =>
   [...new Set(sansAccents(t ?? '').split(/[^a-z0-9]+/).filter((m) => m.length > 1 && !MOTS_VIDES.has(m) && !/^\d+(cl)?$/.test(m)))];
 
-/** Clé d'un vin du tarif : la même d'un tarif à l'autre (mots triés, sans accents ni ponctuation). */
-export const cleVin = (v: Pick<VinTarif, 'producteur' | 'libelle' | 'millesime' | 'contenance'>) =>
-  [motsDe(v.producteur).sort().join(' '), motsDe(v.libelle).sort().join(' '), v.millesime ?? '', v.contenance ?? ''].join('|');
+/** Clé d'un vin du tarif : la même d'un tarif à l'autre (sa référence d'article, sinon ses mots triés, sans accents ni ponctuation). */
+export const cleVin = (v: Pick<VinTarif, 'producteur' | 'libelle' | 'millesime' | 'contenance' | 'reference'>) => (v.reference
+  ? `ref:${v.reference.toUpperCase()}`
+  : [motsDe(v.producteur).sort().join(' '), motsDe(v.libelle).sort().join(' '), v.millesime ?? '', v.contenance ?? ''].join('|'));
 
 /**
  * Un vin peut figurer plusieurs fois dans un tarif (« Vins pour les menus », « Grands formats », puis la page du domaine) :
@@ -60,7 +67,7 @@ export const cleVin = (v: Pick<VinTarif, 'producteur' | 'libelle' | 'millesime' 
  */
 export function dedoublonner(vins: VinTarif[]): VinTarif[] {
   const garde = new Map<string, VinTarif>();
-  const memeVin = (v: VinTarif) => [motsDe(v.libelle).sort().join(' '), v.millesime ?? '', v.contenance ?? '', v.prix ?? ''].join('|');
+  const memeVin = (v: VinTarif) => v.reference ? `ref:${v.reference}` : [motsDe(v.libelle).sort().join(' '), v.millesime ?? '', v.contenance ?? '', v.prix ?? ''].join('|');
   for (const v of vins) {
     const k = memeVin(v);
     const deja = garde.get(k);
@@ -75,7 +82,7 @@ export function dedoublonner(vins: VinTarif[]): VinTarif[] {
       ...(plusComplet ? v : deja),
       section: (plusComplet ? v : deja).section ?? deja.section ?? v.section,
       couleur: deja.couleur ?? v.couleur, certification: deja.certification ?? v.certification,
-      epuise: deja.epuise || v.epuise, maximum: deja.maximum ?? v.maximum,
+      epuise: deja.epuise || v.epuise, maximum: deja.maximum ?? v.maximum, reference: deja.reference ?? v.reference, prixCatalogue: deja.prixCatalogue ?? v.prixCatalogue,
     });
   }
   return [...garde.values()];

@@ -156,3 +156,31 @@ export function vinsDuTableau(t: Tableau): VinTarif[] | null {
 
 /** Tableau remis en texte (une ligne par rang, cellules séparées par des tabulations), pour le faire lire par Claude. */
 export const texteDuTableau = (t: Tableau) => t.map((l) => l.join('\t')).join('\n');
+
+// ───────── Page web collée (site du distributeur) ─────────
+/** Une référence d'article : lettres puis chiffres, en majuscules (« SPFER200 », « PIBRA11 »). */
+export const REFERENCE = /^[A-Z]{2,8}\d{1,8}[A-Z]?$/;
+
+/**
+ * Images d'une page web collée (version « page web » du presse-papiers), reliées à la référence d'article qui les suit :
+ * sur les sites de commande, l'image d'un article vient juste avant sa référence. Adresses rendues complètes avec `base`.
+ */
+export function imagesParReference(html: string, base: string | null): Map<string, string> {
+  const images = new Map<string, string>();
+  let enAttente: string | null = null;
+  const decoder = (t: string) => t.replace(/&amp;/g, '&').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&nbsp;/g, ' ');
+  for (const m of html.matchAll(/<img\b[^>]*?\bsrc\s*=\s*(?:"([^"]+)"|'([^']+)')[^>]*>|>([^<]+)</gi)) {
+    const src = m[1] ?? m[2];
+    if (src) {
+      if (/^data:/i.test(src) || /(logo|icon|sprite|pixel|placeholder|spacer)/i.test(src)) continue;
+      try { enAttente = new URL(decoder(src), base ?? undefined).href; } catch { /* adresse illisible */ }
+      continue;
+    }
+    const t = decoder(m[3] ?? '').trim();
+    if (enAttente && REFERENCE.test(t) && !images.has(t)) { images.set(t, enAttente); enAttente = null; }
+  }
+  return images;
+}
+
+/** Adresse de la page d'où vient un collage (le navigateur l'indique parfois dans la version « page web »). */
+export const adresseDuCollage = (html: string) => html.match(/<!--\s*SourceURL:\s*(\S+)/i)?.[1] ?? html.match(/<base\s+href="([^"]+)"/i)?.[1] ?? null;

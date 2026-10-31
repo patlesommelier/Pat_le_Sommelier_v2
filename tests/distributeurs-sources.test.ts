@@ -45,3 +45,15 @@ test('sources : réponse JSON d’une API', () => {
   assert.deepEqual([vins[0].libelle, vins[0].millesime, vins[0].prix, vins[0].producteur], ['Vouvray sec', '2024', 14.39, 'Vincent Carême']);
   assert.equal(tableauJson({ ok: true }), null);
 });
+
+test('sources : images d’une page web collée, reliées à leur référence d’article', async () => {
+  const { imagesParReference, adresseDuCollage } = await import('../src/lib/distributeurs/sources');
+  const html = `<!-- SourceURL: https://shop.app4sales.net/licata/ -->
+    <div class="article"><img src="/img/logo.png"><img src="images/SPFER200.jpg?x=1&amp;y=2"><span>SPFER200</span><span>€ 28.90</span></div>
+    <div class="article"><img src='https://cdn.exemple.be/b.png'><b>PIBRA11</b></div>
+    <div class="article"><span>SPGAT10418</span></div>`;
+  const imgs = imagesParReference(html, adresseDuCollage(html));
+  assert.equal(imgs.get('SPFER200'), 'https://shop.app4sales.net/licata/images/SPFER200.jpg?x=1&y=2');
+  assert.equal(imgs.get('PIBRA11'), 'https://cdn.exemple.be/b.png');
+  assert.equal(imgs.has('SPGAT10418'), false); // pas d'image juste avant
+});

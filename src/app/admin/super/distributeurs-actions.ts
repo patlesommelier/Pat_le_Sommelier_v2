@@ -108,6 +108,23 @@ export async function deposerTarif(id: string, f: FormData) {
   retour({ ok: 'Tarif enregistré : il est en cours de lecture.' });
 }
 
+/** Tarif collé depuis le site du distributeur : le texte (lu par Claude) et la version « page web » (pour les étiquettes). */
+export async function collerTarif(id: string, f: FormData) {
+  await exigerAdmin();
+  const texte = String(f.get('texte') ?? '').trim();
+  const html = String(f.get('html') ?? '').trim();
+  const retour = (m: Record<string, string>) => redirect(`${page(id)}?${new URLSearchParams(m)}`);
+  if (texte.length < 40) retour({ erreur: 'Collez d’abord la liste des vins copiée depuis le site du distributeur.' });
+  if (texte.length > 2_000_000 || html.length > 15_000_000) retour({ erreur: 'Collage trop long : collez la liste en plusieurs fois.' });
+  const date = new Date().toLocaleString('fr-BE', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Brussels' });
+  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets, html) values ($1, $2, $3, $4, $5, $6)',
+    [randomUUID(), id, `Collage du ${date}`, 'text/plain', Buffer.from(texte, 'utf8'), html || null]);
+  await requete(`update distributeur set source = 'fichier' where id = $1`, [id]);
+  await lancerLecture(id);
+  rafraichir(id);
+  retour({ ok: 'Texte enregistré : il est en cours de lecture.' });
+}
+
 export async function relireTarif(id: string): Promise<Retour> {
   await exigerAdmin();
   await lancerLecture(id, 'fichier');
