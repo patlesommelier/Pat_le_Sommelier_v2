@@ -15,7 +15,7 @@ import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file'
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
-import { creerCompte, definirMotDePasse, fermerSession, inviter, MDP_MINIMUM, motDePasseOublie as envoyerLienOubli, ouvrirSession, verifierIdentifiants } from '@/lib/comptes/comptes';
+import { creerCompte, definirMotDePasse, fermerSession, inviter, trouverCompte, MDP_MINIMUM, motDePasseOublie as envoyerLienOubli, ouvrirSession, verifierIdentifiants } from '@/lib/comptes/comptes';
 import { parametresEnService } from '@/lib/regles/versions';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { chercherEtiquettesManquantes } from '@/lib/etiquettes/lancer';
@@ -898,9 +898,14 @@ export async function creerAcces(resto: string, f: FormData) {
   const { id, existait } = await creerCompte(email, mdp || null);
   await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [id, email, resto]);
   revalidatePath(`/admin/${resto}`, 'layout');
-  // Compte existant (autre restaurant) : simplement relié à celui-ci, sans toucher à son mot de passe.
-  if (existait) retour({ ok: `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.` });
-  if (mdp) retour({ ok: `Accès créé pour ${email} : communiquez-lui son mot de passe.` });
+  // Compte existant avec un mot de passe (autre restaurant) : simplement relié à celui-ci, sans toucher à son mot de passe.
+  // Compte existant sans mot de passe (invitation jamais partie, ou jamais ouverte) : traité comme un nouveau compte.
+  const sansMotDePasse = existait && !(await trouverCompte(email))?.aMotDePasse;
+  if (existait && !sansMotDePasse) retour({ ok: `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.` });
+  if (mdp) {
+    if (sansMotDePasse) await definirMotDePasse(id, mdp);
+    retour({ ok: `Accès créé pour ${email} : communiquez-lui son mot de passe.` });
+  }
   const r = await inviter(id, email);
   retour(r.envoye ? { ok: `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.` }
     : { ok: `Accès créé pour ${email}. ${r.erreur ? r.erreur.replace(/\.$/, '') : 'L’envoi d’e-mails n’est pas encore activé'} ; transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });

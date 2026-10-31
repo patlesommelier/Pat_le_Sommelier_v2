@@ -6,7 +6,7 @@ import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
 import { COOKIE_VUE, exigerAdmin, exigerSuperAdminReel } from '@/lib/admin/auth';
-import { creerCompte, inviter } from '@/lib/comptes/comptes';
+import { creerCompte, inviter, trouverCompte } from '@/lib/comptes/comptes';
 import { requete } from '@/lib/db';
 import { grouperMemeVin } from '@/lib/contenances';
 import { preparerAccords } from '@/lib/inscription/adaptateurs';
@@ -93,7 +93,8 @@ export async function creerRestaurant(f: FormData) {
   let lien: string | null = null;
   const { id: userId, existait } = await creerCompte(email);
   await requete(`insert into acces_restaurant (user_id, email, restaurant_id) values ($1, $2, $3) on conflict do nothing`, [userId, email, id]);
-  if (existait) message += ` ${email} avait déjà un compte : il est relié à ce restaurant.`;
+  // Un compte existant qui n'a pas encore de mot de passe (invitation jamais reçue) est invité à nouveau.
+  if (existait && (await trouverCompte(email))?.aMotDePasse) message += ` ${email} avait déjà un compte : il est relié à ce restaurant.`;
   else {
     const r = await inviter(userId, email);
     if (r.envoye) message += ` Invitation envoyée à ${email}.`;
