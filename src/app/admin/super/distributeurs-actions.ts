@@ -8,6 +8,7 @@ import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
+import { completerVinsDistributeur } from '@/lib/distributeurs/completer';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
@@ -246,6 +247,15 @@ export async function ajouterProducteursSansProposition(id: string): Promise<Ret
   rafraichir(id);
   revalidatePath('/admin/super/producteurs');
   return { ok: aAjouter.length ? `${aAjouter.length} producteur${aAjouter.length > 1 ? 's' : ''} ajouté${aAjouter.length > 1 ? 's' : ''} à la base, à valider dans Producteurs.` : 'Aucun producteur à ajouter.' };
+}
+
+/** Cépages et appellations des vins à valider de ce distributeur, cherchés sur son site public (en arrière-plan). */
+export async function completerVins(id: string): Promise<Retour> {
+  await exigerAdmin();
+  await requete(`update distributeur set completion_statut = 'en_cours', completion_message = 'Recherche des cépages et appellations…', completion_le = now() where id = $1`, [id]);
+  void completerVinsDistributeur(requete, id);
+  rafraichir(id);
+  return { ok: 'Recherche lancée : la page se met à jour pendant la recherche.' };
 }
 
 /** Vins des producteurs reliés, absents de la base : ajoutés comme vins à valider (Vins de la base). */

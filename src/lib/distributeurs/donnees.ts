@@ -12,12 +12,13 @@ export interface Distributeur {
   logo_url: string | null; source: 'fichier' | 'api'; modele_lecture: 'sonnet' | 'haiku' | 'opus';
   /** API du distributeur : adresse et nom de l'en-tête ; la clé elle-même ne sort jamais de la base (seulement « enregistrée »). */
   api_url: string | null; api_entete: string | null; api_cle_enregistree: boolean; api_synchro_le: string | null;
+  completion_statut: 'en_cours' | 'terminee' | 'echec' | null; completion_message: string | null; completion_le: string | null;
 }
 
 // Colonnes lues (jamais api_cle).
 const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.marge::float8 as marge, d.remise_qv::float8 as remise_qv, d.notes, d.actif,
   d.lecture_statut, d.lecture_message, d.lecture_le::text, d.logo_url, d.source, d.modele_lecture, d.api_url, d.api_entete,
-  d.api_cle is not null as api_cle_enregistree, d.api_synchro_le::text`;
+  d.api_cle is not null as api_cle_enregistree, d.api_synchro_le::text, d.completion_statut, d.completion_message, d.completion_le::text`;
 export interface DistributeurListe extends Distributeur { vins: number; tarif_nom: string | null; tarif_le: string | null; restaurants: number }
 export interface VinDistributeur {
   id: string; section: string | null; producteur_texte: string | null; libelle: string; millesime: string | null; contenance: string | null;
@@ -89,6 +90,14 @@ export async function getCuveesDistributeur(id: string) {
     `select c.id, c.producteur_id, c.nom, c.statut::text from cuvee c
       where c.statut <> 'retire' and c.producteur_id in (select producteur_id from distributeur_vin where distributeur_id = $1 and producteur_id is not null)
       order by c.nom`, [id]);
+}
+
+/** Vins à valider de ce distributeur (dans la base de Pat) auxquels il manque les cépages ou l'appellation. */
+export async function vinsACompleter(id: string) {
+  const [{ n }] = await requete<{ n: number }>(
+    `select count(distinct c.id)::int as n from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+      where c.statut = 'propose' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = ''))`, [id]);
+  return n;
 }
 
 // ───────── Coordonnées de Quid Vinum (bons de commande des restaurants) ─────────

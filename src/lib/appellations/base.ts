@@ -2,6 +2,7 @@ import 'server-only';
 // Appellations (terroirs) de la base de Pat : liste du super-admin, appellations saisies à valider, regroupement des doublons.
 import { requete } from '../db';
 import { appellationProche, cleAppellation, doublons } from './regroupement';
+import { creerAppellationProposeeAvec } from './creation';
 
 export interface Appellation {
   id: string; nom: string; type: string | null; niveau: string; region: string | null; pays: string | null; ranking_pat: number | null;
@@ -58,21 +59,9 @@ export async function saisiesNonReliees() {
   return saisies.map((s) => ({ ...s, proche: appellationProche(s.texte, base) }));
 }
 
-const slug = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
-
 /** Nouvelle appellation, à valider (saisie dans la fiche d'un vin, ou ajoutée depuis la liste) ; renvoie son identifiant (l'existante si même nom). */
-export async function creerAppellationProposee(nom: string, region: string | null = null, source = 'saisie') {
-  const propre = nom.replace(/\s+/g, ' ').trim();
-  const existantes = await requete<{ id: string; nom: string; statut: string }>(`select id, nom, statut::text from terroir where statut <> 'retire'`);
-  const meme = existantes.find((t) => cleAppellation(t.nom) === cleAppellation(propre));
-  if (meme) return meme.id;
-  const id = `propose-terr-${slug(propre)}`;
-  await requete(
-    `insert into terroir (id, nom, type, niveau, region, statut, source) values ($1, $2, 'appellation', 'appellation', $3, 'propose', $4)
-     on conflict (id) do update set statut = case when terroir.statut = 'retire' then 'propose'::statut_validation else terroir.statut end`,
-    [id, propre, region, source]);
-  return id;
-}
+export const creerAppellationProposee = (nom: string, region: string | null = null, source = 'saisie') =>
+  creerAppellationProposeeAvec(requete, nom, source, region);
 
 /** Vins (base et cartes) dont l'appellation écrite est ce texte, et qui n'en ont pas encore : reliés à cette appellation. */
 export async function relierSaisie(texte: string, terroirId: string) {

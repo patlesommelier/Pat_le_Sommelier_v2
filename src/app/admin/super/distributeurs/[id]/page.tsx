@@ -1,7 +1,7 @@
 // Super-admin — fiche d'un distributeur : coordonnées et marge, tarif (PDF lu par Claude), vins au prix QV et prix proposé aux restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, completerVins, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -9,7 +9,8 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, vinsACompleter } from '@/lib/distributeurs/donnees';
+import { domaineDuSite } from '@/lib/distributeurs/completer';
 import { prixPropose, sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
 
@@ -26,8 +27,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs, duTarif, cuvees] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id)]);
+  const [tous, producteurs, duTarif, cuvees, aCompleter] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id)]);
   const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
   const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
   const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
@@ -40,6 +41,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   // Lecture interrompue (serveur redémarré) : au-delà de 30 minutes, on propose de la relancer.
   const enCours = d.lecture_statut === 'en_cours' && d.lecture_le && Date.now() - new Date(d.lecture_le).getTime() < 30 * 60_000;
   const marge = Number(d.marge);
+  const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 60 * 60_000;
+  const domaine = domaineDuSite(d.site);
 
   return (
     <>
@@ -47,7 +50,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
         <Link href="/admin/super/distributeurs" className="btn sec">← Distributeurs</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
-      {enCours && <ActualisationAuto secondes={8} />}
+      {(enCours || rechercheEnCours) && <ActualisationAuto secondes={8} />}
 
       <div className="rangee">
         <div className="large" style={{ gap: 16 }}>
@@ -190,6 +193,24 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
+            {(aCompleter > 0 || d.completion_statut) && (
+              <div className="carte-bo pile" style={{ gap: 8 }}>
+                <div className="ligne-actions" style={{ alignItems: 'center' }}>
+                  <b>Cépages et appellations</b>
+                  {aCompleter > 0 && <span className="petit">{aCompleter} vin{aCompleter > 1 ? 's' : ''} à valider sans cépages ou sans appellation.</span>}
+                  {aCompleter > 0 && !rechercheEnCours && (
+                    <FormulaireAdmin action={completerVins.bind(null, id)}>
+                      <button className="btn sec petit">Les chercher sur {domaine ?? 'le web'}</button>
+                    </FormulaireAdmin>
+                  )}
+                </div>
+                {!domaine && <span className="petit" style={{ color: 'var(--ocre)' }}>Renseignez le site du distributeur (Coordonnées) : la recherche s’y limitera.</span>}
+                {d.completion_statut && (
+                  <span className="petit">{rechercheEnCours ? <Etat type="propose">Recherche en cours…</Etat> : d.completion_statut === 'terminee' ? <Etat type="ok">Terminée</Etat> : d.completion_statut === 'echec' ? <Etat type="attention">Échec</Etat> : <Etat type="attention">Interrompue</Etat>}
+                    {' '}{d.completion_message}{d.completion_le && <span className="discret"> · {date(d.completion_le)}</span>}</span>
+                )}
+              </div>
+            )}
             {vinsHorsBase > 0 && (
               <FormulaireAdmin action={ajouterVinsBase.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                 <span className="petit">{vinsHorsBase} vin{vinsHorsBase > 1 ? 's' : ''} de producteurs reliés ne {vinsHorsBase > 1 ? 'sont' : 'est'} pas encore dans la base de Pat.</span>
