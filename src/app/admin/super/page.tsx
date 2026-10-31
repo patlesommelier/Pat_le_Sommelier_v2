@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, voirCommeRestaurant } from './actions';
+import { changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { etapesRestaurant } from '../[resto]/etapes';
@@ -8,6 +8,7 @@ import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { indicateurs, restaurantsSuper } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { etatClaude, modeleAccords, modeleLecture } from '@/lib/claude';
+import { etatEmail } from '@/lib/email';
 
 const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
@@ -39,6 +40,19 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
             {c.passerelleNetlify && ' La passerelle IA de Netlify est active sur le site, mais l’app ne l’utilise plus.'}
             {` Modèles : ${modeleAccords()} pour les accords, commentaires, présentations et la discussion ; ${modeleLecture()} pour lire les cartes et menus.`}
           </p>
+        );
+      })()}
+      {(() => {
+        // Envoi d'e-mails (invitations, mot de passe oublié, bons de commande) : réglage et test.
+        const e = etatEmail();
+        const pret = e.cle && e.expediteur;
+        return (
+          <form action={testerEmail} className="ligne-actions" style={{ alignItems: 'center' }}>
+            <span className="petit" style={{ color: pret ? 'var(--vert)' : 'var(--ocre)' }}>
+              E-mails : {pret ? `envoyés par Resend, depuis ${e.expediteur}.` : `non configurés (${!e.cle ? 'RESEND_API_KEY manque' : 'EMAIL_EXPEDITEUR manque'}).`}
+            </span>
+            <button className="btn fantome petit">Tester l’envoi d’e-mails</button>
+          </form>
         );
       })()}
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>

@@ -35,6 +35,19 @@ async function origine() {
   return `${h.get('x-forwarded-proto') ?? 'https'}://${h.get('x-forwarded-host') ?? h.get('host')}`;
 }
 
+// ───────── Envoi d'e-mails (Resend) ─────────
+/** E-mail de test envoyé à l'adresse du super-admin connecté : la réponse exacte de Resend s'affiche en cas d'échec. */
+export async function testerEmail() {
+  const u = await exigerAdmin();
+  const { envoyerEmail, etatEmail } = await import('@/lib/email');
+  const e = etatEmail();
+  if (!e.cle || !e.expediteur) {
+    redirect(avec('/admin/super', { erreur: `Envoi d’e-mails non configuré : ${!e.cle ? 'RESEND_API_KEY manque' : ''}${!e.cle && !e.expediteur ? ' et ' : ''}${!e.expediteur ? 'EMAIL_EXPEDITEUR manque' : ''} dans les variables de Coolify (puis Redeploy).` }));
+  }
+  const erreur = await envoyerEmail({ a: u.email, sujet: 'Pat le sommelier : e-mail de test', texte: 'Bonjour,\n\nL’envoi d’e-mails de Pat le sommelier fonctionne.\n\nPat le sommelier' });
+  redirect(avec('/admin/super', erreur ? { erreur } : { ok: `E-mail de test envoyé à ${u.email} depuis ${e.expediteur} : vérifiez votre boîte (et les indésirables).` }));
+}
+
 // ───────── « Aperçu côté restaurant » ─────────
 export async function voirCommeRestaurant(restaurantId: string) {
   await exigerAdmin();

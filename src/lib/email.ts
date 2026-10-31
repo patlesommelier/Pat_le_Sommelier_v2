@@ -6,6 +6,21 @@ import 'server-only';
 const expediteur = () => process.env.EMAIL_EXPEDITEUR || process.env.COMMANDES_EXPEDITEUR;
 export const envoiEmailConfigure = () => Boolean(process.env.RESEND_API_KEY && expediteur());
 
+/** Pour le super-admin : la clé est-elle présente (jamais sa valeur), et quelle adresse d'envoi est réglée. */
+export const etatEmail = () => ({ cle: Boolean(process.env.RESEND_API_KEY?.trim()), expediteur: expediteur()?.trim() || null });
+
+/** Réponse d'erreur de Resend, en clair : la cause la plus fréquente d'abord, puis le message exact de Resend. */
+function causeResend(statut: number, corps: string) {
+  let message = corps.slice(0, 300);
+  try { message = (JSON.parse(corps) as { message?: string }).message ?? message; } catch { /* corps non JSON */ }
+  const cause = statut === 401 || /api key/i.test(message) ? 'la clé RESEND_API_KEY est refusée (mal copiée, ou supprimée chez Resend)'
+    : /not verified|verify/i.test(message) ? 'le domaine de l’adresse d’envoi n’est pas encore « Verified » chez Resend'
+    : /from/i.test(message) && statut === 422 ? 'l’adresse d’envoi EMAIL_EXPEDITEUR est mal écrite (forme attendue : Pat le sommelier <bonjour@quidvinum.com>)'
+    : statut === 403 ? 'Resend refuse cet envoi (domaine non vérifié, ou compte en mode test qui n’envoie qu’à sa propre adresse)'
+    : statut === 429 ? 'trop d’e-mails envoyés d’un coup, réessayez dans une minute' : null;
+  return `${cause ? `${cause}. ` : ''}Resend a répondu ${statut} : « ${message} »`;
+}
+
 export interface Email {
   a: string; copie?: string | null; repondreA?: string | null; sujet: string; texte: string;
   pieceJointe?: { nom: string; octets: Uint8Array };
@@ -26,10 +41,11 @@ export async function envoyerEmail(e: Email): Promise<string | null> {
       signal: AbortSignal.timeout(20000),
     });
     if (r.ok) return null;
-    console.error('[email] refusé', r.status, (await r.text()).slice(0, 300));
-    return 'L’e-mail n’a pas pu partir (refusé par le service d’envoi).';
+    const corps = await r.text();
+    console.error('[email] refusé', r.status, corps.slice(0, 300));
+    return `L’e-mail n’a pas pu partir : ${causeResend(r.status, corps)}.`;
   } catch (err) {
     console.error('[email] échec', (err as Error).message);
-    return 'L’e-mail n’a pas pu partir (service d’envoi injoignable).';
+    return `L’e-mail n’a pas pu partir : Resend est injoignable (${(err as Error).message}).`;
   }
 }
