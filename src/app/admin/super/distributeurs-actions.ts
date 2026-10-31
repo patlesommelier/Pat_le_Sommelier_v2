@@ -1,6 +1,7 @@
 'use server';
 // Super-admin — distributeurs de Quid Vinum : coordonnées, marge, tarif (PDF lu par Claude), vins et prix.
 import { randomUUID } from 'node:crypto';
+import sharp from 'sharp';
 import { revalidatePath } from 'next/cache';
 import { redirect } from 'next/navigation';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -37,6 +38,20 @@ export async function creerDistributeur(f: FormData) {
   redirect(page(id));
 }
 
+/**
+ * Logo dans un format et un poids acceptés par le stockage des images (PNG, JPG, WebP ou SVG, 5 Mo au plus) :
+ * un autre format (GIF, AVIF, TIFF…) ou une image trop lourde est converti en PNG, réduit à 800 pixels au plus.
+ */
+async function logoAccepte(f: File): Promise<File> {
+  if (['image/png', 'image/jpeg', 'image/webp', 'image/svg+xml'].includes(f.type) && f.size <= 4 * 1024 * 1024) return f;
+  try {
+    const png = await sharp(Buffer.from(await f.arrayBuffer())).rotate().resize(800, 800, { fit: 'inside', withoutEnlargement: true }).png().toBuffer();
+    return new File([new Uint8Array(png)], 'logo.png', { type: 'image/png' });
+  } catch {
+    throw new Error('image illisible ; envoyez-la en PNG ou en JPG.');
+  }
+}
+
 export async function enregistrerDistributeur(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
   const nom = txt(f, 'nom')?.slice(0, 120);
@@ -52,7 +67,7 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   const fichierLogo = f.get('logo');
   let logo: string | null | undefined;
   if (fichierLogo instanceof File && fichierLogo.size) {
-    try { logo = await deposerImage(fichierLogo, 'distributeurs'); } catch (e) { return { erreur: `Logo : ${(e as Error).message}` }; }
+    try { logo = await deposerImage(await logoAccepte(fichierLogo), 'distributeurs'); } catch (e) { return { erreur: `Logo non enregistré : ${(e as Error).message}` }; }
   } else if (f.get('retirer_logo') === 'on') logo = null;
   try {
     await requete(`update distributeur set nom = $2, adresse = $3, tva = $4, contact = $5, telephone = $6, email = $7, site = $8, marge = $9, remise_qv = $10,

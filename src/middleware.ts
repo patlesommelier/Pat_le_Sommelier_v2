@@ -30,5 +30,11 @@ export async function middleware(req: NextRequest) {
   return NextResponse.next();
 }
 
-// Toutes les pages (maintenance et redirection), sauf les fichiers du site (scripts, images, polices).
-export const config = { matcher: ['/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|webp|ico|woff2?)$).*)'] };
+// Toutes les pages (maintenance et redirection), sauf les fichiers du site (scripts, images, polices), et sauf les envois de
+// formulaires (actions du serveur, en-tête Next-Action) : un envoi qui passe par ici est limité en taille (tarifs de plus de 10 Mo).
+export const config = {
+  matcher: [{
+    source: '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:png|jpg|jpeg|svg|webp|ico|woff2?)$).*)',
+    missing: [{ type: 'header', key: 'next-action' }],
+  }],
+};

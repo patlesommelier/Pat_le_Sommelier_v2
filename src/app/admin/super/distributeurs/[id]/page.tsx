@@ -64,8 +64,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               <div className="champ" style={{ flex: 1 }}><label htmlFor="remise_qv">Remise QV (%)</label><input id="remise_qv" name="remise_qv" inputMode="decimal" defaultValue={d.remise_qv != null ? String(d.remise_qv).replace('.', ',') : ''} /><span className="aide">pour mémoire</span></div>
             </div>
             <label className="petit" style={{ display: 'flex', gap: 8, alignItems: 'center' }}><input type="checkbox" name="actif" defaultChecked={d.actif} /> Proposé aux restaurants</label>
-            <div className="champ"><label htmlFor="logo">Logo</label><input id="logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
-              {d.logo_url ? <label className="aide" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="retirer_logo" /> Retirer le logo actuel</label> : <span className="aide">PNG, JPG, WebP ou SVG</span>}</div>
+            <div className="champ"><label htmlFor="logo">Logo</label><input id="logo" name="logo" type="file" accept="image/*" />
+              {d.logo_url ? <label className="aide" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="retirer_logo" /> Retirer le logo actuel</label> : <span className="aide">PNG, JPG, WebP ou SVG de préférence (une autre image est convertie)</span>}</div>
             <div className="champ"><label htmlFor="source">Source du tarif</label>
               <select id="source" name="source" defaultValue={d.source}><option value="fichier">Fichier déposé (PDF, Word, Excel ou CSV)</option><option value="api">API du distributeur</option></select></div>
             <div className="champ"><label htmlFor="modele_lecture">Lecture par Claude</label>
