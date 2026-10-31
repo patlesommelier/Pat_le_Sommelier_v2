@@ -9,7 +9,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, vinsACompleter, vinsSansPhoto } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, photosCherchees, vinsACompleter, vinsSansPhoto } from '@/lib/distributeurs/donnees';
 import { domaineDuSite } from '@/lib/distributeurs/completer';
 import { prixPropose, sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
@@ -27,8 +27,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs, duTarif, cuvees, aCompleter, sansPhoto] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), vinsSansPhoto(id)]);
+  const [tous, producteurs, duTarif, cuvees, aCompleter, sansPhoto, cherchees] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), vinsSansPhoto(id), photosCherchees(id)]);
   const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
   const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
   const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
@@ -213,11 +213,25 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                   <FormulaireAdmin action={chercherPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                     <span className="petit">{sansPhoto.n} vin{sansPhoto.n > 1 ? 's' : ''} sans photo{sansPhoto.deja > 0 && <> (dont {sansPhoto.deja} déjà cherché{sansPhoto.deja > 1 ? 's' : ''} sur le web)</>} :</span>
                     <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Combien de vins ?
-                      <input type="number" name="limite" min={1} max={sansPhoto.n} placeholder="tous" style={{ width: 90, minWidth: 0 }} className="champ-liste" aria-label="Nombre de vins à chercher (vide : tous)" /></label>
+ 
+                      <input type="number" name="limite" min={1} placeholder="tous" style={{ width: 90, minWidth: 0 }} className="champ-liste" aria-label="Nombre de vins à chercher (vide : tous)" /></label>
                     <button className="btn sec petit">Chercher les photos sur le web</button>
                     {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" defaultChecked={sansPhoto.n === sansPhoto.deja} /> aussi les {sansPhoto.deja} déjà cherchés</label>}
                     <span className="petit discret">(sites des producteurs d’abord, puis cavistes ; quelques centimes par vin)</span>
                   </FormulaireAdmin>
+                )}
+                {cherchees.length > 0 && (
+                  <details>
+                    <summary className="petit" style={{ cursor: 'pointer' }}>Vins dont la photo a été cherchée sur le web ({cherchees.length}{cherchees.length === 60 ? ' derniers' : ''}) : {cherchees.filter((c) => c.etiquette_url).length} trouvées</summary>
+                    <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px, 100%), 1fr))', gap: 8, marginTop: 8 }}>
+                      {cherchees.map((c) => (
+                        <Link key={c.id} href={`/admin/super/vins/${encodeURIComponent(c.id)}`} className="vin-cell" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          <Vignette url={c.etiquette_url} taille={44} />
+                          <span className="petit"><b>{c.nom}</b><br /><span className="discret">{c.producteur} · {c.etiquette_url ? 'photo trouvée' : 'pas trouvée'} · {date(c.cherche_le)}</span></span>
+                        </Link>
+                      ))}
+                    </div>
+                  </details>
                 )}
                 {aCompleter.hors_base > 0 && <span className="petit discret">Et {aCompleter.hors_base} ligne{aCompleter.hors_base > 1 ? 's' : ''} du tarif pas encore dans la base (producteur à relier, plus haut) : elles seront cherchées une fois leur producteur relié. Plusieurs millésimes ou formats d’un même vin ne font qu’une fiche dans la base.</span>}
                 {!domaine && <span className="petit" style={{ color: 'var(--ocre)' }}>Renseignez le site du distributeur (Coordonnées) : la recherche s’y limitera.</span>}
