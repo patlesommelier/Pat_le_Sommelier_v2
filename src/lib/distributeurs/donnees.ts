@@ -105,6 +105,17 @@ export async function vinsACompleter(id: string) {
               group by c.id) x`, [id]);
   return r;
 }
+
+/** Vins de ce distributeur dans la base, sans photo du tout ; et parmi eux, ceux dont la photo a déjà été cherchée sur le web. */
+export async function vinsSansPhoto(id: string) {
+  const [r] = await requete<{ n: number; deja: number }>(
+    `select count(*)::int as n, count(*) filter (where deja)::int as deja from (
+       select c.id, bool_or(v.photo_cherche_le is not null) as deja from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+        where c.statut <> 'retire' and c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)
+        group by c.id) x`, [id]);
+  return r;
+}
+
 // ───────── Coordonnées de Quid Vinum (bons de commande des restaurants) ─────────
 export interface CoordonneesQv { nom: string; email: string | null; adresse: string | null; tva: string | null; telephone: string | null }
 const CLES_QV = ['qv_nom', 'qv_email', 'qv_adresse', 'qv_tva', 'qv_telephone'] as const;

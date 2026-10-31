@@ -8,7 +8,7 @@ import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
-import { completerVinsDistributeur } from '@/lib/distributeurs/completer';
+import { chercherPhotosWeb, completerVinsDistributeur } from '@/lib/distributeurs/completer';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
@@ -257,6 +257,15 @@ export async function completerVins(id: string, f: FormData): Promise<Retour> {
   void completerVinsDistributeur(requete, id, { aussiDejaCherches });
   rafraichir(id);
   return { ok: 'Recherche lancée : la page se met à jour pendant la recherche.' };
+}
+
+/** Photos manquantes des vins de ce distributeur, cherchées sur le web (sites des producteurs d'abord), en arrière-plan. */
+export async function chercherPhotos(id: string, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  await requete(`update distributeur set completion_statut = 'en_cours', completion_message = 'Recherche des photos sur le web…', completion_le = now() where id = $1`, [id]);
+  void chercherPhotosWeb(requete, id, { aussiDejaCherches: f.get('aussi_deja') === 'on' });
+  rafraichir(id);
+  return { ok: 'Recherche des photos lancée : la page se met à jour pendant la recherche.' };
 }
 
 /** Vins des producteurs reliés, absents de la base : ajoutés comme vins à valider (Vins de la base). */

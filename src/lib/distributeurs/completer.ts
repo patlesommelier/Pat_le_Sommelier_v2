@@ -139,3 +139,70 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
     await etat('echec', `La recherche n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
   }
 }
+
+// ───────── Photos manquantes, cherchées sur le web (site du producteur d'abord) ─────────
+const consignePhotos = (vins: Array<{ id: string; producteur: string; nom: string; millesime: string | null }>) =>
+  `Tu complètes la base de vins d'un sommelier. Pour chacun de ces vins, trouve sur le web une photo de la bouteille (ou de son étiquette) :
+de préférence sur le site du producteur, sinon chez un caviste ou un importateur. Cherche avec web_search, ouvre les pages avec web_fetch.
+
+${vins.map((v) => `- id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` ${v.millesime}` : ''}`).join('\n')}
+
+Pour chaque vin : « image » = l'adresse complète de la photo telle qu'elle figure sur la page (un fichier .jpg, .png ou .webp), de ce vin-là
+(même producteur, même cuvée ; un autre millésime convient) — jamais un logo, une bannière, une photo de vignoble ni la bouteille d'un autre vin ;
+null si tu ne la trouves pas. N'invente pas d'adresse.
+Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "image": "https://..."}]}`;
+
+/**
+ * Vins de la base (à valider ou validés) de ce distributeur sans photo : photo cherchée sur le web, par lots, copiée chez nous
+ * puis donnée au vin de la base. Chaque vin cherché est marqué (une relance passe aux suivants, sauf `aussiDejaCherches`).
+ * L'avancement est gardé sur le distributeur (mêmes champs que la recherche sur son site).
+ */
+export async function chercherPhotosWeb(requete: Requete, distributeurId: string, { aussiDejaCherches = false } = {}) {
+  const etat = (statut: string, message: string) =>
+    requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [distributeurId, statut, message]);
+  try {
+    const [d] = await requete<{ modele_lecture: ModeleTarif }>('select modele_lecture from distributeur where id = $1', [distributeurId]);
+    if (!d) return;
+    const vins = await requete<{ id: string; producteur: string; nom: string; millesime: string | null }>(
+      `select distinct on (c.id) c.id, p.nom as producteur, c.nom, v.millesime
+         from cuvee c join producteur p on p.id = c.producteur_id join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+        where c.statut <> 'retire' and c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)
+          and ($2 or not exists (select 1 from distributeur_vin x where x.cuvee_id = c.id and x.distributeur_id = $1 and x.photo_cherche_le is not null))
+        order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]);
+    if (!vins.length) { await etat('terminee', 'Aucune photo à chercher : les vins sans photo ont déjà été cherchés (cochez « aussi les déjà cherchés » pour recommencer).'); return; }
+    const client = clientClaude({ maxRetries: 1 });
+    const modele = modeleTarif(d.modele_lecture);
+    let photos = 0, faits = 0, erreurs = 0, derniereErreur = '';
+    const lots: typeof vins[] = [];
+    for (let i = 0; i < vins.length; i += LOT) lots.push(vins.slice(i, i + LOT));
+    const traiter = async (lot: typeof vins) => {
+      let texte: string;
+      try { texte = await chercherLot(client, modele, consignePhotos(lot), null); } catch (e) {
+        console.error('[photos web]', e);
+        erreurs += lot.length; faits += lot.length; derniereErreur = (e as Error).message;
+        return;
+      }
+      for (const r of (extraireVins(texte) ?? []) as Array<{ id?: string; image?: string | null }>) {
+        const v = lot.find((x) => x.id === r.id);
+        if (!v || !r.image?.trim()) continue;
+        const url = await copierImageDuSite(r.image.trim(), `${distributeurId.slice(0, 8)}-web-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
+        if (!url) continue;
+        await requete('update distributeur_vin set etiquette_url = $3, image_source = $4 where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
+          [distributeurId, v.id, url, r.image.trim()]);
+        photos++;
+      }
+      await requete('update distributeur_vin set photo_cherche_le = now() where distributeur_id = $1 and cuvee_id = any($2)', [distributeurId, lot.map((v) => v.id)]);
+      faits += lot.length;
+      await etat('en_cours', `Photos sur le web : ${faits} vins sur ${vins.length}, ${photos} trouvées…`);
+    };
+    await etat('en_cours', `Photos sur le web : 0 vin sur ${vins.length}…`);
+    for (let i = 0; i < lots.length; i += EN_PARALLELE) await Promise.all(lots.slice(i, i + EN_PARALLELE).map(traiter));
+    await partagerEtiquettesDistributeur(requete, distributeurId);
+    if (erreurs === vins.length) { await etat('echec', `La recherche n’a pas abouti (${derniereErreur}) : relancez-la plus tard.`.slice(0, 500)); return; }
+    await etat('terminee', `Photos sur le web : ${vins.length - erreurs} vins cherchés, ${photos} photos trouvées.`
+      + (erreurs ? ` ${erreurs} n’ont pas pu être cherchés (erreur de connexion) : relancez la recherche pour eux.` : ''));
+  } catch (e) {
+    console.error('[photos web]', distributeurId, e);
+    await etat('echec', `La recherche n’a pas abouti : ${(e as Error).message}`.slice(0, 500));
+  }
+}

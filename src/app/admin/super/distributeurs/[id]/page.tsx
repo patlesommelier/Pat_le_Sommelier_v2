@@ -1,7 +1,7 @@
 // Super-admin — fiche d'un distributeur : coordonnées et marge, tarif (PDF lu par Claude), vins au prix QV et prix proposé aux restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, completerVins, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, chercherPhotos, collerTarif, completerVins, deposerTarif, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -9,7 +9,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, vinsACompleter } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, vinsACompleter, vinsSansPhoto } from '@/lib/distributeurs/donnees';
 import { domaineDuSite } from '@/lib/distributeurs/completer';
 import { prixPropose, sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
@@ -27,8 +27,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs, duTarif, cuvees, aCompleter] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id)]);
+  const [tous, producteurs, duTarif, cuvees, aCompleter, sansPhoto] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), vinsSansPhoto(id)]);
   const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
   const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
   const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
@@ -195,7 +195,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
-            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || d.completion_statut) && (
+            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || sansPhoto.n > 0 || d.completion_statut) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
                   <b>Cépages, appellations et photos</b>
@@ -209,6 +209,14 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                     </FormulaireAdmin>
                   )}
                 </div>
+                {sansPhoto.n > 0 && !rechercheEnCours && (
+                  <FormulaireAdmin action={chercherPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                    <span className="petit">{sansPhoto.n} vin{sansPhoto.n > 1 ? 's' : ''} sans photo{sansPhoto.deja > 0 && <> (dont {sansPhoto.deja} déjà cherché{sansPhoto.deja > 1 ? 's' : ''} sur le web)</>} :</span>
+                    <button className="btn sec petit">{sansPhoto.n > sansPhoto.deja ? `Chercher les ${sansPhoto.n - sansPhoto.deja} photos sur le web` : 'Chercher les photos sur le web'}</button>
+                    {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" defaultChecked={sansPhoto.n === sansPhoto.deja} /> aussi les {sansPhoto.deja} déjà cherchés</label>}
+                    <span className="petit discret">(sites des producteurs d’abord, puis cavistes ; quelques centimes par vin)</span>
+                  </FormulaireAdmin>
+                )}
                 {aCompleter.hors_base > 0 && <span className="petit discret">Et {aCompleter.hors_base} ligne{aCompleter.hors_base > 1 ? 's' : ''} du tarif pas encore dans la base (producteur à relier, plus haut) : elles seront cherchées une fois leur producteur relié. Plusieurs millésimes ou formats d’un même vin ne font qu’une fiche dans la base.</span>}
                 {!domaine && <span className="petit" style={{ color: 'var(--ocre)' }}>Renseignez le site du distributeur (Coordonnées) : la recherche s’y limitera.</span>}
                 {d.completion_statut && (
