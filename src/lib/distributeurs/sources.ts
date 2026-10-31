@@ -184,3 +184,45 @@ export function imagesParReference(html: string, base: string | null): Map<strin
 
 /** Adresse de la page d'où vient un collage (le navigateur l'indique parfois dans la version « page web »). */
 export const adresseDuCollage = (html: string) => html.match(/<!--\s*SourceURL:\s*(\S+)/i)?.[1] ?? html.match(/<base\s+href="([^"]+)"/i)?.[1] ?? null;
+
+// ───────── Document Word (.docx) ─────────
+export type ImageArticle = { url: string } | { octets: Buffer; type: string };
+const TYPES_IMAGES: Record<string, string> = { png: 'image/png', jpg: 'image/jpeg', jpeg: 'image/jpeg', gif: 'image/gif', webp: 'image/webp' };
+
+/**
+ * Texte d'un document Word (un paragraphe par ligne, une ligne vide entre les blocs) et images reliées à la référence
+ * d'article qui les suit (copie d'un site de commande collée dans Word) : image intégrée au document, ou liée (adresse).
+ */
+export async function lireDocx(octets: Uint8Array): Promise<{ texte: string; images: Map<string, ImageArticle> }> {
+  const JSZip = (await import('jszip')).default;
+  const zip = await JSZip.loadAsync(octets);
+  const document = await zip.file('word/document.xml')?.async('string');
+  if (!document) throw new Error('ce fichier Word est illisible');
+  const relations = new Map<string, { cible: string; externe: boolean }>();
+  for (const m of ((await zip.file('word/_rels/document.xml.rels')?.async('string')) ?? '').matchAll(/<Relationship\b[^>]*>/g)) {
+    const id = m[0].match(/\bId="([^"]+)"/)?.[1], cible = m[0].match(/\bTarget="([^"]+)"/)?.[1];
+    if (id && cible) relations.set(id, { cible: cible.replace(/&amp;/g, '&'), externe: /TargetMode="External"/.test(m[0]) });
+  }
+  const decoder = (t: string) => t.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&amp;/g, '&');
+  const lignes: string[] = [];
+  const images = new Map<string, ImageArticle>();
+  let enAttente: ImageArticle | null = null;
+  for (const p of document.matchAll(/<w:p[ >][^]*?<\/w:p>/g)) {
+    // Image du paragraphe : intégrée (r:embed) ou liée (r:link, ou ancien format v:imagedata).
+    const rel = p[0].match(/r:(?:embed|link|id)="(rId\d+)"/)?.[1];
+    const r = rel ? relations.get(rel) : undefined;
+    if (r && /\.(png|jpe?g|gif|webp)(\?|$)/i.test(r.cible) || (r?.externe && /^https?:/i.test(r.cible))) {
+      if (r!.externe) enAttente = { url: r!.cible };
+      else {
+        const chemin = `word/${r!.cible.replace(/^\/?word\//, '').replace(/^\.\//, '')}`;
+        const fichier = zip.file(chemin);
+        const type = TYPES_IMAGES[r!.cible.split('.').pop()!.toLowerCase()];
+        if (fichier && type) enAttente = { octets: Buffer.from(await fichier.async('uint8array')), type };
+      }
+    }
+    const texte = decoder([...p[0].matchAll(/<w:t(?:\s[^>]*)?>([^<]*)<\/w:t>|<w:(tab|br)\/>/g)].map((t) => t[1] ?? (t[2] === 'tab' ? '\t' : '\n')).join('')).trim();
+    lignes.push(texte);
+    if (enAttente && REFERENCE.test(texte) && !images.has(texte)) { images.set(texte, enAttente); enAttente = null; }
+  }
+  return { texte: lignes.join('\n').replace(/\n{3,}/g, '\n\n').trim(), images };
+}

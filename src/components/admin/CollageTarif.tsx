@@ -20,6 +20,7 @@ export function CollageTarif({ action, desactive }: { action: (f: FormData) => v
           if (t && texte.trim()) { e.preventDefault(); setTexte((x) => `${x.trimEnd()}\n\n${t}`); }
         }} aria-label="Texte copié depuis le site du distributeur" />
       <input type="hidden" name="html" value={html} />
+      <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="ajout" /> Ajouter à la liste existante (rien n’est retiré)</label>
       <div className="ligne-actions" style={{ alignItems: 'center' }}>
         <button className="btn" disabled={desactive || texte.trim().length < 40}>Lire le texte collé</button>
         <span className="discret petit">{texte ? `${texte.split('\n').filter((l) => l.trim()).length} lignes` : ''}{pages ? ` · ${pages} page${pages > 1 ? 's' : ''} du site, avec les images` : texte ? ' · sans images (collez depuis le site pour les garder)' : ''}</span>

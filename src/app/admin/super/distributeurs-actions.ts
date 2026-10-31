@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
-import { lireTarif } from '@/lib/distributeurs/lecture';
+import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
@@ -81,15 +81,16 @@ async function lancerLecture(id: string, depuis: 'fichier' | 'api' = 'fichier') 
   void lireTarif(requete, id, depuis);
 }
 
-/** Type d'un tarif déposé : PDF, Excel (.xlsx) ou CSV, d'après son contenu et son nom ; null sinon. */
+/** Type d'un tarif déposé : PDF, Excel (.xlsx), Word (.docx) ou CSV, d'après son contenu et son nom ; null sinon. */
 function typeTarif(octets: Uint8Array, nom: string) {
   if (typeReel(octets) === 'application/pdf') return 'application/pdf';
   if (octets[0] === 0x50 && octets[1] === 0x4b && /\.xlsx$/i.test(nom)) return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  if (octets[0] === 0x50 && octets[1] === 0x4b && /\.docx$/i.test(nom)) return TYPE_DOCX;
   if (/\.(csv|txt)$/i.test(nom) && !octets.subarray(0, 2000).includes(0)) return 'text/csv';
   return null;
 }
 
-/** Nouveau tarif (PDF, Excel ou CSV) : gardé, puis lu. */
+/** Nouveau tarif (PDF, Excel, Word ou CSV) : gardé, puis lu ; « ajout » : ses vins s'ajoutent à la liste, aucun n'est retiré. */
 export async function deposerTarif(id: string, f: FormData) {
   await exigerAdmin();
   const fichier = f.get('tarif');
@@ -99,9 +100,9 @@ export async function deposerTarif(id: string, f: FormData) {
   if (octets.length > TARIF_MAX) retour({ erreur: 'Fichier trop lourd (20 Mo au maximum).' });
   const nom = (fichier as File).name.slice(0, 160) || 'tarif';
   const type = typeTarif(octets, nom);
-  if (!type) retour({ erreur: 'Le tarif doit être un PDF, un fichier Excel (.xlsx) ou un CSV.' });
-  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets) values ($1, $2, $3, $4, $5)',
-    [randomUUID(), id, nom, type, Buffer.from(octets)]);
+  if (!type) retour({ erreur: 'Le tarif doit être un PDF, un fichier Excel (.xlsx), Word (.docx) ou CSV.' });
+  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets, ajout) values ($1, $2, $3, $4, $5, $6)',
+    [randomUUID(), id, nom, type, Buffer.from(octets), f.get('ajout') === 'on']);
   await requete(`update distributeur set source = 'fichier' where id = $1`, [id]);
   await lancerLecture(id);
   rafraichir(id);
@@ -117,8 +118,8 @@ export async function collerTarif(id: string, f: FormData) {
   if (texte.length < 40) retour({ erreur: 'Collez d’abord la liste des vins copiée depuis le site du distributeur.' });
   if (texte.length > 2_000_000 || html.length > 15_000_000) retour({ erreur: 'Collage trop long : collez la liste en plusieurs fois.' });
   const date = new Date().toLocaleString('fr-BE', { dateStyle: 'short', timeStyle: 'short', timeZone: 'Europe/Brussels' });
-  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets, html) values ($1, $2, $3, $4, $5, $6)',
-    [randomUUID(), id, `Collage du ${date}`, 'text/plain', Buffer.from(texte, 'utf8'), html || null]);
+  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets, html, ajout) values ($1, $2, $3, $4, $5, $6, $7)',
+    [randomUUID(), id, `Collage du ${date}`, 'text/plain', Buffer.from(texte, 'utf8'), html || null, f.get('ajout') === 'on']);
   await requete(`update distributeur set source = 'fichier' where id = $1`, [id]);
   await lancerLecture(id);
   rafraichir(id);

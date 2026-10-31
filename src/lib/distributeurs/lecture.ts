@@ -9,11 +9,11 @@ import { randomUUID } from 'node:crypto';
 import Anthropic from '@anthropic-ai/sdk';
 import type { Requete } from '../generation/accords';
 import { clientClaude, modeleLecture } from '../claude';
-import { pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type Tableau } from './sources';
+import { lireDocx, pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type ImageArticle, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
 import { cleVin, dedoublonner, vinTarif, type VinTarif } from './tarif';
 import { rattacherCuvees } from './rattachement';
-import { etiquettesDuCollage } from './etiquettes';
+import { appliquerImages, etiquettesDuCollage } from './etiquettes';
 
 const PAGES_PAR_LECTURE = 4;
 const LECTURES_EN_PARALLELE = 3;
@@ -179,23 +179,32 @@ async function lireTableau(t: Tableau, modele: ModeleTarif) {
   return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (colonnes non reconnues)`, lu.ignores) };
 }
 
-/** Un fichier de tarif (PDF, Excel ou CSV), lu par la méthode la moins chère qui convient. */
-export async function lireFichierTarif(octets: Uint8Array, type: string, nom: string, modele: ModeleTarif) {
+export const TYPE_DOCX = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+
+/** Texte libre (collé, ou tiré d'un document Word) : lu par morceaux de 120 lignes environ, sans couper un article (ligne vide). */
+async function lireTexteLibre(texte: string, modele: ModeleTarif, origine: string) {
+  const morceaux: string[] = [];
+  for (const b of texte.split(/\n\s*\n/)) {
+    if (morceaux.length && morceaux[morceaux.length - 1].split('\n').length < 120) morceaux[morceaux.length - 1] += `\n\n${b}`; else morceaux.push(b);
+  }
+  const lu = await lireVinsDuTexte(morceaux, modeleTarif(modele));
+  return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (${origine})`, lu.ignores) };
+}
+
+/** Un fichier de tarif (PDF, Excel, CSV, Word ou texte collé), lu par la méthode la moins chère qui convient. */
+export async function lireFichierTarif(octets: Uint8Array, type: string, nom: string, modele: ModeleTarif): Promise<{ vins: VinTarif[]; methode: string; incomplet?: boolean; images?: Map<string, ImageArticle> }> {
   if (type === 'application/pdf') {
     const pages = await textePdf(octets);
     if (pdfSansTexte(pages)) return { vins: await lireVinsDuPdfImage(Buffer.from(octets), modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (PDF scanné, lu comme une image)` };
     const lu = await lireVinsDuTexte(pages.map((p, i) => `--- page ${i + 1} ---\n${p}`), modeleTarif(modele));
     return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (texte du PDF)`, lu.ignores) };
   }
-  // Texte collé depuis le site du distributeur : lu par morceaux de 120 lignes environ (une ligne vide ne coupe jamais un article en deux).
-  if (type === 'text/plain') {
-    const blocs = Buffer.from(octets).toString('utf8').split(/\n\s*\n/);
-    const morceaux: string[] = [];
-    for (const b of blocs) {
-      if (morceaux.length && morceaux[morceaux.length - 1].split('\n').length < 120) morceaux[morceaux.length - 1] += `\n\n${b}`; else morceaux.push(b);
-    }
-    const lu = await lireVinsDuTexte(morceaux, modeleTarif(modele));
-    return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (texte collé)`, lu.ignores) };
+  // Texte collé depuis le site du distributeur.
+  if (type === 'text/plain') return lireTexteLibre(Buffer.from(octets).toString('utf8'), modele, 'texte collé');
+  // Document Word (copie du site collée dans Word) : son texte, et ses images reliées aux références d'article.
+  if (type === TYPE_DOCX) {
+    const { texte, images } = await lireDocx(octets);
+    return { ...await lireTexteLibre(texte, modele, 'document Word'), images };
   }
   if (/\.csv$/i.test(nom) || type === 'text/csv') return lireTableau(tableauCsv(Buffer.from(octets).toString('utf8').replace(/^\uFEFF/, '')), modele);
   return lireTableau(await tableauExcel(octets), modele);
@@ -227,7 +236,9 @@ export async function lireApiTarif(url: string, entete: string | null, cle: stri
  * retirés de la proposition (gardés pour les anciennes commandes). Le producteur de la base de Pat est retrouvé par son nom,
  * sauf s'il a été choisi à la main. Renvoie les compteurs.
  */
-export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: string, vins: VinTarif[], { retirer = true } = {}) {
+export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: string, vins: VinTarif[], { retirer = true, ajout = false } = {}) {
+  // En ajout, les vins du nouveau fichier se rangent après ceux déjà lus.
+  const [{ base }] = ajout ? await requete<{ base: number }>('select coalesce(max(ordre), -1) + 1 as base from distributeur_vin where distributeur_id = $1', [distributeurId]) : [{ base: 0 }];
   // Producteurs choisis à la main par Pat pour ce distributeur (par le nom écrit sur le tarif) : repris pour les nouveaux vins.
   const choisis = new Map((await requete<{ nom: string; producteur_id: string | null; manuel: boolean }>(
     `select distinct on (producteur_texte) producteur_texte as nom, producteur_id, producteur_manuel as manuel from distributeur_vin
@@ -236,7 +247,7 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   for (const nom of new Set(vins.map((v) => v.producteur).filter((p): p is string => Boolean(p)))) {
     producteurs.set(nom, choisis.has(nom) ? choisis.get(nom)! : (await producteurConnu(requete, nom))?.id ?? null);
   }
-  const lignes = vins.map((v, i) => ({ ...v, cle: cleVin(v), ordre: i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
+  const lignes = vins.map((v, i) => ({ ...v, cle: cleVin(v), ordre: base + i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
     manuel: Boolean(v.producteur && choisis.has(v.producteur)) }));
   const uniques = [...new Map(lignes.map((l) => [l.cle, l])).values()];
   const avant = new Set((await requete<{ cle: string }>('select cle from distributeur_vin where distributeur_id = $1 and actif', [distributeurId])).map((r) => r.cle));
@@ -274,7 +285,7 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
     const [d] = await requete<{ modele_lecture: ModeleTarif; api_url: string | null; api_entete: string | null; api_cle: string | null }>(
       'select modele_lecture, api_url, api_entete, api_cle from distributeur where id = $1', [distributeurId]);
     if (!d) return;
-    let lu: { vins: VinTarif[]; methode: string; incomplet?: boolean }, source: string, html: string | null = null;
+    let lu: { vins: VinTarif[]; methode: string; incomplet?: boolean; images?: Map<string, ImageArticle> }, source: string, html: string | null = null, ajout = false;
     if (depuis === 'api') {
       if (!d.api_url) { await etat('echec', 'Aucune adresse d’API enregistrée.'); return; }
       await etat('en_cours', 'Lecture du tarif depuis l’API du distributeur…');
@@ -282,20 +293,21 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
       source = 'l’API du distributeur';
       await requete('update distributeur set api_synchro_le = now() where id = $1', [distributeurId]);
     } else {
-      const [t] = await requete<{ octets: Buffer; nom: string; media_type: string; html: string | null }>(
-        'select octets, nom, media_type, html from distributeur_tarif where distributeur_id = $1 order by cree_le desc limit 1', [distributeurId]);
+      const [t] = await requete<{ octets: Buffer; nom: string; media_type: string; html: string | null; ajout: boolean }>(
+        'select octets, nom, media_type, html, ajout from distributeur_tarif where distributeur_id = $1 order by cree_le desc limit 1', [distributeurId]);
       if (!t) { await etat('echec', 'Aucun tarif déposé.'); return; }
       await etat('en_cours', `Lecture de « ${t.nom} »…`);
       lu = await lireFichierTarif(new Uint8Array(t.octets), t.media_type, t.nom, d.modele_lecture);
       source = `« ${t.nom} »`;
       html = t.html;
+      ajout = t.ajout;
     }
     if (!lu.vins.length) { await etat('echec', `Aucun vin trouvé dans ${source}.`); return; }
-    const n = await enregistrerVinsDuTarif(requete, distributeurId, lu.vins, { retirer: !lu.incomplet });
-    const fin = `${n.lus} vins lus dans ${source} (${lu.methode}) : ${n.nouveaux} nouveaux, ${n.retires} retirés, ${n.rattaches} rattachés à un producteur de la base.`;
-    if (html) {
+    const n = await enregistrerVinsDuTarif(requete, distributeurId, lu.vins, { retirer: !lu.incomplet && !ajout, ajout });
+    const fin = `${n.lus} vins lus dans ${source} (${lu.methode}${ajout ? ', ajoutés à la liste' : ''}) : ${n.nouveaux} nouveaux, ${n.retires} retirés, ${n.rattaches} rattachés à un producteur de la base.`;
+    if (html || lu.images?.size) {
       await etat('en_cours', `${fin} Copie des étiquettes…`);
-      const e = await etiquettesDuCollage(requete, distributeurId, html);
+      const e = html ? await etiquettesDuCollage(requete, distributeurId, html) : await appliquerImages(requete, distributeurId, lu.images!);
       await etat('terminee', `${fin} ${e.trouvees ? `${e.copiees} étiquette${e.copiees > 1 ? 's' : ''} copiée${e.copiees > 1 ? 's' : ''} sur ${e.trouvees} trouvée${e.trouvees > 1 ? 's' : ''}${e.copiees < e.trouvees ? ' (les autres ne sont pas accessibles sans être connecté au site)' : ''}.` : 'Aucune étiquette trouvée dans le collage.'}`);
     } else await etat('terminee', fin);
   } catch (e) {

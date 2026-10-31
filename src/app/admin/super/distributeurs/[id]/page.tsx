@@ -88,7 +88,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           <section className="carte-bo pile">
             <div><h2>Tarif</h2><p className="sous">{d.source === 'api'
               ? 'Le tarif est lu depuis l’API du distributeur. Un tableau dont les colonnes sont reconnues est lu sans IA ; sinon, par Claude.'
-              : 'Déposez le tarif : un PDF (son texte est lu par Claude, le modèle choisi dans les coordonnées), ou un fichier Excel ou CSV (ses colonnes sont reconnues sans IA quand c’est possible).'}
+              : 'Déposez le tarif : un PDF ou un document Word (leur texte est lu par Claude, le modèle choisi dans les coordonnées ; les photos d’un document Word vont aux vins), ou un fichier Excel ou CSV (ses colonnes sont reconnues sans IA quand c’est possible).'}
               {' '}Un vin déjà connu garde son prix imposé et son producteur choisi à la main ; un vin absent du nouveau tarif n’est plus proposé.</p></div>
             {d.lecture_statut && (
               <p style={{ margin: 0 }}>
@@ -101,8 +101,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 <div className="pile" style={{ gap: 10 }}>
                   {d.tarif_nom && <p style={{ margin: 0 }}>Dernier fichier : <a href={`/admin/super/distributeurs/${id}/tarif`} target="_blank" rel="noopener"><b>{d.tarif_nom}</b></a> <span className="discret">· déposé le {date(d.tarif_le!)}</span></p>}
                   <form action={deposerTarif.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
-                    <input type="file" name="tarif" accept="application/pdf,.xlsx,.csv,text/csv" required aria-label="Tarif du distributeur (PDF, Excel ou CSV)" />
+                    <input type="file" name="tarif" accept="application/pdf,.xlsx,.docx,.csv,text/csv" required aria-label="Tarif du distributeur (PDF, Excel, Word ou CSV)" />
                     <button className="btn" disabled={Boolean(enCours)}>Déposer et lire le tarif</button>
+                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="ajout" /> Ajouter à la liste existante (tarif en plusieurs fichiers : rien n’est retiré)</label>
                   </form>
                   {d.tarif_nom && !enCours && <FormulaireAdmin action={relireTarif.bind(null, id)}><button className="btn fantome petit" style={{ paddingLeft: 0 }}>Relire le dernier fichier</button></FormulaireAdmin>}
                   <details>
