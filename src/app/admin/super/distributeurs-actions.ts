@@ -9,6 +9,7 @@ import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif } from '@/lib/distributeurs/lecture';
 import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
+import { deposerImage } from '@/lib/admin/fichiers';
 
 type Retour = { ok?: string; erreur?: string };
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -43,10 +44,19 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   if (remise === undefined || (remise != null && remise > 100)) return { erreur: 'La remise QV doit être un pourcentage, par exemple 20.' };
   const email = txt(f, 'email');
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'L’adresse e-mail ne semble pas valide.' };
+  const modele = ['sonnet', 'haiku', 'opus'].includes(txt(f, 'modele_lecture') ?? '') ? txt(f, 'modele_lecture') : 'sonnet';
+  const source = txt(f, 'source') === 'api' ? 'api' : 'fichier';
+  // Logo : nouvelle image déposée (stockage des images), ou retiré.
+  const fichierLogo = f.get('logo');
+  let logo: string | null | undefined;
+  if (fichierLogo instanceof File && fichierLogo.size) {
+    try { logo = await deposerImage(fichierLogo, 'distributeurs'); } catch (e) { return { erreur: `Logo : ${(e as Error).message}` }; }
+  } else if (f.get('retirer_logo') === 'on') logo = null;
   try {
     await requete(`update distributeur set nom = $2, adresse = $3, tva = $4, contact = $5, telephone = $6, email = $7, site = $8, marge = $9, remise_qv = $10,
-                   notes = $11, actif = $12 where id = $1`,
-      [id, nom, txt(f, 'adresse'), txt(f, 'tva'), txt(f, 'contact'), txt(f, 'telephone'), email, txt(f, 'site'), marge, remise, txt(f, 'notes'), f.get('actif') === 'on']);
+                   notes = $11, actif = $12, modele_lecture = $13, source = $14, logo_url = case when $15 then $16 else logo_url end where id = $1`,
+      [id, nom, txt(f, 'adresse'), txt(f, 'tva'), txt(f, 'contact'), txt(f, 'telephone'), email, txt(f, 'site'), marge, remise, txt(f, 'notes'), f.get('actif') === 'on',
+        modele, source, logo !== undefined, logo ?? null]);
   } catch {
     return { erreur: `Un autre distributeur s’appelle déjà « ${nom} ».` };
   }
@@ -63,13 +73,21 @@ export async function supprimerDistributeur(id: string) {
   redirect('/admin/super/distributeurs?ok=Distributeur%20supprim%C3%A9.');
 }
 
-/** Lance la lecture du dernier tarif en arrière-plan (la page suit l'avancement). */
-async function lancerLecture(id: string) {
-  await requete(`update distributeur set lecture_statut = 'en_cours', lecture_message = 'Lecture du tarif par Claude…', lecture_le = now() where id = $1`, [id]);
-  void lireTarif(requete, id);
+/** Lance la lecture du tarif (dernier fichier, ou API) en arrière-plan : la page suit l'avancement. */
+async function lancerLecture(id: string, depuis: 'fichier' | 'api' = 'fichier') {
+  await requete(`update distributeur set lecture_statut = 'en_cours', lecture_message = 'Lecture du tarif…', lecture_le = now() where id = $1`, [id]);
+  void lireTarif(requete, id, depuis);
 }
 
-/** Nouveau tarif (PDF) : gardé, puis lu par Claude. */
+/** Type d'un tarif déposé : PDF, Excel (.xlsx) ou CSV, d'après son contenu et son nom ; null sinon. */
+function typeTarif(octets: Uint8Array, nom: string) {
+  if (typeReel(octets) === 'application/pdf') return 'application/pdf';
+  if (octets[0] === 0x50 && octets[1] === 0x4b && /\.xlsx$/i.test(nom)) return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  if (/\.(csv|txt)$/i.test(nom) && !octets.subarray(0, 2000).includes(0)) return 'text/csv';
+  return null;
+}
+
+/** Nouveau tarif (PDF, Excel ou CSV) : gardé, puis lu. */
 export async function deposerTarif(id: string, f: FormData) {
   await exigerAdmin();
   const fichier = f.get('tarif');
@@ -77,19 +95,49 @@ export async function deposerTarif(id: string, f: FormData) {
   if (!(fichier instanceof File) || !fichier.size) retour({ erreur: 'Choisissez le fichier du tarif (PDF).' });
   const octets = new Uint8Array(await (fichier as File).arrayBuffer());
   if (octets.length > TARIF_MAX) retour({ erreur: 'Fichier trop lourd (20 Mo au maximum).' });
-  if (typeReel(octets) !== 'application/pdf') retour({ erreur: 'Le tarif doit être un PDF.' });
-  await requete('insert into distributeur_tarif (id, distributeur_id, nom, octets) values ($1, $2, $3, $4)',
-    [randomUUID(), id, (fichier as File).name.slice(0, 160) || 'tarif.pdf', Buffer.from(octets)]);
+  const nom = (fichier as File).name.slice(0, 160) || 'tarif';
+  const type = typeTarif(octets, nom);
+  if (!type) retour({ erreur: 'Le tarif doit être un PDF, un fichier Excel (.xlsx) ou un CSV.' });
+  await requete('insert into distributeur_tarif (id, distributeur_id, nom, media_type, octets) values ($1, $2, $3, $4, $5)',
+    [randomUUID(), id, nom, type, Buffer.from(octets)]);
+  await requete(`update distributeur set source = 'fichier' where id = $1`, [id]);
   await lancerLecture(id);
   rafraichir(id);
-  retour({ ok: 'Tarif enregistré : Claude le lit (quelques minutes).' });
+  retour({ ok: 'Tarif enregistré : il est en cours de lecture.' });
 }
 
 export async function relireTarif(id: string): Promise<Retour> {
   await exigerAdmin();
-  await lancerLecture(id);
+  await lancerLecture(id, 'fichier');
   rafraichir(id);
   return { ok: 'Lecture relancée.' };
+}
+
+/**
+ * API du distributeur : adresse (https), nom de l'en-tête d'accès et clé. Une clé laissée vide garde celle enregistrée ;
+ * « effacer » la retire. La clé n'est jamais renvoyée à la page.
+ */
+export async function enregistrerApi(id: string, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  const url = txt(f, 'api_url');
+  if (url && !/^https:\/\/[^\s]+$/i.test(url)) return { erreur: 'L’adresse de l’API doit commencer par https://' };
+  const entete = txt(f, 'api_entete');
+  if (entete && !/^[A-Za-z0-9-]{1,60}$/.test(entete)) return { erreur: 'Nom d’en-tête invalide (ex. Authorization ou X-API-Key).' };
+  const cle = txt(f, 'api_cle');
+  await requete(`update distributeur set api_url = $2, api_entete = $3, api_cle = case when $5 then null when $4::text is not null then $4 else api_cle end,
+                 source = case when $2::text is null then 'fichier' else 'api' end where id = $1`,
+    [id, url, entete, cle, f.get('effacer_cle') === 'on']);
+  rafraichir(id);
+  return { ok: url ? 'API enregistrée : « Lire le tarif depuis l’API » pour l’essayer.' : 'API retirée : le tarif vient des fichiers déposés.' };
+}
+
+export async function synchroniserApi(id: string): Promise<Retour> {
+  await exigerAdmin();
+  const [d] = await requete<{ api_url: string | null }>('select api_url from distributeur where id = $1', [id]);
+  if (!d?.api_url) return { erreur: 'Enregistrez d’abord l’adresse de l’API.' };
+  await lancerLecture(id, 'api');
+  rafraichir(id);
+  return { ok: 'Lecture depuis l’API lancée.' };
 }
 
 /**

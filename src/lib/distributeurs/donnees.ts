@@ -8,7 +8,15 @@ export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
   site: string | null; marge: number; remise_qv: number | null; notes: string | null; actif: boolean;
   lecture_statut: 'en_cours' | 'terminee' | 'echec' | null; lecture_message: string | null; lecture_le: string | null;
+  logo_url: string | null; source: 'fichier' | 'api'; modele_lecture: 'sonnet' | 'haiku' | 'opus';
+  /** API du distributeur : adresse et nom de l'en-tête ; la clé elle-même ne sort jamais de la base (seulement « enregistrée »). */
+  api_url: string | null; api_entete: string | null; api_cle_enregistree: boolean; api_synchro_le: string | null;
 }
+
+// Colonnes lues (jamais api_cle).
+const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.marge::float8 as marge, d.remise_qv::float8 as remise_qv, d.notes, d.actif,
+  d.lecture_statut, d.lecture_message, d.lecture_le::text, d.logo_url, d.source, d.modele_lecture, d.api_url, d.api_entete,
+  d.api_cle is not null as api_cle_enregistree, d.api_synchro_le::text`;
 export interface DistributeurListe extends Distributeur { vins: number; tarif_nom: string | null; tarif_le: string | null; restaurants: number }
 export interface VinDistributeur {
   id: string; section: string | null; producteur_texte: string | null; libelle: string; millesime: string | null; contenance: string | null;
@@ -22,7 +30,7 @@ export const SQL_PRIX_PROPOSE = 'coalesce(v.prix_restaurant, round(v.prix_qv * (
 // ───────── Super-admin ─────────
 export async function getDistributeurs() {
   return requete<DistributeurListe>(
-    `select d.*, d.lecture_le::text,
+    `select ${COLONNES},
             (select count(*)::int from distributeur_vin v where v.distributeur_id = d.id and v.actif) as vins,
             t.nom as tarif_nom, t.cree_le::text as tarif_le,
             (select count(*)::int from fournisseur f where f.distributeur_id = d.id) as restaurants
@@ -33,7 +41,7 @@ export async function getDistributeurs() {
 
 export async function getDistributeur(id: string) {
   const [d] = await requete<Distributeur & { tarif_id: string | null; tarif_nom: string | null; tarif_le: string | null }>(
-    `select d.*, d.lecture_le::text, t.id as tarif_id, t.nom as tarif_nom, t.cree_le::text as tarif_le from distributeur d
+    `select ${COLONNES}, t.id as tarif_id, t.nom as tarif_nom, t.cree_le::text as tarif_le from distributeur d
        left join lateral (select id, nom, cree_le from distributeur_tarif where distributeur_id = d.id order by cree_le desc limit 1) t on true
       where d.id = $1`, [id]);
   return d ?? null;
@@ -65,7 +73,7 @@ export async function enregistrerCoordonneesQv(c: Record<(typeof CLES_QV)[number
 }
 
 // ───────── Restaurants (prix proposé seulement) ─────────
-export interface DistributeurPropose { id: string; nom: string; site: string | null; vins: number; deja: boolean }
+export interface DistributeurPropose { id: string; nom: string; site: string | null; logo_url: string | null; vins: number; deja: boolean }
 export interface VinCatalogueResto {
   id: string; section: string | null; producteur: string | null; producteur_id: string | null; libelle: string; millesime: string | null;
   contenance: string | null; couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
@@ -74,7 +82,7 @@ export interface VinCatalogueResto {
 /** Distributeurs proposés aux restaurants (actifs, avec des vins) ; `deja` : déjà parmi les fournisseurs de ce restaurant. */
 export async function distributeursProposes(resto: string) {
   return requete<DistributeurPropose>(
-    `select d.id, d.nom, d.site, count(v.id)::int as vins,
+    `select d.id, d.nom, d.site, d.logo_url, count(v.id)::int as vins,
             exists (select 1 from fournisseur f where f.restaurant_id = $1 and f.distributeur_id = d.id) as deja
        from distributeur d join distributeur_vin v on v.distributeur_id = d.id and v.actif
       where d.actif group by d.id order by lower(d.nom)`, [resto]);

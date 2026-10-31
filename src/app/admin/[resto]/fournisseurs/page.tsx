@@ -37,7 +37,9 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
         {fournisseurs.map((f) => f.distributeur_id ? (
           // Distributeur de la base de Quid Vinum : catalogue et prix tenus par Quid Vinum, commandes envoyées à Quid Vinum.
           <div key={f.id} className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
-            <span><b style={{ fontSize: 17 }}>{f.nom}</b> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''} de votre carte</span><br />
+            <span>{/* eslint-disable-next-line @next/next/no-img-element */}
+              {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 10 }} />}
+              <b style={{ fontSize: 17 }}>{f.nom}</b> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''} de votre carte</span><br />
               <span className="discret petit">Catalogue et prix proposés par Quid Vinum ; vos commandes partent chez Quid Vinum.</span></span>
             <span className="ligne-actions">
               <Link href={`/admin/${resto}/commandes?f=${f.id}#nouvelle`} className="btn sec petit">Commander</Link>
@@ -66,7 +68,9 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
           <div><h2>Distributeurs Quid Vinum</h2><p className="sous">Ajoutez un distributeur de la sélection Quid Vinum : vous commandez dans son catalogue, au prix proposé par Quid Vinum, sans rien saisir.</p></div>
           {aAjouter.map((d) => (
             <FormulaireAdmin key={d.id} action={ajouterDistributeurQv.bind(null, resto, d.id)} className="ligne-distributeur">
-              <span><b>{d.nom}</b> <span className="discret">· {d.vins} vin{d.vins > 1 ? 's' : ''}</span>{d.site && <> · <a href={/^https?:/.test(d.site) ? d.site : `https://${d.site}`} target="_blank" rel="noopener" className="petit">site</a></>}</span>
+              <span>{/* eslint-disable-next-line @next/next/no-img-element */}
+                {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 10 }} />}
+                <b>{d.nom}</b> <span className="discret">· {d.vins} vin{d.vins > 1 ? 's' : ''}</span>{d.site && <> · <a href={/^https?:/.test(d.site) ? d.site : `https://${d.site}`} target="_blank" rel="noopener" className="petit">site</a></>}</span>
               <button className="btn sec petit">+ Ajouter à mes fournisseurs</button>
             </FormulaireAdmin>
           ))}

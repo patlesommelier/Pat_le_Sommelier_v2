@@ -4,7 +4,7 @@ import { requete } from '../db';
 import { getCoordonneesQv } from '../distributeurs/donnees';
 
 /** distributeur_id : fournisseur choisi dans la base de Quid Vinum (ses commandes partent chez Quid Vinum). */
-export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number; distributeur_id: string | null }
+export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number; distributeur_id: string | null; logo_url: string | null }
 export interface LigneCommande { vin_id: string | null; distributeur_vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null }
 export interface Commande {
   id: string; numero: number; fournisseur_id: string | null; fournisseur_nom: string; fournisseur_email: string | null; via_qv: boolean; statut: 'ouverte' | 'recue' | 'annulee';
@@ -31,6 +31,7 @@ export const stockBas = (stock: number, limite: number) => stock <= limite;
 export async function getFournisseurs(resto: string) {
   return requete<Fournisseur>(
     `select f.id, f.nom, f.adresse, f.tva, f.contact, f.telephone, f.email, f.distributeur_id,
+            (select d.logo_url from distributeur d where d.id = f.distributeur_id) as logo_url,
             (select count(distinct lower(v.libelle) || coalesce(v.millesime, ''))::int from vin_carte v where v.fournisseur_id = f.id) as vins -- un vin, toutes contenances
        from fournisseur f where f.restaurant_id = $1 order by lower(f.nom)`, [resto]);
 }

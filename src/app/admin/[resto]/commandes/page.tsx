@@ -42,9 +42,9 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     return [f.id, lignes] as const;
   })));
   const blocs = [
-    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
+    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, logo: f.logo_url, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
       .filter((b) => b.groupes.length || b.catalogue?.length),
-    { id: '', nom: 'Vins sans fournisseur', email: null, catalogue: undefined, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
+    { id: '', nom: 'Vins sans fournisseur', email: null, logo: null, catalogue: undefined, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
   ].filter((b) => b.groupes.length || b.catalogue?.length);
   const cible = sp.f === 'aucun' ? '' : sp.f;
   const sansCoordonnees = !coord?.commande_email || !coord.commande_adresse;
@@ -112,7 +112,9 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           return (
             <details key={b.id || 'aucun'} className="carte-bo bloc-fournisseur" open={cible !== undefined ? cible === b.id : basN > 0}>
               <summary>
-                <span><b style={{ fontSize: 17 }}>{b.nom}</b>{b.catalogue ? <> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· catalogue de {b.catalogue.length} vin{b.catalogue.length > 1 ? 's' : ''}</span></>
+                <span>{/* eslint-disable-next-line @next/next/no-img-element */}
+                  {b.logo && <img src={b.logo} alt="" className="logo-distributeur" style={{ height: 28, verticalAlign: 'middle', marginRight: 10 }} />}
+                  <b style={{ fontSize: 17 }}>{b.nom}</b>{b.catalogue ? <> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· catalogue de {b.catalogue.length} vin{b.catalogue.length > 1 ? 's' : ''}</span></>
                   : <span className="discret"> · {b.groupes.length} vin{b.groupes.length > 1 ? 's' : ''}</span>}</span>
                 {basN > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basN} en stock bas</span>}
               </summary>

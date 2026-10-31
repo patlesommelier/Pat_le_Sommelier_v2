@@ -28,11 +28,14 @@ export default async function Distributeurs({ searchParams }: { searchParams: Pr
                   {!liste.length && <tr><td colSpan={5} className="discret">Aucun distributeur pour l’instant : ajoutez le premier à droite.</td></tr>}
                   {liste.map((d) => (
                     <tr key={d.id}>
-                      <td><Link href={`/admin/super/distributeurs/${d.id}`}><b>{d.nom}</b></Link>{!d.actif && <> <Etat type="defaut">Masqué</Etat></>}
+                      <td>{/* eslint-disable-next-line @next/next/no-img-element */}
+                        {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" style={{ height: 28, verticalAlign: 'middle', marginRight: 8 }} />}
+                        <Link href={`/admin/super/distributeurs/${d.id}`}><b>{d.nom}</b></Link>{!d.actif && <> <Etat type="defaut">Masqué</Etat></>}
                         {d.lecture_statut === 'en_cours' && <> <Etat type="propose">Lecture en cours</Etat></>}{d.lecture_statut === 'echec' && <> <Etat type="attention">Lecture en échec</Etat></>}</td>
                       <td className="droite">{d.vins}</td>
                       <td className="droite">{String(d.marge).replace('.', ',')} %</td>
-                      <td>{d.tarif_nom ? <span className="petit">{d.tarif_nom}<br /><span className="discret">{date(d.tarif_le!)}</span></span> : <span className="discret">—</span>}</td>
+                      <td>{d.source === 'api' ? <span className="petit">API{d.api_synchro_le && <><br /><span className="discret">{date(d.api_synchro_le)}</span></>}</span>
+                        : d.tarif_nom ? <span className="petit">{d.tarif_nom}<br /><span className="discret">{date(d.tarif_le!)}</span></span> : <span className="discret">—</span>}</td>
                       <td className="droite">{d.restaurants || '—'}</td>
                     </tr>
                   ))}

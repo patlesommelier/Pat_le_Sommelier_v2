@@ -284,3 +284,4 @@ tr.choisi td { background: var(--rose); }
 .recherche { min-width: min(280px, 100%); }
 .champ-liste { width: 100%; min-width: 200px; font-size: 14px; }
 .recherche:focus, .catalogue-filtre input[type=search]:focus, .champ-liste:focus { border-color: var(--encre); outline: none; box-shadow: 0 0 0 3px var(--rose); }
+.logo-distributeur { height: 36px; max-width: 120px; object-fit: contain; border-radius: 6px; background: #fff; }
