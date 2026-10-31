@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { annulerCommande, creerCommande, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
+import { CatalogueCommande, type LigneCatalogue } from '@/components/admin/CatalogueCommande';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
@@ -11,6 +12,8 @@ import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, stockBas, type Commande } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
+import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
+import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
@@ -26,17 +29,30 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const emailPret = envoiEmailConfigure();
   const groupes = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible));
   // Nouvelle commande : un bloc par fournisseur qui a des vins, puis les vins sans fournisseur.
+  // Distributeur Quid Vinum : son catalogue au prix proposé, chaque vin relié à la carte quand il y figure.
+  const carteSimple = groupes.map((g) => ({ id: g.principal.id, libelle: g.principal.libelle, millesime: g.principal.millesime, format: g.principal.format,
+    producteur_id: g.principal.producteur_id, producteur: g.principal.producteur_texte ?? g.principal.producteur_nom ?? null }));
+  const catalogues = new Map(await Promise.all(fournisseurs.filter((f) => f.distributeur_id).map(async (f) => {
+    const lignes: LigneCatalogue[] = (await catalogueDistributeur(f.distributeur_id!)).map((c) => {
+      const surCarte = groupes.find((g) => g.principal.distributeur_vin_id === c.id)?.principal
+        ?? groupes.find((g) => g.principal.id === vinDeLaCarte(c, carteSimple)?.id)?.principal;
+      return { id: c.id, section: c.section, producteur: c.producteur, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, prix: c.prix,
+        epuise: c.epuise, maximum: c.maximum, surCarte: surCarte ? { stock: surCarte.stock, enCommande: surCarte.en_commande, bas: stockBas(surCarte.stock, limite) } : null };
+    });
+    return [f.id, lignes] as const;
+  })));
   const blocs = [
-    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id) })).filter((b) => b.groupes.length),
-    { id: '', nom: 'Vins sans fournisseur', email: null, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
-  ].filter((b) => b.groupes.length);
+    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
+      .filter((b) => b.groupes.length || b.catalogue?.length),
+    { id: '', nom: 'Vins sans fournisseur', email: null, catalogue: undefined, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
+  ].filter((b) => b.groupes.length || b.catalogue?.length);
   const cible = sp.f === 'aucun' ? '' : sp.f;
   const sansCoordonnees = !coord?.commande_email || !coord.commande_adresse;
 
   const carte = (c: Commande) => {
     const ref = referenceCommande({ numero: c.numero, date: new Date(c.cree_le) });
     const nomResto = coord?.commande_societe || coord?.nom || '';
-    const sujet = `Bon de commande ${ref} — ${nomResto}`;
+    const sujet = `Bon de commande ${ref} — ${nomResto}${c.via_qv ? ` — ${c.fournisseur_nom}` : ''}`;
     const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total(c)} bouteille${total(c) > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
     const envoyee = Boolean(c.envoyee_le);
     return (
@@ -69,7 +85,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
               question={`Annuler la commande à ${c.fournisseur_nom} ? Ses bouteilles ne seront plus comptées « en commande ».`} />
           </div>
         )}
-        {c.statut === 'ouverte' && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon de commande, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
+        {c.statut === 'ouverte' && c.via_qv && <span className="petit discret">Commande via Quid Vinum{c.fournisseur_email ? ` : le bon part à ${c.fournisseur_email}` : ' : l’adresse des commandes de Quid Vinum n’est pas encore renseignée, contactez Quid Vinum.'}</span>}
+        {c.statut === 'ouverte' && !c.via_qv && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon de commande, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
       </article>
     );
   };
@@ -91,11 +108,12 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Le prix d’achat HTVA se corrige ici si le fournisseur l’a changé. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
         {!blocs.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
         {blocs.map((b) => {
-          const basN = b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
+          const basN = b.catalogue ? b.catalogue.filter((l) => l.surCarte?.bas).length : b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
           return (
             <details key={b.id || 'aucun'} className="carte-bo bloc-fournisseur" open={cible !== undefined ? cible === b.id : basN > 0}>
               <summary>
-                <span><b style={{ fontSize: 17 }}>{b.nom}</b> <span className="discret">· {b.groupes.length} vin{b.groupes.length > 1 ? 's' : ''}</span></span>
+                <span><b style={{ fontSize: 17 }}>{b.nom}</b>{b.catalogue ? <> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· catalogue de {b.catalogue.length} vin{b.catalogue.length > 1 ? 's' : ''}</span></>
+                  : <span className="discret"> · {b.groupes.length} vin{b.groupes.length > 1 ? 's' : ''}</span>}</span>
                 {basN > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basN} en stock bas</span>}
               </summary>
               <FormulaireAdmin action={creerCommande.bind(null, resto, b.id)} className="pile" style={{ gap: 12, marginTop: 12 }}>
@@ -103,7 +121,10 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                   ? <label className="champ" style={{ maxWidth: 360 }}><span>Fournisseur de cette commande</span>
                       <select name="fournisseur" defaultValue="" required><option value="" disabled>Choisir…</option>{fournisseurs.map((f) => <option key={f.id} value={f.id}>{f.nom}</option>)}</select></label>
                   : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>, puis choisissez celui de chaque vin dans Stocks.</p>)}
-                <div className="tableau">
+                {b.catalogue ? <>
+                  <p className="petit discret" style={{ margin: 0 }}>Prix proposés par Quid Vinum (HTVA). Votre commande part chez Quid Vinum, qui la transmet à {b.nom}.</p>
+                  <CatalogueCommande lignes={b.catalogue} />
+                </> : <div className="tableau">
                   <table style={{ minWidth: 640 }}>
                     <thead><tr><th>Vin</th><th className="droite">En stock</th><th className="droite">En commande</th><th className="droite">Prix d’achat HTVA</th><th className="droite">À commander</th></tr></thead>
                     <tbody>
@@ -122,7 +143,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                       })}
                     </tbody>
                   </table>
-                </div>
+                </div>}
                 <span><button className="btn rouge" disabled={!b.id && !fournisseurs.length}>Valider la commande{b.id ? ` à ${b.nom}` : ''}</button></span>
               </FormulaireAdmin>
             </details>

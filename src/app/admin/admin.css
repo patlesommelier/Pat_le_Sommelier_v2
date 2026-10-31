@@ -271,3 +271,16 @@ tr.choisi td { background: var(--rose); }
 .lignes-commande li { grid-template-columns: 44px 1fr auto; }
 .prix-ligne { white-space: nowrap; font-variant-numeric: tabular-nums; font-size: 14px; }
 .prix-ligne b { text-align: right; color: var(--texte); }
+
+/* Distributeurs Quid Vinum (Fournisseurs, Commandes de vin) */
+.ligne-distributeur { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: center; border-top: 1px solid var(--ligne); padding-top: 10px; }
+.catalogue-filtre { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.catalogue-filtre input[type=search] { min-width: min(320px, 100%); }
+.catalogue-section td { background: var(--fond); font-weight: 700; font-size: 13px; text-transform: uppercase; letter-spacing: .4px; }
+.grille-coordonnees > form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; align-items: start; }
+.grille-coordonnees > form > .ligne-actions { grid-column: 1 / -1; }
+.recherche, .catalogue-filtre input[type=search], .champ-liste { min-height: 40px; box-sizing: border-box; padding: 8px 14px; border: 1px solid var(--ligne-forte);
+  border-radius: 12px; background: var(--carte); font: 500 15px Outfit, sans-serif; color: var(--texte); }
+.recherche { min-width: min(280px, 100%); }
+.champ-liste { width: 100%; min-width: 200px; font-size: 14px; }
+.recherche:focus, .catalogue-filtre input[type=search]:focus, .champ-liste:focus { border-color: var(--encre); outline: none; box-shadow: 0 0 0 3px var(--rose); }

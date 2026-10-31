@@ -7,6 +7,7 @@ const LIENS = [
   { href: '/admin/super', libelle: 'Restaurants', icone: 'home' },
   { href: '/admin/super/producteurs', libelle: 'Producteurs', icone: 'users' },
   { href: '/admin/super/vins', libelle: 'Vins de la base', icone: 'bottle' },
+  { href: '/admin/super/distributeurs', libelle: 'Distributeurs', icone: 'camion' },
   { href: '/admin/super/principes', libelle: 'Principes de Pat', icone: 'menu' },
   { href: '/admin/super/accords-reference', libelle: 'Accords de référence', icone: 'link' },
   { href: '/admin/super/utilisateurs', libelle: 'Utilisateurs de l’App', icone: 'users' },
