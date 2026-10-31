@@ -12,6 +12,13 @@ const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: 
 /** Case à cocher d'un vin à valider (formulaire « valider-lot » de BarreValidation). */
 const Case = ({ id, statut }: { id: string | null; statut: string | null }) =>
   <td style={{ width: 28 }}>{id && statut === 'propose' && <input type="checkbox" name="ids" value={id} form="valider-lot" aria-label="Sélectionner ce vin à valider" />}</td>;
+/** Bouton « Valider » d'un vin à valider, sur sa ligne (sans ouvrir sa fiche). */
+const ValiderIci = ({ id, retour }: { id: string; retour: string }) => (
+  <form action={validerCuvees} style={{ display: 'inline-block' }}>
+    <input type="hidden" name="ids" value={id} /><input type="hidden" name="retour" value={retour} />
+    <button className="btn petit" title="Valider ce vin dans la base de Pat">Valider</button>
+  </form>
+);
 type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string; erreur?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
@@ -83,7 +90,9 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                   <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteVin(v, true); return <Etat type={k}>{l}</Etat>; })()}</td>
                   <td>{v.cuvee_statut ? <Etat type={STATUT[v.cuvee_statut]?.[1] ?? ''}>{STATUT[v.cuvee_statut]?.[0] ?? v.cuvee_statut}</Etat> : <Etat type="">Pas dans la base</Etat>}</td>
                   <td className="droite">
-                    {v.cuvee_id ? <Link className="lien-ligne" href={`/admin/super/vins/${encodeURIComponent(v.cuvee_id)}?${new URLSearchParams({ retour: ici })}`}>Ouvrir</Link>
+                    {v.cuvee_id ? <span className="ligne-actions" style={{ justifyContent: 'flex-end', flexWrap: 'nowrap', alignItems: 'center' }}>
+                      {v.cuvee_statut === 'propose' && <ValiderIci id={v.cuvee_id} retour={ici} />}
+                      <Link className="lien-ligne" href={`/admin/super/vins/${encodeURIComponent(v.cuvee_id)}?${new URLSearchParams({ retour: ici })}`}>Ouvrir</Link></span>
                       : v.producteur_id ? (
                         <form action={ajouterCuveeDepuisCarte.bind(null, v.id)}><input type="hidden" name="retour" value={ici} /><button className="btn sec petit" title="Ajouter ce vin à la base de Pat">Ajouter</button></form>
                       ) : <Link className="lien-ligne" href={`/admin/${sp.resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: ici })}`} title="Le vin doit d'abord être relié à un producteur">Relier</Link>}
@@ -111,7 +120,8 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                   <td className="droite">{c.sur_cartes || '—'}</td>
                   <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteBase(c); return <Etat type={k}>{l}</Etat>; })()}</td>
                   <td><Etat type={STATUT[c.statut]?.[1] ?? ''}>{STATUT[c.statut]?.[0] ?? c.statut}</Etat></td>
-                  <td className="droite"><Link className="lien-ligne" href={fiche}>Ouvrir</Link></td>
+                  <td className="droite"><span className="ligne-actions" style={{ justifyContent: 'flex-end', flexWrap: 'nowrap', alignItems: 'center' }}>
+                    {c.statut === 'propose' && <ValiderIci id={c.id} retour={ici} />}<Link className="lien-ligne" href={fiche}>Ouvrir</Link></span></td>
                 </tr>
               );
             })}
