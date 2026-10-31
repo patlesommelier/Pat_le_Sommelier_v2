@@ -24,6 +24,7 @@ import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { sslBase } from '@/lib/ssl-base';
+import { creerAppellationProposee } from '@/lib/appellations/base';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
 const avec = (url: string, params: Record<string, string>) => `${url}${url.includes('?') ? '&' : '?'}${new URLSearchParams(params)}`;
@@ -327,7 +328,8 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   if (appellation && c.appellation && cleT(appellation) === cleT(c.appellation)) terroir = c.appellation_id;
   else if (appellation) {
     const candidats = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
-    terroir = candidats.find((x) => cleT(x.nom) === cleT(appellation))?.id ?? null;
+    // Appellation inconnue de la base : ajoutée, à valider dans Appellations (région à préciser là, pour ne pas gêner les regroupements).
+    terroir = candidats.find((x) => cleT(x.nom) === cleT(appellation))?.id ?? await creerAppellationProposee(appellation);
   }
   let etiquette: string | null = null;
   const image = f.get('etiquette');

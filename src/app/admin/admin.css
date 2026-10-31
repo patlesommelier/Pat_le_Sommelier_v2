@@ -288,3 +288,5 @@ tr.choisi td { background: var(--rose); }
 .ligne-producteur { display: flex; flex-wrap: wrap; gap: 10px 20px; align-items: flex-start; border-top: 1px solid var(--ligne); padding: 12px 0; }
 .vignette-catalogue { width: 36px; height: 48px; object-fit: contain; border-radius: 6px; background: #fff; flex: none; }
 .vignette-catalogue.vide { display: inline-block; background: var(--fond); }
+.details-ligne[open] { position: relative; }
+.details-ligne[open] > div { position: absolute; right: 0; z-index: 5; width: 280px; background: var(--carte); border: 1px solid var(--ligne); border-radius: 14px; padding: 14px; box-shadow: 0 10px 30px rgba(36,31,32,.15); }

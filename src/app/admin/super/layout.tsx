@@ -9,7 +9,8 @@ export const dynamic = 'force-dynamic';
 /** Espace super-admin (Pat) : barre latérale foncée. La cuisine interne n'est lisible qu'ici. */
 export default async function LayoutSuper({ children }: { children: React.ReactNode }) {
   const u = await exigerAdmin();
-  const [{ n }] = await requete<{ n: number }>(`select count(*)::int as n from producteur where statut = 'propose'`);
+  const [[{ n }], [{ a }]] = await Promise.all([requete<{ n: number }>(`select count(*)::int as n from producteur where statut = 'propose'`),
+    requete<{ a: number }>(`select count(*)::int as a from terroir where statut = 'propose'`)]);
   return (
     <div className="bo">
       <aside className="bo-nav sombre">
@@ -18,7 +19,7 @@ export default async function LayoutSuper({ children }: { children: React.ReactN
           <img src="/pat/pat-icone-logo.svg" alt="" />
           <span><strong>Pat le sommelier</strong><span>Super-admin</span></span>
         </Link>
-        <NavSuper aValider={n} />
+        <NavSuper aValider={n} appellationsAValider={a} />
         <div className="bo-bas">
           <Link href="/admin" style={{ color: '#EFEBE9' }}>Espace des restaurants →</Link>
           <span>{u.email}</span>
