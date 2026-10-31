@@ -67,7 +67,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             <div className="champ"><label htmlFor="logo">Logo</label><input id="logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
               {d.logo_url ? <label className="aide" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="retirer_logo" /> Retirer le logo actuel</label> : <span className="aide">PNG, JPG, WebP ou SVG</span>}</div>
             <div className="champ"><label htmlFor="source">Source du tarif</label>
-              <select id="source" name="source" defaultValue={d.source}><option value="fichier">Fichier déposé (PDF, Excel ou CSV)</option><option value="api">API du distributeur</option></select></div>
+              <select id="source" name="source" defaultValue={d.source}><option value="fichier">Fichier déposé (PDF, Word, Excel ou CSV)</option><option value="api">API du distributeur</option></select></div>
             <div className="champ"><label htmlFor="modele_lecture">Lecture par Claude</label>
               <select id="modele_lecture" name="modele_lecture" defaultValue={d.modele_lecture}>
                 <option value="sonnet">Sonnet (conseillé)</option><option value="haiku">Haiku (le moins cher)</option><option value="opus">Opus (le plus précis, le plus cher)</option>
