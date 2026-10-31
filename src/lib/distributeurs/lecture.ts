@@ -6,6 +6,7 @@
 // un vin déjà connu (même clé) garde son prix imposé et son rattachement choisi par Pat ; un vin absent du tarif n'est plus proposé.
 // Sans « server-only » : lancé en arrière-plan par le serveur.
 import { randomUUID } from 'node:crypto';
+import Anthropic from '@anthropic-ai/sdk';
 import type { Requete } from '../generation/accords';
 import { clientClaude, modeleLecture } from '../claude';
 import { pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type Tableau } from './sources';
@@ -50,14 +51,44 @@ ex. « SPFER200 », sinon null), « epuise » (true si la ligne dit épuisé), �
 « couleur » parmi bulles, blanc, rose, rouge, doux, orange (selon le nom ou l'appellation ; null si impossible à savoir),
 « certification » (BIO, BIODY, RAI… indiqué pour le domaine, ou null), « section » (le titre de région ou de liste au-dessus, ou null).
 Les lignes qui ne sont pas des vins (conditions de vente, légende, coordonnées, boutons du site) et les articles à 0,00 € sont ignorés.
-N'invente rien. Réponds uniquement en JSON, sans texte autour : [{"producteur": "...", "vin": "...", "millesime": "2023", "contenance": null, "prix": 12.5,
-"prix_catalogue": null, "reference": null, "epuise": false, "max": null, "couleur": "blanc", "certification": "BIO", "section": "Bourgogne"}] ([] s'il n'y a aucun vin).`;
+N'invente rien. Réponds uniquement en JSON, sans texte autour : {"vins": [{"producteur": "...", "vin": "...", "millesime": "2023", "contenance": null, "prix": 12.5,
+"prix_catalogue": null, "reference": null, "epuise": false, "max": null, "couleur": "blanc", "certification": "BIO", "section": "Bourgogne"}]} ({"vins": []} s'il n'y a aucun vin).`;
 
-function tableau(t: string): unknown[] | null {
-  const debut = t.indexOf('['), fin = t.lastIndexOf(']');
-  if (debut < 0 || fin < debut) return null;
-  try { const v = JSON.parse(t.slice(debut, fin + 1)); return Array.isArray(v) ? v : null; } catch { return null; }
+/**
+ * Vins de la réponse de Claude : {"vins": [...]} ou [...], avec ou sans balises de code. Une réponse abîmée (coupée, guillemet
+ * mal échappé) garde les vins lisibles, un par un. Une réponse sans aucun objet (« aucun vin ici ») : liste vide. Illisible : null.
+ */
+export function extraireVins(texte: string): unknown[] | null {
+  const t = texte.replace(/```(?:json)?/g, '');
+  const debut = t.search(/[[{]/), fin = Math.max(t.lastIndexOf(']'), t.lastIndexOf('}'));
+  if (debut < 0) return [];
+  try {
+    const v = JSON.parse(t.slice(debut, fin + 1));
+    if (Array.isArray(v)) return v;
+    if (v && typeof v === 'object' && Array.isArray((v as { vins?: unknown }).vins)) return (v as { vins: unknown[] }).vins;
+  } catch { /* réponse abîmée : on garde ce qui se lit */ }
+  const objets = [...t.matchAll(/\{[^{}]*\}/g)].flatMap((m) => { try { return [JSON.parse(m[0])]; } catch { return []; } })
+    .filter((o) => o && typeof o === 'object' && 'vin' in o);
+  return objets.length ? objets : null;
 }
+
+// Forme imposée à la réponse (sorties structurées de l'API) : chaque champ présent, null quand il manque.
+const nullable = (type: string) => ({ type: [type, 'null'] });
+const FORMAT_VINS = {
+  type: 'json_schema',
+  schema: {
+    type: 'object', additionalProperties: false, required: ['vins'],
+    properties: { vins: { type: 'array', items: {
+      type: 'object', additionalProperties: false,
+      required: ['producteur', 'vin', 'millesime', 'contenance', 'prix', 'prix_catalogue', 'reference', 'epuise', 'max', 'couleur', 'certification', 'section'],
+      properties: {
+        producteur: nullable('string'), vin: { type: 'string' }, millesime: nullable('string'), contenance: nullable('string'),
+        prix: nullable('number'), prix_catalogue: nullable('number'), reference: nullable('string'), epuise: { type: 'boolean' },
+        max: nullable('integer'), couleur: nullable('string'), certification: nullable('string'), section: nullable('string'),
+      },
+    } } },
+  },
+};
 
 /** PDF scanné : le document lui-même, quelques pages par appel (Claude est plus précis), jusqu'à la dernière page. */
 export async function lireVinsDuPdfImage(pdf: Buffer, modele: string): Promise<VinTarif[]> {
@@ -71,8 +102,8 @@ export async function lireVinsDuPdfImage(pdf: Buffer, modele: string): Promise<V
       messages: [{ role: 'user', content: [document, { type: 'text', text: consigne(de, de + PAGES_PAR_LECTURE - 1) }] }],
     }).finalMessage();
     const t = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
-    if (t.includes(FIN) && !/\[\s*\{/.test(t)) return 'fin';
-    const v = tableau(t);
+    if (t.includes(FIN) && !/\{/.test(t)) return 'fin';
+    const v = extraireVins(t);
     if (!v) throw new Error(`réponse illisible pour les pages ${de} à ${de + PAGES_PAR_LECTURE - 1}`);
     return v;
   };
@@ -92,23 +123,50 @@ export async function lireVinsDuPdfImage(pdf: Buffer, modele: string): Promise<V
 const CARACTERES_PAR_LECTURE = 14000; // quelques pages de tarif : une réponse courte et précise
 
 /** Texte (pages d'un PDF, tableau, réponse d'API) lu par morceaux, trois à la fois. */
-export async function lireVinsDuTexte(morceaux: string[], modele: string): Promise<VinTarif[]> {
+export async function lireVinsDuTexte(morceaux: string[], modele: string): Promise<{ vins: VinTarif[]; ignores: number }> {
   // Morceaux regroupés jusqu'à la taille d'une lecture (une page n'est jamais coupée, sauf si elle dépasse à elle seule).
   const lots: string[] = [];
   for (const m of morceaux.flatMap((x) => (x.length > CARACTERES_PAR_LECTURE ? x.match(new RegExp(`[^]{1,${CARACTERES_PAR_LECTURE}}(?=\\n|$)`, 'g')) ?? [x] : [x]))) {
     if (lots.length && lots[lots.length - 1].length + m.length < CARACTERES_PAR_LECTURE) lots[lots.length - 1] += `\n${m}`; else lots.push(m);
   }
   const client = clientClaude({ maxRetries: 3 });
-  const lire = async (texte: string) => {
-    const m = await client.messages.stream({ model: modele, max_tokens: 32000, messages: [{ role: 'user', content: consigneTexte(texte) }] }).finalMessage();
-    const v = tableau(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
-    if (!v) throw new Error('réponse illisible pour un extrait du tarif');
-    return v;
+  let avecFormat = true; // sorties structurées ; si l'API les refuse, la consigne seule suffit
+  const demander = async (texte: string) => {
+    const corps = { model: modele, max_tokens: 32000, messages: [{ role: 'user' as const, content: consigneTexte(texte) }] };
+    if (!avecFormat) return client.messages.stream(corps).finalMessage();
+    try {
+      return await client.messages.stream({ ...corps, output_config: { format: FORMAT_VINS } } as Anthropic.MessageStreamParams).finalMessage();
+    } catch (e) {
+      // Format refusé (400) : toutes les lectures suivantes s'en passent (y compris celles lancées en même temps).
+      if (!(e instanceof Anthropic.BadRequestError)) throw e;
+      avecFormat = false;
+      return client.messages.stream(corps).finalMessage();
+    }
+  };
+  let ignores = 0;
+  // Un extrait : réponse coupée (trop longue) → relu en deux moitiés ; illisible → relu une fois, puis laissé de côté (compté).
+  const lire = async (texte: string, essai = 1): Promise<unknown[]> => {
+    const m = await demander(texte);
+    const lignes = texte.split('\n');
+    if (m.stop_reason === 'max_tokens' && lignes.length > 20) {
+      const milieu = Math.floor(lignes.length / 2);
+      return [...await lire(lignes.slice(0, milieu).join('\n')), ...await lire(lignes.slice(milieu).join('\n'))];
+    }
+    const v = extraireVins(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
+    if (v) return v;
+    if (essai < 2) return lire(texte, essai + 1);
+    console.warn('[tarif] extrait illisible, laissé de côté :', texte.slice(0, 120));
+    ignores++;
+    return [];
   };
   const bruts: unknown[] = [];
-  for (let i = 0; i < lots.length; i += LECTURES_EN_PARALLELE) bruts.push(...(await Promise.all(lots.slice(i, i + LECTURES_EN_PARALLELE).map(lire))).flat());
-  return dedoublonner(bruts.map(vinTarif).filter((v): v is VinTarif => v !== null));
+  for (let i = 0; i < lots.length; i += LECTURES_EN_PARALLELE) bruts.push(...(await Promise.all(lots.slice(i, i + LECTURES_EN_PARALLELE).map((l) => lire(l)))).flat());
+  return { vins: dedoublonner(bruts.map(vinTarif).filter((v): v is VinTarif => v !== null)), ignores };
 }
+
+/** Méthode de lecture, avec les extraits laissés de côté s'il y en a. */
+const avecIgnores = (methode: string, ignores: number) =>
+  ignores ? `${methode} ; ${ignores} extrait${ignores > 1 ? 's' : ''} n’${ignores > 1 ? 'ont' : 'a'} pas pu être lu${ignores > 1 ? 's' : ''}, relisez le tarif` : methode;
 
 /** Tableau : colonnes reconnues (sans IA), sinon son texte lu par le modèle. */
 async function lireTableau(t: Tableau, modele: ModeleTarif) {
@@ -117,7 +175,8 @@ async function lireTableau(t: Tableau, modele: ModeleTarif) {
   const lignes = texteDuTableau(t).split('\n');
   const morceaux: string[] = [];
   for (let i = 0; i < lignes.length; i += 150) morceaux.push([lignes[0], ...lignes.slice(Math.max(i, 1), i + 150)].join('\n')); // titres répétés
-  return { vins: await lireVinsDuTexte(morceaux, modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (colonnes non reconnues)` };
+  const lu = await lireVinsDuTexte(morceaux, modeleTarif(modele));
+  return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (colonnes non reconnues)`, lu.ignores) };
 }
 
 /** Un fichier de tarif (PDF, Excel ou CSV), lu par la méthode la moins chère qui convient. */
@@ -125,7 +184,8 @@ export async function lireFichierTarif(octets: Uint8Array, type: string, nom: st
   if (type === 'application/pdf') {
     const pages = await textePdf(octets);
     if (pdfSansTexte(pages)) return { vins: await lireVinsDuPdfImage(Buffer.from(octets), modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (PDF scanné, lu comme une image)` };
-    return { vins: await lireVinsDuTexte(pages.map((p, i) => `--- page ${i + 1} ---\n${p}`), modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (texte du PDF)` };
+    const lu = await lireVinsDuTexte(pages.map((p, i) => `--- page ${i + 1} ---\n${p}`), modeleTarif(modele));
+    return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (texte du PDF)`, lu.ignores) };
   }
   // Texte collé depuis le site du distributeur : lu par morceaux de 120 lignes environ (une ligne vide ne coupe jamais un article en deux).
   if (type === 'text/plain') {
@@ -134,7 +194,8 @@ export async function lireFichierTarif(octets: Uint8Array, type: string, nom: st
     for (const b of blocs) {
       if (morceaux.length && morceaux[morceaux.length - 1].split('\n').length < 120) morceaux[morceaux.length - 1] += `\n\n${b}`; else morceaux.push(b);
     }
-    return { vins: await lireVinsDuTexte(morceaux, modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (texte collé)` };
+    const lu = await lireVinsDuTexte(morceaux, modeleTarif(modele));
+    return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (texte collé)`, lu.ignores) };
   }
   if (/\.csv$/i.test(nom) || type === 'text/csv') return lireTableau(tableauCsv(Buffer.from(octets).toString('utf8').replace(/^\uFEFF/, '')), modele);
   return lireTableau(await tableauExcel(octets), modele);
@@ -155,7 +216,8 @@ export async function lireApiTarif(url: string, entete: string | null, cle: stri
     if (t) return lireTableau(t, modele);
     const texte = JSON.stringify(donnees, null, 1);
     const morceaux = texte.match(new RegExp(`[^]{1,${CARACTERES_PAR_LECTURE}}`, 'g')) ?? [];
-    return { vins: await lireVinsDuTexte(morceaux, modeleTarif(modele)), methode: `${NOMS_MODELES[modele]} (réponse de l’API)` };
+    const lu = await lireVinsDuTexte(morceaux, modeleTarif(modele));
+    return { vins: lu.vins, incomplet: lu.ignores > 0, methode: avecIgnores(`${NOMS_MODELES[modele]} (réponse de l’API)`, lu.ignores) };
   }
   return lireFichierTarif(octets, type === 'application/pdf' || Buffer.from(octets.subarray(0, 4)).toString() === '%PDF' ? 'application/pdf' : type, /csv/.test(type) ? 'api.csv' : 'api.xlsx', modele);
 }
@@ -165,7 +227,7 @@ export async function lireApiTarif(url: string, entete: string | null, cle: stri
  * retirés de la proposition (gardés pour les anciennes commandes). Le producteur de la base de Pat est retrouvé par son nom,
  * sauf s'il a été choisi à la main. Renvoie les compteurs.
  */
-export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: string, vins: VinTarif[]) {
+export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: string, vins: VinTarif[], { retirer = true } = {}) {
   // Producteurs choisis à la main par Pat pour ce distributeur (par le nom écrit sur le tarif) : repris pour les nouveaux vins.
   const choisis = new Map((await requete<{ nom: string; producteur_id: string | null; manuel: boolean }>(
     `select distinct on (producteur_texte) producteur_texte as nom, producteur_id, producteur_manuel as manuel from distributeur_vin
@@ -195,9 +257,10 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
     [distributeurId, uniques.map(() => randomUUID()), col('cle'), col('section'), col('producteur'), col('libelle'), col('millesime'), col('contenance'),
       col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre'), col('manuel'),
       uniques.map((l) => l.reference ?? null), uniques.map((l) => l.prixCatalogue ?? null)]);
-  const retires = await requete<{ id: string }>(
+  // Lecture incomplète (un extrait illisible) : aucun vin n'est retiré, faute de savoir s'il manquait vraiment.
+  const retires = retirer ? await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,
-    [distributeurId, col('cle')]);
+    [distributeurId, col('cle')]) : [];
   await rattacherCuvees(requete, distributeurId);
   return { lus: uniques.length, nouveaux: uniques.filter((l) => !avant.has(l.cle)).length, retires: retires.length,
     rattaches: uniques.filter((l) => l.producteur_id).length };
@@ -211,7 +274,7 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
     const [d] = await requete<{ modele_lecture: ModeleTarif; api_url: string | null; api_entete: string | null; api_cle: string | null }>(
       'select modele_lecture, api_url, api_entete, api_cle from distributeur where id = $1', [distributeurId]);
     if (!d) return;
-    let lu: { vins: VinTarif[]; methode: string }, source: string, html: string | null = null;
+    let lu: { vins: VinTarif[]; methode: string; incomplet?: boolean }, source: string, html: string | null = null;
     if (depuis === 'api') {
       if (!d.api_url) { await etat('echec', 'Aucune adresse d’API enregistrée.'); return; }
       await etat('en_cours', 'Lecture du tarif depuis l’API du distributeur…');
@@ -228,7 +291,7 @@ export async function lireTarif(requete: Requete, distributeurId: string, depuis
       html = t.html;
     }
     if (!lu.vins.length) { await etat('echec', `Aucun vin trouvé dans ${source}.`); return; }
-    const n = await enregistrerVinsDuTarif(requete, distributeurId, lu.vins);
+    const n = await enregistrerVinsDuTarif(requete, distributeurId, lu.vins, { retirer: !lu.incomplet });
     const fin = `${n.lus} vins lus dans ${source} (${lu.methode}) : ${n.nouveaux} nouveaux, ${n.retires} retirés, ${n.rattaches} rattachés à un producteur de la base.`;
     if (html) {
       await etat('en_cours', `${fin} Copie des étiquettes…`);
