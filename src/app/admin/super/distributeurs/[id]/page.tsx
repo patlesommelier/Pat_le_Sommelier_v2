@@ -195,7 +195,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
-            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || sansPhoto.n > 0 || aRecadrer > 0 || d.completion_statut) && (
+            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || sansPhoto.distributeur > 0 || aRecadrer > 0 || d.completion_statut) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
                   <b>Cépages, appellations et étiquettes</b>
@@ -209,15 +209,20 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                     </FormulaireAdmin>
                   )}
                 </div>
-                {sansPhoto.n > 0 && !rechercheEnCours && (
+                {sansPhoto.distributeur > 0 && !rechercheEnCours && (
+                  // Recherche des étiquettes sur le web : toujours proposée, sur les vins choisis et au nombre choisi.
                   <FormulaireAdmin action={chercherPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
-                    <span className="petit">{sansPhoto.n} vin{sansPhoto.n > 1 ? 's' : ''} sans photo{sansPhoto.deja > 0 && <> (dont {sansPhoto.deja} déjà cherché{sansPhoto.deja > 1 ? 's' : ''} sur le web)</>} :</span>
-                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Combien de vins ?
- 
+                    <b className="petit">Étiquettes sur le web :</b>
+                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Quels vins ?
+                      <select name="perimetre" defaultValue={sansPhoto.n > 0 ? 'sans_etiquette' : 'photos_distributeur'} className="champ-liste" style={{ width: 'auto', minWidth: 0 }}>
+                        <option value="sans_etiquette">sans étiquette : pas de photo ou vignette ({sansPhoto.n})</option>
+                        <option value="photos_distributeur">tous ceux dont la photo vient du distributeur ({sansPhoto.distributeur})</option>
+                      </select></label>
+                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Combien ?
                       <input type="number" name="limite" min={1} placeholder="tous" style={{ width: 90, minWidth: 0 }} className="champ-liste" aria-label="Nombre de vins à chercher (vide : tous)" /></label>
-                    <button className="btn sec petit">Chercher les photos sur le web</button>
-                    {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" defaultChecked={sansPhoto.n === sansPhoto.deja} /> aussi les {sansPhoto.deja} déjà cherchés</label>}
-                    <span className="petit discret">(sites des producteurs d’abord, puis cavistes ; quelques centimes par vin)</span>
+                    <button className="btn sec petit">Chercher les étiquettes</button>
+                    {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" /> aussi les {sansPhoto.deja} déjà cherchés</label>}
+                    <span className="petit discret">(site du producteur d’abord, puis cavistes ; l’étiquette trouvée remplace la photo du distributeur ; quelques centimes par vin)</span>
                   </FormulaireAdmin>
                 )}
                 {aRecadrer > 0 && !rechercheEnCours && (

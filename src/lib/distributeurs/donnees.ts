@@ -4,6 +4,7 @@ import 'server-only';
 // - restaurants : le catalogue au prix proposé seulement, jamais le prix QV ni la marge.
 import { requete } from '../db';
 import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rattachement';
+import { SQL_PHOTO_DISTRIBUTEUR, SQL_SANS_ETIQUETTE } from './completer';
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
@@ -106,12 +107,16 @@ export async function vinsACompleter(id: string) {
   return r;
 }
 
-/** Vins de ce distributeur dans la base, sans photo du tout ; et parmi eux, ceux dont la photo a déjà été cherchée sur le web. */
+/**
+ * Vins de ce distributeur dans la base, pour la recherche des étiquettes sur le web : sans étiquette lisible (pas de photo, ou vignette
+ * trop petite ou sans étiquette lisible), ceux dont la photo vient d'un distributeur, et ceux déjà cherchés sur le web.
+ */
 export async function vinsSansPhoto(id: string) {
-  const [r] = await requete<{ n: number; deja: number }>(
-    `select count(*)::int as n, count(*) filter (where deja)::int as deja from (
-       select c.id, bool_or(v.photo_cherche_le is not null) as deja from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
-        where c.statut <> 'retire' and c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)
+  const [r] = await requete<{ n: number; distributeur: number; deja: number }>(
+    `select count(*) filter (where sans)::int as n, count(*)::int as distributeur, count(*) filter (where deja)::int as deja from (
+       select c.id, bool_or(${SQL_SANS_ETIQUETTE}) as sans, bool_or(v.photo_cherche_le is not null) as deja
+         from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+        where c.statut <> 'retire' and ${SQL_PHOTO_DISTRIBUTEUR}
         group by c.id) x`, [id]);
   return r;
 }

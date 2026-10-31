@@ -32,7 +32,10 @@ et de la hauteur de l'image, depuis le coin en haut à gauche : {"x": 0.30, "y":
 (l'étiquette principale seulement, pas la collerette ni la capsule). Si aucune étiquette n'est lisible, réponds {"aucune": true}.
 Réponds uniquement en JSON, sans texte autour.`;
 
-export type Recadrage = { octets: Buffer; type: string; resultat: 'recadree' | 'deja' | 'aucune' | 'echec' };
+export type Recadrage = { octets: Buffer; type: string; resultat: 'recadree' | 'deja' | 'aucune' | 'petite' | 'echec' };
+
+/** En dessous de cette taille (plus petit côté, en pixels), une photo ne permet pas de lire une étiquette : vignette à remplacer. */
+export const COTE_MINIMUM = 300;
 
 /** Image recadrée sur l'étiquette (JPEG) ; l'image d'origine si elle est déjà l'étiquette, ou si le cadre n'a pas pu être trouvé. */
 export async function recadrerSurEtiquette(client: Anthropic, modele: string, octets: Buffer, type: string): Promise<Recadrage> {
@@ -40,6 +43,7 @@ export async function recadrerSurEtiquette(client: Anthropic, modele: string, oc
     const image = sharp(octets).rotate();
     const { width = 0, height = 0 } = await image.metadata();
     if (!width || !height) return { octets, type, resultat: 'echec' };
+    if (Math.min(width, height) < COTE_MINIMUM) return { octets, type, resultat: 'petite' }; // vignette : sans appel à Claude
     const apercu = await sharp(octets).rotate().resize(1200, 1200, { fit: 'inside', withoutEnlargement: true }).jpeg({ quality: 85 }).toBuffer();
     const m = await client.messages.create({
       model: modele, max_tokens: 400,
