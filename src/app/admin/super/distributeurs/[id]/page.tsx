@@ -197,8 +197,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             {(aCompleter > 0 || d.completion_statut) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
-                  <b>Cépages et appellations</b>
-                  {aCompleter > 0 && <span className="petit">{aCompleter} vin{aCompleter > 1 ? 's' : ''} à valider sans cépages ou sans appellation.</span>}
+                  <b>Cépages, appellations et photos</b>
+                  {aCompleter > 0 && <span className="petit">{aCompleter} vin{aCompleter > 1 ? 's' : ''} à valider sans cépages, sans appellation ou sans photo.</span>}
                   {aCompleter > 0 && !rechercheEnCours && (
                     <FormulaireAdmin action={completerVins.bind(null, id)}>
                       <button className="btn sec petit">Les chercher sur {domaine ?? 'le web'}</button>

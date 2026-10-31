@@ -92,11 +92,12 @@ export async function getCuveesDistributeur(id: string) {
       order by c.nom`, [id]);
 }
 
-/** Vins à valider de ce distributeur (dans la base de Pat) auxquels il manque les cépages ou l'appellation. */
+/** Vins à valider de ce distributeur (dans la base de Pat) auxquels il manque les cépages, l'appellation ou la photo. */
 export async function vinsACompleter(id: string) {
   const [{ n }] = await requete<{ n: number }>(
     `select count(distinct c.id)::int as n from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
-      where c.statut = 'propose' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = ''))`, [id]);
+      where c.statut = 'propose' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
+            or (c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)))`, [id]);
   return n;
 }
 

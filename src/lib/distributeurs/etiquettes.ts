@@ -36,6 +36,17 @@ async function telecharger(url: string): Promise<{ octets: Buffer; type: string 
   }
 }
 
+/**
+ * Photo trouvée sur le site du distributeur (adresse) : téléchargée, vérifiée (une vraie image, pas une icône) et gardée chez nous ;
+ * null si elle n'est pas accessible ou n'en est pas une.
+ */
+export async function copierImageDuSite(url: string, nom: string): Promise<string | null> {
+  if (!/^https?:\/\//i.test(url)) return null;
+  const contenu = await telecharger(url);
+  if (!contenu || contenu.octets.length < 3000) return null; // trop petite : icône, logo ou pixel
+  return garder(contenu.octets, contenu.type, nom).catch(() => null);
+}
+
 /** Vins du distributeur qui ont une étiquette, donnée aux cuvées reliées qui n'en ont pas encore. */
 export async function partagerEtiquettesDistributeur(requete: Requete, distributeurId: string) {
   await requete(
