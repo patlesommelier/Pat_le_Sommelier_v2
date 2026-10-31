@@ -141,8 +141,8 @@ export interface CuveeListe {
  */
 export type OrigineVins = 'utilises' | 'cartes' | 'distributeurs' | 'tous';
 
-export async function rechercherCuvees({ texte = '', couleur = '', statut = '', restaurant = '', origine = 'tous', page = 0 }:
-  { texte?: string; couleur?: string; statut?: string; restaurant?: string; origine?: OrigineVins; page?: number }) {
+export async function rechercherCuvees({ texte = '', couleur = '', statut = '', restaurant = '', origine = 'tous', distributeur = '', page = 0 }:
+  { texte?: string; couleur?: string; statut?: string; restaurant?: string; origine?: OrigineVins; distributeur?: string; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<CuveeListe>(
     `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur, c.producteur_id, p.nom as producteur, coalesce(c.appellation_texte, t.nom) as appellation,
@@ -161,8 +161,9 @@ export async function rechercherCuvees({ texte = '', couleur = '', statut = '', 
         and ($5 = 'tous'
           or ($5 in ('utilises', 'cartes') and exists (select 1 from vin_carte v where v.cuvee_id = c.id))
           or ($5 in ('utilises', 'distributeurs') and exists (select 1 from distributeur_vin d where d.cuvee_id = c.id and d.actif)))
+        and ($7 = '' or exists (select 1 from distributeur_vin d where d.cuvee_id = c.id and d.distributeur_id = $7 and d.actif))
       order by (select count(*) from vin_carte v where v.cuvee_id = c.id) desc, p.nom, c.nom
-      limit 50 offset $6`, [texte.trim(), couleur, statut, restaurant, origine, page * 50]);
+      limit 50 offset $6`, [texte.trim(), couleur, statut, restaurant, origine, page * 50, distributeur]);
   return { lignes, total: lignes[0]?.total ?? 0 };
 }
 

@@ -186,6 +186,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           <section className="pile">
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'baseline', justifyContent: 'space-between' }}>
               <h2 style={{ margin: 0 }}>Vins <span className="discret" style={{ fontWeight: 500 }}>{actifs.length} proposés · {rattaches} d’un producteur de la base · {dansLaBase} vins de la base</span></h2>
+              <Link href={`/admin/super/vins?${new URLSearchParams({ distrib: id, statut: 'propose' })}`} className="btn fantome petit">Voir ses vins à valider dans la base →</Link>
               <form className="ligne-actions" style={{ alignItems: 'center' }}>
                 <input name="q" defaultValue={sp.q ?? ''} type="search" className="recherche" placeholder="Chercher un vin, un domaine…" aria-label="Chercher" />
                 <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="tous" value="1" defaultChecked={Boolean(sp.tous)} /> Avec les vins retirés</label>

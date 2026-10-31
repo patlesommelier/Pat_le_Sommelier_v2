@@ -4,6 +4,7 @@ import { nomsProducteurs, rechercherCuvees, restaurantsListe, vinsDeLaCarte, typ
 import { ajouterCuveeDepuisCarte, ajouterVinBase, validerCuvees } from '../actions';
 import { BarreValidation, CocherTout } from '@/components/admin/ValidationGroupee';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
+import { requete } from '@/lib/db';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
 
@@ -19,7 +20,7 @@ const ValiderIci = ({ id, retour }: { id: string; retour: string }) => (
     <button className="btn petit" title="Valider ce vin dans la base de Pat">Valider</button>
   </form>
 );
-type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; page?: string; vin?: string; ok?: string; erreur?: string };
+type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; distrib?: string; page?: string; vin?: string; ok?: string; erreur?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
 export default async function VinsBase({ searchParams }: { searchParams: Promise<Sp> }) {
@@ -30,15 +31,16 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   // seulement les distributeurs, ou toute la base (« 0 », comme avant).
   const origine: OrigineVins = sp.cartes === '0' ? 'tous' : sp.cartes === 'cartes' ? 'cartes' : sp.cartes === 'distributeurs' ? 'distributeurs' : 'utilises';
   // Un restaurant choisi : tous les vins de sa carte, reliés ou non à un vin de la base.
-  const [{ lignes, total }, carte, restos, producteurs] = await Promise.all([
-    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', origine, page }),
+  const [{ lignes, total }, carte, restos, producteurs, distributeurs] = await Promise.all([
+    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', origine, distributeur: sp.distrib ?? '', page }),
     sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', page }) : null,
     restaurantsListe(), nomsProducteurs(),
+    requete<{ id: string; nom: string }>('select id, nom from distributeur order by lower(nom)'),
   ]);
   const nombre = carte ? carte.total : total;
   // Adresse de la liste telle qu'affichée (filtres et page) : la fiche y ramène après une validation.
-  const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
-  const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, ...extra }).filter(([, v]) => v) as [string, string][])}`;
+  const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
+  const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, ...extra }).filter(([, v]) => v) as [string, string][])}`;
 
   return (
     <>
@@ -73,6 +75,8 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
         {!sp.resto && <div className="champ"><label htmlFor="cartes">Vins</label>
           <select id="cartes" name="cartes" defaultValue={sp.cartes ?? ''}><option value="">Sur une carte ou chez un distributeur</option><option value="cartes">Sur une carte de restaurant</option>
             <option value="distributeurs">Chez un distributeur</option><option value="0">Toute la base</option></select></div>}
+        {!sp.resto && distributeurs.length > 0 && <div className="champ"><label htmlFor="distrib">Distributeur</label>
+          <select id="distrib" name="distrib" defaultValue={sp.distrib ?? ''}><option value="">Tous</option>{distributeurs.map((d) => <option key={d.id} value={d.id}>{d.nom}</option>)}</select></div>}
         <button className="btn petit">Filtrer</button>
       </form>
 
