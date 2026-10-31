@@ -16,6 +16,7 @@ import { partagerEtiquettes } from '../src/lib/etiquettes/partage';
 import { rattacherProducteurs } from '../src/lib/producteurs/rattachement';
 import { recomposerIntitules } from './lib/intitules';
 import { importerAccordsReference } from '../src/lib/app/import';
+import { ajouterCuveesManquantes } from '../src/lib/distributeurs/rattachement';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -49,6 +50,11 @@ async function main() {
     // Étiquettes rattachées aux cuvées de la base de Pat (idempotent : ne fait rien quand tout est à jour).
     const recues = await partagerEtiquettes(async (sql, params = []) => (await client.query(sql, params)).rows);
     if (recues) console.log(`Étiquettes partagées par cuvée : ${recues} vin(s).`);
+    // Vins des distributeurs dont le producteur est connu : ajoutés à la base de Pat, à valider (idempotent).
+    const q = async <T,>(sql: string, params: unknown[] = []) => (await client.query(sql, params)).rows as T[];
+    let ajoutes = 0;
+    for (const { id } of await q<{ id: string }>('select id from distributeur')) ajoutes += await ajouterCuveesManquantes(q, id);
+    if (ajoutes) console.log(`Vins des distributeurs ajoutés à la base : ${ajoutes}.`);
   } catch (e) {
     await client.query('rollback');
     throw e;

@@ -101,7 +101,9 @@ export async function relierProducteur(requete: Requete, distributeurId: string,
     `update distributeur_vin set producteur_id = $3, producteur_manuel = true, cuvee_id = case when producteur_id is distinct from $3 then null else cuvee_id end,
             cuvee_manuel = case when producteur_id is distinct from $3 then false else cuvee_manuel end
       where distributeur_id = $1 and coalesce(producteur_texte, '') = $2`, [distributeurId, nomTarif, producteurId]);
+  // Ses vins : reliés à ceux de la base, ou ajoutés à la base (à valider).
   await rattacherCuvees(requete, distributeurId);
+  if (producteurId) await ajouterCuveesManquantes(requete, distributeurId);
 }
 
 /** Vins des producteurs rattachés, sans cuvée dans la base : ajoutés comme cuvées « proposées » (à valider dans Vins de la base). */

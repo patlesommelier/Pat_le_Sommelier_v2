@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
-import { nomsProducteurs, rechercherCuvees, restaurantsListe, vinsDeLaCarte } from '@/lib/super/donnees';
+import { nomsProducteurs, rechercherCuvees, restaurantsListe, vinsDeLaCarte, type OrigineVins } from '@/lib/super/donnees';
 import { ajouterCuveeDepuisCarte, ajouterVinBase, validerCuvees } from '../actions';
 import { BarreValidation, CocherTout } from '@/components/admin/ValidationGroupee';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
@@ -26,10 +26,12 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const page = Math.max(0, Number(sp.page) || 0);
-  const surCartes = sp.cartes !== '0';
+  // Origine (paramètre « cartes ») : vins utilisés (sur une carte ou chez un distributeur, par défaut), seulement les cartes,
+  // seulement les distributeurs, ou toute la base (« 0 », comme avant).
+  const origine: OrigineVins = sp.cartes === '0' ? 'tous' : sp.cartes === 'cartes' ? 'cartes' : sp.cartes === 'distributeurs' ? 'distributeurs' : 'utilises';
   // Un restaurant choisi : tous les vins de sa carte, reliés ou non à un vin de la base.
   const [{ lignes, total }, carte, restos, producteurs] = await Promise.all([
-    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', surCartes, page }),
+    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', origine, page }),
     sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', page }) : null,
     restaurantsListe(), nomsProducteurs(),
   ]);
@@ -69,7 +71,8 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
         <div className="champ"><label htmlFor="resto">Restaurant</label>
           <select id="resto" name="resto" defaultValue={sp.resto ?? ''}><option value="">Tous</option>{restos.map((r) => <option key={r.id} value={r.id}>{r.nom}</option>)}</select></div>
         {!sp.resto && <div className="champ"><label htmlFor="cartes">Vins</label>
-          <select id="cartes" name="cartes" defaultValue={surCartes ? '' : '0'}><option value="">Sur une carte de restaurant</option><option value="0">Toute la base</option></select></div>}
+          <select id="cartes" name="cartes" defaultValue={sp.cartes ?? ''}><option value="">Sur une carte ou chez un distributeur</option><option value="cartes">Sur une carte de restaurant</option>
+            <option value="distributeurs">Chez un distributeur</option><option value="0">Toute la base</option></select></div>}
         <button className="btn petit">Filtrer</button>
       </form>
 
@@ -106,7 +109,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
       ) : (
       <div className="tableau">
         <table className="table-vins" style={{ minWidth: 820 }}>
-          <thead><tr><th><CocherTout /></th><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th>Étiquette</th><th>Statut</th><th /></tr></thead>
+          <thead><tr><th><CocherTout /></th><th>Vin</th><th>Producteur</th><th>Appellation</th><th>Cépages</th><th className="droite">Cartes</th><th className="droite" title="Chez combien de distributeurs">Distrib.</th><th>Étiquette</th><th>Statut</th><th /></tr></thead>
           <tbody>
             {lignes.map((c) => {
               const fiche = `/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: ici })}`;
@@ -118,6 +121,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                   <td>{c.appellation ?? '—'}</td>
                   <td className="petit" style={{ maxWidth: 160 }}>{c.cepages ?? '—'}</td>
                   <td className="droite">{c.sur_cartes || '—'}</td>
+                  <td className="droite">{c.chez_distributeurs || '—'}</td>
                   <td className="col-etiquette">{(() => { const [l, k] = etatEtiquetteBase(c); return <Etat type={k}>{l}</Etat>; })()}</td>
                   <td><Etat type={STATUT[c.statut]?.[1] ?? ''}>{STATUT[c.statut]?.[0] ?? c.statut}</Etat></td>
                   <td className="droite"><span className="ligne-actions" style={{ justifyContent: 'flex-end', flexWrap: 'nowrap', alignItems: 'center' }}>
@@ -125,7 +129,7 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
                 </tr>
               );
             })}
-            {!lignes.length && <tr><td colSpan={9} className="discret">Aucun vin ne correspond.</td></tr>}
+            {!lignes.length && <tr><td colSpan={10} className="discret">Aucun vin ne correspond.</td></tr>}
           </tbody>
         </table>
       </div>

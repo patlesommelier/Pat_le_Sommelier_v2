@@ -12,7 +12,7 @@ import { clientClaude, modeleLecture } from '../claude';
 import { lireDocx, pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type ImageArticle, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
 import { cleVin, dedoublonner, vinTarif, type VinTarif } from './tarif';
-import { rattacherCuvees } from './rattachement';
+import { ajouterCuveesManquantes, rattacherCuvees } from './rattachement';
 import { appliquerImages, etiquettesDuCollage } from './etiquettes';
 
 const PAGES_PAR_LECTURE = 4;
@@ -272,7 +272,9 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   const retires = retirer ? await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,
     [distributeurId, col('cle')]) : [];
+  // Vins des producteurs connus : reliés à leur vin de la base, ou ajoutés à la base (à valider dans Vins de la base).
   await rattacherCuvees(requete, distributeurId);
+  await ajouterCuveesManquantes(requete, distributeurId);
   return { lus: uniques.length, nouveaux: uniques.filter((l) => !avant.has(l.cle)).length, retires: retires.length,
     rattaches: uniques.filter((l) => l.producteur_id).length };
 }
