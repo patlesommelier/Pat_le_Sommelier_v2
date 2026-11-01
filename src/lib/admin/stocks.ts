@@ -100,6 +100,7 @@ export async function donneesBon(resto: string, commandeId: string) {
       ? await (async () => { const qv = await getCoordonneesQv(); return { nom: qv.nom, adresse: qv.adresse, tva: qv.tva, contact: `Pour ${c.nom ?? c.fournisseur_nom}`, telephone: qv.telephone, email: qv.email }; })()
       : { nom: c.nom ?? c.fournisseur_nom, adresse: c.adresse, tva: c.tva, contact: c.contact, telephone: c.telephone, email: c.email },
     distributeur: c.distributeur_id ? (c.nom ?? c.fournisseur_nom) : null,
+    quidVinum: c.quid_vinum,
     lignes,
   };
 }

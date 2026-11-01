@@ -1,5 +1,5 @@
 'use client';
-// « Envoyer au fournisseur » : le bon de commande (PDF) part depuis la page.
+// « Envoyer la commande » : le bon de commande (PDF) part depuis la page.
 // - Envoi par Pat configuré (serveur) : l'e-mail part avec le PDF en pièce jointe.
 // - Sinon : la messagerie s'ouvre avec la commande rédigée, à l'adresse du fournisseur, et le PDF est téléchargé
 //   pour être joint. Tout se fait dans le clic (sans attente), sinon le navigateur bloque l'ouverture de la messagerie.
@@ -29,7 +29,7 @@ export function EnvoiCommande({ pdf, fichier, email, sujet, corps, serveur, envo
   return (
     <span className="pile" style={{ gap: 6 }}>
       <button type="button" className="btn rouge" onClick={cliquer} disabled={enCours} aria-busy={enCours}>
-        {enCours && serveur ? 'Envoi…' : deja ? 'Renvoyer au fournisseur' : 'Envoyer au fournisseur'}
+        {enCours && serveur ? 'Envoi…' : deja ? 'Renvoyer la commande' : 'Envoyer la commande'}
       </button>
       {message?.ok && <span className="petit" style={{ color: 'var(--encre)', maxWidth: 320 }}>{message.ok}</span>}
       {message?.erreur && <span className="petit" style={{ color: 'var(--ocre)', maxWidth: 320 }}>{message.erreur}</span>}

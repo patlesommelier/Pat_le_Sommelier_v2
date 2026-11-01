@@ -209,7 +209,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
     }
   }
   rafraichir(resto);
-  redirect(`/admin/${resto}/commandes?commande=${id}#commande-${id}`);
+  redirect(`/admin/${resto}/commandes/${id}`); // le bon de commande, prêt à envoyer
 }
 
 /**
@@ -255,7 +255,7 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
     }
   }
   rafraichir(resto);
-  redirect(`/admin/${resto}/commandes?commande=${id}#commande-${id}`);
+  redirect(`/admin/${resto}/commandes/${id}`); // le bon de commande, prêt à envoyer
 }
 
 /** Envoie le bon de commande (PDF en pièce jointe) au fournisseur, avec le restaurant en copie. */
@@ -263,7 +263,7 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
   await exigerAcces(resto);
   const bon = await donneesBon(resto, id);
   if (!bon) return { erreur: 'Commande introuvable.' };
-  if (!bon.fournisseur.email) return { erreur: bon.distributeur ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.' : `Ajoutez l’adresse e-mail de « ${bon.fournisseur.nom} » dans Fournisseurs.` };
+  if (!bon.fournisseur.email) return { erreur: bon.distributeur || bon.quidVinum ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.' : `Ajoutez l’adresse e-mail de « ${bon.fournisseur.nom} » dans Fournisseurs.` };
   const ref = referenceCommande(bon);
   const total = bon.lignes.reduce((n, l) => n + l.quantite, 0);
   const erreur = await envoyerEmail({
@@ -283,7 +283,8 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
 /** Commande envoyée par le restaurant lui-même (partage du PDF ou messagerie) : statut « Commande envoyée ». */
 export async function marquerEnvoyee(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
-  await requete(`update commande c set envoyee_le = now(), envoyee_a = (select ${SQL_EMAIL_COMMANDE} from fournisseur f where f.id = c.fournisseur_id)
+  await requete(`update commande c set envoyee_le = now(),
+                         envoyee_a = case when c.quid_vinum then (select valeur from reglage_serveur where cle = 'qv_email') else (select ${SQL_EMAIL_COMMANDE} from fournisseur f where f.id = c.fournisseur_id) end
                   where c.id = $1 and c.restaurant_id = $2 and c.statut = 'ouverte'`, [id, resto]);
   rafraichir(resto);
   return { ok: 'Commande envoyée.' };
