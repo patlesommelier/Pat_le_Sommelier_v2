@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { requete } from '@/lib/db';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { margeDefaut } from '@/lib/distributeurs/donnees';
+import { offreDuCatalogue, type VinCatalogueComplet, type VinCarteComplet } from '@/lib/distributeurs/tarif';
 
 export async function rattacherAuDistributeur(resto: string, vinIds: string[], offreId: string) {
   const [o] = await offresDistributeurs(resto, { vins: [offreId] });
@@ -35,4 +36,35 @@ export async function offresPourLaCarte(resto: string) {
     if (o) parVin.set(v.id, o);
   }
   return parVin;
+}
+
+/**
+ * Fournisseur d'un vin changé (page Vins, fiche du vin) : un distributeur de Quid Vinum → le vin est associé au vin
+ * correspondant de son catalogue (prix d'achat, commande dans le catalogue) ; un autre fournisseur → le lien est retiré.
+ * Renvoie vrai si le vin a été trouvé dans le catalogue.
+ */
+export async function associerAuCatalogue(resto: string, vinIds: string[], fournisseurId: string | null) {
+  if (!vinIds.length) return false;
+  const [f] = fournisseurId ? await requete<{ distributeur_id: string | null }>('select distributeur_id from fournisseur where id = $1 and restaurant_id = $2', [fournisseurId, resto]) : [];
+  if (!f?.distributeur_id) {
+    await requete('update vin_carte set distributeur_vin_id = null where restaurant_id = $1 and id = any($2)', [resto, vinIds]);
+    return false;
+  }
+  const [vin] = await requete<VinCarteComplet>(
+    `select v.id, v.libelle, v.millesime, v.format, v.producteur_id, coalesce(p.nom, v.producteur_texte) as producteur, v.couleur::text as couleur, v.cuvee_id
+       from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1 and v.id = $2`, [resto, vinIds[0]]);
+  const catalogue = await requete<VinCatalogueComplet>(
+    `select v.id, v.libelle, v.millesime, v.contenance, v.producteur_id, coalesce(p.nom, v.producteur_texte) as producteur, v.couleur, v.cuvee_id
+       from distributeur_vin v left join producteur p on p.id = v.producteur_id where v.distributeur_id = $1 and v.actif order by v.ordre`, [f.distributeur_id]);
+  const offre = vin ? offreDuCatalogue(vin, catalogue) : null;
+  if (!offre) {
+    await requete('update vin_carte set distributeur_vin_id = null where restaurant_id = $1 and id = any($2)', [resto, vinIds]);
+    return false;
+  }
+  await rattacherAuDistributeur(resto, vinIds, offre.id);
+  // Vin de la carte pas encore relié à la base : il l'est au vin de la base du distributeur (même producteur).
+  if (offre.cuvee_id) await requete(`update vin_carte v set cuvee_id = $3, producteur_id = coalesce(v.producteur_id, c.producteur_id)
+                                      from cuvee c where c.id = $3 and v.restaurant_id = $1 and v.id = any($2) and v.cuvee_id is null
+                                        and (v.producteur_id is null or v.producteur_id = c.producteur_id)`, [resto, vinIds, offre.cuvee_id]);
+  return true;
 }

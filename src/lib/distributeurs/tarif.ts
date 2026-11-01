@@ -140,3 +140,41 @@ export function vinDeLaCarte(v: VinCatalogue, carte: VinCarteSimple[]): VinCarte
   });
   return trouves.length === 1 ? trouves[0] : null;
 }
+
+// ─── Vin de la carte confié à un distributeur : son vin dans le catalogue ───
+export interface VinCatalogueComplet extends VinCatalogue { couleur: string | null; cuvee_id: string | null }
+export interface VinCarteComplet extends VinCarteSimple { couleur: string | null; cuvee_id: string | null }
+
+const MOTS_COULEUR: Record<string, string> = { rouge: 'rouge', blanc: 'blanc', blanche: 'blanc', rose: 'rose', bulles: 'bulles', orange: 'orange' };
+const couleurDe = (couleur: string | null, libelle: string) => couleur ?? motsDe(libelle).map((m) => MOTS_COULEUR[m]).find(Boolean) ?? null;
+
+/**
+ * Le vin du catalogue d'un distributeur qui correspond à un vin de la carte (le restaurant vient de choisir ce distributeur
+ * comme fournisseur). Le même vin de la base de Pat, sinon le même nom une fois retirés le producteur et la couleur
+ * (« Sancerre Terre de Maimbray » = « Sancerre blanc "Terre de Maimbray" »), avec le même producteur s'il est connu des deux côtés
+ * et la même couleur. Même contenance ; le même millésime de préférence, sinon le plus récent. Aucun en cas de doute.
+ */
+export function offreDuCatalogue(vin: VinCarteComplet, catalogue: VinCatalogueComplet[]): VinCatalogueComplet | null {
+  const cl = (f: string | null) => centilitres(f) ?? 75;
+  const couleurVin = couleurDe(vin.couleur, vin.libelle);
+  const prodVin = motsDe(vin.producteur).filter((m) => m.length >= 4);
+  let candidats = vin.cuvee_id ? catalogue.filter((c) => c.cuvee_id === vin.cuvee_id) : [];
+  if (!candidats.length) {
+    candidats = catalogue.filter((c) => {
+      const couleur = couleurDe(c.couleur, c.libelle);
+      if (couleurVin && couleur && couleurVin !== couleur) return false;
+      const prodCat = motsDe(c.producteur).filter((m) => m.length >= 4);
+      if (vin.producteur_id && c.producteur_id) { if (vin.producteur_id !== c.producteur_id) return false; }
+      else if (prodVin.length && prodCat.length && !prodVin.some((m) => prodCat.includes(m))) return false;
+      const retirer = new Set([...prodVin, ...prodCat, ...Object.keys(MOTS_COULEUR)]);
+      const a = motsDe(vin.libelle).filter((m) => !retirer.has(m)), b = motsDe(c.libelle).filter((m) => !retirer.has(m));
+      return a.length > 0 && a.length === b.length && a.every((m) => b.includes(m));
+    });
+    // Plusieurs vins différents (pas seulement des millésimes) : on ne choisit pas.
+    if (new Set(candidats.map((c) => motsDe(c.libelle).sort().join(' ') + '|' + couleurDe(c.couleur, c.libelle))).size > 1) return null;
+  }
+  candidats = candidats.filter((c) => cl(c.contenance) === cl(vin.format));
+  if (!candidats.length) return null;
+  return candidats.find((c) => (c.millesime ?? '') === (vin.millesime ?? ''))
+    ?? [...candidats].sort((x, y) => (y.millesime ?? '').localeCompare(x.millesime ?? ''))[0];
+}

@@ -74,8 +74,13 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
     const groupes = await lignesDesVins(resto, changes);
     for (const id of changes) await choisirFournisseur(resto, groupes.get(id) ?? [id], txt(f, `fournisseur_${id}`), txt(f, `fournisseur_nouveau_${id}`));
   }
+  // Vins confiés à un distributeur de Quid Vinum mais introuvables dans son catalogue : signalés.
+  const absents = changes.length ? await requete<{ libelle: string; distributeur: string }>(
+    `select v.libelle, f.nom as distributeur from vin_carte v join fournisseur f on f.id = v.fournisseur_id
+      where v.restaurant_id = $1 and v.id = any($2) and f.distributeur_id is not null and v.distributeur_vin_id is null`, [resto, changes]) : [];
   rafraichir(resto);
   const n = r.length;
+  if (absents.length) return { erreur: `Enregistré, mais ${absents.map((a) => `« ${a.libelle} »`).join(', ')} ${absents.length > 1 ? 'ne sont' : 'n’est'} pas dans le catalogue de ${absents[0].distributeur} : vérifiez le nom, le millésime ou la contenance.` };
   if (illisibles.length) return { erreur: `Stocks enregistrés, sauf ${illisibles.length} prix illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
   return { ok: `Stocks enregistrés (${n} vin${n > 1 ? 's' : ''}).` };
 }

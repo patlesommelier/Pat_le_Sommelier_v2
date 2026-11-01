@@ -2,6 +2,7 @@ import 'server-only';
 // Gestion des stocks : fournisseurs et commandes de vin d'un restaurant.
 import { requete } from '../db';
 import { getCoordonneesQv } from '../distributeurs/donnees';
+import { associerAuCatalogue } from './distributeur-vin';
 
 /** distributeur_id : fournisseur choisi dans la base de Quid Vinum (ses commandes partent chez Quid Vinum). */
 export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number; distributeur_id: string | null; logo_url: string | null }
@@ -71,6 +72,8 @@ export async function choisirFournisseur(resto: string, vinIds: string[], valeur
     return undefined; // fournisseur d'un autre restaurant : refusé
   }
   await requete('update vin_carte set fournisseur_id = $3 where restaurant_id = $1 and id = any($2)', [resto, vinIds, id]);
+  // Distributeur de Quid Vinum : le vin est cherché dans son catalogue (prix d'achat, commande).
+  await associerAuCatalogue(resto, vinIds, id).catch((e) => console.error('[fournisseur] catalogue', e));
   return id;
 }
 

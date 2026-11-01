@@ -84,3 +84,18 @@ test('prix publié et prix QV : lus dans la liste ou calculés avec la remise', 
   assert.deepEqual(prixDuTarif(12, null, 'remise', null), { publie: null, qv: 12 }); // sans remise : comme « liste »
   assert.equal(prixRemise(13.99, 12.5), 12.24);
 });
+
+test('vin de la carte confié à un distributeur : son vin dans le catalogue', async () => {
+  const { offreDuCatalogue } = await import('../src/lib/distributeurs/tarif');
+  const cat = (id: string, libelle: string, millesime: string | null, extra = {}) => ({ id, libelle, millesime, contenance: null, producteur_id: null,
+    producteur: 'Domaine Pascal et Nicolas Reverdy', couleur: null, cuvee_id: null, ...extra });
+  const catalogue = [cat('rose', 'Sancerre rosé "Terre de Maimbray" -Domaine P&N Reverdy', '2024'), cat('blanc', 'Sancerre blanc "Terre de Maimbray"', '2024'),
+    cat('rouge', 'Sancerre rouge "Terre de Maimbray"', '2023'), cat('blanc-mag', 'Sancerre blanc "Terre de Maimbray"', '2023', { contenance: '150 cl' })];
+  const vin = (x = {}) => ({ id: 'v', libelle: 'Sancerre Terre de Maimbray', millesime: '2022', format: 'Bouteille 75 cl', producteur_id: null, producteur: null, couleur: 'blanc', cuvee_id: null, ...x });
+  assert.equal(offreDuCatalogue(vin(), catalogue)?.id, 'blanc'); // autre millésime : le plus récent
+  assert.equal(offreDuCatalogue(vin({ couleur: 'rouge' }), catalogue)?.id, 'rouge');
+  assert.equal(offreDuCatalogue(vin({ couleur: 'rose', producteur: 'Reverdy' }), catalogue)?.id, 'rose');
+  assert.equal(offreDuCatalogue(vin({ producteur: 'Domaine Vacheron' }), catalogue), null); // autre producteur
+  assert.equal(offreDuCatalogue(vin({ libelle: 'Sancerre' }), catalogue), null);
+  assert.equal(offreDuCatalogue(vin({ cuvee_id: 'c1' }), [...catalogue, cat('x', 'Autre nom', '2021', { cuvee_id: 'c1' })])?.id, 'x'); // même vin de la base
+});
