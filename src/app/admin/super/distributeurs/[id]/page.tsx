@@ -84,6 +84,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             <div className="champ"><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" defaultValue={d.email ?? ''} /></div>
             <div className="champ"><label htmlFor="telephone">Téléphone</label><input id="telephone" name="telephone" defaultValue={d.telephone ?? ''} /></div>
             <div className="champ"><label htmlFor="site">Site</label><input id="site" name="site" defaultValue={d.site ?? ''} /></div>
+            <div className="champ"><label htmlFor="presentation">Présentation pour les restaurants</label>
+              <textarea id="presentation" name="presentation" rows={3} maxLength={400} defaultValue={d.presentation ?? ''} placeholder="Ex. Importateur de vins d’Italie depuis 1985 : vignerons familiaux, bio pour la plupart." />
+              <span className="aide">Deux phrases au plus, montrées aux restaurants à côté du nom, avec le lien vers le site.</span></div>
             <div className="champ"><label htmlFor="adresse">Adresse</label><textarea id="adresse" name="adresse" rows={2} defaultValue={d.adresse ?? ''} /></div>
             <div className="champ"><label htmlFor="tva">TVA</label><input id="tva" name="tva" defaultValue={d.tva ?? ''} /></div>
             <div className="champ"><label htmlFor="notes">Notes (internes)</label><textarea id="notes" name="notes" rows={3} defaultValue={d.notes ?? ''} /></div>

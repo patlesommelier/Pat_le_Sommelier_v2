@@ -3,8 +3,9 @@
 import Link from 'next/link';
 import { ajouterDistributeurQv, ajouterFournisseur, modifierFournisseur, supprimerFournisseur } from '../../stocks-actions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
+import { EtatDistributeur } from '@/components/admin/EtatDistributeur';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { Entete, Etat } from '@/components/admin/Ui';
+import { Entete } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getFournisseurs, type Fournisseur } from '@/lib/admin/stocks';
 import { distributeursProposes } from '@/lib/distributeurs/donnees';
@@ -30,7 +31,6 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
   const { resto } = await params;
   await exigerAcces(resto);
   const [fournisseurs, proposes] = await Promise.all([getFournisseurs(resto), distributeursProposes(resto)]);
-  const aAjouter = proposes.filter((d) => !d.deja);
   const propres = fournisseurs.filter((f) => !f.distributeur_id), quidVinum = fournisseurs.filter((f) => f.distributeur_id);
   return (
     <>
@@ -66,33 +66,27 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div style={{ flex: '1 1 420px' }}><h2 style={{ margin: 0 }}>Distributeurs Quid Vinum</h2><p className="sous" style={{ margin: '4px 0 0' }}>La sélection de Quid Vinum : vous commandez dans leurs catalogues, au prix proposé par Quid Vinum, sans rien saisir. Une seule commande pour tous : Quid Vinum la transmet à chaque distributeur.</p></div>
         </div>
-        {quidVinum.map((f) => (
-          <div key={f.id} className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
-            <span>{/* eslint-disable-next-line @next/next/no-img-element */}
-              {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 12, height: 64, maxWidth: 180 }} />}
-              <b style={{ fontSize: 17 }}>{f.nom}</b> <Etat type="ok">Activé</Etat> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''} de votre carte</span></span>
-            <span className="ligne-actions">
-              <BoutonSupprimer action={supprimerFournisseur.bind(null, resto, f.id)} libelle="Retirer" className="btn fantome petit"
-                question={`Retirer « ${f.nom} » de vos distributeurs ? Ses vins n’auront plus de distributeur ; les commandes passées restent.`} />
-              {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum activés ; même colonne que les autres lignes. */}
-              <Link href={`/admin/${resto}/commandes?f=qv`} className="btn sec petit bouton-commande" style={{ marginRight: 34 }}>Nouvelle commande</Link>
-            </span>
-          </div>
-        ))}
-        {aAjouter.length > 0 && (
-          <div className="carte-bo pile">
-            <b>{quidVinum.length ? 'Ajouter un autre distributeur Quid Vinum' : 'Ajouter un distributeur Quid Vinum'}</b>
-            {aAjouter.map((d) => (
-              <FormulaireAdmin key={d.id} action={ajouterDistributeurQv.bind(null, resto, d.id)} className="ligne-distributeur">
-                <span>{/* eslint-disable-next-line @next/next/no-img-element */}
-                  {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 12, height: 56, maxWidth: 160 }} />}
-                  <b>{d.nom}</b> <span className="discret">· {d.vins} vin{d.vins > 1 ? 's' : ''}</span>{d.site && <> · <a href={/^https?:/.test(d.site) ? d.site : `https://${d.site}`} target="_blank" rel="noopener" className="petit">site</a></>}</span>
-                <button className="btn sec petit">+ Ajouter</button>
-              </FormulaireAdmin>
-            ))}
-          </div>
-        )}
-        {!quidVinum.length && !aAjouter.length && <p className="discret" style={{ margin: 0 }}>Aucun distributeur Quid Vinum pour le moment.</p>}
+        {/* Tous les distributeurs Quid Vinum, les actifs en premier ; à droite, « Actif » ou « Non sélectionné ». */}
+        {[...proposes].sort((x, y) => Number(y.deja) - Number(x.deja) || x.nom.localeCompare(y.nom)).map((d) => {
+          const f = quidVinum.find((x) => x.distributeur_id === d.id) ?? null;
+          const site = d.site ? (/^https?:/.test(d.site) ? d.site : `https://${d.site}`) : null;
+          return (
+            <div key={d.id} className={`carte-bo ligne-qv${f ? '' : ' inactif'}`}>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              {d.logo_url ? <img src={d.logo_url} alt="" className="logo-distributeur" style={{ height: 64, maxWidth: 180 }} /> : null}
+              <span className="pile" style={{ flex: '1 1 260px', gap: 4 }}>
+                <b style={{ fontSize: 17 }}>{d.nom}</b>
+                {(d.presentation || site) && <span className="petit">{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</span>}
+              </span>
+              {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
+              {f && <Link href={`/admin/${resto}/commandes?f=qv`} className="btn sec petit bouton-commande">Nouvelle commande</Link>}
+              {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
+              <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? `${f.vins} vin${f.vins > 1 ? 's' : ''} sur votre carte` : `${d.vins} vins au catalogue`}</span>
+              <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />
+            </div>
+          );
+        })}
+        {!proposes.length && <p className="discret" style={{ margin: 0 }}>Aucun distributeur Quid Vinum pour le moment.</p>}
       </section>
     </>
   );

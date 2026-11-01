@@ -328,3 +328,7 @@ dialog.superposition { overflow-y: auto; }
 .bloc-fiche[open] > summary::after { transform: rotate(180deg); }
 .bloc-fiche > summary .discret { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 60ch; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ligne-qv { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.ligne-qv.inactif { opacity: .85; }
+.choix-etat { width: 170px; flex: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; }
+.choix-etat.actif { background: var(--vert-fond, #680021); color: #fff; border-color: transparent; }

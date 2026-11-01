@@ -80,7 +80,7 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   }
   // Prix QV calculés : recalculés depuis le prix public avec la nouvelle remise (le prix lu devient le prix public s'il n'y en avait pas).
   const calcul = txt(f, 'calcul_qv') === 'remise' ? 'remise' : 'liste';
-  await requete('update distributeur set calcul_qv = $2 where id = $1', [id, calcul]);
+  await requete('update distributeur set calcul_qv = $2, presentation = $3 where id = $1', [id, calcul, txt(f, 'presentation')?.slice(0, 400) ?? null]);
   if (calcul === 'remise' && remise != null) {
     await requete(`update distributeur_vin set prix_catalogue = coalesce(prix_catalogue, prix_qv),
                      prix_qv = round(coalesce(prix_catalogue, prix_qv) * (1 - $2::numeric / 100), 2), maj_le = now()
