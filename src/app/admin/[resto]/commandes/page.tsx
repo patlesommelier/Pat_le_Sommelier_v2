@@ -1,9 +1,11 @@
 // Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
-// puis une nouvelle commande, les vins groupés par fournisseur avec leur stock actuel.
+// puis « + Nouvelle commande » : une fenêtre où l’on choisit le distributeur, puis les bouteilles (avec leur stock actuel).
 import Link from 'next/link';
 import { annulerCommande, creerCommande, creerCommandeQv, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
 import { CatalogueCommande, type LigneCatalogue } from '@/components/admin/CatalogueCommande';
+import { ChoixCommande, Panneau } from '@/components/admin/ChoixCommande';
+import { Superposition } from '@/components/admin/Superposition';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Vignette } from '@/components/admin/Ui';
@@ -97,30 +99,16 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     );
   };
 
-  return (
-    <>
-      <Entete titre="Commandes de vin" texte="Commandez à vos fournisseurs : Pat prépare le bon de commande, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
-        <a href="#nouvelle" className="btn rouge">+ Faire une commande</a>
-      </Entete>
-      {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
-
-      <section className="pile">
-        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>
-        {ouvertes.length ? <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))' }}>{ouvertes.map(carte)}</div>
-          : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
-      </section>
-
-      <section className="pile" id="nouvelle">
-        <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Le prix d’achat HTVA se corrige ici si le fournisseur l’a changé. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
+  // Nouvelle commande (fenêtre) : choisir le distributeur, puis indiquer les bouteilles.
+  const options = [...(qv.length ? [{ id: 'qv', libelle: `Quid Vinum (${qv.map((f) => f.nom).join(', ')})${basQv ? ` · ${basQv} en stock bas` : ''}` }] : []),
+    ...blocs.map((b) => { const n = b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length; return { id: b.id || 'aucun', libelle: `${b.nom}${n ? ` · ${n} en stock bas` : ''}` }; })];
+  const nouvelle = (
+    <ChoixCommande options={options} initial={cible === '' ? 'aucun' : cible}>
+      <p className="petit discret" style={{ margin: 0 }}>Indiquez les bouteilles à commander, puis validez : le bon de commande s’affiche, prêt à envoyer. Le prix d’achat HTVA se corrige ici si le distributeur l’a changé.</p>
         {!blocs.length && !qv.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
         {qv.length > 0 && (
-          <details className="carte-bo bloc-fournisseur" id="quid-vinum" open={cible !== undefined ? cible === 'qv' : basQv > 0}>
-            <summary>
-              <span><b style={{ fontSize: 17 }}>Quid Vinum</b> <Etat type="ok">{qv.length} distributeur{qv.length > 1 ? 's' : ''}</Etat>
-                <span className="discret"> · {qv.map((f) => f.nom).join(', ')}</span></span>
-              {basQv > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basQv} en stock bas</span>}
-            </summary>
-            <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12, marginTop: 12 }}>
+          <Panneau id="qv">
+            <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12 }}>
               <p className="petit discret" style={{ margin: 0 }}>Une seule commande pour tous vos distributeurs Quid Vinum, aux prix proposés par Quid Vinum (HTVA) : elle part chez Quid Vinum, qui la transmet à chaque distributeur.</p>
               {/* D'abord les vins de la carte (chez tous les distributeurs Quid Vinum), puis, à la demande, le reste des catalogues. */}
               <b>Vins de votre carte</b>
@@ -144,20 +132,12 @@ export default async function Commandes({ params, searchParams }: { params: Prom
               </details>
               <span><button className="btn rouge">Valider la commande Quid Vinum</button></span>
             </FormulaireAdmin>
-          </details>
+          </Panneau>
         )}
         {blocs.map((b) => {
-          const basN = b.catalogue ? b.catalogue.filter((l) => l.surCarte?.bas).length : b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
           return (
-            <details key={b.id || 'aucun'} className="carte-bo bloc-fournisseur" open={cible !== undefined ? cible === b.id : basN > 0}>
-              <summary>
-                <span>{/* eslint-disable-next-line @next/next/no-img-element */}
-                  {b.logo && <img src={b.logo} alt="" className="logo-distributeur" style={{ height: 28, verticalAlign: 'middle', marginRight: 10 }} />}
-                  <b style={{ fontSize: 17 }}>{b.nom}</b>{b.catalogue ? <> <Etat type="ok">Quid Vinum</Etat> <span className="discret">· catalogue de {b.catalogue.length} vin{b.catalogue.length > 1 ? 's' : ''}</span></>
-                  : <span className="discret"> · {b.groupes.length} vin{b.groupes.length > 1 ? 's' : ''}</span>}</span>
-                {basN > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basN} en stock bas</span>}
-              </summary>
-              <FormulaireAdmin action={creerCommande.bind(null, resto, b.id)} className="pile" style={{ gap: 12, marginTop: 12 }}>
+            <Panneau key={b.id || 'aucun'} id={b.id || 'aucun'}>
+              <FormulaireAdmin action={creerCommande.bind(null, resto, b.id)} className="pile" style={{ gap: 12 }}>
                 {!b.id && (fournisseurs.length
                   ? <label className="champ" style={{ maxWidth: 360 }}><span>Fournisseur de cette commande</span>
                       <select name="fournisseur" defaultValue="" required><option value="" disabled>Choisir…</option>{fournisseurs.map((f) => <option key={f.id} value={f.id}>{f.nom}</option>)}</select></label>
@@ -187,9 +167,25 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                 </div>}
                 <span><button className="btn rouge" disabled={!b.id && !fournisseurs.length}>Valider la commande{b.id ? ` à ${b.nom}` : ''}</button></span>
               </FormulaireAdmin>
-            </details>
+            </Panneau>
           );
         })}
+    </ChoixCommande>
+  );
+
+  return (
+    <>
+      <Entete titre="Commandes de vin" texte="Commandez à vos fournisseurs : Pat prépare le bon de commande, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
+        <Superposition bouton="+ Nouvelle commande" titre="Nouvelle commande" classeBouton="btn rouge" large ouvert={Boolean(sp.f || sp.vin)}>
+          {nouvelle}
+        </Superposition>
+      </Entete>
+      {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
+
+      <section className="pile">
+        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>
+        {ouvertes.length ? <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))' }}>{ouvertes.map(carte)}</div>
+          : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
       </section>
 
       {recues.length > 0 && (
