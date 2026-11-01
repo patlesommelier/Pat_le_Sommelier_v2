@@ -24,8 +24,8 @@ export function Coque({ utilisateur, resto, etapes, children }: {
       <aside className="bo-nav">
         <Link href="/admin" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/pat/pat-icone-logo.svg" alt="" />
-          <span><strong>Pat le sommelier</strong><span>Espace restaurant</span></span>
+          <img src="/quidvinum/logo.png" alt="Quid Vinum" className="logo-qv" />
+          <span className="sous-marque">Espace restaurant<small>avec Pat le sommelier</small></span>
         </Link>
         {resto && (
           <Link href={utilisateur.admin || utilisateur.restaurants.length > 1 ? '/admin' : accueil} className="bo-resto" aria-label={`Restaurant ${resto.nom}${utilisateur.admin ? ' — changer de restaurant' : ''}`}>

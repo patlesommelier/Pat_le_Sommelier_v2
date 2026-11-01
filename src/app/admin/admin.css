@@ -1,34 +1,34 @@
-/* Back-office de Pat le sommelier — style « Carnet clair » : fond crème du logo, cartes blanches aux bords doux,
-   accent bordeaux #680021, rose très clair #FFEEED pour ce qui est choisi, fuchsia #DE0454 et rouge #FF0D05 en touches.
-   Outfit (400 à 700) pour l'interface, Lato pour les textes de description. */
+/* Back-office — charte Quid Vinum : fond gris chaud #EFEAE9, cartes blanches, bordeaux #610420, rouge du logo #F7371C
+   en touches, doré #BCAF79, texte #212121. Inter (proche de l'Helvetica Neue de la charte) pour toute l'interface. */
 .bo {
-  --encre: #680021;
-  --encre-fonce: #4E0019;
-  --rouge: #FF0D05;
-  --rose-pat: #EB9D92;
-  --fuchsia: #DE0454;
-  --texte: #241F20;
-  --discret: #5E5357;          /* texte secondaire (7:1 sur blanc) */
-  --etiquette: #6F6366;        /* petits intitulés en capitales (5:1 sur blanc) */
-  --ligne: #EFE7E3;            /* bords des cartes et séparations */
-  --ligne-forte: #E2D5D1;      /* bords des champs et boutons secondaires */
-  --separation: #F4EDEA;       /* lignes entre les rangées d'un tableau */
-  --fond: #FEFAF1;             /* fond des pages : le crème du logo */
+  --encre: #610420;
+  --encre-fonce: #4A0318;
+  --rouge: #F7371C;
+  --rose-pat: #E5A194;
+  --fuchsia: #F7371C;
+  --dore: #BCAF79;
+  --texte: #212121;
+  --discret: #595959;          /* texte secondaire (7:1 sur blanc) */
+  --etiquette: #6B6461;        /* petits intitulés en capitales */
+  --ligne: #E8E2E0;            /* bords des cartes et séparations */
+  --ligne-forte: #D9D0CD;      /* bords des champs et boutons secondaires */
+  --separation: #F0EBEA;       /* lignes entre les rangées d'un tableau */
+  --fond: #F5F2F1;             /* fond des pages : le gris chaud de la charte, éclairci */
   --carte: #FFFFFF;
-  --survol: #FBF5F2;
-  --rose: #FFEEED;             /* ce qui est choisi : onglet, lien du menu, ligne */
-  --rose-pale: #FFEEED;
-  --vert: #241F20; --vert-fond: #680021;
-  --ocre: #A8003D; --ocre-fond: #FFFFFF;
-  --gris-fond: #F5EDEA; --gris: #5E5357;
-  --ombre: 0 18px 40px -30px rgba(36, 31, 32, 0.35);
-  --titre: Outfit, 'Avenir Next', 'Helvetica Neue', sans-serif;
+  --survol: #F7F3F2;
+  --rose: #F7E6E1;             /* ce qui est choisi : onglet, lien du menu, ligne */
+  --rose-pale: #F7E6E1;
+  --vert: #212121; --vert-fond: #610420;
+  --ocre: #B3261E; --ocre-fond: #FFFFFF;
+  --gris-fond: #EFEAE9; --gris: #595959;
+  --ombre: 0 18px 40px -30px rgba(33, 33, 33, 0.35);
+  --titre: Inter, 'Helvetica Neue', Helvetica, sans-serif;
   min-height: 100vh; background: var(--fond); color: var(--texte);
-  font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Inter, 'Helvetica Neue', Helvetica, sans-serif;
   font-weight: 500;
   display: flex; flex-wrap: wrap; align-items: stretch;
 }
-.bo *:not(.apercu-app, .apercu-app *) { font-family: Outfit, 'Helvetica Neue', Helvetica, sans-serif; }
+.bo *:not(.apercu-app, .apercu-app *) { font-family: Inter, 'Helvetica Neue', Helvetica, sans-serif; }
 .bo b, .bo strong { font-weight: 700; }
 .bo a { color: var(--encre); }
 .bo a:hover { color: var(--fuchsia); }
@@ -43,7 +43,7 @@
 .bo-marque span { font-size: 12px; color: var(--discret); }
 .bo-resto { display: flex; align-items: center; gap: 10px; min-height: 52px; padding: 10px 12px; border: 1px solid var(--ligne); border-radius: 14px; background: var(--fond); text-decoration: none; color: var(--texte) !important; }
 .bo-resto:hover { border-color: var(--ligne-forte); }
-.bo-resto .pastille { width: 32px; height: 32px; border-radius: 9px; color: #FEFAF1; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
+.bo-resto .pastille { width: 32px; height: 32px; border-radius: 9px; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; flex-shrink: 0; }
 .bo-resto b { display: block; font-size: 14.5px; font-weight: 600; }
 .bo-resto small { font-size: 12px; color: var(--discret); }
 .bo-liens { display: flex; flex-direction: column; gap: 2px; }
@@ -52,7 +52,7 @@
 .bo-lien:hover { background: var(--survol); }
 .bo-lien[aria-current='page'] { background: var(--rose); color: var(--encre) !important; font-weight: 700; }
 .bo-num { width: 24px; height: 24px; box-sizing: border-box; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1.5px solid var(--ligne-forte); color: var(--discret); font-size: 12px; font-weight: 700; flex-shrink: 0; }
-.bo-num.fait { border: 0; background: var(--encre); color: #FEFAF1; }
+.bo-num.fait { border: 0; background: var(--encre); color: #FFFFFF; }
 .bo-num.encours { border-color: var(--encre); color: var(--encre); }
 .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
 .bo-bas { margin-top: auto; display: flex; flex-direction: column; gap: 4px; font-size: 13px; color: var(--discret); padding: 0 12px; }
@@ -104,10 +104,10 @@
 .stat { background: var(--carte); border: 1px solid var(--ligne); border-radius: 18px; padding: 16px 18px; display: flex; flex-direction: column; gap: 4px; text-decoration: none; color: var(--texte) !important; }
 a.stat:hover { border-color: var(--ligne-forte); }
 .stat .chiffre { font-size: 30px; }
-.stat span:last-child { font-family: Lato, 'Helvetica Neue', Arial, sans-serif; font-size: 13.5px; color: var(--discret); }
+.stat span:last-child { font-family: Inter, 'Helvetica Neue', Arial, sans-serif; font-size: 13.5px; color: var(--discret); }
 
 /* ── Boutons ── */
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 600 14.5px Outfit, sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #FEFAF1 !important; border: 1.5px solid var(--encre); transition: background .15s, border-color .15s; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; box-sizing: border-box; padding: 10px 20px; border-radius: 999px; font: 600 14.5px Inter, 'Helvetica Neue', sans-serif; text-decoration: none; cursor: pointer; white-space: nowrap; background: var(--encre); color: #FFFFFF !important; border: 1.5px solid var(--encre); transition: background .15s, border-color .15s; }
 .btn:hover { background: var(--encre-fonce); border-color: var(--encre-fonce); }
 .btn.sec { background: var(--carte); color: var(--encre) !important; border-color: var(--ligne-forte); }
 .btn.sec:hover { background: var(--rose); border-color: var(--rose); }
@@ -121,7 +121,7 @@ a.stat:hover { border-color: var(--ligne-forte); }
 
 /* ── Pastilles d'état ── */
 .etat { display: inline-flex; align-items: center; gap: 6px; padding: 4px 11px; border-radius: 999px; font-size: 12.5px; font-weight: 600; white-space: nowrap; background: var(--gris-fond); color: var(--discret); border: 1px solid transparent; }
-.etat.ok { background: var(--encre); color: #FEFAF1; }
+.etat.ok { background: var(--encre); color: #FFFFFF; }
 .etat.propose { background: var(--rose); color: var(--encre); }
 .etat.attention { background: var(--carte); color: var(--ocre); border: 1.5px dashed var(--fuchsia); }
 .etat.defaut { background: var(--gris-fond); color: var(--gris); }
@@ -149,20 +149,20 @@ a.stat:hover { border-color: var(--ligne-forte); }
 .tableau .petit { font-size: 13px; color: var(--discret); }
 .lien-ligne { display: inline-flex; min-height: 40px; align-items: center; font-weight: 600; font-size: 14px; text-decoration: none; }
 .vin-cell { display: flex; align-items: center; gap: 12px; }
-.vignette { width: 46px; height: 58px; object-fit: contain; box-sizing: border-box; padding: 3px; background: #FAF5EC; border: 1px solid #EBDFD8; border-radius: 8px; flex-shrink: 0; }
+.vignette { width: 46px; height: 58px; object-fit: contain; box-sizing: border-box; padding: 3px; background: #F5F2F1; border: 1px solid #E8E2E0; border-radius: 8px; flex-shrink: 0; }
 .vignette.vide { display: flex; align-items: center; justify-content: center; background: var(--rose); color: var(--encre); border: 0; }
 
 /* ── Formulaires ── */
 .champ { display: flex; flex-direction: column; gap: 6px; }
 .champ label, .champ .libelle { font-size: 13px; font-weight: 600; }
-.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--ligne-forte); border-radius: 12px; background: var(--carte); font: 500 15px Outfit, sans-serif; color: var(--texte); }
+.champ input, .champ select, .champ textarea { min-height: 44px; box-sizing: border-box; padding: 10px 14px; border: 1px solid var(--ligne-forte); border-radius: 12px; background: var(--carte); font: 500 15px Inter, 'Helvetica Neue', sans-serif; color: var(--texte); }
 .champ textarea { line-height: 1.5; resize: vertical; }
 .champ input:focus, .champ select:focus, .champ textarea:focus { border-color: var(--encre); outline: none; box-shadow: 0 0 0 3px var(--rose); }
 .champ .aide { font-size: 12.5px; color: var(--discret); }
 .champs { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(130px, 100%), 1fr)); gap: 12px; }
 .case { display: flex; align-items: center; gap: 10px; min-height: 44px; font-size: 14.5px; cursor: pointer; }
 .case input { width: 20px; height: 20px; accent-color: var(--encre); margin: 0; flex-shrink: 0; }
-.case small { display: block; color: var(--discret); font-size: 13px; font-weight: 400; font-family: Lato, 'Helvetica Neue', Arial, sans-serif; }
+.case small { display: block; color: var(--discret); font-size: 13px; font-weight: 400; font-family: Inter, 'Helvetica Neue', Arial, sans-serif; }
 .message { margin: 0; padding: 12px 16px; border-radius: 14px; font-size: 14px; line-height: 1.45; }
 .message.ok { background: var(--rose); color: var(--encre); }
 .message.erreur { background: var(--carte); color: var(--ocre); border: 1.5px solid var(--fuchsia); }
@@ -186,21 +186,21 @@ a.stat:hover { border-color: var(--ligne-forte); }
 }
 
 /* ── Espace super-admin : barre latérale foncée ── */
-.bo-nav.sombre { background: #680021; border-right-color: #680021; }
-.bo-nav.sombre .bo-marque strong { color: #EFEBE9; }
-.bo-nav.sombre .bo-marque img { box-shadow: 0 0 0 1.5px #EB9D92; }
-.bo-nav.sombre .bo-num { color: #EFEBE9; }
+.bo-nav.sombre { background: #610420; border-right-color: #610420; }
+.bo-nav.sombre .bo-marque strong { color: #F5F2F1; }
+.bo-nav.sombre .bo-marque img { box-shadow: 0 0 0 1.5px #E5A194; }
+.bo-nav.sombre .bo-num { color: #F5F2F1; }
 .bo-nav.sombre .bo-lien[aria-current='page'] .bo-num { color: var(--encre); }
-.bo-nav.sombre .bo-marque span { color: #EB9D92; }
-.bo-nav.sombre .bo-liens .section { color: #EB9D92; }
-.bo-nav.sombre .bo-lien { color: #EFEBE9 !important; }
-.bo-nav.sombre .bo-lien[aria-current='page'] { background: #FEFAF1; color: var(--encre) !important; }
-.bo-nav.sombre .bo-lien:hover { background: #8A0F36; }
-.bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #EB9D92 !important; }
-.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #680021; color: #EFEBE9; font-size: 14px; }
-.bandeau-vue button { background: #FEFAF1; color: #680021; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 600; cursor: pointer; }
+.bo-nav.sombre .bo-marque span { color: #E5A194; }
+.bo-nav.sombre .bo-liens .section { color: #E5A194; }
+.bo-nav.sombre .bo-lien { color: #F5F2F1 !important; }
+.bo-nav.sombre .bo-lien[aria-current='page'] { background: #F5F2F1; color: var(--encre) !important; }
+.bo-nav.sombre .bo-lien:hover { background: #7A1530; }
+.bo-nav.sombre .bo-bas, .bo-nav.sombre .bo-bas button { color: #E5A194 !important; }
+.bandeau-vue { flex: 1 1 100%; display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; justify-content: center; padding: 10px 16px; background: #610420; color: #F5F2F1; font-size: 14px; }
+.bandeau-vue button { background: #FFFFFF; color: #610420; border: 0; border-radius: 999px; padding: 6px 14px; font-weight: 600; cursor: pointer; }
 .tableau-super td, .tableau-super th { vertical-align: top; }
-.rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 10px; border: 1px solid var(--ligne-forte); font: 600 14px Outfit, sans-serif; }
+.rk { width: 64px; min-height: 36px; padding: 4px 8px; border-radius: 10px; border: 1px solid var(--ligne-forte); font: 600 14px Inter, 'Helvetica Neue', sans-serif; }
 .interne { border: 1.5px dashed var(--encre); background: var(--rose); }
 .bouton-lien { padding: 0; border: 0; background: none; color: var(--encre); font: inherit; font-weight: 700; text-decoration: underline; cursor: pointer; }
 .vin-cell a.nom { display: block; color: inherit; text-decoration: none; font-weight: 600; } .vin-cell a.nom:hover { text-decoration: underline; }
@@ -234,11 +234,11 @@ a.stat:hover { border-color: var(--ligne-forte); }
 .case-proposee input { width: 22px; height: 22px; accent-color: var(--encre); cursor: pointer; margin: 0; }
 .deroulant.non-propose .deroulant-nom, .deroulant.non-propose summary > span:nth-child(2) { opacity: 0.5; }
 
-/* ── Descriptions (textes d'explication, présentations, accords, descriptions des plats) : la typo de l'app, Lato normal ── */
+/* ── Descriptions (textes d'explication, présentations, accords, descriptions des plats) : Inter normal ── */
 .bo :is(p:not(.message), .discret, .sous, .champ .aide, textarea:not([name='nom']), .description) {
-  font-family: Lato, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important;
+  font-family: Inter, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 400 !important;
 }
-.bo p b, .bo p strong, .bo .discret b, .bo .discret strong { font-family: Lato, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; }
+.bo p b, .bo p strong, .bo .discret b, .bo .discret strong { font-family: Inter, 'Helvetica Neue', Arial, sans-serif !important; font-weight: 700 !important; }
 
 /* Carte des vins : titres des sous-catégories (régions) en petites capitales fuchsia, modifiables d'un clic. */
 .rubrique-carte td { padding-top: 16px !important; padding-bottom: 4px !important; background: transparent !important; }
@@ -248,7 +248,7 @@ a.stat:hover { border-color: var(--ligne-forte); }
 
 /* ── Gestion des stocks ── */
 .alerte-stock { display: inline-flex; align-items: center; justify-content: center; width: 20px; height: 20px; flex-shrink: 0; margin: 0 6px; border-radius: 50%;
-  background: var(--rouge); color: #FFF !important; font: 800 13px/1 Outfit, sans-serif; text-decoration: none !important; vertical-align: 1px; }
+  background: var(--rouge); color: #FFF !important; font: 800 13px/1 Inter, 'Helvetica Neue', sans-serif; text-decoration: none !important; vertical-align: 1px; }
 .alerte-texte { display: inline-flex; align-items: center; color: var(--rouge); font-weight: 600; font-size: 14px; }
 .champ-stock { display: inline-flex; align-items: center; justify-content: flex-end; }
 .table-stocks input[type=number], .champ-commande { width: 84px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }
@@ -280,7 +280,7 @@ tr.choisi td { background: var(--rose); }
 .grille-coordonnees > form { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 12px; align-items: start; }
 .grille-coordonnees > form > .ligne-actions { grid-column: 1 / -1; }
 .recherche, .catalogue-filtre input[type=search], .champ-liste { min-height: 40px; box-sizing: border-box; padding: 8px 14px; border: 1px solid var(--ligne-forte);
-  border-radius: 12px; background: var(--carte); font: 500 15px Outfit, sans-serif; color: var(--texte); }
+  border-radius: 12px; background: var(--carte); font: 500 15px Inter, 'Helvetica Neue', sans-serif; color: var(--texte); }
 .recherche { min-width: min(280px, 100%); }
 .champ-liste { width: 100%; min-width: 200px; font-size: 14px; }
 .recherche:focus, .catalogue-filtre input[type=search]:focus, .champ-liste:focus { border-color: var(--encre); outline: none; box-shadow: 0 0 0 3px var(--rose); }
@@ -306,7 +306,7 @@ dialog.superposition::backdrop { background: rgba(20, 10, 12, .55); }
   border: 1.5px solid var(--ligne); background: transparent; color: var(--texte); width: 100%; }
 .choix-vin:hover { border-color: var(--encre); }
 .choix-vin.choisi { border-color: var(--encre); cursor: default; }
-.choix-vin img, .choix-vin .sans-image { width: 34px; height: 44px; object-fit: contain; background: #EFEBE9; border-radius: 6px; flex-shrink: 0; }
+.choix-vin img, .choix-vin .sans-image { width: 34px; height: 44px; object-fit: contain; background: #F5F2F1; border-radius: 6px; flex-shrink: 0; }
 
 .lien-vin { color: inherit; text-decoration: none; } .lien-vin:hover { text-decoration: underline; }
 dialog.superposition.large { width: min(1100px, calc(100vw - 24px)); }
@@ -331,8 +331,15 @@ dialog.superposition { overflow-y: auto; }
 .ligne-qv { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .ligne-qv.inactif { opacity: .85; }
 .choix-etat { width: 170px; flex: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; }
-.choix-etat.actif { background: var(--vert-fond, #680021); color: #fff; border-color: transparent; }
+.choix-etat.actif { background: var(--vert-fond, #610420); color: #fff; border-color: transparent; }
 .case-logo-qv { width: 140px; height: 64px; }
 @media (max-width: 640px) { .case-logo-qv { width: 90px; height: 48px; } }
 .prix-fixe { display: inline-flex; flex-direction: column; align-items: flex-end; font-weight: 700; font-variant-numeric: tabular-nums; }
 .prix-fixe small { font-weight: 400; font-size: 11.5px; color: var(--discret); }
+
+/* Marque Quid Vinum en tête du menu */
+.bo-marque img.logo-qv { width: auto; height: 46px; border-radius: 0; box-shadow: none !important; }
+.bo-marque .sous-marque { display: flex; flex-direction: column; font-size: 12.5px; font-weight: 700; color: var(--encre); line-height: 1.25; letter-spacing: .2px; }
+.bo-marque .sous-marque small { font-weight: 500; font-size: 11.5px; color: var(--discret); }
+.bo-nav.sombre .bo-marque .sous-marque { color: #F5F2F1; }
+.bo-nav.sombre .bo-marque .sous-marque small { color: #E5A194; }
