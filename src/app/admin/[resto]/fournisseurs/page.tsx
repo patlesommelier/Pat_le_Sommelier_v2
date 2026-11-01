@@ -72,8 +72,9 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
           const site = d.site ? (/^https?:/.test(d.site) ? d.site : `https://${d.site}`) : null;
           return (
             <div key={d.id} className={`carte-bo ligne-qv${f ? '' : ' inactif'}`}>
+              {/* Case de logo de même taille pour tous (logo ou non) : les noms commencent tous au même endroit. */}
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              {d.logo_url ? <img src={d.logo_url} alt="" className="logo-distributeur" style={{ height: 64, maxWidth: 180 }} /> : null}
+              <span className="case-logo case-logo-qv">{d.logo_url && <img src={d.logo_url} alt="" />}</span>
               <span className="pile" style={{ flex: '1 1 260px', gap: 4 }}>
                 <b style={{ fontSize: 17 }}>{d.nom}</b>
                 {(d.presentation || site) && <span className="petit">{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</span>}

@@ -332,3 +332,5 @@ dialog.superposition { overflow-y: auto; }
 .ligne-qv.inactif { opacity: .85; }
 .choix-etat { width: 170px; flex: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; }
 .choix-etat.actif { background: var(--vert-fond, #680021); color: #fff; border-color: transparent; }
+.case-logo-qv { width: 140px; height: 64px; }
+@media (max-width: 640px) { .case-logo-qv { width: 90px; height: 48px; } }
