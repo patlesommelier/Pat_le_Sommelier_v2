@@ -13,7 +13,10 @@ import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule'
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
-import { getFournisseurs } from '@/lib/admin/stocks';
+import { getFournisseurs, getPrixAchat } from '@/lib/admin/stocks';
+import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
+import { commanderChezDistributeur } from '../../../stocks-actions';
+import { euros } from '@/lib/bon-commande';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
@@ -50,13 +53,18 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   // Ouvert depuis « Vins de la base » (super-admin) : on y revient après l'enregistrement, pas sur la carte du restaurant.
   const depuisBase = (await searchParams).retour;
   const versBase = depuisBase?.startsWith('/admin/super/vins') ? depuisBase : null;
-  const retour = versBase ?? `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`;
+  // Ouvert depuis la page Vins (Base des vins) : même fiche, avec le stock et la commande ; retour sur cette page.
+  const depuisVins = depuisBase === `/admin/${resto}/stocks`;
+  const retour = versBase ?? (depuisVins ? `/admin/${resto}/stocks` : `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`);
+  const offre = depuisVins ? (await offresPourLaCarte(resto)).get(v.id) : undefined;
+  const fournisseur = fournisseurs.find((f) => f.id === v.fournisseur_id);
+  const achat = depuisVins ? (await getPrixAchat(resto)).get(v.id) : undefined;
   const affiche = titreCarte({ ...v, producteur: v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom });
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
 
   return (
     <>
-      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
+      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Vins' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
       <header className="bo-entete">
         <div>
           {/* Code interne du vin : super-admin seulement. */}
@@ -71,7 +79,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
       </header>
 
       <FormulaireAdmin key={v.id} action={enregistrerVin.bind(null, resto, v.id)} className="fiche-vin">
-        {versBase && <input type="hidden" name="retour" value={versBase} />}
+        {(versBase || depuisVins) && <input type="hidden" name="retour" value={versBase ?? `/admin/${resto}/stocks`} />}
         <section className="pile" style={{ gap: 16, minWidth: 0 }}>
           <fieldset className="carte-bo pile" style={cadre}>
             <legend style={legende}>Le vin</legend>
@@ -154,13 +162,34 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             </div>
           </fieldset>
 
-          {/* Fournisseur du vin (gestion des stocks) : on peut en ajouter un en le nommant. */}
-          <div className="champ carte-bo">
-            <label>Fournisseur</label>
-            <input type="hidden" name="fournisseur_envoye" value="1" />
-            <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
-            <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Base des vins › Vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
-          </div>
+          {/* Fournisseur du vin (gestion des stocks) : on peut en ajouter un en le nommant. Depuis la page Vins : stock et commande aussi. */}
+          {depuisVins ? (
+            <fieldset className="carte-bo pile" style={cadre}>
+              <legend style={legende}>Stock et commande</legend>
+              <input type="hidden" name="fournisseur_envoye" value="1" />
+              <input type="hidden" name="stock_envoye" value="1" />
+              <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))' }}>
+                <div className="champ"><label htmlFor="stock">En stock (bouteilles)</label><input id="stock" name="stock" type="number" min={0} max={100000} defaultValue={v.stock} /></div>
+                <div className="champ"><label htmlFor="en_commande">En commande</label><input id="en_commande" name="en_commande" type="number" min={0} max={100000} defaultValue={v.en_commande} /></div>
+                <div className="champ"><label htmlFor="prix_achat">Prix d’achat HTVA (€)</label><input id="prix_achat" name="prix_achat" inputMode="decimal" defaultValue={achat != null ? achat.toFixed(2).replace('.', ',') : ''} placeholder="—" /></div>
+              </div>
+              <div className="champ" style={{ margin: 0 }}><label>Fournisseur</label>
+                <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} /></div>
+              {offre && (
+                <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}{' '}
+                  <button formAction={commanderChezDistributeur.bind(null, resto, v.id, offre.id)} className="btn sec petit">Commander chez {offre.distributeur}</button></div>
+              )}
+              <span><Link href={`/admin/${resto}/commandes?${new URLSearchParams({ f: v.fournisseur_id ?? 'aucun', vin: v.id })}#nouvelle`} className="btn rouge petit">
+                Commander{fournisseur ? ` chez ${fournisseur.nom}` : ''}</Link></span>
+            </fieldset>
+          ) : (
+            <div className="champ carte-bo">
+              <label>Fournisseur</label>
+              <input type="hidden" name="fournisseur_envoye" value="1" />
+              <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
+              <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Base des vins › Vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
+            </div>
+          )}
 
           <div className="champ carte-bo">
             <label htmlFor="presentation_carte_perso">Présentation (app et carte imprimée)</label>
@@ -170,8 +199,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
 
           <div className="ligne-actions">
             <button type="submit" className="btn">Enregistrer</button>
-            <BoutonSupprimer action={supprimerVin.bind(null, resto, v.id)} libelle="Supprimer ce vin"
-              question={`Supprimer « ${v.libelle} » de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
+            <BoutonSupprimer action={supprimerVin.bind(null, resto, v.id, depuisVins)} libelle="Supprimer ce vin"
+              question={depuisVins ? `Supprimer « ${v.libelle} » de vos vins (toutes ses contenances) et de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`
+                : `Supprimer « ${v.libelle} » de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
           </div>
         </section>
 

@@ -208,6 +208,13 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
       where id = $1 and restaurant_id = $2`,
     [vinId, resto, f.get('coup_de_coeur') === 'on', etiquette, txt(f, 'presentation_carte_perso')],
   );
+  // Stock (fiche ouverte depuis la page Vins) : sur la ligne principale du vin, comme dans la page Vins.
+  if (f.has('stock_envoye')) {
+    const entier = (k: string) => { const x = txt(f, k); const n = x == null ? null : Math.round(Number(x.replace(',', '.'))); return n != null && Number.isFinite(n) && n >= 0 ? Math.min(n, 100000) : null; };
+    const achat = txt(f, 'prix_achat') == null ? null : nombre(f, 'prix_achat');
+    await requete(`update vin_carte set stock = coalesce($3, stock), en_commande = coalesce($4, en_commande), prix_achat = $5 where id = $1 and restaurant_id = $2`,
+      [vinId, resto, entier('stock'), entier('en_commande'), achat ?? null]);
+  }
   // Fournisseur (gestion des stocks) : pour le vin entier ; « nouveau » le crée avec le nom donné.
   if (f.has('fournisseur_envoye')) await choisirFournisseur(resto, await memeVin(resto, vinId), txt(f, 'fournisseur'), txt(f, 'fournisseur_nouveau'));
   // Coup de cœur : pour le vin entier (toutes ses contenances).
@@ -245,6 +252,8 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   // Ouvert depuis « Vins de la base » (super-admin) : retour sur cette liste ou cette fiche.
   const base = txt(f, 'retour');
   if (base?.startsWith('/admin/super/vins')) redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: vinId, ok })}`);
+  // Ouvert depuis la page Vins (Base des vins) : retour sur cette page.
+  if (base === `/admin/${resto}/stocks`) redirect(avec(base, { vin: vinId, ok }));
   redirect(avec(`/admin/${resto}/carte`, { c: v?.couleur ?? '', vin: vinId, ok }));
 }
 
@@ -854,15 +863,22 @@ export async function changerCategoriesCarte(resto: string, categories: string[]
   return { ok: true };
 }
 
-export async function supprimerVin(resto: string, vinId: string) {
+/**
+ * depuisVins : supprimé depuis la page Vins (Base des vins) ou sa fiche : le vin entier (toutes ses contenances),
+ * retour sur la page Vins. Sinon (carte des vins) : cette ligne de la carte.
+ */
+export async function supprimerVin(resto: string, vinId: string, depuisVins = false) {
   await exigerAcces(resto);
   const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
-  if (!v) redirect(avec(`/admin/${resto}/carte`, { erreur: 'Vin introuvable.' }));
-  await requete(`delete from regle_sommelier where restaurant_id = $1 and portee = 'vin' and cible = $2`, [resto, vinId]);
-  await requete('delete from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]); // accords supprimés avec lui
+  const liste = depuisVins ? `/admin/${resto}/stocks` : `/admin/${resto}/carte`;
+  if (!v) redirect(avec(liste, { erreur: 'Vin introuvable.' }));
+  const ids = depuisVins ? await memeVin(resto, vinId) : [vinId];
+  await requete(`delete from regle_sommelier where restaurant_id = $1 and portee = 'vin' and cible = any($2)`, [resto, ids]);
+  await requete('delete from vin_carte where id = any($1) and restaurant_id = $2', [ids, resto]); // accords supprimés avec lui
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte`, { c: v.couleur, ok: `« ${v.libelle} » a été supprimé de la carte.` }));
+  redirect(depuisVins ? avec(liste, { ok: `« ${v.libelle} » a été supprimé de vos vins et de la carte.` })
+    : avec(liste, { c: v.couleur, ok: `« ${v.libelle} » a été supprimé de la carte.` }));
 }
 
 export async function remettreVin(resto: string, id: string) {

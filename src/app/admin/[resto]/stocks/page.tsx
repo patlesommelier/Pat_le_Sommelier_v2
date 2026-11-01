@@ -2,6 +2,8 @@
 // son fournisseur ; un point d'exclamation rouge signale un stock bas, avec un bouton pour commander.
 import Link from 'next/link';
 import { commanderChezDistributeur, enregistrerStocks } from '../../stocks-actions';
+import { supprimerVin } from '../../actions';
+import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { Superposition } from '@/components/admin/Superposition';
 import { FormulaireAjoutVin } from './FormulaireAjoutVin';
@@ -48,6 +50,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
+      <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche (description, stock, commande). Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
           <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Voulez-vous le commander ?</span>
@@ -83,7 +86,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                     return (
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
-                          <div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
+                          <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : la commande est proposée. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
                             <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}{' '}
@@ -99,7 +102,11 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
-                        <td>{alerte && <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id ?? 'aucun'}&vin=${encodeURIComponent(v.id)}#nouvelle`} className="btn rouge petit" style={{ whiteSpace: 'nowrap' }}>Commander</Link>}</td>
+                        <td><div style={{ display: 'flex', gap: 6, alignItems: 'center', justifyContent: 'flex-end' }}>
+                          <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id ?? 'aucun'}&vin=${encodeURIComponent(v.id)}#nouvelle`} className={`btn ${alerte ? 'rouge' : 'sec'} petit`} style={{ whiteSpace: 'nowrap' }}>Commander</Link>
+                          <BoutonSupprimer action={supprimerVin.bind(null, resto, v.id, true)} libelle="Supprimer" enCoursLibelle="Suppression…" className="btn fantome petit"
+                            question={`Supprimer « ${nom[0]} » de vos vins (toutes ses contenances) et de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
+                        </div></td>
                       </tr>
                     );
                   })}
