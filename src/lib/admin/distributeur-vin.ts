@@ -6,6 +6,7 @@ import { requete } from '@/lib/db';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { centilitres } from '@/lib/contenances';
+import { completerBase } from '@/lib/admin/completer-base';
 import { offreDuCatalogue, type VinCatalogueComplet, type VinCarteComplet } from '@/lib/distributeurs/tarif';
 
 export async function rattacherAuDistributeur(resto: string, vinIds: string[], offreId: string) {
@@ -72,6 +73,15 @@ export async function associerAuCatalogue(resto: string, vinIds: string[], fourn
 
 /** Mots d'un vin blanc : la couleur, ou un cépage blanc (« Riesling », « Chardonnay »…). */
 export const BLANCS = 'blanc|blanche|bianco|blanco|weiss|weisser|riesling|chardonnay|sauvignon|chenin|viognier|gewurztraminer|pinot gris|pinot blanc|sylvaner|muscat|gruner|veltliner|albarino|vermentino|grillo|catarratto|carricante|fiano|greco|falanghina|verdicchio|garganega|soave|chablis|sancerre|semillon|marsanne|roussanne|aligote|melon|muscadet|savagnin|jacquere|altesse|petite arvine|furmint|assyrtiko|godello|verdejo|txakoli|arneis|timorasso|friulano|ribolla';
+/** Cépage écrit dans le nom du vin (« Riesling », « Alsace 'Pinot Gris' ») : il devient son cépage. */
+const CEPAGES_NOMMES = ['pinot gris', 'pinot blanc', 'pinot noir', 'pinot meunier', 'riesling', 'gewurztraminer', 'sylvaner', 'muscat', 'chardonnay', 'sauvignon blanc',
+  'sauvignon', 'chenin', 'viognier', 'gamay', 'syrah', 'grenache', 'merlot', 'cabernet franc', 'cabernet sauvignon', 'malbec', 'nero d avola', 'nebbiolo',
+  'sangiovese', 'barbera', 'primitivo', 'aglianico', 'vermentino', 'grillo', 'tempranillo', 'albarino', 'gruner veltliner', 'auxerrois', 'aligote'];
+export function cepageDuNom(libelle: string): string | null {
+  const t = ` ${libelle.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]+/g, ' ')} `;
+  const trouves = CEPAGES_NOMMES.filter((c) => t.includes(` ${c} `)).filter((c, _, l) => !l.some((x) => x !== c && x.includes(c)));
+  return trouves.length ? trouves.join(', ') : null;
+}
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];
 const CONTENANCE_CODE: Record<number, string> = { 75: 'bouteille', 37.5: 'demi', 18.7: 'quart', 150: 'magnum' };
 
@@ -80,10 +90,14 @@ const CONTENANCE_CODE: Record<number, string> = { 75: 'bouteille', 37.5: 'demi',
  * (stock 0, les bouteilles « en commande »), pas encore affiché sur la carte. Renvoie son identifiant.
  */
 export async function ajouterVinCommande(resto: string, distributeurVinId: string, fournisseurId: string | null, prixAchat: number | null, enCommande: number) {
+  // Description reprise du vin de la base de Pat quand le vin du distributeur y est relié (appellation, cépages, région).
   const [d] = await requete<{ libelle: string; couleur: string | null; section: string | null; millesime: string | null; contenance: string | null;
-    producteur_id: string | null; producteur: string | null; cuvee_id: string | null; couleur_cuvee: string | null }>(
-    `select v.libelle, v.couleur, v.section, v.millesime, v.contenance, v.producteur_id, coalesce(p.nom, v.producteur_texte) as producteur, v.cuvee_id, c.couleur::text as couleur_cuvee
-       from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id where v.id = $1`, [distributeurVinId]);
+    producteur_id: string | null; producteur: string | null; cuvee_id: string | null; couleur_cuvee: string | null;
+    appellation_id: string | null; appellation: string | null; cepages: string | null; region: string | null }>(
+    `select v.libelle, v.couleur, v.section, v.millesime, v.contenance, v.producteur_id, coalesce(p.nom, v.producteur_texte) as producteur, v.cuvee_id, c.couleur::text as couleur_cuvee,
+            c.appellation_id, coalesce(c.appellation_texte, t.nom) as appellation, c.cepages, coalesce(t.sous_region, t.region) as region
+       from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
+       left join terroir t on t.id = c.appellation_id where v.id = $1`, [distributeurVinId]);
   if (!d) return null;
   const mots = d.libelle.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
   const devinee = /\b(champagne|cremant|prosecco|cava|brut|petillant|spumante|franciacorta|trento)\b/.test(mots) ? 'bulles'
@@ -95,10 +109,12 @@ export async function ajouterVinCommande(resto: string, distributeurVinId: strin
   for (let n = 2; (await requete('select 1 from vin_carte where id = $1', [id])).length; n++) id = `${id.replace(/-\d+$/, '')}-${n}`;
   await requete(
     `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_texte, producteur_id, cuvee_id, millesime, format, contenances,
-                            ordre, disponible, stock, en_commande, fournisseur_id, distributeur_vin_id, prix_achat, modifie_bo)
+                            ordre, disponible, stock, en_commande, fournisseur_id, distributeur_vin_id, prix_achat, modifie_bo, appellation_id, appellation_texte, cepages)
      values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, (select coalesce(max(ordre), 0) + 1 from vin_carte where restaurant_id = $2),
-             false, 0, $12, $13, $14, $15, now())`,
-    [id, resto, couleur, d.section, d.libelle, d.producteur, d.producteur_id, d.cuvee_id, d.millesime, format, [CONTENANCE_CODE[cl] ?? 'bouteille'],
-      enCommande, fournisseurId, distributeurVinId, prixAchat]);
+             false, 0, $12, $13, $14, $15, now(), $16, $17, $18)`,
+    [id, resto, couleur, d.region ?? (d.section && !d.section.includes(' - ') ? d.section : null), d.libelle, d.producteur, d.producteur_id, d.cuvee_id, d.millesime, format, [CONTENANCE_CODE[cl] ?? 'bouteille'],
+      enCommande, fournisseurId, distributeurVinId, prixAchat, d.appellation_id, d.appellation, d.cepages || cepageDuNom(d.libelle)]);
+  // Ce que l'on sait du vin complète la base de Pat (cépage déduit du nom…).
+  await completerBase([id]).catch((e) => console.error('[commande] base', e));
   return id;
 }

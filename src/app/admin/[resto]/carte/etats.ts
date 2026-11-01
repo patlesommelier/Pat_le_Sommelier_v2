@@ -74,6 +74,7 @@ export function autresContenances(vins: VinBO[], v: VinBO) {
  */
 export function nomPourListe(v: VinBO): string[] {
   const producteur = v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom;
-  const { titre, sousTitre } = titreCarte({ ...v, producteur }, { millesime: false, cepages: false });
+  // Sans nom de vin, le titre n'est que l'appellation (« Alsace ») : le cépage (« pinot gris ») est alors montré dessous.
+  const { titre, sousTitre } = titreCarte({ ...v, producteur }, { millesime: false, cepages: !v.nom_vin });
   return [titre, ...(sousTitre ? [sousTitre] : [])];
 }

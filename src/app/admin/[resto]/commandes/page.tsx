@@ -19,6 +19,9 @@ import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
+// Suivi Quid Vinum, tel que le restaurant le lit.
+const SUIVI_QV: Record<string, string> = { recue: 'commande reçue', acceptee: 'commande acceptée', envoyee_distributeur: 'commande envoyée au distributeur',
+  livree: 'bouteilles livrées', facturee: 'bouteilles facturées' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string }> }) {
@@ -77,6 +80,11 @@ export default async function Commandes({ params, searchParams }: { params: Prom
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
         </div>
+        {/* Suivi par Quid Vinum (mis à jour par Quid Vinum dans son espace). */}
+        {c.via_qv && c.statut_qv && c.statut !== 'annulee' && (
+          <span className="suivi-qv"><Etat type={c.statut_qv === 'livree' || c.statut_qv === 'facturee' ? 'ok' : 'propose'}>Quid Vinum : {SUIVI_QV[c.statut_qv] ?? c.statut_qv}</Etat>
+            {c.statut_qv_le && <span className="petit discret"> depuis le {date(c.statut_qv_le)}</span>}</span>
+        )}
         <ul className="lignes-commande">
           {c.lignes.map((l, i) => <li key={i}><b className="qte-commande">{l.quantite}</b><span><span className="vin-commande">{l.libelle}</span>{c.statut === 'ouverte' && l.recue > 0 && <small className="recue"> · {l.recue >= l.quantite ? 'reçu' : `${l.recue} reçue${l.recue > 1 ? 's' : ''}`}</small>}{l.detail && <small className="detail-commande">{l.detail}</small>}</span>{l.prix_achat != null && <span className="prix-ligne">{euros(l.prix_achat)} <small>× {l.quantite} =</small> <b>{euros(l.prix_achat * l.quantite)}</b></span>}</li>)}
         </ul>

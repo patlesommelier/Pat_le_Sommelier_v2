@@ -8,6 +8,7 @@ import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
 import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
 import { ajouterVinCommande, rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
+import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
@@ -320,9 +321,19 @@ async function enregistrerReception(resto: string, commandeId: string, recues: M
     if (l.vin_id) await requete('update vin_carte set stock = stock + $3, en_commande = greatest(en_commande - $3, 0) where id = $1 and restaurant_id = $2', [l.vin_id, resto, l.q]);
   }
   if (complete) await requete(`update commande set statut = 'recue', recue_le = now() where id = $1`, [commandeId]);
+  // Vins ajoutés par une commande (hors carte jusqu'ici) : à leurs premières bouteilles reçues, ils passent sur la carte,
+  // et Pat prépare leurs accords avec les plats.
+  const misSurCarte = (await requete<{ id: string }>(
+    `update vin_carte set disponible = true, modifie_bo = now() where restaurant_id = $1 and id = any($2) and id like '%-qv-%' and not disponible and stock > 0 returning id`,
+    [resto, recu.map((l) => l.vin_id).filter(Boolean)])).map((v) => v.id);
+  if (misSurCarte.length && email) {
+    const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
+    if (plats.length) await lancerPreparation(resto, plats.map((x) => x.id), email, { vins: misSurCarte }).catch((e) => console.error('[réception] accords', e));
+  }
   rafraichir(resto);
   const n = recu.reduce((t, l) => t + l.q, 0);
-  return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`, reception: id };
+  return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`
+    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page Vins).` : ''), reception: id };
 }
 
 /** Réception des bouteilles (fenêtre de la commande) : champs recue_<ordre de la ligne>. */
