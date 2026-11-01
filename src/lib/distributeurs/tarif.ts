@@ -89,6 +89,25 @@ export function dedoublonner(vins: VinTarif[]): VinTarif[] {
 }
 
 /** Prix proposé aux restaurants : le prix imposé, sinon le prix QV + la marge du distributeur, au centime. */
+export type CalculQv = 'liste' | 'remise';
+
+/**
+ * Prix publié et prix QV d'un vin lu dans un tarif. « liste » : la liste donne le prix QV (le prix barré éventuel est le prix publié).
+ * « remise » : le prix publié (le plus haut si la liste en donne deux) moins la remise QV du distributeur.
+ */
+export function prixDuTarif(prixLu: number | null, prixCatalogue: number | null, calcul: CalculQv, remise: number | null): { publie: number | null; qv: number | null } {
+  if (calcul === 'remise' && remise != null) {
+    const publie = prixCatalogue ?? prixLu;
+    return { publie, qv: prixRemise(publie, remise) };
+  }
+  return { publie: prixCatalogue, qv: prixLu };
+}
+
+/** Prix publié moins la remise (%), arrondi au centime. */
+export function prixRemise(publie: number | null, remise: number): number | null {
+  return publie == null ? null : Math.round(publie * (1 - remise / 100) * 100) / 100;
+}
+
 export function prixPropose(prixQv: number | null, marge: number, impose: number | null = null): number | null {
   if (impose != null) return impose;
   if (prixQv == null) return null;

@@ -44,6 +44,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   // L'avancement est noté à chaque lot : sans nouvelle depuis 15 minutes, la recherche a été interrompue (serveur redémarré).
   // Bilan de l'ancienne recherche des étiquettes sur le web (retirée) : plus affiché
   const bilan = d.completion_statut && !(d.completion_message ?? '').startsWith('Photos sur le web') && !(d.completion_message ?? '').startsWith('Recherche des photos sur le web') ? d.completion_statut : null;
+  const calculQv = d.calcul_qv === 'remise' && d.remise_qv != null;
   const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 15 * 60_000;
   const domaine = domaineDuSite(d.site);
 
@@ -61,14 +62,19 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             <summary style={{ cursor: 'pointer', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" />}
-              <b style={{ fontSize: 17 }}>Coordonnées, logo et marge</b> <span className="discret">· marge {String(marge).replace('.', ',')} %{d.remise_qv != null ? ` · remise QV ${String(d.remise_qv).replace('.', ',')} %` : ''}{d.actif ? '' : ' · masqué aux restaurants'}</span></summary>
+              <b style={{ fontSize: 17 }}>Coordonnées, logo et marge</b> <span className="discret">· marge {String(marge).replace('.', ',')} %{d.remise_qv != null ? ` · remise QV ${String(d.remise_qv).replace('.', ',')} %${calculQv ? ' (prix QV calculés)' : ''}` : ''}{d.actif ? '' : ' · masqué aux restaurants'}</span></summary>
             <div className="grille-coordonnees">
             <FormulaireAdmin action={enregistrerDistributeur.bind(null, id)} className="pile" style={{ marginTop: 14 }}>
             <div className="champ"><label htmlFor="nom">Nom</label><input id="nom" name="nom" defaultValue={d.nom} required /></div>
             <div className="rangee" style={{ gap: 12 }}>
               <div className="champ" style={{ flex: 1 }}><label htmlFor="marge">Marge QV (%)</label><input id="marge" name="marge" inputMode="decimal" defaultValue={String(marge).replace('.', ',')} required /><span className="aide">ajoutée au prix QV</span></div>
-              <div className="champ" style={{ flex: 1 }}><label htmlFor="remise_qv">Remise QV (%)</label><input id="remise_qv" name="remise_qv" inputMode="decimal" defaultValue={d.remise_qv != null ? String(d.remise_qv).replace('.', ',') : ''} /><span className="aide">pour mémoire</span></div>
+              <div className="champ" style={{ flex: 1 }}><label htmlFor="remise_qv">Remise QV (%)</label><input id="remise_qv" name="remise_qv" inputMode="decimal" defaultValue={d.remise_qv != null ? String(d.remise_qv).replace('.', ',') : ''} /><span className="aide">remise du distributeur sur ses prix publiés</span></div>
             </div>
+            <div className="champ"><label htmlFor="calcul_qv">Prix QV</label>
+              <select id="calcul_qv" name="calcul_qv" defaultValue={d.calcul_qv}>
+                <option value="liste">Lus dans la liste du distributeur (prix barré = prix publié)</option>
+                <option value="remise">Calculés : prix publié moins la remise QV</option>
+              </select><span className="aide">en « calculés », les prix QV sont recalculés dès l’enregistrement</span></div>
             <label className="petit" style={{ display: 'flex', gap: 8, alignItems: 'center' }}><input type="checkbox" name="actif" defaultChecked={d.actif} /> Proposé aux restaurants</label>
             <div className="champ"><label htmlFor="logo">Logo</label><input id="logo" name="logo" type="file" accept="image/*" />
               {d.logo_url ? <label className="aide" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="retirer_logo" /> Retirer le logo actuel</label> : <span className="aide">PNG, JPG, WebP ou SVG de préférence (une autre image est convertie)</span>}</div>
@@ -237,9 +243,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               <div className="carte-bo" style={{ padding: 0 }}>
                 <div className="tableau">
                   <table style={{ minWidth: 980 }}>
-                    <thead><tr><th>Vin</th><th>Base de Pat</th><th className="droite">Prix QV</th><th className="droite">Prix proposé</th><th className="droite">Prix imposé</th><th className="droite">Proposé</th></tr></thead>
+                    <thead><tr><th>Vin</th><th>Base de Pat</th><th className="droite">Prix publié</th><th className="droite">Prix QV{calculQv && <span className="discret" style={{ fontWeight: 400 }}> (−{String(d.remise_qv).replace('.', ',')} %)</span>}</th><th className="droite">Prix proposé</th><th className="droite">Prix imposé</th><th className="droite">Proposé</th></tr></thead>
                     <tbody>
-                      {!vins.length && <tr><td colSpan={6} className="discret">{tous.length ? 'Aucun vin ne correspond.' : 'Aucun vin : déposez le tarif ci-dessus, ou ajoutez les vins à la main.'}</td></tr>}
+                      {!vins.length && <tr><td colSpan={7} className="discret">{tous.length ? 'Aucun vin ne correspond.' : 'Aucun vin : déposez le tarif ci-dessus, ou ajoutez les vins à la main.'}</td></tr>}
                       {vins.map((v) => (
                         <tr key={v.id} style={v.actif ? undefined : { opacity: 0.55 }}>
                           <td>
@@ -247,7 +253,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                             <div className="nom"><b>{v.libelle}</b>{v.millesime ? ` ${v.millesime}` : ''}{v.contenance ? <span className="discret"> · {v.contenance}</span> : null}</div>
                             <div className="petit">{v.producteur_texte ?? <span className="discret">producteur non indiqué</span>}{v.certification ? ` · ${v.certification}` : ''}{v.section ? <span className="discret"> · {v.section}</span> : null}
                               {v.epuise && <> · <b style={{ color: 'var(--rouge, #FF0D05)' }}>Épuisé</b></>}{v.maximum != null && <> · Max. {v.maximum}</>}
-                              {v.reference && <span className="discret"> · réf. {v.reference}</span>}{v.prix_catalogue != null && <span className="discret"> · tarif {euros(Number(v.prix_catalogue))}</span>}</div>
+                              {v.reference && <span className="discret"> · réf. {v.reference}</span>}</div>
                             </div></div>
                           </td>
                           <td>{v.producteur_id ? <>
@@ -257,7 +263,10 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                               {cuvees.filter((c) => c.producteur_id === v.producteur_id).map((c) => <option key={c.id} value={c.id}>{c.nom}{c.statut === 'propose' ? ' (à valider)' : ''}</option>)}
                             </select>
                           </> : <a href="#base" className="petit discret">producteur à relier</a>}</td>
-                          <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`prix_${v.id}`} defaultValue={virgule(v.prix_qv)} aria-label={`Prix QV : ${v.libelle}`} /> €</span></td>
+                          <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`publie_${v.id}`} defaultValue={virgule(v.prix_catalogue)} placeholder="—" aria-label={`Prix publié : ${v.libelle}`} /> €</span></td>
+                          <td className="droite">{calculQv && v.prix_catalogue != null
+                            ? <><input type="hidden" name={`prix_${v.id}`} value={virgule(v.prix_qv)} /><span style={{ whiteSpace: 'nowrap' }}>{v.prix_qv == null ? '—' : euros(Number(v.prix_qv))}</span></>
+                            : <span className="champ-prix"><input type="text" inputMode="decimal" name={`prix_${v.id}`} defaultValue={virgule(v.prix_qv)} aria-label={`Prix QV : ${v.libelle}`} /> €</span>}</td>
                           <td className="droite" style={{ whiteSpace: 'nowrap' }}>{(() => { const p = prixPropose(v.prix_qv, marge, v.prix_restaurant); return p == null ? '—' : euros(p); })()}</td>
                           <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`impose_${v.id}`} defaultValue={virgule(v.prix_restaurant)} placeholder="—" aria-label={`Prix imposé aux restaurants : ${v.libelle}`} /> €</span></td>
                           <td className="droite"><input type="checkbox" name={`actif_${v.id}`} defaultChecked={v.actif} aria-label={`Proposé aux restaurants : ${v.libelle}`} /></td>
@@ -277,7 +286,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 <div className="champ"><label htmlFor="n-mil">Millésime</label><input id="n-mil" name="millesime" inputMode="numeric" maxLength={4} /></div>
                 <div className="champ"><label htmlFor="n-cl">Contenance</label><input id="n-cl" name="contenance" placeholder="75 cl" /></div>
                 <div className="champ"><label htmlFor="n-coul">Couleur</label><select id="n-coul" name="couleur" defaultValue=""><option value="">—</option>{['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'].map((c) => <option key={c} value={c}>{c === 'rose' ? 'rosé' : c}</option>)}</select></div>
-                <div className="champ"><label htmlFor="n-prix">Prix QV HTVA</label><input id="n-prix" name="prix" inputMode="decimal" /></div>
+                <div className="champ"><label htmlFor="n-publie">Prix publié HTVA</label><input id="n-publie" name="publie" inputMode="decimal" /></div>
+                {!calculQv && <div className="champ"><label htmlFor="n-prix">Prix QV HTVA</label><input id="n-prix" name="prix" inputMode="decimal" /></div>}
                 <span><button className="btn sec">Ajouter</button></span>
               </FormulaireAdmin>
             </details>

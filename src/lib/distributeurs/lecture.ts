@@ -11,7 +11,7 @@ import type { Requete } from '../generation/accords';
 import { clientClaude, modeleLecture } from '../claude';
 import { lireDocx, pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type ImageArticle, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
-import { cleVin, dedoublonner, vinTarif, type VinTarif } from './tarif';
+import { cleVin, dedoublonner, prixDuTarif, vinTarif, type CalculQv, type VinTarif } from './tarif';
 import { ajouterCuveesManquantes, rattacherCuvees } from './rattachement';
 import { appliquerImages, etiquettesDuCollage } from './etiquettes';
 
@@ -247,7 +247,9 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   for (const nom of new Set(vins.map((v) => v.producteur).filter((p): p is string => Boolean(p)))) {
     producteurs.set(nom, choisis.has(nom) ? choisis.get(nom)! : (await producteurConnu(requete, nom))?.id ?? null);
   }
-  const lignes = vins.map((v, i) => ({ ...v, cle: cleVin(v), ordre: base + i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
+  // Prix QV : lus dans la liste, ou prix publié moins la remise QV du distributeur.
+  const [reglage] = await requete<{ calcul_qv: CalculQv; remise_qv: number | null }>('select calcul_qv, remise_qv::float8 as remise_qv from distributeur where id = $1', [distributeurId]);
+  const lignes = vins.map((v, i) => ({ ...v, ...(() => { const p = prixDuTarif(v.prix, v.prixCatalogue ?? null, reglage?.calcul_qv ?? 'liste', reglage?.remise_qv ?? null); return { prix: p.qv, prixCatalogue: p.publie }; })(), cle: cleVin(v), ordre: base + i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
     manuel: Boolean(v.producteur && choisis.has(v.producteur)) }));
   const uniques = [...new Map(lignes.map((l) => [l.cle, l])).values()];
   const avant = new Set((await requete<{ cle: string }>('select cle from distributeur_vin where distributeur_id = $1 and actif', [distributeurId])).map((r) => r.cle));

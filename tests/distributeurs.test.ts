@@ -74,3 +74,13 @@ test('tarifs : vin du tarif retrouvé sur la carte du restaurant', () => {
   assert.equal(vinDeLaCarte(cat({ libelle: 'Vouvray sec', producteur_id: null, producteur: 'Vincent Carême' }), carte)?.id, 'd');
   assert.equal(vinDeLaCarte(cat({ libelle: 'Vouvray sec', producteur_id: null, producteur: 'Domaine Huet' }), carte), null);
 });
+
+test('prix publié et prix QV : lus dans la liste ou calculés avec la remise', async () => {
+  const { prixDuTarif, prixRemise } = await import('../src/lib/distributeurs/tarif');
+  assert.deepEqual(prixDuTarif(18, 20, 'liste', 10), { publie: 20, qv: 18 });
+  assert.deepEqual(prixDuTarif(12, null, 'liste', null), { publie: null, qv: 12 });
+  assert.deepEqual(prixDuTarif(20, null, 'remise', 10), { publie: 20, qv: 18 });
+  assert.deepEqual(prixDuTarif(18, 20, 'remise', 15), { publie: 20, qv: 17 });
+  assert.deepEqual(prixDuTarif(12, null, 'remise', null), { publie: null, qv: 12 }); // sans remise : comme « liste »
+  assert.equal(prixRemise(13.99, 12.5), 12.24);
+});

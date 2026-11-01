@@ -7,7 +7,7 @@ import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rat
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
-  site: string | null; marge: number; remise_qv: number | null; notes: string | null; actif: boolean;
+  site: string | null; marge: number; remise_qv: number | null; calcul_qv: 'liste' | 'remise'; notes: string | null; actif: boolean;
   lecture_statut: 'en_cours' | 'terminee' | 'echec' | null; lecture_message: string | null; lecture_le: string | null;
   logo_url: string | null; source: 'fichier' | 'api'; modele_lecture: 'sonnet' | 'haiku' | 'opus';
   /** API du distributeur : adresse et nom de l'en-tête ; la clé elle-même ne sort jamais de la base (seulement « enregistrée »). */
@@ -16,7 +16,7 @@ export interface Distributeur {
 }
 
 // Colonnes lues (jamais api_cle).
-const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.marge::float8 as marge, d.remise_qv::float8 as remise_qv, d.notes, d.actif,
+const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.marge::float8 as marge, d.remise_qv::float8 as remise_qv, d.calcul_qv, d.notes, d.actif,
   d.lecture_statut, d.lecture_message, d.lecture_le::text, d.logo_url, d.source, d.modele_lecture, d.api_url, d.api_entete,
   d.api_cle is not null as api_cle_enregistree, d.api_synchro_le::text, d.completion_statut, d.completion_message, d.completion_le::text`;
 export interface DistributeurListe extends Distributeur { vins: number; tarif_nom: string | null; tarif_le: string | null; restaurants: number }

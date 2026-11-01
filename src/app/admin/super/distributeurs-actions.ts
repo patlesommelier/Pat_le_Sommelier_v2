@@ -11,7 +11,7 @@ import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
 import { completerVinsDistributeur, recadrerPhotosDistributeur } from '@/lib/distributeurs/completer';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
-import { cleVin, contenanceTarif } from '@/lib/distributeurs/tarif';
+import { cleVin, contenanceTarif, prixRemise } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
 import { deposerImage } from '@/lib/admin/fichiers';
 
@@ -60,6 +60,7 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   const marge = nombre(f, 'marge'), remise = nombre(f, 'remise_qv');
   if (marge == null || marge > 500) return { erreur: 'La marge doit être un pourcentage, par exemple 15.' };
   if (remise === undefined || (remise != null && remise > 100)) return { erreur: 'La remise QV doit être un pourcentage, par exemple 20.' };
+  if (txt(f, 'calcul_qv') === 'remise' && remise == null) return { erreur: 'Indiquez la remise QV (%) pour calculer les prix QV, par exemple 10.' };
   const email = txt(f, 'email');
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'L’adresse e-mail ne semble pas valide.' };
   const modele = ['sonnet', 'haiku', 'opus'].includes(txt(f, 'modele_lecture') ?? '') ? txt(f, 'modele_lecture') : 'sonnet';
@@ -77,6 +78,15 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
         modele, source, logo !== undefined, logo ?? null]);
   } catch {
     return { erreur: `Un autre distributeur s’appelle déjà « ${nom} ».` };
+  }
+  // Prix QV calculés : recalculés depuis le prix publié avec la nouvelle remise (le prix lu devient le prix publié s'il n'y en avait pas).
+  const calcul = txt(f, 'calcul_qv') === 'remise' ? 'remise' : 'liste';
+  await requete('update distributeur set calcul_qv = $2 where id = $1', [id, calcul]);
+  if (calcul === 'remise' && remise != null) {
+    await requete(`update distributeur_vin set prix_catalogue = coalesce(prix_catalogue, prix_qv),
+                     prix_qv = round(coalesce(prix_catalogue, prix_qv) * (1 - $2::numeric / 100), 2), maj_le = now()
+                    where distributeur_id = $1 and coalesce(prix_catalogue, prix_qv) is not null
+                      and prix_qv is distinct from round(coalesce(prix_catalogue, prix_qv) * (1 - $2::numeric / 100), 2)`, [id, remise]);
   }
   // Le nom suit chez les restaurants qui l'ont choisi.
   await requete('update fournisseur set nom = $2 where distributeur_id = $1', [id, nom]);
@@ -184,15 +194,19 @@ export async function enregistrerVins(id: string, f: FormData): Promise<Retour> 
   await exigerAdmin();
   const ids = [...f.keys()].filter((k) => k.startsWith('prix_')).map((k) => k.slice(5));
   if (!ids.length) return { ok: 'Rien à enregistrer.' };
-  const prix = ids.map((v) => nombre(f, `prix_${v}`)), imposes = ids.map((v) => nombre(f, `impose_${v}`));
-  const illisibles = ids.filter((_, i) => prix[i] === undefined || imposes[i] === undefined).length;
-  const lisibles = (i: number) => prix[i] !== undefined && imposes[i] !== undefined;
+  const [d] = await requete<{ calcul_qv: string; remise_qv: number | null }>('select calcul_qv, remise_qv::float8 as remise_qv from distributeur where id = $1', [id]);
+  const publies = ids.map((v) => (f.has(`publie_${v}`) ? nombre(f, `publie_${v}`) : null));
+  // Remise en % : le prix QV suit le prix publié ; sinon il est saisi.
+  const prix = ids.map((v, i) => (d?.calcul_qv === 'remise' && d.remise_qv != null && publies[i] != null ? prixRemise(publies[i]!, d.remise_qv) : nombre(f, `prix_${v}`)));
+  const imposes = ids.map((v) => nombre(f, `impose_${v}`));
+  const lisibles = (i: number) => prix[i] !== undefined && imposes[i] !== undefined && publies[i] !== undefined;
+  const illisibles = ids.filter((_, i) => !lisibles(i)).length;
   await requete(
-    `update distributeur_vin v set prix_qv = x.prix, prix_restaurant = x.impose, actif = x.actif, maj_le = now()
-       from unnest($2::text[], $3::numeric[], $4::numeric[], $5::bool[]) as x(id, prix, impose, actif)
+    `update distributeur_vin v set prix_qv = x.prix, prix_catalogue = x.publie, prix_restaurant = x.impose, actif = x.actif, maj_le = now()
+       from unnest($2::text[], $3::numeric[], $4::numeric[], $5::bool[], $6::numeric[]) as x(id, prix, impose, actif, publie)
       where v.distributeur_id = $1 and v.id = x.id`,
     [id, ids.filter((_, i) => lisibles(i)), prix.filter((_, i) => lisibles(i)), imposes.filter((_, i) => lisibles(i)),
-      ids.filter((_, i) => lisibles(i)).map((v) => f.get(`actif_${v}`) === 'on')]);
+      ids.filter((_, i) => lisibles(i)).map((v) => f.get(`actif_${v}`) === 'on'), publies.filter((_, i) => lisibles(i))]);
   // Vin de la base choisi à la main : seulement ceux qui ont changé, et seulement une cuvée du producteur relié.
   const actuels = new Map((await requete<{ id: string; cuvee_id: string | null }>(
     'select id, cuvee_id from distributeur_vin where distributeur_id = $1 and id = any($2)', [id, ids])).map((r) => [r.id, r.cuvee_id ?? '']));
@@ -281,14 +295,16 @@ export async function ajouterVinDistributeur(id: string, f: FormData): Promise<R
   await exigerAdmin();
   const libelle = txt(f, 'libelle')?.slice(0, 200);
   if (!libelle) return { erreur: 'Indiquez le nom du vin (appellation, cuvée).' };
-  const prix = nombre(f, 'prix');
-  if (prix === undefined) return { erreur: 'Prix illisible : écrivez par exemple 12,50.' };
+  const publie = nombre(f, 'publie');
+  const [d] = await requete<{ calcul_qv: string; remise_qv: number | null }>('select calcul_qv, remise_qv::float8 as remise_qv from distributeur where id = $1', [id]);
+  const prix = d?.calcul_qv === 'remise' && d.remise_qv != null && publie != null ? prixRemise(publie, d.remise_qv) : nombre(f, 'prix');
+  if (prix === undefined || publie === undefined) return { erreur: 'Prix illisible : écrivez par exemple 12,50.' };
   const millesime = txt(f, 'millesime');
   const v = { producteur: txt(f, 'producteur'), libelle, millesime: millesime && /^\d{4}$/.test(millesime) ? millesime : null, contenance: contenanceTarif(txt(f, 'contenance')) };
   const [{ ordre }] = await requete<{ ordre: number }>('select coalesce(max(ordre), 0) + 1 as ordre from distributeur_vin where distributeur_id = $1', [id]);
-  const r = await requete(`insert into distributeur_vin (id, distributeur_id, cle, producteur_texte, libelle, millesime, contenance, couleur, prix_qv, ordre)
-                           values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) on conflict (distributeur_id, cle) do nothing returning id`,
-    [randomUUID(), id, cleVin(v), v.producteur, v.libelle, v.millesime, v.contenance, txt(f, 'couleur'), prix, ordre]);
+  const r = await requete(`insert into distributeur_vin (id, distributeur_id, cle, producteur_texte, libelle, millesime, contenance, couleur, prix_qv, ordre, prix_catalogue)
+                           values ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) on conflict (distributeur_id, cle) do nothing returning id`,
+    [randomUUID(), id, cleVin(v), v.producteur, v.libelle, v.millesime, v.contenance, txt(f, 'couleur'), prix, ordre, publie]);
   if (!r.length) return { erreur: 'Ce vin est déjà dans la liste.' };
   rafraichir(id);
   return { ok: 'Vin ajouté.' };
