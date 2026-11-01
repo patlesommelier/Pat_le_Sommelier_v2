@@ -7,6 +7,7 @@ import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
 import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
+import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
@@ -261,4 +262,13 @@ export async function annulerCommande(resto: string, id: string): Promise<Retour
       where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
   rafraichir(resto);
   return { ok: 'Commande annulée.' };
+}
+
+/** Base de vins : un vin de la carte vendu par un distributeur de Quid Vinum, commandé chez lui (il devient son fournisseur). */
+export async function commanderChezDistributeur(resto: string, vinId: string, offreId: string) {
+  await exigerAcces(resto);
+  const o = await rattacherAuDistributeur(resto, [vinId], offreId);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  if (!o?.fournisseur_id) redirect(`/admin/${resto}/stocks?${new URLSearchParams({ erreur: 'Ce vin n’est plus proposé par ce distributeur.' })}`);
+  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: o.fournisseur_id, vin: vinId })}#nouvelle`);
 }

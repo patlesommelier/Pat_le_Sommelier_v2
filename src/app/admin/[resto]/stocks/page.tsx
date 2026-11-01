@@ -1,7 +1,10 @@
 // Gestion des stocks — Base de vins : chaque vin de la carte sur une ligne, son stock et ses bouteilles en commande (modifiables),
 // son fournisseur ; un point d'exclamation rouge signale un stock bas, avec un bouton pour commander.
 import Link from 'next/link';
-import { enregistrerStocks } from '../../stocks-actions';
+import { commanderChezDistributeur, enregistrerStocks } from '../../stocks-actions';
+import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
+import { Superposition } from '@/components/admin/Superposition';
+import { FormulaireAjoutVin } from './FormulaireAjoutVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
 import { Entete, Message, Vignette } from '@/components/admin/Ui';
@@ -14,11 +17,11 @@ import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
-export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string }> }) {
+export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const { filtre, ajoute, commander, ok } = await searchParams;
-  const [vins, r, fournisseurs, ouvertes, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto)]);
+  const { filtre, ajoute, commander, ok, erreur, ajout, c } = await searchParams;
+  const [vins, r, fournisseurs, ouvertes, achats, offres] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }))
     .map((g) => ({ ...g, bas: g.disponible && stockBas(g.principal.stock, limite) }));
@@ -37,11 +40,14 @@ export default async function Stocks({ params, searchParams }: { params: Promise
     <>
       <Entete titre="Base de vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
-        <Link href={`/admin/${resto}/stocks/nouveau`} className="btn">+ Ajouter un vin</Link>
+        {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
+        <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
+          <FormulaireAjoutVin resto={resto} couleur={c} />
+        </Superposition>
         <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
-      {ok && !ajouteChez && <Message ok={ok} />}
+      {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
           <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Voulez-vous le commander ?</span>
@@ -77,7 +83,12 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                     return (
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
-                          <div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}</div></div></td>
+                          <div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
+                          {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : la commande est proposée. */}
+                          {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
+                            <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}{' '}
+                              <button formAction={commanderChezDistributeur.bind(null, resto, v.id, o.id)} className="btn sec petit">Commander chez {o.distributeur}</button></div>); })()}
+                          </div></div></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
                         <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
                         {/* Prix de vente : celui de la bouteille sur la carte (app et carte imprimée), modifiable ici. */}

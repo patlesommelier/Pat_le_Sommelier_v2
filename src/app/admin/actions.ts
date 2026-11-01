@@ -25,6 +25,7 @@ import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
 import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { chercherVinsBase, offresDistributeurs, type VinTrouve } from '@/lib/admin/recherche-base';
+import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { completerBase } from '@/lib/admin/completer-base';
 import { choisirFournisseur } from '@/lib/admin/stocks';
 
@@ -473,22 +474,11 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
     ok: `« ${libelle} » ajouté : Pat prépare ses accords avec vos plats (quelques minutes).` }));
 }
 
-/**
- * Vin pris dans le catalogue d'un distributeur de Quid Vinum : le distributeur devient un fournisseur du restaurant
- * (avec la marge par défaut), le vin y est rattaché avec son prix d'achat, et relié au vin de la base s'il l'est.
- */
+/** Vin pris dans le catalogue d'un distributeur de Quid Vinum : rattaché au distributeur, et relié au vin de la base s'il l'est. */
 async function relierAuDistributeur(resto: string, vinIds: string[], distributeurVin: string | null, baseCle: string | null) {
   if (!distributeurVin) return null;
-  const [o] = await offresDistributeurs(resto, { vins: [distributeurVin] });
-  if (!o) return null;
-  const [m] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
-  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
-                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
-    [randomUUID(), resto, o.distributeur, o.distributeur_id, Number.isFinite(Number(m?.valeur)) ? Number(m?.valeur) : 15]);
-  const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2 limit 1', [resto, o.distributeur_id]);
-  await requete(`update vin_carte set fournisseur_id = $3, distributeur_vin_id = $4, prix_achat = coalesce($5, prix_achat) where restaurant_id = $1 and id = any($2)`,
-    [resto, vinIds, f?.id ?? null, o.id, o.prix]);
-  if (!baseCle && o.cuvee_id) await relierAuVinDeLaBase(resto, vinIds, `cuvee:${o.cuvee_id}`);
+  const o = await rattacherAuDistributeur(resto, vinIds, distributeurVin);
+  if (o && !baseCle && o.cuvee_id) await relierAuVinDeLaBase(resto, vinIds, `cuvee:${o.cuvee_id}`);
   return o;
 }
 
