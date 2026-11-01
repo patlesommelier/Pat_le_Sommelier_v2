@@ -40,8 +40,8 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
         {propres.map((f) => (
           <details key={f.id} className="carte-bo deroulant-simple">
             <summary><span><b style={{ fontSize: 17 }}>{f.nom}</b> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''}</span></span>
-              <span className="discret petit">{[f.contact, f.email, f.telephone].filter(Boolean).join(' · ') || 'Coordonnées à compléter'}</span>
-              <Link href={`/admin/${resto}/commandes?f=${f.id}#nouvelle`} className="btn sec petit" style={{ marginLeft: 'auto' }}>Passer une commande</Link></summary>
+              <span className="discret petit" style={{ flex: 1 }}>{[f.contact, f.email, f.telephone].filter(Boolean).join(' · ') || 'Coordonnées à compléter'}</span>
+              <Link href={`/admin/${resto}/commandes?f=${f.id}`} className="btn sec petit bouton-commande">Nouvelle commande</Link></summary>
             <FormulaireAdmin action={modifierFournisseur.bind(null, resto, f.id)} className="pile" style={{ gap: 14, marginTop: 14 }}>
               <Champs f={f} />
               <div className="ligne-actions">
@@ -65,7 +65,6 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
       <section className="pile" id="quid-vinum">
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'flex-start', justifyContent: 'space-between' }}>
           <div style={{ flex: '1 1 420px' }}><h2 style={{ margin: 0 }}>Distributeurs Quid Vinum</h2><p className="sous" style={{ margin: '4px 0 0' }}>La sélection de Quid Vinum : vous commandez dans leurs catalogues, au prix proposé par Quid Vinum, sans rien saisir. Une seule commande pour tous : Quid Vinum la transmet à chaque distributeur.</p></div>
-          {quidVinum.length > 0 && <Link href={`/admin/${resto}/commandes?f=qv#nouvelle`} className="btn rouge">Passer une commande Quid Vinum</Link>}
         </div>
         {quidVinum.map((f) => (
           <div key={f.id} className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
@@ -75,6 +74,8 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
             <span className="ligne-actions">
               <BoutonSupprimer action={supprimerFournisseur.bind(null, resto, f.id)} libelle="Retirer" className="btn fantome petit"
                 question={`Retirer « ${f.nom} » de vos distributeurs ? Ses vins n’auront plus de distributeur ; les commandes passées restent.`} />
+              {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum activés ; même colonne que les autres lignes. */}
+              <Link href={`/admin/${resto}/commandes?f=qv`} className="btn sec petit bouton-commande" style={{ marginRight: 34 }}>Nouvelle commande</Link>
             </span>
           </div>
         ))}
