@@ -173,7 +173,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 <div className="champ"><label htmlFor="en_commande">En commande</label><input id="en_commande" name="en_commande" type="number" min={0} max={100000} defaultValue={v.en_commande} /></div>
                 <div className="champ"><label htmlFor="prix_achat">Prix d’achat HTVA (€)</label><input id="prix_achat" name="prix_achat" inputMode="decimal" defaultValue={achat != null ? achat.toFixed(2).replace('.', ',') : ''} placeholder="—" /></div>
               </div>
-              <div className="champ" style={{ margin: 0 }}><label>Fournisseur</label>
+              <div className="champ" style={{ margin: 0 }}><label>Distributeur</label>
                 <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} /></div>
               {offre && (
                 <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}{' '}
@@ -184,7 +184,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             </fieldset>
           ) : (
             <div className="champ carte-bo">
-              <label>Fournisseur</label>
+              <label>Distributeur</label>
               <input type="hidden" name="fournisseur_envoye" value="1" />
               <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
               <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Base des vins › Vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>

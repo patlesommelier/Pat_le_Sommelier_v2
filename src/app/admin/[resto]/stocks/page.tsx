@@ -2,8 +2,6 @@
 // son fournisseur ; un point d'exclamation rouge signale un stock bas, avec un bouton pour commander.
 import Link from 'next/link';
 import { commanderChezDistributeur, enregistrerStocks } from '../../stocks-actions';
-import { supprimerVin } from '../../actions';
-import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { Superposition } from '@/components/admin/Superposition';
 import { FormulaireAjoutVin } from './FormulaireAjoutVin';
@@ -40,7 +38,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+      <Entete titre="Vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
         {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
         <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
@@ -50,7 +48,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
-      <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche (description, stock, commande). Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
+      <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
           <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Voulez-vous le commander ?</span>
@@ -77,7 +75,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         {parCouleur.length > 0 && (
           <div className="tableau">
             <table className="table-stocks" style={{ minWidth: 860 }}>
-              <thead><tr><th>Vin</th><th>Fournisseur</th><th className="droite">Prix d’achat HTVA</th><th className="droite">Prix de vente</th><th className="droite">En stock</th><th className="droite">En commande</th><th /></tr></thead>
+              <thead><tr><th>Vin</th><th>Distributeur</th><th className="droite">Prix d’achat HTVA</th><th className="droite">Prix de vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th /></tr></thead>
               {parCouleur.map((c) => (
                 <tbody key={c.titre}>
                   <tr className="rubrique"><td colSpan={7}><b className="rubrique-carte">{c.titre}</b></td></tr>
@@ -95,18 +93,15 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
                         <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
                         {/* Prix de vente : celui de la bouteille sur la carte (app et carte imprimée), modifiable ici. */}
-                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`vente_${v.id}`} defaultValue={v.prix != null ? Number(v.prix).toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix de vente : ${v.libelle}`} /> €</span>
+                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`vente_${v.id}`} defaultValue={v.prix != null ? Number(v.prix).toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix de vente TVAC : ${v.libelle}`} /> €</span>
                           {v.prix == null && v.prix_verre != null && <div className="petit discret">verre {Number(v.prix_verre).toFixed(2).replace('.', ',')} €</div>}</td>
                         <td className="droite"><span className="champ-stock">
                           {alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>}
                           <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
-                        <td><div style={{ display: 'flex', gap: 6, alignItems: 'center', justifyContent: 'flex-end' }}>
-                          <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id ?? 'aucun'}&vin=${encodeURIComponent(v.id)}#nouvelle`} className={`btn ${alerte ? 'rouge' : 'sec'} petit`} style={{ whiteSpace: 'nowrap' }}>Commander</Link>
-                          <BoutonSupprimer action={supprimerVin.bind(null, resto, v.id, true)} libelle="Supprimer" enCoursLibelle="Suppression…" className="btn fantome petit"
-                            question={`Supprimer « ${nom[0]} » de vos vins (toutes ses contenances) et de votre carte ? Ses accords seront supprimés aussi. Cette action est définitive.`} />
-                        </div></td>
+                        {/* Stock bas : la commande est proposée (sinon, on commande depuis la fiche du vin ou Commandes de vin). */}
+                        <td>{alerte && <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id ?? 'aucun'}&vin=${encodeURIComponent(v.id)}#nouvelle`} className="btn rouge petit" style={{ whiteSpace: 'nowrap' }}>Commander</Link>}</td>
                       </tr>
                     );
                   })}
@@ -115,7 +110,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
             </table>
           </div>
         )}
-        <div className="barre-enregistrer"><span className="discret">Changez les chiffres puis enregistrez. Le prix de vente est celui de la bouteille sur votre carte (app et carte imprimée).</span><button className="btn">Enregistrer</button></div>
+        <div className="barre-enregistrer"><span className="discret">Changez les chiffres puis enregistrez. Le prix de vente TVAC est celui de la bouteille sur votre carte (app et carte imprimée).</span><button className="btn">Enregistrer</button></div>
       </FormulaireAdmin>
     </>
   );

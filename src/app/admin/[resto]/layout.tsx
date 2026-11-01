@@ -12,7 +12,7 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus
 // « Base des vins » (vins, stocks, commandes, fournisseurs) : en premier, au-dessus de « Cartes et menus ».
 function avecStocks(resto: string, etapes: Etape[]): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Vins', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Fournisseurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
+  const stocks: Etape[] = [['stocks', 'Vins', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Base des vins', icone }));
   return [...stocks, ...etapes];
 }

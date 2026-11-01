@@ -46,7 +46,7 @@ export async function FormulaireAjoutVin({ resto, couleur: c }: { resto: string;
       </details>
 
       <fieldset className="carte-bo pile" style={cadre}>
-        <legend style={legende}>2. Millésime et prix de vente sur votre carte</legend>
+        <legend style={legende}>2. Millésime et prix de vente TVAC sur votre carte</legend>
         <input type="hidden" name="disponible" value="on" />
         <div className="champ" style={{ maxWidth: 220, margin: 0 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" placeholder="Ex. 2021 (vide si non millésimé)" /></div>
         <div className="pile" style={{ gap: 8 }}>

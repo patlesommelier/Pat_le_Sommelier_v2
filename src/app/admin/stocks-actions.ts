@@ -91,31 +91,31 @@ const champsFournisseur = (f: FormData) => [txt(f, 'nom')?.slice(0, 120) ?? null
 export async function ajouterFournisseur(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const champs = champsFournisseur(f);
-  if (!champs[0]) return { erreur: 'Indiquez le nom du fournisseur.' };
-  if (champs[5] && !/^\S+@\S+\.\S+$/.test(champs[5])) return { erreur: 'L’adresse e-mail du fournisseur ne semble pas valide.' };
+  if (!champs[0]) return { erreur: 'Indiquez le nom du distributeur.' };
+  if (champs[5] && !/^\S+@\S+\.\S+$/.test(champs[5])) return { erreur: 'L’adresse e-mail du distributeur ne semble pas valide.' };
   await requete('insert into fournisseur (id, restaurant_id, nom, adresse, tva, contact, telephone, email) values ($1, $2, $3, $4, $5, $6, $7, $8)',
     [randomUUID(), resto, ...champs]);
   rafraichir(resto);
   const retour = txt(f, 'retour');
   if (retour?.startsWith(`/admin/${resto}/`)) redirect(retour);
-  return { ok: `Fournisseur « ${champs[0]} » ajouté.` };
+  return { ok: `Distributeur « ${champs[0]} » ajouté.` };
 }
 
 export async function modifierFournisseur(resto: string, id: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
   const champs = champsFournisseur(f);
-  if (!champs[0]) return { erreur: 'Le nom du fournisseur ne peut pas être vide.' };
-  if (champs[5] && !/^\S+@\S+\.\S+$/.test(champs[5])) return { erreur: 'L’adresse e-mail du fournisseur ne semble pas valide.' };
+  if (!champs[0]) return { erreur: 'Le nom du distributeur ne peut pas être vide.' };
+  if (champs[5] && !/^\S+@\S+\.\S+$/.test(champs[5])) return { erreur: 'L’adresse e-mail du distributeur ne semble pas valide.' };
   await requete('update fournisseur set nom = $3, adresse = $4, tva = $5, contact = $6, telephone = $7, email = $8 where id = $1 and restaurant_id = $2', [id, resto, ...champs]);
   rafraichir(resto);
-  return { ok: 'Fournisseur enregistré.' };
+  return { ok: 'Distributeur enregistré.' };
 }
 
 export async function supprimerFournisseur(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
   await requete('delete from fournisseur where id = $1 and restaurant_id = $2', [id, resto]); // ses vins restent, sans fournisseur
   rafraichir(resto);
-  return { ok: 'Fournisseur supprimé : ses vins n’ont plus de fournisseur.' };
+  return { ok: 'Distributeur supprimé : ses vins n’ont plus de distributeur.' };
 }
 
 /** Distributeur de la base de Quid Vinum ajouté aux fournisseurs du restaurant : il commande dans son catalogue, au prix proposé. */
@@ -127,7 +127,7 @@ export async function ajouterDistributeurQv(resto: string, distributeurId: strin
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
   rafraichir(resto);
-  return { ok: `« ${d.nom} » est ajouté à vos fournisseurs : commandez dans son catalogue depuis Commandes de vin.` };
+  return { ok: `« ${d.nom} » est ajouté à vos distributeurs : commandez dans son catalogue depuis Commandes de vin.` };
 }
 
 // ───────── Paramètres ─────────
@@ -163,7 +163,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
   const [fournisseur] = fournisseurId
     ? await requete<{ nom: string; distributeur_id: string | null }>('select nom, distributeur_id from fournisseur where id = $1 and restaurant_id = $2', [fournisseurId, resto])
     : [{ nom: 'Fournisseur à préciser', distributeur_id: null }];
-  if (!fournisseur) return { erreur: 'Fournisseur introuvable.' };
+  if (!fournisseur) return { erreur: 'Distributeur introuvable.' };
   const catalogue = duCatalogue.length && fournisseur.distributeur_id ? await catalogueDistributeur(fournisseur.distributeur_id, resto) : [];
   for (const [vid, q] of duCatalogue) {
     const c = catalogue.find((x) => x.id === vid);
