@@ -78,10 +78,12 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           {c.statut === 'ouverte'
             ? (recues ? <Etat type="propose">Réception partielle : {recues} / {total(c)} bouteilles</Etat>
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
-            : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
+            : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat>
+            : c.statut_qv === 'refusee' ? <Etat type="attention">Refusée par Quid Vinum</Etat> : <Etat type="defaut">Annulée</Etat>}
         </div>
+        {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Quid Vinum a refusé cette commande : {c.motif_refus}</p>}
         {/* Suivi par Quid Vinum (mis à jour par Quid Vinum dans son espace). */}
-        {c.via_qv && c.statut_qv && c.statut !== 'annulee' && (
+        {c.via_qv && c.statut_qv && c.statut !== 'annulee' && c.statut_qv !== 'refusee' && (
           <span className="suivi-qv"><Etat type={c.statut_qv === 'livree' || c.statut_qv === 'facturee' ? 'ok' : 'propose'}>Quid Vinum : {SUIVI_QV[c.statut_qv] ?? c.statut_qv}</Etat>
             {c.statut_qv_le && <span className="petit discret"> depuis le {date(c.statut_qv_le)}</span>}</span>
         )}
@@ -211,6 +213,11 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         </Superposition>
       </Entete>
       <Message ok={sp.ok} />
+      {/* Commandes refusées par Quid Vinum ces 14 derniers jours : en tête de page, avec le motif. */}
+      {recues.filter((c) => c.statut_qv === 'refusee' && c.statut_qv_le && Date.now() - new Date(c.statut_qv_le).getTime() < 14 * 864e5).map((c) => (
+        <p key={c.id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>
+          Commande n° {referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} refusée par Quid Vinum{c.motif_refus ? ` : ${c.motif_refus}` : '.'}</p>
+      ))}
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">

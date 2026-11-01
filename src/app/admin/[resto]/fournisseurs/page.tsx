@@ -1,7 +1,7 @@
 // Base des vins — Distributeurs : « Mes distributeurs » (ceux du restaurant, coordonnées reprises sur les bons de commande)
 // et « Distributeurs Quid Vinum » (catalogue et prix de Quid Vinum, commandes envoyées à Quid Vinum). On peut en ajouter dans les deux.
 import Link from 'next/link';
-import { ajouterDistributeurQv, ajouterFournisseur, modifierFournisseur, supprimerFournisseur } from '../../stocks-actions';
+import { ajouterDistributeurQv, ajouterFournisseur, nouvelleCommandeQv, modifierFournisseur, supprimerFournisseur } from '../../stocks-actions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { EtatDistributeur } from '@/components/admin/EtatDistributeur';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
@@ -93,7 +93,8 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
                 {(d.presentation || site) && <span className="petit">{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</span>}
               </span>
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
-              {f && <Link href={`/admin/${resto}/commandes?f=qv`} className="btn sec petit bouton-commande">Nouvelle commande</Link>}
+              {/* Sur chaque distributeur Quid Vinum ; s'il n'est pas sélectionné, il le devient. Une commande Quid Vinum regroupe tous les actifs. */}
+              <form action={nouvelleCommandeQv.bind(null, resto, d.id)}><button className="btn sec petit bouton-commande">Nouvelle commande</button></form>
               {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
               <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? (() => { const n = vinsSurCarte.get(d.id) ?? 0; return `${n} vin${n > 1 ? 's' : ''} sur votre carte`; })() : `${d.vins} vins au catalogue`}</span>
               <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />

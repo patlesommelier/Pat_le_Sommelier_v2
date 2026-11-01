@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { commanderChezDistributeur, enregistrerStocks } from '../../stocks-actions';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
+import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { Superposition } from '@/components/admin/Superposition';
 import { FormulaireAjoutVin } from './FormulaireAjoutVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
@@ -23,6 +24,10 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const { filtre, ajoute, commander, ok, erreur, ajout, c } = await searchParams;
   const [vins, r, fournisseurs, ouvertes, achats, offres] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
+  // Vins des distributeurs Quid Vinum : leur prix d'achat est celui du catalogue (prix QV + marge du restaurant), non modifiable.
+  const distributeursQv = new Set(fournisseurs.filter((f) => f.distributeur_id).map((f) => f.id));
+  const prixCatalogue = new Map((await offresDistributeurs(resto, { vins: vins.map((v) => v.distributeur_vin_id).filter((x): x is string => Boolean(x)) }))
+    .map((o) => [o.id, o.prix] as const).filter((x): x is readonly [string, number] => x[1] != null));
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }))
     .map((g) => ({ ...g, bas: g.disponible && stockBas(g.principal.stock, limite) }));
   const bas = groupes.filter((g) => g.bas);
@@ -91,7 +96,10 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                               <button formAction={commanderChezDistributeur.bind(null, resto, v.id, o.id)} className="btn sec petit">Commander chez {o.distributeur}</button></div>); })()}
                           </div></div></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
-                        <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
+                        {/* Distributeur Quid Vinum : prix de son catalogue pour ce restaurant, non modifiable. */}
+                        <td className="droite">{v.fournisseur_id && distributeursQv.has(v.fournisseur_id)
+                          ? <span className="prix-fixe" title="Prix du catalogue Quid Vinum">{(() => { const x = prixCatalogue.get(v.distributeur_vin_id ?? '') ?? achats.get(v.id); return x != null ? euros(x) : '—'; })()}<small>prix Quid Vinum</small></span>
+                          : <span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span>}</td>
                         {/* Prix de vente : celui de la bouteille sur la carte (app et carte imprimée), modifiable ici. */}
                         <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`vente_${v.id}`} defaultValue={v.prix != null ? Number(v.prix).toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix de vente TVAC : ${v.libelle}`} /> €</span>
                           {v.prix == null && v.prix_verre != null && <div className="petit discret">verre {Number(v.prix_verre).toFixed(2).replace('.', ',')} €</div>}</td>

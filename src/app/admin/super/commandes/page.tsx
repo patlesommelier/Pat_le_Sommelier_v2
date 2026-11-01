@@ -1,7 +1,7 @@
 // Super-admin — Commandes passées par Quid Vinum : restaurant, vins commandés (prix du restaurant et prix QV du tarif),
 // et le suivi par Quid Vinum : reçue, acceptée, envoyée au distributeur, livrée, facturée.
 import Link from 'next/link';
-import { changerStatutQv } from '../commandes-actions';
+import { changerStatutQv, refuserCommandeQv } from '../commandes-actions';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -11,7 +11,7 @@ import { commandesQv, STATUTS_QV } from '@/lib/super/commandes';
 export const dynamic = 'force-dynamic';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Europe/Brussels' });
-const FILTRES = [['', 'Toutes'], ['a_envoyer', 'Pas encore envoyées'], ...STATUTS_QV, ['annulee', 'Annulées']] as const;
+const FILTRES = [['', 'Toutes'], ['a_envoyer', 'Pas encore envoyées'], ...STATUTS_QV, ['refusee', 'Refusées'], ['annulee', 'Annulées']] as const;
 
 export default async function CommandesQv({ searchParams }: { searchParams: Promise<{ statut?: string }> }) {
   await exigerAdmin();
@@ -38,7 +38,8 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   <b style={{ fontSize: 18 }}><Link href={`/admin/${c.restaurant_id}/commandes?commande=${c.id}`}>{c.restaurant}</Link></b>
                   <span className="petit discret">{c.destinataire}</span>
                 </span>
-                {c.statut === 'annulee' ? <Etat type="defaut">Annulée par le restaurant</Etat>
+                {c.statut_qv === 'refusee' ? <Etat type="attention">Refusée par QV</Etat>
+                  : c.statut === 'annulee' ? <Etat type="defaut">Annulée par le restaurant</Etat>
                   : !c.envoyee_le ? <Etat type="attention">Pas encore envoyée par le restaurant</Etat>
                   : (
                     <FormulaireAdmin action={changerStatutQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
@@ -50,6 +51,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                     </FormulaireAdmin>
                   )}
               </div>
+              {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Motif du refus : {c.motif_refus}</p>}
               <div className="tableau"><table style={{ minWidth: 720 }}>
                 <thead><tr><th>Vin</th><th>Distributeur</th><th className="droite">Bouteilles</th><th className="droite">Prix restaurant HTVA</th><th className="droite">Prix QV (tarif actuel)</th><th className="droite">Total HTVA</th></tr></thead>
                 <tbody>{c.lignes.map((l, i) => (
@@ -65,6 +67,17 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
               </table></div>
               <span className="petit">{bouteilles} bouteille{bouteilles > 1 ? 's' : ''} · <b>Total {euros(total)} HTVA</b>{totalQv != null && <span className="discret"> · prix QV {euros(totalQv)} · marge {euros(total - totalQv)}</span>}
                 {' · '}<a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener">Bon de commande (PDF)</a></span>
+              {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
+              {c.statut === 'ouverte' && c.envoyee_le && (
+                <details className="refus-commande">
+                  <summary className="petit" style={{ cursor: 'pointer', color: 'var(--ocre)', fontWeight: 700 }}>Refuser cette commande…</summary>
+                  <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 8, marginTop: 8 }}>
+                    <div className="champ" style={{ margin: 0 }}><label htmlFor={`motif-${c.id}`}>Pourquoi ? (le restaurant le lira)</label>
+                      <textarea id={`motif-${c.id}`} name="motif" rows={2} maxLength={500} required placeholder="Ex. Ce vin n’est plus disponible chez le distributeur ; minimum de 12 bouteilles non atteint." /></div>
+                    <span><button className="btn rouge petit">Refuser la commande</button></span>
+                  </FormulaireAdmin>
+                </details>
+              )}
             </article>
           );
         })}

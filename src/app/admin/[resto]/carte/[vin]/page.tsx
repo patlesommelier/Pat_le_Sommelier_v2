@@ -15,6 +15,7 @@ import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
 import { getFournisseurs, getPrixAchat } from '@/lib/admin/stocks';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
+import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { commanderChezDistributeur } from '../../../stocks-actions';
 import { euros } from '@/lib/bon-commande';
 
@@ -67,7 +68,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const retour = versBase ?? (depuisVins ? `/admin/${resto}/stocks` : `/admin/${resto}/carte?${new URLSearchParams({ c: v.couleur, vin: v.id })}`);
   const offre = depuisVins ? (await offresPourLaCarte(resto)).get(v.id) : undefined;
   const fournisseur = fournisseurs.find((f) => f.id === v.fournisseur_id);
-  const achat = depuisVins ? (await getPrixAchat(resto)).get(v.id) : undefined;
+  // Distributeur Quid Vinum : le prix d'achat est celui de son catalogue pour ce restaurant (non modifiable).
+  const prixQv = depuisVins && fournisseur?.distributeur_id && v.distributeur_vin_id ? (await offresDistributeurs(resto, { vins: [v.distributeur_vin_id] }))[0]?.prix ?? null : null;
+  const achat = depuisVins ? (prixQv ?? (await getPrixAchat(resto)).get(v.id)) : undefined;
   const affiche = titreCarte({ ...v, producteur: v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom });
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
 
@@ -181,7 +184,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))' }}>
                 <div className="champ"><label htmlFor="stock">En stock (bouteilles)</label><input id="stock" name="stock" type="number" min={0} max={100000} defaultValue={v.stock} /></div>
                 <div className="champ"><label htmlFor="en_commande">En commande</label><input id="en_commande" name="en_commande" type="number" min={0} max={100000} defaultValue={v.en_commande} /></div>
-                <div className="champ"><label htmlFor="prix_achat">Prix d’achat HTVA (€)</label><input id="prix_achat" name="prix_achat" inputMode="decimal" defaultValue={achat != null ? achat.toFixed(2).replace('.', ',') : ''} placeholder="—" /></div>
+                {fournisseur?.distributeur_id
+                  ? <div className="champ"><label>Prix d’achat HTVA</label><span className="prix-fixe" style={{ alignItems: 'flex-start' }}>{achat != null ? euros(achat) : '—'}<small>prix du catalogue Quid Vinum, non modifiable</small></span></div>
+                  : <div className="champ"><label htmlFor="prix_achat">Prix d’achat HTVA (€)</label><input id="prix_achat" name="prix_achat" inputMode="decimal" defaultValue={achat != null ? achat.toFixed(2).replace('.', ',') : ''} placeholder="—" /></div>}
               </div>
               <div className="champ" style={{ margin: 0 }}><label>Distributeur</label>
                 <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} /></div>

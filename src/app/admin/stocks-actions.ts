@@ -62,7 +62,8 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
   const illisibles = ids.filter((id, i) => (achats[i] === undefined && txt(f, `achat_${id}`) !== null) || (ventes[i] === undefined && txt(f, `vente_${id}`) !== null));
   const r = await requete<{ id: string }>(
     `update vin_carte v set stock = coalesce(x.stock, v.stock), en_commande = coalesce(x.commande, v.en_commande),
-            prix_achat = case when x.achat_envoye then x.achat else v.prix_achat end, prix = coalesce(x.vente, v.prix)
+            prix_achat = case when x.achat_envoye and not exists (select 1 from fournisseur q where q.id = v.fournisseur_id and q.distributeur_id is not null)
+                              then x.achat else v.prix_achat end, prix = coalesce(x.vente, v.prix)
        from unnest($2::text[], $3::int[], $4::int[], $5::numeric[], $6::bool[], $7::numeric[]) as x(id, stock, commande, achat, achat_envoye, vente)
       where v.restaurant_id = $1 and v.id = x.id returning v.id`,
     [resto, ids, ids.map((id) => entier(f, `stock_${id}`)), ids.map((id) => entier(f, `en_commande_${id}`)),
@@ -389,4 +390,17 @@ export async function commanderChezDistributeur(resto: string, vinId: string, of
   revalidatePath(`/admin/${resto}`, 'layout');
   if (!o?.fournisseur_id) redirect(`/admin/${resto}/stocks?${new URLSearchParams({ erreur: 'Ce vin n’est plus proposé par ce distributeur.' })}`);
   redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: o.fournisseur_id, vin: vinId })}#nouvelle`);
+}
+
+/** Page Distributeurs : « Nouvelle commande » sur un distributeur Quid Vinum ; s'il n'était pas sélectionné, il le devient. */
+export async function nouvelleCommandeQv(resto: string, distributeurId: string) {
+  await exigerAcces(resto);
+  const [d] = await requete<{ nom: string }>(`select nom from distributeur where id = $1 and actif`, [distributeurId]);
+  if (d) {
+    await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+                    where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
+      [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
+    rafraichir(resto);
+  }
+  redirect(`/admin/${resto}/commandes?f=qv`);
 }

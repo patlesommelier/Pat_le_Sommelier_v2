@@ -334,3 +334,5 @@ dialog.superposition { overflow-y: auto; }
 .choix-etat.actif { background: var(--vert-fond, #680021); color: #fff; border-color: transparent; }
 .case-logo-qv { width: 140px; height: 64px; }
 @media (max-width: 640px) { .case-logo-qv { width: 90px; height: 48px; } }
+.prix-fixe { display: inline-flex; flex-direction: column; align-items: flex-end; font-weight: 700; font-variant-numeric: tabular-nums; }
+.prix-fixe small { font-weight: 400; font-size: 11.5px; color: var(--discret); }

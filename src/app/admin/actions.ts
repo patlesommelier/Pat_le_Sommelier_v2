@@ -212,8 +212,11 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   if (f.has('stock_envoye')) {
     const entier = (k: string) => { const x = txt(f, k); const n = x == null ? null : Math.round(Number(x.replace(',', '.'))); return n != null && Number.isFinite(n) && n >= 0 ? Math.min(n, 100000) : null; };
     const achat = txt(f, 'prix_achat') == null ? null : nombre(f, 'prix_achat');
-    await requete(`update vin_carte set stock = coalesce($3, stock), en_commande = coalesce($4, en_commande), prix_achat = $5 where id = $1 and restaurant_id = $2`,
-      [vinId, resto, entier('stock'), entier('en_commande'), achat ?? null]);
+    // Prix d'achat : absent du formulaire pour un vin d'un distributeur Quid Vinum (prix de son catalogue, non modifiable).
+    await requete(`update vin_carte v set stock = coalesce($3, stock), en_commande = coalesce($4, en_commande),
+                          prix_achat = case when $6 and not exists (select 1 from fournisseur q where q.id = v.fournisseur_id and q.distributeur_id is not null) then $5 else prix_achat end
+                    where id = $1 and restaurant_id = $2`,
+      [vinId, resto, entier('stock'), entier('en_commande'), achat ?? null, f.has('prix_achat')]);
   }
   // Fournisseur (gestion des stocks) : pour le vin entier ; « nouveau » le crée avec le nom donné.
   if (f.has('fournisseur_envoye')) await choisirFournisseur(resto, await memeVin(resto, vinId), txt(f, 'fournisseur'), txt(f, 'fournisseur_nouveau'));
