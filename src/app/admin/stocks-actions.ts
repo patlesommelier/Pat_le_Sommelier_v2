@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
-import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
+import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
@@ -117,8 +117,9 @@ export async function ajouterDistributeurQv(resto: string, distributeurId: strin
   await exigerAcces(resto);
   const [d] = await requete<{ nom: string }>(`select nom from distributeur where id = $1 and actif`, [distributeurId]);
   if (!d) return { erreur: 'Ce distributeur n’est plus proposé.' };
-  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
-                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId]);
+  // Marge de Quid Vinum : la marge par défaut, modifiable ensuite par Pat pour ce restaurant (fiche du distributeur).
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
   rafraichir(resto);
   return { ok: `« ${d.nom} » est ajouté à vos fournisseurs : commandez dans son catalogue depuis Commandes de vin.` };
 }
@@ -157,7 +158,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
     ? await requete<{ nom: string; distributeur_id: string | null }>('select nom, distributeur_id from fournisseur where id = $1 and restaurant_id = $2', [fournisseurId, resto])
     : [{ nom: 'Fournisseur à préciser', distributeur_id: null }];
   if (!fournisseur) return { erreur: 'Fournisseur introuvable.' };
-  const catalogue = duCatalogue.length && fournisseur.distributeur_id ? await catalogueDistributeur(fournisseur.distributeur_id) : [];
+  const catalogue = duCatalogue.length && fournisseur.distributeur_id ? await catalogueDistributeur(fournisseur.distributeur_id, resto) : [];
   for (const [vid, q] of duCatalogue) {
     const c = catalogue.find((x) => x.id === vid);
     if (!c) return { erreur: 'Un vin n’est plus au catalogue du distributeur : rechargez la page.' };

@@ -34,8 +34,19 @@ export interface ProducteurDuTarif {
   manuel: boolean; suggestions: Suggestion[];
 }
 
-/** Prix proposé aux restaurants, en SQL (v : distributeur_vin, d : distributeur) — même calcul que prixPropose(). */
-export const SQL_PRIX_PROPOSE = 'coalesce(v.prix_restaurant, round(v.prix_qv * (1 + d.marge / 100), 2))';
+/** Marge par défaut de Quid Vinum (%), donnée à un restaurant quand il active un distributeur. */
+export async function margeDefaut(): Promise<number> {
+  const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
+  const n = Number(r?.valeur);
+  return Number.isFinite(n) && n >= 0 ? n : 15;
+}
+
+/** Restaurants qui ont activé ce distributeur, avec leur marge (%). */
+export async function restaurantsDistributeur(id: string) {
+  return requete<{ fournisseur_id: string; restaurant: string; marge: number | null }>(
+    `select f.id as fournisseur_id, r.nom as restaurant, f.marge::float8 as marge
+       from fournisseur f join restaurant r on r.id = f.restaurant_id where f.distributeur_id = $1 order by lower(r.nom)`, [id]);
+}
 
 // ───────── Super-admin ─────────
 export async function getDistributeurs() {
@@ -148,11 +159,14 @@ export async function distributeursProposes(resto: string) {
 }
 
 /** Catalogue d'un distributeur au prix proposé (le prix QV et la marge ne sortent pas d'ici). */
-export async function catalogueDistributeur(distributeurId: string) {
+/** Catalogue d'un distributeur pour un restaurant : prix QV + la marge de ce restaurant (sinon la marge par défaut). */
+export async function catalogueDistributeur(distributeurId: string, resto: string) {
+  const defaut = await margeDefaut();
   return requete<VinCatalogueResto>(
     `select v.id, v.section, coalesce(p.nom, v.producteur_texte) as producteur, v.producteur_id, v.libelle, v.millesime, v.contenance, v.couleur,
-            v.certification, ${SQL_PRIX_PROPOSE}::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
+            v.certification, round(v.prix_qv * (1 + coalesce(f.marge, $3) / 100), 2)::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id left join producteur p on p.id = v.producteur_id
        left join cuvee c on c.id = v.cuvee_id
-      where v.distributeur_id = $1 and v.actif and d.actif order by v.ordre, v.libelle`, [distributeurId]);
+       left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $2
+      where v.distributeur_id = $1 and v.actif and d.actif order by v.ordre, v.libelle`, [distributeurId, resto, defaut]);
 }

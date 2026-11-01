@@ -57,8 +57,7 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   await exigerAdmin();
   const nom = txt(f, 'nom')?.slice(0, 120);
   if (!nom) return { erreur: 'Le nom ne peut pas être vide.' };
-  const marge = nombre(f, 'marge'), remise = nombre(f, 'remise_qv');
-  if (marge == null || marge > 500) return { erreur: 'La marge doit être un pourcentage, par exemple 15.' };
+  const remise = nombre(f, 'remise_qv');
   if (remise === undefined || (remise != null && remise > 100)) return { erreur: 'La remise QV doit être un pourcentage, par exemple 20.' };
   if (txt(f, 'calcul_qv') === 'remise' && remise == null) return { erreur: 'Indiquez la remise QV (%) pour calculer les prix QV, par exemple 10.' };
   const email = txt(f, 'email');
@@ -72,14 +71,14 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
     try { logo = await deposerImage(await logoAccepte(fichierLogo), 'distributeurs'); } catch (e) { return { erreur: `Logo non enregistré : ${(e as Error).message}` }; }
   } else if (f.get('retirer_logo') === 'on') logo = null;
   try {
-    await requete(`update distributeur set nom = $2, adresse = $3, tva = $4, contact = $5, telephone = $6, email = $7, site = $8, marge = $9, remise_qv = $10,
-                   notes = $11, actif = $12, modele_lecture = $13, source = $14, logo_url = case when $15 then $16 else logo_url end where id = $1`,
-      [id, nom, txt(f, 'adresse'), txt(f, 'tva'), txt(f, 'contact'), txt(f, 'telephone'), email, txt(f, 'site'), marge, remise, txt(f, 'notes'), f.get('actif') === 'on',
+    await requete(`update distributeur set nom = $2, adresse = $3, tva = $4, contact = $5, telephone = $6, email = $7, site = $8, remise_qv = $9,
+                   notes = $10, actif = $11, modele_lecture = $12, source = $13, logo_url = case when $14 then $15 else logo_url end where id = $1`,
+      [id, nom, txt(f, 'adresse'), txt(f, 'tva'), txt(f, 'contact'), txt(f, 'telephone'), email, txt(f, 'site'), remise, txt(f, 'notes'), f.get('actif') === 'on',
         modele, source, logo !== undefined, logo ?? null]);
   } catch {
     return { erreur: `Un autre distributeur s’appelle déjà « ${nom} ».` };
   }
-  // Prix QV calculés : recalculés depuis le prix publié avec la nouvelle remise (le prix lu devient le prix publié s'il n'y en avait pas).
+  // Prix QV calculés : recalculés depuis le prix public avec la nouvelle remise (le prix lu devient le prix public s'il n'y en avait pas).
   const calcul = txt(f, 'calcul_qv') === 'remise' ? 'remise' : 'liste';
   await requete('update distributeur set calcul_qv = $2 where id = $1', [id, calcul]);
   if (calcul === 'remise' && remise != null) {
@@ -196,16 +195,15 @@ export async function enregistrerVins(id: string, f: FormData): Promise<Retour> 
   if (!ids.length) return { ok: 'Rien à enregistrer.' };
   const [d] = await requete<{ calcul_qv: string; remise_qv: number | null }>('select calcul_qv, remise_qv::float8 as remise_qv from distributeur where id = $1', [id]);
   const publies = ids.map((v) => (f.has(`publie_${v}`) ? nombre(f, `publie_${v}`) : null));
-  // Remise en % : le prix QV suit le prix publié ; sinon il est saisi.
+  // Remise en % : le prix QV suit le prix public ; sinon il est saisi.
   const prix = ids.map((v, i) => (d?.calcul_qv === 'remise' && d.remise_qv != null && publies[i] != null ? prixRemise(publies[i]!, d.remise_qv) : nombre(f, `prix_${v}`)));
-  const imposes = ids.map((v) => nombre(f, `impose_${v}`));
-  const lisibles = (i: number) => prix[i] !== undefined && imposes[i] !== undefined && publies[i] !== undefined;
+  const lisibles = (i: number) => prix[i] !== undefined && publies[i] !== undefined;
   const illisibles = ids.filter((_, i) => !lisibles(i)).length;
   await requete(
-    `update distributeur_vin v set prix_qv = x.prix, prix_catalogue = x.publie, prix_restaurant = x.impose, actif = x.actif, maj_le = now()
-       from unnest($2::text[], $3::numeric[], $4::numeric[], $5::bool[], $6::numeric[]) as x(id, prix, impose, actif, publie)
+    `update distributeur_vin v set prix_qv = x.prix, prix_catalogue = x.publie, actif = x.actif, maj_le = now()
+       from unnest($2::text[], $3::numeric[], $4::bool[], $5::numeric[]) as x(id, prix, actif, publie)
       where v.distributeur_id = $1 and v.id = x.id`,
-    [id, ids.filter((_, i) => lisibles(i)), prix.filter((_, i) => lisibles(i)), imposes.filter((_, i) => lisibles(i)),
+    [id, ids.filter((_, i) => lisibles(i)), prix.filter((_, i) => lisibles(i)),
       ids.filter((_, i) => lisibles(i)).map((v) => f.get(`actif_${v}`) === 'on'), publies.filter((_, i) => lisibles(i))]);
   // Vin de la base choisi à la main : seulement ceux qui ont changé, et seulement une cuvée du producteur relié.
   const actuels = new Map((await requete<{ id: string; cuvee_id: string | null }>(
@@ -308,6 +306,28 @@ export async function ajouterVinDistributeur(id: string, f: FormData): Promise<R
   if (!r.length) return { erreur: 'Ce vin est déjà dans la liste.' };
   rafraichir(id);
   return { ok: 'Vin ajouté.' };
+}
+
+/** Marge de Quid Vinum (%) de chaque restaurant qui a activé ce distributeur. */
+export async function enregistrerMarges(id: string, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  const ids = [...f.keys()].filter((k) => k.startsWith('marge_')).map((k) => k.slice(6));
+  const marges = ids.map((r) => nombre(f, `marge_${r}`));
+  if (marges.some((m) => m == null || m === undefined || m > 500)) return { erreur: 'Chaque marge doit être un pourcentage, par exemple 15.' };
+  await requete(`update fournisseur f set marge = x.marge from unnest($2::text[], $3::numeric[]) as x(id, marge) where f.distributeur_id = $1 and f.id = x.id`,
+    [id, ids, marges]);
+  rafraichir(id);
+  return { ok: 'Marges enregistrées.' };
+}
+
+/** Marge par défaut de Quid Vinum (%), donnée à un restaurant quand il active un distributeur. */
+export async function enregistrerMargeDefaut(f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  const marge = nombre(f, 'marge_defaut');
+  if (marge == null || marge > 500) return { erreur: 'La marge doit être un pourcentage, par exemple 15.' };
+  await requete(`insert into reglage_serveur (cle, valeur) values ('qv_marge', $1) on conflict (cle) do update set valeur = excluded.valeur, maj_le = now()`, [String(marge)]);
+  rafraichir();
+  return { ok: 'Marge par défaut enregistrée : elle s’applique aux prochains restaurants qui activent un distributeur.' };
 }
 
 /** Coordonnées de Quid Vinum : destinataire des commandes des restaurants (distributeurs de la base). */

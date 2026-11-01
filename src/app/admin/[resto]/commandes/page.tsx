@@ -33,7 +33,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const carteSimple = groupes.map((g) => ({ id: g.principal.id, libelle: g.principal.libelle, millesime: g.principal.millesime, format: g.principal.format,
     producteur_id: g.principal.producteur_id, producteur: g.principal.producteur_texte ?? g.principal.producteur_nom ?? null }));
   const catalogues = new Map(await Promise.all(fournisseurs.filter((f) => f.distributeur_id).map(async (f) => {
-    const lignes: LigneCatalogue[] = (await catalogueDistributeur(f.distributeur_id!)).map((c) => {
+    const lignes: LigneCatalogue[] = (await catalogueDistributeur(f.distributeur_id!, resto)).map((c) => {
       const surCarte = groupes.find((g) => g.principal.distributeur_vin_id === c.id)?.principal
         ?? groupes.find((g) => g.principal.id === vinDeLaCarte(c, carteSimple)?.id)?.principal;
       return { id: c.id, section: c.section, producteur: c.producteur, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, prix: c.prix,
