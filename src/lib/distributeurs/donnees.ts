@@ -4,7 +4,6 @@ import 'server-only';
 // - restaurants : le catalogue au prix proposé seulement, jamais le prix QV ni la marge.
 import { requete } from '../db';
 import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rattachement';
-import { SQL_PHOTO_DISTRIBUTEUR, SQL_SANS_ETIQUETTE } from './completer';
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
@@ -107,36 +106,11 @@ export async function vinsACompleter(id: string) {
   return r;
 }
 
-/**
- * Vins de ce distributeur dans la base, pour la recherche des étiquettes sur le web : sans étiquette lisible (pas de photo, ou vignette
- * trop petite ou sans étiquette lisible), ceux dont la photo vient d'un distributeur, et ceux déjà cherchés sur le web.
- */
-export async function vinsSansPhoto(id: string) {
-  const [r] = await requete<{ n: number; distributeur: number; deja: number }>(
-    `select count(*) filter (where sans)::int as n, count(*)::int as distributeur, count(*) filter (where deja)::int as deja from (
-       select c.id, bool_or(${SQL_SANS_ETIQUETTE}) as sans, bool_or(v.photo_cherche_le is not null) as deja
-         from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
-        where c.statut <> 'retire' and ${SQL_PHOTO_DISTRIBUTEUR}
-        group by c.id) x`, [id]);
-  return r;
-}
-
 /** Photos des vins de ce distributeur pas encore recadrées sur l'étiquette (photos différentes). */
 export async function photosARecadrer(id: string) {
   const [{ n }] = await requete<{ n: number }>(
     `select count(distinct etiquette_url)::int as n from distributeur_vin where distributeur_id = $1 and actif and etiquette_url is not null and not etiquette_recadree`, [id]);
   return n;
-}
-
-/** Derniers vins dont la photo a été cherchée sur le web (les plus récents d'abord), avec la photo trouvée ou non. */
-export async function photosCherchees(id: string, limite = 60) {
-  return requete<{ id: string; nom: string; producteur: string; etiquette_url: string | null; cherche_le: string; trouvee: boolean }>(
-    // trouvee : une étiquette a été trouvée sur le web (fichier « -web- ») ; sinon la photo affichée est restée celle du distributeur
-    `select c.id, c.nom, p.nom as producteur, coalesce(c.etiquette_url, max(v.etiquette_url)) as etiquette_url, max(v.photo_cherche_le)::text as cherche_le,
-            coalesce(bool_or(v.etiquette_url like '%-web-%'), false) as trouvee
-       from distributeur_vin v join cuvee c on c.id = v.cuvee_id join producteur p on p.id = c.producteur_id
-      where v.distributeur_id = $1 and v.photo_cherche_le is not null
-      group by c.id, p.nom order by max(v.photo_cherche_le) desc, c.nom limit $2`, [id, limite]);
 }
 
 // ───────── Coordonnées de Quid Vinum (bons de commande des restaurants) ─────────

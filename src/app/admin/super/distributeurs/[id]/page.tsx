@@ -1,7 +1,7 @@
 // Super-admin — fiche d'un distributeur : coordonnées et marge, tarif (PDF lu par Claude), vins au prix QV et prix proposé aux restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, chercherPhotos, collerTarif, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -9,7 +9,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, photosARecadrer, photosCherchees, vinsACompleter, vinsSansPhoto } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, getProducteursDistributeur, getVinsDistributeur, photosARecadrer, vinsACompleter } from '@/lib/distributeurs/donnees';
 import { domaineDuSite } from '@/lib/distributeurs/completer';
 import { prixPropose, sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
@@ -27,8 +27,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs, duTarif, cuvees, aCompleter, sansPhoto, cherchees, aRecadrer] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), vinsSansPhoto(id), photosCherchees(id), photosARecadrer(id)]);
+  const [tous, producteurs, duTarif, cuvees, aCompleter, aRecadrer] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), photosARecadrer(id)]);
   const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
   const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
   const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
@@ -42,6 +42,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const enCours = d.lecture_statut === 'en_cours' && d.lecture_le && Date.now() - new Date(d.lecture_le).getTime() < 30 * 60_000;
   const marge = Number(d.marge);
   // L'avancement est noté à chaque lot : sans nouvelle depuis 15 minutes, la recherche a été interrompue (serveur redémarré).
+  // Bilan de l'ancienne recherche des étiquettes sur le web (retirée) : plus affiché
+  const bilan = d.completion_statut && !(d.completion_message ?? '').startsWith('Photos sur le web') && !(d.completion_message ?? '').startsWith('Recherche des photos sur le web') ? d.completion_statut : null;
   const rechercheEnCours = d.completion_statut === 'en_cours' && d.completion_le && Date.now() - new Date(d.completion_le).getTime() < 15 * 60_000;
   const domaine = domaineDuSite(d.site);
 
@@ -195,7 +197,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
-            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || sansPhoto.distributeur > 0 || aRecadrer > 0 || d.completion_statut) && (
+            {(aCompleter.n > 0 || aCompleter.hors_base > 0 || aRecadrer > 0 || bilan) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
                   <b>Cépages, appellations et étiquettes</b>
@@ -209,22 +211,6 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                     </FormulaireAdmin>
                   )}
                 </div>
-                {sansPhoto.distributeur > 0 && !rechercheEnCours && (
-                  // Recherche des étiquettes sur le web : toujours proposée, sur les vins choisis et au nombre choisi.
-                  <FormulaireAdmin action={chercherPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
-                    <b className="petit">Étiquettes sur le web :</b>
-                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Quels vins ?
-                      <select name="perimetre" defaultValue={sansPhoto.n > 0 ? 'sans_etiquette' : 'photos_distributeur'} className="champ-liste" style={{ width: 'auto', minWidth: 0 }}>
-                        <option value="sans_etiquette">sans étiquette : pas de photo ou vignette ({sansPhoto.n})</option>
-                        <option value="photos_distributeur">tous ceux dont la photo vient du distributeur ({sansPhoto.distributeur})</option>
-                      </select></label>
-                    <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}>Combien ?
-                      <input type="number" name="limite" min={1} placeholder="tous" style={{ width: 90, minWidth: 0 }} className="champ-liste" aria-label="Nombre de vins à chercher (vide : tous)" /></label>
-                    <button className="btn sec petit">Chercher les étiquettes</button>
-                    {sansPhoto.deja > 0 && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" name="aussi_deja" /> aussi les {sansPhoto.deja} déjà cherchés</label>}
-                    <span className="petit discret">(site du producteur d’abord, puis cavistes ; l’étiquette trouvée remplace la photo du distributeur ; quelques centimes par vin)</span>
-                  </FormulaireAdmin>
-                )}
                 {aRecadrer > 0 && !rechercheEnCours && (
                   <FormulaireAdmin action={recadrerPhotos.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                     <span className="petit">{aRecadrer} photo{aRecadrer > 1 ? 's' : ''} pas encore recadrée{aRecadrer > 1 ? 's' : ''} sur l’étiquette :</span>
@@ -232,23 +218,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                     <span className="petit discret">(une photo de bouteille devient son étiquette ; moins d’un centime par photo)</span>
                   </FormulaireAdmin>
                 )}
-                {cherchees.length > 0 && (
-                  <details>
-                    <summary className="petit" style={{ cursor: 'pointer' }}>Vins dont la photo a été cherchée sur le web ({cherchees.length}{cherchees.length === 60 ? ' derniers' : ''}) : {cherchees.filter((c) => c.trouvee).length} étiquette{cherchees.filter((c) => c.trouvee).length > 1 ? 's' : ''} trouvée{cherchees.filter((c) => c.trouvee).length > 1 ? 's' : ''}, {cherchees.filter((c) => !c.trouvee).length} sans résultat</summary>
-                    <p className="petit discret" style={{ margin: '6px 0 0' }}>« Sans résultat » : rien de mieux sur le web, la photo affichée est restée celle du distributeur.</p>
-                    <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(min(260px, 100%), 1fr))', gap: 8, marginTop: 8 }}>
-                      {[...cherchees].sort((a, b) => Number(b.trouvee) - Number(a.trouvee)).map((c) => (
-                        <Link key={c.id} href={`/admin/super/vins/${encodeURIComponent(c.id)}`} className="vin-cell" style={{ textDecoration: 'none', color: 'inherit' }}>
-                          <Vignette url={c.etiquette_url} taille={44} />
-                          <span className="petit"><b>{c.nom}</b><br /><span className="discret">{c.producteur} · {c.trouvee ? <Etat type="ok">étiquette trouvée</Etat> : c.etiquette_url ? 'sans résultat (photo du distributeur)' : 'sans résultat'} · {date(c.cherche_le)}</span></span>
-                        </Link>
-                      ))}
-                    </div>
-                  </details>
-                )}
                 {aCompleter.hors_base > 0 && <span className="petit discret">Et {aCompleter.hors_base} ligne{aCompleter.hors_base > 1 ? 's' : ''} du tarif pas encore dans la base (producteur à relier, plus haut) : elles seront cherchées une fois leur producteur relié. Plusieurs millésimes ou formats d’un même vin ne font qu’une fiche dans la base.</span>}
                 {!domaine && <span className="petit" style={{ color: 'var(--ocre)' }}>Renseignez le site du distributeur (Coordonnées) : la recherche s’y limitera.</span>}
-                {d.completion_statut && (
+                {bilan && (
                   <span className="petit">{rechercheEnCours ? <Etat type="propose">Recherche en cours…</Etat> : d.completion_statut === 'terminee' ? <Etat type="ok">Terminée</Etat> : d.completion_statut === 'echec' ? <Etat type="attention">Échec</Etat> : <Etat type="attention">Interrompue</Etat>}
                     {' '}{d.completion_message}{d.completion_le && <span className="discret"> · {date(d.completion_le)}</span>}
                     {d.completion_statut === 'en_cours' && !rechercheEnCours && <span> — interrompue (le site a sans doute redémarré) : « Reprendre la recherche » continue avec les vins encore incomplets.</span>}</span>
