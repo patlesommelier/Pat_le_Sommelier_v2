@@ -7,6 +7,7 @@ import { EtatDistributeur } from '@/components/admin/EtatDistributeur';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
+import { requete } from '@/lib/db';
 import { getFournisseurs, type Fournisseur } from '@/lib/admin/stocks';
 import { distributeursProposes } from '@/lib/distributeurs/donnees';
 
@@ -30,7 +31,19 @@ function Champs({ f }: { f?: Fournisseur }) {
 export default async function Fournisseurs({ params }: { params: Promise<{ resto: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const [fournisseurs, proposes] = await Promise.all([getFournisseurs(resto), distributeursProposes(resto)]);
+  const [fournisseurs, proposes, surCarte] = await Promise.all([getFournisseurs(resto), distributeursProposes(resto),
+    // Vins de la carte de chaque distributeur Quid Vinum (un vin, toutes contenances) : rattachés à lui, pris dans son catalogue,
+    // ou, sans autre distributeur, un vin de la base de Pat qu'il vend.
+    requete<{ distributeur_id: string; n: number }>(
+      `select x.distributeur_id, count(distinct x.cle)::int as n from (
+         select coalesce(f.distributeur_id, dv.distributeur_id) as distributeur_id, lower(v.libelle) || coalesce(v.millesime, '') as cle
+           from vin_carte v left join fournisseur f on f.id = v.fournisseur_id left join distributeur_vin dv on dv.id = v.distributeur_vin_id
+          where v.restaurant_id = $1 and v.disponible and coalesce(f.distributeur_id, dv.distributeur_id) is not null
+         union
+         select c.distributeur_id, lower(v.libelle) || coalesce(v.millesime, '')
+           from vin_carte v join distributeur_vin c on c.cuvee_id = v.cuvee_id and c.actif
+          where v.restaurant_id = $1 and v.disponible and v.fournisseur_id is null and v.distributeur_vin_id is null) x group by 1`, [resto])]);
+  const vinsSurCarte = new Map(surCarte.map((x) => [x.distributeur_id, x.n]));
   const propres = fournisseurs.filter((f) => !f.distributeur_id), quidVinum = fournisseurs.filter((f) => f.distributeur_id);
   return (
     <>
@@ -82,7 +95,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
               {f && <Link href={`/admin/${resto}/commandes?f=qv`} className="btn sec petit bouton-commande">Nouvelle commande</Link>}
               {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
-              <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? `${f.vins} vin${f.vins > 1 ? 's' : ''} sur votre carte` : `${d.vins} vins au catalogue`}</span>
+              <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? (() => { const n = vinsSurCarte.get(d.id) ?? 0; return `${n} vin${n > 1 ? 's' : ''} sur votre carte`; })() : `${d.vins} vins au catalogue`}</span>
               <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />
             </div>
           );
