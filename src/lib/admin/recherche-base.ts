@@ -111,5 +111,12 @@ export async function chercherVinsBase(texte: string, resto?: string): Promise<V
     v.offres = offres.filter((o) => (type === 'cuvee' ? o.cuvee_id === ref : type === 'distrib' && o.id === ref))
       .map(({ cuvee_id: _c, ...o }) => o); // eslint-disable-line @typescript-eslint/no-unused-vars
   }
-  return sortie;
+  // Doublon dans la base (même vin sous un autre producteur, ex. « Orestadi ») sans distributeur : seul le vin vendu
+  // par un distributeur est proposé ; sa photo sert à celui-ci s'il n'en a pas. Le doublon reste à fusionner par Pat.
+  return sortie.filter((v) => {
+    if (v.offres?.length) return true;
+    const vendu = sortie.find((w) => w.offres?.length && memeVinQue(v, w));
+    if (vendu && !vendu.etiquette && v.etiquette) vendu.etiquette = v.etiquette;
+    return !vendu;
+  });
 }
