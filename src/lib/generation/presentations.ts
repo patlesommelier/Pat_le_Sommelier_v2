@@ -29,7 +29,12 @@ const ficheVin = (v: VinPresentation) => ({
   descriptif: v.descriptif?.replace(/\s+/g, ' ').slice(0, 1200) ?? null,
   commentaires: v.commentaires?.replace(/\s+/g, ' ').slice(0, 800) ?? null,
   plats_du_restaurant: v.plats?.length ? v.plats : null,
+  // Rien dans la base de Pat sur ce vin : à chercher sur le web (site du producteur d'abord).
+  ...(aChercher(v) ? { a_chercher_sur_le_web: true } : {}),
 });
+
+/** Vin sans descriptif ni commentaire dans la base de Pat : sa présentation s'appuie sur une recherche web. */
+export const aChercher = (v: VinPresentation) => !v.descriptif?.trim() && !v.commentaires?.trim();
 
 export function construirePrompt(vins: VinPresentation[], nomRestaurant: string, dejaEcrits: string[] = []) {
   return `Tu es Pat le sommelier. Rédige la présentation de chaque vin pour la carte des vins imprimée du restaurant ${nomRestaurant}.
@@ -45,6 +50,9 @@ Règles :
 - varie aussi la construction des phrases : pas toujours « signe ce… », « À table, il… », « Il s'invite… » ;
 - appuie-toi uniquement sur les champs fournis (descriptif, commentaires, cépages) ; n'invente aucun fait,
   aucune date, aucun classement officiel absent des données ; si un champ manque, reste général ;
+- pour un vin marqué « a_chercher_sur_le_web » (rien dans la base de Pat), cherche d'abord sa fiche avec web_search,
+  de préférence sur le site du producteur, puis chez un caviste ou un importateur ; appuie-toi sur ce que tu y lis
+  (terroir, vinification, cépages), sans rien inventer ; si tu ne trouves rien de fiable, reste général ;
 - reformule le descriptif dans la voix de Pat, ne le recopie jamais mot pour mot ;
 - toujours positif : dis ce que le vin a de beau, jamais ce qui lui manque ;
 - aucune note, aucun classement de Pat, aucun score, aucune comparaison de prix ;
@@ -121,9 +129,18 @@ export async function genererPresentations(vins: VinPresentation[], nomRestauran
     for (let essai = 0; essai <= essaisMax && aFaire.length; essai++) {
       // Déjà écrits : ceux de ce passage et ceux déjà sur la carte (pour ne pas les répéter).
       const dejaEcrits = [...existants.filter((e) => e.couleur === couleur).map((e) => e.texte), ...deCetteCouleur.filter((v) => resultat[v.id]).map((v) => resultat[v.id])];
-      const m = await client.messages.stream({ model: modele, max_tokens: 32000, messages: [{ role: 'user', content: construirePrompt(aFaire, nomRestaurant, dejaEcrits) }] }).finalMessage();
+      // Des vins inconnus de la base de Pat : recherche web autorisée (outil côté serveur, tours en pause repris).
+      const outils = aFaire.some(aChercher) ? [{ type: 'web_search_20260209', name: 'web_search', max_uses: Math.min(3 * aFaire.filter(aChercher).length, 12) }] : undefined;
+      const messages: Anthropic.MessageParam[] = [{ role: 'user', content: construirePrompt(aFaire, nomRestaurant, dejaEcrits) }];
+      let texte = '';
+      for (let tour = 0; tour < 4; tour++) {
+        const m = await client.messages.stream({ model: modele, max_tokens: 32000, messages, ...(outils ? { tools: outils } : {}) } as unknown as Anthropic.MessageStreamParams).finalMessage();
+        texte = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
+        if ((m.stop_reason as string) !== 'pause_turn') break;
+        messages.push({ role: 'assistant', content: m.content as unknown as Anthropic.ContentBlockParam[] });
+      }
       const ids = new Set(aFaire.map((v) => v.id));
-      for (const x of lireJson(m.content.map((b) => (b.type === 'text' ? b.text : '')).join(''))) {
+      for (const x of lireJson(texte)) {
         if (ids.has(x.id) && !verifierPresentation(x.texte).length) resultat[x.id] = x.texte;
       }
       // Quasi-doublons dans la couleur : le second de chaque paire est refait.
@@ -138,7 +155,7 @@ export async function genererPresentations(vins: VinPresentation[], nomRestauran
 /** Vins à présenter (champs descriptifs seulement, jamais de ranking). Filtre SQL ajouté après les conditions de base. */
 export const SQL_VINS_A_PRESENTER = `select v.id, v.libelle as nom, coalesce(p.nom, v.producteur_texte) as producteur, nullif(v.millesime, 'NM') as millesime,
           v.couleur::text as couleur, v.section as region, v.cepages, v.descriptif,
-          nullif(concat_ws(' ', v.presentation, p.avis_pat), '') as commentaires,
+          nullif(concat_ws(' ', v.presentation, p.avis_pat, (select k.description from cuvee k where k.id = v.cuvee_id)), '') as commentaires,
           -- Plats du menu avec lesquels ce vin s'accorde le mieux : leurs noms seulement (jamais les notes).
           (select array_agg(x.nom) from (select coalesce(pl.nom_court, pl.nom) as nom from accord a join plat pl on pl.id = a.plat_id and pl.actif
              where a.vin_id = v.id and a.note >= 4 and a.statut <> 'refuse' order by a.note desc, a.rang nulls last limit 3) x) as plats

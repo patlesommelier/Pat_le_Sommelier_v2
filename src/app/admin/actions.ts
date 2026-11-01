@@ -474,8 +474,9 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
   const offre = await relierAuDistributeur(resto, ids, txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
   await completerBase(ids).catch((e) => console.error('[base] compléter', id, e));
+  // Accords avec les plats, et présentation du vin (base de Pat, sinon recherche web) : même sans plats au menu.
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
-  if (plats.length) await lancerPreparation(resto, plats.map((p) => p.id), u.email, { vins: ids }).catch((e) => console.error('[ajout] vin', id, e));
+  await lancerPreparation(resto, plats.map((p) => p.id), u.email, { vins: ids }).catch((e) => console.error('[ajout] vin', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
   // Retour à la base de vins ; un vin pris chez un distributeur : proposé à la commande.
@@ -972,3 +973,11 @@ export async function retirerAcces(resto: string, userId: string) {
 }
 
 // ───────── Base de Pat (administrateur) ─────────
+
+/** Fiche du vin : Pat écrit la présentation des vins de la carte qui n'en ont pas (base de Pat, sinon recherche web). */
+export async function ecrirePresentations(resto: string, vinId: string, retour: string | null) {
+  const u = await exigerAcces(resto);
+  await lancerPreparation(resto, [], u.email).catch((e) => console.error('[présentation]', e));
+  revalidatePath(`/admin/${resto}`, 'layout');
+  redirect(`/admin/${resto}/carte/${encodeURIComponent(vinId)}?${new URLSearchParams({ ...(retour ? { retour } : {}), presentation: 'en_cours' })}`);
+}

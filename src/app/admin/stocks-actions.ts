@@ -328,7 +328,7 @@ async function enregistrerReception(resto: string, commandeId: string, recues: M
     [resto, recu.map((l) => l.vin_id).filter(Boolean)])).map((v) => v.id);
   if (misSurCarte.length && email) {
     const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
-    if (plats.length) await lancerPreparation(resto, plats.map((x) => x.id), email, { vins: misSurCarte }).catch((e) => console.error('[réception] accords', e));
+    await lancerPreparation(resto, plats.map((x) => x.id), email, { vins: misSurCarte }).catch((e) => console.error('[réception] accords', e));
   }
   rafraichir(resto);
   const n = recu.reduce((t, l) => t + l.q, 0);

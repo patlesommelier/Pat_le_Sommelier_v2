@@ -3,7 +3,7 @@ import 'server-only';
 import { requete } from '@/lib/db';
 
 export const STATUTS_QV = [['recue', 'Commande reçue par QV'], ['acceptee', 'Commande acceptée par QV'], ['envoyee_distributeur', 'Commande envoyée au distributeur'],
-  ['livree', 'Bouteilles livrées'], ['facturee', 'Bouteilles facturées']] as const;
+  ['livree_partielle', 'Livraison partielle'], ['livree', 'Bouteilles livrées'], ['facturee', 'Bouteilles facturées']] as const;
 
 export interface CommandeQv {
   id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; statut_qv: string | null; statut_qv_le: string | null;

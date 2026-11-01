@@ -21,7 +21,7 @@ import { nomPourListe, regrouperVins } from '../carte/etats';
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 // Suivi Quid Vinum, tel que le restaurant le lit.
 const SUIVI_QV: Record<string, string> = { recue: 'commande reçue', acceptee: 'commande acceptée', envoyee_distributeur: 'commande envoyée au distributeur',
-  livree: 'bouteilles livrées', facturee: 'bouteilles facturées' };
+  livree_partielle: 'livraison partielle', livree: 'bouteilles livrées', facturee: 'bouteilles facturées' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string }> }) {

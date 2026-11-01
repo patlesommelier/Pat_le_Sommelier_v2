@@ -6,7 +6,7 @@ import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { Etat } from '@/components/admin/Ui';
-import { enregistrerVin, supprimerVin } from '../../../actions';
+import { ecrirePresentations, enregistrerVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, ligneNotesPat, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule';
@@ -20,10 +20,18 @@ import { euros } from '@/lib/bon-commande';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const BARRES = [['corps', 'Corps'], ['intensite', 'Intensité'], ['tanins', 'Tanins'], ['acidite', 'Acidité'], ['douceur', 'Douceur'], ['boise', 'Boisé']] as const;
-const cadre = { gap: 12, border: '1px solid var(--ligne)', borderRadius: 14, padding: 16, margin: 0 } as const;
-const legende = { fontSize: 13, fontWeight: 700, padding: '0 6px' } as const;
 
-export default async function FicheVinBO({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ retour?: string }> }) {
+/** Groupe de la fiche, repliable : son titre, et en bref ce qu'il contient. Les champs repliés restent envoyés. */
+function Bloc({ titre, resume, ouvert = false, children }: { titre: string; resume?: string; ouvert?: boolean; children: React.ReactNode }) {
+  return (
+    <details className="carte-bo bloc-fiche" open={ouvert}>
+      <summary><b>{titre}</b>{resume && <span className="petit discret">{resume}</span>}</summary>
+      <div className="pile" style={{ gap: 12, marginTop: 12 }}>{children}</div>
+    </details>
+  );
+}
+
+export default async function FicheVinBO({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ retour?: string; presentation?: string }> }) {
   const { resto, vin } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const id = decodeURIComponent(vin);
@@ -52,6 +60,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const profil = (v.profil_degustation ?? {}) as Record<string, number | null>;
   // Ouvert depuis « Vins de la base » (super-admin) : on y revient après l'enregistrement, pas sur la carte du restaurant.
   const depuisBase = (await searchParams).retour;
+  const enCoursPresentation = (await searchParams).presentation === 'en_cours';
   const versBase = depuisBase?.startsWith('/admin/super/vins') ? depuisBase : null;
   // Ouvert depuis la page Vins (Base des vins) : même fiche, avec le stock et la commande ; retour sur cette page.
   const depuisVins = depuisBase === `/admin/${resto}/stocks`;
@@ -80,24 +89,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
 
       <FormulaireAdmin key={v.id} action={enregistrerVin.bind(null, resto, v.id)} className="fiche-vin">
         {(versBase || depuisVins) && <input type="hidden" name="retour" value={versBase ?? `/admin/${resto}/stocks`} />}
-        <section className="pile" style={{ gap: 16, minWidth: 0 }}>
-          <fieldset className="carte-bo pile" style={cadre}>
-            <legend style={legende}>Le vin</legend>
-            <div className="champ" style={{ maxWidth: 260 }}><label htmlFor="couleur">Catégorie</label>
-              <select id="couleur" name="couleur" defaultValue={v.couleur}>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
-            <IntituleVin initial={v.libelle} />
-            <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
-              <div className="champ"><label htmlFor="appellation_texte">Appellation</label>
-                <input id="appellation_texte" name="appellation_texte" placeholder="Ex. Chablis" defaultValue={v.appellation_texte ?? appellationDeduite(v.vin_texte, v.appellation_nom)} /></div>
-              <div className="champ"><label htmlFor="nom_vin">Nom du vin</label>
-                <input id="nom_vin" name="nom_vin" placeholder="Ex. Saint-Pierre (laisser vide s’il n’en a pas)" defaultValue={v.nom_vin ?? nomDeduit(v.vin_texte)} /></div>
-              <div className="champ"><label htmlFor="cepages">Cépage(s)</label>
-                <input id="cepages" name="cepages" placeholder="Ex. Chardonnay" defaultValue={v.cepages ?? ''} /></div>
-            </div>
-          </fieldset>
-
-          <fieldset className="carte-bo pile" style={cadre}>
-            <legend style={legende}>Producteur</legend>
+        <section className="pile" style={{ gap: 12, minWidth: 0 }}>
+          {/* Chaque groupe se replie (flèche) : on n'affiche que ce que l'on modifie. */}
+          <Bloc titre="Producteur" resume={producteurAffiche || 'À préciser'} ouvert={Boolean(sansLien || suggestions.length || (pk === 'attention' && v.a_verifier))}>
             <div className="champ">
               <label htmlFor="producteur_texte">Nom affiché</label>
               <input id="producteur_texte" name="producteur_texte" placeholder="Nom du domaine ou de la maison" defaultValue={producteurAffiche} />
@@ -133,10 +127,24 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             )}
             <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : Pat le cherche dans sa base. S’il ne le connaît pas, il lui est proposé comme nouveau producteur.</span>
             {pk === 'attention' && v.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {v.a_verifier}</p>}
-          </fieldset>
+          </Bloc>
 
-          <fieldset className="carte-bo pile" style={cadre}>
-            <legend style={legende}>Contenances, millésime et prix</legend>
+          <Bloc titre="Vin" resume={[v.libelle, v.millesime, COULEURS[v.couleur]].filter(Boolean).join(' · ')}>
+            <div className="champ" style={{ maxWidth: 260 }}><label htmlFor="couleur">Catégorie</label>
+              <select id="couleur" name="couleur" defaultValue={v.couleur}>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
+            <IntituleVin initial={v.libelle} />
+            <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(220px, 100%), 1fr))' }}>
+              <div className="champ"><label htmlFor="appellation_texte">Appellation</label>
+                <input id="appellation_texte" name="appellation_texte" placeholder="Ex. Chablis" defaultValue={v.appellation_texte ?? appellationDeduite(v.vin_texte, v.appellation_nom)} /></div>
+              <div className="champ"><label htmlFor="nom_vin">Nom du vin</label>
+                <input id="nom_vin" name="nom_vin" placeholder="Ex. Saint-Pierre (laisser vide s’il n’en a pas)" defaultValue={v.nom_vin ?? nomDeduit(v.vin_texte)} /></div>
+              <div className="champ"><label htmlFor="cepages">Cépage(s)</label>
+                <input id="cepages" name="cepages" placeholder="Ex. Chardonnay" defaultValue={v.cepages ?? ''} /></div>
+            </div>
+            <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
+          </Bloc>
+
+          <Bloc titre="Prix et contenances" resume={cochees.length ? cases.filter((c) => cochees.includes(c.code)).map((c) => `${c.libelle}${prixDe(c.code) != null ? ` ${String(prixDe(c.code)).replace('.', ',')} €` : ''}`).join(' · ') : 'Aucune contenance cochée'}>
             <input type="hidden" name="contenances_envoyees" value="1" />
             <div className="pile" style={{ gap: 8 }}>
               <span style={{ fontSize: 13, fontWeight: 700 }}>Contenances disponibles et prix</span>
@@ -152,7 +160,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               ))}
               <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Cochez les contenances servies et indiquez leur prix : chacune apparaît sur la carte de l’app.</span>
             </div>
-            <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
+          </Bloc>
+
+          <Bloc titre="Disponible, coup de cœur, bio, nature" resume={[groupe.some((x) => x.disponible) ? 'Disponible' : 'Indisponible', v.coup_de_coeur ? 'Coup de cœur' : '', groupe.some((x) => x.bio) ? 'Bio' : '', groupe.some((x) => x.nature) ? 'Nature' : ''].filter(Boolean).join(' · ')}>
             <div>
               <label className="case"><input type="checkbox" name="disponible" defaultChecked={groupe.some((x) => x.disponible)} /><span>Disponible<small>Décochez en cas de rupture : Pat ne le propose plus</small></span></label>
               <label className="case"><input type="checkbox" name="coup_de_coeur" defaultChecked={v.coup_de_coeur} /><span>Coup de cœur de la maison<small>Petit cœur ♥ dans l’app ; si la catégorie « Coups de cœur » est choisie dans Apparence, il n’apparaît que là.</small></span></label>
@@ -160,12 +170,12 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               <label className="case"><input type="checkbox" name="bio" defaultChecked={groupe.some((x) => x.bio)} /><span>Vin bio<small>Petite feuille verte dans l’app et sur la carte imprimée.</small></span></label>
               <label className="case"><input type="checkbox" name="nature" defaultChecked={groupe.some((x) => x.nature)} /><span>Vin nature<small>Petite grappe verte dans l’app et sur la carte imprimée.</small></span></label>
             </div>
-          </fieldset>
+          </Bloc>
 
+          <Bloc titre={depuisVins ? 'Distributeur, stock et commande' : 'Distributeur'} resume={[fournisseur?.nom ?? 'Aucun distributeur', `${v.stock} en stock`, v.en_commande ? `${v.en_commande} en commande` : ''].filter(Boolean).join(' · ')} ouvert={depuisVins}>
           {/* Fournisseur du vin (gestion des stocks) : on peut en ajouter un en le nommant. Depuis la page Vins : stock et commande aussi. */}
           {depuisVins ? (
-            <fieldset className="carte-bo pile" style={cadre}>
-              <legend style={legende}>Stock et commande</legend>
+            <div className="pile" style={{ gap: 12 }}>
               <input type="hidden" name="fournisseur_envoye" value="1" />
               <input type="hidden" name="stock_envoye" value="1" />
               <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))' }}>
@@ -182,21 +192,29 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               {fournisseur ? <span><Link href={`/admin/${resto}/commandes?${new URLSearchParams({ f: fournisseur.id, vin: v.id })}#nouvelle`} className="btn rouge petit">
                 Commander chez {fournisseur.nom}</Link></span>
                 : <span className="petit discret">Choisissez son distributeur pour pouvoir le commander.</span>}
-            </fieldset>
+            </div>
           ) : (
-            <div className="champ carte-bo">
-              <label>Distributeur</label>
+            <div className="champ" style={{ margin: 0 }}>
               <input type="hidden" name="fournisseur_envoye" value="1" />
               <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
               <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Base des vins › Vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
             </div>
           )}
 
-          <div className="champ carte-bo">
-            <label htmlFor="presentation_carte_perso">Présentation (app et carte imprimée)</label>
+          </Bloc>
+
+          <Bloc titre="Présentation (app et carte imprimée)" resume={v.presentation_carte_perso || v.presentation_carte ? "Texte prêt" : enCoursPresentation ? "Pat l’écrit…" : "Pas encore de texte"} ouvert={enCoursPresentation}>
+          <div className="champ" style={{ margin: 0 }}>
+            <label htmlFor="presentation_carte_perso" className="sr-only">Présentation (app et carte imprimée)</label>
             <textarea id="presentation_carte_perso" name="presentation_carte_perso" rows={5} defaultValue={v.presentation_carte_perso ?? ''} placeholder={v.presentation_carte ?? 'Trois phrases : le lieu ou le vigneron, le style du vin, ce avec quoi il brille à table.'} />
             <span className="aide">{v.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : 'Trois phrases, 3 à 4 lignes sur la carte (230 à 380 caractères).'}</span>
+            {!v.presentation_carte && !v.presentation_carte_perso && groupe.some((x) => x.disponible) && (
+              <span><button formAction={ecrirePresentations.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">Faire écrire la présentation par Pat</button>
+                <span className="petit discret"> {enCoursPresentation ? 'Pat l’écrit : rechargez la page dans quelques minutes.' : 'd’après sa base, sinon le site du producteur'}</span></span>
+            )}
           </div>
+
+          </Bloc>
 
           <div className="ligne-actions">
             <button type="submit" className="btn">Enregistrer</button>
