@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { enregistrerCuvee, fusionnerCuvee } from '../../actions';
+import { memeVinQue } from '@/lib/admin/doublons-recherche';
 import { FormulaireFusion } from '@/components/admin/FormulaireFusion';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
@@ -21,15 +22,22 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
     requete<{ nom: string }>(`select distinct nom from terroir where statut <> 'retire' order by nom`),
     requete<{ nom: string; lieu: string | null }>(`select distinct on (nom) nom, nullif(concat_ws(', ', region, pays), '') as lieu from producteur where statut <> 'retire' order by nom`)]);
   if (!c) notFound();
-  // Doublons possibles : les autres vins du même producteur, et ceux du même nom chez un autre producteur.
+  // Doublons possibles : les autres vins du même producteur, ceux du même nom chez un autre producteur, et ceux qui ont
+  // tous les mots du nom (producteur compris), ex. « Molino a Vento Nero d'Avola Bio » (Orestadi) et « Nero d'Avola Bio » (Molino a Vento).
   const sans = (x: string) => `translate(lower(${x}), 'àâäáéèêëíîïóôöúùûüç-''', 'aaaaeeeeiiiooouuuuc  ')`;
-  const doublons = await requete<{ id: string; nom: string; producteur: string; couleur: string | null; statut: string; cartes: number }>(
+  const motsNom = [...new Set(c.nom.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().split(/[^a-z0-9]+/).filter((m) => m.length >= 4))].slice(0, 6);
+  const doublons = (await requete<{ id: string; nom: string; producteur: string; couleur: string | null; statut: string; cartes: number; proche: boolean }>(
     `select k.id, k.nom, p.nom as producteur, k.couleur::text, k.statut::text,
-            (select count(distinct v.restaurant_id) from vin_carte v where v.cuvee_id = k.id)::int as cartes
+            (select count(distinct v.restaurant_id) from vin_carte v where v.cuvee_id = k.id)::int as cartes,
+            not (k.producteur_id = $2 or ${sans('k.nom')} = ${sans('$3')}) as proche
        from cuvee k join producteur p on p.id = k.producteur_id
       where k.id <> $1 and k.statut <> 'retire'
-        and (k.producteur_id = $2 or ${sans('k.nom')} = ${sans('$3')})
-      order by ${sans('k.nom')} = ${sans('$3')} desc, k.nom limit 200`, [c.id, c.producteur_id, c.nom]);
+        and (k.producteur_id = $2 or ${sans('k.nom')} = ${sans('$3')}
+             or (cardinality($4::text[]) > 0 and ${sans("k.nom || ' ' || p.nom")} like all ($4)))
+      order by ${sans('k.nom')} = ${sans('$3')} desc, k.nom limit 200`, [c.id, c.producteur_id, c.nom, motsNom.map((m) => `%${m}%`)]))
+    // Mots en commun : seulement s'il s'agit bien du même vin (mêmes mots, producteur compris, même couleur).
+    .filter((d) => !d.proche || memeVinQue({ libelle: c.nom, producteur: c.producteur ?? null, couleur: c.couleur ?? null }, { libelle: d.nom, producteur: d.producteur, couleur: d.couleur })
+      || memeVinQue({ libelle: d.nom, producteur: d.producteur, couleur: d.couleur }, { libelle: c.nom, producteur: c.producteur ?? null, couleur: c.couleur ?? null }));
   // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
   const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
 
