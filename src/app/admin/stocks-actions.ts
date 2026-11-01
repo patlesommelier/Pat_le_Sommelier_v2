@@ -278,7 +278,10 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
     pieceJointe: { nom: `bon-de-commande-${ref}.pdf`, octets: genererBonCommande(bon) },
   });
   if (erreur) return { erreur };
-  await requete('update commande set envoyee_le = now(), envoyee_a = $3 where id = $1 and restaurant_id = $2', [id, resto, bon.fournisseur.email]);
+  await requete(`update commande c set envoyee_le = now(), envoyee_a = $3,
+                         statut_qv = case when c.statut_qv is null and (c.quid_vinum or exists (select 1 from fournisseur f where f.id = c.fournisseur_id and f.distributeur_id is not null)) then 'recue' else c.statut_qv end,
+                         statut_qv_le = coalesce(c.statut_qv_le, now())
+                   where id = $1 and restaurant_id = $2`, [id, resto, bon.fournisseur.email]);
   rafraichir(resto);
   return { ok: `Bon de commande envoyé à ${bon.fournisseur.email}.` };
 }
@@ -289,6 +292,8 @@ export async function marquerEnvoyee(resto: string, id: string): Promise<Retour>
   await requete(`update commande c set envoyee_le = now(),
                          envoyee_a = case when c.quid_vinum then (select valeur from reglage_serveur where cle = 'qv_email') else (select ${SQL_EMAIL_COMMANDE} from fournisseur f where f.id = c.fournisseur_id) end
                   where c.id = $1 and c.restaurant_id = $2 and c.statut = 'ouverte'`, [id, resto]);
+  await requete(`update commande c set statut_qv = 'recue', statut_qv_le = now() where c.id = $1 and c.statut_qv is null
+                   and (c.quid_vinum or exists (select 1 from fournisseur f where f.id = c.fournisseur_id and f.distributeur_id is not null))`, [id]);
   rafraichir(resto);
   return { ok: 'Commande envoyée.' };
 }
@@ -339,14 +344,31 @@ export async function receptionnerCommande(resto: string, id: string): Promise<R
 /** Commande annulée : ses bouteilles ne sont plus « en commande ». */
 export async function annulerCommande(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
-  const r = await requete(`update commande set statut = 'annulee' where id = $1 and restaurant_id = $2 and statut = 'ouverte' returning id`, [id, resto]);
+  const r = await requete<{ envoyee_a: string | null; envoyee_le: Date | null }>(
+    `update commande set statut = 'annulee' where id = $1 and restaurant_id = $2 and statut = 'ouverte' returning envoyee_a, envoyee_le`, [id, resto]);
   if (!r.length) return { erreur: 'Cette commande n’est plus ouverte.' };
+  // Commande déjà envoyée : son destinataire (Quid Vinum ou le distributeur) est prévenu de l'annulation, le restaurant en copie.
+  let prevenu = '';
+  const bon = r[0].envoyee_le ? await donneesBon(resto, id) : null;
+  const a = r[0].envoyee_a ?? bon?.fournisseur.email ?? null;
+  if (bon && a) {
+    const ref = referenceCommande(bon);
+    const erreur = await envoyerEmail({
+      a, copie: bon.restaurant.email, repondreA: bon.restaurant.email,
+      sujet: `Annulation de la commande ${ref} — ${bon.restaurant.nom}${bon.distributeur ? ` — ${bon.distributeur}` : ''}`,
+      texte: `Bonjour,\n\nNous annulons notre commande n° ${ref}${bon.distributeur ? ` chez ${bon.distributeur}` : ''} :\n\n`
+        + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}`).join('\n')
+        + `\n\nMerci de ne pas donner suite${bon.restaurant.email ? ' et de nous confirmer l’annulation en répondant à cet e-mail' : ''}.\n\n${bon.restaurant.nom}${bon.restaurant.telephone ? `\n${bon.restaurant.telephone}` : ''}`,
+    });
+    prevenu = erreur ? ` L’e-mail d’annulation n’est pas parti (${erreur}) : prévenez ${a} vous-même.` : ` ${a} en a été prévenu par e-mail.`;
+  }
   await requete(
     `update vin_carte v set en_commande = greatest(v.en_commande - l.q, 0)
        from (select vin_id, sum(quantite - recue)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
       where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
   rafraichir(resto);
-  return { ok: 'Commande annulée.' };
+  // Message en haut de la liste (la commande annulée quitte les commandes ouvertes, et son bouton avec elle).
+  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ ok: `Commande annulée.${prevenu}` })}`);
 }
 
 /** Base de vins : un vin de la carte vendu par un distributeur de Quid Vinum, commandé chez lui (il devient son fournisseur). */
