@@ -8,13 +8,13 @@ import type { Etape } from '@/components/admin/Nav';
 
 // Menu de gauche : chaque entrée avec son icône (celle des cadres du tableau de bord) ; les trois premières disent ce qu'on y fait.
 const LIBELLES_MENU: Record<string, string> = { Menu: 'Gérer le menu', 'Carte des vins': 'Gérer la carte des vins', Accords: 'Gérer les accords mets/vins' };
-const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Restaurant', App: 'App client' };
-// « Gestion des stocks » : tout en bas, après l'app client (des outils du restaurant, pas des étapes de la mise en place).
+const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus', App: 'App client' };
+// « Base des vins » (vins, stocks, commandes, fournisseurs) : en premier, au-dessus de « Cartes et menus ».
 function avecStocks(resto: string, etapes: Etape[]): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Base de vins', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Fournisseurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
-    .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion des stocks', icone }));
-  return [...etapes, ...stocks];
+  const stocks: Etape[] = [['stocks', 'Vins', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Fournisseurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
+    .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Base des vins', icone }));
+  return [...stocks, ...etapes];
 }
 
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {
