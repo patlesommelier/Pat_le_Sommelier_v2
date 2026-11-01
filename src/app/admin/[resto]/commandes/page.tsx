@@ -44,6 +44,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   // Distributeurs Quid Vinum activés : une seule commande pour tous (Quid Vinum la répartit entre eux).
   const qv = fournisseurs.filter((f) => f.distributeur_id && catalogues.get(f.id)?.length);
   const vinChoisi = groupes.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined;
+  // Vins de la carte vendus par ces distributeurs : groupés par distributeur (section), en tête de la commande Quid Vinum.
+  const surLaCarteQv = qv.flatMap((f) => (catalogues.get(f.id) ?? []).filter((l) => l.surCarte).map((l) => ({ ...l, section: f.nom, distributeur: undefined })));
   const blocs = [
     ...fournisseurs.filter((f) => !f.distributeur_id).map((f) => ({ id: f.id, nom: f.nom, email: f.email, logo: f.logo_url, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
       .filter((b) => b.groupes.length || b.catalogue?.length),
@@ -120,13 +122,26 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             </summary>
             <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12, marginTop: 12 }}>
               <p className="petit discret" style={{ margin: 0 }}>Une seule commande pour tous vos distributeurs Quid Vinum, aux prix proposés par Quid Vinum (HTVA) : elle part chez Quid Vinum, qui la transmet à chaque distributeur.</p>
-              {qv.map((f) => (
-                <div key={f.id} className="pile" style={{ gap: 8 }}>
-                  <b>{/* eslint-disable-next-line @next/next/no-img-element */}
-                    {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ height: 24, verticalAlign: 'middle', marginRight: 8 }} />}{f.nom}</b>
-                  <CatalogueCommande lignes={catalogues.get(f.id)!} choisi={vinChoisi} />
+              {/* D'abord les vins de la carte (chez tous les distributeurs Quid Vinum), puis, à la demande, le reste des catalogues. */}
+              <b>Vins de votre carte</b>
+              {surLaCarteQv.length
+                ? <CatalogueCommande lignes={surLaCarteQv} choisi={vinChoisi} sansFiltreCarte />
+                : <p className="petit discret" style={{ margin: 0 }}>Aucun vin de votre carte n’est encore relié à un distributeur Quid Vinum : ajoutez-en ci-dessous.</p>}
+              <details className="carte-bo" open={!surLaCarteQv.length || Boolean(vinChoisi && !surLaCarteQv.some((l) => l.id === vinChoisi))} style={{ padding: '12px 16px' }}>
+                <summary style={{ cursor: 'pointer', fontWeight: 700 }}>+ Ajouter un vin qui n’est pas sur la carte <span className="discret" style={{ fontWeight: 400 }}>(catalogues complets)</span></summary>
+                <div className="pile" style={{ gap: 14, marginTop: 12 }}>
+                  {qv.map((f) => {
+                    const reste = (catalogues.get(f.id) ?? []).filter((l) => !l.surCarte);
+                    return reste.length ? (
+                      <div key={f.id} className="pile" style={{ gap: 8 }}>
+                        <b>{/* eslint-disable-next-line @next/next/no-img-element */}
+                          {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ height: 24, verticalAlign: 'middle', marginRight: 8 }} />}{f.nom}</b>
+                        <CatalogueCommande lignes={reste} choisi={vinChoisi} sansFiltreCarte />
+                      </div>
+                    ) : null;
+                  })}
                 </div>
-              ))}
+              </details>
               <span><button className="btn rouge">Valider la commande Quid Vinum</button></span>
             </FormulaireAdmin>
           </details>

@@ -7,12 +7,14 @@ export interface LigneCatalogue {
   id: string; section: string | null; producteur: string | null; libelle: string; millesime: string | null; contenance: string | null;
   prix: number | null; epuise: boolean; maximum: number | null; surCarte: { stock: number; enCommande: number; bas: boolean } | null;
   etiquette: string | null;
+  /** Commande Quid Vinum (plusieurs distributeurs) : le distributeur du vin. */
+  distributeur?: string;
 }
 
 const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 const euros = (n: number) => n.toLocaleString('fr-BE', { style: 'currency', currency: 'EUR' });
 
-export function CatalogueCommande({ lignes, choisi }: { lignes: LigneCatalogue[]; choisi?: string }) {
+export function CatalogueCommande({ lignes, choisi, sansFiltreCarte = false }: { lignes: LigneCatalogue[]; choisi?: string; sansFiltreCarte?: boolean }) {
   const [q, setQ] = useState('');
   const [carteSeulement, setCarteSeulement] = useState(false);
   const mots = sansAccents(q).split(/\s+/).filter(Boolean);
@@ -24,7 +26,7 @@ export function CatalogueCommande({ lignes, choisi }: { lignes: LigneCatalogue[]
     <div className="pile" style={{ gap: 10 }}>
       <div className="catalogue-filtre">
         <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder="Chercher un vin, un domaine, une région…" aria-label="Chercher dans le catalogue" />
-        <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" checked={carteSeulement} onChange={(e) => setCarteSeulement(e.target.checked)} /> Seulement les vins de ma carte</label>
+        {!sansFiltreCarte && <label className="petit" style={{ display: 'flex', gap: 6, alignItems: 'center' }}><input type="checkbox" checked={carteSeulement} onChange={(e) => setCarteSeulement(e.target.checked)} /> Seulement les vins de ma carte</label>}
         <span className="discret petit">{nbVisibles} vin{nbVisibles > 1 ? 's' : ''}</span>
       </div>
       <div className="tableau">
@@ -42,7 +44,7 @@ export function CatalogueCommande({ lignes, choisi }: { lignes: LigneCatalogue[]
                       {/* eslint-disable-next-line @next/next/no-img-element */}
                       {l.etiquette ? <img src={l.etiquette} alt="" loading="lazy" className="vignette-catalogue" /> : <span className="vignette-catalogue vide" aria-hidden="true" />}
                       <div><div className="nom">{l.libelle}{l.millesime ? ` ${l.millesime}` : ''}{l.contenance && <span className="discret"> · {l.contenance}</span>}</div>
-                      <div className="petit">{l.producteur ?? ''}{l.epuise && <b style={{ color: '#FF0D05' }}> · Épuisé</b>}{l.maximum != null && !l.epuise && <> · {l.maximum} au plus</>}</div></div>
+                      <div className="petit">{l.distributeur && <b>Chez {l.distributeur} · </b>}{l.producteur ?? ''}{l.epuise && <b style={{ color: '#FF0D05' }}> · Épuisé</b>}{l.maximum != null && !l.epuise && <> · {l.maximum} au plus</>}</div></div>
                     </div></td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.surCarte ? <>{l.surCarte.bas && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} {l.surCarte.stock} en stock{l.surCarte.enCommande ? ` · ${l.surCarte.enCommande} en commande` : ''}</> : <span className="discret">—</span>}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.prix != null ? euros(l.prix) : '—'}</td>
