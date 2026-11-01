@@ -46,7 +46,7 @@ export function CatalogueCommande({ lignes, choisi }: { lignes: LigneCatalogue[]
                     </div></td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.surCarte ? <>{l.surCarte.bas && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} {l.surCarte.stock} en stock{l.surCarte.enCommande ? ` · ${l.surCarte.enCommande} en commande` : ''}</> : <span className="discret">—</span>}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}>{l.prix != null ? euros(l.prix) : '—'}</td>
-                    <td className="droite"><input type="number" name={`cat_${l.id}`} min={0} max={l.maximum ?? 10000} disabled={l.epuise || l.prix == null} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${l.libelle}`} /></td>
+                    <td className="droite"><input type="number" name={`cat_${l.id}`} min={0} max={l.maximum ?? 10000} disabled={l.epuise || l.prix == null} defaultValue={choisi === l.id && !l.epuise ? Math.min(6, l.maximum ?? 6) : undefined} placeholder="0" className="champ-commande" aria-label={`Bouteilles à commander : ${l.libelle}`} /></td>
                   </tr>
                 )),
               ];

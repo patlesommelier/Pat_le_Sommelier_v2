@@ -81,7 +81,8 @@ export default async function Carte({ params, searchParams }: { params: Promise<
             </nav>
             <CasesCategories choisies={restaurant?.categories_carte ?? []} enregistrer={changerCategoriesCarte.bind(null, resto)} />
             {/* « Ajouter un vin » juste au-dessus de la liste, comme « Ajouter un plat » dans le menu. */}
-            <Link href={`/admin/${resto}/carte/nouveau?c=${c}`} className="btn" style={{ marginLeft: 'auto' }}>+ Ajouter un vin</Link>
+            {/* L'ajout d'un vin se fait dans la Base de vins (chercher, choisir chez un distributeur, ou champ libre). */}
+            <Link href={`/admin/${resto}/stocks`} className="btn fantome petit" style={{ marginLeft: 'auto' }}>Ajouter un vin : Base de vins →</Link>
           </div>
           <div className="tableau">
             <table className="table-vins" style={{ minWidth: 880 }}>

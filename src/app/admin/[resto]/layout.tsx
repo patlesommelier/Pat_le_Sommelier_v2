@@ -12,7 +12,7 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Restaurant', Ap
 // « Gestion des stocks » : tout en bas, après l'app client (des outils du restaurant, pas des étapes de la mise en place).
 function avecStocks(resto: string, etapes: Etape[]): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Stocks', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Fournisseurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
+  const stocks: Etape[] = [['stocks', 'Base de vins', 'stock'], ['commandes', 'Commandes de vin', 'camion'], ['fournisseurs', 'Fournisseurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion des stocks', icone }));
   return [...etapes, ...stocks];
 }

@@ -20,6 +20,43 @@ function poser(form: HTMLFormElement | null, nom: string, valeur: string) {
   el.dispatchEvent(new Event(el instanceof HTMLSelectElement ? 'change' : 'input', { bubbles: true }));
 }
 
+/** Remplit la fiche du vin avec un vin trouvé (base de Pat ou catalogue d'un distributeur) ; tout reste modifiable. */
+export function remplirFiche(form: HTMLFormElement | null, v: VinTrouve, texte = '') {
+  // Couleur inconnue de la base : celle dite dans le texte tapé, sinon dans le nom du vin (« Pinot Blanc »).
+  const couleurTexte = MOTS_COULEUR.find(([re]) => re.test(sansAccents(texte)))?.[1] ?? MOTS_COULEUR.find(([re]) => re.test(sansAccents(v.libelle)))?.[1];
+  const millesime = v.millesime ?? texte.match(/\b(19|20)\d\d\b/)?.[0] ?? '';
+  const couleur = v.couleur && COULEURS[v.couleur] ? v.couleur : couleurTexte;
+  if (couleur) poser(form, 'couleur', couleur);
+  poser(form, 'section', v.section ?? '');
+  poser(form, 'appellation_texte', v.appellation ?? '');
+  poser(form, 'nom_vin', v.nom_vin ?? '');
+  poser(form, 'cepages', v.cepages ?? '');
+  poser(form, 'producteur_texte', v.producteur ?? '');
+  poser(form, 'libelle', v.libelle);
+  if (millesime) poser(form, 'millesime', millesime);
+  // L'étiquette de la base s'affiche dans le cadre « Photo de l'étiquette » ; elle sera reprise à l'ajout.
+  window.dispatchEvent(new CustomEvent('pat:etiquette-base', { detail: v.etiquette }));
+}
+
+export const euros = (n: number | null) => (n == null ? '—' : `${n.toFixed(2).replace('.', ',')} €`);
+
+/** Offres des distributeurs d'un vin choisi : commander chez l'un d'eux (ou non). Champ « distributeur_vin ». */
+export function OffresVin({ offres, valeur, changer }: { offres: NonNullable<VinTrouve['offres']>; valeur: string; changer: (id: string) => void }) {
+  return (
+    <div className="pile" style={{ gap: 6, border: '1.5px solid var(--rouge, #C8102E)', borderRadius: 12, padding: '10px 14px' }}>
+      <b className="petit">Ce vin est disponible chez {offres.length > 1 ? 'des distributeurs' : 'un distributeur'} de Quid Vinum : voulez-vous le commander ?</b>
+      {offres.map((o) => (
+        <label key={o.id} className="case" style={{ margin: 0, opacity: o.epuise ? 0.55 : 1 }}>
+          <input type="radio" name="choix_offre" checked={valeur === o.id} disabled={o.epuise} onChange={() => changer(o.id)} />
+          <span>Chez <b>{o.distributeur}</b> · {o.libelle}{o.millesime ? ` ${o.millesime}` : ''}{o.contenance ? ` · ${o.contenance}` : ''} · <b>{euros(o.prix)} HTVA</b>{o.epuise ? ' · épuisé' : ''}</span>
+        </label>
+      ))}
+      <label className="case" style={{ margin: 0 }}><input type="radio" name="choix_offre" checked={valeur === ''} onChange={() => changer('')} /><span>Non, je l’ai déjà ou je l’achète ailleurs</span></label>
+      <span className="aide">Le distributeur est ajouté à vos fournisseurs ; après l’ajout du vin, vous pourrez passer la commande.</span>
+    </div>
+  );
+}
+
 const resume = (v: VinTrouve) => [v.producteur && !v.libelle.toLowerCase().includes(v.producteur.toLowerCase()) ? v.producteur : null,
   v.appellation && !v.libelle.toLowerCase().includes(v.appellation.toLowerCase()) ? v.appellation : null,
   v.couleur ? COULEURS[v.couleur] : null, v.cepages].filter(Boolean).join(' · ');
@@ -31,6 +68,7 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
   const [choisi, setChoisi] = useState<string | null>(null);
   const [cherche, setCherche] = useState(false);
   const [erreur, setErreur] = useState(false);
+  const [offre, setOffre] = useState('');
 
   const lancer = async () => {
     const t = texte.trim();
@@ -40,26 +78,16 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
   };
 
   const choisir = (v: VinTrouve) => {
-    const form = ref.current?.form ?? null;
-    const couleurTexte = MOTS_COULEUR.find(([re]) => re.test(sansAccents(texte)))?.[1];
-    const millesime = texte.match(/\b(19|20)\d\d\b/)?.[0] ?? '';
-    const couleur = v.couleur && COULEURS[v.couleur] ? v.couleur : couleurTexte;
-    if (couleur) poser(form, 'couleur', couleur);
-    poser(form, 'section', v.section ?? '');
-    poser(form, 'appellation_texte', v.appellation ?? '');
-    poser(form, 'nom_vin', v.nom_vin ?? '');
-    poser(form, 'cepages', v.cepages ?? '');
-    poser(form, 'producteur_texte', v.producteur ?? '');
-    poser(form, 'libelle', v.libelle);
-    if (millesime) poser(form, 'millesime', millesime);
-    // L'étiquette de la base s'affiche dans le cadre « Photo de l'étiquette » ; elle sera reprise à l'ajout.
-    window.dispatchEvent(new CustomEvent('pat:etiquette-base', { detail: v.etiquette }));
+    remplirFiche(ref.current?.form ?? null, v, texte);
     setChoisi(v.cle);
+    // Vin présent chez un distributeur : la première offre est proposée (« pas chez un distributeur » reste possible).
+    setOffre(v.offres?.find((o) => !o.epuise)?.id ?? '');
   };
+  const vinChoisi = trouves?.find((v) => v.cle === choisi);
 
   return (
     <fieldset className="carte-bo pile" style={{ gap: 12, border: '1.5px solid var(--encre)', borderRadius: 14, padding: 16, margin: 0 }}>
-      <legend style={{ fontSize: 13, fontWeight: 700, padding: '0 6px' }}>Chercher le vin dans la base de Pat</legend>
+      <legend style={{ fontSize: 13, fontWeight: 700, padding: '0 6px' }}>Chercher le vin dans la base de Pat et chez les distributeurs</legend>
       <div className="champ" style={{ margin: 0 }}>
         <label htmlFor="recherche_vin">Tout ce que vous savez du vin</label>
         <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
@@ -71,6 +99,7 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
         <span className="aide">Nom, producteur, appellation, couleur, millésime… dans n’importe quel ordre.</span>
       </div>
       <input type="hidden" name="base_cle" value={choisi ?? ''} />
+      <input type="hidden" name="distributeur_vin" value={offre} />
       <div role="status" aria-live="polite" className="pile" style={{ gap: 8 }}>
         {erreur && <span className="petit">La recherche n’a pas abouti. Réessayez, ou remplissez les champs ci-dessous.</span>}
         {trouves && !cherche && (trouves.length === 0
@@ -87,11 +116,13 @@ export function RechercheVinBase({ chercher }: { chercher: (texte: string) => Pr
                   <span style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     {v.etiquette ? <img src={v.etiquette} alt="" style={{ width: 40, height: 52, objectFit: 'contain', background: '#EFEBE9', borderRadius: 6, flexShrink: 0 }} /> : null}
-                    <span>{choisi === v.cle ? '✓ ' : ''}<b>{v.libelle}</b>{resume(v) && <span style={{ display: 'block', fontSize: 13 }}>{resume(v)}</span>}</span>
+                    <span>{choisi === v.cle ? '✓ ' : ''}<b>{v.libelle}</b>{resume(v) && <span style={{ display: 'block', fontSize: 13 }}>{resume(v)}</span>}
+                      {v.offres?.length ? <span style={{ display: 'block', fontSize: 13, fontWeight: 700 }}>Chez {[...new Set(v.offres.map((o) => o.distributeur))].join(', ')}{v.offres.some((o) => o.prix != null) ? ` · dès ${euros(Math.min(...v.offres.filter((o) => o.prix != null).map((o) => o.prix!)))} HTVA` : ''}</span> : null}</span>
                   </span>
                 </button>
               ))}
             </div>
+            {vinChoisi?.offres?.length ? <OffresVin offres={vinChoisi.offres} valeur={offre} changer={setOffre} /> : null}
           </>)}
       </div>
     </fieldset>

@@ -1,10 +1,11 @@
-// Gestion des stocks — Stocks : chaque vin de la carte sur une ligne, son stock et ses bouteilles en commande (modifiables),
+// Gestion des stocks — Base de vins : chaque vin de la carte sur une ligne, son stock et ses bouteilles en commande (modifiables),
 // son fournisseur ; un point d'exclamation rouge signale un stock bas, avec un bouton pour commander.
 import Link from 'next/link';
 import { enregistrerStocks } from '../../stocks-actions';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
-import { Entete, Vignette } from '@/components/admin/Ui';
+import { Entete, Message, Vignette } from '@/components/admin/Ui';
+import { requete } from '@/lib/db';
 import { euros } from '@/lib/bon-commande';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
@@ -13,10 +14,10 @@ import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
-export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string }> }) {
+export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const { filtre } = await searchParams;
+  const { filtre, ajoute, commander, ok } = await searchParams;
   const [vins, r, fournisseurs, ouvertes, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }))
@@ -28,13 +29,26 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
   const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
   const sansPrix = groupes.filter((g) => !achats.has(g.principal.id)).length;
+  // Vin qui vient d'être ajouté depuis le catalogue d'un distributeur : la commande est proposée.
+  const [ajouteChez] = ajoute && commander ? await requete<{ libelle: string; fournisseur_id: string; distributeur: string; prix_achat: number | null }>(
+    `select v.libelle, v.fournisseur_id, f.nom as distributeur, v.prix_achat::float8 as prix_achat from vin_carte v join fournisseur f on f.id = v.fournisseur_id
+      where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Stocks" texte={`Le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+      <Entete titre="Base de vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre fournisseur et son prix de vente sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
+        <Link href={`/admin/${resto}/stocks/nouveau`} className="btn">+ Ajouter un vin</Link>
         <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>
         <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
       </Entete>
+      {ok && !ajouteChez && <Message ok={ok} />}
+      {ajouteChez && (
+        <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
+          <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Voulez-vous le commander ?</span>
+          <Link href={`/admin/${resto}/commandes?f=${ajouteChez.fournisseur_id}&vin=${encodeURIComponent(ajoute!)}#nouvelle`} className="btn rouge">Commander</Link>
+          <Link href={`/admin/${resto}/stocks`} className="btn fantome petit">Plus tard</Link>
+        </div>
+      )}
       <section className="stats" aria-label="Résumé des stocks">
         <div className="stat"><span className="chiffre" style={{ color: bas.length ? 'var(--rouge)' : undefined }}>{bas.length}</span><span>{bas.length > 1 ? 'vins en stock bas' : 'vin en stock bas'}</span></div>
         <div className="stat"><span className="chiffre">{groupes.reduce((n, g) => n + g.principal.stock, 0).toLocaleString('fr-BE')}</span><span>bouteilles en stock</span></div>

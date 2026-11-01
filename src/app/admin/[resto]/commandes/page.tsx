@@ -125,7 +125,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                   : <p className="petit" style={{ color: 'var(--ocre)', margin: 0 }}>Ajoutez d’abord vos fournisseurs dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>, puis choisissez celui de chaque vin dans Stocks.</p>)}
                 {b.catalogue ? <>
                   <p className="petit discret" style={{ margin: 0 }}>Prix proposés par Quid Vinum (HTVA). Votre commande part chez Quid Vinum, qui la transmet à {b.nom}.</p>
-                  <CatalogueCommande lignes={b.catalogue} />
+                  <CatalogueCommande lignes={b.catalogue} choisi={groupes.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined} />
                 </> : <div className="tableau">
                   <table style={{ minWidth: 640 }}>
                     <thead><tr><th>Vin</th><th className="droite">En stock</th><th className="droite">En commande</th><th className="droite">Prix d’achat HTVA</th><th className="droite">À commander</th></tr></thead>

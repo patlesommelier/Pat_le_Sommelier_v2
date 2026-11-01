@@ -1,13 +1,32 @@
 import 'server-only';
 // Recherche d'un vin dans la base de Pat à partir de l'intitulé tapé par le restaurant (ajout d'un vin à la carte).
 // Sources : les cuvées de la base (avec leur producteur et leur appellation) et les vins déjà connus des cartes.
-// Ne renvoie que des descriptions (couleur, région, appellation, nom, cépages, producteur) : jamais de prix ni de classement.
+// Aussi les vins des catalogues des distributeurs de Quid Vinum (actifs) : le vin trouvé porte alors ses offres, au prix
+// du restaurant (prix QV + sa marge, sinon la marge par défaut). Jamais le prix QV, la marge ni le classement.
 import { requete } from '@/lib/db';
 
 export type VinTrouve = {
   cle: string; libelle: string; couleur: string | null; section: string | null; appellation: string | null;
   nom_vin: string | null; cepages: string | null; producteur: string | null; etiquette: string | null; complet: boolean;
+  millesime?: string | null; offres?: OffreDistributeur[];
 };
+
+/** Vin d'un distributeur de Quid Vinum, au prix du restaurant (HTVA). */
+export type OffreDistributeur = { id: string; distributeur: string; distributeur_id: string; libelle: string; millesime: string | null; contenance: string | null; prix: number | null; epuise: boolean };
+
+/** Offres des distributeurs actifs, par vin de la base (cuvée) ou par vin de distributeur, au prix du restaurant. */
+export async function offresDistributeurs(resto: string, { cuvees = [] as string[], vins = [] as string[] } = {}) {
+  if (!cuvees.length && !vins.length) return [] as (OffreDistributeur & { cuvee_id: string | null })[];
+  const [m] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
+  const defaut = Number.isFinite(Number(m?.valeur)) ? Number(m?.valeur) : 15;
+  return requete<OffreDistributeur & { cuvee_id: string | null }>(
+    `select v.id, d.nom as distributeur, d.id as distributeur_id, v.libelle, v.millesime, v.contenance, v.cuvee_id, v.epuise,
+            round(v.prix_qv * (1 + coalesce(f.marge, $3) / 100), 2)::float8 as prix
+       from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
+       left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $4
+      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
+    [cuvees, vins, defaut, resto]);
+}
 
 const MOTS_VIDES = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'the', 'di', 'del', 'della', 'y']);
 const GENERIQUES = new Set(['vin', 'cuvee', 'domaine', 'chateau', 'maison', 'aop', 'aoc', 'igp', 'doc', 'docg']);
@@ -24,7 +43,7 @@ const COULEURS: Record<string, string> = { rouge: 'rouge', blanc: 'blanc', rose:
   cremant: 'bulles', petillant: 'bulles', orange: 'orange', doux: 'doux', moelleux: 'doux', liquoreux: 'doux' };
 
 /** Vins de la base les plus proches du texte tapé (« M de Minuty rosé 2025 »), 8 au plus, le plus sûr en premier. */
-export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
+export async function chercherVinsBase(texte: string, resto?: string): Promise<VinTrouve[]> {
   const tous = mots(texte);
   const couleur = tous.map((m) => COULEURS[m]).find(Boolean) ?? null;
   // Le millésime et la couleur ne font pas partie du nom du vin.
@@ -47,6 +66,10 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
               coalesce(x.appellation_texte, t.nom), x.nom_vin, x.cepages, coalesce(p.nom, x.producteur_texte), x.etiquette_url
          from vin_carte x left join producteur p on p.id = x.producteur_id left join terroir t on t.id = x.appellation_id
         where x.cuvee_id is null and ${SQL_NORM("x.libelle || ' ' || coalesce(p.nom, x.producteur_texte, '')")} like any($1)
+       union all
+       select 'distrib' as source, v.id, v.libelle, v.couleur, v.section, null, null, null, coalesce(p.nom, v.producteur_texte), v.etiquette_url
+         from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif left join producteur p on p.id = v.producteur_id
+        where v.actif and v.cuvee_id is null and ${SQL_NORM("v.libelle || ' ' || coalesce(p.nom, v.producteur_texte, '')")} like any($1)
      ) r limit 400`, [motifs]);
 
   const notes = lignes.map((l) => {
@@ -69,6 +92,15 @@ export async function chercherVinsBase(texte: string): Promise<VinTrouve[]> {
     sortie.push({ cle: `${l.source}:${l.id}`, libelle: l.libelle, couleur: l.couleur, section: l.section, appellation: l.appellation,
       nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur ?? null, etiquette: l.etiquette ?? null, complet: part === 1 });
     if (sortie.length >= 8) break;
+  }
+  if (!resto) return sortie;
+  // Offres des distributeurs : pour les vins de la base (cuvées) et les vins de distributeur trouvés.
+  const offres = await offresDistributeurs(resto, { cuvees: sortie.filter((v) => v.cle.startsWith('cuvee:')).map((v) => v.cle.slice(6)),
+    vins: sortie.filter((v) => v.cle.startsWith('distrib:')).map((v) => v.cle.slice(8)) });
+  for (const v of sortie) {
+    const [type, ref] = v.cle.split(/:(.*)/s);
+    v.offres = offres.filter((o) => (type === 'cuvee' ? o.cuvee_id === ref : type === 'distrib' && o.id === ref))
+      .map(({ cuvee_id: _c, ...o }) => o); // eslint-disable-line @typescript-eslint/no-unused-vars
   }
   return sortie;
 }

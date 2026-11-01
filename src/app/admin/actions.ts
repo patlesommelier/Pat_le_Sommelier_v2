@@ -24,7 +24,7 @@ import { clientClaude, modeleAccords } from '@/lib/claude';
 import { appellationCourte, composerIntitule } from '@/lib/admin/intitule';
 import { contenanceDuFormat, grouperMemeVin, ordonner } from '@/lib/contenances';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
-import { chercherVinsBase, type VinTrouve } from '@/lib/admin/recherche-base';
+import { chercherVinsBase, offresDistributeurs, type VinTrouve } from '@/lib/admin/recherche-base';
 import { completerBase } from '@/lib/admin/completer-base';
 import { choisirFournisseur } from '@/lib/admin/stocks';
 
@@ -400,7 +400,32 @@ async function reprendreEtiquetteDeLaBase(resto: string, vinIds: string[], cle: 
 /** Ajout d'un vin : vins de la base de Pat proches de l'intitulé tapé, pour préremplir la fiche (sans prix ni classement). */
 export async function chercherDansBase(resto: string, texte: string): Promise<VinTrouve[]> {
   await exigerAcces(resto);
-  return chercherVinsBase(String(texte ?? '').slice(0, 200));
+  return chercherVinsBase(String(texte ?? '').slice(0, 200), resto);
+}
+
+/**
+ * Catalogue d'un distributeur de Quid Vinum pour l'ajout d'un vin : chaque vin décrit comme un vin trouvé dans la base
+ * (fiche du vin de la base quand il y est relié), avec son offre au prix du restaurant. Jamais le prix QV ni la marge.
+ */
+export async function catalogueAjout(resto: string, distributeurId: string): Promise<VinTrouve[]> {
+  await exigerAcces(resto);
+  const vins = await requete<{ id: string; libelle: string; couleur: string | null; section: string | null; producteur: string | null; millesime: string | null;
+    etiquette: string | null; cuvee_id: string | null; cuvee: string | null; appellation: string | null; cepages: string | null }>(
+    `select v.id, v.libelle, coalesce(c.couleur::text, v.couleur) as couleur, coalesce(v.section, t.sous_region, t.region) as section,
+            coalesce(p.nom, v.producteur_texte) as producteur, v.millesime, coalesce(v.etiquette_url, c.etiquette_url) as etiquette,
+            c.id as cuvee_id, c.nom as cuvee, coalesce(c.appellation_texte, t.nom) as appellation, c.cepages
+       from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
+       left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id and c.statut <> 'retire'
+       left join terroir t on t.id = c.appellation_id
+      where v.distributeur_id = $1 and v.actif order by v.ordre, v.libelle`, [String(distributeurId)]);
+  const offres = new Map((await offresDistributeurs(resto, { vins: vins.map((v) => v.id) })).map((o) => [o.id, o]));
+  return vins.map((v) => {
+    const o = offres.get(v.id);
+    const { cuvee_id: _c, ...offre } = o ?? ({} as NonNullable<typeof o>); // eslint-disable-line @typescript-eslint/no-unused-vars
+    return { cle: v.cuvee_id ? `cuvee:${v.cuvee_id}` : `distrib:${v.id}`, libelle: v.cuvee ?? v.libelle, couleur: v.couleur, section: v.section,
+      appellation: v.appellation, nom_vin: null, cepages: v.cepages, producteur: v.producteur, etiquette: v.etiquette, complet: true,
+      millesime: v.millesime, offres: o ? [offre] : [] };
+  });
 }
 
 export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
@@ -437,12 +462,34 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   await relierAuVinDeLaBase(resto, ids, txt(f, 'base_cle'));
   if (!etiquette) await reprendreEtiquetteDeLaBase(resto, ids, txt(f, 'base_cle'));
   await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
+  const offre = await relierAuDistributeur(resto, ids, txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
   await completerBase(ids).catch((e) => console.error('[base] compléter', id, e));
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);
   if (plats.length) await lancerPreparation(resto, plats.map((p) => p.id), u.email, { vins: ids }).catch((e) => console.error('[ajout] vin', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte`, { c: couleur, vin: id, ok: `« ${libelle} » ajouté : Pat prépare ses accords avec vos plats (quelques minutes).` }));
+  // Retour à la base de vins ; un vin pris chez un distributeur : proposé à la commande.
+  redirect(avec(`/admin/${resto}/stocks`, { ajoute: id, ...(offre ? { commander: '1' } : {}),
+    ok: `« ${libelle} » ajouté : Pat prépare ses accords avec vos plats (quelques minutes).` }));
+}
+
+/**
+ * Vin pris dans le catalogue d'un distributeur de Quid Vinum : le distributeur devient un fournisseur du restaurant
+ * (avec la marge par défaut), le vin y est rattaché avec son prix d'achat, et relié au vin de la base s'il l'est.
+ */
+async function relierAuDistributeur(resto: string, vinIds: string[], distributeurVin: string | null, baseCle: string | null) {
+  if (!distributeurVin) return null;
+  const [o] = await offresDistributeurs(resto, { vins: [distributeurVin] });
+  if (!o) return null;
+  const [m] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
+    [randomUUID(), resto, o.distributeur, o.distributeur_id, Number.isFinite(Number(m?.valeur)) ? Number(m?.valeur) : 15]);
+  const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2 limit 1', [resto, o.distributeur_id]);
+  await requete(`update vin_carte set fournisseur_id = $3, distributeur_vin_id = $4, prix_achat = coalesce($5, prix_achat) where restaurant_id = $1 and id = any($2)`,
+    [resto, vinIds, f?.id ?? null, o.id, o.prix]);
+  if (!baseCle && o.cuvee_id) await relierAuVinDeLaBase(resto, vinIds, `cuvee:${o.cuvee_id}`);
+  return o;
 }
 
 /** Étiquettes manquantes de la carte : demandées à Wine Labs (une par cuvée), réservé au super-admin (crédits). */
