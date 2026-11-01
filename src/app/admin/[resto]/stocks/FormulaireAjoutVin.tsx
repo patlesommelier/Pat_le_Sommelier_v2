@@ -40,7 +40,7 @@ export async function FormulaireAjoutVin({ resto, couleur: c }: { resto: string;
           </div>
           <PhotoEtiquette url={null} base hauteur={200}>
             <span className="libelle">Photo de l’étiquette (facultatif)</span>
-            <span className="petit discret">Sans photo, Pat la cherche dans sa base.</span>
+            <span className="petit discret">Sans photo, elle est cherchée dans la base Quid Vinum.</span>
           </PhotoEtiquette>
         </div>
       </details>

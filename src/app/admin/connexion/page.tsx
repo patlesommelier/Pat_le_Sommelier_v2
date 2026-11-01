@@ -11,7 +11,7 @@ export default async function Connexion({ searchParams }: { searchParams: Promis
       <div className="carte-bo sticker">
         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <div><h1 style={{ margin: 0 }}><img src="/quidvinum/logo.png" alt="Quid Vinum" style={{ height: 64, display: 'block' }} /></h1><span className="discret">Espace restaurant · avec Pat le sommelier</span></div>
+          <div><h1 style={{ margin: 0 }}><img src="/quidvinum/logo.png" alt="Quid Vinum" style={{ height: 64, display: 'block' }} /></h1><span className="discret">Espace restaurant</span></div>
         </div>
         <Message erreur={erreur} ok={info} />
         {oubli ? (

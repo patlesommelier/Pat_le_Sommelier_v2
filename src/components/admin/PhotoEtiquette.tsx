@@ -50,7 +50,7 @@ export function PhotoEtiquette({ url, children, champ = 'etiquette', alt = 'Éti
       <div className="champ" style={{ minWidth: 0, alignItems: 'flex-start' }}>
         {children}
         {apercu && <span className="petit discret">Nouvelle photo : elle sera gardée à l’enregistrement.</span>}
-        {!apercu && !url && deLaBase && <span className="petit discret">Étiquette trouvée dans la base de Pat : elle sera ajoutée avec le vin. Vous pouvez aussi déposer votre photo.</span>}
+        {!apercu && !url && deLaBase && <span className="petit discret">Étiquette trouvée dans la base Quid Vinum : elle sera ajoutée avec le vin. Vous pouvez aussi déposer votre photo.</span>}
         <input id={`${champ}-${ident}`} name={champ} aria-label="Choisir une photo" type="file" accept="image/png,image/jpeg,image/webp" capture="environment"
           style={{ minHeight: 0, padding: 8, width: '100%', maxWidth: '100%' }}
           onChange={async (e) => {

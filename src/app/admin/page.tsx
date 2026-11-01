@@ -11,7 +11,7 @@ export default async function AccueilAdmin() {
   if (!u.admin && restos.length === 1) redirect(`/admin/${restos[0].id}`);
   return (
     <Coque utilisateur={u} etapes={[]}>
-      <Entete titre="Bonjour" texte={restos.length ? 'Choisissez un restaurant.' : 'Aucun restaurant n’est encore relié à votre compte. Demandez à Pat de vous donner accès.'} />
+      <Entete titre="Bonjour" texte={restos.length ? 'Choisissez un restaurant.' : 'Aucun restaurant n’est encore relié à votre compte. Demandez à Quid Vinum de vous donner accès.'} />
       {!restos.length && (
         <div className="carte-bo pile" style={{ maxWidth: 640 }}>
           <span>Connecté avec <b>{u.email}</b>.</span>

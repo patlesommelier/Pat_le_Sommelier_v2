@@ -6,7 +6,8 @@ export interface Coordonnees { nom: string; adresse?: string | null; tva?: strin
 export interface LigneBon { libelle: string; detail?: string | null; quantite: number; prix_achat?: number | null }
 export interface BonCommande { numero: number; date: Date; restaurant: Coordonnees; fournisseur: Coordonnees; lignes: LigneBon[] }
 
-const BORDEAUX = '#680021', DISCRET = '#6F6366', LIGNE = '#E2D5D1';
+// Charte Quid Vinum : bordeaux, rouge du logo pour la marque, gris neutres.
+const BORDEAUX = '#610420', ROUGE_QV = '#F7371C', DISCRET = '#595959', LIGNE = '#E5E5E5';
 
 /** Montant en euros, à la belge : 1 234,50 €. */
 export const euros = (n: number) => `${n.toLocaleString('fr-BE', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} €`;
@@ -20,6 +21,7 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
 
   // En-tête : restaurant à gauche, référence et date à droite.
   d.texte(marge, y, b.restaurant.nom, { corps: 18, gras: true, couleur: BORDEAUX });
+  d.texte(droite, y - 22, 'QUID VINUM', { corps: 9, gras: true, couleur: ROUGE_QV, aligne: 'droite' });
   d.texte(droite, y - 4, 'BON DE COMMANDE', { corps: 9, gras: true, couleur: DISCRET, aligne: 'droite' });
   d.texte(droite, y + 12, `N° ${referenceCommande(b)}`, { corps: 12, gras: true, aligne: 'droite' });
   d.texte(droite, y + 27, b.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' }), { corps: 10, couleur: DISCRET, aligne: 'droite' });
@@ -46,7 +48,7 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
   const colTotal = droite - 8, colPrix = droite - 95, colQuantite = avecPrix ? droite - 185 : droite - 8;
   const largeurNom = colQuantite - 70 - marge;
   const entete = () => {
-    d.rectangle(marge, y - 12, largeurUtile, 20, '#FBF5F2');
+    d.rectangle(marge, y - 12, largeurUtile, 20, '#EFEAE9');
     d.texte(marge + 8, y + 1, 'VIN', { corps: 8, gras: true, couleur: DISCRET });
     d.texte(colQuantite, y + 1, 'BOUTEILLES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
     if (avecPrix) {
@@ -83,7 +85,7 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
   if (y > d.hauteurPage - 110) { d.nouvellePage(); y = 64; }
   const confirmation = `Merci de confirmer la commande et la date de livraison${b.restaurant.email ? ` à ${b.restaurant.email}` : ''}${b.restaurant.telephone ? ` ou au ${b.restaurant.telephone}` : ''}.`;
   for (const l of couper(confirmation, largeurUtile, 10)) { d.texte(marge, y, l, { corps: 10 }); y += 14; }
-  d.texte(marge, d.hauteurPage - 40, 'Bon de commande préparé avec Pat le sommelier', { corps: 8, couleur: DISCRET });
+  d.texte(marge, d.hauteurPage - 40, 'Bon de commande — Quid Vinum', { corps: 8, couleur: DISCRET });
   return d.octets();
 }
 
@@ -98,6 +100,7 @@ export function genererBonReception(b: BonCommande, r: BonReception): Uint8Array
   const marge = 50, droite = d.largeurPage - marge, largeurUtile = droite - marge;
   let y = 64;
   d.texte(marge, y, b.restaurant.nom, { corps: 18, gras: true, couleur: BORDEAUX });
+  d.texte(droite, y - 22, 'QUID VINUM', { corps: 9, gras: true, couleur: ROUGE_QV, aligne: 'droite' });
   d.texte(droite, y - 4, r.complete ? 'BON DE RÉCEPTION — COMPLÈTE' : 'BON DE RÉCEPTION — PARTIELLE', { corps: 9, gras: true, couleur: DISCRET, aligne: 'droite' });
   d.texte(droite, y + 12, `N° ${referenceCommande(b)}-R${r.numero}`, { corps: 12, gras: true, aligne: 'droite' });
   d.texte(droite, y + 27, r.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' }), { corps: 10, couleur: DISCRET, aligne: 'droite' });
@@ -116,7 +119,7 @@ export function genererBonReception(b: BonCommande, r: BonReception): Uint8Array
   const colRecues = droite - 8, colCommandees = droite - 110;
   const largeurNom = colCommandees - 80 - marge;
   const entete = () => {
-    d.rectangle(marge, y - 12, largeurUtile, 20, '#FBF5F2');
+    d.rectangle(marge, y - 12, largeurUtile, 20, '#EFEAE9');
     d.texte(marge + 8, y + 1, 'VIN', { corps: 8, gras: true, couleur: DISCRET });
     d.texte(colCommandees, y + 1, 'COMMANDÉES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
     d.texte(colRecues, y + 1, 'REÇUES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
@@ -144,6 +147,6 @@ export function genererBonReception(b: BonCommande, r: BonReception): Uint8Array
   const etat = r.complete ? 'Réception complète : toutes les bouteilles de la commande sont arrivées.'
     : `Réception partielle : il reste ${r.reste} bouteille${r.reste > 1 ? 's' : ''} à recevoir.`;
   for (const l of couper(etat, largeurUtile, 10.5)) { d.texte(marge, y, l, { corps: 10.5, gras: true }); y += 15; }
-  d.texte(marge, d.hauteurPage - 40, 'Bon de réception préparé avec Pat le sommelier', { corps: 8, couleur: DISCRET });
+  d.texte(marge, d.hauteurPage - 40, 'Bon de réception — Quid Vinum', { corps: 8, couleur: DISCRET });
   return d.octets();
 }

@@ -6,8 +6,8 @@ import { useState, useTransition } from 'react';
 
 const CASES = [
   ['coups_de_coeur', 'Coups de cœur', 'Les vins cochés « Coup de cœur » dans leur fiche'],
-  ['nature', 'Nature', 'Les vins nature, d’après la base de Pat'],
-  ['bio', 'Bio', 'Les vins bio, d’après la base de Pat'],
+  ['nature', 'Nature', 'Les vins nature, d’après la base Quid Vinum'],
+  ['bio', 'Bio', 'Les vins bio, d’après la base Quid Vinum'],
   ['au_verre', 'Au verre', 'Les vins servis au verre'],
 ] as const;
 

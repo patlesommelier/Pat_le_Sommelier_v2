@@ -44,7 +44,7 @@ export async function testerEmail() {
   if (!e.cle || !e.expediteur) {
     redirect(avec('/admin/super', { erreur: `Envoi d’e-mails non configuré : ${!e.cle ? 'RESEND_API_KEY manque' : ''}${!e.cle && !e.expediteur ? ' et ' : ''}${!e.expediteur ? 'EMAIL_EXPEDITEUR manque' : ''} dans les variables de Coolify (puis Redeploy).` }));
   }
-  const erreur = await envoyerEmail({ a: u.email, sujet: 'Pat le sommelier : e-mail de test', texte: 'Bonjour,\n\nL’envoi d’e-mails de Pat le sommelier fonctionne.\n\nPat le sommelier' });
+  const erreur = await envoyerEmail({ a: u.email, sujet: 'Quid Vinum : e-mail de test', texte: 'Bonjour,\n\nL’envoi d’e-mails de l’espace Quid Vinum fonctionne.\n\nQuid Vinum' });
   redirect(avec('/admin/super', erreur ? { erreur } : { ok: `E-mail de test envoyé à ${u.email} depuis ${e.expediteur} : vérifiez votre boîte (et les indésirables).` }));
 }
 

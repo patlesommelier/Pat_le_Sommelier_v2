@@ -129,17 +129,17 @@ export async function compteDuLien(jeton: string): Promise<string | null> {
  * Envoie le lien par e-mail. Sans service d'envoi configuré (Resend), renvoie le lien pour le transmettre soi-même
  * (invitations) ; `envoye` dit si l'e-mail est parti.
  */
-export async function envoyerLien(email: string, lien: string, sujet: string, texte: string): Promise<{ envoye: boolean; erreur?: string }> {
+export async function envoyerLien(email: string, lien: string, sujet: string, texte: string, signature = 'Quid Vinum'): Promise<{ envoye: boolean; erreur?: string }> {
   if (!envoiEmailConfigure()) return { envoye: false };
-  const erreur = await envoyerEmail({ a: email, sujet, texte: `${texte}\n\n${lien}\n\nPat le sommelier` });
+  const erreur = await envoyerEmail({ a: email, sujet, texte: `${texte}\n\n${lien}\n\n${signature}` });
   return erreur ? { envoye: false, erreur } : { envoye: true };
 }
 
 /** Invitation : un lien (7 jours) pour choisir son mot de passe, envoyé par e-mail (ou à transmettre soi-même : `lien`). */
 export async function inviter(compteId: string, email: string) {
   const lien = await creerLien(compteId, '/admin/mot-de-passe', 7);
-  const r = await envoyerLien(email, lien, 'Votre accès à Pat le sommelier',
-    'Bonjour,\n\nUn accès à l’espace restaurant de Pat le sommelier a été créé pour vous. Pour choisir votre mot de passe, ouvrez ce lien (valable 7 jours) :');
+  const r = await envoyerLien(email, lien, 'Votre accès à l’espace restaurant Quid Vinum',
+    'Bonjour,\n\nUn accès à votre espace restaurant Quid Vinum a été créé pour vous. Pour choisir votre mot de passe, ouvrez ce lien (valable 7 jours) :');
   return { ...r, lien };
 }
 
@@ -154,8 +154,10 @@ export async function motDePasseOublie(email: string, suite: string, creerSiConn
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(e)) return true;
   const id = (await trouverCompte(e))?.id ?? (await creerSiConnu(e) ? (await creerCompte(e)).id : null);
   if (id) {
-    await envoyerLien(e, await creerLien(id, suite, 1), 'Pat le sommelier : choisir un nouveau mot de passe',
-      'Bonjour,\n\nPour choisir un nouveau mot de passe, ouvrez ce lien (valable 24 heures) :');
+    // App client (Pat le sommelier) ou espace restaurant (Quid Vinum).
+    const marque = suite.startsWith('/pat') ? 'Pat le sommelier' : 'Quid Vinum';
+    await envoyerLien(e, await creerLien(id, suite, 1), `${marque} : choisir un nouveau mot de passe`,
+      'Bonjour,\n\nPour choisir un nouveau mot de passe, ouvrez ce lien (valable 24 heures) :', marque);
   }
   return true;
 }

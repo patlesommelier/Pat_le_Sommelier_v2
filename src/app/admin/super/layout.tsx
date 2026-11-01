@@ -17,7 +17,7 @@ export default async function LayoutSuper({ children }: { children: React.ReactN
         <Link href="/admin/super" className="bo-marque">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img src="/quidvinum/logo-clair.png" alt="Quid Vinum" className="logo-qv" />
-          <span className="sous-marque">Super-admin<small>avec Pat le sommelier</small></span>
+          <span className="sous-marque">Super-admin</span>
         </Link>
         <NavSuper aValider={n} appellationsAValider={a} />
         <div className="bo-bas">

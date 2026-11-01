@@ -146,7 +146,7 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
           {choisi.offres?.length ? <OffresVin offres={choisi.offres} valeur={offre} changer={(id) => prendreOffre(choisi, id)} /> : null}
         </div>
       ) : libre ? (
-        <p className="petit" style={{ margin: 0 }}>Décrivez le vin ci-dessous : il sera ajouté à la base de Pat. <button type="button" className="btn fantome petit" onClick={recommencer}>Revenir à la recherche</button></p>
+        <p className="petit" style={{ margin: 0 }}>Décrivez le vin ci-dessous : il sera ajouté à la base Quid Vinum. <button type="button" className="btn fantome petit" onClick={recommencer}>Revenir à la recherche</button></p>
       ) : (
         <>
           <div className="champ" style={{ margin: 0 }}>
@@ -154,9 +154,9 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
             <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap' }}>
               <input id="recherche_vin" value={texte} placeholder="Ex. Nero d’Avola Molino a Vento" style={{ flex: '1 1 260px' }} autoFocus
                 onChange={(e) => setTexte(e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); lancer(); } }} />
-              <button type="button" className="btn" onClick={lancer} disabled={attente || texte.trim().length < 3}>{attente && !distributeur ? 'Pat cherche…' : 'Chercher'}</button>
+              <button type="button" className="btn" onClick={lancer} disabled={attente || texte.trim().length < 3}>{attente && !distributeur ? 'Recherche…' : 'Chercher'}</button>
             </div>
-            <span className="aide">Nom, producteur, appellation… Pat cherche dans sa base et chez les distributeurs de Quid Vinum.</span>
+            <span className="aide">Nom, producteur, appellation… La recherche couvre la base Quid Vinum et les catalogues de ses distributeurs.</span>
           </div>
           {distributeurs.length > 0 && (
             <div className="champ" style={{ margin: 0 }}>
@@ -175,8 +175,8 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
             {erreur && <span className="petit">La recherche n’a pas abouti. Réessayez.</span>}
             {attente && distributeur && <span className="petit">Chargement du catalogue…</span>}
             {trouves && !attente && (trouves.length
-              ? <><span className="petit">{trouves.length === 1 ? 'Pat a trouvé ce vin :' : `Pat a trouvé ${trouves.length} vins :`} cliquez sur le vôtre.</span>{trouves.map((v) => ligne(v, v.cle))}</>
-              : <span className="petit">Pat ne connaît pas encore ce vin.</span>)}
+              ? <><span className="petit">{trouves.length === 1 ? 'Un vin trouvé :' : `${trouves.length} vins trouvés :`} cliquez sur le vôtre.</span>{trouves.map((v) => ligne(v, v.cle))}</>
+              : <span className="petit">Ce vin n’est pas encore dans la base Quid Vinum.</span>)}
             {catalogue && !attente && <>
               <span className="petit discret">{visibles.length} vin{visibles.length > 1 ? 's' : ''}{visibles.length > MAX ? ` : les ${MAX} premiers sont affichés, filtrez la liste` : ''}.</span>
               {visibles.slice(0, MAX).map((v) => ligne(v, v.offres?.[0]?.id ?? v.cle))}

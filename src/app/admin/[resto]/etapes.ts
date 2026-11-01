@@ -16,7 +16,7 @@ export function etapesRestaurant(r: RestaurantBO, s: Resume): EtapeDetail[] {
       statut: s.plats ? ['Fait', 'ok'] : ['À faire', ''], action: 'Gérer le menu' },
     { href: `${base}/carte`, libelle: 'Carte des vins', groupe: 'Mise en place', icone: 'bottle', etat: s.vins ? 'fait' : 'afaire',
       ligne1: `${pl(s.vins, 'référence')} · ${pl(s.vins_etiquette, 'étiquette')}`,
-      ligne2: s.nouveaux_producteurs ? `${pl(s.nouveaux_producteurs, 'nouveau producteur proposé', 'nouveaux producteurs proposés')} à la base de Pat` : `${pl(s.vins_producteur, 'vin relié', 'vins reliés')} à un producteur de Pat`,
+      ligne2: s.nouveaux_producteurs ? `${pl(s.nouveaux_producteurs, 'nouveau producteur proposé', 'nouveaux producteurs proposés')} à la base Quid Vinum` : `${pl(s.vins_producteur, 'vin relié', 'vins reliés')} à un producteur de Pat`,
       statut: s.vins ? ['Fait', 'ok'] : ['À faire', ''], action: 'Gérer la carte' },
     { href: `${base}/accords`, libelle: 'Accords', groupe: 'Mise en place', icone: 'link', etat: s.preparation_en_cours ? 'encours' : accordsFaits ? 'fait' : s.vins && s.plats ? 'encours' : 'afaire',
       ligne1: s.accords ? `${pl(s.accords, 'accord')} sur ${pl(s.plats_avec_accords, 'plat')}` : 'À générer',

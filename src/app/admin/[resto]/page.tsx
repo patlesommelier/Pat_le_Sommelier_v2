@@ -7,7 +7,7 @@ import { titreCarte } from '@/lib/admin/intitule';
 import { avecAppreciation } from '@/lib/appreciation';
 import { sansContenance } from '@/lib/format';
 
-/** Tableau de bord : bonjour, ce que Pat permet de faire, le résumé du restaurant et la règle de Pat du jour. */
+/** Tableau de bord : bonjour, l'espace Quid Vinum (et Pat le Sommelier pour les accords), le résumé du restaurant et la règle de Pat du jour. */
 export default async function TableauDeBord({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ bienvenue?: string }> }) {
   const { resto } = await params;
   const { bienvenue } = await searchParams;
@@ -22,7 +22,7 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
     <>
       {accueil ? <BienvenueRestaurant restaurantId={r.id} /> : <>
       <Entete titre={prenom ? `Bonjour ${prenom}` : 'Bonjour'}
-        texte="Avec Pat le Sommelier, chacun de vos clients choisit son plat sur son téléphone et découvre le vin de votre carte qui l’accompagne le mieux, avec une explication simple, comme le ferait un sommelier à table. Ici, vous gardez la main : tenez votre menu et votre carte des vins à jour, relisez les accords que Pat a préparés, ajustez ses règles à votre service, choisissez l’apparence de votre app et imprimez le QR code à poser sur vos tables." />
+        texte="Votre espace Quid Vinum : votre menu et votre carte des vins, vos vins en stock et vos commandes à vos distributeurs. Pour les accords mets-vins, Pat le Sommelier accompagne vos clients : chacun choisit son plat sur son téléphone et découvre le vin de votre carte qui l’accompagne le mieux, comme le ferait un sommelier à table. Vous gardez la main : relisez les accords que Pat a préparés, ajustez ses règles à votre service, choisissez l’apparence de l’app et imprimez le QR code à poser sur vos tables." />
       {/* Résumé général du restaurant */}
       <div className="carte-bo sticker" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 28 }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}

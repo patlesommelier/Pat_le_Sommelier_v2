@@ -118,7 +118,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               </div>
             )}
             {!v.producteur_id && sansLien && suggestions.length > 0 && (
-              <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Pat a trouvé des noms proches dans sa base : choisissez le bon producteur, ou proposez-le comme nouveau.</p>
+              <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>La base Quid Vinum contient des noms proches : choisissez le bon producteur, ou proposez-le comme nouveau.</p>
             )}
             {suggestions.map((p) => (
               <label key={p.id} className="case"><input type="radio" name="producteur_choix" value={p.id} />
@@ -126,9 +126,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             ))}
             {sansLien && (
               <label className="case"><input type="radio" name="producteur_choix" value="nouveau" />
-                <span>Nouveau producteur : « {v.producteur_texte} »<small>Proposé à Pat pour sa base</small></span></label>
+                <span>Nouveau producteur : « {v.producteur_texte} »<small>Proposé à Quid Vinum pour sa base</small></span></label>
             )}
-            <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : Pat le cherche dans sa base. S’il ne le connaît pas, il lui est proposé comme nouveau producteur.</span>
+            <span className="aide" style={{ fontSize: 12.5, color: 'var(--discret)' }}>Saisissez le nom et enregistrez : il est cherché dans la base Quid Vinum. S’il n’y est pas, il est proposé à Quid Vinum comme nouveau producteur.</span>
             {pk === 'attention' && v.a_verifier && <p className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)', margin: 0 }}>À vérifier : {v.a_verifier}</p>}
           </Bloc>
 
@@ -215,7 +215,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             <span className="aide">{v.presentation_carte ? 'Laissez vide pour garder le texte de Pat (en grisé) ; écrivez pour le remplacer.' : 'Trois phrases, 3 à 4 lignes sur la carte (230 à 380 caractères).'}</span>
             {!v.presentation_carte && !v.presentation_carte_perso && groupe.some((x) => x.disponible) && (
               <span><button formAction={ecrirePresentations.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">Faire écrire la présentation par Pat</button>
-                <span className="petit discret"> {enCoursPresentation ? 'Pat l’écrit : rechargez la page dans quelques minutes.' : 'd’après sa base, sinon le site du producteur'}</span></span>
+                <span className="petit discret"> {enCoursPresentation ? 'Pat l’écrit : rechargez la page dans quelques minutes.' : 'd’après la base Quid Vinum, sinon le site du producteur'}</span></span>
             )}
           </div>
 
