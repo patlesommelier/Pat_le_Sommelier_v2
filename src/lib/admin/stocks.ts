@@ -48,7 +48,8 @@ export async function getCoordonnees(resto: string) {
 export async function getCommandes(resto: string, statuts: Commande['statut'][], limite = 50) {
   const commandes = await requete<Omit<Commande, 'lignes'>>(
     `select c.id, c.numero, c.fournisseur_id, c.fournisseur_nom, c.statut, c.cree_le::text, c.envoyee_le::text, c.envoyee_a, c.recue_le::text,
-            ${SQL_EMAIL_COMMANDE} as fournisseur_email, f.distributeur_id is not null as via_qv
+            case when c.quid_vinum then (select valeur from reglage_serveur where cle = 'qv_email') else ${SQL_EMAIL_COMMANDE} end as fournisseur_email,
+            (c.quid_vinum or f.distributeur_id is not null) as via_qv
        from commande c left join fournisseur f on f.id = c.fournisseur_id
       where c.restaurant_id = $1 and c.statut = any($2) order by c.cree_le desc limit $3`, [resto, statuts, limite]);
   const lignes = commandes.length ? await requete<LigneCommande & { commande_id: string }>(
@@ -80,8 +81,8 @@ export async function choisirFournisseur(resto: string, vinIds: string[], valeur
 /** Données du bon de commande (PDF) d'une commande du restaurant. */
 export async function donneesBon(resto: string, commandeId: string) {
   const [[c], r] = await Promise.all([
-    requete<{ numero: number; cree_le: Date; fournisseur_nom: string; nom: string | null; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; distributeur_id: string | null }>(
-      `select c.numero, c.cree_le, c.fournisseur_nom, f.nom, f.adresse, f.tva, f.contact, f.telephone, f.email, f.distributeur_id
+    requete<{ numero: number; cree_le: Date; fournisseur_nom: string; nom: string | null; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; distributeur_id: string | null; quid_vinum: boolean }>(
+      `select c.numero, c.cree_le, c.fournisseur_nom, f.nom, f.adresse, f.tva, f.contact, f.telephone, f.email, f.distributeur_id, c.quid_vinum
          from commande c left join fournisseur f on f.id = c.fournisseur_id where c.id = $1 and c.restaurant_id = $2`, [commandeId, resto]),
     getCoordonnees(resto),
   ]);
@@ -92,7 +93,10 @@ export async function donneesBon(resto: string, commandeId: string) {
     numero: c.numero, date: new Date(c.cree_le),
     restaurant: { nom: r.commande_societe || r.nom, adresse: r.commande_adresse, tva: r.commande_tva, contact: r.commande_contact, telephone: r.commande_telephone, email: r.commande_email },
     // Distributeur de la base de Quid Vinum : le bon est adressé à Quid Vinum, pour ce distributeur.
-    fournisseur: c.distributeur_id
+    // Commande Quid Vinum (plusieurs distributeurs) : adressée à Quid Vinum ; chaque ligne nomme son distributeur.
+    fournisseur: c.quid_vinum
+      ? await (async () => { const qv = await getCoordonneesQv(); return { nom: qv.nom, adresse: qv.adresse, tva: qv.tva, contact: 'Commande pour les distributeurs Quid Vinum', telephone: qv.telephone, email: qv.email }; })()
+      : c.distributeur_id
       ? await (async () => { const qv = await getCoordonneesQv(); return { nom: qv.nom, adresse: qv.adresse, tva: qv.tva, contact: `Pour ${c.nom ?? c.fournisseur_nom}`, telephone: qv.telephone, email: qv.email }; })()
       : { nom: c.nom ?? c.fournisseur_nom, adresse: c.adresse, tva: c.tva, contact: c.contact, telephone: c.telephone, email: c.email },
     distributeur: c.distributeur_id ? (c.nom ?? c.fournisseur_nom) : null,

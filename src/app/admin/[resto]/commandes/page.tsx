@@ -1,7 +1,7 @@
 // Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
 // puis une nouvelle commande, les vins groupés par fournisseur avec leur stock actuel.
 import Link from 'next/link';
-import { annulerCommande, creerCommande, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
+import { annulerCommande, creerCommande, creerCommandeQv, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
 import { CatalogueCommande, type LigneCatalogue } from '@/components/admin/CatalogueCommande';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -41,12 +41,16 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     });
     return [f.id, lignes] as const;
   })));
+  // Distributeurs Quid Vinum activés : une seule commande pour tous (Quid Vinum la répartit entre eux).
+  const qv = fournisseurs.filter((f) => f.distributeur_id && catalogues.get(f.id)?.length);
+  const vinChoisi = groupes.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined;
   const blocs = [
-    ...fournisseurs.map((f) => ({ id: f.id, nom: f.nom, email: f.email, logo: f.logo_url, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
+    ...fournisseurs.filter((f) => !f.distributeur_id).map((f) => ({ id: f.id, nom: f.nom, email: f.email, logo: f.logo_url, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
       .filter((b) => b.groupes.length || b.catalogue?.length),
     { id: '', nom: 'Vins sans fournisseur', email: null, logo: null, catalogue: undefined, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
   ].filter((b) => b.groupes.length || b.catalogue?.length);
-  const cible = sp.f === 'aucun' ? '' : sp.f;
+  const cible = sp.f === 'aucun' ? '' : sp.f === 'qv' || qv.some((f) => f.id === sp.f) ? 'qv' : sp.f;
+  const basQv = qv.reduce((n, f) => n + (catalogues.get(f.id) ?? []).filter((l) => l.surCarte?.bas).length, 0);
   const sansCoordonnees = !coord?.commande_email || !coord.commande_adresse;
 
   const carte = (c: Commande) => {
@@ -106,7 +110,27 @@ export default async function Commandes({ params, searchParams }: { params: Prom
 
       <section className="pile" id="nouvelle">
         <div><h2>Nouvelle commande</h2><p className="discret" style={{ margin: '6px 0 0' }}>Les vins sont groupés par fournisseur. Le prix d’achat HTVA se corrige ici si le fournisseur l’a changé. Indiquez les bouteilles à commander, puis validez : le bon de commande est prêt à envoyer.</p></div>
-        {!blocs.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
+        {!blocs.length && !qv.length && <p className="discret">Aucun vin disponible sur la carte.</p>}
+        {qv.length > 0 && (
+          <details className="carte-bo bloc-fournisseur" id="quid-vinum" open={cible !== undefined ? cible === 'qv' : basQv > 0}>
+            <summary>
+              <span><b style={{ fontSize: 17 }}>Quid Vinum</b> <Etat type="ok">{qv.length} distributeur{qv.length > 1 ? 's' : ''}</Etat>
+                <span className="discret"> · {qv.map((f) => f.nom).join(', ')}</span></span>
+              {basQv > 0 && <span className="alerte-texte"><span className="alerte-stock" aria-hidden="true">!</span>{basQv} en stock bas</span>}
+            </summary>
+            <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12, marginTop: 12 }}>
+              <p className="petit discret" style={{ margin: 0 }}>Une seule commande pour tous vos distributeurs Quid Vinum, aux prix proposés par Quid Vinum (HTVA) : elle part chez Quid Vinum, qui la transmet à chaque distributeur.</p>
+              {qv.map((f) => (
+                <div key={f.id} className="pile" style={{ gap: 8 }}>
+                  <b>{/* eslint-disable-next-line @next/next/no-img-element */}
+                    {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ height: 24, verticalAlign: 'middle', marginRight: 8 }} />}{f.nom}</b>
+                  <CatalogueCommande lignes={catalogues.get(f.id)!} choisi={vinChoisi} />
+                </div>
+              ))}
+              <span><button className="btn rouge">Valider la commande Quid Vinum</button></span>
+            </FormulaireAdmin>
+          </details>
+        )}
         {blocs.map((b) => {
           const basN = b.catalogue ? b.catalogue.filter((l) => l.surCarte?.bas).length : b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length;
           return (

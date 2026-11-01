@@ -212,6 +212,52 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
   redirect(`/admin/${resto}/commandes?commande=${id}#commande-${id}`);
 }
 
+/**
+ * Commande Quid Vinum : les vins des catalogues de tous les distributeurs Quid Vinum activés par le restaurant (champs cat_<id>),
+ * en une seule commande envoyée à Quid Vinum. Chaque ligne nomme son distributeur ; les vins de la carte reçoivent ce distributeur,
+ * ce prix d'achat et les bouteilles « en commande ».
+ */
+export async function creerCommandeQv(resto: string, f: FormData): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const demandes = [...f.keys()].filter((k) => k.startsWith('cat_')).map((k) => [k.slice(4), entier(f, k) ?? 0] as const).filter(([, q]) => q > 0);
+  if (!demandes.length) return { erreur: 'Indiquez au moins un nombre de bouteilles à commander.' };
+  const actives = await requete<{ id: string; nom: string; distributeur_id: string }>(
+    `select f.id, f.nom, f.distributeur_id from fournisseur f join distributeur d on d.id = f.distributeur_id and d.actif where f.restaurant_id = $1`, [resto]);
+  const catalogues = new Map<string, Awaited<ReturnType<typeof catalogueDistributeur>>>();
+  for (const a of actives) catalogues.set(a.distributeur_id, await catalogueDistributeur(a.distributeur_id, resto));
+  const trouve = (vid: string) => { for (const a of actives) { const c = catalogues.get(a.distributeur_id)!.find((x) => x.id === vid); if (c) return { c, a }; } return null; };
+  for (const [vid, q] of demandes) {
+    const t = trouve(vid);
+    if (!t) return { erreur: 'Un vin n’est plus au catalogue de son distributeur : rechargez la page.' };
+    if (t.c.epuise) return { erreur: `« ${t.c.libelle} » est épuisé chez ${t.a.nom}.` };
+    if (t.c.maximum != null && q > t.c.maximum) return { erreur: `« ${t.c.libelle} » : ${t.c.maximum} bouteille${t.c.maximum > 1 ? 's' : ''} au plus.` };
+  }
+  const vins = await requete<{ id: string; libelle: string; millesime: string | null; format: string; producteur: string | null; producteur_id: string | null; distributeur_vin_id: string | null }>(
+    `select v.id, v.libelle, v.millesime, v.format, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur, v.producteur_id, v.distributeur_vin_id
+       from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [resto]);
+  const id = randomUUID();
+  const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
+  await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum) values ($1, $2, null, $3, $4, $5, true)',
+    [id, resto, 'Quid Vinum', numero, u.email]);
+  let ordre = 0;
+  // Lignes rangées par distributeur, dans l'ordre de leur catalogue.
+  const lignes = demandes.map(([vid, q]) => ({ ...trouve(vid)!, q })).sort((x, y) => x.a.nom.localeCompare(y.a.nom));
+  for (const { c, a, q } of lignes) {
+    const carte = vins.find((v) => v.distributeur_vin_id === c.id)
+      ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
+        vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
+    const detail = [`Chez ${a.nom}`, c.producteur, c.contenance, c.reference ? `réf. ${c.reference}` : null].filter(Boolean).join(' · ');
+    await requete(`insert into commande_ligne (commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, ordre, prix_achat) values ($1, $2, $3, $4, $5, $6, $7, $8)`,
+      [id, carte?.id ?? null, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail, q, ordre++, c.prix]);
+    if (carte) {
+      await requete(`update vin_carte set distributeur_vin_id = $3, prix_achat = $4, en_commande = en_commande + $5, fournisseur_id = $6 where restaurant_id = $1 and id = $2`,
+        [resto, carte.id, c.id, c.prix, q, a.id]);
+    }
+  }
+  rafraichir(resto);
+  redirect(`/admin/${resto}/commandes?commande=${id}#commande-${id}`);
+}
+
 /** Envoie le bon de commande (PDF en pièce jointe) au fournisseur, avec le restaurant en copie. */
 export async function envoyerCommande(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
