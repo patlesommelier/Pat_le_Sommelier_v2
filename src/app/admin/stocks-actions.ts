@@ -7,7 +7,7 @@ import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
 import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
-import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
+import { ajouterVinCommande, rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
@@ -200,8 +200,9 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
       ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
         vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
     const detail = [c.producteur, c.contenance, c.reference ? `réf. ${c.reference}` : null].filter(Boolean).join(' · ');
+    const nouveau = carte ? null : await ajouterVinCommande(resto, c.id, fournisseurId || null, c.prix, q);
     await requete(`insert into commande_ligne (commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, ordre, prix_achat) values ($1, $2, $3, $4, $5, $6, $7, $8)`,
-      [id, carte?.id ?? null, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail || null, q, ordre++, c.prix]);
+      [id, carte?.id ?? nouveau, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail || null, q, ordre++, c.prix]);
     if (carte) {
       await requete(`update vin_carte set distributeur_vin_id = $3, prix_achat = $4, en_commande = en_commande + $5 where restaurant_id = $1 and id = $2`,
         [resto, carte.id, c.id, c.prix, q]);
@@ -247,8 +248,10 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
       ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
         vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
     const detail = [`Chez ${a.nom}`, c.producteur, c.contenance, c.reference ? `réf. ${c.reference}` : null].filter(Boolean).join(' · ');
+    // Vin hors de vos vins : ajouté à la page Vins (stock 0, en commande), pas encore sur la carte.
+    const nouveau = carte ? null : await ajouterVinCommande(resto, c.id, a.id, c.prix, q);
     await requete(`insert into commande_ligne (commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, ordre, prix_achat) values ($1, $2, $3, $4, $5, $6, $7, $8)`,
-      [id, carte?.id ?? null, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail, q, ordre++, c.prix]);
+      [id, carte?.id ?? nouveau, c.id, `${c.libelle}${c.millesime ? ` ${c.millesime}` : ''}`, detail, q, ordre++, c.prix]);
     if (carte) {
       await requete(`update vin_carte set distributeur_vin_id = $3, prix_achat = $4, en_commande = en_commande + $5, fournisseur_id = $6 where restaurant_id = $1 and id = $2`,
         [resto, carte.id, c.id, c.prix, q, a.id]);
@@ -290,17 +293,47 @@ export async function marquerEnvoyee(resto: string, id: string): Promise<Retour>
   return { ok: 'Commande envoyée.' };
 }
 
-/** Bouteilles réceptionnées : celles de la commande passent du « en commande » au stock. */
-export async function receptionnerCommande(resto: string, id: string): Promise<Retour> {
-  await exigerAcces(resto);
-  const r = await requete(`update commande set statut = 'recue', recue_le = now() where id = $1 and restaurant_id = $2 and statut = 'ouverte' returning id`, [id, resto]);
-  if (!r.length) return { erreur: 'Cette commande n’est plus ouverte.' };
-  await requete(
-    `update vin_carte v set stock = v.stock + l.q, en_commande = greatest(v.en_commande - l.q, 0)
-       from (select vin_id, sum(quantite)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
-      where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
+/**
+ * Réception d'une livraison : les bouteilles reçues de chaque ligne (« tout » : tout ce qui reste à recevoir) passent du
+ * « en commande » au stock ; un bon de réception (partielle ou complète) est créé. Toute la commande reçue : « réceptionnée ».
+ */
+async function enregistrerReception(resto: string, commandeId: string, recues: Map<number, number> | 'tout', email: string | null) {
+  const [c] = await requete<{ id: string }>(`select id from commande where id = $1 and restaurant_id = $2 and statut = 'ouverte'`, [commandeId, resto]);
+  if (!c) return { erreur: 'Cette commande n’est plus ouverte.' };
+  const lignes = await requete<{ ordre: number; vin_id: string | null; libelle: string; detail: string | null; quantite: number; recue: number; prix_achat: number | null }>(
+    'select ordre, vin_id, libelle, detail, quantite, recue, prix_achat from commande_ligne where commande_id = $1 order by ordre', [commandeId]);
+  const recu = lignes.map((l) => ({ ...l, q: Math.max(0, Math.min(l.quantite - l.recue, recues === 'tout' ? l.quantite - l.recue : recues.get(l.ordre) ?? 0)) })).filter((l) => l.q > 0);
+  if (!recu.length) return { erreur: 'Indiquez au moins une bouteille reçue.' };
+  const complete = lignes.every((l) => l.recue + (recu.find((x) => x.ordre === l.ordre)?.q ?? 0) >= l.quantite);
+  const id = randomUUID();
+  const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from reception where commande_id = $1', [commandeId]);
+  await requete('insert into reception (id, commande_id, numero, complete, cree_par) values ($1, $2, $3, $4, $5)', [id, commandeId, numero, complete, email]);
+  for (const l of recu) {
+    await requete('insert into reception_ligne (reception_id, ordre, libelle, detail, quantite, commandee, prix_achat) values ($1, $2, $3, $4, $5, $6, $7)',
+      [id, l.ordre, l.libelle, l.detail, l.q, l.quantite, l.prix_achat]);
+    await requete('update commande_ligne set recue = recue + $3 where commande_id = $1 and ordre = $2', [commandeId, l.ordre, l.q]);
+    if (l.vin_id) await requete('update vin_carte set stock = stock + $3, en_commande = greatest(en_commande - $3, 0) where id = $1 and restaurant_id = $2', [l.vin_id, resto, l.q]);
+  }
+  if (complete) await requete(`update commande set statut = 'recue', recue_le = now() where id = $1`, [commandeId]);
   rafraichir(resto);
-  return { ok: 'Bouteilles réceptionnées : elles sont ajoutées au stock.' };
+  const n = recu.reduce((t, l) => t + l.q, 0);
+  return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`, reception: id };
+}
+
+/** Réception des bouteilles (fenêtre de la commande) : champs recue_<ordre de la ligne>. */
+export async function recevoirBouteilles(resto: string, commandeId: string, f: FormData): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const recues = new Map([...f.keys()].filter((k) => k.startsWith('recue_')).map((k) => [Number(k.slice(6)), entier(f, k) ?? 0] as const));
+  const r = await enregistrerReception(resto, commandeId, recues, u.email);
+  if ('erreur' in r) return { erreur: r.erreur };
+  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ commande: commandeId, ok: r.ok })}#commande-${commandeId}`);
+}
+
+/** Toutes les bouteilles restantes de la commande sont arrivées (réception complète). */
+export async function receptionnerCommande(resto: string, id: string): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const r = await enregistrerReception(resto, id, 'tout', u.email);
+  return 'erreur' in r ? { erreur: r.erreur } : { ok: r.ok };
 }
 
 /** Commande annulée : ses bouteilles ne sont plus « en commande ». */
@@ -310,7 +343,7 @@ export async function annulerCommande(resto: string, id: string): Promise<Retour
   if (!r.length) return { erreur: 'Cette commande n’est plus ouverte.' };
   await requete(
     `update vin_carte v set en_commande = greatest(v.en_commande - l.q, 0)
-       from (select vin_id, sum(quantite)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
+       from (select vin_id, sum(quantite - recue)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
       where v.id = l.vin_id and v.restaurant_id = $2`, [id, resto]);
   rafraichir(resto);
   return { ok: 'Commande annulée.' };

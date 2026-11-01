@@ -6,10 +6,11 @@ import { associerAuCatalogue } from './distributeur-vin';
 
 /** distributeur_id : fournisseur choisi dans la base de Quid Vinum (ses commandes partent chez Quid Vinum). */
 export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number; distributeur_id: string | null; logo_url: string | null }
-export interface LigneCommande { vin_id: string | null; distributeur_vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null }
+export interface LigneCommande { vin_id: string | null; distributeur_vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null; recue: number; ordre: number }
+export interface Reception { id: string; numero: number; complete: boolean; cree_le: string }
 export interface Commande {
   id: string; numero: number; fournisseur_id: string | null; fournisseur_nom: string; fournisseur_email: string | null; via_qv: boolean; statut: 'ouverte' | 'recue' | 'annulee';
-  cree_le: string; envoyee_le: string | null; envoyee_a: string | null; recue_le: string | null; lignes: LigneCommande[];
+  cree_le: string; envoyee_le: string | null; envoyee_a: string | null; recue_le: string | null; lignes: LigneCommande[]; receptions: Reception[];
 }
 export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
   commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null }
@@ -53,8 +54,10 @@ export async function getCommandes(resto: string, statuts: Commande['statut'][],
        from commande c left join fournisseur f on f.id = c.fournisseur_id
       where c.restaurant_id = $1 and c.statut = any($2) order by c.cree_le desc limit $3`, [resto, statuts, limite]);
   const lignes = commandes.length ? await requete<LigneCommande & { commande_id: string }>(
-    'select commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, prix_achat from commande_ligne where commande_id = any($1) order by ordre', [commandes.map((c) => c.id)]) : [];
-  return commandes.map((c) => ({ ...c, lignes: lignes.filter((l) => l.commande_id === c.id) })) as Commande[];
+    'select commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, prix_achat, recue, ordre from commande_ligne where commande_id = any($1) order by ordre', [commandes.map((c) => c.id)]) : [];
+  const receptions = commandes.length ? await requete<Reception & { commande_id: string }>(
+    'select id, commande_id, numero, complete, cree_le::text from reception where commande_id = any($1) order by numero', [commandes.map((c) => c.id)]) : [];
+  return commandes.map((c) => ({ ...c, lignes: lignes.filter((l) => l.commande_id === c.id), receptions: receptions.filter((r) => r.commande_id === c.id) })) as Commande[];
 }
 
 /**
@@ -103,4 +106,16 @@ export async function donneesBon(resto: string, commandeId: string) {
     quidVinum: c.quid_vinum,
     lignes,
   };
+}
+
+/** Données du bon de réception (PDF) : la commande, et les bouteilles reçues lors de cette réception. */
+export async function donneesReception(resto: string, commandeId: string, receptionId: string) {
+  const bon = await donneesBon(resto, commandeId);
+  const [r] = await requete<{ numero: number; complete: boolean; cree_le: Date }>(
+    'select r.numero, r.complete, r.cree_le from reception r join commande c on c.id = r.commande_id where r.id = $1 and c.id = $2 and c.restaurant_id = $3', [receptionId, commandeId, resto]);
+  if (!bon || !r) return null;
+  const lignes = await requete<{ libelle: string; detail: string | null; quantite: number; commandee: number; prix_achat: number | null }>(
+    'select libelle, detail, quantite, commandee, prix_achat::float8 as prix_achat from reception_ligne where reception_id = $1 order by ordre', [receptionId]);
+  const [{ reste }] = await requete<{ reste: number }>('select coalesce(sum(quantite - recue), 0)::int as reste from commande_ligne where commande_id = $1', [commandeId]);
+  return { bon, reception: { numero: r.numero, complete: r.complete, date: new Date(r.cree_le), lignes, reste } };
 }

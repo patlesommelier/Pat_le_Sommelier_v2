@@ -101,7 +101,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
                         {/* Stock bas : la commande est proposée (sinon, on commande depuis la fiche du vin ou Commandes de vin). */}
-                        <td>{alerte && <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id ?? 'aucun'}&vin=${encodeURIComponent(v.id)}#nouvelle`} className="btn rouge petit" style={{ whiteSpace: 'nowrap' }}>Commander</Link>}</td>
+                        <td>{alerte && v.fournisseur_id && <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id}&vin=${encodeURIComponent(v.id)}#nouvelle`} className="btn rouge petit" style={{ whiteSpace: 'nowrap' }}>Commander</Link>}</td>
                       </tr>
                     );
                   })}

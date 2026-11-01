@@ -86,3 +86,64 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
   d.texte(marge, d.hauteurPage - 40, 'Bon de commande préparé avec Pat le sommelier', { corps: 8, couleur: DISCRET });
   return d.octets();
 }
+
+/** Bon de réception (PDF) : les bouteilles reçues lors d'une livraison d'une commande (réception partielle ou complète). */
+export interface BonReception {
+  numero: number; complete: boolean; date: Date; reste: number;
+  lignes: { libelle: string; detail?: string | null; quantite: number; commandee: number }[];
+}
+
+export function genererBonReception(b: BonCommande, r: BonReception): Uint8Array {
+  const d = new DocumentPdf();
+  const marge = 50, droite = d.largeurPage - marge, largeurUtile = droite - marge;
+  let y = 64;
+  d.texte(marge, y, b.restaurant.nom, { corps: 18, gras: true, couleur: BORDEAUX });
+  d.texte(droite, y - 4, r.complete ? 'BON DE RÉCEPTION — COMPLÈTE' : 'BON DE RÉCEPTION — PARTIELLE', { corps: 9, gras: true, couleur: DISCRET, aligne: 'droite' });
+  d.texte(droite, y + 12, `N° ${referenceCommande(b)}-R${r.numero}`, { corps: 12, gras: true, aligne: 'droite' });
+  d.texte(droite, y + 27, r.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' }), { corps: 10, couleur: DISCRET, aligne: 'droite' });
+  y += 46;
+  d.trait(marge, y, droite, y, BORDEAUX, 1.2);
+  y += 26;
+  d.texte(marge, y, 'REÇU PAR', { corps: 8, gras: true, couleur: DISCRET });
+  d.texte(marge + largeurUtile / 2 + 10, y, 'FOURNISSEUR', { corps: 8, gras: true, couleur: DISCRET });
+  y += 15;
+  d.texte(marge, y, b.restaurant.nom, { corps: 11, gras: true });
+  d.texte(marge + largeurUtile / 2 + 10, y, b.fournisseur.nom, { corps: 11, gras: true });
+  y += 16;
+  d.texte(marge, y, `Commande n° ${referenceCommande(b)} du ${b.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' })}`, { corps: 9.5, couleur: DISCRET });
+  y += 30;
+
+  const colRecues = droite - 8, colCommandees = droite - 110;
+  const largeurNom = colCommandees - 80 - marge;
+  const entete = () => {
+    d.rectangle(marge, y - 12, largeurUtile, 20, '#FBF5F2');
+    d.texte(marge + 8, y + 1, 'VIN', { corps: 8, gras: true, couleur: DISCRET });
+    d.texte(colCommandees, y + 1, 'COMMANDÉES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+    d.texte(colRecues, y + 1, 'REÇUES', { corps: 8, gras: true, couleur: DISCRET, aligne: 'droite' });
+    y += 22;
+  };
+  entete();
+  let total = 0;
+  for (const l of r.lignes) {
+    const titre = couper(l.libelle, largeurNom, 10.5, true);
+    const detail = l.detail ? couper(l.detail, largeurNom, 9) : [];
+    const hauteur = titre.length * 13 + detail.length * 12 + 10;
+    if (y + hauteur > d.hauteurPage - 90) { d.nouvellePage(); y = 64; entete(); }
+    titre.forEach((t, i) => d.texte(marge + 8, y + i * 13, t, { corps: 10.5, gras: true }));
+    detail.forEach((t, i) => d.texte(marge + 8, y + titre.length * 13 + i * 12, t, { corps: 9, couleur: DISCRET }));
+    d.texte(colCommandees, y, String(l.commandee), { corps: 10, aligne: 'droite' });
+    d.texte(colRecues, y, String(l.quantite), { corps: 11, gras: true, aligne: 'droite' });
+    y += hauteur;
+    d.trait(marge, y - 6, droite, y - 6, LIGNE);
+    total += l.quantite;
+    y += 6;
+  }
+  d.texte(colRecues, y + 6, `${total} bouteille${total > 1 ? 's' : ''} reçue${total > 1 ? 's' : ''}`, { corps: 11, gras: true, couleur: BORDEAUX, aligne: 'droite' });
+  y += 40;
+  if (y > d.hauteurPage - 110) { d.nouvellePage(); y = 64; }
+  const etat = r.complete ? 'Réception complète : toutes les bouteilles de la commande sont arrivées.'
+    : `Réception partielle : il reste ${r.reste} bouteille${r.reste > 1 ? 's' : ''} à recevoir.`;
+  for (const l of couper(etat, largeurUtile, 10.5)) { d.texte(marge, y, l, { corps: 10.5, gras: true }); y += 15; }
+  d.texte(marge, d.hauteurPage - 40, 'Bon de réception préparé avec Pat le sommelier', { corps: 8, couleur: DISCRET });
+  return d.octets();
+}

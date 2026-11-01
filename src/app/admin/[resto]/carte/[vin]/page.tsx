@@ -179,8 +179,9 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}{' '}
                   <button formAction={commanderChezDistributeur.bind(null, resto, v.id, offre.id)} className="btn sec petit">Commander chez {offre.distributeur}</button></div>
               )}
-              <span><Link href={`/admin/${resto}/commandes?${new URLSearchParams({ f: v.fournisseur_id ?? 'aucun', vin: v.id })}#nouvelle`} className="btn rouge petit">
-                Commander{fournisseur ? ` chez ${fournisseur.nom}` : ''}</Link></span>
+              {fournisseur ? <span><Link href={`/admin/${resto}/commandes?${new URLSearchParams({ f: fournisseur.id, vin: v.id })}#nouvelle`} className="btn rouge petit">
+                Commander chez {fournisseur.nom}</Link></span>
+                : <span className="petit discret">Choisissez son distributeur pour pouvoir le commander.</span>}
             </fieldset>
           ) : (
             <div className="champ carte-bo">

@@ -69,7 +69,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
         {quidVinum.map((f) => (
           <div key={f.id} className="carte-bo" style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'center' }}>
             <span>{/* eslint-disable-next-line @next/next/no-img-element */}
-              {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 10 }} />}
+              {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 12, height: 64, maxWidth: 180 }} />}
               <b style={{ fontSize: 17 }}>{f.nom}</b> <Etat type="ok">Activé</Etat> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''} de votre carte</span></span>
             <span className="ligne-actions">
               <BoutonSupprimer action={supprimerFournisseur.bind(null, resto, f.id)} libelle="Retirer" className="btn fantome petit"
@@ -85,7 +85,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
             {aAjouter.map((d) => (
               <FormulaireAdmin key={d.id} action={ajouterDistributeurQv.bind(null, resto, d.id)} className="ligne-distributeur">
                 <span>{/* eslint-disable-next-line @next/next/no-img-element */}
-                  {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 10 }} />}
+                  {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" style={{ verticalAlign: 'middle', marginRight: 12, height: 56, maxWidth: 160 }} />}
                   <b>{d.nom}</b> <span className="discret">· {d.vins} vin{d.vins > 1 ? 's' : ''}</span>{d.site && <> · <a href={/^https?:/.test(d.site) ? d.site : `https://${d.site}`} target="_blank" rel="noopener" className="petit">site</a></>}</span>
                 <button className="btn sec petit">+ Ajouter</button>
               </FormulaireAdmin>

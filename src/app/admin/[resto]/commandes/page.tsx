@@ -1,14 +1,14 @@
 // Gestion des stocks — Commandes de vin : les commandes ouvertes (bon de commande PDF, envoi au fournisseur, réception),
 // puis « + Nouvelle commande » : une fenêtre où l’on choisit le distributeur, puis les bouteilles (avec leur stock actuel).
 import Link from 'next/link';
-import { annulerCommande, creerCommande, creerCommandeQv, envoyerCommande, marquerEnvoyee, receptionnerCommande } from '../../stocks-actions';
+import { annulerCommande, creerCommande, creerCommandeQv, envoyerCommande, marquerEnvoyee, recevoirBouteilles } from '../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
 import { CatalogueCommande, type LigneCatalogue } from '@/components/admin/CatalogueCommande';
 import { ChoixCommande, Panneau } from '@/components/admin/ChoixCommande';
 import { Superposition } from '@/components/admin/Superposition';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { Entete, Etat, Vignette } from '@/components/admin/Ui';
+import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, stockBas, type Commande } from '@/lib/admin/stocks';
@@ -21,7 +21,7 @@ import { nomPourListe, regrouperVins } from '../carte/etats';
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
-export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string }> }) {
+export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = await searchParams;
@@ -51,7 +51,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const blocs = [
     ...fournisseurs.filter((f) => !f.distributeur_id).map((f) => ({ id: f.id, nom: f.nom, email: f.email, logo: f.logo_url, groupes: groupes.filter((g) => g.principal.fournisseur_id === f.id), catalogue: catalogues.get(f.id) }))
       .filter((b) => b.groupes.length || b.catalogue?.length),
-    { id: '', nom: 'Vins sans fournisseur', email: null, logo: null, catalogue: undefined, groupes: groupes.filter((g) => !g.principal.fournisseur_id || !fournisseurs.some((f) => f.id === g.principal.fournisseur_id)) },
+    // Pas de commande sans distributeur : un vin sans distributeur se commande une fois son distributeur choisi (page Vins).
   ].filter((b) => b.groupes.length || b.catalogue?.length);
   const cible = sp.f === 'aucun' ? '' : sp.f === 'qv' || qv.some((f) => f.id === sp.f) ? 'qv' : sp.f;
   const basQv = qv.reduce((n, f) => n + (catalogues.get(f.id) ?? []).filter((l) => l.surCarte?.bas).length, 0);
@@ -63,6 +63,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     const sujet = `Bon de commande ${ref} — ${nomResto}${c.via_qv ? ` — ${c.fournisseur_nom}` : ''}`;
     const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total(c)} bouteille${total(c) > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
     const envoyee = Boolean(c.envoyee_le);
+    const recues = c.lignes.reduce((n, l) => n + l.recue, 0);
     return (
       <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
@@ -70,34 +71,55 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}</span>
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
-          {/* Statut : à envoyer → commande envoyée → bouteilles réceptionnées (ou annulée). */}
+          {/* Statut : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
           {c.statut === 'ouverte'
-            ? (envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
+            ? (recues ? <Etat type="propose">Réception partielle : {recues} / {total(c)} bouteilles</Etat>
+              : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
         </div>
         <ul className="lignes-commande">
-          {c.lignes.map((l, i) => <li key={i}><b>{l.quantite}</b><span>{l.libelle}{l.detail && <small> · {l.detail}</small>}</span>{l.prix_achat != null && <span className="prix-ligne">{euros(l.prix_achat)} <small>× {l.quantite} =</small> <b>{euros(l.prix_achat * l.quantite)}</b></span>}</li>)}
+          {c.lignes.map((l, i) => <li key={i}><b className="qte-commande">{l.quantite}</b><span><span className="vin-commande">{l.libelle}</span>{c.statut === 'ouverte' && l.recue > 0 && <small className="recue"> · {l.recue >= l.quantite ? 'reçu' : `${l.recue} reçue${l.recue > 1 ? 's' : ''}`}</small>}{l.detail && <small className="detail-commande">{l.detail}</small>}</span>{l.prix_achat != null && <span className="prix-ligne">{euros(l.prix_achat)} <small>× {l.quantite} =</small> <b>{euros(l.prix_achat * l.quantite)}</b></span>}</li>)}
         </ul>
         <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}{c.lignes.some((l) => l.prix_achat != null) && <> · <b style={{ color: 'var(--encre)' }}>Total {euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA</b></>}</span>
-        {c.statut === 'ouverte' && (
-          <div className="ligne-actions" style={{ alignItems: 'flex-start' }}>
-            {c.fournisseur_email && (
-              <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
-                serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} />
-            )}
-            <FormulaireAdmin action={receptionnerCommande.bind(null, resto, c.id)}>
-              <button className={envoyee ? 'btn' : 'btn sec'} title="Les bouteilles de cette commande sont ajoutées au stock">Bouteilles réceptionnées</button>
-            </FormulaireAdmin>
-            <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec">Voir le PDF</a>
+        {/* Toutes les actions sur une ligne. */}
+        <div className="actions-commande">
+          {c.statut === 'ouverte' && !envoyee && (c.fournisseur_email
+            ? <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
+                serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} petit />
+            : <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn rouge petit">Envoyer la commande</Link>)}
+          {c.statut === 'ouverte' && (
+            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton={envoyee ? 'btn petit' : 'btn sec petit'}>
+              <FormulaireAdmin action={recevoirBouteilles.bind(null, resto, c.id)} className="pile" style={{ gap: 12 }}>
+                <p className="petit discret" style={{ margin: 0 }}>Indiquez les bouteilles arrivées : elles passent en stock et un bon de réception est créé. Ce qui manque reste « en commande » pour une prochaine livraison.</p>
+                <div className="tableau"><table style={{ minWidth: 520 }}>
+                  <thead><tr><th>Vin</th><th className="droite">Commandées</th><th className="droite">Déjà reçues</th><th className="droite">Reçues aujourd’hui</th></tr></thead>
+                  <tbody>{c.lignes.map((l) => (
+                    <tr key={l.ordre}><td><b>{l.libelle}</b>{l.detail && <div className="petit discret">{l.detail}</div>}</td>
+                      <td className="droite">{l.quantite}</td><td className="droite">{l.recue || '—'}</td>
+                      <td className="droite">{l.recue >= l.quantite ? <span className="discret">reçu</span>
+                        : <input type="number" name={`recue_${l.ordre}`} min={0} max={l.quantite - l.recue} defaultValue={l.quantite - l.recue} className="champ-commande" aria-label={`Bouteilles reçues : ${l.libelle}`} />}</td></tr>
+                  ))}</tbody>
+                </table></div>
+                <span><button className="btn">Enregistrer la réception</button></span>
+              </FormulaireAdmin>
+            </Superposition>
+          )}
+          <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec petit">Bon de commande (PDF)</a>
+          {c.receptions.map((r) => (
+            <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
+              Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
+          ))}
+          {c.statut === 'ouverte' && (
             <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
-              question={`Annuler la commande à ${c.fournisseur_nom} ? Ses bouteilles ne seront plus comptées « en commande ».`} />
-          </div>
-        )}
-        {c.statut === 'ouverte' && c.via_qv && <span className="petit discret">Commande via Quid Vinum{c.fournisseur_email ? ` : le bon part à ${c.fournisseur_email}` : ' : l’adresse des commandes de Quid Vinum n’est pas encore renseignée, contactez Quid Vinum.'}</span>}
-        {c.statut === 'ouverte' && !c.via_qv && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon de commande, ajoutez l’adresse e-mail du fournisseur dans <Link href={`/admin/${resto}/fournisseurs`}>Fournisseurs</Link>.</span>}
+              question={`Annuler la commande à ${c.fournisseur_nom} ? Les bouteilles pas encore reçues ne seront plus comptées « en commande ».`} />
+          )}
+        </div>
+        {c.statut === 'ouverte' && !envoyee && c.via_qv && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.</span>}
+        {c.statut === 'ouverte' && !envoyee && !c.via_qv && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>Pour envoyer le bon de commande, ajoutez l’adresse e-mail du distributeur dans <Link href={`/admin/${resto}/fournisseurs`}>Distributeurs</Link>.</span>}
       </article>
     );
   };
+
 
   // Nouvelle commande (fenêtre) : choisir le distributeur, puis indiquer les bouteilles.
   const options = [...(qv.length ? [{ id: 'qv', libelle: `Quid Vinum (${qv.map((f) => f.nom).join(', ')})${basQv ? ` · ${basQv} en stock bas` : ''}` }] : []),
@@ -130,7 +152,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                   })}
                 </div>
               </details>
-              <span><button className="btn rouge">Valider la commande Quid Vinum</button></span>
+              <div className="barre-valider"><button className="btn rouge">Valider la commande Quid Vinum</button></div>
             </FormulaireAdmin>
           </Panneau>
         )}
@@ -165,7 +187,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                     </tbody>
                   </table>
                 </div>}
-                <span><button className="btn rouge" disabled={!b.id && !fournisseurs.length}>Valider la commande{b.id ? ` à ${b.nom}` : ''}</button></span>
+                <div className="barre-valider"><button className="btn rouge" disabled={!b.id && !fournisseurs.length}>Valider la commande{b.id ? ` à ${b.nom}` : ''}</button></div>
               </FormulaireAdmin>
             </Panneau>
           );
@@ -180,18 +202,19 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           {nouvelle}
         </Superposition>
       </Entete>
+      <Message ok={sp.ok} />
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">
         <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>
-        {ouvertes.length ? <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))' }}>{ouvertes.map(carte)}</div>
+        {ouvertes.length ? <div className="pile" style={{ gap: 12 }}>{ouvertes.map(carte)}</div>
           : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
       </section>
 
       {recues.length > 0 && (
         <details className="pile">
           <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ou annulées ({recues.length})</summary>
-          <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(420px, 100%), 1fr))', marginTop: 12 }}>{recues.map(carte)}</div>
+          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{recues.map(carte)}</div>
         </details>
       )}
     </>

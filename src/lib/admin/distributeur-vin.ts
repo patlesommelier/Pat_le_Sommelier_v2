@@ -5,6 +5,7 @@ import { randomUUID } from 'node:crypto';
 import { requete } from '@/lib/db';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { margeDefaut } from '@/lib/distributeurs/donnees';
+import { centilitres } from '@/lib/contenances';
 import { offreDuCatalogue, type VinCatalogueComplet, type VinCarteComplet } from '@/lib/distributeurs/tarif';
 
 export async function rattacherAuDistributeur(resto: string, vinIds: string[], offreId: string) {
@@ -67,4 +68,37 @@ export async function associerAuCatalogue(resto: string, vinIds: string[], fourn
                                       from cuvee c where c.id = $3 and v.restaurant_id = $1 and v.id = any($2) and v.cuvee_id is null
                                         and (v.producteur_id is null or v.producteur_id = c.producteur_id)`, [resto, vinIds, offre.cuvee_id]);
   return true;
+}
+
+/** Mots d'un vin blanc : la couleur, ou un cépage blanc (« Riesling », « Chardonnay »…). */
+export const BLANCS = 'blanc|blanche|bianco|blanco|weiss|weisser|riesling|chardonnay|sauvignon|chenin|viognier|gewurztraminer|pinot gris|pinot blanc|sylvaner|muscat|gruner|veltliner|albarino|vermentino|grillo|catarratto|carricante|fiano|greco|falanghina|verdicchio|garganega|soave|chablis|sancerre|semillon|marsanne|roussanne|aligote|melon|muscadet|savagnin|jacquere|altesse|petite arvine|furmint|assyrtiko|godello|verdejo|txakoli|arneis|timorasso|friulano|ribolla';
+const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];
+const CONTENANCE_CODE: Record<number, string> = { 75: 'bouteille', 37.5: 'demi', 18.7: 'quart', 150: 'magnum' };
+
+/**
+ * Vin du catalogue d'un distributeur commandé alors qu'il n'est pas dans les vins du restaurant : il y est ajouté
+ * (stock 0, les bouteilles « en commande »), pas encore affiché sur la carte. Renvoie son identifiant.
+ */
+export async function ajouterVinCommande(resto: string, distributeurVinId: string, fournisseurId: string | null, prixAchat: number | null, enCommande: number) {
+  const [d] = await requete<{ libelle: string; couleur: string | null; section: string | null; millesime: string | null; contenance: string | null;
+    producteur_id: string | null; producteur: string | null; cuvee_id: string | null; couleur_cuvee: string | null }>(
+    `select v.libelle, v.couleur, v.section, v.millesime, v.contenance, v.producteur_id, coalesce(p.nom, v.producteur_texte) as producteur, v.cuvee_id, c.couleur::text as couleur_cuvee
+       from distributeur_vin v left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id where v.id = $1`, [distributeurVinId]);
+  if (!d) return null;
+  const mots = d.libelle.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  const devinee = /\b(champagne|cremant|prosecco|cava|brut|petillant|spumante|franciacorta|trento)\b/.test(mots) ? 'bulles'
+    : /\b(rose|rosato|rosado)\b/.test(mots) ? 'rose' : new RegExp(`\\b(${BLANCS})\\b`).test(mots) ? 'blanc' : /\b(rouge|rosso|tinto|rot)\b/.test(mots) ? 'rouge' : null;
+  const couleur = [d.couleur, d.couleur_cuvee, devinee].find((c) => c && COULEURS_VIN.includes(c)) ?? 'rouge';
+  const cl = centilitres(d.contenance) ?? 75;
+  const format = d.contenance && centilitres(d.contenance) ? d.contenance : '75 cl';
+  let id = `${resto}-qv-${distributeurVinId.replace(/[^a-z0-9]+/gi, '').slice(0, 10).toLowerCase()}`;
+  for (let n = 2; (await requete('select 1 from vin_carte where id = $1', [id])).length; n++) id = `${id.replace(/-\d+$/, '')}-${n}`;
+  await requete(
+    `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_texte, producteur_id, cuvee_id, millesime, format, contenances,
+                            ordre, disponible, stock, en_commande, fournisseur_id, distributeur_vin_id, prix_achat, modifie_bo)
+     values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, (select coalesce(max(ordre), 0) + 1 from vin_carte where restaurant_id = $2),
+             false, 0, $12, $13, $14, $15, now())`,
+    [id, resto, couleur, d.section, d.libelle, d.producteur, d.producteur_id, d.cuvee_id, d.millesime, format, [CONTENANCE_CODE[cl] ?? 'bouteille'],
+      enCommande, fournisseurId, distributeurVinId, prixAchat]);
+  return id;
 }
