@@ -4,6 +4,7 @@ import 'server-only';
 // Aussi les vins des catalogues des distributeurs de Quid Vinum (actifs) : le vin trouvé porte alors ses offres, au prix
 // du restaurant (prix QV + sa marge, sinon la marge par défaut). Jamais le prix QV, la marge ni le classement.
 import { requete } from '@/lib/db';
+import { memeVinQue } from './doublons-recherche';
 
 export type VinTrouve = {
   cle: string; libelle: string; couleur: string | null; section: string | null; appellation: string | null;
@@ -83,11 +84,19 @@ export async function chercherVinsBase(texte: string, resto?: string): Promise<V
   if (notes.some((n) => n.part === 1)) notes.splice(0, notes.length, ...notes.filter((n) => n.part === 1));
   notes.sort((a, b) => b.part - a.part || b.bonneCouleur - a.bonneCouleur || b.remplis - a.remplis || a.surplus - b.surplus);
 
+  // Vins de cartes non reliés qui sont un vin de la base (ou d'un distributeur) déjà trouvé : pas proposés deux fois ;
+  // leur photo sert au vin de la base qui n'en a pas.
+  const references = notes.filter((n) => n.l.source !== 'carte').map((n) => n.l);
+  const doublons = new Set(notes.filter((n) => n.l.source === 'carte').map((n) => n.l).filter((c) => {
+    const base = references.find((r) => memeVinQue(c, r));
+    if (base && !base.etiquette && c.etiquette) base.etiquette = c.etiquette;
+    return Boolean(base);
+  }));
   const vus = new Set<string>();
   const sortie: VinTrouve[] = [];
   for (const { l, part } of notes) {
     const cle = `${norm(l.libelle)}|${l.couleur ?? ''}|${norm(l.producteur ?? '')}`;
-    if (vus.has(cle)) continue;
+    if (vus.has(cle) || doublons.has(l)) continue;
     vus.add(cle);
     sortie.push({ cle: `${l.source}:${l.id}`, libelle: l.libelle, couleur: l.couleur, section: l.section, appellation: l.appellation,
       nom_vin: l.nom_vin, cepages: l.cepages, producteur: l.producteur ?? null, etiquette: l.etiquette ?? null, complet: part === 1 });
