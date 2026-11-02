@@ -372,3 +372,4 @@ dialog.superposition { overflow-y: auto; }
 .carte-resto-corps .lien-carte::after { content: ''; position: absolute; inset: 0; }
 .carte-resto-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 8px; position: relative; z-index: 1; }
 .carte-resto-actions form { display: inline-flex; margin: 0; }
+.rond-vert { display: inline-block; width: 11px; height: 11px; border-radius: 50%; background: #2E9E5B; box-shadow: 0 0 0 3px rgba(46, 158, 91, .18); flex-shrink: 0; }

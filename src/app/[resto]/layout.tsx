@@ -24,6 +24,8 @@ export default async function LayoutRestaurant({ children, params }: { children:
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
     '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
+    // Boutons pleins (« Trouver mon vin »…) : sur une couleur claire, ils passent en foncé pour rester bien visibles sur fond blanc.
+    '--bouton': clair ? '#1A1A1A' : restaurant.couleur, '--sur-bouton': '#FFFFFF',
   } as CSSProperties;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
   if (!(await appOuverte(restaurant.id))) {

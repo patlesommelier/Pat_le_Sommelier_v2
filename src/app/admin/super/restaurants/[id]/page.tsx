@@ -20,7 +20,7 @@ const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
 };
 
-export default async function ConfigurationRestaurant({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
+export default async function ConfigurationRestaurant({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   await exigerAdmin();
   const [{ id }, sp] = await Promise.all([params, searchParams]);
   const [r] = await requete<{ id: string; nom: string; ville: string | null; statut: string; distributeur_qv_unique: string | null }>(
@@ -51,12 +51,15 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
         <form action={voirCommeRestaurant.bind(null, id)}><button className="btn sec petit">Vue restaurant</button></form>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {/* Restaurant tout juste créé, invitation non envoyée par e-mail : le lien à transmettre au responsable. */}
+      {sp.lien && <div className="carte-bo" style={{ padding: '14px 20px' }}><CopierLien url={sp.lien} titre="Lien pour choisir son mot de passe" /></div>}
 
       <section className="carte-bo pile">
         <h2 style={{ margin: 0 }}>Statut et mise en place</h2>
         <form action={changerStatutRestaurant.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
           <input type="hidden" name="retour" value={`/admin/super/restaurants/${id}`} />
-          <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
+          {r.statut === 'en_service' ? <span className="rond-vert" role="img" aria-label="En service" title="En service" />
+            : <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>}
           <select name="statut" defaultValue={r.statut} aria-label={`Statut de ${r.nom}`} style={{ minHeight: 36, borderRadius: 8, border: '1.5px solid var(--ligne)' }}>
             {Object.entries(STATUTS).map(([k, [l]]) => <option key={k} value={k}>{l}</option>)}
           </select>

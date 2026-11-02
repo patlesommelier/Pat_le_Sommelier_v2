@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { changerModeTest, creerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
+import { changerModeTest, testerEmail, voirCommeRestaurant } from './actions';
 import { modeTestDistributeurs } from '@/lib/admin/stocks';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
@@ -19,7 +19,9 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
 
   return (
     <>
-      <Entete titre="Restaurants" texte="Tous les restaurants de Pat, leur mise en place et ce qui attend votre validation." />
+      <Entete titre="Restaurants" texte="Tous les restaurants : cliquez sur une carte pour ouvrir ses réglages.">
+        <Link href="/admin/super/restaurants/nouveau" className="btn rouge">+ Ajouter un restaurant</Link>
+      </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
       {sp.lien && <div className="carte-bo" style={{ padding: '14px 20px' }}><CopierLien url={sp.lien} titre="Lien pour choisir son mot de passe" /></div>}
       {(() => {
@@ -76,12 +78,18 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                 {logo ? <img src={logo} alt="" /> : <span className="initiale">{r.nom.slice(0, 1)}</span>}
               </div>
               <div className="carte-resto-corps">
-                <Link href={`/admin/super/restaurants/${r.id}`} className="lien-carte"><b>{r.nom}</b></Link>
-                <span className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/')].filter(Boolean).join(' · ') || ' '}</span>
-                <span style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
-                  <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
-                  {r.origine === 'inscription' && <Etat type="propose">Inscription</Etat>}
+                <span style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                  <Link href={`/admin/super/restaurants/${r.id}`} className="lien-carte"><b>{r.nom}</b></Link>
+                  {/* En service : un simple rond vert ; les autres statuts restent écrits. */}
+                  {r.statut === 'en_service' && <span className="rond-vert" role="img" aria-label="En service" title="En service" />}
                 </span>
+                <span className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/')].filter(Boolean).join(' · ') || ' '}</span>
+                {(r.statut !== 'en_service' || r.origine === 'inscription') && (
+                  <span style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+                    {r.statut !== 'en_service' && <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>}
+                    {r.origine === 'inscription' && <Etat type="propose">Inscription</Etat>}
+                  </span>
+                )}
                 <div className="carte-resto-actions">
                   <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
                   <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
@@ -92,23 +100,6 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
         })}
       </div>
 
-      <form action={creerRestaurant} className="carte-bo pile" style={{ maxWidth: 640 }}>
-        <h2>Créer un restaurant</h2>
-        <div className="champ"><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required /></div>
-        <div className="champ"><label htmlFor="email">E-mail du responsable</label><input id="email" name="email" type="email" required />
-          <span className="aide">Il reçoit une invitation pour choisir son mot de passe et accéder à l’espace de son restaurant.</span></div>
-        <div className="champ"><label htmlFor="ville">Ville</label><input id="ville" name="ville" /></div>
-        <fieldset className="champ" style={{ border: 0, padding: 0, margin: 0 }}>
-          <legend style={{ fontWeight: 700, marginBottom: 6 }}>Langues</legend>
-          <div style={{ display: 'flex', gap: 16 }}>
-            {[['fr', 'Français'], ['nl', 'Nederlands'], ['en', 'English']].map(([k, l]) => (
-              <label key={k} className="case"><input type="checkbox" name={`langue_${k}`} defaultChecked={k === 'fr'} /><span>{l}</span></label>))}
-          </div>
-        </fieldset>
-        <div className="champ"><label htmlFor="couleur">Couleur</label><input id="couleur" name="couleur" type="color" defaultValue="#680021" style={{ width: 80, height: 40 }} /></div>
-        <p className="discret" style={{ margin: 0 }}>Règles de départ : celles de Pat en service ({ind.regles ?? 'V7'}) ; le restaurant pourra les ajuster.</p>
-        <span><button className="btn">Créer et inviter</button></span>
-      </form>
     </>
   );
 }

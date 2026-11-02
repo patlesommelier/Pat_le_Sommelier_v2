@@ -73,7 +73,8 @@ function couleurClaire(hex: string) {
 
 export async function creerRestaurant(f: FormData) {
   const u = await exigerAdmin();
-  const retour = (m: Record<string, string>) => redirect(avec('/admin/super', m));
+  // Erreur : retour au formulaire « Ajouter un restaurant » ; créé : sa page de réglages.
+  const retour = (m: Record<string, string>) => redirect(avec('/admin/super/restaurants/nouveau', m));
   const nom = txt(f, 'nom');
   const email = (txt(f, 'email') ?? '').toLowerCase();
   const couleur = /^#[0-9a-f]{6}$/i.test(txt(f, 'couleur') ?? '') ? txt(f, 'couleur')! : '#680021';
@@ -102,7 +103,7 @@ export async function creerRestaurant(f: FormData) {
     else { lien = r.lien; message += ` Transmettez à ${email} ce lien (valable 7 jours) pour choisir son mot de passe.`; }
   }
   revalidatePath('/admin', 'layout');
-  retour(lien ? { ok: message, lien } : { ok: message });
+  redirect(avec(`/admin/super/restaurants/${id}`, lien ? { ok: message, lien } : { ok: message }));
 }
 
 /**
