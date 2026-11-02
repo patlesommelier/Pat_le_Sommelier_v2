@@ -74,11 +74,11 @@ export default async function Producteurs({ searchParams }: { searchParams: Prom
                   <td>{p.restaurants ?? '—'}</td>
                   <td className="droite">
                     {p.statut === 'propose' ? (
-                      // Validation directe : ranking proposé = suggestion de Pat ; les rankings propres aux cuvées sont gardés.
+                      // Validation directe : ranking proposé = suggestion de Pat, sinon 3 ; les rankings propres aux cuvées sont gardés.
                       <form action={validerDepuisListe.bind(null, p.id)} style={{ display: 'inline-flex', gap: 8, alignItems: 'center', justifyContent: 'flex-end' }}>
                         <input type="hidden" name="retour" value={retour} />
-                        <input className="rk" name="ranking" type="number" min={0} max={5} step={1} required defaultValue={p.ranking_suggere ?? ''}
-                          aria-label={`Ranking de ${p.nom}`} title={p.ranking_suggere !== null ? 'Suggestion de Pat' : 'Pas de suggestion : saisissez un ranking'} />
+                        <input className="rk" name="ranking" type="number" min={0} max={5} step={1} required defaultValue={p.ranking_suggere ?? 3}
+                          aria-label={`Ranking de ${p.nom}`} title={p.ranking_suggere !== null ? 'Suggestion de Pat' : 'Pas de suggestion : 3 par défaut'} />
                         <button className="btn petit">Valider</button>
                       </form>
                     ) : (

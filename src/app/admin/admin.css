@@ -361,7 +361,7 @@ dialog.superposition { overflow-y: auto; }
 .btn.bouton-plus { min-width: 40px; min-height: 36px; font-size: 20px; font-weight: 700; line-height: 1; padding: 0 12px; }
 
 /* Super-admin : une carte par restaurant (logo sur sa couleur) ; toute la carte ouvre ses réglages. */
-.grille-restos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 16px; }
+.grille-restos { margin-top: 28px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 16px; }
 .carte-resto { position: relative; padding: 0; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .15s, transform .15s; }
 .carte-resto:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, .12); transform: translateY(-1px); }
 .carte-resto-tete { height: 110px; display: flex; align-items: center; justify-content: center; padding: 14px; }
