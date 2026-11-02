@@ -256,20 +256,20 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   const col = <K extends keyof (typeof uniques)[number]>(k: K) => uniques.map((l) => l[k]);
   await requete(
     `insert into distributeur_vin (id, distributeur_id, cle, section, producteur_texte, libelle, millesime, contenance, couleur, certification,
-                                   prix_qv, epuise, maximum, producteur_id, ordre, producteur_manuel, reference, prix_catalogue)
+                                   prix_qv, epuise, maximum, producteur_id, ordre, producteur_manuel, reference, prix_catalogue, appellation)
      select x.id, $1, x.cle, x.section, x.producteur, x.libelle, x.millesime, x.contenance, x.couleur, x.certification, x.prix, x.epuise, x.maximum, x.producteur_id, x.ordre, x.manuel,
-            x.reference, x.prix_catalogue
+            x.reference, x.prix_catalogue, x.appellation
        from unnest($2::text[], $3::text[], $4::text[], $5::text[], $6::text[], $7::text[], $8::text[], $9::text[], $10::text[], $11::numeric[], $12::bool[], $13::int[], $14::text[], $15::int[], $16::bool[],
-                   $17::text[], $18::numeric[])
-            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre, manuel, reference, prix_catalogue)
+                   $17::text[], $18::numeric[], $19::text[])
+            as x(id, cle, section, producteur, libelle, millesime, contenance, couleur, certification, prix, epuise, maximum, producteur_id, ordre, manuel, reference, prix_catalogue, appellation)
      on conflict (distributeur_id, cle) do update set section = excluded.section, producteur_texte = excluded.producteur_texte, libelle = excluded.libelle,
        millesime = excluded.millesime, contenance = excluded.contenance, couleur = coalesce(excluded.couleur, distributeur_vin.couleur),
-       certification = excluded.certification, prix_qv = excluded.prix_qv, reference = excluded.reference, prix_catalogue = excluded.prix_catalogue, epuise = excluded.epuise, maximum = excluded.maximum, ordre = excluded.ordre,
+       certification = excluded.certification, prix_qv = excluded.prix_qv, reference = excluded.reference, prix_catalogue = excluded.prix_catalogue, appellation = coalesce(excluded.appellation, distributeur_vin.appellation), epuise = excluded.epuise, maximum = excluded.maximum, ordre = excluded.ordre,
        producteur_id = case when distributeur_vin.producteur_manuel then distributeur_vin.producteur_id else excluded.producteur_id end,
        actif = true, maj_le = now()`,
     [distributeurId, uniques.map(() => randomUUID()), col('cle'), col('section'), col('producteur'), col('libelle'), col('millesime'), col('contenance'),
       col('couleur'), col('certification'), col('prix'), col('epuise'), col('maximum'), col('producteur_id'), col('ordre'), col('manuel'),
-      uniques.map((l) => l.reference ?? null), uniques.map((l) => l.prixCatalogue ?? null)]);
+      uniques.map((l) => l.reference ?? null), uniques.map((l) => l.prixCatalogue ?? null), uniques.map((l) => l.appellation ?? null)]);
   // Lecture incomplète (un extrait illisible) : aucun vin n'est retiré, faute de savoir s'il manquait vraiment.
   const retires = retirer ? await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,

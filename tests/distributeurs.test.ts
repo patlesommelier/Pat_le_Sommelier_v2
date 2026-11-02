@@ -9,7 +9,7 @@ test('tarifs : vin lu par Claude remis en forme', () => {
   assert.deepEqual(vinTarif({ producteur: 'Domaine Clotilde Davenne', vin: 'Chablis', millesime: '2023', contenance: '37,5cl', prix: '11.28',
     couleur: 'Blanc', certification: 'rai', epuise: false, max: 5, section: 'Bourgogne' }),
   { section: 'Bourgogne', producteur: 'Domaine Clotilde Davenne', libelle: 'Chablis', millesime: '2023', contenance: '37,5 cl', couleur: 'blanc',
-    certification: 'RAI', prix: 11.28, epuise: false, maximum: 5, reference: null, prixCatalogue: null });
+    certification: 'RAI', prix: 11.28, epuise: false, maximum: 5, reference: null, prixCatalogue: null, appellation: null });
   assert.equal(vinTarif({ vin: '' }), null);
   assert.equal(vinTarif({ vin: 'Champagne Rosé', millesime: 'NV', couleur: 'rosé' })!.millesime, null);
   assert.equal(vinTarif({ vin: 'Champagne Rosé', couleur: 'rosé' })!.couleur, 'rose');

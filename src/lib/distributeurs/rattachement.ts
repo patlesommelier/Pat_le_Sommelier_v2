@@ -5,6 +5,7 @@
 import type { Requete } from '../generation/accords';
 import { motsDe } from './tarif';
 import { partagerEtiquettesDistributeur } from './etiquettes';
+import { creerAppellationProposeeAvec } from '../appellations/creation';
 
 export interface ProducteurBase { id: string; nom: string; region: string | null; ranking_pat: number | null; statut: string }
 export interface Suggestion extends ProducteurBase { score: number }
@@ -106,18 +107,48 @@ export async function relierProducteur(requete: Requete, distributeurId: string,
   if (producteurId) await ajouterCuveesManquantes(requete, distributeurId);
 }
 
+/** Nom du vin sans l'appellation placée devant (« Médoc Chateau X » → « Chateau X ») ; inchangé si le reste serait vide. */
+export function nomSansAppellation(libelle: string, appellation: string | null) {
+  if (!appellation) return libelle;
+  const n = (t: string) => t.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, ' ').trim();
+  const mots = libelle.trim().split(/\s+/), cible = n(appellation);
+  for (let i = 1; i < mots.length; i++) if (n(mots.slice(0, i).join(' ')) === cible) return mots.slice(i).join(' ');
+  return libelle;
+}
+
 /** Vins des producteurs rattachés, sans cuvée dans la base : ajoutés comme cuvées « proposées » (à valider dans Vins de la base). */
 export async function ajouterCuveesManquantes(requete: Requete, distributeurId: string) {
-  const vins = await requete<{ id: string; producteur_id: string; libelle: string; couleur: string | null }>(
-    `select id, producteur_id, libelle, couleur from distributeur_vin
+  const vins = await requete<{ id: string; producteur_id: string; libelle: string; couleur: string | null; appellation: string | null }>(
+    `select id, producteur_id, libelle, couleur, appellation from distributeur_vin
       where distributeur_id = $1 and actif and producteur_id is not null and cuvee_id is null`, [distributeurId]);
   const COULEURS = ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux'];
   for (const v of vins) {
-    const id = `distributeur-${v.producteur_id}-${slug(v.libelle)}`.slice(0, 120);
+    // Appellation donnée à part par le tarif : retirée du début du nom (« Médoc Chateau LA TOUR DE BY » → « Chateau LA TOUR DE BY »).
+    const nom = nomSansAppellation(v.libelle, v.appellation);
+    const id = `distributeur-${v.producteur_id}-${slug(nom)}`.slice(0, 120);
     await requete(`insert into cuvee (id, producteur_id, nom, couleur, statut, source) values ($1, $2, $3, $4::couleur_vin, 'propose', 'distributeur') on conflict (id) do nothing`,
-      [id, v.producteur_id, v.libelle, v.couleur && COULEURS.includes(v.couleur) ? v.couleur : null]);
+      [id, v.producteur_id, nom, v.couleur && COULEURS.includes(v.couleur) ? v.couleur : null]);
     await requete('update distributeur_vin set cuvee_id = $2 where id = $1', [v.id, id]);
   }
   await partagerEtiquettesDistributeur(requete, distributeurId);
+  await appliquerAppellations(requete, distributeurId);
+  return vins.length;
+}
+
+/**
+ * Appellation donnée par le tarif (colonne « Appellation ») → vin de la base qui n'en a pas : reliée à l'appellation de la base
+ * de même nom, sinon créée « à valider » (Super-admin → Appellations). Une appellation déjà renseignée n'est jamais remplacée.
+ */
+export async function appliquerAppellations(requete: Requete, distributeurId: string) {
+  const vins = await requete<{ cuvee_id: string; appellation: string; region: string | null }>(
+    `select distinct on (v.cuvee_id) v.cuvee_id, v.appellation, v.section as region
+       from distributeur_vin v join cuvee c on c.id = v.cuvee_id
+      where v.distributeur_id = $1 and v.actif and v.appellation is not null and c.appellation_id is null and nullif(c.appellation_texte, '') is null`, [distributeurId]);
+  const ids = new Map<string, string>();
+  for (const v of vins) {
+    if (!ids.has(v.appellation)) ids.set(v.appellation, await creerAppellationProposeeAvec(requete, v.appellation, 'distributeur', null));
+    await requete(`update cuvee set appellation_id = $2, appellation_texte = $3 where id = $1 and appellation_id is null and nullif(appellation_texte, '') is null`,
+      [v.cuvee_id, ids.get(v.appellation), v.appellation]);
+  }
   return vins.length;
 }

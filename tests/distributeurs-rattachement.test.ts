@@ -37,3 +37,12 @@ test('rattachement : vin du tarif retrouvé parmi les cuvées du producteur', ()
   assert.equal(cuveeDuVin({ libelle: 'Chablis', producteur_texte: 'Clotilde Davenne' }, cuvees.slice(0, 2), 'Domaine Clotilde Davenne')?.id, 'c1');
   assert.equal(cuveeDuVin({ libelle: 'Saint-Bris', producteur_texte: 'Clotilde Davenne' }, cuvees, 'Domaine Clotilde Davenne'), null);
 });
+
+test('nom du vin sans l’appellation placée devant', async () => {
+  const { nomSansAppellation } = await import('../src/lib/distributeurs/rattachement');
+  assert.equal(nomSansAppellation('Médoc Chateau LA TOUR DE BY', 'Médoc'), 'Chateau LA TOUR DE BY');
+  assert.equal(nomSansAppellation("Crémant d'Alsace DOPFF CREMANT Brut", "Crémant d'Alsace"), 'DOPFF CREMANT Brut');
+  assert.equal(nomSansAppellation('CHABLIS 1er Cru Fourchaume', 'Chablis'), '1er Cru Fourchaume');
+  assert.equal(nomSansAppellation('Chablis', 'Chablis'), 'Chablis'); // rien d'autre : inchangé
+  assert.equal(nomSansAppellation('NOBLE 100', "IGP Pays d'Oc"), 'NOBLE 100');
+});

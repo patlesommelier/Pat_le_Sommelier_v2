@@ -154,7 +154,7 @@ export function vinsDuTableau(t: Tableau): VinTarif[] | null {
     const v = vinTarif({
       producteur: val(l, 'producteur') || null, vin: nom, millesime, contenance, prix: val(l, 'prix'), couleur: normaliser(val(l, 'couleur')) || null,
       epuise: /epuis|rupture|out of stock|indispo|^0$/.test(dispo), max: val(l, 'max') || null, section: val(l, 'section') || null,
-      certification: val(l, 'certification') || null, prix_catalogue: val(l, 'prix_catalogue') || null, reference: val(l, 'reference') || null,
+      certification: val(l, 'certification') || null, prix_catalogue: val(l, 'prix_catalogue') || null, reference: val(l, 'reference') || null, appellation: appellation || null,
     });
     if (v && v.prix != null) vins.push(v);
   }

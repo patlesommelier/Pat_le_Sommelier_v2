@@ -8,6 +8,8 @@ export interface VinTarif {
   couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
   /** Code article du distributeur (« SPFER200 ») et prix avant remise, quand le tarif les donne. */
   reference?: string | null; prixCatalogue?: number | null;
+  /** Appellation donnée par le tarif (colonne « Appellation ») : elle passe au vin de la base. */
+  appellation?: string | null;
 }
 
 const COULEURS = new Set(['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux']);
@@ -45,6 +47,7 @@ export function vinTarif(brut: unknown): VinTarif | null {
     certification: texte(b.certification, 20)?.toUpperCase() ?? null, prix: nombre(b.prix),
     epuise: b.epuise === true || /epuis|épuis/i.test(String(b.dispo ?? '')), maximum: max && Number.isInteger(max) ? max : null,
     reference: texte(b.reference, 40)?.replace(/\s+/g, '') ?? null, prixCatalogue: nombre(b.prix_catalogue ?? b.prixCatalogue),
+    appellation: texte(b.appellation, 120),
   };
 }
 
@@ -83,6 +86,7 @@ export function dedoublonner(vins: VinTarif[]): VinTarif[] {
       section: (plusComplet ? v : deja).section ?? deja.section ?? v.section,
       couleur: deja.couleur ?? v.couleur, certification: deja.certification ?? v.certification,
       epuise: deja.epuise || v.epuise, maximum: deja.maximum ?? v.maximum, reference: deja.reference ?? v.reference, prixCatalogue: deja.prixCatalogue ?? v.prixCatalogue,
+      appellation: deja.appellation ?? v.appellation,
     });
   }
   return [...garde.values()];
