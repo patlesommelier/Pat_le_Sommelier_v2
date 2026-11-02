@@ -84,8 +84,8 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
   rafraichir(resto);
   const n = r.length;
   if (absents.length) return { erreur: `Enregistré, mais ${absents.map((a) => `« ${a.libelle} »`).join(', ')} ${absents.length > 1 ? 'ne sont' : 'n’est'} pas dans le catalogue de ${absents[0].distributeur} : vérifiez le nom, le millésime ou la contenance.` };
-  if (illisibles.length) return { erreur: `Stocks enregistrés, sauf ${illisibles.length} prix illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
-  return { ok: `Stocks enregistrés (${n} vin${n > 1 ? 's' : ''}).` };
+  if (illisibles.length) return { erreur: `Enregistré, sauf ${illisibles.length} prix illisible${illisibles.length > 1 ? 's' : ''} : écrivez par exemple 12,50.` };
+  return { ok: n ? 'Enregistré.' : 'Rien à enregistrer.' };
 }
 
 // ───────── Fournisseurs ─────────
@@ -516,6 +516,7 @@ export async function commanderPanier(resto: string): Promise<Retour> {
     await retirer(ls.map((l) => l.vin_id));
   }
   rafraichir(resto);
+  // Plusieurs commandes : on arrive sur le premier bon ; une fois envoyé, on passe au suivant (« suite »).
   redirect(creees.length === 1 ? `/admin/${resto}/commandes/${creees[0]}`
-    : `/admin/${resto}/commandes?${new URLSearchParams({ ok: `${creees.length} commandes créées : envoyez chaque bon de commande.` })}`);
+    : `/admin/${resto}/commandes/${creees[0]}?${new URLSearchParams({ suite: creees.slice(1).join(','), n: '1', total: String(creees.length) })}`);
 }

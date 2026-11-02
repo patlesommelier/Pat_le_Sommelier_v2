@@ -1,6 +1,6 @@
 'use client';
-// Distributeur Quid Vinum (page Distributeurs du restaurant) : une liste « Actif / Non sélectionné » à droite de son nom.
-// Le passer « Non sélectionné » demande confirmation (ses vins n'auront plus de distributeur).
+// Distributeur Quid Vinum (page Distributeurs du restaurant) : un interrupteur à droite de son nom, vert (✓, actif) ou rouge (✕, non sélectionné).
+// Le désactiver demande confirmation (ses vins n'auront plus de distributeur).
 import { useState, useTransition } from 'react';
 
 type Retour = { ok?: string; erreur?: string } | void;
@@ -8,21 +8,19 @@ type Retour = { ok?: string; erreur?: string } | void;
 export function EtatDistributeur({ actif, nom, activer, retirer }: { actif: boolean; nom: string; activer: () => Promise<Retour>; retirer: () => Promise<Retour> }) {
   const [enCours, demarrer] = useTransition();
   const [message, setMessage] = useState<{ ok?: string; erreur?: string } | null>(null);
-  const changer = (valeur: string) => {
-    if ((valeur === 'actif') === actif) return;
-    if (valeur !== 'actif' && !window.confirm(`Ne plus sélectionner « ${nom} » ? Ses vins n’auront plus de distributeur ; les commandes passées restent.`)) return;
+  const basculer = () => {
+    if (actif && !window.confirm(`Ne plus sélectionner « ${nom} » ? Ses vins n’auront plus de distributeur ; les commandes passées restent.`)) return;
     demarrer(async () => {
-      const r = (await (valeur === 'actif' ? activer() : retirer())) ?? null;
+      const r = (await (actif ? retirer() : activer())) ?? null;
       if (r) { setMessage(r); setTimeout(() => setMessage(null), 5000); }
     });
   };
   return (
     <>
-      <select key={String(actif)} defaultValue={actif ? 'actif' : 'non'} disabled={enCours} onChange={(e) => changer(e.target.value)}
-        aria-label={`Sélection de ${nom}`} className={`choix-etat${actif ? ' actif' : ''}`}>
-        <option value="actif">Actif</option>
-        <option value="non">Non sélectionné</option>
-      </select>
+      <button type="button" role="switch" aria-checked={actif} disabled={enCours} onClick={basculer}
+        className={`interrupteur${actif ? ' actif' : ''}`} aria-label={`${nom} : ${actif ? 'actif' : 'non sélectionné'}`} title={actif ? 'Actif : cliquez pour désactiver' : 'Non sélectionné : cliquez pour activer'}>
+        <span className="interrupteur-rond" aria-hidden="true">{actif ? '✓' : '✕'}</span>
+      </button>
       {message && <span role="status" className={`toast-admin ${message.erreur ? 'erreur' : ''}`} onClick={() => setMessage(null)}>{message.erreur ?? message.ok}</span>}
     </>
   );

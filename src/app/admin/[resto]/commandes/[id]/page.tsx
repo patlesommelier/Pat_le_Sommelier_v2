@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { envoyerCommande, marquerEnvoyee } from '../../../stocks-actions';
 import { EnvoiCommande } from '@/components/admin/EnvoiCommande';
-import { Entete, Etat } from '@/components/admin/Ui';
+import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getCommandes, getCoordonnees } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
@@ -12,8 +12,13 @@ import { envoiEmailConfigure } from '@/lib/email';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 
-export default async function BonDeCommande({ params }: { params: Promise<{ resto: string; id: string }> }) {
+export default async function BonDeCommande({ params, searchParams }: { params: Promise<{ resto: string; id: string }>; searchParams: Promise<{ suite?: string; n?: string; total?: string; ok?: string }> }) {
   const { resto, id } = await params;
+  const sp = await searchParams;
+  // Panier commandé en plusieurs bons : « suite » donne les commandes suivantes, envoyées l'une après l'autre.
+  const suite = (sp.suite ?? '').split(',').filter((x) => /^[0-9a-f-]{36}$/i.test(x));
+  const rang = Number(sp.n) || 1, nombre = Number(sp.total) || suite.length + 1;
+  const suivante = suite.length ? `/admin/${resto}/commandes/${suite[0]}?${new URLSearchParams({ suite: suite.slice(1).join(','), n: String(rang + 1), total: String(nombre) })}` : null;
   await exigerAcces(resto);
   const [commandes, coord] = await Promise.all([getCommandes(resto, ['ouverte', 'recue', 'annulee'], 500), getCoordonnees(resto)]);
   const c = commandes.find((x) => x.id === id);
@@ -33,12 +38,21 @@ export default async function BonDeCommande({ params }: { params: Promise<{ rest
           ? (envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
           : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
       </Entete>
+      {/* Commande précédente envoyée : son message ; puis où l'on en est parmi les bons du panier. */}
+      <Message ok={sp.ok} />
+      {nombre > 1 && (sp.suite !== undefined || rang > 1) && (
+        <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
+          <b>Bon de commande {rang} sur {nombre}</b>
+          <span className="petit discret">{suivante ? 'Envoyez-le : le bon suivant s’ouvre ensuite.' : 'C’est le dernier bon de votre panier.'}</span>
+          {suivante && <Link href={suivante} className="btn fantome petit">Passer au bon suivant →</Link>}
+        </div>
+      )}
       {c.statut === 'ouverte' && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'flex-start' }}>
           {c.fournisseur_email
             ? <EnvoiCommande pdf={pdf} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={envoiEmailConfigure()} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee}
-                apres={`/admin/${resto}/commandes?commande=${c.id}`} />
+                apres={suivante ?? `/admin/${resto}/commandes?commande=${c.id}`} />
             : <span className="petit" style={{ color: 'var(--ocre)' }}>{c.via_qv ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.'
                 : <>Pour envoyer la commande, ajoutez l’adresse e-mail du distributeur dans <Link href={`/admin/${resto}/fournisseurs`}>Distributeurs</Link>.</>}</span>}
           <a href={pdf} target="_blank" rel="noopener" className="btn sec">Ouvrir le PDF</a>

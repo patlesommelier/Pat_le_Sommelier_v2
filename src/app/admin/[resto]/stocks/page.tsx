@@ -73,13 +73,14 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <div className="stat"><span className="chiffre">{euros(valeur)}</span><span>valeur du stock HTVA{sansPrix ? ` (${sansPrix} vin${sansPrix > 1 ? 's' : ''} sans prix d’achat)` : ''}</span></div>
         <div className="stat"><span className="chiffre">{ouvertes.length}</span><span>{ouvertes.length > 1 ? 'commandes ouvertes' : 'commande ouverte'}</span></div>
       </section>
-      <FormulaireAdmin action={enregistrerStocks.bind(null, resto)} className="pile">
+      {/* Enregistrement automatique : chaque chiffre ou distributeur changé est enregistré en quittant le champ. */}
+      <FormulaireAdmin action={enregistrerStocks.bind(null, resto)} className="pile" auto>
         <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
           <nav className="onglets" aria-label="Filtre">
             <Link href={`/admin/${resto}/stocks`} aria-current={filtre !== 'bas' ? 'true' : undefined}>Tous les vins <span>{groupes.length}</span></Link>
             <Link href={`/admin/${resto}/stocks?filtre=bas`} aria-current={filtre === 'bas' ? 'true' : undefined}>Stock bas <span>{bas.length}</span></Link>
           </nav>
-          <button className="btn">Enregistrer</button>
+          <span className="petit discret">Enregistré automatiquement à chaque changement.</span>
         </div>
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
         {parCouleur.length > 0 && (
@@ -122,7 +123,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
             </table>
           </div>
         )}
-        <div className="barre-enregistrer"><span className="discret">Changez les chiffres puis enregistrez. Le prix de vente TVAC est celui de la bouteille sur votre carte (app et carte imprimée).</span><button className="btn">Enregistrer</button></div>
+        <p className="petit discret" style={{ margin: 0 }}>Chaque changement est enregistré automatiquement. Le prix de vente TVAC est celui de la bouteille sur votre carte (app et carte imprimée).</p>
       </FormulaireAdmin>
     </>
   );
