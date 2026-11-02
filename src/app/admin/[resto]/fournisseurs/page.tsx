@@ -41,7 +41,8 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
           <details key={f.id} className="carte-bo deroulant-simple">
             <summary><span><b style={{ fontSize: 17 }}>{f.nom}</b> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''}</span></span>
               <span className="discret petit" style={{ flex: 1 }}>{[f.contact, f.email, f.telephone].filter(Boolean).join(' · ') || 'Coordonnées à compléter'}</span>
-              <Link href={`/admin/${resto}/commandes?f=${f.id}`} className="btn sec petit bouton-commande">Catalogue</Link></summary>
+              {/* Ses vins, tels que le restaurant les a rentrés : Ma cave, filtrée sur ce distributeur. */}
+              <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ distributeur: f.id })}`} className="btn sec petit bouton-commande">Liste de vins</Link></summary>
             <FormulaireAdmin action={modifierFournisseur.bind(null, resto, f.id)} className="pile" style={{ gap: 14, marginTop: 14 }}>
               <Champs f={f} />
               <div className="ligne-actions">

@@ -19,10 +19,10 @@ import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
-export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string }> }) {
+export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const { filtre, ajoute, commander, ok, erreur, ajout, c } = await searchParams;
+  const { filtre, ajoute, commander, ok, erreur, ajout, c, distributeur } = await searchParams;
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
   const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
@@ -33,7 +33,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const groupes = regrouperVins(vins).map((g) => ({ ...g, disponible: g.tous.some((x) => x.disponible) }))
     .map((g) => ({ ...g, bas: g.disponible && stockBas(g.principal.stock, limite) }));
   const bas = groupes.filter((g) => g.bas);
-  const affiches = filtre === 'bas' ? bas : groupes;
+  // « Liste de vins » d'un distributeur (page Distributeurs) : seulement ses vins.
+  const filtreDistributeur = distributeur ? fournisseurs.find((x) => x.id === distributeur) ?? null : null;
+  const affiches = (filtre === 'bas' ? bas : groupes).filter((g) => !filtreDistributeur || g.tous.some((x) => x.fournisseur_id === filtreDistributeur.id));
   // Vins pas (ou plus) sur la carte, dont ceux ajoutés depuis un catalogue : en tête, pour les retrouver et les commander.
   const parCouleur = [{ titre: 'Pas encore sur votre carte', groupes: affiches.filter((g) => !g.disponible) },
     ...COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.disponible && g.principal.couleur === k) }))].filter((c) => c.groupes.length);
@@ -82,6 +84,12 @@ export default async function Stocks({ params, searchParams }: { params: Promise
           </nav>
           <span className="petit discret">Enregistré automatiquement à chaque changement.</span>
         </div>
+        {filtreDistributeur && (
+          <p className="ligne-actions" style={{ alignItems: 'center', margin: 0 }}>
+            <span>Vins de <b>{filtreDistributeur.nom}</b> ({affiches.length})</span>
+            <Link href={`/admin/${resto}/stocks${filtre === 'bas' ? '?filtre=bas' : ''}`} className="btn fantome petit">✕ Tous les distributeurs</Link>
+          </p>
+        )}
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
         {parCouleur.length > 0 && (
           <div className="tableau">
