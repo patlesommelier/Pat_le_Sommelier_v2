@@ -121,3 +121,12 @@ export async function donneesReception(resto: string, commandeId: string, recept
   const [{ reste }] = await requete<{ reste: number }>('select coalesce(sum(quantite - recue), 0)::int as reste from commande_ligne where commande_id = $1', [commandeId]);
   return { bon, reception: { numero: r.numero, complete: r.complete, date: new Date(r.cree_le), lignes, reste } };
 }
+
+/**
+ * Mode test (réglage du super-admin, actif par défaut) : aucun e-mail n'est envoyé aux distributeurs du restaurant
+ * (bons de commande, annulations) ; les commandes passent quand même « envoyées ». Quid Vinum reçoit les siennes.
+ */
+export async function modeTestDistributeurs(): Promise<boolean> {
+  const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'mode_test_distributeurs'`);
+  return r?.valeur !== '0';
+}

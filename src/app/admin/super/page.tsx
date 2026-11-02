@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
+import { changerModeTest, changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
+import { modeTestDistributeurs } from '@/lib/admin/stocks';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
 import { etapesRestaurant } from '../[resto]/etapes';
@@ -17,7 +18,7 @@ const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
 export default async function Restaurants({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [ind, restos] = await Promise.all([indicateurs(), restaurantsSuper()]);
+  const [ind, restos, modeTest] = await Promise.all([indicateurs(), restaurantsSuper(), modeTestDistributeurs()]);
   // Avancement sur les 6 étapes de la mise en place, calculé comme dans l'espace du restaurant.
   const avancement = new Map(await Promise.all(restos.map(async (r) => {
     const [bo, resume] = await Promise.all([getRestaurantBO(r.id), getResume(r.id)]);
@@ -56,6 +57,13 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
           </form>
         );
       })()}
+      {/* Mode test : pas d'e-mail aux distributeurs des restaurants (bons de commande, annulations). */}
+      <form action={changerModeTest} className="ligne-actions" style={{ alignItems: 'center' }}>
+        <label className="petit" style={{ display: 'flex', gap: 8, alignItems: 'center', fontWeight: 700, color: modeTest ? 'var(--ocre)' : undefined }}>
+          <input type="checkbox" name="mode_test" defaultChecked={modeTest} /> Mode test : ne rien envoyer aux distributeurs</label>
+        <button className="btn fantome petit">Enregistrer</button>
+        <span className="petit discret">{modeTest ? 'Les bons de commande et les annulations ne partent pas chez les distributeurs des restaurants (Quid Vinum reçoit les siennes).' : 'Les bons de commande partent chez les distributeurs.'}</span>
+      </form>
       <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
         <div className="carte-bo" style={{ padding: '16px 20px' }}><div className="chiffre">{ind.restaurants}</div><span className="discret">restaurants</span></div>
         <Link href="/admin/super/producteurs" className="carte-bo" style={{ padding: '16px 20px', textDecoration: 'none', color: 'inherit' }}>

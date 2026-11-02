@@ -652,3 +652,12 @@ export async function lancerComparaison(f: FormData) {
   }
   redirect(avec('/admin/super/comparaison', { resto: resto!, id: c.id }));
 }
+
+/** Mode test : coupe (ou rétablit) les e-mails aux distributeurs des restaurants. */
+export async function changerModeTest(f: FormData) {
+  await exigerAdmin();
+  const actif = f.get('mode_test') === 'on';
+  await requete(`insert into reglage_serveur (cle, valeur) values ('mode_test_distributeurs', $1) on conflict (cle) do update set valeur = excluded.valeur, maj_le = now()`, [actif ? '1' : '0']);
+  revalidatePath('/admin/super');
+  redirect(avec('/admin/super', { ok: actif ? 'Mode test : aucun e-mail n’est envoyé aux distributeurs des restaurants.' : 'Mode test arrêté : les bons de commande partent chez les distributeurs.' }));
+}
