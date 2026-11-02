@@ -54,7 +54,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
           <details key={f.id} className="carte-bo deroulant-simple">
             <summary><span><b style={{ fontSize: 17 }}>{f.nom}</b> <span className="discret">· {f.vins} vin{f.vins > 1 ? 's' : ''}</span></span>
               <span className="discret petit" style={{ flex: 1 }}>{[f.contact, f.email, f.telephone].filter(Boolean).join(' · ') || 'Coordonnées à compléter'}</span>
-              <Link href={`/admin/${resto}/commandes?f=${f.id}`} className="btn sec petit bouton-commande">Nouvelle commande</Link></summary>
+              <Link href={`/admin/${resto}/commandes?f=${f.id}`} className="btn sec petit bouton-commande">Catalogue</Link></summary>
             <FormulaireAdmin action={modifierFournisseur.bind(null, resto, f.id)} className="pile" style={{ gap: 14, marginTop: 14 }}>
               <Champs f={f} />
               <div className="ligne-actions">
@@ -93,8 +93,8 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
                 {(d.presentation || site) && <span className="petit">{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</span>}
               </span>
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}
-              {/* Sur chaque distributeur Quid Vinum ; s'il n'est pas sélectionné, il le devient. Une commande Quid Vinum regroupe tous les actifs. */}
-              <form action={nouvelleCommandeQv.bind(null, resto, d.id)}><button className="btn sec petit bouton-commande">Nouvelle commande</button></form>
+              {/* « Catalogue » : tous les vins de ce distributeur, à commander ; s'il n'est pas sélectionné, il le devient. */}
+              <form action={nouvelleCommandeQv.bind(null, resto, d.id)}><button className="btn sec petit bouton-commande">Catalogue</button></form>
               {/* À droite, près de la sélection : ses vins sur votre carte (actif), ou la taille de son catalogue. */}
               <span className="discret petit" style={{ whiteSpace: 'nowrap' }}>{f ? (() => { const n = vinsSurCarte.get(d.id) ?? 0; return `${n} vin${n > 1 ? 's' : ''} sur votre carte`; })() : `${d.vins} vins au catalogue`}</span>
               <EtatDistributeur actif={Boolean(f)} nom={d.nom} activer={ajouterDistributeurQv.bind(null, resto, d.id)} retirer={supprimerFournisseur.bind(null, resto, f?.id ?? '')} />

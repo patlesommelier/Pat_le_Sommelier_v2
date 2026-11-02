@@ -24,7 +24,7 @@ const SUIVI_QV: Record<string, string> = { recue: 'commande reçue', acceptee: '
   livree_partielle: 'livraison partielle', livree: 'bouteilles livrées', facturee: 'bouteilles facturées' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
-export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string }> }) {
+export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
   const sp = await searchParams;
@@ -147,10 +147,11 @@ export default async function Commandes({ params, searchParams }: { params: Prom
               {surLaCarteQv.length
                 ? <CatalogueCommande lignes={surLaCarteQv} choisi={vinChoisi} sansFiltreCarte />
                 : <p className="petit discret" style={{ margin: 0 }}>Aucun vin de votre carte n’est encore relié à un distributeur Quid Vinum : ajoutez-en ci-dessous.</p>}
-              <details className="carte-bo" open={!surLaCarteQv.length || Boolean(vinChoisi && !surLaCarteQv.some((l) => l.id === vinChoisi))} style={{ padding: '12px 16px' }}>
+              <details className="carte-bo" open={!surLaCarteQv.length || Boolean(sp.catalogue) || Boolean(vinChoisi && !surLaCarteQv.some((l) => l.id === vinChoisi))} style={{ padding: '12px 16px' }}>
                 <summary style={{ cursor: 'pointer', fontWeight: 700 }}>+ Ajouter un vin qui n’est pas sur la carte <span className="discret" style={{ fontWeight: 400 }}>(catalogues complets)</span></summary>
                 <div className="pile" style={{ gap: 14, marginTop: 12 }}>
-                  {qv.map((f) => {
+                  {/* Catalogue demandé depuis la page Distributeurs : le sien en premier. */}
+                  {[...qv].sort((a, b) => Number(b.distributeur_id === sp.catalogue) - Number(a.distributeur_id === sp.catalogue)).map((f) => {
                     const reste = (catalogues.get(f.id) ?? []).filter((l) => !l.surCarte);
                     return reste.length ? (
                       <div key={f.id} className="pile" style={{ gap: 8 }}>

@@ -392,7 +392,7 @@ export async function commanderChezDistributeur(resto: string, vinId: string, of
   redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: o.fournisseur_id, vin: vinId })}#nouvelle`);
 }
 
-/** Page Distributeurs : « Nouvelle commande » sur un distributeur Quid Vinum ; s'il n'était pas sélectionné, il le devient. */
+/** Page Distributeurs : « Catalogue » d'un distributeur Quid Vinum (tous ses vins, à commander) ; s'il n'était pas sélectionné, il le devient. */
 export async function nouvelleCommandeQv(resto: string, distributeurId: string) {
   await exigerAcces(resto);
   const [d] = await requete<{ nom: string }>(`select nom from distributeur where id = $1 and actif`, [distributeurId]);
@@ -402,5 +402,6 @@ export async function nouvelleCommandeQv(resto: string, distributeurId: string) 
       [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
     rafraichir(resto);
   }
-  redirect(`/admin/${resto}/commandes?f=qv`);
+  // Son catalogue complet, ouvert, en tête de la commande Quid Vinum.
+  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: 'qv', catalogue: distributeurId })}`);
 }
