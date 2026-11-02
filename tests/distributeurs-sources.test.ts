@@ -57,3 +57,18 @@ test('sources : images d’une page web collée, reliées à leur référence d�
   assert.equal(imgs.get('PIBRA11'), 'https://cdn.exemple.be/b.png');
   assert.equal(imgs.has('SPGAT10418'), false); // pas d'image juste avant
 });
+
+test('tableau avec prix liste et prix QV, référence et appellation déjà dans le nom', async () => {
+  const { vinsDuTableau } = await import('../src/lib/distributeurs/sources');
+  const t = [
+    ['Producteur', 'Vin', 'Millésime', 'Appellation', 'Type', 'Contenance', 'Prix liste HTVA', 'Prix QV HTVA', 'Catégorie', 'Certification', 'Référence'],
+    ['Louis Jadot', 'CHABLIS 1er Cru Fourchaume', '2023', 'Chablis', 'blanc', '75 cl', '43.42', '34.86', 'Bourgogne', '', '1831'],
+    ['Château Clarke', 'Chateau CLARKE', '2020', 'Listrac-Médoc', 'rouge', '75 cl', '34.44', '27.68', 'Bordeaux', 'HVE', '1832'],
+  ];
+  const v = vinsDuTableau(t)!;
+  assert.equal(v.length, 2);
+  assert.equal(v[0].libelle, 'CHABLIS 1er Cru Fourchaume'); // appellation pas répétée
+  assert.equal(v[0].prix, 34.86); assert.equal(v[0].prixCatalogue, 43.42); assert.equal(v[0].reference, '1831');
+  assert.equal(v[1].libelle, 'Listrac-Médoc Chateau CLARKE');
+  assert.equal(v[1].couleur, 'rouge');
+});

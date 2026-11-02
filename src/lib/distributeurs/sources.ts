@@ -97,9 +97,12 @@ export function tableauJson(donnees: unknown): Tableau | null {
 }
 
 // ───────── Colonnes reconnues ─────────
-type Champ = 'producteur' | 'vin' | 'appellation' | 'cuvee' | 'millesime' | 'contenance' | 'prix' | 'couleur' | 'dispo' | 'max' | 'section' | 'certification';
+type Champ = 'producteur' | 'vin' | 'appellation' | 'cuvee' | 'millesime' | 'contenance' | 'prix' | 'prix_catalogue' | 'couleur' | 'dispo' | 'max' | 'section' | 'certification' | 'reference';
 const TITRES: Array<[Champ, RegExp]> = [
+  // Prix public (liste, catalogue) à côté du prix QV : à lire avant le prix (« Prix liste HTVA », « Prix public »).
+  ['prix_catalogue', /\b(prix (liste|public|catalogue|barre)|list price|public price|pvp|tarif public)\b/],
   ['prix', /\b(prix|price|tarif|htva|hors\s*tva|net|pu|p\.u\.|unit)/],
+  ['reference', /^(reference|ref\.?|code|code article|sku|article n)\b/],
   ['producteur', /\b(producteur|producer|domaine|chateau|maison|estate|winery|fournisseur|vigneron|marque|brand)/],
   ['millesime', /\b(millesime|vintage|annee|year|mill)\b/],
   ['contenance', /\b(contenance|format|volume|taille|size|cl|centil|bouteille)\b/],
@@ -136,7 +139,11 @@ export function vinsDuTableau(t: Tableau): VinTarif[] | null {
   const val = (l: string[], k: Champ) => (c.champs[k] !== undefined ? l[c.champs[k]!] ?? '' : '');
   const vins: VinTarif[] = [];
   for (const l of t.slice(c.ligne + 1)) {
-    let nom = [val(l, 'appellation'), val(l, 'cuvee'), val(l, 'vin')].filter(Boolean).join(' ').trim();
+    // L'appellation n'est ajoutée au nom que s'il ne la contient pas déjà (« Chablis » + « CHABLIS 1er Cru »).
+    const appellation = val(l, 'appellation');
+    const reste = [val(l, 'cuvee'), val(l, 'vin')].filter(Boolean).join(' ');
+    const dejaDedans = appellation && normaliser(reste).replace(/[^a-z0-9]+/g, ' ').includes(normaliser(appellation).replace(/[^a-z0-9]+/g, ' ').trim());
+    let nom = [dejaDedans ? '' : appellation, reste].filter(Boolean).join(' ').trim();
     let millesime = val(l, 'millesime').match(/\b(19|20)\d{2}\b/)?.[0] ?? null;
     // Millésime écrit dans le nom : « 2023 Chablis » ou « Chablis 2023 ».
     const dansNom = nom.match(/(?:^|\s)((?:19|20)\d{2})(?=\s|$)/);
@@ -147,7 +154,7 @@ export function vinsDuTableau(t: Tableau): VinTarif[] | null {
     const v = vinTarif({
       producteur: val(l, 'producteur') || null, vin: nom, millesime, contenance, prix: val(l, 'prix'), couleur: normaliser(val(l, 'couleur')) || null,
       epuise: /epuis|rupture|out of stock|indispo|^0$/.test(dispo), max: val(l, 'max') || null, section: val(l, 'section') || null,
-      certification: val(l, 'certification') || null,
+      certification: val(l, 'certification') || null, prix_catalogue: val(l, 'prix_catalogue') || null, reference: val(l, 'reference') || null,
     });
     if (v && v.prix != null) vins.push(v);
   }
