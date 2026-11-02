@@ -57,7 +57,7 @@ export function OngletsCarte({ restaurant, vins, couleur, categories = [] }: { r
             {s && <div className="sous-titre">{s}</div>}
             {liste.filter((v) => rubrique(v) === s).map((v) => (
               <Link key={v.id} href={`/${restaurant}/vin/${v.id}`} className="ligne-vin">
-                <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={52} hauteur={52} />
+                <Etiquette url={v.etiquette_url} logo={v.logo_distributeur} nom={v.libelle} largeur={52} hauteur={52} />
                 <div className="infos">
                   <span className="nom">{v.titre ?? v.libelle}<PictosVin coeur={v.coup_de_coeur} bio={v.bio} nature={v.nature} /></span>
                   <span className="sous">{v.titre !== undefined ? v.sousTitre : sousTitreVin({ ...v, format: v.tarifs?.length ? undefined : v.format })}</span>

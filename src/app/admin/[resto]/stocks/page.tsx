@@ -102,7 +102,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                     const nom = nomPourListe(v);
                     return (
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
-                        <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
+                        <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url ?? v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (

@@ -58,7 +58,7 @@ export default async function Propositions({
             <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
               {propositions.map(({ accord, vin, motif, parPlat, ensemble }) => (
                 <Link key={vin.id} href={`/${resto}/vin/${vin.id}?plat=${plat.id}`} className="carte-vin">
-                  <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={100} hauteur={100} />
+                  <Etiquette url={vin.etiquette_url} logo={vin.logo_distributeur} nom={vin.libelle} largeur={100} hauteur={100} />
                   <div className="infos">
                     {MENTIONS[motif] && <div className="mention">{MENTIONS[motif]}</div>}
                     {(() => {

@@ -187,7 +187,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                         const nom = nomPourListe(v);
                         return (
                           <tr key={v.id} className={sp.vin === v.id ? 'choisi' : undefined}>
-                            <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
+                            <td><div className="vin-cell"><Vignette url={v.etiquette_url ?? v.logo_distributeur} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
                             <td className="droite" style={{ whiteSpace: 'nowrap' }}>{alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} <b>{v.stock}</b></td>
                             <td className="droite">{v.en_commande || '—'}</td>
                             <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>

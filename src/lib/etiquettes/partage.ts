@@ -22,7 +22,10 @@ const GENERIQUES = new Set(['brut', 'extra', 'nature', 'cru', 'er', '1er', 'prem
   // Pays (souvent en tête de ligne sur les cartes : « Allemagne - Riesling Eisquell »).
   'france', 'allemagne', 'autriche', 'italie', 'espagne', 'portugal', 'suisse', 'grece', 'hongrie', 'slovenie', 'croatie', 'georgie', 'liban',
   'israel', 'chili', 'argentine', 'australie', 'usa', 'belgique', 'luxembourg', 'roumanie', 'bulgarie', 'moldavie', 'uruguay', 'bresil']);
-const ORDRE_SOURCE: Record<string, number> = { fichier: 1, wine_labs: 2, restaurant: 3 };
+// Photos posées par une personne (restaurant, ou Pat dans « Vins de la base » / la carte déposée : « fichier ») : définitives,
+// jamais remplacées par une photo trouvée automatiquement (Wine Labs, distributeur) ; seule une nouvelle photo déposée les remplace.
+const ORDRE_SOURCE: Record<string, number> = { wine_labs: 1, fichier: 3, restaurant: 3 };
+const SQL_ORDRE = (col: string) => `(case ${col} when 'wine_labs' then 1 when 'fichier' then 3 when 'restaurant' then 3 else 0 end)`;
 
 const norm = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe');
 const mots = (t: string | null | undefined) => (t ? norm(t).split(/[^a-z0-9]+/).filter((m) => m && !MOTS_VIDES.has(m)) : []);
@@ -187,7 +190,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
           `insert into etiquette_libelle (cle, libelle, couleur, etiquette_url, etiquette_source, vin_id) values ($1, $2, $3, $4, $5, $6)
            on conflict (cle) do update set etiquette_url = excluded.etiquette_url, etiquette_source = excluded.etiquette_source,
              vin_id = excluded.vin_id, maj_le = now()
-            where $7 or coalesce(array_position(array['fichier', 'wine_labs', 'restaurant'], etiquette_libelle.etiquette_source), 0) < $8`,
+            where $7 or ${SQL_ORDRE('etiquette_libelle.etiquette_source')} < $8`,
           [cle, v.libelle, v.couleur, v.etiquette_url, v.etiquette_source, v.id, v.id === nouvellePhoto, ORDRE_SOURCE[v.etiquette_source!] ?? 0]);
       }
     }
@@ -202,7 +205,7 @@ export async function partagerEtiquettes(requete: Requete, { vins, nouvellePhoto
         `update cuvee set etiquette_url = $2, etiquette_source = $3, etiquette_vin_id = $4, etiquette_maj_le = now()
           where id = $1 and etiquette_url is distinct from $2
             and ($5 or etiquette_url is null
-                 or coalesce(array_position(array['fichier', 'wine_labs', 'restaurant'], etiquette_source), 0) < $6)`,
+                 or ${SQL_ORDRE('etiquette_source')} < $6)`,
         [cuvee, v.etiquette_url, v.etiquette_source, v.id, v.id === nouvellePhoto, ORDRE_SOURCE[v.etiquette_source!] ?? 0]);
     }
   }

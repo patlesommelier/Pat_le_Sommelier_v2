@@ -13,7 +13,7 @@ interface Message {
   content: string;
   /** Vins proposés : étiquette et texte complet de l'accord (ou présentation du vin), affichés sous la réponse. */
   vins?: { id: string; plat: string | null; libelle: string; producteur: string | null; millesime: string | null; prix: number | null;
-    prix_verre: number | null; etiquette_url: string | null; texte: string | null; tarifs?: { code: string; prix: number }[]; titre?: string; sousTitre?: string; coup_de_coeur?: boolean; nature?: boolean; bio?: boolean }[];
+    prix_verre: number | null; etiquette_url: string | null; logo_distributeur?: string | null; texte: string | null; tarifs?: { code: string; prix: number }[]; titre?: string; sousTitre?: string; coup_de_coeur?: boolean; nature?: boolean; bio?: boolean }[];
   erreur?: boolean;
 }
 
@@ -95,7 +95,7 @@ export function BarrePat({ restaurant, nom }: { restaurant: string; nom: string 
                     {m.vins.map((v) => (
                       <Link key={v.id} className="fiche-chat" href={`/${restaurant}/vin/${v.id}${v.plat ?? plat ? `?plat=${v.plat ?? plat}` : ''}`} onClick={() => setOuvert(false)}>
                         <span className="fiche-chat-haut">
-                          <Etiquette url={v.etiquette_url} nom={v.libelle} largeur={72} hauteur={96} />
+                          <Etiquette url={v.etiquette_url} logo={v.logo_distributeur} nom={v.libelle} largeur={72} hauteur={96} />
                           <span className="fiche-chat-nom">
                             <strong>{v.titre ?? v.libelle}<PictosVin coeur={v.coup_de_coeur} bio={v.bio} nature={v.nature} /></strong>
                             {v.titre !== undefined ? v.sousTitre && <span>{v.sousTitre}</span>

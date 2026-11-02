@@ -36,7 +36,7 @@ export default async function FicheVin({ params, searchParams }: { params: Promi
       <Entete restaurant={restaurant} retour={plat ? `/${resto}/plat/${plat.id}` : `/${resto}/carte?c=${vin.couleur}`} />
       <main className="defile">
         <div className="contenu">
-          <Etiquette url={vin.etiquette_url} nom={vin.libelle} largeur={350} hauteur={210} />
+          <Etiquette url={vin.etiquette_url} logo={vin.logo_distributeur} nom={vin.libelle} largeur={350} hauteur={210} />
 
           <div className="fiche-entete">
             {/* Comme dans la carte : nom du vin et millésime, puis producteur, appellation et cépages. */}

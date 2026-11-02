@@ -1,6 +1,7 @@
 import 'server-only';
 import { requete } from '../db';
 import { REGLAGES_PAT, reglagesComplets, type Reglages } from '../selection';
+import { SQL_LOGO_DISTRIBUTEUR } from '../etiquettes/logo';
 
 export interface RestaurantBO {
   id: string; nom: string; couleur: string; couleur_claire: string; logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null;
@@ -95,6 +96,8 @@ export interface VinBO {
   statut_producteur: 'reference' | 'nouveau' | null;
   millesime: string | null; format: string; prix: number | null; prix_verre: number | null; cepages: string | null;
   resume_court: string | null; presentation: string | null; etiquette_url: string | null; etiquette_source: string | null;
+  /** Sans étiquette : logo du distributeur du vin (affichage seulement). */
+  logo_distributeur: string | null;
   etiquette_statut: string | null; etiquette_erreur: string | null; coup_de_coeur: boolean; disponible: boolean; a_verifier: string | null;
   pays: string | null; vin_texte: string | null;
   /** Appellation et nom du vin enregistrés dans la fiche (vides : à déduire de la carte importée), terroir de Pat relié. */
@@ -115,7 +118,8 @@ export async function getVinsBO(restaurantId: string) {
             p.statut::text as producteur_statut,
             case when p.statut <> 'valide' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
             v.millesime, v.format, v.prix, v.prix_verre,
-            v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
+            v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source,
+            case when v.etiquette_url is null then ${SQL_LOGO_DISTRIBUTEUR('v')} end as logo_distributeur, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,

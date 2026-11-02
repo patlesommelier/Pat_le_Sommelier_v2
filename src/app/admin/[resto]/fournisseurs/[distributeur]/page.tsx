@@ -62,7 +62,7 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
                 const x = dansVins.get(v.id);
                 return (
                   <tr key={v.id} className={v.epuise ? 'indisponible' : undefined}>
-                    <td><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
+                    <td><div className="vin-cell"><Vignette url={v.etiquette_url ?? d.logo_url} taille={40} />
                       <div><div className="nom">{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</div>
                         <div className="petit">{[v.producteur, v.section, v.contenance, v.certification, v.reference ? `réf. ${v.reference}` : null].filter(Boolean).join(' · ')}</div>
                         {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></div></td>
