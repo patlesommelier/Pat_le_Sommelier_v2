@@ -37,9 +37,9 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
 
   return (
     <>
-      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur, au prix d’achat HTVA proposé par Quid Vinum. Ajoutez un vin à vos vins : il apparaît dans Vins (pas encore sur votre carte) et se commande avec le panier.">
+      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur, au prix d’achat HTVA proposé par Quid Vinum. Ajoutez un vin à votre cave avec « + » : il apparaît dans Ma cave (pas encore sur votre carte) et se commande avec le panier.">
         <Link href={`/admin/${resto}/fournisseurs`} className="btn fantome">← Distributeurs</Link>
-        <Link href={`/admin/${resto}/stocks`} className="btn sec">Vins et panier</Link>
+        <Link href={`/admin/${resto}/stocks`} className="btn sec">Ma cave et panier</Link>
       </Entete>
       {(d.presentation || site) && <p className="petit" style={{ margin: 0 }}>{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</p>}
       <form className="ligne-actions" style={{ alignItems: 'center' }}>
@@ -56,7 +56,7 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
       {affiches.length > 0 && (
         <div className="tableau">
           <table className="table-stocks" style={{ minWidth: 760 }}>
-            <thead><tr><th>Vin</th><th className="droite">Prix HTVA</th><th>Vos vins</th></tr></thead>
+            <thead><tr><th>Vin</th><th className="droite">Prix HTVA</th><th className="centre">Ajouter à ma cave</th></tr></thead>
             <tbody>
               {affiches.map((v) => {
                 const x = dansVins.get(v.id);
@@ -67,8 +67,8 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
                         <div className="petit">{[v.producteur, v.section, v.contenance, v.certification, v.reference ? `réf. ${v.reference}` : null].filter(Boolean).join(' · ')}</div>
                         {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></div></td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}><b>{v.prix != null ? euros(v.prix) : '—'}</b></td>
-                    <td>{x
-                      ? <span className="pile" style={{ gap: 4 }}><Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}?${new URLSearchParams({ retour: `/admin/${resto}/fournisseurs/${distributeur}` })}`} className="petit">✓ Dans vos vins</Link>
+                    <td className="centre">{x
+                      ? <span className="pile" style={{ gap: 4 }}><Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}?${new URLSearchParams({ retour: `/admin/${resto}/fournisseurs/${distributeur}` })}`} className="petit">✓ Dans ma cave</Link>
                           {!v.epuise && <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, x.id)} libelle={v.libelle} dansPanier={x.panier} />}</span>
                       : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, distributeur, v.id)} libelle={v.libelle} />}</td>
                   </tr>

@@ -356,3 +356,6 @@ dialog.superposition { overflow-y: auto; }
 .ligne-panier input { width: 64px; min-height: 32px; border-radius: 8px; border: 1.5px solid var(--ligne); padding: 0 6px; text-align: right; }
 .table-stocks th, .table-stocks td { padding-left: 10px; padding-right: 10px; }
 .table-stocks .champ-prix input { width: 76px; }
+.tableau th.centre, .tableau td.centre { text-align: center; }
+.tableau td.centre .pile { align-items: center; }
+.btn.bouton-plus { min-width: 40px; min-height: 36px; font-size: 20px; font-weight: 700; line-height: 1; padding: 0 12px; }

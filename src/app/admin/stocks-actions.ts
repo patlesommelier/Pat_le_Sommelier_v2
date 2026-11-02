@@ -352,7 +352,7 @@ async function enregistrerReception(resto: string, commandeId: string, recues: M
   rafraichir(resto);
   const n = recu.reduce((t, l) => t + l.q, 0);
   return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`
-    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page Vins).` : ''), reception: id };
+    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page Ma cave).` : ''), reception: id };
 }
 
 /** Réception des bouteilles (fenêtre de la commande) : champs recue_<ordre de la ligne>. */
@@ -414,7 +414,7 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
   const c = (await catalogueDistributeur(distributeurId, resto)).find((x) => x.id === distributeurVinId);
   if (!c) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   const [deja] = await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1 and distributeur_vin_id = $2 limit 1', [resto, distributeurVinId]);
-  if (deja) return { ok: `« ${c.libelle} » est déjà dans vos vins.` };
+  if (deja) return { ok: `« ${c.libelle} » est déjà dans votre cave.` };
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
     [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
@@ -429,25 +429,30 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
     await choisirFournisseur(resto, [meme.id], f.id, null);
     rafraichir(resto);
     revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-    return { ok: `« ${meme.libelle} » est déjà dans vos vins : il est maintenant relié à ${d.nom}, au prix de son catalogue.` };
+    return { ok: `« ${meme.libelle} » est déjà dans votre cave : il est maintenant relié à ${d.nom}, au prix de son catalogue.` };
   }
   const id = await ajouterVinCommande(resto, distributeurVinId, f.id, c.prix, 0);
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à vos vins (en haut de Vins, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Vins.` };
+  return { ok: `« ${c.libelle} » est ajouté à votre cave (en haut de Ma cave, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Ma cave.` };
 }
 
 // ───────── Panier (page Vins) ─────────
 const bouteilles = (n: number) => `${n} bouteille${n > 1 ? 's' : ''}`;
 
 /** Ajoute des bouteilles d'un vin au panier (elles s'ajoutent à celles qui y sont déjà). */
-export async function ajouterAuPanier(resto: string, vinId: string, quantite: number): Promise<Retour> {
+export async function ajouterAuPanier(resto: string, vinId: string, quantite: number, fournisseur?: string | null): Promise<Retour> {
   await exigerAcces(resto);
   const q = Math.floor(Number(quantite));
   if (!Number.isFinite(q) || q < 1 || q > 10000) return { erreur: 'Indiquez un nombre de bouteilles.' };
-  const [v] = await requete<{ libelle: string }>('select libelle from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  const [v] = await requete<{ libelle: string; fournisseur_id: string | null }>('select libelle, fournisseur_id from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
   if (!v) return { erreur: 'Vin introuvable.' };
+  // Distributeur choisi sur la ligne (page Vins) mais pas encore enregistré : il est enregistré avec l'ajout au panier.
+  if (typeof fournisseur === 'string' && fournisseur !== 'nouveau' && fournisseur !== (v.fournisseur_id ?? '')) {
+    const groupes = await lignesDesVins(resto, [vinId]);
+    await choisirFournisseur(resto, groupes.get(vinId)?.length ? groupes.get(vinId)! : [vinId], fournisseur, null);
+  }
   const [l] = await requete<{ quantite: number }>(`insert into panier (restaurant_id, vin_id, quantite) values ($1, $2, $3)
      on conflict (restaurant_id, vin_id) do update set quantite = panier.quantite + excluded.quantite returning quantite`, [resto, vinId, q]);
   rafraichir(resto);
@@ -480,12 +485,15 @@ export async function viderPanier(resto: string): Promise<Retour> {
 export async function commanderPanier(resto: string): Promise<Retour> {
   const u = await exigerAcces(resto);
   const lignes = await requete<{ vin_id: string; quantite: number; fournisseur_id: string | null; qv: boolean; distributeur_vin_id: string | null }>(
-    `select p.vin_id, p.quantite, v.fournisseur_id, f.distributeur_id is not null as qv,
+    `select p.vin_id, p.quantite, f.id as fournisseur_id, f.distributeur_id is not null as qv,
             -- Son vin dans le catalogue du distributeur Quid Vinum : celui relié, sinon le même vin de la base (même millésime d'abord).
             coalesce((select dv.id from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id and dv.actif),
                      (select dv.id from distributeur_vin dv where v.cuvee_id is not null and dv.cuvee_id = v.cuvee_id and dv.distributeur_id = f.distributeur_id and dv.actif
                        order by (dv.millesime is not distinct from v.millesime) desc limit 1)) as distributeur_vin_id
-       from panier p join vin_carte v on v.id = p.vin_id left join fournisseur f on f.id = v.fournisseur_id
+       from panier p join vin_carte v on v.id = p.vin_id
+       -- Distributeur du vin : celui de sa ligne, sinon celui d'une autre contenance du même vin.
+       left join fournisseur f on f.id = coalesce(v.fournisseur_id, (select x.fournisseur_id from vin_carte x where x.restaurant_id = v.restaurant_id
+                                   and lower(x.libelle) = lower(v.libelle) and x.millesime is not distinct from v.millesime and x.fournisseur_id is not null limit 1))
       where p.restaurant_id = $1 order by p.ajoute_le`, [resto]);
   if (!lignes.length) return { erreur: 'Le panier est vide.' };
   const creees: string[] = [];

@@ -34,7 +34,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
   const propres = fournisseurs.filter((f) => !f.distributeur_id), quidVinum = fournisseurs.filter((f) => f.distributeur_id);
   return (
     <>
-      <Entete titre="Distributeurs" texte="Les distributeurs et fournisseurs chez qui vous achetez votre vin : leurs coordonnées figurent sur vos bons de commande, envoyés à leur adresse e-mail. Choisissez le distributeur de chaque vin dans Vins ou dans la fiche du vin." />
+      <Entete titre="Distributeurs" texte="Les distributeurs et fournisseurs chez qui vous achetez votre vin : leurs coordonnées figurent sur vos bons de commande, envoyés à leur adresse e-mail. Choisissez le distributeur de chaque vin dans Ma cave ou dans la fiche du vin." />
       <section className="pile" id="mes-distributeurs">
         <div><h2 style={{ margin: 0 }}>Mes distributeurs</h2><p className="sous" style={{ margin: '4px 0 0' }}>Vos propres distributeurs et fournisseurs : vos bons de commande leur sont envoyés directement.</p></div>
         {propres.map((f) => (

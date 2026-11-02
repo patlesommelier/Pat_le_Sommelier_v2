@@ -16,11 +16,18 @@ function useToast() {
 }
 
 /** Sur une ligne de la page Vins : nombre de bouteilles et bouton « Au panier » (hors du formulaire des stocks). */
-export function AjoutPanier({ ajouter, libelle, dansPanier }: { ajouter: (q: number) => Promise<Retour>; libelle: string; dansPanier: number }) {
+export function AjoutPanier({ ajouter, libelle, dansPanier, champFournisseur }: {
+  ajouter: (q: number, fournisseur?: string | null) => Promise<Retour>; libelle: string; dansPanier: number;
+  /** Nom de la liste « Distributeur » de la ligne (page Vins) : son choix, même pas encore enregistré, vaut pour la commande. */
+  champFournisseur?: string;
+}) {
   const [q, setQ] = useState('6');
   const [enCours, demarrer] = useTransition();
   const { montrer, toast } = useToast();
-  const envoyer = () => demarrer(async () => montrer(await ajouter(Number(q))));
+  const envoyer = () => {
+    const liste = champFournisseur ? document.querySelector<HTMLSelectElement>(`select[name="${champFournisseur}"]`) : null;
+    demarrer(async () => montrer(await ajouter(Number(q), liste ? liste.value : undefined)));
+  };
   return (
     <span className="ajout-panier">
       <input type="number" min={1} max={10000} value={q} onChange={(e) => setQ(e.target.value)} aria-label={`Bouteilles à mettre au panier : ${libelle}`}
@@ -76,14 +83,14 @@ export function Panier({ lignes, modifier, vider, commander }: {
   );
 }
 
-/** Catalogue d'un distributeur : « Ajouter à mes vins » (le vin rejoint la page Vins, puis se commande). */
+/** Catalogue d'un distributeur : « + » (Ajouter à ma cave) ; le vin rejoint Ma cave, puis se commande. */
 export function AjoutCatalogue({ ajouter, libelle }: { ajouter: () => Promise<Retour>; libelle: string }) {
   const [enCours, demarrer] = useTransition();
   const { montrer, toast } = useToast();
   return (
     <span>
-      <button type="button" className="btn sec petit" style={{ whiteSpace: 'nowrap' }} disabled={enCours} aria-label={`Ajouter à mes vins : ${libelle}`}
-        onClick={() => demarrer(async () => montrer(await ajouter()))}>{enCours ? 'Ajout…' : '+ Ajouter à mes vins'}</button>
+      <button type="button" className="btn sec petit bouton-plus" disabled={enCours} aria-label={`Ajouter à ma cave : ${libelle}`} title="Ajouter à ma cave"
+        onClick={() => demarrer(async () => montrer(await ajouter()))}>{enCours ? '…' : '+'}</button>
       {toast}
     </span>
   );

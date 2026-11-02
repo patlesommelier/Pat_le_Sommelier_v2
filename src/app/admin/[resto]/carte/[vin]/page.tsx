@@ -78,7 +78,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
 
   return (
     <>
-      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Vins' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
+      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Ma cave' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
       <header className="bo-entete">
         <div>
           {/* Code interne du vin : super-admin seulement. */}
@@ -195,7 +195,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               {offre && <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}</div>}
               {/* Commande : avec le panier (page Vins), jamais un bouton « Commander chez … ». */}
               <div className="champ" style={{ margin: 0 }}><label>Panier</label>
-                <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier} /></div>
+                <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier} champFournisseur="fournisseur" /></div>
             </div>
           ) : (
             <div className="champ" style={{ margin: 0 }}>

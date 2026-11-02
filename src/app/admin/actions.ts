@@ -449,6 +449,9 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   const champs = { appellation: txt(f, 'appellation_texte'), nom: txt(f, 'nom_vin'), cepage: txt(f, 'cepages'), producteur: txt(f, 'producteur_texte') };
   const libelle = txt(f, 'libelle') ?? (composerIntitule(champs) || null);
   if (!libelle) return { erreur: 'Indiquez au moins l’appellation ou le nom du vin.' };
+  // Un vin n'est qu'une fois dans vos vins (même millésime) : même vin du catalogue, même vin de la base ou même intitulé.
+  const deja = await vinDejaPresent(resto, libelle, txt(f, 'millesime'), txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
+  if (deja) return { erreur: `« ${deja.libelle}${deja.millesime && !deja.libelle.includes(deja.millesime) ? ` ${deja.millesime}` : ''} » est déjà dans vos vins${deja.disponible ? '' : ' (pas encore sur votre carte)'} : ouvrez sa fiche depuis Ma cave pour changer ses contenances ou ses prix.` };
   let etiquette: string | null = null;
   const image = fichier(f, 'etiquette');
   if (image) {
@@ -486,6 +489,21 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   // Retour à la base de vins ; un vin pris chez un distributeur : proposé à la commande.
   redirect(avec(`/admin/${resto}/stocks`, { ajoute: id, ...(offre ? { commander: '1' } : {}),
     ok: `« ${libelle} » ajouté : Pat prépare ses accords avec vos plats (quelques minutes).` }));
+}
+
+/** Vin déjà dans les vins du restaurant (même millésime) : le même vin d'un catalogue, de la base de Pat, ou le même intitulé. */
+async function vinDejaPresent(resto: string, libelle: string, millesime: string | null, distributeurVin: string | null, baseCle: string | null) {
+  const [type, ref] = (baseCle ?? '').split(/:(.*)/s);
+  const [v] = await requete<{ id: string; libelle: string; millesime: string | null; disponible: boolean }>(
+    `select v.id, v.libelle, v.millesime, v.disponible from vin_carte v
+      where v.restaurant_id = $1 and (
+            ($2::text is not null and v.distributeur_vin_id = $2)
+         or (coalesce(v.millesime, '') = coalesce($5, '') and (
+                lower(btrim(v.libelle)) = lower(btrim($4))
+             or ($3::text is not null and v.cuvee_id = case $6 when 'cuvee' then $3 when 'carte' then (select x.cuvee_id from vin_carte x where x.id = $3) end))))
+      order by v.disponible desc limit 1`,
+    [resto, distributeurVin, ref || null, libelle, millesime, type]);
+  return v ?? null;
 }
 
 /** Vin pris dans le catalogue d'un distributeur de Quid Vinum : rattaché au distributeur, et relié au vin de la base s'il l'est. */

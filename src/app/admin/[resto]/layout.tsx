@@ -12,7 +12,7 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus
 // « Base des vins » (vins, stocks, commandes, distributeurs) : sous « Cartes et menus » (règles du sommelier comprises), avant l'app client.
 function avecStocks(resto: string, etapes: Etape[]): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Vins', 'stock'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
+  const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur'], ['parametres', 'Paramètres', 'reglages']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Base des vins', icone }));
   const app = etapes.findIndex((e) => e.groupe === 'App client');
   return app < 0 ? [...etapes, ...stocks] : [...etapes.slice(0, app), ...stocks, ...etapes.slice(app)];

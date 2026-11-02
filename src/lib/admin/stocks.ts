@@ -141,6 +141,8 @@ export async function getPanier(resto: string) {
             coalesce(case when f.distributeur_id is not null then (select round(dv.prix_qv * (1 + coalesce(f.marge,
               (select case when valeur ~ '^[0-9]+([.][0-9]+)?$' then valeur::numeric end from reglage_serveur where cle = 'qv_marge'), 15) / 100), 2)
               from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id) end, v.prix_achat)::float8 as prix_achat
-       from panier p join vin_carte v on v.id = p.vin_id left join fournisseur f on f.id = v.fournisseur_id
+       from panier p join vin_carte v on v.id = p.vin_id
+       left join fournisseur f on f.id = coalesce(v.fournisseur_id, (select x.fournisseur_id from vin_carte x where x.restaurant_id = v.restaurant_id
+                                   and lower(x.libelle) = lower(v.libelle) and x.millesime is not distinct from v.millesime and x.fournisseur_id is not null limit 1))
       where p.restaurant_id = $1 order by f.distributeur_id is null, lower(coalesce(f.nom, 'zzz')), p.ajoute_le`, [resto]);
 }

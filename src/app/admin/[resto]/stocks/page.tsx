@@ -47,7 +47,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+      <Entete titre="Ma cave" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
         {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
         <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
@@ -113,7 +113,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
                         {/* Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut). */}
-                        <td><AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} /></td>
+                        <td><AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} champFournisseur={`fournisseur_${v.id}`} /></td>
                       </tr>
                     );
                   })}
