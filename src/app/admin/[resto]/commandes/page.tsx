@@ -208,7 +208,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
 
   return (
     <>
-      <Entete titre="Commandes de vin" texte="Commandez à vos distributeurs : le bon de commande est préparé, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
+      <Entete titre="Commandes" texte="Commandez à vos distributeurs : le bon de commande est préparé, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
         <Superposition bouton="+ Nouvelle commande" titre="Nouvelle commande" classeBouton="btn rouge" large ouvert={Boolean(sp.f || sp.vin)}>
           {nouvelle}
         </Superposition>

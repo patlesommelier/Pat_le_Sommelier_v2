@@ -43,7 +43,7 @@ export async function refuserCommandeQv(id: string, f: FormData): Promise<Retour
     const erreur = await envoyerEmail({
       a: bon.restaurant.email, sujet: `Commande ${ref} refusée par Quid Vinum`,
       texte: `Bonjour,\n\nQuid Vinum ne peut pas donner suite à votre commande n° ${ref} :\n\n${motif}\n\n`
-        + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n') + '\n\nLa commande est annulée ; vous pouvez en passer une nouvelle depuis Commandes de vin.\n\nQuid Vinum',
+        + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}`).join('\n') + '\n\nLa commande est annulée ; vous pouvez en passer une nouvelle depuis Commandes.\n\nQuid Vinum',
     });
     note = erreur ? ` (e-mail au restaurant non envoyé : ${erreur})` : ' Le restaurant est prévenu par e-mail.';
   }

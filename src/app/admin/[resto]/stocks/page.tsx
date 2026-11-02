@@ -34,7 +34,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
     .map((g) => ({ ...g, bas: g.disponible && stockBas(g.principal.stock, limite) }));
   const bas = groupes.filter((g) => g.bas);
   const affiches = filtre === 'bas' ? bas : groupes;
-  const parCouleur = COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((c) => c.groupes.length);
+  // Vins pas (ou plus) sur la carte, dont ceux ajoutés depuis un catalogue : en tête, pour les retrouver et les commander.
+  const parCouleur = [{ titre: 'Pas encore sur votre carte', groupes: affiches.filter((g) => !g.disponible) },
+    ...COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.disponible && g.principal.couleur === k) }))].filter((c) => c.groupes.length);
   const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
   // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
   const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
@@ -59,9 +61,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
-          <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Voulez-vous le commander ?</span>
-          <Link href={`/admin/${resto}/commandes?f=${ajouteChez.fournisseur_id}&vin=${encodeURIComponent(ajoute!)}#nouvelle`} className="btn rouge">Commander</Link>
-          <Link href={`/admin/${resto}/stocks`} className="btn fantome petit">Plus tard</Link>
+          <span>{ok} <b>« {ajouteChez.libelle} »</b> est disponible chez <b>{ajouteChez.distributeur}</b>{ajouteChez.prix_achat != null ? ` à ${euros(ajouteChez.prix_achat)} HTVA` : ''}. Mettez-le au panier pour le commander :</span>
+          <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, ajoute!)} libelle={ajouteChez.libelle} dansPanier={auPanier.get(ajoute!) ?? 0} />
+          <Link href={`/admin/${resto}/stocks`} className="btn fantome petit">Fermer</Link>
         </div>
       )}
       <section className="stats" aria-label="Résumé des stocks">

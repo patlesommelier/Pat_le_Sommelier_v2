@@ -17,8 +17,12 @@ export async function commandesQv(statut?: string) {
     `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.statut, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.restaurant_id, r.nom as restaurant,
             case when c.quid_vinum then 'Quid Vinum (plusieurs distributeurs)' else coalesce(f.nom, c.fournisseur_nom) end as destinataire
        from commande c join restaurant r on r.id = c.restaurant_id left join fournisseur f on f.id = c.fournisseur_id
-      where (c.quid_vinum or f.distributeur_id is not null)
-        and ($1::text is null or ($1 = 'a_envoyer' and c.envoyee_le is null and c.statut = 'ouverte') or c.statut_qv = $1 or ($1 = 'annulee' and c.statut = 'annulee' and c.statut_qv is distinct from 'refusee'))
+      where (c.quid_vinum or f.distributeur_id is not null
+             or exists (select 1 from commande_ligne l where l.commande_id = c.id and l.distributeur_vin_id is not null)) -- distributeur retiré depuis
+        -- Une commande annulée par le restaurant quitte l'onglet de son suivi (reçue, acceptée…) pour « Annulées ».
+        and ($1::text is null or ($1 = 'a_envoyer' and c.envoyee_le is null and c.statut = 'ouverte')
+             or (c.statut_qv = $1 and ($1 = 'refusee' or c.statut <> 'annulee'))
+             or ($1 = 'annulee' and c.statut = 'annulee' and c.statut_qv is distinct from 'refusee'))
       order by c.cree_le desc limit 300`, [statut || null]);
   const lignes = commandes.length ? await requete<CommandeQv['lignes'][number] & { commande_id: string }>(
     `select l.commande_id, l.libelle, l.detail, l.quantite, l.recue, l.prix_achat::float8 as prix_achat, v.prix_qv::float8 as prix_qv, d.nom as distributeur

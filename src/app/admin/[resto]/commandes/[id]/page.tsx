@@ -27,7 +27,7 @@ export default async function BonDeCommande({ params }: { params: Promise<{ rest
   const envoyee = Boolean(c.envoyee_le);
   return (
     <>
-      <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes de vin</Link>
+      <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
       <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
         {c.statut === 'ouverte'
           ? (envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)

@@ -36,7 +36,7 @@ export default async function Parametres({ params }: { params: Promise<{ resto: 
             {champ('commande_email', 'Adresse e-mail', c.commande_email, { type: 'email', aide: 'Le fournisseur y répond ; vous recevez une copie de chaque bon envoyé.' })}
           </div>
           <span className="petit discret">{envoiEmailConfigure()
-            ? '« Envoyer au fournisseur » envoie le bon de commande par e-mail, en pièce jointe (PDF), directement depuis la page Commandes de vin.'
+            ? '« Envoyer au fournisseur » envoie le bon de commande par e-mail, en pièce jointe (PDF), directement depuis la page Commandes.'
             : '« Envoyer au fournisseur » ouvre votre messagerie avec la commande rédigée et télécharge le bon de commande (PDF), à joindre à l’e-mail.'}</span>
         </section>
         <span><button className="btn">Enregistrer les paramètres</button></span>

@@ -7,7 +7,7 @@ import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, modeTestDistributeurs, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
 import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
-import { ajouterVinCommande, rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
+import { ajouterVinCommande } from '@/lib/admin/distributeur-vin';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
@@ -130,7 +130,7 @@ export async function ajouterDistributeurQv(resto: string, distributeurId: strin
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
   rafraichir(resto);
-  return { ok: `« ${d.nom} » est ajouté à vos distributeurs : commandez dans son catalogue depuis Commandes de vin.` };
+  return { ok: `« ${d.nom} » est ajouté à vos distributeurs : ouvrez son catalogue pour ajouter ses vins à vos vins.` };
 }
 
 // ───────── Paramètres ─────────
@@ -403,15 +403,6 @@ export async function annulerCommande(resto: string, id: string): Promise<Retour
   redirect(`/admin/${resto}/commandes?${new URLSearchParams({ ok: `Commande annulée.${prevenu}` })}`);
 }
 
-/** Base de vins : un vin de la carte vendu par un distributeur de Quid Vinum, commandé chez lui (il devient son fournisseur). */
-export async function commanderChezDistributeur(resto: string, vinId: string, offreId: string) {
-  await exigerAcces(resto);
-  const o = await rattacherAuDistributeur(resto, [vinId], offreId);
-  revalidatePath(`/admin/${resto}`, 'layout');
-  if (!o?.fournisseur_id) redirect(`/admin/${resto}/stocks?${new URLSearchParams({ erreur: 'Ce vin n’est plus proposé par ce distributeur.' })}`);
-  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: o.fournisseur_id, vin: vinId })}#nouvelle`);
-}
-
 /**
  * Catalogue d'un distributeur Quid Vinum : le vin est ajouté aux vins du restaurant (page Vins, stock 0, pas encore sur la carte),
  * avec ce distributeur et le prix de son catalogue ; il se commande ensuite depuis le panier. Le distributeur devient actif s'il ne l'était pas.
@@ -428,11 +419,23 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
     [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
   const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2', [resto, distributeurId]);
+  // Le même vin est déjà dans vos vins (sur la carte) : il est relié à ce distributeur, à ce prix, plutôt qu'ajouté en double.
+  const vins = await requete<{ id: string; libelle: string; millesime: string | null; format: string; producteur: string | null; producteur_id: string | null }>(
+    `select v.id, v.libelle, v.millesime, v.format, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur, v.producteur_id
+       from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [resto]);
+  const meme = vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur }, vins);
+  if (meme) {
+    await requete('update vin_carte set distributeur_vin_id = $3, prix_achat = $4 where restaurant_id = $1 and id = $2', [resto, meme.id, c.id, c.prix]);
+    await choisirFournisseur(resto, [meme.id], f.id, null);
+    rafraichir(resto);
+    revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
+    return { ok: `« ${meme.libelle} » est déjà dans vos vins : il est maintenant relié à ${d.nom}, au prix de son catalogue.` };
+  }
   const id = await ajouterVinCommande(resto, distributeurVinId, f.id, c.prix, 0);
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à vos vins : mettez-le au panier ici ou depuis Vins.` };
+  return { ok: `« ${c.libelle} » est ajouté à vos vins (en haut de Vins, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Vins.` };
 }
 
 // ───────── Panier (page Vins) ─────────
@@ -478,7 +481,10 @@ export async function commanderPanier(resto: string): Promise<Retour> {
   const u = await exigerAcces(resto);
   const lignes = await requete<{ vin_id: string; quantite: number; fournisseur_id: string | null; qv: boolean; distributeur_vin_id: string | null }>(
     `select p.vin_id, p.quantite, v.fournisseur_id, f.distributeur_id is not null as qv,
-            (select dv.id from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id and dv.actif) as distributeur_vin_id
+            -- Son vin dans le catalogue du distributeur Quid Vinum : celui relié, sinon le même vin de la base (même millésime d'abord).
+            coalesce((select dv.id from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id and dv.actif),
+                     (select dv.id from distributeur_vin dv where v.cuvee_id is not null and dv.cuvee_id = v.cuvee_id and dv.distributeur_id = f.distributeur_id and dv.actif
+                       order by (dv.millesime is not distinct from v.millesime) desc limit 1)) as distributeur_vin_id
        from panier p join vin_carte v on v.id = p.vin_id left join fournisseur f on f.id = v.fournisseur_id
       where p.restaurant_id = $1 order by p.ajoute_le`, [resto]);
   if (!lignes.length) return { erreur: 'Le panier est vide.' };

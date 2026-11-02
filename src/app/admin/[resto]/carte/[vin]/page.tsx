@@ -13,10 +13,11 @@ import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule'
 import { autresContenances, etatEtiquette, etatProducteur } from '../etats';
 import { CONTENANCES, contenanceDuFormat, ordonner } from '@/lib/contenances';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
-import { getFournisseurs, getPrixAchat } from '@/lib/admin/stocks';
+import { getFournisseurs, getPanier, getPrixAchat } from '@/lib/admin/stocks';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
-import { commanderChezDistributeur } from '../../../stocks-actions';
+import { ajouterAuPanier } from '../../../stocks-actions';
+import { AjoutPanier } from '@/components/admin/Panier';
 import { euros } from '@/lib/bon-commande';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blancs', rose: 'Rosés', rouge: 'Rouges', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
@@ -36,9 +37,10 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const { resto, vin } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const id = decodeURIComponent(vin);
-  const [vins, u, fournisseurs] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getFournisseurs(resto)]);
+  const [vins, u, fournisseurs, panier] = await Promise.all([getVinsBO(resto), utilisateurCourant(), getFournisseurs(resto), getPanier(resto)]);
   const v = vins.find((x) => x.id === id);
   if (!v) notFound();
+  const auPanier = panier.find((l) => l.vin_id === v.id)?.quantite ?? 0;
   // Rankings : chargés seulement pour Pat (administrateur), jamais pour un compte restaurant.
   const r = u?.admin ? (await getRankingsInternes(resto)).get(v.id) : null;
   const etoiles = r ? ` · ${ligneNotesPat(r)}` : '';
@@ -190,13 +192,10 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               </div>
               <div className="champ" style={{ margin: 0 }}><label>Distributeur</label>
                 <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} /></div>
-              {offre && (
-                <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}{' '}
-                  <button formAction={commanderChezDistributeur.bind(null, resto, v.id, offre.id)} className="btn sec petit">Commander chez {offre.distributeur}</button></div>
-              )}
-              {fournisseur ? <span><Link href={`/admin/${resto}/commandes?${new URLSearchParams({ f: fournisseur.id, vin: v.id })}#nouvelle`} className="btn rouge petit">
-                Commander chez {fournisseur.nom}</Link></span>
-                : <span className="petit discret">Choisissez son distributeur pour pouvoir le commander.</span>}
+              {offre && <div className="petit offre-qv">Disponible chez <b>{offre.distributeur}</b>{offre.prix != null ? ` · ${euros(offre.prix)} HTVA` : ''}</div>}
+              {/* Commande : avec le panier (page Vins), jamais un bouton « Commander chez … ». */}
+              <div className="champ" style={{ margin: 0 }}><label>Panier</label>
+                <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier} /></div>
             </div>
           ) : (
             <div className="champ" style={{ margin: 0 }}>
