@@ -7,6 +7,7 @@ import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { centilitres } from '@/lib/contenances';
 import { completerBase } from '@/lib/admin/completer-base';
+import { cepageDuNom } from '@/lib/distributeurs/cepages';
 import { offreDuCatalogue, type VinCatalogueComplet, type VinCarteComplet } from '@/lib/distributeurs/tarif';
 
 export async function rattacherAuDistributeur(resto: string, vinIds: string[], offreId: string) {
@@ -73,15 +74,6 @@ export async function associerAuCatalogue(resto: string, vinIds: string[], fourn
 
 /** Mots d'un vin blanc : la couleur, ou un cépage blanc (« Riesling », « Chardonnay »…). */
 export const BLANCS = 'blanc|blanche|bianco|blanco|weiss|weisser|riesling|chardonnay|sauvignon|chenin|viognier|gewurztraminer|pinot gris|pinot blanc|sylvaner|muscat|gruner|veltliner|albarino|vermentino|grillo|catarratto|carricante|fiano|greco|falanghina|verdicchio|garganega|soave|chablis|sancerre|semillon|marsanne|roussanne|aligote|melon|muscadet|savagnin|jacquere|altesse|petite arvine|furmint|assyrtiko|godello|verdejo|txakoli|arneis|timorasso|friulano|ribolla';
-/** Cépage écrit dans le nom du vin (« Riesling », « Alsace 'Pinot Gris' ») : il devient son cépage. */
-const CEPAGES_NOMMES = ['pinot gris', 'pinot blanc', 'pinot noir', 'pinot meunier', 'riesling', 'gewurztraminer', 'sylvaner', 'muscat', 'chardonnay', 'sauvignon blanc',
-  'sauvignon', 'chenin', 'viognier', 'gamay', 'syrah', 'grenache', 'merlot', 'cabernet franc', 'cabernet sauvignon', 'malbec', 'nero d avola', 'nebbiolo',
-  'sangiovese', 'barbera', 'primitivo', 'aglianico', 'vermentino', 'grillo', 'tempranillo', 'albarino', 'gruner veltliner', 'auxerrois', 'aligote'];
-export function cepageDuNom(libelle: string): string | null {
-  const t = ` ${libelle.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z]+/g, ' ')} `;
-  const trouves = CEPAGES_NOMMES.filter((c) => t.includes(` ${c} `)).filter((c, _, l) => !l.some((x) => x !== c && x.includes(c)));
-  return trouves.length ? trouves.join(', ') : null;
-}
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux', 'sans_alcool'];
 const CONTENANCE_CODE: Record<number, string> = { 75: 'bouteille', 37.5: 'demi', 18.7: 'quart', 150: 'magnum' };
 

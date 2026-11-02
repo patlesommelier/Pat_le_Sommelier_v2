@@ -57,7 +57,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
 
       <div className="rangee">
         <div className="large" style={{ gap: 16 }}>
-          <details className="carte-bo" open={!tous.length}>
+          <details className="carte-bo bloc-fiche bloc-distrib" open={!tous.length}>
             <summary style={{ cursor: 'pointer', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" />}
@@ -96,8 +96,9 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           </FormulaireAdmin>
             </div>
           </details>
-          <section className="carte-bo pile">
-            <div><h2>Tarif</h2><p className="sous">{d.source === 'api'
+          <details className="carte-bo pile bloc-fiche bloc-distrib" open>
+            <summary><h2 style={{ margin: 0 }}>Tarif</h2><span className="petit discret">{d.source === 'api' ? 'API du distributeur' : 'Fichier ou liste collée'}</span></summary>
+            <div><p className="sous">{d.source === 'api'
               ? 'Le tarif est lu depuis l’API du distributeur. Un tableau dont les colonnes sont reconnues est lu sans IA ; sinon, par Claude.'
               : 'Déposez le tarif : un PDF ou un document Word (leur texte est lu par Claude, le modèle choisi dans les coordonnées ; les photos d’un document Word vont aux vins), ou un fichier Excel ou CSV (ses colonnes sont reconnues sans IA quand c’est possible).'}
               {' '}Un vin déjà connu garde son prix imposé et son producteur choisi à la main ; un vin absent du nouveau tarif n’est plus proposé.</p></div>
@@ -144,10 +145,11 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 ? <>{api}<details><summary style={{ cursor: 'pointer' }} className="petit">Ou déposer un fichier</summary><div style={{ marginTop: 10 }}>{fichier}</div></details></>
                 : <>{fichier}<details><summary style={{ cursor: 'pointer' }} className="petit">Brancher l’API du distributeur</summary><div style={{ marginTop: 10 }}>{api}</div></details></>;
             })()}
-          </section>
+          </details>
 
-          <section className="carte-bo pile" id="base">
-            <div><h2>Producteurs et base de Pat</h2><p className="sous">Chaque producteur du tarif est relié à la base de Pat : celui que Pat a reconnu (avec son ranking), un producteur proche à choisir, ou ajouté à la base, à valider dans Producteurs. Le choix vaut pour tous ses vins, et pour les prochains tarifs.</p></div>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" id="base" open>
+            <summary><h2 style={{ margin: 0 }}>Producteurs et base Quid Vinum</h2><span className="petit discret">{duTarif.filter((p) => p.producteur_id).length} reliés · {aRelier.length} à relier</span></summary>
+            <div><p className="sous">Chaque producteur du tarif est relié à la base de Pat : celui que Pat a reconnu (avec son ranking), un producteur proche à choisir, ou ajouté à la base, à valider dans Producteurs. Le choix vaut pour tous ses vins, et pour les prochains tarifs.</p></div>
             <div className="ligne-actions" style={{ alignItems: 'center' }}>
               <span><b>{duTarif.filter((p) => p.producteur_id).length}</b> reliés · <b>{aRelier.length}</b> à relier</span>
               <Link href={`?prod=${sp.prod === 'tous' ? '' : 'tous'}#base`} className="btn fantome petit">{sp.prod === 'tous' ? 'Seulement ceux à relier ou à valider' : `Voir les ${duTarif.length} producteurs`}</Link>
@@ -189,10 +191,11 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 </div>
               ))}
             </div>
-          </section>
+          </details>
 
-          <section className="carte-bo pile" style={{ gap: 10 }}>
-            <div><h2 style={{ margin: 0 }}>Restaurants et marges de Quid Vinum</h2>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }} open>
+            <summary><h2 style={{ margin: 0 }}>Restaurants et marges</h2><span className="petit discret">{restos.length} restaurant{restos.length > 1 ? 's' : ''}</span></summary>
+            <div>
               <p className="sous" style={{ margin: '4px 0 0' }}>Prix vendu au restaurant (HTVA) = prix QV + la marge du restaurant. Un restaurant qui active ce distributeur reçoit la marge par défaut ({String(defaut).replace('.', ',')} %, à changer dans la page Distributeurs). Les restaurants ne voient ni le prix QV ni la marge.</p></div>
             {restos.length ? (
               <FormulaireAdmin action={enregistrerMarges.bind(null, id)} className="pile" style={{ gap: 8 }}>
@@ -205,11 +208,11 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 <span><button className="btn sec petit">Enregistrer les marges</button></span>
               </FormulaireAdmin>
             ) : <span className="petit discret">Aucun restaurant n’a encore activé ce distributeur.</span>}
-          </section>
+          </details>
 
-          <section className="pile">
+          <details className="carte-bo pile bloc-fiche bloc-distrib" open>
+            <summary><h2 style={{ margin: 0 }}>Vins</h2><span className="petit discret">{actifs.length} proposés · {rattaches} d’un producteur de la base · {dansLaBase} vins de la base</span></summary>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'baseline', justifyContent: 'space-between' }}>
-              <h2 style={{ margin: 0 }}>Vins <span className="discret" style={{ fontWeight: 500 }}>{actifs.length} proposés · {rattaches} d’un producteur de la base · {dansLaBase} vins de la base</span></h2>
               <Link href={`/admin/super/vins?${new URLSearchParams({ distrib: id, statut: 'propose' })}`} className="btn fantome petit">Voir ses vins à valider dans la base →</Link>
               <form className="ligne-actions" style={{ alignItems: 'center' }}>
                 <input name="q" defaultValue={sp.q ?? ''} type="search" className="recherche" placeholder="Chercher un vin, un domaine…" aria-label="Chercher" />
@@ -304,7 +307,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                 <span><button className="btn sec">Ajouter</button></span>
               </FormulaireAdmin>
             </details>
-          </section>
+          </details>
         </div>
 
       </div>

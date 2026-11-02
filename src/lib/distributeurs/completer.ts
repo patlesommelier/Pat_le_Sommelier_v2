@@ -10,6 +10,8 @@ import { cleAppellation } from '../appellations/regroupement';
 import { extraireVins, modeleTarif, type ModeleTarif } from './lecture';
 import { garder, partagerEtiquettesDistributeur, telecharger } from './etiquettes';
 import { recadrerSurEtiquette } from './recadrage';
+import { cepageDuNom } from './cepages';
+import { appliquerAppellations } from './rattachement';
 
 /** Cépages remis en forme : sans pourcentages, en minuscules, séparés par des virgules (« Chardonnay 80 %, Pinot Noir 20% » → « chardonnay, pinot noir »). */
 export function normaliserCepages(texte: string | null | undefined): string | null {
@@ -44,15 +46,18 @@ async function etiquetteDepuisPhoto(client: Anthropic, modele: string, url: stri
 const LOT = 6;
 const EN_PARALLELE = 3;
 
-const consigne = (distributeur: string, domaine: string | null, vins: Array<{ id: string; producteur: string; nom: string; millesime: string | null; sans_photo: boolean }>) =>
+type VinACompleter = { id: string; producteur: string; nom: string; millesime: string | null; sans_photo: boolean; sans_cepages: boolean; sans_appellation: boolean };
+const aTrouver = (v: VinACompleter) => [v.sans_appellation ? 'appellation' : '', v.sans_cepages ? 'cépages' : '', v.sans_photo ? 'photo' : ''].filter(Boolean).join(', ');
+const consigne = (distributeur: string, domaine: string | null, vins: VinACompleter[]) =>
   `Tu complètes la base de vins d'un sommelier. Pour chacun de ces vins, vendus par le distributeur ${distributeur}${domaine ? ` (site public : ${domaine})` : ''},
-trouve l'appellation, les cépages et, pour ceux marqués « photo à trouver », la photo de la bouteille${domaine ? ` sur le site de ${distributeur} (cherche avec web_search, ouvre les pages produits avec web_fetch)` : ' (cherche avec web_search)'}.
+trouve seulement ce qui est indiqué entre parenthèses${domaine ? ` sur le site de ${distributeur} : cherche la fiche du vin avec web_search, puis ouvre seulement cette fiche avec web_fetch` : ' (cherche avec web_search)'}.
+Économise : une recherche et une page au plus par vin ; n'ouvre ni les pages de liste, ni les pages d'autres vins ; si la fiche n'est pas trouvée, réponds null.
 
-${vins.map((v) => `- id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` ${v.millesime}` : ''}${v.sans_photo ? ' (photo à trouver)' : ''}`).join('\n')}
+${vins.map((v) => `- id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` ${v.millesime}` : ''} (à trouver : ${aTrouver(v)})`).join('\n')}
 
-Pour chaque vin : « appellation » (le nom officiel, sans « AOC », « DOC »… à la fin, ex. « Trento », « Barolo », « Franciacorta » ; null si introuvable)
-, « cepages » (les cépages tels qu'indiqués, ex. « Chardonnay 80%, Pinot Noir 20% » ; null si introuvable)
-et « image » (seulement pour un vin marqué « photo à trouver » : l'adresse complète, telle qu'elle figure sur la page du vin, de l'image
+Pour chaque vin : « appellation » (le nom officiel, sans « AOC », « DOC »… à la fin, ex. « Trento », « Barolo », « Franciacorta » ; null si introuvable ou pas demandée)
+, « cepages » (les cépages tels qu'indiqués, ex. « Chardonnay 80%, Pinot Noir 20% » ; null si introuvables ou pas demandés)
+et « image » (seulement si la photo est demandée : l'adresse complète, telle qu'elle figure sur la page du vin, de l'image
 de son étiquette — de préférence l'étiquette seule, sinon la photo de la bouteille de face, étiquette lisible ; pas un logo, une bannière
 ni la photo d'un autre vin ; null sinon). N'invente rien : en cas de doute, null.
 Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "appellation": "...", "cepages": "...", "image": null}]}`;
@@ -60,8 +65,9 @@ Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "appell
 /** Recherche pour un lot de vins (outils de recherche web côté serveur, avec reprise des tours mis en pause). */
 async function chercherLot(client: Anthropic, modele: string, texte: string, domaine: string | null) {
   const outils = [
-    { type: 'web_search_20260209', name: 'web_search', max_uses: 8, ...(domaine ? { allowed_domains: [domaine] } : {}) },
-    { type: 'web_fetch_20260209', name: 'web_fetch', max_uses: 12, ...(domaine ? { allowed_domains: [domaine] } : {}) },
+    // Coût : peu de recherches, et seulement le début de chaque page lue (la fiche du vin, pas les menus ni les autres vins).
+    { type: 'web_search_20260209', name: 'web_search', max_uses: 5, ...(domaine ? { allowed_domains: [domaine] } : {}) },
+    { type: 'web_fetch_20260209', name: 'web_fetch', max_uses: 7, max_content_tokens: 3000, ...(domaine ? { allowed_domains: [domaine] } : {}) },
   ];
   const messages: Anthropic.MessageParam[] = [{ role: 'user', content: texte }];
   for (let tour = 0; tour < 4; tour++) {
@@ -87,16 +93,27 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
     const [d] = await requete<{ nom: string; site: string | null; modele_lecture: ModeleTarif }>('select nom, site, modele_lecture from distributeur where id = $1', [distributeurId]);
     if (!d) return;
     const domaine = domaineDuSite(d.site);
+    // D'abord sans IA (gratuit) : l'appellation donnée par le tarif, et le cépage écrit dans le nom du vin.
+    await appliquerAppellations(requete, distributeurId);
+    const sansCepages = await requete<{ id: string; nom: string; libelle: string }>(
+      `select distinct on (c.id) c.id, c.nom, v.libelle from cuvee c join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
+        where c.statut <> 'retire' and coalesce(c.cepages, '') = '' order by c.id`, [distributeurId]);
+    let deduits = 0;
+    for (const c of sansCepages) {
+      const cep = cepageDuNom(c.nom) ?? cepageDuNom(c.libelle);
+      if (cep) deduits += (await requete(`update cuvee set cepages = $2 where id = $1 and coalesce(cepages, '') = '' returning id`, [c.id, cep])).length;
+    }
     // Une cuvée sans photo : ni la sienne, ni une étiquette déjà copiée du distributeur (collage, document Word).
-    const vins = await requete<{ id: string; producteur: string; nom: string; millesime: string | null; sans_photo: boolean }>(
+    const vins = await requete<VinACompleter>(
       `select distinct on (c.id) c.id, p.nom as producteur, c.nom, v.millesime,
-              c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null) as sans_photo
+              c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null) as sans_photo,
+              coalesce(c.cepages, '') = '' as sans_cepages, (c.appellation_id is null and coalesce(c.appellation_texte, '') = '') as sans_appellation
          from cuvee c join producteur p on p.id = c.producteur_id join distributeur_vin v on v.cuvee_id = c.id and v.distributeur_id = $1 and v.actif
         where c.statut <> 'retire' and (coalesce(c.cepages, '') = '' or (c.appellation_id is null and coalesce(c.appellation_texte, '') = '')
               or (c.etiquette_url is null and not exists (select 1 from distributeur_vin e where e.cuvee_id = c.id and e.etiquette_url is not null)))
           and ($2 or not exists (select 1 from distributeur_vin x where x.cuvee_id = c.id and x.distributeur_id = $1 and x.cherche_le is not null))
         order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]);
-    if (!vins.length) { await etat('terminee', 'Aucun vin à chercher : les vins incomplets ont déjà été cherchés (cochez « aussi ceux déjà cherchés » pour recommencer).'); return; }
+    if (!vins.length) { await etat('terminee', `${deduits ? `${deduits} cépage${deduits > 1 ? 's' : ''} déduit${deduits > 1 ? 's' : ''} du nom des vins, sans IA. ` : ''}Aucun vin à chercher : les vins incomplets ont déjà été cherchés (cochez « aussi ceux déjà cherchés » pour recommencer).`); return; }
     const client = clientClaude({ maxRetries: 1 });
     const modele = modeleTarif(d.modele_lecture);
     const terroirs = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
@@ -147,7 +164,7 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
     for (let i = 0; i < lots.length; i += EN_PARALLELE) await Promise.all(lots.slice(i, i + EN_PARALLELE).map(traiter));
     await partagerEtiquettesDistributeur(requete, distributeurId);
     if (erreurs === vins.length) { await etat('echec', `La recherche n’a pas abouti (${derniereErreur}) : relancez-la plus tard.`.slice(0, 500)); return; }
-    await etat('terminee', `${vins.length - erreurs} vins cherchés sur ${domaine ?? 'le web'} : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`
+    await etat('terminee', `${deduits ? `${deduits} cépages déduits du nom, sans IA. ` : ''}${vins.length - erreurs} vins cherchés sur ${domaine ?? 'le web'} : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`
       + (erreurs ? ` ${erreurs} n’ont pas pu être cherchés (erreur de connexion) : relancez la recherche pour eux.` : ''));
   } catch (e) {
     console.error('[completer]', distributeurId, e);

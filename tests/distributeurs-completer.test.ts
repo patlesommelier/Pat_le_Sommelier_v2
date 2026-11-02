@@ -20,3 +20,12 @@ test('site du distributeur : son domaine', () => {
   assert.equal(domaineDuSite(''), null);
   assert.equal(domaineDuSite(null), null);
 });
+
+test('cépage écrit dans le nom du vin', async () => {
+  const { cepageDuNom } = await import('../src/lib/distributeurs/cepages');
+  assert.equal(cepageDuNom("Alsace 'Pinot Gris'"), 'pinot gris');
+  assert.equal(cepageDuNom('PORTILLO Malbec Rose'), 'malbec');
+  assert.equal(cepageDuNom('COTERIE Chenin Grenache Blanc'), 'chenin, grenache');
+  assert.equal(cepageDuNom('KEN FORRESTER Icon The FMC'), null);
+  assert.equal(cepageDuNom('CA BOLANI Sauvignon Blanc'), 'sauvignon blanc');
+});
