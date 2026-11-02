@@ -1,14 +1,24 @@
-// Configuration d'un restaurant (super-admin) : ses distributeurs (les siens et ceux de Quid Vinum), et le verrou
-// sur un seul distributeur Quid Vinum.
+// Page d'un restaurant (super-admin, en cliquant sur sa carte) : tous ses réglages de super-admin — statut, mise en place,
+// carte et accords (préparation), producteurs à valider, distributeurs (et verrou sur un seul distributeur Quid Vinum), suppression.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
+import { changerStatutRestaurant, relancerPreparation, supprimerRestaurant, verrouillerDistributeurQv, voirCommeRestaurant } from '../../actions';
+import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
+import { CopierLien } from '@/components/admin/CopierLien';
+import { etapesRestaurant } from '../../../[resto]/etapes';
+import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
+import { restaurantsSuper } from '@/lib/super/donnees';
+import { adresseApp } from '@/lib/admin/qr';
 import { FormulaireVerrou } from '@/components/admin/FormulaireVerrou';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { getFournisseurs } from '@/lib/admin/stocks';
 import { vinsSurCarteParDistributeur } from '@/lib/distributeurs/donnees';
 import { requete } from '@/lib/db';
+
+const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
+  mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
+};
 
 export default async function ConfigurationRestaurant({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   await exigerAdmin();
@@ -25,17 +35,54 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
   const verrou = distributeurs.find((d) => d.id === r.distributeur_qv_unique) ?? null;
   // Quid Vinum : ceux qu'il a sélectionnés d'abord, puis ceux qui lui sont proposés ; les distributeurs masqués seulement s'il les avait choisis.
   const qv = distributeurs.filter((d) => d.actif || choisi(d.id)).sort((a, b) => Number(Boolean(choisi(b.id))) - Number(Boolean(choisi(a.id))));
+  // Mise en place (6 étapes, comme dans l'espace du restaurant) et chiffres de la carte et des accords.
+  const [bo, resume, infos] = await Promise.all([getRestaurantBO(id), getResume(id), restaurantsSuper()]);
+  const x = infos.find((i) => i.id === id)!;
+  const etapes = bo ? etapesRestaurant(bo, resume).filter((e) => e.libelle !== 'Simulateur') : [];
+  const lienApp = await adresseApp(id);
   const marges = new Map((await requete<{ distributeur_id: string; marge: number | null }>(
     'select distributeur_id, marge::float8 as marge from fournisseur where restaurant_id = $1 and distributeur_id is not null', [id])).map((m) => [m.distributeur_id, m.marge]));
 
   return (
     <>
-      <Entete titre={r.nom} texte={`Configuration du restaurant${r.ville ? ` · ${r.ville}` : ''}.`}>
+      <Entete titre={r.nom} texte={`Réglages de super-admin du restaurant${r.ville ? ` · ${r.ville}` : ''}.`}>
         <Link href="/admin/super" className="btn fantome petit">← Restaurants</Link>
         <Link href={`/admin/${id}`} className="btn petit">Super-admin</Link>
         <form action={voirCommeRestaurant.bind(null, id)}><button className="btn sec petit">Vue restaurant</button></form>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
+
+      <section className="carte-bo pile">
+        <h2 style={{ margin: 0 }}>Statut et mise en place</h2>
+        <form action={changerStatutRestaurant.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+          <input type="hidden" name="retour" value={`/admin/super/restaurants/${id}`} />
+          <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
+          <select name="statut" defaultValue={r.statut} aria-label={`Statut de ${r.nom}`} style={{ minHeight: 36, borderRadius: 8, border: '1.5px solid var(--ligne)' }}>
+            {Object.entries(STATUTS).map(([k, [l]]) => <option key={k} value={k}>{l}</option>)}
+          </select>
+          <button className="btn sec petit">Enregistrer</button>
+          {x.origine === 'inscription' && <Etat type="propose">Inscrit en ligne</Etat>}
+        </form>
+        <p className="petit" style={{ margin: 0 }}><b>{etapes.filter((e) => e.etat === 'fait').length}/{etapes.length}</b> étapes faites :{' '}
+          {etapes.map((e, i) => <span key={e.href}>{i ? ' · ' : ''}<Link href={e.href}>{e.libelle}</Link> {e.etat === 'fait' ? '✓' : '…'}</span>)}</p>
+        <p className="petit discret" style={{ margin: 0 }}>{x.acces} accès · {x.langues.map((l) => l.toUpperCase()).join('/')}{x.ajustements ? ` · ${x.ajustements} règle(s) ajustée(s)` : ''}</p>
+        <CopierLien url={lienApp} titre="Lien de l’app des clients" />
+      </section>
+
+      <section className="carte-bo pile">
+        <h2 style={{ margin: 0 }}>Carte et accords</h2>
+        <p style={{ margin: 0 }}><b>{x.plats}</b> plats · <b>{x.vins}</b> vins sur la carte · <b>{x.accords.toLocaleString('fr-BE')}</b> accords
+          {x.a_relire ? <> · <Link href={`/admin/${id}/accords`}>{x.a_relire} à relire</Link></> : null}</p>
+        {x.passe_rapide > 0 && <p className="petit" style={{ margin: 0, color: 'var(--ocre)' }}>Passe rapide : {x.passe_rapide} plat(s) aux accords écrits avec Sonnet à l’inscription — régénérer avec Opus.</p>}
+        {x.prep_attente > 0 && <p className="petit" style={{ margin: 0 }}>Préparation en cours : {x.prep_faits + x.prep_erreurs}/{x.prep_total} plats.</p>}
+        {x.prep_erreurs > 0 && x.prep_attente === 0 && (
+          <form action={relancerPreparation.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+            <span className="petit" style={{ color: 'var(--ocre)' }}>{x.prep_erreurs} plat(s) en échec</span>
+            <button className="btn sec petit">Relancer la préparation</button>
+          </form>
+        )}
+        <p className="petit" style={{ margin: 0 }}>Producteurs à valider sur sa carte : {x.producteurs ? <Link href="/admin/super/producteurs">{x.producteurs}</Link> : 'aucun'}.</p>
+      </section>
 
       <section className="carte-bo pile">
         <div><h2 style={{ margin: 0 }}>Distributeur Quid Vinum unique</h2>
@@ -87,6 +134,13 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
             </table>
           </div>
         ) : <p className="discret" style={{ margin: 0 }}>Aucun distributeur à lui.</p>}
+      </section>
+
+      <section className="carte-bo pile" style={{ borderColor: 'var(--rouge)' }}>
+        <h2 style={{ margin: 0 }}>Supprimer ce restaurant</h2>
+        <p className="petit discret" style={{ margin: 0 }}>Menu, carte des vins, accords, règles et accès sont effacés. Irréversible.</p>
+        <span><BoutonConfirmation action={supprimerRestaurant.bind(null, id)} libelle="Supprimer" className="btn fantome petit" saisie={r.nom}
+          question={`Supprimer définitivement « ${r.nom} » ? Menu, carte des vins, accords, règles et accès seront effacés. Cette action est irréversible.`} /></span>
       </section>
     </>
   );

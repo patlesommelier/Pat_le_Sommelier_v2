@@ -20,12 +20,13 @@ export async function indicateurs() {
 
 export interface RestaurantSuper {
   id: string; nom: string; couleur: string; statut: string; ville: string | null; langues: string[];
+  logo_url: string | null; logo_fonce_url: string | null; logo_choix: string | null;
   plats: number; vins: number; accords: number; a_relire: number; producteurs: number; acces: number; ajustements: number;
   origine: string; passe_rapide: number; prep_total: number; prep_faits: number; prep_erreurs: number; prep_attente: number;
 }
 export async function restaurantsSuper() {
   return requete<RestaurantSuper>(
-    `select r.id, r.nom, r.couleur, r.statut, r.ville, r.langues,
+    `select r.id, r.nom, r.couleur, r.statut, r.ville, r.langues, r.logo_url, r.logo_fonce_url, r.logo_choix,
             (select count(*)::int from plat p where p.restaurant_id = r.id and p.actif) as plats,
             (select count(*)::int from vin_carte v where v.restaurant_id = r.id and v.disponible) as vins,
             (select count(*)::int from accord a where a.restaurant_id = r.id) as accords,

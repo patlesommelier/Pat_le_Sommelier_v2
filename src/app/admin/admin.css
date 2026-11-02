@@ -359,3 +359,16 @@ dialog.superposition { overflow-y: auto; }
 .tableau th.centre, .tableau td.centre { text-align: center; }
 .tableau td.centre .pile { align-items: center; }
 .btn.bouton-plus { min-width: 40px; min-height: 36px; font-size: 20px; font-weight: 700; line-height: 1; padding: 0 12px; }
+
+/* Super-admin : une carte par restaurant (logo sur sa couleur) ; toute la carte ouvre ses réglages. */
+.grille-restos { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(250px, 100%), 1fr)); gap: 16px; }
+.carte-resto { position: relative; padding: 0; overflow: hidden; display: flex; flex-direction: column; transition: box-shadow .15s, transform .15s; }
+.carte-resto:hover { box-shadow: 0 6px 20px rgba(0, 0, 0, .12); transform: translateY(-1px); }
+.carte-resto-tete { height: 110px; display: flex; align-items: center; justify-content: center; padding: 14px; }
+.carte-resto-tete img { max-width: 75%; max-height: 82px; object-fit: contain; }
+.carte-resto-tete .initiale { font-size: 44px; font-weight: 700; color: #EFEBE9; }
+.carte-resto-corps { display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 16px; flex: 1; }
+.carte-resto-corps .lien-carte { color: var(--encre); text-decoration: none; font-size: 18px; }
+.carte-resto-corps .lien-carte::after { content: ''; position: absolute; inset: 0; }
+.carte-resto-actions { display: flex; gap: 6px; flex-wrap: wrap; margin-top: auto; padding-top: 8px; position: relative; z-index: 1; }
+.carte-resto-actions form { display: inline-flex; margin: 0; }

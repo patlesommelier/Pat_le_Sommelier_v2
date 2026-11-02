@@ -1,11 +1,8 @@
 import Link from 'next/link';
-import { changerModeTest, changerStatutRestaurant, creerRestaurant, relancerPreparation, supprimerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
+import { changerModeTest, creerRestaurant, testerEmail, voirCommeRestaurant } from './actions';
 import { modeTestDistributeurs } from '@/lib/admin/stocks';
 import { CopierLien } from '@/components/admin/CopierLien';
-import { BoutonConfirmation } from '@/components/admin/BoutonConfirmation';
-import { etapesRestaurant } from '../[resto]/etapes';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
-import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { indicateurs, restaurantsSuper } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { etatClaude, modeleAccords, modeleLecture } from '@/lib/claude';
@@ -19,12 +16,6 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
   const [ind, restos, modeTest] = await Promise.all([indicateurs(), restaurantsSuper(), modeTestDistributeurs()]);
-  // Avancement sur les 6 étapes de la mise en place, calculé comme dans l'espace du restaurant.
-  const avancement = new Map(await Promise.all(restos.map(async (r) => {
-    const [bo, resume] = await Promise.all([getRestaurantBO(r.id), getResume(r.id)]);
-    const etapes = bo ? etapesRestaurant(bo, resume).filter((e) => e.libelle !== 'Simulateur') : []; // le simulateur est un outil, pas une étape
-    return [r.id, `${etapes.filter((e) => e.etat === 'fait').length}/${etapes.length}`] as const;
-  })));
 
   return (
     <>
@@ -74,47 +65,31 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
           <div className="chiffre">{ind.principes ?? '—'}</div><span className="discret">principes en service{ind.brouillon ? ` · brouillon ${ind.brouillon}` : ''}</span></Link>
       </div>
 
-      <div className="tableau">
-        <table style={{ minWidth: 820 }} className="tableau-super">
-          <thead><tr><th>Restaurant</th><th>Statut</th><th>Mise en place</th><th>Menu et carte</th><th>Accords</th><th>Producteurs à valider</th></tr></thead>
-          <tbody>
-            {restos.map((r) => (
-              <tr key={r.id}>
-                <td><div style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                  <span style={{ width: 30, height: 30, borderRadius: 8, background: r.couleur, color: '#EFEBE9', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700 }}>{r.nom.slice(0, 1)}</span>
-                  <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div>
-                    <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 6 }}>
-                      <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
-                      <Link href={`/admin/super/restaurants/${r.id}`} className="btn sec mini" title="Distributeurs du restaurant et distributeur Quid Vinum unique">Configuration</Link>
-                      <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
-                      <BoutonConfirmation action={supprimerRestaurant.bind(null, r.id)} libelle="Supprimer" className="btn fantome mini" saisie={r.nom}
-                        question={`Supprimer définitivement « ${r.nom} » ? Menu, carte des vins, accords, règles et accès seront effacés. Cette action est irréversible.`} />
-                    </div></div></div></td>
-                <td>
-                  <form action={changerStatutRestaurant.bind(null, r.id)} style={{ display: 'flex', gap: 6, alignItems: 'center' }}>
-                    <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
-                    <select name="statut" defaultValue={r.statut} aria-label={`Statut de ${r.nom}`} style={{ minHeight: 32, borderRadius: 8, border: '1.5px solid var(--ligne)' }}>
-                      {Object.entries(STATUTS).map(([k, [l]]) => <option key={k} value={k}>{l}</option>)}
-                    </select>
-                    <button className="btn fantome petit">OK</button>
-                  </form>
-                </td>
-                <td><b>{avancement.get(r.id)}</b> <span className="petit discret">étapes</span>{r.ajustements ? <div className="petit discret">{r.ajustements} règle(s) ajustée(s)</div> : null}</td>
-                <td>{r.plats} plats · {r.vins} vins</td>
-                <td>{r.accords.toLocaleString('fr-BE')}{r.a_relire ? <div className="petit discret">{r.a_relire} à relire</div> : null}
-                  {r.passe_rapide > 0 && <div className="petit" style={{ color: 'var(--ocre)' }} title="Accords de l’inscription, écrits avec Sonnet pour aller vite">Passe rapide : {r.passe_rapide} plat(s) — régénérer avec Opus</div>}
-                  {r.prep_attente > 0 && <div className="petit">Préparation : {r.prep_faits + r.prep_erreurs}/{r.prep_total} plats</div>}
-                  {r.prep_erreurs > 0 && r.prep_attente === 0 && (
-                    <form action={relancerPreparation.bind(null, r.id)} className="pile" style={{ gap: 4 }}>
-                      <span className="petit" style={{ color: 'var(--ocre)' }}>{r.prep_erreurs} plat(s) en échec</span>
-                      <button className="btn sec petit">Relancer la préparation</button>
-                    </form>
-                  )}</td>
-                <td>{r.producteurs ? <Link href="/admin/super/producteurs">{r.producteurs}</Link> : '—'}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      {/* Une carte par restaurant : logo sur sa couleur, statut, accès à son espace. La carte ouvre ses réglages de super-admin. */}
+      <div className="grille-restos">
+        {restos.map((r) => {
+          const logo = r.logo_fonce_url || r.logo_url;
+          return (
+            <article key={r.id} className="carte-resto carte-bo">
+              <div className="carte-resto-tete" style={{ background: r.couleur }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                {logo ? <img src={logo} alt="" /> : <span className="initiale">{r.nom.slice(0, 1)}</span>}
+              </div>
+              <div className="carte-resto-corps">
+                <Link href={`/admin/super/restaurants/${r.id}`} className="lien-carte"><b>{r.nom}</b></Link>
+                <span className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/')].filter(Boolean).join(' · ') || ' '}</span>
+                <span style={{ display: 'flex', gap: 6, flexWrap: 'wrap', alignItems: 'center' }}>
+                  <Etat type={STATUTS[r.statut]?.[1] ?? ''}>{STATUTS[r.statut]?.[0] ?? r.statut}</Etat>
+                  {r.origine === 'inscription' && <Etat type="propose">Inscription</Etat>}
+                </span>
+                <div className="carte-resto-actions">
+                  <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
+                  <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
+                </div>
+              </div>
+            </article>
+          );
+        })}
       </div>
 
       <form action={creerRestaurant} className="carte-bo pile" style={{ maxWidth: 640 }}>

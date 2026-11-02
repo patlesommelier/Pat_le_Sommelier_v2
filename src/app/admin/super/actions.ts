@@ -137,7 +137,10 @@ export async function changerStatutRestaurant(restaurantId: string, f: FormData)
     await requete('update restaurant set statut = $2 where id = $1', [restaurantId, statut]);
   }
   revalidatePath('/admin/super');
-  redirect('/admin/super');
+  revalidatePath(`/admin/super/restaurants/${restaurantId}`);
+  // Retour sur la page d'où vient le changement (liste des restaurants ou page du restaurant).
+  const retour = txt(f, 'retour');
+  redirect(retour?.startsWith('/admin/super') ? avec(retour, { ok: 'Statut enregistré.' }) : '/admin/super');
 }
 
 /** « Relancer la préparation » : les plats sans accord ou en échec repartent dans la file. */
@@ -145,7 +148,7 @@ export async function relancerPreparation(restaurantId: string) {
   const u = await exigerAdmin();
   await preparerAccords(restaurantId, u.email, { seulementManquants: true });
   revalidatePath('/admin/super');
-  redirect(avec('/admin/super', { ok: 'Préparation relancée.' }));
+  redirect(avec(`/admin/super/restaurants/${restaurantId}`, { ok: 'Préparation relancée.' }));
 }
 
 // ───────── Producteurs à valider ─────────
