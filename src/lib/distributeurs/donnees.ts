@@ -4,6 +4,7 @@ import 'server-only';
 // - restaurants : le catalogue au prix proposé seulement, jamais le prix QV ni la marge.
 import { requete } from '../db';
 import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rattachement';
+import { distributeurPermis } from './verrou';
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
@@ -155,7 +156,24 @@ export async function distributeursProposes(resto: string) {
     `select d.id, d.nom, d.site, d.logo_url, d.presentation, count(v.id)::int as vins,
             exists (select 1 from fournisseur f where f.restaurant_id = $1 and f.distributeur_id = d.id) as deja
        from distributeur d join distributeur_vin v on v.distributeur_id = d.id and v.actif
-      where d.actif group by d.id order by lower(d.nom)`, [resto]);
+      where d.actif and ${distributeurPermis('$1')} group by d.id order by lower(d.nom)`, [resto]);
+}
+
+/**
+ * Vins de la carte du restaurant de chaque distributeur Quid Vinum (un vin, toutes contenances) : rattachés à lui, pris dans son catalogue,
+ * ou, sans autre distributeur, un vin de la base de Pat qu'il vend.
+ */
+export async function vinsSurCarteParDistributeur(resto: string): Promise<Map<string, number>> {
+  const lignes = await requete<{ distributeur_id: string; n: number }>(
+    `select x.distributeur_id, count(distinct x.cle)::int as n from (
+       select coalesce(f.distributeur_id, dv.distributeur_id) as distributeur_id, lower(v.libelle) || coalesce(v.millesime, '') as cle
+         from vin_carte v left join fournisseur f on f.id = v.fournisseur_id left join distributeur_vin dv on dv.id = v.distributeur_vin_id
+        where v.restaurant_id = $1 and v.disponible and coalesce(f.distributeur_id, dv.distributeur_id) is not null
+       union all
+       select c.distributeur_id, lower(v.libelle) || coalesce(v.millesime, '')
+         from vin_carte v join distributeur_vin c on c.cuvee_id = v.cuvee_id and c.actif
+        where v.restaurant_id = $1 and v.disponible and v.fournisseur_id is null and v.distributeur_vin_id is null) x group by 1`, [resto]);
+  return new Map(lignes.map((x) => [x.distributeur_id, x.n]));
 }
 
 /** Catalogue d'un distributeur au prix proposé (le prix QV et la marge ne sortent pas d'ici). */
@@ -168,5 +186,5 @@ export async function catalogueDistributeur(distributeurId: string, resto: strin
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id left join producteur p on p.id = v.producteur_id
        left join cuvee c on c.id = v.cuvee_id
        left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $2
-      where v.distributeur_id = $1 and v.actif and d.actif order by v.ordre, v.libelle`, [distributeurId, resto, defaut]);
+      where v.distributeur_id = $1 and v.actif and d.actif and ${distributeurPermis('$2')} order by v.ordre, v.libelle`, [distributeurId, resto, defaut]);
 }

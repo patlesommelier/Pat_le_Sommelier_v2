@@ -85,6 +85,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                   <div><b>{r.nom}</b>{r.origine === 'inscription' && <> <Etat type="propose">Inscription</Etat></>}<div className="petit discret">{[r.ville, r.langues.map((l) => l.toUpperCase()).join('/'), `${r.acces} accès`].filter(Boolean).join(' · ')}</div>
                     <div style={{ display: 'flex', gap: 6, alignItems: 'center', marginTop: 6 }}>
                       <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
+                      <Link href={`/admin/super/restaurants/${r.id}`} className="btn sec mini" title="Distributeurs du restaurant et distributeur Quid Vinum unique">Configuration</Link>
                       <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
                       <BoutonConfirmation action={supprimerRestaurant.bind(null, r.id)} libelle="Supprimer" className="btn fantome mini" saisie={r.nom}
                         question={`Supprimer définitivement « ${r.nom} » ? Menu, carte des vins, accords, règles et accès seront effacés. Cette action est irréversible.`} />

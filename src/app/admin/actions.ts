@@ -28,6 +28,7 @@ import { chercherVinsBase, offresDistributeurs, type VinTrouve } from '@/lib/adm
 import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { completerBase } from '@/lib/admin/completer-base';
 import { choisirFournisseur } from '@/lib/admin/stocks';
+import { distributeurPermis } from '@/lib/distributeurs/verrou';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -430,7 +431,7 @@ export async function catalogueAjout(resto: string, distributeurId: string): Pro
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
        left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id and c.statut <> 'retire'
        left join terroir t on t.id = c.appellation_id
-      where v.distributeur_id = $1 and v.actif order by v.ordre, v.libelle`, [String(distributeurId)]);
+      where v.distributeur_id = $1 and v.actif and ${distributeurPermis('$2')} order by v.ordre, v.libelle`, [String(distributeurId), resto]);
   const offres = new Map((await offresDistributeurs(resto, { vins: vins.map((v) => v.id) })).map((o) => [o.id, o]));
   return vins.map((v) => {
     const o = offres.get(v.id);

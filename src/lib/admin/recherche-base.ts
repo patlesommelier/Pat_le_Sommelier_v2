@@ -5,6 +5,7 @@ import 'server-only';
 // du restaurant (prix QV + sa marge, sinon la marge par défaut). Jamais le prix QV, la marge ni le classement.
 import { requete } from '@/lib/db';
 import { memeVinQue } from './doublons-recherche';
+import { distributeurPermis } from '../distributeurs/verrou';
 
 export type VinTrouve = {
   cle: string; libelle: string; couleur: string | null; section: string | null; appellation: string | null;
@@ -25,7 +26,7 @@ export async function offresDistributeurs(resto: string, { cuvees = [] as string
             round(v.prix_qv * (1 + coalesce(f.marge, $3) / 100), 2)::float8 as prix
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
        left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $4
-      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
+      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) and ${distributeurPermis('$4')} order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
     [cuvees, vins, defaut, resto]);
 }
 
@@ -70,8 +71,8 @@ export async function chercherVinsBase(texte: string, resto?: string): Promise<V
        union all
        select 'distrib' as source, v.id, v.libelle, v.couleur, v.section, null, null, null, coalesce(p.nom, v.producteur_texte), v.etiquette_url
          from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif left join producteur p on p.id = v.producteur_id
-        where v.actif and v.cuvee_id is null and ${SQL_NORM("v.libelle || ' ' || coalesce(p.nom, v.producteur_texte, '')")} like any($1)
-     ) r limit 400`, [motifs]);
+        where v.actif and v.cuvee_id is null and ${distributeurPermis('$2')} and ${SQL_NORM("v.libelle || ' ' || coalesce(p.nom, v.producteur_texte, '')")} like any($1)
+     ) r limit 400`, [motifs, resto ?? '']);
 
   const notes = lignes.map((l) => {
     const leurs = new Set([...mots(l.libelle), ...mots(l.producteur), ...mots(l.appellation), ...mots(l.nom_vin)]);

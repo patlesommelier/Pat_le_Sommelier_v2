@@ -130,3 +130,17 @@ export async function modeTestDistributeurs(): Promise<boolean> {
   const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'mode_test_distributeurs'`);
   return r?.valeur !== '0';
 }
+
+/** Panier de commande du restaurant (page Vins) : chaque vin, ses bouteilles, son distributeur et son prix d'achat HTVA. */
+export interface LignePanier { vin_id: string; quantite: number; libelle: string; millesime: string | null; format: string | null; etiquette_url: string | null;
+  fournisseur: string | null; quid_vinum: boolean; prix_achat: number | null }
+export async function getPanier(resto: string) {
+  return requete<LignePanier>(
+    `select p.vin_id, p.quantite, v.libelle, v.millesime, v.format, v.etiquette_url, f.nom as fournisseur, f.distributeur_id is not null as quid_vinum,
+            -- Distributeur Quid Vinum : le prix de son catalogue pour ce restaurant (jamais le prix QV ni la marge).
+            coalesce(case when f.distributeur_id is not null then (select round(dv.prix_qv * (1 + coalesce(f.marge,
+              (select case when valeur ~ '^[0-9]+([.][0-9]+)?$' then valeur::numeric end from reglage_serveur where cle = 'qv_marge'), 15) / 100), 2)
+              from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id) end, v.prix_achat)::float8 as prix_achat
+       from panier p join vin_carte v on v.id = p.vin_id left join fournisseur f on f.id = v.fournisseur_id
+      where p.restaurant_id = $1 order by f.distributeur_id is null, lower(coalesce(f.nom, 'zzz')), p.ajoute_le`, [resto]);
+}

@@ -13,6 +13,7 @@ import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { euros, genererBonCommande, referenceCommande } from '@/lib/bon-commande';
 import { envoyerEmail } from '@/lib/email';
 import { contenanceDuFormat, grouperMemeVin } from '@/lib/contenances';
+import { distributeurPermis } from '@/lib/distributeurs/verrou';
 
 type Retour = { ok?: string; erreur?: string };
 
@@ -123,7 +124,7 @@ export async function supprimerFournisseur(resto: string, id: string): Promise<R
 /** Distributeur de la base de Quid Vinum ajouté aux fournisseurs du restaurant : il commande dans son catalogue, au prix proposé. */
 export async function ajouterDistributeurQv(resto: string, distributeurId: string): Promise<Retour> {
   await exigerAcces(resto);
-  const [d] = await requete<{ nom: string }>(`select nom from distributeur where id = $1 and actif`, [distributeurId]);
+  const [d] = await requete<{ nom: string }>(`select nom from distributeur d where id = $1 and actif and ${distributeurPermis('$2')}`, [distributeurId, resto]);
   if (!d) return { erreur: 'Ce distributeur n’est plus proposé.' };
   // Marge de Quid Vinum : la marge par défaut, modifiable ensuite par Pat pour ce restaurant (fiche du distributeur).
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
@@ -162,6 +163,15 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
   const choisi = fournisseurId || txt(f, 'fournisseur') || '';
   if (!fournisseurId && choisi) await choisirFournisseur(resto, quantites.map(([id]) => id), choisi, null);
   fournisseurId = choisi;
+  const r = await enregistrerCommande(resto, u.email, fournisseurId, quantites, duCatalogue, (vinId) => prix(f, `achat_${vinId}`));
+  if ('erreur' in r) return r;
+  rafraichir(resto);
+  redirect(`/admin/${resto}/commandes/${r.id}`); // le bon de commande, prêt à envoyer
+}
+
+/** Crée la commande à un fournisseur (vins de la carte : quantites ; vins de son catalogue Quid Vinum : duCatalogue). */
+async function enregistrerCommande(resto: string, email: string | null, fournisseurId: string, quantites: (readonly [string, number])[], duCatalogue: (readonly [string, number])[],
+  achatIndique: (vinId: string) => number | null | undefined = () => undefined): Promise<{ id: string } | { erreur: string }> {
   const [fournisseur] = fournisseurId
     ? await requete<{ nom: string; distributeur_id: string | null }>('select nom, distributeur_id from fournisseur where id = $1 and restaurant_id = $2', [fournisseurId, resto])
     : [{ nom: 'Fournisseur à préciser', distributeur_id: null }];
@@ -179,7 +189,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
   await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par) values ($1, $2, $3, $4, $5, $6)',
-    [id, resto, fournisseurId || null, fournisseur.nom, numero, u.email]);
+    [id, resto, fournisseurId || null, fournisseur.nom, numero, email]);
   let ordre = 0;
   for (const [vinId, q] of quantites) {
     const v = vins.find((x) => x.id === vinId);
@@ -187,7 +197,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
     const millesime = v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : '';
     const detail = [v.producteur && !/^non /i.test(v.producteur) ? v.producteur : null, contenanceDuFormat(v.format) === 'verre' ? null : v.format].filter(Boolean).join(' · ');
     // Prix d'achat HTVA : celui indiqué au moment de commander (il devient le prix d'achat du vin), sinon celui du vin.
-    const achat = prix(f, `achat_${vinId}`);
+    const achat = achatIndique(vinId);
     if (achat !== undefined) await requete('update vin_carte set prix_achat = $3 where restaurant_id = $1 and id = $2', [resto, vinId, achat]);
     await requete(`insert into commande_ligne (commande_id, vin_id, libelle, detail, quantite, ordre, prix_achat)
                    values ($1, $2, $3, $4, $5, $6, (select prix_achat from vin_carte where id = $2))`,
@@ -211,8 +221,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
       await choisirFournisseur(resto, [carte.id], fournisseurId, null);
     }
   }
-  rafraichir(resto);
-  redirect(`/admin/${resto}/commandes/${id}`); // le bon de commande, prêt à envoyer
+  return { id };
 }
 
 /**
@@ -224,8 +233,16 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
   const u = await exigerAcces(resto);
   const demandes = [...f.keys()].filter((k) => k.startsWith('cat_')).map((k) => [k.slice(4), entier(f, k) ?? 0] as const).filter(([, q]) => q > 0);
   if (!demandes.length) return { erreur: 'Indiquez au moins un nombre de bouteilles à commander.' };
+  const r = await enregistrerCommandeQv(resto, u.email, demandes);
+  if ('erreur' in r) return r;
+  rafraichir(resto);
+  redirect(`/admin/${resto}/commandes/${r.id}`); // le bon de commande, prêt à envoyer
+}
+
+/** Crée la commande Quid Vinum (vins des catalogues des distributeurs Quid Vinum actifs du restaurant). */
+async function enregistrerCommandeQv(resto: string, email: string | null, demandes: (readonly [string, number])[]): Promise<{ id: string } | { erreur: string }> {
   const actives = await requete<{ id: string; nom: string; distributeur_id: string }>(
-    `select f.id, f.nom, f.distributeur_id from fournisseur f join distributeur d on d.id = f.distributeur_id and d.actif where f.restaurant_id = $1`, [resto]);
+    `select f.id, f.nom, f.distributeur_id from fournisseur f join distributeur d on d.id = f.distributeur_id and d.actif where f.restaurant_id = $1 and ${distributeurPermis('$1')}`, [resto]);
   const catalogues = new Map<string, Awaited<ReturnType<typeof catalogueDistributeur>>>();
   for (const a of actives) catalogues.set(a.distributeur_id, await catalogueDistributeur(a.distributeur_id, resto));
   const trouve = (vid: string) => { for (const a of actives) { const c = catalogues.get(a.distributeur_id)!.find((x) => x.id === vid); if (c) return { c, a }; } return null; };
@@ -241,7 +258,7 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
   await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum) values ($1, $2, null, $3, $4, $5, true)',
-    [id, resto, 'Quid Vinum', numero, u.email]);
+    [id, resto, 'Quid Vinum', numero, email]);
   let ordre = 0;
   // Lignes rangées par distributeur, dans l'ordre de leur catalogue.
   const lignes = demandes.map(([vid, q]) => ({ ...trouve(vid)!, q })).sort((x, y) => x.a.nom.localeCompare(y.a.nom));
@@ -259,8 +276,7 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
         [resto, carte.id, c.id, c.prix, q, a.id]);
     }
   }
-  rafraichir(resto);
-  redirect(`/admin/${resto}/commandes/${id}`); // le bon de commande, prêt à envoyer
+  return { id };
 }
 
 /** Envoie le bon de commande (PDF en pièce jointe) au fournisseur, avec le restaurant en copie. */
@@ -396,16 +412,96 @@ export async function commanderChezDistributeur(resto: string, vinId: string, of
   redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: o.fournisseur_id, vin: vinId })}#nouvelle`);
 }
 
-/** Page Distributeurs : « Catalogue » d'un distributeur Quid Vinum (tous ses vins, à commander) ; s'il n'était pas sélectionné, il le devient. */
-export async function nouvelleCommandeQv(resto: string, distributeurId: string) {
+/**
+ * Catalogue d'un distributeur Quid Vinum : le vin est ajouté aux vins du restaurant (page Vins, stock 0, pas encore sur la carte),
+ * avec ce distributeur et le prix de son catalogue ; il se commande ensuite depuis le panier. Le distributeur devient actif s'il ne l'était pas.
+ */
+export async function ajouterDuCatalogue(resto: string, distributeurId: string, distributeurVinId: string): Promise<Retour> {
   await exigerAcces(resto);
-  const [d] = await requete<{ nom: string }>(`select nom from distributeur where id = $1 and actif`, [distributeurId]);
-  if (d) {
-    await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
-                    where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
-      [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
-    rafraichir(resto);
+  const [d] = await requete<{ nom: string }>(`select nom from distributeur d where id = $1 and actif and ${distributeurPermis('$2')}`, [distributeurId, resto]);
+  if (!d) return { erreur: 'Ce distributeur n’est plus proposé.' };
+  const c = (await catalogueDistributeur(distributeurId, resto)).find((x) => x.id === distributeurVinId);
+  if (!c) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
+  const [deja] = await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1 and distributeur_vin_id = $2 limit 1', [resto, distributeurVinId]);
+  if (deja) return { ok: `« ${c.libelle} » est déjà dans vos vins.` };
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
+    [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
+  const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2', [resto, distributeurId]);
+  const id = await ajouterVinCommande(resto, distributeurVinId, f.id, c.prix, 0);
+  if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
+  rafraichir(resto);
+  revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
+  return { ok: `« ${c.libelle} » est ajouté à vos vins : mettez-le au panier ici ou depuis Vins.` };
+}
+
+// ───────── Panier (page Vins) ─────────
+const bouteilles = (n: number) => `${n} bouteille${n > 1 ? 's' : ''}`;
+
+/** Ajoute des bouteilles d'un vin au panier (elles s'ajoutent à celles qui y sont déjà). */
+export async function ajouterAuPanier(resto: string, vinId: string, quantite: number): Promise<Retour> {
+  await exigerAcces(resto);
+  const q = Math.floor(Number(quantite));
+  if (!Number.isFinite(q) || q < 1 || q > 10000) return { erreur: 'Indiquez un nombre de bouteilles.' };
+  const [v] = await requete<{ libelle: string }>('select libelle from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  if (!v) return { erreur: 'Vin introuvable.' };
+  const [l] = await requete<{ quantite: number }>(`insert into panier (restaurant_id, vin_id, quantite) values ($1, $2, $3)
+     on conflict (restaurant_id, vin_id) do update set quantite = panier.quantite + excluded.quantite returning quantite`, [resto, vinId, q]);
+  rafraichir(resto);
+  return { ok: `${bouteilles(q)} de « ${v.libelle} » au panier${l.quantite > q ? ` (${l.quantite} en tout)` : ''}.` };
+}
+
+/** Change le nombre de bouteilles d'une ligne du panier (0 : la ligne est retirée). */
+export async function modifierPanier(resto: string, vinId: string, quantite: number): Promise<Retour> {
+  await exigerAcces(resto);
+  const q = Math.floor(Number(quantite));
+  if (!Number.isFinite(q) || q < 0 || q > 10000) return { erreur: 'Indiquez un nombre de bouteilles.' };
+  if (q === 0) await requete('delete from panier where restaurant_id = $1 and vin_id = $2', [resto, vinId]);
+  else await requete('update panier set quantite = $3 where restaurant_id = $1 and vin_id = $2', [resto, vinId, q]);
+  rafraichir(resto);
+  return { ok: q ? 'Panier mis à jour.' : 'Vin retiré du panier.' };
+}
+
+export async function viderPanier(resto: string): Promise<Retour> {
+  await exigerAcces(resto);
+  await requete('delete from panier where restaurant_id = $1', [resto]);
+  rafraichir(resto);
+  return { ok: 'Panier vidé.' };
+}
+
+/**
+ * Commande tout le panier : une commande Quid Vinum pour les vins des distributeurs Quid Vinum (pris dans leur catalogue),
+ * une commande par distributeur du restaurant, et une « fournisseur à préciser » pour les vins sans distributeur.
+ * Chaque commande créée retire ses lignes du panier ; on arrive sur la commande (ou la liste s'il y en a plusieurs).
+ */
+export async function commanderPanier(resto: string): Promise<Retour> {
+  const u = await exigerAcces(resto);
+  const lignes = await requete<{ vin_id: string; quantite: number; fournisseur_id: string | null; qv: boolean; distributeur_vin_id: string | null }>(
+    `select p.vin_id, p.quantite, v.fournisseur_id, f.distributeur_id is not null as qv,
+            (select dv.id from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id and dv.actif) as distributeur_vin_id
+       from panier p join vin_carte v on v.id = p.vin_id left join fournisseur f on f.id = v.fournisseur_id
+      where p.restaurant_id = $1 order by p.ajoute_le`, [resto]);
+  if (!lignes.length) return { erreur: 'Le panier est vide.' };
+  const creees: string[] = [];
+  const retirer = (ids: string[]) => requete('delete from panier where restaurant_id = $1 and vin_id = any($2)', [resto, ids]);
+  // Distributeurs Quid Vinum : une seule commande, depuis leurs catalogues.
+  const duCatalogue = lignes.filter((l) => l.qv && l.distributeur_vin_id);
+  if (duCatalogue.length) {
+    const r = await enregistrerCommandeQv(resto, u.email, duCatalogue.map((l) => [l.distributeur_vin_id!, l.quantite] as const));
+    if ('erreur' in r) { rafraichir(resto); return r; }
+    creees.push(r.id);
+    await retirer(duCatalogue.map((l) => l.vin_id));
   }
-  // Son catalogue complet, ouvert, en tête de la commande Quid Vinum.
-  redirect(`/admin/${resto}/commandes?${new URLSearchParams({ f: 'qv', catalogue: distributeurId })}`);
+  // Les autres : une commande par distributeur (sans distributeur : « fournisseur à préciser »).
+  const parFournisseur = new Map<string, typeof lignes>();
+  for (const l of lignes.filter((x) => !duCatalogue.includes(x))) parFournisseur.set(l.fournisseur_id ?? '', [...(parFournisseur.get(l.fournisseur_id ?? '') ?? []), l]);
+  for (const [fournisseurId, ls] of parFournisseur) {
+    const r = await enregistrerCommande(resto, u.email, fournisseurId, ls.map((l) => [l.vin_id, l.quantite] as const), []);
+    if ('erreur' in r) { rafraichir(resto); return r; }
+    creees.push(r.id);
+    await retirer(ls.map((l) => l.vin_id));
+  }
+  rafraichir(resto);
+  redirect(creees.length === 1 ? `/admin/${resto}/commandes/${creees[0]}`
+    : `/admin/${resto}/commandes?${new URLSearchParams({ ok: `${creees.length} commandes créées : envoyez chaque bon de commande.` })}`);
 }

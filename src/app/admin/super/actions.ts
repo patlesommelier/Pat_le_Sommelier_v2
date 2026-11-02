@@ -24,6 +24,7 @@ import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { sslBase } from '@/lib/ssl-base';
+import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { creerAppellationProposee } from '@/lib/appellations/base';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -693,4 +694,31 @@ export async function regrouperProducteur(id: string, f: FormData) {
   await requete(`update producteur set statut = 'retire', fusionne_dans = $2, maj_le = now() where id = $1`, [id, cible.id]);
   revalidatePath('/admin', 'layout');
   redirect(`/admin/super/producteurs/${encodeURIComponent(cible.id)}?${new URLSearchParams({ ok: `« ${source.nom} » regroupé dans ce producteur : ses vins y sont maintenant reliés.` })}`);
+}
+
+// ───────── Configuration d'un restaurant ─────────
+/**
+ * Verrouille un restaurant sur un seul distributeur Quid Vinum (ou le déverrouille, champ vide) : celui-ci devient actif chez lui,
+ * les autres distributeurs Quid Vinum sont retirés de sa sélection (ses vins de chez eux n'ont plus de distributeur ; les commandes passées restent).
+ */
+export async function verrouillerDistributeurQv(resto: string, f: FormData) {
+  await exigerAdmin();
+  const page = `/admin/super/restaurants/${resto}`;
+  const id = txt(f, 'distributeur');
+  let message = 'Verrou retiré : tous les distributeurs Quid Vinum sont de nouveau proposés à ce restaurant.';
+  if (id) {
+    const [d] = await requete<{ nom: string }>('select nom from distributeur where id = $1 and actif', [id]);
+    if (!d) redirect(avec(page, { erreur: 'Ce distributeur n’est plus proposé.' }));
+    const marge = await margeDefaut();
+    await requete('update restaurant set distributeur_qv_unique = $2 where id = $1', [resto, id]);
+    await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+                    where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [crypto.randomUUID(), resto, d.nom, id, marge]);
+    const retires = await requete<{ nom: string }>('delete from fournisseur where restaurant_id = $1 and distributeur_id is not null and distributeur_id <> $2 returning nom', [resto, id]);
+    message = `Restaurant verrouillé sur « ${d.nom} »${retires.length ? ` ; retirés de sa sélection : ${retires.map((r) => r.nom).join(', ')}` : ''}.`;
+  } else {
+    await requete('update restaurant set distributeur_qv_unique = null where id = $1', [resto]);
+  }
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(page);
+  redirect(avec(page, { ok: message }));
 }

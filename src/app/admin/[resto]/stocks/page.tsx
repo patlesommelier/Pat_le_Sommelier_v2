@@ -1,7 +1,8 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock et ses bouteilles en commande (modifiables),
-// son fournisseur ; un point d'exclamation rouge signale un stock bas, avec un bouton pour commander.
+// son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
 import Link from 'next/link';
-import { commanderChezDistributeur, enregistrerStocks } from '../../stocks-actions';
+import { ajouterAuPanier, commanderPanier, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
+import { AjoutPanier, Panier } from '@/components/admin/Panier';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
 import { Superposition } from '@/components/admin/Superposition';
@@ -13,7 +14,7 @@ import { requete } from '@/lib/db';
 import { euros } from '@/lib/bon-commande';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
-import { getCommandes, getFournisseurs, getPrixAchat, stockBas } from '@/lib/admin/stocks';
+import { getCommandes, getFournisseurs, getPanier, getPrixAchat, stockBas } from '@/lib/admin/stocks';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
@@ -22,7 +23,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const { resto } = await params;
   await exigerAcces(resto);
   const { filtre, ajoute, commander, ok, erreur, ajout, c } = await searchParams;
-  const [vins, r, fournisseurs, ouvertes, achats, offres] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto)]);
+  const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
+  const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
   // Vins des distributeurs Quid Vinum : leur prix d'achat est celui du catalogue (prix QV + marge du restaurant), non modifiable.
   const distributeursQv = new Set(fournisseurs.filter((f) => f.distributeur_id).map((f) => f.id));
@@ -50,7 +52,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
           <FormulaireAjoutVin resto={resto} couleur={c} />
         </Superposition>
         <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>
-        <Link href={`/admin/${resto}/commandes#nouvelle`} className="btn rouge">Commander du vin</Link>
+        {/* Panier : les bouteilles ajoutées ligne par ligne, commandées en une fois. */}
+        <Panier lignes={panier} modifier={modifierPanier.bind(null, resto)} vider={viderPanier.bind(null, resto)} commander={commanderPanier.bind(null, resto)} />
       </Entete>
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
       <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
@@ -79,8 +82,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
         {parCouleur.length > 0 && (
           <div className="tableau">
-            <table className="table-stocks" style={{ minWidth: 860 }}>
-              <thead><tr><th>Vin</th><th>Distributeur</th><th className="droite">Prix d’achat HTVA</th><th className="droite">Prix de vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th /></tr></thead>
+            <table className="table-stocks" style={{ minWidth: 900 }}>
+              <thead><tr><th>Vin</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
               {parCouleur.map((c) => (
                 <tbody key={c.titre}>
                   <tr className="rubrique"><td colSpan={7}><b className="rubrique-carte">{c.titre}</b></td></tr>
@@ -90,10 +93,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
-                          {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : la commande est proposée. */}
+                          {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
-                            <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}{' '}
-                              <button formAction={commanderChezDistributeur.bind(null, resto, v.id, o.id)} className="btn sec petit">Commander chez {o.distributeur}</button></div>); })()}
+                            <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}</div>); })()}
                           </div></div></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
                         {/* Distributeur Quid Vinum : prix de son catalogue pour ce restaurant, non modifiable. */}
@@ -108,8 +110,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
-                        {/* Stock bas : la commande est proposée (sinon, on commande depuis la fiche du vin ou Commandes de vin). */}
-                        <td>{alerte && v.fournisseur_id && <Link href={`/admin/${resto}/commandes?f=${v.fournisseur_id}&vin=${encodeURIComponent(v.id)}#nouvelle`} className="btn rouge petit" style={{ whiteSpace: 'nowrap' }}>Commander</Link>}</td>
+                        {/* Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut). */}
+                        <td><AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} /></td>
                       </tr>
                     );
                   })}
