@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { decisionProducteur } from '../../actions';
+import { decisionProducteur, regrouperProducteur } from '../../actions';
+import { FormulaireRegroupement } from '@/components/admin/FormulaireRegroupement';
+import { requete } from '@/lib/db';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { ficheProducteur } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -16,6 +18,18 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
   const p = await ficheProducteur(decodeURIComponent(id));
   if (!p) notFound();
   const rk = p.ranking_pat ?? p.ranking_suggere;
+  // Doublons possibles : les producteurs qui partagent un mot significatif du nom (« Dopff » : « Dopff au Moulin »).
+  const motsNom = [...new Set(p.nom.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().split(/[^a-z0-9]+/)
+    .filter((m) => m.length >= 4 && !['domaine', 'chateau', 'maison', 'cave', 'caves', 'vignobles', 'cantina', 'tenuta', 'bodega', 'bodegas', 'weingut', 'winery', 'estate', 'wines', 'famille'].includes(m)))];
+  const [proches, tous] = p.statut === 'retire' ? [[], []] : await Promise.all([
+    motsNom.length ? requete<{ id: string; nom: string; detail: string }>(
+      `select id, nom, concat_ws(' · ', nullif(concat_ws(', ', region, pays), ''), case statut when 'valide' then 'validé' else 'à valider' end,
+              (select count(*) from cuvee c where c.producteur_id = producteur.id) || ' vin(s) dans la base') as detail
+         from producteur where statut <> 'retire' and id <> $1
+          and translate(lower(nom), 'àâäáãéèêëíìîïóòôöõúùûüçñœ', 'aaaaaeeeeiiiiooooouuuucno') ~ any($2)
+        order by statut = 'valide' desc, length(nom) limit 8`, [p.id, motsNom.map((m) => `\\m${m}\\M`)]) : Promise.resolve([]),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' and id <> $1 order by nom`, [p.id]).then((l) => l.map((x) => x.nom)),
+  ]);
 
   return (
     <>
@@ -131,6 +145,14 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
           </div>
         )}
       </form>
+      {/* Doublon : regrouper ce producteur dans un autre (ses vins y passent, il est retiré de la base). */}
+      {p.statut !== 'retire' && (
+        <div className="carte-bo pile" style={{ gap: 10, marginTop: 20 }}>
+          <h2>Doublon ? Regrouper avec un autre producteur</h2>
+          <p className="discret" style={{ margin: 0 }}>Si ce producteur existe déjà sous un autre nom, regroupez-le dans celui à garder : ses vins de la base, ses vins sur les cartes et chez les distributeurs y passent, le producteur gardé reprend ce qui lui manque (fiche, ranking, appellations), et celui-ci est retiré. Son nom mènera désormais au producteur gardé. Pour seulement corriger le nom, modifiez le champ « Nom » ci-dessus et enregistrez.</p>
+          <FormulaireRegroupement action={regrouperProducteur.bind(null, p.id)} nom={p.nom} propositions={proches} tous={tous} />
+        </div>
+      )}
     </>
   );
 }

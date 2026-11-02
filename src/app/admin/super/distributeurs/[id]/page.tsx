@@ -57,7 +57,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
 
       <div className="rangee">
         <div className="large" style={{ gap: 16 }}>
-          <details className="carte-bo bloc-fiche bloc-distrib" open={!tous.length}>
+          <details className="carte-bo bloc-fiche bloc-distrib">
             <summary style={{ cursor: 'pointer', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" />}
@@ -96,7 +96,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           </FormulaireAdmin>
             </div>
           </details>
-          <details className="carte-bo pile bloc-fiche bloc-distrib" open>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" open={Boolean(sp.ok || sp.erreur)}>
             <summary><h2 style={{ margin: 0 }}>Tarif</h2><span className="petit discret">{d.source === 'api' ? 'API du distributeur' : 'Fichier ou liste collée'}</span></summary>
             <div><p className="sous">{d.source === 'api'
               ? 'Le tarif est lu depuis l’API du distributeur. Un tableau dont les colonnes sont reconnues est lu sans IA ; sinon, par Claude.'
@@ -147,7 +147,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             })()}
           </details>
 
-          <details className="carte-bo pile bloc-fiche bloc-distrib" id="base" open>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" id="base" open={sp.prod !== undefined}>
             <summary><h2 style={{ margin: 0 }}>Producteurs et base Quid Vinum</h2><span className="petit discret">{duTarif.filter((p) => p.producteur_id).length} reliés · {aRelier.length} à relier</span></summary>
             <div><p className="sous">Chaque producteur du tarif est relié à la base de Pat : celui que Pat a reconnu (avec son ranking), un producteur proche à choisir, ou ajouté à la base, à valider dans Producteurs. Le choix vaut pour tous ses vins, et pour les prochains tarifs.</p></div>
             <div className="ligne-actions" style={{ alignItems: 'center' }}>
@@ -193,7 +193,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             </div>
           </details>
 
-          <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }} open>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }}>
             <summary><h2 style={{ margin: 0 }}>Restaurants et marges</h2><span className="petit discret">{restos.length} restaurant{restos.length > 1 ? 's' : ''}</span></summary>
             <div>
               <p className="sous" style={{ margin: '4px 0 0' }}>Prix vendu au restaurant (HTVA) = prix QV + la marge du restaurant. Un restaurant qui active ce distributeur reçoit la marge par défaut ({String(defaut).replace('.', ',')} %, à changer dans la page Distributeurs). Les restaurants ne voient ni le prix QV ni la marge.</p></div>
@@ -210,7 +210,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             ) : <span className="petit discret">Aucun restaurant n’a encore activé ce distributeur.</span>}
           </details>
 
-          <details className="carte-bo pile bloc-fiche bloc-distrib" open>
+          <details className="carte-bo pile bloc-fiche bloc-distrib" open={sp.q !== undefined || sp.tous !== undefined}>
             <summary><h2 style={{ margin: 0 }}>Vins</h2><span className="petit discret">{actifs.length} proposés · {rattaches} d’un producteur de la base · {dansLaBase} vins de la base</span></summary>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'baseline', justifyContent: 'space-between' }}>
               <Link href={`/admin/super/vins?${new URLSearchParams({ distrib: id, statut: 'propose' })}`} className="btn fantome petit">Voir ses vins à valider dans la base →</Link>
@@ -280,7 +280,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                               <option value="">— pas encore dans la base —</option>
                               {cuvees.filter((c) => c.producteur_id === v.producteur_id).map((c) => <option key={c.id} value={c.id}>{c.nom}{c.statut === 'propose' ? ' (à valider)' : ''}</option>)}
                             </select>
-                          </> : <a href="#base" className="petit discret">producteur à relier</a>}</td>
+                          </> : <a href={`?${new URLSearchParams({ ...(sp.q ? { q: sp.q } : {}), ...(sp.tous ? { tous: sp.tous } : {}), prod: '' })}#base`} className="petit discret">producteur à relier</a>}</td>
                           <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`publie_${v.id}`} defaultValue={virgule(v.prix_catalogue)} placeholder="—" aria-label={`Prix public : ${v.libelle}`} /> €</span></td>
                           <td className="droite">{calculQv && v.prix_catalogue != null
                             ? <><input type="hidden" name={`prix_${v.id}`} value={virgule(v.prix_qv)} /><span style={{ whiteSpace: 'nowrap' }}>{v.prix_qv == null ? '—' : euros(Number(v.prix_qv))}</span></>

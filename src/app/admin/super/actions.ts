@@ -661,3 +661,36 @@ export async function changerModeTest(f: FormData) {
   revalidatePath('/admin/super');
   redirect(avec('/admin/super', { ok: actif ? 'Mode test : aucun e-mail n’est envoyé aux distributeurs des restaurants.' : 'Mode test arrêté : les bons de commande partent chez les distributeurs.' }));
 }
+
+/**
+ * Doublon dans les producteurs : ce producteur est regroupé dans un autre (le producteur gardé). Ses vins de la base, ses vins
+ * sur les cartes et chez les distributeurs passent au producteur gardé, qui reprend ce qui lui manque (pays, région, fiche, ranking,
+ * appellations…). Ce producteur est retiré de la base, mais son nom mène désormais au producteur gardé (tarifs, cartes).
+ */
+export async function regrouperProducteur(id: string, f: FormData) {
+  await exigerAdmin();
+  const page = `/admin/super/producteurs/${encodeURIComponent(id)}`;
+  const nom = txt(f, 'cible');
+  const [cible] = nom ? await requete<{ id: string; nom: string; ranking_pat: number | null }>(
+    `select id, nom, ranking_pat from producteur where statut <> 'retire' and id <> $1 and (id = $2 or lower(nom) = lower($2)) order by statut = 'valide' desc limit 1`, [id, nom]) : [];
+  if (!cible) redirect(avec(page, { erreur: 'Choisissez le producteur à garder dans la liste.' }));
+  const [source] = await requete<{ nom: string }>('select nom from producteur where id = $1', [id]);
+  if (!source) redirect(avec('/admin/super/producteurs', { erreur: 'Producteur introuvable.' }));
+  await requete(
+    `update producteur g set pays = coalesce(g.pays, d.pays), region = coalesce(g.region, d.region), sous_region = coalesce(g.sous_region, d.sous_region),
+            notes_objectives = coalesce(nullif(g.notes_objectives, ''), d.notes_objectives), gamme_prix = coalesce(g.gamme_prix, d.gamme_prix),
+            ranking_pat = coalesce(g.ranking_pat, d.ranking_pat), ranking_suggere = coalesce(g.ranking_suggere, d.ranking_suggere),
+            appellations_texte = (select coalesce(array_agg(distinct x), '{}') from unnest(g.appellations_texte || d.appellations_texte) x),
+            couleurs = (select coalesce(array_agg(distinct x), '{}') from unnest(g.couleurs || d.couleurs) x),
+            cepages_rois = (select coalesce(array_agg(distinct x), '{}') from unnest(g.cepages_rois || d.cepages_rois) x), maj_le = now()
+       from producteur d where g.id = $1 and d.id = $2`, [cible.id, id]);
+  await requete('insert into producteur_terroir (producteur_id, terroir_id) select $1, terroir_id from producteur_terroir where producteur_id = $2 on conflict do nothing', [cible.id, id]);
+  await requete('delete from producteur_terroir where producteur_id = $1', [id]);
+  await requete('update cuvee set producteur_id = $2 where producteur_id = $1', [id, cible.id]);
+  const [g] = await requete<{ ranking_pat: number | null }>('select ranking_pat from producteur where id = $1', [cible.id]);
+  await requete(`update vin_carte set producteur_id = $2, ranking_producteur = coalesce($3, ranking_producteur) where producteur_id = $1`, [id, cible.id, g?.ranking_pat ?? null]);
+  await requete('update distributeur_vin set producteur_id = $2 where producteur_id = $1', [id, cible.id]);
+  await requete(`update producteur set statut = 'retire', fusionne_dans = $2, maj_le = now() where id = $1`, [id, cible.id]);
+  revalidatePath('/admin', 'layout');
+  redirect(`/admin/super/producteurs/${encodeURIComponent(cible.id)}?${new URLSearchParams({ ok: `« ${source.nom} » regroupé dans ce producteur : ses vins y sont maintenant reliés.` })}`);
+}

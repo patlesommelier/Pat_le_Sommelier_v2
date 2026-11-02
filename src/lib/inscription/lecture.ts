@@ -138,13 +138,18 @@ type Options = { exclure?: string; valideSeulement?: boolean; memesMots?: boolea
 async function producteurAuNom(requete: Requete, nom: string, { exclure = '', valideSeulement = false, memesMots = false }: Options = {}): Promise<{ id: string; nom: string; statut: string } | null> {
   const m = mots(nom);
   if (!m.length) return null;
-  const lignes = await requete<{ id: string; nom: string; statut: string }>(
-    `select id, nom, statut::text from producteur where statut <> 'retire' and ${SANS_ACCENTS} like all($1) and id <> $2 and (not $3 or statut = 'valide')
-      order by statut = 'valide' desc, length(nom) limit 5`,
+  // Un producteur regroupé dans un autre (doublon) reste trouvable par son nom : il mène au producteur gardé.
+  const lignes = await requete<{ id: string; nom: string; statut: string; garde_id: string | null; garde_nom: string | null; garde_statut: string | null }>(
+    `select p.id, p.nom, p.statut::text, g.id as garde_id, g.nom as garde_nom, g.statut::text as garde_statut
+       from producteur p left join producteur g on g.id = p.fusionne_dans and g.statut <> 'retire'
+      where (p.statut <> 'retire' or g.id is not null) and ${SANS_ACCENTS.replace(/\bnom\b/g, 'p.nom')} like all($1) and p.id <> $2 and coalesce(g.id, p.id) <> $2
+        and (not $3 or coalesce(g.statut, p.statut) = 'valide')
+      order by coalesce(g.statut, p.statut) = 'valide' desc, length(p.nom) limit 5`,
     [m.map((x) => `%${x}%`), exclure, valideSeulement]);
   // Mots entiers (« Pala » n'est pas « Palari ») ; `memesMots` : le nom de la base n'a pas d'autre mot (doublons).
   const p = lignes.find((l) => { const leurs = mots(l.nom); return m.every((x) => leurs.includes(x)) && (!memesMots || leurs.every((x) => m.includes(x))); });
-  return p ? { id: p.id, nom: p.nom, statut: p.statut } : null;
+  if (!p) return null;
+  return p.garde_id ? { id: p.garde_id, nom: p.garde_nom!, statut: p.garde_statut! } : { id: p.id, nom: p.nom, statut: p.statut };
 }
 
 /**

@@ -20,7 +20,7 @@ function base(producteurs: Producteur[], cuvees: Cuvee[], vins: VinCarte[]): Req
       return vins.filter((v) => !v.producteur_id).map((v) => ({ ...v, appellation: v.appellation_texte }));
     if (s.startsWith('select nom, appellations_texte')) return producteurs.filter((x) => x.statut !== 'retire').map((x) => ({ ...x }));
     if (s.startsWith('select nom from terroir')) return [{ nom: 'Costières de Nîmes AOC' }, { nom: 'Rheinhessen' }];
-    if (s.startsWith('select id, nom, statut::text from producteur')) {
+    if (s.startsWith('select p.id, p.nom, p.statut::text, g.id as garde_id')) {
       const [motifs, exclure, valide] = p as [string[], string, boolean];
       return producteurs.filter((x) => x.statut !== 'retire' && x.id !== exclure && (!valide || x.statut === 'valide')
         && motifs.every((m) => sansAccents(x.nom).includes(m.replace(/%/g, ''))))

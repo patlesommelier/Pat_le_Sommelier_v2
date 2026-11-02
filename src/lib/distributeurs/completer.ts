@@ -12,6 +12,7 @@ import { garder, partagerEtiquettesDistributeur, telecharger } from './etiquette
 import { recadrerSurEtiquette } from './recadrage';
 import { cepageDuNom } from './cepages';
 import { appliquerAppellations } from './rattachement';
+import { contenuDePage, indexDesPages, lireUrl, pageDuVin, pagesDuSite } from './plansite';
 
 /** Cépages remis en forme : sans pourcentages, en minuscules, séparés par des virgules (« Chardonnay 80 %, Pinot Noir 20% » → « chardonnay, pinot noir »). */
 export function normaliserCepages(texte: string | null | undefined): string | null {
@@ -60,6 +61,22 @@ Pour chaque vin : « appellation » (le nom officiel, sans « AOC », « DOC »�
 et « image » (seulement si la photo est demandée : l'adresse complète, telle qu'elle figure sur la page du vin, de l'image
 de son étiquette — de préférence l'étiquette seule, sinon la photo de la bouteille de face, étiquette lisible ; pas un logo, une bannière
 ni la photo d'un autre vin ; null sinon). N'invente rien : en cas de doute, null.
+Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "appellation": "...", "cepages": "...", "image": null}]}`;
+
+/** Consigne pour des fiches déjà lues par le serveur (plan du site) : Claude n'a qu'à relever, sans outil de recherche. */
+const consigneLue = (lus: { v: VinACompleter; url: string; texte: string; images: string[] }[]) =>
+  `Tu complètes la base de vins d'un sommelier. Voici la fiche de chaque vin, telle qu'elle figure sur le site du distributeur.
+Relève seulement ce qui est indiqué entre parenthèses, d'après le texte de la fiche. N'invente rien : en cas de doute, null.
+
+${lus.map(({ v, url, texte, images }) => `### id ${v.id} : ${v.producteur} — ${v.nom}${v.millesime ? ` ${v.millesime}` : ''} (à trouver : ${aTrouver(v)})
+Page : ${url}
+${v.sans_photo ? `Images de la page :\n${images.map((i) => `- ${i}`).join('\n') || '(aucune)'}\n` : ''}Texte de la page :
+${texte}`).join('\n\n')}
+
+Pour chaque vin : « appellation » (le nom officiel, sans « AOC », « DOC »… à la fin ; null si absente ou pas demandée),
+« cepages » (les cépages tels qu'indiqués ; null si absents ou pas demandés) et « image » (seulement si la photo est demandée :
+l'adresse, recopiée de la liste « Images de la page », de la photo de ce vin — étiquette ou bouteille ; pas un logo ni un autre vin ; null sinon).
+Si la page n'est manifestement pas celle de ce vin, mets les trois à null.
 Réponds uniquement en JSON, sans texte autour : {"vins": [{"id": "...", "appellation": "...", "cepages": "...", "image": null}]}`;
 
 /** Recherche pour un lot de vins (outils de recherche web côté serveur, avec reprise des tours mis en pause). */
@@ -117,22 +134,15 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
     const client = clientClaude({ maxRetries: 1 });
     const modele = modeleTarif(d.modele_lecture);
     const terroirs = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
-    let cepages = 0, appellations = 0, photos = 0, faits = 0, erreurs = 0, derniereErreur = '';
-    const lots: typeof vins[] = [];
-    for (let i = 0; i < vins.length; i += LOT) lots.push(vins.slice(i, i + LOT));
-    const traiter = async (lot: typeof vins) => {
-      // Appel en erreur (Claude injoignable…) : le lot n'est pas marqué « cherché », une reprise le refera.
-      let texte: string;
-      try { texte = await chercherLot(client, modele, consigne(d.nom, domaine, lot), domaine); } catch (e) {
-        console.error('[completer]', e);
-        erreurs += lot.length; faits += lot.length;
-        derniereErreur = (e as Error).message;
-        return;
-      }
-      const reponse = extraireVins(texte) ?? [];
-      for (const r of reponse as Array<{ id?: string; appellation?: string | null; cepages?: string | null; image?: string | null }>) {
+    let cepages = 0, appellations = 0, photos = 0, faits = 0, erreurs = 0, derniereErreur = '', parPlan = 0, surLeWeb = 0;
+    type Reponse = { id?: string; appellation?: string | null; cepages?: string | null; image?: string | null };
+    /** Enregistre ce qui a été trouvé (sans rien écraser) ; renvoie les ids des vins pour lesquels quelque chose a été trouvé. */
+    const appliquer = async (lot: VinACompleter[], reponse: Reponse[], images?: Map<string, string[]>) => {
+      const trouves = new Set<string>();
+      for (const r of reponse) {
         const v = lot.find((x) => x.id === r.id);
         if (!v) continue;
+        if (r.appellation?.trim() || r.cepages?.trim() || r.image?.trim()) trouves.add(v.id);
         const c = normaliserCepages(r.cepages);
         if (c) {
           const n = await requete(`update cuvee set cepages = $2 where id = $1 and coalesce(cepages, '') = '' returning id`, [v.id, c]);
@@ -146,25 +156,88 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
           appellations += n.length;
         }
         // Photo : copiée chez nous, sur les vins du distributeur sans étiquette, puis donnée à la cuvée (si elle n'en a toujours pas).
-        if (v.sans_photo && r.image?.trim()) {
-          const url = await etiquetteDepuisPhoto(client, modele, r.image.trim(), `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
+        // Fiche lue par le serveur : seulement une image de la page (pas une adresse inventée).
+        const image = r.image?.trim();
+        if (v.sans_photo && image && (!images || images.get(v.id)?.includes(image))) {
+          const url = await etiquetteDepuisPhoto(client, modele, image, `${distributeurId.slice(0, 8)}-${v.id.slice(-40).replace(/[^a-z0-9]+/gi, '-')}`);
           if (url) {
             await requete('update distributeur_vin set etiquette_url = $3, image_source = $4, etiquette_recadree = true where distributeur_id = $1 and cuvee_id = $2 and etiquette_url is null',
-              [distributeurId, v.id, url, r.image.trim()]);
+              [distributeurId, v.id, url, image]);
             photos++;
           }
         }
       }
-      // Vins du lot marqués « cherchés » (trouvés ou non) : une reprise passe aux suivants.
-      await requete('update distributeur_vin set cherche_le = now() where distributeur_id = $1 and cuvee_id = any($2)', [distributeurId, lot.map((v) => v.id)]);
-      faits += lot.length;
-      await etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : ${faits} vins sur ${vins.length}…`);
+      return trouves;
     };
-    await etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : 0 vin sur ${vins.length}…`);
+    const marquer = (lot: VinACompleter[]) => requete('update distributeur_vin set cherche_le = now() where distributeur_id = $1 and cuvee_id = any($2)', [distributeurId, lot.map((v) => v.id)]);
+    const avancer = (n: number) => { faits += n; return etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : ${faits} vins sur ${vins.length}…`); };
+
+    // 1. Sans recherche web : la page de chaque vin trouvée dans le plan du site, lue par le serveur, puis relevée par Claude Haiku (peu cher).
+    let restants: VinACompleter[] = vins;
+    if (domaine) {
+      await etat('en_cours', `Lecture du plan du site ${domaine}…`);
+      const pages = await pagesDuSite(domaine).catch(() => [] as string[]);
+      if (pages.length) {
+        const index = indexDesPages(pages);
+        const lus: { v: VinACompleter; url: string; texte: string; images: string[] }[] = [];
+        const aLire = vins.map((v) => ({ v, url: pageDuVin(pages, v, index) })).filter((x): x is { v: VinACompleter; url: string } => Boolean(x.url));
+        await etat('en_cours', `Plan du site ${domaine} : ${aLire.length} fiches de vins trouvées sur ${vins.length}, lecture…`);
+        for (let i = 0; i < aLire.length; i += 6) {
+          await Promise.all(aLire.slice(i, i + 6).map(async ({ v, url }) => {
+            const html = await lireUrl(url);
+            const c = html ? contenuDePage(html, url) : null;
+            if (c && c.texte.length > 150) lus.push({ v, url, ...c });
+          }));
+        }
+        const images = new Map(lus.map((l) => [l.v.id, l.images]));
+        const sansReponse = new Set(lus.map((l) => l.v.id));
+        const releveur = modeleTarif('haiku');
+        const lotsLus: typeof lus[] = [];
+        for (let i = 0; i < lus.length; i += 8) lotsLus.push(lus.slice(i, i + 8));
+        for (let i = 0; i < lotsLus.length; i += EN_PARALLELE) {
+          await Promise.all(lotsLus.slice(i, i + EN_PARALLELE).map(async (lot) => {
+            try {
+              const m = await client.messages.create({ model: releveur, max_tokens: 4000, messages: [{ role: 'user', content: consigneLue(lot) }] }, { timeout: 2 * 60_000 });
+              const texte = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
+              const trouves = await appliquer(lot.map((l) => l.v), (extraireVins(texte) ?? []) as Reponse[], images);
+              const faitsIci = lot.filter((l) => trouves.has(l.v.id)).map((l) => l.v);
+              for (const v of faitsIci) sansReponse.delete(v.id);
+              parPlan += faitsIci.length;
+              if (faitsIci.length) await marquer(faitsIci);
+              await avancer(faitsIci.length);
+            } catch (e) { console.error('[completer] fiche lue', e); }
+          }));
+        }
+        // Les vins dont la fiche n'a rien donné (ou pas été trouvée) passent à la recherche web.
+        const faitsParPlan = new Set(lus.filter((l) => !sansReponse.has(l.v.id)).map((l) => l.v.id));
+        restants = vins.filter((v) => !faitsParPlan.has(v.id));
+      }
+    }
+
+    // 2. Recherche web de Claude (plus chère) pour les autres vins.
+    const lots: VinACompleter[][] = [];
+    for (let i = 0; i < restants.length; i += LOT) lots.push(restants.slice(i, i + LOT));
+    const traiter = async (lot: VinACompleter[]) => {
+      // Appel en erreur (Claude injoignable…) : le lot n'est pas marqué « cherché », une reprise le refera.
+      let texte: string;
+      try { texte = await chercherLot(client, modele, consigne(d.nom, domaine, lot), domaine); } catch (e) {
+        console.error('[completer]', e);
+        erreurs += lot.length; faits += lot.length;
+        derniereErreur = (e as Error).message;
+        return;
+      }
+      await appliquer(lot, (extraireVins(texte) ?? []) as Reponse[]);
+      // Vins du lot marqués « cherchés » (trouvés ou non) : une reprise passe aux suivants.
+      await marquer(lot);
+      surLeWeb += lot.length;
+      await avancer(lot.length);
+    };
+    if (restants.length) await etat('en_cours', `Recherche sur ${domaine ?? 'le web'} : ${faits} vins sur ${vins.length}…`);
     for (let i = 0; i < lots.length; i += EN_PARALLELE) await Promise.all(lots.slice(i, i + EN_PARALLELE).map(traiter));
     await partagerEtiquettesDistributeur(requete, distributeurId);
-    if (erreurs === vins.length) { await etat('echec', `La recherche n’a pas abouti (${derniereErreur}) : relancez-la plus tard.`.slice(0, 500)); return; }
-    await etat('terminee', `${deduits ? `${deduits} cépages déduits du nom, sans IA. ` : ''}${vins.length - erreurs} vins cherchés sur ${domaine ?? 'le web'} : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`
+    if (erreurs && erreurs === restants.length && !parPlan) { await etat('echec', `La recherche n’a pas abouti (${derniereErreur}) : relancez-la plus tard.`.slice(0, 500)); return; }
+    await etat('terminee', `${deduits ? `${deduits} cépages déduits du nom, sans IA. ` : ''}${vins.length - erreurs} vins cherchés sur ${domaine ?? 'le web'}`
+      + ` (${parPlan} par le plan du site, sans recherche web ; ${surLeWeb} par la recherche web) : ${cepages} reçoivent leurs cépages, ${appellations} leur appellation, ${photos} leur photo.`
       + (erreurs ? ` ${erreurs} n’ont pas pu être cherchés (erreur de connexion) : relancez la recherche pour eux.` : ''));
   } catch (e) {
     console.error('[completer]', distributeurId, e);
