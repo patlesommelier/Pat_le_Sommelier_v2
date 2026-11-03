@@ -9,6 +9,7 @@ import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
 import { completerVinsDistributeur, recadrerPhotosDistributeur } from '@/lib/distributeurs/completer';
+import { retirerPhotosVides } from '@/lib/distributeurs/etiquettes';
 import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif, prixRemise } from '@/lib/distributeurs/tarif';
@@ -278,6 +279,19 @@ export async function recadrerPhotos(id: string): Promise<Retour> {
   void recadrerPhotosDistributeur(requete, id);
   rafraichir(id);
   return { ok: 'Recadrage lancé : la page se met à jour pendant le travail.' };
+}
+
+/** Photos « vides » (images « pas de photo » toutes blanches…) retirées des vins du distributeur, de la base et des cartes (en arrière-plan). */
+export async function nettoyerPhotosVides(id: string): Promise<Retour> {
+  await exigerAdmin();
+  const etat = (statut: string, message: string) =>
+    requete('update distributeur set completion_statut = $2, completion_message = $3, completion_le = now() where id = $1', [id, statut, message]);
+  await etat('en_cours', 'Recherche des photos vides (images « pas de photo »)…');
+  void retirerPhotosVides(requete, id)
+    .then((r) => etat('terminee', `${r.examinees} photo${r.examinees > 1 ? 's' : ''} examinée${r.examinees > 1 ? 's' : ''} : ${r.retirees} vide${r.retirees > 1 ? 's' : ''} retirée${r.retirees > 1 ? 's' : ''}${r.retirees ? ' (le logo du distributeur s’affiche à leur place)' : ''}.`))
+    .catch((e) => etat('echec', `Le nettoyage n’a pas abouti : ${(e as Error).message}`.slice(0, 500)));
+  rafraichir(id);
+  return { ok: 'Nettoyage lancé : la page se met à jour pendant le travail.' };
 }
 
 /** Vins des producteurs reliés, absents de la base : ajoutés comme vins à valider (Vins de la base). */

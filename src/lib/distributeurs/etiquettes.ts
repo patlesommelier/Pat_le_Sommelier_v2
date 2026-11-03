@@ -8,6 +8,7 @@ import type { Requete } from '../generation/accords';
 import { enProduction } from '../production';
 import { configStockage, deposerObjet } from '../stockage';
 import { adresseDuCollage, imagesParReference, type ImageArticle } from './sources';
+import { estImageVide } from '../etiquettes/image-vide';
 
 const EXTENSIONS: Record<string, string> = { 'image/jpeg': 'jpg', 'image/png': 'png', 'image/webp': 'webp', 'image/gif': 'gif' };
 
@@ -15,6 +16,7 @@ const EXTENSIONS: Record<string, string> = { 'image/jpeg': 'jpg', 'image/png': '
 export async function garder(octets: Buffer, type: string, nom: string): Promise<string | null> {
   const ext = EXTENSIONS[type];
   if (!ext || !octets.length || octets.length > 5 * 1024 * 1024) return null;
+  if (await estImageVide(octets)) return null; // image « pas de photo » (toute blanche…) : jamais gardée comme étiquette
   const fichier = `distributeurs/${nom}-${createHash('sha1').update(octets).digest('hex').slice(0, 10)}.${ext}`;
   const c = configStockage();
   if (c) return deposerObjet(fichier, octets, type, c);
@@ -86,3 +88,27 @@ export async function appliquerImages(requete: Requete, distributeurId: string, 
 /** Images de la version « page web » d'un collage. */
 export const etiquettesDuCollage = (requete: Requete, distributeurId: string, html: string) =>
   appliquerImages(requete, distributeurId, new Map([...imagesParReference(html, adresseDuCollage(html))].map(([ref, url]) => [ref, { url }])));
+
+/**
+ * Nettoyage : les photos « vides » (toutes blanches, transparentes ou d'une seule couleur) des vins de ce distributeur sont retirées,
+ * ainsi que leurs copies dans la base de Pat (cuvées) et sur les cartes : le logo du distributeur s'affiche à leur place,
+ * et une recherche ou une photo déposée pourra les remplacer. Renvoie le nombre de photos examinées et retirées.
+ */
+export async function retirerPhotosVides(requete: Requete, distributeurId: string) {
+  const urls = (await requete<{ url: string }>(
+    `select distinct etiquette_url as url from distributeur_vin where distributeur_id = $1 and etiquette_url is not null`, [distributeurId])).map((u) => u.url);
+  const vides: string[] = [];
+  for (let i = 0; i < urls.length; i += 6) {
+    await Promise.all(urls.slice(i, i + 6).map(async (url) => {
+      const c = await telecharger(url);
+      if (c && await estImageVide(c.octets)) vides.push(url);
+    }));
+  }
+  if (vides.length) {
+    await requete(`update distributeur_vin set etiquette_url = null, etiquette_recadree = false, etiquette_qualite = null, photo_cherche_le = null
+                    where distributeur_id = $1 and etiquette_url = any($2)`, [distributeurId, vides]);
+    await requete(`update cuvee set etiquette_url = null, etiquette_source = null, etiquette_maj_le = now() where etiquette_url = any($1) and etiquette_source = 'distributeur'`, [vides]);
+    await requete(`update vin_carte set etiquette_url = null, etiquette_source = null, etiquette_statut = null where etiquette_url = any($1) and etiquette_source = 'cuvee'`, [vides]);
+  }
+  return { examinees: urls.length, retirees: vides.length };
+}

@@ -1,7 +1,7 @@
 // Super-admin — fiche d’un distributeur : coordonnées et remise, tarif lu par Claude, vins (prix publics et prix QV), marges des restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerMarges, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerMarges, completerVins, deposerTarif, nettoyerPhotosVides, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -221,6 +221,13 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               </form>
             </div>
             <datalist id="producteurs-base">{producteurs.map((p) => <option key={p.nom} value={p.nom} />)}</datalist>
+            {/* Images « pas de photo » (toutes blanches…) reprises du site : retirées, le logo du distributeur s'affiche à leur place. */}
+            {!rechercheEnCours && (
+              <FormulaireAdmin action={nettoyerPhotosVides.bind(null, id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                <button className="btn fantome petit">Retirer les photos vides</button>
+                <span className="petit discret">Images « pas de photo » toutes blanches reprises du site : retirées des vins, de la base et des cartes.</span>
+              </FormulaireAdmin>
+            )}
             {(aCompleter.n > 0 || aCompleter.hors_base > 0 || aRecadrer > 0 || bilan) && (
               <div className="carte-bo pile" style={{ gap: 8 }}>
                 <div className="ligne-actions" style={{ alignItems: 'center' }}>
