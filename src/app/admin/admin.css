@@ -444,3 +444,19 @@ dialog.superposition { overflow-y: auto; }
 .tableau-commande .recue { color: #2e7d32; font-weight: 700; }
 .tableau-commande tfoot td { border-top: 2px solid var(--ligne); border-bottom: 0; background: var(--survol); }
 .tableau-commande .total-commande { font-size: 17px; color: var(--encre); white-space: nowrap; }
+/* Bouton vert (super-admin : « Valider la commande »). */
+.btn.vert { background: #2E9E5B; color: #FFFFFF; border-color: #2E9E5B; }
+.btn.vert:hover { background: #26864C; }
+/* Super-admin, Commandes : le statut en grande pastille de couleur (liste enregistrée à chaque changement). */
+.select-statut { appearance: none; -webkit-appearance: none; border: 0; border-radius: 999px; padding: 10px 40px 10px 18px; font: inherit; font-size: 15px; font-weight: 700; cursor: pointer;
+  background: #FDEBC8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='currentColor' stroke-width='2' fill='none'/%3E%3C/svg%3E") no-repeat right 16px center; color: #7A4B00; }
+.select-statut[data-statut="acceptee"] { background-color: #FDEBC8; color: #7A4B00; }
+.select-statut[data-statut="envoyee_distributeur"] { background-color: #DCEBFA; color: #1D4F86; }
+.select-statut[data-statut="livree_partielle"] { background-color: #EFE3F7; color: #5B2C83; }
+.select-statut[data-statut="livree"], .select-statut[data-statut="facturee"] { background-color: #2E9E5B; color: #FFFFFF; }
+.select-statut option { background: #FFFFFF; color: var(--texte); font-weight: 600; }
+/* Commandes : statut vert (acceptée par Quid Vinum et après) ; ce que Quid Vinum partage, juste sous le statut. */
+.etat.vert { background: #2E9E5B; color: #FFFFFF; }
+.statut-bloc { gap: 6px; align-items: flex-end; text-align: right; max-width: 460px; }
+.info-statut { font-size: 13px; color: var(--discret); }
+.info-statut.vert { color: #2E7D4F; font-weight: 600; }

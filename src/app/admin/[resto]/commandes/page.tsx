@@ -18,6 +18,7 @@ import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 import { VignetteVin } from '@/components/admin/VignetteVin';
+import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 // Suivi Quid Vinum, tel que le restaurant le lit.
@@ -77,20 +78,21 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
           {/* Statut, bien visible : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
+          {/* À côté du statut : ce que Quid Vinum partage (la suite après l'acceptation, la date de mise à jour). */}
+          <span className="pile statut-bloc">
           <span className="statut-commande">{c.statut === 'ouverte'
             ? (recues ? <Etat type="propose">Réception partielle : {recues} / {total(c)} bouteilles</Etat>
-              : envoyee && c.via_qv ? <Etat type={c.statut_qv && c.statut_qv !== 'recue' ? 'ok' : 'propose'}>{SUIVI_QV[c.statut_qv ?? 'recue'] ?? c.statut_qv}</Etat>
+              : envoyee && c.via_qv ? (c.statut_qv && c.statut_qv !== 'recue'
+                ? <span className="etat vert">{SUIVI_QV[c.statut_qv] ?? c.statut_qv}</span>
+                : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat>
             : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
+          {c.via_qv && c.statut === 'ouverte' && c.statut_qv === 'acceptee' && <span className="info-statut vert">Vous recevrez bientôt des informations concernant la livraison.</span>}
+          {c.via_qv && envoyee && c.statut_qv_le && c.statut !== 'annulee' && <span className="info-statut">Envoyée le {date(c.envoyee_le!)} · mise à jour le {date(c.statut_qv_le)}</span>}
+          </span>
         </div>
         {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Quid Vinum a refusé cette commande : {c.motif_refus}</p>}
-        {/* Suivi par Quid Vinum (mis à jour par Quid Vinum dans son espace). */}
-        {/* Commande Quid Vinum acceptée : le restaurant est prévenu de la suite (et ne peut plus l'annuler). */}
-        {c.via_qv && c.statut === 'ouverte' && c.statut_qv === 'acceptee' && (
-          <p className="message ok" style={{ margin: 0 }}>Votre commande a été acceptée par Quid Vinum : vous recevrez bientôt des informations concernant la livraison.</p>
-        )}
-        {c.via_qv && envoyee && c.statut_qv_le && c.statut !== 'annulee' && <span className="petit discret">Envoyée le {date(c.envoyee_le!)} · mise à jour le {date(c.statut_qv_le)}</span>}
         {/* Détail de la commande : photo, vin, bouteilles, prix et total de chaque ligne ; la somme en dessous. */}
         <div className="tableau tableau-commande"><table>
           <thead><tr><th>Vin</th><th className="droite">Bouteilles</th><th className="droite">Prix HTVA</th><th className="droite">Total HTVA</th></tr></thead>
@@ -117,7 +119,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             ? <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} petit />
             : <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn rouge petit">Envoyer la commande</Link>)}
-          <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec petit">Bon de commande (PDF)</a>
+          {/* Le bon de commande : sa page (aperçu du PDF, et l'envoyer ou le renvoyer). */}
+          <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn sec petit">Bon de commande (PDF)</Link>
           {c.receptions.map((r) => (
             <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
               Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
@@ -241,6 +244,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         </Superposition>
       </Entete>
       <Message ok={sp.ok} />
+      {/* Commande Quid Vinum en cours : la page se met à jour seule (statut changé par Quid Vinum, presque en temps réel). */}
+      {ouvertes.some((c) => c.via_qv && c.envoyee_le) && <ActualisationAuto secondes={30} />}
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres du restaurant</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">

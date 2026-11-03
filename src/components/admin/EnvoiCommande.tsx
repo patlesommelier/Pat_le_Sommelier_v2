@@ -35,8 +35,8 @@ export function EnvoiCommande({ pdf, fichier, email, sujet, corps, serveur, envo
 
   return (
     <span className="pile" style={{ gap: 6 }}>
-      <button type="button" className={`btn rouge${petit ? ' petit' : ''}`} onClick={cliquer} disabled={enCours} aria-busy={enCours}>
-        {enCours && serveur ? 'Envoi…' : deja ? 'Renvoyer la commande' : 'Envoyer la commande'}
+      <button type="button" className={`btn ${deja ? 'sec' : 'rouge'}${petit ? ' petit' : ''}`} onClick={cliquer} disabled={enCours} aria-busy={enCours}>
+        {enCours && serveur ? 'Envoi…' : deja ? 'Renvoyer le bon de commande' : 'Envoyer la commande'}
       </button>
       {message?.ok && <span className="petit" style={{ color: 'var(--encre)', maxWidth: 320 }}>{message.ok}</span>}
       {message?.erreur && <span className="petit" style={{ color: 'var(--ocre)', maxWidth: 320 }}>{message.erreur}</span>}

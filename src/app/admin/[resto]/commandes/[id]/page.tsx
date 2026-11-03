@@ -38,7 +38,7 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
       <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
       <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom}${c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
         <span className="statut-commande">{c.statut === 'ouverte'
-          ? (envoyee && c.via_qv ? <Etat type={c.statut_qv && c.statut_qv !== 'recue' ? 'ok' : 'propose'}>{SUIVI_QV[c.statut_qv ?? 'recue'] ?? c.statut_qv}</Etat>
+          ? (envoyee && c.via_qv ? (c.statut_qv && c.statut_qv !== 'recue' ? <span className="etat vert">{SUIVI_QV[c.statut_qv] ?? c.statut_qv}</span> : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
             : envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
           : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
       </Entete>
@@ -57,15 +57,15 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
           {c.fournisseur_email
             ? <EnvoiCommande pdf={pdf} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={envoiEmailConfigure()} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee}
-                apres={suivante ?? `/admin/${resto}/commandes?commande=${c.id}`} />
+                apres={envoyee ? undefined : suivante ?? `/admin/${resto}/commandes?commande=${c.id}`} />
             : <span className="petit" style={{ color: 'var(--ocre)' }}>{c.via_qv ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.'
                 : <>Pour envoyer la commande, ajoutez l’adresse e-mail du distributeur dans <Link href={`/admin/${resto}/fournisseurs`}>Distributeurs</Link>.</>}</span>}
           <a href={pdf} target="_blank" rel="noopener" className="btn sec">Ouvrir le PDF</a>
           <span className="petit discret" style={{ alignSelf: 'center' }}>{c.via_qv ? 'La commande part chez Quid Vinum' : 'La commande part chez le distributeur'}{c.fournisseur_email ? ` (${c.fournisseur_email})` : ''}, votre restaurant en copie.</span>
         </div>
       )}
-      {/* Une fois la commande envoyée, plus d'aperçu : « Ouvrir le PDF » suffit. */}
-      {!envoyee && <iframe src={pdf} title={`Bon de commande ${ref}`} style={{ width: '100%', height: 'min(1100px, 85vh)', border: '1px solid var(--ligne)', borderRadius: 14, background: '#fff' }} />}
+      {/* Aperçu du bon de commande (toujours : on peut le relire avant de le renvoyer). */}
+      <iframe src={pdf} title={`Bon de commande ${ref}`} style={{ width: '100%', height: 'min(1100px, 85vh)', border: '1px solid var(--ligne)', borderRadius: 14, background: '#fff' }} />
     </>
   );
 }
