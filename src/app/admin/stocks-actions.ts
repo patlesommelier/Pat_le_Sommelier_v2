@@ -378,8 +378,9 @@ export async function receptionnerCommande(resto: string, id: string): Promise<R
 export async function annulerCommande(resto: string, id: string): Promise<Retour> {
   await exigerAcces(resto);
   const r = await requete<{ envoyee_a: string | null; envoyee_le: Date | null }>(
-    `update commande set statut = 'annulee' where id = $1 and restaurant_id = $2 and statut = 'ouverte' returning envoyee_a, envoyee_le`, [id, resto]);
-  if (!r.length) return { erreur: 'Cette commande n’est plus ouverte.' };
+    `update commande set statut = 'annulee' where id = $1 and restaurant_id = $2 and statut = 'ouverte'
+        and coalesce(statut_qv, '') not in ('acceptee', 'envoyee_distributeur', 'livree_partielle', 'livree', 'facturee') returning envoyee_a, envoyee_le`, [id, resto]);
+  if (!r.length) return { erreur: 'Cette commande ne peut plus être annulée : elle n’est plus ouverte, ou Quid Vinum l’a déjà acceptée.' };
   // Commande déjà envoyée : son destinataire (Quid Vinum ou le distributeur) est prévenu de l'annulation, le restaurant en copie.
   let prevenu = '';
   const bon = r[0].envoyee_le ? await donneesBon(resto, id) : null;

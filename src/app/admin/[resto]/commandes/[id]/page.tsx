@@ -10,6 +10,9 @@ import { getCommandes, getCoordonnees } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
 
+// Commande Quid Vinum envoyée : son statut suit Quid Vinum.
+const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'Commande acceptée', envoyee_distributeur: 'Commande envoyée au distributeur',
+  livree_partielle: 'Livraison partielle', livree: 'Bouteilles livrées', facturee: 'Bouteilles facturées' };
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 
 export default async function BonDeCommande({ params, searchParams }: { params: Promise<{ resto: string; id: string }>; searchParams: Promise<{ suite?: string; n?: string; total?: string; ok?: string }> }) {
@@ -35,7 +38,8 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
       <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
       <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom}${c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
         {c.statut === 'ouverte'
-          ? (envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
+          ? (envoyee && c.via_qv ? <Etat type={c.statut_qv && c.statut_qv !== 'recue' ? 'ok' : 'propose'}>{SUIVI_QV[c.statut_qv ?? 'recue'] ?? c.statut_qv}</Etat>
+            : envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
           : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
       </Entete>
       {/* Commande précédente envoyée : son message ; puis où l'on en est parmi les bons du panier. */}

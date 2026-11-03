@@ -150,3 +150,7 @@ export async function getPanier(resto: string) {
                                    and lower(x.libelle) = lower(v.libelle) and x.millesime is not distinct from v.millesime and x.fournisseur_id is not null limit 1))
       where p.restaurant_id = $1 order by f.distributeur_id is null, lower(coalesce(f.nom, 'zzz')), p.ajoute_le`, [resto]);
 }
+
+/** Commande Quid Vinum acceptée (ou plus loin : envoyée au distributeur, livrée…) : le restaurant ne peut plus l'annuler. */
+export const QV_VERROUILLEE = ['acceptee', 'envoyee_distributeur', 'livree_partielle', 'livree', 'facturee'];
+export const commandeVerrouillee = (c: { via_qv?: boolean; statut_qv: string | null }) => Boolean(c.statut_qv && QV_VERROUILLEE.includes(c.statut_qv));

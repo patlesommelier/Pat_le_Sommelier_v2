@@ -42,6 +42,15 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   : c.statut === 'annulee' ? <Etat type="defaut">Annulée par le restaurant</Etat>
                   : !c.envoyee_le ? <Etat type="attention">Pas encore envoyée par le restaurant</Etat>
                   : (
+                    <span className="pile" style={{ gap: 8, alignItems: 'flex-end' }}>
+                    {/* En attente de validation : l'acceptation en un clic (le restaurant voit « Commande acceptée » et ne peut plus annuler). */}
+                    {(c.statut_qv ?? 'recue') === 'recue' && (
+                      <FormulaireAdmin action={changerStatutQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                        <Etat type="attention">En attente de validation</Etat>
+                        <input type="hidden" name="statut_qv" value="acceptee" />
+                        <button className="btn rouge petit">Accepter la commande</button>
+                      </FormulaireAdmin>
+                    )}
                     <FormulaireAdmin action={changerStatutQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                       <select name="statut_qv" defaultValue={c.statut_qv ?? 'recue'} aria-label="Statut de la commande" className="champ-liste" style={{ width: 'auto' }}>
                         {STATUTS_QV.map(([k, l]) => <option key={k} value={k}>{l}</option>)}
@@ -49,6 +58,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                       <button className="btn sec petit">Enregistrer</button>
                       {c.statut_qv_le && <span className="petit discret">depuis le {date(c.statut_qv_le)}</span>}
                     </FormulaireAdmin>
+                    </span>
                   )}
               </div>
               {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Motif du refus : {c.motif_refus}</p>}
