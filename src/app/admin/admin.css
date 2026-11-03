@@ -400,3 +400,33 @@ dialog.superposition { overflow-y: auto; }
 /* Ma cave : vin qui vient d'être ajouté depuis « Rajouter un vin » (la page s'y place). */
 .table-stocks tr.ligne-nouvelle td { background: #FFF4D6; opacity: 1; }
 .table-stocks tr.ligne-nouvelle { scroll-margin-top: 120px; }
+
+/* Rajouter un vin : grand bandeau de recherche bordeaux, vins en vitrine, recherches précédentes en pastilles. */
+.bandeau-recherche { background: var(--encre); color: #FFFFFF; border-radius: 24px; padding: 32px 36px; display: flex; flex-direction: column; gap: 12px; }
+.bandeau-recherche h1 { margin: 0; color: #FFFFFF; font-size: 34px; font-weight: 800; }
+.bandeau-recherche > p { margin: 0; color: #EAD7D7; }
+.barre-recherche { display: flex; align-items: center; gap: 10px; background: #FFFFFF; border-radius: 16px; padding: 8px 8px 8px 18px; margin-top: 6px; }
+.barre-recherche textarea { flex: 1; border: 0; resize: vertical; min-height: 48px; font: inherit; font-size: 16px; color: var(--texte); background: transparent; outline: none; padding: 6px 0; }
+.barre-recherche .btn { white-space: nowrap; }
+.filtres-recherche { display: flex; flex-wrap: wrap; gap: 10px; }
+.pastille-filtre { display: inline-flex; align-items: center; gap: 6px; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .28); color: #FFFFFF;
+  border-radius: 999px; padding: 4px 6px 4px 14px; font-size: 14px; font-weight: 600; }
+.pastille-filtre select, .pastille-filtre input { background: transparent; border: 0; color: #FFFFFF; font: inherit; font-weight: 600; padding: 4px 6px; min-height: 30px; outline: none; }
+.pastille-filtre input { width: 190px; }
+.pastille-filtre input::placeholder { color: #EAD7D7; }
+.pastille-filtre select option { color: var(--texte); }
+.pastille-filtre.lien { text-decoration: none; padding-right: 14px; }
+.etiquette-distributeur { font-size: 11.5px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase; color: var(--dore); }
+.vitrine-vins { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 16px; }
+.carte-vitrine { background: var(--carte); border-radius: 18px; padding: 16px; display: flex; flex-direction: column; gap: 6px; box-shadow: var(--ombre); }
+.carte-vitrine .vignette { border-radius: 12px; margin-bottom: 6px; }
+.carte-vitrine p { margin: 4px 0 0; font-size: 14px; line-height: 1.5; color: #3B3434; }
+.pied-vitrine { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-top: auto; padding-top: 10px; }
+.prix-vitrine { font-weight: 800; color: var(--encre); font-size: 17px; white-space: nowrap; }
+.prix-vitrine small { font-weight: 600; color: var(--discret); font-size: 12px; }
+.pastille-recherche { display: inline-block; padding: 7px 14px; border-radius: 999px; background: var(--carte); border: 1.5px solid var(--ligne); font-size: 13px; font-weight: 600; color: var(--encre); text-decoration: none; }
+.pastille-recherche:hover { border-color: var(--encre); }
+@media (max-width: 640px) { .bandeau-recherche { padding: 22px 18px; } .barre-recherche { flex-direction: column; align-items: stretch; } }
+.pastille-filtre { max-width: 100%; min-width: 0; }
+.pastille-filtre select { max-width: 230px; min-width: 0; text-overflow: ellipsis; }
+@media (max-width: 640px) { .pastille-filtre select { max-width: calc(100vw - 120px); } .pastille-filtre input { width: 150px; } }

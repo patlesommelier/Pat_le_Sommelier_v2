@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from 'react';
 import { Icone } from './Icone';
 import { imageVide } from '@/lib/image-vide';
 
-export function VignetteVin({ url, logo, taille = 52 }: { url: string | null | undefined; logo?: string | null; taille?: number }) {
+/** `plein` : toute la largeur disponible, sur `taille` pixels de haut (cartes en vitrine). */
+export function VignetteVin({ url, logo, taille = 52, plein = false }: { url: string | null | undefined; logo?: string | null; taille?: number; plein?: boolean }) {
+  const dims = plein ? { width: '100%', height: taille } : { width: taille, height: taille };
   const sources = [url, logo].filter((x): x is string => Boolean(x && x.trim()));
   const [rang, setRang] = useState(0);
   // Photo d'un autre site (stockage) : d'abord lue « partagée » pour pouvoir l'examiner ; si ce site le refuse, chargée normalement.
@@ -23,9 +25,9 @@ export function VignetteVin({ url, logo, taille = 52 }: { url: string | null | u
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [src, simple]);
   // eslint-disable-next-line @next/next/no-img-element
-  if (src) return <img ref={ref} key={`${src}-${simple}`} className={`vignette${src === logo ? ' vignette-logo' : ''}`} src={src} alt="" style={{ width: taille, height: taille }}
+  if (src) return <img ref={ref} key={`${src}-${simple}`} className={`vignette${src === logo ? ' vignette-logo' : ''}`} src={src} alt="" style={dims}
     crossOrigin={externe && !simple ? 'anonymous' : undefined}
     onError={() => (externe && !simple ? setSimple(true) : suivante())}
     onLoad={(e) => examiner(e.currentTarget)} />;
-  return <span className="vignette vide" style={{ width: taille, height: taille }} aria-hidden="true"><Icone nom="bottle" taille={22} /></span>;
+  return <span className="vignette vide" style={dims} aria-hidden="true"><Icone nom="bottle" taille={22} /></span>;
 }
