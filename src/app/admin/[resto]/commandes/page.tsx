@@ -126,7 +126,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           {/* Le bon de commande : sa page (aperçu du PDF, et l'envoyer ou le renvoyer). */}
           <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn sec petit">Bon de commande (PDF)</Link>
           {/* Facture jointe par Quid Vinum. */}
-          {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn petit">Facture (PDF)</a>}
+          {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn sec petit">Facture (PDF)</a>}
           {c.receptions.map((r) => (
             <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
               Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
@@ -137,7 +137,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           )}
           {/* Réception des bouteilles : discrète, à droite. */}
           {c.statut === 'ouverte' && (<span style={{ marginLeft: 'auto' }}>
-            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton="btn sec">
+            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton="btn">
               <FormulaireAdmin action={recevoirBouteilles.bind(null, resto, c.id)} className="pile" style={{ gap: 12 }}>
                 <p className="petit discret" style={{ margin: 0 }}>Indiquez les bouteilles arrivées : elles passent en stock et un bon de réception est créé. Ce qui manque reste « en commande » pour une prochaine livraison.</p>
                 <div className="tableau"><table style={{ minWidth: 520 }}>

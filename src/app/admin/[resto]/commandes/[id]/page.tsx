@@ -63,7 +63,7 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
             : <span className="petit" style={{ color: 'var(--ocre)' }}>{c.via_qv ? 'L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.'
                 : <>Pour envoyer la commande, ajoutez l’adresse e-mail du distributeur dans <Link href={`/admin/${resto}/fournisseurs`}>Distributeurs</Link>.</>}</span>}
           <a href={pdf} target="_blank" rel="noopener" className="btn sec">Ouvrir le PDF</a>
-          {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn">Facture (PDF)</a>}
+          {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn sec">Facture (PDF)</a>}
           <span className="petit discret" style={{ alignSelf: 'center' }}>{c.via_qv ? 'La commande part chez Quid Vinum' : 'La commande part chez le distributeur'}{c.fournisseur_email ? ` (${c.fournisseur_email})` : ''}, votre restaurant en copie.</span>
         </div>
       )}

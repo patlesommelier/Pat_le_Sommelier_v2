@@ -1,7 +1,8 @@
 // Super-admin — Commandes passées par Quid Vinum : restaurant, vins commandés (prix du restaurant et prix QV du tarif),
 // et le suivi par Quid Vinum : reçue, acceptée, envoyée au distributeur, livrée, facturée.
 import Link from 'next/link';
-import { changerStatutQv, decisionCommandeQv, deposerFactureQv, refuserCommandeQv } from '../commandes-actions';
+import { changerStatutQv, decisionCommandeQv, deposerFactureQv, refuserCommandeQv, supprimerFactureQv } from '../commandes-actions';
+import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat } from '@/components/admin/Ui';
@@ -79,8 +80,21 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
           const bouteilles = c.lignes.reduce((n, l) => n + l.quantite, 0);
           const total = c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0);
           const totalQv = c.lignes.every((l) => l.prix_qv != null) ? c.lignes.reduce((n, l) => n + l.prix_qv! * l.quantite, 0) : null;
+          // Commande livrée (ou réceptionnée par le restaurant) : repliée sous une flèche, avec un ✓ vert ; le détail au clic.
+          const livree = c.statut === 'recue' || c.statut_qv === 'livree' || c.statut_qv === 'facturee';
+          const Bloc = livree ? 'details' : 'article';
           return (
-            <article key={c.id} className="carte-bo pile" style={{ gap: 10 }}>
+            <Bloc key={c.id} className={`carte-bo pile${livree ? ' bloc-fiche commande-livree' : ''}`} style={{ gap: 10 }}>
+              {livree && (
+                <summary>
+                  <span className="coche-acceptee" role="img" aria-label="Commande livrée" title="Commande livrée">✓</span>
+                  <span className="pile" style={{ gap: 2 }}>
+                    <span className="surtitre">Commande n° {ref}{c.reference_interne ? ` (réf. ${c.reference_interne})` : ''} · {date(c.cree_le)}</span>
+                    <b>{c.restaurant}</b>
+                  </span>
+                  <span className="petit discret" style={{ marginLeft: 'auto' }}>{STATUTS_QV.find(([k]) => k === c.statut_qv)?.[1] ?? 'Réceptionnée'} · {euros(total)} HTVA</span>
+                </summary>
+              )}
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <span className="pile" style={{ gap: 2 }}>
                   <span className="surtitre">Commande n° {ref}{c.reference_interne ? ` (réf. ${c.reference_interne})` : ''} · {date(c.cree_le)}{c.envoyee_le ? ` · envoyée le ${date(c.envoyee_le)}` : ''}</span>
@@ -133,19 +147,26 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   <td className="droite"><b className="total-commande">{euros(total)} HTVA</b></td>
                 </tr></tfoot>
               </table></div>
-              <span className="petit">{totalQv != null && <span className="discret">Marge Quid Vinum : {euros(total - totalQv)} · </span>}
-                <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener">Bon de commande (PDF)</a>
-                {c.facture_le && <> · <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/facture`} target="_blank" rel="noopener">Facture (PDF)</a> <span className="discret">jointe le {date(c.facture_le)}</span></>}</span>
-              {/* Facture : jointe (ou remplacée) à tout moment ; le restaurant la retrouve dans sa commande. */}
-              {c.statut !== 'annulee' && (
-                <FormulaireAdmin action={deposerFactureQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
-                  <label className="petit" style={{ fontWeight: 700 }}>{c.facture_le ? 'Remplacer la facture' : 'Joindre la facture'}</label>
-                  <input type="file" name="facture" accept="application/pdf,.pdf" required className="petit" />
-                  <button className="btn sec petit">Envoyer la facture</button>
-                </FormulaireAdmin>
-              )}
+              <div className="ligne-actions" style={{ alignItems: 'center' }}>
+                {totalQv != null && <span className="petit discret">Marge Quid Vinum : {euros(total - totalQv)}</span>}
+                <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec petit">Bon de commande (PDF)</a>
+                {/* Facture : « Envoyer la facture » (le PDF choisi part aussitôt) ; jointe, elle se consulte ou se supprime (pour en joindre une autre). */}
+                {c.facture_le ? <>
+                  <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn sec petit">Facture (PDF)</a>
+                  <span className="petit discret">jointe le {date(c.facture_le)}</span>
+                  <BoutonSupprimer action={supprimerFactureQv.bind(null, c.id)} libelle="Supprimer la facture" className="btn fantome petit"
+                    question="Supprimer la facture de cette commande ? Le restaurant ne la verra plus ; vous pourrez en joindre une autre." />
+                </> : c.statut !== 'annulee' && (
+                  <FormulaireAdmin auto action={deposerFactureQv.bind(null, c.id)} style={{ display: 'inline-flex' }}>
+                    <label className="btn petit" style={{ cursor: 'pointer' }}>
+                      Envoyer la facture
+                      <input type="file" name="facture" accept="application/pdf,.pdf" hidden />
+                    </label>
+                  </FormulaireAdmin>
+                )}
+              </div>
               {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
-              {c.statut === 'ouverte' && c.envoyee_le && (
+              {c.statut === 'ouverte' && c.envoyee_le && (c.statut_qv ?? 'recue') === 'recue' && (
                 <details className="refus-commande">
                   <summary className="petit" style={{ cursor: 'pointer', color: 'var(--ocre)', fontWeight: 700 }}>Refuser cette commande…</summary>
                   <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 8, marginTop: 8 }}>
@@ -155,7 +176,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   </FormulaireAdmin>
                 </details>
               )}
-            </article>
+            </Bloc>
           );
         })}
       </div>

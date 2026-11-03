@@ -83,3 +83,13 @@ export async function deposerFactureQv(id: string, f: FormData): Promise<Retour>
   revalidatePath(`/admin/${c.restaurant_id}`, 'layout');
   return { ok: 'Facture jointe : le restaurant la retrouve dans sa commande.' };
 }
+
+/** Facture retirée d'une commande (pour en joindre une autre). */
+export async function supprimerFactureQv(id: string): Promise<Retour> {
+  await exigerAdmin();
+  const r = await requete<{ restaurant_id: string }>(
+    `delete from facture_commande f using commande c where f.commande_id = $1 and c.id = f.commande_id returning c.restaurant_id`, [id]);
+  revalidatePath('/admin/super/commandes');
+  if (r[0]) revalidatePath(`/admin/${r[0].restaurant_id}`, 'layout');
+  return { ok: 'Facture supprimée.' };
+}

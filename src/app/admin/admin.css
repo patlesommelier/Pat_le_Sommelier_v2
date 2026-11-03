@@ -467,3 +467,6 @@ dialog.superposition { overflow-y: auto; }
 .etat.statut-qv[data-statut="envoyee_distributeur"] { background: #DCEBFA; color: #1D4F86; }
 .etat.statut-qv[data-statut="livree_partielle"] { background: #EFE3F7; color: #5B2C83; }
 .etat.statut-qv[data-statut="livree"], .etat.statut-qv[data-statut="facturee"] { background: #2E9E5B; color: #FFFFFF; }
+/* Super-admin, Commandes : commande livrée repliée (✓ vert), le détail sous la flèche. */
+.commande-livree > summary { align-items: center; gap: 12px; }
+.commande-livree[open] > summary { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--ligne); }
