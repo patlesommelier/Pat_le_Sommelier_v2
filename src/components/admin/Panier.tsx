@@ -89,13 +89,13 @@ export function Panier({ lignes, modifier, vider, commander }: {
 }
 
 /** Catalogue d'un distributeur : « + » (Ajouter à ma cave) ; le vin rejoint Ma cave, puis se commande. */
-export function AjoutCatalogue({ ajouter, libelle }: { ajouter: () => Promise<Retour>; libelle: string }) {
+export function AjoutCatalogue({ ajouter, libelle, texte }: { ajouter: () => Promise<Retour>; libelle: string; texte?: string }) {
   const [enCours, demarrer] = useTransition();
   const { montrer, toast } = useToast();
   return (
     <span>
-      <button type="button" className="btn sec petit bouton-plus" disabled={enCours} aria-label={`Ajouter à ma cave : ${libelle}`} title="Ajouter à ma cave"
-        onClick={() => demarrer(async () => montrer(await ajouter()))}>{enCours ? '…' : '+'}</button>
+      <button type="button" className={`btn sec petit${texte ? '' : ' bouton-plus'}`} disabled={enCours} aria-label={`Ajouter à ma cave : ${libelle}`} title="Ajouter à ma cave"
+        style={texte ? { whiteSpace: 'nowrap' } : undefined} onClick={() => demarrer(async () => montrer(await ajouter()))}>{enCours ? '…' : texte ?? '+'}</button>
       {toast}
     </span>
   );

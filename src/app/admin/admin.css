@@ -388,3 +388,7 @@ dialog.superposition { overflow-y: auto; }
 .facturation .adresse-facturation { display: none; }
 .facturation:has(input[name="facturation_differente"]:checked) .adresse-facturation { display: flex; }
 .vignette.vignette-logo { object-fit: contain; background: #FFFFFF; padding: 3px; }
+
+/* Trouver un vin : une proposition de Pat (vignette, vin et pourquoi, prix et ajout à la cave). */
+.proposition-vin { display: flex; gap: 14px; align-items: flex-start; border-top: 1px solid var(--ligne); padding-top: 12px; flex-wrap: wrap; }
+.proposition-vin > .pile:first-of-type { min-width: 220px; }

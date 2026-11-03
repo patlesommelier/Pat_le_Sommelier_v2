@@ -38,7 +38,7 @@ const prix = (f: FormData, k: string): number | null | undefined => {
 };
 
 const rafraichir = (resto: string) => {
-  for (const p of ['stocks', 'commandes', 'fournisseurs', 'parametres', 'carte']) revalidatePath(`/admin/${resto}/${p}`);
+  for (const p of ['stocks', 'commandes', 'fournisseurs', 'parametres', 'carte', 'trouver-vin']) revalidatePath(`/admin/${resto}/${p}`);
   revalidatePath(`/${resto}`, 'layout'); // l'app des clients (prix de vente)
 };
 
