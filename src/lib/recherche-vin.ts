@@ -8,9 +8,11 @@
 import type Anthropic from '@anthropic-ai/sdk';
 import type { Requete } from './generation/accords';
 import { clientClaude, modeleAccords } from './claude';
+
+// Choix des vins et textes de Pat : Opus (accords plus fins, quelques centimes de plus par recherche).
+const modeleRecherche = () => process.env.PAT_MODELE_RECHERCHE || 'claude-opus-5-5';
 import { textePlat, textePrincipes, type PlatCtx, type PrincipeCtx } from './pat-cerveau';
 import { distributeurPermis } from './distributeurs/verrou';
-import { modeleTarif } from './distributeurs/lecture';
 
 export interface VinPropose {
   id: string; libelle: string; producteur: string | null; appellation: string | null; millesime: string | null; contenance: string | null;
@@ -50,18 +52,19 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
               coalesce(pa.couleurs_ok::text[], '{}') as couleurs_ok, coalesce(pa.cepages_conseilles, '{}') as cepages_conseilles,
               pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond
          from plat pl left join profil_accord pa on pa.plat_id = pl.id where pl.id = $1 and pl.restaurant_id = $2`, [r.plat_id, resto]) : [];
-    const client = claude ?? clientClaude({ maxRetries: 1 });
+    const client = claude ?? clientClaude({ maxRetries: 2 });
 
     // 1. La demande en critères (petit modèle, peu cher).
     const texteDemande = [r.demande, plat ? `Plat du menu choisi : ${plat.nom}${plat.description_cuisine ? ` (${plat.description_cuisine})` : ''}` : null,
       r.budget ? `Budget : ${r.budget} € HTVA la bouteille au plus` : null, r.couleur ? `Couleur souhaitée : ${r.couleur}` : null].filter(Boolean).join('\n');
-    const m1 = await client.messages.create({ model: modeleTarif('haiku'), max_tokens: 800, messages: [{ role: 'user', content:
+    // Étape non bloquante : si elle échoue, la recherche continue avec la demande telle quelle (et les champs du formulaire).
+    const m1 = await client.messages.create({ model: modeleAccords(), max_tokens: 4000, messages: [{ role: 'user', content:
       `Un restaurant cherche un vin à ajouter à sa cave. Voici sa demande :\n${texteDemande}\n\n`
       + `Réponds uniquement en JSON : {"couleurs": [parmi ${COULEURS.map((x) => `"${x}"`).join(', ')} ; vide si libre], `
       + `"lieux": [lieux souhaités, vide si libre : pour chacun, le pays en français, en anglais et dans sa langue, la région, et ses principales appellations `
       + `(ex. Toscane → "Italie", "Italy", "Italia", "Toscane", "Toscana", "Chianti", "Brunello di Montalcino", "Bolgheri", "Vino Nobile di Montepulciano")], `
-      + `"budget_max": nombre en euros HTVA ou null, "plat": "le plat à accorder, décrit en une phrase" ou null, "style": "le style de vin souhaité en quelques mots" ou null}` }] });
-    const c = json<Criteres>(m1.content.map((b) => (b.type === 'text' ? b.text : '')).join('')) ?? { couleurs: [], lieux: [], budget_max: null, plat: null, style: null };
+      + `"budget_max": nombre en euros HTVA ou null, "plat": "le plat à accorder, décrit en une phrase" ou null, "style": "le style de vin souhaité en quelques mots" ou null}` }] }).catch((e) => { console.error('[trouver un vin] critères', e); return null; });
+    const c = (m1 && json<Criteres>(m1.content.map((b) => (b.type === 'text' ? b.text : '')).join(''))) ?? { couleurs: [], lieux: [], budget_max: null, plat: null, style: null };
     const couleurs = [...new Set([...(r.couleur ? [r.couleur] : []), ...(c.couleurs ?? [])].filter((x) => COULEURS.includes(x)))];
     const budget = r.budget ?? (typeof c.budget_max === 'number' && c.budget_max > 0 ? c.budget_max : null);
     const lieux = (c.lieux ?? []).map(sansAccents).filter((x) => x.length > 2);
@@ -109,7 +112,8 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
       `- ${v.id} : ${v.libelle}${v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}`
       + ` · ${[v.producteur, v.appellation, v.region, v.pays, v.cepages, v.couleur, v.contenance].filter(Boolean).join(' · ')}`
       + `${v.prix != null ? ` · ${v.prix.toFixed(2)} € HTVA` : ''}`).join('\n')}`).join('\n\n');
-    const m2 = await client.messages.create({ model: modeleAccords(), max_tokens: 3000, messages: [{ role: 'user', content:
+    // Marge large : la réflexion d'Opus compte dans max_tokens (une réponse coupée serait illisible).
+    const m2 = await client.messages.create({ model: modeleRecherche(), max_tokens: 16000, messages: [{ role: 'user', content:
       `Tu es Pat, sommelier. Un restaurant cherche un vin à ajouter à sa cave, chez les distributeurs de Quid Vinum.
 
 PRINCIPES DE PAT (ta doctrine pour choisir)
@@ -127,7 +131,11 @@ Pour chacun, écris « pourquoi » : 2 phrases (35 à 55 mots en tout), en fran�
 Ne cite ni note, ni classement, ni principe, ni prix d'achat de Quid Vinum.
 Réponds uniquement en JSON : {"distributeurs": [{"id": "...", "vins": [{"id": "...", "pourquoi": "..."}]}]}` }] });
     const choix = json<{ distributeurs: { id: string; vins: { id: string; pourquoi: string }[] }[] }>(m2.content.map((b) => (b.type === 'text' ? b.text : '')).join(''));
-    if (!choix?.distributeurs) { await fin('echec', 'Pat n’a pas pu terminer la recherche : relancez-la.'); return; }
+    if (!choix?.distributeurs) {
+      await fin('echec', 'Pat n’a pas pu terminer la recherche : relancez-la.');
+      await requete('update recherche_vin set erreur = $2 where id = $1', [rechercheId, `Réponse illisible (fin : ${m2.stop_reason}) : ${m2.content.map((b) => (b.type === 'text' ? b.text : '')).join('').slice(0, 600)}`]);
+      return;
+    }
     const resultat: PropositionDistributeur[] = [];
     for (const [id, vins] of parDistributeur) {
       const pris = (choix.distributeurs.find((x) => x.id === id)?.vins ?? [])
@@ -141,6 +149,8 @@ Réponds uniquement en JSON : {"distributeurs": [{"id": "...", "vins": [{"id": "
     await fin('terminee', resultat.length ? '' : 'Aucun vin des catalogues ne répond vraiment à cette demande : précisez-la ou élargissez-la.', resultat);
   } catch (e) {
     console.error('[trouver un vin]', rechercheId, e);
-    await fin('echec', 'La recherche n’a pas abouti : relancez-la dans un instant.'); // le détail reste dans les journaux du serveur
+    await fin('echec', 'La recherche n’a pas abouti : relancez-la dans un instant.');
+    // Détail technique : pour le super-admin seulement.
+    await requete('update recherche_vin set erreur = $2 where id = $1', [rechercheId, String((e as Error)?.message ?? e).slice(0, 1000)]).catch(() => undefined);
   }
 }

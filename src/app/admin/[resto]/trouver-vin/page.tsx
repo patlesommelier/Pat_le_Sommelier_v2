@@ -7,7 +7,7 @@ import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { AjoutCatalogue, AjoutPanier } from '@/components/admin/Panier';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 import { Entete, Message } from '@/components/admin/Ui';
-import { exigerAcces } from '@/lib/admin/auth';
+import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
 import { euros } from '@/lib/bon-commande';
 import { requete } from '@/lib/db';
 import type { PropositionDistributeur } from '@/lib/recherche-vin';
@@ -25,8 +25,9 @@ export default async function TrouverUnVin({ params, searchParams }: { params: P
       'select id, demande, statut, cree_le::text from recherche_vin where restaurant_id = $1 order by cree_le desc limit 10', [resto]),
   ]);
   // Recherche affichée : celle demandée, sinon la dernière.
-  const [r] = await requete<{ id: string; demande: string; statut: string; message: string | null; resultat: PropositionDistributeur[] | null; cree_le: string }>(
-    `select id, demande, statut, message, resultat, cree_le::text from recherche_vin where restaurant_id = $1 and ($2::text is null or id = $2) order by cree_le desc limit 1`,
+  const u = await utilisateurCourant();
+  const [r] = await requete<{ id: string; demande: string; statut: string; message: string | null; erreur: string | null; resultat: PropositionDistributeur[] | null; cree_le: string }>(
+    `select id, demande, statut, message, erreur, resultat, cree_le::text from recherche_vin where restaurant_id = $1 and ($2::text is null or id = $2) order by cree_le desc limit 1`,
     [resto, sp.r ?? null]);
   // Une recherche restée « en cours » plus de 5 minutes a échoué (serveur redémarré…).
   const enCours = r?.statut === 'en_cours' && Date.now() - new Date(r.cree_le).getTime() < 5 * 60_000;
@@ -63,6 +64,8 @@ export default async function TrouverUnVin({ params, searchParams }: { params: P
           )}
           {r.statut === 'en_cours' && !enCours && <p className="message erreur">La recherche n’a pas abouti : relancez-la.</p>}
           {r.statut !== 'en_cours' && r.message && <p className={`message ${r.statut === 'echec' ? 'erreur' : ''}`}>{r.message}</p>}
+          {/* Détail technique d'un échec : pour Pat (super-admin) seulement. */}
+          {u?.admin && r.erreur && <p className="petit discret" style={{ margin: 0 }}>Détail (super-admin) : {r.erreur}</p>}
           {(r.resultat ?? []).map((d) => (
             <article key={d.id} className="carte-bo pile" style={{ gap: 12 }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
