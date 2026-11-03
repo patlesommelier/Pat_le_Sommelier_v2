@@ -1,7 +1,7 @@
 // Super-admin — Commandes passées par Quid Vinum : restaurant, vins commandés (prix du restaurant et prix QV du tarif),
 // et le suivi par Quid Vinum : reçue, acceptée, envoyée au distributeur, livrée, facturée.
 import Link from 'next/link';
-import { changerStatutQv, decisionCommandeQv, refuserCommandeQv } from '../commandes-actions';
+import { changerStatutQv, decisionCommandeQv, deposerFactureQv, refuserCommandeQv } from '../commandes-actions';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat } from '@/components/admin/Ui';
@@ -134,7 +134,16 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                 </tr></tfoot>
               </table></div>
               <span className="petit">{totalQv != null && <span className="discret">Marge Quid Vinum : {euros(total - totalQv)} · </span>}
-                <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener">Bon de commande (PDF)</a></span>
+                <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener">Bon de commande (PDF)</a>
+                {c.facture_le && <> · <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/facture`} target="_blank" rel="noopener">Facture (PDF)</a> <span className="discret">jointe le {date(c.facture_le)}</span></>}</span>
+              {/* Facture : jointe (ou remplacée) à tout moment ; le restaurant la retrouve dans sa commande. */}
+              {c.statut !== 'annulee' && (
+                <FormulaireAdmin action={deposerFactureQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
+                  <label className="petit" style={{ fontWeight: 700 }}>{c.facture_le ? 'Remplacer la facture' : 'Joindre la facture'}</label>
+                  <input type="file" name="facture" accept="application/pdf,.pdf" required className="petit" />
+                  <button className="btn sec petit">Envoyer la facture</button>
+                </FormulaireAdmin>
+              )}
               {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
               {c.statut === 'ouverte' && c.envoyee_le && (
                 <details className="refus-commande">

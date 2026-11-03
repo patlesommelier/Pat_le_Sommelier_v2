@@ -257,6 +257,13 @@ async function enregistrerCommandeQv(resto: string, email: string | null, demand
   const vins = await requete<{ id: string; libelle: string; millesime: string | null; format: string; producteur: string | null; producteur_id: string | null; distributeur_vin_id: string | null }>(
     `select v.id, v.libelle, v.millesime, v.format, coalesce(nullif(v.producteur_texte, ''), p.nom) as producteur, v.producteur_id, v.distributeur_vin_id
        from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [resto]);
+  // Seulement des vins de la cave du restaurant : un nouveau vin s'ajoute d'abord avec « Rajouter un vin ».
+  const enCave = (c: { id: string; libelle: string; millesime: string | null; contenance: string | null; producteur_id: string | null; producteur: string | null }) =>
+    vins.find((v) => v.distributeur_vin_id === c.id)
+      ?? vinDeLaCarte({ id: c.id, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, producteur_id: c.producteur_id, producteur: c.producteur },
+        vins.map((v) => ({ id: v.id, libelle: v.libelle, millesime: v.millesime, format: v.format, producteur_id: v.producteur_id, producteur: v.producteur })));
+  const horsCave = demandes.map(([vid]) => trouve(vid)!.c).find((c) => !enCave(c));
+  if (horsCave) return { erreur: `« ${horsCave.libelle} » n’est pas dans votre cave : ajoutez-le d’abord avec « Rajouter un vin », puis commandez-le.` };
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
   await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum, reference_interne) values ($1, $2, null, $3, $4, $5, true, $6)',

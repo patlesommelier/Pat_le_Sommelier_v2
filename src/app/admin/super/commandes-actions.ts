@@ -65,3 +65,21 @@ export async function decisionCommandeQv(id: string, f: FormData): Promise<Retou
   revalidatePath(`/admin/${r[0].restaurant_id}`, 'layout');
   return { ok: 'Commande acceptée : elle passe « En cours de traitement » (le restaurant voit « Commande acceptée »).' };
 }
+
+/** Facture (PDF) d'une commande, jointe ou remplacée à tout moment : le restaurant la retrouve dans sa commande. */
+export async function deposerFactureQv(id: string, f: FormData): Promise<Retour> {
+  const u = await exigerAdmin();
+  const fichier = f.get('facture');
+  if (!(fichier instanceof File) || !fichier.size) return { erreur: 'Choisissez le PDF de la facture.' };
+  if (fichier.size > 15 * 1024 * 1024) return { erreur: 'Facture trop lourde (15 Mo au maximum).' };
+  const octets = Buffer.from(await fichier.arrayBuffer());
+  if (octets.subarray(0, 5).toString('latin1') !== '%PDF-') return { erreur: 'La facture doit être un fichier PDF.' };
+  const [c] = await requete<{ restaurant_id: string }>('select restaurant_id from commande where id = $1', [id]);
+  if (!c) return { erreur: 'Commande introuvable.' };
+  await requete(`insert into facture_commande (commande_id, nom, octets, taille, depose_par) values ($1, $2, $3, $4, $5)
+                 on conflict (commande_id) do update set nom = excluded.nom, octets = excluded.octets, taille = excluded.taille, depose_par = excluded.depose_par, depose_le = now()`,
+    [id, (fichier.name || 'facture.pdf').slice(0, 120), octets, octets.length, u.email]);
+  revalidatePath('/admin/super/commandes');
+  revalidatePath(`/admin/${c.restaurant_id}`, 'layout');
+  return { ok: 'Facture jointe : le restaurant la retrouve dans sa commande.' };
+}

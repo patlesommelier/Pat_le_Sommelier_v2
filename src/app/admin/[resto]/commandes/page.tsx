@@ -24,8 +24,8 @@ import { STATUTS_QV } from '@/lib/super/commandes';
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 // Suivi Quid Vinum, tel que le restaurant le lit.
 // Commande Quid Vinum envoyée : son statut suit Quid Vinum (en attente de validation, acceptée, envoyée au distributeur…).
-const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'Commande acceptée', envoyee_distributeur: 'Commande envoyée au distributeur',
-  livree_partielle: 'Livraison partielle', livree: 'Bouteilles livrées', facturee: 'Bouteilles facturées' };
+const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'En cours de traitement', envoyee_distributeur: 'En cours de livraison',
+  livree: 'Bouteilles livrées', livree_partielle: 'Livraison partielle', facturee: 'Commande livrée' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {
@@ -39,12 +39,14 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const groupes = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible));
   // Nouvelle commande : un bloc par fournisseur qui a des vins, puis les vins sans fournisseur.
   // Distributeur Quid Vinum : son catalogue au prix proposé, chaque vin relié à la carte quand il y figure.
-  const carteSimple = groupes.map((g) => ({ id: g.principal.id, libelle: g.principal.libelle, millesime: g.principal.millesime, format: g.principal.format,
+  // Toute la cave (aussi les vins ajoutés pas encore sur la carte) : ce sont eux qui se commandent chez Quid Vinum.
+  const cave = regrouperVins(vins);
+  const carteSimple = cave.map((g) => ({ id: g.principal.id, libelle: g.principal.libelle, millesime: g.principal.millesime, format: g.principal.format,
     producteur_id: g.principal.producteur_id, producteur: g.principal.producteur_texte ?? g.principal.producteur_nom ?? null }));
   const catalogues = new Map(await Promise.all(fournisseurs.filter((f) => f.distributeur_id).map(async (f) => {
     const lignes: LigneCatalogue[] = (await catalogueDistributeur(f.distributeur_id!, resto)).map((c) => {
-      const surCarte = groupes.find((g) => g.principal.distributeur_vin_id === c.id)?.principal
-        ?? groupes.find((g) => g.principal.id === vinDeLaCarte(c, carteSimple)?.id)?.principal;
+      const surCarte = cave.find((g) => g.principal.distributeur_vin_id === c.id)?.principal
+        ?? cave.find((g) => g.principal.id === vinDeLaCarte(c, carteSimple)?.id)?.principal;
       return { id: c.id, section: c.section, producteur: c.producteur, libelle: c.libelle, millesime: c.millesime, contenance: c.contenance, prix: c.prix,
         epuise: c.epuise, maximum: c.maximum, etiquette: c.etiquette_url, surCarte: surCarte ? { stock: surCarte.stock, enCommande: surCarte.en_commande, bas: stockBas(surCarte.stock, limite) } : null };
     });
@@ -52,7 +54,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   })));
   // Distributeurs Quid Vinum activés : une seule commande pour tous (Quid Vinum la répartit entre eux).
   const qv = fournisseurs.filter((f) => f.distributeur_id && catalogues.get(f.id)?.length);
-  const vinChoisi = groupes.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined;
+  const vinChoisi = cave.find((g) => g.tous.some((x) => x.id === sp.vin))?.principal.distributeur_vin_id ?? undefined;
   // Vins de la carte vendus par ces distributeurs : groupés par distributeur (section), en tête de la commande Quid Vinum.
   const surLaCarteQv = qv.flatMap((f) => (catalogues.get(f.id) ?? []).filter((l) => l.surCarte).map((l) => ({ ...l, section: f.nom, distributeur: undefined })));
   const blocs = [
@@ -88,7 +90,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                   <span className="etat statut-qv" data-statut={c.statut_qv}>{STATUTS_QV.find(([k]) => k === c.statut_qv)?.[1] ?? c.statut_qv}</span></span>
                 : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
-            : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat>
+            : c.statut === 'recue' ? <span className="etat vert">Bouteilles réceptionnées le {date(c.recue_le!)}</span>
             : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
           {c.via_qv && c.statut === 'ouverte' && c.statut_qv === 'acceptee' && <span className="info-statut vert">Vous recevrez bientôt des informations concernant la livraison.</span>}
           {c.via_qv && envoyee && c.statut_qv_le && c.statut !== 'annulee' && <span className="info-statut">Envoyée le {date(c.envoyee_le!)} · mise à jour le {date(c.statut_qv_le)}</span>}
@@ -123,6 +125,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             : <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn rouge petit">Envoyer la commande</Link>)}
           {/* Le bon de commande : sa page (aperçu du PDF, et l'envoyer ou le renvoyer). */}
           <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn sec petit">Bon de commande (PDF)</Link>
+          {/* Facture jointe par Quid Vinum. */}
+          {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn petit">Facture (PDF)</a>}
           {c.receptions.map((r) => (
             <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
               Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
@@ -133,7 +137,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           )}
           {/* Réception des bouteilles : discrète, à droite. */}
           {c.statut === 'ouverte' && (<span style={{ marginLeft: 'auto' }}>
-            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton="btn fantome petit">
+            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton="btn sec">
               <FormulaireAdmin action={recevoirBouteilles.bind(null, resto, c.id)} className="pile" style={{ gap: 12 }}>
                 <p className="petit discret" style={{ margin: 0 }}>Indiquez les bouteilles arrivées : elles passent en stock et un bon de réception est créé. Ce qui manque reste « en commande » pour une prochaine livraison.</p>
                 <div className="tableau"><table style={{ minWidth: 520 }}>
@@ -158,7 +162,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
 
 
   // Nouvelle commande (fenêtre) : choisir le distributeur, puis indiquer les bouteilles.
-  const options = [...(qv.length ? [{ id: 'qv', libelle: `Quid Vinum (${qv.map((f) => f.nom).join(', ')})${basQv ? ` · ${basQv} en stock bas` : ''}` }] : []),
+  const options = [...(qv.length ? [{ id: 'qv', libelle: `Quid Vinum${basQv ? ` · ${basQv} en stock bas` : ''}` }] : []),
     ...blocs.map((b) => { const n = b.groupes.filter((g) => stockBas(g.principal.stock, limite)).length; return { id: b.id || 'aucun', libelle: `${b.nom}${n ? ` · ${n} en stock bas` : ''}` }; })];
   const nouvelle = (
     <ChoixCommande options={options} initial={cible === '' ? 'aucun' : cible}>
@@ -168,27 +172,12 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           <Panneau id="qv">
             <FormulaireAdmin action={creerCommandeQv.bind(null, resto)} className="pile" style={{ gap: 12 }}>
               <p className="petit discret" style={{ margin: 0 }}>Une seule commande pour tous vos distributeurs Quid Vinum, aux prix proposés par Quid Vinum (HTVA) : elle part chez Quid Vinum, qui la transmet à chaque distributeur.</p>
-              {/* D'abord les vins de la carte (chez tous les distributeurs Quid Vinum), puis, à la demande, le reste des catalogues. */}
-              <b>Vins de votre carte</b>
+              {/* Seulement les vins de votre cave : un nouveau vin s'ajoute d'abord avec « Rajouter un vin ». */}
+              <b>Vins de votre cave</b>
               {surLaCarteQv.length
                 ? <CatalogueCommande lignes={surLaCarteQv} choisi={vinChoisi} sansFiltreCarte />
-                : <p className="petit discret" style={{ margin: 0 }}>Aucun vin de votre carte n’est encore relié à un distributeur Quid Vinum : ajoutez-en ci-dessous.</p>}
-              <details className="carte-bo" open={!surLaCarteQv.length || Boolean(sp.catalogue) || Boolean(vinChoisi && !surLaCarteQv.some((l) => l.id === vinChoisi))} style={{ padding: '12px 16px' }}>
-                <summary style={{ cursor: 'pointer', fontWeight: 700 }}>+ Ajouter un vin qui n’est pas sur la carte <span className="discret" style={{ fontWeight: 400 }}>(catalogues complets)</span></summary>
-                <div className="pile" style={{ gap: 14, marginTop: 12 }}>
-                  {/* Catalogue demandé depuis la page Distributeurs : le sien en premier. */}
-                  {[...qv].sort((a, b) => Number(b.distributeur_id === sp.catalogue) - Number(a.distributeur_id === sp.catalogue)).map((f) => {
-                    const reste = (catalogues.get(f.id) ?? []).filter((l) => !l.surCarte);
-                    return reste.length ? (
-                      <div key={f.id} className="pile" style={{ gap: 8 }}>
-                        <b>{/* eslint-disable-next-line @next/next/no-img-element */}
-                          {f.logo_url && <img src={f.logo_url} alt="" className="logo-distributeur" style={{ height: 24, verticalAlign: 'middle', marginRight: 8 }} />}{f.nom}</b>
-                        <CatalogueCommande lignes={reste} choisi={vinChoisi} sansFiltreCarte />
-                      </div>
-                    ) : null;
-                  })}
-                </div>
-              </details>
+                : <p className="petit discret" style={{ margin: 0 }}>Aucun vin de votre cave n’est encore relié à un distributeur Quid Vinum.</p>}
+              <p className="petit discret" style={{ margin: 0 }}>Un vin qui n’est pas encore dans votre cave s’ajoute d’abord avec <Link href={`/admin/${resto}/trouver-vin`}>Rajouter un vin</Link> ; il se commande ensuite ici.</p>
               <div className="barre-valider"><button className="btn rouge">Valider la commande Quid Vinum</button></div>
             </FormulaireAdmin>
           </Panneau>

@@ -2,11 +2,12 @@ import 'server-only';
 // Super-admin — commandes des restaurants passées par Quid Vinum (distributeurs de la base de Quid Vinum).
 import { requete } from '@/lib/db';
 
-export const STATUTS_QV = [['recue', 'En attente de validation'], ['acceptee', 'En cours de traitement'], ['envoyee_distributeur', 'Commande envoyée au distributeur'],
-  ['livree_partielle', 'Livraison partielle'], ['livree', 'Bouteilles livrées'], ['facturee', 'Bouteilles facturées']] as const;
+// Suivi d'une commande Quid Vinum après sa validation, dans cet ordre (les clés restent celles de la base).
+export const STATUTS_QV = [['recue', 'En attente de validation'], ['acceptee', 'En cours de traitement'], ['envoyee_distributeur', 'En cours de livraison'],
+  ['livree', 'Bouteilles livrées'], ['livree_partielle', 'Livraison partielle'], ['facturee', 'Commande livrée']] as const;
 
 export interface CommandeQv {
-  id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; reference_interne: string | null; statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
+  id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; reference_interne: string | null; facture_le: string | null; statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
   restaurant_id: string; restaurant: string; destinataire: string;
   lignes: { libelle: string; detail: string | null; quantite: number; recue: number; prix_achat: number | null; prix_qv: number | null; distributeur: string | null;
     etiquette: string | null; logo: string | null }[];
@@ -15,7 +16,8 @@ export interface CommandeQv {
 /** Commandes passées par Quid Vinum (la plus récente d'abord) ; prix du restaurant, et prix QV du tarif actuel (super-admin seulement). */
 export async function commandesQv(statut?: string) {
   const commandes = await requete<Omit<CommandeQv, 'lignes'>>(
-    `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.statut, c.reference_interne, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.restaurant_id, r.nom as restaurant,
+    `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.statut, c.reference_interne,
+            (select fc.depose_le::text from facture_commande fc where fc.commande_id = c.id) as facture_le, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.restaurant_id, r.nom as restaurant,
             case when c.quid_vinum then 'Quid Vinum (plusieurs distributeurs)' else coalesce(f.nom, c.fournisseur_nom) end as destinataire
        from commande c join restaurant r on r.id = c.restaurant_id left join fournisseur f on f.id = c.fournisseur_id
       where (c.quid_vinum or f.distributeur_id is not null

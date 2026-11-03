@@ -17,6 +17,8 @@ export interface Commande {
   statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
   /** Numéro de commande interne du restaurant (facultatif). */
   reference_interne: string | null;
+  /** Facture jointe par Quid Vinum (date), servie par /commandes/<id>/facture. */
+  facture_le: string | null;
 }
 export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
   commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null;
@@ -57,6 +59,7 @@ export async function getCoordonnees(resto: string) {
 export async function getCommandes(resto: string, statuts: Commande['statut'][], limite = 50) {
   const commandes = await requete<Omit<Commande, 'lignes'>>(
     `select c.id, c.numero, c.fournisseur_id, c.fournisseur_nom, c.statut, c.cree_le::text, c.envoyee_le::text, c.envoyee_a, c.recue_le::text, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.reference_interne,
+            (select fc.depose_le::text from facture_commande fc where fc.commande_id = c.id) as facture_le,
             case when c.quid_vinum then (select valeur from reglage_serveur where cle = 'qv_email') else ${SQL_EMAIL_COMMANDE} end as fournisseur_email,
             (c.quid_vinum or f.distributeur_id is not null) as via_qv
        from commande c left join fournisseur f on f.id = c.fournisseur_id
