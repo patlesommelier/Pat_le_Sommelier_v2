@@ -2,6 +2,7 @@
 // Panier de commande (page Vins) : sur chaque ligne, un nombre de bouteilles et « Au panier » ; en haut, le panier,
 // ligne par ligne (bouteilles modifiables), commandé en une fois.
 import { useState, useTransition } from 'react';
+import { useRouter } from 'next/navigation';
 import { Superposition } from './Superposition';
 import type { LignePanier } from '@/lib/admin/stocks';
 
@@ -89,13 +90,22 @@ export function Panier({ lignes, modifier, vider, commander }: {
 }
 
 /** Catalogue d'un distributeur : « + » (Ajouter à ma cave) ; le vin rejoint Ma cave, puis se commande. */
-export function AjoutCatalogue({ ajouter, libelle, texte }: { ajouter: () => Promise<Retour>; libelle: string; texte?: string }) {
+export function AjoutCatalogue({ ajouter, libelle, texte, versCave }: {
+  ajouter: () => Promise<Retour & { vin?: string }>; libelle: string; texte?: string;
+  /** Après l'ajout, ouvrir Ma cave sur la ligne du vin (pour le commander) : l'adresse de Ma cave. */
+  versCave?: string;
+}) {
   const [enCours, demarrer] = useTransition();
   const { montrer, toast } = useToast();
+  const router = useRouter();
   return (
     <span>
       <button type="button" className={`btn sec petit${texte ? '' : ' bouton-plus'}`} disabled={enCours} aria-label={`Ajouter à ma cave : ${libelle}`} title="Ajouter à ma cave"
-        style={texte ? { whiteSpace: 'nowrap' } : undefined} onClick={() => demarrer(async () => montrer(await ajouter()))}>{enCours ? '…' : texte ?? '+'}</button>
+        style={texte ? { whiteSpace: 'nowrap' } : undefined} onClick={() => demarrer(async () => {
+          const r = await ajouter();
+          if (versCave && r && r.vin) router.push(`${versCave}?${new URLSearchParams({ nouveau: r.vin })}#vin-${r.vin}`);
+          else montrer(r);
+        })}>{enCours ? '…' : texte ?? '+'}</button>
       {toast}
     </span>
   );

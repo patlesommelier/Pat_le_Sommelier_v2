@@ -20,10 +20,10 @@ import { VignetteVin } from '@/components/admin/VignetteVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
-export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string }> }) {
+export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string; nouveau?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const { filtre, ajoute, commander, ok, erreur, ajout, c, distributeur } = await searchParams;
+  const { filtre, ajoute, commander, ok, erreur, ajout, c, distributeur, nouveau } = await searchParams;
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
   const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
@@ -61,6 +61,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         <Panier lignes={panier} modifier={modifierPanier.bind(null, resto)} vider={viderPanier.bind(null, resto)} commander={commanderPanier.bind(null, resto)} />
       </Entete>
       {(erreur || (ok && !ajouteChez)) && <Message ok={ok} erreur={erreur} />}
+      {nouveau && (() => { const n = vins.find((x) => x.id === nouveau); return n ? (
+        <p className="message ok" style={{ margin: 0 }}>« {n.libelle} » est dans votre cave (en évidence ci-dessous) : indiquez le nombre de bouteilles et cliquez sur + 🛒 pour le commander.</p>) : null; })()}
       <p className="petit discret" style={{ margin: 0 }}>Cliquez sur un vin pour ouvrir sa fiche : description, stock, commande, suppression. Ce qui s’affiche sur votre carte se règle dans <Link href={`/admin/${resto}/carte`}>Gérer la carte des vins</Link>.</p>
       {ajouteChez && (
         <div className="carte-bo ligne-actions" style={{ alignItems: 'center', border: '1.5px solid var(--rouge)' }}>
@@ -99,10 +101,12 @@ export default async function Stocks({ params, searchParams }: { params: Promise
               {parCouleur.map((c) => (
                 <tbody key={c.titre}>
                   <tr className="rubrique"><td colSpan={7}><b className="rubrique-carte">{c.titre}</b></td></tr>
-                  {c.groupes.map(({ principal: v, disponible, bas: alerte }) => {
+                  {c.groupes.map(({ principal: v, tous, disponible, bas: alerte }) => {
                     const nom = nomPourListe(v);
                     return (
-                      <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
+                      // Vin qui vient d'être ajouté (« Rajouter un vin ») : ligne mise en évidence, la page s'y place (ancre).
+                      <tr key={v.id} id={nouveau && tous.some((x) => x.id === nouveau) ? `vin-${nouveau}` : undefined}
+                        className={[disponible ? '' : 'indisponible', nouveau && tous.some((x) => x.id === nouveau) ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}

@@ -410,14 +410,14 @@ export async function annulerCommande(resto: string, id: string): Promise<Retour
  * Catalogue d'un distributeur Quid Vinum : le vin est ajouté aux vins du restaurant (page Vins, stock 0, pas encore sur la carte),
  * avec ce distributeur et le prix de son catalogue ; il se commande ensuite depuis le panier. Le distributeur devient actif s'il ne l'était pas.
  */
-export async function ajouterDuCatalogue(resto: string, distributeurId: string, distributeurVinId: string): Promise<Retour> {
+export async function ajouterDuCatalogue(resto: string, distributeurId: string, distributeurVinId: string): Promise<Retour & { vin?: string }> {
   await exigerAcces(resto);
   const [d] = await requete<{ nom: string }>(`select nom from distributeur d where id = $1 and actif and ${distributeurPermis('$2')}`, [distributeurId, resto]);
   if (!d) return { erreur: 'Ce distributeur n’est plus proposé.' };
   const c = (await catalogueDistributeur(distributeurId, resto)).find((x) => x.id === distributeurVinId);
   if (!c) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   const [deja] = await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1 and distributeur_vin_id = $2 limit 1', [resto, distributeurVinId]);
-  if (deja) return { ok: `« ${c.libelle} » est déjà dans votre cave.` };
+  if (deja) return { ok: `« ${c.libelle} » est déjà dans votre cave.`, vin: deja.id };
   await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
     [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
@@ -432,13 +432,13 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
     await choisirFournisseur(resto, [meme.id], f.id, null);
     rafraichir(resto);
     revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-    return { ok: `« ${meme.libelle} » est déjà dans votre cave : il est maintenant relié à ${d.nom}, au prix de son catalogue.` };
+    return { ok: `« ${meme.libelle} » est déjà dans votre cave : il est maintenant relié à ${d.nom}, au prix de son catalogue.`, vin: meme.id };
   }
   const id = await ajouterVinCommande(resto, distributeurVinId, f.id, c.prix, 0);
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à votre cave (en haut de Ma cave, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Ma cave.` };
+  return { ok: `« ${c.libelle} » est ajouté à votre cave (en haut de Ma cave, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Ma cave.`, vin: id };
 }
 
 // ───────── Panier (page Vins) ─────────

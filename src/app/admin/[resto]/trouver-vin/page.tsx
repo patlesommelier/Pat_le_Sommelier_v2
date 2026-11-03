@@ -106,7 +106,7 @@ export default async function TrouverUnVin({ params, searchParams }: { params: P
                             <b style={{ whiteSpace: 'nowrap' }}>{v.prix != null ? `${euros(v.prix)} HTVA` : '—'}</b>
                             {c ? <><Link href={`/admin/${resto}/carte/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="petit">✓ Dans ma cave</Link>
                                 <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, c.id)} libelle={v.libelle} dansPanier={c.panier} /></>
-                              : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, d.id, v.id)} libelle={v.libelle} texte="+ Ajouter" />}
+                              : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, d.id, v.id)} libelle={v.libelle} texte="+ Ajouter" versCave={`/admin/${resto}/stocks`} />}
                           </div>
                         </div>
                       );

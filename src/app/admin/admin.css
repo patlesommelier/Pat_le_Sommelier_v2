@@ -397,3 +397,6 @@ dialog.superposition { overflow-y: auto; }
 .bloc-recherche .demande-resume { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
 .proposition-distributeur { border-top: 1px solid var(--ligne); padding-top: 12px; }
 .bloc-recherche[open] .demande-resume { white-space: pre-line; overflow: visible; }
+/* Ma cave : vin qui vient d'être ajouté depuis « Rajouter un vin » (la page s'y place). */
+.table-stocks tr.ligne-nouvelle td { background: #FFF4D6; opacity: 1; }
+.table-stocks tr.ligne-nouvelle { scroll-margin-top: 120px; }
