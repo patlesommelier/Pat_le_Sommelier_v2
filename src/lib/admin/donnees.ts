@@ -119,7 +119,7 @@ export async function getVinsBO(restaurantId: string) {
             case when p.statut <> 'valide' then 'nouveau' when v.producteur_id is not null then 'reference' end as statut_producteur,
             v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source,
-            case when v.etiquette_url is null then ${SQL_LOGO_DISTRIBUTEUR('v')} end as logo_distributeur, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
+            ${SQL_LOGO_DISTRIBUTEUR('v')} as logo_distributeur, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,

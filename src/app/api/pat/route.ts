@@ -104,7 +104,7 @@ export async function POST(req: Request) {
     coup_de_coeur: boolean; nature: boolean; bio: boolean }>(
     `select v.id, v.libelle, v.couleur::text as couleur, v.millesime as millesime_brut, case when v.modifie_bo is not null and v.producteur_texte is not null then v.producteur_texte else coalesce(p.nom, v.producteur_texte) end as producteur,
             nullif(v.millesime, 'NM') as millesime, v.prix::float as prix, v.prix_verre::float as prix_verre, v.etiquette_url,
-            case when v.etiquette_url is null then ${SQL_LOGO_DISTRIBUTEUR('v')} end as logo_distributeur,
+            ${SQL_LOGO_DISTRIBUTEUR('v')} as logo_distributeur,
             coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte, v.descriptif) as presentation,
             v.nom_vin, v.vin_texte, v.appellation_texte, t.nom as appellation_nom, v.cepages, ${SQL_PICTOS('v')}
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id

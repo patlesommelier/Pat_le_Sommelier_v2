@@ -46,8 +46,8 @@ const SELECT_VIN = `
          v.descriptif, v.vin_texte, v.appellation_texte, v.nom_vin,
          -- Texte montré au client : celui du restaurant, sinon la présentation de la base, sinon celle écrite par Pat
          coalesce(v.presentation_carte_perso, v.presentation, v.presentation_carte) as presentation, v.resume_court, v.etiquette_url,
-         -- Sans étiquette : le logo du distributeur, montré à la place
-         case when v.etiquette_url is null then ${SQL_LOGO_DISTRIBUTEUR('v')} end as logo_distributeur,
+         -- Logo du distributeur : montré si l'étiquette manque, ne se charge pas ou est vide
+         ${SQL_LOGO_DISTRIBUTEUR('v')} as logo_distributeur,
          -- notes de la base de Pat : celle du vin, sinon celle du producteur ; celle du terroir
          v.ordre, coalesce((select c.ranking_pat from cuvee c where c.id = v.cuvee_id), p.ranking_pat) as ranking_producteur, coalesce(t.ranking_pat, v.ranking_terroir) as ranking_terroir, v.pays,
          -- Nom saisi dans le back-office prioritaire sur celui de la base de Pat
