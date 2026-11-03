@@ -9,6 +9,7 @@ import { exigerAcces } from '@/lib/admin/auth';
 import { getCommandes, getCoordonnees } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
+import { STATUTS_QV } from '@/lib/super/commandes';
 
 // Commande Quid Vinum envoyée : son statut suit Quid Vinum.
 const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'Commande acceptée', envoyee_distributeur: 'Commande envoyée au distributeur',
@@ -38,7 +39,8 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
       <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
       <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom}${c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
         <span className="statut-commande">{c.statut === 'ouverte'
-          ? (envoyee && c.via_qv ? (c.statut_qv && c.statut_qv !== 'recue' ? <span className="etat vert">{SUIVI_QV[c.statut_qv] ?? c.statut_qv}</span> : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
+          ? (envoyee && c.via_qv ? (c.statut_qv && c.statut_qv !== 'recue' ? <span className="statut-qv-resto"><span className="coche-acceptee" role="img" aria-label="Commande acceptée par Quid Vinum" title="Commande acceptée par Quid Vinum">✓</span>
+                  <span className="etat statut-qv" data-statut={c.statut_qv}>{STATUTS_QV.find(([k]) => k === c.statut_qv)?.[1] ?? c.statut_qv}</span></span> : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
             : envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
           : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
       </Entete>

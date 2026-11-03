@@ -19,6 +19,7 @@ import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { nomPourListe, regrouperVins } from '../carte/etats';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
+import { STATUTS_QV } from '@/lib/super/commandes';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 // Suivi Quid Vinum, tel que le restaurant le lit.
@@ -83,7 +84,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           <span className="statut-commande">{c.statut === 'ouverte'
             ? (recues ? <Etat type="propose">Réception partielle : {recues} / {total(c)} bouteilles</Etat>
               : envoyee && c.via_qv ? (c.statut_qv && c.statut_qv !== 'recue'
-                ? <span className="etat vert">{SUIVI_QV[c.statut_qv] ?? c.statut_qv}</span>
+                ? <span className="statut-qv-resto"><span className="coche-acceptee" role="img" aria-label="Commande acceptée par Quid Vinum" title="Commande acceptée par Quid Vinum">✓</span>
+                  <span className="etat statut-qv" data-statut={c.statut_qv}>{STATUTS_QV.find(([k]) => k === c.statut_qv)?.[1] ?? c.statut_qv}</span></span>
                 : <Etat type="propose">{SUIVI_QV.recue}</Etat>)
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat>
