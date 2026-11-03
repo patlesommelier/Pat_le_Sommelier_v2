@@ -1,7 +1,8 @@
 // Super-admin — Commandes passées par Quid Vinum : restaurant, vins commandés (prix du restaurant et prix QV du tarif),
 // et le suivi par Quid Vinum : reçue, acceptée, envoyée au distributeur, livrée, facturée.
 import Link from 'next/link';
-import { changerStatutQv, refuserCommandeQv } from '../commandes-actions';
+import { changerStatutQv, decisionCommandeQv, refuserCommandeQv } from '../commandes-actions';
+import { ChoixDecision } from '@/components/admin/ChoixDecision';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
@@ -38,26 +39,23 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   <b style={{ fontSize: 18 }}><Link href={`/admin/${c.restaurant_id}/commandes?commande=${c.id}`}>{c.restaurant}</Link></b>
                   <span className="petit discret">{c.destinataire}</span>
                 </span>
-                {c.statut_qv === 'refusee' ? <Etat type="attention">Refusée par QV</Etat>
+                {c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat>
                   : c.statut === 'annulee' ? <Etat type="defaut">Annulée par le restaurant</Etat>
                   : !c.envoyee_le ? <Etat type="attention">Pas encore envoyée par le restaurant</Etat>
                   : (
                     <span className="pile" style={{ gap: 8, alignItems: 'flex-end' }}>
-                    {/* En attente de validation : l'acceptation en un clic (le restaurant voit « Commande acceptée » et ne peut plus annuler). */}
-                    {(c.statut_qv ?? 'recue') === 'recue' && (
-                      <FormulaireAdmin action={changerStatutQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
-                        <Etat type="attention">En attente de validation</Etat>
-                        <input type="hidden" name="statut_qv" value="acceptee" />
-                        <button className="btn rouge petit">Accepter la commande</button>
-                      </FormulaireAdmin>
-                    )}
+                    {/* En attente de validation : accepter, ou refuser avec une explication (le restaurant voit la décision). */}
+                    {(c.statut_qv ?? 'recue') === 'recue' ? (
+                      <FormulaireAdmin action={decisionCommandeQv.bind(null, c.id)}><ChoixDecision id={c.id} /></FormulaireAdmin>
+                    ) : (
                     <FormulaireAdmin action={changerStatutQv.bind(null, c.id)} className="ligne-actions" style={{ alignItems: 'center' }}>
                       <select name="statut_qv" defaultValue={c.statut_qv ?? 'recue'} aria-label="Statut de la commande" className="champ-liste" style={{ width: 'auto' }}>
-                        {STATUTS_QV.map(([k, l]) => <option key={k} value={k}>{l}</option>)}
+                        {STATUTS_QV.filter(([k]) => k !== 'recue').map(([k, l]) => <option key={k} value={k}>{l}</option>)}
                       </select>
                       <button className="btn sec petit">Enregistrer</button>
                       {c.statut_qv_le && <span className="petit discret">depuis le {date(c.statut_qv_le)}</span>}
                     </FormulaireAdmin>
+                    )}
                     </span>
                   )}
               </div>
@@ -78,7 +76,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
               <span className="petit">{bouteilles} bouteille{bouteilles > 1 ? 's' : ''} · <b>Total {euros(total)} HTVA</b>{totalQv != null && <span className="discret"> · prix QV {euros(totalQv)} · marge {euros(total - totalQv)}</span>}
                 {' · '}<a href={`/admin/${c.restaurant_id}/commandes/${c.id}/pdf`} target="_blank" rel="noopener">Bon de commande (PDF)</a></span>
               {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
-              {c.statut === 'ouverte' && c.envoyee_le && (
+              {c.statut === 'ouverte' && c.envoyee_le && (c.statut_qv ?? 'recue') !== 'recue' && (
                 <details className="refus-commande">
                   <summary className="petit" style={{ cursor: 'pointer', color: 'var(--ocre)', fontWeight: 700 }}>Refuser cette commande…</summary>
                   <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 8, marginTop: 8 }}>

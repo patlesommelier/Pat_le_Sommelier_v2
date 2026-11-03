@@ -51,3 +51,17 @@ export async function refuserCommandeQv(id: string, f: FormData): Promise<Retour
   revalidatePath(`/admin/${resto}`, 'layout');
   return { ok: `Commande refusée.${note}` };
 }
+
+/** Commande en attente de validation : acceptée, ou refusée avec son explication (champ « decision » : accepter / refuser). */
+export async function decisionCommandeQv(id: string, f: FormData): Promise<Retour> {
+  await exigerAdmin();
+  const decision = String(f.get('decision') ?? '');
+  if (decision === 'refuser') return refuserCommandeQv(id, f);
+  if (decision !== 'accepter') return { erreur: 'Choisissez : accepter ou refuser la commande.' };
+  const r = await requete<{ restaurant_id: string }>(
+    `update commande set statut_qv = 'acceptee', statut_qv_le = now() where id = $1 and statut = 'ouverte' returning restaurant_id`, [id]);
+  if (!r.length) return { erreur: 'Cette commande n’est plus ouverte (déjà réceptionnée ou annulée).' };
+  revalidatePath('/admin/super/commandes');
+  revalidatePath(`/admin/${r[0].restaurant_id}`, 'layout');
+  return { ok: 'Commande acceptée : elle passe « En cours de traitement » (le restaurant voit « Commande acceptée »).' };
+}

@@ -6,7 +6,9 @@ import { associerAuCatalogue } from './distributeur-vin';
 
 /** distributeur_id : fournisseur choisi dans la base de Quid Vinum (ses commandes partent chez Quid Vinum). */
 export interface Fournisseur { id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; vins: number; distributeur_id: string | null; logo_url: string | null }
-export interface LigneCommande { vin_id: string | null; distributeur_vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null; recue: number; ordre: number }
+export interface LigneCommande { vin_id: string | null; distributeur_vin_id: string | null; libelle: string; detail: string | null; quantite: number; prix_achat: number | null; recue: number; ordre: number;
+  /** Photo du vin (sa ligne de carte, son vin de catalogue ou le vin de la base) et logo de son distributeur, pour l'affichage. */
+  etiquette?: string | null; logo?: string | null }
 export interface Reception { id: string; numero: number; complete: boolean; cree_le: string }
 export interface Commande {
   id: string; numero: number; fournisseur_id: string | null; fournisseur_nom: string; fournisseur_email: string | null; via_qv: boolean; statut: 'ouverte' | 'recue' | 'annulee';
@@ -60,7 +62,13 @@ export async function getCommandes(resto: string, statuts: Commande['statut'][],
        from commande c left join fournisseur f on f.id = c.fournisseur_id
       where c.restaurant_id = $1 and c.statut = any($2) order by c.cree_le desc limit $3`, [resto, statuts, limite]);
   const lignes = commandes.length ? await requete<LigneCommande & { commande_id: string }>(
-    'select commande_id, vin_id, distributeur_vin_id, libelle, detail, quantite, prix_achat, recue, ordre from commande_ligne where commande_id = any($1) order by ordre', [commandes.map((c) => c.id)]) : [];
+    `select l.commande_id, l.vin_id, l.distributeur_vin_id, l.libelle, l.detail, l.quantite, l.prix_achat, l.recue, l.ordre,
+            coalesce(v.etiquette_url, dv.etiquette_url, c.etiquette_url) as etiquette,
+            (select d.logo_url from distributeur d where d.id = coalesce(dv.distributeur_id,
+               (select f.distributeur_id from fournisseur f where f.id = v.fournisseur_id))) as logo
+       from commande_ligne l left join vin_carte v on v.id = l.vin_id left join distributeur_vin dv on dv.id = l.distributeur_vin_id
+       left join cuvee c on c.id = coalesce(v.cuvee_id, dv.cuvee_id)
+      where l.commande_id = any($1) order by l.ordre`, [commandes.map((c) => c.id)]) : [];
   const receptions = commandes.length ? await requete<Reception & { commande_id: string }>(
     'select id, commande_id, numero, complete, cree_le::text from reception where commande_id = any($1) order by numero', [commandes.map((c) => c.id)]) : [];
   return commandes.map((c) => ({ ...c, lignes: lignes.filter((l) => l.commande_id === c.id), receptions: receptions.filter((r) => r.commande_id === c.id) })) as Commande[];

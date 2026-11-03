@@ -2,7 +2,7 @@ import 'server-only';
 // Super-admin — commandes des restaurants passées par Quid Vinum (distributeurs de la base de Quid Vinum).
 import { requete } from '@/lib/db';
 
-export const STATUTS_QV = [['recue', 'En attente de validation'], ['acceptee', 'Commande acceptée par QV'], ['envoyee_distributeur', 'Commande envoyée au distributeur'],
+export const STATUTS_QV = [['recue', 'En attente de validation'], ['acceptee', 'En cours de traitement'], ['envoyee_distributeur', 'Commande envoyée au distributeur'],
   ['livree_partielle', 'Livraison partielle'], ['livree', 'Bouteilles livrées'], ['facturee', 'Bouteilles facturées']] as const;
 
 export interface CommandeQv {

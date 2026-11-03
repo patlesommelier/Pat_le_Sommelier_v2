@@ -433,3 +433,14 @@ dialog.superposition { overflow-y: auto; }
 /* Les propositions côte à côte : une seule rangée qui défile horizontalement. */
 .vitrine-vins { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 2px 14px; }
 .vitrine-vins .carte-vitrine { flex: 0 0 270px; scroll-snap-align: start; }
+/* Commandes : le statut bien visible (grande pastille ; « À envoyer » en rouge plein). */
+.statut-commande .etat { font-size: 15px; font-weight: 700; padding: 8px 16px; }
+.statut-commande .etat.attention { background: var(--rouge); color: #FFFFFF; border: 0; }
+.statut-commande .etat.propose { background: #FDEBC8; color: #7A4B00; }
+/* Commandes : le détail des lignes (photo, vin, bouteilles, prix, total) et la somme de la commande. */
+.tableau-commande table { width: 100%; min-width: 560px; }
+.tableau-commande td { vertical-align: middle; }
+.tableau-commande .vin-commande { font-weight: 700; color: var(--encre); }
+.tableau-commande .recue { color: #2e7d32; font-weight: 700; }
+.tableau-commande tfoot td { border-top: 2px solid var(--ligne); border-bottom: 0; background: var(--survol); }
+.tableau-commande .total-commande { font-size: 17px; color: var(--encre); white-space: nowrap; }

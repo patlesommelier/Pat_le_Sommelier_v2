@@ -37,11 +37,12 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
     <>
       <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
       <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom}${c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
-        {c.statut === 'ouverte'
+        <span className="statut-commande">{c.statut === 'ouverte'
           ? (envoyee && c.via_qv ? <Etat type={c.statut_qv && c.statut_qv !== 'recue' ? 'ok' : 'propose'}>{SUIVI_QV[c.statut_qv ?? 'recue'] ?? c.statut_qv}</Etat>
             : envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
-          : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}
+          : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
       </Entete>
+      {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Quid Vinum a refusé cette commande : {c.motif_refus}</p>}
       {/* Commande précédente envoyée : son message ; puis où l'on en est parmi les bons du panier. */}
       <Message ok={sp.ok} />
       {nombre > 1 && (sp.suite !== undefined || rang > 1) && (

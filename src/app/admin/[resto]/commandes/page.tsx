@@ -76,13 +76,13 @@ export default async function Commandes({ params, searchParams }: { params: Prom
             <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}{c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''}</span>
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
-          {/* Statut : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
-          {c.statut === 'ouverte'
+          {/* Statut, bien visible : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
+          <span className="statut-commande">{c.statut === 'ouverte'
             ? (recues ? <Etat type="propose">Réception partielle : {recues} / {total(c)} bouteilles</Etat>
               : envoyee && c.via_qv ? <Etat type={c.statut_qv && c.statut_qv !== 'recue' ? 'ok' : 'propose'}>{SUIVI_QV[c.statut_qv ?? 'recue'] ?? c.statut_qv}</Etat>
               : envoyee ? <Etat type="propose">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
             : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat>
-            : c.statut_qv === 'refusee' ? <Etat type="attention">Refusée par Quid Vinum</Etat> : <Etat type="defaut">Annulée</Etat>}
+            : c.statut_qv === 'refusee' ? <Etat type="attention">Commande refusée</Etat> : <Etat type="defaut">Annulée</Etat>}</span>
         </div>
         {c.statut_qv === 'refusee' && c.motif_refus && <p className="message" style={{ margin: 0, background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>Quid Vinum a refusé cette commande : {c.motif_refus}</p>}
         {/* Suivi par Quid Vinum (mis à jour par Quid Vinum dans son espace). */}
@@ -91,18 +91,44 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           <p className="message ok" style={{ margin: 0 }}>Votre commande a été acceptée par Quid Vinum : vous recevrez bientôt des informations concernant la livraison.</p>
         )}
         {c.via_qv && envoyee && c.statut_qv_le && c.statut !== 'annulee' && <span className="petit discret">Envoyée le {date(c.envoyee_le!)} · mise à jour le {date(c.statut_qv_le)}</span>}
-        <ul className="lignes-commande">
-          {c.lignes.map((l, i) => <li key={i}><b className="qte-commande">{l.quantite}</b><span><span className="vin-commande">{l.libelle}</span>{c.statut === 'ouverte' && l.recue > 0 && <small className="recue"> · {l.recue >= l.quantite ? 'reçu' : `${l.recue} reçue${l.recue > 1 ? 's' : ''}`}</small>}{l.detail && <small className="detail-commande">{l.detail}</small>}</span>{l.prix_achat != null && <span className="prix-ligne">{euros(l.prix_achat)} <small>× {l.quantite} =</small> <b>{euros(l.prix_achat * l.quantite)}</b></span>}</li>)}
-        </ul>
-        <span className="petit discret">{total(c)} bouteille{total(c) > 1 ? 's' : ''}{c.lignes.some((l) => l.prix_achat != null) && <> · <b style={{ color: 'var(--encre)' }}>Total {euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA</b></>}</span>
+        {/* Détail de la commande : photo, vin, bouteilles, prix et total de chaque ligne ; la somme en dessous. */}
+        <div className="tableau tableau-commande"><table>
+          <thead><tr><th>Vin</th><th className="droite">Bouteilles</th><th className="droite">Prix HTVA</th><th className="droite">Total HTVA</th></tr></thead>
+          <tbody>{c.lignes.map((l, i) => (
+            <tr key={i}>
+              <td><div className="vin-cell"><VignetteVin url={l.etiquette} logo={l.logo} taille={44} />
+                <div><div className="vin-commande">{l.libelle}</div>{l.detail && <div className="petit discret">{l.detail}</div>}
+                  {c.statut === 'ouverte' && l.recue > 0 && <div className="petit recue">{l.recue >= l.quantite ? 'reçu' : `${l.recue} reçue${l.recue > 1 ? 's' : ''}`}</div>}</div></div></td>
+              <td className="droite"><b>{l.quantite}</b></td>
+              <td className="droite">{l.prix_achat != null ? euros(l.prix_achat) : '—'}</td>
+              <td className="droite"><b>{l.prix_achat != null ? euros(l.prix_achat * l.quantite) : '—'}</b></td>
+            </tr>
+          ))}</tbody>
+          <tfoot><tr>
+            <td><b>Total de la commande</b></td>
+            <td className="droite"><b>{total(c)}</b></td>
+            <td />
+            <td className="droite"><b className="total-commande">{c.lignes.some((l) => l.prix_achat != null) ? `${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : '—'}</b></td>
+          </tr></tfoot>
+        </table></div>
         {/* Toutes les actions sur une ligne. */}
         <div className="actions-commande">
           {c.statut === 'ouverte' && !envoyee && (c.fournisseur_email
             ? <EnvoiCommande pdf={`/admin/${resto}/commandes/${c.id}/pdf`} fichier={`bon-de-commande-${ref}.pdf`} email={c.fournisseur_email} sujet={sujet} corps={corps}
                 serveur={emailPret} envoyer={envoyerCommande.bind(null, resto, c.id)} marquer={marquerEnvoyee.bind(null, resto, c.id)} deja={envoyee} petit />
             : <Link href={`/admin/${resto}/commandes/${c.id}`} className="btn rouge petit">Envoyer la commande</Link>)}
-          {c.statut === 'ouverte' && (
-            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton={envoyee ? 'btn petit' : 'btn sec petit'}>
+          <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec petit">Bon de commande (PDF)</a>
+          {c.receptions.map((r) => (
+            <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
+              Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
+          ))}
+          {c.statut === 'ouverte' && !commandeVerrouillee(c) && (
+            <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
+              question={`Annuler la commande à ${c.fournisseur_nom} ? Les bouteilles pas encore reçues ne seront plus comptées « en commande ».`} />
+          )}
+          {/* Réception des bouteilles : discrète, à droite. */}
+          {c.statut === 'ouverte' && (<span style={{ marginLeft: 'auto' }}>
+            <Superposition bouton="Réception des bouteilles" titre={`Réception des bouteilles — commande n° ${ref}`} classeBouton="btn fantome petit">
               <FormulaireAdmin action={recevoirBouteilles.bind(null, resto, c.id)} className="pile" style={{ gap: 12 }}>
                 <p className="petit discret" style={{ margin: 0 }}>Indiquez les bouteilles arrivées : elles passent en stock et un bon de réception est créé. Ce qui manque reste « en commande » pour une prochaine livraison.</p>
                 <div className="tableau"><table style={{ minWidth: 520 }}>
@@ -116,16 +142,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                 </table></div>
                 <span><button className="btn">Enregistrer la réception</button></span>
               </FormulaireAdmin>
-            </Superposition>
-          )}
-          <a href={`/admin/${resto}/commandes/${c.id}/pdf`} target="_blank" rel="noopener" className="btn sec petit">Bon de commande (PDF)</a>
-          {c.receptions.map((r) => (
-            <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
-              Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
-          ))}
-          {c.statut === 'ouverte' && !commandeVerrouillee(c) && (
-            <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"
-              question={`Annuler la commande à ${c.fournisseur_nom} ? Les bouteilles pas encore reçues ne seront plus comptées « en commande ».`} />
+            </Superposition></span>
           )}
         </div>
         {c.statut === 'ouverte' && !envoyee && c.via_qv && !c.fournisseur_email && <span className="petit" style={{ color: 'var(--ocre)' }}>L’adresse des commandes de Quid Vinum n’est pas encore renseignée : contactez Quid Vinum.</span>}
@@ -210,6 +227,12 @@ export default async function Commandes({ params, searchParams }: { params: Prom
     </ChoixCommande>
   );
 
+  // Commande refusée par Quid Vinum depuis moins d'un jour : encore parmi les commandes ouvertes (statut et explication) ;
+  // ensuite, dans les commandes réceptionnées ou annulées.
+  const refuseeRecente = (c: Commande) => c.statut_qv === 'refusee' && Boolean(c.statut_qv_le) && Date.now() - new Date(c.statut_qv_le!).getTime() < 864e5;
+  const enCours = [...recues.filter(refuseeRecente), ...ouvertes];
+  const cloturees = recues.filter((c) => !refuseeRecente(c));
+
   return (
     <>
       <Entete titre="Commandes" texte="Commandez à vos distributeurs : le bon de commande est préparé, vous l’envoyez d’ici, et les bouteilles sont comptées « en commande ». À la livraison, « Bouteilles réceptionnées » les ajoute au stock.">
@@ -218,23 +241,18 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         </Superposition>
       </Entete>
       <Message ok={sp.ok} />
-      {/* Commandes refusées par Quid Vinum ces 14 derniers jours : en tête de page, avec le motif. */}
-      {recues.filter((c) => c.statut_qv === 'refusee' && c.statut_qv_le && Date.now() - new Date(c.statut_qv_le).getTime() < 14 * 864e5).map((c) => (
-        <p key={c.id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>
-          Commande n° {referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} refusée par Quid Vinum{c.motif_refus ? ` : ${c.motif_refus}` : '.'}</p>
-      ))}
       {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres du restaurant</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">
-        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>
-        {ouvertes.length ? <div className="pile" style={{ gap: 12 }}>{ouvertes.map(carte)}</div>
+        <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{enCours.length}</span></h2>
+        {enCours.length ? <div className="pile" style={{ gap: 12 }}>{enCours.map(carte)}</div>
           : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
       </section>
 
-      {recues.length > 0 && (
+      {cloturees.length > 0 && (
         <details className="pile">
-          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ou annulées ({recues.length})</summary>
-          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{recues.map(carte)}</div>
+          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ou annulées ({cloturees.length})</summary>
+          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{cloturees.map(carte)}</div>
         </details>
       )}
     </>
