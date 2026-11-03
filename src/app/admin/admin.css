@@ -430,3 +430,6 @@ dialog.superposition { overflow-y: auto; }
 .pastille-filtre { max-width: 100%; min-width: 0; }
 .pastille-filtre select { max-width: 230px; min-width: 0; text-overflow: ellipsis; }
 @media (max-width: 640px) { .pastille-filtre select { max-width: calc(100vw - 120px); } .pastille-filtre input { width: 150px; } }
+/* Les propositions côte à côte : une seule rangée qui défile horizontalement. */
+.vitrine-vins { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x proximity; padding: 4px 2px 14px; }
+.vitrine-vins .carte-vitrine { flex: 0 0 270px; scroll-snap-align: start; }

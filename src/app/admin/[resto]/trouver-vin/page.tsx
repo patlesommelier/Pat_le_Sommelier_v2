@@ -76,31 +76,30 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
           {r.statut !== 'en_cours' && r.message && <p className={`message ${r.statut === 'echec' ? 'erreur' : ''}`}>{r.message}</p>}
           {/* Détail technique d'un échec : pour Pat (super-admin) seulement. */}
           {u?.admin && r.erreur && <p className="petit discret" style={{ margin: 0 }}>Détail (super-admin) : {r.erreur}</p>}
-          {(r.resultat ?? []).map((d) => (
-            <div key={d.id} className="pile" style={{ gap: 8 }}>
-              <span className="etiquette-distributeur">{d.nom}</span>
-              <div className="vitrine-vins">
-                {d.vins.map((v) => {
-                  const c = dansCave.get(v.id);
-                  return (
-                    <article key={v.id} className="carte-vitrine">
-                      <VignetteVin url={v.etiquette} logo={d.logo} taille={130} plein />
-                      <b>{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</b>
-                      <span className="petit discret">{[v.producteur, v.appellation, v.contenance].filter(Boolean).join(' · ')}</span>
-                      <p>{v.pourquoi}</p>
-                      <div className="pied-vitrine">
-                        <span className="prix-vitrine">{v.prix != null ? euros(v.prix) : '—'} <small>HTVA</small></span>
-                        {c ? <span className="pile" style={{ gap: 4, alignItems: 'flex-end' }}>
-                            <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ nouveau: c.id })}#vin-${c.id}`} className="petit">✓ Dans ma cave</Link>
-                            <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, c.id)} libelle={v.libelle} dansPanier={c.panier} /></span>
-                          : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, d.id, v.id)} libelle={v.libelle} texte="+ Ajouter" versCave={`/admin/${resto}/stocks`} />}
-                      </div>
-                    </article>
-                  );
-                })}
-              </div>
+          {/* Toutes les propositions côte à côte (une seule rangée, qui défile si besoin) ; le distributeur sur chaque carte. */}
+          {(r.resultat ?? []).length > 0 && (
+            <div className="vitrine-vins">
+              {(r.resultat ?? []).flatMap((d) => d.vins.map((v) => {
+                const c = dansCave.get(v.id);
+                return (
+                  <article key={`${d.id}-${v.id}`} className="carte-vitrine">
+                    <span className="etiquette-distributeur">{d.nom}</span>
+                    <VignetteVin url={v.etiquette} logo={d.logo} taille={130} plein />
+                    <b>{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</b>
+                    <span className="petit discret">{[v.producteur, v.appellation, v.contenance].filter(Boolean).join(' · ')}</span>
+                    <p>{v.pourquoi}</p>
+                    <div className="pied-vitrine">
+                      <span className="prix-vitrine">{v.prix != null ? euros(v.prix) : '—'} <small>HTVA</small></span>
+                      {c ? <span className="pile" style={{ gap: 4, alignItems: 'flex-end' }}>
+                          <Link href={`/admin/${resto}/stocks?${new URLSearchParams({ nouveau: c.id })}#vin-${c.id}`} className="petit">✓ Dans ma cave</Link>
+                          <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, c.id)} libelle={v.libelle} dansPanier={c.panier} /></span>
+                        : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, d.id, v.id)} libelle={v.libelle} texte="+ Ajouter" versCave={`/admin/${resto}/stocks`} />}
+                    </div>
+                  </article>
+                );
+              }))}
             </div>
-          ))}
+          )}
         </section>
       )}
 
