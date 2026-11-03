@@ -392,3 +392,8 @@ dialog.superposition { overflow-y: auto; }
 /* Trouver un vin : une proposition de Pat (vignette, vin et pourquoi, prix et ajout à la cave). */
 .proposition-vin { display: flex; gap: 14px; align-items: flex-start; border-top: 1px solid var(--ligne); padding-top: 12px; flex-wrap: wrap; }
 .proposition-vin > .pile:first-of-type { min-width: 220px; }
+/* Rajouter un vin : chaque recherche se déplie ; la demande en résumé sur une ligne. */
+.bloc-recherche > summary { align-items: center; }
+.bloc-recherche .demande-resume { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+.proposition-distributeur { border-top: 1px solid var(--ligne); padding-top: 12px; }
+.bloc-recherche[open] .demande-resume { white-space: pre-line; overflow: visible; }

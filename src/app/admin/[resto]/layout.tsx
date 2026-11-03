@@ -12,7 +12,7 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus
 // « Base des vins » (vins, stocks, commandes, distributeurs) : sous « Cartes et menus » (règles du sommelier comprises), avant l'app client.
 function avecStocks(resto: string, etapes: Etape[]): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['trouver-vin', 'Trouver un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
+  const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['trouver-vin', 'Rajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
     .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Base des vins', icone }));
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Restaurant', icone: 'reglages' };

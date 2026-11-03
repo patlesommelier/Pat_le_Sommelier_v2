@@ -1,8 +1,9 @@
 // « Trouver un vin » (espace restaurant) : la demande du restaurant, décrite librement (plat, pays, budget, style…),
-// devient des propositions dans les catalogues des distributeurs Quid Vinum : 2 vins par distributeur, avec un petit texte de Pat.
+// devient des propositions dans les catalogues des distributeurs Quid Vinum, avec un petit texte de Pat : 4 vins par distributeur
+// quand il y en a 1 ou 2, sinon 2 vins par distributeur.
 //   1. Claude comprend la demande (critères) ;
 //   2. présélection sans IA dans les catalogues (épuisés, budget, vins déjà en cave écartés ; rankings de Pat pour classer) ;
-//   3. Claude choisit 2 vins par distributeur selon les principes de Pat et écrit pourquoi.
+//   3. Claude choisit les vins de chaque distributeur selon les principes de Pat et écrit pourquoi.
 // Les rankings, le prix QV et la marge ne sortent jamais d'ici : le restaurant voit son prix d'achat HTVA et le texte de Pat.
 // Sans « server-only » : lancé en arrière-plan.
 import type Anthropic from '@anthropic-ai/sdk';
@@ -28,7 +29,6 @@ interface Candidat {
 }
 
 const COULEURS = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'];
-const PAR_DISTRIBUTEUR = 14; // vins présélectionnés par distributeur, soumis à Pat
 const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 /** Premier objet JSON d'une réponse de Claude. */
@@ -87,12 +87,18 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
     const lieuDe = (v: Candidat) => sansAccents([v.appellation, v.region, v.pays, v.libelle, v.producteur].filter(Boolean).join(' '));
     const retenus = tous.filter((v) => (!couleurs.length || (v.couleur && couleurs.includes(v.couleur))) && (!budget || (v.prix != null && v.prix <= budget)));
     // Le lieu demandé passe devant (sans écarter les autres : il y en a parfois peu) ; puis les rankings de Pat.
-    const score = (v: Candidat) => (lieux.length && lieux.some((l) => lieuDe(v).includes(l)) ? 10 : 0) + v.ranking;
+    // Avec un budget : les vins proches du budget (sans le dépasser) passent devant les vins bien moins chers.
+    const procheBudget = (v: Candidat) => (budget && v.prix != null ? 4 * Math.min(1, v.prix / budget) : 0);
+    const score = (v: Candidat) => (lieux.length && lieux.some((l) => lieuDe(v).includes(l)) ? 10 : 0) + v.ranking + procheBudget(v);
     // Un même vin n'est proposé qu'une fois par distributeur (deux millésimes ou formats ne font qu'une proposition) :
     // la bouteille de 75 cl et le millésime le plus récent de préférence.
     const cle = (v: Candidat) => `${v.distributeur_id}|${sansAccents(v.libelle).replace(/[^a-z0-9]+/g, ' ').trim()}`;
     const bouteille = (v: Candidat) => (/75\s*cl|0[,.]75/i.test(v.contenance ?? '') ? 1 : 0);
     const annee = (v: Candidat) => Number(v.millesime) || 0;
+    // Vins proposés par distributeur : 4 quand il y a 1 ou 2 distributeurs, 2 à partir de 3 ; présélection en conséquence.
+    const nbDistributeurs = new Set(retenus.map((v) => v.distributeur_id)).size;
+    const parVins = nbDistributeurs <= 2 ? 4 : 2;
+    const PAR_DISTRIBUTEUR = parVins === 4 ? 24 : 14; // vins présélectionnés par distributeur, soumis à Pat
     const parDistributeur = new Map<string, Candidat[]>();
     const vus = new Set<string>();
     for (const v of retenus.sort((a, b) => score(b) - score(a) || bouteille(b) - bouteille(a) || annee(b) - annee(a))) {
@@ -106,7 +112,7 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
       return;
     }
 
-    // 3. Pat choisit 2 vins par distributeur et explique pourquoi.
+    // 3. Pat choisit les vins de chaque distributeur et explique pourquoi.
     const principes = await requete<PrincipeCtx>(`select id, numero, titre, regle, role, statut::text from principe where statut <> 'retire'`);
     const liste = [...parDistributeur.entries()].map(([id, vins]) => `DISTRIBUTEUR ${id} (${vins[0].distributeur})\n${vins.map((v) =>
       `- ${v.id} : ${v.libelle}${v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}`
@@ -125,7 +131,7 @@ ${c.plat ? `Plat à accorder : ${c.plat}\n` : ''}${c.style ? `Style recherché :
 VINS DISPONIBLES, PAR DISTRIBUTEUR (déjà triés : les premiers conviennent le mieux)
 ${liste}
 
-Pour chaque distributeur, choisis les 2 vins qui répondent le mieux à la demande (1 seul s'il n'y en a qu'un ; aucun si rien ne convient).
+${budget ? `Budget : ${budget} € HTVA au plus. Propose des vins qui s'en approchent (idéalement entre 70 % et 100 % du budget), jamais au-dessus ; un vin bien moins cher seulement s'il convient nettement mieux.\n` : ''}Pour chaque distributeur, choisis les ${parVins} vins qui répondent le mieux à la demande (moins s'il n'y en a pas assez qui conviennent ; aucun si rien ne convient).
 Pour chacun, écris « pourquoi » : 2 phrases (35 à 55 mots en tout), en français, adressées au restaurant, qui disent pourquoi ce vin répond
 à sa demande (accord avec le plat, style, origine, budget), par la cause (acidité, texture, arômes, terroir, cépage…), sans adjectif creux.
 Ne cite ni note, ni classement, ni principe, ni prix d'achat de Quid Vinum.
@@ -140,7 +146,7 @@ Réponds uniquement en JSON : {"distributeurs": [{"id": "...", "vins": [{"id": "
     for (const [id, vins] of parDistributeur) {
       const pris = (choix.distributeurs.find((x) => x.id === id)?.vins ?? [])
         .map((x) => ({ v: vins.find((y) => y.id === x.id), pourquoi: (x.pourquoi ?? '').trim() }))
-        .filter((x): x is { v: Candidat; pourquoi: string } => Boolean(x.v && x.pourquoi)).slice(0, 2);
+        .filter((x): x is { v: Candidat; pourquoi: string } => Boolean(x.v && x.pourquoi)).slice(0, parVins);
       if (!pris.length) continue;
       resultat.push({ id, nom: vins[0].distributeur, logo: vins[0].logo, vins: pris.map(({ v, pourquoi }) => ({
         id: v.id, libelle: v.libelle, producteur: v.producteur, appellation: v.appellation, millesime: v.millesime, contenance: v.contenance,
