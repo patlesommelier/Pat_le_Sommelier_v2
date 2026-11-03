@@ -438,7 +438,7 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à votre cave (en haut de Ma cave, « Pas encore sur votre carte ») : mettez-le au panier ici ou depuis Ma cave.`, vin: id };
+  return { ok: `« ${c.libelle} » est ajouté à votre cave (dans Ma cave, avec les vins de sa couleur) : mettez-le au panier ici ou depuis Ma cave.`, vin: id };
 }
 
 // ───────── Panier (page Vins) ─────────

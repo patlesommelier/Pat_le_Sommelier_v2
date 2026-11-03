@@ -37,9 +37,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   // « Liste de vins » d'un distributeur (page Distributeurs) : seulement ses vins.
   const filtreDistributeur = distributeur ? fournisseurs.find((x) => x.id === distributeur) ?? null : null;
   const affiches = (filtre === 'bas' ? bas : groupes).filter((g) => !filtreDistributeur || g.tous.some((x) => x.fournisseur_id === filtreDistributeur.id));
-  // Vins pas (ou plus) sur la carte, dont ceux ajoutés depuis un catalogue : en tête, pour les retrouver et les commander.
-  const parCouleur = [{ titre: 'Pas encore sur votre carte', groupes: affiches.filter((g) => !g.disponible) },
-    ...COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.disponible && g.principal.couleur === k) }))].filter((c) => c.groupes.length);
+  // Chaque vin dans la rubrique de sa couleur, qu'il soit sur la carte ou pas encore (sa ligne le dit).
+  const parCouleur = COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((c) => c.groupes.length);
   const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
   // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
   const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
@@ -108,7 +107,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                       <tr key={v.id} id={nouveau && tous.some((x) => x.id === nouveau) ? `vin-${nouveau}` : undefined}
                         className={[disponible ? '' : 'indisponible', nouveau && tous.some((x) => x.id === nouveau) ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
-                          <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
+                          <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
                             <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}</div>); })()}
