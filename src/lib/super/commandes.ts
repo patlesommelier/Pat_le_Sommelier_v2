@@ -6,7 +6,7 @@ export const STATUTS_QV = [['recue', 'Commande reçue par QV'], ['acceptee', 'Co
   ['livree_partielle', 'Livraison partielle'], ['livree', 'Bouteilles livrées'], ['facturee', 'Bouteilles facturées']] as const;
 
 export interface CommandeQv {
-  id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
+  id: string; numero: number; cree_le: string; envoyee_le: string | null; statut: string; reference_interne: string | null; statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
   restaurant_id: string; restaurant: string; destinataire: string;
   lignes: { libelle: string; detail: string | null; quantite: number; recue: number; prix_achat: number | null; prix_qv: number | null; distributeur: string | null }[];
 }
@@ -14,7 +14,7 @@ export interface CommandeQv {
 /** Commandes passées par Quid Vinum (la plus récente d'abord) ; prix du restaurant, et prix QV du tarif actuel (super-admin seulement). */
 export async function commandesQv(statut?: string) {
   const commandes = await requete<Omit<CommandeQv, 'lignes'>>(
-    `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.statut, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.restaurant_id, r.nom as restaurant,
+    `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.statut, c.reference_interne, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.restaurant_id, r.nom as restaurant,
             case when c.quid_vinum then 'Quid Vinum (plusieurs distributeurs)' else coalesce(f.nom, c.fournisseur_nom) end as destinataire
        from commande c join restaurant r on r.id = c.restaurant_id left join fournisseur f on f.id = c.fournisseur_id
       where (c.quid_vinum or f.distributeur_id is not null

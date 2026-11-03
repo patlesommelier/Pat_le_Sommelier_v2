@@ -4,11 +4,12 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ajouterAuPanier, ajouterDuCatalogue } from '../../../stocks-actions';
 import { AjoutCatalogue, AjoutPanier } from '@/components/admin/Panier';
-import { Entete, Etat, Vignette } from '@/components/admin/Ui';
+import { Entete, Etat } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { euros } from '@/lib/bon-commande';
 import { requete } from '@/lib/db';
 import { catalogueDistributeur, distributeursProposes } from '@/lib/distributeurs/donnees';
+import { VignetteVin } from '@/components/admin/VignetteVin';
 
 const COULEURS: [string, string][] = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux']];
 const PAR_PAGE = 120;
@@ -62,7 +63,7 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
                 const x = dansVins.get(v.id);
                 return (
                   <tr key={v.id} className={v.epuise ? 'indisponible' : undefined}>
-                    <td><div className="vin-cell"><Vignette url={v.etiquette_url ?? d.logo_url} taille={40} />
+                    <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={d.logo_url} taille={40} />
                       <div><div className="nom">{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</div>
                         <div className="petit">{[v.producteur, v.section, v.contenance, v.certification, v.reference ? `réf. ${v.reference}` : null].filter(Boolean).join(' · ')}</div>
                         {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></div></td>

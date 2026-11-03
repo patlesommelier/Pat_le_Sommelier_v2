@@ -966,7 +966,8 @@ export async function creerAcces(resto: string, f: FormData) {
   await exigerAcces(resto);
   const email = (txt(f, 'email') ?? '').toLowerCase();
   const mdp = String(f.get('mdp') ?? '');
-  const retour = (m: Record<string, string>) => redirect(avec(`/admin/${resto}/acces`, m));
+  // Utilisateurs : dans Paramètres du restaurant.
+  const retour = (m: Record<string, string>) => redirect(`${avec(`/admin/${resto}/parametres`, m)}#utilisateurs`);
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) retour({ erreur: 'Adresse e-mail invalide.' });
   if (mdp && mdp.length < MDP_MINIMUM) retour({ erreur: `Mot de passe : ${MDP_MINIMUM} caractères minimum.` });
   if (mdp && mdp !== f.get('mdp2')) retour({ erreur: 'Les deux mots de passe sont différents.' });
@@ -980,18 +981,18 @@ export async function creerAcces(resto: string, f: FormData) {
   if (existait && !sansMotDePasse) retour({ ok: `${email} avait déjà un compte : il a maintenant accès à ce restaurant, avec son mot de passe habituel.` });
   if (mdp) {
     if (sansMotDePasse) await definirMotDePasse(id, mdp);
-    retour({ ok: `Accès créé pour ${email} : communiquez-lui son mot de passe.` });
+    retour({ ok: `Utilisateur ${email} ajouté : communiquez-lui son mot de passe.` });
   }
   const r = await inviter(id, email);
   retour(r.envoye ? { ok: `Invitation envoyée à ${email} : la personne choisit son mot de passe en cliquant sur le lien reçu.` }
-    : { ok: `Accès créé pour ${email}. ${r.erreur ? r.erreur.replace(/\.$/, '') : 'L’envoi d’e-mails n’est pas encore activé'} ; transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
+    : { ok: `Utilisateur ${email} invité. ${r.erreur ? r.erreur.replace(/\.$/, '') : 'L’envoi d’e-mails n’est pas encore activé'} ; transmettez-lui ce lien (valable 7 jours) pour choisir son mot de passe.`, lien: r.lien });
 }
 
 export async function retirerAcces(resto: string, userId: string) {
   await exigerAcces(resto);
   await requete('delete from acces_restaurant where restaurant_id = $1 and user_id = $2', [resto, userId]);
   revalidatePath(`/admin/${resto}`, 'layout');
-  redirect(`/admin/${resto}/acces`);
+  redirect(`/admin/${resto}/parametres#utilisateurs`);
 }
 
 // ───────── Base de Pat (administrateur) ─────────

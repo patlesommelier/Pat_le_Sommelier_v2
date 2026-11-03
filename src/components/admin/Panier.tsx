@@ -42,9 +42,10 @@ export function AjoutPanier({ ajouter, libelle, dansPanier, champFournisseur }: 
 
 /** Le panier, en haut de la page Vins : ses lignes regroupées par distributeur, puis « Commander ». */
 export function Panier({ lignes, modifier, vider, commander }: {
-  lignes: LignePanier[]; modifier: (vinId: string, q: number) => Promise<Retour>; vider: () => Promise<Retour>; commander: () => Promise<Retour>;
+  lignes: LignePanier[]; modifier: (vinId: string, q: number) => Promise<Retour>; vider: () => Promise<Retour>; commander: (reference: string) => Promise<Retour>;
 }) {
   const [enCours, demarrer] = useTransition();
+  const [reference, setReference] = useState(''); // numéro de commande interne du restaurant (facultatif)
   const { montrer, toast } = useToast();
   const total = lignes.reduce((n, l) => n + l.quantite, 0);
   const montant = lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0);
@@ -70,11 +71,15 @@ export function Panier({ lignes, modifier, vider, commander }: {
               ))}
             </div>
           ))}
+          <div className="champ" style={{ margin: 0, maxWidth: 320 }}>
+            <label htmlFor="reference-interne">Votre n° de commande interne <span className="discret" style={{ fontWeight: 400 }}>(facultatif)</span></label>
+            <input id="reference-interne" value={reference} onChange={(e) => setReference(e.target.value)} maxLength={60} placeholder="Ex. BC-2026-114" />
+          </div>
           <div className="ligne-actions" style={{ alignItems: 'center', borderTop: '1px solid var(--ligne)', paddingTop: 12 }}>
             <span style={{ flex: 1 }}><b>{total}</b> bouteille{total > 1 ? 's' : ''}{montant ? <> · <b>{euros(montant)}</b> HTVA</> : null}
               <span className="petit discret"> · {nbCommandes > 1 ? `${nbCommandes} bons de commande (un par distributeur ; un seul pour Quid Vinum)` : '1 bon de commande'}</span></span>
             <button type="button" className="btn fantome petit" disabled={enCours} onClick={() => { if (window.confirm('Vider le panier ?')) agir(vider); }}>Vider</button>
-            <button type="button" className="btn rouge" disabled={enCours} onClick={() => agir(commander)}>{enCours ? 'Commande en cours…' : 'Commander'}</button>
+            <button type="button" className="btn rouge" disabled={enCours} onClick={() => agir(() => commander(reference))}>{enCours ? 'Commande en cours…' : 'Commander'}</button>
           </div>
         </div>
       )}

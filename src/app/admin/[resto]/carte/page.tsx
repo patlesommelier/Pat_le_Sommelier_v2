@@ -5,13 +5,14 @@ import { PictosVin } from '@/components/Pictos';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { identifiantsWineLabs } from '@/lib/etiquettes/wine-labs';
 import { BoutonCarteImprimee } from '@/components/admin/BoutonCarteImprimee';
-import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
+import { Entete, Etat, Message, euros } from '@/components/admin/Ui';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { categoriesActives } from '@/lib/categories';
 import { etatEtiquette, nomPourListe, parRubrique, placeGroupe, regrouperVins } from './etats';
 import { RetourVin } from '@/components/admin/RetourVin';
 import { stockBas } from '@/lib/admin/stocks';
+import { VignetteVin } from '@/components/admin/VignetteVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['rouge', 'Rouges'], ['orange', 'Orange'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
@@ -107,7 +108,7 @@ export default async function Carte({ params, searchParams }: { params: Promise<
                   return {
                     cle: v.id, ids: tous.map((x) => x.id), ancre: `vin-${v.id}`, classe: choisie ? 'choisi' : undefined,
                     cellules: (<>
-                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><Vignette url={v.etiquette_url ?? v.logo_distributeur} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.disponible) && stockBas(v.stock, limite) && <Link href={`/admin/${resto}/stocks?filtre=bas`} className="alerte-stock" title={`Stock bas : ${v.stock} bouteille${v.stock > 1 ? 's' : ''}`} aria-label="Stock bas" draggable={false}>!</Link>}<PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
+                      <td style={{ minWidth: 170 }}><div className="vin-cell"><span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4 }}>⋮⋮</span><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} /><div><Link href={fiche} className="nom" draggable={false}>{nom[0]}</Link>{tous.some((x) => x.disponible) && stockBas(v.stock, limite) && <Link href={`/admin/${resto}/stocks?filtre=bas`} className="alerte-stock" title={`Stock bas : ${v.stock} bouteille${v.stock > 1 ? 's' : ''}`} aria-label="Stock bas" draggable={false}>!</Link>}<PictosVin coeur={tous.some((x) => x.coup_de_coeur)} bio={v.bio} nature={v.nature} />{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{u?.admin && <div className="petit discret">{tous.map((x) => x.id).join(' · ')}</div>}</div></div></td>
                       <td>{v.millesime ?? '—'}</td>
                       <td className="col-producteur">{v.producteur_nom ?? v.producteur_texte ?? '—'}</td>
                       <td className="petit" style={{ minWidth: 80, maxWidth: 120 }}>{v.cepages ?? '—'}</td>

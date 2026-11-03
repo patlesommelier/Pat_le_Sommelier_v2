@@ -34,7 +34,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
             <article key={c.id} className="carte-bo pile" style={{ gap: 10 }}>
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, justifyContent: 'space-between', alignItems: 'flex-start' }}>
                 <span className="pile" style={{ gap: 2 }}>
-                  <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}{c.envoyee_le ? ` · envoyée le ${date(c.envoyee_le)}` : ''}</span>
+                  <span className="surtitre">Commande n° {ref}{c.reference_interne ? ` (réf. ${c.reference_interne})` : ''} · {date(c.cree_le)}{c.envoyee_le ? ` · envoyée le ${date(c.envoyee_le)}` : ''}</span>
                   <b style={{ fontSize: 18 }}><Link href={`/admin/${c.restaurant_id}/commandes?commande=${c.id}`}>{c.restaurant}</Link></b>
                   <span className="petit discret">{c.destinataire}</span>
                 </span>

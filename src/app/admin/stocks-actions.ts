@@ -140,10 +140,12 @@ export async function enregistrerParametresStock(resto: string, f: FormData): Pr
   if (limite === null || limite > 1000) return { erreur: 'La limite de stock bas doit être un nombre de bouteilles (0 ou plus).' };
   const email = txt(f, 'commande_email');
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'Votre adresse e-mail ne semble pas valide.' };
+  // Adresse de facturation : seulement si la case « différente de l'adresse de livraison » est cochée.
+  const facturation = f.get('facturation_differente') === 'on' ? txt(f, 'commande_adresse_facturation') : null;
   await requete(
     `update restaurant set stock_limite_basse = $2, commande_societe = $3, commande_adresse = $4, commande_tva = $5, commande_contact = $6,
-            commande_telephone = $7, commande_email = $8 where id = $1`,
-    [resto, limite, txt(f, 'commande_societe'), txt(f, 'commande_adresse'), txt(f, 'commande_tva'), txt(f, 'commande_contact'), txt(f, 'commande_telephone'), email]);
+            commande_telephone = $7, commande_email = $8, commande_adresse_facturation = $9 where id = $1`,
+    [resto, limite, txt(f, 'commande_societe'), txt(f, 'commande_adresse'), txt(f, 'commande_tva'), txt(f, 'commande_contact'), txt(f, 'commande_telephone'), email, facturation]);
   rafraichir(resto);
   return { ok: 'Paramètres enregistrés.' };
 }
@@ -171,7 +173,7 @@ export async function creerCommande(resto: string, fournisseurId: string, f: For
 
 /** Crée la commande à un fournisseur (vins de la carte : quantites ; vins de son catalogue Quid Vinum : duCatalogue). */
 async function enregistrerCommande(resto: string, email: string | null, fournisseurId: string, quantites: (readonly [string, number])[], duCatalogue: (readonly [string, number])[],
-  achatIndique: (vinId: string) => number | null | undefined = () => undefined): Promise<{ id: string } | { erreur: string }> {
+  achatIndique: (vinId: string) => number | null | undefined = () => undefined, reference: string | null = null): Promise<{ id: string } | { erreur: string }> {
   const [fournisseur] = fournisseurId
     ? await requete<{ nom: string; distributeur_id: string | null }>('select nom, distributeur_id from fournisseur where id = $1 and restaurant_id = $2', [fournisseurId, resto])
     : [{ nom: 'Fournisseur à préciser', distributeur_id: null }];
@@ -188,8 +190,8 @@ async function enregistrerCommande(resto: string, email: string | null, fourniss
        from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [resto]);
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
-  await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par) values ($1, $2, $3, $4, $5, $6)',
-    [id, resto, fournisseurId || null, fournisseur.nom, numero, email]);
+  await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, reference_interne) values ($1, $2, $3, $4, $5, $6, $7)',
+    [id, resto, fournisseurId || null, fournisseur.nom, numero, email, reference]);
   let ordre = 0;
   for (const [vinId, q] of quantites) {
     const v = vins.find((x) => x.id === vinId);
@@ -240,7 +242,7 @@ export async function creerCommandeQv(resto: string, f: FormData): Promise<Retou
 }
 
 /** Crée la commande Quid Vinum (vins des catalogues des distributeurs Quid Vinum actifs du restaurant). */
-async function enregistrerCommandeQv(resto: string, email: string | null, demandes: (readonly [string, number])[]): Promise<{ id: string } | { erreur: string }> {
+async function enregistrerCommandeQv(resto: string, email: string | null, demandes: (readonly [string, number])[], reference: string | null = null): Promise<{ id: string } | { erreur: string }> {
   const actives = await requete<{ id: string; nom: string; distributeur_id: string }>(
     `select f.id, f.nom, f.distributeur_id from fournisseur f join distributeur d on d.id = f.distributeur_id and d.actif where f.restaurant_id = $1 and ${distributeurPermis('$1')}`, [resto]);
   const catalogues = new Map<string, Awaited<ReturnType<typeof catalogueDistributeur>>>();
@@ -257,8 +259,8 @@ async function enregistrerCommandeQv(resto: string, email: string | null, demand
        from vin_carte v left join producteur p on p.id = v.producteur_id where v.restaurant_id = $1`, [resto]);
   const id = randomUUID();
   const [{ numero }] = await requete<{ numero: number }>('select coalesce(max(numero), 0) + 1 as numero from commande where restaurant_id = $1', [resto]);
-  await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum) values ($1, $2, null, $3, $4, $5, true)',
-    [id, resto, 'Quid Vinum', numero, email]);
+  await requete('insert into commande (id, restaurant_id, fournisseur_id, fournisseur_nom, numero, cree_par, quid_vinum, reference_interne) values ($1, $2, null, $3, $4, $5, true, $6)',
+    [id, resto, 'Quid Vinum', numero, email, reference]);
   let ordre = 0;
   // Lignes rangées par distributeur, dans l'ordre de leur catalogue.
   const lignes = demandes.map(([vid, q]) => ({ ...trouve(vid)!, q })).sort((x, y) => x.a.nom.localeCompare(y.a.nom));
@@ -294,6 +296,7 @@ export async function envoyerCommande(resto: string, id: string): Promise<Retour
     sujet: `Bon de commande ${ref} — ${bon.restaurant.nom}${bon.distributeur ? ` — ${bon.distributeur}` : ''}`,
     texte: `Bonjour${bon.distributeur ? '' : bon.fournisseur.contact ? ` ${bon.fournisseur.contact}` : ''},\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref}${bon.distributeur ? ` chez ${bon.distributeur}` : ''} (${total} bouteille${total > 1 ? 's' : ''}) :\n\n`
       + bon.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')
+      + (bon.referenceInterne ? `\n\nNotre référence interne : ${bon.referenceInterne}` : '')
       + `\n\nMerci de nous confirmer la commande et la date de livraison${bon.restaurant.email ? ` en répondant à cet e-mail` : ''}.\n\n${bon.restaurant.nom}${bon.restaurant.telephone ? `\n${bon.restaurant.telephone}` : ''}`,
     pieceJointe: { nom: `bon-de-commande-${ref}.pdf`, octets: genererBonCommande(bon) },
   });
@@ -482,8 +485,10 @@ export async function viderPanier(resto: string): Promise<Retour> {
  * une commande par distributeur du restaurant, et une « fournisseur à préciser » pour les vins sans distributeur.
  * Chaque commande créée retire ses lignes du panier ; on arrive sur la commande (ou la liste s'il y en a plusieurs).
  */
-export async function commanderPanier(resto: string): Promise<Retour> {
+export async function commanderPanier(resto: string, referenceInterne?: string | null): Promise<Retour> {
   const u = await exigerAcces(resto);
+  // Numéro de commande interne du restaurant (facultatif) : sur chaque bon créé.
+  const reference = typeof referenceInterne === 'string' && referenceInterne.trim() ? referenceInterne.trim().slice(0, 60) : null;
   const lignes = await requete<{ vin_id: string; quantite: number; fournisseur_id: string | null; qv: boolean; distributeur_vin_id: string | null }>(
     `select p.vin_id, p.quantite, f.id as fournisseur_id, f.distributeur_id is not null as qv,
             -- Son vin dans le catalogue du distributeur Quid Vinum : celui relié, sinon le même vin de la base (même millésime d'abord).
@@ -501,7 +506,7 @@ export async function commanderPanier(resto: string): Promise<Retour> {
   // Distributeurs Quid Vinum : une seule commande, depuis leurs catalogues.
   const duCatalogue = lignes.filter((l) => l.qv && l.distributeur_vin_id);
   if (duCatalogue.length) {
-    const r = await enregistrerCommandeQv(resto, u.email, duCatalogue.map((l) => [l.distributeur_vin_id!, l.quantite] as const));
+    const r = await enregistrerCommandeQv(resto, u.email, duCatalogue.map((l) => [l.distributeur_vin_id!, l.quantite] as const), reference);
     if ('erreur' in r) { rafraichir(resto); return r; }
     creees.push(r.id);
     await retirer(duCatalogue.map((l) => l.vin_id));
@@ -510,7 +515,7 @@ export async function commanderPanier(resto: string): Promise<Retour> {
   const parFournisseur = new Map<string, typeof lignes>();
   for (const l of lignes.filter((x) => !duCatalogue.includes(x))) parFournisseur.set(l.fournisseur_id ?? '', [...(parFournisseur.get(l.fournisseur_id ?? '') ?? []), l]);
   for (const [fournisseurId, ls] of parFournisseur) {
-    const r = await enregistrerCommande(resto, u.email, fournisseurId, ls.map((l) => [l.vin_id, l.quantite] as const), []);
+    const r = await enregistrerCommande(resto, u.email, fournisseurId, ls.map((l) => [l.vin_id, l.quantite] as const), [], undefined, reference);
     if ('erreur' in r) { rafraichir(resto); return r; }
     creees.push(r.id);
     await retirer(ls.map((l) => l.vin_id));

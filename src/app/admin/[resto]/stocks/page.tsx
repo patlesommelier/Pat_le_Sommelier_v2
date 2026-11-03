@@ -9,13 +9,14 @@ import { Superposition } from '@/components/admin/Superposition';
 import { FormulaireAjoutVin } from './FormulaireAjoutVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
-import { Entete, Message, Vignette } from '@/components/admin/Ui';
+import { Entete, Message } from '@/components/admin/Ui';
 import { requete } from '@/lib/db';
 import { euros } from '@/lib/bon-commande';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getFournisseurs, getPanier, getPrixAchat, stockBas } from '@/lib/admin/stocks';
 import { nomPourListe, regrouperVins } from '../carte/etats';
+import { VignetteVin } from '@/components/admin/VignetteVin';
 
 const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'], ['orange', 'Orange'], ['rouge', 'Rouges'], ['doux', 'Doux'], ['sans_alcool', 'Sans alcool']] as const;
 
@@ -49,7 +50,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Ma cave" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres).`}>
+      <Entete titre="Ma cave" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
         {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
         <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
@@ -102,7 +103,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                     const nom = nomPourListe(v);
                     return (
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
-                        <td style={{ minWidth: 240 }}><div className="vin-cell"><Vignette url={v.etiquette_url ?? v.logo_distributeur} taille={40} />
+                        <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Indisponible sur la carte</div>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (

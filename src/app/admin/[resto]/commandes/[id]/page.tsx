@@ -27,13 +27,13 @@ export default async function BonDeCommande({ params, searchParams }: { params: 
   const total = c.lignes.reduce((n, l) => n + l.quantite, 0);
   const nomResto = coord?.commande_societe || coord?.nom || '';
   const sujet = `Bon de commande ${ref} — ${nomResto}${c.via_qv ? ` — ${c.fournisseur_nom}` : ''}`;
-  const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total} bouteille${total > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
+  const corps = `Bonjour,\n\nVeuillez trouver ci-joint notre bon de commande n° ${ref} (${total} bouteille${total > 1 ? 's' : ''}) :\n\n${c.lignes.map((l) => `- ${l.quantite} × ${l.libelle}${l.detail ? ` (${l.detail})` : ''}${l.prix_achat != null ? ` à ${euros(l.prix_achat)} HTVA` : ''}`).join('\n')}${c.reference_interne ? `\n\nNotre référence interne : ${c.reference_interne}` : ''}\n\nMerci de nous confirmer la commande et la date de livraison.\n\n${nomResto}`;
   const pdf = `/admin/${resto}/commandes/${c.id}/pdf`;
   const envoyee = Boolean(c.envoyee_le);
   return (
     <>
       <Link href={`/admin/${resto}/commandes`} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← Commandes</Link>
-      <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
+      <Entete titre={`Commande n° ${ref}`} texte={`${c.fournisseur_nom}${c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''} · ${total} bouteille${total > 1 ? 's' : ''}${c.lignes.some((l) => l.prix_achat != null) ? ` · ${euros(c.lignes.reduce((n, l) => n + (l.prix_achat ?? 0) * l.quantite, 0))} HTVA` : ''}`}>
         {c.statut === 'ouverte'
           ? (envoyee ? <Etat type="ok">Commande envoyée le {date(c.envoyee_le!)}</Etat> : <Etat type="attention">À envoyer</Etat>)
           : c.statut === 'recue' ? <Etat type="ok">Bouteilles réceptionnées le {date(c.recue_le!)}</Etat> : <Etat type="defaut">Annulée</Etat>}

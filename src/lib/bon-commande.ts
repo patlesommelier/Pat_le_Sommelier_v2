@@ -2,9 +2,9 @@
 // Fonction pure (sans base de données) : utilisée pour le téléchargement et pour la pièce jointe de l'e-mail.
 import { couper, DocumentPdf } from './pdf-simple';
 
-export interface Coordonnees { nom: string; adresse?: string | null; tva?: string | null; contact?: string | null; telephone?: string | null; email?: string | null }
+export interface Coordonnees { nom: string; adresse?: string | null; facturation?: string | null; tva?: string | null; contact?: string | null; telephone?: string | null; email?: string | null }
 export interface LigneBon { libelle: string; detail?: string | null; quantite: number; prix_achat?: number | null }
-export interface BonCommande { numero: number; date: Date; restaurant: Coordonnees; fournisseur: Coordonnees; lignes: LigneBon[] }
+export interface BonCommande { numero: number; date: Date; restaurant: Coordonnees; fournisseur: Coordonnees; lignes: LigneBon[]; referenceInterne?: string | null }
 
 // Charte Quid Vinum : bordeaux, rouge du logo pour la marque, gris neutres.
 const BORDEAUX = '#610420', ROUGE_QV = '#F7371C', DISCRET = '#595959', LIGNE = '#E5E5E5';
@@ -25,6 +25,8 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
   d.texte(droite, y - 4, 'BON DE COMMANDE', { corps: 9, gras: true, couleur: DISCRET, aligne: 'droite' });
   d.texte(droite, y + 12, `N° ${referenceCommande(b)}`, { corps: 12, gras: true, aligne: 'droite' });
   d.texte(droite, y + 27, b.date.toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' }), { corps: 10, couleur: DISCRET, aligne: 'droite' });
+  // Numéro de commande interne du restaurant (saisi dans le panier).
+  if (b.referenceInterne) { d.texte(droite, y + 41, `Réf. interne : ${b.referenceInterne}`, { corps: 10, gras: true, aligne: 'droite' }); y += 14; }
   y += 46;
   d.trait(marge, y, droite, y, BORDEAUX, 1.2);
   y += 26;
@@ -34,8 +36,11 @@ export function genererBonCommande(b: BonCommande): Uint8Array {
     let yy = y;
     d.texte(x, yy, titre, { corps: 8, gras: true, couleur: DISCRET }); yy += 15;
     d.texte(x, yy, c.nom, { corps: 11, gras: true }); yy += 14;
+    const morceauxAdresse = (a: string) => a.split(/\n|,\s*(?=\d{4})/).map((l) => l.trim()).filter(Boolean);
+    // Adresse de facturation différente : les deux adresses, nommées.
     const lignes = [
-      ...(c.adresse ? c.adresse.split(/\n|,\s*(?=\d{4})/).map((l) => l.trim()).filter(Boolean) : []),
+      ...(c.adresse ? morceauxAdresse(c.adresse).map((l, i) => (c.facturation && i === 0 ? `Livraison : ${l}` : l)) : []),
+      ...(c.facturation ? morceauxAdresse(c.facturation).map((l, i) => (i === 0 ? `Facturation : ${l}` : l)) : []),
       c.tva ? `TVA : ${c.tva}` : '', c.contact ? `Contact : ${c.contact}` : '', c.telephone ? `Tél. : ${c.telephone}` : '', c.email ?? '',
     ].filter(Boolean);
     for (const l of lignes) for (const morceau of couper(l, largeurUtile / 2 - 20, 9.5)) { d.texte(x, yy, morceau, { corps: 9.5 }); yy += 13; }

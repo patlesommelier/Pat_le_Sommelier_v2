@@ -8,7 +8,7 @@ import { ChoixCommande, Panneau } from '@/components/admin/ChoixCommande';
 import { Superposition } from '@/components/admin/Superposition';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
-import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
+import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
 import { getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, stockBas, type Commande } from '@/lib/admin/stocks';
@@ -17,6 +17,7 @@ import { envoiEmailConfigure } from '@/lib/email';
 import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
 import { nomPourListe, regrouperVins } from '../carte/etats';
+import { VignetteVin } from '@/components/admin/VignetteVin';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 // Suivi Quid Vinum, tel que le restaurant le lit.
@@ -71,7 +72,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
       <article key={c.id} id={`commande-${c.id}`} className={`carte-bo pile commande${sp.commande === c.id ? ' choisie' : ''}`} style={{ gap: 12 }}>
         <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: 8 }}>
           <span className="pile" style={{ gap: 2 }}>
-            <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}</span>
+            <span className="surtitre">Commande n° {ref} · {date(c.cree_le)}{c.reference_interne ? ` · réf. interne ${c.reference_interne}` : ''}</span>
             <b style={{ fontSize: 18 }}>{c.fournisseur_nom}</b>
           </span>
           {/* Statut : à envoyer → commande envoyée → réception partielle → bouteilles réceptionnées (ou annulée). */}
@@ -187,7 +188,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
                         const nom = nomPourListe(v);
                         return (
                           <tr key={v.id} className={sp.vin === v.id ? 'choisi' : undefined}>
-                            <td><div className="vin-cell"><Vignette url={v.etiquette_url ?? v.logo_distributeur} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
+                            <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={36} /><div><div className="nom">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}</div></div></td>
                             <td className="droite" style={{ whiteSpace: 'nowrap' }}>{alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>} <b>{v.stock}</b></td>
                             <td className="droite">{v.en_commande || '—'}</td>
                             <td className="droite"><span className="champ-prix"><input type="text" inputMode="decimal" name={`achat_${v.id}`} defaultValue={achats.has(v.id) ? achats.get(v.id)!.toFixed(2).replace('.', ',') : ''} placeholder="—" aria-label={`Prix d’achat HTVA : ${v.libelle}`} /> €</span></td>
@@ -219,7 +220,7 @@ export default async function Commandes({ params, searchParams }: { params: Prom
         <p key={c.id} className="message" style={{ background: 'var(--ocre-fond)', color: 'var(--ocre)' }}>
           Commande n° {referenceCommande({ numero: c.numero, date: new Date(c.cree_le) })} refusée par Quid Vinum{c.motif_refus ? ` : ${c.motif_refus}` : '.'}</p>
       ))}
-      {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres</Link> : ils figurent sur vos bons de commande.</p>}
+      {sansCoordonnees && <p className="message">Ajoutez l’adresse et l’e-mail de votre restaurant dans <Link href={`/admin/${resto}/parametres`}>Paramètres du restaurant</Link> : ils figurent sur vos bons de commande.</p>}
 
       <section className="pile">
         <h2>Commandes ouvertes <span className="discret" style={{ fontWeight: 500 }}>{ouvertes.length}</span></h2>

@@ -13,9 +13,13 @@ export interface Commande {
   cree_le: string; envoyee_le: string | null; envoyee_a: string | null; recue_le: string | null; lignes: LigneCommande[]; receptions: Reception[];
   /** Suivi par Quid Vinum (super-admin) : reçue, acceptée, envoyée au distributeur, livrée, facturée. */
   statut_qv: string | null; statut_qv_le: string | null; motif_refus: string | null;
+  /** Numéro de commande interne du restaurant (facultatif). */
+  reference_interne: string | null;
 }
 export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
-  commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null }
+  commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null;
+  /** Adresse de facturation, quand elle diffère de l'adresse de livraison (commande_adresse). */
+  commande_adresse_facturation: string | null }
 
 /**
  * Prix d'achat HTVA de chaque vin (id de la ligne → prix) : lu seulement par les pages Stocks et Commandes de vin,
@@ -42,15 +46,15 @@ export async function getFournisseurs(resto: string) {
 
 export async function getCoordonnees(resto: string) {
   const [r] = await requete<CoordonneesRestaurant>(
-    `select nom, stock_limite_basse, commande_societe, commande_adresse, commande_tva, commande_contact, commande_telephone, commande_email
-       from restaurant where id = $1`, [resto]);
+    `select nom, stock_limite_basse, commande_societe, commande_adresse, commande_tva, commande_contact, commande_telephone, commande_email,
+            commande_adresse_facturation from restaurant where id = $1`, [resto]);
   return r ?? null;
 }
 
 /** Commandes du restaurant (les plus récentes d'abord), avec leurs lignes. */
 export async function getCommandes(resto: string, statuts: Commande['statut'][], limite = 50) {
   const commandes = await requete<Omit<Commande, 'lignes'>>(
-    `select c.id, c.numero, c.fournisseur_id, c.fournisseur_nom, c.statut, c.cree_le::text, c.envoyee_le::text, c.envoyee_a, c.recue_le::text, c.statut_qv, c.statut_qv_le::text, c.motif_refus,
+    `select c.id, c.numero, c.fournisseur_id, c.fournisseur_nom, c.statut, c.cree_le::text, c.envoyee_le::text, c.envoyee_a, c.recue_le::text, c.statut_qv, c.statut_qv_le::text, c.motif_refus, c.reference_interne,
             case when c.quid_vinum then (select valeur from reglage_serveur where cle = 'qv_email') else ${SQL_EMAIL_COMMANDE} end as fournisseur_email,
             (c.quid_vinum or f.distributeur_id is not null) as via_qv
        from commande c left join fournisseur f on f.id = c.fournisseur_id
@@ -86,8 +90,8 @@ export async function choisirFournisseur(resto: string, vinIds: string[], valeur
 /** Données du bon de commande (PDF) d'une commande du restaurant. */
 export async function donneesBon(resto: string, commandeId: string) {
   const [[c], r] = await Promise.all([
-    requete<{ numero: number; cree_le: Date; fournisseur_nom: string; nom: string | null; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; distributeur_id: string | null; quid_vinum: boolean }>(
-      `select c.numero, c.cree_le, c.fournisseur_nom, f.nom, f.adresse, f.tva, f.contact, f.telephone, f.email, f.distributeur_id, c.quid_vinum
+    requete<{ numero: number; cree_le: Date; fournisseur_nom: string; nom: string | null; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null; distributeur_id: string | null; quid_vinum: boolean; reference_interne: string | null }>(
+      `select c.numero, c.cree_le, c.fournisseur_nom, f.nom, f.adresse, f.tva, f.contact, f.telephone, f.email, f.distributeur_id, c.quid_vinum, c.reference_interne
          from commande c left join fournisseur f on f.id = c.fournisseur_id where c.id = $1 and c.restaurant_id = $2`, [commandeId, resto]),
     getCoordonnees(resto),
   ]);
@@ -95,8 +99,8 @@ export async function donneesBon(resto: string, commandeId: string) {
   const lignes = await requete<{ libelle: string; detail: string | null; quantite: number; prix_achat: number | null }>(
     'select libelle, detail, quantite, prix_achat from commande_ligne where commande_id = $1 order by ordre', [commandeId]);
   return {
-    numero: c.numero, date: new Date(c.cree_le),
-    restaurant: { nom: r.commande_societe || r.nom, adresse: r.commande_adresse, tva: r.commande_tva, contact: r.commande_contact, telephone: r.commande_telephone, email: r.commande_email },
+    numero: c.numero, date: new Date(c.cree_le), referenceInterne: c.reference_interne,
+    restaurant: { nom: r.commande_societe || r.nom, adresse: r.commande_adresse, facturation: r.commande_adresse_facturation, tva: r.commande_tva, contact: r.commande_contact, telephone: r.commande_telephone, email: r.commande_email },
     // Distributeur de la base de Quid Vinum : le bon est adressé à Quid Vinum, pour ce distributeur.
     // Commande Quid Vinum (plusieurs distributeurs) : adressée à Quid Vinum ; chaque ligne nomme son distributeur.
     fournisseur: c.quid_vinum
