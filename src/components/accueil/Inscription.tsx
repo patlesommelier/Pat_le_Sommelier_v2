@@ -13,8 +13,8 @@ import { Preparation } from './Preparation';
 
 const ACCEPT = 'image/jpeg,image/png,image/webp,image/heic,application/pdf';
 const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: string }> = {
-  carte: { depot: 'Déposez votre carte des vins pour que je l’analyse', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
-  menu: { depot: 'Déposez votre menu pour que je l’analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
+  carte: { depot: 'Déposez votre carte des vins pour son analyse', lecture: 'Pat lit votre carte des vins…', unite: 'vins trouvés' },
+  menu: { depot: 'Déposez votre menu pour son analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
 /** Zone de dépôt et, à sa droite, le petit bouton rond à flèche vers le haut pour passer à l'étape suivante. */
@@ -30,7 +30,7 @@ const AvecSuite = ({ children, pret, aller }: { children: React.ReactNode; pret:
 const ETAPES: { id: Etape; titre: string }[] = [
   { id: 'carte', titre: 'Votre carte des vins' },
   { id: 'menu', titre: 'Votre menu' },
-  { id: 'restaurant', titre: 'J’établis les accords mets-vins de votre carte' },
+  { id: 'restaurant', titre: 'Votre restaurant et vos accords mets-vins' },
 ];
 
 const IconeEnvoi = () => (

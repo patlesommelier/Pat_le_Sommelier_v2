@@ -1,3 +1,4 @@
+// Ancienne page d’accueil de Pat le sommelier (« Le carnet ») : gardée pour plus tard, plus affichée (la page d’accueil est PageQuidVinum).
 // Page d'accueil de Pat le sommelier, proposition « Le carnet » choisie par Pat :
 //   1. présentation (crème du logo) : logo écrit, titre, texte, puis la scène animée (DemoPat) : Pat attablé avec
 //      les bulles d'un client et de Pat, le petit QR code rouge et le téléphone qui montre l'app de démo en vidéo ;
