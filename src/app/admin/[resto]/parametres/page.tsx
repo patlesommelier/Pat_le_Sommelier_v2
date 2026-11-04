@@ -26,7 +26,10 @@ export default async function Parametres({ params, searchParams }: { params: Pro
         <section className="carte-bo pile" style={{ gap: 12 }}>
           <h2>Coordonnées du restaurant</h2>
           <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(260px, 100%), 1fr))', gap: 12 }}>
-            {champ('commande_societe', 'Nom (ou raison sociale)', c.commande_societe, { aide: `Vide : « ${c.nom} »` })}
+            {/* Nom affiché partout (espace, app des clients, carte) ; la raison sociale ne sert qu'aux bons de commande. */}
+            <label className="champ"><span>Nom du restaurant</span><input name="nom" defaultValue={c.nom} maxLength={120} required autoComplete="off" />
+              <span className="aide">Affiché dans votre espace et dans l’app de vos clients</span></label>
+            {champ('commande_societe', 'Raison sociale (bons de commande)', c.commande_societe, { aide: `Vide : « ${c.nom} »` })}
             {champ('commande_tva', 'Numéro de TVA', c.commande_tva)}
             <label className="champ" style={{ gridColumn: '1 / -1' }}><span>Adresse de livraison</span><textarea name="commande_adresse" rows={2} defaultValue={c.commande_adresse ?? ''} /></label>
             {/* Adresse de facturation : seulement si elle diffère (la case l'affiche). */}

@@ -142,6 +142,16 @@ export async function enregistrerParametresStock(resto: string, f: FormData): Pr
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'Votre adresse e-mail ne semble pas valide.' };
   // Adresse de facturation : seulement si la case « différente de l'adresse de livraison » est cochée.
   const facturation = f.get('facturation_differente') === 'on' ? txt(f, 'commande_adresse_facturation') : null;
+  // Nom du restaurant : remplacé aussi dans le message d'accueil de l'app s'il y figurait (« Bienvenue chez … »).
+  const nom = txt(f, 'nom')?.replace(/\s+/g, ' ').slice(0, 120);
+  if (f.has('nom')) {
+    if (!nom) return { erreur: 'Indiquez le nom du restaurant.' };
+    await requete(
+      `update restaurant set accroche = case when nom <> '' and accroche is not null then replace(accroche, nom, $2) else accroche end, nom = $2
+        where id = $1 and nom is distinct from $2`, [resto, nom]);
+    revalidatePath(`/admin/${resto}`, 'layout'); // le nom dans le menu de gauche
+    revalidatePath('/admin/super');
+  }
   await requete(
     `update restaurant set stock_limite_basse = $2, commande_societe = $3, commande_adresse = $4, commande_tva = $5, commande_contact = $6,
             commande_telephone = $7, commande_email = $8, commande_adresse_facturation = $9 where id = $1`,

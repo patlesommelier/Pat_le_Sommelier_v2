@@ -72,7 +72,11 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
       [restaurantId, i.nom_restaurant, couleur, couleurClaire(couleur), `Bienvenue chez ${i.nom_restaurant},|je vous aide à choisir le vin`, i.ville, email]);
     await majInscription(inscriptionId, { restaurant_id: restaurantId });
   } else {
-    // Reprise après une erreur : on repart d'une carte et d'un menu vides pour ne rien dupliquer.
+    // Reprise après une erreur : on repart d'une carte et d'un menu vides pour ne rien dupliquer. Le nom et la ville
+    // saisis cette fois-ci remplacent ceux de l'essai précédent (sinon le restaurant gardait l'ancien nom).
+    if (i.nom_restaurant) await requete(
+      `update restaurant set nom = $2, ville = coalesce($3, ville), accroche = $4 where id = $1 and origine = 'inscription'`,
+      [restaurantId, i.nom_restaurant, i.ville, `Bienvenue chez ${i.nom_restaurant},|je vous aide à choisir le vin`]);
     await requete('delete from plat where restaurant_id = $1', [restaurantId]);
     await requete('delete from vin_carte where restaurant_id = $1', [restaurantId]);
   }
