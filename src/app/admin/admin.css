@@ -470,3 +470,6 @@ dialog.superposition { overflow-y: auto; }
 /* Super-admin, Commandes : commande livrée repliée (✓ vert), le détail sous la flèche. */
 .commande-livree > summary { align-items: center; gap: 12px; }
 .commande-livree[open] > summary { margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid var(--ligne); }
+/* Pastille de notification dans le menu (ex. statut d'une commande changé par Quid Vinum). */
+.pastille-notif { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: #C62828; color: #FFFFFF;
+  font-size: 12px; font-weight: 700; line-height: 20px; text-align: center; }

@@ -3,10 +3,13 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icone } from './Icone';
+import { PastilleNotif } from './PastilleNotif';
 
 export type EtatEtape = 'fait' | 'encours' | 'afaire';
 /** Étape du menu de gauche, rangée sous son groupe ; un outil (icône) n'est pas une étape à cocher. */
-export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?: string; icone?: string }
+export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?: string; icone?: string;
+  /** Pastille de notification : nombre au chargement et adresse qui le relit. */
+  notif?: { n: number; source: string } }
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
 export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
@@ -25,6 +28,7 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
               </span>
             )}
             {e.libelle}
+            {e.notif && <PastilleNotif initial={e.notif.n} source={e.notif.source} page={e.href} />}
           </Link>
         </Fragment>
       ))}

@@ -165,3 +165,19 @@ export async function getPanier(resto: string) {
 /** Commande Quid Vinum acceptée (ou plus loin : envoyée au distributeur, livrée…) : le restaurant ne peut plus l'annuler. */
 export const QV_VERROUILLEE = ['acceptee', 'envoyee_distributeur', 'livree_partielle', 'livree', 'facturee'];
 export const commandeVerrouillee = (c: { via_qv?: boolean; statut_qv: string | null }) => Boolean(c.statut_qv && QV_VERROUILLEE.includes(c.statut_qv));
+
+// Nouveautés d'une commande Quid Vinum pas encore vues par le restaurant : statut changé par le super-admin, ou facture jointe.
+const A_VOIR = `restaurant_id = $1 and (
+  (statut_qv_le is not null and coalesce(statut_qv, 'recue') <> 'recue' and statut_qv_le > coalesce(statut_qv_vu_le, '-infinity'::timestamptz))
+  or exists (select 1 from facture_commande f where f.commande_id = commande.id and f.depose_le > coalesce(statut_qv_vu_le, '-infinity'::timestamptz)))`;
+
+/** Nombre de commandes avec une nouveauté (statut, facture) depuis la dernière visite de la page Commandes (pastille du menu). */
+export async function commandesAVoir(resto: string): Promise<number> {
+  const [r] = await requete<{ n: number }>(`select count(*)::int as n from commande where ${A_VOIR}`, [resto]);
+  return r?.n ?? 0;
+}
+
+/** Le restaurant a ouvert la page Commandes : les nouveautés sont vues. */
+export async function marquerCommandesVues(resto: string): Promise<void> {
+  await requete(`update commande set statut_qv_vu_le = now() where ${A_VOIR}`, [resto]);
+}

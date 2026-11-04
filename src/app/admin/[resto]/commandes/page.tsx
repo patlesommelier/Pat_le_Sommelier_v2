@@ -11,7 +11,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getVinsBO } from '@/lib/admin/donnees';
-import { commandeVerrouillee, getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, stockBas, type Commande } from '@/lib/admin/stocks';
+import { commandeVerrouillee, getCommandes, getCoordonnees, getFournisseurs, getPrixAchat, marquerCommandesVues, stockBas, type Commande } from '@/lib/admin/stocks';
 import { euros, referenceCommande } from '@/lib/bon-commande';
 import { envoiEmailConfigure } from '@/lib/email';
 import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
@@ -30,8 +30,10 @@ const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {
   const { resto } = await params;
-  await exigerAcces(resto);
+  const u = await exigerAcces(resto);
   const sp = await searchParams;
+  // Le restaurant voit ses commandes : la pastille du menu s'efface (pas quand le super-admin regarde à sa place).
+  if (!u.admin) await marquerCommandesVues(resto);
   const [vins, r, fournisseurs, ouvertes, recues, coord, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
     getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue', 'annulee'], 20), getCoordonnees(resto), getPrixAchat(resto)]);
   const limite = r?.stock_limite_basse ?? 2;
