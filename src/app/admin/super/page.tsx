@@ -6,6 +6,7 @@ import { CopierLien } from '@/components/admin/CopierLien';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { restaurantsSuper } from '@/lib/super/donnees';
 import { exigerAdmin } from '@/lib/admin/auth';
+import { requete } from '@/lib/db';
 
 const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
   mise_en_place: ['Mise en place', 'propose'], en_service: ['En service', 'ok'], suspendu: ['Suspendu', 'defaut'],
@@ -14,7 +15,13 @@ const STATUTS: Record<string, [string, 'ok' | 'propose' | 'defaut']> = {
 export default async function Restaurants({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string; lien?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [restos, modeTest] = await Promise.all([restaurantsSuper(), modeTestDistributeurs()]);
+  const [restos, modeTest, echecs] = await Promise.all([restaurantsSuper(), modeTestDistributeurs(),
+    // Dernières lectures de carte ou de menu en échec à l'inscription (7 jours), avec le détail technique.
+    requete<{ email: string | null; quand: string; quoi: string; message: string; detail: string | null }>(
+      `select i.email, i.maj_le::text as quand, t.quoi, i.lecture->t.quoi->>'message' as message, i.lecture->t.quoi->>'detail' as detail
+         from inscription i cross join (values ('carte'), ('menu')) as t(quoi)
+        where i.lecture->t.quoi->>'statut' = 'erreur' and i.maj_le > now() - interval '7 days'
+        order by i.maj_le desc limit 5`)]);
 
   return (
     <>
@@ -58,6 +65,15 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
 
       {/* Tout en bas : envoi des e-mails (test) et mode test des commandes. */}
       <div className="pile" style={{ gap: 8, marginTop: 64, paddingTop: 16, borderTop: '1px solid var(--ligne)' }}>
+      {echecs.length > 0 && (
+        <details className="petit">
+          <summary style={{ cursor: 'pointer', color: 'var(--ocre)', fontWeight: 700 }}>Inscriptions : {echecs.length} lecture{echecs.length > 1 ? 's' : ''} en échec ces 7 derniers jours</summary>
+          <ul style={{ margin: '8px 0 0', paddingLeft: 18 }}>
+            {echecs.map((x, n) => <li key={n}>{new Date(x.quand).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' })}
+              {' · '}{x.quoi === 'carte' ? 'carte des vins' : 'menu'}{x.email ? ` · ${x.email}` : ''} — {x.message}{x.detail ? <span className="discret"> (détail : {x.detail})</span> : null}</li>)}
+          </ul>
+        </details>
+      )}
       {(() => {
         // Envoi d'e-mails (invitations, mot de passe oublié, bons de commande) : réglage et test.
         const e = etatEmail();

@@ -12,6 +12,7 @@
  * - un vin dont la réponse reste fautive après les corrections garde son accord actuel.
  */
 import type Anthropic from '@anthropic-ai/sdk';
+import { createHash } from 'node:crypto';
 import { N_SAUCE_A_PART } from '../principes/constantes';
 import { textePlat, textePrincipes, texteCarte, texteRegles, type PlatCtx, type PrincipeCtx, type RegleCtx, type VinCtx } from '../pat-cerveau';
 import { controlerPlat, MOTS_INTERDITS, MOTS_MAX, MOTS_MIN, type VinAControler } from './controle';
@@ -24,6 +25,20 @@ const CORRECTIONS = 3;
  * la consigne commune, en cache, n'est pas renvoyée en entier).
  */
 export const VINS_PAR_PAQUET = 25;
+
+/**
+ * Réflexion de Claude pour les accords (facturée comme du texte écrit) : « medium » par défaut, moins cher que le
+ * « high » de Sonnet sans réglage. PAT_EFFORT_ACCORDS (low, medium, high, xhigh, max) pour changer sans toucher au code.
+ */
+const effortAccords = () => process.env.PAT_EFFORT_ACCORDS || 'medium';
+
+/**
+ * Cache de la consigne commune (principes, règles, carte) : la première demande d'un restaurant part seule et met la
+ * consigne en cache ; les suivantes (autres paquets, autres plats) l'attendent puis la relisent au dixième du prix.
+ * Sans cela, les demandes lancées en même temps payaient toutes le prix fort de la mise en cache.
+ * Une entrée vaut 4 minutes (le cache de Claude dure 5 minutes après sa dernière lecture).
+ */
+const CACHE_CHAUD = new Map<string, { quand: number; pret: Promise<unknown> }>();
 const paquets = <T,>(liste: T[], n = VINS_PAR_PAQUET) => {
   const k = Math.max(1, Math.ceil(liste.length / n)), taille = Math.ceil(liste.length / k); // paquets de taille égale
   return Array.from({ length: k }, (_, i) => liste.slice(i * taille, (i + 1) * taille)).filter((p) => p.length);
@@ -154,13 +169,15 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     : plat.sauce_servie_a_part === false ? '\nLa sauce fait partie du plat (nappée ou composante) : elle compte pleinement dans l’accord.' : '');
   const systeme = consigneSysteme(principes, regles, carteComplete);
   let jetonsEntree = 0, jetonsSortie = 0;
+  const cleCache = `${modele}:${createHash('sha256').update(systeme).digest('hex')}`;
   async function appeler(contenu: string) {
     const m = await client.messages.stream({
       model: modele, max_tokens: 32000,
       // Principes et carte : identiques pour tous les plats du restaurant, donc mis en cache.
       system: [{ type: 'text', text: systeme, cache_control: { type: 'ephemeral' } }],
       messages: [{ role: 'user', content: contenu }],
-    }).finalMessage();
+      output_config: { effort: effortAccords() },
+    } as Anthropic.MessageStreamParams).finalMessage();
     jetonsEntree += m.usage.input_tokens + (m.usage.cache_read_input_tokens ?? 0) + (m.usage.cache_creation_input_tokens ?? 0);
     jetonsSortie += m.usage.output_tokens;
     if (m.stop_reason === 'max_tokens') throw new Error('réponse de Pat coupée (trop longue)');
@@ -195,9 +212,23 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   };
 
   const premiers = paquets(carte);
-  const lus = await Promise.all(premiers.map((p, i) => appeler(`${fichePlat}\n\n`
+  const demandePaquet = (p: VinGen[], i: number) => appeler(`${fichePlat}\n\n`
     + (premiers.length > 1 ? `Paquet ${i + 1} sur ${premiers.length} de la carte : privilégie d'abord ${ANGLES[i % ANGLES.length]} pour ouvrir tes commentaires.\n\n` : '')
-    + `VINS À NOTER ET COMMENTER (${p.length})\n${p.map((v) => ligneVin(v)).join('\n')}`)));
+    + `VINS À NOTER ET COMMENTER (${p.length})\n${p.map((v) => ligneVin(v)).join('\n')}`);
+  // Consigne pas encore en cache : le premier paquet part seul (il la met en cache), les autres suivent en parallèle.
+  const chaud = CACHE_CHAUD.get(cleCache);
+  let lus: Reponse[][];
+  if (chaud && Date.now() - chaud.quand < 4 * 60_000) {
+    await chaud.pret;
+    lus = await Promise.all(premiers.map(demandePaquet));
+    chaud.quand = Date.now(); // le cache de Claude vient d'être relu : il dure encore 5 minutes
+  } else {
+    const premier = demandePaquet(premiers[0], 0);
+    CACHE_CHAUD.set(cleCache, { quand: Date.now(), pret: premier.catch(() => null) });
+    const r0 = await premier;
+    CACHE_CHAUD.set(cleCache, { quand: Date.now(), pret: Promise.resolve() });
+    lus = [r0, ...await Promise.all(premiers.slice(1).map((p, i) => demandePaquet(p, i + 1)))];
+  }
   for (const r of lus.flat()) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
   let defauts = defautsDe();
   // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.

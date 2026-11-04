@@ -12,6 +12,17 @@ const ECHEC: Record<TypeAnalyse, string> = {
   menu: 'Pat n’a pas réussi à lire ce menu. Essayez des images plus nettes, une par page, ou le PDF.',
 };
 
+/** Échec venant du service Claude et non du document : message à montrer, ou null. */
+export function serviceIndisponible(e: unknown): string | null {
+  const err = e as { status?: number; message?: string } | null;
+  const texte = String(err?.message ?? '');
+  if (err?.status === 429 || err?.status === 529 || /overloaded|rate.?limit/i.test(texte))
+    return 'Pat est très sollicité en ce moment : réessayez dans quelques minutes avec le même fichier.';
+  if (/credit balance|billing/i.test(texte) || err?.status === 401 || err?.status === 403 || (err?.status ?? 0) >= 500)
+    return 'La lecture est momentanément indisponible : réessayez un peu plus tard avec le même fichier.';
+  return null;
+}
+
 /** Prend la prochaine lecture en attente (deux fonctions ne prennent jamais la même). */
 async function prendre(q: Requete): Promise<{ id: string; type: TypeAnalyse } | null> {
   for (const type of ['carte', 'menu'] as const) {
@@ -49,10 +60,13 @@ export async function executerAnalyse(q: Requete, inscriptionId: string, type: T
     }
   } catch (e) {
     console.error('[inscription] lecture', inscriptionId, type, e);
-    // Mauvais document (menu à la place de la carte, ou l'inverse) ou image illisible : le message exact ; sinon, le message général.
-    const message = e instanceof Error && (e.name === 'MauvaisDocument' || /illisible/.test(e.message)) ? e.message : ECHEC[type];
+    // Mauvais document (menu à la place de la carte, ou l'inverse) ou image illisible : le message exact ;
+    // service Claude indisponible (crédit, surcharge, clé) : le dire, ce n'est pas la faute du document ; sinon, le message général.
+    const message = e instanceof Error && (e.name === 'MauvaisDocument' || /illisible/.test(e.message)) ? e.message : (serviceIndisponible(e) ?? ECHEC[type]);
+    // Détail technique gardé dans la base (jamais montré au restaurateur) pour comprendre un échec.
+    const detail = String((e as { status?: number })?.status ?? '') + ' ' + String((e as Error)?.message ?? e).slice(0, 300);
     await q(`update inscription set lecture = jsonb_set(lecture, $2, $3), maj_le = now() where id = $1`,
-      [inscriptionId, `{${type}}`, JSON.stringify({ statut: 'erreur', message })]);
+      [inscriptionId, `{${type}}`, JSON.stringify({ statut: 'erreur', message, detail: detail.trim() })]);
   }
 }
 

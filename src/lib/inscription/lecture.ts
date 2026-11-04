@@ -58,7 +58,7 @@ const INSISTANCE = {
 };
 
 async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof typeof SIGNAL): Promise<unknown[]> {
-  const client = clientClaude({ maxRetries: 3 });
+  const client = clientClaude({ maxRetries: 6 }); // surcharge passagère (429/529) : le SDK attend et réessaie
   const contenu = await blocs(fichiers);
   const demander = async (texte: string) => {
     const m = await client.messages.stream({
