@@ -183,7 +183,7 @@ export async function PageQuidVinum() {
       <section className={s.final} aria-labelledby="h-insc" id="demarrer">
         <div className={s.large}>
           <h2 id="h-insc">Rejoignez Quid Vinum.</h2>
-          <p className={s.finalTexte}>L’inscription est gratuite. Votre espace est prêt en quelques minutes.</p>
+          <p className={s.finalTexte}>La solution est gratuite. Votre espace est prêt en quelques minutes.</p>
           <div className={s.formulaire}><Inscription initial={resume} restaurantCree={suivi?.id ?? null} /></div>
         </div>
       </section>
