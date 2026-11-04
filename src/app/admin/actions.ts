@@ -11,7 +11,7 @@ import { typeReel, verifierFichiers } from '@/lib/inscription/fichiers';
 import { randomUUID } from 'node:crypto';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { deposerLogo } from '@/lib/logo';
-import { creerLot, PLATS_EN_PARALLELE, travailler } from '@/lib/generation/file';
+import { creerLot, PLATS_EN_PARALLELE, travaillerEnParallele } from '@/lib/generation/file';
 import Anthropic from '@anthropic-ai/sdk';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from '@/lib/generation/presentations';
 import { creerLotPresentations, preparationEnCours, presentationsManquantes, travaillerPresentations } from '@/lib/generation/file-presentations';
@@ -652,7 +652,7 @@ async function lancerFonctions(fonction: string, nombre: number, surPlace: () =>
 }
 
 async function lancerTravailleurs(nombre: number) {
-  await lancerFonctions('generer-accords-background', nombre, () => travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }));
+  await lancerFonctions('generer-accords-background', nombre, async () => travaillerEnParallele(requete, nombre, 'accords'));
 }
 
 async function regenerer(resto: string, platIds: string[], retour: Record<string, string>) {

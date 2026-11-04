@@ -125,6 +125,18 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
 }
 
 /**
+ * Hors Netlify (serveur Coolify) : plusieurs travailleurs dans le même serveur, comme les fonctions d'arrière-plan
+ * (PLATS_EN_PARALLELE plats préparés en même temps ; deux travailleurs ne prennent jamais le même plat).
+ * Avec un seul travailleur, les plats passaient un par un : une demi-heure pour un restaurant d'une trentaine de plats.
+ */
+export function travaillerEnParallele(q: Requete, nombre: number, quoi: string) {
+  const n = Math.max(1, Math.min(PLATS_EN_PARALLELE, nombre));
+  const finAvant = Date.now() + 60 * 60 * 1000;
+  void Promise.all(Array.from({ length: n }, () => travailler(q, { finAvant })))
+    .catch((e) => console.error(`[${quoi}]`, e));
+}
+
+/**
  * QR code sans attendre tous les plats : un restaurant en mise en place passe en service dès que la moitié de ses plats
  * ont leurs accords ; les autres continuent en arrière-plan et apparaissent dans l'app dès qu'ils sont prêts
  * (un plat sans accord n'y est pas montré).

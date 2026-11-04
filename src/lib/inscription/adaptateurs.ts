@@ -3,7 +3,7 @@
 // création des producteurs proposés et lancement de la préparation des accords (file existante).
 import 'server-only';
 import { requete } from '../db';
-import { creerLot, finirMisesEnPlace, libererTachesBloquees, modeleRapide, ouvrirSiAssez, PLATS_EN_PARALLELE, travailler } from '../generation/file';
+import { creerLot, finirMisesEnPlace, libererTachesBloquees, modeleRapide, ouvrirSiAssez, PLATS_EN_PARALLELE, travaillerEnParallele } from '../generation/file';
 import { creerLotPresentations, presentationsManquantes, travaillerPresentations } from '../generation/file-presentations';
 import type { Plat, Vin, VinRapproche } from './donnees';
 import { mots, norm, producteurConnu, rapprocherVins as rapprocher } from './lecture';
@@ -78,7 +78,7 @@ export async function lancerPreparation(restaurantId: string, platIds: string[],
   const [accords, pres] = await Promise.all([appeler('generer-accords-background', crees), appeler('generer-presentations-background', presentations)]);
   const lance = (s: number[]) => s.some((x) => x === 202 || x === 200);
   // Hors Netlify : le serveur traite les files lui-même, sans faire attendre la page.
-  if (crees && !lance(accords)) void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[inscription]', e));
+  if (crees && !lance(accords)) travaillerEnParallele(requete, crees, 'inscription');
   if (presentations && !lance(pres)) void travaillerPresentations(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((e) => console.error('[inscription]', e));
 }
 
@@ -105,7 +105,7 @@ export async function surveillerPreparation(restaurantId: string) {
   const base = origineSite();
   const statuts = await Promise.all(Array.from({ length: Math.min(PLATS_EN_PARALLELE, aFaire) }, () =>
     base ? fetch(`${base}/.netlify/functions/generer-accords-background`, { method: 'POST' }).then((r) => r.status).catch(() => 0) : Promise.resolve(0)));
-  if (!statuts.some((s) => s === 202 || s === 200)) void travailler(requete, { finAvant: Date.now() + 60 * 60 * 1000 }).catch((err) => console.error('[preparation]', err));
+  if (!statuts.some((s) => s === 202 || s === 200)) travaillerEnParallele(requete, aFaire, 'preparation');
 }
 
 export type { Plat };
