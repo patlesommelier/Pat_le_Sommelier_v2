@@ -24,7 +24,9 @@
 .centre h1 { font-size: clamp(36px, 5vw, 62px); }
 .centre h1 span { color: var(--qv); white-space: nowrap; }
 .accroche { font-size: clamp(17px, 1.6vw, 19px); opacity: .88; max-width: 760px; margin: 22px auto 10px !important; }
-.fort { color: var(--qv); font-weight: 700; }
+/* « Gratuite… » : pastille bien visible sur le fond anthracite. */
+.fort { display: inline-block; margin: 14px 0 0 !important; padding: 9px 20px; border-radius: 999px; background: rgba(235, 74, 31, .16); border: 1.5px solid var(--qv);
+  color: #FFFFFF; font-family: Outfit, sans-serif; font-weight: 700; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.35; }
 .boutons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
 
 /* Aperçu (exemple fictif) : « Ma cave » de l'espace restaurant et l'app de Pat, avec les mêmes vins repérés 1 et 2. */
@@ -56,7 +58,6 @@
 .rangee { padding-block: 8px; border-bottom: 1px solid #F0EBEA; position: relative; }
 .rangee:last-child { border-bottom: 0; }
 .rangeeLiee { background: #FFF6F2; box-shadow: inset 3px 0 0 var(--qv); }
-.rangeeEpuisee { opacity: .55; }
 .vinCave { display: flex; align-items: center; gap: 9px; min-width: 0; }
 .vinCave > span { display: flex; flex-direction: column; min-width: 0; }
 .vinCave b { color: var(--bordeaux); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
@@ -64,31 +65,11 @@
 .bouteille { flex: none; width: 26px; height: 26px; border-radius: 7px; background: var(--rose); color: var(--bordeaux); display: flex; align-items: center; justify-content: center; }
 .cellule { color: #212121; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .alerte { display: inline-flex; width: 15px; height: 15px; margin-left: 6px; border-radius: 50%; background: #B3261E; color: #FFFFFF; font-size: 10px; align-items: center; justify-content: center; }
-.retire { color: #595959; font-size: 10.5px; }
-.repere { flex: none; display: inline-flex; width: 20px; height: 20px; border-radius: 50%; background: var(--qv); color: #FFFFFF; font-style: normal; font-weight: 700; font-size: 11px;
-  align-items: center; justify-content: center; font-family: Outfit, sans-serif; box-shadow: 0 0 0 3px rgba(235, 74, 31, .2); }
-/* Le lien : une bulle entre la cave et le téléphone, avec une flèche vers l'app. */
-.lien { position: absolute; right: 0; bottom: -78px; width: 300px; z-index: 2; display: flex; flex-direction: column-reverse; align-items: center; }
-.lien span { background: var(--qv); color: #FFFFFF; font-family: Outfit, sans-serif; font-weight: 700; font-size: 13px; line-height: 1.3; padding: 10px 14px; border-radius: 12px;
-  text-align: center; box-shadow: 0 12px 30px rgba(235, 74, 31, .35); }
-.lien::after { content: ''; height: 26px; border-left: 2.5px dashed var(--qv); }
-.telephone { position: absolute; right: 0; top: -30px; width: 230px; aspect-ratio: 9 / 16.5; border-radius: 32px; background: #111111; padding: 8px; box-shadow: 0 30px 60px rgba(0, 0, 0, .28); }
-.telEcran { width: 100%; height: 100%; border-radius: 25px; overflow: hidden; background: #FFFFFF; display: flex; flex-direction: column; font-family: Lato, sans-serif; }
-.telEntete { background: #B8433A; color: #FFFFFF; padding: 22px 14px 12px; display: flex; align-items: center; justify-content: space-between; gap: 6px; }
-.telEntete b { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; font-size: 18px; white-space: nowrap; }
-.telEntete span { white-space: nowrap; border: 1px solid rgba(255, 255, 255, .8); font-size: 8px; letter-spacing: 1px; text-transform: uppercase; padding: 4px 6px; }
-.telCorps { padding: 12px 10px; display: flex; flex-direction: column; gap: 8px; }
-.telTitre { text-align: center; font-weight: 400; font-size: 17px; }
-.telPour { text-align: center; font-style: italic; color: #6B6461; font-size: 10px; margin-top: -6px; }
-.telVin { position: relative; display: flex; gap: 8px; border: 1px solid var(--trait); padding: 8px; background: #FFF6F2; box-shadow: inset 3px 0 0 var(--qv); }
-.telVin img { width: 44px; height: 58px; object-fit: cover; border: 1px solid var(--trait); flex: none; }
-.telVin span { display: flex; flex-direction: column; gap: 2px; font-size: 10px; color: #595959; line-height: 1.35; }
-.telVin b { color: #212121; font-size: 11.5px; }
-.telVin em { font-style: normal; color: #B8433A; font-weight: 700; font-size: 11px; }
-.telVin .repere { position: absolute; top: -8px; right: -8px; }
+.telephone { position: absolute; right: 0; top: -30px; width: 230px; aspect-ratio: 9 / 19; border-radius: 32px; background: #111111; padding: 8px; box-shadow: 0 30px 60px rgba(0, 0, 0, .28); }
+.telephone video { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; display: block; background: #222222; }
 
 /* 2. Pourquoi et cartes */
-.pourquoi { max-width: 820px; margin: 0 auto; padding: 130px 24px 24px; text-align: center; }
+.pourquoi { max-width: 820px; margin: 0 auto; padding: 100px 24px 24px; text-align: center; }
 .pourquoi h2 { font-size: clamp(28px, 3vw, 36px); margin-bottom: 14px; }
 .pourquoi p { font-size: 18px; }
 .cartes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; padding-top: 32px; padding-bottom: 80px; }
@@ -131,8 +112,7 @@
   .menuApp { display: none; }
   .app { grid-template-columns: 1fr; }
   /* Le téléphone passe sous la cave, la bulle entre les deux. */
-  .lien { position: static; width: auto; flex-direction: column; margin: 18px 0 10px; }
-  .telephone { position: relative; right: auto; top: auto; margin: 0 auto; }
+  .telephone { position: relative; right: auto; top: auto; margin: 28px auto 0; }
 }
 @media (max-width: 680px) {
   .large, .entete { padding-inline: 16px; }

@@ -24,9 +24,9 @@ const CHEMINS: Record<string, React.ReactNode> = {
 };
 
 export function Icone({ nom, taille = 20, epaisseur = 1.8 }: { nom: string; taille?: number; epaisseur?: number }) {
-  // « pat » : le logo de Pat le sommelier (lettres crème sur bordeaux), à la place d'un pictogramme.
+  // « pat » : le logo crème de Pat le sommelier (Pat qui goûte un vin, au milieu), à la place d’un pictogramme.
   // eslint-disable-next-line @next/next/no-img-element
-  if (nom === 'pat') return <img src="/pat/pat-icone-creme.svg" alt="" aria-hidden="true" width={taille + 2} height={taille + 2} style={{ display: 'block', borderRadius: 5 }} />;
+  if (nom === 'pat') return <img src="/pat/pat-avatar-creme.svg" alt="" aria-hidden="true" width={taille + 2} height={taille + 2} style={{ display: 'block', borderRadius: '50%' }} />;
   return (
     <svg width={taille} height={taille} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={epaisseur}
       strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">{CHEMINS[nom]}</svg>

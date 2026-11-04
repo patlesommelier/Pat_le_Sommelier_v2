@@ -3,6 +3,7 @@
 //   2. « Pourquoi Quid Vinum », puis les 6 avantages en cartes (Pat le sommelier en orange) ;
 //   3. avantages en bref et « Comment ça marche » côte à côte ;
 //   4. inscription (le formulaire existant : carte des vins, menu, restaurant) sur fond anthracite.
+import { Fragment } from 'react';
 import Link from 'next/link';
 import s from './quidvinum.module.css';
 import { Inscription } from './Inscription';
@@ -27,7 +28,7 @@ const AVANTAGES: { titre: string; icone: string; textes: React.ReactNode[]; pat?
     'Votre équipe parle du vin avec assurance, même sans formation spécifique.',
     'Au moment de prendre la commande, les accords conseillés pour chaque plat et leurs explications sont accessibles en un instant, sur téléphone ou tablette.',
     'La carte est dynamique : elle suit votre stock et ne présente que les vins disponibles en cave. Fini les « désolé, nous n’en avons plus ».'] },
-  { titre: 'Pat le sommelier : le conseil à chaque table', icone: 'qr', pat: true, textes: [
+  { titre: 'Pat le sommelier : le conseil à chaque table', icone: 'pat', pat: true, textes: [
     'Grâce à un QR code, vos clients ont accès à votre carte des vins et à un sommelier virtuel. Ils choisissent leur plat et reçoivent les suggestions de Pat, accompagnées d’une explication claire.',
     <><b>Résultat :</b> un service du vin homogène, même sans sommelier en salle, et davantage de bouteilles vendues.</>] },
 ];
@@ -47,18 +48,18 @@ const ETAPES = [
   'Créez l’espace de votre restaurant.',
   'Importez votre menu et votre carte des vins.',
   'Placez le QR code sur vos tables. Vous gérez vos vins, votre carte et vos commandes depuis votre espace ; vos clients sont conseillés à table.',
+  'Renseignez votre stock de bouteilles : votre cave est suivie et les vins à réassortir vous sont signalés.',
 ];
 
 /**
- * Aperçu illustré (exemple fictif) : à gauche « Ma cave » comme dans l'espace restaurant, à droite l'app de Pat sur téléphone.
- * Les mêmes vins, repérés 1 et 2, apparaissent des deux côtés : la cave alimente directement la carte et les propositions de Pat ;
- * le vin épuisé est retiré de la carte.
+ * Aperçu illustré : à gauche « Ma cave » comme dans l'espace restaurant, à droite l'app de Pat en vidéo (démonstration
+ * « L'Improbable », filet pur poivre vert). Les vins que Pat propose dans la vidéo sont ceux de la cave, surlignés.
  */
-const CAVE: { nom: string; detail: string; distributeur: string; prix: string; stock: number; repere?: number; epuise?: boolean }[] = [
-  { nom: 'Sancerre 2023', detail: 'Domaine des Caves · Sauvignon blanc', distributeur: 'Vins de Loire SA', prix: '48,00', stock: 12, repere: 1 },
-  { nom: 'Petit Chablis 2022', detail: 'Domaine du Clos · Chardonnay', distributeur: 'Bourgogne Direct', prix: '42,00', stock: 8, repere: 2 },
-  { nom: 'Muscadet Sèvre et Maine', detail: 'Château de la Rive · Melon', distributeur: 'Vins de Loire SA', prix: '32,00', stock: 0, epuise: true },
-  { nom: 'Saint-Joseph 2021', detail: 'Domaine Rocher · Syrah', distributeur: 'Rhône & Co', prix: '56,00', stock: 2 },
+const CAVE: { groupe?: string; nom: string; detail: string; distributeur: string; prix: string; stock: number; propose?: boolean }[] = [
+  { groupe: 'Rouges', nom: 'Michelon 2014', detail: 'Domaine Jules Desjourneys · Moulin-à-Vent', distributeur: 'Vins du Beaujolais', prix: '145,00', stock: 6, propose: true },
+  { nom: 'Trévallon 2009', detail: 'Domaine de Trévallon · IGP Alpilles', distributeur: 'Provence Sélection', prix: '190,00', stock: 2, propose: true },
+  { groupe: 'Blancs', nom: 'Terre de Maimbray 2022', detail: 'Reverdy · Sancerre', distributeur: 'Vins de Loire SA', prix: '45,70', stock: 12 },
+  { nom: 'Brut de Brabant', detail: 'Domaine W · Chardonnay', distributeur: 'Belgian Wines', prix: '86,00', stock: 9 },
 ];
 
 function Apercu() {
@@ -70,7 +71,7 @@ function Apercu() {
           <aside className={s.menuApp}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/quidvinum/logo.png" alt="" className={s.menuLogo} />
-            <div className={s.menuResto}><b>L</b><span>Le Comptoir<small>24 plats · 38 vins</small></span></div>
+            <div className={s.menuResto}><b>L</b><span>L’Improbable<small>24 plats · 38 vins</small></span></div>
             <span className={s.menuSection}>Cartes et menus</span>
             <span className={s.menuLien}><Icone nom="menu" taille={14} />Gérer le menu</span>
             <span className={s.menuLien}><Icone nom="bottle" taille={14} />Carte des vins</span>
@@ -86,45 +87,31 @@ function Apercu() {
               <span><b>1</b>vin en stock bas</span><span><b>214</b>bouteilles en stock</span><span><b>24</b>bouteilles en commande</span>
             </div>
             <div className={s.tableau}>
-              <div className={s.entetes}><span>Vin</span><span>Distributeur</span><span>Vente TVAC</span><span>En stock</span></div>
-              <div className={s.groupe}>Blancs</div>
+              <div className={s.entetes}><span>Vin</span><span>Distributeur</span><span>Prix de vente</span><span>En stock</span></div>
               {CAVE.map((v) => (
-                <div key={v.nom} className={`${s.rangee}${v.repere ? ` ${s.rangeeLiee}` : ''}${v.epuise ? ` ${s.rangeeEpuisee}` : ''}`}>
-                  <span className={s.vinCave}>
-                    <i className={s.bouteille}><Icone nom="bottle" taille={13} /></i>
-                    <span><b>{v.nom}</b><small>{v.detail}</small></span>
-                    {v.repere && <em className={s.repere}>{v.repere}</em>}
-                  </span>
-                  <span className={s.cellule}>{v.distributeur}</span>
-                  <span className={s.cellule}>{v.prix} €</span>
-                  <span className={s.cellule}>{v.epuise ? <small className={s.retire}>0 · retiré de la carte</small> : <>{v.stock}{v.stock <= 2 && <b className={s.alerte}>!</b>}</>}</span>
-                </div>
+                <Fragment key={v.nom}>
+                  {v.groupe && <div className={s.groupe}>{v.groupe}</div>}
+                  <div className={`${s.rangee}${v.propose ? ` ${s.rangeeLiee}` : ''}`}>
+                    <span className={s.vinCave}>
+                      <i className={s.bouteille}><Icone nom="bottle" taille={13} /></i>
+                      <span><b>{v.nom}</b><small>{v.detail}</small></span>
+                    </span>
+                    <span className={s.cellule}>{v.distributeur}</span>
+                    <span className={s.cellule}>{v.prix} €</span>
+                    <span className={s.cellule}>{v.stock}{v.stock <= 2 && <b className={s.alerte}>!</b>}</span>
+                  </div>
+                </Fragment>
               ))}
             </div>
           </div>
         </div>
       </div>
 
-      {/* Le lien entre les deux : une seule base de vins. */}
-      <div className={s.lien}><span>Les vins de votre cave sont ceux que Pat propose à vos clients</span></div>
-
       <div className={s.telephone}>
-        <div className={s.telEcran}>
-          <div className={s.telEntete}><b>Le Comptoir</b><span>Carte des vins</span></div>
-          <div className={s.telCorps}>
-            <b className={s.telTitre}>Mes propositions</b>
-            <small className={s.telPour}>Pour : Saint-Jacques au beurre blanc</small>
-            {[{ n: 1, nom: 'Sancerre 2023', img: '/accueil/etiquette-sancerre.jpg', txt: 'Vif et minéral : il équilibre le beurre blanc.', prix: '48,00 €' },
-              { n: 2, nom: 'Petit Chablis 2022', img: '/accueil/etiquette-petit-chablis.jpg', txt: 'Tendu et salin, il prolonge la saint-jacques.', prix: '42,00 €' }].map((v) => (
-              <div key={v.nom} className={s.telVin}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={v.img} alt="" />
-                <span><b>{v.nom}</b><small>{v.txt}</small><em>{v.prix}</em></span>
-                <i className={s.repere}>{v.n}</i>
-              </div>
-            ))}
-          </div>
-        </div>
+        <video muted autoPlay loop playsInline preload="metadata" poster="/demo/demo-2-filet-debut.jpg">
+          <source src="/demo/demo-2-filet.webm" type="video/webm" />
+          <source src="/demo/demo-2-filet.mp4" type="video/mp4" />
+        </video>
       </div>
     </figure>
   );
@@ -173,7 +160,7 @@ export async function PageQuidVinum() {
       <section className={`${s.large} ${s.cartes}`} aria-label="La solution">
         {AVANTAGES.map((a, n) => (
           <article key={a.titre} className={`${s.carte}${a.pat ? ` ${s.cartePat}` : ''}`}>
-            <span className={s.icone}><Icone nom={a.icone} taille={24} /></span>
+            <span className={s.icone}><Icone nom={a.icone} taille={a.pat ? 40 : 24} /></span>
             <span className={s.num}>{String(n + 1).padStart(2, '0')}</span>
             <h3>{a.titre}</h3>
             {a.textes.map((t, k) => <p key={k}>{t}</p>)}
