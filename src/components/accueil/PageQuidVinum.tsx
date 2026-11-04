@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import s from './quidvinum.module.css';
 import { Inscription } from './Inscription';
+import { VideoDemo } from './VideoDemo';
 import { Icone } from '@/components/admin/Icone';
 import { inscriptionCourante } from '@/lib/inscription/etat';
 import { requete } from '@/lib/db';
@@ -109,10 +110,7 @@ function Apercu() {
       </div>
 
       <div className={s.telephone}>
-        <video muted autoPlay loop playsInline preload="metadata" poster="/demo/demo-2-filet-debut.jpg">
-          <source src="/demo/demo-2-filet.webm" type="video/webm" />
-          <source src="/demo/demo-2-filet.mp4" type="video/mp4" />
-        </video>
+        <VideoDemo video="/demo/demo-2-filet" />
       </div>
     </figure>
   );
