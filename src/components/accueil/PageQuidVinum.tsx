@@ -167,6 +167,17 @@ export async function PageQuidVinum() {
         ))}
       </section>
 
+      {/* Inscription : une bulle rouge, juste après les avantages en cartes. */}
+      <section className={s.final} aria-labelledby="h-insc" id="demarrer">
+        <div className={s.large}>
+          <div className={s.bulle}>
+            <h2 id="h-insc">Rejoignez Quid Vinum.</h2>
+            <p className={s.finalTexte}>La solution est gratuite. Votre espace est prêt en quelques minutes.</p>
+            <div className={s.formulaire}><Inscription initial={resume} restaurantCree={suivi?.id ?? null} /></div>
+          </div>
+        </div>
+      </section>
+
       <section className={s.bande} aria-label="En bref">
         <div className={`${s.large} ${s.bandeGrille}`}>
           <div>
@@ -177,14 +188,6 @@ export async function PageQuidVinum() {
             <h2>Comment ça marche</h2>
             <ol className={s.etapes}>{ETAPES.map((e, n) => <li key={e}><b>{n + 1}</b><span>{e}</span></li>)}</ol>
           </div>
-        </div>
-      </section>
-
-      <section className={s.final} aria-labelledby="h-insc" id="demarrer">
-        <div className={s.large}>
-          <h2 id="h-insc">Rejoignez Quid Vinum.</h2>
-          <p className={s.finalTexte}>La solution est gratuite. Votre espace est prêt en quelques minutes.</p>
-          <div className={s.formulaire}><Inscription initial={resume} restaurantCree={suivi?.id ?? null} /></div>
         </div>
       </section>
 
