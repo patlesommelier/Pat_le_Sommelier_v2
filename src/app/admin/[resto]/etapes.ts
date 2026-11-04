@@ -25,7 +25,7 @@ export function etapesRestaurant(r: RestaurantBO, s: Resume): EtapeDetail[] {
       statut: s.preparation_en_cours ? ['En cours', 'propose'] : accordsFaits ? ['Validés', 'ok'] : s.accords ? ['À relire', 'propose'] : ['Étape suivante', 'propose'],
       action: s.accords ? 'Relire les accords' : 'Voir les accords' },
     // Les règles de Pat par défaut suffisent pour servir : l'étape est faite même sans réglage modifié.
-    { href: `${base}/regles`, libelle: 'Règles du sommelier', groupe: 'Sommelier', icone: 'sliders', etat: 'fait',
+    { href: `${base}/regles`, libelle: 'Règles du sommelier', groupe: 'Sommelier', icone: 'pat', etat: 'fait',
       ligne1: modifs ? pl(modifs, 'réglage modifié', 'réglages modifiés') : 'Règles de Pat par défaut (V7)', ligne2: 'À ajuster selon votre service',
       statut: modifs ? ['Ajustées', 'ok'] : ['Par défaut', 'ok'], action: 'Voir les règles' },
     { href: `${base}/apparence`, libelle: 'Apparence', groupe: 'App', icone: 'palette', etat: r.modifie_bo ? 'fait' : 'afaire',

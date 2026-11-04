@@ -49,46 +49,84 @@ const ETAPES = [
   'Placez le QR code sur vos tables. Vous gérez vos vins, votre carte et vos commandes depuis votre espace ; vos clients sont conseillés à table.',
 ];
 
-/** Aperçu illustré de l'espace restaurant (exemple fictif) : la cave, une commande suivie, la carte. */
+/**
+ * Aperçu illustré (exemple fictif) : à gauche « Ma cave » comme dans l'espace restaurant, à droite l'app de Pat sur téléphone.
+ * Les mêmes vins, repérés 1 et 2, apparaissent des deux côtés : la cave alimente directement la carte et les propositions de Pat ;
+ * le vin épuisé est retiré de la carte.
+ */
+const CAVE: { nom: string; detail: string; distributeur: string; prix: string; stock: number; repere?: number; epuise?: boolean }[] = [
+  { nom: 'Sancerre 2023', detail: 'Domaine des Caves · Sauvignon blanc', distributeur: 'Vins de Loire SA', prix: '48,00', stock: 12, repere: 1 },
+  { nom: 'Petit Chablis 2022', detail: 'Domaine du Clos · Chardonnay', distributeur: 'Bourgogne Direct', prix: '42,00', stock: 8, repere: 2 },
+  { nom: 'Muscadet Sèvre et Maine', detail: 'Château de la Rive · Melon', distributeur: 'Vins de Loire SA', prix: '32,00', stock: 0, epuise: true },
+  { nom: 'Saint-Joseph 2021', detail: 'Domaine Rocher · Syrah', distributeur: 'Rhône & Co', prix: '56,00', stock: 2 },
+];
+
 function Apercu() {
-  const cave: [string, string, number, boolean][] = [
-    ['Petit Chablis', 'Blanc · Bourgogne', 14, false], ['Sancerre', 'Blanc · Loire', 3, true],
-    ['Côtes du Rhône', 'Rouge · Rhône', 22, false], ['Crémant de Loire', 'Bulles · Loire', 9, false],
-  ];
   return (
-    <div className={s.apercu} aria-hidden="true">
+    <figure className={s.apercu} aria-hidden="true">
       <div className={s.ecran}>
-        <div className={s.ecranBarre}><i /><i /><i /><span>Espace restaurant</span></div>
-        <div className={s.ecranCorps}>
-          <div className={s.panneau}>
-            <b className={s.panneauTitre}><Icone nom="stock" taille={16} /> Ma cave</b>
-            {cave.map(([nom, detail, n, bas]) => (
-              <div key={nom} className={s.ligneCave}>
-                <span><b>{nom}</b><small>{detail}</small></span>
-                <span className={bas ? s.stockBas : s.stockOk}>{n} bt{bas ? ' · à recommander' : ''}</span>
-              </div>
-            ))}
-          </div>
-          <div className={s.colonne}>
-            <div className={s.panneau}>
-              <b className={s.panneauTitre}><Icone nom="camion" taille={16} /> Commande en cours</b>
-              <div className={s.statut}><Icone nom="check" taille={14} epaisseur={2.6} /> En cours de livraison</div>
-              <small className={s.discret}>3 distributeurs · 1 seule commande · facture jointe</small>
+        <div className={s.ecranBarre}><i /><i /><i /><span>quidvinum.com · Espace restaurant</span></div>
+        <div className={s.app}>
+          <aside className={s.menuApp}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/quidvinum/logo.png" alt="" className={s.menuLogo} />
+            <div className={s.menuResto}><b>L</b><span>Le Comptoir<small>24 plats · 38 vins</small></span></div>
+            <span className={s.menuSection}>Cartes et menus</span>
+            <span className={s.menuLien}><Icone nom="menu" taille={14} />Gérer le menu</span>
+            <span className={s.menuLien}><Icone nom="bottle" taille={14} />Carte des vins</span>
+            <span className={s.menuLien}><Icone nom="pat" taille={13} />Règles du sommelier</span>
+            <span className={s.menuSection}>Base des vins</span>
+            <span className={`${s.menuLien} ${s.menuActif}`}><Icone nom="stock" taille={14} />Ma cave</span>
+            <span className={s.menuLien}><Icone nom="camion" taille={14} />Commandes</span>
+            <span className={s.menuLien}><Icone nom="fournisseur" taille={14} />Distributeurs</span>
+          </aside>
+          <div className={s.caveApp}>
+            <b className={s.caveTitre}>Ma cave</b>
+            <div className={s.tuiles}>
+              <span><b>1</b>vin en stock bas</span><span><b>214</b>bouteilles en stock</span><span><b>24</b>bouteilles en commande</span>
             </div>
-            <div className={s.panneau}>
-              <b className={s.panneauTitre}><Icone nom="print" taille={16} /> Carte des vins</b>
-              <small className={s.discret}>À jour avec votre cave · prête à imprimer</small>
+            <div className={s.tableau}>
+              <div className={s.entetes}><span>Vin</span><span>Distributeur</span><span>Vente TVAC</span><span>En stock</span></div>
+              <div className={s.groupe}>Blancs</div>
+              {CAVE.map((v) => (
+                <div key={v.nom} className={`${s.rangee}${v.repere ? ` ${s.rangeeLiee}` : ''}${v.epuise ? ` ${s.rangeeEpuisee}` : ''}`}>
+                  <span className={s.vinCave}>
+                    <i className={s.bouteille}><Icone nom="bottle" taille={13} /></i>
+                    <span><b>{v.nom}</b><small>{v.detail}</small></span>
+                    {v.repere && <em className={s.repere}>{v.repere}</em>}
+                  </span>
+                  <span className={s.cellule}>{v.distributeur}</span>
+                  <span className={s.cellule}>{v.prix} €</span>
+                  <span className={s.cellule}>{v.epuise ? <small className={s.retire}>0 · retiré de la carte</small> : <>{v.stock}{v.stock <= 2 && <b className={s.alerte}>!</b>}</>}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
+
+      {/* Le lien entre les deux : une seule base de vins. */}
+      <div className={s.lien}><span>Les vins de votre cave sont ceux que Pat propose à vos clients</span></div>
+
       <div className={s.telephone}>
-        <video muted autoPlay loop playsInline preload="metadata" poster="/demo/demo-2-filet-debut.jpg">
-          <source src="/demo/demo-2-filet.webm" type="video/webm" />
-          <source src="/demo/demo-2-filet.mp4" type="video/mp4" />
-        </video>
+        <div className={s.telEcran}>
+          <div className={s.telEntete}><b>Le Comptoir</b><span>Carte des vins</span></div>
+          <div className={s.telCorps}>
+            <b className={s.telTitre}>Mes propositions</b>
+            <small className={s.telPour}>Pour : Saint-Jacques au beurre blanc</small>
+            {[{ n: 1, nom: 'Sancerre 2023', img: '/accueil/etiquette-sancerre.jpg', txt: 'Vif et minéral : il équilibre le beurre blanc.', prix: '48,00 €' },
+              { n: 2, nom: 'Petit Chablis 2022', img: '/accueil/etiquette-petit-chablis.jpg', txt: 'Tendu et salin, il prolonge la saint-jacques.', prix: '42,00 €' }].map((v) => (
+              <div key={v.nom} className={s.telVin}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={v.img} alt="" />
+                <span><b>{v.nom}</b><small>{v.txt}</small><em>{v.prix}</em></span>
+                <i className={s.repere}>{v.n}</i>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </figure>
   );
 }
 
