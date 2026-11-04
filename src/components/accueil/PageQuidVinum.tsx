@@ -52,14 +52,14 @@ const ETAPES = [
 ];
 
 /**
- * Aperçu illustré : à gauche « Ma cave » comme dans l'espace restaurant, à droite l'app de Pat en vidéo (démonstration
+ * Aperçu illustré : à gauche « Ma cave » (étiquettes reprises des vidéos de démonstration) comme dans l'espace restaurant, à droite l'app de Pat en vidéo (démonstration
  * « L'Improbable », filet pur poivre vert). Les vins que Pat propose dans la vidéo sont ceux de la cave, surlignés.
  */
-const CAVE: { groupe?: string; nom: string; detail: string; distributeur: string; prix: string; stock: number; propose?: boolean }[] = [
-  { groupe: 'Rouges', nom: 'Michelon 2014', detail: 'Domaine Jules Desjourneys · Moulin-à-Vent', distributeur: 'Vins du Beaujolais', prix: '145,00', stock: 6, propose: true },
-  { nom: 'Trévallon 2009', detail: 'Domaine de Trévallon · IGP Alpilles', distributeur: 'Provence Sélection', prix: '190,00', stock: 2, propose: true },
-  { groupe: 'Blancs', nom: 'Terre de Maimbray 2022', detail: 'Reverdy · Sancerre', distributeur: 'Vins de Loire SA', prix: '45,70', stock: 12 },
-  { nom: 'Brut de Brabant', detail: 'Domaine W · Chardonnay', distributeur: 'Belgian Wines', prix: '86,00', stock: 9 },
+const CAVE: { groupe?: string; nom: string; detail: string; distributeur: string; prix: string; stock: number; etiquette: string; propose?: boolean }[] = [
+  { groupe: 'Rouges', nom: 'Michelon 2014', detail: 'Domaine Jules Desjourneys · Moulin-à-Vent', distributeur: 'Vins du Beaujolais', prix: '145,00', etiquette: '/accueil/etiquettes/michelon.jpg', stock: 6, propose: true },
+  { nom: 'Trévallon 2009', detail: 'Domaine de Trévallon · IGP Alpilles', distributeur: 'Provence Sélection', prix: '190,00', etiquette: '/accueil/etiquettes/trevallon.jpg', stock: 2, propose: true },
+  { groupe: 'Blancs', nom: 'Terre de Maimbray 2022', detail: 'Reverdy · Sancerre', distributeur: 'Vins de Loire SA', prix: '45,70', etiquette: '/accueil/etiquettes/maimbray.jpg', stock: 12 },
+  { nom: 'Brut de Brabant', detail: 'Domaine W · Chardonnay', distributeur: 'Belgian Wines', prix: '86,00', etiquette: '/accueil/etiquettes/brabant.jpg', stock: 9 },
 ];
 
 function Apercu() {
@@ -93,7 +93,8 @@ function Apercu() {
                   {v.groupe && <div className={s.groupe}>{v.groupe}</div>}
                   <div className={`${s.rangee}${v.propose ? ` ${s.rangeeLiee}` : ''}`}>
                     <span className={s.vinCave}>
-                      <i className={s.bouteille}><Icone nom="bottle" taille={13} /></i>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img className={s.bouteille} src={v.etiquette} alt="" />
                       <span><b>{v.nom}</b><small>{v.detail}</small></span>
                     </span>
                     <span className={s.cellule}>{v.distributeur}</span>
