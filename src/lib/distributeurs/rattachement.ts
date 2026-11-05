@@ -150,6 +150,14 @@ export async function rattacherCuvees(requete: Requete, distributeurId: string) 
  * Un choix fait à la main n'est jamais changé. Renvoie le nombre de vins complétés.
  */
 export async function completerDepuisLesCartes(requete: Requete, distributeurId: string) {
+  // D'abord par le vin de la base : sans photo, le vin du tarif prend celle d'une carte qui a le même vin de la base
+  // (même si le producteur y est écrit autrement).
+  await requete(
+    `update distributeur_vin d set etiquette_url = x.etiquette_url, image_source = 'carte'
+       from (select distinct on (cuvee_id) cuvee_id, etiquette_url from vin_carte
+              where cuvee_id is not null and etiquette_url is not null order by cuvee_id, modifie_bo desc nulls last) x
+      where d.distributeur_id = $1 and d.cuvee_id = x.cuvee_id and d.etiquette_url is null
+        and not exists (select 1 from cuvee c where c.id = d.cuvee_id and c.etiquette_url is not null)`, [distributeurId]);
   const vins = await requete<{ id: string; libelle: string; producteur_texte: string | null; producteur_id: string; producteur_nom: string; appellation: string | null;
     cuvee_id: string | null; cuvee_manuel: boolean; proposee: boolean; photo: boolean }>(
     `select v.id, v.libelle, v.producteur_texte, v.producteur_id, p.nom as producteur_nom, v.appellation, v.cuvee_id, v.cuvee_manuel,
@@ -158,7 +166,7 @@ export async function completerDepuisLesCartes(requete: Requete, distributeurId:
        from distributeur_vin v join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
       where v.distributeur_id = $1 and v.actif`, [distributeurId]);
   const aCompleter = vins.filter((v) => !v.photo || (!v.cuvee_manuel && (!v.cuvee_id || v.proposee)));
-  if (!aCompleter.length) return 0;
+  if (!aCompleter.length) { await partagerEtiquettesDistributeur(requete, distributeurId); return 0; }
   const cartes = await requete<{ id: string; producteur_id: string; nom: string; appellation: string | null; cuvee_id: string | null; etiquette_url: string | null }>(
     `select v.id, v.producteur_id, coalesce(nullif(v.nom_vin, ''), v.libelle) as nom, coalesce(t.nom, v.appellation_texte) as appellation, v.cuvee_id, v.etiquette_url
        from vin_carte v left join terroir t on t.id = v.appellation_id

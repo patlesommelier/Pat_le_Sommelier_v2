@@ -9,7 +9,7 @@ import { requete } from '@/lib/db';
 import { enregistrerCoordonneesQv } from '@/lib/distributeurs/donnees';
 import { lireTarif, TYPE_DOCX } from '@/lib/distributeurs/lecture';
 import { completerVinsDistributeur, recadrerPhotosDistributeur } from '@/lib/distributeurs/completer';
-import { ajouterCuveesManquantes, ajouterProducteurBase, relierProducteur } from '@/lib/distributeurs/rattachement';
+import { ajouterCuveesManquantes, ajouterProducteurBase, completerDepuisLesCartes, relierProducteur } from '@/lib/distributeurs/rattachement';
 import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif, prixRemise } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
@@ -214,6 +214,8 @@ export async function enregistrerVins(id: string, f: FormData): Promise<Retour> 
                     where d.distributeur_id = $1 and d.id = $2 and ($3::text is null or exists (select 1 from cuvee c where c.id = $3 and c.producteur_id = d.producteur_id))`,
       [id, v, txt(f, `cuvee_${v}`)]);
   }
+  // Vin de la base choisi : sa photo (base, carte d'un restaurant) suit tout de suite.
+  if (changes.length) await completerDepuisLesCartes(requete, id).catch((e) => console.error('[distributeur] photos', e));
   rafraichir(id);
   return illisibles ? { erreur: `Enregistré, sauf ${illisibles} prix illisible${illisibles > 1 ? 's' : ''} (écrivez par exemple 12,50).` } : { ok: 'Vins enregistrés.' };
 }

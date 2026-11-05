@@ -443,13 +443,22 @@ export async function fusionnerCuvee(id: string, f: FormData) {
             producteur_id = case when v.producteur_id = (select producteur_id from cuvee where id = $1) then (select producteur_id from cuvee where id = $2) else v.producteur_id end
       where v.cuvee_id = $1 returning v.id`, [id, cible]);
   await requete('update demande_etiquette set cuvee_id = $2 where cuvee_id = $1', [id, cible]);
+  // Vins des distributeurs reliés au doublon : désormais au vin gardé (choix gardé : la relecture du tarif ne le défait pas).
+  await requete('update distributeur_vin set cuvee_id = $2, cuvee_manuel = true where cuvee_id = $1', [id, cible]);
   // Étiquette reprise de la base par les vins des cartes : désormais celle du vin gardé.
   await requete(
     `update vin_carte v set etiquette_url = k.etiquette_url from cuvee k
       where k.id = $1 and v.cuvee_id = $1 and v.etiquette_source = 'cuvee' and k.etiquette_url is not null`, [cible]);
   await requete(`update cuvee set statut = 'retire' where id = $1`, [id]);
   // Photo d'un de ces vins (déposée par le restaurant…) → étiquette du vin gardé s'il n'en a pas, puis aux autres cartes et distributeurs.
-  if (deplaces.length) await partagerEtiquettes(requete, { vins: deplaces.map((v) => v.id) }).catch((e) => console.error('[fusion] étiquettes', e));
+  // Toutes les cartes du vin gardé comptent (pas seulement celles du doublon) : la photo d'un restaurant manquait sinon.
+  const cartes = (await requete<{ id: string }>('select id from vin_carte where cuvee_id = $1', [cible])).map((v) => v.id);
+  if (cartes.length) await partagerEtiquettes(requete, { vins: cartes }).catch((e) => console.error('[fusion] étiquettes', e));
+  // Sinon la photo d'un distributeur.
+  await requete(
+    `update cuvee k set etiquette_url = d.etiquette_url, etiquette_source = 'distributeur', etiquette_maj_le = now()
+       from (select etiquette_url from distributeur_vin where cuvee_id = $1 and etiquette_url is not null order by maj_le desc limit 1) d
+      where k.id = $1 and k.etiquette_url is null`, [cible]);
   revalidatePath('/', 'layout');
   redirect(`/admin/super/vins/${encodeURIComponent(cible)}?${new URLSearchParams({ retour: liste, ok: `« ${a[0].nom} » fusionné dans ce vin : ses vins sur les cartes y sont maintenant reliés.` })}`);
 }
