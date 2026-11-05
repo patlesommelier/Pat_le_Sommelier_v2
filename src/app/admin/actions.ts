@@ -323,8 +323,8 @@ export async function ajouterMillesime(resto: string, vinId: string, retour: str
     if (ancien === vinId) principal = id;
   }
   revalidatePath(`/admin/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/carte/${encodeURIComponent(principal || vinId)}`, { ...(retour ? { retour } : {}),
-    ok: `Millésime ${millesime} ajouté à votre cave et à votre carte (décochez « À ma carte » dans Ma cave pour l’en retirer).` }));
+  // Retour sur Ma cave, la nouvelle ligne mise en évidence (la page s'y place).
+  redirect(`${avec(`/admin/${resto}/stocks`, { nouveau: principal || vinId })}#vin-${principal || vinId}`);
 }
 
 async function memeVin(resto: string, vinId: string) {

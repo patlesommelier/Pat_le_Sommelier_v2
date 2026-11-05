@@ -1,7 +1,7 @@
 'use client';
 import { Fragment } from 'react';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 import { Icone } from './Icone';
 import { PastilleNotif } from './PastilleNotif';
 
@@ -13,7 +13,12 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
 export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
-  const chemin = usePathname();
+  const sp = useSearchParams();
+  let chemin = usePathname();
+  // Fiche d'un vin ouverte depuis Ma cave (?retour=…/stocks), fiche d'un producteur : on reste sur « Ma cave » dans le menu.
+  const retour = sp?.get('retour') ?? '';
+  if (/^\/admin\/[^/]+\/carte\/[^/]+$/.test(chemin) && /^\/admin\/[^/]+\/stocks/.test(retour)) chemin = retour.split('?')[0];
+  if (/^\/admin\/[^/]+\/producteurs\//.test(chemin)) chemin = chemin.replace(/\/producteurs\/.*$/, '/stocks');
   const courant = (href: string) => (href === accueil ? chemin === href : chemin.startsWith(href)) ? 'page' : undefined;
   return (
     <nav aria-label="Back-office" className="bo-liens">

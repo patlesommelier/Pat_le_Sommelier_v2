@@ -485,3 +485,8 @@ dialog.superposition { overflow-y: auto; }
 .champ-millesime { width: 72px; text-align: center; }
 .table-stocks td.centre { text-align: center; }
 .case-carte { width: 20px; height: 20px; accent-color: var(--encre); cursor: pointer; }
+.champ-fiche { width: 140px; min-height: 40px; padding: 6px 12px; border: 1.5px solid var(--ligne); border-radius: 10px; font: inherit; background: #FFFFFF; }
+/* Fiche producteur : ses vins, le distributeur qui les vend et l'ajout à Ma cave. */
+.vin-producteur { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; padding: 10px 0; border-top: 1px solid var(--separation); align-items: start; }
+.offre-producteur { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+@media (max-width: 680px) { .vin-producteur { grid-template-columns: 1fr; gap: 6px; } }

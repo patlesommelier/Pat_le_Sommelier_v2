@@ -6,6 +6,10 @@ import { notFound } from 'next/navigation';
 import { exigerAcces } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
 import { presentationPublique } from '@/lib/producteurs/presentation';
+import { offresDistributeurs } from '@/lib/admin/recherche-base';
+import { ajouterDuCatalogue } from '../../../stocks-actions';
+import { AjoutCatalogue } from '@/components/admin/Panier';
+import { euros } from '@/lib/bon-commande';
 
 const PRODUCTION: Record<string, string> = {
   biologique: 'Agriculture biologique', 'biologique-certifie': 'Agriculture biologique certifiée', biodynamie: 'Biodynamie',
@@ -31,6 +35,21 @@ export default async function FicheProducteur({ params, searchParams }: { params
       `select distinct on (libelle, millesime) id, libelle, millesime from vin_carte where restaurant_id = $1 and producteur_id = $2 order by libelle, millesime, ordre`, [resto, id]),
   ]);
   if (!p || !siens.length) notFound();
+  // Vins du producteur chez les distributeurs de Quid Vinum (au prix du restaurant, HTVA ; jamais le prix QV) :
+  // par vin de la base, et ceux du catalogue reliés au producteur sans vin de la base.
+  const sansCuvee = (await requete<{ id: string }>('select id from distributeur_vin where producteur_id = $1 and actif and cuvee_id is null', [id])).map((x) => x.id);
+  const offres = await offresDistributeurs(resto, { cuvees: cuvees.map((c) => c.id), vins: sansCuvee });
+  // Déjà dans Ma cave : par l'offre du distributeur, ou par le vin de la base.
+  const enCave = await requete<{ id: string; distributeur_vin_id: string | null; cuvee_id: string | null }>(
+    'select id, distributeur_vin_id, cuvee_id from vin_carte where restaurant_id = $1 and (cuvee_id = any($2) or distributeur_vin_id = any($3))',
+    [resto, cuvees.map((c) => c.id), offres.map((o) => o.id)]);
+  const lignes = [
+    ...cuvees.map((c) => ({ cle: c.id, nom: c.nom, detail: [c.appellation && c.appellation !== c.nom ? c.appellation : null, c.couleur ? COULEURS[c.couleur] : null].filter(Boolean).join(' · '),
+      offres: offres.filter((o) => o.cuvee_id === c.id), cave: enCave.find((x) => x.cuvee_id === c.id) ?? null })),
+    ...offres.filter((o) => !o.cuvee_id).map((o) => ({ cle: o.id, nom: o.libelle, detail: '', offres: [o], cave: null })),
+  ].map((l) => ({ ...l, cave: l.cave ?? enCave.find((x) => l.offres.some((o) => o.id === x.distributeur_vin_id)) ?? null }));
+  const versCave = `/admin/${resto}/stocks`;
+  const ficheVin = (vinId: string) => `/admin/${resto}/carte/${encodeURIComponent(vinId)}?${new URLSearchParams({ retour: versCave })}`;
   const vers = vin ? `/admin/${resto}/carte/${encodeURIComponent(vin)}${retour ? `?${new URLSearchParams({ retour })}` : ''}` : `/admin/${resto}/stocks`;
   const lieu = [p.sous_region, p.region, p.pays].filter(Boolean).join(' · ');
   return (
@@ -54,18 +73,35 @@ export default async function FicheProducteur({ params, searchParams }: { params
             {/* Texte de la base, sans ce qui est réservé à Pat (son profil, ses notes, un classement). */}
             {presentationPublique(p.presentation).length > 0 && <div className="pile" style={{ gap: 8 }}>{presentationPublique(p.presentation).map((par, n) => <p key={n} style={{ margin: 0 }}>{par}</p>)}</div>}
           </div>
+          {/* Les vins du producteur : chez quel distributeur de Quid Vinum, à quel prix, et l'ajout à Ma cave. */}
+          {lignes.length > 0 && (
+            <div className="carte-bo pile" style={{ gap: 4 }}>
+              <b style={{ marginBottom: 6 }}>Les vins du producteur</b>
+              {lignes.map((l) => (
+                <div key={l.cle} className="vin-producteur">
+                  <div><b>{l.nom}</b>{l.detail && <div className="petit discret">{l.detail}</div>}</div>
+                  <div className="pile" style={{ gap: 6 }}>
+                    {l.cave ? <Link href={ficheVin(l.cave.id)} className="petit">✓ Dans ma cave</Link> : null}
+                    {!l.cave && !l.offres.length && <span className="petit discret">Pas encore chez un distributeur de Quid Vinum</span>}
+                    {!l.cave && l.offres.map((o) => (
+                      <div key={o.id} className="offre-producteur">
+                        <span className="petit">{o.distributeur}{o.millesime ? ` · ${o.millesime}` : ''}{o.contenance && o.contenance !== '75 cl' ? ` · ${o.contenance}` : ''}
+                          {o.prix != null && <> · <b>{euros(o.prix)}</b> HTVA</>}</span>
+                        {o.epuise ? <span className="petit discret">épuisé</span>
+                          : <AjoutCatalogue ajouter={ajouterDuCatalogue.bind(null, resto, o.distributeur_id, o.id)} libelle={o.libelle} texte="+ Ajouter à ma cave" versCave={versCave} />}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
         <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
           <div className="carte-bo pile" style={{ gap: 8 }}>
             <b>Vos vins de ce producteur</b>
-            {siens.map((x) => <Link key={x.id} href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}`} className="petit">{x.libelle}{x.millesime ? ` ${x.millesime}` : ''}</Link>)}
+            {siens.map((x) => <Link key={x.id} href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="petit">{x.libelle}{x.millesime ? ` ${x.millesime}` : ''}</Link>)}
           </div>
-          {cuvees.length > 0 && (
-            <div className="carte-bo pile" style={{ gap: 6 }}>
-              <b>Ses vins dans la base Quid Vinum</b>
-              {cuvees.map((c) => <span key={c.id} className="petit">{c.nom}<span className="discret">{[c.appellation && c.appellation !== c.nom ? c.appellation : null, c.couleur ? COULEURS[c.couleur] : null].filter(Boolean).map((x) => ` · ${x}`).join('')}</span></span>)}
-            </div>
-          )}
         </aside>
       </div>
     </>

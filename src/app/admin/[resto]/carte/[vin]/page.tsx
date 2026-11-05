@@ -7,6 +7,7 @@ import { IntituleVin } from '@/components/admin/IntituleVin';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { Etat, Message } from '@/components/admin/Ui';
 import { BoutonAction } from '@/components/admin/BoutonAction';
+import { AjoutMillesime } from '@/components/admin/AjoutMillesime';
 import { requete } from '@/lib/db';
 import { ajouterMillesime, ecrirePresentations, enregistrerVin, pasMonVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
@@ -87,14 +88,11 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
        from vin_carte v join cuvee c on c.id = v.cuvee_id join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id
       where v.id = $1 and v.restaurant_id = $2`, [v.id, resto]) : [];
   const { ok, erreur } = await searchParams;
+  // Autres millésimes du même vin dans Ma cave (même intitulé et même couleur), un lien par millésime.
+  const autresMillesimes = [...new Map(vins.filter((x) => x.libelle === v.libelle && x.couleur === v.couleur && (x.millesime ?? '') !== (v.millesime ?? ''))
+    .map((x) => [x.millesime ?? '', x] as const)).values()].sort((a, b) => (a.millesime ?? '').localeCompare(b.millesime ?? ''));
   // Autre millésime du même vin : une nouvelle ligne dans Ma cave (copie du vin, sans stock).
-  const autreMillesime = (
-    <div className="ligne-actions" style={{ alignItems: 'flex-end' }}>
-      <div className="champ" style={{ margin: 0, maxWidth: 180 }}><label htmlFor="nouveau_millesime">Autre millésime de ce vin</label>
-        <input id="nouveau_millesime" name="nouveau_millesime" placeholder="Ex. 2023" maxLength={6} /></div>
-      <button type="submit" formAction={ajouterMillesime.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">+ Ajouter ce millésime</button>
-    </div>
-  );
+  const autreMillesime = <AjoutMillesime action={ajouterMillesime.bind(null, resto, v.id, depuisBase ?? null)} />;
 
   return (
     <>
@@ -131,13 +129,25 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 {base.garde && <><dt>Garde</dt><dd>{base.garde}</dd></>}
                 {base.description && <><dt>Description</dt><dd>{base.description}</dd></>}
               </dl>
-              <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} placeholder="Ex. 2022" /></div>
-              {autreMillesime}
               <div className="ligne-actions" style={{ alignItems: 'center' }}>
                 <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Pas mon vin" className="btn rouge petit"
                   question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « En attente de validation » : Quid Vinum le vérifiera." />
                 <span className="petit discret">Ce vin ne correspond pas au vôtre : il repasse en attente de validation.</span>
               </div>
+            </section>
+          ) : null}
+          {verrouille && base ? (
+            // Millésime : sa propre fiche, sous celle du vin ; les autres millésimes de ce vin dans Ma cave, et l'ajout d'un millésime.
+            <section className="carte-bo pile" style={{ gap: 12 }}>
+              <b>Millésime</b>
+              <dl className="infos-base" style={{ alignItems: 'center' }}>
+                <dt>Cette bouteille</dt>
+                <dd><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} placeholder="Ex. 2022" maxLength={20} className="champ-fiche" aria-label="Millésime" /></dd>
+                {autresMillesimes.length > 0 && <><dt>Dans votre cave</dt>
+                  <dd className="ligne-actions">{autresMillesimes.map((x) => (
+                    <Link key={x.id} href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}${depuisBase ? `?${new URLSearchParams({ retour: depuisBase })}` : ''}`} className="pastille-recherche">{x.millesime ?? 'Sans millésime'}</Link>))}</dd></>}
+              </dl>
+              {autreMillesime}
             </section>
           ) : (<>
             {/* Vin lu sur la carte, pas encore validé : le restaurant complète sa fiche ; il reste en attente jusqu'à la validation de Quid Vinum. */}
