@@ -473,3 +473,7 @@ dialog.superposition { overflow-y: auto; }
 /* Pastille de notification dans le menu (ex. statut d'une commande changé par Quid Vinum). */
 .pastille-notif { margin-left: auto; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: #C62828; color: #FFFFFF;
   font-size: 12px; font-weight: 700; line-height: 20px; text-align: center; }
+/* Ma cave : vin lu sur la carte, reconnu dans la base de Pat ou en attente de validation. */
+.pastille-reconnu, .pastille-attente { display: inline-block; margin-top: 4px; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.pastille-reconnu { background: #E6F2E8; color: #2E7D32; }
+.pastille-attente { background: #FFF1E0; color: #A65E00; }

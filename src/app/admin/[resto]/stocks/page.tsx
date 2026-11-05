@@ -108,6 +108,9 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         className={[disponible ? '' : 'indisponible', nouveau && tous.some((x) => x.id === nouveau) ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
+                          {/* Vin lu sur la carte : reconnu dans la base de Pat (ses données), ou en attente de validation (tel que lu). */}
+                          {v.reconnaissance === 'reconnu' && <span className="pastille-reconnu" title="Vin reconnu dans la base de Pat : nom, producteur et appellation viennent de la base">✓ Reconnu</span>}
+                          {v.reconnaissance === 'en_attente' && <span className="pastille-attente" title="Vin pas encore retrouvé dans la base de Pat : tel que lu sur votre carte, en attente de validation">En attente de validation</span>}
                           {/* Vendu par un distributeur de Quid Vinum (qui n'est pas encore son fournisseur) : pour information. */}
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
                             <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}</div>); })()}

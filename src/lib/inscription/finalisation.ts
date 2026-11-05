@@ -8,6 +8,7 @@ import { chercherEtiquettesManquantes } from '../etiquettes/lancer';
 import { deposerImage } from '../admin/fichiers';
 import { creerVinsEnAttente, preparerAccords } from './adaptateurs';
 import { lireInscription, majInscription } from './etat';
+import { reconnaitreVins } from './reconnaissance';
 import { slugRestaurant } from './slug';
 
 /** Fond clair de la barre Pat : la couleur du restaurant mêlée de blanc. */
@@ -125,12 +126,16 @@ async function finaliser(inscriptionId: string, userId: string, email: string): 
     const id = `${restaurantId}-${l}${String(compteurs[l]).padStart(2, '0')}`;
     await requete(
       `insert into vin_carte (id, restaurant_id, couleur, section, libelle, producteur_id, producteur_texte, vin_texte, millesime, format,
-                              prix, prix_verre, ordre, disponible, contenances, cepages, coup_de_coeur)
-       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15, $16)`,
+                              prix, prix_verre, ordre, disponible, contenances, cepages, coup_de_coeur, lu_sur_carte)
+       values ($1, $2, $3::couleur_vin, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, true, $14, $15, $16, $17)`,
       [id, restaurantId, sansAlcool(v) ? 'sans_alcool' : v.couleur, rubriqueCoupDeCoeur(v.region) ? null : v.region, v.libelleCarte, producteurs[k], v.producteur, v.appellation, v.millesime,
         v.auVerre ? 'au verre' : v.contenance ?? '75 cl', v.auVerre ? null : v.prix, v.auVerre ? v.prix ?? v.prixVerre : v.prixVerre, k + 1,
-        contenancesDesLignes(lignes(v)), v.cepages ?? null, rubriqueCoupDeCoeur(v.region)]);
+        contenancesDesLignes(lignes(v)), v.cepages ?? null, rubriqueCoupDeCoeur(v.region),
+        // Ce qui a été lu sur la carte, gardé tel quel (le vin reconnu prend ensuite les données de la base de Pat).
+        JSON.stringify({ libelle: v.libelleCarte, producteur: v.producteur ?? null, appellation: v.appellation ?? null, millesime: v.millesime ?? null })]);
   }
+  // Vins reconnus dans la base de Pat : « Reconnu », avec les données de la base ; les autres, « En attente de validation ».
+  await reconnaitreVins(requete, restaurantId).catch((e) => console.error('[inscription] reconnaissance des vins', e));
 
   // Étiquettes déjà connues de la base de Pat (au niveau de la cuvée).
   await partagerEtiquettes(requete, { vins: (await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1', [restaurantId])).map((v) => v.id) })

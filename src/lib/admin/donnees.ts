@@ -111,6 +111,8 @@ export interface VinBO {
   profil_degustation: Record<string, unknown> | null; ordre: number;
   /** Nature, bio : base de Pat. */
   nature: boolean; bio: boolean;
+  /** Vin lu sur la carte à l'inscription : « reconnu » (relié à un vin de la base de Pat) ou « en_attente » de validation ; null sinon. */
+  reconnaissance: 'reconnu' | 'en_attente' | null;
 }
 export async function getVinsBO(restaurantId: string) {
   return requete<VinBO>(
@@ -123,7 +125,8 @@ export async function getVinsBO(restaurantId: string) {
             v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,
-            v.stock, v.en_commande, v.fournisseur_id, v.distributeur_vin_id
+            v.stock, v.en_commande, v.fournisseur_id, v.distributeur_vin_id,
+            case when v.lu_sur_carte is null then null when v.cuvee_id is not null then 'reconnu' else 'en_attente' end as reconnaissance
        from vin_carte v left join producteur p on p.id = v.producteur_id left join terroir t on t.id = v.appellation_id
             left join cuvee cu on cu.id = v.cuvee_id
       where v.restaurant_id = $1 order by v.ordre`, [restaurantId]);
