@@ -103,7 +103,7 @@ export default async function FicheProducteurPage({ params, searchParams }: { pa
                 ))}
                 {p.cuvees.map((c) => (
                   <tr key={c.id}>
-                    <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><Link href={`/admin/super/vins/${encodeURIComponent(c.id)}`}><b>{c.nom}</b></Link></div></td>
+                    <td><div className="vin-cell"><Vignette url={c.etiquette_url} taille={40} /><Link href={`/admin/super/vins/${encodeURIComponent(c.id)}?${new URLSearchParams({ retour: `/admin/super/producteurs/${encodeURIComponent(p.id)}` })}`}><b>{c.nom}</b></Link></div></td>
                     <td>{c.couleur ? COULEURS[c.couleur] ?? c.couleur : '—'}</td><td>{c.appellation ?? '—'}</td>
                     <td>—</td><td /><td><Etat type="ok">{c.source === 'carte' ? 'Cuvée reprise d’une carte' : 'Proposé par Pat'}</Etat></td>
                     <td className="droite"><input className="rk" name={`rkc_${c.id}`} type="number" min={0} max={5} step={1} defaultValue={c.ranking_pat ?? ''}

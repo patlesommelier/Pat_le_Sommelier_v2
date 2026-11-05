@@ -27,7 +27,6 @@
 /* « Gratuite… » : pastille bien visible sur le fond anthracite. */
 .fort { display: inline-block; margin: 14px 0 0 !important; padding: 9px 20px; border-radius: 999px; background: rgba(235, 74, 31, .16); border: 1.5px solid var(--qv);
   color: #FFFFFF; font-family: Outfit, sans-serif; font-weight: 700; font-size: clamp(16px, 1.5vw, 19px); line-height: 1.35; }
-.boutons { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 26px; }
 
 /* Aperçu (exemple fictif) : « Ma cave » de l'espace restaurant et l'app de Pat, avec les mêmes vins repérés 1 et 2. */
 .apercu { --bordeaux: #610420; --rose: #F7E6E1; --gris: #F5F2F1; --trait: #E8E2E0;
@@ -65,6 +64,16 @@
 .bouteille { flex: none; width: 34px; height: 34px; border-radius: 7px; border: 1px solid var(--trait); object-fit: cover; background: #FFFFFF; }
 .cellule { color: #212121; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .alerte { display: inline-flex; width: 15px; height: 15px; margin-left: 6px; border-radius: 50%; background: #B3261E; color: #FFFFFF; font-size: 10px; align-items: center; justify-content: center; }
+/* « Prêt à essayer ? » : sur la démo en bas à gauche, apparaît après 5 secondes (invisible et non cliquable avant). */
+.carteFlottante { position: absolute; left: -28px; bottom: -36px; z-index: 2; width: 300px; background: #FFFFFF; border: 1.5px solid var(--qv); border-radius: 18px;
+  padding: 20px 22px; box-shadow: 0 24px 50px rgba(0, 0, 0, .22); display: flex; flex-direction: column; gap: 4px; font-family: Lato, 'Helvetica Neue', sans-serif;
+  animation: apparition .6s ease-out 5s both; }
+.carteFlottante b { font-family: Outfit, sans-serif; font-size: 21px; color: var(--encre); }
+.carteFlottante span { color: var(--doux); font-size: 14px; margin-bottom: 12px; }
+.carteFlottante .btn { font-size: 17px; padding: 14px 20px; box-shadow: 0 10px 26px rgba(235, 74, 31, .38); }
+@keyframes apparition { from { opacity: 0; visibility: hidden; transform: translateY(16px); } to { opacity: 1; visibility: visible; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .carteFlottante { animation: apparitionSimple .01s linear 5s both; } }
+@keyframes apparitionSimple { from { opacity: 0; visibility: hidden; } to { opacity: 1; visibility: visible; } }
 .telephone { position: absolute; right: 0; top: -30px; width: 230px; aspect-ratio: 9 / 19; border-radius: 32px; background: #111111; padding: 8px; box-shadow: 0 30px 60px rgba(0, 0, 0, .28); }
 .telephone video { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; display: block; background: #222222; }
 
@@ -114,6 +123,7 @@
   .app { grid-template-columns: 1fr; }
   /* Le téléphone passe sous la cave, la bulle entre les deux. */
   .telephone { position: relative; right: auto; top: auto; margin: 28px auto 0; }
+  .carteFlottante { position: relative; left: auto; bottom: auto; width: auto; margin-top: 20px; }
 }
 @media (max-width: 680px) {
   .large, .entete { padding-inline: 16px; }

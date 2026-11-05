@@ -5,6 +5,7 @@
 import { revalidatePath } from 'next/cache';
 import { cookies, headers } from 'next/headers';
 import { redirect } from 'next/navigation';
+import { after } from 'next/server';
 import { COOKIE_VUE, exigerAdmin, exigerSuperAdminReel } from '@/lib/admin/auth';
 import { creerCompte, inviter, trouverCompte } from '@/lib/comptes/comptes';
 import { requete } from '@/lib/db';
@@ -253,6 +254,11 @@ export async function changerRanking(type: 'producteur' | 'terroir', id: string,
 const COULEURS_VIN = ['bulles', 'blanc', 'rose', 'rouge', 'orange', 'doux', 'sans_alcool'];
 
 /** Vins des cartes de ce producteur pas encore reliés à un vin de la base : on les relie (s'ils correspondent) et ils reprennent son étiquette. */
+/** Page où revenir après une fiche de vin de la base : la liste des vins (filtres compris) ou la fiche d'un producteur. */
+function retourVin(r: string | null | undefined) {
+  return r && (r.startsWith('/admin/super/vins') || r.startsWith('/admin/super/producteurs/')) ? r : '/admin/super/vins';
+}
+
 async function relierVinsDesCartes(cuveeId: string) {
   const vins = (await requete<{ id: string }>(
     `select v.id from vin_carte v join cuvee c on c.producteur_id = v.producteur_id where c.id = $1 and v.cuvee_id is null`, [cuveeId])).map((v) => v.id);
@@ -402,11 +408,11 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   } else if (retirerEtiquette) {
     await requete(`update vin_carte set etiquette_url = null, etiquette_source = null where cuvee_id = $1 and etiquette_source = 'cuvee'`, [id]);
   }
-  await relierVinsDesCartes(id);
+  // Photos et liens des vins des cartes de ce producteur : après la réponse (long sur un gros producteur, la page attendait).
+  after(() => relierVinsDesCartes(id).catch((e) => console.error('[vin] relier', e)));
   revalidatePath('/', 'layout');
-  // Retour sur la liste d'où l'on venait (mêmes filtres, même page), la ligne du vin centrée et mise en évidence.
-  const liste = txt(f, 'retour');
-  const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
+  // Retour sur la liste d'où l'on venait (mêmes filtres, même page, ou fiche du producteur), la ligne du vin centrée et mise en évidence.
+  const base = retourVin(txt(f, 'retour'));
   const [{ nom } = { nom: 'Vin' }] = await requete<{ nom: string }>('select nom from cuvee where id = $1', [id]);
   const fait = decision === 'valider' ? 'validé' : decision === 'retirer' ? 'retiré de la base' : 'enregistré';
   const lien = appellation && !terroir ? ' (appellation absente de la base : gardée sans lien)' : '';
@@ -422,7 +428,7 @@ export async function fusionnerCuvee(id: string, f: FormData) {
   await exigerAdmin();
   const cible = txt(f, 'cible');
   const retour = txt(f, 'retour');
-  const liste = retour?.startsWith('/admin/super/vins') ? retour : '/admin/super/vins';
+  const liste = retourVin(retour);
   const page = `/admin/super/vins/${encodeURIComponent(id)}`;
   if (!cible || cible === id) redirect(avec(page, { retour: liste, erreur: 'Choisissez le vin à garder.' }));
   const [a, b] = await Promise.all([
@@ -472,8 +478,7 @@ export async function validerCuvees(f: FormData) {
     ? await requete<{ id: string }>(`update cuvee set statut = 'valide' where id = any($1) and statut = 'propose' returning id`, [ids])
     : [];
   revalidatePath('/', 'layout');
-  const liste = txt(f, 'retour');
-  const base = liste?.startsWith('/admin/super/vins') ? liste : '/admin/super/vins';
+  const base = retourVin(txt(f, 'retour'));
   const ok = valides.length ? `${valides.length} vin${valides.length > 1 ? 's' : ''} validé${valides.length > 1 ? 's' : ''}.` : 'Aucun vin à valider dans la sélection.';
   redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: valides[0]?.id ?? ids[0] ?? '', ok })}`);
 }

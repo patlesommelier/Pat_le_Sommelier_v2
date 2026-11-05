@@ -1,5 +1,5 @@
 // Page d'accueil de quidvinum.com (proposition « B » choisie par Pat) : la solution vin des restaurants.
-//   1. grand bandeau anthracite : titre, accroche, boutons ; en dessous, l'aperçu (espace restaurant illustré + l'app de Pat en vidéo) ;
+//   1. grand bandeau anthracite : titre, accroche, « Gratuite… » ; en dessous, l'aperçu (espace restaurant illustré + l'app de Pat en vidéo) ;
 //   2. « Pourquoi Quid Vinum », puis les 6 avantages en cartes (Pat le sommelier en orange) ;
 //   3. avantages en bref et « Comment ça marche » côte à côte ;
 //   4. inscription (le formulaire existant : carte des vins, menu, restaurant) sur fond anthracite.
@@ -65,8 +65,8 @@ const CAVE: { groupe?: string; nom: string; detail: string; distributeur: string
 
 function Apercu() {
   return (
-    <figure className={s.apercu} aria-hidden="true">
-      <div className={s.ecran}>
+    <div className={s.apercu}>
+      <div className={s.ecran} aria-hidden="true">
         <div className={s.ecranBarre}><i /><i /><i /><span>quidvinum.com · Espace restaurant</span></div>
         <div className={s.app}>
           <aside className={s.menuApp}>
@@ -109,10 +109,16 @@ function Apercu() {
         </div>
       </div>
 
-      <div className={s.telephone}>
+      {/* Inscription posée sur la démo, en bas à gauche : elle apparaît après quelques secondes. */}
+      <div className={s.carteFlottante}>
+        <b>Prêt à essayer ?</b>
+        <span>Gratuit, opérationnel en quelques minutes.</span>
+        <a href="#demarrer" className={s.btn}>Inscrire mon restaurant →</a>
+      </div>
+      <div className={s.telephone} aria-hidden="true">
         <VideoDemo video="/demo/demo-2-filet" />
       </div>
-    </figure>
+    </div>
   );
 }
 
@@ -142,9 +148,6 @@ export async function PageQuidVinum() {
           <h1 id="h-titre">Développez et gérez <span>l’offre vin</span> de votre restaurant.</h1>
           <p className={s.accroche}>Quid Vinum gère vos stocks, regroupe vos commandes, rédige et imprime votre carte des vins, vous aide à composer les accords avec vos plats et conseille vos clients à table.</p>
           <p className={s.fort}>Gratuite, la solution est opérationnelle en quelques minutes.</p>
-          <div className={s.boutons}>
-            <a href="#demarrer" className={s.btn}>Inscrire mon restaurant</a>
-          </div>
         </div>
       </section>
 

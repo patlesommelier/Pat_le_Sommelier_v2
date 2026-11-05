@@ -39,12 +39,12 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
     .filter((d) => !d.proche || memeVinQue({ libelle: c.nom, producteur: c.producteur ?? null, couleur: c.couleur ?? null }, { libelle: d.nom, producteur: d.producteur, couleur: d.couleur })
       || memeVinQue({ libelle: d.nom, producteur: d.producteur, couleur: d.couleur }, { libelle: c.nom, producteur: c.producteur ?? null, couleur: c.couleur ?? null }));
   // Liste d'où l'on vient (filtres et page) : on y revient après une validation ou un retrait.
-  const retour = sp.retour?.startsWith('/admin/super/vins') ? sp.retour : '/admin/super/vins';
+  const retour = sp.retour?.startsWith('/admin/super/vins') || sp.retour?.startsWith('/admin/super/producteurs/') ? sp.retour : '/admin/super/vins';
 
   return (
     <>
       <Entete titre={c.nom} texte={[c.producteur, c.appellation].filter(Boolean).join(' · ')}>
-        <Link href={retour} className="btn sec">← Vins de la base</Link>
+        <Link href={retour} className="btn sec">{retour.startsWith('/admin/super/producteurs/') ? '← Producteur' : '← Vins de la base'}</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
       <form action={enregistrerCuvee.bind(null, c.id)} className="fiche-vin">
