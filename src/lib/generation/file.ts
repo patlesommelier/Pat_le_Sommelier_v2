@@ -5,7 +5,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { randomUUID } from 'node:crypto';
 import { regenererAccordsPlat, type Requete } from './accords';
-import { clientClaude, modeleAccords } from '../claude';
+import { avecSuivi, clientClaude, modeleAccords } from '../claude';
 
 /**
  * Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu : une fonction Netlify
@@ -104,8 +104,8 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
       try {
         // Corrections arrêtées 4 minutes après l'heure limite du travailleur : il finit son plat avant d'être coupé.
         const jusqua = finAvant + 4 * 60 * 1000;
-        const b = await avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele,
-          { jusqua, ...(t!.vins ? { vins: t!.vins } : {}) }), finAvant, t.plat_id);
+        const b = await avecSuivi({ poste: 'accords', restaurant: t.restaurant_id }, () => avecReprises(() => regenererAccordsPlat(q, client!, t!.restaurant_id, t!.plat_id, t!.modele ?? modele,
+          { jusqua, ...(t!.vins ? { vins: t!.vins } : {}) }), finAvant, t!.plat_id));
         const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
           + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
           + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');

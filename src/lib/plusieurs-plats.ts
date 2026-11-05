@@ -81,7 +81,7 @@ Ne parle jamais de notes, de score ni de classement des producteurs. Pas de cont
 Réponds uniquement en JSON, sans texte autour : [{"vin": "identifiant", "pourquoi": "..."}]`;
   let resultat: ChoixTable[] = [];
   try {
-    const m = await clientClaude({ maxRetries: 2 }).messages.create({ model: modeleAccords(), max_tokens: 2500, messages: [{ role: 'user', content: consigne }] });
+    const m = await clientClaude({ maxRetries: 2, suivi: { poste: 'app : plusieurs plats' } }).messages.create({ model: modeleAccords(), max_tokens: 2500, messages: [{ role: 'user', content: consigne }] });
     const texte = m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
     const brut = JSON.parse(texte.slice(texte.indexOf('['), texte.lastIndexOf(']') + 1)) as { vin?: unknown; pourquoi?: unknown }[];
     const ids = new Set(d.vins.map((v) => v.id));

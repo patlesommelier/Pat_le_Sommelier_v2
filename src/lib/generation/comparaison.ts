@@ -10,7 +10,7 @@ export type ResultatModele = { lignes: LigneComparee[]; jetonsEntree: number; je
 export type ResultatComparaison = { plats: { id: string; nom: string; modeles: Record<string, ResultatModele> }[] };
 
 export async function comparerModeles(pool: pg.Pool, restaurant: string, plats: string[], modeles: string[]): Promise<ResultatComparaison> {
-  const client = clientClaude({ maxRetries: 4 });
+  const client = clientClaude({ maxRetries: 4, suivi: { poste: 'comparaison des modèles' } });
   const resultat: ResultatComparaison = { plats: [] };
   for (const plat of plats) {
     const { rows: [p] } = await pool.query<{ nom: string }>('select nom from plat where id = $1 and restaurant_id = $2', [plat, restaurant]);

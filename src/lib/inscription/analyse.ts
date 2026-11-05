@@ -6,6 +6,7 @@ import type { Requete } from '../generation/accords';
 import { dedoublonnerPlats, dedoublonnerVins, Plat, unSeulVerre, validerListe, Vin } from './donnees';
 import type { TypeAnalyse } from './etapes';
 import { analyserCarte, analyserMenu, rapprocherVins, type FichierEnvoye } from './lecture';
+import { avecSuivi } from '../claude';
 
 const ECHEC: Record<TypeAnalyse, string> = {
   carte: 'Pat n’a pas réussi à lire cette carte. Essayez des images plus nettes, une par page, ou le PDF.',
@@ -38,6 +39,11 @@ async function prendre(q: Requete): Promise<{ id: string; type: TypeAnalyse } | 
 
 /** Lit les fichiers d'une étape et enregistre le résultat (il remplace le précédent : « Remplacer » repart de zéro). */
 export async function executerAnalyse(q: Requete, inscriptionId: string, type: TypeAnalyse) {
+  // Consommation notée sous « lecture carte » / « lecture menu », rattachée au restaurant une fois créé (par l'inscription).
+  return avecSuivi({ poste: `lecture ${type}`, inscription: inscriptionId }, () => lireEtEnregistrer(q, inscriptionId, type));
+}
+
+async function lireEtEnregistrer(q: Requete, inscriptionId: string, type: TypeAnalyse) {
   const ecrire = (champ: 'vins' | 'plats', liste: unknown[], etat: Record<string, unknown>) =>
     q(`update inscription set ${champ} = $3, lecture = jsonb_set(lecture, $2, $4), maj_le = now() where id = $1`,
       [inscriptionId, `{${type}}`, JSON.stringify(liste), JSON.stringify(etat)]);

@@ -64,7 +64,10 @@ async function lire(fichiers: FichierEnvoye[], consigne: string, attendu: keyof 
     const m = await client.messages.stream({
       model: modele(), max_tokens: 32000,
       messages: [{ role: 'user', content: [...contenu, { type: 'text', text: texte }] }],
-    }).finalMessage();
+      // Relever les vins ou les plats est un travail de recopie : peu de réflexion (facturée comme du texte écrit).
+      // PAT_EFFORT_LECTURE (low, medium, high…) pour changer sans toucher au code.
+      output_config: { effort: process.env.PAT_EFFORT_LECTURE || 'low' },
+    } as Anthropic.MessageStreamParams).finalMessage();
     return m.content.map((b) => (b.type === 'text' ? b.text : '')).join('');
   };
   // « Mauvais document » seulement si la réponse donne le signal convenu et aucune liste.

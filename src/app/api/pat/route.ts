@@ -78,7 +78,7 @@ export async function POST(req: Request) {
     historique[historique.length - 1] = { ...dernier, content: `[Le client consulte la page du plat « ${nomAllege(plat.nom)} » (${plat.id}).]\n\n${dernier.content}` };
   }
 
-  const client = clientClaude();
+  const client = clientClaude({ suivi: { poste: 'questions des clients', restaurant: corps.restaurant } });
   const r = await client.messages.create({
     model: modeleAccords(),
     max_tokens: 1200,

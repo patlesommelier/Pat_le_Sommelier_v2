@@ -92,7 +92,7 @@ const FORMAT_VINS = {
 
 /** PDF scanné : le document lui-même, quelques pages par appel (Claude est plus précis), jusqu'à la dernière page. */
 export async function lireVinsDuPdfImage(pdf: Buffer, modele: string): Promise<VinTarif[]> {
-  const client = clientClaude({ maxRetries: 3 });
+  const client = clientClaude({ maxRetries: 3, suivi: { poste: 'distributeurs' } });
   // Le même document à chaque appel : gardé en cache chez Anthropic (moins cher dès le deuxième appel).
   const document = { type: 'document' as const, source: { type: 'base64' as const, media_type: 'application/pdf' as const, data: pdf.toString('base64') },
     cache_control: { type: 'ephemeral' as const } };
@@ -129,7 +129,7 @@ export async function lireVinsDuTexte(morceaux: string[], modele: string): Promi
   for (const m of morceaux.flatMap((x) => (x.length > CARACTERES_PAR_LECTURE ? x.match(new RegExp(`[^]{1,${CARACTERES_PAR_LECTURE}}(?=\\n|$)`, 'g')) ?? [x] : [x]))) {
     if (lots.length && lots[lots.length - 1].length + m.length < CARACTERES_PAR_LECTURE) lots[lots.length - 1] += `\n${m}`; else lots.push(m);
   }
-  const client = clientClaude({ maxRetries: 3 });
+  const client = clientClaude({ maxRetries: 3, suivi: { poste: 'distributeurs' } });
   let avecFormat = true; // sorties structurées ; si l'API les refuse, la consigne seule suffit
   const demander = async (texte: string) => {
     const corps = { model: modele, max_tokens: 32000, messages: [{ role: 'user' as const, content: consigneTexte(texte) }] };

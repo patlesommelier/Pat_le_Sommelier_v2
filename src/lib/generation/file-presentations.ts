@@ -8,7 +8,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { randomUUID } from 'node:crypto';
 import type { Requete } from './accords';
 import { genererPresentations, SQL_VINS_A_PRESENTER, type VinPresentation } from './presentations';
-import { clientClaude, modeleAccords } from '../claude';
+import { avecSuivi, clientClaude, modeleAccords } from '../claude';
 
 /** Une ligne restée « en cours » plus longtemps que ça vient d'un travailleur interrompu. */
 const BLOQUE_APRES = '20 minutes';
@@ -60,7 +60,7 @@ export async function travaillerPresentations(q: Requete, { finAvant, modele = m
         `select couleur::text as couleur, coalesce(presentation_carte_perso, presentation_carte) as texte from vin_carte
           where restaurant_id = $1 and couleur::text = $2 and disponible and coalesce(presentation_carte_perso, presentation_carte) is not null`,
         [t.restaurant_id, t.couleur]);
-      const textes = vins.length ? await genererPresentations(vins, r?.nom ?? t.restaurant_id, client, modele, { existants }) : {};
+      const textes = vins.length ? await avecSuivi({ poste: 'présentations', restaurant: t.restaurant_id }, () => genererPresentations(vins, r?.nom ?? t!.restaurant_id, client, modele, { existants })) : {};
       // « is null » : un texte saisi par le restaurant pendant la génération n'est pas écrasé.
       for (const [id, texte] of Object.entries(textes)) {
         await q('update vin_carte set presentation_carte = $3 where restaurant_id = $1 and id = $2 and presentation_carte is null', [t.restaurant_id, id, texte]);

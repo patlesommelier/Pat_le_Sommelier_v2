@@ -746,7 +746,7 @@ export async function autrePresentation(resto: string, vinId: string) {
   let erreur: string | null = null;
   try {
     // L'ancien texte est montré au modèle comme « déjà écrit » : la proposition sera différente.
-    const textes = await genererPresentations([vin], r.nom, clientClaude({ maxRetries: 3 }), modeleAccords(),
+    const textes = await genererPresentations([vin], r.nom, clientClaude({ maxRetries: 3, suivi: { poste: 'présentations', restaurant: resto } }), modeleAccords(),
       { existants: [...existants, ...(actuel?.texte ? [{ couleur: vin.couleur, texte: actuel.texte }] : [])] });
     if (textes[vinId]) {
       await requete(`update vin_carte set presentation_carte = $3, presentation_carte_perso = null where restaurant_id = $1 and id = $2`, [resto, vinId, textes[vinId]]);

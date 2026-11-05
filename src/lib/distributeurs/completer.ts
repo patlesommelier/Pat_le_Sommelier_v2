@@ -131,7 +131,7 @@ export async function completerVinsDistributeur(requete: Requete, distributeurId
           and ($2 or not exists (select 1 from distributeur_vin x where x.cuvee_id = c.id and x.distributeur_id = $1 and x.cherche_le is not null))
         order by c.id, v.ordre`, [distributeurId, aussiDejaCherches]);
     if (!vins.length) { await etat('terminee', `${deduits ? `${deduits} cépage${deduits > 1 ? 's' : ''} déduit${deduits > 1 ? 's' : ''} du nom des vins, sans IA. ` : ''}Aucun vin à chercher : les vins incomplets ont déjà été cherchés (cochez « aussi ceux déjà cherchés » pour recommencer).`); return; }
-    const client = clientClaude({ maxRetries: 1 });
+    const client = clientClaude({ maxRetries: 1, suivi: { poste: 'distributeurs' } });
     const modele = modeleTarif(d.modele_lecture);
     const terroirs = await requete<{ id: string; nom: string }>(`select id, nom from terroir where statut <> 'retire'`);
     let cepages = 0, appellations = 0, photos = 0, faits = 0, erreurs = 0, derniereErreur = '', parPlan = 0, surLeWeb = 0;
@@ -259,7 +259,7 @@ export async function recadrerPhotosDistributeur(requete: Requete, distributeurI
     const photos = (await requete<{ url: string }>(
       `select distinct etiquette_url as url from distributeur_vin where distributeur_id = $1 and actif and etiquette_url is not null and not etiquette_recadree`, [distributeurId])).map((p) => p.url);
     if (!photos.length) { await etat('terminee', 'Toutes les photos de ce distributeur sont déjà recadrées sur l’étiquette.'); return; }
-    const client = clientClaude({ maxRetries: 1 });
+    const client = clientClaude({ maxRetries: 1, suivi: { poste: 'distributeurs' } });
     const modele = modeleTarif(d.modele_lecture);
     let recadrees = 0, deja = 0, illisibles = 0, faites = 0;
     const traiter = async (ancienne: string, i: number) => {

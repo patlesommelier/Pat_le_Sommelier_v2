@@ -52,7 +52,7 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
               coalesce(pa.couleurs_ok::text[], '{}') as couleurs_ok, coalesce(pa.cepages_conseilles, '{}') as cepages_conseilles,
               pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond
          from plat pl left join profil_accord pa on pa.plat_id = pl.id where pl.id = $1 and pl.restaurant_id = $2`, [r.plat_id, resto]) : [];
-    const client = claude ?? clientClaude({ maxRetries: 2 });
+    const client = claude ?? clientClaude({ maxRetries: 2, suivi: { poste: 'rajouter un vin', restaurant: resto } });
 
     // 1. La demande en critères (petit modèle, peu cher).
     const texteDemande = [r.demande, plat ? `Plat du menu choisi : ${plat.nom}${plat.description_cuisine ? ` (${plat.description_cuisine})` : ''}` : null,

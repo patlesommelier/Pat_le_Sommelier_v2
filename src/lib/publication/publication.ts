@@ -147,7 +147,7 @@ async function cloturer(q: Requete, publicationId: string) {
  * Traite les plats en attente des préparations de principes jusqu'à épuisement ou jusqu'à l'heure limite.
  * Renvoie le nombre de plats encore en attente (à reprendre par un autre passage).
  */
-export async function travaillerPublications(q: Requete, { finAvant, modele = modeleAccords(), client = clientClaude({ maxRetries: 6 }) }:
+export async function travaillerPublications(q: Requete, { finAvant, modele = modeleAccords(), client = clientClaude({ maxRetries: 6, suivi: { poste: 'publication des règles' } }) }:
   { finAvant: number; modele?: string; client?: Anthropic }) {
   const principesParCode = new Map<string, Awaited<ReturnType<typeof principesPourGeneration>>>();
   const baseRegles = await parametresEnService(q);
