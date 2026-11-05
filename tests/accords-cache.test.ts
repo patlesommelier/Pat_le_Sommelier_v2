@@ -43,3 +43,14 @@ test('accords : premier paquet seul (mise en cache), puis paquets en parallèle 
   await regenererAccordsPlat(q, deux.client, 'resto-cache', 'p1', 'modele-test');
   assert.ok(Math.abs(deux.appels[2].debut - deux.appels[0].debut) < 15, 'cache chaud : tout en parallèle');
 });
+
+test('accords : vins toujours oubliés → corrections par paquets, plus jamais un appel par vin', async () => {
+  let appels = 0;
+  const client = { messages: { stream: () => ({ finalMessage: async () => {
+    appels++;
+    return { stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 }, content: [{ type: 'text', text: '[]' }] };
+  } }) } } as unknown as Anthropic;
+  await regenererAccordsPlat(q, client, 'resto-oublis', 'p1', 'modele-test');
+  // 60 vins : premier passage 3 paquets, 3 tours de correction (3 paquets), derniers vins 2 essais × 6 paquets de 10.
+  assert.equal(appels, 3 + 3 * 3 + 2 * 6);
+});

@@ -477,3 +477,11 @@ dialog.superposition { overflow-y: auto; }
 .pastille-reconnu, .pastille-attente { display: inline-block; margin-top: 4px; padding: 2px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
 .pastille-reconnu { background: #E6F2E8; color: #2E7D32; }
 .pastille-attente { background: #FFF1E0; color: #A65E00; }
+/* Fiche d'un vin reconnu : informations de la base de Quid Vinum, en lecture seule. */
+.infos-base { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; margin: 0; font-size: 14px; }
+.infos-base dt { color: var(--etiquette); font-size: 12px; text-transform: uppercase; letter-spacing: .6px; padding-top: 2px; }
+.infos-base dd { margin: 0; }
+/* Ma cave : millésime de chaque ligne (un même vin peut avoir plusieurs millésimes, une ligne chacun). */
+.champ-millesime { width: 72px; text-align: center; }
+.table-stocks td.centre { text-align: center; }
+.case-carte { width: 20px; height: 20px; accent-color: var(--encre); cursor: pointer; }

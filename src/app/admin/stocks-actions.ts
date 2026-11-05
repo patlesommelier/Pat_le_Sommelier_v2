@@ -77,6 +77,30 @@ export async function enregistrerStocks(resto: string, f: FormData): Promise<Ret
     const groupes = await lignesDesVins(resto, changes);
     for (const id of changes) await choisirFournisseur(resto, groupes.get(id) ?? [id], txt(f, `fournisseur_${id}`), txt(f, `fournisseur_nouveau_${id}`));
   }
+  // Millésime (colonne de Ma cave) : pour toutes les contenances du vin ; seulement ceux qui ont changé.
+  const millesimes = new Map((await requete<{ id: string; millesime: string | null }>(
+    'select id, millesime from vin_carte where restaurant_id = $1 and id = any($2)', [resto, ids])).map((v) => [v.id, v.millesime ?? '']));
+  const nouveauxMillesimes = ids.filter((id) => f.has(`millesime_${id}`) && (txt(f, `millesime_${id}`) ?? '').slice(0, 20) !== millesimes.get(id));
+  if (nouveauxMillesimes.length) {
+    const groupes = await lignesDesVins(resto, nouveauxMillesimes);
+    for (const id of nouveauxMillesimes) {
+      await requete('update vin_carte set millesime = $3 where restaurant_id = $1 and id = any($2)',
+        [resto, groupes.get(id)?.length ? groupes.get(id) : [id], txt(f, `millesime_${id}`)?.slice(0, 20) ?? null]);
+    }
+  }
+  // « À ma carte » : le vin (toutes ses contenances) est proposé sur la carte, ou retiré ; seulement ceux qui ont changé.
+  const envoyes = ids.filter((id) => f.has(`carte_envoye_${id}`));
+  if (envoyes.length) {
+    const groupesCarte = await lignesDesVins(resto, envoyes);
+    const dispo = new Map((await requete<{ id: string; disponible: boolean }>('select id, disponible from vin_carte where restaurant_id = $1', [resto])).map((x) => [x.id, x.disponible]));
+    for (const id of envoyes) {
+      const lignes = groupesCarte.get(id)?.length ? groupesCarte.get(id)! : [id];
+      const voulu = f.get(`carte_${id}`) === 'on';
+      if (lignes.some((l) => dispo.get(l)) !== voulu) {
+        await requete('update vin_carte set disponible = $3 where restaurant_id = $1 and id = any($2)', [resto, lignes, voulu]);
+      }
+    }
+  }
   // Vins confiés à un distributeur de Quid Vinum mais introuvables dans son catalogue : signalés.
   const absents = changes.length ? await requete<{ libelle: string; distributeur: string }>(
     `select v.libelle, f.nom as distributeur from vin_carte v join fournisseur f on f.id = v.fournisseur_id

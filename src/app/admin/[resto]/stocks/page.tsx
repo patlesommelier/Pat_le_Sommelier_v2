@@ -95,11 +95,11 @@ export default async function Stocks({ params, searchParams }: { params: Promise
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
         {parCouleur.length > 0 && (
           <div className="tableau">
-            <table className="table-stocks" style={{ minWidth: 900 }}>
-              <thead><tr><th>Vin</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
+            <table className="table-stocks" style={{ minWidth: 1060 }}>
+              <thead><tr><th>Vin</th><th>À ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
               {parCouleur.map((c) => (
                 <tbody key={c.titre}>
-                  <tr className="rubrique"><td colSpan={7}><b className="rubrique-carte">{c.titre}</b></td></tr>
+                  <tr className="rubrique"><td colSpan={9}><b className="rubrique-carte">{c.titre}</b></td></tr>
                   {c.groupes.map(({ principal: v, tous, disponible, bas: alerte }) => {
                     const nom = nomPourListe(v);
                     return (
@@ -107,7 +107,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                       <tr key={v.id} id={nouveau && tous.some((x) => x.id === nouveau) ? `vin-${nouveau}` : undefined}
                         className={[disponible ? '' : 'indisponible', nouveau && tous.some((x) => x.id === nouveau) ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined}>
                         <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
-                          <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}{v.millesime ? ` ${v.millesime}` : ''}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
+                          <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
                           {/* Vin lu sur la carte : reconnu dans la base de Pat (ses données), ou en attente de validation (tel que lu). */}
                           {v.reconnaissance === 'reconnu' && <span className="pastille-reconnu" title="Vin reconnu dans la base de Pat : nom, producteur et appellation viennent de la base">✓ Reconnu</span>}
                           {v.reconnaissance === 'en_attente' && <span className="pastille-attente" title="Vin pas encore retrouvé dans la base de Pat : tel que lu sur votre carte, en attente de validation">En attente de validation</span>}
@@ -115,6 +115,11 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           {offres.get(v.id) && (() => { const o = offres.get(v.id)!; return (
                             <div className="petit offre-qv">Disponible chez <b>{o.distributeur}</b>{o.prix != null ? ` · ${euros(o.prix)} HTVA` : ''}</div>); })()}
                           </div></div></td>
+                        {/* À ma carte : le vin est proposé sur la carte des vins (app et carte imprimée) ; toutes ses contenances. */}
+                        <td className="centre"><input type="hidden" name={`carte_envoye_${v.id}`} value="1" />
+                          <input type="checkbox" name={`carte_${v.id}`} defaultChecked={disponible} className="case-carte" aria-label={`À ma carte : ${v.libelle}`} /></td>
+                        {/* Millésime : une ligne par millésime d'un même vin ; modifiable ici (toutes ses contenances). */}
+                        <td><input type="text" name={`millesime_${v.id}`} defaultValue={v.millesime ?? ''} placeholder="—" maxLength={20} className="champ-millesime" aria-label={`Millésime : ${v.libelle}`} /></td>
                         <td><SelectFournisseur nom={`fournisseur_${v.id}`} fournisseurs={fournisseurs} valeur={v.fournisseur_id} compact /></td>
                         {/* Distributeur Quid Vinum : prix de son catalogue pour ce restaurant, non modifiable. */}
                         <td className="droite">{v.fournisseur_id && distributeursQv.has(v.fournisseur_id)

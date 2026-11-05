@@ -14,6 +14,11 @@ export interface ContexteSuivi { poste?: string; restaurant?: string | null; ins
 const SUIVI = new AsyncLocalStorage<ContexteSuivi>();
 /** Exécute `f` en notant ses appels à Claude sous ce poste (et ce restaurant). */
 export const avecSuivi = <T,>(contexte: ContexteSuivi, f: () => Promise<T>): Promise<T> => SUIVI.run({ ...SUIVI.getStore(), ...contexte }, f);
+/** Phase d'une étape (« accords » → « accords · corrections ») ; l'étape et le restaurant en cours sont gardés. */
+export const sousPoste = <T,>(phase: string, f: () => Promise<T>): Promise<T> => {
+  const c = SUIVI.getStore() ?? {};
+  return SUIVI.run({ ...c, poste: `${c.poste ?? 'accords'} · ${phase}` }, f);
+};
 
 type Usage = { input_tokens?: number | null; output_tokens?: number | null; cache_read_input_tokens?: number | null;
   cache_creation_input_tokens?: number | null; server_tool_use?: { web_search_requests?: number | null } | null };

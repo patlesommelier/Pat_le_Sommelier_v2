@@ -42,7 +42,9 @@ export async function reconnaitreVins(requete: Requete, restaurantId: string): P
   const cuvees = await requete<CuveeBase & { appellation_id: string | null; cepages: string | null }>(
     `select c.id, c.producteur_id, c.nom, t.nom as appellation, c.appellation_id, c.cepages
        from cuvee c left join terroir t on t.id = c.appellation_id
-      where c.producteur_id = any($1) and c.statut <> 'retire'`, [[...new Set(vins.map((v) => v.producteur_id))]]);
+      where c.producteur_id = any($1) and c.statut <> 'retire'
+        -- pas un vin proposé depuis la carte d'un restaurant, que Pat n'a pas encore validé
+        and (c.statut = 'valide' or coalesce(c.source, '') <> 'carte')`, [[...new Set(vins.map((v) => v.producteur_id))]]);
   let reconnus = 0;
   for (const v of vins) {
     const c = cuveeReconnue(v, cuvees.filter((x) => x.producteur_id === v.producteur_id), v.producteur_nom);

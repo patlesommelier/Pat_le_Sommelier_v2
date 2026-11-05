@@ -13,6 +13,7 @@
  */
 import type Anthropic from '@anthropic-ai/sdk';
 import { createHash } from 'node:crypto';
+import { sousPoste } from '../claude';
 import { N_SAUCE_A_PART } from '../principes/constantes';
 import { textePlat, textePrincipes, texteCarte, texteRegles, type PlatCtx, type PrincipeCtx, type RegleCtx, type VinCtx } from '../pat-cerveau';
 import { controlerPlat, MOTS_INTERDITS, MOTS_MAX, MOTS_MIN, type VinAControler } from './controle';
@@ -217,7 +218,9 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     + `VINS À NOTER ET COMMENTER (${p.length})\n${p.map((v) => ligneVin(v)).join('\n')}`);
   // Consigne pas encore en cache : le premier paquet part seul (il la met en cache), les autres suivent en parallèle.
   const chaud = CACHE_CHAUD.get(cleCache);
-  let lus: Reponse[][];
+  let lus: Reponse[][] = [];
+  // Consommation notée à part pour chaque phase (page Consommation : « accords · premier passage », « · corrections »…).
+  await sousPoste('premier passage', async () => {
   if (chaud && Date.now() - chaud.quand < 4 * 60_000) {
     await chaud.pret;
     lus = await Promise.all(premiers.map(demandePaquet));
@@ -229,35 +232,37 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     CACHE_CHAUD.set(cleCache, { quand: Date.now(), pret: Promise.resolve() });
     lus = [r0, ...await Promise.all(premiers.slice(1).map((p, i) => demandePaquet(p, i + 1)))];
   }
+  });
   for (const r of lus.flat()) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
   let defauts = defautsDe();
   // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.
   const presse = () => options.jusqua !== undefined && Date.now() > options.jusqua;
+  // Défauts qui empêchent d'écrire l'accord (vin oublié, note, mot interdit, commentaire manquant) ; un défaut de style
+  // (longueur, début proche d'un autre…) ne l'empêche pas après les corrections : un seul tour pour lui, les suivants
+  // seulement pour les défauts bloquants (chaque appel renvoie toute la consigne : le style ne vaut pas trois tours).
+  const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit|commentaire manquant)/.test(d);
   for (let essai = 1; essai <= CORRECTIONS && defauts.size && !presse(); essai++) {
     const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id) && reponses.get(v.id)!.commentaire).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
-    const fautifs = paquets(carte.filter((v) => defauts.has(v.id)));
-    const repris = await Promise.all(fautifs.map((p, i) => appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n`
+    const fautifs = paquets(carte.filter((v) => essai === 1 ? defauts.has(v.id) : defauts.get(v.id)?.some(bloquant)));
+    if (!fautifs.length) break;
+    const repris = await sousPoste('corrections', () => Promise.all(fautifs.map((p, i) => appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n`
       + (fautifs.length > 1 ? `Ouvre tes commentaires d'abord par ${ANGLES[(i + essai) % ANGLES.length]}.\n\n` : '')
-      + `VINS À REPRENDRE (${p.length})\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`)));
+      + `VINS À REPRENDRE (${p.length})\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`))));
     for (const r of repris.flat()) if (defauts.has(r.vin)) reponses.set(r.vin, r);
     defauts = defautsDe();
   }
 
-  // Vins encore bloqués : repris un par un (une réponse courte et ciblée réussit mieux qu'une longue liste),
-  // quatre à la fois, deux essais chacun.
-  const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit|commentaire manquant)/.test(d);
+  // Vins encore bloqués : repris ensemble par petits paquets de 10 (une réponse courte et ciblée réussit mieux qu'une
+  // longue liste ; un appel par vin renvoyait toute la consigne à chaque fois), deux essais.
   const bloques = () => carte.filter((v) => defauts.get(v.id)?.some(bloquant));
   for (let essai = 1; essai <= 2 && bloques().length && !presse(); essai++) {
-    const aReprendre = bloques();
-    for (let i = 0; i < aReprendre.length; i += 4) {
-      await Promise.all(aReprendre.slice(i, i + 4).map(async (v) => {
-        const deja = carte.filter((x) => x.id !== v.id && reponses.has(x.id) && !defauts.has(x.id) && reponses.get(x.id)!.commentaire).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
-        for (const r of await appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n` +
-          `UN SEUL VIN À REPRENDRE : réponds avec un tableau d'un seul élément.\n${ligneVin(v, defauts.get(v.id))}`)) {
-          if (r.vin === v.id) reponses.set(r.vin, r);
-        }
-      }));
-    }
+    const aReprendre = paquets(bloques(), 10);
+    const deja = carte.filter((x) => reponses.has(x.id) && !defauts.has(x.id) && reponses.get(x.id)!.commentaire).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
+    const repris = await sousPoste('derniers vins', () => Promise.all(aReprendre.map((p) => appeler(
+      `${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n`
+      + `VINS À REPRENDRE (${p.length}) : un élément par vin, rien d'autre.\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`))));
+    const ids = new Set(aReprendre.flat().map((v) => v.id));
+    for (const r of repris.flat()) if (ids.has(r.vin)) reponses.set(r.vin, r);
     defauts = defautsDe();
   }
   // Note hors règle mais commentaire valable : la note est ramenée à la note imposée, ou dans les bornes du plat.

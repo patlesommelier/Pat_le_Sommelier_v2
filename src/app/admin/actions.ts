@@ -185,7 +185,11 @@ const slug = (s: string) => s.normalize('NFKD').replace(/[\u0300-\u036f]/g, '').
 
 // ───────── Carte des vins ─────────
 export async function enregistrerVin(resto: string, vinId: string, f: FormData): Promise<Retour> {
-  await exigerAcces(resto);
+  const u = await exigerAcces(resto);
+  // Vin reconnu dans la base de Pat : le restaurant ne change ni le producteur, ni le vin (nom, appellation, cépages,
+  // catégorie) ; seulement le millésime, les prix, le stock… (Pat, super-admin, garde la main sur tout).
+  const verrouille = !u.admin && (await requete(`select 1 from vin_carte v join cuvee c on c.id = v.cuvee_id
+    where v.id = $1 and v.restaurant_id = $2 and v.lu_sur_carte is not null and (c.statut = 'valide' or coalesce(c.source, '') <> 'carte')`, [vinId, resto])).length > 0;
   let etiquette: string | null = null;
   const image = fichier(f, 'etiquette');
   if (image) {
@@ -195,11 +199,11 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
       return { erreur: (e as Error).message };
     }
   }
-  await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
+  if (!verrouille) await enregistrerProducteurDuVin(resto, vinId, txt(f, 'producteur_texte'), txt(f, 'producteur_choix'));
   // Fiche par contenances : prix, disponibilité et millésime valent pour toutes les lignes du même vin.
   const parContenances = f.has('contenances_envoyees');
   if (parContenances) await enregistrerContenances(resto, vinId, f);
-  if (f.has('libelle')) await enregistrerIntitule(resto, vinId, f);
+  if (f.has('libelle') && !verrouille) await enregistrerIntitule(resto, vinId, f);
   await requete(
     `update vin_carte set coup_de_coeur = $3,
             etiquette_url = coalesce($4, etiquette_url),
@@ -240,7 +244,7 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
   }
   // Couleur (catégorie de la carte : bulles, blancs… sans alcool) : pour toutes les contenances du vin.
   const couleur = txt(f, 'couleur');
-  if (couleur && COULEURS_VIN.includes(couleur)) {
+  if (couleur && COULEURS_VIN.includes(couleur) && !verrouille) {
     await requete('update vin_carte set couleur = $3::couleur_vin where restaurant_id = $1 and id = any($2)', [resto, await memeVin(resto, vinId), couleur]);
   }
   // L'étiquette rejoint la cuvée dans la base de Pat ; les autres cartes qui ont cette cuvée sans photo la reprennent.
@@ -262,6 +266,67 @@ export async function enregistrerVin(resto: string, vinId: string, f: FormData):
 }
 
 /** Lignes du même vin (une par contenance qui a son propre prix), le vin compris. */
+/**
+ * « Pas mon vin » : le vin reconnu dans la base de Pat ne correspond pas à celui du restaurant. Il reprend ce qui avait été
+ * lu sur sa carte (nom, producteur, appellation), perd le lien avec la base (et l'étiquette venue d'elle) et repasse
+ * « En attente de validation » ; la cuvée écartée est notée pour Pat.
+ */
+export async function pasMonVin(resto: string, vinId: string, retour: string | null) {
+  await exigerAcces(resto);
+  await requete(
+    `update vin_carte v set cuvee_id = null, appellation_id = null, nom_vin = null,
+            libelle = coalesce(v.lu_sur_carte->>'libelle', v.libelle),
+            producteur_texte = coalesce(v.lu_sur_carte->>'producteur', v.producteur_texte),
+            appellation_texte = v.lu_sur_carte->>'appellation',
+            etiquette_url = case when v.etiquette_source = 'cuvee' then null else v.etiquette_url end,
+            etiquette_source = case when v.etiquette_source = 'cuvee' then null else v.etiquette_source end,
+            lu_sur_carte = v.lu_sur_carte || jsonb_build_object('pas_mon_vin', v.cuvee_id, 'pas_mon_vin_le', now()),
+            modifie_bo = now()
+      where v.restaurant_id = $1 and v.id = any($2) and v.cuvee_id is not null and v.lu_sur_carte is not null`,
+    [resto, await memeVin(resto, vinId)]);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  revalidatePath(`/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/carte/${encodeURIComponent(vinId)}`, { ...(retour ? { retour } : {}), ok: 'Le vin repasse « En attente de validation » : Quid Vinum va le vérifier.' }));
+}
+
+/**
+ * Autre millésime d'un vin : chaque contenance du vin est copiée avec ce millésime (nouvelle ligne dans Ma cave), sans stock
+ * ni commande, sur la carte (« À ma carte » coché par défaut) ; ses accords sont repris (même vin, autre année). Le vin reconnu le reste.
+ */
+export async function ajouterMillesime(resto: string, vinId: string, retour: string | null, f: FormData) {
+  await exigerAcces(resto);
+  const millesime = txt(f, 'nouveau_millesime')?.replace(/\s+/g, '').toUpperCase() ?? '';
+  const vers = (params: Record<string, string>) => avec(`/admin/${resto}/carte/${encodeURIComponent(vinId)}`, { ...(retour ? { retour } : {}), ...params });
+  if (!/^(\d{4}|NM)$/.test(millesime)) redirect(vers({ erreur: 'Indiquez un millésime de 4 chiffres (ex. 2022), ou NM pour un vin non millésimé.' }));
+  const lignes = await memeVin(resto, vinId);
+  const [v] = await requete<{ libelle: string; couleur: string }>('select libelle, couleur::text from vin_carte where id = $1 and restaurant_id = $2', [vinId, resto]);
+  if (!v) redirect(vers({ erreur: 'Vin introuvable.' }));
+  const deja = await requete('select 1 from vin_carte where restaurant_id = $1 and libelle = $2 and couleur::text = $3 and upper(coalesce(millesime, \'\')) = $4',
+    [resto, v.libelle, v.couleur, millesime]);
+  if (deja.length) redirect(vers({ erreur: `Le millésime ${millesime} de ce vin est déjà dans votre cave.` }));
+  // Toutes les colonnes du vin sont reprises, sauf celles qui font la nouvelle ligne.
+  const propres = new Set(['id', 'millesime', 'stock', 'en_commande', 'disponible', 'modifie_bo']);
+  const colonnes = (await requete<{ c: string }>(`select column_name as c from information_schema.columns where table_name = 'vin_carte' and is_generated = 'NEVER' order by ordinal_position`))
+    .map((x) => x.c).filter((c) => !propres.has(c));
+  const colonnesAccord = (await requete<{ c: string }>(`select column_name as c from information_schema.columns where table_name = 'accord' and column_name not in ('id', 'vin_id') order by ordinal_position`)).map((x) => x.c);
+  const liste = colonnes.map((c) => `"${c}"`).join(', ');
+  const listeAccord = colonnesAccord.map((c) => `"${c}"`).join(', ');
+  const existants = new Set((await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1', [resto])).map((x) => x.id));
+  let principal = '';
+  for (const ancien of lignes) {
+    let id = `${ancien}-${millesime.toLowerCase()}`;
+    for (let n = 2; existants.has(id); n++) id = `${ancien}-${millesime.toLowerCase()}-${n}`;
+    existants.add(id);
+    await requete(`insert into vin_carte (id, millesime, stock, en_commande, disponible, ${liste})
+                   select $2, $3, 0, 0, true, ${liste} from vin_carte where id = $1 and restaurant_id = $4`, [ancien, id, millesime, resto]);
+    await requete(`insert into accord (vin_id, ${listeAccord}) select $2, ${listeAccord} from accord where vin_id = $1`, [ancien, id]);
+    if (ancien === vinId) principal = id;
+  }
+  revalidatePath(`/admin/${resto}`, 'layout');
+  redirect(avec(`/admin/${resto}/carte/${encodeURIComponent(principal || vinId)}`, { ...(retour ? { retour } : {}),
+    ok: `Millésime ${millesime} ajouté à votre cave et à votre carte (décochez « À ma carte » dans Ma cave pour l’en retirer).` }));
+}
+
 async function memeVin(resto: string, vinId: string) {
   const lignes = await requete<{ id: string; couleur: string; libelle: string; millesime: string | null; format: string }>(
     'select id, couleur::text, libelle, millesime, format from vin_carte where restaurant_id = $1 order by ordre, id', [resto]);

@@ -5,8 +5,10 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
 import { IntituleVin } from '@/components/admin/IntituleVin';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
-import { Etat } from '@/components/admin/Ui';
-import { ecrirePresentations, enregistrerVin, supprimerVin } from '../../../actions';
+import { Etat, Message } from '@/components/admin/Ui';
+import { BoutonAction } from '@/components/admin/BoutonAction';
+import { requete } from '@/lib/db';
+import { ajouterMillesime, ecrirePresentations, enregistrerVin, pasMonVin, supprimerVin } from '../../../actions';
 import { utilisateurCourant, exigerAcces } from '@/lib/admin/auth';
 import { getRankingsInternes, getVinsBO, ligneNotesPat, suggestionsProducteurs } from '@/lib/admin/donnees';
 import { appellationDeduite, nomDeduit, titreCarte } from '@/lib/admin/intitule';
@@ -33,7 +35,7 @@ function Bloc({ titre, resume, ouvert = false, children }: { titre: string; resu
   );
 }
 
-export default async function FicheVinBO({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ retour?: string; presentation?: string }> }) {
+export default async function FicheVinBO({ params, searchParams }: { params: Promise<{ resto: string; vin: string }>; searchParams: Promise<{ retour?: string; presentation?: string; ok?: string; erreur?: string }> }) {
   const { resto, vin } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const id = decodeURIComponent(vin);
@@ -75,6 +77,24 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
   const achat = depuisVins ? (prixQv ?? (await getPrixAchat(resto)).get(v.id)) : undefined;
   const affiche = titreCarte({ ...v, producteur: v.producteur_texte && !/^non /i.test(v.producteur_texte) ? v.producteur_texte : v.producteur_nom });
   const producteurAffiche = v.producteur_texte && /^non /i.test(v.producteur_texte) ? '' : v.producteur_texte ?? v.producteur_nom ?? '';
+  // Vin reconnu dans la base de Pat : le restaurant voit le producteur et le vin de la base, sans les modifier ;
+  // il peut indiquer le millésime, ou dire « Pas mon vin ». Pat (super-admin) garde la fiche complète.
+  const verrouille = v.reconnaissance === 'reconnu' && !u?.admin;
+  const [base] = verrouille ? await requete<{ producteur_id: string; producteur: string; region: string | null; sous_region: string | null; pays: string | null; localisation: string | null;
+    cuvee: string; appellation: string | null; couleur: string | null; cepages: string | null; garde: string | null; description: string | null }>(
+    `select p.id as producteur_id, p.nom as producteur, p.region, p.sous_region, p.pays, p.localisation, c.nom as cuvee, coalesce(t.nom, c.appellation_texte) as appellation,
+            c.couleur::text as couleur, c.cepages, c.garde, c.description
+       from vin_carte v join cuvee c on c.id = v.cuvee_id join producteur p on p.id = c.producteur_id left join terroir t on t.id = c.appellation_id
+      where v.id = $1 and v.restaurant_id = $2`, [v.id, resto]) : [];
+  const { ok, erreur } = await searchParams;
+  // Autre millésime du même vin : une nouvelle ligne dans Ma cave (copie du vin, sans stock).
+  const autreMillesime = (
+    <div className="ligne-actions" style={{ alignItems: 'flex-end' }}>
+      <div className="champ" style={{ margin: 0, maxWidth: 180 }}><label htmlFor="nouveau_millesime">Autre millésime de ce vin</label>
+        <input id="nouveau_millesime" name="nouveau_millesime" placeholder="Ex. 2023" maxLength={6} /></div>
+      <button type="submit" formAction={ajouterMillesime.bind(null, resto, v.id, depuisBase ?? null)} formNoValidate className="btn sec petit">+ Ajouter ce millésime</button>
+    </div>
+  );
 
   return (
     <>
@@ -87,15 +107,46 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
           <h1>{affiche.titre}</h1>
           {affiche.sousTitre && <p style={{ margin: '4px 0 0', color: 'var(--discret)' }}>{affiche.sousTitre}</p>}
         </div>
-        <div className="ligne-actions">
-          <Link href={`/${resto}/vin/${encodeURIComponent(v.id)}`} target="_blank" className="btn sec">Voir la fiche client</Link>
-        </div>
       </header>
 
+      <Message ok={ok} erreur={erreur} />
       <FormulaireAdmin key={v.id} action={enregistrerVin.bind(null, resto, v.id)} className="fiche-vin">
         {(versBase || depuisVins) && <input type="hidden" name="retour" value={versBase ?? `/admin/${resto}/stocks`} />}
         <section className="pile" style={{ gap: 12, minWidth: 0 }}>
           {/* Chaque groupe se replie (flèche) : on n'affiche que ce que l'on modifie. */}
+          {verrouille && base ? (
+            <section className="carte-bo pile" style={{ gap: 12 }}>
+              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
+                <b>Fiche du vin</b><span className="pastille-reconnu" style={{ marginTop: 0 }}>✓ Reconnu</span>
+              </div>
+              <dl className="infos-base">
+                {/* Le producteur : sa fiche (base de Quid Vinum), en lecture. */}
+                <dt>Producteur</dt><dd><Link href={`/admin/${resto}/producteurs/${encodeURIComponent(base.producteur_id)}?${new URLSearchParams({ vin: v.id, ...(depuisBase ? { retour: depuisBase } : {}) })}`} className="btn sec petit">{base.producteur} →</Link></dd>
+                {(base.region || base.pays) && <><dt>Région</dt><dd>{[base.sous_region, base.region, base.pays].filter(Boolean).join(' · ')}</dd></>}
+                {base.localisation && <><dt>Situation</dt><dd>{base.localisation}</dd></>}
+                <dt>Vin</dt><dd>{base.cuvee}</dd>
+                {base.appellation && <><dt>Appellation</dt><dd>{base.appellation}</dd></>}
+                <dt>Catégorie</dt><dd>{COULEURS[base.couleur ?? v.couleur] ?? COULEURS[v.couleur]}</dd>
+                {base.cepages && <><dt>Cépages</dt><dd>{base.cepages}</dd></>}
+                {base.garde && <><dt>Garde</dt><dd>{base.garde}</dd></>}
+                {base.description && <><dt>Description</dt><dd>{base.description}</dd></>}
+              </dl>
+              <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} placeholder="Ex. 2022" /></div>
+              {autreMillesime}
+              <div className="ligne-actions" style={{ alignItems: 'center' }}>
+                <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Pas mon vin" className="btn rouge petit"
+                  question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « En attente de validation » : Quid Vinum le vérifiera." />
+                <span className="petit discret">Ce vin ne correspond pas au vôtre : il repasse en attente de validation.</span>
+              </div>
+            </section>
+          ) : (<>
+            {/* Vin lu sur la carte, pas encore validé : le restaurant complète sa fiche ; il reste en attente jusqu'à la validation de Quid Vinum. */}
+            {v.reconnaissance === 'en_attente' && (
+              <div className="carte-bo ligne-actions" style={{ alignItems: 'center', justifyContent: 'space-between' }}>
+                <span className="petit">Complétez les informations du producteur et du vin, puis enregistrez : Quid Vinum les vérifiera.</span>
+                <span className="pastille-attente" style={{ marginTop: 0 }}>En attente de validation</span>
+              </div>
+            )}
           <Bloc titre="Producteur" resume={producteurAffiche || 'À préciser'} ouvert={Boolean(sansLien || suggestions.length || (pk === 'attention' && v.a_verifier))}>
             <div className="champ">
               <label htmlFor="producteur_texte">Nom affiché</label>
@@ -147,7 +198,10 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 <input id="cepages" name="cepages" placeholder="Ex. Chardonnay" defaultValue={v.cepages ?? ''} /></div>
             </div>
             <div className="champ" style={{ maxWidth: 240 }}><label htmlFor="millesime">Millésime</label><input id="millesime" name="millesime" defaultValue={v.millesime ?? ''} /></div>
+            {autreMillesime}
           </Bloc>
+
+          </>)}
 
           <Bloc titre="Prix et contenances" resume={cochees.length ? cases.filter((c) => cochees.includes(c.code)).map((c) => `${c.libelle}${prixDe(c.code) != null ? ` ${String(prixDe(c.code)).replace('.', ',')} €` : ''}`).join(' · ') : 'Aucune contenance cochée'}>
             <input type="hidden" name="contenances_envoyees" value="1" />
