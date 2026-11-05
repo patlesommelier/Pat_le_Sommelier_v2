@@ -28,6 +28,11 @@ export default async function Consommation({ searchParams }: { searchParams: Pro
       where c.quand > now() - make_interval(days => $1)
       group by 1, 2, 3, 4`, [jours]);
   const avecCout = lignes.map((l) => ({ ...l, cout: coutClaude(l.modele, l) }));
+  // Défauts relevés au premier passage des accords (par plat), additionnés par restaurant : ce qui déclenche les corrections.
+  const defauts = await requete<{ restaurant: string; sorte: string; n: number }>(
+    `select g.restaurant_id as restaurant, e.k as sorte, sum(e.v::int)::int as n
+       from generation_accords g cross join lateral jsonb_each_text(g.defauts) as e(k, v)
+      where g.defauts is not null and g.fin_le > now() - make_interval(days => $1) group by 1, 2`, [jours]);
   const total = avecCout.reduce((n, l) => n + l.cout, 0);
   // Par restaurant, puis par étape.
   const restos = [...new Map(avecCout.map((l) => [l.restaurant ?? '', l.restaurant ? (l.nom ?? `${l.restaurant} (supprimé)`) : 'Hors restaurant (distributeurs, publications, inscriptions en cours…)'])).entries()]
@@ -54,6 +59,14 @@ export default async function Consommation({ searchParams }: { searchParams: Pro
           <div style={{ display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'baseline' }}>
             <h2 style={{ margin: 0 }}>{r.nom}</h2><b>{dollars(r.cout)}</b>
           </div>
+          {(() => {
+            const siens = defauts.filter((x) => x.restaurant === r.id);
+            const vins = siens.find((x) => x.sorte === 'vins')?.n ?? 0;
+            const autres = siens.filter((x) => x.sorte !== 'vins').sort((a, b) => b.n - a.n);
+            return vins ? (
+              <p className="petit" style={{ margin: 0 }}>Défauts au premier passage des accords, sur {vins.toLocaleString('fr-BE')} commentaires demandés :{' '}
+                {autres.length ? autres.map((x) => `${x.sorte} ${x.n} (${Math.round((100 * x.n) / vins)} %)`).join(' · ') : 'aucun'}</p>) : null;
+          })()}
           <div className="tableau"><table>
             <thead><tr><th>Étape</th><th>Modèle</th><th className="droite">Appels</th><th className="droite">Lu</th><th className="droite">Écrit</th><th className="droite">Recherches web</th><th className="droite">Coût</th></tr></thead>
             <tbody>{r.postes.map((p) => (

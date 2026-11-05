@@ -53,7 +53,9 @@ interface VinGen extends VinCtx { appellation: string | null; ordre: number }
 interface AccordActuel { plat_id: string; vin_id: string; note: number | null; origine: string; statut: string }
 interface Reponse { vin: string; note: number; commentaire: string; limite: string | null }
 
-export interface Bilan { ecrits: number; imposes: number; aRevoir: string[]; jetonsEntree: number; jetonsSortie: number }
+export interface Bilan { ecrits: number; imposes: number; aRevoir: string[]; jetonsEntree: number; jetonsSortie: number;
+  /** Défauts relevés au premier passage, par sorte (pour comprendre le coût des corrections). */
+  defauts?: Record<string, number> }
 
 function consigneSysteme(principes: PrincipeCtx[], regles: RegleCtx[], carte: VinGen[]) {
   return `Tu es Pat, sommelier. Pour un plat d'un restaurant, tu notes chaque vin de sa carte et tu écris le commentaire d'accord que lira le client.
@@ -200,6 +202,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     .filter((x): x is { v: VinGen; r: Reponse } => Boolean(x.r && Number.isFinite(x.r.note) && x.r.note >= 3))
     .sort((a, b) => b.r.note - a.r.note || a.v.ordre - b.v.ordre)
     .filter((x, i) => x.r.note >= 4 || i < VISIBLES_MIN).map((x) => x.v.id));
+  const notesRamenees = new Set<string>();
   const defautsDe = () => {
     const d = new Map<string, string[]>();
     const aControler: VinAControler[] = [];
@@ -207,10 +210,14 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     for (const v of carte) {
       const r = reponses.get(v.id);
       if (!r) { d.set(v.id, ['vin absent de la réponse']); continue; }
+      // Note imposée, ou au-dessus du plafond du plat : corrigée ici, sans redemander à Claude (un appel ne sert à rien).
       const n = imposee(v.id);
-      if (n !== null ? r.note !== n : !(Number.isInteger(r.note) && r.note >= 1 && r.note <= plafond)) {
-        d.set(v.id, [n !== null ? `la note imposée est ${n}` : `note invalide (entière, de 1 à ${plafond})`]);
+      const lue = Number(r.note);
+      if (n !== null && r.note !== n) { r.note = n; notesRamenees.add(v.id); }
+      else if (n === null && Number.isFinite(lue) && !(Number.isInteger(r.note) && r.note >= 1 && r.note <= plafond)) {
+        r.note = Math.min(plafond, Math.max(1, Math.round(lue))); notesRamenees.add(v.id);
       }
+      if (n === null && !Number.isFinite(lue)) d.set(v.id, [`note invalide (entière, de 1 à ${plafond})`]);
       // Vin faible (2 ou moins) : pas de commentaire à contrôler, une phrase automatique le remplace.
       if (faible(r)) continue;
       if (!r.commentaire) { d.set(v.id, [...(d.get(v.id) ?? []), 'commentaire manquant (note 3 ou plus)']); continue; }
@@ -252,6 +259,14 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   });
   for (const r of lus.flat()) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
   let defauts = defautsDe();
+  // Bilan des défauts du premier passage, par sorte (affiché dans Consommation Claude).
+  const sortes: Record<string, number> = {};
+  const sorte = (x: string) => /^vin absent/.test(x) ? 'vins oubliés' : /^note/.test(x) ? 'notes illisibles' : /^commentaire manquant/.test(x) ? 'commentaires manquants'
+    : /^mot interdit/.test(x) ? 'mots interdits' : /mots \(attendu/.test(x) ? 'longueur' : /^aucun élément/.test(x) ? 'vin pas cité'
+    : /début|doublon/.test(x) ? 'ressemblances' : 'autres';
+  for (const d of defauts.values()) for (const k of new Set(d.map(sorte))) sortes[k] = (sortes[k] ?? 0) + 1;
+  if (notesRamenees.size) sortes['notes ramenées au plafond'] = notesRamenees.size;
+  sortes['vins'] = carte.length;
   // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.
   const presse = () => options.jusqua !== undefined && Date.now() > options.jusqua;
   // Défauts qui empêchent d'écrire l'accord (vin oublié, note, mot interdit, commentaire manquant) ; un défaut de style
@@ -338,7 +353,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
           valides.map((r) => r.commentaire), valides.map((r) => (r.note === 5 ? null : r.limite))],
       );
     }
-    return { ecrits: valides.length, imposes: carte.filter((v) => imposee(v.id) !== null).length, aRevoir: [...defauts.keys()], jetonsEntree, jetonsSortie };
+    return { ecrits: valides.length, imposes: carte.filter((v) => imposee(v.id) !== null).length, aRevoir: [...defauts.keys()], jetonsEntree, jetonsSortie, defauts: sortes };
   }
 
   // Une seule requête : l'écriture du plat est atomique (tout ou rien).
@@ -367,5 +382,5 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
        from (select a2.id, row_number() over (order by a2.note desc nulls last, v.ordre) as rn
                from accord a2 join vin_carte v on v.id = a2.vin_id where a2.plat_id = $1) r
       where a.id = r.id and a.rang is distinct from r.rn`, [platId]);
-  return { ecrits: valides.length, imposes: carte.filter((v) => imposee(v.id) !== null).length, aRevoir: [...defauts.keys()], jetonsEntree, jetonsSortie };
+  return { ecrits: valides.length, imposes: carte.filter((v) => imposee(v.id) !== null).length, aRevoir: [...defauts.keys()], jetonsEntree, jetonsSortie, defauts: sortes };
 }

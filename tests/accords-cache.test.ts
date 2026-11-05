@@ -68,3 +68,17 @@ test('accords : seuls les commentaires des vins visibles (les mieux notés) sont
   // Premier passage (3 paquets), puis un seul tour de correction pour les 8 vins visibles ; rien pour les 52 autres.
   assert.deepEqual(demandes.slice(3), [8]);
 });
+
+test('accords : une note hors bornes est ramenée sans redemander à Claude, et les défauts sont comptés', async () => {
+  let appels = 0;
+  const client = { messages: { stream: (params: { messages: { content: string }[] }) => ({ finalMessage: async () => {
+    appels++;
+    const ids = [...params.messages[0].content.matchAll(/^(v\d+) \|/gm)].map((m) => m[1]);
+    return { stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 },
+      content: [{ type: 'text', text: JSON.stringify(ids.map((vin) => ({ vin, note: 1.4, commentaire: '', limite: null }))) }] };
+  } }) } } as unknown as Anthropic;
+  const b = await regenererAccordsPlat(q, client, 'resto-notes', 'p1', 'modele-test');
+  assert.equal(appels, 3); // premier passage seulement
+  assert.equal(b.defauts?.['notes ramenées au plafond'], 60);
+  assert.equal(b.defauts?.vins, 60);
+});

@@ -109,7 +109,7 @@ export async function travailler(q: Requete, { finAvant, modele = modeleAccords(
         const message = `${b.ecrits} accord${b.ecrits > 1 ? 's' : ''} écrit${b.ecrits > 1 ? 's' : ''}`
           + (b.imposes ? `, ${b.imposes} note${b.imposes > 1 ? 's' : ''} modifiée${b.imposes > 1 ? 's' : ''} à la main gardée${b.imposes > 1 ? 's' : ''}` : '')
           + (b.aRevoir.length ? ` ; inchangés (réponse à revoir) : ${b.aRevoir.join(', ')}` : '');
-        await q(`update generation_accords set statut = 'fait', message = $2, fin_le = now() where id = $1`, [t.id, message]);
+        await q(`update generation_accords set statut = 'fait', message = $2, fin_le = now(), defauts = $3 where id = $1`, [t.id, message, b.defauts ? JSON.stringify(b.defauts) : null]);
         console.log(`[accords] ${t.plat_id} : ${message} (jetons ${b.jetonsEntree} + ${b.jetonsSortie})`);
         await ouvrirSiAssez(q, t.restaurant_id);
       } catch (e) {
