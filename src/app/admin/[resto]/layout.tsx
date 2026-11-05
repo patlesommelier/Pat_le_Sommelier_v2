@@ -14,8 +14,8 @@ const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus
 // « Base des vins » (Ma cave, Rajouter un vin, Commandes, Distributeurs) : en tête du menu, au-dessus de « Cartes et menus ».
 function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
   const base = `/admin/${resto}`;
-  const stocks: Etape[] = [['stocks', 'Ma cave', 'stock'], ['trouver-vin', 'Rajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
-    .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Base des vins', icone,
+  const stocks: Etape[] = [['stocks', 'Les vins', 'stock'], ['trouver-vin', 'Rajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
+    .map(([chemin, libelle, icone]) => ({ href: `${base}/${chemin}`, libelle, etat: 'fait', groupe: 'Gestion de cave', icone,
       // Commandes : pastille quand Quid Vinum a changé le statut d’une commande ou joint une facture depuis la dernière visite.
       ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}) }));
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.

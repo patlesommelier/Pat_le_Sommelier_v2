@@ -396,7 +396,7 @@ async function enregistrerReception(resto: string, commandeId: string, recues: M
   rafraichir(resto);
   const n = recu.reduce((t, l) => t + l.q, 0);
   return { ok: `${n} bouteille${n > 1 ? 's' : ''} ajoutée${n > 1 ? 's' : ''} au stock : ${complete ? 'commande entièrement reçue' : 'réception partielle'}.`
-    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page Ma cave).` : ''), reception: id };
+    + (misSurCarte.length ? ` ${misSurCarte.length} vin${misSurCarte.length > 1 ? 's' : ''} ajouté${misSurCarte.length > 1 ? 's' : ''} à la carte : indiquez son prix de vente (page « Les vins »).` : ''), reception: id };
 }
 
 /** Réception des bouteilles (fenêtre de la commande) : champs recue_<ordre de la ligne>. */
@@ -480,7 +480,7 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
   if (!id) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   rafraichir(resto);
   revalidatePath(`/admin/${resto}/fournisseurs/${distributeurId}`);
-  return { ok: `« ${c.libelle} » est ajouté à votre cave (dans Ma cave, avec les vins de sa couleur) : mettez-le au panier ici ou depuis Ma cave.`, vin: id };
+  return { ok: `« ${c.libelle} » est ajouté à votre cave (dans « Les vins », avec les vins de sa couleur) : mettez-le au panier ici ou depuis « Les vins ».`, vin: id };
 }
 
 // ───────── Panier (page Vins) ─────────

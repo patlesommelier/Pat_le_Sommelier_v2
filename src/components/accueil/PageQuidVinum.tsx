@@ -77,13 +77,13 @@ function Apercu() {
             <span className={s.menuLien}><Icone nom="menu" taille={14} />Gérer le menu</span>
             <span className={s.menuLien}><Icone nom="bottle" taille={14} />Carte des vins</span>
             <span className={s.menuLien}><Icone nom="pat" taille={13} />Règles du sommelier</span>
-            <span className={s.menuSection}>Base des vins</span>
-            <span className={`${s.menuLien} ${s.menuActif}`}><Icone nom="stock" taille={14} />Ma cave</span>
+            <span className={s.menuSection}>Gestion de cave</span>
+            <span className={`${s.menuLien} ${s.menuActif}`}><Icone nom="stock" taille={14} />Les vins</span>
             <span className={s.menuLien}><Icone nom="camion" taille={14} />Commandes</span>
             <span className={s.menuLien}><Icone nom="fournisseur" taille={14} />Distributeurs</span>
           </aside>
           <div className={s.caveApp}>
-            <b className={s.caveTitre}>Ma cave</b>
+            <b className={s.caveTitre}>Les vins</b>
             <div className={s.tuiles}>
               <span><b>1</b>vin en stock bas</span><span><b>214</b>bouteilles en stock</span><span><b>24</b>bouteilles en commande</span>
             </div>

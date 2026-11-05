@@ -516,7 +516,7 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   if (!libelle) return { erreur: 'Indiquez au moins l’appellation ou le nom du vin.' };
   // Un vin n'est qu'une fois dans vos vins (même millésime) : même vin du catalogue, même vin de la base ou même intitulé.
   const deja = await vinDejaPresent(resto, libelle, txt(f, 'millesime'), txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
-  if (deja) return { erreur: `« ${deja.libelle}${deja.millesime && !deja.libelle.includes(deja.millesime) ? ` ${deja.millesime}` : ''} » est déjà dans vos vins${deja.disponible ? '' : ' (pas encore sur votre carte)'} : ouvrez sa fiche depuis Ma cave pour changer ses contenances ou ses prix.` };
+  if (deja) return { erreur: `« ${deja.libelle}${deja.millesime && !deja.libelle.includes(deja.millesime) ? ` ${deja.millesime}` : ''} » est déjà dans vos vins${deja.disponible ? '' : ' (pas encore sur votre carte)'} : ouvrez sa fiche depuis « Les vins » pour changer ses contenances ou ses prix.` };
   let etiquette: string | null = null;
   const image = fichier(f, 'etiquette');
   if (image) {

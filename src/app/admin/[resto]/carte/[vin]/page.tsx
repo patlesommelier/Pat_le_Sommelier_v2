@@ -96,7 +96,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
 
   return (
     <>
-      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Ma cave' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
+      <Link href={retour} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>{versBase ? '← Vins de la base' : depuisVins ? '← Les vins' : <>← Carte des vins · {COULEURS[v.couleur] ?? v.couleur}</>}</Link>
       <header className="bo-entete">
         <div>
           {/* Code interne du vin : super-admin seulement. */}
@@ -266,7 +266,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
             <div className="champ" style={{ margin: 0 }}>
               <input type="hidden" name="fournisseur_envoye" value="1" />
               <SelectFournisseur nom="fournisseur" fournisseurs={fournisseurs} valeur={v.fournisseur_id} />
-              <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Base des vins › Vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
+              <span className="aide">Le stock de ce vin et ses commandes se gèrent dans <Link href={`/admin/${resto}/stocks`}>Gestion de cave › Les vins</Link> : {v.stock} bouteille{v.stock > 1 ? 's' : ''} en stock{v.en_commande ? `, ${v.en_commande} en commande` : ''}.</span>
             </div>
           )}
 

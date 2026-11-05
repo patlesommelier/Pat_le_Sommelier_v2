@@ -64,7 +64,7 @@ export default async function FicheProducteur({ params, searchParams }: { params
   const lieu = [p.sous_region, p.region, p.pays].filter(Boolean).join(' · ');
   return (
     <>
-      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin ? 'Fiche du vin' : 'Ma cave'}</Link>
+      <Link href={vers} className="lien-ligne" style={{ minHeight: 0, marginBottom: -8 }}>← {vin ? 'Fiche du vin' : 'Les vins'}</Link>
       <header className="bo-entete"><div>
         <span className="surtitre">Producteur</span>
         <h1>{p.nom}</h1>

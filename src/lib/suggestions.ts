@@ -32,8 +32,18 @@ async function lireUne(q: Requete): Promise<{ restaurantId: string; platIds: str
                  and cible in (select id from plat where restaurant_id = $1 and categorie = 'suggestion')`, [l.restaurant_id]);
       await q(`delete from plat where restaurant_id = $1 and categorie = 'suggestion'`, [l.restaurant_id]);
     }
+    // Suggestion déjà au menu (même plat, lu à l'inscription…) : le plat passe en suggestion, avec ses accords, au lieu
+    // d'apparaître deux fois (dans « Plats » et dans « Suggestions »). Son prix est celui de la suggestion.
+    const auMenu = await q<{ id: string; nom: string }>(
+      `select id, nom from plat where restaurant_id = $1 and categorie <> 'suggestion' and actif`, [l.restaurant_id]);
+    const dejaLa = associerNoms(auMenu, plats);
+    for (const [platId, p] of dejaLa) {
+      await q(`update plat set categorie = 'suggestion', prix = coalesce($2, prix), prix_variantes = coalesce($3, prix_variantes), modifie_bo = now()
+                where id = $1`, [platId, p.prix ?? null, p.prixVariantes ?? null]);
+    }
+    const repris = new Set(dejaLa.values());
     const ids: string[] = [];
-    for (const p of plats) {
+    for (const p of plats.filter((x) => !repris.has(x))) {
       const base = `${l.restaurant_id}-sugg-${slug(p.nom) || 'plat'}`;
       let id = base;
       for (let n = 2; (await q('select 1 from plat where id = $1', [id])).length; n++) id = `${base}-${n}`;
@@ -44,7 +54,8 @@ async function lireUne(q: Requete): Promise<{ restaurantId: string; platIds: str
       ids.push(id);
     }
     await q(`update lecture_suggestions set statut = 'ok', maj_le = now(), message = $2 where id = $1`,
-      [l.id, `${ids.length} suggestion${ids.length > 1 ? 's' : ''} ajoutée${ids.length > 1 ? 's' : ''} : ${plats.map((p) => p.nom).join(', ')}.`]);
+      [l.id, `${plats.length} suggestion${plats.length > 1 ? 's' : ''} ajoutée${plats.length > 1 ? 's' : ''} : ${plats.map((p) => p.nom).join(', ')}.`
+        + (dejaLa.size ? ` ${dejaLa.size} ${dejaLa.size > 1 ? 'étaient déjà au menu : ils passent' : 'était déjà au menu : il passe'} en suggestion.` : '')]);
     await q('delete from lecture_suggestions_fichier where lecture_id = $1', [l.id]); // les photos ne sont plus utiles
     return { restaurantId: l.restaurant_id, platIds: ids, demandePar: l.demande_par ?? 'suggestions' };
   } catch (e) {

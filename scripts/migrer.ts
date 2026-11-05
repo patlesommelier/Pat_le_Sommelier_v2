@@ -17,6 +17,7 @@ import { rattacherProducteurs } from '../src/lib/producteurs/rattachement';
 import { recomposerIntitules } from './lib/intitules';
 import { importerAccordsReference } from '../src/lib/app/import';
 import { ajouterCuveesManquantes } from '../src/lib/distributeurs/rattachement';
+import { associerNoms } from '../src/lib/inscription/prix';
 
 async function main() {
   const contexte = process.env.CONTEXT; // fourni par Netlify : production, deploy-preview, branch-deploy…
@@ -55,6 +56,17 @@ async function main() {
     let ajoutes = 0;
     for (const { id } of await q<{ id: string }>('select id from distributeur')) ajoutes += await ajouterCuveesManquantes(q, id);
     if (ajoutes) console.log(`Vins des distributeurs ajoutés à la base : ${ajoutes}.`);
+    // Suggestions envoyées alors que le même plat était au menu (doublon dans l'app) : le plat du menu est retiré de la
+    // carte (gardé, inactif, avec ses accords). Les nouvelles suggestions reprennent directement le plat du menu.
+    let doublons = 0;
+    for (const { restaurant_id: r } of await q<{ restaurant_id: string }>(`select distinct restaurant_id from plat where categorie = 'suggestion' and actif`)) {
+      const [menu, suggestions] = await Promise.all([
+        q<{ id: string; nom: string }>(`select id, nom from plat where restaurant_id = $1 and categorie <> 'suggestion' and actif`, [r]),
+        q<{ id: string; nom: string }>(`select id, nom from plat where restaurant_id = $1 and categorie = 'suggestion' and actif`, [r])]);
+      const memes = [...associerNoms(menu, suggestions).keys()];
+      if (memes.length) doublons += (await q('update plat set actif = false, modifie_bo = now() where id = any($1) returning id', [memes])).length;
+    }
+    if (doublons) console.log(`Plats du menu en double avec une suggestion, retirés de la carte : ${doublons}.`);
   } catch (e) {
     await client.query('rollback');
     throw e;

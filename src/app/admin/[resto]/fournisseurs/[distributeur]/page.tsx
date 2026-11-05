@@ -38,9 +38,9 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
 
   return (
     <>
-      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur, au prix d’achat HTVA proposé par Quid Vinum. Ajoutez un vin à votre cave avec « + » : il apparaît dans Ma cave (pas encore sur votre carte) et se commande avec le panier.">
+      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur, au prix d’achat HTVA proposé par Quid Vinum. Ajoutez un vin à votre cave avec « + » : il apparaît dans « Les vins » (pas encore sur votre carte) et se commande avec le panier.">
         <Link href={`/admin/${resto}/fournisseurs`} className="btn fantome">← Distributeurs</Link>
-        <Link href={`/admin/${resto}/stocks`} className="btn sec">Ma cave et panier</Link>
+        <Link href={`/admin/${resto}/stocks`} className="btn sec">Les vins et panier</Link>
       </Entete>
       {(d.presentation || site) && <p className="petit" style={{ margin: 0 }}>{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</p>}
       <form className="ligne-actions" style={{ alignItems: 'center' }}>
