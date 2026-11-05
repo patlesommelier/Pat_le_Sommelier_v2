@@ -54,3 +54,17 @@ test('accords : vins toujours oubliés → corrections par paquets, plus jamais 
   // 60 vins : premier passage 3 paquets, 3 tours de correction (3 paquets), derniers vins 2 essais × 6 paquets de 10.
   assert.equal(appels, 3 + 3 * 3 + 2 * 6);
 });
+
+test('accords : seuls les commentaires des vins visibles (les mieux notés) sont corrigés', async () => {
+  const demandes: number[] = [];
+  const client = { messages: { stream: (params: { messages: { content: string }[] }) => ({ finalMessage: async () => {
+    const ids = [...params.messages[0].content.matchAll(/^(v\d+) \|/gm)].map((m) => m[1]);
+    demandes.push(ids.length);
+    // Tous notés 3, avec un commentaire trop court (défaut de style seulement).
+    return { stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 },
+      content: [{ type: 'text', text: JSON.stringify(ids.map((vin) => ({ vin, note: 3, commentaire: `Bel accord ${vin}.`, limite: null }))) }] };
+  } }) } } as unknown as Anthropic;
+  await regenererAccordsPlat(q, client, 'resto-visibles', 'p1', 'modele-test');
+  // Premier passage (3 paquets), puis un seul tour de correction pour les 8 vins visibles ; rien pour les 52 autres.
+  assert.deepEqual(demandes.slice(3), [8]);
+});

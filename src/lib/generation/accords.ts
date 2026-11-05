@@ -26,6 +26,8 @@ const CORRECTIONS = 3;
  * la consigne commune, en cache, n'est pas renvoyée en entier).
  */
 export const VINS_PAR_PAQUET = 25;
+/** Vins d'un plat au moins dont le commentaire est contrôlé et corrigé (les mieux notés : ceux que le client peut voir). */
+export const VISIBLES_MIN = 8;
 
 /**
  * Réflexion de Claude pour les accords (facturée comme du texte écrit) : « medium » par défaut, moins cher que le
@@ -191,9 +193,17 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   const plafond = plat.plafond ? Number(plat.plafond) : 5;
   const reponses = new Map<string, Reponse>();
   const faible = (r: Reponse) => Number.isFinite(r.note) && r.note <= 2;
+  // Vins que le client peut voir pour ce plat : notés 4 ou plus, et au moins les VISIBLES_MIN mieux notés (3 ou plus).
+  // Seuls leurs commentaires sont contrôlés en détail et corrigés ; pour les autres, le premier commentaire est gardé
+  // s'il n'a pas de mot interdit (sinon l'accord n'est pas écrit). Les corrections coûtaient plus que le premier passage.
+  const visibles = () => new Set(carte.map((v) => ({ v, r: reponses.get(v.id) }))
+    .filter((x): x is { v: VinGen; r: Reponse } => Boolean(x.r && Number.isFinite(x.r.note) && x.r.note >= 3))
+    .sort((a, b) => b.r.note - a.r.note || a.v.ordre - b.v.ordre)
+    .filter((x, i) => x.r.note >= 4 || i < VISIBLES_MIN).map((x) => x.v.id));
   const defautsDe = () => {
     const d = new Map<string, string[]>();
     const aControler: VinAControler[] = [];
+    const vus = visibles();
     for (const v of carte) {
       const r = reponses.get(v.id);
       if (!r) { d.set(v.id, ['vin absent de la réponse']); continue; }
@@ -204,6 +214,13 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
       // Vin faible (2 ou moins) : pas de commentaire à contrôler, une phrase automatique le remplace.
       if (faible(r)) continue;
       if (!r.commentaire) { d.set(v.id, [...(d.get(v.id) ?? []), 'commentaire manquant (note 3 ou plus)']); continue; }
+      if (!vus.has(v.id)) {
+        // Vin pas montré au client pour ce plat : seulement les mots interdits.
+        const t = r.commentaire.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/['’]/g, ' ');
+        const interdits = MOTS_INTERDITS.filter(([, re]) => re.test(t)).map(([m]) => `mot interdit « ${m} »`);
+        if (interdits.length) d.set(v.id, [...(d.get(v.id) ?? []), ...interdits]);
+        continue;
+      }
       aControler.push({ vin: v.id, note: r.note, commentaire: r.commentaire,
         reperes: [v.cepages ?? '', v.producteur ?? '', v.appellation ?? '', v.libelle].filter(Boolean),
         meilleurPlat: r.note <= 2 ? meilleurPlat(v.id) : null });
@@ -241,9 +258,17 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   // (longueur, début proche d'un autre…) ne l'empêche pas après les corrections : un seul tour pour lui, les suivants
   // seulement pour les défauts bloquants (chaque appel renvoie toute la consigne : le style ne vaut pas trois tours).
   const bloquant = (d: string) => /^(vin absent|la note imposée|note invalide|mot interdit|commentaire manquant)/.test(d);
+  // À redemander à Claude : un vin visible (tout défaut au premier tour, ensuite seulement les bloquants) ; un vin non visible
+  // seulement s'il manque sa note (oublié ou note invalide) : elle compte pour le classement ; son commentaire, non.
+  const aReprendre = (id: string, tout: boolean) => {
+    const d = defauts.get(id);
+    if (!d) return false;
+    if (visibles().has(id)) return tout || d.some(bloquant);
+    return d.some((x) => /^(vin absent|la note imposée|note invalide)/.test(x));
+  };
   for (let essai = 1; essai <= CORRECTIONS && defauts.size && !presse(); essai++) {
     const retenus = carte.filter((v) => reponses.has(v.id) && !defauts.has(v.id) && reponses.get(v.id)!.commentaire).map((v) => `- ${reponses.get(v.id)!.commentaire}`);
-    const fautifs = paquets(carte.filter((v) => essai === 1 ? defauts.has(v.id) : defauts.get(v.id)?.some(bloquant)));
+    const fautifs = paquets(carte.filter((v) => aReprendre(v.id, essai === 1)));
     if (!fautifs.length) break;
     const repris = await sousPoste('corrections', () => Promise.all(fautifs.map((p, i) => appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n`
       + (fautifs.length > 1 ? `Ouvre tes commentaires d'abord par ${ANGLES[(i + essai) % ANGLES.length]}.\n\n` : '')
@@ -254,7 +279,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
 
   // Vins encore bloqués : repris ensemble par petits paquets de 10 (une réponse courte et ciblée réussit mieux qu'une
   // longue liste ; un appel par vin renvoyait toute la consigne à chaque fois), deux essais.
-  const bloques = () => carte.filter((v) => defauts.get(v.id)?.some(bloquant));
+  const bloques = () => carte.filter((v) => aReprendre(v.id, false));
   for (let essai = 1; essai <= 2 && bloques().length && !presse(); essai++) {
     const aReprendre = paquets(bloques(), 10);
     const deja = carte.filter((x) => reponses.has(x.id) && !defauts.has(x.id) && reponses.get(x.id)!.commentaire).map((x) => `- ${reponses.get(x.id)!.commentaire}`);
