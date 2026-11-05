@@ -58,17 +58,68 @@ export function cuveeDuVin(v: { libelle: string; producteur_texte: string | null
   return trouvees.length === 1 ? trouvees[0] : null;
 }
 
+/**
+ * Comme cuveeDuVin, et sinon une écriture différente du même vin : tous les mots propres à la cuvée (hors producteur et
+ * appellation) sont dans le nom lu, et le nom lu ne dit rien que la cuvée, son appellation ou l'appellation donnée à part
+ * (colonne du tarif) ne disent (« IGP Haute Vallée de l'Aude Vue du Ciel » → « Vue du Ciel » ; « Crémant Zéro Dosage »
+ * → « Crémant d'Alsace Zéro Dosage »). Un mot de plus (« rosé » pour un vin « blanc ») suffit à écarter. Une seule cuvée possible.
+ */
+export function cuveeDuVinSouple<C extends CuveeBase>(v: { libelle: string; producteur_texte: string | null; appellation?: string | null },
+  cuvees: C[], producteurNom: string | null): C | null {
+  const exacte = cuveeDuVin(v, cuvees, producteurNom) as C | null;
+  if (exacte) return exacte;
+  const retirer = new Set([...motsDe(v.producteur_texte), ...motsDe(producteurNom)]);
+  const mots = (t: string | null | undefined) => motsDe(t).filter((m) => !retirer.has(m));
+  const vin = mots(v.libelle);
+  if (!vin.length) return null;
+  const appellationLue = mots(v.appellation);
+  const trouvees = cuvees.filter((c) => {
+    const appellation = mots(c.appellation);
+    const propres = mots(c.nom).filter((m) => !appellation.includes(m) && !appellationLue.includes(m));
+    const permis = new Set([...mots(c.nom), ...appellation, ...appellationLue]);
+    if (!vin.every((m) => permis.has(m))) return false;
+    return propres.length ? propres.every((m) => vin.includes(m)) : appellation.length > 0 && appellation.every((m) => vin.includes(m));
+  });
+  if (trouvees.length === 1) return trouvees[0];
+  if (trouvees.length > 1) return null;
+  // Dernier recours : le nom lu finit par le nom complet de la cuvée (deux mots au moins), précédé de son appellation
+  // que la base ne connaît pas (« IGP Haute Vallée de l'Aude Vue du Ciel » → « Vue du Ciel »).
+  const suite = (t: string) => motsDe(t).filter((m) => !retirer.has(m));
+  const lu = suite(v.libelle);
+  const finissent = cuvees.filter((c) => {
+    const n = suite(c.nom);
+    return n.length >= 2 && n.length < lu.length && lu.slice(-n.length).join(' ') === n.join(' ');
+  });
+  return finissent.length === 1 ? finissent[0] : null;
+}
+
 /** Cuvées retrouvées pour les vins rattachés à un producteur dont la cuvée n'a pas été choisie à la main. Renvoie le nombre de vins reliés. */
 export async function rattacherCuvees(requete: Requete, distributeurId: string) {
-  const vins = await requete<{ id: string; libelle: string; producteur_texte: string | null; producteur_id: string; producteur_nom: string; cuvee_id: string | null }>(
-    `select v.id, v.libelle, v.producteur_texte, v.producteur_id, p.nom as producteur_nom, v.cuvee_id
+  const vins = await requete<{ id: string; libelle: string; producteur_texte: string | null; producteur_id: string; producteur_nom: string; cuvee_id: string | null; appellation: string | null }>(
+    `select v.id, v.libelle, v.producteur_texte, v.producteur_id, p.nom as producteur_nom, v.cuvee_id, v.appellation
        from distributeur_vin v join producteur p on p.id = v.producteur_id where v.distributeur_id = $1 and not v.cuvee_manuel`, [distributeurId]);
   if (!vins.length) return 0;
-  const cuvees = await requete<CuveeBase>(
-    `select c.id, c.producteur_id, c.nom, coalesce(t.nom, c.appellation_texte) as appellation from cuvee c left join terroir t on t.id = c.appellation_id
+  const cuvees = await requete<CuveeBase & { proposee: boolean }>(
+    `select c.id, c.producteur_id, c.nom, coalesce(t.nom, c.appellation_texte) as appellation,
+            (c.statut = 'propose' and coalesce(c.source, '') = 'distributeur') as proposee
+       from cuvee c left join terroir t on t.id = c.appellation_id
       where c.producteur_id = any($1) and c.statut <> 'retire'`, [[...new Set(vins.map((v) => v.producteur_id))]]);
+  // Appellation écrite dans le nom du vin quand le tarif ne la donne pas à part (« IGP Haute Vallée de l'Aude Vue du Ciel ») :
+  // la plus longue appellation de la base dont tous les mots y figurent.
+  const terroirs = (await requete<{ nom: string }>(`select nom from terroir where statut <> 'retire'`)).map((t) => ({ nom: t.nom, mots: motsDe(t.nom) }))
+    .filter((t) => t.mots.length >= 2);
+  const appellationDans = (libelle: string) => {
+    const mots = new Set(motsDe(libelle));
+    return terroirs.filter((t) => t.mots.every((m) => mots.has(m))).sort((a, b) => b.mots.length - a.mots.length)[0]?.nom ?? null;
+  };
+  // Les vins de la base d'abord ; un vin seulement proposé depuis un tarif (souvent un doublon) en dernier recours.
+  const choisir = (w: (typeof vins)[number]) => {
+    const v = { ...w, appellation: w.appellation ?? appellationDans(w.libelle) };
+    const siennes = cuvees.filter((c) => c.producteur_id === v.producteur_id);
+    return cuveeDuVinSouple(v, siennes.filter((c) => !c.proposee), v.producteur_nom) ?? cuveeDuVinSouple(v, siennes, v.producteur_nom);
+  };
   const liens = vins.map((v) => ({ id: v.id, avant: v.cuvee_id,
-    cuvee: cuveeDuVin(v, cuvees.filter((c) => c.producteur_id === v.producteur_id), v.producteur_nom)?.id ?? null }));
+    cuvee: choisir(v)?.id ?? null }));
   const changes = liens.filter((l) => l.cuvee !== l.avant);
   if (changes.length) {
     await requete(`update distributeur_vin v set cuvee_id = x.cuvee from unnest($1::text[], $2::text[]) as x(id, cuvee) where v.id = x.id`,

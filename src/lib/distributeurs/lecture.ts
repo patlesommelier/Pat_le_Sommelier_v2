@@ -286,6 +286,13 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   // Vins des producteurs connus : reliés à leur vin de la base, ou ajoutés à la base (à valider dans Vins de la base).
   await rattacherCuvees(requete, distributeurId);
   await ajouterCuveesManquantes(requete, distributeurId);
+  // Vins proposés à la base par une lecture précédente et devenus inutiles (le vin du tarif est maintenant relié au vrai
+  // vin de la base) : retirés de « Vins de la base », s'ils ne servent plus à rien (aucun tarif, aucune carte, pas validés).
+  await requete(
+    `delete from cuvee c where c.statut = 'propose' and c.source = 'distributeur' and c.id like 'distributeur-%'
+        and c.producteur_id in (select producteur_id from distributeur_vin where distributeur_id = $1 and producteur_id is not null)
+        and not exists (select 1 from distributeur_vin v where v.cuvee_id = c.id)
+        and not exists (select 1 from vin_carte v where v.cuvee_id = c.id)`, [distributeurId]).catch((e) => console.error('[tarif] nettoyage', e));
   return { lus: uniques.length, nouveaux: uniques.filter((l) => !avant.has(l.cle)).length, retires: retires.length,
     rattaches: uniques.filter((l) => l.producteur_id).length };
 }
