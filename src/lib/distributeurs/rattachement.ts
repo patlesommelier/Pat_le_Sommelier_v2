@@ -129,6 +129,48 @@ export async function rattacherCuvees(requete: Requete, distributeurId: string) 
   return liens.filter((l) => l.cuvee).length;
 }
 
+/**
+ * Vins du tarif comparés aux vins des cartes des restaurants (même producteur, même vin, mêmes règles que cuveeDuVinSouple) :
+ * - sans photo, ils prennent celle de la carte (ex. la liste de LVQNEP, export de la carte de Bistro Bercuit) ;
+ * - sans vin de la base (ou relié seulement à une proposition venue d'un tarif), ils prennent celui de la carte s'il en a un.
+ * Un choix fait à la main n'est jamais changé. Renvoie le nombre de vins complétés.
+ */
+export async function completerDepuisLesCartes(requete: Requete, distributeurId: string) {
+  const vins = await requete<{ id: string; libelle: string; producteur_texte: string | null; producteur_id: string; producteur_nom: string; appellation: string | null;
+    cuvee_id: string | null; cuvee_manuel: boolean; proposee: boolean; photo: boolean }>(
+    `select v.id, v.libelle, v.producteur_texte, v.producteur_id, p.nom as producteur_nom, v.appellation, v.cuvee_id, v.cuvee_manuel,
+            coalesce(c.statut = 'propose' and c.source = 'distributeur', false) as proposee,
+            (v.etiquette_url is not null or c.etiquette_url is not null) as photo
+       from distributeur_vin v join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id
+      where v.distributeur_id = $1 and v.actif`, [distributeurId]);
+  const aCompleter = vins.filter((v) => !v.photo || (!v.cuvee_manuel && (!v.cuvee_id || v.proposee)));
+  if (!aCompleter.length) return 0;
+  const cartes = await requete<{ id: string; producteur_id: string; nom: string; appellation: string | null; cuvee_id: string | null; etiquette_url: string | null }>(
+    `select v.id, v.producteur_id, coalesce(nullif(v.nom_vin, ''), v.libelle) as nom, coalesce(t.nom, v.appellation_texte) as appellation, v.cuvee_id, v.etiquette_url
+       from vin_carte v left join terroir t on t.id = v.appellation_id
+      where v.producteur_id = any($1) and (v.etiquette_url is not null or v.cuvee_id is not null)
+      order by (v.etiquette_url is not null) desc, (v.cuvee_id is not null) desc`, [[...new Set(aCompleter.map((v) => v.producteur_id))]]);
+  // Un même vin sur plusieurs cartes (ou en plusieurs contenances) ne compte qu'une fois.
+  const uniques = [...new Map(cartes.map((c) => [`${c.producteur_id}|${c.cuvee_id ?? motsDe(c.nom).sort().join(' ')}`, c])).values()];
+  let completes = 0;
+  for (const v of aCompleter) {
+    const trouve = cuveeDuVinSouple(v, uniques.filter((c) => c.producteur_id === v.producteur_id), v.producteur_nom);
+    if (!trouve) continue;
+    const memes = cartes.filter((c) => c.producteur_id === v.producteur_id && (trouve.cuvee_id ? c.cuvee_id === trouve.cuvee_id : c.id === trouve.id));
+    const photo = memes.find((c) => c.etiquette_url)?.etiquette_url ?? null;
+    const cuvee = memes.find((c) => c.cuvee_id)?.cuvee_id ?? null;
+    const nouvelleCuvee = !v.cuvee_manuel && (!v.cuvee_id || v.proposee) && cuvee && cuvee !== v.cuvee_id ? cuvee : null;
+    if (!nouvelleCuvee && (v.photo || !photo)) continue;
+    await requete(
+      `update distributeur_vin set cuvee_id = coalesce($2, cuvee_id),
+              etiquette_url = coalesce(etiquette_url, $3), image_source = case when etiquette_url is null and $3::text is not null then 'carte' else image_source end
+        where id = $1`, [v.id, nouvelleCuvee, v.photo ? null : photo]);
+    completes++;
+  }
+  await partagerEtiquettesDistributeur(requete, distributeurId);
+  return completes;
+}
+
 const slug = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().replace(/œ/g, 'oe').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
 
 /**

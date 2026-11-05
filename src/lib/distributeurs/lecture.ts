@@ -12,7 +12,7 @@ import { clientClaude, modeleLecture } from '../claude';
 import { lireDocx, pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type ImageArticle, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
 import { cleVin, dedoublonner, prixDuTarif, recalerCles, vinTarif, type CalculQv, type LigneCle, type VinTarif } from './tarif';
-import { ajouterCuveesManquantes, rattacherCuvees } from './rattachement';
+import { ajouterCuveesManquantes, completerDepuisLesCartes, rattacherCuvees } from './rattachement';
 import { appliquerImages, etiquettesDuCollage } from './etiquettes';
 
 const PAGES_PAR_LECTURE = 4;
@@ -285,7 +285,10 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   await reprendreAnciennesLignes(requete, distributeurId);
   // Vins des producteurs connus : reliés à leur vin de la base, ou ajoutés à la base (à valider dans Vins de la base).
   await rattacherCuvees(requete, distributeurId);
+  // Vins des cartes des restaurants : photo et vin de la base repris pour les vins du tarif qui n'en ont pas.
+  await completerDepuisLesCartes(requete, distributeurId);
   await ajouterCuveesManquantes(requete, distributeurId);
+  await completerDepuisLesCartes(requete, distributeurId); // les photos pour les vins tout juste ajoutés à la base
   // Vins proposés à la base par une lecture précédente et devenus inutiles (le vin du tarif est maintenant relié au vrai
   // vin de la base) : retirés de « Vins de la base », s'ils ne servent plus à rien (aucun tarif, aucune carte, pas validés).
   await requete(
