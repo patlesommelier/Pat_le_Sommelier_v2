@@ -114,8 +114,14 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
           {/* Chaque groupe se replie (flèche) : on n'affiche que ce que l'on modifie. */}
           {verrouille && base ? (
             <section className="carte-bo pile" style={{ gap: 12 }}>
-              <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
-                <b>Fiche du vin</b><span className="pastille-reconnu" style={{ marginTop: 0 }}>✓ Reconnu</span>
+              <div style={{ display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: 10, flexWrap: 'wrap' }}>
+                <b>Fiche du vin</b>
+                {/* Reconnu, et juste dessous le petit bouton « Pas mon vin ». */}
+                <span className="pile" style={{ gap: 6, alignItems: 'flex-end' }}>
+                  <span className="pastille-reconnu" style={{ marginTop: 0 }}>✓ Reconnu</span>
+                  <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Pas mon vin" className="btn rouge tout-petit"
+                    question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « En attente de validation » : Quid Vinum le vérifiera." />
+                </span>
               </div>
               <dl className="infos-base">
                 {/* Le producteur : sa fiche (base de Quid Vinum), en lecture. */}
@@ -129,11 +135,6 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
                 {base.garde && <><dt>Garde</dt><dd>{base.garde}</dd></>}
                 {base.description && <><dt>Description</dt><dd>{base.description}</dd></>}
               </dl>
-              <div className="ligne-actions" style={{ alignItems: 'center' }}>
-                <BoutonAction action={pasMonVin.bind(null, resto, v.id, depuisBase ?? null)} libelle="Pas mon vin" className="btn rouge petit"
-                  question="Ce n’est pas votre vin ? Il reprendra le nom lu sur votre carte et repassera « En attente de validation » : Quid Vinum le vérifiera." />
-                <span className="petit discret">Ce vin ne correspond pas au vôtre : il repasse en attente de validation.</span>
-              </div>
             </section>
           ) : null}
           {verrouille && base ? (

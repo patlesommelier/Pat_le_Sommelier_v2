@@ -487,6 +487,7 @@ dialog.superposition { overflow-y: auto; }
 .case-carte { width: 20px; height: 20px; accent-color: var(--encre); cursor: pointer; }
 .champ-fiche { width: 140px; min-height: 40px; padding: 6px 12px; border: 1.5px solid var(--ligne); border-radius: 10px; font: inherit; background: #FFFFFF; }
 /* Fiche producteur : ses vins, le distributeur qui les vend et l'ajout à Ma cave. */
-.vin-producteur { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 16px; padding: 10px 0; border-top: 1px solid var(--separation); align-items: start; }
+.vins-producteur { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr)); gap: 12px; }
+.vin-producteur { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 14px; align-items: start; }
 .offre-producteur { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
-@media (max-width: 680px) { .vin-producteur { grid-template-columns: 1fr; gap: 6px; } }
+.btn.tout-petit { min-height: 0; height: 17px; padding: 0 7px; font-size: 10px; line-height: 17px; font-weight: 600; letter-spacing: 0; }
