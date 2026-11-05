@@ -7,7 +7,7 @@ import type { Utilisateur } from '@/lib/admin/auth';
 /** Coque du back-office : marque, restaurant, menu des étapes, déconnexion. */
 export function Coque({ utilisateur, resto, etapes, children }: {
   utilisateur: Utilisateur;
-  resto?: { id: string; nom: string; couleur: string; resume: string };
+  resto?: { id: string; nom: string; couleur: string; resume: string; logo?: string | null };
   etapes: Etape[];
   children: React.ReactNode;
 }) {
@@ -29,8 +29,12 @@ export function Coque({ utilisateur, resto, etapes, children }: {
         </Link>
         {resto && (
           <Link href={utilisateur.admin || utilisateur.restaurants.length > 1 ? '/admin' : accueil} className="bo-resto" aria-label={`Restaurant ${resto.nom}${utilisateur.admin ? ' — changer de restaurant' : ''}`}>
-            <span className="pastille" style={{ background: resto.couleur }}>{resto.nom.slice(0, 1)}</span>
-            <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span>
+            {/* Logo de l'app (Apparence) sur la couleur du restaurant, à la place du nom ; sinon l'initiale et le nom. */}
+            {resto.logo
+              // eslint-disable-next-line @next/next/no-img-element
+              ? <span className="bo-resto-logo" style={{ background: resto.couleur }}><img src={resto.logo} alt={resto.nom} /></span>
+              : <><span className="pastille" style={{ background: resto.couleur }}>{resto.nom.slice(0, 1)}</span>
+                <span style={{ flexGrow: 1 }}><b>{resto.nom}</b><small>{resto.resume}</small></span></>}
           </Link>
         )}
         {resto ? <NavLiens accueil={accueil} etapes={etapes} admin={admin} /> : <NavLiens accueil="/admin" etapes={[]} admin={admin} />}

@@ -3,6 +3,7 @@ import { Coque } from '../Coque';
 import { exigerAcces } from '@/lib/admin/auth';
 import { getRestaurantBO, getResume } from '@/lib/admin/donnees';
 import { commandesAVoir } from '@/lib/admin/stocks';
+import { logoAffiche } from '@/lib/couleurs';
 import { etapesRestaurant } from './etapes';
 import type { Etape } from '@/components/admin/Nav';
 
@@ -29,7 +30,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   const [r, resume, aVoir] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto)]);
   if (!r) notFound();
   return (
-    <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins` }}
+    <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
       etapes={avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir)}>
       {children}
     </Coque>
