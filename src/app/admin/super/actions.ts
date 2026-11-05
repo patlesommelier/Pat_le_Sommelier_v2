@@ -23,6 +23,7 @@ import { traiterComparaisons } from '@/lib/generation/comparaison';
 import { deposerImage } from '@/lib/admin/fichiers';
 import { appellationCourte } from '@/lib/admin/intitule';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
+import { completerDepuisLesCartes, rattacherCuvees } from '@/lib/distributeurs/rattachement';
 import { sslBase } from '@/lib/ssl-base';
 import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { creerAppellationProposee } from '@/lib/appellations/base';
@@ -53,7 +54,7 @@ export async function testerEmail() {
 export async function voirCommeRestaurant(restaurantId: string) {
   await exigerAdmin();
   (await cookies()).set(COOKIE_VUE, restaurantId, { httpOnly: true, sameSite: 'lax', secure: process.env.NODE_ENV === 'production', path: '/', maxAge: 8 * 3600 });
-  redirect(`/admin/${restaurantId}`);
+  redirect(`/admin/${restaurantId}/stocks`); // on arrive toujours sur Ma cave
 }
 
 export async function quitterVueRestaurant() {
@@ -705,6 +706,12 @@ export async function regrouperProducteur(id: string, f: FormData) {
   await requete(`update vin_carte set producteur_id = $2, ranking_producteur = coalesce($3, ranking_producteur) where producteur_id = $1`, [id, cible.id, g?.ranking_pat ?? null]);
   await requete('update distributeur_vin set producteur_id = $2 where producteur_id = $1', [id, cible.id]);
   await requete(`update producteur set statut = 'retire', fusionne_dans = $2, maj_le = now() where id = $1`, [id, cible.id]);
+  // Distributeurs qui ont ce producteur : leurs vins sont reliés aux vins de la base du producteur gardé, avec leurs photos.
+  for (const { distributeur_id: d } of await requete<{ distributeur_id: string }>(
+    'select distinct distributeur_id from distributeur_vin where producteur_id = $1', [cible.id])) {
+    await rattacherCuvees(requete, d).catch((e) => console.error('[regroupement] vins', e));
+    await completerDepuisLesCartes(requete, d).catch((e) => console.error('[regroupement] photos', e));
+  }
   revalidatePath('/admin', 'layout');
   redirect(`/admin/super/producteurs/${encodeURIComponent(cible.id)}?${new URLSearchParams({ ok: `« ${source.nom} » regroupé dans ce producteur : ses vins y sont maintenant reliés.` })}`);
 }

@@ -28,7 +28,7 @@ export function Coque({ utilisateur, resto, etapes, children }: {
           <span className="sous-marque">Espace restaurant</span>
         </Link>
         {resto && (
-          <Link href={utilisateur.admin || utilisateur.restaurants.length > 1 ? '/admin' : accueil} className="bo-resto" aria-label={`Restaurant ${resto.nom}${utilisateur.admin ? ' — changer de restaurant' : ''}`}>
+          <Link href={utilisateur.admin || utilisateur.restaurants.length > 1 ? '/admin' : `${accueil}/stocks`} className="bo-resto" aria-label={`Restaurant ${resto.nom}${utilisateur.admin ? ' — changer de restaurant' : ''}`}>
             {/* Logo de l'app (Apparence) sur la couleur du restaurant, à la place du nom ; sinon l'initiale et le nom. */}
             {resto.logo
               // eslint-disable-next-line @next/next/no-img-element

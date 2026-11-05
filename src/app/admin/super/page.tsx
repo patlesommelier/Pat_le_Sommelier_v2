@@ -54,7 +54,7 @@ export default async function Restaurants({ searchParams }: { searchParams: Prom
                   </span>
                 )}
                 <div className="carte-resto-actions">
-                  <Link href={`/admin/${r.id}`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
+                  <Link href={`/admin/${r.id}/stocks`} className="btn mini" title="Votre espace de super-admin pour ce restaurant : rankings, Wine Labs, cuisine interne">Super-admin</Link>
                   <form action={voirCommeRestaurant.bind(null, r.id)}><button className="btn sec mini" title={`Voir l’espace exactement comme ${r.nom} le voit, sans vos outils de super-admin`}>Vue restaurant</button></form>
                 </div>
               </div>
