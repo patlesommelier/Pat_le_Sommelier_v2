@@ -109,8 +109,6 @@ function Apercu() {
         </div>
       </div>
 
-      {/* Inscription posée sur la démo, en bas à gauche : le bouton apparaît après 5 secondes, puis clignote doucement. */}
-      <a href="#demarrer" className={`${s.btn} ${s.btnDemo}`}>Inscrire mon restaurant →</a>
       <div className={s.telephone} aria-hidden="true">
         <VideoDemo video="/demo/demo-2-filet" />
       </div>
@@ -137,13 +135,12 @@ export async function PageQuidVinum() {
             <a href="#solution">La solution</a>
             <a href="#comment">Comment ça marche</a>
             <Link href="/admin/connexion">Se connecter</Link>
-            <a href="#demarrer" className={`${s.btn} ${s.btnPetit}`}>Inscrire mon restaurant</a>
           </nav>
         </header>
         <div className={s.centre}>
           <h1 id="h-titre">Développez et gérez <span>l’offre vin</span> de votre restaurant.</h1>
           <p className={s.accroche}>Quid Vinum gère vos stocks, regroupe vos commandes, rédige et imprime votre carte des vins, vous aide à composer les accords avec vos plats et conseille vos clients à table.</p>
-          <p className={s.fort}>Gratuite, la solution est opérationnelle en quelques minutes.</p>
+          <div className={s.boutons}><a href="#demarrer" className={`${s.btn} ${s.btnFort}`}>La solution est gratuite, j’inscris mon restaurant</a></div>
         </div>
       </section>
 
