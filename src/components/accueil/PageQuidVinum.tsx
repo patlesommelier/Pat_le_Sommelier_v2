@@ -144,7 +144,6 @@ export async function PageQuidVinum() {
           <p className={s.fort}>Gratuite, la solution est opérationnelle en quelques minutes.</p>
           <div className={s.boutons}>
             <a href="#demarrer" className={s.btn}>Inscrire mon restaurant</a>
-            <a href="#comment" className={`${s.btn} ${s.btnSec}`}>Voir comment ça marche</a>
           </div>
         </div>
       </section>

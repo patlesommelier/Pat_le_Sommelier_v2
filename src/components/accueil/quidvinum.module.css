@@ -79,7 +79,7 @@
 .icone { width: 52px; height: 52px; border-radius: 14px; background: #FFFFFF; border: 1.5px solid var(--ligne); display: flex; align-items: center; justify-content: center;
   color: var(--qv); margin-bottom: 16px; }
 .num { display: block; color: var(--qv); font-size: 13px; letter-spacing: 1px; }
-.cartePat { background: var(--qv); border-color: var(--qv); color: #FFFFFF; }
+.cartePat { background: #680021; border-color: #680021; color: #FFFFFF; } /* bordeaux de Pat le sommelier */
 .cartePat .num { color: #FFFFFF; opacity: .8; }
 .cartePat .icone { border: 0; }
 
