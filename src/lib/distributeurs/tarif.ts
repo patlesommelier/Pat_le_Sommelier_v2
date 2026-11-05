@@ -182,3 +182,41 @@ export function offreDuCatalogue(vin: VinCarteComplet, catalogue: VinCatalogueCo
   return candidats.find((c) => (c.millesime ?? '') === (vin.millesime ?? ''))
     ?? [...candidats].sort((x, y) => (y.millesime ?? '').localeCompare(x.millesime ?? ''))[0];
 }
+
+// ─── Relecture d'un tarif : retrouver les vins déjà lus ───
+export type LigneCle = { cle: string; producteur: string | null; libelle: string; millesime: string | null; contenance: string | null };
+
+/** Mots d'un vin, producteur et nom réunis : la lecture peut les répartir autrement d'une fois à l'autre. */
+const motsVin = (l: Pick<LigneCle, 'producteur' | 'libelle'>) => new Set([...motsDe(l.producteur), ...motsDe(l.libelle)]);
+const compatible = (a: string | null, b: string | null) => !a || !b || a === b;
+
+/**
+ * Vins relus dont la clé a changé (producteur écrit dans le nom du vin, mot en plus ou en moins…) : retrouvés parmi les vins
+ * déjà connus du distributeur, pour garder leur ligne (photo, vin de la base, commandes) au lieu d'en créer une nouvelle.
+ * Mêmes mots (ou les mots de l'un tous dans l'autre, deux au moins en commun), millésime et contenance compatibles,
+ * et un seul candidat ; sinon rien. Renvoie, pour chaque clé nouvelle retrouvée, la clé connue à reprendre.
+ */
+export function recalerCles(nouveaux: LigneCle[], connus: LigneCle[]): Map<string, string> {
+  const nouvellesCles = new Set(nouveaux.map((n) => n.cle));
+  const connuesCles = new Set(connus.map((c) => c.cle));
+  // Vins connus encore libres : leur clé n'est pas reprise telle quelle par la relecture.
+  const libres = connus.filter((c) => !nouvellesCles.has(c.cle)).map((c) => ({ ...c, mots: motsVin(c) }));
+  const pris = new Set<string>();
+  const out = new Map<string, string>();
+  for (const n of nouveaux) {
+    if (connuesCles.has(n.cle) || out.has(n.cle)) continue;
+    const mots = motsVin(n);
+    if (mots.size < 2) continue;
+    const possibles = libres.filter((c) => !pris.has(c.cle) && compatible(c.millesime, n.millesime) && compatible(c.contenance, n.contenance));
+    const egaux = possibles.filter((c) => c.mots.size === mots.size && [...mots].every((m) => c.mots.has(m)));
+    const inclus = possibles.filter((c) => {
+      const communs = [...mots].filter((m) => c.mots.has(m)).length;
+      return communs >= 2 && (communs === mots.size || communs === c.mots.size);
+    });
+    const choix = egaux.length ? egaux : inclus;
+    if (choix.length !== 1) continue;
+    out.set(n.cle, choix[0].cle);
+    pris.add(choix[0].cle);
+  }
+  return out;
+}

@@ -11,7 +11,7 @@ import type { Requete } from '../generation/accords';
 import { clientClaude, modeleLecture } from '../claude';
 import { lireDocx, pdfSansTexte, tableauCsv, tableauExcel, tableauJson, textePdf, texteDuTableau, vinsDuTableau, type ImageArticle, type Tableau } from './sources';
 import { producteurConnu } from '../inscription/lecture';
-import { cleVin, dedoublonner, prixDuTarif, vinTarif, type CalculQv, type VinTarif } from './tarif';
+import { cleVin, dedoublonner, prixDuTarif, recalerCles, vinTarif, type CalculQv, type LigneCle, type VinTarif } from './tarif';
 import { ajouterCuveesManquantes, rattacherCuvees } from './rattachement';
 import { appliquerImages, etiquettesDuCollage } from './etiquettes';
 
@@ -251,6 +251,12 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   const [reglage] = await requete<{ calcul_qv: CalculQv; remise_qv: number | null }>('select calcul_qv, remise_qv::float8 as remise_qv from distributeur where id = $1', [distributeurId]);
   const lignes = vins.map((v, i) => ({ ...v, ...(() => { const p = prixDuTarif(v.prix, v.prixCatalogue ?? null, reglage?.calcul_qv ?? 'liste', reglage?.remise_qv ?? null); return { prix: p.qv, prixCatalogue: p.publie }; })(), cle: cleVin(v), ordre: base + i, producteur_id: v.producteur ? producteurs.get(v.producteur) ?? null : null,
     manuel: Boolean(v.producteur && choisis.has(v.producteur)) }));
+  // Vins déjà connus dont la relecture a changé la clé (producteur et nom répartis autrement…) : leur ligne est reprise,
+  // avec sa photo et son vin de la base, au lieu d'un doublon.
+  const connus = await requete<LigneCle>(
+    `select cle, producteur_texte as producteur, libelle, millesime, contenance from distributeur_vin where distributeur_id = $1 order by actif desc, maj_le desc`, [distributeurId]);
+  const recales = recalerCles(lignes.map((l) => ({ cle: l.cle, producteur: l.producteur ?? null, libelle: l.libelle, millesime: l.millesime ?? null, contenance: l.contenance ?? null })), connus);
+  for (const l of lignes) if (recales.has(l.cle)) l.cle = recales.get(l.cle)!;
   const uniques = [...new Map(lignes.map((l) => [l.cle, l])).values()];
   const avant = new Set((await requete<{ cle: string }>('select cle from distributeur_vin where distributeur_id = $1 and actif', [distributeurId])).map((r) => r.cle));
   const col = <K extends keyof (typeof uniques)[number]>(k: K) => uniques.map((l) => l[k]);
@@ -274,11 +280,46 @@ export async function enregistrerVinsDuTarif(requete: Requete, distributeurId: s
   const retires = retirer ? await requete<{ id: string }>(
     `update distributeur_vin set actif = false, maj_le = now() where distributeur_id = $1 and actif and not (cle = any($2)) returning id`,
     [distributeurId, col('cle')]) : [];
+  // Doublons d'une relecture précédente : les photos, le vin de la base et les vins des restaurants des anciennes lignes
+  // (retirées) passent sur la ligne active du même vin.
+  await reprendreAnciennesLignes(requete, distributeurId);
   // Vins des producteurs connus : reliés à leur vin de la base, ou ajoutés à la base (à valider dans Vins de la base).
   await rattacherCuvees(requete, distributeurId);
   await ajouterCuveesManquantes(requete, distributeurId);
   return { lus: uniques.length, nouveaux: uniques.filter((l) => !avant.has(l.cle)).length, retires: retires.length,
     rattaches: uniques.filter((l) => l.producteur_id).length };
+}
+
+/**
+ * Lignes retirées par une relecture qui avait mal reconnu les vins (doublons) : leur photo, leur vin de la base (s'il était
+ * choisi à la main ou si la ligne active n'en a pas) et les vins des restaurants qui y étaient reliés passent sur la ligne
+ * active du même vin (mêmes règles que recalerCles). Renvoie le nombre de lignes reprises.
+ */
+export async function reprendreAnciennesLignes(requete: Requete, distributeurId: string) {
+  type Ligne = LigneCle & { id: string; etiquette_url: string | null; cuvee_id: string | null; cuvee_manuel: boolean };
+  const lignes = await requete<Ligne & { actif: boolean }>(
+    `select id, cle, producteur_texte as producteur, libelle, millesime, contenance, etiquette_url, cuvee_id, cuvee_manuel, actif
+       from distributeur_vin where distributeur_id = $1`, [distributeurId]);
+  const actives = lignes.filter((l) => l.actif);
+  const anciennes = lignes.filter((l) => !l.actif && (l.etiquette_url || l.cuvee_id));
+  if (!anciennes.length) return 0;
+  const paires = recalerCles(actives, anciennes);
+  let reprises = 0;
+  for (const [cleActive, cleAncienne] of paires) {
+    const a = actives.find((l) => l.cle === cleActive)!, v = anciennes.find((l) => l.cle === cleAncienne)!;
+    await requete(
+      `update distributeur_vin n set
+              etiquette_url = coalesce(n.etiquette_url, o.etiquette_url),
+              image_source = case when n.etiquette_url is null then o.image_source else n.image_source end,
+              etiquette_recadree = case when n.etiquette_url is null then o.etiquette_recadree else n.etiquette_recadree end,
+              etiquette_qualite = case when n.etiquette_url is null then o.etiquette_qualite else n.etiquette_qualite end,
+              cuvee_id = case when o.cuvee_id is not null and (o.cuvee_manuel or n.cuvee_id is null) then o.cuvee_id else n.cuvee_id end,
+              cuvee_manuel = n.cuvee_manuel or (o.cuvee_id is not null and o.cuvee_manuel)
+         from distributeur_vin o where n.id = $1 and o.id = $2`, [a.id, v.id]);
+    await requete('update vin_carte set distributeur_vin_id = $1 where distributeur_vin_id = $2', [a.id, v.id]);
+    reprises++;
+  }
+  return reprises;
 }
 
 /** Lecture du tarif (dernier fichier déposé, ou API du distributeur), en arrière-plan : l'avancement est gardé sur le distributeur. */
