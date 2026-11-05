@@ -50,3 +50,15 @@ test('appellation inconnue devant le nom de la cuvée : retrouvée par la fin du
   assert.equal(cuveeDuVinSouple({ libelle: 'IGP Haute Vallée de l’Aude Vue du Ciel', producteur_texte: 'Clos Teisseire' }, cuvees, 'Clos Teisseire')?.id, 'vue');
   assert.equal(cuveeDuVinSouple({ libelle: 'Vue du Ciel rosé', producteur_texte: 'Clos Teisseire' }, cuvees, 'Clos Teisseire'), null);
 });
+
+test('nom réduit à l’appellation : le seul vin du producteur dans cette appellation', () => {
+  const mader = [{ id: 'riesling', producteur_id: 'p', nom: 'Alsace Riesling', appellation: 'AOC Alsace' }];
+  assert.equal(cuveeDuVinSouple({ libelle: 'Alsace', producteur_texte: 'Domaine Jean-Luc Mader', appellation: 'Alsace' }, mader, 'Domaine Jean-Luc Mader')?.id, 'riesling');
+  const deux = [...mader, { id: 'pg', producteur_id: 'p', nom: 'Alsace Pinot Gris', appellation: 'AOC Alsace' }];
+  assert.equal(cuveeDuVinSouple({ libelle: 'Alsace', producteur_texte: 'Domaine Jean-Luc Mader', appellation: 'Alsace' }, deux, 'Domaine Jean-Luc Mader'), null);
+});
+
+test('mention « Bio » ou « DOC » en plus : même vin', () => {
+  const c = [{ id: 'molino', producteur_id: 'p', nom: "Molino a Vento Nero d'Avola", appellation: 'Terre Siciliane' }];
+  assert.equal(cuveeDuVinSouple({ libelle: "Terre Sicilienne Molino a Vento Nero d'Avola Bio", producteur_texte: 'Orestadi', appellation: 'Terre Sicilienne' }, c, 'Orestadi')?.id, 'molino');
+});

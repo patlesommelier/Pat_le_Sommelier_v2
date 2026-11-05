@@ -64,11 +64,14 @@ export function cuveeDuVin(v: { libelle: string; producteur_texte: string | null
  * (colonne du tarif) ne disent (« IGP Haute Vallée de l'Aude Vue du Ciel » → « Vue du Ciel » ; « Crémant Zéro Dosage »
  * → « Crémant d'Alsace Zéro Dosage »). Un mot de plus (« rosé » pour un vin « blanc ») suffit à écarter. Une seule cuvée possible.
  */
+const NEUTRES = ['bio', 'biologique', 'organic', 'biodynamie', 'biodynamique', 'biodyn', 'demeter', 'nature', 'naturel', 'vegan', 'doc', 'docg', 'dop', 'igt', 'do', 'dac', 'qualitatswein', 'vino'];
+
 export function cuveeDuVinSouple<C extends CuveeBase>(v: { libelle: string; producteur_texte: string | null; appellation?: string | null },
   cuvees: C[], producteurNom: string | null): C | null {
   const exacte = cuveeDuVin(v, cuvees, producteurNom) as C | null;
   if (exacte) return exacte;
-  const retirer = new Set([...motsDe(v.producteur_texte), ...motsDe(producteurNom)]);
+  // Mentions qui ne changent pas le vin (« Bio », « DOC »…) : ignorées des deux côtés ; jamais la couleur.
+  const retirer = new Set([...motsDe(v.producteur_texte), ...motsDe(producteurNom), ...NEUTRES]);
   const mots = (t: string | null | undefined) => motsDe(t).filter((m) => !retirer.has(m));
   const vin = mots(v.libelle);
   if (!vin.length) return null;
@@ -90,7 +93,18 @@ export function cuveeDuVinSouple<C extends CuveeBase>(v: { libelle: string; prod
     const n = suite(c.nom);
     return n.length >= 2 && n.length < lu.length && lu.slice(-n.length).join(' ') === n.join(' ');
   });
-  return finissent.length === 1 ? finissent[0] : null;
+  if (finissent.length === 1) return finissent[0];
+  if (finissent.length > 1) return null;
+  // Nom lu qui n'est que l'appellation (« Alsace » de Jean-Luc Mader) : le seul vin du producteur dans cette appellation
+  // (« Alsace Riesling », appellation « AOC Alsace »). Deux vins possibles ou plus : aucun.
+  const appellationSeule = appellationLue.length ? vin.every((m) => appellationLue.includes(m)) : false;
+  if (!appellationSeule && v.appellation) return null;
+  const memeAppellation = cuvees.filter((c) => {
+    const lieu = new Set([...mots(c.appellation), ...mots(c.nom)]);
+    return vin.every((m) => lieu.has(m));
+  });
+  return vin.length && (appellationSeule || !v.appellation) && memeAppellation.length === 1 && mots(memeAppellation[0].appellation).length
+    && vin.every((m) => mots(memeAppellation[0].appellation).includes(m)) ? memeAppellation[0] : null;
 }
 
 /** Cuvées retrouvées pour les vins rattachés à un producteur dont la cuvée n'a pas été choisie à la main. Renvoie le nombre de vins reliés. */
