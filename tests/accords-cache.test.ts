@@ -82,3 +82,19 @@ test('accords : une note hors bornes est ramenée sans redemander à Claude, et 
   assert.equal(b.defauts?.['notes ramenées au plafond'], 60);
   assert.equal(b.defauts?.vins, 60);
 });
+
+test('accords : un code de vin abrégé par Claude (« B07 », « L-B07 ») est retrouvé, le vin n’est pas « oublié »', async () => {
+  const longs = VINS.slice(0, 20).map((v, i) => ({ ...v, id: `la-brasserie-du-lac-3-B${String(i + 1).padStart(2, '0')}` }));
+  const q2: Requete = async <T,>(sql: string) => (/from vin_carte v left join producteur/.test(sql) ? longs as T[] : q<T>(sql));
+  let appels = 0;
+  const client = { messages: { stream: (params: { messages: { content: string }[] }) => ({ finalMessage: async () => {
+    appels++;
+    const ids = [...params.messages[0].content.matchAll(/^(\S+) \|/gm)].map((m) => m[1]);
+    // Claude abrège : seulement la fin du code (un sur deux avec un « L- » devant).
+    return { stop_reason: 'end_turn', usage: { input_tokens: 1, output_tokens: 1 },
+      content: [{ type: 'text', text: JSON.stringify(ids.map((id, i) => ({ vin: `${i % 2 ? 'L-' : ''}${id.split('-').pop()}`, note: 1, commentaire: null, limite: 'x' }))) }] };
+  } }) } } as unknown as Anthropic;
+  const b = await regenererAccordsPlat(q2, client, 'resto-codes', 'p1', 'modele-test');
+  assert.equal(appels, 1); // un seul paquet, aucun vin redemandé
+  assert.equal(b.defauts?.['vins oubliés'] ?? 0, 0);
+});

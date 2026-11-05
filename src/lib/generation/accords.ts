@@ -86,8 +86,9 @@ En quelques mots, ce qui empêche une note plus haute sur ce plat ; null si la n
 CARTE DES VINS DU RESTAURANT (code | couleur | vin — producteur | millésime | format | prix | cépages | profil | …)
 ${texteCarte(carte)}
 
+Le champ « vin » recopie le code du vin EN ENTIER, exactement comme dans la liste (tout ce qui précède le premier « | »), sans l'abréger.
 Réponds uniquement avec un tableau JSON, sans texte autour, un objet par vin demandé, dans l'ordre :
-[{"vin": "L-B02", "note": 4, "commentaire": "…", "limite": "…"}, {"vin": "L-R07", "note": 2, "commentaire": null, "limite": "…"}]`;
+[{"vin": "${carte[0]?.id ?? 'code-du-vin'}", "note": 4, "commentaire": "…", "limite": "…"}, {"vin": "${carte[1]?.id ?? carte[0]?.id ?? 'code-du-vin'}", "note": 2, "commentaire": null, "limite": "…"}]`;
 }
 
 function lireJson(texte: string): Reponse[] {
@@ -236,6 +237,21 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     return d;
   };
 
+  // Code du vin abrégé ou mal recopié par Claude (« B02 », « L-B02 » pour « la-brasserie-du-lac-B02 », majuscules…) :
+  // retrouvé quand un seul vin de la carte y correspond. Sans cela, le vin passait pour oublié et était redemandé.
+  const parFin = new Map<string, string[]>();
+  for (const v of carteComplete) {
+    const fin = v.id.split('-').pop()!.toLowerCase();
+    parFin.set(fin, [...(parFin.get(fin) ?? []), v.id]);
+  }
+  const recaler = (r: Reponse): Reponse => {
+    if (vinsParCode.has(r.vin)) return r;
+    const code = String(r.vin ?? '').trim();
+    const exact = carteComplete.find((v) => v.id.toLowerCase() === code.toLowerCase());
+    if (exact) return { ...r, vin: exact.id };
+    const memes = parFin.get(code.split(/[-\s]/).pop()!.toLowerCase()) ?? [];
+    return memes.length === 1 ? { ...r, vin: memes[0] } : r;
+  };
   const premiers = paquets(carte);
   const demandePaquet = (p: VinGen[], i: number) => appeler(`${fichePlat}\n\n`
     + (premiers.length > 1 ? `Paquet ${i + 1} sur ${premiers.length} de la carte : privilégie d'abord ${ANGLES[i % ANGLES.length]} pour ouvrir tes commentaires.\n\n` : '')
@@ -257,7 +273,10 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     lus = [r0, ...await Promise.all(premiers.slice(1).map((p, i) => demandePaquet(p, i + 1)))];
   }
   });
-  for (const r of lus.flat()) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
+  const recus = lus.flat().map(recaler);
+  for (const r of recus) if (vinsParCode.has(r.vin)) reponses.set(r.vin, r);
+  // Pour le diagnostic : réponses dont le code ne correspond à aucun vin, même après recalage.
+  const codesInconnus = recus.filter((r) => !vinsParCode.has(r.vin)).length;
   let defauts = defautsDe();
   // Bilan des défauts du premier passage, par sorte (affiché dans Consommation Claude).
   const sortes: Record<string, number> = {};
@@ -267,6 +286,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
   for (const d of defauts.values()) for (const k of new Set(d.map(sorte))) sortes[k] = (sortes[k] ?? 0) + 1;
   if (notesRamenees.size) sortes['notes ramenées au plafond'] = notesRamenees.size;
   sortes['vins'] = carte.length;
+  if (codesInconnus) sortes['codes de vin non reconnus'] = codesInconnus;
   // Plus le temps de corriger (la fonction d'arrière-plan serait coupée) : on écrit ce qui est valable.
   const presse = () => options.jusqua !== undefined && Date.now() > options.jusqua;
   // Défauts qui empêchent d'écrire l'accord (vin oublié, note, mot interdit, commentaire manquant) ; un défaut de style
@@ -288,7 +308,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
     const repris = await sousPoste('corrections', () => Promise.all(fautifs.map((p, i) => appeler(`${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${retenus.join('\n') || '—'}\n\n`
       + (fautifs.length > 1 ? `Ouvre tes commentaires d'abord par ${ANGLES[(i + essai) % ANGLES.length]}.\n\n` : '')
       + `VINS À REPRENDRE (${p.length})\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`))));
-    for (const r of repris.flat()) if (defauts.has(r.vin)) reponses.set(r.vin, r);
+    for (const r of repris.flat().map(recaler)) if (defauts.has(r.vin)) reponses.set(r.vin, r);
     defauts = defautsDe();
   }
 
@@ -302,7 +322,7 @@ export async function regenererAccordsPlat(q: Requete, client: Anthropic, restau
       `${fichePlat}\n\nCOMMENTAIRES DÉJÀ ÉCRITS POUR CE PLAT (ne pas les répéter, ne pas commencer de la même façon)\n${deja.join('\n') || '—'}\n\n`
       + `VINS À REPRENDRE (${p.length}) : un élément par vin, rien d'autre.\n${p.map((v) => ligneVin(v, defauts.get(v.id))).join('\n')}`))));
     const ids = new Set(aReprendre.flat().map((v) => v.id));
-    for (const r of repris.flat()) if (ids.has(r.vin)) reponses.set(r.vin, r);
+    for (const r of repris.flat().map(recaler)) if (ids.has(r.vin)) reponses.set(r.vin, r);
     defauts = defautsDe();
   }
   // Note hors règle mais commentaire valable : la note est ramenée à la note imposée, ou dans les bornes du plat.
