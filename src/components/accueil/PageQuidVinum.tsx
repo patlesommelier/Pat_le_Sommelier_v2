@@ -109,12 +109,8 @@ function Apercu() {
         </div>
       </div>
 
-      {/* Inscription posée sur la démo, en bas à gauche : elle apparaît après quelques secondes. */}
-      <div className={s.carteFlottante}>
-        <b>Prêt à essayer ?</b>
-        <span>Gratuit, opérationnel en quelques minutes.</span>
-        <a href="#demarrer" className={s.btn}>Inscrire mon restaurant →</a>
-      </div>
+      {/* Inscription posée sur la démo, en bas à gauche : le bouton apparaît après 5 secondes, puis clignote doucement. */}
+      <a href="#demarrer" className={`${s.btn} ${s.btnDemo}`}>Inscrire mon restaurant →</a>
       <div className={s.telephone} aria-hidden="true">
         <VideoDemo video="/demo/demo-2-filet" />
       </div>
