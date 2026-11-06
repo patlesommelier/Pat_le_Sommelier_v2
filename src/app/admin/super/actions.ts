@@ -26,7 +26,6 @@ import { appellationCourte } from '@/lib/admin/intitule';
 import { partagerEtiquettes } from '@/lib/etiquettes/partage';
 import { completerDepuisLesCartes, rattacherCuvees } from '@/lib/distributeurs/rattachement';
 import { sslBase } from '@/lib/ssl-base';
-import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { creerAppellationProposee } from '@/lib/appellations/base';
 
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -736,10 +735,9 @@ export async function verrouillerDistributeurQv(resto: string, f: FormData) {
   if (id) {
     const [d] = await requete<{ nom: string }>('select nom from distributeur where id = $1 and actif', [id]);
     if (!d) redirect(avec(page, { erreur: 'Ce distributeur n’est plus proposé.' }));
-    const marge = await margeDefaut();
     await requete('update restaurant set distributeur_qv_unique = $2 where id = $1', [resto, id]);
-    await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
-                    where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [crypto.randomUUID(), resto, d.nom, id, marge]);
+    await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
+                    where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [crypto.randomUUID(), resto, d.nom, id]);
     const retires = await requete<{ nom: string }>('delete from fournisseur where restaurant_id = $1 and distributeur_id is not null and distributeur_id <> $2 returning nom', [resto, id]);
     message = `Restaurant verrouillé sur « ${d.nom} »${retires.length ? ` ; retirés de sa sélection : ${retires.map((r) => r.nom).join(', ')}` : ''}.`;
   } else {

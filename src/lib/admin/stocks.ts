@@ -1,6 +1,7 @@
 import 'server-only';
 // Gestion des stocks : fournisseurs et commandes de vin d'un restaurant.
 import { requete } from '../db';
+import { prixRestaurantSql } from '../distributeurs/prix-restaurant';
 import { getCoordonneesQv } from '../distributeurs/donnees';
 import { associerAuCatalogue } from './distributeur-vin';
 
@@ -152,10 +153,10 @@ export interface LignePanier { vin_id: string; quantite: number; libelle: string
 export async function getPanier(resto: string) {
   return requete<LignePanier>(
     `select p.vin_id, p.quantite, v.libelle, v.millesime, v.format, v.etiquette_url, f.nom as fournisseur, f.distributeur_id is not null as quid_vinum,
-            -- Distributeur Quid Vinum : le prix de son catalogue pour ce restaurant (jamais le prix QV ni la marge).
-            coalesce(case when f.distributeur_id is not null then (select round(dv.prix_qv * (1 + coalesce(f.marge,
-              (select case when valeur ~ '^[0-9]+([.][0-9]+)?$' then valeur::numeric end from reglage_serveur where cle = 'qv_marge'), 15) / 100), 2)
-              from distributeur_vin dv where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id) end, v.prix_achat)::float8 as prix_achat
+            -- Distributeur Quid Vinum : le prix de son catalogue pour ce restaurant (prix public moins sa remise ; jamais le prix QV).
+            coalesce(case when f.distributeur_id is not null then (select ${prixRestaurantSql('dv', 'dd', 'f')}
+              from distributeur_vin dv join distributeur dd on dd.id = dv.distributeur_id
+              where dv.id = v.distributeur_vin_id and dv.distributeur_id = f.distributeur_id) end, v.prix_achat)::float8 as prix_achat
        from panier p join vin_carte v on v.id = p.vin_id
        left join fournisseur f on f.id = coalesce(v.fournisseur_id, (select x.fournisseur_id from vin_carte x where x.restaurant_id = v.restaurant_id
                                    and lower(x.libelle) = lower(v.libelle) and x.millesime is not distinct from v.millesime and x.fournisseur_id is not null limit 1))

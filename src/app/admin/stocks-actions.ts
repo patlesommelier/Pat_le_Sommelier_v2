@@ -6,7 +6,7 @@ import { redirect } from 'next/navigation';
 import { requete } from '@/lib/db';
 import { exigerAcces } from '@/lib/admin/auth';
 import { choisirFournisseur, donneesBon, modeTestDistributeurs, SQL_EMAIL_COMMANDE } from '@/lib/admin/stocks';
-import { catalogueDistributeur, margeDefaut } from '@/lib/distributeurs/donnees';
+import { catalogueDistributeur } from '@/lib/distributeurs/donnees';
 import { ajouterVinCommande } from '@/lib/admin/distributeur-vin';
 import { lancerPreparation } from '@/lib/inscription/adaptateurs';
 import { vinDeLaCarte } from '@/lib/distributeurs/tarif';
@@ -150,9 +150,9 @@ export async function ajouterDistributeurQv(resto: string, distributeurId: strin
   await exigerAcces(resto);
   const [d] = await requete<{ nom: string }>(`select nom from distributeur d where id = $1 and actif and ${distributeurPermis('$2')}`, [distributeurId, resto]);
   if (!d) return { erreur: 'Ce distributeur n’est plus proposé.' };
-  // Marge de Quid Vinum : la marge par défaut, modifiable ensuite par Pat pour ce restaurant (fiche du distributeur).
-  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
-                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
+  // Remise du restaurant sur le prix public : celle du distributeur, modifiable ensuite par Pat pour ce restaurant (fiche du distributeur).
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
+                  where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`, [randomUUID(), resto, d.nom, distributeurId]);
   rafraichir(resto);
   return { ok: `« ${d.nom} » est ajouté à vos distributeurs : ouvrez son catalogue pour ajouter ses vins à vos vins.` };
 }
@@ -460,9 +460,9 @@ export async function ajouterDuCatalogue(resto: string, distributeurId: string, 
   if (!c) return { erreur: 'Ce vin n’est plus au catalogue : rechargez la page.' };
   const [deja] = await requete<{ id: string }>('select id from vin_carte where restaurant_id = $1 and distributeur_vin_id = $2 limit 1', [resto, distributeurVinId]);
   if (deja) return { ok: `« ${c.libelle} » est déjà dans votre cave.`, vin: deja.id };
-  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
-    [randomUUID(), resto, d.nom, distributeurId, await margeDefaut()]);
+    [randomUUID(), resto, d.nom, distributeurId]);
   const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2', [resto, distributeurId]);
   // Le même vin est déjà dans vos vins (sur la carte) : il est relié à ce distributeur, à ce prix, plutôt qu'ajouté en double.
   const vins = await requete<{ id: string; libelle: string; millesime: string | null; format: string; producteur: string | null; producteur_id: string | null }>(

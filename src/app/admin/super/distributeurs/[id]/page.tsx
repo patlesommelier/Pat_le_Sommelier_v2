@@ -1,7 +1,7 @@
-// Super-admin — fiche d’un distributeur : coordonnées et remise, tarif lu par Claude, vins (prix publics et prix QV), marges des restaurants.
+// Super-admin — fiche d’un distributeur : coordonnées et remise, tarif lu par Claude, vins (prix publics, prix QV, prix restaurant), remises des restaurants.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerMarges, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
+import { ajouterProducteur, ajouterProducteursSansProposition, ajouterVinDistributeur, ajouterVinsBase, associerProducteur, collerTarif, enregistrerRemises, completerVins, deposerTarif, recadrerPhotos, retirerLienProducteur, enregistrerApi, enregistrerDistributeur, enregistrerVins, relireTarif, supprimerDistributeur, synchroniserApi } from '../../distributeurs-actions';
 import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { CollageTarif } from '@/components/admin/CollageTarif';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
@@ -9,10 +9,11 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message, Vignette } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { requete } from '@/lib/db';
-import { getCuveesDistributeur, getDistributeur, margeDefaut, restaurantsDistributeur, getProducteursDistributeur, getVinsDistributeur, photosARecadrer, vinsACompleter } from '@/lib/distributeurs/donnees';
+import { getCuveesDistributeur, getDistributeur, restaurantsDistributeur, getProducteursDistributeur, getVinsDistributeur, photosARecadrer, vinsACompleter } from '@/lib/distributeurs/donnees';
 import { domaineDuSite } from '@/lib/distributeurs/completer';
 import { sansAccents } from '@/lib/distributeurs/tarif';
 import { euros } from '@/lib/bon-commande';
+import { prixRestaurant } from '@/lib/distributeurs/prix-restaurant';
 
 export const dynamic = 'force-dynamic';
 
@@ -27,8 +28,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const sp = await searchParams;
   const d = await getDistributeur(id);
   if (!d) notFound();
-  const [tous, producteurs, duTarif, cuvees, aCompleter, aRecadrer, restos, defaut] = await Promise.all([getVinsDistributeur(id),
-    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), photosARecadrer(id), restaurantsDistributeur(id), margeDefaut()]);
+  const [tous, producteurs, duTarif, cuvees, aCompleter, aRecadrer, restos] = await Promise.all([getVinsDistributeur(id),
+    requete<{ nom: string }>(`select distinct nom from producteur where statut <> 'retire' order by nom`), getProducteursDistributeur(id), getCuveesDistributeur(id), vinsACompleter(id), photosARecadrer(id), restaurantsDistributeur(id)]);
   const aRelier = duTarif.filter((p) => p.nom && !p.producteur_id);
   const sansProposition = aRelier.filter((p) => !p.suggestions.length).length;
   const listeProducteurs = sp.prod === 'tous' ? duTarif : duTarif.filter((p) => p.nom && (!p.producteur_id || p.base_statut === 'propose'));
@@ -49,7 +50,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
 
   return (
     <>
-      <Entete titre={d.nom} texte="Les vins du distributeur : prix publics et prix QV (après la remise de Quid Vinum). Chaque restaurant achète au prix QV + sa marge ; il ne voit ni le prix QV ni la marge.">
+      <Entete titre={d.nom} texte="Les vins du distributeur : prix publics et prix QV (après la remise de Quid Vinum). Chaque restaurant achète au prix public moins sa remise, comme en direct ; il ne voit ni le prix QV ni la commission.">
         <Link href="/admin/super/distributeurs" className="btn sec">← Distributeurs</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
@@ -61,11 +62,12 @@ export default async function FicheDistributeur({ params, searchParams }: { para
             <summary style={{ cursor: 'pointer', display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10 }}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               {d.logo_url && <img src={d.logo_url} alt="" className="logo-distributeur" />}
-              <b style={{ fontSize: 17 }}>Coordonnées, logo et remise</b> <span className="discret">{d.remise_qv != null ? `· remise QV ${String(d.remise_qv).replace('.', ',')} %${calculQv ? ' (prix QV calculés)' : ''}` : ''}{d.actif ? '' : ' · masqué aux restaurants'}</span></summary>
+              <b style={{ fontSize: 17 }}>Coordonnées, logo et remises</b> <span className="discret">{`· remise des restaurants ${String(d.remise_restaurant).replace('.', ',')} % `}{d.remise_qv != null ? `· remise QV ${String(d.remise_qv).replace('.', ',')} %${calculQv ? ' (prix QV calculés)' : ''}` : ''}{d.actif ? '' : ' · masqué aux restaurants'}</span></summary>
             <div className="grille-coordonnees">
             <FormulaireAdmin action={enregistrerDistributeur.bind(null, id)} className="pile" style={{ marginTop: 14 }}>
             <div className="champ"><label htmlFor="nom">Nom</label><input id="nom" name="nom" defaultValue={d.nom} required /></div>
-            <div className="champ"><label htmlFor="remise_qv">Remise QV (%)</label><input id="remise_qv" name="remise_qv" inputMode="decimal" defaultValue={d.remise_qv != null ? String(d.remise_qv).replace('.', ',') : ''} /><span className="aide">remise du distributeur sur ses prix publics</span></div>
+            <div className="champ"><label htmlFor="remise_qv">Remise QV (%)</label><input id="remise_qv" name="remise_qv" inputMode="decimal" defaultValue={d.remise_qv != null ? String(d.remise_qv).replace('.', ',') : ''} /><span className="aide">remise du distributeur à Quid Vinum sur ses prix publics</span></div>
+            <div className="champ"><label htmlFor="remise_restaurant">Remise des restaurants (%)</label><input id="remise_restaurant" name="remise_restaurant" inputMode="decimal" defaultValue={String(d.remise_restaurant).replace('.', ',')} /><span className="aide">remise habituelle d’un restaurant qui commande en direct (ex. 8) ; modifiable par restaurant</span></div>
             <div className="champ"><label htmlFor="calcul_qv">Prix QV</label>
               <select id="calcul_qv" name="calcul_qv" defaultValue={d.calcul_qv}>
                 <option value="liste">Lus dans la liste du distributeur (prix barré = prix public)</option>
@@ -194,18 +196,18 @@ export default async function FicheDistributeur({ params, searchParams }: { para
           </details>
 
           <details className="carte-bo pile bloc-fiche bloc-distrib" style={{ gap: 10 }}>
-            <summary><h2 style={{ margin: 0 }}>Restaurants et marges</h2><span className="petit discret">{restos.length} restaurant{restos.length > 1 ? 's' : ''}</span></summary>
+            <summary><h2 style={{ margin: 0 }}>Restaurants et remises</h2><span className="petit discret">{restos.length} restaurant{restos.length > 1 ? 's' : ''}</span></summary>
             <div>
-              <p className="sous" style={{ margin: '4px 0 0' }}>Prix vendu au restaurant (HTVA) = prix QV + la marge du restaurant. Un restaurant qui active ce distributeur reçoit la marge par défaut ({String(defaut).replace('.', ',')} %, à changer dans la page Distributeurs). Les restaurants ne voient ni le prix QV ni la marge.</p></div>
+              <p className="sous" style={{ margin: '4px 0 0' }}>Prix du restaurant (HTVA) = prix public moins sa remise, comme s’il commandait en direct. Vide : la remise du distributeur ({String(d.remise_restaurant).replace('.', ',')} %). Les restaurants ne voient ni le prix QV ni la commission de Quid Vinum.</p></div>
             {restos.length ? (
-              <FormulaireAdmin action={enregistrerMarges.bind(null, id)} className="pile" style={{ gap: 8 }}>
+              <FormulaireAdmin action={enregistrerRemises.bind(null, id)} className="pile" style={{ gap: 8 }}>
                 {restos.map((r) => (
                   <label key={r.fournisseur_id} className="ligne-actions" style={{ alignItems: 'center' }}>
                     <span style={{ minWidth: 200 }}><b>{r.restaurant}</b></span>
-                    <span className="champ-prix"><input type="text" inputMode="decimal" name={`marge_${r.fournisseur_id}`} defaultValue={String(r.marge ?? defaut).replace('.', ',')} aria-label={`Marge : ${r.restaurant}`} /> %</span>
+                    <span className="champ-prix"><input type="text" inputMode="decimal" name={`remise_${r.fournisseur_id}`} defaultValue={r.remise != null ? String(r.remise).replace('.', ',') : ''} placeholder={String(d.remise_restaurant).replace('.', ',')} aria-label={`Remise : ${r.restaurant}`} /> %</span>
                   </label>
                 ))}
-                <span><button className="btn sec petit">Enregistrer les marges</button></span>
+                <span><button className="btn sec petit">Enregistrer les remises</button></span>
               </FormulaireAdmin>
             ) : <span className="petit discret">Aucun restaurant n’a encore activé ce distributeur.</span>}
           </details>
@@ -261,7 +263,7 @@ export default async function FicheDistributeur({ params, searchParams }: { para
               <div className="carte-bo" style={{ padding: 0 }}>
                 <div className="tableau">
                   <table style={{ minWidth: 760 }}>
-                    <thead><tr><th>Vin</th><th>Base de Pat</th><th className="droite">Prix public (HTVA)</th><th className="droite">Prix QV (HTVA){calculQv && <span className="discret" style={{ fontWeight: 400 }}> −{String(d.remise_qv).replace('.', ',')} %</span>}</th><th className="droite">Proposé</th></tr></thead>
+                    <thead><tr><th>Vin</th><th>Base de Pat</th><th className="droite">Prix public (HTVA)</th><th className="droite">Prix QV (HTVA){calculQv && <span className="discret" style={{ fontWeight: 400 }}> −{String(d.remise_qv).replace('.', ',')} %</span>}</th><th className="droite">Restaurant (HTVA)<span className="discret" style={{ fontWeight: 400 }}> −{String(d.remise_restaurant).replace('.', ',')} %</span></th><th className="droite">Proposé</th></tr></thead>
                     <tbody>
                       {!vins.length && <tr><td colSpan={5} className="discret">{tous.length ? 'Aucun vin ne correspond.' : 'Aucun vin : déposez le tarif ci-dessus, ou ajoutez les vins à la main.'}</td></tr>}
                       {vins.map((v) => (
@@ -285,6 +287,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
                           <td className="droite">{calculQv && v.prix_catalogue != null
                             ? <><input type="hidden" name={`prix_${v.id}`} value={virgule(v.prix_qv)} /><span style={{ whiteSpace: 'nowrap' }}>{v.prix_qv == null ? '—' : euros(Number(v.prix_qv))}</span></>
                             : <span className="champ-prix"><input type="text" inputMode="decimal" name={`prix_${v.id}`} defaultValue={virgule(v.prix_qv)} aria-label={`Prix QV : ${v.libelle}`} /> €</span>}</td>
+                          {/* Prix du restaurant avec la remise par défaut : prix public (sinon recalculé depuis le prix QV) moins la remise. */}
+                          <td className="droite" style={{ whiteSpace: 'nowrap' }}>{(() => { const p = prixRestaurant(v.prix_catalogue != null ? Number(v.prix_catalogue) : null, v.prix_qv != null ? Number(v.prix_qv) : null, d.remise_qv, d.remise_restaurant); return p == null ? <span className="discret" title="Pas de prix public ni de remise QV : pas de prix pour les restaurants">—</span> : euros(p); })()}</td>
                           <td className="droite"><input type="checkbox" name={`actif_${v.id}`} defaultChecked={v.actif} aria-label={`Proposé aux restaurants : ${v.libelle}`} /></td>
                         </tr>
                       ))}

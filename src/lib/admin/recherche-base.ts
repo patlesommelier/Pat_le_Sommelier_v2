@@ -2,8 +2,9 @@ import 'server-only';
 // Recherche d'un vin dans la base de Pat à partir de l'intitulé tapé par le restaurant (ajout d'un vin à la carte).
 // Sources : les cuvées de la base (avec leur producteur et leur appellation) et les vins déjà connus des cartes.
 // Aussi les vins des catalogues des distributeurs de Quid Vinum (actifs) : le vin trouvé porte alors ses offres, au prix
-// du restaurant (prix QV + sa marge, sinon la marge par défaut). Jamais le prix QV, la marge ni le classement.
+// du restaurant (prix public moins sa remise chez ce distributeur). Jamais le prix QV, la commission ni le classement.
 import { requete } from '@/lib/db';
+import { prixRestaurantSql } from '@/lib/distributeurs/prix-restaurant';
 import { memeVinQue } from './doublons-recherche';
 import { distributeurPermis } from '../distributeurs/verrou';
 
@@ -19,15 +20,13 @@ export type OffreDistributeur = { id: string; distributeur: string; distributeur
 /** Offres des distributeurs actifs, par vin de la base (cuvée) ou par vin de distributeur, au prix du restaurant. */
 export async function offresDistributeurs(resto: string, { cuvees = [] as string[], vins = [] as string[] } = {}) {
   if (!cuvees.length && !vins.length) return [] as (OffreDistributeur & { cuvee_id: string | null })[];
-  const [m] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
-  const defaut = Number.isFinite(Number(m?.valeur)) ? Number(m?.valeur) : 15;
   return requete<OffreDistributeur & { cuvee_id: string | null }>(
     `select v.id, d.nom as distributeur, d.id as distributeur_id, v.libelle, v.millesime, v.contenance, v.cuvee_id, v.epuise,
-            round(v.prix_qv * (1 + coalesce(f.marge, $3) / 100), 2)::float8 as prix
+            ${prixRestaurantSql()}::float8 as prix
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
-       left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $4
-      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) and ${distributeurPermis('$4')} order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
-    [cuvees, vins, defaut, resto]);
+       left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $3
+      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) and ${distributeurPermis('$3')} order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
+    [cuvees, vins, resto]);
 }
 
 const MOTS_VIDES = new Set(['de', 'du', 'des', 'la', 'le', 'les', 'l', 'd', 'et', 'en', 'au', 'aux', 'a', 'the', 'di', 'del', 'della', 'y']);

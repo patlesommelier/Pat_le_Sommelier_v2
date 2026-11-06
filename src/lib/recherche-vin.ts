@@ -4,7 +4,7 @@
 //   1. Claude comprend la demande (critères) ;
 //   2. présélection sans IA dans les catalogues (épuisés, budget, vins déjà en cave écartés ; rankings de Pat pour classer) ;
 //   3. Claude choisit les vins de chaque distributeur selon les principes de Pat et écrit pourquoi.
-// Les rankings, le prix QV et la marge ne sortent jamais d'ici : le restaurant voit son prix d'achat HTVA et le texte de Pat.
+// Les rankings, le prix QV et la commission ne sortent jamais d'ici : le restaurant voit son prix d'achat HTVA et le texte de Pat.
 // Sans « server-only » : lancé en arrière-plan.
 import type Anthropic from '@anthropic-ai/sdk';
 import type { Requete } from './generation/accords';
@@ -14,6 +14,7 @@ import { clientClaude, modeleAccords } from './claude';
 const modeleRecherche = () => process.env.PAT_MODELE_RECHERCHE || 'claude-opus-5-5';
 import { textePlat, textePrincipes, type PlatCtx, type PrincipeCtx } from './pat-cerveau';
 import { distributeurPermis } from './distributeurs/verrou';
+import { prixRestaurantSql } from './distributeurs/prix-restaurant';
 
 export interface VinPropose {
   id: string; libelle: string; producteur: string | null; appellation: string | null; millesime: string | null; contenance: string | null;
@@ -70,20 +71,18 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
     const lieux = (c.lieux ?? []).map(sansAccents).filter((x) => x.length > 2);
 
     // 2. Présélection : vins actifs des distributeurs Quid Vinum proposés à ce restaurant, au prix du restaurant.
-    const [m] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
-    const margeDefaut = Number.isFinite(Number(m?.valeur)) && m?.valeur ? Number(m.valeur) : 15;
     const tous = await requete<Candidat>(
       `select v.id, d.id as distributeur_id, d.nom as distributeur, d.logo_url as logo, v.libelle, coalesce(p.nom, v.producteur_texte) as producteur,
               coalesce(c.appellation_texte, t.nom, v.appellation) as appellation, coalesce(t.region, p.region, v.section) as region, coalesce(p.pays, t.pays) as pays,
               c.cepages, v.millesime, v.contenance, coalesce(c.couleur::text, v.couleur) as couleur,
-              round(v.prix_qv * (1 + coalesce(f.marge, $2) / 100), 2)::float8 as prix, coalesce(v.etiquette_url, c.etiquette_url) as etiquette,
+              ${prixRestaurantSql()}::float8 as prix, coalesce(v.etiquette_url, c.etiquette_url) as etiquette,
               coalesce(c.ranking_pat, p.ranking_pat, 3)::float8 + coalesce(t.ranking_pat, 3)::float8 / 10 as ranking
          from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
          left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id and c.statut <> 'retire'
          left join terroir t on t.id = c.appellation_id
          left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $1
         where v.actif and not v.epuise and ${distributeurPermis('$1')}
-          and not exists (select 1 from vin_carte x where x.restaurant_id = $1 and x.distributeur_vin_id = v.id)`, [resto, margeDefaut]);
+          and not exists (select 1 from vin_carte x where x.restaurant_id = $1 and x.distributeur_vin_id = v.id)`, [resto]);
     const lieuDe = (v: Candidat) => sansAccents([v.appellation, v.region, v.pays, v.libelle, v.producteur].filter(Boolean).join(' '));
     const retenus = tous.filter((v) => (!couleurs.length || (v.couleur && couleurs.includes(v.couleur))) && (!budget || (v.prix != null && v.prix <= budget)));
     // Le lieu demandé passe devant (sans écarter les autres : il y en a parfois peu) ; puis les rankings de Pat.

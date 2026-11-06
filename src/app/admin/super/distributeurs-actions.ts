@@ -1,5 +1,5 @@
 'use server';
-// Super-admin — distributeurs de Quid Vinum : coordonnées, marge, tarif (PDF lu par Claude), vins et prix.
+// Super-admin — distributeurs de Quid Vinum : coordonnées, remises, tarif (PDF lu par Claude), vins et prix.
 import { randomUUID } from 'node:crypto';
 import sharp from 'sharp';
 import { revalidatePath } from 'next/cache';
@@ -60,6 +60,8 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   const remise = nombre(f, 'remise_qv');
   if (remise === undefined || (remise != null && remise > 100)) return { erreur: 'La remise QV doit être un pourcentage, par exemple 20.' };
   if (txt(f, 'calcul_qv') === 'remise' && remise == null) return { erreur: 'Indiquez la remise QV (%) pour calculer les prix QV, par exemple 10.' };
+  const remiseResto = nombre(f, 'remise_restaurant');
+  if (remiseResto === undefined || (remiseResto != null && remiseResto >= 100)) return { erreur: 'La remise des restaurants doit être un pourcentage, par exemple 8.' };
   const email = txt(f, 'email');
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'L’adresse e-mail ne semble pas valide.' };
   const modele = ['sonnet', 'haiku', 'opus'].includes(txt(f, 'modele_lecture') ?? '') ? txt(f, 'modele_lecture') : 'sonnet';
@@ -72,9 +74,9 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   } else if (f.get('retirer_logo') === 'on') logo = null;
   try {
     await requete(`update distributeur set nom = $2, adresse = $3, tva = $4, contact = $5, telephone = $6, email = $7, site = $8, remise_qv = $9,
-                   notes = $10, actif = $11, modele_lecture = $12, source = $13, logo_url = case when $14 then $15 else logo_url end where id = $1`,
+                   notes = $10, actif = $11, modele_lecture = $12, source = $13, logo_url = case when $14 then $15 else logo_url end, remise_restaurant = $16 where id = $1`,
       [id, nom, txt(f, 'adresse'), txt(f, 'tva'), txt(f, 'contact'), txt(f, 'telephone'), email, txt(f, 'site'), remise, txt(f, 'notes'), f.get('actif') === 'on',
-        modele, source, logo !== undefined, logo ?? null]);
+        modele, source, logo !== undefined, logo ?? null, remiseResto ?? 0]);
   } catch {
     return { erreur: `Un autre distributeur s’appelle déjà « ${nom} ».` };
   }
@@ -310,26 +312,16 @@ export async function ajouterVinDistributeur(id: string, f: FormData): Promise<R
   return { ok: 'Vin ajouté.' };
 }
 
-/** Marge de Quid Vinum (%) de chaque restaurant qui a activé ce distributeur. */
-export async function enregistrerMarges(id: string, f: FormData): Promise<Retour> {
+/** Remise (%) de chaque restaurant chez ce distributeur, sur son prix public ; vide : la remise par défaut du distributeur. */
+export async function enregistrerRemises(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
-  const ids = [...f.keys()].filter((k) => k.startsWith('marge_')).map((k) => k.slice(6));
-  const marges = ids.map((r) => nombre(f, `marge_${r}`));
-  if (marges.some((m) => m == null || m === undefined || m > 500)) return { erreur: 'Chaque marge doit être un pourcentage, par exemple 15.' };
-  await requete(`update fournisseur f set marge = x.marge from unnest($2::text[], $3::numeric[]) as x(id, marge) where f.distributeur_id = $1 and f.id = x.id`,
-    [id, ids, marges]);
+  const ids = [...f.keys()].filter((k) => k.startsWith('remise_')).map((k) => k.slice(7));
+  const remises = ids.map((r) => nombre(f, `remise_${r}`));
+  if (remises.some((m) => m === undefined || (m != null && m >= 100))) return { erreur: 'Chaque remise doit être un pourcentage, par exemple 8 (ou vide : celle du distributeur).' };
+  await requete(`update fournisseur f set remise = x.remise from unnest($2::text[], $3::numeric[]) as x(id, remise) where f.distributeur_id = $1 and f.id = x.id`,
+    [id, ids, remises]);
   rafraichir(id);
-  return { ok: 'Marges enregistrées.' };
-}
-
-/** Marge par défaut de Quid Vinum (%), donnée à un restaurant quand il active un distributeur. */
-export async function enregistrerMargeDefaut(f: FormData): Promise<Retour> {
-  await exigerAdmin();
-  const marge = nombre(f, 'marge_defaut');
-  if (marge == null || marge > 500) return { erreur: 'La marge doit être un pourcentage, par exemple 15.' };
-  await requete(`insert into reglage_serveur (cle, valeur) values ('qv_marge', $1) on conflict (cle) do update set valeur = excluded.valeur, maj_le = now()`, [String(marge)]);
-  rafraichir();
-  return { ok: 'Marge par défaut enregistrée : elle s’applique aux prochains restaurants qui activent un distributeur.' };
+  return { ok: 'Remises des restaurants enregistrées.' };
 }
 
 /** Coordonnées de Quid Vinum : destinataire des commandes des restaurants (distributeurs de la base). */

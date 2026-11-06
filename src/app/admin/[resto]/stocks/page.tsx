@@ -27,7 +27,7 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
   const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
-  // Vins des distributeurs Quid Vinum : leur prix d'achat est celui du catalogue (prix QV + marge du restaurant), non modifiable.
+  // Vins des distributeurs Quid Vinum : leur prix d'achat est celui du catalogue (prix public moins la remise du restaurant), non modifiable.
   const distributeursQv = new Set(fournisseurs.filter((f) => f.distributeur_id).map((f) => f.id));
   const prixCatalogue = new Map((await offresDistributeurs(resto, { vins: vins.map((v) => v.distributeur_vin_id).filter((x): x is string => Boolean(x)) }))
     .map((o) => [o.id, o.prix] as const).filter((x): x is readonly [string, number] => x[1] != null));

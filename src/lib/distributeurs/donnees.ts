@@ -1,14 +1,15 @@
 import 'server-only';
 // Base des distributeurs de Quid Vinum. Deux lectures bien séparées :
-// - super-admin : tout (prix QV, marge, remise) ;
-// - restaurants : le catalogue au prix proposé seulement, jamais le prix QV ni la marge.
+// - super-admin : tout (prix public, prix QV, remise QV, remises des restaurants) ;
+// - restaurants : le catalogue à leur prix (prix public moins leur remise) seulement, jamais le prix QV ni la commission.
 import { requete } from '../db';
 import { suggererProducteurs, type ProducteurBase, type Suggestion } from './rattachement';
 import { distributeurPermis } from './verrou';
+import { prixRestaurantSql } from './prix-restaurant';
 
 export interface Distributeur {
   id: string; nom: string; adresse: string | null; tva: string | null; contact: string | null; telephone: string | null; email: string | null;
-  site: string | null; marge: number; remise_qv: number | null; calcul_qv: 'liste' | 'remise'; presentation: string | null; notes: string | null; actif: boolean;
+  site: string | null; remise_restaurant: number; remise_qv: number | null; calcul_qv: 'liste' | 'remise'; presentation: string | null; notes: string | null; actif: boolean;
   lecture_statut: 'en_cours' | 'terminee' | 'echec' | null; lecture_message: string | null; lecture_le: string | null;
   logo_url: string | null; source: 'fichier' | 'api'; modele_lecture: 'sonnet' | 'haiku' | 'opus';
   /** API du distributeur : adresse et nom de l'en-tête ; la clé elle-même ne sort jamais de la base (seulement « enregistrée »). */
@@ -17,7 +18,7 @@ export interface Distributeur {
 }
 
 // Colonnes lues (jamais api_cle).
-const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.marge::float8 as marge, d.remise_qv::float8 as remise_qv, d.calcul_qv, d.presentation, d.notes, d.actif,
+const COLONNES = `d.id, d.nom, d.adresse, d.tva, d.contact, d.telephone, d.email, d.site, d.remise_restaurant::float8 as remise_restaurant, d.remise_qv::float8 as remise_qv, d.calcul_qv, d.presentation, d.notes, d.actif,
   d.lecture_statut, d.lecture_message, d.lecture_le::text, d.logo_url, d.source, d.modele_lecture, d.api_url, d.api_entete,
   d.api_cle is not null as api_cle_enregistree, d.api_synchro_le::text, d.completion_statut, d.completion_message, d.completion_le::text`;
 export interface DistributeurListe extends Distributeur { vins: number; tarif_nom: string | null; tarif_le: string | null; restaurants: number }
@@ -36,16 +37,10 @@ export interface ProducteurDuTarif {
 }
 
 /** Marge par défaut de Quid Vinum (%), donnée à un restaurant quand il active un distributeur. */
-export async function margeDefaut(): Promise<number> {
-  const [r] = await requete<{ valeur: string }>(`select valeur from reglage_serveur where cle = 'qv_marge'`);
-  const n = Number(r?.valeur);
-  return Number.isFinite(n) && n >= 0 ? n : 15;
-}
-
-/** Restaurants qui ont activé ce distributeur, avec leur marge (%). */
+/** Restaurants qui ont activé ce distributeur, avec leur remise propre (%) ; null : celle du distributeur. */
 export async function restaurantsDistributeur(id: string) {
-  return requete<{ fournisseur_id: string; restaurant: string; marge: number | null }>(
-    `select f.id as fournisseur_id, r.nom as restaurant, f.marge::float8 as marge
+  return requete<{ fournisseur_id: string; restaurant: string; remise: number | null }>(
+    `select f.id as fournisseur_id, r.nom as restaurant, f.remise::float8 as remise
        from fournisseur f join restaurant r on r.id = f.restaurant_id where f.distributeur_id = $1 order by lower(r.nom)`, [id]);
 }
 
@@ -176,15 +171,13 @@ export async function vinsSurCarteParDistributeur(resto: string): Promise<Map<st
   return new Map(lignes.map((x) => [x.distributeur_id, x.n]));
 }
 
-/** Catalogue d'un distributeur au prix proposé (le prix QV et la marge ne sortent pas d'ici). */
-/** Catalogue d'un distributeur pour un restaurant : prix QV + la marge de ce restaurant (sinon la marge par défaut). */
+/** Catalogue d'un distributeur pour un restaurant : prix public moins la remise de ce restaurant (le prix QV ne sort pas d'ici). */
 export async function catalogueDistributeur(distributeurId: string, resto: string) {
-  const defaut = await margeDefaut();
   return requete<VinCatalogueResto>(
     `select v.id, v.section, coalesce(p.nom, v.producteur_texte) as producteur, v.producteur_id, v.libelle, v.millesime, v.contenance, v.couleur,
-            v.certification, round(v.prix_qv * (1 + coalesce(f.marge, $3) / 100), 2)::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
+            v.certification, ${prixRestaurantSql()}::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id left join producteur p on p.id = v.producteur_id
        left join cuvee c on c.id = v.cuvee_id
        left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $2
-      where v.distributeur_id = $1 and v.actif and d.actif and ${distributeurPermis('$2')} order by v.ordre, v.libelle`, [distributeurId, resto, defaut]);
+      where v.distributeur_id = $1 and v.actif and d.actif and ${distributeurPermis('$2')} order by v.ordre, v.libelle`, [distributeurId, resto]);
 }

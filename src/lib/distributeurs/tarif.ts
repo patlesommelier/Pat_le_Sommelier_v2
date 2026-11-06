@@ -92,7 +92,6 @@ export function dedoublonner(vins: VinTarif[]): VinTarif[] {
   return [...garde.values()];
 }
 
-/** Prix proposé aux restaurants : le prix imposé, sinon le prix QV + la marge du distributeur, au centime. */
 export type CalculQv = 'liste' | 'remise';
 
 /**
@@ -110,12 +109,6 @@ export function prixDuTarif(prixLu: number | null, prixCatalogue: number | null,
 /** Prix publié moins la remise (%), arrondi au centime. */
 export function prixRemise(publie: number | null, remise: number): number | null {
   return publie == null ? null : Math.round(publie * (1 - remise / 100) * 100) / 100;
-}
-
-export function prixPropose(prixQv: number | null, marge: number, impose: number | null = null): number | null {
-  if (impose != null) return impose;
-  if (prixQv == null) return null;
-  return Math.round(prixQv * (1 + marge / 100) * 100) / 100;
 }
 
 // ─── Rapprochement avec la carte d'un restaurant ───

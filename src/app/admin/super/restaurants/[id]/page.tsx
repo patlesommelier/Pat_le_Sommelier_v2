@@ -40,8 +40,10 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
   const x = infos.find((i) => i.id === id)!;
   const etapes = bo ? etapesRestaurant(bo, resume).filter((e) => e.libelle !== 'Simulateur') : [];
   const lienApp = await adresseApp(id);
-  const marges = new Map((await requete<{ distributeur_id: string; marge: number | null }>(
-    'select distributeur_id, marge::float8 as marge from fournisseur where restaurant_id = $1 and distributeur_id is not null', [id])).map((m) => [m.distributeur_id, m.marge]));
+  // Remise du restaurant chez chaque distributeur actif (la sienne, sinon celle du distributeur), sur le prix public.
+  const remises = new Map((await requete<{ distributeur_id: string; remise: number; propre: boolean }>(
+    `select f.distributeur_id, coalesce(f.remise, d.remise_restaurant)::float8 as remise, f.remise is not null as propre
+       from fournisseur f join distributeur d on d.id = f.distributeur_id where f.restaurant_id = $1`, [id])).map((m) => [m.distributeur_id, m]));
 
   return (
     <>
@@ -100,7 +102,7 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
         <h2 style={{ margin: 0 }}>Distributeurs Quid Vinum</h2>
         <div className="tableau">
           <table className="tableau-super">
-            <thead><tr><th>Distributeur</th><th>Chez ce restaurant</th><th>Marge</th><th style={{ textAlign: 'right' }}>Vins sur la carte</th><th style={{ textAlign: 'right' }}>Catalogue</th></tr></thead>
+            <thead><tr><th>Distributeur</th><th>Chez ce restaurant</th><th>Remise</th><th style={{ textAlign: 'right' }}>Vins sur la carte</th><th style={{ textAlign: 'right' }}>Catalogue</th></tr></thead>
             <tbody>
               {qv.map((d) => {
                 const f = choisi(d.id);
@@ -110,7 +112,7 @@ export default async function ConfigurationRestaurant({ params, searchParams }: 
                     <td><Link href={`/admin/super/distributeurs/${d.id}`}><b>{d.nom}</b></Link>{!d.actif && <> <Etat type="defaut">Masqué</Etat></>}</td>
                     <td>{bloque ? <Etat type="defaut">Exclu par le verrou</Etat> : f ? <Etat type="ok">Actif</Etat> : <span className="discret">Non sélectionné</span>}
                       {verrou?.id === d.id && <> <Etat type="propose">Unique</Etat></>}</td>
-                    <td>{f ? (marges.get(d.id) != null ? `${marges.get(d.id)} %` : 'par défaut') : '—'}</td>
+                    <td>{f && remises.get(d.id) ? `${String(remises.get(d.id)!.remise).replace('.', ',')} %${remises.get(d.id)!.propre ? '' : ' (par défaut)'}` : '—'}</td>
                     <td style={{ textAlign: 'right' }}>{surCarte.get(d.id) ?? 0}</td>
                     <td style={{ textAlign: 'right' }} className="discret">{d.catalogue} vins</td>
                   </tr>

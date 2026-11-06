@@ -1,10 +1,10 @@
-// Super-admin — distributeurs et importateurs de Quid Vinum : leurs tarifs, prix publics et prix QV, et la marge par défaut de Quid Vinum.
+// Super-admin — distributeurs et importateurs de Quid Vinum : leurs tarifs, prix publics et prix QV, et les coordonnées de Quid Vinum pour les commandes.
 import Link from 'next/link';
-import { creerDistributeur, enregistrerMargeDefaut, enregistrerQv } from '../distributeurs-actions';
+import { creerDistributeur, enregistrerQv } from '../distributeurs-actions';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
-import { getCoordonneesQv, getDistributeurs, margeDefaut } from '@/lib/distributeurs/donnees';
+import { getCoordonneesQv, getDistributeurs } from '@/lib/distributeurs/donnees';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,10 +13,10 @@ const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'nume
 export default async function Distributeurs({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [liste, qv, marge] = await Promise.all([getDistributeurs(), getCoordonneesQv(), margeDefaut()]);
+  const [liste, qv] = await Promise.all([getDistributeurs(), getCoordonneesQv()]);
   return (
     <>
-      <Entete titre="Distributeurs" texte="Les distributeurs et importateurs de Quid Vinum : leurs prix publics et leurs prix QV (avec la remise de Quid Vinum). Chaque restaurant achète au prix QV + sa marge de Quid Vinum. Les restaurants choisissent un distributeur dans leurs Fournisseurs et commandent dans son catalogue : la commande part chez Quid Vinum." />
+      <Entete titre="Distributeurs" texte="Les distributeurs et importateurs de Quid Vinum : leurs prix publics et leurs prix QV (avec la remise de Quid Vinum). Chaque restaurant achète au prix public moins sa remise chez le distributeur, comme en direct ; Quid Vinum est rémunéré par la différence avec le prix QV, jamais montrée aux restaurants. Les restaurants choisissent un distributeur dans leurs Fournisseurs et commandent dans son catalogue : la commande part chez Quid Vinum." />
       <Message ok={sp.ok} erreur={sp.erreur} />
       <div className="rangee">
         <div className="large" style={{ gap: 16 }}>
@@ -51,11 +51,6 @@ export default async function Distributeurs({ searchParams }: { searchParams: Pr
             <div className="champ"><label htmlFor="nom">Nom du distributeur</label><input id="nom" name="nom" required placeholder="Tapez le nom ici" /></div>
             <button className="btn">Créer</button>
           </form>
-          <FormulaireAdmin action={enregistrerMargeDefaut} className="carte-bo pile">
-            <div><h2>Marge de Quid Vinum</h2><p className="sous">Ajoutée au prix QV quand un restaurant active un distributeur. Elle se change ensuite pour chaque restaurant dans la fiche du distributeur.</p></div>
-            <div className="champ"><label htmlFor="marge_defaut">Marge par défaut (%)</label><input id="marge_defaut" name="marge_defaut" inputMode="decimal" defaultValue={String(marge).replace('.', ',')} required /></div>
-            <button className="btn sec">Enregistrer</button>
-          </FormulaireAdmin>
           <FormulaireAdmin action={enregistrerQv} className="carte-bo pile">
             <div><h2>Commandes Quid Vinum</h2><p className="sous">Les commandes des restaurants aux distributeurs de la base partent à cette adresse, avec ces coordonnées sur le bon de commande.</p></div>
             <div className="champ"><label htmlFor="qv_nom">Société</label><input id="qv_nom" name="qv_nom" defaultValue={qv.nom} /></div>

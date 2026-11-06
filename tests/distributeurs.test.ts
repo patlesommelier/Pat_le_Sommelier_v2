@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { cleVin, contenanceTarif, dedoublonner, prixPropose, vinDeLaCarte, vinTarif, type VinTarif } from '../src/lib/distributeurs/tarif';
+import { cleVin, contenanceTarif, dedoublonner, vinDeLaCarte, vinTarif, type VinTarif } from '../src/lib/distributeurs/tarif';
+import { prixRestaurant } from '../src/lib/distributeurs/prix-restaurant';
 
 const v = (x: Partial<VinTarif>): VinTarif => ({ section: null, producteur: null, libelle: 'x', millesime: null, contenance: null, couleur: null,
   certification: null, prix: null, epuise: false, maximum: null, ...x });
@@ -50,11 +51,12 @@ test('tarifs : clé stable d’un tarif à l’autre', () => {
   assert.notEqual(cleVin({ producteur: 'X', libelle: 'Chablis', millesime: '2023', contenance: null }), cleVin({ producteur: 'X', libelle: 'Chablis', millesime: '2023', contenance: '37,5 cl' }));
 });
 
-test('tarifs : prix proposé aux restaurants', () => {
-  assert.equal(prixPropose(10, 15), 11.5);
-  assert.equal(prixPropose(11.28, 12.5), 12.69);
-  assert.equal(prixPropose(10, 15, 9.9), 9.9);
-  assert.equal(prixPropose(null, 15), null);
+test('prix du restaurant : prix public moins sa remise, sans lien avec le prix QV', () => {
+  assert.equal(prixRestaurant(10, 8, 20, 8), 9.2);           // public 10 €, remise 8 % → 9,20 € (Quid Vinum achète 8 €)
+  assert.equal(prixRestaurant(10, 7, 20, 8), 9.2);           // le prix QV ne change rien
+  assert.equal(prixRestaurant(null, 8, 20, 8), 9.2);         // sans prix public : 8 € ÷ (1 − 20 %) = 10 €, puis − 8 %
+  assert.equal(prixRestaurant(12.5, null, null, null), 12.5); // pas de remise : le prix public
+  assert.equal(prixRestaurant(null, 8, null, 8), null);      // ni prix public ni remise QV : pas de prix
 });
 
 test('tarifs : vin du tarif retrouvé sur la carte du restaurant', () => {

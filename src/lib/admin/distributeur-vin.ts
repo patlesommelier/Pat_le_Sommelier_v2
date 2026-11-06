@@ -1,10 +1,9 @@
 import 'server-only';
 // Vin d'un restaurant acheté chez un distributeur de Quid Vinum : le distributeur devient son fournisseur
-// (avec la marge par défaut s'il ne l'était pas), le vin y est rattaché avec son prix d'achat (prix du restaurant, HTVA).
+// (avec la remise par défaut du distributeur s'il ne l'était pas), le vin y est rattaché avec son prix d'achat (prix du restaurant, HTVA).
 import { randomUUID } from 'node:crypto';
 import { requete } from '@/lib/db';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
-import { margeDefaut } from '@/lib/distributeurs/donnees';
 import { centilitres } from '@/lib/contenances';
 import { completerBase } from '@/lib/admin/completer-base';
 import { cepageDuNom } from '@/lib/distributeurs/cepages';
@@ -13,9 +12,9 @@ import { offreDuCatalogue, type VinCatalogueComplet, type VinCarteComplet } from
 export async function rattacherAuDistributeur(resto: string, vinIds: string[], offreId: string) {
   const [o] = await offresDistributeurs(resto, { vins: [offreId] });
   if (!o || !vinIds.length) return null;
-  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id, marge) select $1, $2, $3, $4, $5
+  await requete(`insert into fournisseur (id, restaurant_id, nom, distributeur_id) select $1, $2, $3, $4
                   where not exists (select 1 from fournisseur where restaurant_id = $2 and distributeur_id = $4)`,
-    [randomUUID(), resto, o.distributeur, o.distributeur_id, await margeDefaut()]);
+    [randomUUID(), resto, o.distributeur, o.distributeur_id]);
   const [f] = await requete<{ id: string }>('select id from fournisseur where restaurant_id = $1 and distributeur_id = $2 limit 1', [resto, o.distributeur_id]);
   await requete(`update vin_carte set fournisseur_id = $3, distributeur_vin_id = $4, prix_achat = coalesce($5, prix_achat) where restaurant_id = $1 and id = any($2)`,
     [resto, vinIds, f?.id ?? null, o.id, o.prix]);
