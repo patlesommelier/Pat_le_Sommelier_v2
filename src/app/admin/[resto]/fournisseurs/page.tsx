@@ -65,7 +65,7 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
 
       <section className="pile" id="quid-vinum">
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: 12, alignItems: 'flex-start', justifyContent: 'space-between' }}>
-          <div style={{ flex: '1 1 420px' }}><h2 style={{ margin: 0 }}>Distributeurs Quid Vinum</h2><p className="sous" style={{ margin: '4px 0 0' }}>La sélection de Quid Vinum : vous commandez dans leurs catalogues, au prix proposé par Quid Vinum, sans rien saisir. Une seule commande pour tous : Quid Vinum la transmet à chaque distributeur.</p></div>
+          <div style={{ flex: '1 1 420px' }}><h2 style={{ margin: 0 }}>Distributeurs Quid Vinum</h2><p className="sous" style={{ margin: '4px 0 0' }}>La sélection de Quid Vinum : vous commandez dans leurs catalogues au même prix qu’en direct (leur prix public moins votre remise), sans rien saisir. Une seule commande pour tous : Quid Vinum la transmet à chaque distributeur.</p></div>
         </div>
         {/* Tous les distributeurs Quid Vinum, les actifs en premier ; à droite, « Actif » ou « Non sélectionné ». */}
         {[...proposes].sort((x, y) => Number(y.deja) - Number(x.deja) || x.nom.localeCompare(y.nom)).map((d) => {
@@ -78,6 +78,10 @@ export default async function Fournisseurs({ params }: { params: Promise<{ resto
               <span className="case-logo case-logo-qv">{d.logo_url && <img src={d.logo_url} alt="" />}</span>
               <span className="pile" style={{ flex: '1 1 260px', gap: 4 }}>
                 <b style={{ fontSize: 17 }}>{d.nom}</b>
+                {/* Remise du restaurant chez ce distributeur, sur son prix public (jamais le prix QV ni la commission). */}
+                {d.remise > 0
+                  ? <span className="remise-qv"><b>−{String(d.remise).replace('.', ',')} %</b> de remise sur le prix public</span>
+                  : <span className="remise-qv sans">Prix public, sans remise</span>}
                 {(d.presentation || site) && <span className="petit">{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</span>}
               </span>
               {/* Une commande Quid Vinum regroupe tous les distributeurs Quid Vinum actifs. */}

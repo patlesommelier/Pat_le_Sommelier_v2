@@ -37,6 +37,8 @@ export default async function FicheDistributeur({ params, searchParams }: { para
   const q = sansAccents(sp.q?.trim() ?? '');
   const vins = tous.filter((v) => (sp.tous || v.actif) && (!q || sansAccents(`${v.producteur_texte ?? ''} ${v.libelle} ${v.millesime ?? ''} ${v.producteur_nom ?? ''} ${v.section ?? ''}`).includes(q)));
   const actifs = tous.filter((v) => v.actif);
+  // Vins proposés sans prix pour les restaurants : ni prix public sur le tarif, ni remise QV pour le retrouver depuis le prix QV.
+  const sansPrix = actifs.filter((v) => prixRestaurant(v.prix_catalogue != null ? Number(v.prix_catalogue) : null, v.prix_qv != null ? Number(v.prix_qv) : null, d.remise_qv, 0) == null).length;
   const rattaches = actifs.filter((v) => v.producteur_id).length;
   const dansLaBase = actifs.filter((v) => v.cuvee_id).length;
   // Lecture interrompue (serveur redémarré) : au-delà de 30 minutes, on propose de la relancer.
@@ -54,6 +56,12 @@ export default async function FicheDistributeur({ params, searchParams }: { para
         <Link href="/admin/super/distributeurs" className="btn sec">← Distributeurs</Link>
       </Entete>
       <Message ok={sp.ok} erreur={sp.erreur} />
+      {sansPrix > 0 && (
+        <div className="carte-bo" role="alert" style={{ borderColor: 'var(--ocre)', color: 'var(--ocre)' }}>
+          <b>{sansPrix} vin{sansPrix > 1 ? 's' : ''} sans prix pour les restaurants.</b> Le tarif ne donne pas leur prix public : indiquez la <b>remise QV</b> dans
+          « Coordonnées, logo et remises » (le prix public est alors recalculé depuis le prix QV), ou saisissez leur prix public dans la liste des vins.
+        </div>
+      )}
       {(enCours || rechercheEnCours) && <ActualisationAuto secondes={8} />}
 
       <div className="rangee">

@@ -330,6 +330,11 @@ dialog.superposition { overflow-y: auto; }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 .ligne-qv { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .ligne-qv.inactif { opacity: .85; }
+/* Remise du restaurant chez un distributeur Quid Vinum : pastille bordeaux bien visible sous le nom. */
+.remise-qv { align-self: flex-start; display: inline-flex; align-items: baseline; gap: 6px; background: var(--vert-fond, #610420); color: #fff;
+  border-radius: 999px; padding: 5px 14px; font-size: 14px; font-weight: 600; }
+.remise-qv b { font-size: 18px; font-weight: 800; }
+.remise-qv.sans { background: var(--gris-fond); color: var(--gris); }
 .choix-etat { width: 170px; flex: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; }
 .choix-etat.actif { background: var(--vert-fond, #610420); color: #fff; border-color: transparent; }
 .case-logo-qv { width: 140px; height: 64px; }

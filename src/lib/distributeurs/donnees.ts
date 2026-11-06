@@ -138,7 +138,9 @@ export async function enregistrerCoordonneesQv(c: Record<(typeof CLES_QV)[number
 }
 
 // ───────── Restaurants (prix proposé seulement) ─────────
-export interface DistributeurPropose { id: string; nom: string; site: string | null; logo_url: string | null; vins: number; deja: boolean; presentation: string | null }
+export interface DistributeurPropose { id: string; nom: string; site: string | null; logo_url: string | null; vins: number; deja: boolean; presentation: string | null;
+  /** Remise du restaurant chez ce distributeur (%), sur son prix public : la sienne, sinon celle du distributeur. */
+  remise: number }
 export interface VinCatalogueResto {
   id: string; section: string | null; producteur: string | null; producteur_id: string | null; libelle: string; millesime: string | null;
   contenance: string | null; couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
@@ -149,7 +151,8 @@ export interface VinCatalogueResto {
 export async function distributeursProposes(resto: string) {
   return requete<DistributeurPropose>(
     `select d.id, d.nom, d.site, d.logo_url, d.presentation, count(v.id)::int as vins,
-            exists (select 1 from fournisseur f where f.restaurant_id = $1 and f.distributeur_id = d.id) as deja
+            exists (select 1 from fournisseur f where f.restaurant_id = $1 and f.distributeur_id = d.id) as deja,
+            coalesce((select f.remise from fournisseur f where f.restaurant_id = $1 and f.distributeur_id = d.id limit 1), d.remise_restaurant)::float8 as remise
        from distributeur d join distributeur_vin v on v.distributeur_id = d.id and v.actif
       where d.actif and ${distributeurPermis('$1')} group by d.id order by lower(d.nom)`, [resto]);
 }
