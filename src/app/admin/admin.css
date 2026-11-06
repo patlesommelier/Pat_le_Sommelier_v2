@@ -251,6 +251,17 @@ a.stat:hover { border-color: var(--ligne-forte); }
   background: var(--rouge); color: #FFF !important; font: 800 13px/1 Inter, 'Helvetica Neue', sans-serif; text-decoration: none !important; vertical-align: 1px; }
 .alerte-texte { display: inline-flex; align-items: center; color: var(--rouge); font-weight: 600; font-size: 14px; }
 .champ-stock { display: inline-flex; align-items: center; justify-content: flex-end; }
+/* Stock dans la liste des vins : en lecture seule (il se change dans l'inventaire). */
+.stock-lecture { display: inline-block; min-width: 44px; text-align: right; font-weight: 700; font-size: 16px; color: var(--texte); text-decoration: none; padding: 6px 4px; }
+.stock-lecture:hover { text-decoration: underline; }
+/* Inventaire : − nombre + bien larges (au téléphone, dans la cave) ; un stock changé est mis en évidence. */
+.champ-inventaire { display: inline-flex; align-items: center; gap: 6px; }
+.champ-inventaire button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ligne); background: var(--carte); font-size: 22px; line-height: 1; cursor: pointer; color: var(--vert-fond, #610420); }
+.champ-inventaire input { width: 72px; height: 40px; text-align: center; font-size: 18px; font-weight: 700; }
+.champ-inventaire.change input { border-color: var(--vert-fond, #610420); background: var(--rose); }
+.table-inventaire td { vertical-align: middle; }
+/* Tableau de bord : inventaire à refaire. */
+.rappel-inventaire { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; border-left: 5px solid var(--vert-fond, #610420); }
 .table-stocks input[type=number], .champ-commande { width: 72px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }
 .table-stocks tr.indisponible td { opacity: 0.55; }
 .table-stocks tr.rubrique td { background: var(--survol); padding-top: 10px; padding-bottom: 10px; }

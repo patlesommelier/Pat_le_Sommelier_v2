@@ -9,11 +9,13 @@ export interface RestaurantBO {
   statut: string; origine: string; page_accueil: string; categories_carte: string[]; couleur_impression: string | null;
   /** Gestion des stocks : alerte « stock bas » à ce nombre de bouteilles (ou moins). */
   stock_limite_basse: number;
+  /** Date du dernier inventaire validé (page Inventaire) ; null : jamais. */
+  inventaire_le: string | null;
 }
 
 export async function getRestaurantBO(id: string) {
   const [r] = await requete<RestaurantBO>(
-    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, stock_limite_basse
+    `select id, nom, couleur, couleur_claire, logo_url, logo_fonce_url, logo_choix, accroche, reglages_selection, modifie_bo, statut, origine, page_accueil, categories_carte, couleur_impression, stock_limite_basse, inventaire_le::text as inventaire_le
        from restaurant where id = $1`, [id]);
   return r ?? null;
 }

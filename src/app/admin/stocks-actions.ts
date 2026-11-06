@@ -54,7 +54,9 @@ async function lignesDesVins(resto: string, principaux: string[]) {
 /** Page Stocks : stock, bouteilles en commande, prix d'achat HTVA et fournisseur de chaque vin (champs stock_<id>, en_commande_<id>, achat_<id>, fournisseur_<id>). */
 export async function enregistrerStocks(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);
-  const ids = [...f.keys()].filter((k) => k.startsWith('stock_')).map((k) => k.slice(6));
+  // Une ligne par vin (le stock ne se change plus ici : seulement dans la page Inventaire).
+  const ids = [...f.keys()].filter((k) => k.startsWith('ligne_') || k.startsWith('stock_')).map((k) => k.replace(/^(ligne|stock)_/, ''))
+    .filter((id, i, l) => l.indexOf(id) === i);
   if (!ids.length) return { ok: 'Rien à enregistrer.' };
   // Une seule requête pour tous les vins (une par vin dépassait le temps d'une action sur le serveur en ligne).
   const achats = ids.map((id) => prix(f, `achat_${id}`));
@@ -566,4 +568,35 @@ export async function commanderPanier(resto: string, referenceInterne?: string |
   // Plusieurs commandes : on arrive sur le premier bon ; une fois envoyé, on passe au suivant (« suite »).
   redirect(creees.length === 1 ? `/admin/${resto}/commandes/${creees[0]}`
     : `/admin/${resto}/commandes/${creees[0]}?${new URLSearchParams({ suite: creees.slice(1).join(','), n: '1', total: String(creees.length) })}`);
+}
+
+/**
+ * Inventaire validé (page Inventaire) : le stock de chaque vin compté (ligne principale du vin), et la date de l'inventaire.
+ * « Rien n'a changé » valide l'inventaire sans toucher aux stocks. Chaque inventaire est gardé (stock avant et après).
+ */
+export async function enregistrerInventaire(resto: string, f: FormData) {
+  const u = await exigerAcces(resto);
+  const rien = f.get('rien') === '1';
+  const ids = [...f.keys()].filter((k) => k.startsWith('stock_')).map((k) => k.slice(6));
+  const avant = new Map((await requete<{ id: string; stock: number }>('select id, stock from vin_carte where restaurant_id = $1 and id = any($2)', [resto, ids]))
+    .map((v) => [v.id, v.stock]));
+  const lignes = ids.filter((id) => avant.has(id)).map((id) => ({ id, avant: avant.get(id)!, apres: rien ? avant.get(id)! : entier(f, `stock_${id}`) ?? avant.get(id)! }));
+  const changes = lignes.filter((l) => l.apres !== l.avant);
+  if (changes.length) {
+    await requete(`update vin_carte v set stock = x.stock from unnest($2::text[], $3::int[]) as x(id, stock) where v.restaurant_id = $1 and v.id = x.id`,
+      [resto, changes.map((l) => l.id), changes.map((l) => l.apres)]);
+  }
+  const [inv] = await requete<{ id: string }>('insert into inventaire (restaurant_id, par, vins, changes) values ($1, $2, $3, $4) returning id',
+    [resto, u.email, lignes.length, changes.length]);
+  if (lignes.length) {
+    await requete(`insert into inventaire_ligne (inventaire_id, vin_id, avant, apres) select $1, x.id, x.avant, x.apres
+                    from unnest($2::text[], $3::int[], $4::int[]) as x(id, avant, apres)`,
+      [inv.id, lignes.map((l) => l.id), lignes.map((l) => l.avant), lignes.map((l) => l.apres)]);
+  }
+  await requete('update restaurant set inventaire_le = now() where id = $1', [resto]);
+  rafraichir(resto);
+  revalidatePath(`/admin/${resto}`, 'layout');
+  const ok = rien ? 'Inventaire validé : rien n’a changé.'
+    : `Inventaire enregistré : ${lignes.length} vin${lignes.length > 1 ? 's' : ''} compté${lignes.length > 1 ? 's' : ''}, ${changes.length} stock${changes.length > 1 ? 's' : ''} modifié${changes.length > 1 ? 's' : ''}.`;
+  redirect(`/admin/${resto}/stocks?${new URLSearchParams({ ok })}`);
 }

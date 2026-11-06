@@ -1,4 +1,4 @@
-// Base des vins — Vins : chaque vin de la carte sur une ligne, son stock et ses bouteilles en commande (modifiables),
+// Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande,
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
 import Link from 'next/link';
 import { ajouterAuPanier, commanderPanier, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
@@ -49,12 +49,14 @@ export default async function Stocks({ params, searchParams }: { params: Promise
       where v.restaurant_id = $1 and v.id = $2 and f.distributeur_id is not null`, [resto, ajoute]) : [];
   return (
     <>
-      <Entete titre="Les vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
+      <Entete titre="Les vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock (à compter dans « Faire l’inventaire ») et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
         {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
         <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
           <FormulaireAjoutVin resto={resto} couleur={c} />
         </Superposition>
+        {/* Le stock se change dans la page Inventaire (plus ici, à côté du prix de vente). */}
+        <Link href={`/admin/${resto}/inventaire`} className="btn sec">Faire l’inventaire</Link>
         <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>
         {/* Panier : les bouteilles ajoutées ligne par ligne, commandées en une fois. */}
         <Panier lignes={panier} modifier={modifierPanier.bind(null, resto)} vider={viderPanier.bind(null, resto)} commander={commanderPanier.bind(null, resto)} />
@@ -130,7 +132,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           {v.prix == null && v.prix_verre != null && <div className="petit discret">verre {Number(v.prix_verre).toFixed(2).replace('.', ',')} €</div>}</td>
                         <td className="droite"><span className="champ-stock">
                           {alerte && <span className="alerte-stock" role="img" aria-label="Stock bas" title="Stock bas">!</span>}
-                          <input type="number" name={`stock_${v.id}`} defaultValue={v.stock} min={0} max={100000} aria-label={`Bouteilles en stock : ${v.libelle}`} />
+                          <input type="hidden" name={`ligne_${v.id}`} value="1" />
+                          <Link href={`/admin/${resto}/inventaire`} className="stock-lecture" title="Le stock se change dans l’inventaire">{v.stock}</Link>
                         </span></td>
                         <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
                         {/* Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut). */}

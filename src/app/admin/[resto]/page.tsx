@@ -1,4 +1,6 @@
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { ilYA, inventaireARefaire } from '@/lib/admin/inventaire';
 import { BienvenueRestaurant } from '@/components/admin/BienvenueRestaurant';
 import { Entete } from '@/components/admin/Ui';
 import { getRegleDuJour, getRestaurantBO, getResume } from '@/lib/admin/donnees';
@@ -37,6 +39,17 @@ export default async function TableauDeBord({ params, searchParams }: { params: 
         </div>
       </div>
       </>}
+
+      {/* Inventaire à refaire (jamais fait, ou plus de 7 jours) : un message, avec le lien vers la page Inventaire. */}
+      {!accueil && s.vins > 0 && inventaireARefaire(r.inventaire_le) && (
+        <section className="carte-bo rappel-inventaire" aria-label="Inventaire">
+          <div className="pile" style={{ gap: 4, flex: '1 1 320px' }}>
+            <b style={{ fontSize: 17 }}>{r.inventaire_le ? `Dernier inventaire ${ilYA(r.inventaire_le)}` : 'Faites votre premier inventaire'}</b>
+            <span className="petit">Comptez vos bouteilles pour garder votre stock à jour : alertes de stock bas et commandes au plus juste.</span>
+          </div>
+          <Link href={`/admin/${r.id}/inventaire`} className="btn">Faire l’inventaire</Link>
+        </section>
+      )}
 
       {/* La règle de Pat du jour : une de ses règles, illustrée par le meilleur vin de la carte pour un plat du menu. */}
       {jour && vin && (
