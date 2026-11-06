@@ -81,6 +81,8 @@ test('prix publié et prix QV : lus dans la liste ou calculés avec la remise', 
   const { prixDuTarif, prixRemise } = await import('../src/lib/distributeurs/tarif');
   assert.deepEqual(prixDuTarif(18, 20, 'liste', 10), { publie: 20, qv: 18 });
   assert.deepEqual(prixDuTarif(12, null, 'liste', null), { publie: null, qv: 12 });
+  assert.deepEqual(prixDuTarif(10, null, 'liste', 7.41), { publie: 10.8, qv: 10 }); // sans prix public : prix QV + 8 %
+  assert.deepEqual(prixDuTarif(25.5, null, 'liste', 7.41), { publie: 27.54, qv: 25.5 });
   assert.deepEqual(prixDuTarif(20, null, 'remise', 10), { publie: 20, qv: 18 });
   assert.deepEqual(prixDuTarif(18, 20, 'remise', 15), { publie: 20, qv: 17 });
   assert.deepEqual(prixDuTarif(12, null, 'remise', null), { publie: null, qv: 12 }); // sans remise : comme « liste »

@@ -103,7 +103,9 @@ export function prixDuTarif(prixLu: number | null, prixCatalogue: number | null,
     const publie = prixCatalogue ?? prixLu;
     return { publie, qv: prixRemise(publie, remise) };
   }
-  return { publie: prixCatalogue, qv: prixLu };
+  // Liste sans prix public : retrouvé depuis le prix QV avec la remise QV (prix QV ÷ (1 − remise)), s'il y en a une.
+  const publie = prixCatalogue ?? (prixLu != null && remise != null && remise > 0 && remise < 100 ? Math.round((prixLu / (1 - remise / 100)) * 100) / 100 : null);
+  return { publie, qv: prixLu };
 }
 
 /** Prix publié moins la remise (%), arrondi au centime. */

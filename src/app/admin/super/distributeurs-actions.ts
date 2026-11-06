@@ -62,6 +62,8 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   if (txt(f, 'calcul_qv') === 'remise' && remise == null) return { erreur: 'Indiquez la remise QV (%) pour calculer les prix QV, par exemple 10.' };
   const remiseResto = nombre(f, 'remise_restaurant');
   if (remiseResto === undefined || (remiseResto != null && remiseResto >= 100)) return { erreur: 'La remise des restaurants doit être un pourcentage, par exemple 8.' };
+  // Remise QV d'avant : les prix publics qu'elle avait servi à retrouver sont recalculés avec la nouvelle.
+  const [avant] = await requete<{ remise_qv: number | null }>('select remise_qv::float8 as remise_qv from distributeur where id = $1', [id]);
   const email = txt(f, 'email');
   if (email && !/^\S+@\S+\.\S+$/.test(email)) return { erreur: 'L’adresse e-mail ne semble pas valide.' };
   const modele = ['sonnet', 'haiku', 'opus'].includes(txt(f, 'modele_lecture') ?? '') ? txt(f, 'modele_lecture') : 'sonnet';
@@ -88,6 +90,14 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
                      prix_qv = round(coalesce(prix_catalogue, prix_qv) * (1 - $2::numeric / 100), 2), maj_le = now()
                     where distributeur_id = $1 and coalesce(prix_catalogue, prix_qv) is not null
                       and prix_qv is distinct from round(coalesce(prix_catalogue, prix_qv) * (1 - $2::numeric / 100), 2)`, [id, remise]);
+  }
+  // Prix QV lus dans la liste, sans prix public : le prix public est retrouvé avec la remise QV (prix QV ÷ (1 − remise)) ;
+  // ceux retrouvés avec l'ancienne remise suivent la nouvelle (un prix public lu sur le tarif ne change pas).
+  if (calcul === 'liste' && remise != null && remise > 0 && remise < 100) {
+    await requete(`update distributeur_vin set prix_catalogue = round(prix_qv / (1 - $2::numeric / 100), 2), maj_le = now()
+                    where distributeur_id = $1 and prix_qv is not null
+                      and (prix_catalogue is null or ($3::numeric > 0 and $3::numeric < 100 and prix_catalogue = round(prix_qv / (1 - $3::numeric / 100), 2)))
+                      and prix_catalogue is distinct from round(prix_qv / (1 - $2::numeric / 100), 2)`, [id, remise, avant?.remise_qv ?? null]);
   }
   // Le nom suit chez les restaurants qui l'ont choisi.
   await requete('update fournisseur set nom = $2 where distributeur_id = $1', [id, nom]);
