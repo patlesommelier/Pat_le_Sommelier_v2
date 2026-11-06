@@ -257,9 +257,24 @@ a.stat:hover { border-color: var(--ligne-forte); }
 /* Inventaire : − nombre + bien larges (au téléphone, dans la cave) ; un stock changé est mis en évidence. */
 .champ-inventaire { display: inline-flex; align-items: center; gap: 6px; }
 .champ-inventaire button { width: 40px; height: 40px; border-radius: 50%; border: 1px solid var(--ligne); background: var(--carte); font-size: 22px; line-height: 1; cursor: pointer; color: var(--vert-fond, #610420); }
-.champ-inventaire input { width: 72px; height: 40px; text-align: center; font-size: 18px; font-weight: 700; }
+.table-stocks.table-inventaire .champ-inventaire input { width: 72px; height: 40px; text-align: center; font-size: 18px; font-weight: 700; padding: 0 4px; }
 .champ-inventaire.change input { border-color: var(--vert-fond, #610420); background: var(--rose); }
 .table-inventaire td { vertical-align: middle; }
+.table-inventaire .vignette { object-fit: contain; }
+.table-inventaire .nom { font-size: 17px; }
+/* Téléphone : photo un peu plus petite et − nombre + plus serrés, pour que tout tienne sans faire défiler de côté. */
+@media (max-width: 680px) {
+  .table-inventaire { min-width: 0 !important; }
+  .table-stocks.table-inventaire th, .table-stocks.table-inventaire td { padding-left: 8px; padding-right: 8px; }
+  .table-inventaire .vignette, .table-inventaire .vin-cell > :first-child { width: 56px !important; height: 56px !important; }
+  .table-inventaire .vin-cell { gap: 8px; }
+  .table-inventaire .nom, .table-inventaire .petit { overflow-wrap: anywhere; }
+  .table-inventaire .nom { font-size: 15px; }
+  .table-inventaire .petit { font-size: 12px; }
+  .champ-inventaire { gap: 4px; }
+  .champ-inventaire button { width: 34px; height: 34px; font-size: 19px; }
+  .table-stocks.table-inventaire .champ-inventaire input { width: 48px; height: 36px; font-size: 16px; padding: 0 2px; text-align: center; }
+}
 /* Tableau de bord : inventaire à refaire. */
 .rappel-inventaire { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; border-left: 5px solid var(--vert-fond, #610420); }
 .table-stocks input[type=number], .champ-commande { width: 72px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }

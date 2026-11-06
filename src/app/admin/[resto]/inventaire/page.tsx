@@ -34,7 +34,7 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
       <form action={action} className="pile" style={{ gap: 14 }}>
         {!groupes.length && <p className="discret">Aucun vin dans votre cave pour l’instant.</p>}
         {parCouleur.length > 0 && (
-          <div className="tableau">
+          <div className="tableau" style={{ maxWidth: 820 }}>
             <table className="table-stocks table-inventaire">
               <thead><tr><th>Vin</th><th className="droite">Nombre de bouteilles</th></tr></thead>
               {parCouleur.map((c) => (
@@ -44,7 +44,7 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
                     const nom = nomPourListe(v);
                     return (
                       <tr key={v.id} className={disponible ? undefined : 'indisponible'}>
-                        <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={36} />
+                        <td><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={84} />
                           <div><div className="nom">{nom[0]}</div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}
                             {!disponible && <div className="petit discret">Pas sur votre carte</div>}
                             {disponible && stockBas(v.stock, limite) && <div className="petit" style={{ color: 'var(--rouge)' }}>Stock bas</div>}</div></div></td>
