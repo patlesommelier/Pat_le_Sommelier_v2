@@ -27,7 +27,7 @@ export default async function Inventaire({ params }: { params: Promise<{ resto: 
 
   return (
     <>
-      <Entete titre="Inventaire">
+      <Entete titre="Faire l’inventaire">
         <Link href={`/admin/${resto}/stocks`} className="btn fantome">← Les vins</Link>
       </Entete>
       <p className="petit" style={{ margin: 0 }}>{dernier ? <>Dernier inventaire : <b>{ilYA(dernier)}</b>.</> : <b>Aucun inventaire pour l’instant.</b>}</p>
