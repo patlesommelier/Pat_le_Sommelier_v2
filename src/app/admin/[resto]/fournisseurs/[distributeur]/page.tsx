@@ -1,4 +1,4 @@
-// Catalogue d'un distributeur Quid Vinum (Base des vins — Distributeurs → « Catalogue ») : tous ses vins, au prix proposé au restaurant.
+// Catalogue d'un distributeur Quid Vinum (Base des vins — Distributeurs → « Catalogue ») : tous ses vins, prix public et prix du restaurant (sa remise en haut).
 // Un vin peut être ajouté à « Vins » (pas encore sur la carte) ; il se commande ensuite avec le panier.
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -38,10 +38,16 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
 
   return (
     <>
-      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur, au prix d’achat HTVA proposé par Quid Vinum. Ajoutez un vin à votre cave avec « + » : il apparaît dans « Les vins » (pas encore sur votre carte) et se commande avec le panier.">
+      <Entete titre={`Catalogue ${d.nom}`} texte="Tous les vins de ce distributeur : son prix public et votre prix, avec votre remise, comme en direct. Ajoutez un vin à votre cave avec « + » : il apparaît dans « Les vins » (pas encore sur votre carte) et se commande avec le panier.">
         <Link href={`/admin/${resto}/fournisseurs`} className="btn fantome">← Distributeurs</Link>
         <Link href={`/admin/${resto}/stocks`} className="btn sec">Les vins et panier</Link>
       </Entete>
+      {/* Remise du restaurant chez ce distributeur, bien visible en haut du catalogue. */}
+      <div className="ligne-actions" style={{ alignItems: 'center' }}>
+        {d.remise > 0
+          ? <span className="remise-qv"><b>−{String(d.remise).replace('.', ',')} %</b> de remise sur le prix public</span>
+          : <span className="remise-qv sans">Prix public, sans remise</span>}
+      </div>
       {(d.presentation || site) && <p className="petit" style={{ margin: 0 }}>{d.presentation}{site && <>{d.presentation ? ' ' : ''}<a href={site} target="_blank" rel="noopener">Voir le site →</a></>}</p>}
       <form className="ligne-actions" style={{ alignItems: 'center' }}>
         <input name="q" type="search" defaultValue={sp.q ?? ''} placeholder="Chercher un vin, un domaine, une appellation…" aria-label="Chercher dans le catalogue" className="recherche" style={{ flex: '1 1 280px' }} />
@@ -57,7 +63,7 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
       {affiches.length > 0 && (
         <div className="tableau">
           <table className="table-stocks" style={{ minWidth: 760 }}>
-            <thead><tr><th>Vin</th><th className="droite">Prix HTVA</th><th className="centre">Ajouter à ma cave</th></tr></thead>
+            <thead><tr><th>Vin</th><th className="droite">Prix public HTVA</th><th className="droite">Votre prix HTVA{d.remise > 0 ? ` (−${String(d.remise).replace('.', ',')} %)` : ''}</th><th className="centre">Ajouter à ma cave</th></tr></thead>
             <tbody>
               {affiches.map((v) => {
                 const x = dansVins.get(v.id);
@@ -67,6 +73,7 @@ export default async function Catalogue({ params, searchParams }: { params: Prom
                       <div><div className="nom">{v.libelle}{v.millesime && !v.libelle.includes(v.millesime) ? ` ${v.millesime}` : ''}</div>
                         <div className="petit">{[v.producteur, v.section, v.contenance, v.certification, v.reference ? `réf. ${v.reference}` : null].filter(Boolean).join(' · ')}</div>
                         {v.epuise && <Etat type="defaut">Épuisé</Etat>}</div></div></td>
+                    <td className="droite discret" style={{ whiteSpace: 'nowrap', textDecoration: d.remise > 0 && v.prix_public != null ? 'line-through' : undefined }}>{v.prix_public != null ? euros(v.prix_public) : '—'}</td>
                     <td className="droite" style={{ whiteSpace: 'nowrap' }}><b>{v.prix != null ? euros(v.prix) : '—'}</b></td>
                     <td className="centre">{x
                       ? <span className="pile" style={{ gap: 4 }}><Link href={`/admin/${resto}/carte/${encodeURIComponent(x.id)}?${new URLSearchParams({ retour: `/admin/${resto}/fournisseurs/${distributeur}` })}`} className="petit">✓ Dans ma cave</Link>

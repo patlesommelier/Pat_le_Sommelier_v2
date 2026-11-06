@@ -145,6 +145,8 @@ export interface VinCatalogueResto {
   id: string; section: string | null; producteur: string | null; producteur_id: string | null; libelle: string; millesime: string | null;
   contenance: string | null; couleur: string | null; certification: string | null; prix: number | null; epuise: boolean; maximum: number | null;
   reference: string | null; etiquette_url: string | null;
+  /** Prix public du distributeur (HTVA), avant la remise du restaurant ; prix = celui du restaurant. */
+  prix_public: number | null;
 }
 
 /** Distributeurs proposés aux restaurants (actifs, avec des vins) ; `deja` : déjà parmi les fournisseurs de ce restaurant. */
@@ -178,7 +180,7 @@ export async function vinsSurCarteParDistributeur(resto: string): Promise<Map<st
 export async function catalogueDistributeur(distributeurId: string, resto: string) {
   return requete<VinCatalogueResto>(
     `select v.id, v.section, coalesce(p.nom, v.producteur_texte) as producteur, v.producteur_id, v.libelle, v.millesime, v.contenance, v.couleur,
-            v.certification, ${prixRestaurantSql()}::float8 as prix, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
+            v.certification, ${prixRestaurantSql()}::float8 as prix, prix_restaurant_distributeur(v.prix_catalogue, v.prix_qv, d.remise_qv, 0)::float8 as prix_public, v.epuise, v.maximum, v.reference, coalesce(v.etiquette_url, c.etiquette_url) as etiquette_url
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id left join producteur p on p.id = v.producteur_id
        left join cuvee c on c.id = v.cuvee_id
        left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $2
