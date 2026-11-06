@@ -7,6 +7,7 @@ import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
 import { requete } from '@/lib/db';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { RetourVin } from '@/components/admin/RetourVin';
+import { BoutonEnvoi } from '@/components/admin/BoutonEnvoi';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 const STATUT: Record<string, [string, 'ok' | 'propose' | 'defaut']> = { valide: ['Validé', 'ok'], propose: ['À valider', 'propose'], retire: ['Retiré', 'defaut'] };
@@ -17,7 +18,7 @@ const Case = ({ id, statut }: { id: string | null; statut: string | null }) =>
 const ValiderIci = ({ id, retour }: { id: string; retour: string }) => (
   <form action={validerCuvees} style={{ display: 'inline-block' }}>
     <input type="hidden" name="ids" value={id} /><input type="hidden" name="retour" value={retour} />
-    <button className="btn petit" title="Valider ce vin dans la base de Pat">Valider</button>
+    <BoutonEnvoi className="btn petit" enCours="Validation…">Valider</BoutonEnvoi>
   </form>
 );
 type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; distrib?: string; page?: string; vin?: string; ok?: string; erreur?: string };

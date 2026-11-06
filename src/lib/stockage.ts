@@ -44,10 +44,24 @@ export async function deposerObjet(nom: string, octets: Buffer, type: string, c:
   const cleSignature = hmac(hmac(hmac(hmac(`AWS4${c.secret}`, jour), c.region), 's3'), 'aws4_request');
   const signature = createHmac('sha256', cleSignature).update(aSigner).digest('hex');
   const { host: _hote, ...envoyes } = entetes;
-  const r = await fetch(url, {
+  const envoyer = () => fetch(url, {
     method: 'PUT', body: new Uint8Array(octets), signal: AbortSignal.timeout(30_000),
     headers: { ...envoyes, authorization: `AWS4-HMAC-SHA256 Credential=${c.cle}/${portee}, SignedHeaders=${noms.join(';')}, Signature=${signature}` },
   });
-  if (!r.ok) throw new Error(`Dépôt de l'image refusé par le stockage (${r.status}) : ${(await r.text()).slice(0, 200)}`);
-  return `${c.urlPublique}/${encoder(nom)}`;
+  // Indisponibilité passagère du stockage (503 « ServiceUnavailable », 500, 502, 504, 429 « SlowDown », délai dépassé) :
+  // on réessaie après 1, 2 puis 4 secondes (la signature reste valable 15 minutes).
+  const ATTENTES = [1000, 2000, 4000];
+  for (let essai = 0; ; essai++) {
+    const r = await envoyer().catch((e: Error) => e);
+    if (!(r instanceof Error) && r.ok) return `${c.urlPublique}/${encoder(nom)}`;
+    const passager = r instanceof Error || r.status === 429 || r.status >= 500;
+    if (!passager || essai >= ATTENTES.length) {
+      if (r instanceof Error) throw new Error(`Stockage des images injoignable : ${r.message}. Réessayez dans quelques minutes.`);
+      const detail = (await r.text()).match(/<Message>([^<]*)<\/Message>/)?.[1] ?? '';
+      throw new Error(passager
+        ? `Le stockage des images est momentanément indisponible (${r.status}${detail ? ` : ${detail}` : ''}). Réessayez dans quelques minutes.`
+        : `Dépôt de l'image refusé par le stockage (${r.status}${detail ? ` : ${detail}` : ''}).`);
+    }
+    await new Promise((ok) => setTimeout(ok, ATTENTES[essai]));
+  }
 }

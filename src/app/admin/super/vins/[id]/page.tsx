@@ -5,6 +5,7 @@ import { memeVinQue } from '@/lib/admin/doublons-recherche';
 import { FormulaireFusion } from '@/components/admin/FormulaireFusion';
 import { Entete, Etat, Message, Vignette, euros } from '@/components/admin/Ui';
 import { PhotoEtiquette } from '@/components/admin/PhotoEtiquette';
+import { BoutonEnvoi } from '@/components/admin/BoutonEnvoi';
 import { ficheCuvee } from '@/lib/super/donnees';
 import { requete } from '@/lib/db';
 import { etatEtiquetteBase, etatEtiquetteVin } from '@/lib/etiquettes/etat';
@@ -122,9 +123,9 @@ export default async function FicheVinBase({ params, searchParams }: { params: P
           )}
 
           <div className="ligne-actions">
-            {c.statut !== 'retire' && <button className="btn sec" name="decision" value="retirer" formNoValidate>Retirer de la base</button>}
-            <button className="btn sec" name="decision" value="enregistrer">Enregistrer</button>
-            {c.statut !== 'valide' && <button className="btn" name="decision" value="valider">Valider le vin</button>}
+            {c.statut !== 'retire' && <BoutonEnvoi className="btn sec" name="decision" value="retirer" formNoValidate enCours="Retrait…">Retirer de la base</BoutonEnvoi>}
+            <BoutonEnvoi className="btn sec" name="decision" value="enregistrer" enCours="Enregistrement…">Enregistrer</BoutonEnvoi>
+            {c.statut !== 'valide' && <BoutonEnvoi className="btn" name="decision" value="valider" enCours="Validation…">Valider le vin</BoutonEnvoi>}
           </div>
         </section>
         <aside className="pile" style={{ gap: 16, minWidth: 0 }}>
