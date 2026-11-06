@@ -14,6 +14,7 @@ import { getProducteursDistributeur } from '@/lib/distributeurs/donnees';
 import { cleVin, contenanceTarif, prixRemise } from '@/lib/distributeurs/tarif';
 import { typeReel } from '@/lib/inscription/fichiers';
 import { deposerImage } from '@/lib/admin/fichiers';
+import { passerEnDistributeurQv } from '@/lib/distributeurs/non-signes';
 
 type Retour = { ok?: string; erreur?: string };
 const txt = (f: FormData, k: string) => { const v = f.get(k); return typeof v === 'string' && v.trim() ? v.trim() : null; };
@@ -103,6 +104,19 @@ export async function enregistrerDistributeur(id: string, f: FormData): Promise<
   await requete('update fournisseur set nom = $2 where distributeur_id = $1', [id, nom]);
   rafraichir(id);
   return { ok: 'Distributeur enregistré.' };
+}
+
+/** Distributeur des restaurants → distributeur Quid Vinum (nouveau ou existant), chez tous ses restaurants ; on ouvre sa fiche. */
+export async function passerEnQv(f: FormData) {
+  await exigerAdmin();
+  const cle = txt(f, 'cle');
+  const cible = txt(f, 'cible');
+  const r = cle ? await passerEnDistributeurQv(cle, cible && cible !== 'nouveau' ? cible : null) : null;
+  if (!r) redirect(`/admin/super/distributeurs?${new URLSearchParams({ erreur: 'Distributeur introuvable : rechargez la page.' })}#non-signes`);
+  revalidatePath('/admin', 'layout');
+  redirect(`${page(r.id)}?${new URLSearchParams({ ok: `« ${r.nom} » est maintenant distributeur Quid Vinum chez ${r.restaurants} restaurant${r.restaurants > 1 ? 's' : ''}, prévenu${r.restaurants > 1 ? 's' : ''} dans leur espace.`
+    + (r.ignores ? ` ${r.ignores} restaurant${r.ignores > 1 ? 's' : ''} verrouillé${r.ignores > 1 ? 's' : ''} sur un autre distributeur QV : inchangé${r.ignores > 1 ? 's' : ''}.` : '')
+    + ' Indiquez ses remises et chargez son tarif.' })}`);
 }
 
 export async function supprimerDistributeur(id: string) {

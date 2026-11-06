@@ -334,6 +334,10 @@ dialog.superposition { overflow-y: auto; }
 .remise-qv { align-self: flex-start; display: inline-flex; align-items: baseline; gap: 6px; background: var(--vert-fond, #610420); color: #fff;
   border-radius: 999px; padding: 5px 14px; font-size: 14px; font-weight: 600; }
 .remise-qv b { font-size: 18px; font-weight: 800; }
+/* Avis de Quid Vinum en haut de l'espace du restaurant. */
+.avis-restaurant { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; background: var(--rose); border: 1px solid var(--vert-fond, #610420);
+  border-left-width: 5px; border-radius: 12px; padding: 14px 18px; color: var(--texte); }
+.avis-restaurant b { color: var(--vert-fond, #610420); font-size: 16px; }
 .remise-qv.sans { background: var(--gris-fond); color: var(--gris); }
 .choix-etat { width: 170px; flex: none; padding: 8px 12px; border-radius: 999px; font-weight: 700; }
 .choix-etat.actif { background: var(--vert-fond, #610420); color: #fff; border-color: transparent; }

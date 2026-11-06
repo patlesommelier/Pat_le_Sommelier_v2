@@ -1069,3 +1069,10 @@ export async function ecrirePresentations(resto: string, vinId: string, retour: 
   revalidatePath(`/admin/${resto}`, 'layout');
   redirect(`/admin/${resto}/carte/${encodeURIComponent(vinId)}?${new URLSearchParams({ ...(retour ? { retour } : {}), presentation: 'en_cours' })}`);
 }
+
+/** Avis de Quid Vinum fermé par le restaurant (« Compris ») : il ne s'affiche plus. */
+export async function fermerAvis(resto: string, id: string) {
+  await exigerAcces(resto);
+  await requete('update avis_restaurant set lu_le = now() where id = $1 and restaurant_id = $2 and lu_le is null', [id, resto]);
+  revalidatePath(`/admin/${resto}`, 'layout');
+}

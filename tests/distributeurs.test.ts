@@ -103,3 +103,11 @@ test('vin de la carte confié à un distributeur : son vin dans le catalogue', a
   assert.equal(offreDuCatalogue(vin({ libelle: 'Sancerre' }), catalogue), null);
   assert.equal(offreDuCatalogue(vin({ cuvee_id: 'c1' }), [...catalogue, cat('x', 'Autre nom', '2021', { cuvee_id: 'c1' })])?.id, 'x'); // même vin de la base
 });
+
+test('distributeurs des restaurants : regroupés par nom, sans forme de société', async () => {
+  const { cleDistributeur } = await import('../src/lib/distributeurs/cle-distributeur');
+  assert.equal(cleDistributeur('LICATA SA'), cleDistributeur('Licata'));
+  assert.equal(cleDistributeur('Licata s.a.'), 'licata');
+  assert.equal(cleDistributeur('Les Vents d’Anges SPRL'), cleDistributeur("Les Vents d'Anges"));
+  assert.notEqual(cleDistributeur('Vins de Loire SA'), cleDistributeur('Vins du Rhône'));
+});

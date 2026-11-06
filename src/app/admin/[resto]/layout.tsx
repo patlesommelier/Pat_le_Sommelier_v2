@@ -6,6 +6,8 @@ import { commandesAVoir } from '@/lib/admin/stocks';
 import { logoAffiche } from '@/lib/couleurs';
 import { etapesRestaurant } from './etapes';
 import type { Etape } from '@/components/admin/Nav';
+import { AvisRestaurant, type Avis } from '@/components/admin/AvisRestaurant';
+import { requete } from '@/lib/db';
 
 
 // Menu de gauche : chaque entrée avec son icône (celle des cadres du tableau de bord) ; les trois premières disent ce qu'on y fait.
@@ -27,11 +29,14 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {
   const { resto } = await params;
   const u = await exigerAcces(resto);
-  const [r, resume, aVoir] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto)]);
+  const [r, resume, aVoir, avis] = await Promise.all([getRestaurantBO(resto), getResume(resto), u.admin ? 0 : commandesAVoir(resto),
+    // Avis de Quid Vinum pas encore fermés par le restaurant (pas montrés au super-admin, qui ne doit pas les fermer à sa place).
+    u.admin ? [] : requete<Avis>('select id, titre, texte, lien from avis_restaurant where restaurant_id = $1 and lu_le is null order by cree_le', [resto])]);
   if (!r) notFound();
   return (
     <Coque utilisateur={u} resto={{ id: r.id, nom: r.nom, couleur: r.couleur, resume: `${resume.plats} plats · ${resume.vins} vins`, logo: logoAffiche(r)?.url ?? null }}
       etapes={avecStocks(resto, etapesRestaurant(r, resume).map((e) => ({ href: e.href, libelle: LIBELLES_MENU[e.libelle] ?? e.libelle, etat: e.etat, groupe: GROUPES_MENU[e.groupe] ?? e.groupe, icone: e.icone })), aVoir)}>
+      <AvisRestaurant resto={resto} avis={avis} />
       {children}
     </Coque>
   );

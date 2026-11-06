@@ -5,6 +5,7 @@ import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Etat, Message } from '@/components/admin/Ui';
 import { exigerAdmin } from '@/lib/admin/auth';
 import { getCoordonneesQv, getDistributeurs } from '@/lib/distributeurs/donnees';
+import { distributeursNonSignes } from '@/lib/distributeurs/non-signes';
 
 export const dynamic = 'force-dynamic';
 
@@ -13,7 +14,7 @@ const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'nume
 export default async function Distributeurs({ searchParams }: { searchParams: Promise<{ ok?: string; erreur?: string }> }) {
   await exigerAdmin(); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
   const sp = await searchParams;
-  const [liste, qv] = await Promise.all([getDistributeurs(), getCoordonneesQv()]);
+  const [liste, qv, nonSignes] = await Promise.all([getDistributeurs(), getCoordonneesQv(), distributeursNonSignes()]);
   return (
     <>
       <Entete titre="Distributeurs" texte="Les distributeurs et importateurs de Quid Vinum : leurs prix publics et leurs prix QV (avec la remise de Quid Vinum). Chaque restaurant achète au prix public moins sa remise chez le distributeur, comme en direct ; Quid Vinum est rémunéré par la différence avec le prix QV, jamais montrée aux restaurants. Les restaurants choisissent un distributeur dans leurs Fournisseurs et commandent dans son catalogue : la commande part chez Quid Vinum." />
@@ -44,6 +45,7 @@ export default async function Distributeurs({ searchParams }: { searchParams: Pr
               </table>
             </div>
           </div>
+
         </div>
         <div className="etroit" style={{ flex: '1 1 320px' }}>
           <form action={creerDistributeur} className="carte-bo pile">
@@ -62,6 +64,33 @@ export default async function Distributeurs({ searchParams }: { searchParams: Pr
           </FormulaireAdmin>
         </div>
       </div>
+
+      {/* Distributeurs propres aux restaurants : commandes envoyées directement (sans commission), l'argument pour les faire signer. */}
+      <section className="carte-bo pile" id="non-signes" style={{ gap: 12 }}>
+        <div><h2 style={{ margin: 0 }}>Distributeurs des restaurants (pas encore chez Quid Vinum)</h2>
+          <p className="sous" style={{ margin: '4px 0 0' }}>Les distributeurs ajoutés par les restaurants eux-mêmes : leurs commandes partent directement chez eux par e-mail, sans commission.
+            Les chiffres sont ceux à leur montrer (« Vous avez reçu 120 commandes via Quid Vinum »). « Passer en distributeur QV » le fait chez tous ses restaurants d’un coup, et les prévient.</p></div>
+        {nonSignes.length ? (
+          <div className="tableau">
+            <table>
+              <thead><tr><th>Distributeur</th><th>Restaurants</th><th className="droite">Commandes envoyées</th><th className="droite">Bouteilles</th><th>Dernière commande</th></tr></thead>
+              <tbody>
+                {nonSignes.map((g) => (
+                  <tr key={g.cle}>
+                    <td><b>{g.nom}</b>{g.emails.length > 0 && <div className="petit discret">{g.emails.join(' · ')}</div>}
+                      <Link href={`/admin/super/distributeurs/passer?${new URLSearchParams({ cle: g.cle })}`} className="btn sec petit" style={{ marginTop: 6, whiteSpace: 'nowrap' }}
+                        title="Passer en distributeur Quid Vinum, chez tous ses restaurants">Passer en distributeur QV →</Link></td>
+                    <td className="petit">{g.restaurants.length} <span className="discret">({g.restaurants.map((r) => r.nom).join(', ')})</span></td>
+                    <td className="droite"><b>{g.commandes}</b>{g.commandes90 > 0 && <div className="petit discret">{g.commandes90} sur 90 jours</div>}</td>
+                    <td className="droite">{g.bouteilles}</td>
+                    <td className="petit">{g.derniere ? date(g.derniere) : '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        ) : <p className="discret" style={{ margin: 0 }}>Aucun distributeur propre aux restaurants pour l’instant.</p>}
+      </section>
     </>
   );
 }
