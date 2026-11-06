@@ -596,7 +596,7 @@ export async function enregistrerInventaire(resto: string, f: FormData) {
   await requete('update restaurant set inventaire_le = now() where id = $1', [resto]);
   rafraichir(resto);
   revalidatePath(`/admin/${resto}`, 'layout');
-  const ok = rien ? 'Inventaire validé : rien n’a changé.'
-    : `Inventaire enregistré : ${lignes.length} vin${lignes.length > 1 ? 's' : ''} compté${lignes.length > 1 ? 's' : ''}, ${changes.length} stock${changes.length > 1 ? 's' : ''} modifié${changes.length > 1 ? 's' : ''}.`;
+  const ok = rien ? 'Inventaire envoyé : rien n’a changé.'
+    : `Inventaire envoyé : ${lignes.length} vin${lignes.length > 1 ? 's' : ''} compté${lignes.length > 1 ? 's' : ''}, ${changes.length} stock${changes.length > 1 ? 's' : ''} modifié${changes.length > 1 ? 's' : ''}.`;
   redirect(`/admin/${resto}/stocks?${new URLSearchParams({ ok })}`);
 }

@@ -1,6 +1,5 @@
 'use client';
-// Page Inventaire : champ de stock avec − et + (pratique au téléphone, dans la cave), et recherche qui masque les autres vins
-// sans perdre ce qui a déjà été compté (tout reste dans le formulaire).
+// Page Inventaire : champ de stock avec − et + (pratique au téléphone, dans la cave).
 import { useState } from 'react';
 
 export function ChampStock({ id, stock, libelle }: { id: string; stock: number; libelle: string }) {
@@ -16,11 +15,3 @@ export function ChampStock({ id, stock, libelle }: { id: string; stock: number; 
   );
 }
 
-/** Recherche dans l'inventaire : masque les lignes (data-recherche) qui ne contiennent pas le texte tapé. */
-export function RechercheInventaire() {
-  const filtrer = (q: string) => {
-    const t = q.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase().trim();
-    for (const tr of document.querySelectorAll<HTMLElement>('[data-recherche]')) tr.hidden = Boolean(t) && !(tr.dataset.recherche ?? '').includes(t);
-  };
-  return <input type="search" className="recherche" placeholder="Chercher un vin…" aria-label="Chercher un vin dans l’inventaire" onChange={(e) => filtrer(e.target.value)} style={{ flex: '1 1 260px' }} />;
-}
