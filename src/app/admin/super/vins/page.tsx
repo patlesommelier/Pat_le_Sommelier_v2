@@ -21,7 +21,7 @@ const ValiderIci = ({ id, retour }: { id: string; retour: string }) => (
     <BoutonEnvoi className="btn petit" enCours="Validation…">Valider</BoutonEnvoi>
   </form>
 );
-type Sp = { q?: string; couleur?: string; statut?: string; resto?: string; cartes?: string; distrib?: string; page?: string; vin?: string; ok?: string; erreur?: string };
+type Sp = { q?: string; couleur?: string; statut?: string; photo?: string; resto?: string; cartes?: string; distrib?: string; page?: string; vin?: string; ok?: string; erreur?: string };
 
 /** Vins de la base de Pat (cuvées) : recherche, filtres, et accès à la fiche de chaque vin. */
 export default async function VinsBase({ searchParams }: { searchParams: Promise<Sp> }) {
@@ -30,18 +30,19 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
   const page = Math.max(0, Number(sp.page) || 0);
   // Origine (paramètre « cartes ») : vins utilisés (sur une carte ou chez un distributeur, par défaut), seulement les cartes,
   // seulement les distributeurs, ou toute la base (« 0 », comme avant).
+  const photoFiltre = sp.photo === 'avec' || sp.photo === 'sans' ? sp.photo : '';
   const origine: OrigineVins = sp.cartes === '0' ? 'tous' : sp.cartes === 'cartes' ? 'cartes' : sp.cartes === 'distributeurs' ? 'distributeurs' : 'utilises';
   // Un restaurant choisi : tous les vins de sa carte, reliés ou non à un vin de la base.
   const [{ lignes, total }, carte, restos, producteurs, distributeurs] = await Promise.all([
-    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', origine, distributeur: sp.distrib ?? '', page }),
-    sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', page }) : null,
+    sp.resto ? { lignes: [], total: 0 } : rechercherCuvees({ texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', origine, distributeur: sp.distrib ?? '', photo: photoFiltre, page }),
+    sp.resto ? vinsDeLaCarte({ restaurant: sp.resto, texte: sp.q ?? '', couleur: sp.couleur ?? '', statut: sp.statut ?? '', photo: photoFiltre, page }) : null,
     restaurantsListe(), nomsProducteurs(),
     requete<{ id: string; nom: string }>('select id, nom from distributeur order by lower(nom)'),
   ]);
   const nombre = carte ? carte.total : total;
   // Adresse de la liste telle qu'affichée (filtres et page) : la fiche y ramène après une validation.
-  const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
-  const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, ...extra }).filter(([, v]) => v) as [string, string][])}`;
+  const ici = `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, photo: photoFiltre, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, page: sp.page }).filter(([, v]) => v) as [string, string][])}`;
+  const lien = (extra: Partial<Sp>) => `/admin/super/vins?${new URLSearchParams(Object.entries({ q: sp.q, couleur: sp.couleur, statut: sp.statut, photo: photoFiltre, resto: sp.resto, cartes: sp.cartes, distrib: sp.distrib, ...extra }).filter(([, v]) => v) as [string, string][])}`;
 
   return (
     <>
@@ -71,6 +72,8 @@ export default async function VinsBase({ searchParams }: { searchParams: Promise
           <select id="couleur" name="couleur" defaultValue={sp.couleur ?? ''}><option value="">Toutes</option>{Object.entries(COULEURS).map(([k, l]) => <option key={k} value={k}>{l}</option>)}</select></div>
         <div className="champ"><label htmlFor="statut">Statut</label>
           <select id="statut" name="statut" defaultValue={sp.statut ?? ''}><option value="">Tous</option><option value="propose">À valider</option><option value="valide">Validés</option><option value="retire">Retirés</option>{sp.resto && <option value="absent">Pas encore dans la base</option>}</select></div>
+        <div className="champ"><label htmlFor="photo">Photo</label>
+          <select id="photo" name="photo" defaultValue={photoFiltre}><option value="">Toutes</option><option value="avec">Avec photo</option><option value="sans">Sans photo</option></select></div>
         <div className="champ"><label htmlFor="resto">Restaurant</label>
           <select id="resto" name="resto" defaultValue={sp.resto ?? ''}><option value="">Tous</option>{restos.map((r) => <option key={r.id} value={r.id}>{r.nom}</option>)}</select></div>
         {!sp.resto && <div className="champ"><label htmlFor="cartes">Vins</label>

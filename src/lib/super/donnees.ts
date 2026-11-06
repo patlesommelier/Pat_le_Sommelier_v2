@@ -142,8 +142,8 @@ export interface CuveeListe {
  */
 export type OrigineVins = 'utilises' | 'cartes' | 'distributeurs' | 'tous';
 
-export async function rechercherCuvees({ texte = '', couleur = '', statut = '', restaurant = '', origine = 'tous', distributeur = '', page = 0 }:
-  { texte?: string; couleur?: string; statut?: string; restaurant?: string; origine?: OrigineVins; distributeur?: string; page?: number }) {
+export async function rechercherCuvees({ texte = '', couleur = '', statut = '', restaurant = '', origine = 'tous', distributeur = '', photo = '', page = 0 }:
+  { texte?: string; couleur?: string; statut?: string; restaurant?: string; origine?: OrigineVins; distributeur?: string; photo?: string; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const lignes = await requete<CuveeListe>(
     `select c.id, c.nom, coalesce(c.couleur::text, (select v.couleur::text from vin_carte v where v.cuvee_id = c.id limit 1)) as couleur, c.producteur_id, p.nom as producteur, coalesce(c.appellation_texte, t.nom) as appellation,
@@ -163,8 +163,10 @@ export async function rechercherCuvees({ texte = '', couleur = '', statut = '', 
           or ($5 in ('utilises', 'cartes') and exists (select 1 from vin_carte v where v.cuvee_id = c.id))
           or ($5 in ('utilises', 'distributeurs') and exists (select 1 from distributeur_vin d where d.cuvee_id = c.id and d.actif)))
         and ($7 = '' or exists (select 1 from distributeur_vin d where d.cuvee_id = c.id and d.distributeur_id = $7 and d.actif))
+        -- photo : l'étiquette du vin dans la base (« avec » ou « sans »)
+        and ($8 = '' or ($8 = 'avec') = (coalesce(c.etiquette_url, '') <> ''))
       order by (select count(*) from vin_carte v where v.cuvee_id = c.id) desc, p.nom, c.nom
-      limit 50 offset $6`, [texte.trim(), couleur, statut, restaurant, origine, page * 50, distributeur]);
+      limit 50 offset $6`, [texte.trim(), couleur, statut, restaurant, origine, page * 50, distributeur, photo]);
   return { lignes, total: lignes[0]?.total ?? 0 };
 }
 
@@ -210,8 +212,8 @@ export interface VinCarteBase {
  * Tous les vins de la carte d'un restaurant, reliés ou non à un vin de la base de Pat (filtre « Restaurant » de « Vins de la base »).
  * Statut : celui du vin de la base ; « absent » : vins pas encore dans la base.
  */
-export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', statut = '', page = 0 }:
-  { restaurant: string; texte?: string; couleur?: string; statut?: string; page?: number }) {
+export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', statut = '', photo = '', page = 0 }:
+  { restaurant: string; texte?: string; couleur?: string; statut?: string; photo?: string; page?: number }) {
   const sansAccent = (s: string) => `translate(lower(${s}), 'àâäáéèêëíîïóôöúùûüç', 'aaaaeeeeiiiooouuuuc')`;
   const toutes = await requete<VinCarteBase & { format: string }>(
     `select v.id, v.libelle, v.millesime, v.couleur::text, v.producteur_id, -- producteur de la base d'abord (nom corrigé par Pat), sinon celui lu sur la carte
@@ -248,6 +250,8 @@ export async function vinsDeLaCarte({ restaurant, texte = '', couleur = '', stat
     // Producteur : celui d'une des contenances s'il manque sur la ligne affichée (relié à la base d'abord).
     const p = v.producteur_id ? v : g.find((x) => x.producteur_id) ?? (v.producteur ? v : g.find((x) => x.producteur)) ?? v;
     return { ...v, producteur_id: p.producteur_id, producteur: p.producteur, contenances: g.length > 1 ? codes.map(libelleCourt).join(' · ') : undefined };
-  }).filter((v) => !statut || (statut === 'absent' ? !v.cuvee_id : v.cuvee_statut === statut));
+  }).filter((v) => !statut || (statut === 'absent' ? !v.cuvee_id : v.cuvee_statut === statut))
+    // Photo : celle affichée pour ce vin sur la carte (la sienne ou celle reprise de la base).
+    .filter((v) => !photo || (photo === 'avec') === Boolean(v.etiquette_url));
   return { lignes: vins.slice(page * 50, page * 50 + 50), total: vins.length };
 }

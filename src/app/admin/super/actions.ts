@@ -358,9 +358,11 @@ export async function enregistrerCuvee(id: string, f: FormData) {
     terroir = candidats.find((x) => cleT(x.nom) === cleT(appellation))?.id ?? await creerAppellationProposee(appellation);
   }
   let etiquette: string | null = null;
+  let photoRatee: string | null = null;
   const image = f.get('etiquette');
   if (image instanceof File && image.size > 0) {
-    try { etiquette = await deposerImage(image, 'base/etiquettes'); } catch (e) { redirect(avec(page, { erreur: (e as Error).message })); }
+    // Stockage des images en panne (Hetzner) : le reste de la fiche (validation comprise) est enregistré quand même.
+    try { etiquette = await deposerImage(image, 'base/etiquettes'); } catch (e) { photoRatee = `Photo non enregistrée : ${(e as Error).message}`; }
   }
   const retirerEtiquette = !etiquette && f.get('retirer_etiquette') === 'on';
   // Note du vin (cuisine interne) : vide = celle du producteur ; une valeur hors 0 à 5 est ignorée.
@@ -416,7 +418,7 @@ export async function enregistrerCuvee(id: string, f: FormData) {
   const [{ nom } = { nom: 'Vin' }] = await requete<{ nom: string }>('select nom from cuvee where id = $1', [id]);
   const fait = decision === 'valider' ? 'validé' : decision === 'retirer' ? 'retiré de la base' : 'enregistré';
   const lien = appellation && !terroir ? ' (appellation absente de la base : gardée sans lien)' : '';
-  redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${fait}${lien}.` })}`);
+  redirect(`${base}${base.includes('?') ? '&' : '?'}${new URLSearchParams({ vin: id, ok: `« ${nom} » ${fait}${lien}.`, ...(photoRatee ? { erreur: photoRatee } : {}) })}`);
 }
 
 /**
