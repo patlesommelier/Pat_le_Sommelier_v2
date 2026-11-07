@@ -85,8 +85,9 @@ async function appliquerLogo(restaurantId: string, f: FormDataEntryValue | null)
   if (!(f instanceof File) || !f.size) return;
   if (!/^image\//.test(f.type) || f.size > 8 * 1024 * 1024) return;
   try {
+    // Couleur lue sur le fichier envoyé, avant que ses marges (le fond) soient rognées au dépôt.
+    const couleur = await couleurAppDuLogo(Buffer.from(await f.arrayBuffer()));
     const { url, ratio } = await deposerLogo(f, `${restaurantId}/logo`);
-    const couleur = await couleurAppDuLogo(url);
     const claire = (hex: string) => {
       const n = parseInt(hex.slice(1), 16);
       const m = (c: number) => Math.round(c + (255 - c) * 0.94).toString(16).padStart(2, '0');

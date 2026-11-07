@@ -58,25 +58,35 @@ export async function fondDuLogo(url: string | null | undefined): Promise<string
 }
 
 /**
- * Couleur de l'app d'un restaurant d'après son logo (inscription) : la couleur du fond du logo s'il en a un (quatre coins
- * opaques et semblables, quelle que soit leur teinte), pour que le logo se fonde dans le bandeau ; sinon sa couleur dominante.
+ * Couleur de l'app d'un restaurant d'après son logo (inscription), lue sur le fichier envoyé, AVANT que ses marges soient
+ * rognées : la couleur du fond du logo s'il en a un (le pourtour de l'image, opaque et presque partout de la même couleur,
+ * quelle que soit sa teinte), pour que le logo se fonde dans le bandeau ; sinon sa couleur dominante.
  */
-export async function couleurAppDuLogo(url: string | null | undefined): Promise<string | null> {
-  if (!url) return null;
+export async function couleurAppDuLogo(octets: Buffer): Promise<string | null> {
   try {
-    const octets = url.startsWith('/')
-      ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
-      : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(8000) })).arrayBuffer());
-    const { data, info } = await sharp(octets).resize(60, 60, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
-    const px = (x: number, y: number) => { const i = (y * info.width + x) * 4; return [data[i], data[i + 1], data[i + 2], data[i + 3]]; };
-    const coins = [px(1, 1), px(info.width - 2, 1), px(1, info.height - 2), px(info.width - 2, info.height - 2)];
-    const ecart = Math.max(...[0, 1, 2].map((k) => Math.max(...coins.map((c) => c[k])) - Math.min(...coins.map((c) => c[k]))));
-    if (coins.every((c) => c[3] >= 240) && ecart <= 24) {
-      const moy = (k: number) => Math.round(coins.reduce((t, c) => t + c[k], 0) / 4).toString(16).padStart(2, '0');
+    const { data, info } = await sharp(octets).rotate().resize(120, 120, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const { width: l, height: h } = info;
+    const bord: number[][] = [];
+    const px = (x: number, y: number) => { const i = (y * l + x) * 4; bord.push([data[i], data[i + 1], data[i + 2], data[i + 3]]); };
+    for (let x = 0; x < l; x++) { px(x, 0); px(x, h - 1); }
+    for (let y = 1; y < h - 1; y++) { px(0, y); px(l - 1, y); }
+    // Couleur la plus fréquente du pourtour (à 24 près) : le fond, si elle en couvre au moins 70 % et qu'elle est opaque.
+    const proches = (a: number[], c: number[]) => Math.max(...[0, 1, 2].map((k) => Math.abs(a[k] - c[k]))) <= 24;
+    const opaques = bord.filter((c) => c[3] >= 240);
+    let meilleur: number[][] = [];
+    for (const c of opaques.filter((_, i) => i % 7 === 0)) {
+      const groupe = opaques.filter((a) => proches(a, c));
+      if (groupe.length > meilleur.length) meilleur = groupe;
+    }
+    if (meilleur.length >= bord.length * 0.7) {
+      const moy = (k: number) => Math.round(meilleur.reduce((t, c) => t + c[k], 0) / meilleur.length).toString(16).padStart(2, '0');
       return `#${moy(0)}${moy(1)}${moy(2)}`.toUpperCase();
     }
-  } catch { /* logo illisible : la couleur dominante, ci-dessous */ }
-  return couleurDuLogo(url);
+    const brut = await sharp(octets).resize(80, 80, { fit: 'inside' }).ensureAlpha().raw().toBuffer();
+    return couleurDominante(brut);
+  } catch {
+    return null;
+  }
 }
 
 export async function couleurDuLogo(url: string | null | undefined): Promise<string | null> {
