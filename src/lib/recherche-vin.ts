@@ -66,9 +66,14 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
       + `(ex. Toscane → "Italie", "Italy", "Italia", "Toscane", "Toscana", "Chianti", "Brunello di Montalcino", "Bolgheri", "Vino Nobile di Montepulciano")], `
       + `"budget_max": nombre en euros HTVA ou null, "plat": "le plat à accorder, décrit en une phrase" ou null, "style": "le style de vin souhaité en quelques mots" ou null}` }] }).catch((e) => { console.error('[trouver un vin] critères', e); return null; });
     const c = (m1 && json<Criteres>(m1.content.map((b) => (b.type === 'text' ? b.text : '')).join(''))) ?? { couleurs: [], lieux: [], budget_max: null, plat: null, style: null };
-    const couleurs = [...new Set([...(r.couleur ? [r.couleur] : []), ...(c.couleurs ?? [])].filter((x) => COULEURS.includes(x)))];
+    // Réponse de l'IA tolérée sous plusieurs formes : une liste simple, une liste par région (Jura et Savoie : deux listes),
+    // ou un texte « Jura, Savoie » ; seuls les mots sont gardés (sinon la recherche échouait en 2 secondes).
+    const mots = (x: unknown): string[] => Array.isArray(x) ? x.flatMap(mots)
+      : typeof x === 'string' ? x.split(/[,;\n]/).map((s) => s.trim()).filter(Boolean)
+      : x && typeof x === 'object' ? Object.values(x).flatMap(mots) : [];
+    const couleurs = [...new Set([...(r.couleur ? [r.couleur] : []), ...mots(c.couleurs).map((x) => x.toLowerCase())].filter((x) => COULEURS.includes(x)))];
     const budget = r.budget ?? (typeof c.budget_max === 'number' && c.budget_max > 0 ? c.budget_max : null);
-    const lieux = (c.lieux ?? []).map(sansAccents).filter((x) => x.length > 2);
+    const lieux = [...new Set(mots(c.lieux).map(sansAccents))].filter((x) => x.length > 2);
 
     // 2. Présélection : vins actifs des distributeurs Quid Vinum proposés à ce restaurant, au prix du restaurant.
     const tous = await requete<Candidat>(
