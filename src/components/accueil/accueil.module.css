@@ -74,6 +74,11 @@
 .depot[data-survol='true'] { border-color: #FF0D05; background: #EFEBE9; }
 .depot:focus-within { outline: 3px solid #680021; outline-offset: 2px; }
 .icone { width: 48px; height: 48px; border-radius: 13px; background: #EFEBE9; border: 1px solid #EB9D92; color: #680021; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+/* Zone de dépôt : la flèche d'envoi monte doucement de 3 px puis redescend, de temps en temps, pour attirer le regard (très léger). */
+.fleche { animation: fleche-envoi 2.8s ease-in-out infinite; }
+.depot:hover .fleche, .depot[data-survol='true'] .fleche { animation-duration: 1.2s; }
+@keyframes fleche-envoi { 0%, 55%, 100% { transform: translateY(0); } 70% { transform: translateY(-3px); } 85% { transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) { .fleche { animation: none; } }
 .attente { display: flex; align-items: center; gap: 14px; min-height: 92px; padding: 14px 22px; box-sizing: border-box; border-radius: 16px; background: #EFEBE9; font-size: 19px; font-weight: 700; color: #680021; }
 .roue { width: 28px; height: 28px; border-radius: 50%; border: 3px solid #EB9D92; border-top-color: #680021; animation: tourne 0.9s linear infinite; }
 @keyframes tourne { to { transform: rotate(360deg); } }

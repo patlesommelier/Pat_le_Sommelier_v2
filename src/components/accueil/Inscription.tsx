@@ -33,7 +33,7 @@ const ETAPES: { id: Etape; titre: string }[] = [
 
 const IconeEnvoi = () => (
   <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-    <path d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v4h16v-4" />
+    <path className={s.fleche} d="M12 16V4M7 9l5-5 5 5" /><path d="M4 16v4h16v-4" />
   </svg>
 );
 const Coche = () => (
