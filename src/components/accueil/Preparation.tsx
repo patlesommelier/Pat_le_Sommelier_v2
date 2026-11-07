@@ -12,6 +12,8 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
   const [etat, setEtat] = useState<Etat>({ preparation: { statut: 'en_cours', total: 0, faits: 0 } });
   const pret = etat.restaurant === 'en_service';
   const espace = `/admin/${restaurantId}`;
+  // Première arrivée dans l'espace : directement sur la carte des vins (lue à l'inscription).
+  const arrivee = `${espace}/carte`;
 
   useEffect(() => {
     let actif = true;
@@ -24,14 +26,14 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
       if (!e?.preparation) return;
       if (e.restaurant === 'en_service') {
         if (dejaOuverte === null) dejaOuverte = Boolean(e.scanne);
-        else if (!dejaOuverte && e.scanne) { window.location.href = espace; return; } // QR code scanné
+        else if (!dejaOuverte && e.scanne) { window.location.href = arrivee; return; } // QR code scanné
       }
       setEtat(e);
     };
     lire();
     const t = setInterval(lire, 3000);
     return () => { actif = false; clearInterval(t); };
-  }, [restaurantId, espace]);
+  }, [restaurantId, espace, arrivee]);
 
   const { total, faits, statut } = etat.preparation;
   const pct = pret ? 100 : total ? Math.round((faits / total) * 100) : 0;
@@ -46,7 +48,7 @@ export function Preparation({ restaurantId }: { restaurantId: string }) {
           <span>Scannez ce QR code avec votre téléphone : vous verrez votre sommelier comme vos clients le verront.</span>
           <span className={s.pretLiens}>
             <a href={`${espace}/acces/qr?format=png`} download>Télécharger le QR code</a>
-            <a href={espace}>Aller à mon espace</a>
+            <a href={arrivee}>Aller à mon espace</a>
           </span>
         </div>
       </div>

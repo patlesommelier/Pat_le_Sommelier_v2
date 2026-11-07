@@ -11,6 +11,8 @@ import { resumePublic, type ResumePublic, type TypeAnalyse } from './etapes';
 import { demarrerInscription, inscriptionCourante, lireInscription, majInscription, nettoyerInscriptions } from './etat';
 import { typeReel, verifierFichiers } from './fichiers';
 import { finaliserInscription } from './finalisation';
+import { deposerLogo } from '@/lib/logo';
+import { couleurAppDuLogo } from '@/lib/couleur-logo';
 import { inscriptionAutorisee, MAX_ANALYSES_PAR_INSCRIPTION } from './limites';
 
 export type Reponse = { erreurs: string[]; resume?: ResumePublic; /** restaurant créé : la page suit la préparation des accords */ restaurantId?: string };
@@ -75,6 +77,28 @@ const Compte = z.object({
  * Étape 3 (après la carte des vins et le menu) : nom du restaurant, e-mail et mot de passe. Le compte est créé
  * (déjà confirmé), la session ouverte, puis le restaurant est créé et la préparation des accords lancée (« C’est parti ! »).
  */
+/**
+ * Logo déposé à l'inscription (facultatif) : il habille l'app des clients, et l'app prend sa couleur — celle du fond du logo
+ * s'il en a un, sinon sa couleur dominante (modifiable ensuite dans « Apparence »). Un échec ne bloque pas l'inscription.
+ */
+async function appliquerLogo(restaurantId: string, f: FormDataEntryValue | null) {
+  if (!(f instanceof File) || !f.size) return;
+  if (!/^image\//.test(f.type) || f.size > 8 * 1024 * 1024) return;
+  try {
+    const { url, ratio } = await deposerLogo(f, `${restaurantId}/logo`);
+    const couleur = await couleurAppDuLogo(url);
+    const claire = (hex: string) => {
+      const n = parseInt(hex.slice(1), 16);
+      const m = (c: number) => Math.round(c + (255 - c) * 0.94).toString(16).padStart(2, '0');
+      return `#${m((n >> 16) & 255)}${m((n >> 8) & 255)}${m(n & 255)}`.toUpperCase();
+    };
+    await requete(`update restaurant set logo_url = $2, logo_ratio = $3, couleur = coalesce($4, couleur), couleur_claire = coalesce($5, couleur_claire) where id = $1`,
+      [restaurantId, url, ratio, couleur, couleur ? claire(couleur) : null]);
+  } catch (e) {
+    console.error('[inscription] logo', restaurantId, e); // le restaurant pourra le déposer depuis « Apparence »
+  }
+}
+
 export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   const r = Compte.safeParse(Object.fromEntries(form));
   if (!r.success) return { erreurs: r.error.issues.map((x) => x.message) };
@@ -116,6 +140,7 @@ export async function commencer(_: Reponse, form: FormData): Promise<Reponse> {
   if (!apres?.vins.length || !apres.plats.length) return { erreurs: ['Déposez d’abord votre carte des vins et votre menu.'], resume: resumePublic(apres) };
   try {
     const { restaurantId } = await finaliserInscription(i.id, userId, email);
+    await appliquerLogo(restaurantId, form.get('logo'));
     return { erreurs: [], resume: resumePublic(await lireInscription(i.id)), restaurantId };
   } catch (e) {
     console.error('[inscription] création', i.id, e);

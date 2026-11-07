@@ -13,7 +13,7 @@ import { requete } from '@/lib/db';
 // Menu de gauche : chaque entrée avec son icône (celle des cadres du tableau de bord) ; les trois premières disent ce qu'on y fait.
 const LIBELLES_MENU: Record<string, string> = { Menu: 'Gérer le menu', 'Carte des vins': 'Gérer la carte des vins', Accords: 'Gérer les accords mets/vins' };
 const GROUPES_MENU: Record<string, string> = { 'Mise en place': 'Cartes et menus', Sommelier: 'Cartes et menus', App: 'App client' };
-// « Base des vins » (Ma cave, Rajouter un vin, Commandes, Distributeurs) : en tête du menu, au-dessus de « Cartes et menus ».
+// « Gestion de cave » (Les vins, Inventaire, Ajouter un vin, Commandes, Distributeurs) : sous « Cartes et menus ».
 function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
   const base = `/admin/${resto}`;
   const stocks: Etape[] = [['stocks', 'Les vins', 'stock'], ['inventaire', 'Faire l’inventaire', 'check'], ['trouver-vin', 'Ajouter un vin', 'bottle'], ['commandes', 'Commandes', 'camion'], ['fournisseurs', 'Distributeurs', 'fournisseur']]
@@ -22,8 +22,9 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
       ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}) }));
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Restaurant', icone: 'reglages' };
-  // Base des vins en tête du menu (juste après le tableau de bord), au-dessus de Cartes et menus.
-  return [...stocks, ...etapes, parametres];
+  // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et le restaurant.
+  const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus');
+  return [...cartes, ...stocks, ...etapes.filter((e) => e.groupe !== 'Cartes et menus'), parametres];
 }
 
 export default async function LayoutRestaurant({ children, params }: { children: React.ReactNode; params: Promise<{ resto: string }> }) {

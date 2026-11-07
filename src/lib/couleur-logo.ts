@@ -57,6 +57,28 @@ export async function fondDuLogo(url: string | null | undefined): Promise<string
   }
 }
 
+/**
+ * Couleur de l'app d'un restaurant d'après son logo (inscription) : la couleur du fond du logo s'il en a un (quatre coins
+ * opaques et semblables, quelle que soit leur teinte), pour que le logo se fonde dans le bandeau ; sinon sa couleur dominante.
+ */
+export async function couleurAppDuLogo(url: string | null | undefined): Promise<string | null> {
+  if (!url) return null;
+  try {
+    const octets = url.startsWith('/')
+      ? await fs.readFile(path.join(process.cwd(), 'public', decodeURIComponent(url.split('?')[0])))
+      : Buffer.from(await (await fetch(url, { signal: AbortSignal.timeout(8000) })).arrayBuffer());
+    const { data, info } = await sharp(octets).resize(60, 60, { fit: 'fill' }).ensureAlpha().raw().toBuffer({ resolveWithObject: true });
+    const px = (x: number, y: number) => { const i = (y * info.width + x) * 4; return [data[i], data[i + 1], data[i + 2], data[i + 3]]; };
+    const coins = [px(1, 1), px(info.width - 2, 1), px(1, info.height - 2), px(info.width - 2, info.height - 2)];
+    const ecart = Math.max(...[0, 1, 2].map((k) => Math.max(...coins.map((c) => c[k])) - Math.min(...coins.map((c) => c[k]))));
+    if (coins.every((c) => c[3] >= 240) && ecart <= 24) {
+      const moy = (k: number) => Math.round(coins.reduce((t, c) => t + c[k], 0) / 4).toString(16).padStart(2, '0');
+      return `#${moy(0)}${moy(1)}${moy(2)}`.toUpperCase();
+    }
+  } catch { /* logo illisible : la couleur dominante, ci-dessous */ }
+  return couleurDuLogo(url);
+}
+
 export async function couleurDuLogo(url: string | null | undefined): Promise<string | null> {
   if (!url) return null;
   try {

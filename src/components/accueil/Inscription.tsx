@@ -185,6 +185,10 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
               <div className={s.champ}><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
               <div className={s.champ}><label htmlFor="motDePasse">Mot de passe</label><input id="motDePasse" name="motDePasse" type="password" required autoComplete="new-password" placeholder="12 caractères minimum" /></div>
             </div>
+            {/* Logo (facultatif) : il habille l'app de vos clients, qui prend sa couleur (modifiable ensuite dans « Apparence »). */}
+            <div className={s.champ}><label htmlFor="logo">Logo du restaurant <span style={{ fontWeight: 400, opacity: .8 }}>(facultatif)</span></label>
+              <input id="logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
+              <span style={{ fontSize: 13, opacity: .85 }}>Votre app prendra sa couleur. Vous pourrez le changer plus tard.</span></div>
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
             <div className={s.pied}>
