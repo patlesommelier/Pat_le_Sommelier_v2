@@ -24,7 +24,9 @@ export interface Commande {
 export interface CoordonneesRestaurant { nom: string; stock_limite_basse: number; commande_societe: string | null; commande_adresse: string | null;
   commande_tva: string | null; commande_contact: string | null; commande_telephone: string | null; commande_email: string | null;
   /** Adresse de facturation, quand elle diffère de l'adresse de livraison (commande_adresse). */
-  commande_adresse_facturation: string | null }
+  commande_adresse_facturation: string | null;
+  /** Position de l'adresse, quand elle a été choisie dans les propositions d'OpenStreetMap (adresse vérifiée). */
+  latitude: number | null; longitude: number | null }
 
 /**
  * Prix d'achat HTVA de chaque vin (id de la ligne → prix) : lu seulement par les pages Stocks et Commandes de vin,
@@ -52,7 +54,7 @@ export async function getFournisseurs(resto: string) {
 export async function getCoordonnees(resto: string) {
   const [r] = await requete<CoordonneesRestaurant>(
     `select nom, stock_limite_basse, commande_societe, commande_adresse, commande_tva, commande_contact, commande_telephone, commande_email,
-            commande_adresse_facturation from restaurant where id = $1`, [resto]);
+            commande_adresse_facturation, latitude, longitude from restaurant where id = $1`, [resto]);
   return r ?? null;
 }
 

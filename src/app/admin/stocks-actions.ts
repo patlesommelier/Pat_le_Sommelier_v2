@@ -196,6 +196,14 @@ export async function enregistrerParametresStock(resto: string, f: FormData): Pr
     `update restaurant set stock_limite_basse = $2, commande_societe = $3, commande_adresse = $4, commande_tva = $5, commande_contact = $6,
             commande_telephone = $7, commande_email = $8, commande_adresse_facturation = $9 where id = $1`,
     [resto, limite, txt(f, 'commande_societe'), txt(f, 'commande_adresse'), txt(f, 'commande_tva'), txt(f, 'commande_contact'), txt(f, 'commande_telephone'), email, facturation]);
+  // Position de l'adresse : seulement si elle a été choisie dans les propositions d'OpenStreetMap (sinon, adresse non vérifiée).
+  const [lat, lon] = [Number(f.get('adresse_lat') || NaN), Number(f.get('adresse_lon') || NaN)];
+  const position = txt(f, 'commande_adresse') && Math.abs(lat) <= 90 && Math.abs(lon) <= 180 ? [lat, lon] : [null, null];
+  await requete(
+    `update restaurant set adresse_verifiee_le = case when $2::float8 is null then null
+                                                       when latitude is not distinct from $2 and longitude is not distinct from $3 then coalesce(adresse_verifiee_le, now())
+                                                       else now() end,
+            latitude = $2, longitude = $3 where id = $1`, [resto, ...position]);
   rafraichir(resto);
   return { ok: 'Paramètres enregistrés.' };
 }

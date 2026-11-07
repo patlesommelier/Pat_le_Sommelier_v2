@@ -2,6 +2,7 @@
 // limite de stock bas, et les utilisateurs de l'espace (invitation, liste).
 import { creerAcces, retirerAcces } from '../../actions';
 import { enregistrerParametresStock } from '../../stocks-actions';
+import { ChampAdresse } from '@/components/admin/ChampAdresse';
 import { CopierLien } from '@/components/admin/CopierLien';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { Entete, Message } from '@/components/admin/Ui';
@@ -31,7 +32,8 @@ export default async function Parametres({ params, searchParams }: { params: Pro
               <span className="aide">Affiché dans votre espace et dans l’app de vos clients</span></label>
             {champ('commande_societe', 'Raison sociale (bons de commande)', c.commande_societe, { aide: `Vide : « ${c.nom} »` })}
             {champ('commande_tva', 'Numéro de TVA', c.commande_tva)}
-            <label className="champ" style={{ gridColumn: '1 / -1' }}><span>Adresse de livraison</span><textarea name="commande_adresse" rows={2} defaultValue={c.commande_adresse ?? ''} /></label>
+            {/* Adresse vérifiée avec OpenStreetMap (propositions pendant la frappe, position enregistrée). */}
+            <ChampAdresse resto={resto} valeur={c.commande_adresse} lat={c.latitude} lon={c.longitude} />
             {/* Adresse de facturation : seulement si elle diffère (la case l'affiche). */}
             <div className="facturation" style={{ gridColumn: '1 / -1' }}>
               <label className="case" style={{ margin: 0 }}><input type="checkbox" name="facturation_differente" defaultChecked={Boolean(c.commande_adresse_facturation)} />

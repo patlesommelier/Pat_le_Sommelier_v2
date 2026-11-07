@@ -561,3 +561,15 @@ body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-b
 /* Attente d'une recherche faite par Pat (à côté du bouton) : Pat attablé qui se balance et un mot. */
 .attente-pat { display: inline-flex; align-items: center; gap: 10px; font-weight: 600; }
 .bandeau-recherche .attente-pat { color: var(--texte); font-size: 15px; }
+
+/* Adresse du restaurant vérifiée avec OpenStreetMap (Paramètres) */
+.propositions-adresse { position: absolute; z-index: 20; left: 0; right: 0; top: calc(100% + 4px); margin: 0; padding: 6px; list-style: none; background: var(--carte); border: 1px solid var(--ligne-forte); border-radius: 12px; box-shadow: 0 10px 30px rgba(0, 0, 0, .12); max-height: 300px; overflow-y: auto; }
+.propositions-adresse li { display: flex; flex-direction: column; gap: 2px; padding: 9px 12px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+.propositions-adresse li span { font-size: 13px; color: var(--etiquette); }
+.propositions-adresse li:hover, .propositions-adresse li[aria-selected='true'] { background: var(--rose); }
+.propositions-adresse li.vide { cursor: default; color: var(--etiquette); }
+.propositions-adresse li.vide:hover { background: none; }
+.adresse-etat { font-size: 13px; font-weight: 600; }
+.adresse-etat.ok { color: #1E7A46; }
+.adresse-etat.attention { color: #A15C00; }
+.carte-adresse { width: 100%; height: 200px; border: 1px solid var(--ligne); border-radius: 12px; margin-top: 4px; }
