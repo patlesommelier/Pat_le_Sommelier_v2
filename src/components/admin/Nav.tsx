@@ -12,7 +12,8 @@ export interface Etape { href: string; libelle: string; etat: EtatEtape; groupe?
   notif?: { n: number; source: string } }
 
 const CLE_REPLIS = 'qv-menu-replis';
-const REPLIS_PAR_DEFAUT: Record<string, boolean> = { 'Gestion de cave': true };
+// Au départ, seul « Cartes et menus » est déplié.
+const REPLIS_PAR_DEFAUT: Record<string, boolean> = { 'Gestion de cave': true, 'App client': true, 'Paramètres': true };
 
 /** Liens du menu de gauche ; l'étape ouverte est mise en évidence. */
 export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: Etape[]; admin?: { href: string; libelle: string }[] }) {
@@ -23,19 +24,25 @@ export function NavLiens({ accueil, etapes, admin }: { accueil: string; etapes: 
   if (/^\/admin\/[^/]+\/carte\/[^/]+$/.test(chemin) && /^\/admin\/[^/]+\/stocks/.test(retour)) chemin = retour.split('?')[0];
   if (/^\/admin\/[^/]+\/producteurs\//.test(chemin)) chemin = chemin.replace(/\/producteurs\/.*$/, '/stocks');
   const courant = (href: string) => (href === accueil ? chemin === href : chemin.startsWith(href)) ? 'page' : undefined;
-  // Groupes repliables (flèche à côté du titre) : choix gardé dans ce navigateur. « Gestion de cave » est replié au départ ;
-  // le groupe de la page ouverte reste toujours déplié.
+  // Groupes repliables (flèche à côté du titre) : choix gardé dans ce navigateur. tout sauf « Cartes et menus » est replié au départ ;
+  // le groupe de la page ouverte s'ouvre de lui-même.
   const [replies, setReplies] = useState<Record<string, boolean>>(REPLIS_PAR_DEFAUT);
   useEffect(() => {
     try { const r = JSON.parse(localStorage.getItem(CLE_REPLIS) ?? 'null'); if (r && typeof r === 'object') setReplies({ ...REPLIS_PAR_DEFAUT, ...r }); } catch { /* stockage indisponible */ }
   }, []);
-  const basculer = (g: string) => setReplies((r) => {
-    const n = { ...r, [g]: !r[g] };
-    try { localStorage.setItem(CLE_REPLIS, JSON.stringify(n)); } catch { /* stockage indisponible */ }
-    return n;
-  });
+  // Groupe de la page ouverte : déplié d'office, mais on peut quand même le replier (pour cette visite).
+  const [fermesIci, setFermesIci] = useState<Record<string, boolean>>({});
   const groupeOuvert = (g: string) => etapes.some((e) => e.groupe === g && courant(e.href));
-  const cache = (g?: string) => Boolean(g && replies[g] && !groupeOuvert(g));
+  const cache = (g?: string) => Boolean(g && (groupeOuvert(g) ? fermesIci[g] : replies[g]));
+  const basculer = (g: string) => {
+    const replier = !cache(g);
+    if (groupeOuvert(g)) setFermesIci((f) => ({ ...f, [g]: replier }));
+    setReplies((r) => {
+      const n = { ...r, [g]: replier };
+      try { localStorage.setItem(CLE_REPLIS, JSON.stringify(n)); } catch { /* stockage indisponible */ }
+      return n;
+    });
+  };
   return (
     <nav aria-label="Back-office" className="bo-liens">
       <Link href={accueil} className="bo-lien" aria-current={courant(accueil)}><span className="bo-num" style={{ border: 0 }}><Icone nom="home" /></span>Tableau de bord</Link>

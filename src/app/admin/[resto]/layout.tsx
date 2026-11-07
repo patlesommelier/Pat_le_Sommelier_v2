@@ -21,8 +21,8 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
       // Commandes : pastille quand Quid Vinum a changé le statut d’une commande ou joint une facture depuis la dernière visite.
       ...(chemin === 'commandes' ? { notif: { n: aVoir, source: `${base}/commandes/notifications` } } : {}) }));
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
-  const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Restaurant', icone: 'reglages' };
-  // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et le restaurant.
+  const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Paramètres', icone: 'reglages' };
+  // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et les paramètres.
   const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus');
   return [...cartes, ...stocks, ...etapes.filter((e) => e.groupe !== 'Cartes et menus'), parametres];
 }
