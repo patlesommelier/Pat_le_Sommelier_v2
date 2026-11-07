@@ -27,7 +27,13 @@
 .btnPetit { padding: 10px 20px; font-size: 15px; }
 
 /* 1. Bandeau */
-.bandeau { background: var(--encre); color: #FFFFFF; padding-bottom: clamp(140px, 16vw, 200px); }
+.bandeau { position: relative; isolation: isolate; background: var(--encre); color: #FFFFFF; padding-bottom: clamp(140px, 16vw, 200px);
+  /* Formes organiques : le bas du bandeau se courbe au lieu d'une coupe droite. */
+  border-bottom-left-radius: 50% clamp(28px, 5vw, 80px); border-bottom-right-radius: 50% clamp(28px, 5vw, 80px); }
+/* Lueur orange en forme libre derrière le titre (décor, très discret). */
+.bandeau::before { content: ''; position: absolute; z-index: -1; top: -8%; right: -6%; width: clamp(280px, 42vw, 620px); aspect-ratio: 1.15;
+  border-radius: 58% 42% 63% 37% / 46% 55% 45% 54%; background: radial-gradient(circle at 40% 40%, rgba(235, 74, 31, .35), rgba(235, 74, 31, 0) 68%);
+  filter: blur(18px); pointer-events: none; }
 .entete { max-width: 1180px; margin: 0 auto; padding: clamp(14px, 2vw, 20px) var(--gouttiere); padding-top: max(clamp(14px, 2vw, 20px), env(safe-area-inset-top)); display: flex; align-items: center; justify-content: space-between; gap: 16px; }
 .entete img { display: block; height: 44px; width: auto; }
 .liens { display: flex; align-items: center; gap: 28px; font-size: 15px; }
@@ -80,7 +86,9 @@
 .telephone video { width: 100%; height: 100%; object-fit: cover; border-radius: 25px; display: block; background: #222222; }
 
 /* 2. Pourquoi et cartes */
-.pourquoi { max-width: 900px; margin: 0 auto; padding: var(--espace-xl) var(--gouttiere) var(--espace-s); text-align: center; }
+.pourquoi { position: relative; isolation: isolate; max-width: 900px; margin: 0 auto; padding: var(--espace-xl) var(--gouttiere) var(--espace-s); text-align: center; }
+.pourquoi::before { content: ''; position: absolute; z-index: -1; left: 50%; top: calc(var(--espace-xl) - 40px); width: min(560px, 90%); height: 170px; translate: -50% 0;
+  border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; background: var(--fond); rotate: -3deg; pointer-events: none; }
 .pourquoi h2 { font-size: clamp(28px, 3vw, 36px); margin-bottom: 14px; }
 .pourquoi p { font-size: clamp(18px, 1.9vw, 22px); line-height: 1.55; max-width: 68ch; margin-inline: auto; color: #4A4542; }
 .cartes { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: clamp(14px, 2vw, 22px); padding-top: var(--espace-m); padding-bottom: var(--espace-l); }
@@ -88,6 +96,8 @@
   transition: transform var(--duree) var(--ressort), box-shadow var(--duree) var(--ressort), border-color .2s; }
 /* Survol d'une carte : elle se soulève légèrement, son icône s'anime. */
 .carte:hover { transform: translateY(-4px); box-shadow: var(--ombre-levee); border-color: #D9CDBE; }
+/* Rythme asymétrique sur grand écran : la colonne du milieu descend un peu (sans gêner la lecture). */
+@media (min-width: 1000px) { .cartes { padding-bottom: calc(var(--espace-l) + 32px); } .cartes > :nth-child(3n+2) { translate: 0 32px; } }
 .carte:hover .icone { transform: translateY(-2px) rotate(-4deg); border-color: var(--qv); }
 .carte h3 { font-size: 22px; margin: 6px 0 12px; }
 .carte p { font-size: 15px; }
@@ -100,7 +110,11 @@
 .cartePat .icone { border: 0; }
 
 /* 3. En bref et comment ça marche */
-.bande { background: var(--creme); padding-block: var(--espace-l); }
+.bande { position: relative; background: var(--creme); padding-block: var(--espace-l); }
+/* Vague souple en haut de la bande crème, à la place d'une ligne droite. */
+.bande::before { content: ''; position: absolute; left: 0; right: 0; bottom: calc(100% - 1px); height: clamp(28px, 5vw, 64px); background: var(--creme); pointer-events: none;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 80V46C180 6 380 0 600 30s420 46 600 18c110-17 190-34 240-40v72z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 80' preserveAspectRatio='none'%3E%3Cpath d='M0 80V46C180 6 380 0 600 30s420 46 600 18c110-17 190-34 240-40v72z'/%3E%3C/svg%3E") 0 0 / 100% 100% no-repeat; }
 .bandeGrille { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(340px, 100%), 1fr)); gap: clamp(36px, 5vw, 64px); }
 .bande h2 { font-size: clamp(26px, 2.6vw, 32px); margin-bottom: 20px; }
 .bref { list-style: none; margin: 0; padding: 0; }
@@ -118,6 +132,10 @@
 .final { padding: 0 0 var(--espace-xl); }
 .bulle { position: relative; isolation: isolate; overflow: hidden; color: #FFFFFF; border-radius: var(--rayon-l); padding: clamp(40px, 5vw, 60px) clamp(18px, 4vw, 48px);
   background: radial-gradient(120% 90% at 85% 0%, #F2683F 0%, transparent 55%), var(--qv); box-shadow: 0 30px 60px -24px rgba(235, 74, 31, .55); }
+/* Deux formes libres claires dans la bulle orange (décor, derrière le contenu). */
+.bulle::before, .bulle::after { content: ''; position: absolute; z-index: -1; pointer-events: none; background: rgba(255, 255, 255, .08); }
+.bulle::before { width: clamp(220px, 30vw, 380px); aspect-ratio: 1; left: -8%; bottom: -30%; border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+.bulle::after { width: clamp(140px, 18vw, 240px); aspect-ratio: 1.2; right: -4%; top: -14%; border-radius: 41% 59% 38% 62% / 52% 36% 64% 48%; }
 .final h2 { font-size: clamp(32px, 4vw, 46px); text-align: center; }
 /* Engagements sous « Rejoignez Quid Vinum » : gratuit, sans engagement… */
 .garanties { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; padding: 0; margin: -14px 0 28px; }
