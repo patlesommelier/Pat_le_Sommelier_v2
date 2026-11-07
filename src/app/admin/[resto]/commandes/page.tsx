@@ -34,8 +34,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   const sp = await searchParams;
   // Le restaurant voit ses commandes : la pastille du menu s'efface (pas quand le super-admin regarde à sa place).
   if (!u.admin) await marquerCommandesVues(resto);
-  const [vins, r, fournisseurs, ouvertes, recues, coord, achats] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
-    getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue', 'annulee'], 20), getCoordonnees(resto), getPrixAchat(resto)]);
+  const [vins, r, fournisseurs, ouvertes, recues, coord, achats, annulees] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto),
+    getCommandes(resto, ['ouverte']), getCommandes(resto, ['recue'], 20), getCoordonnees(resto), getPrixAchat(resto), getCommandes(resto, ['annulee'], 20)]);
   const limite = r?.stock_limite_basse ?? 2;
   const emailPret = envoiEmailConfigure();
   const groupes = regrouperVins(vins).filter((g) => g.tous.some((x) => x.disponible));
@@ -224,10 +224,10 @@ export default async function Commandes({ params, searchParams }: { params: Prom
   );
 
   // Commande refusée par Quid Vinum depuis moins d'un jour : encore parmi les commandes ouvertes (statut et explication) ;
-  // ensuite, dans les commandes réceptionnées ou annulées.
+  // ensuite, dans les commandes annulées. Réceptionnées et annulées : deux listes séparées, repliées.
   const refuseeRecente = (c: Commande) => c.statut_qv === 'refusee' && Boolean(c.statut_qv_le) && Date.now() - new Date(c.statut_qv_le!).getTime() < 864e5;
-  const enCours = [...recues.filter(refuseeRecente), ...ouvertes];
-  const cloturees = recues.filter((c) => !refuseeRecente(c));
+  const enCours = [...annulees.filter(refuseeRecente), ...ouvertes];
+  const annuleesAnciennes = annulees.filter((c) => !refuseeRecente(c));
 
   return (
     <>
@@ -247,10 +247,16 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           : <p className="discret" style={{ margin: 0 }}>Aucune commande en cours.</p>}
       </section>
 
-      {cloturees.length > 0 && (
+      {recues.length > 0 && (
         <details className="pile">
-          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ou annulées ({cloturees.length})</summary>
-          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{cloturees.map(carte)}</div>
+          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes réceptionnées ({recues.length})</summary>
+          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{recues.map(carte)}</div>
+        </details>
+      )}
+      {annuleesAnciennes.length > 0 && (
+        <details className="pile">
+          <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Commandes annulées ou refusées ({annuleesAnciennes.length})</summary>
+          <div className="pile" style={{ gap: 12, marginTop: 12 }}>{annuleesAnciennes.map(carte)}</div>
         </details>
       )}
     </>

@@ -23,7 +23,8 @@ export async function commandesQv(statut?: string) {
       where (c.quid_vinum or f.distributeur_id is not null
              or exists (select 1 from commande_ligne l where l.commande_id = c.id and l.distributeur_vin_id is not null)) -- distributeur retiré depuis
         -- Une commande annulée par le restaurant quitte l'onglet de son suivi (reçue, acceptée…) pour « Annulées ».
-        and ($1::text is null or ($1 = 'a_envoyer' and c.envoyee_le is null and c.statut = 'ouverte')
+        -- Par défaut (pas de statut) : les commandes ouvertes, ni réceptionnées (clôturées) ni annulées ; « toutes » : sans filtre.
+        and (($1::text is null and c.statut = 'ouverte') or $1 = 'toutes' or ($1 = 'a_envoyer' and c.envoyee_le is null and c.statut = 'ouverte')
              or (c.statut_qv = $1 and ($1 = 'refusee' or c.statut <> 'annulee'))
              or ($1 = 'annulee' and c.statut = 'annulee' and c.statut_qv is distinct from 'refusee'))
       order by c.cree_le desc limit 300`, [statut || null]);

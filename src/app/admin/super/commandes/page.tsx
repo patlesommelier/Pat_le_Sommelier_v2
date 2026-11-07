@@ -13,7 +13,8 @@ import { commandesHorsQv, commandesQv, STATUTS_QV } from '@/lib/super/commandes'
 export const dynamic = 'force-dynamic';
 
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Europe/Brussels' });
-const FILTRES = [['', 'Toutes'], ['a_envoyer', 'Pas encore envoyées'], ...STATUTS_QV, ['refusee', 'Refusées'], ['annulee', 'Annulées'], ['hors_qv', 'Commandes hors Quid Vinum']] as const;
+// On arrive sur les commandes ouvertes (ni réceptionnées ni annulées) ; « Toutes » les montre sans filtre.
+const FILTRES = [['', 'Ouvertes'], ['a_envoyer', 'Pas encore envoyées'], ...STATUTS_QV, ['refusee', 'Refusées'], ['annulee', 'Annulées'], ['toutes', 'Toutes'], ['hors_qv', 'Commandes hors Quid Vinum']] as const;
 
 export default async function CommandesQv({ searchParams }: { searchParams: Promise<{ statut?: string }> }) {
   await exigerAdmin();
@@ -25,7 +26,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
       <>
         <Entete titre="Commandes" texte="Les commandes des restaurants à leurs propres distributeurs : elles ne passent pas par Quid Vinum (pour information, sans suivi)." />
         <nav className="onglets" aria-label="Statut">
-          {FILTRES.map(([k, l]) => <Link key={k} href={k ? `/admin/super/commandes?statut=${k}` : '/admin/super/commandes'} aria-current={statut === k ? 'true' : undefined}>{l}</Link>)}
+          {FILTRES.map(([k, l]) => <Link key={k} href={k ? `/admin/super/commandes?statut=${k}` : '/admin/super/commandes'} aria-current={(statut ?? '') === k ? 'true' : undefined}>{l}</Link>)}
         </nav>
         {!horsQv.length && <p className="discret">Aucune commande hors Quid Vinum.</p>}
         <div className="pile" style={{ gap: 12 }}>
@@ -73,7 +74,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
       <nav className="onglets" aria-label="Statut">
         {FILTRES.map(([k, l]) => <Link key={k} href={k ? `/admin/super/commandes?statut=${k}` : '/admin/super/commandes'} aria-current={(statut ?? '') === k ? 'true' : undefined}>{l}</Link>)}
       </nav>
-      {!commandes.length && <p className="discret">Aucune commande.</p>}
+      {!commandes.length && <p className="discret">{statut ? 'Aucune commande.' : 'Aucune commande ouverte.'}</p>}
       <div className="pile" style={{ gap: 12 }}>
         {commandes.map((c) => {
           const ref = referenceCommande({ numero: c.numero, date: new Date(c.cree_le) });
