@@ -177,18 +177,29 @@ export function Inscription({ initial, restaurantCree }: { initial: ResumePublic
 
         {!cree && etape === 'restaurant' && (
           <form action={envoyerCompte} className={s.champs}>
-            <div className={s.ligne}>
+            {/* Deux blocs bien distincts : le restaurant d'abord, puis la personne (sinon on tape son nom de famille dans « Nom du restaurant »). */}
+            <fieldset className={s.bloc}>
+              <legend className={s.blocTitre}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V10l7-5 7 5v11M9 21v-6h6v6" /></svg>
+                Votre restaurant
+              </legend>
+              <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="organization" placeholder="Ex. Le Comptoir" /></div>
+              {/* Logo (facultatif) : il habille l'app de vos clients, qui prend sa couleur (modifiable ensuite dans « Apparence »). */}
+              <div className={s.champ}><label htmlFor="logo">Logo du restaurant <span style={{ fontWeight: 400, opacity: .8 }}>(facultatif)</span></label>
+                <input id="logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
+                <span style={{ fontSize: 13, opacity: .85 }}>Votre app prendra sa couleur. Vous pourrez le changer plus tard.</span></div>
+            </fieldset>
+            <fieldset className={s.bloc}>
+              <legend className={s.blocTitre}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 4-6 8-6s8 2 8 6" /></svg>
+                Vous
+              </legend>
               <div className={s.champ}><label htmlFor="prenom">Votre prénom</label><input id="prenom" name="prenom" required autoComplete="given-name" placeholder="Ex. Marie" /></div>
-              <div className={s.champ}><label htmlFor="nom">Nom du restaurant</label><input id="nom" name="nom" required autoComplete="off" placeholder="Ex. Le Comptoir" /></div>
-            </div>
-            <div className={s.ligne}>
-              <div className={s.champ}><label htmlFor="email">E-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
-              <div className={s.champ}><label htmlFor="motDePasse">Mot de passe</label><input id="motDePasse" name="motDePasse" type="password" required autoComplete="new-password" placeholder="12 caractères minimum" /></div>
-            </div>
-            {/* Logo (facultatif) : il habille l'app de vos clients, qui prend sa couleur (modifiable ensuite dans « Apparence »). */}
-            <div className={s.champ}><label htmlFor="logo">Logo du restaurant <span style={{ fontWeight: 400, opacity: .8 }}>(facultatif)</span></label>
-              <input id="logo" name="logo" type="file" accept="image/png,image/jpeg,image/webp,image/svg+xml" />
-              <span style={{ fontSize: 13, opacity: .85 }}>Votre app prendra sa couleur. Vous pourrez le changer plus tard.</span></div>
+              <div className={s.ligne}>
+                <div className={s.champ}><label htmlFor="email">Votre e-mail</label><input id="email" name="email" type="email" required autoComplete="email" placeholder="vous@restaurant.be" /></div>
+                <div className={s.champ}><label htmlFor="motDePasse">Mot de passe</label><input id="motDePasse" name="motDePasse" type="password" required autoComplete="new-password" placeholder="12 caractères minimum" /></div>
+              </div>
+            </fieldset>
             <label className={s.cgu}><input type="checkbox" name="cgu" required /><span>J’accepte les <a href="/conditions" target="_blank" rel="noopener">conditions d’utilisation</a></span></label>
             <Erreurs liste={compte.erreurs} />
             <div className={s.pied}>
