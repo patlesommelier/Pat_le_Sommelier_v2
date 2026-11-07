@@ -15,6 +15,10 @@ import { requete } from '@/lib/db';
 import { resumePublic } from '@/lib/inscription/etapes';
 
 const AVANTAGES: { titre: string; icone: string; textes: React.ReactNode[]; pat?: boolean }[] = [
+  // Pat le sommelier en premier (en haut à gauche des cartes), avec le QR code de démonstration.
+  { titre: 'Pat le sommelier : le conseil à chaque table', icone: 'pat', pat: true, textes: [
+    'Grâce à un QR code, vos clients ont accès à votre carte des vins et à un sommelier virtuel. Ils choisissent leur plat et reçoivent les suggestions de Pat, accompagnées d’une explication claire.',
+    <><b>Résultat :</b> un service du vin homogène, même sans sommelier en salle, et davantage de bouteilles vendues.</>] },
   { titre: 'Une gestion de stock simplifiée et automatisée', icone: 'stock', textes: [
     'Votre cave est tenue à jour sans effort. Dès qu’une référence passe sous le seuil que vous avez fixé, elle vous est signalée et peut être recommandée immédiatement. Les bouteilles commandées sont suivies jusqu’à leur réception, puis ajoutées au stock d’un simple clic.',
     'Chaque vin de votre stock apparaît directement sur votre carte des vins, et il en est retiré dès qu’il n’est plus disponible. Vous savez à tout moment ce que vous avez en cave, ce qui est en commande et ce qu’il faut réassortir.'] },
@@ -30,9 +34,6 @@ const AVANTAGES: { titre: string; icone: string; textes: React.ReactNode[]; pat?
     'Votre équipe parle du vin avec assurance, même sans formation spécifique.',
     'Au moment de prendre la commande, les accords conseillés pour chaque plat et leurs explications sont accessibles en un instant, sur téléphone ou tablette.',
     'La carte est dynamique : elle suit votre stock et ne présente que les vins disponibles en cave. Fini les « désolé, nous n’en avons plus ».'] },
-  { titre: 'Pat le sommelier : le conseil à chaque table', icone: 'pat', pat: true, textes: [
-    'Grâce à un QR code, vos clients ont accès à votre carte des vins et à un sommelier virtuel. Ils choisissent leur plat et reçoivent les suggestions de Pat, accompagnées d’une explication claire.',
-    <><b>Résultat :</b> un service du vin homogène, même sans sommelier en salle, et davantage de bouteilles vendues.</>] },
 ];
 
 const EN_BREF = [
@@ -159,6 +160,15 @@ export async function PageQuidVinum() {
             <span className={s.num}>{String(n + 1).padStart(2, '0')}</span>
             <h3>{a.titre}</h3>
             {a.textes.map((t, k) => <p key={k}>{t}</p>)}
+            {/* Carte de Pat : le QR code de l'app de démonstration, comme sur une table de restaurant (lien sur téléphone). */}
+            {a.pat && (
+              <div className={s.essai}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src="/api/demo-qr" alt="QR code à scanner pour essayer Pat le sommelier" width={96} height={96} />
+                <span><b>Essayez Pat</b> comme vos clients : scannez ce QR code avec votre téléphone.
+                  <a href={process.env.NEXT_PUBLIC_DEMO_URL || "/chez-pat"} target="_blank" rel="noopener">Ouvrir l’app de démonstration →</a></span>
+              </div>
+            )}
           </article>
         ))}
       </section>

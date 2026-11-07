@@ -1,4 +1,4 @@
-// Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande,
+// Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
 import Link from 'next/link';
 import { ajouterAuPanier, commanderPanier, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
@@ -135,7 +135,10 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                           <input type="hidden" name={`ligne_${v.id}`} value="1" />
                           <Link href={`/admin/${resto}/inventaire`} className="stock-lecture" title="Le stock se change dans l’inventaire">{v.stock}</Link>
                         </span></td>
-                        <td className="droite"><input type="number" name={`en_commande_${v.id}`} defaultValue={v.en_commande} min={0} max={100000} aria-label={`Bouteilles en commande : ${v.libelle}`} className="champ-commande" /></td>
+                        {/* En commande : suit les commandes passées (panier → Commander) et leur réception, jamais saisi à la main. */}
+                        <td className="droite">{v.en_commande > 0
+                          ? <Link href={`/admin/${resto}/commandes`} className="stock-lecture" title="Bouteilles commandées, pas encore reçues : voir les commandes">{v.en_commande}</Link>
+                          : <span className="stock-lecture discret" title="Aucune bouteille en commande">0</span>}</td>
                         {/* Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut). */}
                         <td><AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} champFournisseur={`fournisseur_${v.id}`} /></td>
                       </tr>

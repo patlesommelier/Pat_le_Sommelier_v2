@@ -7,6 +7,8 @@ export function ChampStock({ id, stock, libelle }: { id: string; stock: number; 
   const change = n !== stock;
   return (
     <span className={`champ-inventaire${change ? ' change' : ''}`}>
+      {/* Stock affiché à l'ouverture : un vin non touché garde son stock du moment (une réception entre-temps n'est pas effacée). */}
+      <input type="hidden" name={`avant_${id}`} value={stock} />
       <button type="button" aria-label={`Une bouteille de moins : ${libelle}`} onClick={() => setN((x) => Math.max(0, x - 1))}>−</button>
       <input type="number" name={`stock_${id}`} value={n} min={0} max={100000} inputMode="numeric" aria-label={`Bouteilles en stock : ${libelle}`}
         onChange={(e) => setN(Math.max(0, Math.min(100000, Math.round(Number(e.target.value) || 0))))} />

@@ -250,7 +250,7 @@ export default async function FicheVinBO({ params, searchParams }: { params: Pro
               <input type="hidden" name="stock_envoye" value="1" />
               <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(160px, 100%), 1fr))' }}>
                 <div className="champ"><label>En stock (bouteilles)</label><span className="prix-fixe" style={{ alignItems: 'flex-start' }}>{v.stock}<small><Link href={`/admin/${resto}/inventaire`}>à changer dans l’inventaire</Link></small></span></div>
-                <div className="champ"><label htmlFor="en_commande">En commande</label><input id="en_commande" name="en_commande" type="number" min={0} max={100000} defaultValue={v.en_commande} /></div>
+                <div className="champ"><label>En commande</label><span className="prix-fixe" style={{ alignItems: 'flex-start' }}>{v.en_commande}<small><Link href={`/admin/${resto}/commandes`}>suit vos commandes</Link></small></span></div>
                 {fournisseur?.distributeur_id
                   ? <div className="champ"><label>Prix d’achat HTVA</label><span className="prix-fixe" style={{ alignItems: 'flex-start' }}>{achat != null ? euros(achat) : '—'}<small>prix du catalogue Quid Vinum, non modifiable</small></span></div>
                   : <div className="champ"><label htmlFor="prix_achat">Prix d’achat HTVA (€)</label><input id="prix_achat" name="prix_achat" inputMode="decimal" defaultValue={achat != null ? achat.toFixed(2).replace('.', ',') : ''} placeholder="—" /></div>}

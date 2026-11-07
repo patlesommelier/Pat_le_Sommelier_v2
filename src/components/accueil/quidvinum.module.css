@@ -105,6 +105,15 @@
   color: var(--qv); margin-bottom: 16px; transition: transform var(--duree) var(--ressort), border-color .2s; }
 .num { display: block; color: var(--qv); font-size: 13px; letter-spacing: 1px; }
 .cartePat { background: linear-gradient(160deg, #7A0A2C 0%, #680021 55%, #560019 100%); border-color: #680021; color: #FFFFFF; } /* bordeaux de Pat le sommelier */
+/* QR code de démonstration dans la carte de Pat : sur une pastille blanche, comme posé sur une table. */
+.essai { display: flex; align-items: center; gap: 14px; margin-top: 18px; padding: 12px; border-radius: 16px; background: rgba(255, 255, 255, .1); border: 1px solid rgba(255, 255, 255, .22); }
+.essai img { flex: none; width: 96px; height: 96px; padding: 6px; border-radius: 12px; background: #FFFFFF; box-shadow: 0 8px 18px -8px rgba(0, 0, 0, .45);
+  transition: transform var(--duree) var(--ressort); }
+.cartePat:hover .essai img { transform: rotate(-2deg) scale(1.03); }
+.essai span { font-size: 14px; line-height: 1.45; }
+.essai a { display: inline-block; margin-top: 6px; color: #FFFFFF; font-weight: 700; text-underline-offset: 3px; }
+/* Au téléphone, on ne scanne pas son propre écran : le lien passe devant. */
+@media (hover: none) and (max-width: 680px) { .essai img { width: 72px; height: 72px; } }
 .cartePat:hover { border-color: #680021; box-shadow: 0 22px 44px -18px rgba(104, 0, 33, .55); }
 .cartePat .num { color: #FFFFFF; opacity: .8; }
 .cartePat .icone { border: 0; }
