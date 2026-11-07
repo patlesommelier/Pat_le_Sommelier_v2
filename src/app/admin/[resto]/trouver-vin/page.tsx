@@ -69,8 +69,6 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
           {reprise && <Link href="?nouvelle=1" className="pastille-filtre lien">✕ Nouvelle demande</Link>}
         </div>
       </form>
-      {/* Vin déjà connu du restaurant : décrit à la main (il passe « En attente de validation »). */}
-      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter ma référence →</Link></p>
 
       {r && (
         <section className="pile" style={{ gap: 12 }}>
@@ -109,6 +107,9 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
           )}
         </section>
       )}
+
+      {/* Vin déjà connu du restaurant : décrit à la main (il passe « En attente de validation »). */}
+      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter ma référence →</Link></p>
 
       {precedentes.length > 0 && (
         <section className="pile" style={{ gap: 8 }}>
