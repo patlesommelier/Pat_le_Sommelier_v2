@@ -7,6 +7,8 @@ import { ActualisationAuto } from '@/components/admin/ActualisationAuto';
 import { AjoutCatalogue, AjoutPanier } from '@/components/admin/Panier';
 import { VignetteVin } from '@/components/admin/VignetteVin';
 import { Message } from '@/components/admin/Ui';
+import { PatAttente } from '@/components/PatAttente';
+import { BoutonRecherchePat } from '@/components/admin/BoutonRecherchePat';
 import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
 import { euros } from '@/lib/bon-commande';
 import { requete } from '@/lib/db';
@@ -55,7 +57,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
         <div className="barre-recherche">
           <textarea name="demande" rows={2} maxLength={2000} defaultValue={reprise?.demande ?? ''} aria-label="Votre demande"
             placeholder="Ex. Un blanc pour notre nouveau plat de saint-jacques au beurre blanc, plutôt Loire ou Bourgogne." />
-          <button className="btn rouge">Chercher avec Pat</button>
+          <BoutonRecherchePat className="btn rouge" enCours="Pat se met au travail…">Chercher avec Pat</BoutonRecherchePat>
         </div>
         <div className="filtres-recherche">
           <label className="pastille-filtre"><span aria-hidden="true">🍽</span>
@@ -76,7 +78,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
             <h2 style={{ margin: 0 }}>Les propositions de Pat</h2>
             <span className="petit discret" title={r.demande}>{court(r.demande, 70)} · {date(r.cree_le)}</span>
           </div>
-          {enCours && <p className="carte-bo" style={{ margin: 0 }}><ActualisationAuto secondes={3} />Pat parcourt les catalogues et choisit ses vins… (20 à 40 secondes)</p>}
+          {enCours && <p className="carte-bo" style={{ margin: 0, display: 'flex', alignItems: 'center', gap: 14 }}><ActualisationAuto secondes={3} /><PatAttente taille={56} />Pat parcourt les catalogues et choisit ses vins… (20 à 40 secondes)</p>}
           {r.statut === 'en_cours' && !enCours && <p className="message erreur">La recherche n’a pas abouti : relancez-la.</p>}
           {r.statut !== 'en_cours' && r.message && <p className={`message ${r.statut === 'echec' ? 'erreur' : ''}`}>{r.message}</p>}
           {/* Détail technique d'un échec : pour Pat (super-admin) seulement. */}

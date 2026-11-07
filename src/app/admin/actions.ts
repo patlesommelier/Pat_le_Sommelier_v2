@@ -142,17 +142,24 @@ export async function ajouterPlat(resto: string, f: FormData): Promise<Retour> {
   const base = `${resto}-${slug(nom) || 'plat'}`;
   let id = base;
   for (let n = 2; (await requete('select 1 from plat where id = $1', [id])).length; n++) id = `${base}-${n}`;
+  // Rang du nouveau plat : à la fin de sa catégorie (pas tout en bas du menu, après les desserts), les suivants décalés d'un cran.
+  const categorie = ['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat! : 'plat';
+  const [{ rang }] = await requete<{ rang: number }>(
+    `select coalesce((select max(ordre) from plat where restaurant_id = $1 and categorie = $2::categorie_plat),
+                     (select max(ordre) from plat where restaurant_id = $1), 0) + 1 as rang`, [resto, categorie]);
+  await requete('update plat set ordre = ordre + 1 where restaurant_id = $1 and ordre >= $2', [resto, rang]);
   await requete(
     `insert into plat (id, restaurant_id, nom, nom_court, categorie, prix, prix_variantes, description_cuisine, sauce_servie_a_part, photo_url, ordre, actif, modifie_bo)
      values ($1, $2, $3, $4, $5::categorie_plat, $6, $7, $8, $9::boolean, $10,
-             (select coalesce(max(ordre), 0) + 1 from plat where restaurant_id = $2), true, now())`,
-    [id, resto, nom, txt(f, 'nom_court'), ['entree', 'plat', 'dessert', 'fromage', 'suggestion'].includes(cat ?? '') ? cat : 'plat',
+             $11, true, now())`,
+    [id, resto, nom, txt(f, 'nom_court'), categorie,
       nombre(f, 'prix'), txt(f, 'prix_variantes'), txt(f, 'description_cuisine'),
-      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null, photo]);
+      f.get('sauce') === 'oui' ? true : f.get('sauce') === 'non' ? false : null, photo, rang]);
   await lancerPreparation(resto, [id], u.email).catch((e) => console.error('[ajout] plat', id, e));
   revalidatePath(`/admin/${resto}`, 'layout');
   revalidatePath(`/${resto}`, 'layout');
-  redirect(avec(`/admin/${resto}/menu`, { plat: id, ajout: '1' }));
+  // Retour sur le menu, tous les plats, en haut de la page (message de confirmation) ; le nouveau plat est mis en évidence.
+  redirect(avec(`/admin/${resto}/menu`, { ajout: nom, nouveau: id }));
 }
 
 /**

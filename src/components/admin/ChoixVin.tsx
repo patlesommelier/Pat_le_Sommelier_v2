@@ -4,6 +4,7 @@
 // (tout reste modifiable) ; s'il est vendu par un distributeur, la commande est proposée (champ « distributeur_vin »).
 import { useRef, useState } from 'react';
 import type { VinTrouve } from '@/lib/admin/recherche-base';
+import { PatAttente } from '@/components/PatAttente';
 
 const COULEURS: Record<string, string> = { bulles: 'Bulles', blanc: 'Blanc', rose: 'Rosé', rouge: 'Rouge', orange: 'Orange', doux: 'Doux', sans_alcool: 'Sans alcool' };
 // Couleur dite dans le texte (comparée sans accents) : sert quand la base ne connaît pas celle du vin.
@@ -173,7 +174,8 @@ export function ChoixVin({ chercher, distributeurs, charger }: {
           )}
           <div role="status" aria-live="polite" className="pile" style={{ gap: 6 }}>
             {erreur && <span className="petit">La recherche n’a pas abouti. Réessayez.</span>}
-            {attente && distributeur && <span className="petit">Chargement du catalogue…</span>}
+            {/* Recherche ou catalogue en chargement : Pat attablé qui se balance, comme à la lecture de la carte. */}
+            {attente && <span className="petit" style={{ display: 'inline-flex', alignItems: 'center', gap: 10 }}><PatAttente taille={40} />{distributeur ? 'Chargement du catalogue…' : 'Pat cherche ce vin…'}</span>}
             {trouves && !attente && (trouves.length
               ? <><span className="petit">{trouves.length === 1 ? 'Un vin trouvé :' : `${trouves.length} vins trouvés :`} cliquez sur le vôtre.</span>{trouves.map((v) => ligne(v, v.cle))}</>
               : <span className="petit">Ce vin n’est pas encore dans la base Quid Vinum.</span>)}

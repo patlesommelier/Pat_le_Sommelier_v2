@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { AllerAuPlat } from '@/components/admin/AllerAuPlat';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { enregistrerPlat, envoyerSuggestions, proposerPlat, supprimerPlat } from '../../actions';
 import { CaseProposee } from '@/components/admin/CaseProposee';
@@ -13,10 +14,10 @@ import { requete } from '@/lib/db';
 
 const CATS = [['tous', 'Tous'], ['suggestion', 'Suggestions'], ['entree', 'Entrées'], ['plat', 'Plats'], ['dessert', 'Desserts'], ['fromage', 'Fromages']] as const;
 
-export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string; supprime?: string }> }) {
+export default async function Menu({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ cat?: string; plat?: string; ok?: string; ajout?: string; supprime?: string; nouveau?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto); // chaque page se protège : le layout ne suffit pas (rendu en parallèle)
-  const { cat = 'tous', plat: platId, ok, ajout, supprime } = await searchParams;
+  const { cat = 'tous', plat: platId, ok, ajout, supprime, nouveau } = await searchParams;
   const [plats, u, profils] = await Promise.all([getPlatsBO(resto), utilisateurCourant(), getProfils(resto)]);
   // Dernière lecture de suggestions (photo envoyée par le restaurant), récente seulement (moins d'un jour).
   const [lecture] = await requete<NonNullable<EtatLecture>>(
@@ -31,7 +32,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
         <a href={`/admin/${resto}/menu/imprimer?type=suggestions`} target="_blank" rel="noopener" className="btn rouge">Imprimer les suggestions</a>
       </Entete>
       {supprime && <Message ok={`« ${supprime} » a été supprimé du menu.`} />}
-      {ajout && <Message ok="Plat ajouté : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts." />}
+      {ajout && <><AllerAuPlat id={nouveau ? `plat-${nouveau}` : null} /><Message ok={`${ajout === '1' ? 'Plat ajouté' : `« ${ajout} » ajouté au menu`} : Pat prépare ses accords avec votre carte des vins (quelques minutes). Il apparaîtra dans l’app dès qu’ils seront prêts.`} /></>}
       <EnvoiSuggestions envoyer={envoyerSuggestions.bind(null, resto)} derniere={lecture ?? null} nombre={plats.filter((p) => p.categorie === 'suggestion' && p.actif).length} />
       <section className="pile">
         {/* Catégories et « Ajouter un plat », juste au-dessus de la liste des plats. */}
@@ -47,7 +48,7 @@ export default async function Menu({ params, searchParams }: { params: Promise<{
         <div className="liste-deroulante">
           <div className="entete-deroulante" aria-hidden="true"><span className="case-proposee">Proposé</span></div>
           {affiches.map((p) => (
-            <details key={p.id} className={`deroulant ${p.actif ? '' : 'non-propose'}`} open={p.id === platId}>
+            <details key={p.id} id={`plat-${p.id}`} className={`deroulant ${p.actif ? '' : 'non-propose'}${p.id === nouveau ? ' ligne-nouvelle' : ''}`} open={p.id === platId}>
               <summary>
                 <span className="deroulant-nom"><span className="nom">{p.nom}</span>{p.nom_court && p.nom_court !== p.nom && <span className="petit">Nom affiché dans l’app : {p.nom_court}</span>}</span>
                 <span style={{ fontWeight: 700, whiteSpace: 'nowrap' }}>{p.prix_variantes ?? euros(p.prix)}</span>
