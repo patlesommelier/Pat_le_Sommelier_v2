@@ -30,6 +30,11 @@ interface Candidat {
 }
 
 const COULEURS = ['bulles', 'blanc', 'rose', 'orange', 'rouge', 'doux'];
+// Noms de pays (sans accents) : trop larges pour désigner le lieu demandé quand une région ou une appellation est donnée.
+const PAYS = new Set(['france', 'italie', 'italy', 'italia', 'espagne', 'spain', 'espana', 'allemagne', 'germany', 'deutschland', 'portugal', 'autriche',
+  'austria', 'osterreich', 'suisse', 'switzerland', 'schweiz', 'svizzera', 'grece', 'greece', 'hellas', 'etats-unis', 'usa', 'united states', 'argentine',
+  'argentina', 'chili', 'chile', 'afrique du sud', 'south africa', 'australie', 'australia', 'nouvelle-zelande', 'new zealand', 'hongrie', 'hungary',
+  'magyarorszag', 'slovenie', 'slovenia', 'liban', 'lebanon', 'belgique', 'belgium', 'luxembourg', 'georgie', 'georgia']);
 const sansAccents = (t: string) => t.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
 
 /** Premier objet JSON d'une réponse de Claude. */
@@ -90,11 +95,20 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
         where v.actif and not v.epuise and ${distributeurPermis('$1')}
           and not exists (select 1 from vin_carte x where x.restaurant_id = $1 and x.distributeur_vin_id = v.id)`, [resto]);
     const lieuDe = (v: Candidat) => sansAccents([v.appellation, v.region, v.pays, v.libelle, v.producteur].filter(Boolean).join(' '));
-    const retenus = tous.filter((v) => (!couleurs.length || (v.couleur && couleurs.includes(v.couleur))) && (!budget || (v.prix != null && v.prix <= budget)));
-    // Le lieu demandé passe devant (sans écarter les autres : il y en a parfois peu) ; puis les rankings de Pat.
-    // Avec un budget : les vins proches du budget (sans le dépasser) passent devant les vins bien moins chers.
+    const dansBudget = tous.filter((v) => (!couleurs.length || (v.couleur && couleurs.includes(v.couleur))) && (!budget || (v.prix != null && v.prix <= budget)));
+    // Lieu demandé : seulement les mots qui distinguent (« Alsace », « Riesling », « Colmar »), pas ceux que portent presque
+    // tous les vins (« France » quand le catalogue est surtout français) — sinon tout passait pour « du bon endroit ».
+    // Un pays (« France », « Italy ») ne compte que s'il n'y a rien de plus précis (une région, une appellation).
+    const regions = lieux.filter((l) => !PAYS.has(l));
+    const precis = (regions.length ? regions : lieux).filter((l) => dansBudget.filter((v) => lieuDe(v).includes(l)).length <= Math.max(3, dansBudget.length * 0.4));
+    const duLieu = (v: Candidat) => precis.some((l) => lieuDe(v).includes(l));
+    // Des vins du lieu demandé existent : seuls ceux-là sont proposés. Aucun : les plus proches, et on le dit au restaurant.
+    const lieuAbsent = precis.length > 0 && !dansBudget.some(duLieu);
+    const retenus = precis.length && !lieuAbsent ? dansBudget.filter(duLieu) : dansBudget;
+    // Puis les rankings de Pat ; avec un budget, les vins proches du budget (sans le dépasser) passent devant les vins bien moins chers.
     const procheBudget = (v: Candidat) => (budget && v.prix != null ? 4 * Math.min(1, v.prix / budget) : 0);
-    const score = (v: Candidat) => (lieux.length && lieux.some((l) => lieuDe(v).includes(l)) ? 10 : 0) + v.ranking + procheBudget(v);
+    // Le vin qui répond au plus de mots du lieu (« Alsace » et « Riesling ») passe devant celui qui n'en a qu'un (un riesling allemand).
+    const score = (v: Candidat) => 6 * precis.filter((l) => lieuDe(v).includes(l)).length + v.ranking + procheBudget(v);
     // Un même vin n'est proposé qu'une fois par distributeur (deux millésimes ou formats ne font qu'une proposition) :
     // la bouteille de 75 cl et le millésime le plus récent de préférence.
     const cle = (v: Candidat) => `${v.distributeur_id}|${sansAccents(v.libelle).replace(/[^a-z0-9]+/g, ' ').trim()}`;
@@ -161,7 +175,8 @@ Réponds uniquement en JSON : {"distributeurs": [{"id": "...", "vins": [{"id": "
         id: v.id, libelle: v.libelle, producteur: v.producteur, appellation: v.appellation, millesime: v.millesime, contenance: v.contenance,
         couleur: v.couleur, prix: v.prix, etiquette: v.etiquette, pourquoi })) });
     }
-    await fin('terminee', resultat.length ? '' : 'Aucun vin des catalogues ne répond vraiment à cette demande : précisez-la ou élargissez-la.', resultat);
+    await fin('terminee', !resultat.length ? 'Aucun vin des catalogues ne répond vraiment à cette demande : précisez-la ou élargissez-la.'
+      : lieuAbsent ? 'Vos distributeurs n’ont pas de vin de la région demandée dans ce budget : voici ce qui s’en rapproche le plus.' : '', resultat);
   } catch (e) {
     console.error('[trouver un vin]', rechercheId, e);
     // Service d'IA saturé ou indisponible (après plusieurs essais) : un message qui le dit ; sinon le message général.
