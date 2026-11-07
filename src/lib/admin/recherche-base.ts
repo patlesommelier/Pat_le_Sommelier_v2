@@ -17,7 +17,7 @@ export type VinTrouve = {
 /** Vin d'un distributeur de Quid Vinum, au prix du restaurant (HTVA). */
 export type OffreDistributeur = { id: string; distributeur: string; distributeur_id: string; libelle: string; millesime: string | null; contenance: string | null; prix: number | null; epuise: boolean };
 
-/** Offres des distributeurs actifs, par vin de la base (cuvée) ou par vin de distributeur, au prix du restaurant. */
+/** Offres des distributeurs choisis par le restaurant, par vin de la base (cuvée) ou par vin de distributeur, au prix du restaurant. */
 export async function offresDistributeurs(resto: string, { cuvees = [] as string[], vins = [] as string[] } = {}) {
   if (!cuvees.length && !vins.length) return [] as (OffreDistributeur & { cuvee_id: string | null })[];
   return requete<OffreDistributeur & { cuvee_id: string | null }>(
@@ -25,7 +25,8 @@ export async function offresDistributeurs(resto: string, { cuvees = [] as string
             ${prixRestaurantSql()}::float8 as prix
        from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
        left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $3
-      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) and ${distributeurPermis('$3')} order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
+      where v.actif and (v.cuvee_id = any($1) or v.id = any($2)) and ${distributeurPermis('$3')}
+        and f.id is not null -- seulement les distributeurs choisis par le restaurant (actifs dans sa page Distributeurs) order by lower(d.nom), v.millesime desc nulls last, v.ordre`,
     [cuvees, vins, resto]);
 }
 

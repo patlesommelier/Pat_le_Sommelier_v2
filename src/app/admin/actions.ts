@@ -29,6 +29,7 @@ import { rattacherAuDistributeur } from '@/lib/admin/distributeur-vin';
 import { completerBase } from '@/lib/admin/completer-base';
 import { choisirFournisseur } from '@/lib/admin/stocks';
 import { distributeurPermis } from '@/lib/distributeurs/verrou';
+import { reconnaitreVins } from '@/lib/inscription/reconnaissance';
 
 /** Réponse des enregistrements « sur place » (FormulaireAdmin) : la page ne se recharge pas. */
 type Retour = { ok?: string; erreur?: string };
@@ -545,6 +546,13 @@ export async function ajouterVin(resto: string, f: FormData): Promise<Retour> {
   if (!etiquette) await reprendreEtiquetteDeLaBase(resto, ids, txt(f, 'base_cle'));
   await partagerEtiquettes(requete, { vins: ids, nouvellePhoto: etiquette ? id : undefined }).catch((e) => console.error('[etiquettes] partage', e));
   const offre = await relierAuDistributeur(resto, ids, txt(f, 'distributeur_vin'), txt(f, 'base_cle'));
+  // Vin décrit à la main (ni vin de la base, ni vin d'un catalogue) : « En attente de validation » comme un vin lu sur la carte
+  // (ce que le restaurant a saisi est gardé) ; reconnu tout de suite s'il correspond à un vin validé de la base de Pat.
+  if (!txt(f, 'base_cle') && !txt(f, 'distributeur_vin')) {
+    await requete(`update vin_carte set lu_sur_carte = $3::jsonb where restaurant_id = $1 and id = any($2) and lu_sur_carte is null`,
+      [resto, ids, JSON.stringify({ libelle, producteur: champs.producteur, appellation: champs.appellation, millesime: txt(f, 'millesime'), manuel: true })]);
+    await reconnaitreVins(requete, resto).catch((e) => console.error('[ajout] reconnaissance', id, e));
+  }
   await completerBase(ids).catch((e) => console.error('[base] compléter', id, e));
   // Accords avec les plats, et présentation du vin (base de Pat, sinon recherche web) : même sans plats au menu.
   const plats = await requete<{ id: string }>('select id from plat where restaurant_id = $1 and actif order by ordre', [resto]);

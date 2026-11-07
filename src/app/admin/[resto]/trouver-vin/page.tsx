@@ -1,4 +1,4 @@
-// Base des vins — « Rajouter un vin » (sous Ma cave) : un grand bandeau de recherche (la demande, le plat, le budget, la couleur),
+// Base des vins — « Ajouter un vin » (sous Ma cave) : un grand bandeau de recherche (la demande, le plat, le budget, la couleur),
 // puis les propositions de Pat en vitrine (par distributeur Quid Vinum, avec son texte) et les recherches précédentes en pastilles.
 import Link from 'next/link';
 import { lancerRechercheVin } from '../../trouver-vin-actions';
@@ -36,6 +36,9 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
   const precedentes = recherches.filter((x) => x.id !== r?.id);
   // Une recherche restée « en cours » plus de 5 minutes a échoué (serveur redémarré…).
   const enCours = Boolean(r && r.statut === 'en_cours' && Date.now() - new Date(r.cree_le).getTime() < 5 * 60_000);
+  // Propositions d'une recherche : seulement les distributeurs encore choisis par le restaurant (un distributeur désactivé disparaît).
+  const actifs = new Set((await requete<{ distributeur_id: string }>('select distributeur_id from fournisseur where restaurant_id = $1 and distributeur_id is not null', [resto])).map((x) => x.distributeur_id));
+  if (r?.resultat) r.resultat = r.resultat.filter((d) => actifs.has(d.id));
   const ids = (r?.resultat ?? []).flatMap((d) => d.vins.map((v) => v.id));
   const dansCave = new Map((ids.length ? await requete<{ distributeur_vin_id: string; id: string; panier: number }>(
     `select distinct on (v.distributeur_vin_id) v.distributeur_vin_id, v.id, coalesce(p.quantite, 0) as panier
@@ -64,6 +67,8 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
           {reprise && <Link href="?nouvelle=1" className="pastille-filtre lien">✕ Nouvelle demande</Link>}
         </div>
       </form>
+      {/* Vin déjà connu du restaurant : décrit à la main (il passe « En attente de validation »). */}
+      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter un vin à la main →</Link></p>
 
       {r && (
         <section className="pile" style={{ gap: 12 }}>

@@ -80,7 +80,8 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
          from distributeur_vin v join distributeur d on d.id = v.distributeur_id and d.actif
          left join producteur p on p.id = v.producteur_id left join cuvee c on c.id = v.cuvee_id and c.statut <> 'retire'
          left join terroir t on t.id = c.appellation_id
-         left join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $1
+         -- seulement les distributeurs que le restaurant a choisis (actifs dans sa page Distributeurs)
+         join fournisseur f on f.distributeur_id = d.id and f.restaurant_id = $1
         where v.actif and not v.epuise and ${distributeurPermis('$1')}
           and not exists (select 1 from vin_carte x where x.restaurant_id = $1 and x.distributeur_vin_id = v.id)`, [resto]);
     const lieuDe = (v: Candidat) => sansAccents([v.appellation, v.region, v.pays, v.libelle, v.producteur].filter(Boolean).join(' '));
@@ -105,6 +106,10 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
       vus.add(cle(v));
       const l = parDistributeur.get(v.distributeur_id) ?? [];
       if (l.length < PAR_DISTRIBUTEUR) parDistributeur.set(v.distributeur_id, [...l, v]);
+    }
+    if (!tous.length) {
+      await fin('terminee', 'Aucun distributeur Quid Vinum n’est activé pour votre restaurant : choisissez-en dans « Distributeurs », puis relancez la recherche.', []);
+      return;
     }
     if (!parDistributeur.size) {
       await fin('terminee', 'Aucun vin des catalogues ne correspond à ces critères (couleur, budget) : élargissez la demande.', []);

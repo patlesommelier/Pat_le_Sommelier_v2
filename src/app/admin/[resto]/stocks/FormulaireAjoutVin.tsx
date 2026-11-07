@@ -13,18 +13,22 @@ const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blanc'], ['rose', 'Rosé'], [
 const cadre = { gap: 12, border: '1px solid var(--ligne)', borderRadius: 14, padding: 16, margin: 0 } as const;
 const legende = { fontSize: 13, fontWeight: 700, padding: '0 6px' } as const;
 
-export async function FormulaireAjoutVin({ resto, couleur: c }: { resto: string; couleur?: string }) {
+/** `manuel` : vin décrit à la main (pas de recherche) ; la fiche est ouverte et le vin sera « En attente de validation ». */
+export async function FormulaireAjoutVin({ resto, couleur: c, manuel = false }: { resto: string; couleur?: string; manuel?: boolean }) {
   const couleur = COULEURS.some(([k]) => k === c) ? c : 'rouge';
-  const distributeurs = (await distributeursProposes(resto)).map((d) => ({ id: d.id, nom: d.nom, vins: d.vins }));
+  // Seulement les distributeurs que le restaurant a choisis (actifs dans sa page Distributeurs).
+  const distributeurs = (await distributeursProposes(resto)).filter((d) => d.deja).map((d) => ({ id: d.id, nom: d.nom, vins: d.vins }));
   return (
     <FormulaireAdmin action={ajouterVin.bind(null, resto)} className="pile" style={{ gap: 16 }}>
-      <fieldset className="carte-bo pile" style={{ ...cadre, border: '1.5px solid var(--encre)' }}>
-        <legend style={legende}>1. Le vin</legend>
-        <ChoixVin chercher={chercherDansBase.bind(null, resto)} distributeurs={distributeurs} charger={catalogueAjout.bind(null, resto)} />
-      </fieldset>
+      {!manuel && (
+        <fieldset className="carte-bo pile" style={{ ...cadre, border: '1.5px solid var(--encre)' }}>
+          <legend style={legende}>1. Le vin</legend>
+          <ChoixVin chercher={chercherDansBase.bind(null, resto)} distributeurs={distributeurs} charger={catalogueAjout.bind(null, resto)} />
+        </fieldset>
+      )}
 
-      <details id="description-vin" className="carte-bo" style={{ ...cadre, padding: '12px 16px' }}>
-        <summary style={{ cursor: 'pointer', fontWeight: 700 }}>Description du vin <span className="discret" style={{ fontWeight: 400 }}>(couleur, appellation, producteur, photo… remplis par le vin choisi)</span></summary>
+      <details id="description-vin" className="carte-bo" style={{ ...cadre, padding: '12px 16px', ...(manuel ? { border: '1.5px solid var(--encre)' } : {}) }} open={manuel}>
+        <summary style={{ cursor: 'pointer', fontWeight: 700 }}>{manuel ? '1. Le vin' : 'Description du vin'} <span className="discret" style={{ fontWeight: 400 }}>{manuel ? '(couleur, appellation, producteur, photo…)' : '(couleur, appellation, producteur, photo… remplis par le vin choisi)'}</span></summary>
         <div className="pile" style={{ gap: 12, marginTop: 12 }}>
           <div className="champs" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(200px, 100%), 1fr))' }}>
             <div className="champ"><label htmlFor="couleur">Couleur</label>
