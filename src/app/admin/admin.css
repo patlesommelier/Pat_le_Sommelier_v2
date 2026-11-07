@@ -388,6 +388,24 @@ dialog.superposition { overflow-y: auto; }
 .table-stocks .ajout-panier input, .ajout-panier input { width: 52px; padding: 0 6px; min-height: 32px; border-radius: 8px; border: 1.5px solid var(--ligne); padding: 0 6px; text-align: right; }
 .ajout-panier .dans-panier { position: absolute; top: 100%; right: 0; margin-top: 2px; color: var(--rouge); font-weight: 700; white-space: nowrap; }
 .ligne-panier { display: flex; align-items: center; gap: 8px; }
+/* Panier non vide : bouton flottant en bas à droite, toujours visible quand on ajoute des bouteilles plus bas dans la liste. */
+.panier-flottant { position: fixed; right: clamp(16px, 3vw, 32px); bottom: clamp(16px, 3vw, 28px); z-index: 60; min-height: 60px; padding: 8px 22px 8px 14px;
+  border-radius: 999px; box-shadow: 0 14px 34px -10px rgba(97, 4, 32, .55), 0 2px 6px rgba(0, 0, 0, .12); transition: transform .2s, box-shadow .2s; }
+.panier-flottant:hover { transform: translateY(-2px); box-shadow: 0 18px 40px -10px rgba(97, 4, 32, .6), 0 2px 6px rgba(0, 0, 0, .12); }
+.panier-flottant-contenu { display: inline-flex; align-items: center; gap: 12px; animation: panier-saut .45s cubic-bezier(.2, .8, .2, 1.4); }
+.panier-flottant small { font-weight: 500; opacity: .9; font-size: 12.5px; }
+.panier-icone { position: relative; display: inline-flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%;
+  background: rgba(255, 255, 255, .18); font-size: 21px; }
+.panier-nombre { position: absolute; top: -6px; right: -8px; min-width: 22px; height: 22px; padding: 0 6px; border-radius: 999px; background: #FFFFFF;
+  color: var(--rouge, #B3261E); font-size: 12.5px; line-height: 22px; text-align: center; box-shadow: 0 2px 6px rgba(0, 0, 0, .2); }
+@keyframes panier-saut { 0% { transform: scale(.85); } 60% { transform: scale(1.06); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .panier-flottant-contenu { animation: none; } }
+/* Avec le panier flottant : les messages passent au-dessus de lui, et la fin de la liste n'est pas cachée dessous. */
+body:has(.panier-flottant) .toast-admin { bottom: 104px; }
+body:has(.panier-flottant) .bo-main, body:has(.panier-flottant) main { padding-bottom: 110px; }
+@media (max-width: 680px) { .panier-flottant { left: 16px; right: 16px; justify-content: center; } }
+@media (min-width: 681px) { body:has(.panier-flottant) .toast-admin { bottom: 24px; } }
+
 .ligne-panier input { width: 64px; min-height: 32px; border-radius: 8px; border: 1.5px solid var(--ligne); padding: 0 6px; text-align: right; }
 .table-stocks th, .table-stocks td { padding-left: 10px; padding-right: 10px; }
 .table-stocks .champ-prix input { width: 76px; }

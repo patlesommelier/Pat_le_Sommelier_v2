@@ -55,7 +55,14 @@ export function Panier({ lignes, modifier, vider, commander }: {
   const nbCommandes = new Set(lignes.map((l) => (l.quid_vinum ? 'qv' : l.fournisseur ?? ''))).size;
   const agir = (f: () => Promise<Retour>) => demarrer(async () => montrer(await f()));
   return (
-    <Superposition bouton={`🛒 Panier${total ? ` · ${total} bouteille${total > 1 ? 's' : ''}` : ''}`} titre="Panier" classeBouton={total ? 'btn rouge' : 'btn sec'}>
+    // Panier non vide : bouton flottant en bas à droite de l'écran (visible partout dans la liste), avec le nombre de bouteilles
+    // et le montant ; il « saute » à chaque ajout. Panier vide : simple bouton en haut de la page.
+    <Superposition titre="Panier" bouton={`Voir le panier${total ? ` : ${total} bouteille${total > 1 ? 's' : ''}` : ' (vide)'}`}
+      classeBouton={total ? 'btn rouge panier-flottant' : 'btn sec'}
+      contenuBouton={total ? <span key={total} className="panier-flottant-contenu">
+        <span className="panier-icone" aria-hidden="true">🛒<b className="panier-nombre">{total}</b></span>
+        <span className="pile" style={{ gap: 0, alignItems: 'flex-start', lineHeight: 1.15 }}><b>Voir le panier</b>
+          <small>{total} bouteille{total > 1 ? 's' : ''}{montant ? ` · ${euros(montant)} HTVA` : ''}</small></span></span> : <>🛒 Panier vide</>}>
       {!lignes.length ? <p className="discret" style={{ margin: 0 }}>Le panier est vide : indiquez un nombre de bouteilles sur la ligne d’un vin, puis « + Panier ».</p> : (
         <div className="pile" style={{ gap: 14 }}>
           {groupes.map((g) => (
