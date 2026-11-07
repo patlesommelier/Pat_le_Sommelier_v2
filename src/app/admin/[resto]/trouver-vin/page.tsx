@@ -9,7 +9,7 @@ import { VignetteVin } from '@/components/admin/VignetteVin';
 import { Message } from '@/components/admin/Ui';
 import { PatAttente } from '@/components/PatAttente';
 import { BoutonRecherchePat } from '@/components/admin/BoutonRecherchePat';
-import { exigerAcces, utilisateurCourant } from '@/lib/admin/auth';
+import { exigerAcces, utilisateurReel } from '@/lib/admin/auth';
 import { euros } from '@/lib/bon-commande';
 import { requete } from '@/lib/db';
 import type { PropositionDistributeur } from '@/lib/recherche-vin';
@@ -29,7 +29,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
     requete<{ id: string; nom: string }>('select id, nom from plat where restaurant_id = $1 and actif order by ordre, nom', [resto]),
     requete<Recherche>(`select id, demande, plat_id, budget::float8 as budget, couleur, statut, message, erreur, resultat, cree_le::text
                           from recherche_vin where restaurant_id = $1 order by cree_le desc limit 10`, [resto]),
-    utilisateurCourant(),
+    utilisateurReel(), // super-admin réel : le détail d'un échec reste visible en « Aperçu côté restaurant »
   ]);
   // Recherche montrée en vitrine : celle choisie (?r=…), sinon la dernière ; « Nouvelle demande » vide tout.
   const r = sp.nouvelle ? null : (sp.r ? recherches.find((x) => x.id === sp.r) : recherches[0]) ?? null;
@@ -70,7 +70,7 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
         </div>
       </form>
       {/* Vin déjà connu du restaurant : décrit à la main (il passe « En attente de validation »). */}
-      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter un vin à la main →</Link></p>
+      <p style={{ margin: 0 }}>Vous savez déjà quel vin ajouter ? <Link href={`/admin/${resto}/trouver-vin/main`} className="btn sec petit">Ajouter ma référence →</Link></p>
 
       {r && (
         <section className="pile" style={{ gap: 12 }}>

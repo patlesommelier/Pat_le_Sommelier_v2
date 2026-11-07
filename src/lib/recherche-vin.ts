@@ -53,7 +53,7 @@ export async function chercherVins(requete: Requete, rechercheId: string, claude
               coalesce(pa.couleurs_ok::text[], '{}') as couleurs_ok, coalesce(pa.cepages_conseilles, '{}') as cepages_conseilles,
               pa.a_eviter, pa.temperature_service, coalesce(pa.principes, '{}') as principes, pa.plafond
          from plat pl left join profil_accord pa on pa.plat_id = pl.id where pl.id = $1 and pl.restaurant_id = $2`, [r.plat_id, resto]) : [];
-    const client = claude ?? clientClaude({ maxRetries: 2, suivi: { poste: 'rajouter un vin', restaurant: resto } });
+    const client = claude ?? clientClaude({ maxRetries: 5, suivi: { poste: 'rajouter un vin', restaurant: resto } });
 
     // 1. La demande en critères (petit modèle, peu cher).
     const texteDemande = [r.demande, plat ? `Plat du menu choisi : ${plat.nom}${plat.description_cuisine ? ` (${plat.description_cuisine})` : ''}` : null,
@@ -159,7 +159,12 @@ Réponds uniquement en JSON : {"distributeurs": [{"id": "...", "vins": [{"id": "
     await fin('terminee', resultat.length ? '' : 'Aucun vin des catalogues ne répond vraiment à cette demande : précisez-la ou élargissez-la.', resultat);
   } catch (e) {
     console.error('[trouver un vin]', rechercheId, e);
-    await fin('echec', 'La recherche n’a pas abouti : relancez-la dans un instant.');
+    // Service d'IA saturé ou indisponible (après plusieurs essais) : un message qui le dit ; sinon le message général.
+    const st = (e as { status?: number })?.status ?? 0;
+    const sature = st === 429 || st === 529 || /overloaded|rate.?limit/i.test(String((e as Error)?.message ?? ''));
+    await fin('echec', sature ? 'Pat est très sollicité en ce moment : relancez la recherche dans une minute.'
+      : st >= 500 ? 'Le service de Pat est momentanément indisponible : relancez la recherche dans quelques minutes.'
+      : 'La recherche n’a pas abouti : relancez-la dans un instant.');
     // Détail technique : pour le super-admin seulement.
     await requete('update recherche_vin set erreur = $2 where id = $1', [rechercheId, String((e as Error)?.message ?? e).slice(0, 1000)]).catch(() => undefined);
   }
