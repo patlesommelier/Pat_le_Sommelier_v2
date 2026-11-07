@@ -11,7 +11,7 @@ import { LIBELLES_REGLAGES, pourquoiPas, raisonEcart } from '@/lib/admin/explica
 import { requete } from '@/lib/db';
 import { getCandidats, getCarte, getReglages } from '@/lib/donnees';
 import { parametresEnService } from '@/lib/regles/versions';
-import { etatDernierLot, type EtatLot } from '@/lib/generation/file';
+import { avancementAccords, etatDernierLot, type EtatLot } from '@/lib/generation/file';
 import { selectionner, tourSuivant, type Reglages, scoreVin } from '@/lib/selection';
 
 const dateHeure = (d: string) => new Date(d).toLocaleString('fr-BE', { timeZone: 'Europe/Brussels', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' });
@@ -24,6 +24,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
   const sp = await searchParams;
   const [plats, stats, resume, R, u, etat, [derniere]] = await Promise.all([getPlatsBO(resto), getStatsAccordsParPlat(resto), getResume(resto), getReglages(resto), utilisateurCourant(), etatDernierLot(requete, resto),
     requete<{ le: string | null }>('select max(coalesce(regenere_le, explication_generee_le, calcule_le)) as le from accord where restaurant_id = $1', [resto])]);
+  const avancement = await avancementAccords(requete, resto, etat);
   // Commentaires d'origine (import) pas encore réécrits par une régénération : souvent identiques d'un vin à l'autre.
   const anciens = new Map((await requete<{ plat_id: string; n: number }>(
     `select a.plat_id, count(*)::int as n from accord a join vin_carte v on v.id = a.vin_id and v.disponible
@@ -54,7 +55,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
           <span className="pile" style={{ gap: 4, alignItems: 'flex-start' }}><BoutonRegenerer action={lancerRegenerationTout.bind(null, resto)} className="btn"><Icone nom="reset" taille={18} />Générer tous les accords</BoutonRegenerer></span>
         </div>
         <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
-        <SuiviEnDirect resto={resto} initial={etat ? { total: etat.total, finis: etat.faits + etat.erreurs.length, termine: etat.termine } : null} />
+        <SuiviEnDirect resto={resto} initial={avancement} />
       </>
     );
   }
@@ -115,7 +116,7 @@ export default async function Accords({ params, searchParams }: { params: Promis
         </span>
       </div>
       <SuiviRegeneration etat={etat} demande={sp.regeneration} erreur={sp.erreur} />
-        <SuiviEnDirect resto={resto} initial={etat ? { total: etat.total, finis: etat.faits + etat.erreurs.length, termine: etat.termine } : null} />
+        <SuiviEnDirect resto={resto} initial={avancement} />
       {interne && rapides > 0 && (!etat || etat.termine) && (
         <div className="carte-bo pile" style={{ gap: 6, padding: '14px 20px', borderColor: 'var(--ocre)' }}>
           <strong>Accords de la passe rapide sur {rapides} plat{rapides > 1 ? 's' : ''}</strong>

@@ -7,7 +7,8 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState, useTransition, type ReactNode } from 'react';
 import { PatAttente } from '@/components/PatAttente';
 
-type Etat = { total: number; finis: number; termine: boolean } | null;
+// prets / plats : préparation des accords (inscription, relance des plats manqués) : plats prêts sur tout le menu.
+type Etat = { total: number; finis: number; termine: boolean; prets?: number; plats?: number } | null;
 const EVENEMENT = 'pat:regeneration-lancee';
 
 export function BoutonRegenerer({ action, className, title, children }: {
@@ -55,8 +56,13 @@ export function SuiviRegeneration({ resto, initial }: { resto: string; initial: 
     <div className="carte-bo" style={{ display: 'flex', gap: 18, alignItems: 'center', padding: '16px 20px' }} aria-live="polite">
       <PatAttente taille={56} />
       <div className="pile" style={{ gap: 6 }}>
-        <strong>Pat régénère les accords…</strong>
-        <span className="discret">{`${etat.finis} plat${etat.finis > 1 ? 's' : ''} sur ${etat.total} · plusieurs plats à la fois ; la page se met à jour à la fin`}</span>
+        {etat.plats ? <>
+          <strong>Pat prépare vos accords…</strong>
+          <span className="discret">{`${etat.prets} plat${(etat.prets ?? 0) > 1 ? 's' : ''} prêt${(etat.prets ?? 0) > 1 ? 's' : ''} sur ${etat.plats} · la page se met à jour à la fin`}</span>
+        </> : <>
+          <strong>Pat régénère les accords…</strong>
+          <span className="discret">{`${etat.finis} plat${etat.finis > 1 ? 's' : ''} sur ${etat.total} · plusieurs plats à la fois ; la page se met à jour à la fin`}</span>
+        </>}
       </div>
     </div>
   );

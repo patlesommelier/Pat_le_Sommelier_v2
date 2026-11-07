@@ -187,18 +187,35 @@ export async function finirMisesEnPlace(q: Requete): Promise<number> {
   return remis;
 }
 
-export interface EtatLot { lot: string; total: number; attente: number; enCours: number; faits: number; erreurs: { plat_id: string; message: string | null }[]; demande_le: string; termine: boolean }
+export interface EtatLot { lot: string; total: number; attente: number; enCours: number; faits: number; erreurs: { plat_id: string; message: string | null }[]; demande_le: string; termine: boolean; demande_par?: string }
 
 /** État de la dernière régénération demandée pour un restaurant (pour la page Accords). */
 export async function etatDernierLot(q: Requete, restaurantId: string): Promise<EtatLot | null> {
-  const lignes = await q<{ lot: string; plat_id: string; statut: string; message: string | null; cree_le: string }>(
-    `select lot, plat_id, statut, message, cree_le from generation_accords
+  const lignes = await q<{ lot: string; plat_id: string; statut: string; message: string | null; cree_le: string; demande_par: string }>(
+    `select lot, plat_id, statut, message, cree_le, demande_par from generation_accords
       where lot = (select lot from generation_accords where restaurant_id = $1 order by cree_le desc, id desc limit 1)`, [restaurantId]);
   if (!lignes.length) return null;
   const n = (s: string) => lignes.filter((l) => l.statut === s).length;
   return {
     lot: lignes[0].lot, total: lignes.length, attente: n('en_attente'), enCours: n('en_cours'), faits: n('fait'),
     erreurs: lignes.filter((l) => l.statut === 'erreur').map((l) => ({ plat_id: l.plat_id, message: l.message })),
-    demande_le: lignes[0].cree_le, termine: n('en_attente') + n('en_cours') === 0,
+    demande_le: lignes[0].cree_le, termine: n('en_attente') + n('en_cours') === 0, demande_par: lignes[0].demande_par,
   };
+}
+
+/** Préparation des accords (inscription ou relance automatique des plats manqués) : plats actifs qui ont leurs accords, sur le total. */
+export async function platsPrets(q: Requete, restaurantId: string): Promise<{ prets: number; plats: number }> {
+  const [r] = await q<{ prets: number; plats: number }>(
+    `select count(*) filter (where exists (select 1 from accord a where a.plat_id = pl.id))::int as prets, count(*)::int as plats
+       from plat pl where pl.restaurant_id = $1 and pl.actif`, [restaurantId]);
+  return r ?? { prets: 0, plats: 0 };
+}
+
+/** Avancement affiché sur la page Accords : le lot en cours, et pour une préparation, les plats prêts sur tout le menu. */
+export async function avancementAccords(q: Requete, restaurantId: string, e?: EtatLot | null) {
+  const lot = e === undefined ? await etatDernierLot(q, restaurantId) : e;
+  if (!lot) return null;
+  const preparation = ['inscription', 'relance-auto'].includes(lot.demande_par ?? '');
+  return { total: lot.total, finis: lot.faits + lot.erreurs.length, termine: lot.termine,
+    ...(preparation && !lot.termine ? await platsPrets(q, restaurantId) : {}) };
 }
