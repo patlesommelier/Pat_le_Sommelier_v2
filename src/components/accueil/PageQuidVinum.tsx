@@ -7,6 +7,7 @@ import { Fragment } from 'react';
 import Link from 'next/link';
 import s from './quidvinum.module.css';
 import { Inscription } from './Inscription';
+import { BarreInscription } from './BarreInscription';
 import { VideoDemo } from './VideoDemo';
 import { Icone } from '@/components/admin/Icone';
 import { inscriptionCourante } from '@/lib/inscription/etat';
@@ -168,6 +169,10 @@ export async function PageQuidVinum() {
           <div className={s.bulle}>
             <h2 id="h-insc">Rejoignez Quid Vinum.</h2>
             <p className={s.finalTexte}>La solution est gratuite. Votre espace est prêt en quelques minutes.</p>
+            {/* Ce qui rassure au moment de s'inscrire. */}
+            <ul className={s.garanties} aria-label="Nos engagements">
+              <li>✓ Gratuit</li><li>✓ Sans engagement</li><li>✓ Sans carte bancaire</li><li>✓ Prêt en quelques minutes</li>
+            </ul>
             <div className={s.formulaire}><Inscription initial={resume} restaurantCree={suivi?.id ?? null} /></div>
           </div>
         </div>
@@ -186,6 +191,8 @@ export async function PageQuidVinum() {
         </div>
       </section>
 
+      {/* Téléphone : l'inscription toujours à portée de pouce (cachée en haut de page et quand le formulaire est à l'écran). */}
+      <BarreInscription />
       <footer className={s.pied}>
         <div className={s.large}>
           <span>© Quid Vinum · Belgique</span>

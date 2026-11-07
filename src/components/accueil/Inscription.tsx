@@ -17,13 +17,11 @@ const TEXTES: Record<TypeAnalyse, { depot: string; lecture: string; unite: strin
   menu: { depot: 'Déposez votre menu pour son analyse', lecture: 'Pat lit votre menu…', unite: 'plats trouvés' },
 };
 
-/** Zone de dépôt et, à sa droite, le petit bouton rond à flèche vers le haut pour passer à l'étape suivante. */
+/** Zone de dépôt et, juste dessous, le bouton « Continuer → » pour passer à l'étape suivante. */
 const AvecSuite = ({ children, pret, aller }: { children: React.ReactNode; pret: boolean; aller: () => void }) => (
   <div className={s.etapeLigne}>
     <div className={s.etapeContenu}>{children}</div>
-    <button type="button" className={s.suivant} disabled={!pret} onClick={aller} aria-label="Continuer" title="Continuer">
-      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
-    </button>
+    <button type="button" className={s.suivant} disabled={!pret} onClick={aller}>Continuer →</button>
   </div>
 );
 
