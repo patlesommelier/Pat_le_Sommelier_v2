@@ -3,15 +3,17 @@
 // - Une ligne de vin se prend à la souris et se dépose au-dessus d'un autre vin, ou sur un titre (en tête de cette sous-catégorie).
 // - Un titre se prend à la souris (ou flèches ↑ ↓) : la sous-catégorie entière, avec ses vins, change de place.
 // - « Nouvelle sous-catégorie » : ajoutée en bas ; elle est enregistrée dès qu'un vin y est déposé.
+// - Page Les vins : des catégories au-dessus des sous-catégories (au départ, les couleurs), renommables et déplaçables avec
+//   tout ce qu'elles contiennent ; une catégorie porte aussi ses vins sans sous-catégorie.
 // Chaque changement est enregistré tout de suite. Les cellules des vins sont rendues par le serveur.
 import { useRouter } from 'next/navigation';
 import { useEffect, useState, useTransition, type ReactNode } from 'react';
 
 /** `cellules` : les 7 premières colonnes ; `fin` : le lien « Modifier » (la dernière colonne ajoute les flèches ↑ ↓). */
 export type LigneGlissable = { cle: string; ids: string[]; cellules: ReactNode; fin?: ReactNode; libelle?: string; classe?: string; ancre?: string };
-/** `entete` : titre fixe (catégorie spéciale) ; sinon titre modifiable. */
-export type RubriqueGlissable = { cle: string; nom: string; entete?: ReactNode; vins: LigneGlissable[] };
-type Plan = { rubrique: string; vins: string[][] }[];
+/** `entete` : titre fixe (catégorie spéciale) ; sinon titre modifiable. `categorie` : titre de catégorie (les sous-catégories qui suivent sont à elle). */
+export type RubriqueGlissable = { cle: string; nom: string; entete?: ReactNode; vins: LigneGlissable[]; categorie?: boolean };
+type Plan = { rubrique: string; categorie?: string; vins: string[][] }[];
 
 let compteur = 0;
 
@@ -36,12 +38,34 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
     if (fixe || !enregistrer) return;
     demarrer(async () => {
       // Les sous-catégories vides ne sont pas enregistrées (elles restent affichées ici jusqu'au rechargement).
-      const res = await enregistrer(r.filter((x) => x.vins.length).map((x) => ({ rubrique: x.nom, vins: x.vins.map((v) => v.ids) })));
+      let categorie = '';
+      const plan: Plan = [];
+      for (const x of r) {
+        if (x.categorie) categorie = x.nom;
+        if (x.vins.length) plan.push({ rubrique: x.categorie ? '' : x.nom, ...(avecCategories ? { categorie } : {}), vins: x.vins.map((v) => v.ids) });
+      }
+      const res = await enregistrer(plan);
       setMessage(res.ok ? texte : 'Échec : rien n’a été enregistré.');
       router.refresh();
     });
   };
   const copie = () => rubriques.map((x) => ({ ...x, vins: [...x.vins] }));
+  const avecCategories = rubriques.some((x) => x.categorie);
+  /** Fin (exclue) du bloc d'une catégorie : jusqu'à la catégorie suivante. */
+  const finBloc = (r: RubriqueGlissable[], i: number) => { let j = i + 1; while (j < r.length && !r[j].categorie) j++; return j; };
+  const debutsCategories = rubriques.map((x, i) => (x.categorie ? i : -1)).filter((i) => i >= 0);
+  /** Catégorie déplacée d'un cran, avec ses sous-catégories et ses vins. */
+  const deplacerCategorie = (i: number, sens: -1 | 1) => {
+    const r = copie();
+    const k = debutsCategories.indexOf(i);
+    const voisine = debutsCategories[k + sens];
+    if (voisine === undefined) return;
+    const [a, b] = sens === -1 ? [voisine, i] : [i, voisine];
+    const blocA = r.slice(a, finBloc(r, a)), blocB = r.slice(b, finBloc(r, b));
+    r.splice(a, blocA.length + blocB.length, ...blocB, ...blocA);
+    sauver(r, 'Catégorie déplacée');
+  };
+  const ajouterCategorie = () => { const cle = `c${Date.now()}-${compteur++}`; setRubriques((r) => [...r, { cle, nom: '', vins: [], categorie: true }]); setNouvelle(cle); };
 
   const deposerVin = (cle: string, rubrique: number, avant: string | null) => {
     if (cle === avant) return;
@@ -68,6 +92,8 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
   };
   const deplacerRubrique = (de: number, vers: number) => {
     if (de === vers || vers < 0 || vers >= rubriques.length) return;
+    if (rubriques[de].categorie) { if (rubriques[vers].categorie) deplacerCategorie(de, vers < de ? -1 : 1); return; }
+    if (vers === 0 && rubriques[0].categorie) return; // une sous-catégorie reste sous une catégorie
     const r = copie();
     const [x] = r.splice(de, 1);
     r.splice(vers, 0, x);
@@ -76,9 +102,11 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
   const renommer = (i: number, nom: string) => {
     const propre = nom.replace(/\s+/g, ' ').trim();
     if (propre === rubriques[i].nom) return;
+    if (rubriques[i].categorie && !propre) { setRubriques(copie()); return; } // une catégorie garde un nom
     const r = copie();
     r[i] = { ...r[i], nom: propre };
-    if (r[i].vins.length) sauver(r, propre ? 'Sous-catégorie renommée' : 'Titre retiré'); else setRubriques(r);
+    const pleine = rubriques[i].categorie ? r.slice(i, finBloc(r, i)).some((x) => x.vins.length) : r[i].vins.length > 0;
+    if (pleine) sauver(r, rubriques[i].categorie ? 'Catégorie renommée' : propre ? 'Sous-catégorie renommée' : 'Titre retiré'); else setRubriques(r);
   };
   const [nouvelle, setNouvelle] = useState<string | null>(null); // titre à remplir (curseur dedans)
   const ajouter = () => { const cle = `n${Date.now()}-${compteur++}`; setRubriques((r) => [...r, { cle, nom: '', vins: [] }]); setNouvelle(cle); };
@@ -91,14 +119,30 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
     <>
       {rubriques.map((r, ri) => (
         <tbody key={r.cle} style={glisse?.type === 'rubrique' && glisse.cle === r.cle ? { opacity: 0.4 } : undefined}>
-          <tr className="rubrique-carte" onDragOver={survol(`r:${r.cle}`)} onDragLeave={() => setCible(null)} style={trait(`r:${r.cle}`)}
+          <tr className={r.categorie ? 'rubrique-carte categorie-cave' : 'rubrique-carte'} onDragOver={survol(`r:${r.cle}`)} onDragLeave={() => setCible(null)} style={trait(`r:${r.cle}`)}
             onDrop={(e) => {
               e.preventDefault();
               if (glisse?.type === 'vin') deposerVin(glisse.cle, ri, null);
               if (glisse?.type === 'rubrique') deplacerRubrique(rubriques.findIndex((x) => x.cle === glisse.cle), ri);
               fin();
             }}>
-            {r.entete ?? (
+            {r.entete ?? (r.categorie ? (
+              <td colSpan={colonnes} className="titre-categorie">
+                <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
+                  <input key={r.nom} defaultValue={r.nom} autoFocus={nouvelle === r.cle} aria-label="Nom de la catégorie" maxLength={80}
+                    placeholder="Nom de la nouvelle catégorie (ex. une région)"
+                    onBlur={(e) => renommer(ri, e.target.value)} onKeyDown={(e) => { if (e.key === 'Enter') { e.preventDefault(); e.currentTarget.blur(); } }}
+                    style={{ flex: '1 1 240px', maxWidth: 420, fontWeight: 800, fontSize: 17, color: 'var(--texte)' }} />
+                  <button type="button" className="btn fantome petit" disabled={debutsCategories[0] === ri || enCours} onClick={() => deplacerCategorie(ri, -1)} aria-label="Monter la catégorie">↑</button>
+                  <button type="button" className="btn fantome petit" disabled={debutsCategories[debutsCategories.length - 1] === ri || enCours} onClick={() => deplacerCategorie(ri, 1)} aria-label="Descendre la catégorie">↓</button>
+                  {(() => { const n = rubriques.slice(ri, finBloc(rubriques, ri)).reduce((t, x) => t + x.vins.length, 0);
+                    return <>
+                      <span className="petit discret">{n ? `${n} vin${n > 1 ? 's' : ''}` : 'Vide : déposez-y un vin pour la créer'}</span>
+                      {!n && finBloc(rubriques, ri) === ri + 1 && <button type="button" className="btn fantome petit" onClick={() => setRubriques((x) => x.filter((y) => y.cle !== r.cle))}>Retirer</button>}
+                    </>; })()}
+                </div>
+              </td>
+            ) : (
               <td colSpan={colonnes}>
                 <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                   <span draggable={!fixe} onDragStart={(e) => { setGlisse({ type: 'rubrique', cle: r.cle }); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', ''); }} onDragEnd={fin}
@@ -113,9 +157,9 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
                   {!r.vins.length && <button type="button" className="btn fantome petit" onClick={() => setRubriques((x) => x.filter((y) => y.cle !== r.cle))}>Retirer</button>}
                 </div>
               </td>
-            )}
+            ))}
           </tr>
-          {!r.vins.length && !fixe && (
+          {!r.vins.length && !fixe && !(r.categorie && finBloc(rubriques, ri) > ri + 1) && (
             <tr onDragOver={survol(`r:${r.cle}`)} onDrop={(e) => { e.preventDefault(); if (glisse?.type === 'vin') deposerVin(glisse.cle, ri, null); fin(); }}>
               <td colSpan={colonnes} style={{ padding: 18, textAlign: 'center', border: '2px dashed var(--ligne, #AFB0AE)', color: '#241F20', ...trait(`r:${r.cle}`) }}>
                 Déposez un vin ici, ou utilisez les flèches ↓ d’un vin de la sous-catégorie du dessus.
@@ -155,7 +199,8 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
       {!fixe && (
         <tbody><tr><td colSpan={colonnes} style={{ border: 0, paddingTop: 12 }}>
           <button type="button" className="btn sec petit" onClick={ajouter}>+ Nouvelle sous-catégorie</button>
-          <span className="petit discret" style={{ marginLeft: 10 }}>Elle s’ajoute en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).</span>
+          {avecCategories && <button type="button" className="btn sec petit" style={{ marginLeft: 8 }} onClick={ajouterCategorie}>+ Nouvelle catégorie</button>}
+          <span className="petit discret" style={{ marginLeft: 10 }}>{avecCategories ? 'Elle s’ajoute tout en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).' : 'Elle s’ajoute en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).'}</span>
         </td></tr></tbody>
       )}
       {message && <tbody><tr><td colSpan={colonnes} style={{ padding: 0, border: 0 }}><span role="status" className="toast-admin">{message}</span></td></tr></tbody>}

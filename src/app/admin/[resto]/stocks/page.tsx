@@ -1,6 +1,5 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
-import { Fragment } from 'react';
 import Link from 'next/link';
 import { ajouterAuPanier, commanderPanier, enregistrerOrdreCave, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
@@ -41,15 +40,24 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const affiches = (filtre === 'bas' ? bas : groupes).filter((g) => !filtreDistributeur || g.tous.some((x) => x.fournisseur_id === filtreDistributeur.id));
   // Chaque vin dans la rubrique de sa couleur, qu'il soit sur la carte ou pas encore (sa ligne le dit).
   // Dans chaque couleur, le classement de la cave (à part de la carte) : ses sous-catégories et l'ordre choisi par le restaurant.
-  const rang = (g: (typeof affiches)[number]) => Math.min(...g.tous.map((x) => x.cave_ordre ?? Number.MAX_SAFE_INTEGER));
-  const parCouleur = COULEURS.map(([k, l]) => ({ cle: k as string, titre: l, groupes: affiches.filter((g) => g.principal.couleur === k)
-    .map((g, i) => ({ g, i })).sort((a, b) => rang(a.g) - rang(b.g) || a.i - b.i).map(({ g }) => g) })).filter((c) => c.groupes.length);
-  const rubriquesCave = (gs: typeof affiches) => {
-    const out: { nom: string; groupes: typeof affiches }[] = [];
-    for (const g of gs) { const nom = g.principal.cave_rubrique ?? g.tous.find((x) => x.cave_rubrique)?.cave_rubrique ?? '';
-      const r = out.find((x) => x.nom === nom); if (r) r.groupes.push(g); else out.push({ nom, groupes: [g] }); }
-    return out;
+  // Classement de la cave (à part de la carte) : des catégories (au départ, les couleurs ; renommables, ex. par région),
+  // chacune avec ses vins sans sous-catégorie puis ses sous-catégories. Un vin jamais classé va dans la catégorie de sa couleur.
+  type G = (typeof affiches)[number];
+  const premier = <T,>(g: G, f: (x: G['principal']) => T | null) => f(g.principal) ?? g.tous.map(f).find((x) => x != null) ?? null;
+  const couleurIdx = (g: G) => { const i = COULEURS.findIndex(([k]) => k === g.principal.couleur); return i < 0 ? COULEURS.length : i; };
+  const cle = (g: G, i: number): number[] => {
+    const ordre = Math.min(...g.tous.map((x) => x.cave_ordre ?? Number.MAX_SAFE_INTEGER));
+    return premier(g, (x) => x.cave_categorie) != null ? [0, ordre, i] : [1, couleurIdx(g), ordre, i];
   };
+  const tries = affiches.map((g, i) => ({ g, k: cle(g, i) })).sort((x, y) => { for (let n = 0; n < 4; n++) { const d = (x.k[n] ?? 0) - (y.k[n] ?? 0); if (d) return d; } return 0; }).map((x) => x.g);
+  const categories: { nom: string; rubriques: { nom: string; groupes: G[] }[] }[] = [];
+  for (const g of tries) {
+    const nomCat = premier(g, (x) => x.cave_categorie) ?? COULEURS.find(([k]) => k === g.principal.couleur)?.[1] ?? 'Autres';
+    const nomRub = premier(g, (x) => x.cave_rubrique) ?? '';
+    let c = categories.find((x) => x.nom === nomCat); if (!c) categories.push(c = { nom: nomCat, rubriques: [{ nom: '', groupes: [] }] });
+    let r = c.rubriques.find((x) => x.nom === nomRub); if (!r) c.rubriques.push(r = { nom: nomRub, groupes: [] });
+    r.groupes.push(g);
+  }
   // Liste filtrée (stock bas, un distributeur) : on ne déplace pas les vins (le classement ne verrait qu'une partie de la cave).
   const fixe = filtre === 'bas' || Boolean(filtreDistributeur);
   const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
@@ -108,20 +116,18 @@ export default async function Stocks({ params, searchParams }: { params: Promise
           </p>
         )}
         {!affiches.length && <p className="discret">{filtre === 'bas' ? 'Aucun vin en stock bas.' : 'Aucun vin sur la carte.'}</p>}
-        {parCouleur.length > 0 && (
+        {categories.length > 0 && (
           <div className="tableau">
             <table className="table-stocks" style={{ minWidth: 1060 }}>
               <thead><tr><th>Vin</th><th>À ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
-              {parCouleur.map((c) => (
-                <Fragment key={c.cle}>
-                  <tbody><tr className="rubrique"><td colSpan={9}><b className="rubrique-carte">{c.titre}</b></td></tr></tbody>
-                  {/* Sous-catégories de la cave (titre modifiable), vins à glisser ou à déplacer avec les flèches ↑ ↓ (à part de la carte). */}
-                  <TableCarteGlissable key={`${c.cle}:${fixe}`} colonnes={9} apres="classement de votre cave enregistré" fixe={fixe}
-                    enregistrer={fixe ? undefined : enregistrerOrdreCave.bind(null, resto, c.cle)}
-                    rubriques={rubriquesCave(c.groupes).map((r, ri) => ({
-                      cle: `${ri}:${r.nom}`, nom: r.nom,
+              {/* Catégories et sous-catégories de la cave (titres modifiables), vins à glisser ou à déplacer avec les flèches ↑ ↓ (à part de la carte). */}
+              <TableCarteGlissable key={String(fixe)} colonnes={9} apres="classement de votre cave enregistré" fixe={fixe}
+                    enregistrer={fixe ? undefined : enregistrerOrdreCave.bind(null, resto)}
+                    rubriques={categories.flatMap((c, ci) => c.rubriques.filter((r, ri) => ri === 0 || r.groupes.length).map((r, ri) => ({ ...r, categorie: ri === 0, cle: `${ci}:${ri}:${c.nom}:${r.nom}`, nomAffiche: ri === 0 ? c.nom : r.nom }))).map((r) => ({
+                      cle: r.cle, nom: r.nomAffiche, categorie: r.categorie,
                       // Liste filtrée : titres fixes (pas de renommage).
-                      entete: fixe ? (r.nom ? <td colSpan={9}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b></td> : <td colSpan={9} style={{ padding: 0, border: 0 }} />) : undefined,
+                      entete: fixe ? (r.categorie ? <td colSpan={9}><b className="rubrique-carte">{r.nomAffiche}</b></td>
+                        : <td colSpan={9}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nomAffiche}</b></td>) : undefined,
                       vins: r.groupes.map(({ principal: v, tous, disponible, bas: alerte }) => {
                         const nom = nomPourListe(v);
                         const nouv = Boolean(nouveau && tous.some((x) => x.id === nouveau));
@@ -170,8 +176,6 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         };
                       }),
                     }))} />
-                </Fragment>
-              ))}
             </table>
           </div>
         )}

@@ -287,6 +287,9 @@ a.stat:hover { border-color: var(--ligne-forte); }
 .table-stocks input[type=number], .champ-commande { width: 72px; padding: 7px 10px; text-align: right; font-variant-numeric: tabular-nums; }
 .table-stocks tr.indisponible td { opacity: 0.55; }
 .table-stocks tr.rubrique td { background: var(--survol); padding-top: 10px; padding-bottom: 10px; }
+/* Catégorie du classement de la cave (Les vins) : bandeau comme les couleurs, titre modifiable. */
+.rubrique-carte.categorie-cave td { background: var(--survol) !important; padding-top: 8px !important; padding-bottom: 8px !important; }
+.rubrique-carte.categorie-cave input { font-size: 17px; }
 tr.choisi td { background: var(--rose); }
 .barre-enregistrer { position: sticky; bottom: 0; z-index: 2; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px;
   padding: 12px 18px; background: var(--carte); border: 1px solid var(--ligne); border-radius: 16px; box-shadow: var(--ombre); }
