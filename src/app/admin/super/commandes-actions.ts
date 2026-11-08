@@ -8,6 +8,8 @@ import { STATUTS_QV } from '@/lib/super/commandes';
 import { donneesBon } from '@/lib/admin/stocks';
 import { envoyerEmail } from '@/lib/email';
 import { referenceCommande } from '@/lib/bon-commande';
+import { getVinsBO } from '@/lib/admin/donnees';
+import { regrouperVins } from '@/app/admin/[resto]/carte/etats';
 
 export async function changerStatutQv(id: string, f: FormData): Promise<Retour> {
   await exigerAdmin();
@@ -28,10 +30,22 @@ export async function refuserCommandeQv(id: string, f: FormData): Promise<Retour
   await exigerAdmin();
   const motif = String(f.get('motif') ?? '').trim().slice(0, 500);
   if (!motif) return { erreur: 'Expliquez en quelques mots pourquoi la commande est refusée.' };
+  // Seul le super-admin annule une commande déjà réceptionnée : ses bouteilles reçues peuvent alors être retirées du stock.
   const r = await requete<{ restaurant_id: string }>(
-    `update commande set statut_qv = 'refusee', statut_qv_le = now(), motif_refus = $2, statut = 'annulee' where id = $1 and statut = 'ouverte' returning restaurant_id`, [id, motif]);
-  if (!r.length) return { erreur: 'Cette commande n’est plus ouverte (déjà réceptionnée ou annulée).' };
+    `update commande set statut_qv = 'refusee', statut_qv_le = now(), motif_refus = $2, statut = 'annulee' where id = $1 and statut in ('ouverte', 'recue') returning restaurant_id`, [id, motif]);
+  if (!r.length) return { erreur: 'Cette commande est déjà annulée.' };
   const resto = r[0].restaurant_id;
+  let retire = 0;
+  if (f.get('retirer_stock') === 'on') {
+    // Le stock est porté par la ligne principale de chaque vin (comme à la réception).
+    const principale = new Map<string, string>();
+    for (const g of regrouperVins(await getVinsBO(resto))) for (const v of g.tous) principale.set(v.id, g.principal.id);
+    for (const l of await requete<{ vin_id: string; q: number }>(
+      'select vin_id, sum(recue)::int as q from commande_ligne where commande_id = $1 and vin_id is not null and recue > 0 group by vin_id', [id])) {
+      await requete('update vin_carte set stock = greatest(stock - $3, 0) where id = $1 and restaurant_id = $2', [principale.get(l.vin_id) ?? l.vin_id, resto, l.q]);
+      retire += l.q;
+    }
+  }
   await requete(
     `update vin_carte v set en_commande = greatest(v.en_commande - l.q, 0)
        from (select vin_id, sum(quantite - recue)::int as q from commande_ligne where commande_id = $1 and vin_id is not null group by vin_id) l
@@ -49,7 +63,7 @@ export async function refuserCommandeQv(id: string, f: FormData): Promise<Retour
   }
   revalidatePath('/admin/super/commandes');
   revalidatePath(`/admin/${resto}`, 'layout');
-  return { ok: `Commande refusée.${note}` };
+  return { ok: `Commande annulée.${retire ? ` ${retire} bouteille${retire > 1 ? 's' : ''} retirée${retire > 1 ? 's' : ''} du stock du restaurant.` : ''}${note}` };
 }
 
 /** Commande en attente de validation : acceptée, ou refusée avec son explication (champ « decision » : accepter / refuser). */

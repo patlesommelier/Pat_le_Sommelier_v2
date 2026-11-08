@@ -130,8 +130,8 @@ export default async function Commandes({ params, searchParams }: { params: Prom
           {/* Facture jointe par Quid Vinum. */}
           {c.facture_le && <a href={`/admin/${resto}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn sec petit">Facture (PDF)</a>}
           {c.receptions.map((r) => (
-            <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn fantome petit">
-              Bon de réception {r.numero}{r.complete ? '' : ' (partielle)'}</a>
+            <a key={r.id} href={`/admin/${resto}/commandes/${c.id}/reception/${r.id}`} target="_blank" rel="noopener" className="btn sec petit">
+              Bon de réception {r.numero}{r.complete ? "" : " (partielle)"} (PDF)</a>
           ))}
           {c.statut === 'ouverte' && !commandeVerrouillee(c) && (
             <BoutonSupprimer action={annulerCommande.bind(null, resto, c.id)} libelle="Annuler" enCoursLibelle="Annulation…" className="btn fantome petit"

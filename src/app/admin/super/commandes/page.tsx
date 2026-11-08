@@ -128,15 +128,8 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                     {(c.statut_qv ?? 'recue') === 'recue' ? (
                       <span style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'flex-end' }}>
                         {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
-                        {c.statut === 'recue' ? <span className="petit discret" style={{ alignSelf: 'center', maxWidth: 260, textAlign: 'right' }}>Déjà réceptionnée par le restaurant : elle ne peut plus être refusée.</span> : (
-                          <Superposition bouton="✕ Refuser" titre={`Refuser la commande n° ${ref} de ${c.restaurant}`} classeBouton="btn rouge">
-                            <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 12 }}>
-                              <div className="champ" style={{ margin: 0 }}><label htmlFor={`motif-${c.id}`}>Pourquoi ? (le restaurant le lira)</label>
-                                <textarea id={`motif-${c.id}`} name="motif" rows={3} maxLength={500} required placeholder="Ex. Ce vin n’est plus disponible chez le distributeur ; minimum de 12 bouteilles non atteint." /></div>
-                              <span><button className="btn rouge">Refuser la commande</button></span>
-                            </FormulaireAdmin>
-                          </Superposition>
-                        )}
+                        {/* Refus (ou annulation d'une commande déjà réceptionnée) : un motif court, montré au restaurant. */}
+                        <BoutonAnnulerQv id={c.id} ref_={ref} restaurant={c.restaurant} recues={c.lignes.reduce((n, l) => n + l.recue, 0)} receptionnee={c.statut === 'recue'} />
                         <FormulaireAdmin action={decisionCommandeQv.bind(null, c.id)}>
                           <input type="hidden" name="decision" value="accepter" />
                           <button className="btn vert">✓ Valider la commande</button>
@@ -150,6 +143,10 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                       </select>
                       {c.statut_qv_le && <span className="petit discret">depuis le {date(c.statut_qv_le)}</span>}
                     </FormulaireAdmin>
+                    )}
+                    {/* Commande déjà acceptée : le super-admin peut encore l'annuler (lui seul). */}
+                    {(c.statut_qv ?? 'recue') !== 'recue' && (
+                      <BoutonAnnulerQv id={c.id} ref_={ref} restaurant={c.restaurant} recues={c.lignes.reduce((n, l) => n + l.recue, 0)} receptionnee discret />
                     )}
                     </span>
                   )}
@@ -200,5 +197,23 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
         })}
       </div>
     </>
+  );
+}
+
+/** Bouton rouge « Refuser » (commande pas encore réceptionnée) ou « Annuler » (déjà réceptionnée), avec le motif dans une fenêtre. */
+function BoutonAnnulerQv({ id, ref_, restaurant, recues, receptionnee, discret = false }: { id: string; ref_: string; restaurant: string; recues: number; receptionnee: boolean; discret?: boolean }) {
+  const verbe = receptionnee ? 'Annuler' : 'Refuser';
+  return (
+    <Superposition bouton={`✕ ${verbe}${discret ? ' la commande' : ''}`} titre={`${verbe} la commande n° ${ref_} de ${restaurant}`} classeBouton={discret ? 'btn fantome petit' : 'btn rouge'}>
+      <FormulaireAdmin action={refuserCommandeQv.bind(null, id)} className="pile" style={{ gap: 12 }}>
+        <div className="champ" style={{ margin: 0 }}><label htmlFor={`motif-${id}`}>Pourquoi ? (le restaurant le lira)</label>
+          <textarea id={`motif-${id}`} name="motif" rows={3} maxLength={500} required placeholder="Ex. Ce vin n’est plus disponible chez le distributeur ; minimum de 12 bouteilles non atteint." /></div>
+        {recues > 0 && (
+          <label className="case" style={{ margin: 0 }}><input type="checkbox" name="retirer_stock" defaultChecked />
+            <span>Retirer du stock du restaurant les {recues} bouteille{recues > 1 ? 's' : ''} déjà reçue{recues > 1 ? 's' : ''}</span></label>
+        )}
+        <span><button className="btn rouge">{verbe} la commande</button></span>
+      </FormulaireAdmin>
+    </Superposition>
   );
 }
