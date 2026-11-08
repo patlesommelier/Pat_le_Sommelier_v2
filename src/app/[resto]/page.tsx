@@ -53,7 +53,7 @@ export default async function Accueil({ params, searchParams }: { params: Promis
           {/* « Pat » écrit, tout petit, posé au bord de la partie blanche (dans sa couleur) : le bandeau semble découpé à sa forme. */}
           {!compact && <PatEcrit />}</p>
         <div className="contenu" style={{ padding: '22px 16px 20px', gap: 18 }}>
-          <ChoixPlats resto={resto} creme={restaurant.design_app === 'creme'} groupes={GROUPES.map((g) => ({
+          <ChoixPlats resto={resto} creme={restaurant.design_app !== 'classique'} groupes={GROUPES.map((g) => ({
             titre: g.titre,
             plats: plats.filter((p) => g.categories.includes(p.categorie)).map((p) => ({ id: p.id, nom: p.nom, court: p.nom_court ?? p.nom })),
           })).filter((g) => g.plats.length)} />

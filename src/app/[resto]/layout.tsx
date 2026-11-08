@@ -21,7 +21,8 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Logo d'un restaurant inscrit déposé avant le recadrage automatique : rogné et mesuré une fois.
   if (restaurant.logo_url && restaurant.logo_ratio == null && restaurant.origine === 'inscription') await reparerLogo(restaurant.id, restaurant.logo_url);
   const clair = couleurClaire(restaurant.couleur);
-  const creme = restaurant.design_app === 'creme';
+  // « Crème et courbes » pour tous les restaurants ; 'classique' garde l'ancien design (au cas où un restaurant le demande).
+  const creme = restaurant.design_app !== 'classique';
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,

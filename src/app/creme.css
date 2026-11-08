@@ -1,4 +1,4 @@
-/* ── Design « Crème et courbes » de l'app des clients (restaurant.design_app = 'creme') ──
+/* ── Design « Crème et courbes » de l'app des clients (tous les restaurants, sauf design_app = 'classique') ──
    Repris du site Quid Vinum : titres en Outfit, formes arrondies, cartes blanches sur un fond très clair de la couleur du
    restaurant (--fond), pastilles arrondies. Tout est limité à .design-creme : le design actuel ne change pas. */
 .design-creme { --texte-creme: #2E2E2E; --doux-creme: #6B6560; background: var(--fond, #FAF7F2); }
