@@ -31,8 +31,9 @@ export default async function RajouterUnVin({ params, searchParams }: { params: 
                           from recherche_vin where restaurant_id = $1 order by cree_le desc limit 10`, [resto]),
     utilisateurReel(), // super-admin réel : le détail d'un échec reste visible en « Aperçu côté restaurant »
   ]);
-  // Recherche montrée en vitrine : celle choisie (?r=…), sinon la dernière ; « Nouvelle demande » vide tout.
-  const r = sp.nouvelle ? null : (sp.r ? recherches.find((x) => x.id === sp.r) : recherches[0]) ?? null;
+  // Recherche montrée en vitrine : seulement celle choisie (?r=…, aussi juste après l'avoir lancée). En arrivant sur la page,
+  // rien : la page est prête pour une nouvelle demande, et toutes les recherches passées sont dans « Vos recherches précédentes ».
+  const r = sp.nouvelle || !sp.r ? null : recherches.find((x) => x.id === sp.r) ?? null;
   // Formulaire : rempli avec la recherche choisie (pour la modifier et la relancer) ; vide pour une nouvelle demande.
   const reprise = sp.r ? r : null;
   const precedentes = recherches.filter((x) => x.id !== r?.id);
