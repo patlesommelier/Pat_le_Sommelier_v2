@@ -1,7 +1,8 @@
 import { notFound } from 'next/navigation';
+import '../creme.css';
 import type { CSSProperties } from 'react';
 import { BarrePat } from '@/components/BarrePat';
-import { couleurClaire } from '@/lib/couleurs';
+import { couleurClaire, eclaircir } from '@/lib/couleurs';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
@@ -20,17 +21,22 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Logo d'un restaurant inscrit déposé avant le recadrage automatique : rogné et mesuré une fois.
   if (restaurant.logo_url && restaurant.logo_ratio == null && restaurant.origine === 'inscription') await reparerLogo(restaurant.id, restaurant.logo_url);
   const clair = couleurClaire(restaurant.couleur);
+  const creme = restaurant.design_app === 'creme';
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
     '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
     // Boutons pleins (« Trouver mon vin »…) : sur une couleur claire, ils passent en foncé pour rester bien visibles sur fond blanc.
     '--bouton': clair ? '#1A1A1A' : restaurant.couleur, '--sur-bouton': '#FFFFFF',
+    // Design « Crème et courbes » : fond de page, pastilles et filets dans des teintes très claires de la couleur des boutons.
+    ...(creme ? { '--fond': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.07), '--fond-pastille': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.1),
+      '--ligne-creme': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.2) } : {}),
   } as CSSProperties;
+  const classe = `ecran${creme ? ' design-creme' : ''}${creme && clair ? ' bandeau-clair' : ''}`;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
   if (!(await appOuverte(restaurant.id))) {
     return (
-      <div className="ecran" style={theme}>
+      <div className={classe} style={theme}>
         <main style={{ minHeight: '70dvh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 14, padding: 28, textAlign: 'center' }}>
           {/* Page blanche : le logo foncé s'y lit mieux, s'il existe. */}
           {restaurant.logo_fonce_url || restaurant.logo_url
@@ -48,7 +54,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Première ouverture de l'app (le QR code vient d'être scanné) : notée une seule fois.
   await requete('update restaurant set premier_scan_le = now() where id = $1 and premier_scan_le is null', [restaurant.id]);
   return (
-    <div className="ecran" style={theme}>
+    <div className={classe} style={theme}>
       {children}
       <BarrePat restaurant={restaurant.id} nom={restaurant.nom} />
     </div>

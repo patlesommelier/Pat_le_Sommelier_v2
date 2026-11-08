@@ -1,0 +1,113 @@
+/* ── Design « Crème et courbes » de l'app des clients (restaurant.design_app = 'creme') ──
+   Repris du site Quid Vinum : titres en Outfit, formes arrondies, cartes blanches sur un fond très clair de la couleur du
+   restaurant (--fond), pastilles arrondies. Tout est limité à .design-creme : le design actuel ne change pas. */
+.design-creme { --texte-creme: #2E2E2E; --doux-creme: #6B6560; background: var(--fond, #FAF7F2); }
+.design-creme .defile { background: var(--fond, #FAF7F2); }
+
+/* Bandeau : couleur du restaurant, grandes formes douces en fond, bas arrondi (sous la question). */
+.design-creme .bandeau { background: transparent; }
+.design-creme .bandeau-haut, .design-creme .bandeau-suite { position: relative; overflow: hidden; isolation: isolate; background: var(--marque); }
+.design-creme .bandeau-haut::before { content: ''; position: absolute; z-index: -1; top: -120px; right: -70px; width: 250px; height: 200px;
+  border-radius: 62% 38% 55% 45% / 48% 60% 40% 52%; background: rgba(255, 255, 255, 0.12); pointer-events: none; }
+.design-creme.bandeau-clair .bandeau-haut::before { background: rgba(26, 26, 26, 0.05); }
+.design-creme .question-bandeau {
+  border-radius: 0 0 32px 32px; padding: 2px 22px 22px; font-family: Outfit, 'Helvetica Neue', sans-serif; font-style: normal;
+  font-weight: 600; font-size: 20px; letter-spacing: -0.01em;
+}
+.design-creme.bandeau-clair .question-bandeau { border-bottom: 1px solid var(--ligne-creme); }
+/* « Pat » écrit au bord de la partie blanche : il ne tombe plus juste avec le bas arrondi. */
+.design-creme .question-bandeau .pat-ecrit { display: none; }
+.design-creme .accueil-defile { background: var(--fond, #FAF7F2); }
+.design-creme .accueil-defile > .contenu { background: transparent; }
+
+/* Bouton « Carte des vins » / « Sommelier » : une pastille arrondie. */
+.design-creme .bouton-carte {
+  height: 42px; padding: 0 16px; border: 0; border-radius: 999px; background: rgba(255, 255, 255, 0.18);
+  font-family: Outfit, 'Helvetica Neue', sans-serif; font-size: 14.5px; font-weight: 600; letter-spacing: 0; text-transform: none;
+}
+.design-creme.bandeau-clair .bouton-carte { background: var(--bouton); color: var(--sur-bouton, #FFFFFF); }
+.design-creme .retour { width: 40px; height: 40px; margin: 0 -2px 0 -6px; border-radius: 50%; }
+
+/* Accueil */
+.design-creme .accueil-titre { font-family: Outfit, 'Helvetica Neue', sans-serif; letter-spacing: -0.02em; line-height: 1.12; }
+.design-creme .accueil-titre span { font-family: Lato, 'Helvetica Neue', sans-serif; font-size: 19px; opacity: 0.92; margin-top: 4px; }
+.design-creme .filet-blanc, .design-creme .filet { display: none; }
+
+/* Titres et cadres */
+.design-creme .titre-page h1, .design-creme .fiche-entete h1 { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 28px; letter-spacing: -0.02em; color: var(--texte-creme); }
+.design-creme .boite {
+  gap: 12px; padding: 18px 16px 20px; background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 24px;
+  box-shadow: 0 24px 48px -30px rgba(46, 46, 46, 0.28);
+}
+.design-creme .titre-section { align-items: flex-start; }
+.design-creme .titre-section span { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 700; font-size: 19px; letter-spacing: -0.01em; text-transform: none; color: var(--texte-creme); }
+
+/* Plats : pastilles arrondies, cochées à la couleur du restaurant. */
+.design-creme .bulles { justify-content: flex-start; gap: 8px; }
+.design-creme .bulle {
+  height: auto; min-height: 42px; padding: 0 15px; border: 1px solid var(--ligne-creme); border-radius: 999px;
+  background: var(--fond-pastille); font-size: 14.5px; color: var(--texte-creme);
+}
+.design-creme .bulle.choisie { background: var(--bouton); border-color: var(--bouton); color: var(--sur-bouton, #FFFFFF); font-weight: 700; }
+
+/* Raccourcis vers les catégories, avec le nombre de plats choisis dans chacune. */
+.raccourcis-plats { display: flex; gap: 4px; padding: 5px; margin-top: -4px; background: #FFFFFF; border-radius: 999px;
+  box-shadow: 0 10px 28px -14px rgba(46, 46, 46, 0.35); overflow-x: auto; scrollbar-width: none; }
+.raccourcis-plats::-webkit-scrollbar { display: none; }
+.raccourcis-plats a { flex: 1 0 auto; display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 0 12px;
+  border-radius: 999px; color: var(--texte-creme, #2E2E2E); text-decoration: none; font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 14px; white-space: nowrap; }
+.raccourcis-plats .compte { min-width: 20px; height: 20px; padding: 0 6px; border-radius: 999px; background: var(--bouton); color: var(--sur-bouton, #FFFFFF);
+  font-size: 12px; display: inline-flex; align-items: center; justify-content: center; }
+.design-creme .boite[id] { scroll-margin-top: 90px; }
+
+/* « Votre sélection » : toujours visible en bas, au-dessus de la barre de Pat. */
+.design-creme .envoi-plats { padding: 10px 0 6px; background: linear-gradient(to bottom, transparent, var(--fond, #FAF7F2) 22%); }
+.selection-plats { width: 100%; display: flex; flex-direction: column; gap: 10px; padding: 14px; background: #FFFFFF; border-radius: 24px;
+  border: 1px solid var(--ligne-creme); box-shadow: 0 2px 8px rgba(46, 46, 46, 0.08), 0 22px 40px -18px rgba(46, 46, 46, 0.45); }
+.selection-haut { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+.selection-haut b { font-family: Outfit, 'Helvetica Neue', sans-serif; font-size: 15px; }
+.selection-haut .effacer { border: 0; background: none; padding: 6px 2px; color: var(--doux-creme, #6B6560); font-size: 13.5px; text-decoration: underline; cursor: pointer; }
+.selection-liste { display: flex; flex-wrap: wrap; gap: 6px; }
+.plat-choisi { display: inline-flex; align-items: center; gap: 5px; min-height: 34px; padding: 0 10px 0 12px; border: 0; border-radius: 999px;
+  background: var(--fond-pastille); color: var(--texte-creme, #2E2E2E); font-size: 14px; cursor: pointer; text-align: left; }
+.plat-choisi .categorie { font-size: 12px; color: var(--doux-creme, #6B6560); }
+.design-creme .selection-plats .bouton-plein, .design-creme .envoi-plats .bouton-plein {
+  width: 100%; max-width: none; min-height: 50px; border-radius: 999px; font-family: Outfit, 'Helvetica Neue', sans-serif; font-size: 16px; box-shadow: none; }
+
+/* Carte des vins : couleurs en pastilles, chaque vin dans sa carte. */
+.design-creme .onglets { background: var(--fond, #FAF7F2); border-bottom: 0; gap: 6px; padding: 8px 14px; min-height: 60px; }
+.design-creme .onglet {
+  flex: 0 0 auto; flex-direction: row; gap: 6px; height: 44px; min-height: 44px; padding: 0 16px; border: 0; border-radius: 999px; background: #FFFFFF;
+  box-shadow: 0 8px 20px -14px rgba(46, 46, 46, 0.45); font-family: Outfit, 'Helvetica Neue', sans-serif; font-size: 14.5px; font-weight: 600;
+  letter-spacing: 0; text-transform: none; color: var(--texte-creme);
+}
+.design-creme .onglet small { font-size: 13px; color: var(--doux-creme); }
+.design-creme .onglet[aria-selected='true'] { background: var(--bouton); color: var(--sur-bouton, #FFFFFF); border: 0; }
+.design-creme .onglet[aria-selected='true'] small { color: inherit; opacity: 0.8; }
+.design-creme .panneau { gap: 10px; padding: 4px 14px 24px; }
+.design-creme .sous-titre { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 12.5px; letter-spacing: 0.12em; color: var(--doux-creme); padding: 12px 6px 0; }
+.design-creme .ligne-vin { padding: 12px; background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 20px; box-shadow: 0 16px 32px -26px rgba(46, 46, 46, 0.4); }
+.design-creme .ligne-vin .nom { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 600; font-size: 16px; }
+.design-creme .prix { font-family: Outfit, 'Helvetica Neue', sans-serif; }
+.design-creme .etiquette, .design-creme .etiquette-vide { border-radius: 12px; }
+
+/* Propositions de Pat, fiche d'un vin */
+.design-creme .carte-vin, .design-creme .ligne-prix, .design-creme .encadre, .design-creme .etat-vide, .design-creme .fiche-chat {
+  background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 20px; }
+.design-creme .carte-vin { box-shadow: 0 16px 32px -26px rgba(46, 46, 46, 0.4); }
+.design-creme .carte-vin .nom { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 600; }
+.design-creme .pastille { border-radius: 999px; background: #FFFFFF; border-color: var(--ligne-creme); }
+.design-creme a.bouton-plein, .design-creme .bouton-plein { border-radius: 999px; font-family: Outfit, 'Helvetica Neue', sans-serif; }
+.design-creme .photo-plat { border-radius: 20px; }
+
+/* Barre « Demandez à Pat » : une pastille blanche qui flotte ; Pat garde ses couleurs (rouge). */
+.design-creme .barre-pat { background: var(--fond, #FAF7F2); box-shadow: none; padding: 6px 12px 14px; }
+.design-creme .barre-pat form { align-items: center; background: #FFFFFF; border: 0; border-radius: 999px; padding: 6px;
+  box-shadow: 0 2px 8px rgba(46, 46, 46, 0.08), 0 18px 36px -16px rgba(46, 46, 46, 0.45); }
+.design-creme .barre-pat textarea { font-family: Outfit, 'Helvetica Neue', sans-serif; font-weight: 500; padding: 11px 0; }
+.design-creme .avatar-pat { width: 46px; height: 46px; }
+.design-creme .rond.secondaire { border: 0; background: var(--fond-pastille); }
+.design-creme .conversation { background: var(--fond, #FAF7F2); }
+.design-creme .message { border-radius: 18px; }
+.design-creme .message.client { border-radius: 18px 18px 4px 18px; }
+.design-creme .message.pat { background: #FFFFFF; border-radius: 18px 18px 18px 4px; }

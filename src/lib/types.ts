@@ -18,6 +18,8 @@ export interface Restaurant {
   logo_choix?: string | null;
   /** Page d'arrivée de l'app : 'menu' (avec le sommelier) ou 'carte' (carte des vins). */
   page_accueil?: string;
+  /** Design de l'app des clients : 'creme' (Crème et courbes), sinon le design actuel. */
+  design_app?: string | null;
   /** Catégories en plus des couleurs dans la carte de l'app : 'nature', 'bio', 'coups_de_coeur'. */
   categories_carte?: string[];
 }
