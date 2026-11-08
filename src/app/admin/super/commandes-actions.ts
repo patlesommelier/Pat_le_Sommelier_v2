@@ -59,8 +59,9 @@ export async function decisionCommandeQv(id: string, f: FormData): Promise<Retou
   if (decision === 'refuser') return refuserCommandeQv(id, f);
   if (decision !== 'accepter') return { erreur: 'Choisissez : accepter ou refuser la commande.' };
   const r = await requete<{ restaurant_id: string }>(
-    `update commande set statut_qv = 'acceptee', statut_qv_le = now() where id = $1 and statut = 'ouverte' returning restaurant_id`, [id]);
-  if (!r.length) return { erreur: 'Cette commande n’est plus ouverte (déjà réceptionnée ou annulée).' };
+    // Une commande déjà réceptionnée par le restaurant peut encore être validée (elle n'a simplement plus de suite à donner).
+    `update commande set statut_qv = 'acceptee', statut_qv_le = now() where id = $1 and statut in ('ouverte', 'recue') returning restaurant_id`, [id]);
+  if (!r.length) return { erreur: 'Cette commande a été annulée.' };
   revalidatePath('/admin/super/commandes');
   revalidatePath(`/admin/${r[0].restaurant_id}`, 'layout');
   return { ok: 'Commande acceptée : elle passe « En cours de traitement » (le restaurant voit « Commande acceptée »).' };

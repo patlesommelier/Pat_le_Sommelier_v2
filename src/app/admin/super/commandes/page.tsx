@@ -1,6 +1,7 @@
 // Super-admin — Commandes passées par Quid Vinum : restaurant, vins commandés (prix du restaurant et prix QV du tarif),
 // et le suivi par Quid Vinum : reçue, acceptée, envoyée au distributeur, livrée, facturée.
 import Link from 'next/link';
+import { Superposition } from '@/components/admin/Superposition';
 import { changerStatutQv, decisionCommandeQv, deposerFactureQv, refuserCommandeQv, supprimerFactureQv } from '../commandes-actions';
 import { BoutonSupprimer } from '@/components/admin/BoutonSupprimer';
 import { VignetteVin } from '@/components/admin/VignetteVin';
@@ -109,10 +110,22 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                     <span className="pile" style={{ gap: 8, alignItems: 'flex-end' }}>
                     {/* En attente de validation : accepter, ou refuser avec une explication (le restaurant voit la décision). */}
                     {(c.statut_qv ?? 'recue') === 'recue' ? (
-                      <FormulaireAdmin action={decisionCommandeQv.bind(null, c.id)}>
-                        <input type="hidden" name="decision" value="accepter" />
-                        <button className="btn vert">✓ Valider la commande</button>
-                      </FormulaireAdmin>
+                      <span style={{ display: 'flex', flexWrap: 'wrap', gap: 8, justifyContent: 'flex-end' }}>
+                        {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
+                        {c.statut === 'recue' ? <span className="petit discret" style={{ alignSelf: 'center', maxWidth: 260, textAlign: 'right' }}>Déjà réceptionnée par le restaurant : elle ne peut plus être refusée.</span> : (
+                          <Superposition bouton="✕ Refuser" titre={`Refuser la commande n° ${ref} de ${c.restaurant}`} classeBouton="btn rouge">
+                            <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 12 }}>
+                              <div className="champ" style={{ margin: 0 }}><label htmlFor={`motif-${c.id}`}>Pourquoi ? (le restaurant le lira)</label>
+                                <textarea id={`motif-${c.id}`} name="motif" rows={3} maxLength={500} required placeholder="Ex. Ce vin n’est plus disponible chez le distributeur ; minimum de 12 bouteilles non atteint." /></div>
+                              <span><button className="btn rouge">Refuser la commande</button></span>
+                            </FormulaireAdmin>
+                          </Superposition>
+                        )}
+                        <FormulaireAdmin action={decisionCommandeQv.bind(null, c.id)}>
+                          <input type="hidden" name="decision" value="accepter" />
+                          <button className="btn vert">✓ Valider la commande</button>
+                        </FormulaireAdmin>
+                      </span>
                     ) : (
                     // Statut : grande liste en couleur, enregistrée à chaque changement (le restaurant le voit aussitôt).
                     <FormulaireAdmin auto action={changerStatutQv.bind(null, c.id)} className="pile" style={{ gap: 4, alignItems: 'flex-end' }}>
@@ -166,17 +179,6 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                   </FormulaireAdmin>
                 )}
               </div>
-              {/* Refus : un motif court, montré au restaurant (sa commande est annulée). */}
-              {c.statut === 'ouverte' && c.envoyee_le && (c.statut_qv ?? 'recue') === 'recue' && (
-                <details className="refus-commande">
-                  <summary className="petit" style={{ cursor: 'pointer', color: 'var(--ocre)', fontWeight: 700 }}>Refuser cette commande…</summary>
-                  <FormulaireAdmin action={refuserCommandeQv.bind(null, c.id)} className="pile" style={{ gap: 8, marginTop: 8 }}>
-                    <div className="champ" style={{ margin: 0 }}><label htmlFor={`motif-${c.id}`}>Pourquoi ? (le restaurant le lira)</label>
-                      <textarea id={`motif-${c.id}`} name="motif" rows={2} maxLength={500} required placeholder="Ex. Ce vin n’est plus disponible chez le distributeur ; minimum de 12 bouteilles non atteint." /></div>
-                    <span><button className="btn rouge petit">Refuser la commande</button></span>
-                  </FormulaireAdmin>
-                </details>
-              )}
             </Bloc>
           );
         })}
