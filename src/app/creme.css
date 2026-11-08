@@ -17,7 +17,9 @@
 .design-creme.bandeau-clair .question-bandeau { border-bottom: 1px solid var(--ligne-creme); }
 /* « Pat » écrit au bord de la partie blanche : il ne tombe plus juste avec le bas arrondi. */
 .design-creme .question-bandeau .pat-ecrit { display: none; }
-.design-creme .accueil-defile { background: var(--fond, #FAF7F2); }
+/* Accueil : en tirant la page vers le bas (rebond sur iPhone), c'est la couleur du bandeau qui apparaît sous le logo, jamais
+   un espace clair entre le logo et la bienvenue ; plus bas (sous le bas arrondi), le fond clair. */
+.design-creme .accueil-defile { background: linear-gradient(to bottom, var(--marque) 0, var(--marque) 120px, var(--fond, #FAF7F2) 120px); overscroll-behavior-y: none; }
 .design-creme .accueil-defile > .contenu { background: transparent; }
 
 /* Bouton « Carte des vins » / « Sommelier » : une pastille arrondie. */
