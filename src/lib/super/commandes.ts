@@ -40,13 +40,13 @@ export async function commandesQv(statut?: string) {
 /** Commandes des restaurants à leurs propres distributeurs (hors Quid Vinum), pour information : la plus récente d'abord. */
 export interface CommandeHorsQv {
   id: string; numero: number; cree_le: string; envoyee_le: string | null; recue_le: string | null; statut: string; reference_interne: string | null;
-  restaurant_id: string; restaurant: string; fournisseur: string;
+  restaurant_id: string; restaurant: string; fournisseur: string; facture_le: string | null;
   lignes: { libelle: string; detail: string | null; quantite: number; recue: number; prix_achat: number | null }[];
 }
 export async function commandesHorsQv() {
   const commandes = await requete<Omit<CommandeHorsQv, 'lignes'>>(
     `select c.id, c.numero, c.cree_le::text, c.envoyee_le::text, c.recue_le::text, c.statut, c.reference_interne, c.restaurant_id, r.nom as restaurant,
-            coalesce(f.nom, c.fournisseur_nom) as fournisseur
+            coalesce(f.nom, c.fournisseur_nom) as fournisseur, (select fc.depose_le::text from facture_commande fc where fc.commande_id = c.id) as facture_le
        from commande c join restaurant r on r.id = c.restaurant_id left join fournisseur f on f.id = c.fournisseur_id
       where not c.quid_vinum and f.distributeur_id is null
         and not exists (select 1 from commande_ligne l where l.commande_id = c.id and l.distributeur_vin_id is not null)

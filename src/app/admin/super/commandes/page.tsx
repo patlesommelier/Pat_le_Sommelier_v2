@@ -25,7 +25,7 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
     const horsQv = await commandesHorsQv();
     return (
       <>
-        <Entete titre="Commandes" texte="Les commandes des restaurants à leurs propres distributeurs : elles ne passent pas par Quid Vinum (pour information, sans suivi)." />
+        <Entete titre="Commandes" texte="Les commandes des restaurants à leurs propres distributeurs : elles ne passent pas par Quid Vinum (pour information, sans suivi). Vous pouvez y joindre la facture." />
         <nav className="onglets" aria-label="Statut">
           {FILTRES.map(([k, l]) => <Link key={k} href={k ? `/admin/super/commandes?statut=${k}` : '/admin/super/commandes'} aria-current={(statut ?? '') === k ? 'true' : undefined}>{l}</Link>)}
         </nav>
@@ -60,7 +60,23 @@ export default async function CommandesQv({ searchParams }: { searchParams: Prom
                     </tr>
                   ))}</tbody>
                 </table></div>
-                <span className="petit">{bouteilles} bouteille{bouteilles > 1 ? 's' : ''}{c.lignes.some((l) => l.prix_achat != null) && <> · <b>Total {euros(total)} HTVA</b></>}</span>
+                <div className="ligne-actions" style={{ alignItems: 'center' }}>
+                  <span className="petit">{bouteilles} bouteille{bouteilles > 1 ? 's' : ''}{c.lignes.some((l) => l.prix_achat != null) && <> · <b>Total {euros(total)} HTVA</b></>}</span>
+                  {/* Facture : comme pour les commandes Quid Vinum, le restaurant la retrouve dans sa commande. */}
+                  {c.facture_le ? <>
+                    <a href={`/admin/${c.restaurant_id}/commandes/${c.id}/facture`} target="_blank" rel="noopener" className="btn sec petit">Facture (PDF)</a>
+                    <span className="petit discret">jointe le {date(c.facture_le)}</span>
+                    <BoutonSupprimer action={supprimerFactureQv.bind(null, c.id)} libelle="Supprimer la facture" className="btn fantome petit"
+                      question="Supprimer la facture de cette commande ? Le restaurant ne la verra plus ; vous pourrez en joindre une autre." />
+                  </> : c.statut !== 'annulee' && (
+                    <FormulaireAdmin auto action={deposerFactureQv.bind(null, c.id)} style={{ display: 'inline-flex' }}>
+                      <label className="btn petit" style={{ cursor: 'pointer' }}>
+                        Envoyer la facture
+                        <input type="file" name="facture" accept="application/pdf,.pdf" hidden />
+                      </label>
+                    </FormulaireAdmin>
+                  )}
+                </div>
               </article>
             );
           })}
