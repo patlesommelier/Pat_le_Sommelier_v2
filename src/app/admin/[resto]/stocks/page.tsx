@@ -1,13 +1,12 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
 import Link from 'next/link';
+import { redirect } from 'next/navigation';
 import { ajouterAuPanier, commanderPanier, enregistrerOrdreCave, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
 import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { AjoutPanier, Panier } from '@/components/admin/Panier';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
-import { Superposition } from '@/components/admin/Superposition';
-import { FormulaireAjoutVin } from './FormulaireAjoutVin';
 import { FormulaireAdmin } from '@/components/admin/FormulaireAdmin';
 import { SelectFournisseur } from '@/components/admin/SelectFournisseur';
 import { Entete, Message } from '@/components/admin/Ui';
@@ -24,7 +23,8 @@ const COULEURS = [['bulles', 'Bulles'], ['blanc', 'Blancs'], ['rose', 'Rosés'],
 export default async function Stocks({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ filtre?: string; ajoute?: string; commander?: string; ok?: string; erreur?: string; ajout?: string; c?: string; distributeur?: string; nouveau?: string }> }) {
   const { resto } = await params;
   await exigerAcces(resto);
-  const { filtre, ajoute, commander, ok, erreur, ajout, c, distributeur, nouveau } = await searchParams;
+  const { filtre, ajoute, commander, ok, erreur, ajout, distributeur, nouveau } = await searchParams;
+  if (ajout === '1') redirect(`/admin/${resto}/trouver-vin`); // anciens liens (?ajout=1) : la page Ajouter un vin
   const [vins, r, fournisseurs, ouvertes, achats, offres, panier] = await Promise.all([getVinsBO(resto), getRestaurantBO(resto), getFournisseurs(resto), getCommandes(resto, ['ouverte']), getPrixAchat(resto), offresPourLaCarte(resto), getPanier(resto)]);
   const auPanier = new Map(panier.map((l) => [l.vin_id, l.quantite]));
   const limite = r?.stock_limite_basse ?? 2;
@@ -72,10 +72,8 @@ export default async function Stocks({ params, searchParams }: { params: Promise
     <>
       <Entete titre="Les vins" texte={`Vos vins : le nombre de bouteilles de chaque vin, en stock (à compter dans « Faire l’inventaire ») et en commande, son prix d’achat HTVA chez votre distributeur et son prix de vente TVAC sur votre carte. Un point d’exclamation rouge signale un stock bas : ${limite} bouteille${limite > 1 ? 's' : ''} ou moins (à régler dans Paramètres du restaurant).`}>
         {/* Fichier Excel des stocks (téléchargé) : vins, fournisseurs, prix, stock. */}
-        {/* Ajout d'un vin dans une fenêtre en superposition (ouverte d'office par ?ajout=1). */}
-        <Superposition bouton="+ Ajouter un vin" titre="Ajouter un vin" ouvert={ajout === '1'}>
-          <FormulaireAjoutVin resto={resto} couleur={c} />
-        </Superposition>
+        {/* « + Ajouter un vin » : la page Ajouter un vin (chercher dans la base, chez un distributeur, ou à la main). */}
+        <Link href={`/admin/${resto}/trouver-vin`} className="btn">+ Ajouter un vin</Link>
         {/* Le stock se change dans la page Inventaire (plus ici, à côté du prix de vente). */}
         <Link href={`/admin/${resto}/inventaire`} className="btn sec">Faire l’inventaire</Link>
         <a href={`/admin/${resto}/stocks/export`} className="btn sec" download>Exporter en Excel</a>

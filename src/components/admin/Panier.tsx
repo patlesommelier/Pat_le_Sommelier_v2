@@ -54,9 +54,11 @@ export function Panier({ lignes, modifier, vider, commander }: {
     .map(([f]) => ({ fournisseur: f, quid_vinum: lignes.find((l) => (l.fournisseur ?? '') === f)!.quid_vinum, lignes: lignes.filter((l) => (l.fournisseur ?? '') === f) }));
   const nbCommandes = new Set(lignes.map((l) => (l.quid_vinum ? 'qv' : l.fournisseur ?? ''))).size;
   const agir = (f: () => Promise<Retour>) => demarrer(async () => montrer(await f()));
+  // Panier vide : pas de bouton (seulement le message d'une action qui vient de le vider, s'il y en a un).
+  if (!lignes.length) return <>{toast}</>;
   return (
     // Panier non vide : bouton flottant en bas à droite de l'écran (visible partout dans la liste), avec le nombre de bouteilles
-    // et le montant ; il « saute » à chaque ajout. Panier vide : simple bouton en haut de la page.
+    // et le montant ; il « saute » à chaque ajout. Panier vide : pas de bouton.
     <Superposition titre="Panier" bouton={`Voir le panier${total ? ` : ${total} bouteille${total > 1 ? 's' : ''}` : ' (vide)'}`}
       classeBouton={total ? 'btn rouge panier-flottant' : 'btn sec'}
       contenuBouton={total ? <span key={total} className="panier-flottant-contenu">
