@@ -1,7 +1,9 @@
 // Base des vins — Vins : chaque vin de la carte sur une ligne, son stock (changé seulement dans la page Inventaire), ses bouteilles en commande (suivent les commandes),
 // son fournisseur ; un point d’exclamation rouge signale un stock bas ; « + Panier » ajoute des bouteilles au panier de commande.
+import { Fragment } from 'react';
 import Link from 'next/link';
-import { ajouterAuPanier, commanderPanier, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
+import { ajouterAuPanier, commanderPanier, enregistrerOrdreCave, enregistrerStocks, modifierPanier, viderPanier } from '../../stocks-actions';
+import { TableCarteGlissable } from '@/components/admin/TableCarteGlissable';
 import { AjoutPanier, Panier } from '@/components/admin/Panier';
 import { offresPourLaCarte } from '@/lib/admin/distributeur-vin';
 import { offresDistributeurs } from '@/lib/admin/recherche-base';
@@ -38,7 +40,18 @@ export default async function Stocks({ params, searchParams }: { params: Promise
   const filtreDistributeur = distributeur ? fournisseurs.find((x) => x.id === distributeur) ?? null : null;
   const affiches = (filtre === 'bas' ? bas : groupes).filter((g) => !filtreDistributeur || g.tous.some((x) => x.fournisseur_id === filtreDistributeur.id));
   // Chaque vin dans la rubrique de sa couleur, qu'il soit sur la carte ou pas encore (sa ligne le dit).
-  const parCouleur = COULEURS.map(([k, l]) => ({ titre: l, groupes: affiches.filter((g) => g.principal.couleur === k) })).filter((c) => c.groupes.length);
+  // Dans chaque couleur, le classement de la cave (à part de la carte) : ses sous-catégories et l'ordre choisi par le restaurant.
+  const rang = (g: (typeof affiches)[number]) => Math.min(...g.tous.map((x) => x.cave_ordre ?? Number.MAX_SAFE_INTEGER));
+  const parCouleur = COULEURS.map(([k, l]) => ({ cle: k as string, titre: l, groupes: affiches.filter((g) => g.principal.couleur === k)
+    .map((g, i) => ({ g, i })).sort((a, b) => rang(a.g) - rang(b.g) || a.i - b.i).map(({ g }) => g) })).filter((c) => c.groupes.length);
+  const rubriquesCave = (gs: typeof affiches) => {
+    const out: { nom: string; groupes: typeof affiches }[] = [];
+    for (const g of gs) { const nom = g.principal.cave_rubrique ?? g.tous.find((x) => x.cave_rubrique)?.cave_rubrique ?? '';
+      const r = out.find((x) => x.nom === nom); if (r) r.groupes.push(g); else out.push({ nom, groupes: [g] }); }
+    return out;
+  };
+  // Liste filtrée (stock bas, un distributeur) : on ne déplace pas les vins (le classement ne verrait qu'une partie de la cave).
+  const fixe = filtre === 'bas' || Boolean(filtreDistributeur);
   const enCommande = groupes.reduce((n, g) => n + g.principal.en_commande, 0);
   // Valeur du stock au prix d'achat HTVA (vins sans prix d'achat : comptés à part).
   const valeur = groupes.reduce((n, g) => n + (achats.get(g.principal.id) ?? 0) * g.principal.stock, 0);
@@ -100,15 +113,25 @@ export default async function Stocks({ params, searchParams }: { params: Promise
             <table className="table-stocks" style={{ minWidth: 1060 }}>
               <thead><tr><th>Vin</th><th>À ma carte</th><th>Millésime</th><th>Distributeur</th><th className="droite">Achat HTVA</th><th className="droite">Vente TVAC</th><th className="droite">En stock</th><th className="droite">En commande</th><th>Panier</th></tr></thead>
               {parCouleur.map((c) => (
-                <tbody key={c.titre}>
-                  <tr className="rubrique"><td colSpan={9}><b className="rubrique-carte">{c.titre}</b></td></tr>
-                  {c.groupes.map(({ principal: v, tous, disponible, bas: alerte }) => {
-                    const nom = nomPourListe(v);
-                    return (
-                      // Vin qui vient d'être ajouté (« Rajouter un vin ») : ligne mise en évidence, la page s'y place (ancre).
-                      <tr key={v.id} id={nouveau && tous.some((x) => x.id === nouveau) ? `vin-${nouveau}` : undefined}
-                        className={[disponible ? '' : 'indisponible', nouveau && tous.some((x) => x.id === nouveau) ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined}>
-                        <td style={{ minWidth: 240 }}><div className="vin-cell"><VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
+                <Fragment key={c.cle}>
+                  <tbody><tr className="rubrique"><td colSpan={9}><b className="rubrique-carte">{c.titre}</b></td></tr></tbody>
+                  {/* Sous-catégories de la cave (titre modifiable), vins à glisser ou à déplacer avec les flèches ↑ ↓ (à part de la carte). */}
+                  <TableCarteGlissable key={`${c.cle}:${fixe}`} colonnes={9} apres="classement de votre cave enregistré" fixe={fixe}
+                    enregistrer={fixe ? undefined : enregistrerOrdreCave.bind(null, resto, c.cle)}
+                    rubriques={rubriquesCave(c.groupes).map((r, ri) => ({
+                      cle: `${ri}:${r.nom}`, nom: r.nom,
+                      // Liste filtrée : titres fixes (pas de renommage).
+                      entete: fixe ? (r.nom ? <td colSpan={9}><b style={{ textTransform: 'uppercase', letterSpacing: 1.5, color: 'var(--encre)' }}>{r.nom}</b></td> : <td colSpan={9} style={{ padding: 0, border: 0 }} />) : undefined,
+                      vins: r.groupes.map(({ principal: v, tous, disponible, bas: alerte }) => {
+                        const nom = nomPourListe(v);
+                        const nouv = Boolean(nouveau && tous.some((x) => x.id === nouveau));
+                        return {
+                          cle: v.id, ids: tous.map((x) => x.id), libelle: v.libelle,
+                          // Vin qui vient d'être ajouté (« Rajouter un vin ») : ligne mise en évidence, la page s'y place (ancre).
+                          ancre: nouv ? `vin-${nouveau}` : undefined,
+                          classe: [disponible ? '' : 'indisponible', nouv ? 'ligne-nouvelle' : ''].filter(Boolean).join(' ') || undefined,
+                          cellules: (<>
+                        <td style={{ minWidth: 240 }}><div className="vin-cell">{!fixe && <span aria-hidden="true" style={{ color: '#AFB0AE', fontSize: 16, marginRight: -4, cursor: 'grab' }}>⋮⋮</span>}<VignetteVin url={v.etiquette_url} logo={v.logo_distributeur} taille={40} />
                           <div><div className="nom"><Link href={`/admin/${resto}/carte/${encodeURIComponent(v.id)}?${new URLSearchParams({ retour: `/admin/${resto}/stocks` })}`} className="lien-vin">{nom[0]}</Link></div>{nom.length > 1 && <div className="petit">{nom.slice(1).join(' · ')}</div>}{!disponible && <div className="petit discret">Pas sur votre carte</div>}
                           {/* Vin lu sur la carte : reconnu dans la base de Pat (ses données), ou en attente de validation (tel que lu). */}
                           {v.reconnaissance === 'reconnu' && <span className="pastille-reconnu" title="Vin reconnu dans la base de Pat : nom, producteur et appellation viennent de la base">✓ Reconnu</span>}
@@ -139,12 +162,15 @@ export default async function Stocks({ params, searchParams }: { params: Promise
                         <td className="droite">{v.en_commande > 0
                           ? <Link href={`/admin/${resto}/commandes`} className="stock-lecture" title="Bouteilles commandées, pas encore reçues : voir les commandes">{v.en_commande}</Link>
                           : <span className="stock-lecture discret" title="Aucune bouteille en commande">0</span>}</td>
-                        {/* Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut). */}
-                        <td><AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} champFournisseur={`fournisseur_${v.id}`} /></td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
+                          </>),
+                          // Panier : un nombre de bouteilles, ajouté ligne par ligne (commandé ensuite depuis le panier, en haut).
+                          fin: (
+                        <AjoutPanier ajouter={ajouterAuPanier.bind(null, resto, v.id)} libelle={v.libelle} dansPanier={auPanier.get(v.id) ?? 0} champFournisseur={`fournisseur_${v.id}`} />
+                          ),
+                        };
+                      }),
+                    }))} />
+                </Fragment>
               ))}
             </table>
           </div>

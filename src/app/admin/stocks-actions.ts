@@ -173,6 +173,35 @@ export async function ajouterDistributeurQv(resto: string, distributeurId: strin
   return { ok: `« ${d.nom} » est ajouté à vos distributeurs : ouvrez son catalogue pour ajouter ses vins à vos vins.` };
 }
 
+// ───────── Classement de la cave (page Les vins) ─────────
+/**
+ * Sous-catégories et ordre des vins d'une couleur dans « Les vins », à part de la carte. `plan` : les sous-catégories dans l'ordre,
+ * chacune avec ses vins (chaque vin : les identifiants de toutes ses contenances). Les vins absents du plan gardent leur classement, à la fin.
+ */
+export async function enregistrerOrdreCave(resto: string, couleur: string, plan: { rubrique: string; vins: string[][] }[]): Promise<{ ok: boolean }> {
+  await exigerAcces(resto);
+  if (!Array.isArray(plan)) return { ok: false };
+  const lignes = await requete<{ id: string }>(
+    'select id from vin_carte where restaurant_id = $1 and couleur::text = $2 order by cave_ordre nulls last, ordre, id', [resto, couleur]);
+  const connus = new Set(lignes.map((l) => l.id));
+  const ids: string[] = [], rubriques: (string | null)[] = [];
+  for (const r of plan) {
+    const nom = typeof r?.rubrique === 'string' ? r.rubrique.replace(/\s+/g, ' ').trim().slice(0, 80) : '';
+    for (const vin of Array.isArray(r?.vins) ? r.vins : []) for (const id of Array.isArray(vin) ? vin : []) {
+      if (typeof id !== 'string' || !connus.has(id) || ids.includes(id)) continue;
+      ids.push(id); rubriques.push(nom || null);
+    }
+  }
+  const reste = lignes.filter((l) => !ids.includes(l.id)).map((l) => l.id);
+  await requete(
+    `update vin_carte v set cave_ordre = n.ordre, cave_rubrique = case when n.garder then v.cave_rubrique else n.rubrique end
+       from unnest($2::text[], $3::text[], $4::boolean[]) with ordinality as n(id, rubrique, garder, ordre)
+      where v.id = n.id and v.restaurant_id = $1`,
+    [resto, [...ids, ...reste], [...rubriques, ...reste.map(() => null)], [...ids.map(() => false), ...reste.map(() => true)]]);
+  revalidatePath(`/admin/${resto}/stocks`);
+  return { ok: true };
+}
+
 // ───────── Paramètres ─────────
 export async function enregistrerParametresStock(resto: string, f: FormData): Promise<Retour> {
   await exigerAcces(resto);

@@ -15,17 +15,23 @@ type Plan = { rubrique: string; vins: string[][] }[];
 
 let compteur = 0;
 
-export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = false }: { rubriques: RubriqueGlissable[]; enregistrer?: (plan: Plan) => Promise<{ ok: boolean }>; fixe?: boolean }) {
+/**
+ * `colonnes` : nombre de colonnes du tableau (8 sur la carte) ; `apres` : fin des messages d'enregistrement (« l’app est à jour » sur la carte).
+ * Une ligne qui contient des champs (page Les vins) ne se prend pas à la souris depuis un champ, un bouton ou un lien : on peut y écrire normalement.
+ */
+export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = false, colonnes = 8, apres = 'l’app est à jour' }: { rubriques: RubriqueGlissable[]; enregistrer?: (plan: Plan) => Promise<{ ok: boolean }>; fixe?: boolean; colonnes?: number; apres?: string }) {
   const router = useRouter();
   const [rubriques, setRubriques] = useState(initiales);
   const [glisse, setGlisse] = useState<{ type: 'vin' | 'rubrique'; cle: string } | null>(null);
   const [cible, setCible] = useState<string | null>(null);
   const [message, setMessage] = useState<string | null>(null);
   const [enCours, demarrer] = useTransition();
+  const [dansChamp, setDansChamp] = useState(false); // souris enfoncée sur un champ, un bouton ou un lien : pas de glisser
   useEffect(() => setRubriques(initiales), [initiales]); // nouvelle version du serveur (après enregistrement)
   useEffect(() => { if (!message) return; const t = setTimeout(() => setMessage(null), 2500); return () => clearTimeout(t); }, [message]);
 
-  const sauver = (r: RubriqueGlissable[], texte = 'Enregistré : l’app est à jour.') => {
+  const sauver = (r: RubriqueGlissable[], quoi = 'Enregistré') => {
+    const texte = `${quoi} : ${apres}.`;
     setRubriques(r);
     if (fixe || !enregistrer) return;
     demarrer(async () => {
@@ -45,7 +51,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
     if (!vin) return;
     const j = avant ? r[rubrique].vins.findIndex((v) => v.cle === avant) : 0; // sur le titre : en tête de la sous-catégorie
     r[rubrique].vins.splice(j >= 0 ? j : r[rubrique].vins.length, 0, vin);
-    sauver(r, 'Vin déplacé : l’app est à jour.');
+    sauver(r, 'Vin déplacé');
   };
   /** Flèches d'un vin : un cran ; au bord d'une sous-catégorie, il passe dans la voisine (même vide). */
   const flecheVin = (cle: string, sens: -1 | 1) => {
@@ -58,21 +64,21 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
       else if (i > 0) r[i - 1].vins.push(...vins.splice(j, 1)); else return;
     } else if (j < vins.length - 1) [vins[j + 1], vins[j]] = [vins[j], vins[j + 1]];
     else if (i < r.length - 1) r[i + 1].vins.unshift(...vins.splice(j, 1)); else return;
-    sauver(r, 'Vin déplacé : l’app est à jour.');
+    sauver(r, 'Vin déplacé');
   };
   const deplacerRubrique = (de: number, vers: number) => {
     if (de === vers || vers < 0 || vers >= rubriques.length) return;
     const r = copie();
     const [x] = r.splice(de, 1);
     r.splice(vers, 0, x);
-    sauver(r, 'Sous-catégorie déplacée : l’app est à jour.');
+    sauver(r, 'Sous-catégorie déplacée');
   };
   const renommer = (i: number, nom: string) => {
     const propre = nom.replace(/\s+/g, ' ').trim();
     if (propre === rubriques[i].nom) return;
     const r = copie();
     r[i] = { ...r[i], nom: propre };
-    if (r[i].vins.length) sauver(r, propre ? 'Sous-catégorie renommée.' : 'Titre retiré.'); else setRubriques(r);
+    if (r[i].vins.length) sauver(r, propre ? 'Sous-catégorie renommée' : 'Titre retiré'); else setRubriques(r);
   };
   const [nouvelle, setNouvelle] = useState<string | null>(null); // titre à remplir (curseur dedans)
   const ajouter = () => { const cle = `n${Date.now()}-${compteur++}`; setRubriques((r) => [...r, { cle, nom: '', vins: [] }]); setNouvelle(cle); };
@@ -93,7 +99,7 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
               fin();
             }}>
             {r.entete ?? (
-              <td colSpan={8}>
+              <td colSpan={colonnes}>
                 <div style={{ display: 'flex', gap: 8, alignItems: 'center', flexWrap: 'wrap' }}>
                   <span draggable={!fixe} onDragStart={(e) => { setGlisse({ type: 'rubrique', cle: r.cle }); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', ''); }} onDragEnd={fin}
                     title="Glissez pour déplacer la sous-catégorie avec ses vins" aria-hidden="true" style={{ cursor: 'grab', color: '#C9BCB8', fontSize: 18, padding: '0 4px' }}>⋮⋮</span>
@@ -111,13 +117,15 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
           </tr>
           {!r.vins.length && !fixe && (
             <tr onDragOver={survol(`r:${r.cle}`)} onDrop={(e) => { e.preventDefault(); if (glisse?.type === 'vin') deposerVin(glisse.cle, ri, null); fin(); }}>
-              <td colSpan={8} style={{ padding: 18, textAlign: 'center', border: '2px dashed var(--ligne, #AFB0AE)', color: '#241F20', ...trait(`r:${r.cle}`) }}>
+              <td colSpan={colonnes} style={{ padding: 18, textAlign: 'center', border: '2px dashed var(--ligne, #AFB0AE)', color: '#241F20', ...trait(`r:${r.cle}`) }}>
                 Déposez un vin ici, ou utilisez les flèches ↓ d’un vin de la sous-catégorie du dessus.
               </td>
             </tr>
           )}
           {r.vins.map((v, vi) => (
-            <tr key={v.cle} id={v.ancre} className={v.classe} draggable={!fixe}
+            <tr key={v.cle} id={v.ancre} className={v.classe} draggable={!fixe && !dansChamp}
+              onMouseDownCapture={(e) => setDansChamp(Boolean((e.target as HTMLElement).closest('input, select, textarea, button')))}
+              onMouseUp={() => setDansChamp(false)}
               onDragStart={(e) => { e.stopPropagation(); setGlisse({ type: 'vin', cle: v.cle }); e.dataTransfer.effectAllowed = 'move'; e.dataTransfer.setData('text/plain', ''); }} onDragEnd={fin}
               onDragOver={survol(v.cle)}
               onDrop={(e) => {
@@ -145,12 +153,12 @@ export function TableCarteGlissable({ rubriques: initiales, enregistrer, fixe = 
         </tbody>
       ))}
       {!fixe && (
-        <tbody><tr><td colSpan={8} style={{ border: 0, paddingTop: 12 }}>
+        <tbody><tr><td colSpan={colonnes} style={{ border: 0, paddingTop: 12 }}>
           <button type="button" className="btn sec petit" onClick={ajouter}>+ Nouvelle sous-catégorie</button>
           <span className="petit discret" style={{ marginLeft: 10 }}>Elle s’ajoute en bas : nommez-la, puis glissez-y des vins (ou flèche ↓ sur le dernier vin du dessus).</span>
         </td></tr></tbody>
       )}
-      {message && <tbody><tr><td colSpan={8} style={{ padding: 0, border: 0 }}><span role="status" className="toast-admin">{message}</span></td></tr></tbody>}
+      {message && <tbody><tr><td colSpan={colonnes} style={{ padding: 0, border: 0 }}><span role="status" className="toast-admin">{message}</span></td></tr></tbody>}
     </>
   );
 }

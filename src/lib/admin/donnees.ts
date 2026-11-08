@@ -111,6 +111,8 @@ export interface VinBO {
   /** Gestion des stocks : bouteilles en stock et en commande (sur la ligne principale du vin), fournisseur. */
   stock: number; en_commande: number; fournisseur_id: string | null; distributeur_vin_id: string | null;
   profil_degustation: Record<string, unknown> | null; ordre: number;
+  /** Classement dans la page « Les vins » (la cave), à part de celui de la carte : sous-catégorie et place. */
+  cave_rubrique: string | null; cave_ordre: number | null;
   /** Nature, bio : base de Pat. */
   nature: boolean; bio: boolean;
   /** Vin lu sur la carte à l'inscription : « reconnu » (relié à un vin de la base de Pat) ou « en_attente » de validation ; null sinon. */
@@ -124,7 +126,7 @@ export async function getVinsBO(restaurantId: string) {
             v.millesime, v.format, v.prix, v.prix_verre,
             v.cepages, v.resume_court, v.presentation, v.etiquette_url, v.etiquette_source,
             ${SQL_LOGO_DISTRIBUTEUR('v')} as logo_distributeur, v.etiquette_statut, v.etiquette_erreur, v.coup_de_coeur,
-            v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.presentation_carte, v.presentation_carte_perso,
+            v.disponible, v.a_verifier, v.pays, v.vin_texte, v.profil_degustation, v.ordre, v.cave_rubrique, v.cave_ordre, v.presentation_carte, v.presentation_carte_perso,
             v.appellation_texte, v.nom_vin, t.nom as appellation_nom, v.contenances,
             coalesce(v.nature, cu.nature, false) as nature, coalesce(v.bio, cu.bio, false) as bio,
             v.stock, v.en_commande, v.fournisseur_id, v.distributeur_vin_id,

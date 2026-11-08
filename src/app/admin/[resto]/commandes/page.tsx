@@ -25,7 +25,7 @@ const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'nume
 // Suivi Quid Vinum, tel que le restaurant le lit.
 // Commande Quid Vinum envoyée : son statut suit Quid Vinum (en attente de validation, acceptée, envoyée au distributeur…).
 const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'En cours de traitement', envoyee_distributeur: 'En cours de livraison',
-  livree: 'Bouteilles livrées', livree_partielle: 'Livraison partielle', facturee: 'Commande livrée' };
+  livree_partielle: 'Livraison partielle', livree: 'Commande livrée', facturee: 'Bouteilles facturées' };
 const total = (c: Commande) => c.lignes.reduce((n, l) => n + l.quantite, 0);
 
 export default async function Commandes({ params, searchParams }: { params: Promise<{ resto: string }>; searchParams: Promise<{ commande?: string; f?: string; vin?: string; ok?: string; catalogue?: string }> }) {

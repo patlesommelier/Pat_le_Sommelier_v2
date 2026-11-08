@@ -13,7 +13,7 @@ import { STATUTS_QV } from '@/lib/super/commandes';
 
 // Commande Quid Vinum envoyée : son statut suit Quid Vinum.
 const SUIVI_QV: Record<string, string> = { recue: 'Commande envoyée · en attente de validation', acceptee: 'En cours de traitement', envoyee_distributeur: 'En cours de livraison',
-  livree: 'Bouteilles livrées', livree_partielle: 'Livraison partielle', facturee: 'Commande livrée' };
+  livree_partielle: 'Livraison partielle', livree: 'Commande livrée', facturee: 'Bouteilles facturées' };
 const date = (d: string) => new Date(d).toLocaleDateString('fr-BE', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Europe/Brussels' });
 
 export default async function BonDeCommande({ params, searchParams }: { params: Promise<{ resto: string; id: string }>; searchParams: Promise<{ suite?: string; n?: string; total?: string; ok?: string }> }) {
