@@ -18,7 +18,7 @@ export interface Restaurant {
   logo_choix?: string | null;
   /** Page d'arrivée de l'app : 'menu' (avec le sommelier) ou 'carte' (carte des vins). */
   page_accueil?: string;
-  /** Design de l'app des clients : « Crème et courbes » pour tous, sauf 'classique' (l'ancien design). */
+  /** Mise en page de l'app des clients, choisie dans « Apparence » : vide ou 'creme' (Crème et courbes), 'classique', 'sombre'. */
   design_app?: string | null;
   /** Couleur claire : couleur foncée du logo pour les boutons de l'app ('' : aucune trouvée), et ce dont elle a été calculée. */
   couleur_boutons?: string | null; couleur_boutons_cle?: string | null;

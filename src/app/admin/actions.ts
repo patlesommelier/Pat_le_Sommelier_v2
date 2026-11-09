@@ -1026,6 +1026,9 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
       ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null],
   );
+  // Mise en page de l'app des clients : Crème et courbes (par défaut), Classique ou Sombre.
+  const mise = txt(f, 'design_app');
+  if (mise && ['creme', 'classique', 'sombre'].includes(mise)) await requete('update restaurant set design_app = $2 where id = $1', [resto, mise]);
   // Couleur des impressions : vide = automatique.
   if (f.has('couleur_impression_envoyee')) {
     const ci = txt(f, 'couleur_impression');

@@ -78,10 +78,13 @@ interface Props {
   impression?: React.ReactNode;
   /** Page d'arrivée de l'app : 'menu' ou 'carte'. */
   pageAccueil?: string;
+  /** Mise en page de l'app des clients : 'creme' (par défaut), 'classique' ou 'sombre'. */
+  miseEnPage?: MiseEnPage;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', plats, impression }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', miseEnPage = 'creme', plats, impression }: Props) {
+  const [mise, setMise] = useState<MiseEnPage>(miseEnPage);
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
   const [palette, setPalette] = useState<string[]>([]);
@@ -120,6 +123,23 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
       <input type="hidden" name="couleur" value={couleur} />
       <input type="hidden" name="logo_choix" value={choix} />
       <div className="large" style={{ gap: 24 }}>
+        {/* Mise en page de l'app : trois choix, chacun avec son aperçu aux couleurs et au logo du restaurant. */}
+        <section className="carte-bo pile">
+          <div><h2>Mise en page de l’app</h2><p className="sous">Choisissez l’allure de l’app que vos clients ouvrent avec le QR code. Elle garde toujours votre couleur et votre logo.</p></div>
+          <div role="radiogroup" aria-label="Mise en page de l’app" className="choix-mise-en-page">
+            {MISES_EN_PAGE.map(([cle, titre, detail]) => (
+              <label key={cle} className="mise-en-page" data-choisie={mise === cle ? 'oui' : undefined}>
+                <span className="mise-en-page-apercu" aria-hidden="true">
+                  <ApercuApp mise={cle} couleur={couleur} texte={texte} logo={logoAffiche} nom={nom} a1={a1} a2={a2} plats={plats} />
+                </span>
+                <span style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
+                  <input type="radio" name="design_app" value={cle} checked={mise === cle} onChange={() => setMise(cle)} style={{ width: 20, height: 20, marginTop: 1, flexShrink: 0 }} />
+                  <span className="pile" style={{ gap: 2 }}><b>{titre}</b><small className="discret">{detail}</small></span>
+                </span>
+              </label>
+            ))}
+          </div>
+        </section>
         <section className="carte-bo pile">
           <div><h2>Couleur de l’app</h2><p className="sous">Déposez une photo de votre salle ou de votre devanture : Pat en tire les couleurs dominantes. Vous pouvez aussi saisir votre couleur.</p></div>
           <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', alignItems: 'start' }}>
@@ -212,36 +232,97 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
       </div>
       <aside className="etroit" style={{ alignItems: 'center' }}>
         <span className="surtitre">Aperçu de votre app</span>
-        <div className="apercu-app" style={{ width: 340, maxWidth: '100%', height: 640, boxSizing: 'border-box', border: '10px solid #241F20', borderRadius: 42, overflow: 'hidden', background: '#FFF', display: 'flex', flexDirection: 'column', fontFamily: 'Lato, sans-serif', color: '#1A1A1A' }}>
-          <div style={{ background: couleur, color: texte, padding: '14px 16px 22px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              {logoAffiche ? <img src={logoAffiche} alt="" style={{ maxWidth: 120, maxHeight: 56 }} /> : <b style={{ fontSize: 22 }}>{nom}</b>}
-              <span style={{ marginLeft: 'auto', height: 28, padding: '0 8px', border: `1px solid ${texte}`, display: 'flex', alignItems: 'center', fontSize: 9, fontWeight: 700, letterSpacing: 1.3, textTransform: 'uppercase' }}>Carte des vins</span>
-            </div>
-            <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, marginTop: 8 }}>
-              <span style={{ fontSize: 21, fontWeight: 700, lineHeight: 1.25 }}>{a1}<br /><span style={{ fontWeight: 400, fontSize: 15 }}>{a2}</span></span>
-              <span style={{ width: 40, height: 1, background: texte }} />
-              <span style={{ fontSize: 15, fontStyle: 'italic' }}>Qu’allez-vous manger ?</span>
-            </div>
+        <ApercuApp mise={mise} couleur={couleur} texte={texte} logo={logoAffiche} nom={nom} a1={a1} a2={a2} plats={plats} />
+      </aside>
+    </FormulaireAdmin>
+  );
+}
+
+type MiseEnPage = 'creme' | 'classique' | 'sombre';
+const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
+  ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
+  ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
+  ['sombre', 'Sombre', 'Fond sombre, idéal pour une salle peu éclairée le soir.'],
+];
+
+/** Aperçu de l'app des clients (téléphone), dans la mise en page choisie, avec la couleur, le logo et le message du restaurant. */
+function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: MiseEnPage; couleur: string; texte: string; logo: string | null; nom: string; a1: string; a2: string; plats: string[] }) {
+  const clair = texte !== '#FFFFFF';
+  const accent = clair ? '#1A1A1A' : couleur;
+  const melange = (k: number) => { const n = parseInt(accent.slice(1), 16); const c = (v: number) => Math.round(v * k + 255 * (1 - k)).toString(16).padStart(2, '0'); return `#${c((n >> 16) & 255)}${c((n >> 8) & 255)}${c(n & 255)}`; };
+  const sombre = mise === 'sombre';
+  const fond = sombre ? '#1C1A19' : mise === 'creme' ? melange(0.07) : '#FFFFFF';
+  const surface = sombre ? '#2A2725' : '#FFFFFF';
+  const encre = sombre ? '#F5EFE8' : '#1A1A1A';
+  const ligne = sombre ? '#3D3835' : melange(0.2);
+  const pastille = sombre ? '#332F2C' : melange(0.1);
+  const titre = 'Outfit, Lato, sans-serif';
+  const logoImg = logo
+    // eslint-disable-next-line @next/next/no-img-element
+    ? <img src={logo} alt="" style={{ maxWidth: 120, maxHeight: 56 }} /> : <b style={{ fontSize: 22 }}>{nom}</b>;
+  const telephone: React.CSSProperties = { width: 340, maxWidth: '100%', height: 640, boxSizing: 'border-box', border: '10px solid #241F20', borderRadius: 42, overflow: 'hidden', background: fond, display: 'flex', flexDirection: 'column', fontFamily: 'Lato, sans-serif', color: encre };
+  if (mise === 'classique') {
+    return (
+      <div className="apercu-app" style={telephone}>
+        <div style={{ background: couleur, color: texte, padding: '14px 16px 22px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            {logoImg}
+            <span style={{ marginLeft: 'auto', height: 28, padding: '0 8px', border: `1px solid ${texte}`, display: 'flex', alignItems: 'center', fontSize: 9, fontWeight: 700, letterSpacing: 1.3, textTransform: 'uppercase' }}>Carte des vins</span>
           </div>
-          <div style={{ flexGrow: 1, minHeight: 0, overflow: 'hidden', padding: '16px 12px' }}>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '16px 6px', border: '1px solid #DDD' }}>
-              <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}><span style={{ fontSize: 12, letterSpacing: 2 }}>ENTRÉES</span><span style={{ width: 18, height: 1, background: couleur }} /></div>
-              <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 5 }}>
-                {plats.slice(0, 9).map((p) => <span key={p} style={{ height: 26, padding: '0 6px', border: '1px solid #BDBDBD', display: 'flex', alignItems: 'center', fontSize: 10 }}>{p}</span>)}
-              </div>
-            </div>
+          <div style={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 10, marginTop: 8 }}>
+            <span style={{ fontSize: 21, fontWeight: 700, lineHeight: 1.25 }}>{a1}<br /><span style={{ fontWeight: 400, fontSize: 15 }}>{a2}</span></span>
+            <span style={{ width: 40, height: 1, background: texte }} />
+            <span style={{ fontSize: 15, fontStyle: 'italic' }}>Qu’allez-vous manger ?</span>
           </div>
-          <div style={{ padding: '10px 12px 12px', boxShadow: '0 -6px 18px rgba(0,0,0,0.1)' }}>
-            <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 4px 4px', borderRadius: 30, background: '#FFEEED', border: '1.5px solid #FF0D05' }}>
-              <span style={{ width: 42, height: 42, borderRadius: 21, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}>
-                <span className="buste-pat" /></span>
-              <span style={{ flexGrow: 1, fontSize: 14, fontWeight: 700, color: '#4A4A4A' }}>Demandez à Pat…</span>
+        </div>
+        <div style={{ flexGrow: 1, minHeight: 0, overflow: 'hidden', padding: '16px 12px' }}>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: '16px 6px', border: '1px solid #DDD' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 6 }}><span style={{ fontSize: 12, letterSpacing: 2 }}>ENTRÉES</span><span style={{ width: 18, height: 1, background: couleur }} /></div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: 5 }}>
+              {plats.slice(0, 9).map((p) => <span key={p} style={{ height: 26, padding: '0 6px', border: '1px solid #BDBDBD', display: 'flex', alignItems: 'center', fontSize: 10 }}>{p}</span>)}
             </div>
           </div>
         </div>
-      </aside>
-    </FormulaireAdmin>
+        <div style={{ padding: '10px 12px 12px', boxShadow: '0 -6px 18px rgba(0,0,0,0.1)' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: '4px 6px 4px 4px', borderRadius: 30, background: '#FFEEED', border: '1.5px solid #FF0D05' }}>
+            <span style={{ width: 42, height: 42, borderRadius: 21, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}><span className="buste-pat" /></span>
+            <span style={{ flexGrow: 1, fontSize: 14, fontWeight: 700, color: '#4A4A4A' }}>Demandez à Pat…</span>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  // Crème et courbes, ou Sombre (la même mise en page sur fond sombre).
+  return (
+    <div className="apercu-app" style={telephone}>
+      <div style={{ position: 'relative', overflow: 'hidden', background: couleur, color: texte, padding: '14px 16px 20px', borderRadius: '0 0 26px 26px', display: 'flex', flexDirection: 'column', gap: 10, borderBottom: clair ? `1px solid ${ligne}` : 0 }}>
+        <span style={{ position: 'absolute', top: -70, right: -50, width: 170, height: 130, borderRadius: '62% 38% 55% 45% / 48% 60% 40% 52%', background: clair ? 'rgba(26,26,26,0.05)' : 'rgba(255,255,255,0.12)' }} />
+        <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 10 }}>
+          {logoImg}
+          <span style={{ marginLeft: 'auto', height: 30, padding: '0 12px', borderRadius: 999, background: clair ? accent : 'rgba(255,255,255,0.18)', color: clair ? '#FFFFFF' : texte, display: 'flex', alignItems: 'center', fontFamily: titre, fontSize: 11, fontWeight: 600 }}>Carte des vins</span>
+        </div>
+        <div style={{ position: 'relative', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginTop: 6 }}>
+          <span style={{ fontFamily: titre, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.02em' }}>{a1}<br /><span style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400, fontSize: 15, letterSpacing: 0 }}>{a2}</span></span>
+          <span style={{ fontFamily: titre, fontSize: 15, fontWeight: 600 }}>Qu’allez-vous manger ?</span>
+        </div>
+      </div>
+      <div style={{ flexGrow: 1, minHeight: 0, overflow: 'hidden', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
+        <div style={{ display: 'flex', gap: 4, padding: 4, borderRadius: 999, background: surface, border: sombre ? `1px solid ${ligne}` : 0, boxShadow: sombre ? 'none' : '0 8px 20px -12px rgba(46,46,46,0.35)' }}>
+          {['Entrées', 'Plats', 'Desserts'].map((x) => <span key={x} style={{ flex: 1, textAlign: 'center', padding: '6px 0', fontFamily: titre, fontWeight: 600, fontSize: 11 }}>{x}</span>)}
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '14px 12px', borderRadius: 18, background: surface, border: `1px solid ${ligne}` }}>
+          <span style={{ fontFamily: titre, fontWeight: 700, fontSize: 15 }}>Entrées</span>
+          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
+            {plats.slice(0, 8).map((p, i) => <span key={p} style={{ height: 26, padding: '0 10px', borderRadius: 999, border: `1px solid ${i === 1 ? accent : ligne}`, background: i === 1 ? accent : pastille, color: i === 1 ? '#FFFFFF' : encre, fontWeight: i === 1 ? 700 : 400, display: 'flex', alignItems: 'center', fontSize: 10 }}>{i === 1 ? '✓ ' : ''}{p}</span>)}
+          </div>
+        </div>
+      </div>
+      <div style={{ padding: '6px 12px 12px' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: 4, borderRadius: 999, background: surface, border: sombre ? `1px solid ${ligne}` : 0, boxShadow: sombre ? 'none' : '0 12px 26px -14px rgba(46,46,46,0.45)' }}>
+          <span style={{ width: 38, height: 38, borderRadius: 19, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}><span className="buste-pat" /></span>
+          <span style={{ flexGrow: 1, fontFamily: titre, fontSize: 13, fontWeight: 500, color: sombre ? '#C9BFB5' : '#4A4A4A' }}>Demandez à Pat…</span>
+        </div>
+      </div>
+    </div>
   );
 }
