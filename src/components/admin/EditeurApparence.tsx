@@ -133,7 +133,8 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
                   <ApercuApp mise={cle} couleur={couleur} texte={texte} logo={logoAffiche} nom={nom} a1={a1} a2={a2} plats={plats} />
                 </span>
                 <span style={{ display: 'flex', gap: 8, alignItems: 'flex-start' }}>
-                  <input type="radio" name="design_app" value={cle} checked={mise === cle} onChange={() => setMise(cle)} style={{ width: 20, height: 20, marginTop: 1, flexShrink: 0 }} />
+                  {/* defaultChecked (pas checked) : après l'enregistrement, le formulaire revient à l'état par défaut ; il suit ainsi le choix fait. */}
+                  <input type="radio" name="design_app" value={cle} defaultChecked={mise === cle} onChange={() => setMise(cle)} style={{ width: 20, height: 20, marginTop: 1, flexShrink: 0 }} />
                   <span className="pile" style={{ gap: 2 }}><b>{titre}</b><small className="discret">{detail}</small></span>
                 </span>
               </label>
@@ -199,7 +200,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
               return (
                 <div key={cle} className="pile" style={{ gap: 10, padding: 14, borderRadius: 14, border: choisi ? '2.5px solid var(--encre)' : '1.5px solid var(--ligne)' }}>
                   <label style={{ display: 'flex', gap: 10, alignItems: 'flex-start', cursor: apercu ? 'pointer' : 'default' }}>
-                    <input type="radio" name="choix_logo" checked={choisi} disabled={!apercu} onChange={() => setChoix(cle)} style={{ width: 20, height: 20, marginTop: 2 }} />
+                    <input type="radio" name="choix_logo" defaultChecked={choisi} disabled={!apercu} onChange={() => setChoix(cle)} style={{ width: 20, height: 20, marginTop: 2 }} />
                     <span><b>{titre}</b>{choisi && apercu ? <span style={{ color: 'var(--vert)', fontWeight: 700 }}> · affiché dans l’app</span> : null}<br /><span className="aide">{aide}</span></span>
                   </label>
                   <span style={{ height: 96, borderRadius: 12, background: couleur, border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
