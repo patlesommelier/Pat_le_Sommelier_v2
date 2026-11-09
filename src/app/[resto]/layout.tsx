@@ -40,7 +40,7 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Bento, Néo-brutalisme et Éditorial : posés sur Crème et courbes (même structure), chacun avec son style.
   const sombre = restaurant.design_app === 'sombre';
   const creme = restaurant.design_app !== 'classique';
-  const style = ['bento', 'brut', 'edito', 'relief'].includes(restaurant.design_app ?? '') ? restaurant.design_app : null;
+  const style = ['bento', 'brut', 'edito', 'relief', 'greige'].includes(restaurant.design_app ?? '') ? restaurant.design_app : null;
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,

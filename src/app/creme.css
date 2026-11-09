@@ -257,3 +257,74 @@
 .design-relief .raccourcis-plats .compte { background: radial-gradient(circle at 30% 25%, rgba(255, 255, 255, 0.3), transparent 50%), var(--bouton); }
 .design-relief .etiquette, .design-relief .etiquette-vide { border: 0; box-shadow: var(--relief-petit); }
 @media (prefers-reduced-motion: reduce) { .design-relief .bulle, .design-relief .bouton-plein, .design-relief .rond.principal { transition: none; } }
+
+/* ── Grège (design_app = 'greige') : « Quiet Luxury », luxe discret scandinave et japonais ──
+   Blancs cassés, gris chauds, lin et grège ; filets ultra-fins, police légère, grands espaces. Aucune couleur vive :
+   seules les étiquettes des bouteilles (et le logo, dans sa petite pastille) apportent de la couleur. */
+.design-greige { --fond: #F4F1EC; --surface: #FAF8F5; --fond-pastille: transparent; --ligne-creme: #DDD6CB; --texte-creme: #4A443E; --doux-creme: #8C847A;
+  --bouton: #4A443E !important; --marque-texte: #4A443E !important; --sur-bouton: #FAF8F5 !important;
+  color: #4A443E; font-family: Jost, 'Helvetica Neue', sans-serif; font-weight: 300; }
+.design-greige .bandeau-haut, .design-greige .bandeau-suite, .design-greige .question-bandeau { background: var(--fond); color: #4A443E; }
+.design-greige .bandeau-haut::before { display: none; }
+.design-greige .bandeau .bandeau-haut .logo img, .design-greige .bandeau.grand .bandeau-haut .logo img { background: var(--marque); padding: 6px 12px; border-radius: 999px; height: 24px !important; width: auto; box-sizing: content-box; }
+.design-greige .question-bandeau { border-radius: 0; border-bottom: 1px solid var(--ligne-creme); padding-top: 8px; padding-bottom: 26px;
+  font-family: Jost, sans-serif; font-weight: 300; font-style: normal; font-size: 19px; letter-spacing: 0.04em; }
+.design-greige .accueil-defile { background: var(--fond); }
+.design-greige .accueil-hero { padding-top: 26px; padding-bottom: 22px; }
+.design-greige .accueil-titre { font-family: Jost, sans-serif; font-weight: 300; letter-spacing: 0.01em; }
+.design-greige .accueil-titre span { font-family: Jost, sans-serif; font-weight: 300; color: #8C847A; font-size: 17px; }
+.design-greige .bouton-carte, .design-greige.bandeau-clair .bouton-carte { background: transparent; color: #4A443E; border: 1px solid #B8AFA3; border-radius: 999px; height: 38px; padding: 0 16px;
+  font-family: Jost, sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; }
+.design-greige .bouton-carte svg { display: none; }
+.design-greige .retour { color: #4A443E; }
+.design-greige .contenu { padding-top: 30px; gap: 28px; }
+.design-greige .titre-page h1, .design-greige .fiche-entete h1 { font-family: Jost, sans-serif; font-weight: 300; font-size: 26px; letter-spacing: 0.04em; color: #4A443E; }
+.design-greige .boite { background: transparent; border: 0; box-shadow: none; padding: 0 2px; gap: 16px; }
+.design-greige .titre-section span { font-family: Jost, sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: 0.24em; text-transform: uppercase; color: #8C847A; }
+.design-greige .bulles { gap: 8px; }
+.design-greige .bulle { border: 1px solid var(--ligne-creme); border-radius: 999px; background: transparent; font-family: Jost, sans-serif; font-weight: 300; font-size: 15px; color: #4A443E; }
+.design-greige .bulle.choisie { font-weight: 400; }
+.design-greige .raccourcis-plats { background: transparent; box-shadow: none; border-radius: 0; padding: 0; gap: 22px; border-bottom: 1px solid var(--ligne-creme); }
+.design-greige .raccourcis-plats a { flex: 0 0 auto; padding: 0; border-radius: 0; font-family: Jost, sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; }
+.design-greige .selection-plats { background: var(--surface); border: 1px solid var(--ligne-creme); border-radius: 6px; box-shadow: 0 24px 48px -30px rgba(74, 68, 62, 0.3); }
+.design-greige .selection-haut b { font-family: Jost, sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C847A; }
+.design-greige .plat-choisi { background: transparent; border: 1px solid var(--ligne-creme); font-family: Jost, sans-serif; font-weight: 300; }
+.design-greige .bouton-plein, .design-greige .selection-plats .bouton-plein, .design-greige a.bouton-plein {
+  border-radius: 999px; font-family: Jost, sans-serif; font-weight: 400; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; }
+.design-greige .onglets { background: var(--fond); gap: 22px; }
+.design-greige .onglet { background: transparent; box-shadow: none; border-radius: 0; padding: 0; height: 40px; min-height: 40px; font-family: Jost, sans-serif; font-weight: 400; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #8C847A; }
+.design-greige .onglet[aria-selected='true'] { background: transparent; color: #4A443E; border-bottom: 1px solid #4A443E; border-radius: 0; }
+.design-greige .onglet small { display: none; }
+.design-greige .panneau { gap: 0; }
+.design-greige .sous-titre { font-family: Jost, sans-serif; font-weight: 400; letter-spacing: 0.24em; color: #8C847A; }
+.design-greige .ligne-vin, .design-greige .carte-vin { background: transparent; border: 0; border-bottom: 1px solid var(--ligne-creme); border-radius: 0; box-shadow: none; padding: 18px 2px; }
+.design-greige .ligne-vin .nom, .design-greige .carte-vin .nom { font-family: Jost, sans-serif; font-weight: 400; font-size: 16.5px; letter-spacing: 0.01em; }
+.design-greige .ligne-vin .sous, .design-greige .carte-vin .sous { font-weight: 300; }
+.design-greige .prix { font-family: Jost, sans-serif; font-weight: 400; color: #4A443E; }
+.design-greige .etiquette, .design-greige .etiquette-vide { border: 1px solid var(--ligne-creme); border-radius: 4px; background: #FFFFFF; }
+.design-greige .ligne-prix, .design-greige .encadre, .design-greige .etat-vide, .design-greige .fiche-chat { background: transparent; border: 1px solid var(--ligne-creme); border-radius: 6px; box-shadow: none; }
+.design-greige .barre-pat form { background: var(--surface); border: 1px solid var(--ligne-creme); box-shadow: none; }
+.design-greige .barre-pat textarea { font-family: Jost, sans-serif; font-weight: 300; letter-spacing: 0.02em; }
+.design-greige .rond.secondaire { background: transparent; border: 1px solid var(--ligne-creme); }
+.design-greige .rond.principal { background: #4A443E; }
+.design-greige .conversation { background: var(--fond); }
+.design-greige .message.pat { background: var(--surface); border: 1px solid var(--ligne-creme); }
+.design-greige .message.client { background: #4A443E; color: #FAF8F5; }
+/* Grège : la carte des vins en galerie — les étiquettes en grand, deux par ligne, le nom et le prix dessous, centrés.
+   Ce sont les bouteilles qui donnent sa couleur à l'app. */
+.design-greige .panneau { padding: 8px 18px 28px; }
+.design-greige .panneau > div { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 34px 16px; padding-top: 14px; }
+.design-greige .panneau > div > .sous-titre { grid-column: 1 / -1; text-align: center; padding: 18px 0 0; }
+.design-greige .ligne-vin { flex-direction: column; align-items: center; gap: 10px; text-align: center; border: 0; padding: 0; }
+.design-greige .ligne-vin .etiquette, .design-greige .ligne-vin .etiquette-vide { width: 100% !important; height: 190px !important; padding: 16px !important; box-sizing: border-box;
+  object-fit: contain; background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 2px; }
+.design-greige .ligne-vin .etiquette-nom { font-size: 13px !important; font-family: Jost, sans-serif; font-weight: 400; }
+.design-greige .ligne-vin .infos { align-items: center; gap: 4px; }
+.design-greige .ligne-vin .nom { font-size: 15.5px; }
+.design-greige .ligne-vin .sous { font-size: 12.5px; line-height: 1.4; }
+.design-greige .ligne-vin .prix { text-align: center; font-size: 15px; }
+.design-greige .ligne-vin .prix small { display: block; }
+/* Propositions de Pat : la bouteille en grand au-dessus de chaque proposition. */
+.design-greige .carte-vin { flex-direction: column; align-items: stretch; gap: 14px; padding: 0 0 24px; }
+.design-greige .carte-vin .etiquette, .design-greige .carte-vin .etiquette-vide { width: 100% !important; height: 240px !important; padding: 20px !important; box-sizing: border-box;
+  object-fit: contain; background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 2px; }

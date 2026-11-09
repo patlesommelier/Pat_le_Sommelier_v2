@@ -112,7 +112,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   );
 }
 
-export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito' | 'relief';
+export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito' | 'relief' | 'greige';
 const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
   ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
@@ -121,15 +121,17 @@ const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['brut', 'Néo-brutalisme', 'Contours noirs, ombres nettes, couleurs vives et titres épais.'],
   ['edito', 'Éditorial lumineux', 'Beige lin, beaucoup d’air, titres élégants et listes à filets fins.'],
   ['relief', 'Relief', 'Cartes et boutons en relief, comme des capsules de bouteille ; filtres en liège et en verre.'],
+  ['greige', 'Grège', 'Luxe discret : blancs cassés et gris chauds, filets très fins, beaucoup de calme.'],
 ];
 
 /** Réglages de l'aperçu de chaque mise en page posée sur Crème et courbes. */
 const STYLES: Record<Exclude<MiseEnPage, 'classique'>, { fond: string; surface: string; encre: string; ligne?: string; pastille?: string; bord?: string; ombre?: string; ombrePetite?: string;
-  rayon: number; titre: string; majuscules?: boolean; bandeauNeutre?: boolean; liste?: boolean }> = {
+  rayon: number; titre: string; majuscules?: boolean; bandeauNeutre?: boolean; liste?: boolean; accent?: string }> = {
   creme: { fond: '', surface: '#FFFFFF', encre: '#1A1A1A', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   sombre: { fond: '#1C1A19', surface: '#2A2725', encre: '#F5EFE8', ligne: '#3D3835', pastille: '#332F2C', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   bento: { fond: '#EFECE7', surface: '#FFFFFF', encre: '#1F1D1C', ligne: '#FFFFFF', pastille: '#F4F2EE', rayon: 24, titre: 'Outfit, Lato, sans-serif' },
   brut: { fond: '#FFF1C9', surface: '#FFFFFF', encre: '#111111', ligne: '#111111', pastille: '#FFFFFF', bord: '2px solid #111111', ombre: '4px 4px 0 #111111', ombrePetite: '2px 2px 0 #111111', rayon: 10, titre: "'Archivo Black', sans-serif", majuscules: true },
+  greige: { fond: '#F4F1EC', surface: '#FAF8F5', encre: '#4A443E', ligne: '#DDD6CB', pastille: 'transparent', bord: '1px solid #DDD6CB', rayon: 6, titre: 'Jost, sans-serif', bandeauNeutre: true, accent: '#4A443E' },
   relief: { fond: '#ECE7E1', surface: '#ECE7E1', encre: '#3A332D', ligne: '#ECE7E1', pastille: '#EDE8E2', bord: '0', ombre: '6px 6px 12px #CFC7BD, -6px -6px 12px #FFFFFF', ombrePetite: '3px 3px 6px #CBC3B9, -3px -3px 6px #FFFFFF', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   edito: { fond: '#F6F1E8', surface: '#FFFDF9', encre: '#2B2724', ligne: '#E2D9CC', pastille: 'transparent', rayon: 0, titre: 'Fraunces, Georgia, serif', bandeauNeutre: true, liste: true },
 };
@@ -203,7 +205,7 @@ function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: M
           <span style={{ marginLeft: 'auto', height: 30, padding: '0 12px', borderRadius: mise === 'brut' ? 8 : 999, display: 'flex', alignItems: 'center', fontFamily: mise === 'edito' ? 'Inter, sans-serif' : titre, fontSize: 11, fontWeight: 600,
             textTransform: mise === 'brut' || mise === 'edito' ? 'uppercase' : undefined, letterSpacing: mise === 'edito' ? '0.12em' : undefined,
             ...(mise === 'brut' ? { background: '#FFE14D', color: '#111111', border: st.bord, boxShadow: st.ombrePetite }
-              : mise === 'edito' ? { background: 'transparent', color: st.encre, borderRadius: 0, borderBottom: `1px solid ${st.encre}`, padding: 0 }
+              : st.bandeauNeutre ? { background: 'transparent', color: st.encre, borderRadius: 0, borderBottom: `1px solid ${st.encre}`, padding: 0 }
               : { background: clair ? accent : 'rgba(255,255,255,0.18)', color: clair ? '#FFFFFF' : texte }) }}>Carte des vins</span>
         </div>
         <div style={{ position: 'relative', textAlign: mise === 'edito' ? 'left' : 'center', display: 'flex', flexDirection: 'column', alignItems: mise === 'edito' ? 'flex-start' : 'center', gap: 8, marginTop: 6 }}>
@@ -221,7 +223,7 @@ function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: M
           <div style={st.liste ? { display: 'flex', flexDirection: 'column', borderTop: `1px solid ${lignes}` } : { display: mise === 'bento' ? 'grid' : 'flex', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', flexWrap: 'wrap', gap: 5 }}>
             {plats.slice(0, st.liste ? 6 : 8).map((p, i) => st.liste
               ? <span key={p} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: 30, borderBottom: `1px solid ${lignes}`, fontFamily: st.titre, fontSize: 12.5, color: i === 1 ? couleur : st.encre }}>{p}<span style={{ width: 11, height: 11, borderRadius: '50%', border: `1px solid ${i === 1 ? couleur : '#A89E92'}`, background: i === 1 ? couleur : 'transparent' }} /></span>
-              : <span key={p} style={{ minHeight: 26, padding: '4px 10px', borderRadius: mise === 'bento' ? 12 : 999, border: i === 1 ? (st.bord ?? `1px solid ${accent}`) : st.bord ?? (mise === 'bento' ? 0 : `1px solid ${lignes}`), boxShadow: i === 1 ? 'none' : st.ombrePetite, background: i === 1 ? accent : pastilles, color: i === 1 ? '#FFFFFF' : st.encre, fontWeight: i === 1 || mise === 'brut' ? 700 : 400, display: 'flex', alignItems: 'center', fontSize: 10, boxSizing: 'border-box' }}>{i === 1 ? '✓ ' : ''}{p}</span>)}
+              : <span key={p} style={{ minHeight: 26, padding: '4px 10px', borderRadius: mise === 'bento' ? 12 : 999, border: i === 1 ? (st.accent ? `1px solid ${st.accent}` : st.bord ?? `1px solid ${accent}`) : st.bord ?? (mise === 'bento' ? 0 : `1px solid ${lignes}`), boxShadow: i === 1 ? 'none' : st.ombrePetite, background: i === 1 ? (st.accent ?? accent) : pastilles, color: i === 1 ? '#FFFFFF' : st.encre, fontWeight: i === 1 || mise === 'brut' ? 700 : 400, display: 'flex', alignItems: 'center', fontSize: 10, boxSizing: 'border-box' }}>{i === 1 ? '✓ ' : ''}{p}</span>)}
           </div>
         </div>
       </div>
