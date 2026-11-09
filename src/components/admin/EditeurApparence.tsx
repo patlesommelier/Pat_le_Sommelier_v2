@@ -9,36 +9,6 @@ const hex = (r: number, g: number, b: number) => `#${[r, g, b].map((x) => Math.r
 const claire = (h: string) => { const [r, g, b] = rgb(h); return hex(r + (255 - r) * 0.93, g + (255 - g) * 0.93, b + (255 - b) * 0.93); };
 const valide = (h: string) => /^#[0-9a-f]{6}$/i.test(h);
 
-/**
- * Couleur du fond d'un logo : la couleur la plus fréquente sur son pourtour (pixels opaques), lue dans le fichier lui-même.
- * Plus juste que la pipette de l'ordinateur, qui mesure l'écran (sur Mac, dans un autre espace de couleurs : teinte décalée).
- * null : fond transparent (pas de couleur de fond à reprendre).
- */
-async function couleurDuFond(source: string): Promise<string | null> {
-  const img = new Image();
-  img.crossOrigin = 'anonymous';
-  img.src = source;
-  await img.decode();
-  const l = Math.min(img.naturalWidth, 600), h = Math.round(img.naturalHeight * (l / img.naturalWidth));
-  const toile = document.createElement('canvas');
-  toile.width = l; toile.height = h;
-  const ctx = toile.getContext('2d', { colorSpace: 'srgb' } as CanvasRenderingContext2DSettings)!;
-  ctx.drawImage(img, 0, 0, l, h);
-  const { data } = ctx.getImageData(0, 0, l, h);
-  const compte = new Map<string, number>();
-  const prendre = (x: number, y: number) => {
-    const i = (y * l + x) * 4;
-    if (data[i + 3] < 250) return;
-    const hex = '#' + [data[i], data[i + 1], data[i + 2]].map((v) => v.toString(16).padStart(2, '0')).join('').toUpperCase();
-    compte.set(hex, (compte.get(hex) ?? 0) + 1);
-  };
-  for (let x = 0; x < l; x++) { prendre(x, 0); prendre(x, 1); prendre(x, h - 1); prendre(x, h - 2); }
-  for (let y = 0; y < h; y++) { prendre(0, y); prendre(1, y); prendre(l - 1, y); prendre(l - 2, y); }
-  const [meilleure] = [...compte.entries()].sort((a, b) => b[1] - a[1]);
-  // Un fond : au moins un quart du pourtour de la même couleur.
-  return meilleure && meilleure[1] >= (2 * (l + h)) / 4 ? meilleure[0] : null;
-}
-
 interface Props {
   action: (f: FormData) => Promise<Retour>;
   nom: string; couleur: string; logo: string | null; logoFonce: string | null; logoChoix: string | null; accroche: string | null;
@@ -72,23 +42,47 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   const logoAffiche = choix === 'fonce' ? apercuLogoFonce ?? apercuLogo : apercuLogo ?? apercuLogoFonce;
 
   const choisir = (h: string) => { setCouleur(h); setSaisie(h); };
-  const [messageFond, setMessageFond] = useState<string | null>(null);
-  const reprendreFond = async () => {
-    setMessageFond(null);
-    for (const source of [logoAffiche, apercuLogo, apercuLogoFonce].filter((x): x is string => Boolean(x))) {
-      try {
-        const c = await couleurDuFond(source);
-        if (c) { choisir(c); setMessageFond(`Couleur du fond du logo reprise : ${c}.`); return; }
-      } catch { /* image illisible ici : on essaie l'autre logo */ }
-    }
-    setMessageFond('Pas de couleur de fond à reprendre : le logo a un fond transparent.');
-  };
 
   return (
     <FormulaireAdmin action={action} className="rangee">
       <input type="hidden" name="couleur" value={couleur} />
       <input type="hidden" name="logo_choix" value={choix} />
       <div className="large" style={{ gap: 24 }}>
+        {/* Un seul logo : celui affiché en haut de l'app, montré sur la couleur de l'app. En déposer un nouveau le remplace partout. */}
+        <section className="carte-bo pile">
+          <div><h2>Logo</h2><p className="sous">Votre logo (PNG ou SVG, de préférence à fond transparent), tel qu’il s’affiche en haut de l’app, sur votre couleur.</p></div>
+          <input type="hidden" name="logo_unique" value="1" />
+          <span style={{ height: 120, maxWidth: 420, borderRadius: 14, background: couleur, border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            {logoAffiche ? <img src={logoAffiche} alt="Logo actuel" style={{ maxWidth: 220, maxHeight: 90 }} /> : <span style={{ color: texte, opacity: 0.8 }}>Aucun logo</span>}
+          </span>
+          <div className="champ" style={{ maxWidth: 420 }}>
+            <label htmlFor="logo">{logoAffiche ? 'Remplacer le logo' : 'Déposer le logo'}</label>
+            <input id="logo" name="logo" type="file" accept="image/png,image/svg+xml,image/webp" style={{ padding: 8 }}
+              onChange={(e) => { const f = e.currentTarget.files?.[0]; if (f) { setApercuLogo(URL.createObjectURL(f)); setApercuLogoFonce(null); setChoix('clair'); } }} />
+            {fondClair && <span className="aide">Votre couleur est claire : un logo foncé s’y lira mieux.</span>}
+          </div>
+        </section>
+        <section className="carte-bo pile">
+          <div><h2>Couleur de l’app</h2><p className="sous">Saisissez le code de votre couleur, ou choisissez-la avec le carré de couleur (sa pipette permet de la prendre sur votre logo).</p></div>
+          <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', alignItems: 'start' }}>
+            <div className="pile" style={{ gap: 12 }}>
+              <div className="champ"><label htmlFor="hex">Votre couleur (code)</label>
+                <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
+                  <input id="hex" value={saisie} onChange={(e) => { const v = e.target.value.toUpperCase(); setSaisie(v); if (valide(v)) setCouleur(v); }} style={{ width: 130, fontFamily: 'monospace' }} />
+                  <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#EFEBE9' }} />
+                </span>
+              </div>
+            </div>
+          </div>
+          <div style={{ borderTop: '1px solid var(--ligne)', paddingTop: 14, display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center' }}>
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: couleur, border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur principale</span><br /><b style={{ fontFamily: 'monospace' }}>{couleur}</b></span></span>
+            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: claire(couleur), border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur claire (barre de Pat), calculée</span><br /><b style={{ fontFamily: 'monospace' }}>{claire(couleur)}</b></span></span>
+          </div>
+          {contraste >= 4.5 && <span style={{ color: 'var(--vert)', fontSize: 14 }}>Texte blanc bien lisible sur cette couleur (contraste {contraste.toFixed(1).replace('.', ',')} : 1).</span>}
+          {contraste >= 3 && contraste < 4.5 && <span style={{ color: 'var(--ocre)', fontSize: 14 }}><b>Lisibilité limitée</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : les petits textes blancs fatiguent. Une teinte un peu plus foncée serait plus confortable.</span>}
+          {fondClair && <span style={{ color: '#680021', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; un logo foncé s’y lira mieux.</span>}
+        </section>
         {/* Mise en page de l'app : trois choix, chacun avec son aperçu aux couleurs et au logo du restaurant. */}
         <section className="carte-bo pile">
           <div><h2>Mise en page de l’app</h2><p className="sous">Choisissez l’allure de l’app que vos clients ouvrent avec le QR code. Elle garde toujours votre couleur et votre logo.</p></div>
@@ -105,47 +99,6 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
                 </span>
               </label>
             ))}
-          </div>
-        </section>
-        <section className="carte-bo pile">
-          <div><h2>Couleur de l’app</h2><p className="sous">Saisissez votre couleur, ou reprenez celle du fond de votre logo.</p></div>
-          <div className="grille" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(min(240px, 100%), 1fr))', alignItems: 'start' }}>
-            <div className="pile" style={{ gap: 12 }}>
-              <div className="champ"><label htmlFor="hex">Votre couleur (code)</label>
-                <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}>
-                  <input id="hex" value={saisie} onChange={(e) => { const v = e.target.value.toUpperCase(); setSaisie(v); if (valide(v)) setCouleur(v); }} style={{ width: 130, fontFamily: 'monospace' }} />
-                  <input type="color" aria-label="Choisir une couleur" value={couleur.toLowerCase()} onChange={(e) => choisir(e.target.value.toUpperCase())} style={{ width: 48, height: 44, padding: 2, border: '1.5px solid var(--ligne)', borderRadius: 10, background: '#EFEBE9' }} />
-                </span>
-              </div>
-              {(apercuLogo || apercuLogoFonce) && (
-                <div className="champ">
-                  <button type="button" className="btn sec petit" onClick={reprendreFond}>Reprendre la couleur du fond du logo</button>
-                  <span className="aide">{messageFond ?? 'La couleur exacte du fond de votre logo, lue dans le fichier (plus juste que la pipette de l’ordinateur).'}</span>
-                </div>
-              )}
-            </div>
-          </div>
-          <div style={{ borderTop: '1px solid var(--ligne)', paddingTop: 14, display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center' }}>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: couleur, border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur principale</span><br /><b style={{ fontFamily: 'monospace' }}>{couleur}</b></span></span>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: claire(couleur), border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur claire (barre de Pat), calculée</span><br /><b style={{ fontFamily: 'monospace' }}>{claire(couleur)}</b></span></span>
-          </div>
-          {contraste >= 4.5 && <span style={{ color: 'var(--vert)', fontSize: 14 }}>Texte blanc bien lisible sur cette couleur (contraste {contraste.toFixed(1).replace('.', ',')} : 1).</span>}
-          {contraste >= 3 && contraste < 4.5 && <span style={{ color: 'var(--ocre)', fontSize: 14 }}><b>Lisibilité limitée</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : les petits textes blancs fatiguent. Une teinte un peu plus foncée serait plus confortable.</span>}
-          {fondClair && <span style={{ color: '#680021', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; un logo foncé s’y lira mieux.</span>}
-        </section>
-        {/* Un seul logo : celui affiché en haut de l'app, montré sur la couleur de l'app. En déposer un nouveau le remplace partout. */}
-        <section className="carte-bo pile">
-          <div><h2>Logo</h2><p className="sous">Votre logo (PNG ou SVG, de préférence à fond transparent), tel qu’il s’affiche en haut de l’app, sur votre couleur.</p></div>
-          <input type="hidden" name="logo_unique" value="1" />
-          <span style={{ height: 120, maxWidth: 420, borderRadius: 14, background: couleur, border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            {logoAffiche ? <img src={logoAffiche} alt="Logo actuel" style={{ maxWidth: 220, maxHeight: 90 }} /> : <span style={{ color: texte, opacity: 0.8 }}>Aucun logo</span>}
-          </span>
-          <div className="champ" style={{ maxWidth: 420 }}>
-            <label htmlFor="logo">{logoAffiche ? 'Remplacer le logo' : 'Déposer le logo'}</label>
-            <input id="logo" name="logo" type="file" accept="image/png,image/svg+xml,image/webp" style={{ padding: 8 }}
-              onChange={(e) => { const f = e.currentTarget.files?.[0]; if (f) { setApercuLogo(URL.createObjectURL(f)); setApercuLogoFonce(null); setChoix('clair'); } }} />
-            {fondClair && <span className="aide">Votre couleur est claire : un logo foncé s’y lira mieux.</span>}
           </div>
         </section>
         <section className="carte-bo pile">
