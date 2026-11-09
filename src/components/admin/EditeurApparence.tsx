@@ -123,7 +123,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   );
 }
 
-export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito';
+export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito' | 'relief';
 const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
   ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
@@ -131,6 +131,7 @@ const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['bento', 'Bento', 'Tout en cases aux coins très arrondis, comme une boîte à repas.'],
   ['brut', 'Néo-brutalisme', 'Contours noirs, ombres nettes, couleurs vives et titres épais.'],
   ['edito', 'Éditorial lumineux', 'Beige lin, beaucoup d’air, titres élégants et listes à filets fins.'],
+  ['relief', 'Relief', 'Cartes et boutons en relief, comme des capsules de bouteille ; filtres en liège et en verre.'],
 ];
 
 /** Réglages de l'aperçu de chaque mise en page posée sur Crème et courbes. */
@@ -140,6 +141,7 @@ const STYLES: Record<Exclude<MiseEnPage, 'classique'>, { fond: string; surface: 
   sombre: { fond: '#1C1A19', surface: '#2A2725', encre: '#F5EFE8', ligne: '#3D3835', pastille: '#332F2C', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   bento: { fond: '#EFECE7', surface: '#FFFFFF', encre: '#1F1D1C', ligne: '#FFFFFF', pastille: '#F4F2EE', rayon: 24, titre: 'Outfit, Lato, sans-serif' },
   brut: { fond: '#FFF1C9', surface: '#FFFFFF', encre: '#111111', ligne: '#111111', pastille: '#FFFFFF', bord: '2px solid #111111', ombre: '4px 4px 0 #111111', ombrePetite: '2px 2px 0 #111111', rayon: 10, titre: "'Archivo Black', sans-serif", majuscules: true },
+  relief: { fond: '#ECE7E1', surface: '#ECE7E1', encre: '#3A332D', ligne: '#ECE7E1', pastille: '#EDE8E2', bord: '0', ombre: '6px 6px 12px #CFC7BD, -6px -6px 12px #FFFFFF', ombrePetite: '3px 3px 6px #CBC3B9, -3px -3px 6px #FFFFFF', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   edito: { fond: '#F6F1E8', surface: '#FFFDF9', encre: '#2B2724', ligne: '#E2D9CC', pastille: 'transparent', rayon: 0, titre: 'Fraunces, Georgia, serif', bandeauNeutre: true, liste: true },
 };
 
