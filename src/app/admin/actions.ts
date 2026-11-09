@@ -1026,6 +1026,10 @@ export async function enregistrerApparence(resto: string, f: FormData): Promise<
       ['clair', 'fonce'].includes(txt(f, 'logo_choix') ?? '') ? txt(f, 'logo_choix') : null,
       ['menu', 'carte'].includes(txt(f, 'page_accueil') ?? '') ? txt(f, 'page_accueil') : null],
   );
+  // Logo unique (Apparence) : un nouveau logo remplace aussi l'ancienne version foncée, et c'est lui qui s'affiche partout.
+  if (logo && f.get('logo_unique') === '1') {
+    await requete(`update restaurant set logo_fonce_url = null, logo_fonce_ratio = null, logo_choix = 'clair' where id = $1`, [resto]);
+  }
   // Mise en page de l'app des clients : Crème et courbes (par défaut), Classique ou Sombre.
   const mise = txt(f, 'design_app');
   if (mise && ['creme', 'classique', 'sombre'].includes(mise)) await requete('update restaurant set design_app = $2 where id = $1', [resto, mise]);
