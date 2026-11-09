@@ -20,7 +20,7 @@ export default async function Apparence({ params, searchParams }: { params: Prom
       <Entete titre="Apparence" texte="Votre logo et votre couleur habillent l’app que vos clients ouvrent avec le QR code. Pat vérifie que tout reste lisible." />
       <Message ok={sp.ok ? 'Apparence enregistrée : l’app de vos clients est à jour.' : undefined} erreur={sp.erreur} />
       <EditeurApparence action={enregistrerApparence.bind(null, resto)} nom={r.nom} couleur={r.couleur} logo={r.logo_url} logoFonce={r.logo_fonce_url} logoChoix={r.logo_choix}
-        accroche={r.accroche} pageAccueil={r.page_accueil} miseEnPage={r.design_app === 'classique' || r.design_app === 'sombre' ? r.design_app : 'creme'} plats={plats.filter((p) => p.actif && p.categorie === 'entree').map((p) => p.nom_court ?? p.nom)}
+        accroche={r.accroche} pageAccueil={r.page_accueil} simulateur={`/admin/${resto}/simulateur`} miseEnPage={r.design_app === 'classique' || r.design_app === 'sombre' ? r.design_app : 'creme'} plats={plats.filter((p) => p.actif && p.categorie === 'entree').map((p) => p.nom_court ?? p.nom)}
         impression={<CouleurImpression initiale={r.couleur_impression} app={r.couleur.toUpperCase()} logo={logoCouleur} auto={couleurImpression(r.couleur.toUpperCase(), logoCouleur)} />} />
     </>
   );

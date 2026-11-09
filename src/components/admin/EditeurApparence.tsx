@@ -18,10 +18,12 @@ interface Props {
   pageAccueil?: string;
   /** Mise en page de l'app des clients : 'creme' (par défaut), 'classique' ou 'sombre'. */
   miseEnPage?: MiseEnPage;
+  /** Adresse du simulateur : l'app exactement comme la voient les clients. */
+  simulateur?: string;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', miseEnPage = 'creme', plats, impression }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', miseEnPage = 'creme', simulateur, plats, impression }: Props) {
   const [mise, setMise] = useState<MiseEnPage>(miseEnPage);
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
@@ -85,7 +87,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
         </section>
         {/* Mise en page de l'app : trois choix, chacun avec son aperçu aux couleurs et au logo du restaurant. */}
         <section className="carte-bo pile">
-          <div><h2>Mise en page de l’app</h2><p className="sous">Choisissez l’allure de l’app que vos clients ouvrent avec le QR code. Elle garde toujours votre couleur et votre logo.</p></div>
+          <div><h2>Mise en page de l’app</h2><p className="sous">Choisissez l’allure de l’app que vos clients ouvrent avec le QR code. Elle garde toujours votre couleur et votre logo.{simulateur && <> Pour la voir exactement comme vos clients, après l’avoir enregistrée : <a href={simulateur}>le simulateur</a>.</>}</p></div>
           <div role="radiogroup" aria-label="Mise en page de l’app" className="choix-mise-en-page">
             {MISES_EN_PAGE.map(([cle, titre, detail]) => (
               <label key={cle} className="mise-en-page" data-choisie={mise === cle ? 'oui' : undefined}>
@@ -117,10 +119,6 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
         {impression}
         <div className="ligne-actions"><button type="submit" className="btn">Enregistrer l’apparence</button></div>
       </div>
-      <aside className="etroit" style={{ alignItems: 'center' }}>
-        <span className="surtitre">Aperçu de votre app</span>
-        <ApercuApp mise={mise} couleur={couleur} texte={texte} logo={logoAffiche} nom={nom} a1={a1} a2={a2} plats={plats} />
-      </aside>
     </FormulaireAdmin>
   );
 }
