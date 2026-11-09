@@ -112,7 +112,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   );
 }
 
-export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito' | 'relief' | 'greige';
+export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito' | 'relief' | 'greige' | 'ardoise';
 const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
   ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
@@ -122,6 +122,7 @@ const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['edito', 'Éditorial lumineux', 'Beige lin, beaucoup d’air, titres élégants et listes à filets fins.'],
   ['relief', 'Relief', 'Cartes et boutons en relief, comme des capsules de bouteille ; filtres en liège et en verre.'],
   ['greige', 'Grège', 'Luxe discret : blancs cassés et gris chauds, filets très fins, beaucoup de calme.'],
+  ['ardoise', 'Ardoise', 'Le tableau noir du bistrot : tout est écrit à la craie.'],
 ];
 
 /** Réglages de l'aperçu de chaque mise en page posée sur Crème et courbes. */
@@ -132,6 +133,7 @@ const STYLES: Record<Exclude<MiseEnPage, 'classique'>, { fond: string; surface: 
   bento: { fond: '#EFECE7', surface: '#FFFFFF', encre: '#1F1D1C', ligne: '#FFFFFF', pastille: '#F4F2EE', rayon: 24, titre: 'Outfit, Lato, sans-serif' },
   brut: { fond: '#FFF1C9', surface: '#FFFFFF', encre: '#111111', ligne: '#111111', pastille: '#FFFFFF', bord: '2px solid #111111', ombre: '4px 4px 0 #111111', ombrePetite: '2px 2px 0 #111111', rayon: 10, titre: "'Archivo Black', sans-serif", majuscules: true },
   greige: { fond: '#F4F1EC', surface: '#FAF8F5', encre: '#4A443E', ligne: '#DDD6CB', pastille: 'transparent', bord: '1px solid #DDD6CB', rayon: 6, titre: 'Jost, sans-serif', bandeauNeutre: true, accent: '#4A443E' },
+  ardoise: { fond: '#25302B', surface: 'transparent', encre: '#F1EFE8', ligne: 'rgba(241,239,232,0.5)', pastille: 'transparent', bord: '2px dashed rgba(241,239,232,0.5)', rayon: 14, titre: "'Cabin Sketch', Kalam, cursive", bandeauNeutre: true, accent: '#5A6A62' },
   relief: { fond: '#ECE7E1', surface: '#ECE7E1', encre: '#3A332D', ligne: '#ECE7E1', pastille: '#EDE8E2', bord: '0', ombre: '6px 6px 12px #CFC7BD, -6px -6px 12px #FFFFFF', ombrePetite: '3px 3px 6px #CBC3B9, -3px -3px 6px #FFFFFF', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
   edito: { fond: '#F6F1E8', surface: '#FFFDF9', encre: '#2B2724', ligne: '#E2D9CC', pastille: 'transparent', rayon: 0, titre: 'Fraunces, Georgia, serif', bandeauNeutre: true, liste: true },
 };
@@ -230,7 +232,7 @@ function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: M
       <div style={{ padding: '6px 12px 12px' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: 4, borderRadius: mise === 'brut' ? 10 : mise === 'bento' ? 20 : 999, background: mise === 'brut' ? '#FFE14D' : st.surface, border: st.bord ?? (sombre || mise === 'edito' ? `1px solid ${lignes}` : 0), boxShadow: st.ombre ?? (sombre ? 'none' : '0 12px 26px -14px rgba(46,46,46,0.45)') }}>
           <span style={{ width: 38, height: 38, borderRadius: 19, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}><span className="buste-pat" /></span>
-          <span style={{ flexGrow: 1, fontFamily: mise === 'edito' ? st.titre : titre, fontStyle: mise === 'edito' ? 'italic' : undefined, fontSize: 13, fontWeight: 500, color: sombre ? '#C9BFB5' : '#4A4A4A' }}>Demandez à Pat…</span>
+          <span style={{ flexGrow: 1, fontFamily: mise === 'edito' ? st.titre : titre, fontStyle: mise === 'edito' ? 'italic' : undefined, fontSize: 13, fontWeight: 500, color: sombre || mise === 'ardoise' ? '#C9BFB5' : '#4A4A4A' }}>Demandez à Pat…</span>
         </div>
       </div>
     </div>

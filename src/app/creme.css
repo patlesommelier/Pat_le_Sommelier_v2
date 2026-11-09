@@ -328,3 +328,70 @@
 .design-greige .carte-vin { flex-direction: column; align-items: stretch; gap: 14px; padding: 0 0 24px; }
 .design-greige .carte-vin .etiquette, .design-greige .carte-vin .etiquette-vide { width: 100% !important; height: 240px !important; padding: 20px !important; box-sizing: border-box;
   object-fit: contain; background: #FFFFFF; border: 1px solid var(--ligne-creme); border-radius: 2px; }
+
+/* ── Ardoise (design_app = 'ardoise') : le tableau noir du bistrot, tout écrit à la craie ──
+   Fond d'ardoise vert-noir avec des traces d'effacement, écriture manuscrite à la craie (légèrement poudreuse),
+   cadres tracés à la main en pointillés, craie jaune pour ce qui est choisi. */
+.design-ardoise { --fond: #25302B; --surface: transparent; --fond-pastille: transparent; --ligne-creme: rgba(241, 239, 232, 0.5);
+  --texte-creme: #F1EFE8; --doux-creme: #C8CCC3; --encre: #F1EFE8; --discret: #C8CCC3; --bord: rgba(241, 239, 232, 0.4); --filet: rgba(241, 239, 232, 0.25);
+  --craie-jaune: #F3E39B; --bouton: #F3E39B !important; --sur-bouton: #25302B !important; --marque-texte: #F3E39B !important;
+  color: #F1EFE8; font-family: Kalam, 'Comic Sans MS', cursive;
+  background: radial-gradient(ellipse at 18% 24%, rgba(255, 255, 255, 0.06), transparent 38%), radial-gradient(ellipse at 82% 68%, rgba(255, 255, 255, 0.05), transparent 42%),
+    radial-gradient(ellipse at 50% 100%, rgba(0, 0, 0, 0.25), transparent 60%), #25302B; }
+.design-ardoise * { text-shadow: 0 0 1px rgba(241, 239, 232, 0.35); }
+.design-ardoise .defile, .design-ardoise .accueil-defile { background: transparent; }
+.design-ardoise .bandeau-haut, .design-ardoise .bandeau-suite, .design-ardoise .question-bandeau { background: transparent; color: #F1EFE8; }
+.design-ardoise .bandeau-haut::before { display: none; }
+.design-ardoise.bandeau-clair .bandeau .bandeau-haut .logo img { background: #F1EFE8; padding: 6px 12px; border-radius: 10px; box-sizing: content-box; }
+.design-ardoise .question-bandeau { border-radius: 0; font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-style: normal; font-size: 26px; padding-bottom: 18px;
+  border-bottom: 2px dashed rgba(241, 239, 232, 0.35); }
+.design-ardoise .accueil-titre { font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; letter-spacing: 0.01em; }
+.design-ardoise .accueil-titre span { font-family: Kalam, cursive; font-size: 20px; color: #C8CCC3; }
+.design-ardoise .bouton-carte, .design-ardoise.bandeau-clair .bouton-carte { background: transparent; color: #F3E39B; border: 2px solid rgba(243, 227, 155, 0.8);
+  border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-family: Kalam, cursive; font-weight: 700; font-size: 15px; letter-spacing: 0.02em; text-transform: none; }
+.design-ardoise .retour { color: #F1EFE8; }
+/* Titres à la craie ; cadres tracés à la main. */
+.design-ardoise .titre-page h1, .design-ardoise .fiche-entete h1 { font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-size: 32px; color: #F1EFE8; }
+.design-ardoise .titre-section span { font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-size: 24px; letter-spacing: 0.02em; text-transform: none; color: #F3E39B; }
+.design-ardoise .boite, .design-ardoise .selection-plats, .design-ardoise .ligne-prix, .design-ardoise .encadre, .design-ardoise .etat-vide, .design-ardoise .carte-vin, .design-ardoise .fiche-chat {
+  background: transparent; border: 2px dashed rgba(241, 239, 232, 0.45); border-radius: 255px 18px 225px 18px / 18px 225px 18px 255px; box-shadow: none; }
+.design-ardoise .bulles { gap: 6px 14px; }
+.design-ardoise .bulle { border: 0; background: transparent; padding: 0 6px; font-family: Kalam, cursive; font-size: 18px; color: #F1EFE8; border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%; }
+.design-ardoise .bulle.choisie { background: transparent; color: #F3E39B; font-weight: 700; box-shadow: 0 0 0 2px rgba(243, 227, 155, 0.85); }
+.design-ardoise .raccourcis-plats { background: transparent; box-shadow: none; border: 0; border-bottom: 2px dashed rgba(241, 239, 232, 0.35); border-radius: 0; padding: 0; gap: 18px; }
+.design-ardoise .raccourcis-plats a { flex: 0 0 auto; padding: 0; color: #F1EFE8; font-family: Kalam, cursive; font-weight: 700; font-size: 17px; }
+.design-ardoise .raccourcis-plats .compte { background: #F3E39B; color: #25302B; text-shadow: none; }
+.design-ardoise .selection-haut b { font-family: 'Cabin Sketch', Kalam, cursive; font-size: 19px; color: #F3E39B; }
+.design-ardoise .selection-haut .effacer { color: #C8CCC3; font-family: Kalam, cursive; }
+.design-ardoise .selection-plats { background: rgba(37, 48, 43, 0.92); }
+.design-ardoise .envoi-plats { background: linear-gradient(to bottom, transparent, #25302B 25%); }
+.design-ardoise .plat-choisi { background: transparent; border: 1.5px dashed rgba(241, 239, 232, 0.5); color: #F1EFE8; font-family: Kalam, cursive; font-size: 15px; }
+.design-ardoise .plat-choisi .categorie { color: #C8CCC3; }
+.design-ardoise .bouton-plein, .design-ardoise .selection-plats .bouton-plein, .design-ardoise a.bouton-plein {
+  background: #F3E39B; color: #25302B; text-shadow: none; border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px; font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-size: 19px; }
+/* Carte des vins à la craie : couleurs soulignées, vins séparés d'un trait de craie, prix en craie jaune. */
+.design-ardoise .onglets { background: #25302B; gap: 18px; }
+.design-ardoise .onglet { background: transparent; box-shadow: none; border: 0; border-radius: 0; padding: 0; height: 44px; min-height: 44px; font-family: Kalam, cursive; font-weight: 700; font-size: 18px; letter-spacing: 0; text-transform: none; color: #C8CCC3; }
+.design-ardoise .onglet[aria-selected='true'] { background: transparent; color: #F3E39B; border-bottom: 2px solid #F3E39B; border-radius: 0; }
+.design-ardoise .onglet small { color: inherit; font-family: Kalam, cursive; }
+.design-ardoise .panneau { gap: 0; }
+.design-ardoise .sous-titre { font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-size: 18px; letter-spacing: 0; text-transform: none; color: #F3E39B; }
+.design-ardoise .ligne-vin { background: transparent; border: 0; border-bottom: 2px dashed rgba(241, 239, 232, 0.25); border-radius: 0; box-shadow: none; padding: 14px 2px; }
+.design-ardoise .ligne-vin .nom, .design-ardoise .carte-vin .nom { font-family: Kalam, cursive; font-weight: 700; font-size: 19px; color: #F1EFE8; }
+.design-ardoise .ligne-vin .sous, .design-ardoise .carte-vin .sous { font-family: Kalam, cursive; font-size: 15px; color: #C8CCC3; }
+.design-ardoise .prix { font-family: 'Cabin Sketch', Kalam, cursive; font-weight: 700; font-size: 20px; color: #F3E39B; }
+.design-ardoise .prix small { font-family: Kalam, cursive; font-weight: 400; color: #C8CCC3; }
+/* Étiquettes : comme des photos punaisées au tableau, un peu de travers. */
+.design-ardoise .etiquette, .design-ardoise .etiquette-vide { background: #FFFFFF; border: 0; border-radius: 2px; transform: rotate(-2.5deg); box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35); text-shadow: none; }
+.design-ardoise .etiquette-nom { color: #25302B; text-shadow: none; }
+.design-ardoise .barre-pat { background: #25302B; }
+.design-ardoise .barre-pat form { background: rgba(255, 255, 255, 0.06); border: 2px dashed rgba(241, 239, 232, 0.45); box-shadow: none; }
+.design-ardoise .barre-pat textarea { color: #F1EFE8; font-family: Kalam, cursive; font-weight: 700; font-size: 18px; }
+.design-ardoise .barre-pat textarea::placeholder { color: #C8CCC3; }
+.design-ardoise .rond.secondaire { background: transparent; border: 2px dashed rgba(241, 239, 232, 0.45); color: #F1EFE8; }
+.design-ardoise .rond.principal { background: #F3E39B; color: #25302B; }
+.design-ardoise .conversation { background: #25302B; }
+.design-ardoise .message.pat { background: rgba(255, 255, 255, 0.06); border: 2px dashed rgba(241, 239, 232, 0.35); font-family: Kalam, cursive; font-size: 16px; }
+.design-ardoise .message.client { background: #F3E39B; color: #25302B; text-shadow: none; font-family: Kalam, cursive; font-size: 16px; }
+.design-ardoise .jauge .barres span { background: rgba(241, 239, 232, 0.2); }
+.design-ardoise .jauge .barres span.pleine { background: #F3E39B; }

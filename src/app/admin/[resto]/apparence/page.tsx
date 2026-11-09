@@ -20,7 +20,7 @@ export default async function Apparence({ params, searchParams }: { params: Prom
       <Entete titre="Apparence" />
       <Message ok={sp.ok ? 'Apparence enregistrée : l’app de vos clients est à jour.' : undefined} erreur={sp.erreur} />
       <EditeurApparence action={enregistrerApparence.bind(null, resto)} nom={r.nom} couleur={r.couleur} logo={r.logo_url} logoFonce={r.logo_fonce_url} logoChoix={r.logo_choix}
-        accroche={r.accroche} pageAccueil={r.page_accueil} miseEnPage={(['classique', 'sombre', 'bento', 'brut', 'edito', 'relief', 'greige'].includes(r.design_app ?? '') ? r.design_app : 'creme') as MiseEnPage} plats={plats.filter((p) => p.actif && p.categorie === 'entree').map((p) => p.nom_court ?? p.nom)}
+        accroche={r.accroche} pageAccueil={r.page_accueil} miseEnPage={(['classique', 'sombre', 'bento', 'brut', 'edito', 'relief', 'greige', 'ardoise'].includes(r.design_app ?? '') ? r.design_app : 'creme') as MiseEnPage} plats={plats.filter((p) => p.actif && p.categorie === 'entree').map((p) => p.nom_court ?? p.nom)}
         impression={<CouleurImpression initiale={r.couleur_impression} app={r.couleur.toUpperCase()} logo={logoCouleur} auto={couleurImpression(r.couleur.toUpperCase(), logoCouleur)} />} />
     </>
   );
