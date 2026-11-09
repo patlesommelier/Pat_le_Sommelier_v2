@@ -37,8 +37,10 @@ export default async function LayoutRestaurant({ children, params }: { children:
   }
   // Mise en page choisie dans « Apparence » : « Crème et courbes » (par défaut), « Classique » (l'ancienne) ou « Sombre »
   // (la même que Crème et courbes, sur fond sombre).
+  // Bento, Néo-brutalisme et Éditorial : posés sur Crème et courbes (même structure), chacun avec son style.
   const sombre = restaurant.design_app === 'sombre';
   const creme = restaurant.design_app !== 'classique';
+  const style = ['bento', 'brut', 'edito'].includes(restaurant.design_app ?? '') ? restaurant.design_app : null;
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
@@ -46,10 +48,10 @@ export default async function LayoutRestaurant({ children, params }: { children:
     // Boutons pleins (« Trouver mon vin »…) : sur une couleur claire, ils passent en foncé pour rester bien visibles sur fond blanc.
     '--bouton': clair ? boutons : restaurant.couleur, '--sur-bouton': '#FFFFFF',
     // Design « Crème et courbes » : fond de page, pastilles et filets dans des teintes très claires de la couleur des boutons.
-    ...(creme && !sombre ? { '--fond': eclaircir(clair ? boutons : restaurant.couleur, 0.07), '--fond-pastille': eclaircir(clair ? boutons : restaurant.couleur, 0.1),
+    ...(creme && !sombre && !style ? { '--fond': eclaircir(clair ? boutons : restaurant.couleur, 0.07), '--fond-pastille': eclaircir(clair ? boutons : restaurant.couleur, 0.1),
       '--ligne-creme': eclaircir(clair ? boutons : restaurant.couleur, 0.2) } : {}),
   } as CSSProperties;
-  const classe = `ecran${creme ? ' design-creme' : ''}${sombre ? ' design-sombre' : ''}${creme && clair ? ' bandeau-clair' : ''}`;
+  const classe = `ecran${creme ? ' design-creme' : ''}${sombre ? ' design-sombre' : ''}${style ? ` design-${style}` : ''}${creme && clair ? ' bandeau-clair' : ''}`;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
   if (!(await appOuverte(restaurant.id))) {
     return (

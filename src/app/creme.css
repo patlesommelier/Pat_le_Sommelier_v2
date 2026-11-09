@@ -131,3 +131,92 @@
 .design-sombre .onglet[aria-selected='true'] { border-color: var(--bouton); }
 .design-sombre .jauge .barres span { background: #3D3835; }
 .design-sombre .titre-page p, .design-sombre .fiche-entete .lieu, .design-sombre .note-discrete { color: #C9BFB5; }
+
+/* ══ Trois mises en page de plus, posées sur « Crème et courbes » (même structure : sélection des plats toujours visible) ══ */
+
+/* ── Bento (design_app = 'bento') : tout en cases aux coins très arrondis, sur un fond gris chaud ── */
+.design-bento { --fond: #EFECE7; --fond-pastille: #F4F2EE; --ligne-creme: #E6E1DA; }
+.design-bento .bandeau-haut { margin: 10px 10px 0; border-radius: 30px 30px 0 0; }
+.design-bento .bandeau-suite, .design-bento .question-bandeau { margin: 0 10px; }
+.design-bento .question-bandeau { border-radius: 0 0 30px 30px; }
+.design-bento .accueil-defile { background: var(--fond); }
+.design-bento .boite, .design-bento .selection-plats, .design-bento .ligne-vin, .design-bento .carte-vin { border: 0; border-radius: 28px; box-shadow: none; }
+.design-bento .bulles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+.design-bento .bulle { justify-content: flex-start; border: 0; border-radius: 16px; min-height: 46px; white-space: normal; text-align: left; line-height: 1.2; padding: 6px 12px; }
+.design-bento .raccourcis-plats { border-radius: 22px; box-shadow: none; }
+.design-bento .raccourcis-plats a { border-radius: 16px; }
+.design-bento .onglet { border-radius: 18px; box-shadow: none; }
+.design-bento .barre-pat form { border-radius: 26px; box-shadow: none; }
+.design-bento .selection-plats .bouton-plein { border-radius: 20px; }
+
+/* ── Néo-brutalisme (design_app = 'brut') : fond jaune clair, gros contours noirs, ombres nettes, titres épais ── */
+.design-brut { --fond: #FFF1C9; --fond-pastille: #FFFFFF; --ligne-creme: #111111; --texte-creme: #111111; --doux-creme: #3A3A3A; color: #111111; }
+.design-brut .bandeau-haut { margin: 12px 12px 0; border: 3px solid #111111; border-bottom: 0; border-radius: 14px 14px 0 0; }
+.design-brut .bandeau-suite { margin: 0 12px; border-left: 3px solid #111111; border-right: 3px solid #111111; }
+.design-brut .question-bandeau { margin: 0 12px; border: 3px solid #111111; border-top: 0; border-radius: 0 0 14px 14px; box-shadow: 6px 6px 0 #111111;
+  font-family: 'Archivo Black', 'Helvetica Neue', sans-serif; font-weight: 400; text-transform: uppercase; }
+.design-brut .accueil-defile { background: var(--fond); }
+.design-brut .bandeau-haut::before { display: none; }
+.design-brut .accueil-titre, .design-brut .titre-page h1, .design-brut .fiche-entete h1, .design-brut .titre-section span, .design-brut .ligne-vin .nom,
+.design-brut .carte-vin .nom, .design-brut .prix, .design-brut .selection-haut b {
+  font-family: 'Archivo Black', 'Helvetica Neue', sans-serif; font-weight: 400; text-transform: uppercase; letter-spacing: 0; }
+.design-brut .accueil-titre span { font-family: 'Space Grotesk', sans-serif; text-transform: none; }
+.design-brut .boite, .design-brut .selection-plats, .design-brut .ligne-vin, .design-brut .carte-vin, .design-brut .raccourcis-plats, .design-brut .barre-pat form,
+.design-brut .ligne-prix, .design-brut .encadre, .design-brut .etat-vide {
+  border: 3px solid #111111; border-radius: 14px; box-shadow: 6px 6px 0 #111111; }
+.design-brut .bulle, .design-brut .onglet, .design-brut .plat-choisi { border: 2.5px solid #111111; box-shadow: 3px 3px 0 #111111; font-family: 'Space Grotesk', sans-serif; font-weight: 700; color: #111111; }
+.design-brut .bulle.choisie { box-shadow: none; border-color: #111111; }
+.design-brut .onglet { text-transform: uppercase; }
+.design-brut .onglet[aria-selected='true'] { background: #FFE14D; color: #111111; border: 2.5px solid #111111; box-shadow: none; }
+.design-brut .bouton-carte { background: #FFE14D; color: #111111; border: 3px solid #111111; border-radius: 10px; box-shadow: 3px 3px 0 #111111; text-transform: uppercase; }
+.design-brut .selection-plats { background: #FFE14D; }
+.design-brut .selection-plats .bouton-plein, .design-brut .envoi-plats .bouton-plein, .design-brut a.bouton-plein, .design-brut .bouton-plein {
+  background: #111111; color: #FFFFFF; border-radius: 10px; font-family: 'Archivo Black', sans-serif; font-weight: 400; text-transform: uppercase; }
+.design-brut .raccourcis-plats .compte { background: #FFE14D; color: #111111; border: 2px solid #111111; }
+.design-brut .etiquette, .design-brut .etiquette-vide { border: 2.5px solid #111111; border-radius: 8px; }
+.design-brut .rond.secondaire { border: 2.5px solid #111111; }
+
+/* ── Éditorial lumineux (design_app = 'edito') : beige lin, beaucoup d'air, titres à empattements, listes à filets fins ── */
+.design-edito { --fond: #F6F1E8; --surface: #FFFDF9; --fond-pastille: transparent; --ligne-creme: #E2D9CC; --texte-creme: #2B2724; --doux-creme: #8A8077; color: #2B2724; }
+.design-edito .bandeau-haut, .design-edito .bandeau-suite, .design-edito .question-bandeau { background: var(--fond); color: #2B2724; }
+.design-edito .bandeau-haut::before { display: none; }
+.design-edito .question-bandeau { border-radius: 0; border-bottom: 1px solid var(--ligne-creme); font-family: Fraunces, Georgia, serif; font-weight: 400; font-style: italic; font-size: 22px; }
+.design-edito .accueil-defile { background: var(--fond); }
+/* Logo (souvent blanc, fait pour le bandeau) : posé dans une pastille à la couleur du restaurant. */
+.design-edito .bandeau .bandeau-haut .logo img, .design-edito .bandeau.grand .bandeau-haut .logo img { background: var(--marque); padding: 7px 14px; border-radius: 999px; height: 30px !important; width: auto; box-sizing: content-box; }
+.design-edito .bouton-carte, .design-edito.bandeau-clair .bouton-carte { background: transparent; color: #2B2724; border-radius: 0; border-bottom: 1px solid #2B2724; height: 36px; padding: 0;
+  font-family: Inter, 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; }
+.design-edito .bouton-carte svg { display: none; }
+.design-edito .retour { color: #2B2724; }
+.design-edito .accueil-titre, .design-edito .titre-page h1, .design-edito .fiche-entete h1 { font-family: Fraunces, Georgia, serif; font-weight: 400; letter-spacing: -0.02em; }
+.design-edito .accueil-titre span { font-family: Inter, 'Helvetica Neue', sans-serif; color: #5E564F; }
+.design-edito .boite { background: transparent; border: 0; box-shadow: none; padding: 6px 4px; border-radius: 0; }
+.design-edito .titre-section span { font-family: Inter, 'Helvetica Neue', sans-serif; font-weight: 500; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #8A8077; }
+.design-edito .bulles { flex-direction: column; flex-wrap: nowrap; gap: 0; border-top: 1px solid var(--ligne-creme); }
+.design-edito .bulle { width: 100%; justify-content: flex-start; border: 0; border-bottom: 1px solid var(--ligne-creme); border-radius: 0; background: transparent;
+  min-height: 50px; padding: 0 2px; font-family: Fraunces, Georgia, serif; font-size: 17px; white-space: normal; text-align: left; }
+.design-edito .bulle.choisie { background: transparent; border-color: var(--ligne-creme); color: var(--marque-texte); font-weight: 600; }
+.design-edito .raccourcis-plats { background: transparent; box-shadow: none; border-radius: 0; padding: 0; gap: 18px; }
+.design-edito .raccourcis-plats a { flex: 0 0 auto; padding: 0; border-radius: 0; font-family: Inter, sans-serif; font-weight: 500; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; }
+.design-edito .onglets { gap: 20px; }
+.design-edito .onglet { background: transparent; box-shadow: none; border-radius: 0; padding: 0; height: 40px; min-height: 40px; font-family: Inter, sans-serif; font-weight: 500; font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: #8A8077; }
+.design-edito .onglet[aria-selected='true'] { background: transparent; color: #2B2724; border-bottom: 1.5px solid var(--marque); border-radius: 0; }
+.design-edito .onglet small { display: none; }
+.design-edito .panneau { gap: 0; }
+.design-edito .ligne-vin, .design-edito .carte-vin { background: transparent; border: 0; border-top: 1px solid var(--ligne-creme); border-radius: 0; box-shadow: none; padding: 16px 2px; }
+.design-edito .ligne-vin .nom, .design-edito .carte-vin .nom { font-family: Fraunces, Georgia, serif; font-weight: 400; font-size: 18px; }
+.design-edito .prix { font-family: Fraunces, Georgia, serif; font-weight: 400; color: #2B2724; }
+.design-edito .sous-titre { font-family: Inter, sans-serif; font-weight: 500; }
+.design-edito .selection-plats { box-shadow: 0 20px 40px -24px rgba(43, 39, 36, 0.35); }
+.design-edito .bouton-plein, .design-edito .selection-plats .bouton-plein { font-family: Inter, 'Helvetica Neue', sans-serif; font-weight: 600; }
+.design-edito .barre-pat form { border: 1px solid var(--ligne-creme); box-shadow: 0 20px 40px -24px rgba(43, 39, 36, 0.35); }
+.design-edito .barre-pat textarea { font-family: Fraunces, Georgia, serif; font-style: italic; font-weight: 400; }
+/* Micro-animations : le contenu apparaît en glissant légèrement (désactivées si le téléphone réduit les animations). */
+@keyframes edito-monte { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+.design-edito .boite, .design-edito .ligne-vin, .design-edito .carte-vin, .design-edito .accueil-texte { animation: edito-monte .5s ease-out both; }
+@media (prefers-reduced-motion: reduce) { .design-edito .boite, .design-edito .ligne-vin, .design-edito .carte-vin, .design-edito .accueil-texte { animation: none; } }
+.design-edito .plat-choisi { border: 1px solid var(--ligne-creme); background: var(--surface); }
+/* Néo-brutalisme : titre d'accueil en lettres épaisses, sur plusieurs lignes au besoin (il est plus large). */
+.design-brut .accueil-titre > div { font-size: 22px !important; white-space: normal !important; line-height: 1.05; }
+.design-brut .prix small { font-family: 'Space Grotesk', sans-serif; text-transform: none; font-weight: 700; }
+.design-bento .ligne-vin { margin-bottom: 8px; }

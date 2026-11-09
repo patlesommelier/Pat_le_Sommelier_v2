@@ -123,12 +123,25 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
   );
 }
 
-type MiseEnPage = 'creme' | 'classique' | 'sombre';
+export type MiseEnPage = 'creme' | 'classique' | 'sombre' | 'bento' | 'brut' | 'edito';
 const MISES_EN_PAGE: [MiseEnPage, string, string][] = [
   ['creme', 'Crème et courbes', 'Formes arrondies, fond clair à votre couleur (par défaut).'],
   ['classique', 'Classique', 'Lignes droites et cadres fins, sur fond blanc.'],
   ['sombre', 'Sombre', 'Fond sombre, idéal pour une salle peu éclairée le soir.'],
+  ['bento', 'Bento', 'Tout en cases aux coins très arrondis, comme une boîte à repas.'],
+  ['brut', 'Néo-brutalisme', 'Contours noirs, ombres nettes, couleurs vives et titres épais.'],
+  ['edito', 'Éditorial lumineux', 'Beige lin, beaucoup d’air, titres élégants et listes à filets fins.'],
 ];
+
+/** Réglages de l'aperçu de chaque mise en page posée sur Crème et courbes. */
+const STYLES: Record<Exclude<MiseEnPage, 'classique'>, { fond: string; surface: string; encre: string; ligne?: string; pastille?: string; bord?: string; ombre?: string; ombrePetite?: string;
+  rayon: number; titre: string; majuscules?: boolean; bandeauNeutre?: boolean; liste?: boolean }> = {
+  creme: { fond: '', surface: '#FFFFFF', encre: '#1A1A1A', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
+  sombre: { fond: '#1C1A19', surface: '#2A2725', encre: '#F5EFE8', ligne: '#3D3835', pastille: '#332F2C', rayon: 18, titre: 'Outfit, Lato, sans-serif' },
+  bento: { fond: '#EFECE7', surface: '#FFFFFF', encre: '#1F1D1C', ligne: '#FFFFFF', pastille: '#F4F2EE', rayon: 24, titre: 'Outfit, Lato, sans-serif' },
+  brut: { fond: '#FFF1C9', surface: '#FFFFFF', encre: '#111111', ligne: '#111111', pastille: '#FFFFFF', bord: '2px solid #111111', ombre: '4px 4px 0 #111111', ombrePetite: '2px 2px 0 #111111', rayon: 10, titre: "'Archivo Black', sans-serif", majuscules: true },
+  edito: { fond: '#F6F1E8', surface: '#FFFDF9', encre: '#2B2724', ligne: '#E2D9CC', pastille: 'transparent', rayon: 0, titre: 'Fraunces, Georgia, serif', bandeauNeutre: true, liste: true },
+};
 
 /** Aperçu de l'app des clients (téléphone), dans la mise en page choisie, avec la couleur, le logo et le message du restaurant. */
 function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: MiseEnPage; couleur: string; texte: string; logo: string | null; nom: string; a1: string; a2: string; plats: string[] }) {
@@ -177,35 +190,54 @@ function ApercuApp({ mise, couleur, texte, logo, nom, a1, a2, plats }: { mise: M
       </div>
     );
   }
-  // Crème et courbes, ou Sombre (la même mise en page sur fond sombre).
+  // Crème et courbes et les mises en page posées dessus (Sombre, Bento, Néo-brutalisme, Éditorial).
+  const st = STYLES[mise];
+  const fondApp = st.fond || fond;
+  const lignes = st.ligne ?? ligne;
+  const pastilles = st.pastille ?? pastille;
+  const ombre = st.ombre ?? (sombre ? 'none' : '0 8px 20px -12px rgba(46,46,46,0.35)');
+  const bandeau = st.bandeauNeutre ? fondApp : couleur;
+  const texteBandeau = st.bandeauNeutre ? st.encre : texte;
+  const casse = st.majuscules ? 'uppercase' as const : undefined;
   return (
-    <div className="apercu-app" style={telephone}>
-      <div style={{ position: 'relative', overflow: 'hidden', background: couleur, color: texte, padding: '14px 16px 20px', borderRadius: '0 0 26px 26px', display: 'flex', flexDirection: 'column', gap: 10, borderBottom: clair ? `1px solid ${ligne}` : 0 }}>
-        <span style={{ position: 'absolute', top: -70, right: -50, width: 170, height: 130, borderRadius: '62% 38% 55% 45% / 48% 60% 40% 52%', background: clair ? 'rgba(26,26,26,0.05)' : 'rgba(255,255,255,0.12)' }} />
+    <div className="apercu-app" style={{ ...telephone, background: fondApp, color: st.encre }}>
+      <div style={{ position: 'relative', overflow: 'hidden', background: bandeau, color: texteBandeau, padding: '14px 16px 20px', margin: mise === 'bento' || mise === 'brut' ? '8px 8px 0' : 0,
+        borderRadius: mise === 'bento' ? 24 : mise === 'brut' ? 10 : mise === 'edito' ? 0 : '0 0 26px 26px', border: st.bord ?? 0, boxShadow: st.ombre ?? 'none',
+        borderBottom: st.bandeauNeutre ? `1px solid ${lignes}` : st.bord ?? (clair ? `1px solid ${lignes}` : 0), display: 'flex', flexDirection: 'column', gap: 10 }}>
+        {!st.bandeauNeutre && mise !== 'brut' && <span style={{ position: 'absolute', top: -70, right: -50, width: 170, height: 130, borderRadius: '62% 38% 55% 45% / 48% 60% 40% 52%', background: clair ? 'rgba(26,26,26,0.05)' : 'rgba(255,255,255,0.12)' }} />}
         <div style={{ position: 'relative', display: 'flex', alignItems: 'center', gap: 10 }}>
-          {logoImg}
-          <span style={{ marginLeft: 'auto', height: 30, padding: '0 12px', borderRadius: 999, background: clair ? accent : 'rgba(255,255,255,0.18)', color: clair ? '#FFFFFF' : texte, display: 'flex', alignItems: 'center', fontFamily: titre, fontSize: 11, fontWeight: 600 }}>Carte des vins</span>
+          {st.bandeauNeutre ? <span style={{ background: couleur, borderRadius: 999, padding: '6px 12px', display: 'flex' }}>{logo
+            // eslint-disable-next-line @next/next/no-img-element
+            ? <img src={logo} alt="" style={{ maxWidth: 90, maxHeight: 26 }} /> : <b style={{ color: texte, fontSize: 14 }}>{nom}</b>}</span> : logoImg}
+          <span style={{ marginLeft: 'auto', height: 30, padding: '0 12px', borderRadius: mise === 'brut' ? 8 : 999, display: 'flex', alignItems: 'center', fontFamily: mise === 'edito' ? 'Inter, sans-serif' : titre, fontSize: 11, fontWeight: 600,
+            textTransform: mise === 'brut' || mise === 'edito' ? 'uppercase' : undefined, letterSpacing: mise === 'edito' ? '0.12em' : undefined,
+            ...(mise === 'brut' ? { background: '#FFE14D', color: '#111111', border: st.bord, boxShadow: st.ombrePetite }
+              : mise === 'edito' ? { background: 'transparent', color: st.encre, borderRadius: 0, borderBottom: `1px solid ${st.encre}`, padding: 0 }
+              : { background: clair ? accent : 'rgba(255,255,255,0.18)', color: clair ? '#FFFFFF' : texte }) }}>Carte des vins</span>
         </div>
-        <div style={{ position: 'relative', textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 8, marginTop: 6 }}>
-          <span style={{ fontFamily: titre, fontSize: 21, fontWeight: 700, lineHeight: 1.2, letterSpacing: '-0.02em' }}>{a1}<br /><span style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400, fontSize: 15, letterSpacing: 0 }}>{a2}</span></span>
-          <span style={{ fontFamily: titre, fontSize: 15, fontWeight: 600 }}>Qu’allez-vous manger ?</span>
+        <div style={{ position: 'relative', textAlign: mise === 'edito' ? 'left' : 'center', display: 'flex', flexDirection: 'column', alignItems: mise === 'edito' ? 'flex-start' : 'center', gap: 8, marginTop: 6 }}>
+          <span style={{ fontFamily: st.titre, fontSize: mise === 'brut' ? 19 : 21, fontWeight: mise === 'brut' || mise === 'edito' ? 400 : 700, lineHeight: 1.2, letterSpacing: '-0.02em', textTransform: casse }}>{a1}<br /><span style={{ fontFamily: 'Lato, sans-serif', fontWeight: 400, fontSize: 15, letterSpacing: 0, textTransform: 'none' }}>{a2}</span></span>
+          <span style={{ fontFamily: st.titre, fontSize: 15, fontWeight: mise === 'edito' ? 400 : 600, fontStyle: mise === 'edito' ? 'italic' : undefined, textTransform: casse }}>Qu’allez-vous manger ?</span>
         </div>
       </div>
       <div style={{ flexGrow: 1, minHeight: 0, overflow: 'hidden', padding: '14px 12px', display: 'flex', flexDirection: 'column', gap: 10 }}>
-        <div style={{ display: 'flex', gap: 4, padding: 4, borderRadius: 999, background: surface, border: sombre ? `1px solid ${ligne}` : 0, boxShadow: sombre ? 'none' : '0 8px 20px -12px rgba(46,46,46,0.35)' }}>
-          {['Entrées', 'Plats', 'Desserts'].map((x) => <span key={x} style={{ flex: 1, textAlign: 'center', padding: '6px 0', fontFamily: titre, fontWeight: 600, fontSize: 11 }}>{x}</span>)}
+        <div style={{ display: 'flex', gap: 4, padding: st.liste ? 0 : 4, borderRadius: st.liste ? 0 : mise === 'brut' ? 10 : 999, background: st.liste ? 'transparent' : st.surface, border: st.bord ?? (sombre ? `1px solid ${lignes}` : 0), boxShadow: st.liste ? 'none' : ombre }}>
+          {['Entrées', 'Plats', 'Desserts'].map((x, i) => <span key={x} style={{ flex: st.liste ? '0 0 auto' : 1, marginRight: st.liste ? 14 : 0, textAlign: 'center', padding: '6px 0', fontFamily: st.liste ? 'Inter, sans-serif' : titre, fontWeight: 600, fontSize: st.liste ? 9.5 : 11,
+            textTransform: st.liste || casse ? 'uppercase' : undefined, letterSpacing: st.liste ? '0.12em' : undefined, borderBottom: st.liste && i === 0 ? `1.5px solid ${couleur}` : undefined }}>{x}</span>)}
         </div>
-        <div style={{ display: 'flex', flexDirection: 'column', gap: 10, padding: '14px 12px', borderRadius: 18, background: surface, border: `1px solid ${ligne}` }}>
-          <span style={{ fontFamily: titre, fontWeight: 700, fontSize: 15 }}>Entrées</span>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: 5 }}>
-            {plats.slice(0, 8).map((p, i) => <span key={p} style={{ height: 26, padding: '0 10px', borderRadius: 999, border: `1px solid ${i === 1 ? accent : ligne}`, background: i === 1 ? accent : pastille, color: i === 1 ? '#FFFFFF' : encre, fontWeight: i === 1 ? 700 : 400, display: 'flex', alignItems: 'center', fontSize: 10 }}>{i === 1 ? '✓ ' : ''}{p}</span>)}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: st.liste ? 0 : 10, padding: st.liste ? 0 : '14px 12px', borderRadius: st.rayon, background: st.liste ? 'transparent' : st.surface, border: st.liste ? 0 : st.bord ?? (mise === 'bento' ? 0 : `1px solid ${lignes}`), boxShadow: st.ombre ?? 'none' }}>
+          <span style={{ fontFamily: st.liste ? 'Inter, sans-serif' : st.titre, fontWeight: st.liste || mise === 'brut' ? 400 : 700, fontSize: st.liste ? 9.5 : 15, letterSpacing: st.liste ? '0.16em' : undefined, textTransform: st.liste || casse ? 'uppercase' : undefined, color: st.liste ? '#8A8077' : undefined, marginBottom: st.liste ? 6 : 0 }}>Entrées</span>
+          <div style={st.liste ? { display: 'flex', flexDirection: 'column', borderTop: `1px solid ${lignes}` } : { display: mise === 'bento' ? 'grid' : 'flex', gridTemplateColumns: 'repeat(2, minmax(0, 1fr))', flexWrap: 'wrap', gap: 5 }}>
+            {plats.slice(0, st.liste ? 6 : 8).map((p, i) => st.liste
+              ? <span key={p} style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', minHeight: 30, borderBottom: `1px solid ${lignes}`, fontFamily: st.titre, fontSize: 12.5, color: i === 1 ? couleur : st.encre }}>{p}<span style={{ width: 11, height: 11, borderRadius: '50%', border: `1px solid ${i === 1 ? couleur : '#A89E92'}`, background: i === 1 ? couleur : 'transparent' }} /></span>
+              : <span key={p} style={{ minHeight: 26, padding: '4px 10px', borderRadius: mise === 'bento' ? 12 : 999, border: i === 1 ? (st.bord ?? `1px solid ${accent}`) : st.bord ?? (mise === 'bento' ? 0 : `1px solid ${lignes}`), boxShadow: i === 1 ? 'none' : st.ombrePetite, background: i === 1 ? accent : pastilles, color: i === 1 ? '#FFFFFF' : st.encre, fontWeight: i === 1 || mise === 'brut' ? 700 : 400, display: 'flex', alignItems: 'center', fontSize: 10, boxSizing: 'border-box' }}>{i === 1 ? '✓ ' : ''}{p}</span>)}
           </div>
         </div>
       </div>
       <div style={{ padding: '6px 12px 12px' }}>
-        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: 4, borderRadius: 999, background: surface, border: sombre ? `1px solid ${ligne}` : 0, boxShadow: sombre ? 'none' : '0 12px 26px -14px rgba(46,46,46,0.45)' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, padding: 4, borderRadius: mise === 'brut' ? 10 : mise === 'bento' ? 20 : 999, background: mise === 'brut' ? '#FFE14D' : st.surface, border: st.bord ?? (sombre || mise === 'edito' ? `1px solid ${lignes}` : 0), boxShadow: st.ombre ?? (sombre ? 'none' : '0 12px 26px -14px rgba(46,46,46,0.45)') }}>
           <span style={{ width: 38, height: 38, borderRadius: 19, boxSizing: 'border-box', background: '#FF0D05', display: 'flex', alignItems: 'flex-end', justifyContent: 'center', overflow: 'hidden' }}><span className="buste-pat" /></span>
-          <span style={{ flexGrow: 1, fontFamily: titre, fontSize: 13, fontWeight: 500, color: sombre ? '#C9BFB5' : '#4A4A4A' }}>Demandez à Pat…</span>
+          <span style={{ flexGrow: 1, fontFamily: mise === 'edito' ? st.titre : titre, fontStyle: mise === 'edito' ? 'italic' : undefined, fontSize: 13, fontWeight: 500, color: sombre ? '#C9BFB5' : '#4A4A4A' }}>Demandez à Pat…</span>
         </div>
       </div>
     </div>
