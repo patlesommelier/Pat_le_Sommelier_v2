@@ -20,6 +20,8 @@ export interface Restaurant {
   page_accueil?: string;
   /** Design de l'app des clients : « Crème et courbes » pour tous, sauf 'classique' (l'ancien design). */
   design_app?: string | null;
+  /** Couleur claire : couleur foncée du logo pour les boutons de l'app ('' : aucune trouvée), et ce dont elle a été calculée. */
+  couleur_boutons?: string | null; couleur_boutons_cle?: string | null;
   /** Catégories en plus des couleurs dans la carte de l'app : 'nature', 'bio', 'coups_de_coeur'. */
   categories_carte?: string[];
 }

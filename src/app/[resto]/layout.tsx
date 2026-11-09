@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import '../creme.css';
 import type { CSSProperties } from 'react';
 import { BarrePat } from '@/components/BarrePat';
-import { couleurClaire, eclaircir } from '@/lib/couleurs';
+import { contrasteBlanc, couleurClaire, eclaircir } from '@/lib/couleurs';
+import { couleurDuLogo } from '@/lib/couleur-logo';
 import { getRestaurant } from '@/lib/donnees';
 import { appOuverte } from '@/lib/ouverture';
 import { requete } from '@/lib/db';
@@ -21,17 +22,30 @@ export default async function LayoutRestaurant({ children, params }: { children:
   // Logo d'un restaurant inscrit déposé avant le recadrage automatique : rogné et mesuré une fois.
   if (restaurant.logo_url && restaurant.logo_ratio == null && restaurant.origine === 'inscription') await reparerLogo(restaurant.id, restaurant.logo_url);
   const clair = couleurClaire(restaurant.couleur);
+  // Couleur claire (logo sur fond blanc…) : les boutons prennent la couleur foncée du logo (bleu marine de Bercuit…), sinon le noir.
+  // Calculée une fois d'après le logo, et de nouveau quand la couleur ou le logo changent.
+  let boutons = '#1A1A1A';
+  if (clair) {
+    const logo = restaurant.logo_fonce_url || restaurant.logo_url;
+    const cle = `${restaurant.couleur}|${logo ?? ''}`;
+    let trouvee = restaurant.couleur_boutons ?? '';
+    if (restaurant.couleur_boutons_cle !== cle) {
+      trouvee = (logo && await couleurDuLogo(logo)) || '';
+      await requete('update restaurant set couleur_boutons = $2, couleur_boutons_cle = $3 where id = $1', [restaurant.id, trouvee, cle]);
+    }
+    if (/^#[0-9a-f]{6}$/i.test(trouvee) && contrasteBlanc(trouvee) >= 4.5) boutons = trouvee.toUpperCase();
+  }
   // « Crème et courbes » pour tous les restaurants ; 'classique' garde l'ancien design (au cas où un restaurant le demande).
   const creme = restaurant.design_app !== 'classique';
   // Sur une couleur claire, le bandeau écrit en foncé ; les textes « couleur de marque » sur fond blanc aussi.
   const theme = {
     '--marque': restaurant.couleur, '--marque-claire': restaurant.couleur_claire,
-    '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? '#1A1A1A' : restaurant.couleur,
+    '--sur-marque': clair ? '#1A1A1A' : '#FFFFFF', '--marque-texte': clair ? boutons : restaurant.couleur,
     // Boutons pleins (« Trouver mon vin »…) : sur une couleur claire, ils passent en foncé pour rester bien visibles sur fond blanc.
-    '--bouton': clair ? '#1A1A1A' : restaurant.couleur, '--sur-bouton': '#FFFFFF',
+    '--bouton': clair ? boutons : restaurant.couleur, '--sur-bouton': '#FFFFFF',
     // Design « Crème et courbes » : fond de page, pastilles et filets dans des teintes très claires de la couleur des boutons.
-    ...(creme ? { '--fond': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.07), '--fond-pastille': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.1),
-      '--ligne-creme': eclaircir(clair ? '#1A1A1A' : restaurant.couleur, 0.2) } : {}),
+    ...(creme ? { '--fond': eclaircir(clair ? boutons : restaurant.couleur, 0.07), '--fond-pastille': eclaircir(clair ? boutons : restaurant.couleur, 0.1),
+      '--ligne-creme': eclaircir(clair ? boutons : restaurant.couleur, 0.2) } : {}),
   } as CSSProperties;
   const classe = `ecran${creme ? ' design-creme' : ''}${creme && clair ? ' bandeau-clair' : ''}`;
   // Pas encore en service (ou suspendu) : page d'attente pour les clients ; chaque page vérifie aussi (rendu en parallèle).
