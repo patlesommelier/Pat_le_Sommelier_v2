@@ -5,8 +5,6 @@ import { FormulaireAdmin, type Retour } from './FormulaireAdmin';
 const lin = (v: number) => { v /= 255; return v <= 0.03928 ? v / 12.92 : Math.pow((v + 0.055) / 1.055, 2.4); };
 const rgb = (h: string) => { const n = parseInt(h.slice(1), 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
 const lum = (h: string) => { const [r, g, b] = rgb(h); return 0.2126 * lin(r) + 0.7152 * lin(g) + 0.0722 * lin(b); };
-const hex = (r: number, g: number, b: number) => `#${[r, g, b].map((x) => Math.round(x).toString(16).padStart(2, '0')).join('')}`.toUpperCase();
-const claire = (h: string) => { const [r, g, b] = rgb(h); return hex(r + (255 - r) * 0.93, g + (255 - g) * 0.93, b + (255 - b) * 0.93); };
 const valide = (h: string) => /^#[0-9a-f]{6}$/i.test(h);
 
 interface Props {
@@ -18,12 +16,10 @@ interface Props {
   pageAccueil?: string;
   /** Mise en page de l'app des clients : 'creme' (par défaut), 'classique' ou 'sombre'. */
   miseEnPage?: MiseEnPage;
-  /** Adresse du simulateur : l'app exactement comme la voient les clients. */
-  simulateur?: string;
   plats: string[];
 }
 
-export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', miseEnPage = 'creme', simulateur, plats, impression }: Props) {
+export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFonce, logoChoix, accroche, pageAccueil = 'menu', miseEnPage = 'creme', plats, impression }: Props) {
   const [mise, setMise] = useState<MiseEnPage>(miseEnPage);
   const [couleur, setCouleur] = useState(initiale.toUpperCase());
   const [saisie, setSaisie] = useState(initiale.toUpperCase());
@@ -52,7 +48,7 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
       <div className="large" style={{ gap: 24 }}>
         {/* Un seul logo : celui affiché en haut de l'app, montré sur la couleur de l'app. En déposer un nouveau le remplace partout. */}
         <section className="carte-bo pile">
-          <div><h2>Logo</h2><p className="sous">Votre logo (PNG ou SVG, de préférence à fond transparent), tel qu’il s’affiche en haut de l’app, sur votre couleur.</p></div>
+          <h2>Logo</h2>
           <input type="hidden" name="logo_unique" value="1" />
           <span style={{ height: 120, maxWidth: 420, borderRadius: 14, background: couleur, border: '1px solid var(--ligne)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -77,17 +73,10 @@ export function EditeurApparence({ action, nom, couleur: initiale, logo, logoFon
               </div>
             </div>
           </div>
-          <div style={{ borderTop: '1px solid var(--ligne)', paddingTop: 14, display: 'flex', flexWrap: 'wrap', gap: 18, alignItems: 'center' }}>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: couleur, border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur principale</span><br /><b style={{ fontFamily: 'monospace' }}>{couleur}</b></span></span>
-            <span style={{ display: 'flex', gap: 10, alignItems: 'center' }}><span style={{ width: 28, height: 28, borderRadius: 8, background: claire(couleur), border: '1px solid #AFB0AE' }} /><span><span className="discret" style={{ fontSize: 13 }}>Couleur claire (barre de Pat), calculée</span><br /><b style={{ fontFamily: 'monospace' }}>{claire(couleur)}</b></span></span>
-          </div>
-          {contraste >= 4.5 && <span style={{ color: 'var(--vert)', fontSize: 14 }}>Texte blanc bien lisible sur cette couleur (contraste {contraste.toFixed(1).replace('.', ',')} : 1).</span>}
-          {contraste >= 3 && contraste < 4.5 && <span style={{ color: 'var(--ocre)', fontSize: 14 }}><b>Lisibilité limitée</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : les petits textes blancs fatiguent. Une teinte un peu plus foncée serait plus confortable.</span>}
-          {fondClair && <span style={{ color: '#680021', fontSize: 14 }}><b>Couleur claire</b> (contraste {contraste.toFixed(1).replace('.', ',')} : 1) : l’app écrit en foncé ; un logo foncé s’y lira mieux.</span>}
         </section>
         {/* Mise en page de l'app : trois choix, chacun avec son aperçu aux couleurs et au logo du restaurant. */}
         <section className="carte-bo pile">
-          <div><h2>Mise en page de l’app</h2><p className="sous">Choisissez l’allure de l’app que vos clients ouvrent avec le QR code. Elle garde toujours votre couleur et votre logo.{simulateur && <> Pour la voir exactement comme vos clients, après l’avoir enregistrée : <a href={simulateur}>le simulateur</a>.</>}</p></div>
+          <h2>Mise en page de l’app</h2>
           <div role="radiogroup" aria-label="Mise en page de l’app" className="choix-mise-en-page">
             {MISES_EN_PAGE.map(([cle, titre, detail]) => (
               <label key={cle} className="mise-en-page" data-choisie={mise === cle ? 'oui' : undefined}>
