@@ -23,7 +23,7 @@ function avecStocks(resto: string, etapes: Etape[], aVoir: number): Etape[] {
   // Paramètres du restaurant (coordonnées, stock bas, utilisateurs) : tout en bas du menu.
   const parametres: Etape = { href: `${base}/parametres`, libelle: 'Paramètres du restaurant', etat: 'fait', groupe: 'Paramètres', icone: 'reglages' };
   // Centre d'impression (logo et couleur des impressions, menu, suggestions, carte des vins) : entre l'app client et les paramètres.
-  const impression: Etape = { href: `${base}/impression`, libelle: 'Centre d’impression', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante' };
+  const impression: Etape = { href: `${base}/impression`, libelle: 'Impression de la carte des vins', etat: 'fait', groupe: 'Centre d’impression', icone: 'imprimante' };
   // Cartes et menus d'abord (juste après le tableau de bord), puis Gestion de cave, puis l'app client et les paramètres.
   const cartes = etapes.filter((e) => e.groupe === 'Cartes et menus');
   return [...cartes, ...stocks, ...etapes.filter((e) => e.groupe !== 'Cartes et menus'), impression, parametres];
